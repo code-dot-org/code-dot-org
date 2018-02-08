@@ -35,8 +35,8 @@
             students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer
-            description for students
-          description_teacher: This is a course for allthethings and has a longer
-            description for teachers
+          description_short: Este é un curso para allthethings
+          description_student: Este é un curso para allthethings e ten unha descrición
+            máis longa para o alumnado
+          description_teacher: Este é un curso para allthethings e ten unha descrición
+            máis longa para o profesorado

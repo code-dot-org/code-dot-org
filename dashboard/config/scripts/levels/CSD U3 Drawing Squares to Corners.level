@@ -51,7 +51,7 @@
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
     "markdown_instructions": "<img src=\"https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12 AM.png\" style=\"float:right;width:150px\">\r\n\r\n# Place Squares in Corners\r\n\r\nA big part of using Game Lab is understanding position. Remember you can always turn on the grid or hover with the mouse to help find the x and y position you want.\r\n\r\n# Do This\r\n\r\n* Place two rectangles exactly in the corners of the screen, just like the picture.",

@@ -1484,24 +1484,19 @@
       CSDU6 arrays rainbow_instruction: |-
         Write the contents of the array to the screen
         in numerical order. (Click to see full instructions)
-      CSDU6 arrays random_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
-      CSDU6 arrays select icons_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays random_instruction: Napisz program, który wyświetli losowo wybrany
+        kolor z tablicy. (Kliknij, aby wyświetlić pełne instrukcje)
+      CSDU6 arrays select icons_instruction: Napisz program, który wyświetli losowo
+        wybrany kolor z tablicy. (Kliknij, aby wyświetlić pełne instrukcje)
       CSDU6 arrays select rainbow_instruction: |-
         Write the contents of the array to
         the screen in numerical order. (Click to see full instructions)
-      CSDU6 arrays select random_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
-      CSDU6 arrays select variable_instruction: |-
-        Write a program that displays a
-        randomly chosen color from the array. (Click to see full instructions)
-      CSDU6 arrays variable_instruction: |-
-        Write a program that displays a randomly
-        chosen color from the array. (Click to see full instructions)
+      CSDU6 arrays select random_instruction: Napisz program, który wyświetli losowo
+        wybrany kolor z tablicy. (Kliknij, aby wyświetlić pełne instrukcje)
+      CSDU6 arrays select variable_instruction: Napisz program, który wyświetli losowo
+        wybrany kolor z tablicy. (Naciśnij aby dowiedzieć się więcej)
+      CSDU6 arrays variable_instruction: Napisz program, który wyświetli losowo wybrany
+        kolor z tablicy. (Kliknij, aby wyświetlić pełne instrukcje)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -3330,8 +3325,8 @@
         This is a test!\r
         Move one way, then
         another to get me to the pig.
-      CourseF_PlayLab_vars1_instruction: "To play this game, you don't have to write\nany
-        code, just hit \"Run\"! "
+      CourseF_PlayLab_vars1_instruction: 'Aby zagrać w tą grę, nie musisz pisać żadnego
+        kodu, po prostu naciśnij "Graj"! '
       CourseF_PlayLab_vars10_instruction: |-
         Free Play time! Here are all of the variables
         we've played with so far in this stage, as well as a few more in case you
@@ -3344,10 +3339,9 @@
         \r
         Hint:
         scroll down to see all the commands in the workspace.
-      CourseF_PlayLab_vars2_instruction: |-
-        The race in that last puzzle wasn't very
-        fair! Change the `dog_speed` variable to make sure you can collect more flags
-        than Cat. The first to collect 10 flags wins!
+      CourseF_PlayLab_vars2_instruction: Wyścig w poprzedniej zagadce nie był zbyt
+        sprawiedliwy! Zmień zmienną`dog_speed` aby upewnić się, że zbierzesz więcej
+        flag niż kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
       CourseF_PlayLab_vars3_instruction: Używaj strzałek w lewo i w prawo, aby się
         przesunąć, i strzałki do góry, aby skoczyć. Spróbuj, czy potrafisz zebrać
         wszystkie flagi.
@@ -3375,11 +3369,10 @@
         postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku
         (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj
         wynik równy 10 (powiększając go co jeden!)."
-      CourseF_PlayLab_vars9_instruction: |-
-        Nice, now let's make sure this game isn't
-        too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
-        2), you should lose a point. Start with 10 points so it's not too hard. Let
-        your score drop down from 10 to 0 to pass the level.
+      CourseF_PlayLab_vars9_instruction: Dobrze, teraz upewnijmy się, że gra nie jest
+        zbyt prosta. Za każdym razem gdy Pies(aktor 1) zostanie uderzony kanapką przez
+        Kota (aktor 2), powinieneś stracić punkt. Zacznij od 10 punktów, aby nie było
+        zbyt trudno. Aby przejść ten poziom Twój wynik musi spaść z 10 do 0.
       Crack Random Substitution_instruction: Instrukcje
       Crack a Caesar Cipher_instruction: Instrukcje
       ECSPD Binary Odometer_instruction: |-
@@ -4017,6 +4010,7 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC Agent Freeplay_instruction: 'Zabaw się:  Czas na samodzielną eksplorację!'
       MC HOC 2016 Level 10_instruction: Nadszedł czas, abyś zrobił własną grę Minecraft!
         Wykreuj potwory a następnie spowoduj, by robiły to, co chcesz. Baw się dobrze!
       MC HOC 2016 Level 2-2_instruction: Kurczak jest zamrożony. Umieść bloki "idź"
@@ -4462,10 +4456,9 @@
         with a router, and explores issues in routing and DNS
       New Artist Project_instruction: Narysuj coś niesamowitego! Twój kod zostaje
         zapisany jako projekt i możesz wrócić do niego w dowolnym momencie.
-      New Basketball Project_instruction: |-
-        Create your own Basketball game. You can
-        change all the rules. When you're done, click Finish to let friends try your
-        game on their phones.
+      New Basketball Project_instruction: Stwórz swoją własną grę w Koszykówkę. Możesz
+        zmienić wszystkie zasady. Kiedy skończysz naciśnij "Zakończ" aby Twoi znajomi
+        mogli w nią zagrać na swoich telefonach.
       New Bounce Project_instruction: |-
         Create your own Bounce game. You can change
         all the visuals and the rules. When you're done, click Finish to let friends
@@ -4482,9 +4475,8 @@
         **Freeplay:**  Time to explore on
         your own!
       New Sports Project_instruction: |-
-        Create your own game! You're in charge here:
-        you can change all the rules, mix and match sports, get creative! When you're
-        done, click Finish to let friends try your game on their phones.
+        Stwórz swoją własną grę! Ty tutaj rządzisz:
+        Możesz zmienić każdą zasadę, mieszaj i dopasowuj dyscypliny sportowe, bądź kreatywny! Kiedy skończysz, naciśnij "Koniec" aby Twoi znajomi mogli zagrać w tą grę na swoich telefonach.
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple
@@ -4779,10 +4771,9 @@
       Project - Final Image Scroller_instruction: |-
         Update the image scroller to respond
         to buttons and key presses. (Click to see full instructions)
-      Project - Finish your canvas app_instruction: |-
-        Extend the functionality of
-        one of the effects, or create an entirely new one of your own. (Click to see
-        full instructions)
+      Project - Finish your canvas app_instruction: Rozszerz funkcjonalność jednego
+        z efektu, lub stwórz samemu całkowicie nową. (Naciśnij, aby dowiedzieć się
+        więcej)
       Project - Make Your Own Clicker Game_instruction: |-
         Complete your clicker game!
         (Click to see full instructions)
@@ -4799,12 +4790,10 @@
       Quantum Bee_instruction: Fioletowe kwiaty mogą mieć 1 lub 0 nektaru, ale nie
         wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka, jeśli go
         nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli".
-      Robot Doodle_instruction: |-
-        Project Idea: Create a picture of something familiar
-        from the real world. This requires persistence and planning!
-      Robot Drawing_instruction: |-
-        Project Idea: Create a picture of something familiar
-        from the real world. This requires persistence and planning!
+      Robot Doodle_instruction: 'Pomysł na projekt: Stwórz obraz czegoś znajomego
+        z prawdziwego świata. Wymaga to wytrwałości oraz planowania!'
+      Robot Drawing_instruction: 'Pomysł na projekt: Stwórz obraz czegoś znajomego
+        z prawdziwego świata. Wymaga to wytrwałości oraz planowania!'
       Robot_instruction: |-
         Project Idea: Create a picture of something familiar from
         the real world. This requires persistence and planning!
@@ -4851,9 +4840,8 @@
       SG U3L03 Define and use turnAround_instruction: |-
         Define a function called turnAround.
         Call the function and then move the turtle forward. (Click to see full instructions)
-      SG U3L03 Draw a T using turnAround_instruction: |-
-        Draw a plus sign using the
-        provided version of turnAround().  (Click to see full instructions)
+      SG U3L03 Draw a T using turnAround_instruction: Narysuj kształt plusa korzystając
+        z dostępnej wersji turnAround(). (Naciśnij aby dowiedzieć się więcej)
       SG U3L03 Three Steps_instruction: |-
         Define a function called drawSide() which
         draws three steps and moves the turtle to prepare for the next side (Click
@@ -4879,19 +4867,18 @@
         Use the parameterized versions
         of the turtle commands to create a triangle with sides 100 pixels long. (Click
         to see full instructions)
-      SG U3L06 Challenge 2 purple square_instruction: |-
-        Read the documentation for
-        penColor() and penWidth() before using them to draw the blue square.
+      SG U3L06 Challenge 2 purple square_instruction: Przeczytaj dokumentacje dla
+        funkcji penColor() oraz penWidth() zanim zaczniesz ich używać do rysowania
+        niebieskich kwadratów.
       SG U3L06 Challenge 3 fill pink_instruction: |-
         Fill in the background of the
         screen with your favorite color. (Click to see full instructions)
       SG U3L06 Challenge 4 bullseye_instruction: |-
         Create the bullseye using hexadecimal
         colors and dot(). (Click to see full instructions)
-      SG U3L06 Challenge 5 overlapping circles_instruction: |-
-        This image is created
-        just using dot() and penColor() but, how are we going to get those circles
-        to be transparent?  If you haven't gotten the hint yet: check out the documentation!
+      SG U3L06 Challenge 5 overlapping circles_instruction: 'Ten obraz jest stworzony
+        tylko za pomocą funkcji dot() oraz penColor(), co możemy zrobić, aby te okręgi
+        były przezroczyste? Jeśli jeszcze nie dostałeś wskazówki: sprawdź dokumentację!'
       SG U3L06 Challenge 6 squiggles_instruction: |
         Read the documentation for the
         "arcLeft" and "arcRight" commands and then draw the squiggles as shown.
@@ -4927,9 +4914,8 @@
       SG U3L07 - randomDots1_instruction: |-
         Increase the number of iterations to fully
         fill the screen with random dots. (Click to see full instructions)
-      SG U3L07 - randomSquare_instruction: |-
-        Draw the figure using a loop. (Click
-        to see full instructions)
+      SG U3L07 - randomSquare_instruction: Narysuj figurę używając pętli. (Kliknij,
+        aby zobaczyć pełne instrukcje)
       SG U3L07 - seaGrass_instruction: |-
         Add a parameter to drawSeagrass that controls
         the number of waves in the grass. (Click to see full instructions)
@@ -6988,6 +6974,10 @@
       Unicorn Tag_instruction: |-
         Take a look at this project.  Do you see how it was
         made?
+      Valentine_artist_01_instruction: 'Help the artist finish his llama heart. '
+      Valentine_playlab_01_instruction: "Program Kiki (Actor 1) to move left and\nright
+        when the left and right arrows are pressed. When Kiki is clicked, she\nshould
+        throw hearts towards her friends. "
       Vigenere_instruction: Test
       WhileAdventure_instruction: |-
         Our adventurer wants to collect coins. Can you
@@ -7199,15 +7189,14 @@
       collectorDebugVideo2_instruction: |-
         Put these blocks in order to collect all
         of the gold and solve the puzzle.
-      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
+      collectorSkinVideo1_instruction: Zbierz wszystkie cztery sterty, aby ukończyć
+        ten poziom.
       collectorSkinVideo2_instruction: Zbierz jedną stertę złota żeby ukończyć ten
         poziom.
       course1_artist_loops_challenge1_instruction: |-
-        You can use a loop to draw many
-        lines in a row.\r
+        Możesz wykorzystać pętlę aby narysować wiele linii w wierszu.\r
         \r
-        Can you draw a house? Make it look just the way you
-        like it!  Try looking for patterns that repeat!
+        Czy możesz narysować dom? Spraw, aby wyglądał tak, jak Ty tego chcesz! Spróbuj wyszukać wzory, które się powtarzają!
       course1_artist_loops_challenge2_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
@@ -7230,9 +7219,8 @@
       course1_maze_debugging_challenge1_instruction: |-
         Debug this level. Remove the
         extra blocks and add the missing blocks. Get the bird to the pig!
-      course1_maze_debugging_challenge2_instruction: |-
-        Debug this level. These are
-        the right blocks, but they're in the wrong order!
+      course1_maze_debugging_challenge2_instruction: Debuguj ten poziom. To poprawne
+        bloki, ale w złej kolejności!
       course1_maze_seq_challenge1_instruction: |-
         "Trace the path and lead me to the
         silly pig. Avoid TNT or the feathers will fly!"
@@ -7245,19 +7233,16 @@
       course1_playlab_events_challenge2_instruction: |-
         "Let's have a party! Give
         my friends something to do when you click or tap them."
-      course2_artist_nestedLoops_challenge1_instruction: |-
-        Can you figure out how
-        to make a picture like this?
-      course2_artist_nestedLoops_challenge2_instruction: |-
-        Can you figure out how
-        to make a picture like this?
+      course2_artist_nestedLoops_challenge1_instruction: "** Wyzwanie: ** Czy możesz
+        dojść do tego jak utworzyć obrazek taki jak ten?"
+      course2_artist_nestedLoops_challenge2_instruction: "** Wyzwanie: ** Czy możesz
+        dojść do tego jak utworzyć obrazek taki jak ten?"
       course2_artist_prog_challenge1_instruction: |-
         Draw rooms for each of the animals.
         There are many different ways to solve this puzzle, so have some fun. The
         shortest possible solution is 6 blocks, but use as many as you like!
-      course2_artist_prog_challenge2_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
+      course2_artist_prog_challenge2_instruction: "*Pomóż mi narysować żółte linie
+        na tej drodze!*"
       course2_bee_conditionals_challenge1_instruction: Zbierz cały nektar i zrób cały
         miód.
       course2_bee_conditionals_challenge2_instruction: Zbierz cały nektar i zrób cały
@@ -7265,25 +7250,22 @@
       course2_collector_loops_challenge2_instruction: |-
         Let's hunt for treasure -
         using loops! Help the collector by debugging this code. Get all of the treasure!
-      course2_collector_prog_challenge1_instruction: |-
-        Look carefully! Can you collect
-        all *10* pieces of treasure?
+      course2_collector_prog_challenge1_instruction: Spójrz uważnie! Czy potrafisz
+        zebrać wszystkie *10* części skarbu?
       course2_collector_prog_challenge2_instruction: |-
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
-      course2_harvester_loops_challenge1_instruction: Collect all of the corn.
-      course2_harvester_loops_challenge2_instruction: |-
-        Collect all of the lettuce.
-        Avoid the trees and fields!
+      course2_harvester_loops_challenge1_instruction: Zbierz całą kukurydzę.
+      course2_harvester_loops_challenge2_instruction: Zbierz wszystkie sałaty. Unikaj
+        drzew i pól!
       course2_maze_loops_challenge1_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
       course2_maze_programming_challenge1_instruction: |-
         *"The pig is hiding! Can
         you help me find a way around?"*
-      course2_maze_programming_challenge2_instruction: |-
-        Sometimes there is more than
-        one way to solve the same problem. Sometimes it's faster to go backwards
-        than it is to go forwards!
+      course2_maze_programming_challenge2_instruction: Czasami jest więcej sposobów
+        na rozwiązanie tego samego problemu. Czasami szybciej jest się cofnąć niż
+        iść na przód!
       course2_maze_seq_challenge1_instruction: |-
         Trace the path and lead me to the
         silly pig. Avoid TNT or the feathers will fly!
@@ -7320,10 +7302,9 @@
       course2_playlab_stage17_9_instruction: Czy mógłbyś dodać blok, aby liczyć punkty,
         kiedy pingwin Waddles wpada na ośmiornicę Octavia (postać 3)?\r Następnie
         przenoś go za pomocą strzałek, aż zdobędziesz punkt!
-      course3_artist_concept_challenge1_instruction: |-
-        Feel free to use trial and
-        error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
+      course3_artist_concept_challenge1_instruction: Nie bój się popełniać błędów
+        próbując. Nie oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij
+        tutaj, jeśli chcesz zobaczyć więcej wskazówek!
       course3_artist_functions_challenge1_instruction: |-
         Once you define a function,
         you can call it over and over again - whenever and wherever you want! Try
@@ -7338,39 +7319,33 @@
       course3_bee_functions_challenge1_instruction: |-
         You are on your own for this
         challenge. This could "bee" harder than it looks!
-      course3_bee_functions_challenge2_instruction: |-
-        You are on your own for this
-        challenge!
+      course3_bee_functions_challenge2_instruction: Rozwiąż to wyzwanie na własną
+        rękę!
       course3_bee_functions_challenge3_instruction: |-
         Create a new function to collect
         all the nectar and honey while there is a path ahead. Use it to complete the
         puzzle!
-      course3_bee_functions_challenge4_instruction: |-
-        Use everything you have learned
-        to complete this puzzle!
-      course3_collector_debugging_challenge2_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
+      course3_bee_functions_challenge4_instruction: Wykorzystaj wszystko czego się
+        nauczyłeś, aby rozwiązać tą zagadkę!
+      course3_collector_debugging_challenge2_instruction: Czy jesteś ekspertem od
+        zagnieżdżonych pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały
+        skarb!
       course3_farmer_condLoops_challenge1_instruction: |-
         Turn right at the pumpkins.
         Collect everything to complete the level. Each hidden crop has only one corn
         or lettuce.
-      course3_farmer_condLoops_challenge2_instruction: |-
-        Collect everything to complete
-        the level.
+      course3_farmer_condLoops_challenge2_instruction: Zbierz wszystko, aby ukończyć
+        poziom.
       course3_farmer_until_challenge2_instruction: |-
         Use If/Else blocks to follow
         the curvy path. At each corner, use the `remove 1` command in a loop to clear
         the piles.
-      course3_maze_debugging_challenge1_instruction: |-
-        *"Am I just going around in
-        circles?"*
+      course3_maze_debugging_challenge1_instruction: '*"Czy ja właśnie chodzę w kółko?"*'
       course3_maze_debugging_challenge2_instruction: |-
         *"If I turn too often, I might
         get dizzy! Help me reach the acorn with only four `turn` commands."*
-      course3_maze_until_challenge1_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
+      course3_maze_until_challenge1_instruction: Bez podpowiedzi, po prostu wyzwanie.
+        Doprowadź zombie do słonecznika.
       course3_playLab_challenge1_instruction: |-
         Something should happen when you get
         enough points or when you run out of points. Add some code to the `win game`
@@ -7414,13 +7389,10 @@
       course3_playlab_stage17_7_instruction: Utwórz własną opowieść. Kiedy skończysz,
         kliknij przycisk "Zakończ", aby umożliwić znajomym wypróbowanie Twojej opowieści
         na swoich telefonach.
-      course4_artist_binary_challenge1_instruction: |-
-        You can only use each binary
-        value (0 or 1) once each in this puzzle. Try using nested loops to complete
-        this drawing.
-      course4_artist_binary_challenge2_instruction: |-
-        Are you persistent enough to
-        restore this logo back to normal?
+      course4_artist_binary_challenge1_instruction: Możesz użyć tylko binarnych wartości
+        (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
+      course4_artist_binary_challenge2_instruction: Czy jesteś wystarczająco wytrwały,
+        aby przywrócić to logo do normy?
       course4_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
@@ -7473,9 +7445,8 @@
       courseA_artist_loops11_instruction: |-
         Help me build steps to watch the ship
         sail away.
-      courseA_artist_loops12_instruction: |-
-        The artist saw something funny in the
-        distance.  Draw what you think he saw.
+      courseA_artist_loops12_instruction: Artysta zobaczył w oddali coś śmiesznego.
+        Narysuj, co Twoim zdaniem zobaczył.
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
@@ -7527,9 +7498,8 @@
       courseA_collector_loops6_instruction: |-
         Add blocks to this code to get all of
         the treasure.
-      courseA_collector_loops7_instruction: |-
-        What should you add to this code to
-        get all of the treasure?
+      courseA_collector_loops7_instruction: Co powinieneś dodać do tego kodu, aby
+        zebrać wszystkie skarby?
       courseA_collector_loops8_instruction: Write the code to get all of this gold.
       courseA_collector_loops9_instruction: |-
         **Challenge:** The treasure goes all
@@ -7899,16 +7869,16 @@
         Great!  Now it's time to make a fence
         inside to keep the animals out.   \r
         \r
-      courseC_artist_loops5a_instruction: Try new stickers!
-      courseC_artist_loops5b_instruction: Try adding lines!
+      courseC_artist_loops5a_instruction: Spróbuj nowych nalepek!
+      courseC_artist_loops5b_instruction: Spróbuj dodać linie!
       courseC_artist_loops6_instruction: |
         What should the zombie put inside of the
         garden?  \r
         \r
         \r
-      courseC_artist_loops6a_instruction: Add another sticker!
-      courseC_artist_loops7a_instruction: Play with the loops and angles.
-      courseC_artist_loops8a_instruction: Now try something on your own!
+      courseC_artist_loops6a_instruction: Dodaj kolejną nalepkę!
+      courseC_artist_loops7a_instruction: Baw się pętlami i kątami.
+      courseC_artist_loops8a_instruction: A teraz spróbuj czegoś na własną rękę!
       courseC_artist_loopsPre1a_instruction: Time to spin that line around!
       courseC_artist_loopsPrePre1a_instruction: "Get the artist to the center of\nthe
         play area, then draw a line. "
@@ -7947,15 +7917,12 @@
         Draw rooms for each of the animals.
         There are many different ways to solve this puzzle, so have some fun. The
         shortest possible solution is 6 blocks, but use as many as you like!
-      courseC_artist_prog_challenge2_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
-      courseC_artist_prog_challenge2a_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
-      courseC_collector_loops_challenge2_instruction: |-
-        Get at least **5** pieces
-        of treasure!
+      courseC_artist_prog_challenge2_instruction: "*Pomóż mi narysować żółte linie
+        na tej drodze!*"
+      courseC_artist_prog_challenge2a_instruction: "*Pomóż mi narysować żółte linie
+        na tej drodze!*"
+      courseC_collector_loops_challenge2_instruction: Zbierz co najmniej **5** części
+        skarbu!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -7980,17 +7947,15 @@
       courseC_collector_prog8_instruction: |-
         *"Keep up the good work! Help me collect
         all of the treasure."*
-      courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
+      courseC_collector_prog9_instruction: '*"Zbierzmy cały skarb!"*'
       courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
       courseC_collector_progB_instruction: |-
         Collect as many coins as you can to finish
         the stage!
-      courseC_collector_prog_challenge1_instruction: |-
-        Look carefully! Can you collect
-        all *10* pieces of treasure?
-      courseC_collector_prog_challenge2_instruction: |-
-        Collect at least **10** pieces
-        of treasure to finish this challenge!
+      courseC_collector_prog_challenge1_instruction: Spójrz uważnie! Czy potrafisz
+        zebrać wszystkie *10* części skarbu?
+      courseC_collector_prog_challenge2_instruction: Zbierz co najmniej **10** części
+        skarbu, aby ukończyć to wyzwanie!
       courseC_flappy_embed_events_instruction: |-
         Here's an example of a game that
         you're about to create yourself! Play through it one or two times to get
@@ -8047,14 +8012,11 @@
       courseC_harvester_loops9_instruction: |-
         Collect all of the corn and all of the
         pumpkins.
-      courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
-      courseC_harvester_loops_challenge1a_instruction: Collect all of the corn.
-      courseC_harvester_loops_challenge2_instruction: |-
-        Collect all of the lettuce.
-        Avoid the trees and fields!
-      courseC_harvester_loops_forVid_instruction: |-
-        Collect all of the corn and all
-        of the pumpkins.
+      courseC_harvester_loops_challenge1_instruction: Zbierz całą kukurydzę.
+      courseC_harvester_loops_challenge1a_instruction: Zbierz całą kukurydzę.
+      courseC_harvester_loops_challenge2_instruction: Zbierz wszystkie sałaty. Unikaj
+        drzew i pól!
+      courseC_harvester_loops_forVid_instruction: Zbierz wszystkie kukurydze i dynie.
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -8083,9 +8045,7 @@
       courseC_maze_debugging9_instruction: |-
         Debug this level to get Scrat to the
         acorn.
-      courseC_maze_debugging_challenge1_instruction: |-
-        *"Am I just going around in
-        circles?"*
+      courseC_maze_debugging_challenge1_instruction: '*"Czy ja właśnie chodzę w kółko?"*'
       courseC_maze_debugging_challenge2_instruction: |-
         *"If I turn too often, I might
         get dizzy! Help me reach the acorn with only four `turn` commands."*
@@ -8116,9 +8076,8 @@
         find his acorn! "
       courseC_maze_loops_challenge1a_instruction: "Now Scrat wants to try using loops\nto
         find his acorn! "
-      courseC_maze_loops_challenge2_instruction: |-
-        Let's hunt for treasure - using
-        loops! Help the collector by debugging this code. Get all of the treasure!
+      courseC_maze_loops_challenge2_instruction: Zapolujmy na skarb - używając pętel!
+        Pomóż zbieraczowi poprzez debugowanie tego kodu. Zbierz cały skarb!
       courseC_maze_programming1_instruction: |-
         For this puzzle, drag all of the blocks
         together and click "Run" to watch it go!
@@ -8148,10 +8107,9 @@
       courseC_maze_programming_challenge1_instruction: |-
         *"The pig is hiding! Can
         you help me find a way around?"*
-      courseC_maze_programming_challenge2_instruction: |-
-        Sometimes there is more than
-        one way to solve the same problem. Sometimes it's faster to go backwards
-        than it is to go forwards!
+      courseC_maze_programming_challenge2_instruction: Czasami jest więcej sposobów
+        na rozwiązanie tego samego problemu. Czasami szybciej jest się cofnąć niż
+        iść na przód!
       courseC_playLab_embedded_instruction: |-
         Here's a game for you to play! To win,
         use your arrow keys to get the penguin to run into the octopus.\r
@@ -8174,9 +8132,8 @@
         the path where he moves. Use 5 of the same block to get BB-8 to pick up all
         of the scrap metal in the play area.
       courseC_starWars_loops10_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops10_predict2_instruction: |-
-        You are doing great! Keep it
-        up!
+      courseC_starWars_loops10_predict2_instruction: Dobrze sobie radzisz! Oby tak
+        dalej!
       courseC_starWars_loops11_instruction: |-
         You are almost there! This time, choose
         any path you like!
@@ -8226,30 +8183,23 @@
       courseD_artist_binary7_instruction: Jaki jest najkrótszy łańcuch binarny, który
         możesz powtórzyć, by narysować ten obraz?
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
-      courseD_artist_binary8_predict1_instruction: |-
-        Finish the code to create this
-        drawing.
+      courseD_artist_binary8_predict1_instruction: Ukończ kod, aby utworzyć ten rysunek.
       courseD_artist_binaryFP_instruction: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r
         \r
         See what happens when we start to
         get creative with the bits!
-      courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
-        binary! "
-      courseD_artist_binary_challenge0_instruction: |-
-        Try using nested loops to complete
-        this drawing.
-      courseD_artist_binary_challenge1_instruction: |-
-        You can only use each binary
-        value (0 or 1) once each in this puzzle. Try using nested loops to complete
-        this drawing.
-      courseD_artist_binary_challenge2_instruction: |-
-        Are you persistent enough to
-        restore this logo back to normal?
-      courseD_artist_binary_challenge3_instruction: |-
-        Are you persistent enough to
-        restore this logo back to normal?
+      courseD_artist_binaryFP8_instruction: "**Czas na zabawę:** Narysuj binarnie
+        cokolwiek chcesz! "
+      courseD_artist_binary_challenge0_instruction: Spróbuj użyć zagnieżdżonych pętli,
+        aby ukończyć ten rysunek.
+      courseD_artist_binary_challenge1_instruction: Możesz użyć tylko binarnych wartości
+        (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
+      courseD_artist_binary_challenge2_instruction: Czy jesteś wystarczająco wytrwały,
+        aby przywrócić to logo do normy?
+      courseD_artist_binary_challenge3_instruction: Czy jesteś wystarczająco wytrwały,
+        aby przywrócić to logo do normy?
       courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
       courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
       courseD_artist_functions10_instruction: |-
@@ -8318,29 +8268,25 @@
       courseD_artist_nestedLoops9_instruction: |-
         **Challenge:** Can you figure out
         how to make a picture like this?
-      courseD_artist_nestedLoops9_predict1_instruction: |-
-        **Challenge:** Can you figure
-        out how to make a picture like this?
+      courseD_artist_nestedLoops9_predict1_instruction: "** Wyzwanie: ** Czy możesz
+        dojść do tego jak utworzyć obrazek taki jak ten?"
       courseD_artist_nestedLoopsFP_instruction: |-
         Now it's your turn.  Take the skills
         you have learned and make something that you love!
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
-      courseD_artist_nestedLoops_challenge1_instruction: |-
-        Can you figure out how
-        to make a picture like this?
-      courseD_artist_nestedLoops_challenge2_instruction: |-
-        Fix the code to make this
-        picture!
-      courseD_artist_project1_instruction: "Draw a small shape, between **20 and\n50**
-        pixels wide.  It can be any shape that you like.  "
+      courseD_artist_nestedLoops_challenge1_instruction: "** Wyzwanie: ** Czy możesz
+        dojść do tego jak utworzyć obrazek taki jak ten?"
+      courseD_artist_nestedLoops_challenge2_instruction: Napraw kod, aby utworzyć
+        ten rysunek!
+      courseD_artist_project1_instruction: 'Narysuj mały kształt, szeroki na  **20
+        do 50** pikseli. To może być kształt jakikolwiek chcesz.  '
       courseD_artist_project1a_instruction: |-
         Draw a stair-step pattern that uses
         turns between 75 and 105 degrees.
-      courseD_artist_project2_instruction: |-
-        Now take your shape and draw two or three
-        in a row!
+      courseD_artist_project2_instruction: Teraz weź swój kształt i narysuj go dwa
+        lub trzy z rzędu!
       courseD_artist_project2a_instruction: |-
         Now, turn around 180 degrees and draw
         the stair pattern again!
@@ -8528,44 +8474,33 @@
       courseD_bounce_events5s_instruction: |-
         Attach a block to the `when ball hits
         hand` event to ensure the ball reaches the basket.
-      courseD_bounce_events6_instruction: |-
-        Now the finish target is on the top. You
-        need to attach blocks to both of the "when ball hits" blocks to solve this
-        puzzle.
+      courseD_bounce_events6_instruction: Teraz ostateczny cel jest na górze. Musisz
+        dołączyć bloki do obu bloków "when ball hits", aby rozwiązać tę łamigłówkę.
       courseD_bounce_events6s_instruction: |-
         Attach code to make the ball bounce when
         it hits the wall so you can solve this puzzle.
-      courseD_bounce_events7_instruction: |-
-        Attach blocks to each of the "when"
-        blocks. Bounce the ball until it hits the finish target.
+      courseD_bounce_events7_instruction: Dołącz bloki do każdego z bloków "when".
+        Odbijaj piłeczkę, aż osiągnie ostateczny cel.
       courseD_bounce_events7s_instruction: |-
         Attach sound blocks to make the net swish
         when you hit the basket and have the whistle blow when the ball misses your
         hand. Bounce the ball until it hits the finish target.
-      courseD_collector_debugging1_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
-      courseD_collector_debugging1a_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
-      courseD_collector_debugging2_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
-      courseD_collector_debugging2a_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
-      courseD_collector_debugging3_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
-      courseD_collector_debugging3a_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
-      courseD_collector_debugging4_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
-      courseD_collector_debugging4a_instruction: |-
-        Fix the error(s) to collect all
-        of the treasure.
+      courseD_collector_debugging1_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
+      courseD_collector_debugging1a_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
+      courseD_collector_debugging2_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
+      courseD_collector_debugging2a_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
+      courseD_collector_debugging3_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
+      courseD_collector_debugging3a_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
+      courseD_collector_debugging4_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
+      courseD_collector_debugging4a_instruction: Napraw błędy, aby zebrać wszystkie
+        skarby.
       courseD_collector_debugging5_instruction: |-
         All of the commands that you need
         are already here...now use your debugging skills to figure out how to solve
@@ -8574,19 +8509,17 @@
         All of the commands that you need
         are already here...now use your debugging skills to figure out how to solve
         this puzzle.
-      courseD_collector_debugging6_instruction: |-
-        Challenge: Use your debugging skills
-        to fix the errors and collect all of the treasure.
-      courseD_collector_debugging6a_instruction: |-
-        Challenge: Use the code in the
-        work area to get at least **6** pieces of treasure!
+      courseD_collector_debugging6_instruction: 'Wyzwanie: Użyj swoich umiejętności
+        debugowania, aby naprawić błędy i zebrać cały skarb.'
+      courseD_collector_debugging6a_instruction: 'Wyzwanie: Użyj kodu w obszarze roboczym,
+        aby uzyskać co najmniej **6** części skarbu!'
       courseD_collector_debugging7_instruction: |-
         Challenge: All of the commands that
         you need are already here...now use your debugging skills to figure out how
         to solve this puzzle.
-      courseD_collector_debugging_challenge2_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
+      courseD_collector_debugging_challenge2_instruction: Czy jesteś ekspertem od
+        zagnieżdżonych pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały
+        skarb!
       courseD_collector_nested_loops_challenge2_instruction: |-
         Help the collector
         reach at least two piles of treasure using only the blocks in your toolbox.
@@ -8598,9 +8531,8 @@
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
-      courseD_collector_until_challenge1_instruction: |-
-        Are you an expert of nested
-        loops? Use what you have learned so far to collect all of the treasure!
+      courseD_collector_until_challenge1_instruction: Czy jesteś ekspertem od zagnieżdżonych
+        pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały skarb!
       courseD_debugging_1_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_2_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_3_instruction: Napraw błędy, aby zebrać cały nektar i zrobić
@@ -8628,9 +8560,8 @@
       courseD_farmer_condLoops4a_instruction: |-
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
-      courseD_farmer_condLoops5_instruction: |-
-        Collect all of the corn and lettuce,
-        then grab the pumpkin at the end.
+      courseD_farmer_condLoops5_instruction: Zbierz całą kukurydzę oraz sałatę, a
+        na koniec dynie.
       courseD_farmer_condLoops6_instruction: |-
         Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!
@@ -8650,12 +8581,10 @@
         Turn right at the pumpkins.
         Collect everything to complete the level. Each hidden crop has only one corn
         or lettuce.
-      courseD_farmer_condLoops_challenge2_instruction: |-
-        Collect everything to complete
-        the level.
-      courseD_farmer_condLoops_challenge2_clone_instruction: |-
-        Collect everything
-        to complete the level.
+      courseD_farmer_condLoops_challenge2_instruction: Zbierz wszystko, aby ukończyć
+        poziom.
+      courseD_farmer_condLoops_challenge2_clone_instruction: Zbierz wszystko, aby
+        ukończyć ten poziom.
       courseD_farmer_conditionals1_instruction: |-
         Move to the pile of dirt and use
         the `remove` block to remove it.
@@ -8716,12 +8645,10 @@
         few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
-      courseD_farmer_while_challenge1_instruction: |-
-        Fill all of the holes and remove
-        all of the piles.
-      courseD_farmer_while_challenge2_instruction: |-
-        Fill all of the holes and remove
-        all of the piles.
+      courseD_farmer_while_challenge1_instruction: Wypełnij wszystkie dziury i usuń
+        wszystkie stosy.
+      courseD_farmer_while_challenge2_instruction: Wypełnij wszystkie dziury i usuń
+        wszystkie stosy.
       courseD_harvester_nested_loops_challenge1-broken_instruction: |-
         "I need some
         help on the farm! Help me harvest this corn using only the blocks in your
@@ -8769,7 +8696,7 @@
       courseD_maze_ramp6a_instruction: |-
         "Keep calm and help me find the bad pig.
         Otherwise I might get angry!"
-      courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
+      courseD_maze_ramp7_instruction: Doprowadź ptaka do świnki!
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
@@ -8789,18 +8716,14 @@
       courseD_maze_until9_instruction: |-
         **Challenge:** Avoid the chompers and help
         the zombie get to the sunflower.
-      courseD_maze_until_challenge_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
-      courseD_maze_until_challenge1-delete-this-copy_instruction: |-
-        No hints, just
-        challenge. Get the zombie to the sunflower.
-      courseD_maze_until_challenge1_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
-      courseD_maze_until_challenge2_instruction: |-
-        No hints, just challenge. Get the
-        zombie to the sunflower.
+      courseD_maze_until_challenge_instruction: Bez podpowiedzi, po prostu wyzwanie.
+        Doprowadź zombie do słonecznika.
+      courseD_maze_until_challenge1-delete-this-copy_instruction: Bez podpowiedzi,
+        po prostu wyzwanie. Doprowadź zombie do słonecznika.
+      courseD_maze_until_challenge1_instruction: Bez podpowiedzi, po prostu wyzwanie.
+        Doprowadź zombie do słonecznika.
+      courseD_maze_until_challenge2_instruction: Bez podpowiedzi, po prostu wyzwanie.
+        Doprowadź zombie do słonecznika.
       courseD_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.
@@ -8855,8 +8778,9 @@
       courseD_scrat_ramp3_instruction: |-
         There is one extra block that is going to
         cause Scrat to crash. Throw it away by dragging it back to the toolbox.
-      courseD_scrat_ramp4_instruction: Avoid the cracked ice to keep Scrat safe!
-      courseD_scrat_ramp5_instruction: Avoid the cracked ice.
+      courseD_scrat_ramp4_instruction: Unikaj nadpękniętego lodu, aby Scratowi nic
+        się nie stało!
+      courseD_scrat_ramp5_instruction: Unikaj nadpękniętego lodu.
       courseD_scrat_ramp6_instruction: Help Scrat get to the acorn using a loop!
       courseD_scrat_ramp7_instruction: Help Scrat get to the acorn!
       courseD_scrat_ramp8_instruction: |-
@@ -8866,10 +8790,9 @@
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
         or fewer.
-      courseE_artist_concept_challenge1_instruction: |-
-        Feel free to use trial and
-        error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
+      courseE_artist_concept_challenge1_instruction: Nie bój się popełniać błędów
+        próbując. Nie oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij
+        tutaj, jeśli chcesz zobaczyć więcej wskazówek!
       courseE_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
@@ -8886,8 +8809,8 @@
       courseE_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
-      courseE_artist_functions2_instruction: "This time, use the `draw a square`\nfunction
-        to create the glasses. "
+      courseE_artist_functions2_instruction: 'Tym razem użyj funkcji `draw a square`,
+        aby utworzyć okulary. '
       courseE_artist_functions3_instruction: |-
         You can make this drawing by adding
         a repeat block.
@@ -8931,10 +8854,10 @@
         inside of a square.
       courseE_artist_ramp8_instruction: Now make a square using Artist!
       courseE_artist_ramp8_2_instruction: Now make a square using Artist!
-      courseE_artist_ramp9_instruction: Use what you've learned to draw this triangle.
-      courseE_artist_ramp9_2_instruction: |-
-        Use what you've learned to draw this
-        triangle.
+      courseE_artist_ramp9_instruction: Użyj tego, czego się nauczyłeś(-aś), by narysować
+        ten trójkąt.
+      courseE_artist_ramp9_2_instruction: Użyj tego, czego się nauczyłeś(-aś), by
+        narysować ten trójkąt.
       courseE_bee_concept1_instruction: 'Zbierz cały nektar z każdego kwiatka. Użyj
         zagnieżdżonej pętli. '
       courseE_bee_concept2_instruction: |-
@@ -8983,9 +8906,8 @@
       courseE_bee_functions_challenge1_instruction: |-
         You are on your own for this
         challenge. This could "bee" harder than it looks!
-      courseE_bee_functions_challenge2_instruction: |-
-        You are on your own for this
-        challenge!
+      courseE_bee_functions_challenge2_instruction: Rozwiąż to wyzwanie na własną
+        rękę!
       courseE_bee_ramp14_instruction: Pomóż pszczółce podążać ścieżką, aby zebrać
         cały nektar i zrobić miód.
       courseE_bee_ramp17_instruction: Użyj tego, czego się nauczyłeś(-aś), by rozwiązać
@@ -9324,7 +9246,8 @@
         Now, drag the code for the last triangle
         into a new loop to spin it around and make a snowflake!
       courseF_artist_ramp8_instruction: Now make a square using Artist!
-      courseF_artist_ramp9_instruction: Use what you've learned to draw this triangle.
+      courseF_artist_ramp9_instruction: Użyj tego, czego się nauczyłeś(-aś), by narysować
+        ten trójkąt.
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side.
@@ -9492,9 +9415,7 @@
       courseF_bee_functions7_instruction: |-
         Rebuild your function from the last puzzle
         to solve this maze.
-      courseF_bee_functions8a_instruction: |-
-        Collect all the nectar or make all of
-        the honey!
+      courseF_bee_functions8a_instruction: Zbierz cały nektar lub zrób cały miód!
       courseF_bee_functionsPre7_instruction: |-
         Now try building a function to solve
         this maze.  How is it different from last time?
@@ -9502,9 +9423,8 @@
         Create a new function to collect
         all the nectar and honey while there is a path ahead. Use it to complete the
         puzzle!
-      courseF_bee_functions_challenge2_instruction: |-
-        Use everything you have learned
-        to complete this puzzle!
+      courseF_bee_functions_challenge2_instruction: Wykorzystaj wszystko czego się
+        nauczyłeś, aby rozwiązać tą zagadkę!
       courseF_bee_functions_challenge2_recursion_instruction: |-
         Zbierz cały nektar
         lub zrób cały miód!

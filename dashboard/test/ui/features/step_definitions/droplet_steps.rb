@@ -15,6 +15,13 @@ And(/^the Droplet ACE text is "([^"]*)"$/) do |expected_text|
   expect(actual_text).to eq(expected_text)
 end
 
+And(/^the Droplet ACE text is '([^']*)'$/) do |expected_text|
+  # Let us expect newlines in the editor
+  expected_text.gsub! '\n', "\n"
+  actual_text = @browser.execute_script("return __TestInterface.getDropletContents();")
+  expect(actual_text).to eq(expected_text)
+end
+
 And(/^no Tooltipster tooltip is visible$/) do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
   wait.until {!@browser.execute_script("return $('.tooltipster-base').is(':visible');")}

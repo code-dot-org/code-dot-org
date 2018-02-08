@@ -66,6 +66,8 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 <p>
 <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
+
+In New York and North Carolina, there is a fee to cover the costs of the workshop. But, we have worked with many school districts in these regions and they have allocated funds to cover the costs for you and your school. If your principal or administration has any questions around the costs to support this, please encourage them to reach out to our partners in <a href="mailto:programs@codeinteractive.org">New York</a> and <a href="mailto:srmorri3@ncsu.edu">North Carolina</a> so we can help you.
 </p>
 </details>
 
@@ -94,7 +96,7 @@ Participants will engage with the curriculum both as instructors and as learners
 ​</details>
 
 
-## Program Commitments: 
+## Program commitments 
 The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Principles or CS Discoveries.
 
 <img src="/images/professional-learning/pl_timeline.png" width="100%"/>
@@ -115,6 +117,20 @@ The Code.org Professional Learning Program has both in-person and online support
 
 
 In addition, all teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum. Have more questions about which program is for you? Learn more about [implementation options](/files/PL-Program-for-Me.pdf) or [contact us](mailto: teacher@code.org).
+
+## Q&A Video Chat with Hadi Partovi
+
+To help answer any questions you have, **Hadi Partovi** (Code.org Founder) and **Brook Osborne** (Education Program Manager and one of the creators of our professional learning programs) will be hosting a video chat on Thursday, Feb. 15. They’ll share stories from teachers who have gone through the program and discuss why it’s important for every student to have the opportunity to learn computer science.
+
+We’ll also be hosting open office hours with Code.org staff before and after the video chat in case those times work better for you. Feel free to join whenever you’re free. Invite your principal or other teachers and administrators to join and get a better understanding of the program.  
+
+**Thursday, Feb. 15, 2018**
+
+- 3:00 - 4:00 pm PST - Open office hours with Code.org staff
+- 4:00 - 4:30 pm PST - Video chat with Hadi Partovi and Brook Osborne 
+- 4:30 - 5:00 pm PST - Open office hours with Code.org staff
+
+[Use this link to join the chat](https://code.zoom.us/j/730985651) (or share it with others).
 
 ## Apply Today!
 

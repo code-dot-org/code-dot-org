@@ -179,7 +179,7 @@ class PdProgramRegistration < Form
       'Arts/Music',
       OTHER
     ]
-  }
+  }.freeze
 
   def self.receipt
     'pd_program_registration_receipt'

@@ -56,7 +56,7 @@
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "encrypted_examples": "76ejS+XHP6oyLgA0YGSYEEgCaK+JYqtGyVcvEp9YOdjFe4ViiBiGc4PzDt5z\nbPu+h9i8Ff64KJB57vlUq07NE5/gizM39yOQ8cdG74Ga4DRugrrpS7E0z1k3\nyAWjLbBZWqpquBEYZlz5ksQpNCDUEWGGUYyS7Hv3MHdVbXKXpznhV0gN3NCx\nu6NQYGB8/ZcqVKnY0QWbE6U7ZyixkW6YaCSbSUOvLDCnEK25asAWQeE=\n",
     "contained_level_names": null

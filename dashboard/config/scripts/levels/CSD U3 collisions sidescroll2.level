@@ -72,7 +72,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"red_car\",\r\n        \"orange_cone\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"red_car\": {\r\n            \"name\": \"red_car\",\r\n            \"sourceUrl\": \"https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png\",\r\n            \"frameSize\": {\r\n                \"x\": 50,\r\n                \"y\": 50\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"orange_cone\": {\r\n            \"name\": \"orange_cone\",\r\n            \"sourceUrl\": \"https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png\",\r\n            \"frameSize\": {\r\n                \"x\": 35,\r\n                \"y\": 35\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "markdown_instructions": "# Improve Your Game\r\n\r\nNow that you know how to use `isTouching` and `playSound`, you can make some fun things happen when your sprites run into each other.\r\n\r\n*Note: The `playSound` block now has an extra parameter called \"loop\" that can be set to true or false.  If this parameter is true, the sound will continue to play in a loop.*\r\n\r\n# Do This\r\n\r\n* Add at least two effects when your sprites collide.\r\n\r\n*Challenge: Add a scoreboard to the top of your screen.*\r\n",

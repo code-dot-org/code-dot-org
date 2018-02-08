@@ -15,7 +15,7 @@ module Pd::Application
     end
 
     test 'requires csp/csd replacement course info if a course is being replaced' do
-      application = build :pd_principal_approval1819_application, replace_course: Pd::Application::PrincipalApproval1819Application.options[:replace_course][1]
+      application = build :pd_principal_approval1819_application, replace_course: Pd::Application::PrincipalApproval1819Application::REPLACE_COURSE_NO
       assert application.valid?
       application.update_form_data_hash({replace_course: 'Yes'})
       refute application.valid?

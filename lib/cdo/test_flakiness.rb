@@ -14,6 +14,9 @@ class TestFlakiness
   MIN_SAMPLES = 10
   TEST_ACCOUNT_USERNAME = 'testcodeorg'.freeze
 
+  # Each feature should be retried until the chance of flaky failure is less than this amount.
+  MAX_FAILURE_RATE = 0.005 # 0.5%
+
   # Queries the SauceLabs API for jobs
   # @param options [Hash] Optional, options overrides.
   # @return [JSON] The JSON parsed response.
@@ -67,7 +70,7 @@ class TestFlakiness
   # @param flakiness [Float] The flakiness score.
   # @return [Array] The recommended number of re-runs and confidence factor.
   def self.recommend_reruns(flakiness)
-    recommended_reruns = (1 / Math.log(flakiness, 0.05)).ceil
+    recommended_reruns = Math.log(MAX_FAILURE_RATE, flakiness).ceil
     max_reruns = [1, [recommended_reruns, 5].min].max
     confidence = (1.0 - flakiness**(max_reruns + 1)).round(3)
     return [max_reruns, confidence]

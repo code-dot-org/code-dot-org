@@ -45,6 +45,8 @@ class SchoolInfo < ActiveRecord::Base
   belongs_to :school_district
   belongs_to :school
 
+  has_and_belongs_to_many :census_submissions, class_name: 'Census::CensusSubmission'
+
   # Remap what the form has (e.g. school_zip) to what we write to (e.g. zip)
   def school_zip=(input)
     self.zip = input

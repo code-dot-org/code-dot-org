@@ -30,7 +30,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Use randomNumber() on the x position and width of your cloud ellipses to introduce a bit of animation.",
     "markdown_instructions": "# Clouds in the Wind\r\n\r\nNow that our image is in the draw loop, let's make use of that feature to add a little bit of animation. We're going to make our clouds look as though they're shifting in the breeze by randomizing their position and size a little bit each time the `draw()` loop is run.\r\n\r\n# Do This\r\n\r\n* Replace the x input of each cloud ellipse with a call to `randomNumber`\r\n  * `randomNumber` should vary the x position by + or - 5 pixels. So if your x position was 50, replace it with `randomNumber(45,55)`\r\n* Replace the width input of each cloud ellipse with a call to `randomNumber`\r\n  * `randomNumber` should vary the width by + 5 pixels. So if your width was 50, replace it with `randomNumber(50,55)`\r\n* Change the **frame rate** to something slower (try 5 or 10 FPS)",
     "start_blocks": "// Background\r\n\r\n// Grass\r\n\r\n// Road\r\n\r\n",
