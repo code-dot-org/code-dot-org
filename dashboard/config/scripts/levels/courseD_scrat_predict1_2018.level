@@ -37,8 +37,7 @@
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "step_speed": "2",
-    "top_level_procedure_autopopulate": "false",
-    "maze_data": null
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
