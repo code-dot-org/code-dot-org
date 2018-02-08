@@ -93,10 +93,11 @@ export default class SchoolInfoInterstitial extends React.Component {
 
 
   handleSchoolInfoSubmit = () => {
+    const isUS = this.state.country === 'United States';
     let schoolData;
     if (this.state.schoolType === '') {
       schoolData = {};
-    } else if (SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(this.state.schoolType)) {
+    } else if (isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(this.state.schoolType)) {
       if (this.state.ncesSchoolId === '-1') {
         // I couldn't find my school.
         schoolData = {
