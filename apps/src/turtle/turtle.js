@@ -71,6 +71,7 @@ const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 const decorationAnimationWidth = 85;
 const decorationAnimationHeight = 85;
+
 /**
 * Minimum joint segment length
 */
@@ -223,8 +224,7 @@ var Artist = function () {
   this.linePatterns = [];
 
   // these get set by init based on skin.
-  this.avatarWidth = 0;
-  this.avatarHeight = 0;
+  this.avatar = null;
   this.speedSlider = null;
 
   this.ctxAnswer = null;
@@ -352,22 +352,12 @@ Artist.prototype.init = function (config) {
   }
 
   this.linePatterns = config.skin.linePatterns;
+  this.avatar = config.skin.avatarSettings;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
   config.prepareForRemix = Artist.prototype.prepareForRemix.bind(this);
-
-  if (this.skin.id === "anna") {
-    this.avatarWidth = 73;
-    this.avatarHeight = 100;
-  } else if (this.skin.id === "elsa") {
-    this.avatarWidth = 73;
-    this.avatarHeight = 100;
-  } else {
-    this.avatarWidth = 70;
-    this.avatarHeight = 51;
-  }
 
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
@@ -735,8 +725,6 @@ Artist.prototype.loadTurtle = function (initializing = true) {
   } else {
     this.numberAvatarHeadings = 180;
   }
-  this.avatarImage.spriteHeight = this.avatarHeight;
-  this.avatarImage.spriteWidth = this.avatarWidth;
 };
 
 /**
@@ -772,17 +760,17 @@ Artist.prototype.drawTurtle = function () {
     // and they are 180 degrees out of phase.
     index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
   }
-  var sourceX = this.avatarImage.spriteWidth * index;
+  var sourceX = this.avatar.width * index;
   if (this.isFrozenSkin()) {
-    sourceY = this.avatarImage.spriteHeight * turtleFrame;
+    sourceY = this.avatar.height * turtleFrame;
     turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
   } else {
     sourceY = 0;
   }
-  var sourceWidth = this.avatarImage.spriteWidth;
-  var sourceHeight = this.avatarImage.spriteHeight;
-  var destWidth = this.avatarImage.spriteWidth;
-  var destHeight = this.avatarImage.spriteHeight;
+  var sourceWidth = this.avatar.width;
+  var sourceHeight = this.avatar.height;
+  var destWidth = this.avatar.width;
+  var destHeight = this.avatar.height;
   var destX = this.x - destWidth / 2;
   var destY = this.y - destHeight + 7;
 
