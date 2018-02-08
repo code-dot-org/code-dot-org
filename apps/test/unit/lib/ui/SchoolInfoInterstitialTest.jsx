@@ -254,7 +254,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with only a country', () => {
+    it('submits with only country=US', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -275,7 +275,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country and a school type', () => {
+    it('submits with US and an NCES school type', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -298,7 +298,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country, school type, and school id', () => {
+    it('submits with US, NCES school type, and school id', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -322,7 +322,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country, school type, and school name', () => {
+    it('submits with US, NCES school type, and school name', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -349,7 +349,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country, school type, name, state', () => {
+    it('submits with US, NCES school type, name, state', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -377,7 +377,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country, school type, name, state, zip', () => {
+    it('submits with US, NCES school type, name, state, zip', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -406,7 +406,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country, and non-NCES school type', () => {
+    it('submits with US and non-NCES school type', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -430,7 +430,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country, non-NCES school type, school name', () => {
+    it('submits with US, non-NCES school type, school name', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -455,7 +455,7 @@ describe('SchoolInfoInterstitial', () => {
       ].join('&'));
     });
 
-    it('submits with a country, non-NCES school type, school name, location', () => {
+    it('submits with US, non-NCES school type, school name, location', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -478,6 +478,81 @@ describe('SchoolInfoInterstitial', () => {
         'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
         'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
         'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR',
+      ].join('&'));
+    });
+
+    it('submits with non-US, NCES school type', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'Tanzania',
+              school_type: 'public',
+            },
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
+    });
+
+    it('submits with non-US, NCES school type, school name', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'Tanzania',
+              school_type: 'public',
+              school_name: 'Test School',
+            },
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
+    });
+
+    it('submits with non-US, NCES school type, school name, location', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'Tanzania',
+              school_type: 'public',
+              school_name: 'Test School',
+              full_address: 'Tanzania National Stadium, Taifa Road, Dar es Salaam, Tanzania',
+            },
+          }}
+        />
+      );
+      wrapper.find(Button).simulate('click');
+      expect(server.requests[0].requestBody).to.equal([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Tanzania+National+Stadium%2C+Taifa+Road%2C+Dar+es+Salaam%2C+Tanzania',
       ].join('&'));
     });
 
