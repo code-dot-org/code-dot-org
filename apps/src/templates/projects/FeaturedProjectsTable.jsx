@@ -74,7 +74,7 @@ const thumbnailFormatter = function (thumbnailUrl) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
-  const url = '/projects/${rowData.type}/${rowData.channel}/';
+  const url = `/projects/${rowData.type}/${rowData.channel}/`;
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
 };
 
@@ -297,7 +297,7 @@ class FeaturedProjectsTable extends React.Component {
         style={tableLayoutStyles.table}
       >
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="projectName" />
+        <Table.Body rows={sortedRows} rowKey="channel" />
       </Table.Provider>
     );
   }

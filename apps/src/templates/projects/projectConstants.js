@@ -24,12 +24,12 @@ export const personalProjectDataPropType = PropTypes.shape({
 
 export const featuredProjectDataPropType = PropTypes.shape({
   projectName: PropTypes.string.isRequired,
+  channel: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
   thumbnailUrl: PropTypes.string,
   featuredAt: PropTypes.string.isRequired,
   unfeaturedAt: PropTypes.string,
-  featured: PropTypes.bool.isRequired,
 });
 
 export const projectPropType = PropTypes.shape({
