@@ -16,7 +16,6 @@ Scenario: Teachercon Registration form submission
 
   # Section 2
   And I wait until element "h4" contains text "Section 2: Travel Plans"
-  And I wait for 5 seconds
   And I press keys "Filius" for element "#contactFirstName"
   And I press keys "Flitwick" for element "#contactLastName"
   And I press keys "Colleague" for element "#contactRelationship"
@@ -36,7 +35,7 @@ Scenario: Teachercon Registration form submission
 
   # Section 3
   And I wait until element "h4" contains text "Section 3: Course Plans"
-  And I wait for 5 seconds
+  And I wait for 2 seconds
   And I press the first "input[name='howOfferCsp']" element
   And I press the first "input[name='haveTaughtAp']" element
   And I press the first "input[name='haveTaughtWrittenProjectCourse']" element
@@ -58,5 +57,3 @@ Scenario: Teachercon Registration form submission
   Then I wait until element "h1" contains text "Thank you for registering for TeacherCon!"
   Then I see no difference for "TeacherCon confirmation form"
   Then I close my eyes
-
-
