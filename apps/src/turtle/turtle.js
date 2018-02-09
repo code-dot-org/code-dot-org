@@ -210,9 +210,6 @@ var Artist = function () {
   // Set a turtle heading.
   this.heading = 0;
 
-  // The avatar image
-  this.avatarImage = new Image();
-
   // The avatar animation decoration image
   this.decorationAnimationImage = new Image();
 
@@ -714,9 +711,9 @@ Artist.prototype.drawImages = function () {
  */
 Artist.prototype.loadTurtle = function (initializing = true) {
   const onloadCallback = initializing ? this.display : this.drawTurtle;
-  this.avatarImage.onload = _.bind(onloadCallback, this);
+  this.avatar.image.onload = _.bind(onloadCallback, this);
 
-  this.avatarImage.src = this.skin.avatar;
+  this.avatar.image.src = this.skin.avatar;
 };
 
 /**
@@ -766,20 +763,20 @@ Artist.prototype.drawTurtle = function () {
   var destX = this.x - destWidth / 2;
   var destY = this.y - destHeight + 7;
 
-  if (this.avatarImage.width === 0 || this.avatarImage.height === 0) {
+  if (this.avatar.image.width === 0 || this.avatar.image.height === 0) {
     return;
   }
 
   if (sourceX < 0 ||
       sourceY < 0 ||
-      sourceX + sourceWidth  -0 > this.avatarImage.width ||
-      sourceY + sourceHeight > this.avatarImage.height) {
+      sourceX + sourceWidth  -0 > this.avatar.image.width ||
+      sourceY + sourceHeight > this.avatar.image.height) {
     return;
   }
 
-  if (this.avatarImage.width !== 0) {
+  if (this.avatar.image.width !== 0) {
     this.ctxDisplay.drawImage(
-      this.avatarImage,
+      this.avatar.image,
       Math.round(sourceX), Math.round(sourceY),
       sourceWidth - 0, sourceHeight,
       Math.round(destX), Math.round(destY),

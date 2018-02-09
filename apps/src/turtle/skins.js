@@ -24,6 +24,7 @@ exports.load = function (assetUrl, id) {
         width: 73,
         height: 100,
         numHeadings: 36,
+        image: new Image(),
       },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
@@ -45,6 +46,7 @@ exports.load = function (assetUrl, id) {
         width: 73,
         height: 100,
         numHeadings: 18,
+        image: new Image(),
       },
       decorationAnimationNumFrames: 19,
       smoothAnimate: true,
@@ -118,6 +120,7 @@ exports.load = function (assetUrl, id) {
     width: 70,
     height: 51,
     numHeadings: 180,
+    image: new Image(),
   };
 
   // Get properties from config
