@@ -6,7 +6,7 @@ title: CS Principles Hall of Fame
 
 <img src="/images/csp-hof-2.png" width="100%"/>
 
-### In 2017, girls and underrepresented minorities shattered participation records in AP Computer Science exams. Thank you, to every teacher who is working to change the face of computer science. 
+### In 2017, girls and underrepresented minorities [shattered participation records](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) in AP Computer Science exams. Thank you, to every teacher who is working to change the face of computer science. 
 
 Find your school below!
 

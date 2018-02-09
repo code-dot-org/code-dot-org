@@ -47,7 +47,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 </details>
 
 <details>
-<summary style="font-size: 20px; color: #7665a0;">**Middle School Professional Learning** - *Applications for 2018 Just Opened!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
+<summary style="font-size: 20px; color: #7665a0;">**Middle School Professional Learning** - *Applications for 2018 are still open!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
  <p>
 
 * You don't need any prior computer science experience to get started
@@ -65,7 +65,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 
 
 <details>
-<summary style="font-size: 20px; color: #7665a0;">**High School Professional Learning** - *Applications for 2018 Just Opened!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
+<summary style="font-size: 20px; color: #7665a0;">**High School Professional Learning** - *Applications for 2018 are still open!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
 <p> 
 
 
