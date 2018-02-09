@@ -246,8 +246,8 @@ module AWS
           CDO.log.info "Instance #{instance.id} is started."
 
           public_ip_address = instance.reload.public_ip_address
-          dashboard_url = stack.outputs.select {|output| output.output_key == 'DashboardURL'}.first.output_value
-          pegasus_url = stack.outputs.select {|output| output.output_key == 'PegasusURL'}.first.output_value
+          dashboard_url = stack.outputs.detect {|output| output.output_key == 'DashboardURL'}.output_value
+          pegasus_url = stack.outputs.detect {|output| output.output_key == 'PegasusURL'}.output_value
 
           # suffix period to construct fully qualified domain name
           pegasus_domain_name = URI.parse(pegasus_url).host + '.'
@@ -305,8 +305,8 @@ module AWS
         change_status = change_resource_response.change_info.status
         change_id = change_resource_response.change_info.id
         CDO.log.info "DNS update status - #{change_status}"
-        CDO.log.info "Waiting 60 seconds for AWS Route53 to apply updated DNS records to all of its servers."
-        sleep 60 # wait 60 seconds
+        CDO.log.info "Waiting for AWS Route53 to apply updated DNS records to all of its servers."
+        route53_client.wait_until(:resource_record_sets_changed, {id: change_id})
         change_status = route53_client.get_change({id: change_id}).change_info.status
         CDO.log.info "DNS update status - #{change_status}"
         CDO.log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
