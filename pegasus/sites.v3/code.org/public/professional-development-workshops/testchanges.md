@@ -47,6 +47,24 @@ If there is no workshop near you, teachers anywhere in the world can use [our se
 
 <div style="clear:both"></div>
 
+## Benefits beyond the workshop
+
+[col-20]
+
+<img style="margin-top:-20px;margin-bottom:-30px" src="/images/avatars/fit-200/iste.png"/>
+
+[/col-20]
+
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, [we can offer an ISTE membership](https://www.iste.org/membership/code-org) exclusively to Code.org teachers at the special price of $99 (regularly $125).
+
+Check out these 3 key benefits of ISTE membership:
+
+- Professional Learning Networks made up of peer experts, including computer science educators
+- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
+- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
+
+
+
 ## Become a CS Fundamentals Facilitator
 Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Fundamentals curriculum.
 
