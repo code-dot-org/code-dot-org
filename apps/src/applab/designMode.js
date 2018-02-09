@@ -263,7 +263,6 @@ designMode.updateProperty = function (element, name, value) {
       }
       break;
     }
-    // Set an image on a button.
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -295,7 +294,6 @@ designMode.updateProperty = function (element, name, value) {
         backgroundImage.onload = fitImage;
       }
       break;
-    // Set an image on a screen.
     case 'screen-image': {
       element.setAttribute('data-canonical-image-url', value);
 
@@ -316,7 +314,6 @@ designMode.updateProperty = function (element, name, value) {
 
       break;
     }
-    // Set an image on an image element.
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
