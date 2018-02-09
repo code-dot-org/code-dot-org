@@ -8,8 +8,8 @@ if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when runni
   end
 end
 
-require 'minitest/reporters'
-reporters = [Minitest::Reporters::ProgressReporter.new]
+require 'test_reporter'
+reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
 end
