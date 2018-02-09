@@ -9,51 +9,61 @@ import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 import { styles } from './censusFormStyles';
 
+export const censusFormPrefillDataShape = PropTypes.shape({
+  userName: PropTypes.string,
+  userEmail: PropTypes.string,
+  isTeacher: PropTypes.bool,
+  schoolCountry: PropTypes.string,
+  schoolId: PropTypes.string,
+  schoolType: PropTypes.string,
+  schoolName: PropTypes.string,
+  schoolState: PropTypes.string,
+  schoolZip: PropTypes.string,
+});
+
 class CensusForm extends Component {
   static propTypes = {
-    userName: PropTypes.string,
-    userEmail: PropTypes.string,
-    isTeacher: PropTypes.bool,
-    schoolCountry: PropTypes.string,
-    schoolId: PropTypes.string,
-    schoolType: PropTypes.string,
-    schoolName: PropTypes.string,
-    schoolState: PropTypes.string,
-    schoolZip: PropTypes.string,
+    prefillData: censusFormPrefillDataShape,
   };
 
-  state = {
-    showFollowUp: false,
-    showPledge: false,
-    selectedHowMuchCS: [],
-    selectedTopics: [],
-    otherTopicsDesc: '',
-    schoolName: this.props.schoolName || '',
-    submission: {
-      name: this.props.userName || '',
-      email: this.props.userEmail || '',
-      role: this.props.isTeacher ? 'TEACHER' : '',
-      country: this.props.schoolCountry || 'United States',
-      hoc: '',
-      nces: this.props.schoolId || '',
-      schoolName: this.props.schoolName || '',
-      schoolCity: '',
-      schoolState: this.props.schoolState || '',
-      schoolZip: this.props.schoolZip || '',
-      schoolType: this.props.schoolType || '',
-      afterSchool: '',
-      tenHours: '',
-      twentyHours: '',
-      otherCS: false,
-      followUpFrequency: '',
-      followUpMore: '',
-      acceptedPledge: false,
-      share: ''
-    },
-    errors: {
-      invalidEmail: false
-    }
-  };
+  constructor(props) {
+    super(props);
+
+    const prefillData = this.props.prefillData || {};
+
+    this.state = {
+      showFollowUp: false,
+      showPledge: false,
+      selectedHowMuchCS: [],
+      selectedTopics: [],
+      otherTopicsDesc: '',
+      schoolName: prefillData['schoolName'] || '',
+      submission: {
+        name: prefillData['userName'] || '',
+        email: prefillData['userEmail'] || '',
+        role: prefillData['isTeacher'] ? 'TEACHER' : '',
+        country: prefillData['schoolCountry'] || 'United States',
+        hoc: '',
+        nces: prefillData['schoolId'] || '',
+        schoolName: prefillData['schoolName'] || '',
+        schoolCity: '',
+        schoolState: prefillData['schoolState'] || '',
+        schoolZip: prefillData['schoolZip'] || '',
+        schoolType: prefillData['schoolType'] || '',
+        afterSchool: '',
+        tenHours: '',
+        twentyHours: '',
+        otherCS: false,
+        followUpFrequency: '',
+        followUpMore: '',
+        acceptedPledge: false,
+        share: ''
+      },
+      errors: {
+        invalidEmail: false
+      }
+    };
+  }
 
   handleChange = (field, event) => {
     this.setState({
