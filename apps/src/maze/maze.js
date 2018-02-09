@@ -799,7 +799,7 @@ module.exports = class Maze {
    * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
    * @param {integer} timePerStep How much time we have allocated before the next step
    */
-  animateAction_(action, spotlightBlocks, timePerStep) {
+  animateAction(action, spotlightBlocks, timePerStep) {
     if (action.blockId) {
       studioApp().highlight(String(action.blockId), spotlightBlocks);
     }

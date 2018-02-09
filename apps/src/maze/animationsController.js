@@ -113,10 +113,10 @@ export default class AnimationsController {
       }
       timeoutList.setTimeout(() => {
         this.maze.stepSpeed = 100;
-        this.scheduleTurn_(this.maze.startDirection);
+        this.scheduleTurn(this.maze.startDirection);
       }, danceTime + 150);
     } else {
-      this.displayPegman(this.pegmanX, this.pegmanY, directionToFrame(this.pegmanD));
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, directionToFrame(this.maze.pegmanD));
 
       const finishIcon = document.getElementById('finish');
       if (finishIcon) {
@@ -267,9 +267,9 @@ export default class AnimationsController {
    * @param {number} endY Y coordinate of the target position
    */
   scheduleMove(endX, endY, timeForAnimation) {
-    var startX = this.pegmanX;
-    var startY = this.pegmanY;
-    var direction = this.pegmanD;
+    var startX = this.maze.pegmanX;
+    var startY = this.maze.pegmanY;
+    var direction = this.maze.pegmanD;
 
     var deltaX = (endX - startX);
     var deltaY = (endY - startY);
@@ -337,13 +337,13 @@ export default class AnimationsController {
    */
   scheduleTurn(endDirection) {
     var numFrames = 4;
-    var startDirection = this.pegmanD;
+    var startDirection = this.maze.pegmanD;
     var deltaDirection = endDirection - startDirection;
     utils.range(1, numFrames).forEach((frame) => {
       timeoutList.setTimeout(() => {
         this.displayPegman(
-          this.pegmanX,
-          this.pegmanY,
+          this.maze.pegmanX,
+          this.maze.pegmanY,
           directionToFrame(startDirection + deltaDirection * frame / numFrames));
       }, this.maze.stepSpeed * (frame - 1));
     });
@@ -407,8 +407,8 @@ export default class AnimationsController {
         // animate our sprite sheet
         var timePerFrame = 100;
         this.scheduleSheetedMovement_({
-            x: this.pegmanX,
-            y: this.pegmanY
+            x: this.maze.pegmanX,
+            y: this.maze.pegmanY
           }, {
             x: deltaX,
             y: deltaY
@@ -421,10 +421,10 @@ export default class AnimationsController {
         // active our gif
         timeoutList.setTimeout(() => {
           wallAnimationIcon.setAttribute('x',
-            this.maze.SQUARE_SIZE * (this.pegmanX + 0.5 + deltaX * 0.5) -
+            this.maze.SQUARE_SIZE * (this.maze.pegmanX + 0.5 + deltaX * 0.5) -
             wallAnimationIcon.getAttribute('width') / 2);
           wallAnimationIcon.setAttribute('y',
-            this.maze.SQUARE_SIZE * (this.pegmanY + 1 + deltaY * 0.5) -
+            this.maze.SQUARE_SIZE * (this.maze.pegmanY + 1 + deltaY * 0.5) -
             wallAnimationIcon.getAttribute('height'));
           wallAnimationIcon.setAttribute('visibility', 'visible');
           wallAnimationIcon.setAttributeNS(
@@ -434,14 +434,14 @@ export default class AnimationsController {
       }
     }
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, frame);
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, frame);
     }, this.maze.stepSpeed);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX + deltaX / 4, this.pegmanY + deltaY / 4,
+      this.displayPegman(this.maze.pegmanX + deltaX / 4, this.maze.pegmanY + deltaY / 4,
         frame);
     }, this.maze.stepSpeed * 2);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, frame);
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, frame);
     }, this.maze.stepSpeed * 3);
 
     if (this.maze.skin.wallPegmanAnimation) {
@@ -450,9 +450,9 @@ export default class AnimationsController {
         pegmanIcon.setAttribute('visibility', 'hidden');
         this.updatePegmanAnimation_({
           idStr: 'wall',
-          row: this.pegmanY,
-          col: this.pegmanX,
-          direction: this.pegmanD
+          row: this.maze.pegmanY,
+          col: this.maze.pegmanX,
+          direction: this.maze.pegmanD
         });
       }, this.maze.stepSpeed * 4);
     }
@@ -466,8 +466,8 @@ export default class AnimationsController {
         'http://www.w3.org/1999/xlink', 'xlink:href',
         this.maze.skin.obstacleAnimation);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX + deltaX / 2,
-                        this.pegmanY + deltaY / 2,
+      this.displayPegman(this.maze.pegmanX + deltaX / 2,
+                        this.maze.pegmanY + deltaY / 2,
                         frame);
     }, this.maze.stepSpeed);
 
@@ -526,10 +526,10 @@ export default class AnimationsController {
   scheduleAnimations(singleStep, onAnimationEnd) {
     timeoutList.clearTimeouts();
 
-    var timePerAction = this.maze.stepSpeed * this.scale.stepSpeed *
+    var timePerAction = this.maze.stepSpeed * this.maze.scale.stepSpeed *
       this.maze.skin.movePegmanAnimationSpeedScale;
     // get a flat list of actions we want to schedule
-    var actions = this.executionInfo.getActions(singleStep);
+    var actions = this.maze.executionInfo.getActions(singleStep);
 
     this.scheduleSingleAnimation_(0, actions, singleStep, timePerAction, onAnimationEnd);
   }
@@ -546,14 +546,14 @@ export default class AnimationsController {
       return;
     }
 
-    this.animateAction_(actions[index], singleStep, timePerAction);
+    this.maze.animateAction(actions[index], singleStep, timePerAction);
 
     var command = actions[index] && actions[index].command;
     var timeModifier = (this.maze.skin.actionSpeedScale && this.maze.skin.actionSpeedScale[command]) || 1;
     var timeForThisAction = Math.round(timePerAction * timeModifier);
 
     timeoutList.setTimeout(() => {
-      this.scheduleSingleAnimation_(index + 1, actions, singleStep, timePerAction);
+      this.scheduleSingleAnimation_(index + 1, actions, singleStep, timePerAction, onAnimationEnd);
     }, timeForThisAction);
   }
 
@@ -562,7 +562,7 @@ export default class AnimationsController {
    * have steps left, otherwise we're done with this execution.
    */
   finishAnimations_(singleStep, onAnimationEnd) {
-    var stepsRemaining = this.executionInfo.stepsRemaining();
+    var stepsRemaining = this.maze.executionInfo.stepsRemaining();
     var stepButton = document.getElementById('stepButton');
 
     // allow time for  additional pause if we're completely done
@@ -600,8 +600,8 @@ export default class AnimationsController {
       return;
     }
 
-    var originalFrame = directionToFrame(this.pegmanD);
-    this.displayPegman(this.pegmanX, this.pegmanY, 16);
+    var originalFrame = directionToFrame(this.maze.pegmanD);
+    this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, 16);
 
     // If victoryDance === true, play the goal animation, else reset it
     var finishIcon = document.getElementById('finish');
@@ -612,21 +612,21 @@ export default class AnimationsController {
 
     var danceSpeed = timeAlloted / 5;
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 18);
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, 18);
     }, danceSpeed);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 20);
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, 20);
     }, danceSpeed * 2);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 18);
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, 18);
     }, danceSpeed * 3);
     timeoutList.setTimeout(() => {
-      this.displayPegman(this.pegmanX, this.pegmanY, 20);
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, 20);
     }, danceSpeed * 4);
 
     timeoutList.setTimeout(() => {
       if (!victoryDance || this.maze.skin.turnAfterVictory) {
-        this.displayPegman(this.pegmanX, this.pegmanY, originalFrame);
+        this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, originalFrame);
       }
 
       if (victoryDance && this.maze.skin.transparentTileEnding) {
