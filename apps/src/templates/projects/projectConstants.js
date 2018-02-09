@@ -42,6 +42,11 @@ export const Galleries = {
   PRIVATE: 'PRIVATE',
 };
 
+export const featuredProjectTableTypes = {
+  current: 'currentFeatured',
+  archived: 'archivedUnfeatured'
+};
+
 export const MAX_PROJECTS_PER_CATEGORY = 100;
 
 /**
