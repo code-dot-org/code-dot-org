@@ -623,6 +623,13 @@ FactoryGirl.define do
       form_data_hash {build :pd_facilitator1819_application_hash, course.to_sym}
     end
     form_data {form_data_hash.to_json}
+
+    trait :locked do
+      after(:create) do |application|
+        application.update!(status: 'accepted')
+        application.lock!
+      end
+    end
   end
 
   # default to csp

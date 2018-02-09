@@ -36,6 +36,35 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     )
   end
 
+  test 'Accepted and locked facilitator application populates script_data' do
+    facilitator = create :facilitator
+    sign_in(facilitator)
+    facilitator_application = create :pd_facilitator1819_application, :locked, user: facilitator
+    facilitator_application.update(pd_workshop_id: @teachercon.id)
+
+    get :new, params: {
+      application_guid: facilitator_application.application_guid
+    }
+
+    assert_response :success
+    assert_equal(
+      {
+        options: Pd::Teachercon1819Registration.options.camelize_keys,
+        requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
+        apiEndpoint: "/api/v1/pd/teachercon_registrations",
+        applicationId: facilitator_application.id,
+        applicationType: facilitator_application.application_type,
+        course: facilitator_application.workshop.course,
+        city: facilitator_application.workshop.location_city,
+        date: facilitator_application.workshop.friendly_date_range,
+        email: facilitator.email,
+        firstName: facilitator_application.first_name,
+        lastName: facilitator_application.last_name,
+        phone: facilitator_application.sanitize_form_data_hash[:phone]
+      }.to_json, assigns(:script_data)[:props]
+    )
+  end
+
   # Accepted but unlocked teacher application should be redirected to invalid
   test 'accepted but unlocked teacher application' do
     @application.update(locked_at: nil)

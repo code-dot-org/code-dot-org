@@ -36,7 +36,7 @@ GRACE_PERIOD_DAYS = 3
 #   b) stop instance if it activity is below threshold
 # 2) publish final status to slack cron-job (list of all adhoc environments and which ones were stopped)
 def main
-  ChatClient.message 'cron-daily', 'Beginning to stop inactive adhoc instances'
+  ChatClient.message 'adhoc', 'Beginning to stop inactive adhoc instances'
   job_status = Array.new
 
   cloudformation_client = Aws::CloudFormation::Client.new
@@ -104,7 +104,7 @@ def main
     csv << StackStatus.members
     job_status.sort! {|a, b|  a.creation_time <=> b.creation_time}.each {|status| csv << status}
   end
-  ChatClient.message 'cron-daily', 'Adhoc Environments Status: \\n\\n' + job_status_csv.gsub(/\n/, '\\n')
+  ChatClient.message 'adhoc', "Adhoc Environments Status: \n\n" + job_status_csv
 end
 
 main if only_one_running?(__FILE__)
