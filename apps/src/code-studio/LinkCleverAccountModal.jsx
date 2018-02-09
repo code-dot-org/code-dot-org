@@ -69,6 +69,7 @@ export default class LinkCleverAccountModal extends React.Component {
     handleSubmit: PropTypes.func,
     handleCancel: PropTypes.func,
     isOpen: PropTypes.bool,
+    forceConnect: PropTypes.bool,
   };
 
   constructor(props) {
@@ -87,6 +88,8 @@ export default class LinkCleverAccountModal extends React.Component {
   render = () => {
     const title = locale.cleverConnectDialogTitle();
     const content = locale.cleverConnectDialogText();
+    const forceConnectTitle = locale.cleverForceConnectDialogTitle();
+    const forceConnectContent = locale.cleverForceConnectDialogContent();
     return (
       <BaseDialog
         useUpdatedStyles
@@ -97,20 +100,23 @@ export default class LinkCleverAccountModal extends React.Component {
         {...this.props}
       >
         <h2 style={styles.title}>
-          {title}
+          {this.props.forceConnect ? forceConnectTitle : title}
         </h2>
         <div style={styles.content}>
           <hr style={styles.hr} />
-          <p style={styles.contentText}>{content}</p>
+          <p style={styles.contentText}>{this.props.forceConnect ? forceConnectContent : content}</p>
           <hr style={styles.hr} />
         </div>
         <div style={styles.footer}>
-          <button
-            onClick={this.cancel}
-            style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
-          >
-            {locale.cleverConnectDeny()}
-          </button>
+          {
+            !this.props.forceConnect &&
+            <button
+              onClick={this.cancel}
+              style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
+            >
+              {locale.cleverConnectDeny()}
+            </button>
+          }
           <button
             onClick={this.ok}
             style={Object.assign({},styles.buttonPrimary)}
