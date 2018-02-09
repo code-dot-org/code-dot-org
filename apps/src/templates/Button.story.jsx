@@ -4,7 +4,7 @@ import Button from './Button';
 export default storybook => {
 
   storybook
-    .storiesOf('Button', module)
+    .storiesOf('Buttons/Button', module)
     .addStoryTable([
       {
         name:'Button with href',

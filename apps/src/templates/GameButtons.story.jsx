@@ -3,7 +3,7 @@ import {UnconnectedGameButtons, RunButton, ResetButton} from './GameButtons';
 
 export default function (storybook) {
   storybook
-    .storiesOf('RunButton', module)
+    .storiesOf('Buttons/GameButtons/RunButton', module)
     .addStoryTable([
       {
         name: 'default',
@@ -26,7 +26,7 @@ export default function (storybook) {
     ]);
 
   storybook
-    .storiesOf('ResetButton', module)
+    .storiesOf('Buttons/GameButtons/ResetButton', module)
     .addStoryTable([
       {
         name: 'default',
@@ -64,7 +64,7 @@ export default function (storybook) {
     ]);
 
   storybook
-    .storiesOf('GameButtons', module)
+    .storiesOf('Buttons/GameButtons/GameButtons', module)
     .addStoryTable([
       {
         name: 'default',
