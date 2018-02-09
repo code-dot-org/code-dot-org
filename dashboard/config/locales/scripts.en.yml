@@ -6914,7 +6914,105 @@ en:
               name: 'Programming: My Robotic Friends'
             Sequence in Maze:
               name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Introduction:
+              name: Introduction
+            Conditionals:
+              name: Conditionals
+            Private and Personal Information:
+              name: Private and Personal Information
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            MINECRAFT STAGE GOES HERE:
+              name: MINECRAFT STAGE GOES HERE
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
           title: Course E 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-f-2018:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Building a Foundation
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Introduction:
+              name: Introduction
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Envelope Variables:
+              name: Envelope Variables
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: For Loop Fun
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Songwriting with Parameters
+            Functions in Bee:
+              name: Functions in Bee
+          title: Course F 2018
           description_audience: ''
           description_short: ''
           description: ''
