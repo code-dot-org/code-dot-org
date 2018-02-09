@@ -165,7 +165,7 @@ class ProjectsController < ApplicationController
       featured_project_row = {
         projectName: project_details_value['name'],
         channel: channel,
-        type: project_details[:projectType],
+        type: project_details[:project_type],
         publishedAt: project_details[:published_at],
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
