@@ -239,6 +239,10 @@ Outputs:
     Description: Standalone Frontend Instance Profile
     Value: !Ref StandaloneFrontendInstanceProfile
     Export: {Name: !Sub "${AWS::StackName}-StandaloneFrontendInstanceProfile"}
+  StandaloneInstanceProfile:
+    Description: Standalone Instance Profile
+    Value: !Ref StandaloneInstanceProfile
+    Export: {Name: !Sub "${AWS::StackName}-StandaloneInstanceProfile"}
   StagingInstanceProfile:
     Description: Staging Instance Profile
     Value: !Ref StagingInstanceProfile

@@ -13,7 +13,7 @@
     "player_start_position": "[3, 4]",
     "player_start_direction": "1",
     "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.isPlayerNextTo(\"sheep\");\r\n    }",
-    "instructions": "Add a second “move forward” command to reach the sheep.",
+    "instructions": "Add a second `move forward` block to reach the sheep.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "instructions_important": "true",
@@ -33,7 +33,51 @@
     "disable_examples": "false",
     "show_popup_on_load": "playerSelection",
     "is_daytime": "true",
-    "available_blocks": "[\"bedrock\", \"bricks\", \"clay\", \"oreCoal\", \"dirtCoarse\", \"cobblestone\", \"oreDiamond\", \"dirt\", \"oreEmerald\", \"farmlandWet\", \"glass\", \"oreGold\", \"grass\", \"gravel\", \"houseTopA\", \"houseRightC\", \"houseRightB\", \"houseLeftA\", \"houseRightA\", \"houseBottomA\", \"houseBottomB\", \"houseBottomC\", \"houseBottomD\", \"clayHardened\", \"oreIron\", \"oreLapis\", \"lava\", \"logAcacia\", \"logBirch\", \"logJungle\", \"logOak\", \"logSpruce\", \"obsidian\", \"planksAcacia\", \"planksBirch\", \"planksJungle\", \"planksOak\", \"planksSpruce\", \"oreRedstone\", \"sand\", \"sandstone\", \"stone\", \"tnt\", \"water\", \"wool\"]",
+    "available_blocks": [
+      "bedrock",
+      "bricks",
+      "clay",
+      "cobblestone",
+      "dirt",
+      "dirtCoarse",
+      "farmlandWet",
+      "glass",
+      "grass",
+      "gravel",
+      "lava",
+      "oreCoal",
+      "oreDiamond",
+      "oreEmerald",
+      "oreGold",
+      "oreIron",
+      "oreLapis",
+      "oreRedstone",
+      "sand",
+      "sandstone",
+      "stone",
+      "tnt",
+      "water",
+      "wool",
+      "houseTopA",
+      "houseRightC",
+      "houseRightB",
+      "houseLeftA",
+      "houseRightA",
+      "houseBottomA",
+      "houseBottomB",
+      "houseBottomC",
+      "houseBottomD",
+      "logAcacia",
+      "logBirch",
+      "logJungle",
+      "logOak",
+      "logSpruce",
+      "planksAcacia",
+      "planksBirch",
+      "planksJungle",
+      "planksOak",
+      "planksSpruce"
+    ],
     "video_key": "mc_intro",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_run_button_callout\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to try your program\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"craft_drag_block_callout\",\r\n  \"callout_text\": \"Drag a \\\"move forward\\\" block and snap it below the other block\",\r\n  \"element_id\": \"[block-id='1']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"no-tip\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "embed": "false",
@@ -50,12 +94,15 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Add a second `move forward` command to reach the sheep.",
+    "markdown_instructions": "Add a second `move forward` block to reach the sheep.",
+    "top_level_procedure_autopopulate": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 03:27:01 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:45:44 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:28:17 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 22:57:23 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 03:27:01 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:45:44 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:28:17 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-25 22:57:23 +0000\",\"changed\":[\"start_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 19:47:13 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 19:49:59 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 19:50:35 +0000\",\"changed\":[\"start_blocks\",\"instructions\",\"available_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 19:51:42 +0000\",\"changed\":[\"start_blocks\",\"instructions\",\"markdown_instructions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 19:52:53 +0000\",\"changed\":[\"start_blocks\",\"instructions\",\"markdown_instructions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 19:53:23 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1
   }
@@ -70,5 +117,18 @@
         </block>
       </xml>
     </start_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="craft_moveForward">
+              <next>
+                <block type="craft_moveForward"/>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Craft>

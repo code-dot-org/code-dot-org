@@ -1,12 +1,12 @@
 require_relative './form'
 
 class K5ProfessionalDevelopmentSurvey < Form
-  AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
-  SCALE_ANSWERS = (1..10).map(&:to_s)
+  AGREEMENT_ANSWERS = (-2..2).map(&:to_s).freeze
+  SCALE_ANSWERS = (1..10).map(&:to_s).freeze
   SIMPLE_ANSWERS = %w(
     yes
     no
-  )
+  ).freeze
   DEGREE_TYPE = [
     'art',
     'business',
@@ -20,7 +20,7 @@ class K5ProfessionalDevelopmentSurvey < Form
     'science',
     'social science',
     'other',
-  ]
+  ].freeze
 
   def self.normalize(data)
     result = {}

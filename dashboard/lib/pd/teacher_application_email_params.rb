@@ -2,7 +2,7 @@ class Pd::TeacherApplicationEmailParams
   # Array of string tuples. Replace any of the first strings with the second in partner names.
   PARTNER_NAME_OVERRIDES = [
     ['Share Fair Nation', 'mindSpark Learning (formerly Share Fair Nation)']
-  ]
+  ].freeze
 
   attr_reader :teacher_application, :errors, :value_overrides, :rules
 
