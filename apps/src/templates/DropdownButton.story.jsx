@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 
 export default storybook => {
   storybook
-    .storiesOf('DropdownButton', module)
+    .storiesOf('Buttons/DropdownButton', module)
     .addStoryTable([
       {
         name: 'DropdownButton',
