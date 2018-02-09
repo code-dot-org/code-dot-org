@@ -63,9 +63,7 @@ export function fixPath(filename) {
     return filename;
   }
 
-  // Use escape() rather than encodeURIComponent() on files in the user's project,
-  // to make sure we properly handle parentheses and other characters.
-  return assetPathPrefix + channelId + '/' + escape(filename);
+  return assetPathPrefix + channelId + '/' + filename;
 }
 
 /**
