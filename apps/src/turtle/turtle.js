@@ -212,7 +212,6 @@ var Artist = function () {
 
   // The avatar image
   this.avatarImage = new Image();
-  this.numberAvatarHeadings = undefined;
 
   // The avatar animation decoration image
   this.decorationAnimationImage = new Image();
@@ -718,13 +717,6 @@ Artist.prototype.loadTurtle = function (initializing = true) {
   this.avatarImage.onload = _.bind(onloadCallback, this);
 
   this.avatarImage.src = this.skin.avatar;
-  if (this.skin.id === "anna") {
-    this.numberAvatarHeadings = 36;
-  } else if (this.skin.id === "elsa") {
-    this.numberAvatarHeadings = 18;
-  } else {
-    this.numberAvatarHeadings = 180;
-  }
 };
 
 /**
@@ -752,13 +744,13 @@ Artist.prototype.drawTurtle = function () {
 
   var sourceY;
   // Computes the index of the image in the sprite.
-  var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
+  var index = Math.floor(this.heading * this.avatar.numHeadings / 360);
   if (this.isFrozenSkin()) {
     // the rotations in the sprite sheet go in the opposite direction.
-    index = this.numberAvatarHeadings - index;
+    index = this.avatar.numHeadings - index;
 
     // and they are 180 degrees out of phase.
-    index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
+    index = (index + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
   }
   var sourceX = this.avatar.width * index;
   if (this.isFrozenSkin()) {
@@ -806,13 +798,13 @@ Artist.prototype.drawDecorationAnimation = function (when) {
   if (this.skin.id === "elsa") {
     var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
 
-    var angleIndex = Math.floor(this.heading * this.numberAvatarHeadings / 360);
+    var angleIndex = Math.floor(this.heading * this.avatar.numHeadings / 360);
 
     // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
-    angleIndex = this.numberAvatarHeadings - angleIndex;
+    angleIndex = this.avatar.numHeadings - angleIndex;
 
     // and they are 180 degrees out of phase.
-    angleIndex = (angleIndex + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
+    angleIndex = (angleIndex + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
 
     if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
       var sourceX = this.decorationAnimationImage.width * frameIndex;
@@ -1383,6 +1375,7 @@ Artist.prototype.step = function (command, values, options) {
     case 'setArtist':
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
+        this.avatar = this.skin.avatarSettings;
         this.loadTurtle(false /* initializing */);
         this.loadPatterns();
         this.selectPattern();

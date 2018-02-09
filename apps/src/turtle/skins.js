@@ -23,6 +23,7 @@ exports.load = function (assetUrl, id) {
       avatarSettings: {
         width: 73,
         height: 100,
+        numHeadings: 36,
       },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
@@ -43,6 +44,7 @@ exports.load = function (assetUrl, id) {
       avatarSettings: {
         width: 73,
         height: 100,
+        numHeadings: 18,
       },
       decorationAnimationNumFrames: 19,
       smoothAnimate: true,
@@ -115,6 +117,7 @@ exports.load = function (assetUrl, id) {
   skin.avatarSettings = {
     width: 70,
     height: 51,
+    numHeadings: 180,
   };
 
   // Get properties from config
