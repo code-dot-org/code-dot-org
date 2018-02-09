@@ -24,11 +24,65 @@ INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
 
+<% if environment == 'adhoc' -%>
+# Redirect copy of stdout/stderr to a log file for later auditing.
+LOG=<%=log_name%>
+exec >> >(tee -i $LOG)
+exec 2>&1
+
+# Temp dir that cleans up after itself.
+MYTMPDIR=$(mktemp -d)
+trap 'rm -rf "$MYTMPDIR"' EXIT
+
+# Install AWS CloudWatch Logs
+# Ref: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/EC2NewInstanceCWL.html
+AWSLOGS_AGENT_URL=https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
+AWSLOGS_CONF=$MYTMPDIR/awslogs.conf
+cat <<CONF > $AWSLOGS_CONF
+[general]
+region = $REGION
+[$LOG]
+log_group_name = $STACK
+log_stream_name = $LOG
+file = $LOG
+CONF
+curl -s $AWSLOGS_AGENT_URL | python - -n -r $REGION -c $AWSLOGS_CONF > /dev/null
+aws logs put-retention-policy \
+  --log-group-name $STACK \
+  --retention-in-days 1 \
+  --region $REGION
+<% end -%>
+<% unless @load_balancer -%>
+# Fetch acmesmith-provisioned SSL certificate and key from S3
+aws configure set s3.signature_version s3v4
+SUBDOMAIN=<%=subdomain%>
+S3_PATH=s3://$S3_BUCKET/ssl/certs/$SUBDOMAIN
+CURRENT=$S3_PATH/$(aws s3 cp $S3_PATH/current -)
+function replace_newline() {
+  sed 's/$/\\n/' | tr -d '\n'
+}
+CERT=$(aws s3 cp $CURRENT/cert.pem - | replace_newline)
+CHAIN=$(aws s3 cp $CURRENT/chain.pem - | replace_newline)
+KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
+<% end -%>
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname $FIRST_BOOT)
 cat <<JSON > $FIRST_BOOT
 {
+<% unless @load_balancer -%>
+  "cdo-nginx": {
+    "ssl_cert": {
+      "content": "$CERT"
+    },
+    "ssl_chain": {
+      "content": "$CHAIN"
+    },
+    "ssl_key": {
+      "content": "$KEY"
+    }
+  },
+<% end -%>
   "cdo-repository": {
     <% if commit %>
       "revision": "<%=commit%>",
@@ -37,21 +91,22 @@ cat <<JSON > $FIRST_BOOT
     "sync": true
   },
   "cdo-secrets": {
-<% if local_mode -%>
-    "build_apps": true,
-    "use_my_apps": true,
-<% end -%>
 <% if @frontends -%>
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
     "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
-<% if environment == :adhoc && TEMPLATE == 'cloud_formation_stack.yml.erb' -%>
+<% if TEMPLATE == 'cloud_formation_stack.yml.erb' && @database -%>
     "db_writer": "mysql://${DatabaseUsername}:${DatabasePassword}@${Database.Endpoint.Address}:${Database.Endpoint.Port}/",
 <% end -%>
 <% unless cdn_enabled -%>
     "cdn_enabled": false,
+<% end -%>
+<% if rack_env?(:adhoc) -%>
+    "image_optim": false,
+    "override_dashboard": "<%=studio_subdomain%>",
+    "override_pegasus": "<%=subdomain%>",
 <% end -%>
     "stack_name": "$STACK"
   },
@@ -71,7 +126,7 @@ JSON
 
 # Provision via Chef.
 OPTIONS="<%=local_mode ? '-z ' : ''%> -b $BRANCH -n $NODE_NAME -r '$RUN_LIST' -e $ENVIRONMENT"
-sudo -u ubuntu bash -c "aws s3 cp s3://$S3_BUCKET/chef/bootstrap-$STACK.sh - | sudo bash -s -- $OPTIONS"
+sudo -u ubuntu bash -c "aws s3 cp s3://$S3_BUCKET/<%=CHEF_KEY%>/bootstrap-$STACK.sh - | sudo bash -s -- $OPTIONS"
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=<%=daemon ? 'SUCCESS' : 'FAILURE'%>
 
 <% unless daemon -%>

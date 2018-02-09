@@ -183,6 +183,7 @@ export default class SchoolNotFound extends Component {
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolType())}
                 <select
+                  id="school_type"
                   name={this.props.fieldNames.schoolType}
                   value={this.props.schoolType}
                   onChange={this.handleChange.bind(this, "schoolType")}
@@ -207,6 +208,7 @@ export default class SchoolNotFound extends Component {
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolCity())}
                 <input
+                  id="school_city"
                   type="text"
                   name={this.props.fieldNames.schoolCity}
                   value={this.props.schoolCity}
@@ -221,6 +223,7 @@ export default class SchoolNotFound extends Component {
               <label style={labelStyle}>
                 {this.renderLabel(i18n.schoolState())}
                 <select
+                  id="school_state"
                   name={this.props.fieldNames.schoolState}
                   value={this.props.schoolState}
                   onChange={this.handleChange.bind(this, "schoolState")}

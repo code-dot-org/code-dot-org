@@ -80,13 +80,13 @@
           - exists = FeaturedProject.exists?(:storage_app_id => channel_id)
           - if exists
             - project = FeaturedProject.find_by storage_app_id: channel_id
-            - currently_featured = project.unfeatured_at == nil
+            - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
 
-          #feature_project{'style' => ('display: none;' if !exists || currently_featured)}
+          #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
             %button{id: "feature", class: "btn btn-default btn-sm"}
               Feature in gallery
 
-          #unfeature_project{'style' => ('display: none;' if exists && !currently_featured)}
+          #unfeature_project{'style' => ('display: none;' unless currently_featured)}
             %button{id: "feature", class: "btn btn-default btn-sm"}
               Stop featuring in gallery
 
