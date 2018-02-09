@@ -9,8 +9,7 @@ import {
   PROJECT_TYPE_MAP,
   featuredProjectDataPropType,
   featuredProjectTableTypes
-}
-from './projectConstants';
+} from './projectConstants';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
