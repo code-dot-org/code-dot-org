@@ -1,6 +1,10 @@
 import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
-import {stubFakeFeaturedProjectData, stubFakeUnfeaturedProjectData} from './generateFakeProjects';
+import {
+  stubFakeFeaturedProjectData,
+  stubFakeUnfeaturedProjectData
+} from './generateFakeProjects';
+import {featuredProjectTableTypes} from './projectConstants';
 
 export default storybook => {
   return storybook
@@ -12,7 +16,7 @@ export default storybook => {
         story: () => (
           <FeaturedProjectsTable
             projectList={stubFakeFeaturedProjectData}
-            tableVersion="currentFeatured"
+            tableVersion={featuredProjectTableTypes.current}
           />
         )
       },
@@ -22,7 +26,7 @@ export default storybook => {
         story: () => (
           <FeaturedProjectsTable
             projectList={stubFakeUnfeaturedProjectData}
-            tableVersion="archivedUnfeatured"
+            tableVersion={featuredProjectTableTypes.archived}
           />
         )
       },
