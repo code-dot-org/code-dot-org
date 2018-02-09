@@ -15,7 +15,8 @@ describe('SchoolInfoInterstitial', () => {
       authTokenName: 'auth_token',
       authTokenValue: 'fake_auth_token',
       existingSchoolInfo: {},
-    }
+    },
+    onClose: function () {},
   };
 
   it('renders an uncloseable dialog with school info inputs and a save button', () => {

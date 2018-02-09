@@ -61,10 +61,6 @@ export default class SchoolInfoInterstitial extends React.Component {
     onClose: PropTypes.func.isRequired,
   };
 
-  static defaultProps = {
-    onClose: function () {},
-  };
-
   constructor(props) {
     super(props);
 
