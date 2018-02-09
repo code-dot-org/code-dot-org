@@ -5,6 +5,8 @@ module UsersHelper
   include ApplicationHelper
   include SharedConstants
 
+  # If Clever takeover flags are present, the current account (user) is the one that the person just
+  # logged into (to prove ownership), and all the Clever details are migrated over, including sections.
   def check_and_apply_clever_takeover(user)
     if session['clever_link_flag'].present? && session['clever_takeover_id'].present? && session['clever_takeover_token'].present?
       uid = session['clever_takeover_id']
