@@ -5,7 +5,7 @@ import DialogButtons from './DialogButtons';
 export default storybook => {
     storybook
       .deprecatedStoriesOf(
-        'DialogButtons',
+        'Buttons/DialogButtons',
         module,
         {
           reason: "The component had way too many properties",
