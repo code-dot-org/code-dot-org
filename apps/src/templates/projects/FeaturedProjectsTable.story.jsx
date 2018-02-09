@@ -22,7 +22,7 @@ export default storybook => {
         story: () => (
           <FeaturedProjectsTable
             projectList={stubFakeUnfeaturedProjectData}
-            tableVersion="archiveFeatured"
+            tableVersion="archivedUnfeatured"
           />
         )
       },
