@@ -1,6 +1,12 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
-import {Button, FormControl, InputGroup} from 'react-bootstrap';
+import {
+  Button,
+  SplitButton,
+  MenuItem,
+  FormControl,
+  InputGroup
+} from 'react-bootstrap';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
@@ -71,8 +77,12 @@ export class DetailViewContents extends React.Component {
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     course: PropTypes.oneOf(['csf', 'csd', 'csp']),
-    reload: PropTypes.func.isRequired,
+    onUpdate: PropTypes.func.isRequired,
     isWorkshopAdmin: PropTypes.bool
+  };
+
+  static contextTypes = {
+    router: PropTypes.object.isRequired
   };
 
   constructor(props) {
@@ -109,6 +119,10 @@ export class DetailViewContents extends React.Component {
     this.setState({
       editing: true
     });
+  };
+
+  handleAdminEditClick = () => {
+    this.context.router.push(`/${this.props.applicationId}/edit`);
   };
 
   handleLockClick = () => {
@@ -174,8 +188,9 @@ export class DetailViewContents extends React.Component {
         editing: false
       });
 
-      //Reload the page, but don't display the spinner
-      this.props.reload();
+      // Notify the parent of the updated data.
+      // The parent is responsible for passing it back in as props.
+      this.props.onUpdate(applicationData);
     });
   };
 
@@ -217,10 +232,28 @@ export class DetailViewContents extends React.Component {
           Save
         </Button>
       ), (
-        <Button onClick={this.handleCancelEditClick} key="cancel">
+        <Button
+          onClick={this.handleCancelEditClick}
+          key="cancel"
+        >
           Cancel
         </Button>
       )];
+    } else if (this.props.isWorkshopAdmin) {
+      return (
+        <SplitButton
+          id="admin-edit"
+          pullRight
+          title="Edit"
+          onClick={this.handleEditClick}
+        >
+          <MenuItem
+            onSelect={this.handleAdminEditClick}
+          >
+            (Admin) Edit Form Data
+          </MenuItem>
+        </SplitButton>
+      );
     } else {
       return (
         <Button onClick={this.handleEditClick}>
