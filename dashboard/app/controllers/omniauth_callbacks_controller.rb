@@ -19,7 +19,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Redirect to open roster dialog on home page if user just authorized access
       # to Google Classroom courses and rosters
       redirect_to '/home?open=rosterDialog'
-    elsif @user.provider == 'clever'
+    elsif @user.provider == 'clever' && @user.persisted?
       handle_clever_signin(@user)
     elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
@@ -69,7 +69,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session['clever_link_flag'] = true
       session['clever_takeover_id'] = user.uid
       session['clever_takeover_token'] = user.oauth_token
-      session['force_clever_takeover'] = user.teacher? && user.email.end_with?('.cleveremailalreadytaken')
+      session['force_clever_takeover'] = user.teacher? && user.email.present? && user.email.end_with?('.cleveremailalreadytaken')
       sign_in_user
     end
   end
