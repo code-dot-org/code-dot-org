@@ -74,7 +74,7 @@ const thumbnailFormatter = function (thumbnailUrl) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
-  const url = '/projects/${rowData.type}/${rowData.channel}/';
+  const url = `/projects/${rowData.type}/${rowData.channel}/`;
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
 };
 
@@ -101,6 +101,7 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
     </QuickActionsCell>
   );
 };
+
 const dateFormatter = (time) => {
   const date = new Date(time);
   return date.toLocaleDateString();
@@ -113,7 +114,7 @@ const typeFormatter = (type) => {
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
-    tableVersion: PropTypes.oneOf(['currentFeatured', 'archiveFeatured']).isRequired
+    tableVersion: PropTypes.oneOf(['currentFeatured', 'archivedUnfeatured']).isRequired
   };
 
   state = {
