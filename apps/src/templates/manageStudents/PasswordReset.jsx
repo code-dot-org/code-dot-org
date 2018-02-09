@@ -13,8 +13,8 @@ const styles = {
 
 class PasswordReset extends Component {
   static propTypes = {
-    resetAction: PropTypes.func.isRequired,
-    initialIsResetting: PropTypes.bool
+    initialIsResetting: PropTypes.bool,
+    id: PropTypes.number,
   };
 
   state = {
@@ -36,11 +36,24 @@ class PasswordReset extends Component {
   };
 
   save = () => {
-    this.props.resetAction(this.state.input);
-
-    this.setState({
-      isResetting: false,
-      input: ''
+    $.ajax({
+      url: `/v2/students/${this.props.id}/update`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({
+        password: this.state.input,
+        editing_password: true,
+      }),
+    }).done((data) => {
+      this.setState({
+        isResetting: false,
+        input: ''
+      });
+    }).fail((jqXhr, status) => {
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
+      console.error(status);
     });
   };
 

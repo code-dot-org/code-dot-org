@@ -53,11 +53,11 @@
           làm điều đó?\n\nNếu bạn không thể, chỉ cần click \"Bắt đầu lại\" và code
           của bạn sẽ được reset."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Gợi ý: Cứ mỗi ria mèo là 75 độ dài pixel.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening,
-          try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: Mỗi lượt lag 15 độ tối thiểu.
+        2-3_Artist_Debugging_3_b: Nếu chương trình chạy quá nhanh để xem chuyện gì
+          đã xảy ra, hãy thử làm chậm nó lại với thành trượt.
       2-3 Artist Debugging 7_authored_hint:
         2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
           backward after he draws the first line?
@@ -3777,6 +3777,9 @@
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây dựng vài đường ray cho xe chở
+          quặng để bạn có thể khám phá thế giới!
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: Sử dụng các phím mũi tên để di chuyển người chơi vào
           nhà. Bạn sẽ chiến thắng khi dừng lại tại hình vuông màu cam.
@@ -4153,6 +4156,7 @@
         mc_9_b: The black specks in the wall are coal! Use `destroy block` on these
           to mine the coal.
         mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+      Valentine_artist_01_authored_hint: []
       aE1_authored_hint: []
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump
@@ -7500,11 +7504,11 @@
         courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
           including `when run`.
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the
+          turn block will let you change it to  "right".
         courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
         courseC_starWars_loops4_b: 'Each `repeat` loop will have only one command
           inside of it: `move forward`.'
-        courseC_starWars_loops4_c: Clicking on the small arrow next to "left" on the
-          turn block will let you change it to  "right".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
         courseC_starWars_loops5_a: The best solution uses one move down and one loop
@@ -8964,8 +8968,6 @@
           loop.  One will choose a random emotion for the dragon (actor 2) and the
           other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: 'You will need to use an `if / else` block for this
-          challenge. '
         courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n
           \  - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
@@ -10777,8 +10779,6 @@
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
-        courseF_bee_for9_d: This is very similar to the other stair step puzzle earlier
-          in the stage, but this time you’re counting down!
       courseF_bee_for_challenge1_authored_hint: []
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: "Take a look at this option for movement:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
@@ -12155,7 +12155,7 @@
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
           to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Gợi ý: Cứ mỗi ria mèo là 75 độ dài pixel.'
       grade2_PuppyLoops_9_authored_hint:
         2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
           backward after he draws the first line?

@@ -11,9 +11,8 @@ module Api::V1::Pd::Application
     protected
 
     def on_successful_create
-      workshop = @application.find_default_workshop
-      @application.pd_workshop_id = workshop.id if workshop
-
+      @application.assign_default_workshop!
+      @application.assign_default_fit_workshop!
       fit_workshop = @application.find_default_fit_workshop
       @application.fit_workshop_id = fit_workshop.id if fit_workshop
 

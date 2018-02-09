@@ -10,10 +10,9 @@ module Pd::Application
 
     test 'course is filled in from the form program before validation' do
       [:csf, :csd, :csp].each do |program|
-        program_name = Facilitator1819Application::PROGRAMS[program]
-        application_hash = build :pd_facilitator1819_application_hash, program: program_name
+        application_hash = build :pd_facilitator1819_application_hash_common, program
         application = build :pd_facilitator1819_application, form_data_hash: application_hash
-        assert application.valid?
+        assert application.valid?, "Errors in #{program} application: #{application.errors.full_messages}"
         assert_equal program.to_s, application.course
       end
     end
@@ -210,6 +209,42 @@ module Pd::Application
       end
 
       assert_not_equal first_enrollment.id, application.auto_assigned_fit_enrollment_id
+    end
+
+    test 'assign_default_workshop! saves the default workshop' do
+      application = create :pd_facilitator1819_application
+      workshop = create :pd_workshop
+      application.expects(:find_default_workshop).returns(workshop)
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
+      workshop = create :pd_workshop
+      application = create :pd_facilitator1819_application, pd_workshop_id: workshop.id
+      application.expects(:find_default_workshop).never
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'assign_default_fit_workshop! saves the default fit workshop' do
+      application = create :pd_facilitator1819_application
+      workshop = create :pd_workshop
+      application.expects(:find_default_fit_workshop).returns(workshop)
+
+      application.assign_default_fit_workshop!
+      assert_equal workshop.id, application.reload.fit_workshop_id
+    end
+
+    test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
+      workshop = create :pd_workshop
+      application = create :pd_facilitator1819_application, fit_workshop_id: workshop.id
+      application.expects(:find_default_fit_workshop).never
+
+      application.assign_default_fit_workshop!
+      assert_equal workshop.id, application.reload.fit_workshop_id
     end
   end
 end

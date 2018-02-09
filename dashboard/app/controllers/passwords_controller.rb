@@ -14,6 +14,11 @@ class PasswordsController < Devise::PasswordsController
         return
       end
     end
+    unless verify_recaptcha || (current_user && current_user.admin?)
+      flash[:alert] = I18n.t('password.reset_errors.captcha_required')
+      redirect_to new_user_password_path
+      return
+    end
     super
   end
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import LabeledFormComponent from './LabeledFormComponent';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import {action} from '@storybook/addon-actions';
 
 const OTHER = "Other (please specify):";
 
@@ -82,7 +83,7 @@ export default storybook => {
     errorMessages: {},
     data: {},
     options: {},
-    onChange: storybook.action('onChange')
+    onChange: action('onChange')
   };
 
   storybook

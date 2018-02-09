@@ -2088,7 +2088,7 @@
   header_home: "На главную"
   header_my_dashboard: My Dashboard
   header_courses: "курсы"
-  header_course_catalog: Course Catalog
+  header_course_catalog: "Каталог курсов"
   header_project_gallery: "Проекты"
   header_sections: "Секции"
   header_professional_learning: "Профессиональное обучение"
@@ -2184,3 +2184,9 @@
     Account” option:'
   hero_name: "Майнкрафт: Путешествие Героя"
   applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

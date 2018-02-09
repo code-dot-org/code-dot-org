@@ -135,7 +135,7 @@ export default class JSInterpreter {
   parse(options) {
     this.calculateCodeInfo(options.code);
 
-    if (!this.studioApp.hideSource) {
+    if (!this.studioApp.hideSource && this.studioApp.editor) {
       const session = this.studioApp.editor.aceEditor.getSession();
       this.isBreakpointRow = (row) => codegen.isAceBreakpointRow(session, row);
     } else {
@@ -645,10 +645,14 @@ export default class JSInterpreter {
         return;
       }
     }
-    if (reachedBreak && atMaxSpeed) {
-      // If we were running atMaxSpeed and just reached a breakpoint, the
-      // code may not be selected in the editor, so do it now:
-      this.selectCurrentCode();
+    if (atMaxSpeed) {
+      if (reachedBreak) {
+        // If we were running atMaxSpeed and just reached a breakpoint, the
+        // code may not be selected in the editor, so do it now:
+        this.selectCurrentCode();
+      } else if (this.studioApp.editor) {
+        codegen.clearDropletAceHighlighting(this.studioApp.editor);
+      }
     }
     this.isExecuting = false;
   }
@@ -813,7 +817,7 @@ export default class JSInterpreter {
    * because it is outside of the userCode area, the return value is -1
    */
   selectCurrentCode(highlightClass) {
-    if (this.studioApp.hideSource) {
+    if (this.studioApp.hideSource || !this.studioApp.editCode) {
       return -1;
     }
     return codegen.selectCurrentCode(this.interpreter,

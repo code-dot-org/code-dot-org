@@ -17,6 +17,7 @@ export default class Joining extends Teachercon1819FormComponent {
     teacherAcceptSeat: "Do you want to accept your seat in the Professional Learning Program? (Select one)",
     teacherWaitlistExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
     teacherDeclineExplain: "Optional: Please explain more why you cannot accept your seat in the Professional Learning Program.",
+    ableToAttend: "Are you able to attend your assigned TeacherCon?",
   };
 
   static associatedFields = Object.keys(Joining.labels);
@@ -34,9 +35,43 @@ export default class Joining extends Teachercon1819FormComponent {
     return formatErrors;
   }
 
+  renderCongratulations() {
+    if (this.isTeacherApplication()) {
+      return (
+        <p>
+          Congratulations on your acceptance to Code.org's Professional Learning Program
+          for {this.props.course}! Please complete this form
+          <strong> within two weeks</strong> to let us know if you will be joining us
+          this year, and contact <a href="mailto:teacher@code.org">teacher@code.org</a>
+          &nbsp;with any questions.
+        </p>
+      );
+    } else if (this.isFacilitatorApplication()) {
+      return (
+        <p>
+          Congratulations on your acceptance to Code.org’s Facilitator Development
+          Program for {this.props.course}! Please complete this registration
+          form <strong>within two weeks</strong>, and
+          contact <a href="mailto:facilitators@code.org">facilitators@code.org</a>
+          with any questions.
+        </p>
+      );
+    } else if (this.isPartnerApplication()) {
+      return (
+        <p>
+          We're looking forward to seeing you at TeacherCon this summer!
+          Please complete this registration form <strong>within two
+          weeks</strong>, and contact your Outreach Regional Manager with any
+          questions.
+        </p>
+      );
+    }
+  }
+
   render() {
     return (
       <FormGroup>
+        {this.renderCongratulations()}
         <h4>Section 1: Are you joining us?</h4>
 
         <FormGroup>
@@ -102,9 +137,10 @@ export default class Joining extends Teachercon1819FormComponent {
           {this.radioButtonsFor("ableToAttend")}
           {this.props.data.ableToAttend === "No" &&
             <p>
-              If you're unable to attend your assigned TeacherCon, please
-              contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> as
-              soon as possible so we can assist you.
+              If you're unable to attend your assigned TeacherCon, please contact{' '}
+              {this.isFacilitatorApplication() && <a href="mailto:facilitators@code.org">facilitators@code.org</a>}
+              {this.isPartnerApplication() && "your Outreach Regional Manager"}
+              {' '}as soon as possible so we can assist you.
             </p>
           }
         </FormGroup>

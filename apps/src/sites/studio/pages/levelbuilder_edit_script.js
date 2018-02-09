@@ -7,6 +7,7 @@ import { getStore, registerReducers } from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import reducers, {init} from '@cdo/apps/lib/script-editor/editorRedux';
 import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
+import { valueOr } from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
@@ -45,7 +46,7 @@ export default function initPage(scriptEditorData) {
         beta={scriptEditorData.beta}
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
-        hidden={scriptData.hidden}
+        hidden={valueOr(scriptData.hidden, true)}
         loginRequired={scriptData.loginRequired}
         hideableStages={scriptData.hideable_stages}
         studentDetailProgressView={scriptData.student_detail_progress_view}

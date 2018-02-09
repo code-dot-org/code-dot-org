@@ -3,8 +3,8 @@ import PopUpMenu from './PopUpMenu';
 
 export default storybook => {
   storybook
-      .storiesOf('PopUpMenu')
-      .addWithInfo('overview', '', () => <Overview/>);
+      .storiesOf('PopUpMenu', module)
+      .add('overview', () => <Overview/>);
 };
 
 class Overview extends Component {

@@ -713,6 +713,13 @@ describe('GameLabSprite', function () {
       expect(sprite.velocity.x).to.equal(3);
       expect(spriteTarget.velocity.x).to.equal(0);
     });
+
+    it('destroyed sprites do not collide', function () {
+      expect(sprite.overlap(spriteTarget)).to.equal(true);
+      spriteTarget.remove();
+      expect(sprite.overlap(spriteTarget)).to.equal(false);
+      expect(spriteTarget.overlap(sprite)).to.equal(false);
+    });
   });
 
   describe('collisions with groups', function () {

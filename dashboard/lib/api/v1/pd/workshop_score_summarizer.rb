@@ -9,7 +9,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :how_often_given_feedback_s,
     :how_comfortable_asking_questions_s,
     :how_often_taught_new_things_s
-  ]
+  ].freeze
 
   TEACHER_ENGAGEMENT_QUESTIONS = [
     :how_much_participated_s,
@@ -17,7 +17,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :how_often_lost_track_of_time_s,
     :how_excited_before_s,
     :overall_how_interested_s
-  ]
+  ].freeze
 
   OVERALL_SUCCESS_QUESTIONS = [
     :more_prepared_than_before_s,
@@ -25,7 +25,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :suitable_for_my_experience_s,
     :would_recommend_s,
     :part_of_community_s
-  ]
+  ].freeze
 
   INDIVIDUAL_RESPONSE_QUESTIONS = [
     :how_much_learned_s,
@@ -45,7 +45,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :suitable_for_my_experience_s,
     :would_recommend_s,
     :part_of_community_s
-  ]
+  ].freeze
 
   FREE_RESPONSE_QUESTIONS = [
     :things_facilitator_did_well_s,
@@ -53,7 +53,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :things_you_liked_s,
     :things_you_would_change_s,
     :anything_else_s
-  ]
+  ].freeze
 
   FACILITATOR_SPECIFIC_QUESTIONS = [
     :how_clearly_presented_s,
@@ -64,7 +64,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :how_often_taught_new_things_s,
     :things_facilitator_did_well_s,
     :things_facilitator_could_improve_s
-  ]
+  ].freeze
 
   def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false)
     report_rows = Hash.new(0).merge({number_teachers: 0, response_count: 0})

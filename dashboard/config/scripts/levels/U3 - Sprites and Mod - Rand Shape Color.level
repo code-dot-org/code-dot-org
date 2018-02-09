@@ -62,7 +62,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Do This",
     "markdown_instructions": "# Properties\r\n\r\nIn past levels you created rectangles and then made a bunch of variables to keep track of different qualities about that rectangles such as its position and color. Sprites take away the need to make lots of separate variables because those qualities can be controlled by built in variables. The first built in variable we are going to try is `shapeColor`.  In order to access the built in variable you need to type something like `sprite.shapeColor` where sprite is the name of the sprite you are setting the color of.\r\n\r\n# Do This\r\n\r\nThe shape color of the first sprite is set for you. Can you set the color of the second sprite?\r\n\r\n* Add a command to set the `shapeColor` of the second sprite\r\n* Run the program and test it out.",
     "show_d_pad": "false",

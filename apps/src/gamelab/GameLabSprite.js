@@ -284,6 +284,10 @@ function play() {
  * use the additional state parameter to be compatible with the interpreter.
  */
 var _collideWith = function (p5Inst, type, target, callback) {
+  if (this.removed) {
+    return false;
+  }
+
   // Grab reference to p5.Sprite for instanceof check
   var Sprite = p5Inst.Sprite;
 
@@ -358,8 +362,8 @@ var _collideWith = function (p5Inst, type, target, callback) {
  * @return {boolean} true if a collision occurred
  */
 function _collideWithOne(p5Inst, type, other, callback) {
-  // Never collide with self
-  if (other === this) {
+  // Never collide with self or removed sprites.
+  if (other === this || other.removed) {
     return false;
   }
 

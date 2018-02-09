@@ -30,10 +30,10 @@ function schoolDropdownOnChange(field, event) {
   schoolData.nces = val;
   schoolData.showDropdownError = !val;
 
-  if (val === SCHOOL_NOT_FOUND){
+  if (val === SCHOOL_NOT_FOUND) {
     $('#school-name-field').show();
     $('#hoc-event-location-field').show();
-  } else if (val){
+  } else if (val) {
     $('#school-name-field').hide();
     $('#hoc-event-location-field').hide();
   }
@@ -95,7 +95,7 @@ $(document).ready(function () {
       // continue button goes to census questions on click
       $('#continue-btn').show();
       $('#submit-btn').hide();
-    } else if (($('#hoc-event-type').val() === 'in_school')){
+    } else if (($('#hoc-event-type').val() === 'in_school')) {
       // in-school & NOT US
       $('#school-autocomplete').hide();
       $('#school-name-field').show();

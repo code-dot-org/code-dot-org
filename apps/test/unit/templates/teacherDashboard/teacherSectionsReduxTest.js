@@ -119,7 +119,7 @@ const validCourses = [
     script_ids: [112, 113],
   }];
 
-  const validScripts = [
+const validScripts = [
   {
     id: 1,
     name: "Accelerated Course",
@@ -414,7 +414,7 @@ describe('teacherSectionsRedux', () => {
         loginType: undefined,
         grade: '',
         providerManaged: false,
-        stageExtras: false,
+        stageExtras: true,
         pairingAllowed: true,
         sharingDisabled: false,
         studentCount: 0,
@@ -509,6 +509,15 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false, // Uneditable!
         })
       )).to.throw();
+    });
+
+    it('switching to non-CSF course assignment turns off stage extras', () => {
+      let state = reducer(editingNewSectionState, setValidAssignments(validCourses, validScripts));
+      state = reducer(state, editSectionProperties({scriptId: 1}));
+      expect(state.sectionBeingEdited.stageExtras).to.equal(false);
+
+      state = reducer(state, editSectionProperties({scriptId: 36}));
+      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
     });
   });
 

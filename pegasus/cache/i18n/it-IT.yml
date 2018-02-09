@@ -1740,8 +1740,8 @@
     o usato direttamente su una pennina USB
   thinkersmith2_longdescription: Gli studenti imparano come rappresentare e memorizzare
     le lettere in formato binario, come funzioni di acceso e spento. Alla fine tutti
-    gli alunni della classe potranno codificare le proprie iniziali da portare a casa
-    con loro.
+    gli studenti della classe potranno codificare le proprie iniziali da portare a
+    casa con loro.
   kodableunplugged_longdescription: 'Progettato per essere usato con semplice carta,
     il fuzzFamily Frenzy è un''introduzione alla logica della programmazione per bambini
     dai 5 anni in su. L''insegnante deve spiegare il gioco, quindi gli studenti "programmano"
@@ -2244,3 +2244,9 @@
     Account” option:'
   hero_name: 'Minecraft: Il viaggio dell''eroe'
   applab-intro_name: Introduzione a Sviluppo App
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab
