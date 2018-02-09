@@ -1,0 +1,9 @@
+name 'Begin planning your project_2018'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The Design Process
+
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true" style="width: 800px; height: 600px"></iframe>
+MARKDOWN

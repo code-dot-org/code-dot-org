@@ -27,9 +27,9 @@ export const featuredProjectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
+  thumbnailUrl: PropTypes.string,
   featuredAt: PropTypes.string.isRequired,
   unfeaturedAt: PropTypes.string,
-  isFeatured: PropTypes.bool.isRequired
 });
 
 export const projectPropType = PropTypes.shape({
