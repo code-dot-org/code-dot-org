@@ -711,6 +711,7 @@ Artist.prototype.drawImages = function () {
  */
 Artist.prototype.loadTurtle = function (initializing = true) {
   const onloadCallback = initializing ? this.display : this.drawTurtle;
+  this.avatar.image = new Image();
   this.avatar.image.onload = _.bind(onloadCallback, this);
 
   this.avatar.image.src = this.skin.avatar;
@@ -763,7 +764,7 @@ Artist.prototype.drawTurtle = function () {
   var destX = this.x - destWidth / 2;
   var destY = this.y - destHeight + 7;
 
-  if (this.avatar.image.width === 0 || this.avatar.image.height === 0) {
+  if (!this.avatar.image) {
     return;
   }
 
