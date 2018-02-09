@@ -60,6 +60,17 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   }
 end
 
+Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
+  require_rails_env
+
+  user = User.find_by_email @users[name][:email]
+  application = Pd::Application::Teacher1819Application.find_by(user: user)
+
+  steps %Q{
+    And I am on "http://studio.code.org/pd/application/principal_approval/#{application.application_guid}"
+  }
+end
+
 Given(/^I am a facilitator with completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
@@ -75,6 +86,28 @@ Given(/^I am an organizer with completed courses$/) do
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
     And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it and answer surveys
+  }
+end
+
+Given(/^I am a teacher named "([^"]*)" going to TeacherCon and am on the TeacherCon registration page$/) do |name|
+  require_rails_env
+
+  teacher_email, teacher_password = generate_user(name)
+
+  teacher = FactoryGirl.create :teacher, name: name, password: teacher_password, email: teacher_email, school_info: SchoolInfo.first
+  teachercon = FactoryGirl.create :pd_workshop, :teachercon, num_sessions: 5, organizer: (FactoryGirl.create :workshop_organizer, email: "organizer_#{SecureRandom.hex}@code.org"), processed_location: {city: 'Seattle'}.to_json
+  application_hash = FactoryGirl.build :pd_teacher1819_application_hash, school: School.first, preferred_first_name: 'Minerva', last_name: 'McGonagall'
+  application = FactoryGirl.create :pd_teacher1819_application, :locked, user: teacher, form_data: application_hash.to_json
+  application.update(pd_workshop_id: teachercon.id)
+
+  @users[name] = {
+    email: teacher_email,
+    password: teacher_password
+  }
+
+  steps %Q{
+    And I sign in as "#{name}"
+    And I am on "http://studio.code.org/pd/teachercon_registration/#{application.application_guid}"
   }
 end
 

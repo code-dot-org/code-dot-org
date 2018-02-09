@@ -74,15 +74,36 @@ const thumbnailFormatter = function (thumbnailUrl) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
-  const url = '/projects/${rowData.type}/${rowData.channel}/';
+  const url = `/projects/${rowData.type}/${rowData.channel}/`;
   return <a style={tableLayoutStyles.link} href={url} target="_blank">{projectName}</a>;
+};
+
+const unfeature = (channel) => {
+  var url = `/featured_projects/${channel}/unfeature`;
+  $.ajax({
+    url: url,
+    type:'PUT',
+    dataType:'json',
+  }).done(handleSuccess).fail(handleUnfeatureFailure);
+};
+
+const handleSuccess = () => {
+  window.location.reload(true);
+};
+
+const handleUnfeatureFailure = () => {
+  alert("Shucks. Something went wrong - this project is still featured.");
+};
+
+const handleFeatureFailure = () => {
+  alert("Shucks. Something went wrong - this project wasn't featured.");
 };
 
 const actionsFormatterFeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => {}}
+        onClick={() => unfeature(rowData.channel)}
       >
         {i18n.stopFeaturing()}
       </PopUpMenu.Item>
@@ -90,17 +111,27 @@ const actionsFormatterFeatured = (actions, {rowData}) => {
   );
 };
 
+const feature = (channel) => {
+  var url = `/featured_projects/${channel}/feature`;
+  $.ajax({
+    url: url,
+    type:'PUT',
+    dataType:'json',
+  }).done(handleSuccess).fail(handleFeatureFailure);
+};
+
 const actionsFormatterUnfeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => {}}
+        onClick={() => feature(rowData.channel)}
       >
         {i18n.featureAgain()}
       </PopUpMenu.Item>
     </QuickActionsCell>
   );
 };
+
 const dateFormatter = (time) => {
   const date = new Date(time);
   return date.toLocaleDateString();
@@ -113,7 +144,7 @@ const typeFormatter = (type) => {
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
-    tableVersion: PropTypes.oneOf(['currentFeatured', 'archiveFeatured']).isRequired
+    tableVersion: PropTypes.oneOf(['currentFeatured', 'archivedUnfeatured']).isRequired
   };
 
   state = {

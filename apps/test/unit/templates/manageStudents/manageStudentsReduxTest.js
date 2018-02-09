@@ -9,6 +9,9 @@ import manageStudents, {
   removeStudent,
   setSecretImage,
   setSecretWords,
+  editStudent,
+  startSavingStudent,
+  saveStudentSuccess,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -140,6 +143,14 @@ describe('manageStudentsRedux', () => {
       const finalState = manageStudents(nextState, startEditingStudentAction);
       assert.deepEqual(finalState.studentData[1].isEditing, true);
     });
+
+    it('sets editingData to be studentData', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = startEditingStudent(1);
+      const finalState = manageStudents(nextState, startEditingStudentAction);
+      assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
+    });
   });
 
   describe('cancelEditingStudent', () => {
@@ -187,6 +198,78 @@ describe('manageStudentsRedux', () => {
       assert.equal(stateAfterUpdating.studentData[1].secretWords, 'cats');
       assert.deepEqual(stateAfterUpdating.studentData[2].secretWords, studentEmailData[2].secretWords);
       assert.deepEqual(stateAfterUpdating.studentData[3].secretWords, studentEmailData[3].secretWords);
+    });
+  });
+
+  describe('editStudent', () => {
+    it('sets editingData to new updated values', () => {
+      // Set up a student that is in the editing state.
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = startEditingStudent(1);
+      const editingState = manageStudents(nextState, startEditingStudentAction);
+
+      // Edit name, age, and gender and verify data is updated.
+      const editStudentNameAction = editStudent(1, {name: "New name"});
+      const stateWithName = manageStudents(editingState, editStudentNameAction);
+      assert.deepEqual(stateWithName.editingData[1], {
+        ...studentEmailData[1],
+        name: "New name",
+      });
+
+      const editStudentAgeAction = editStudent(1, {age: 13});
+      const stateWithAge = manageStudents(stateWithName, editStudentAgeAction);
+      assert.deepEqual(stateWithAge.editingData[1], {
+        ...studentEmailData[1],
+        name: "New name",
+        age: 13,
+      });
+
+      const editStudentGenderAction = editStudent(1, {gender: 'm'});
+      const stateWithGender = manageStudents(stateWithAge, editStudentGenderAction);
+      assert.deepEqual(stateWithGender.editingData[1], {
+        ...studentEmailData[1],
+        name: "New name",
+        age: 13,
+        gender: 'm',
+      });
+    });
+  });
+
+  describe('saving edited data of a student', () => {
+    it('startSavingStudent sets student to disabled saving mode', () => {
+      // Start editing student
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = startEditingStudent(1);
+      const editingState = manageStudents(nextState, startEditingStudentAction);
+
+      // Start saving student
+      const startSavingAction = startSavingStudent(1);
+      const startedSavingState = manageStudents(editingState, startSavingAction);
+      assert.equal(startedSavingState.studentData[1].isEditing, true);
+      assert.equal(startedSavingState.studentData[1].isSaving, true);
+    });
+
+    it('saveStudentSuccess updates studentData and removes editingData', () => {
+      // Edit and start saving a student
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = startEditingStudent(1);
+      const editingState = manageStudents(nextState, startEditingStudentAction);
+      const editStudentNameAction = editStudent(1, {name: "New name"});
+      const editedState = manageStudents(editingState, editStudentNameAction);
+      const startSavingAction = startSavingStudent(1);
+      const startedSavingState = manageStudents(editedState, startSavingAction);
+
+      // Save student success
+      const saveStudentSuccessAction = saveStudentSuccess(1);
+      const afterSaveState = manageStudents(startedSavingState, saveStudentSuccessAction);
+
+      assert.equal(afterSaveState.editingData[1], null);
+      assert.equal(afterSaveState.studentData[1].isEditing, false);
+      assert.equal(afterSaveState.studentData[1].isSaving, false);
+      assert.equal(afterSaveState.studentData[1].name, "New name");
     });
   });
 });
