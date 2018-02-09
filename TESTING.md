@@ -92,6 +92,9 @@ or
 To run a specific unit test, you can run
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
 
+If you get an error about missing db fields, try migrating your test database:
+`RAILS_ENV=test rake db:migrate`
+
 ### UI Tests and Eyes Tests
 We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
 Or you can just use this shortcut (after you've installed chromedriver):
