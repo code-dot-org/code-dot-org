@@ -620,8 +620,13 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
-      user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type
+      # Store emails, except when using Clever
+      user.email = auth.info.email unless user.user_type == 'student' && auth.provider == 'clever'
+
+      unless User.find_by_email_or_hashed_email(user.email).nil?
+        user.email = user.email + '.cleveremailalreadytaken'
+      end
 
       if auth.provider == :the_school_project
         user.username = auth.extra.raw_info.nickname

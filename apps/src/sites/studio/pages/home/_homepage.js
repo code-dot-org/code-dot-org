@@ -187,6 +187,7 @@ window.CleverTakeoverManager = function (options) {
         isOpen={true}
         handleCancel={cancel}
         handleSubmit={submit}
+        forceConnect={options.forceConnect === 'true'}
       />,
       linkCleverDiv[0]
     );
