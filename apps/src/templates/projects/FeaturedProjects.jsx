@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
-import {featuredProjectDataPropType} from './projectConstants';
+import {featuredProjectDataPropType, featuredProjectTableTypes} from './projectConstants';
 
 export default class FeaturedProjects extends React.Component {
   static propTypes = {
@@ -14,12 +14,12 @@ export default class FeaturedProjects extends React.Component {
         <h3>Currently Featured Projects</h3>
         <FeaturedProjectsTable
           projectList={this.props.currentFeaturedProjects}
-          tableVersion="currentFeatured"
+          tableVersion={featuredProjectTableTypes.current}
         />
         <h3>Archive of Previously Featured Projects</h3>
         <FeaturedProjectsTable
           projectList={this.props.archivedUnfeaturedProjects}
-          tableVersion="archivedUnfeatured"
+          tableVersion={featuredProjectTableTypes.archived}
         />
       </div>
     );
