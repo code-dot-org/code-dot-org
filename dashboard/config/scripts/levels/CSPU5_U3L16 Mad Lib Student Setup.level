@@ -168,7 +168,6 @@
     "encrypted_examples": "ZiPKWcq+qaAjBa14UzorDk/7llVaj+qHbe29PKYUJBXgt9A14wfzlPfbaJqG\nHb7d\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -177,7 +176,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
