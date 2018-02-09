@@ -44,8 +44,7 @@ describe("DetailViewContents", () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'facilitator',
-      reload: () => {}
+      viewType: 'facilitator'
     };
 
     return mount(
