@@ -6,7 +6,8 @@ nav: employee_engagement_nav
 rightbar: blank
 ---
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jdUkMM3fbfE", play_button: 'center', letterbox: 'false' %>
+
+<iframe width="750" height="493" src="https://www.youtube.com/embed/jdUkMM3fbfE" frameborder="0" allowfullscreen></iframe>
 
 Vista Equity Group hosts an Hour of Code with the Boys and Girls Club 
 

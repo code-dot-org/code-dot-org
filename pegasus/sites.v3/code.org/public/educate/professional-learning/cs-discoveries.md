@@ -149,6 +149,22 @@ In some cases, travel may be required to attend your five-day summer workshop. P
 **Local Academic Year Workshop Expenses**
 Meals and course materials will be provided to participants who attend the local follow-up workshops. Your Regional Partner will schedule and lead these workshops, and will provide more details.
 
+## Additional benefits
+
+[col-20]
+
+<img style="margin-top:-20px;margin-bottom:-30px" src="/images/avatars/fit-200/iste.png"/>
+
+[/col-20]
+
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, [we can offer an ISTE membership](https://www.iste.org/membership/code-org) exclusively to Code.org teachers at the special price of $99 (regularly $125).
+
+Check out these 3 key benefits of ISTE membership:
+
+- Professional Learning Networks made up of peer experts, including computer science educators
+- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
+- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
+
 ## <a name="apply"></a>How to apply?
 
 - Step 1: Read about the [Program Features and Commitments](#features).
