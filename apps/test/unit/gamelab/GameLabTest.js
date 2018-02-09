@@ -61,9 +61,17 @@ describe("GameLab", () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
 
       describe("The init method", () => {
-        it("requires droplet to be in the config", () => {
-          expect(() => instance.init({level:{}}))
-            .to.throw("Game Lab requires Droplet");
+        it("does not require droplet to be in the config", () => {
+          expect(() => instance.init(
+            {
+              ...config,
+              level: {
+                ...config.level,
+                editCode: false,
+              },
+            }
+          ))
+            .not.to.throw;
           expect(() => instance.init(config))
             .not.to.throw;
         });

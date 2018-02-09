@@ -738,6 +738,12 @@ FactoryGirl.define do
     zip "98101"
   end
 
+  factory :school_stats_by_year do
+    grade_10_offered true
+    school_year "2016-2017"
+    school {build :school}
+  end
+
   # Default school to public school. More specific factories below
   factory :school, parent: :public_school
 

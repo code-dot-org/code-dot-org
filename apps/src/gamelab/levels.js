@@ -1,7 +1,6 @@
 var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
-var blockOfType = blockUtils.blockOfType;
 import { GamelabBlocks } from '@cdo/apps/gamelab/sharedGamelabBlocks';
 
 // TODO (bbuchanan): Continue documenting the game lab level object properties.
@@ -43,7 +42,7 @@ levels.sandbox =  {
   },
   freePlay: true,
   toolbox:
-    tb(blockOfType('gamelab_foo')),
+    tb(),
   startBlocks:
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
