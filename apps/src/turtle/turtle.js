@@ -187,6 +187,32 @@ class Visualization {
     this.y = DEFAULT_Y;
     this.heading = 0;
     this.penDownValue = true;
+
+    // Create hidden canvases.
+    this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
+    this.ctxImages = this.createCanvas_('images', 400, 400).getContext('2d');
+    this.ctxPredraw = this.createCanvas_('predraw', 400, 400).getContext('2d');
+    this.ctxScratch = this.createCanvas_('scratch', 400, 400).getContext('2d');
+    this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
+    this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
+    this.ctxThumbnail = this.createCanvas_('thumbnail', 180, 180).getContext('2d');
+
+    // Create hidden canvases for normalized versions
+    this.ctxNormalizedScratch = this.createCanvas_('normalizedScratch', 400, 400).getContext('2d');
+    this.ctxNormalizedAnswer = this.createCanvas_('normalizedAnswer', 400, 400).getContext('2d');
+
+    // Create display canvas.
+    this.displayCanvas = this.createCanvas_('display', 400, 400);
+    this.ctxDisplay = this.displayCanvas.getContext('2d');
+  }
+
+  // Helper for creating canvas elements.
+  createCanvas_(id, width, height) {
+    var el = document.createElement('canvas');
+    el.id = id;
+    el.width = width;
+    el.height = height;
+    return el;
   }
 }
 
@@ -228,16 +254,6 @@ var Artist = function () {
   // these get set by init based on skin.
   this.avatar = null;
   this.speedSlider = null;
-
-  this.ctxAnswer = null;
-  this.ctxNormalizedAnswer = null;
-  this.ctxImages = null;
-  this.ctxPredraw = null;
-  this.ctxScratch = null;
-  this.ctxNormalizedScratch = null;
-  this.ctxPattern = null;
-  this.ctxFeedback = null;
-  this.ctxDisplay = null;
 
   this.isDrawingAnswer_ = false;
   this.isPredrawing_ = false;
@@ -533,25 +549,8 @@ Artist.prototype.afterInject_ = function (config) {
     Blockly.JavaScript.addReservedWords('Turtle,code');
   }
 
-  // Create hidden canvases.
-  this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
-  this.ctxImages = this.createCanvas_('images', 400, 400).getContext('2d');
-  this.ctxPredraw = this.createCanvas_('predraw', 400, 400).getContext('2d');
-  this.ctxScratch = this.createCanvas_('scratch', 400, 400).getContext('2d');
-  this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
-  this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
-  this.ctxThumbnail = this.createCanvas_('thumbnail', 180, 180).getContext('2d');
-
-  // Create hidden canvases for normalized versions
-  this.ctxNormalizedScratch = this.createCanvas_('normalizedScratch', 400, 400).getContext('2d');
-  this.ctxNormalizedAnswer = this.createCanvas_('normalizedAnswer', 400, 400).getContext('2d');
-
-  // Create display canvas.
-  var displayCanvas = this.createCanvas_('display', 400, 400);
-
   var visualization = document.getElementById('visualization');
-  visualization.appendChild(displayCanvas);
-  this.ctxDisplay = displayCanvas.getContext('2d');
+  visualization.appendChild(this.visualization.displayCanvas);
 
   // TODO (br-pair): - pull this out?
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
@@ -584,15 +583,15 @@ Artist.prototype.afterInject_ = function (config) {
   // Draw the answer twice; once to the display canvas and once again in a
   // normalized version to the validation canvas
   this.isDrawingAnswer_ = true;
-  this.drawAnswer(this.ctxAnswer);
+  this.drawAnswer(this.visualization.ctxAnswer);
   this.shouldDrawNormalized_ = true;
-  this.drawAnswer(this.ctxNormalizedAnswer);
+  this.drawAnswer(this.visualization.ctxNormalizedAnswer);
   this.shouldDrawNormalized_ = false;
   this.isDrawingAnswer_ = false;
 
   if (this.level.predrawBlocks) {
     this.isPredrawing_ = true;
-    this.drawBlocksOnCanvas(this.level.predrawBlocks, this.ctxPredraw);
+    this.drawBlocksOnCanvas(this.level.predrawBlocks, this.visualization.ctxPredraw);
     this.isPredrawing_ = false;
   }
 
@@ -637,7 +636,7 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
     this.resetStepInfo_();
   }
   canvas.globalCompositeOperation = 'copy';
-  canvas.drawImage(this.ctxScratch.canvas, 0, 0);
+  canvas.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
   canvas.globalCompositeOperation = 'source-over';
 };
 
@@ -676,10 +675,10 @@ Artist.prototype.placeImage = function (filename, position, scale) {
   img.onload = _.bind(function () {
     if (img.width !== 0) {
       if (scale) {
-        this.ctxImages.drawImage(img, position[0], position[1], img.width,
+        this.visualization.ctxImages.drawImage(img, position[0], position[1], img.width,
           img.height, 0, 0, img.width * scale, img.height * scale);
       } else  {
-        this.ctxImages.drawImage(img, position[0], position[1]);
+        this.visualization.ctxImages.drawImage(img, position[0], position[1]);
       }
     }
     this.display();
@@ -699,7 +698,7 @@ Artist.prototype.placeImage = function (filename, position, scale) {
 };
 
 /**
- * Draw the images for this page and level onto this.ctxImages.
+ * Draw the images for this page and level onto this.visualization.ctxImages.
  */
 Artist.prototype.drawImages = function () {
   if (!this.level.images) {
@@ -709,9 +708,9 @@ Artist.prototype.drawImages = function () {
     var image = this.level.images[i];
     this.placeImage(image.filename, image.position, image.scale);
   }
-  this.ctxImages.globalCompositeOperation = 'copy';
-  this.ctxImages.drawImage(this.ctxScratch.canvas, 0, 0);
-  this.ctxImages.globalCompositeOperation = 'source-over';
+  this.visualization.ctxImages.globalCompositeOperation = 'copy';
+  this.visualization.ctxImages.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
+  this.visualization.ctxImages.globalCompositeOperation = 'source-over';
 };
 
 /**
@@ -784,7 +783,7 @@ Artist.prototype.drawTurtle = function () {
   }
 
   if (this.avatar.image.width !== 0) {
-    this.ctxDisplay.drawImage(
+    this.visualization.ctxDisplay.drawImage(
       this.avatar.image,
       Math.round(sourceX), Math.round(sourceY),
       sourceWidth - 0, sourceHeight,
@@ -823,7 +822,7 @@ Artist.prototype.drawDecorationAnimation = function (when) {
       var destY = this.visualization.y - destHeight / 2 - 100;
 
       if (this.decorationAnimationImage.width !== 0) {
-        this.ctxDisplay.drawImage(
+        this.visualization.ctxDisplay.drawImage(
           this.decorationAnimationImage,
           Math.round(sourceX), Math.round(sourceY),
           sourceWidth, sourceHeight,
@@ -858,25 +857,25 @@ Artist.prototype.reset = function (ignore) {
     this.visualization.y = this.level.initialY;
   }
   // Clear the display.
-  this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
-  this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
+  this.visualization.ctxScratch.canvas.width = this.visualization.ctxScratch.canvas.width;
+  this.visualization.ctxPattern.canvas.width = this.visualization.ctxPattern.canvas.width;
   if (this.isFrozenSkin()) {
-    this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    this.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    this.ctxScratch.lineWidth = 2;
+    this.visualization.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    this.visualization.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    this.visualization.ctxScratch.lineWidth = 2;
   } else {
-    this.ctxScratch.strokeStyle = '#000000';
-    this.ctxScratch.fillStyle = '#000000';
-    this.ctxScratch.lineWidth = 5;
+    this.visualization.ctxScratch.strokeStyle = '#000000';
+    this.visualization.ctxScratch.fillStyle = '#000000';
+    this.visualization.ctxScratch.lineWidth = 5;
   }
 
-  this.ctxScratch.lineCap = 'round';
-  this.ctxScratch.font = 'normal 18pt Arial';
+  this.visualization.ctxScratch.lineCap = 'round';
+  this.visualization.ctxScratch.font = 'normal 18pt Arial';
   this.display();
 
   // Clear the feedback.
-  this.ctxFeedback.clearRect(
-      0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+  this.visualization.ctxFeedback.clearRect(
+      0, 0, this.visualization.ctxFeedback.canvas.width, this.visualization.ctxFeedback.canvas.height);
 
   this.selectPattern();
 
@@ -909,37 +908,37 @@ Artist.prototype.reset = function (ignore) {
 Artist.prototype.display = function () {
   // FF on linux retains drawing of previous location of artist unless we clear
   // the canvas first.
-  var style = this.ctxDisplay.fillStyle;
-  this.ctxDisplay.fillStyle = color.white;
-  this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
-    this.ctxDisplay.canvas.width);
-  this.ctxDisplay.fillStyle = style;
+  var style = this.visualization.ctxDisplay.fillStyle;
+  this.visualization.ctxDisplay.fillStyle = color.white;
+  this.visualization.ctxDisplay.clearRect(0, 0, this.visualization.ctxDisplay.canvas.width,
+    this.visualization.ctxDisplay.canvas.width);
+  this.visualization.ctxDisplay.fillStyle = style;
 
-  this.ctxDisplay.globalCompositeOperation = 'copy';
+  this.visualization.ctxDisplay.globalCompositeOperation = 'copy';
   // Draw the images layer.
-  this.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
+  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.visualization.ctxDisplay.drawImage(this.visualization.ctxImages.canvas, 0, 0);
 
   // Draw the predraw layer.
-  this.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
+  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.visualization.ctxDisplay.drawImage(this.visualization.ctxPredraw.canvas, 0, 0);
 
   // Draw the answer layer.
   if (this.isFrozenSkin()) {
-    this.ctxDisplay.globalAlpha = 0.4;
+    this.visualization.ctxDisplay.globalAlpha = 0.4;
   } else {
-    this.ctxDisplay.globalAlpha = 0.3;
+    this.visualization.ctxDisplay.globalAlpha = 0.3;
   }
-  this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
-  this.ctxDisplay.globalAlpha = 1;
+  this.visualization.ctxDisplay.drawImage(this.visualization.ctxAnswer.canvas, 0, 0);
+  this.visualization.ctxDisplay.globalAlpha = 1;
 
   // Draw the pattern layer.
-  this.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.ctxDisplay.drawImage(this.ctxPattern.canvas, 0, 0);
+  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.visualization.ctxDisplay.drawImage(this.visualization.ctxPattern.canvas, 0, 0);
 
   // Draw the user layer.
-  this.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
+  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.visualization.ctxDisplay.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
 
   // Draw the turtle.
   this.drawTurtle();
@@ -1057,7 +1056,7 @@ Artist.prototype.execute = function () {
     // doesn't vary patterns or stickers) to a dedicated context. Note that we
     // clone this.api.log so the real log doesn't get mutated
     this.shouldDrawNormalized_ = true;
-    this.drawLogOnCanvas(this.api.log.slice(), this.ctxNormalizedScratch);
+    this.drawLogOnCanvas(this.api.log.slice(), this.visualization.ctxNormalizedScratch);
     this.shouldDrawNormalized_ = false;
 
     // Then, reset our state and draw the user's actions in a visible, animated
@@ -1326,7 +1325,7 @@ Artist.prototype.step = function (command, values, options) {
       var alpha = values[0];
       alpha = Math.max(0, alpha);
       alpha = Math.min(100, alpha);
-      this.ctxScratch.globalAlpha = alpha / 100;
+      this.visualization.ctxScratch.globalAlpha = alpha / 100;
       break;
     case 'PU':  // Pen Up
       this.visualization.penDownValue = false;
@@ -1335,11 +1334,11 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.penDownValue = true;
       break;
     case 'PW':  // Pen Width
-      this.ctxScratch.lineWidth = values[0];
+      this.visualization.ctxScratch.lineWidth = values[0];
       break;
     case 'PC':  // Pen Colour
-      this.ctxScratch.strokeStyle = values[0];
-      this.ctxScratch.fillStyle = values[0];
+      this.visualization.ctxScratch.strokeStyle = values[0];
+      this.visualization.ctxScratch.fillStyle = values[0];
       if (!this.isFrozenSkin()) {
         this.isDrawingWithPattern = false;
       }
@@ -1371,11 +1370,11 @@ Artist.prototype.step = function (command, values, options) {
       // Rotate the image such the the turtle is at the center of the bottom of
       // the image and the image is pointing (from bottom to top) in the same
       // direction as the turtle.
-      this.ctxScratch.save();
-      this.ctxScratch.translate(this.visualization.x, this.visualization.y);
-      this.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading));
-      this.ctxScratch.drawImage(img, -width / 2, -height, width, height);
-      this.ctxScratch.restore();
+      this.visualization.ctxScratch.save();
+      this.visualization.ctxScratch.translate(this.visualization.x, this.visualization.y);
+      this.visualization.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading));
+      this.visualization.ctxScratch.drawImage(img, -width / 2, -height, width, height);
+      this.visualization.ctxScratch.restore();
 
       break;
     case 'setArtist':
@@ -1465,11 +1464,11 @@ Artist.prototype.jumpForward_ = function (distance) {
 Artist.prototype.dotAt_ = function (x, y) {
   // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
   var dotLineLength = 0.1;
-  this.ctxScratch.lineTo(x + dotLineLength, y);
+  this.visualization.ctxScratch.lineTo(x + dotLineLength, y);
 };
 
 Artist.prototype.circleAt_ = function (x, y, radius) {
-  this.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
+  this.visualization.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
 };
 
 Artist.prototype.drawToTurtle_ = function (distance) {
@@ -1477,7 +1476,7 @@ Artist.prototype.drawToTurtle_ = function (distance) {
   if (isDot) {
     this.dotAt_(this.visualization.x, this.visualization.y);
   } else {
-    this.ctxScratch.lineTo(this.visualization.x, this.visualization.y);
+    this.visualization.ctxScratch.lineTo(this.visualization.x, this.visualization.y);
   }
 };
 
@@ -1555,17 +1554,17 @@ Artist.prototype.drawForwardWithJoints_ = function (distance, isDiagonal) {
 Artist.prototype.drawForwardLine_ = function (distance) {
 
   if (this.isFrozenSkin()) {
-    this.ctxScratch.beginPath();
-    this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
+    this.visualization.ctxScratch.beginPath();
+    this.visualization.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
     this.jumpForward_(distance);
     this.drawToTurtle_(distance);
-    this.ctxScratch.stroke();
+    this.visualization.ctxScratch.stroke();
   } else {
-    this.ctxScratch.beginPath();
-    this.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
+    this.visualization.ctxScratch.beginPath();
+    this.visualization.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
     this.jumpForward_(distance);
     this.drawToTurtle_(distance);
-    this.ctxScratch.stroke();
+    this.visualization.ctxScratch.stroke();
   }
 
 };
@@ -1576,18 +1575,18 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
   var startY;
 
   if (this.isFrozenSkin()) {
-    this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
+    this.visualization.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
     img = this.currentPathPattern;
     startX = this.stepStartX;
     startY = this.stepStartY;
 
     var lineDistance = Math.abs(this.stepDistanceCovered);
 
-    this.ctxPattern.save();
-    this.ctxPattern.translate(startX, startY);
+    this.visualization.ctxPattern.save();
+    this.visualization.ctxPattern.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxPattern.rotate(utils.degreesToRadians(this.visualization.heading - 90));
+    this.visualization.ctxPattern.rotate(utils.degreesToRadians(this.visualization.heading - 90));
 
     var clipSize;
     if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -1600,7 +1599,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
       clipSize = lineDistance;
     }
     if (img.width > 0 && img.height > 0 && clipSize > 0) {
-      this.ctxPattern.drawImage(img,
+      this.visualization.ctxPattern.drawImage(img,
         // Start point for clipping image
         Math.round(lineDistance), 0,
         // clip region size
@@ -1610,24 +1609,24 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
         clipSize, img.height);
     }
 
-    this.ctxPattern.restore();
+    this.visualization.ctxPattern.restore();
 
   } else {
 
-    this.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
+    this.visualization.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
     img = this.currentPathPattern;
     startX = this.visualization.x;
     startY = this.visualization.y;
 
     this.jumpForward_(distance);
-    this.ctxScratch.save();
-    this.ctxScratch.translate(startX, startY);
+    this.visualization.ctxScratch.save();
+    this.visualization.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading - 90));
+    this.visualization.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading - 90));
 
     if (img.width !== 0) {
-      this.ctxScratch.drawImage(img,
+      this.visualization.ctxScratch.drawImage(img,
         // Start point for clipping image
         0, 0,
         // clip region size
@@ -1637,7 +1636,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
         distance+img.height / 2, img.height);
     }
 
-    this.ctxScratch.restore();
+    this.visualization.ctxScratch.restore();
   }
 };
 
@@ -1646,10 +1645,10 @@ Artist.prototype.shouldDrawJoints_ = function () {
 };
 
 Artist.prototype.drawJointAtTurtle_ = function () {
-  this.ctxScratch.beginPath();
-  this.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
+  this.visualization.ctxScratch.beginPath();
+  this.visualization.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
   this.circleAt_(this.visualization.x, this.visualization.y, JOINT_RADIUS);
-  this.ctxScratch.stroke();
+  this.visualization.ctxScratch.stroke();
 };
 
 /**
@@ -1729,12 +1728,12 @@ Artist.prototype.checkAnswer = function () {
   // the sample answer image.
 
   var userCanvas = this.shouldSupportNormalization() ?
-      this.ctxNormalizedScratch :
-      this.ctxScratch;
+      this.visualization.ctxNormalizedScratch :
+      this.visualization.ctxScratch;
 
   var userImage = userCanvas.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var answerImage =
-      this.ctxNormalizedAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      this.visualization.ctxNormalizedAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   var len = Math.min(userImage.data.length, answerImage.data.length);
   var delta = 0;
@@ -1905,47 +1904,47 @@ Artist.prototype.setReportDataImage_ = function (level, reportData) {
 
 Artist.prototype.getFeedbackImage_ = function (width, height) {
 
-  var origWidth = this.ctxFeedback.canvas.width;
-  var origHeight = this.ctxFeedback.canvas.height;
+  var origWidth = this.visualization.ctxFeedback.canvas.width;
+  var origHeight = this.visualization.ctxFeedback.canvas.height;
 
-  this.ctxFeedback.canvas.width = width || origWidth;
-  this.ctxFeedback.canvas.height = height || origHeight;
+  this.visualization.ctxFeedback.canvas.width = width || origWidth;
+  this.visualization.ctxFeedback.canvas.height = height || origHeight;
 
   // Clear the feedback layer
-  this.clearImage_(this.ctxFeedback);
+  this.clearImage_(this.visualization.ctxFeedback);
 
   if (this.isFrozenSkin() && this.level.impressive) {
     // For impressive levels in frozen skins, show everything - including
     // background, characters, and pattern - along with drawing.
-    this.ctxFeedback.globalCompositeOperation = 'copy';
-    this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
-        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
+    this.visualization.ctxFeedback.globalCompositeOperation = 'copy';
+    this.visualization.ctxFeedback.drawImage(this.visualization.ctxDisplay.canvas, 0, 0,
+        this.visualization.ctxFeedback.canvas.width, this.visualization.ctxFeedback.canvas.height);
   } else {
     // Frozen free play levels must not show the character, since we don't know
     // how the drawing will look, and it could be off-brand.
-    this.drawImage_(this.ctxFeedback);
+    this.drawImage_(this.visualization.ctxFeedback);
   }
 
   // Save the canvas as a png
-  var image = this.ctxFeedback.canvas.toDataURL("image/png");
+  var image = this.visualization.ctxFeedback.canvas.toDataURL("image/png");
 
   // Restore the canvas' original size
-  this.ctxFeedback.canvas.width = origWidth;
-  this.ctxFeedback.canvas.height = origHeight;
+  this.visualization.ctxFeedback.canvas.width = origWidth;
+  this.visualization.ctxFeedback.canvas.height = origHeight;
 
   return image;
 };
 
 /**
- * Renders the artist's image onto a canvas. Relies on this.ctxImages,
- * this.ctxPredraw, and this.ctxScratch to have already been drawn.
+ * Renders the artist's image onto a canvas. Relies on this.visualization.ctxImages,
+ * this.visualization.ctxPredraw, and this.visualization.ctxScratch to have already been drawn.
  * @returns {HTMLCanvasElement} A canvas containing the thumbnail.
  * @private
  */
 Artist.prototype.getThumbnailCanvas_ = function () {
-  this.clearImage_(this.ctxThumbnail);
-  this.drawImage_(this.ctxThumbnail);
-  return this.ctxThumbnail.canvas;
+  this.clearImage_(this.visualization.ctxThumbnail);
+  this.drawImage_(this.visualization.ctxThumbnail);
+  return this.visualization.ctxThumbnail.canvas;
 };
 
 Artist.prototype.clearImage_ = function (context) {
@@ -1960,28 +1959,19 @@ Artist.prototype.drawImage_ = function (context) {
   // Draw the images layer.
   if (!this.level.discardBackground) {
     context.globalCompositeOperation = 'source-over';
-    context.drawImage(this.ctxImages.canvas, 0, 0,
+    context.drawImage(this.visualization.ctxImages.canvas, 0, 0,
       context.canvas.width, context.canvas.height);
   }
 
   // Draw the predraw layer.
   context.globalCompositeOperation = 'source-over';
-  context.drawImage(this.ctxPredraw.canvas, 0, 0,
+  context.drawImage(this.visualization.ctxPredraw.canvas, 0, 0,
     context.canvas.width, context.canvas.height);
 
   // Draw the user layer.
   context.globalCompositeOperation = 'source-over';
-  context.drawImage(this.ctxScratch.canvas, 0, 0,
+  context.drawImage(this.visualization.ctxScratch.canvas, 0, 0,
     context.canvas.width, context.canvas.height);
-};
-
-// Helper for creating canvas elements.
-Artist.prototype.createCanvas_ = function (id, width, height) {
-  var el = document.createElement('canvas');
-  el.id = id;
-  el.width = width;
-  el.height = height;
-  return el;
 };
 
 /**
