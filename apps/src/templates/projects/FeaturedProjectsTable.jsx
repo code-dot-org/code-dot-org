@@ -118,8 +118,9 @@ const typeFormatter = (type) => {
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
-    tableVersion: PropTypes.oneOf(featuredProjectTableTypes.values).isRequired
+    tableVersion: PropTypes.oneOf(Object.values(featuredProjectTableTypes)).isRequired
   };
+
 
   state = {
     [COLUMNS.PROJECT_NAME]: {
