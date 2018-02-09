@@ -77,7 +77,7 @@ export class DetailViewContents extends React.Component {
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     course: PropTypes.oneOf(['csf', 'csd', 'csp']),
-    onUpdate: PropTypes.func.isRequired,
+    onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool
   };
 
@@ -190,7 +190,9 @@ export class DetailViewContents extends React.Component {
 
       // Notify the parent of the updated data.
       // The parent is responsible for passing it back in as props.
-      this.props.onUpdate(applicationData);
+      if (this.props.onUpdate) {
+        this.props.onUpdate(applicationData);
+      }
     });
   };
 
