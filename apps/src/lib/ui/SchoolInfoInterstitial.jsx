@@ -178,14 +178,16 @@ export default class SchoolInfoInterstitial extends React.Component {
       >
         <div style={styles.container}>
           <div style={styles.heading}>
-            We want to bring Computer Science to every student - help us track our progress!
+            {i18n.schoolInfoInterstitialTitle()}
           </div>
           {this.state.showSchoolInfoUnknownError && (
-            <p style={styles.error}>We encountered an error with your submission. Please try again.</p>
+            <p style={styles.error}>
+              {i18n.schoolInfoInterstitialUnknownError()}
+            </p>
           )}
           <div style={styles.middle}>
             <p>
-              Please enter your school information below.
+              {i18n.schoolInfoInterstitialDescription()}
             </p>
             <SchoolInfoInputs
               ref={ref => this.schoolInfoInputs = ref}
