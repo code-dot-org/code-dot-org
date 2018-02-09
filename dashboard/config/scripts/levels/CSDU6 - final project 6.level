@@ -100,7 +100,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "true",
     "show_debug_watch": "true",
     "expand_debugger": "false",
@@ -108,11 +108,17 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - final project template",
-    "markdown_instructions": "# Finishing Touches\r\n\r\nAdd any finishing touches still needed to make your program awesome.",
-    "contained_level_names": null
+    "markdown_instructions": "# Finishing Touches\r\n\r\nAdd any finishing touches still needed to make your innovation awesome. If you have time, test out your innovation with some potential users to gather feedback and find opportunities for improvement. When you're totally finished, click the \"Submit\" button to turn it in!",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-09 19:10:37 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

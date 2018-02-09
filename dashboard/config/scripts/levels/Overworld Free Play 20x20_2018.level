@@ -72,7 +72,6 @@
     "special_level_type": "freeplay",
     "instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
     "video_key": "mc_congrats_no_share",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -85,7 +84,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
-    "use_player": "false"
+    "use_player": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
