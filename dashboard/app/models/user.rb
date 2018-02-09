@@ -624,7 +624,7 @@ class User < ActiveRecord::Base
       # Store emails, except when using Clever
       user.email = auth.info.email unless user.user_type == 'student' && auth.provider == 'clever'
 
-      unless User.find_by_email_or_hashed_email(user.email).nil?
+      if auth.provider == 'clever' && User.find_by_email_or_hashed_email(user.email)
         user.email = user.email + '.cleveremailalreadytaken'
       end
 
