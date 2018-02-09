@@ -1,14 +1,12 @@
-import { SVG_NS } from '../constants';
-import { displayPegman, getPegmanYForRow } from './drawMap';
-import * as timeoutList from '../lib/util/timeoutList';
-import * as utils from '../utils';
-import {
-  Direction,
-  SquareType,
-  directionToFrame,
-} from './tiles';
+const SVG_NS = require('../constants').SVG_NS;
+const drawMap = require('./drawMap');
+const displayPegman = drawMap.displayPegman;
+const getPegmanYForRow = drawMap.getPegmanYForRow;
+const timeoutList = require('../lib/util/timeoutList');
+const utils = require('../utils');
+const tiles = require('./tiles');
 
-export default class AnimationsController {
+module.exports = class AnimationsController {
   constructor(maze, svg) {
     this.maze = maze;
     this.svg = svg;
@@ -58,7 +56,7 @@ export default class AnimationsController {
         pegmanImage: this.maze.skin.celebrateAnimation,
         row: this.maze.subtype.start.y,
         col: this.maze.subtype.start.x,
-        direction: Direction.NORTH,
+        direction: tiles.Direction.NORTH,
         numColPegman: this.maze.skin.celebratePegmanCol,
         numRowPegman: this.maze.skin.celebratePegmanRow
       });
@@ -116,7 +114,7 @@ export default class AnimationsController {
         this.scheduleTurn(this.maze.startDirection);
       }, danceTime + 150);
     } else {
-      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, directionToFrame(this.maze.pegmanD));
+      this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, tiles.directionToFrame(this.maze.pegmanD));
 
       const finishIcon = document.getElementById('finish');
       if (finishIcon) {
@@ -297,7 +295,7 @@ export default class AnimationsController {
       timeoutList.setTimeout(() => {
         movePegmanIcon.setAttribute('visibility', 'hidden');
         pegmanIcon.setAttribute('visibility', 'visible');
-        this.displayPegman(endX, endY, directionToFrame(direction));
+        this.displayPegman(endX, endY, tiles.directionToFrame(direction));
         if (this.maze.subtype.isWordSearch()) {
           this.maze.subtype.markTileVisited(endY, endX, true);
         }
@@ -311,7 +309,7 @@ export default class AnimationsController {
           this.displayPegman(
             startX + deltaX * frame / numFrames,
             startY + deltaY * frame / numFrames,
-            directionToFrame(direction));
+            tiles.directionToFrame(direction));
         }, timePerFrame * frame);
       });
     }
@@ -344,7 +342,7 @@ export default class AnimationsController {
         this.displayPegman(
           this.maze.pegmanX,
           this.maze.pegmanY,
-          directionToFrame(startDirection + deltaDirection * frame / numFrames));
+          tiles.directionToFrame(startDirection + deltaDirection * frame / numFrames));
       }, this.maze.stepSpeed * (frame - 1));
     });
   }
@@ -352,12 +350,12 @@ export default class AnimationsController {
   crackSurroundingIce(targetX, targetY) {
     // Remove cracked ice, replace surrounding ice with cracked ice.
     this.updateSurroundingTiles_(targetY, targetX, (tileElement, cell) => {
-      if (cell.getTile() === SquareType.OPEN) {
+      if (cell.getTile() === tiles.SquareType.OPEN) {
         tileElement.setAttributeNS(
           'http://www.w3.org/1999/xlink', 'xlink:href',
           this.maze.skin.largerObstacleAnimationTiles
         );
-      } else if (cell.getTile() === SquareType.OBSTACLE) {
+      } else if (cell.getTile() === tiles.SquareType.OBSTACLE) {
         tileElement.setAttribute('opacity', 0);
       }
     });
@@ -413,7 +411,7 @@ export default class AnimationsController {
             x: deltaX,
             y: deltaY
           }, numFrames, timePerFrame, 'wall',
-          Direction.NORTH, true);
+          tiles.Direction.NORTH, true);
         setTimeout(function () {
           document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
         }, numFrames * timePerFrame);
@@ -600,7 +598,7 @@ export default class AnimationsController {
       return;
     }
 
-    var originalFrame = directionToFrame(this.maze.pegmanD);
+    var originalFrame = tiles.directionToFrame(this.maze.pegmanD);
     this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, 16);
 
     // If victoryDance === true, play the goal animation, else reset it
@@ -684,4 +682,4 @@ export default class AnimationsController {
     var clipRect = document.getElementById('clipRect');
     displayPegman(this.maze.skin, pegmanIcon, clipRect, x, y, frame);
   }
-}
+};
