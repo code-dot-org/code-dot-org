@@ -1,6 +1,5 @@
 ---
 title: Student Recruitment
-nav: educate_nav
 video_player: true
 theme: responsive
 ---
@@ -88,7 +87,7 @@ Find more videos to inspire your students at [code.org/inspire](/inspire), as we
 </br> 
 </br>
 
-* **Curriculum brochures:** [CS Discoveries brochure](https://code.org/files/programs/CSD_1-pager_final.pdf) | [CS Principles brochure](https://code.org/files/programs/CSP_1-pager_final.pdf) | [CS in Algebra](/files/CSinAlgebra_one_pager.pdf) | [CS in Science](/files/CSinScience_one_pager.pdf) | [Exploring Computer Science](/files/ECS_one_pager.pdf)
+* **Curriculum brochures:** [CS Discoveries brochure](https://code.org/files/CSDiscoveries_1-pager.pdf) | [CS Principles brochure](https://code.org/files/CSPrinciples_1-pager.pdf) | [CS in Algebra](/files/CSinAlgebra_one_pager.pdf) | [CS in Science](/files/CSinScience_one_pager.pdf) | [Exploring Computer Science](/files/ECS_one_pager.pdf)
 
 
 More on how to talk to stakeholders like counselors, from fellow CS teachers: [code.org/pitch](/pitch)

@@ -14,7 +14,7 @@ module Pd::Payment
   class PaymentCalculatorBase
     include Singleton
 
-    DATE_FORMAT = '%m/%d/%Y'
+    DATE_FORMAT = '%m/%d/%Y'.freeze
 
     # Calculates payment information for a workshop and its teachers.
     # @param workshop [Pd::Workshop]

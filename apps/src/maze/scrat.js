@@ -1,5 +1,5 @@
-import {SquareType, Direction} from './tiles';
-import _ from 'lodash';
+import { SquareType, Direction } from './tiles';
+import { randomValue } from '../utils';
 
 import Subtype from './subtype';
 
@@ -62,7 +62,7 @@ export default class Scrat extends Subtype {
         possibleIslandLocations.push({row, col});
       }
     }
-    const island = _.sample(possibleIslandLocations);
+    const island = randomValue(possibleIslandLocations);
     const preFilled = {};
     if (island) {
       preFilled[`${island.row + 0}_${island.col + 0}`] = 'island_start';
@@ -91,7 +91,7 @@ export default class Scrat extends Subtype {
 
           tile = preFilled[`${row}_${col}`];
           if (!tile) {
-            tile = _.sample(['empty', 'empty', 'empty', 'empty', 'empty', 'lily2',
+            tile = randomValue(['empty', 'empty', 'empty', 'empty', 'empty', 'lily2',
               'lily3', 'lily4', 'lily5', 'lily1', 'log', 'lily1', 'land1']);
           }
 

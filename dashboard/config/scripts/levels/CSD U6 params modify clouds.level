@@ -118,10 +118,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "palette_category_at_start": "functions",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

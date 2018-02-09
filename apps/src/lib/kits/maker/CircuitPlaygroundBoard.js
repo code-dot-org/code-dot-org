@@ -79,6 +79,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         resolve();
       });
       board.on('error', reject);
+      playground.on('error', reject);
     });
   }
 
