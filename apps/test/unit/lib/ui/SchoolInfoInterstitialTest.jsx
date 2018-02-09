@@ -122,6 +122,21 @@ describe('SchoolInfoInterstitial', () => {
     );
   });
 
+  it('interprets initial country "US" as "United States"', () => {
+    const wrapper = shallow(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            country: 'US',
+          },
+        }}
+      />
+    );
+    expect(wrapper.find(SchoolInfoInputs)).to.have.prop('country', 'United States');
+  });
+
   describe('initial NCES ID', () => {
     // Tricky behavior of inner component null (or other falsy) NCES id
     // shows the school dropdown in an initial state.  An NCES id of '-1' will

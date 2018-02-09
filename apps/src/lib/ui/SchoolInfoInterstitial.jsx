@@ -69,6 +69,12 @@ export default class SchoolInfoInterstitial extends React.Component {
     super(props);
 
     const {existingSchoolInfo} = this.props.scriptData;
+
+    let initialCountry = existingSchoolInfo.country || '';
+    if (initialCountry === 'US') {
+      initialCountry = 'United States';
+    }
+
     const initialNcesSchoolId = existingSchoolInfo.school_id ?
       existingSchoolInfo.school_id :
       (
@@ -80,7 +86,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       ) ? '-1' : '';
 
     this.state = {
-      country: existingSchoolInfo.country || '',
+      country: initialCountry,
       schoolType: existingSchoolInfo.school_type || '',
       schoolName: existingSchoolInfo.school_name || '',
       schoolState: existingSchoolInfo.state || '',
