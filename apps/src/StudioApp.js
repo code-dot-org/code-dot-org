@@ -653,7 +653,7 @@ StudioApp.prototype.scaleLegacyShare = function () {
 
 StudioApp.prototype.getCode = function () {
   if (!this.editCode) {
-    throw "getCode() requires editCode";
+    return codegen.workspaceCode(Blockly);
   }
   if (this.hideSource) {
     return this.startBlocks_;

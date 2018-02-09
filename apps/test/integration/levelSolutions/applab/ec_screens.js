@@ -560,17 +560,19 @@ module.exports = {
     },
 
     {
-      description: "add a background with spaces",
+      description: "add a background image name with spaces and parens",
       editCode: true,
+      // Use an asset path which we can access so that image loading will succeed
+      assetPathPrefix: '/base/test/integration/assets/',
       xml: "",
       runBeforeClick: function (assert) {
         $("#design_screen1").click();
 
         validatePropertyRow(0, 'id', 'screen1', assert);
 
-        // take advantage of the fact that we expose the filesystem via
-        var assetUrl = '/base/static/flappy promo.png';
-        var encodedAssetUrl = '/base/static/flappy%20promo.png';
+        // take advantage of the fact that we expose the filesystem via localhost
+        var assetUrl = 'flappy (1).png';
+        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20%281%29.png';
         var imageInput = $("#design-properties input").eq(2)[0];
 
         ReactTestUtils.Simulate.change(imageInput, {

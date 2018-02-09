@@ -1,0 +1,6 @@
+stage 'Programming: My Robotic Friends', flex_category: 'Ramp Up to Course E'
+level 'courseB_unplugged_MRF_2018'
+
+stage 'Sequence in Maze', flex_category: 'csf_e_1'
+level 'courseD_video_ramp1_2018'
+level 'courseD_maze_ramp1_2018'
