@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   return storybook
-    .storiesOf('ConfirmDeleteButton', module)
+    .storiesOf('Buttons/ConfirmDeleteButton', module)
     .addStoryTable([
       {
         name: 'basic example',
