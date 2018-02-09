@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import {UnconnectedCensusForm as CensusForm} from './CensusForm';
+import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
@@ -37,15 +37,7 @@ class YourSchool extends Component {
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
-    userName: PropTypes.string,
-    userEmail: PropTypes.string,
-    isTeacher: PropTypes.bool,
-    schoolCountry: PropTypes.string,
-    schoolId: PropTypes.string,
-    schoolType: PropTypes.string,
-    schoolName: PropTypes.string,
-    schoolState: PropTypes.string,
-    schoolZip: PropTypes.string,
+    prefillData: censusFormPrefillDataShape,
     hideMap: PropTypes.bool
   };
 
@@ -104,15 +96,7 @@ class YourSchool extends Component {
            </div>
         )}
         <CensusForm
-          userName={this.props.userName}
-          userEmail={this.props.userEmail}
-          isTeacher={this.props.isTeacher}
-          schoolCountry={this.props.schoolCountry}
-          schoolId={this.props.schoolId}
-          schoolType={this.props.schoolType}
-          schoolName={this.props.schoolName}
-          schoolState={this.props.schoolState}
-          schoolZip={this.props.schoolZip}
+          prefillData={this.props.prefillData}
         />
       </div>
     );
