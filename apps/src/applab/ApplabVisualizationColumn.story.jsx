@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
 import {ApplabInterfaceMode} from './constants';
+import {Provider} from 'react-redux';
+import {action} from '@storybook/addon-actions';
+import {createStore} from 'redux';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 
 export default function (storybook) {
@@ -9,7 +10,7 @@ export default function (storybook) {
   function StubProvider({state, children}) {
     const store = createStore(
       (s, a) => {
-        storybook.action(a);
+        action(a);
         return s;
       },
       state

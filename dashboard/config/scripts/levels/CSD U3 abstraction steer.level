@@ -66,7 +66,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"red_car\"\n    ],\n    \"propsByKey\": {\n        \"red_car\": {\n            \"name\": \"red_car\",\n            \"sourceUrl\": \"https://curriculum.code.org/images/sprites/red_car.png\",\n            \"frameSize\": {\n                \"x\": 170,\n                \"y\": 76\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",
     "markdown_instructions": "# Steering your car\r\n\r\nNow you have enough information to control your car with the keyboard using conditionals.  Every time the left arrow key is pressed, the car will turn to the left.  Can you use the `if` block to make the car turn to the right when the right arrow key is pressed?  (Don't worry about speeding up and slowing down.  You will do that on the next level.)\r\n\r\n# Do This\r\n\r\nInside the draw loop:\r\n* check whether the right arrow key is pressed\r\n* if it's pressed, turn the car to the right\r\n\r\n*Challenge: Can you modify the code so that the car turns faster?*",

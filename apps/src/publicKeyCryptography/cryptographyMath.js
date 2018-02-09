@@ -30,12 +30,12 @@ export const privateKeyList = memoize(publicModulus => {
   }
   let potentialVals = [];
   let privateKeys = [];
-  for (let i = 0; i < publicModulus - 2; i++){
+  for (let i = 0; i < publicModulus - 2; i++) {
     potentialVals.push(i);
   }
   potentialVals[1] = 0;
   for (let j = 0; j < publicModulus - 2; j++) {
-    if (potentialVals[j] !== 0){
+    if (potentialVals[j] !== 0) {
       privateKeys.push(j);
       const inverse = computePublicKey(j, publicModulus);
       potentialVals[inverse] = 0;

@@ -51,6 +51,7 @@ module.exports = {
     "react/self-closing-comp": "error",
     "react/wrap-multilines": "error", // autofixable
     "semi": "off", // enforced by babel/semi
+    "space-before-blocks": "error",
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never"

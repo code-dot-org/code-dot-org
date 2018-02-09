@@ -33,7 +33,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Do This",
     "markdown_instructions": "# Sprites\r\n\r\n**Creating Sprites:**  <img src = \"https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png\" style = \"height:30px\">  creates a new sprite and assigns it to a variable.  The default name is `sprite`, so you'll want to change it to something more meaningful.\r\n\r\n**Drawing Sprites:** Sprites only appear on the screen when you draw them there. Calling ![](https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png) will draw all of your created sprites on the screen.\r\n\r\n<img src=\"https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png\" style=\"width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px\">\r\n\r\n# Do This\r\n\r\nThis program includes comments that let you know where to place code but otherwise is blank. Your program should look like the image on the right.\r\n\r\n* Add `var sprite = createSprite(200, 200)` under the comment `Creating Sprites`.\r\n\t* You can ignore the yellow triangle warning for now.  It's just telling you that you haven't used your sprite yet.\r\n* Add `drawSprites()` under the comment `Drawing`.\r\n* **Run the code** to draw your first sprite on the screen.\r\n\r\n_Hint: Sprites are drawn from their center, which means that center of the square (not the top left corner) is at (200, 200)._",
     "show_d_pad": "false",

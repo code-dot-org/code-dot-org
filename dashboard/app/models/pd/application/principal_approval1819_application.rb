@@ -48,6 +48,7 @@ module Pd::Application
     belongs_to :teacher_application, class_name: 'Pd::Application::Teacher1819Application',
       primary_key: :application_guid, foreign_key: :application_guid
 
+    REPLACE_COURSE_NO = "No, this course will be added to the schedule, but it won't replace an existing computer science course"
     def self.options
       {
         title: COMMON_OPTIONS[:title],
@@ -59,7 +60,7 @@ module Pd::Application
         terms_per_year: COMMON_OPTIONS[:terms_per_year],
         replace_course: [
           YES,
-          "No, this course will be added to the schedule, but it won't replace an existing computer science course",
+          REPLACE_COURSE_NO,
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [

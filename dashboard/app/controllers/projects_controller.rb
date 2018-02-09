@@ -83,6 +83,10 @@ class ProjectsController < ApplicationController
       name: 'New Game Lab Project',
       login_required: true,
     },
+    gamelab_jr: {
+      name: 'New Game Lab Jr Project',
+      levelbuilder_required: true,
+    },
     makerlab: {
       name: 'New Maker Lab Project',
       login_required: true
@@ -334,7 +338,11 @@ class ProjectsController < ApplicationController
   end
 
   def get_from_cache(key)
-    @@project_level_cache[key] ||= Level.find_by_key(key)
+    if Script.should_cache?
+      @@project_level_cache[key] ||= Level.find_by_key(key)
+    else
+      Level.find_by_key(key)
+    end
   end
 
   # For certain actions, check a special permission before proceeding.

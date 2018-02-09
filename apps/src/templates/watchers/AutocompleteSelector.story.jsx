@@ -1,5 +1,6 @@
 import React from 'react';
 import AutocompleteSelector from './AutocompleteSelector';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   storybook
@@ -12,9 +13,9 @@ export default storybook => {
             currentText="test"
             currentIndex={-1}
             options={['one', 'two']}
-            onOptionClicked={storybook.action("click")}
-            onOptionHovered={storybook.action("hover")}
-            onClickOutside={storybook.action("click outside")}
+            onOptionClicked={action("click")}
+            onOptionHovered={action("hover")}
+            onClickOutside={action("click outside")}
           />
         )
       },
@@ -25,9 +26,9 @@ export default storybook => {
             currentText="test"
             currentIndex={0}
             options={['one', 'two']}
-            onOptionClicked={storybook.action("click")}
-            onOptionHovered={storybook.action("hover")}
-            onClickOutside={storybook.action("click outside")}
+            onOptionClicked={action("click")}
+            onOptionHovered={action("hover")}
+            onClickOutside={action("click outside")}
           />
         )
       }

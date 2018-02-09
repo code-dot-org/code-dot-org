@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import * as storybook from '@storybook/react';
-import infoAddon from '@storybook/addon-info';
 import Node from '@storybook/addon-info/dist/components/Node';
 import Props from '@storybook/addon-info/dist/components/Props';
 import {Pre} from '@storybook/addon-info/dist/components/markdown/code';
@@ -175,7 +174,6 @@ storybook.setAddon({
   }
 });
 
-storybook.setAddon(infoAddon);
 storybook.setAddon(addStoriesGroup);
 storybook.addDecorator(story => {
   var rendered = story();

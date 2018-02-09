@@ -1121,6 +1121,10 @@ When /^I press enter key$/ do
   @browser.action.send_keys(:return).perform
 end
 
+When /^I press double-quote key$/ do
+  @browser.action.send_keys('"').perform
+end
+
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end

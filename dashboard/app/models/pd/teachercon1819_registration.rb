@@ -2,15 +2,17 @@
 #
 # Table name: pd_teachercon1819_registrations
 #
-#  id                :integer          not null, primary key
-#  pd_application_id :integer
-#  form_data         :text(65535)
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
+#  id                  :integer          not null, primary key
+#  pd_application_id   :integer
+#  form_data           :text(65535)
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  regional_partner_id :integer
 #
 # Indexes
 #
-#  index_pd_teachercon1819_registrations_on_pd_application_id  (pd_application_id)
+#  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
+#  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
@@ -20,6 +22,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   include Teachercon1819RegistrationConstants
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
+  belongs_to :regional_partner, class_name: 'RegionalPartner'
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
@@ -34,70 +37,79 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     end
   end
 
+  after_create :send_teachercon_confirmation_email
+  def send_teachercon_confirmation_email
+    if regional_partner_id?
+      Pd::Teachercon1819RegistrationMailer.regional_partner(self).deliver_now
+    else
+      return unless pd_application.workshop && pd_application.workshop.teachercon?
+      Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
+    end
+  end
+
   def self.options
     {
-      dietaryNeeds: [
+      dietary_needs: [
         'None',
         'Vegetarian',
         'Vegan',
+        'Kosher',
         'Halal',
         'Gluten Free',
         TEXT_FIELDS[:food_allergy],
       ],
-      liveFarAway: YES_OR_NO,
-      addressState: get_all_states_with_dc.to_h.values,
-      howTraveling: [
+      live_far_away: YES_OR_NO,
+      address_state: get_all_states_with_dc.to_h.values,
+      how_traveling: [
         'I will drive by myself',
         'I will carpool with another TeacherCon attendee',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',
       ],
-      needHotel: YES_OR_NO,
-      needAda: [YES, NO, TEXT_FIELDS[:other_please_explain]],
-      ableToAttend: YES_OR_NO,
-      teacherAcceptSeat: [
+      need_hotel: YES_OR_NO,
+      need_ada: YES_OR_NO,
+      able_to_attend: YES_OR_NO,
+      teacher_accept_seat: [
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_other],
         TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline],
       ],
-      howOfferCsp: [
+      how_offer_csp: [
         "As an AP course",
         "As a non-AP course",
         "Both: I will teach multiple sections, some as AP and some as non-AP",
         "I'm not sure",
       ],
-      haveTaughtAp: [
+      have_taught_ap: [
         YES, NO,
         "I'm not sure",
       ],
-      haveTaughtWrittenProjectCourse: [
+      have_taught_written_project_course: [
         YES, NO,
         "I'm not sure",
       ],
-      gradingSystem: [
+      grading_system: [
         'Numerical and/or letter grades (e.g., 0 - 100% or F- A)',
         'Rank-based grading (distribute grades based on student rank)',
         'Standards-based grading (grades assigned based on exceeding, meeting, or falling below the standard)',
         TEXT_FIELDS[:other_please_list]
       ],
-      howManyHours: [
+      how_many_hours: [
         "At least 100 course hours",
         "50 to 99 course hours",
         "Less than 50 course hours",
         "I'm not sure",
       ],
-      howManyTerms: [
+      how_many_terms: [
         "1 quarter",
         "1 trimester",
         "1 semester",
         "2 trimesters",
         "Full year",
         "I'm not sure",
-      ],
-      photoRelease: [YES],
-      liabilityWaiver: [YES],
+      ]
     }.freeze
   end
 
@@ -107,7 +119,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       :last_name,
       :email,
       :phone,
-      :teacher_accept_seat,
       :contact_first_name,
       :contact_last_name,
       :contact_relationship,
@@ -143,9 +154,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
     # some fields are required based on the type of the associated application
 
-    if pd_application.application_type === "Teacher"
+    if pd_application && pd_application.application_type === "Teacher"
       requireds.concat [
-        :teacher_accept_seat
+        :teacher_accept_seat,
+        :how_many_hours,
+        :how_many_terms,
+        :grading_system
       ]
 
       if pd_application.course === "csp"
@@ -153,12 +167,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
           :how_offer_csp,
           :have_taught_ap,
           :have_taught_written_project_course,
-          :grading_system,
-        ]
-      elsif pd_application.course === "csd"
-        requireds.concat [
-          :how_many_hours,
-          :how_many_terms,
         ]
       end
     else

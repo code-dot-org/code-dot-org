@@ -44,7 +44,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "markdown_instructions": "# Randomized Shapes\r\n\r\nLet's see how we can use randomization in our drawings. Each of the inputs from the shape blocks you've seen can be replaced with calls to `randomNumber()`. Try drawing some images that are slightly randomized each time. You might try changing the position randomly by using `randomNumber()` in place of the x or y inputs, or you could change the size of the shape itself by randomizing the length or width inputs.\r\n\r\n# Do This\r\n\r\nPick a shape command (`ellipse()`, `rect()` or `regularPolygon()`) and use `randomNumber()` in place of one or more of the inputs. Make sure you run it a few times so you can see the effect of randomization.\r\n\r\n_Notice that the `console.log()` block is now in the Variables drawer and the `randomNumber()` block is in the Math drawer._",
     "instructions": "Pick a shape block and use calls to randomNumber() in place of one or more of the parameters. Maker sure you run it a few times so you can see the effect of randomization.",
     "show_d_pad": "false",

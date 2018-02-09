@@ -19,7 +19,7 @@ def main
   if primary_dotd_email
     primary_dotd_user = Slack.user_name(primary_dotd_email)
   end
-  primary_dotd_user = '(ERROR: check schedule)' unless primary_dotd_user
+  primary_dotd_user ||= '(ERROR: check schedule)'
 
   # Set the new developers room topic
   new_topic = current_topic.sub(/^.+?;/, "DOTD: @#{primary_dotd_user};")

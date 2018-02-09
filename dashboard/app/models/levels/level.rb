@@ -313,6 +313,7 @@ class Level < ActiveRecord::Base
     Craft
     Eval
     Grid
+    GamelabJr
     Karel
     Maze
     Studio

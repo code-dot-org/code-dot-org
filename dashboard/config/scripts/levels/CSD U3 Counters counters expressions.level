@@ -64,7 +64,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "encrypted_examples": "qYBXw2XE1ZgoaSNKTyn13B4NBbVKGnAkUoSjNhmXT3+j388LQITxW97oNLvM\nBi0P\n",
     "instructions_important": "false",
     "show_debug_watch": "true",
