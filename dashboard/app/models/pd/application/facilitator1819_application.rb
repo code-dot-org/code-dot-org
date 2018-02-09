@@ -384,6 +384,10 @@ module Pd::Application
       sanitize_form_data_hash[:first_name]
     end
 
+    def last_name
+      sanitize_form_data_hash[:last_name]
+    end
+
     def program
       sanitize_form_data_hash[:program]
     end
