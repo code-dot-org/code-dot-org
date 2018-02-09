@@ -262,6 +262,8 @@ var Artist = function () {
   // code) that nornamlizes patterns and stickers to always use the "first"
   // option, so that validation can be agnostic
   this.shouldDrawNormalized_ = false;
+
+  this.visualization = new Visualization();
 };
 
 module.exports = Artist;
@@ -368,8 +370,6 @@ Artist.prototype.init = function (config) {
     this.level.images[0].position = [0, 0];
     this.level.images[0].scale = 1;
   }
-
-  this.visualization = new Visualization();
 
   this.linePatterns = config.skin.linePatterns;
   this.avatar = config.skin.avatarSettings;

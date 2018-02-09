@@ -66,8 +66,8 @@ describe('Artist', () => {
       coords.forEach(x => {
         coords.forEach(y => {
           artist.jumpTo_([x, y]);
-          expect(artist.x).to.equal(x);
-          expect(artist.y).to.equal(y);
+          expect(artist.visualization.x).to.equal(x);
+          expect(artist.visualization.y).to.equal(y);
         });
       });
     });
@@ -88,8 +88,8 @@ describe('Artist', () => {
       Object.keys(expectations).forEach(position => {
         const [x, y] = expectations[position];
         artist.jumpTo_(constants.Position[position]);
-        expect(artist.x).to.equal(x);
-        expect(artist.y).to.equal(y);
+        expect(artist.visualization.x).to.equal(x);
+        expect(artist.visualization.y).to.equal(y);
       });
     });
   });
