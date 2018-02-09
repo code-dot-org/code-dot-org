@@ -181,6 +181,15 @@ const REMIX_PROPS_BY_SKIN = {
 
 const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
 
+class Visualization {
+  constructor() {
+    this.x = DEFAULT_X;
+    this.y = DEFAULT_Y;
+    this.heading = 0;
+    this.penDownValue = true;
+  }
+}
+
 /**
  * An instantiable Artist class
  * @param {StudioApp} studioApp The studioApp instance to build upon.
@@ -206,9 +215,6 @@ var Artist = function () {
 
   // Should the turtle be drawn?
   this.visible = true;
-
-  // Set a turtle heading.
-  this.heading = 0;
 
   // The avatar animation decoration image
   this.decorationAnimationImage = new Image();
@@ -346,6 +352,8 @@ Artist.prototype.init = function (config) {
     this.level.images[0].position = [0, 0];
     this.level.images[0].scale = 1;
   }
+
+  this.visualization = new Visualization();
 
   this.linePatterns = config.skin.linePatterns;
   this.avatar = config.skin.avatarSettings;
@@ -732,7 +740,7 @@ var turtleFrame = 0;
 
 
 /**
- * Draw the turtle image based on this.x, this.y, and this.heading.
+ * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
  */
 Artist.prototype.drawTurtle = function () {
   if (!this.visible) {
@@ -742,7 +750,7 @@ Artist.prototype.drawTurtle = function () {
 
   var sourceY;
   // Computes the index of the image in the sprite.
-  var index = Math.floor(this.heading * this.avatar.numHeadings / 360);
+  var index = Math.floor(this.visualization.heading * this.avatar.numHeadings / 360);
   if (this.isFrozenSkin()) {
     // the rotations in the sprite sheet go in the opposite direction.
     index = this.avatar.numHeadings - index;
@@ -761,8 +769,8 @@ Artist.prototype.drawTurtle = function () {
   var sourceHeight = this.avatar.height;
   var destWidth = this.avatar.width;
   var destHeight = this.avatar.height;
-  var destX = this.x - destWidth / 2;
-  var destY = this.y - destHeight + 7;
+  var destX = this.visualization.x - destWidth / 2;
+  var destY = this.visualization.y - destHeight + 7;
 
   if (!this.avatar.image) {
     return;
@@ -796,7 +804,7 @@ Artist.prototype.drawDecorationAnimation = function (when) {
   if (this.skin.id === "elsa") {
     var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
 
-    var angleIndex = Math.floor(this.heading * this.avatar.numHeadings / 360);
+    var angleIndex = Math.floor(this.visualization.heading * this.avatar.numHeadings / 360);
 
     // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
     angleIndex = this.avatar.numHeadings - angleIndex;
@@ -811,8 +819,8 @@ Artist.prototype.drawDecorationAnimation = function (when) {
       var sourceHeight = this.decorationAnimationImage.height;
       var destWidth = sourceWidth;
       var destHeight = sourceHeight;
-      var destX = this.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
-      var destY = this.y - destHeight / 2 - 100;
+      var destX = this.visualization.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
+      var destY = this.visualization.y - destHeight / 2 - 100;
 
       if (this.decorationAnimationImage.width !== 0) {
         this.ctxDisplay.drawImage(
@@ -835,19 +843,19 @@ Artist.prototype.drawDecorationAnimation = function (when) {
  */
 Artist.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
-  this.x = DEFAULT_X;
-  this.y = DEFAULT_Y;
-  this.heading = this.level.startDirection !== undefined ?
+  this.visualization.x = DEFAULT_X;
+  this.visualization.y = DEFAULT_Y;
+  this.visualization.heading = this.level.startDirection !== undefined ?
       this.level.startDirection : DEFAULT_DIRECTION;
-  this.penDownValue = true;
+  this.visualization.penDownValue = true;
   this.visible = true;
 
   // For special cases, use a different initial location.
   if (this.level.initialX !== undefined) {
-    this.x = this.level.initialX;
+    this.visualization.x = this.level.initialX;
   }
   if (this.level.initialY !== undefined) {
-    this.y = this.level.initialY;
+    this.visualization.y = this.level.initialY;
   }
   // Clear the display.
   this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
@@ -1321,10 +1329,10 @@ Artist.prototype.step = function (command, values, options) {
       this.ctxScratch.globalAlpha = alpha / 100;
       break;
     case 'PU':  // Pen Up
-      this.penDownValue = false;
+      this.visualization.penDownValue = false;
       break;
     case 'PD':  // Pen Down
-      this.penDownValue = true;
+      this.visualization.penDownValue = true;
       break;
     case 'PW':  // Pen Width
       this.ctxScratch.lineWidth = values[0];
@@ -1364,8 +1372,8 @@ Artist.prototype.step = function (command, values, options) {
       // the image and the image is pointing (from bottom to top) in the same
       // direction as the turtle.
       this.ctxScratch.save();
-      this.ctxScratch.translate(this.x, this.y);
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading));
+      this.ctxScratch.translate(this.visualization.x, this.visualization.y);
+      this.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading));
       this.ctxScratch.drawImage(img, -width / 2, -height, width, height);
       this.ctxScratch.restore();
 
@@ -1445,13 +1453,13 @@ Artist.prototype.jumpTo_ = function (pos) {
     x = utils.xFromPosition(pos, CANVAS_WIDTH);
     y = utils.yFromPosition(pos, CANVAS_HEIGHT);
   }
-  this.x = Number(x);
-  this.y = Number(y);
+  this.visualization.x = Number(x);
+  this.visualization.y = Number(y);
 };
 
 Artist.prototype.jumpForward_ = function (distance) {
-  this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
-  this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
+  this.visualization.x += distance * Math.sin(utils.degreesToRadians(this.visualization.heading));
+  this.visualization.y -= distance * Math.cos(utils.degreesToRadians(this.visualization.heading));
 };
 
 Artist.prototype.dotAt_ = function (x, y) {
@@ -1467,19 +1475,19 @@ Artist.prototype.circleAt_ = function (x, y, radius) {
 Artist.prototype.drawToTurtle_ = function (distance) {
   var isDot = (distance === 0);
   if (isDot) {
-    this.dotAt_(this.x, this.y);
+    this.dotAt_(this.visualization.x, this.visualization.y);
   } else {
-    this.ctxScratch.lineTo(this.x, this.y);
+    this.ctxScratch.lineTo(this.visualization.x, this.visualization.y);
   }
 };
 
 Artist.prototype.turnByDegrees_ = function (degreesRight) {
-  this.setHeading_(this.heading + degreesRight);
+  this.setHeading_(this.visualization.heading + degreesRight);
 };
 
 Artist.prototype.setHeading_ = function (heading) {
   heading = this.constrainDegrees_(heading);
-  this.heading = heading;
+  this.visualization.heading = heading;
 };
 
 Artist.prototype.constrainDegrees_ = function (degrees) {
@@ -1491,7 +1499,7 @@ Artist.prototype.constrainDegrees_ = function (degrees) {
 };
 
 Artist.prototype.moveForward_ = function (distance, isDiagonal) {
-  if (!this.penDownValue) {
+  if (!this.visualization.penDownValue) {
     this.jumpForward_(distance);
     return;
   }
@@ -1554,7 +1562,7 @@ Artist.prototype.drawForwardLine_ = function (distance) {
     this.ctxScratch.stroke();
   } else {
     this.ctxScratch.beginPath();
-    this.ctxScratch.moveTo(this.x, this.y);
+    this.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
     this.jumpForward_(distance);
     this.drawToTurtle_(distance);
     this.ctxScratch.stroke();
@@ -1579,7 +1587,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     this.ctxPattern.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
+    this.ctxPattern.rotate(utils.degreesToRadians(this.visualization.heading - 90));
 
     var clipSize;
     if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -1606,17 +1614,17 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
 
   } else {
 
-    this.ctxScratch.moveTo(this.x, this.y);
+    this.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
     img = this.currentPathPattern;
-    startX = this.x;
-    startY = this.y;
+    startX = this.visualization.x;
+    startY = this.visualization.y;
 
     this.jumpForward_(distance);
     this.ctxScratch.save();
     this.ctxScratch.translate(startX, startY);
     // increment the angle and rotate the image.
     // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+    this.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading - 90));
 
     if (img.width !== 0) {
       this.ctxScratch.drawImage(img,
@@ -1639,8 +1647,8 @@ Artist.prototype.shouldDrawJoints_ = function () {
 
 Artist.prototype.drawJointAtTurtle_ = function () {
   this.ctxScratch.beginPath();
-  this.ctxScratch.moveTo(this.x, this.y);
-  this.circleAt_(this.x, this.y, JOINT_RADIUS);
+  this.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
+  this.circleAt_(this.visualization.x, this.visualization.y, JOINT_RADIUS);
   this.ctxScratch.stroke();
 };
 
@@ -1982,7 +1990,7 @@ Artist.prototype.createCanvas_ = function (id, width, height) {
 * is what this does.
 */
 Artist.prototype.resetStepInfo_ = function () {
-  this.stepStartX = this.x;
-  this.stepStartY = this.y;
+  this.stepStartX = this.visualization.x;
+  this.stepStartY = this.visualization.y;
   this.stepDistanceCovered = 0;
 };
