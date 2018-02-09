@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
@@ -15,7 +16,6 @@ import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarsha
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
-var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '../lib/util/timeoutList';
@@ -297,7 +297,7 @@ GameLab.prototype.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
-    showDebugSlider: false,
+    showDebugSlider: experiments.isEnabled('showDebugSlider'),
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
@@ -357,6 +357,10 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     if (!lastState.runState || state.runState.isDebuggingSprites !== lastState.runState.isDebuggingSprites) {
       this.onIsDebuggingSpritesChange(state.runState.isDebuggingSprites);
     }
+
+    if (!lastState.runState || state.runState.stepSpeed !== lastState.runState.stepSpeed) {
+      this.onStepSpeedChange(state.runState.stepSpeed);
+    }
   });
 };
 
@@ -366,6 +370,15 @@ GameLab.prototype.onIsRunningChange = function () {
 
 GameLab.prototype.onIsDebuggingSpritesChange = function (isDebuggingSprites) {
   this.gameLabP5.debugSprites(isDebuggingSprites);
+};
+
+GameLab.prototype.onStepSpeedChange = function (stepSpeed) {
+  this.gameLabP5.changeStepSpeed(stepSpeed);
+
+  if (this.isTickTimerRunning()) {
+    this.stopTickTimer();
+    this.startTickTimer();
+  }
 };
 
 /**
@@ -450,11 +463,32 @@ GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
 
 GameLab.prototype.haltExecution_ = function () {
   this.eventHandlers = {};
+  this.stopTickTimer();
+  this.tickCount = 0;
+};
+
+GameLab.prototype.isTickTimerRunning = function () {
+  return this.tickIntervalId !== 0;
+};
+
+GameLab.prototype.stopTickTimer = function () {
   if (this.tickIntervalId !== 0) {
     window.clearInterval(this.tickIntervalId);
+    this.tickIntervalId = 0;
   }
-  this.tickIntervalId = 0;
-  this.tickCount = 0;
+};
+
+GameLab.prototype.startTickTimer = function () {
+  if (this.isTickTimerRunning()) {
+    console.warn('Tick timer is already running in startTickTimer()');
+  }
+  // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
+  const fastPeriod = 1;
+  // Set to 100ms interval when we are in the experiment with the speed slider
+  // and the slider has been slowed down (we only support two speeds for now):
+  const slowPeriod = 100;
+  const intervalPeriod = this.gameLabP5.stepSpeed < 1 ? slowPeriod : fastPeriod;
+  this.tickIntervalId = window.setInterval(this.onTick.bind(this), intervalPeriod);
 };
 
 /**
@@ -797,8 +831,7 @@ GameLab.prototype.execute = function () {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
-  this.tickIntervalId = window.setInterval(this.onTick.bind(this), 1);
+  this.startTickTimer();
 };
 
 GameLab.prototype.initInterpreter = function () {
@@ -820,6 +853,7 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+    shouldRunAtMaxSpeed: () => (this.gameLabP5.stepSpeed >= 1),
     customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
     customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
     customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList(),
@@ -875,6 +909,10 @@ GameLab.prototype.onTick = function () {
   if (this.JSInterpreter) {
     if (this.interpreterStarted) {
       this.JSInterpreter.executeInterpreter();
+
+      if (this.gameLabP5.stepSpeed < 1) {
+        this.gameLabP5.drawDebugSpriteColliders();
+      }
     }
 
     this.completePreloadIfPreloadComplete();
@@ -1036,7 +1074,11 @@ GameLab.prototype.completePreloadIfPreloadComplete = function () {
 GameLab.prototype.onP5Setup = function () {
   if (this.JSInterpreter) {
     // Re-marshal restored preload methods for the interpreter:
-    for (var method in this.gameLabP5.p5._preloadMethods) {
+    const preloadMethods = _.intersection(
+      this.gameLabP5.p5._preloadMethods,
+      this.gameLabP5.getMarshallableP5Properties()
+    );
+    for (const method in preloadMethods) {
       this.JSInterpreter.createGlobalProperty(
           method,
           this.gameLabP5.p5[method],

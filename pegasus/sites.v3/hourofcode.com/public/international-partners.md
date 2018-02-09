@@ -30,11 +30,13 @@ You, too, can play a leading role to get more people in your country involved! I
 | Australia   | Google                                                            | Sally-Ann Williams            | https://www.google.com/edu/cs                                                      |
 | Australia   | Grok Learning                                                     | Jane Abrams                   | https://groklearning.com                                                           |
 | Bangladesh  | CodeLab                                                           | Enayet Chowdhury              | www.codelab-online.com                                                             |
-| Brazil      | Programaê! - Fundaçao Lemann                                      | Tiago Maluta                  | http://programae.org.br/horadocodigo <br> tiago@fundacaolemann.org.br                     |
+| Brazil      | Programaê! - Fundaçao Lemann                                      | Tiago Maluta                  | http://programae.org.br/horadocodigo <br> tiago@fundacaolemann.org.br              |
 | Cameroon    | Big IT Company Ltd                                                |                               |                                                                                    |
 | Canada      | Brilliant Labs Inc.                                               |                               | https://www.brilliantlabs.ca/                                                      |
 | Canada      | Hatch Canada                                                      |                               | www.hatchcanada.com                                                                |
-| Canada      | Kids & Code                                                       |                               | www.kidsandcode.org <br> hello@kidsandcode.org                                         |
+| Canada      | Canada Learning Code                                              | Carolyn Van                   | https://www.canadalearningcode.ca/                                                 |
+| Canada      | Actua                                                             | Tracy Ross                    | www.actua.ca                                                                       |
+| Canada      | Kids & Code                                                       |                               | www.kidsandcode.org <br> hello@kidsandcode.org                                     |
 | Canada      | Kids Code Jeunesse                                                | Bry LeBlanc                   | http://kidscodejeunesse.org <br> bry@kidscodejeunesse.org                          |
 | Canada      | Nova Scotia Department of Education & Early Childhood Development | Alexander MacDougall          | http://ednet.ns.ca <br> Alexander.MacDougall@novascotia.ca                         |
 | Canada      | Partners In Research Canada                                       |                               | www.pirweb.org/en                                                                  |
@@ -48,7 +50,7 @@ You, too, can play a leading role to get more people in your country involved! I
 | Japan       | 湘南ゼミナール (Shonan Seminar)                                   | Team Hour of Code             | https://shozemi.com                                                                |
 | Malaysia    | Telebort Technologies Sdn Bhd                                     |                               | www.telebort.com                                                                   |
 | Mexico      | Cuantrix - Fundación Televisa                                     | Ermy Castaneira               | www.cuantrix.mx <br> ermy.castaneira@fundaciontelevisa.org                         |
-| Morocco     | S.T.E.M ROBOTICS AGADIR                                           | Dr. Isha Daramy               | www.stemagadir.com <br> Stemagadir@gmail.com                                           |
+| Morocco     | S.T.E.M ROBOTICS AGADIR                                           | Dr. Isha Daramy               | www.stemagadir.com <br> Stemagadir@gmail.com                                       |
 | New Zealand | Ara Institute of Canterbury                                       | Amitrajit Sarkar              | www.ara.ac.nz <br> sarkara@cpit.ac.nz                                              |
 | New Zealand | Google                                                            | Sally-Ann Williams            | https://www.google.com/edu/cs                                                      |
 | Nigeria     | Dev's District Nigeria                                            | Emmanuel Odunlade             | http://devsdistrictnigeria.com/ <br> E.odunlade@devsdistrictnigeria.com            |
