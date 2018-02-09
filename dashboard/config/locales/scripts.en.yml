@@ -7032,3 +7032,39 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd6-old:
+          stages:
+            Computing Innovations:
+              name: Computing Innovations
+            Input Unplugged:
+              name: Input Unplugged
+            Event Types:
+              name: Event Types
+            Getters and Setters:
+              name: Getters and Setters
+            The Circuit Playground:
+              name: The Circuit Playground
+            Lists:
+              name: Lists
+            Lights:
+              name: Lights
+            For Loops:
+              name: For Loops
+            Lists and For Loops:
+              name: Lists and For Loops
+            Timed Loops:
+              name: Timed Loops
+            'Project: Board Output':
+              name: 'Project: Board Output'
+            Physical Input:
+              name: Physical Input
+            Analog Input:
+              name: Analog Input
+            Sensor Applications:
+              name: Sensor Applications
+            'Project: Prototype an Innovation':
+              name: 'Project: Prototype an Innovation'
+          title: "(DEPRECATED) CSD Unit 6 - Physical Computing"
+          description_audience: ''
+          description_short: ''
+          description: ''
