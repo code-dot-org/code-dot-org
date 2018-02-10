@@ -1,11 +1,13 @@
 import React from 'react';
 import { DetailViewContents } from './detail_view_contents';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import reactRouterStoryDecorator from '../reactRouterStoryDecorator';
 
 export default storybook => {
   storybook
     .storiesOf('DetailViewContents', module)
     .addDecorator(reactBootstrapStoryDecorator)
+    .addDecorator(reactRouterStoryDecorator)
     .addStoryTable([
       {
         name: 'Detail view for applications',
