@@ -518,64 +518,6 @@ module.exports = class AnimationsController {
     }, delay);
   }
 
-  /**
-   * Perform our animations, either all of them or those of a single step
-   */
-  scheduleAnimations(singleStep, onAnimationEnd) {
-    timeoutList.clearTimeouts();
-
-    var timePerAction = this.maze.stepSpeed * this.maze.scale.stepSpeed *
-      this.maze.skin.movePegmanAnimationSpeedScale;
-    // get a flat list of actions we want to schedule
-    var actions = this.maze.executionInfo.getActions(singleStep);
-
-    this.scheduleSingleAnimation_(0, actions, singleStep, timePerAction, onAnimationEnd);
-  }
-
-  /**
-   * schedule animations in sequence
-   * The reason we do this recursively instead of iteratively is that we want to
-   * ensure that we finish scheduling action1 before starting to schedule
-   * action2. Otherwise we get into trouble when stepSpeed is 0.
-   */
-  scheduleSingleAnimation_(index, actions, singleStep, timePerAction, onAnimationEnd) {
-    if (index >= actions.length) {
-      this.finishAnimations_(singleStep, onAnimationEnd);
-      return;
-    }
-
-    this.maze.animateAction(actions[index], singleStep, timePerAction);
-
-    var command = actions[index] && actions[index].command;
-    var timeModifier = (this.maze.skin.actionSpeedScale && this.maze.skin.actionSpeedScale[command]) || 1;
-    var timeForThisAction = Math.round(timePerAction * timeModifier);
-
-    timeoutList.setTimeout(() => {
-      this.scheduleSingleAnimation_(index + 1, actions, singleStep, timePerAction, onAnimationEnd);
-    }, timeForThisAction);
-  }
-
-  /**
-   * Once animations are complete, we want to reenable the step button if we
-   * have steps left, otherwise we're done with this execution.
-   */
-  finishAnimations_(singleStep, onAnimationEnd) {
-    var stepsRemaining = this.maze.executionInfo.stepsRemaining();
-    var stepButton = document.getElementById('stepButton');
-
-    // allow time for  additional pause if we're completely done
-    var waitTime = (stepsRemaining ? 0 : 1000);
-
-    // run after all animations
-    timeoutList.setTimeout(() => {
-      if (stepsRemaining) {
-        stepButton.removeAttribute('disabled');
-      } else {
-        onAnimationEnd(singleStep);
-      }
-    }, waitTime);
-  }
-
   stopIdling() {
     // Removing the idle animation and replace with pegman sprite
     if (this.maze.skin.idlePegmanAnimation) {
