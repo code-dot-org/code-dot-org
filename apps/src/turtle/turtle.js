@@ -185,11 +185,20 @@ class Visualization {
   constructor() {
     this.x = DEFAULT_X;
     this.y = DEFAULT_Y;
-    this.heading = 0;
+    this.heading = DEFAULT_DIRECTION;
     this.penDownValue = true;
 
     // Internal state.
     this.turtleFrame_ = 0;
+    this.isPredrawing_ = false;
+
+    // This flag is used to draw a version of code (either user code or solution
+    // code) that normalizes patterns and stickers to always use the "first"
+    // option, so that validation can be agnostic.
+    this.shouldDrawNormalized_ = false;
+
+    // Set after initialization.
+    this.avatar = null;
 
     // Create hidden canvases.
     this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
@@ -242,9 +251,6 @@ var Artist = function () {
   // PID of animation task currently executing.
   this.pid = 0;
 
-  // Should the turtle be drawn?
-  this.visible = true;
-
   // The avatar animation decoration image
   this.decorationAnimationImage = new Image();
 
@@ -255,16 +261,7 @@ var Artist = function () {
   this.linePatterns = [];
 
   // these get set by init based on skin.
-  this.avatar = null;
   this.speedSlider = null;
-
-  this.isDrawingAnswer_ = false;
-  this.isPredrawing_ = false;
-
-  // This flag is used to draw a version of code (either user code or solution
-  // code) that nornamlizes patterns and stickers to always use the "first"
-  // option, so that validation can be agnostic
-  this.shouldDrawNormalized_ = false;
 
   this.visualization = new Visualization();
 };
@@ -375,7 +372,10 @@ Artist.prototype.init = function (config) {
   }
 
   this.linePatterns = config.skin.linePatterns;
-  this.avatar = config.skin.avatarSettings;
+  this.visualization.avatar = config.skin.avatarSettings;
+
+  // Should the turtle be drawn?
+  this.visualization.avatar.visible = true;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
@@ -585,17 +585,15 @@ Artist.prototype.afterInject_ = function (config) {
 
   // Draw the answer twice; once to the display canvas and once again in a
   // normalized version to the validation canvas
-  this.isDrawingAnswer_ = true;
   this.drawAnswer(this.visualization.ctxAnswer);
-  this.shouldDrawNormalized_ = true;
+  this.visualization.shouldDrawNormalized_ = true;
   this.drawAnswer(this.visualization.ctxNormalizedAnswer);
-  this.shouldDrawNormalized_ = false;
-  this.isDrawingAnswer_ = false;
+  this.visualization.shouldDrawNormalized_ = false;
 
   if (this.level.predrawBlocks) {
-    this.isPredrawing_ = true;
+    this.visualization.isPredrawing_ = true;
     this.drawBlocksOnCanvas(this.level.predrawBlocks, this.visualization.ctxPredraw);
-    this.isPredrawing_ = false;
+    this.visualization.isPredrawing_ = false;
   }
 
   this.loadPatterns();
@@ -721,10 +719,10 @@ Artist.prototype.drawImages = function () {
  */
 Artist.prototype.loadTurtle = function (initializing = true) {
   const onloadCallback = initializing ? this.display : this.drawTurtle;
-  this.avatar.image = new Image();
-  this.avatar.image.onload = _.bind(onloadCallback, this);
+  this.visualization.avatar.image = new Image();
+  this.visualization.avatar.image.onload = _.bind(onloadCallback, this);
 
-  this.avatar.image.src = this.skin.avatar;
+  this.visualization.avatar.image.src = this.skin.avatar;
 };
 
 /**
@@ -742,45 +740,45 @@ Artist.prototype.loadDecorationAnimation = function () {
  * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
  */
 Artist.prototype.drawTurtle = function () {
-  if (!this.visible) {
+  if (!this.visualization.avatar.visible) {
     return;
   }
   this.drawDecorationAnimation("before");
 
   // Computes the index of the image in the sprite.
-  var index = Math.floor(this.visualization.heading * this.avatar.numHeadings / 360);
+  var index = Math.floor(this.visualization.heading * this.visualization.avatar.numHeadings / 360);
   if (this.isFrozenSkin()) {
     // the rotations in the sprite sheet go in the opposite direction.
-    index = this.avatar.numHeadings - index;
+    index = this.visualization.avatar.numHeadings - index;
 
     // and they are 180 degrees out of phase.
-    index = (index + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
+    index = (index + this.visualization.avatar.numHeadings / 2) % this.visualization.avatar.numHeadings;
   }
-  var sourceX = this.avatar.width * index;
-  var sourceY = this.avatar.height * this.visualization.turtleFrame_;
-  this.visualization.turtleFrame_ = (this.visualization.turtleFrame_ + 1) % this.avatar.numFrames;
+  var sourceX = this.visualization.avatar.width * index;
+  var sourceY = this.visualization.avatar.height * this.visualization.turtleFrame_;
+  this.visualization.turtleFrame_ = (this.visualization.turtleFrame_ + 1) % this.visualization.avatar.numFrames;
 
-  var sourceWidth = this.avatar.width;
-  var sourceHeight = this.avatar.height;
-  var destWidth = this.avatar.width;
-  var destHeight = this.avatar.height;
+  var sourceWidth = this.visualization.avatar.width;
+  var sourceHeight = this.visualization.avatar.height;
+  var destWidth = this.visualization.avatar.width;
+  var destHeight = this.visualization.avatar.height;
   var destX = this.visualization.x - destWidth / 2;
   var destY = this.visualization.y - destHeight + 7;
 
-  if (!this.avatar.image) {
+  if (!this.visualization.avatar.image) {
     return;
   }
 
   if (sourceX < 0 ||
       sourceY < 0 ||
-      sourceX + sourceWidth  -0 > this.avatar.image.width ||
-      sourceY + sourceHeight > this.avatar.image.height) {
+      sourceX + sourceWidth  -0 > this.visualization.avatar.image.width ||
+      sourceY + sourceHeight > this.visualization.avatar.image.height) {
     return;
   }
 
-  if (this.avatar.image.width !== 0) {
+  if (this.visualization.avatar.image.width !== 0) {
     this.visualization.ctxDisplay.drawImage(
-      this.avatar.image,
+      this.visualization.avatar.image,
       Math.round(sourceX), Math.round(sourceY),
       sourceWidth - 0, sourceHeight,
       Math.round(destX), Math.round(destY),
@@ -799,13 +797,13 @@ Artist.prototype.drawDecorationAnimation = function (when) {
   if (this.skin.id === "elsa") {
     var frameIndex = (this.visualization.turtleFrame_ + 10) % this.skin.decorationAnimationNumFrames;
 
-    var angleIndex = Math.floor(this.visualization.heading * this.avatar.numHeadings / 360);
+    var angleIndex = Math.floor(this.visualization.heading * this.visualization.avatar.numHeadings / 360);
 
     // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
-    angleIndex = this.avatar.numHeadings - angleIndex;
+    angleIndex = this.visualization.avatar.numHeadings - angleIndex;
 
     // and they are 180 degrees out of phase.
-    angleIndex = (angleIndex + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
+    angleIndex = (angleIndex + this.visualization.avatar.numHeadings / 2) % this.visualization.avatar.numHeadings;
 
     if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
       var sourceX = this.decorationAnimationImage.width * frameIndex;
@@ -843,7 +841,7 @@ Artist.prototype.reset = function (ignore) {
   this.visualization.heading = this.level.startDirection !== undefined ?
       this.level.startDirection : DEFAULT_DIRECTION;
   this.visualization.penDownValue = true;
-  this.visible = true;
+  this.visualization.avatar.visible = true;
 
   // For special cases, use a different initial location.
   if (this.level.initialX !== undefined) {
@@ -1051,9 +1049,9 @@ Artist.prototype.execute = function () {
     // First, draw a normalized version of the user's actions (ie, one which
     // doesn't vary patterns or stickers) to a dedicated context. Note that we
     // clone this.api.log so the real log doesn't get mutated
-    this.shouldDrawNormalized_ = true;
+    this.visualization.shouldDrawNormalized_ = true;
     this.drawLogOnCanvas(this.api.log.slice(), this.visualization.ctxNormalizedScratch);
-    this.shouldDrawNormalized_ = false;
+    this.visualization.shouldDrawNormalized_ = false;
 
     // Then, reset our state and draw the user's actions in a visible, animated
     // way
@@ -1240,7 +1238,7 @@ Artist.prototype.calculateSmoothAnimate = function (options, distance) {
       }
 
     } else {
-      // Going foward.
+      // Going forward.
       if (stepDistanceCovered + smoothAnimateStepSize >= fullDistance) {
         // clamp at maximum
         distance = fullDistance - stepDistanceCovered;
@@ -1347,13 +1345,13 @@ Artist.prototype.step = function (command, values, options) {
       }
       break;
     case 'HT':  // Hide Turtle
-      this.visible = false;
+      this.visualization.avatar.visible = false;
       break;
     case 'ST':  // Show Turtle
-      this.visible = true;
+      this.visualization.avatar.visible = true;
       break;
     case 'sticker':
-      if (this.shouldDrawNormalized_) {
+      if (this.visualization.shouldDrawNormalized_) {
         values = Object.keys(this.stickers);
       }
 
@@ -1376,7 +1374,7 @@ Artist.prototype.step = function (command, values, options) {
     case 'setArtist':
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
-        this.avatar = this.skin.avatarSettings;
+        this.visualization.avatar = this.skin.avatarSettings;
         this.loadTurtle(false /* initializing */);
         this.loadPatterns();
         this.selectPattern();
@@ -1427,7 +1425,7 @@ Artist.prototype.selectPattern = function () {
 };
 
 Artist.prototype.setPattern = function (pattern) {
-  if (this.shouldDrawNormalized_) {
+  if (this.visualization.shouldDrawNormalized_) {
     pattern = null;
   }
 
@@ -1637,7 +1635,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
 };
 
 Artist.prototype.shouldDrawJoints_ = function () {
-  return this.level.isK1 && !this.isPredrawing_;
+  return this.level.isK1 && !this.visualization.isPredrawing_;
 };
 
 Artist.prototype.drawJointAtTurtle_ = function () {
