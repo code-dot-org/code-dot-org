@@ -459,6 +459,8 @@ describe('entry tests', () => {
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'maker/home':
+    './src/sites/studio/pages/maker/home.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'maker/discountcode':           './src/sites/studio/pages/maker/discountcode.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
