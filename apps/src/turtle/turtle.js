@@ -71,6 +71,7 @@ const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 const decorationAnimationWidth = 85;
 const decorationAnimationHeight = 85;
+const decorationAnimationNumFrames = 19;
 
 /**
 * Minimum joint segment length
@@ -182,11 +183,17 @@ const REMIX_PROPS_BY_SKIN = {
 const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
 
 class Visualization {
-  constructor() {
+  constructor(options = {}) {
     this.x = DEFAULT_X;
     this.y = DEFAULT_Y;
     this.heading = DEFAULT_DIRECTION;
     this.penDownValue = true;
+
+    this.avatar = options.avatar;
+    this.isFrozenSkin = !!options.isFrozenSkin;
+    this.isK1 = !!options.isK1;
+    this.decorationAnimationImage = options.decorationAnimationImage;
+    this.showDecoration = options.showDecoration;
 
     // Internal state.
     this.turtleFrame_ = 0;
@@ -196,9 +203,6 @@ class Visualization {
     // code) that normalizes patterns and stickers to always use the "first"
     // option, so that validation can be agnostic.
     this.shouldDrawNormalized_ = false;
-
-    // Set after initialization.
-    this.avatar = null;
 
     // Create hidden canvases.
     this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
@@ -225,6 +229,96 @@ class Visualization {
     el.width = width;
     el.height = height;
     return el;
+  }
+
+  /**
+   * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
+   */
+  drawTurtle() {
+    if (!this.avatar.visible) {
+      return;
+    }
+    this.drawDecorationAnimation("before");
+
+    // Computes the index of the image in the sprite.
+    var index = Math.floor(this.heading * this.avatar.numHeadings / 360);
+    if (this.isFrozenSkin) {
+      // the rotations in the sprite sheet go in the opposite direction.
+      index = this.avatar.numHeadings - index;
+
+      // and they are 180 degrees out of phase.
+      index = (index + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
+    }
+    var sourceX = this.avatar.width * index;
+    var sourceY = this.avatar.height * this.turtleFrame_;
+    this.turtleFrame_ = (this.turtleFrame_ + 1) % this.avatar.numFrames;
+
+    var sourceWidth = this.avatar.width;
+    var sourceHeight = this.avatar.height;
+    var destWidth = this.avatar.width;
+    var destHeight = this.avatar.height;
+    var destX = this.x - destWidth / 2;
+    var destY = this.y - destHeight + 7;
+
+    if (!this.avatar.image) {
+      return;
+    }
+
+    if (sourceX < 0 ||
+      sourceY < 0 ||
+      sourceX + sourceWidth  -0 > this.avatar.image.width ||
+      sourceY + sourceHeight > this.avatar.image.height) {
+      return;
+    }
+
+    if (this.avatar.image.width !== 0) {
+      this.ctxDisplay.drawImage(
+        this.avatar.image,
+        Math.round(sourceX), Math.round(sourceY),
+        sourceWidth - 0, sourceHeight,
+        Math.round(destX), Math.round(destY),
+        destWidth - 0, destHeight);
+    }
+
+    this.drawDecorationAnimation("after");
+  }
+
+  /**
+   * This is called twice, once with "before" and once with "after", referring to before or after
+   * the sprite is drawn.  For some angles it should be drawn before, and for some after.
+   */
+  drawDecorationAnimation(when) {
+    if (this.showDecoration()) {
+      var frameIndex = (this.turtleFrame_ + 10) % decorationAnimationNumFrames;
+
+      var angleIndex = Math.floor(this.heading * this.avatar.numHeadings / 360);
+
+      // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
+      angleIndex = this.avatar.numHeadings - angleIndex;
+
+      // and they are 180 degrees out of phase.
+      angleIndex = (angleIndex + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
+
+      if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
+        var sourceX = this.decorationAnimationImage.width * frameIndex;
+        var sourceY = 0;
+        var sourceWidth = this.decorationAnimationImage.width;
+        var sourceHeight = this.decorationAnimationImage.height;
+        var destWidth = sourceWidth;
+        var destHeight = sourceHeight;
+        var destX = this.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
+        var destY = this.y - destHeight / 2 - 100;
+
+        if (this.decorationAnimationImage.width !== 0) {
+          this.ctxDisplay.drawImage(
+            this.decorationAnimationImage,
+            Math.round(sourceX), Math.round(sourceY),
+            sourceWidth, sourceHeight,
+            Math.round(destX), Math.round(destY),
+            destWidth, destHeight);
+        }
+      }
+    }
   }
 }
 
@@ -262,8 +356,6 @@ var Artist = function () {
 
   // these get set by init based on skin.
   this.speedSlider = null;
-
-  this.visualization = new Visualization();
 };
 
 module.exports = Artist;
@@ -372,10 +464,14 @@ Artist.prototype.init = function (config) {
   }
 
   this.linePatterns = config.skin.linePatterns;
-  this.visualization.avatar = config.skin.avatarSettings;
 
-  // Should the turtle be drawn?
-  this.visualization.avatar.visible = true;
+  this.visualization = new Visualization({
+    avatar: config.skin.avatarSettings,
+    isK1: config.level.isK1,
+    isFrozenSkin: this.isFrozenSkin(),
+    decorationAnimationImage: this.decorationAnimationImage,
+    showDecoration: () => this.skin.id === "elsa",
+  });
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
@@ -718,7 +814,7 @@ Artist.prototype.drawImages = function () {
  * Initialize the turtle image on load.
  */
 Artist.prototype.loadTurtle = function (initializing = true) {
-  const onloadCallback = initializing ? this.display : this.drawTurtle;
+  const onloadCallback = initializing ? this.display : () => this.visualization.drawTurtle();
   this.visualization.avatar.image = new Image();
   this.visualization.avatar.image.onload = _.bind(onloadCallback, this);
 
@@ -735,98 +831,6 @@ Artist.prototype.loadDecorationAnimation = function () {
     this.decorationAnimationImage.width = decorationAnimationWidth;
   }
 };
-
-/**
- * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
- */
-Artist.prototype.drawTurtle = function () {
-  if (!this.visualization.avatar.visible) {
-    return;
-  }
-  this.drawDecorationAnimation("before");
-
-  // Computes the index of the image in the sprite.
-  var index = Math.floor(this.visualization.heading * this.visualization.avatar.numHeadings / 360);
-  if (this.isFrozenSkin()) {
-    // the rotations in the sprite sheet go in the opposite direction.
-    index = this.visualization.avatar.numHeadings - index;
-
-    // and they are 180 degrees out of phase.
-    index = (index + this.visualization.avatar.numHeadings / 2) % this.visualization.avatar.numHeadings;
-  }
-  var sourceX = this.visualization.avatar.width * index;
-  var sourceY = this.visualization.avatar.height * this.visualization.turtleFrame_;
-  this.visualization.turtleFrame_ = (this.visualization.turtleFrame_ + 1) % this.visualization.avatar.numFrames;
-
-  var sourceWidth = this.visualization.avatar.width;
-  var sourceHeight = this.visualization.avatar.height;
-  var destWidth = this.visualization.avatar.width;
-  var destHeight = this.visualization.avatar.height;
-  var destX = this.visualization.x - destWidth / 2;
-  var destY = this.visualization.y - destHeight + 7;
-
-  if (!this.visualization.avatar.image) {
-    return;
-  }
-
-  if (sourceX < 0 ||
-      sourceY < 0 ||
-      sourceX + sourceWidth  -0 > this.visualization.avatar.image.width ||
-      sourceY + sourceHeight > this.visualization.avatar.image.height) {
-    return;
-  }
-
-  if (this.visualization.avatar.image.width !== 0) {
-    this.visualization.ctxDisplay.drawImage(
-      this.visualization.avatar.image,
-      Math.round(sourceX), Math.round(sourceY),
-      sourceWidth - 0, sourceHeight,
-      Math.round(destX), Math.round(destY),
-      destWidth - 0, destHeight);
-  }
-
-  this.drawDecorationAnimation("after");
-};
-
-/**
-  * This is called twice, once with "before" and once with "after", referring to before or after
-  * the sprite is drawn.  For some angles it should be drawn before, and for some after.
-  */
-
-Artist.prototype.drawDecorationAnimation = function (when) {
-  if (this.skin.id === "elsa") {
-    var frameIndex = (this.visualization.turtleFrame_ + 10) % this.skin.decorationAnimationNumFrames;
-
-    var angleIndex = Math.floor(this.visualization.heading * this.visualization.avatar.numHeadings / 360);
-
-    // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
-    angleIndex = this.visualization.avatar.numHeadings - angleIndex;
-
-    // and they are 180 degrees out of phase.
-    angleIndex = (angleIndex + this.visualization.avatar.numHeadings / 2) % this.visualization.avatar.numHeadings;
-
-    if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
-      var sourceX = this.decorationAnimationImage.width * frameIndex;
-      var sourceY = 0;
-      var sourceWidth = this.decorationAnimationImage.width;
-      var sourceHeight = this.decorationAnimationImage.height;
-      var destWidth = sourceWidth;
-      var destHeight = sourceHeight;
-      var destX = this.visualization.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
-      var destY = this.visualization.y - destHeight / 2 - 100;
-
-      if (this.decorationAnimationImage.width !== 0) {
-        this.visualization.ctxDisplay.drawImage(
-          this.decorationAnimationImage,
-          Math.round(sourceX), Math.round(sourceY),
-          sourceWidth, sourceHeight,
-          Math.round(destX), Math.round(destY),
-          destWidth, destHeight);
-      }
-    }
-  }
-};
-
 
 /**
  * Reset the turtle to the start position, clear the display, and kill any
@@ -935,7 +939,7 @@ Artist.prototype.display = function () {
   this.visualization.ctxDisplay.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
 
   // Draw the turtle.
-  this.drawTurtle();
+  this.visualization.drawTurtle();
 };
 
 /**
