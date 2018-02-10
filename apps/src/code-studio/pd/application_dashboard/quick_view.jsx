@@ -17,6 +17,7 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import {
   ApplicationStatuses,
+  UnmatchedFilter,
   RegionalPartnerDropdownOptions as dropdownOptions
 } from './constants';
 import {
@@ -51,38 +52,65 @@ export class QuickView extends React.Component {
     router: PropTypes.object.isRequired
   };
 
-  state = {
-    loading: true,
-    applications: null,
-    filter: null,
-    regionalPartnerName: this.props.regionalPartnerName,
-    regionalPartnerFilter: null
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true,
+      applications: null,
+      filter: '',
+      regionalPartnerName: props.regionalPartnerName,
+      regionalPartnerFilter: props.isWorkshopAdmin ? UnmatchedFilter : ''
+    };
+    this.loadRequest = null;
+  }
 
   componentWillMount() {
-    $.ajax({
+    this.load();
+
+    const statusList = ApplicationStatuses[this.props.route.viewType];
+    this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
+    this.statuses.unshift({value: '', label: "All statuses"});
+  }
+
+  componentWillUnmount() {
+    this.abortLoad();
+  }
+
+  abortLoad() {
+    if (this.loadRequest) {
+      this.loadRequest.abort();
+    }
+  }
+
+  load(regionalPartnerFilter = this.state.regionalPartnerFilter) {
+    this.abortLoad();
+    this.setState({loading: true});
+
+    this.loadRequest = $.ajax({
       method: 'GET',
-      url: this.getJsonUrl(),
+      url: this.getJsonUrl(regionalPartnerFilter),
       dataType: 'json'
-    })
-    .done(data => {
+    }).done(data => {
       this.setState({
         loading: false,
         applications: data
       });
     });
-
-    const statusList = ApplicationStatuses[this.props.route.viewType];
-    this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
-    this.statuses.unshift({value: null, label: "\u00A0"});
   }
 
-  getApiUrl = (format = '') => `/api/v1/pd/applications/quick_view${format}?role=${this.props.route.path}`;
-  getJsonUrl = () => this.getApiUrl();
-  getCsvUrl = () => this.getApiUrl('.csv');
+  getApiUrl = (format, regionalPartnerFilter) => (
+    `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilter))}`
+  );
+  getApiParams = (regionalPartnerFilter) => ({
+    role: this.props.route.path,
+    regional_partner_filter: regionalPartnerFilter
+  });
+  getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
+  getCsvUrl = (regionalPartnerFilter) => this.getApiUrl('.csv', regionalPartnerFilter);
 
   handleDownloadCsvClick = event => {
-    window.open(this.getCsvUrl());
+    window.open(this.getCsvUrl(this.state.regionalPartnerFilter || ''));
   };
 
   handleStateChange = (selected) => {
@@ -94,12 +122,11 @@ export class QuickView extends React.Component {
     const regionalPartnerFilter = selected ? selected.value : null;
     const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.regionalPartnerName;
     this.setState({ regionalPartnerName, regionalPartnerFilter });
+
+    this.load(regionalPartnerFilter);
   };
 
   render() {
-    if (this.state.loading) {
-      return <Spinner />;
-    }
     return (
       <div>
         {this.props.isWorkshopAdmin &&
@@ -129,20 +156,29 @@ export class QuickView extends React.Component {
                 placeholder={null}
                 options={this.statuses}
                 style={styles.select}
+                clearable={false}
                 {...SelectStyleProps}
               />
             </FormGroup>
           </Col>
         </Row>
-        <QuickViewTable
-          path={this.props.route.path}
-          data={this.state.applications}
-          statusFilter={this.state.filter}
-          regionalPartnerFilter={this.state.regionalPartnerFilter}
-          regionalPartnerName={this.props.regionalPartnerName}
-          viewType={this.props.route.viewType}
-        />
+        {this.state.loading
+          ? <Spinner />
+          : this.renderApplicationsTable()
+        }
       </div>
+    );
+  }
+
+  renderApplicationsTable() {
+    return (
+      <QuickViewTable
+        path={this.props.route.path}
+        data={this.state.applications}
+        statusFilter={this.state.filter}
+        regionalPartnerName={this.props.regionalPartnerName}
+        viewType={this.props.route.viewType}
+      />
     );
   }
 }

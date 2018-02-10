@@ -7,7 +7,7 @@ module Api::V1::Pd::Application
     setup_all do
       @teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
       @test_params = {
-        form_data: build(:pd_principal_approval1819_application_hash),
+        form_data: build(:pd_principal_approval1819_application_hash, :approved_yes),
         application_guid: @teacher_application.application_guid
       }
     end
@@ -71,22 +71,41 @@ module Api::V1::Pd::Application
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
-    test 'application update includes Other fields' do
+    test 'application update contains replaced courses' do
       teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
 
       test_params = {
         application_guid: teacher_application.application_guid,
         form_data: build(:pd_principal_approval1819_application_hash).merge(
           {
-            do_you_approve: "Other:",
-            do_you_approve_other: "this is the other for do you approve",
-            committed_to_master_schedule: "Other:",
-            committed_to_master_schedule_other: "this is the other for master schedule",
-            committed_to_diversity: "Other (Please Explain):",
-            committed_to_diversity_other: "this is the other for diversity",
-            replace_course: "I don't know (please explain):",
-            replace_course_other: "this is the other for replace course",
+            replace_course: "Yes",
+            replace_which_course_csp: ['CodeHS', 'CS50']
           }.stringify_keys
+        )
+      }
+
+      assert_creates(Pd::Application::PrincipalApproval1819Application) do
+        put :create, params: test_params
+        assert_response :success
+      end
+
+      assert_equal 'Yes: CodeHS, CS50', teacher_application.reload.sanitize_form_data_hash[:wont_replace_existing_course]
+    end
+
+    test 'application update includes Other fields' do
+      teacher_application = create :pd_teacher1819_application, application_guid: SecureRandom.uuid
+
+      test_params = {
+        application_guid: teacher_application.application_guid,
+        form_data: build(:pd_principal_approval1819_application_hash,
+          do_you_approve: "Other:",
+          do_you_approve_other: "this is the other for do you approve",
+          committed_to_master_schedule: "Other:",
+          committed_to_master_schedule_other: "this is the other for master schedule",
+          committed_to_diversity: "Other (Please Explain):",
+          committed_to_diversity_other: "this is the other for diversity",
+          replace_course: "I don't know (please explain):",
+          replace_course_other: "this is the other for replace course"
         )
       }
 

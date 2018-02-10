@@ -216,7 +216,7 @@ class Homepage
               },
               {
                 text: "homepage_slot_text_link_administrators",
-                url: "/administrators"
+                url: "/yourschool"
               },
               {
                 text: "homepage_slot_text_link_shop",

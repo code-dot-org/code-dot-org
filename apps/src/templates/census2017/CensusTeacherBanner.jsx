@@ -118,36 +118,36 @@ export default class CensusTeacherBanner extends Component {
   handleCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
     this.setState({country: newCountry});
-  }
+  };
 
   handleSchoolTypeChange = (event) => {
     const newType = event ? event.target.value : '';
     this.setState({schoolType: newType});
-  }
+  };
 
   handleSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
     this.setState({ncesSchoolId: newSchool});
     this.loadSchoolName(newSchool);
-  }
+  };
 
   handleSchoolNotFoundChange = (field, event) => {
     const newValue = event ? event.target.value : '';
     this.setState({
       [field]: newValue
     });
-  }
+  };
 
   showSchoolInfoForm = () => {
     this.setState({showSchoolInfoForm: true});
-  }
+  };
 
   hideSchoolInfoForm = () => {
     this.setState({
       showSchoolInfoForm: false,
       showSchoolInfoErrors: false,
     });
-  }
+  };
 
   dismissSchoolInfoForm = () => {
     // This is handling the case where the user dismissed the
@@ -157,7 +157,7 @@ export default class CensusTeacherBanner extends Component {
     // to the previous values.
     this.setState(this.initialState);
     this.loadSchoolName(this.props.ncesSchoolId);
-  }
+  };
 
   handleSchoolInfoSubmit = () => {
     if (this.schoolInfoInputs.isValid()) {
@@ -189,14 +189,14 @@ export default class CensusTeacherBanner extends Component {
         showSchoolInfoErrors: true,
       });
     }
-  }
+  };
 
   updateSchoolInfoError= () => {
     // It isn't clear what could cause an error here since none of the fields are required.
     this.setState({
       showSchoolInfoUnknownError: true,
     });
-  }
+  };
 
   loadSchoolName = (schoolId) => {
     if (schoolId && schoolId !== '-1') {
@@ -209,29 +209,29 @@ export default class CensusTeacherBanner extends Component {
         schoolDisplayName: ''
       });
     }
-  }
+  };
 
   loadSchoolNameSuccess = (response) => {
     this.setState({
       schoolDisplayName: response.name,
       schoolType: response.school_type,
     });
-  }
+  };
 
   loadSchoolNameError = (error) => {
     this.setState({
       schoolDisplayName: "your school",
     });
-  }
+  };
 
   bindSchoolInfoInputs = (inputs) => {
     this.schoolInfoInputs = inputs;
-  }
+  };
 
   isValid = () => {
     return (!this.props.teaches ||
             (this.props.inClass === true || this.props.inClass === false));
-  }
+  };
 
   getData = () => {
     const schoolId = this.state.ncesSchoolId ? this.state.ncesSchoolId : this.props.ncesSchoolId;
@@ -256,7 +256,7 @@ export default class CensusTeacherBanner extends Component {
     }
 
     return data;
-  }
+  };
 
   renderThankYou() {
     const yourschoolUrl = encodeURIComponent('https://code.org/yourschool');

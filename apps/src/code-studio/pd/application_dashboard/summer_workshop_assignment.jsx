@@ -28,7 +28,7 @@ export default class SummerWorkshopAssignment extends React.Component {
     regionalPartnerGroup: PropTypes.number,
     canYouAttendQuestion: PropTypes.string,
     canYouAttendAnswer: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
-  }
+  };
 
   render() {
     return (
@@ -39,13 +39,12 @@ export default class SummerWorkshopAssignment extends React.Component {
               Assigned Workshop
             </ControlLabel>
           </Col>
-          <Col md={10} sm={9}>
+          <Col md={10} sm={9} style={styles.select}>
             <Select
               value={this.props.assignedWorkshopId}
               onChange={this.props.onChange}
               options={this.props.workshops}
               disabled={!this.props.editing}
-              style={styles.select}
               {...SelectStyleProps}
             />
           </Col>

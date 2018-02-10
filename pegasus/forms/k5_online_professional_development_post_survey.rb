@@ -1,12 +1,12 @@
 require_relative './form'
 
 class K5OnlineProfessionalDevelopmentPostSurvey < Form
-  AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
-  SCALE_ANSWERS = (1..10).map(&:to_s)
+  AGREEMENT_ANSWERS = (-2..2).map(&:to_s).freeze
+  SCALE_ANSWERS = (1..10).map(&:to_s).freeze
   SIMPLE_ANSWERS = %w(
     yes
     no
-  )
+  ).freeze
 
   def self.normalize(data)
     result = {}

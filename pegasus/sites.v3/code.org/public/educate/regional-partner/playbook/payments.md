@@ -3,6 +3,7 @@ title: Payment Information
 nav: regional_partner_playbook_nav
 ---
 
+#Payment Information
 <a id="top"></a>
 ________________
 
@@ -12,6 +13,7 @@ ________________
 - [Administrator and Counselor Workshops](#ac)<br/>
 - [Community Events](#community)<br/>
 - [TeacherCon Evening Events](#evening)<br/>
+- [CS Fair](#csfair)
 
 ________________
 <a id="workshops"></a>
@@ -20,8 +22,6 @@ ________________
 Code.org pays Regional Partners for program expenses related to hosting workshops for teachers according to their contracts. These payments may include funds for facilitators at the workshops, costs for venue space and food during the workshop day, and compensation for time for a Regional Partner staff member to plan and execute the workshop.
 
 Code.org’s payment cycles are the 1st-15th and 16th-last day of each month. In the two weeks following, Code.org prepares a report and sends it with payment for all workshops closed in that prior period. For example: if a workshop was held July 11-12th, the cycle would close July 15th, and Code.org would mail a check to the Regional Partner by the end of July.
-
-See [this document](https://docs.google.com/document/d/1FkHeRX8ZJ_GoPcRYIk4WraphYV4bMsWYv4fFq55FU8Q/edit) for an image of the payment report and frequently asked questions.
 
 ________________
 <a id="facilitators"></a>
@@ -79,7 +79,8 @@ ________________
 ## Community Events
 To receive reimbursement for a community event, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
-Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
+Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).  
+See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community). 
 
 [**Back to the top**](#top)
 
@@ -90,5 +91,16 @@ ________________
 To receive reimbursement for a Wednesday night event at TeacherCon, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Code.org will reimburse each partner up to $45 per participant. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
+
+[**Back to the top**](#top)
+
+________________
+<a id="csfair"></a>
+<br/>
+## CS Fair
+
+To receive reimbursement for a CS Fair, send an official invoice and receipts for [reimbursable expenses](https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit) to invoices@code.org within 30 days of the event. Code.org will reimburse each partner up to $5000 for one CS Fair. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+
+See more information about the CS Fair and reimbursable expenses on the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
 
 [**Back to the top**](#top)

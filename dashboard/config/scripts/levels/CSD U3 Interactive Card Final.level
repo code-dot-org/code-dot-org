@@ -199,7 +199,7 @@
     "free_play": "false",
     "text_mode_at_start": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",

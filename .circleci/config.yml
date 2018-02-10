@@ -80,7 +80,6 @@ jobs:
           command: |
             echo "
             bundler_use_sudo: false
-            npm_use_sudo: false
             properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
             applitools_eyes_api_key: $APPLITOOLS_KEY
             saucelabs_username: $SAUCE_USERNAME

@@ -64,7 +64,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"red_car\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"red_car\": {\r\n            \"name\": \"red_car\",\r\n            \"sourceUrl\": \"https://images.code.org/63b04e63fc4bc21700b64ef3d6c6b8b7-image-1471475653020.png\",\r\n            \"frameSize\": {\r\n                \"x\": 60,\r\n                \"y\": 30\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "markdown_instructions": "# getDirection()\r\n\r\nYou've been using `getSpeed` and `setSpeedAndDirection`  to change the speed of a sprite in a particular direction.  What do you think will happen if you keep the speed the same, but use `getDirection` and `setSpeedAndDirection` to change the direction?  Look at the code below and predict what it will do.  After you've run it, try changing the direction by different amounts to see what happens.\r\n\r\n# Do This\r\n* Read the code where the direction is changed and predict what it will do [Show me where](#triggercallout=code_triggered)\r\n* Run the program and observe what it does\r\n* Modify the program to make the car spin in large circles\r\n* Modify the program to make the car move in the opposite direction\r\n\r\n[//]: #(https://images.code.org/63b04e63fc4bc21700b64ef3d6c6b8b7-image-1471475653020.png)",

@@ -4,7 +4,7 @@ zh-CN:
       name:
         course1:
           title: '课程 1:'
-          description: 课程 1 旨在能让初学者创建计算机程序，在这个过程中帮助他们学习如何与他人进行协作、 提高解决问题的能力，并通过不断努力完成艰巨的任务。这门课程结束时，学生能创建他们自己编写的游戏或故事，并分享给别人。推荐等级 K-1。
+          description: 课程 1 旨在能让初学者创建计算机程序，在这个过程中帮助他们学习如何与他人进行协作、 提高解决问题的能力，并通过不断努力完成艰巨的任务。这门课程结束时，学生能创建他们自己编写的游戏或故事，并分享给别人。推荐年级 K-1。
           description_short: 为较小的读者准备的计算机科学简介。
           description_audience: 4 - 6岁
           stages:
@@ -2433,7 +2433,7 @@ zh-CN:
             Draw Loop and Randomization:
               name: 绘制 循环 和随机化
             Drawing in Game Lab:
-              name: 在游戏实验室绘图
+              name: 在游戏实验室绘画
             'Project: Interactive Card':
               name: '项目: 互动卡'
             Sprite Movement Methods:
@@ -2497,7 +2497,7 @@ zh-CN:
           description_audience: ''
           stages:
             Drawing in Game Lab:
-              name: 在游戏实验室绘图
+              name: 在游戏实验室绘画
         CSF_Secret_Sample:
           title: Secret Sample
           description: Test of new educational philosophy
@@ -3269,7 +3269,7 @@ zh-CN:
             Draw Loop and Randomization:
               name: 绘制 循环 和随机化
             Drawing in Game Lab:
-              name: 在游戏实验室绘图
+              name: 在游戏实验室绘画
               description_student: 该班级被引入游戏实验室, 即这个单元的编程环境，并开始使用它来在屏幕上定位形状。课程涵盖了排序和调试的基础知识, 以及一些简单的命令。在本课结束时, 该班级创建了上一课中所设计的图像的在线版本。
               description_teacher: 学生被引入到游戏实验室, 即这个单元的编程环境, 并开始使用它来在屏幕上定位形状。他们学习了排序和调试的基础知识, 以及一些简单的命令。在课程结束时, 学生将能够像在上一课中使用绘图工具制作的图像一样进行编程。
             'Project: Interactive Card':
@@ -4809,7 +4809,7 @@ zh-CN:
             Shapes and Randomness:
               name: 形状和随机性
             Drawing in Game Lab:
-              name: 在游戏实验室绘图
+              name: 在游戏实验室绘画
             Variables:
               name: 变量
             Programming for Entertainment:
@@ -4937,7 +4937,7 @@ zh-CN:
           description: 这是2016 年秋天发布的CSD 单元 3 的原始草案。 除非你现在有学生在使用该课程，你应该使用该单元在studio.code.org/s/csd3 里的更新版本- 该原始版本草案将被保存到2017 年7 月1 日。
           stages:
             Drawing in Game Lab:
-              name: 在游戏实验室绘图
+              name: 在游戏实验室绘画
             Draw Loop and Randomization:
               name: 绘制 循环 和随机化
             Variables Unplugged:
@@ -5077,7 +5077,7 @@ zh-CN:
             Plotting Shapes:
               name: 绘制形状
             Drawing in Game Lab:
-              name: 在游戏实验室绘图
+              name: 在游戏实验室绘画
             Shapes and Randomness:
               name: 形状和随机性
             Variables:
@@ -5153,8 +5153,8 @@ zh-CN:
             Plotting Shapes:
               name: 绘制形状
             Drawing in Game Lab:
-              name: 在游戏实验室绘图
-          title: CSD- 在游戏实验室里绘图
+              name: 在游戏实验室绘画
+          title: CSD- 在游戏实验室里绘画
           description_audience: Falmouth中学(Mike Harvey)
           description_short: ''
           description: ''
@@ -6723,6 +6723,22 @@ zh-CN:
               name: Programming - Hour of Code
             Simple Encryption:
               name: 简单加密
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: 用户界面
+            Intro to App Lab:
+              name: Intro to App Lab
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
           title: PwC's Access Your Potential curriculum
           description_audience: ''
           description_short: ''
@@ -6852,4 +6868,20 @@ zh-CN:
           title: AWS Demo
           description_audience: ''
           description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
           description: ''

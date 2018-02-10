@@ -73,7 +73,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "false",
     "markdown_instructions": "# Rotation\r\n\r\nOne of the cool things about properties are there are new things you can control about a sprite that you could not about a shape! \r\n\r\nOne of those things you can control about a sprite is its rotation.  The `rotation` property sets the angle in degrees that the sprite should be turned to. With this you can angle a sprite to a certain orientation.\r\n\r\n# Do This\r\nRotate the gears so they sockets don't overlap.\r\n\r\n* Add a command for top and bottom gears to set the rotation property of the sprite\r\n* Play with the value of the rotation until you get it to look like the picutre on the right.",
     "start_blocks": "function draw(){\r\n  \r\n}",

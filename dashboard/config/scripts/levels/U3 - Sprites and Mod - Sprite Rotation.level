@@ -74,7 +74,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "show_d_pad": "false",
     "markdown_instructions": "<img src=\"https://images.code.org/dfdc813b35a6773684e77618cffb04c9-image-1465570394783.gif\" alt=\"wheel spinning\" style=\"width:200px;float:right\" >\r\n\r\n# Rotation\r\n\r\nYou can control sprites in ways you never could with just shapes.\r\n\r\nOne of those things you can control about a sprite is its rotation.  The **`rotation` property sets the angle in degrees that the sprite should be turned to**. With this you can angle a sprite to a certain orientation or make it spin!\r\n\r\n# Do This\r\nYou are going to start creating a spinner wheel similar to one you might find at a carnival.\r\n\r\n* Create a **new sprite**\r\n* **Set the image** of the sprite to the provided wheel.png\r\n* Use the **`rotation` property as a counter** by 1 to produce a spinning effect\r\n* Test it out\r\n* Play with the increment amount to find a speed you like\r\n\r\n# Till The Animation Tab Works\r\n\r\n* <a href=\"https://images.code.org/60ce4d33daafb50996f53597b4f1547e-image-1466193542771.png\"> Wheel</a>",
     "project_template_level_name": "CSD U3 - wheel template",

@@ -72,7 +72,7 @@ class PuzzleRatingButtons extends Component {
   static propTypes = {
     useLegacyStyles: PropTypes.bool,
     label: PropTypes.string,
-  }
+  };
 
   like() {
     this.setState({liked: !this.state.liked, disliked: false});

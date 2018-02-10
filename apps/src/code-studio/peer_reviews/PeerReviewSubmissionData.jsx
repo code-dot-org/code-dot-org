@@ -7,7 +7,7 @@ class PeerReviewSubmissionData extends React.Component {
   static propTypes = {
     filterType: PropTypes.string.isRequired,
     submissions: PropTypes.arrayOf(PropTypes.object).isRequired
-  }
+  };
 
   renderTableHeader() {
     return (

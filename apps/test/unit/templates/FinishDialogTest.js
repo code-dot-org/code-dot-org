@@ -13,7 +13,21 @@ describe('FinishDialog', () => {
         showFunometer
       />
     );
-    expect(result.find('div.uitest-bubble').props().style.backgroundColor).to.equal(color.level_perfect);
+    expect(result.find('div.uitest-bubble').props().style.backgroundColor).to.equal(color.white);
+    expect(result.find('PuzzleRatingButtons')).to.have.length(1);
+  });
+
+  it('renders with a block count', () => {
+    const result = shallow(
+      <FinishDialog
+        isOpen
+        isPerfect
+        showFunometer
+        blocksUsed={10}
+        blockLimit={10}
+      />
+    );
+    expect(result.find('div.uitest-bubble').props().style.backgroundColor).to.equal(color.white);
     expect(result.find('PuzzleRatingButtons')).to.have.length(1);
   });
 });

@@ -796,7 +796,7 @@
     accept_label: わたしは、更新された <a href="%{tos_url}"target="_blank"> サービス利用規約</a> および
       <a href="%{privacy_url}"target="_blank"> プライバシー ポリシー</a> に同意します。
     accept: "同意する"
-    print: "印刷"
+    print: "プリント"
     reminder_desc: 私たちは <a href="%{tos_url}"target="_blank"> サービス利用規約</a> および <a href="%{privacy_url}"target="_blank">
       プライバシー ポリシー</a> を更新しました。それらを受け入れる前に、これらを慎重にお読みください。更新された条項に同意されない場合、JavaScript
       を教えるツールが無いかもしれないことに、注意してください。

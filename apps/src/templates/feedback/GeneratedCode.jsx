@@ -5,11 +5,12 @@ export default class GeneratedCode extends React.Component {
   static propTypes = {
     message: PropTypes.string.isRequired,
     code: PropTypes.string.isRequired,
+    style: PropTypes.object,
   };
 
   render() {
     return (
-      <div className="generated-code-container">
+      <div className="generated-code-container" style={this.props.style}>
         <p
           className="generatedCodeMessage"
           dangerouslySetInnerHTML={{__html: this.props.message}}

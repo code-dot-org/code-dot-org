@@ -32,6 +32,7 @@ describe('dialogHelper', () => {
       while (parent.hasChildNodes()) {
         parent.removeChild(parent.lastChild);
       }
+      document.body.removeChild(parent);
     });
 
     const MyComponent = () => (

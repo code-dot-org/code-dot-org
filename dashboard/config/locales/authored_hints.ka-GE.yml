@@ -3852,6 +3852,9 @@
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make
           sure blocks are connected under `when run`.
+      MC Agent Freeplay_authored_hint:
+        MC_HOC_2017_13_Cole_a: Try having the Agent build some minecart tracks so
+          you can explore the world!
       MC_HOC_2017_01_Cole_authored_hint:
         MC_HOC_2017_01_Cole_a: "გამოიყენეთ ისრების ღილაკები, რათა მიმარტოთ მოთამაშე
           სახლისკენ. მოსაგებად მიიყვანეთ ის ნარინჯისფერ კვადრატამდე."
@@ -4228,6 +4231,7 @@
           მათ გამოსათხრელად."
         mc_9_c: "იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ
           ბლოკი `ჩირაღდნის განთავსება`."
+      Valentine_artist_01_authored_hint: []
       aE1_authored_hint: []
       aE2_authored_hint:
         aE2_a: "მიაქციეთ ყურადღება: რადგან ხელსახოცები 20 პიხსელი სიგრძისაა, მოგიწევთ
@@ -7577,11 +7581,11 @@
         courseC_starWars_loops2_a: "კოდის გასამეორებლად, გადმოათრიეთ `გამეორების`
           ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი."
       courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: მობრუნების ბლოკზე "მარცხნივ"-ის გვერდით განთავსებულ
+          ისარზე დაკლიკვით თქვენ შეგიძლიათ შეცვალოთ ის "მარჯვენაზე".
         courseC_starWars_loops4_a: "გამოიყენეთ ორი `გამეორების` ბლოკი."
         courseC_starWars_loops4_b: "ყოველ `გამეორების` ციკლში მოთავსდება მხოლოდ ერთი
           ბრძანება: `გადაადგილდეთ წინ`."
-        courseC_starWars_loops4_c: მობრუნების ბლოკზე "მარცხნივ"-ის გვერდით განთავსებულ
-          ისარზე დაკლიკვით თქვენ შეგიძლიათ შეცვალოთ ის "მარჯვენაზე".
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: "ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ
           წინ."
@@ -9053,8 +9057,6 @@
           loop.  One will choose a random emotion for the dragon (actor 2) and the
           other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_b: "როგორ ფიქრობთ, რას აკეთებს `ყველა შენიღბული ნინძის
-          ისე დაყენება რომ მოქმედს აედევნონ`?"
         courseD_playLab_cond3_c: "- `თუ` დრაკონი ბედნიერია \n  - `ქულის დამატება`\n
           \ - `ქულის დამატება`  \n  \n  \n \n- `სხვა შემთხვევაში` `ქულის დამატება`"
       courseD_playLab_cond3b_authored_hint:
@@ -10901,8 +10903,6 @@
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
-        courseF_bee_for9_d: "ეს ძალიან ჰგავს სხვა კიბის-საფეხუროვან თავსატეხს, რომელიც
-          წინა დონეებზე იყო, თუმცა ამჯერად უნდა ითვალოთ უკუღმა!"
       courseF_bee_for_challenge1_authored_hint: []
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_a: |-

@@ -27,10 +27,11 @@ class MiniView extends React.Component {
     hasGroups: PropTypes.bool.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasFullProgress: PropTypes.bool.isRequired,
+    selectedSectionId: PropTypes.string,
   };
 
   render() {
-    const { linesOfCodeText, isSummaryView, hasGroups, scriptName, hasFullProgress } = this.props;
+    const { linesOfCodeText, isSummaryView, hasGroups, scriptName, hasFullProgress, selectedSectionId } = this.props;
 
     let body;
     if (!hasFullProgress) {
@@ -60,6 +61,7 @@ class MiniView extends React.Component {
         <MiniViewTopRow
           scriptName={scriptName}
           linesOfCodeText={linesOfCodeText}
+          selectedSectionId={selectedSectionId}
         />
         {body}
       </div>
@@ -73,5 +75,6 @@ export default connect(state => ({
   isSummaryView: state.progress.isSummaryView,
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
-  hasGroups: hasGroups(state.progress)
+  hasGroups: hasGroups(state.progress),
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(MiniView);

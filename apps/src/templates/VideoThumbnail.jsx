@@ -46,11 +46,11 @@ export default class VideoThumbnail extends Component {
             enable_fallback: video.enable_fallback,
             autoplay: video.autoplay,
           }, true);
-          if (experiments.isEnabled('resourcesTab') && this.props.logText){
+          if ((experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) && this.props.logText) {
             firehoseClient.putRecord(
               'analysis-events',
               {
-                study: 'instructions-resources-tab-wip-v2',
+                study: 'instructions-resources-tab',
                 study_group: 'resources-tab',
                 event: 'tab-video-click',
                 script_id: this.props.scriptId,

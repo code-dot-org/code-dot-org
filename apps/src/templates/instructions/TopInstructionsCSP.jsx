@@ -223,7 +223,7 @@ var TopInstructions = React.createClass({
     firehoseClient.putRecord(
       'analysis-events',
       {
-        study: 'instructions-resources-tab-wip-v2',
+        study: 'instructions-resources-tab',
         study_group: 'resources-tab',
         event: 'resources-tab-click',
         script_id: this.props.scriptId,
@@ -260,7 +260,7 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
-            {experiments.isEnabled('resourcesTab') &&
+            {(experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) &&
               <div style={styles.helpTabs}>
                 <InstructionsTab
                   className="uitest-instructionsTab"
@@ -283,7 +283,7 @@ var TopInstructions = React.createClass({
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            {!experiments.isEnabled('resourcesTab') &&
+            {(!experiments.isEnabled('resources_tab') || !experiments.isEnabled('resourcesTab')) &&
               <div style={styles.title}>
                 {msg.puzzleTitle({
                   stage_total: this.props.stageTotal,

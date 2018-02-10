@@ -28,11 +28,11 @@ end
 # Checks that CDO.github_access_token and CDO.slack_token are defined. If not,
 # exits the program.
 def check_for_cdo_keys
-  return if CDO.github_access_token && CDO.slack_token && CDO.honeybadger_api_token
+  return if CDO.github_access_token && CDO.slack_token && CDO.honeybadger_api_token && CDO.devinternal_db_writer
 
   puts <<-EOS.unindent
 
-    This script requires CDO.github_access_token, CDO.slack_token, and CDO.honeybadger_api_token.
+    This script requires CDO.github_access_token, CDO.slack_token, and CDO.honeybadger_api_token AND CDO.devinternal_db_writer.
 
     Create your API tokens from these pages:
 
@@ -41,6 +41,10 @@ def check_for_cdo_keys
       https://app.honeybadger.io/users/edit#authentication
 
     Please add them to your locals.yml and rerun the script.
+
+    ********
+    NEW (Jan. 2018): You need to have devinternal_db_writer set in your locals.yml so that your DOTD actions will log to the metrics table. If you don't have it yet, check with Erin Bond.
+    ********
 
   EOS
   exit
@@ -99,6 +103,8 @@ end
 # @param [String] dotd_name The name of the DOTD running this script.
 def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
+  warn_if_old_commit test_green_commit
+
   DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
@@ -409,6 +415,15 @@ def print_database_changes(pull_request_number)
        #{red database_changes_output}
 
   EOS
+end
+
+# if the commit is more than 24 hours old, warn
+def warn_if_old_commit(commit_sha)
+  date = GitHub.get_date_for_commit(commit_sha)
+  days_ago = (Date.today - date.to_date).to_i
+  return if days_ago < 1
+
+  puts "#{commit_sha} is #{red "#{days_ago} days old"}"
 end
 
 # Retrieves recent Honeybadger issues, displaying them on the console.

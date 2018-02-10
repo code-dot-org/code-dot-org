@@ -1,12 +1,13 @@
 namespace :adhoc do
   task :environment do
     require_relative '../../deployment'
-    CDO.stack_name = nil
+    ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     CDO.chef_local_mode = !ENV['CHEF_SERVER']
     if CDO.chef_local_mode
       ENV['RAILS_ENV'] = ENV['RACK_ENV'] = 'adhoc'
       CDO.rack_env = :adhoc
     end
+    CDO.stack_name = 'adhoc'
     require 'cdo/aws/cloud_formation'
   end
 
@@ -17,8 +18,18 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     AWS::CloudFormation.create_or_update
   end
 
-  desc 'Stop an adhoc server. Clean up all consumed AWS resources'
+  desc 'Start an inactive adhoc server'
+  task start_inactive_instance: :environment do
+    AWS::CloudFormation.start_inactive_instance
+  end
+
+  desc 'Stop an adhoc environment\'s EC2 Instance '
   task stop: :environment do
+    AWS::CloudFormation.stop
+  end
+
+  desc 'Delete an adhoc environment and all of its AWS Resources.  '
+  task delete: :environment do
     AWS::CloudFormation.delete
   end
 
@@ -29,7 +40,8 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
 
   namespace :full_stack do
     task :environment do
-      ENV['TEMPLATE'] = 'cloud_formation_stack.yml.erb'
+      ENV['FRONTENDS'] = '1'
+      ENV['DATABASE'] = '1'
       ENV['CDN_ENABLED'] = '1'
     end
 
