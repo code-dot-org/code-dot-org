@@ -37,6 +37,90 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     refute summary.valid?
   end
 
+  test "High school with NONE doesn't teach" do
+    submission = build :census_submission, how_many_20_hours: "NONE"
+    is_high_school = true
+    refute Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with SOME but no topics doesn't teach" do
+    submission = build :census_submission, how_many_20_hours: "SOME", topic_blocks: nil, topic_text: nil
+    is_high_school = true
+    refute Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with SOME but no topics in teacher banner does teach" do
+    submission = build :census_teacher_banner_v1, how_many_20_hours: "SOME", topic_blocks: nil, topic_text: nil
+    is_high_school = true
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with SOME and topic_blocks does teach" do
+    submission = build :census_submission, how_many_20_hours: "SOME", topic_blocks: true, topic_text: nil
+    is_high_school = true
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with SOME and topic_text does teach" do
+    submission = build :census_submission, how_many_20_hours: "SOME", topic_blocks: nil, topic_text: true
+    is_high_school = true
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with SOME and topic_text and topic_blocks does teach" do
+    submission = build :census_submission, how_many_20_hours: "SOME", topic_blocks: true, topic_text: true
+    is_high_school = true
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with ALL and topic_blocks does teach" do
+    submission = build :census_submission, how_many_20_hours: "ALL", topic_blocks: true, topic_text: nil
+    is_high_school = true
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with ALL and topic_text does teach" do
+    submission = build :census_submission, how_many_20_hours: "ALL", topic_blocks: nil, topic_text: true
+    is_high_school = true
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "High school with ALL and topic_text and topic_blocks does teach" do
+    submission = build :census_submission, how_many_20_hours: "ALL", topic_blocks: true, topic_text: true
+    is_high_school = true
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "Non-high school with NONE and NONE doesn't teach" do
+    submission = build :census_submission, how_many_10_hours: "NONE", how_many_20_hours: "NONE"
+    is_high_school = false
+    refute Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "Non-high school with 10 hours SOME does teach" do
+    submission = build :census_submission, how_many_10_hours: "SOME", how_many_20_hours: "NONE"
+    is_high_school = false
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "Non-high school with 10 hours ALL does teach" do
+    submission = build :census_submission, how_many_10_hours: "ALL", how_many_20_hours: "NONE"
+    is_high_school = false
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "Non-high school with 20 hours SOME does teach" do
+    submission = build :census_submission, how_many_10_hours: "NONE", how_many_20_hours: "SOME"
+    is_high_school = false
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
+  test "Non-high school with 20 hours ALL does teach" do
+    submission = build :census_submission, how_many_10_hours: "NONE", how_many_20_hours: "ALL"
+    is_high_school = false
+    assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school)
+  end
+
   test "School with only state data is a yes" do
     offering = create :state_cs_offering
     school = offering.school
@@ -198,7 +282,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
   end
 
   test "High school without AP, or IB data and a yes survey is a yes" do
-    submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL'
+    submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL', topic_text: true
     school = submission.school_infos[0].school
     year = submission.school_year
     create :school_stats_by_year, school: school
