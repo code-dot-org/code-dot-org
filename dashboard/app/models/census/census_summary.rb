@@ -35,7 +35,7 @@ class Census::CensusSummary < ApplicationRecord
   # The teacher banner does not have the topic check boxes
   # so we count those submissions even though they don't have
   # those options checked.
-  def self.submission_teaches_cs?(submission, is_high_school)
+  def self.submission_teaches_cs?(submission, is_high_school:)
     if is_high_school
       (
         (
@@ -184,7 +184,7 @@ class Census::CensusSummary < ApplicationRecord
       submissions.select {|s| s.school_year == school_year}.each do |submission|
         teaches =
           if submission_has_response(submission, high_school)
-            submission_teaches_cs?(submission, high_school)
+            submission_teaches_cs?(submission, is_high_school: high_school)
           else
             nil
           end
