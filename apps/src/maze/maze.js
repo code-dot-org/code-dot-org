@@ -95,7 +95,21 @@ module.exports = class Maze {
 
     //TODO: Make configurable.
     studioApp().setCheckForEmptyBlocks(true);
+
+    // TODO elijah: move this out into a separate part of the lifecycle
+    if (studioApp()) {
+      this.playAudio = studioApp().playAudio.bind(studioApp());
+      this.loadAudio = studioApp().loadAudio.bind(studioApp());
+      this.getTestResults = studioApp().getTestResults.bind(studioApp());
+    }
   }
+
+  /**
+   * A few placeholder methods intended to be rebound
+   */
+  playAudio = () => {};
+  loadAudio = () => {};
+  getTestResults = () => {};
 
   /**
    * Used by appMain to register reducers
@@ -185,7 +199,7 @@ module.exports = class Maze {
     config.dropletConfig = dropletConfig;
 
     const Type = getSubtypeForSkin(config.skinId);
-    this.subtype = new Type(this, studioApp(), config);
+    this.subtype = new Type(this, config);
 
     if (this.subtype.overrideStepSpeed) {
       this.scale.stepSpeed = this.subtype.overrideStepSpeed;
@@ -647,11 +661,11 @@ module.exports = class Maze {
     //    during execution, in which case we set ResultType to ERROR.
     // The animation should be fast if execution was successful, slow otherwise
     // to help the user see the mistake.
-    studioApp().playAudio('start');
+    this.playAudio('start');
     try {
       // don't bother running code if we're just editting required blocks. all
       // we care about is the contents of report.
-      var initialTestResults = studioApp().getTestResults(false);
+      var initialTestResults = this.getTestResults(false);
       var runCode = !Maze.isPreAnimationFailure(initialTestResults) && !this.level.edit_blocks;
 
       if (runCode) {
@@ -759,7 +773,7 @@ module.exports = class Maze {
     // Set testResults unless app-specific results were set in the default
     // branch of the above switch statement.
     if (this.testResults === TestResults.NO_TESTS_RUN) {
-      this.testResults = studioApp().getTestResults(levelComplete);
+      this.testResults = this.getTestResults(levelComplete);
     }
 
     var program;
@@ -933,7 +947,7 @@ module.exports = class Maze {
       }
       var finishIcon = document.getElementById('finish');
       if (finishIcon) {
-        studioApp().playAudio('winGoal');
+        this.playAudio('winGoal');
       }
       studioApp().playAudioOnWin();
       this.animationsController.scheduleDance(true, timePerStep);
@@ -949,7 +963,7 @@ module.exports = class Maze {
     var newX = this.pegmanX + positionChange.dx;
     var newY = this.pegmanY + positionChange.dy;
     this.animationsController.scheduleMove(newX, newY, timeForMove);
-    studioApp().playAudio('walk');
+    this.playAudio('walk');
     this.pegmanX = newX;
     this.pegmanY = newY;
   }
@@ -983,10 +997,10 @@ module.exports = class Maze {
     if (squareType === tiles.SquareType.WALL || squareType === undefined ||
       (this.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE)) {
       // Play the sound
-      studioApp().playAudio('wall');
+      this.playAudio('wall');
       if (squareType !== undefined) {
         // Check which type of wall pegman is hitting
-        studioApp().playAudio('wall' + this.subtype.wallMap[targetY][targetX]);
+        this.playAudio('wall' + this.subtype.wallMap[targetY][targetX]);
       }
 
       if (this.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE) {
@@ -999,7 +1013,7 @@ module.exports = class Maze {
       }, this.stepSpeed * 2);
     } else if (squareType === tiles.SquareType.OBSTACLE) {
       // Play the sound
-      studioApp().playAudio('obstacle');
+      this.playAudio('obstacle');
       this.animationsController.scheduleObstacleHit(targetX, targetY, deltaX, deltaY, frame);
       timeoutList.setTimeout(function () {
         studioApp().playAudioOnFailure();
@@ -1047,7 +1061,7 @@ module.exports = class Maze {
 
     this.map.setValue(row, col, previousValue + options.amount);
     this.subtype.scheduleDirtChange(row, col);
-    studioApp().playAudio(options.sound);
+    this.playAudio(options.sound);
   }
 
   /**

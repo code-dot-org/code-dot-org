@@ -8,6 +8,8 @@
  * available collectibles.
  */
 
+const studioApp = require('../StudioApp').singleton;
+
 import { TestResults } from '../constants.js';
 
 import Subtype from './subtype';
@@ -29,8 +31,8 @@ const COLLECTED_NOT_ENOUGH = 5;
 const COLLECTED_ENOUGH_BUT_NOT_ALL = 6;
 
 export default class Collector extends Subtype {
-  constructor(maze, studioApp, config) {
-    super(maze, studioApp, config);
+  constructor(maze, config) {
+    super(maze, config);
 
     // Collector level types treat the "ideal" block count as a hard
     // requirement
@@ -84,7 +86,7 @@ export default class Collector extends Subtype {
     if (skin.collectSounds) {
       this.collectSoundsCount = skin.collectSounds.length;
       skin.collectSounds.forEach((sound, i) => {
-        this.studioApp_.loadAudio(sound, 'collect' + i);
+        this.maze_.loadAudio(sound, 'collect' + i);
       });
     }
   }
@@ -157,7 +159,7 @@ export default class Collector extends Subtype {
    */
   succeeded() {
     const usedFewEnoughBlocks =
-      this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+      studioApp.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
 
     return this.collectedAll() && usedFewEnoughBlocks;
   }
@@ -179,7 +181,7 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(COLLECTED_NOTHING);
     } else if (this.collectedTooMany()) {
       executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
-    } else if (this.studioApp_.feedback_.getNumCountableBlocks() > this.maxBlocks_) {
+    } else if (studioApp.feedback_.getNumCountableBlocks() > this.maxBlocks_) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);

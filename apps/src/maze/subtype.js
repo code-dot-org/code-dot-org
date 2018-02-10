@@ -30,9 +30,8 @@ const TILE_SHAPES = {
 };
 
 export default class Subtype {
-  constructor(maze, studioApp, config) {
+  constructor(maze, config) {
     this.maze_ = maze;
-    this.studioApp_ = studioApp;
     this.skin_ = config.skin;
     this.level_ = config.level;
     this.startDirection = config.level.startDirection;
@@ -98,8 +97,8 @@ export default class Subtype {
    */
   playAudio_(sound) {
     // Check for StudioApp, which will often be undefined in unit tests
-    if (this.studioApp_) {
-      this.studioApp_.playAudio(sound);
+    if (this.maze_.playAudio) {
+      this.maze_.playAudio(sound);
     }
   }
 
@@ -136,7 +135,7 @@ export default class Subtype {
    * @returns {Number} testResult
    */
   getTestResults(terminationValue) {
-    return this.studioApp_.getTestResults(false);
+    return this.maze_.getTestResults(false);
   }
 
   /**
