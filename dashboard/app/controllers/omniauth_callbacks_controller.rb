@@ -60,15 +60,18 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Clever signins have unique requirements, and must be handled a bit outside the normal flow
   def handle_clever_signin(user)
-    # If account exists and it's not the first login, just sign in
-    if user.persisted? && user.sign_in_count > 0
+    force_takeover = user.teacher? && user.email.present? && user.email.end_with?('.cleveremailalreadytaken')
+
+    # If account exists (as looked up by Clever ID) and it's not the first login, just sign in
+    if user.persisted? && user.sign_in_count > 0 && !force_takeover
       sign_in_user
     else
-      # Otherwise, go through the new user flow - there we will
-      # offer to connect the Clever account to an existing one
+      # Otherwise, it's either the first login, or a user who must connect -
+      # offer to connect the Clever account to an existing one, or insist if needed
       session['clever_link_flag'] = true
       session['clever_takeover_id'] = user.uid
       session['clever_takeover_token'] = user.oauth_token
+      session['force_clever_takeover'] = force_takeover
       sign_in_user
     end
   end
