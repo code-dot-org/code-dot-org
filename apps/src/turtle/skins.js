@@ -3,15 +3,34 @@ var skinBase = require('../skins');
 exports.load = function (assetUrl, id) {
   var skin = skinBase.load(assetUrl, id);
 
+  skin.linePatterns = {
+    rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
+    ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
+    squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
+    swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png'),
+    patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'),
+    rainbowLine: assetUrl('media/common_images/rainbow.png'),
+    ropeLine: assetUrl('media/common_images/rope.png'),
+    squigglyLine: assetUrl('media/common_images/squiggly.png'),
+    swirlyLine: assetUrl('media/common_images/swirlyline.png'),
+  };
+
   var CONFIGS = {
     anna: {
       // slider speed gets divided by this value
       speedModifier: 10,
       turtleNumFrames: 10,
+      avatarSettings: {
+        width: 73,
+        height: 100,
+        numHeadings: 36,
+      },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
-      annaLine: skin.assetUrl('annaline.png'),
-      annaLine_2x: skin.assetUrl('annaline_2x.png'),
+      linePatterns: {
+        annaLine: skin.assetUrl('annaline.png'),
+        annaLine_2x: skin.assetUrl('annaline_2x.png'),
+      },
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [[skin.assetUrl('annaline-menuicon.png'), 'annaLine']],
       artistOptions: ['anna', 'elsa'],
@@ -22,11 +41,18 @@ exports.load = function (assetUrl, id) {
     elsa: {
       speedModifier: 10,
       turtleNumFrames: 20,
+      avatarSettings: {
+        width: 73,
+        height: 100,
+        numHeadings: 18,
+      },
       decorationAnimationNumFrames: 19,
       smoothAnimate: true,
       consolidateTurnAndMove: true,
-      elsaLine: skin.assetUrl('elsaline.png'),
-      elsaLine_2x: skin.assetUrl('elsaline_2x.png'),
+      linePatterns: {
+        elsaLine: skin.assetUrl('elsaline.png'),
+        elsaLine_2x: skin.assetUrl('elsaline_2x.png'),
+      },
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [[skin.assetUrl('elsaline-menuicon.png'), 'elsaLine']],
       artistOptions: ['anna', 'elsa'],
@@ -37,10 +63,10 @@ exports.load = function (assetUrl, id) {
     artist: {
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
-          [skin.rainbowMenu, 'rainbowLine'],
-          [skin.ropeMenu, 'ropeLine'],
-          [skin.squigglyMenu, 'squigglyLine'],
-          [skin.swirlyMenu, 'swirlyLine']
+          [skin.linePatterns.rainbowMenu, 'rainbowLine'],
+          [skin.linePatterns.ropeMenu, 'ropeLine'],
+          [skin.linePatterns.squigglyMenu, 'squigglyLine'],
+          [skin.linePatterns.swirlyMenu, 'swirlyLine'],
       ]
     }
   };
@@ -88,6 +114,11 @@ exports.load = function (assetUrl, id) {
 
   // base skin properties here (can be overriden by CONFIG)
   skin.speedModifier = 1;
+  skin.avatarSettings = {
+    width: 70,
+    height: 51,
+    numHeadings: 180,
+  };
 
   // Get properties from config
   for (var prop in config) {
@@ -98,7 +129,7 @@ exports.load = function (assetUrl, id) {
   // to populate the image dropdown in the Set Pattern block.
 
   // All skins have the default line style (solid coloured line)
-  var lineStylePatternOptions =  [[skin.patternDefault, 'DEFAULT']];
+  var lineStylePatternOptions =  [[skin.linePatterns.patternDefault, 'DEFAULT']];
 
   // If the skin provided line patterns, add them to the pattern set
   if (config && config.lineStylePatternOptions) {

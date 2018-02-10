@@ -1,7 +1,7 @@
-- if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
+- if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
   = render layout: 'shared/extra_links' do
     - if @level_source.hidden?
-      %h4 This level is hidden but you can see it because you have the RESET_ABUSE permission. Everyone else gets a 404 page.
+      %h4 This level is hidden but you can see it because you have the PROJECT_VALIDATOR permission. Everyone else gets a 404 page.
     = form_for(@level_source, html: {class: 'form-inline'}) do |f|
       = f.label :hidden, 'Hide this solution and block sharing: '
       = f.check_box :hidden

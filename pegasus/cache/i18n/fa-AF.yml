@@ -1077,7 +1077,7 @@
   dashboard_teacher_worksheet: "ورقه کار معلم"
   dashboard_curriculum_csina: "علوم کامپیوتر در جبر:"
   dashboard_curriculum_csins: "علوم کامپیوتر در علم:"
-  dashboard_curriculum_csp: "مفاهیم ® AP علوم کامپیوتر:"
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: "کاوش در علوم کامپیوتر:"
   dashboard_grade_k: K
   dashboard_grade_other: "دیگر"
@@ -2166,3 +2166,9 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
+  dashboard_tools: 'Tools: '
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
+  gamelab_name: Game Lab

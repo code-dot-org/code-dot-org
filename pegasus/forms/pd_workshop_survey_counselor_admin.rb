@@ -88,7 +88,7 @@ class PdWorkshopSurveyCounselorAdmin < Form
     OPTIONS[symbolized_field_name]
   end
 
-  OTHER = 'Other'
+  OTHER = 'Other'.freeze
 
   AGREE_SCALE_OPTIONS = [
     'Strongly Disagree',
@@ -97,7 +97,7 @@ class PdWorkshopSurveyCounselorAdmin < Form
     'Slightly Agree',
     'Agree',
     'Strongly Agree'
-  ]
+  ].freeze
 
   def self.agree_scale_options
     AGREE_SCALE_OPTIONS
@@ -106,7 +106,7 @@ class PdWorkshopSurveyCounselorAdmin < Form
   ATTENDEE_TYPE = {
     ADMINISTRATOR: 'Administrator',
     COUNSELOR: 'Counselor',
-  }
+  }.freeze
 
   OPTIONS = {
     how_heard_ss: [
@@ -145,5 +145,5 @@ class PdWorkshopSurveyCounselorAdmin < Form
       'Computer Science Discoveries',
       'Computer Science Principles'
     ],
-  }
+  }.freeze
 end

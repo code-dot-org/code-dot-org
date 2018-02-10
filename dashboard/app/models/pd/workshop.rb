@@ -345,6 +345,22 @@ class Pd::Workshop < ActiveRecord::Base
       "#{sessions.first.start.strftime('%B %-d')} - #{sessions.last.start.strftime('%B %-d, %Y')}"
   end
 
+  # Friendly location string is determined by:
+  # 1. known variant of TBA? use TBA
+  # 2. processed location? use city, state
+  # 3. unprocessable location: use user-entered string
+  # 4. no location address at all? use TBA
+  def friendly_location
+    return 'Location TBA' if location_address_tba?
+    return "#{location_city} #{location_state}" if processed_location
+    location_address.presence || 'Location TBA'
+  end
+
+  def date_and_location_name
+    date_string = sessions.any? ? friendly_date_range : 'Dates TBA'
+    "#{date_string}, #{friendly_location}#{teachercon? ? ' TeacherCon' : ''}"
+  end
+
   # Puts workshop in 'In Progress' state
   def start!
     raise 'Workshop must have at least one session to start.' if sessions.empty?
@@ -466,10 +482,14 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  def location_address_tba?
+    %w(tba tbd n/a).include?(location_address.try(:downcase))
+  end
+
   def process_location
     result = nil
 
-    unless location_address.blank?
+    unless location_address.blank? || location_address_tba?
       begin
         Geocoder.with_errors do
           # Geocoder can raise a number of errors including SocketError, with a common base of StandardError

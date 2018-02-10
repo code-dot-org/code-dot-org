@@ -273,6 +273,8 @@ class LevelsController < ApplicationController
       {soft_buttons: []},
       {contained_level_names: []},
       {examples: []},
+      {reference_links: []},
+      :map_reference,
 
       # Minecraft-specific
       {available_blocks: []},
@@ -294,6 +296,9 @@ class LevelsController < ApplicationController
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
     end
+
+    # Removes empty reference links which are autosaved as "" by the form
+    params[:level][:reference_links].delete_if {|link| link == ""} if params[:level][:reference_links]
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)

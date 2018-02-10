@@ -15,7 +15,7 @@ theme: responsive
 
 [col-50]
 
-<iframe width="375" height="246" src="//www.youtube.com/embed/sUXfjzzHO5g?controls=2" frameborder="0" allowfullscreen></iframe>
+<iframe width="375" height="246" src="https://www.youtube.com/embed/1iwq-uZNOSg" frameborder="0" allowfullscreen></iframe>
 
 **Code.org's work covered by CBS This Morning**
 
@@ -25,7 +25,7 @@ theme: responsive
 
 [col-50]
 
-<iframe width="375" height="246" src="//www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
+<iframe width="375" height="246" src="https://www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
 
 **President Obama does the Hour of Code**
 

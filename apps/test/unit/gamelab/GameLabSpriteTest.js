@@ -2,7 +2,10 @@
 /* global p5 */
 import {spy, stub} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import {forEveryBooleanPermutation} from '../../util/testUtils';
+import {
+  forEveryBooleanPermutation,
+  sandboxDocumentBody
+} from '../../util/testUtils';
 import createGameLabP5, {
   createStatefulGameLabP5,
   expectAnimationsAreClones
@@ -10,6 +13,10 @@ import createGameLabP5, {
 
 describe('GameLabSprite', function () {
   let gameLabP5, createSprite;
+
+  // Using the aggressive sandbox here because the P5 library generates
+  // a default canvas when it's not attached to an existing one.
+  sandboxDocumentBody();
 
   beforeEach(function () {
     gameLabP5 = createGameLabP5();
@@ -705,6 +712,13 @@ describe('GameLabSprite', function () {
       expect(spriteTarget.position.x).to.equal(300);
       expect(sprite.velocity.x).to.equal(3);
       expect(spriteTarget.velocity.x).to.equal(0);
+    });
+
+    it('destroyed sprites do not collide', function () {
+      expect(sprite.overlap(spriteTarget)).to.equal(true);
+      spriteTarget.remove();
+      expect(sprite.overlap(spriteTarget)).to.equal(false);
+      expect(spriteTarget.overlap(sprite)).to.equal(false);
     });
   });
 

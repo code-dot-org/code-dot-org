@@ -167,7 +167,7 @@ function main() {
 
   // Section service. see sites.v3/code.org/routes/v2_section_routes.rb
   services.factory('sectionsService', ['$resource',
-    function ($resource){
+    function ($resource) {
       return $resource('/v2/sections/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
@@ -194,7 +194,7 @@ function main() {
     }]);
 
   services.factory('studentsService', ['$resource',
-    function ($resource){
+    function ($resource) {
       return $resource('/v2/students/:id', {}, {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
@@ -354,7 +354,7 @@ function main() {
     $scope.tab = $routeParams.tab;
 
     $scope.section.$promise.then(
-      function ( section ){
+      function ( section ) {
         if (!$scope.tab) {
           if ($scope.section.students.length > 0) {
             $location.path('/sections/' + $routeParams.id + '/progress');
@@ -368,7 +368,7 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
@@ -681,7 +681,7 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
@@ -692,7 +692,7 @@ function main() {
 
       //Want to apply this only to the printing frame, so add here rather than inline
       const cards = $window.frames.print_frame.document.getElementsByClassName('signin_card');
-      for (let i = 0; i < cards.length; i++){
+      for (let i = 0; i < cards.length; i++) {
         cards[i].style.width = '300px';
       }
       $window.frames.print_frame.window.focus();
@@ -799,7 +799,7 @@ function main() {
     $scope.progress_disabled_scripts = disabled_scripts;
 
     // wait until we have both the students and the student progress
-    $q.all([paginatedPromise, $scope.section.$promise]).then(function (){
+    $q.all([paginatedPromise, $scope.section.$promise]).then(function () {
       $scope.mergeProgress();
       $scope.progressLoadedFirst = true;
       $scope.progressLoaded = true;
@@ -830,7 +830,7 @@ function main() {
       return $scope.page.zoom ? Math.max(34 * $scope.progress.script.levels_count, 770) : 770;
     };
 
-    $scope.scrollToStage = function ($event){
+    $scope.scrollToStage = function ($event) {
       var doScroll = function () {
         var element = $( $event.currentTarget );
         var wrapper = $('.table-wrapper');
@@ -884,7 +884,7 @@ function main() {
         student.highest_level_in_stage = 0;
 
         // if we have progress
-        var progress_student = $.grep($scope.progress.students, function (e){ return e.id == student.id; })[0];
+        var progress_student = $.grep($scope.progress.students, function (e) { return e.id == student.id; })[0];
         if (progress_student) {
           student.levels = progress_student.levels;
 
@@ -941,7 +941,7 @@ function main() {
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
@@ -952,7 +952,7 @@ function main() {
     $scope.script_list = valid_scripts;
 
     // wait until we have both the students and the student progress
-    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function (){
+    $q.all([$scope.section.$promise, $scope.responses.$promise]).then(function () {
       $scope.responsesLoaded = true;
       $scope.findStages();
     });
@@ -963,7 +963,7 @@ function main() {
 
       $scope.responses = sectionsService.responses({id: $routeParams.id, script_id: scriptId});
 
-      $scope.responses.$promise.then(function (){
+      $scope.responses.$promise.then(function () {
         $scope.responsesLoaded = true;
         $scope.findStages();
       });
@@ -1035,13 +1035,13 @@ function main() {
     // The ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
-      function ( sections ){
+      function ( sections ) {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
 
     // Wait until we have initial section, assessment, and survey data.
-    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function (){
+    $q.all([$scope.section.$promise, $scope.assessments.$promise, $scope.surveys.$promise]).then(function () {
       $scope.assessmentsLoaded = true;
       $scope.surveysLoaded = true;
       $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
@@ -1056,7 +1056,7 @@ function main() {
       // Load assessments.
       $scope.assessmentsLoaded = false;
       $scope.assessments = sectionsService.assessments({id: $routeParams.id, script_id: scriptId});
-      $scope.assessments.$promise.then(function (){
+      $scope.assessments.$promise.then(function () {
         $scope.assessmentsLoaded = true;
         $scope.assessmentLevels = $scope.getAssessmentData($scope.assessments);
         $scope.assessmentStages = $scope.findStages($scope.assessments);

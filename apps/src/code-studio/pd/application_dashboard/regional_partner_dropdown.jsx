@@ -27,7 +27,7 @@ export class RegionalPartnerDropdown extends React.Component {
       name: PropTypes.string
     })),
     additionalOptions: PropTypes.array,
-  }
+  };
 
   componentWillMount() {
     this.regionalPartners = this.props.regionalPartners.map(v => ({value: v.id, label: v.name}));
@@ -41,6 +41,7 @@ export class RegionalPartnerDropdown extends React.Component {
       <FormGroup>
         <ControlLabel>Select a regional partner</ControlLabel>
         <Select
+          clearable={false}
           value={this.props.regionalPartnerFilter}
           onChange={this.props.onChange}
           placeholder={null}

@@ -274,4 +274,8 @@ module GitHub
       response = response.rels[:next].get
     end
   end
+
+  def self.get_date_for_commit(commit_sha)
+    return Octokit.commit(REPO, commit_sha)[:commit][:author][:date]
+  end
 end

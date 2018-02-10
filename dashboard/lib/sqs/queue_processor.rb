@@ -15,7 +15,6 @@
 
 require 'aws-sdk'
 require 'logger'
-require 'thread'
 require_relative 'messages_handler'
 require_relative 'metrics'
 require_relative 'queue_processor_config'
@@ -103,7 +102,7 @@ module SQS
             rescue => exception
               @logger.warn exception
             end
-          end # while
+          end
         end
         @worker_threads << worker_thread
       end

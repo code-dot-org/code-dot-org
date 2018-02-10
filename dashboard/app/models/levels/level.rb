@@ -58,6 +58,8 @@ class Level < ActiveRecord::Base
     authored_hints
     instructions_important
     display_name
+    map_reference
+    reference_links
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -311,6 +313,7 @@ class Level < ActiveRecord::Base
     Craft
     Eval
     Grid
+    GamelabJr
     Karel
     Maze
     Studio

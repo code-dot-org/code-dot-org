@@ -10,11 +10,19 @@ table {width: 100%;}
 
 # Implementation Timeline
 
+<br/>
+Need a different format? See more frequently updated short list and calendar view [here](https://docs.google.com/document/d/1cubSRIAG5llj-pftmVdZkjKaDHVTE85HO8enUy_mdXo/edit#).
+
 ## Legend
 
 - Regional Partner items are in black
 - <span style="color:green">Items and Deadlines for Facilitators are in green</span>
 
+
+<details>
+  <summary>November</summary>
+  <p>
+  
 ## November Areas of Focus
 
 - Recruiting New Facilitators<br/>
@@ -37,7 +45,12 @@ table {width: 100%;}
 | Nov 15, 2017 | Identify your CSEdWeek District Invitees|
 | Nov 29, 2017 | Group 3 - Conducting Facilitator Interviews - Virtual Meeting |
 | Nov 30, 2017 | Group 1 and 2 - Conducting Facilitator Interviews - Virtual Meeting |
-
+<br/>
+</p>
+</details>
+<details>
+  <summary>December</summary>
+  <p>
 ## December Areas of Focus
 
 - Review of Facilitator Applications<br/>
@@ -59,7 +72,12 @@ table {width: 100%;}
 | Dec 12, 2017 <br/> 10:00 am - 11:00 am PT<br/> | TEALS Virtual Meeting for Regional Partners. Meeting Information will be provided in early December.|
 | Dec 15, 2017 | Finalize and sign Sustainability MOU (**Group 1 partners only**) |
 | Dec 16, 2017 - Jan 1, 2018 | Code.org Offices Closed|
-
+<br/>
+</p>
+</details>
+<details>
+  <summary>January</summary>
+  <p>
 
 ## January Areas of Focus
 
@@ -83,7 +101,9 @@ table {width: 100%;}
 | Ongoing through January | Code.org reviews recommendations, conducts follow-up interviews if there are any red flags, and makes acceptance decisions in collaboration with partners for CS Fundamentals Facilitators |
 | Jan 8, 2018 - Feb 15, 2018| Code.org-trained interviewer and partner co-lead interviews and debriefs begin. Partner stack ranks applicants after all interviews are complete for CS Discoveries and CS Principles facilitators (**Group 3 partners only**) |
 | Jan 23, 2018 - Feb 8, 2018| Code.org reviews recommendations, conducts follow-up interviews if there are any red flags, and makes acceptance decisions in collaboration with partners for CSD and CSP Facilitators (**Group 1 and 2 partners only**)|
-
+<br/>
+</p>
+</details>
 
 ## February Areas of Focus
 
@@ -176,3 +196,13 @@ table {width: 100%;}
 | **July** ||
 |-----------------|--------------------------------------------------|
 | July 22-27, 2018| TeacherCon 2 in Phoenix, AZ|
+
+<br/>
+
+More information to come.
+
+<br/>
+<br/>
+
+
+

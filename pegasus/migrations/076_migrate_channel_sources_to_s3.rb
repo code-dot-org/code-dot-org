@@ -5,7 +5,7 @@ require 'files_api'
 Sequel.migration do
   up do
     ChatClient.log 'Moving <b>channel</b> sources to S3...'
-    FILE_NAME = 'main.json'
+    FILE_NAME = 'main.json'.freeze
     source_bucket = SourceBucket.new
 
     # For each channel with a level(Source|Html) and no migratedToS3 flag, create a new S3 record and set migratedToS3.

@@ -1,7 +1,7 @@
 /* eslint no-unused-vars: "error" */
 import React from 'react';
 import sinon from 'sinon';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 import {expect} from '../../util/configuredChai';
 import Dialog, {Body, Buttons, Confirm, Cancel} from '@cdo/apps/templates/Dialog';
@@ -38,6 +38,25 @@ describe("AssetListItem", () => {
     expect(item.text()).to.contain(
       'Warning: Importing this will replace your existing "bar.mp3".'
     );
+  });
+
+  it("uses the current project id when no other id is specified", () => {
+    const itemWithoutProjectId = mount(
+      <AssetListItem
+        asset={{filename: 'bar.png', category: 'image', willReplace: false}}
+      />
+    );
+    expect(itemWithoutProjectId.find('img').prop('src')).to.contain("/v3/assets/undefined/bar.png");
+  });
+
+  it("uses the specified project's id", () => {
+    const itemWithProjectId = mount(
+      <AssetListItem
+        projectId="1234"
+        asset={{filename: 'bar.png', category: 'image', willReplace: false}}
+      />
+    );
+    expect(itemWithProjectId.find('img').prop('src')).to.contain("/v3/assets/1234/bar.png");
   });
 });
 

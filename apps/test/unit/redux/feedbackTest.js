@@ -14,7 +14,10 @@ describe('feedback redux module', () => {
       blockLimit: undefined,
       achievements: [],
       displayFunometer: true,
-      studentCode: '',
+      studentCode: {
+        message: '',
+        code: '',
+      },
       canShare: false,
     });
   });
@@ -83,7 +86,6 @@ describe('feedback redux module', () => {
       expect(newState).to.deep.equal({
         isPerfect: true,
         blocksUsed: 19,
-        achievements: undefined,
         displayFunometer: false,
         studentCode: 'console.log("hello world!");',
         canShare: true,

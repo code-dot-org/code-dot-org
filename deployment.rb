@@ -59,6 +59,7 @@ def load_configuration
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_writer'                   => 'mysql://root@localhost/',
+    'default_hoc_mode'            => false, # overridden by 'hoc_mode' DCDO param, except in :test
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,
@@ -69,8 +70,6 @@ def load_configuration
     'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
-    # npm_use_sudo now controls whether to run yarn under sudo, which should be never. Remove this variable in the future.
-    'npm_use_sudo'                => false,
     'partners'                    => %w(ar br italia ro sg tr uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
@@ -236,7 +235,7 @@ class CDOImpl < OpenStruct
   end
 
   def default_scheme
-    rack_env?(:development) ? 'http:' : 'https:'
+    rack_env?(:development) || ENV['CI'] ? 'http:' : 'https:'
   end
 
   def dir(*dirs)

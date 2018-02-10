@@ -512,7 +512,7 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
         // Mark if this should be nativeIsAsync:
         makeNativeOpts.nativeIsAsync = true;
       }
-      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(this, nativeParentObj, nativeVar);
+      var extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(nativeParentObj, nativeVar);
       // Add extra options if the parent of this function is in our custom marshal
       // modified object list:
       for (var prop in extraOpts) {

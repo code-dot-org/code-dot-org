@@ -31,8 +31,9 @@ const styles = {
 class QuickActionsCell extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.array]).isRequired,
+      PropTypes.node,
+      PropTypes.array
+    ]).isRequired
   };
 
   state = {
@@ -48,13 +49,13 @@ class QuickActionsCell extends Component {
     this.updateMenuLocation();
     window.addEventListener("resize", throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
-  }
+  };
 
   // Menu closed
   close = () => {
     window.removeEventListener("resize", throttle(this.updateMenuLocation, 50));
     this.setState({open: false});
-  }
+  };
 
   // Menu closed
   beforeClose = (_, resetPortalState) => {
@@ -77,7 +78,7 @@ class QuickActionsCell extends Component {
         menuTop: rect.bottom + window.pageYOffset,
         menuLeft: rect.left - rect.width + window.pageXOffset});
     }
-  }
+  };
 
   render() {
     const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};

@@ -32,6 +32,7 @@ module Api::V1::Pd
       }
 
       @csd_teacher_application = create :pd_teacher1819_application, course: 'csd'
+      @csd_teacher_application_with_partner = create :pd_teacher1819_application, course: 'csd', regional_partner: @regional_partner
       @csp_teacher_application = create :pd_teacher1819_application, course: 'csp'
       @csp_facilitator_application = create :pd_facilitator1819_application, course: 'csp'
 
@@ -45,6 +46,8 @@ module Api::V1::Pd
           )
         )
       )
+
+      @workshop_admin = create :workshop_admin
     end
 
     test_redirect_to_sign_in_for :index
@@ -84,6 +87,54 @@ module Api::V1::Pd
       get :quick_view, params: @test_quick_view_params
       assert_response :success
       assert_equal Pd::Application::Facilitator1819Application.csf.count, JSON.parse(@response.body).length
+    end
+
+    test "quick view returns applications with appropriate regional partner filter" do
+      sign_in @workshop_admin
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: @regional_partner.id}
+      assert_response :success
+      assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+    end
+
+    test "quick view returns applications with regional partner filter unset" do
+      sign_in @workshop_admin
+      get :quick_view, params: {role: 'csd_teachers'}
+      assert_response :success
+      assert_equal [@csd_teacher_application.id, @csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+    end
+
+    test "quick view returns applications with regional partner filter set to no partner" do
+      sign_in @workshop_admin
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_filter: 'none'}
+      assert_response :success
+      assert_equal [@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']}
+    end
+
+    test "index shows multiple locked applications" do
+      program_manager = create :workshop_organizer
+      regional_partner = create :regional_partner, program_managers: [program_manager]
+      sign_in program_manager
+
+      create_list :pd_teacher1819_application, 3, :locked, regional_partner: regional_partner
+      get :index
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal 3, data['csp_teachers']['accepted']['locked']
+    end
+
+    test "index with applications of different statuses correctly shows locked applications" do
+      program_manager = create :workshop_organizer
+      regional_partner = create :regional_partner, program_managers: [program_manager]
+      sign_in program_manager
+
+      create_list :pd_teacher1819_application, 3, :locked, regional_partner: regional_partner
+      create_list :pd_teacher1819_application, 2, regional_partner: regional_partner
+
+      get :index
+      assert_response :success
+      data = JSON.parse(response.body)
+      assert_equal 3, data['csp_teachers']['accepted']['locked']
+      assert_equal 2, data['csp_teachers']['unreviewed']['unlocked']
     end
 
     test 'regional partners can only see their applications in index' do
@@ -161,23 +212,15 @@ module Api::V1::Pd
       assert_equal({regional_partner_name: 'Yes'}, application.response_scores_hash)
     end
 
-    test 'workshop admins and G3 partners can lock and unlock applications' do
+    test 'workshop admins can and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
       assert_response :success
       data = JSON.parse(response.body)
       assert data['locked']
-
-      g3_organizer = create :workshop_organizer
-      create :regional_partner, program_managers: [g3_organizer], group: 3
-      sign_in g3_organizer
-      put :update, params: {id: @csf_facilitator_application_with_partner, application: {status: 'accepted', locked: 'true'}}
-      assert_response :success
-      data = JSON.parse(response.body)
-      assert data['locked']
     end
 
-    test 'ONLY workdshop admins and G3 partners can lock and unlock applications' do
+    test 'Regional partners cannot lock and unlock applications' do
       sign_in @workshop_organizer
       put :update, params: {id: @csf_facilitator_application_with_partner, application: {status: 'accepted', locked: 'true'}}
       assert_response :success
@@ -257,11 +300,31 @@ module Api::V1::Pd
       ).values.any? {|x| response_csv.first.exclude?(x)}
     end
 
+    test 'cohort view returns applications that are accepted and withdrawn' do
+      expected_applications = []
+      (Pd::Application::ApplicationBase.statuses.values - ['interview']).each do |status|
+        application = create :pd_teacher1819_application, course: 'csp'
+        application.update_column(:status, status)
+        if ['accepted', 'withdrawn'].include? status
+          expected_applications << application
+        end
+      end
+
+      sign_in @workshop_admin
+      get :cohort_view, params: {role: 'csp_teachers'}
+      assert_response :success
+
+      assert_equal(
+        expected_applications.map {|application| application[:id]}.sort,
+        JSON.parse(@response.body).map {|application| application['id']}.sort
+      )
+    end
+
     test 'cohort view returns expected columns for a teacher' do
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :pd_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -279,7 +342,7 @@ module Api::V1::Pd
 
         sign_in @workshop_organizer
         get :cohort_view, params: {role: 'csp_teachers'}
-        assert :success
+        assert_response :success
 
         assert_equal(
           {
@@ -289,7 +352,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'Orchard Park',
+            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -314,7 +377,7 @@ module Api::V1::Pd
 
         sign_in @workshop_organizer
         get :cohort_view, params: {role: 'csp_teachers'}
-        assert :success
+        assert_response :success
 
         assert_equal(
           {
@@ -349,7 +412,7 @@ module Api::V1::Pd
 
         sign_in @workshop_organizer
         get :cohort_view, params: {role: 'csp_facilitators'}
-        assert :success
+        assert_response :success
 
         assert_equal(
           {
@@ -362,6 +425,40 @@ module Api::V1::Pd
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
+    end
+
+    test 'search finds applications by email for workshop admins' do
+      sign_in @workshop_admin
+      get :search, params: {email: @csd_teacher_application.user.email}
+      assert_response :success
+      result = JSON.parse response.body
+      expected = [{
+        id: @csd_teacher_application.id,
+        application_type: 'Teacher',
+        course: 'csd'
+      }.stringify_keys]
+      assert_equal expected, result
+    end
+
+    test 'search finds applications by email for the relevant regional partner' do
+      sign_in @workshop_organizer
+      get :search, params: {email: @csd_teacher_application_with_partner.user.email}
+      assert_response :success
+      result = JSON.parse response.body
+      expected = [{
+        id: @csd_teacher_application_with_partner.id,
+        application_type: 'Teacher',
+        course: 'csd'
+      }.stringify_keys]
+      assert_equal expected, result
+    end
+
+    test 'search does not reveal applications outside the regional partners cohort' do
+      sign_in @workshop_organizer
+      get :search, params: {email: @csd_teacher_application.user.email}
+      assert_response :success
+      result = JSON.parse response.body
+      assert_equal [], result
     end
   end
 end

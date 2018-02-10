@@ -48,10 +48,12 @@ The program kicks off with a 5-day summer workshop where you'll have the opportu
 ## <a name="features"></a>Program Features
 
 <details>
-<summary>**Accessible to all educators**</summary>
+<summary>**Cost should not be a barrier**</summary>
 <p>
 <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
+
+In New York and North Carolina, there is a fee to cover the costs of the workshop. But, we have worked with many school districts in these regions and they have allocated funds to cover the costs for you and your school. If your principal or administration has any questions around the costs to support this, please encourage them to reach out to our partners in <a href="mailto:programs@codeinteractive.org">New York</a> and <a href="mailto:srmorri3@ncsu.edu">North Carolina</a> so we can help you.
 </p>
 </details>
 
@@ -115,6 +117,9 @@ The CS Principles Professional Learning Program is available in regions served b
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
 
+<br>
+Some of our Partners serve their entire state and will be hosting summer workshops in multiple locations. Even if your city is not listed on this map, we encourage you to apply! 
+
 ## <a name="participate"></a>Who can participate?
 
 The CS Principles Professional Learning Program is open to educators who are interested in teaching the Code.org CS Principles course - no prior experience required! We prioritize educators who plan to teach the course in grades 9, 10, 11 and/or 12. In order to participate in this program, we ask that applicants:
@@ -137,6 +142,22 @@ In some cases, travel may be required to attend your five-day summer workshop. P
 
 **Local Academic Year Workshop Expenses**
 Meals and course materials will be provided to participants who attend the local follow-up workshops. Your Regional Partner will schedule and lead these workshops, and will provide more details.
+
+## Additional benefits
+
+[col-20]
+
+<img style="margin-top:-20px;margin-bottom:-30px" src="/images/avatars/fit-200/iste.png"/>
+
+[/col-20]
+
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, [we can offer an ISTE membership](https://www.iste.org/membership/code-org) exclusively to Code.org teachers at the special price of $99 (regularly $125).
+
+Check out these 3 key benefits of ISTE membership:
+
+- Professional Learning Networks made up of peer experts, including computer science educators
+- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
+- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
 
 ## <a name="apply"></a>How to apply?
 

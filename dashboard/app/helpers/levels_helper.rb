@@ -265,7 +265,7 @@ module LevelsHelper
     use_droplet = app_options[:droplet]
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
-    use_gamelab = @level.game == Game.gamelab
+    use_gamelab = @level.game.app == Game::GAMELAB
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
@@ -548,7 +548,7 @@ module LevelsHelper
       app_options[:firebaseAuthToken] = firebase_auth_token
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
-    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
+    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?

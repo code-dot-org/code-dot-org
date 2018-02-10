@@ -3,7 +3,7 @@ import NewProjectButtons from './NewProjectButtons';
 
 export default storybook => {
   storybook
-    .storiesOf('NewProjectButtons', module)
+    .storiesOf('Buttons/NewProjectButtons', module)
     .withReduxStore()
     .addStoryTable([
       {
@@ -41,7 +41,7 @@ export default storybook => {
         )
       },
       {
-        name: 'More options',
+        name: 'Even more options',
         description: 'Buttons for Bounce, Infinity, Ice Age, Gumball',
         story: () => (
           <NewProjectButtons

@@ -35,7 +35,8 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
     handleScoreChange: PropTypes.func,
     courseName: PropTypes.string,
     assignedWorkshopId: PropTypes.number,
-    handleSelectedWorkshopChange: PropTypes.func
+    handleSelectedWorkshopChange: PropTypes.func,
+    applicationGuid: PropTypes.string
   };
 
   constructor(props) {
@@ -81,7 +82,18 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
   renderResponsesForSection(section) {
     // Lame edge case but has to be done
     if (section === 'detailViewPrincipalApproval' && !this.props.formResponses['principalApproval']) {
-      return (<h4>Not yet submitted</h4>);
+      return (
+        <span>
+          <h4>
+            Not yet submitted
+          </h4>
+          <span>
+            Link to principal approval form: (<a href={`/pd/application/principal_approval/${this.props.applicationGuid}`} target="_blank">
+             {`http://studio.code.org/pd/application/principal_approval/${this.props.applicationGuid}`}
+            </a>)
+          </span>
+        </span>
+      );
     } else {
       return Object.keys(this.pageLabels[section]).map((question, j) => {
         return (

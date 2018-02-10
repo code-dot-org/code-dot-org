@@ -43,7 +43,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions": "Do This",
     "markdown_instructions": "# Clouds and Sun\r\n\r\nNext, you are going to add the clouds and sun to our picture. Here is an example of what your work could look like at the end of the level, but use some creativity as you create your sun and clouds.\r\n\r\n<img src=\"https://images.code.org/c3a26070e316d0fda19caba59af710ba-image-1460644884454.41.10 AM.png\" width=200>\r\n\r\n# Do This\r\n* Add ellipses for clouds and the sun.\r\n* Make sure there is no outline on the clouds and sun\r\n* Set the colors of the clouds and sun. ",
     "show_d_pad": "false",
