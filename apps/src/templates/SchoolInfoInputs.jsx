@@ -5,7 +5,7 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
 
-const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
+export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
 const SCHOOL_TYPES_HAVING_NAMES = [
   'charter',
