@@ -418,7 +418,7 @@ Artist.prototype.preloadAllPatternImages = function () {
   const loadPattern = patternOption => new Promise(resolve => {
     const pattern = patternOption[1];
 
-    if (this.linePatterns[pattern]) {
+    if (this.linePatterns[pattern] && !this.loadedPathPatterns[pattern]) {
       const img = new Image();
 
       img.onload = () => resolve();
@@ -692,22 +692,9 @@ Artist.prototype.afterInject_ = function (config) {
     this.visualization.isPredrawing_ = false;
   }
 
-  this.loadPatterns();
-
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.width = '400px';
-};
-
-Artist.prototype.loadPatterns = function () {
-  for ( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
-    var pattern = this.skin.lineStylePatternOptions[i][1];
-    if (this.skin[pattern] && !this.loadedPathPatterns[pattern]) {
-      var img = new Image();
-      img.src = this.skin[pattern];
-      this.loadedPathPatterns[pattern] = img;
-    }
-  }
 };
 
 /**
@@ -1379,9 +1366,9 @@ Artist.prototype.step = function (command, values, options) {
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
         this.visualization.avatar = this.skin.avatarSettings;
+        this.linePatterns = this.skin.linePatterns;
         this.loadTurtle(false /* initializing */);
-        this.loadPatterns();
-        this.selectPattern();
+        this.preloadAllPatternImages().then(() => this.selectPattern());
       }
       break;
   }
