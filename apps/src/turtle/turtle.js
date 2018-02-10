@@ -747,7 +747,6 @@ Artist.prototype.drawTurtle = function () {
   }
   this.drawDecorationAnimation("before");
 
-  var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.visualization.heading * this.avatar.numHeadings / 360);
   if (this.isFrozenSkin()) {
@@ -758,12 +757,9 @@ Artist.prototype.drawTurtle = function () {
     index = (index + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
   }
   var sourceX = this.avatar.width * index;
-  if (this.isFrozenSkin()) {
-    sourceY = this.avatar.height * turtleFrame;
-    turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
-  } else {
-    sourceY = 0;
-  }
+  var sourceY = this.avatar.height * turtleFrame;
+  turtleFrame = (turtleFrame + 1) % this.avatar.numFrames;
+
   var sourceWidth = this.avatar.width;
   var sourceHeight = this.avatar.height;
   var destWidth = this.avatar.width;
