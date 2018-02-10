@@ -47,10 +47,18 @@ describe("DetailViewContents", () => {
       viewType: 'facilitator'
     };
 
+    // No-op router context
+    const context = {
+      router: {
+        push() {}
+      }
+    };
+
     return mount(
       <DetailViewContents
         {..._.merge(defaultProps, overrides)}
-      />
+      />,
+      {context}
     );
   };
 
