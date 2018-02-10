@@ -320,6 +320,48 @@ class Visualization {
       }
     }
   }
+
+  /**
+   * Copy the scratch canvas to the display canvas. Add a turtle marker.
+   */
+  display() {
+    // FF on linux retains drawing of previous location of artist unless we clear
+    // the canvas first.
+    var style = this.ctxDisplay.fillStyle;
+    this.ctxDisplay.fillStyle = color.white;
+    this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
+      this.ctxDisplay.canvas.width);
+    this.ctxDisplay.fillStyle = style;
+
+    this.ctxDisplay.globalCompositeOperation = 'copy';
+    // Draw the images layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
+
+    // Draw the predraw layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
+
+    // Draw the answer layer.
+    if (this.isFrozenSkin) {
+      this.ctxDisplay.globalAlpha = 0.4;
+    } else {
+      this.ctxDisplay.globalAlpha = 0.3;
+    }
+    this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
+    this.ctxDisplay.globalAlpha = 1;
+
+    // Draw the pattern layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxPattern.canvas, 0, 0);
+
+    // Draw the user layer.
+    this.ctxDisplay.globalCompositeOperation = 'source-over';
+    this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
+
+    // Draw the turtle.
+    this.drawTurtle();
+  }
 }
 
 /**
@@ -765,7 +807,7 @@ Artist.prototype.placeImage = function (filename, position, scale) {
         this.visualization.ctxImages.drawImage(img, position[0], position[1]);
       }
     }
-    this.display();
+    this.visualization.display();
   }, this);
 
   if (this.isFrozenSkin()) {
@@ -801,7 +843,7 @@ Artist.prototype.drawImages = function () {
  * Initialize the turtle image on load.
  */
 Artist.prototype.loadTurtle = function (initializing = true) {
-  const onloadCallback = initializing ? this.display : () => this.visualization.drawTurtle();
+  const onloadCallback = initializing ? () => this.visualization.display() : () => this.visualization.drawTurtle();
   this.visualization.avatar.image = new Image();
   this.visualization.avatar.image.onload = _.bind(onloadCallback, this);
 
@@ -856,7 +898,7 @@ Artist.prototype.reset = function (ignore) {
 
   this.visualization.ctxScratch.lineCap = 'round';
   this.visualization.ctxScratch.font = 'normal 18pt Arial';
-  this.display();
+  this.visualization.display();
 
   // Clear the feedback.
   this.visualization.ctxFeedback.clearRect(
@@ -884,49 +926,6 @@ Artist.prototype.reset = function (ignore) {
   this.studioApp_.stopLoopingAudio('start');
 
   this.resetStepInfo_();
-};
-
-
-/**
- * Copy the scratch canvas to the display canvas. Add a turtle marker.
- */
-Artist.prototype.display = function () {
-  // FF on linux retains drawing of previous location of artist unless we clear
-  // the canvas first.
-  var style = this.visualization.ctxDisplay.fillStyle;
-  this.visualization.ctxDisplay.fillStyle = color.white;
-  this.visualization.ctxDisplay.clearRect(0, 0, this.visualization.ctxDisplay.canvas.width,
-    this.visualization.ctxDisplay.canvas.width);
-  this.visualization.ctxDisplay.fillStyle = style;
-
-  this.visualization.ctxDisplay.globalCompositeOperation = 'copy';
-  // Draw the images layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxImages.canvas, 0, 0);
-
-  // Draw the predraw layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxPredraw.canvas, 0, 0);
-
-  // Draw the answer layer.
-  if (this.isFrozenSkin()) {
-    this.visualization.ctxDisplay.globalAlpha = 0.4;
-  } else {
-    this.visualization.ctxDisplay.globalAlpha = 0.3;
-  }
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxAnswer.canvas, 0, 0);
-  this.visualization.ctxDisplay.globalAlpha = 1;
-
-  // Draw the pattern layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxPattern.canvas, 0, 0);
-
-  // Draw the user layer.
-  this.visualization.ctxDisplay.globalCompositeOperation = 'source-over';
-  this.visualization.ctxDisplay.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
-
-  // Draw the turtle.
-  this.visualization.drawTurtle();
 };
 
 /**
@@ -1122,7 +1121,7 @@ Artist.prototype.executeTuple_ = function () {
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
     var tupleDone = this.step(command, tuple.slice(1), {smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple});
-    this.display();
+    this.visualization.display();
 
     if (tupleDone) {
       this.api.log.shift();
@@ -1692,7 +1691,7 @@ Artist.prototype.onReportComplete = function (response) {
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
   this.studioApp_.onReportComplete(response);
-  this.displayFeedback_();
+  this.visualization.displayFeedback_();
 };
 
 // This removes lengths from the text version of the XML of programs.
