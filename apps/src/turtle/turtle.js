@@ -188,6 +188,9 @@ class Visualization {
     this.heading = 0;
     this.penDownValue = true;
 
+    // Internal state.
+    this.turtleFrame_ = 0;
+
     // Create hidden canvases.
     this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
     this.ctxImages = this.createCanvas_('images', 400, 400).getContext('2d');
@@ -735,9 +738,6 @@ Artist.prototype.loadDecorationAnimation = function () {
   }
 };
 
-var turtleFrame = 0;
-
-
 /**
  * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
  */
@@ -757,8 +757,8 @@ Artist.prototype.drawTurtle = function () {
     index = (index + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
   }
   var sourceX = this.avatar.width * index;
-  var sourceY = this.avatar.height * turtleFrame;
-  turtleFrame = (turtleFrame + 1) % this.avatar.numFrames;
+  var sourceY = this.avatar.height * this.visualization.turtleFrame_;
+  this.visualization.turtleFrame_ = (this.visualization.turtleFrame_ + 1) % this.avatar.numFrames;
 
   var sourceWidth = this.avatar.width;
   var sourceHeight = this.avatar.height;
@@ -797,7 +797,7 @@ Artist.prototype.drawTurtle = function () {
 
 Artist.prototype.drawDecorationAnimation = function (when) {
   if (this.skin.id === "elsa") {
-    var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
+    var frameIndex = (this.visualization.turtleFrame_ + 10) % this.skin.decorationAnimationNumFrames;
 
     var angleIndex = Math.floor(this.visualization.heading * this.avatar.numHeadings / 360);
 
