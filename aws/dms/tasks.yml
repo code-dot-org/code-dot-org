@@ -101,5 +101,5 @@ cron-user-hierarchy-pii:
 - dashboard.user_geos
 cron-user-levels:
 - dashboard.user_levels
-cron-level-sources:
+cron-level-sources-pii:
 - dashboard.level_sources
