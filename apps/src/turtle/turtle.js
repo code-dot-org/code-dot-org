@@ -1281,7 +1281,14 @@ Artist.prototype.step = function (command, values, options) {
       this.moveForward_(result.distance);
       break;
     case 'JT':  // Jump To Location
-      this.jumpTo_(values[0]);
+      if (Array.isArray(values[0])) {
+        this.jumpTo_(values[0]);
+      } else {
+        this.jumpTo_(
+          utils.xFromPosition(values[0], CANVAS_WIDTH),
+          utils.yFromPosition(values[0], CANVAS_HEIGHT),
+        );
+      }
       break;
     case 'MD':  // Move diagonally (use longer steps if showing joints)
       distance = values[0];
@@ -1429,13 +1436,7 @@ Artist.prototype.setPattern = function (pattern) {
 };
 
 Artist.prototype.jumpTo_ = function (pos) {
-  let x, y;
-  if (Array.isArray(pos)) {
-    [x, y] = pos;
-  } else {
-    x = utils.xFromPosition(pos, CANVAS_WIDTH);
-    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
-  }
+  let [x, y] = pos;
   this.visualization.x = Number(x);
   this.visualization.y = Number(y);
 };
