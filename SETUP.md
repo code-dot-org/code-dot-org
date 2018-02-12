@@ -102,6 +102,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 * Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 17.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
+  3. If your VM is slow, try increasing the number of processors to 4 and increasing the memory settings up to 8 GB. 
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
   1. `cd code-dot-org`
