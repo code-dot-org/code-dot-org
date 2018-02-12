@@ -1,5 +1,5 @@
 /**
-   * Loads an application from the API by a supplied applicationId and passes it to
+ * Loads an application from the API by a supplied applicationId and passes it to
  * the applicationData prop of the child component.
  */
 
@@ -30,8 +30,7 @@ export default class FormDataEdit extends React.Component {
       course_name: PropTypes.string,
       application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
       form_data: PropTypes.object.isRequired
-    }).isRequired,
-    onUpdate: PropTypes.func.isRequired
+    }).isRequired
   };
 
   static contextTypes = {
@@ -52,7 +51,6 @@ export default class FormDataEdit extends React.Component {
   }
 
   handleChange = event => {
-    // this.props.onUpdate(event.target.value);
     this.setState({formData: event.target.value});
   };
 
