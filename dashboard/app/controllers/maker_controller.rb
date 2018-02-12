@@ -1,6 +1,9 @@
 class MakerController < ApplicationController
   authorize_resource class: :maker_discount, except: :setup
 
+  def home
+  end
+
   def setup
   end
 

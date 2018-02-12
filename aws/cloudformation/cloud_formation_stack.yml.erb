@@ -390,7 +390,7 @@ Resources:
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
 <%   else -%>
-          TTL: 60
+          TTL: DNS_TTL
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <%   if cdn_enabled -%>
@@ -426,7 +426,7 @@ Resources:
             HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
             DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
 <%   else -%>
-          TTL: 60
+          TTL: DNS_TTL
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <% end -%>
