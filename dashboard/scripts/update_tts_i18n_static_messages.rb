@@ -67,7 +67,7 @@ FEEDBACK_MESSAGES = {
     "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
     "shareDrawing": "Share your drawing:"
   }
-}
+}.freeze
 
 VOICES.each do |lang, _voice|
   I18n.locale = lang

@@ -2,7 +2,7 @@
 # Find and remove extra .level files for dsl defined levels
 require_relative '../../config/environment'
 
-DSL_TYPES = %w(TextMatch ContractMatch External Match Multi)
+DSL_TYPES = %w(TextMatch ContractMatch External Match Multi).freeze
 DSL_TYPES.map(&:constantize).each do |c|
   c.all.each do |level|
     # these should be dsl levels and should not have .level files

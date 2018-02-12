@@ -5,7 +5,7 @@ module MarkdownHandler
     autolink: true,
     tables: true,
     space_after_headers: true
-  }
+  }.freeze
 
   class CustomRewriter < Redcarpet::Render::HTML
     # Rewrite YouTube iframe elements to use the fallback-player iframe instead.

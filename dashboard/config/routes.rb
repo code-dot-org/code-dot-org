@@ -1,8 +1,8 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 module OPS
-  API = 'api' unless defined? API
-  DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
+  API = 'api'.freeze unless defined? API
+  DASHBOARDAPI = 'dashboardapi'.freeze unless defined? DASHBOARDAPI
 end
 
 Dashboard::Application.routes.draw do
