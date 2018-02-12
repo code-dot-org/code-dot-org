@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Button from '../Button';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
@@ -9,39 +9,61 @@ import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 import { styles } from './censusFormStyles';
 
-class CensusForm extends Component {
+export const censusFormPrefillDataShape = PropTypes.shape({
+  userName: PropTypes.string,
+  userEmail: PropTypes.string,
+  isTeacher: PropTypes.bool,
+  schoolCountry: PropTypes.string,
+  schoolId: PropTypes.string,
+  schoolType: PropTypes.string,
+  schoolName: PropTypes.string,
+  schoolState: PropTypes.string,
+  schoolZip: PropTypes.string,
+});
 
-  state = {
-    showFollowUp: false,
-    showPledge: false,
-    selectedHowMuchCS: [],
-    selectedTopics: [],
-    otherTopicsDesc: '',
-    submission: {
-      name: '',
-      email: '',
-      role: '',
-      country: 'United States',
-      hoc: '',
-      nces: '',
-      schoolName: '',
-      schoolCity: '',
-      schoolState: '',
-      schoolZip: '',
-      schoolType: '',
-      afterSchool: '',
-      tenHours: '',
-      twentyHours: '',
-      otherCS: false,
-      followUpFrequency: '',
-      followUpMore: '',
-      acceptedPledge: false,
-      share: ''
-    },
-    errors: {
-      invalidEmail: false
-    }
+class CensusForm extends Component {
+  static propTypes = {
+    prefillData: censusFormPrefillDataShape,
   };
+
+  constructor(props) {
+    super(props);
+
+    const prefillData = this.props.prefillData || {};
+
+    this.state = {
+      showFollowUp: false,
+      showPledge: false,
+      selectedHowMuchCS: [],
+      selectedTopics: [],
+      otherTopicsDesc: '',
+      schoolName: prefillData['schoolName'] || '',
+      submission: {
+        name: prefillData['userName'] || '',
+        email: prefillData['userEmail'] || '',
+        role: prefillData['isTeacher'] ? 'TEACHER' : '',
+        country: prefillData['schoolCountry'] || 'United States',
+        hoc: '',
+        nces: prefillData['schoolId'] || '',
+        schoolName: prefillData['schoolName'] || '',
+        schoolCity: '',
+        schoolState: prefillData['schoolState'] || '',
+        schoolZip: prefillData['schoolZip'] || '',
+        schoolType: prefillData['schoolType'] || '',
+        afterSchool: '',
+        tenHours: '',
+        twentyHours: '',
+        otherCS: false,
+        followUpFrequency: '',
+        followUpMore: '',
+        acceptedPledge: false,
+        share: ''
+      },
+      errors: {
+        invalidEmail: false
+      }
+    };
+  }
 
   handleChange = (field, event) => {
     this.setState({
