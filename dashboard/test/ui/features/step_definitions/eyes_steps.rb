@@ -38,7 +38,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   @browser.capabilities[:takes_screenshot] = true
   @eyes.force_full_page_screenshot = true
   @eyes.stitch_mode = :css
-  @browser = @eyes.open(config)
+  @eyes.open(config)
 end
 
 And(/^I close my eyes$/) do

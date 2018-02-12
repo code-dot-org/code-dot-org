@@ -8,6 +8,7 @@ require 'cdo/chat_client'
 StackStatus = Struct.new(
   :name,
   :cloudformation_status,
+  :owner,
   :creation_time,
   :activity,
   :current_instance_status,
@@ -43,9 +44,19 @@ def main
   cloudformation_resource = Aws::CloudFormation::Resource.new(client: cloudformation_client)
   cloudwatch_client = Aws::CloudWatch::Client.new
 
-  cloudformation_resource.stacks.select {|stack| stack.name.starts_with?('adhoc-')}.each do |stack|
+  # find all stacks with 'adhoc' name prefix or environment tag
+  adhoc_stacks = cloudformation_resource.stacks.select do |stack|
+    stack.name.starts_with?('adhoc-') ||
+    stack.tags.detect {|tag| tag.key == 'environment'}.try(:value) == 'adhoc'
+  end
+
+  adhoc_stacks.each do |stack|
     begin
-      status = StackStatus.new(stack.name, stack.stack_status, stack.creation_time)
+      status = StackStatus.new
+      status.name = stack.name
+      status.cloudformation_status = stack.stack_status
+      status.owner = stack.tags.detect {|tag| tag.key == 'owner'}.try(:value)
+      status.creation_time = stack.creation_time
 
       # get Unicorn active HTTP request count CloudWatch metric for the current adhoc stack
       metric = Aws::CloudWatch::Metric.new(namespace: 'Unicorn', name: 'active', client: cloudwatch_client)

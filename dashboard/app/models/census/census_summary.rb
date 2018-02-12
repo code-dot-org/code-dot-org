@@ -29,11 +29,25 @@ class Census::CensusSummary < ApplicationRecord
 
   validates_presence_of :audit_data
 
-  # High schools need to teach a 20 hour course for it to count as CS.
-  # Other schools can teach 10 or 20 hour courses.
-  def self.submission_teaches_cs?(submission, is_high_school)
+  # High schools need to teach a 20 hour course with either
+  # block- or text-based programming for it to count as CS.
+  # Other schools can teach any 10 or 20 hour courses.
+  # The teacher banner does not have the topic check boxes
+  # so we count those submissions even though they don't have
+  # those options checked.
+  def self.submission_teaches_cs?(submission, is_high_school:)
     if is_high_school
-      (submission.how_many_20_hours_some? || submission.how_many_20_hours_all?)
+      (
+        (
+          submission.how_many_20_hours_some? ||
+          submission.how_many_20_hours_all?
+        ) &&
+        (
+          submission.type == "Census::CensusTeacherBannerV1" ||
+          submission.topic_text ||
+          submission.topic_blocks
+        )
+      )
     else
       (
         submission.how_many_10_hours_some? ||
@@ -170,7 +184,7 @@ class Census::CensusSummary < ApplicationRecord
       submissions.select {|s| s.school_year == school_year}.each do |submission|
         teaches =
           if submission_has_response(submission, high_school)
-            submission_teaches_cs?(submission, high_school)
+            submission_teaches_cs?(submission, is_high_school: high_school)
           else
             nil
           end
