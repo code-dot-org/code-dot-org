@@ -8,6 +8,9 @@ import i18n from '@cdo/locale';
 const styles = {
   title: {
     fontSize: 30,
+  },
+  container: {
+    marginBottom: 20
   }
 };
 
@@ -44,7 +47,7 @@ export default class MakerLanding extends Component {
     ];
 
     return (
-      <div>
+      <div style={styles.container}>
         <h1 style={styles.title}>
           {i18n.makerPageTitle()}
         </h1>

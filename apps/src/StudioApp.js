@@ -1505,7 +1505,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 
   // If this level is enabled with a hint prompt threshold, check it and some
   // other state values to see if we should show the hint prompt
-  if (this.config.level.hintPromptAttemptsThreshold !== undefined) {
+  if (this.config.level.hintPromptAttemptsThreshold) {
     this.authoredHintsController_.considerShowingOnetimeHintPrompt();
   }
 
