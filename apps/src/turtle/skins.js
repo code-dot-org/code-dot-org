@@ -19,7 +19,12 @@ exports.load = function (assetUrl, id) {
     anna: {
       // slider speed gets divided by this value
       speedModifier: 10,
-      turtleNumFrames: 10,
+      avatarSettings: {
+        width: 73,
+        height: 100,
+        numHeadings: 36,
+        numFrames: 10,
+      },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
@@ -35,7 +40,12 @@ exports.load = function (assetUrl, id) {
 
     elsa: {
       speedModifier: 10,
-      turtleNumFrames: 20,
+      avatarSettings: {
+        width: 73,
+        height: 100,
+        numHeadings: 18,
+        numFrames: 20,
+      },
       decorationAnimationNumFrames: 19,
       smoothAnimate: true,
       consolidateTurnAndMove: true,
@@ -104,6 +114,12 @@ exports.load = function (assetUrl, id) {
 
   // base skin properties here (can be overriden by CONFIG)
   skin.speedModifier = 1;
+  skin.avatarSettings = {
+    width: 70,
+    height: 51,
+    numHeadings: 180,
+    numFrames: 1,
+  };
 
   // Get properties from config
   for (var prop in config) {

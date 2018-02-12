@@ -202,7 +202,7 @@ module.exports = {
 
         // take advantage of the fact that we expose the filesystem via localhost
         var assetUrl = 'flappy (1).png';
-        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20%281%29.png';
+        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20(1).png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         var buttonElement = $("#design_button1")[0];
