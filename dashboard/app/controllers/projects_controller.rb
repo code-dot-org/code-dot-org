@@ -150,7 +150,7 @@ class ProjectsController < ApplicationController
   end
 
   def combine_projects_and_featured_projects_data
-    storage_apps = "pegasus_#{CDO.rack_env}__storage_apps".to_sym
+    storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
       join(storage_apps, id: :storage_app_id).all
