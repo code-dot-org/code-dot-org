@@ -7,10 +7,16 @@
     .legend-title Legend
     .color.green
     .caption
-      Pledged to expand computer science
+      Offers computer science class(es)
     .color.blue
     .caption
-      Goes beyond an Hour of Code
+      Limited or no CS opportunities
+    .color.yellow
+    .caption
+      Inconclusive data
+    .color.grey
+    .caption
+      No Data
   #map-footer
     %span#footer-text
       In partnership with
@@ -18,7 +24,7 @@
   %br
   %br
 
-- TABLE_ID = CDO.pledge_map_table_id.freeze
+- TABLE_ID = CDO.census_map_table_id.freeze
 :javascript
   var gmap;
   var resizeZoom;
@@ -54,19 +60,34 @@
     var layer = new google.maps.FusionTablesLayer({
       query: {
         select: 'location',
-        from: "#{TABLE_ID}"
+        from: "#{TABLE_ID}",
       },
-      styles: [{
-        where: "type CONTAINS 'pledged'",
-        markerOptions: {
-          iconName: "small_green"
-        }
-      }, {
-        where: "type DOES NOT CONTAIN 'pledged'",
-        markerOptions: {
-          iconName: "small_blue"
-        }
-      }],
+      styles: [
+        {
+          where: "teaches_cs IN ''",
+          markerOptions: {
+            iconName: "measle_grey"
+          }
+        },
+        {
+          where: "teaches_cs IN 'YES'",
+          markerOptions: {
+            iconName: "small_green"
+          }
+        },
+        {
+          where: "teaches_cs IN 'NO'",
+          markerOptions: {
+            iconName: "small_blue"
+          }
+        },
+        {
+          where: "teaches_cs IN 'MAYBE'",
+          markerOptions: {
+            iconName: "small_yellow"
+          }
+        },
+      ],
     });
 
     var legend = document.createElement('div');
@@ -81,8 +102,8 @@
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
-      event.infoWindowHtml = event.row['organization_name'].value;
-      event.infoWindowHtml += ' (' + event.row['city'].value + ')';
+      event.infoWindowHtml = event.row['school_name'].value;
+      event.infoWindowHtml += ' (' + event.row['city'].value + ', ' + event.row['state_code'].value +')';
       event.infoWindowHtml += '<br>';
     });
     google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
@@ -107,7 +128,6 @@
   function resizeMap() {
     var map_width = $('#gmap').width();
     var map_zoom = gmap.getZoom();
-    var map_center = gmap.getCenter();
 
     // Max height of map is 2/3 of screen height so user can always scroll.
     var max_height = $(window).innerHeight() * maxHeightPercentage;
@@ -130,21 +150,17 @@
 
     if (map_width < 256 && map_zoom < 3) {
       map_zoom = 0;
-      map_center = new google.maps.LatLng(22.2116,4.5775);
     }
     else if (map_width < 512 && map_zoom < 3) {
       map_zoom = 1;
-      map_center = new google.maps.LatLng(22.2116,4.5775);
     }
     else if (map_zoom < 3) {
       map_zoom = 2;
-      map_center = new google.maps.LatLng(22.2116,4.5775);
     }
 
     var map_options = {
-      center: map_center,
+      center: new google.maps.LatLng(37.6642776,-97.7238747),
       zoom: map_zoom,
-      minZoom: map_zoom,
       scrollwheel: scrollwheelOption,
       draggable: draggableOption
     }
