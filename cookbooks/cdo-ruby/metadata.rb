@@ -5,3 +5,5 @@ license          'All rights reserved'
 description      'Installs/Upgrades Ruby'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.2.11'
+
+depends 'apt', '~> 2.6.0'

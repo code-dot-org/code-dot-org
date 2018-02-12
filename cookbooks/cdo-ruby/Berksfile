@@ -2,5 +2,4 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'apt'
 cookbook 'sudo-user', path: '../sudo-user'
