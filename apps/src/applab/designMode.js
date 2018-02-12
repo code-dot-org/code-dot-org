@@ -288,7 +288,7 @@ designMode.updateProperty = function (element, name, value) {
 
       var backgroundImage = new Image();
       backgroundImage.src = assetPrefix.fixPath(value);
-      element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+      element.style.backgroundImage = 'url("' + backgroundImage.src + '")';
 
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
@@ -312,7 +312,7 @@ designMode.updateProperty = function (element, name, value) {
         screenImage.src = assetPrefix.fixPath(value);
         url = screenImage.src;
       }
-      element.style.backgroundImage = 'url(' + url + ')';
+      element.style.backgroundImage = 'url("' + url + '")';
 
       break;
     }
