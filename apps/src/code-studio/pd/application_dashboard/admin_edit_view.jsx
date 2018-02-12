@@ -14,11 +14,10 @@ export default class AdminEditView extends React.Component {
     }).isRequired
   };
 
-  renderApplication = ({applicationData, handleUpdate}) => (
+  renderApplication = ({applicationData}) => (
     <FormDataEdit
       applicationId={this.props.params.applicationId}
       applicationData={applicationData}
-      onUpdate={handleUpdate}
     />
   );
 
