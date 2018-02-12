@@ -30,7 +30,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Advocacy**
 	- [Director of State Government Affairs](#govaffairs)
 - **Education**
-	- [Facilitator Development Specialist](#facilitator)
 	- [Program Associate](#associate)
 - **Engineering**
 	- [Software Engineer](#softwareengineer)
@@ -90,43 +89,6 @@ As our ideal candidate, you have:
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="facilitator"href="#facilitator">Facilitator Development Specialist (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for a Facilitator Development Specialist for our Education team. In this new role on our education team, you will be a coach and mentor for Code.org’s 200+ (and growing) CS Discoveries and CS Principles facilitators, who deliver in-person workshops to thousands of middle and high school teachers each year. This is a full time, exempt position.
-
-In this role you will: 
-
-- Serve as the primary point of contact for individual facilitator support questions related to facilitation practice and workshop delivery
-- Serve as a role model for excellent participant-centered facilitation and help develop those capabilities in others
-- Identify, intervene and troubleshoot with facilitators who are struggling in the program
-- Maintain ongoing pulse checks with facilitators via 1:1 check-in calls, weekly office hours, and surveys  
-- Monitor the Code.org facilitator online community and forums
-- Analyze, triage, and follow-up when necessary on issues identified from workshop survey results
-- Work closely with the Education Team Program Managers to ensure overall facilitator program cohesiveness, recommend outcomes for in-person facilitator development workshops, and collaborate on the printed facilitation guide
-- Co-facilitate in-person workshops for the 6-12 Facilitator Development Program
-- Future-looking: Potentially develop and manage a small network of contracted regional coaches
-- This role requires travel to approximately 3 facilitator development events (typically on weekends), multiple teacher professional learning events during the summer, and quarterly travel to the Seattle office, if the employee is not based in Seattle. Depending on location, office hours for facilitators may be held after business hours (ET, CT, or MT). 
-
-**Experience and Qualifications:**
-
-We are looking for an empathetic and engaging leader in the facilitation space who is highly respected by K-12 educators, and has expertise in coaching others to deliver high quality facilitation. 
-
-You will be successful in this role if you have:
-
-- Strong facilitation skills, and demonstrated ability to support and mentor others in these domains
-- Experience coaching participants in a train-the-trainer program
-- Strong attention to detail with an ability to prioritize and follow up on issues effectively
-- Excellent written and verbal communication skills
-- Exceptional interpersonal skills and empathetic approach to problem solving
-- Demonstrated cultural competence and experience with conversations and issues related to diversity, equity, and inclusion
-- Some knowledge of computer science; direct experience teaching or facilitating Code.org’s CS Discoveries or CS Principles courses is preferred
-- Familiarity with Code.org’s CS Discoveries and/or CS Principles Professional Learning Programs
-- A Bachelor's degree or higher in Education or related field preferred 
-- 5-7 years related experience 
-
-To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="associate"href="#associate">Program Associate, Education Team (Seattle, WA)</a>
 
