@@ -109,12 +109,9 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - final project template",
     "markdown_instructions": "# Finishing Touches\r\n\r\nAdd any finishing touches still needed to make your innovation awesome. If you have time, test out your innovation with some potential users to gather feedback and find opportunities for improvement. When you're totally finished, click the \"Submit\" button to turn it in!",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
