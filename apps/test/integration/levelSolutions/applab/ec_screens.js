@@ -572,7 +572,7 @@ module.exports = {
 
         // take advantage of the fact that we expose the filesystem via localhost
         var assetUrl = 'flappy (1).png';
-        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20%281%29.png';
+        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20(1).png';
         var imageInput = $("#design-properties input").eq(2)[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
