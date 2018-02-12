@@ -16,7 +16,7 @@ module Pd::Application
 
       @application = Facilitator1819Application.find_by(user: current_user)
       return render :submitted if @application
-      return render :closed unless Facilitator1819Application.open?
+      return render :closed unless Facilitator1819Application.open? || params[:extend_deadline]
 
       @script_data = {
         props: {
