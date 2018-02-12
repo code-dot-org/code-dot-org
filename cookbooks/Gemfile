@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf', '< 6.0.0' # >= 6.0.0 requires Ruby 2.3
+gem 'berkshelf'
 gem 'chef', '12.7.2'
 gem 'chefspec'
 gem 'kitchen-inspec'
