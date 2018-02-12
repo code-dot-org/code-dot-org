@@ -12,7 +12,7 @@ const docs = {
 
 export default storybook => {
   storybook
-    .storiesOf('LegacyButton', module)
+    .storiesOf('Buttons/LegacyButton', module)
     .add(
       'overview',
       withInfo('')(() =>
