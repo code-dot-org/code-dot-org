@@ -6,7 +6,7 @@
 #  name               :string(255)      not null
 #  group              :integer
 #  contact_id         :integer
-#  urban              :boolean
+#  active             :boolean
 #  attention          :string(255)
 #  street             :string(255)
 #  apartment_or_suite :string(255)
