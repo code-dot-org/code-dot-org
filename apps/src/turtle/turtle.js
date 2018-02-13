@@ -368,6 +368,194 @@ class Visualization {
     this.x = Number(x);
     this.y = Number(y);
   }
+
+  jumpForward(distance) {
+    this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
+    this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
+  }
+
+  circleAt_(x, y, radius) {
+    this.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
+  }
+
+  drawToTurtle_(distance) {
+    var isDot = (distance === 0);
+    if (isDot) {
+      // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
+      this.ctxScratch.lineTo(this.x + 0.1, this.y);
+    } else {
+      this.ctxScratch.lineTo(this.x, this.y);
+    }
+  }
+
+  turnByDegrees(degreesRight) {
+    this.setHeading(this.heading + degreesRight);
+  }
+
+  setHeading(heading) {
+    heading = this.constrainDegrees_(heading);
+    this.heading = heading;
+  }
+
+  constrainDegrees_(degrees) {
+    degrees %= 360;
+    if (degrees < 0) {
+      degrees += 360;
+    }
+    return degrees;
+  }
+
+  moveForward(distance, isDiagonal) {
+    if (!this.penDownValue) {
+      this.jumpForward(distance);
+      return;
+    }
+    if (this.isDrawingWithPattern) {
+      this.drawForwardLineWithPattern_(distance);
+
+      // Frozen gets both a pattern and a line over the top of it.
+      if (!this.isFrozenSkin()) {
+        return;
+      }
+    }
+
+    this.drawForward_(distance, isDiagonal);
+  }
+
+  drawForward_(distance, isDiagonal) {
+    if (this.shouldDrawJoints_()) {
+      this.drawForwardWithJoints_(distance, isDiagonal);
+    } else {
+      this.drawForwardLine_(distance);
+    }
+  }
+
+  /**
+   * Draws a line of length `distance`, adding joint knobs along the way at
+   * intervals of `JOINT_SEGMENT_LENGTH` if `isDiagonal` is false, or
+   * `JOINT_SEGMENT_LENGTH * sqrt(2)` if `isDiagonal` is true.
+   * @param distance
+   * @param isDiagonal
+   */
+  drawForwardWithJoints_(distance, isDiagonal) {
+    var remainingDistance = distance;
+    var segmentLength = JOINT_SEGMENT_LENGTH * (isDiagonal ? Math.sqrt(2) : 1);
+
+    if (remainingDistance >= segmentLength) {
+      this.drawJointAtTurtle_();
+    }
+
+    while (remainingDistance > 0) {
+      var enoughForFullSegment = remainingDistance >= segmentLength;
+      var currentSegmentLength = enoughForFullSegment ? segmentLength : remainingDistance;
+
+      remainingDistance -= currentSegmentLength;
+
+      this.drawForwardLine_(currentSegmentLength);
+
+      if (enoughForFullSegment) {
+        this.drawJointAtTurtle_();
+      }
+    }
+  }
+
+  drawForwardLine_(distance) {
+    if (this.isFrozenSkin) {
+      this.ctxScratch.beginPath();
+      this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
+      this.jumpForward(distance);
+      this.drawToTurtle_(distance);
+      this.ctxScratch.stroke();
+    } else {
+      this.ctxScratch.beginPath();
+      this.ctxScratch.moveTo(this.x, this.y);
+      this.jumpForward(distance);
+      this.drawToTurtle_(distance);
+      this.ctxScratch.stroke();
+    }
+  }
+
+  drawForwardLineWithPattern_(distance) {
+    var img;
+    var startX;
+    var startY;
+
+    if (this.isFrozenSkin()) {
+      this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
+      img = this.currentPathPattern;
+      startX = this.stepStartX;
+      startY = this.stepStartY;
+
+      var lineDistance = Math.abs(this.stepDistanceCovered);
+
+      this.ctxPattern.save();
+      this.ctxPattern.translate(startX, startY);
+      // increment the angle and rotate the image.
+      // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+      this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
+
+      var clipSize;
+      if (lineDistance % this.smoothAnimateStepSize === 0) {
+        clipSize = this.smoothAnimateStepSize;
+      } else if (lineDistance > this.smoothAnimateStepSize) {
+        // this happens when our line was not divisible by smoothAnimateStepSize
+        // and we've hit our last chunk
+        clipSize = lineDistance % this.smoothAnimateStepSize;
+      } else {
+        clipSize = lineDistance;
+      }
+      if (img.width > 0 && img.height > 0 && clipSize > 0) {
+        this.ctxPattern.drawImage(img,
+          // Start point for clipping image
+          Math.round(lineDistance), 0,
+          // clip region size
+          clipSize, img.height,
+          // some mysterious hand-tweaking done by Brendan
+          Math.round((this.stepDistanceCovered - clipSize - 2)), Math.round((- 18)),
+          clipSize, img.height);
+      }
+
+      this.ctxPattern.restore();
+
+    } else {
+
+      this.ctxScratch.moveTo(this.x, this.y);
+      img = this.currentPathPattern;
+      startX = this.x;
+      startY = this.y;
+
+      this.jumpForward(distance);
+      this.ctxScratch.save();
+      this.ctxScratch.translate(startX, startY);
+      // increment the angle and rotate the image.
+      // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+
+      if (img.width !== 0) {
+        this.ctxScratch.drawImage(img,
+          // Start point for clipping image
+          0, 0,
+          // clip region size
+          distance + img.height / 2, img.height,
+          // draw location relative to the ctx.translate point pre-rotation
+          -img.height / 4, -img.height / 2,
+          distance+img.height / 2, img.height);
+      }
+
+      this.ctxScratch.restore();
+    }
+  }
+
+  shouldDrawJoints_() {
+    return this.isK1 && !this.isPredrawing_;
+  }
+
+  drawJointAtTurtle_() {
+    this.ctxScratch.beginPath();
+    this.ctxScratch.moveTo(this.x, this.y);
+    this.circleAt_(this.x, this.y, JOINT_RADIUS);
+    this.ctxScratch.stroke();
+  }
 }
 
 /**
@@ -1271,21 +1459,21 @@ Artist.prototype.step = function (command, values, options) {
       distance = values[0];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.moveForward_(result.distance);
+      this.visualization.moveForward(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.jumpForward_(result.distance);
+      this.visualization.jumpForward(result.distance);
       break;
     case 'MV':  // Move (direction)
       distance = values[0];
       heading = values[1];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.setHeading_(heading);
-      this.moveForward_(result.distance);
+      this.visualization.setHeading(heading);
+      this.visualization.moveForward(result.distance);
       break;
     case 'JT':  // Jump To Location
       if (Array.isArray(values[0])) {
@@ -1302,22 +1490,22 @@ Artist.prototype.step = function (command, values, options) {
       heading = values[1];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.setHeading_(heading);
-      this.moveForward_(result.distance, true);
+      this.visualization.setHeading(heading);
+      this.visualization.moveForward(result.distance, true);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.setHeading_(heading);
-      this.jumpForward_(result.distance);
+      this.visualization.setHeading(heading);
+      this.jumpForward(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.turnByDegrees_(result.distance);
+      this.visualization.turnByDegrees(result.distance);
       break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
@@ -1440,201 +1628,6 @@ Artist.prototype.setPattern = function (pattern) {
     this.currentPathPattern = new Image();
     this.isDrawingWithPattern = false;
   }
-};
-
-Artist.prototype.jumpForward_ = function (distance) {
-  this.visualization.x += distance * Math.sin(utils.degreesToRadians(this.visualization.heading));
-  this.visualization.y -= distance * Math.cos(utils.degreesToRadians(this.visualization.heading));
-};
-
-Artist.prototype.dotAt_ = function (x, y) {
-  // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
-  var dotLineLength = 0.1;
-  this.visualization.ctxScratch.lineTo(x + dotLineLength, y);
-};
-
-Artist.prototype.circleAt_ = function (x, y, radius) {
-  this.visualization.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
-};
-
-Artist.prototype.drawToTurtle_ = function (distance) {
-  var isDot = (distance === 0);
-  if (isDot) {
-    this.dotAt_(this.visualization.x, this.visualization.y);
-  } else {
-    this.visualization.ctxScratch.lineTo(this.visualization.x, this.visualization.y);
-  }
-};
-
-Artist.prototype.turnByDegrees_ = function (degreesRight) {
-  this.setHeading_(this.visualization.heading + degreesRight);
-};
-
-Artist.prototype.setHeading_ = function (heading) {
-  heading = this.constrainDegrees_(heading);
-  this.visualization.heading = heading;
-};
-
-Artist.prototype.constrainDegrees_ = function (degrees) {
-  degrees %= 360;
-  if (degrees < 0) {
-    degrees += 360;
-  }
-  return degrees;
-};
-
-Artist.prototype.moveForward_ = function (distance, isDiagonal) {
-  if (!this.visualization.penDownValue) {
-    this.jumpForward_(distance);
-    return;
-  }
-  if (this.isDrawingWithPattern) {
-    this.drawForwardLineWithPattern_(distance);
-
-    // Frozen gets both a pattern and a line over the top of it.
-    if (!this.isFrozenSkin()) {
-      return;
-    }
-  }
-
-  this.drawForward_(distance, isDiagonal);
-};
-
-Artist.prototype.drawForward_ = function (distance, isDiagonal) {
-  if (this.shouldDrawJoints_()) {
-    this.drawForwardWithJoints_(distance, isDiagonal);
-  } else {
-    this.drawForwardLine_(distance);
-  }
-};
-
-/**
- * Draws a line of length `distance`, adding joint knobs along the way at
- * intervals of `JOINT_SEGMENT_LENGTH` if `isDiagonal` is false, or
- * `JOINT_SEGMENT_LENGTH * sqrt(2)` if `isDiagonal` is true.
- * @param distance
- * @param isDiagonal
- */
-Artist.prototype.drawForwardWithJoints_ = function (distance, isDiagonal) {
-  var remainingDistance = distance;
-  var segmentLength = JOINT_SEGMENT_LENGTH * (isDiagonal ? Math.sqrt(2) : 1);
-
-  if (remainingDistance >= segmentLength) {
-    this.drawJointAtTurtle_();
-  }
-
-  while (remainingDistance > 0) {
-    var enoughForFullSegment = remainingDistance >= segmentLength;
-    var currentSegmentLength = enoughForFullSegment ? segmentLength : remainingDistance;
-
-    remainingDistance -= currentSegmentLength;
-
-    this.drawForwardLine_(currentSegmentLength);
-
-    if (enoughForFullSegment) {
-      this.drawJointAtTurtle_();
-    }
-  }
-};
-
-Artist.prototype.drawForwardLine_ = function (distance) {
-
-  if (this.isFrozenSkin()) {
-    this.visualization.ctxScratch.beginPath();
-    this.visualization.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
-    this.jumpForward_(distance);
-    this.drawToTurtle_(distance);
-    this.visualization.ctxScratch.stroke();
-  } else {
-    this.visualization.ctxScratch.beginPath();
-    this.visualization.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
-    this.jumpForward_(distance);
-    this.drawToTurtle_(distance);
-    this.visualization.ctxScratch.stroke();
-  }
-
-};
-
-Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
-  var img;
-  var startX;
-  var startY;
-
-  if (this.isFrozenSkin()) {
-    this.visualization.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
-    img = this.currentPathPattern;
-    startX = this.stepStartX;
-    startY = this.stepStartY;
-
-    var lineDistance = Math.abs(this.stepDistanceCovered);
-
-    this.visualization.ctxPattern.save();
-    this.visualization.ctxPattern.translate(startX, startY);
-    // increment the angle and rotate the image.
-    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.visualization.ctxPattern.rotate(utils.degreesToRadians(this.visualization.heading - 90));
-
-    var clipSize;
-    if (lineDistance % this.smoothAnimateStepSize === 0) {
-      clipSize = this.smoothAnimateStepSize;
-    } else if (lineDistance > this.smoothAnimateStepSize) {
-      // this happens when our line was not divisible by smoothAnimateStepSize
-      // and we've hit our last chunk
-      clipSize = lineDistance % this.smoothAnimateStepSize;
-    } else {
-      clipSize = lineDistance;
-    }
-    if (img.width > 0 && img.height > 0 && clipSize > 0) {
-      this.visualization.ctxPattern.drawImage(img,
-        // Start point for clipping image
-        Math.round(lineDistance), 0,
-        // clip region size
-        clipSize, img.height,
-        // some mysterious hand-tweaking done by Brendan
-        Math.round((this.stepDistanceCovered - clipSize - 2)), Math.round((- 18)),
-        clipSize, img.height);
-    }
-
-    this.visualization.ctxPattern.restore();
-
-  } else {
-
-    this.visualization.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
-    img = this.currentPathPattern;
-    startX = this.visualization.x;
-    startY = this.visualization.y;
-
-    this.jumpForward_(distance);
-    this.visualization.ctxScratch.save();
-    this.visualization.ctxScratch.translate(startX, startY);
-    // increment the angle and rotate the image.
-    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-    this.visualization.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading - 90));
-
-    if (img.width !== 0) {
-      this.visualization.ctxScratch.drawImage(img,
-        // Start point for clipping image
-        0, 0,
-        // clip region size
-        distance+img.height / 2, img.height,
-        // draw location relative to the ctx.translate point pre-rotation
-        -img.height / 4, -img.height / 2,
-        distance+img.height / 2, img.height);
-    }
-
-    this.visualization.ctxScratch.restore();
-  }
-};
-
-Artist.prototype.shouldDrawJoints_ = function () {
-  return this.level.isK1 && !this.visualization.isPredrawing_;
-};
-
-Artist.prototype.drawJointAtTurtle_ = function () {
-  this.visualization.ctxScratch.beginPath();
-  this.visualization.ctxScratch.moveTo(this.visualization.x, this.visualization.y);
-  this.circleAt_(this.visualization.x, this.visualization.y, JOINT_RADIUS);
-  this.visualization.ctxScratch.stroke();
 };
 
 /**
