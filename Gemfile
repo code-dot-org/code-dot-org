@@ -12,6 +12,9 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
+# Lock i18n dependency to prevent regression.
+# Ref: https://github.com/svenfuchs/i18n/issues/404
+gem 'i18n', '<= 0.9.1'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
 # Ref: https://github.com/rails/sprockets/pull/470

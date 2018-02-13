@@ -387,7 +387,7 @@ GEM
       multi_xml (>= 0.5.2)
     httpclient (2.8.2.2)
     hurley (0.2)
-    i18n (0.9.4)
+    i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
@@ -812,6 +812,7 @@ DEPENDENCIES
   highline (~> 1.6.21)
   honeybadger
   httparty
+  i18n (<= 0.9.1)
   image_optim!
   image_optim_pack (~> 0.5.0)!
   image_optim_rails!
