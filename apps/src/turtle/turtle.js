@@ -300,10 +300,10 @@ class Visualization {
       angleIndex = (angleIndex + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
 
       if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
-        var sourceX = this.decorationAnimationImage.width * frameIndex;
+        var sourceX = decorationAnimationWidth * frameIndex;
         var sourceY = 0;
-        var sourceWidth = this.decorationAnimationImage.width;
-        var sourceHeight = this.decorationAnimationImage.height;
+        var sourceWidth = decorationAnimationWidth;
+        var sourceHeight = decorationAnimationHeight;
         var destWidth = sourceWidth;
         var destHeight = sourceHeight;
         var destX = this.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
@@ -370,8 +370,8 @@ class Visualization {
   }
 
   jumpForward(distance) {
-    this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
-    this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
+    this.x += distance * Math.sin(this.degreesToRadians_(this.heading));
+    this.y -= distance * Math.cos(this.degreesToRadians_(this.heading));
   }
 
   circleAt_(x, y, radius) {
@@ -395,6 +395,16 @@ class Visualization {
   setHeading(heading) {
     heading = this.constrainDegrees_(heading);
     this.heading = heading;
+  }
+
+  /**
+   * Converts degrees into radians.
+   *
+   * @param {number} degrees - The degrees to convert to radians
+   * @return {number} `degrees` converted to radians
+   */
+  degreesToRadians_(degrees) {
+    return degrees * (Math.PI / 180);
   }
 
   constrainDegrees_(degrees) {
@@ -492,7 +502,7 @@ class Visualization {
       this.ctxPattern.translate(startX, startY);
       // increment the angle and rotate the image.
       // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-      this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
+      this.ctxPattern.rotate(this.degreesToRadians_(this.heading - 90));
 
       var clipSize;
       if (lineDistance % this.smoothAnimateStepSize === 0) {
@@ -529,7 +539,7 @@ class Visualization {
       this.ctxScratch.translate(startX, startY);
       // increment the angle and rotate the image.
       // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-      this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+      this.ctxScratch.rotate(this.degreesToRadians_(this.heading - 90));
 
       if (img.width !== 0) {
         this.ctxScratch.drawImage(img,
@@ -1051,8 +1061,6 @@ Artist.prototype.loadTurtle = function (initializing = true) {
 Artist.prototype.loadDecorationAnimation = function () {
   if (this.skin.id === "elsa") {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
-    this.decorationAnimationImage.height = decorationAnimationHeight;
-    this.decorationAnimationImage.width = decorationAnimationWidth;
   }
 };
 
@@ -1558,7 +1566,7 @@ Artist.prototype.step = function (command, values, options) {
       // direction as the turtle.
       this.visualization.ctxScratch.save();
       this.visualization.ctxScratch.translate(this.visualization.x, this.visualization.y);
-      this.visualization.ctxScratch.rotate(utils.degreesToRadians(this.visualization.heading));
+      this.visualization.ctxScratch.rotate(this.degreesToRadians_(this.visualization.heading));
       this.visualization.ctxScratch.drawImage(img, -width / 2, -height, width, height);
       this.visualization.ctxScratch.restore();
 
