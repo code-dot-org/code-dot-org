@@ -39,7 +39,8 @@ export class SummaryTable extends React.Component {
       unreviewed: ApplicationDataPropType,
       waitlisted: ApplicationDataPropType,
     }),
-    path: PropTypes.string.isRequired
+    path: PropTypes.string.isRequired,
+    id: PropTypes.string
   };
 
   static contextTypes = {
@@ -78,7 +79,12 @@ export class SummaryTable extends React.Component {
   render() {
     return (
       <div className="col-xs-4" style={styles.tableWrapper}>
-        <Table striped condensed style={styles.table}>
+        <Table
+          id={this.props.id}
+          striped
+          condensed
+          style={styles.table}
+        >
           <caption>{this.props.caption}</caption>
           <thead>
             <tr>

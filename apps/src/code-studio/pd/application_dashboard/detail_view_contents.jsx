@@ -487,7 +487,7 @@ export class DetailViewContents extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="detail-view">
         {this.renderHeader()}
         <br/>
         {this.renderTopSection()}
