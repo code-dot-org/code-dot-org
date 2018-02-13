@@ -258,7 +258,7 @@ export default class SchoolNotFound extends Component {
               <GoogleSchoolLocationSearchField
                 ref={el => this.locationSearchRef = el}
                 name={this.props.fieldNames.googleLocation}
-                controlSchoolLocation={this.props.controlSchoolLocation}
+                isControlledInput={this.props.controlSchoolLocation}
                 value={this.props.schoolLocation}
                 onChange={this.handleChange.bind(this, 'schoolLocation')}
                 style={inputStyle}
@@ -281,14 +281,14 @@ class GoogleSchoolLocationSearchField extends React.Component {
     // have the value/onChange handlers hooked up to work properly.
     // If false, is uncontrolled and used only as a submittable <form> element.
     // @see https://reactpatterns.com/#controlled-input
-    controlSchoolLocation: PropTypes.bool,
+    isControlledInput: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
     style: PropTypes.object,
   };
 
   value() {
-    if (this.props.controlSchoolLocation) {
+    if (this.props.isControlledInput) {
       return this.props.value;
     }
     return this.searchBoxRef.value;
@@ -297,7 +297,7 @@ class GoogleSchoolLocationSearchField extends React.Component {
   componentDidMount() {
     // Docs: https://developers.google.com/maps/documentation/javascript/places-autocomplete#places_searchbox
     const searchBox = new google.maps.places.SearchBox(this.searchBoxRef);
-    if (this.props.controlSchoolLocation) {
+    if (this.props.isControlledInput) {
       searchBox.addListener('places_changed', () => {
         this.props.onChange({target: this.searchBoxRef});
       });
@@ -305,7 +305,7 @@ class GoogleSchoolLocationSearchField extends React.Component {
   }
 
   render() {
-    const conditionalProps = this.props.controlSchoolLocation ? {
+    const conditionalProps = this.props.isControlledInput ? {
       value: this.props.value,
       onChange: this.props.onChange,
     } : {};
