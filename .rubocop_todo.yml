@@ -99,11 +99,6 @@ Lint/RescueException:
 Lint/ScriptPermission:
   Enabled: false
 
-# Offense count: 6
-# Configuration parameters: IgnoreImplicitReferences.
-Lint/ShadowedArgument:
-  Enabled: false
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Lint/UnneededDisable:
