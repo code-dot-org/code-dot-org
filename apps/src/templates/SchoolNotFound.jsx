@@ -265,6 +265,7 @@ export default class SchoolNotFound extends Component {
                  <input
                    id="registration-school-location"
                    type="text"
+                   ref={el => this.registrationSchoolLocation = el}
                    name={this.props.fieldNames.googleLocation}
                    value={this.props.schoolLocation}
                    placeholder={i18n.schoolLocationSearchPlaceholder()}
@@ -291,8 +292,17 @@ export default class SchoolNotFound extends Component {
   }
 
   componentDidMount() {
-    if (this.props.useGoogleLocationSearch) {
-      new google.maps.places.SearchBox(document.getElementById('registration-school-location'));
+    const {useGoogleLocationSearch, controlSchoolLocation} = this.props;
+    if (useGoogleLocationSearch) {
+      // Docs: https://developers.google.com/maps/documentation/javascript/places-autocomplete#places_searchbox
+      const searchBox = new google.maps.places.SearchBox(document.getElementById('registration-school-location'));
+      if (controlSchoolLocation) {
+        searchBox.addListener('places_changed', () => {
+          this.handleChange('schoolLocation', {
+            target: this.registrationSchoolLocation,
+          });
+        });
+      }
     }
   }
 }
