@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import {UnconnectedCensusForm as CensusForm} from './CensusForm';
+import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
@@ -37,6 +37,7 @@ class YourSchool extends Component {
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
+    prefillData: censusFormPrefillDataShape,
     hideMap: PropTypes.bool
   };
 
@@ -94,7 +95,9 @@ class YourSchool extends Component {
              <ProtectedStatefulDiv ref="map"/>
            </div>
         )}
-        <CensusForm/>
+        <CensusForm
+          prefillData={this.props.prefillData}
+        />
       </div>
     );
   }

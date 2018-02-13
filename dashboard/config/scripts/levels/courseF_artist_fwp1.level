@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Today, we're going to try out a powerful function editor. See if you can figure out how to edit the `draw a square` function to find the bugs.",
+    "markdown_instructions": "Today, we're going to keep using the powerful function editor. See if you remember how to edit the `draw a square` function to find the bugs.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -39,10 +39,13 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Put all of the code for drawing a square inside the function editor.\",\"hint_id\":\"courseF_artist_fwp1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e00b17d034fa035a44b0a4c562555e76/courseF_artist_fwp1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember, you need to turn 90 degrees to draw a square.\",\"hint_id\":\"courseF_artist_fwp1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5661b67b4011435daf25729ce840c20d/courseF_artist_fwp1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to repeat as many times as the number of sides in a square.\",\"hint_id\":\"courseF_artist_fwp1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5321f7822d8eb023667e4a5044932e76/courseF_artist_fwp1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-09 17:29:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "debugging": 2,
