@@ -4888,6 +4888,10 @@ en:
               name: Circuits and Physical Prototypes
             'Project: Prototype an Innovation_':
               name: 'Project: Prototype an Innovation'
+            'Project: Make a Game__':
+              name: 'Project: Make a Game'
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
