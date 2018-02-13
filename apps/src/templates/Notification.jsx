@@ -58,7 +58,6 @@ const styles = {
   },
   iconBox: {
     width: 72,
-    height: 72,
     backgroundColor: color.lightest_gray,
     textAlign: 'center'
   },
