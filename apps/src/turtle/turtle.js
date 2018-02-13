@@ -362,6 +362,12 @@ class Visualization {
     // Draw the turtle.
     this.drawTurtle();
   }
+
+  jumpTo(pos) {
+    let [x, y] = pos;
+    this.x = Number(x);
+    this.y = Number(y);
+  }
 }
 
 /**
@@ -401,6 +407,7 @@ var Artist = function () {
 };
 
 module.exports = Artist;
+module.exports.Visualization = Visualization;
 
 
 /**
@@ -1282,12 +1289,12 @@ Artist.prototype.step = function (command, values, options) {
       break;
     case 'JT':  // Jump To Location
       if (Array.isArray(values[0])) {
-        this.jumpTo_(values[0]);
+        this.visualization.jumpTo(values[0]);
       } else {
-        this.jumpTo_(
+        this.visualization.jumpTo([
           utils.xFromPosition(values[0], CANVAS_WIDTH),
           utils.yFromPosition(values[0], CANVAS_HEIGHT),
-        );
+        ]);
       }
       break;
     case 'MD':  // Move diagonally (use longer steps if showing joints)
@@ -1433,12 +1440,6 @@ Artist.prototype.setPattern = function (pattern) {
     this.currentPathPattern = new Image();
     this.isDrawingWithPattern = false;
   }
-};
-
-Artist.prototype.jumpTo_ = function (pos) {
-  let [x, y] = pos;
-  this.visualization.x = Number(x);
-  this.visualization.y = Number(y);
 };
 
 Artist.prototype.jumpForward_ = function (distance) {

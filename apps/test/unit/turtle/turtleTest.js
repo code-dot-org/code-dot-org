@@ -58,6 +58,7 @@ describe('Artist', () => {
     let artist;
     beforeEach(() => {
       artist = new Artist();
+      artist.visualization = new Artist.Visualization();
     });
 
     it('can jump to coordinates', () => {
@@ -65,7 +66,7 @@ describe('Artist', () => {
 
       coords.forEach(x => {
         coords.forEach(y => {
-          artist.jumpTo_([x, y]);
+          artist.step('JT', [[x, y]]);
           expect(artist.visualization.x).to.equal(x);
           expect(artist.visualization.y).to.equal(y);
         });
@@ -87,7 +88,7 @@ describe('Artist', () => {
 
       Object.keys(expectations).forEach(position => {
         const [x, y] = expectations[position];
-        artist.jumpTo_(constants.Position[position]);
+        artist.step('JT', [constants.Position[position]]);
         expect(artist.visualization.x).to.equal(x);
         expect(artist.visualization.y).to.equal(y);
       });
