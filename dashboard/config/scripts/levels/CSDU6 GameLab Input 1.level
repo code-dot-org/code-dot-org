@@ -11,7 +11,6 @@
     "embed": "false",
     "markdown_instructions": "# Input in Game Lab\r\n\r\n_You don't need to make any changes to the code here_\r\n\r\nTake a minute to read through the code and run the program. Discuss with a partner:\r\n\r\n1. What is the source of input?\r\n2. Where and how does the program check for input?\r\n3. What does the program do when it gets the correct input?\r\n3. What is the program doing when there is no input?",
     "instructions_important": "false",
-    "start_blocks": "var ghost = createSprite(200, 200);\r\nghost.setAnimation(\"ghost_standing_1\");\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (keyDown(\"up\")) {\r\n    ghost.y = ghost.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    ghost.y = ghost.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    ghost.x = ghost.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    ghost.x = ghost.x + 1;\r\n  }\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

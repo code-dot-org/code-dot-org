@@ -3,7 +3,7 @@ import NewProjectButtons from './NewProjectButtons';
 
 export default storybook => {
   storybook
-    .storiesOf('NewProjectButtons', module)
+    .storiesOf('Buttons/NewProjectButtons', module)
     .withReduxStore()
     .addStoryTable([
       {
