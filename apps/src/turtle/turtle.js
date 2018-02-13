@@ -1694,7 +1694,7 @@ Artist.prototype.onReportComplete = function (response) {
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
   this.studioApp_.onReportComplete(response);
-  this.visualization.displayFeedback_();
+  this.displayFeedback_();
 };
 
 // This removes lengths from the text version of the XML of programs.
