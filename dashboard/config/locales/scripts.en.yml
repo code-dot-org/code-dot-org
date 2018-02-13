@@ -4856,6 +4856,38 @@ en:
               name: Innovations in Computing
             Arrays and Color LEDs:
               name: Arrays and Color LEDs
+            Innovations in Computing_:
+              name: Innovations in Computing
+            Designing Screens with Code_:
+              name: Designing Screens with Code
+            The Circuit Playground_:
+              name: The Circuit Playground
+            Input Unplugged_:
+              name: Input Unplugged
+            Board Events_:
+              name: Board Events
+            Getting Properties_:
+              name: Getting Properties
+            Analog Input_:
+              name: Analog Input
+            The Program Design Process_:
+              name: The Program Design Process
+            Arrays and Color LEDs_:
+              name: Arrays and Color LEDs
+            'Project: Make a Game_':
+              name: 'Project: Make a Game'
+            Making Music_:
+              name: Making Music
+            Arrays and For Loops_:
+              name: Arrays and For Loops
+            Accelerometer_:
+              name: Accelerometer
+            Functions with Parameters_:
+              name: Functions with Parameters
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation'
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
@@ -7012,6 +7044,8 @@ en:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
           title: Course E 2018
           description_audience: ''
           description_short: ''
