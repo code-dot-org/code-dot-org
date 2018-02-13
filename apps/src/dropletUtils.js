@@ -520,16 +520,33 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
   return {
     getCompletions(editor, session, pos, prefix, callback) {
       const token = editor.session.getTokenAt(pos.row, pos.column);
-      if (prefix.length === 0 || token.type === 'comment') {
+      // Ignore cases where:
+      // * the prefix is empty
+      // * we are in a comment
+      // * the prefix is a number with less than 3 digits (matches Atom semantics)
+      if (prefix.length === 0 || token.type === 'comment' ||
+          (prefix.length < 3 && !isNaN(Number(prefix)))) {
         callback(null, []);
         return;
       }
-      if (isPositionAfterDot(session, pos)) {
-        // Following a dot, we autocomplete from methodsAndProperties:
-        callback(null, methodsAndProperties);
-      } else {
-        callback(null, apis);
-      }
+      // Following a dot, we autocomplete from methodsAndProperties:
+      const list = isPositionAfterDot(session, pos) ? methodsAndProperties : apis;
+
+      // Filter our list to contain substring word matches based on camelCase or
+      // snake_case:
+      const lowerPrefix = prefix.toLowerCase();
+      const filteredList = list.filter(completion => {
+        const { value } = completion;
+        // https://stackoverflow.com/a/34680912
+        const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
+        const words = value.replace(edges, '$1_').split('_');
+        for (const word of words) {
+          if (word.toLowerCase().indexOf(lowerPrefix) === 0) {
+            return completion;
+          }
+        }
+      });
+      callback(null, filteredList);
     }
   };
 }
