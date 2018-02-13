@@ -21,6 +21,8 @@ social:
 
 # Win a celebrity chat for your class!
 
+### Update: the challenge is now closed - thanks to all who participated!
+
 ### Create an app, game, or design with Code.org and tag #HourOfCode and one of our special guests for a chance to win a video chat for your classroom!
 
 <a href="#stephen"><img src="/images/fit-195/steph-challenge.png"></a><a href="#stacy"><img src="/images/fit-195/stacy-challenge.png"></a><a href="#hadi"><img src="/images/fit-195/hadi-challenge.png"></a><a href="#sheryl"><img src="/images/fit-195/sheryl-challenge.png"></a><a href="#russell"><img src="/images/fit-195/russell-challenge.png"></a><a href="#susan"><img src="/images/fit-195/susan-challenge.png"></a>
@@ -43,6 +45,7 @@ social:
 
 
 ## What are they looking for?
+<a name="lookingfor"></a>
 <a name="stephen"></a>
 ### Stephen Curry 
 I'm lucky to have gone to the NBA playoffs with the Golden State Warriors, but we would never have been there without teamwork. Show me what your team can create when you work together.   
