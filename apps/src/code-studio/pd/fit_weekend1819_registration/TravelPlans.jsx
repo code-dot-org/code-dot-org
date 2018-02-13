@@ -24,6 +24,7 @@ export default class TravelPlans extends LabeledFormComponent {
     howTraveling: "Code.org provides a round trip flight for every FiT Weekend attendee. If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to the event. If you choose not to fly, and live at least 25 miles from the event location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trains, or public transit if you live less than 25 miles from the event location. How will you travel to the FiT Weekend?",
     needHotel: "Code.org provides a hotel room for every FiT Weekend attendee. Attendees will not be required to share a room. Would you like a hotel room at the FiT Weekend?",
     needAda: "Do you require an ADA accessible hotel room?",
+    explainAda: "Please explain your specific accommodation needs."
   };
 
   static associatedFields = Object.keys(TravelPlans.labels).concat([
@@ -115,14 +116,32 @@ export default class TravelPlans extends LabeledFormComponent {
           {this.radioButtonsFor("howTraveling")}
           {this.radioButtonsFor("needHotel")}
           {
-            this.props.data.needHotel &&
-              this.props.data.needHotel === 'Yes' &&
-              this.radioButtonsWithAdditionalTextFieldsFor("needAda", {
-                "Other (please explain):": "ada_details"
-              })
+            this.props.data.needHotel === 'Yes' &&
+            this.radioButtonsFor("needAda")
+          }
+          {
+            this.props.data.needHotel === 'Yes' &&
+            this.props.data.needAda === 'Yes' &&
+            this.largeInputFor("explainAda", {required: false})
           }
         </FormGroup>
       </FormGroup>
     );
+  }
+
+  /**
+   * @override
+   */
+  static processPageData(data) {
+    const changes = {};
+
+    if (data.needHotel !== 'Yes') {
+      data.needAda = undefined;
+    }
+    if (data.needAda !== 'Yes') {
+      data.explainAda = undefined;
+    }
+
+    return changes;
   }
 }
