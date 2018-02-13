@@ -109,13 +109,7 @@ export default class SchoolNotFound extends Component {
     }
 
     if (this.props.useGoogleLocationSearch) {
-      let locationValue;
-      if (this.props.controlSchoolLocation) {
-        locationValue = this.props.schoolLocation;
-      } else {
-        locationValue = $("#registration-school-location").val();
-      }
-      return this.isFieldValid(locationValue);
+      return this.isFieldValid(this.locationSearchRef.value());
     } else {
       return (
         this.isFieldValid(this.props.schoolCity) &&
@@ -262,6 +256,7 @@ export default class SchoolNotFound extends Component {
             <label style={labelStyle}>
               {this.renderLabel(i18n.schoolCityTown())}
               <GoogleSchoolLocationSearchField
+                ref={el => this.locationSearchRef = el}
                 name={this.props.fieldNames.googleLocation}
                 controlSchoolLocation={this.props.controlSchoolLocation}
                 value={this.props.schoolLocation}
@@ -282,11 +277,22 @@ export default class SchoolNotFound extends Component {
 class GoogleSchoolLocationSearchField extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
+    // If true, this field uses the React controlled input pattern and must
+    // have the value/onChange handlers hooked up to work properly.
+    // If false, is uncontrolled and used only as a submittable <form> element.
+    // @see https://reactpatterns.com/#controlled-input
     controlSchoolLocation: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
     style: PropTypes.object,
   };
+
+  value() {
+    if (this.props.controlSchoolLocation) {
+      return this.props.value;
+    }
+    return this.searchBoxRef.value;
+  }
 
   componentDidMount() {
     // Docs: https://developers.google.com/maps/documentation/javascript/places-autocomplete#places_searchbox
@@ -306,7 +312,6 @@ class GoogleSchoolLocationSearchField extends React.Component {
 
     return (
       <input
-        id="registration-school-location"
         ref={el => this.searchBoxRef = el}
         type="text"
         name={this.props.name}
