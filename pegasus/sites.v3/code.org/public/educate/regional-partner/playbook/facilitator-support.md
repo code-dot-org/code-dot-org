@@ -101,8 +101,8 @@ ________________
 <a id="docs"></a>
 ## Facilitator Support Documents
 
-- [Facilitator Playbook](https://docs.google.com/document/d/1xTZkAfmjsOttqNB7uFT-Sp5yH0fVDGbQ0PPhhcU70Zk/edit) - Toolkit for facilitators of all programs
-- [Facilitation Guide](https://docs.google.com/document/d/1xvBjf74VL0YfVswqLwoCdau5NN3D-QRyqQHGYl20034/edit)
+- [6-12 Facilitator Playbook](https://docs.google.com/document/d/1xTZkAfmjsOttqNB7uFT-Sp5yH0fVDGbQ0PPhhcU70Zk/edit) - Toolkit for CS Discoveries and CS Principles facilitators
+- [6-12 Facilitation Guide](https://docs.google.com/document/d/1xvBjf74VL0YfVswqLwoCdau5NN3D-QRyqQHGYl20034/edit)
 - [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators 
 - [Important Resources for CS Discoveries Facilitators](https://curriculum.code.org/plcsd/) - See full list of resources and agendas for CS Discoveries Facilitators
 
