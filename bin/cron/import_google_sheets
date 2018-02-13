@@ -9,4 +9,8 @@ def main
   end
 end
 
-main if only_one_running?(__FILE__)
+if only_one_running?(__FILE__)
+  main
+else
+  puts "Importing Google sheets was unsuccessful. This might be because there is already another import_google_sheet process that is stuck. Check for an import_google_sheets.pid file, delete it and try again."
+end
