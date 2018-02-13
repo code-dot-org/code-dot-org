@@ -1,5 +1,5 @@
 cron-pii:
-- dashboard.census_submissions_school_infos
+- dashboard.census_submissions
 - pegasus.contact_rollups
 - pegasus.contacts
 - pegasus.forms
@@ -53,7 +53,7 @@ cron:
 - dashboard.census_summaries
 - dashboard.ib_school_codes
 - dashboard.ap_school_codes
-- dashboard.census_submissions
+- dashboard.census_submissions_school_infos
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
