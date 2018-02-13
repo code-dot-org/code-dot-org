@@ -1,5 +1,5 @@
 @dashboard_db_access
-#@eyes
+@eyes
 
 Feature: Teacher Application Dashboard view
 
