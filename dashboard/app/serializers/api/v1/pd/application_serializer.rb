@@ -2,7 +2,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
   attributes :regional_partner_name, :regional_partner_id, :locked, :notes, :form_data, :status,
-    :school_name, :district_name, :email, :application_type, :response_scores, :course_name,
+    :school_name, :district_name, :email, :application_type, :response_scores, :course, :course_name,
     :meets_criteria, :bonus_points, :pd_workshop_id, :fit_workshop_name, :fit_workshop_url,
     :meets_criteria, :bonus_points, :pd_workshop_id, :pd_workshop_name, :pd_workshop_url,
     :fit_workshop_name, :fit_workshop_url, :application_guid
@@ -15,9 +15,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     object.locked?
   end
 
-  # Include the full answers here
+  # Include the full answers here, unless otherwise specified
   def form_data
-    object.full_answers_camelized
+    @scope[:raw_form_data] ? object.form_data_hash : object.full_answers_camelized
   end
 
   def response_scores
