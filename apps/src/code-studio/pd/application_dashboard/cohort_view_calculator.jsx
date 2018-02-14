@@ -28,18 +28,10 @@ export default class CohortViewCalculator extends React.Component {
           <tbody>
             <tr>
               <td>
-                Total Capacity
+                Available Seats
               </td>
               <td>
                 {this.props.totalCapacity}
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Remaining Capacity
-              </td>
-              <td>
-                {this.props.totalCapacity - this.props.accepted}
               </td>
             </tr>
             <tr>
@@ -48,6 +40,14 @@ export default class CohortViewCalculator extends React.Component {
               </td>
               <td>
                 {this.props.accepted}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Remaining Capacity
+              </td>
+              <td>
+                {this.props.totalCapacity - this.props.accepted}
               </td>
             </tr>
             <tr>
