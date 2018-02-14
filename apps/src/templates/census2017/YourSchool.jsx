@@ -85,12 +85,11 @@ class YourSchool extends Component {
         {!this.props.hideMap && (
            <div>
              <h1 style={styles.heading}>
-               Put your school on the map
+               Does your school teach Computer Science?
              </h1>
              <h3 style={styles.description}>
-               {i18n.yourSchoolMapDesc()}
-               If you are located in the US, please <a href="#form">fill out the form below</a>.
-               If you are outside the US, <a href="/learn/local">add your school here</a>.
+               Find your school on the map to see if computer science is already being offered.
+               Can't find your school on the map? <a href="#form">Fill out the survey below</a>.
              </h3>
              <ProtectedStatefulDiv ref="map"/>
            </div>
