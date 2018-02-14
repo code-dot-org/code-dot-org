@@ -3,8 +3,8 @@ require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
 require 'channels_api'
 
-CAUSES_ARGUMENTERROR = "bT0zAyBvk"
-CAUSES_CIPHERERROR = "IMALITTLETEAPOTSHORTANDSTOUT"
+CAUSES_ARGUMENTERROR = "bT0zAyBvk".freeze
+CAUSES_CIPHERERROR = "IMALITTLETEAPOTSHORTANDSTOUT".freeze
 
 class Base64ErrorTest < Minitest::Test
   include SetupTest
