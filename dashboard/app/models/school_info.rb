@@ -132,12 +132,30 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_without_country
   validate :validate_zip
 
+  # Decides whether the school info is complete enough to stop bugging the
+  # teacher for additional information every week.  Different from complete
+  # record validation.
   def complete?
+    return false if country.nil?
+    return true unless usa?
+    return true if [
+      SCHOOL_TYPE_HOMESCHOOL,
+      SCHOOL_TYPE_AFTER_SCHOOL,
+      SCHOOL_TYPE_ORGANIZATION,
+      SCHOOL_STATE_OTHER
+    ].include?(school_type)
+    return true unless school_id.nil?
+
+    # At this point, require full info to be filled out
     validation_type_original = validation_type
     self.validation_type = VALIDATION_FULL
     return_val = valid?
     self.validation_type = validation_type_original
     return_val
+  end
+
+  def usa?
+    ['US', 'USA', 'United States'].include? country
   end
 
   def should_validate?
