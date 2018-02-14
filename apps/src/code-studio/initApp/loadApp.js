@@ -316,7 +316,11 @@ function loadAppAsync(appOptions) {
     );
   }
 
-  if (appOptions.channel || isViewingSolution || isViewingStudentAnswer) {
+  if (isViewingSolution) {
+    return Promise.resolve(appOptions);
+  }
+
+  if (appOptions.channel || isViewingStudentAnswer) {
     return loadProjectAndCheckAbuse(appOptions);
   }
 

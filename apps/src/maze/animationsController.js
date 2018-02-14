@@ -535,8 +535,27 @@ module.exports = class AnimationsController {
    * @param {integer} timeAlloted How much time we have for our animations
    */
   scheduleDance(victoryDance, timeAlloted) {
-    if (this.maze.subtype.scheduleDance) {
-      this.maze.subtype.scheduleDance(victoryDance, timeAlloted, this.maze.skin);
+    const finishIcon = document.getElementById('finish');
+
+    // Some skins (like scrat) have custom celebration animations we want to
+    // suport
+    if (victoryDance && this.maze.skin.celebrateAnimation) {
+      if (finishIcon) {
+        finishIcon.setAttribute('visibility', 'hidden');
+      }
+      const numFrames = this.maze.skin.celebratePegmanRow;
+      const timePerFrame = timeAlloted / numFrames;
+      const start = { x: this.maze.pegmanX, y: this.maze.pegmanY };
+
+      this.scheduleSheetedMovement_(
+        { x: start.x, y: start.y },
+        { x: 0, y: 0 },
+        numFrames,
+        timePerFrame,
+        'celebrate',
+        tiles.Direction.NORTH,
+        true,
+      );
       return;
     }
 
@@ -544,7 +563,6 @@ module.exports = class AnimationsController {
     this.displayPegman(this.maze.pegmanX, this.maze.pegmanY, 16);
 
     // If victoryDance === true, play the goal animation, else reset it
-    var finishIcon = document.getElementById('finish');
     if (victoryDance && finishIcon) {
       finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
         this.maze.skin.goalAnimation);

@@ -1,7 +1,6 @@
 import {PropTypes} from 'react';
 import FormController from '../form_components/FormController';
 
-import Welcome from './Welcome';
 import Joining from './Joining';
 import TravelPlans from './TravelPlans';
 import Releases from './Releases';
@@ -40,7 +39,6 @@ export default class FitWeekend1819Registration extends FormController {
    */
   getPageComponents() {
     return [
-      Welcome,
       Joining,
       TravelPlans,
       Releases,
