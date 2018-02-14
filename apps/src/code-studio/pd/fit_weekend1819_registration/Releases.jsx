@@ -28,18 +28,18 @@ export default class Releases extends LabeledFormComponent {
           <ControlLabel>
             Please read this <a target="_blank" href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>
           </ControlLabel>
-          {this.selectFor("photoRelease", { placeholder: "--" })}
+          {this.singleCheckboxFor("photoRelease")}
           <ControlLabel>
             Please read this <a target="_blank" href="https://docs.google.com/document/d/15N5N1m-BPCU7obQDf7FLLhEt3IComFGB1u3N6kEQR6k/edit">liability waiver.</a>
           </ControlLabel>
-          {this.selectFor("liabilityWaiver", { placeholder: "--" })}
+          {this.singleCheckboxFor("liabilityWaiver")}
         </FormGroup>
 
         <FormGroup>
           <ControlLabel>
             <strong>
-              Code.org works closely with local Regional Partners to organize
-              and deliver the Professional Learning Program. By enrolling in this
+              Code.org works closely with local Regional Partners to organize and
+              deliver the Professional Learning Program.  By enrolling in this
               program, you are agreeing to allow Code.org to share information on
               how you use Code.org and the Professional Learning resources with your
               Regional Partner and school district. In order to organize the
