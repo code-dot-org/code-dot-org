@@ -135,11 +135,13 @@ export default class TravelPlans extends LabeledFormComponent {
   static processPageData(data) {
     const changes = {};
 
+    changes.needAda = data.needAda;
+
     if (data.needHotel !== 'Yes') {
-      data.needAda = undefined;
+      changes.needAda = undefined;
     }
-    if (data.needAda !== 'Yes') {
-      data.explainAda = undefined;
+    if (changes.needAda !== 'Yes') {
+      changes.explainAda = undefined;
     }
 
     return changes;
