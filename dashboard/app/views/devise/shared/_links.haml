@@ -36,11 +36,10 @@
             check the wiki.
 
       - [:google_oauth2, :facebook, :windowslive].each do |provider|
-        = link_to omniauth_authorize_path(resource_name, provider), class: "oauth_sign_in with_#{provider}" do
-          = image_tag("auth/#{provider}.png")
-          = t('auth.sign_in_with', provider: t("auth.#{provider}"))
-        %br/
-        %br/
+        .authprovider
+          = link_to omniauth_authorize_path(resource_name, provider), class: "oauth_sign_in with_#{provider}" do
+            = image_tag("auth/#{provider}.png")
+            = t('auth.sign_in_with', provider: t("auth.#{provider}"))
 
 :javascript
   $('.oauth_sign_in').click(dashboard.clientState.reset);

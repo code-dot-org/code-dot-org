@@ -1722,6 +1722,28 @@ a.download-video {
       font-weight: bolder;
     }
   }
+
+  .authprovider:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.policy_logos {
+  .studentprivacypledge {
+    float: left;
+    margin-right: 20px;
+
+    .studentprivacypledgeimage {
+      width: 110px;
+    }
+  }
+
+  .commonsense {
+    .commonsenseimage {
+      width: 115px;
+      margin-top: 3px;
+    }
+  }
 }
 
 #hoc_download {
