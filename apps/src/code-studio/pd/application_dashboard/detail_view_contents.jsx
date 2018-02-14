@@ -54,7 +54,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
-      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
+      course: PropTypes.oneOf(['csf', 'csd', 'csp']).isRequired,
       course_name: PropTypes.string,
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
