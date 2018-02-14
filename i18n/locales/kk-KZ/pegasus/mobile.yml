@@ -25,7 +25,7 @@
   submit: "Жіберу"
   twentyhours_heading: "Біздің курсты қолданып көріңіз: информатикаға кіріспе"
   twentyhours_text: "Бірінші \"Код жазу Сағатын\" аяқтадыңыз ба? Информатика және бағдарламалау ұғымы туралы толығырақ келесі курста біліңіз."
-  og_title: Әр бір бала мүмкіндікке лайық
+  og_title: 'Әр бір бала мүмкіндікке лайық'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Every student in every school deserves the opportunity to study computer science."
@@ -69,7 +69,7 @@
   thank_you_: "Рахмет!"
   congratulations: "Құттықтаймыз!"
   congratulations_on_completing_hoc: "Код Жазу Сағатының бір бөлімінің бітуімен құттықтаймыз"
-  congratulations_volunteer: Құттықтаймыз, енді сіз <a href="https://code.org/volunteer"> "Бағдарламалау сағатын" қооданып көргенен кейін, үйренгісі келетін сыныптастарыңызды сайтта тіркеңіз </a> және де оқушыларға "Бағдарламалау сағатын" оқып үйренуге көмектесіңіз!
+  congratulations_volunteer: 'Құттықтаймыз, енді сіз <a href="https://code.org/volunteer"> "Бағдарламалау сағатын" қооданып көргенен кейін, үйренгісі келетін сыныптастарыңызды сайтта тіркеңіз </a> және де оқушыларға "Бағдарламалау сағатын" оқып үйренуге көмектесіңіз!'
   congratulations_on_completing_course1: "1-Курсты аяқтауыңызбен құттықтаймыз"
   congratulations_on_completing_course2: "2-Курсты аяқтауыңызбен құттықтаймыз"
   congratulations_on_completing_course3: "3-Курсты аяқтауыңызбен құттықтаймыз"
@@ -753,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Оқу бағдарламасы"
   dashboard_curriculum_overview: "Мектепке дейінгі және бастауыш мектеп оқушылары үшін бағдарламаны шолу"
   dashboard_overview: "Қысқаша шолу"
@@ -771,6 +774,8 @@
   dashboard_curriculum_csins: 'Компьютер ғылымдары, ғылымның өзінде түсіндіріледі:'
   dashboard_curriculum_csp: 'AP® Информатика қағидалары:'
   dashboard_curriculum_ecs: 'Информатика пәнін оқу:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Балабақша"
   dashboard_grade_other: "Басқасы"
   dashboard_login_word: "Сөз"
@@ -839,7 +844,7 @@
   carousel_heading_international: "Сіздің тіліңіздегі оқыту нұсқаулығы"
   carousel_heading_domestic: "Оқыту құралдары ағылшын тілінде қолжетімді"
   carousel_heading_beginners: "Бастаушылар үшін оқулықтар"
-  carousel_heading_beyond_beginners: Бастаушылар үшін оқулықтар
+  carousel_heading_beyond_beginners: 'Бастаушылар үшін оқулықтар'
   carousel_heading_javascript: "JavaScript тілін үйрену үшін арналған оқулықтар"
   carousel_heading_beyond_javascript: "JavaScript тілін үйрену үшін арналған оқулықтар"
   carousel_heading_unplugged: "Желіге шығуға мүмкіндік жоқ па ? Онда \"информатиканы оффлайн оқуды\" пайдаланып көр"
@@ -941,11 +946,11 @@
   accelerated_name: "Жеделдетілген курс"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -994,6 +999,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Қосымшалар Лабораториясы"
+  gamelab_name: "Game Lab"
   basketball_name: "Баскетбол ойынды жасау"
   sports_name: "Спорттар"
   applab_gradelevel: "13+ жастағылар үшін"

@@ -753,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте эти оффлайн уроки в вашем классе."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Учебная программа"
   dashboard_curriculum_overview: "Обзор программы для дошкольников и учеников начальной школы"
   dashboard_overview: "Краткий обзор"
@@ -771,6 +774,8 @@
   dashboard_curriculum_csins: 'Информатика в науке:'
   dashboard_curriculum_csp: 'Принципы информатики AP®:'
   dashboard_curriculum_ecs: 'Изучение информатики:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Детский сад"
   dashboard_grade_other: "Другое"
   dashboard_login_word: "Слово"
@@ -839,7 +844,7 @@
   carousel_heading_international: "Уроки от партнеров на вашем языке"
   carousel_heading_domestic: "Уроки от партнеров доступны на английском языке"
   carousel_heading_beginners: "Уроки от партнеров для дошкольников и учеников до 8 класса"
-  carousel_heading_beyond_beginners: Учебники для начинающих
+  carousel_heading_beyond_beginners: 'Учебники для начинающих'
   carousel_heading_javascript: "Пособия от партнеров по изучению языка JavaScript"
   carousel_heading_beyond_javascript: "Учебники для изучения JavaScript"
   carousel_heading_unplugged: "У вас нет нужного устройства или доступа в интернет? Займитесь информатикой, не требующей использования компьютера"
@@ -941,12 +946,12 @@
   accelerated_name: "Ускоренный курс"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'Урок 1: Цифровая информация'
-  cspunit2_name: 'Урок 2: Интернет'
-  cspunit3_name: 'Урок 3: Программирование'
-  cspunit4_name: 'Урок 4: Данные'
-  cspunit5_name: CS принципы блок 5
-  cspunit6_name: CS принципы блок 6
+  cspunit1_name: "Урок 1: Цифровая информация"
+  cspunit2_name: "Урок 2: Интернет"
+  cspunit3_name: "Урок 3: Программирование"
+  cspunit4_name: "Урок 4: Данные"
+  cspunit5_name: "CS принципы блок 5"
+  cspunit6_name: 'CS принципы блок 6'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
@@ -994,6 +999,7 @@
   cspexams_category_name: "Практический тест по основам информатики"
   research_studies_category_name: "Research Studies"
   applab_name: "Лаборатория приложений"
+  gamelab_name: "Игровая лаборатория"
   basketball_name: "Создать игру в баскетбол"
   sports_name: "Создай свою спортивную игру"
   applab_gradelevel: "Возраст 13+"

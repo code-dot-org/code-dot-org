@@ -25,7 +25,7 @@
   submit: "Enviar"
   twentyhours_heading: "Prueba nuestro curso de Introducción a la Informática"
   twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática y conceptos de programación en este curso de seguimiento."
-  og_title: Todos los niños merecen oportunidades
+  og_title: 'Todos los niños merecen oportunidades'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Every student in every school deserves the opportunity to study computer science."
@@ -752,7 +752,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Si no tiene computadoras, <a href='%{unplugged_url}'> intente estas lecciones desenchufados</a> en su salón del clase."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Currículum"
   dashboard_curriculum_overview: "Resumen de currículo K-5"
   dashboard_overview: "Resumen"
@@ -770,6 +773,8 @@
   dashboard_curriculum_csins: 'Informática en Ciencia:'
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Kah"
   dashboard_grade_other: "Otros"
   dashboard_login_word: "Palabra"
@@ -838,7 +843,7 @@
   carousel_heading_international: "Tutoriales en tu idioma"
   carousel_heading_domestic: "Guías disponibles en inglés"
   carousel_heading_beginners: "Tutoriales para principiantes (en inglés)"
-  carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
+  carousel_heading_beyond_beginners: 'Tutoriales para principiantes (en inglés)'
   carousel_heading_javascript: "Guías que enseñan JavaScript"
   carousel_heading_beyond_javascript: "Tutoriales para aprender JavaScript"
   carousel_heading_unplugged: "¿No tienes dispositivo o Internet? Prueba informática sin conexión"
@@ -940,11 +945,11 @@
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'Tema 1: Información digital'
-  cspunit2_name: 'Tema 2: El Internet'
-  cspunit3_name: 'Unidad 3: programación'
-  cspunit4_name: 'Tema 4: Datos'
-  cspunit5_name: 'Unidad 5: Explorar y Crear PT'
+  cspunit1_name: "Tema 1: Información digital"
+  cspunit2_name: "Tema 2: El Internet"
+  cspunit3_name: "Unidad 3: programación"
+  cspunit4_name: "Tema 4: Datos"
+  cspunit5_name: "Unidad 5: Explorar y Crear PT"
   cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -993,6 +998,7 @@
   cspexams_category_name: "Prueba de práctica de principios de CS"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratorio de App"
+  gamelab_name: "Game Lab"
   basketball_name: "Crear un juego de baloncesto"
   sports_name: "Crea tu propio Juego de deportes"
   applab_gradelevel: "Mayores de 13 años"
@@ -1411,7 +1417,7 @@
   header_home: "Inicio"
   header_my_dashboard: "My Dashboard"
   header_courses: "cursos"
-  header_course_catalog: "Course Catalog"
+  header_course_catalog: "Catálogo de cursos"
   header_project_gallery: "Proyectos"
   header_sections: "Secciones"
   header_professional_learning: "Aprendizaje Profesional"
@@ -1443,8 +1449,8 @@
   header_teacher_community: "Comunidad de profesores"
   header_help_support: 'Ayuda y soporte técnico '
   header_report_bug: "Reportar un error"
-  header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
+  header_tutorials: "Tutoriales"
+  header_documentation: "Documentación"
   csp_name: "'16-'17 Principios de CS"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
@@ -1472,7 +1478,7 @@
   joining_section_overview: "Si un estudiante todavía no se ha unido a su sección, pídale que realicen los siguientes pasos. Tenga en cuenta que solo necesitan hacer esto una vez. Al unirte a tu sección, los estudiantes podrán ver el curso que se les asignó y podrás seguir el progreso del trabajo que se ha completado mientras estén registrados."
   joining_section_instruct_website: 'Cree una cuenta de Code.org si aún no lo han hecho. Pueden hacer esto en https://studio.code.org/users/sign_up. Tenga en cuenta que pueden registrarse con una dirección de correo electrónico y contraseña, o registrarse en Google, Facebook o Microsoft haciendo clic en uno de estos botones:'
   joining_section_instruct_account: "Inicie sesión con su cuenta de Code.org."
-  joining_section_instruct_code: Navegue a %{code_org_url} y escriba su seccion de sodigo:%{section_code}.
+  joining_section_instruct_code: 'Navegue a %{code_org_url} y escriba su seccion de sodigo:%{section_code}.'
   joining_section_instruct_button: "Una vez que ellos presionen el botón \"comenzar\", se deben agregar a su sección."
   signing_in_single_instruct: "Sus alumnos pueden iniciar sesión en sus cuentas de Code.org accediendo a https://code.org/ y haciendo clic en el botón \"Iniciar sesión\" en la esquina superior derecha."
   reset_student_password_email: "Si su estudiante creó una cuenta de Code.org usando su dirección de correo electrónico y contraseña (en lugar de iniciar sesión a través de su cuenta de Google, Facebook, Microsoft o Clever), puede restablecer su contraseña yendo a la pestaña \"Administrar estudiantes\" para la sección y haciendo clic en el botón \"Restablecer contraseña\" en la columna \"Contraseña\"."

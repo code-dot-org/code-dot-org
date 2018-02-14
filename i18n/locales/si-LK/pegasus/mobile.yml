@@ -25,7 +25,7 @@
   submit: "යොමු කරන්න"
   twentyhours_heading: "අප විසින් පිරිනමන පරිගණක විද්‍යා පිවිසුම් පාඨමාලාව උත්සාහ කර බලන්න"
   twentyhours_text: "ඔබගේ පළමු  Hour of Code වැඩසටහන අවසන්ද? මෙම පාඨමාලාවේ පසුවට මූලික පරිගණක විද්‍යාව සහ  ක්‍රමලේඛන සංකලප තව දුරටත් ඉගෙනගන්න."
-  og_title: Hour of Code වැඩසටහන ළඟදීම
+  og_title: 'Hour of Code වැඩසටහන ළඟදීම'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "පරිගණක විද්‍යාව හැදෑරීමේ අවස්තාව, සෑම පාසලකම සිටින සෑම දරුවෙකුටම ලැබිය යුතු වේ. එය සෑමදෙයක්ම වෙනස් කරමින් පවතී."
@@ -628,7 +628,7 @@
   dashboard_course_csins: "විද්‍යාවේ පරිගණක විද්‍යාව "
   dashboard_course_csins_desc: "ආකෘති නිර්මාණය සහ අනුරූපන සන්දර්භය තුල පරිගණක විද්යාව සංකල්ප හැඳින්වීමක් ඉදිරිපත් කිරීමට Code.org GUTSව්යාපෘතිය මෙයින් අදහස් සමග අත්වැල් බැඳගෙන ඇත."
   dashboard_course_ecs: "පරිගණක විද්‍යාව ගවේශණය"
-  dashboard_course_ecs_desc: පරිගණක විද්‍යාව ගවේෂණය එක් අවුරුදු කොටස 6 කින් සමන්විත පාඨමාලාවකි. මානව පරිගණක අන්තර් ක්රියාකාරිත්වය. ප්රශ්නය විසඳීම, වෙබ් නිර්මාණ, ක්රමලේඛ, තොරතුරු තාක්ෂණය සහ දත්ත විශ්ලේෂණය, සහ රොබෝ විද්යාව.
+  dashboard_course_ecs_desc: 'පරිගණක විද්‍යාව ගවේෂණය එක් අවුරුදු කොටස 6 කින් සමන්විත පාඨමාලාවකි. මානව පරිගණක අන්තර් ක්රියාකාරිත්වය. ප්රශ්නය විසඳීම, වෙබ් නිර්මාණ, ක්රමලේඛ, තොරතුරු තාක්ෂණය සහ දත්ත විශ්ලේෂණය, සහ රොබෝ විද්යාව.'
   dashboard_course_csp: "AP® පරිගණක විද්‍යා මූලධර්ම"
   dashboard_course_csp_desc: "Code.org සිත් ඇදගන්නා සුලු සහ ඕන විටක ලබා ගත හැකි පරිගණක විද්‍යාවේ මූලිකාංග අධ්‍යනය කල හැකි පාඨමාලා නිර්මාණය කර තිබේ."
   dashboard_landing_loading: "පූරණය වෙමින්..."
@@ -771,7 +771,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ <a href='%{unplugged_url}'>මෙම එළිදැක්වූ පාඩම් උත්සාහ කරන්න</a>."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "විෂයමාලාව"
   dashboard_curriculum_overview: "K-5 විශය මාලාවේ සාරංශය"
   dashboard_overview: "දළ විශ්ලේෂණය"
@@ -789,6 +792,8 @@
   dashboard_curriculum_csins: 'විද්‍යාවේ පරිගණක විද්‍යාව:'
   dashboard_curriculum_csp: 'AP® පරිගණක විද්‍යා මූලධර්ම:'
   dashboard_curriculum_ecs: 'පරිගණක විද්‍යාව ගවේශණය:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "පෙරපාසල්"
   dashboard_grade_other: "වෙනත්"
   dashboard_login_word: "වචනය"
@@ -857,7 +862,7 @@
   carousel_heading_international: "ඔබේ බසින් හවුල්කරු නිබන්ධන"
   carousel_heading_domestic: "හවුල්කරු නිබන්ධන සිංහල බසින් ඇත"
   carousel_heading_beginners: "K - 8 ශ්‍රේණි සදහා හවුල්කරු නිබන්ධන"
-  carousel_heading_beyond_beginners: ආධුනිකයින් හට පාඩම්
+  carousel_heading_beyond_beginners: 'ආධුනිකයින් හට පාඩම්'
   carousel_heading_javascript: "ජාවාස්ක්‍රිප්ට් උගන්වන සහකරු නිබන්ධන"
   carousel_heading_beyond_javascript: "ජාවා ස්ක්‍රිප්ට් ඉගෙන ගත හැකි පාඩම්"
   carousel_heading_unplugged: "උපාංගයක් හෝ අන්තර්ජාලය නොමැති ද? 'එළිදැක්වූ පරිගණක විද්‍යාව' උත්සාහ කරන්න"
@@ -884,7 +889,7 @@
   third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "සහභාගි වන්නන්"
   teachers_notes: "ගුරුවරයාගේ තුණ්ඩු"
-  teachers_notes_hoc: ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න.
+  teachers_notes_hoc: 'ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න.'
   previous: "පෙරට"
   next: "ඊළඟ"
   older_systems: "   පැරණි පද්ධතියන් හි   වැඩකරන හවුල්කරු නිබන්ධන"
@@ -959,11 +964,11 @@
   accelerated_name: "කඩිනම් පාඨමාලා"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
-  cspunit2_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
-  cspunit3_name: '(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය'
-  cspunit4_name: '(පැරණි) 4 වෙනි ඒකකය: දත්ත'
-  cspunit5_name: '(පැරණි) ඒකකය 5: PT ගවේෂණය කර තනන්න'
+  cspunit1_name: "ඒකක 1: ඩිජිටල් තොරතුරු"
+  cspunit2_name: "පාඩම් අංක 2: අන්තර්ජාලය"
+  cspunit3_name: "(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය"
+  cspunit4_name: "(පැරණි) 4 වෙනි ඒකකය: දත්ත"
+  cspunit5_name: "(පැරණි) ඒකකය 5: PT ගවේෂණය කර තනන්න"
   cspunit6_name: 'පසු-AP: යෙදුම් තුළ දත්ත සංචිත'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1012,6 +1017,7 @@
   cspexams_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය"
   research_studies_category_name: "Research Studies"
   applab_name: "මෘදුකාංග විද්‍යාගාරය"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "වයස් 13+"
@@ -1396,11 +1402,11 @@
   makeschool_beyond_longdescription: "ObjectiveC දන්නවද? අයිෆෝන් ගේම් එකක් හදන්න පැයකින් ඉගෙන ගන්න. අපි ඔබට සෑදීමට සහ පරික්ශා කිරීමට වෙබ් බ්‍රව්සරය තුලින්ම උදව් කරන්නම්. ඔබ ඉන්පසු ඔබේ ෆේස්බුක් මිතුරන් සමග මෙය බෙදාගත හැකියි. පෙර දැනුම අවශ්‍ය නොවේ. නමුත් විචල්‍යන්, ශ්‍රිත හා වස්තු අඳුරාගැනීමට ඔබට හැකිවිය යුතුය."
   appinventor_beyond_longdescription: "විනෝදාත්මක, ඉක්මන් වීඩියෝ නිබන්ධන ඔබගේ Android දුරකථනය හෝ ටැබ්ලටය සඳහා සරල යෙදුම් තුනක් ගොඩ හරහා ඔබව රැගෙන. සමානව බෙදාහදා ගැනීම අදුනික සහ විශේෂඥයන් සඳහා නිර්මාණය කර ඇති,මෙම hour of code මගින් ඔබට පෙර සූදානමක් ලබා දෙනෙවා  ඔබේ ම යෙදුම් ගොඩනැගීමට පෙර. ඔබේ මිතුරන් සමග ඔබගේ යෙදුම නිර්මාණ බෙදා සිතා බලන්න! මෙම කටයුතු පුද්ගලයන් සඳහා සහ මෙරට ප්රමුඛ පෙළේ පන්ති ගුරුවරුන් සඳහා සුදුසු ය"
   touchdevelop_beyond_longdescription: "ඔබ iPad, iPhone, Android, PC, Mac, Windows Phone මගින් TouchDevelop එක මගින් යෙදුම් නිර්මාණය කරන්න. අපගේ touch-friendly editor එක මගින් කේතනය පහසු කරයි!"
-  codehs_beyond_longdescription: Karel, බල්ලා සමඟ වැඩසටහන් පිළිබඳ මූලික දේ ඉගෙනගන්න,විනෝදාත්මක, කේතනය සඳහා ප්රවේශවීමේ සහ දෘශ්ය ප්‍රවේශයක්හ ඳුන්වාදෙයි,එහිදී පරිගණකයට  විධාන  ලබාදීම  සුනඛයෙකුට විධාන ලබාදෙන ලෙස ලබාදිය හැකිය.ගුරුවරයෙකු විසින්  මෙම නිබන්ධනයට නායකත්වය ලබාදෙන්නේ නම් වඩාත් ගැලපේ ,නමුත් ස්වාධීනවද එය සිදු කළ හැකිය.
-  udemy_beyond_longdescription: ඔබ මීට පෙර කේත පේලියක් නොදැකපු කෙනෙක් වුවත්, ජීවත්වීමට කේතනය කරන කෙනෙකු වුවත්, Udemy තුළින් ඔබටම ගැලපෙන පාඨමාලාවක් සොයාගත හැකියි. මෙය වෘත්තිමය උපදේශකයින් මගින් පිරිනැමේ. [මුදල් ගෙවා ලබා ගත යුතුයි.]
+  codehs_beyond_longdescription: 'Karel, බල්ලා සමඟ වැඩසටහන් පිළිබඳ මූලික දේ ඉගෙනගන්න,විනෝදාත්මක, කේතනය සඳහා ප්රවේශවීමේ සහ දෘශ්ය ප්‍රවේශයක්හ ඳුන්වාදෙයි,එහිදී පරිගණකයට  විධාන  ලබාදීම  සුනඛයෙකුට විධාන ලබාදෙන ලෙස ලබාදිය හැකිය.ගුරුවරයෙකු විසින්  මෙම නිබන්ධනයට නායකත්වය ලබාදෙන්නේ නම් වඩාත් ගැලපේ ,නමුත් ස්වාධීනවද එය සිදු කළ හැකිය.'
+  udemy_beyond_longdescription: 'ඔබ මීට පෙර කේත පේලියක් නොදැකපු කෙනෙක් වුවත්, ජීවත්වීමට කේතනය කරන කෙනෙකු වුවත්, Udemy තුළින් ඔබටම ගැලපෙන පාඨමාලාවක් සොයාගත හැකියි. මෙය වෘත්තිමය උපදේශකයින් මගින් පිරිනැමේ. [මුදල් ගෙවා ලබා ගත යුතුයි.]'
   lynda_beyond_longdescription: 'ඉගෙන ගන්න කොහොමද වෙබ් යෙදුම් කේතනය කිරීමට, නිර්මාණය කිරීමට object-oriented වැඩසටහන් වන C සහ C++ මගින් සහ Java ලියන ආකාරය. ජංගම යෙදුම් සංවර්ධනය කිරීමට සහ නිර්මාණය කිරීමට අපගේ සංවර්ධක නිබන්ධන බාවිතයෙන් ඉගෙන ගැනීමට හැකිය, PHP සහ MySQL දත්ත සමුදායන් සමග වැඩ කරන ආකාරය, ආරම්භ කරන්න සංඛ්යා ලේඛන සැකසුම් භාෂා R සහ තවත් භාෂා සමග.[සටහන: ගෙවිය යුතු නැත]'
   edx_beyond_longdescription: "CS50x එක  Harvard College හි   අදුන්වා දීමක් ,බුද්ධිමය ව්‍යවසායක්  පරිගණක  විද්‍යාවේ  සහ  ක්‍රමලේඛන  කලාව  ප්‍රධාන සහ ප්‍රදාන නොවෙන  අයුරින් ,ක්‍රමලේඛනය අත්දැකීමක් ඇති  හෝ නොමැති අයට abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development මාතෘකා යටතේ  කරුණු ඇතුලත් වේ.එයට C, PHP, and JavaScript plus SQL, CSS, and HTML බෂා ඇතුලත්වේ. CS50x වන on-campus අනුවාදය Harvard's second-largest course."
-  coursera_beyond_longdescription: ස්ටැන්ෆර්ඩ් ගේ CS 101 පන්තියේ නික් Parlante (නොමිලේ!) උගන්වා ඇත. CS101 ශූන්ය පෙර-අත්දැකීම් ප්රේක්ෂක සඳහා වන පරිගණක විද්යා අත්යවශ්ය අදහස් උගන්වනවා. Play හා පරිගණක බලය හා සීමාවන් ජීවිතය ගෙන ඒමට කේතය කෙටි බිටු අත්හදා බැලීම්. , පරිගණක කුමක්ද, දෘඩාංග කුමක්ද මෘදුකාංග දේ අන්තර්ජාලය මෙයයි CS101 අද පරිගණක මත පොදු පසුබිම සපයයි. මීට පෙර අත්දැකීම් වෙබ් බ්රව්සරය භාවිතා කිරීමේ හැකියාව හැර වෙනත් අවශ්ය වේ.
+  coursera_beyond_longdescription: 'ස්ටැන්ෆර්ඩ් ගේ CS 101 පන්තියේ නික් Parlante (නොමිලේ!) උගන්වා ඇත. CS101 ශූන්ය පෙර-අත්දැකීම් ප්රේක්ෂක සඳහා වන පරිගණක විද්යා අත්යවශ්ය අදහස් උගන්වනවා. Play හා පරිගණක බලය හා සීමාවන් ජීවිතය ගෙන ඒමට කේතය කෙටි බිටු අත්හදා බැලීම්. , පරිගණක කුමක්ද, දෘඩාංග කුමක්ද මෘදුකාංග දේ අන්තර්ජාලය මෙයයි CS101 අද පරිගණක මත පොදු පසුබිම සපයයි. මීට පෙර අත්දැකීම් වෙබ් බ්රව්සරය භාවිතා කිරීමේ හැකියාව හැර වෙනත් අවශ්ය වේ.'
   udacity_beyond_longdescription: "මෙම පාඨමාලාවේදී ඔබට   පරිගණක විද්‍යාවේ ප්‍රදාන සංකල්ප සහ ඔබගේම පරිගණක වැඩසටහනක් වෙබ් crawler ආධාරයෙන් නිර්මාණය කිරීමට ඉගෙන ගැනීමට  හැකි වෙනවා . මෙහිදී මුලික වැඩසටහන් දෙනුමක් අවශ්‍ය නැත. අරම්භාකයින්ට මෙයට සම්බන්ධ විය හැක! මෙම වැඩසටහන අවසානයේදී ඔබට Phython වැඩසටහන් ලිවීමට හැකිය. මෙම පාඨමාලාවෙන් පසුව අතරමැදි මට්ටමේ පරිගණක පාඨමාලාවට සම්බන්ධ විය හැක."
   teachingtree_beyond_longdescription: "TeachingTree කාටත් අධ්යාපන අන්තර්ගතයන් සංවිධානය ඉඩ දෙන විවෘත වේදිකාවකි. සිසුන් ඉක්මනින් තනි තනි සංකල්ප ඉගෙන ගැනීම සඳහා ඔවුන්ට අවශ්ය නිශ්චිත ක්ලිප් ප්රවේශ සඳහා අපගේ ඉලක්කය වේ. හැමෝම වීඩියෝ හෝ සලකුණු සංකල්ප එකතු කිරීමෙන් උදව් කිරීමට දිරිමත් කරනවා."
   kodu_beyond_longdescription: "කෝඩු මගින් දරුවන්ට එක්ස් බොක්ස් හෝ පරිගණකය මගින් පහසුවෙන් පරිගණක ක්‍රීඩා නිර්මාණය කර හැකියි. නිර්මාණශීලිත්වය, විචක්ශණශීලි බව හා ක්‍රමලේඛනය ඉගැන්වීමට කෝඩු භාවිත කල හැක. පෙර දැනුමක් නැති වැඩිහිටියෙකුට හෝ කුඩා දරුවෙකුට කෝඩු භාවිත කල හැක. පරිගණකය සඳහා කෝඩු නොමිලේම ලබා ගත හැක. එක්සත් ජනපදයේ එක්ස් බොක්ස් වෙලඳපොලෙන් මෙය එක්ස් බොක්ස් සඳහා මිලදී ගත හැක. මෙය ඩොලර් 5ක් පමණ වනු ඇත."

@@ -461,7 +461,7 @@
   homepage_slot_text_frozen: Frozen kasama sina Anna at Elsa
   homepage_slot_text_teacher: Dashboard ng Guro
   homepage_slot_text_studio: Ang lahat ng aming mga tutorial
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: Kursong 4
   homepage_slot_text_shop: Tindahan
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Isang Hour of Code para sa bawat estudyante.
@@ -1133,8 +1133,11 @@
   dashboard_coursed: 'Kursong D: '
   dashboard_coursee: 'Kursong E: '
   dashboard_coursef: 'Kursong F: '
+  dashboard_pre-express: 'Pre-reader na Pinabilis na Kurso: '
+  dashboard_express: 'Pinabilis na Kurso: '
   dashboard_unplugged: Kung wala kang mga kompyuter, <a href='%{unplugged_url}'>subukan
     ang mga unplugged na mga aralin</a> sa iyong silid-aralan.
+  dashboard_tools: 'Mga Kagamitan: '
   dashboard_curriculum: Kurikulum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Buod
@@ -1152,6 +1155,8 @@
   dashboard_curriculum_csins: 'Computer Science sa Agham:'
   dashboard_curriculum_csp: 'AP® na mga Prinsipyo ng Computer Science:'
   dashboard_curriculum_ecs: 'Pagtuklas sa Computer Science:'
+  dashboard_curriculum_csd: 'Mga Natuklasan sa Computer Science: '
+  dashboard_curriculum_apcsa: 'AP Computer Science sa Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Iba
   dashboard_login_word: Salita
@@ -1327,7 +1332,7 @@
   hourofcode_name: Klasiko na Maze
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
-  artist_name: Artist
+  artist_name: Artista
   monstercoding_name: Pag-program na Paghahanap sa Misteryosong Isla
   allcancode_name: Takbo Marco!
   csfirst_name: CS First
@@ -1336,9 +1341,9 @@
   texasinstruments_name: 10 Minuto ng Pag-code
   teacherled_name: Pinamumunuan ng Guro na mga Banghay-Aralin
   course1_name: Kurso 1
-  course2_name: Course 2
-  course3_name: Course 3
-  course4_name: Course 4
+  course2_name: Kursong 2
+  course3_name: Kursong 3
+  course4_name: Kursong 4
   coursea-draft_name: Kursong A
   coursea_name: Kursong A
   courseb-draft_name: Kursong B
@@ -1411,6 +1416,7 @@
   cspexams_category_name: Pag-ensayo na Pagsubok sa mga Prinsipyo ng CS
   research_studies_category_name: Research Studies
   applab_name: App na Lab
+  gamelab_name: Game Lab
   basketball_name: Gumawa ng isang basketbol na laro
   sports_name: Code your own sports game
   applab_gradelevel: Edad 13+
@@ -1470,15 +1476,15 @@
   teacherled_gradelevel: Mga edad 5+
   course1_gradelevel: Edad 4+ (bago pa nagbabasa)
   course2_gradelevel: Mga edad 6-18
-  course3_gradelevel: Ages 8-18
-  course4_gradelevel: Ages 10-18
+  course3_gradelevel: Mga edad na 8-18
+  course4_gradelevel: Mga edad na 10-18
   coursea_gradelevel: Baitang 5+
   courseb_gradelevel: Baitang 6+
   coursec_gradelevel: Baitang 7+
   coursed_gradelevel: Baitang 8+
   coursee_gradelevel: Baitang 9+
   coursef_gradelevel: Baitang 10+
-  accelerated_gradelevel: Ages 10-18
+  accelerated_gradelevel: Mga edad na 10-18
   codeorg_platformtext: Makabagong mga browser, smartphone, at mga tablet
   codeintl_platformtext: Makabagong mga browser, smartphone, at mga tablet
   thinkersmithspanish_platformtext: Unplugged
@@ -1588,12 +1594,13 @@
     Birds!
   frozen_shortdescription: Gamitin natin ang code para samahan sina Anna at Elsa sa
     kanilang pagtuklas sa mahika at kagandahan ng yelo.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
-  infinity_shortdescription: Use Play Lab to create a story or game starring Disney
-    Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  starwars_shortdescription: Matutong mag-program ng mga droids, at lumikha ng sarili
+    mong Star Wars na laro sa isang malayong malayo na kalawakan.
+  playlab_shortdescription: Lumikha ng kuwento o gumawa ng laro sa Play Lab!
+  infinity_shortdescription: Gamitin ang Play Lab para lumikha ng mga kuwento o laro
+    na pinagbibidahan ng mga karakter sa Disney Infinity.
+  artist_shortdescription: Gumuhit ng magagandang larawan at mga disenyo gamit ang
+    Artist!
   monsterocding_shortdescription: Isang makulay na pansariling gabay sa pagprogram
     na paglalakbay para sa mga bata.
   allcancode_shortdescription: Isang nakaka-engganyong laro para gabayan si Marco
@@ -1803,8 +1810,8 @@
     pagtuklas sa mahika at kagandahan ng yelo. Ikaw ay lilikha ng mga niyebe at mga
     paterno habang ikaw ay nag-iceskate at gumawa ng isang kahanga-hangang lugar sa
     taglamig na maaari mong ibahagi sa iyong mga kaibigan!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: Matutong mag-program ng mga droids, at lumikha ng sarili
+    mong Star Wars na laro sa isang malayong malayo na kalawakan.
   playlab_longdescription: Lumikha ng kwento o gumawa ng laro sa Play Lab! Gumawa
     ng mga hayop, mga pirata, mga zombie, mga ninja, at marami pang mga galaw ng mga
     karakter, gumawa ng mga tunog, kumuha ng puntos, at kahit ng maghagis ng bolang
@@ -2327,9 +2334,3 @@
     Account" na opsyon:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: Panimula ng App Lab
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

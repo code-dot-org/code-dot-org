@@ -25,7 +25,7 @@
   submit: "Pošalji"
   twentyhours_heading: "Isprobajte naš Uvod u Tečaj informatike"
   twentyhours_text: "Završio si svoj prvi Sat Kodiranja? Nauči više o Informatici i konceptima programiranja u narednom tečaju."
-  og_title: Svako dijete zaslužuje priliku
+  og_title: 'Svako dijete zaslužuje priliku'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Svaki učenik u svakoj školi zaslužuje priliku studirati informatiku. Ona mijenja sve."
@@ -761,7 +761,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Nastavni plan"
   dashboard_curriculum_overview: "Pregled kurikuluma razredne nastave"
   dashboard_overview: "Pregled"
@@ -777,8 +780,10 @@
   dashboard_teacher_worksheet: "učiteljski radni list"
   dashboard_curriculum_csina: 'Računarstvo u algebri:'
   dashboard_curriculum_csins: 'Računarstvo u znanosti:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "predškolski"
   dashboard_grade_other: "Ostalo"
   dashboard_login_word: "Riječ"
@@ -949,11 +954,11 @@
   accelerated_name: "Ubrzani tečaj"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1002,6 +1007,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratorij aplikacija"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"
