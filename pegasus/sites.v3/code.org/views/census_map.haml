@@ -102,9 +102,44 @@
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
-      event.infoWindowHtml = event.row['school_name'].value;
-      event.infoWindowHtml += ' (' + event.row['city'].value + ', ' + event.row['state_code'].value +')';
-      event.infoWindowHtml += '<br>';
+      let censusMessage;
+      switch(event.row['teaches_cs'].value) {
+        case 'YES':
+          censusMessage = "We believe this school offers Computer Science class(es).";
+          break;
+        case 'NO':
+          censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
+          break;
+        case 'MAYBE':
+          censusMessage = "We are unsure if this school offers Computer Science class(es).";
+          break;
+        default:
+          censusMessage = "We have no data about this school.";
+      }
+      event.infoWindowHtml  = '<div class="census-info-window">';
+      event.infoWindowHtml += '  <h4>';
+      event.infoWindowHtml += '    <b>';
+      event.infoWindowHtml +=        event.row['school_name'].value;
+      event.infoWindowHtml += '    </b>';
+      event.infoWindowHtml += '    <br>';
+      event.infoWindowHtml += '    (' + event.row['city'].value + ', ' + event.row['state_code'].value +')';
+      event.infoWindowHtml += '  </h4>';
+      event.infoWindowHtml += '  <hr>';
+      event.infoWindowHtml += '  <div class="census-message">' + censusMessage + '</div>';
+      event.infoWindowHtml += '  <div class="button-container">';
+      event.infoWindowHtml += '    <a href="?school_id=' + event.row['school_id'].value + '#form" >';
+      event.infoWindowHtml += '      <div class="button">';
+      event.infoWindowHtml += '        <div class="button-text">Take the survey for this school</div>';
+      event.infoWindowHtml += '      </div>';
+      event.infoWindowHtml += '    </a>';
+      event.infoWindowHtml += '    <a href="TODO: add this link once we have it">';
+      event.infoWindowHtml += '      <div class="button">';
+      event.infoWindowHtml += '        <div class="button-text">Send the survey to a teacher at this school</div>';
+      event.infoWindowHtml += '      </div>';
+      event.infoWindowHtml += '    </a>'
+      event.infoWindowHtml += '    <div style="clear: both;" />';
+      event.infoWindowHtml += '  </div>';
+      event.infoWindowHtml += '</div>';
     });
     google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
       enableDrag();
