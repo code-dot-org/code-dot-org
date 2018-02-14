@@ -5,6 +5,7 @@ import color from '../../util/color';
 import BaseDialog from '../../templates/BaseDialog';
 import Button from '../../templates/Button';
 import SchoolInfoInputs, {SCHOOL_TYPES_HAVING_NCES_SEARCH} from '../../templates/SchoolInfoInputs';
+import firehoseClient from '../util/firehose';
 
 const styles = {
   container: {
@@ -34,6 +35,17 @@ const styles = {
   error: {
     color: color.red,
   },
+};
+
+const FIREHOSE_EVENTS = {
+  // Interstitial is displayed to the teacher.
+  SHOW: 'show',
+  // Teacher clicked "Save"
+  SUBMIT: 'submit',
+  // School information saved successfully
+  SAVE_SUCCESS: 'save_success',
+  // School information failed to save
+  SAVE_FAILURE: 'save_failure',
 };
 
 export default class SchoolInfoInterstitial extends React.Component {
@@ -93,8 +105,56 @@ export default class SchoolInfoInterstitial extends React.Component {
     };
   }
 
+  logEvent(eventName, data = {}) {
+    firehoseClient.putRecord('analysis-events', {
+      study: 'school_info_interstitial',
+      study_group: 'control',
+      event: eventName,
+      data_json: JSON.stringify({
+        isComplete: SchoolInfoInterstitial.isSchoolInfoComplete(this.state),
+        ...data
+      }),
+    });
+  }
+
+  static isSchoolInfoComplete(state) {
+    if (!state.country) {
+      return false;
+    }
+
+    if (state.country !== 'United States') {
+      return true;
+    }
+
+    if (['homeschool', 'after school', 'organization', 'other'].includes(state.schoolType)) {
+      return true;
+    }
+
+    if (state.ncesSchoolId && state.ncesSchoolId !== '-1') {
+      return true;
+    }
+
+    return !!(
+      state.country
+      && state.schoolType
+      && state.schoolName
+      && (
+        (state.schoolState && state.schoolZip)
+        || state.schoolLocation
+      )
+    );
+  }
+
+  componentDidMount() {
+    this.logEvent(FIREHOSE_EVENTS.SHOW);
+  }
+
 
   handleSchoolInfoSubmit = () => {
+    this.logEvent(FIREHOSE_EVENTS.SUBMIT, {
+      attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+    });
+
     const isUS = this.state.country === 'United States';
     let schoolData;
     if (this.state.schoolType === '') {
@@ -132,8 +192,16 @@ export default class SchoolInfoInterstitial extends React.Component {
         ...schoolData,
       },
     }).done(() => {
+      this.logEvent(FIREHOSE_EVENTS.SAVE_SUCCESS, {
+        attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+      });
+
       this.props.onClose();
     }).fail(() => {
+      this.logEvent(FIREHOSE_EVENTS.SAVE_FAILURE, {
+        attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+      });
+
       if (!this.state.showSchoolInfoUnknownError) {
         // First failure, display error message and give the teacher a chance
         // to try again.
