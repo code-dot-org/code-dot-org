@@ -7,6 +7,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 describe('SchoolInfoInterstitial', () => {
   const MINIMUM_PROPS = {
@@ -18,6 +19,9 @@ describe('SchoolInfoInterstitial', () => {
     },
     onClose: function () {},
   };
+
+  beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));
+  afterEach(() => firehoseClient.putRecord.restore());
 
   it('renders an uncloseable dialog with school info inputs and a save button', () => {
     const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS}/>);
@@ -618,6 +622,156 @@ describe('SchoolInfoInterstitial', () => {
       wrapper.find(Button).simulate('click');
       server.requests[1].respond(404, {}, '');
       expect(onClose).to.have.been.calledOnce;
+    });
+  });
+
+  // Mirrors a set of tests in
+  // dashboard/test/models/school_info_test.rb
+  describe('isSchoolInfoComplete', () => {
+    it('is complete if all school info is provided', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'public',
+        schoolName: 'Test School',
+        schoolState: 'Washington',
+        schoolZip: '98102',
+        schoolLocation: '',
+        ncesSchoolId: '-1',
+      })).to.be.true;
+    });
+
+    it('is complete if school info is provided and we get location via full_address', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'public',
+        schoolName: 'Test School',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: 'Seattle, WA, USA',
+        ncesSchoolId: '-1',
+      })).to.be.true;
+    });
+
+    it('is complete if school is found by NCIS id', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'public',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '12345',
+      })).to.be.true;
+    });
+
+    it('is complete if school type is homeschool/after school/organization/other', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'homeschool',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.true;
+
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'after school',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.true;
+
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'organization',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.true;
+
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'other',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.true;
+    });
+
+    it('is complete if country is not US', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'Canada',
+        schoolType: '',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.true;
+    });
+
+    it('is not complete without country', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: '',
+        schoolType: '',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.false;
+    });
+
+    it('is not complete if country is US but no school type is set', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: '',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.false;
+    });
+
+    it('is not complete if country is US and school type is public/private/charter but other information is missing', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'public',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.false;
+
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'private',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.false;
+
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'charter',
+        schoolName: '',
+        schoolState: '',
+        schoolZip: '',
+        schoolLocation: '',
+        ncesSchoolId: '',
+      })).to.be.false;
     });
   });
 });
