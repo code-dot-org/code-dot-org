@@ -177,6 +177,7 @@ export default class CohortViewTable extends React.Component {
 
     return (
       <Table.Provider
+        id="cohort-view"
         className="pure-table table-striped"
         columns={this.columns}
         style={styles.table}
