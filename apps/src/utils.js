@@ -362,16 +362,6 @@ export function showUnusedBlockQtip(targetElement) {
 }
 
 /**
- * Converts degrees into radians.
- *
- * @param {number} degrees - The degrees to convert to radians
- * @return {number} `degrees` converted to radians
- */
-export function degreesToRadians(degrees) {
-    return degrees * (Math.PI / 180);
-}
-
-/**
  * @param {string} key
  * @param {string} defaultValue
  * @return {string}
