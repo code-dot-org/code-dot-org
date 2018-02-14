@@ -2,10 +2,10 @@
 require_relative '../config/environment'
 require 'csv'
 
-COL_NAME = 'PLP Name'
-COL_EMAIL = 'PM Email'
-COL_USER_ID = 'Code Studio ID'
-COL_URBAN = 'Urban'
+COL_NAME = 'PLP Name'.freeze
+COL_EMAIL = 'PM Email'.freeze
+COL_USER_ID = 'Code Studio ID'.freeze
+COL_URBAN = 'Urban'.freeze
 
 regional_partner_csv = ARGV[0]
 unless regional_partner_csv

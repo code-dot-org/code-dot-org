@@ -672,7 +672,7 @@ FactoryGirl.define do
     cs_offered_at_school ['AP CS A']
     cs_opportunities_at_school ['Courses for credit']
     plan_to_teach 'Yes, I plan to teach this course'
-    able_to_attend_single 'Yes'
+    able_to_attend_single "Yes, I'm able to attend"
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
     agree 'Yes'

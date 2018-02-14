@@ -43,7 +43,7 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
         'Public transit (e.g., city bus or light rail)',
       ],
       needHotel: YES_OR_NO,
-      needAda: [YES, NO, "Other (please explain):"],
+      needAda: YES_OR_NO,
       photoRelease: [YES],
       liabilityWaiver: [YES],
     }.freeze
