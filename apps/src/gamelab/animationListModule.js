@@ -14,7 +14,7 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
-import {projectChanged} from '../code-studio/initApp/project';
+import {projectChanged, isOwner} from '../code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session
@@ -567,19 +567,35 @@ function loadAnimationFromSource(key, callback) {
         // Brute-force recovery step: Remove the animation from our redux state;
         // it looks like it's already gone from the server.
 
-        // Log data about when this scenario occurs
-        firehoseClient.putRecord(
-         'analysis-events',
-            {
-              study: 'animation_no_load',
-              study_group: 'animation_no_load_with_buttons',
-              event: 'animation_not_loaded',
-              data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
-                'animationName': state.propsByKey[key].name, 'error': err.message})
-            }
-        );
+        if (isOwner()) {
+          // Log data about when this scenario occurs for projects you own
+          firehoseClient.putRecord(
+           'analysis-events',
+              {
+                study: 'animation_no_load',
+                study_group: 'animation_no_load_v2',
+                event: 'animation_not_loaded_owner',
+                data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
+                  'animationName': state.propsByKey[key].name, 'error': err.message})
+              }
+          );
 
-        dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
+          // Display error dialog
+          dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
+        } else {
+          // Log data about when this scenario occurs for project you don't own
+          firehoseClient.putRecord(
+           'analysis-events',
+              {
+                study: 'animation_no_load',
+                study_group: 'animation_no_load_v2',
+                event: 'animation_not_loaded_viewer',
+                data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
+                  'animationName': state.propsByKey[key].name, 'error': err.message})
+              }
+          );
+        }
+
         return;
       }
 
