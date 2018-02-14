@@ -219,7 +219,8 @@ module Teacher1819ApplicationConstants
     not_teaching_this_year: "I'm not teaching this year (Please Explain):".freeze,
     not_teaching_next_year: "I'm not teaching next year (Please Explain):".freeze,
     dont_know_if_i_will_teach_explain: "I don't know if I will teach this course (Please Explain):".freeze,
-    unable_to_attend: "No, I'm unable to attend (please explain):".freeze,
+    unable_to_attend: "No, I'm unable to attend (Please Explain):".freeze,
+    able_to_attend_single: "Yes, I'm able to attend".freeze,
     no_explain: "No (Please Explain):".freeze,
     no_pay_fee: "No, my school or I will not be able to pay the summer workshop program fee.".freeze
   }.freeze
