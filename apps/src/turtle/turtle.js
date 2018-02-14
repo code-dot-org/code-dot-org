@@ -1566,7 +1566,7 @@ Artist.prototype.step = function (command, values, options) {
       // direction as the turtle.
       this.visualization.ctxScratch.save();
       this.visualization.ctxScratch.translate(this.visualization.x, this.visualization.y);
-      this.visualization.ctxScratch.rotate(this.degreesToRadians_(this.visualization.heading));
+      this.visualization.ctxScratch.rotate(this.visualization.degreesToRadians_(this.visualization.heading));
       this.visualization.ctxScratch.drawImage(img, -width / 2, -height, width, height);
       this.visualization.ctxScratch.restore();
 
