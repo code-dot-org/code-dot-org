@@ -691,6 +691,42 @@ module Pd::Application
       assert_nil application.get_first_selected_workshop
     end
 
+    test 'get_first_selected_workshop returns nil for teachercon even with local workshops' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build :pd_teacher1819_application_hash, teachercon: TC_PHOENIX, regional_partner_workshop_ids: [workshop.id]
+      )
+
+      assert_nil application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop ignores single deleted workshops' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build :pd_teacher1819_application_hash, regional_partner_workshop_ids: [workshop.id]
+      )
+
+      workshop.destroy
+      assert_nil application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
+      workshops = (1..2).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: workshops.map(&:id),
+          able_to_attend_multiple: []
+        )
+      )
+
+      workshops[0].destroy
+      assert_equal workshops[1], application.get_first_selected_workshop
+
+      workshops[1].destroy
+      assert_nil application.get_first_selected_workshop
+    end
+
     test 'assign_default_workshop! saves the default workshop' do
       application = create :pd_teacher1819_application
       workshop = create :pd_workshop
