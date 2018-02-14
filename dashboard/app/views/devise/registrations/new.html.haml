@@ -117,11 +117,7 @@
     .span4
       .devise_links
         = render "devise/shared/links"
-
-    %div{style: "clear:both"}
-    %br/
-    %br/
-    %br/
+        = render "devise/shared/policylogos"
 
 %script{src: minifiable_asset_path('js/signup.js')}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}

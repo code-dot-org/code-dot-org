@@ -1729,19 +1729,20 @@ a.download-video {
 }
 
 .policy_logos {
-  .studentprivacypledge {
-    float: left;
-    margin-right: 20px;
+  padding-top: 70px;
 
+  .studentprivacypledge {
     .studentprivacypledgeimage {
-      width: 110px;
+      width: 200px;
+      padding-left: 40px;
+      padding-bottom: 20px;
     }
   }
 
   .commonsense {
     .commonsenseimage {
-      width: 115px;
-      margin-top: 3px;
+      width: 200px;
+      padding-left: 40px;
     }
   }
 }
