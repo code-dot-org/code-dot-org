@@ -3,7 +3,7 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import StageProgress from './StageProgress';
 import stageLock from '../../stageLockRedux';
-import progress, { initProgress, setStageExtrasEnabled } from '../../progressRedux';
+import progress, { initProgress, setStageExtrasEnabled, setStageTrophyEnabled } from '../../progressRedux';
 
 const activityPuzzle = {
   ids: [
@@ -90,7 +90,7 @@ const unplugged = {
 };
 
 export default storybook => {
-  const createStoreForLevels = (levels, currentLevelIndex, showStageExtras, onStageExtras) => {
+  const createStoreForLevels = (levels, currentLevelIndex, showStageExtras, onStageExtras, showStageTrophy) => {
     const store = createStore(combineReducers({progress, stageLock}));
     store.dispatch(initProgress({
       currentLevelId: onStageExtras ?
@@ -105,6 +105,7 @@ export default storybook => {
       }]
     }));
     store.dispatch(setStageExtrasEnabled(showStageExtras));
+    store.dispatch(setStageTrophyEnabled(showStageTrophy));
     return store;
   };
 
@@ -199,6 +200,25 @@ export default storybook => {
             activityPuzzle,
             conceptPuzzle,
           ], 1, true /* showStageExtras */, true /* onStageExtras */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage trophy',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            activityPuzzle,
+            conceptPuzzle,
+          ], 1, false /* showStageExtras */, false /* onStageExtras */, true /* showStageTrophy */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>

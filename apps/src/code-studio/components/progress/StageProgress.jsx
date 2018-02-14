@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import color from "../../../util/color";
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
+import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
 import { levelsForLessonId, stageExtrasUrl } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import { levelType } from '@cdo/apps/templates/progress/progressTypes';
@@ -38,10 +39,11 @@ const StageProgress = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
     stageExtrasUrl: PropTypes.string,
     onStageExtras: PropTypes.bool,
+    stageTrophyEnabled: PropTypes.bool,
   },
 
   render() {
-    const { levels, stageExtrasUrl, onStageExtras } = this.props;
+    const { levels, stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
 
     return (
       <div className="react_stage" style={styles.headerContainer}>
@@ -65,6 +67,9 @@ const StageProgress = React.createClass({
             onStageExtras={onStageExtras}
           />
         }
+        {stageTrophyEnabled &&
+          <StageTrophyProgressBubble/>
+        }
       </div>
     );
   }
@@ -75,5 +80,6 @@ export const UnconnectedStageProgress = StageProgress;
 export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
   stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
-  onStageExtras: state.progress.currentLevelId === 'stage_extras'
+  onStageExtras: state.progress.currentLevelId === 'stage_extras',
+  stageTrophyEnabled: state.progress.stageTrophyEnabled,
 }))(StageProgress);
