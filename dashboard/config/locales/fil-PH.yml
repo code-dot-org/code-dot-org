@@ -214,6 +214,7 @@
       email: Email address
       submit: Ipasa
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Parang nagsign-up ka gamit ang email address na hindi balido.
         Paki-email sa support@code.org para makatanggap ng password na recovery link.
     change_form:
@@ -821,7 +822,8 @@
       title: Star Wars
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan
+        ng mga karakter sa Disney Infinity.
     minecraft:
       title: Minecraft
       body: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code.

@@ -206,6 +206,7 @@
       email: "Адрес электронной почты"
       submit: "Отправить"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "Похоже, Вы зарегистрировались с неверным адрес электронной почты.
         Пожалуйста, напишите об этом в support@code.org, и Вы получите ссылку на восстановление
         пароля."

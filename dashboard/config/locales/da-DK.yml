@@ -203,6 +203,7 @@
       email: Email adresse
       submit: Indsend
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Det ser ud, som du har tilmeldt en ugyldig e-mail-adresse. Send
         en email til email support@code.org for at modtage et link til at få adgang.
     change_form:

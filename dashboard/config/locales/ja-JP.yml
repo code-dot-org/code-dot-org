@@ -183,6 +183,7 @@
       email: Eメールアドレス
       submit: "送信"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "無効なメール アドレスでサインアップしたようです。support@code.org にメールして、パスワードの回復リンクを受信してください。"
     change_form:
       title: "パスワードを変更"
