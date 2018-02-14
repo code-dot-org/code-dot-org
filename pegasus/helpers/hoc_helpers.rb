@@ -2,7 +2,7 @@ require 'rmagick'
 require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
 
-UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
+UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'.freeze
 
 # Creates a session row and sets the hour of code cookie to the session_id,
 # if the user is assigned to the sample set (as decided by a random choice
