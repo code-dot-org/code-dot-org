@@ -54,6 +54,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
+      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
       course_name: PropTypes.string,
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
@@ -76,7 +77,6 @@ export class DetailViewContents extends React.Component {
       application_guid: PropTypes.string
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
-    course: PropTypes.oneOf(['csf', 'csd', 'csp']),
     onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool
   };
@@ -324,14 +324,14 @@ export class DetailViewContents extends React.Component {
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
           </h4>
-          {this.props.course === 'csp' &&
+          {this.props.applicationData.course === 'csp' &&
             <h4>
               <a target="_blank" href="https://docs.google.com/document/d/1ounHnw4fdihHiMwcNNjtQeK4avHz8Inw7W121PbDQRw/edit#heading=h.p1d568zb27s0">
                 View CS Principles Rubric
               </a>
             </h4>
           }
-          {this.props.course === 'csd' &&
+          {this.props.applicationData.course === 'csd' &&
             <h4>
               <a target="_blank" href="https://docs.google.com/document/d/1Sjzd_6zjHyXLgzIUgHVp-AeRK2y3hZ1PUjg8lTtWsHs/edit#heading=h.fqiranmp717e">
                 View CS Discoveries Rubric
