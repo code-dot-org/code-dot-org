@@ -42,7 +42,7 @@ If you have questions, be sure to check out our <a href="https://docs.google.com
 
 Our CS Discoveries Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started! 
 
-The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](educate/professional-learning/values). Print a [flyer](/files/PLProgramsOverview_1-Pager.pdf) to share with teachers or administrators at your school.
+The program kicks off with 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Discoveries curriculum](/educate/csd). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). Print a [flyer](/files/PLProgramsOverview_1-Pager.pdf) to share with teachers or administrators at your school.
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},

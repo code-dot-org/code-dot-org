@@ -32,10 +32,10 @@ module.exports = class CustomMarshaler {
    * When marshaling methods on "custom marshal" objects, we may need to augment
    * the marshaling options. This returns those options.
    */
-  getCustomMarshalMethodOptions(nativeParentObj) {
+  getCustomMarshalMethodOptions(nativeParentObj, _, nativeVar) {
     for (var i = 0; i < this.objectList.length; i++) {
       var marshalObj = this.objectList[i];
-      if (nativeParentObj instanceof marshalObj.instance) {
+      if (nativeParentObj instanceof marshalObj.instance || nativeVar === marshalObj.instance) {
         if (typeof marshalObj.requiredMethod === 'undefined' ||
             nativeParentObj[marshalObj.requiredMethod] !== undefined) {
           return marshalObj.methodOpts || {};
