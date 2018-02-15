@@ -11,44 +11,43 @@ describe('Artist', () => {
     var joints, segments, artist;
     beforeEach(() => {
       artist = new Artist();
-      artist.visualization = new Artist.Visualization();
       joints = 0;
       segments = [];
-      artist.visualization.drawJointAtTurtle_ = () => { joints += 1; };
-      artist.visualization.drawForwardLine_ = (dist) => { segments.push(dist); };
+      artist.drawJointAtTurtle_ = () => { joints += 1; };
+      artist.drawForwardLine_ = (dist) => { segments.push(dist); };
     });
     it('draws 2 joints on a short segment', () => {
-      artist.visualization.drawForwardWithJoints_(50, false);
+      artist.drawForwardWithJoints_(50, false);
 
       expect(joints).to.equal(2);
       expect(segments).to.eql([50]);
     });
     it('draws 3 joints on a long segment', () => {
-      artist.visualization.drawForwardWithJoints_(100, false);
+      artist.drawForwardWithJoints_(100, false);
 
       expect(joints).to.equal(3);
       expect(segments).to.eql([50, 50]);
     });
     it('draws no joints on a very short segment', () => {
-      artist.visualization.drawForwardWithJoints_(10, false);
+      artist.drawForwardWithJoints_(10, false);
 
       expect(joints).to.equal(0);
       expect(segments).to.eql([10]);
     });
     it('draws 2 joints on a short diagonal segment', () => {
-      artist.visualization.drawForwardWithJoints_(SHORT_DIAGONAL, true);
+      artist.drawForwardWithJoints_(SHORT_DIAGONAL, true);
 
       expect(joints).to.equal(2);
       expect(segments).to.eql([SHORT_DIAGONAL]);
     });
     it('draws 4 joints on a very long diagonal segment', () => {
-      artist.visualization.drawForwardWithJoints_(VERY_LONG_DIAGONAL, true);
+      artist.drawForwardWithJoints_(VERY_LONG_DIAGONAL, true);
 
       expect(joints).to.equal(4);
       expect(segments).to.eql([SHORT_DIAGONAL, SHORT_DIAGONAL, SHORT_DIAGONAL]);
     });
     it('draws no joints on a very short diagonal segment', () => {
-      artist.visualization.drawForwardWithJoints_(SHORT_DIAGONAL - 1, true);
+      artist.drawForwardWithJoints_(SHORT_DIAGONAL - 1, true);
 
       expect(joints).to.equal(0);
       expect(segments).to.eql([SHORT_DIAGONAL - 1]);
@@ -59,7 +58,6 @@ describe('Artist', () => {
     let artist;
     beforeEach(() => {
       artist = new Artist();
-      artist.visualization = new Artist.Visualization();
     });
 
     it('can jump to coordinates', () => {
@@ -67,9 +65,9 @@ describe('Artist', () => {
 
       coords.forEach(x => {
         coords.forEach(y => {
-          artist.step('JT', [[x, y]]);
-          expect(artist.visualization.x).to.equal(x);
-          expect(artist.visualization.y).to.equal(y);
+          artist.jumpTo_([x, y]);
+          expect(artist.x).to.equal(x);
+          expect(artist.y).to.equal(y);
         });
       });
     });
@@ -89,9 +87,9 @@ describe('Artist', () => {
 
       Object.keys(expectations).forEach(position => {
         const [x, y] = expectations[position];
-        artist.step('JT', [constants.Position[position]]);
-        expect(artist.visualization.x).to.equal(x);
-        expect(artist.visualization.y).to.equal(y);
+        artist.jumpTo_(constants.Position[position]);
+        expect(artist.x).to.equal(x);
+        expect(artist.y).to.equal(y);
       });
     });
   });
