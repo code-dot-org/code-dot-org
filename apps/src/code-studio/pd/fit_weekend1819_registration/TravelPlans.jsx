@@ -17,6 +17,7 @@ export default class TravelPlans extends LabeledFormComponent {
     contactRelationship: "Relationship to you:",
     contactPhone: "Phone number:",
     dietaryNeeds: "Do you have any dietary needs or food allergies?",
+    dietaryNeedsDetails: "Please provide details",
     addressStreet: "Street",
     addressCity: "City",
     addressState: "State",
@@ -62,6 +63,10 @@ export default class TravelPlans extends LabeledFormComponent {
       );
     }
 
+    if (data.dietaryNeeds && data.dietaryNeeds.includes('Food Allergy')) {
+      requiredFields.push('foodAllergyDetails');
+    }
+
     if (data.needHotel === 'Yes') {
       requiredFields.push("needAda");
 
@@ -90,9 +95,12 @@ export default class TravelPlans extends LabeledFormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.checkBoxesWithAdditionalTextFieldsFor("dietaryNeeds", {
-            "Food Allergy (please list):": "food_allergy_details"
-          })}
+          {this.checkBoxesFor("dietaryNeeds")}
+          {
+            this.props.data.dietaryNeeds &&
+            this.props.data.dietaryNeeds.includes('Food Allergy') &&
+            this.largeInputFor("dietaryNeedsDetails")
+          }
         </FormGroup>
 
         <FormGroup>
@@ -146,6 +154,10 @@ export default class TravelPlans extends LabeledFormComponent {
     }
     if (changes.needAda !== 'Yes') {
       changes.explainAda = undefined;
+    }
+
+    if (data.dietaryNeeds && !data.dietaryNeeds.includes('Food Allergy')) {
+      changes.dietaryNeedsDetails = undefined;
     }
 
     return changes;
