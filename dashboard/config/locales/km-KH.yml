@@ -202,6 +202,7 @@
       email: "អាសយដ្ឋាន​អ៊ីមែល"
       submit: "ដាក់ស្នើរ"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "មើលទៅអ្នកប្រហែលជាបានចូលទៅកាន់គណនីជាមួយនឹងអស័យដ្ឋានអ៊ីម៉េលដែលមិនត្រឹមត្រូវ។​
         សូមមេត្តាផ្ញើរអ៊ីម៉ែលទៅកាន់ support@code.org​ ដើម្បីទទួលនូវតំណរភ្ជាប់យកលេខសំងាត់មកវិញ។"
     change_form:

@@ -21,7 +21,7 @@ module RequireBacktrace
   # Re-implement `require_relative` using `require` so it uses the same require filter,
   # and so the expanded path can be matched against.
   def require_relative(*args)
-    require(File.expand_path(['..'].concat(args).join('/'), caller[0].split(':').first))
+    require(File.expand_path(['..'].concat(args).join('/'), caller(1..1).first.split(':').first))
   end
 end
 include RequireBacktrace
