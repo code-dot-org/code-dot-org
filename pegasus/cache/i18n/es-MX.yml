@@ -1068,8 +1068,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Si no tiene computadoras, <a href='%{unplugged_url}'> intente
     estas lecciones desenchufados</a> en su salón del clase.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
   dashboard_overview: Resumen
@@ -1087,6 +1090,8 @@
   dashboard_curriculum_csins: 'Informática en Ciencia:'
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Kah
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -1343,6 +1348,7 @@
   cspexams_category_name: Prueba de práctica de principios de CS
   research_studies_category_name: Research Studies
   applab_name: Laboratorio de App
+  gamelab_name: Game Lab
   basketball_name: Crear un juego de baloncesto
   sports_name: Crea tu propio Juego de deportes
   applab_gradelevel: Mayores de 13 años
@@ -2090,7 +2096,7 @@
   header_home: Inicio
   header_my_dashboard: My Dashboard
   header_courses: cursos
-  header_course_catalog: Course Catalog
+  header_course_catalog: Catálogo de cursos
   header_project_gallery: Proyectos
   header_sections: Secciones
   header_professional_learning: Aprendizaje Profesional
@@ -2122,8 +2128,8 @@
   header_teacher_community: Comunidad de profesores
   header_help_support: 'Ayuda y soporte técnico '
   header_report_bug: Reportar un error
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_tutorials: Tutoriales
+  header_documentation: Documentación
   csp_name: "'16-'17 Principios de CS"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
@@ -2186,9 +2192,3 @@
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
