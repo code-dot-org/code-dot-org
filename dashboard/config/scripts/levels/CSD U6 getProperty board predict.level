@@ -96,9 +96,6 @@
     "contained_level_names": [
       "CSD U6 board getters"
     ],
-    "encrypted_examples": [
-
-    ],
     "top_level_procedure_autopopulate": "false"
   },
   "published": true,
