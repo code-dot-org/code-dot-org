@@ -295,6 +295,12 @@ class GoogleSchoolLocationSearchField extends React.Component {
   }
 
   componentDidMount() {
+    // Gracefully skip initialization for the search control if the needed
+    // library isn't available (as in storybook or unit tests).
+    if (typeof google !== 'object') {
+      return;
+    }
+
     // Docs: https://developers.google.com/maps/documentation/javascript/places-autocomplete#places_searchbox
     const searchBox = new google.maps.places.SearchBox(this.searchBoxRef);
     if (this.props.isControlledInput) {
