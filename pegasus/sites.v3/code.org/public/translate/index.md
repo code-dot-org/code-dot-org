@@ -21,8 +21,8 @@ By translating Code.org content to other languages, you are directly impacting s
   * [Sports and Basketball](/translate/sports)
   * [All Code Studio courses](/translate/tutorials)
 1. Translate our video captions.
-  * [Computer Science is Changing Everything](https://www.amara.org/en/videos/atEXdPApYAO8/info/computer-science-is-changing-everything/)
-  * [The Hour of Code Worldwide (2016)](https://www.amara.org/en/videos/mbBjcLLwypIT/info/hour-of-code-worldwide/)
+  * [Computer Science is Changing Everything](https://amara.org/en/videos/atEXdPApYAO8/info/computer-science-is-changing-everything/)
+  * [The Hour of Code Worldwide (2016)](https://amara.org/en/videos/mbBjcLLwypIT/info/hour-of-code-worldwide/)
   * [Computer Science Principles videos](/videos/#cspvideos)
   * [All videos](/translate/videos)
 1. Or start by choosing your language below:
