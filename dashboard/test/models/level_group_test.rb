@@ -218,7 +218,7 @@ MARKDOWN
     # loads user's attempt if user provided
     assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, script)
     # does not load attempt for a different script
-    assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, create(:script))
+    assert_nil LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, create(:script))
     # returns undefined when signed out
     assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
