@@ -49,6 +49,13 @@ GIT
       activemodel (>= 4.0)
 
 GIT
+  remote: https://github.com/wjordan/gctools.git
+  revision: a318fede5cb519133a4d6bfa566b800c71c2e42c
+  ref: ruby-2.5
+  specs:
+    gctools (0.2.4)
+
+GIT
   remote: https://github.com/wjordan/geocoder.git
   revision: 2da20897188b57f777df89f90e45cf331c5b014f
   ref: rack-request-fix
@@ -329,7 +336,6 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     fspath (3.1.0)
-    gctools (0.2.4)
     gemoji (2.1.0)
     gherkin (4.0.0)
     globalid (0.4.1)
@@ -801,7 +807,7 @@ DEPENDENCIES
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
   full-name-splitter!
-  gctools
+  gctools!
   gemoji
   geocoder!
   google-api-client
