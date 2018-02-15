@@ -1074,8 +1074,11 @@
   dashboard_coursed: 'Cúrsa D: '
   dashboard_coursee: 'Cúrsa E: '
   dashboard_coursef: 'Cúrsa F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na
     ceachtanna "díphlugáilte" seo</a> i do sheomra ranga.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Curaclam
   dashboard_curriculum_overview: Foramharc ar an gCuraclam Bunscoile
   dashboard_overview: Foramharc
@@ -1093,6 +1096,8 @@
   dashboard_curriculum_csins: 'An Ríomheolaíocht san Eolaíocht:'
   dashboard_curriculum_csp: 'Foras Feasa ar an Ríomheolaíocht AP®:'
   dashboard_curriculum_ecs: 'Taiscéalaíocht na Ríomheolaíochta:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Naíscoil
   dashboard_grade_other: Eile
   dashboard_login_word: Focal
@@ -1348,6 +1353,7 @@
   cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
   research_studies_category_name: Research Studies
   applab_name: Saotharlann Aipeanna
+  gamelab_name: An tSaotharlann Cluichíochta
   basketball_name: Déan do chluiche cispheile féin
   sports_name: Códáil do chluiche spóirt féin
   applab_gradelevel: Aois 13+
@@ -2206,9 +2212,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
