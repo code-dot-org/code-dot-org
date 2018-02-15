@@ -59,7 +59,7 @@ ga:
   courses: 'Cúrsaí'
   courses_page:
     title_student: "Foghlaim sa Stiúideo Códála"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Gníomhaíocht Dhíphlugáilte'
   of: "as"
   more: "NÍOS MÓ"
@@ -69,7 +69,7 @@ ga:
   try_k8intro: "Bain triail as ár gCúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna (15-25 uair an chloig)"
   k8intro: "Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna (15-25 uair an chloig)"
   already_started: "Ar thosaigh tú cheana? Lean ar aghaidh anseo >> "
-  demos: 'Riarthóir: Gach Taispeántas'
+  demos: "Riarthóir: Gach Taispeántas"
   continue: 'Ar aghaidh'
   prize: 'duais'
   more_info: 'Tuilleadh eolais'
@@ -171,6 +171,7 @@ ga:
       email: 'Seoladh ríomhphoist'
       submit: 'Seol'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Dealraíonn sé gur chláraigh tú le seoladh ríomhphoist neamhbhailí. Cuir ríomhphost chugainn ag support@code.org agus seolfaimid nasc chugat lenar féidir d''fhocal faire a athshocrú.'
     change_form:
       title: 'Athraigh d''fhocal faire'
@@ -220,7 +221,7 @@ ga:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
+        subject: "Fógra ó Code.org: D'fhág %{student_name} do rang."
   reports:
     error:
       access_denied: "Níl cead agat staitisticí a bhaineann leis an duine seo a fheiceáil"
@@ -352,7 +353,7 @@ ga:
     current_password_hint: '(ní mór duit an focal faire atá agat faoi láthair a chur isteach leis an athrú a dheimhniú)'
     delete: 'Scrios do chuntas'
     delete_text: "Cliceáil an cnaipe thíos chun do chuntas a scriosadh."
-    delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais do chuid daltaí.'
+    delete_text_teacher_note: "Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais do chuid daltaí."
     delete_confirm: 'An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?'
     deleted_user: 'úsáideoir scriosta'
     no_password_because_oauth: 'Ní gá focal faire a roghnú. Logálfaidh tú isteach trí sholáthraí tríú páirtí.'
@@ -363,7 +364,7 @@ ga:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'Más mian leat Code.org a úsáid fiú tar éis dheireadh na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.'
     create_personal_login_terms: "Má chruthaíonn tú cuntas pearsanta, glacann tú le <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>. Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -702,7 +703,7 @@ ga:
     sign_out: 'Mura bhfuil tú sásta d''aois a nocht, fáilte romhat <a href="%{url}">logáil amach</a> anois.'
   terms_interstitial:
     title: "Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua"
-    intro_desc: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa 2016. An t-athrú is mó: <i>ní stórálfaimid seoltaí ríomhphoist mar chuid de chuntais dalta sa Stiúideo Códála.</i> Is mór an rud é seo, agus tá súil againn go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist.'
+    intro_desc: "Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa 2016. An t-athrú is mó: <i>ní stórálfaimid seoltaí ríomhphoist mar chuid de chuntais dalta sa Stiúideo Códála.</i> Is mór an rud é seo, agus tá súil againn go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist."
     intro_instructions: "Caithfidh tú glacadh leis na téarmaí nua a bhaineann le daltaí i do sheomra ranga atá níos óige ná 13 bliana d'aois chun teacht ar na gnéithe nua sa Stiúideo Códála. Nuair a chláróidh tú cuntas le haghaidh dalta atá níos óige ná 13, iarrfar ort deimhniú gur thug tuismitheoir cead do do scoil faisnéis phearsanta a bhailiú ón dalta ar mhaithe leis an scoil, cláracha oideachasúla cosúil leis an Stiúideo Códála san áireamh."
     tos: "Téarmaí Seirbhíse"
     privacy: "Polasaí Príobháideachais"
@@ -718,7 +719,7 @@ ga:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Sábháil"
   race_interstitial:
-    title: 'Roghnach: Cabhraigh linn dul chun cinn i dtreo na hilchineálachta sa ríomheolaíocht a rianú'
+    title: "Roghnach: Cabhraigh linn dul chun cinn i dtreo na hilchineálachta sa ríomheolaíocht a rianú"
     message: "Cad é do chine (cuir tic le gach a mbaineann leatsa)"
     races:
       - 
@@ -762,7 +763,7 @@ ga:
     delete: "Scrios"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Fill ar an gCúrsa"

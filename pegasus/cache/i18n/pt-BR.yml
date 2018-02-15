@@ -1089,8 +1089,11 @@
   dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Se não tiver computadores, <a href='%{unplugged_url}'>use essas
     aulas off-line</a> na sua sala de aula.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Currículo
   dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
   dashboard_overview: Visão geral
@@ -1108,6 +1111,8 @@
   dashboard_curriculum_csins: 'Ciência da computação na ciência:'
   dashboard_curriculum_csp: 'AP® Princípios da ciência da computação:'
   dashboard_curriculum_ecs: 'Explorando a Ciência da Computação:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Nível
   dashboard_grade_other: Outros
   dashboard_login_word: Palavra
@@ -1363,6 +1368,7 @@
   cspexams_category_name: Teste prático dos princípios da CC
   research_studies_category_name: Research Studies
   applab_name: Laboratório de Aplicativo
+  gamelab_name: Game Lab
   basketball_name: Fazer um jogo de basquete
   sports_name: Esportes
   applab_gradelevel: A partir de 13 anos
@@ -2214,9 +2220,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

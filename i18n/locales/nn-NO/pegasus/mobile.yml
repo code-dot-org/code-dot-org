@@ -260,12 +260,12 @@
   studiobar_donate_body: "Eit barn lærer for kvar krone du donerer"
   studiobar_shop_title: "Nettbutikk"
   studiobar_shop_body: "Knus stereotypane. Vær stolt av å bruke logoen vår."
-  homepage_stats_students: "of US students have accounts on Code.org"
-  homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
-  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
-  homepage_stats_policy: "states changed policy to support computer science"
-  homepage_stats_title: "We're making a difference"
+  homepage_stats_students: "av Amerikanske elever har konto på Code.org"
+  homepage_stats_female: "av våre elever er jenter"
+  homepage_stats_teachers: "lærere bruker Code.org"
+  homepage_stats_hourofcodde: "av verdens elever som har prøvd kodetimen"
+  homepage_stats_policy: "stater forandret regler for å støtte dataforskning"
+  homepage_stats_title: "Vi utgjør en forskjell"
   homepage_hero_text_malala: "&ldquo;Eg utfordrar jenter i alle land til å læra ein Kodetime&rdquo; Malala, fredsprisvinnar"
   homepage_hero_text_susan: |-
     &ldquo;Om du kan endra teknologien, kan du endra verda.&rdquo; Susan, administrerande direktør i YouTube
@@ -493,7 +493,7 @@
   video_title_obama: "President Obama om informatikk"
   video_title_hoc_is_here: "Kodetimen er her - Alle kan lære"
   video_title_anybody_can_learn: "Alle kan lære"
-  video_title_steph_curry: "Hour of Code with Steph Curry"
+  video_title_steph_curry: "Kodetimen med Steph Curry"
   video_title_draymond_green: "Kodetimen med Draymond Green"
   video_title_russell_okung: "Kodetimen med Russell Okung"
   video_title_real_madrid: "Kodetimen med Real Madrid"
@@ -760,7 +760,10 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Om de ikkje har datamaskiner, kan du <a href='%{unplugged_url}'>prøve desse analoge oppgåvene</a>."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Læreplan"
   dashboard_curriculum_overview: "Oversikt for barnetrinnet"
   dashboard_overview: "Oversyn"
@@ -778,6 +781,8 @@
   dashboard_curriculum_csins: 'Datavitskap i Vitskap:'
   dashboard_curriculum_csp: 'AP® Prinsipp i Datavitskap:'
   dashboard_curriculum_ecs: 'Utforsking av datavitskap:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Anna"
   dashboard_login_word: "Ord"
@@ -948,11 +953,11 @@
   accelerated_name: "Framskunda kurs"
   express_name: "Express Course"
   pre-express_name: Programmeringskurs før ein kan lese
-  cspunit1_name: '(gammel) Eining 1: Digital informasjon'
-  cspunit2_name: '(gammel) Eining 2: Internett'
-  cspunit3_name: '(gammel) Eining 3: Programmering'
-  cspunit4_name: '(gammel) Eining 4: Data'
-  cspunit5_name: '(gamal) Eining 5: Utforsk og lag PT'
+  cspunit1_name: "(gammel) Eining 1: Digital informasjon"
+  cspunit2_name: "(gammel) Eining 2: Internett"
+  cspunit3_name: "(gammel) Eining 3: Programmering"
+  cspunit4_name: "(gammel) Eining 4: Data"
+  cspunit5_name: "(gamal) Eining 5: Utforsk og lag PT"
   cspunit6_name: 'Post-AP: Databaser i appar'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -971,8 +976,8 @@
   csp-ap_name: AP-ytelseaktivitetar
   csppostap_name: 'Post-AP: Databasar i appar'
   cspassessment_name: "Full test - 50 spørsmål"
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
+  csp-explore_name: 'Utforsk PT forberedelse'
+  csp-create_name: 'Lag en PT forberedelse'
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: "9.-12. klasse"
@@ -1001,6 +1006,7 @@
   cspexams_category_name: "Prinsipp i teoriprøve i informatikk"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Spel-lab"
   basketball_name: "Lag eit basketballspel"
   sports_name: "Kode din eigen sport"
   applab_gradelevel: "Alder 13+"
@@ -1488,4 +1494,4 @@
   syncing_students_instructions: 'Hvis Code.org-seksjonen din blir utdatert etter lista di over elevar i Google Classroom, klikk på knappen "Synkronisér elevar frå Google Classroom" i fana "Administrér elevar":'
   google_sign_in_instruct: 'Derfra bør dei velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Helten si reise'
-  applab-intro_name: App Lab Intro
+  applab-intro_name: Lab-intro til appen

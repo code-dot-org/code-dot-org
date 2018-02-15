@@ -470,3 +470,42 @@
           1. started with an `unplugged` level. populated with info. hit save and publish.\r
           2. “destroyed” the level\r
           3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      courseB_unplugged_loopyMRF_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      DiceRace_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      courseE_unplugged_privateInformation_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      SongwritingParameters_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      Internet_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      Crowdsourcing_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      TangramAlgorithms_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      courseF_unplugged_powerOfWords_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      EnvelopeVariables_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      ForLoopFun_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      SongwritingWithParameters_2018:
+        title: "[șir gol]"
+        desc: "[șir gol]"

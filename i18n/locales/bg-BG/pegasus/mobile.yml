@@ -25,7 +25,7 @@
   submit: "Изпрати"
   twentyhours_heading: "Опитайте нашите въвеждащи курсове по компютърни науки"
   twentyhours_text: "Завършихте ли първия Час на кодиране? Научете повече за основните понятия в компютърните науки и програмиране в този следващ курс."
-  og_title: Всяко дете заслужава възможност
+  og_title: 'Всяко дете заслужава възможност'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Всеки ученик във всяко училище заслужава възможност да учи компютърни науки."
@@ -753,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'> Опитайте тези уроци без компютър</a> в класната стая."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Учебна програма"
   dashboard_curriculum_overview: "K-5 преглед на програмата"
   dashboard_overview: "Общ преглед"
@@ -771,6 +774,8 @@
   dashboard_curriculum_csins: 'Компютърни науки в науката:'
   dashboard_curriculum_csp: 'AP ® Принципи на компютърните науки:'
   dashboard_curriculum_ecs: 'Изследване на компютърните науки:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Предучилище"
   dashboard_grade_other: "Друго"
   dashboard_login_word: "Дума"
@@ -839,7 +844,7 @@
   carousel_heading_international: "Уроци на вашия език"
   carousel_heading_domestic: "Уроци на английски"
   carousel_heading_beginners: "Уроци за K-8"
-  carousel_heading_beyond_beginners: Уроци за начинаещи
+  carousel_heading_beyond_beginners: 'Уроци за начинаещи'
   carousel_heading_javascript: "Уроци, които преподават Javascript"
   carousel_heading_beyond_javascript: "Уроци, които преподават Javascript"
   carousel_heading_unplugged: "Нямате устройство или интернет? Опитайте \"ънплъгд\" уроците по компютърни науки"
@@ -941,11 +946,11 @@
   accelerated_name: "Ускорен курс"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(стар) Урок 1: Цифрова информация'
-  cspunit2_name: '(стар) Раздел 2: Интернет'
-  cspunit3_name: '(стар) Раздел 3: програмиране'
-  cspunit4_name: '(стар) Раздел 4: данни'
-  cspunit5_name: '(стар) Раздел 5: Изследване и създаване на PT'
+  cspunit1_name: "(стар) Урок 1: Цифрова информация"
+  cspunit2_name: "(стар) Раздел 2: Интернет"
+  cspunit3_name: "(стар) Раздел 3: програмиране"
+  cspunit4_name: "(стар) Раздел 4: данни"
+  cspunit5_name: "(стар) Раздел 5: Изследване и създаване на PT"
   cspunit6_name: 'Пост AP: Бази данни в приложения'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -954,7 +959,7 @@
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Раздел 1: Интернет'
-  csp2_name: Част 1 - Дигитална информация
+  csp2_name: 'Част 1 - Дигитална информация'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unit 3: Intro Programming (version A)'
   csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
@@ -994,6 +999,7 @@
   cspexams_category_name: "CS принципи практически тест"
   research_studies_category_name: "Research Studies"
   applab_name: "Лаборатория за приложения"
+  gamelab_name: "Играта лаборатория"
   basketball_name: "Направете баскетболна игра"
   sports_name: "Спорт"
   applab_gradelevel: "Възраст 13 +"
@@ -1378,7 +1384,7 @@
   makeschool_beyond_longdescription: "Имате ли някакви умения в ObjectiveC? Научете се да програмирате iPhone игра в рамките на един час! Ние ще ви преведем през този процес, за да напишете кода, да тествате и играете играта си изцяло в браузъра и след това, да я споделите във Facebook с приятелите си! Не е необходим предварителен опит с iPhone. Ще разберете какво са променливите, методите и обектите."
   appinventor_beyond_longdescription: "Забавни, бързи видео уроци ще ви преведат през изграждането на три прости приложения за Вашия андроид телефон или таблет. Курсът е предназначен за начинаещи и за експерти. В този Час на кодирането ще се научите да изграждате собствени програми. Представете си възможността да споделите собствените си приложения с вашите приятели! Тези дейности са подходящи индивидуално и за класове."
   touchdevelop_beyond_longdescription: "TouchDevelop ви позволява да създавате приложения за iPad, iPhone, Android, PC, Mac, Windows Phone. Нашият touch-friendly редактор прави кодирането забавно, дори на вашия телефон или таблет!"
-  codehs_beyond_longdescription: Научете основите на програмирането с кучето Карел, забавно, достъпно и визуално въведение в програмирането, където давате команди на компютъра, така както давате команди на куче. Този урок е страхотен ако се води от учител, но също така може да се направи самостоятелно
+  codehs_beyond_longdescription: 'Научете основите на програмирането с кучето Карел, забавно, достъпно и визуално въведение в програмирането, където давате команди на компютъра, така както давате команди на куче. Този урок е страхотен ако се води от учител, но също така може да се направи самостоятелно'
   udemy_beyond_longdescription: 'Независимо дали не сте виждали линия  код или кодирането е Вашия живот, Udemy има курсове за Вас, преподавани от професионални инструктори. [Забележка: изисква се плащане]'
   lynda_beyond_longdescription: 'Научете как да програмирате, създавате и изграждате уеб приложения на базата на обектно ориентираното програмиране в C и C++ и как да пишете на Java. Нашите разработени уроци може да Ви помогнат да се научите да развивате и създавате мобилни приложения, да работите с PHP и MySQL бази данни, да започнете с езика на статистическата обработка R и много повече. [Забележка: изисква се плащане]'
   edx_beyond_longdescription: "CS50x е курс на Харвардския университет за представянето на интелектуалната стойност на компютърните науки и изкуството на програмирането за специалисти и неспециалисти с или без предварителен опит в програмирането. Темите включват абстракция, алгоритми, структури от данни, капсулиране, управление на ресурсите, сигурност, софтуерно инженерство и уеб програмиране. Изучават се C, PHP и JavaScript плюс SQL, CSS и HTML."

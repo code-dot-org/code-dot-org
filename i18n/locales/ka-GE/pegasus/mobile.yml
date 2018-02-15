@@ -69,7 +69,7 @@
   thank_you_: "მადლობა!"
   congratulations: "გილოცავთ!"
   congratulations_on_completing_hoc: "გილოცავთ! კოდის ერთი საათი დასრულებულია"
-  congratulations_volunteer: გილოცავთ:ახლა, როცა თქვენ უკვე სცადეთ კოდის ერთი საათი, <a href="https://code.org/volunteer">დარეგისტრირდით მოხლისედ თქვენს კლასში</a> და დაეხმარეთ მოსწავლეებს კოდის ერთი საათის სწავლაში!
+  congratulations_volunteer: 'გილოცავთ:ახლა, როცა თქვენ უკვე სცადეთ კოდის ერთი საათი, <a href="https://code.org/volunteer">დარეგისტრირდით მოხლისედ თქვენს კლასში</a> და დაეხმარეთ მოსწავლეებს კოდის ერთი საათის სწავლაში!'
   congratulations_on_completing_course1: "გილოცავთ 1–ლი კურსის დასრულებას"
   congratulations_on_completing_course2: "გილოცავთ მე–2 კურსის დასრულებას"
   congratulations_on_completing_course3: "გილოცავთ მე–3 კურსის დასრულებას"
@@ -752,7 +752,10 @@
   dashboard_coursed: 'კურსი D: '
   dashboard_coursee: 'კურსი E: '
   dashboard_coursef: 'კურსი F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "თუ არ გაქვთ კომპიუტერები, <a href='%{unplugged_url}'>ჩაატარეთ ეს გაკვეთილები, რომლებსაც არ სჭირდებათ კომპიუტერი</a> თქვენს საკლასო ოთახში."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "კურიკულუმი"
   dashboard_curriculum_overview: "K-5 კურიკულუმის მომიხილვა"
   dashboard_overview: "მიმოხილვა"
@@ -770,6 +773,8 @@
   dashboard_curriculum_csins: 'ინფორმატიკა მეცნიერებაში:'
   dashboard_curriculum_csp: 'AP® ინფორმატიკის პრინციპები:'
   dashboard_curriculum_ecs: 'ინფორმატიკის შესწავლა:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K (საბავშვო ბაღი)"
   dashboard_grade_other: "სხვა"
   dashboard_login_word: "სიტყვა"
@@ -838,7 +843,7 @@
   carousel_heading_international: "პარტნიორების ტუტორიალები მშობლიურ ენაზე"
   carousel_heading_domestic: "ინგლისურ ენაზე მისაწვდომი ტუტორიალები პარტნიორებისგან"
   carousel_heading_beginners: "პარტნიორების ტუტორიალები K-8 ასაკებისთვის"
-  carousel_heading_beyond_beginners: ტუტორიალები დამწყებთათვის
+  carousel_heading_beyond_beginners: 'ტუტორიალები დამწყებთათვის'
   carousel_heading_javascript: "JavaScript ტუტორიალები პარტნიორებისგან"
   carousel_heading_beyond_javascript: "JavaScript ტუტორიალები"
   carousel_heading_unplugged: "არ გაქვთ მოწყობილობა ან ინტერნეტი? სცადეთ ინფორმატიკა კომპიუტერის გარეშე"
@@ -940,11 +945,11 @@
   accelerated_name: "დაჩქარებული კურსი"
   express_name: "დაჩქარებული კურსი"
   pre-express_name: კითხვამდელთა ექსპრეს კურსი
-  cspunit1_name: '(ძველი) სექცია 1: ციფრული ინფორმაცია'
-  cspunit2_name: '(ძველი) სექცია 2: ინტერნეტი'
-  cspunit3_name: '(ძველი) ნაწილი 3: პროგრამირება'
-  cspunit4_name: '(ძველი) სექცია 4: მონაცემები'
-  cspunit5_name: '(ძველი) ნაწილი 5: შეისწავლეთ და შექმენით PT'
+  cspunit1_name: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
+  cspunit2_name: "(ძველი) სექცია 2: ინტერნეტი"
+  cspunit3_name: "(ძველი) ნაწილი 3: პროგრამირება"
+  cspunit4_name: "(ძველი) სექცია 4: მონაცემები"
+  cspunit5_name: "(ძველი) ნაწილი 5: შეისწავლეთ და შექმენით PT"
   cspunit6_name: 'მომდევნო დონე: მონაცემთა ბაზები აპლიკაციებში'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -993,6 +998,7 @@
   cspexams_category_name: "CS საფუძვლების სავარჯიშო ტესტი"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "თამაშების ლაბი"
   basketball_name: "კალათბურთის თამაშის შექმნა"
   sports_name: "შექმენით საკუთარი სპორტული თამაში"
   applab_gradelevel: "ასაკი 13+"
@@ -1386,7 +1392,7 @@
   teachingtree_beyond_longdescription: "TeachingTree არის ღია პლატფორმა, რომელზეც ნებისმიერს შუძლია განათავსოს საგანმანათლებლო კონტენტი. ჩვენი მიზანია, რომ მოსწავლეებს შეეძლოთ იპოვონ ზუსტად ის ინფორმაცია, რაც სჭირდებათ ამ კონკრეტულ მომენტში. ყველას შეუძლია დაამატოს ვიდეოები ან ცნებები."
   kodu_beyond_longdescription: "Kodu აძლევს ბავშვებს საშაულებას შექმნან თამაშები კომპიუტერზე ან XBox-ზე ვიზუალური პროგრამირების ენის მეშვეობით. Kodu შეიძლება გამოიყენოთ შემოქმედებითი, საკითხების გადაწყვეტის, ამბის მოყოლის და, ცხადია, პროგრამირების უნარების გასავითარებლად. ყველას შეუძლია გამოიყენოს Kodu და შექმნას თამაში: პატარებსაც და დიდებსაც, იმათაც, ვისაც აქვთ პროგრამირების გამოცდილება და იმათაც, ვისაც არა. Kodu XBox-ისთვის ასევე მისაწვდომია აშშ-ში, XBox მაღაზიაში, Indie Games არხზე, მხოლოდ 5 დოლარად."
   cargobot_beyond_longdescription: "Cargo-Bot არის თამაში-თავსატეხი, სადაც რობოტს ყუთების გადაადგილებას ასწავლით. მარტივად ჟღერს, არა? მოცემულია 36 თავსატეხი, კარგი მუსიკა და თვალწარმტაცი გრაფიკა. შეგიძლიათ ჩაწეროთ თქვენი ამონახსნები ვიდეოზე და გაუზიაროთ მეგობრებს YouTube-ით."
-  kidsruby_beyond_longdescription: შექმენით თამაშები ან შეასრულეთ საშიანაო დავალება Ruby-ს გამოყენებით! უბრალოდ უთხარით მშობლებსა ან მასწავლებლებს, რომ Ruby-ზე პროგრამირებას სწავლობთ... ;) პროგრამა უფასოა და მუშაობს ნებისმიერ კომპიუტერზე, მაგრამ სჭირდება დაყენება.
+  kidsruby_beyond_longdescription: 'შექმენით თამაშები ან შეასრულეთ საშიანაო დავალება Ruby-ს გამოყენებით! უბრალოდ უთხარით მშობლებსა ან მასწავლებლებს, რომ Ruby-ზე პროგრამირებას სწავლობთ... ;) პროგრამა უფასოა და მუშაობს ნებისმიერ კომპიუტერზე, მაგრამ სჭირდება დაყენება.'
   w3schools_beyond_longdescription: "ისწავლეთ ვებსაიტების შექმნა. გაეცანით სერვერის მუშაობის პრინციპებს ერთ დღეში. გაიგეთ, როგორ დაუმატოთ თქვენს საიტს მონაცემთა ბაზები"
   codeavengers_beyond_longdescription: "დაწერეთ თამაშები, აპლიკაციები და ვებ-გვერდები. შექმნილია ექსპერტების მიერ დამწყებთათვის: ინსტრუქციები მარტივია, მინიშნებები კი მისაწვდომი ყოველთვის, როცა საჭიროა. ჩვენი HTML, CSS და JavaScript კურსები შეიცავენ პროგრამირების დავალებებს, გამეორებისთვის კი - თამაშებს. სწავლა ნებისმიერ ასაკში იქნება სახალისო და ეფექტური."
   mozilla_beyond_longdescription: "Thimble-ს გამოყენებით საკუთარი ვებ-გვერდების შექმნა და გაზიარება სასაცილომდე მარტივია. დაწერეთ და დაარედაქტირეთ HTML და CSS პირდაპირ თქვენს ბრაუზერში, შემდეგ კი გატესტეთ ნაშრომი. თანაბრად სასარგებლოა როგორც დამწყებთათვის, ასევე გამოცდილი მომხმარებლებისთვის."

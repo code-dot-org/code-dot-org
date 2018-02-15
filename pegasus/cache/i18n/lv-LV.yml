@@ -1057,8 +1057,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Mācību programmas
   dashboard_curriculum_overview: K-5 mācību programmas pārskats
   dashboard_overview: Pārskats
@@ -1076,6 +1079,8 @@
   dashboard_curriculum_csins: 'Datorzinātne Zinātnē:'
   dashboard_curriculum_csp: 'AP® Datorzinātņu Principi:'
   dashboard_curriculum_ecs: 'Izpētot Datorzinātni:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Citi
   dashboard_login_word: Vārds
@@ -1327,6 +1332,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Aplikāciju laborotorija
+  gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
   applab_gradelevel: Ages 13+
@@ -2117,9 +2123,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

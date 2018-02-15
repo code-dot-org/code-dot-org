@@ -78,10 +78,14 @@
         tagging 5 Golems, try changing the score to 2 per tag.
       MC HOC 2016 Village Test_failure_message_override: "Вие трябва да накарате железният
         голем Чейс да атакува зомбитата, за да спечелите."
+      Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: "Поздравления!  Вие събрахте X монети!"
       courseE_playLab_scaffold3_failure_message_override: |-
         You must add two or more
         new actors to your game and program them to move.
+      courseE_playLab_scaffold3_2018_failure_message_override: |-
+        You must add two
+        or more new actors to your game and program them to move.
       grade4_scaffolded_project3_failure_message_override: |-
         You must add two or more
         new actors that move to your game.
