@@ -11,16 +11,19 @@ export default class SchoolAutocompleteDropdown extends Component {
     onChange: PropTypes.func.isRequired,
     // Value is the NCES id of the school
     value: PropTypes.string,
-    fieldName: PropTypes.string
+    fieldName: PropTypes.string,
+    schoolDropdownOption: PropTypes.object,
   };
 
   static defaultProps = {
     fieldName: "nces_school_s"
   };
 
+
   constructSchoolOption = school => ({
     value: school.nces_id.toString(),
-    label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`
+    label: `${school.name} - ${school.city}, ${school.state} ${school.zip}`,
+    school: school,
   });
 
   constructSchoolNotFoundOption = () => ({
@@ -93,7 +96,7 @@ export default class SchoolAutocompleteDropdown extends Component {
         loadOptions={this.getOptions}
         cache={false}
         filterOption={() => true}
-        value={this.props.value}
+        value={this.props.schoolDropdownOption ? this.props.schoolDropdownOption : this.props.value}
         onChange={this.props.onChange}
         placeholder={i18n.searchForSchool()}
       />
