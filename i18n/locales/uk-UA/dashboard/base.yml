@@ -59,7 +59,7 @@ uk:
   courses: 'курси'
   courses_page:
     title_student: "Навчання у Студії коду"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Безмашинна вправа'
   of: "з"
   more: "БІЛЬШЕ"
@@ -69,7 +69,7 @@ uk:
   try_k8intro: "Спробуйте наш вступний курс інформатики для 5-8 класів (15-25 годин)"
   k8intro: "Вступ в курс інформатики для 5-8 класів (15-25 годин)"
   already_started: "Готові почати? Продовжимо тут >> "
-  demos: 'Адмін: Всі демо'
+  demos: "Адмін: Всі демо"
   continue: 'Далі'
   prize: 'приз'
   more_info: 'Детальніше'
@@ -171,6 +171,7 @@ uk:
       email: 'Адреса електронної пошти'
       submit: 'Надіслати'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Змінити пароль'
@@ -220,7 +221,7 @@ uk:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Повідомлення Code.org: %{student_name} відтепер не є вашим учнем.'
+        subject: "Повідомлення Code.org: %{student_name} відтепер не є вашим учнем."
   reports:
     error:
       access_denied: "Ви не маєте доступу до статистики цієї людини"
@@ -352,7 +353,7 @@ uk:
     current_password_hint: '(нам потрібний ваш поточний пароль, щоб підтвердити зміни)'
     delete: 'Видалення облікового запису'
     delete_text: "Клацання розташованої нижче кнопки призведе до видалення облікового запису."
-    delete_text_teacher_note: 'Будь ласка, зверніть увагу: видалення облікового запису не видалить облікових записів ваших учнів.'
+    delete_text_teacher_note: "Будь ласка, зверніть увагу: видалення облікового запису не видалить облікових записів ваших учнів."
     delete_confirm: 'Ви впевнені, що бажаєте видалити обліковий запис?'
     deleted_user: 'видалений користувач'
     no_password_because_oauth: 'Паролю немає, оскільки ви входите за допомогою стороннього постачальника.'
@@ -363,7 +364,7 @@ uk:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -702,7 +703,7 @@ uk:
     sign_out: 'Якщо Ви не бажаєте надавати інформацію про свій вік, Ви можете <a href="%{url}">вийти з системи</a>.'
   terms_interstitial:
     title: "Оновлені умови надання послуг та політики конфіденційності"
-    intro_desc: 'Ми оновили наші умови користування та політику конфіденційності. Зміни вступили в силу з 24 серпня 2016 року. Найбільша зміна: ми більше <i>не будемо зберігати електронні адреси для облікових записів учнів у Студії коду.</i> Для нас це дуже важливо, і ми сподіваємось, що це задасть новий стандарт учнівської конфіденційності в освітніх технологіях. Ми надіслали Вам коротку інформацію про зміни на електронну скриньку.'
+    intro_desc: "Ми оновили наші умови користування та політику конфіденційності. Зміни вступили в силу з 24 серпня 2016 року. Найбільша зміна: ми більше <i>не будемо зберігати електронні адреси для облікових записів учнів у Студії коду.</i> Для нас це дуже важливо, і ми сподіваємось, що це задасть новий стандарт учнівської конфіденційності в освітніх технологіях. Ми надіслали Вам коротку інформацію про зміни на електронну скриньку."
     intro_instructions: "Вам потрібно прийняти ці нові умови, щоб Ваші учні, молодші 13 років, мали повний доступ до останніх можливостей Студії коду. Коли реєструєте обліковий запис для учня, молодшого 13 років, потрібно підтвердити, що Ваша школа має згоду батьків на збір особистих даних учня для використання у школі, включно з освітніми програмами, такими як Студія коду."
     tos: "Умови надання послуг"
     privacy: "Політика конфіденційності"
@@ -718,7 +719,7 @@ uk:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "зберегти"
   race_interstitial:
-    title: 'За бажанням: Допоможіть нам відстежувати прогрес для підвищення різноманіття у галузі інформатики'
+    title: "За бажанням: Допоможіть нам відстежувати прогрес для підвищення різноманіття у галузі інформатики"
     message: "Вкажіть свою расову приналежність (позначте всі потрібні варіанти)"
     races:
       - 
@@ -762,7 +763,7 @@ uk:
     delete: "Видалити"
     import: "Імпорт"
     share_link_import_bad_link_header: "Посилання на завдання не розпізнано"
-    share_link_import_bad_link_body: 'Не вдалось імпортувати посилання на завдання. Перевірте, чи це дійсно посилання із завдання Minecraft: Agent, яке ви повністю скопіювали.'
+    share_link_import_bad_link_body: "Не вдалось імпортувати посилання на завдання. Перевірте, чи це дійсно посилання із завдання Minecraft: Agent, яке ви повністю скопіювали."
     share_link_import_error_header: "Щось пішло не так."
     share_link_import_error_body: "Під час імпорту цього посилання на завдання виникла проблема. Спробуйте ще раз."
     exit: "Повернутися до курсу"
@@ -865,8 +866,8 @@ uk:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
