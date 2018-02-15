@@ -40,8 +40,7 @@ export function findPortWithViableDevice() {
             return Promise.reject(new ConnectionFailedError(
                 "It looks like you've connected a Circuit Playground Express. " +
                 'Code.org Maker Toolkit does not support the Express at this time. ' +
-                'Please connect a Circuit Playground Developer Edition and try again. ' +
-                '\n\nFound devices: ' + JSON.stringify(list)));
+                'Please connect a Circuit Playground Developer Edition and try again.'));
           }
           return bestOption.comName;
         } else {
