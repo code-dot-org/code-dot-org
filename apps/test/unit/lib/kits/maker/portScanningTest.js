@@ -58,7 +58,6 @@ describe("maker/portScanning.js", function () {
           expect(err.reason).to.include("It looks like you've connected a Circuit Playground Express.");
           expect(err.reason).to.include("Code.org Maker Toolkit does not support the Express at this time.");
           expect(err.reason).to.include("Please connect a Circuit Playground Developer Edition and try again.");
-          expect(err.reason).to.include(JSON.stringify(CIRCUIT_PLAYGROUND_EXPRESS_PORTS));
           done();
         })
         .catch(done);
