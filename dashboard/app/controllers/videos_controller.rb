@@ -83,7 +83,7 @@ class VideosController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def video_params
-    params.require(:video).permit(:name, :key, :youtube_code)
+    params.require(:video).permit(:title, :key, :youtube_code, :download)
   end
 
   # This is to fix a ForbiddenAttributesError CanCan issue.

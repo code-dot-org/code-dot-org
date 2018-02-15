@@ -10,10 +10,18 @@
   .field
     = f.label :key
     %br/
-    = f.text_field :key
+    = f.text_field :key, readonly: !@video.new_record?
   .field
-    = f.label :youtube_code
+    = f.label 'Title'
+    %br/
+    = f.text_field :title, value: @video.new_record? ? '' : data_t('video.name', @video.key)
+  .field
+    = f.label 'YouTube code'
     %br/
     = f.text_field :youtube_code
+  .field
+    = f.label 'S3 download link'
+    %br/
+    = f.text_field :download
   .actions
     = f.submit
