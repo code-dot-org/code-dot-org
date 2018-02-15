@@ -64,6 +64,10 @@ export default class TravelPlans extends LabeledFormComponent {
 
     if (data.needHotel === 'Yes') {
       requiredFields.push("needAda");
+
+      if (data.needAda === 'Yes') {
+        requiredFields.push("explainAda");
+      }
     }
 
     return requiredFields;
@@ -122,7 +126,7 @@ export default class TravelPlans extends LabeledFormComponent {
           {
             this.props.data.needHotel === 'Yes' &&
             this.props.data.needAda === 'Yes' &&
-            this.largeInputFor("explainAda", {required: false})
+            this.largeInputFor("explainAda")
           }
         </FormGroup>
       </FormGroup>
