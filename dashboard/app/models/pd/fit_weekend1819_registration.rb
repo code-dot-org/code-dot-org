@@ -43,7 +43,7 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
       addressState: get_all_states_with_dc.to_h.values,
       howTraveling: [
         'I will drive by myself',
-        'I will carpool with another FiT Weekend attendee',
+        'I will carpool with another FiT Weekend attendee (Please note who)',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',
