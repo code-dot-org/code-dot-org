@@ -1,0 +1,20 @@
+.privacy-principles {
+  padding: 10px;
+    background-color: #d9f3f5;
+}
+
+.privacy-pullquote {
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+}
+
+.privacy-pullquote:before {
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7665a0;
+}
