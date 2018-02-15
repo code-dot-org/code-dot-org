@@ -29,6 +29,7 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
         'None',
         'Vegetarian',
         'Vegan',
+        'Kosher',
         'Halal',
         'Gluten Free',
         'Food Allergy (please list):',
