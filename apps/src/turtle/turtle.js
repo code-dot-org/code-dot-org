@@ -71,7 +71,6 @@ const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
 
 const decorationAnimationWidth = 85;
 const decorationAnimationHeight = 85;
-const decorationAnimationNumFrames = 19;
 
 /**
 * Minimum joint segment length
@@ -182,392 +181,6 @@ const REMIX_PROPS_BY_SKIN = {
 
 const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
 
-class Visualization {
-  constructor(options = {}) {
-    this.x = DEFAULT_X;
-    this.y = DEFAULT_Y;
-    this.heading = DEFAULT_DIRECTION;
-    this.penDownValue = true;
-
-    this.avatar = options.avatar;
-    this.isFrozenSkin = !!options.isFrozenSkin;
-    this.isK1 = !!options.isK1;
-    this.decorationAnimationImage = options.decorationAnimationImage;
-    this.showDecoration = options.showDecoration;
-
-    // Internal state.
-    this.turtleFrame_ = 0;
-    this.isPredrawing_ = false;
-
-    // This flag is used to draw a version of code (either user code or solution
-    // code) that normalizes patterns and stickers to always use the "first"
-    // option, so that validation can be agnostic.
-    this.shouldDrawNormalized_ = false;
-
-    // Create hidden canvases.
-    this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
-    this.ctxImages = this.createCanvas_('images', 400, 400).getContext('2d');
-    this.ctxPredraw = this.createCanvas_('predraw', 400, 400).getContext('2d');
-    this.ctxScratch = this.createCanvas_('scratch', 400, 400).getContext('2d');
-    this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
-    this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
-    this.ctxThumbnail = this.createCanvas_('thumbnail', 180, 180).getContext('2d');
-
-    // Create hidden canvases for normalized versions
-    this.ctxNormalizedScratch = this.createCanvas_('normalizedScratch', 400, 400).getContext('2d');
-    this.ctxNormalizedAnswer = this.createCanvas_('normalizedAnswer', 400, 400).getContext('2d');
-
-    // Create display canvas.
-    this.displayCanvas = this.createCanvas_('display', 400, 400);
-    this.ctxDisplay = this.displayCanvas.getContext('2d');
-  }
-
-  // Helper for creating canvas elements.
-  createCanvas_(id, width, height) {
-    var el = document.createElement('canvas');
-    el.id = id;
-    el.width = width;
-    el.height = height;
-    return el;
-  }
-
-  /**
-   * Draw the turtle image based on this.visualization.x, this.visualization.y, and this.visualization.heading.
-   */
-  drawTurtle() {
-    if (!this.avatar.visible) {
-      return;
-    }
-    this.drawDecorationAnimation("before");
-
-    // Computes the index of the image in the sprite.
-    var index = Math.floor(this.heading * this.avatar.numHeadings / 360);
-    if (this.isFrozenSkin) {
-      // the rotations in the sprite sheet go in the opposite direction.
-      index = this.avatar.numHeadings - index;
-
-      // and they are 180 degrees out of phase.
-      index = (index + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
-    }
-    var sourceX = this.avatar.width * index;
-    var sourceY = this.avatar.height * this.turtleFrame_;
-    this.turtleFrame_ = (this.turtleFrame_ + 1) % this.avatar.numFrames;
-
-    var sourceWidth = this.avatar.width;
-    var sourceHeight = this.avatar.height;
-    var destWidth = this.avatar.width;
-    var destHeight = this.avatar.height;
-    var destX = this.x - destWidth / 2;
-    var destY = this.y - destHeight + 7;
-
-    if (!this.avatar.image) {
-      return;
-    }
-
-    if (sourceX < 0 ||
-      sourceY < 0 ||
-      sourceX + sourceWidth  -0 > this.avatar.image.width ||
-      sourceY + sourceHeight > this.avatar.image.height) {
-      return;
-    }
-
-    if (this.avatar.image.width !== 0) {
-      this.ctxDisplay.drawImage(
-        this.avatar.image,
-        Math.round(sourceX), Math.round(sourceY),
-        sourceWidth - 0, sourceHeight,
-        Math.round(destX), Math.round(destY),
-        destWidth - 0, destHeight);
-    }
-
-    this.drawDecorationAnimation("after");
-  }
-
-  /**
-   * This is called twice, once with "before" and once with "after", referring to before or after
-   * the sprite is drawn.  For some angles it should be drawn before, and for some after.
-   */
-  drawDecorationAnimation(when) {
-    if (this.showDecoration()) {
-      var frameIndex = (this.turtleFrame_ + 10) % decorationAnimationNumFrames;
-
-      var angleIndex = Math.floor(this.heading * this.avatar.numHeadings / 360);
-
-      // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
-      angleIndex = this.avatar.numHeadings - angleIndex;
-
-      // and they are 180 degrees out of phase.
-      angleIndex = (angleIndex + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
-
-      if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
-        var sourceX = decorationAnimationWidth * frameIndex;
-        var sourceY = 0;
-        var sourceWidth = decorationAnimationWidth;
-        var sourceHeight = decorationAnimationHeight;
-        var destWidth = sourceWidth;
-        var destHeight = sourceHeight;
-        var destX = this.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
-        var destY = this.y - destHeight / 2 - 100;
-
-        if (this.decorationAnimationImage.width !== 0) {
-          this.ctxDisplay.drawImage(
-            this.decorationAnimationImage,
-            Math.round(sourceX), Math.round(sourceY),
-            sourceWidth, sourceHeight,
-            Math.round(destX), Math.round(destY),
-            destWidth, destHeight);
-        }
-      }
-    }
-  }
-
-  /**
-   * Copy the scratch canvas to the display canvas. Add a turtle marker.
-   */
-  display() {
-    // FF on linux retains drawing of previous location of artist unless we clear
-    // the canvas first.
-    var style = this.ctxDisplay.fillStyle;
-    this.ctxDisplay.fillStyle = color.white;
-    this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
-      this.ctxDisplay.canvas.width);
-    this.ctxDisplay.fillStyle = style;
-
-    this.ctxDisplay.globalCompositeOperation = 'copy';
-    // Draw the images layer.
-    this.ctxDisplay.globalCompositeOperation = 'source-over';
-    this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
-
-    // Draw the predraw layer.
-    this.ctxDisplay.globalCompositeOperation = 'source-over';
-    this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
-
-    // Draw the answer layer.
-    if (this.isFrozenSkin) {
-      this.ctxDisplay.globalAlpha = 0.4;
-    } else {
-      this.ctxDisplay.globalAlpha = 0.3;
-    }
-    this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
-    this.ctxDisplay.globalAlpha = 1;
-
-    // Draw the pattern layer.
-    this.ctxDisplay.globalCompositeOperation = 'source-over';
-    this.ctxDisplay.drawImage(this.ctxPattern.canvas, 0, 0);
-
-    // Draw the user layer.
-    this.ctxDisplay.globalCompositeOperation = 'source-over';
-    this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
-
-    // Draw the turtle.
-    this.drawTurtle();
-  }
-
-  jumpTo(pos) {
-    let [x, y] = pos;
-    this.x = Number(x);
-    this.y = Number(y);
-  }
-
-  jumpForward(distance) {
-    this.x += distance * Math.sin(this.degreesToRadians_(this.heading));
-    this.y -= distance * Math.cos(this.degreesToRadians_(this.heading));
-  }
-
-  circleAt_(x, y, radius) {
-    this.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
-  }
-
-  drawToTurtle_(distance) {
-    var isDot = (distance === 0);
-    if (isDot) {
-      // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
-      this.ctxScratch.lineTo(this.x + 0.1, this.y);
-    } else {
-      this.ctxScratch.lineTo(this.x, this.y);
-    }
-  }
-
-  turnByDegrees(degreesRight) {
-    this.setHeading(this.heading + degreesRight);
-  }
-
-  setHeading(heading) {
-    heading = this.constrainDegrees_(heading);
-    this.heading = heading;
-  }
-
-  /**
-   * Converts degrees into radians.
-   *
-   * @param {number} degrees - The degrees to convert to radians
-   * @return {number} `degrees` converted to radians
-   */
-  degreesToRadians_(degrees) {
-    return degrees * (Math.PI / 180);
-  }
-
-  constrainDegrees_(degrees) {
-    degrees %= 360;
-    if (degrees < 0) {
-      degrees += 360;
-    }
-    return degrees;
-  }
-
-  moveForward(distance, isDiagonal) {
-    if (!this.penDownValue) {
-      this.jumpForward(distance);
-      return;
-    }
-    if (this.isDrawingWithPattern) {
-      this.drawForwardLineWithPattern_(distance);
-
-      // Frozen gets both a pattern and a line over the top of it.
-      if (!this.isFrozenSkin()) {
-        return;
-      }
-    }
-
-    this.drawForward_(distance, isDiagonal);
-  }
-
-  drawForward_(distance, isDiagonal) {
-    if (this.shouldDrawJoints_()) {
-      this.drawForwardWithJoints_(distance, isDiagonal);
-    } else {
-      this.drawForwardLine_(distance);
-    }
-  }
-
-  /**
-   * Draws a line of length `distance`, adding joint knobs along the way at
-   * intervals of `JOINT_SEGMENT_LENGTH` if `isDiagonal` is false, or
-   * `JOINT_SEGMENT_LENGTH * sqrt(2)` if `isDiagonal` is true.
-   * @param distance
-   * @param isDiagonal
-   */
-  drawForwardWithJoints_(distance, isDiagonal) {
-    var remainingDistance = distance;
-    var segmentLength = JOINT_SEGMENT_LENGTH * (isDiagonal ? Math.sqrt(2) : 1);
-
-    if (remainingDistance >= segmentLength) {
-      this.drawJointAtTurtle_();
-    }
-
-    while (remainingDistance > 0) {
-      var enoughForFullSegment = remainingDistance >= segmentLength;
-      var currentSegmentLength = enoughForFullSegment ? segmentLength : remainingDistance;
-
-      remainingDistance -= currentSegmentLength;
-
-      this.drawForwardLine_(currentSegmentLength);
-
-      if (enoughForFullSegment) {
-        this.drawJointAtTurtle_();
-      }
-    }
-  }
-
-  drawForwardLine_(distance) {
-    if (this.isFrozenSkin) {
-      this.ctxScratch.beginPath();
-      this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
-      this.jumpForward(distance);
-      this.drawToTurtle_(distance);
-      this.ctxScratch.stroke();
-    } else {
-      this.ctxScratch.beginPath();
-      this.ctxScratch.moveTo(this.x, this.y);
-      this.jumpForward(distance);
-      this.drawToTurtle_(distance);
-      this.ctxScratch.stroke();
-    }
-  }
-
-  drawForwardLineWithPattern_(distance) {
-    var img;
-    var startX;
-    var startY;
-
-    if (this.isFrozenSkin()) {
-      this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
-      img = this.currentPathPattern;
-      startX = this.stepStartX;
-      startY = this.stepStartY;
-
-      var lineDistance = Math.abs(this.stepDistanceCovered);
-
-      this.ctxPattern.save();
-      this.ctxPattern.translate(startX, startY);
-      // increment the angle and rotate the image.
-      // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-      this.ctxPattern.rotate(this.degreesToRadians_(this.heading - 90));
-
-      var clipSize;
-      if (lineDistance % this.smoothAnimateStepSize === 0) {
-        clipSize = this.smoothAnimateStepSize;
-      } else if (lineDistance > this.smoothAnimateStepSize) {
-        // this happens when our line was not divisible by smoothAnimateStepSize
-        // and we've hit our last chunk
-        clipSize = lineDistance % this.smoothAnimateStepSize;
-      } else {
-        clipSize = lineDistance;
-      }
-      if (img.width > 0 && img.height > 0 && clipSize > 0) {
-        this.ctxPattern.drawImage(img,
-          // Start point for clipping image
-          Math.round(lineDistance), 0,
-          // clip region size
-          clipSize, img.height,
-          // some mysterious hand-tweaking done by Brendan
-          Math.round((this.stepDistanceCovered - clipSize - 2)), Math.round((- 18)),
-          clipSize, img.height);
-      }
-
-      this.ctxPattern.restore();
-
-    } else {
-
-      this.ctxScratch.moveTo(this.x, this.y);
-      img = this.currentPathPattern;
-      startX = this.x;
-      startY = this.y;
-
-      this.jumpForward(distance);
-      this.ctxScratch.save();
-      this.ctxScratch.translate(startX, startY);
-      // increment the angle and rotate the image.
-      // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
-      this.ctxScratch.rotate(this.degreesToRadians_(this.heading - 90));
-
-      if (img.width !== 0) {
-        this.ctxScratch.drawImage(img,
-          // Start point for clipping image
-          0, 0,
-          // clip region size
-          distance + img.height / 2, img.height,
-          // draw location relative to the ctx.translate point pre-rotation
-          -img.height / 4, -img.height / 2,
-          distance+img.height / 2, img.height);
-      }
-
-      this.ctxScratch.restore();
-    }
-  }
-
-  shouldDrawJoints_() {
-    return this.isK1 && !this.isPredrawing_;
-  }
-
-  drawJointAtTurtle_() {
-    this.ctxScratch.beginPath();
-    this.ctxScratch.moveTo(this.x, this.y);
-    this.circleAt_(this.x, this.y, JOINT_RADIUS);
-    this.ctxScratch.stroke();
-  }
-}
-
 /**
  * An instantiable Artist class
  * @param {StudioApp} studioApp The studioApp instance to build upon.
@@ -591,6 +204,12 @@ var Artist = function () {
   // PID of animation task currently executing.
   this.pid = 0;
 
+  // Should the turtle be drawn?
+  this.visible = true;
+
+  // Set a turtle heading.
+  this.heading = 0;
+
   // The avatar animation decoration image
   this.decorationAnimationImage = new Image();
 
@@ -601,11 +220,29 @@ var Artist = function () {
   this.linePatterns = [];
 
   // these get set by init based on skin.
+  this.avatar = null;
   this.speedSlider = null;
+
+  this.ctxAnswer = null;
+  this.ctxNormalizedAnswer = null;
+  this.ctxImages = null;
+  this.ctxPredraw = null;
+  this.ctxScratch = null;
+  this.ctxNormalizedScratch = null;
+  this.ctxPattern = null;
+  this.ctxFeedback = null;
+  this.ctxDisplay = null;
+
+  this.isDrawingAnswer_ = false;
+  this.isPredrawing_ = false;
+
+  // This flag is used to draw a version of code (either user code or solution
+  // code) that nornamlizes patterns and stickers to always use the "first"
+  // option, so that validation can be agnostic
+  this.shouldDrawNormalized_ = false;
 };
 
 module.exports = Artist;
-module.exports.Visualization = Visualization;
 
 
 /**
@@ -711,14 +348,7 @@ Artist.prototype.init = function (config) {
   }
 
   this.linePatterns = config.skin.linePatterns;
-
-  this.visualization = new Visualization({
-    avatar: config.skin.avatarSettings,
-    isK1: config.level.isK1,
-    isFrozenSkin: this.isFrozenSkin(),
-    decorationAnimationImage: this.decorationAnimationImage,
-    showDecoration: () => this.skin.id === "elsa",
-  });
+  this.avatar = config.skin.avatarSettings;
 
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
@@ -895,8 +525,25 @@ Artist.prototype.afterInject_ = function (config) {
     Blockly.JavaScript.addReservedWords('Turtle,code');
   }
 
+  // Create hidden canvases.
+  this.ctxAnswer = this.createCanvas_('answer', 400, 400).getContext('2d');
+  this.ctxImages = this.createCanvas_('images', 400, 400).getContext('2d');
+  this.ctxPredraw = this.createCanvas_('predraw', 400, 400).getContext('2d');
+  this.ctxScratch = this.createCanvas_('scratch', 400, 400).getContext('2d');
+  this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
+  this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
+  this.ctxThumbnail = this.createCanvas_('thumbnail', 180, 180).getContext('2d');
+
+  // Create hidden canvases for normalized versions
+  this.ctxNormalizedScratch = this.createCanvas_('normalizedScratch', 400, 400).getContext('2d');
+  this.ctxNormalizedAnswer = this.createCanvas_('normalizedAnswer', 400, 400).getContext('2d');
+
+  // Create display canvas.
+  var displayCanvas = this.createCanvas_('display', 400, 400);
+
   var visualization = document.getElementById('visualization');
-  visualization.appendChild(this.visualization.displayCanvas);
+  visualization.appendChild(displayCanvas);
+  this.ctxDisplay = displayCanvas.getContext('2d');
 
   // TODO (br-pair): - pull this out?
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
@@ -928,15 +575,17 @@ Artist.prototype.afterInject_ = function (config) {
 
   // Draw the answer twice; once to the display canvas and once again in a
   // normalized version to the validation canvas
-  this.drawAnswer(this.visualization.ctxAnswer);
-  this.visualization.shouldDrawNormalized_ = true;
-  this.drawAnswer(this.visualization.ctxNormalizedAnswer);
-  this.visualization.shouldDrawNormalized_ = false;
+  this.isDrawingAnswer_ = true;
+  this.drawAnswer(this.ctxAnswer);
+  this.shouldDrawNormalized_ = true;
+  this.drawAnswer(this.ctxNormalizedAnswer);
+  this.shouldDrawNormalized_ = false;
+  this.isDrawingAnswer_ = false;
 
   if (this.level.predrawBlocks) {
-    this.visualization.isPredrawing_ = true;
-    this.drawBlocksOnCanvas(this.level.predrawBlocks, this.visualization.ctxPredraw);
-    this.visualization.isPredrawing_ = false;
+    this.isPredrawing_ = true;
+    this.drawBlocksOnCanvas(this.level.predrawBlocks, this.ctxPredraw);
+    this.isPredrawing_ = false;
   }
 
   // Adjust visualizationColumn width.
@@ -967,7 +616,7 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
     this.resetStepInfo_();
   }
   canvas.globalCompositeOperation = 'copy';
-  canvas.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
+  canvas.drawImage(this.ctxScratch.canvas, 0, 0);
   canvas.globalCompositeOperation = 'source-over';
 };
 
@@ -1006,13 +655,13 @@ Artist.prototype.placeImage = function (filename, position, scale) {
   img.onload = _.bind(function () {
     if (img.width !== 0) {
       if (scale) {
-        this.visualization.ctxImages.drawImage(img, position[0], position[1], img.width,
+        this.ctxImages.drawImage(img, position[0], position[1], img.width,
           img.height, 0, 0, img.width * scale, img.height * scale);
       } else  {
-        this.visualization.ctxImages.drawImage(img, position[0], position[1]);
+        this.ctxImages.drawImage(img, position[0], position[1]);
       }
     }
-    this.visualization.display();
+    this.display();
   }, this);
 
   if (this.isFrozenSkin()) {
@@ -1029,7 +678,7 @@ Artist.prototype.placeImage = function (filename, position, scale) {
 };
 
 /**
- * Draw the images for this page and level onto this.visualization.ctxImages.
+ * Draw the images for this page and level onto this.ctxImages.
  */
 Artist.prototype.drawImages = function () {
   if (!this.level.images) {
@@ -1039,20 +688,20 @@ Artist.prototype.drawImages = function () {
     var image = this.level.images[i];
     this.placeImage(image.filename, image.position, image.scale);
   }
-  this.visualization.ctxImages.globalCompositeOperation = 'copy';
-  this.visualization.ctxImages.drawImage(this.visualization.ctxScratch.canvas, 0, 0);
-  this.visualization.ctxImages.globalCompositeOperation = 'source-over';
+  this.ctxImages.globalCompositeOperation = 'copy';
+  this.ctxImages.drawImage(this.ctxScratch.canvas, 0, 0);
+  this.ctxImages.globalCompositeOperation = 'source-over';
 };
 
 /**
  * Initialize the turtle image on load.
  */
 Artist.prototype.loadTurtle = function (initializing = true) {
-  const onloadCallback = initializing ? () => this.visualization.display() : () => this.visualization.drawTurtle();
-  this.visualization.avatar.image = new Image();
-  this.visualization.avatar.image.onload = _.bind(onloadCallback, this);
+  const onloadCallback = initializing ? this.display : this.drawTurtle;
+  this.avatar.image = new Image();
+  this.avatar.image.onload = _.bind(onloadCallback, this);
 
-  this.visualization.avatar.image.src = this.skin.avatar;
+  this.avatar.image.src = this.skin.avatar;
 };
 
 /**
@@ -1061,8 +710,105 @@ Artist.prototype.loadTurtle = function (initializing = true) {
 Artist.prototype.loadDecorationAnimation = function () {
   if (this.skin.id === "elsa") {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
+    this.decorationAnimationImage.height = decorationAnimationHeight;
+    this.decorationAnimationImage.width = decorationAnimationWidth;
   }
 };
+
+var turtleFrame = 0;
+
+
+/**
+ * Draw the turtle image based on this.x, this.y, and this.heading.
+ */
+Artist.prototype.drawTurtle = function () {
+  if (!this.visible) {
+    return;
+  }
+  this.drawDecorationAnimation("before");
+
+  // Computes the index of the image in the sprite.
+  var index = Math.floor(this.heading * this.avatar.numHeadings / 360);
+  if (this.isFrozenSkin()) {
+    // the rotations in the sprite sheet go in the opposite direction.
+    index = this.avatar.numHeadings - index;
+
+    // and they are 180 degrees out of phase.
+    index = (index + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
+  }
+  var sourceX = this.avatar.width * index;
+  var sourceY = this.avatar.height * turtleFrame;
+  turtleFrame = (turtleFrame + 1) % this.avatar.numFrames;
+
+  var sourceWidth = this.avatar.width;
+  var sourceHeight = this.avatar.height;
+  var destWidth = this.avatar.width;
+  var destHeight = this.avatar.height;
+  var destX = this.x - destWidth / 2;
+  var destY = this.y - destHeight + 7;
+
+  if (!this.avatar.image) {
+    return;
+  }
+
+  if (sourceX < 0 ||
+      sourceY < 0 ||
+      sourceX + sourceWidth  -0 > this.avatar.image.width ||
+      sourceY + sourceHeight > this.avatar.image.height) {
+    return;
+  }
+
+  if (this.avatar.image.width !== 0) {
+    this.ctxDisplay.drawImage(
+      this.avatar.image,
+      Math.round(sourceX), Math.round(sourceY),
+      sourceWidth - 0, sourceHeight,
+      Math.round(destX), Math.round(destY),
+      destWidth - 0, destHeight);
+  }
+
+  this.drawDecorationAnimation("after");
+};
+
+/**
+  * This is called twice, once with "before" and once with "after", referring to before or after
+  * the sprite is drawn.  For some angles it should be drawn before, and for some after.
+  */
+
+Artist.prototype.drawDecorationAnimation = function (when) {
+  if (this.skin.id === "elsa") {
+    var frameIndex = (turtleFrame + 10) % this.skin.decorationAnimationNumFrames;
+
+    var angleIndex = Math.floor(this.heading * this.avatar.numHeadings / 360);
+
+    // the rotations in the Anna & Elsa sprite sheets go in the opposite direction.
+    angleIndex = this.avatar.numHeadings - angleIndex;
+
+    // and they are 180 degrees out of phase.
+    angleIndex = (angleIndex + this.avatar.numHeadings / 2) % this.avatar.numHeadings;
+
+    if (ELSA_DECORATION_DETAILS[angleIndex].when === when) {
+      var sourceX = this.decorationAnimationImage.width * frameIndex;
+      var sourceY = 0;
+      var sourceWidth = this.decorationAnimationImage.width;
+      var sourceHeight = this.decorationAnimationImage.height;
+      var destWidth = sourceWidth;
+      var destHeight = sourceHeight;
+      var destX = this.x - destWidth / 2 - 15 - 15 + ELSA_DECORATION_DETAILS[angleIndex].x;
+      var destY = this.y - destHeight / 2 - 100;
+
+      if (this.decorationAnimationImage.width !== 0) {
+        this.ctxDisplay.drawImage(
+          this.decorationAnimationImage,
+          Math.round(sourceX), Math.round(sourceY),
+          sourceWidth, sourceHeight,
+          Math.round(destX), Math.round(destY),
+          destWidth, destHeight);
+      }
+    }
+  }
+};
+
 
 /**
  * Reset the turtle to the start position, clear the display, and kill any
@@ -1072,40 +818,40 @@ Artist.prototype.loadDecorationAnimation = function () {
  */
 Artist.prototype.reset = function (ignore) {
   // Standard starting location and heading of the turtle.
-  this.visualization.x = DEFAULT_X;
-  this.visualization.y = DEFAULT_Y;
-  this.visualization.heading = this.level.startDirection !== undefined ?
+  this.x = DEFAULT_X;
+  this.y = DEFAULT_Y;
+  this.heading = this.level.startDirection !== undefined ?
       this.level.startDirection : DEFAULT_DIRECTION;
-  this.visualization.penDownValue = true;
-  this.visualization.avatar.visible = true;
+  this.penDownValue = true;
+  this.visible = true;
 
   // For special cases, use a different initial location.
   if (this.level.initialX !== undefined) {
-    this.visualization.x = this.level.initialX;
+    this.x = this.level.initialX;
   }
   if (this.level.initialY !== undefined) {
-    this.visualization.y = this.level.initialY;
+    this.y = this.level.initialY;
   }
   // Clear the display.
-  this.visualization.ctxScratch.canvas.width = this.visualization.ctxScratch.canvas.width;
-  this.visualization.ctxPattern.canvas.width = this.visualization.ctxPattern.canvas.width;
+  this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
+  this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
   if (this.isFrozenSkin()) {
-    this.visualization.ctxScratch.strokeStyle = 'rgb(255,255,255)';
-    this.visualization.ctxScratch.fillStyle = 'rgb(255,255,255)';
-    this.visualization.ctxScratch.lineWidth = 2;
+    this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
+    this.ctxScratch.fillStyle = 'rgb(255,255,255)';
+    this.ctxScratch.lineWidth = 2;
   } else {
-    this.visualization.ctxScratch.strokeStyle = '#000000';
-    this.visualization.ctxScratch.fillStyle = '#000000';
-    this.visualization.ctxScratch.lineWidth = 5;
+    this.ctxScratch.strokeStyle = '#000000';
+    this.ctxScratch.fillStyle = '#000000';
+    this.ctxScratch.lineWidth = 5;
   }
 
-  this.visualization.ctxScratch.lineCap = 'round';
-  this.visualization.ctxScratch.font = 'normal 18pt Arial';
-  this.visualization.display();
+  this.ctxScratch.lineCap = 'round';
+  this.ctxScratch.font = 'normal 18pt Arial';
+  this.display();
 
   // Clear the feedback.
-  this.visualization.ctxFeedback.clearRect(
-      0, 0, this.visualization.ctxFeedback.canvas.width, this.visualization.ctxFeedback.canvas.height);
+  this.ctxFeedback.clearRect(
+      0, 0, this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
 
   this.selectPattern();
 
@@ -1129,6 +875,49 @@ Artist.prototype.reset = function (ignore) {
   this.studioApp_.stopLoopingAudio('start');
 
   this.resetStepInfo_();
+};
+
+
+/**
+ * Copy the scratch canvas to the display canvas. Add a turtle marker.
+ */
+Artist.prototype.display = function () {
+  // FF on linux retains drawing of previous location of artist unless we clear
+  // the canvas first.
+  var style = this.ctxDisplay.fillStyle;
+  this.ctxDisplay.fillStyle = color.white;
+  this.ctxDisplay.clearRect(0, 0, this.ctxDisplay.canvas.width,
+    this.ctxDisplay.canvas.width);
+  this.ctxDisplay.fillStyle = style;
+
+  this.ctxDisplay.globalCompositeOperation = 'copy';
+  // Draw the images layer.
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxImages.canvas, 0, 0);
+
+  // Draw the predraw layer.
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
+
+  // Draw the answer layer.
+  if (this.isFrozenSkin()) {
+    this.ctxDisplay.globalAlpha = 0.4;
+  } else {
+    this.ctxDisplay.globalAlpha = 0.3;
+  }
+  this.ctxDisplay.drawImage(this.ctxAnswer.canvas, 0, 0);
+  this.ctxDisplay.globalAlpha = 1;
+
+  // Draw the pattern layer.
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxPattern.canvas, 0, 0);
+
+  // Draw the user layer.
+  this.ctxDisplay.globalCompositeOperation = 'source-over';
+  this.ctxDisplay.drawImage(this.ctxScratch.canvas, 0, 0);
+
+  // Draw the turtle.
+  this.drawTurtle();
 };
 
 /**
@@ -1242,9 +1031,9 @@ Artist.prototype.execute = function () {
     // First, draw a normalized version of the user's actions (ie, one which
     // doesn't vary patterns or stickers) to a dedicated context. Note that we
     // clone this.api.log so the real log doesn't get mutated
-    this.visualization.shouldDrawNormalized_ = true;
-    this.drawLogOnCanvas(this.api.log.slice(), this.visualization.ctxNormalizedScratch);
-    this.visualization.shouldDrawNormalized_ = false;
+    this.shouldDrawNormalized_ = true;
+    this.drawLogOnCanvas(this.api.log.slice(), this.ctxNormalizedScratch);
+    this.shouldDrawNormalized_ = false;
 
     // Then, reset our state and draw the user's actions in a visible, animated
     // way
@@ -1324,7 +1113,7 @@ Artist.prototype.executeTuple_ = function () {
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
     var tupleDone = this.step(command, tuple.slice(1), {smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple});
-    this.visualization.display();
+    this.display();
 
     if (tupleDone) {
       this.api.log.shift();
@@ -1431,7 +1220,7 @@ Artist.prototype.calculateSmoothAnimate = function (options, distance) {
       }
 
     } else {
-      // Going forward.
+      // Going foward.
       if (stepDistanceCovered + smoothAnimateStepSize >= fullDistance) {
         // clamp at maximum
         distance = fullDistance - stepDistanceCovered;
@@ -1467,72 +1256,65 @@ Artist.prototype.step = function (command, values, options) {
       distance = values[0];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.visualization.moveForward(result.distance);
+      this.moveForward_(result.distance);
       break;
     case 'JF':  // Jump forward
       distance = values[0];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.visualization.jumpForward(result.distance);
+      this.jumpForward_(result.distance);
       break;
     case 'MV':  // Move (direction)
       distance = values[0];
       heading = values[1];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.visualization.setHeading(heading);
-      this.visualization.moveForward(result.distance);
+      this.setHeading_(heading);
+      this.moveForward_(result.distance);
       break;
     case 'JT':  // Jump To Location
-      if (Array.isArray(values[0])) {
-        this.visualization.jumpTo(values[0]);
-      } else {
-        this.visualization.jumpTo([
-          utils.xFromPosition(values[0], CANVAS_WIDTH),
-          utils.yFromPosition(values[0], CANVAS_HEIGHT),
-        ]);
-      }
+      this.jumpTo_(values[0]);
       break;
     case 'MD':  // Move diagonally (use longer steps if showing joints)
       distance = values[0];
       heading = values[1];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.visualization.setHeading(heading);
-      this.visualization.moveForward(result.distance, true);
+      this.setHeading_(heading);
+      this.moveForward_(result.distance, true);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
       heading = values[1];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.visualization.setHeading(heading);
-      this.jumpForward(result.distance);
+      this.setHeading_(heading);
+      this.jumpForward_(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
-      this.visualization.turnByDegrees(result.distance);
+      this.turnByDegrees_(result.distance);
       break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
       alpha = Math.max(0, alpha);
       alpha = Math.min(100, alpha);
-      this.visualization.ctxScratch.globalAlpha = alpha / 100;
+      this.ctxScratch.globalAlpha = alpha / 100;
       break;
     case 'PU':  // Pen Up
-      this.visualization.penDownValue = false;
+      this.penDownValue = false;
       break;
     case 'PD':  // Pen Down
-      this.visualization.penDownValue = true;
+      this.penDownValue = true;
       break;
     case 'PW':  // Pen Width
-      this.visualization.ctxScratch.lineWidth = values[0];
+      this.ctxScratch.lineWidth = values[0];
       break;
     case 'PC':  // Pen Colour
-      this.visualization.ctxScratch.strokeStyle = values[0];
-      this.visualization.ctxScratch.fillStyle = values[0];
+      this.ctxScratch.strokeStyle = values[0];
+      this.ctxScratch.fillStyle = values[0];
       if (!this.isFrozenSkin()) {
         this.isDrawingWithPattern = false;
       }
@@ -1545,13 +1327,13 @@ Artist.prototype.step = function (command, values, options) {
       }
       break;
     case 'HT':  // Hide Turtle
-      this.visualization.avatar.visible = false;
+      this.visible = false;
       break;
     case 'ST':  // Show Turtle
-      this.visualization.avatar.visible = true;
+      this.visible = true;
       break;
     case 'sticker':
-      if (this.visualization.shouldDrawNormalized_) {
+      if (this.shouldDrawNormalized_) {
         values = Object.keys(this.stickers);
       }
 
@@ -1564,17 +1346,17 @@ Artist.prototype.step = function (command, values, options) {
       // Rotate the image such the the turtle is at the center of the bottom of
       // the image and the image is pointing (from bottom to top) in the same
       // direction as the turtle.
-      this.visualization.ctxScratch.save();
-      this.visualization.ctxScratch.translate(this.visualization.x, this.visualization.y);
-      this.visualization.ctxScratch.rotate(this.visualization.degreesToRadians_(this.visualization.heading));
-      this.visualization.ctxScratch.drawImage(img, -width / 2, -height, width, height);
-      this.visualization.ctxScratch.restore();
+      this.ctxScratch.save();
+      this.ctxScratch.translate(this.x, this.y);
+      this.ctxScratch.rotate(utils.degreesToRadians(this.heading));
+      this.ctxScratch.drawImage(img, -width / 2, -height, width, height);
+      this.ctxScratch.restore();
 
       break;
     case 'setArtist':
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
-        this.visualization.avatar = this.skin.avatarSettings;
+        this.avatar = this.skin.avatarSettings;
         this.linePatterns = this.skin.linePatterns;
         this.loadTurtle(false /* initializing */);
         this.preloadAllPatternImages().then(() => this.selectPattern());
@@ -1625,7 +1407,7 @@ Artist.prototype.selectPattern = function () {
 };
 
 Artist.prototype.setPattern = function (pattern) {
-  if (this.visualization.shouldDrawNormalized_) {
+  if (this.shouldDrawNormalized_) {
     pattern = null;
   }
 
@@ -1636,6 +1418,213 @@ Artist.prototype.setPattern = function (pattern) {
     this.currentPathPattern = new Image();
     this.isDrawingWithPattern = false;
   }
+};
+
+Artist.prototype.jumpTo_ = function (pos) {
+  let x, y;
+  if (Array.isArray(pos)) {
+    [x, y] = pos;
+  } else {
+    x = utils.xFromPosition(pos, CANVAS_WIDTH);
+    y = utils.yFromPosition(pos, CANVAS_HEIGHT);
+  }
+  this.x = Number(x);
+  this.y = Number(y);
+};
+
+Artist.prototype.jumpForward_ = function (distance) {
+  this.x += distance * Math.sin(utils.degreesToRadians(this.heading));
+  this.y -= distance * Math.cos(utils.degreesToRadians(this.heading));
+};
+
+Artist.prototype.dotAt_ = function (x, y) {
+  // WebKit (unlike Gecko) draws nothing for a zero-length line, so draw a very short line.
+  var dotLineLength = 0.1;
+  this.ctxScratch.lineTo(x + dotLineLength, y);
+};
+
+Artist.prototype.circleAt_ = function (x, y, radius) {
+  this.ctxScratch.arc(x, y, radius, 0, 2 * Math.PI);
+};
+
+Artist.prototype.drawToTurtle_ = function (distance) {
+  var isDot = (distance === 0);
+  if (isDot) {
+    this.dotAt_(this.x, this.y);
+  } else {
+    this.ctxScratch.lineTo(this.x, this.y);
+  }
+};
+
+Artist.prototype.turnByDegrees_ = function (degreesRight) {
+  this.setHeading_(this.heading + degreesRight);
+};
+
+Artist.prototype.setHeading_ = function (heading) {
+  heading = this.constrainDegrees_(heading);
+  this.heading = heading;
+};
+
+Artist.prototype.constrainDegrees_ = function (degrees) {
+  degrees %= 360;
+  if (degrees < 0) {
+    degrees += 360;
+  }
+  return degrees;
+};
+
+Artist.prototype.moveForward_ = function (distance, isDiagonal) {
+  if (!this.penDownValue) {
+    this.jumpForward_(distance);
+    return;
+  }
+  if (this.isDrawingWithPattern) {
+    this.drawForwardLineWithPattern_(distance);
+
+    // Frozen gets both a pattern and a line over the top of it.
+    if (!this.isFrozenSkin()) {
+      return;
+    }
+  }
+
+  this.drawForward_(distance, isDiagonal);
+};
+
+Artist.prototype.drawForward_ = function (distance, isDiagonal) {
+  if (this.shouldDrawJoints_()) {
+    this.drawForwardWithJoints_(distance, isDiagonal);
+  } else {
+    this.drawForwardLine_(distance);
+  }
+};
+
+/**
+ * Draws a line of length `distance`, adding joint knobs along the way at
+ * intervals of `JOINT_SEGMENT_LENGTH` if `isDiagonal` is false, or
+ * `JOINT_SEGMENT_LENGTH * sqrt(2)` if `isDiagonal` is true.
+ * @param distance
+ * @param isDiagonal
+ */
+Artist.prototype.drawForwardWithJoints_ = function (distance, isDiagonal) {
+  var remainingDistance = distance;
+  var segmentLength = JOINT_SEGMENT_LENGTH * (isDiagonal ? Math.sqrt(2) : 1);
+
+  if (remainingDistance >= segmentLength) {
+    this.drawJointAtTurtle_();
+  }
+
+  while (remainingDistance > 0) {
+    var enoughForFullSegment = remainingDistance >= segmentLength;
+    var currentSegmentLength = enoughForFullSegment ? segmentLength : remainingDistance;
+
+    remainingDistance -= currentSegmentLength;
+
+    this.drawForwardLine_(currentSegmentLength);
+
+    if (enoughForFullSegment) {
+      this.drawJointAtTurtle_();
+    }
+  }
+};
+
+Artist.prototype.drawForwardLine_ = function (distance) {
+
+  if (this.isFrozenSkin()) {
+    this.ctxScratch.beginPath();
+    this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
+    this.jumpForward_(distance);
+    this.drawToTurtle_(distance);
+    this.ctxScratch.stroke();
+  } else {
+    this.ctxScratch.beginPath();
+    this.ctxScratch.moveTo(this.x, this.y);
+    this.jumpForward_(distance);
+    this.drawToTurtle_(distance);
+    this.ctxScratch.stroke();
+  }
+
+};
+
+Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
+  var img;
+  var startX;
+  var startY;
+
+  if (this.isFrozenSkin()) {
+    this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
+    img = this.currentPathPattern;
+    startX = this.stepStartX;
+    startY = this.stepStartY;
+
+    var lineDistance = Math.abs(this.stepDistanceCovered);
+
+    this.ctxPattern.save();
+    this.ctxPattern.translate(startX, startY);
+    // increment the angle and rotate the image.
+    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+    this.ctxPattern.rotate(utils.degreesToRadians(this.heading - 90));
+
+    var clipSize;
+    if (lineDistance % this.smoothAnimateStepSize === 0) {
+      clipSize = this.smoothAnimateStepSize;
+    } else if (lineDistance > this.smoothAnimateStepSize) {
+      // this happens when our line was not divisible by smoothAnimateStepSize
+      // and we've hit our last chunk
+      clipSize = lineDistance % this.smoothAnimateStepSize;
+    } else {
+      clipSize = lineDistance;
+    }
+    if (img.width > 0 && img.height > 0 && clipSize > 0) {
+      this.ctxPattern.drawImage(img,
+        // Start point for clipping image
+        Math.round(lineDistance), 0,
+        // clip region size
+        clipSize, img.height,
+        // some mysterious hand-tweaking done by Brendan
+        Math.round((this.stepDistanceCovered - clipSize - 2)), Math.round((- 18)),
+        clipSize, img.height);
+    }
+
+    this.ctxPattern.restore();
+
+  } else {
+
+    this.ctxScratch.moveTo(this.x, this.y);
+    img = this.currentPathPattern;
+    startX = this.x;
+    startY = this.y;
+
+    this.jumpForward_(distance);
+    this.ctxScratch.save();
+    this.ctxScratch.translate(startX, startY);
+    // increment the angle and rotate the image.
+    // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+    this.ctxScratch.rotate(utils.degreesToRadians(this.heading - 90));
+
+    if (img.width !== 0) {
+      this.ctxScratch.drawImage(img,
+        // Start point for clipping image
+        0, 0,
+        // clip region size
+        distance+img.height / 2, img.height,
+        // draw location relative to the ctx.translate point pre-rotation
+        -img.height / 4, -img.height / 2,
+        distance+img.height / 2, img.height);
+    }
+
+    this.ctxScratch.restore();
+  }
+};
+
+Artist.prototype.shouldDrawJoints_ = function () {
+  return this.level.isK1 && !this.isPredrawing_;
+};
+
+Artist.prototype.drawJointAtTurtle_ = function () {
+  this.ctxScratch.beginPath();
+  this.ctxScratch.moveTo(this.x, this.y);
+  this.circleAt_(this.x, this.y, JOINT_RADIUS);
+  this.ctxScratch.stroke();
 };
 
 /**
@@ -1715,12 +1704,12 @@ Artist.prototype.checkAnswer = function () {
   // the sample answer image.
 
   var userCanvas = this.shouldSupportNormalization() ?
-      this.visualization.ctxNormalizedScratch :
-      this.visualization.ctxScratch;
+      this.ctxNormalizedScratch :
+      this.ctxScratch;
 
   var userImage = userCanvas.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var answerImage =
-      this.visualization.ctxNormalizedAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+      this.ctxNormalizedAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
   var len = Math.min(userImage.data.length, answerImage.data.length);
   var delta = 0;
@@ -1891,47 +1880,47 @@ Artist.prototype.setReportDataImage_ = function (level, reportData) {
 
 Artist.prototype.getFeedbackImage_ = function (width, height) {
 
-  var origWidth = this.visualization.ctxFeedback.canvas.width;
-  var origHeight = this.visualization.ctxFeedback.canvas.height;
+  var origWidth = this.ctxFeedback.canvas.width;
+  var origHeight = this.ctxFeedback.canvas.height;
 
-  this.visualization.ctxFeedback.canvas.width = width || origWidth;
-  this.visualization.ctxFeedback.canvas.height = height || origHeight;
+  this.ctxFeedback.canvas.width = width || origWidth;
+  this.ctxFeedback.canvas.height = height || origHeight;
 
   // Clear the feedback layer
-  this.clearImage_(this.visualization.ctxFeedback);
+  this.clearImage_(this.ctxFeedback);
 
   if (this.isFrozenSkin() && this.level.impressive) {
     // For impressive levels in frozen skins, show everything - including
     // background, characters, and pattern - along with drawing.
-    this.visualization.ctxFeedback.globalCompositeOperation = 'copy';
-    this.visualization.ctxFeedback.drawImage(this.visualization.ctxDisplay.canvas, 0, 0,
-        this.visualization.ctxFeedback.canvas.width, this.visualization.ctxFeedback.canvas.height);
+    this.ctxFeedback.globalCompositeOperation = 'copy';
+    this.ctxFeedback.drawImage(this.ctxDisplay.canvas, 0, 0,
+        this.ctxFeedback.canvas.width, this.ctxFeedback.canvas.height);
   } else {
     // Frozen free play levels must not show the character, since we don't know
     // how the drawing will look, and it could be off-brand.
-    this.drawImage_(this.visualization.ctxFeedback);
+    this.drawImage_(this.ctxFeedback);
   }
 
   // Save the canvas as a png
-  var image = this.visualization.ctxFeedback.canvas.toDataURL("image/png");
+  var image = this.ctxFeedback.canvas.toDataURL("image/png");
 
   // Restore the canvas' original size
-  this.visualization.ctxFeedback.canvas.width = origWidth;
-  this.visualization.ctxFeedback.canvas.height = origHeight;
+  this.ctxFeedback.canvas.width = origWidth;
+  this.ctxFeedback.canvas.height = origHeight;
 
   return image;
 };
 
 /**
- * Renders the artist's image onto a canvas. Relies on this.visualization.ctxImages,
- * this.visualization.ctxPredraw, and this.visualization.ctxScratch to have already been drawn.
+ * Renders the artist's image onto a canvas. Relies on this.ctxImages,
+ * this.ctxPredraw, and this.ctxScratch to have already been drawn.
  * @returns {HTMLCanvasElement} A canvas containing the thumbnail.
  * @private
  */
 Artist.prototype.getThumbnailCanvas_ = function () {
-  this.clearImage_(this.visualization.ctxThumbnail);
-  this.drawImage_(this.visualization.ctxThumbnail);
-  return this.visualization.ctxThumbnail.canvas;
+  this.clearImage_(this.ctxThumbnail);
+  this.drawImage_(this.ctxThumbnail);
+  return this.ctxThumbnail.canvas;
 };
 
 Artist.prototype.clearImage_ = function (context) {
@@ -1946,19 +1935,28 @@ Artist.prototype.drawImage_ = function (context) {
   // Draw the images layer.
   if (!this.level.discardBackground) {
     context.globalCompositeOperation = 'source-over';
-    context.drawImage(this.visualization.ctxImages.canvas, 0, 0,
+    context.drawImage(this.ctxImages.canvas, 0, 0,
       context.canvas.width, context.canvas.height);
   }
 
   // Draw the predraw layer.
   context.globalCompositeOperation = 'source-over';
-  context.drawImage(this.visualization.ctxPredraw.canvas, 0, 0,
+  context.drawImage(this.ctxPredraw.canvas, 0, 0,
     context.canvas.width, context.canvas.height);
 
   // Draw the user layer.
   context.globalCompositeOperation = 'source-over';
-  context.drawImage(this.visualization.ctxScratch.canvas, 0, 0,
+  context.drawImage(this.ctxScratch.canvas, 0, 0,
     context.canvas.width, context.canvas.height);
+};
+
+// Helper for creating canvas elements.
+Artist.prototype.createCanvas_ = function (id, width, height) {
+  var el = document.createElement('canvas');
+  el.id = id;
+  el.width = width;
+  el.height = height;
+  return el;
 };
 
 /**
@@ -1967,7 +1965,7 @@ Artist.prototype.drawImage_ = function (context) {
 * is what this does.
 */
 Artist.prototype.resetStepInfo_ = function () {
-  this.stepStartX = this.visualization.x;
-  this.stepStartY = this.visualization.y;
+  this.stepStartX = this.x;
+  this.stepStartY = this.y;
   this.stepDistanceCovered = 0;
 };
