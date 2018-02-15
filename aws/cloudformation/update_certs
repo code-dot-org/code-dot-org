@@ -2,7 +2,7 @@
 #
 # Creates/updates LetsEncrypt SSL certificates stored in S3 using acmesmith.
 # Ref: https://github.com/sorah/acmesmith
-# Usage: update_certs [domain]
+# Usage: update_certs COMMON_NAME [SAN_1] [SAN_2] [...]
 #
 # Prerequisites:
 # - AWS credentials provided by the environment with appropriate access policies
@@ -12,17 +12,17 @@
 require_relative '../../deployment'
 require 'acmesmith/command'
 
-unless ARGV.length == 1
-  puts "Usage: #{$0} [domain]"
+unless ARGV.length >= 1
+  puts "Usage: #{$0} common_name [san_1] [san_2] [...]"
   exit 1
 end
 
-domain = ARGV[0]
+common_name = ARGV[0]
+required_certs = ARGV.dup
 begin
-  Acmesmith::Command.start ['current', domain]
+  Acmesmith::Command.start ['current', common_name]
 rescue => _
-  required_certs = ['', 'dashboard-', 'origin-'].map {|prefix| prefix + domain}
-  CDO.log.info "Authorizing SSL certificates for subdomain: #{domain}"
+  CDO.log.info "Authorizing SSL certificates for #{common_name}"
   required_certs.each do |auth|
     Acmesmith::Command.start ['authorize', auth]
   end
