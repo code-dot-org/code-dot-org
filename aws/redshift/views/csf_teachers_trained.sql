@@ -10,12 +10,14 @@ SELECT DISTINCT f.student_user_id user_id, date_trunc('month', se.created_at)::d
        ON se.id = f.section_id
     WHERE se.section_type = 'csf_workshop'
     UNION ALL
-    SELECT DISTINCT pde.user_id, pdw.started_at::date trained_at
+    SELECT DISTINCT pde.user_id, pds.start::date trained_at
     FROM dashboard_production_pii.pd_enrollments pde
      JOIN dashboard_production_pii.pd_attendances pda 
        ON pda.pd_enrollment_id = pde.id
      JOIN dashboard_production_pii.pd_workshops pdw 
        ON pdw.id = pde.pd_workshop_id
+     JOIN dashboard_production_pii.pd_sessions pds 
+       ON pds.pd_workshop_id = pdw.id
     WHERE course = 'CS Fundamentals'
 )
 group by 1;
