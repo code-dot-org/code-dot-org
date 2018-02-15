@@ -37,11 +37,17 @@ export default class FitWeekend1819Registration extends FormController {
    * @override
    */
   getPageComponents() {
-    return [
-      Joining,
-      TravelPlans,
-      Releases
-    ];
+    if (this.state.data.ableToAttend === 'Yes') {
+      return [
+        Joining,
+        TravelPlans,
+        Releases
+      ];
+    } else {
+      return [
+        Joining
+      ];
+    }
   }
 
   /**
