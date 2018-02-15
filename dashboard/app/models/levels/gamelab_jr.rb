@@ -54,6 +54,10 @@ class GamelabJr < Gamelab
 <category name="Variables" custom="VARIABLE" />
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
+  <block type="gamelab_moveUp" />
+  <block type="gamelab_moveDown" />
+  <block type="gamelab_moveLeft" />
+  <block type="gamelab_moveRight" />
 </category>
 <category name="Math">
   <block type="math_number" />
