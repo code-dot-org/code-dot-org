@@ -1,5 +1,6 @@
 class VideosController < ApplicationController
   before_action :authenticate_user!, except: [:test, :embed]
+  before_action :require_levelbuilder_mode, except: [:test, :embed, :index]
   check_authorization except: [:test, :embed]
   load_and_authorize_resource except: [:test, :embed]
   after_action :allow_iframe, only: :embed
