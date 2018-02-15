@@ -198,6 +198,8 @@ class Visualization {
     // Internal state.
     this.turtleFrame_ = 0;
     this.isPredrawing_ = false;
+    this.currentPathPattern = new Image();
+    this.isDrawingWithPattern = false;
 
     // This flag is used to draw a version of code (either user code or solution
     // code) that normalizes patterns and stickers to always use the "first"
@@ -424,7 +426,7 @@ class Visualization {
       this.drawForwardLineWithPattern_(distance);
 
       // Frozen gets both a pattern and a line over the top of it.
-      if (!this.isFrozenSkin()) {
+      if (!this.isFrozenSkin) {
         return;
       }
     }
@@ -490,7 +492,7 @@ class Visualization {
     var startX;
     var startY;
 
-    if (this.isFrozenSkin()) {
+    if (this.isFrozenSkin) {
       this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
       img = this.currentPathPattern;
       startX = this.stepStartX;
@@ -538,7 +540,7 @@ class Visualization {
       this.ctxScratch.save();
       this.ctxScratch.translate(startX, startY);
       // increment the angle and rotate the image.
-      // Need to subtract 90 to accomodate difference in canvas vs. Turtle direction
+      // Need to subtract 90 to accommodate difference in canvas vs. Turtle direction
       this.ctxScratch.rotate(this.degreesToRadians_(this.heading - 90));
 
       if (img.width !== 0) {
@@ -595,9 +597,7 @@ var Artist = function () {
   this.decorationAnimationImage = new Image();
 
   // Drawing with a pattern
-  this.currentPathPattern = new Image();
   this.loadedPathPatterns = [];
-  this.isDrawingWithPattern = false;
   this.linePatterns = [];
 
   // these get set by init based on skin.
@@ -1369,7 +1369,7 @@ Artist.prototype.animate = function () {
 
   // when smoothAnimate is true, we divide long steps into partitions of this
   // size.
-  this.smoothAnimateStepSize = (stepSpeed === 0 ?
+  this.visualization.smoothAnimateStepSize = (stepSpeed === 0 ?
     FAST_SMOOTH_ANIMATE_STEP_SIZE : SMOOTH_ANIMATE_STEP_SIZE);
 
   if (this.level.editCode &&
@@ -1412,11 +1412,11 @@ Artist.prototype.animate = function () {
 
 Artist.prototype.calculateSmoothAnimate = function (options, distance) {
   var tupleDone = true;
-  var stepDistanceCovered = this.stepDistanceCovered;
+  var stepDistanceCovered = this.visualization.stepDistanceCovered;
 
   if (options && options.smoothAnimate) {
     var fullDistance = distance;
-    var smoothAnimateStepSize = this.smoothAnimateStepSize;
+    var smoothAnimateStepSize = this.visualization.smoothAnimateStepSize;
 
     if (fullDistance < 0) {
       // Going backward.
@@ -1444,7 +1444,7 @@ Artist.prototype.calculateSmoothAnimate = function (options, distance) {
     }
   }
 
-  this.stepDistanceCovered = stepDistanceCovered;
+  this.visualization.stepDistanceCovered = stepDistanceCovered;
 
   return { tupleDone: tupleDone, distance: distance };
 };
@@ -1534,7 +1534,7 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.ctxScratch.strokeStyle = values[0];
       this.visualization.ctxScratch.fillStyle = values[0];
       if (!this.isFrozenSkin()) {
-        this.isDrawingWithPattern = false;
+        this.visualization.isDrawingWithPattern = false;
       }
       break;
     case 'PS':  // Pen style with image
@@ -1630,11 +1630,11 @@ Artist.prototype.setPattern = function (pattern) {
   }
 
   if (this.loadedPathPatterns[pattern]) {
-    this.currentPathPattern = this.loadedPathPatterns[pattern];
-    this.isDrawingWithPattern = true;
+    this.visualization.currentPathPattern = this.loadedPathPatterns[pattern];
+    this.visualization.isDrawingWithPattern = true;
   } else if (pattern === null) {
-    this.currentPathPattern = new Image();
-    this.isDrawingWithPattern = false;
+    this.visualization.currentPathPattern = new Image();
+    this.visualization.isDrawingWithPattern = false;
   }
 };
 
@@ -1967,7 +1967,7 @@ Artist.prototype.drawImage_ = function (context) {
 * is what this does.
 */
 Artist.prototype.resetStepInfo_ = function () {
-  this.stepStartX = this.visualization.x;
-  this.stepStartY = this.visualization.y;
-  this.stepDistanceCovered = 0;
+  this.visualization.stepStartX = this.visualization.x;
+  this.visualization.stepStartY = this.visualization.y;
+  this.visualization.stepDistanceCovered = 0;
 };
