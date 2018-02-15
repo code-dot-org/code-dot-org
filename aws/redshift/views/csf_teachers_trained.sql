@@ -16,7 +16,8 @@ SELECT DISTINCT f.student_user_id user_id, date_trunc('month', se.created_at)::d
        ON pda.pd_enrollment_id = pde.id
      JOIN dashboard_production_pii.pd_workshops pdw 
        ON pdw.id = pde.pd_workshop_id
-     JOIN dashboard_production_pii.pd_sessions pds on pds.pd_workshop_id = pdw.id
+     JOIN dashboard_production_pii.pd_sessions pds 
+       ON pds.pd_workshop_id = pdw.id
     WHERE course = 'CS Fundamentals'
 )
 group by 1;
