@@ -45,7 +45,7 @@
         - page.levels.each_with_index do |level, index|
           -# Don't show last attempt for submitted surveys, even for the current user, otherwise teachers
           -# could access student responses
-          - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level) unless submitted_survey
+          - sublevel_last_attempt = LevelGroup.get_sublevel_last_attempt(current_user, @user, level, @script) unless submitted_survey
 
           -# Show any text from an external level.
           - if data["texts"]

@@ -44,7 +44,6 @@ linters:
       - "pegasus/sites.v3/code.org/views/about_advisors.haml"
       - "pegasus/sites.v3/code.org/views/contributors.haml"
       - "pegasus/sites.v3/code.org/views/stats_homepage.haml"
-      - "pegasus/sites.v3/code.org/views/video_cast.haml"
 
   # Offense count: 1858
   SpaceBeforeScript:

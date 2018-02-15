@@ -835,15 +835,18 @@
   dashboard_course1: "コース1"
   dashboard_course2: "コース2"
   dashboard_course3: "コース3"
-  dashboard_course4: "コース4："
-  dashboard_coursea: "コース A："
-  dashboard_courseb: "コース B："
-  dashboard_coursec: "コース C："
-  dashboard_coursed: "コース D："
-  dashboard_coursee: "コース E："
-  dashboard_coursef: "コース F："
+  dashboard_course4: "コース4： "
+  dashboard_coursea: "コース A： "
+  dashboard_courseb: "コース B： "
+  dashboard_coursec: "コース C： "
+  dashboard_coursed: "コース D： "
+  dashboard_coursee: "コース E： "
+  dashboard_coursef: "コース F： "
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "コンピューターが無い場合は、 <a href='%{unplugged_url}'> コンピューター不要のレッスン</a>
     を教室で試してください。"
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "カリキュラム"
   dashboard_curriculum_overview: K 5 カリキュラム概要
   dashboard_overview: "概要"
@@ -861,6 +864,8 @@
   dashboard_curriculum_csins: "理科とコンピュータサイエンス:"
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: "コンピュータサイエンスの世界を探検する:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: "その他"
   dashboard_login_word: "単語"
@@ -1105,6 +1110,7 @@
   cspexams_category_name: "コンピューター・サイエンス原理実習テスト"
   research_studies_category_name: Research Studies
   applab_name: "アプリ ラボ"
+  gamelab_name: "ゲーム ラボ"
   basketball_name: "バスケット ボールのゲームを作る"
   sports_name: Code your own sports game
   applab_gradelevel: 13才以上
@@ -1662,9 +1668,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
