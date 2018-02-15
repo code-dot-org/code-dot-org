@@ -25,7 +25,7 @@
   submit: "Invia"
   twentyhours_heading: "Prova la nostra introduzione all'Informatica"
   twentyhours_text: "Hai terminato la tua prima Ora del Codice? Impara un altro po' di concetti di informatica e di programmazione in quest'altro corso."
-  og_title: Ogni bambino merita un'opportunità
+  og_title: 'Ogni bambino merita un''opportunità'
   og_title_soon: "L'Ora del Codice è in arrivo"
   og_title_here: "L'Ora del Codice è qui!"
   og_description: "Ogni studente di ogni scuola merita l'opportunità di studiare informatica."
@@ -625,7 +625,7 @@
   dashboard_course_csins: "Informatica nelle scienze"
   dashboard_course_csins_desc: "Code.org ha collaborato con Project GUTS per fornire un'introduzione ai concetti di informatica all'interno di contesti di modellazione e simulazione."
   dashboard_course_ecs: "Esplorando l'Informatica"
-  dashboard_course_ecs_desc: Esplorare l'Informatica in un corso annuale costituito da 6 unità. Interazione Uomo-Computer, Risoluzione Problemi, Web Design, Programmazione, Elaborazione ed Analisi dei Dati e Robotica.
+  dashboard_course_ecs_desc: 'Esplorare l''Informatica in un corso annuale costituito da 6 unità. Interazione Uomo-Computer, Risoluzione Problemi, Web Design, Programmazione, Elaborazione ed Analisi dei Dati e Robotica.'
   dashboard_course_csp: "Principi di informatica ® AP"
   dashboard_course_csp_desc: "I corsi di Code.org sono stati progettati in modo rigoroso, coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti dell'informatica."
   dashboard_landing_loading: "Sto caricando..."
@@ -768,7 +768,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Corso Rapido pre-scolare: '
+  dashboard_express: 'Corso Rapido: '
   dashboard_unplugged: "Se non hai un computer, <a href='%{unplugged_url}'>usa queste lezioni tradizionali</a> nella tua classe."
+  dashboard_tools: 'Strumenti: '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
   dashboard_overview: "Panoramica"
@@ -786,6 +789,8 @@
   dashboard_curriculum_csins: 'Informatica nelle Scienze:'
   dashboard_curriculum_csp: 'Principi di informatica ® AP:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
+  dashboard_curriculum_csd: 'Alla Scoperta dell''Informatica (scuole medie - in inglese): '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "livello"
   dashboard_grade_other: "Altro"
   dashboard_login_word: "Parola"
@@ -854,7 +859,7 @@
   carousel_heading_international: "Corsi nella tua lingua"
   carousel_heading_domestic: "Corsi disponibili in Inglese"
   carousel_heading_beginners: "Corsi per principianti"
-  carousel_heading_beyond_beginners: Tutorial per principianti
+  carousel_heading_beyond_beginners: 'Tutorial per principianti'
   carousel_heading_javascript: "Lezioni che insegnano il linguaggio Javascript"
   carousel_heading_beyond_javascript: "Tutorial che insegnano JavaScript"
   carousel_heading_unplugged: "Non hai Internet o dispositivi informatici? Prova l'informatica con mezzi tradizionali!"
@@ -956,11 +961,11 @@
   accelerated_name: "Corso rapido"
   express_name: "Corso Rapido"
   pre-express_name: Corso Rapido pre-scolare
-  cspunit1_name: Princìpi dell'Informatica - Unità 1
-  cspunit2_name: Princìpi dell'Informatica - Unità 2
-  cspunit3_name: Princìpi dell'Informatica - Unità 3
-  cspunit4_name: Princìpi dell'Informatica - Unità 4
-  cspunit5_name: Princìpi dell'Informatica - Unità 5
+  cspunit1_name: "Princìpi dell'Informatica - Unità 1"
+  cspunit2_name: "Princìpi dell'Informatica - Unità 2"
+  cspunit3_name: "Princìpi dell'Informatica - Unità 3"
+  cspunit4_name: "Princìpi dell'Informatica - Unità 4"
+  cspunit5_name: "Princìpi dell'Informatica - Unità 5"
   cspunit6_name: 'Dopo il corso Princìpi dell''Informatica: uso di database nelle App'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1009,6 +1014,7 @@
   cspexams_category_name: "Prova pratica di principi d'informatica"
   research_studies_category_name: "Research Studies"
   applab_name: "Sviluppo App"
+  gamelab_name: "Sviluppo Giochi"
   basketball_name: "Crea una partita di basket"
   sports_name: "Programma il tuo sport"
   applab_gradelevel: "Da 13 anni in su"
@@ -1072,7 +1078,7 @@
   coursec_gradelevel: "Grade 7+"
   coursed_gradelevel: "Classi 8+"
   coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursef_gradelevel: "Da 15 anni in su"
   accelerated_gradelevel: "Da 10 anni in su (dopo il Corso 3)"
   codeorg_platformtext: "Browser moderni, smartphone, Tablet"
   codeintl_platformtext: "Browser moderni, smartphone, Tablet"

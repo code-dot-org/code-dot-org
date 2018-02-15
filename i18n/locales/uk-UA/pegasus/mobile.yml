@@ -25,7 +25,7 @@
   submit: "Надіслати"
   twentyhours_heading: "Спробуйте наш курс вступу до інформатики"
   twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні поняття комп'ютерних наук та програмування на подальших курсах."
-  og_title: Програмування є основоположним
+  og_title: 'Програмування є основоположним'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Технології змінюють все. Кожен учень у кожній школі заслуговує на те, щоб мати можливість вивчати інформатику."
@@ -771,7 +771,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте ці безмашинні вправи</a> у своєму класі."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Навчальний план"
   dashboard_curriculum_overview: "Огляд навчальної програми"
   dashboard_overview: "Огляд"
@@ -789,6 +792,8 @@
   dashboard_curriculum_csins: 'Інформатика в науці:'
   dashboard_curriculum_csp: 'AP® принципи інформатики:'
   dashboard_curriculum_ecs: 'Вивчення інформатики:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Kлас"
   dashboard_grade_other: "Інше"
   dashboard_login_word: "Слово"
@@ -857,7 +862,7 @@
   carousel_heading_international: "Підручники вашою мовою"
   carousel_heading_domestic: "Підручники англійською мовою"
   carousel_heading_beginners: "Посібники для середніх класів від партнерів"
-  carousel_heading_beyond_beginners: Посібники для початківців
+  carousel_heading_beyond_beginners: 'Посібники для початківців'
   carousel_heading_javascript: "Посібники з вивчення Javascript"
   carousel_heading_beyond_javascript: "Посібники з вивчення JavaScript"
   carousel_heading_unplugged: "Немає пристроїв або Інтернету? Спробуйте безмашинні вправи"
@@ -959,11 +964,11 @@
   accelerated_name: "Прискорений курс"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'Розділ 1: Цифрова інформація'
-  cspunit2_name: 'Розділ 2: Інтернет'
-  cspunit3_name: 'Розділ 3: Програмування'
-  cspunit4_name: 'Розділ 4: Дані'
-  cspunit5_name: 'Розділ 5: Дослідження та створення PT'
+  cspunit1_name: "Розділ 1: Цифрова інформація"
+  cspunit2_name: "Розділ 2: Інтернет"
+  cspunit3_name: "Розділ 3: Програмування"
+  cspunit4_name: "Розділ 4: Дані"
+  cspunit5_name: "Розділ 5: Дослідження та створення PT"
   cspunit6_name: 'Після-АР: Бази даних у програмах'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1012,6 +1017,7 @@
   cspexams_category_name: "Практичний тест з принципів інформатики"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Ігрова лабораторія"
   basketball_name: "Зроби гру в баскетбол"
   sports_name: "Закодуй власну спортивну гру"
   applab_gradelevel: "Вік 13+"

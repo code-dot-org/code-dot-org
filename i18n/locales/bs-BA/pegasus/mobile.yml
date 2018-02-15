@@ -641,7 +641,7 @@
   dashboard_assessments_summaries: "Assessment summaries"
   dashboard_assessments_answers: "All assessment answers"
   dashboard_surveys_answers: "Surveys"
-  dashboard_percent: "Percent"
+  dashboard_percent: "Postotak"
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: "All"
   dashboard_download_csv: "Download CSV"
@@ -699,7 +699,7 @@
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: "6-character code (ABCDEF)"
-  dashboard_sections_other_section: "Other Teacher"
+  dashboard_sections_other_section: "Drugi učitelj"
   dashboard_sections_both_sections: "Would you like the student(s) to be in both sections?"
   dashboard_sections_yes_both: "Yes, I want to copy student(s) to be in this current section AND the new section"
   dashboard_sections_no_move: "No, I want to move student(s) to be in the new section only."
@@ -761,7 +761,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Nastavni plan"
   dashboard_curriculum_overview: "Pregled nastavnog plana razredne nastave"
   dashboard_overview: "Pregled"
@@ -779,6 +782,8 @@
   dashboard_curriculum_csins: 'Ralunarstvo u Nauci:'
   dashboard_curriculum_csp: 'AP® Principi Računarstva:'
   dashboard_curriculum_ecs: 'Istraživajući Računarstvo:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "predškolski"
   dashboard_grade_other: "Ostalo"
   dashboard_login_word: "Riječ"
@@ -793,7 +798,7 @@
   dashboard_correctness_free_response: "Free response"
   dashboard_correctness_unsubmitted: "Unsubmitted"
   dashboard_correctness_correct: "Ispravno"
-  dashboard_correctness_incorrect: "Incorrect"
+  dashboard_correctness_incorrect: "Netačno"
   dashboard_submission_submitted: "Submitted"
   dashboard_submission_in_progress: "In progress"
   dashboard_status: "Status"
@@ -847,7 +852,7 @@
   carousel_heading_international: "Tutorijali i na tvom jeziku"
   carousel_heading_domestic: "Tutorijali dostupni na engleskom"
   carousel_heading_beginners: "Tutorijali za početnike"
-  carousel_heading_beyond_beginners: Tutorijali za početnike
+  carousel_heading_beyond_beginners: 'Tutorijali za početnike'
   carousel_heading_javascript: "JavaScript Tutorijali"
   carousel_heading_beyond_javascript: "JavaScript Tutorijali"
   carousel_heading_unplugged: "Nemate uređaj ili Internet? Isprobajte 'odspojeno' računarstvo"
@@ -860,7 +865,7 @@
   carousel_heading_webpages: "Nauči praviti web stranice"
   carousel_heading_robots: "Nauči programirati robote"
   carousel_heading_ide: "Platforme popularne među nastavnicima"
-  carousel_heading_desktop: "Learn to code on a computer"
+  carousel_heading_desktop: "Naučite da kodirate na računaru"
   carousel_heading_mobtabelem: "For phones and tablets"
   carousel_heading_prereader: "For pre-readers"
   carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
@@ -936,8 +941,8 @@
   course4_name: "Kurs 4"
   coursea-draft_name: Kurs A
   coursea_name: "Kurs A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
+  courseb-draft_name: Kurs B
+  courseb_name: "Kurs B"
   coursec-draft_name: Course C
   coursec_name: "Course C"
   coursed-draft_name: Course D
@@ -949,11 +954,11 @@
   accelerated_name: "Ubrzani Kurs"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1002,6 +1007,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratorij za Aplikacije"
+  gamelab_name: "Game Lab"
   basketball_name: "Napravi igru košarke"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"
@@ -1425,23 +1431,23 @@
   header_sections: "Sections"
   header_professional_learning: "Professional Learning"
   header_educate_overview: "Educator Overview"
-  header_educate_elementary: "Elementary School"
+  header_educate_elementary: "Osnovna škola"
   header_educate_middle: "Middle School"
-  header_educate_high: "High School"
+  header_educate_high: "Srednja škola"
   header_educate_hoc: "Sat Kodiranja"
   header_educate_partner: "Partner sa nama"
   header_educate_beyond: "Beyond Code.org"
   header_educate_inspire: "Inspiriraj učenika"
   header_educate_community: "Online Community"
   header_educate_tools: "Tools and Videos"
-  header_about_us: "About Us"
+  header_about_us: "O nama"
   header_about_leadership: "Leadership"
   header_about_donors: "Donatori"
   header_about_partners: "Partners"
   header_about_team: "Full Team"
   header_about_news: "Newsroom"
   header_about_evaluation: "Evaluation"
-  header_about_jobs: "Jobs"
+  header_about_jobs: "Poslovi"
   header_about_contact: "Contact Us"
   header_about_faqs: "FAQs"
   header_learn: "Learn"
@@ -1453,7 +1459,7 @@
   header_help_support: 'Pomoć i podrška '
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
+  header_documentation: "Dokumentacija"
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"

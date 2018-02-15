@@ -79,8 +79,8 @@ tr:
         'turtle_1_1': "Merhaba , ben bir sanatçıyım. İstediğin herhangi bir şeyi çizmek için beni programlayabilirsin. Resimdeki gri çizgileri çizdirmek için bir kaç blok kullan."
         'turtle_1_2': "Şimdi bir kare çiz. Not: Bunu \"rengi belirle\" bloğunda en sevdiğin rengi seçerek yapabilirsin."
         'turtle_1_3': "Sadece 3 blok kullanarak bir kare yapın."
-        'turtle_1_4': "Her seferinde farklı bir renk alan \"rastgele renk\" seçeneğini kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar uzağa dönmeniz gerektiğini dönüş blogundaki numaraya tıklayarak bulmanız gerek."
-        'turtle_1_5': "Şimdi, uygulama için bir üçgen ve sonra bir zarf çizmek için bir kare çizin."
+        'turtle_1_4': "Her seferinde farklı bir renk alan \"rastgele renk\" seçeneğini kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar uzağa dönmeniz gerektiğini dönüş bloğundaki numaraya tıklayarak bulmanız gerek."
+        'turtle_1_5': "Şimdi, bir üçgen ve sonra bir kare çizerek zarf oluşturun."
         'turtle_1_6': "Bir karenin ve bir üçgenin nasıl çizileceğini anlayabildiniz mi? İpucu: Önce üçgeni çizin, sonra kare çizmeden önce kaç kez dönmeniz gerektiğini bulun."
         'turtle_1_7': "Hadi biraz daha zorlaştıralım - yeşil gözlükleri çizip çizemeyeceğinizi görelim. Her köşede bulunan kareler 100 piksel büyüklüğünde birbirlerinden 50 piksel uzaklıktadır. Çizgilerinizi yeşik renk ile çizmeyi unutmayın!"
         'turtle_1_8': "Tamam, bu kodu çalıştırıdığınızda ne olduğunu görelim (ya da \"Çalıştır\" düğmesini tıklayın). O halde, çizimi tamalamak için yeteri kadar tekrar edin. Renkler her defasında farkı olsun."
@@ -396,7 +396,7 @@ tr:
         'C4_unplugged_forloops': 'For Döngüleri'
         'C4_unplugged_parameters': 'Parametrelerle Şarkı Yazmak'
         'C4_unplugged_binary': 'İkili'
-        'CSF_a_b_artist_loops': 'Loops in Artist'
+        'CSF_a_b_artist_loops': 'Sanatçıların Döngüleri'
         'CSF_artist_angles': 'Sanatçı açılarda'
         'CSF_collector_k1_blocks': 'Bilgisayar bilimleri Temelleri: Toplayıcı'
         'CSF_collector_repeat_loops': 'Toplayıcı tekrarlama döngüleri'

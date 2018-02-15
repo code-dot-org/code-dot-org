@@ -25,7 +25,7 @@
   submit: "Odeslat"
   twentyhours_heading: "Vyzkoušej si náš kurz Úvod do Informatiky"
   twentyhours_text: "Dokončil jsi svou první Hodinu kódu? Nauč se více o informatice a programovacích pojmech v  následujícím kurzu."
-  og_title: Každé dítě si zaslouží příležitost
+  og_title: 'Každé dítě si zaslouží příležitost'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Každý student v každé škole si zaslouží možnost studovat informatiku."
@@ -764,7 +764,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Pokud nemáte přístup k počítačům, vyzkoušejte ve třídě tyto <a href='%{unplugged_url}'>lekce bez počítače</a>."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Kurikulum"
   dashboard_curriculum_overview: "Přehled učiva 1. stupně ZŠ"
   dashboard_overview: "Přehled"
@@ -782,6 +785,8 @@
   dashboard_curriculum_csins: 'Informatika ve vědě:'
   dashboard_curriculum_csp: 'AP ® Informatika principy:'
   dashboard_curriculum_ecs: 'Zkoumání informatiky:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Ostatní"
   dashboard_login_word: "Slovo"
@@ -850,7 +855,7 @@
   carousel_heading_international: "Výuka ve tvém jazyce"
   carousel_heading_domestic: "Kurzy dostupné v angličtině"
   carousel_heading_beginners: "Kurzy pro začátečníky"
-  carousel_heading_beyond_beginners: Kurzy pro začátečníky
+  carousel_heading_beyond_beginners: 'Kurzy pro začátečníky'
   carousel_heading_javascript: "Kurzy, které učí Javascript"
   carousel_heading_beyond_javascript: "Kurzy, které učí Javascript"
   carousel_heading_unplugged: "Žádné zařízení nebo internet? Zkuste informatiku \"unplugged\""
@@ -952,11 +957,11 @@
   accelerated_name: "Zrychlený kurz"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '1. lekce: Digitální informace'
-  cspunit2_name: '2. lekce: Internet'
-  cspunit3_name: '3. lekce: Programování'
-  cspunit4_name: '4. lekce: Data'
-  cspunit5_name: '5. lekce: Prozkoumejte a vytvořte projekt'
+  cspunit1_name: "1. lekce: Digitální informace"
+  cspunit2_name: "2. lekce: Internet"
+  cspunit3_name: "3. lekce: Programování"
+  cspunit4_name: "4. lekce: Data"
+  cspunit5_name: "5. lekce: Prozkoumejte a vytvořte projekt"
   cspunit6_name: 'Po testu: Databáze v aplikacích'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1005,6 +1010,7 @@
   cspexams_category_name: "Praktický test z principů informatiky"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Game Lab"
   basketball_name: "Vytvoř basketbalovou hru"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Věk 13 +"
