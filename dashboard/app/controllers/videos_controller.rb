@@ -4,7 +4,7 @@ class VideosController < ApplicationController
   load_and_authorize_resource except: [:test, :embed]
   after_action :allow_iframe, only: :embed
 
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:edit, :update, :destroy]
 
   def test
     @video = Video.first
@@ -31,9 +31,6 @@ class VideosController < ApplicationController
     @videos = Video.all
   end
 
-  def show
-  end
-
   def new
     @video = Video.new
   end
@@ -44,15 +41,7 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
 
-    respond_to do |format|
-      if @video.save
-        format.html {redirect_to @video, notice: I18n.t('crud.created', Video.model_name.human)}
-        format.json {render action: 'show', status: :created, location: @video}
-      else
-        format.html {render action: 'new'}
-        format.json {render json: @video.errors, status: :unprocessable_entity}
-      end
-    end
+    redirect_to videos_path
   end
 
   # PATCH/PUT /videos/1
