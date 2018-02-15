@@ -86,7 +86,7 @@ export default class TravelPlans extends LabeledFormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsWithAdditionalTextFieldsFor("dietaryNeeds", {
+          {this.checkBoxesWithAdditionalTextFieldsFor("dietaryNeeds", {
             "Food Allergy (please list):": "food_allergy_details"
           })}
         </FormGroup>
