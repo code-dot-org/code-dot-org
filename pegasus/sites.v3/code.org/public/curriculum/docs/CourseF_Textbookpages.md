@@ -200,4 +200,112 @@ Coming your way- ways to store information in your program so you can reuse it l
 
 ### What is a variable?
 
-Imagine you are writing a program to 
+Imagine you are trying to write a program that adds two numbers together. It would be no fun if the program added the same two numbers together every time. If we have a way to tell the program to always add the first number to the second number, no matter what the numbers are, wouldn't that be helpful?
+
+**A variable is a placeholder for a piece of information that can change.** Variables can be helpful when you don't know what certain information will be until you press Run and the user is interacting with your program. They can also be helpful if you have lots of places that one piece of information will be used, but the information might change someday. 
+
+In order to use a variable, it needs a name and a value. The name never changes, but the value can. This way you can just use the name of the variable as a placeholder wherever you want in your program! Now, when the value changes, you only have to change the value in one place. Here is an example of when you would use a variable in Artist:
+
+<xml>Set length to 100</xml><xml>Move forward by length pixels</xml>
+
+#### Words to Know
+
+Variable
+
+- A placeholder for a piece of information that can change
+
+#### Up Next
+
+Repeat loops- but with more control.
+
+------
+
+12. For Loops
+
+------
+
+### What is a for loop?
+
+Sometimes you might want to repeat things over and over, but also want to keep track of how many time you have repeated it already. Sometimes, you don't want to start at one and count by ones. This new kind of repeat loop will give you more control of when your loop starts, when it ends, and what it should increase by every time it runs.
+
+**For loops are loops where you set the beginning, end, and step values.** This is what a for loop looks like in this lesson:
+
+![](https://code.org/curriculum/course4/8/loop.png)
+
+*For*tunately, for loops will make solving puzzles like this really easy!
+
+<screengrab or gif>https://studio.code.org/s/coursef/stage/19/puzzle/5 puzzle </gif>
+
+#### Words to Know
+
+For Loop
+
+- For loops are loops that have a predetermined beginning, end, and increment (step interval)
+
+#### Up Next
+
+You will get to learn how to make... drumroll please... your own blocks!
+
+------
+
+22. Functions
+
+------
+
+### What is a function?
+
+Have you ever wanted to create your own blocks? Today is your lucky day! You will learn how to create your own blocks, and define what should happen when each block is run. 
+
+**A function is a piece of code that you can use over and over again.** There are two different parts to a function:
+
+1. Create a newly named block that has all of the code you want to run inside it
+
+   <xml> gray function box with green "do something" function inside, some blue do something block inside that </xml>
+
+2. The single green block that you can use, or "call", to run the function you created
+
+   <xml> single green "do something" block in between two move forward blocks</xml>
+
+Functions are really helpful in computer science because you get to define what happens when you call it, and you can call it from anywhere in your program! You can put whatever you need to inside of functions, including: loops, actions, conditionals, and sometimes even *other functions*!
+
+Prepare to have so much fun with *fun*ctions!
+
+#### Words to Know
+
+Function
+
+- A named group of programming instructions. Functions are reusable abstractions that reduce the complexity of writing and maintaining programs
+
+#### Up Next
+
+Functions: leveled up!
+
+------
+
+15. Functions with Parameters
+
+------
+
+### What is a parameter?
+
+Now that you know all about functions, what if you wanted to customize it some more? Imagine that you want to create a function that will draw triangles. You want to draw lots of triangles, but in different colors. Right now, you would have to make a separate function for each different colored triangle. Parameters will help us fix this problem!
+
+**A parameter is an extra piece of information passed to a function to customize it for a specific need.** To help us use parameters, we now have a new function editor:
+
+<gif> function editor opening with draw triangle, color parameter </gif>
+
+Now, when you call your function, you need to define the parameter, like this:
+
+<gif> green draw triangle function block with color block being passed in</gif>
+
+Have fun parading around your new tool: *para*meters!
+
+#### Words to Know
+
+Function
+
+- A named group of programming instructions
+
+Parameter
+
+- An extra piece of information passed to a function to customize it for a specific need

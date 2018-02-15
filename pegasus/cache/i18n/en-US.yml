@@ -9,7 +9,7 @@
   upgrade_ie_link: "Learn more"
   en: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
-  csedweek_dates: "December 8-14, 2014"
+  csedweek_dates: "December 3-9, 2018"
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
@@ -31,8 +31,8 @@
   og_description: "Every student in every school deserves the opportunity to study computer science."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Computer Science Education Week"
-  csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description: "December 3-9, 2018. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
   hoc2014_students: "Students"
