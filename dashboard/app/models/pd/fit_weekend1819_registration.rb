@@ -20,7 +20,6 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
 
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
-
   end
 
   YES = 'Yes'.freeze
