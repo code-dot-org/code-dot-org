@@ -5,7 +5,7 @@ class VideosController < ApplicationController
   load_and_authorize_resource except: [:test, :embed]
   after_action :allow_iframe, only: :embed
 
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:show, :edit, :update]
 
   def test
     @video = Video.first
@@ -67,16 +67,6 @@ class VideosController < ApplicationController
         format.html {render action: 'edit'}
         format.json {render json: @video.errors, status: :unprocessable_entity}
       end
-    end
-  end
-
-  # DELETE /videos/1
-  # DELETE /videos/1.json
-  def destroy
-    @video.destroy
-    respond_to do |format|
-      format.html {redirect_to videos_url}
-      format.json {head :no_content}
     end
   end
 
