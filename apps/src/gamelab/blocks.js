@@ -1,9 +1,13 @@
 //import msg from '@cdo/gamelab/locale';
 
 const SPRITE_CATEGORY = 'sprites';
+const EVENT_CATEGORY = 'events';
 const CATEGORIES = {
   [SPRITE_CATEGORY]: {
     color: [184, 1.00, 0.74],
+  },
+  [EVENT_CATEGORY]: {
+    color: [140, 1.00, 0.74],
   },
 };
 
@@ -21,7 +25,15 @@ export default {
     const SPRITE_TYPE = blockly.BlockValueType.NUMBER;
     const generator = blockly.Generator.get('JavaScript');
 
-    const createJsWrapperBlock = ({category, func, blockText, args, returnType, methodCall}) => {
+    const createJsWrapperBlock = ({
+      category,
+      func,
+      blockText,
+      args,
+      returnType,
+      methodCall,
+      eventBlock,
+    }) => {
       const blockName = `gamelab_${func}`;
       blockly.Blocks[blockName] = {
         helpUrl: '',
@@ -48,7 +60,11 @@ export default {
             this.setOutput(true, Blockly.BlockValueType.NUMBER);
           } else {
             this.setNextStatement(true);
-            this.setPreviousStatement(true);
+            if (eventBlock) {
+              this.skipNextBlockGeneration = true;
+            } else {
+              this.setPreviousStatement(true);
+            }
           }
         },
       };
@@ -64,10 +80,18 @@ export default {
           }
         });
         const prefix = methodCall ? `${object}.` : '';
+        if (eventBlock) {
+          const nextBlock = this.nextConnection && this.nextConnection.targetBlock();
+          const handlerCode = Blockly.Generator.prefixLines(
+            Blockly.JavaScript.blockToCode(nextBlock, true),
+            '  ' // 2-space indent
+          );
+          values.push(`function () {\n${handlerCode}}`);
+        }
         if (returnType !== undefined) {
           return [`${prefix}${func}(${values.join(', ')})`, ORDER_FUNCTION_CALL];
         } else {
-          return `${prefix}${func}(${values.join(', ')});`;
+          return `${prefix}${func}(${values.join(', ')});\n`;
         }
       };
     };
@@ -115,6 +139,70 @@ export default {
       blockText: 'move right',
       args: [],
       methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whenUpArrow',
+      blockText: 'When up arrow presssed',
+      args: [],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whenDownArrow',
+      blockText: 'When down arrow presssed',
+      args: [],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whenLeftArrow',
+      blockText: 'When left arrow presssed',
+      args: [],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whenRightArrow',
+      blockText: 'When right arrow presssed',
+      args: [],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whileUpArrow',
+      blockText: 'While up arrow presssed',
+      args: [],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whileDownArrow',
+      blockText: 'While down arrow presssed',
+      args: [],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whileLeftArrow',
+      blockText: 'While left arrow presssed',
+      args: [],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whileRightArrow',
+      blockText: 'While right arrow presssed',
+      args: [],
+      eventBlock: true,
     });
   },
 };
