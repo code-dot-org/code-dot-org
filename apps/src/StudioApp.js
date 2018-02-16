@@ -1823,7 +1823,7 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab'));
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && experiments.isEnabled('resourcesTab');
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
   }
