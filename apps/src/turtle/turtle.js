@@ -1507,7 +1507,7 @@ Artist.prototype.step = function (command, values, options) {
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       this.visualization.setHeading(heading);
-      this.jumpForward(result.distance);
+      this.visualization.jumpForward(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
