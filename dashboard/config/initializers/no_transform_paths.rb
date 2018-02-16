@@ -7,7 +7,7 @@ module Cdo
   module NoTransformPaths
     NO_TRANSFORM_PATHS = %w(
       /craft/
-    )
+    ).freeze
 
     def serve(request)
       super(request).tap do |_, headers, _|

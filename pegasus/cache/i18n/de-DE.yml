@@ -1061,8 +1061,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Lehrplan
   dashboard_curriculum_overview: Vor- und Grundschullehrplan Übersicht
   dashboard_overview: "Übersicht"
@@ -1080,6 +1083,8 @@
   dashboard_curriculum_csins: 'Informatik in der Wissenschaft:'
   dashboard_curriculum_csp: 'AP® Grundsätze der Informatik:'
   dashboard_curriculum_ecs: 'Die Informatik erkunden:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Kindergarten
   dashboard_grade_other: Andere
   dashboard_login_word: Wort
@@ -1335,6 +1340,7 @@
   cspexams_category_name: Praxistest Grundlagen der Informatik
   research_studies_category_name: Research Studies
   applab_name: App-Labor
+  gamelab_name: Game Lab
   basketball_name: Baue ein Basketball-Spiel
   sports_name: Programmiere Dein eigenes Sport-Spiel
   applab_gradelevel: Ab 13 Jahren
@@ -2164,9 +2170,3 @@
     auswählen:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

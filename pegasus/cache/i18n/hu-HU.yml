@@ -1045,8 +1045,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Ha nincs számítógép,  <a href='%{unplugged_url}'>próbálja ki
     ezeket az offline tanórákat </a> az osztályával!
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Tanterv
   dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
   dashboard_overview: "Összefoglaló"
@@ -1064,6 +1067,8 @@
   dashboard_curriculum_csins: 'A számítógép-tudomány a tudományok között:'
   dashboard_curriculum_csp: 'Az AP® számítástechnika alapelvei:'
   dashboard_curriculum_ecs: 'A számítástechnika felfedezése:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Egyéb
   dashboard_login_word: Szó
@@ -1317,6 +1322,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+
@@ -2152,9 +2158,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
