@@ -1,4 +1,4 @@
-/*global updateCensusMapSchool*/
+/* global updateCensusMapSchool, setShowYourSchoolFunction */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -10,9 +10,9 @@ import responsive from '@cdo/apps/code-studio/responsiveRedux';
 
 registerReducers({isRtl, responsive});
 
-$(document).ready(showYourSchool);
+$(document).ready(initYourSchool);
 
-function showYourSchool() {
+function showYourSchool(schoolDropdownOption) {
   const rawSchoolId = $('#your-school').data("parameters-schoolId");
   const rawSchoolZip = $('#your-school').data("parameters-schoolZip");
   const prefillData = {
@@ -36,8 +36,14 @@ function showYourSchool() {
         hideMap={$('#your-school').data("parameters-hide-map")}
         prefillData={prefillData}
         updateCensusMapSchool={updateCensusMapSchool}
+        schoolDropdownOption={schoolDropdownOption}
       />
     </Provider>,
     $('#your-school')[0]
   );
+}
+
+function initYourSchool() {
+  setShowYourSchoolFunction(showYourSchool);
+  showYourSchool();
 }

@@ -26,6 +26,7 @@
 
 - TABLE_ID = CDO.census_map_table_id.freeze
 :javascript
+  var showYourSchoolFunction;
   var gmap;
   var resizeZoom;
   var scrollwheelOption = false;
@@ -117,6 +118,18 @@
         default:
           censusMessage = "We have no data about this school.";
       }
+      const schoolDropdownOptionString = `{
+        value: '${event.row['school_id'].value}',
+        label: '${event.row['school_name'].value}',
+        school: {
+          nces_id: '${event.row['school_id'].value}',
+          name: '${event.row['school_name'].value}',
+          city: '${event.row['city'].value}',
+          state: '${event.row['state_code'].value}',
+          latitude: ${event.row['location'].value.split(',')[0]},
+          longitude: ${event.row['location'].value.split(',')[1]},
+        },
+      }`;
       event.infoWindowHtml  = '<div class="census-info-window">';
       event.infoWindowHtml += '  <h4>';
       event.infoWindowHtml += '    <b>';
@@ -128,7 +141,7 @@
       event.infoWindowHtml += '  <hr>';
       event.infoWindowHtml += '  <div class="census-message">' + censusMessage + '</div>';
       event.infoWindowHtml += '  <div class="button-container">';
-      event.infoWindowHtml += '    <a href="?school_id=' + event.row['school_id'].value + '#form" >';
+      event.infoWindowHtml += '    <a href="#form" onclick="showYourSchoolFunction(' + schoolDropdownOptionString + ');">';
       event.infoWindowHtml += '      <div class="button">';
       event.infoWindowHtml += '        <div class="button-text">Take the survey for this school</div>';
       event.infoWindowHtml += '      </div>';
@@ -160,6 +173,10 @@
       }
       gmap.setOptions(map_options);
     }
+  }
+
+  function setShowYourSchoolFunction(f) {
+    showYourSchoolFunction = f;
   }
 
   function enableDrag() {
