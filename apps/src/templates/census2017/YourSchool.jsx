@@ -10,6 +10,7 @@ import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnAction
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 
 const styles = {
   heading: {
@@ -38,7 +39,8 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    hideMap: PropTypes.bool
+    hideMap: PropTypes.bool,
+    updateCensusMapSchool: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -46,6 +48,21 @@ class YourSchool extends Component {
       $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
     }
   }
+
+  state = {
+    schoolDropdownOption: undefined
+  };
+
+  handleSchoolDropdownChange = (option) => {
+    this.setState({
+      schoolDropdownOption: option,
+    });
+
+    const schoolId = option ? option.value.toString() : '';
+    if (option && schoolId !== '-1') {
+      this.props.updateCensusMapSchool(option.school);
+    }
+  };
 
   render() {
     const {responsiveSize} = this.props;
@@ -91,11 +108,20 @@ class YourSchool extends Component {
                Find your school on the map to see if computer science is already being offered.
                Can't find your school on the map? <a href="#form">Fill out the survey below</a>.
              </h3>
+             <SchoolAutocompleteDropdown
+               value={this.props.prefillData ? this.props.prefillData['schoolId'] : undefined}
+               fieldName="census-map-school-dropdown"
+               schoolDropdownOption={this.state.schoolDropdownOption}
+               onChange={this.handleSchoolDropdownChange}
+             />
+             <br/>
              <ProtectedStatefulDiv ref="map"/>
            </div>
         )}
         <CensusForm
           prefillData={this.props.prefillData}
+          schoolDropdownOption={this.state.schoolDropdownOption}
+          onSchoolDropdownChange={this.handleSchoolDropdownChange}
         />
       </div>
     );

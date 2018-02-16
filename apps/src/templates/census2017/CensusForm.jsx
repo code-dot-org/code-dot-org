@@ -24,6 +24,8 @@ export const censusFormPrefillDataShape = PropTypes.shape({
 class CensusForm extends Component {
   static propTypes = {
     prefillData: censusFormPrefillDataShape,
+    schoolDropdownOption: PropTypes.object,
+    onSchoolDropdownChange: PropTypes.func,
   };
 
   constructor(props) {
@@ -81,6 +83,9 @@ class CensusForm extends Component {
         [field]: event ? event.value : ''
       }
     });
+    if (field === "nces") {
+      this.props.onSchoolDropdownChange(event);
+    }
   };
 
   checkShowFollowUp() {
@@ -296,6 +301,14 @@ class CensusForm extends Component {
                             errors.nces ||
                             errors.share);
     const US = submission.country === "United States";
+    let schoolId = submission.nces;
+    let useSchoolDropdownOption = false;
+    const schoolDropdownOption = this.props.schoolDropdownOption;
+    if (schoolDropdownOption && (schoolDropdownOption.value !== schoolId) && (schoolDropdownOption.value !== "-1")) {
+      useSchoolDropdownOption = true;
+      schoolId = undefined;
+    }
+    const showSchoolNotFound = US && (schoolId === '-1' || (useSchoolDropdownOption && schoolDropdownOption.value === "-1"));
 
     return (
       <div id="form">
@@ -313,11 +326,12 @@ class CensusForm extends Component {
           {US && (
             <SchoolAutocompleteDropdownWithLabel
               setField={this.handleDropdownChange}
-              value={submission.nces}
+              value={schoolId}
+              schoolDropdownOption={useSchoolDropdownOption ? schoolDropdownOption : undefined}
               showErrorMsg={errors.nces}
             />
           )}
-          {US && this.state.submission.nces === "-1" && (
+          {showSchoolNotFound && (
             <SchoolNotFound
               onChange={this.handleChange}
               schoolName={submission.schoolName}
