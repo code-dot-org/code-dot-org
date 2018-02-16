@@ -86,6 +86,7 @@
     "ejs": "0.8.4",
     "ejs-compiled-loader": "2.1.1",
     "enzyme": "2.8.0",
+    "enzyme-wait": "^1.0.9",
     "es6-promise": "3.0.2",
     "eslint": "^3.19.0",
     "eslint-plugin-babel": "^4.1.2",
