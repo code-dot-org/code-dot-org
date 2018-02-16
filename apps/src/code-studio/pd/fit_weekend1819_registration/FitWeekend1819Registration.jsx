@@ -4,7 +4,6 @@ import FormController from '../form_components/FormController';
 import Joining from './Joining';
 import TravelPlans from './TravelPlans';
 import Releases from './Releases';
-import Confirmation from './Confirmation';
 
 export default class FitWeekend1819Registration extends FormController {
   static propTypes = {
@@ -38,12 +37,17 @@ export default class FitWeekend1819Registration extends FormController {
    * @override
    */
   getPageComponents() {
-    return [
-      Joining,
-      TravelPlans,
-      Releases,
-      Confirmation
-    ];
+    if (this.state.data.ableToAttend === 'No') {
+      return [
+        Joining
+      ];
+    } else {
+      return [
+        Joining,
+        TravelPlans,
+        Releases
+      ];
+    }
   }
 
   /**
