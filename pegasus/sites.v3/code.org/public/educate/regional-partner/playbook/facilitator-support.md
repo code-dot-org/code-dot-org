@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 ---
 title: Facilitators
 nav: regional_partner_playbook_nav
@@ -119,6 +120,37 @@ ________________
 - Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. *(Note: this includes any out of region facilitators)*
 - Code.org will directly pay facilitators for any work they do at TeacherCon.
 - Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
+- For Local Summer Workshops:
+	- Novice Facilitators attend as teachers, so there is no payment.
+	- Apprentice Facilitators will receive a $1000 stipend for attending (paid by code.org). (Who are apprentices? Apprentices have attended TeacherCon or a local summer workshop as a teacher in the past.)
+	- All Lead Facilitators are paid by Regional Partners at the same expected rate of $500/day.
+
+
+<br/>
+
+**CS Fundamentals Facilitator Payments**
+
+- CS Fundamentals facilitators are paid $400 for workshop facilitation.****
+  - Note: CS Discoveries and CS Principles are paid $500 per workshop day, which is different from CS Fundamentals. Each CS Discoveries and CS Principles academic year workshop contains different content, so this payment includes the additional preparation required to deliver these workshops.
+- Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. (Note: this includes any out of region facilitators).
+- Code.org will directly pay facilitators for Facilitator Development activities and events.
+- If facilitators help with recruiting or other aspects of running the workshop, you should consider increasing their per workshop rate. Please reference Exhibit B in your CS Fundamentals MOU to see how the workshop payments received can support an increased rate.   
+- Some facilitators will have a different payment structure because they work for a district.
+Facilitators can host workshops that are not associated with their Regional Partner, but these will no longer be paid for by Code.org. Two common cases for this will be:
+  - Working with another Regional Partner to help meet demand in their region
+  - Facilitating a workshop for in-service elementary school teachers in districts that have funding to compensate the facilitator directly. In this case Code.org will strongly encourage actively coordinating and collaborating with the Regional Partner that covers that district.
+  - Code.org will continue to pay for and provide swag and curriculum guides in both of these cases.
+
+****This Code.org's general recommendation, and on a case-by-case basis, payment may differ.
+
+**Timeline for the CS Fundamentals Funding Model Transition**
+
+
+- February 2018 - Code.org is requesting facilitators to not schedule any more Code.org paid workshops or put them in the dashboard.
+- As soon as March 9, 2018 - Regional Partners and facilitators can start workshops under this agreement and new funding model, in consultation together.
+- No later than June 1, 2018 - host your first workshop in collaboration with your CS Fundamentals facilitator(s), *unless otherwise arranged with your Regional Manager.*
+	- In some regions, there may be existing Code.org paid workshops that facilitators have already listed in the dashboard. We have clarified with facilitators that these can still be paid under existing facilitator agreements until September 1, 2018.
+  - However, our expectation is that facilitators will work in close coordination with the Regional Partner to possibly transition these existing workshops to the new model where Regional Partners pay facilitators directly.
 
 
 [**Back to the top**](#top)
