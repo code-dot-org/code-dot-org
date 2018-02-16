@@ -52,5 +52,4 @@ regional_partner_list.each do |regional_partner|
   partner.save!
 end
 
-raise "#{error_count} Errors. Not importing regional partners." if error_count > 0
 puts "#{regional_partner_list.length} Regional Partners' Capacities Imported."
