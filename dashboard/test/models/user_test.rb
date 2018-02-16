@@ -1400,11 +1400,11 @@ class UserTest < ActiveSupport::TestCase
 
     track_progress(user.id, csf_script_level, 10)
     track_progress(user.id, csf_script_level, 20)
-    track_progress(user.id, csf_script_level, 20)
+    track_progress(user.id, csf_script_level, 30)
 
     assert_equal 3, ul.reload.attempts
 
-    track_progress(user.id, csf_script_level, 30)
+    track_progress(user.id, csf_script_level, 31)
 
     assert_equal 4, ul.reload.attempts
 
