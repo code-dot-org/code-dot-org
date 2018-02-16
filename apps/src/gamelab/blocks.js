@@ -150,7 +150,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whenUpArrow',
-      blockText: 'When up arrow presssed',
+      blockText: 'when up arrow presssed',
       args: [],
       eventBlock: true,
     });
@@ -158,7 +158,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whenDownArrow',
-      blockText: 'When down arrow presssed',
+      blockText: 'when down arrow presssed',
       args: [],
       eventBlock: true,
     });
@@ -166,7 +166,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whenLeftArrow',
-      blockText: 'When left arrow presssed',
+      blockText: 'when left arrow presssed',
       args: [],
       eventBlock: true,
     });
@@ -174,7 +174,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whenRightArrow',
-      blockText: 'When right arrow presssed',
+      blockText: 'when right arrow presssed',
       args: [],
       eventBlock: true,
     });
@@ -182,7 +182,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whileUpArrow',
-      blockText: 'While up arrow presssed',
+      blockText: 'while up arrow presssed',
       args: [],
       eventBlock: true,
     });
@@ -190,7 +190,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whileDownArrow',
-      blockText: 'While down arrow presssed',
+      blockText: 'while down arrow presssed',
       args: [],
       eventBlock: true,
     });
@@ -198,7 +198,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whileLeftArrow',
-      blockText: 'While left arrow presssed',
+      blockText: 'while left arrow presssed',
       args: [],
       eventBlock: true,
     });
@@ -206,7 +206,7 @@ export default {
     createJsWrapperBlock({
       category: EVENT_CATEGORY,
       func: 'whileRightArrow',
-      blockText: 'While right arrow presssed',
+      blockText: 'while right arrow presssed',
       args: [],
       eventBlock: true,
     });
