@@ -205,6 +205,11 @@ export default class DesignProperties extends React.Component {
                 />
                 }
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
+                <CopyElementToScreenButton
+                    handleCopyElementToScreen={function() { debugger; }}
+                    currentScreenId={"current"}
+                    screenIds={["other", "current", "more"]}
+                />
               </div>
               <PropertyComponent
                 element={this.props.element}

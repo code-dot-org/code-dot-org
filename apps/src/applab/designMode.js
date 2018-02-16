@@ -547,6 +547,23 @@ function duplicateScreen(element) {
   return newScreen;
 }
 
+designMode.copyElementToScreen = function (element, sourceScreen, destScreen) {
+  designMode.changeScreen(destScreen);
+
+  // Unwrap the draggable wrappers around the elements in the source screen:
+  const madeUndraggable = makeUndraggable(sourceScreen.children());
+
+  let duplicateElement = $(element).clone(true)[0];
+  const elementType = elementLibrary.getElementType(duplicateElement);
+  elementUtils.setId(duplicateElement, elementLibrary.getUnusedElementId(elementType.toLowerCase()));
+  designMode.attachElement(duplicateElement);
+
+  // Restore the draggable wrappers on the elements in the source screen:
+  if (madeUndraggable) {
+    makeDraggable(sourceScreen.children());
+  }
+};
+
 designMode.onDeletePropertiesButton = function (element, event) {
   deleteElement(element);
 };
