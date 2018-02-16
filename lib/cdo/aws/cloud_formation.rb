@@ -373,7 +373,10 @@ module AWS
 
       def update_certs
         Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.bundle_exec './update_certs', subdomain
+          RakeUtils.bundle_exec './update_certs',
+            subdomain,
+            studio_subdomain,
+            subdomain('origin')
         end
       end
 
