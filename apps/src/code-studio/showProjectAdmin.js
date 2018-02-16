@@ -23,6 +23,10 @@ export default () => {
     }
   }
 
+  if (!dashboard.project.isPublished()) {
+    $('#unpublished_warning').show();
+  }
+
   if ($('#feature_project').length && dashboard.project.isProjectLevel()) {
     $('#feature_project').click(function () {
       var url = `/featured_projects/${dashboard.project.getCurrentId()}/feature`;

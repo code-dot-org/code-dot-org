@@ -911,7 +911,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "교과 과정"
   dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
   dashboard_overview: "개요"
@@ -929,6 +932,8 @@
   dashboard_curriculum_csins: "과학 영역의 컴퓨터 과학:"
   dashboard_curriculum_csp: 'AP ® 컴퓨터 과학 원리:'
   dashboard_curriculum_ecs: "컴퓨터과학 살펴보기"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: "기타"
   dashboard_login_word: "단어"
@@ -1169,6 +1174,7 @@
   cspexams_category_name: "컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트"
   research_studies_category_name: Research Studies
   applab_name: "앱 연구실"
+  gamelab_name: Game Lab
   basketball_name: "농구 게임 만들기"
   sports_name: "당신만의 스포츠게임을 코딩하세요"
   applab_gradelevel: 13세 이상
@@ -1838,9 +1844,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

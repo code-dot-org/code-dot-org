@@ -69,7 +69,7 @@
   thank_you_: "Aitäh!"
   congratulations: "Palju õnne!"
   congratulations_on_completing_hoc: "Palju õnne, oled lõpetanud KoodiTunni"
-  congratulations_volunteer: Palju õnne! Nüüd, kus oled proovinud KoodiTundi, <a href="https://code.org/volunteer">liitu, et osaleda vabatahtlikuna klassiruumis</a> ja aidata õpilasi KoodiTunni õppimisel!
+  congratulations_volunteer: 'Palju õnne! Nüüd, kus oled proovinud KoodiTundi, <a href="https://code.org/volunteer">liitu, et osaleda vabatahtlikuna klassiruumis</a> ja aidata õpilasi KoodiTunni õppimisel!'
   congratulations_on_completing_course1: "Õnnitleme Kursus 1 läbimise puhul"
   congratulations_on_completing_course2: "Õnnitleme Kursus 2 läbimise puhul"
   congratulations_on_completing_course3: "Õnnitleme Kursus 3 läbimise puhul"
@@ -753,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Õppekava"
   dashboard_curriculum_overview: "K-5 õppekava ülevaade"
   dashboard_overview: "Ülevaade"
@@ -771,6 +774,8 @@
   dashboard_curriculum_csins: 'Arvutitehnika teaduses:'
   dashboard_curriculum_csp: 'AP® Arvutiteaduse põhiprintsiibid:'
   dashboard_curriculum_ecs: 'Avastades arvutiteadust:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Muu"
   dashboard_login_word: "Sõna"
@@ -941,11 +946,11 @@
   accelerated_name: "Kiirendatud kursus"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -994,6 +999,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Game Lab"
   basketball_name: "Tee korvpallimäng"
   sports_name: "Tee oma spordimäng"
   applab_gradelevel: "Vanus 13+"

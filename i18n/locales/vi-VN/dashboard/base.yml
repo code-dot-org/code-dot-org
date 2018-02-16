@@ -69,7 +69,7 @@ vi:
   try_k8intro: "Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 giờ)"
   k8intro: "Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)"
   already_started: "Đã bắt đầu rồi à? Tiếp tục ở đây >> "
-  demos: 'Admin: Tất cả các bản demo'
+  demos: "Admin: Tất cả các bản demo"
   continue: 'Tiếp tục'
   prize: 'giải thưởng'
   more_info: 'Thông tin thêm'
@@ -171,6 +171,7 @@ vi:
       email: 'Địa chỉ Email'
       submit: 'Gửi'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Có vẻ như bạn đã đăng nhập với một địa chỉ email không hợp lệ. Vui lòng gửi email tới support@code.org để nhận được link đặt lại mật khẩu.'
     change_form:
       title: 'Thay đổi mật khẩu của bạn'
@@ -220,7 +221,7 @@ vi:
       provider_managed_section: "Mục này được quản lý bởi nhà cung cấp khác và bạn không thể tham gia. Vui lòng liên hệ giáo viên của bạn để %{provider} thêm bạn vào và tham gia mục này."
     mail:
       student_disassociated:
-        subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn.'
+        subject: "Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn."
   reports:
     error:
       access_denied: "Bạn không có quyền truy cập vào tình trạng pháp nhân của người này"
@@ -352,7 +353,7 @@ vi:
     current_password_hint: '(chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)'
     delete: 'Xóa tài khoản của bạn'
     delete_text: "Nhấp vào nút bên dưới sẽ xóa tài khoản của bạn."
-    delete_text_teacher_note: 'Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản học viên của bạn.'
+    delete_text_teacher_note: "Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản học viên của bạn."
     delete_confirm: 'Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?'
     deleted_user: 'người dùng đã bị xóa'
     no_password_because_oauth: 'Không có mật khẩu vì bạn đăng nhập với một nhà cũng cấp bên thứ ba.'
@@ -363,7 +364,7 @@ vi:
     create_personal_login_under_13_parent_email: 'Địa chỉ email của bố mẹ / người giám hộ'
     create_personal_login_info: 'Nếu bạn muốn tiếp tục sử dụng tài khoản Code.org của bạn sau khi kết thúc năm học, bạn có thể tạo đăng nhập của mình bên dưới.'
     create_personal_login_terms: "Bằng cách tạo đăng nhập cá nhân, Tôi đồng ý với <a href='%{terms_of_service_url}', target='_blank'>điều khoản dịch vụ</a> của Code.org. Nếu tôi dưới 13 tuổi, tôi chấp nhận rằng tôi có ba mẹ hoặc người giám hộ hợp pháp để sử dụng dịch vụ Code.org mặc dù không có giáo viên."
-    create_personal_login_email_note: 'Chú ý: Địa chỉ email không được lưu trữ dưới mọi hình thức mà cho phép chúng tôi liên hệ với hssv. Hssv sẽ không bao giờ nhận email từ Code.org ngoại trừ email khôi phục mật khẩu. Xem <a href=''%{privacy_policy_url}'', target=''_blank''>chính sách riêng tư</a> để biết thêm thì tin.'
+    create_personal_login_email_note: "Chú ý: Địa chỉ email không được lưu trữ dưới mọi hình thức mà cho phép chúng tôi liên hệ với hssv. Hssv sẽ không bao giờ nhận email từ Code.org ngoại trừ email khôi phục mật khẩu. Xem <a href='%{privacy_policy_url}', target='_blank'>chính sách riêng tư</a> để biết thêm thì tin."
     enter_new_login_info: 'Nhập thông tin đăng nhập mới của bạn'
     confirm_secret_words: 'Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của mình'
     enter_parent_email: "Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho việc khôi phục mật khẩu)"
@@ -702,7 +703,7 @@ vi:
     sign_out: 'Nếu bạn không muốn cung cấp tuổi của mình, bạn có thể đăng nhập vào <a href="%{url}">sign out</a>'
   terms_interstitial:
     title: "Cập nhật các điều khoản của dịch vụ và chính sách bảo mật"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Các điều khoản của Code.org"
     privacy: "Chính sách riêng tư"
@@ -718,7 +719,7 @@ vi:
     message_with_suggestion: "Hãy chắc chắn rằng những thông tin sau đây là chính xác, nếu không vui lòng cập nhật."
     save: "Lưu"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -762,7 +763,7 @@ vi:
     delete: "Xóa"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'Chúng tôi không thể truy xuất đường link chia sẻ này. Hãy chắc chắn rằng bạn đang sử dụng một đường link từ Minecraft: câu đố về nhiệm vụ của Đặc vụ và bạn đã copy đầy đủ đường link đó.'
+    share_link_import_bad_link_body: "Chúng tôi không thể truy xuất đường link chia sẻ này. Hãy chắc chắn rằng bạn đang sử dụng một đường link từ Minecraft: câu đố về nhiệm vụ của Đặc vụ và bạn đã copy đầy đủ đường link đó."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Trở về khóa học"
@@ -865,8 +866,8 @@ vi:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

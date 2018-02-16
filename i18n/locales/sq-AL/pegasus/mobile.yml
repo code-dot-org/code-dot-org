@@ -25,7 +25,7 @@
   submit: "Dorëzo"
   twentyhours_heading: "Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike"
   twentyhours_text: "E përfunduat orën tuaj të parë te kodimit? Tani mësoni më shumë për Shkencen Kompjuterike dhe konceptet e programimit në kursin në vazhdim."
-  og_title: Çdo fëmijë meriton mundësinë
+  og_title: 'Çdo fëmijë meriton mundësinë'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Çdo student në çdo shkollë e meriton të ketë mundësinë për të studiuar shkenca kompjuterike. Po ndryshon gjithçka."
@@ -335,7 +335,7 @@
   homepage_banner_link_prizes: 'Bashkoju ngjarjes më të madhe të mësimit në histori. '
   homepage_banner_text_main: "Code.org dhe Bordi i Kolegjit bashkohen për të nxitur larmishmërinë në shkencat kompjuterike."
   homepage_banner_text_link: "Mëso më shumë"
-  homepage_banner_privacy_main: Ne e kemi rifreskuar linjën tonë të privacisë që të përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.
+  homepage_banner_privacy_main: 'Ne e kemi rifreskuar linjën tonë të privacisë që të përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.'
   homepage_banner_privacy_link: "Mëso më shumë"
   homepage_banner_20k_teachers: "20.000 mësues të trajnuar, dhe tani mësimi i shkencës kompjuterike në klasa.\n"
   homepage_banner_20k_teachers_link: "Mëso më shumë"
@@ -765,7 +765,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Plani mësimor"
   dashboard_curriculum_overview: "Pamja e përgjithshme e Planit Mësimor K-5"
   dashboard_overview: "Përmbledhja"
@@ -783,6 +786,8 @@
   dashboard_curriculum_csins: 'Shkencat kompjuterike si pjesë e shkencës:'
   dashboard_curriculum_csp: 'Ap® Parimet e Shkencave Kompjuterike:'
   dashboard_curriculum_ecs: 'Explorimi i Shkencave Kompjuterike:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Të tjera/ë"
   dashboard_login_word: "Fjalë"
@@ -953,11 +958,11 @@
   accelerated_name: "Kurs i Avancuar"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1006,6 +1011,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratori i Aplikacioneve"
+  gamelab_name: "Game Lab"
   basketball_name: "Realizo një lojë basketbolli"
   sports_name: "Krijo lojën tënde sportive"
   applab_gradelevel: "Moshat 13 +"

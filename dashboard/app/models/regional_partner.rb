@@ -17,6 +17,7 @@
 #  notes              :text(65535)
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  deleted_at         :datetime
 #
 # Indexes
 #
@@ -26,6 +27,8 @@
 require 'state_abbr'
 
 class RegionalPartner < ActiveRecord::Base
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   has_many :regional_partner_program_managers
   has_many :program_managers,
     class_name: 'User',

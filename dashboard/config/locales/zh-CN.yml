@@ -44,7 +44,7 @@
   add_teacher_form:
     code:
       label: "添加一个老师:"
-      placeholder: "单元代码(ABCDEF)"
+      placeholder: "小组代码(ABCDEF)"
       instructions: "请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。"
       instructions_short: "输入你的6位小组代码"
     submit: "添加老师"
@@ -177,6 +177,7 @@
       email: "电子邮件地址"
       submit: "提交"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "您也许用了无效的电子邮件地址来登录。请联系support@code.org 来获得恢复密码的链接。"
     change_form:
       title: "更换密码"
@@ -463,7 +464,7 @@
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
-    current_section_dne: "抱歉，章节%{current_section_code} 不存在。请输入不同的章节代码。"
+    current_section_dne: "抱歉，小组%{current_section_code} 不存在。请输入一个不同的小组代码。"
     student_ids_not_entered: "请提供 student_ids。"
     student_not_found: "无法找到这一个或多个学生。"
     all_students_must_be_in_current_section: "所有的学生都必须注册到您的章节中。"
