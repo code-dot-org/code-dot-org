@@ -1,4 +1,7 @@
-import { interpolateInputs } from '../block_utils';
+import {
+  interpolateInputs,
+  determineInputs,
+} from '../block_utils';
 
 const SPRITE_CATEGORY = 'sprites';
 const EVENT_CATEGORY = 'events';
@@ -46,7 +49,7 @@ export default {
             });
           }
 
-          interpolateInputs(blockly, this, blockText, args);
+          interpolateInputs(blockly, this, determineInputs(blockText, args));
 
           this.setInputsInline(true);
           if (returnType) {
