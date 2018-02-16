@@ -1563,7 +1563,7 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else if (this.hasExtraTopBlocks() && Blockly.showUnusedBlocks) {
     return TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
-  } else if (this.studioApp_.IDEAL_BLOCK_NUM &&
+  } else if (isFinite(this.studioApp_.IDEAL_BLOCK_NUM) &&
     numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
     return TestResults.BETTER_THAN_IDEAL;
   } else {
