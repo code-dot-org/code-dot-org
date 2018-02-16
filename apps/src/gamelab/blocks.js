@@ -15,7 +15,8 @@ const CATEGORIES = {
 };
 
 const SPRITES = [
-  ['dog', '"dog"']
+  ['dog', '"dog"'],
+  ['cat', '"cat"'],
 ];
 
 export default {

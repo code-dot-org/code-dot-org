@@ -81,10 +81,7 @@ describe('block utils', () => {
 
       expect(fakeBlockly.FieldDropdown).to.have.been.calledOnce;
       const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
-      expect(dropdownArg).to.deep.equal([
-        ['create sprite dog', '"dog"'],
-        ['create sprite cat', '"cat"'],
-      ]);
+      expect(dropdownArg).to.deep.equal(TEST_SPRITES);
       expect(appendDummyInput).to.have.been.calledOnce;
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
     });
