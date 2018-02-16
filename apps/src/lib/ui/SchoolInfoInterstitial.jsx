@@ -112,6 +112,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       event: eventName,
       data_json: JSON.stringify({
         isComplete: SchoolInfoInterstitial.isSchoolInfoComplete(this.state),
+        hasNcesId: this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1',
         ...data
       }),
     });
