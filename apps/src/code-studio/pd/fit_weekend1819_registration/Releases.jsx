@@ -15,8 +15,8 @@ export default class Releases extends LabeledFormComponent {
   ];
 
   static labels = {
-    photoRelease: "Do you agree to the conditions in the photo release?",
-    liabilityWaiver: "Do you agree to the conditions in the liability waiver?",
+    photoRelease: "I agree to the conditions in the photo release",
+    liabilityWaiver: "I agree to the conditions in the liability waiver",
     agreeShareContact: "By submitting this application, I agree to share my contact information and registration with Code.org's Regional Partners.",
   };
 
