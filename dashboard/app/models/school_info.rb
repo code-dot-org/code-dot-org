@@ -146,6 +146,9 @@ class SchoolInfo < ActiveRecord::Base
     ].include?(school_type)
     return true unless school_id.nil?
 
+    # School name and full address is sufficient
+    return true if school_name && full_address
+
     # At this point, require full info to be filled out
     validation_type_original = validation_type
     self.validation_type = VALIDATION_FULL
@@ -184,7 +187,7 @@ class SchoolInfo < ActiveRecord::Base
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
     return unless country && should_validate?
-    country == 'US' ? validate_us : validate_non_us
+    usa? ? validate_us : validate_non_us
   end
 
   def validate_non_us
