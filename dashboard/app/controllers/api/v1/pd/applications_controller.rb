@@ -39,7 +39,12 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications/1
   def show
-    render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
+    serialized_application = Api::V1::Pd::ApplicationSerializer.new(
+      @application,
+      scope: {raw_form_data: params[:raw_form_data]}
+    ).attributes
+
+    render json: serialized_application
   end
 
   # GET /api/v1/pd/applications/quick_view?role=:role
@@ -53,7 +58,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
+        serialized_applications = applications.map {|a| Api::V1::Pd::ApplicationQuickViewSerializer.new(a).attributes}
+        render json: serialized_applications
       end
       format.csv do
         course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
@@ -65,7 +71,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner_name
   def cohort_view
-    applications = get_applications_by_role(params[:role].to_sym).where(status: 'accepted')
+    applications = get_applications_by_role(params[:role].to_sym).where(status: ['accepted', 'withdrawn'])
 
     unless params[:regional_partner_filter].nil? || params[:regional_partner_filter] == 'all'
       applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
@@ -80,7 +86,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        render json: applications, each_serializer: serializer
+        serialized_applications = applications.map {|a| serializer.new(a).attributes}
+        render json: serialized_applications
       end
       format.csv do
         csv_text = [TYPES_BY_ROLE[params[:role].to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
@@ -91,7 +98,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # PATCH /api/v1/pd/applications/1
   def update
-    application_data = application_params.except(:locked)
+    application_data = application_params
 
     if application_data[:response_scores]
       JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
@@ -104,11 +111,17 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     application_data["notes"] = application_data["notes"].strip_utf8mb4 if application_data["notes"]
 
-    @application.update!(application_data)
+    # only allow those with full management permission to lock/unlock and edit form data
+    if current_user.workshop_admin?
+      if current_user.workshop_admin? && application_admin_params.key?(:locked)
+        application_admin_params[:locked] ? @application.lock! : @application.unlock!
+      end
 
-    # only allow those with full management permission to lock or unlock
-    if application_params.key?(:locked) && current_user.workshop_admin?
-      application_params[:locked] ? @application.lock! : @application.unlock!
+      @application.form_data_hash = application_admin_params[:form_data] if application_admin_params.key?(:form_data)
+    end
+
+    unless @application.update(application_data)
+      return render status: :bad_request, json: {errors: @application.errors.full_messages}
     end
 
     render json: @application, serializer: Api::V1::Pd::ApplicationSerializer
@@ -124,7 +137,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       user: user
     )
 
-    render json: filtered_applications, each_serializer: Api::V1::Pd::ApplicationSearchSerializer
+    serialized_applications = filtered_applications.map {|a| Api::V1::Pd::ApplicationSearchSerializer.new(a).attributes}
+    render json: serialized_applications
   end
 
   private
@@ -149,8 +163,21 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   def application_params
     params.require(:application).permit(
-      :status, :notes, :regional_partner_filter, :response_scores, :locked, :pd_workshop_id
+      :status,
+      :notes,
+      :regional_partner_filter,
+      :response_scores,
+      :pd_workshop_id
     )
+  end
+
+  def application_admin_params
+    params.require(:application).tap do |application_params|
+      application_params.permit(:locked)
+
+      # Permit form_data: and everything under it
+      application_params.permit(:form_data).permit!
+    end
   end
 
   TYPES_BY_ROLE = {

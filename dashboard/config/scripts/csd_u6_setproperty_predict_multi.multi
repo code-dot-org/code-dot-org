@@ -8,3 +8,7 @@ wrong '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-
 markdown <<MARKDOWN
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+For many of the programming activities in this unit, design mode elements have already been created.  One helpful tip for students is that they can hover over any of these elements to see the element's id.
+MARKDOWN

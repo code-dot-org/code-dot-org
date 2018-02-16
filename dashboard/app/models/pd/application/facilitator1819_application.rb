@@ -39,7 +39,6 @@ require 'cdo/shared_constants/pd/facilitator1819_application_constants'
 module Pd::Application
   class Facilitator1819Application < WorkshopAutoenrolledApplication
     include Facilitator1819ApplicationConstants
-    include RegionalPartnerTeacherconMapping
 
     serialized_attrs %w(
       fit_workshop_id
@@ -385,6 +384,10 @@ module Pd::Application
       sanitize_form_data_hash[:first_name]
     end
 
+    def last_name
+      sanitize_form_data_hash[:last_name]
+    end
+
     def program
       sanitize_form_data_hash[:program]
     end
@@ -519,6 +522,12 @@ module Pd::Application
       return TC_ATLANTA if regional_partner.group == 2
 
       return get_matching_teachercon(regional_partner) || TC_PHOENIX
+    end
+
+    # Assigns the default FiT workshop, if one is not yet assigned
+    def assign_default_fit_workshop!
+      return if fit_workshop_id
+      update! fit_workshop_id: find_default_fit_workshop.try(:id)
     end
 
     def find_default_fit_workshop

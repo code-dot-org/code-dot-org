@@ -8,6 +8,7 @@ import {
   isChrome,
   isChromeOS,
   isCodeOrgBrowser,
+  isLinux,
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import SurveySupportSection from './SurveySupportSection';
@@ -214,6 +215,9 @@ export default class SetupChecklist extends Component {
   }
 
   render() {
+    const linuxPermissionError = isLinux() && this.state.caughtError &&
+      this.state.caughtError.message.includes('Permission denied');
+
     return (
         <div>
           <h2>
@@ -242,6 +246,11 @@ export default class SetupChecklist extends Component {
               stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             >
+              {this.state.caughtError && this.state.caughtError.reason &&
+                <pre>
+                  {this.state.caughtError.reason}
+                </pre>
+              }
               We couldn't detect a Circuit Playground board.
               Make sure your board is plugged in, and click <a href="#" onClick={this.redetect.bind(this)}>re-detect</a>.
               {this.surveyLink()}
@@ -251,8 +260,34 @@ export default class SetupChecklist extends Component {
               stepName="Board connectable"
             >
               We found a board but it didn't respond properly when we tried to connect to it.
-              <br/>You should make sure it has the right firmware sketch installed.
-              You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
+              {linuxPermissionError &&
+                <div>
+                  <p>
+                    We didn't have permission to open the serialport.  Please make sure you are a member of the 'dialout' group.
+                  </p>
+                  <p>
+                    From your terminal, check which groups you belong to:
+                  </p>
+                  <pre>
+                    groups $&#123;USER&#125;
+                  </pre>
+                  <p>
+                    If you don't belong to 'dialout', you'll want to add yourself to that group:
+                  </p>
+                  <pre>
+                    sudo gpasswd --add $&#123;USER&#125; dialout
+                  </pre>
+                  <p>
+                    You may need to restart your computer for changes to take effect.
+                  </p>
+                </div>
+              }
+              {!linuxPermissionError &&
+                <div>
+                  You should make sure it has the right firmware sketch installed.
+                  You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
+                </div>
+              }
               {this.surveyLink()}
             </ValidationStep>
             <ValidationStep

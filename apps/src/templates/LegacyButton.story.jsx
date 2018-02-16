@@ -1,5 +1,6 @@
 import React from 'react';
 import LegacyButton, {BUTTON_TYPES, style} from './LegacyButton';
+import { withInfo } from '@storybook/addon-info';
 
 const docs = {
   "default": 'Use for actions that don\'t need to be the focus of the page',
@@ -11,11 +12,10 @@ const docs = {
 
 export default storybook => {
   storybook
-    .storiesOf('LegacyButton', module)
-    .addWithInfo(
+    .storiesOf('Buttons/LegacyButton', module)
+    .add(
       'overview',
-      '',
-      () => (
+      withInfo('')(() =>
         <div>
           <h1>Intro</h1>
           <p>

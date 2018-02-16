@@ -38,7 +38,7 @@ The priority deadline for applications is **March 30, 2018**. Late applications 
 
 Our CS Principles Professional Learning program offers year round support designed for educators teaching a semester or full-year course. You don't need any prior computer science experience to get started!
 
-The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](educate/professional-learning/values). ​Print a [flyer](/files/PLProgramsOverview_1-Pager.pdf) to share with teachers or administrators at your school.
+The program kicks off with a 5-day summer workshop where you'll have the opportunity to work hands-on with the [CS Principles curriculum](/educate/csp). Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. For more information about our goals and approach to professional learning, check out our [professional learning values](/educate/professional-learning/values). ​Print a [flyer](/files/PLProgramsOverview_1-Pager.pdf) to share with teachers or administrators at your school.
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
@@ -142,6 +142,22 @@ In some cases, travel may be required to attend your five-day summer workshop. P
 
 **Local Academic Year Workshop Expenses**
 Meals and course materials will be provided to participants who attend the local follow-up workshops. Your Regional Partner will schedule and lead these workshops, and will provide more details.
+
+## Additional benefits
+
+[col-20]
+
+<img style="margin-top:-20px;margin-bottom:-30px" src="/images/avatars/fit-200/iste.png"/>
+
+[/col-20]
+
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, [we can offer an ISTE membership](https://www.iste.org/membership/code-org) exclusively to Code.org teachers at the special price of $99 (regularly $125).
+
+Check out these 3 key benefits of ISTE membership:
+
+- Professional Learning Networks made up of peer experts, including computer science educators
+- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
+- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
 
 ## <a name="apply"></a>How to apply?
 

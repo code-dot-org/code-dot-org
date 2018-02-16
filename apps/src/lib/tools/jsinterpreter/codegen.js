@@ -363,8 +363,6 @@ exports.selectEditorRowColError = function (editor, row, col) {
 exports.clearDropletAceHighlighting = function (editor, allClasses) {
   if (editor.session && editor.session.currentlyUsingBlocks) {
     editor.clearLineMarks();
-  } else {
-    editor.aceEditor.getSelection().clearSelection();
   }
   if (allClasses) {
     clearAllHighlightedAceLines(editor.aceEditor);
@@ -375,7 +373,7 @@ exports.clearDropletAceHighlighting = function (editor, allClasses) {
   }
 };
 
-function selectAndHighlightCode(aceEditor, cumulativeLength, start, end, highlightClass) {
+function highlightCode(aceEditor, cumulativeLength, start, end, highlightClass) {
   var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
@@ -443,8 +441,7 @@ exports.selectCurrentCode = function (interpreter,
         editor.clearLineMarks();
         editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow], type: 'block'}, style);
       } else {
-        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
-            highlightClass);
+        highlightCode(editor.aceEditor, cumulativeLength, start, end, highlightClass);
       }
     } else {
       exports.clearDropletAceHighlighting(editor);

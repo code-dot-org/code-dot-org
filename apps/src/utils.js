@@ -362,16 +362,6 @@ export function showUnusedBlockQtip(targetElement) {
 }
 
 /**
- * Converts degrees into radians.
- *
- * @param {number} degrees - The degrees to convert to radians
- * @return {number} `degrees` converted to radians
- */
-export function degreesToRadians(degrees) {
-    return degrees * (Math.PI / 180);
-}
-
-/**
  * @param {string} key
  * @param {string} defaultValue
  * @return {string}
@@ -677,6 +667,18 @@ export function bisect(array, conditional) {
   const positive = array.filter(x => conditional(x));
   const negative = array.filter(x => !conditional(x));
   return [positive, negative];
+}
+
+/**
+ * Recursively flatten the given array
+ * from https://stackoverflow.com/a/15030117/1810460
+ */
+export function flatten(array) {
+  return array.reduce(
+    (flat, toFlatten) =>
+      flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten),
+    [],
+  );
 }
 
 /**

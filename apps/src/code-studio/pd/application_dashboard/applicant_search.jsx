@@ -42,7 +42,7 @@ export default class ApplicantSearch extends React.Component {
 
     $.ajax({
       method: 'GET',
-      url: `/api/v1/pd/applications/search?email=${this.state.email}`,
+      url: `/api/v1/pd/applications/search?${$.param({email: this.state.email})}`,
       dataType: 'json'
     }).done(data => {
       this.setState({

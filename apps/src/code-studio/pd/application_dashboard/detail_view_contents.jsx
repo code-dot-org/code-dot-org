@@ -1,6 +1,12 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
-import {Button, FormControl, InputGroup} from 'react-bootstrap';
+import {
+  Button,
+  SplitButton,
+  MenuItem,
+  FormControl,
+  InputGroup
+} from 'react-bootstrap';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
@@ -48,6 +54,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
+      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
       course_name: PropTypes.string,
       regional_partner_name: PropTypes.string,
       locked: PropTypes.bool,
@@ -68,23 +75,34 @@ export class DetailViewContents extends React.Component {
       fit_workshop_name: PropTypes.string,
       fit_workshop_url: PropTypes.string,
       application_guid: PropTypes.string
-    }),
+    }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
-    course: PropTypes.oneOf(['csf', 'csd', 'csp']),
-    reload: PropTypes.func.isRequired,
+    onUpdate: PropTypes.func,
     isWorkshopAdmin: PropTypes.bool
   };
 
-  state = {
-    status: this.props.applicationData.status,
-    locked: this.props.applicationData.locked,
-    notes: this.props.applicationData.notes,
-    response_scores: this.props.applicationData.response_scores || {},
-    editing: false,
-    regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
-    regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
-    pd_workshop_id: this.props.applicationData.pd_workshop_id
+  static contextTypes = {
+    router: PropTypes.object.isRequired
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = this.getOriginalState();
+  }
+
+  getOriginalState() {
+    return {
+      editing: false,
+      status: this.props.applicationData.status,
+      locked: this.props.applicationData.locked,
+      notes: this.props.applicationData.notes,
+      response_scores: this.props.applicationData.response_scores || {},
+      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
+      regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
+      pd_workshop_id: this.props.applicationData.pd_workshop_id
+    };
+  }
 
   componentWillMount() {
     this.statuses = ApplicationStatuses[this.props.viewType];
@@ -94,20 +112,17 @@ export class DetailViewContents extends React.Component {
   }
 
   handleCancelEditClick = () => {
-    this.setState({
-      editing: false,
-      status: this.props.applicationData.status,
-      locked: this.props.applicationData.locked,
-      notes: this.props.applicationData.notes,
-      regional_partner_name: this.props.applicationData.regional_partner_name,
-      regional_partner_filter: this.props.applicationData.regional_partner_id
-    });
+    this.setState(this.getOriginalState());
   };
 
   handleEditClick = () => {
     this.setState({
       editing: true
     });
+  };
+
+  handleAdminEditClick = () => {
+    this.context.router.push(`/${this.props.applicationId}/edit`);
   };
 
   handleLockClick = () => {
@@ -128,9 +143,9 @@ export class DetailViewContents extends React.Component {
     });
   };
 
-  handleSelectedWorkshopChange = (event) => {
+  handleSelectedWorkshopChange = (selection) => {
     this.setState({
-      pd_workshop_id: event.value
+      pd_workshop_id: selection ? selection.value : null
     });
   };
 
@@ -173,8 +188,11 @@ export class DetailViewContents extends React.Component {
         editing: false
       });
 
-      //Reload the page, but don't display the spinner
-      this.props.reload();
+      // Notify the parent of the updated data.
+      // The parent is responsible for passing it back in as props.
+      if (this.props.onUpdate) {
+        this.props.onUpdate(applicationData);
+      }
     });
   };
 
@@ -216,10 +234,28 @@ export class DetailViewContents extends React.Component {
           Save
         </Button>
       ), (
-        <Button onClick={this.handleCancelEditClick} key="cancel">
+        <Button
+          onClick={this.handleCancelEditClick}
+          key="cancel"
+        >
           Cancel
         </Button>
       )];
+    } else if (this.props.isWorkshopAdmin) {
+      return (
+        <SplitButton
+          id="admin-edit"
+          pullRight
+          title="Edit"
+          onClick={this.handleEditClick}
+        >
+          <MenuItem
+            onSelect={this.handleAdminEditClick}
+          >
+            (Admin) Edit Form Data
+          </MenuItem>
+        </SplitButton>
+      );
     } else {
       return (
         <Button onClick={this.handleEditClick}>
@@ -288,14 +324,14 @@ export class DetailViewContents extends React.Component {
           <h4>
             Bonus Points: {this.props.applicationData.bonus_points}
           </h4>
-          {this.props.course === 'csp' &&
+          {this.props.applicationData.course === 'csp' &&
             <h4>
               <a target="_blank" href="https://docs.google.com/document/d/1ounHnw4fdihHiMwcNNjtQeK4avHz8Inw7W121PbDQRw/edit#heading=h.p1d568zb27s0">
                 View CS Principles Rubric
               </a>
             </h4>
           }
-          {this.props.course === 'csd' &&
+          {this.props.applicationData.course === 'csd' &&
             <h4>
               <a target="_blank" href="https://docs.google.com/document/d/1Sjzd_6zjHyXLgzIUgHVp-AeRK2y3hZ1PUjg8lTtWsHs/edit#heading=h.fqiranmp717e">
                 View CS Discoveries Rubric
@@ -336,52 +372,79 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  renderTopSection = () => {
-    const fitWorkshopLink = (
-      <a href={this.props.applicationData.fit_workshop_url} target="_blank">see workshop</a>
-    );
-    const pdWorkshopLink = (
-      <a href={this.props.applicationData.pd_workshop_url} target="_blank">see workshop</a>
-    );
+  renderTopSection = () => (
+    <div id="TopSection">
+      <DetailViewResponse
+        question="Email"
+        answer={this.props.applicationData.email}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="School Name"
+        answer={this.props.applicationData.school_name}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="District Name"
+        answer={this.props.applicationData.district_name}
+        layout="lineItem"
+      />
+      {this.props.applicationData.pd_workshop_name &&
+        this.renderAssignedSummerWorkshop()
+      }
+      {this.props.applicationData.application_type === 'Facilitator' &&
+        this.renderAssignedFitWorkshop()
+      }
+      {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
+    </div>
+  );
+
+  renderAssignedSummerWorkshop() {
+    let answer;
+    if (this.props.applicationData.pd_workshop_url) {
+      answer = (
+        <span>
+          {this.props.applicationData.pd_workshop_name} (
+          <a href={this.props.applicationData.pd_workshop_url} target="_blank">
+            see workshop
+          </a>)
+        </span>
+      );
+    } else {
+      answer = "Unassigned";
+    }
     return (
-      <div id="TopSection">
-        <DetailViewResponse
-          question="Email"
-          answer={this.props.applicationData.email}
-          layout="lineItem"
-        />
-        <DetailViewResponse
-          question="School Name"
-          answer={this.props.applicationData.school_name}
-          layout="lineItem"
-        />
-        <DetailViewResponse
-          question="District Name"
-          answer={this.props.applicationData.district_name}
-          layout="lineItem"
-        />
-        {this.props.applicationData.pd_workshop_name &&
-          <DetailViewResponse
-            question="Summer Workshop"
-            answer={<span>
-              {this.props.applicationData.pd_workshop_name} ({pdWorkshopLink})
-            </span>}
-            layout="lineItem"
-          />
-        }
-        {this.props.applicationData.application_type === 'Facilitator' &&
-          <DetailViewResponse
-            question="FIT Workshop"
-            answer={<span>
-              {this.props.applicationData.fit_workshop_name} ({fitWorkshopLink})
-            </span>}
-            layout="lineItem"
-          />
-        }
-        {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
-      </div>
+      <DetailViewResponse
+        question="Summer Workshop"
+        answer={answer}
+        layout="lineItem"
+      />
     );
-  };
+  }
+
+  renderAssignedFitWorkshop() {
+    let answer;
+    if (this.props.applicationData.fit_workshop_url) {
+      answer = (
+        <span>
+          {this.props.applicationData.fit_workshop_name} (
+          <a href={this.props.applicationData.fit_workshop_url} target="_blank">
+            see workshop
+          </a>)
+        </span>
+      );
+    } else {
+      answer = "Unassigned";
+    }
+
+    return (
+      <DetailViewResponse
+        question="FIT Workshop"
+        answer={answer}
+        layout="lineItem"
+      />
+    );
+  }
 
   renderQuestions = () => {
     return (
@@ -424,7 +487,7 @@ export class DetailViewContents extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="detail-view">
         {this.renderHeader()}
         <br/>
         {this.renderTopSection()}

@@ -40,11 +40,11 @@ module Pd::Application
 
     test 'meets criteria says an application meets critera when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher1819_application, course: 'csp',
-        response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP.map {|x| [x, 'Yes']}.to_h.to_json
+        response_scores: CRITERIA_SCORE_QUESTIONS_CSP.map {|x| [x, 'Yes']}.to_h.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher1819_application, course: 'csd',
-        response_scores: Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD.map {|x| [x, 'Yes']}.to_h.to_json
+        response_scores: CRITERIA_SCORE_QUESTIONS_CSD.map {|x| [x, 'Yes']}.to_h.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
     end
 
@@ -66,7 +66,7 @@ module Pd::Application
       teacher_application = build :pd_teacher1819_application, response_scores: {
         free_lunch_percent: '5',
         underrepresented_minority_percent: '5',
-        able_to_attend_single: 'Yes',
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         csp_which_grades: nil
       }.to_json
 
@@ -76,7 +76,7 @@ module Pd::Application
     test 'autoscore does not override existing scores' do
       application_hash = build :pd_teacher1819_application_hash, {
         committed: YES,
-        able_to_attend_single: YES,
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         csp_which_grades: ['12'],
         csp_course_hours_per_year: Pd::Application::ApplicationBase::COMMON_OPTIONS[:course_hours_per_year].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -137,7 +137,7 @@ module Pd::Application
     test 'autoscore for a CSP application where they should get YES/Points for everything' do
       application_hash = build :pd_teacher1819_application_hash, {
         committed: YES,
-        able_to_attend_single: YES,
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         principal_approval: YES,
         schedule_confirmed: YES,
         diversity_recruitment: YES,
@@ -178,7 +178,7 @@ module Pd::Application
     test 'autoscore for a CSP application where they should get NO/No points for everything' do
       application_hash = build :pd_teacher1819_application_hash, {
         committed: Pd::Application::Teacher1819Application.options[:committed].last,
-        able_to_attend_single: NO,
+        able_to_attend_single: TEXT_FIELDS[:no_explain],
         principal_approval: YES,
         schedule_confirmed: NO,
         diversity_recruitment: NO,
@@ -218,7 +218,7 @@ module Pd::Application
     test 'autoscore for a CSD application where they should get YES/Points for everything' do
       application_hash = build(:pd_teacher1819_application_hash, :csd,
         committed: YES,
-        able_to_attend_single: YES,
+        able_to_attend_single: TEXT_FIELDS[:able_to_attend_single],
         principal_approval: YES,
         schedule_confirmed: YES,
         diversity_recruitment: YES,
@@ -257,7 +257,7 @@ module Pd::Application
     test 'autoscore for a CSD application where they should get NO/No points for everything' do
       application_hash = build(:pd_teacher1819_application_hash, :csd,
         committed: Pd::Application::Teacher1819Application.options[:committed].last,
-        able_to_attend_single: NO,
+        able_to_attend_single: TEXT_FIELDS[:no_explain],
         principal_approval: YES,
         schedule_confirmed: NO,
         diversity_recruitment: NO,
@@ -305,7 +305,7 @@ module Pd::Application
       application_hash = build(:pd_teacher1819_application_hash, :csd, :with_multiple_workshops,
         able_to_attend_multiple: [
           "December 11-15, 2017 in Indiana, USA",
-          Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]
+          TEXT_FIELDS[:no_explain]
         ]
       )
 
@@ -318,13 +318,62 @@ module Pd::Application
     test 'autoscore for not able_to_attend_multiple' do
       application_hash = build(:pd_teacher1819_application_hash, :csd, :with_multiple_workshops,
         program: Pd::Application::Teacher1819Application::PROGRAM_OPTIONS.first,
-        able_to_attend_multiple: [Teacher1819ApplicationConstants::TEXT_FIELDS[:no_explain]]
+        able_to_attend_multiple: [TEXT_FIELDS[:no_explain]]
       )
 
       application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: nil
       application.auto_score!
 
       assert_equal(NO, application.response_scores_hash[:able_to_attend_multiple])
+    end
+
+    test 'application meets criteria if able to attend single workshop' do
+      application_hash = build(:pd_teacher1819_application_hash,
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+
+      assert_equal(YES, application.meets_criteria)
+    end
+
+    test 'application meets criteria if able to attend multiple workshops' do
+      application_hash = build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+
+      assert_equal(YES, application.meets_criteria)
+    end
+
+    test 'application does not meet criteria if unable to attend single workshop' do
+      application_hash = build(:pd_teacher1819_application_hash,
+        able_to_attend_single: [TEXT_FIELDS[:no_explain]],
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+
+      assert_equal(NO, application.meets_criteria)
+    end
+
+    test 'application does not meet criteria if unable to attend multiple workshops' do
+      application_hash = build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+        able_to_attend_multiple: [TEXT_FIELDS[:no_explain]],
+        principal_approval: YES,
+        schedule_confirmed: YES,
+        diversity_recruitment: YES
+      )
+      application = create :pd_teacher1819_application, form_data: application_hash.to_json, regional_partner: (create :regional_partner)
+      application.auto_score!
+      assert_equal(NO, application.meets_criteria)
     end
 
     test 'send_decision_notification_email only sends to G3 and unmatched' do
@@ -593,6 +642,107 @@ module Pd::Application
       application.update_user_school_info!
       refute_equal original_school_info.id, user.school_info_id
       assert_not_nil user.school_info_id
+    end
+
+    test 'get_first_selected_workshop single local workshop' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build :pd_teacher1819_application_hash, regional_partner_workshop_ids: [workshop.id]
+      )
+
+      assert_equal workshop, application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop multiple local workshops' do
+      workshops = (1..3).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: workshops.map(&:id),
+          able_to_attend_multiple: (
+            # Select all but the first. Expect the first selected to be returned below
+            workshops[1..-1].map do |workshop|
+              "#{workshop.friendly_date_range} in #{workshop.location_address} hosted by Code.org"
+            end
+          )
+        )
+      )
+      assert_equal workshops[1], application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop multiple local workshops no selection returns first' do
+      workshops = (1..2).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: workshops.map(&:id),
+          able_to_attend_multiple: []
+        )
+      )
+      assert_equal workshops.first, application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop with no workshops returns nil' do
+      application = create :pd_teacher1819_application, form_data_hash: (
+      build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+        regional_partner_workshop_ids: []
+        )
+      )
+      assert_nil application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop returns nil for teachercon even with local workshops' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build :pd_teacher1819_application_hash, teachercon: TC_PHOENIX, regional_partner_workshop_ids: [workshop.id]
+      )
+
+      assert_nil application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop ignores single deleted workshops' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build :pd_teacher1819_application_hash, regional_partner_workshop_ids: [workshop.id]
+      )
+
+      workshop.destroy
+      assert_nil application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
+      workshops = (1..2).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: workshops.map(&:id),
+          able_to_attend_multiple: []
+        )
+      )
+
+      workshops[0].destroy
+      assert_equal workshops[1], application.get_first_selected_workshop
+
+      workshops[1].destroy
+      assert_nil application.get_first_selected_workshop
+    end
+
+    test 'assign_default_workshop! saves the default workshop' do
+      application = create :pd_teacher1819_application
+      workshop = create :pd_workshop
+      application.expects(:find_default_workshop).returns(workshop)
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'assign_default_workshop! does nothing when a workshop is already assigned' do
+      workshop = create :pd_workshop
+      application = create :pd_teacher1819_application, pd_workshop_id: workshop.id
+      application.expects(:find_default_workshop).never
+
+      application.assign_default_workshop!
+      assert_equal workshop.id, application.reload.pd_workshop_id
     end
   end
 end

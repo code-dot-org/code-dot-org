@@ -2,7 +2,7 @@
 require_relative('../config/environment')
 require 'cdo/properties'
 
-ENABLED_LANGUAGES = [:'es-ES', :'it-IT', :'pt-BR']
+ENABLED_LANGUAGES = [:'es-ES', :'it-IT', :'pt-BR'].freeze
 k1_scripts = Script.all.select(&:text_to_speech_enabled?)
 
 def clean(value)

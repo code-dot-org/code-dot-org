@@ -8,6 +8,7 @@ nav: regional_partner_playbook_nav
 
 ## Table of Contents
 - [Virtual Trainings](#virtual)
+- [Regional Partner Summit - Mar 2018](#mar18)
 - [Regional Partner Summit - Sept 2017](#sept17)
 - [Regional Partner Summit - Feb 2017] (#feb17)
 - [TeacherCon - Summer 2016](#teachercon16)
@@ -22,10 +23,15 @@ ________________
 ## Virtual Trainings
 
 
-  January 2018
+February 2018
+
+- Feb 1 Teacher Recruitment Strategies ([Video](https://code.zoom.us/recording/play/1zNBEQIEdZz1mNF1ZB1dfMc712T8QZytT8S3-9HKcinn7aL8SHdwLLaE9Ufd2j0Q), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
+
+January 2018
 
 - Jan 19 Teacher Application Tools ([Video](https://code.zoom.us/recording/play/YTF54MqiBk6352GrU7mClLIeZ8eZ91P-tsrXw7yp1g2mafp4x1GEOIvPFBMbslmg), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
 - Jan 11 Teacher Application Process ([Video](https://code.zoom.us/recording/play/aEKJINsQA4uXqKqUx_gmk3V6neP24RusyC_0Rd9W1pwlDnDy5KSz5g0v_vIfG5eM), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
+<br/>
 <br/>
 
  <details>
@@ -118,6 +124,20 @@ January 2017:
 <br/>
 </p>
 </details>
+
+[**Back to the top**](#top)
+<br/>
+
+________________
+<a id="mar18"></a>
+<br/>
+
+## Regional Partner Summit (March 2018)
+Please review the following resources for the March 2018 Regional Partner Summit.  More resources will be added up to and through the summit. 
+
+- [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
+- Nominate your fellow Regional Partners - [form](https://goo.gl/forms/LpvgerOhqNycItj23)
+- Sign up to deliver 5-minute Lightening Talks during the summit - [form](https://goo.gl/forms/6dVAKAM9qtkVAm5G2)
 
 [**Back to the top**](#top)
 <br/>

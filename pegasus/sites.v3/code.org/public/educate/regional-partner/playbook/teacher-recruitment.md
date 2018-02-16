@@ -11,6 +11,7 @@ nav: regional_partner_playbook_nav
 - [Teacher Outreach](#teachout)
 - [District Outreach](#district)
 
+Compiled document of all Teacher Recruitment Resources and Strategies **[here](https://docs.google.com/document/d/1pNyPvt54ACH7sfA0f13_-CZGQ4m-VhcH4NorEIhdx24/edit?ts=5a6baf6c#heading=h.a8j457kayvro)**.
 
 ________________
 <a id="teachapp"></a>
@@ -21,7 +22,8 @@ Review the [2018 Teacher Application Process Document](https://docs.google.com/d
 
 ### What are the important dates I need to know about?
 - Jan. 16: Applications open!
-- April 6: Priority deadline for all Group 3 applications
+- March 30: Priority Deadline for applications
+- April 6: Priority deadline for Group 3 to accept applications to TeacherCon
 - April - July: Application link will remain open for Group 1 and 2, and as needed for Group 3
 - April 20: Deadline for accepting teachers for TeacherCon 1
 - May 18: Deadline for accepting teachers for TeacherCon 2
@@ -57,7 +59,7 @@ CS​ ​Principles​ ​and​ ​CS​ ​Discoveries] (https://code.org/file
 
 
 ________________
-<a id="teachon"></a>
+<a id="district"></a>
 
 ## District Outreach
 
