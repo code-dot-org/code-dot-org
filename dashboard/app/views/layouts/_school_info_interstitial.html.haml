@@ -16,7 +16,7 @@
 - script_data[:authTokenValue] = form_authenticity_token
 - script_data[:existingSchoolInfo] = {}
 - if current_user_school_info
-  - script_data[:existingSchoolInfo] = current_user_school_info.slice(:country, :school_type, :school_id, :school_name, :state, :zip, :full_address)
+  - script_data[:existingSchoolInfo] = current_user_school_info.slice(:country, :school_type, :school_id, :school_name, :full_address)
 - script_data[:existingSchoolInfo][:country] ||= 'United States' if us_ip
 
 - content_for(:head) do
