@@ -31,6 +31,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
     schoolDropdownOption: PropTypes.object,
+    schoolFilter: PropTypes.func,
   };
 
   schoolDropdown = undefined;
@@ -83,6 +84,7 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
             fieldName={this.props.fieldName}
             onChange={this.sendToParent}
             schoolDropdownOption={this.props.schoolDropdownOption}
+            schoolFilter={this.props.schoolFilter}
           />
           <label>
             <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={this.props.value === "-1"}/>
