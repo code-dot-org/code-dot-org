@@ -52,14 +52,6 @@ const instructionsInitialState = {
   hasAuthoredHints: false,
   overlayVisible: false,
   levelVideos: [],
-  // TODO (epeach) - remove after resources tab A/B test
-  // Used to provide access to level data for the logging
-  app: undefined,
-  scriptName: undefined,
-  scriptId: undefined,
-  stagePosition: 0,
-  levelPosition: 0,
-  serverLevelId: undefined,
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -77,12 +69,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       overlayVisible,
       teacherMarkdown,
       levelVideos,
-      app,
-      scriptName,
-      stagePosition,
-      levelPosition,
-      scriptId,
-      serverLevelId
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -100,12 +86,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       overlayVisible,
       collapsed,
       levelVideos,
-      app,
-      scriptName,
-      stagePosition,
-      levelPosition,
-      scriptId,
-      serverLevelId
     });
   }
 
@@ -161,8 +141,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
-    app, scriptName, stagePosition, levelPosition, serverLevelId, scriptId }) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -173,12 +152,6 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   overlayVisible,
   teacherMarkdown,
   levelVideos,
-  app,
-  scriptName,
-  stagePosition,
-  levelPosition,
-  scriptId,
-  serverLevelId
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -280,14 +253,7 @@ export const determineInstructionsConstants = config => {
     locale,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
-    teacherMarkdown,
-    //TOD0- REMOVE after resources tab A/B testing
-    app,
-    scriptName,
-    stagePosition,
-    levelPosition,
-    serverLevelId,
-    scriptId  } = config;
+    teacherMarkdown} = config;
   const {
     instructions,
     instructions2,
@@ -366,12 +332,6 @@ export const determineInstructionsConstants = config => {
     longInstructions,
     teacherMarkdown,
     hasContainedLevels,
-    levelVideos,
-    app,
-    scriptName,
-    stagePosition,
-    levelPosition,
-    serverLevelId,
-    scriptId,
+    levelVideos
   };
 };
