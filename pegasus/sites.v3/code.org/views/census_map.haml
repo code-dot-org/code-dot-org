@@ -164,7 +164,7 @@
   }
 
   function updateCensusMapSchool(school) {
-    if (school) {
+    if (school && school.latitude && school.longitude) {
       const map_options = {
         center: new google.maps.LatLng(school.latitude, school.longitude),
         zoom: 17,
