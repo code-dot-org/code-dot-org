@@ -12,10 +12,15 @@ import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPo
 import {ConnectionFailedError} from '@cdo/apps/lib/kits/maker/MakerError';
 import {
   findPortWithViableDevice,
-  getPreferredPort
+  getPreferredPort,
+  CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT,
 } from '@cdo/apps/lib/kits/maker/portScanning';
+import experiments from '@cdo/apps/util/experiments';
 
 describe("maker/portScanning.js", function () {
+  // Unit tests assume no support for CPX, unless they explicitly enable it.
+  beforeEach(() => experiments.setEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT, false));
+
   describe(`findPortWithViableDevice()`, () => {
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
@@ -47,6 +52,7 @@ describe("maker/portScanning.js", function () {
     });
 
     it('rejects if the best device is a Circuit Playground Express', done => {
+      expect(experiments.isEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT)).to.be.false;
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
       findPortWithViableDevice()
         .then(port => {
@@ -62,6 +68,20 @@ describe("maker/portScanning.js", function () {
         })
         .catch(done);
     });
+
+    describe(`with experiment ${CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT}`, () => {
+      beforeEach(() => experiments.setEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT, true));
+      afterEach(() => experiments.setEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT, false));
+
+      it(`allows the Circuit Playground Express`, () => {
+        ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
+        return findPortWithViableDevice()
+          .then(port => {
+            expect(port).to.equal('COM5');
+          });
+      });
+    });
+
   });
 
   describe(`getPreferredPort(portList)`, () => {
