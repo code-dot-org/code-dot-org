@@ -69,7 +69,7 @@ fil:
   try_k8intro: "Subukan ang pang K-8 na Kursong Introduksyon sa Computer Science (15-25 oras)"
   k8intro: "K-8 Intro to Computer Science Course (15-25 oras)"
   already_started: "Nag simula na? Mag simula ulit dito >> "
-  demos: 'Admin: Lahat ng Demos'
+  demos: "Admin: Lahat ng Demos"
   continue: 'Magpatuloy'
   prize: 'Gantimpala'
   more_info: 'Para sa maraming kaalaman'
@@ -171,6 +171,7 @@ fil:
       email: 'Email address'
       submit: 'Ipasa'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Parang nagsign-up ka gamit ang email address na hindi balido. Paki-email sa support@code.org para makatanggap ng password na recovery link.'
     change_form:
       title: 'Palitan ang iyong password'
@@ -220,7 +221,7 @@ fil:
       provider_managed_section: "Ang seksyon na ito ay pinamahalaan ng ibang provider at hindi maaaring masalihan. Pakisabihan ang iyong guro na idagdag ka gamit ang %{provider} at ire-sync ang kanilang seksyon."
     mail:
       student_disassociated:
-        subject: 'Notipikasyon ng Code.org: Si %{student_name} ay hindi mo na estudyante.'
+        subject: "Notipikasyon ng Code.org: Si %{student_name} ay hindi mo na estudyante."
   reports:
     error:
       access_denied: "Wala kang access sa stats ng taong ito"
@@ -352,7 +353,7 @@ fil:
     current_password_hint: '(kailangan namin ang iyong kasalukuyang password para kumpirmahin ang iyong mga binago)'
     delete: 'Burahin ang iyong account'
     delete_text: "Ang pagpindut sa button sa baba ay magbubura ng iyong account."
-    delete_text_teacher_note: 'Paki-tandaan: ang pagbura ng iyong account ay hindi magbubura sa mga account ng iyong mga estudyante.'
+    delete_text_teacher_note: "Paki-tandaan: ang pagbura ng iyong account ay hindi magbubura sa mga account ng iyong mga estudyante."
     delete_confirm: 'Sigurado ka bang gusto mong burahin ang account na ito?'
     deleted_user: 'naburang user'
     no_password_because_oauth: 'Walang password dahil nagsign-in ka gaming ang isang third-party na provider.'
@@ -363,7 +364,7 @@ fil:
     create_personal_login_under_13_parent_email: 'Magulang/Tagapangala na email address'
     create_personal_login_info: 'Kung gusto mo pa ring gamitin ang iyong Code.org na account kahit pagkatapos ng school year, maaring kang maglikha ng iyong sariling login sa baba.'
     create_personal_login_terms: "Sa paglikha ng personal na login, ako ay sumasang-ayon na masailalaim sa mga <a href='%{terms_of_service_url}', target='_blank'>alituntunin</a> ng Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako ay maayrong pahintulot mula sa aking mga magulang o legal na taga-pangalaga na gumamit sa mga serbisyo ng Code.org kahit na walang guro."
-    create_personal_login_email_note: 'Tandaan: Ang mga email address ay hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming <a href=''%{privacy_policy_url}'', target=''_blank''>patakaran sa privacy</a> para sa karagdagan impormasyon.'
+    create_personal_login_email_note: "Tandaan: Ang mga email address ay hindi nakastore sa isang form na magbigay sa atin ng kakayahan na makipag-ugnayan sa mga estudyante. Ang mga estudyante ay hinding-hindi makatanggap ng mga emails mula sa Code.org maliban na lang sa password recovery. Tingnan ang aming <a href='%{privacy_policy_url}', target='_blank'>patakaran sa privacy</a> para sa karagdagan impormasyon."
     enter_new_login_info: 'Ipasok ang iyong bagong login na impormasyon'
     confirm_secret_words: 'Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay ng iyong kasalukuyang mga secret na mga pulong'
     enter_parent_email: "Ilagay ang iyong mga magulang, o tagapangalaga na email address (para sa password recovery)"
@@ -581,7 +582,7 @@ fil:
       title: "Star Wars"
     infinity:
       title: "Infinity Play Lab"
-      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
+      body: "Gamitin ang Play Lab para lumikha ng mga kuwento o laro na pinagbibidahan ng mga karakter sa Disney Infinity."
     minecraft:
       title: "Minecraft"
       body: "Tuklasin ang mundo ng Minecraft sa pamamagitan ng code."
@@ -702,7 +703,7 @@ fil:
     sign_out: 'Kung hindi mo nais magbigay ng edad mo maari kang <a href="%{url}">mag-sign out</a>.'
   terms_interstitial:
     title: "Binago ang mga Palatuntunan at ang Privacy Policy"
-    intro_desc: 'Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay <i>hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio.</i> Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email.'
+    intro_desc: "Binago namin ang aming mga palatuntunan at privacy policy, gaya ng pinakita namin sa baba. Ang mga pagbabago ay magkaroon ng bisa sa ika-24 ng Agosto, 2016. Ang pinakamalaking pagbabago: kami ay <i>hindi na mag-store ng email address ng mga estudyanteng account sa Code Studio.</i> Ito ay isang malaking bagay para sa amin, at kami ay umaasa na magbibigay ito ng bagong pamantayan para sa privacy ng mga estudyante sa teknolohiya na pang-edukasyon. Kami ay nagpapadala ng buod ng lahat ng mga pagbabago sa pamamagitan ng email."
     intro_instructions: "Kailangan mong tanggapin ang mga bagong pamatayan para sa mga estudyante na wala pang 13 taong gulang sa iyong silid-aralan para magkaroon ng buong access sa lahat ng mga bagong katangian ng Code Studio. Kung magrehistro ng account para sa estudyante na wala pang 13 taong gulang, pagsasabihan ka na ikompirma kung ang iyong paaralan ay may pahintulot ng mga magulang para sa koleksyon ng mga personal na impormasyon ng mga estudyante para sa paggamit at pakinabang ng paaralan, kalakip na dito ang mga educational na mga programa gaya ng Code Studio."
     tos: "Mga Palatuntunan"
     privacy: "Privacy Policy"
@@ -718,7 +719,7 @@ fil:
     message_with_suggestion: "Pakitiyak kung ang sumusunod na mga impormasyon ay tama, o baguhin ito kung kinakailangan."
     save: "I-save"
   race_interstitial:
-    title: 'Opsyonal: Tulungan niyo kaming subaybayan ang ating pag-unlad tungo sa pagpapabuti ng pagkakaiba-iba sa computer science'
+    title: "Opsyonal: Tulungan niyo kaming subaybayan ang ating pag-unlad tungo sa pagpapabuti ng pagkakaiba-iba sa computer science"
     message: "Mangyaring sabihan niyo kami sa iyong lahi (lagyan ng tsek ang angkop sa iyo)"
     races:
       - 
@@ -762,7 +763,7 @@ fil:
     delete: "I-delete"
     import: "Mag-Import"
     share_link_import_bad_link_header: "Ang Share na Link ay hindi kinikilala"
-    share_link_import_bad_link_body: 'Hindi namin ma-import ang share na link na iyan. Siguraduhing ikaw ay gumagamit ng link mula sa Minecraft: Agent puzzle, at nakopya mo ang buong link.'
+    share_link_import_bad_link_body: "Hindi namin ma-import ang share na link na iyan. Siguraduhing ikaw ay gumagamit ng link mula sa Minecraft: Agent puzzle, at nakopya mo ang buong link."
     share_link_import_error_header: "May nangyaring mali."
     share_link_import_error_body: "May problema sa pag-import ng share na link na iyan. Pakisubukan ulit."
     exit: "Bumalik sa Kurso"

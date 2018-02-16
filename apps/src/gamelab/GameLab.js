@@ -275,6 +275,9 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
   };
 
+  // Always hide DPad until better UI is created.
+  this.level.showDPad = false;
+
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 

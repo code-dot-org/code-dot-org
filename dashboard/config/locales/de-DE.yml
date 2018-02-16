@@ -209,6 +209,7 @@
       email: E-Mail-Adresse
       submit: Absenden
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Du scheinst dich mit einer ungültigen E-Mail-Adresse eingeloggt
         zu haben. Bitte emaile support@code.org um einen Link zur Wiederherstellung
         deines Passwortes zu erhalten.

@@ -350,12 +350,12 @@
     med
   studiobar_shop_title: Butikk
   studiobar_shop_body: Bryt stereotyper. Bruk vår logo med stolthet.
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
+  homepage_stats_students: av Amerikanske elever har konto på Code.org
+  homepage_stats_female: av våre elever er jenter
+  homepage_stats_teachers: lærere bruker Code.org
+  homepage_stats_hourofcodde: av verdens elever som har prøvd kodetimen
+  homepage_stats_policy: stater forandret regler for å støtte dataforskning
+  homepage_stats_title: Vi utgjør en forskjell
   homepage_hero_text_malala: '"Jeg utfordrer jenter i alle land til å lære en kodetime"
     Malala, fredsprisvinner'
   homepage_hero_text_susan: '"Hvis du kan endre teknologi, kan du endre verden." Susan,
@@ -633,7 +633,7 @@
   video_title_obama: President Obama om informatikk
   video_title_hoc_is_here: Kodetimen er her - alle kan lære
   video_title_anybody_can_learn: Alle kan lære
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: Kodetimen med Steph Curry
   video_title_draymond_green: Kodetimen med Draymond Green
   video_title_russell_okung: Kodetimen med Russell Okung
   video_title_real_madrid: Kodetimen med Real Madrid
@@ -1019,8 +1019,11 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve
     disse analoge leksjonene</a>.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Skoleplan
   dashboard_curriculum_overview: K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)
   dashboard_overview: Oversikt
@@ -1038,6 +1041,8 @@
   dashboard_curriculum_csins: 'Datavitenskap i Vitenskap:'
   dashboard_curriculum_csp: 'AP® Datavitenskapsprinsipper:'
   dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Andre
   dashboard_login_word: Ord
@@ -1248,11 +1253,11 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
+  csp-ap_name: AP ytelsesaktiviteter
+  csppostap_name: 'Post AP: Databaser i appen'
   cspassessment_name: Full Test - 50 spørsmål
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
+  csp-explore_name: Utforsk PT forberedelse
+  csp-create_name: Lag en PT forberedelse
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: 9.-12. klasse
@@ -1285,6 +1290,7 @@
   cspexams_category_name: Prinsipper i informatikk teoriprøve
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Spill-lab
   basketball_name: Lag et basketball-spill
   sports_name: Kod ditt eget sportsspill
   applab_gradelevel: Minstealder 13 år
@@ -2053,7 +2059,7 @@
     hemmelighet".
   login_cards: Innloggingskort
   print_login_cards: Skriv ut innloggingskort
-  joining_section: Joining your section (one-time only)
+  joining_section: Blir med på din del ( engangstilfelle)
   joining_section_overview: Om en elev ikke allerede har blitt med i seksjonen din,
     be dem om å gjøre følgende steg. Merk at de bare trenger å gjøre dette én gang.
     Ved å bli med i seksjonen din vil elevene se hvilket kurs de er blitt tildelt
@@ -2081,10 +2087,4 @@
     fra Google Classroom" i fanen "Administrer elever":'
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Heltens reise'
-  applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
+  applab-intro_name: Lab-intro til appen

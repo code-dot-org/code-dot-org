@@ -104,6 +104,7 @@ class Documents < Sinatra::Base
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
     Sass::Plugin.options[:template_location] = shared_dir('css')
+    set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
   end
 
   before do

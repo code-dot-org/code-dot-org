@@ -5,6 +5,8 @@ require 'sinatra/base'
 require 'cdo/sinatra'
 
 class FilesApi < Sinatra::Base
+  set :mustermann_opts, check_anchors: false
+
   def max_file_size
     5_000_000 # 5 MB
   end

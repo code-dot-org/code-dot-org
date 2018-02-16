@@ -1017,8 +1017,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Õppekava"
   dashboard_curriculum_overview: K-5 õppekava ülevaade
   dashboard_overview: "Ülevaade"
@@ -1036,6 +1039,8 @@
   dashboard_curriculum_csins: 'Arvutitehnika teaduses:'
   dashboard_curriculum_csp: 'AP® Arvutiteaduse põhiprintsiibid:'
   dashboard_curriculum_ecs: 'Avastades arvutiteadust:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Muu
   dashboard_login_word: Sõna
@@ -1285,6 +1290,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Game Lab
   basketball_name: Tee korvpallimäng
   sports_name: Tee oma spordimäng
   applab_gradelevel: Vanus 13+
@@ -2071,9 +2077,3 @@
     Account” option:'
   hero_name: 'Minecraft: Kangelase teekond'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
