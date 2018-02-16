@@ -107,6 +107,7 @@ class ContactRollups
 
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
+  ROLE_CENSUS_SUBMITTER = "Census Submitter".freeze
 
   def self.build_contact_rollups
     start = Time.now
@@ -120,6 +121,7 @@ class ContactRollups
     insert_from_pegasus_forms
     insert_from_dashboard_contacts
     insert_from_dashboard_pd_enrollments
+    insert_from_dashboard_census_submissions
     update_unsubscribe_info
     update_roles
     update_grades_taught
@@ -284,6 +286,25 @@ class ContactRollups
     SELECT email, name, '#{ROLE_TEACHER}'
     FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
     WHERE LENGTH(pd_enrollments.email) > 0
+    ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name,
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    roles =
+    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END"
+
+    log_completion(start)
+  end
+
+  def self.insert_from_dashboard_census_submissions
+    start = Time.now
+    log "Inserting contacts from dashboard.census_submissions"
+    PEGASUS_REPORTING_DB_WRITER.run "
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
+    SELECT submitter_email_address, submitter_name, '#{ROLE_CENSUS_SUBMITTER}'
+    FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
+    WHERE LENGTH(census_submissions.submitter_email_address) > 0
     ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name,
     -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
     roles =
