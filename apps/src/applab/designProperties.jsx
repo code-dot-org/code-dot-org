@@ -12,6 +12,7 @@ let nextKey = 0;
 
 export default class DesignProperties extends React.Component {
   static propTypes = {
+    currentScreenId: PropTypes.string.isRequired,
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -19,7 +20,8 @@ export default class DesignProperties extends React.Component {
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   state = {selectedTab: TabType.PROPERTIES};
@@ -206,9 +208,9 @@ export default class DesignProperties extends React.Component {
                 }
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
                 <CopyElementToScreenButton
-                    handleCopyElementToScreen={function() { debugger; }}
-                    currentScreenId={"current"}
-                    screenIds={["other", "current", "more"]}
+                  currentScreenId={this.props.currentScreenId}
+                  handleCopyElementToScreen={function() { debugger; }}
+                  screenIds={this.props.screenIds}
                 />
               </div>
               <PropertyComponent

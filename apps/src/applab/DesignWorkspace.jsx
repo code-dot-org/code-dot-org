@@ -7,6 +7,7 @@ class DesignWorkspace extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
     handleDragStart: PropTypes.func,
+    currentScreenId: PropTypes.string.isRequired,
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -16,6 +17,7 @@ class DesignWorkspace extends React.Component {
     onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
     isDimmed: PropTypes.bool.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
 
     // provided by redux
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
@@ -42,17 +44,19 @@ class DesignWorkspace extends React.Component {
         showMakerToggle={this.props.showMakerToggle}
       />
       <DesignModeBox
-        handleDragStart={this.props.handleDragStart}
+        currentScreenId={this.props.currentScreenId}
         element={this.props.element}
         elementIdList={this.props.elementIdList}
         handleChange={this.props.handleChange}
+        handleDragStart={this.props.handleDragStart}
+        isDimmed={this.props.isDimmed}
+        isToolboxVisible={this.state.isToolboxVisible}
         onChangeElement={this.props.onChangeElement}
+        onDelete={this.props.onDelete}
         onDepthChange={this.props.onDepthChange}
         onDuplicate={this.props.onDuplicate}
-        onDelete={this.props.onDelete}
         onInsertEvent={this.props.onInsertEvent}
-        isToolboxVisible={this.state.isToolboxVisible}
-        isDimmed={this.props.isDimmed}
+        screenIds={this.props.screenIds}
       />
     </div>);
   }
