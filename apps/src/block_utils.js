@@ -406,10 +406,10 @@ exports.interpolateInputs = function (blockly, block, inputs) {
     let dropdown;
     switch (input.mode) {
       case DROPDOWN_INPUT:
-        dropdown = new blockly.FieldDropdown(
-          input.options.map(option => [input.label + option[0], option[1]])
-        );
-        block.appendDummyInput().appendTitle(dropdown, input.name);
+        dropdown = new blockly.FieldDropdown(input.options);
+        block.appendDummyInput()
+          .appendTitle(input.label)
+          .appendTitle(dropdown, input.name);
         break;
       case VALUE_INPUT:
         block.appendValueInput(input.name)
