@@ -2,6 +2,7 @@
 /* global SerialPort */ // Maybe provided by the Code.org Browser
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
+import experiments from '../../../util/experiments';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -23,12 +24,16 @@ export const CIRCUIT_PLAYGROUND_PID = 0x8011;
 /** @const {string} The Circuit Playground Express product id */
 export const CIRCUIT_PLAYGROUND_EXPRESS_PID = 0x8018;
 
+/** @const {string} Experiment key for enabling CPX support */
+export const CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT = 'cpx-support';
+
 /**
  * Scan system serial ports for a device compatible with Maker Toolkit.
  * @returns {Promise.<string>} resolves to a serial port name for a viable
  *   device, or rejects if no such device can be found.
  */
 export function findPortWithViableDevice() {
+  const allowCircuitPlaygroundExpress = experiments.isEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT);
   return Promise.resolve()
       .then(ensureAppInstalled)
       .then(listSerialDevices)
@@ -36,7 +41,7 @@ export function findPortWithViableDevice() {
         const bestOption = getPreferredPort(list);
         if (bestOption) {
           // Special case: Detect CP Express and show a unique error message.
-          if (parseInt(bestOption.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID) {
+          if (!allowCircuitPlaygroundExpress && parseInt(bestOption.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID) {
             return Promise.reject(new ConnectionFailedError(
                 "It looks like you've connected a Circuit Playground Express. " +
                 'Code.org Maker Toolkit does not support the Express at this time. ' +
