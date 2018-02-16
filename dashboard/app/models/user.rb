@@ -1405,7 +1405,7 @@ class User < ActiveRecord::Base
       script = Script.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result == 100 &&
+        new_result >= ActivityConstants::BEST_PASS_RESULT &&
         script_valid &&
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
