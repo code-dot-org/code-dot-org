@@ -29,9 +29,10 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
         'None',
         'Vegetarian',
         'Vegan',
+        'Kosher',
         'Halal',
         'Gluten Free',
-        'Food Allergy (please list):',
+        'Food Allergy',
       ],
       liveFarAway: YES_OR_NO,
       addressState: get_all_states_with_dc.to_h.values,
@@ -99,6 +100,16 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
       ]
     end
 
+    if hash[:dietary_needs].try(:include?, 'Food Allergy')
+      requireds.concat [
+        :dietary_needs_details
+      ]
+    end
+
     return requireds
+  end
+
+  def accepted?
+    sanitize_form_data_hash.try(:[], :able_to_attend) == YES
   end
 end
