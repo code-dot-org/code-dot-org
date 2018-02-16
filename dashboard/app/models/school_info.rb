@@ -142,7 +142,7 @@ class SchoolInfo < ActiveRecord::Base
       SCHOOL_TYPE_HOMESCHOOL,
       SCHOOL_TYPE_AFTER_SCHOOL,
       SCHOOL_TYPE_ORGANIZATION,
-      SCHOOL_STATE_OTHER
+      SCHOOL_TYPE_OTHER,
     ].include?(school_type)
     return true unless school_id.nil?
 
