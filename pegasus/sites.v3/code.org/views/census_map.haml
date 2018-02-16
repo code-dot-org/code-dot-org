@@ -149,6 +149,18 @@
     });
   }
 
+  function updateCensusMapSchool(school) {
+    if (school) {
+      const map_options = {
+        center: new google.maps.LatLng(school.latitude, school.longitude),
+        zoom: 17,
+        scrollwheel: scrollwheelOption,
+        draggable: draggableOption,
+      }
+      gmap.setOptions(map_options);
+    }
+  }
+
   function enableDrag() {
     scrollwheelOption = true;
     draggableOption = true;

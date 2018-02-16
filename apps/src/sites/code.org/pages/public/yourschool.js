@@ -1,3 +1,4 @@
+/*global updateCensusMapSchool*/
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -34,6 +35,7 @@ function showYourSchool() {
         alertUrl={$('#your-school').data("parameters-alert-url")}
         hideMap={$('#your-school').data("parameters-hide-map")}
         prefillData={prefillData}
+        updateCensusMapSchool={updateCensusMapSchool}
       />
     </Provider>,
     $('#your-school')[0]
