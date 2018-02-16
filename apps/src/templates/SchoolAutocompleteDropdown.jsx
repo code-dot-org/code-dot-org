@@ -13,10 +13,12 @@ export default class SchoolAutocompleteDropdown extends Component {
     value: PropTypes.string,
     fieldName: PropTypes.string,
     schoolDropdownOption: PropTypes.object,
+    schoolFilter: PropTypes.func,
   };
 
   static defaultProps = {
-    fieldName: "nces_school_s"
+    fieldName: "nces_school_s",
+    schoolFilter: () => true,
   };
 
 
@@ -48,7 +50,7 @@ export default class SchoolAutocompleteDropdown extends Component {
     fetch(searchUrl)
       .then(response => response.ok ? response.json() : [])
       .then(json => {
-        const schools = json.map(school => this.constructSchoolOption(school));
+        const schools = json.filter(this.props.schoolFilter).map(school => this.constructSchoolOption(school));
         schools.unshift(this.constructSchoolNotFoundOption());
         return { options: schools };
       })
