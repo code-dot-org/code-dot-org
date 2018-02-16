@@ -78,11 +78,12 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
     end
 
-    unless [nil, 'none', 'all'].include? params[:regional_partner_filter]
-      partner = RegionalPartner.find_by(id: params[:regional_partner_filter])
-      if params[:role] = 'csd_teachers'
+    unless ['none', 'all'].include? params[:regional_partner_filter]
+      partner_id = params[:regional_partner_filter] ? params[:regional_partner_filter] : current_user.regional_partners.first
+      partner = RegionalPartner.find_by(id: partner_id)
+      if params[:role] == 'csd_teachers'
         cohort_capacity = partner.cohort_capacity_csd
-      elsif params[:role] = 'csp_teachers'
+      elsif params[:role] == 'csp_teachers'
         cohort_capacity = partner.cohort_capacity_csp
       end
     end
