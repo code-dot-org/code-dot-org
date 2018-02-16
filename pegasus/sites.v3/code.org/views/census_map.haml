@@ -61,6 +61,7 @@
       query: {
         select: 'location',
         from: "#{TABLE_ID}",
+        where: "location NOT IN ''",
       },
       styles: [
         {
