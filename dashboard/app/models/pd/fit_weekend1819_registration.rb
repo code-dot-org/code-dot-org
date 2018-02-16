@@ -20,6 +20,7 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
 
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
+    Pd::FitWeekend1819RegistrationMailer.confirmation(self).deliver_now
   end
 
   YES = 'Yes'.freeze
@@ -104,5 +105,9 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
     end
 
     return requireds
+  end
+
+  def accepted?
+    sanitize_form_data_hash.try(:[], :able_to_attend) == YES
   end
 end
