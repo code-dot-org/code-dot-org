@@ -165,13 +165,25 @@
 
   function updateCensusMapSchool(school) {
     if (school && school.latitude && school.longitude) {
+      const schoolLocation = new google.maps.LatLng(school.latitude, school.longitude);
       const map_options = {
-        center: new google.maps.LatLng(school.latitude, school.longitude),
+        center: schoolLocation,
         zoom: 17,
         scrollwheel: scrollwheelOption,
         draggable: draggableOption,
       }
       gmap.setOptions(map_options);
+
+      const marker = new google.maps.Marker({
+        map: gmap,
+        position: schoolLocation,
+        title: school.name,
+        animation: google.maps.Animation.DROP,
+      });
+
+      setTimeout(function() {
+        marker.setMap(null);
+      }, 3000);
     }
   }
 
