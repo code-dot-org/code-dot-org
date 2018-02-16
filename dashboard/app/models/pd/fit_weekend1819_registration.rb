@@ -18,6 +18,11 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
 
+  after_create :send_fit_weekend_confirmation_email
+  def send_fit_weekend_confirmation_email
+    Pd::FitWeekend1819RegistrationMailer.confirmation(self).deliver_now
+  end
+
   YES = 'Yes'.freeze
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze

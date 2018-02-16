@@ -1,6 +1,6 @@
 %p
   Hi
-  = @registration.sanitize_form_data_hash[:preferred_first_name] + ','
+  = @registration.regional_partner.contact.name + ','
 
 %p
   Thank you for submitting your TeacherCon registration form! You will receive more
@@ -11,8 +11,8 @@
   contact your Outreach Regional Manager as soon as possible so that we may assist you.
 
 %p
+  Thank you,
+  %br
   Sarah Fairweather
   %br
   Education Team Program Manager
-  %br
-  Code.org
