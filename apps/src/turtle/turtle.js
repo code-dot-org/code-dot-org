@@ -1082,8 +1082,6 @@ Artist.prototype.reset = function (ignore) {
       this.level.startDirection : DEFAULT_DIRECTION;
   this.visualization.penDownValue = true;
   this.visualization.avatar.visible = true;
-  // reset turtle frame
-  // this.visualization.turtleFrame_ = 0;
   this.visualization.resetTurtleFrame();
 
   // For special cases, use a different initial location.
@@ -1134,9 +1132,7 @@ Artist.prototype.reset = function (ignore) {
 
   // Stop the looping sound.
   this.studioApp_.stopLoopingAudio('start');
-
   this.resetStepInfo_();
-
 };
 
 /**
