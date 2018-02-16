@@ -448,10 +448,10 @@ GEM
     mini_magick (4.5.1)
     mini_mime (1.0.0)
     mini_portile2 (2.1.0)
-    minitest (5.11.1)
-    minitest-around (0.3.2)
+    minitest (5.11.3)
+    minitest-around (0.4.1)
       minitest (~> 5.0)
-    minitest-reporters (1.1.10)
+    minitest-reporters (1.2.0.beta3)
       ansi
       builder
       minitest (>= 5.0)
@@ -829,7 +829,7 @@ DEPENDENCIES
   mini_magick
   minitest (~> 5.5)
   minitest-around
-  minitest-reporters
+  minitest-reporters (~> 1.2.0.beta3)
   mocha
   mysql2 (~> 0.3.13)
   naturally
