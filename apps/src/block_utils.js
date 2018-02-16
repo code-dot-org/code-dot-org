@@ -334,3 +334,66 @@ exports.cleanBlocks = function (blocksDom) {
     ATTRIBUTES_TO_CLEAN.forEach(attr => block.removeAttribute(attr));
   });
 };
+
+const DROPDOWN_INPUT = 'dropdown';
+const VALUE_INPUT = 'value';
+const DUMMY_INPUT = 'dummy';
+
+exports.determineInputs = function (text, args) {
+  const tokens = text.split(/[{}]/);
+  if (tokens[tokens.length - 1] === '') {
+    tokens.pop();
+  }
+  const inputs = [];
+  for (let i = 0; i < tokens.length; i += 2) {
+    const label = tokens[i];
+    const input = tokens[i + 1];
+    if (input) {
+      const arg = args.find(arg => arg.name === input);
+      if (arg.options) {
+        inputs.push({
+          mode: DROPDOWN_INPUT,
+          name: arg.name,
+          options: arg.options,
+          label,
+        });
+      } else if (arg.type) {
+        inputs.push({
+          mode: VALUE_INPUT,
+          name: arg.name,
+          type: arg.type,
+          label,
+        });
+      }
+    } else {
+      inputs.push({
+        mode: DUMMY_INPUT,
+        label,
+      });
+    }
+  }
+  return inputs;
+};
+
+exports.interpolateInputs = function (blockly, block, text, args) {
+  exports.determineInputs(text, args).map(input => {
+    let dropdown;
+    switch (input.mode) {
+      case DROPDOWN_INPUT:
+        dropdown = new blockly.FieldDropdown(
+          input.options.map(option => [input.label + option[0], option[1]])
+        );
+        block.appendDummyInput().appendTitle(dropdown, input.name);
+        break;
+      case VALUE_INPUT:
+        block.appendValueInput(input.name)
+          .setCheck(input.type)
+          .appendTitle(input.label);
+        break;
+      case DUMMY_INPUT:
+        block.appendDummyInput()
+          .appendTitle(input.label);
+        break;
+    }
+  });
+};
