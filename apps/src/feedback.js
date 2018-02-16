@@ -998,7 +998,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=fal
  * @return {boolean}
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
-  return feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT;
+  return feedbackType >= TestResults.MINIMUM_PASS_RESULT;
 };
 
 /**
