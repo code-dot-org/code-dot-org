@@ -108,7 +108,7 @@ export default {
        // TODO(ram): should be "Make a new {ANIMATION} sprite", coordinates TBD
       blockText: 'Make a new sprite',
       args: [
-        { name: 'ANIMATION', type: 'string', options: SPRITES},
+        { name: 'ANIMATION', options: SPRITES},
         { name: 'X', type: blockly.BlockValueType.NUMBER},
         { name: 'Y', type: blockly.BlockValueType.NUMBER},
       ],
