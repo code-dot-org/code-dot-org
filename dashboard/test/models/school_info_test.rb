@@ -476,7 +476,7 @@ class SchoolInfoCompleteTest < ActiveSupport::TestCase
     assert school_info.complete?
   end
 
-  test 'complete if school is found by NCIS id' do
+  test 'complete if school is found by NCES id' do
     school_info = build :school_info_us_public, :with_school
     refute_nil school_info.school_id
     assert school_info.complete?
