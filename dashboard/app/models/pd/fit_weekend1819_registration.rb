@@ -100,7 +100,7 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
       ]
     end
 
-    if hash[:dietary_needs].include? 'Food Allergy'
+    if hash[:dietary_needs].try(:include?, 'Food Allergy')
       requireds.concat [
         :dietary_needs_details
       ]
