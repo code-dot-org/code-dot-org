@@ -99,7 +99,6 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'makeNewSprite',
-       // TODO(ram): should be "Make a new {ANIMATION} sprite", coordinates TBD
       blockText: 'Make a new {ANIMATION} sprite at {X} {Y}',
       args: [
         { name: 'ANIMATION', options: SPRITES},
