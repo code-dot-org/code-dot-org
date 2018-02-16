@@ -2,6 +2,9 @@
 #
 # Creates/updates LetsEncrypt SSL certificates stored in S3 using acmesmith.
 # Ref: https://github.com/sorah/acmesmith
+#
+# Provide a Common Name and a list of Subject Alternative Names as arguments.
+#
 # Usage: update_certs COMMON_NAME [SAN_1] [SAN_2] [...]
 #
 # Prerequisites:
