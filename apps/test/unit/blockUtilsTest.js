@@ -1,4 +1,4 @@
-import blockUtils, {
+import {
   cleanBlocks,
   determineInputs,
   interpolateInputs,
@@ -72,13 +72,12 @@ describe('block utils', () => {
     });
 
     it('adds a dropdown input', () => {
-      const stub = sinon.stub(blockUtils, 'determineInputs').returns([{
+      interpolateInputs(fakeBlockly, fakeBlock, [{
         mode: 'dropdown',
         name: 'ANIMATION',
         label: 'create sprite ',
         options: TEST_SPRITES,
       }]);
-      interpolateInputs(fakeBlockly, fakeBlock);
 
       expect(fakeBlockly.FieldDropdown).to.have.been.calledOnce;
       const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
@@ -88,41 +87,33 @@ describe('block utils', () => {
       ]);
       expect(appendDummyInput).to.have.been.calledOnce;
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
-
-      stub.restore();
     });
 
     it('adds a value input', () => {
-      const stub = sinon.stub(blockUtils, 'determineInputs').returns([{
+      interpolateInputs(fakeBlockly, fakeBlock, [{
         mode: 'value',
         name: 'DISTANCE',
         type: Blockly.BlockValueType.NUMBER,
         label: 'block title',
       }]);
-      interpolateInputs(fakeBlockly, fakeBlock);
 
       expect(appendValueInput).to.have.been.calledWith('DISTANCE');
       expect(setCheck).to.have.been.calledWith(Blockly.BlockValueType.NUMBER);
       expect(appendTitle).to.have.been.calledWith('block title');
-
-      stub.restore();
     });
 
     it('adds a dummy input', () => {
-      const stub = sinon.stub(blockUtils, 'determineInputs').returns([{
+      interpolateInputs(fakeBlockly, fakeBlock, [{
         mode: 'dummy',
         label: 'block title',
       }]);
-      interpolateInputs(fakeBlockly, fakeBlock);
 
       expect(appendDummyInput).to.have.been.calledOnce;
       expect(appendTitle).to.have.been.calledWith('block title');
-
-      stub.restore();
     });
 
     it('adds all three', () => {
-      const stub = sinon.stub(blockUtils, 'determineInputs').returns([
+      interpolateInputs(fakeBlockly, fakeBlock, [
         {
           mode: 'dropdown',
           name: 'ANIMATION',
@@ -140,13 +131,10 @@ describe('block utils', () => {
           label: 'dummy label',
         },
       ]);
-      interpolateInputs(fakeBlockly, fakeBlock);
 
       expect(appendTitle).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
       expect(appendTitle).to.have.been.calledWith('value label');
       expect(appendTitle).to.have.been.calledWith('dummy label');
-
-      stub.restore();
     });
   });
 

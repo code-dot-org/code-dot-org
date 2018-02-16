@@ -339,6 +339,25 @@ const DROPDOWN_INPUT = 'dropdown';
 const VALUE_INPUT = 'value';
 const DUMMY_INPUT = 'dummy';
 
+/**
+ * Given block text with input names specified in curly braces, returns a list
+ * of labeled inputs that should be added to the block.
+ *
+ * @param {string} text The complete message shown on the block with inputs in
+ *   curly braces, e.g. "Move the {SPRITE} {PIXELS} to the {DIR}"
+ * @param {Object[]} args Define the type/options of the block's inputs.
+ * @param {string} args[].name Input name, conventionally all-caps
+ * @param {string[][]} args[].options For dropdowns, the list of options. Each
+ *   entry is a 2-element string array with the display name first, and the
+ *   codegen-compatible (i.e. strings should be doubly-quoted) value second.
+ * @param {BlockValueType} args[].type For value inputs, the type required. Use
+ *   BlockValueType.NONE to accept any block.
+ *
+ * @returns {Object[]} a list of labeled inputs. Each one has the same fields
+ *   as 'args', but additionally includes:
+ * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
+ * @returns {string} return[].label Text to display to the left of the input
+ */
 exports.determineInputs = function (text, args) {
   const tokens = text.split(/[{}]/);
   if (tokens[tokens.length - 1] === '') {
@@ -375,8 +394,15 @@ exports.determineInputs = function (text, args) {
   return inputs;
 };
 
-exports.interpolateInputs = function (blockly, block, text, args) {
-  exports.determineInputs(text, args).map(input => {
+/**
+ * Adds the specified inputs to the block
+ * @param {Blockly} blockly The Blockly object provided to install()
+ * @param {Block} block The block to add the inputs to
+ * @param {Object[]} inputs The list of inputs. See determineInputs() for
+ *   the fields in each input.
+ */
+exports.interpolateInputs = function (blockly, block, inputs) {
+  inputs.map(input => {
     let dropdown;
     switch (input.mode) {
       case DROPDOWN_INPUT:
