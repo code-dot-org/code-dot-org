@@ -40,8 +40,6 @@ describe('SchoolInfoInterstitial', () => {
               schoolType={''}
               ncesSchoolId={''}
               schoolName={''}
-              schoolState={''}
-              schoolZip={''}
               schoolLocation={''}
               useGoogleLocationSearch={true}
               showErrors={false}
@@ -79,8 +77,6 @@ describe('SchoolInfoInterstitial', () => {
         schoolType={''}
         ncesSchoolId={''}
         schoolName={''}
-        schoolState={''}
-        schoolZip={''}
         schoolLocation={''}
         useGoogleLocationSearch={true}
         onCountryChange={wrapper.instance().onCountryChange}
@@ -102,8 +98,6 @@ describe('SchoolInfoInterstitial', () => {
             country: 'United States',
             school_type: 'public',
             school_name: 'Test School',
-            state: 'Washington',
-            zip: '98109',
             full_address: 'Seattle',
           },
         }}
@@ -115,8 +109,6 @@ describe('SchoolInfoInterstitial', () => {
         schoolType={'public'}
         ncesSchoolId={'123'}
         schoolName={'Test School'}
-        schoolState={'Washington'}
-        schoolZip={'98109'}
         schoolLocation={'Seattle'}
         useGoogleLocationSearch={true}
         onCountryChange={wrapper.instance().onCountryChange}
@@ -199,7 +191,7 @@ describe('SchoolInfoInterstitial', () => {
       expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
     });
 
-    it('is blank if none of school name/state/zip have been entered', () => {
+    it('is blank if none of school name/address have been entered', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -209,8 +201,7 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'public',
               school_name: '',
-              state: '',
-              zip: '',
+              full_address: '',
             },
           }}
         />
@@ -220,7 +211,7 @@ describe('SchoolInfoInterstitial', () => {
 
     // Matrix of conditions where NCES ID initializes to "-1":
     ['public', 'private', 'charter'].forEach((schoolType) => {
-      ['school_name', 'state', 'zip'].forEach((schoolDetailFieldName) => {
+      ['school_name', 'full_address'].forEach((schoolDetailFieldName) => {
         it(`is "-1" if country is US and schoolType is ${schoolType} and ${schoolDetailFieldName} was provided`, () => {
           const wrapper = shallow(
             <SchoolInfoInterstitial
@@ -231,8 +222,6 @@ describe('SchoolInfoInterstitial', () => {
                   country: 'United States',
                   school_type: schoolType,
                   school_name: '',
-                  school_state: '',
-                  school_zip: '',
                   [schoolDetailFieldName]: 'provided value',
                 },
               }}
@@ -333,11 +322,11 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find(Button).simulate('click');
+      // No need to send anything but ID if it's available...
+      // All other info will be backfilled from records on the server.
       expect(server.requests[0].requestBody).to.equal([
         '_method=patch',
         'auth_token=fake_auth_token',
-        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
         'user%5Bschool_info_attributes%5D%5Bschool_id%5D=123',
       ].join('&'));
     });
@@ -363,13 +352,11 @@ describe('SchoolInfoInterstitial', () => {
         'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
         'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
         'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-        'user%5Bschool_info_attributes%5D%5Bschool_state%5D=',
-        'user%5Bschool_info_attributes%5D%5Bschool_zip%5D=',
         'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
       ].join('&'));
     });
 
-    it('submits with US, NCES school type, name, state', () => {
+    it('submits with US, NCES school type, name, address', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -379,7 +366,7 @@ describe('SchoolInfoInterstitial', () => {
               country: 'United States',
               school_type: 'public',
               school_name: 'Test School',
-              state: 'Washington',
+              full_address: '12222 SE Sunnyside Ln',
             },
           }}
         />
@@ -391,38 +378,7 @@ describe('SchoolInfoInterstitial', () => {
         'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
         'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
         'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-        'user%5Bschool_info_attributes%5D%5Bschool_state%5D=Washington',
-        'user%5Bschool_info_attributes%5D%5Bschool_zip%5D=',
-        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-      ].join('&'));
-    });
-
-    it('submits with US, NCES school type, name, state, zip', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
-              school_name: 'Test School',
-              state: 'Washington',
-              zip: '98109',
-            },
-          }}
-        />
-      );
-      wrapper.find(Button).simulate('click');
-      expect(server.requests[0].requestBody).to.equal([
-        '_method=patch',
-        'auth_token=fake_auth_token',
-        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-        'user%5Bschool_info_attributes%5D%5Bschool_state%5D=Washington',
-        'user%5Bschool_info_attributes%5D%5Bschool_zip%5D=98109',
-        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=12222+SE+Sunnyside+Ln',
       ].join('&'));
     });
 
@@ -633,20 +589,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'public',
         schoolName: 'Test School',
-        schoolState: 'Washington',
-        schoolZip: '98102',
-        schoolLocation: '',
-        ncesSchoolId: '-1',
-      })).to.be.true;
-    });
-
-    it('is complete if school info is provided and we get location via full_address', () => {
-      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
-        country: 'United States',
-        schoolType: 'public',
-        schoolName: 'Test School',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: 'Seattle, WA, USA',
         ncesSchoolId: '-1',
       })).to.be.true;
@@ -657,8 +599,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'public',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '12345',
       })).to.be.true;
@@ -669,8 +609,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'homeschool',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.true;
@@ -679,8 +617,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'after school',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.true;
@@ -689,8 +625,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'organization',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.true;
@@ -699,8 +633,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'other',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.true;
@@ -711,8 +643,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'Canada',
         schoolType: '',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.true;
@@ -723,8 +653,6 @@ describe('SchoolInfoInterstitial', () => {
         country: '',
         schoolType: '',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.false;
@@ -735,8 +663,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: '',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.false;
@@ -747,8 +673,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'public',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.false;
@@ -757,8 +681,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'private',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.false;
@@ -767,8 +689,6 @@ describe('SchoolInfoInterstitial', () => {
         country: 'United States',
         schoolType: 'charter',
         schoolName: '',
-        schoolState: '',
-        schoolZip: '',
         schoolLocation: '',
         ncesSchoolId: '',
       })).to.be.false;

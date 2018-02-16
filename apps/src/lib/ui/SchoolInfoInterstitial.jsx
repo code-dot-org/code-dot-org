@@ -65,8 +65,6 @@ export default class SchoolInfoInterstitial extends React.Component {
         country: PropTypes.string,
         school_type: PropTypes.string,
         school_name: PropTypes.string,
-        state: PropTypes.string,
-        zip: PropTypes.string,
         full_address: PropTypes.string,
       }).isRequired,
     }).isRequired,
@@ -90,15 +88,13 @@ export default class SchoolInfoInterstitial extends React.Component {
         &&
         SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(existingSchoolInfo.school_type)
         &&
-        (existingSchoolInfo.school_name || existingSchoolInfo.state || existingSchoolInfo.zip)
+        (existingSchoolInfo.school_name || existingSchoolInfo.full_address)
       ) ? '-1' : '';
 
     this.state = {
       country: initialCountry,
       schoolType: existingSchoolInfo.school_type || '',
       schoolName: existingSchoolInfo.school_name || '',
-      schoolState: existingSchoolInfo.state || '',
-      schoolZip: existingSchoolInfo.zip || '',
       schoolLocation: existingSchoolInfo.full_address || '',
       ncesSchoolId: initialNcesSchoolId,
       showSchoolInfoUnknownError: false,
@@ -140,10 +136,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       state.country
       && state.schoolType
       && state.schoolName
-      && (
-        (state.schoolState && state.schoolZip)
-        || state.schoolLocation
-      )
+      && state.schoolLocation
     );
   }
 
@@ -151,37 +144,50 @@ export default class SchoolInfoInterstitial extends React.Component {
     this.logEvent(FIREHOSE_EVENTS.SHOW);
   }
 
+  buildSchoolData() {
+    const {country, schoolType, ncesSchoolId} = this.state;
+    // If we have an NCES id, _only_ send that - everything else will be
+    // backfilled by records on the server.
+    if (ncesSchoolId && ncesSchoolId !== '-1') {
+      return {
+        "user[school_info_attributes][school_id]": ncesSchoolId,
+      };
+    }
+
+    // If we don't know enough to pick other metadata, only send these.
+    if (!country || !schoolType) {
+      return {
+        "user[school_info_attributes][country]": country,
+        "user[school_info_attributes][school_type]": schoolType,
+      };
+    }
+
+    // If an NCES type is selected but we don't know anything else, send a
+    // blank NCES id to ensure we save the current input state.
+    const isUS = country === 'United States';
+    const isNcesSchoolType = isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType);
+    if (isNcesSchoolType && ncesSchoolId === '') {
+      return {
+        "user[school_info_attributes][country]": country,
+        "user[school_info_attributes][school_type]": schoolType,
+        "user[school_info_attributes][school_id]": ncesSchoolId,
+      };
+    }
+
+    return {
+      "user[school_info_attributes][country]": country,
+      "user[school_info_attributes][school_type]": schoolType,
+      "user[school_info_attributes][school_name]": this.state.schoolName,
+      "user[school_info_attributes][full_address]": this.state.schoolLocation,
+    };
+  }
 
   handleSchoolInfoSubmit = () => {
     this.logEvent(FIREHOSE_EVENTS.SUBMIT, {
       attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
     });
 
-    const isUS = this.state.country === 'United States';
-    let schoolData;
-    if (this.state.schoolType === '') {
-      schoolData = {};
-    } else if (isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(this.state.schoolType)) {
-      if (this.state.ncesSchoolId === '-1') {
-        // I couldn't find my school.
-        schoolData = {
-          "user[school_info_attributes][school_name]": this.state.schoolName,
-          "user[school_info_attributes][school_state]": this.state.schoolState,
-          "user[school_info_attributes][school_zip]": this.state.schoolZip,
-          "user[school_info_attributes][full_address]": this.state.schoolLocation,
-        };
-      } else {
-        schoolData = {
-          "user[school_info_attributes][school_id]": this.state.ncesSchoolId,
-        };
-      }
-    } else {
-      schoolData = {
-        "user[school_info_attributes][school_name]": this.state.schoolName,
-        "user[school_info_attributes][full_address]": this.state.schoolLocation,
-      };
-    }
-
+    const schoolData = this.buildSchoolData();
     const {formUrl, authTokenName, authTokenValue} = this.props.scriptData;
     $.post({
       url: formUrl + '.json',
@@ -189,8 +195,6 @@ export default class SchoolInfoInterstitial extends React.Component {
       data: {
         '_method': 'patch',
         [authTokenName]: authTokenValue,
-        "user[school_info_attributes][country]": this.state.country,
-        "user[school_info_attributes][school_type]": this.state.schoolType,
         ...schoolData,
       },
     }).done(() => {
@@ -269,8 +273,6 @@ export default class SchoolInfoInterstitial extends React.Component {
               schoolType={this.state.schoolType}
               ncesSchoolId={this.state.ncesSchoolId}
               schoolName={this.state.schoolName}
-              schoolState={this.state.schoolState}
-              schoolZip={this.state.schoolZip}
               schoolLocation={this.state.schoolLocation}
               useGoogleLocationSearch={true}
               showErrors={false}
