@@ -167,7 +167,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       :notes,
       :regional_partner_filter,
       :response_scores,
-      :pd_workshop_id
+      :pd_workshop_id,
+      :fit_workshop_id
     )
   end
 

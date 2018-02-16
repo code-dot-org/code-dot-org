@@ -89,7 +89,7 @@ describe("DetailViewContents", () => {
   ];
 
   for (const applicationData of expectedTestData) {
-    const responseCount = applicationData.type === "Teacher" ? 3 : 4;
+    const responseCount = applicationData.type === "Teacher" ? 4 : 5;
 
     it(`Renders full contents for ${applicationData.type} initially`, () => {
       const detailView = mountDetailView(applicationData.type);
