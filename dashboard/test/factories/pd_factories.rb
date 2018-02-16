@@ -912,6 +912,10 @@ FactoryGirl.define do
       need_hotel "No"
       photo_release "Yes"
     end
+
+    trait :decliend do
+      able_to_attend "No"
+    end
   end
 
   factory :pd_fit_weekend1819_registration, class: 'Pd::FitWeekend1819Registration' do
