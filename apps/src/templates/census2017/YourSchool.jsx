@@ -41,6 +41,7 @@ class YourSchool extends Component {
     prefillData: censusFormPrefillDataShape,
     hideMap: PropTypes.bool,
     updateCensusMapSchool: PropTypes.func.isRequired,
+    schoolDropdownOption: PropTypes.object,
   };
 
   componentDidMount() {
@@ -49,8 +50,15 @@ class YourSchool extends Component {
     }
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.schoolDropdownOption !== this.props.schoolDropdownOption) {
+      this.setState({
+        schoolDropdownOption: newProps.schoolDropdownOption,
+      });
+    }
+  }
   state = {
-    schoolDropdownOption: undefined
+    schoolDropdownOption: this.props.schoolDropdownOption,
   };
 
   handleSchoolDropdownChange = (option) => {
@@ -67,7 +75,7 @@ class YourSchool extends Component {
   render() {
     const {responsiveSize} = this.props;
     const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
-
+    const schoolDropdownOption = this.state.schoolDropdownOption;
     return (
       <div>
         <SpecialAnnouncementActionBlock/>
@@ -111,7 +119,7 @@ class YourSchool extends Component {
              <SchoolAutocompleteDropdown
                value={this.props.prefillData ? this.props.prefillData['schoolId'] : undefined}
                fieldName="census-map-school-dropdown"
-               schoolDropdownOption={this.state.schoolDropdownOption}
+               schoolDropdownOption={schoolDropdownOption}
                onChange={this.handleSchoolDropdownChange}
              />
              <br/>
@@ -120,7 +128,7 @@ class YourSchool extends Component {
         )}
         <CensusForm
           prefillData={this.props.prefillData}
-          schoolDropdownOption={this.state.schoolDropdownOption}
+          schoolDropdownOption={schoolDropdownOption}
           onSchoolDropdownChange={this.handleSchoolDropdownChange}
         />
       </div>
