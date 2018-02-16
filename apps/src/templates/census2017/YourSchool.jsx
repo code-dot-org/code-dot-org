@@ -72,6 +72,10 @@ class YourSchool extends Component {
     }
   };
 
+  hasLocation = (school) => {
+    return !!(school.latitude && school.longitude);
+  };
+
   render() {
     const {responsiveSize} = this.props;
     const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
@@ -121,6 +125,7 @@ class YourSchool extends Component {
                fieldName="census-map-school-dropdown"
                schoolDropdownOption={schoolDropdownOption}
                onChange={this.handleSchoolDropdownChange}
+               schoolFilter={this.hasLocation}
              />
              <br/>
              <ProtectedStatefulDiv ref="map"/>
