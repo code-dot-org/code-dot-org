@@ -70,8 +70,6 @@ export default {
       };
 
       generator[blockName] = function () {
-        const object =
-          Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
         const values = args.map(arg => {
           if (arg.options) {
             return this.getTitleValue(arg.name);
@@ -79,7 +77,14 @@ export default {
             return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
           }
         });
-        const prefix = methodCall ? `${object}.` : '';
+
+        let prefix = '';
+        if (methodCall) {
+          const object =
+            Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
+          prefix = `${object}.`;
+        }
+
         if (eventBlock) {
           const nextBlock = this.nextConnection && this.nextConnection.targetBlock();
           const handlerCode = Blockly.Generator.prefixLines(
@@ -88,6 +93,7 @@ export default {
           );
           values.push(`function () {\n${handlerCode}}`);
         }
+
         if (returnType !== undefined) {
           return [`${prefix}${func}(${values.join(', ')})`, ORDER_FUNCTION_CALL];
         } else {
