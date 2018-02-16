@@ -456,23 +456,21 @@ end
 class SchoolInfoCompleteTest < ActiveSupport::TestCase
   test 'complete if all school info is provided' do
     school_info = build :school_info_us_private
+    school_info.full_address = '123 Sesame Street'
     assert_nil school_info.school_id
     refute_nil school_info.school_name
-    refute_nil school_info.state
-    refute_nil school_info.zip
-    assert_nil school_info.full_address
+    refute_nil school_info.full_address
     assert school_info.complete?
   end
 
-  test 'complete if school info is provided and we get location via full_address' do
+  test 'complete if all school info but location is provided' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
-    school_info.school_name = 'Test school name'
-    school_info.full_address = 'Test school full address'
+    school_info.school_name = 'Primary School'
     assert_nil school_info.school_id
-    assert_nil school_info.state
-    assert_nil school_info.zip
+    refute_nil school_info.school_name
+    assert_nil school_info.full_address
     assert school_info.complete?
   end
 
