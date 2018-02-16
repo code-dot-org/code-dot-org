@@ -58,7 +58,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        render json: applications, each_serializer: Api::V1::Pd::ApplicationQuickViewSerializer
+        serialized_applications = applications.map {|a| Api::V1::Pd::ApplicationQuickViewSerializer.new(a).attributes}
+        render json: serialized_applications
       end
       format.csv do
         course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
@@ -85,7 +86,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        render json: applications, each_serializer: serializer
+        serialized_applications = applications.map {|a| serializer.new(a).attributes}
+        render json: serialized_applications
       end
       format.csv do
         csv_text = [TYPES_BY_ROLE[params[:role].to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
@@ -135,7 +137,8 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       user: user
     )
 
-    render json: filtered_applications, each_serializer: Api::V1::Pd::ApplicationSearchSerializer
+    serialized_applications = filtered_applications.map {|a| Api::V1::Pd::ApplicationSearchSerializer.new(a).attributes}
+    render json: serialized_applications
   end
 
   private
