@@ -146,15 +146,8 @@ class SchoolInfo < ActiveRecord::Base
     ].include?(school_type)
     return true unless school_id.nil?
 
-    # School name and full address is sufficient
-    return true if school_name && full_address
-
-    # At this point, require full info to be filled out
-    validation_type_original = validation_type
-    self.validation_type = VALIDATION_FULL
-    return_val = valid?
-    self.validation_type = validation_type_original
-    return_val
+    # Given we got past above cases, school name is sufficient
+    !!school_name
   end
 
   def usa?

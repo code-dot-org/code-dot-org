@@ -594,6 +594,16 @@ describe('SchoolInfoInterstitial', () => {
       })).to.be.true;
     });
 
+    it('is complete if all school info but location is provided', () => {
+      expect(SchoolInfoInterstitial.isSchoolInfoComplete({
+        country: 'United States',
+        schoolType: 'public',
+        schoolName: 'Test School',
+        schoolLocation: '',
+        ncesSchoolId: '-1',
+      })).to.be.true;
+    });
+
     it('is complete if school is found by NCES id', () => {
       expect(SchoolInfoInterstitial.isSchoolInfoComplete({
         country: 'United States',

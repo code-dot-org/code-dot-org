@@ -132,12 +132,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       return true;
     }
 
-    return !!(
-      state.country
-      && state.schoolType
-      && state.schoolName
-      && state.schoolLocation
-    );
+    return !!(state.country && state.schoolType && state.schoolName);
   }
 
   componentDidMount() {
