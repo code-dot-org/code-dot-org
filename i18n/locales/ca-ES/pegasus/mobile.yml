@@ -25,7 +25,7 @@
   submit: "Envia"
   twentyhours_heading: "Prova el nostre curs d'introducció a la programació"
   twentyhours_text: "Heu acabat la primera Hora del Codi? Apreneu més informàtica i programació en el curs següent."
-  og_title: Cada nen mereix oportunitat
+  og_title: 'Cada nen mereix oportunitat'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Cada alumne de cada escola es mereix l'oportunitat d'estudiar informàtica."
@@ -763,7 +763,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Pla d'estudis"
   dashboard_curriculum_overview: "Resum del curriculum de cicle superior de primària"
   dashboard_overview: "Vista general"
@@ -781,6 +784,8 @@
   dashboard_curriculum_csins: 'Informàtica en la ciència:'
   dashboard_curriculum_csp: 'Principis informàtics AP®:'
   dashboard_curriculum_ecs: 'Explorant la informàtica:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Altres"
   dashboard_login_word: "Paraula"
@@ -951,11 +956,11 @@
   accelerated_name: "Curs Accelerat"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1004,6 +1009,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratori d'aplicacions"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"

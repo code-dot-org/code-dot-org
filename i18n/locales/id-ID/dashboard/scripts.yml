@@ -561,8 +561,8 @@ id:
           description_audience: ''
         algebraPD:
           title: Ilmu komputer dalam aljabar PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Course Overview:
@@ -644,8 +644,8 @@ id:
               name: Pelajaran ke- 15
         ECSPD:
           title: Exploring Computer Science PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           stages:
             Growth Mindset:
               name: pertumbuhan Pola pikir
@@ -661,8 +661,8 @@ id:
               name: Apa itu CS?
         sciencePD:
           title: Computer Science in Science PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -680,7 +680,7 @@ id:
             Introduction to StarLogo Nova:
               name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Pemeriksaan-postingan
             The Tutorial:
               name: Tutorial
             Using Computer Models in Science:
@@ -711,7 +711,7 @@ id:
           description_audience: ''
           stages:
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API dan fungsi parameter
             Beyond Buttons Toward Apps:
               name: Di luar Tombo; Menuju Apps
             Canvas and Arrays in Apps:
@@ -723,21 +723,21 @@ id:
             Creating Functions:
               name: Fungsi membuat
             Creating functions with Parameters:
-              name: Creating Functions with Parameters
+              name: Membuat fungsi dengan parameter
             Digital Assistant Project:
-              name: Digital Assistant Project
+              name: Proyek asisten digital
             Event-Driven Programming and Debugging:
               name: Event-Driven Programming and Debugging
             Events Unplugged:
               name: Events Unplugged
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Fungsi dan desain atas-bawah
             Functions with Return Values:
-              name: Functions with Return Values
+              name: Fungsi dengan nilai kembali
             Image Scroller with Key Events:
               name: Image Scroller with Key Events
             Introducing Design Mode:
-              name: Introducing Design Mode
+              name: Memasukkan mode desain
             Introduction to Arrays:
               name: Pengenalan untuk array
             Introduction to Conditional Logic:
@@ -745,25 +745,25 @@ id:
             Introduction to Digital Assistants:
               name: Introduction to Digital Assistants
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Perulangan dan acak angka
             Loops and Simulations:
               name: Loops and Simulations
             Multi-screen Apps:
               name: Multi-screen Apps
             Practice PT - Design a Digital Scene:
-              name: Practice PT - Design a Digital Scene
+              name: Latihan PT - desain sebuah adegan digital
             'Practice PT: Create':
-              name: 'Practice PT: Create'
+              name: 'Latihan PT: membuat'
             Processing Arrays:
               name: Processing Arrays
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: Kebutuhan untuk bahasa pemograman
             Understanding Program Flow and Logic:
-              name: Understanding Program Flow and Logic
+              name: Memahami aliran program dan logika
             User Input and Strings:
               name: User Input and Strings
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Menggunakan perintah sederhana
             Using Variables in Apps:
               name: Menggunakan variabel dalam aplikasi
             While Loops:
@@ -792,8 +792,8 @@ id:
               name: Resep desain
         ECSPD-NexTech:
           title: Exploring Computer Science PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           logo_image: nextech_logo.png
           stages:
             Growth Mindset:
@@ -810,8 +810,8 @@ id:
               name: Apa itu CS?
         ECSPD-iZone:
           title: Exploring Computer Science PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           logo_image: izone_logo.png
           stages:
             Growth Mindset:
@@ -828,8 +828,8 @@ id:
               name: Apa itu CS?
         algebraPD-NexTech:
           title: Ilmu komputer dalam aljabar PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           logo_image: nextech_logo.png
           description_audience: ''
           stages:
@@ -847,8 +847,8 @@ id:
               name: Mengapa Ilmu Komputer termasuk dalam Aljabar
         algebraPD-iZone:
           title: Ilmu komputer dalam aljabar PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           logo_image: izone_logo.png
           description_audience: ''
           stages:
@@ -866,8 +866,8 @@ id:
               name: Mengapa Ilmu Komputer termasuk dalam Aljabar
         sciencePD-NexTech:
           title: Computer Science in Science PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           logo_image: nextech_logo.png
           description_audience: ''
           stages:
@@ -886,7 +886,7 @@ id:
             Introduction to StarLogo Nova:
               name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Pemeriksaan-postingan
             The Tutorial:
               name: Tutorial
             Using Computer Models in Science:
@@ -897,8 +897,8 @@ id:
               name: Apa yang diharapkan
         sciencePD-iZone:
           title: Computer Science in Science PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           logo_image: izone_logo.png
           description_audience: ''
           stages:
@@ -917,7 +917,7 @@ id:
             Introduction to StarLogo Nova:
               name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Pemeriksaan-postingan
             The Tutorial:
               name: Tutorial
             Using Computer Models in Science:
@@ -951,7 +951,7 @@ id:
           description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
-              name: Decode and Share
+              name: Membaca sandi dan bagikan
             Mystery Model:
               name: Misteri model
             Welcome Back!:
@@ -981,7 +981,7 @@ id:
             Cracking the Code:
               name: Cracking the Code
             DNS in the Real World:
-              name: DNS in the Real World
+              name: DNS di dunia nyata
             Encryption Algorithms:
               name: Kunci dan password
             HTTP and Abstraction:
@@ -1011,8 +1011,8 @@ id:
           description_audience: ''
         algebraPD2a:
           title: Ilmu komputer dalam aljabar PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Big Game - Animation:
@@ -1125,8 +1125,8 @@ id:
               name: Referensi kurikulum
         algebraPD2b:
           title: Ilmu komputer dalam aljabar PD
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Best Practices for Teaching Computer Science:
@@ -1203,8 +1203,8 @@ id:
               name: Perencanaan
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
@@ -1220,9 +1220,9 @@ id:
             1: |-
               Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
-              name: Unit 1, Days 5-7 Searching and Web 2
+              name: Unit 1, hari ke 5-7 pencarian dan web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
@@ -1258,8 +1258,8 @@ id:
               name: Selamat Datang!
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1322,8 +1322,8 @@ id:
               name: Langkah berikutnya
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1342,8 +1342,8 @@ id:
               name: Penutupan
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unit 1, Hari 10 menceritakan sebuah cerita dengan data
@@ -1358,9 +1358,9 @@ id:
             1: |-
               Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
-              name: Unit 1, Days 5-7 Searching and Web 2
+              name: Unit 1, hari ke 5-7 pencarian dan web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
@@ -1369,8 +1369,8 @@ id:
               name: Penutupan
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Mengajarkan pemrograman fungsional melalui aljabar
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: 'Mengajarkan pemrograman fungsional melalui aljabar'
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unit 1, Hari 10 menceritakan sebuah cerita dengan data
@@ -1385,9 +1385,9 @@ id:
             1: |-
               Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
-              name: Unit 1, Days 5-7 Searching and Web 2
+              name: Unit 1, hari ke 5-7 pencarian dan web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
@@ -1776,7 +1776,7 @@ id:
             Canvas and Arrays in Apps:
               name: Kanvas dan Array dalam Apps
             Functions with Return Values:
-              name: Functions with Return Values
+              name: Fungsi dengan nilai kembali
             Image Scroller with Key Events:
               name: Image Scroller with Key Events
             Introduction to Arrays:
@@ -1784,7 +1784,7 @@ id:
             Loops and Simulations:
               name: Loops and Simulations
             'Practice PT: Create':
-              name: 'Practice PT: Create'
+              name: 'Latihan PT: membuat'
             Processing Arrays:
               name: Processing Arrays
             While Loops:
@@ -1897,21 +1897,21 @@ id:
             Good and Bad Data Visualizations:
               name: Baik dan buruk visualisasi data
             Identifying People with Data:
-              name: Identifying People with Data
+              name: Mengenali orang dengan data
             Intro to Data:
-              name: Introduction to Data
+              name: Pengenalan data
             Making Data Visualizations:
               name: Membuat visualisasi data
             Practice PT - Propose an Innovation:
-              name: Practice PT - Propose an Innovation
+              name: Latihan PT - mengajukan sebuah inovasi
             Practice PT - Tell a Data Story:
               name: Practice PT - Tell a Data Story
             Rapid Research - Data Innovations:
               name: Penelitian cepat - Data inovasi
             The Cost of Free:
-              name: The Cost of Free
+              name: Biayanya gratis
             What is Big Data?:
-              name: What is Big Data?
+              name: Apa itu data besar?
         CSPPD3-Unit4:
           title: 'Computer Science Principles: Unit 4 PD'
           description: Online Support for CSP Unit 4
@@ -1920,19 +1920,19 @@ id:
             Challenge Overview:
               name: Tinjauan tantangan
             Chapter 1 Overview:
-              name: Chapter 1 Overview
+              name: Rangkuman bab 1
             Chapter 2 Overview:
-              name: Chapter 2 Overview
+              name: Rangkuman bab 2
             Complete the Challenge:
               name: Menyelesaikan Tantangan
             Getting Started:
               name: Dapat Dimulai
             Practice Performance Tasks:
-              name: Practice Performance Tasks
+              name: Latihan tugas kinerja
             Share out and Submit:
               name: Berbagi dan Kirim
             Unit 4 Overview:
-              name: Unit 4 Overview
+              name: Rangkuman unit 4
         cspunit6draft:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
@@ -1941,21 +1941,21 @@ id:
             Creating Javascript Objects:
               name: Menciptakan Objek Javascript
             Deleting Records:
-              name: Deleting Records
+              name: Penghapusan catatan
             Final Project:
-              name: Final Project
+              name: Tugas Akhir
             Importing and Exporting Data:
-              name: Importing and Exporting Data
+              name: Mengimpor dan mengekspor data
             Permanent Data Storage:
               name: Menyimpan data permanen
             Reading Records:
               name: Membaca catatan
             Sample Apps:
-              name: Sample Apps
+              name: Contoh aplikasi
             Updating Records:
-              name: Updating Records
+              name: Memperbarui catatan
             Visualizing Data:
-              name: Visualizing Data
+              name: Membayangkan data
         CSPPD3-Unit5:
           title: 'Computer Science Principles: Unit 5 PD'
           description: Online Support for CSP Unit 5
@@ -1966,9 +1966,9 @@ id:
             Complete the Challenge:
               name: Menyelesaikan Tantangan
             Create PT Breakdown:
-              name: Create PT Breakdown
+              name: Membuat perincian PT
             Explore PT Breakdown:
-              name: Explore PT Breakdown
+              name: Jelajahi Perincian Tugas Kinerja
             Getting Started:
               name: Dapat Dimulai
             Share out and Submit:
@@ -1984,21 +1984,21 @@ id:
             Creating Javascript Objects:
               name: Menciptakan Objek Javascript
             Deleting Records:
-              name: Deleting Records
+              name: Penghapusan catatan
             Final Project:
-              name: Final Project
+              name: Tugas Akhir
             Importing and Exporting Data:
-              name: Importing and Exporting Data
+              name: Mengimpor dan mengekspor data
             Permanent Data Storage:
               name: Menyimpan data permanen
             Reading Records:
               name: Membaca catatan
             Sample Apps:
-              name: Sample Apps
+              name: Contoh aplikasi
             Updating Records:
-              name: Updating Records
+              name: Memperbarui catatan
             Visualizing Data:
-              name: Visualizing Data
+              name: Membayangkan data
         AlgebraA:
           title: 'Computer Science in Algebra: Course A'
           description: Belajar pemrograman fungsional melalui aljabar
@@ -2022,7 +2022,7 @@ id:
             'Unplugged: Contracts':
               name: 'Unplugged/tidak terpasang: kontrak'
             'Unplugged: Fast Functions':
-              name: 'Unplugged: Fast Functions'
+              name: 'Dicabut: fungsi cepat'
             'Unplugged: The Design Recipe':
               name: 'Unplugged/tidak terpasang: Resep desain'
         AlgebraB:
@@ -2063,7 +2063,7 @@ id:
         algebraPD1:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan aljabar melalui pemrograman fungsional
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Course Overview:
@@ -2087,9 +2087,9 @@ id:
             Getting Started:
               name: Dapat Dimulai
             Planning For the Future:
-              name: Planning For the Future
+              name: Rencana untuk masa depan
             Sharing Student Work:
-              name: Sharing Student Work
+              name: Membagikan karya siswa
         csp1:
           title: CSP Unit 1 - The Internet
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -2103,7 +2103,7 @@ id:
             Encoding and Sending Formatted Text:
               name: Encoding and Sending Formatted Text
             HTTP and Abstraction:
-              name: HTTP and Abstraction
+              name: HTTP dan pemisahan
             Number Systems:
               name: Sistem nomor
             Packets and Making a Reliable Internet:
@@ -2127,11 +2127,11 @@ id:
             The Need for DNS:
               name: Dibutuhkan untuk DNS
             Unit 1 Chapter 1 Assessment:
-              name: Unit 1 Chapter 1 Assessment
+              name: Unit 1 penilaian bab 1
             Unit 1 Chapter 2 Assessment:
-              name: Unit 1 Chapter 2 Assessment
+              name: Unit 1 penilaian bab 2
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
@@ -2177,7 +2177,7 @@ id:
             Unit 2 Chapter 2 Assessment:
               name: Unit 2 penilaian bab 2
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
@@ -2186,12 +2186,12 @@ id:
               name: Praktek PT - Mengkodekan pengalaman
         csp3:
           title: CSP Unit 3 - Intro to Programming
-          description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\\r\n\\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
+          description: "Unit ini memerkenalkan konsep dasar dari pemograman komputer, agar kemampuan mereka menjadi berkembang dan membuat aplikasi yang interaktif. kursus ini menggunakan javaScript sebagai bahasa pemograman, dan aplikasi lab sebagai tempat pemograpan untuk membuat aplikasi, namun konsep yang dipelajari dalam pelajaran ini mencakup semua bahasa dan semua perangkat pemograman. \\r\n\\r\nunit ini terakhir dierbarui tanggal 30 oktober 2017. baca selengkanya tentang pembaruan kurikulum di forum.code.org/c/csp/updates."
           description_short: Pemrograman
           description_audience: ''
           stages:
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API dan fungsi parameter
             Creating Functions:
               name: Fungsi membuat
             Creating functions with Parameters:
@@ -2199,29 +2199,29 @@ id:
             Creativity in Algorithms:
               name: Kreativitas dalam algoritma
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Fungsi dan desain atas-bawah
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Perulangan dan acak angka
             Practice PT - Design a Digital Scene:
-              name: Practice PT - Design a Digital Scene
+              name: Latihan PT - desain sebuah adegan digital
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: Kebutuhan untuk bahasa pemograman
             The Need for Algorithms:
               name: Dibutuhkan untuk algoritma
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Menggunakan perintah sederhana
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
-              name: Creating Functions with Parameters
+              name: Membuat fungsi dengan parameter
             CSP End-of-Semester Mid-course survey:
               name: CSP End-of-Semester Mid-course survey
             CSP Mid-course survey:
@@ -2235,17 +2235,17 @@ id:
           description_audience: ''
           stages:
             Alice and Bob and Asymmetric Keys:
-              name: Alice and Bob and Asymmetric Keys
+              name: Alice dan Bob dan kunci asimetris
             Cracking the Code:
               name: Cracking the Code
             Encryption with Keys and Passwords:
-              name: Encryption with Keys and Passwords
+              name: Enkripsi dengan kunci dan kata sandi
             Identifying People with Data:
-              name: Identifying People with Data
+              name: Mengenali orang dengan data
             Practice PT - Cybersecurity Innovations:
               name: Praktek PT - Keamanan cyber inovasi
             Practice PT - Propose an Innovation:
-              name: Practice PT - Propose an Innovation
+              name: Latihan PT - mengajukan sebuah inovasi
             Public Key Crypto:
               name: Kunci umum Kripto
             Rapid Research - Data Innovations:
@@ -2253,9 +2253,9 @@ id:
             Simple Encryption:
               name: Simple Encryption
             The Cost of Free:
-              name: The Cost of Free
+              name: Biayanya gratis
             What is Big Data?:
-              name: What is Big Data?
+              name: Apa itu data besar?
             Rapid Research - Cybercrime:
               name: Penelitian cepat - Keamanan cyber
             Practice PT - Big Data and Security Dilemmas:
@@ -2263,7 +2263,7 @@ id:
             Unit 4 Chapter 1 Assessment:
               name: Unit 4 penilaian bab 1
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
@@ -2283,17 +2283,17 @@ id:
             Controlling Memory with Variables:
               name: Mengontrol Memori dengan Variabel
             Digital Assistant Project:
-              name: Digital Assistant Project
+              name: Proyek asisten digital
             Event-Driven Programming and Debugging:
               name: Event-Driven Programming and Debugging
             Events Unplugged:
               name: Events Unplugged
             Functions with Return Values:
-              name: Functions with Return Values
+              name: Fungsi dengan nilai kembali
             Image Scroller with Key Events:
               name: Image Scroller with Key Events
             Introducing Design Mode:
-              name: Introducing Design Mode
+              name: Memasukkan mode desain
             Introduction to Arrays:
               name: Pengenalan untuk array
             Introduction to Conditional Logic:
@@ -2305,11 +2305,11 @@ id:
             Multi-screen Apps:
               name: Multi-screen Apps
             'Practice PT: Create':
-              name: 'Practice PT: Create'
+              name: 'Latihan PT: membuat'
             Processing Arrays:
               name: Processing Arrays
             Understanding Program Flow and Logic:
-              name: Understanding Program Flow and Logic
+              name: Memahami aliran program dan logika
             User Input and Strings:
               name: User Input and Strings
             Using Variables in Apps:
@@ -2327,9 +2327,9 @@ id:
             Unit 5 Assessment 2:
               name: Unit 5 penilaian 2
             "'If' Statements Unplugged":
-              name: "'If' Statements Unplugged"
+              name: "Pernyataan 'jika' dicabut"
             '"If" Statements Unplugged':
-              name: '"If" Statements Unplugged'
+              name: 'Pernyataan "jika" dicabut'
             Getting started with If Statements:
               name: Dapat dinilai dengan pernyataan jika
             Unit 3 Chapter 1 Assessment 3:
@@ -2351,7 +2351,7 @@ id:
             Unit 5 Assessment 4:
               name: Unit 5 penilaian 4
             Boolean Expressions and "If" Statements:
-              name: Boolean Expressions and "If" Statements
+              name: Ungkapan Boolean dan pernyataan "jika"
             '"if-else-if" and Conditional Logic':
               name: '"if-else-if" and Conditional Logic'
             'Building an App: Multi-Screen App':
@@ -2367,7 +2367,7 @@ id:
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
@@ -2375,9 +2375,9 @@ id:
             Multi-Screen Apps:
               name: Multi-layar aplikasi
             '"if" Statements Unplugged':
-              name: '"if" Statements Unplugged'
+              name: 'pernyatan "jika" dicabut'
             Boolean Expressions and "if" Statements:
-              name: Boolean Expressions and "if" Statements
+              name: Ungkapan Boolean dan pernyataan "jika"
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -2407,7 +2407,7 @@ id:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Tech Setup - Your AP Digital Portfolio and Other Tools
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             CSP Student Post-Course Survey:
@@ -2441,9 +2441,9 @@ id:
             Sprites and Images:
               name: Sprite dan gambar
             Sprites and Properties:
-              name: Sprites and Properties
+              name: Spite dan properti
             Variables Unplugged:
-              name: Variables Unplugged
+              name: Variabel dicabut
             Variables and Animation:
               name: Variables and Animation
             Functions:
@@ -2451,13 +2451,13 @@ id:
             Platform Jumper:
               name: Platform Jumper
             Defender:
-              name: Defender
+              name: Penjaga
             'Project: Build a Game':
-              name: 'Project: Build a Game'
+              name: 'Proyek: membuat sebuah permainan'
             Velocity:
               name: Velocity
             The Game Design Process:
-              name: The Game Design Process
+              name: Proses perancangan permainan
             Using the Game Design Process:
               name: Using the Game Design Process
         2016_sciencePD_phase1:
@@ -2481,7 +2481,7 @@ id:
             Introduction to StarLogo Nova:
               name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Pemeriksaan-postingan
             The Tutorial:
               name: Tutorial
             Using Computer Models in Science:
@@ -2509,19 +2509,19 @@ id:
         ECSPD1:
           title: ECS Part 1
           description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Background and Context:
-              name: Background and Context
+              name: Latar belakang dan alur
             'Classroom and Workshop Style ':
               name: 'Classroom and Workshop Style '
             ECS Curriculum:
-              name: ECS Curriculum
+              name: Kurikulum ECS
             Welcome to Phase 1!:
-              name: Welcome to Phase 1!
+              name: Selamat datang di tahap 1!
             Wrap Up:
-              name: Wrap Up
+              name: Penutupan
             Classroom and workshop style:
               name: Classroom and workshop style
             'Classroom and workshop style ':
@@ -2543,7 +2543,7 @@ id:
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
-          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: 'Mengajarkan pemrograman fungsional melalui aljabar'
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -2561,7 +2561,7 @@ id:
             Introduction to StarLogo Nova:
               name: Pengenalan Untuk StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Pemeriksaan-postingan
             The Tutorial:
               name: Tutorial
             Using Computer Models in Science:
@@ -2583,9 +2583,9 @@ id:
             Algorithms Detour - Shortest Path:
               name: Algorithms Detour - Shortest Path
             Unit 1 - Encoding Numbers in the Real World:
-              name: Unit 1 - Encoding Numbers in the Real World
+              name: Unit 1 - pengkodean angka di dunia nyata
             Unit 1 - Sending Bits in the Real World:
-              name: Unit 1 - Sending Bits in the Real World
+              name: Unit 1 - mengirim bit di dunia nyata
             Unit 1 - Algorithms Detour - Minimum Spanning Tree:
               name: Unit 1 - Algorithms Detour - Minimum Spanning Tree
             Unit 1 - Algorithms Detour - Shortest Path:
@@ -2607,7 +2607,7 @@ id:
             Encoding and Sending Numbers:
               name: Encoding and Sending Numbers
             Intro to the Unit:
-              name: Intro to the Unit
+              name: Introduksi ke unit
             Running a Constructive Classroom:
               name: Running a Constructive Classroom
             Sending Binary Messages:
@@ -2617,7 +2617,7 @@ id:
             Supporting Peer Learning:
               name: Supporting Peer Learning
             'Tool Talk: Intro to Netsim':
-              name: 'Tool Talk: Intro to Netsim'
+              name: 'Alat untuk bicara: introduksi ke netsim'
         test-teaching-ap-cs-unit-1:
           title: Test CPS PD
           description_audience: ''
@@ -2680,15 +2680,15 @@ id:
           description_audience: ''
           stages:
             CS Principles Culminating Assessment:
-              name: CS Principles Culminating Assessment
+              name: Prinsip-prinsip CS yang memacu penilaian
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             CSP Longitudinal Contact Request:
               name: CSP Longitudinal Contact Request
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
-              name: "[Deprecated - teacher cannot see results] CSP Culminating Assessment"
+              name: "[tidak berlaku lagi- guru tidak dapat melihat hasil] penilaian memacu CSP"
             'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
               name: 'CATATAN: Tidak berlaku lagi - guru tidak bisa melihat hasil. Penilaian memacu CSP'
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
@@ -2696,7 +2696,7 @@ id:
         cspexam1-mWU7ilDYM9:
           title: CS Principles Culminating Assessment - Part 1
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.'
-          description_short: This multiple choice assessment covers questions across 7 big ideas of computer science. It is part 1 of a two-part 50 question exam.
+          description_short: Penilaian pilihan ganda ini mencakup seputaran 7 ide besar tentang ilmu komputer. ini adalah bagian 1 dari dua bagian 50 soal ujian.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 1:
@@ -2704,7 +2704,7 @@ id:
         cspexam2-AKwgAh1ac5:
           title: CS Principles Culminating Assessment - Part 2
           description: 'This 25 question multiple choice assessment covers questions across 7 big ideas of computer science: Creativity, Abstraction, Data, Algorithms, Programming, The Internet, and Global Impact.  It is part 2 of a two-part 50 question exam'
-          description_short: This multiple choice assessment covers questions across 7 big ideas of computer science. It is part 2 of a two-part 50 question exam.
+          description_short: Penilaian pilihan ganda ini mencakup seputaran 7 ide besar tentang ilmu komputer. ini adalah bagian 2 dari dua bagian 50 soal ujian.
           description_audience: ''
           stages:
             CS Principles Culminating Assessment Part 2:
@@ -2732,19 +2732,19 @@ id:
             Designing for Social Impact:
               name: Merancang dampak sosial
             Conducting User-Centered Interviews:
-              name: Conducting User-Centered Interviews
+              name: Melakukan wawancara yang berpusat pada pengguna
             Analyzing Interviews:
-              name: Analyzing Interviews
+              name: Menganalisa wawancara
             Re-designing a Space:
-              name: Re-designing a Space
+              name: Merancang ulang sebuah ruang
             Presenting Your Design:
-              name: Presenting Your Design
+              name: Presentasikan rancangan mu
             Designing Apps for Good:
-              name: Designing Apps for Good
+              name: Merancang aplikasi untuk kebaikan
             Market Research:
-              name: Market Research
+              name: Meneliti pasar
             User Research:
-              name: User Research
+              name: Meneliti pengguna
             Low Fidelity Prototyping:
               name: Low Fidelity Prototyping
             Preparing for Prototype Testing:
@@ -2752,26 +2752,26 @@ id:
             Prototype Testing:
               name: Prototype Testing
             Preparing for App Testing:
-              name: Preparing for App Testing
+              name: Persiapan untuk menguji aplikasi
             App Testing:
-              name: App Testing
+              name: Menguji aplikasi
             Planning for Improvements:
-              name: Planning for Improvements
+              name: Rencana untuk perbaikan
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Meningkatkan dan menguraikan
             App Presentation Prep:
-              name: App Presentation Prep
+              name: Persiapan penyajian aplikasi
             App Presentation:
-              name: App Presentation
+              name: Penyajian aplikasi
         CSDU1-Draft:
           title: " TEMP CSD Unit 1"
           description: Temp place to work on U1 of Disco
           description_short: Problem Solving
           stages:
             Exploring Apps:
-              name: Exploring Apps
+              name: Jelajahi aplikasi
             Processing Information:
-              name: Processing Information
+              name: Pengolahan informasi
         CSDU2-Draft:
           title: " TEMP CSD Unit 2"
           description: Temp place to work on U2 of Disco
@@ -2781,51 +2781,51 @@ id:
             Clean Code and Debugging:
               name: Clean Code and Debugging
             Describing Webpages:
-              name: Describing Webpages
+              name: Membayangkan halaman web
             Designing Code for Computers:
-              name: Designing Code for Computers
+              name: Merancang kode untuk komputer
             Digital Footprint:
               name: Digital Footprint
             Images on the Web:
-              name: Images on the Web
+              name: Gambar di web
             'Personal Website: Finalizing Site':
-              name: 'Personal Website: Finalizing Site'
+              name: 'Situs pribadi: menyelesaikan situs'
             Quality Websites:
-              name: Quality Websites
+              name: Kualitas situs web
             Text on the Web:
-              name: Text on the Web
+              name: Teks di web
             Website Design:
-              name: Website Design
+              name: Rancangan situs web
             Intellectual Property:
-              name: Intellectual Property
+              name: Hak milik intelektual
             Introduction to Styling with CSS:
               name: Introduction to Styling with CSS
             'Personal Website: Connecting Pages':
-              name: 'Personal Website: Connecting Pages'
+              name: 'Situs web pribadi: halaman menghubungkan'
             Classes and External Style Sheets:
-              name: Classes and External Style Sheets
+              name: Kelas dan lembar gaya luar
             Box Model and Page Layout:
-              name: Box Model and Page Layout
+              name: Model kotak dan tata letak halaman
             'Personal Website: Midway Check':
-              name: 'Personal Website: Midway Check'
+              name: 'Situs web pribadi: periksa midway'
             Publishing a Website:
-              name: Publishing a Website
+              name: Penerbitan sebuah situs web
             Sources and Search Engines:
-              name: Sources and Search Engines
+              name: Sumber dan mesin pencari
             Introduction to HTML:
-              name: Introduction to HTML
+              name: Pengenalan HTML
             Headers and Lists:
               name: Headers and Lists
             Designing Web Pages:
-              name: Designing Web Pages
+              name: Merancang halaman web
             Holding:
-              name: Holding
+              name: Menahan
             Describing Web pages:
-              name: Describing Web pages
+              name: Menggambarkan halaman web
             Multi-Page Websites:
               name: Multi-Page Websites
             Classes:
-              name: Classes
+              name: Kelas
             External Style Sheets:
               name: External Style Sheets
             Usability and Accessibility:
@@ -2865,7 +2865,7 @@ id:
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
-              name: The same thing with named levels
+              name: Hal yang sama dengan yang bernama tingkat
             You are a coding STAR:
               name: You are a coding STAR
         artistExemplar:
@@ -2887,9 +2887,9 @@ id:
             Discovery Learning:
               name: Discovery Learning
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Introduction to Teachercon:
-              name: Introduction to Teachercon
+              name: Memperkenalkan teachercon
             Lesson 1,10:
               name: 'Lesson 1.10: Routers and Redundancy'
             Lesson 1,11:
@@ -2963,31 +2963,31 @@ id:
             'Bee: Determine the Concept':
               name: 'Bee: Determine the Concept'
             'Bee: Functions (Course 3)':
-              name: 'Bee: Functions (Course 3)'
+              name: 'Lebah: guna (Kursus 3)'
             Build a Star Wars Game!:
-              name: Build a Star Wars Game!
+              name: Bangun sebuah permainan perang antar bintang!
             Digital Citizenship:
               name: Kewarganegaraaan Digital
             Explore project ideas:
-              name: Explore project ideas
+              name: Menjelajahi gagasan proyek
             'Farmer: Functions (New)':
-              name: 'Farmer: Functions (New)'
+              name: 'Petani: fungsi (baru)'
             Final Project - Presentation Day:
-              name: Final Project - Presentation Day
+              name: Proyek terakhir - hari presentasi
             'Final Project - Unplugged: Design Process':
-              name: 'Final Project - Unplugged: Design Process'
+              name: 'Proyek terakhir - dicabut: cara merancang'
             'Final Project - Work Day: Build Project Online':
-              name: 'Final Project - Work Day: Build Project Online'
+              name: 'Projek terakhir - hari kerja: bangun proyek online'
             More Programming with Scratch:
-              name: More Programming with Scratch
+              name: Pemograman lebih dengan Scratch
             'New Artist: Functions':
-              name: 'New Artist: Functions'
+              name: 'Seniman baru: fungsi'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
               name: Penulisan lagu dengan Parameter
             'Unplugged: Funky Functions':
-              name: 'Unplugged: Funky Functions'
+              name: 'Dicabut: fungsi funky'
         grade1:
           title: Grade 1
           description: Planning Script for CSF 2.0
@@ -3045,19 +3045,19 @@ id:
             Digital Citizenship:
               name: Kewarganegaraaan Digital
             Explore project ideas:
-              name: Explore project ideas
+              name: Menjelajahi gagasan proyek
             Final Project - Presentation Day:
-              name: Final Project - Presentation Day
+              name: Proyek terakhir - hari presentasi
             Final Project - Review/Revise Day:
-              name: Final Project - Review/Revise Day
+              name: Proyek terakhir - hari pemeriksaan/perbaiki
             'Final Project - Unplugged: Design Process':
-              name: 'Final Project - Unplugged: Design Process'
+              name: 'Proyek terakhir - dicabut: cara merancang'
             'Final Project - Work Day: Build Project Online':
-              name: 'Final Project - Work Day: Build Project Online'
+              name: 'Projek terakhir - hari kerja: bangun proyek online'
             'Play Lab: Variables':
               name: 'Lab Bemain: Variabel-Variabel'
             Try programming with Khan Academy:
-              name: Try programming with Khan Academy
+              name: Mencoba pemograman dengan akademi khan
             'Unplugged: Envelope Variables':
               name: 'Dicabut: Amlop Variabel'
             'Unplugged: For Loop Fun':
@@ -3083,9 +3083,9 @@ id:
             1: |-
               Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
-              name: Unit 1, Days 3-4 Buying a Computer
+              name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
-              name: Unit 1, Days 5-7 Searching and Web 2
+              name: Unit 1, hari ke 5-7 pencarian dan web 2
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Hari 8-9 dampak komputer dan komunikasi
             Welcome!:
@@ -3165,7 +3165,7 @@ id:
             Unit 5 lessons:
               name: Pelajaran Unit 5
             Unit 5 Challenge:
-              name: Unit 5 Challenge
+              name: Tantangan unit 5
             Close & Next Steps:
               name: Keluar dan Langkah berikutnya
         ecs-unit6:
@@ -3195,7 +3195,7 @@ id:
           description_audience: Ages 5-18
           stages:
             " Bee: Conditionals":
-              name: ' Bee: Conditionals'
+              name: " Bee: Conditionals"
             'Artist: Nested Loops':
               name: 'Artis: Sarang Pengulangan'
             Bee Debugging:
@@ -3203,9 +3203,9 @@ id:
             Bounce:
               name: Terpental
             Build a Game:
-              name: Build a Game
+              name: Bangun sebuah permainan
             Farmer Conditional with Cards:
-              name: Farmer Conditional with Cards
+              name: Petani bersyarat dengan kartu
             Farmer Debug Relay Programming:
               name: Farmer Debug Relay Programming
             Farmer Graph Paper Programming:
@@ -3219,9 +3219,9 @@ id:
             'Maze: Nested Loops':
               name: 'Maze: Nested Loops'
             More Programming with CS4FN:
-              name: More Programming with CS4FN
+              name: Pemograman lebih lanjut dengan CS4FN
             Robot Running the Farm:
-              name: Robot Running the Farm
+              name: Robot menjalankan pertanian
             Unplugged Conditionals with Loops:
               name: Unplugged Conditionals with Loops
         alltheplcthings:
@@ -3233,27 +3233,27 @@ id:
             Balancing Teachers and Tools:
               name: Balancing Teachers and Tools
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Introduction to Teachercon:
-              name: Introduction to Teachercon
+              name: Memperkenalkan teachercon
             Lesson 1,10:
-              name: Lesson 1,10
+              name: Pelajaran 1,10
             Lesson 1,11:
-              name: Lesson 1,11
+              name: Pelajaran 1,11
             Lesson 1,4:
-              name: Lesson 1,4
+              name: Pelajaran 1,4
             Lesson 1,6:
-              name: Lesson 1,6
+              name: Pelajaran 1,6
             Lesson 1,9:
-              name: Lesson 1,9
+              name: Pelajaran 1,9
             Lesson 2,10:
-              name: Lesson 2,10
+              name: Pelajaran 2,10
             Lesson 2,2:
-              name: Lesson 2,2
+              name: Pelajaran 2,2
             Lesson 2,3:
-              name: Lesson 2,3
+              name: Pelajaran 2,3
             Test stage with bubbles:
-              name: Test stage with bubbles
+              name: Tahap ujian dengan gelembung
         csd3:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -3271,28 +3271,28 @@ id:
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
               description_student: The class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. Thee lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, the class creates an online version of the image they designed in the previous lesson.
-              description_teacher: Students are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.
+              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya.
             'Project: Interactive Card':
               name: 'Proyek: Kartu interaktif'
             Sprites and Images:
               name: Sprite dan gambar
             Sprites and Properties:
-              name: Sprites and Properties
+              name: Spite dan properti
             Variables Unplugged:
-              name: Variables Unplugged
+              name: Variabel dicabut
             Variables and Animation:
               name: Variables and Animation
             Velocity:
               name: Velocity
-              description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
-              description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
+              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan scroller.
+              description_teacher: Setelah melihat singkat tentang bagaimana mereka melawan menggunakan pola untuk memindahkan sprite dalam pelajaran sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat baru dengan cara yang berbeda, mereka membangun keterampilan yang mereka butuhkan untuk membuat dasar sisi permainan scroller.
             Collision Detection:
               name: Deteksi tumbukan
-              description_student: The class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
+              description_student: Kelas belajar tentang deteksi tabrakan di komputer. Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk meningkatkan sisi scroller permainan yang mereka mulai di pelajaran yang lalu.
               description_teacher: Students learn about collision detection on the computer.  Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  They then use the `isTouching()` block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
             Complex Sprite Movement:
               name: Complex Sprite Movement
-              description_student: 'The class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement, such as simulating gravity, making a sprite jump, and allowing a sprite to float left or right. In the final levels the class combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects coins. '
+              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat sprite dengan melawan pola untuk membuat gerakan sprite yang lebih kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol satu sprite dan membangun sebuah permainan sederhana di mana karakter terbang di sekitar dan mengumpulkan koin. '
               description_teacher: Students learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. In particular students will learn how to simulate gravity, make a sprite jump, and allow a sprite to float left or right. In the final levels of the Code Studio progression students combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects a coin. Students are encouraged to make their own additions to the game in the final level.
             Collisions:
               name: Tumbukan
@@ -3303,15 +3303,15 @@ id:
               description_student: This lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.
               description_teacher: Students learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. An unplugged warmup explores how directions at different levels of detail can be useful depending on context. Students learn that higher level or more abstract steps make it easier to understand and reason about steps. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function. At the end of the lesson students use these skills to organize and add functionality to the final version of their side scroller game.
             The Game Design Process:
-              name: The Game Design Process
-              description_student: This lesson introduces the process the class will use to design games for the remainder of the unit. The class walks through through this process in a series of levels. As part of this lesson the class also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson they have an opportunity to make improvements to the game to make it their own.
-              description_teacher: This lesson introduces students to the process they will use to design games for the remainder of the unit. This process is centered around a project guide which asks students to define their sprites, variables, and functions before they begin programming their game. In this lesson students begin by playing a game on Game Lab where the code is hidden. They discuss what they think the sprites, variables, and functions would need to be to make the game. They are then given a completed project guide which shows one way to implement the game. Students are then walked through this process through a series of levels. As part of this lesson students also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson students have an opportunity to make improvements to the game to make it their own.
+              name: Proses perancangan permainan
+              description_student: Pelajaran ini memperkenalkan proses kelas yang akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan untuk membuat perbaikan permainan sendiri.
+              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan untuk membuat perbaikan untuk permainan buatan mereka sendiri.
             Using the Game Design Process:
               name: Using the Game Design Process
               description_student: In this multi-day lesson, the class uses the problem solving process from Unit 1 to create a platform jumper game.  After looking at a sample game, the class defines what their games will look like and uses a structured process to build them.  Finally, the class reflects on how the games could be improved, and implements those changes.
               description_teacher: In this multi-day lesson, students use the problem solving process from Unit 1 to create a platform jumper game.  They start by looking at an example of a platform jumper, then define what their games will look like.  Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game.  After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.
             'Project: Build a Game':
-              name: 'Project: Build a Game'
+              name: 'Proyek: membuat sebuah permainan'
             'Project: Design a Game':
               name: 'Project: Design a Game'
             Programming for Entertainment:
@@ -3328,11 +3328,11 @@ id:
               description_teacher: In this lesson students continue to develop their drawing skills. At the beginning of the lesson a teacher-led discussion connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or "parameters". Students learn to draw with versions of `ellipse()` and `rect()` that include width and height parameters. They also learn to use the `background()` block. At the end of the progression students are introduced to the `randomNumber()` block. Combining all of these skills students will draw a randomized rainbow snake at the end of the lesson.
             Variables:
               name: Variabel
-              description_student: This lesson introduces variables as a way to label a number in a program or save a randomly generated value. The class begins the lesson with a very basic description of the purpose of a variable and practices using the new blocks.  Afterwards, the class uses variables to save a random number, allowing the programs to use the same random number multiple times.
-              description_teacher: In this lesson students learn how to use variables to label a number in their program or save a randomly generated value. Students begin the lesson with a very basic description of the purpose of a variable. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number. Students use variables to save a random number to see that variables actually store or save their values, allowing them to use the same random number multiple times in their programs.
+              description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
+              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Sprites:
               name: Sprites
-              description_student: In order to create more interesting and detailed images, the class is introduced to the sprite object. Every sprite can be assigned an image to show, and sprites also keep track of multiple values about themselves, which will prove useful down the road when making animations.  At the end of the lesson, everyone creates a scene using sprites.
+              description_student: Dalam rangka untuk membuat lebih menarik dan lengkap gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai tentang diri mereka sendiri, yang akan berguna di jalan, ketika membuat animasi. Di akhir pelajaran, semua orang membuat adegan menggunakan sprite.
               description_teacher: In order to create more interesting and detailed images, students are introduced to the sprite object. Every sprite can be assigned an image to show, and sprites also keep track of multiple values about themselves, which will prove useful down the road when making animations.
             The Draw Loop:
               name: The Draw Loop
@@ -3359,8 +3359,8 @@ id:
               description_student: The class continues to explore ways to use conditional statements to take user input. In addition to the simple keyDown() command learned yesterday, the class learns about several other keyboard input commands as well as ways to take mouse input.
               description_teacher: In this lesson students continue to explore ways to use conditional statements to take user input. In addition to the simple `keyDown()` command learned yesterday, students will learn about several other keyboard input commands as well as ways to take mouse input.
             Booleans Unplugged:
-              name: Booleans Unplugged
-              description_student: This lesson introduces boolean values and logic, as well as conditional statements. The class starts by playing a simple game of Stand Up, Sit Down in which the boolean (true/false) statements describe personal properties (hair or eye color, clothing type, age, etc). The class then groups objects based on increasingly complex boolean statements, then looks at how conditionals can impact the flow of a program.
+              name: Booleans dicabut
+              description_student: Pelajaran ini memperkenalkan nilai-nilai boolean dan logika, serta pernyataan bersyarat. Kelas dimulai dengan bermain game sederhana dari Berdiri, Duduk di mana boolean (benar/palsu) pernyataan yang menggambarkan sifat-sifat pribadi (rambut atau warna mata, jenis pakaian, usia, dll). Kelas, kemudian kelompok benda berdasarkan semakin kompleks pernyataan boolean, kemudian melihat bagaimana dapat bersyarat mempengaruhi aliran program.
               description_teacher: |-
                 In this lesson, students are introduced to boolean values and logic, as well as conditional statements. The class starts by playing a simple game of Stand Up, Sit Down in which the boolean (true/false) statements describe personal properties (hair or eye color, clothing type, age, etc). This gets students thinking about how they can frame a property with multiple potential values (such as age) with a binary question.
                 
@@ -3368,12 +3368,12 @@ id:
                 
                 Finally we reveal Conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
             Project - Interactive Card:
-              name: Project - Interactive Card
-              description_student: In this cumulative project for Chapter 1, the class plans for and develops an interactive greeting card using all of the programming techniques they've learned to this point.
+              name: Proyek - kartu interaktif
+              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan semua teknik pemrograman yang telah mereka pelajari saat ini.
               description_teacher: In this cumulative project for Chapter 1, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point.
             Project - Design a Game:
-              name: Project - Design a Game
-              description_student: The class plans and builds original games using the project guide from the previous two lessons. Working individually or in pairs, the class plans, develops, and gives feedback on the games.  After incorporating the peer feedback, the class shares out the completed games.
+              name: Proyek - merancang sebuah permainan
+              description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
               description_teacher: Students will plan and build their own game using the project guide from the previous two lessons to guide their project. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.
             Parameters and Randomization:
               name: Parameters and Randomization
@@ -3390,9 +3390,9 @@ id:
             At The Dog Park:
               name: At The Dog Park
             Caring for My New Pet:
-              name: Caring for My New Pet
+              name: Memelihara peliharaan baru saya
             Exploring the Neighborhood:
-              name: Exploring the Neighborhood
+              name: Menjelajahi lingkungan sekitar
             Flappy:
               name: Flappy
             Getting Loopy with Puppy:
@@ -3402,7 +3402,7 @@ id:
             More CS with Run Marco:
               name: More CS with Run Marco
             New Home for My Pet:
-              name: New Home for My Pet
+              name: Rumah baru untuk peliharaan saya
             Online Internet Safety:
               name: Online Internet Safety
             Online My New Pet Jigsaw:
@@ -3434,11 +3434,11 @@ id:
             20-hr Stage 9:
               name: 20-hr Stage 9
             Course 2 Stage 17:
-              name: Course 2 Stage 17
+              name: Kursus ke 2 tahapan 17
             Course 3 Stage 16:
-              name: Course 3 Stage 16
+              name: Kursus ke 3 tahapan 16
             Course 3 Stage 17:
-              name: Course 3 Stage 17
+              name: Kursus ke 3 tahapan 17
         k5concepts:
           title: K5 Concepts
           description_audience: ''
@@ -3468,7 +3468,7 @@ id:
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Mengajarkan aljabar melalui pemrograman fungsional
-          description_short: '\tPhase 3: School Year Support'
+          description_short: "\\tPhase 3: School Year Support"
           description_audience: ''
           stages:
             Lesson Prep:
@@ -3494,7 +3494,7 @@ id:
             NEW Unit 1 Chapter 1 Assessment:
               name: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment:
-              name: Unit 1 Chapter 1 Assessment
+              name: Unit 1 penilaian bab 1
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
             Unit 4 Chapter 1 Assessment:
@@ -3523,25 +3523,25 @@ id:
                 
                 This lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.
             What is a Computer?:
-              name: What is a Computer?
+              name: Apa itu komputer?
               description_student: In this lesson the class develops a preliminary definition of a computer. After brainstorming the possible definitions for a computer, the class works in groups to sort pictures into “is a computer” or “is not a computer” on poster paper and explain their motivations for choosing some of the most difficult categorizations.  The teacher then introduces a definition of the computer and allows groups to revise their posters according to the new definition.
               description_teacher: |
                 In this lesson students develop a preliminary definition of a computer. To begin the lesson, the class will brainstorm possible definitions for a computer and place the results of this brainstorm on the board. Next, students will work in groups to sort pictures into “is a computer” or “is not a computer” on poster paper. Groups will place their posters around the room and briefly explain their motivations for choosing some of their most difficult categorizations.  The teacher will then introduce a definition of the computer and allow students to revise their posters according to the new definition.
             Representing Information:
-              name: Representing Information
+              name: Menunjukkan informasi
             Processing with Bits:
-              name: Processing with Bits
+              name: Memproses dengan bit
             Human vs. Computer Processing:
-              name: Human vs. Computer Processing
+              name: Manusia vs olahan komputer
             Processing with Apps:
-              name: Processing with Apps
+              name: Memproses dengan aplikasi
             'Project: Apps and Problem Solving':
-              name: 'Project: Apps and Problem Solving'
+              name: 'Proyek: aplikasi dan menyelesaikan masalah'
             Human vs Computer Processing:
               name: Human vs Computer Processing
             Input and Output:
               name: Input and Output
-              description_student: In this the class students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device.  To conclude the lesson the class examines common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
+              description_student: Dalam hal ini siswa kelas mempertimbangkan sejumlah perangkat komputasi untuk menentukan apa jenis masukan dan keluaran yang mereka gunakan. Kelompok-kelompok yang ditugaskan untuk sebuah perangkat komputasi dan didasarkan pada guru-disediakan definisi masukan dan keluaran, daftar masukan dan keluaran dari perangkat mereka. Untuk menyimpulkan pelajaran kelas meneliti umum kegiatan-kegiatan yang mereka lakukan pada perangkat komputasi dan pilih masukan dan keluaran yang digunakan untuk kegiatan itu dari grafik.
               description_teacher: In this lesson students consider a number of computing devices to determine what types of inputs and outputs they use. Groups are assigned to a computing device and based on a teacher-provided definition of input and output, list the inputs and outputs of their device. Earlier in the activity students are prompted to focus on more obvious physical inputs and outputs (e.g. a keyboard as an input or a screen as an output) but later discussions lead students to consider less obvious examples (e.g. that a touch screen is both an input and output, or the fact that the Internet can serve as both input and output). Throughout the lesson the teacher records inputs and outputs that are identified on a T-Chart at the front of the room. To conclude the lesson students examine common activities they do on a computing device and select the inputs and outputs used for that activity from the chart.
             Processing:
               name: Sedang memproses
@@ -3549,11 +3549,11 @@ id:
               description_teacher: Students complete two unplugged card sorting activities to explore the meaning of processing and its relationship to problem-solving. The first has few constraints and is used to introduce a high-level definition of processing. The next introduces more constraints that forces students to develop an algorithm that will always successfully process the cards. Students iteratively develop, test, and share their algorithms with classmates. A wrap-up discussion has students reflect on the different types of problem-solving they used in these activities and the value of producing an algorithm to solve a problem.
             Storage:
               name: Penyimpanan
-              description_student: This lesson focuses on the storage component of the definition of a computer, within the content of processing information. The class spends the majority of the lesson developing and sharing algorithms to process information, with an emphasis on how much storage is needed for any particular algorithm. The lesson concludes with a discussion of the importance of storage while processing information.
+              description_student: Pelajaran ini berfokus pada penyimpanan komponen dari definisi dari sebuah komputer, hanya isi dari pengolahan informasi. Kelas menghabiskan sebagian besar pelajaran yang mengembangkan dan berbagi algoritma untuk memproses informasi, dengan penekanan pada berapa banyak penyimpanan yang diperlukan untuk setiap algoritma tertentu. Pelajaran ditutup dengan diskusi pentingnya penyimpanan sementara pengolahan informasi.
               description_teacher: Students explore the importance of storage within the Input-Storage-Processing-Output model of a computer. The warm-up activity asks students to reflect on the types of information they have seen computers store in the past, like documents, photographs, or videos. The unplugged main activity has students develop an algorithm to process a small pile of cards in search of specific cards within the deck. Constraints on how students can move the cards force them to consider the importance of storage even while they are processing the deck. The lesson concludes with a discussion of the two types of storage students saw in this lesson and the importance of storage while processing information.
             Apps and Problem Solving:
               name: Apps and Problem Solving
-              description_student: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. The class evaluates various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
+              description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
               description_teacher: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. In pairs, students evaluate various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
             Project - Propose an App:
               name: Project - Propose an App
@@ -3574,7 +3574,7 @@ id:
             'Lessons 2-3: Binary Messages':
               name: 'Lessons 2-3: Binary Messages'
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
               name: Balancing Teachers and Tools
             Discovery Learning:
@@ -3582,13 +3582,13 @@ id:
             Measuring Student Learning:
               name: Measuring Student Learning
             'Lessons 4-6: Encoding and Sending Numbers':
-              name: 'Lessons 4-6: Encoding and Sending Numbers'
+              name: 'Pelajaran 4-6: pengkodean dan mengirim nomor'
             'Lesson 7: Encoding and Sending Text':
-              name: 'Lesson 7: Encoding and Sending Text'
+              name: 'Pelajaran7: pengkodean dan mengirim teks'
             'lessons 9: Internet Addressing':
-              name: 'lessons 9: Internet Addressing'
+              name: 'pelajaran 9: Alamat internet'
             'lessons 10: Routers and Redundancy':
-              name: 'lessons 10: Routers and Redundancy'
+              name: 'pelajaran 10: roter dan redundansi'
             'lessons 11-12: Protocols and Abstraction':
               name: 'lessons 11-12: Protocols and Abstraction'
             'Lessons 2 - 3: Binary Messages':
@@ -3654,7 +3654,7 @@ id:
             'Lessons 4 - 6: Encoding and Sending Numbers':
               name: 'Lessons 4 - 6: Encoding and Sending Numbers'
             'Lesson 7: Encoding and Sending Text':
-              name: 'Lesson 7: Encoding and Sending Text'
+              name: 'Pelajaran7: pengkodean dan mengirim teks'
             'Lesson 9: Internet Addressing':
               name: 'Lesson 9: Internet Addressing'
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
@@ -3662,7 +3662,7 @@ id:
             'Lessons 12 - 13: Abstraction on the Internet':
               name: 'Lessons 12 - 13: Abstraction on the Internet'
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
               name: Balancing Teachers and Tools
             Discovery Learning:
@@ -3706,7 +3706,7 @@ id:
             RGB Color:
               name: RGB Color
             Processing with Bits:
-              name: Processing with Bits
+              name: Memproses dengan bit
         csd2:
           title: CSD Unit 2 - Web Development
           description_audience: ''
@@ -3716,15 +3716,15 @@ id:
             new stage:
               name: new stage
             Quality Websites:
-              name: Quality Websites
+              name: Kualitas situs web
             Website Design:
-              name: Website Design
+              name: Rancangan situs web
             Describing Web pages:
-              name: Describing Web pages
+              name: Menggambarkan halaman web
             Text on the Web:
-              name: Text on the Web
+              name: Teks di web
             Images on the Web:
-              name: Images on the Web
+              name: Gambar di web
             Clean Code and Debugging:
               name: Clean Code and Debugging
               description_student: In this lesson covers common issues that arise when designing web pages in HTML. The class will correct errors in a sequence of increasingly complex web pages found on Code Studio and learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read.
@@ -3734,27 +3734,27 @@ id:
             Multi-Page Websites:
               name: Multi-Page Websites
             Classes:
-              name: Classes
+              name: Kelas
             External Style Sheets:
               name: External Style Sheets
             Peer Review:
               name: Peer Review
             Box Model and Page Layout:
-              name: Box Model and Page Layout
+              name: Model kotak dan tata letak halaman
             Digital Footprint:
               name: Digital Footprint
-              description_student: This lesson takes a step back from creating the personal website to talk about personal information people choose to share digitally.  The class begins by discussing what types of information are good to share with other people, then looks at several sample social media pages to see what types of personal information could be shared intentionally or unintentionally.  Finally, the class comes up with a set of guidelines to follow when putting information online.
+              description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
               description_teacher: "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \\r\n\\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\\r\n\\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
             Publishing a Website:
-              name: Publishing a Website
+              name: Penerbitan sebuah situs web
             Sources and Search Engines:
-              name: Sources and Search Engines
+              name: Sumber dan mesin pencari
               description_student: After first completing a web search scavenger hunt, the class learns about the inner workings of search engines and has an opportunity to flex their analytical skills in a search for strange and unlikely animals.
-              description_teacher: This lesson encourages students to think more critically about how web searches work and how to find relevant and trustworthy information online. After viewing and discussion a video about how search engines work, students will search for information about several unlikely animals. They'll need to analyze the sites they find for reliability in order to identify which of the animals is actually a hoax.
+              description_teacher: Pelajaran ini mendorong siswa agar dapat berpikir lebih kritis tentang bagaimana situs pencari bekerja dan bagaimana menemukan informasi yang relevan dan dapat dipercaya. setelah melihat video dan mendiskusikan tentang mesin pencari bekerja, para murid akan mencari informasi tentang beberapa hewan yang langka. mereka perlu menganalisis situs yang mereka temukan apakah bisa diandalkan untuk mengenali hewan mana yang bohongan.
             Intellectual Property:
-              name: Intellectual Property
+              name: Hak milik intelektual
             'Personal Website: Finalizing Site':
-              name: 'Personal Website: Finalizing Site'
+              name: 'Situs pribadi: menyelesaikan situs'
             'Project: Personal Portfolio Website':
               name: 'Project: Personal Portfolio Website'
             Images in HTML:
@@ -3769,7 +3769,7 @@ id:
               description_teacher: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to do more styling of their personal websites.
             Exploring Websites:
               name: Exploring Websites
-              description_student: This lesson covers the purposes that a website might serve, both for the users and the creators. The class explores a handful of the most-used websites in the United States and discusses how each of those sites is useful for users and how it might also serve its creators.
+              description_student: Pelajaran kali ini mencakup tentang bagaimana sebuah situs web daat berfungsi, baik untuk pengguna maupun pembuatnya. kelas ini mengeksplorasi beberapa situs web yang paling sering dikunjungi di Amerika Serikat dan bagaimana situs-situs tersebut bisa berguna bagi pengguna dan untuk pembuatnya juga.
               description_teacher: Every website has a purpose, a reason someone created it and others use it. In this lesson, students will start to consider the purposes a website might serve, both for the users and the creators. Students will explore a handful of the most-used websites in the United States and try to figure out how each of those sites is useful for users and how they might also serve their creators.
             'Websites for Expression ':
               name: 'Websites for Expression '
@@ -3804,7 +3804,7 @@ id:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
             Headings:
-              name: Headings
+              name: Tajuk
               description_student: This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
               description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
         csp2-support:
@@ -3826,7 +3826,7 @@ id:
             'Lessons 11 - 15: Communicating with Visualizations':
               name: 'Lessons 11 - 15: Communicating with Visualizations'
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
               name: Balancing Teachers and Tools
             Discovery Learning:
@@ -3858,19 +3858,19 @@ id:
             Designing for Social Impact:
               name: Merancang dampak sosial
             Conducting User-Centered Interviews:
-              name: Conducting User-Centered Interviews
+              name: Melakukan wawancara yang berpusat pada pengguna
             Analyzing Interviews:
-              name: Analyzing Interviews
+              name: Menganalisa wawancara
             Redesigning a Space:
-              name: Redesigning a Space
+              name: Merancang ulang sebuah ruang
             Presenting Your Design:
-              name: Presenting Your Design
+              name: Presentasikan rancangan mu
             Designing Apps for Good:
-              name: Designing Apps for Good
+              name: Merancang aplikasi untuk kebaikan
               description_student: To kick off the app design project, the class organizes into teams and starts exploring app topics. Several example socially impactful apps serve as inspiration for the project.
               description_teacher: To kick off the app design project that lasts through the end of the unit, students first explore a number of apps designed for social impact that have been created by other students. The class then reviews the Define, Prepare, Try, and Reflect steps of the Problem Solving process as they develop an idea for an app of their own with social impact. Finally, students will form project teams and lay out a contract for how the team will function throughout the development of their app.
             Market Research:
-              name: Market Research
+              name: Meneliti pasar
               description_student: Dive into app development by exploring existing apps that may serve similar users. Each group identifies a handful of apps that address the same topic they are working on, using those apps to help refine the app idea they will pursue.
               description_teacher: In this lesson students research apps similar to the one they intend on creating to better understand the needs of their users. Students work within their teams to search the Internet for other apps, then evaluate the ones they find interesting. By the end of the lesson, each team will have a clearer idea about the type of app they want to create and further refine who their target users are. Each team will maintain a list of citations for all the apps they examined for use in their final presentation.
             Paper Prototypes:
@@ -3898,11 +3898,11 @@ id:
               description_student: Teams run another round of user testing, this time with their interactive prototype. Feedback gathered from this round of testing will inform the final iteration of the app prototypes.
               description_teacher: 'By the end of the previous lesson each team should have a minimum viable prototype of their app. The primary purpose of this lesson is to have the team actually test the app with other people, preferably from the target audience the app is intended for, or from different teams in the class while observers from the team will record the results on the worksheets they used in the planning phase. As with testing the paper prototypes, teams will start by planning for the specific scenarios before running and observing tests. '
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Meningkatkan dan menguraikan
               description_student: Using the feedback from the last round of testing, teams implement changes that address the needs of their users. Each team tracks and prioritizes the features they want to add and the bugs they need to fix.
               description_teacher: Teams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student has the opportunity to plan for and implement improvements to the team app. Depending on the time you have available, and student interest, you can run the cycle of testing and iteration as many times as you see fit.
             App Presentation:
-              name: App Presentation
+              name: Penyajian aplikasi
               description_student: Each team prepares a presentation to "pitch" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
             User Interface and Prototype Testing:
@@ -3940,8 +3940,8 @@ id:
         minecraft:
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri.
+          description: Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri.
           stages:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code Designer
@@ -4104,7 +4104,7 @@ id:
             Impacts of Computing:
               name: Impacts of Computing
             More Programming with CS4FN:
-              name: More Programming with CS4FN
+              name: Pemograman lebih lanjut dengan CS4FN
             Build a Play Lab Game:
               name: Build a Play Lab Game
             Conditionals in Bee:
@@ -4156,7 +4156,7 @@ id:
             Present Your Project:
               name: Present Your Project
             More Programming with Scratch:
-              name: More Programming with Scratch
+              name: Pemograman lebih dengan Scratch
             Private and Personal Information:
               name: Private and Personal Information
             Internet:
@@ -4208,7 +4208,7 @@ id:
             Presentation Your Project:
               name: Present Your Project
             Try programming with Khan Academy:
-              name: Try programming with Khan Academy
+              name: Mencoba pemograman dengan akademi khan
             The Power of Words:
               name: The Power of Words
             Songwriting with Parameters:
@@ -4320,7 +4320,7 @@ id:
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers':
               name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
               name: Balancing Teachers and Tools
             Discovery Learning:
@@ -4360,7 +4360,7 @@ id:
             'Lessons 8 - 9: Practice PT':
               name: 'Lessons 8 - 9: Practice PT'
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
               name: Balancing Teachers and Tools
             Discovery Learning:
@@ -4368,7 +4368,7 @@ id:
             Measuring Student Learning:
               name: Measuring Student Learning
             Unit 4 Overview:
-              name: Unit 4 Overview
+              name: Rangkuman unit 4
         sciencepd4:
           title: 'CS in Science: Part 4'
           description_audience: ''
@@ -4464,7 +4464,7 @@ id:
             Processing Arrays and Functions with Return Values:
               name: Processing Arrays and Functions with Return Values
             Group Work and Peer Learning:
-              name: Group Work and Peer Learning
+              name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
               name: Balancing Teachers and Tools
             Discovery Learning:
@@ -4491,17 +4491,17 @@ id:
             Reading Records:
               name: Membaca catatan
             Deleting Records:
-              name: Deleting Records
+              name: Penghapusan catatan
             Updating Records:
-              name: Updating Records
+              name: Memperbarui catatan
             Importing and Exporting Data:
-              name: Importing and Exporting Data
+              name: Mengimpor dan mengekspor data
             Visualizing Data:
-              name: Visualizing Data
+              name: Membayangkan data
             Sample Apps:
-              name: Sample Apps
+              name: Contoh aplikasi
             Final Project:
-              name: Final Project
+              name: Tugas Akhir
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -4745,7 +4745,7 @@ id:
             Input Unplugged:
               name: Input Unplugged
               description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
-              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite and asynchronous events) to gain a better understanding of how they work.
+              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Event Types:
               name: Event Types
               description_student: Review the basics of programming in App Lab and explore some new event types that can be used in your programs.
@@ -4757,7 +4757,7 @@ id:
             The Circuit Playground:
               name: The Circuit Playground
               description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
-              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that blink an LED and make noise with a buzzer. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Lists:
               name: List
               description_student: Learn how lists can be used to store multiple values in a single variable name.
@@ -4797,7 +4797,91 @@ id:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
               description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
-              description_teacher: 'In this final project for the course, student team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+            Designing Screens with Code:
+              name: Designing Screens with Code
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
+            Board Events:
+              name: Board Events
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+            Getting Properties:
+              name: Getting Properties
+              description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
+              description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
+            The Program Design Process:
+              name: The Program Design Process
+              description_student: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+              description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+            Arrays:
+              name: Arrays
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
+              description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+            Making Music:
+              name: Membuat musik
+              description_student: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+            Arrays and For Loops:
+              name: Arrays and For Loops
+              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
+              description_teacher: Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.
+            Accelerometer:
+              name: Accelerometer
+              description_student: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+            Functions with Parameters:
+              name: Fungsi dengan parameter
+              description_student: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+              description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+              description_student: Wire simple circuits to create a physical prototype using cheap and easily found materials.
+              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
+            Innovations in Computing:
+              name: Innovations in Computing
+            Arrays and Color LEDs:
+              name: Arrays and Color LEDs
+            Innovations in Computing_:
+              name: Innovations in Computing
+            Designing Screens with Code_:
+              name: Designing Screens with Code
+            The Circuit Playground_:
+              name: The Circuit Playground
+            Input Unplugged_:
+              name: Input Unplugged
+            Board Events_:
+              name: Board Events
+            Getting Properties_:
+              name: Getting Properties
+            Analog Input_:
+              name: Analog Input
+            The Program Design Process_:
+              name: The Program Design Process
+            Arrays and Color LEDs_:
+              name: Arrays and Color LEDs
+            'Project: Make a Game_':
+              name: 'Project: Make a Game'
+            Making Music_:
+              name: Membuat musik
+            Arrays and For Loops_:
+              name: Arrays and For Loops
+            Accelerometer_:
+              name: Accelerometer
+            Functions with Parameters_:
+              name: Fungsi dengan parameter
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation'
+            'Project: Make a Game__':
+              name: 'Project: Make a Game'
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
@@ -4849,7 +4933,7 @@ id:
             Functions:
               name: Fungsi
             The Game Design Process:
-              name: The Game Design Process
+              name: Proses perancangan permainan
             Using the Game Design Process:
               name: Using the Game Design Process
             'Project: Design a Game':
@@ -4858,7 +4942,7 @@ id:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: Learn how people use computers to solve data problems.
-          description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the your choosing.
+          description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           stages:
             Representation Matters:
               name: Representation Matters
@@ -4927,9 +5011,11 @@ id:
             Structuring Data:
               name: Structuring Data
               description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
-              description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+              description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing data.  Students first look at the how presenting data in different ways can help people to understand it better, and they then create visualizations of their own data. Using a the results of a preferred pizza topping survey, students must decide what to do with data that does not easily fit into the visualization scheme that they have chosen.  Finally, students look at which parts of this process can be automated by a computer and which need a human to make decisions.
             Keeping Data Secret:
               name: Keeping Data Secret
+              description_student: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
+              description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -4941,11 +5027,11 @@ id:
             Draw Loop and Randomization:
               name: Menarik loop dan pengacakan
             Variables Unplugged:
-              name: Variables Unplugged
+              name: Variabel dicabut
             Variables and Animation:
               name: Variables and Animation
             Sprites and Properties:
-              name: Sprites and Properties
+              name: Spite dan properti
             Sprites and Images:
               name: Sprite dan gambar
             Booleans and Conditionals:
@@ -4967,7 +5053,7 @@ id:
             Functions:
               name: Fungsi
             The Game Design Process:
-              name: The Game Design Process
+              name: Proses perancangan permainan
             Using the Game Design Process:
               name: Using the Game Design Process
             'Project: Design a Game':
@@ -4985,17 +5071,17 @@ id:
             Exploring Problem Solving:
               name: Exploring Problem Solving
             What is a Computer?:
-              name: What is a Computer?
+              name: Apa itu komputer?
             Representing Information:
-              name: Representing Information
+              name: Menunjukkan informasi
             Processing with Bits:
-              name: Processing with Bits
+              name: Memproses dengan bit
             Human vs Computer Processing:
               name: Human vs Computer Processing
             Processing with Apps:
-              name: Processing with Apps
+              name: Memproses dengan aplikasi
             'Project: Apps and Problem Solving':
-              name: 'Project: Apps and Problem Solving'
+              name: 'Proyek: aplikasi dan menyelesaikan masalah'
         csd2-draft:
           title: ''
           description_audience: ''
@@ -5003,7 +5089,7 @@ id:
           description: ''
           stages:
             Text on the Web:
-              name: Text on the Web
+              name: Teks di web
             Digital Footprint:
               name: Digital Footprint
             Images in HTML:
@@ -5017,7 +5103,7 @@ id:
             Headers and Lists:
               name: Headers and Lists
             Intellectual Property:
-              name: Intellectual Property
+              name: Hak milik intelektual
             Images:
               name: Images
             Clean Code and Debugging:
@@ -5029,7 +5115,7 @@ id:
             Styling Elements with CSS:
               name: Styling Elements with CSS
             Sources and Search Engines:
-              name: Sources and Search Engines
+              name: Sumber dan mesin pencari
             RGB Colors and Classes:
               name: RGB Colors and Classes
             Project - Personal Portfolio Website:
@@ -5053,7 +5139,7 @@ id:
             Exploring Problem Solving:
               name: Exploring Problem Solving
             What is a Computer?:
-              name: What is a Computer?
+              name: Apa itu komputer?
             Inputs and Outputs:
               name: Inputs and Outputs
             Processing:
@@ -5111,7 +5197,7 @@ id:
             Functions:
               name: Fungsi
             The Game Design Process:
-              name: The Game Design Process
+              name: Proses perancangan permainan
             Using the Game Design Process:
               name: Using the Game Design Process
             'Project: Design a Game':
@@ -5145,7 +5231,7 @@ id:
           description: Moved to /s/csp-post-survey.  Destory after 05.05.17
           stages:
             CSP Student Post Survey Staging:
-              name: CSP Student Post Survey Staging
+              name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
         fmscsd3preview:
@@ -5191,13 +5277,13 @@ id:
         csd2-old:
           stages:
             Quality Websites:
-              name: Quality Websites
+              name: Kualitas situs web
             Website Design:
-              name: Website Design
+              name: Rancangan situs web
             Describing Web pages:
-              name: Describing Web pages
+              name: Menggambarkan halaman web
             Text on the Web:
-              name: Text on the Web
+              name: Teks di web
             Images in HTML:
               name: Images in HTML
             Clean Code and Debugging:
@@ -5209,17 +5295,17 @@ id:
             Multi-Page Websites:
               name: Multi-Page Websites
             Classes:
-              name: Classes
+              name: Kelas
             Peer Review:
               name: Peer Review
             Digital Footprint:
               name: Digital Footprint
             Publishing a Website:
-              name: Publishing a Website
+              name: Penerbitan sebuah situs web
             Sources and Search Engines:
-              name: Sources and Search Engines
+              name: Sumber dan mesin pencari
             Intellectual Property:
-              name: Intellectual Property
+              name: Hak milik intelektual
             'Project: Personal Portfolio Website':
               name: 'Project: Personal Portfolio Website'
           title: CSD Unit 2 (DEPRECATED)
@@ -5389,7 +5475,7 @@ id:
           title: Kursus C
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: Create programs with loops, events, and conditionals. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share.
+          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed:
           stages:
             Introduction:
@@ -5718,7 +5804,7 @@ id:
             Congrats:
               name: Congrats
             Wrap Up:
-              name: Wrap Up
+              name: Penutupan
           title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
@@ -5788,7 +5874,7 @@ id:
             Thursday:
               name: Thursday
             Wrap Up:
-              name: Wrap Up
+              name: Penutupan
           title: CS Principles TeacherCon Novice Facilitator Reflection
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
@@ -6104,25 +6190,25 @@ id:
             new stage:
               name: new stage
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: Kebutuhan untuk bahasa pemograman
             The Need for Algorithms:
               name: Dibutuhkan untuk algoritma
             Creativity in Algorithms:
               name: Kreativitas dalam algoritma
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Menggunakan perintah sederhana
             Creating Functions:
               name: Fungsi membuat
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Fungsi dan desain atas-bawah
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API dan fungsi parameter
             Creating functions with Parameters:
               name: Membuat fungsi dengan parameter
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Perulangan dan acak angka
             Practice PT - Design a Digital Scene:
-              name: Practice PT - Design a Digital Scene
+              name: Latihan PT - desain sebuah adegan digital
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
             foo:
@@ -6152,9 +6238,9 @@ id:
             Project - Paper Prototype:
               name: Project - Paper Prototype
             Designing Apps for Good:
-              name: Designing Apps for Good
+              name: Merancang aplikasi untuk kebaikan
             Market Research:
-              name: Market Research
+              name: Meneliti pasar
             Paper Prototypes:
               name: Paper Prototypes
             Prototype Testing:
@@ -6168,9 +6254,9 @@ id:
             Testing the App:
               name: Testing the App
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Meningkatkan dan menguraikan
             App Presentation:
-              name: App Presentation
+              name: Penyajian aplikasi
             Linking Screens:
               name: Linking Screens
           title: CSD Unit 4 Revisions Draft
@@ -6652,9 +6738,9 @@ id:
             Project - Paper Prototype:
               name: Project - Paper Prototype
             Designing Apps for Good:
-              name: Designing Apps for Good
+              name: Merancang aplikasi untuk kebaikan
             Market Research:
-              name: Market Research
+              name: Meneliti pasar
             Paper Prototypes:
               name: Paper Prototypes
             Prototype Testing:
@@ -6668,9 +6754,9 @@ id:
             Testing the App:
               name: Testing the App
             Improving and Iterating:
-              name: Improving and Iterating
+              name: Meningkatkan dan menguraikan
             App Presentation:
-              name: App Presentation
+              name: Penyajian aplikasi
           title: "(DEPRECATED) CSD Unit 4 - The Design Process"
           description_audience: ''
           description_short: 2016/17 Beta version of CSD Unit 4
@@ -6678,25 +6764,25 @@ id:
         csp3-staging:
           stages:
             The Need For Programming Languages:
-              name: The Need For Programming Languages
+              name: Kebutuhan untuk bahasa pemograman
             The Need for Algorithms:
               name: Dibutuhkan untuk algoritma
             Creativity in Algorithms:
               name: Kreativitas dalam algoritma
             Using Simple Commands:
-              name: Using Simple Commands
+              name: Menggunakan perintah sederhana
             Creating Functions:
               name: Fungsi membuat
             Functions and Top-Down Design:
-              name: Functions and Top-Down Design
+              name: Fungsi dan desain atas-bawah
             APIs and Function Parameters:
-              name: APIs and Function Parameters
+              name: API dan fungsi parameter
             Creating functions with Parameters:
               name: Membuat fungsi dengan parameter
             Looping and Random Numbers:
-              name: Looping and Random Numbers
+              name: Perulangan dan acak angka
             Practice PT - Design a Digital Scene:
-              name: Practice PT - Design a Digital Scene
+              name: Latihan PT - desain sebuah adegan digital
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
           title: CSP 3 Proposed Changes Temporary Staging Ground
@@ -6716,7 +6802,7 @@ id:
             Personal Innovations:
               name: Inovasi Pribadi
             What is a Computer?:
-              name: What is a Computer?
+              name: Apa itu komputer?
             Problem Solving with Big Data:
               name: Problem Solving with Big Data
             Programming - Hour of Code:
@@ -6881,7 +6967,179 @@ id:
           stages:
             special valentine:
               name: special valentine
+            Valentine Puzzles:
+              name: Valentine Puzzles
           title: Valentine Special
           description_audience: ''
           description_short: Have fun creating valentines
+          description: ''
+        colehoc17:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-e-2018:
+          stages:
+            courseB_unplugged_MRF_2018:
+              name: courseB_unplugged_MRF_2018
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Membangun dasar
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Perulangan bertingkat
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Introduction:
+              name: Pendahuluan
+            Conditionals:
+              name: Kondisi
+            Private and Personal Information:
+              name: Private and Personal Information
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            MINECRAFT STAGE GOES HERE:
+              name: MINECRAFT STAGE GOES HERE
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Kerumunan
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+          title: Course E 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-f-2018:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Membangun dasar
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Introduction:
+              name: Pendahuluan
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: Laboratorium Bermain Ice Age
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Envelope Variables:
+              name: Sampul Variabel
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: Untuk Loop Fun
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Penulisan lagu dengan Parameter
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+          title: Course F 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd6-old:
+          stages:
+            Computing Innovations:
+              name: Computing Innovations
+            Input Unplugged:
+              name: Input Unplugged
+            Event Types:
+              name: Event Types
+            Getters and Setters:
+              name: Getters and Setters
+            The Circuit Playground:
+              name: The Circuit Playground
+            Lists:
+              name: List
+            Lights:
+              name: Lights
+            For Loops:
+              name: Untuk Pengulangan
+            Lists and For Loops:
+              name: Lists and For Loops
+            Timed Loops:
+              name: Timed Loops
+            'Project: Board Output':
+              name: 'Project: Board Output'
+            Physical Input:
+              name: Physical Input
+            Analog Input:
+              name: Analog Input
+            Sensor Applications:
+              name: Sensor Applications
+            'Project: Prototype an Innovation':
+              name: 'Project: Prototype an Innovation'
+          title: "(DEPRECATED) CSD Unit 6 - Physical Computing"
+          description_audience: ''
+          description_short: ''
           description: ''

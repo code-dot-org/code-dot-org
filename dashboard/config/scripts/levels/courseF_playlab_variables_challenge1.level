@@ -51,10 +51,10 @@
     "timeout_failure_tick": "400",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need additional blocks from the tool box to get the actors to talk.\\n<xml><block type=\\\"studio_saySpriteParamsTime\\\" inline=\\\"true\\\">\\n      <value name=\\\"SPRITE\\\">\\n        <block type=\\\"math_number\\\">\\n          <title name=\\\"NUM\\\">1</title>\\n        </block>\\n      </value>\\n                      <value name=\\\"TEXT\\\">\\n                  <block type=\\\"text\\\">\\n                    <title name=\\\"TEXT\\\">Knock knock.</title>\\n                  </block>\\n                </value>\\n      <value name=\\\"TIME\\\">\\n        <block type=\\\"math_number\\\">\\n          <title name=\\\"NUM\\\">1</title>\\n        </block>\\n      </value>\\n      </block></xml>\",\"hint_id\":\"courseF_playlab_variables_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b762235c570537eb6be20148ab354efb/courseF_playlab_variables_challenge1.mp3\"}]",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/ce1ac2dd6966fbec112b40500154cd13=levelbuilder/25761.png",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

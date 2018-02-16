@@ -134,7 +134,6 @@ export default class SchoolInfoInputs extends Component {
          />
         }
         {(outsideUS || ncesInfoNotFound || noDropdownForSchoolType) &&
-         !(outsideUS && !askForName) &&
          <SchoolNotFound
            ref={this.bindSchoolNotFound}
            onChange={this.props.onSchoolNotFoundChange}

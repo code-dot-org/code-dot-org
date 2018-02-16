@@ -1,7 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles} from "../tables/tableConstants";
 import i18n from "@cdo/locale";
+import {editStudent} from './manageStudentsRedux';
 
 class ManageStudentNameCell extends Component {
   static propTypes = {
@@ -11,18 +13,17 @@ class ManageStudentNameCell extends Component {
     loginType: PropTypes.string.isRequired,
     username: PropTypes.string,
     isEditing: PropTypes.bool,
-  };
-
-  state = {
-    nameValue: this.props.name
+    editedValue: PropTypes.string,
+    //Provided by redux
+    editStudent: PropTypes.func.isRequired,
   };
 
   onChangeName = (e) => {
-    this.setState({nameValue: e.target.value});
+    this.props.editStudent(this.props.id, {name: e.target.value});
   };
 
   render() {
-    const {id, sectionId, name, loginType, username} = this.props;
+    const {id, sectionId, name, loginType, username, editedValue} = this.props;
     return (
       <div>
         {!this.props.isEditing &&
@@ -40,11 +41,18 @@ class ManageStudentNameCell extends Component {
           </div>
         }
         {this.props.isEditing &&
-          <input value={this.state.nameValue} onChange={this.onChangeName}/>
+          <div style={{paddingTop: 10}}>
+            <input value={editedValue} onChange={this.onChangeName}/>
+            <div style={{color: 'red', fontSize: 9, height: 10}}>{this.props.editedValue.length === 0 ? 'required' : ''}</div>
+          </div>
         }
       </div>
       );
   }
 }
 
-export default ManageStudentNameCell;
+export default connect(state => ({}), dispatch => ({
+  editStudent(id, studentInfo) {
+    dispatch(editStudent(id, studentInfo));
+  },
+}))(ManageStudentNameCell);

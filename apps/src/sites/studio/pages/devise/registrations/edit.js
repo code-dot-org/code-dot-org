@@ -65,7 +65,7 @@ $(document).ready(() => {
       prepareEmailData();
     }
   });
-  $( "#edit_user_create_personal_account" ).on("submit", function (e){
+  $( "#edit_user_create_personal_account" ).on("submit", function (e) {
     if ($('#create_personal_user_email').length) {
       window.dashboard.hashEmail({
         email_selector: '#create_personal_user_email',

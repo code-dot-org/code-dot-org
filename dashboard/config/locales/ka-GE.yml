@@ -206,6 +206,7 @@
       email: "ელ.ფოსტის მისამართი"
       submit: "გაგზავნა"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "როგორც ჩანს თქვენ შეხვედით არასწორი იმეილის მისამართით. გთხოვთ
         მოგვწერეთ support@code.org-ზე, რათა მიიღოთ პაროლის აღდგენის ბმული."
     change_form:

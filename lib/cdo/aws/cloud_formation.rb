@@ -15,19 +15,13 @@ require 'digest'
 module AWS
   class CloudFormation
     # Hard-coded values for our CloudFormation template.
-    TEMPLATE = ENV['TEMPLATE'] || 'cloud_formation_adhoc_standalone.yml.erb'
+    TEMPLATE = ENV['TEMPLATE'] || raise('Stack template not provided in environment (TEMPLATE=[stack].yml.erb)')
     TEMPLATE_POLICY = TEMPLATE.split('.').tap {|s| s.first << '-policy'}.join('.')
     TEMP_BUCKET = ENV['TEMP_S3_BUCKET'] || 'cf-templates-p9nfb0gyyrpf-us-east-1'
+    # number of seconds to configure as Time To Live for DNS record
+    DNS_TTL = 60
 
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
-
-    # Lookup ACM certificate for ELB and CloudFront SSL.
-    ACM_REGION = 'us-east-1'.freeze
-    CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
-      list_certificates(certificate_statuses: ['ISSUED']).
-      certificate_summary_list.
-      find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
-      certificate_arn
 
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
@@ -35,7 +29,7 @@ module AWS
 
     SSH_KEY_NAME = 'server_access_key'.freeze
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
-    INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.large'
+    INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.2xlarge'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
@@ -55,7 +49,9 @@ module AWS
       end
 
       def stack_name
-        (ENV['STACK_NAME'] || CDO.stack_name || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
+        name = ENV['STACK_NAME'] || CDO.stack_name
+        name += "-#{branch}" if name == 'adhoc'
+        name.gsub(STACK_NAME_INVALID_REGEX, '-')
       end
 
       # CNAME prefix to use for this stack.
@@ -80,6 +76,16 @@ module AWS
           stacks.first.outputs.
           find {|o| o.output_key == 'AMI'}.
           output_value
+      end
+
+      # Lookup ACM certificate for ELB and CloudFront SSL.
+      ACM_REGION = 'us-east-1'.freeze
+      def certificate_arn
+        Aws::ACM::Client.new(region: ACM_REGION).
+        list_certificates(certificate_statuses: ['ISSUED']).
+          certificate_summary_list.
+          find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
+          certificate_arn
       end
 
       # Validates that the template is valid CloudFormation syntax.
@@ -168,7 +174,17 @@ module AWS
       def stack_options(template)
         {
           stack_name: stack_name,
-          parameters: parameters(template)
+          parameters: parameters(template),
+          tags: [
+            {
+              key: 'environment',
+              value: rack_env
+            },
+            {
+              key: 'owner',
+              value: Aws::STS::Client.new.get_caller_identity.arn
+            }
+          ],
         }.merge(string_or_url(template)).tap do |options|
           if %w[IAM lambda].include? stack_name
             options[:capabilities] = %w[
@@ -216,6 +232,114 @@ module AWS
         end
       end
 
+      def start_inactive_instance
+        cloudformation_resource = Aws::CloudFormation::Resource.new
+        stack = cloudformation_resource.stack(stack_name)
+        instance = Aws::EC2::Instance.new(id: stack.resource('WebServer').physical_resource_id)
+        if instance.state.code != 80
+          CDO.log.info "Instance #{instance.id} in Stack #{stack_name} can't be started because it is not" \
+          " currently stopped.  Current state - #{instance.state.code}:#{instance.state.name}"
+        else
+          CDO.log.info "Starting Instance #{instance.id} ..."
+          instance.start
+          instance.wait_until_running
+          CDO.log.info "Instance #{instance.id} is started."
+
+          public_ip_address = instance.reload.public_ip_address
+          dashboard_url = stack.outputs.detect {|output| output.output_key == 'DashboardURL'}.output_value
+          pegasus_url = stack.outputs.detect {|output| output.output_key == 'PegasusURL'}.output_value
+
+          # suffix period to construct fully qualified domain name
+          pegasus_domain_name = URI.parse(pegasus_url).host + '.'
+          dashboard_domain_name = URI.parse(dashboard_url).host + '.'
+
+          route53_client = Aws::Route53::Client.new
+
+          # this lookup may stop working if/when there are more than 100 zones
+          # prefix zone name with a period to prevent partial match (don't let zone "code.org." match "foo.cdn-code.org.")
+          hosted_zone_id = route53_client.
+            list_hosted_zones.
+            hosted_zones.
+            select {|zone| pegasus_domain_name.end_with?('.' + zone.name)}.
+            first.
+            id
+
+          change_resource_response = route53_client.change_resource_record_sets(
+            {
+              change_batch: {
+                changes: [
+                  {
+                    action: "UPSERT",
+                    resource_record_set: {
+                      name: pegasus_domain_name,
+                      resource_records: [
+                        {
+                          value: public_ip_address,
+                        },
+                      ],
+                      ttl: DNS_TTL,
+                      type: "A",
+                    },
+                  },
+                  {
+                    action: "UPSERT",
+                    resource_record_set: {
+                      name: dashboard_domain_name,
+                      resource_records: [
+                        {
+                          value: public_ip_address,
+                        },
+                      ],
+                      ttl: DNS_TTL,
+                      type: "A",
+                    }
+                  }
+                ],
+                comment: "Web server for adhoc environment #{pegasus_domain_name}",
+              },
+              hosted_zone_id: hosted_zone_id
+            }
+          )
+        end
+
+        change_status = change_resource_response.change_info.status
+        change_id = change_resource_response.change_info.id
+        CDO.log.info "DNS update status - #{change_status}"
+        CDO.log.info "Waiting for AWS Route53 to apply updated DNS records to all of its servers."
+        route53_client.wait_until(:resource_record_sets_changed, {id: change_id})
+        change_status = route53_client.get_change({id: change_id}).change_info.status
+        CDO.log.info "DNS update status - #{change_status}"
+        CDO.log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
+      end
+
+      def stop
+        if stack_exists?
+          CDO.log.info "Finding EC2 Instance for CloudFormation Stack #{stack_name} ..."
+          cloudformation_resource = Aws::CloudFormation::Resource.new
+          stack = cloudformation_resource.stack(stack_name)
+          instance_id = stack.resource('WebServer').physical_resource_id
+          instance = Aws::EC2::Instance.new(id: instance_id)
+          if instance.nil?
+            CDO.log.info "Instance #{instance_id} does not exist or has been terminated."\
+              "Delete this unrecoverable CloudFormation stack: rake adhoc:delete STACK_NAME=#{stack_name}"
+          elsif instance.state.code == 80 # already Stopped
+            CDO.log.info "Instance #{instance.id} is already Stopped."
+          elsif instance.state.code == 16 # Running
+            CDO.log.info "Stopping Instance #{instance.id} ..."
+            stop_result = instance.stop
+            CDO.log.info "Instance Status - #{stop_result.stopping_instances[0].current_state.name}"
+            CDO.log.info "Waiting until Stopped ..."
+            instance.wait_until_stopped
+            CDO.log.info "Instance Status - #{instance.reload.state.name}"
+            CDO.log.info "To start instance: rake adhoc:start_inactive_instance STACK_NAME=#{stack_name}"
+          else
+            CDO.log.info "Cannot stop Instance because its state is #{instance.state.name}"
+          end
+        else
+          CDO.log.warn "Stack #{stack_name} does not exist."
+        end
+      end
+
       def delete
         if stack_exists?
           CDO.log.info "Shutting down #{stack_name}..."
@@ -249,7 +373,10 @@ module AWS
 
       def update_certs
         Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.bundle_exec './update_certs', subdomain
+          RakeUtils.bundle_exec './update_certs',
+            subdomain,
+            studio_subdomain,
+            subdomain('origin')
         end
       end
 
@@ -353,7 +480,6 @@ module AWS
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,
-          certificate_arn: CERTIFICATE_ARN,
           cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
           cname: cname,

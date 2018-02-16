@@ -467,6 +467,8 @@
         4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
       Geometric Sun_callout:
         4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
+      Geometric Sun_2018_callout:
+        4-5_Artist_Patterns_Free_Play_1: "所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！"
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: "发生此事件时播放声音。"
       Infinity_move_directions_callout:
@@ -477,6 +479,9 @@
       Infinity_repeat_callout:
         Infinity_repeat_callout: "放置移动模块到这里面"
       InspirationalArtwork_callout:
+        InspirationalArtwork_1: Try using the new `comment` block under this label
+          to leave yourself notes inside your program!
+      InspirationalArtwork_2018_callout:
         InspirationalArtwork_1: Try using the new `comment` block under this label
           to leave yourself notes inside your program!
       Luigi's Pizza 1 (copy 1)_callout:
@@ -571,12 +576,21 @@
         Ninjacat Demo B: Click `Run` to try out the game
       Overworld Chop Trees_callout:
         craft_callout_preplaced: "我们已将一些方块放在这儿，好方便你开始"
+      Overworld Chop Trees_2018_callout:
+        craft_callout_preplaced: "我们已将一些方块放在这儿，好方便你开始"
       Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: "此代码将开始建造你的房子。你能完成吗？"
+      Overworld House Frame Chosen_2018_callout:
         craft_callout_preplaced_house: "此代码将开始建造你的房子。你能完成吗？"
       Overworld Move to Sheep_callout:
         craft_run_button_callout: 点击"运行"以尝试您的程序
         craft_drag_block_callout: "拖动一个“向前移动”模块并接到其他模块下方"
+      Overworld Move to Sheep_2018_callout:
+        craft_run_button_callout: 点击"运行"以尝试您的程序
+        craft_drag_block_callout: "拖动一个“向前移动”模块并接到其他模块下方"
       Overworld Place Wall_callout:
+        craft_inside_repeat: "将方块放在这里可以重复行动"
+      Overworld Place Wall_2018_callout:
         craft_inside_repeat: "将方块放在这里可以重复行动"
       PDAlg 13-16 Sam Extension Puzzle_callout: []
       PDAlg 17-20 Luigi Extension Puzzle_callout: []
@@ -605,6 +619,9 @@
       Quantum Bee - Ryan_callout:
         feeling_stuck_callout_test: " 感觉卡住了？ <br/> 单击灯泡以得到提示!"
       Robot Doodle_callout:
+        4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
+          label to leave yourself notes inside your program!
+      Robot Doodle_2018_callout:
         4-5_Artist_Patterns_Free_Play_2: Try using the new `comment` block under this
           label to leave yourself notes inside your program!
       Robot Drawing_callout:
@@ -668,7 +685,11 @@
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: "此代码会检查岩浆，你能添加一条向前移动的命令吗？"
+      Underground Avoiding Lava_2018_callout:
+        craft_callout_moveforward: "此代码会检查岩浆，你能添加一条向前移动的命令吗？"
       Underground Iron_callout:
+        craft_what_is_iron: "开采这块铁矿！"
+      Underground Iron_2018_callout:
         craft_what_is_iron: "开采这块铁矿！"
       WebLab PS test - 1-12_callout:
         version_history_button: "检查版本历史记录"
@@ -792,7 +813,9 @@
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: "开始使用这个块, 让艺术家到屏幕的中心。"
       courseC_artist_prog1_callout: []
+      courseC_artist_prog1_2018_callout: []
       courseC_artist_prog2_callout: []
+      courseC_artist_prog2_2018_callout: []
       courseC_collector_loops_challenge2_callout: []
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
@@ -808,6 +831,8 @@
       courseC_harvester_loops1_callout:
         courseC_harvester_loops1_callout1: "南瓜上的数字四告诉你有四个南瓜可供挑选。"
       courseC_maze_debugging5_callout:
+        courseC_maze_debugging5_1: "这些块是锁定的, 不能删除!"
+      courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: "这些块是锁定的, 不能删除!"
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this
@@ -890,21 +915,39 @@
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
+      courseD_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseD_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseD_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
         stone_block_2: "灰色的块是石头做的, 不能扔掉。"
+      courseD_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+        stone_block_2: "灰色的块是石头做的, 不能扔掉。"
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseD_maze_ramp5_callout: []
+      courseD_maze_ramp5_2018_callout: []
       courseD_maze_ramp5a_callout: []
+      courseD_maze_ramp5a_2018_callout: []
       courseD_maze_ramp5b_callout: []
+      courseD_maze_ramp5b_2018_callout: []
       courseD_maze_ramp5c_callout: []
+      courseD_maze_ramp5c_2018_callout: []
       courseD_maze_ramp5d_callout: []
+      courseD_maze_ramp5d_2018_callout: []
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
       courseD_maze_ramp6a_callout:
@@ -914,36 +957,68 @@
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: []
+      courseD_scrat_predict1_2018_callout: []
       courseD_scrat_ramp1_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseD_scrat_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
       courseD_scrat_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
+      courseD_scrat_ramp2_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
       courseD_scrat_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+      courseD_scrat_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
       courseD_scrat_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseD_scrat_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseD_scrat_ramp5_callout: []
+      courseD_scrat_ramp5_2018_callout: []
       courseD_scrat_ramp6_callout:
         courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+      courseD_scrat_ramp6_2018_callout:
+        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
       courseD_scrat_ramp7_callout:
+        courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
+      courseD_scrat_ramp7_2018_callout:
         courseD_maze_ramp6_1: "无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。"
       courseD_scrat_ramp8_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
+      courseD_scrat_ramp8_2018_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
       courseE_artist_concept_challenge2_callout: []
+      courseE_artist_concept_challenge2_2018_callout: []
       courseE_artist_embed_functions8_callout: []
       courseE_artist_functions1_callout:
+        courseD_artist_functions1_1: Let's start by using this block to help create
+          the first square.
+      courseE_artist_functions1_2018_callout:
         courseD_artist_functions1_1: Let's start by using this block to help create
           the first square.
       courseE_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in
           the function will run. What should the artist do after drawing the first
           square?
+      courseE_artist_functions2_2018_callout:
+        courseD_artist_functions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
       courseE_artist_functions8_callout:
+        courseD_artist_functions8_1: Your blocks to create functions have been moved
+          under this label in the toolbox.
+      courseE_artist_functions8_2018_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
       courseE_artist_functions_challenge_callout:
@@ -952,10 +1027,17 @@
       courseE_artist_functions_challenge1_callout:
         courseE_artist_functions_challenge1_callout1: "通过在底部添加更多代码来保持这个程序运行。"
         courseE_artist_functions_challenge1_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+      courseE_artist_functions_challenge1_2018_callout:
+        courseE_artist_functions_challenge1_callout1: "通过在底部添加更多代码来保持这个程序运行。"
+        courseE_artist_functions_challenge1_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
       courseE_artist_functions_challenge2_callout:
         courseE_artist_functions_challenge2_callout1: "通过在底部添加更多代码来保持这个程序运行。"
         courseE_artist_functions_challenge2_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+      courseE_artist_functions_challenge2_2018_callout:
+        courseE_artist_functions_challenge2_callout1: "通过在底部添加更多代码来保持这个程序运行。"
+        courseE_artist_functions_challenge2_callout2: "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
       courseE_artist_functions_predict1_callout: []
+      courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
@@ -968,17 +1050,28 @@
       courseE_artist_ramp8_2_callout:
         courseE_artist_ramp8_1: "您可以更改此数字。"
         courseE_artist_ramp8_2: "单击此处键入重复代码的次数。"
+      courseE_artist_ramp8_2018_callout:
+        courseE_artist_ramp8_1: "您可以更改此数字。"
+        courseE_artist_ramp8_2: "单击此处键入重复代码的次数。"
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
+      courseE_artist_ramp9_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: "使用此块收集一块宝藏。  "
       courseE_collector_ramp9_callout: []
       courseE_farmer_functions1_callout:
-        courseE_farmer_functions1_2: "这个工具箱这次排放有点不同! 点击不同的类别, 看看你有哪些模块。"
+        courseE_farmer_functions1_2: "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
       courseE_farmer_functions10b_callout: []
+      courseE_farmer_functions10b_2018_callout: []
       courseE_farmer_functions11_predict_callout: []
+      courseE_farmer_functions11_predict_2018_callout: []
+      courseE_farmer_functions1_2018_callout:
+        courseE_farmer_functions1_2: "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
       courseE_farmer_functions1a_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      courseE_farmer_functions1a_2018_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
       courseE_farmer_functions2a_callout:
@@ -990,19 +1083,30 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
+      courseE_farmer_functions2b_2018_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
       courseE_farmer_functions2ba_callout: []
+      courseE_farmer_functions2ba_2018_callout: []
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
       courseE_farmer_functions3c_callout: []
+      courseE_farmer_functions3c_2018_callout: []
       courseE_farmer_functions4b_callout: []
+      courseE_farmer_functions4b_2018_callout: []
       courseE_farmer_functions5b_callout: []
       courseE_farmer_functions5c_callout: []
+      courseE_farmer_functions5c_2018_callout: []
       courseE_farmer_functions6b_callout: []
       courseE_farmer_functions6c_callout: []
+      courseE_farmer_functions6c_2018_callout: []
       courseE_farmer_functions7b_callout: []
+      courseE_farmer_functions7b_2018_callout: []
       courseE_farmer_functions8b_callout: []
+      courseE_farmer_functions8b_2018_callout: []
       courseE_farmer_functions9b_callout: []
+      courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
       courseE_maze_ramp1_callout:
@@ -1028,7 +1132,11 @@
       courseE_multi_maze_ramp5_callout: []
       courseE_playLab_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: "这个模块允许你把演员移动到游戏空间的不同部分。"
+      courseE_playLab_challenge1_2018_callout:
+        courseC_PlayLab_events_challenge1_1: "这个模块允许你把演员移动到游戏空间的不同部分。"
       courseE_playLab_scaffold3_callout:
+        courseE_playLab_scaffold3_1: "让演员到这个标志移动到下一层。"
+      courseE_playLab_scaffold3_2018_callout:
         courseE_playLab_scaffold3_1: "让演员到这个标志移动到下一层。"
       courseF_IceAge_1_callout:
         playlab_drag_say_a: 在这里拖动 "演员1说 ' 模块, 并键入“您好!”
@@ -1054,14 +1162,26 @@
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room
           for your code.  The `for` loops live in here.
+      courseF_artist_for1_2018_callout:
+        courseF_artist_for1_1: The toolbox is in "category" mode to make more room
+          for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_for4_2018_callout: []
       courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp1_2018_callout:
         courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
           function.
       courseF_artist_fwp4_callout:
         courseF_artist_fwp4_1: To complete your polygon, make sure you are always
           turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp4_2018_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
       courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
+      courseF_artist_fwp5_2018_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_predict1_callout: []
       courseF_artist_ramp10_callout: []
@@ -1073,22 +1193,39 @@
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter
           numbers. These `math` blocks can be pulled out and moved around!
       courseF_artist_variables10_callout: []
+      courseF_artist_variables10_2018_callout: []
       courseF_artist_variables2_callout: []
+      courseF_artist_variables2_2018_callout: []
       courseF_artist_variables3_callout:
         courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables3_2018_callout:
+        courseF_artist_variables3_a: Use this to set the value of the variable `length`
       courseF_artist_variables3a_predict1_callout: []
+      courseF_artist_variables3a_predict1_2018_callout: []
       courseF_artist_variables4_callout: []
+      courseF_artist_variables4_2018_callout: []
       courseF_artist_variables5_callout: []
+      courseF_artist_variables5_2018_callout: []
       courseF_artist_variables6_callout:
+        courseF_artist_variables6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      courseF_artist_variables6_2018_callout:
         courseF_artist_variables6_1: Variables can be helpful when you have to change
           a lot of copies of the same number.
       courseF_artist_variables6a_callout:
         courseF_artist_variables6a_1: Variables can be helpful when you have to change
           a lot of copies of the same number.
+      courseF_artist_variables6a_2018_callout:
+        courseF_artist_variables6a_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
       courseF_artist_variables7_callout: []
+      courseF_artist_variables7_2018_callout: []
       courseF_artist_variables8_callout: []
+      courseF_artist_variables8_2018_callout: []
       courseF_artist_variables9_callout: []
+      courseF_artist_variables9_2018_callout: []
       courseF_artist_variablesFP_callout: []
+      courseF_artist_variablesFP_2018_callout: []
       courseF_artist_variables_10_callout: []
       courseF_artist_variables_2_callout: []
       courseF_artist_variables_3_callout:
@@ -1109,36 +1246,66 @@
       courseF_artistembed_variables9_callout: []
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: "工具箱现在处于分类模式。 所有您需要的区块都在这些标签下面!"
+      courseF_bee_conditionals2_2018_callout:
+        courseF_bee_conditionals2_2: "工具箱现在处于分类模式。 所有您需要的区块都在这些标签下面!"
       courseF_bee_conditionals5_callout:
+        courseF_bee_conditionals5_1: "当路径的长度改变时（在矩形的两侧！）使用这个块。"
+      courseF_bee_conditionals5_2018_callout:
         courseF_bee_conditionals5_1: "当路径的长度改变时（在矩形的两侧！）使用这个块。"
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
           into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: []
+      courseF_bee_for3_predict1_2018_callout: []
       courseF_bee_for4_callout:
         courseF_bee_for4_1: "你会在这里发现 ' 计数循环 '!"
+      courseF_bee_for4_2018_callout:
+        courseF_bee_for4_1: "你会在这里发现 ' 计数循环 '!"
       courseF_bee_for6_callout: []
+      courseF_bee_for6_2018_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_for9_2018_callout:
+        courseF_bee_for9_1: You will find the `math` block in here.
       courseF_bee_for_challenge1_callout: []
+      courseF_bee_for_challenge1_2018_callout: []
       courseF_bee_functions2_callout:
         courseF_bee_functions2_1: "此模块调用函数。点击这个“编辑”按钮看看里面是什么！"
+      courseF_bee_functions2_2018_callout:
+        courseF_bee_functions2_1: "此模块调用函数。点击这个“编辑”按钮看看里面是什么！"
       courseF_bee_functions6_callout:
+        courseF_bee_functions6_1: "不要忘了在这里寻找更多的模块，可能有助于使这个更容易！"
+      courseF_bee_functions6_2018_callout:
         courseF_bee_functions6_1: "不要忘了在这里寻找更多的模块，可能有助于使这个更容易！"
       courseF_bee_functions_challenge1_callout:
         courseF_bee_functions_challenge1_1: "在这个函数中您应该放什么代码？"
         courseF_bee_functions_challenge1_2: '"检查花蜜或蜂蜜" 函数可以在这里使用, 如果编辑它, 可以多次制作蜂蜜。'
+      courseF_bee_functions_challenge1_2018_callout:
+        courseF_bee_functions_challenge1_1: "在这个函数中您应该放什么代码？"
+        courseF_bee_functions_challenge1_2: '"检查花蜜或蜂蜜" 函数可以在这里使用, 如果编辑它, 可以多次制作蜂蜜。'
       courseF_bee_functions_challenge2_callout: []
+      courseF_bee_functions_challenge2_2018_callout: []
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp1_2018_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp2_callout:
+        courseF_bee_fwp2_a: "调用函数的模块就住在这里。"
+      courseF_bee_fwp2_2018_callout:
         courseF_bee_fwp2_a: "调用函数的模块就住在这里。"
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty
           spaces as well as clouds.
+      courseF_bee_fwp3_2018_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_bee_fwp4_2018_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_bee_fwp_challenge2_callout:
+        courseF_bee_fwp_challenge2_callout1: "这个函数对玉米有很好的作用, 但是其他的蔬菜呢？"
+      courseF_bee_fwp_challenge2_2018_callout:
         courseF_bee_fwp_challenge2_callout1: "这个函数对玉米有很好的作用, 但是其他的蔬菜呢？"
       courseF_maze_predict1_callout: []
       courseF_maze_ramp1_callout:
@@ -1168,6 +1335,9 @@
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
+      courseF_playlab_variables1a_2018_callout:
+        courseF_playlab_variables1a_1: The toolbox has been organized into categories
+          to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
         course_playlab_variables2_1: "这就是如何设置变量的值。更改连接到此块的文本以更改在变量中保存的内容。"
       courseF_playlab_variables2a_callout: []
@@ -1178,11 +1348,18 @@
         courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
       courseF_playlab_variables5c_callout:
         courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+      courseF_playlab_variables5c_2018_callout:
+        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
       courseF_playlab_variables6c_callout:
+        courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
+      courseF_playlab_variables6c_2018_callout:
         courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
       courseF_playlab_variables7c_callout:
         courseF_playlab_variables7c_1: 在这里找到 "问" 模块!
+      courseF_playlab_variables7c_2018_callout:
+        courseF_playlab_variables7c_1: 在这里找到 "问" 模块!
       courseF_playlab_variables8c_callout: []
+      courseF_playlab_variables8c_2018_callout: []
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: "你会发现你的变量模块在这里。"
       course_playlab_variables2_callout:
@@ -1378,6 +1555,9 @@
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
+      grade5_artist_variables_triangles1_2018_callout:
+        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
+          to enter numbers. These `math` blocks can be pulled out and moved around!
       grade5_artist_variables_triangles2_callout:
         set_length: "用这个模块来设置“长度”为正确的数值。"
       grade5_bee_for_loops3_callout:
@@ -1421,23 +1601,41 @@
         gradek_playlab_events5c_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
       iceage_click_hello_callout: []
+      iceage_click_hello_2018_callout: []
       iceage_free_play_callout: []
+      iceage_free_play_2018_callout: []
       iceage_free_playcourseF_IceAge_11_callout: []
       iceage_hello1_callout:
         playlab_drag_say: ''
+      iceage_hello1_2018_callout:
+        playlab_drag_say: ''
       iceage_hello2_callout:
+        playlab_use_twice: ''
+      iceage_hello2_2018_callout:
         playlab_use_twice: ''
       iceage_move_events_callout:
         arrows_move_actor: ''
+      iceage_move_events_2018_callout:
+        arrows_move_actor: ''
       iceage_move_to_actor_callout:
         playlab_play_sound: ''
+      iceage_move_to_actor_2018_callout:
+        playlab_play_sound: ''
       iceage_move_to_flag_callout: []
+      iceage_move_to_flag_2018_callout: []
       iceage_repeat_callout:
+        playlab_add_move: ''
+      iceage_repeat_2018_callout:
         playlab_add_move: ''
       iceage_sound_and_points_callout:
         playlab_add_score: ''
+      iceage_sound_and_points_2018_callout:
+        playlab_add_score: ''
       iceage_throw_hearts_callout: []
+      iceage_throw_hearts_2018_callout: []
       iceage_warn_ice_age_callout:
+        playlab_add_blocks: ''
+      iceage_warn_ice_age_2018_callout:
         playlab_add_blocks: ''
       kikiTesta_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.

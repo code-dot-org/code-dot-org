@@ -210,6 +210,7 @@
       email: Endereço de email
       submit: Enviar
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Parece que você se inscreveu com um endereço de e-mail inválido.
         Envie um e-mail para support@code.org para receber um link de recuperação
         de senha.

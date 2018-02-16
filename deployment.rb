@@ -46,6 +46,7 @@ def load_configuration
     'build_apps'                  => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
+    'census_map_table_id'         => rack_env == :production ? '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13' : nil,
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
@@ -59,6 +60,7 @@ def load_configuration
     'dashboard_enable_pegasus'    => rack_env == :development,
     'dashboard_workers'           => 8,
     'db_writer'                   => 'mysql://root@localhost/',
+    'default_hoc_mode'            => false, # overridden by 'hoc_mode' DCDO param, except in :test
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'slack_log_room'              => rack_env.to_s,

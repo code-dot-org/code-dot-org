@@ -158,8 +158,8 @@ id:
         'maze_3_2': "Buatkan saya sebuah program, sehingga saya bisa mencapai babi itu."
         'maze_3_3': "Bagaimanacara saya bisa menangkap babi itu? Pastikan saya tidak menabrak kotak TNT!"
         'maze_3_4': "Waduh! Buatkan saya sebuah program yang membantu saya mencapai babi tetapi menghindari TNT.\n"
-        'bounce_1_basketball': "Attach a block to the \"when left arrow\" block and press \"Run\". Move the hand using the left arrow to reach the finish target."
-        'bounce_2_basketball': "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the hand to reach both finish targets."
+        'bounce_1_basketball': "Lampirkan blok ke blok \"saat panah kiri\" dan tekan \"jalankan program\". Gerakkan dengan menggunakan tangan kepanah kiri untuk mencapai target selesai."
+        'bounce_2_basketball': "Lampirkan blok ke blok \"saat panah kanan\" dan \"saat panah kiri\". Pindahkan tangan untuk mencapai kedua target selesai."
         'bounce_5_basketball': "We're going to send a ball flying down towards the hand. Attach a block to the \"when ball hits hand\" block to ensure the ball reaches the flag."
         'bounce_6_basketball': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
         'bounce_7_basketball': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
@@ -404,11 +404,11 @@ id:
         'CSF_create_functions': 'Create Functions'
         'CSF_debugging_k1_blocks': 'Debugging'
         'CSF_debugging_text_blocks': 'Debugging'
-        'CSF_EF_cs_matters': 'Computer Science Matters'
+        'CSF_EF_cs_matters': 'Perihal ilmu komputer'
         'CSF_maze_intro_k1_blocks': 'Intro to Code Studio'
         'CSF_maze_intro_text_blocks': 'Intro to Code Studio'
         'CSF_my_robotic_friends': 'Teman-teman robot saya'
-        'CSF_Power_of_Words': 'Power of Words'
+        'CSF_Power_of_Words': 'Kemampuan kata-kata'
         'CSF_Super_Digital_Citizen': 'Super Digital Citizen'
         'CSF_stevie_big_project': 'Stevie and the Big Project'
         'CSF_unspotted_bugs': 'Unspotted Bugs'
