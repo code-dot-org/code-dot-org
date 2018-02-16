@@ -915,6 +915,7 @@ ActiveRecord::Schema.define(version: 20180209005153) do
     t.datetime "updated_at",                        null: false
     t.integer  "cohort_capacity_csp"
     t.integer  "cohort_capacity_csd"
+    t.datetime "deleted_at"
     t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 

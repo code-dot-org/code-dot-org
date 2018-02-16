@@ -19,6 +19,7 @@
 #  updated_at          :datetime         not null
 #  cohort_capacity_csp :integer
 #  cohort_capacity_csd :integer
+#  deleted_at          :datetime
 #
 # Indexes
 #
