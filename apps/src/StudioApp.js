@@ -849,7 +849,6 @@ StudioApp.prototype.assetUrl_ = function (path) {
  *   to be played.
  */
 StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
-  // TODO (bbuchanan): Look for comon reset logic we can pull here
   // Override in app subclass
 };
 
