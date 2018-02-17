@@ -102,8 +102,6 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
-  // TODO (bbuchanan): Modify and return the template node instead of
-  // making two in this method.
   var templateNode = new NetSimLocalClientNode(shard);
   templateNode.displayName_ = displayName;
   templateNode.getTable().create(templateNode.buildRow(), function (err, row) {
