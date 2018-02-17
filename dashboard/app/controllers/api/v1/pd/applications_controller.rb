@@ -71,27 +71,18 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner_name
   def cohort_view
-    applications = get_applications_by_role(params[:role].to_sym).where(status: ['accepted', 'withdrawn'])
-    cohort_capacity = nil
+    role = params[:role]
+    regional_partner_filter = params[:regional_partner_filter]
+    applications = get_applications_by_role(role.to_sym).where(status: ['accepted', 'withdrawn'])
 
-    unless params[:regional_partner_filter].nil? || params[:regional_partner_filter] == 'all'
-      applications = applications.where(regional_partner_id: params[:regional_partner_filter] == 'none' ? nil : params[:regional_partner_filter])
-    end
-
-    unless ['none', 'all'].include? params[:regional_partner_filter]
-      partner_id = params[:regional_partner_filter] ? params[:regional_partner_filter] : current_user.regional_partners.first
-      partner = RegionalPartner.find_by(id: partner_id)
-      if params[:role] == 'csd_teachers'
-        cohort_capacity = partner.cohort_capacity_csd
-      elsif params[:role] == 'csp_teachers'
-        cohort_capacity = partner.cohort_capacity_csp
-      end
+    unless regional_partner_filter.nil? || regional_partner_filter == 'all'
+      applications = applications.where(regional_partner_id: regional_partner_filter == 'none' ? nil : regional_partner_filter)
     end
 
     serializer =
-      if TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Facilitator1819Application
+      if TYPES_BY_ROLE[role.to_sym] == Pd::Application::Facilitator1819Application
         Api::V1::Pd::FacilitatorApplicationCohortViewSerializer
-      elsif TYPES_BY_ROLE[params[:role].to_sym] == Pd::Application::Teacher1819Application
+      elsif TYPES_BY_ROLE[role.to_sym] == Pd::Application::Teacher1819Application
         Api::V1::Pd::TeacherApplicationCohortViewSerializer
       end
 
@@ -100,12 +91,12 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         serialized_applications = applications.map {|a| serializer.new(a).attributes}
         render json: {
           applications: serialized_applications,
-          capacity: cohort_capacity
+          capacity: get_partner_cohort_capacity(regional_partner_filter, role)
         }
       end
       format.csv do
-        csv_text = [TYPES_BY_ROLE[params[:role].to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
-        send_csv_attachment csv_text, "#{params[:role]}_cohort_applications.csv"
+        csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
+        send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
       end
     end
   end
@@ -216,5 +207,18 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         end
       end
     end
+  end
+
+  def get_partner_cohort_capacity(regional_partner_filter, role)
+    unless ['none', 'all'].include? regional_partner_filter
+      partner_id = regional_partner_filter ? regional_partner_filter : current_user.regional_partners.first
+      regional_partner = RegionalPartner.find_by(id: partner_id)
+      if role == 'csd_teachers'
+        return regional_partner.cohort_capacity_csd
+      elsif role == 'csp_teachers'
+        return regional_partner.cohort_capacity_csp
+      end
+    end
+    nil
   end
 end

@@ -21,7 +21,7 @@ export default class CohortViewCalculator extends React.Component {
           <caption>Cohort Calulator</caption>
           <thead>
               <tr>
-                <th></th>
+                <th />
                 <th>Total</th>
               </tr>
           </thead>
