@@ -156,9 +156,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return new Promise((resolve) => {
       // It can take a moment for the reset() command to reach the board, so defer
       // closing the serialport for a moment.
-      // TODO (Brad): Make changes to Firmata so we can be notified when writes
-      // succeed instead of making a 50ms guess, and make this a properly async
-      // method.
       setTimeout(() => {
         // Close the serialport, cleaning it up properly so we can open it again
         // on the next run.
