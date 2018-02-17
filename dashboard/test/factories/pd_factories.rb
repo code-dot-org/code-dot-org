@@ -863,6 +863,15 @@ FactoryGirl.define do
       with_full_form_data
     end
 
+    trait :facilitator_accepted do
+      able_to_attend 'Yes'
+      with_full_form_data
+    end
+
+    trait :facilitator_declined do
+      able_to_attend 'No'
+    end
+
     trait :partner_registration do
       after :build do |hash|
         hash['ableToAttend'] = "Yes"
@@ -913,7 +922,7 @@ FactoryGirl.define do
       photo_release "Yes"
     end
 
-    trait :decliend do
+    trait :declined do
       able_to_attend "No"
     end
   end
