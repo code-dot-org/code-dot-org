@@ -709,15 +709,16 @@ export function animationSourceUrl(key, props, withVersion = false) {
 
   // 1. If the animation has a sourceUrl it's external (from the library
   //    or some other outside source, not the animation API) - and we may need
-  //    to run it through the media proxy.
-  if (props.sourceUrl) {
-    return assetPrefix.fixPath(props.sourceUrl);
-  }
-
+  //    to run it through the media proxy. (Note - 02/2018 - cannot guarantee -
+  //    uploaded images were assigned non-null sourceUrls)
   // 2. Otherwise it's local to this project, and we should use the animation
   //    key to look it up in the animations API.
-  return animationsApi.basePath(key) + '.png' +
-      ((withVersion && props.version) ? '?version=' + props.version : '');
+  let url = (props.sourceUrl) ?
+      assetPrefix.fixPath(props.sourceUrl) : animationsApi.basePath(key) + '.png';
+
+  // Appending version here to support projects with uploaded images
+  // with sourceUrls.
+  return url + (props.version) ? '?version=' + props.version : '';
 }
 
 /**
