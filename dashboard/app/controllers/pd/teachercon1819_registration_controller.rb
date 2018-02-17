@@ -27,7 +27,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    unless @application.locked? && @application.status == 'accepted'
+    unless @application.locked? && ['accepted', 'withdrawn'].include?(@application.status)
       render :invalid
       return
     end
