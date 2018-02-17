@@ -224,6 +224,10 @@ class Visualization {
     this.ctxDisplay = this.displayCanvas.getContext('2d');
   }
 
+  resetTurtleFrame() {
+    this.turtleFrame_ = 0;
+  }
+
   // Helper for creating canvas elements.
   createCanvas_(id, width, height) {
     var el = document.createElement('canvas');
@@ -1078,6 +1082,7 @@ Artist.prototype.reset = function (ignore) {
       this.level.startDirection : DEFAULT_DIRECTION;
   this.visualization.penDownValue = true;
   this.visualization.avatar.visible = true;
+  this.visualization.resetTurtleFrame();
 
   // For special cases, use a different initial location.
   if (this.level.initialX !== undefined) {
@@ -1127,7 +1132,6 @@ Artist.prototype.reset = function (ignore) {
 
   // Stop the looping sound.
   this.studioApp_.stopLoopingAudio('start');
-
   this.resetStepInfo_();
 };
 
