@@ -15,11 +15,11 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
   end
 
   def facilitator_accepted
-    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:accepted)
+    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:facilitator_accepted)
   end
 
   def facilitator_withdrawn
-    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:withdrawn)
+    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:facilitator_declined)
   end
 
   def regional_partner
