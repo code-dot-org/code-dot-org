@@ -835,7 +835,7 @@ FactoryGirl.define do
       contact_phone "1597534862"
       contact_relationship "it's complicated"
       dietary_needs "Food Allergy"
-      dietary_needs_food_allergy_details "memories"
+      dietary_needs_details "memories"
       how_traveling "Amtrak or regional train service"
       liability_waiver "Yes"
       live_far_away "Yes"
