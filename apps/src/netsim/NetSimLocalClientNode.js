@@ -36,11 +36,6 @@ var MessageGranularity = NetSimConstants.MessageGranularity;
 var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   NetSimClientNode.call(this, shard, clientRow);
 
-  // TODO (bbuchanan): Consider:
-  //      Do we benefit from inheritance here?  Would it be cleaner to make this
-  //      not-an-entity that manipulates a stock NetSimClientNode?  Will another
-  //      developer find it easy to understand how this class works?
-
   /**
    * Client nodes can be connected to other clients.
    * @type {NetSimClientNode}
