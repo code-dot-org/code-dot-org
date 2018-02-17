@@ -898,7 +898,6 @@ Artist.prototype.afterInject_ = function (config) {
   var visualization = document.getElementById('visualization');
   visualization.appendChild(this.visualization.displayCanvas);
 
-  // TODO (br-pair): - pull this out?
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
