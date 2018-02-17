@@ -96,7 +96,7 @@ class CohortView extends React.Component {
         <Spinner/>
       );
     } else {
-      let registered = this.state.applications
+      const registered = this.state.applications
         .filter(app => app.registered_workshop === 'Yes')
         .length;
       return (

@@ -17,7 +17,7 @@ module Api::V1::Pd
       @regional_partner = create :regional_partner,
         program_managers: [@workshop_organizer],
         cohort_capacity_csd: 25,
-        cohort_capacity_csp: 25
+        cohort_capacity_csp: 50
       @csf_facilitator_application_with_partner = create :pd_facilitator1819_application,
         regional_partner: @regional_partner, form_data_hash: csf_facilitator_application_hash
 
@@ -357,8 +357,8 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_organizer
@@ -392,8 +392,8 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_organizer
@@ -427,8 +427,8 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_organizer
@@ -460,15 +460,15 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_organizer
         get :cohort_view, params: {role: 'csp_teachers'}
         assert_response :success
 
-        assert_equal(25, JSON.parse(@response.body)['capacity'])
+        assert_equal(50, JSON.parse(@response.body)['capacity'])
       end
     end
 
@@ -484,8 +484,8 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_organizer
@@ -508,8 +508,8 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_admin
@@ -532,8 +532,8 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_admin
@@ -556,8 +556,8 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.save
-        application.update(status: 'accepted')
+        application.status = 'accepted'
+        application.save!
         application.lock!
 
         sign_in @workshop_admin
