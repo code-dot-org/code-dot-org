@@ -196,7 +196,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   end
 
   def accepted?
-    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+    if pd_application.try(:application_type) == 'Teacher'
+      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+    elsif pd_application.try(:application_type) == 'Facilitator'
+      accept_status == YES
+    end
   end
 
   def waitlisted?
@@ -205,10 +209,18 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   end
 
   def declined?
-    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+    if pd_application.try(:application_type) == 'Teacher'
+      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+    elsif pd_application.try(:application_type) == 'Facilitator'
+      accept_status == NO
+    end
   end
 
   def accept_status
-    sanitize_form_data_hash.try(:[], :teacher_accept_seat)
+    if pd_application.try(:application_type) == "Teacher"
+      sanitize_form_data_hash.try(:[], :teacher_accept_seat)
+    elsif pd_application.try(:application_type) == "Facilitator"
+      sanitize_form_data_hash.try(:[], :able_to_attend)
+    end
   end
 end
