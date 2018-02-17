@@ -203,8 +203,6 @@ StudioApp.prototype.configure = function (options) {
   this.scratch = options.level && options.level.scratch;
   this.usingBlockly_ = !this.editCode && !this.scratch;
 
-  // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
-  // or (even better) inject an appropriate editor-adaptor.
   if (options.isEditorless) {
     this.editCode = false;
     this.usingBlockly_ = false;
