@@ -2,12 +2,16 @@
 
 const SPRITE_CATEGORY = 'sprites';
 const EVENT_CATEGORY = 'events';
+const EVENT_LOOP_CATEGORY = 'event_loop';
 const CATEGORIES = {
   [SPRITE_CATEGORY]: {
     color: [184, 1.00, 0.74],
   },
   [EVENT_CATEGORY]: {
     color: [140, 1.00, 0.74],
+  },
+  [EVENT_LOOP_CATEGORY]: {
+    color: [322, 0.90, 0.95],
   },
 };
 
@@ -33,6 +37,7 @@ export default {
       returnType,
       methodCall,
       eventBlock,
+      eventLoopBlock,
     }) => {
       const blockName = `gamelab_${func}`;
       blockly.Blocks[blockName] = {
@@ -59,11 +64,15 @@ export default {
             // TODO(ram): Create Blockly.BlockValueType.SPRITE
             this.setOutput(true, Blockly.BlockValueType.NUMBER);
           } else {
-            this.setNextStatement(true);
-            if (eventBlock) {
-              this.skipNextBlockGeneration = true;
+            if (eventLoopBlock) {
+              this.appendStatementInput('DO');
             } else {
-              this.setPreviousStatement(true);
+              this.setNextStatement(true);
+              if (eventBlock) {
+                this.skipNextBlockGeneration = true;
+              } else {
+                this.setPreviousStatement(true);
+              }
             }
           }
         },
@@ -85,12 +94,16 @@ export default {
           prefix = `${object}.`;
         }
 
-        if (eventBlock) {
-          const nextBlock = this.nextConnection && this.nextConnection.targetBlock();
-          const handlerCode = Blockly.Generator.prefixLines(
-            Blockly.JavaScript.blockToCode(nextBlock, true),
-            '  ' // 2-space indent
-          );
+        if (eventLoopBlock || eventBlock) {
+          let handlerCode = '';
+          if (eventBlock) {
+            const nextBlock = this.nextConnection &&
+              this.nextConnection.targetBlock();
+            handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+          } else if (eventLoopBlock) {
+            handlerCode = Blockly.JavaScript.statementToCode(this, 'DO');
+          }
+          handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
           values.push(`function () {\n${handlerCode}}`);
         }
 
@@ -180,35 +193,35 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      category: EVENT_LOOP_CATEGORY,
       func: 'whileUpArrow',
       blockText: 'while up arrow presssed',
       args: [],
-      eventBlock: true,
+      eventLoopBlock: true,
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      category: EVENT_LOOP_CATEGORY,
       func: 'whileDownArrow',
       blockText: 'while down arrow presssed',
       args: [],
-      eventBlock: true,
+      eventLoopBlock: true,
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      category: EVENT_LOOP_CATEGORY,
       func: 'whileLeftArrow',
       blockText: 'while left arrow presssed',
       args: [],
-      eventBlock: true,
+      eventLoopBlock: true,
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      category: EVENT_LOOP_CATEGORY,
       func: 'whileRightArrow',
       blockText: 'while right arrow presssed',
       args: [],
-      eventBlock: true,
+      eventLoopBlock: true,
     });
   },
 };
