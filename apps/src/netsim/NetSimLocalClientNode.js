@@ -165,8 +165,6 @@ NetSimLocalClientNode.prototype.stopSimulation = function () {
  * @param {!RunLoop.Clock} clock
  */
 NetSimLocalClientNode.prototype.tick = function (clock) {
-  // TODO (bbuchanan): Move the router collection and ticking the
-  // routers up to netsim.js (or elsewhere)
   this.routers_.forEach(function (router) {
     router.tick(clock);
   });
