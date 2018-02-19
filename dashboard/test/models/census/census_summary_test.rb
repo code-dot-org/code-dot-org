@@ -245,7 +245,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal "MAYBE", summary.teaches_cs, summary.audit_data
   end
 
-  test "School with state data and a no survey is a yes" do
+  test "School with state data and a no survey is a yes or maybe" do
     offering = create :state_cs_offering
     school = offering.school
     year = offering.school_year
@@ -269,7 +269,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 1, summaries.length
 
     summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
   end
 
   test "High school without AP, or IB data and a yes survey is a yes" do
@@ -294,7 +294,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal "YES", summary.teaches_cs, summary.audit_data
   end
 
-  test "High school without state, AP, or IB data and a yes survey is a no" do
+  test "High school without state, AP, or IB data and a yes survey is a no or maybe" do
     submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL'
     school = submission.school_infos[0].school
     school.state = Census::StateCsOffering::SUPPORTED_STATES[0]
@@ -314,10 +314,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 1, summaries.length
 
     summary = summaries[0]
-    assert_equal "NO", summary.teaches_cs, summary.audit_data
+    assert ["NO", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
   end
 
-  test "School with AP data and a no survey is a yes" do
+  test "School with AP data and a no survey is a yes or maybe" do
     offering = create :ap_cs_offering
     school = offering.ap_school_code.school
     year = offering.school_year
@@ -341,10 +341,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 1, summaries.length
 
     summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
   end
 
-  test "School with IB data and a no survey is a yes" do
+  test "School with IB data and a no survey is a yes or maybe" do
     offering = create :ib_cs_offering
     school = offering.ib_school_code.school
     year = offering.school_year
@@ -368,10 +368,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 1, summaries.length
 
     summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
   end
 
-  test "High school with AP data but not state data is a yes" do
+  test "High school with AP data but not state data is a yes or maybe" do
     offering = create :ap_cs_offering
     school = offering.ap_school_code.school
     school.state = Census::StateCsOffering::SUPPORTED_STATES[0]
@@ -391,10 +391,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 1, summaries.length
 
     summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
   end
 
-  test "High school with IB data but not state data is a yes" do
+  test "High school with IB data but not state data is a yes or maybe" do
     offering = create :ib_cs_offering
     school = offering.ib_school_code.school
     school.state = Census::StateCsOffering::SUPPORTED_STATES[0]
@@ -414,6 +414,6 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 1, summaries.length
 
     summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
   end
 end
