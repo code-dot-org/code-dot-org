@@ -42,6 +42,7 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
     Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
+    Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
 
     redirect_to videos_path
   end
@@ -51,6 +52,8 @@ class VideosController < ApplicationController
   def update
     if @video.update(video_params)
       Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
+      Video.merge_and_write_attributes(@video.key, @video.youtube_code, @video.download)
+
       redirect_to videos_path, notice: I18n.t('crud.updated', model: Video.model_name.human)
     else
       render action: 'edit'
