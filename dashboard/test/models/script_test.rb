@@ -436,6 +436,20 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script.summarize(false)[:stages]
   end
 
+  test 'summarize includes has_verified_resources' do
+    script = create(:script, name: 'resources-script')
+
+    script.has_verified_resources = true
+    assert script.has_verified_resources
+    summary = script.summarize
+    assert summary[:has_verified_resources]
+
+    script.has_verified_resources = false
+    refute script.has_verified_resources
+    summary = script.summarize
+    refute summary[:has_verified_resources]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
