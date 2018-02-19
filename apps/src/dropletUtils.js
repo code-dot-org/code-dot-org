@@ -538,8 +538,7 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
       // Following a dot, we autocomplete from methodsAndProperties:
       const list = isPositionAfterDot(session, pos) ? methodsAndProperties : apis;
 
-      // Filter our list to contain substring word matches based on camelCase or
-      // snake_case:
+      // Filter our list to contain substring word matches:
       const filteredList = filterListBasedOnWordMatches(prefix, list);
       callback(null, filteredList);
     }
@@ -547,14 +546,14 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 }
 
 function filterListBasedOnWordMatches(prefix, list) {
-  // Filter our list to contain substring word matches based on camelCase or
-  // snake_case:
+  // Filter our list to contain substring word matches based on camelCase,
+  // snake_case or Global.method:
   const lowerPrefix = prefix.toLowerCase();
   return list.filter(completion => {
     const { value } = completion;
     // https://stackoverflow.com/a/34680912
     const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
-    const words = value.replace(edges, '$1_').split('_');
+    const words = value.replace('.', '_').replace(edges, '$1_').split('_');
     // Transform words into phrases that we consider to be "matches": e.g.
     // words ['get', 'Time'] become phrases ['getTime', 'Time']
     const phrases = words.map((word, index) => words.slice(index).join(''));
