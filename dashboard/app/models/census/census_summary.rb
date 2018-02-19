@@ -32,11 +32,12 @@ class Census::CensusSummary < ApplicationRecord
   # High schools need to teach a 20 hour course with either
   # block- or text-based programming for it to count as CS.
   # Other schools can teach any 10 or 20 hour courses.
+  # Schools that are a mix of K8 and high school use the K8 logic.
   # The teacher banner does not have the topic check boxes
   # so we count those submissions even though they don't have
   # those options checked.
-  def self.submission_teaches_cs?(submission, is_high_school:)
-    if is_high_school
+  def self.submission_teaches_cs?(submission, is_high_school:, is_k8_school:)
+    if is_high_school && !is_k8_school
       (
         (
           submission.how_many_20_hours_some? ||
@@ -175,6 +176,7 @@ class Census::CensusSummary < ApplicationRecord
       # The lack of stats will show up in the audit data as a null value for high_school.
       stats = school.school_stats_by_year.try(:sort).try(:last)
       high_school = stats.try(:has_high_school_grades?)
+      k8_school = stats.try(:has_k8_grades?)
       audit[:stats].push({high_school: high_school})
 
       # Census Submissions
@@ -184,7 +186,7 @@ class Census::CensusSummary < ApplicationRecord
       submissions.select {|s| s.school_year == school_year}.each do |submission|
         teaches =
           if submission_has_response(submission, high_school)
-            submission_teaches_cs?(submission, is_high_school: high_school)
+            submission_teaches_cs?(submission, is_high_school: high_school, is_k8_school: k8_school)
           else
             nil
           end
