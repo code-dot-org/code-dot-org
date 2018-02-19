@@ -1,13 +1,12 @@
-require_relative '../test_helper'
-require 'cdo/school_info_interstitial_helper'
+require 'test_helper'
 
 # Tests following spec:
 # We should pop up this interstitial again every 7 days unless one of the following is true:
 # - The teacher already filled out all the fields (except location)
 # - They chose “Homeschool,” “After School”, "Organization" or “Other” for school type
 # - Teacher chose a country that’s not “United States”
-class SchoolInfoInterstitialHelperTest < Minitest::Test
-  def test_complete_if_all_school_info_is_provided
+class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
+  test 'complete if all school info is provided' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
@@ -20,7 +19,7 @@ class SchoolInfoInterstitialHelperTest < Minitest::Test
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  def test_complete_if_all_school_info_but_location_is_provided
+  test 'complete if all school info but location is provided' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
@@ -32,7 +31,7 @@ class SchoolInfoInterstitialHelperTest < Minitest::Test
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  def test_complete_if_school_is_found_by_nces_id
+  test 'complete if school is found by NCES id' do
     school_info = SchoolInfo.new
     school_info.school_id = 1
 
@@ -40,7 +39,7 @@ class SchoolInfoInterstitialHelperTest < Minitest::Test
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  def test_complete_if_school_type_is_homeschool_after_school_organization_other
+  test 'complete if school type is homeschool/after school/organization/other' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
 
@@ -57,26 +56,26 @@ class SchoolInfoInterstitialHelperTest < Minitest::Test
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  def test_complete_if_country_is_not_us
+  test 'complete if country is not US' do
     school_info = SchoolInfo.new
     school_info.country = 'Canada'
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  def test_not_complete_without_country
+  test 'not complete without country' do
     school_info = SchoolInfo.new
     assert_nil school_info.country
     refute SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  def test_not_complete_if_country_is_us_but_no_school_type_is_set
+  test 'not complete if country is US but no school type is set' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
     assert_nil school_info.school_type
     refute SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  def test_not_complete_if_country_is_us_and_school_type_is_public_private_charter_but_other_information_is_missing
+  test 'not complete if country is US and school type is public/private/charter but other information is missing' do
     school_info = SchoolInfo.new
     school_info.country = 'United States'
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
