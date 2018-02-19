@@ -519,6 +519,12 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 
   return {
     getCompletions(editor, session, pos, prefix, callback) {
+      // Ensure our updateCompletionsOverride is installed - note that we must wait
+      // until a completor object has been created to install the hook. This
+      // getCompletions() function will be called from within the original
+      // updateCompletions() call, which is ok to run without our hook. We need
+      // to make sure subsequent calls to updateCompletions() are overriden
+      installAceUpdateCompletionsHook(editor);
       const token = editor.session.getTokenAt(pos.row, pos.column);
       // Ignore cases where:
       // * the prefix is empty
@@ -534,21 +540,67 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 
       // Filter our list to contain substring word matches based on camelCase or
       // snake_case:
-      const lowerPrefix = prefix.toLowerCase();
-      const filteredList = list.filter(completion => {
-        const { value } = completion;
-        // https://stackoverflow.com/a/34680912
-        const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
-        const words = value.replace(edges, '$1_').split('_');
-        for (const word of words) {
-          if (word.toLowerCase().indexOf(lowerPrefix) === 0) {
-            return completion;
-          }
-        }
-      });
+      const filteredList = filterListBasedOnWordMatches(prefix, list);
       callback(null, filteredList);
     }
   };
+}
+
+function filterListBasedOnWordMatches(prefix, list) {
+  // Filter our list to contain substring word matches based on camelCase or
+  // snake_case:
+  const lowerPrefix = prefix.toLowerCase();
+  return list.filter(completion => {
+    const { value } = completion;
+    // https://stackoverflow.com/a/34680912
+    const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
+    const words = value.replace(edges, '$1_').split('_');
+    // Transform words into phrases that we consider to be "matches": e.g.
+    // words ['get', 'Time'] become phrases ['getTime', 'Time']
+    const phrases = words.map((word, index) => words.slice(index).join(''));
+    for (const phrase of phrases) {
+      if (phrase.toLowerCase().indexOf(lowerPrefix) === 0) {
+        return completion;
+      }
+    }
+  });
+}
+
+/**
+ * Install our own updateCompletions method to override the default ace
+ * behavior so that we can modify the filtering behavior
+ * @param {AceEditor} editor
+ */
+function installAceUpdateCompletionsHook(editor) {
+  if (editor.completer.updateCompletions !== updateCompletionsOverride) {
+    originalUpdateCompletions = editor.completer.updateCompletions;
+    editor.completer.updateCompletions = updateCompletionsOverride;
+  }
+}
+
+var originalUpdateCompletions;
+
+/**
+ * Our overridden updateCompletions method, installed so that we can modify the
+ * filtering behavior
+ * @param {completor} this
+ * @param {boolean} keepPopupPosition
+ */
+function updateCompletionsOverride(keepPopupPosition) {
+  if (keepPopupPosition && this.base && this.completions) {
+    const pos = this.editor.getCursorPosition();
+    const prefix = this.editor.session.getTextRange({start: this.base, end: pos});
+
+    // Repopulate all 3 properties of the FilteredList (stored in this.completions)
+    // with a new list, filtered by our algorithm, but not yet filtered by ace's
+    // algorithm. Ensure that filterText is blank so that the original
+    // updateCompletions() won't just return immediately
+
+    this.completions.all = filterListBasedOnWordMatches(prefix, this.completions.all);
+    this.completions.filtered = this.completions.all;
+    this.completions.filterText = "";
+  }
+  return originalUpdateCompletions.call(this, keepPopupPosition);
 }
 
 /**
