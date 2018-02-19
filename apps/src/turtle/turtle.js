@@ -224,6 +224,10 @@ class Visualization {
     this.ctxDisplay = this.displayCanvas.getContext('2d');
   }
 
+  resetTurtleFrame() {
+    this.turtleFrame_ = 0;
+  }
+
   // Helper for creating canvas elements.
   createCanvas_(id, width, height) {
     var el = document.createElement('canvas');
@@ -898,7 +902,6 @@ Artist.prototype.afterInject_ = function (config) {
   var visualization = document.getElementById('visualization');
   visualization.appendChild(this.visualization.displayCanvas);
 
-  // TODO (br-pair): - pull this out?
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
@@ -1078,6 +1081,7 @@ Artist.prototype.reset = function (ignore) {
       this.level.startDirection : DEFAULT_DIRECTION;
   this.visualization.penDownValue = true;
   this.visualization.avatar.visible = true;
+  this.visualization.resetTurtleFrame();
 
   // For special cases, use a different initial location.
   if (this.level.initialX !== undefined) {
@@ -1127,7 +1131,6 @@ Artist.prototype.reset = function (ignore) {
 
   // Stop the looping sound.
   this.studioApp_.stopLoopingAudio('start');
-
   this.resetStepInfo_();
 };
 
@@ -1507,7 +1510,7 @@ Artist.prototype.step = function (command, values, options) {
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       this.visualization.setHeading(heading);
-      this.jumpForward(result.distance);
+      this.visualization.jumpForward(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
