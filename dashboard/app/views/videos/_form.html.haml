@@ -14,7 +14,7 @@
   .field
     = f.label 'Title'
     %br/
-    = f.text_field :title, value: @video.new_record? ? '' : data_t('video.name', @video.key)
+    = text_field_tag :title, @video.new_record? ? '' : data_t('video.name', @video.key)
   .field
     = f.label 'YouTube code'
     %br/
