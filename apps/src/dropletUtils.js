@@ -548,7 +548,7 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 function filterListBasedOnWordMatches(prefix, list) {
   // Filter our list to contain substring word matches based on camelCase,
   // snake_case or Global.method:
-  const lowerPrefix = prefix.toLowerCase();
+  const modifiedPrefix = prefix.replace(/_|\./g, '').toLowerCase();
   return list.filter(completion => {
     const { value } = completion;
     // https://stackoverflow.com/a/34680912
@@ -558,7 +558,7 @@ function filterListBasedOnWordMatches(prefix, list) {
     // words ['get', 'Time'] become phrases ['getTime', 'Time']
     const phrases = words.map((word, index) => words.slice(index).join(''));
     for (const phrase of phrases) {
-      if (phrase.toLowerCase().indexOf(lowerPrefix) === 0) {
+      if (phrase.toLowerCase().indexOf(modifiedPrefix) === 0) {
         return completion;
       }
     }
