@@ -97,7 +97,7 @@ module.exports = {
     },
 
     {
-      description: 'randomNumber and Math.random show up in autocomplete by matching rand',
+      description: 'randomNumber and Math.random show up in autocomplete by matching ran',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -105,13 +105,15 @@ module.exports = {
         assert.equal($(".ace_autocomplete").is(":visible"), false,
           'no autocomplete to start');
 
-        testUtils.typeAceText('rand');
+        testUtils.typeAceText('ran');
         assert.equal($(".ace_autocomplete").is(":visible"), true,
           'we have autocomplete options after typing');
         assert.equal(/randomNumber/.test($(".ace_autocomplete").text()), true,
           'our autocomplete options contain randomNumber');
         assert.equal(/Math.random/.test($(".ace_autocomplete").text()), true,
           'our autocomplete options contain Math.random');
+        assert.equal(/createCanvas/.test($(".ace_autocomplete").text()), false,
+          'our autocomplete options do not contain createCanvas');
 
         // clear contents before run
         testUtils.setAceText('');
