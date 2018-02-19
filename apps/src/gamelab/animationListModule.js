@@ -19,8 +19,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
-// TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
-//       is deleted, so nothing is selected.
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList

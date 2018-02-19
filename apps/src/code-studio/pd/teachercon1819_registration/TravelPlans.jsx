@@ -5,7 +5,6 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 
-import {TextFields} from '@cdo/apps/generated/pd/teachercon1819RegistrationConstants';
 import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 
@@ -75,6 +74,10 @@ export default class TravelPlans extends Teachercon1819FormComponent {
       );
     }
 
+    if (data.dietaryNeeds && data.dietaryNeeds.includes('Food Allergy')) {
+      requiredFields.push('foodAllergyDetails');
+    }
+
     if (data.needHotel === 'Yes') {
       requiredFields.push("needAda");
     }
@@ -99,9 +102,12 @@ export default class TravelPlans extends Teachercon1819FormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.checkBoxesWithAdditionalTextFieldsFor("dietaryNeeds", {
-            [TextFields.foodAllergy]: "food_allergy_details"
-          })}
+          {this.checkBoxesFor("dietaryNeeds")}
+          {
+            this.props.data.dietaryNeeds &&
+            this.props.data.dietaryNeeds.includes('Food Allergy') &&
+            this.largeInputFor("dietaryNeedsDetails")
+          }
         </FormGroup>
 
         <FormGroup>
@@ -126,7 +132,9 @@ export default class TravelPlans extends Teachercon1819FormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsFor("howTraveling")}
+          {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
+            'I will carpool with another TeacherCon attendee (Please note who)': 'carpooling_with_attendee'
+          })}
           {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel === 'Yes' &&
@@ -153,6 +161,10 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     }
     if (data.needAda !== 'Yes') {
       data.explainAda = undefined;
+    }
+
+    if (data.dietaryNeeds && !data.dietaryNeeds.includes('Food Allergy')) {
+      changes.dietaryNeedsDetails = undefined;
     }
 
     return changes;
