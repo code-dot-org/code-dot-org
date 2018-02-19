@@ -7,7 +7,9 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     name: 'Albert Einstein Academy Elementary',
     city: 'Santa Clarita',
     state: 'CA',
-    zip: '91355'
+    zip: '91355',
+    latitude: "34.4375",
+    longitude: "-118.576861"
   }.deep_stringify_keys.freeze
 
   GLADYS_JUNG_ELEMENTARY = {
@@ -16,7 +18,9 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     name: 'Gladys Jung Elementary',
     city: 'Bethel',
     state: 'AK',
-    zip: '99559'
+    zip: '99559',
+    latitude: "60.80254",
+    longitude: "-161.77072"
   }.deep_stringify_keys.freeze
 
   JOANN_A_ALEXIE_MEMORIAL_SCHOOL = {
@@ -25,7 +29,9 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     name: 'Joann A. Alexie Memorial School',
     city: 'Atmautluak',
     state: 'AK',
-    zip: '99559'
+    zip: '99559',
+    latitude: "60.866944",
+    longitude: "-162.273056"
   }.deep_stringify_keys.freeze
 
   test 'search by school name prefix' do
