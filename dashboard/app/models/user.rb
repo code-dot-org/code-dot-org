@@ -71,9 +71,9 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/school_info_interstitial_helper'
 require 'cdo/chat_client'
 require 'cdo/shared_cache'
+require 'school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
