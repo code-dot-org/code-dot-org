@@ -450,6 +450,20 @@ class ScriptTest < ActiveSupport::TestCase
     refute summary[:has_verified_resources]
   end
 
+  test 'summarize includes has_lesson_plan' do
+    script = create(:script, name: 'resources-script')
+
+    script.has_lesson_plan = true
+    assert script.has_lesson_plan
+    summary = script.summarize
+    assert summary[:has_lesson_plan]
+
+    script.has_lesson_plan = false
+    refute script.has_lesson_plan
+    summary = script.summarize
+    refute summary[:has_lesson_plan]
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     scripts, custom_i18n = Script.setup([script_file])
