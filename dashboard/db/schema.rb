@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209005153) do
+ActiveRecord::Schema.define(version: 20180219200100) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -899,7 +899,7 @@ ActiveRecord::Schema.define(version: 20180209005153) do
   end
 
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",                              null: false
+    t.string   "name",                             null: false
     t.integer  "group"
     t.integer  "contact_id"
     t.boolean  "urban"
@@ -910,12 +910,11 @@ ActiveRecord::Schema.define(version: 20180209005153) do
     t.string   "state"
     t.string   "zip_code"
     t.string   "phone_number"
-    t.text     "notes",               limit: 65535
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.integer  "cohort_capacity_csp"
-    t.integer  "cohort_capacity_csd"
+    t.text     "notes",              limit: 65535
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.datetime "deleted_at"
+    t.text     "properties",         limit: 65535
     t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
