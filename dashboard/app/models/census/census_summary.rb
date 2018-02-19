@@ -156,7 +156,7 @@ class Census::CensusSummary < ApplicationRecord
     school_years.each do |school_year|
       audit = {
         version: 0.3,
-        stats: [],
+        stats: {},
         census_submissions: [],
         ap_cs_offerings: [],
         ib_cs_offerings: [],
@@ -171,7 +171,8 @@ class Census::CensusSummary < ApplicationRecord
       stats = school.school_stats_by_year.try(:sort).try(:last)
       high_school = stats.try(:has_high_school_grades?)
       k8_school = stats.try(:has_k8_grades?)
-      audit[:stats].push({high_school: high_school})
+      audit[:stats][:high_school] = high_school
+      audit[:stats][:k8_school] = k8_school
 
       # Census Submissions
       submissions = school.school_info.map(&:census_submissions).flatten
@@ -277,7 +278,7 @@ class Census::CensusSummary < ApplicationRecord
     school_years.each do |school_year|
       audit = {
         version: 0.2,
-        stats: [],
+        stats: {},
         census_submissions: [],
         ap_cs_offerings: [],
         ib_cs_offerings: [],
@@ -301,7 +302,8 @@ class Census::CensusSummary < ApplicationRecord
       stats = school.school_stats_by_year.try(:sort).try(:last)
       high_school = stats.try(:has_high_school_grades?)
       k8_school = stats.try(:has_k8_grades?)
-      audit[:stats].push({high_school: high_school})
+      audit[:stats][:high_school] = high_school
+      audit[:stats][:k8_school] = k8_school
 
       # Census Submissions
       submissions = school.school_info.map(&:census_submissions).flatten
