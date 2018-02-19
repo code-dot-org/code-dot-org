@@ -124,8 +124,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     feedbackBlocks = new FeedbackBlocks(
         options,
         this.getMissingBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
-        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag),
-        this.studioApp_);
+        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag));
   }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
