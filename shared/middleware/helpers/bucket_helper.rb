@@ -236,7 +236,8 @@ class BucketHelper
 
     # If we get this far, the restore request has succeeded.
     FirehoseClient.instance.put_record(
-      'project-data-integrity',
+      'analysis-events',
+      study: 'project-data-integrity',
       event: 'version-restored',
 
       # Make it easy to limit our search to restores in the sources bucket for a certain project.
