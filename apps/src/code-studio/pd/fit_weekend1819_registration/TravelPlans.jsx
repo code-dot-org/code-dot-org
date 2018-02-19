@@ -125,7 +125,9 @@ export default class TravelPlans extends LabeledFormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsFor("howTraveling")}
+          {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
+            'I will carpool with another FiT Weekend attendee (Please note who)': 'carpooling_with_attendee'
+          })}
           {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel === 'Yes' &&

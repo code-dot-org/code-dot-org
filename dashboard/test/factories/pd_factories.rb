@@ -835,7 +835,7 @@ FactoryGirl.define do
       contact_phone "1597534862"
       contact_relationship "it's complicated"
       dietary_needs "Food Allergy"
-      dietary_needs_food_allergy_details "memories"
+      dietary_needs_details "memories"
       how_traveling "Amtrak or regional train service"
       liability_waiver "Yes"
       live_far_away "Yes"
@@ -861,6 +861,15 @@ FactoryGirl.define do
     trait :waitlisted do
       teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date]
       with_full_form_data
+    end
+
+    trait :facilitator_accepted do
+      able_to_attend 'Yes'
+      with_full_form_data
+    end
+
+    trait :facilitator_declined do
+      able_to_attend 'No'
     end
 
     trait :partner_registration do
@@ -913,7 +922,7 @@ FactoryGirl.define do
       photo_release "Yes"
     end
 
-    trait :decliend do
+    trait :declined do
       able_to_attend "No"
     end
   end
