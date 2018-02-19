@@ -1,4 +1,7 @@
-//import msg from '@cdo/gamelab/locale';
+import {
+  interpolateInputs,
+  determineInputs,
+} from '../block_utils';
 
 const SPRITE_CATEGORY = 'sprites';
 const EVENT_CATEGORY = 'events';
@@ -16,7 +19,8 @@ const CATEGORIES = {
 };
 
 const SPRITES = [
-  ['a dog', '"dog"']
+  ['dog', '"dog"'],
+  ['cat', '"cat"'],
 ];
 
 export default {
@@ -45,19 +49,13 @@ export default {
         init: function () {
           this.setHSV(...CATEGORIES[category].color);
           if (methodCall) {
-            this.appendValueInput('THIS');
+            args.push({
+              name: 'THIS',
+              type: Blockly.BlockValueType.NONE,
+            });
           }
-          // TODO(ram): interpolate text with inputs
-          this.appendDummyInput().appendTitle(blockText);
-          args.forEach(arg => {
-            if (arg.options) {
-              const dropdown = new blockly.FieldDropdown(arg.options);
-              this.appendDummyInput().appendTitle(dropdown, arg.name);
-            } else if (arg.type) {
-              this.appendValueInput(arg.name)
-                .setCheck(arg.type);
-            }
-          });
+
+          interpolateInputs(blockly, this, determineInputs(blockText, args));
 
           this.setInputsInline(true);
           if (returnType) {
@@ -118,8 +116,7 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'makeNewSprite',
-       // TODO(ram): should be "Make a new {ANIMATION} sprite", coordinates TBD
-      blockText: 'Make a new sprite',
+      blockText: 'Make a new {ANIMATION} sprite at {X} {Y}',
       args: [
         { name: 'ANIMATION', options: SPRITES},
         { name: 'X', type: blockly.BlockValueType.NUMBER},
@@ -131,7 +128,7 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'moveUp',
-      blockText: 'move up',
+      blockText: '{THIS} move up',
       args: [],
       methodCall: true,
     });
@@ -139,7 +136,7 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'moveDown',
-      blockText: 'move down',
+      blockText: '{THIS} move down',
       args: [],
       methodCall: true,
     });
@@ -147,7 +144,7 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'moveLeft',
-      blockText: 'move left',
+      blockText: '{THIS} move left',
       args: [],
       methodCall: true,
     });
@@ -155,7 +152,7 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'moveRight',
-      blockText: 'move right',
+      blockText: '{THIS} move right',
       args: [],
       methodCall: true,
     });

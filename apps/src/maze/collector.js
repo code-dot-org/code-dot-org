@@ -12,6 +12,7 @@ import { TestResults } from '../constants.js';
 
 import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
+import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from './locale';
 
 import {getStore} from '../redux';
@@ -214,9 +215,14 @@ export default class Collector extends Subtype {
           count: this.getLastTotalCollected(),
         });
       case true:
-        return mazeMsg.collectorCollectedEverything({
-          count: this.getPotentialMaxCollected(),
-        });
+        // Remove this case when we turn the bubble dialog on for everyone
+        if (!experiments.isEnabled('bubbleDialog')) {
+          return mazeMsg.collectorCollectedEverything({
+            count: this.getPotentialMaxCollected(),
+          });
+        } else {
+          return super.getMessage(terminationValue);
+        }
       default:
         return super.getMessage(terminationValue);
     }

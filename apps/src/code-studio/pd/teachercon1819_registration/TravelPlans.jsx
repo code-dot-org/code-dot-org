@@ -25,6 +25,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     'howTraveling',
     'needHotel',
     'needAda',
+    'dietaryNeedsDetails'
   ];
 
   static labels = {
@@ -33,6 +34,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     contactRelationship: "Relationship to you:",
     contactPhone: "Phone number:",
     dietaryNeeds: "Do you have any dietary needs or food allergies?",
+    dietaryNeedsDetails: "Please provide details",
     addressStreet: "Street",
     addressCity: "City",
     addressState: "State",
@@ -75,7 +77,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     }
 
     if (data.dietaryNeeds && data.dietaryNeeds.includes('Food Allergy')) {
-      requiredFields.push('foodAllergyDetails');
+      requiredFields.push('dietaryNeedsDetails');
     }
 
     if (data.needHotel === 'Yes') {
