@@ -709,8 +709,9 @@ export function animationSourceUrl(key, props, withVersion = false) {
 
   // 1. If the animation has a sourceUrl it's external (from the library
   //    or some other outside source, not the animation API) - and we may need
-  //    to run it through the media proxy. (Note - 02/2018 - cannot guarantee -
-  //    uploaded images were assigned non-null sourceUrls)
+  //    to run it through the media proxy. (Note - Before 02/2018 -
+  //    uploaded images may/may not have non-null sourceUrls. After 02/2018 -
+  //    uploaded images will have null sourceUrls)
   // 2. Otherwise it's local to this project, and we should use the animation
   //    key to look it up in the animations API.
   let url = (props.sourceUrl) ?
