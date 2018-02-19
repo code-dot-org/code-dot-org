@@ -285,6 +285,18 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_displace" inline="true">
+            <value name="THIS">
+              <block type="variables_get">
+                <title name="VAR">sprite</title>
+              </block>
+            </value>
+            <value name="SPRITE">
+              <block type="variables_get">
+                <title name="VAR">other</title>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Events">
           <block type="gamelab_whenUpArrow"/>
@@ -295,6 +307,18 @@
           <block type="gamelab_whileDownArrow"/>
           <block type="gamelab_whileLeftArrow"/>
           <block type="gamelab_whileRightArrow"/>
+          <block type="gamelab_whenTouching" inline="true">
+            <value name="SPRITE1">
+              <block type="variables_get">
+                <title name="VAR">sprite</title>
+              </block>
+            </value>
+            <value name="SPRITE2">
+              <block type="variables_get">
+                <title name="VAR">other</title>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Variables" custom="VARIABLE"/>
       </xml>

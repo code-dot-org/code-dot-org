@@ -30,7 +30,7 @@ export default {
       ORDER_FUNCTION_CALL,
       ORDER_MEMBER,
     } = Blockly.JavaScript;
-    const SPRITE_TYPE = blockly.BlockValueType.NUMBER;
+    const SPRITE_TYPE = blockly.BlockValueType.NONE;
     const generator = blockly.Generator.get('JavaScript');
 
     const createJsWrapperBlock = ({
@@ -118,9 +118,9 @@ export default {
       func: 'makeNewSprite',
       blockText: 'Make a new {ANIMATION} sprite at {X} {Y}',
       args: [
-        { name: 'ANIMATION', options: SPRITES},
-        { name: 'X', type: blockly.BlockValueType.NUMBER},
-        { name: 'Y', type: blockly.BlockValueType.NUMBER},
+        { name: 'ANIMATION', options: SPRITES },
+        { name: 'X', type: blockly.BlockValueType.NUMBER },
+        { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
       returnType: SPRITE_TYPE,
     });
@@ -219,6 +219,27 @@ export default {
       blockText: 'while right arrow presssed',
       args: [],
       eventLoopBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whenTouching',
+      blockText: 'when {SPRITE1} is touching {SPRITE2}',
+      args: [
+        { name: 'SPRITE1', type: SPRITE_TYPE },
+        { name: 'SPRITE2', type: SPRITE_TYPE },
+      ],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'displace',
+      blockText: '{THIS} blocks {SPRITE} from moving',
+      args: [
+        {name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      methodCall: true,
     });
   },
 };
