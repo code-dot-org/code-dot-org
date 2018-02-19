@@ -58,6 +58,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_moveDown" />
   <block type="gamelab_moveLeft" />
   <block type="gamelab_moveRight" />
+  <block type="gamelab_displace" />
 </category>
 <category name="Events">
   <block type="gamelab_whenUpArrow" />
@@ -68,6 +69,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_whileDownArrow" />
   <block type="gamelab_whileLeftArrow" />
   <block type="gamelab_whileRightArrow" />
+  <block type="gamelab_whenTouching" />
 </category>
 <category name="Math">
   <block type="math_number" />
