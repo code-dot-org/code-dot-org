@@ -41,21 +41,19 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.new(video_params)
+    Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
 
-    redirect_to :index
+    redirect_to videos_path
   end
 
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
-    respond_to do |format|
-      if @video.update(video_params)
-        format.html {redirect_to @video, notice: I18n.t('crud.updated', model: Video.model_name.human)}
-        format.json {head :no_content}
-      else
-        format.html {render action: 'edit'}
-        format.json {render json: @video.errors, status: :unprocessable_entity}
-      end
+    if @video.update(video_params)
+      Video.merge_and_write_i18n({@video.key => i18n_params[:title]})
+      redirect_to videos_path, notice: I18n.t('crud.updated', model: Video.model_name.human)
+    else
+      render action: 'edit'
     end
   end
 
@@ -83,7 +81,11 @@ class VideosController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def video_params
-    params.require(:video).permit(:title, :key, :youtube_code, :download)
+    params.require(:video).permit(:key, :youtube_code, :download)
+  end
+
+  def i18n_params
+    params.permit(:title)
   end
 
   # This is to fix a ForbiddenAttributesError CanCan issue.
