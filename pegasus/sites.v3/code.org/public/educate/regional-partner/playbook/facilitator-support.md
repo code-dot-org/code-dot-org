@@ -116,14 +116,15 @@ ________________
 
 **CS Principles & CS Discoveries Facilitator Payments**
 
-- All facilitators are paid $500 per workshop day.
+- All facilitators are paid $500 per workshop day for workshops they co-lead
 - Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. *(Note: this includes any out of region facilitators)*
-- Code.org will directly pay facilitators for any work they do at TeacherCon.
-- Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
+- Code.org will directly pay facilitators for co-leading workshops at TeacherCon.
+- Code.org will directly pay facilitators for completing the reflections and reviews for each Deeper Learning unit
 - For Local Summer Workshops:
-	- Novice Facilitators attend as teachers, so there is no payment.
-	- Apprentice Facilitators will receive a $1000 stipend for attending (paid by code.org). (Who are apprentices? Apprentices have attended TeacherCon or a local summer workshop as a teacher in the past.)
-	- All Lead Facilitators are paid by Regional Partners at the same expected rate of $500/day.
+	- Novice Facilitators attend as teachers, and are not paid for attending the workshop. Novices are new facilitators who did not participate in a previous Code.org Professional Learning Program for this course.
+	- Code.org will pay Apprentice Facilitators directly for attending and supporting the workshop. Apprentices are new facilitators who have participated in a previous Code.org Professional Learning Program for this course. They will observe workshops, and engage in daily preparation and debrief sessions with lead facilitators.
+	- All Lead Facilitators are paid by Regional Partners at the expected rate of $500/day.
+- For Facilitator-in-Training Weekends: Code.org will pay all new facilitators for attending the training. 
 
 
 <br/>
