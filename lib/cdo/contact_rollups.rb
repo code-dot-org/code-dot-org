@@ -107,7 +107,6 @@ class ContactRollups
 
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
-  ROLE_CENSUS_SUBMITTER = "Census Submitter".freeze
 
   def self.build_contact_rollups
     start = Time.now
@@ -144,6 +143,7 @@ class ContactRollups
 
     # Add contacts to the Teacher role based on form responses
     update_teachers_from_forms
+    update_teachers_from_census_submissions
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
@@ -302,7 +302,7 @@ class ContactRollups
     log "Inserting contacts from dashboard.census_submissions"
     PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
-    SELECT submitter_email_address, submitter_name, '#{ROLE_CENSUS_SUBMITTER}'
+    SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}'
     FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
     WHERE LENGTH(census_submissions.submitter_email_address) > 0
     ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name,
@@ -330,6 +330,23 @@ class ContactRollups
     END
     WHERE forms.kind in (#{FORM_KINDS_TEACHER})
     OR #{DEST_TABLE_NAME}.form_roles like '%educator%'"
+
+    log_completion(start)
+  end
+
+  def self.update_teachers_from_census_submissions
+    start = Time.now
+    log "Updating teacher roles based on census submissions"
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN #{DASHBOARD_DB_NAME}.census_submissions on census_submissions.submitter_email_address = #{DEST_TABLE_NAME}.email
+    SET roles =
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE('#{ROLE_TEACHER}', COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),'#{ROLE_TEACHER}'),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END
+    WHERE census_submissions.submitter_role = 'TEACHER'"
 
     log_completion(start)
   end
