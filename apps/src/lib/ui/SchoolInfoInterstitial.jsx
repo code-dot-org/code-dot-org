@@ -209,7 +209,6 @@ export default class SchoolInfoInterstitial extends React.Component {
         this.setState({showSchoolInfoUnknownError: true});
       } else {
         // We already failed once, let's not block the teacher any longer.
-        // TODO (bbuchanan): Gather metrics on this.
         this.props.onClose();
       }
     });
