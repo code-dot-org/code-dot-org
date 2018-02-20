@@ -153,10 +153,22 @@ class Census::CensusSummary < ApplicationRecord
   end
 
   def self.summarize_school_data(school, school_years, years_with_ap_data, years_with_ib_data, state_years_with_data)
-    summarize_school_data_simple(school, school_years, years_with_ap_data, years_with_ib_data, state_years_with_data)
+    summarize_school_data_simple(
+      {
+        school: school,
+        school_years: school_years,
+        years_with_ap_data: years_with_ap_data,
+        years_with_ib_data: years_with_ib_data,
+        state_years_with_data: state_years_with_data,
+      }
+    )
   end
 
-  def self.summarize_school_data_simple(school, school_years, years_with_ap_data, years_with_ib_data, state_years_with_data)
+  def self.summarize_school_data_simple(summarization_data)
+    school = summarization_data[:school]
+    school_years = summarization_data[:school_years]
+    state_years_with_data = summarization_data[:state_years_with_data]
+
     summaries = []
 
     school_years.each do |school_year|
@@ -277,7 +289,13 @@ class Census::CensusSummary < ApplicationRecord
     return summaries
   end
 
-  def self.summarize_school_data_naive_bayes(school, school_years, years_with_ap_data, years_with_ib_data, state_years_with_data)
+  def self.summarize_school_data_naive_bayes(summarization_data)
+    school = summarization_data[:school]
+    school_years = summarization_data[:school_years]
+    years_with_ap_data = summarization_data[:years_with_ap_data]
+    years_with_ib_data = summarization_data[:years_with_ib_data]
+    state_years_with_data = summarization_data[:state_years_with_data]
+
     previous_years_belief = nil
     summaries = []
 
@@ -484,11 +502,13 @@ class Census::CensusSummary < ApplicationRecord
 
         algorithm.call(
           self,
-          school,
-          school_years,
-          years_with_ap_data,
-          years_with_ib_data,
-          state_years_with_data
+          {
+            school: school,
+            school_years: school_years,
+            years_with_ap_data: years_with_ap_data,
+            years_with_ib_data: years_with_ib_data,
+            state_years_with_data: state_years_with_data,
+          }
         ).each do |summary|
           if block_given?
             yield summary
