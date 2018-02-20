@@ -23,6 +23,7 @@ class ManageStudentActionsCell extends Component {
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
+    isAddRow: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -91,7 +92,7 @@ class ManageStudentActionsCell extends Component {
             </PopUpMenu.Item>
           </QuickActionsCell>
         }
-        {this.props.isEditing &&
+        {(this.props.isEditing && !this.props.isAddRow) &&
           <div>
             <Button
               onClick={this.onSave}
@@ -103,6 +104,16 @@ class ManageStudentActionsCell extends Component {
               onClick={this.onCancel}
               color={Button.ButtonColor.blue}
               text={i18n.cancel()}
+            />
+          </div>
+        }
+        {this.props.isAddRow &&
+          <div>
+            <Button
+              onClick={() => {}}
+              color={Button.ButtonColor.white}
+              text={"Add"}
+              disabled={this.props.isSaving || this.props.disableSaving}
             />
           </div>
         }
