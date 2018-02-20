@@ -89,13 +89,6 @@ class ContactRollupsValidation
       max: 10_000_000
     },
     {
-      name: "Census Submitter count",
-      query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
-              LIKE '%Census Submitter%'",
-      min: 40_000,
-      max: 400_000
-    },
-    {
       # Check that rollup's 'opt_out' data matches pegasus.contact's
       # 'unsubscribed_at' data. In general the
       # discrepancy should be 0 records. Allow for a handful of mismatches
