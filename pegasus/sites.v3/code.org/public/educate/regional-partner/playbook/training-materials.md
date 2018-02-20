@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 ---
 title: training materials
 nav: regional_partner_playbook_nav

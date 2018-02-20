@@ -32,6 +32,7 @@ class SchoolInfo < ActiveRecord::Base
     SCHOOL_TYPE_PUBLIC = "public".freeze,
     SCHOOL_TYPE_HOMESCHOOL = "homeschool".freeze,
     SCHOOL_TYPE_AFTER_SCHOOL = "afterschool".freeze,
+    SCHOOL_TYPE_ORGANIZATION = "organization".freeze,
     SCHOOL_TYPE_OTHER = "other".freeze
   ].freeze
 
@@ -170,6 +171,7 @@ class SchoolInfo < ActiveRecord::Base
 
   def validate_non_us
     errors.add(:school_type, "is required") unless school_type
+    errors.add(:school_type, "is invalid") unless SCHOOL_TYPES.include? school_type
     errors.add(:school_name, "is required") unless school_name
     errors.add(:full_address, "is required") unless full_address
 
@@ -184,6 +186,7 @@ class SchoolInfo < ActiveRecord::Base
 
   def validate_us
     errors.add(:school_type, "is required") unless school_type
+    errors.add(:school_type, "is invalid") unless SCHOOL_TYPES.include? school_type
     validate_private_other if [SCHOOL_TYPE_PRIVATE, SCHOOL_TYPE_OTHER].include? school_type
     validate_public_charter if [SCHOOL_TYPE_PUBLIC, SCHOOL_TYPE_CHARTER].include? school_type
   end
