@@ -47,10 +47,9 @@ class S3Packaging
     return true
   end
 
-  # creates a package from the given assets location and upload it to s3
-  # @return tempfile object of package
-  def upload_package_to_s3(sub_path)
-    package = create_package(sub_path)
+  # Uploads the created package to s3
+  # @return package
+  def upload_package_to_s3(package)
     raise "Generated different package for same contents" unless package_matches_download(package)
     upload_package(package)
     package
