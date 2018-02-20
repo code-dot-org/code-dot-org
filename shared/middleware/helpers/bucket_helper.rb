@@ -174,7 +174,9 @@ class BucketHelper
     response
   end
 
-  def check_current_version(encrypted_channel_id, filename, version_to_replace)
+  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp)
+    return unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
+
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
@@ -186,18 +188,19 @@ class BucketHelper
     FirehoseClient.instance.put_record(
       'analysis-events',
       study: 'project-data-integrity',
-      event: 'replace-non-current-version',
+      event: 'replace-non-current-main-json',
 
-      # Make it easy to limit our search to restores in the sources bucket for a certain project.
       project_id: encrypted_channel_id,
-      data_string: @bucket,
 
       data_json: {
         replacedVersionId: version_to_replace,
         currentVersionId: current_version,
-        bucket: @bucket,
         key: key,
-        filename: filename,
+
+        # Server timestamp indicating when the first version of main.json was saved by the browser
+        # tab making this request. This is for diagnosing problems with writes from multiple browser
+        # tabs.
+        firstSaveTimestamp: timestamp
       }.to_json
     )
   end

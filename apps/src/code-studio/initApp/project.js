@@ -69,6 +69,9 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+// Server time at which the first project version was saved from this browser tab,
+// for logging purposes.
+var firstSaveTimestamp;
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
@@ -764,7 +767,9 @@ var projects = module.exports = {
     };
 
     if (this.useSourcesApi()) {
-      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      const params = currentSourceVersionId ?
+        `?version=${currentSourceVersionId}&firstSaveTimestamp=${firstSaveTimestamp}` : '';
+      var filename = SOURCE_FILE + params;
       sources.put(channelId, packSources(), filename, function (err, response) {
         if (err) {
           saveSourcesErrorCount++;
@@ -772,6 +777,9 @@ var projects = module.exports = {
           return;
         }
         saveSourcesErrorCount = 0;
+        if (!firstSaveTimestamp) {
+          firstSaveTimestamp = response.timestamp;
+        }
         currentSourceVersionId = response.versionId;
         current.migratedToS3 = true;
 
