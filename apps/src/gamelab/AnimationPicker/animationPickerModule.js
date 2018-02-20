@@ -114,7 +114,7 @@ export function handleUploadComplete(result) {
     loadImageMetadata(sourceUrl, metadata => {
       const animation = _.assign({}, metadata, {
         name: uploadFilename,
-        sourceUrl: null,
+        sourceUrl: sourceUrl,
         size: result.size,
         version: result.versionId
       });
