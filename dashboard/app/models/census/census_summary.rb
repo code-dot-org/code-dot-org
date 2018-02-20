@@ -441,7 +441,7 @@ class Census::CensusSummary < ApplicationRecord
     return summaries
   end
 
-  def self.summarize_census_data
+  def self.summarize_census_data(algorithm=:summarize_school_data_simple.to_proc)
     latest_survey_year = Census::CensusSubmission.maximum(:school_year)
     years_with_ap_data = Census::ApCsOffering.select(:school_year).group(:school_year).map(&:school_year)
     latest_ap_data_year = years_with_ap_data.max
@@ -476,13 +476,20 @@ class Census::CensusSummary < ApplicationRecord
         eager_load(:school_stats_by_year).
         find_each do |school|
 
-        summarize_school_data(
+        algorithm.call(
+          self,
           school,
           school_years,
           years_with_ap_data,
           years_with_ib_data,
           state_years_with_data
-        ).each(&:save!)
+        ).each do |summary|
+          if block_given?
+            yield summary
+          else
+            summary.save!
+          end
+        end
       end
     end
   end
