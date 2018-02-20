@@ -60,7 +60,7 @@ end
 gem 'rack-cache'
 
 group :development, :test do
-  gem 'rerun', '~> 0.10.0'
+  gem 'rerun'
   gem 'shotgun'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
