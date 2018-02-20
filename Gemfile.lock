@@ -476,7 +476,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
     netrc (0.11.0)
-    newrelic_rpm (3.16.0.318)
+    newrelic_rpm (4.8.0.341)
     nio4r (2.2.0)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
@@ -843,7 +843,7 @@ DEPENDENCIES
   net-http-persistent
   net-scp
   net-ssh
-  newrelic_rpm (~> 3.16.0)
+  newrelic_rpm (~> 4.8.0)
   nokogiri (~> 1.6.1)
   octokit
   oj
