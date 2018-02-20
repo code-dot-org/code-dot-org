@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 ---
 title: Fundraising Resources
 nav: regional_partner_playbook_nav
