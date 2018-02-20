@@ -265,34 +265,11 @@ class FilesApi < Sinatra::Base
     # Replacing a non-current version could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot user issues in this case.
     version_to_replace = params['version']
-    check_current_version(buckets, encrypted_channel_id, filename, version_to_replace) if version_to_replace
+    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace) if version_to_replace
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
-  end
-
-  def check_current_version(buckets, encrypted_channel_id, filename, version_to_replace)
-    current_version = buckets.get_current_version(encrypted_channel_id, filename)
-
-    return if version_to_replace == current_version
-
-    FirehoseClient.instance.put_record(
-      'analysis-events',
-      study: 'project-data-integrity',
-      event: 'replace-non-current-version',
-
-      # Make it easy to limit our search to restores in the sources bucket for a certain project.
-      project_id: encrypted_channel_id,
-      data_string: @bucket,
-
-      data_json: {
-        replacedVersionId: version_to_replace,
-        currentVersionId: current_version,
-        bucket: @bucket,
-        filename: filename,
-      }.to_json
-    )
   end
 
   #

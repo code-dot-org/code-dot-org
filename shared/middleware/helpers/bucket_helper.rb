@@ -174,14 +174,32 @@ class BucketHelper
     response
   end
 
-  def get_current_version(encrypted_channel_id, filename)
+  def check_current_version(encrypted_channel_id, filename, version_to_replace)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-
     key = s3_path owner_id, channel_id, filename
 
     # check current version id without pulling down the whole object.
-    response = s3.get_object_tagging(bucket: @bucket, key: key)
-    response.version_id
+    current_version = s3.get_object_tagging(bucket: @bucket, key: key).version_id
+
+    return if version_to_replace == current_version
+
+    FirehoseClient.instance.put_record(
+      'analysis-events',
+      study: 'project-data-integrity',
+      event: 'replace-non-current-version',
+
+      # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      project_id: encrypted_channel_id,
+      data_string: @bucket,
+
+      data_json: {
+        replacedVersionId: version_to_replace,
+        currentVersionId: current_version,
+        bucket: @bucket,
+        key: key,
+        filename: filename,
+      }.to_json
+    )
   end
 
   #
