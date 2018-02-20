@@ -116,13 +116,31 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'makeNewSprite',
-      blockText: 'Make a new {ANIMATION} sprite at {X} {Y}',
+      blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
         { name: 'ANIMATION', options: SPRITES },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
       returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'makeNewGroup',
+      blockText: 'make a new group',
+      args: [],
+      returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'add',
+      blockText: 'add {SPRITE} to group {THIS}',
+      args: [
+        { name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      methodCall: true,
     });
 
     createJsWrapperBlock({
