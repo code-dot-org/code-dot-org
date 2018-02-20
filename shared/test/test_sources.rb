@@ -161,8 +161,14 @@ class SourcesTest < FilesApiTestBase
     assert_equal 1, versions.count
   end
 
+  class Foo
+    def bar(x)
+      x + 1
+    end
+  end
+
   def test_replace_main_json_version
-    FirehoseClient.instance.expects(:put_record).never
+    # FirehoseClient.instance.expects(:put_record).never
     Timecop.freeze
 
     filename = 'main.json'
@@ -171,22 +177,35 @@ class SourcesTest < FilesApiTestBase
     @api.put_object(filename, file_data, file_headers)
     assert successful?
     response = JSON.parse(last_response.body)
-    assert_equal response['timestamp'], Time.now.to_s
+    timestamp1 = response['timestamp'].to_s
+    assert_equal timestamp1, Time.now.to_s
     version1 = response['versionId']
 
-    Timecop.return
+    Timecop.travel 1
 
     file_data = 'version 2'
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
+    Timecop.travel 1
+
     # log when replacing non-current version.
-    FirehoseClient.instance.expects(:put_record).once
+    FirehoseClient.instance.expects(:put_record).with do |stream_name, data|
+      data_json_data = JSON.parse(data[:data_json])
+      stream_name == 'analysis-events' &&
+        data[:study] == 'project-data-integrity' &&
+        data[:event] == 'replace-non-current-main-json' &&
+        data[:project_id] == @channel &&
+        data_json_data['replacedVersionId'] == version1 &&
+        data_json_data['firstSaveTimestamp'] == timestamp1
+    end
 
     file_data = 'version 3'
-    @api.put_object_version(filename, version1, file_data, file_headers)
+    @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
     assert successful?
+
+    Timecop.return
   end
 
   private
