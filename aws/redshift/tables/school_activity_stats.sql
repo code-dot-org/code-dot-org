@@ -22,7 +22,7 @@ CREATE table analysis.school_activity_stats AS
   -- By school_id, has a school pledged to expand computer science?
     select distinct si.school_id
     from dashboard_production_pii.census_submissions cs
-      join dashboard_production_pii.census_submissions_school_infos cssi 
+      join dashboard_production.census_submissions_school_infos cssi 
       on cssi.census_submission_id = cs.id
       join dashboard_production.school_infos si 
       on si.id = cssi.school_info_id
