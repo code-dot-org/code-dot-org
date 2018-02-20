@@ -53,7 +53,6 @@ window.SignupManager = function (options) {
 
   function sendSchoolInfoSplitTestEvent(event) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'school-info-optional',
         study_group: optionalTestGroup,

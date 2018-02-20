@@ -8,7 +8,6 @@ import {getStore} from '@cdo/apps/redux';
  * A barebones client for posting data to an AWS Firehose stream.
  * Usage:
  *   firehoseClient.putRecord(
- *     'analysis-events',
  *     {
  *       study: 'underwater basket weaving', // REQUIRED
  *       study_group: 'control',             // OPTIONAL
@@ -21,7 +20,6 @@ import {getStore} from '@cdo/apps/redux';
  *   );
  * Usage:
  *   firehoseClient.putRecordBatch(
- *     'analysis-events',
  *     [
  *       {
  *         study: 'underwater basket weaving', // REQUIRED
@@ -44,6 +42,9 @@ import {getStore} from '@cdo/apps/redux';
  *     ]
  *   );
  */
+
+const deliveryStreamName = 'analysis-events';
+
 // TODO(asher): Add the ability to queue records individually, to be submitted
 // as a batch.
 // TODO(asher): Determine whether any of the utility functions herein should be
@@ -172,7 +173,6 @@ class FirehoseClient {
 
   /**
    * Pushes one data record into the delivery stream.
-   * @param {string} deliveryStreamName The name of the delivery stream.
    * @param {hash} data The data to push.
    * @param {hash} options Additional (optional) options.
    *   (default {alwaysPut: false})
@@ -180,7 +180,7 @@ class FirehoseClient {
    * @option options [boolean] includeUserId Include userId in records, if signed in
    * @option options [function(err, data)] callback Invoked upon completion with error or data
    */
-  putRecord(deliveryStreamName, data, options = {alwaysPut: false, includeUserId: false, callback: null}) {
+  putRecord(data, options = {alwaysPut: false, includeUserId: false, callback: null}) {
     data = this.addCommonValues(data, options.includeUserId);
     if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed("Skipped sending record to " + deliveryStreamName);
@@ -209,14 +209,13 @@ class FirehoseClient {
 
   /**
    * Pushes an array of data records into the delivery stream.
-   * @param {string} deliveryStreamName The name of the delivery stream.
    * @param {array[hash]} data The data to push.
    * @param {hash} options Additional (optional) options.
    *   (default {alwaysPut: false})
    * @option options [boolean] alwaysPut Forces the record to be sent.
    * @option options [boolean] includeUserId Include userId in records, if signed in
    */
-  putRecordBatch(deliveryStreamName, data, options = {alwaysPut: false, includeUserId: false}) {
+  putRecordBatch(data, options = {alwaysPut: false, includeUserId: false}) {
     data.map(function (record) { return this.AddCommonValues(record, options.includeUserId); });
 
     if (!this.shouldPutRecord(options['alwaysPut'])) {

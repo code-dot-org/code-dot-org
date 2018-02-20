@@ -236,7 +236,6 @@ class BucketHelper
 
     # If we get this far, the restore request has succeeded.
     FirehoseClient.instance.put_record(
-      'analysis-events',
       study: 'project-data-integrity',
       event: 'version-restored',
 

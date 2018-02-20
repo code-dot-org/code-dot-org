@@ -26,7 +26,6 @@ class ErrorDialogStack extends React.Component {
   handleDeleteChoice(key) {
     // Log data about when this scenario occurs
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'animation_no_load',
         study_group: 'animation_no_load_v2',
@@ -42,7 +41,6 @@ class ErrorDialogStack extends React.Component {
   handleReloadChoice(key) {
     // Log data about when this scenario occurs
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'animation_no_load',
         study_group: 'animation_no_load_v2',
