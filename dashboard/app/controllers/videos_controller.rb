@@ -41,7 +41,11 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
 
-    redirect_to videos_path
+    if @video.save
+      redirect_to videos_path, notice: I18n.t('crud.created', model: Video.model_name.human)
+    else
+      render action: 'new'
+    end
   end
 
   # PATCH/PUT /videos/1
