@@ -44,7 +44,7 @@ const studentCode = {
 
 export default storybook =>
   storybook
-    .storiesOf('FinishDialog', module)
+    .storiesOf('Dialogs/FinishDialog', module)
     .addStoryTable([
       {
         name: 'Dialog with overlay',

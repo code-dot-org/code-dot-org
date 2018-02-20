@@ -41,7 +41,7 @@ export default class MakerLanding extends Component {
         title: i18n.makerSetupTitle(),
         description: i18n.makerSetupDesc(),
         link: "/maker/setup",
-        image: "applab-tutorial",
+        image: "maker",
         buttonText: i18n.makerSetupButton()
       }
     ];
