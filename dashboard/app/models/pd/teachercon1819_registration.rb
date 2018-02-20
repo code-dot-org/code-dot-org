@@ -62,7 +62,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       address_state: get_all_states_with_dc.to_h.values,
       how_traveling: [
         'I will drive by myself',
-        'I will carpool with another TeacherCon attendee (Please note who)',
+        'I will carpool with another TeacherCon attendee (Please note who):',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',

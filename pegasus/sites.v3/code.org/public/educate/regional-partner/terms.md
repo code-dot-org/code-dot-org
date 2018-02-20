@@ -6,6 +6,8 @@ nav: plc_regional_partner_nav
 # Regional Partner Term Sheet #
 
 
+## Updated 2018-2019 Terms coming soon.
+2017-2018 Information for reference below. 
 
 ## Your Commitment (Regional Partner)
 

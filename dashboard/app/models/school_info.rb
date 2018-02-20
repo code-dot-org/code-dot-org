@@ -132,12 +132,8 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_without_country
   validate :validate_zip
 
-  def complete?
-    validation_type_original = validation_type
-    self.validation_type = VALIDATION_FULL
-    return_val = valid?
-    self.validation_type = validation_type_original
-    return_val
+  def usa?
+    ['US', 'USA', 'United States'].include? country
   end
 
   def should_validate?
@@ -166,7 +162,7 @@ class SchoolInfo < ActiveRecord::Base
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
     return unless country && should_validate?
-    country == 'US' ? validate_us : validate_non_us
+    usa? ? validate_us : validate_non_us
   end
 
   def validate_non_us
