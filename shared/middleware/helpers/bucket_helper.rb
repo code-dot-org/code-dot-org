@@ -174,6 +174,16 @@ class BucketHelper
     response
   end
 
+  def get_current_version(encrypted_channel_id, filename)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+
+    key = s3_path owner_id, channel_id, filename
+
+    # check current version id without pulling down the whole object.
+    response = s3.get_object_tagging(bucket: @bucket, key: key)
+    response.version_id
+  end
+
   #
   # Copy an object within a channel, creating a new object in the channel.
   #
