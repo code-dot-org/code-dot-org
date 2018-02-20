@@ -79,18 +79,12 @@ module AWS
       end
 
       # Lookup ACM certificate for ELB and CloudFront SSL.
-      # Choose latest expiration among multiple active matching certificates.
       ACM_REGION = 'us-east-1'.freeze
       def certificate_arn
-        acm = Aws::ACM::Client.new(region: ACM_REGION)
-        wildcard = "*.#{DOMAIN}"
-        acm.
-          list_certificates(certificate_statuses: ['ISSUED']).
+        Aws::ACM::Client.new(region: ACM_REGION).
+        list_certificates(certificate_statuses: ['ISSUED']).
           certificate_summary_list.
-          select {|cert| cert.domain_name == wildcard || cert.domain_name == DOMAIN}.
-          map {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate}.
-          select {|cert| cert.subject_alternative_names.include? wildcard}.
-          max_by(&:not_after).
+          find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
           certificate_arn
       end
 
