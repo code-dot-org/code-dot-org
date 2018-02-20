@@ -37,10 +37,31 @@ export const saveStudent = (studentId) => {
   };
 };
 
+
 const initialState = {
   loginType: '',
-  studentData: {},
-  editingData: {},
+  studentData: {
+    0: {
+      id: 0,
+      name: '',
+      username: '',
+      sectionId: 0,
+      loginType: '',
+      isEditing: true,
+      isAddRow: true,
+    }
+  },
+  editingData: {
+    0: {
+      id: 0,
+      name: '',
+      username: '',
+      sectionId: 0,
+      loginType: '',
+      isEditing: true,
+      isAddRow: true,
+    }
+  },
   sectionId: null,
 };
 
@@ -60,7 +81,10 @@ export default function manageStudents(state=initialState, action) {
   if (action.type === SET_STUDENTS) {
     return {
       ...state,
-      studentData: action.studentData,
+      studentData: {
+        ...state.studentData,
+        ...action.studentData
+      },
     };
   }
   if (action.type === START_EDITING_STUDENT) {
