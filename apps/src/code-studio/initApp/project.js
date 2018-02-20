@@ -852,7 +852,6 @@ var projects = module.exports = {
   showSaveError_(errorType, errorCount, errorText) {
     $('.project_updated_at').text('Error saving project');  // TODO i18n
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'project-data-integrity',
         event: errorType,

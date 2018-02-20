@@ -317,7 +317,6 @@ class ProjectsController < ApplicationController
     end
 
     FirehoseClient.instance.put_record(
-      'analysis-events',
       study: 'project-views',
       event: project_view_event_type(iframe_embed, sharing),
       # allow cross-referencing with the storage_apps table.

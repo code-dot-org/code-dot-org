@@ -273,7 +273,6 @@ StudioApp.prototype.init = function (config) {
   if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')) {
     if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) {
       firehoseClient.putRecord(
-        'analysis-events',
         {
           study: 'instructions-resources-tab',
           study_group: 'resources-tab',
@@ -285,7 +284,6 @@ StudioApp.prototype.init = function (config) {
       );
     } else {
       firehoseClient.putRecord(
-        'analysis-events',
         {
           study: 'instructions-resources-tab',
           study_group: 'under-app',
@@ -1863,7 +1861,6 @@ StudioApp.prototype.configureDom = function (config) {
     if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')) {
       videoThumbnail[0].addEventListener('click', () => {
         firehoseClient.putRecord(
-          'analysis-events',
           {
             study: 'instructions-resources-tab',
             study_group: 'under-app',
