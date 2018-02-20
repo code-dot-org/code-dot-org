@@ -186,6 +186,7 @@ class Census::CensusSummary < ApplicationRecord
 
       # If the school doesn't have stats then treat it as not high school.
       # The lack of stats will show up in the audit data as a null value for high_school.
+      # k8_school will behave similarly.
       stats = school.school_stats_by_year.try(:sort).try(:last)
       high_school = stats.try(:has_high_school_grades?)
       k8_school = stats.try(:has_k8_grades?)
@@ -323,6 +324,7 @@ class Census::CensusSummary < ApplicationRecord
 
       # If the school doesn't have stats then treat it as not high school.
       # The lack of stats will show up in the audit data as a null value for high_school.
+      # k8_school will behave similarly.
       stats = school.school_stats_by_year.try(:sort).try(:last)
       high_school = stats.try(:has_high_school_grades?)
       k8_school = stats.try(:has_k8_grades?)
