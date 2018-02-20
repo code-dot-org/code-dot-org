@@ -1,6 +1,8 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require 'cdo/share_filtering'
+require 'timecop'
+require 'cdo/firehose'
 
 class SourcesTest < FilesApiTestBase
   def setup
@@ -137,6 +139,8 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_version
+    FirehoseClient.instance.expects(:putRecord).never
+
     # Upload a source file.
     filename = 'replace_me.js'
     file_data = 'version 1'
@@ -155,6 +159,34 @@ class SourcesTest < FilesApiTestBase
     versions = @api.list_object_versions(filename)
     assert successful?
     assert_equal 1, versions.count
+  end
+
+  def test_replace_main_json_version
+    FirehoseClient.instance.expects(:put_record).never
+    Timecop.freeze
+
+    filename = 'main.json'
+    file_data = 'version 1'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+    response = JSON.parse(last_response.body)
+    assert_equal response['timestamp'], Time.now.to_s
+    version1 = response['versionId']
+
+    Timecop.return
+
+    file_data = 'version 2'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # log when replacing non-current version.
+    FirehoseClient.instance.expects(:put_record).once
+
+    file_data = 'version 3'
+    @api.put_object_version(filename, version1, file_data, file_headers)
+    assert successful?
   end
 
   private
