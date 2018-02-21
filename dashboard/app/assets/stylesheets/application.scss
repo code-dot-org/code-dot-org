@@ -377,6 +377,13 @@ img.video_thumbnail {
 
   .project_updated_at {
     font-size: 10px;
+    .save_error {
+      background-color: $dark_red;
+      padding: 0 5px;
+      margin-top: 2px;
+      font-size: 12px;
+      display: inline-block;
+    }
   }
 
   #hamburger {
