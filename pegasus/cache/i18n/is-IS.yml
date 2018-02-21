@@ -1036,8 +1036,11 @@
   dashboard_coursed: 'Námskeið D: '
   dashboard_coursee: 'Námskeið E: '
   dashboard_coursef: 'Námskeið F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir
     þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Námskrá
   dashboard_curriculum_overview: Yfirlit 5 - 10 ára (K-5) námsefnis
   dashboard_overview: Yfirlit
@@ -1055,6 +1058,8 @@
   dashboard_curriculum_csins: 'Tölvunarfræði í vísindum:'
   dashboard_curriculum_csp: 'AP® Undirstöðuatriði tölvunarfræði:'
   dashboard_curriculum_ecs: 'Tölvunarfræði könnuð:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Annað
   dashboard_login_word: Orð
@@ -1305,6 +1310,7 @@
   cspexams_category_name: "Æfingapróf fyrir Undirstöðuatriði TF"
   research_studies_category_name: Research Studies
   applab_name: Appsmiðja
+  gamelab_name: Leikjasmiðjan
   basketball_name: Búa til körfuboltaleik
   sports_name: Kóðaðu íþróttaleik eftir þínu höfði
   applab_gradelevel: Aldur 13+
@@ -2104,9 +2110,3 @@
     aðgangi":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

@@ -115,8 +115,11 @@ const actionsFormatterFeatured = (actions, {rowData}) => {
   );
 };
 
-const feature = (channel) => {
+const feature = (channel, publishedAt) => {
   var url = `/featured_projects/${channel}/feature`;
+  if (!publishedAt) {
+    alert(i18n.featureUnpublishedWarning());
+  }
   $.ajax({
     url: url,
     type:'PUT',
@@ -128,7 +131,7 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => feature(rowData.channel)}
+        onClick={() => feature(rowData.channel, rowData.publishedAt)}
       >
         {i18n.featureAgain()}
       </PopUpMenu.Item>
@@ -137,8 +140,12 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
 };
 
 const dateFormatter = (time) => {
-  const date = new Date(time);
-  return date.toLocaleDateString();
+  if (time) {
+    const date = new Date(time);
+    return date.toLocaleDateString();
+  } else {
+    return i18n.no();
+  }
 };
 
 const typeFormatter = (type) => {

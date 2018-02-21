@@ -29,12 +29,24 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'School type is required', school_info.errors.full_messages.first
   end
 
+  test 'non-US with nonexistent type fails' do
+    school_info = build :school_info_non_us, school_type: 'fake type'
+    refute school_info.valid?
+    assert_equal 'School type is invalid', school_info.errors.full_messages.first
+  end
+
   # US
 
   test "US without school type fails" do
     school_info = build :school_info_us
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School type is required', school_info.errors.full_messages.first
+  end
+
+  test "US with invalid school type fails" do
+    school_info = build :school_info_us, school_type: 'fake type'
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'School type is invalid', school_info.errors.full_messages.first
   end
 
   # US, private

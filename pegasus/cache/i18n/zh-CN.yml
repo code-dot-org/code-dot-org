@@ -32,14 +32,11 @@
   og_title_soon: "编程一小时活动即将开始"
   og_title_here: "《编程一小时》在这里！"
   og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。"
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
+  og_description_celeb: "试试这个新的教程，为你或你的班级赢得与名人视频聊天的机会。"
   csedweek_og_title: "计算机科学教育周"
   csedweek_og_description: 2017年12月4日至10日。计算机科学是每个学生要学习的基础课程。
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
-  csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
-    for every student to learn.
+  csedweek_og_description_soon: "编程一小时会在2017年12月4日至10日来临。计算机科学是每个学生都要学习的基础课程。"
+  csedweek_og_description_here: "编程一小时来了。计算机科学是每个学生都要学习的基础课程。"
   hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
   hoc2014_students: "学生"
   hoc2014_try: "体验一下"
@@ -277,11 +274,11 @@
   studiobar_donate_body: "你捐的每一美元让一个孩子学会"
   studiobar_shop_title: "商店"
   studiobar_shop_body: "突破束缚，骄傲的戴上我们的标志。"
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
+  homepage_stats_students: "在Code.org上有账号的美国学生"
+  homepage_stats_female: "我们的女性学生"
+  homepage_stats_teachers: "使用Code.org的教师"
+  homepage_stats_hourofcodde: "全世界已经尝试了编程一小时的学生"
+  homepage_stats_policy: "国家改变了政策来支持计算机科学"
   homepage_stats_title: "我们正在有所作为"
   homepage_hero_text_malala: "&ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;诺贝尔和平奖得主马拉拉说"
   homepage_hero_text_susan: "&ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官"
@@ -706,7 +703,7 @@
   dashboard_sections_table_pairing_allowed: "结对编程"
   dashboard_sections_table_stage_extras: "此阶段的额外资源"
   dashboard_sections_table_students: "学生"
-  dashboard_sections_table_code: "单元代码"
+  dashboard_sections_table_code: "小组代码"
   dashboard_sections_name: "学习小组名称"
   dashboard_sections_choose_secret: "如果您想要给您的学生提供帐户，请为那个学习小组选择一种 <b>单词</b> 或 <b>图片</b>
     的密码类型。"
@@ -781,14 +778,17 @@
   dashboard_course1: "课程 1:"
   dashboard_course2: "课程 2："
   dashboard_course3: "课程 3："
-  dashboard_course4: "课程 4："
-  dashboard_coursea: "课程 A："
-  dashboard_courseb: "课程 B："
-  dashboard_coursec: "课程 C："
-  dashboard_coursed: "课程 D："
-  dashboard_coursee: "课程 E："
-  dashboard_coursef: "课程 F："
+  dashboard_course4: "课程 4： "
+  dashboard_coursea: "课程 A： "
+  dashboard_courseb: "课程 B： "
+  dashboard_coursec: "课程 C： "
+  dashboard_coursed: "课程 D： "
+  dashboard_coursee: "课程 E： "
+  dashboard_coursef: "课程 F： "
+  dashboard_pre-express: "学前儿童的快速课程： "
+  dashboard_express: "快速课程： "
   dashboard_unplugged: "如果你没有电脑，可以在你的教室<a href='%{unplugged_url}'>试试这些离线的教程。</a>"
+  dashboard_tools: "工具集： "
   dashboard_curriculum: "课程"
   dashboard_curriculum_overview: K-5课程概述
   dashboard_overview: "概览"
@@ -804,8 +804,10 @@
   dashboard_teacher_worksheet: "教师工作表"
   dashboard_curriculum_csina: "代数中的计算机科学:"
   dashboard_curriculum_csins: "科学中的计算机科学:"
-  dashboard_curriculum_csp: AP® 计算机科学原则：
+  dashboard_curriculum_csp: "计算机科学原理："
   dashboard_curriculum_ecs: "探索计算机科学："
+  dashboard_curriculum_csd: "计算机科学探索： "
+  dashboard_curriculum_apcsa: 'Java的AP计算机科学： '
   dashboard_grade_k: "学前"
   dashboard_grade_other: "其他"
   dashboard_login_word: "单词"
@@ -1039,6 +1041,7 @@
   cspexams_category_name: "计算机原理练习测试"
   research_studies_category_name: Research Studies
   applab_name: "应用实验室"
+  gamelab_name: "游戏实验室"
   basketball_name: "进行一场篮球赛"
   sports_name: "用代码编写你自己的体育比赛。"
   applab_gradelevel: 13岁以上
@@ -1575,9 +1578,3 @@
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: "应用程序实验室简介"
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
