@@ -27,12 +27,7 @@ class VideosControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to video_path(assigns(:video))
-  end
-
-  test "should show video" do
-    get :show, params: {id: @video}
-    assert_response :success
+    assert_redirected_to videos_path
   end
 
   test "should get edit" do
