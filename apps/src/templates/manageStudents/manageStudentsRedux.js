@@ -185,13 +185,15 @@ export default function manageStudents(state=initialState, action) {
         },
         ...state.studentData,
         [addRowId]: {
-          ...blankAddRow
+          ...blankAddRow,
+          loginType: state.loginType
         },
       },
       editingData: {
         ...state.editingData,
         [addRowId]: {
-          ...blankAddRow
+          ...blankAddRow,
+          loginType: state.loginType
         }
       }
     };
