@@ -197,6 +197,11 @@ class Pd::Workshop < ActiveRecord::Base
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 
+  before_save :assign_regional_partner, if: -> {organizer_id_changed?}
+  def assign_regional_partner
+    self.regional_partner = organizer.try {|o| o.regional_partners.first}
+  end
+
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
       unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
