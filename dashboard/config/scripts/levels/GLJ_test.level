@@ -1,9 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2018-01-29T22:48:47.000Z",
+  "created_at": "2018-02-21T20:03:08.000Z",
   "level_num": "custom",
-  "user_id": 9,
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -179,10 +179,11 @@
       "comment": null
     },
     "show_d_pad": "true",
+    "edit_code": "false",
     "show_debug_watch": "true",
+    "use_helper_lib": true,
     "embed": "false",
     "instructions_important": "false",
-    "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -201,96 +202,25 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
-    "hide_animation_mode": "false",
-    "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "submittable": "false",
     "hide_view_data_button": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "edit_code": "false",
-    "helper_libraries": [
-      "GameLabJr"
-    ],
-    "droplet_tooltips_disabled": "false",
-    "lock_zero_param_functions": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/fyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA/d19383c3-9b64-482d-811d-07f8997533ea.png?version=v.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/fyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA/62c23e14-37e1-4b40-9dc8-68553ff35ff9.png?version=t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\",\r\n      \"frameSize\": {\r\n        \"x\": 64,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\"\r\n    }\r\n  }\r\n}",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-21 19:18:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-21 20:03:17 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_d_pad\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks>
-    <toolbox_blocks>
-      <xml>
-        <category name="Start">
-          <block type="when_run"/>
-        </category>
-        <category name="Sprites">
-          <block type="variables_set" inline="false">
-            <title name="VAR">sprite</title>
-            <value name="VALUE">
-              <block type="gamelab_makeNewSprite" inline="true">
-                <title name="ANIMATION">"dog"</title>
-                <value name="X">
-                  <block type="math_number">
-                    <title name="NUM">100</title>
-                  </block>
-                </value>
-                <value name="Y">
-                  <block type="math_number">
-                    <title name="NUM">100</title>
-                  </block>
-                </value>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_moveUp" inline="true">
-            <value name="THIS">
-              <block type="variables_get">
-                <title name="VAR">sprite</title>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_moveDown" inline="true">
-            <value name="THIS">
-              <block type="variables_get">
-                <title name="VAR">sprite</title>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_moveLeft" inline="true">
-            <value name="THIS">
-              <block type="variables_get">
-                <title name="VAR">sprite</title>
-              </block>
-            </value>
-          </block>
-          <block type="gamelab_moveRight" inline="true">
-            <value name="THIS">
-              <block type="variables_get">
-                <title name="VAR">sprite</title>
-              </block>
-            </value>
-          </block>
-        </category>
-        <category name="Events">
-          <block type="gamelab_whenUpArrow"/>
-          <block type="gamelab_whenDownArrow"/>
-          <block type="gamelab_whenLeftArrow"/>
-          <block type="gamelab_whenRightArrow"/>
-          <block type="gamelab_whileUpArrow"/>
-          <block type="gamelab_whileDownArrow"/>
-          <block type="gamelab_whileLeftArrow"/>
-          <block type="gamelab_whileRightArrow"/>
-        </category>
-        <category name="Variables" custom="VARIABLE"/>
-      </xml>
-    </toolbox_blocks>
-  </blocks>
+  <blocks/>
 </GamelabJr>
