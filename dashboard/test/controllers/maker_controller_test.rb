@@ -4,6 +4,7 @@ class MakerControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    @student = create :student
     @teacher = create :teacher
     @admin = create :admin
     @school = create :school
@@ -21,8 +22,7 @@ class MakerControllerTest < ActionController::TestCase
     # Fake CSD6 script for progress info
     csd6_script = create :script, name: Script::CSD6_NAME
     create :script_level, script: csd6_script
-    student = create :student
-    sign_in student
+    sign_in @student
 
     assert_queries 12 do
       get :home
