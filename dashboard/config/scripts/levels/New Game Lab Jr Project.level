@@ -214,21 +214,14 @@
     "helper_libraries": [
       "GameLabJr"
     ],
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/fyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA/d19383c3-9b64-482d-811d-07f8997533ea.png?version=v.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/fyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA/62c23e14-37e1-4b40-9dc8-68553ff35ff9.png?version=t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\",\r\n      \"frameSize\": {\r\n        \"x\": 64,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\"\r\n    }\r\n  }\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-21 19:18:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -246,12 +239,12 @@
                 <title name="ANIMATION">"dog"</title>
                 <value name="X">
                   <block type="math_number">
-                    <title name="NUM">25</title>
+                    <title name="NUM">100</title>
                   </block>
                 </value>
                 <value name="Y">
                   <block type="math_number">
-                    <title name="NUM">25</title>
+                    <title name="NUM">100</title>
                   </block>
                 </value>
               </block>
