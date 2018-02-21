@@ -1601,29 +1601,67 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
-  def assert_levelgroup_results_match(expected_results, actual_results)
-    # Results may be in any order, so...
-    # Assert sets of equal length
-    assert_equal expected_results.count, actual_results.count
-    # Assert every expected result is found in the actual results
-    expected_results.each do |expected_result|
-      assert_contains_matching_result expected_result, actual_results
+  #
+  # Given two arrays, checks that they contain equivalent sets of elements,
+  # ignoring order.
+  #
+  # Equivalent:     [1, 1, 2], [1, 2, 1]
+  # Not equivalent: [1, 1, 2], [1, 2, 2]
+  #
+  # Optionally takes a comparator block.  If omitted, == comparison is used.
+  #
+  # equivalent_sets?([2, 3, 4], [12, 13, 14]) {|a,b| a%10 == b%10}
+  #
+  # @param [Array] set_a
+  # @param [Array] set_b
+  # @param [Block] (optional) comparator
+  # @return [Boolean] true if sets are equivalent, false if not
+  #
+  def equivalent_sets?(set_a, set_b)
+    set_b_left = set_b.clone
+    set_a.each do |a|
+      match_index = set_b_left.find_index do |b|
+        if block_given?
+          yield a, b
+        else
+          a == b
+        end
+      end
+      if match_index.nil?
+        return false
+      else
+        set_b_left.delete_at match_index
+      end
     end
+    set_b_left.empty?
   end
 
-  def assert_contains_matching_result(expected_result, actual_results)
-    result_found = actual_results.any? do |actual|
-      actual['type'] == expected_result['type'] &&
-        actual['question'] == expected_result['question'] &&
-        actual['answer_texts'] == expected_result['answer_texts'] &&
-        # Particular results may be in any order so...
-        # Assert sets of equal length
-        actual['results'].count == expected_result['results'].count &&
-        # Assert every actual result shows up in expected results
-        actual['results'].all? do |actual_result|
-          expected_result['results'].include? actual_result
-        end
+  test 'equivalent_sets? helper' do
+    assert equivalent_sets? [], []
+    assert equivalent_sets? [1, 1, 1, 2, 2], [2, 1, 2, 1, 1]
+    refute equivalent_sets? [1, 1, 1, 2, 2], [1, 1, 2, 2, 2]
+    assert equivalent_sets? [2, 3, 4], [12, 13, 14] {|a, b| a % 10 == b % 10}
+    refute equivalent_sets? [2, 3, 4], [11, 12, 13] {|a, b| a % 10 == b % 10}
+  end
+
+  def assert_levelgroup_results_match(expected_results, actual_results)
+    match = equivalent_sets?(expected_results, actual_results) do |expected, actual|
+      expected['type'] == actual['type'] &&
+        expected['question'] == actual['question'] &&
+        expected['answer_texts'] == actual['answer_texts'] &&
+        equivalent_sets?(expected['results'], actual['results'])
     end
-    assert result_found, "Could not find result\n\n#{expected_result}\n\nin results\n\n#{actual_results.join("\n")}\n\n"
+    assert match, <<MESSAGE
+Mismatched sets:
+
+Expected:
+
+#{expected_results.join("\n")}
+
+Actual:
+
+#{actual_results.join("\n")}
+
+MESSAGE
   end
 end
