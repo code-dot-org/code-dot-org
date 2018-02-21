@@ -112,6 +112,7 @@ class ScriptsController < ApplicationController
       :exclude_csf_column_in_legend,
       :stage_extras_available,
       :has_verified_resources,
+      :has_lesson_plan,
       :script_announcements,
       resourceTypes: [],
       resourceLinks: [],

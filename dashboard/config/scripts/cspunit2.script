@@ -1,4 +1,5 @@
 login_required true
+has_lesson_plan true
 
 stage 'The Internet'
 level 'U2L1 Student Lesson Introduction'
