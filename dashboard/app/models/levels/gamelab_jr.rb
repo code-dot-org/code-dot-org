@@ -66,6 +66,7 @@ class GamelabJr < Gamelab
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />
   <block type="gamelab_add" />
+  <block type="gamelab_groupLength" />
 </category>
 <category name="Events">
   <block type="gamelab_whenUpArrow" />
