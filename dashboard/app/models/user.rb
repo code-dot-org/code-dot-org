@@ -241,6 +241,10 @@ class User < ActiveRecord::Base
     permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
+  def program_manager?
+    permission? UserPermission::PROGRAM_MANAGER
+  end
+
   def workshop_admin?
     permission? UserPermission::WORKSHOP_ADMIN
   end
