@@ -52,8 +52,12 @@ export const addStudent = (studentId) => {
   };
 };
 
+// This doesn't get used to make a server call, but does
+// need to be unique from the rest of the ids.
+const addRowId = 0;
+
 const blankAddRow = {
-  id: 0,
+  id: addRowId,
   name: '',
   age: '',
   gender: '',
@@ -65,24 +69,36 @@ const blankAddRow = {
 
 const initialState = {
   loginType: '',
-  studentData: {
-    0: {
-      ...blankAddRow
-    }
-  },
-  editingData: {
-    0: {
-      ...blankAddRow
-    }
-  },
+  studentData: {},
+  editingData: {},
   sectionId: null,
 };
 
+// TODO: (caley) only add addRow when picture and word login
 export default function manageStudents(state=initialState, action) {
   if (action.type === SET_LOGIN_TYPE) {
+    let addRowInitialization = {};
+    if (action.loginType === 'word' || action.loginType === 'picture') {
+      addRowInitialization = {
+        studentData: {
+          [addRowId]: {
+            ...blankAddRow,
+            loginType: action.loginType,
+          }
+        },
+        editingData: {
+          [addRowId]: {
+            ...blankAddRow,
+            loginType: action.loginType,
+
+          }
+        }
+      };
+    }
     return {
       ...state,
       loginType: action.loginType,
+      ...addRowInitialization,
     };
   }
   if (action.type === SET_SECTION_ID) {
@@ -168,13 +184,13 @@ export default function manageStudents(state=initialState, action) {
           loginType: state.loginType
         },
         ...state.studentData,
-        0: {
+        [addRowId]: {
           ...blankAddRow
         },
       },
       editingData: {
         ...state.editingData,
-        0: {
+        [addRowId]: {
           ...blankAddRow
         }
       }
