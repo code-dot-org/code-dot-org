@@ -89,7 +89,7 @@ group :development, :test do
   gem 'eyes_selenium', '3.14.2'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
-  gem 'minitest-reporters'
+  gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'

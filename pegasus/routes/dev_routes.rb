@@ -2,13 +2,13 @@ require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/infra_test_topic'
 
-BUILD_STARTED_PATH = deploy_dir('build-started')
+BUILD_STARTED_PATH = deploy_dir('build-started').freeze
 CHECK_DTS_ACTIONS = [
   'opened',
   'reopened',
   'edited',
   'synchronize',
-]
+].freeze
 
 # Used to restart builds on staging/test via Slack slash commands.
 post '/api/dev/start-build' do

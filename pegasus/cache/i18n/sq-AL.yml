@@ -1049,8 +1049,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Plani mësimor
   dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
   dashboard_overview: Përmbledhja
@@ -1068,6 +1071,8 @@
   dashboard_curriculum_csins: 'Shkencat kompjuterike si pjesë e shkencës:'
   dashboard_curriculum_csp: 'Ap® Parimet e Shkencave Kompjuterike:'
   dashboard_curriculum_ecs: 'Explorimi i Shkencave Kompjuterike:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Të tjera/ë
   dashboard_login_word: Fjalë
@@ -1320,6 +1325,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Laboratori i Aplikacioneve
+  gamelab_name: Game Lab
   basketball_name: Realizo një lojë basketbolli
   sports_name: Krijo lojën tënde sportive
   applab_gradelevel: Moshat 13 +
@@ -2138,9 +2144,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

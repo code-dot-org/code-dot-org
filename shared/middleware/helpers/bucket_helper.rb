@@ -3,6 +3,7 @@ require 'active_support/core_ext/object/try'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'cdo/aws/s3'
 require 'honeybadger'
+require 'cdo/firehose'
 
 #
 # BucketHelper
@@ -231,7 +232,28 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
+    response = s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
+
+    # If we get this far, the restore request has succeeded.
+    FirehoseClient.instance.put_record(
+      'analysis-events',
+      study: 'project-data-integrity',
+      event: 'version-restored',
+
+      # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      project_id: encrypted_channel_id,
+      data_string: @bucket,
+
+      data_json: {
+        restoredVersionId: version_id,
+        newVersionId: response.version_id,
+        bucket: @bucket,
+        key: key,
+        filename: filename,
+      }.to_json
+    )
+
+    response
   end
 
   protected

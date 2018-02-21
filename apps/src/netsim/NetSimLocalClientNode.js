@@ -36,11 +36,6 @@ var MessageGranularity = NetSimConstants.MessageGranularity;
 var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   NetSimClientNode.call(this, shard, clientRow);
 
-  // TODO (bbuchanan): Consider:
-  //      Do we benefit from inheritance here?  Would it be cleaner to make this
-  //      not-an-entity that manipulates a stock NetSimClientNode?  Will another
-  //      developer find it easy to understand how this class works?
-
   /**
    * Client nodes can be connected to other clients.
    * @type {NetSimClientNode}
@@ -107,8 +102,6 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
-  // TODO (bbuchanan): Modify and return the template node instead of
-  // making two in this method.
   var templateNode = new NetSimLocalClientNode(shard);
   templateNode.displayName_ = displayName;
   templateNode.getTable().create(templateNode.buildRow(), function (err, row) {
@@ -172,8 +165,6 @@ NetSimLocalClientNode.prototype.stopSimulation = function () {
  * @param {!RunLoop.Clock} clock
  */
 NetSimLocalClientNode.prototype.tick = function (clock) {
-  // TODO (bbuchanan): Move the router collection and ticking the
-  // routers up to netsim.js (or elsewhere)
   this.routers_.forEach(function (router) {
     router.tick(clock);
   });
