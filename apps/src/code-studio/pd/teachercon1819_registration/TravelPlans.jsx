@@ -139,7 +139,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
 
         <FormGroup>
           {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
-            'I will carpool with another TeacherCon attendee (Please note who)': 'carpooling_with_attendee'
+            'I will carpool with another TeacherCon attendee (Please note who):': 'carpooling_with_attendee'
           })}
           {this.radioButtonsFor("needHotel")}
           {
