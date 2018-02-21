@@ -113,8 +113,15 @@ describe('animationPickerModule', function () {
         var store = createStore(combineReducers({animationList: listReducer, animationPicker: reducer}), newState);
 
         var onMetadataLoaded = animationPickerModule.buildOnImageMetadataLoaded(
-          "filename.jpg", Goal.NEW_ANIMATION, "filename.jpg",
-          {filename: "filename.jpg", result: 0, versionId: "string"}, store.dispatch);
+          "filename.jpg",
+          {
+            filename: "filename.jpg",
+            result: 0,
+            versionId: "string"
+          },
+          store.dispatch,
+          store.getState
+        );
         onMetadataLoaded({});
 
         const newListState = store.getState().animationList;
