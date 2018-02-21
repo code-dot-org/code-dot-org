@@ -161,12 +161,6 @@ class SourcesTest < FilesApiTestBase
     assert_equal 1, versions.count
   end
 
-  class Foo
-    def bar(x)
-      x + 1
-    end
-  end
-
   def test_replace_main_json_version
     # FirehoseClient.instance.expects(:put_record).never
     Timecop.freeze
