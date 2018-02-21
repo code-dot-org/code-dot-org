@@ -259,5 +259,13 @@ export default {
       ],
       methodCall: true,
     });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'destroy',
+      blockText: 'remove {THIS}',
+      args: [],
+      methodCall: true,
+    });
   },
 };
