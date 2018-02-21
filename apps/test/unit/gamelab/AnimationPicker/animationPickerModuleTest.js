@@ -1,4 +1,7 @@
 import reducer, * as animationPickerModule from '@cdo/apps/gamelab/AnimationPicker/animationPickerModule';
+import listReducer from '@cdo/apps/gamelab/animationListModule';
+import {combineReducers} from 'redux';
+import {createStore} from '../../../util/redux';
 import {expect} from '../../../util/configuredChai';
 var Goal = animationPickerModule.Goal;
 
@@ -100,6 +103,26 @@ describe('animationPickerModule', function () {
         var newState = reducer(initialState, handleUploadError(status));
         expect(newState).not.to.equal(initialState);
         expect(newState.uploadError).to.equal(status);
+      });
+    });
+
+    describe('action: handleUploadComplete', function () {
+
+      it('sets sourceUrl to null', function () {
+        const newState = {animationPicker: { uploadFilename: "filename.jpg", goal: Goal.NEW_ANIMATION }};
+        var store = createStore(combineReducers({animationList: listReducer, animationPicker: reducer}), newState);
+
+        var onMetadataLoaded = animationPickerModule.buildOnImageMetadataLoaded(
+          "filename.jpg", Goal.NEW_ANIMATION, "filename.jpg",
+          {filename: "filename.jpg", result: 0, versionId: "string"}, store.dispatch);
+        onMetadataLoaded({});
+
+        const newListState = store.getState().animationList;
+        const animationKey = newListState.orderedKeys[0];
+
+        expect(newListState.propsByKey[animationKey]).to.be.not.null;
+        expect(newListState.propsByKey[animationKey].name).to.equal("filename.jpg");
+        expect(newListState.propsByKey[animationKey].sourceUrl).to.be.null;
       });
     });
   });
