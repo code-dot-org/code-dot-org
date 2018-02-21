@@ -221,7 +221,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-20 17:01:39 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-02-20 17:02:45 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-20 17:01:39 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-02-20 17:02:45 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-02-20 17:54:04 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-02-20 18:07:25 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -339,6 +339,8 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_firstTouched"/>
+          <block type="gamelab_secondTouched"/>
         </category>
         <category name="Variables" custom="VARIABLE"/>
         <category name="Loops">

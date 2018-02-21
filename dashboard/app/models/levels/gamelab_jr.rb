@@ -60,6 +60,8 @@ class GamelabJr < Gamelab
   <block type="gamelab_moveRight" />
   <block type="gamelab_displace" />
   <block type="gamelab_destroy" />
+  <block type="gamelab_firstTouched" />
+  <block type="gamelab_secondTouched" />
 </category>
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />
