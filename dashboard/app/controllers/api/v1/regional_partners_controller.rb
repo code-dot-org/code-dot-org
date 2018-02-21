@@ -14,10 +14,8 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
   # GET /api/v1/regional-partner/for_user
   def for_user
-    if current_user.permission? UserPermission::WORKSHOP_ADMIN
-      render json: RegionalPartner.all.pluck(:id, :name)
-    else
-      render json: current_user.regional_partners.pluck(:name, :id)
-    end
+    regional_partners = current_user.permission?(UserPermission::WORKSHOP_ADMIN) ? RegionalPartner.all : current_user.regional_partners
+
+    render json: regional_partners.order(:name).map {|partner| {id: partner.id, name: partner.name}}
   end
 end
