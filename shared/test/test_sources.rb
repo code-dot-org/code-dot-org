@@ -198,8 +198,7 @@ class SourcesTest < FilesApiTestBase
         data[:study] == 'project-data-integrity' &&
         data[:event] == 'replace-non-current-main-json' &&
         data[:project_id] == @channel &&
-        data_json_data['replacedVersionId'] == version1 &&
-        data_json_data['firstSaveTimestamp'] == timestamp1
+        data_json_data['replacedVersionId'] == version1
     end
 
     file_data = 'version 3'
