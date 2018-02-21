@@ -193,7 +193,7 @@
       gmap.setOptions(map_options);
 
       const query = encodeURIComponent(`SELECT * FROM #{TABLE_ID} WHERE school_id in '${school.nces_id}'`);
-      const gvizQuery = new google.visualization.Query(`http://www.google.com/fusiontables/gvizdata?tq=${query}`);
+      const gvizQuery = new google.visualization.Query(`https://www.google.com/fusiontables/gvizdata?tq=${query}`);
       const infoWindow = new google.maps.InfoWindow();
 
       gvizQuery.send(function(response) {
