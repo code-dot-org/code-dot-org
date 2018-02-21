@@ -402,21 +402,14 @@ class ApiControllerTest < ActionController::TestCase
       }
     ]
 
-    response_body = JSON.parse(@response.body)
-    # Since the order of the levelgroup_results with the response isn't defined, we manually
-    # compare the actual and expected responses.
-    # TODO(asher): Generalize this to somewhere where it can be reused.
-    assert_equal 1, response_body.length
-    assert_equal ['stage', 'levelgroup_results'], response_body[0].keys
-    assert_equal expected_response[0]['stage'], response_body[0]['stage']
-    assert_equal expected_response[0]['levelgroup_results'].count,
-      response_body[0]['levelgroup_results'].count
-    expected_response[0]['levelgroup_results'].each do |result|
-      assert response_body[0]['levelgroup_results'].include? result
-    end
-    response_body[0]['levelgroup_results'].each do |result|
-      assert expected_response[0]['levelgroup_results'].include? result
-    end
+    actual_response = JSON.parse(@response.body)
+    assert_equal 1, actual_response.length
+    assert_equal ['stage', 'levelgroup_results'], actual_response[0].keys
+    assert_equal expected_response[0]['stage'], actual_response[0]['stage']
+    assert_levelgroup_results_match(
+      expected_response[0]['levelgroup_results'],
+      actual_response[0]['levelgroup_results']
+    )
   end
 
   test "should get surveys for section with script with single page anonymous level_group assessment" do
@@ -541,7 +534,14 @@ class ApiControllerTest < ActionController::TestCase
       }
     ]
 
-    assert_equal expected_response, JSON.parse(@response.body)
+    actual_response = JSON.parse(@response.body)
+    assert_equal 1, actual_response.length
+    assert_equal ['stage', 'levelgroup_results'], actual_response[0].keys
+    assert_equal expected_response[0]['stage'], actual_response[0]['stage']
+    assert_levelgroup_results_match(
+      expected_response[0]['levelgroup_results'],
+      actual_response[0]['levelgroup_results']
+    )
   end
 
   test "no anonymous survey data via assessment call" do
@@ -1599,5 +1599,31 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "student_progress", section_id: '2', student_id: '15'},
       {method: "get", path: "/api/student_progress/2/15"}
     )
+  end
+
+  def assert_levelgroup_results_match(expected_results, actual_results)
+    # Results may be in any order, so...
+    # Assert sets of equal length
+    assert_equal expected_results.count, actual_results.count
+    # Assert every expected result is found in the actual results
+    expected_results.each do |expected_result|
+      assert_contains_matching_result expected_result, actual_results
+    end
+  end
+
+  def assert_contains_matching_result(expected_result, actual_results)
+    result_found = actual_results.any? do |actual|
+      actual['type'] == expected_result['type'] &&
+        actual['question'] == expected_result['question'] &&
+        actual['answer_texts'] == expected_result['answer_texts'] &&
+        # Particular results may be in any order so...
+        # Assert sets of equal length
+        actual['results'].count == expected_result['results'].count &&
+        # Assert every actual result shows up in expected results
+        actual['results'].all? do |actual_result|
+          expected_result['results'].include? actual_result
+        end
+    end
+    assert result_found, "Could not find result\n\n#{expected_result}\n\nin results\n\n#{actual_results.join("\n")}\n\n"
   end
 end
