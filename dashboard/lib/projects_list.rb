@@ -108,7 +108,30 @@ module ProjectsList
         where(project_type: project_type.to_s, abuse_score: 0).
         exclude(published_at: nil).
         order("RAND()").limit(4).all
-      print project_featured_project_user_combo_data
+      extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+    end
+
+    def extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
+      @data_for_featured_project_cards = []
+      project_featured_project_user_combo_data.each do |project_details|
+        project_details_value = JSON.parse(project_details[:value])
+        channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+        data_for_featured_project_card = {
+          projectName: project_details_value['name'],
+          channel: channel,
+          type: project_details[:project_type],
+          publishedAt: project_details[:published_at],
+          thumbnailUrl: project_details_value['thumbnailUrl'],
+          studentName: UserHelpers.initial(project_details[:name]),
+          studentAgeRange: UserHelpers.age_range_from_birthday(project_details[:birthday])
+        }
+        @data_for_featured_project_cards << data_for_featured_project_card
+      end
+      puts
+      puts
+      print @data_for_featured_project_cards
+      puts
+      puts
     end
 
     private
