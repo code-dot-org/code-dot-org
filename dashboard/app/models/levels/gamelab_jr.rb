@@ -59,6 +59,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_moveLeft" />
   <block type="gamelab_moveRight" />
   <block type="gamelab_displace" />
+  <block type="gamelab_destroy" />
 </category>
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />
