@@ -1,3 +1,4 @@
+%script{type: "text/javascript", src: "/shared/js/helpers.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/census_map.css"}
 -max_height_percentage = 0.65 if max_height_percentage.nil?
 
@@ -165,7 +166,7 @@
         <hr>
         <div class="census-message">${censusMessage}</div>
         <div class="button-container">
-          <a href="#form" onclick="showYourSchoolFunction(${schoolDropdownOptionString});">
+          <a onclick="showYourSchoolFunction(${schoolDropdownOptionString}); adjustScroll('form');">
             <div class="button">
               <div class="button-text">Take the survey for this school</div>
             </div>
