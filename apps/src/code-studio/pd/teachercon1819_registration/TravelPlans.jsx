@@ -34,7 +34,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     contactRelationship: "Relationship to you:",
     contactPhone: "Phone number:",
     dietaryNeeds: "Do you have any dietary needs or food allergies?",
-    dietaryNeedsDetails: "Please provide details",
+    dietaryNeedsDetails: "Please provide details about your food allergy.",
     addressStreet: "Street",
     addressCity: "City",
     addressState: "State",
@@ -82,6 +82,10 @@ export default class TravelPlans extends Teachercon1819FormComponent {
 
     if (data.needHotel === 'Yes') {
       requiredFields.push("needAda");
+
+      if (data.needAda === 'Yes') {
+        requiredFields.push("explainAda");
+      }
     }
 
     return requiredFields;
@@ -135,7 +139,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
 
         <FormGroup>
           {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
-            'I will carpool with another TeacherCon attendee (Please note who)': 'carpooling_with_attendee'
+            'I will carpool with another TeacherCon attendee (Please note who):': 'carpooling_with_attendee'
           })}
           {this.radioButtonsFor("needHotel")}
           {
