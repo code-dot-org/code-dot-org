@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
@@ -74,11 +75,10 @@ const initialState = {
   sectionId: null,
 };
 
-// TODO: (caley) only add addRow when picture and word login
 export default function manageStudents(state=initialState, action) {
   if (action.type === SET_LOGIN_TYPE) {
     let addRowInitialization = {};
-    if (action.loginType === 'word' || action.loginType === 'picture') {
+    if (action.loginType === SectionLoginType.word || action.loginType === SectionLoginType.picture) {
       addRowInitialization = {
         studentData: {
           [addRowId]: {
