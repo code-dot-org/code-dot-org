@@ -770,7 +770,7 @@ var projects = module.exports = {
       let params = '';
       if (currentSourceVersionId) {
         params = `?version=${currentSourceVersionId}` +
-          `&firstSaveTimestamp=${firstSaveTimestamp}` +
+          `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
           `&tabId=${utils.getTabId()}`;
       }
       const filename = SOURCE_FILE + params;
