@@ -11,4 +11,13 @@ class Api::V1::RegionalPartnersController < ApplicationController
       render json: regional_partner_mapping, include: :regional_partner
     end
   end
+
+  # GET /api/v1/regional-partner/for_user
+  def for_user
+    if current_user.permission? UserPermission::WORKSHOP_ADMIN
+      render json: RegionalPartner.all.pluck(:id, :name)
+    else
+      render json: current_user.regional_partners.pluck(:name, :id)
+    end
+  end
 end
