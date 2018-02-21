@@ -52,6 +52,13 @@ class GamelabJr < Gamelab
   <block type="when_run" />
 </category>
 <category name="Variables" custom="VARIABLE" />
+<category name="World">
+  <block type="gamelab_setBackground">
+    <value name="COLOR">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+</category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
   <block type="gamelab_moveUp" />

@@ -7,6 +7,7 @@ const SPRITE_CATEGORY = 'sprites';
 const EVENT_CATEGORY = 'events';
 const EVENT_LOOP_CATEGORY = 'event_loop';
 const VARIABLES_CATEGORY = 'variables';
+const WORLD_CATEGORY = 'world';
 const CATEGORIES = {
   [SPRITE_CATEGORY]: {
     color: [184, 1.00, 0.74],
@@ -19,6 +20,9 @@ const CATEGORIES = {
   },
   [VARIABLES_CATEGORY]: {
     color: [312, 0.32, 0.62],
+  },
+  [WORLD_CATEGORY]: {
+    color: [240, 0.45, 0.65],
   },
 };
 
@@ -313,6 +317,15 @@ export default {
       blockText: 'number of sprites in {THIS}',
       methodCall: true,
       returnType: blockly.BlockValueType.NUMBER,
+    });
+
+    createJsWrapperBlock({
+      category: WORLD_CATEGORY,
+      func: 'setBackground',
+      blockText: 'set background color {COLOR}',
+      args: [
+        { name: 'COLOR', type: blockly.BlockValueType.COLOUR },
+      ],
     });
   },
 };
