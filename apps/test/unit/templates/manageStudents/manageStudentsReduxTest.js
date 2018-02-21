@@ -272,4 +272,32 @@ describe('manageStudentsRedux', () => {
       assert.equal(afterSaveState.studentData[1].name, "New name");
     });
   });
+
+  describe('add student', () => {
+    const expectedBlankRow = {
+      id: 0,
+      name: '',
+      age: '',
+      gender: '',
+      username: '',
+      loginType: '',
+      isEditing: true,
+      isAddRow: true,
+    };
+    it('setLoginType creates an add row for word login types', () => {
+      const action = setLoginType('word');
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData[0], {...expectedBlankRow, loginType: 'word'});
+      assert.deepEqual(nextState.editingData[0], {...expectedBlankRow, loginType: 'word'});
+    });
+
+    it('setLoginType creates an add row for picture login types', () => {
+      const action = setLoginType('picture');
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData[0], {...expectedBlankRow, loginType: 'picture'});
+      assert.deepEqual(nextState.editingData[0], {...expectedBlankRow, loginType: 'picture'});
+    });
+
+
+  });
 });
