@@ -33,16 +33,16 @@ Whether you are new to teaching computer science (CS) or have experience teachin
 
 The program supports teachers with diverse teaching backgrounds as they prepare to teach either of the following courses:
 
-### [CS Discoveries (Grades 6-10)] (/educate/professional-learning/cs-discoveries)
-* CS Discoveries is an introductory computer science course 
-* It empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun. 
+### <a id="middle-csd" class="pl-2018-link" href="/educate/professional-learning/cs-discoveries">CS Discoveries (Grades 6-10)</a>
+* CS Discoveries is an introductory computer science course
+* It empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
 * The curriculum is recommended for middle and high school students (grades 6-10)
 * Can be taught either as a semester or full-year offering.
 <br/>
 
-### [CS Principles (Grades 9-12)] (/educate/professional-learning/cs-principles)
-* Computer Science Principles (can be taught as an AP​®​ course)​ is also an introductory course that requires no computer science background (from students or teachers). 
-* We recommend it for students in grades 9-12 with stronger reading and writing skills. 
+### <a id="middle-csp" class="pl-2018-link" href="/educate/professional-learning/cs-principles">CS Principles (Grades 9-12)</a>
+* Computer Science Principles (can be taught as an AP​®​ course)​ is also an introductory course that requires no computer science background (from students or teachers).
+* We recommend it for students in grades 9-12 with stronger reading and writing skills.
 * More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 <br/>
 
@@ -71,7 +71,7 @@ In New York and North Carolina, there is a fee to cover the costs of the worksho
 </p>
 </details>
 
-<details> 
+<details>
 <summary>**One cohesive set of resources**</summary>
 <p>
 <br>
@@ -103,10 +103,10 @@ The Code.org Professional Learning Program has both in-person and online support
 
 <br/>
 
-**Summer Workshop:** 
+**Summer Workshop:**
 
 * Participants kick off the Professional Learning Program with a 5-day workshop
-* Explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers. 
+* Explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
 * With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.<br/>
 
 **Ongoing Support, throughout following academic year:**  
@@ -120,30 +120,21 @@ In addition, all teachers have access to the Code.org forum, an online professio
 
 ## Q&A Video Chat with Hadi Partovi
 
-To help answer any questions you have, **Hadi Partovi** (Code.org Founder) and **Brook Osborne** (Education Program Manager and one of the creators of our professional learning programs) will be hosting a video chat on Thursday, Feb. 15. They’ll share stories from teachers who have gone through the program and discuss why it’s important for every student to have the opportunity to learn computer science.
+To help provide more information about the program, **Hadi Partovi** (Code.org Founder) and **Brook Osborne** (Education Program Manager and one of the creators of our professional learning program) hosted a video chat on Thursday, Feb. 15. They discussed why it’s important for every student to have the opportunity to learn computer science and shared more details about what teachers and administrators can expect from the Code.org Professional Learning Program.
 
-We’ll also be hosting open office hours with Code.org staff before and after the video chat in case those times work better for you. Feel free to join whenever you’re free. Invite your principal or other teachers and administrators to join and get a better understanding of the program.  
-
-**Thursday, Feb. 15, 2018**
-
-- 3:00 - 4:00 pm PST - Open office hours with Code.org staff
-- 4:00 - 4:30 pm PST - Video chat with Hadi Partovi and Brook Osborne 
-- 4:30 - 5:00 pm PST - Open office hours with Code.org staff
-
-[Use this link to join the chat](https://code.zoom.us/j/730985651) (or share it with others).
+[Watch a recording of the discussion here](https://zoom.us/recording/play/zhCfZbsJmnYHyNbLHu45FbO7Hb5Q5-frDAEMcU9xEc3mQMS91AGbXBzQW2C9RYKR). 
 
 ## Apply Today!
 
 Learn more about each program and apply today! Priority deadline for applications is March 31, 2018.
 <br/>
 
-
-<img src="/images/professional-learning/plane.png" width="8%"/> &nbsp;&nbsp; [<button>Professional Learning for Grades 6-10</button>](/educate/professional-learning/cs-discoveries)&nbsp;&nbsp; [<button>Professional Learning for Grades 9-12</button>](/educate/professional-learning/cs-principles)
+<img src="/images/professional-learning/plane.png" width="8%"/> &nbsp;&nbsp;
+<a id="bottom-banner-csd" class="pl-2018-link" href="/educate/professional-learning/cs-discoveries">
+  <button>Professional Learning for Grades 6-10</button>
+</a>
+<a id="bottom-banner-csp" class="pl-2018-link" href="/educate/professional-learning/cs-principles">
+  <button>Professional Learning for Grades 9-12</button>
+</a>
 
 <br/>
-
-
-
-
-
-

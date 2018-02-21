@@ -25,7 +25,7 @@
   submit: "Пошаљи"
   twentyhours_heading: "Пробајте наш курс Увод у информатику"
   twentyhours_text: "Завршили сте свој први Час програмирања? Научите више основа информатике и концепте програмирања у курсу који следи."
-  og_title: Свако дете заслужује шансу
+  og_title: 'Свако дете заслужује шансу'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Сваки ученик у свакој школи треба да има прилику да учи рачунарске науке."
@@ -671,8 +671,8 @@
   dashboard_navigation_manage_students: "Управљање ученицима"
   dashboard_navigation_lesson_plans_resources: "План лекција и ресурса"
   dashboard_navigation_view_stats: "Stats"
-  dashboard_navigation_section: Секција:%{section_name}
-  dashboard_navigation_student: Ученик:%{student_name}
+  dashboard_navigation_section: 'Секција:%{section_name}'
+  dashboard_navigation_student: 'Ученик:%{student_name}'
   dashboard_progress_not_started: "not started"
   dashboard_progress_in_progress: "in progress"
   dashboard_progress_not_completed: "није завршено"
@@ -733,8 +733,8 @@
   dashboard_students_female: "Женско"
   dashboard_students_secret: "Тајна"
   dashboard_students_password: "Шифра"
-  dashboard_students_username: Корисничко име:%{student_username}
-  dashboard_students_email: Имејл:%{student_email}
+  dashboard_students_username: 'Корисничко име:%{student_username}'
+  dashboard_students_email: 'Имејл:%{student_email}'
   dashboard_students_completed_levels: "Завршени нивои"
   dashboard_students_total_lines: "Редови програма"
   dashboard_students_show_secret: "Покажи тајну"
@@ -771,7 +771,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Наставни план"
   dashboard_curriculum_overview: "Преглед наставног плана за вртић"
   dashboard_overview: "Преглед"
@@ -789,6 +792,8 @@
   dashboard_curriculum_csins: 'Информатика у науци:'
   dashboard_curriculum_csp: 'AP® Принципи информатичких наука:'
   dashboard_curriculum_ecs: 'Истраживање компјутерске науке:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Вртић"
   dashboard_grade_other: "Други"
   dashboard_login_word: "Реч"
@@ -959,11 +964,11 @@
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1012,6 +1017,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"

@@ -14,15 +14,16 @@
     errors:
       messages:
         blank: "අවශ්‍යයි"
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: "අවශ්‍ය වේ"
+        invalid_plural: "වලංගු නැත"
     attributes:
       user:
         name: "ප්‍රදර්ශක නාමය"
-        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
+        name_example: "ප්‍රදර්ශන නම<br/>(e.g. Cool Coder or Jane S.)"
         email: "විද්‍යුත් තැපැල"
-        parent_email: Parent/guardian email
-        personal_email: Personal email address
+        parent_email: "මාපිය/භාරකරු e-තැපෑල"
+        personal_email: පෞද්ගලික e-තැපැල් ලිපිනය <a href="%{url}">(ඔබට e-තැපැල් ලිපිනයක්
+          නැති නම් මෙතන ඔබන්න)</a>
         username: "පරිශීලක නාමය"
         password: "මුර පදය"
         password_confirmation: "මුර පදය ස්ථිර කිරීම"
@@ -91,12 +92,12 @@
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft ගිණුම
-    clever: Clever Account
+    clever: "දක්ෂ ගිණුම"
     forgot_password: "ඔබගේ මුරපදය අමතකද?"
     need_confirmation: "තහවුරු කිරීමේ උපදෙස් තවමත් ලැබී නැත්ද?"
     need_unlock: "අගුළු හැරීමේ උපදෙස් ලැබී නැත් ද?"
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
+    not_linked: "සමාවන්න, ඔබගේ Code.org ගිණුම %{provider} ට සම්බන්ධ වී නොමැත. ඔබට
+      ඔබේ මුරපදය (password) යොදා ඇතුලත් විය හැක."
     use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
       sign in through your Clever Portal instead.
   signup_form:
@@ -105,14 +106,13 @@
     overview: ගිණුමකට   අත්සන්වන්න  ඔබගේ ප්‍රගතිය බැලීමට නැතහොත් පාලනය කිරීමට.<a href="/">ඔබට
       විවිද අවදි ප්‍රහේලිකාවේ සොයන්න හැකය.</a>ගිණුමක් නොමැතිව ,නමුත්  ඔබට අත්සන්වන්න
       වෙනවා ගිණුමට  ඔබගේ ප්‍රගතිය  සහ  ව්‍යාපෘති දිගුකාලීනව තබා ගැනීමට.
-    hoc_already_signed_up_heading: Get started without logging in
-    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
-      and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
-      courses</a>.
+    hoc_already_signed_up_heading: "ඇතුළත් නොවී ආරම්භ කරන්න"
+    hoc_already_signed_up_content: ඔබ Hour of Code ඉගැන්වීමට ලියාපදිංචි වී ඇත! ඔබටත්
+      ඔබගේ සිසුන් හටත් මෙම වැඩසටහන සඳහා සහභාගී වීමට Code Studio හි ලියාපදිංචි වීමට
+      අවශ්‍යතාවයක් නැත. ආරම්භ වීමට, ඔබගේ පන්තිය සඳහා<a href="%{learn_url}">නිබන්ධනයක්
+      තෝරා ගැනීමට</a> ඔවුන් හා ලින්ක් එක බෙදාගන්න.<br/><br/>ඔබ Hour of Code රසවිඳ
+      තව දුරටත් යාමට කැමති නම්, ඔබට මුරපදයක් යොදා Code Studio ගිණුමක් සාඳා ඔබගේ සිසුන්
+      එහි ඇති <a href="%{educate_url}">දිගු පාඨමාලා</a>හි යෙඳවිය හැකිය.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
       This will let you save your progress and manage your classroom. You’ll be able
@@ -202,6 +202,7 @@
       email: "විද්‍යුත් තැපැල් ලිපිනය"
       submit: "යොමු කරන්න"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:

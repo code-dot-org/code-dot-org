@@ -668,6 +668,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       on_map: true,
       funded: true,
       course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101,
       capacity: 10,
       sessions_attributes: [
         {

@@ -25,7 +25,7 @@
   submit: "Trimite"
   twentyhours_heading: "Încearcă Cursul nostru de Introducere în Informatică"
   twentyhours_text: "Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor."
-  og_title: Fiecare copil merită o portunitate
+  og_title: 'Fiecare copil merită o portunitate'
   og_title_soon: "Ora de Cod este aproape"
   og_title_here: "The Hour of Code is here!"
   og_description: "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 45 de limbi vorbite."
@@ -760,7 +760,10 @@
   dashboard_coursed: 'Curs D: '
   dashboard_coursee: 'Curs E: '
   dashboard_coursef: 'Curs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați aceste lecţii offline</a> în clasa dvs."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "Prezentare generală Curriculum pentru clasele 1-5"
   dashboard_overview: "Prezentare generală"
@@ -778,6 +781,8 @@
   dashboard_curriculum_csins: 'Informatica în știință:'
   dashboard_curriculum_csp: 'AP ® Principiile Informaticii:'
   dashboard_curriculum_ecs: 'Explorând Informatica:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Clase"
   dashboard_grade_other: "Alte"
   dashboard_login_word: "Cuvânt"
@@ -846,7 +851,7 @@
   carousel_heading_international: "Tutoriale în limba ta"
   carousel_heading_domestic: "Tutoriale disponibile în limba engleză"
   carousel_heading_beginners: "Tutoriale pentru începători"
-  carousel_heading_beyond_beginners: Tutoriale pentru începători
+  carousel_heading_beyond_beginners: 'Tutoriale pentru începători'
   carousel_heading_javascript: "Tutoriale care predau JavaScript"
   carousel_heading_beyond_javascript: "Tutoriale care predau JavaScript"
   carousel_heading_unplugged: "Nu ai un dispozitiv sau internet? Încearca tehnologia computerelor 'deconectate'"
@@ -948,11 +953,11 @@
   accelerated_name: "Curs intensiv"
   express_name: "Express Course"
   pre-express_name: Curs expres pentru preșcolari
-  cspunit1_name: '(vechi) Unitatea 1: Informaţii digitale'
-  cspunit2_name: '(vechi) Unitatea 2: Internet'
-  cspunit3_name: '(vechi) Unitate 3: programare'
-  cspunit4_name: '(vechi) Unitatea 4: date'
-  cspunit5_name: '(vechi) Unitatea 5: Exploreaza şi creaza PT'
+  cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
+  cspunit2_name: "(vechi) Unitatea 2: Internet"
+  cspunit3_name: "(vechi) Unitate 3: programare"
+  cspunit4_name: "(vechi) Unitatea 4: date"
+  cspunit5_name: "(vechi) Unitatea 5: Exploreaza şi creaza PT"
   cspunit6_name: 'Post-AP: Baze de date din aplicaţii'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1001,6 +1006,7 @@
   cspexams_category_name: "Principiile practicilor test CS"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratului Aplicației"
+  gamelab_name: "Laborator de jocuri"
   basketball_name: "Realizeaza un joc de baschet"
   sports_name: "Prorgramează propriul joc sportiv"
   applab_gradelevel: "Vârste 13 +"

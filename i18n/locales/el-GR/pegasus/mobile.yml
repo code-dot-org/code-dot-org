@@ -25,7 +25,7 @@
   submit: "Υποβολή"
   twentyhours_heading: "Δοκιμάστε την εισαγωγή μας στη Σειρά Μαθημάτων Επιστήμης των Υπολογιστών"
   twentyhours_text: "Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο μάθημα."
-  og_title: Κάθε παιδί δικαιούται μία ευκαιρία
+  og_title: 'Κάθε παιδί δικαιούται μία ευκαιρία'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να μελετήσει την Πληροφορική. Αλλάζει τα πάντα."
@@ -753,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Πρόγραμμα σπουδών"
   dashboard_curriculum_overview: "Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως Ε΄ Δημοτικού"
   dashboard_overview: "Επισκόπηση"
@@ -771,6 +774,8 @@
   dashboard_curriculum_csins: 'Η Πληροφορική στην Επιστήμη:'
   dashboard_curriculum_csp: 'AP® Αρχές Πληροφορικής:'
   dashboard_curriculum_ecs: 'Εξερευνώντας την Πληροφορική:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Άλλα"
   dashboard_login_word: "Λέξη"
@@ -839,7 +844,7 @@
   carousel_heading_international: "Σεμινάρια στη γλώσσα σας"
   carousel_heading_domestic: "Βοηθήματα εκμάθησης που είναι διαθέσιμα στα αγγλικά"
   carousel_heading_beginners: "Βοηθήματα εκμάθησης για αρχάριους"
-  carousel_heading_beyond_beginners: Βοηθήματα εκμάθησης για αρχάριους
+  carousel_heading_beyond_beginners: 'Βοηθήματα εκμάθησης για αρχάριους'
   carousel_heading_javascript: "Μαθήματα που διδάσκουν JavaScript"
   carousel_heading_beyond_javascript: "Οδηγοί που διδάσκουν JavaScript"
   carousel_heading_unplugged: "Δεν διαθέτετε ψηφιακή συσκευή ή πρόσβαση στο Διαδίκτυο; Δοκιμάστε την 'unplugged' Πληροφορική"
@@ -941,11 +946,11 @@
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: Αρχές CS - Ενότητα 3
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "Αρχές CS - Ενότητα 3"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -994,6 +999,7 @@
   cspexams_category_name: "Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών"
   research_studies_category_name: "Research Studies"
   applab_name: "Εργαστήριο εφαρμογών"
+  gamelab_name: "Game Lab"
   basketball_name: "Φτιάξτε ένα παιχνίδι μπάσκετ"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ηλικίες 13+"

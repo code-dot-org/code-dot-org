@@ -448,10 +448,10 @@ GEM
     mini_magick (4.5.1)
     mini_mime (1.0.0)
     mini_portile2 (2.1.0)
-    minitest (5.11.1)
-    minitest-around (0.3.2)
+    minitest (5.11.3)
+    minitest-around (0.4.1)
       minitest (~> 5.0)
-    minitest-reporters (1.1.10)
+    minitest-reporters (1.2.0.beta3)
       ansi
       builder
       minitest (>= 5.0)
@@ -462,7 +462,7 @@ GEM
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mustermann (1.0.0.beta2)
+    mustermann (1.0.1)
     mysql2 (0.3.21)
     naturally (2.1.0)
     net-http-persistent (2.9.4)
@@ -535,7 +535,7 @@ GEM
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
-    rack (2.0.3)
+    rack (2.0.4)
     rack-cache (1.6.1)
       rack (>= 0.4)
     rack-mini-profiler (0.10.1)
@@ -548,7 +548,7 @@ GEM
       rack (>= 1.1)
     rack-parser (0.7.0)
       rack
-    rack-protection (2.0.0.beta2)
+    rack-protection (2.0.1.rc1)
       rack
     rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
@@ -667,10 +667,10 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
-    sinatra (2.0.0.beta2)
-      mustermann (= 1.0.0.beta2)
+    sinatra (2.0.1.rc1)
+      mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.0.beta2)
+      rack-protection (= 2.0.1.rc1)
       tilt (~> 2.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -829,7 +829,7 @@ DEPENDENCIES
   mini_magick
   minitest (~> 5.5)
   minitest-around
-  minitest-reporters
+  minitest-reporters (~> 1.2.0.beta3)
   mocha
   mysql2 (~> 0.3.13)
   naturally
