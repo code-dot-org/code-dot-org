@@ -508,7 +508,7 @@ header.showProjectSaveError = () => {
     "good internet connection and try running the project again to save it.";
 
   const saveErrorHtml = `
-<span class="save_error" title="${saveErrorTooltip}">
+<span class="project-save-error" title="${saveErrorTooltip}">
   <i class="fa fa-exclamation-triangle"/> Error saving project
 </span>`;
 
