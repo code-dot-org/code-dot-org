@@ -767,9 +767,13 @@ var projects = module.exports = {
     };
 
     if (this.useSourcesApi()) {
-      const params = currentSourceVersionId ?
-        `?version=${currentSourceVersionId}&firstSaveTimestamp=${firstSaveTimestamp}` : '';
-      var filename = SOURCE_FILE + params;
+      let params = '';
+      if (currentSourceVersionId) {
+        params = `?version=${currentSourceVersionId}` +
+          `&firstSaveTimestamp=${firstSaveTimestamp}` +
+          `&tabId=${utils.getTabId()}`;
+      }
+      const filename = SOURCE_FILE + params;
       sources.put(channelId, packSources(), filename, function (err, response) {
         if (err) {
           saveSourcesErrorCount++;

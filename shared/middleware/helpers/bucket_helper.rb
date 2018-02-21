@@ -174,7 +174,7 @@ class BucketHelper
     response
   end
 
-  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp)
+  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id)
     return unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
@@ -195,6 +195,7 @@ class BucketHelper
       data_json: {
         replacedVersionId: version_to_replace,
         currentVersionId: current_version,
+        tabId: tab_id,
         key: key,
 
         # Server timestamp indicating when the first version of main.json was saved by the browser

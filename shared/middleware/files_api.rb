@@ -266,7 +266,8 @@ class FilesApi < Sinatra::Base
     # Log to firehose so that we can better troubleshoot issues in this case.
     version_to_replace = params['version']
     timestamp = params['firstSaveTimestamp']
-    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp)
+    tab_id = params['tabId']
+    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
