@@ -38,6 +38,11 @@ let saveChannelErrorCount = 0;
 // Number of consecutive failed attempts to update the sources.
 let saveSourcesErrorCount = 0;
 
+const saveErrorHtml = `
+<span class="save_error">
+  <i class="fa fa-exclamation-triangle"/> Error saving project
+</span>`;
+
 /**
  * Helper for when we split our pathname by /. channel_id and action may end up
  * being undefined.
@@ -862,7 +867,7 @@ var projects = module.exports = {
     });
   },
   showSaveError_(errorType, errorCount, errorText) {
-    $('.project_updated_at').text('Error saving project');  // TODO i18n
+    $('.project_updated_at').html(saveErrorHtml);  // TODO i18n
     firehoseClient.putRecord(
       'analysis-events',
       {
