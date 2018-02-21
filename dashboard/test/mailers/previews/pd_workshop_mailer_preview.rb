@@ -18,6 +18,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSF
   end
 
+  def teacher_enrollment_receipt__csd_summer_workshop
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+  end
+
   def teacher_enrollment_receipt__csp_summer_workshop
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
   end
@@ -36,6 +40,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def teacher_enrollment_reminder__csf
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF
+  end
+
+  def teacher_enrollment_reminder__csd_summer_workshop
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
   end
 
   def teacher_enrollment_reminder__csp_summer_workshop
