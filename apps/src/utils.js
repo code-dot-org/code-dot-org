@@ -750,3 +750,19 @@ export function interpolateColors(from, to, value) {
   const b = fromRGB.b * (1 - value) + toRGB.b * value;
   return `rgb(${r}, ${g}, ${b})`;
 }
+
+/**
+ * Return a random id which will be consistent for this browser tab or window as long as it remains
+ * open, including if this page is reloaded or if we navigate away and then back to it. The id will
+ * be different for other tabs, including tabs in other browsers or on other machines. Unfortunately,
+ * duplicating a browser tab will result in two tabs with the same id, but this is not common.
+ * @returns {string} A string representing a float between 0 and 1.
+ */
+export function getTabId() {
+  let tabId = tryGetSessionStorage('tabId', false);
+  if (tabId) {
+    return tabId;
+  }
+  trySetSessionStorage('tabId', Math.random() + '');
+  return tryGetSessionStorage('tabId', false);
+}
