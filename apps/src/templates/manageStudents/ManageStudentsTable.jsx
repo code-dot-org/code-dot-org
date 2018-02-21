@@ -24,6 +24,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
+  isAddRow: PropTypes.bool,
 });
 
 /** @enum {number} */
@@ -66,6 +67,23 @@ const passwordFormatter = (loginType, {rowData}) => {
       }
     </div>
   );
+};
+
+// The "add row" should always be pinned to the top when sorting.
+// This function takes into account having multiple "add rows"
+const sortRows = (data, columnIndexList, orderList) => {
+  let addRows = [];
+  let studentRows = [];
+  for (let i = 0; i<data.length; i++) {
+    if (data[i].isAddRow) {
+      addRows.push(data[i]);
+    } else {
+      studentRows.push(data[i]);
+    }
+  }
+  addRows = orderBy(addRows, columnIndexList, orderList);
+  studentRows = orderBy(studentRows, columnIndexList, orderList);
+  return addRows.concat(studentRows);
 };
 
 class ManageStudentsTable extends Component {
@@ -131,6 +149,7 @@ class ManageStudentsTable extends Component {
         isEditing={rowData.isEditing}
         isSaving={rowData.isSaving}
         disableSaving={disableSaving}
+        isAddRow={rowData.isAddRow}
       />
     );
   };
@@ -279,7 +298,7 @@ class ManageStudentsTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: sortRows,
     })(this.props.studentData);
 
     return (
