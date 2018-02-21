@@ -14,7 +14,7 @@ $(document).ready(() => {
   registerReducers({projects});
   $.ajax({
     method: 'GET',
-    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}?showFeatured=1`,
     dataType: 'json'
   }).done(projectLists => {
     getStore().dispatch(setProjectLists(projectLists));

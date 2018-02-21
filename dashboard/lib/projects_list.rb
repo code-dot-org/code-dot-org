@@ -72,6 +72,37 @@ module ProjectsList
       fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
     end
 
+    def fetch_featured_published_projects
+      featured_published_projects = {}
+      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
+        featured_published_projects[project_type] = fetch_featured_projects_by_type(project_type)
+      end
+      featured_published_projects
+    end
+
+    def project_and_featured_project_fields
+      [
+        :storage_apps__id___id,
+        :storage_apps__storage_id___storage_id,
+        :storage_apps__value___value,
+        :storage_apps__project_type___project_type,
+        :storage_apps__published_at___published_at,
+        :featured_projects__featured_at___featured_at,
+        :featured_projects__unfeatured_at___unfeatured_at
+      ]
+    end
+
+    def fetch_featured_projects_by_type(project_type)
+      storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
+      project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
+        select(*project_and_featured_project_fields).
+        join(storage_apps, id: :storage_app_id).
+        where(unfeatured_at: nil).
+        where(project_type: project_type.to_s).
+        order("RAND()").limit(4).all
+      print project_featured_project_combo_data
+    end
+
     private
 
     # e.g. '/p/applab' -> 'applab'
