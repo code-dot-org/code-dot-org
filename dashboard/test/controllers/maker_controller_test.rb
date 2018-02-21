@@ -9,6 +9,43 @@ class MakerControllerTest < ActionController::TestCase
     @school = create :school
   end
 
+  test "home redirects to sign-in when user is signed out" do
+    assert_queries 0 do
+      get :home
+    end
+
+    assert_redirected_to '/users/sign_in'
+  end
+
+  test "home loads for student" do
+    # Fake CSD6 script for progress info
+    csd6_script = create :script, name: Script::CSD6_NAME
+    create :script_level, script: csd6_script
+    student = create :student
+    sign_in student
+
+    assert_queries 12 do
+      get :home
+    end
+
+    assert_response :success
+    assert_select '#maker-home'
+  end
+
+  test "home loads for teacher" do
+    # Fake CSD6 script for progress info
+    csd6_script = create :script, name: Script::CSD6_NAME
+    create :script_level, script: csd6_script
+    sign_in @teacher
+
+    assert_queries 13 do
+      get :home
+    end
+
+    assert_response :success
+    assert_select '#maker-home'
+  end
+
   test "apply: fails if unit_6_intention not provided" do
     sign_in @teacher
     assert_raises ActionController::ParameterMissing do
