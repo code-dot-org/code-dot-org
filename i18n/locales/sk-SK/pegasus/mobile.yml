@@ -770,7 +770,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Osnovy"
   dashboard_curriculum_overview: "Prehľad učiva 1. stupňa ZŠ"
   dashboard_overview: "Prehľad"
@@ -786,8 +789,10 @@
   dashboard_teacher_worksheet: "pracovný zošit učiteľa"
   dashboard_curriculum_csina: 'Počítačová veda a algebra:'
   dashboard_curriculum_csins: 'Počítačová veda a veda:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Ostatné"
   dashboard_login_word: "Slovo"
@@ -958,11 +963,11 @@
   accelerated_name: "Zrýchlený kurz"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1011,6 +1016,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratórium aplikácií"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Vek 13+"

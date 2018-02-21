@@ -5,10 +5,10 @@
     %div{id: "containedLevel0"}
       - if @user && current_user && @user != current_user
         -# load other user's solution for teachers viewing their students' solution
-        - sublevel_last_attempt = @user.last_attempt(contained_level).try(:level_source).try(:data)
+        - sublevel_last_attempt = @user.last_attempt(contained_level, @script).try(:level_source).try(:data)
       - elsif current_user
         -# load user's previous attempt at this puzzle.
-        - sublevel_last_attempt = current_user.last_attempt(contained_level).try(:level_source).try(:data)
+        - sublevel_last_attempt = current_user.last_attempt(contained_level, @script).try(:level_source).try(:data)
 
       - level_class = contained_level.class.to_s.underscore
       - if level_class == "multi"

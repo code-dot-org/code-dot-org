@@ -5,7 +5,7 @@ class VideosController < ApplicationController
   load_and_authorize_resource except: [:test, :embed]
   after_action :allow_iframe, only: :embed
 
-  before_action :set_video, only: [:show, :edit, :update]
+  before_action :set_video, only: [:edit, :update]
 
   def test
     @video = Video.first

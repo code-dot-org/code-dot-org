@@ -25,7 +25,7 @@
   submit: "Enviar"
   twentyhours_heading: "Experimente nosso Curso de Introdução à Ciência da Computação"
   twentyhours_text: "Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência da computação e seus conceitos nesse curso."
-  og_title: A Hora do Código está chegando
+  og_title: 'A Hora do Código está chegando'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Cada aluno em cada escola merece a oportunidade de estudar ciência da computação. Isso muda tudo."
@@ -771,7 +771,10 @@
   dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Se não tiver computadores, <a href='%{unplugged_url}'>use essas aulas off-line</a> na sua sala de aula."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Currículo"
   dashboard_curriculum_overview: "Visão geral do currículo do pré ao 5º ano"
   dashboard_overview: "Visão geral"
@@ -789,6 +792,8 @@
   dashboard_curriculum_csins: 'Ciência da computação na ciência:'
   dashboard_curriculum_csp: 'AP® Princípios da ciência da computação:'
   dashboard_curriculum_ecs: 'Explorando a Ciência da Computação:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Nível"
   dashboard_grade_other: "Outros"
   dashboard_login_word: "Palavra"
@@ -857,7 +862,7 @@
   carousel_heading_international: "Tutoriais de parceiros no seu idioma"
   carousel_heading_domestic: "Tutoriais disponíveis em inglês"
   carousel_heading_beginners: "Tutoriais para alunos do Ensino Fundamental"
-  carousel_heading_beyond_beginners: Tutoriais para iniciantes
+  carousel_heading_beyond_beginners: 'Tutoriais para iniciantes'
   carousel_heading_javascript: "Tutoriais que ensinam JavaScript"
   carousel_heading_beyond_javascript: "Tutoriais que ensinam JavaScript"
   carousel_heading_unplugged: "Não tem dispositivos eletrônicos nem Internet? Conheça as atividades de ciência da computação \"offline\""
@@ -959,11 +964,11 @@
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(antigo) Unidade 1: Informação digital'
-  cspunit2_name: '(antigo) Unidade 2: A Internet'
-  cspunit3_name: '(antigo) Unidade 3: Programação'
-  cspunit4_name: '(antigo) Unidade 4: Dados'
-  cspunit5_name: '(antigo) Unidade 5: Explorar e criar tarefas de desempenho'
+  cspunit1_name: "(antigo) Unidade 1: Informação digital"
+  cspunit2_name: "(antigo) Unidade 2: A Internet"
+  cspunit3_name: "(antigo) Unidade 3: Programação"
+  cspunit4_name: "(antigo) Unidade 4: Dados"
+  cspunit5_name: "(antigo) Unidade 5: Explorar e criar tarefas de desempenho"
   cspunit6_name: 'Após NA (Nivelamento Avançado): Bancos de dados em aplicativos'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1012,6 +1017,7 @@
   cspexams_category_name: "Teste prático dos princípios da CC"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratório de Aplicativo"
+  gamelab_name: "Game Lab"
   basketball_name: "Fazer um jogo de basquete"
   sports_name: "Esportes"
   applab_gradelevel: "A partir de 13 anos"

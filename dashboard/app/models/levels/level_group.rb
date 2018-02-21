@@ -200,11 +200,11 @@ ruby
   # @param {User} current_user - The currently signed in user
   # @param {User} user - The optional user we're trying to see the attempt of
   # @param {Level} level - The sublevel we'd like the last attempt for
-  def self.get_sublevel_last_attempt(current_user, user, level)
+  def self.get_sublevel_last_attempt(current_user, user, level, script)
     # if given an alternative user, we want to show that user's solution (for
     # teachers viewing students' solutions), otherwise show that of the current_user
     (user || current_user).
-      try(:last_attempt, level).
+      try(:last_attempt, level, script).
       try(:level_source).
       try(:data)
   end

@@ -334,8 +334,10 @@ export const install = (blockly, blockInstallOptions) => {
   function generatorFor(blockType, statementNames = defaultEventOrder) {
     return function () {
       return statementNames.map((statementName) => {
-        const callback = blockly.Generator.get('JavaScript').statementToCode(this, statementName).replace(/\n/g, '');
-        return `onEventTriggered("${blockType}", ${statementNameToEvent[statementName]}, "${callback}", 'block_id_${this.id}');`;
+        return `
+        onEventTriggered("${blockType}", ${statementNameToEvent[statementName]}, function(event) {
+          ${blockly.Generator.get('JavaScript').statementToCode(this, statementName)}
+        }, 'block_id_${this.id}');`;
       }).join("\n");
     };
   }
@@ -382,8 +384,10 @@ export const install = (blockly, blockInstallOptions) => {
     };
 
     blockly.Generator.get('JavaScript')[`craft_${functionName}`] = function () {
-      const callback = blockly.Generator.get('JavaScript').statementToCode(this, 'DO').replace(/\n/g, '');
-      return `onGlobalEventTriggered(${eventType}, "${callback}", 'block_id_${this.id}');`;
+      return `
+        onGlobalEventTriggered(${eventType}, function(event) {
+          ${blockly.Generator.get('JavaScript').statementToCode(this, 'DO')}
+        }, 'block_id_${this.id}');`;
     };
   }
 
@@ -490,7 +494,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_forever = function () {
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function(event) { ${innerCode} }, -1, event.targetIdentifier);`;
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, -1, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatTimes = {
@@ -510,7 +514,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Generator.get('JavaScript').craft_repeatTimes = function () {
     const times = this.getTitleValue('TIMES');
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function(event) { ${innerCode} }, ${times}, event.targetIdentifier);`;
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatRandom = {
@@ -528,7 +532,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_repeatRandom = function () {
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeatRandom('block_id_${this.id}', function(event) { ${innerCode} }, event.targetIdentifier);`;
+    return `repeatRandom('block_id_${this.id}', function() { ${innerCode} }, event.targetIdentifier);`;
   };
 
   blockly.Blocks.craft_repeatDropdown = {
@@ -552,7 +556,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Generator.get('JavaScript').craft_repeatDropdown = function () {
     const times = this.getTitleValue('TIMES');
     const innerCode = blockly.Generator.get('JavaScript').statementToCode(this, 'DO');
-    return `repeat('block_id_${this.id}', function(event) { ${innerCode} }, ${times}, event.targetIdentifier);`;
+    return `repeat('block_id_${this.id}', function() { ${innerCode} }, ${times}, event.targetIdentifier);`;
   };
 
   blockly.Blocks[`craft_spawnEntity`] = {
@@ -696,7 +700,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_playSound = function () {
     const blockType = this.getTitleValue('TYPE');
-    return `playSound('${blockType}', event.targetIdentifier, 'block_id_${this.id}');\n`;
+    return `playSound("${blockType}", event.targetIdentifier, "block_id_${this.id}");\n`;
   };
 
   blockly.Blocks.craft_addScore = {
@@ -718,6 +722,6 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.Generator.get('JavaScript').craft_addScore = function () {
     const score = this.getTitleValue('SCORE');
-    return `addScore('${score}', 'block_id_${this.id}');\n`;
+    return 'addScore("' + score + '", \'block_id_' + this.id + '\');\n';
   };
 };
