@@ -35,6 +35,8 @@
   var resizeThrottleTimeoutMs = 500;
   var maxHeightPercentage = "#{max_height_percentage}";
 
+  google.load('visualization', '1');
+
   $(document).ready(function() {
     initializeMap();
     addGeocomplete();
@@ -104,40 +106,61 @@
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
-      let censusMessage;
-      switch(event.row['teaches_cs'].value) {
-        case 'YES':
-          censusMessage = "We believe this school offers Computer Science class(es).";
-          break;
-        case 'NO':
-          censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
-          break;
-        case 'MAYBE':
-          censusMessage = "We are unsure if this school offers Computer Science class(es).";
-          break;
-        default:
-          censusMessage = "We have no data about this school.";
-      }
-      const schoolDropdownOptionString = `{
-        value: '${event.row['school_id'].value}',
-        label: '${event.row['school_name'].value}',
-        school: {
-          nces_id: '${event.row['school_id'].value}',
-          name: '${event.row['school_name'].value}',
-          city: '${event.row['city'].value}',
-          state: '${event.row['state_code'].value}',
-          latitude: ${event.row['location'].value.split(',')[0]},
-          longitude: ${event.row['location'].value.split(',')[1]},
-        },
-      }`;
-      event.infoWindowHtml  = `
+      event.infoWindowHtml = generateInfoWindowHtml(
+        event.row['school_id'].value,
+        event.row['school_name'].value,
+        event.row['city'].value,
+        event.row['state_code'].value,
+        event.row['location'].value,
+        event.row['teaches_cs'].value
+      );
+    });
+    google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
+      enableDrag();
+    });
+    google.maps.event.addListener(gmap, 'click', function(event) {
+      enableDrag();
+    });
+  }
+
+  function generateInfoWindowHtml(schoolId, schoolName, city, state, location, teachesCs) {
+    let censusMessage;
+
+    switch(teachesCs) {
+      case 'YES':
+        censusMessage = "We believe this school offers Computer Science.";
+        break;
+      case 'NO':
+        censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
+        break;
+      case 'MAYBE':
+        censusMessage = "We have conflicting data for this school.";
+        break;
+      default:
+        censusMessage = "We have no data about this school.";
+    }
+
+    const schoolDropdownOptionString = `{
+      value: '${schoolId}',
+      label: '${schoolName} - ${city}, ${state}',
+      school: {
+        nces_id: '${schoolId}',
+        name: '${schoolName}',
+        city: '${city}',
+        state: '${state}',
+        latitude: ${location.split(',')[0]},
+        longitude: ${location.split(',')[1]},
+      },
+    }`;
+
+    return `
       <div class="census-info-window">
         <h4>
           <b>
-            ${event.row['school_name'].value}
+            ${schoolName}
           </b>
           <br>
-          (${event.row['city'].value}, ${event.row['state_code'].value})
+          (${city}, ${state})
         </h4>
         <hr>
         <div class="census-message">${censusMessage}</div>
@@ -155,14 +178,7 @@
           <div style="clear: both;" />
         </div>
       </div>
-      `
-    });
-    google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
-      enableDrag();
-    });
-    google.maps.event.addListener(gmap, 'click', function(event) {
-      enableDrag();
-    });
+    `;
   }
 
   function updateCensusMapSchool(school) {
@@ -176,16 +192,32 @@
       }
       gmap.setOptions(map_options);
 
-      const marker = new google.maps.Marker({
-        map: gmap,
-        position: schoolLocation,
-        title: school.name,
-        animation: google.maps.Animation.DROP,
-      });
+      const query = encodeURIComponent(`SELECT * FROM #{TABLE_ID} WHERE school_id in '${school.nces_id}'`);
+      const gvizQuery = new google.visualization.Query(`http://www.google.com/fusiontables/gvizdata?tq=${query}`);
+      const infoWindow = new google.maps.InfoWindow();
 
-      setTimeout(function() {
-        marker.setMap(null);
-      }, 3000);
+      gvizQuery.send(function(response) {
+        const datatable = response.getDataTable();
+        if (datatable && datatable.getNumberOfRows()) {
+          const schoolId = datatable.getValue(0,0);
+          const schoolName = datatable.getValue(0,2);
+          const city = datatable.getValue(0,3);
+          const state = datatable.getValue(0,4);
+          const location = datatable.getValue(0,5);
+          const teachesCs = datatable.getValue(0,6);
+
+          infoWindow.setContent(generateInfoWindowHtml(
+            schoolId,
+            schoolName,
+            city,
+            state,
+            location,
+            teachesCs
+          ));
+          infoWindow.setPosition(schoolLocation);
+          infoWindow.open(gmap);
+        }
+      });
     }
   }
 
