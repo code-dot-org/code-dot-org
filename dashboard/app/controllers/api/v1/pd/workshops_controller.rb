@@ -176,7 +176,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     authenticate_user!
 
     unless current_user.admin? || current_user.workshop_admin? ||
-      current_user.workshop_organizer? || current_user.facilitator?
+      current_user.workshop_organizer? || current_user.program_manager? || current_user.facilitator?
       raise CanCan::AccessDenied.new
     end
 
