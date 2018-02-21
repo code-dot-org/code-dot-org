@@ -6,6 +6,7 @@ import {
 const SPRITE_CATEGORY = 'sprites';
 const EVENT_CATEGORY = 'events';
 const EVENT_LOOP_CATEGORY = 'event_loop';
+const VARIABLES_CATEGORY = 'variables';
 const CATEGORIES = {
   [SPRITE_CATEGORY]: {
     color: [184, 1.00, 0.74],
@@ -15,6 +16,9 @@ const CATEGORIES = {
   },
   [EVENT_LOOP_CATEGORY]: {
     color: [322, 0.90, 0.95],
+  },
+  [VARIABLES_CATEGORY]: {
+    color: [312, 0.32, 0.62],
   },
 };
 
@@ -29,13 +33,19 @@ export default {
       ORDER_COMMA,
       ORDER_FUNCTION_CALL,
       ORDER_MEMBER,
+      ORDER_NONE,
     } = Blockly.JavaScript;
+
+    // TODO(ram): Create Blockly.BlockValueType.SPRITE
     const SPRITE_TYPE = blockly.BlockValueType.NONE;
     const generator = blockly.Generator.get('JavaScript');
 
     const createJsWrapperBlock = ({
       category,
       func,
+      expression,
+      orderPrecedence,
+      name,
       blockText,
       args,
       returnType,
@@ -43,7 +53,9 @@ export default {
       eventBlock,
       eventLoopBlock,
     }) => {
-      const blockName = `gamelab_${func}`;
+      args = args || [];
+      const blockName = `gamelab_${name || func}`;
+
       blockly.Blocks[blockName] = {
         helpUrl: '',
         init: function () {
@@ -59,8 +71,7 @@ export default {
 
           this.setInputsInline(true);
           if (returnType) {
-            // TODO(ram): Create Blockly.BlockValueType.SPRITE
-            this.setOutput(true, Blockly.BlockValueType.NUMBER);
+            this.setOutput(true, returnType);
           } else {
             if (eventLoopBlock) {
               this.appendStatementInput('DO');
@@ -103,6 +114,14 @@ export default {
           }
           handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
           values.push(`function () {\n${handlerCode}}`);
+        }
+
+        if (expression) {
+          if (returnType !== undefined) {
+            return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
+          } else {
+            return `${prefix}${expression}`;
+          }
         }
 
         if (returnType !== undefined) {
@@ -266,6 +285,24 @@ export default {
       blockText: 'remove {THIS}',
       args: [],
       methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      category: VARIABLES_CATEGORY,
+      expression: 'arguments[0]',
+      orderPrecedence: ORDER_MEMBER,
+      name: 'firstTouched',
+      blockText: 'first touched sprite',
+      returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      category: VARIABLES_CATEGORY,
+      expression: 'arguments[1]',
+      orderPrecedence: ORDER_MEMBER,
+      name: 'secondTouched',
+      blockText: 'second touched sprite',
+      returnType: SPRITE_TYPE,
     });
   },
 };
