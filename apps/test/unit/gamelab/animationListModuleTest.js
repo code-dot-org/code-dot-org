@@ -52,16 +52,6 @@ describe('animationListModule', function () {
       const props = {sourceUrl: null, version: 'baz'};
       expect(animationSourceUrl(key, props, true)).to.equal('/v3/animations/fake_id/foo.png?version=baz');
     });
-
-    it(`appends version query param if props has a version id and no version flag is passed`, function () {
-      const props = {sourceUrl: null, version: 'baz'};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=baz');
-    });
-
-    it(`appends version query param if props has a version id and sourceURL`, function () {
-      const props = {sourceUrl: 'bar', version: 'baz'};
-      expect(animationSourceUrl(key, props)).to.equal('bar?version=baz');
-    });
   });
 
   describe('loadAnimationFromSource', function () {

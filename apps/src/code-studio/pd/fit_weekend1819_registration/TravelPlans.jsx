@@ -17,7 +17,7 @@ export default class TravelPlans extends LabeledFormComponent {
     contactRelationship: "Relationship to you:",
     contactPhone: "Phone number:",
     dietaryNeeds: "Do you have any dietary needs or food allergies?",
-    dietaryNeedsDetails: "Please provide details",
+    dietaryNeedsDetails: "Please provide details about your food allergy.",
     addressStreet: "Street",
     addressCity: "City",
     addressState: "State",
@@ -64,7 +64,7 @@ export default class TravelPlans extends LabeledFormComponent {
     }
 
     if (data.dietaryNeeds && data.dietaryNeeds.includes('Food Allergy')) {
-      requiredFields.push('foodAllergyDetails');
+      requiredFields.push('dietaryNeedsDetails');
     }
 
     if (data.needHotel === 'Yes') {
@@ -125,7 +125,9 @@ export default class TravelPlans extends LabeledFormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsFor("howTraveling")}
+          {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
+            'I will carpool with another FiT Weekend attendee (Please note who)': 'carpooling_with_attendee'
+          })}
           {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel === 'Yes' &&
