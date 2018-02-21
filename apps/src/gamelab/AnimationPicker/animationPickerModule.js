@@ -107,22 +107,18 @@ export function beginUpload(filename) {
  */
 export function handleUploadComplete(result) {
   return function (dispatch, getState) {
-    const { goal, uploadFilename } = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
-    const onImageMetadataLoaded = buildOnImageMetadataLoaded(uploadFilename, goal, key, result, dispatch);
-    // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
-    // ought to preview and get dimensions from the local filesystem, async
-    // with the upload itself, but that will mean refactoring away from the
-    // jQuery uploader.
+    const onImageMetadataLoaded = buildOnImageMetadataLoaded(key, result, dispatch, getState);
     loadImageMetadata(sourceUrl, onImageMetadataLoaded, () => {
       dispatch(handleUploadError(gamelabMsg.animationPicker_failedToParseImage()));
     });
   };
 }
 
-export function buildOnImageMetadataLoaded(uploadFilename, goal, key, result, dispatch) {
+export function buildOnImageMetadataLoaded(key, result, dispatch, getState) {
   return (metadata) => {
+    const { goal, uploadFilename } = getState().animationPicker;
     const animation = _.assign({}, metadata, {
       name: uploadFilename,
       sourceUrl: null,
