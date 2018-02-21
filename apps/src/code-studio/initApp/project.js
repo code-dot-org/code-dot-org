@@ -431,10 +431,6 @@ var projects = module.exports = {
     }
   },
 
-  showHeaderSaveError() {
-    header.showProjectSaveError();
-  },
-
   //////////////////////////////////////////////////////////////////////
   // End of properties and callbacks.
   //////////////////////////////////////////////////////////////////////
@@ -866,7 +862,7 @@ var projects = module.exports = {
     });
   },
   showSaveError_(errorType, errorCount, errorText) {
-    this.showHeaderSaveError();
+    header.showProjectSaveError();
     firehoseClient.putRecord(
       'analysis-events',
       {
