@@ -6,8 +6,10 @@ module Pd::Payment
     freeze_time
 
     setup_all do
-      @regional_partner = create :regional_partner
-      @csp_workshop = create(:pd_ended_workshop, regional_partner: @regional_partner, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, enrolled_and_attending_users: 20, num_sessions: 2)
+      @program_manager = create :workshop_organizer
+      @regional_partner = create :regional_partner, program_managers: [@program_manager]
+
+      @csp_workshop = create(:pd_ended_workshop, organizer: @program_manager, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, enrolled_and_attending_users: 20, num_sessions: 2)
 
       2.times do
         @csp_workshop.facilitators << create(:facilitator)
