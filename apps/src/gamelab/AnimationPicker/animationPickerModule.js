@@ -110,7 +110,6 @@ export function handleUploadComplete(result) {
     const { goal, uploadFilename } = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
-
     const onImageMetadataLoaded = buildOnImageMetadataLoaded(uploadFilename, goal, key, result, dispatch);
     // TODO (bbuchanan): This sequencing feels backwards.  Eventually, we
     // ought to preview and get dimensions from the local filesystem, async

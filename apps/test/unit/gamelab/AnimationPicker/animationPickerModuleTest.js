@@ -121,7 +121,7 @@ describe('animationPickerModule', function () {
         const animationKey = newListState.orderedKeys[0];
 
         expect(newListState.propsByKey[animationKey]).to.be.not.null;
-        expect(newListState.propsByKey[animationKey].name).to.equal("filename.jpg");
+        expect(newListState.propsByKey[animationKey].name).to.equal("filename.jpg_1");
         expect(newListState.propsByKey[animationKey].sourceUrl).to.be.null;
       });
     });

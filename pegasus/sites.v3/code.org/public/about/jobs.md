@@ -34,6 +34,8 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Engineering**
 	- [Software Engineer](#softwareengineer)
 	- [Technical Lead](#techlead)
+- **Outreach**
+ 	- [Program Associate](#outreach)
 - **Internships**
 	- [Data Intern (Seattle, WA)](#dataintern)
 	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
@@ -181,6 +183,39 @@ In addition, candidates:
 
 - Must be a U.S. Citizen or Permanent Resident
 - Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="outreach"href="#outreach">Program Associate, Outreach Team (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for a detail and customer-service oriented Program Associate to join Code.org’s Outreach team. The primary responsibility of this role will be to support Code.org’s <a href="/educate/regional-partner">Regional Partner Program</a>. The goal of this program is to help independent organizations throughout the U.S. establish themselves as a K-12 computer science hub for their region, offering professional learning opportunities for teachers and building a strong local community. 
+
+Under the direction of the Director of Outreach, you will provide operational and administrative assistance. This role will work collaboratively with the other team members supporting Regional Partners. This is a full-time, exempt position. 
+
+In this role you will: 
+
+- Manage communication channels with our Regional Partners
+	- Draft and send weekly communication to partners; draft templates Regional Managers can use to email partners
+	- Respond to customer support tickets
+- Provide general support to the team Program Manager and other outreach team members. Typical duties may include:  
+	- Managing the MOU process with partners, reviewing partner annual reports for missing data, updating information sheets and slides 
+	- Tracking teacher and facilitator application data and summarizing findings for team
+- Provide logistical support for events, such as our annual Regional Partner Summit
+
+**Experience and Qualifications:**
+
+We are looking for a customer-service oriented self-starter who is skilled in successfully delivering projects, enjoys multi-tasking, cheerfully excels under pressure, and works independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
+
+You will be successful in this role if you have:
+
+- Passion for Code.org’s mission 
+- Proficiency in working with Microsoft Office and Google Docs 
+- Proficient with Excel and/or Google Sheets. 
+- 2-3 years experience in a program support role
+- A bachelors degree (Computer science background/experience not required)
+- Ability and willingness to travel up to 15% time 
 
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
