@@ -862,7 +862,7 @@ var projects = module.exports = {
     });
   },
   showSaveError_(errorType, errorCount, errorText) {
-    $('.project_updated_at').text('Error saving project');  // TODO i18n
+    header.showProjectSaveError();
     firehoseClient.putRecord(
       'analysis-events',
       {
