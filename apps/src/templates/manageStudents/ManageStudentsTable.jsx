@@ -69,6 +69,8 @@ const passwordFormatter = (loginType, {rowData}) => {
   );
 };
 
+// The "add row" should always be pinned to the top when sorting.
+// This function takes into account having multiple "add rows"
 const sortRows = (data, columnIndexList, orderList) => {
   let addRows = [];
   let studentRows = [];
