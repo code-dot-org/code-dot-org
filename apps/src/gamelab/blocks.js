@@ -304,5 +304,15 @@ export default {
       blockText: 'second touched sprite',
       returnType: SPRITE_TYPE,
     });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      expression: 'length',
+      orderPrecedence: ORDER_MEMBER,
+      name: 'groupLength',
+      blockText: 'number of sprites in {THIS}',
+      methodCall: true,
+      returnType: blockly.BlockValueType.NUMBER,
+    });
   },
 };
