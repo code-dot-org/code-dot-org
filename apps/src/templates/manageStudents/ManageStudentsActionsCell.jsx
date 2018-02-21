@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -19,7 +19,7 @@ const styles = {
 class ManageStudentActionsCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
-    sectionId: PropTypes.number.isRequired,
+    sectionId: PropTypes.number,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
@@ -29,6 +29,7 @@ class ManageStudentActionsCell extends Component {
     cancelEditingStudent: PropTypes.func,
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
+    addStudent: PropTypes.func,
   };
 
   state = {
@@ -72,6 +73,10 @@ class ManageStudentActionsCell extends Component {
     this.props.saveStudent(this.props.id);
   };
 
+  onAdd = () => {
+    this.props.addStudent(this.props.id);
+  };
+
   render() {
     return (
       <div>
@@ -110,7 +115,7 @@ class ManageStudentActionsCell extends Component {
         {this.props.isAddRow &&
           <div>
             <Button
-              onClick={() => {}}
+              onClick={this.onAdd}
               color={Button.ButtonColor.white}
               text={"Add"}
               disabled={this.props.isSaving || this.props.disableSaving}
@@ -158,5 +163,8 @@ export default connect(state => ({}), dispatch => ({
   },
   saveStudent(id) {
     dispatch(saveStudent(id));
+  },
+  addStudent(id) {
+    dispatch(addStudent(id));
   },
 }))(ManageStudentActionsCell);
