@@ -43,4 +43,25 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       assert_equal workshop_days, response['workshop_days']
     end
   end
+
+  test 'for_user gets regional partners for user' do
+    program_manager = create :teacher
+    regional_partner_for_user = create :regional_partner, name: 'Regional Partner 1'
+    regional_partner_for_user.program_manager = program_manager.id
+    create :regional_partner, name: 'Other regional partner'
+
+    sign_in program_manager
+
+    get :for_user
+    response = JSON.parse(@response.body)
+    assert_equal [['Regional Partner 1', regional_partner_for_user.id.to_s]], response
+  end
+
+  test 'for_user gets all regional partners for workshop admin' do
+    sign_in (create :workshop_admin)
+
+    get :for_user
+    response = JSON.parse(@response.body)
+    assert_equal RegionalPartner.count, response.length
+  end
 end
