@@ -12,6 +12,7 @@ import manageStudents, {
   editStudent,
   startSavingStudent,
   saveStudentSuccess,
+  addStudentSuccess,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -298,6 +299,52 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(nextState.editingData[0], {...expectedBlankRow, loginType: 'picture'});
     });
 
+    it('addStudentSuccess updates studentData,removes editingData, and adds new blank row', () => {
+      // Initial state with blank row
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        sectionId: 10,
+      };
+
+      const studentDataToAdd = {
+        id: 10,
+        name: 'new student',
+        age: 17,
+        gender: 'f',
+        secretPicturePath: '/wizard.jpg',
+        loginType: 'picture',
+        sectionId: 10,
+        isEditing: false,
+      };
+
+      // Add student
+      const addStudentSuccessAction = addStudentSuccess(studentDataToAdd);
+      const addedStudentState = manageStudents(initialState, addStudentSuccessAction);
+
+      assert.deepEqual(addedStudentState.editingData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[10], {
+        ...studentDataToAdd
+      });
+    });
 
   });
 });
