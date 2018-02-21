@@ -80,7 +80,7 @@ module ProjectsList
       featured_published_projects
     end
 
-    def project_and_featured_project_fields
+    def project_and_featured_project_and_user_fields
       [
         :storage_apps__id___id,
         :storage_apps__storage_id___storage_id,
@@ -88,19 +88,27 @@ module ProjectsList
         :storage_apps__project_type___project_type,
         :storage_apps__published_at___published_at,
         :featured_projects__featured_at___featured_at,
-        :featured_projects__unfeatured_at___unfeatured_at
+        :featured_projects__unfeatured_at___unfeatured_at,
+        :users__name___name,
+        :users__birthday___birthday,
+        :users__properties___properties,
       ]
     end
 
     def fetch_featured_projects_by_type(project_type)
       storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
-      project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
-        select(*project_and_featured_project_fields).
+      user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
+      users = "dashboard_#{CDO.rack_env}__users".to_sym
+      project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
+        select(*project_and_featured_project_and_user_fields).
         join(storage_apps, id: :storage_app_id).
+        join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
+        join(users, id: Sequel[:user_storage_ids][:user_id]).
         where(unfeatured_at: nil).
-        where(project_type: project_type.to_s).
+        where(project_type: project_type.to_s, abuse_score: 0).
+        exclude(published_at: nil).
         order("RAND()").limit(4).all
-      print project_featured_project_combo_data
+      print project_featured_project_user_combo_data
     end
 
     private
