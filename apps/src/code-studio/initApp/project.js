@@ -38,8 +38,11 @@ let saveChannelErrorCount = 0;
 // Number of consecutive failed attempts to update the sources.
 let saveSourcesErrorCount = 0;
 
+const saveErrorTooltip = "It looks like we couldn't save your progress. Make sure you have a " +
+  "good internet connection and try running the project again to save it.";
+
 const saveErrorHtml = `
-<span class="save_error">
+<span class="save_error" title="${saveErrorTooltip}">
   <i class="fa fa-exclamation-triangle"/> Error saving project
 </span>`;
 
