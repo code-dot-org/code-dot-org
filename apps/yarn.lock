@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#ea9da01f6512bcd2c8ea562d6a4ff4d2c0549e4f":
-  version "0.1.1"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/ea9da01f6512bcd2c8ea562d6a4ff4d2c0549e4f"
+"@code-dot-org/craft@github:code-dot-org/craft#46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf":
+  version "0.1.2"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"

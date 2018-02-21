@@ -30,10 +30,6 @@ class Activity < ActiveRecord::Base
   belongs_to :user
   belongs_to :level_source
 
-  def best?
-    ActivityConstants.best? test_result
-  end
-
   def perfect?
     ActivityConstants.perfect? test_result
   end

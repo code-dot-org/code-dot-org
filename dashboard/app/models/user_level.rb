@@ -48,10 +48,6 @@ class UserLevel < ActiveRecord::Base
     end
   end
 
-  def best?
-    ActivityConstants.best?(best_result)
-  end
-
   def perfect?
     ActivityConstants.perfect?(best_result)
   end
