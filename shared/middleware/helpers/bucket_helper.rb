@@ -261,7 +261,7 @@ class BucketHelper
 
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
-  def restore_previous_version(encrypted_channel_id, filename, version_id)
+  def restore_previous_version(encrypted_channel_id, filename, version_id, user_id = nil)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
@@ -277,6 +277,7 @@ class BucketHelper
       project_id: encrypted_channel_id,
       data_string: @bucket,
 
+      user_id: user_id,
       data_json: {
         restoredVersionId: version_id,
         newVersionId: response.version_id,
