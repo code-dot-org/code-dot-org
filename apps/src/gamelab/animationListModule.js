@@ -575,7 +575,8 @@ function loadAnimationFromSource(key, callback) {
               project_id: getCurrentId(),
               data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
                 'animationName': state.propsByKey[key].name, 'error': err.message})
-            }
+            },
+          {includeUserId: true}
         );
 
         if (isOwner()) {
