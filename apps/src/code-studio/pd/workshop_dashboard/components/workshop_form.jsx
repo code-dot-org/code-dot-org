@@ -175,7 +175,7 @@ export default class WorkshopForm extends React.Component {
   loadRegionalPartners() {
     this.loadRegionalPartnersRequest = $.ajax({
       method: "GET",
-      url: '/api/v1/regional-partners/for_user',
+      url: '/api/v1/regional_partners',
       dataType: "json"
     }).done(data => {
       this.setState({
