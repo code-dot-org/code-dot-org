@@ -20,7 +20,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-import {queryParams, hasQueryParam} from '../utils';
+import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -1294,15 +1294,17 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 }
 
 /**
- * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ * Allow setting Maker APIs enabled / disabled via URL parameters.
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
     currentSources.makerAPIsEnabled = true;
+    updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = false;
+    updateQueryParam('disableMaker', undefined, true);
   }
 }
 
