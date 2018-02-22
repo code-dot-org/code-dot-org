@@ -146,18 +146,6 @@ function trySetLocalStorageItem(key, value) {
   }
 }
 
-Craft.onAssetsLoaded = () => {};
-
-function ensureAssetsLoaded() {
-  return new Promise(resolve => {
-    if (Craft.assetsLoaded) {
-      resolve();
-    } else {
-      Craft.onAssetsLoaded = () => resolve();
-    }
-  });
-}
-
 /**
  * Initialize Blockly and the Craft app. Called on page load.
  */
@@ -295,9 +283,6 @@ Craft.init = function (config) {
            */
           earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(config.level.puzzle_number),
           afterAssetsLoaded: function () {
-            Craft.assetsLoaded = true;
-            Craft.onAssetsLoaded();
-
             // preload music after essential game asset downloads completely finished
             Craft.musicController.preload();
           },
@@ -661,7 +646,7 @@ Craft.runButtonClick = function () {
   Blockly.mainBlockSpace.traceOn(true);
   studioApp().attempts++;
 
-  ensureAssetsLoaded().then(() => Craft.executeUserCode());
+  Craft.executeUserCode();
 
   if (Craft.level.freePlay && !studioApp().hideSource) {
     var finishBtnContainer = $('#right-button-cell');
