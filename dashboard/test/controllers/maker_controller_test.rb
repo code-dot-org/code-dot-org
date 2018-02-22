@@ -10,13 +10,7 @@ class MakerControllerTest < ActionController::TestCase
     @school = create :school
   end
 
-  test "home redirects to sign-in when user is signed out" do
-    assert_queries 0 do
-      get :home
-    end
-
-    assert_redirected_to '/users/sign_in'
-  end
+  test_redirect_to_sign_in_for :home
 
   test "home loads for student" do
     # Fake CSD6 script for progress info
