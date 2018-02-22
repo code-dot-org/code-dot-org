@@ -861,6 +861,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Location TBA', workshop.friendly_location
   end
 
+  test 'workshops organized by a non program manager are not assigned regional partner' do
+    workshop = create :pd_workshop
+    assert_nil workshop.regional_partner
+  end
+
+  test 'workshops organized by a program manager are assigned the regional partner' do
+    regional_partner = create :regional_partner
+    create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: @organizer
+    workshop = create :pd_workshop, organizer: @organizer
+
+    assert_equal regional_partner, workshop.regional_partner
+  end
+
   private
 
   def session_on_day(day_offset)
