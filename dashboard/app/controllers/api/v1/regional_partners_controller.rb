@@ -11,4 +11,11 @@ class Api::V1::RegionalPartnersController < ApplicationController
       render json: regional_partner_mapping, include: :regional_partner
     end
   end
+
+  # GET /api/v1/regional-partner/for_user
+  def for_user
+    regional_partners = current_user.permission?(UserPermission::WORKSHOP_ADMIN) ? RegionalPartner.all : current_user.regional_partners
+
+    render json: regional_partners.order(:name).map {|partner| {id: partner.id, name: partner.name}}
+  end
 end
