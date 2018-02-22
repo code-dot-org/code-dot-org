@@ -63,6 +63,19 @@ module.exports = class MazeController {
     this.loadLevel_();
   }
 
+  /**
+   * A few placeholder methods intended to be rebound
+   */
+  playAudio = () => {};
+  loadAudio = () => {};
+  getTestResults = () => {};
+
+  rebindMethods(methods) {
+    this.playAudio = methods.playAudio || this.playAudio;
+    this.loadAudio = methods.loadAudio || this.loadAudio;
+    this.getTestResults = methods.getTestResults || this.getTestResults;
+  }
+
   addReduxStore(store) {
     this.store = store;
   }
@@ -247,10 +260,10 @@ module.exports = class MazeController {
     if (squareType === tiles.SquareType.WALL || squareType === undefined ||
       (this.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE)) {
       // Play the sound
-      studioApp().playAudio('wall');
+      this.playAudio('wall');
       if (squareType !== undefined) {
         // Check which type of wall pegman is hitting
-        studioApp().playAudio('wall' + this.subtype.wallMap[targetY][targetX]);
+        this.playAudio('wall' + this.subtype.wallMap[targetY][targetX]);
       }
 
       if (this.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE) {
@@ -259,14 +272,14 @@ module.exports = class MazeController {
 
       this.animationsController.scheduleWallHit(targetX, targetY, deltaX, deltaY, frame);
       timeoutList.setTimeout(() => {
-        studioApp().playAudioOnFailure();
+        this.playAudioOnFailure();
       }, this.stepSpeed * 2);
     } else if (squareType === tiles.SquareType.OBSTACLE) {
       // Play the sound
-      studioApp().playAudio('obstacle');
+      this.playAudio('obstacle');
       this.animationsController.scheduleObstacleHit(targetX, targetY, deltaX, deltaY, frame);
       timeoutList.setTimeout(function () {
-        studioApp().playAudioOnFailure();
+        this.playAudioOnFailure();
       }, this.stepSpeed);
     }
   }
