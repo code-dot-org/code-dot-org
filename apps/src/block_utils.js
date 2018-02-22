@@ -426,9 +426,18 @@ exports.interpolateInputs = function (blockly, block, inputs) {
 };
 const interpolateInputs = exports.interpolateInputs;
 
+/**
+ * Create a block generator that creats blocks that directly map to a javascript
+ * function call, method call, or other (hopefully simple) expression.
+ *
+ * @params {Blockly} blockly The Blockly object provided to install()
+ * @params {string} blocksModuleName Module name that will be prefixed to all
+ *   the block names
+ * @returns {function} A function that takes a bunch of block properties and
+ *   adds a block to the blockly.Blocks object. See param documentation below.
+ */
 exports.createJsWrapperBlockCreator = function (
   blockly,
-  blockInstallOptions,
   blocksModuleName
 ) {
 
@@ -440,6 +449,33 @@ exports.createJsWrapperBlockCreator = function (
   } = Blockly.JavaScript;
 
   const generator = blockly.Generator.get('JavaScript');
+
+  /**
+   * Create a block that directly maps to a javascript function call, method
+   * call, or other (hopefully simple) expression.
+   *
+   * @param {Object} opts Block options
+   * @param {number[]} opts.color HSV block color as a 3-element number array
+   * @param {string} opts.func For function/method calls, the function name
+   * @param {string} opts.expression Instead of specifying func, use this param
+   *   to specify an arbitrary javascript expression instead
+   * @param {number} opts.orderPrecedence For expressions, the minimum binding
+   *   strength of any operators in the expression. You can omit this, and the
+   *   code generator code will just wrap the expression in parens, see:
+   *   https://developers.google.com/blockly/guides/create-custom-blocks/operator-precedence
+   * @param {string} opts.name Block name, defaults to func.
+   * @param {string} opts.blockText Human-readable text to show on the block,
+   *   with params specified in curly braces, see determineInputs()
+   * @param {Object[]} opts.args List of block inputs, see determineInputs()
+   * @param {BlockValueType} opts.returnType Type of value returned by this
+   *   block, omit if you want a block with no output.
+   * @param {boolean} opts.methodCall Generate a method call. The blockText
+   *   should contain '{THIS}' in order to create an input for the instance
+   * @param {boolean} opts.eventBlock Generate an event block, which is just a
+   *   block without a previous statement connector.
+   * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
+   *   looks like a loop block but without previous or next statement connectors
+   */
   return ({
     color,
     func,
@@ -453,6 +489,12 @@ exports.createJsWrapperBlockCreator = function (
     eventBlock,
     eventLoopBlock,
   }) => {
+    if (!func === !expression) {
+      throw new Error('Provide either func or expression, but not both');
+    }
+    if (expression && !name) {
+      throw new Error('Expression blocks require a name');
+    }
     args = args || [];
     const blockName = `${blocksModuleName}_${name || func}`;
 

@@ -18,7 +18,7 @@ export default {
     const { ORDER_MEMBER } = Blockly.JavaScript;
 
     const createJsWrapperBlock =
-      createJsWrapperBlockCreator(blockly, blockInstallOptions, 'gamelab');
+      createJsWrapperBlockCreator(blockly, 'gamelab');
 
     createJsWrapperBlock({
       color: SPRITE_COLOR,
