@@ -472,7 +472,7 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
   end
 
   #
