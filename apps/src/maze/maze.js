@@ -174,7 +174,7 @@ module.exports = class Maze {
 
       // Listen for hint events that draw a path in the game.
       window.addEventListener('displayHintPath', e => {
-        this.drawHintPath_(svg, e.detail);
+        this.controller.drawHintPath(svg, e.detail);
       });
     };
 
@@ -481,7 +481,7 @@ module.exports = class Maze {
     // Maze. now contains a transcript of all the user's actions.
     // Reset the maze and animate the transcript.
     studioApp().reset(false);
-    this.controller.resetDirtImages_(true);
+    this.controller.resetDirtImages(true);
 
     // if we have extra top blocks, don't even bother animating
     if (this.testResults === TestResults.EXTRA_TOP_BLOCKS_FAIL) {
@@ -644,49 +644,49 @@ module.exports = class Maze {
 
     switch (action.command) {
       case 'north':
-        this.controller.animatedMove_(tiles.Direction.NORTH, timePerStep);
+        this.controller.animatedMove(tiles.Direction.NORTH, timePerStep);
         break;
       case 'east':
-        this.controller.animatedMove_(tiles.Direction.EAST, timePerStep);
+        this.controller.animatedMove(tiles.Direction.EAST, timePerStep);
         break;
       case 'south':
-        this.controller.animatedMove_(tiles.Direction.SOUTH, timePerStep);
+        this.controller.animatedMove(tiles.Direction.SOUTH, timePerStep);
         break;
       case 'west':
-        this.controller.animatedMove_(tiles.Direction.WEST, timePerStep);
+        this.controller.animatedMove(tiles.Direction.WEST, timePerStep);
         break;
       case 'look_north':
-        this.controller.animatedLook_(tiles.Direction.NORTH);
+        this.controller.animatedLook(tiles.Direction.NORTH);
         break;
       case 'look_east':
-        this.controller.animatedLook_(tiles.Direction.EAST);
+        this.controller.animatedLook(tiles.Direction.EAST);
         break;
       case 'look_south':
-        this.controller.animatedLook_(tiles.Direction.SOUTH);
+        this.controller.animatedLook(tiles.Direction.SOUTH);
         break;
       case 'look_west':
-        this.controller.animatedLook_(tiles.Direction.WEST);
+        this.controller.animatedLook(tiles.Direction.WEST);
         break;
       case 'fail_forward':
-        this.controller.animatedFail_(true);
+        this.controller.animatedFail(true);
         break;
       case 'fail_backward':
-        this.controller.animatedFail_(false);
+        this.controller.animatedFail(false);
         break;
       case 'left':
-        this.controller.animatedTurn_(tiles.TurnDirection.LEFT);
+        this.controller.animatedTurn(tiles.TurnDirection.LEFT);
         break;
       case 'right':
-        this.controller.animatedTurn_(tiles.TurnDirection.RIGHT);
+        this.controller.animatedTurn(tiles.TurnDirection.RIGHT);
         break;
       case 'finish':
         this.finish_(timePerStep);
         break;
       case 'putdown':
-        this.controller.scheduleFill_();
+        this.controller.scheduleFill();
         break;
       case 'pickup':
-        this.controller.scheduleDig_();
+        this.controller.scheduleDig();
         break;
       case 'nectar':
         this.controller.subtype.animateGetNectar();
@@ -725,7 +725,7 @@ module.exports = class Maze {
         this.playAudio('winGoal');
       }
       studioApp().playAudioOnWin();
-      this.controller.animatedFinish_(timePerStep);
+      this.controller.animatedFinish(timePerStep);
     } else {
       timeoutList.setTimeout(function () {
         studioApp().playAudioOnFailure();

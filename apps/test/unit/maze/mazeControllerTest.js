@@ -42,25 +42,25 @@ describe("Maze", function () {
       // image starts out nonexistant
       expect(document.getElementById(dirtId), 'image starts out nonexistant').to.be.null;
 
-      mazeController.scheduleFill_();
+      mazeController.scheduleFill();
       image = document.getElementById(dirtId);
       // image now exists and is dirt
       expect(image).not.to.be.null;
       expect(image.getAttribute('x'), 'image is dirt').to.equal("-550");
 
-      mazeController.scheduleDig_();
+      mazeController.scheduleDig();
       image = document.getElementById(dirtId);
       // tile is flat, image is therefore hidden
       expect(image, 'image now exists').not.to.be.null;
       expect(image.getAttribute('visibility'), 'tile is flat, image is therefore hidden').to.equal('hidden');
 
-      mazeController.scheduleDig_();
+      mazeController.scheduleDig();
       image = document.getElementById(dirtId);
       // image is a holde
       expect(image, 'image now exists').not.to.be.null;
       expect(image.getAttribute('x'), 'image is a hole').to.equal("-500");
 
-      mazeController.scheduleFill_();
+      mazeController.scheduleFill();
       image = document.getElementById(dirtId);
       // tile is flat, image is therefore hidden
       expect(image, 'image now exists').not.to.be.null;
