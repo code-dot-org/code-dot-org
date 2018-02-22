@@ -882,7 +882,8 @@ var projects = module.exports = {
           shareUrl: this.getShareUrl(),
           currentSourceVersionId: currentSourceVersionId,
         }),
-      }
+      },
+      {includeUserId: true}
     );
   },
   updateCurrentData_(err, data, options = {}) {
