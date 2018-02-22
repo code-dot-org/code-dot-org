@@ -52,7 +52,7 @@ def load_configuration
     'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
-    'dashboard_secret_key_base'   => 'not a secret',
+    'dashboard_secret_key_base'   => '0' * 32,
     'dashboard_honeybadger_api_key' => '00000000',
     'dashboard_host'              => '0.0.0.0',
     'dashboard_port'              => 3000,
