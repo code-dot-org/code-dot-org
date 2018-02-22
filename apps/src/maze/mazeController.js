@@ -119,7 +119,7 @@ module.exports = class MazeController {
    * Redraw all dirt images
    * @param {boolean} running Whether or not user program is currently running
    */
-  resetDirtImages_(running) {
+  resetDirtImages(running) {
     this.map.forEachCell((cell, row, col) => {
       this.subtype.drawer.updateItemImage(row, col, running);
     });
@@ -137,7 +137,7 @@ module.exports = class MazeController {
    * @param svg
    * @param {Array<Array>} coordinates An array of x and y grid coordinates.
    */
-  drawHintPath_(svg, coordinates) {
+  drawHintPath(svg, coordinates) {
     const path = svg.getElementById('hintPath');
     path.setAttribute('d', 'M' + coordinates.map(([x, y]) => {
       return `${this.gridNumberToPosition_(x)},${this.gridNumberToPosition_(y)}`;
@@ -163,7 +163,7 @@ module.exports = class MazeController {
 
     // Move the init dirt marker icons into position.
     this.map.resetDirt();
-    this.resetDirtImages_(false);
+    this.resetDirtImages(false);
 
     // Reset the obstacle image.
     var obsId = 0;
@@ -204,27 +204,27 @@ module.exports = class MazeController {
     }
   }
 
-  animatedFinish_(timePerStep) {
+  animatedFinish(timePerStep) {
     this.animationsController.scheduleDance(true, timePerStep);
   }
 
-  animatedMove_(direction, timeForMove) {
+  animatedMove(direction, timeForMove) {
     var positionChange = tiles.directionToDxDy(direction);
     var newX = this.pegmanX + positionChange.dx;
     var newY = this.pegmanY + positionChange.dy;
     this.animationsController.scheduleMove(newX, newY, timeForMove);
-    studioApp().playAudio('walk');
+    this.playAudio('walk');
     this.pegmanX = newX;
     this.pegmanY = newY;
   }
 
-  animatedTurn_(direction) {
+  animatedTurn(direction) {
     var newDirection = this.pegmanD + direction;
     this.animationsController.scheduleTurn(newDirection);
     this.pegmanD = tiles.constrainDirection4(newDirection);
   }
 
-  animatedFail_(forward) {
+  animatedFail(forward) {
     var dxDy = tiles.directionToDxDy(this.pegmanD);
     var deltaX = dxDy.dx;
     var deltaY = dxDy.dy;
@@ -276,7 +276,7 @@ module.exports = class MazeController {
    * in the specified direction.
    * @param {!Direction} direction Direction (0 - 3).
    */
-  animatedLook_(direction) {
+  animatedLook(direction) {
     var x = this.pegmanX;
     var y = this.pegmanY;
     switch (direction) {
@@ -311,13 +311,13 @@ module.exports = class MazeController {
 
     this.map.setValue(row, col, previousValue + options.amount);
     this.subtype.scheduleDirtChange(row, col);
-    studioApp().playAudio(options.sound);
+    this.playAudio(options.sound);
   }
 
   /**
    * Schedule to add dirt at pegman's current position.
    */
-  scheduleFill_() {
+  scheduleFill() {
     this.scheduleDirtChange_({
       amount: 1,
       sound: 'fill'
@@ -327,7 +327,7 @@ module.exports = class MazeController {
   /**
    * Schedule to remove dirt at pegman's current location.
    */
-  scheduleDig_() {
+  scheduleDig() {
     this.scheduleDirtChange_({
       amount: -1,
       sound: 'dig'
