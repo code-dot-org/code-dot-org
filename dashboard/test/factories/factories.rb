@@ -108,6 +108,11 @@ FactoryGirl.define do
           end
         end
       end
+      factory :program_manager do
+        after(:create) do |user|
+          create :regional_partner_program_manager, program_manager: user
+        end
+      end
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
         sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
