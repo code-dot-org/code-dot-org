@@ -231,6 +231,15 @@
         <category name="Start">
           <block type="when_run"/>
         </category>
+        <category name="World">
+          <block type="gamelab_setBackground" inline="true">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+        </category>
         <category name="Sprites">
           <block type="variables_set" inline="false">
             <title name="VAR">sprite</title>
@@ -317,6 +326,7 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_groupLength" inline="true"/>
         </category>
         <category name="Events">
           <block type="gamelab_whenUpArrow"/>
@@ -385,6 +395,19 @@
                 <title name="NUM">100</title>
               </block>
             </value>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if" inline="false"/>
+          <block type="logic_compare" inline="true">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation" inline="true">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_negate" inline="false"/>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
           </block>
         </category>
       </xml>
