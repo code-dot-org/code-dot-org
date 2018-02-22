@@ -174,7 +174,7 @@ class BucketHelper
     response
   end
 
-  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id)
+  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, user_id)
     return unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
@@ -191,6 +191,7 @@ class BucketHelper
       event: 'replace-non-current-main-json',
 
       project_id: encrypted_channel_id,
+      user_id: user_id,
 
       data_json: {
         replacedVersionId: version_to_replace,
