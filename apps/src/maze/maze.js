@@ -36,8 +36,14 @@ module.exports = class Maze {
     };
 
     this.stepSpeed = 100;
+    this.animating_ = false;
 
     this.cachedBlockStates = [];
+
+    this.response;
+    this.result;
+    this.testResults;
+    this.waitingForReport;
 
     // TODO elijah: move this out into a separate part of the lifecycle
     if (studioApp()) {
@@ -262,7 +268,8 @@ module.exports = class Maze {
   };
 
   reset_ = () => {
-    this.controller.reset_();
+    this.animating_ = false;
+    this.controller.reset();
   };
 
   beginAttempt() {
