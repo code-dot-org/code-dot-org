@@ -58,6 +58,14 @@ class GamelabJr < Gamelab
   <block type="gamelab_moveDown" />
   <block type="gamelab_moveLeft" />
   <block type="gamelab_moveRight" />
+  <block type="gamelab_displace" />
+  <block type="gamelab_destroy" />
+  <block type="gamelab_firstTouched" />
+  <block type="gamelab_secondTouched" />
+</category>
+<category name="Groups">
+  <block type="gamelab_makeNewGroup" />
+  <block type="gamelab_add" />
 </category>
 <category name="Events">
   <block type="gamelab_whenUpArrow" />
@@ -68,6 +76,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_whileDownArrow" />
   <block type="gamelab_whileLeftArrow" />
   <block type="gamelab_whileRightArrow" />
+  <block type="gamelab_whenTouching" />
 </category>
 <category name="Math">
   <block type="math_number" />
@@ -91,6 +100,41 @@ class GamelabJr < Gamelab
     </value>
   </block>
   <block type="math_arithmetic" />
+</category>
+<category name="Logic">
+  <block type="controls_if" />
+  <block type="logic_compare" />
+  <block type="logic_operation" />
+  <block type="logic_negate" />
+  <block type="logic_boolean" />
+</category>
+<category name="Loops">
+  <block type="controls_repeat_ext">
+    <value name="TIMES">
+      <block type="math_number">
+        <title name="NUM">10</title>
+      </block>
+    </value>
+  </block>
+  <block type="controls_whileUntil" />
+  <block type="controls_for">
+    <value name="FROM">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="TO">
+      <block type="math_number">
+        <title name="NUM">10</title>
+      </block>
+    </value>
+    <value name="BY">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="controls_flow_statements" />
 </category>
     XML
   end
