@@ -6,6 +6,7 @@ import {
 const SPRITE_CATEGORY = 'sprites';
 const EVENT_CATEGORY = 'events';
 const EVENT_LOOP_CATEGORY = 'event_loop';
+const VARIABLES_CATEGORY = 'variables';
 const CATEGORIES = {
   [SPRITE_CATEGORY]: {
     color: [184, 1.00, 0.74],
@@ -15,6 +16,9 @@ const CATEGORIES = {
   },
   [EVENT_LOOP_CATEGORY]: {
     color: [322, 0.90, 0.95],
+  },
+  [VARIABLES_CATEGORY]: {
+    color: [312, 0.32, 0.62],
   },
 };
 
@@ -29,13 +33,19 @@ export default {
       ORDER_COMMA,
       ORDER_FUNCTION_CALL,
       ORDER_MEMBER,
+      ORDER_NONE,
     } = Blockly.JavaScript;
-    const SPRITE_TYPE = blockly.BlockValueType.NUMBER;
+
+    // TODO(ram): Create Blockly.BlockValueType.SPRITE
+    const SPRITE_TYPE = blockly.BlockValueType.NONE;
     const generator = blockly.Generator.get('JavaScript');
 
     const createJsWrapperBlock = ({
       category,
       func,
+      expression,
+      orderPrecedence,
+      name,
       blockText,
       args,
       returnType,
@@ -43,7 +53,9 @@ export default {
       eventBlock,
       eventLoopBlock,
     }) => {
-      const blockName = `gamelab_${func}`;
+      args = args || [];
+      const blockName = `gamelab_${name || func}`;
+
       blockly.Blocks[blockName] = {
         helpUrl: '',
         init: function () {
@@ -59,8 +71,7 @@ export default {
 
           this.setInputsInline(true);
           if (returnType) {
-            // TODO(ram): Create Blockly.BlockValueType.SPRITE
-            this.setOutput(true, Blockly.BlockValueType.NUMBER);
+            this.setOutput(true, returnType);
           } else {
             if (eventLoopBlock) {
               this.appendStatementInput('DO');
@@ -105,6 +116,14 @@ export default {
           values.push(`function () {\n${handlerCode}}`);
         }
 
+        if (expression) {
+          if (returnType !== undefined) {
+            return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
+          } else {
+            return `${prefix}${expression}`;
+          }
+        }
+
         if (returnType !== undefined) {
           return [`${prefix}${func}(${values.join(', ')})`, ORDER_FUNCTION_CALL];
         } else {
@@ -116,13 +135,31 @@ export default {
     createJsWrapperBlock({
       category: SPRITE_CATEGORY,
       func: 'makeNewSprite',
-      blockText: 'Make a new {ANIMATION} sprite at {X} {Y}',
+      blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
-        { name: 'ANIMATION', options: SPRITES},
-        { name: 'X', type: blockly.BlockValueType.NUMBER},
-        { name: 'Y', type: blockly.BlockValueType.NUMBER},
+        { name: 'ANIMATION', options: SPRITES },
+        { name: 'X', type: blockly.BlockValueType.NUMBER },
+        { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
       returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'makeNewGroup',
+      blockText: 'make a new group',
+      args: [],
+      returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'add',
+      blockText: 'add {SPRITE} to group {THIS}',
+      args: [
+        { name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      methodCall: true,
     });
 
     createJsWrapperBlock({
@@ -219,6 +256,53 @@ export default {
       blockText: 'while right arrow presssed',
       args: [],
       eventLoopBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: EVENT_CATEGORY,
+      func: 'whenTouching',
+      blockText: 'when {SPRITE1} is touching {SPRITE2}',
+      args: [
+        { name: 'SPRITE1', type: SPRITE_TYPE },
+        { name: 'SPRITE2', type: SPRITE_TYPE },
+      ],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'displace',
+      blockText: '{THIS} blocks {SPRITE} from moving',
+      args: [
+        {name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      category: SPRITE_CATEGORY,
+      func: 'destroy',
+      blockText: 'remove {THIS}',
+      args: [],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      category: VARIABLES_CATEGORY,
+      expression: 'arguments[0]',
+      orderPrecedence: ORDER_MEMBER,
+      name: 'firstTouched',
+      blockText: 'first touched sprite',
+      returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      category: VARIABLES_CATEGORY,
+      expression: 'arguments[1]',
+      orderPrecedence: ORDER_MEMBER,
+      name: 'secondTouched',
+      blockText: 'second touched sprite',
+      returnType: SPRITE_TYPE,
     });
   },
 };
