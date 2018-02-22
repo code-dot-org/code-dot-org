@@ -20,7 +20,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-import {queryParams, hasQueryParam} from '../utils';
+import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -867,6 +867,7 @@ var projects = module.exports = {
       'analysis-events',
       {
         study: 'project-data-integrity',
+        study_group: 'v2',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
@@ -882,7 +883,8 @@ var projects = module.exports = {
           shareUrl: this.getShareUrl(),
           currentSourceVersionId: currentSourceVersionId,
         }),
-      }
+      },
+      {includeUserId: true}
     );
   },
   updateCurrentData_(err, data, options = {}) {
@@ -1294,15 +1296,17 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 }
 
 /**
- * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ * Allow setting Maker APIs enabled / disabled via URL parameters.
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
     currentSources.makerAPIsEnabled = true;
+    updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = false;
+    updateQueryParam('disableMaker', undefined, true);
   }
 }
 
