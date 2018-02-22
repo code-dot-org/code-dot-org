@@ -117,7 +117,7 @@ class ManageStudentActionsCell extends Component {
             <Button
               onClick={this.onAdd}
               color={Button.ButtonColor.white}
-              text={"Add"}
+              text={i18n.add()}
               disabled={this.props.isSaving || this.props.disableSaving}
             />
           </div>
