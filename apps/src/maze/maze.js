@@ -45,22 +45,9 @@ module.exports = class Maze {
     this.testResults;
     this.waitingForReport;
 
-    // TODO elijah: move this out into a separate part of the lifecycle
-    if (studioApp()) {
-      //TODO: Make configurable.
-      studioApp().setCheckForEmptyBlocks(true);
-      this.playAudio = studioApp().playAudio.bind(studioApp());
-      this.loadAudio = studioApp().loadAudio.bind(studioApp());
-      this.getTestResults = studioApp().getTestResults.bind(studioApp());
-    }
+    //TODO: Make configurable.
+    studioApp().setCheckForEmptyBlocks(true);
   }
-
-  /**
-   * A few placeholder methods intended to be rebound
-   */
-  playAudio = () => {};
-  loadAudio = () => {};
-  getTestResults = () => {};
 
   /**
    * Used by appMain to register reducers
@@ -97,6 +84,11 @@ module.exports = class Maze {
     config.dropletConfig = dropletConfig;
 
     this.controller = new MazeController(level, skin, config);
+    this.controller.rebindMethods({
+      playAudio: studioApp().playAudio.bind(studioApp()),
+      loadAudio: studioApp().loadAudio.bind(studioApp()),
+      getTestResults: studioApp().getTestResults.bind(studioApp()),
+    });
     this.controller.addReduxStore(getStore());
 
     if (this.controller.subtype.overrideStepSpeed) {
@@ -330,12 +322,12 @@ module.exports = class Maze {
     //    during execution, in which case we set ResultType to ERROR.
     // The animation should be fast if execution was successful, slow otherwise
     // to help the user see the mistake.
-    this.playAudio('start');
+    studioApp().playAudio('start');
     try {
       // don't bother running code if we're just editting required blocks. all
       // we care about is the contents of report.
-      var initialTestResults = this.getTestResults(false);
-      var runCode = !Maze.isPreAnimationFailure(initialTestResults) && !this.controller.level.edit_blocks;
+      var initialTestResults = studioApp().getTestResults(false);
+      var runCode = !this.isPreAnimationFailure(initialTestResults) && !this.controller.level.edit_blocks;
 
       if (runCode) {
         if (this.controller.map.hasMultiplePossibleGrids()) {
@@ -442,7 +434,7 @@ module.exports = class Maze {
     // Set testResults unless app-specific results were set in the default
     // branch of the above switch statement.
     if (this.testResults === TestResults.NO_TESTS_RUN) {
-      this.testResults = this.getTestResults(levelComplete);
+      this.testResults = studioApp().getTestResults(levelComplete);
     }
 
     var program;
@@ -722,7 +714,7 @@ module.exports = class Maze {
       }
       var finishIcon = document.getElementById('finish');
       if (finishIcon) {
-        this.playAudio('winGoal');
+        studioApp().playAudio('winGoal');
       }
       studioApp().playAudioOnWin();
       this.controller.animatedFinish(timePerStep);
