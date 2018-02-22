@@ -8,6 +8,8 @@ class CourseBlocksGradeBands extends Component {
   static propTypes = {
     cards: PropTypes.arrayOf(
       PropTypes.shape({
+        linkId: PropTypes.string,
+        linkClass: PropTypes.string,
         heading: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired
@@ -21,6 +23,8 @@ class CourseBlocksGradeBands extends Component {
         {this.props.cards.map(
           (card, cardIndex) => (
             <ResourceCard
+              linkId={card.linkId}
+              linkClass={card.linkClass}
               key={cardIndex}
               title={card.heading}
               description={card.description}
