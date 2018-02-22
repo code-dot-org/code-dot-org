@@ -128,8 +128,14 @@ class ManageStudentActionsCell extends Component {
           isOpen={this.state.deleting}
           style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
         >
-          <h2 style={styles.heading}>{i18n.removeStudent()}</h2>
-          <div>{i18n.removeStudentConfirm()}</div>
+          <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
+          <div>
+            {i18n.removeStudentConfirm1() + ' '}
+            <a href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
+              {i18n.removeStudentConfirm2()}
+            </a>
+            {' ' + i18n.removeStudentConfirm3()}
+          </div>
           <DialogFooter>
             <Button
               text={i18n.dialogCancel()}
