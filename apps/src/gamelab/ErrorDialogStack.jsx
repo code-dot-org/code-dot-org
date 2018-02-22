@@ -10,6 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import * as animationActions from './animationListModule';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {getCurrentId} from '../code-studio/initApp/project';
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.
@@ -31,6 +32,7 @@ class ErrorDialogStack extends React.Component {
         study: 'animation_no_load',
         study_group: 'animation_no_load_v2',
         event: 'delete_selected',
+        project_id: getCurrentId(),
         data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
           'animationName': this.props.animationList.propsByKey[key].name})
       }
@@ -47,6 +49,7 @@ class ErrorDialogStack extends React.Component {
         study: 'animation_no_load',
         study_group: 'animation_no_load_v2',
         event: 'reload_selected',
+        project_id: getCurrentId(),
         data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
           'animationName': this.props.animationList.propsByKey[key].name})
       }
