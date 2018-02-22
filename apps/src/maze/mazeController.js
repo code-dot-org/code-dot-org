@@ -46,12 +46,6 @@ module.exports = class MazeController {
     this.subtype = subtype;
     this.animationsController;
 
-    this.animating_;
-    this.response;
-    this.result;
-    this.testResults;
-    this.waitingForReport;
-
     this.pegmanD;
     this.pegmanX;
     this.pegmanY;
@@ -99,7 +93,6 @@ module.exports = class MazeController {
     this.startDirection = this.level.startDirection;
 
     // this could probably be moved to the constructor
-    this.animating_ = false;
 
     if (this.level.fastGetNectarAnimation) {
       this.skin.actionSpeedScale.nectar = 0.5;
@@ -150,13 +143,11 @@ module.exports = class MazeController {
    * Reset the maze to the start position and kill any pending animation tasks.
    * @param {boolean} first True if an opening animation is to be played.
    */
-  reset_ = (first) => {
+  reset = (first) => {
     this.subtype.reset();
 
     // Kill all tasks.
     timeoutList.clearTimeouts();
-
-    this.animating_ = false;
 
     // Move Pegman into position.
     this.pegmanX = this.subtype.start.x;
