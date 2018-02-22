@@ -867,6 +867,7 @@ var projects = module.exports = {
       'analysis-events',
       {
         study: 'project-data-integrity',
+        study_group: 'v2',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
