@@ -93,11 +93,10 @@ module.exports = class Maze {
     this.PEGMAN_Y_OFFSET;
     this.SQUARE_SIZE;
 
-    //TODO: Make configurable.
-    studioApp().setCheckForEmptyBlocks(true);
-
     // TODO elijah: move this out into a separate part of the lifecycle
     if (studioApp()) {
+      //TODO: Make configurable.
+      studioApp().setCheckForEmptyBlocks(true);
       this.playAudio = studioApp().playAudio.bind(studioApp());
       this.loadAudio = studioApp().loadAudio.bind(studioApp());
       this.getTestResults = studioApp().getTestResults.bind(studioApp());
