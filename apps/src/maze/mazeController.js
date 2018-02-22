@@ -23,7 +23,6 @@
  */
 
 const timeoutList = require('../lib/util/timeoutList');
-const studioApp = require('../StudioApp').singleton;
 
 const AnimationsController = require('./animationsController');
 const MazeMap = require('./mazeMap');
@@ -34,7 +33,7 @@ const tiles = require('./tiles');
 module.exports = class MazeController {
   constructor(level, skin, config) {
     const Type = getSubtypeForSkin(config.skinId);
-    const subtype = new Type(this, studioApp(), config);
+    const subtype = new Type(this, config);
 
     this.stepSpeed = 100;
 
@@ -45,6 +44,8 @@ module.exports = class MazeController {
     this.map;
     this.subtype = subtype;
     this.animationsController;
+    this.executionInfo;
+    this.store;
 
     this.pegmanD;
     this.pegmanX;
@@ -60,6 +61,10 @@ module.exports = class MazeController {
     this.SQUARE_SIZE;
 
     this.loadLevel_();
+  }
+
+  addReduxStore(store) {
+    this.store = store;
   }
 
   initWithSvg(svg) {

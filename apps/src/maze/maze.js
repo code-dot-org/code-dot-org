@@ -97,6 +97,7 @@ module.exports = class Maze {
     config.dropletConfig = dropletConfig;
 
     this.controller = new MazeController(level, skin, config);
+    this.controller.addReduxStore(getStore());
 
     if (this.controller.subtype.overrideStepSpeed) {
       this.scale.stepSpeed = this.controller.subtype.overrideStepSpeed;
