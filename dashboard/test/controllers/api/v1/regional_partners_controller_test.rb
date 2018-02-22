@@ -14,7 +14,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   test 'index finds the regional partner for a given district and course combination' do
     [
       ['csp', 'A+ College Ready'],
-      ['csd', 'Academy for CS Education - Florida International University'],
+      ['csd', 'Florida International University'],
     ].each do |course, regional_partner|
       get :index, params: {school_district_id: '1200390', course: course}
       response = JSON.parse(@response.body)
