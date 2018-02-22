@@ -1,5 +1,4 @@
 require 'cdo/user_helpers'
-require 'json'
 
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
@@ -136,7 +135,7 @@ module ProjectsList
     end
 
     def extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
-      @data_for_featured_project_cards = []
+      data_for_featured_project_cards = []
       project_featured_project_user_combo_data.each do |project_details|
         project_details_value = JSON.parse(project_details[:value])
         channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
@@ -149,9 +148,9 @@ module ProjectsList
           "studentName" => UserHelpers.initial(project_details[:name]),
           "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday])
         }
-        @data_for_featured_project_cards << data_for_featured_project_card
+        data_for_featured_project_cards << data_for_featured_project_card
       end
-      return @data_for_featured_project_cards
+      return data_for_featured_project_cards
     end
 
     private

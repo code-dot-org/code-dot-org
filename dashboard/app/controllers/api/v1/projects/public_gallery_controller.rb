@@ -12,7 +12,6 @@ class Api::V1::Projects::PublicGalleryController < ApplicationController
         published_before: params[:published_before],
         append_featured: true
       )
-      ProjectsList.fetch_featured_published_projects
     else
       render json: ProjectsList.fetch_published_projects(
         params[:project_type],
