@@ -568,14 +568,15 @@ function loadAnimationFromSource(key, callback) {
         // Log data about when this scenario occurs
         firehoseClient.putRecord(
          'analysis-events',
-            {
-              study: 'animation_no_load',
-              study_group: 'animation_no_load_v3',
-              event: isOwner() ? 'animation_not_loaded_owner' : 'animation_not_loaded_viewer',
-              project_id: getCurrentId(),
-              data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
-                'animationName': state.propsByKey[key].name, 'error': err.message})
-            }
+          {
+            study: 'animation_no_load',
+            study_group: 'animation_no_load_v3',
+            event: isOwner() ? 'animation_not_loaded_owner' : 'animation_not_loaded_viewer',
+            project_id: getCurrentId(),
+            data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
+              'animationName': state.propsByKey[key].name, 'error': err.message})
+          },
+          {includeUserId: true}
         );
 
         if (isOwner()) {
