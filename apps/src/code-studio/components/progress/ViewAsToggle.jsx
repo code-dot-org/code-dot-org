@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
@@ -75,11 +76,11 @@ const ViewAsToggle = React.createClass({
     );
   }
 });
-
+export const UnconnectedViewAsToggle = ViewAsToggle;
 export default connect(state => ({
   viewAs: state.viewAs
 }), dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));
   }
-}))(ViewAsToggle);
+}))(UnconnectedViewAsToggle);
