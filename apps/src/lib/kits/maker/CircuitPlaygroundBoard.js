@@ -148,7 +148,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // Deregister Firmata sysex response handler for circuit playground commands,
     // or playground-io will fail to register a new one next time we construct it
     // and the old playground-io instance will get events.
-    // TODO (bbuchanan): Improve Firmata+Playground-io so this isn't needed
     if (Firmata.SYSEX_RESPONSE) {
       delete Firmata.SYSEX_RESPONSE[CP_COMMAND];
     }
@@ -157,15 +156,12 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return new Promise((resolve) => {
       // It can take a moment for the reset() command to reach the board, so defer
       // closing the serialport for a moment.
-      // TODO (Brad): Make changes to Firmata so we can be notified when writes
-      // succeed instead of making a 50ms guess, and make this a properly async
-      // method.
       setTimeout(() => {
         // Close the serialport, cleaning it up properly so we can open it again
         // on the next run.
         // Note: This doesn't seem to be necessary when using browser-serialport
         // and the Chrome App connector, but it is required for native
-        // node serialport in the Maker Toolkit Browser.
+        // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
         }

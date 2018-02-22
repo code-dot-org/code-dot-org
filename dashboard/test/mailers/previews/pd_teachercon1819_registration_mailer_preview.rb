@@ -15,11 +15,11 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
   end
 
   def facilitator_accepted
-    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:accepted)
+    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:facilitator_accepted)
   end
 
   def facilitator_withdrawn
-    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:withdrawn)
+    Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:facilitator_declined)
   end
 
   def regional_partner
@@ -52,7 +52,7 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
   end
 
   def build_regional_partner_registration
-    regional_partner_contact = build :teacher, email: 'dumbledore@hogwarts.co.uk'
+    regional_partner_contact = build :teacher, email: 'dumbledore@hogwarts.co.uk', name: 'Albus Dumbledore'
     regional_partner = build :regional_partner, contact: regional_partner_contact
 
     build :pd_regional_partner_program_registration, regional_partner: regional_partner, user: regional_partner_contact

@@ -82,7 +82,6 @@
 
     if node.chef_environment == 'production' # production daemon
       cronjob at:'20 */2 * * *', do:deploy_dir('bin', 'cron', 'activity-monitor')
-      cronjob at:'5 6 * * *', do:deploy_dir('bin', 'cron', 'send_workshop_reminder_emails')
       cronjob at:'15 16 * * *', do:dashboard_dir('bin','scheduled_ops_emails')
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'* 14 * * 1', do:dashboard_dir('bin','scheduled_pd_application_emails')
