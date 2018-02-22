@@ -153,11 +153,6 @@ describe('Level tests', function () {
     if (window.Calc) {
       Calc.resetButtonClick();
     }
-
-    if (window.Craft) {
-      Craft.assetsLoaded = false;
-      Craft.onAssetsLoaded = function () {};
-    }
   });
 
   testCollectionUtils.getCollections().forEach(runTestCollection);
