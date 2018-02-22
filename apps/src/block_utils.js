@@ -393,6 +393,7 @@ exports.determineInputs = function (text, args) {
   }
   return inputs;
 };
+const determineInputs = exports.determineInputs;
 
 /**
  * Adds the specified inputs to the block
@@ -422,4 +423,110 @@ exports.interpolateInputs = function (blockly, block, inputs) {
         break;
     }
   });
+};
+const interpolateInputs = exports.interpolateInputs;
+
+exports.createJsWrapperBlockCreator = function (
+  blockly,
+  blockInstallOptions,
+  blocksModuleName
+) {
+
+  const {
+    ORDER_COMMA,
+    ORDER_FUNCTION_CALL,
+    ORDER_MEMBER,
+    ORDER_NONE,
+  } = Blockly.JavaScript;
+
+  const generator = blockly.Generator.get('JavaScript');
+  return ({
+    color,
+    func,
+    expression,
+    orderPrecedence,
+    name,
+    blockText,
+    args,
+    returnType,
+    methodCall,
+    eventBlock,
+    eventLoopBlock,
+  }) => {
+    args = args || [];
+    const blockName = `${blocksModuleName}_${name || func}`;
+
+    blockly.Blocks[blockName] = {
+      helpUrl: '',
+      init: function () {
+        this.setHSV(...color);
+        const inputs = [...args];
+        if (methodCall) {
+          inputs.push({
+            name: 'THIS',
+            type: Blockly.BlockValueType.NONE,
+          });
+        }
+
+        interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+
+        this.setInputsInline(true);
+        if (returnType) {
+          this.setOutput(true, returnType);
+        } else if (eventLoopBlock) {
+          this.appendStatementInput('DO');
+        } else if (eventBlock) {
+          this.setNextStatement(true);
+          this.skipNextBlockGeneration = true;
+        } else {
+          this.setNextStatement(true);
+          this.setPreviousStatement(true);
+        }
+      },
+    };
+
+    generator[blockName] = function () {
+      const values = args.map(arg => {
+        if (arg.options) {
+          return this.getTitleValue(arg.name);
+        } else {
+          return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
+        }
+      });
+
+      let prefix = '';
+      if (methodCall) {
+        const object =
+          Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
+        prefix = `${object}.`;
+      }
+
+      if (eventLoopBlock || eventBlock) {
+        let handlerCode = '';
+        if (eventBlock) {
+          const nextBlock = this.nextConnection &&
+            this.nextConnection.targetBlock();
+          handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+          handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
+        } else if (eventLoopBlock) {
+          handlerCode = Blockly.JavaScript.statementToCode(this, 'DO');
+        }
+        values.push(`function () {\n${handlerCode}}`);
+      }
+
+      if (expression) {
+        if (returnType !== undefined) {
+          return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
+        } else {
+          return `${prefix}${expression}`;
+        }
+      }
+
+      if (returnType !== undefined) {
+        return [`${prefix}${func}(${values.join(', ')})`, ORDER_FUNCTION_CALL];
+      } else {
+        return `${prefix}${func}(${values.join(', ')});\n`;
+      }
+    };
+  };
 };
