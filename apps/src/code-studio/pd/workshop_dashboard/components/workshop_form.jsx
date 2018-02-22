@@ -369,7 +369,7 @@ export default class WorkshopForm extends React.Component {
           value={this.state.regional_partner_id || ''}
           disabled={this.props.readOnly}
         >
-          <option value=""/>
+          <option value="">None</option>
           {
             this.state.regionalPartners && this.state.regionalPartners.map((partner, i) => {
               return (
