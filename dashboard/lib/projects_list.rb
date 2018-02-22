@@ -1,4 +1,5 @@
 require 'cdo/user_helpers'
+require 'json'
 
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
@@ -60,16 +61,39 @@ module ProjectsList
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before:)
+    def fetch_published_projects(project_group, limit:, published_before:, append_featured:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_group == 'all'
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        return fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
+        if append_featured
+          return include_featured(limit: limit)
+        else
+          return fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
+        end
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
       fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
+    end
+
+    def include_featured(limit:)
+      published = fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
+      featured = fetch_featured_published_projects
+      featured_channel_ids = []
+      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
+        featured[project_type].each do |project|
+          featured_channel_ids << project["channel"]
+        end
+      end
+      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
+        published[project_type].each do |project|
+          unless featured_channel_ids.include?(project["channel"])
+            featured[project_type].push(project)
+          end
+        end
+      end
+      return featured
     end
 
     def fetch_featured_published_projects
@@ -77,7 +101,7 @@ module ProjectsList
       PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
         featured_published_projects[project_type] = fetch_featured_projects_by_type(project_type)
       end
-      featured_published_projects
+      return featured_published_projects
     end
 
     def project_and_featured_project_and_user_fields
@@ -117,21 +141,17 @@ module ProjectsList
         project_details_value = JSON.parse(project_details[:value])
         channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
         data_for_featured_project_card = {
-          projectName: project_details_value['name'],
-          channel: channel,
-          type: project_details[:project_type],
-          publishedAt: project_details[:published_at],
-          thumbnailUrl: project_details_value['thumbnailUrl'],
-          studentName: UserHelpers.initial(project_details[:name]),
-          studentAgeRange: UserHelpers.age_range_from_birthday(project_details[:birthday])
+          "channel" => channel,
+          "name" => project_details_value['name'],
+          "thumbnailUrl" => project_details_value['thumbnailUrl'],
+          "type" => project_details[:project_type],
+          "publishedAt" => project_details[:published_at],
+          "studentName" => UserHelpers.initial(project_details[:name]),
+          "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday])
         }
         @data_for_featured_project_cards << data_for_featured_project_card
       end
-      puts
-      puts
-      print @data_for_featured_project_cards
-      puts
-      puts
+      return @data_for_featured_project_cards
     end
 
     private
@@ -194,7 +214,7 @@ module ProjectsList
     #
     # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
-    # @returns [hash, nil] containing feilds relevant to the published project or
+    # @returns [hash, nil] containing fields relevant to the published project or
     #  nil when the user has sharing_disabled = true
     def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties])
