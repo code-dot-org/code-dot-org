@@ -7,6 +7,7 @@ class CsvToSqlTable
     @db = params[:db] || DB
     @path = path
     @table = File.basename(@path, File.extname(@path)).tr('-', '_').to_sym
+    @remove_type_suffix = (@table == :beyond_tutorials) ? true : false
   end
 
   def up_to_date?
@@ -29,9 +30,10 @@ class CsvToSqlTable
     at = 1
 
     CSV.open(@path, 'rb') do |csv|
-      table, columns = create_table(csv.shift)
+      csv_column_names = csv.shift
+      table, db_column_names = create_table(csv_column_names)
       while values = csv.shift
-        table.insert(hash_from_keys_and_values(columns, values).merge({id: at += 1}))
+        table.insert(hash_from_column_names_and_values(db_column_names, csv_column_names, values).merge({id: at += 1}))
       end
     end
 
@@ -44,12 +46,13 @@ class CsvToSqlTable
 
   private
 
-  def hash_from_keys_and_values(keys, values)
+  def hash_from_column_names_and_values(db_column_names, csv_column_names, values)
     h = {}
-    (0..keys.count - 1).each do |i|
-      key_name = keys[i].to_s
+    (0..db_column_names.count - 1).each do |i|
+      csv_column_name = csv_column_names[i].to_s
+      type_suffix = csv_column_name[csv_column_name.rindex('_')..-1]
       value =
-        case key_name[key_name.rindex('_')..-1]
+        case type_suffix
         when '_b'
           values[i].to_bool
         when '_f'
@@ -60,13 +63,13 @@ class CsvToSqlTable
           values[i]
         end
 
-      h[keys[i]] = value
+      h[db_column_names[i]] = value
     end
     h
   end
 
-  def create_table(columns)
-    schema = columns.map {|column| column_name_to_schema(column)}
+  def create_table(csv_column_names)
+    schema = csv_column_names.map {|csv_column_name| column_name_to_schema(csv_column_name)}
 
     DB.create_table!(@table, charset: 'utf8') do
       primary_key :id
@@ -81,20 +84,20 @@ class CsvToSqlTable
     [DB[@table], schema.map {|i| i[:name]}]
   end
 
-  def column_name_to_schema(name)
-    i = name.rindex('_')
+  def column_name_to_schema(csv_column_name)
+    i = csv_column_name.rindex('_')
 
     if i.nil?
-      ChatClient.log "Bad column name (#{name}) for table (#{@table}), see this " \
+      ChatClient.log "Bad column name (#{csv_column_name}) for table (#{@table}), see this " \
         "<a href='https://drive.google.com/drive/folders/0B0OFfWqnAHxhM0prRGd0UWczMUU'>Google Drive</a> folder."
     end
 
-    if name.ends_with?('!') || name.ends_with?('*')
-      type_flag = name[-1..-1]
-      name = name[0..-2]
+    if csv_column_name.ends_with?('!') || csv_column_name.ends_with?('*')
+      type_flag = csv_column_name[-1..-1]
+      csv_column_name = csv_column_name[0..-2]
     end
 
-    type_info = name[i..-1]
+    type_info = csv_column_name[i..-1]
 
     type = {
       '_b' => {type: 'boolean'},
@@ -110,7 +113,9 @@ class CsvToSqlTable
     type = type.merge(unique: true) if type_flag == '!'
     type = type.merge(index: true) if type_flag == '*'
 
-    type.merge({name: name.to_sym})
+    db_column_name = @remove_type_suffix ? csv_column_name.rpartition('_')[0] : csv_column_name
+
+    type.merge({name: db_column_name.to_sym})
   end
 
   def set_table_mtime(mtime)
@@ -238,7 +243,6 @@ namespace :seed do
   sync_tasks = []
 
   imports = {
-    beyond_tutorials: 'Data/HocBeyondTutorials.gsheet',
     tutorials: 'Data/HocTutorials.gsheet'
   }
 
