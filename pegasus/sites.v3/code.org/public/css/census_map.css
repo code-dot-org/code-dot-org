@@ -106,6 +106,7 @@
 
 .census-info-window a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .census-info-window .button {
