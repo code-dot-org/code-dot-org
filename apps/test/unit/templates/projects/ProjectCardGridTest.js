@@ -7,7 +7,7 @@ import {projects} from './projectsTestData';
 import {combineReducers, createStore} from 'redux';
 import reducer from '@cdo/apps/templates/projects/projectsRedux';
 
-describe('ProjectCardGrid', () => {
+describe.skip('ProjectCardGrid', () => {
   const store = createStore(combineReducers({projects: reducer}));
 
   it('filters by selected app type', () => {
