@@ -1,12 +1,26 @@
-#school-info-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false'}
-  .modal-dialog
-    .modal-content.no-modal-icon
-      %h2.custom-h2= t('school_info_interstitial.title')
+-# Rendering this partial causes the school info interstitial to be shown to the
+-# user.  Rendering this partial into a cached view may not work properly.
 
-      %h3= t('school_info_interstitial.message')
-      .left.full-width
-        = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
-          #schooldropdown-block.itemblock{style: "margin-left: -10px; background-color: #ffffff;  border-style: none;"}
-            = render partial: 'shared/school_info_interstitial', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
-          = f.submit t('school_info_interstitial.save'), id: 'school-info-submit', class: 'btn primary-button'
-          = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+- require 'country_codes'
+- require 'state_abbr'
+- require 'geocoder'
+
+- location = Geocoder.search(request.ip).try(:first)
+-# geocoder sometimes shows localhost's country as RD/Reserved
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+- current_user_school_info = current_user.school_info
+
+- script_data = {}
+- script_data[:formUrl] = registration_url('user')
+- script_data[:authTokenName] = request_forgery_protection_token.to_s
+- script_data[:authTokenValue] = form_authenticity_token
+- script_data[:existingSchoolInfo] = {}
+- if current_user_school_info
+  - script_data[:existingSchoolInfo] = current_user_school_info.slice(:country, :school_type, :school_id, :school_name, :full_address)
+- script_data[:existingSchoolInfo][:country] ||= 'United States' if us_ip
+
+- content_for(:head) do
+  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+  %script{src: minifiable_asset_path('js/schoolInfoInterstitial.js'), data: {schoolinfointerstitial: script_data.to_json}}
+  :css
+    .pac-container { z-index: 2000; }
