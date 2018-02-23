@@ -237,11 +237,16 @@ class ProjectsController < ApplicationController
       return
     end
     return if redirect_under_13_without_tos_teacher(@level)
-    redirect_to action: 'edit', channel_id: ChannelToken.create_channel(
+    channel = ChannelToken.create_channel(
       request.ip,
       StorageApps.new(storage_id('user')),
       data: initial_data,
       type: params[:key]
+    )
+    redirect_to(
+      action: 'edit',
+      channel_id: channel,
+      enableMaker: params['enableMaker'] ? true : nil
     )
   end
 
