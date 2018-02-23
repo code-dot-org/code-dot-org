@@ -3,12 +3,12 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 # Hash of several common requirements file patterns. Note that not all
 # of these are currently used, but are included for future-proofing.
 REQUIREMENTS = {
-  "requirements.txt" => {cmd: "pip install -r requirements.txt", dir: "./"},
-  "package.json" => {cmd: "yarn", dir: "./apps"},
-  "bower.json" => {cmd: "bower install", dir: "./"},
-  "Gemfile" => {cmd: "bundle install", dir: "./"},
-  "Berksfile" => {cmd: "berks install", dir: "./"},
-  "schema.rb" => {cmd: "rake db:migrate", dir: "./dashboard"},
+  "requirements.txt" => {cmd: "pip install -r requirements.txt"},
+  "package.json" => {cmd: "yarn"},
+  "bower.json" => {cmd: "bower install"},
+  "Gemfile" => {cmd: "bundle install"},
+  "Berksfile" => {cmd: "berks install"},
+  "schema.rb" => {cmd: "bundle exec rake db:migrate", dir: ".."},
 }.freeze
 
 def get_modified_files
@@ -28,7 +28,9 @@ PROMPT_ENABLED = ENV['MERGE_RUN_PROMPT']
 def optionally_run(cmd, file)
   puts "#{file} changed! Shall I run #{cmd[:cmd]}? [Y/n]"
   unless $stdin.readline.downcase.start_with? 'n'
-    Dir.chdir File.expand_path(cmd[:dir], REPO_DIR)
+    dir = File.dirname(file)
+    dir = File.expand_path(cmd[:dir], dir) if cmd[:dir]
+    Dir.chdir File.expand_path(dir, REPO_DIR)
     system cmd[:cmd]
   end
 end
