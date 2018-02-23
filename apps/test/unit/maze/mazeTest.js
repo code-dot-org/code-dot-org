@@ -25,7 +25,7 @@ describe("Maze", function () {
       document.body.innerHTML = '<div id="svgMaze"><div class="pegman-location"></div></div>';
       maze = new Maze();
       maze.map = MazeMap.deserialize(dirtMap, Cell);
-      maze.subtype = new Farmer(maze, {}, {
+      maze.subtype = new Farmer(maze, {
         skin: {
           dirt: 'dirt.png'
         },
