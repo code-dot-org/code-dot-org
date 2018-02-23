@@ -140,6 +140,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'cancancan', '~> 1.15.0'
 gem 'devise', '~> 4.2.0'
 gem 'devise_invitable', '~> 1.6.0'
+gem 'devise-pwned_password', github: 'wjordan/devise-pwned_password', ref: 'rails-gemspec'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'

@@ -49,6 +49,14 @@ GIT
       activemodel (>= 4.0)
 
 GIT
+  remote: https://github.com/wjordan/devise-pwned_password.git
+  revision: db0c6df0e738a7c39baf9506a80ab86c9087686b
+  ref: rails-gemspec
+  specs:
+    devise-pwned_password (0.1.1)
+      devise (~> 4)
+
+GIT
   remote: https://github.com/wjordan/geocoder.git
   revision: 2da20897188b57f777df89f90e45cf331c5b014f
   ref: rack-request-fix
@@ -790,6 +798,7 @@ DEPENDENCIES
   dalli
   dalli-elasticache
   devise (~> 4.2.0)
+  devise-pwned_password!
   devise_invitable (~> 1.6.0)
   execjs
   eyes_selenium (= 3.14.2)
