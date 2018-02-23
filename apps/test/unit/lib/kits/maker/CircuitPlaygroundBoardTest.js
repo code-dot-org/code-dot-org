@@ -5,7 +5,7 @@ import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
-import {SONG_CHARGE, TOUCH_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {SONG_CHARGE, EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
@@ -361,19 +361,19 @@ describe('CircuitPlaygroundBoard', () => {
       });
     });
 
-    it('configures the controller as a pullup if passed a touch pin', () => {
+    it('configures the controller as a pullup if passed an external pin', () => {
       return board.connect().then(() => {
-        TOUCH_PINS.forEach((pin) => {
+        EXTERNAL_PINS.forEach((pin) => {
           const newButton = board.createButton(pin);
           expect(newButton.pullup).to.be.true;
         });
       });
     });
 
-    it('does not configure the controller as a pullup if passed a non-touch pin', () => {
+    it('does not configure the controller as a pullup if passed a non-external pin', () => {
       return board.connect().then(() => {
         _.range(21)
-          .filter(pin => !TOUCH_PINS.includes(pin))
+          .filter(pin => !EXTERNAL_PINS.includes(pin))
           .forEach((pin) => {
             const newButton = board.createButton(pin);
             expect(newButton.pullup).to.be.false;
