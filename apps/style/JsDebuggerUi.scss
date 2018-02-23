@@ -111,9 +111,12 @@ $debug-header-border-width: 1px;
   }
   right: 0;
   width: $debug-watch-max-column-width;
+  overflow-y: scroll;
+}
+
+.debug-watch *, .debug-watch input {
   font-family: monospace;
   font-size: 12px;
-  overflow-y: scroll;
 }
 
 .debug-watch-item {
@@ -139,10 +142,10 @@ $debug-header-border-width: 1px;
   }
   left: $debug-commands-column-width;
   right: $debug-watch-max-column-width;
-  min-width: $debug-console-min-column-width
+  min-width: $debug-console-min-column-width;
 }
 
-.debug-console * {
+.debug-console *, .debug-console input {
   font-family: monospace;
   font-size: 12px;
 }

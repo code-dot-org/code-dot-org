@@ -1,9 +1,10 @@
+<meta name="robots" content="noindex">
 ---
 title: Payment Information
 nav: regional_partner_playbook_nav
 ---
 
-#Payment Information
+# Payment Information
 <a id="top"></a>
 ________________
 
@@ -30,11 +31,34 @@ ________________
 
 **CS Principles and CS Discoveries Facilitator Payments**
 
-- All facilitators are paid $500 per workshop day.
-- Each Regional Partner is responsible for contracting with and paying any facilitators who run local acadmeic year workshops and local summer workshops (including local summer workshops in summer 2017 and beyond).
-- Code.org will directly contract and pay facilitators for any work they do at TeacherCon.
+- All CS Principles & CS Discoveries facilitators are paid $500 per workshop day.****
+- Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. (Note: this includes any out of region facilitators).
+- Code.org will directly pay facilitators for any work they do at TeacherCon.
 - Code.org will directly pay facilitators for any artifacts they produce as part of their Deeper Learning Plan.
 
+**CS Fundamentals Facilitator Payments**
+
+- CS Fundamentals facilitators are paid $400 for workshop facilitation.****
+  - Note: CS Discoveries and CS Principles are paid $500 per workshop day, which is different from CS Fundamentals. Each CS Discoveries and CS Principles academic year workshop contains different content, so this payment includes the additional preparation required to deliver these workshops.
+- Each Regional Partner is responsible for contracting with and paying any facilitators who run local workshops. (Note: this includes any out of region facilitators).
+- Code.org will directly pay facilitators for Facilitator Development activities and events.
+- If facilitators help with recruiting or other aspects of running the workshop, you should consider increasing their per workshop rate. Please reference Exhibit B in your CS Fundamentals MOU to see how the workshop payments received can support an increased rate.   
+- Some facilitators will have a different payment structure because they work for a district.
+Facilitators can host workshops that are not associated with their Regional Partner, but these will no longer be paid for by Code.org. Two common cases for this will be:
+  - Working with another Regional Partner to help meet demand in their region
+  - Facilitating a workshop for in-service elementary school teachers in districts that have funding to compensate the facilitator directly. In this case Code.org will strongly encourage actively coordinating and collaborating with the Regional Partner that covers that district.
+  - Code.org will continue to pay for and provide swag and curriculum guides in both of these cases.
+
+****This Code.org's general recommendation, and on a case-by-case basis, payment may differ.
+
+**Timeline for the CS Fundamentals Funding Model Transition**
+
+
+- February 2018 - Code.org is requesting facilitators to not schedule any more Code.org paid workshops or put them in the dashboard.
+- As soon as March 9, 2018 - Regional Partners and facilitators can start workshops under this agreement and new funding model, in consultation together.
+- No later than June 1, 2018 - host your first workshop in collaboration with your CS Fundamentals facilitator(s), *unless otherwise arranged with your Regional Manager.*
+	- In some regions, there may be existing Code.org paid workshops that facilitators have already listed in the dashboard. We have clarified with facilitators that these can still be paid under existing facilitator agreements until September 1, 2018.
+  - However, our expectation is that facilitators will work in close coordination with the Regional Partner to possibly transition these existing workshops to the new model where Regional Partners pay facilitators directly.
 
 [**Back to the top**](#top)
 
@@ -80,7 +104,7 @@ ________________
 To receive reimbursement for a community event, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).  
-See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community). 
+See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
 
 [**Back to the top**](#top)
 

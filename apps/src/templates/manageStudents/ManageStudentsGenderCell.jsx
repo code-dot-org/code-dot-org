@@ -4,6 +4,7 @@ import i18n from "@cdo/locale";
 import {editStudent} from './manageStudentsRedux';
 
 const GENDERS = {
+  '': '',
   m: i18n.genderMale(),
   f: i18n.genderFemale()
 };

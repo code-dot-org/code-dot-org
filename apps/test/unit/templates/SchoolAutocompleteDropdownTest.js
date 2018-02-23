@@ -101,8 +101,8 @@ describe('SchoolAutocompleteDropdown', () => {
         return expect(promise).to.eventually.deep.equal({
           options: [
             {value: '-1', label: 'Other school not listed below (click here to provide details)'},
-            {value: '10', label: 'Abcd School 1 - Seattle, WA 98101'},
-            {value: '11', label: 'Abcd School 2 - Redmond, WA 98073'}
+            {value: '10', label: 'Abcd School 1 - Seattle, WA 98101', school: {nces_id: 10, name: 'Abcd School 1', city: 'Seattle', state: 'WA', zip: '98101'}},
+            {value: '11', label: 'Abcd School 2 - Redmond, WA 98073', school: {nces_id: 11, name: 'Abcd School 2', city: 'Redmond', state: 'WA', zip: '98073'}}
           ]
         });
       });
@@ -149,7 +149,7 @@ describe('SchoolAutocompleteDropdown', () => {
 
         return expect(promise).to.eventually.deep.equal({
           options: [
-            {value: '9999', label: 'Abcd School 1 - Seattle, WA 98101'}
+            {value: '9999', label: 'Abcd School 1 - Seattle, WA 98101', school: {nces_id: 9999, name: 'Abcd School 1', city: 'Seattle', state: 'WA', zip: '98101'}}
           ]
         });
       });
