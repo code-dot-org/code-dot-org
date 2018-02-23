@@ -13,6 +13,7 @@ const EDIT_STUDENT = 'manageStudents/EDIT_STUDENT';
 const START_SAVING_STUDENT = 'manageStudents/START_SAVING_STUDENT';
 const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
+const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -26,6 +27,7 @@ export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, st
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const addStudentSuccess = (studentData) => ({ type: ADD_STUDENT_SUCCESS, studentData });
+export const addStudentFailure = (error, studentId) => ({ type: ADD_STUDENT_FAILURE, error, studentId });
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -46,9 +48,11 @@ export const addStudent = (studentId) => {
     dispatch(startSavingStudent(studentId));
     addStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
       if (error) {
+        dispatch(addStudentFailure(error, studentId));
         console.error(error);
+      } else {
+        dispatch(addStudentSuccess(convertAddedStudent(data)));
       }
-      dispatch(addStudentSuccess(convertAddedStudent(data)));
     });
   };
 };
@@ -73,6 +77,7 @@ const initialState = {
   studentData: {},
   editingData: {},
   sectionId: null,
+  addStatus: '',
 };
 
 export default function manageStudents(state=initialState, action) {
@@ -175,6 +180,19 @@ export default function manageStudents(state=initialState, action) {
       editingData: _.omit(state.editingData, action.studentId),
     };
   }
+  if (action.type === ADD_STUDENT_FAILURE) {
+    return {
+      ...state,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          isSaving: false,
+        }
+      },
+      addStatus: 'failure'
+    };
+  }
   if (action.type === ADD_STUDENT_SUCCESS) {
     return {
       ...state,
@@ -195,7 +213,8 @@ export default function manageStudents(state=initialState, action) {
           ...blankAddRow,
           loginType: state.loginType
         }
-      }
+      },
+      addStatus: 'success',
     };
   }
   if (action.type === EDIT_STUDENT) {
