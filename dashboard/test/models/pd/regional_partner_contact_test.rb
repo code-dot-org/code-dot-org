@@ -115,7 +115,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
       ).to_json
     )
 
-    assert_equal 'Florida International University', regional_partner_contact.regional_partner.name
+    assert_equal 'Academy for CS Education - Florida International University', regional_partner_contact.regional_partner.name
 
     regional_partner_contact = create(
       :pd_regional_partner_contact, form_data: FORM_DATA.merge(
