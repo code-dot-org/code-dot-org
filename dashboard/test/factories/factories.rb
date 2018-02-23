@@ -735,7 +735,6 @@ FactoryGirl.define do
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).to_i + 1).to_s}
-    name "A seattle private school"
     city "Seattle"
     state "WA"
     zip "98122"
@@ -747,6 +746,7 @@ FactoryGirl.define do
 
   factory :public_school, parent: :school_common do
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    name "A seattle public school"
     with_district
 
     state_school_id {School.construct_state_school_id(state, school_district.try(:id), id)}
@@ -762,10 +762,12 @@ FactoryGirl.define do
 
   factory :private_school, parent: :school_common do
     school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    name "A seattle private school"
   end
 
   factory :charter_school, parent: :school_common do
     school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    name "A seattle charter school"
     with_district
   end
 
