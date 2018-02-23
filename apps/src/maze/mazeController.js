@@ -66,9 +66,9 @@ module.exports = class MazeController {
   /**
    * A few placeholder methods intended to be rebound
    */
-  playAudio = () => {};
-  loadAudio = () => {};
-  getTestResults = () => {};
+  playAudio() {}
+  loadAudio() {}
+  getTestResults() {}
 
   rebindMethods(methods) {
     this.playAudio = methods.playAudio || this.playAudio;
@@ -161,7 +161,7 @@ module.exports = class MazeController {
    * Reset the maze to the start position and kill any pending animation tasks.
    * @param {boolean} first True if an opening animation is to be played.
    */
-  reset = (first) => {
+  reset(first) {
     this.subtype.reset();
 
     // Kill all tasks.
@@ -197,7 +197,7 @@ module.exports = class MazeController {
     } else {
       this.resetTiles_();
     }
-  };
+  }
 
   resetTiles_() {
     // Reset the tiles
