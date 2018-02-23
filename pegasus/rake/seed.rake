@@ -7,6 +7,7 @@ class CsvToSqlTable
     @db = params[:db] || DB
     @path = path
     @table = File.basename(@path, File.extname(@path)).tr('-', '_').to_sym
+    # TODO: suresh - find a better way to specify which tables should be imported without column name datatype suffixes
     @remove_type_suffix = (@table == :beyond_tutorials) ? true : false
   end
 
