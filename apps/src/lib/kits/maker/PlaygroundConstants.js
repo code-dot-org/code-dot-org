@@ -1,6 +1,7 @@
 import experiments from '../../../util/experiments';
 export const N_COLOR_LEDS = 10;
-export const TOUCH_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
+export const EXTERNAL_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
+export const TOUCH_PINS = [0, 2, 3, 6, 12];
 export const J5_CONSTANTS = {
   INPUT: 0,
   OUTPUT: 1,
