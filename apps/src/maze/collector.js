@@ -159,7 +159,7 @@ export default class Collector extends Subtype {
    */
   succeeded() {
     const usedFewEnoughBlocks =
-      studioApp.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+      studioApp().feedback_.getNumCountableBlocks() <= this.maxBlocks_;
 
     return this.collectedAll() && usedFewEnoughBlocks;
   }
@@ -181,7 +181,7 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(COLLECTED_NOTHING);
     } else if (this.collectedTooMany()) {
       executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
-    } else if (studioApp.feedback_.getNumCountableBlocks() > this.maxBlocks_) {
+    } else if (studioApp().feedback_.getNumCountableBlocks() > this.maxBlocks_) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
