@@ -7,21 +7,21 @@ class CourseBlocksTeacherGradeBands extends Component {
   cards = [
     {
       linkId: 'course-block-grade-band-elementary',
-      linkClass: 'clicktag',
+      linkClass: 'linktag',
       heading: i18n.courseBlocksGradeBandsElementary(),
       description: i18n.courseBlocksGradeBandsElementaryDescription(),
       path: '/educate/curriculum/elementary-school'
     },
     {
       linkId: 'course-block-grade-band-middle',
-      linkClass: 'clicktag',
+      linkClass: 'linktag',
       heading: i18n.courseBlocksGradeBandsMiddle(),
       description: i18n.courseBlocksGradeBandsMiddleDescription(),
       path: '/educate/curriculum/middle-school'
     },
     {
       linkId: 'course-block-grade-band-high',
-      linkClass: 'clicktag',
+      linkClass: 'linktag',
       heading: i18n.courseBlocksGradeBandsHigh(),
       description: i18n.courseBlocksGradeBandsHighDescription(),
       path: '/educate/curriculum/high-school'
