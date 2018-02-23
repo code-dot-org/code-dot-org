@@ -1,6 +1,7 @@
 require 'sequel'
+require 'sequel/connection_pool/threaded'
 
-def sequel_connect(writer, reader)
+def sequel_connect(writer, reader, validation_frequency = nil)
   reader = reader.gsub 'mysql:', 'mysql2:'
   writer = writer.gsub 'mysql:', 'mysql2:'
 
@@ -13,6 +14,13 @@ def sequel_connect(writer, reader)
     end
 
   db.extension :server_block
+
+  # Check if validation frequency is valid and then use it to specify how often to
+  # verify the db connection
+  if !validation_frequency.nil? && (validation_frequency == -1 || validation_frequency > 0)
+    db.extension(:connection_validator)
+    db.connection_validation_timeout = validation_frequency
+  end
 
   # Uncomment this for Pegasus logging.  Only appears to work when started
   # using bin/pegasus-server.

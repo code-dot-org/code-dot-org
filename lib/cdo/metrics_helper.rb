@@ -2,7 +2,7 @@ require_relative './db'
 
 module Metrics
   DEVINTERNAL_DB = CDO.devinternal_db_writer ?
-    sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer) : nil
+    sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer, -1) : nil
 
   # Values for DTT metrics.
   AUTOMATIC = 0
