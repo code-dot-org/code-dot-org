@@ -35,6 +35,7 @@
   var resizeThrottleTimerId;
   var resizeThrottleTimeoutMs = 500;
   var maxHeightPercentage = "#{max_height_percentage}";
+  const infoWindow = new google.maps.InfoWindow();
 
   google.load('visualization', '1');
 
@@ -62,6 +63,7 @@
     gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
 
     var layer = new google.maps.FusionTablesLayer({
+      suppressInfoWindows: true,
       query: {
         select: 'location',
         from: "#{TABLE_ID}",
@@ -107,14 +109,20 @@
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
-      event.infoWindowHtml = generateInfoWindowHtml(
+      const latitude = event.row['location'].value.split(',')[0];
+      const longitude = event.row['location'].value.split(',')[1];
+      const location = new google.maps.LatLng(latitude, longitude);
+      infoWindow.close();
+      infoWindow.setContent(generateInfoWindowHtml(
         event.row['school_id'].value,
         event.row['school_name'].value,
         event.row['city'].value,
         event.row['state_code'].value,
         event.row['location'].value,
         event.row['teaches_cs'].value
-      );
+      ));
+      infoWindow.setPosition(location);
+      infoWindow.open(gmap);
     });
     google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
       enableDrag();
@@ -195,7 +203,6 @@
 
       const query = encodeURIComponent(`SELECT * FROM #{TABLE_ID} WHERE school_id in '${school.nces_id}'`);
       const gvizQuery = new google.visualization.Query(`https://www.google.com/fusiontables/gvizdata?tq=${query}`);
-      const infoWindow = new google.maps.InfoWindow();
 
       gvizQuery.send(function(response) {
         const datatable = response.getDataTable();
@@ -207,6 +214,7 @@
           const location = datatable.getValue(0,5);
           const teachesCs = datatable.getValue(0,6);
 
+          infoWindow.close();
           infoWindow.setContent(generateInfoWindowHtml(
             schoolId,
             schoolName,
