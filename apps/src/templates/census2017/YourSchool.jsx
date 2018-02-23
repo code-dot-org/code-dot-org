@@ -57,6 +57,7 @@ class YourSchool extends Component {
       });
     }
   }
+
   state = {
     schoolDropdownOption: this.props.schoolDropdownOption,
   };
