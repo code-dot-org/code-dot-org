@@ -22,7 +22,7 @@ describe("drawCorners", function () {
         return {tileType: val};
       })), Cell);
 
-      const collector = new Collector({map}, {}, empty_config);
+      const collector = new Collector({map}, empty_config);
 
       collector.drawCorners(svg, target[0], target[1], name);
       corners.forEach(corner => {
