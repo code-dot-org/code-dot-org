@@ -5,21 +5,12 @@ class Api::V1::Projects::PublicGalleryController < ApplicationController
       expires_in 5.seconds, public: true # cache
     end
 
-    if params[:showFeatured] == "1"
-      render json: ProjectsList.fetch_published_projects(
-        params[:project_type],
-        limit: params[:limit],
-        published_before: params[:published_before],
-        append_featured: true
-      )
-    else
-      render json: ProjectsList.fetch_published_projects(
-        params[:project_type],
-        limit: params[:limit],
-        published_before: params[:published_before]
-      )
-    end
-
+    render json: ProjectsList.fetch_published_projects(
+      params[:project_type],
+      limit: params[:limit],
+      published_before: params[:published_before],
+      prepend_featured: !!params[:showFeatured]
+    )
   rescue ArgumentError => e
     render json: {error: e.message}, status: :bad_request
   end
