@@ -25,7 +25,7 @@ export default class MazeThumbnail extends React.Component {
     const skin = skins.load(assetUrl, this.props.skin);
     const Maze = {};
     const Type = getSubtypeForSkin(this.props.skin);
-    const subtype = new Type(Maze, null, {
+    const subtype = new Type(Maze, {
       skin,
       level: this.props.level,
     });
