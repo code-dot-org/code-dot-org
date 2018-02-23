@@ -13,6 +13,7 @@ import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import {convertStudentDataToArray} from './manageStudentsRedux';
 import { connect } from 'react-redux';
+import Notification, {NotificationType} from '../Notification';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -92,6 +93,7 @@ class ManageStudentsTable extends Component {
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
+    addStatus: PropTypes.string,
   };
 
   state = {
@@ -302,13 +304,31 @@ class ManageStudentsTable extends Component {
     })(this.props.studentData);
 
     return (
-      <Table.Provider
-        columns={columns}
-        style={tableLayoutStyles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="name" />
-      </Table.Provider>
+      <div>
+        {this.props.addStatus === 'success' &&
+          <Notification
+            type={NotificationType.success}
+            notice={i18n.manageStudentsNotificationSuccess()}
+            details={i18n.manageStudentsNotificationAddSuccess()}
+            dismissible={false}
+          />
+        }
+        {this.props.addStatus === 'failure' &&
+          <Notification
+            type={NotificationType.failure}
+            notice={i18n.manageStudentsNotificationFailure()}
+            details={i18n.manageStudentsNotificationCannotAdd()}
+            dismissible={false}
+          />
+        }
+        <Table.Provider
+          columns={columns}
+          style={tableLayoutStyles.table}
+        >
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="name" />
+        </Table.Provider>
+      </div>
     );
   }
 }
@@ -319,4 +339,5 @@ export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
+  addStatus: state.manageStudents.addStatus,
 }))(ManageStudentsTable);
