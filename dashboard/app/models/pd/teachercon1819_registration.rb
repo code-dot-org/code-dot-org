@@ -11,8 +11,8 @@
 #
 # Indexes
 #
-#  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
-#  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
+#  index_pd_summer_event1819_registrations_on_pd_application_id    (pd_application_id)
+#  index_pd_summer_event1819_registrations_on_regional_partner_id  (regional_partner_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
@@ -62,7 +62,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       address_state: get_all_states_with_dc.to_h.values,
       how_traveling: [
         'I will drive by myself',
-        'I will carpool with another TeacherCon attendee (Please note who)',
+        'I will carpool with another TeacherCon attendee (Please note who):',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',

@@ -111,8 +111,10 @@ module.exports.Group = function (baseConstructor) {
   array.callMethodEach = function (methodName) {
     // Copy all arguments after the first parameter into methodArgs:
     var methodArgs = Array.prototype.slice.call(arguments, 1);
-    for (var i = 0; i < this.length; i++) {
-      this[i][methodName].apply(this[i], methodArgs);
+    // Use a copy of the array in case the method modifies the group
+    var elements = [...this];
+    for (var i = 0; i < elements.length; i++) {
+      elements[i][methodName].apply(elements[i], methodArgs);
     }
   };
 
