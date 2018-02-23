@@ -70,7 +70,7 @@ export default class WorkshopIndex extends React.Component {
       <div>
         <h1>Your Workshops</h1>
         <ButtonToolbar>
-          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) &&
+          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isFacilitator) &&
             (
               <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
                 New Workshop
