@@ -1,5 +1,5 @@
 class Api::V1::RegionalPartnersController < ApplicationController
-  # GET /api/v1/regional_partner/<school_district_id>/<course>
+  # GET /api/v1/regional_partners/<school_district_id>/<course>
   def for_school_district_and_course
     school_district = SchoolDistrict.find(params[:school_district_id])
 
@@ -12,7 +12,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
     end
   end
 
-  # GET /api/v1/regional_partner/for_user
+  # GET /api/v1/regional_partners
   def index
     regional_partners = current_user.permission?(UserPermission::WORKSHOP_ADMIN) ? RegionalPartner.all : current_user.regional_partners
 
