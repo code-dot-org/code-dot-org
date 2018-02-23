@@ -79,7 +79,8 @@
       "lightSensor.setScale": null,
       "tempSensor.F": null,
       "tempSensor.C": null,
-      "toggleSwitch.isOpen": null
+      "toggleSwitch.isOpen": null,
+      "accessListItem": null
     },
     "edit_code": true,
     "embed": "false",
@@ -123,11 +124,14 @@
     "top_level_procedure_autopopulate": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-14 23:25:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-05 06:18:26 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-14 23:25:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-05 06:18:26 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-02-23 22:02:57 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
