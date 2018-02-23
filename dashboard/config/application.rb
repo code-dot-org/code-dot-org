@@ -57,7 +57,7 @@ module Dashboard
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
     if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
       require 'pegasus_sites'
-      config.middleware.insert_after VarnishEnvironment, PegasusSites
+      config.middleware.unshift PegasusSites
     end
 
     require 'cdo/rack/upgrade_insecure_requests'

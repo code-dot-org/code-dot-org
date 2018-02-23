@@ -1,6 +1,7 @@
 require 'rack/request'
 require 'ipaddr'
 require 'json'
+require 'warden/session_serializer'
 
 module Cdo
   module RequestExtension
@@ -79,25 +80,14 @@ module Cdo
       @user_id ||= user_id_from_session_cookie
     end
 
+    class UserSerializer < Warden::SessionSerializer
+      def user_deserialize(key)
+        key.first.first
+      end
+    end
+
     def user_id_from_session_cookie
-      session_cookie_key = "_learn_session"
-      session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
-
-      message = CGI.unescape(cookies[session_cookie_key].to_s)
-
-      key_generator = ActiveSupport::KeyGenerator.new(
-        CDO.dashboard_secret_key_base,
-        iterations: 1000
-      )
-
-      encryptor = ActiveSupport::MessageEncryptor.new(
-        key_generator.generate_key('encrypted cookie'),
-        key_generator.generate_key('signed encrypted cookie')
-      )
-
-      return nil unless cookie = encryptor.decrypt_and_verify(message)
-      return nil unless warden = cookie['warden.user.user.key']
-      warden.first.first
+      UserSerializer.new(env).fetch('user')
     rescue
       return nil
     end

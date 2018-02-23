@@ -1,7 +1,11 @@
 require File.expand_path('../router', __FILE__)
 
+require 'cdo/rails_env_config'
+use RailsEnvConfig
+require 'cookie_helpers'
+use(*CookieHelpers::SESSION_STORE)
+
 require 'rack/csrf'
-use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
 use Rack::Csrf, check_only: ['POST:/v2/poste/send-message']
 
 require 'rack/ssl-enforcer'
