@@ -107,6 +107,7 @@ class ContactRollups
 
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
+  CENSUS_FORM_NAME = "Census".freeze
 
   def self.build_contact_rollups
     start = Time.now
@@ -301,16 +302,15 @@ class ContactRollups
     start = Time.now
     log "Inserting contacts from dashboard.census_submissions"
     PEGASUS_REPORTING_DB_WRITER.run "
-    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
-    SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}'
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted)
+    SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}'
     FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
     WHERE LENGTH(census_submissions.submitter_email_address) > 0
-    ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name,
-    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
-    roles =
-    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
-      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
-      ELSE #{DEST_TABLE_NAME}.roles
+    ON DUPLICATE KEY
+    UPDATE #{DEST_TABLE_NAME}.forms_submitted =
+    CASE LOCATE(values(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''),values(forms_submitted)),255)
+      ELSE #{DEST_TABLE_NAME}.forms_submitted
     END"
 
     log_completion(start)
