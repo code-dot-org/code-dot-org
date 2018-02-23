@@ -79,6 +79,10 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
+    def fit_workshop
+      Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
+    end
+
     GRADES = [
       'Pre-K'.freeze,
       'Kindergarten'.freeze,

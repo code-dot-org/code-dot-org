@@ -317,11 +317,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'friendly name' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF, location_name: 'Code.org',
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
       sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
-    assert_equal 'CS Fundamentals workshop on 09/01/16 at Code.org', workshop.friendly_name
+    assert_equal 'Admin workshop on 09/01/16 at Code.org', workshop.friendly_name
 
     # with subject
     workshop.update!(course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5)
@@ -730,10 +730,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'suppress_reminders?' do
     suppressed = [
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_FIT),
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
       create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT)
     ]
 
     refute @workshop.suppress_reminders?
@@ -858,6 +859,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'friendly_location with no location returns tba' do
     workshop = build :pd_workshop, location_address: '', processed_location: nil
     assert_equal 'Location TBA', workshop.friendly_location
+  end
+
+  test 'workshops organized by a non program manager are not assigned regional partner' do
+    workshop = create :pd_workshop
+    assert_nil workshop.regional_partner
+  end
+
+  test 'workshops organized by a program manager are assigned the regional partner' do
+    regional_partner = create :regional_partner
+    create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: @organizer
+    workshop = create :pd_workshop, organizer: @organizer
+
+    assert_equal regional_partner, workshop.regional_partner
   end
 
   private
