@@ -3,7 +3,7 @@ import LoginTypeCard from './LoginTypeCard';
 import {action} from '@storybook/addon-actions';
 
 export default storybook => storybook
-    .storiesOf('LoginTypeCard', module)
+    .storiesOf('Cards/LoginTypeCard', module)
     .addStoryTable([
       {
         name: 'With age recommendation',
