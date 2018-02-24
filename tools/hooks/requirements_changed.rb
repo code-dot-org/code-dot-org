@@ -1,3 +1,5 @@
+require 'pathname'
+
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
 # Hash of several common requirements file patterns. Note that not all
@@ -26,12 +28,16 @@ MERGE = ARGV[0] == "merge"
 PROMPT_ENABLED = ENV['MERGE_RUN_PROMPT']
 
 def optionally_run(cmd, file)
-  puts "#{file} changed! Shall I run #{cmd[:cmd]}? [Y/n]"
+  dir = File.dirname(file)
+  if cmd[:dir]
+    dir = File.realdirpath(File.expand_path(cmd[:dir], dir), REPO_DIR)
+    dir = Pathname.new(dir).relative_path_from(Pathname.new(REPO_DIR)).to_s
+  end
+  puts "#{file} changed! Shall I run `#{cmd[:cmd]}` from #{dir}/? [Y/n]"
   unless $stdin.readline.downcase.start_with? 'n'
-    dir = File.dirname(file)
-    dir = File.expand_path(cmd[:dir], dir) if cmd[:dir]
-    Dir.chdir File.expand_path(dir, REPO_DIR)
-    system cmd[:cmd]
+    Dir.chdir File.expand_path(dir, REPO_DIR) do
+      system cmd[:cmd]
+    end
   end
 end
 
