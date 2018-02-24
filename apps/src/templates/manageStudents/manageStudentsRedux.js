@@ -57,6 +57,11 @@ export const addStudent = (studentId) => {
   };
 };
 
+export const ADD_STATUS = {
+  "success": "success",
+  "fail": "fail",
+};
+
 // This doesn't get used to make a server call, but does
 // need to be unique from the rest of the ids.
 const addRowId = 0;
@@ -190,7 +195,7 @@ export default function manageStudents(state=initialState, action) {
           isSaving: false,
         }
       },
-      addStatus: 'failure'
+      addStatus: ADD_STATUS.fail
     };
   }
   if (action.type === ADD_STUDENT_SUCCESS) {
@@ -214,7 +219,7 @@ export default function manageStudents(state=initialState, action) {
           loginType: state.loginType
         }
       },
-      addStatus: 'success',
+      addStatus: ADD_STATUS.success,
     };
   }
   if (action.type === EDIT_STUDENT) {
