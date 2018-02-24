@@ -91,49 +91,4 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
       ).to_json
     ).valid?
   end
-
-  test 'Updates regional partner' do
-    school_district = create :school_district
-    regional_partner_hs = create :regional_partner, name: 'High School regional Partner'
-    regional_partner_ms = create :regional_partner, name: 'Middle School regional Partner'
-
-    create :regional_partners_school_district, school_district: school_district, course: 'csp', regional_partner: regional_partner_hs
-    create :regional_partners_school_district, school_district: school_district, course: 'csd', regional_partner: regional_partner_ms
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: school_district.id,
-          grade_levels: ['High School']
-        }
-      ).to_json
-    )
-
-    assert_equal regional_partner_hs.name, regional_partner_contact.regional_partner.name
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: school_district.id,
-          grade_levels: ['Middle School']
-        }
-      ).to_json
-    )
-
-    assert_equal regional_partner_ms.name, regional_partner_contact.regional_partner.name
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: school_district.id,
-          grade_levels: ['Elementary School']
-        }
-      ).to_json
-    )
-
-    assert_nil regional_partner_contact.regional_partner
-  end
 end

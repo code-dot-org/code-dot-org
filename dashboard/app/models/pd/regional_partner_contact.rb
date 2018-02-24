@@ -80,8 +80,6 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
   end
 
   def update_regional_partner
-    return if sanitize_form_data_hash[:grade_levels] == ['Elementary School']
-
     hash = sanitize_form_data_hash
     zipcode = hash[:school_zipcode]
     state = hash[:school_state]
