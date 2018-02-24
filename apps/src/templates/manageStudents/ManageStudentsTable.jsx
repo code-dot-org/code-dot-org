@@ -11,7 +11,7 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import {convertStudentDataToArray} from './manageStudentsRedux';
+import {convertStudentDataToArray, ADD_STATUS} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 
@@ -305,7 +305,7 @@ class ManageStudentsTable extends Component {
 
     return (
       <div>
-        {this.props.addStatus === 'success' &&
+        {this.props.addStatus === ADD_STATUS.success &&
           <Notification
             type={NotificationType.success}
             notice={i18n.manageStudentsNotificationSuccess()}
@@ -313,7 +313,7 @@ class ManageStudentsTable extends Component {
             dismissible={false}
           />
         }
-        {this.props.addStatus === 'failure' &&
+        {this.props.addStatus === ADD_STATUS.fail &&
           <Notification
             type={NotificationType.failure}
             notice={i18n.manageStudentsNotificationFailure()}
