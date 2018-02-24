@@ -60,7 +60,7 @@ end
 gem 'rack-cache'
 
 group :development, :test do
-  gem 'rerun', '~> 0.10.0'
+  gem 'rerun'
   gem 'shotgun'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
@@ -113,7 +113,8 @@ gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
 
-gem 'gctools'
+# Ref: https://github.com/tmm1/gctools/pull/17
+gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -138,7 +139,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise', '~> 4.2.0'
+gem 'devise', '~> 4.4.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -162,7 +163,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 3.16.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 

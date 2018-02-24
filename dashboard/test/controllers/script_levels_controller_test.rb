@@ -1104,8 +1104,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal POST_MILESTONE_MODE.all, assigns(:view_options)[:post_milestone_mode]
   end
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   test "should not see examples if an unauthorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     sign_in create(:teacher)
 
@@ -1118,7 +1120,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should see examples if an authorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     authorized_teacher = create(:teacher)
     cohort = create(:cohort)
