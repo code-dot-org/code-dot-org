@@ -265,9 +265,9 @@ class FilesApi < Sinatra::Base
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
     version_to_replace = params['version']
-    timestamp = params['firstSaveTimestamp']
-    tab_id = params['tabId']
-    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
+    # timestamp = params['firstSaveTimestamp']
+    # tab_id = params['tabId']
+    # buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
