@@ -256,6 +256,18 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params: -> {{pd_workshop: workshop_params}}
   )
 
+  test 'csf facilitators can create workshops' do
+    facilitator = create :facilitator
+    Pd::CourseFacilitator.create(facilitator: facilitator, course: Pd::Workshop::COURSE_CSF)
+
+    sign_in(facilitator)
+
+    assert_creates(Pd::Workshop) do
+      post :create, params: {pd_workshop: workshop_params}
+      assert_response :success
+    end
+  end
+
   # Action: Destroy
 
   test 'organizers can delete their workshops' do
