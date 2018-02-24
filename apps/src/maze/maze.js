@@ -86,6 +86,7 @@ module.exports = class Maze {
     this.controller = new MazeController(level, skin, config);
     this.controller.rebindMethods({
       playAudio: studioApp().playAudio.bind(studioApp()),
+      playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
       loadAudio: studioApp().loadAudio.bind(studioApp()),
       getTestResults: studioApp().getTestResults.bind(studioApp()),
     });

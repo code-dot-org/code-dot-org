@@ -67,11 +67,13 @@ module.exports = class MazeController {
    * A few placeholder methods intended to be rebound
    */
   playAudio() {}
+  playAudioOnFailure() {}
   loadAudio() {}
   getTestResults() {}
 
   rebindMethods(methods) {
     this.playAudio = methods.playAudio || this.playAudio;
+    this.playAudioOnFailure = methods.playAudioOnFailure || this.playAudioOnFailure;
     this.loadAudio = methods.loadAudio || this.loadAudio;
     this.getTestResults = methods.getTestResults || this.getTestResults;
   }
