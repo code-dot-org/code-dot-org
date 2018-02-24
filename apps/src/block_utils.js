@@ -358,7 +358,7 @@ const DUMMY_INPUT = 'dummy';
  * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
  * @returns {string} return[].label Text to display to the left of the input
  */
-exports.determineInputs = function (text, args) {
+const determineInputs = function (text, args) {
   const tokens = text.split(/[{}]/);
   if (tokens[tokens.length - 1] === '') {
     tokens.pop();
@@ -393,7 +393,7 @@ exports.determineInputs = function (text, args) {
   }
   return inputs;
 };
-const determineInputs = exports.determineInputs;
+exports.determineInputs = determineInputs;
 
 /**
  * Adds the specified inputs to the block
@@ -402,7 +402,7 @@ const determineInputs = exports.determineInputs;
  * @param {Object[]} inputs The list of inputs. See determineInputs() for
  *   the fields in each input.
  */
-exports.interpolateInputs = function (blockly, block, inputs) {
+const interpolateInputs = function (blockly, block, inputs) {
   inputs.map(input => {
     let dropdown;
     switch (input.mode) {
@@ -424,7 +424,7 @@ exports.interpolateInputs = function (blockly, block, inputs) {
     }
   });
 };
-const interpolateInputs = exports.interpolateInputs;
+exports.interpolateInputs = interpolateInputs;
 
 /**
  * Create a block generator that creats blocks that directly map to a javascript
