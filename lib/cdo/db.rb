@@ -19,7 +19,7 @@ def sequel_connect(writer, reader, validation_frequency = nil)
   # verify the db connection
   if !validation_frequency.nil? && (validation_frequency == -1 || validation_frequency > 0)
     db.extension(:connection_validator)
-    db.connection_validation_timeout = validation_frequency
+    db.pool.connection_validation_timeout = validation_frequency
   end
 
   # Uncomment this for Pegasus logging.  Only appears to work when started
