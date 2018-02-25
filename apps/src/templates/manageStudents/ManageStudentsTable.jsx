@@ -93,7 +93,7 @@ class ManageStudentsTable extends Component {
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
-    addStatus: PropTypes.string,
+    addStatus: PropTypes.oneOf(Object.values(ADD_STATUS)),
   };
 
   state = {
