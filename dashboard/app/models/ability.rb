@@ -106,6 +106,7 @@ class Ability
           workshop.facilitators.include? user
         end
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :update], Pd::Workshop, organizer_id: user.id
         can :create, Pd::Workshop do |_|
           Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
         end
