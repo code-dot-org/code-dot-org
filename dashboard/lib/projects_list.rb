@@ -79,18 +79,8 @@ module ProjectsList
     def include_featured(limit:)
       published = fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
       featured = fetch_featured_published_projects
-      featured_channel_ids = []
       PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
-        featured[project_type].each do |project|
-          featured_channel_ids << project["channel"]
-        end
-      end
-      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
-        published[project_type].each do |project|
-          unless featured_channel_ids.include?(project["channel"])
-            featured[project_type].push(project)
-          end
-        end
+        featured[project_type].push(published[project_type]).flatten!.uniq!
       end
       return featured
     end
@@ -140,7 +130,7 @@ module ProjectsList
         data_for_featured_project_card = {
           "channel" => channel,
           "name" => project_details_value['name'],
-          "thumbnailUrl" => project_details_value['thumbnailUrl'],
+          "thumbnailUrl" =>  StorageApps.make_thumbnail_url_cacheable(project_details_value['thumbnailUrl']),
           "type" => project_details[:project_type],
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
