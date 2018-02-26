@@ -280,7 +280,10 @@ export default class Bee extends Gatherer {
    * Attempt to harvest nectar from the current location; terminate the
    * execution if this is not a valid place at which to get nectar.
    *
-   * @return {boolean} whether or not the attempt was successful
+   * This method is preferred over animateGetNectar for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @return {boolean} whether or not this attempt was successful
    */
   getNectar() {
     const col = this.maze_.pegmanX;
@@ -306,7 +309,10 @@ export default class Bee extends Gatherer {
    * this is not a valid place at which to make honey.
    * Note that this deliberately does not check whether bee has gathered nectar.
    *
-   * @return {boolean} whether or not the attempt was successful
+   * This method is preferred over animateGetHoney for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @return {boolean} whether or not this attempt was successful
    */
   makeHoney() {
     const col = this.maze_.pegmanX;
@@ -343,26 +349,55 @@ export default class Bee extends Gatherer {
     return this.hiveRemainingCapacity(row, col);
   }
 
+  /**
+   * Display the harvesting of nectar from the current location; raise a runtime
+   * error if the current location is not a valid spot from which to gather
+   * nectar.
+   *
+   * This method is preferred over getNectar for live operation (ie when
+   * actually displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell has no nectar.
+   */
   animateGetNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
-    if (this.getNectar()) {
-      this.playAudio_(NECTAR_SOUND);
-      this.drawer.updateItemImage(row, col, true);
-      this.drawer.updateNectarCounter(this.nectars_);
+    if (this.getValue(row, col) <= 0) {
+      throw new Error("Shouldn't be able to end up with a nectar animation if " +
+        "there was no nectar to be had");
     }
+
+    this.playAudio_(NECTAR_SOUND);
+    this.gotNectarAt(row, col);
+
+    this.drawer.updateItemImage(row, col, true);
+    this.drawer.updateNectarCounter(this.nectars_);
   }
 
+  /**
+   * Display the making of honey from the current location; raise a runtime
+   * error if the current location is not a valid spot at which to make honey.
+   *
+   * This method is preferred over getHoney for live operation (ie when
+   * actually displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell is not a hive.
+   */
   animateMakeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
-    if (this.makeHoney()) {
-      this.playAudio_(HONEY_SOUND);
-      this.drawer.updateItemImage(row, col, true);
-      this.drawer.updateHoneyCounter(this.honey_);
+    if (!this.isHive(row, col)) {
+      throw new Error("Shouldn't be able to end up with a honey animation if " +
+        "we arent at a hive or dont have nectar");
     }
+
+    this.playAudio_(HONEY_SOUND);
+    this.madeHoneyAt(row, col);
+
+    this.drawer.updateItemImage(row, col, true);
+    this.drawer.updateHoneyCounter(this.honey_);
   }
 
   /**
