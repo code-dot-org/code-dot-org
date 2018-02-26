@@ -20,7 +20,10 @@ export default class Bee extends Gatherer {
    */
   succeeded() {
     // nectar/honey goals
-    if (this.maze_.subtype.honey_ < this.honeyGoal_ || this.maze_.subtype.nectars_.length < this.nectarGoal_) {
+    if (
+      this.maze_.subtype.getHoneyCount() < this.honeyGoal_ ||
+      this.maze_.subtype.getNectarCount() < this.nectarGoal_
+    ) {
       return false;
     }
 
@@ -50,9 +53,9 @@ export default class Bee extends Gatherer {
   terminateWithAppSpecificValue() {
     const executionInfo = this.maze_.executionInfo;
 
-    if (this.maze_.subtype.nectars_.length < this.nectarGoal_) {
+    if (this.maze_.subtype.getNectarCount() < this.nectarGoal_) {
       executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_NECTAR);
-    } else if (this.maze_.subtype.honey_ < this.honeyGoal_) {
+    } else if (this.maze_.subtype.getHoneyCount() < this.honeyGoal_) {
       executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_HONEY);
     } else if (!this.checkedAllClouded()) {
       executionInfo.terminateWithValue(TerminationValue.UNCHECKED_CLOUD);
