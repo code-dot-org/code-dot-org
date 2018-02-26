@@ -25,6 +25,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     'howTraveling',
     'needHotel',
     'needAda',
+    'explainAda',
     'dietaryNeedsDetails'
   ];
 
@@ -149,7 +150,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
           {
             this.props.data.needHotel === 'Yes' &&
             this.props.data.needAda === 'Yes' &&
-            this.largeInputFor("explainAda", {required: false})
+            this.largeInputFor("explainAda")
           }
         </FormGroup>
       </FormGroup>
