@@ -68,7 +68,9 @@ export default class WorkshopForm extends React.Component {
       subject: PropTypes.string,
       notes: PropTypes.string,
       sessions: PropTypes.array.isRequired,
-      enrolled_teacher_count: PropTypes.number.isRequired
+      enrolled_teacher_count: PropTypes.number.isRequired,
+      regional_partner_name: PropTypes.string,
+      regional_partner_id: PropTypes.number
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
@@ -98,7 +100,8 @@ export default class WorkshopForm extends React.Component {
       destroyedSessions: [],
       availableFacilitators: [],
       showSaveConfirmation: false,
-      showTypeOptionsHelpDisplay: false
+      showTypeOptionsHelpDisplay: false,
+      regional_partner_id: ''
     };
 
     if (props.workshop) {
@@ -112,11 +115,13 @@ export default class WorkshopForm extends React.Component {
           'funded',
           'course',
           'subject',
-          'notes'
+          'notes',
+          'regional_partner_id'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(props.workshop.sessions);
       this.loadAvailableFacilitators(props.workshop.course);
+      this.loadRegionalPartners();
     }
 
     return initialState;
@@ -141,6 +146,10 @@ export default class WorkshopForm extends React.Component {
     if (this.loadWorkshopRequest) {
       this.loadWorkshopRequest.abort();
     }
+
+    if (this.loadRegionalPartnersRequest) {
+      this.loadRegionalPartnersRequest.abort();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -160,6 +169,18 @@ export default class WorkshopForm extends React.Component {
       dataType: "json"
     }).done(data => {
       this.setState({availableFacilitators: data});
+    });
+  }
+
+  loadRegionalPartners() {
+    this.loadRegionalPartnersRequest = $.ajax({
+      method: "GET",
+      url: '/api/v1/regional_partners',
+      dataType: "json"
+    }).done(data => {
+      this.setState({
+        regionalPartners: data
+      });
     });
   }
 
@@ -334,6 +355,35 @@ export default class WorkshopForm extends React.Component {
     return this.state.course && window.dashboard.workshop.SUBJECTS[this.state.course];
   }
 
+  renderRegionalPartnerSelect() {
+    return (
+      <FormGroup>
+        <ControlLabel>
+          Regional Partner
+        </ControlLabel>
+        <FormControl
+          componentClass="select"
+          name="regional_partner_id"
+          onChange={this.handleFieldChange}
+          style={this.getInputStyle()}
+          value={this.state.regional_partner_id || ''}
+          disabled={this.props.readOnly}
+        >
+          <option value="">None</option>
+          {
+            this.state.regionalPartners && this.state.regionalPartners.map((partner, i) => {
+              return (
+                <option key={i} value={partner['id']}>
+                  {partner['name']}
+                </option>
+              );
+            })
+          }
+        </FormControl>
+      </FormGroup>
+    );
+  }
+
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
       const options = window.dashboard.workshop.SUBJECTS[this.state.course].map((subject, i) => {
@@ -469,7 +519,8 @@ export default class WorkshopForm extends React.Component {
       course: this.state.course,
       subject: this.state.subject,
       notes: this.state.notes,
-      sessions_attributes: this.prepareSessionsForApi(this.state.sessions, this.state.destroyedSessions)
+      sessions_attributes: this.prepareSessionsForApi(this.state.sessions, this.state.destroyedSessions),
+      regional_partner_id: this.state.regional_partner_id
     };
 
     let method, url;
@@ -724,6 +775,11 @@ export default class WorkshopForm extends React.Component {
                   </Col>
                 </Row>
               </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={10}>
+              {this.renderRegionalPartnerSelect()}
             </Col>
           </Row>
           <Row>
