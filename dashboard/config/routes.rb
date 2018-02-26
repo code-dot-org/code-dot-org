@@ -552,8 +552,8 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
-      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
-      get 'regional-partners/for_user', 'regional_partners'
+      get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
+      get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 

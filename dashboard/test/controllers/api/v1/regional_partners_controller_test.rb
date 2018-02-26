@@ -5,7 +5,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'index finds the regional partner for a normal district' do
     (COURSES + ['unselected']).each do |course|
-      get :index, params: {school_district_id: '100002', course: course}
+      get :for_school_district_and_course, params: {school_district_id: '100002', course: course}
       response = JSON.parse(@response.body)
       assert_equal 'A+ College Ready', response['regional_partner']['name']
     end
@@ -16,12 +16,12 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       ['csp', 'A+ College Ready'],
       ['csd', 'Academy for CS Education - Florida International University'],
     ].each do |course, regional_partner|
-      get :index, params: {school_district_id: '1200390', course: course}
+      get :for_school_district_and_course, params: {school_district_id: '1200390', course: course}
       response = JSON.parse(@response.body)
       assert_equal regional_partner, response['regional_partner']['name']
     end
 
-    get :index, params: {school_district_id: '1200390', course: 'unselected'}
+    get :for_school_district_and_course, params: {school_district_id: '1200390', course: 'unselected'}
     response = JSON.parse(@response.body)
     assert_not_nil response['regional_partner']['name']
   end
@@ -37,7 +37,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       ['csd', '600001', 'A+ College Ready', 'June 1-5, 2017'],
       ['csp', '600001', 'A+ College Ready', 'June 21-25, 2017'],
     ].each do |course, district, regional_partner, workshop_days|
-      get :index, params: {school_district_id: district, course: course}
+      get :for_school_district_and_course, params: {school_district_id: district, course: course}
       response = JSON.parse(@response.body)
       assert_equal regional_partner, response['regional_partner']['name']
       assert_equal workshop_days, response['workshop_days']
@@ -57,7 +57,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     sign_in program_manager
 
-    get :for_user
+    get :index
     response = JSON.parse(@response.body)
     assert_equal [
       {'name' => 'Another Regional Partner', 'id' => another_regional_partner_for_user.id},
@@ -69,7 +69,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     regional_partner = create :regional_partner, name: 'New regional partner'
     sign_in (create :workshop_admin)
 
-    get :for_user
+    get :index
     response = JSON.parse(@response.body)
     assert_equal RegionalPartner.count, response.length
     assert response.include?({'id' => regional_partner.id, 'name' => regional_partner.name})
