@@ -72,8 +72,6 @@ const styles = {
     width: valueAndInputWidth,
     marginTop: 0,
     height: inputElementHeight,
-    fontFamily: 'monospace',
-    fontSize: '12px'
   }
 };
 
