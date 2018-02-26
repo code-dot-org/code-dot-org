@@ -3,6 +3,8 @@ require 'test_helper'
 class LevelTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
     @custom_turtle_data = {user_id: 1}
@@ -360,7 +362,7 @@ EOS
   end
 
   test 'applab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Applab.create(name: 'applab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -390,7 +392,7 @@ EOS
   end
 
   test 'gamelab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Gamelab.create(name: 'gamelab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -420,7 +422,7 @@ EOS
   end
 
   test 'weblab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Weblab.create(name: 'weblab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
