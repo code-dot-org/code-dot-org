@@ -20,7 +20,7 @@ export default class Harvester extends Gatherer {
    */
   loadAudio(skin) {
     if (skin.harvestSound) {
-      this.studioApp_.loadAudio(skin.harvestSound, HARVEST_SOUND);
+      this.maze_.loadAudio(skin.harvestSound, HARVEST_SOUND);
     }
   }
 
@@ -173,7 +173,7 @@ export default class Harvester extends Gatherer {
         return TestResults.APP_SPECIFIC_FAIL;
 
       case HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING:
-        var testResults = this.studioApp_.getTestResults(true);
+        var testResults = this.maze_.getTestResults(true);
         // If we have a non-app specific failure, we want that to take precedence.
         // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
         // a suboptimal solution, so in those cases we want to return our

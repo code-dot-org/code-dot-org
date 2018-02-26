@@ -267,7 +267,7 @@ class FilesApi < Sinatra::Base
     version_to_replace = params['version']
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
-    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id)
+    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
 
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
 
@@ -472,7 +472,7 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
   end
 
   #
