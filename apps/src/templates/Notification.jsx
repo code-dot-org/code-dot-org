@@ -119,8 +119,7 @@ class Notification extends Component {
     dismissible: PropTypes.bool.isRequired,
     newWindow: PropTypes.bool,
     analyticId: PropTypes.string,
-    // isRtl not required so it can be used on Pegasus
-    isRtl: PropTypes.bool,
+    isRtl: PropTypes.bool.isRequired,
     onButtonClick: PropTypes.func,
     buttonClassName: PropTypes.string,
 

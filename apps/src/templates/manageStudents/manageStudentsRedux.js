@@ -82,7 +82,6 @@ const initialState = {
   studentData: {},
   editingData: {},
   sectionId: null,
-  addStatus: '',
 };
 
 export default function manageStudents(state=initialState, action) {
