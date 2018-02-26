@@ -121,14 +121,12 @@ module ProjectsList
     def fetch_featured_projects_by_type(project_type)
       storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
       user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
-      users = "dashboard_#{CDO.rack_env}__users".to_sym
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
         join(storage_apps, id: :storage_app_id).
         join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
-        join(users, id: Sequel[:user_storage_ids][:user_id]).
-        where(unfeatured_at: nil).
-        where(project_type: project_type.to_s, abuse_score: 0).
+        join(:users, id: Sequel[:user_storage_ids][:user_id]).
+        where(unfeatured_at: nil, project_type: project_type.to_s, abuse_score: 0).
         exclude(published_at: nil).
         order("RAND()").limit(4).all
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
