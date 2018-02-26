@@ -44,7 +44,7 @@ Below is a list of program commitments:
 ## What Code.org will provide in return
 - Appropriate levels of Code.org funding needed for the first three years of partnership by evaluating funding needs and funding opportunities in your region that can support and sustain this work. 
 - Marketing your organization as the official Code.org Regional Partner for your state or region
-Support and guidance from a dedicated Code.org Regional Manager
+- Support and guidance from a dedicated Code.org Regional Manager
 - Coaching and tools for the Regional Partner on teacher recruitment, facilitator capacity, funding, regional CS expansion, workshop quality, diversity, and community building and reputation.
 - Support for the Regional Partner community, including hosting Code.org Regional Partner Summits during the length of the partnership.
 - Ongoing facilitator development and support through in-person and virtual training events. 

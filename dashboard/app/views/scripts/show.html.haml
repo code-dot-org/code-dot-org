@@ -88,4 +88,4 @@
           .span3
             = level.properties['project_template_level_name']
           .span3
-            = level.properties['contained_level_names'].join(", ")
+            = level.properties['contained_level_names'].try {|names| names.join(", ")}
