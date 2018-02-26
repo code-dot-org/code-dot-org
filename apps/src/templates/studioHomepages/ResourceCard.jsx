@@ -67,12 +67,14 @@ class ResourceCard extends Component {
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    allowWrap: PropTypes.bool
+    allowWrap: PropTypes.bool,
+    linkId: PropTypes.string,
+    linkClass: PropTypes.string
   };
 
   render() {
 
-    const { title, description, buttonText, link, isRtl, allowWrap } = this.props;
+    const { title, description, buttonText, link, isRtl, allowWrap, linkId, linkClass} = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
     let buttonStyles = [styles.button];
     let cardStyles = [styles.card, localeStyle];
@@ -95,6 +97,8 @@ class ResourceCard extends Component {
         </div>
         <br/>
         <Button
+          id={linkId}
+          className={linkClass}
           href={link}
           color={Button.ButtonColor.gray}
           text={buttonText}
