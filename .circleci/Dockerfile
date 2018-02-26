@@ -46,15 +46,15 @@ RUN apt-get update && \
 		  python python-dev
 
 # install ruby
-RUN wget https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz && \
-    tar -xzvf ruby-2.5.0.tar.gz && \
-    rm ruby-2.5.0.tar.gz && \
-    cd ruby-2.5.0 && \
+RUN wget https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz && \
+    tar -xzvf ruby-2.2.3.tar.gz && \
+    rm ruby-2.2.3.tar.gz && \
+    cd ruby-2.2.3 && \
     ./configure && \
     make -j"$(nproc)" && \
     make install && \
     cd .. && \
-    rm -r ruby-2.5.0
+    rm -r ruby-2.2.3
 
 # install bundler
 RUN gem install bundler && \
