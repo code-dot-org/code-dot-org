@@ -41,12 +41,12 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "encrypted_examples": "2qvPk2x7NgA4jZQO8HnjUNoiOzBrsrZVmBz4KbBDRcCbpbDWaLBLXWKLEYcs\n1X+/\n",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
