@@ -1,3 +1,4 @@
+import sinon from 'sinon';
 import reducer, * as animationPickerModule from '@cdo/apps/gamelab/AnimationPicker/animationPickerModule';
 import listReducer from '@cdo/apps/gamelab/animationListModule';
 import {combineReducers} from 'redux';
@@ -109,6 +110,7 @@ describe('animationPickerModule', function () {
     describe('action: handleUploadComplete', function () {
 
       it('sets sourceUrl to null', function () {
+        const fakeDispatch = sinon.spy();
         const newState = {animationPicker: { uploadFilename: "filename.jpg", goal: Goal.NEW_ANIMATION }};
         var store = createStore(combineReducers({animationList: listReducer, animationPicker: reducer}), newState);
 
@@ -119,17 +121,30 @@ describe('animationPickerModule', function () {
             result: 0,
             versionId: "string"
           },
-          store.dispatch,
+          fakeDispatch,
           store.getState
         );
         onMetadataLoaded({});
+        expect(fakeDispatch).to.have.been.calledTwice;
 
-        const newListState = store.getState().animationList;
-        const animationKey = newListState.orderedKeys[0];
+        const addAnimation = fakeDispatch.firstCall.args[0];
+        expect(addAnimation).to.be.a('function');
+        expect(fakeDispatch.secondCall.args[0]).to.deep.equal(animationPickerModule.hide());
+        fakeDispatch.reset();
 
-        expect(newListState.propsByKey[animationKey]).to.be.not.null;
-        expect(newListState.propsByKey[animationKey].name).to.equal("filename.jpg_1");
-        expect(newListState.propsByKey[animationKey].sourceUrl).to.be.null;
+        addAnimation(fakeDispatch, store.getState);
+        expect(fakeDispatch.firstCall.args[0]).to.deep.equal({
+          type: 'AnimationList/ADD_ANIMATION',
+          key: 'filename.jpg',
+          props:
+            {
+              name: 'filename.jpg',
+              sourceUrl: null,
+              size: undefined,
+              version: 'string',
+              looping: true
+            }
+        });
       });
     });
   });
