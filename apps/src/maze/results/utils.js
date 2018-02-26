@@ -14,29 +14,20 @@ const PlanterHandler = require('./planter');
 const ResultsHandler = require('./resultsHandler');
 
 export function createResultsHandlerForSubtype(controller, config) {
-  let handler;
+  let handler = ResultsHandler;
 
-  switch (controller.subtype) {
-    case Farmer:
-      handler = FarmerHandler;
-      break;
-    case Bee:
-      handler = BeeHandler;
-      break;
-    case Collector:
-      handler = CollectorHandler;
-      break;
-    case Wordsearch:
-      handler = WordsearchHandler;
-      break;
-    case Harvester:
-      handler = HarvesterHandler;
-      break;
-    case Planter:
-      handler = PlanterHandler;
-      break;
-    default:
-      handler = ResultsHandler;
+  if (controller.subtype instanceof Farmer) {
+    handler = FarmerHandler;
+  } else if (controller.subtype instanceof Bee) {
+    handler = BeeHandler;
+  } else if (controller.subtype instanceof Collector) {
+    handler = CollectorHandler;
+  } else if (controller.subtype instanceof Wordsearch) {
+    handler = WordsearchHandler;
+  } else if (controller.subtype instanceof Harvester) {
+    handler = HarvesterHandler;
+  } else if (controller.subtype instanceof Planter) {
+    handler = PlanterHandler;
   }
 
   return new handler(controller, config);
