@@ -238,6 +238,7 @@ namespace :seed do
   sync_tasks = []
 
   imports = {
+    beyond_tutorials: 'Data/HocBeyondTutorials.gsheet',
     tutorials: 'Data/HocTutorials.gsheet'
   }
 
