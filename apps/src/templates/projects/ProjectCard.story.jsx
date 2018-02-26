@@ -15,7 +15,7 @@ const defaultData = {
 
 export default storybook => {
   storybook
-    .storiesOf('ProjectCard', module)
+    .storiesOf('Cards/ProjectCard', module)
     .addStoryTable([
       {
         name: 'Project card - public',

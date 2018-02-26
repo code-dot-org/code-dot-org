@@ -1640,8 +1640,8 @@ class ApiControllerTest < ActionController::TestCase
     assert equivalent_bags? [], []
     assert equivalent_bags? [1, 1, 1, 2, 2], [2, 1, 2, 1, 1]
     refute equivalent_bags? [1, 1, 1, 2, 2], [1, 1, 2, 2, 2]
-    assert equivalent_bags? [2, 3, 4], [12, 13, 14] {|a, b| a % 10 == b % 10}
-    refute equivalent_bags? [2, 3, 4], [11, 12, 13] {|a, b| a % 10 == b % 10}
+    assert equivalent_bags?([2, 3, 4], [12, 13, 14]) {|a, b| a % 10 == b % 10}
+    refute equivalent_bags?([2, 3, 4], [11, 12, 13]) {|a, b| a % 10 == b % 10}
   end
 
   def assert_levelgroup_results_match(expected_results, actual_results)
