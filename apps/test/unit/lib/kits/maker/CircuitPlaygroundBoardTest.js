@@ -70,7 +70,7 @@ describe('CircuitPlaygroundBoard', () => {
 
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(21);
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(23);
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.colorLeds).to.be.a('array');
         expect(board.prewiredComponents_.led).to.be.a('object');
@@ -86,6 +86,8 @@ describe('CircuitPlaygroundBoard', () => {
         expect(board.prewiredComponents_.touchPad2).to.be.a('object');
         expect(board.prewiredComponents_.touchPad3).to.be.a('object');
         expect(board.prewiredComponents_.touchPad6).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad9).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad10).to.be.a('object');
         expect(board.prewiredComponents_.touchPad12).to.be.a('object');
         expect(board.prewiredComponents_.INPUT).to.be.a('number');
         expect(board.prewiredComponents_.OUTPUT).to.be.a('number');
