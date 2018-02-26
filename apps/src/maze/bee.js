@@ -31,6 +31,8 @@ export default class Bee extends Gatherer {
     this.userChecks_ = [];
 
     this.overrideStepSpeed = 2;
+    this.honey_;
+    this.nectars_;
   }
 
   /**
@@ -87,6 +89,20 @@ export default class Bee extends Gatherer {
       this.drawer.updateHoneyCounter(this.honey_);
     }
     super.reset();
+  }
+
+  /**
+   * Get the total count of all honey collected
+   */
+  getHoneyCount() {
+    return this.honey_;
+  }
+
+  /**
+   * Get the total count of all nectar collected
+   */
+  getNectarCount() {
+    return this.nectars_.length;
   }
 
   /**
