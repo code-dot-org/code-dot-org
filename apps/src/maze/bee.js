@@ -18,8 +18,8 @@ const HONEY_SOUND = 'honey';
 const NECTAR_SOUND = 'nectar';
 
 export default class Bee extends Gatherer {
-  constructor(maze, studioApp, config) {
-    super(maze, studioApp, config);
+  constructor(maze, config) {
+    super(maze, config);
 
     this.defaultFlowerColor_ = (config.level.flowerType === 'redWithNectar' ?
       'red' : 'purple');
@@ -57,8 +57,8 @@ export default class Bee extends Gatherer {
    */
   loadAudio(skin) {
     if (skin.beeSound) {
-      this.studioApp_.loadAudio(skin.nectarSound, NECTAR_SOUND);
-      this.studioApp_.loadAudio(skin.honeySound, HONEY_SOUND);
+      this.maze_.loadAudio(skin.nectarSound, NECTAR_SOUND);
+      this.maze_.loadAudio(skin.honeySound, HONEY_SOUND);
     }
   }
 
@@ -188,7 +188,7 @@ export default class Bee extends Gatherer {
       case TerminationValue.INSUFFICIENT_NECTAR:
       case TerminationValue.INSUFFICIENT_HONEY:
       case TerminationValue.DID_NOT_COLLECT_EVERYTHING:
-        var testResults = this.studioApp_.getTestResults(true);
+        var testResults = this.maze_.getTestResults(true);
         // If we have a non-app specific failure, we want that to take precedence.
         // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
         // a suboptimal solution, so in those cases we want to return our
