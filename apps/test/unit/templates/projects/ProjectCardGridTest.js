@@ -7,7 +7,7 @@ import {projects} from './projectsTestData';
 import {combineReducers, createStore} from 'redux';
 import reducer from '@cdo/apps/templates/projects/projectsRedux';
 
-describe.skip('ProjectCardGrid', () => {
+describe('ProjectCardGrid', () => {
   const store = createStore(combineReducers({projects: reducer}));
 
   it('filters by selected app type', () => {
@@ -22,7 +22,11 @@ describe.skip('ProjectCardGrid', () => {
     const viewAllProjects = wrapper.instance().viewAllProjects;
 
     // Should show all project types.
-    expect(wrapper).to.have.exactly(7).descendants(ProjectAppTypeArea);
+    // EXCEPT gamelab and applab, which have been temporarily hidden due to
+    // abusive content.
+    // TODO (Erin B) update test when we re-enable showing all project types.
+    // There will be 7 descendants including applab and gamelab.
+    expect(wrapper).to.have.exactly(5).descendants(ProjectAppTypeArea);
     expect(wrapper.find(ProjectAppTypeArea).first()).to.have.props({
       labKey: "playlab",
       labName: "Stories and Games with Play Lab",
@@ -39,8 +43,12 @@ describe.skip('ProjectCardGrid', () => {
     });
 
     // Show all project types.
+    // EXCEPT gamelab and applab, which have been temporarily hidden due to
+    // abusive content.
+    // TODO (Erin B) update test when we re-enable showing all project types.
+    // There will be 7 descendants including applab and gamelab.
     viewAllProjects();
-    expect(wrapper).to.have.exactly(7).descendants(ProjectAppTypeArea);
+    expect(wrapper).to.have.exactly(5).descendants(ProjectAppTypeArea);
 
     // Filter to only show Minecraft projects.
     onSelectApp('minecraft');
