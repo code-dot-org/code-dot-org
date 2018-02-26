@@ -66,12 +66,13 @@ export default class WorkshopIndex extends React.Component {
   render() {
     const showOrganizer = this.permission.isWorkshopAdmin;
     const canDelete = this.permission.isWorkshopAdmin || this.permission.isOrganizer;
+    const canCreate = (this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isCsfFacilitator);
 
     return (
       <div>
         <h1>Your Workshops</h1>
         <ButtonToolbar>
-          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isCsfFacilitator) &&
+          {canCreate &&
             (
               <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
                 New Workshop
