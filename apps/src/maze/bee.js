@@ -276,41 +276,53 @@ export default class Bee extends Gatherer {
 
   // API
 
-  getNectar(id) {
+  /**
+   * Attempt to harvest nectar from the current location; terminate the
+   * execution if this is not a valid place at which to get nectar.
+   *
+   * @return {boolean} whether or not the attempt was successful
+   */
+  getNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     // Make sure we're at a flower.
     if (!this.isFlower(row, col)) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
-      return;
+      return false;
     }
     // Nectar is positive.  Make sure we have it.
     if (this.flowerRemainingCapacity(row, col) === 0) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.FLOWER_EMPTY);
-      return;
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('nectar', id);
     this.gotNectarAt(row, col);
+    return true;
   }
 
-  // Note that this deliberately does not check whether bee has gathered nectar.
-  makeHoney(id) {
+  /**
+   * Attempt to make honey at the current location; terminate the execution if
+   * this is not a valid place at which to make honey.
+   * Note that this deliberately does not check whether bee has gathered nectar.
+   *
+   * @return {boolean} whether or not the attempt was successful
+   */
+  makeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     if (!this.isHive(row, col)) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_HONEYCOMB);
-      return;
+      return false;
     }
     if (this.hiveRemainingCapacity(row, col) === 0) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.HONEYCOMB_FULL);
-      return;
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('honey', id);
     this.madeHoneyAt(row, col);
+    return true;
   }
 
   nectarRemaining(userCheck=false) {
@@ -335,33 +347,22 @@ export default class Bee extends Gatherer {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
-    if (this.getValue(row, col) <= 0) {
-      throw new Error("Shouldn't be able to end up with a nectar animation if " +
-        "there was no nectar to be had");
+    if (this.getNectar()) {
+      this.playAudio_(NECTAR_SOUND);
+      this.drawer.updateItemImage(row, col, true);
+      this.drawer.updateNectarCounter(this.nectars_);
     }
-
-    this.playAudio_(NECTAR_SOUND);
-    this.gotNectarAt(row, col);
-
-    this.drawer.updateItemImage(row, col, true);
-    this.drawer.updateNectarCounter(this.nectars_);
   }
 
   animateMakeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
-    if (!this.isHive(row, col)) {
-      throw new Error("Shouldn't be able to end up with a honey animation if " +
-        "we arent at a hive or dont have nectar");
+    if (this.makeHoney()) {
+      this.playAudio_(HONEY_SOUND);
+      this.drawer.updateItemImage(row, col, true);
+      this.drawer.updateHoneyCounter(this.honey_);
     }
-
-    this.playAudio_(HONEY_SOUND);
-    this.madeHoneyAt(row, col);
-
-    this.drawer.updateItemImage(row, col, true);
-
-    this.drawer.updateHoneyCounter(this.honey_);
   }
 
   /**
