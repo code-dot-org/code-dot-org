@@ -83,14 +83,15 @@ module.exports = class Maze {
     config.forceInsertTopBlock = 'when_run';
     config.dropletConfig = dropletConfig;
 
-    this.controller = new MazeController(level, skin, config);
-    this.controller.rebindMethods({
-      playAudio: studioApp().playAudio.bind(studioApp()),
-      playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
-      loadAudio: studioApp().loadAudio.bind(studioApp()),
-      getTestResults: studioApp().getTestResults.bind(studioApp()),
+    this.controller = new MazeController(level, skin, config, {
+      methods: {
+        playAudio: studioApp().playAudio.bind(studioApp()),
+        playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
+        loadAudio: studioApp().loadAudio.bind(studioApp()),
+        getTestResults: studioApp().getTestResults.bind(studioApp()),
+      },
+      reduxStore: getStore()
     });
-    this.controller.addReduxStore(getStore());
 
     if (this.controller.subtype.overrideStepSpeed) {
       this.scale.stepSpeed = this.controller.subtype.overrideStepSpeed;
