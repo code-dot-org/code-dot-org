@@ -31,7 +31,7 @@ const getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
 const tiles = require('./tiles');
 
 module.exports = class MazeController {
-  constructor(level, skin, config) {
+  constructor(level, skin, config, options = {}) {
     const Type = getSubtypeForSkin(config.skinId);
     const subtype = new Type(this, config);
 
@@ -61,6 +61,14 @@ module.exports = class MazeController {
     this.SQUARE_SIZE;
 
     this.loadLevel_();
+
+    if (options.methods) {
+      this.rebindMethods(options.methods);
+    }
+
+    if (options.reduxStore) {
+      this.addReduxStore(options.reduxStore);
+    }
   }
 
   /**
