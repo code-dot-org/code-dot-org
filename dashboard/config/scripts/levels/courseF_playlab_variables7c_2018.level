@@ -54,7 +54,7 @@
     "min_workspace_height": "500",
     "disable_procedure_autopopulate": "false",
     "background": "rainbow",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Put the new `ask` block before your `if/else` statement so you can use it there in other stages.\",\"hint_id\":\"courseF_playlab_variables7c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/188460747523c3f465cc98df8b82a49b/courseF_playlab_variables7c.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Put the new `ask` block before your `if/else` statement so you can use it there in other stages.\",\"hint_id\":\"courseF_playlab_variables7c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/188460747523c3f465cc98df8b82a49b/courseF_playlab_variables7c_2018.mp3\"}]",
     "remove_items_when_actor_collides": "false",
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/c52d85bb54e9c1b3a7d5e273d9221f47=levelbuilder/34130.png",

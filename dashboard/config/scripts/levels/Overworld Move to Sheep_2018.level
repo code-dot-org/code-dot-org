@@ -84,7 +84,7 @@
     "free_play": "false",
     "grid_width": "10",
     "grid_height": "10",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `move forward` block is at the top of the toolbox.\\n\",\"hint_id\":\"mc_1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b6be9d8f890b3299317350cdd870869/Overworld Move to Sheep.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure both `move forward` blocks are snapped to the `when run` block.\\n\",\"hint_id\":\"mc_1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ea450203b25138854ca29414ecd676c2/Overworld Move to Sheep.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `move forward` block is at the top of the toolbox.\\n\",\"hint_id\":\"mc_1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b6be9d8f890b3299317350cdd870869/Overworld Move to Sheep_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure both `move forward` blocks are snapped to the `when run` block.\\n\",\"hint_id\":\"mc_1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ea450203b25138854ca29414ecd676c2/Overworld Move to Sheep_2018.mp3\"}]",
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

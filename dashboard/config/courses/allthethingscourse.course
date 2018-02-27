@@ -4,6 +4,13 @@
     "allthethings",
     "allthehiddenthings"
   ],
+  "alternate_scripts": [
+    {
+      "experiment_name": "alternate-things",
+      "alternate_script": "alternatethings",
+      "default_script": "allthethings"
+    }
+  ],
   "properties": {
   }
 }
