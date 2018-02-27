@@ -30,7 +30,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\",\"hint_id\":\"courseF_bee_functions8a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/14391b89faae14bf0f715e5f6a774bc3/courseF_bee_functions8a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to build code inside of the function editor.\\n\\n\",\"hint_id\":\"courseF_bee_functions8a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d21bd514975d839615a96bfc253e09d4/courseF_bee_functions8a.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\",\"hint_id\":\"courseF_bee_functions8a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/14391b89faae14bf0f715e5f6a774bc3/courseF_bee_functions8a_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to build code inside of the function editor.\\n\\n\",\"hint_id\":\"courseF_bee_functions8a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d21bd514975d839615a96bfc253e09d4/courseF_bee_functions8a_2018.mp3\"}]",
     "instructions_important": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

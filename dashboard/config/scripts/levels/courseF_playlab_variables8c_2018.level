@@ -54,7 +54,7 @@
     "min_workspace_height": "500",
     "disable_procedure_autopopulate": "false",
     "background": "rainbow",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `join` block goes into an `actor say` block, and lets you use your variables in larger sentences.\",\"hint_id\":\"courseF_playlab_variables8c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd705542df0c4616c34c79bf0144b6de/courseF_playlab_variables8c.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The `join` block goes into an `actor say` block, and lets you use your variables in larger sentences.\",\"hint_id\":\"courseF_playlab_variables8c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd705542df0c4616c34c79bf0144b6de/courseF_playlab_variables8c_2018.mp3\"}]",
     "remove_items_when_actor_collides": "false",
     "top_level_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/8b64a1c419598a6d1044a14307dcc59c=levelbuilder/34131.png",
