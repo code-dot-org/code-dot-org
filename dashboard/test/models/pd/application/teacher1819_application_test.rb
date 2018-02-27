@@ -492,11 +492,8 @@ module Pd::Application
     end
 
     test 'find_default_workshop find an appropriate partner workshop for G1 and G2 partners' do
-      program_manager = create :workshop_organizer
       partner = create :regional_partner
-      create :regional_partner_program_manager,
-        program_manager: program_manager,
-        regional_partner: partner
+      program_manager = create :program_manager, regional_partner: partner
 
       # where "appropriate workshop" is the earliest teachercon or local summer
       # workshop matching the application course.
