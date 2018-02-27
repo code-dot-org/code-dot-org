@@ -111,9 +111,16 @@ module.exports = class MazeController {
     // and only exists for backwards compatibility for not-yet-updated
     // levels.
     if (this.level.serializedMaze) {
-      this.map = MazeMap.deserialize(this.level.serializedMaze, this.subtype.getCellClass());
+      this.map = MazeMap.deserialize(
+        this.level.serializedMaze,
+        this.subtype.getCellClass(),
+      );
     } else {
-      this.map = MazeMap.parseFromOldValues(this.level.map, this.level.initialDirt, this.subtype.getCellClass());
+      this.map = MazeMap.parseFromOldValues(
+        this.level.map,
+        this.level.initialDirt,
+        this.subtype.getCellClass(),
+      );
     }
 
     // this could possibly be eliminated in favor of just always referencing
@@ -151,7 +158,6 @@ module.exports = class MazeController {
   /**
    * Initialize Blockly and the maze.  Called on page load.
    */
-
   gridNumberToPosition_(n) {
     return (n + 0.5) * this.SQUARE_SIZE;
   }
@@ -195,8 +201,11 @@ module.exports = class MazeController {
       for (x = 0; x < this.map.COLS; x++) {
         var obsIcon = document.getElementById('obstacle' + obsId);
         if (obsIcon) {
-          obsIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                                 this.skin.obstacleIdle);
+          obsIcon.setAttributeNS(
+            'http://www.w3.org/1999/xlink',
+            'xlink:href',
+            this.skin.obstacleIdle,
+          );
         }
         ++obsId;
       }
@@ -220,7 +229,10 @@ module.exports = class MazeController {
         // Tile sprite.
         var tileElement = document.getElementById('tileElement' + tileId);
         tileElement.setAttributeNS(
-            'http://www.w3.org/1999/xlink', 'xlink:href', this.skin.tiles);
+          'http://www.w3.org/1999/xlink',
+          'xlink:href',
+          this.skin.tiles,
+        );
         tileElement.setAttribute('opacity', 1);
         tileId++;
       }
@@ -267,8 +279,11 @@ module.exports = class MazeController {
     );
     // Play sound and animation for hitting wall or obstacle
     var squareType = this.map.getTile(targetY, targetX);
-    if (squareType === tiles.SquareType.WALL || squareType === undefined ||
-      (this.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE)) {
+    if (
+      squareType === tiles.SquareType.WALL ||
+      squareType === undefined ||
+      (this.subtype.isScrat() && squareType === tiles.SquareType.OBSTACLE)
+    ) {
       // Play the sound
       this.playAudio('wall');
       if (squareType !== undefined) {
@@ -343,7 +358,7 @@ module.exports = class MazeController {
   scheduleFill() {
     this.scheduleDirtChange_({
       amount: 1,
-      sound: 'fill'
+      sound: 'fill',
     });
   }
 
@@ -353,7 +368,7 @@ module.exports = class MazeController {
   scheduleDig() {
     this.scheduleDirtChange_({
       amount: -1,
-      sound: 'dig'
+      sound: 'dig',
     });
   }
 
