@@ -10,6 +10,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @workshop_admin = create(:workshop_admin)
     @organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
+    @regional_partner = create(:regional_partner)
 
     @workshop = create(
       :pd_workshop,
@@ -312,10 +313,15 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test 'organizers can update their workshops' do
+  test 'organizers can update their workshops, including regional partner' do
     sign_in @organizer
-    put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
+    params_with_regional_partner = workshop_params.merge({regional_partner_id: @regional_partner.id})
+    workshop = create :pd_workshop, organizer: @organizer
+
+    put :update, params: {id: workshop.id, pd_workshop: params_with_regional_partner}
     assert_response :success
+    workshop.reload
+    assert_equal @regional_partner.id, workshop.regional_partner_id
   end
 
   test 'organizers cannot update workshops they are not organizing' do
@@ -327,15 +333,18 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'Facilitators can update workshops they organized' do
+  test 'Facilitators can update workshops they organized but not the regional parter' do
     sign_in(@facilitator)
 
     workshop = create :pd_workshop, organizer: @facilitator
+    params_with_regional_partner = workshop_params.merge({regional_partner_id: @regional_partner.id})
     put :update, params: {
       id: workshop.id,
-      pd_workshop: workshop_params
+      pd_workshop: params_with_regional_partner
     }
     assert_response :success
+    workshop.reload
+    assert_nil workshop.regional_partner_id
   end
 
   test_user_gets_response_for(
