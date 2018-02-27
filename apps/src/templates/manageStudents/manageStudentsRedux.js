@@ -1,6 +1,37 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
+export const ADD_STATUS = {
+  "success": "success",
+  "fail": "fail",
+};
+
+// This doesn't get used to make a server call, but does
+// need to be unique from the rest of the ids.
+const addRowId = 0;
+
+// Number that is available as a new id for adding students.
+// Each needs a unique id, and counts backward from -1.
+let addRowIdCounter = -1;
+
+const blankAddRow = {
+  id: addRowId,
+  name: '',
+  age: '',
+  gender: '',
+  username: '',
+  loginType: '',
+  isEditing: true,
+  isAddRow: true,
+};
+
+const initialState = {
+  loginType: '',
+  studentData: {},
+  editingData: {},
+  sectionId: null,
+};
+
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
 const SET_SECTION_ID = 'manageStudents/SET_SECTION_ID';
@@ -14,6 +45,7 @@ const START_SAVING_STUDENT = 'manageStudents/START_SAVING_STUDENT';
 const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
+const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -26,8 +58,9 @@ export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, s
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
-export const addStudentSuccess = (studentData) => ({ type: ADD_STUDENT_SUCCESS, studentData });
+export const addStudentSuccess = (rowId, studentData) => ({ type: ADD_STUDENT_SUCCESS, rowId, studentData });
 export const addStudentFailure = (error, studentId) => ({ type: ADD_STUDENT_FAILURE, error, studentId });
+export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -51,37 +84,28 @@ export const addStudent = (studentId) => {
         dispatch(addStudentFailure(error, studentId));
         console.error(error);
       } else {
-        dispatch(addStudentSuccess(convertAddedStudent(data)));
+        dispatch(addStudentSuccess(studentId, convertAddedStudent(data)));
       }
     });
   };
 };
 
-export const ADD_STATUS = {
-  "success": "success",
-  "fail": "fail",
-};
-
-// This doesn't get used to make a server call, but does
-// need to be unique from the rest of the ids.
-const addRowId = 0;
-
-const blankAddRow = {
-  id: addRowId,
-  name: '',
-  age: '',
-  gender: '',
-  username: '',
-  loginType: '',
-  isEditing: true,
-  isAddRow: true,
-};
-
-const initialState = {
-  loginType: '',
-  studentData: {},
-  editingData: {},
-  sectionId: null,
+export const addMultipleAddRows = (studentNames) => {
+  return (dispatch, getState) => {
+    console.log("addMultipleAddRows");
+    //needs to be an object id: {}, and Ids need to be unique
+    let studentData = {};
+    for (let i = 0; i<studentNames.length; i++) {
+      const newId = addRowIdCounter;
+      addRowIdCounter = addRowIdCounter - 1;
+      studentData[newId] = {
+        ...blankAddRow,
+        name: studentNames[i],
+        id: newId,
+      };
+    }
+    dispatch(addMultipleRows(studentData));
+  };
 };
 
 export default function manageStudents(state=initialState, action) {
@@ -179,6 +203,7 @@ export default function manageStudents(state=initialState, action) {
           ...state.editingData[action.studentId],
           isEditing: false,
           isSaving: false,
+          isAddRow: false,
         }
       },
       editingData: _.omit(state.editingData, action.studentId),
@@ -198,6 +223,7 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === ADD_STUDENT_SUCCESS) {
+    // omit action.rowId
     return {
       ...state,
       studentData: {
@@ -205,14 +231,14 @@ export default function manageStudents(state=initialState, action) {
           ...action.studentData,
           loginType: state.loginType
         },
-        ...state.studentData,
+        ..._.omit(state.studentData, action.rowId),
         [addRowId]: {
           ...blankAddRow,
           loginType: state.loginType
         },
       },
       editingData: {
-        ...state.editingData,
+        ..._.omit(state.editingData, action.rowId),
         [addRowId]: {
           ...blankAddRow,
           loginType: state.loginType
@@ -267,6 +293,19 @@ export default function manageStudents(state=initialState, action) {
     return {
       ...state,
       studentData: _.omit(state.studentData, studentId)
+    };
+  }
+  if (action.type === ADD_MULTIPLE_ROWS) {
+    return {
+      ...state,
+      studentData: {
+        ...state.studentData,
+        ...action.studentData
+      },
+      editingData: {
+        ...state.editingData,
+        ...action.studentData
+      }
     };
   }
 

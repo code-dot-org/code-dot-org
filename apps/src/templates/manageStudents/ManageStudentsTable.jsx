@@ -14,6 +14,7 @@ import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import {convertStudentDataToArray, ADD_STATUS} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
+import AddMultipleStudents from './AddMultipleStudents';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -321,6 +322,7 @@ class ManageStudentsTable extends Component {
             dismissible={false}
           />
         }
+        <AddMultipleStudents/>
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
