@@ -60,6 +60,19 @@ export default class Collector extends Subtype {
   }
 
   /**
+   * @return {number} The number of collectibles collected
+   */
+  getTotalCollected() {
+    let count = 0;
+    this.maze_.map.forEachCell((cell, x, y) => {
+      if (cell.isDirt()) {
+        count += (cell.getOriginalValue() - cell.getCurrentValue());
+      }
+    });
+    return count;
+  }
+
+  /**
    * @override
    */
   loadAudio(skin) {
