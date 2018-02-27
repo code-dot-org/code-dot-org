@@ -39,26 +39,26 @@ module.exports = class MazeController {
 
     this.level = level;
     this.skin = skin;
-    this.startDirection;
+    this.startDirection = null;
 
-    this.map;
     this.subtype = subtype;
-    this.animationsController;
-    this.executionInfo;
-    this.store;
+    this.map = null;
+    this.animationsController = null;
+    this.executionInfo = null;
+    this.store = null;
 
-    this.pegmanD;
-    this.pegmanX;
-    this.pegmanY;
+    this.pegmanD = null;
+    this.pegmanX = null;
+    this.pegmanY = null;
 
-    this.MAZE_HEIGHT;
-    this.MAZE_WIDTH;
-    this.PATH_WIDTH;
-    this.PEGMAN_HEIGHT;
-    this.PEGMAN_WIDTH;
-    this.PEGMAN_X_OFFSET;
-    this.PEGMAN_Y_OFFSET;
-    this.SQUARE_SIZE;
+    this.MAZE_HEIGHT = null;
+    this.MAZE_WIDTH = null;
+    this.PATH_WIDTH = null;
+    this.PEGMAN_HEIGHT = null;
+    this.PEGMAN_WIDTH = null;
+    this.PEGMAN_X_OFFSET = null;
+    this.PEGMAN_Y_OFFSET = null;
+    this.SQUARE_SIZE = null;
 
     this.loadLevel_();
 
