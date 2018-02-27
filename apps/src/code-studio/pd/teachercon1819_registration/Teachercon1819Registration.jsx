@@ -43,7 +43,10 @@ export default class Teachercon1819Registration extends FormController {
    * @override
    */
   getPageComponents() {
-    if (this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions['decline']) {
+    if (
+        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions['decline'] ||
+        this.state.data.ableToAttend === 'No'
+    ) {
       return [Joining];
     } else {
       const pageComponents = [

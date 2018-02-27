@@ -32,12 +32,12 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Education**
 	- [Program Associate](#associate)
 - **Engineering**
+	- [Director/VP Engineering](#vpeng)
 	- [Software Engineer](#softwareengineer)
 	- [Technical Lead](#techlead)
 - **Outreach**
  	- [Program Associate](#outreach)
 - **Internships**
-	- [Data Intern (Seattle, WA)](#dataintern)
 	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
 	- [Events Intern (Seattle, WA)](#eventsintern)
 	
@@ -125,6 +125,38 @@ You will be successful in this role if you have:
 - Ability and willingness to travel up to 15% time
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="vpeng"href="#vpeng">Director/VP Engineering (Seattle, WA)</a>
+
+**Job Summary:**
+ 
+ Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive, diverse workforce of the future.
+As Director/VP of Engineering at Code.org, you’ll be responsible for leading and supporting a high-powered, agile software engineering team of 15-20 engineers, and supporting a learning+coding platform for tens of millions students. You’ll set technical strategy and direction, drive big bets and investments, and address technical debt. You’ll manage, mentor and grow individual contributors and managers. Partnering with product management, you will lead execution on delivering product features. You’ll be responsible for engineering recruiting and hiring. You’ll deliver great live site operational results for our millions of students and teachers around the world.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Desire to support the growth of female and underrepresented minority students
+- 10+ years of professional software engineering experience
+- 5+ years experience as a people manager
+- Top-notch technical ability - must have technical credibility as a leader of a highly accomplished engineering team
+- Demonstrated ability to lead and energize others
+- Supportive manager with experience managing well functioning teams
+- Expertise in some of these technologies preferred:
+	- JavaScript
+	- React
+	- Ruby on Rails
+	- SQL/Databases/MySQL
+- Experience operating a live high-scale web-based software product or service
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="softwareengineer"href="#softwareengineer">Software Engineer (Seattle, WA)</a>
 
@@ -219,49 +251,7 @@ You will be successful in this role if you have:
 
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="dataintern"href="#dataintern">Data Intern (Seattle, WA)</a>
 
-**Internship Summary:**
-
-At Code.org we create and support computer science curriculum that reaches millions of students, and we prepare tens of thousands of teachers to begin teaching computer science each year. The core function of the Analytics Intern role is to help us: 
-
-1. Analyze the impact of our professional development and curriculum programs
-2. Generate dashboards that can empower internal teams and external partners to make informed decisions
-
-
-Our Code.org platform has become the most popular coding platform in K-12 education.  We’re looking for someone who’s passionate about understanding and using data; someone who wants to ask questions and find answers. The responsibility in this job isn't just to answer analytic questions but ultimately to help the team improve outcomes for students, teachers, and schools. This role will help establish the questions to ask in the first place, figure out how to answer them, and ensure we are measuring and collecting the right data across our education products, services, and processes.
-
-Prior industry experience is not required but experience with SQL and a data visualization tool like Tableau is strongly preferred. 
-
-Job responsibilities could include:
-
-- Working with teams across Code.org (product management, professional learning, curriculum, outreach, advocacy) to design and create actionable visualizations and dashboards 
-- Writing code/scripts/queries as well as using Tableau to analyze the data and find answers
-- Analyzing student and teacher data collected through our web-based curriculum to understand how we can improve outcomes, including:
-	- Optimizing courses to be engaging, challenging (but not too challenging) and to increase student learning and coding proficiency outcomes
-	- Recruiting teachers and students, retaining users, and increasing engagement
-
-**Experience and Qualifications:**
-
-The ideal candidate has a breadth of experience and qualifications:
-
-- A degree (or working towards a degree) in applied math, statistics, engineering, computer science, finance or a related field (coursework in applied maths and/or statistics preferred)
-- Strong analytical skills with attention to detail and the ability to create clear reports to communicate actionable findings to others
-- Some experience querying SQL-style databases
-- Ability to communicate effectively with both technical and non-technical audiences to fully understand the experiences of our students, teachers, and facilitators resulting in significantly deeper learning and impact
-- Knowledge of visualization/analysis tools including spreadsheets, Tableau experience preferred
-
-
-
-**Benefits Package:**
-
-Code.org offers a competitive benefits package that includes:
-
-- Hourly rate (DOE) 32-40 hours/week
-- Flexible working environment
-- Pre-paid transit (ORCA) card 
-
-Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
 
 
 ## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL or Seattle, WA preferred)</a>
