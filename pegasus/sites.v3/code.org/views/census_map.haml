@@ -174,17 +174,20 @@
         <hr>
         <div class="census-message">${censusMessage}</div>
         <div class="button-container">
-          <a onclick="showYourSchoolFunction(${schoolDropdownOptionString}); adjustScroll('form');">
-            <div class="button">
-              <div class="button-text">Take the survey for this school</div>
-            </div>
-          </a>
-          <a href="/yourschool/letter" target="_blank">
-            <div class="button">
-              <div class="button-text">Send the survey to a teacher at this school</div>
-            </div>
-          </a>
-          <div style="clear: both;" />
+          <div class="button-link-div">
+            <a onclick="showYourSchoolFunction(${schoolDropdownOptionString}); adjustScroll('form');">
+              <div class="button">
+                <div class="button-text">Take the survey for this school</div>
+              </div>
+            </a>
+          </div>
+          <div class="button-link-div">
+            <a href="/yourschool/letter" target="_blank">
+              <div class="button">
+                <div class="button-text">Send the survey to a teacher at this school</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     `;
