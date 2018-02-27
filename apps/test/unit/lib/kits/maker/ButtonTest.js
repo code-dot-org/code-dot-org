@@ -4,7 +4,7 @@ import {expect} from '../../../../util/configuredChai';
 import five from '@code-dot-org/johnny-five';
 import makeStubBoard from './makeStubBoard';
 import Button from '@cdo/apps/lib/kits/maker/Button';
-import {TOUCH_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 describe('Button', function () {
   it('is a johnny-five Button component', function () {
@@ -35,8 +35,8 @@ describe('Button', function () {
     });
   });
 
-  it('becomes a pullup when assigned to a touch pin', () => {
-    TOUCH_PINS.forEach((pin) => {
+  it('becomes a pullup when assigned to an external pin', () => {
+    EXTERNAL_PINS.forEach((pin) => {
       const button = new Button({
         board: makeStubBoard(),
         pin
@@ -45,9 +45,9 @@ describe('Button', function () {
     });
   });
 
-  it('does not become a pullup when assigned to a non-touch pin', () => {
+  it('does not become a pullup when assigned to a non-external pin', () => {
     _.range(21)
-      .filter(pin => !TOUCH_PINS.includes(pin))
+      .filter(pin => !EXTERNAL_PINS.includes(pin))
       .forEach((pin) => {
         const button = new Button({
           board: makeStubBoard(),
