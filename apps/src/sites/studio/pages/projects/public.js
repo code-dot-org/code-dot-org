@@ -14,6 +14,7 @@ $(document).ready(() => {
   const showFeatured = window.location.href.includes("showFeatured");
   const originalUrl = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
   const url = showFeatured ? originalUrl + `?showFeatured=1` : originalUrl;
+
   registerReducers({projects});
   $.ajax({
     method: 'GET',
