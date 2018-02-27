@@ -32,6 +32,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Education**
 	- [Program Associate](#associate)
 - **Engineering**
+	- [Director/VP Engineering](#vpeng)
 	- [Software Engineer](#softwareengineer)
 	- [Technical Lead](#techlead)
 - **Outreach**
@@ -124,6 +125,38 @@ You will be successful in this role if you have:
 - Ability and willingness to travel up to 15% time
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="vpeng"href="#vpeng">Director/VP Engineering (Seattle, WA)</a>
+
+**Job Summary:**
+ 
+ Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive, diverse workforce of the future.
+As Director/VP of Engineering at Code.org, you’ll be responsible for leading and supporting a high-powered, agile software engineering team of 15-20 engineers, and supporting a learning+coding platform for tens of millions students. You’ll set technical strategy and direction, drive big bets and investments, and address technical debt. You’ll manage, mentor and grow individual contributors and managers. Partnering with product management, you will lead execution on delivering product features. You’ll be responsible for engineering recruiting and hiring. You’ll deliver great live site operational results for our millions of students and teachers around the world.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Desire to support the growth of female and underrepresented minority students
+- 10+ years of professional software engineering experience
+- 5+ years experience as a people manager
+- Top-notch technical ability - must have technical credibility as a leader of a highly accomplished engineering team
+- Demonstrated ability to lead and energize others
+- Supportive manager with experience managing well functioning teams
+- Expertise in some of these technologies preferred:
+	- JavaScript
+	- React
+	- Ruby on Rails
+	- SQL/Databases/MySQL
+- Experience operating a live high-scale web-based software product or service
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="softwareengineer"href="#softwareengineer">Software Engineer (Seattle, WA)</a>
 
