@@ -65,12 +65,14 @@ export default class WorkshopIndex extends React.Component {
 
   render() {
     const showOrganizer = this.permission.isWorkshopAdmin;
+    const canDelete = this.permission.isWorkshopAdmin || this.permission.isOrganizer;
+    const canCreate = (this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isCsfFacilitator);
 
     return (
       <div>
         <h1>Your Workshops</h1>
         <ButtonToolbar>
-          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) &&
+          {canCreate &&
             (
               <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
                 New Workshop
@@ -91,7 +93,7 @@ export default class WorkshopIndex extends React.Component {
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           queryParams={filterParams.inProgress}
-          canDelete
+          canDelete={canDelete}
           tableId="inProgressWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('In Progress')}
@@ -100,7 +102,7 @@ export default class WorkshopIndex extends React.Component {
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           queryParams={filterParams.notStarted}
-          canDelete
+          canDelete={canDelete}
           tableId="notStartedWorkshopsTable"
           showSignupUrl
           showOrganizer={showOrganizer}

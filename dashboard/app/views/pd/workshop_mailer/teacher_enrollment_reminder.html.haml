@@ -10,7 +10,8 @@
 - if @workshop.local_summer?
   %p
     This is a reminder about your upcoming 5-day Summer workshop on the Code.org
-    CS Principles curriculum.
+    = @workshop.course
+    curriculum.
 - else
   %p
     This is a reminder about your upcoming Code.org

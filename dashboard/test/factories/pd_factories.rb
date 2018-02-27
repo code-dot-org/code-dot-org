@@ -738,6 +738,8 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
+
   # default to do_you_approve: other
   factory :pd_principal_approval1819_application_hash, parent: :pd_principal_approval1819_application_hash_common do
     approved_other
