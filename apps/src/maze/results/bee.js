@@ -13,6 +13,24 @@ export default class BeeHandler extends GathererHandler {
     this.honeyGoal_ = config.level.honeyGoal || 0;
   }
 
+  setTerminationHandlerMethods() {
+    this.maze_.subtype.setNotAtFlowerHandler(() => {
+      this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
+    });
+
+    this.maze_.subtype.setFlowerEmptyHandler(() => {
+      this.maze_.executionInfo.terminateWithValue(TerminationValue.FLOWER_EMPTY);
+    });
+
+    this.maze_.subtype.setNotAtHiveHandler(() => {
+      this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_HONEYCOMB);
+    });
+
+    this.maze_.subtype.setHiveFullHandler(() => {
+      this.maze_.executionInfo.terminateWithValue(TerminationValue.HONEYCOMB_FULL);
+    });
+  }
+
   /**
    * Did we reach our total nectar/honey goals?
    * @return {boolean}
