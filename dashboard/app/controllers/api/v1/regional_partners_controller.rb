@@ -1,6 +1,6 @@
 class Api::V1::RegionalPartnersController < ApplicationController
-  # GET /api/v1/regional-partner/<school_district_id>/<course>
-  def index
+  # GET /api/v1/regional_partners/<school_district_id>/<course>
+  def for_school_district_and_course
     school_district = SchoolDistrict.find(params[:school_district_id])
 
     if params[:course] == 'unselected'
@@ -12,9 +12,9 @@ class Api::V1::RegionalPartnersController < ApplicationController
     end
   end
 
-  # GET /api/v1/regional-partner/for_user
-  def for_user
-    regional_partners = current_user.permission?(UserPermission::WORKSHOP_ADMIN) ? RegionalPartner.all : current_user.regional_partners
+  # GET /api/v1/regional_partners
+  def index
+    regional_partners = (current_user.facilitator? || current_user.workshop_admin?) ? RegionalPartner.all : current_user.regional_partners
 
     render json: regional_partners.order(:name).map {|partner| {id: partner.id, name: partner.name}}
   end

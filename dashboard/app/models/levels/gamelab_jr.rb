@@ -52,6 +52,13 @@ class GamelabJr < Gamelab
   <block type="when_run" />
 </category>
 <category name="Variables" custom="VARIABLE" />
+<category name="World">
+  <block type="gamelab_setBackground">
+    <value name="COLOR">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+</category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
   <block type="gamelab_moveUp" />
@@ -66,6 +73,7 @@ class GamelabJr < Gamelab
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />
   <block type="gamelab_add" />
+  <block type="gamelab_groupLength" />
 </category>
 <category name="Events">
   <block type="gamelab_whenUpArrow" />
@@ -147,5 +155,10 @@ class GamelabJr < Gamelab
 </category>
 #{common_blocks(type)}
     XML
+  end
+
+  # These serialized fields will be serialized/deserialized as straight XML
+  def xml_blocks
+    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 end

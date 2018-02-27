@@ -1,7 +1,7 @@
 /** @file Wrapper around Johnny-Five Button component */
 import five from '@code-dot-org/johnny-five';
 import '../../../utils'; // For Function.prototype.inherits
-import {TOUCH_PINS} from "./PlaygroundConstants";
+import {EXTERNAL_PINS} from "./PlaygroundConstants";
 
 /**
  * Wrap Johnny-Five's Button component to add attributes and customize behavior.
@@ -11,7 +11,7 @@ import {TOUCH_PINS} from "./PlaygroundConstants";
  */
 export default function Button(opts) {
   // For Circuit Playground, treat touch pin buttons as pullups.
-  opts.pullup = TOUCH_PINS.includes(opts.pin);
+  opts.pullup = EXTERNAL_PINS.includes(opts.pin);
   five.Button.call(this, opts);
 
   // Add a read-only `isPressed` property
