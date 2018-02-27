@@ -100,8 +100,11 @@
 }
 
 .census-info-window .button-container {
-  width: 280px;
+  max-width: 280px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .census-info-window a {
@@ -109,13 +112,16 @@
   cursor: pointer;
 }
 
+.census-info-window .button-link-div {
+  flex: 1 0;
+  vertical-align: middle;
+  margin: 5px;
+}
+
 .census-info-window .button {
-  display: inline-block;
-  width: 126px;
-  height: 61px;
   vertical-align: middle;
   word-wrap: break-word;
-  margin: 5px;
+  height: 100%;
   color: white;
   background-color:orange;
   border-color: orange;
