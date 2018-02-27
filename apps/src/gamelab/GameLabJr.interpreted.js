@@ -216,6 +216,7 @@ function makeNewGroup() {
       addBehavior(group[i], behavior, name);
     }
   };
+  group.destroy = group.destroyEach;
   return group;
 }
 
