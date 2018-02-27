@@ -109,8 +109,11 @@ FactoryGirl.define do
         end
       end
       factory :program_manager do
-        after(:create) do |user|
-          create :regional_partner_program_manager, program_manager: user
+        transient do
+          regional_partner {build :regional_partner}
+        end
+        after(:create) do |user, evaluator|
+          create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
         end
       end
       factory :plc_reviewer do
