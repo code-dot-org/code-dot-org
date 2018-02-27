@@ -11,8 +11,8 @@
 #
 # Indexes
 #
-#  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
-#  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
+#  index_pd_summer_event1819_registrations_on_pd_application_id    (pd_application_id)
+#  index_pd_summer_event1819_registrations_on_regional_partner_id  (regional_partner_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
