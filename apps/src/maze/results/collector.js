@@ -50,7 +50,7 @@ export default class Collector extends ResultsHandler {
    * @return {boolean} Has the user collected all available collectibles?
    */
   collectedAll() {
-    return this.getTotalCollected() === this.getPotentialMaxCollected();
+    return this.maze_.subtype.getTotalCollected() === this.getPotentialMaxCollected();
   }
 
   /**
@@ -77,19 +77,6 @@ export default class Collector extends ResultsHandler {
   }
 
   /**
-   * @return {number} The number of collectibles collected
-   */
-  getTotalCollected() {
-    let count = 0;
-    this.maze_.map.forEachCell((cell, x, y) => {
-      if (cell.isDirt()) {
-        count += (cell.getOriginalValue() - cell.getCurrentValue());
-      }
-    });
-    return count;
-  }
-
-  /**
    * @override
    */
   succeeded() {
@@ -112,13 +99,13 @@ export default class Collector extends ResultsHandler {
   terminateWithAppSpecificValue() {
     const executionInfo = this.maze_.executionInfo;
 
-    if (this.getTotalCollected() === 0) {
+    if (this.maze_.subtype.getTotalCollected() === 0) {
       executionInfo.terminateWithValue(COLLECTED_NOTHING);
     } else if (this.collectedTooMany()) {
       executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
     } else if (studioApp().feedback_.getNumCountableBlocks() > this.maxBlocks_) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
-    } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
+    } else if (this.minCollected_ && this.maze_.subtype.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
     } else if (!this.collectedAll()) {
       executionInfo.terminateWithValue(COLLECTED_ENOUGH_BUT_NOT_ALL);
