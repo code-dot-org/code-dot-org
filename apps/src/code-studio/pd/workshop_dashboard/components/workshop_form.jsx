@@ -121,8 +121,9 @@ export default class WorkshopForm extends React.Component {
       );
       initialState.sessions = this.prepareSessionsForForm(props.workshop.sessions);
       this.loadAvailableFacilitators(props.workshop.course);
-      this.loadRegionalPartners();
     }
+
+    this.loadRegionalPartners();
 
     return initialState;
   }
