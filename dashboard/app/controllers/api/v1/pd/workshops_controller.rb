@@ -116,6 +116,12 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
+
+    # Add regional partner permission here when those are added
+    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      params.require(:pd_workshop).delete(:regional_partner_id)
+    end
+
     if @workshop.update(workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
