@@ -1,20 +1,24 @@
-drop view analysis.census_details
+drop view analysis.census_details;
 create view analysis.census_details as
 with csa as
 (
-select ss.school_id, case when cso.school_code is not null then 1 else 0 end as teaches_csa
+select ss.school_id, 
+case when cso.school_code is not null then 1 
+when cso.school_code is null and ss.school_type in ('public', 'charter') then 0 -- only include known status for public and charter schools, as we don't have data for private schools
+end as teaches_csa
 from analysis.school_stats ss
 left join dashboard_production.ap_school_codes sc on sc.school_id = ss.school_id
 left join dashboard_production.ap_cs_offerings cso on cso.school_code = sc.school_code and cso.course = 'CSA'
-where ss.school_type in ('public','charter') -- only include known status for public and charter schools, as we don't have data for private schools
 ),
 csp as
 (
-select ss.school_id, case when cso.school_code is not null then 1 else 0 end as teaches_csp
+select ss.school_id, 
+case when cso.school_code is not null then 1 
+when cso.school_code is null and ss.school_type in ('public', 'charter') then 0 -- only include known status for public and charter schools, as we don't have data for private schools
+end as teaches_csp
 from analysis.school_stats ss
 left join dashboard_production.ap_school_codes sc on sc.school_id = ss.school_id
 left join dashboard_production.ap_cs_offerings cso on cso.school_code = sc.school_code and cso.course = 'CSP'
-where ss.school_type in ('public','charter') -- only include known status for public and charter schools, as we don't have data for private schools
 ),
 census as 
 (
