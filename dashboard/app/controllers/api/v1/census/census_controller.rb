@@ -44,6 +44,13 @@ class Api::V1::Census::CensusController < ApplicationController
     :pledged
   ].freeze
 
+  FREE_TEXT_FIELDS = [
+    :submitter_email_address,
+    :submitter_name,
+    :topic_other_description,
+    :tell_us_more,
+  ].freeze
+
   # POST /dashboardapi/v1/census/<form_version>
   def create
     errors = {}
@@ -84,6 +91,13 @@ class Api::V1::Census::CensusController < ApplicationController
     CHECKBOX_FIELDS.map do |field|
       census_params[field] = false unless census_params[field]
     end
+
+    # The database cannot handle utf8mb4 characters.
+    # Strip them out before saving.
+    FREE_TEXT_FIELDS.map do |field|
+      census_params[field] = census_params[field].strip_utf8mb4 unless census_params[field].nil?
+    end
+
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
