@@ -350,10 +350,12 @@ exports.plant = API_FUNCTION(function (id) {
 });
 
 exports.atSoil = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_soil', id);
   return Maze.controller.subtype.atSoil(id);
 });
 
 exports.atSprout = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_sprout', id);
   return Maze.controller.subtype.atSprout(id);
 });
 
