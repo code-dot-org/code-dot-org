@@ -88,13 +88,13 @@ class Api::V1::Census::CensusController < ApplicationController
 
     # Checkboxes don't get submitted if they aren't checked.
     # Set them to false if they are nil
-    CHECKBOX_FIELDS.map do |field|
+    CHECKBOX_FIELDS.each do |field|
       census_params[field] = false unless census_params[field]
     end
 
     # The database cannot handle utf8mb4 characters.
     # Strip them out before saving.
-    FREE_TEXT_FIELDS.map do |field|
+    FREE_TEXT_FIELDS.each do |field|
       census_params[field] = census_params[field].strip_utf8mb4 unless census_params[field].nil?
     end
 
