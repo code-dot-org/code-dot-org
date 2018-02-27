@@ -13,6 +13,11 @@
 # - Existing valid ACME account key in the object storage (created by `acmesmith register CONTACT`)
 # - configuration in ./acmesmith.yml
 require_relative '../../deployment'
+
+# Workaround for https://github.com/rails/rails/issues/28918
+# Fixed in ActiveSupport 5.1.1.
+require 'active_support/core_ext/module/remove_method'
+
 require 'acmesmith/command'
 
 unless ARGV.length >= 1

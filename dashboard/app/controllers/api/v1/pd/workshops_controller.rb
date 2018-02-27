@@ -228,7 +228,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :course,
       :subject,
       :notes,
-      sessions_attributes: [:id, :start, :end, :_destroy]
+      :regional_partner_id,
+      sessions_attributes: [:id, :start, :end, :_destroy],
     )
   end
 end
