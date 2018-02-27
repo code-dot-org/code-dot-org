@@ -27,7 +27,7 @@ export default class Bee extends Gatherer {
       return false;
     }
 
-    if (!this.checkedAllClouded() || !this.checkedAllPurple()) {
+    if (!this.maze_.subtype.checkedAllClouded() || !this.maze_.subtype.checkedAllPurple()) {
       return false;
     }
 
@@ -57,41 +57,13 @@ export default class Bee extends Gatherer {
       executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_NECTAR);
     } else if (this.maze_.subtype.getHoneyCount() < this.honeyGoal_) {
       executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_HONEY);
-    } else if (!this.checkedAllClouded()) {
+    } else if (!this.maze_.subtype.checkedAllClouded()) {
       executionInfo.terminateWithValue(TerminationValue.UNCHECKED_CLOUD);
-    } else if (!this.checkedAllPurple()) {
+    } else if (!this.maze_.subtype.checkedAllPurple()) {
       executionInfo.terminateWithValue(TerminationValue.UNCHECKED_PURPLE);
     } else if (!this.collectedEverything()) {
       executionInfo.terminateWithValue(TerminationValue.DID_NOT_COLLECT_EVERYTHING);
     }
-  }
-
-  /**
-   * Did we check every flower/honey that was covered by a cloud?
-   */
-  checkedAllClouded() {
-    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
-      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
-        if (this.maze_.subtype.shouldCheckCloud(row, col) && !this.maze_.subtype.checkedCloud(row, col)) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-
-  /**
-   * Did we check every purple flower
-   */
-  checkedAllPurple() {
-    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
-      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
-        if (this.maze_.subtype.shouldCheckPurple(row, col) && !this.maze_.subtype[row][col].checkedForNectar) {
-          return false;
-        }
-      }
-    }
-    return true;
   }
 
   /**

@@ -161,6 +161,34 @@ export default class Bee extends Gatherer {
   }
 
   /**
+   * Did we check every flower/honey that was covered by a cloud?
+   */
+  checkedAllClouded() {
+    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
+      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
+        if (this.shouldCheckCloud(row, col) && !this.checkedCloud(row, col)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  /**
+   * Did we check every purple flower
+   */
+  checkedAllPurple() {
+    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
+      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
+        if (this.shouldCheckPurple(row, col) && !this.userChecks_[row][col].checkedForNectar) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  /**
    * Flowers are either red or purple. This function returns true if a flower is red.
    */
   isRedFlower(row, col) {
