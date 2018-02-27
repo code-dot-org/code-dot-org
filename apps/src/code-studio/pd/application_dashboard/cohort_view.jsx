@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
+import CohortViewCalculator from './cohort_view_calculator';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
 import {
@@ -37,6 +38,7 @@ class CohortView extends React.Component {
   state = {
     loading: true,
     applications: null,
+    capacity: null,
     regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: UnmatchedFilter
   };
@@ -63,7 +65,8 @@ class CohortView extends React.Component {
       .done(data => {
         this.setState({
           loading: false,
-          applications: data
+          applications: data.applications,
+          capacity: data.capacity
         });
       });
   }
@@ -93,8 +96,18 @@ class CohortView extends React.Component {
         <Spinner/>
       );
     } else {
+      const registered = this.state.applications
+        .filter(app => app.registered_workshop === 'Yes')
+        .length;
       return (
         <div>
+          {this.state.capacity &&
+            <CohortViewCalculator
+              accepted={this.state.applications.length}
+              registered={registered}
+              totalCapacity={this.state.capacity}
+            />
+          }
           {this.props.isWorkshopAdmin &&
             <RegionalPartnerDropdown
               onChange={this.handleRegionalPartnerChange}

@@ -120,17 +120,9 @@ In addition, all teachers have access to the Code.org forum, an online professio
 
 ## Q&A Video Chat with Hadi Partovi
 
-To help answer any questions you have, **Hadi Partovi** (Code.org Founder) and **Brook Osborne** (Education Program Manager and one of the creators of our professional learning programs) will be hosting a video chat on Thursday, Feb. 15. They’ll share stories from teachers who have gone through the program and discuss why it’s important for every student to have the opportunity to learn computer science.
+To help provide more information about the program, **Hadi Partovi** (Code.org Founder) and **Brook Osborne** (Education Program Manager and one of the creators of our professional learning program) hosted a video chat on Thursday, Feb. 15. They discussed why it’s important for every student to have the opportunity to learn computer science and shared more details about what teachers and administrators can expect from the Code.org Professional Learning Program.
 
-We’ll also be hosting open office hours with Code.org staff before and after the video chat in case those times work better for you. Feel free to join whenever you’re free. Invite your principal or other teachers and administrators to join and get a better understanding of the program.  
-
-**Thursday, Feb. 15, 2018**
-
-- 3:00 - 4:00 pm PST - Open office hours with Code.org staff
-- 4:00 - 4:30 pm PST - Video chat with Hadi Partovi and Brook Osborne 
-- 4:30 - 5:00 pm PST - Open office hours with Code.org staff
-
-[Use this link to join the chat](https://code.zoom.us/j/730985651) (or share it with others).
+[Watch a recording of the discussion here](https://zoom.us/recording/play/zhCfZbsJmnYHyNbLHu45FbO7Hb5Q5-frDAEMcU9xEc3mQMS91AGbXBzQW2C9RYKR). 
 
 ## Apply Today!
 

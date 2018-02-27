@@ -61,7 +61,7 @@ We also have a room set aside for you at our conference hotel, so you don’t ne
 <summary>**What if I choose to drive to TeacherCon?**</summary>
   <p>
   <br>
-If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
+If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
 </p>
 </details>
 

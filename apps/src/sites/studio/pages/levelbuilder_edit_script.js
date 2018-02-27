@@ -60,6 +60,7 @@ export default function initPage(scriptEditorData) {
         stageExtrasAvailable={!!scriptData.stage_extras_available}
         stageLevelData={stageLevelData}
         hasVerifiedResources={scriptData.has_verified_resources}
+        hasLessonPlan={scriptData.has_lesson_plan}
         announcements={announcements}
       />
     </Provider>,

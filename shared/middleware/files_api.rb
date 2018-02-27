@@ -5,6 +5,8 @@ require 'sinatra/base'
 require 'cdo/sinatra'
 
 class FilesApi < Sinatra::Base
+  set :mustermann_opts, check_anchors: false
+
   def max_file_size
     5_000_000 # 5 MB
   end
@@ -259,9 +261,23 @@ class FilesApi < Sinatra::Base
 
     quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, params['version'])
 
-    {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
+    # Replacing a non-current version of main.json could lead to perceived data loss.
+    # Log to firehose so that we can better troubleshoot issues in this case.
+    version_to_replace = params['version']
+    timestamp = params['firstSaveTimestamp']
+    tab_id = params['tabId']
+    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
+
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
+
+    {
+      filename: filename,
+      category: category,
+      size: body.length,
+      versionId: response.version_id,
+      timestamp: Time.now # for logging purposes
+    }.to_json
   end
 
   #
@@ -456,7 +472,7 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
   end
 
   #
