@@ -33,6 +33,7 @@ import {
   DATE_FORMAT,
   DATETIME_FORMAT
 } from '../workshopConstants';
+import Permission from '../../permission';
 
 const styles = {
   readOnlyInput: {
@@ -80,6 +81,7 @@ export default class WorkshopForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.computeInitialState(props);
+    this.permission = new Permission();
   }
 
   computeInitialState(props) {
@@ -121,8 +123,9 @@ export default class WorkshopForm extends React.Component {
       );
       initialState.sessions = this.prepareSessionsForForm(props.workshop.sessions);
       this.loadAvailableFacilitators(props.workshop.course);
-      this.loadRegionalPartners();
     }
+
+    this.loadRegionalPartners();
 
     return initialState;
   }
@@ -367,7 +370,8 @@ export default class WorkshopForm extends React.Component {
           onChange={this.handleFieldChange}
           style={this.getInputStyle()}
           value={this.state.regional_partner_id || ''}
-          disabled={this.props.readOnly}
+          // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
+          disabled={this.props.readOnly || (!this.permission.isWorkshopAdmin && !this.permission.isOrganizer && !this.permission.isPartner)}
         >
           <option value="">None</option>
           {
