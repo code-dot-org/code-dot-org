@@ -130,7 +130,8 @@ class Blockly < Level
   def normalize_xml(attr)
     attr_val = send(attr)
     if attr_val.present?
-      normalized_attr = Nokogiri::XML(attr_val, &:noblanks).serialize(save_with: XML_OPTIONS).strip
+      attr_doc = Nokogiri::XML(attr_val) {|config| config.strict.noblanks}
+      normalized_attr = attr_doc.serialize(save_with: XML_OPTIONS).strip
       send("#{attr}=", normalized_attr)
     end
   end
