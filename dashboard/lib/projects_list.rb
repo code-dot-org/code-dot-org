@@ -119,11 +119,6 @@ module ProjectsList
         where(unfeatured_at: nil, project_type: project_type.to_s, abuse_score: 0).
         exclude(published_at: nil).
         order(Sequel.lit('RAND()')).limit(4).all
-      puts
-      puts
-      print project_featured_project_user_combo_data
-      puts
-      puts
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
