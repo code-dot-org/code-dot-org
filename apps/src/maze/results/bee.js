@@ -1,11 +1,11 @@
-import Gatherer from './gatherer';
+import GathererHandler from './gatherer';
 import mazeMsg from '../locale';
 import {
   TestResults,
   BeeTerminationValue as TerminationValue
 } from '../../constants.js';
 
-export default class Bee extends Gatherer {
+export default class BeeHandler extends GathererHandler {
   constructor(maze, config) {
     super(maze, config);
 

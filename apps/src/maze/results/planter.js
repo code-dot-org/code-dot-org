@@ -7,7 +7,7 @@ const TerminationValue = {
   DID_NOT_PLANT_EVERYWHERE: 1,
 };
 
-export default class Planter extends ResultsHandler {
+export default class PlanterHandler extends ResultsHandler {
   /**
    * @override
    */

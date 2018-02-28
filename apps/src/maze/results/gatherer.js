@@ -1,7 +1,7 @@
 import ResultsHandler from './resultsHandler';
 import { TestResults } from '../../constants.js';
 
-export default class Gatherer extends ResultsHandler {
+export default class GathererHandler extends ResultsHandler {
 
   /**
    * @return {boolean}
