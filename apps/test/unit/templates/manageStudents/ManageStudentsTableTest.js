@@ -1,13 +1,14 @@
 import {expect} from '../../../util/configuredChai';
 import {sortRows} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import {ROW_TYPE} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 describe('ManageStudentsTable', () => {
-  it('sortRows orders table in the following order: addRow, newStudentRow, other', () => {
+  it('sortRows orders table in the following order: add, newStudent, student', () => {
     const rowData = [
-      {id: 1, name: 'studentb'},
-      {id: 3, name: 'studenta'},
-      {id: 0, name: '', isAddRow: true},
-      {id: 2, name: 'studentf', isNewStudentRow: true}
+      {id: 1, name: 'studentb', rowType: ROW_TYPE.student},
+      {id: 3, name: 'studenta', rowType: ROW_TYPE.student},
+      {id: 0, name: '', rowType: ROW_TYPE.add},
+      {id: 2, name: 'studentf', rowType: ROW_TYPE.newStudent}
     ];
     const columnIndexList = [];
     const orderList = ["asc"];

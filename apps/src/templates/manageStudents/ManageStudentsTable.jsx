@@ -11,7 +11,7 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import {convertStudentDataToArray, ADD_STATUS} from './manageStudentsRedux';
+import {convertStudentDataToArray, ADD_STATUS, ROW_TYPE} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
@@ -27,8 +27,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
-  isAddRow: PropTypes.bool,
-  isNewStudentRow: PropTypes.bool,
+  rowType: PropTypes.oneOf(Object.values(ROW_TYPE)),
 });
 
 /** @enum {number} */
@@ -81,9 +80,9 @@ export const sortRows = (data, columnIndexList, orderList) => {
   let newStudentRows = [];
   let studentRows = [];
   for (let i = 0; i<data.length; i++) {
-    if (data[i].isAddRow) {
+    if (data[i].rowType === ROW_TYPE.add) {
       addRows.push(data[i]);
-    } else if (data[i].isNewStudentRow) {
+    } else if (data[i].rowType === ROW_TYPE.newStudent) {
       newStudentRows.push(data[i]);
     } else {
       studentRows.push(data[i]);
@@ -159,8 +158,7 @@ class ManageStudentsTable extends Component {
         isEditing={rowData.isEditing}
         isSaving={rowData.isSaving}
         disableSaving={disableSaving}
-        isAddRow={rowData.isAddRow}
-        isNewStudentRow={rowData.isNewStudentRow}
+        rowType={rowData.rowType}
       />
     );
   };

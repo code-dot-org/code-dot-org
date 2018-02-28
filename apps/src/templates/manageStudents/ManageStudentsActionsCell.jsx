@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent, ROW_TYPE} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -23,8 +23,7 @@ class ManageStudentActionsCell extends Component {
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
-    isAddRow: PropTypes.bool,
-    isNewStudentRow: PropTypes.bool,
+    rowType: PropTypes.oneOf(Object.values(ROW_TYPE)),
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -67,7 +66,7 @@ class ManageStudentActionsCell extends Component {
   };
 
   onCancel = () => {
-    if (this.props.isNewStudentRow) {
+    if (this.props.rowType === ROW_TYPE.newStudent) {
       this.props.removeStudent(this.props.id);
     } else {
       this.props.cancelEditingStudent(this.props.id);
@@ -75,7 +74,7 @@ class ManageStudentActionsCell extends Component {
   };
 
   onSave = () => {
-    if (this.props.isNewStudentRow) {
+    if (this.props.rowType === ROW_TYPE.newStudent) {
       this.onAdd();
     } else {
       this.props.saveStudent(this.props.id);
@@ -87,9 +86,10 @@ class ManageStudentActionsCell extends Component {
   };
 
   render() {
+    const {rowType, isEditing} = this.props;
     return (
       <div>
-        {!this.props.isEditing &&
+        {!isEditing &&
           <QuickActionsCell>
             <PopUpMenu.Item
               onClick={this.onEdit}
@@ -106,7 +106,7 @@ class ManageStudentActionsCell extends Component {
             </PopUpMenu.Item>
           </QuickActionsCell>
         }
-        {(this.props.isEditing && !this.props.isAddRow) &&
+        {(isEditing && (rowType !== ROW_TYPE.add)) &&
           <div>
             <Button
               onClick={this.onSave}
@@ -121,7 +121,7 @@ class ManageStudentActionsCell extends Component {
             />
           </div>
         }
-        {this.props.isAddRow &&
+        {(rowType === ROW_TYPE.add) &&
           <div>
             <Button
               onClick={this.onAdd}

@@ -7,6 +7,15 @@ export const ADD_STATUS = {
   "fail": "fail",
 };
 
+// Types of rows in studentData/editingData
+// newStudent looks like a studentRow with isEditing true, but
+// is updated like an add row, since the student has yet to be added.
+export const ROW_TYPE = {
+  "add": "addRow",
+  "newStudent": "newStudentRow",
+  "student": "studentRow",
+};
+
 // This doesn't get used to make a server call, but does
 // need to be unique from the rest of the ids.
 const addRowId = 0;
@@ -24,7 +33,7 @@ const blankAddRow = {
   username: '',
   loginType: '',
   isEditing: true,
-  isAddRow: true,
+  rowType: ROW_TYPE.add,
 };
 
 // New student row is created after a list of students have been
@@ -38,7 +47,7 @@ const blankNewStudentRow = {
   username: '',
   loginType: '',
   isEditing: true,
-  isNewStudentRow: true,
+  rowType: ROW_TYPE.newStudent,
 };
 
 // Initial state for the manageStudents redux store.
@@ -123,7 +132,6 @@ export const addMultipleAddRows = (studentNames) => {
         ...blankNewStudentRow,
         name: studentNames[i],
         id: newId,
-        isAddRow: false,
       };
     }
     dispatch(addMultipleRows(studentData));
@@ -225,7 +233,7 @@ export default function manageStudents(state=initialState, action) {
           ...state.editingData[action.studentId],
           isEditing: false,
           isSaving: false,
-          isAddRow: false,
+          rowType: ROW_TYPE.student,
         }
       },
       editingData: _.omit(state.editingData, action.studentId),
@@ -251,7 +259,8 @@ export default function manageStudents(state=initialState, action) {
       studentData: {
         [action.studentData.id]: {
           ...action.studentData,
-          loginType: state.loginType
+          loginType: state.loginType,
+          sectionId: state.sectionId,
         },
         ..._.omit(state.studentData, action.rowId),
         [addRowId]: {
@@ -351,6 +360,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       loginType: loginType,
       sectionId: sectionId,
       isEditing: false,
+      rowType: ROW_TYPE.student,
     };
   }
   return studentLookup;
@@ -371,6 +381,7 @@ export const convertAddedStudent = (studentData, loginType, sectionId) => {
     loginType: loginType,
     sectionId: sectionId,
     isEditing: false,
+    rowType: ROW_TYPE.student,
   };
   return studentObject;
 };
