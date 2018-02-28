@@ -329,9 +329,11 @@ class ManageStudentsTable extends Component {
       sort: sortRows,
     })(this.props.studentData);
 
+    const {addStatus, loginType} = this.props;
+
     return (
       <div>
-        {this.props.addStatus === ADD_STATUS.success &&
+        {addStatus === ADD_STATUS.success &&
           <Notification
             type={NotificationType.success}
             notice={i18n.manageStudentsNotificationSuccess()}
@@ -339,7 +341,7 @@ class ManageStudentsTable extends Component {
             dismissible={false}
           />
         }
-        {this.props.addStatus === ADD_STATUS.fail &&
+        {addStatus === ADD_STATUS.fail &&
           <Notification
             type={NotificationType.failure}
             notice={i18n.manageStudentsNotificationFailure()}
@@ -347,7 +349,9 @@ class ManageStudentsTable extends Component {
             dismissible={false}
           />
         }
-        <AddMultipleStudents/>
+        {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
+          <AddMultipleStudents/>
+        }
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
