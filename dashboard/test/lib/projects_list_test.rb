@@ -104,6 +104,43 @@ class ProjectsListTest < ActionController::TestCase
       returned_project["studentAgeRange"]
   end
 
+  test "include_featured combines featured project data and published projects data correctly" do
+    fake_featured_projects = {
+      applab: [
+        {name: "featuredApplab1"},
+        {name: "featuredApplab2"},
+        {name: "featuredApplab3"}
+      ],
+      gamelab: [],
+      playlab: [],
+      artist: [],
+      minecraft: [],
+      events: [],
+      k1: []
+    }
+    fake_recent_projects = {
+      applab: [
+        {name: "recentApplab1"},
+        {name: "recentApplab2"},
+        {name: "recentApplab3"}
+      ],
+      gamelab: [],
+      playlab: [],
+      artist: [],
+      minecraft: [],
+      events: [],
+      k1: []
+    }
+    ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
+    ProjectsList.stubs(:fetch_published_project_types).returns(fake_recent_projects)
+    combined_projects = ProjectsList.send(
+      :include_featured, limit: 10
+    )
+    # Featured projects should be ordered before recent projects
+    assert_equal combined_projects[:applab].first, {name: "featuredApplab1"}
+    assert_equal combined_projects[:applab].last, {name: "recentApplab3"}
+  end
+
   private
 
   def db_result(result)
