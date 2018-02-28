@@ -1,6 +1,6 @@
 import ResultsHandler from './resultsHandler';
 
-export default class WordSearch extends ResultsHandler {
+export default class WordSearchHandler extends ResultsHandler {
   constructor(maze, config) {
     super(maze, config);
     this.goal_ = config.level.searchWord;

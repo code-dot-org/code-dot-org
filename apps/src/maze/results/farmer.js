@@ -1,6 +1,6 @@
 import ResultsHandler from './resultsHandler';
 
-export default class Farmer extends ResultsHandler {
+export default class FarmerHandler extends ResultsHandler {
   /**
    * @override
    */

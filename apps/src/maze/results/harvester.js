@@ -1,9 +1,9 @@
-import Gatherer from './gatherer';
+import GathererHandler from './gatherer';
 
 import mazeMsg from '../locale';
 import { HarvesterTerminationValue, TestResults } from '../../constants.js';
 
-export default class Harvester extends Gatherer {
+export default class HarvesterHandler extends GathererHandler {
   /**
    * @override
    */

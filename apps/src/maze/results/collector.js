@@ -16,7 +16,7 @@ const COLLECTED_TOO_MANY = 4;
 const COLLECTED_NOT_ENOUGH = 5;
 const COLLECTED_ENOUGH_BUT_NOT_ALL = 6;
 
-export default class Collector extends ResultsHandler {
+export default class CollectorHandler extends ResultsHandler {
   constructor(maze, config) {
     super(maze, config);
 
