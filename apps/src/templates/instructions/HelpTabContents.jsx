@@ -37,7 +37,6 @@ export default class HelpTabContents extends Component {
           this.props.mapReference &&
           <ResourceLink
             map={true}
-            text={this.props.mapReference}
             reference={this.props.mapReference}
           />
         }
@@ -46,7 +45,6 @@ export default class HelpTabContents extends Component {
             <ResourceLink
               key={link}
               map={false}
-              text={link}
               reference={link}
             />
           ))
