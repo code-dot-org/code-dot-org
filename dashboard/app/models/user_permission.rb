@@ -45,7 +45,10 @@ class UserPermission < ActiveRecord::Base
     PLC_REVIEWER = 'plc_reviewer'.freeze,
     # Grants ability to view teacher markdown and level examples.
     # Also prevents account from being locked
-    AUTHORIZED_TEACHER = 'authorized_teacher'.freeze
+    AUTHORIZED_TEACHER = 'authorized_teacher'.freeze,
+    # Granted to regional partner program managers.
+    # Initially has the same abilities as workshop organizer.
+    PROGRAM_MANAGER = 'program_manager'.freeze
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack

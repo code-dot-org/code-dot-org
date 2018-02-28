@@ -6,7 +6,7 @@ class Api::V1::Pd::WorkshopOrganizerSurveyReportControllerTest < ::ActionControl
     AWS::S3.stubs(:download_from_bucket).returns(Hash[@course.to_sym, {}].to_json)
   end
 
-  [:admin, :workshop_organizer].each do |user_type|
+  [:admin, :workshop_organizer, :program_manager].each do |user_type|
     test_user_gets_response_for(
       :index,
       user: user_type,
