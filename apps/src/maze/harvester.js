@@ -77,16 +77,16 @@ export default class Harvester extends Gatherer {
     cell.setCurrentValue(cell.getCurrentValue() - 1);
   }
 
-  getCorn() {
-    this.getCrop(HarvesterCell.FeatureType.CORN);
+  tryGetCorn() {
+    return this.tryGetCrop(HarvesterCell.FeatureType.CORN);
   }
 
-  getPumpkin() {
-    this.getCrop(HarvesterCell.FeatureType.PUMPKIN);
+  tryGetPumpkin() {
+    return this.tryGetCrop(HarvesterCell.FeatureType.PUMPKIN);
   }
 
-  getLettuce() {
-    this.getCrop(HarvesterCell.FeatureType.LETTUCE);
+  tryGetLettuce() {
+    return this.tryGetCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
   /**
@@ -98,7 +98,7 @@ export default class Harvester extends Gatherer {
    *
    * @return {boolean} whether or not this attempt was successful
    */
-  getCrop(crop) {
+  tryGetCrop(crop) {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
@@ -115,6 +115,7 @@ export default class Harvester extends Gatherer {
     }
 
     this.gotCropAt(row, col);
+    return true;
   }
 
   animateGetCorn() {
@@ -134,7 +135,7 @@ export default class Harvester extends Gatherer {
    * runtime error if the current location is not a valid spot from which to
    * gather that crop.
    *
-   * This method is preferred over getCrop for live operation (ie when actually
+   * This method is preferred over tryGetCrop for live operation (ie when actually
    * displaying something to the user)
    *
    * @throws Will throw an error if the current cell does not have that crop
