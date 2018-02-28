@@ -36,6 +36,7 @@ class Census::CensusSummary < ApplicationRecord
     INITIAL_IMPLEMENTATION: 0.1,
     NAIVE_BAYES: 0.2,
     SIMPLE: 0.3,
+    PRECEDENCE_V1: 1.1,
   }.freeze
 
   # High schools need to teach a 20 hour course with either
@@ -155,6 +156,19 @@ class Census::CensusSummary < ApplicationRecord
     end
   end
 
+  HISTORICAL_RESULTS_MAP = {
+    "YES" => "HISTORICAL_YES",
+    "NO" => "HISTORICAL_NO",
+    "MAYBE" => "HISTORICAL_MAYBE",
+    "HISTORICAL_YES" => "HISTORICAL_YES",
+    "HISTORICAL_NO" => "HISTORICAL_NO",
+    "HISTORICAL_MAYBE" => "HISTORICAL_MAYBE",
+  }
+
+  def self.map_historical_teaches_cs(historical_value)
+    HISTORICAL_RESULTS_MAP[historical_value]
+  end
+
   def self.summarize_school_data(school, school_years, years_with_ap_data, years_with_ib_data, state_years_with_data)
     summarize_school_data_simple(
       {
@@ -173,19 +187,18 @@ class Census::CensusSummary < ApplicationRecord
     state_years_with_data = summarization_data[:state_years_with_data]
 
     summaries = []
+    last_years_result = nil
+    two_years_ago_result = nil
 
     school_years.each do |school_year|
       audit = {
-        version: AUDIT_DATA_VERSIONS[:SIMPLE],
+        version: AUDIT_DATA_VERSIONS[:PRECEDENCE_V1],
         stats: {},
         census_submissions: [],
         ap_cs_offerings: [],
         ib_cs_offerings: [],
         state_cs_offerings: [],
       }
-
-      count_yes = 0
-      count_no = 0
 
       # If the school doesn't have stats then treat it as not high school.
       # The lack of stats will show up in the audit data as a null value for high_school.
@@ -200,6 +213,16 @@ class Census::CensusSummary < ApplicationRecord
       submissions = school.school_info.map(&:census_submissions).flatten
       # Lack of a submission for a school isn't considered evidence
       # so we only look at actual submissions.
+      counts = {
+        teacher_or_admin: {
+          yes: 0,
+          no: 0,
+        },
+        not_teacher_or_admin: {
+          yes: 0,
+          no: 0,
+        },
+      }
       submissions.select {|s| s.school_year == school_year}.each do |submission|
         teaches =
           if submission_has_response(submission, high_school)
@@ -208,45 +231,72 @@ class Census::CensusSummary < ApplicationRecord
             nil
           end
 
+        is_teacher_or_admin = (submission.submitter_role_teacher? || submission.submitter_role_administrator?)
+        teacher_or_admin = is_teacher_or_admin ? :teacher_or_admin : :not_teacher_or_admin
+
         audit[:census_submissions].push(
           {
             id: submission.id,
-            teaches: teaches
+            teaches: teaches,
+            teacher_or_admin: teacher_or_admin,
           }
         )
 
         next if teaches.nil?
 
         if teaches
-          count_yes += 1
+          counts[teacher_or_admin][:yes] += 1
         else
-          count_no += 1
+          counts[teacher_or_admin][:no] += 1
+        end
+      end
+
+      audit[:census_submissions].push({counts: counts})
+
+      consistency = {
+        teacher_or_admin: nil,
+        not_teacher_or_admin: nil,
+      }
+      has_inconsistent_surveys = false
+
+      [:teacher_or_admin, :not_teacher_or_admin].each do |role|
+        unless counts[role][:no] == 0 && counts[role][:yes] == 0
+          if counts[role][:no] == 0
+            consistency[role] = "YES"
+          elsif counts[role][:yes] == 0
+            consistency[role] = "NO"
+          else
+            has_inconsistent_surveys = true
+          end
         end
       end
 
       # AP data
 
+      has_ap_data = false
       ap_offerings = school.ap_school_code.try(:ap_cs_offering) || []
       ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
       ap_offerings_this_year.each do |offering|
         audit[:ap_cs_offerings].push(offering.id)
       end
-      count_yes += 1 unless ap_offerings_this_year.empty?
+      has_ap_data = true unless ap_offerings_this_year.empty?
 
       # IB data
 
+      has_ib_data = false
       ib_offerings = school.ib_school_code.try(:ib_cs_offering) || []
       ib_offerings_this_year = ib_offerings.select {|o| o.school_year == school_year}
       ib_offerings_this_year.each do |offering|
         audit[:ib_cs_offerings].push(offering.id)
       end
-      count_yes += 1 unless ib_offerings_this_year.empty?
+      has_ib_data = true unless ib_offerings_this_year.empty?
 
       # State data
 
       # Schools without state school ids cannot have state data.
       # Ignore those schools so that we won't count the lack of
       # state data as a NO.
+      state_data = nil
       if school.state_school_id
         state_offerings = school.state_cs_offering || []
         state_offerings = state_offerings.select {|o| o.school_year == school_year}
@@ -257,37 +307,60 @@ class Census::CensusSummary < ApplicationRecord
            Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
            state_years_with_data[school.state].include?(school_year)
           audit[:state_cs_offerings].push(nil)
-          count_no += 1
+          state_data = 'NO'
         else
           state_offerings.each do |offering|
             audit[:state_cs_offerings].push(offering.id)
           end
-          count_yes += 1 unless state_offerings.empty?
+          state_data = 'YES' unless state_offerings.empty?
         end
       end
-
-      audit[:count_yes] = count_yes
-      audit[:count_no] = count_no
 
       summary = Census::CensusSummary.find_or_initialize_by(
         school: school,
         school_year: school_year,
       )
 
+      #
+      # We will set teaches_cs to the first value we find in this order:
+      # 1	This year's AP data
+      # 2	This year's IB data
+      # 3	This year's surveys from teachers/administrators - consistent
+      # 4	State data
+      # 5	This year's surveys from non-teachers/admins - consistent
+      # 6	This year's surveys - inconsistent
+      # 7	teaches_cs from last year
+      # 8	teaches_cs from 2 years ago
+      # 9 nil
+      #
       summary.teaches_cs =
-        if count_no == 0 && count_yes == 0
-          nil
-        elsif count_no == 0
-          'Y'
-        elsif count_yes == 0
-          'N'
+        if has_ap_data || has_ib_data
+          'YES'
+        elsif consistency[:teacher_or_admin]
+          consistency[:teacher_or_admin]
+        elsif state_data
+          state_data
+        elsif consistency[:not_teacher_or_admin]
+          consistency[:not_teacher_or_admin]
+        elsif has_inconsistent_surveys
+          'MAYBE'
+        elsif last_years_result
+          map_historical_teaches_cs(last_years_result)
+        elsif two_years_ago_result
+          map_historical_teaches_cs(two_years_ago_result)
         else
-          'M'
+          nil
         end
+
+      audit[:last_years_result] = last_years_result
+      audit[:two_years_ago_result] = two_years_ago_result
 
       summary.audit_data = JSON.generate(audit)
 
       summaries.push summary
+
+      two_years_ago_result = last_years_result
+      last_years_result = summary.teaches_cs
     end
 
     return summaries
