@@ -30,7 +30,7 @@ class ErrorDialogStack extends React.Component {
       'analysis-events',
       {
         study: 'animation_no_load',
-        study_group: 'animation_no_load_v3',
+        study_group: 'animation_no_load_v4',
         event: 'delete_selected',
         project_id: getCurrentId(),
         data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
@@ -48,7 +48,7 @@ class ErrorDialogStack extends React.Component {
       'analysis-events',
       {
         study: 'animation_no_load',
-        study_group: 'animation_no_load_v3',
+        study_group: 'animation_no_load_v4',
         event: 'reload_selected',
         project_id: getCurrentId(),
         data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
