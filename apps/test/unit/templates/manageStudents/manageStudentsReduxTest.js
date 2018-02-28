@@ -16,6 +16,7 @@ import manageStudents, {
   addStudentFailure,
   ADD_STATUS,
   addMultipleRows,
+  ROW_TYPE,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -321,7 +322,7 @@ describe('manageStudentsRedux', () => {
       username: '',
       loginType: '',
       isEditing: true,
-      isAddRow: true,
+      rowType: ROW_TYPE.add,
     };
     it('setLoginType creates an add row for word login types', () => {
       const action = setLoginType('word');
@@ -411,7 +412,6 @@ describe('manageStudentsRedux', () => {
         gender: 'f',
         secretPicturePath: '/wizard.jpg',
         loginType: 'picture',
-        sectionId: 10,
         isEditing: false,
       };
 
@@ -428,7 +428,8 @@ describe('manageStudentsRedux', () => {
         loginType: 'picture',
       });
       assert.deepEqual(addedStudentState.studentData[10], {
-        ...studentDataToAdd
+        ...studentDataToAdd,
+        sectionId: 10,
       });
       assert.deepEqual(addedStudentState.addStatus, ADD_STATUS.success);
     });
