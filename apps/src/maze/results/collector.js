@@ -32,6 +32,15 @@ export default class CollectorHandler extends ResultsHandler {
   }
 
   /**
+   * @override
+   */
+  setTerminationHandlerMethods() {
+    this.maze_.subtype.setCollectedTooManyHandler(() => {
+      this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
+    });
+  }
+
+  /**
    * @return {boolean} Did the user try to collect too many things from
    * a space?
    */

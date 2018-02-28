@@ -13,6 +13,9 @@ export default class BeeHandler extends GathererHandler {
     this.honeyGoal_ = config.level.honeyGoal || 0;
   }
 
+  /**
+   * @override
+   */
   setTerminationHandlerMethods() {
     this.maze_.subtype.setNotAtFlowerHandler(() => {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
