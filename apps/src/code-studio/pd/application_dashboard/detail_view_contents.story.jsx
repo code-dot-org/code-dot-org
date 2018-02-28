@@ -1,11 +1,13 @@
 import React from 'react';
 import { DetailViewContents } from './detail_view_contents';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import reactRouterStoryDecorator from '../reactRouterStoryDecorator';
 
 export default storybook => {
   storybook
     .storiesOf('DetailViewContents', module)
     .addDecorator(reactBootstrapStoryDecorator)
+    .addDecorator(reactRouterStoryDecorator)
     .addStoryTable([
       {
         name: 'Detail view for applications',
@@ -13,7 +15,8 @@ export default storybook => {
           <DetailViewContents
             applicationId="1"
             applicationData={{
-              regionalPartner: 'partner',
+              course_name: 'CS Discoveries',
+              regional_partner_name: 'partner',
               notes: 'notes',
               status: 'unreviewed',
               school_name: 'School Name',
@@ -36,7 +39,6 @@ export default storybook => {
               }
             }}
             viewType="facilitator"
-            reload={() => {}}
           />
         )
       }

@@ -5,7 +5,6 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 
-import {TextFields} from '@cdo/apps/generated/pd/teachercon1819RegistrationConstants';
 import UsPhoneNumberInput from "../form_components/UsPhoneNumberInput";
 import {isZipCode} from '@cdo/apps/util/formatValidation';
 
@@ -26,6 +25,8 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     'howTraveling',
     'needHotel',
     'needAda',
+    'explainAda',
+    'dietaryNeedsDetails'
   ];
 
   static labels = {
@@ -34,6 +35,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     contactRelationship: "Relationship to you:",
     contactPhone: "Phone number:",
     dietaryNeeds: "Do you have any dietary needs or food allergies?",
+    dietaryNeedsDetails: "Please provide details about your food allergy.",
     addressStreet: "Street",
     addressCity: "City",
     addressState: "State",
@@ -75,8 +77,16 @@ export default class TravelPlans extends Teachercon1819FormComponent {
       );
     }
 
+    if (data.dietaryNeeds && data.dietaryNeeds.includes('Food Allergy')) {
+      requiredFields.push('dietaryNeedsDetails');
+    }
+
     if (data.needHotel === 'Yes') {
       requiredFields.push("needAda");
+
+      if (data.needAda === 'Yes') {
+        requiredFields.push("explainAda");
+      }
     }
 
     return requiredFields;
@@ -99,9 +109,12 @@ export default class TravelPlans extends Teachercon1819FormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.checkBoxesWithAdditionalTextFieldsFor("dietaryNeeds", {
-            [TextFields.foodAllergy]: "food_allergy_details"
-          })}
+          {this.checkBoxesFor("dietaryNeeds")}
+          {
+            this.props.data.dietaryNeeds &&
+            this.props.data.dietaryNeeds.includes('Food Allergy') &&
+            this.largeInputFor("dietaryNeedsDetails")
+          }
         </FormGroup>
 
         <FormGroup>
@@ -126,7 +139,9 @@ export default class TravelPlans extends Teachercon1819FormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsFor("howTraveling")}
+          {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
+            'I will carpool with another TeacherCon attendee (Please note who):': 'carpooling_with_attendee'
+          })}
           {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel === 'Yes' &&
@@ -135,7 +150,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
           {
             this.props.data.needHotel === 'Yes' &&
             this.props.data.needAda === 'Yes' &&
-            this.largeInputFor("explainAda", {required: false})
+            this.largeInputFor("explainAda")
           }
         </FormGroup>
       </FormGroup>
@@ -153,6 +168,10 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     }
     if (data.needAda !== 'Yes') {
       data.explainAda = undefined;
+    }
+
+    if (data.dietaryNeeds && !data.dietaryNeeds.includes('Food Allergy')) {
+      changes.dietaryNeedsDetails = undefined;
     }
 
     return changes;

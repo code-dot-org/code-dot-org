@@ -4,6 +4,8 @@ require 'cdo/rack/request'
 require 'csv'
 
 class TablesApi < Sinatra::Base
+  set :mustermann_opts, check_anchors: false
+
   helpers do
     [
       'core.rb',

@@ -26,10 +26,10 @@ export const featuredProjectDataPropType = PropTypes.shape({
   projectName: PropTypes.string.isRequired,
   channel: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string,
+  thumbnailUrl: PropTypes.string,
   featuredAt: PropTypes.string.isRequired,
   unfeaturedAt: PropTypes.string,
-  isFeatured: PropTypes.bool.isRequired
 });
 
 export const projectPropType = PropTypes.shape({
@@ -40,6 +40,11 @@ export const projectPropType = PropTypes.shape({
 export const Galleries = {
   PUBLIC: 'PUBLIC',
   PRIVATE: 'PRIVATE',
+};
+
+export const featuredProjectTableTypes = {
+  current: 'currentFeatured',
+  archived: 'archivedUnfeatured'
 };
 
 export const MAX_PROJECTS_PER_CATEGORY = 100;

@@ -1043,8 +1043,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте
     ці безмашинні вправи</a> у своєму класі."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Навчальний план"
   dashboard_curriculum_overview: "Огляд навчальної програми"
   dashboard_overview: "Огляд"
@@ -1062,6 +1065,8 @@
   dashboard_curriculum_csins: "Інформатика в науці:"
   dashboard_curriculum_csp: 'AP® принципи інформатики:'
   dashboard_curriculum_ecs: "Вивчення інформатики:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Kлас
   dashboard_grade_other: "Інше"
   dashboard_login_word: "Слово"
@@ -1314,6 +1319,7 @@
   cspexams_category_name: "Практичний тест з принципів інформатики"
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: "Ігрова лабораторія"
   basketball_name: "Зроби гру в баскетбол"
   sports_name: "Закодуй власну спортивну гру"
   applab_gradelevel: "Вік 13+"
@@ -2117,9 +2123,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

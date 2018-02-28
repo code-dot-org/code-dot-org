@@ -1,5 +1,6 @@
 hidden false
 student_detail_progress_view true
+has_lesson_plan true
 
 stage 'Intro to App Lab'
 level 'App Lab Intro 8 - Video Getting Started', progression: 'Setting Properties'

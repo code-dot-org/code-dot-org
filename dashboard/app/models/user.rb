@@ -71,9 +71,9 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/school_info_interstitial_helper'
 require 'cdo/chat_client'
 require 'cdo/shared_cache'
+require 'school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -620,8 +620,13 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
-      user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type
+      # Store emails, except when using Clever
+      user.email = auth.info.email unless user.user_type == 'student' && auth.provider == 'clever'
+
+      if auth.provider == 'clever' && User.find_by_email_or_hashed_email(user.email)
+        user.email = user.email + '.cleveremailalreadytaken'
+      end
 
       if auth.provider == :the_school_project
         user.username = auth.extra.raw_info.nickname
@@ -1408,7 +1413,8 @@ class User < ActiveRecord::Base
       end
 
       # Update user_level with the new attempt.
-      user_level.attempts += 1 unless user_level.best?
+      # We increment the attempt count unless they've already perfected the level.
+      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted

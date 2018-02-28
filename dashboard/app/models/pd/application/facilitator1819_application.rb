@@ -79,6 +79,10 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
+    def fit_workshop
+      Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
+    end
+
     GRADES = [
       'Pre-K'.freeze,
       'Kindergarten'.freeze,
@@ -382,6 +386,10 @@ module Pd::Application
 
     def first_name
       sanitize_form_data_hash[:first_name]
+    end
+
+    def last_name
+      sanitize_form_data_hash[:last_name]
     end
 
     def program

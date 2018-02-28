@@ -187,7 +187,7 @@ course1:
   hidden: false
   user_id:
   login_required: false
-  properties: '{}'
+  properties: '{"has_lesson_plan": true}'
 course2:
   id: 49
   name: course2

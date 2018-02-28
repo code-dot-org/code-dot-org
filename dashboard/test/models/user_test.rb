@@ -1388,6 +1388,34 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
+  test 'track_level_progress_sync stops incrementing attempts for perfect results' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    ul = UserLevel.create!(
+      user: user,
+      level: csf_script_level.level,
+      script: Script.get_from_cache('20-hour'),
+      best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
+    )
+
+    track_progress(user.id, csf_script_level, 10)
+    track_progress(user.id, csf_script_level, 20)
+    track_progress(user.id, csf_script_level, 30)
+
+    assert_equal 3, ul.reload.attempts
+
+    track_progress(user.id, csf_script_level, 31)
+
+    assert_equal 4, ul.reload.attempts
+
+    track_progress(user.id, csf_script_level, 31)
+    track_progress(user.id, csf_script_level, 31)
+    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, csf_script_level, 101)
+
+    assert_equal 4, ul.reload.attempts
+  end
+
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
     script_level = create :script_level
     student = create :student

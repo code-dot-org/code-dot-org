@@ -29,12 +29,24 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'School type is required', school_info.errors.full_messages.first
   end
 
+  test 'non-US with nonexistent type fails' do
+    school_info = build :school_info_non_us, school_type: 'fake type'
+    refute school_info.valid?
+    assert_equal 'School type is invalid', school_info.errors.full_messages.first
+  end
+
   # US
 
   test "US without school type fails" do
     school_info = build :school_info_us
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School type is required', school_info.errors.full_messages.first
+  end
+
+  test "US with invalid school type fails" do
+    school_info = build :school_info_us, school_type: 'fake type'
+    refute school_info.valid?  # Run the validations and set errors
+    assert_equal 'School type is invalid', school_info.errors.full_messages.first
   end
 
   # US, private
@@ -433,5 +445,21 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
     assert_equal 'Standard School', school_info_standard_school.effective_school_name
     assert_equal 'Custom School', school_info_custom_school.effective_school_name
+  end
+
+  test 'school_info factory build does not persist dependencies' do
+    assert_does_not_create School do
+      assert_does_not_create SchoolDistrict do
+        build :school_info
+      end
+    end
+  end
+
+  test 'school_info factory create does persist dependencies' do
+    assert_creates School do
+      assert_creates SchoolDistrict do
+        create :school_info
+      end
+    end
   end
 end

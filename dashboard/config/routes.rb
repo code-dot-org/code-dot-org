@@ -1,8 +1,8 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 module OPS
-  API = 'api' unless defined? API
-  DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
+  API = 'api'.freeze unless defined? API
+  DASHBOARDAPI = 'dashboardapi'.freeze unless defined? DASHBOARDAPI
 end
 
 Dashboard::Application.routes.draw do
@@ -44,6 +44,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'maker/home', to: 'maker#home'
   get 'maker/setup', to: 'maker#setup'
   get 'maker/discountcode', to: 'maker#discountcode'
   post 'maker/apply', to: 'maker#apply'
@@ -551,7 +552,8 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
-      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
+      get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
+      get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 

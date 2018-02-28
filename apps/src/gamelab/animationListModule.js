@@ -14,13 +14,11 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
-import {projectChanged} from '../code-studio/initApp/project';
+import {projectChanged, isOwner, getCurrentId} from '../code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
-// TODO: Piskel needs a "blank" state.  Revert to "blank" state when something
-//       is deleted, so nothing is selected.
 // TODO: Warn about duplicate-named animations.
 
 // Args: {SerializedAnimationList} animationList
@@ -570,16 +568,22 @@ function loadAnimationFromSource(key, callback) {
         // Log data about when this scenario occurs
         firehoseClient.putRecord(
          'analysis-events',
-            {
-              study: 'animation_no_load',
-              study_group: 'animation_no_load_with_buttons',
-              event: 'animation_not_loaded',
-              data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
-                'animationName': state.propsByKey[key].name, 'error': err.message})
-            }
+          {
+            study: 'animation_no_load',
+            study_group: 'animation_no_load_v3',
+            event: isOwner() ? 'animation_not_loaded_owner' : 'animation_not_loaded_viewer',
+            project_id: getCurrentId(),
+            data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
+              'animationName': state.propsByKey[key].name, 'error': err.message})
+          },
+          {includeUserId: true}
         );
 
-        dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
+        if (isOwner()) {
+          // Display error dialog
+          dispatch(reportError(`Sorry, we couldn't load animation "${state.propsByKey[key].name}".`, "anim_load", key));
+        }
+
         return;
       }
 
