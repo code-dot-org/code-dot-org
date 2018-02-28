@@ -62,6 +62,8 @@ exports.load = function (assetUrl, id) {
     },
 
     artist: {
+      smoothAnimate: true,
+      consolidateTurnAndMove: true,
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
           [skin.linePatterns.rainbowMenu, 'rainbowLine'],
