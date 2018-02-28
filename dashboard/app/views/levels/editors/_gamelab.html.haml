@@ -68,7 +68,7 @@
           "click_count": 5,
           "button_color": "blue"
         }
-  = f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
+  ~ f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
   :javascript
     levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
 
@@ -126,7 +126,7 @@
         The sourceUrl should point to an image or spritesheet - not an animated gif.
       %li <tt>frameDelay</tt> can be from slowest to fastest: 60, 45, 30, 20, 15, 10, 5, 4, 3, 2, 1.
       %li <tt>looping</tt> is true is if the animation plays repeatedly or false if it plays once.
-  = f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
+  ~ f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
   #level-start-animations-validation
 
 :javascript
