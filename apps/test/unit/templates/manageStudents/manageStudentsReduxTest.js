@@ -14,9 +14,9 @@ import manageStudents, {
   saveStudentSuccess,
   addStudentSuccess,
   addStudentFailure,
-  ADD_STATUS,
+  AddStatus,
   addMultipleRows,
-  ROW_TYPE,
+  RowType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -322,7 +322,7 @@ describe('manageStudentsRedux', () => {
       username: '',
       loginType: '',
       isEditing: true,
-      rowType: ROW_TYPE.add,
+      rowType: RowType.ADD,
     };
     it('setLoginType creates an add row for word login types', () => {
       const action = setLoginType('word');
@@ -383,7 +383,7 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(addedStudentState.studentData[10], {
         ...studentDataToAdd
       });
-      assert.deepEqual(addedStudentState.addStatus, ADD_STATUS.success);
+      assert.deepEqual(addedStudentState.addStatus, AddStatus.SUCCESS);
     });
 
     it('addStudentSuccess updates studentData,removes editingData, and adds new blank row', () => {
@@ -431,7 +431,7 @@ describe('manageStudentsRedux', () => {
         ...studentDataToAdd,
         sectionId: 10,
       });
-      assert.deepEqual(addedStudentState.addStatus, ADD_STATUS.success);
+      assert.deepEqual(addedStudentState.addStatus, AddStatus.SUCCESS);
     });
 
     it('addStudentFailure updates the addStatus, and sets saving to false for the student', () => {
@@ -465,7 +465,7 @@ describe('manageStudentsRedux', () => {
         ...initialState.studentData[0],
         isSaving: false,
       });
-      assert.deepEqual(addedStudentState.addStatus, ADD_STATUS.fail);
+      assert.deepEqual(addedStudentState.addStatus, AddStatus.FAIL);
     });
 
   });

@@ -11,7 +11,7 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import {convertStudentDataToArray, ADD_STATUS, ROW_TYPE} from './manageStudentsRedux';
+import {convertStudentDataToArray, AddStatus, RowType} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
@@ -27,7 +27,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
-  rowType: PropTypes.oneOf(Object.values(ROW_TYPE)),
+  rowType: PropTypes.oneOf(Object.values(RowType)),
 });
 
 /** @enum {number} */
@@ -80,9 +80,9 @@ export const sortRows = (data, columnIndexList, orderList) => {
   let newStudentRows = [];
   let studentRows = [];
   for (let i = 0; i<data.length; i++) {
-    if (data[i].rowType === ROW_TYPE.add) {
+    if (data[i].rowType === RowType.ADD) {
       addRows.push(data[i]);
-    } else if (data[i].rowType === ROW_TYPE.newStudent) {
+    } else if (data[i].rowType === RowType.NEW_STUDENT) {
       newStudentRows.push(data[i]);
     } else {
       studentRows.push(data[i]);
@@ -100,7 +100,7 @@ class ManageStudentsTable extends Component {
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
-    addStatus: PropTypes.oneOf(Object.values(ADD_STATUS)),
+    addStatus: PropTypes.oneOf(Object.values(AddStatus)),
   };
 
   state = {
@@ -333,7 +333,7 @@ class ManageStudentsTable extends Component {
 
     return (
       <div>
-        {addStatus === ADD_STATUS.success &&
+        {addStatus === AddStatus.SUCCESS &&
           <Notification
             type={NotificationType.success}
             notice={i18n.manageStudentsNotificationSuccess()}
@@ -341,7 +341,7 @@ class ManageStudentsTable extends Component {
             dismissible={false}
           />
         }
-        {addStatus === ADD_STATUS.fail &&
+        {addStatus === AddStatus.FAIL &&
           <Notification
             type={NotificationType.failure}
             notice={i18n.manageStudentsNotificationFailure()}

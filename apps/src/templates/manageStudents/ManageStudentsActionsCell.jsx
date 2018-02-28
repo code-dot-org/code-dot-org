@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent, ROW_TYPE} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent, RowType} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -23,7 +23,7 @@ class ManageStudentActionsCell extends Component {
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
-    rowType: PropTypes.oneOf(Object.values(ROW_TYPE)),
+    rowType: PropTypes.oneOf(Object.values(RowType)),
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -66,7 +66,7 @@ class ManageStudentActionsCell extends Component {
   };
 
   onCancel = () => {
-    if (this.props.rowType === ROW_TYPE.newStudent) {
+    if (this.props.rowType === RowType.NEW_STUDENT) {
       this.props.removeStudent(this.props.id);
     } else {
       this.props.cancelEditingStudent(this.props.id);
@@ -74,7 +74,7 @@ class ManageStudentActionsCell extends Component {
   };
 
   onSave = () => {
-    if (this.props.rowType === ROW_TYPE.newStudent) {
+    if (this.props.rowType === RowType.NEW_STUDENT) {
       this.onAdd();
     } else {
       this.props.saveStudent(this.props.id);
@@ -106,7 +106,7 @@ class ManageStudentActionsCell extends Component {
             </PopUpMenu.Item>
           </QuickActionsCell>
         }
-        {(isEditing && (rowType !== ROW_TYPE.add)) &&
+        {(isEditing && (rowType !== RowType.ADD)) &&
           <div>
             <Button
               onClick={this.onSave}
@@ -121,7 +121,7 @@ class ManageStudentActionsCell extends Component {
             />
           </div>
         }
-        {(rowType === ROW_TYPE.add) &&
+        {(rowType === RowType.ADD) &&
           <div>
             <Button
               onClick={this.onAdd}

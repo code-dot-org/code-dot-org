@@ -2,18 +2,18 @@ import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 // Response from server after adding a new student to the section.
-export const ADD_STATUS = {
-  "success": "success",
-  "fail": "fail",
+export const AddStatus = {
+  SUCCESS: "success",
+  FAIL: "fail",
 };
 
 // Types of rows in studentData/editingData
 // newStudent looks like a studentRow with isEditing true, but
 // is updated like an add row, since the student has yet to be added.
-export const ROW_TYPE = {
-  "add": "addRow",
-  "newStudent": "newStudentRow",
-  "student": "studentRow",
+export const RowType = {
+  ADD: "addRow",
+  NEW_STUDENT: "newStudentRow",
+  STUDENT: "studentRow",
 };
 
 // This doesn't get used to make a server call, but does
@@ -33,7 +33,7 @@ const blankAddRow = {
   username: '',
   loginType: '',
   isEditing: true,
-  rowType: ROW_TYPE.add,
+  rowType: RowType.ADD,
 };
 
 // New student row is created after a list of students have been
@@ -47,7 +47,7 @@ const blankNewStudentRow = {
   username: '',
   loginType: '',
   isEditing: true,
-  rowType: ROW_TYPE.newStudent,
+  rowType: RowType.NEW_STUDENT,
 };
 
 // Initial state for the manageStudents redux store.
@@ -233,7 +233,7 @@ export default function manageStudents(state=initialState, action) {
           ...state.editingData[action.studentId],
           isEditing: false,
           isSaving: false,
-          rowType: ROW_TYPE.student,
+          rowType: RowType.STUDENT,
         }
       },
       editingData: _.omit(state.editingData, action.studentId),
@@ -249,7 +249,7 @@ export default function manageStudents(state=initialState, action) {
           isSaving: false,
         }
       },
-      addStatus: ADD_STATUS.fail
+      addStatus: AddStatus.FAIL
     };
   }
   if (action.type === ADD_STUDENT_SUCCESS) {
@@ -275,7 +275,7 @@ export default function manageStudents(state=initialState, action) {
           loginType: state.loginType
         }
       },
-      addStatus: ADD_STATUS.success,
+      addStatus: AddStatus.SUCCESS,
     };
   }
   if (action.type === EDIT_STUDENT) {
@@ -360,7 +360,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       loginType: loginType,
       sectionId: sectionId,
       isEditing: false,
-      rowType: ROW_TYPE.student,
+      rowType: RowType.STUDENT,
     };
   }
   return studentLookup;
@@ -381,7 +381,7 @@ export const convertAddedStudent = (studentData, loginType, sectionId) => {
     loginType: loginType,
     sectionId: sectionId,
     isEditing: false,
-    rowType: ROW_TYPE.student,
+    rowType: RowType.STUDENT,
   };
   return studentObject;
 };
