@@ -15,6 +15,7 @@ import {convertStudentDataToArray, ADD_STATUS} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
+import Button from '../Button';
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -72,20 +73,25 @@ const passwordFormatter = (loginType, {rowData}) => {
 };
 
 // The "add row" should always be pinned to the top when sorting.
+// The "new student rows" should always be next.
 // This function takes into account having multiple "add rows"
 const sortRows = (data, columnIndexList, orderList) => {
   let addRows = [];
+  let newStudentRows = [];
   let studentRows = [];
   for (let i = 0; i<data.length; i++) {
     if (data[i].isAddRow) {
       addRows.push(data[i]);
+    } else if (data[i].isNewStudentRow) {
+      newStudentRows.push(data[i]);
     } else {
       studentRows.push(data[i]);
     }
   }
   addRows = orderBy(addRows, columnIndexList, orderList);
+  newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
   studentRows = orderBy(studentRows, columnIndexList, orderList);
-  return addRows.concat(studentRows);
+  return addRows.concat(newStudentRows).concat(studentRows);
 };
 
 class ManageStudentsTable extends Component {
@@ -153,7 +159,26 @@ class ManageStudentsTable extends Component {
         isSaving={rowData.isSaving}
         disableSaving={disableSaving}
         isAddRow={rowData.isAddRow}
+        isNewStudentRow={rowData.isNewStudentRow}
       />
+    );
+  };
+
+  actionsHeaderFormatter = () => {
+    const numberOfEditingRows = Object.keys(this.props.editingData).length;
+    return (
+      <div>
+        {numberOfEditingRows > 1 &&
+          <Button
+            onClick={()=>{console.log("save all");}}
+            color={Button.ButtonColor.orange}
+            text={i18n.saveAll()}
+          />
+        }
+        {numberOfEditingRows <= 1 &&
+          i18n.actions()
+        }
+      </div>
     );
   };
 
@@ -267,6 +292,7 @@ class ManageStudentsTable extends Component {
         property: 'actions',
         header: {
           label: i18n.actions(),
+          format: this.actionsHeaderFormatter,
           props: {
             style: {
             ...tableLayoutStyles.headerCell,

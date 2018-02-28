@@ -828,6 +828,7 @@
   "runTooltip": "Run the program defined by the blocks in the workspace.",
   "runtimeErrorMsg": "Your program did not run successfully. Please remove line {lineNumber} and try again.",
   "save": "Save",
+  "saveAll": "Save all",
   "saveAndPublish": "Save & Publish",
   "savedToGallery": "Saved",
   "saving": "Saving...",
