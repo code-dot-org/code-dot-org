@@ -7,6 +7,11 @@ class VideosControllerTest < ActionController::TestCase
     @video = create(:video)
     @user = create(:admin)
     sign_in(@user)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Video.stubs(:merge_and_write_i18n)
+    Video.stubs(:merge_and_write_attributes)
   end
 
   test "should get index" do
@@ -23,7 +28,8 @@ class VideosControllerTest < ActionController::TestCase
   test "should create video" do
     assert_creates(Video) do
       post :create, params: {
-        video: {key: @video.key, youtube_code: @video.youtube_code}
+        title: 'Test create title',
+        video: {key: 'test_key', youtube_code: '_fake_code_'}
       }
     end
 
@@ -38,16 +44,9 @@ class VideosControllerTest < ActionController::TestCase
   test "should update video" do
     patch :update, params: {
       id: @video,
+      title: 'Test title',
       video: {key: @video.key, youtube_code: @video.youtube_code}
     }
-    assert_redirected_to video_path(assigns(:video))
-  end
-
-  test "should destroy video" do
-    assert_destroys(Video) do
-      delete :destroy, params: {id: @video}
-    end
-
     assert_redirected_to videos_path
   end
 end
