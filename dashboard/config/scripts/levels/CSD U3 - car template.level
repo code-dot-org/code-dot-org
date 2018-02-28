@@ -43,11 +43,8 @@
     "top_level_procedure_autopopulate": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\");\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update\r\n  raceCar.x = raceCar.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}"
+    "start_blocks": "var finishLine = createSprite(40, 200);\r\nfinishLine.setAnimation(\"finish_line\");\r\n\r\nvar raceCar = createSprite(400, 200);\r\nraceCar.setAnimation(\"race_car\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update\r\n  raceCar.x = raceCar.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
