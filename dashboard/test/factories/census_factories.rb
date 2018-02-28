@@ -1,6 +1,126 @@
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
+  factory :census_submission_school_info, parent: :school_info_us do
+    transient do
+      school_year 2017
+    end
+
+    trait :with_teaches_yes_teacher_census_submission do
+      after(:create) do |school_info, evaluator|
+        create :census_teacher_banner_v1, :with_teaches_yes, school_infos: [school_info], school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_teaches_no_teacher_census_submission do
+      after(:create) do |school_info, evaluator|
+        create :census_teacher_banner_v1, :with_teaches_no, school_infos: [school_info], school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_teaches_yes_parent_census_submission do
+      after(:create) do |school_info, evaluator|
+        create :census_your_school2017v5, :with_teaches_yes, school_infos: [school_info], submitter_role: 'parent', school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_teaches_no_parent_census_submission do
+      after(:create) do |school_info, evaluator|
+        create :census_your_school2017v5, :with_teaches_no, school_infos: [school_info], submitter_role: 'parent', school_year: evaluator.school_year
+      end
+    end
+  end
+
+  factory :census_school, parent: :school do
+    state {Census::StateCsOffering::SUPPORTED_STATES.first}
+    is_high_school
+    transient do
+      school_year 2017
+    end
+
+    trait :with_ap_cs_offering do
+      after(:create) do |school, evaluator|
+        create :ap_school_code, :with_ap_cs_offering, school: school, school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_ib_cs_offering do
+      after(:create) do |school, evaluator|
+        create :ib_school_code, :with_ib_cs_offering, school: school, school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_state_cs_offering do
+      after(:create) do |school, evaluator|
+        create :state_cs_offering, school: school, school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_state_not_having_state_data do
+      state "QQ"
+    end
+
+    trait :with_teaches_yes_teacher_census_submission do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_teaches_no_teacher_census_submission do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_teaches_yes_parent_census_submission do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_yes_parent_census_submission, school: school, school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_teaches_no_parent_census_submission do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_parent_census_submission, school: school, school_year: evaluator.school_year
+      end
+    end
+
+    trait :with_one_year_ago_teaches_yes do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 1
+      end
+    end
+
+    trait :with_one_year_ago_teaches_no do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 1
+      end
+    end
+
+    trait :with_one_year_ago_teaches_maybe do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 1
+      end
+    end
+
+    trait :with_two_years_ago_teaches_yes do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 2
+      end
+    end
+
+    trait :with_two_years_ago_teaches_no do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 2
+      end
+    end
+
+    trait :with_two_years_ago_teaches_maybe do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 2
+      end
+    end
+  end
+
   factory :census_submission, class: Census::CensusSubmission do
     submitter_email_address "parent@school.edu"
     school_year 2017
@@ -72,6 +192,18 @@ FactoryGirl.define do
     trait :with_other_description do
       topic_other_description "Another topic"
     end
+
+    trait :with_teaches_yes do
+      how_many_20_hours "all"
+      with_topic_booleans
+      with_other_description
+      topic_text true
+    end
+
+    trait :with_teaches_no do
+      how_many_20_hours "none"
+      how_many_10_hours "none"
+    end
   end
 
   factory :census_your_school2017v0, parent: :census_submission, class: Census::CensusYourSchool2017v0 do
@@ -132,7 +264,7 @@ FactoryGirl.define do
   end
 
   factory :ap_school_code, class: 'Census::ApSchoolCode' do
-    school_code "123456"
+    sequence(:school_code) {|n| Census::ApSchoolCode.normalize_school_code(n)}
     school {create :school}
 
     trait :without_school_code do
@@ -149,6 +281,13 @@ FactoryGirl.define do
 
     trait :with_invalid_school_code do
       school_code "ABCDEF"
+    end
+
+    trait :with_ap_cs_offering do
+      transient do
+        school_year 2017
+      end
+      ap_cs_offering {build_list(:ap_cs_offering, 1, school_year: school_year)}
     end
   end
 
@@ -201,7 +340,7 @@ FactoryGirl.define do
   end
 
   factory :ib_school_code, class: 'Census::IbSchoolCode' do
-    school_code "123456"
+    sequence(:school_code) {|n| Census::IbSchoolCode.normalize_school_code(n)}
     school {create :school}
 
     trait :without_school_code do
@@ -218,6 +357,13 @@ FactoryGirl.define do
 
     trait :with_invalid_school_code do
       school_code "ABCDEF"
+    end
+
+    trait :with_ib_cs_offering do
+      transient do
+        school_year 2017
+      end
+      ib_cs_offering {build_list(:ib_cs_offering, 1, school_year: school_year)}
     end
   end
 
