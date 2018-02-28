@@ -258,13 +258,13 @@ exports.loopHighlight = API_FUNCTION(function (id) {
  * whether or not we're a Bee level
  */
 exports.getNectar = API_FUNCTION(function (id) {
-  if (Maze.controller.subtype.getNectar()) {
+  if (Maze.controller.subtype.tryGetNectar()) {
     Maze.executionInfo.queueAction("nectar", id);
   }
 });
 
 exports.makeHoney = API_FUNCTION(function (id) {
-  if (Maze.controller.subtype.makeHoney()) {
+  if (Maze.controller.subtype.tryMakeHoney()) {
     Maze.executionInfo.queueAction("honey", id);
   }
 });
