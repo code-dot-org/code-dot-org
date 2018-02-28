@@ -84,7 +84,7 @@ class ProjectsListTest < ActionController::TestCase
         published_at: "2018-02-26 11:23:11 -0800",
         featured_at: "2018-02-26 19:23:36 -0800",
         unfeatured_at: nil,
-        name: "erin_pv",
+        name: "harry_potter",
         birthday: DateTime.now,
         properties: {}
       }
