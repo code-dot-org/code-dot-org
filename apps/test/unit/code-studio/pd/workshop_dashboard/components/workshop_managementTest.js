@@ -173,6 +173,38 @@ describe("WorkshopManagement", () => {
     });
   });
 
+  describe("For completed workshops to a program manager organizer", () => {
+    beforeEach(() => {
+      (new Permission()).setPermission("program_manager");
+      mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
+      mockRouter.expects("createHref").withExactArgs("/organizer_survey_results/123").returns("organizerResultsHref");
+
+      workshopManagement = shallow(
+        <WorkshopManagement
+          workshopId = {123}
+          viewUrl = "viewUrl"
+          showSurveyUrl={true}
+        />,
+        {context}
+      );
+    });
+
+    it("Has 2 buttons", () => {
+      expect(findButtons()).to.have.length(2);
+    });
+
+    it("Has a view workshop button", () => {
+      verifyViewWorkshopButton();
+    });
+
+    it("Has a View Survey Results button", () => {
+      const surveyButton = findButtonWithText("View Survey Results");
+      expect(surveyButton.props().href).to.eql("organizerResultsHref");
+
+      mockRouter.expects("push").withExactArgs("/organizer_survey_results/123");
+      surveyButton.simulate('click', mockClickEvent);
+    });
+  });
 
   describe("For completed workshops to a facilitator", () => {
     beforeEach(() => {

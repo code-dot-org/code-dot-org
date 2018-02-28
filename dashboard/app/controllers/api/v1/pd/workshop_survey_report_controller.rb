@@ -108,7 +108,7 @@ module Api::V1::Pd
     # We want to filter facilitator-specific responses if the user is a facilitator and
     # NOT a workshop organizer - the filter is the user's name.
     def facilitator_name_filter
-      current_user.facilitator? && !current_user.workshop_organizer? ? current_user.name : nil
+      current_user.facilitator? && !(current_user.workshop_organizer? || current_user.program_manager?) ? current_user.name : nil
     end
   end
 end

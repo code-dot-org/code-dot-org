@@ -128,7 +128,7 @@ class Ability
         end
       end
 
-      if user.workshop_organizer?
+      if user.workshop_organizer? || user.program_manager?
         can :create, Pd::Workshop
         can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
@@ -215,7 +215,8 @@ class Ability
         Level,
         Course,
         Script,
-        ScriptLevel
+        ScriptLevel,
+        Video,
       ]
 
       # Only custom levels are editable.

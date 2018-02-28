@@ -108,6 +108,14 @@ FactoryGirl.define do
           end
         end
       end
+      factory :program_manager do
+        transient do
+          regional_partner {build :regional_partner}
+        end
+        after(:create) do |user, evaluator|
+          create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
+        end
+      end
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
         sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}

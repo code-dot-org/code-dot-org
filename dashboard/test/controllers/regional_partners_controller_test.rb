@@ -66,12 +66,23 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert_equal @regional_partner.reload.name, 'Updated Name'
   end
 
-  test 'assign program manager creates regional partner program manager' do
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'assign workshop organizer as program manager creates regional partner program manager' do
     workshop_organizer = create :workshop_organizer
     sign_in @workshop_admin
     assert_creates RegionalPartnerProgramManager do
       post :assign_program_manager, params: {id: @regional_partner.id, email: workshop_organizer.email}
     end
     assert @regional_partner.program_managers.exists?(workshop_organizer.id)
+  end
+
+  test 'assign program manager creates regional partner program manager' do
+    teacher = create :teacher
+    sign_in @workshop_admin
+    assert_creates RegionalPartnerProgramManager do
+      post :assign_program_manager, params: {id: @regional_partner.id, email: teacher.email}
+    end
+    assert @regional_partner.program_managers.exists?(teacher.id)
+    assert teacher.program_manager?
   end
 end
