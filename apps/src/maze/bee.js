@@ -285,7 +285,7 @@ export default class Bee extends Gatherer {
    *
    * @return {boolean} whether or not this attempt was successful
    */
-  getNectar() {
+  tryGetNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
@@ -314,7 +314,7 @@ export default class Bee extends Gatherer {
    *
    * @return {boolean} whether or not this attempt was successful
    */
-  makeHoney() {
+  tryMakeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
@@ -354,7 +354,7 @@ export default class Bee extends Gatherer {
    * error if the current location is not a valid spot from which to gather
    * nectar.
    *
-   * This method is preferred over getNectar for live operation (ie when
+   * This method is preferred over tryGetNectar for live operation (ie when
    * actually displaying something to the user)
    *
    * @throws Will throw an error if the current cell has no nectar.
@@ -379,7 +379,7 @@ export default class Bee extends Gatherer {
    * Display the making of honey from the current location; raise a runtime
    * error if the current location is not a valid spot at which to make honey.
    *
-   * This method is preferred over getHoney for live operation (ie when
+   * This method is preferred over tryMakeHoney for live operation (ie when
    * actually displaying something to the user)
    *
    * @throws Will throw an error if the current cell is not a hive.
