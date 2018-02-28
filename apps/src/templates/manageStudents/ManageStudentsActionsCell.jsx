@@ -24,6 +24,7 @@ class ManageStudentActionsCell extends Component {
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
     isAddRow: PropTypes.bool,
+    isNewStudentRow: PropTypes.bool,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -66,11 +67,19 @@ class ManageStudentActionsCell extends Component {
   };
 
   onCancel = () => {
-    this.props.cancelEditingStudent(this.props.id);
+    if (this.props.isNewStudentRow) {
+      this.props.removeStudent(this.props.id);
+    } else {
+      this.props.cancelEditingStudent(this.props.id);
+    }
   };
 
   onSave = () => {
-    this.props.saveStudent(this.props.id);
+    if (this.props.isNewStudentRow) {
+      this.onAdd();
+    } else {
+      this.props.saveStudent(this.props.id);
+    }
   };
 
   onAdd = () => {
@@ -101,13 +110,13 @@ class ManageStudentActionsCell extends Component {
           <div>
             <Button
               onClick={this.onSave}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.orange}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
             />
             <Button
               onClick={this.onCancel}
-              color={Button.ButtonColor.blue}
+              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
             />
           </div>
@@ -116,7 +125,7 @@ class ManageStudentActionsCell extends Component {
           <div>
             <Button
               onClick={this.onAdd}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.gray}
               text={i18n.add()}
               disabled={this.props.isSaving || this.props.disableSaving}
             />

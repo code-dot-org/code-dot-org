@@ -25,6 +25,17 @@ const blankAddRow = {
   isAddRow: true,
 };
 
+const blankNewStudentRow = {
+  id: addRowId,
+  name: '',
+  age: '',
+  gender: '',
+  username: '',
+  loginType: '',
+  isEditing: true,
+  isNewStudentRow: true,
+};
+
 const initialState = {
   loginType: '',
   studentData: {},
@@ -99,9 +110,10 @@ export const addMultipleAddRows = (studentNames) => {
       const newId = addRowIdCounter;
       addRowIdCounter = addRowIdCounter - 1;
       studentData[newId] = {
-        ...blankAddRow,
+        ...blankNewStudentRow,
         name: studentNames[i],
         id: newId,
+        isAddRow: false,
       };
     }
     dispatch(addMultipleRows(studentData));
