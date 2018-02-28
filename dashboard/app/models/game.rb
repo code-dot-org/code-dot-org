@@ -192,6 +192,8 @@ class Game < ActiveRecord::Base
   end
 
   def uses_droplet?
+    # This is only applicable to levels.js levels. Everything else
+    # specifies droplet usage in the corresponding level class
     %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? name
   end
 

@@ -65,7 +65,6 @@ class Blockly < Level
     project_template_level_name
     hide_share_and_remix
     is_project_level
-    edit_code
     code_functions
     palette_category_at_start
     failure_message_override
@@ -218,20 +217,11 @@ class Blockly < Level
       app_options[:skinId] = skin_id if skin_id
 
       # Set some values that Blockly expects on the root of its options string
-
-      droplet = game.try(:uses_droplet?)
-      #TODO(ram) normalize or remove the edit_code field
-      if edit_code == "false"
-        droplet = false
-      elsif edit_code == true
-        droplet = true
-      end
-
       app_options.merge!(
         {
           baseUrl: Blockly.base_url,
           app: game.try(:app),
-          droplet: droplet,
+          droplet: uses_droplet?,
           pretty: Rails.configuration.pretty_apps ? '' : '.min',
         }
       )
@@ -295,6 +285,7 @@ class Blockly < Level
       level_prop['startDirection'] = level_prop['startDirection'].to_i if level_prop['startDirection'].present?
       level_prop['sliderSpeed'] = level_prop['sliderSpeed'].to_f if level_prop['sliderSpeed']
       level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
+      level_prop['editCode'] = uses_droplet?
 
       # Blockly requires these fields to be objects not strings
       %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
@@ -398,4 +389,9 @@ class Blockly < Level
     return if examples.nil?
     self.examples = examples.select(&:present?)
   end
+
+  # This should just return false, but we have a few levels.js levels that use
+  # droplet (starwars, and a few test levels). They all have level records of
+  # type 'Blockly', so they can't override this as needed
+  delegate :uses_droplet?, to: :game
 end
