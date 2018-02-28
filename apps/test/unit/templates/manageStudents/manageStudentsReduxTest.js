@@ -15,6 +15,7 @@ import manageStudents, {
   addStudentSuccess,
   addStudentFailure,
   ADD_STATUS,
+  addMultipleRows,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -276,6 +277,41 @@ describe('manageStudentsRedux', () => {
     });
   });
 
+  describe('addMultipleRows', () => {
+    it('updates studentData and editingData', () => {
+      const startingState = {
+        ...initialState,
+        studentData: {
+          4: {
+            id: 4,
+            name: 'original student',
+            isEditing: true,
+          }
+        },
+        editingData: {
+          4: {
+            id: 4,
+            name: 'original student',
+            isEditing: true
+          }
+        },
+      };
+      const action = addMultipleRows({
+        '-1': {id: -1, name: 'student -1', isEditing: true},
+        '-2': {id: -2, name: 'student -2', isEditing: true}
+      });
+      const nextState = manageStudents(startingState, action);
+
+      const expectedData = {
+        '-1': {id: -1, name: 'student -1', isEditing: true},
+        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '4': {id: 4, name: 'original student', isEditing: true}
+      };
+      assert.deepEqual(nextState.studentData, expectedData);
+      assert.deepEqual(nextState.editingData, expectedData);
+    });
+  });
+
   describe('add student', () => {
     const expectedBlankRow = {
       id: 0,
@@ -332,7 +368,7 @@ describe('manageStudentsRedux', () => {
       };
 
       // Add student
-      const addStudentSuccessAction = addStudentSuccess(studentDataToAdd);
+      const addStudentSuccessAction = addStudentSuccess(10, studentDataToAdd);
       const addedStudentState = manageStudents(initialState, addStudentSuccessAction);
 
       assert.deepEqual(addedStudentState.editingData[0], {
@@ -380,7 +416,7 @@ describe('manageStudentsRedux', () => {
       };
 
       // Add student
-      const addStudentSuccessAction = addStudentSuccess(studentDataToAdd);
+      const addStudentSuccessAction = addStudentSuccess(10, studentDataToAdd);
       const addedStudentState = manageStudents(initialState, addStudentSuccessAction);
 
       assert.deepEqual(addedStudentState.editingData[0], {

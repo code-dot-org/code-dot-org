@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
+// Response from server after adding a new student to the section.
 export const ADD_STATUS = {
   "success": "success",
   "fail": "fail",
@@ -14,6 +15,7 @@ const addRowId = 0;
 // Each needs a unique id, and counts backward from -1.
 let addRowIdCounter = -1;
 
+// Add row is for adding a single student from blank data.
 const blankAddRow = {
   id: addRowId,
   name: '',
@@ -25,6 +27,9 @@ const blankAddRow = {
   isAddRow: true,
 };
 
+// New student row is created after a list of students have been
+// added to the table, but their information hasn't been saved
+// to the server yet.
 const blankNewStudentRow = {
   id: addRowId,
   name: '',
@@ -36,6 +41,7 @@ const blankNewStudentRow = {
   isNewStudentRow: true,
 };
 
+// Initial state for the manageStudents redux store.
 const initialState = {
   loginType: '',
   studentData: {},
@@ -86,6 +92,8 @@ export const saveStudent = (studentId) => {
   };
 };
 
+// Adds a student, with the given row id (studentId), from an addRow or
+// a newStudentRow.
 export const addStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
@@ -101,14 +109,16 @@ export const addStudent = (studentId) => {
   };
 };
 
+// Creates a new "new student" add row for teach name in the array.
 export const addMultipleAddRows = (studentNames) => {
   return (dispatch, getState) => {
-    console.log("addMultipleAddRows");
-    //needs to be an object id: {}, and Ids need to be unique
     let studentData = {};
     for (let i = 0; i<studentNames.length; i++) {
+      // Create a new uniqueId for the newStudentRow
       const newId = addRowIdCounter;
       addRowIdCounter = addRowIdCounter - 1;
+
+      // Create student data for each student name.
       studentData[newId] = {
         ...blankNewStudentRow,
         name: studentNames[i],
