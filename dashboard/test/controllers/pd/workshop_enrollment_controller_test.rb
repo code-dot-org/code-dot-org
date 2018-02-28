@@ -20,7 +20,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
     @organizer_workshop = create :pd_workshop, organizer: @workshop_organizer, num_sessions: 1
     @organizer_workshop.facilitators << @facilitator
-    @existing_enrollment = create :pd_enrollment, workshop: @organizer_workshop
+    @organizer_workshop_existing_enrollment = create :pd_enrollment, workshop: @organizer_workshop
   end
 
   test 'enroll get route' do
