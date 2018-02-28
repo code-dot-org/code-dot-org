@@ -56,7 +56,7 @@ module Pd::Application
     end
 
     def workshop
-      Pd::Workshop.find(pd_workshop_id) if pd_workshop_id
+      Pd::Workshop.find_by(id: pd_workshop_id) if pd_workshop_id
     end
 
     # override
