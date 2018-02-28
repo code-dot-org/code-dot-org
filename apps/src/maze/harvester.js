@@ -1,7 +1,6 @@
 import Gatherer from './gatherer';
 import HarvesterCell from './harvesterCell';
 import HarvesterDrawer from './harvesterDrawer';
-import { HarvesterTerminationValue } from '../constants.js';
 
 const HARVEST_SOUND = 'harvest';
 
@@ -89,6 +88,18 @@ export default class Harvester extends Gatherer {
     return this.tryGetCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
+  // Overridable termination handler methods
+
+  onWrongCrop = () => {};
+  setWrongCropHandler(handler) {
+    this.onWrongCrop = handler;
+  }
+
+  onEmptyCrop = () => {};
+  setEmptyCropHandler(handler) {
+    this.onEmptyCrop = handler;
+  }
+
   /**
    * Attempt to harvest the specified crop from the current location; terminate
    * the execution if this is not a valid place at which to get that crop.
@@ -105,12 +116,12 @@ export default class Harvester extends Gatherer {
     const cell = this.getCell(row, col);
 
     if (cell.featureType() !== crop) {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
+      this.onWrongCrop();
       return false;
     }
 
     if (cell.getCurrentValue() === 0) {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.EMPTY_CROP);
+      this.onEmptyCrop();
       return false;
     }
 
