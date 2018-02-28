@@ -28,6 +28,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
   isAddRow: PropTypes.bool,
+  isNewStudentRow: PropTypes.bool,
 });
 
 /** @enum {number} */
@@ -75,7 +76,7 @@ const passwordFormatter = (loginType, {rowData}) => {
 // The "add row" should always be pinned to the top when sorting.
 // The "new student rows" should always be next.
 // This function takes into account having multiple "add rows"
-const sortRows = (data, columnIndexList, orderList) => {
+export const sortRows = (data, columnIndexList, orderList) => {
   let addRows = [];
   let newStudentRows = [];
   let studentRows = [];
