@@ -55,7 +55,7 @@ export default class Planter extends Subtype {
    *
    * @return {boolean} whether or not this attempt was successful
    */
-  plant() {
+  tryPlant() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
@@ -74,7 +74,7 @@ export default class Planter extends Subtype {
    * Display the planting of a sprout at the current location; raise a runtime
    * error if the current location is not a valid spot at which to plant.
    *
-   * This method is preferred over plant for live operation (ie when actually
+   * This method is preferred over tryPlant for live operation (ie when actually
    * displaying something to the user)
    *
    * @throws Will throw an error if the current cell has no nectar.
