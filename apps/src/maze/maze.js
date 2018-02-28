@@ -42,11 +42,11 @@ module.exports = class Maze {
 
     this.cachedBlockStates = [];
 
-    this.resultsHandler;
-    this.response;
-    this.result;
-    this.testResults;
-    this.waitingForReport;
+    this.resultsHandler = undefined;
+    this.response = undefined;
+    this.result = undefined;
+    this.testResults = undefined;
+    this.waitingForReport = undefined;
 
     //TODO: Make configurable.
     studioApp().setCheckForEmptyBlocks(true);

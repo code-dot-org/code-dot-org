@@ -31,8 +31,8 @@ export default class Bee extends Gatherer {
     this.userChecks_ = [];
 
     this.overrideStepSpeed = 2;
-    this.honey_;
-    this.nectars_;
+    this.honey_ = undefined;
+    this.nectars_ = undefined;
   }
 
   /**
