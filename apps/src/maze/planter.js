@@ -41,7 +41,7 @@ export default class Planter extends Subtype {
     return cell.featureType() === type;
   }
 
-  // Overridable termination handler methods
+  // Overridable event handlers
 
   onPlantInNonSoil = () => {};
   setPlantInNonSoilHandler(handler) {

@@ -7,7 +7,7 @@ export default class HarvesterHandler extends GathererHandler {
   /**
    * @override
    */
-  setTerminationHandlerMethods() {
+  setEventHandlers() {
     this.maze_.subtype.setWrongCropHandler(() => {
       this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
     });

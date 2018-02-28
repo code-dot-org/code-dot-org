@@ -271,7 +271,7 @@ export default class Bee extends Gatherer {
     this.nectars_.push({ row, col });
   }
 
-  // Overridable termination handler methods
+  // Overridable event handlers
 
   onNotAtFlower = () => {};
   setNotAtFlowerHandler(handler) {

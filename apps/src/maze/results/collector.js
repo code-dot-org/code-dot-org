@@ -34,7 +34,7 @@ export default class CollectorHandler extends ResultsHandler {
   /**
    * @override
    */
-  setTerminationHandlerMethods() {
+  setEventHandlers() {
     this.maze_.subtype.setCollectedTooManyHandler(() => {
       this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
     });

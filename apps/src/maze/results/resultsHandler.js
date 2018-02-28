@@ -4,14 +4,14 @@ export default class ResultsHandler {
     this.skin_ = config.skin;
     this.level_ = config.level;
 
-    this.setTerminationHandlerMethods();
+    this.setEventHandlers();
   }
 
   /**
    * Overridable method for hooking into this.maze_.subtype to set the execution
-   * termination handler methods
+   * event handlers
    */
-  setTerminationHandlerMethods() {
+  setEventHandlers() {
     // intentional noop; overridable
   }
 

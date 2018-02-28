@@ -16,7 +16,7 @@ export default class BeeHandler extends GathererHandler {
   /**
    * @override
    */
-  setTerminationHandlerMethods() {
+  setEventHandlers() {
     this.maze_.subtype.setNotAtFlowerHandler(() => {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
     });

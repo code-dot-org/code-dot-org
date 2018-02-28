@@ -11,7 +11,7 @@ export default class PlanterHandler extends ResultsHandler {
   /**
    * @override
    */
-  setTerminationHandlerMethods() {
+  setEventHandlers() {
     this.maze_.subtype.setPlantInNonSoilHandler(() => {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.PLANT_IN_NON_SOIL);
     });

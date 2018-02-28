@@ -47,7 +47,7 @@ export default class Collector extends Subtype {
     return true;
   }
 
-  // Overridable termination handler methods
+  // Overridable event handlers
 
   onCollectedTooMany = () => {};
   setCollectedTooManyHandler(handler) {
