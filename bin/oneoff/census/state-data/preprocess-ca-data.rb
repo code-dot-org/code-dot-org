@@ -19,7 +19,7 @@ OptionParser.new do |opts|
 end.parse!
 
 # The raw file we get from CA (CoursesTaught via https://www.cde.ca.gov/ds/sd/df/filesassign.asp)
-# Has data for all courses in all schools in CA, not jsut CS.
+# Has data for all courses in all schools in CA, not just CS.
 # Rather than processing that huge file as part of seeding we just filter out the rows
 # we care about. At the same time we convert it from TSV to CSV.
 CSV($stdout) do |output|
