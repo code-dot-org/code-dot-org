@@ -156,4 +156,9 @@ class GamelabJr < Gamelab
 #{common_blocks(type)}
     XML
   end
+
+  # These serialized fields will be serialized/deserialized as straight XML
+  def xml_blocks
+    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
+  end
 end
