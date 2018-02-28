@@ -11,6 +11,7 @@ const styles = {
     fontSize: 16,
     lineHeight: '25px',
     cursor: 'pointer',
+    maxWidth: '90%'
   },
   mapThumbnail: {
     backgroundColor: color.teal,
@@ -43,12 +44,12 @@ const styles = {
 class ResourceLink extends React.Component {
   static propTypes = {
     map: PropTypes.bool.isRequired,
-    text: PropTypes.string,
     reference: PropTypes.string,
   };
 
   state = {
     dialogSelected: false,
+    text: this.props.reference
   };
 
   selectResource = () => {
@@ -59,8 +60,18 @@ class ResourceLink extends React.Component {
     this.setState({dialogSelected: false});
   };
 
+  getLinkText = (data) => {
+    this.setState({text: data});
+  };
+
+  componentWillMount = () => {
+    // Gets the text content from the meta description tag from the
+    // reference to which we're linking
+    $.get(this.props.reference, (data) => { this.getLinkText($(data).filter("meta[name='description']").attr("content"));});
+  };
+
   render() {
-    const { map, text } = this.props;
+    const { map } = this.props;
 
     const iconStyle = map ? {...styles.commonIcon, ...styles.mapIcon} : {...styles.commonIcon, ...styles.resourceIcon};
     const thumbnailStyle = map ? {...styles.commonThumbnail, ...styles.mapThumbnail} : {...styles.commonThumbnail};
@@ -72,7 +83,7 @@ class ResourceLink extends React.Component {
               <i style={iconStyle} className={map ? "fa fa-map" : "fa fa-book"}/>
           </span>
           <a style={styles.textLink}>
-            {text}
+            {this.state.text}
           </a>
         </div>
         <BaseDialog

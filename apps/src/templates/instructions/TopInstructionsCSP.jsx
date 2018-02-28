@@ -300,7 +300,7 @@ var TopInstructions = React.createClass({
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            {(!experiments.isEnabled('resources_tab') || !experiments.isEnabled('resourcesTab')) &&
+            {(!experiments.isEnabled('resources_tab') && !experiments.isEnabled('resourcesTab') && !experiments.isEnabled('additionalResources')) &&
               <div style={styles.title}>
                 {msg.puzzleTitle({
                   stage_total: this.props.stageTotal,
