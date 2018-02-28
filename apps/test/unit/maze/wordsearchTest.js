@@ -62,7 +62,6 @@ describe("wordsearch: drawMapTiles", function () {
     var fakeMaze = {
       map: map
     };
-    var fakeStudioApp = undefined;
     var fakeConfig = {
       level: {
         searchWord: '',
@@ -73,7 +72,7 @@ describe("wordsearch: drawMapTiles", function () {
       }
     };
 
-    var wordSearch = new WordSearch(fakeMaze, fakeStudioApp, fakeConfig);
+    var wordSearch = new WordSearch(fakeMaze, fakeConfig);
     wordSearch.createDrawer(document.getElementById('svgMaze'));
     // Not currently doing any validation, so mostly just making sure no
     // exceptions are thrown.
