@@ -570,11 +570,16 @@ function loadAnimationFromSource(key, callback) {
          'analysis-events',
           {
             study: 'animation_no_load',
-            study_group: 'animation_no_load_v3',
+            study_group: 'animation_no_load_v4',
             event: isOwner() ? 'animation_not_loaded_owner' : 'animation_not_loaded_viewer',
             project_id: getCurrentId(),
-            data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
-              'animationName': state.propsByKey[key].name, 'error': err.message})
+            data_json: JSON.stringify({
+              'sourceUrl': sourceUrl,
+              'mainJsonSourceUrl': state.propsByKey[key].sourceUrl,
+              'version': state.propsByKey[key].version,
+              'animationName': state.propsByKey[key].name,
+              'error': err.message
+            })
           },
           {includeUserId: true}
         );
