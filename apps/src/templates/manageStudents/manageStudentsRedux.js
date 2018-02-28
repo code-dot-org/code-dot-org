@@ -118,7 +118,7 @@ export const addStudent = (studentId) => {
   };
 };
 
-// Creates a new "new student" add row for teach name in the array.
+// Creates a new "new student" add row for each name in the array.
 export const addMultipleAddRows = (studentNames) => {
   return (dispatch, getState) => {
     let studentData = {};
