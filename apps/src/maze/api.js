@@ -344,7 +344,7 @@ exports.hasLettuce = API_FUNCTION(function (id) {
  */
 
 exports.plant = API_FUNCTION(function (id) {
-  if (Maze.controller.subtype.plant()) {
+  if (Maze.controller.subtype.tryPlant()) {
     Maze.executionInfo.queueAction('plant', id);
   }
 });
