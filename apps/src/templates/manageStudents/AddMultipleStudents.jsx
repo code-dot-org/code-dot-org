@@ -21,15 +21,15 @@ class AddMultipleStudents extends Component {
   };
 
   state = {
-    openDialog: false,
+    isDialogOpen: false,
   };
 
   openDialog = () => {
-    this.setState({openDialog: true});
+    this.setState({isDialogOpen: true});
   };
 
   closeDialog = () => {
-    this.setState({openDialog: false});
+    this.setState({isDialogOpen: false});
   };
 
   add = () => {
@@ -48,8 +48,7 @@ class AddMultipleStudents extends Component {
         />
         <BaseDialog
           useUpdatedStyles
-          uncloseable
-          isOpen={this.state.openDialog}
+          isOpen={this.state.isDialogOpen}
           style={styles.dialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
