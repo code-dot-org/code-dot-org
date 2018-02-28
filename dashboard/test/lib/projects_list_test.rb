@@ -146,8 +146,4 @@ class ProjectsListTest < ActionController::TestCase
   def db_result(result)
     stub(select: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
   end
-
-  def featured_db_result(result)
-    stub(select: stub(join: stub(join: stub(join: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
-  end
 end
