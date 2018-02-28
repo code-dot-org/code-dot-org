@@ -82,7 +82,7 @@ export default class Collector extends Subtype {
    *
    * @return {boolean} whether or not this attempt was successful
    */
-  collect(row, col) {
+  tryCollect(row, col) {
     const currVal = this.maze_.map.getValue(row, col);
 
     if (currVal === undefined || currVal < 1) {
