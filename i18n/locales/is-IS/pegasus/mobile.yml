@@ -98,9 +98,9 @@
   third_party_gradelevel_5to12: "11-18 ára"
   third_party_gradelevel_6plus: "12 ára og eldri"
   third_party_gradelevel_8plus: "14 ára og eldri"
-  third_party_platform_all: Fyrir vef, iPad og Android
-  third_party_platform_mobile: Fyrir iPad og Android
-  third_party_platform_web: Fyrir vef
+  third_party_platform_all: 'Fyrir vef, iPad og Android'
+  third_party_platform_mobile: 'Fyrir iPad og Android'
+  third_party_platform_web: 'Fyrir vef'
   third_party_price_varies: 'Verð: Ýmsir valkostir'
   third_party_price_free: 'Verð: Frítt'
   third_party_price_299: 'Verð: $2,99/niðurhal'
@@ -544,7 +544,7 @@
   volunteer_engineer_submission_field_email_desc: "Netfangi þínu verður aldrei deilt, en við munum senda þér beiðnir frá kennurum."
   volunteer_engineer_submission_field_email_placeholder: "Netfang"
   volunteer_engineer_submission_final_paragraph: "Þú verður sýndur á korti fyrir kennara á svæðinu að hafa samband í tengslum við Klukkustund kóðunar eða önnur tækifæri til sjálfboðaliðastarfa. Netfangi þínu og nákvæmu heimilisfangi verður ALDREI deilt af okkur. En hinar upplýsingarnar (þ. á m. lausleg staðsetning) verða sýnilegar kennurum á svæðinu."
-  volunteer_engineer_submission_checkbox_contact: Ég samþykki að kennarar megi hafa samband við mig vegna mögulegra sjálfboðaliðastarfa (Ath. netfangi þínu verður ekki deilt)
+  volunteer_engineer_submission_checkbox_contact: 'Ég samþykki að kennarar megi hafa samband við mig vegna mögulegra sjálfboðaliðastarfa (Ath. netfangi þínu verður ekki deilt)'
   volunteer_engineer_submission_checkbox_age_18_plus: "Ég staðfesti að ég er a.m.k. 18 ára."
   volunteer_engineer_submission_submit: "Senda inn"
   volunteer_engineer_submission_thankyou: "Takk fyrir að bjóða liðveislu. Kennarar munu nota <a href=\"%{url}\">þetta kort</a> til að leita að og hafa samband við sjálfboðaliða eins og þig. Vinsamlegast gerðu ráð fyrir að það taki 48 klst. áður en upplýsingar þínar birtast rétt á kortinu."
@@ -763,7 +763,10 @@
   dashboard_coursed: 'Námskeið D: '
   dashboard_coursee: 'Námskeið E: '
   dashboard_coursef: 'Námskeið F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Námskrá"
   dashboard_curriculum_overview: "Yfirlit 5 - 10 ára (K-5) námsefnis"
   dashboard_overview: "Yfirlit"
@@ -781,6 +784,8 @@
   dashboard_curriculum_csins: 'Tölvunarfræði í vísindum:'
   dashboard_curriculum_csp: 'AP® Undirstöðuatriði tölvunarfræði:'
   dashboard_curriculum_ecs: 'Tölvunarfræði könnuð:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Annað"
   dashboard_login_word: "Orð"
@@ -849,7 +854,7 @@
   carousel_heading_international: "Kennsluefni samstarfsaðila á þínu tungumáli"
   carousel_heading_domestic: "Kennsluefni samstarfsaðila á ensku"
   carousel_heading_beginners: "Kennsluefni samstarfsaðila fyrir 5.- 8. bekk"
-  carousel_heading_beyond_beginners: Kennsluefni fyrir byrjendur
+  carousel_heading_beyond_beginners: 'Kennsluefni fyrir byrjendur'
   carousel_heading_javascript: "Kennsluefni samstarfsaðila í JavaScript"
   carousel_heading_beyond_javascript: "Kennsluefni sem kennir JavaScript"
   carousel_heading_unplugged: "Án tölvu eða netsambands? Prófaðu tölvunarfræði með \"verkefnum án tölvu\""
@@ -951,11 +956,11 @@
   accelerated_name: "Hraðnámskeið"
   express_name: "Express Course"
   pre-express_name: Hraðnámskeið fyrir forlæsa
-  cspunit1_name: Kafli 1 - Stafrænar upplýsingar
-  cspunit2_name: 'Kafli 2: Internetið'
-  cspunit3_name: 'Kafli 3: Forritun'
-  cspunit4_name: 'Kafli 4: Gögn'
-  cspunit5_name: 'Kafli 5: Kanna og búa til fagnám'
+  cspunit1_name: "Kafli 1 - Stafrænar upplýsingar"
+  cspunit2_name: "Kafli 2: Internetið"
+  cspunit3_name: "Kafli 3: Forritun"
+  cspunit4_name: "Kafli 4: Gögn"
+  cspunit5_name: "Kafli 5: Kanna og búa til fagnám"
   cspunit6_name: 'Framhald: Gagnagrunnar í öppum'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -964,7 +969,7 @@
   csd5_name: 'Kafli 5: Upplýsingar og samfélagið'
   csd6_name: 'Kafli 6: Tölvun'
   csp1_name: 'Kafli 1: Internetið'
-  csp2_name: Kafli 2 - Stafrænar upplýsingar
+  csp2_name: 'Kafli 2 - Stafrænar upplýsingar'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Kafli 3: Kynning á forritun (útgáfa A)'
   csp3-research-mxghyt_name: 'Kafli 3: Kynning á forritun (undirmarkmið)'
@@ -1004,6 +1009,7 @@
   cspexams_category_name: "Æfingapróf fyrir Undirstöðuatriði TF"
   research_studies_category_name: "Research Studies"
   applab_name: "Appsmiðja"
+  gamelab_name: "Leikjasmiðjan"
   basketball_name: "Búa til körfuboltaleik"
   sports_name: "Kóðaðu íþróttaleik eftir þínu höfði"
   applab_gradelevel: "Aldur 13+"
@@ -1388,7 +1394,7 @@
   makeschool_beyond_longdescription: "Kanntu eitthvað í ObjectiveC? Lærðu að búa til iPhone leik á klukkutíma! Við leiðum þig gegnum það að kóða, prófa og spila leikinn að öllu leyti í vafra og síðan deila honum á Facebook svo vinir geti prófað hann! Engin forkunnátta í að þróa fyrir iPhone er nauðsynleg. Þú verður þó að skilja hvað breytur (variables), aðferðir (methods) og hlutir (objects) eru."
   appinventor_beyond_longdescription: "Stutt og skemmtileg kennslumyndskeið leiðbeina við gerð þriggja einfaldra appa fyrir Android síma eða spjaldtölvur. Þessi klukkustund kóðunar hentar bæði byrjendum og kunnáttusömum og áður en þú veist af getur þú farið að búa til þín eigin öpp. Ekki slæmt að geta deilt eigin sköpunarverkum með vinum! Þessi verkefni henta fyrir sjálfsnám eða fyrir kennara í bekkjakennslu."
   touchdevelop_beyond_longdescription: "Með TouchDevelop getur þú búið til öpp á iPad, iPhone, Android, PC, Mac, Windows Phone. Í snertivæna vinnuumhverfinu okkar verður forritun skemmtileg, jafnvel á síma eða spjaldtölvu!"
-  codehs_beyond_longdescription: Lærðu grunnatriði forritunar með hundinum Karel. Þetta er skemmtileg, aðgengileg og sjónræn kynning á forritun, þar sem tölvunni eru gefnar skipanir líkt og hún væri hundur. Kennsluefnið hentar vel fyrir handleiðslu kennara, en er einnig hægt að nota á eigin spýtur
+  codehs_beyond_longdescription: 'Lærðu grunnatriði forritunar með hundinum Karel. Þetta er skemmtileg, aðgengileg og sjónræn kynning á forritun, þar sem tölvunni eru gefnar skipanir líkt og hún væri hundur. Kennsluefnið hentar vel fyrir handleiðslu kennara, en er einnig hægt að nota á eigin spýtur'
   udemy_beyond_longdescription: 'Hvort sem þú hefur aldrei séð eina línu af kóða eða hefur það að lifibrauði, þá hefur Udemy námskeið fyrir þig með kennurum sem hafa það að atvinnu. [Til athugunar: þetta kostar]'
   lynda_beyond_longdescription: 'Lærðu að kóða, búa til og þróa vefhugbúnað, frá grunni hlutbundinnar forritunar með C og C++ upp í að skrifa Java. Með kennsluefni okkar fyrir hugbúnaðarsmiði getur þú lært að þróa og búa til farandforrit (mobile apps), vinna með PHP og MySQL gagnagrunna, byrja í tölfræðiúrvinnslumálinu R og margt fleira. [Til athugunar: þetta kostar]'
   edx_beyond_longdescription: "CS50x er inngangur Harvard háskóla að tölvunarfræði og listinni að forrita fyrir alla nemendur hvort sem þeir stefna á þetta sem aðalgrein eða aukagrein og hvort sem þeir hafa reynslu af forritun eða ekki. Meðal efnis er útdráttur, algrím, gagnaskipan, hjúpun, umsjón tilfanga, öryggi, hugbúnaðarverkfræði og vefþróun. Meðal forritunarmála eru C, PHP og JavaScript ásamt SQL, CSS og HTML. Staðbundna útgáfan af CS50x er annar stærsti kúrsinn í Harvard."

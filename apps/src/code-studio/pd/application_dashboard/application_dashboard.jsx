@@ -21,7 +21,9 @@ import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
 import DetailView from './detail_view';
+import DetailViewRedirect from './detail_view_redirect';
 import CohortView from './cohort_view';
+import AdminEditView from './admin_edit_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
@@ -124,6 +126,18 @@ export default class ApplicationDashboard extends React.Component {
                   )
                 ];
               }))
+            }
+            <Route
+              path=":applicationId"
+              breadcrumbs="Application"
+              component={DetailViewRedirect}
+            />
+            {this.props.isWorkshopAdmin &&
+            <Route
+              path=":applicationId/edit"
+              breadcrumbs="Application,Edit"
+              component={AdminEditView}
+            />
             }
           </Route>
         </Router>

@@ -1,3 +1,4 @@
+@no_ie
 Feature: Using the YourSchool census page
 
   Scenario: Loading yourschool and fill out form

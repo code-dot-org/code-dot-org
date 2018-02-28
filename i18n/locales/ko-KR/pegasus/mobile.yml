@@ -25,7 +25,7 @@
   submit: "제출하기"
   twentyhours_heading: "컴퓨터과학(정보과학) 과정을 시도해 보세요."
   twentyhours_text: "Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요."
-  og_title: 모든 아이들에게 기회가 주어져야 합니다.
+  og_title: '모든 아이들에게 기회가 주어져야 합니다.'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다."
@@ -753,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "교과 과정"
   dashboard_curriculum_overview: "K-5(초등 5학년) 교육과정 살펴보기"
   dashboard_overview: "개요"
@@ -771,6 +774,8 @@
   dashboard_curriculum_csins: '과학 영역의 컴퓨터 과학:'
   dashboard_curriculum_csp: 'AP ® 컴퓨터 과학 원리:'
   dashboard_curriculum_ecs: '컴퓨터과학 살펴보기'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "기타"
   dashboard_login_word: "단어"
@@ -839,7 +844,7 @@
   carousel_heading_international: "한국어로 제공되는 협찬 튜토리얼"
   carousel_heading_domestic: "영어로 제공되는 협찬 튜토리얼들"
   carousel_heading_beginners: "K-8(유치원-초1) 학생들을 위한 협찬 튜토리얼"
-  carousel_heading_beyond_beginners: 처음하는 사람들을 위한 튜토리얼
+  carousel_heading_beyond_beginners: '처음하는 사람들을 위한 튜토리얼'
   carousel_heading_javascript: "Javascript 를 교육할 수 있는 협찬 튜토리얼들"
   carousel_heading_beyond_javascript: "Javascript 를 교육할 수 있는 튜토리얼들"
   carousel_heading_unplugged: "적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요."
@@ -941,12 +946,12 @@
   accelerated_name: "빠른 과정"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: CS 원리 1단원
-  cspunit2_name: CS 원리 2단원
-  cspunit3_name: CS Principles Unit 3
-  cspunit4_name: CS 원리 4단원
-  cspunit5_name: CS 원리 5단원
-  cspunit6_name: CS 원리 6단원
+  cspunit1_name: "CS 원리 1단원"
+  cspunit2_name: "CS 원리 2단원"
+  cspunit3_name: "CS Principles Unit 3"
+  cspunit4_name: "CS 원리 4단원"
+  cspunit5_name: "CS 원리 5단원"
+  cspunit6_name: 'CS 원리 6단원'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
@@ -994,6 +999,7 @@
   cspexams_category_name: "컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트"
   research_studies_category_name: "Research Studies"
   applab_name: "앱 연구실"
+  gamelab_name: "Game Lab"
   basketball_name: "농구 게임 만들기"
   sports_name: "당신만의 스포츠게임을 코딩하세요"
   applab_gradelevel: "13세 이상"

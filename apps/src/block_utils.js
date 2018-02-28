@@ -334,3 +334,241 @@ exports.cleanBlocks = function (blocksDom) {
     ATTRIBUTES_TO_CLEAN.forEach(attr => block.removeAttribute(attr));
   });
 };
+
+const DROPDOWN_INPUT = 'dropdown';
+const VALUE_INPUT = 'value';
+const DUMMY_INPUT = 'dummy';
+
+/**
+ * Given block text with input names specified in curly braces, returns a list
+ * of labeled inputs that should be added to the block.
+ *
+ * @param {string} text The complete message shown on the block with inputs in
+ *   curly braces, e.g. "Move the {SPRITE} {PIXELS} to the {DIR}"
+ * @param {Object[]} args Define the type/options of the block's inputs.
+ * @param {string} args[].name Input name, conventionally all-caps
+ * @param {string[][]} args[].options For dropdowns, the list of options. Each
+ *   entry is a 2-element string array with the display name first, and the
+ *   codegen-compatible (i.e. strings should be doubly-quoted) value second.
+ * @param {BlockValueType} args[].type For value inputs, the type required. Use
+ *   BlockValueType.NONE to accept any block.
+ *
+ * @returns {Object[]} a list of labeled inputs. Each one has the same fields
+ *   as 'args', but additionally includes:
+ * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
+ * @returns {string} return[].label Text to display to the left of the input
+ */
+const determineInputs = function (text, args) {
+  const tokens = text.split(/[{}]/);
+  if (tokens[tokens.length - 1] === '') {
+    tokens.pop();
+  }
+  const inputs = [];
+  for (let i = 0; i < tokens.length; i += 2) {
+    const label = tokens[i];
+    const input = tokens[i + 1];
+    if (input) {
+      const arg = args.find(arg => arg.name === input);
+      if (arg.options) {
+        inputs.push({
+          mode: DROPDOWN_INPUT,
+          name: arg.name,
+          options: arg.options,
+          label,
+        });
+      } else if (arg.type) {
+        inputs.push({
+          mode: VALUE_INPUT,
+          name: arg.name,
+          type: arg.type,
+          label,
+        });
+      }
+    } else {
+      inputs.push({
+        mode: DUMMY_INPUT,
+        label,
+      });
+    }
+  }
+  return inputs;
+};
+exports.determineInputs = determineInputs;
+
+/**
+ * Adds the specified inputs to the block
+ * @param {Blockly} blockly The Blockly object provided to install()
+ * @param {Block} block The block to add the inputs to
+ * @param {Object[]} inputs The list of inputs. See determineInputs() for
+ *   the fields in each input.
+ */
+const interpolateInputs = function (blockly, block, inputs) {
+  inputs.map(input => {
+    let dropdown;
+    switch (input.mode) {
+      case DROPDOWN_INPUT:
+        dropdown = new blockly.FieldDropdown(input.options);
+        block.appendDummyInput()
+          .appendTitle(input.label)
+          .appendTitle(dropdown, input.name);
+        break;
+      case VALUE_INPUT:
+        block.appendValueInput(input.name)
+          .setCheck(input.type)
+          .appendTitle(input.label);
+        break;
+      case DUMMY_INPUT:
+        block.appendDummyInput()
+          .appendTitle(input.label);
+        break;
+    }
+  });
+};
+exports.interpolateInputs = interpolateInputs;
+
+/**
+ * Create a block generator that creats blocks that directly map to a javascript
+ * function call, method call, or other (hopefully simple) expression.
+ *
+ * @params {Blockly} blockly The Blockly object provided to install()
+ * @params {string} blocksModuleName Module name that will be prefixed to all
+ *   the block names
+ * @returns {function} A function that takes a bunch of block properties and
+ *   adds a block to the blockly.Blocks object. See param documentation below.
+ */
+exports.createJsWrapperBlockCreator = function (
+  blockly,
+  blocksModuleName
+) {
+
+  const {
+    ORDER_COMMA,
+    ORDER_FUNCTION_CALL,
+    ORDER_MEMBER,
+    ORDER_NONE,
+  } = Blockly.JavaScript;
+
+  const generator = blockly.Generator.get('JavaScript');
+
+  /**
+   * Create a block that directly maps to a javascript function call, method
+   * call, or other (hopefully simple) expression.
+   *
+   * @param {Object} opts Block options
+   * @param {number[]} opts.color HSV block color as a 3-element number array
+   * @param {string} opts.func For function/method calls, the function name
+   * @param {string} opts.expression Instead of specifying func, use this param
+   *   to specify an arbitrary javascript expression instead
+   * @param {number} opts.orderPrecedence For expressions, the minimum binding
+   *   strength of any operators in the expression. You can omit this, and the
+   *   code generator code will just wrap the expression in parens, see:
+   *   https://developers.google.com/blockly/guides/create-custom-blocks/operator-precedence
+   * @param {string} opts.name Block name, defaults to func.
+   * @param {string} opts.blockText Human-readable text to show on the block,
+   *   with params specified in curly braces, see determineInputs()
+   * @param {Object[]} opts.args List of block inputs, see determineInputs()
+   * @param {BlockValueType} opts.returnType Type of value returned by this
+   *   block, omit if you want a block with no output.
+   * @param {boolean} opts.methodCall Generate a method call. The blockText
+   *   should contain '{THIS}' in order to create an input for the instance
+   * @param {boolean} opts.eventBlock Generate an event block, which is just a
+   *   block without a previous statement connector.
+   * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
+   *   looks like a loop block but without previous or next statement connectors
+   */
+  return ({
+    color,
+    func,
+    expression,
+    orderPrecedence,
+    name,
+    blockText,
+    args,
+    returnType,
+    methodCall,
+    eventBlock,
+    eventLoopBlock,
+  }) => {
+    if (!func === !expression) {
+      throw new Error('Provide either func or expression, but not both');
+    }
+    if (expression && !name) {
+      throw new Error('Expression blocks require a name');
+    }
+    args = args || [];
+    const blockName = `${blocksModuleName}_${name || func}`;
+
+    blockly.Blocks[blockName] = {
+      helpUrl: '',
+      init: function () {
+        this.setHSV(...color);
+        const inputs = [...args];
+        if (methodCall) {
+          inputs.push({
+            name: 'THIS',
+            type: Blockly.BlockValueType.NONE,
+          });
+        }
+
+        interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+
+        this.setInputsInline(true);
+        if (returnType) {
+          this.setOutput(true, returnType);
+        } else if (eventLoopBlock) {
+          this.appendStatementInput('DO');
+        } else if (eventBlock) {
+          this.setNextStatement(true);
+          this.skipNextBlockGeneration = true;
+        } else {
+          this.setNextStatement(true);
+          this.setPreviousStatement(true);
+        }
+      },
+    };
+
+    generator[blockName] = function () {
+      const values = args.map(arg => {
+        if (arg.options) {
+          return this.getTitleValue(arg.name);
+        } else {
+          return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
+        }
+      });
+
+      let prefix = '';
+      if (methodCall) {
+        const object =
+          Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
+        prefix = `${object}.`;
+      }
+
+      if (eventLoopBlock || eventBlock) {
+        let handlerCode = '';
+        if (eventBlock) {
+          const nextBlock = this.nextConnection &&
+            this.nextConnection.targetBlock();
+          handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+          handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
+        } else if (eventLoopBlock) {
+          handlerCode = Blockly.JavaScript.statementToCode(this, 'DO');
+        }
+        values.push(`function () {\n${handlerCode}}`);
+      }
+
+      if (expression) {
+        if (returnType !== undefined) {
+          return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
+        } else {
+          return `${prefix}${expression}`;
+        }
+      }
+
+      if (returnType !== undefined) {
+        return [`${prefix}${func}(${values.join(', ')})`, ORDER_FUNCTION_CALL];
+      } else {
+        return `${prefix}${func}(${values.join(', ')});\n`;
+      }
+    };
+  };
+};

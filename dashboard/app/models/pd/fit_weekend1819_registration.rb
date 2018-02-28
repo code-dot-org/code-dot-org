@@ -18,6 +18,11 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
 
+  after_create :send_fit_weekend_confirmation_email
+  def send_fit_weekend_confirmation_email
+    Pd::FitWeekend1819RegistrationMailer.confirmation(self).deliver_now
+  end
+
   YES = 'Yes'.freeze
   NO = 'No'.freeze
   YES_OR_NO = [YES, NO].freeze
@@ -29,21 +34,22 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
         'None',
         'Vegetarian',
         'Vegan',
+        'Kosher',
         'Halal',
         'Gluten Free',
-        'Food Allergy (please list):',
+        'Food Allergy',
       ],
       liveFarAway: YES_OR_NO,
       addressState: get_all_states_with_dc.to_h.values,
       howTraveling: [
         'I will drive by myself',
-        'I will carpool with another FiT Weekend attendee',
+        'I will carpool with another FiT Weekend attendee (Please note who)',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',
       ],
       needHotel: YES_OR_NO,
-      needAda: [YES, NO, "Other (please explain):"],
+      needAda: YES_OR_NO,
       photoRelease: [YES],
       liabilityWaiver: [YES],
     }.freeze
@@ -99,6 +105,16 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
       ]
     end
 
+    if hash[:dietary_needs].try(:include?, 'Food Allergy')
+      requireds.concat [
+        :dietary_needs_details
+      ]
+    end
+
     return requireds
+  end
+
+  def accepted?
+    sanitize_form_data_hash.try(:[], :able_to_attend) == YES
   end
 end

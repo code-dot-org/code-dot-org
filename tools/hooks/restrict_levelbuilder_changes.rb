@@ -8,6 +8,8 @@ WHITELISTED_FILES = %w(
   dashboard/config/locales/scripts.en.yml
   dashboard/config/locales/courses.en.yml
   dashboard/config/locales/unplugged.en.yml
+  dashboard/config/locales/data.en.yml
+  dashboard/config/videos.csv
 ).map {|f| File.join(REPO_DIR, f)}.freeze
 ERROR_MESSAGE = "Levelbuilder branch should only commit files in levels directory and specific whitelisted files. See #{__FILE__} for details.".freeze
 

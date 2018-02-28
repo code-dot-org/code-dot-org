@@ -69,7 +69,7 @@ tr:
   try_k8intro: "İlk ve Orta Okula yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin (15-25 saat)"
   k8intro: "K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)"
   already_started: "Zaten başladınız mı? Buradan devam edin >> "
-  demos: 'Yönetici: Tüm Demolar'
+  demos: "Yönetici: Tüm Demolar"
   continue: 'Devam'
   prize: 'ödül'
   more_info: 'Daha fazla bilgi'
@@ -171,6 +171,7 @@ tr:
       email: 'E-posta adresi'
       submit: 'Gönder'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Geçersiz e-posta adresi ile kayıt olmuşsunuz gibi görünüyor. Parola kurtarma bağlantısı için support@code.org a e-posta gönderin.'
     change_form:
       title: 'Şifrenizi değiştirin'
@@ -217,7 +218,7 @@ tr:
       provider_managed_section: "Bu bölüm, bir başka sağlayıcı tarafından yönetilmektedir ve katılım sağlanamaz. Lütfen öğretmeninden seni %{provider} üzerinden eklemesini iste  ve bu bölümü yeniden senkronize et."
     mail:
       student_disassociated:
-        subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
+        subject: "Code.org bildirim: %{student_name} artık senin öğrencin değil."
   reports:
     error:
       access_denied: "Bu kişinin istatistiklerine erişemezsiniz"
@@ -349,7 +350,7 @@ tr:
     current_password_hint: '(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)'
     delete: 'Hesabını Sil'
     delete_text: "Aşağıdaki düğmeye tıklamak hesabınızı siler."
-    delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin hesaplarını silmez.'
+    delete_text_teacher_note: "Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin hesaplarını silmez."
     delete_confirm: 'Hesabınızı silmek istediğinize emin misiniz?'
     deleted_user: 'silinen kullanıcı'
     no_password_because_oauth: 'Şifre yok çünkü bir üçüncü taraf sağlayıcı ile giriş yaptınız.'
@@ -360,7 +361,7 @@ tr:
     create_personal_login_under_13_parent_email: 'Ebeveyn eposta adresi (şifreni kurtarmak için)'
     create_personal_login_info: 'Code.org hesabınızı öğretim yılı bitiminden sonra kullanmaya devam etmek istiyorsanız, altta kendi girişinizi yapın.'
     create_personal_login_terms: "Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}', target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
-    create_personal_login_email_note: Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız.
+    create_personal_login_email_note: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız."
     enter_new_login_info: 'Oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     enter_parent_email: "Ebeveyn ya da velinizin elektronik posta adresini girin (şifre kurtarmak için)"
@@ -699,7 +700,7 @@ tr:
     sign_out: 'Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a> çıkış yapabilirsiniz.'
   terms_interstitial:
     title: "Güncellenen Hizmet ve Gizlilik Politikası şartları"
-    intro_desc: 'Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016''dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio''daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik.'
+    intro_desc: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
     intro_instructions: "Kod Studio tüm son özelliklerine tam erişim sınıfında 13 yaşın altındaki öğrenciler için bu yeni şartları kabul gerekir.  13 yaşından küçük bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere okul parası için ebeveyn izni olduğundan emin olun istenecektir."
     tos: "Şartlar"
     privacy: "Gizlilik Politikası"
@@ -715,7 +716,7 @@ tr:
     message_with_suggestion: "Lütfen aşağıdaki bilgileri doğru olduğundan emin olun veya gerektiği gibi güncelleştirin."
     save: "Kaydet"
   race_interstitial:
-    title: 'Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki ilerlememizi izlememize yardımcı olun'
+    title: "Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki ilerlememizi izlememize yardımcı olun"
     message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
       - 
@@ -759,7 +760,7 @@ tr:
     delete: "Sil"
     import: "İçeri Aktar"
     share_link_import_bad_link_header: "Paylaşım bağlantısı tanınmıyor"
-    share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık. Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı kopyaladığından emin ol.'
+    share_link_import_bad_link_body: "Bu paylaşım bağlantısını içeri aktaramadık. Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı kopyaladığından emin ol."
     share_link_import_error_header: "Bir sorun oluştu."
     share_link_import_error_body: "Paylaşım bağlantısını içeri aktarırken bir sorun oluştu. Lütfen tekrar dene."
     exit: "Kursa dön"
@@ -865,8 +866,8 @@ tr:
     csd6_1: 'Bölüm 1: Donanım çıktısı'
     csd6_2: 'Bölüm 1: Donanım girdisi'
     csp1_1: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
-    csp1_2: Interneti icat etme
-    csp2_1: Karmaşık bilgileri kodlama ve sıkıştırma
+    csp1_2: 'Interneti icat etme'
+    csp2_1: 'Karmaşık bilgileri kodlama ve sıkıştırma'
     csp2_2: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
     csp3_1: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
     csp4_1: 'Bölüm 1: Büyük Verilerin Dünyası ve Şifreleme'

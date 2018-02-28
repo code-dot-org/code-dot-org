@@ -1,4 +1,4 @@
-import { SquareType, Direction } from './tiles';
+import { SquareType } from './tiles';
 import { randomValue } from '../utils';
 
 import Subtype from './subtype';
@@ -103,21 +103,5 @@ export default class Scrat extends Subtype {
         tileId++;
       }
     }
-  }
-
-  scheduleDance(victoryDance, timeAlloted, skin) {
-    const finishIcon = document.getElementById('finish');
-    if (finishIcon) {
-      finishIcon.setAttribute('visibility', 'hidden');
-    }
-
-    const numFrames = skin.celebratePegmanRow;
-    const timePerFrame = timeAlloted / numFrames;
-    const start = {x: this.maze_.pegmanX, y: this.maze_.pegmanY};
-
-    this.maze_.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
-      numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
-
-    this.studioApp_.playAudioOnWin();
   }
 }

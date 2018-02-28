@@ -95,7 +95,6 @@ describe('Circuit Playground Components', () => {
             'buttonL',
             'buttonR',
             'touchPad0',
-            'touchPad1',
             'touchPad2',
             'touchPad3',
             'touchPad6',
@@ -616,14 +615,14 @@ describe('Circuit Playground Components', () => {
     });
 
     it('destroys everything that createCircuitPlaygroundComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(18);
+      expect(Object.keys(components)).to.have.length(17);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
       components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(19);
+      expect(Object.keys(components)).to.have.length(18);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');

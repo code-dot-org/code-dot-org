@@ -6,7 +6,7 @@
   states_policy_change = "40"
 
   top_statistic_number = student_accounts_percent
-  top_statistic_phrase = "of US students have accounts on Code.org"
+  top_statistic_phrase = "of U.S. students have accounts on Code.org"
 
   statistics = [
     {
@@ -26,7 +26,7 @@
     },
     {
       number: states_policy_change,
-      phrase: "states changed policy to support computer science",
+      phrase: "U.S. states changed policy to support computer science",
       link: '/advocacy'
     },
   ]
@@ -35,10 +35,10 @@
 
 .statistics
   %a.nounderscorehover.col-20.stats-box{:href => CDO.studio_url('/courses')}
-    .jumbo.stats-number= "#{top_statistic_number}"
-    .stats-phrase= "#{top_statistic_phrase}"
+    .jumbo.stats-number= top_statistic_number
+    .stats-phrase= top_statistic_phrase
 
   - statistics.each do |statistic|
-    %a.nounderscorehover.col-20.col-mobile-48.stats-box{:href=> "#{statistic[:link]}"}
-      .jumbo.stats-number= "#{statistic[:number]}"
-      .stats-phrase= "#{statistic[:phrase]}"
+    %a.nounderscorehover.col-20.col-mobile-48.stats-box{:href=> statistic[:link]}
+      .jumbo.stats-number= statistic[:number]
+      .stats-phrase= statistic[:phrase]

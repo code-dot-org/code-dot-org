@@ -12,6 +12,8 @@ describe("DetailViewContents", () => {
   // have a fake server to handle calls and suppress warnings
   sinon.fakeServer.create();
 
+  let context;
+
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
       regionalPartner: 'partner',
@@ -44,14 +46,21 @@ describe("DetailViewContents", () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'facilitator',
-      reload: () => {}
+      viewType: 'facilitator'
+    };
+
+    // No-op router context
+    context = {
+      router: {
+        push() {}
+      }
     };
 
     return mount(
       <DetailViewContents
         {..._.merge(defaultProps, overrides)}
-      />
+      />,
+      {context}
     );
   };
 
@@ -80,7 +89,7 @@ describe("DetailViewContents", () => {
   ];
 
   for (const applicationData of expectedTestData) {
-    const responseCount = applicationData.type === "Teacher" ? 3 : 4;
+    const responseCount = applicationData.type === "Teacher" ? 4 : 5;
 
     it(`Renders full contents for ${applicationData.type} initially`, () => {
       const detailView = mountDetailView(applicationData.type);
@@ -116,6 +125,30 @@ describe("DetailViewContents", () => {
         const workshopAdminDetailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
         expect(workshopAdminDetailView.find('#TopSection DetailViewResponse')).to.have.length(responseCount + 1);
         expect(workshopAdminDetailView).to.containMatchingElement(regionalPartnerPanel);
+      });
+    });
+
+    describe("Admin edit dropdown", () => {
+      it("Is not visible to regional partners", () => {
+        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: false});
+        expect(detailView.find("#admin-edit")).to.have.length(0);
+      });
+
+      it("Is visible to admins", () => {
+        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        expect(detailView.find("#admin-edit")).to.have.length(2);
+      });
+
+      it("Redirects to edit page", () => {
+        const detailView = mountDetailView(applicationData.type, {isWorkshopAdmin: true});
+        const mockRouter = sinon.mock(context.router);
+
+        detailView.find("#admin-edit").first().simulate("click");
+        const adminEditMenuitem = detailView.find(".dropdown.open a").findWhere(a => a.text() === "(Admin) Edit Form Data");
+
+        mockRouter.expects("push").withExactArgs("/1/edit");
+        adminEditMenuitem.simulate("click");
+        mockRouter.verify();
       });
     });
 

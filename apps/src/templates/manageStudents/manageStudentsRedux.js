@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
@@ -11,6 +12,8 @@ const SET_SECRET_WORDS = 'manageStudents/SET_SECRET_WORDS';
 const EDIT_STUDENT = 'manageStudents/EDIT_STUDENT';
 const START_SAVING_STUDENT = 'manageStudents/START_SAVING_STUDENT';
 const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
+const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
+const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -23,6 +26,8 @@ export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, s
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
+export const addStudentSuccess = (studentData) => ({ type: ADD_STUDENT_SUCCESS, studentData });
+export const addStudentFailure = (error, studentId) => ({ type: ADD_STUDENT_FAILURE, error, studentId });
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -37,6 +42,41 @@ export const saveStudent = (studentId) => {
   };
 };
 
+export const addStudent = (studentId) => {
+  return (dispatch, getState) => {
+    const state = getState().manageStudents;
+    dispatch(startSavingStudent(studentId));
+    addStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
+      if (error) {
+        dispatch(addStudentFailure(error, studentId));
+        console.error(error);
+      } else {
+        dispatch(addStudentSuccess(convertAddedStudent(data)));
+      }
+    });
+  };
+};
+
+export const ADD_STATUS = {
+  "success": "success",
+  "fail": "fail",
+};
+
+// This doesn't get used to make a server call, but does
+// need to be unique from the rest of the ids.
+const addRowId = 0;
+
+const blankAddRow = {
+  id: addRowId,
+  name: '',
+  age: '',
+  gender: '',
+  username: '',
+  loginType: '',
+  isEditing: true,
+  isAddRow: true,
+};
+
 const initialState = {
   loginType: '',
   studentData: {},
@@ -46,9 +86,28 @@ const initialState = {
 
 export default function manageStudents(state=initialState, action) {
   if (action.type === SET_LOGIN_TYPE) {
+    let addRowInitialization = {};
+    if (action.loginType === SectionLoginType.word || action.loginType === SectionLoginType.picture) {
+      addRowInitialization = {
+        studentData: {
+          [addRowId]: {
+            ...blankAddRow,
+            loginType: action.loginType,
+          }
+        },
+        editingData: {
+          [addRowId]: {
+            ...blankAddRow,
+            loginType: action.loginType,
+
+          }
+        }
+      };
+    }
     return {
       ...state,
       loginType: action.loginType,
+      ...addRowInitialization,
     };
   }
   if (action.type === SET_SECTION_ID) {
@@ -60,7 +119,10 @@ export default function manageStudents(state=initialState, action) {
   if (action.type === SET_STUDENTS) {
     return {
       ...state,
-      studentData: action.studentData,
+      studentData: {
+        ...state.studentData,
+        ...action.studentData
+      },
     };
   }
   if (action.type === START_EDITING_STUDENT) {
@@ -120,6 +182,43 @@ export default function manageStudents(state=initialState, action) {
         }
       },
       editingData: _.omit(state.editingData, action.studentId),
+    };
+  }
+  if (action.type === ADD_STUDENT_FAILURE) {
+    return {
+      ...state,
+      studentData: {
+        ...state.studentData,
+        [action.studentId]: {
+          ...state.studentData[action.studentId],
+          isSaving: false,
+        }
+      },
+      addStatus: ADD_STATUS.fail
+    };
+  }
+  if (action.type === ADD_STUDENT_SUCCESS) {
+    return {
+      ...state,
+      studentData: {
+        [action.studentData.id]: {
+          ...action.studentData,
+          loginType: state.loginType
+        },
+        ...state.studentData,
+        [addRowId]: {
+          ...blankAddRow,
+          loginType: state.loginType
+        },
+      },
+      editingData: {
+        ...state.editingData,
+        [addRowId]: {
+          ...blankAddRow,
+          loginType: state.loginType
+        }
+      },
+      addStatus: ADD_STATUS.success,
     };
   }
   if (action.type === EDIT_STUDENT) {
@@ -196,6 +295,25 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
   return studentLookup;
 };
 
+// Converts added student from /v2/sections/sectionid/students to a key/value
+// object for the redux store
+export const convertAddedStudent = (studentData, loginType, sectionId) => {
+  let student = studentData[0];
+  const studentObject = {
+    id: student.id,
+    name: student.name,
+    username: student.username,
+    age: student.age,
+    gender: student.gender,
+    secretWords: student.secret_words,
+    secretPicturePath: student.secret_picture_path,
+    loginType: loginType,
+    sectionId: sectionId,
+    isEditing: false,
+  };
+  return studentObject;
+};
+
 // Converts key/value id/student pairs to an array of student objects for the
 // component to display
 // TODO(caleybrock): memoize this - sections could be a few thousand students
@@ -216,6 +334,26 @@ const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(dataToUpdate),
+  }).done((data) => {
+    onComplete(null, data);
+  }).fail((jqXhr, status) => {
+    onComplete(status, null);
+  });
+};
+
+// Make a post request to add a student.
+const addStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
+  const studentToAdd = [{
+    editing: true,
+    name: updatedStudentInfo.name,
+    age: updatedStudentInfo.age,
+    gender: updatedStudentInfo.gender,
+  }];
+  $.ajax({
+    url: `/v2/sections/${sectionId}/students`,
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(studentToAdd),
   }).done((data) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {

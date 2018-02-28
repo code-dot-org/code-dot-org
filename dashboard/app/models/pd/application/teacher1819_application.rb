@@ -506,10 +506,16 @@ module Pd::Application
       response_scores = response_scores_hash
       scored_questions =
         if course == 'csd'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD
+          CRITERIA_SCORE_QUESTIONS_CSD.dup
         elsif course == 'csp'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP
+          CRITERIA_SCORE_QUESTIONS_CSP.dup
         end
+
+      if response_scores[:able_to_attend_single] && !response_scores[:able_to_attend_multiple]
+        scored_questions.delete(:able_to_attend_multiple)
+      elsif response_scores[:able_to_attend_multiple] && !response_scores[:able_to_attend_single]
+        scored_questions.delete(:able_to_attend_single)
+      end
 
       responses = scored_questions.map do |key|
         response_scores[key]
@@ -559,7 +565,7 @@ module Pd::Application
       }
 
       if responses[:able_to_attend_single]
-        scores[:able_to_attend_single] = yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
+        scores[:able_to_attend_single] = able_attend_single_to_yes_no_score(responses[:able_to_attend_single])
       elsif responses[:able_to_attend_multiple]
         scores[:able_to_attend_multiple] = able_attend_multiple_to_yes_no_score(responses[:able_to_attend_multiple])
       end
@@ -756,15 +762,17 @@ module Pd::Application
 
     def get_first_selected_workshop
       hash = sanitize_form_data_hash
+      return nil if hash[:teachercon]
+
       workshop_ids = hash[:regional_partner_workshop_ids]
       return nil unless workshop_ids.try(:any?)
 
-      return Pd::Workshop.find(workshop_ids.first) if workshop_ids.length == 1
+      return Pd::Workshop.find_by(id: workshop_ids.first) if workshop_ids.length == 1
 
       # able_to_attend_multiple responses are in the format:
       # "${friendly_date_range} in ${location} hosted by ${regionalPartnerName}"
       # Map back to actual workshops by reconstructing the friendly_date_range
-      workshops = Pd::Workshop.find(workshop_ids)
+      workshops = Pd::Workshop.where(id: workshop_ids)
       hash[:able_to_attend_multiple].each do |response|
         selected_workshop = workshops.find {|w| response.start_with?(w.friendly_date_range)}
         return selected_workshop if selected_workshop
@@ -792,6 +800,16 @@ module Pd::Application
         NO
       elsif response && !response.include?(TEXT_FIELDS[:no_explain])
         YES
+      else
+        nil
+      end
+    end
+
+    def able_attend_single_to_yes_no_score(response)
+      if response == TEXT_FIELDS[:able_to_attend_single]
+        YES
+      elsif response && !response.include?(TEXT_FIELDS[:unable_to_attend])
+        NO
       else
         nil
       end
