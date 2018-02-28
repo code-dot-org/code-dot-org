@@ -10,7 +10,10 @@
 - if @workshop.local_summer?
   %p
     Thanks for enrolling in
-    = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} 5-day Summer workshop on the Code.org CS Principles curriculum."
+    = "#{@workshop.organizer.name}’#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
+    5-day Summer workshop on the Code.org
+    = @workshop.course
+    curriculum.
 - else
   %p
     Thanks for enrolling in Code.org’s

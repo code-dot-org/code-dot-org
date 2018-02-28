@@ -102,4 +102,32 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     refute response['census_submission_id'].nil?, "census_submission_id expected in response: #{response}"
   end
+
+  test 'utf8mb4 characters are stripped out' do
+    post :create,
+      params: {
+        form_version: 'CensusYourSchool2017v4',
+        nces_school_s: '60000113717',
+        school_year: 2017,
+        submitter_email_address: "fake\u{1F600}@email.address",
+        submitter_name: "Somebody\u{1F600}",
+        submitter_role: 'OTHER',
+        how_many_do_hoc: 'NONE',
+        how_many_after_school: 'NONE',
+        how_many_10_hours: 'NONE',
+        how_many_20_hours: 'NONE',
+        topic_other_description: "\u{1F600}description\u{1F600}",
+        tell_us_more: "\u{1F600}more\u{1F600}",
+      }
+    assert_response 201, @response.body.to_s
+    response = JSON.parse(@response.body)
+    submission_id = response['census_submission_id']
+    refute submission_id.nil?, "census_submission_id expected in response: #{response}"
+    submission = Census::CensusSubmission.find(submission_id)
+    refute submission.nil?
+    assert_equal "fake@email.address", submission.submitter_email_address
+    assert_equal "Somebody", submission.submitter_name
+    assert_equal "description", submission.topic_other_description
+    assert_equal "more", submission.tell_us_more
+  end
 end

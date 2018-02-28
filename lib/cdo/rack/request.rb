@@ -91,7 +91,7 @@ module Cdo
       )
 
       encryptor = ActiveSupport::MessageEncryptor.new(
-        key_generator.generate_key('encrypted cookie'),
+        key_generator.generate_key('encrypted cookie')[0, ActiveSupport::MessageEncryptor.key_len],
         key_generator.generate_key('signed encrypted cookie')
       )
 
