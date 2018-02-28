@@ -547,12 +547,15 @@ class Visualization {
       // Need to subtract 90 to accommodate difference in canvas vs. Turtle direction
       this.ctxScratch.rotate(this.degreesToRadians_(this.heading - 90));
 
+      const imgSourceX = img.width/2;
+      const imgSourceY = 0;
+
       if (img.width !== 0) {
         this.ctxScratch.drawImage(img,
           // Start point for clipping image
-          0, 0,
+          imgSourceX, imgSourceY,
           // clip region size
-          distance + img.height / 2, img.height,
+          distance, img.height,
           // draw location relative to the ctx.translate point pre-rotation
           -img.height / 4, -img.height / 2,
           distance+img.height / 2, img.height);
