@@ -117,8 +117,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def update
     adjust_facilitators
 
-    # Add regional partner permission here when those are added
-    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
       params.require(:pd_workshop).delete(:regional_partner_id)
     end
 
@@ -176,7 +175,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     authenticate_user!
 
     unless current_user.admin? || current_user.workshop_admin? ||
-      current_user.workshop_organizer? || current_user.facilitator?
+      current_user.workshop_organizer? || current_user.program_manager? || current_user.facilitator?
       raise CanCan::AccessDenied.new
     end
 

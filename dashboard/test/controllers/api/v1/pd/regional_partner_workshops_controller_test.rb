@@ -11,14 +11,20 @@ module Api::V1::Pd
       Pd::Workshop.any_instance.stubs(:process_location)
       first_session_time = Time.new(2018, 3, 15, 9)
 
-      @partner_organizer = create :workshop_organizer, :as_regional_partner_program_manager
+      @program_manager = create :program_manager
+      @partner_organizer = create :workshop_organizer, regional_partners: [@program_manager.regional_partners.first]
       @non_partner_organizer = create :workshop_organizer
 
       csd_options = {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP}
       csp_options = {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP}
 
-      @partner_csd_workshop, @partner_csp_workshop, @non_partner_csd_workshop, @non_partner_csp_workshop =
-        [@partner_organizer, @non_partner_organizer].map do |organizer|
+      @program_manager_csd_workshop,
+      @program_manager_csp_workshop,
+      @partner_organizer_csd_workshop,
+      @partner_organizer_csp_workshop,
+      @non_partner_organizer_csd_workshop,
+      @non_partner_organizer_csp_workshop =
+        [@program_manager, @partner_organizer, @non_partner_organizer].map do |organizer|
           [csd_options, csp_options].map do |course_options|
             create :pd_workshop, organizer: organizer, num_sessions: 5, sessions_from: first_session_time,
               location_address: 'Code.org, Seattle, WA', **course_options
@@ -26,7 +32,7 @@ module Api::V1::Pd
         end.flatten
 
       @school = create :school, zip: '99999'
-      @regional_partner = @partner_organizer.regional_partners.first
+      @regional_partner = @program_manager.regional_partners.first
       @regional_partner.mappings << Pd::RegionalPartnerMapping.create!(regional_partner: @regional_partner, zip_code: '99999')
 
       @regional_partner_teachercon = create :regional_partner, group: 3, name: REGIONAL_PARTNER_TC_MAPPING.keys.first
@@ -51,10 +57,12 @@ module Api::V1::Pd
       get :index
       assert_response :success
 
-      assert workshop_in_index_results @partner_csd_workshop
-      assert workshop_in_index_results @partner_csp_workshop
-      refute workshop_in_index_results @non_partner_csd_workshop
-      refute workshop_in_index_results @non_partner_csp_workshop
+      assert workshop_in_index_results @program_manager_csd_workshop
+      assert workshop_in_index_results @program_manager_csp_workshop
+      assert workshop_in_index_results @partner_organizer_csd_workshop
+      assert workshop_in_index_results @partner_organizer_csp_workshop
+      refute workshop_in_index_results @non_partner_organizer_csd_workshop
+      refute workshop_in_index_results @non_partner_organizer_csp_workshop
     end
 
     test 'index filters on course and subject' do
@@ -62,10 +70,12 @@ module Api::V1::Pd
       get :index, params: {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP}
       assert_response :success
 
-      assert workshop_in_index_results @partner_csd_workshop
-      refute workshop_in_index_results @partner_csp_workshop
-      refute workshop_in_index_results @non_partner_csd_workshop
-      refute workshop_in_index_results @non_partner_csp_workshop
+      assert workshop_in_index_results @program_manager_csd_workshop
+      refute workshop_in_index_results @program_manager_csp_workshop
+      assert workshop_in_index_results @partner_organizer_csd_workshop
+      refute workshop_in_index_results @partner_organizer_csp_workshop
+      refute workshop_in_index_results @non_partner_organizer_csd_workshop
+      refute workshop_in_index_results @non_partner_organizer_csp_workshop
     end
 
     test 'index with no match returns empty set' do
@@ -176,11 +186,19 @@ module Api::V1::Pd
         name: @regional_partner.name,
         group: @regional_partner.group,
         workshops: [{
-          id: @partner_csd_workshop.id,
+          id: @program_manager_csd_workshop.id,
           dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
         }, {
-          id: @partner_csp_workshop.id,
+          id: @program_manager_csp_workshop.id,
+          dates: 'March 15-19, 2018',
+          location: 'Code.org, Seattle, WA'
+        }, {
+          id: @partner_organizer_csd_workshop.id,
+          dates: 'March 15-19, 2018',
+          location: 'Code.org, Seattle, WA'
+        }, {
+          id: @partner_organizer_csp_workshop.id,
           dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
         }],
@@ -194,7 +212,11 @@ module Api::V1::Pd
         name: @regional_partner.name,
         group: @regional_partner.group,
         workshops: [{
-          id: @partner_csd_workshop.id,
+          id: @program_manager_csd_workshop.id,
+          dates: 'March 15-19, 2018',
+          location: 'Code.org, Seattle, WA'
+        }, {
+          id: @partner_organizer_csd_workshop.id,
           dates: 'March 15-19, 2018',
           location: 'Code.org, Seattle, WA'
         }],

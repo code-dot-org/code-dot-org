@@ -10,6 +10,7 @@ class LevelTest < ActiveSupport::TestCase
     @custom_turtle_data = {user_id: 1}
     @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
+    @gamelab_data = {game_id: 48, name: 'some gamelab level', level_num: 'custom', type: 'Gamelab'}
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -646,5 +647,32 @@ EOS
     # new actual entry
     assert_equal 65533, level.audit_log.length
     assert_equal 9351, JSON.parse(level.audit_log).length
+  end
+
+  test "can validate XML field with valid XML" do
+    level = Level.new(@turtle_data.merge({name: 'xml validation level'}))
+
+    level.start_blocks = '<xml>blah blah</xml>'
+
+    assert level.valid?
+  end
+
+  test "can save non-XML in a non-XML field" do
+    Level.find_by_name(@gamelab_data[:name]).try(:destroy)
+    level = Level.new(@gamelab_data)
+
+    level.start_blocks = 'var i = 1;'
+
+    assert level.valid?
+  end
+
+  test "cannot save non-XML in an XML field" do
+    level = Level.new(@turtle_data.merge({name: 'xml validation level'}))
+
+    level.start_blocks = 'var i = 1'
+
+    assert_raises(Nokogiri::XML::SyntaxError) do
+      level.valid?
+    end
   end
 end
