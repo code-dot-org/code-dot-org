@@ -42,7 +42,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 2;
+        return Maze.controller.subtype.nectars_.length === 2;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -58,7 +58,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 3;
+        return Maze.controller.subtype.nectars_.length === 3;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -75,8 +75,8 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 1 &&
-          Maze.executionInfo.terminationValue() === TerminationValue.INSUFFICIENT_NECTAR;
+        return Maze.controller.subtype.nectars_.length === 1 &&
+          Maze.controller.executionInfo.terminationValue() === TerminationValue.INSUFFICIENT_NECTAR;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -90,8 +90,8 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 0 &&
-          Maze.executionInfo.terminationValue() === TerminationValue.NOT_AT_FLOWER;
+        return Maze.controller.subtype.nectars_.length === 0 &&
+          Maze.controller.executionInfo.terminationValue() === TerminationValue.NOT_AT_FLOWER;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_nectar',
@@ -108,7 +108,7 @@ module.exports = {
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 0;
+        return Maze.controller.subtype.nectars_.length === 0;
       },
       // turn left, move forward
       xml: '<xml><block type="maze_turn"><title name="DIR">turnLeft</title><next><block type="maze_moveForward"></block></next></block></xml>'
@@ -120,8 +120,8 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 1 &&
-          Maze.executionInfo.terminationValue() === TerminationValue.FLOWER_EMPTY;
+        return Maze.controller.subtype.nectars_.length === 1 &&
+          Maze.controller.executionInfo.terminationValue() === TerminationValue.FLOWER_EMPTY;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
