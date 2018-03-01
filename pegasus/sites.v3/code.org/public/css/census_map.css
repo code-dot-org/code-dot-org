@@ -68,75 +68,9 @@
 }
 
 .green {
-  background: #66DC57;
+  background: #00FF00;
 }
 
 .blue {
-  background: #989CF8;
-}
-
-.yellow {
-  background: #FFFDA6;
-}
-
-.white {
-  background: #FFFFFF;
-}
-
-.census-info-window h4 {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  text-align: center;
-}
-
-.census-info-window hr {
-  border-color: blue;
-  background-color: blue;
-  margin: 2px;
-}
-
-.census-info-window .census-message {
-  text-align: center;
-}
-
-.census-info-window .button-container {
-  max-width: 280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.census-info-window a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.census-info-window .button-link-div {
-  flex: 1 0;
-  vertical-align: middle;
-  margin: 5px;
-}
-
-.census-info-window .button {
-  vertical-align: middle;
-  word-wrap: break-word;
-  height: 100%;
-  color: white;
-  background-color:orange;
-  border-color: orange;
-  border-style: solid;
-  border-width: 1px;
-}
-
-.census-info-window .button:hover {
-  color: orange;
-  background-color: white;
-}
-
-.census-info-window .button-text {
-  display: inline-block;
-  padding: 8px;
-  text-align: center;
-  vertical-align: middle;
+  background: #6699FF;
 }
