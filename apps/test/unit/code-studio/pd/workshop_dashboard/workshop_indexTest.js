@@ -45,6 +45,14 @@ describe("WorkshopIndex", () => {
         ]
       ],
       [
+        "program_manager",
+        [
+          "New Workshop",
+          "Attendance Reports",
+          "Filter View"
+        ]
+      ],
+      [
         "workshop_admin",
         [
           "New Workshop",
