@@ -129,7 +129,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       :need_hotel,
       :photo_release,
       :liability_waiver,
-      :agree_share_contact,
     ].freeze
   end
 
@@ -195,6 +194,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     if hash[:dietary_needs].try(:include?, 'Food Allergy')
       requireds.concat [
         :dietary_needs_details
+      ]
+    end
+
+    if pd_application
+      requireds.concat [
+        :agreeShareContact
       ]
     end
 

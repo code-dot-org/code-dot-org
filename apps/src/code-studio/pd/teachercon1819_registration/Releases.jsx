@@ -10,8 +10,7 @@ import Teachercon1819FormComponent from './Teachercon1819FormComponent';
 export default class Releases extends Teachercon1819FormComponent {
   static associatedFields = [
     'photoRelease',
-    'liabilityWaiver',
-    'agreeShareContact',
+    'liabilityWaiver'
   ];
 
   static labels = {
@@ -19,6 +18,12 @@ export default class Releases extends Teachercon1819FormComponent {
     liabilityWaiver: "I agree to the conditions in the liability waiver.",
     agreeShareContact: "By submitting this application, I agree to share my contact information and registration with Code.org's Regional Partners.",
   };
+
+  static getDynamicallyRequiredFields(data) {
+    if (data.applicationType !== 'Partner') {
+      return ['agreeShareContact'];
+    }
+  }
 
   render() {
     return (
