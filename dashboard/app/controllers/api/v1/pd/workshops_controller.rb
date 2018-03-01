@@ -119,6 +119,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
     # The below user types have permission to set the regional partner. CSF Facilitators
     # can initially set the regional partner, but cannot edit it once it is set.
+    # Because of that, we can't really do this through the workshop_params
     unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) ||
       current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
       current_user.permission?(UserPermission::WORKSHOP_ADMIN)
