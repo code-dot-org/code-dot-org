@@ -8,11 +8,12 @@ export const TerminationValue = {
 };
 
 export default class PlanterHandler extends ResultsHandler {
-  /**
-   * @override
-   */
-  setEventHandlers() {
-    this.maze_.subtype.setPlantInNonSoilHandler(() => {
+  constructor(maze, config) {
+    super(maze, config);
+
+    // Initialize subtype-specific event listeners
+
+    this.maze_.subtype.on('plantInNonSoil', () => {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.PLANT_IN_NON_SOIL);
     });
   }
