@@ -117,11 +117,14 @@ class ContactRollups
     # on tables we are reading from during what can be multi-minute operations
     DASHBOARD_REPORTING_DB_READER.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     ActiveRecord::Base.connection.execute "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
+=begin
     create_destination_table
     insert_from_pegasus_forms
     insert_from_dashboard_contacts
     insert_from_dashboard_pd_enrollments
+=end
     insert_from_dashboard_census_submissions
+=begin
     update_unsubscribe_info
     update_roles
     update_grades_taught
@@ -144,6 +147,7 @@ class ContactRollups
 
     # Add contacts to the Teacher role based on form responses
     update_teachers_from_forms
+=end
     update_teachers_from_census_submissions
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
@@ -311,6 +315,11 @@ class ContactRollups
     CASE LOCATE(values(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
       WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''),values(forms_submitted)),255)
       ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END,
+    roles =
+    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
+      ELSE #{DEST_TABLE_NAME}.roles
     END"
 
     log_completion(start)
