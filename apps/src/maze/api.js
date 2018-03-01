@@ -90,7 +90,7 @@ var move = function (direction, id) {
   if (Maze.controller.subtype.isWordSearch()) {
     Maze.controller.subtype.markTileVisited(Maze.controller.pegmanY, Maze.controller.pegmanX, false);
   }
-  if (Maze.controller.shouldCheckSuccessOnMove()) {
+  if (Maze.shouldCheckSuccessOnMove()) {
     Maze.checkSuccess();
   }
 };
