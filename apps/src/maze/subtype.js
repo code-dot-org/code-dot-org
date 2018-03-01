@@ -38,19 +38,6 @@ export default class Subtype {
   }
 
   /**
-   * Did the user successfully complete this level?
-   * @returns {Boolean} success
-   */
-  succeeded() {
-    if (this.finish) {
-      return (
-        this.maze_.pegmanX === this.finish.x &&
-        this.maze_.pegmanY === this.finish.y
-      );
-    }
-  }
-
-  /**
    * @param {Number} row
    * @param {Number} col
    * @returns {Number} val
@@ -106,63 +93,8 @@ export default class Subtype {
     this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt, svg);
   }
 
-  shouldCheckSuccessOnMove() {
-    return true;
-  }
-
   reset() {
     // noop; overridable
-  }
-
-  hasMessage(testResults) {
-    return false;
-  }
-
-  /**
-   * Get any app-specific message, based on the termination value, or return
-   * null if none applies.
-   * @param {Number} terminationValue - from Maze.executionInfo
-   * @returns {(String|null)} message
-   */
-  getMessage(terminationValue) {
-    return null;
-  }
-
-  /**
-   * Get the test results based on the termination value.  If there is no
-   * app-specific failure, this returns StudioApp.getTestResults().
-   * @param {Number} terminationValue - from Maze.executionInfo
-   * @returns {Number} testResult
-   */
-  getTestResults(terminationValue) {
-    return this.maze_.getTestResults(false);
-  }
-
-  /**
-   * Set the termination results to something app-specific, so that getMessage
-   * and getTestResults can return custom values based on the specifc way in
-   * which we terminated
-   * @modifies Maze.executionInfo.terminationValue
-   */
-  terminateWithAppSpecificValue() {
-    // noop; overridable
-  }
-
-  /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
-   * @see terminateWithAppSpecificValue
-   */
-  onExecutionFinish() {
-    const executionInfo = this.maze_.executionInfo;
-    if (executionInfo.isTerminated()) {
-      return;
-    }
-    if (this.succeeded()) {
-      return;
-    }
-
-    this.terminateWithAppSpecificValue();
   }
 
   isFarmer() {
@@ -182,18 +114,6 @@ export default class Subtype {
   }
 
   isBee() {
-    return false;
-  }
-
-  /**
-   * Used by StudioApp.displayFeedback to allow subtypes to conditionally
-   * prevent the feedback dialog from showing up and the page from automatically
-   * advancing to the next level.
-   *
-   * @param {Number} feedbackType
-   * @return {boolean}
-   */
-  shouldPreventFeedbackDialog(feedbackType) {
     return false;
   }
 
