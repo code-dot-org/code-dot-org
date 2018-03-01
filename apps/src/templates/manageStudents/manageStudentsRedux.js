@@ -391,13 +391,14 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       id: student.id,
       name: student.name,
       username: student.username,
-      age: student.age,
-      gender: student.gender,
+      age: student.age || '',
+      gender: student.gender || '',
       secretWords: student.secret_words,
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
       isEditing: false,
+      isSaving: false,
       rowType: RowType.STUDENT,
     };
   }
