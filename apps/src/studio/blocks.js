@@ -203,7 +203,8 @@ exports.install = function (blockly, blockInstallOptions) {
             .appendTitle(spriteNumberTextDropdown(msg.ifSpriteN), 'SPRITE');
         }
       } else {
-        block.appendDummyInput();
+        block.appendDummyInput()
+          .appendTitle(msg.ifSprite());
       }
     } else {
       block
