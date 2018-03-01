@@ -339,7 +339,7 @@ export function addBlankAnimation() {
         version: null,
         loadedFromSource: true,
         saved: false,
-        blob: null,
+        blob: new Blob(),
         dataURI: null,
         hasNewVersionThisSession: false
       }));
