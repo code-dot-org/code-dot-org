@@ -359,6 +359,15 @@ export default class WorkshopForm extends React.Component {
   }
 
   renderRegionalPartnerSelect() {
+    const editDisabled = this.props.readOnly ||
+    (
+      !this.permission.isWorkshopAdmin && //Enabled for these permissions
+      !this.permission.isOrganizer &&
+      !this.permission.isProgramManager &&
+      !this.permission.isPartner &&
+      !(this.permission.isCsfFacilitator && !this.props.workshop) //Enabled  for CSF facilitators when they are creating a new workshop
+    );
+
     return (
       <FormGroup>
         <ControlLabel>
@@ -371,7 +380,7 @@ export default class WorkshopForm extends React.Component {
           style={this.getInputStyle()}
           value={this.state.regional_partner_id || ''}
           // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
-          disabled={this.props.readOnly || (!this.permission.isWorkshopAdmin && !this.permission.isOrganizer && !this.permission.isProgramManager && !this.permission.isPartner && !this.permission.isCsfFacilitator)}
+          disabled={editDisabled}
         >
           <option value="">None</option>
           {
