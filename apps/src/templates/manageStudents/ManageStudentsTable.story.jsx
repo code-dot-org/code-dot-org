@@ -2,7 +2,7 @@ import React from 'react';
 import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {combineReducers, createStore} from 'redux';
-import manageStudents from './manageStudentsRedux';
+import manageStudents, {RowType} from './manageStudentsRedux';
 import {Provider} from 'react-redux';
 
 const initialState = {
@@ -29,6 +29,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -43,6 +44,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -57,6 +59,7 @@ const passwordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -74,6 +77,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -88,6 +92,7 @@ const wordAccountData = [
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -101,6 +106,7 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -118,6 +124,7 @@ const pictureAccountData = [
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -132,6 +139,7 @@ const pictureAccountData = [
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -146,6 +154,7 @@ const pictureAccountData = [
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
     isEditing: false,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -162,6 +171,7 @@ const googleData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -175,6 +185,7 @@ const googleData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -191,6 +202,7 @@ const cleverData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -204,6 +216,7 @@ const cleverData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -219,6 +232,7 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={passwordAccountData}
+              editingData={{}}
               id={53}
               loginType={SectionLoginType.email}
             />
@@ -232,6 +246,7 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={wordAccountData}
+              editingData={{}}
               id={53}
               loginType={SectionLoginType.word}
             />
@@ -245,6 +260,7 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={pictureAccountData}
+              editingData={{}}
               id={53}
               loginType={SectionLoginType.picture}
             />
@@ -258,6 +274,7 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={googleData}
+              editingData={{}}
               id={53}
               loginType={SectionLoginType.google_classroom}
             />
@@ -271,6 +288,7 @@ export default storybook => {
           <Provider store={store}>
             <UnconnectedManageStudentsTable
               studentData={cleverData}
+              editingData={{}}
               id={53}
               loginType={SectionLoginType.clever}
             />

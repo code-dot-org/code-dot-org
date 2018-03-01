@@ -100,7 +100,6 @@ class SchoolInfo < ActiveRecord::Base
       original[:school_name] = school_name
       original[:full_address] = full_address
 
-      school = School.find(school_id) if school.nil?
       self.country = 'US' # Everything in SCHOOLS is a US school
       self.school_type = school.school_type
       self.state = school.state
@@ -132,12 +131,8 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_without_country
   validate :validate_zip
 
-  def complete?
-    validation_type_original = validation_type
-    self.validation_type = VALIDATION_FULL
-    return_val = valid?
-    self.validation_type = validation_type_original
-    return_val
+  def usa?
+    ['US', 'USA', 'United States'].include? country
   end
 
   def should_validate?
@@ -166,7 +161,7 @@ class SchoolInfo < ActiveRecord::Base
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
     return unless country && should_validate?
-    country == 'US' ? validate_us : validate_non_us
+    usa? ? validate_us : validate_non_us
   end
 
   def validate_non_us

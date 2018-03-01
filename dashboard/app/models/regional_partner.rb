@@ -18,6 +18,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  deleted_at         :datetime
+#  properties         :text(65535)
 #
 # Indexes
 #
@@ -36,6 +37,13 @@ class RegionalPartner < ActiveRecord::Base
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :regional_partner_program_managers
   has_many :mappings, -> {order :state, :zip_code}, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
+
+  include SerializedProperties
+
+  serialized_attrs %w(
+    cohort_capacity_csd
+    cohort_capacity_csp
+  )
 
   # Upcoming and not ended
   def future_pd_workshops_organized

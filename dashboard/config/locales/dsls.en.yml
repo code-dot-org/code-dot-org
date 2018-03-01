@@ -8075,6 +8075,15 @@ en:
         The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
         The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
         What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseE_prediction_artistFunction1_2018:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
       courseF_multi_artist_for10_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
