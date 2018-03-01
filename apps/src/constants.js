@@ -96,6 +96,9 @@ exports.TestResults = {
   // Contained level result. Not validated, but should be treated as a success
   CONTAINED_LEVEL_RESULT: 101,
 
+  // The level was solved with fewer blocks than the recommended number of blocks.
+  BETTER_THAN_IDEAL: 102,
+
   SUBMITTED_RESULT: 1000,
   LOCKED_RESULT: 1001,
   REVIEW_REJECTED_RESULT: 1500,

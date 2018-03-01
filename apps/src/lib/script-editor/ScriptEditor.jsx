@@ -48,6 +48,7 @@ const ScriptEditor = React.createClass({
     stageExtrasAvailable: PropTypes.bool,
     stageLevelData: PropTypes.string,
     hasVerifiedResources: PropTypes.bool,
+    hasLessonPlan: PropTypes.bool,
     announcements: PropTypes.arrayOf(announcementShape),
   },
 
@@ -192,6 +193,19 @@ const ScriptEditor = React.createClass({
           <p>
             Check if this course has resources for verified teachers, and we
             want to notify non-verified teachers that this is the case.
+          </p>
+        </label>
+        <label>
+          Lesson Plan
+          <input
+            name="has_lesson_plan"
+            type="checkbox"
+            defaultChecked={this.props.hasLessonPlan}
+            style={styles.checkbox}
+          />
+          <p>
+            Check if this course has lesson plans (on Curriculum Builder or in
+            PDF form) that we should provide links to.
           </p>
         </label>
         <label>

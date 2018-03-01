@@ -5,11 +5,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @organizer = create(:workshop_organizer)
+    @organizer = create(:program_manager)
     @workshop = create(:pd_workshop, organizer: @organizer)
+
+    @workshop_organizer = create(:workshop_organizer)
+    @organizer_workshop = create(:pd_workshop, organizer: @workshop_organizer)
   end
   setup do
     @workshop.reload
+
+    @organizer_workshop.reload
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
+  test 'query by workshop organizer' do
+    # create a workshop with a different organizer, which should not be returned below
+    create(:pd_workshop)
+
+    workshops = Pd::Workshop.organized_by @workshop_organizer
+    assert_equal 1, workshops.length
+    assert_equal workshops.first, @organizer_workshop
   end
 
   test 'query by organizer' do
@@ -89,13 +104,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'query by state' do
-    workshop_not_started = @workshop
+    workshops_not_started = [@workshop, @organizer_workshop]
     workshop_in_progress = create :pd_workshop, started_at: Time.now
     workshop_ended = create :pd_ended_workshop
 
     not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
-    assert_equal 1, not_started.count
-    assert_equal workshop_not_started.id, not_started[0][:id]
+    assert_equal workshops_not_started.length, not_started.count
+    assert_equal workshops_not_started, not_started
 
     in_progress = Pd::Workshop.in_state(Pd::Workshop::STATE_IN_PROGRESS)
     assert_equal 1, in_progress.count
@@ -414,35 +429,39 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Workshops with 0 (not counting deleted), 1 and 2 enrollments
     workshops = [
       @workshop,
+      @organizer_workshop,
       build(:pd_workshop, num_enrollments: 1),
       build(:pd_workshop, num_enrollments: 2)
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_enrollment_count.pluck(:id)
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_enrollment_count(desc: false).pluck(:id)
-    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_enrollment_count(desc: true).pluck(:id)
+    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count}
+    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
+    assert_equal [2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
   end
 
   test 'order_by_enrollment_count with duplicates' do
     workshops = [
       @workshop,
+      @organizer_workshop,
       build(:pd_workshop),
       build(:pd_workshop, num_enrollments: 1),
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal [0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
+    assert_equal [1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
   end
 
   test 'order_by_state' do
+    @workshop.started_at = Time.now
     workshops = [
       build(:pd_ended_workshop), # Ended
-      build(:pd_workshop, started_at: Time.now), # In Progress
+      # build(:pd_workshop, started_at: Time.now), # In Progress
       @workshop, # Not Started
+      @organizer_workshop # Not Started
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
@@ -656,7 +675,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizer_or_facilitator?' do
+    facilitator = create :facilitator
+    @organizer_workshop.facilitators << facilitator
+    another_organizer = create :workshop_organizer
+    another_facilitator = create :facilitator
+
+    assert @organizer_workshop.organizer_or_facilitator?(@workshop_organizer)
+    assert @organizer_workshop.organizer_or_facilitator?(facilitator)
+    refute @organizer_workshop.organizer_or_facilitator?(another_organizer)
+    refute @organizer_workshop.organizer_or_facilitator?(another_facilitator)
+  end
+
+  test 'organizer_or_facilitator? with program manager organizer' do
     facilitator = create :facilitator
     @workshop.facilitators << facilitator
     another_organizer = create :workshop_organizer
@@ -859,6 +891,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'friendly_location with no location returns tba' do
     workshop = build :pd_workshop, location_address: '', processed_location: nil
     assert_equal 'Location TBA', workshop.friendly_location
+  end
+
+  test 'workshops organized by a non program manager are not assigned regional partner' do
+    workshop = create :pd_workshop
+    assert_nil workshop.regional_partner
+  end
+
+  test 'workshops organized by a program manager are assigned the regional partner' do
+    regional_partner = create :regional_partner
+    program_manager = create :program_manager, regional_partner: regional_partner
+    workshop = create :pd_workshop, organizer: program_manager
+
+    assert_equal regional_partner, workshop.regional_partner
   end
 
   private

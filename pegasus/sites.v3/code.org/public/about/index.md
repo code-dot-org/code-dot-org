@@ -81,13 +81,10 @@ In 2013, Code.org was launched by twin brothers [Hadi](/about/leadership/hadi_pa
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes.
 
-Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
+Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924).
 
-- [Code.org 2014 Annual Report](/about/2014)
-- [Code.org 2015 Annual Report](/about/2015)
-- [Code.org 2016 Annual Report](/about/2016)
-- [Code.org 2017 Annual Report](/about/2017)
-- [Code.org core values and messaging guidelines](/about/values)
+- [Code.org 2017 Annual Report](/about/2017) (Past reports: [2016](/about/2016), [2015](/about/2015), [2014](/about/2014))
+- [Our core values and messaging guidelines](/about/values)
 - [Our curriculum and pedagogy philosophy](/educate/curriculum/values)
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 
