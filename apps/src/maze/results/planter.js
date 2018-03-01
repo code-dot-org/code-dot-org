@@ -2,7 +2,7 @@ import ResultsHandler from './resultsHandler';
 import mazeMsg from '../locale';
 import { TestResults } from '../../constants.js';
 
-const TerminationValue = {
+export const TerminationValue = {
   PLANT_IN_NON_SOIL: 0,
   DID_NOT_PLANT_EVERYWHERE: 1,
 };
