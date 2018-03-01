@@ -371,16 +371,4 @@ module.exports = class MazeController {
       sound: 'dig',
     });
   }
-
-  /**
-   * Certain Maze types - namely, WordSearch, Collector, and any Maze with
-   * Quantum maps, don't want to check for success until the user's code
-   * has finished running completely.
-   */
-  shouldCheckSuccessOnMove() {
-    if (this.map.hasMultiplePossibleGrids()) {
-      return false;
-    }
-    return this.subtype.shouldCheckSuccessOnMove();
-  }
 };
