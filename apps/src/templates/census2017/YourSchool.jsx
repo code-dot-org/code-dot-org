@@ -10,7 +10,6 @@ import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnAction
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 
 const styles = {
   heading: {
@@ -39,9 +38,7 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    hideMap: PropTypes.bool,
-    updateCensusMapSchool: PropTypes.func.isRequired,
-    schoolDropdownOption: PropTypes.object,
+    hideMap: PropTypes.bool
   };
 
   componentDidMount() {
@@ -50,37 +47,10 @@ class YourSchool extends Component {
     }
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.schoolDropdownOption !== this.props.schoolDropdownOption) {
-      this.setState({
-        schoolDropdownOption: newProps.schoolDropdownOption,
-      });
-    }
-  }
-
-  state = {
-    schoolDropdownOption: this.props.schoolDropdownOption,
-  };
-
-  handleSchoolDropdownChange = (option) => {
-    this.setState({
-      schoolDropdownOption: option,
-    });
-
-    const schoolId = option ? option.value.toString() : '';
-    if (option && schoolId !== '-1') {
-      this.props.updateCensusMapSchool(option.school);
-    }
-  };
-
-  hasLocation = (school) => {
-    return !!(school.latitude && school.longitude);
-  };
-
   render() {
     const {responsiveSize} = this.props;
     const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
-    const schoolDropdownOption = this.state.schoolDropdownOption;
+
     return (
       <div>
         <SpecialAnnouncementActionBlock/>
@@ -115,27 +85,18 @@ class YourSchool extends Component {
         {!this.props.hideMap && (
            <div>
              <h1 style={styles.heading}>
-               Does your school teach Computer Science?
+               Put your school on the map
              </h1>
              <h3 style={styles.description}>
-               Find your school on the map to see if computer science is already being offered.
-               Can't find your school on the map? <a href="#form">Fill out the survey below</a>.
+               {i18n.yourSchoolMapDesc()}
+               If you are located in the US, please <a href="#form">fill out the form below</a>.
+               If you are outside the US, <a href="/learn/local">add your school here</a>.
              </h3>
-             <SchoolAutocompleteDropdown
-               value={this.props.prefillData ? this.props.prefillData['schoolId'] : undefined}
-               fieldName="census-map-school-dropdown"
-               schoolDropdownOption={schoolDropdownOption}
-               onChange={this.handleSchoolDropdownChange}
-               schoolFilter={this.hasLocation}
-             />
-             <br/>
              <ProtectedStatefulDiv ref="map"/>
            </div>
         )}
         <CensusForm
           prefillData={this.props.prefillData}
-          schoolDropdownOption={schoolDropdownOption}
-          onSchoolDropdownChange={this.handleSchoolDropdownChange}
         />
       </div>
     );
