@@ -64,7 +64,7 @@ CREATE table analysis.school_activity_stats AS
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
          COUNT(DISTINCT CASE WHEN csf_pd.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc,
+         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
          MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
          MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
   FROM analysis.school_stats ss
@@ -126,7 +126,7 @@ union all
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
          COUNT(DISTINCT CASE WHEN csf_pd.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc,
+         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
          MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
          MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event        
   FROM analysis.school_stats ss
@@ -188,7 +188,7 @@ union all
          COUNT(DISTINCT CASE WHEN se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) THEN f.student_user_id ELSE NULL END) students_csf,
          COUNT(DISTINCT CASE WHEN se.script_id IN (122,123,124,125,126,127) THEN f.student_user_id ELSE NULL END) students_csp,
          COUNT(DISTINCT CASE WHEN csf_pd.user_id IS NOT NULL THEN u.id ELSE NULL END) teachers_csf_pd,
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball') THEN f.student_user_id ELSE NULL END) students_hoc,
+         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro') THEN f.student_user_id ELSE NULL END) students_hoc,
          MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
          MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event
   FROM analysis.school_stats ss
