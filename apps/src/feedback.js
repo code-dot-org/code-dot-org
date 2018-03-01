@@ -658,7 +658,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
   var message;
 
   // If a message was explicitly passed in, use that.
-  if (options.feedbackType !== TestResults.ALL_PASS &&
+  if (options.feedbackType < TestResults.ALL_PASS &&
       options.level && options.level.failureMessageOverride) {
     message = options.level.failureMessageOverride;
   } else if (options.message) {
@@ -780,6 +780,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
       // Success.
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
+      case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel = (options.response &&
           (options.response.message === "no more levels"));
@@ -996,12 +997,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=fal
  * @return {boolean}
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
-  return (feedbackType === TestResults.ALL_PASS ||
-    feedbackType === TestResults.PASS_WITH_EXTRA_TOP_BLOCKS ||
-    feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
-    feedbackType === TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
-    feedbackType === TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||
-    feedbackType === TestResults.FREE_PLAY);
+  return feedbackType >= TestResults.MINIMUM_PASS_RESULT;
 };
 
 /**
@@ -1566,6 +1562,9 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
     return TestResults.TOO_MANY_BLOCKS_FAIL;
   } else if (this.hasExtraTopBlocks() && Blockly.showUnusedBlocks) {
     return TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
+  } else if (isFinite(this.studioApp_.IDEAL_BLOCK_NUM) &&
+    numEnabledBlocks < this.studioApp_.IDEAL_BLOCK_NUM) {
+    return TestResults.BETTER_THAN_IDEAL;
   } else {
     return TestResults.ALL_PASS;
   }

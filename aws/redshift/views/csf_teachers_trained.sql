@@ -20,7 +20,8 @@ SELECT DISTINCT f.student_user_id user_id, date_trunc('month', se.created_at)::d
        ON pds.pd_workshop_id = pdw.id
     WHERE course = 'CS Fundamentals'
 )
-group by 1;
+group by 1
+with no schema binding;
 
 GRANT ALL PRIVILEGES ON analysis.csf_teachers_trained TO GROUP admin;
 GRANT SELECT ON analysis.csf_teachers_trained TO GROUP reader, GROUP reader_pii;

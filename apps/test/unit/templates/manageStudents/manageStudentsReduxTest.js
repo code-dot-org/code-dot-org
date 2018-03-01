@@ -12,6 +12,11 @@ import manageStudents, {
   editStudent,
   startSavingStudent,
   saveStudentSuccess,
+  addStudentSuccess,
+  addStudentFailure,
+  AddStatus,
+  addMultipleRows,
+  RowType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -271,5 +276,197 @@ describe('manageStudentsRedux', () => {
       assert.equal(afterSaveState.studentData[1].isSaving, false);
       assert.equal(afterSaveState.studentData[1].name, "New name");
     });
+  });
+
+  describe('addMultipleRows', () => {
+    it('updates studentData and editingData', () => {
+      const startingState = {
+        ...initialState,
+        studentData: {
+          4: {
+            id: 4,
+            name: 'original student',
+            isEditing: true,
+          }
+        },
+        editingData: {
+          4: {
+            id: 4,
+            name: 'original student',
+            isEditing: true
+          }
+        },
+      };
+      const action = addMultipleRows({
+        '-1': {id: -1, name: 'student -1', isEditing: true},
+        '-2': {id: -2, name: 'student -2', isEditing: true}
+      });
+      const nextState = manageStudents(startingState, action);
+
+      const expectedData = {
+        '-1': {id: -1, name: 'student -1', isEditing: true},
+        '-2': {id: -2, name: 'student -2', isEditing: true},
+        '4': {id: 4, name: 'original student', isEditing: true}
+      };
+      assert.deepEqual(nextState.studentData, expectedData);
+      assert.deepEqual(nextState.editingData, expectedData);
+    });
+  });
+
+  describe('add student', () => {
+    const expectedBlankRow = {
+      id: 0,
+      name: '',
+      age: '',
+      gender: '',
+      username: '',
+      loginType: '',
+      isEditing: true,
+      rowType: RowType.ADD,
+    };
+    it('setLoginType creates an add row for word login types', () => {
+      const action = setLoginType('word');
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData[0], {...expectedBlankRow, loginType: 'word'});
+      assert.deepEqual(nextState.editingData[0], {...expectedBlankRow, loginType: 'word'});
+    });
+
+    it('setLoginType creates an add row for picture login types', () => {
+      const action = setLoginType('picture');
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData[0], {...expectedBlankRow, loginType: 'picture'});
+      assert.deepEqual(nextState.editingData[0], {...expectedBlankRow, loginType: 'picture'});
+    });
+
+    it('addStudentSuccess updates studentData,removes editingData, and adds new blank row', () => {
+      // Initial state with blank row
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        sectionId: 10,
+      };
+
+      const studentDataToAdd = {
+        id: 10,
+        name: 'new student',
+        age: 17,
+        gender: 'f',
+        secretPicturePath: '/wizard.jpg',
+        loginType: 'picture',
+        sectionId: 10,
+        isEditing: false,
+      };
+
+      // Add student
+      const addStudentSuccessAction = addStudentSuccess(10, studentDataToAdd);
+      const addedStudentState = manageStudents(initialState, addStudentSuccessAction);
+
+      assert.deepEqual(addedStudentState.editingData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[10], {
+        ...studentDataToAdd
+      });
+      assert.deepEqual(addedStudentState.addStatus, AddStatus.SUCCESS);
+    });
+
+    it('addStudentSuccess updates studentData,removes editingData, and adds new blank row', () => {
+      // Initial state with blank row
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        sectionId: 10,
+      };
+
+      const studentDataToAdd = {
+        id: 10,
+        name: 'new student',
+        age: 17,
+        gender: 'f',
+        secretPicturePath: '/wizard.jpg',
+        loginType: 'picture',
+        isEditing: false,
+      };
+
+      // Add student
+      const addStudentSuccessAction = addStudentSuccess(10, studentDataToAdd);
+      const addedStudentState = manageStudents(initialState, addStudentSuccessAction);
+
+      assert.deepEqual(addedStudentState.editingData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[10], {
+        ...studentDataToAdd,
+        sectionId: 10,
+      });
+      assert.deepEqual(addedStudentState.addStatus, AddStatus.SUCCESS);
+    });
+
+    it('addStudentFailure updates the addStatus, and sets saving to false for the student', () => {
+      // Initial state with editing blank row.
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            name: 'editing name',
+            loginType: 'picture',
+          }
+        },
+        sectionId: 10,
+      };
+
+      // Add student fails
+      const addStudentFailureAction = addStudentFailure('error info', 0);
+      const addedStudentState = manageStudents(initialState, addStudentFailureAction);
+
+      assert.deepEqual(addedStudentState.editingData[0], {
+        ...initialState.editingData[0],
+      });
+      assert.deepEqual(addedStudentState.studentData[0], {
+        ...initialState.studentData[0],
+        isSaving: false,
+      });
+      assert.deepEqual(addedStudentState.addStatus, AddStatus.FAIL);
+    });
+
   });
 });

@@ -14,7 +14,7 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
-import {projectChanged, isOwner} from '../code-studio/initApp/project';
+import {projectChanged, isOwner, getCurrentId} from '../code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session
@@ -568,13 +568,20 @@ function loadAnimationFromSource(key, callback) {
         // Log data about when this scenario occurs
         firehoseClient.putRecord(
          'analysis-events',
-            {
-              study: 'animation_no_load',
-              study_group: 'animation_no_load_v2',
-              event: isOwner() ? 'animation_not_loaded_owner' : 'animation_not_loaded_viewer',
-              data_json: JSON.stringify({'sourceUrl': sourceUrl, 'version': state.propsByKey[key].version,
-                'animationName': state.propsByKey[key].name, 'error': err.message})
-            }
+          {
+            study: 'animation_no_load',
+            study_group: 'animation_no_load_v4',
+            event: isOwner() ? 'animation_not_loaded_owner' : 'animation_not_loaded_viewer',
+            project_id: getCurrentId(),
+            data_json: JSON.stringify({
+              'sourceUrl': sourceUrl,
+              'mainJsonSourceUrl': state.propsByKey[key].sourceUrl,
+              'version': state.propsByKey[key].version,
+              'animationName': state.propsByKey[key].name,
+              'error': err.message
+            })
+          },
+          {includeUserId: true}
         );
 
         if (isOwner()) {
@@ -707,17 +714,15 @@ export function animationSourceUrl(key, props, withVersion = false) {
 
   // 1. If the animation has a sourceUrl it's external (from the library
   //    or some other outside source, not the animation API) - and we may need
-  //    to run it through the media proxy. (Note - Before 02/2018 -
-  //    uploaded images may/may not have non-null sourceUrls. After 02/2018 -
-  //    uploaded images will have null sourceUrls)
+  //    to run it through the media proxy.
+  if (props.sourceUrl) {
+    return assetPrefix.fixPath(props.sourceUrl);
+  }
+
   // 2. Otherwise it's local to this project, and we should use the animation
   //    key to look it up in the animations API.
-  let url = (props.sourceUrl) ?
-      assetPrefix.fixPath(props.sourceUrl) : (animationsApi.basePath(key) + '.png');
-
-  // Appending version here to support projects with uploaded images
-  // with sourceUrls.
-  return url + ((props.version) ? '?version=' + props.version : '');
+  return animationsApi.basePath(key) + '.png' +
+      ((withVersion && props.version) ? '?version=' + props.version : '');
 }
 
 /**
