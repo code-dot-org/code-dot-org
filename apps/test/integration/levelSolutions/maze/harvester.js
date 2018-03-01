@@ -27,7 +27,7 @@ module.exports = {
         testResult: TestResults.LEVEL_INCOMPLETE_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === constants.BeeTerminationValue.INFINITE_LOOP;
+        return Maze.controller.executionInfo.terminationValue() === constants.BeeTerminationValue.INFINITE_LOOP;
       },
       xml: '<xml>' +
           '  <block type="when_run" deletable="false" movable="false">' +
@@ -53,7 +53,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === constants.HarvesterTerminationValue.WRONG_CROP;
+        return Maze.controller.executionInfo.terminationValue() === constants.HarvesterTerminationValue.WRONG_CROP;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +
@@ -74,7 +74,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === constants.HarvesterTerminationValue.EMPTY_CROP;
+        return Maze.controller.executionInfo.terminationValue() === constants.HarvesterTerminationValue.EMPTY_CROP;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +
@@ -100,7 +100,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === constants.HarvesterTerminationValue.WRONG_CROP;
+        return Maze.controller.executionInfo.terminationValue() === constants.HarvesterTerminationValue.WRONG_CROP;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +
@@ -119,7 +119,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === constants.HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING;
+        return Maze.controller.executionInfo.terminationValue() === constants.HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +

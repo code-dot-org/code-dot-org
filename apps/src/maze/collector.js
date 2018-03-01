@@ -17,7 +17,6 @@ import CollectorDrawer from './collectorDrawer';
 import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from './locale';
 
-import {getStore} from '../redux';
 import {
   resetCollectorCurrentCollected,
   setCollectorCurrentCollected,
@@ -39,13 +38,16 @@ export default class Collector extends Subtype {
     this.maxBlocks_ = config.level.ideal;
 
     this.minCollected_ = config.level.minCollected;
-    this.store_ = getStore();
 
-    this.store_.dispatch(setCollectorMinRequired(this.minCollected_));
+    if (this.maze_.store) {
+      this.maze_.store.dispatch(setCollectorMinRequired(this.minCollected_));
+    }
   }
 
   reset() {
-    this.store_.dispatch(resetCollectorCurrentCollected());
+    if (this.maze_.store) {
+      this.maze_.store.dispatch(resetCollectorCurrentCollected());
+    }
   }
 
   scheduleDirtChange(row, col) {
@@ -59,7 +61,9 @@ export default class Collector extends Subtype {
       this.collectSoundsI %= this.collectSoundsCount;
     }
 
-    this.store_.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
+    if (this.maze_.store) {
+      this.maze_.store.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
+    }
   }
 
   /**
@@ -138,7 +142,9 @@ export default class Collector extends Subtype {
    *         on the previous run (persists through resets)
    */
   getLastTotalCollected() {
-    return this.store_.getState().maze.collectorLastCollected;
+    if (this.maze_.store) {
+      return this.maze_.store.getState().maze.collectorLastCollected;
+    }
   }
 
   /**
