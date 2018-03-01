@@ -117,7 +117,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def update
     adjust_facilitators
 
-    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) ||
+      current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
+      current_user.permission?(UserPermission::WORKSHOP_ADMIN) ||
+      Pd::CourseFacilitator.exists?(facilitator: current_user, course: Pd::Workshop::COURSE_CSF)
       params.require(:pd_workshop).delete(:regional_partner_id)
     end
 

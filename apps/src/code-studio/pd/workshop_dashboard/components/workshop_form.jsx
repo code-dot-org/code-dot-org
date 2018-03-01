@@ -371,7 +371,7 @@ export default class WorkshopForm extends React.Component {
           style={this.getInputStyle()}
           value={this.state.regional_partner_id || ''}
           // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
-          disabled={this.props.readOnly || (!this.permission.isWorkshopAdmin && !this.permission.isOrganizer && !this.permission.isProgramManager && !this.permission.isPartner)}
+          disabled={this.props.readOnly || (!this.permission.isWorkshopAdmin && !this.permission.isOrganizer && !this.permission.isProgramManager && !this.permission.isPartner && !this.permission.isCsfFacilitator)}
         >
           <option value="">None</option>
           {

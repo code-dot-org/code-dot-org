@@ -197,7 +197,7 @@ class Pd::Workshop < ActiveRecord::Base
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 
-  before_save :assign_regional_partner, if: -> {organizer_id_changed?}
+  before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
   def assign_regional_partner
     self.regional_partner = organizer.try {|o| o.regional_partners.first}
   end
