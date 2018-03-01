@@ -12,7 +12,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @workshop_organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
     @regional_partner = create(:regional_partner)
-    @csf_facilitator = create :facilitator
+    @csf_facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
 
     @workshop = create(
       :pd_workshop,
@@ -30,8 +30,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     )
 
     @standalone_workshop = create(:pd_workshop)
-
-    Pd::CourseFacilitator.create(facilitator: @csf_facilitator, course: Pd::Workshop::COURSE_CSF)
   end
 
   setup do
