@@ -385,6 +385,66 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(addedStudentState.addStatus, {status: AddStatus.SUCCESS, numStudents: 1});
     });
 
+    it('addStudentsSuccess adds multiple students', () => {
+      // Initial state with blank row
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        sectionId: 10,
+      };
+
+      const studentsDataToAdd = {
+        111: {
+          id: 111,
+          name: 'new student a',
+          age: 17,
+          gender: 'f',
+          secretPicturePath: '/wizard.jpg',
+          loginType: 'picture',
+          isEditing: false,
+        },
+        112: {
+          id: 112,
+          name: 'new student b',
+          age: 11,
+          gender: 'm',
+          secretPicturePath: '/wizard.jpg',
+          loginType: 'picture',
+          isEditing: false,
+        }};
+
+      // Add student
+      const addStudentSuccessAction = addStudentsSuccess(2, [-2, -3], studentsDataToAdd);
+      const addedStudentState = manageStudents(initialState, addStudentSuccessAction);
+
+      assert.deepEqual(addedStudentState.editingData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[0], {
+        ...expectedBlankRow,
+        loginType: 'picture',
+      });
+      assert.deepEqual(addedStudentState.studentData[111], {
+        ...studentsDataToAdd[111],
+      });
+      assert.deepEqual(addedStudentState.studentData[112], {
+        ...studentsDataToAdd[112],
+      });
+      assert.deepEqual(addedStudentState.addStatus, {status: AddStatus.SUCCESS, numStudents: 2});
+    });
+
     it('addStudentsFailure updates the addStatus, and sets saving to false for the student', () => {
       // Initial state with editing blank row.
       const initialState = {
