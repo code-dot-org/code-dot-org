@@ -119,7 +119,8 @@ class ProjectCardGrid extends Component {
                 labViewMoreString={i18n.projectTypeApplabViewMore()}
                 projectList={projectLists.applab}
                 numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}              navigateFunction={this.onSelectApp}
+                galleryType={this.props.galleryType}
+                navigateFunction={this.onSelectApp}
                 isDetailView={false}
                 hideWithoutThumbnails={true}
               />
@@ -209,7 +210,8 @@ class ProjectCardGrid extends Component {
                 projectList={projectLists.applab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
-                navigateFunction={this.viewAllProjects}                isDetailView={true}
+                navigateFunction={this.viewAllProjects}
+                isDetailView={true}
               />
             }
             {this.state.showApp === 'gamelab' && this.props.showApplabGamelab &&
