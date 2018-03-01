@@ -8,7 +8,8 @@ class Api::V1::Projects::PublicGalleryController < ApplicationController
     render json: ProjectsList.fetch_published_projects(
       params[:project_type],
       limit: params[:limit],
-      published_before: params[:published_before]
+      published_before: params[:published_before],
+      prepend_featured: !!params[:showFeatured]
     )
   rescue ArgumentError => e
     render json: {error: e.message}, status: :bad_request

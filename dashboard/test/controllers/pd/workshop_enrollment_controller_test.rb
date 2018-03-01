@@ -4,7 +4,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @organizer = create :workshop_organizer
+    @organizer = create :program_manager
+    @workshop_organizer = create :workshop_organizer
     @facilitator = create :facilitator
     @teacher = create :teacher
 
@@ -16,6 +17,10 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     @workshop = create :pd_workshop, organizer: @organizer, num_sessions: 1
     @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
+
+    @organizer_workshop = create :pd_workshop, organizer: @workshop_organizer, num_sessions: 1
+    @organizer_workshop.facilitators << @facilitator
+    @organizer_workshop_existing_enrollment = create :pd_enrollment, workshop: @organizer_workshop
   end
 
   test 'enroll get route' do
@@ -41,7 +46,16 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_select 'span.info-box-message', count: 0
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can see enrollment form' do
+    # Note - organizers can see the form, but cannot enroll in their own workshops.
+    # This is tested in 'creating an enrollment with email match from organizer renders own view'
+    sign_in @workshop_organizer
+    get :new, params: {workshop_id: @organizer_workshop.id}
+    assert_template :new
+  end
+
+  test 'program manager workshop organizers can see enrollment form' do
     # Note - organizers can see the form, but cannot enroll in their own workshops.
     # This is tested in 'creating an enrollment with email match from organizer renders own view'
     sign_in @organizer
@@ -119,7 +133,20 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_template :duplicate
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'creating an enrollment with email match from organizer renders own view' do
+    params = enrollment_test_params.merge(
+      {
+        full_name: @workshop_organizer.name,
+        email: @workshop_organizer.email,
+        confirmation_email: @workshop_organizer.email,
+      }
+    )
+    post :create, params: {workshop_id: @organizer_workshop.id, pd_enrollment: params}
+    assert_template :own
+  end
+
+  test 'creating an enrollment with email match from program manager organizer renders own view' do
     params = enrollment_test_params.merge(
       {
         full_name: @organizer.name,
@@ -211,10 +238,10 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'cancel with a known code deletes the enrollment' do
-    assert_equal 1, Pd::Enrollment.count
+    assert_equal 2, Pd::Enrollment.count
     get :cancel, params: {code: @existing_enrollment.code}
     assert_response :success
-    assert_equal 0, Pd::Enrollment.count
+    assert_equal 1, Pd::Enrollment.count
   end
 
   test 'cancel with an unknown code responds with 404' do

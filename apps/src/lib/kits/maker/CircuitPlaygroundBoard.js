@@ -1,5 +1,6 @@
 /** @file Board controller for Adafruit Circuit Playground */
 /* global SerialPort */ // Maybe provided by the Code.org Browser
+import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
 import five from '@code-dot-org/johnny-five';
@@ -12,6 +13,9 @@ import {
 } from './PlaygroundComponents';
 import {
   SONG_CHARGE,
+  SONG_LEVEL_COMPLETE,
+  SONG_ASCENDING,
+  SONG_CONCLUSION,
   CP_COMMAND,
   J5_CONSTANTS,
 } from './PlaygroundConstants';
@@ -161,7 +165,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // on the next run.
         // Note: This doesn't seem to be necessary when using browser-serialport
         // and the Chrome App connector, but it is required for native
-        // node serialport in the Maker Toolkit Browser.
+        // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
         }
@@ -211,8 +215,15 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       });
     }
 
+    const song = _.sample([
+      {notes: SONG_CHARGE, tempo: 104},
+      {notes: SONG_LEVEL_COMPLETE, tempo: 80},
+      {notes: SONG_ASCENDING, tempo: 180},
+      {notes: SONG_CONCLUSION, tempo: 130},
+    ]);
+
     return Promise.resolve()
-        .then(() => buzzer.play(SONG_CHARGE, 104))
+        .then(() => buzzer.play(song.notes, song.tempo))
         .then(() => forEachLedInSequence(led => led.color('green'), 80))
         .then(() => forEachLedInSequence(led => led.off(), 80));
   }

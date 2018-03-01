@@ -20,7 +20,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-import {queryParams, hasQueryParam} from '../utils';
+import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -69,6 +69,9 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+// Server time at which the first project version was saved from this browser tab,
+// for logging purposes.
+var firstSaveTimestamp;
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
@@ -764,7 +767,13 @@ var projects = module.exports = {
     };
 
     if (this.useSourcesApi()) {
-      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      let params = '';
+      if (currentSourceVersionId) {
+        params = `?version=${currentSourceVersionId}` +
+          `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
+          `&tabId=${utils.getTabId()}`;
+      }
+      const filename = SOURCE_FILE + params;
       sources.put(channelId, packSources(), filename, function (err, response) {
         if (err) {
           saveSourcesErrorCount++;
@@ -772,6 +781,9 @@ var projects = module.exports = {
           return;
         }
         saveSourcesErrorCount = 0;
+        if (!firstSaveTimestamp) {
+          firstSaveTimestamp = response.timestamp;
+        }
         currentSourceVersionId = response.versionId;
         current.migratedToS3 = true;
 
@@ -850,10 +862,11 @@ var projects = module.exports = {
     });
   },
   showSaveError_(errorType, errorCount, errorText) {
-    $('.project_updated_at').text('Error saving project');  // TODO i18n
+    header.showProjectSaveError();
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
+        study_group: 'v2',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
@@ -869,7 +882,8 @@ var projects = module.exports = {
           shareUrl: this.getShareUrl(),
           currentSourceVersionId: currentSourceVersionId,
         }),
-      }
+      },
+      {includeUserId: true}
     );
   },
   updateCurrentData_(err, data, options = {}) {
@@ -1281,15 +1295,17 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 }
 
 /**
- * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ * Allow setting Maker APIs enabled / disabled via URL parameters.
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
     currentSources.makerAPIsEnabled = true;
+    updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = false;
+    updateQueryParam('disableMaker', undefined, true);
   }
 }
 

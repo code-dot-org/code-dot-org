@@ -9,6 +9,8 @@ nav: regional_partner_playbook_nav
 # Topics
 
 
+- [Announcements](#announce)
+
 **Organization Sustainability:**<br/>
 
 - [Goals](#goal)
@@ -29,6 +31,22 @@ nav: regional_partner_playbook_nav
 - [Supports for Pursuing Federal and State Grants](#grants)
 
 
+# Announcements
+<a id="announce"></a>
+### Federal Funding - Consortia Development Survey
+In March, the US Department of Education will release details about the federal grant opportunities for CS we first heard about last fall. Code.org will not be applying for these federal funds and will not lead or directly sign onto any application. We do, however, want to explore bringing together some regional partners to apply together as a consortium. There are two potential funding targets at the US Dept. of Ed -- <a href="https://www2.ed.gov/programs/edseed/index.html" target=_blank>SEED (Supporting Effective Educator Development)</a> and <a href="https://innovation.ed.gov/what-we-do/innovation/education-innovation-and-research-eir/" target=_blank>EIR (Education, Innovation and Research)</a> grant programs run by the Department of Ed. These grants typically span 3-5 years with funding of $1.5M-$5M. The grants can fund CS professional development, as well as some program management and evaluation expenses. These grants also come with compliance requirements for recipients.
+
+Code.org’s role would be to help facilitate the formation of one or more consortium (3-6 partners each) and support the development of a grant proposal with a lead partner. Each consortium member’s role would be to execute on the Code.org programs and partner with the lead for the consortium on funding and compliance requests.
+
+We’ve developed a short survey to gauge your interest and readiness for joining a consortium and to gather some initial information. 
+
+The timeline is pretty tight on this because of the budget issues Washington has faced. When Department of Ed releases the grant notices in early March, there will only be 60 days to build a consortium and write the application. Once it is filed we’d expect to know the results by late summer, with funds available sometime in the fall, if successful. 
+
+**Please complete <a href="https://goo.gl/forms/iB4vzaGZFvus1tCQ2" target=_blank>this survey</a> by February 27th**. If you are interested, we’ll get in touch with you prior to the Summit to invite you to a 30-minute meeting for prospective partners on Wednesday, March 7 (at the March Summit). 
+
+[**Back to the top**](#top)
+<br/>
+________________
 # How does your organization become sustainable?
 
 This year most of your funding will come from Code.org.

@@ -106,8 +106,13 @@ class Ability
           workshop.facilitators.include? user
         end
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :update], Pd::Workshop, organizer_id: user.id
+        can :create, Pd::Workshop do |_|
+          Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
+        end
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
         can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
+        can :read, Pd::CourseFacilitator, facilitator_id: user.id
       end
 
       if user.district_contact?
@@ -123,7 +128,7 @@ class Ability
         end
       end
 
-      if user.workshop_organizer?
+      if user.workshop_organizer? || user.program_manager?
         can :create, Pd::Workshop
         can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
@@ -210,7 +215,8 @@ class Ability
         Level,
         Course,
         Script,
-        ScriptLevel
+        ScriptLevel,
+        Video,
       ]
 
       # Only custom levels are editable.
