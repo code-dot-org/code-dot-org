@@ -71,7 +71,8 @@ class PuzzleRatingButtons extends Component {
 
   static propTypes = {
     useLegacyStyles: PropTypes.bool,
-  }
+    label: PropTypes.string,
+  };
 
   like() {
     this.setState({liked: !this.state.liked, disliked: false});
@@ -83,13 +84,14 @@ class PuzzleRatingButtons extends Component {
 
   render() {
     const styles = this.props.useLegacyStyles ? legacyStyles : newStyles;
+    const label = this.props.label || locale.puzzleRatingQuestion();
     return (
       <div
         id="puzzleRatingButtons"
         style={{display: 'inline-block'}}
       >
         {this.props.useLegacyStyles &&
-          <span style={styles.question}>{locale.puzzleRatingQuestion()}</span>
+          <span style={styles.question}>{label}</span>
         }
         <a
           className={

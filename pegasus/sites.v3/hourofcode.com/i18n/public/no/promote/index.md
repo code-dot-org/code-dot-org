@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 <%
@@ -15,28 +12,28 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Hvordan involvere seg
+# Selg inn Kodetimen i nærmiljøet
 
 ## 1. Spre budskapet
 
-Fortell dine venner om **#HourOfCode**!
+Fortell venner og bekjente om **#Kodetimen**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Be skolen din om å arrangere Kodetime
+## 2. Få den lokale skolen til å arrangere en Kodetime
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
+Send [denne e-posten](<%= resolve_url('/promote/resources#sample-emails') %>) til rektor, med en utfordring til å melde på alle klasser på alle trinn.
 
 ## 3. Spør arbeidsgiveren din om å bidra
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+Send [denne e-posten](<%= resolve_url('/promote/resources#sample-emails') %>) til sjefen din eller ledelsen i bedriften.
 
 ## 4. Promoter Kodetimen i ditt lokalsamfunn
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Rekrutter grupper i lokalmiljøet](<%= resolve_url('/promote/resources#sample-emails') %>) — speidergrupper, kirken, universiteter, eldresentre, arbeidersamfunn, eller rett og slett din egen omgangskrets. Du trenger ikke gå på skolen for å lære noe nytt. Benytt våre [plakater, bannere, klistremerker, videoer og annet](<%= resolve_url('/promote/resources') %>) for å fremme ditt eget arrangement.
 
 ## 5. Spør en lokalpolitiker om å støtte Kodetimen
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+Send [denne e-posten](<%= resolve_url('/promote/resources#sample-emails') %>) til en lokalpolitiker, til rådhuset eller til det lokale skolestyret, og inviter dem til skolens Kodetime-arrangement. Dette kan hjelpe informatikkfaget å få fotfeste i ditt nærområde litt lenger enn én time.
 
 <%= view :signup_button %>

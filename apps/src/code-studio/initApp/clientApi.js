@@ -3,6 +3,7 @@
  */
 import $ from 'jquery';
 import _ from 'lodash';
+import {stringifyQueryParams} from '../../utils';
 
 /**
  * Standard callback form for asynchronous operations, popularized by Node.
@@ -44,10 +45,12 @@ var base = {
    * @param {Object} value - collection contents, must be JSON.stringify-able.
    * @param {NodeStyleCallback} callback - Expected result is the created
    *        collection object (which will include an assigned 'id' key).
+   * @param {Object} queryParams Object representing params to append to the
+   *        url as a query string.
    */
-  create: function (value, callback) {
+  create: function (value, callback, queryParams) {
     $.ajax({
-      url: this.api_base_url,
+      url: this.api_base_url + stringifyQueryParams(queryParams),
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)

@@ -1,3 +1,4 @@
+%script{type: "text/javascript", src: "/shared/js/helpers.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/census_map.css"}
 -max_height_percentage = 0.65 if max_height_percentage.nil?
 
@@ -7,10 +8,16 @@
     .legend-title Legend
     .color.green
     .caption
-      Pledged to expand computer science
+      Offers computer science class(es)
     .color.blue
     .caption
-      Goes beyond an Hour of Code
+      Limited or no CS opportunities
+    .color.yellow
+    .caption
+      Inconclusive data
+    .color.white
+    .caption
+      No Data
   #map-footer
     %span#footer-text
       In partnership with
@@ -18,8 +25,9 @@
   %br
   %br
 
-
+- TABLE_ID = CDO.census_map_table_id.freeze
 :javascript
+  var showYourSchoolFunction;
   var gmap;
   var resizeZoom;
   var scrollwheelOption = false;
@@ -27,6 +35,9 @@
   var resizeThrottleTimerId;
   var resizeThrottleTimeoutMs = 500;
   var maxHeightPercentage = "#{max_height_percentage}";
+  const infoWindow = new google.maps.InfoWindow();
+
+  google.load('visualization', '1');
 
   $(document).ready(function() {
     initializeMap();
@@ -42,8 +53,9 @@
 
   function initializeMap() {
     var mapOptions = {
-      center: new google.maps.LatLng(41,-102),
+      center: new google.maps.LatLng(37.6642776,-97.7238747),
       zoom: 4,
+      minZoom: 1,
       scrollwheel: scrollwheelOption,
       draggable: draggableOption,
       mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -52,21 +64,38 @@
     gmap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
 
     var layer = new google.maps.FusionTablesLayer({
+      suppressInfoWindows: true,
       query: {
-        select: 'type',
-        from: '1G3wfhnX2LFkgkJfDA6iw0Pq3t-6pl9wjvqUdLY7B'
+        select: 'location',
+        from: "#{TABLE_ID}",
+        where: "location NOT IN ''",
       },
-      styles: [{
-        where: "type CONTAINS 'pledged'",
-        markerOptions: {
-          iconName: "small_green"
-        }
-      }, {
-        where: "type DOES NOT CONTAIN 'pledged'",
-        markerOptions: {
-          iconName: "small_blue"
-        }
-      }],
+      styles: [
+        {
+          where: "teaches_cs IN ''",
+          markerOptions: {
+            iconName: "measle_white"
+          }
+        },
+        {
+          where: "teaches_cs IN 'YES'",
+          markerOptions: {
+            iconName: "grn_blank"
+          }
+        },
+        {
+          where: "teaches_cs IN 'NO'",
+          markerOptions: {
+            iconName: "small_blue"
+          }
+        },
+        {
+          where: "teaches_cs IN 'MAYBE'",
+          markerOptions: {
+            iconName: "small_yellow"
+          }
+        },
+      ],
     });
 
     var legend = document.createElement('div');
@@ -81,9 +110,20 @@
 
     google.maps.event.addListener(layer, 'click', function(event) {
       enableDrag();
-      event.infoWindowHtml = event.row['organization_name'].value;
-      event.infoWindowHtml += ' (' + event.row['city'].value + ')';
-      event.infoWindowHtml += '<br>';
+      const latitude = event.row['location'].value.split(',')[0];
+      const longitude = event.row['location'].value.split(',')[1];
+      const location = new google.maps.LatLng(latitude, longitude);
+      infoWindow.close();
+      infoWindow.setContent(generateInfoWindowHtml(
+        event.row['school_id'].value,
+        event.row['school_name'].value,
+        event.row['city'].value,
+        event.row['state_code'].value,
+        event.row['location'].value,
+        event.row['teaches_cs'].value
+      ));
+      infoWindow.setPosition(location);
+      infoWindow.open(gmap);
     });
     google.maps.event.addListener(gmap, 'zoom_changed', function(event) {
       enableDrag();
@@ -91,6 +131,111 @@
     google.maps.event.addListener(gmap, 'click', function(event) {
       enableDrag();
     });
+  }
+
+  function generateInfoWindowHtml(schoolId, schoolName, city, state, location, teachesCs) {
+    let censusMessage;
+
+    switch(teachesCs) {
+      case 'YES':
+        censusMessage = "We believe this school offers Computer Science.";
+        break;
+      case 'NO':
+        censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
+        break;
+      case 'MAYBE':
+        censusMessage = "We have conflicting data for this school.";
+        break;
+      default:
+        censusMessage = "We need data for this school.";
+    }
+
+    const schoolDropdownOptionString = `{
+      value: '${schoolId}',
+      label: '${schoolName} - ${city}, ${state}',
+      school: {
+        nces_id: '${schoolId}',
+        name: '${schoolName}',
+        city: '${city}',
+        state: '${state}',
+        latitude: ${location.split(',')[0]},
+        longitude: ${location.split(',')[1]},
+      },
+    }`;
+
+    return `
+      <div class="census-info-window">
+        <h4>
+          <b>
+            ${schoolName}
+          </b>
+          <br>
+          (${city}, ${state})
+        </h4>
+        <hr>
+        <div class="census-message">${censusMessage}</div>
+        <div class="button-container">
+          <div class="button-link-div">
+            <a onclick="showYourSchoolFunction(${schoolDropdownOptionString}); adjustScroll('form');">
+              <div class="button">
+                <div class="button-text">Take the survey for this school</div>
+              </div>
+            </a>
+          </div>
+          <div class="button-link-div">
+            <a href="/yourschool/letter" target="_blank">
+              <div class="button">
+                <div class="button-text">Send the survey to a teacher at this school</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function updateCensusMapSchool(school) {
+    if (school && school.latitude && school.longitude) {
+      const schoolLocation = new google.maps.LatLng(school.latitude, school.longitude);
+      const map_options = {
+        center: schoolLocation,
+        zoom: 14,
+        scrollwheel: scrollwheelOption,
+        draggable: draggableOption,
+      }
+      gmap.setOptions(map_options);
+
+      const query = encodeURIComponent(`SELECT * FROM #{TABLE_ID} WHERE school_id in '${school.nces_id}'`);
+      const gvizQuery = new google.visualization.Query(`https://www.google.com/fusiontables/gvizdata?tq=${query}`);
+
+      gvizQuery.send(function(response) {
+        const datatable = response.getDataTable();
+        if (datatable && datatable.getNumberOfRows()) {
+          const schoolId = datatable.getValue(0,0);
+          const schoolName = datatable.getValue(0,2);
+          const city = datatable.getValue(0,3);
+          const state = datatable.getValue(0,4);
+          const location = datatable.getValue(0,5);
+          const teachesCs = datatable.getValue(0,6);
+
+          infoWindow.close();
+          infoWindow.setContent(generateInfoWindowHtml(
+            schoolId,
+            schoolName,
+            city,
+            state,
+            location,
+            teachesCs
+          ));
+          infoWindow.setPosition(schoolLocation);
+          infoWindow.open(gmap);
+        }
+      });
+    }
+  }
+
+  function setShowYourSchoolFunction(f) {
+    showYourSchoolFunction = f;
   }
 
   function enableDrag() {
@@ -107,7 +252,6 @@
   function resizeMap() {
     var map_width = $('#gmap').width();
     var map_zoom = gmap.getZoom();
-    var map_center = gmap.getCenter();
 
     // Max height of map is 2/3 of screen height so user can always scroll.
     var max_height = $(window).innerHeight() * maxHeightPercentage;
@@ -130,21 +274,16 @@
 
     if (map_width < 256 && map_zoom < 3) {
       map_zoom = 0;
-      map_center = new google.maps.LatLng(22.2116,4.5775);
     }
     else if (map_width < 512 && map_zoom < 3) {
       map_zoom = 1;
-      map_center = new google.maps.LatLng(22.2116,4.5775);
     }
     else if (map_zoom < 3) {
       map_zoom = 2;
-      map_center = new google.maps.LatLng(22.2116,4.5775);
     }
 
     var map_options = {
-      center: map_center,
       zoom: map_zoom,
-      minZoom: map_zoom,
       scrollwheel: scrollwheelOption,
       draggable: draggableOption
     }

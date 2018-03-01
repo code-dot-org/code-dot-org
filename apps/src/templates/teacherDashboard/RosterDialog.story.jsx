@@ -7,7 +7,7 @@ const ROSTER_DIALOG_CLOSE_CALLBACKS = ['handleImport', 'handleCancel'];
 
 export default storybook => {
   return storybook
-    .storiesOf('RosterDialog', module)
+    .storiesOf('Dialogs/RosterDialog', module)
     .addStoryTable([
       {
         name: 'Select a Classroom',

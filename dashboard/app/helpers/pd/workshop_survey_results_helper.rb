@@ -70,11 +70,12 @@ module Pd::WorkshopSurveyResultsHelper
     sum_hash = Hash.new(0)
     responses_per_facilitator = Hash.new(0)
 
-    if surveys.first.is_a? Pd::LocalSummerWorkshopSurvey
-      fields_to_summarize = include_free_response ? LOCAL_WORKSHOP_FIELDS_IN_SUMMARY : LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY
-    else
-      fields_to_summarize = include_free_response ? TEACHERCON_FIELDS_IN_SUMMARY : TEACHERCON_MULTIPLE_CHOICE_FIELDS
-    end
+    fields_to_summarize =
+      if surveys.first.is_a? Pd::LocalSummerWorkshopSurvey
+        include_free_response ? LOCAL_WORKSHOP_FIELDS_IN_SUMMARY : LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY
+      else
+        include_free_response ? TEACHERCON_FIELDS_IN_SUMMARY : TEACHERCON_MULTIPLE_CHOICE_FIELDS
+      end
 
     # Ugly branchy way to compute the summarization for the user
     surveys.each do |response|
@@ -132,17 +133,18 @@ module Pd::WorkshopSurveyResultsHelper
       next unless questions.key? k
 
       if v.is_a? Integer
-        if facilitator_specific_options.include?(k)
-          if facilitator_name_filter
-            # For facilitator specific questions, take the average over all responses for that facilitator
-            sum_hash[k] = (v / responses_per_facilitator[facilitator_name_filter].to_f).round(2)
+        sum_hash[k] =
+          if facilitator_specific_options.include?(k)
+            if facilitator_name_filter
+              # For facilitator specific questions, take the average over all responses for that facilitator
+              (v / responses_per_facilitator[facilitator_name_filter].to_f).round(2)
+            else
+              (v / responses_per_facilitator.values.reduce(:+).to_f).round(2)
+            end
           else
-            sum_hash[k] = (v / responses_per_facilitator.values.reduce(:+).to_f).round(2)
+            # For non facilitator specific answers, take the average over all surveys
+            (v / surveys.count.to_f).round(2)
           end
-        else
-          # For non facilitator specific answers, take the average over all surveys
-          sum_hash[k] = (v / surveys.count.to_f).round(2)
-        end
       else
         v.each do |name, value|
           sum_hash[k][name] = (value / responses_per_facilitator[name].to_f).round(2)

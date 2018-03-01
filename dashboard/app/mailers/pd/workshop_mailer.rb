@@ -175,8 +175,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
     # Don't send if there's no associated survey
     return unless @survey_url
 
-    @dash_code = CDO.pd_workshop_exit_survey_dash_code
-
     content_type = 'text/html'
     if @workshop.course == Pd::Workshop::COURSE_CSF
       attachments['certificate.jpg'] = generate_csf_certificate
@@ -239,7 +237,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
-      'Your upcoming CS Principles workshop and next steps'
+      "Your upcoming #{workshop.course} workshop and next steps"
     else
       'Your upcoming Code.org workshop and next steps'
     end

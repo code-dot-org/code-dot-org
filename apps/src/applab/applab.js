@@ -65,6 +65,7 @@ import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
@@ -387,7 +388,6 @@ Applab.init = function (config) {
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
-    isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
   Applab.isReadOnlyView = config.readonlyWorkspace;
@@ -464,9 +464,11 @@ Applab.init = function (config) {
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
     // is stored in startHtml, not levelHtml. Also ignore levelHtml for embedded
-    // levels so that updates made to startHtml by levelbuilders are shown.
+    // or contained levels so that updates made to startHtml by levelbuilders
+    // are shown.
     if (!getStore().getState().pageConstants.hasDesignMode ||
-        getStore().getState().pageConstants.isEmbedView) {
+        getStore().getState().pageConstants.isEmbedView ||
+        getStore().getState().pageConstants.hasContainedLevels) {
       config.level.levelHtml = '';
     }
 
@@ -598,7 +600,8 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch
+    showDebugWatch: !!config.level.isProjectLevel || config.level.showDebugWatch,
+    showMakerToggle: !!config.level.isProjectLevel || config.level.makerlabEnabled,
   });
 
   config.dropletConfig = dropletConfig;
@@ -933,13 +936,11 @@ Applab.runButtonClick = function () {
 var displayFeedback = function () {
   if (!Applab.waitingForReport) {
     studioApp().displayFeedback({
-      app: 'applab', //XXX
-      skin: skin.id,
       feedbackType: Applab.testResults,
       executionError: Applab.executionError,
       response: Applab.response,
       level: level,
-      showingSharing: level.freePlay,
+      showingSharing: false,
       tryAgainText: applabMsg.tryAgainText(),
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
@@ -1072,6 +1073,7 @@ function onInterfaceModeChange(mode) {
       Applab.activeScreen().focus();
     }
   }
+  requestAnimationFrame(() => showHideWorkspaceCallouts());
 }
 
 /**

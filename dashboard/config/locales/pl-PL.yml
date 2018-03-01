@@ -205,6 +205,7 @@
       email: Adres e-mail
       submit: Wyślij
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Wygląda na to, że zarejestrowałeś się na niepoprawny adres e-mail.
         Wyślij e-mail pod adres support@code.org, aby uzyskać link do odzyskiwania
         hasła.
@@ -781,6 +782,9 @@
         sobą.
       audience: Wiek 13+
       cta: Zobacz instrukcję
+    hoc-encryption:
+      title: Proste szyfrowanie
+      body: Studenci nauczą się technik tworzenia i łamania zaszyfrowanych wiadomości.
     weblab:
       title: Laboratorium Sieci (beta)
       body: Web Lab to środowisko programowania, w którym można tworzyć proste strony
@@ -803,6 +807,10 @@
       title: Minecraft
       body: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry
         Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj
+        podróżując po świecie Minecraftu.
     sports:
       title: Zawody
       body: Stwórz grę w koszykówkę albo włąsną mieszankę różnych sportów.
@@ -821,7 +829,7 @@
         te lekcje bez komputerów.
     unplugged_conditionals:
       title: Warunkowe
-      body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności "bez prądu",
+      body: Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera,
         przy użyciu talii kart.
     widgets:
       title: Widżety
@@ -884,6 +892,10 @@
     hide_survey_last_answer: Ankieta jest anonimowa.  Odwiedź panel nauczyciela, by
       zobaczyć tabelę wyników.  Zauważ, że wyniki są widoczne tylko, jeśli co najmniej
       pięciu uczniów wypełniło ankiety.
+    survey_submission_thankyou: Dziękujemy za przesłanie ankiety! Ankieta została
+      wyczyszczona, dzięki czemu Twoje odpowiedzi pozostają anonimowe. Pamiętaj, że
+      Twój nauczyciel nadal będzie widzieć odpowiedzi całej klasy, ale bez załączonych
+      imion.
   level_group-submittable:
     wrong_title: Dziękujemy
     wrong_body: Dziękujemy za przesłanie odpowiedzi.
@@ -1013,10 +1025,10 @@
     save: Zapisz
     delete: Usuń
     import: Importuj
-    share_link_import_bad_link_header: Link udostępniania nierozpoznany
-    share_link_import_bad_link_body: 'Nie mogliśmy zaimportować tego linku udostępniania.
-      Upewnij się, że używasz linku z łamigłówki Minecraft: Agent oraz że skopiowałeś
-      pełny link.'
+    share_link_import_bad_link_header: Nie rozpoznano udostępnionego linka
+    share_link_import_bad_link_body: 'Nie można było zaimportować tego udostępnionego
+      linka. Upewnij się, że ten link pochodzi z łamigłówki Minecraft: Agent i że
+      został skopiowany w całości.'
     share_link_import_error_header: Coś poszło nie tak.
     share_link_import_error_body: Wystąpił problem podczas importowania tego linku
       udostępniania. Proszę spróbować ponownie.

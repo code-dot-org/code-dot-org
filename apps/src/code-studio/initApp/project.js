@@ -4,6 +4,7 @@ import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -19,7 +20,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-import {queryParams, hasQueryParam} from '../utils';
+import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -30,6 +31,12 @@ var events = {
   appInitialized: 'appInitialized',
   workspaceChange: 'workspaceChange'
 };
+
+// Number of consecutive failed attempts to update the channel.
+let saveChannelErrorCount = 0;
+
+// Number of consecutive failed attempts to update the sources.
+let saveSourcesErrorCount = 0;
 
 /**
  * Helper for when we split our pathname by /. channel_id and action may end up
@@ -62,6 +69,9 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+// Server time at which the first project version was saved from this browser tab,
+// for logging purposes.
+var firstSaveTimestamp;
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
@@ -134,7 +144,14 @@ var projects = module.exports = {
    * This method is used so that it can be mocked for unit tests.
    */
   getUrl() {
-    return location.href;
+    return this.getLocation().href;
+  },
+
+  /**
+   * This method exists to be mocked for unit tests.
+   */
+  getLocation() {
+    return document.location;
   },
 
   /**
@@ -168,6 +185,32 @@ var projects = module.exports = {
       }
     }
     return url + fragment + queryString;
+  },
+
+  /**
+   * Returns a share URL for the current project.
+   *
+   * Share URLs can vary by application environment and project type.  For most
+   * project types the share URL is the same as the project edit and view URLs,
+   * but has no action appended to the project's channel ID. Weblab is a special
+   * case right now, because it shares projects to codeprojects.org.
+   *
+   * This function depends on the document location to determine the current
+   * application environment.
+   *
+   * @returns {string} Fully-qualified share URL for the current project.
+   */
+  getShareUrl() {
+    const location = this.getLocation();
+    if (this.isWebLab()) {
+      const re = /([-.]?studio)?\.?code.org/i;
+      const environmentKey = location.hostname.replace(re, '');
+      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
+      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+      return `${location.protocol}//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
+    } else {
+      return location.origin + this.getPathName();
+    }
   },
 
   getCurrentTimestamp() {
@@ -300,10 +343,10 @@ var projects = module.exports = {
     // we'll load the project and show them a small alert
     const pageAction = parsePath().action;
 
-    // NOTE: appOptions.isAdmin is not a security setting as it can be manipulated
-    // by the user. In this case that's okay, since all that does is allow them to
-    // view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.isAdmin;
+    // NOTE: appOptions.canResetAbuse is not a security setting as it can be
+    // manipulated by the user. In this case that's okay, since all that does
+    // is allow them to view a project that was marked as abusive.
+    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
@@ -369,8 +412,10 @@ var projects = module.exports = {
   },
 
   showHeaderForProjectBacked() {
-    if (this.shouldUpdateHeaders() && !this.shouldHideShareAndRemix()) {
-      header.showHeaderForProjectBacked();
+    if (this.shouldUpdateHeaders()) {
+      header.showHeaderForProjectBacked({
+        showShareAndRemix: !this.shouldHideShareAndRemix()
+      });
     }
   },
   setName(newName) {
@@ -498,6 +543,7 @@ var projects = module.exports = {
       case 'turtle':
         switch (appOptions.skinId) {
           case 'artist':
+          case 'artist_zombie':
             return msg.defaultProjectNameArtist();
           case 'anna':
           case 'elsa':
@@ -551,14 +597,18 @@ var projects = module.exports = {
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
+        } else if (appOptions.level.isK1) {
+          return 'artist_k1';
         }
         return 'artist';
       case 'calc':
         return 'calc';
       case 'craft':
-        if (appOptions.level.isEventLevel) {
+        if (appOptions.level.isAgentLevel) {
+          return 'minecraft_hero';
+        } else if (appOptions.level.isEventLevel) {
           return 'minecraft_designer';
-        } else if (appOptions.level.isConnectionLevel || appOptions.level.isAgentLevel) {
+        } else if (appOptions.level.isConnectionLevel) {
           return 'minecraft_codebuilder';
         }
         return 'minecraft_adventurer';
@@ -579,6 +629,8 @@ var projects = module.exports = {
           return 'infinity';
         } else if (appOptions.skinId === 'gumball') {
           return 'gumball';
+        } else if (appOptions.level.isK1) {
+          return 'playlab_k1';
         }
         return 'playlab';
       case 'weblab':
@@ -599,6 +651,10 @@ var projects = module.exports = {
     }
   },
 
+  isWebLab() {
+    return this.getStandaloneApp() === 'weblab';
+  },
+
   canServerSideRemix() {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
@@ -613,6 +669,12 @@ var projects = module.exports = {
    */
   isSupportedLevelType() {
     return !!this.getStandaloneApp();
+  },
+  /*
+   * @returns {boolean} Whether a project should use the sources api.
+   */
+  useSourcesApi() {
+    return this.getStandaloneApp() !== 'weblab';
   },
   /**
    * @returns {string} The path to the app capable of running
@@ -689,23 +751,64 @@ var projects = module.exports = {
       throw new Error('Attempting to blow away existing levelHtml');
     }
 
-    unpackSources(sourceAndHtml);
     if (this.getStandaloneApp()) {
       current.level = this.appToProjectUrl();
       current.projectType = this.getStandaloneApp();
     }
 
-    var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-    sources.put(channelId, packSources(), filename, function (err, response) {
-      currentSourceVersionId = response.versionId;
-      current.migratedToS3 = true;
+    unpackSources(sourceAndHtml);
 
+    const updateChannels = () => {
       channels.update(channelId, current, function (err, data) {
         initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
-    }.bind(this));
+    };
+
+    if (this.useSourcesApi()) {
+      let params = '';
+      if (currentSourceVersionId) {
+        params = `?version=${currentSourceVersionId}` +
+          `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
+          `&tabId=${utils.getTabId()}`;
+      }
+      const filename = SOURCE_FILE + params;
+      sources.put(channelId, packSources(), filename, function (err, response) {
+        if (err) {
+          saveSourcesErrorCount++;
+          this.showSaveError_('save-sources-error', saveSourcesErrorCount, err + '');
+          return;
+        }
+        saveSourcesErrorCount = 0;
+        if (!firstSaveTimestamp) {
+          firstSaveTimestamp = response.timestamp;
+        }
+        currentSourceVersionId = response.versionId;
+        current.migratedToS3 = true;
+
+        updateChannels();
+      }.bind(this));
+    } else {
+      updateChannels();
+    }
+  },
+
+  getSourceForChannel(channelId, callback) {
+    channels.fetch(channelId, function (err, data) {
+      if (err) {
+        executeCallback(callback, null);
+      } else {
+        var url = channelId + '/' + SOURCE_FILE;
+        sources.fetch(url, function (err, data) {
+          if (err) {
+            executeCallback(callback, null);
+          } else {
+            executeCallback(callback, data.source);
+          }
+        });
+      }
+    });
   },
 
   createNewChannelFromSource(source, callback) {
@@ -758,12 +861,40 @@ var projects = module.exports = {
       });
     });
   },
+  showSaveError_(errorType, errorCount, errorText) {
+    header.showProjectSaveError();
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'project-data-integrity',
+        study_group: 'v2',
+        event: errorType,
+        data_int: errorCount,
+        project_id: current.id + '',
+        data_string: errorText,
+        // Some fields in the data_json are repeated in separate fields above, so
+        // that they can be easily searched on as separate fields, and also have
+        // appropriately descriptive names in the data_json.
+        data_json: JSON.stringify({
+          errorCount: errorCount,
+          errorText: errorText,
+          isOwner: this.isOwner(),
+          currentUrl: window.location.href,
+          shareUrl: this.getShareUrl(),
+          currentSourceVersionId: currentSourceVersionId,
+        }),
+      },
+      {includeUserId: true}
+    );
+  },
   updateCurrentData_(err, data, options = {}) {
     const { shouldNavigate } = options;
     if (err) {
-      $('.project_updated_at').text('Error saving project');  // TODO i18n
+      saveChannelErrorCount++;
+      this.showSaveError_('save-channel-error', saveChannelErrorCount, err + '');
       return;
     }
+    saveChannelErrorCount = 0;
 
     // The following race condition can lead to thumbnail URLs not being stored
     // in the project metadata:
@@ -873,6 +1004,7 @@ var projects = module.exports = {
   copy(newName, options = {}) {
     const { shouldPublish } = options;
     current = current || {};
+    const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
     if (shouldPublish) {
@@ -884,7 +1016,7 @@ var projects = module.exports = {
       channels.create(current, (err, data) => {
         this.updateCurrentData_(err, data, options);
         err ? reject(err) : resolve();
-      });
+      }, queryParams);
     }).then(() => this.save(
       false /* forceNewVersion */,
       true /* preparingRemix */
@@ -969,20 +1101,20 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        channels.fetch(pathInfo.channelId, function (err, data) {
+        channels.fetch(pathInfo.channelId, (err, data) => {
           if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            fetchSource(data, function () {
+            fetchSource(data, () => {
               if (current.isOwner && pathInfo.action === 'view') {
                 isEditing = true;
               }
               fetchAbuseScoreAndPrivacyViolations(function () {
                 deferred.resolve();
               });
-            }, queryParams('version'));
+            }, queryParams('version'), this.useSourcesApi());
           }
         });
       } else {
@@ -991,16 +1123,16 @@ var projects = module.exports = {
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      channels.fetch(appOptions.channel, function (err, data) {
+      channels.fetch(appOptions.channel, (err, data) => {
         if (err) {
           deferred.reject();
         } else {
-          fetchSource(data, function () {
+          fetchSource(data, () => {
             projects.showHeaderForProjectBacked();
             fetchAbuseScoreAndPrivacyViolations(function () {
               deferred.resolve();
             });
-          }, queryParams('version'));
+          }, queryParams('version'), this.useSourcesApi());
         }
       });
     } else {
@@ -1074,8 +1206,9 @@ var projects = module.exports = {
  * @param {object} channelData Data we fetched from channels api
  * @param {function} callback
  * @param {string?} version Optional version to load
+ * @param {boolean} useSourcesApi use sources api when true
  */
-function fetchSource(channelData, callback, version) {
+function fetchSource(channelData, callback, version, useSourcesApi) {
   // Explicitly remove levelSource/levelHtml from channels
   delete channelData.levelSource;
   delete channelData.levelHtml;
@@ -1086,7 +1219,7 @@ function fetchSource(channelData, callback, version) {
   current = channelData;
 
   projects.setTitle(current.name);
-  if (channelData.migratedToS3) {
+  if (useSourcesApi && channelData.migratedToS3) {
     var url = current.id + '/' + SOURCE_FILE;
     if (version) {
       url += '?version=' + version;
@@ -1154,7 +1287,7 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
   } else if ((dashboard.project.getStandaloneApp() === 'applab') ||
     (dashboard.project.getStandaloneApp() === 'gamelab') ||
-    (dashboard.project.getStandaloneApp() === 'weblab')) {
+    (dashboard.project.isWebLab())) {
     deferredCallsToMake.push(new Promise(fetchSharingDisabled));
   }
   Promise.all(deferredCallsToMake).then(function () {
@@ -1163,15 +1296,17 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 }
 
 /**
- * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ * Allow setting Maker APIs enabled / disabled via URL parameters.
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
     currentSources.makerAPIsEnabled = true;
+    updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = false;
+    updateQueryParam('disableMaker', undefined, true);
   }
 }
 

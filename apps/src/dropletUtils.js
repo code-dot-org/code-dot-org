@@ -34,8 +34,8 @@ import {singleton as studioApp} from './StudioApp';
  * @property {DropletBlock[]} blocks list of blocks
  * @property {Object} categories configuration of categories within which to
  *   place blocks
- * @property {boolean} autocompleteFunctionsWithParens If set, we will append
- *   "();" after functions
+ * @property {boolean} autocompleteFunctionsWithSemicolon If set, we will append
+ *   "();" after functions (vs. the "()" we always append)
  * @property {string[]} additionalPredefValues Additional keywords to add to
  *   autocomplete and consider 'defined' for linting purposes.
  */
@@ -80,19 +80,19 @@ export const globalFunctions = {
  */
 export const dropletGlobalConfigBlocks = [
   {func: 'getTime', parent: globalFunctions, category: 'Control', type: 'value' },
-  {func: 'randomNumber', parent: globalFunctions, category: 'Math', type: 'value' },
-  {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
-  {func: 'promptNum', parent: globalFunctions, category: 'Variables', type: 'value' }
+  {func: 'randomNumber', parent: globalFunctions, category: 'Math', type: 'value', params: ['__']  },
+  {func: 'prompt', parent: window, category: 'Variables', type: 'value', params: ['__'] },
+  {func: 'promptNum', parent: globalFunctions, category: 'Variables', type: 'value', params: ['__'] }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 export const dropletBuiltinConfigBlocks = [
-  {func: 'Math.round', category: 'Math', type: 'value', docFunc: 'mathRound' },
-  {func: 'Math.abs', category: 'Math', type: 'value', docFunc: 'mathAbs' },
-  {func: 'Math.max', category: 'Math', type: 'value', docFunc: 'mathMax' },
-  {func: 'Math.min', category: 'Math', type: 'value', docFunc: 'mathMin' },
+  {func: 'Math.round', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathRound' },
+  {func: 'Math.abs', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathAbs' },
+  {func: 'Math.max', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMax' },
+  {func: 'Math.min', category: 'Math', type: 'value', params: ['__'], docFunc: 'mathMin' },
   {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
 ];
 
@@ -377,6 +377,8 @@ export function generateDropletPalette(codeFunctions, dropletConfig) {
 }
 
 function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties, configBlocks) {
+  const acUtil = window.ace.require("ace/autocomplete/util");
+
   for (let i = 0; i < configBlocks.length; i++) {
     const block = configBlocks[i];
     if (!block.noAutocomplete) {
@@ -388,40 +390,61 @@ function populateCompleterApisFromConfigBlocks(opts, apis, methodsAndProperties,
         score: 100,
         meta: block.category
       };
-      if (opts.autocompleteFunctionsWithParens) {
-        newApi.completer = {
-          insertMatch: function (value, editor) {
-            // Remove the filterText that was already typed (ace's built-in
-            // insertMatch would normally do this automatically)
-            if (editor.completer.completions.filterText) {
-              const ranges = editor.selection.getAllRanges();
-              for (let i = 0, range; !!(range = ranges[i]); i++) {
-                range.start.column -= editor.completer.completions.filterText.length;
-                editor.session.remove(range);
-              }
-            }
-            // Insert the function name plus parentheses and semicolon:
-            editor.execCommand("insertstring", value + '();');
-            if (this.params) {
-              // Move the selection back so parameters can be entered:
-              const curRange = editor.selection.getRange();
-              curRange.start.column -= 2;
-              curRange.end.column -= 2;
-              editor.selection.setSelectionRange(curRange);
-            }
-          }.bind(block, newApi.value)
-        };
-      }
-      if (newApi.value.indexOf('*.') === 0 || newApi.value.indexOf('?.') === 0) {
-        // Populate this in a special methodsAndProperties collection:
-
+      const methodOrProperty = (newApi.value.indexOf('*.') === 0 ||
+          newApi.value.indexOf('?.') === 0);
+      if (methodOrProperty) {
         // Store the original name in a docFunc property for the
         // benefit of our DropletAutocompletePopupTooltipManager:
         newApi.docFunc = newApi.value;
         // Update the value to skip over the '*.' or '?.' at the beginning:
         newApi.value = newApi.value.substring(2);
-        methodsAndProperties.push(newApi);
+      }
 
+      newApi.completer = {
+        insertMatch: function (value, editor) {
+          // Remove the filterText that was already typed (ace's built-in
+          // insertMatch would normally do this automatically) plus the rest of
+          // the identifier after the filterText...
+          let modifyingExistingFunctionCall = false;
+          if (editor.completer.completions.filterText) {
+            const ranges = editor.selection.getAllRanges();
+            for (let i = 0, range; !!(range = ranges[i]); i++) {
+              range.start.column -= editor.completer.completions.filterText.length;
+              const line = editor.session.getLine(range.end.row);
+              const lengthOfRestOfIdentifier =
+                  acUtil.retrieveFollowingIdentifier(line, range.end.column).length;
+              range.end.column += lengthOfRestOfIdentifier;
+              modifyingExistingFunctionCall = line[range.end.column] === '(';
+              editor.session.remove(range);
+            }
+          }
+          // Insert the function name plus parentheses and semicolon:
+          const isProp = block.type === 'property' || block.type === 'readonlyproperty';
+          if (isProp) {
+            editor.execCommand("insertstring", value);
+          } else {
+            const suffix = modifyingExistingFunctionCall ? '' :
+                opts.autocompleteFunctionsWithSemicolon ? '();' : '()';
+            editor.execCommand("insertstring", value + suffix);
+            if (this.params) {
+              // Move the selection back so parameters can be entered:
+              const curRange = editor.selection.getRange();
+              let moveSelectionCharCount;
+              if (modifyingExistingFunctionCall) {
+                moveSelectionCharCount = 1;
+              } else {
+                moveSelectionCharCount = -(suffix.length - 1);
+              }
+              curRange.start.column += moveSelectionCharCount;
+              curRange.end.column += moveSelectionCharCount;
+              editor.selection.setSelectionRange(curRange);
+            }
+          }
+        }.bind(block, newApi.value)
+      };
+      if (methodOrProperty) {
+        // Populate this in a special methodsAndProperties collection:
+        methodsAndProperties.push(newApi);
       } else {
         // Populate this in the "normal" apis collection:
         apis.push(newApi);
@@ -480,8 +503,9 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
   const methodsAndProperties = [];
   const opts = {};
 
-  // If autocompleteFunctionsWithParens is set, we will append "();" after functions
-  opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
+  // If autocompleteFunctionsWithSemicolon is set, we will append "();" after
+  // functions, instead of the "()" we normally append
+  opts.autocompleteFunctionsWithSemicolon = dropletConfig.autocompleteFunctionsWithSemicolon;
 
   if (functionFilter) {
     const mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, { paletteOnly: true });
@@ -495,18 +519,87 @@ export function generateAceApiCompleter(functionFilter, dropletConfig) {
 
   return {
     getCompletions(editor, session, pos, prefix, callback) {
-      if (prefix.length === 0) {
+      // Ensure our updateCompletionsOverride is installed - note that we must wait
+      // until a completor object has been created to install the hook. This
+      // getCompletions() function will be called from within the original
+      // updateCompletions() call, which is ok to run without our hook. We need
+      // to make sure subsequent calls to updateCompletions() are overriden
+      installAceUpdateCompletionsHook(editor);
+      const token = editor.session.getTokenAt(pos.row, pos.column);
+      // Ignore cases where:
+      // * the prefix is empty
+      // * we are in a comment
+      // * the prefix is a number with less than 3 digits (matches Atom semantics)
+      if (prefix.length === 0 || token.type === 'comment' ||
+          (prefix.length < 3 && !isNaN(Number(prefix)))) {
         callback(null, []);
         return;
       }
-      if (isPositionAfterDot(session, pos)) {
-        // Following a dot, we autocomplete from methodsAndProperties:
-        callback(null, methodsAndProperties);
-      } else {
-        callback(null, apis);
-      }
+      // Following a dot, we autocomplete from methodsAndProperties:
+      const list = isPositionAfterDot(session, pos) ? methodsAndProperties : apis;
+
+      // Filter our list to contain substring word matches:
+      const filteredList = filterListBasedOnWordMatches(prefix, list);
+      callback(null, filteredList);
     }
   };
+}
+
+function filterListBasedOnWordMatches(prefix, list) {
+  // Filter our list to contain substring word matches based on camelCase,
+  // snake_case or Global.method:
+  const modifiedPrefix = prefix.replace(/_|\./g, '').toLowerCase();
+  return list.filter(completion => {
+    const { value } = completion;
+    // https://stackoverflow.com/a/34680912
+    const edges = /([A-Z](?=[A-Z][a-z])|[^A-Z](?=[A-Z])|[a-zA-Z](?=[^a-zA-Z]))/g;
+    const words = value.replace('.', '_').replace(edges, '$1_').split('_');
+    // Transform words into phrases that we consider to be "matches": e.g.
+    // words ['get', 'Time'] become phrases ['getTime', 'Time']
+    const phrases = words.map((word, index) => words.slice(index).join(''));
+    for (const phrase of phrases) {
+      if (phrase.toLowerCase().indexOf(modifiedPrefix) === 0) {
+        return completion;
+      }
+    }
+  });
+}
+
+/**
+ * Install our own updateCompletions method to override the default ace
+ * behavior so that we can modify the filtering behavior
+ * @param {AceEditor} editor
+ */
+function installAceUpdateCompletionsHook(editor) {
+  if (editor.completer.updateCompletions !== updateCompletionsOverride) {
+    originalUpdateCompletions = editor.completer.updateCompletions;
+    editor.completer.updateCompletions = updateCompletionsOverride;
+  }
+}
+
+var originalUpdateCompletions;
+
+/**
+ * Our overridden updateCompletions method, installed so that we can modify the
+ * filtering behavior
+ * @param {completor} this
+ * @param {boolean} keepPopupPosition
+ */
+function updateCompletionsOverride(keepPopupPosition) {
+  if (keepPopupPosition && this.base && this.completions) {
+    const pos = this.editor.getCursorPosition();
+    const prefix = this.editor.session.getTextRange({start: this.base, end: pos});
+
+    // Repopulate all 3 properties of the FilteredList (stored in this.completions)
+    // with a new list, filtered by our algorithm, but not yet filtered by ace's
+    // algorithm. Ensure that filterText is blank so that the original
+    // updateCompletions() won't just return immediately
+
+    this.completions.all = filterListBasedOnWordMatches(prefix, this.completions.all);
+    this.completions.filtered = this.completions.all;
+    this.completions.filterText = "";
+  }
+  return originalUpdateCompletions.call(this, keepPopupPosition);
 }
 
 /**

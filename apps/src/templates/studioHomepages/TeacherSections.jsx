@@ -7,26 +7,24 @@ import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 
 class TeacherSections extends Component {
   static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
 
     //Redux provided
     asyncLoadSectionData: PropTypes.func.isRequired,
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.asyncLoadSectionData();
   }
 
   render() {
-    const {isRtl, queryStringOpen} = this.props;
+    const {queryStringOpen} = this.props;
     return (
       <div id="classroom-sections">
         <ContentContainer
           heading={i18n.sectionsTitle()}
-          isRtl={isRtl}
         >
-          <OwnedSections isRtl={isRtl} queryStringOpen={queryStringOpen}/>
+          <OwnedSections queryStringOpen={queryStringOpen}/>
         </ContentContainer>
       </div>
     );

@@ -224,11 +224,26 @@ Scenario: Starwars Flow
   Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
   And I press "runButton"
 
-  # the starwars app type is not publishable
   When I open the project share dialog
-  Then the project cannot be published
+  Then the project is unpublished
 
   When I navigate to the share URL
   And I wait to see "#footerDiv"
   Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
   And element "#codeWorkspace" is hidden
+
+@eyes
+@as_student
+Scenario: My Projects
+  When I open my eyes to test "My Projects page"
+  And I am on "http://studio.code.org/projects/"
+  And I wait to see ".header_user"
+  And I wait until element "#uitest-view-full-list" is visible
+  And element "a[href='/projects/artist/new']" is visible
+  And element "a[href='/projects/gumball/new']" is not visible
+  Then I see no difference for "page load"
+
+  When I click selector "#uitest-view-full-list"
+  And I wait until element "a[href='/projects/gumball/new']" is visible
+  Then I see no difference for "view full list of new project types"
+  And I close my eyes

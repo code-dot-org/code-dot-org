@@ -6,14 +6,10 @@ social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
   "twitter:url": "https://<%=request.host%>/learn"
-  "twitter:image:src" : "https://code.org/images/learn/og-learn-student.png"
   "twitter:title": "Hour of Code"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   "og:title": "Hour of Code"
   "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages."
-  "og:image" : "https://code.org/images/learn/og-learn-student.png"
-  "og:image:width": "853"
-  "og:image:height": "447"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -74,7 +70,7 @@ style_min: false
 
 #fullwidth
   - if request.site == 'code.org'
-    = view :header2
+    = view :header
   - else
     #desktop-header.desktop-feature
       = view :header, variant: "desktop"
@@ -116,6 +112,9 @@ style_min: false
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
+- sort_by_popularity = request.site == 'code.org'
+- sort_by_popularity &&= [false, "pre-hoc"].include?(DCDO.get("hoc_mode", false))
+
 #tutorials
 
 :javascript
@@ -126,7 +125,8 @@ style_min: false
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
+      defaultSortByPopularity: #{sort_by_popularity}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 

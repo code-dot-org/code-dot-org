@@ -58,6 +58,24 @@
   = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
   .video-preview{style: 'display: block'}
 
+.field
+  = f.label :map_reference, 'Map Reference'
+  %p If there is a key resource you want to reference in the instructions, add the link here. It will show up under the 'Help & Tips' tab.
+  %p This should be a string representing the URL on docs.code.org you want to embed, i.e. '/docs/csd/maker_leds/index.html'.
+  = f.text_field :map_reference, placeholder: 'Map Reference'
+
+
+.field
+  = f.label :reference_link, 'Reference Links'
+  %p Add links to pages on Curriculum Builder below. They will show up in the 'Help & Tips' tab below any videos and the map reference.
+  %p These should be strings representing the URL on [docs|curriculum].code.org you want to embed, i.e. '/docs/csd/maker_leds/index.html' or '/curriculum/path/to/file'.
+  %p Click the + sign if you want to add multiple links
+  - @level.reference_links = [''] unless @level.reference_links.try(:present?)
+  - @level.reference_links.each do |ref_link|
+    = text_field_tag 'level[reference_links][]', ref_link, placeholder: 'Additional Reference Link'
+  #plusAnswerReference
+    %i.fa.fa-plus-circle
+
 #callout_editor.field
   .json_editor
     .json_template

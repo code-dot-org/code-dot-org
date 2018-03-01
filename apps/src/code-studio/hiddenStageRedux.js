@@ -8,16 +8,17 @@ import Immutable from 'immutable';
 // TODO: rename file to hiddenBySection
 // TODO: rename action prefix
 
-export const SET_HIDDEN_STAGES_INITIALIZED = 'hiddenStage/SET_HIDDEN_STAGES_INITIALIZED';
-export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
-export const UPDATE_HIDDEN_SCRIPT = 'hiddenStage/UPDATE_HIDDEN_SCRIPT';
+const SET_HIDDEN_STAGES = 'hiddenStage/SET_HIDDEN_STAGES';
+const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
+const UPDATE_HIDDEN_SCRIPT = 'hiddenStage/UPDATE_HIDDEN_SCRIPT';
 
 export const STUDENT_SECTION_ID = 'STUDENT';
 
 const HiddenState = Immutable.Record({
   hiddenStagesInitialized: false,
   hideableStagesAllowed: false,
-  // mapping of section id to hidden stages for that section
+  // A mapping, where the key is the sectionId, and the value is a mapping from
+  // stageId to a bool indicating whether that stage is hidden (true) or not (false)
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
   // for the student based on the sections they are in.
@@ -35,41 +36,72 @@ const HiddenState = Immutable.Record({
 });
 
 /**
- * hidden stage reducer
- * Mapping of stage ids to bools indicating whether it's hidden or not
+ * Validates that we never have multiple stagesBySection if we have STUDENT_SECTION_ID
+ * @throws If new state is invalid
+ */
+function validateSectionIds(state) {
+  if (state.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
+      state.get('stagesBySection').size > 1) {
+    throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
+  }
+}
+
+/**
+ * Hidden stage reducer
  */
 export default function reducer(state = new HiddenState(), action) {
+  if (action.type === SET_HIDDEN_STAGES) {
+    const { hiddenStagesPerSection, hideableStagesAllowed } = action;
+
+    // Iterate through each section
+    const sectionIds = Object.keys(hiddenStagesPerSection);
+    let nextState = state;
+    sectionIds.forEach(sectionId => {
+      // And iterate through each hidden stage within that section
+      const hiddenStageIds = hiddenStagesPerSection[sectionId];
+      hiddenStageIds.forEach(stageId => {
+        nextState = nextState.setIn(['stagesBySection', sectionId, stageId.toString()], true);
+      });
+    });
+    validateSectionIds(nextState);
+
+    return nextState.merge({
+      hiddenStagesInitialized: true,
+      hideableStagesAllowed
+    });
+  }
+
   if (action.type === UPDATE_HIDDEN_STAGE) {
     const { sectionId, stageId, hidden } = action;
     const nextState = state.setIn(['stagesBySection', sectionId, stageId.toString()], hidden);
-    if (nextState.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
-        nextState.get('stagesBySection').size > 1) {
-      throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
-    }
+    validateSectionIds(nextState);
     return nextState;
   }
 
   if (action.type === UPDATE_HIDDEN_SCRIPT) {
     const { sectionId, scriptId, hidden } = action;
     const nextState = state.setIn(['scriptsBySection', sectionId, scriptId.toString()], hidden);
-    if (nextState.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
-        nextState.get('stagesBySection').size > 1) {
-      throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
-    }
+    validateSectionIds(nextState);
     return nextState;
-  }
-
-  if (action.type === SET_HIDDEN_STAGES_INITIALIZED) {
-    return state.merge({
-      hiddenStagesInitialized: true,
-      hideableStagesAllowed: action.hideableStagesAllowed
-    });
   }
 
   return state;
 }
 
 // action creators
+
+/**
+ * @param {object} hiddenStagesPerSection - Mapping from sectionId to a list of stageIds
+ *   that are hidden for that section.
+ * @param {bool} hideableStagesAllowed - True if we're able to toggle hidden stages
+ */
+export function setHiddenStages(hiddenStagesPerSection, hideableStagesAllowed) {
+  return {
+    type: SET_HIDDEN_STAGES,
+    hiddenStagesPerSection,
+    hideableStagesAllowed
+  };
+}
 export function updateHiddenStage(sectionId, stageId, hidden) {
   return {
     type: UPDATE_HIDDEN_STAGE,
@@ -136,13 +168,6 @@ function postToggleHidden(scriptName, sectionId, stageId, hidden) {
   });
 }
 
-export function setHiddenStagesInitialized(hideableStagesAllowed) {
-  return {
-    type: SET_HIDDEN_STAGES_INITIALIZED,
-    hideableStagesAllowed
-  };
-}
-
 /**
  * Query server for hidden stage ids, and (potentially) toggle whether or not we
  * are able to mark stages as hideable.
@@ -179,13 +204,7 @@ function initializeHiddenStages(data, canHideStages) {
       data = { [STUDENT_SECTION_ID]: data };
     }
 
-    Object.keys(data).forEach(sectionId => {
-      const hiddenStageIds = data[sectionId];
-      hiddenStageIds.forEach(stageId => {
-        dispatch(updateHiddenStage(sectionId, stageId, true));
-      });
-    });
-    dispatch(setHiddenStagesInitialized(!!canHideStages));
+    dispatch(setHiddenStages(data, !!canHideStages));
   };
 }
 
@@ -239,7 +258,7 @@ function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
     return false;
   }
   // if we don't have a sectionId, we must be a student
-  if (!sectionId){
+  if (!sectionId) {
     sectionId = STUDENT_SECTION_ID;
   }
   const bySection = state.get(bySectionKey);

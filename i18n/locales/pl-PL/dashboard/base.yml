@@ -69,7 +69,7 @@ pl:
   try_k8intro: "Wypróbuj nasz wprowadzający kurs z informatyki (15-25 godzin)"
   k8intro: "Kurs Wprowadzenie do Informatyki dla K-8 (15-25 godzin)"
   already_started: "Już rozpocząłeś ? Wznów tutaj >> "
-  demos: 'Admin: Wszystkie dema'
+  demos: "Admin: Wszystkie dema"
   continue: 'Dalej'
   prize: 'nagroda'
   more_info: 'Więcej informacji'
@@ -171,6 +171,7 @@ pl:
       email: 'Adres e-mail'
       submit: 'Wyślij'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Wygląda na to, że zarejestrowałeś się na niepoprawny adres e-mail. Wyślij e-mail pod adres support@code.org, aby uzyskać link do odzyskiwania hasła.'
     change_form:
       title: 'Zmień swoje hasło'
@@ -220,7 +221,7 @@ pl:
       provider_managed_section: "Ta sekcja jest zarządzana przez innego dostawcę i nie można do niej dołączyć. Poproś swojego nauczyciela o dodanie Ciebie poprzez %{provider} i ponowną synchronizację sekcji."
     mail:
       student_disassociated:
-        subject: 'Powiadomienie Code.org: %{student_name} nie jest już powiązany z Tobą jako Twój uczeń.'
+        subject: "Powiadomienie Code.org: %{student_name} nie jest już powiązany z Tobą jako Twój uczeń."
   reports:
     error:
       access_denied: "Nie masz dostępu do statystyk tej osoby"
@@ -352,7 +353,7 @@ pl:
     current_password_hint: '(potrzebujemy Twojego aktualnego hasła, aby potwierdzić Twoje zmiany)'
     delete: 'Usuń swoje konto'
     delete_text: "Kliknięcie na poniższym przycisku spowoduje usunięcie Twojego konta."
-    delete_text_teacher_note: 'Uwaga: usunięcie Twojego konta nie spowoduje usunięcia kont Twoich uczniów.'
+    delete_text_teacher_note: "Uwaga: usunięcie Twojego konta nie spowoduje usunięcia kont Twoich uczniów."
     delete_confirm: 'Czy na pewno chcesz usunąć swoje konto?'
     deleted_user: 'użytkownik usunięty'
     no_password_because_oauth: 'Bez hasła, ponieważ logujesz się przy pomocy innego dostawcy.'
@@ -363,7 +364,7 @@ pl:
     create_personal_login_under_13_parent_email: 'Adres e-mail rodzica lub opiekuna'
     create_personal_login_info: 'Jeśli chcesz nadal używać swojego konta Code.org, nawet po zakończeniu roku szkolnego, możesz utworzyć swój osobisty login poniżej.'
     create_personal_login_terms: "Tworząc swój osobisty login, zobowiązuję się do przestrzegania <a href='%{terms_of_service_url}', target='_blank'>regulaminu</a> Code.org. Jeśli mam poniżej 13 lat, potwierdzam, że otrzymałem zgodę moich rodziców lub prawnych opiekunów na korzystanie z usług Code.org nawet bez nadzoru nauczyciela."
-    create_personal_login_email_note: 'Uwaga: Adresy e-mail nie są przechowywane w formie, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Aby uzyskać więcej informacji, zobacz naszą <a href=''%{privacy_policy_url}'', target=''_blank''>politykę prywatności</a>.'
+    create_personal_login_email_note: "Uwaga: Adresy e-mail nie są przechowywane w formie, która pozwalałaby nam kontaktować się z uczniami. Uczniowie nigdy nie będą otrzymywać e-maili od Code.org, z wyjątkiem odzyskiwania hasła. Aby uzyskać więcej informacji, zobacz naszą <a href='%{privacy_policy_url}', target='_blank'>politykę prywatności</a>."
     enter_new_login_info: 'Wprowadź swoje nowe dane logowania'
     confirm_secret_words: 'Potwierdź, że to ty, wprowadzając swoje aktualne sekretne słowa'
     enter_parent_email: "Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)"
@@ -567,6 +568,9 @@ pl:
       body: "Laboratorium Gier jest środowiskiem programistycznym, w którym można wykonać proste animacje i gry używając obiektów i postaci, które współdziałają ze sobą."
       audience: "Wiek 13+"
       cta: "Zobacz instrukcję"
+    hoc-encryption:
+      title: "Proste szyfrowanie"
+      body: "Studenci nauczą się technik tworzenia i łamania zaszyfrowanych wiadomości."
     weblab:
       title: "Laboratorium Sieci (beta)"
       body: "Web Lab to środowisko programowania, w którym można tworzyć proste strony www za pomocą HTML i CSS. Zaprojektuj swoją stronę www i udostępnij ją w kilka sekund."
@@ -585,6 +589,9 @@ pl:
     minecraft2016:
       title: "Minecraft"
       body: "Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu."
     sports:
       title: "Zawody"
       body: "Stwórz grę w koszykówkę albo włąsną mieszankę różnych sportów."
@@ -598,7 +605,7 @@ pl:
       body_short: "Jeżeli nie macie dostępu do komputerów, to wypróbujcie w klasie te lekcje bez komputerów."
     unplugged_conditionals:
       title: "Warunkowe"
-      body: "Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności \"bez prądu\", przy użyciu talii kart."
+      body: "Poznawaj algorytmy i wyrażenia warunkowe w tej aktywności bez komputera, przy użyciu talii kart."
     widgets:
       title: "Widżety"
       body: "Uczniowie mogą odkrywać pojęcia z naszego kursu Zasady Informatyki w praktyczny sposób, za pomocą tych narzędzi cyfrowych. Użyj samych widżetów lub stwórz jednowymiarową lekcję dla swojej klasy."
@@ -648,6 +655,7 @@ pl:
     correct_title: "Dziękujemy"
     correct_body: "Dziękujemy za przesłanie odpowiedzi."
     hide_survey_last_answer: "Ankieta jest anonimowa.  Odwiedź panel nauczyciela, by zobaczyć tabelę wyników.  Zauważ, że wyniki są widoczne tylko, jeśli co najmniej pięciu uczniów wypełniło ankiety."
+    survey_submission_thankyou: "Dziękujemy za przesłanie ankiety! Ankieta została wyczyszczona, dzięki czemu Twoje odpowiedzi pozostają anonimowe. Pamiętaj, że Twój nauczyciel nadal będzie widzieć odpowiedzi całej klasy, ale bez załączonych imion."
   level_group-submittable:
     wrong_title: "Dziękujemy"
     wrong_body: "Dziękujemy za przesłanie odpowiedzi."
@@ -695,7 +703,7 @@ pl:
     sign_out: 'Jeśli nie chcesz podać swojego wieku, to możesz się <a href="%{url}"> wylogować</a>.'
   terms_interstitial:
     title: "Zaktualizowano Warunki usług i Politykę prywatności"
-    intro_desc: 'Zaktualizowaliśmy nasze Warunki Użytkowania i Politykę Prywatności, jak pokazano poniżej. Zmiany wchodzą w życie z dniem 24 sierpnia 2016 r.  Największa zmiana: nie będziemy <i>przechowywać adresów e-mail dla kont uczniowskich na Code Studio.</i> Jest to wielka sprawa dla nas, i mamy nadzieję, że to wyznacza nowy standard dla prywatność uczniów w technologii kształcenia. Wysłaliśmy Ci podsumowanie innych zmian za pośrednictwem poczty elektronicznej.'
+    intro_desc: "Zaktualizowaliśmy nasze Warunki Użytkowania i Politykę Prywatności, jak pokazano poniżej. Zmiany wchodzą w życie z dniem 24 sierpnia 2016 r.  Największa zmiana: nie będziemy <i>przechowywać adresów e-mail dla kont uczniowskich na Code Studio.</i> Jest to wielka sprawa dla nas, i mamy nadzieję, że to wyznacza nowy standard dla prywatność uczniów w technologii kształcenia. Wysłaliśmy Ci podsumowanie innych zmian za pośrednictwem poczty elektronicznej."
     intro_instructions: "Najpierw musisz zaakceptować te nowe warunki dla uczniów w wieku poniżej 13 lat w swojej klasie, aby mieć pełny dostęp do wszystkich najnowszych funkcji w Code Studio.  Podczas rejestracji kont dla uczniów poniżej 13 roku życia, będziesz poproszony o potwierdzenie, że Twoja szkoła ma zgodę rodzicielską na zbieranie danych osobowych uczniów do korzystania z nich w szkole i dla korzyści edukacyjnych, w tym do korzystania z takich programów, jak Code Studio."
     tos: "Regulamin"
     privacy: "Polityka prywatności"
@@ -711,7 +719,7 @@ pl:
     message_with_suggestion: "Proszę sprawdzić czy następujące informacje są poprawne i zaktualizować je, jeśli istnieje taka potrzeba."
     save: "Zapisz"
   race_interstitial:
-    title: 'Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności w informatyce'
+    title: "Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności w informatyce"
     message: "Określ swoja przynależność rasową (zaznacz wszystko, co dotyczy Ciebie)"
     races:
       - 
@@ -754,8 +762,8 @@ pl:
     save: "Zapisz"
     delete: "Usuń"
     import: "Importuj"
-    share_link_import_bad_link_header: "Link udostępniania nierozpoznany"
-    share_link_import_bad_link_body: 'Nie mogliśmy zaimportować tego linku udostępniania. Upewnij się, że używasz linku z łamigłówki Minecraft: Agent oraz że skopiowałeś pełny link.'
+    share_link_import_bad_link_header: "Nie rozpoznano udostępnionego linka"
+    share_link_import_bad_link_body: "Nie można było zaimportować tego udostępnionego linka. Upewnij się, że ten link pochodzi z łamigłówki Minecraft: Agent i że został skopiowany w całości."
     share_link_import_error_header: "Coś poszło nie tak."
     share_link_import_error_body: "Wystąpił problem podczas importowania tego linku udostępniania. Proszę spróbować ponownie."
     exit: "Powrót do Kursu"

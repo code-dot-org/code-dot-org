@@ -38,9 +38,9 @@
 
 %br/
 
-%h2 Users
-- if @users.size > 0
-  = paginate @users
+%h2 #{@total_count}#{@total_count == AdminSearchController::MAX_TOTAL_SIZE ? '+' : ''} Users
+- if @total_count > 0
+  = paginate @users, total_pages: (@total_count / AdminSearchController::MAX_PAGE_SIZE.to_f).ceil
   %table.users
     %tr
       - ['ID', 'Name', 'Email', 'Provider', 'Deleted At', 'Undelete'].each do |field|

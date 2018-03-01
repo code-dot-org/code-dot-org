@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Veja abaixo um exemplo de resolução em apoio à Semana da Educação em Ciência da Computação e às suas metas, que pode ser usado pelos responsáveis pela legislação estadual e local.

@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
@@ -119,4 +120,6 @@ class TopCourse extends Component {
   }
 }
 
-export default Radium(TopCourse);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(TopCourse));

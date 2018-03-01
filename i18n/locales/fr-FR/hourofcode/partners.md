@@ -1,14 +1,11 @@
-* * *
-
+---
 title: <%= hoc_s(:title_partners) %>
+---
+L'Heure du Code est rendu possible grâce à la Commission Consultative et aux Comités d'Examen de l'Heure du Code et de l'Informatique.
 
-* * *
+La [Commission Consultative ](%= resolve_url('/advisory-committee') %) est comprise de représentant(e)s d'éducation primaire et secondaire, d'universités, d'organizations sans but lucratif, d'organizations à but lucratif et d'organizations internationales. Cette commission guide la stratégie de la campagne Heure du Code.
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
-
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
-
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led tutorials and teacher-led lesson plans submitted by hundreds of tutorial partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+Le [Comité d'Examen](%= resolve_url('/review-committee') %) est compris de 15 éducateurs provenant de toutes tranches d'éducation primaire et secondaire qui évaluent et recommandent des activités tout en utilisant la rubrique de la Commission Consultative. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
 
 Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
 
@@ -134,13 +131,13 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Partenaires pour les tutoriels
+# Activity Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Outils et partenaires d'infrastructure
+# Infrastructure Partners and Tools
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

@@ -1,0 +1,20 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+#thanks
+  %h1 Thank you for submitting your application to join Code.org’s Professional Learning Program!
+
+  %p
+    Your principal will receive a survey at the email address you provided,
+    asking for approval of your participation in the program.
+    %strong Your application will not be considered complete until your principal has finished this survey,
+    so please make sure your principal has received that email and completes the survey as soon as possible.
+
+  %p
+    In the meantime, please visit
+    = link_to 'https://code.org/yourschool', 'https://code.org/yourschool'
+    and tell us more about what computer science opportunities are available at your school.
+    Or, visit
+    = link_to 'https://code.org/educate', 'https://code.org/educate'
+    for additional resources and opportunities to connect with other computer science educators.
+    Thank you for supporting computer science for all!

@@ -1,42 +1,136 @@
 import React, {PropTypes} from 'react';
-import {Button, FormControl} from 'react-bootstrap';
-import Facilitator1819Questions from './detail_view_facilitator_specific_components';
+import { connect } from 'react-redux';
+import {
+  Button,
+  SplitButton,
+  MenuItem,
+  FormControl,
+  InputGroup
+} from 'react-bootstrap';
+import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
+import RegionalPartnerDropdown from './regional_partner_dropdown';
+import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
+import {ValidScores as TeacherValidScores} from '@cdo/apps/generated/pd/teacher1819ApplicationConstants';
+import _ from 'lodash';
+import {
+  ApplicationStatuses,
+  ApplicationFinalStatuses,
+  UnmatchedFilter,
+  UnmatchedLabel
+} from './constants';
 
-const STATUSES = ['Unreviewed', 'Pending', 'Move to Interview', 'Waitlisted', 'Accepted', 'Declined', 'Withdrawn'];
+const styles = {
+  notes: {
+    height: '95px'
+  },
+  statusSelect: {
+    marginRight: '5px'
+  },
+  editMenu: {
+    display: 'flex',
+  },
+  detailViewHeader: {
+    marginLeft: 'auto'
+  },
+  headerWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  saveButton: {
+    marginRight: '5px'
+  },
+  statusSelectGroup: {
+    maxWidth: 200,
+    marginRight: 5,
+    marginLeft: 5,
+  }
+};
 
-export default class DetailViewContents extends React.Component {
+const DEFAULT_NOTES = "Google doc rubric completed: Y/N\nTotal points:\n(If interviewing) Interview notes completed: Y/N\nAdditional notes:";
+
+export class DetailViewContents extends React.Component {
   static propTypes = {
+    canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
+      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
+      course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
+      locked: PropTypes.bool,
+      regional_partner_id: PropTypes.number,
       notes: PropTypes.string,
       status: PropTypes.string.isRequired,
       school_name: PropTypes.string,
       district_name: PropTypes.string,
       email: PropTypes.string,
-      form_data: PropTypes.object
-    }),
-    updateProps: PropTypes.func.isRequired
+      form_data: PropTypes.object,
+      application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
+      response_scores: PropTypes.object,
+      meets_criteria: PropTypes.string,
+      bonus_points: PropTypes.number,
+      pd_workshop_id: PropTypes.number,
+      pd_workshop_name: PropTypes.string,
+      pd_workshop_url: PropTypes.string,
+      fit_workshop_id: PropTypes.number,
+      fit_workshop_name: PropTypes.string,
+      fit_workshop_url: PropTypes.string,
+      application_guid: PropTypes.string
+    }).isRequired,
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    onUpdate: PropTypes.func,
+    isWorkshopAdmin: PropTypes.bool
   };
 
-  state = {
-    status: this.props.applicationData.status,
-    notes: this.props.applicationData.notes
+  static contextTypes = {
+    router: PropTypes.object.isRequired
   };
 
-  handleCancelEditClick = () => {
-    this.setState({
+  constructor(props) {
+    super(props);
+
+    this.state = this.getOriginalState();
+  }
+
+  getOriginalState() {
+    return {
       editing: false,
       status: this.props.applicationData.status,
-      notes: this.props.applicationData.notes
-    });
+      locked: this.props.applicationData.locked,
+      notes: this.props.applicationData.notes,
+      response_scores: this.props.applicationData.response_scores || {},
+      regional_partner_name: this.props.applicationData.regional_partner_name || UnmatchedLabel,
+      regional_partner_filter: this.props.applicationData.regional_partner_id || UnmatchedFilter,
+      pd_workshop_id: this.props.applicationData.pd_workshop_id,
+      fit_workshop_id: this.props.applicationData.fit_workshop_id
+    };
+  }
+
+  componentWillMount() {
+    this.statuses = ApplicationStatuses[this.props.viewType];
+    if (this.props.applicationData.application_type === 'Facilitator' && !this.props.applicationData.notes) {
+      this.setState({notes: DEFAULT_NOTES});
+    }
+  }
+
+  handleCancelEditClick = () => {
+    this.setState(this.getOriginalState());
   };
 
   handleEditClick = () => {
     this.setState({
       editing: true
+    });
+  };
+
+  handleAdminEditClick = () => {
+    this.context.router.push(`/${this.props.applicationId}/edit`);
+  };
+
+  handleLockClick = () => {
+    this.setState({
+      locked: !this.state.locked,
     });
   };
 
@@ -52,19 +146,90 @@ export default class DetailViewContents extends React.Component {
     });
   };
 
+  handleSummerWorkshopChange = (selection) => {
+    this.setState({
+      pd_workshop_id: selection ? selection.value : null
+    });
+  };
+
+  handleFitWorkshopChange = (selection) => {
+    this.setState({
+      fit_workshop_id: selection ? selection.value : null
+    });
+  };
+
+  handleScoreChange = (event) => {
+    this.setState({
+      response_scores: {...this.state.response_scores, [event.target.id.replace('-score', '')]: event.target.value}
+    });
+  };
+
+  handleRegionalPartnerChange = (selected) => {
+    const regional_partner_filter = selected ? selected.value : UnmatchedFilter;
+    const regional_partner_name = selected ? selected.label : UnmatchedLabel;
+    this.setState({ regional_partner_name, regional_partner_filter});
+  };
+
   handleSaveClick = () => {
+    let stateValues = [
+      'status',
+      'locked',
+      'notes',
+      'regional_partner_filter',
+      'pd_workshop_id'
+    ];
+
+    if (this.props.applicationData.application_type === 'Facilitator') {
+      stateValues.push('fit_workshop_id');
+    }
+
+    const data = {
+      ...(_.pick(this.state, stateValues)),
+      response_scores: JSON.stringify(this.state.response_scores)
+    };
     $.ajax({
       method: "PATCH",
       url: `/api/v1/pd/applications/${this.props.applicationId}`,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify(this.state)
-    }).done(() => {
+      data: JSON.stringify(data)
+    }).done((applicationData) => {
       this.setState({
         editing: false
       });
-      this.props.updateProps({notes: this.state.notes, status: this.state.status});
+
+      // Notify the parent of the updated data.
+      // The parent is responsible for passing it back in as props.
+      if (this.props.onUpdate) {
+        this.props.onUpdate(applicationData);
+      }
     });
+  };
+
+  renderLockButton = () => {
+    const statusIsLockable = ApplicationFinalStatuses.includes(this.state.status);
+    return (
+      <Button
+        title={!statusIsLockable && `Can only lock if status is one of ${ApplicationFinalStatuses.join(', ')}`}
+        disabled={!(this.state.editing && statusIsLockable)}
+        onClick={this.handleLockClick}
+      >
+        {this.state.locked ? "Unlock" : "Lock"}
+      </Button>
+    );
+  };
+
+  renderRegionalPartnerAnswer = () => {
+    if (this.state.editing && this.props.isWorkshopAdmin) {
+      return (
+        <RegionalPartnerDropdown
+          onChange={this.handleRegionalPartnerChange}
+          regionalPartnerFilter={this.state.regional_partner_filter}
+          additionalOptions={[{label: UnmatchedLabel, value: UnmatchedFilter}]}
+        />
+      );
+    }
+    return this.state.regional_partner_name;
   };
 
   renderEditButtons = () => {
@@ -74,15 +239,33 @@ export default class DetailViewContents extends React.Component {
           onClick={this.handleSaveClick}
           bsStyle="primary"
           key="save"
-          style={{marginRight: '5px'}}
+          style={styles.saveButton}
         >
           Save
         </Button>
       ), (
-        <Button onClick={this.handleCancelEditClick} key="cancel">
+        <Button
+          onClick={this.handleCancelEditClick}
+          key="cancel"
+        >
           Cancel
         </Button>
       )];
+    } else if (this.props.isWorkshopAdmin) {
+      return (
+        <SplitButton
+          id="admin-edit"
+          pullRight
+          title="Edit"
+          onClick={this.handleEditClick}
+        >
+          <MenuItem
+            onSelect={this.handleAdminEditClick}
+          >
+            (Admin) Edit Form Data
+          </MenuItem>
+        </SplitButton>
+      );
     } else {
       return (
         <Button onClick={this.handleEditClick}>
@@ -92,66 +275,171 @@ export default class DetailViewContents extends React.Component {
     }
   };
 
+  renderStatusSelect = () => {
+    const selectControl = (
+      <FormControl
+        componentClass="select"
+        disabled={this.state.locked || !this.state.editing}
+        title={this.state.locked && "The status of this application has been locked"}
+        value={this.state.status}
+        onChange={this.handleStatusChange}
+        style={styles.statusSelect}
+      >
+        {
+          this.statuses.map((status, i) => (
+            <option value={status.toLowerCase()} key={i}>
+              {status}
+            </option>
+          ))
+        }
+      </FormControl>
+    );
+
+    if (this.props.canLock) {
+      // Render the select with the lock button in a fancy InputGroup
+      return (
+        <InputGroup style={styles.statusSelectGroup}>
+          <InputGroup.Button>
+            {this.renderLockButton()}
+          </InputGroup.Button>
+          {selectControl}
+        </InputGroup>
+      );
+    } else {
+      // Render just the select; otherwise, rendering a single element in an
+      // InputGroup makes it look funky
+      return selectControl;
+    }
+  };
+
+  renderEditMenu = () => {
+    return (
+      <div style={styles.editMenu}>
+        {this.renderStatusSelect()}
+        {this.renderEditButtons()}
+      </div>
+    );
+  };
+
   renderHeader = () => {
     return (
-      <div style={{display: 'flex', alignItems: 'baseline'}}>
-        <h1>
-          {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
-        </h1>
+      <div style={styles.headerWrapper}>
+        <div>
+          <h1>
+            {`${this.props.applicationData.form_data.firstName} ${this.props.applicationData.form_data.lastName}`}
+          </h1>
+          <h4>
+            Meets minimum requirements? {this.props.applicationData.meets_criteria}
+          </h4>
+          <h4>
+            Bonus Points: {this.props.applicationData.bonus_points}
+          </h4>
+          {this.props.applicationData.course === 'csp' &&
+            <h4>
+              <a target="_blank" href="https://docs.google.com/document/d/1ounHnw4fdihHiMwcNNjtQeK4avHz8Inw7W121PbDQRw/edit#heading=h.p1d568zb27s0">
+                View CS Principles Rubric
+              </a>
+            </h4>
+          }
+          {this.props.applicationData.course === 'csd' &&
+            <h4>
+              <a target="_blank" href="https://docs.google.com/document/d/1Sjzd_6zjHyXLgzIUgHVp-AeRK2y3hZ1PUjg8lTtWsHs/edit#heading=h.fqiranmp717e">
+                View CS Discoveries Rubric
+              </a>
+            </h4>
+          }
+        </div>
 
-        <div id="DetailViewHeader" style={{display: 'flex', marginLeft: 'auto'}}>
-          <FormControl
-            componentClass="select"
-            disabled={!this.state.editing}
-            value={this.state.status}
-            onChange={this.handleStatusChange}
-            style={{marginRight: '5px'}}
-          >
-            {
-              STATUSES.map((status, i) => (
-                <option value={status.toLowerCase().replace(/ /g, '_')} key={i}>
-                  {status}
-                </option>
-              ))
-            }
-          </FormControl>
-          {this.renderEditButtons()}
+        <div id="DetailViewHeader" style={styles.detailViewHeader}>
+          {this.renderEditMenu()}
         </div>
       </div>
     );
   };
 
-  renderTopSection = () => {
-    return (
-      <div id="TopSection">
-        <DetailViewResponse
-          question="Email"
-          answer={this.props.applicationData.email}
-          layout="lineItem"
-        />
+  renderRegionalPartnerPanel = () => {
+    if (this.props.applicationData.application_type === 'Teacher') {
+      return (
         <DetailViewResponse
           question="Regional Partner"
-          answer={this.props.applicationData.regional_partner_name}
-          layout="lineItem"
+          questionId="regionalPartnerName"
+          answer={this.renderRegionalPartnerAnswer()}
+          layout="panel"
+          score={this.state.response_scores['regionalPartnerName']}
+          possibleScores={TeacherValidScores['regionalPartnerName']}
+          editing={this.state.editing}
+          handleScoreChange={this.handleScoreChange}
         />
+      );
+    } else {
+      return (
         <DetailViewResponse
-          question="School Name"
-          answer={this.props.applicationData.school_name}
-          layout="lineItem"
+          question="Regional Partner"
+          answer={this.renderRegionalPartnerAnswer()}
+          layout="panel"
         />
-        <DetailViewResponse
-          question="District Name"
-          answer={this.props.applicationData.district_name}
-          layout="lineItem"
-        />
-      </div>
-    );
+      );
+    }
   };
+
+  renderTopSection = () => (
+    <div id="TopSection">
+      <DetailViewResponse
+        question="Email"
+        answer={this.props.applicationData.email}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="School Name"
+        answer={this.props.applicationData.school_name}
+        layout="lineItem"
+      />
+      <DetailViewResponse
+        question="District Name"
+        answer={this.props.applicationData.district_name}
+        layout="lineItem"
+      />
+
+      <DetailViewWorkshopAssignmentResponse
+        question="Summer Workshop"
+        courseName={this.props.applicationData.course_name}
+        subjectType="summer"
+        assignedWorkshop={{
+          id: this.state.pd_workshop_id,
+          name: this.props.applicationData.pd_workshop_name,
+          url: this.props.applicationData.pd_workshop_url
+        }}
+        editing={!!this.state.editing}
+        onChange={this.handleSummerWorkshopChange}
+      />
+
+      {this.props.applicationData.application_type === 'Facilitator' &&
+        <DetailViewWorkshopAssignmentResponse
+          question="FIT Workshop"
+          courseName={this.props.applicationData.course_name}
+          subjectType="fit"
+          assignedWorkshop={{
+            id: this.state.fit_workshop_id,
+            name: this.props.applicationData.fit_workshop_name,
+            url: this.props.applicationData.fit_workshop_url
+          }}
+          editing={!!(this.state.editing && this.props.isWorkshopAdmin)}
+          onChange={this.handleFitWorkshopChange}
+        />
+      }
+      {this.props.isWorkshopAdmin && this.renderRegionalPartnerPanel()}
+    </div>
+  );
 
   renderQuestions = () => {
     return (
-      <Facilitator1819Questions
+      <DetailViewApplicationSpecificQuestions
         formResponses={this.props.applicationData.form_data}
+        applicationType={this.props.applicationData.application_type}
+        editing={this.state.editing}
+        scores={this.state.response_scores}
+        handleScoreChange={this.handleScoreChange}
+        applicationGuid={this.props.applicationData.application_guid}
       />
     );
   };
@@ -170,23 +458,30 @@ export default class DetailViewContents extends React.Component {
               componentClass="textarea"
               value={this.state.notes || ''}
               onChange={this.handleNotesChange}
+              style={styles.notes}
             />
           </div>
         </div>
-        <br/>
-        {this.renderEditButtons()}
+        <br />
       </div>
     );
   };
 
   render() {
     return (
-      <div>
+      <div id="detail-view">
         {this.renderHeader()}
+        <br/>
         {this.renderTopSection()}
         {this.renderQuestions()}
         {this.renderNotes()}
+        {this.renderEditMenu()}
       </div>
     );
   }
 }
+
+export default connect(state => ({
+  canLock: state.permissions.lockApplication,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
+}))(DetailViewContents);

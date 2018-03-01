@@ -367,15 +367,6 @@ class ShareAllowedDialog extends React.Component {
                     channelId={this.props.channelId}
                     embedOptions={embedOptions}
                   />}
-                  {/* Awkward that this is called continue-button, when text is
-                   close, but id is (unfortunately) used for styling */}
-                  <button
-                    id="continue-button"
-                    style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                    onClick={this.close}
-                  >
-                    {this.props.i18n.t('project.close')}
-                  </button>
                 </div>
               </div>
             </div>

@@ -1,0 +1,22 @@
+-# This partial is shown alongside a similar block with a YouTube thumbnail, and
+  separately alongside a similar block with a MC thumbnail.  We can adjust our
+  height to match either of them.
+
+- if image_match_youtube_height
+  - image_url = "/images/app-lab/applab-intro.png"
+- else
+  - image_url = "/images/fill-485x260/app-lab/applab-intro.png"
+
+.col-50
+  .tutorial-tile
+    %a{href: CDO.studio_url("/s/applab-intro/reset")}
+      %img.tutorial-tile-img{src: CDO.code_org_url(image_url)}
+    .tutorial-info
+      %h3.tutorial-info-h Intro to App Lab Tutorial
+      .smalltext Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming.
+      %a{href: CDO.studio_url("/s/applab-intro/reset")}
+        %button.tutorial-info-start.tutorial-gray Start tutorial
+      .tutorial-info-guide
+        %a{href: "https://curriculum.code.org/hoc/plugged/7/"}
+          View teacher guide
+      .clear

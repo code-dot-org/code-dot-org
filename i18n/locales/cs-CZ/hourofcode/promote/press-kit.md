@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Jak přilákat média na Vaší Hodinu kódu
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Důležité tipy
 
-  * Oslovte média dva týdny před událostí prostřednictvím e-mailu. Zkuste to znovu e-mailem a telefonicky, pokud nedostanete prvotní odpověď.
-  * Požádejte zaměstnance školy nebo dobrovolníky, aby fotili a sdíleli fotky online nebo je poslali do tisku.
-  * Napište o Hodině kódu na domovské stránce vašich webových stránek a ve školních novinách. Pošlete podrobnosti o vaší akci a fotky ze žákovských aktivit.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Oslovte média dva týdny před událostí prostřednictvím e-mailu. Zkuste to znovu e-mailem a telefonicky, pokud nedostanete prvotní odpověď.
+- Požádejte zaměstnance školy nebo dobrovolníky, aby fotili a sdíleli fotky online nebo je poslali do tisku.
+- Napište o Hodině kódu na domovské stránce vašich webových stránek a ve školních novinách. Pošlete podrobnosti o vaší akci a fotky ze žákovských aktivit.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Podrobný průvodce:
 
 **1. Plan your event**
 
-  * Naplánujte si, jak udělat kick off Hodiny kódu.
-  * Pošlete [mail](%= resolve_url('/promote/resources#sample-emails') %) rodičům. Požádejte je, aby to dále šířili.
-  * Pošlete [dopis](%= resolve_url('/promote/resources#sample-emails') %) abyste pozvali místního starostu, senátora, hejtmana, nebo vlivného podnikatele, aby se učástnil a promluvil k vašim studentům.
-  * Organizujte skupinové aktivity (např. ukázku offline programování), nebo představte studenty vytvořené a vedené projekty.
-  * Ukažte Code.org's [video Hodiny kódu](%= resolve_url('/') %) nebo jedno z [těchto videí](%= resolve_url('/promote/resources#videos') %) pro inspiraci.
+- Naplánujte si, jak udělat kick off Hodiny kódu.
+- Pošlete [mail](%= resolve_url('/promote/resources#sample-emails') %) rodičům. Požádejte je, aby to dále šířili.
+- Pošlete [dopis](%= resolve_url('/promote/resources#sample-emails') %) abyste pozvali místního starostu, senátora, hejtmana, nebo vlivného podnikatele, aby se učástnil a promluvil k vašim studentům.
+- Organizujte skupinové aktivity (např. ukázku offline programování), nebo představte studenty vytvořené a vedené projekty.
+- Ukažte Code.org's [video Hodiny kódu](%= resolve_url('/') %) nebo jedno z [těchto videí](%= resolve_url('/promote/resources#videos') %) pro inspiraci.
 
 **2. Identify specific local reporters that cover education or local events.**
 

@@ -10,9 +10,11 @@ module GitHub
   DASHBOARD_DB_DIR = 'dashboard/db/'.freeze
   PEGASUS_DB_DIR = 'pegasus/migrations/'.freeze
   STAGING_BRANCH = 'staging'.freeze
+  STAGING_NEXT_BRANCH = 'staging-next'.freeze
   STATUS_SUCCESS = 'success'.freeze
   STATUS_FAILURE = 'failure'.freeze
   STATUS_CONTEXT = 'DTS'.freeze
+  STATUS_CONTEXT_DTSN = 'DTSN'.freeze
 
   # Configures Octokit with our GitHub access token.
   # @raise [RuntimeError] If CDO.github_access_token is not defined.
@@ -54,6 +56,18 @@ module GitHub
     response['number']
   end
 
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Issues.html#update_issue-instance_method
+  # @param base [String | Integer] the numeric id of the PR to be updated
+  # @param lables [Array[String]] array of strings to be set as new labels for the PR
+  # @raise [Exception] From calling Octokit.create_pull_request.
+  # @return [Array[String]] the resulting labels for the PR
+  def self.label_pull_request(id, labels)
+    configure_octokit
+    response = Octokit.update_issue(REPO, id, {labels: labels})
+
+    response['labels'].map {|label| label[:name]}
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#merge_pull_request-instance_method
   # @param pr_number [Integer] The PR number to be merged.
   # @param commit_message [String] The message to add to the commit
@@ -61,10 +75,32 @@ module GitHub
   # @raise [Exception] From calling Octokit.merge_pull_request.
   # @return [Boolean] Whether the PR was merged.
   def self.merge_pull_request(pr_number, commit_message='')
-    if pull_merged?(pr_number)
-      raise ArgumentError.new("PR\##{pr_number} is already merged")
-    end
     configure_octokit
+
+    # Let async mergeability check finish before proceeding.
+    #   The value of the mergeable attribute can be true, false, or null. If the
+    #   value is null, this means that the mergeability hasn't been computed
+    #   yet, and a background job was started to compute it. Give the job a few
+    #   moments to complete, and then submit the request again. When the job is
+    #   complete, the response will include a non-null value for the mergeable
+    #   attribute.
+    # Source: https://developer.github.com/v3/pulls/#get-a-single-pull-request
+    pr = nil
+    attempt_count = 0
+    loop do
+      pr = Octokit.pull_request(REPO, pr_number)
+      attempt_count += 1
+      break unless pr['mergeable'].nil? && attempt_count < 30
+      sleep 1
+    end
+
+    if attempt_count >= 30
+      raise ArgumentError.new("PR\##{pr_number} mergeability check timed out")
+    elsif pr['merged']
+      raise ArgumentError.new("PR\##{pr_number} is already merged")
+    elsif !pr['mergeable']
+      raise ArgumentError.new("PR\##{pr_number} is not mergeable")
+    end
     response = Octokit.merge_pull_request(REPO, pr_number, commit_message)
     response['merged']
   end
@@ -81,9 +117,6 @@ module GitHub
   def self.create_and_merge_pull_request(base:, head:, title:)
     return nil unless behind?(base: head, compare: base)
     pr_number = create_pull_request(base: base, head: head, title: title)
-    # By sleeping, we allow GitHub time to determine that a merge conflict is
-    # not present. Otherwise, empirically, we receive a 405 response error.
-    sleep 3
     success = merge_pull_request(pr_number, title)
     success ? pr_number : nil
   end
@@ -196,6 +229,42 @@ module GitHub
     end
   end
 
+  def self.set_dtsn_check_pass(pull)
+    Octokit.create_status(
+      pull['base']['repo']['full_name'],
+      pull['head']['sha'],
+      STATUS_SUCCESS,
+      context: STATUS_CONTEXT_DTSN,
+      description: 'The staging-next branch is open.'
+    )
+  end
+
+  def self.set_all_dtsn_check_pass
+    configure_octokit
+    Octokit.pulls(REPO, base: STAGING_NEXT_BRANCH)
+    paged_for_each(Octokit.last_response) do |pull|
+      set_dtsn_check_pass(pull)
+    end
+  end
+
+  def self.set_dtsn_check_fail(pull)
+    Octokit.create_status(
+      pull['base']['repo']['full_name'],
+      pull['head']['sha'],
+      STATUS_FAILURE,
+      context: STATUS_CONTEXT_DTSN,
+      description: 'The staging-next branch is closed. Check #developers.'
+    )
+  end
+
+  def self.set_all_dtsn_check_fail
+    configure_octokit
+    Octokit.pulls(REPO, base: STAGING_NEXT_BRANCH)
+    paged_for_each(Octokit.last_response) do |pull|
+      set_dtsn_check_fail(pull)
+    end
+  end
+
   # Iterate over a paged resource, given the first response
   def self.paged_for_each(response)
     loop do
@@ -204,5 +273,9 @@ module GitHub
       break unless response.rels[:next]
       response = response.rels[:next].get
     end
+  end
+
+  def self.get_date_for_commit(commit_sha)
+    return Octokit.commit(REPO, commit_sha)[:commit][:author][:date]
   end
 end

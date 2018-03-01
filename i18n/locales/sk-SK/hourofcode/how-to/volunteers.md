@@ -1,94 +1,244 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_volunteers) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# Návod pre dobrovoľníkov
 
-## Why volunteer?
+### Spravte niečo užitočné pre triedu už dnes!
 
-Check out some testimony from past volunteers:
+## Prečo sa stať dobrovoľníkom?
 
-  * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-  * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-  * “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+Čo hovoria naši dobrovoľníci:
 
-Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
+- "Najlepšou časťou mojej skúsenosti bola trieda zložená zo žien a ľudí rôznych rás. Je dobrým znamením pre budúcnosť nášo priemyslu mať prístup k týmto deťom a možnosť ich zaujať."
+- "Nadchla ma predovšetkým možnosť povzbudiť dievčatá, aby sa viac zaujímali o technológie. Mal som pocit, že pomáham ďaľšej generáci v mojom okolí."
+- "Bol som VEĽMI RÁD, keď deti prejavili nadšenie. Úžasnou vecou bolo, že učitelia si všimli, že niektorí zo študentov, ktorí nemali až tak dobré školské výsledky, boli vynikajúci v myslení z pohľadu developera a pomáhali ostatným učiť sa. To im dodalo istotu a dôveru."
 
-## Recruit your co-workers to volunteer
+## Hocikto sa môže stať dobrovoľníkom
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+**Dobrovoľníci a rečníci z IT**: Máte kontakt v IT alebo technológiach? Ak pracujete ako softvérový inžinier, alebo v technologickej spoločnosti na akejkoľvek pozícií (netechnickej i technickej) alebo ste absolvovali kurzy v IT, môžete pomôcť inšpirovať študentov! Veľa študentov nikdy nestretlo nikoho, kto pracuje v technologickom odvetví. Naši učitelia by preto veľmi privítali možnosť priblížit ich žiakom profesionálov a vysokoškolských študentov z IT.
 
-## How you get selected:
+Môžete byť hosťom - rečníkom v triede alebo pomôcť vyučujúcemu pri samotnej aktivite. Navštíve lokálnu triedu a motivujte študentov k štúdiu informačných technológií.
 
-  * Teachers will be searching for volunteers on our [volunteer map](/volunteer/local) 
-  * Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-  * A teacher will contact you through this form (your email address will never be shared with the teacher). 
-      * If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+<a href="https://code.org/volunteer/engineer"><button>Prihľaste sa dnes a stanťe sa dobrovoľníkom - špecialistom!</button></p> 
 
-## How to prepare:
+<p>
+  <strong>Ktokoľvek s motiváciou rozširovať možnosti</strong>: Veríte, že výučba informačných technológií môže výrazne rozšíriť pole možností pre študentov? Pomôžte v lokalnej triede alebo zorganizujte mimoškolské aktivity! Nepotrebujete žiadne IT pozadie, aby ste mohli hosťovať Hodinu Kodovania. Aj snaha pomôcť je často dostatočná na presvedčenie učiteľov, kamarátov alebo záujmových krúžkov, aby zorganizovali Hodinu Kódu.
+</p>
 
-Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+<p>
+  Ako môžete začať?
+</p>
 
-  * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
-  * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](%= resolve_url('/learn') %)
-  * If you're visiting a school, complete any background checks or required paperwork
-  * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
-  * Prepare an intro: 
-      * Share an inspirational story: How you got involved in a career in tech or why tech is important to you
-      * Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
-  * Join the conversation on FB, Twitter, Instagram, Tumblr with #Hourofcode
-  * Connect with the teacher to discuss what you plan to speak about during your session
-  * If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand
+<ol>
+  <li>
+    <p>
+      <a href="%= resolve_url('/promote/resources#help-schools') %">Pošlite tento email</a> učiteľovi Vášho dietaťa s pomocou pri organizácií Hodiny Kódovania.
+    </p>
+  </li>
+  
+  <li>
+    <p>
+      Ponúknite, že zorganizujete Hodinu Kódovania v rámci mimoškolských aktivít na škole vo Vašom okolí. <a href="%= resolve_url('/how-to') %">Use Použite tento návod</a> ako pomôcku pri plánovaní.
+    </p>
+  </li>
+</ol>
 
-### **Day-of Hour of Code Event:**
+<h2>
+  Získajte pomoc od Vašich kolegov
+</h2>
 
-  * Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
-  * Spend 5 minutes talking about yourself, who inspired you to pursue a career in tech and/or computer science. 
-      * Introduce yourself: who you are and what you do
-      * Choose one inspirational video and show it to the entire classroom together. Answer any questions from students.
-      * Share a short story about how you got interested in computer science. What or who inspired you? What do you love most about your job? Keep it short! ;) The point is to let the kids do the coding, leave time for more questions at the end.
-      * Share how computer science has broad, worldwide impact.
-  * Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright, instead try asking them questions so they can answer themselves what went wrong.
-  * Encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity. Often kids can solve the problems themselves and through teamwork. 
-  * At the completion of their Hour of Code, hand out your company swag (stickers are awesome) and answer any remaining questions.
-  * Also important to mention that if you do take pictures/videos during the event -- especially with students -- that you get teacher/parent permission if you would like to post your stories on social media.
+<p>
+  Povedzte Vašim kamarátom a kolegom o Hodine Kódovania. Tisícky učiteľov hľadajú dobrovoľníkov, takže ich môžete požiadať o <a href="https://code.org/volunteer">prihlásenie sa ako dobrovoľník</a>. Požiadajte Vášho zamestnávateľa, aby sa zapojil. <a href="%= resolve_url('/promote/resources#sample-email') %">Pošlite tento email</a> Vášmu manažérovi alebo CEO, aby rozšíril povedomie o akcií a navýšil rady dobrovoľníkov.
+</p>
 
-### **Sample agenda:**
+<h2>
+  Ako sa pripraviť
+</h2>
 
-Introduce yourself: </ul>
+<ul>
+  <li>
+    <a href="%= resolve_url('/promote/resources#videos') %">Vyberte si video</a>, ktoré Vám pomôže nasmerovať triedu a nadchnúť ich pre účast na Hodine Kódovania.
+  </li>
+  <li>
+    Pozrite si <a href="/files/hoc-volunteer-toolkit.pdf">Nástroje pre dobrovoľníka Hodiny Kódovania</a>, ktoré obsahujú prehľad, časový rozvrh, materiály na prípravu a marketingové materiály. Nájdete tam všetko, čo potrebujete pre Vašu aktivitu!
+  </li>
+  <li>
+    Ak budete robiť názornú ukážku, vyhľaďte si 30 minúť a vyskúšajte aspoň jednu <a href="%= resolve_url('/learn') %">ukážku Hodiny Kódovania</a>.
+  </li>
+  <li>
+    Ak plánujete navštíviť školu, pripravte si dopredu všetky potrebné dokumenty a povolenia.
+  </li>
+  <li>
+    Pozrite si <a href="https://code.org/files/CSTT_Volunteers.pdf">tieto tipy</a>, ako správne komunikovať so študentami.
+  </li>
+  <li>
+    Pripojte sa k diskusiám na Facebooku, Twitteri, Instagrame a Tumblri pomocou #HourOfCode.
+  </li>
+  <li>
+    Spojte sa s učiteľom a prejdite si obsah a detaily Vášej prezentácie počas Hodiny.
+  </li>
+  <li>
+    Ak sa pripájate na diaľku, otestujte spojenie a konektivitu ešte pred aktivitou samotnou.
+  </li>
+</ul>
 
-  * What do you work, what do you do, and what do you love most about your job?
-  * What or who inspired you
-  * Did you have a mentor?
-  * Share a story about how tech affects everyone</ul></td> </tr> 
-    Ask the students questions and leave time for Q&A </ul>
+<h2>
+  Harmonogram Hodiny Kódovania
+</h2>
+
+<p>
+  Ak hosťujete Hodinu Kódovania, navrhujeme Vám nasledovný harmonogram aktivít ako pomôcku pri organizácií. Ešte predtým sa skontaktujte s učiteľom, ktorý bude túto aktivitu dozorovať. Potvrďte si harmonogram a predjite si body, o ktorých budete diskutovať.
+</p>
+
+<h3>
+  <strong>Vzorová agenda:</strong>
+</h3>
+
+<table>
+  <tr>
+    <th>
+      Čas
+    </th>
     
-      * WHat jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 
-      * Do the students have any questions for you?</ul></td> </tr> 
-        </tbody> </table> 
-        ### **After the Event:**
+    <th>
+      Agenda
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      1-5 minút
+    </td>
+    
+    <td>
+      <a href="%= resolve_url('promote/resources#videos') %">Ukážte motivačné video</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      5-10 minút
+    </td>
+    
+    <td>
+      Predstavte sa a dozveďte a niečo o študentoch: </ul>
+      
+      <li>
+        Čo robíte, kde robíte a čo Vás najviac baví na Vašom zamestnaní?
+      </li>
+      
+      <li>
+        Kto alebo čo Vás inšprovalo?
+      </li>
+      
+      <li>
+        Prečo ste sa začali zaujímať o informačné technológie?
+      </li>
+      
+      <li>
+        Mali ste mentora?
+      </li>
+      
+      <li>
+        Povedzte príbeh o tom, ako technológie ovplyvňujú nás všetkých.
+      </li>
+      
+      <br />Opýtajte sa študentov a nechajte čas na otázky a odpovede.</br> 
+      
+      <li>
+        Čo by chceli robiť v budúcnosti, aké sú ich obľúbené technologické gadgety alebo aplikácie a ako si myslia, že sú vyrobené?
+      </li>
+      
+      <li>
+        Majú študenti nejaké otázky na Vás?</ul></td> </tr> <tr>
+          <td>
+            30-60 minút
+          </td>
+          
+          <td>
+            <strong>Kódujte!</strong> Prechádzajte sa po triete, odpovedajte na otázky a veďte ich počas riešenia úloh. Snažte sa nedávať študentom priamy návod, ale pýtajte sa ich, aby si sami vedeli zodpovedať, čo nefungovalo a podporte študentov, aby sa pýtali ostatných spolužiakov, ak majú nejaké otázky. Učiť sa od ostatných je obrovská možnosť naučiť sa.
+          </td>
+        </tr>
         
-          * Share your photos and stories with Code.org at giving@code.org
-          * Remember to enter in your volunteer hours in your company’s volunteer tracking portal 
-          * Share about your experience on social media #Hourofcode! See below for tips. 
-        ## Volunteering during the Hour of Code FAQ
+        <tr>
+          <td>
+            1-3 minúty
+          </td>
+          
+          <td>
+            Poďakujte každému a rozlúčte sa s pozitívnym a motivačným odkazom. Rozdajte Vaše firemné darčeky (nálepky sú perfektné)!
+          </td>
+        </tr>
         
-        ### **I haven't been contacted by a teacher yet. How can I still volunteer?**
+        <tr>
+          <td>
+            Po
+          </td>
+          
+          <td>
+            <strong>Spravte udržateľnú zmenu:</strong> Porozprávajte sa s učiteľom, či by nechcel zmeniť Hodinu Kódovania na plnohodnotný IT predmet! Navštívte <a href="https://code.org/yourschool">code.org/yourschool</a> spolu s učiteľom, vyplňte, čo sa na škole vyučuje teraz a získajte prísľub učiteľa zaviesť výučbu IT v ich triede.
+          </td>
+        </tr></tbody> </table> 
         
-        Try searching for local schools and call the principal/teacher/front office and ask how you can help.
-        
-        ### **How long do classroom visits last for?**
-        
-        An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes
-        
-        ### **What age group is the Hour of Code tutorial appropriate for?**
-        
-        Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
-        
-        <%= view :signup_button %>
+        <h3>
+          <strong>Po aktivite:</strong>
+        </h3>
+        <ul>
+          <li>
+            Zdieľajte Vaše fotografie a príbehy s Code.org na giving@code.org.
+          </li>
+          <li>
+            Nezabudnite zadať čas strávený dobrovoľníctvom do firemného portálu dobrovoľníctva.
+          </li>
+          <li>
+            Zdieľajte Vaše skúsenosti na sociálnych médiách #HourOfCode!
+          </li>
+          <li>
+            Ak vytvárate obrazový záznam, <strong>predovšetkým so študentami</strong>, zabezpečte si súhlas rodičov/učiteov, ak chcete tieto záznamy šíriť ďalej.
+          </li>
+          <li>
+            O mesiac: Má učiteľ záujem ponúkať hodiny informatiky? Zdieľajte <a href="https://code.org/yourschool">zdroje a profesionálne školiace materiály, ktoré im v tom pomôžu</a>.
+          </li>
+        </ul>
+        <h2>
+          Ako byť vybraný za technologického dobrovoľníka alebo rečníka
+        </h2>
+        <ul>
+          <li>
+            Učitelia budú hľadať dobrovoľníkov na našej <a href="https://code.org/volunteer/local">mape dobrovoľníkov</a>.
+          </li>
+          <li>
+            Majte Váš profil vyplnený čo najviac pre zvýšenie šance, že si učiteľ vyberie práve Vás.
+          </li>
+          <li>
+            Učiteľ Vás bude kontaktovať cez daný formulár (Vaša emailová adresa nikdy nebude zdieľaná s učiteľom). <em>Ak dostávate priveľa požiadaviek od učiteľov, môžete kedykoľvek zmeniť Vaše preferencie kliknutím na link na spodku každého emailu od učiteľa a upravením Vašich údajov alebo sa môžete odhlásiť.</em>
+          </li>
+        </ul>
+        <h2>
+          Otázky pre dobrovoľníctvo Hodiny Kódovania
+        </h2>
+        <h3>
+          <strong>Nikto z učiteľov ma zatiaľ nekontaktoval. Môžem sa napriek tomu zapojiť?</strong>
+        </h3>
+        <p>
+          Skúste sa opýtať v školách vo Vašom okolí a zavolať učiteľovi/riaditeľovi/recepcií a spýtať sa, ako môžete pomôcť.
+        </p>
+        <h3>
+          <strong>Ako dlho trvá návšteva triedy?</strong>
+        </h3>
+        <p>
+          Osobná návšteva trvá obvykle 60-90 minút, zatiaľčo virtuálna konferencia trvá obvykle 20-30 minút.
+        </p>
+        <h3>
+          <strong>Pre aké vekové skupiny je Hodina Kódovania vhodná?</strong>
+        </h3>
+        <p>
+          Code.org navrhuje ukážky Hodinu Kódovania ako hry a hádanky pre zaujatie žiakov všekých tried a ročníkov (základné a stredné školy), chlapcov i dievčatá z akéhokoľvek pozadia. Kazdý, dokonca aj dospelí sa môžu zabaviť hraním našich ukážok!
+        </p>
+        <p>
+          <%= view :signup_button %>
+        </p>

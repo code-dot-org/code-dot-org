@@ -8,7 +8,7 @@
     "skin": "artist",
     "embed": "false",
     "instructions": "Now make a square using Artist!",
-    "markdown_instructions": "Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\r\n___\r\n#####Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
+    "markdown_instructions": "Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\r\n___\r\n##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",

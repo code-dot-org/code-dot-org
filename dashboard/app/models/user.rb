@@ -71,9 +71,9 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/school_info_interstitial_helper'
 require 'cdo/chat_client'
 require 'cdo/shared_cache'
+require 'school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -120,6 +120,7 @@ class User < ActiveRecord::Base
     oauth_token
     oauth_token_expiration
     sharing_disabled
+    next_census_display
   )
 
   # Include default devise modules. Others available are:
@@ -184,12 +185,16 @@ class User < ActiveRecord::Base
   has_many :regional_partners,
     through: :regional_partner_program_managers
 
+  has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
+
+  has_one :circuit_playground_discount_application
 
   after_create :associate_with_potential_pd_enrollments
 
@@ -236,8 +241,16 @@ class User < ActiveRecord::Base
     permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
+  def program_manager?
+    permission? UserPermission::PROGRAM_MANAGER
+  end
+
   def workshop_admin?
     permission? UserPermission::WORKSHOP_ADMIN
+  end
+
+  def project_validator?
+    permission? UserPermission::PROJECT_VALIDATOR
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -316,6 +329,13 @@ class User < ActiveRecord::Base
 
   def district_name
     district.try(:name)
+  end
+
+  # Given a user_id, username, or email, attempts to find the relevant user
+  def self.from_identifier(identifier)
+    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
+      where(username: identifier).first ||
+      find_by_email_or_hashed_email(identifier)
   end
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
@@ -534,11 +554,6 @@ class User < ActiveRecord::Base
     User.find_by(hashed_email: hashed_email)
   end
 
-  def self.find_by_parent_email(email)
-    return nil if email.blank?
-    User.find_by(parent_email: email)
-  end
-
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
@@ -609,8 +624,13 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
-      user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type
+      # Store emails, except when using Clever
+      user.email = auth.info.email unless user.user_type == 'student' && auth.provider == 'clever'
+
+      if auth.provider == 'clever' && User.find_by_email_or_hashed_email(user.email)
+        user.email = user.email + '.cleveremailalreadytaken'
+      end
 
       if auth.provider == :the_school_project
         user.username = auth.extra.raw_info.nickname
@@ -804,7 +824,7 @@ class User < ActiveRecord::Base
     # some of our user_levels may be for levels within level_groups, or for levels
     # that are no longer in this script. we want to ignore those, and only look
     # user_levels that have matching script_levels
-    # TODO(brent): Worth noting in the case that we have the same level appear in
+    # Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
     sl_level_ids = script.script_levels.map(&:level_ids).flatten
@@ -852,10 +872,10 @@ class User < ActiveRecord::Base
 
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
-  def last_attempt(level)
-    UserLevel.where(user_id: id, level_id: level.id).
-      order('updated_at DESC').
-      first
+  def last_attempt(level, script = nil)
+    query = UserLevel.where(user_id: id, level_id: level.id)
+    query = query.where(script_id: script.id) unless script.nil?
+    query.order('updated_at DESC').first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -1389,7 +1409,7 @@ class User < ActiveRecord::Base
       script = Script.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result == 100 &&
+        new_result >= ActivityConstants::BEST_PASS_RESULT &&
         script_valid &&
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
@@ -1397,7 +1417,8 @@ class User < ActiveRecord::Base
       end
 
       # Update user_level with the new attempt.
-      user_level.attempts += 1 unless user_level.best?
+      # We increment the attempt count unless they've already perfected the level.
+      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
@@ -1604,6 +1625,12 @@ class User < ActiveRecord::Base
       (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
   end
 
+  def show_census_teacher_banner?
+    # Must have an NCES school to show the banner
+    users_school = try(:school_info).try(:school)
+    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+  end
+
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
@@ -1611,10 +1638,6 @@ class User < ActiveRecord::Base
 
   def show_school_info_interstitial?
     SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
-  end
-
-  def school_info_suggestion?
-    !(school.blank? && full_address.blank?)
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.

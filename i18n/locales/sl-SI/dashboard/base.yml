@@ -9,14 +9,14 @@ sl:
     errors:
       messages:
         blank: "se zahtevan(o)"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "so potrebni"
+        invalid_plural: "so nepravilni"
     attributes:
       user:
         name: 'Prikazno ime'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Elektronska pošta'
-        parent_email: 'Parent/guardian email'
+        parent_email: 'Elektronska pošta staršev/skrbnikov'
         personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
         username: 'Uporabniško ime'
         password: 'Geslo'
@@ -30,7 +30,7 @@ sl:
           future: ne more biti v prihodnosti
   hello: "Pozdravljen svet"
   welcome_back: "Dobrodošel/a nazaj, %{name}"
-  your_professional_learning_plan: "Your Professional Learning Plan"
+  your_professional_learning_plan: "Tvoj osebni načrt učenja"
   see_your_learning_plan: "Poglej učni načrt"
   submit: Pošlji
   unsubmit: Unsubmit
@@ -58,8 +58,8 @@ sl:
   trophies: "Trofeje"
   courses: 'Predavanja'
   courses_page:
-    title_student: "Learn on Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_student: "Learn Computer Science"
+    title_teacher: "Poučuj s studio Code"
   unplugged_activity: 'Dejavnost brez prijave'
   of: "od"
   more: "VEČ"
@@ -69,7 +69,7 @@ sl:
   try_k8intro: "Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)"
   k8intro: "Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)"
   already_started: "Si že začel? Nadaljuj tukaj >> "
-  demos: 'Administrator: Vse demonstracije'
+  demos: "Administrator: Vse demonstracije"
   continue: 'Nadaljuj'
   prize: 'nagrada'
   more_info: 'Več informacij'
@@ -84,11 +84,11 @@ sl:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft račun'
-    clever: 'Clever Account'
+    clever: 'Pameten račun'
     forgot_password: 'Si pozabil/a svoje geslo?'
     need_confirmation: "Nisi prejel/a navodil za potrditev?"
     need_unlock: "Nisi prejel/a navodil za odklepanje?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    not_linked: "Žal, tvoj Code.org račun ni povezan s tvojim %{provider}. Žal se morate prijaviti z vnosom gesla spodaj."
     use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
   signup_form:
     student_count: '%{count} študentov se je že prijavilo.'
@@ -171,6 +171,7 @@ sl:
       email: 'Elektronska pošta'
       submit: 'Pošlji'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Spremeni geslo'
@@ -220,7 +221,7 @@ sl:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org obvestilo: %{student_name} ni več tvoj učenec.'
+        subject: "Code.org obvestilo: %{student_name} ni več tvoj učenec."
   reports:
     error:
       access_denied: "Nimaš dostopa do statistike te osebe"
@@ -256,9 +257,9 @@ sl:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Domov"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Moja nadzorna plošča"
       courses: "Predavanja"
-      course_catalog: "Course Catalog"
+      course_catalog: "Katalog tečajev"
       project_gallery: "Projekti"
       sections: "Sections"
       help_support: "Help and support"
@@ -352,7 +353,7 @@ sl:
     current_password_hint: '(potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)'
     delete: 'Izbriši svoj račun'
     delete_text: "S klikom na gumb boste izbrisali svoj račun."
-    delete_text_teacher_note: 'Prosimo pomnite: brisanje vašega računa ne bo izbrisalo računov vaših študentov.'
+    delete_text_teacher_note: "Prosimo pomnite: brisanje vašega računa ne bo izbrisalo računov vaših študentov."
     delete_confirm: 'Ali ste prepričani, da želite izbrisati svoj račun?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,7 +364,7 @@ sl:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -567,6 +568,9 @@ sl:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Starost 13+"
       cta: "Learn how"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +589,9 @@ sl:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -648,6 +655,7 @@ sl:
     correct_title: "Hvala"
     correct_body: "Thank you for submitting answers."
     hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Hvala"
     wrong_body: "Thank you for submitting answers."
@@ -695,7 +703,7 @@ sl:
     sign_out: 'Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Pogoje storitve"
     privacy: "Izjava o zasebnosti"
@@ -711,7 +719,7 @@ sl:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Shrani"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -755,7 +763,7 @@ sl:
     delete: "Izbriši"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Vrni se na tečaj"
@@ -858,8 +866,8 @@ sl:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

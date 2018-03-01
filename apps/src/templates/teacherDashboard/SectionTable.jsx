@@ -9,8 +9,9 @@ import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape, OAuthSectionTypes} from "./shapes";
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {pegasus} from "../../lib/util/urlHelpers";
-import SectionTableButtonCell from "./SectionTableButtonCell";
+import SectionActionDropdown from "./SectionActionDropdown";
 import Button from '@cdo/apps/templates/Button';
+import { stringifyQueryParams } from '../../utils';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -42,6 +43,7 @@ const styles = {
     paddingTop: 20,
     paddingLeft: 20,
     paddingBottom: 20,
+    width: 40,
   },
   sectionCol: {
     paddingLeft: 20,
@@ -63,7 +65,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
   return (
     <div>
       <a
-        href={rowData.assignmentPaths[0]}
+        href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({section_id: rowData.id})}`}
         style={tableLayoutStyles.link}
       >
         {rowData.assignmentNames[0]}
@@ -72,7 +74,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
         <div style={styles.currentUnit}>
           <div>{i18n.currentUnit()}</div>
           <a
-            href={assignmentPaths[1]}
+            href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({section_id: rowData.id})}`}
             style={tableLayoutStyles.link}
           >
             {assignmentNames[1]}
@@ -98,7 +100,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   let sectionCode = '';
   let pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id + '/print_signin_cards');
   // For managed logins, just show the provider name rather than the login code.
-  if (rowData.loginType === OAuthSectionTypes.clever){
+  if (rowData.loginType === OAuthSectionTypes.clever) {
     sectionCode = i18n.loginTypeClever();
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
@@ -156,7 +158,7 @@ class SectionTable extends Component {
   };
 
   actionCellFormatter = (temp, {rowData}) => {
-    return <SectionTableButtonCell sectionData={rowData} handleEdit={this.props.onEdit}/>;
+    return <SectionActionDropdown sectionData={rowData} handleEdit={this.props.onEdit}/>;
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.

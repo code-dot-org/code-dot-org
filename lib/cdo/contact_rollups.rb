@@ -97,16 +97,17 @@ class ContactRollups
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
-  FORM_INFOS = []
-  FORM_INFOS << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
+  form_infos = []
+  form_infos << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
   (2014..hoc_year).each do |year|
-    FORM_INFOS << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
+    form_infos << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
   end
-  FORM_INFOS << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
-  FORM_INFOS.freeze
+  form_infos << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
+  FORM_INFOS = form_infos.freeze
 
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
+  CENSUS_FORM_NAME = "Census".freeze
 
   def self.build_contact_rollups
     start = Time.now
@@ -120,6 +121,7 @@ class ContactRollups
     insert_from_pegasus_forms
     insert_from_dashboard_contacts
     insert_from_dashboard_pd_enrollments
+    insert_from_dashboard_census_submissions
     update_unsubscribe_info
     update_roles
     update_grades_taught
@@ -142,6 +144,7 @@ class ContactRollups
 
     # Add contacts to the Teacher role based on form responses
     update_teachers_from_forms
+    update_teachers_from_census_submissions
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
@@ -295,6 +298,24 @@ class ContactRollups
     log_completion(start)
   end
 
+  def self.insert_from_dashboard_census_submissions
+    start = Time.now
+    log "Inserting contacts from dashboard.census_submissions"
+    PEGASUS_REPORTING_DB_WRITER.run "
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted)
+    SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}'
+    FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
+    WHERE LENGTH(census_submissions.submitter_email_address) > 0
+    ON DUPLICATE KEY
+    UPDATE #{DEST_TABLE_NAME}.forms_submitted =
+    CASE LOCATE(values(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''),values(forms_submitted)),255)
+      ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END"
+
+    log_completion(start)
+  end
+
   def self.update_teachers_from_forms
     start = Time.now
     log "Updating teacher roles based on submitted forms"
@@ -309,6 +330,23 @@ class ContactRollups
     END
     WHERE forms.kind in (#{FORM_KINDS_TEACHER})
     OR #{DEST_TABLE_NAME}.form_roles like '%educator%'"
+
+    log_completion(start)
+  end
+
+  def self.update_teachers_from_census_submissions
+    start = Time.now
+    log "Updating teacher roles based on census submissions"
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN #{DASHBOARD_DB_NAME}.census_submissions on census_submissions.submitter_email_address = #{DEST_TABLE_NAME}.email
+    SET roles =
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE('#{ROLE_TEACHER}', COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),'#{ROLE_TEACHER}'),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END
+    WHERE census_submissions.submitter_role = 'TEACHER'"
 
     log_completion(start)
   end

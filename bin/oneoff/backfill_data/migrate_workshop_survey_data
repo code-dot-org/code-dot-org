@@ -49,11 +49,11 @@ FIELD_MAPPING = {
   "willing_to_talk_b" => "willingToTalk",
   "how_to_contact_s" => "howToContact",
   "who_facilitated_ss" => "whoFacilitated"
-}
+}.freeze
 
 NEW_FIELD_DEFAULTS = {
   "whoFacilitated" => [],
-}
+}.freeze
 
 # Custom class for creating Pd::WorkshopSurvey entries from older data that
 # might not necessarily pass our current validation

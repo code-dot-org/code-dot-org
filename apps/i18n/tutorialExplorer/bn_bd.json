@@ -1,4 +1,5 @@
 {
+  "startButton": "শুরু করুন",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "সব",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Grades 2-5",
   "filterGrades68": "Grades 6-8",
   "filterGrades9": "Grades 9+",
-  "filterTeacherExperience": "Educator experience",
-  "filterTeacherExperienceBeginner": "শিক্ষানবিশ",
-  "filterTeacherExperienceComfortable": "Comfortable",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Student experience",
   "filterStudentExperienceBeginner": "শিক্ষানবিশ",
   "filterStudentExperienceComfortable": "Comfortable",

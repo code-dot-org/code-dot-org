@@ -1,22 +1,26 @@
 - if @regional_partner
-  Thank you for expressing your interest in bringing Computer Science to your school or
-  district.  Your Code.org Regional Partner is
-  = "#{@regional_partner.name}."
-  A representative from
-  = @regional_partner.name
-  will receive your contact information and contact you soon.
+  Thank you! We're looking forward to helping you bring computer science to your school or district.
 
-  In the meanwhile, take a look
+  Your local Code.org Regional Partner is
+  = "#{@regional_partner.name}."
+  If you are a teacher interested in our professional learning program, please visit our
+  = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning-2018')
+  to learn about the opportunities that exist in your region. If you are an administrator, a representative from
+  = @regional_partner.name
+  will reach out to contact you about options for your school or district.
+
+  In the meantime, take a look
   = link_to 'here for the K-12 Code.org curriculum options', courses_path
-  available for no cost to all schools
+  available for no cost to all schools.
 - else
   %p
-    Thank you for expressing your interest in bringing computer science to your school or
-    district. There is not currently a Code.org Regional Partner in your area. The Code.org
-    team will receive your interest form and forward it to a regional partner in your
-    community if and when they become available.
+    Thank you! If you are a teacher, please visit our
+    = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning-2018')
+    to learn about the opportunities that exist in your region.
+  %p
+    If you are a school or district administrator, we don't currently have a local contact for you. We are continuing to expand into more regions every year and will forward your message to a Regional Partner in your community if and when they become available.
 
-  In the meanwhile, take a look
+  In the meantime, take a look
   = link_to 'here for the K-12 Code.org curriculum options', courses_path
   available for no cost to all schools, or check out our list of
-  = link_to 'third-party computer science resources.', 'https://code.org/educate/curriculum/3rd-party'
+  = link_to 'third-party computer science resources.', CDO.code_org_url('/educate/curriculum/3rd-party')

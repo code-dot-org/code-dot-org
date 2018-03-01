@@ -4,36 +4,38 @@
       name:
         csp:
           title: Bilgisayar Bilimleri Prensipleri
-          description_student: Sonbaharda 2016, Üniversite Yönetim Kurulu en yeni  bilgisayar
-            bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel
-            kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl
-            etkisi olabilirler keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri
-            dersi bilgisayar bilimi alanında liderler oluşturma  oluşturmak amacı
-            ile tasarlanmıştır.
-          description_teacher: Sonbaharda 2016, Üniversite Yönetim Kurulu en yeni  bilgisayar
-            bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel
-            kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl
-            etkisi olabilirler keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri
-            dersi bilgisayar bilimi alanında liderler oluşturma  oluşturmak amacı
-            ile tasarlanmıştır.
+          description_student: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
+            yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar
+            bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin
+            dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar
+            bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel
+            bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak
+            ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
+          description_teacher: 2016'ı sonbaharında , Üniversite Yönetim Kurulu en
+            yeni bilgisayar bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar
+            bilimi temel kavramlarını tanıtır ve onların bilgisayar ve teknolojinin
+            dünyaya nasıl etkisi olabileceğini keşfetmelerini sağlar. AP bilgisayar
+            bilim ilkeleri dersi bilgisayar bilimi alanında liderler oluşturmak, temel
+            bilgisayar eğitimine ulaşımı olmayanları bilgisayar bilimi ile tanıştırmak
+            ve disiplinler arası bağ kurmak amacı ile tasarlanmıştır.
           description_short: Temel bilgisayar bilim kavramlarını öğrenin.
         csd:
           title: Bilgisayar Bilimi Keşifleri
-          description_student: Bilgisayar bilim keşifler (CS keşifler) giriş seviyesi
-            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturma ve
-            yaratıcılık, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar
-            bilimi ile meşgul olmasını sağlar.
-          description_teacher: Bilgisayar bilim keşifler (CS keşifler) giriş seviyesi
-            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturma ve
-            yaratıcılık, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar
-            bilimi ile meşgul olmasını sağlar.
+          description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
+          description_teacher: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
           description_short: Bilgisayar bilimlerine giriş niteliğindeki bir kurs,
             öğrencilere özgün eserler oluşturabilme yetkinliğini sağlamakta yardımcı
             olur.
         allthethingscourse:
-          title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer
-            description for students
-          description_teacher: This is a course for allthethings and has a longer
-            description for teachers
+          title: tümherşeykursu
+          description_short: Bu tümherşey için bir kurs
+          description_student: Bu tümherşey için bir kurs ve öğrenciler için daha
+            uzun bir tanıma sahip
+          description_teacher: Bu tümherşey için bir kurs ve öğretmenler için daha
+            uzun bir tanıma sahip

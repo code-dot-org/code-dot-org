@@ -90,6 +90,22 @@ class FormHelpersTest < SequelTestCase
     end
   end
 
+  describe 'insert_form_with_large_utf8' do
+    before do
+      stubs(:dashboard_user).returns(nil)
+      Pegasus.stubs(:logger).returns(nil)
+      stubs(:request).returns(stub(ip: '1.2.3.4'))
+    end
+
+    it 'strips bad utf8 characeters on insert' do
+      row = insert_or_upsert_form(
+        'HocSignup2017',
+        DEFAULT_DATA.merge(email_s: "#{SecureRandom.hex(8)}@example.com", name_s: "Name\u{1F600}Name")
+      )
+      assert_equal "NameName", row[:name]
+    end
+  end
+
   describe 'update_form' do
     before do
       stubs(:dashboard_user).returns(nil)

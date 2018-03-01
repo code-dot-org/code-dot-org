@@ -25,10 +25,15 @@
   submit: "Изпрати"
   twentyhours_heading: "Опитайте нашите въвеждащи курсове по компютърни науки"
   twentyhours_text: "Завършихте ли първия Час на кодиране? Научете повече за основните понятия в компютърните науки и програмиране в този следващ курс."
-  og_title: Всяко дете заслужава възможност
+  og_title: 'Всяко дете заслужава възможност'
+  og_title_soon: "The Hour of Code is coming"
+  og_title_here: "The Hour of Code is here!"
   og_description: "Всеки ученик във всяко училище заслужава възможност да учи компютърни науки."
+  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code идва"
   csedweek_og_description: "Hour of Code е глобално движение, достигащо до десетки милиони ученици от 180+ страни на над 45 езика."
+  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Присъединете се към <a href=\"http://hourofcode.com\"> Часът на кодирането</a> <br/>на 8-14 декември 2014 г. <br/>"
   hoc2014_students: "Ученици"
   hoc2014_try: "Опитайте го"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "Едно дете  получава вузможност да учи от всеки долар, който си дарил"
   studiobar_shop_title: "Магазин"
   studiobar_shop_body: "Разбий стереотипите. Носи логото ни с гордост."
+  homepage_stats_students: "of US students have accounts on Code.org"
+  homepage_stats_female: "of our students are female"
+  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
+  homepage_stats_policy: "states changed policy to support computer science"
+  homepage_stats_title: "We're making a difference"
   homepage_hero_text_malala: "&ldquo;\"Предизвиквам момичетата от всяка страна да учат с  Един Час Кодиране&rdquo; Малала, носител на Нобелова награда за мир"
   homepage_hero_text_susan: |-
     &ldquo;"Ако можете да промените технологията, можете да промените света."&rdquo; Сюзън, изпълнителен директор на YouTube
@@ -284,6 +295,8 @@
   homepage_hero_text_stat_loc: "#loc линии код, написани от учениците"
   homepage_hero_text_stat_students: "#student_count Ученически акаунти на Студиото по кодиране"
   homepage_hero_text_stat_served: 'Часът на кодирането: #served пробваха'
+  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
+  homepage_hero_hoc_is_here: "The Hour of Code is here"
   homepage_slot_text_hoc: "Часът на кодирането"
   homepage_slot_text_frozen: "Frozen с Анна и Елза"
   homepage_slot_text_teacher: "Учителско табло"
@@ -303,6 +316,7 @@
   homepage_action_text_girlvideo: "Вдъхновете момиче"
   homepage_action_text_learn: "Започнете обучение"
   homepage_action_text_signpetition: "Подпишете петицията"
+  homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "Съгласен&#x25BE;"
   homepage_diversity_pledge: "Вземете разнообразни подаръци"
   homepage_banner_text_prizes: 'Часът на кода идва отново, декември 7-13. '
@@ -346,7 +360,7 @@
   homepage_slot_text_link_buy: "Включете се"
   homepage_slot_text_link_donate: "Направете дарение"
   homepage_slot_text_link_shop: "Тениски, шапки & повече"
-  homepage_slot_text_link_administrators: "Bring to your school or district"
+  homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_header_codestudio: "Проекти  на ученици в Студиото по програмиране"
   homepage_header_donors: "Code.org благодари на своите привърженици"
   homepage_donors_seall: "Вижте всички"
@@ -409,10 +423,13 @@
   mc_gradelevel: "Възраст 6 +"
   mc_platformtext: "Съвременни браузъри, смартфони, таблети"
   mc_specs: "На много езици | Съвременни браузъри и таблети | Възраст 6 +"
+  minecraft_agent: 'Minecraft: Пътуването на героя'
   minecraft_designer: "Minecraft дизайнер"
   minecraft_adventurer: "Minecraft авантюрист"
   minecraft_tutorials: "Minecraft Hour of Code уроци"
   minecraft_specs: "Много езици | Съвременни браузъри и таблети | Клас 2 +"
+  minecraft_agent_description: "Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код."
+  minecraft_agent_button: "Старт"
   minecraft_designer_description: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
   minecraft_designer_button: "Старт"
   minecraft_adventurer_description: "Използвайте код, за да изпратите Алекс или Стив на приключение."
@@ -420,6 +437,19 @@
   minecraft_no_internet: "Нямате интернет?"
   minecraft_download_adventurer: "Изтегляне на офлайн версията на Minecraft авантюрист."
   minecraft_subtitle: "Minecraft Hour of Code"
+  minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
+  minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
+  minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
+  minecraft_future: "Help all youth become future ready"
+  minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
+  minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_og_agent: "Minecraft се завръща за часът на кода, и ти си героят там! Пиши код за пътуване през Minecraft средата."
   sports_page_title: "Спортен Hour of Code"
   sports_og_title: "Уроци за спортен Hour of Code"
   sports_og_description: "Изберете между NBA и WNBA или от всички спортни уроци за кодиране."
@@ -456,6 +486,7 @@
   video_title_obama: "Президентът Обама за компютърните науки"
   video_title_hoc_is_here: "Hour of Code е тук - всеки може да се научи"
   video_title_anybody_can_learn: "Всеки може да се научи"
+  video_title_steph_curry: "Hour of Code with Steph Curry"
   video_title_draymond_green: "Hour of Code с Draymond Green"
   video_title_russell_okung: "Hour of Code с Russell Okung"
   video_title_real_madrid: "Russell Okung с Real Madrid"
@@ -722,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'> Опитайте тези уроци без компютър</a> в класната стая."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Учебна програма"
   dashboard_curriculum_overview: "K-5 преглед на програмата"
   dashboard_overview: "Общ преглед"
@@ -740,6 +774,8 @@
   dashboard_curriculum_csins: 'Компютърни науки в науката:'
   dashboard_curriculum_csp: 'AP ® Принципи на компютърните науки:'
   dashboard_curriculum_ecs: 'Изследване на компютърните науки:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Предучилище"
   dashboard_grade_other: "Друго"
   dashboard_login_word: "Дума"
@@ -808,7 +844,7 @@
   carousel_heading_international: "Уроци на вашия език"
   carousel_heading_domestic: "Уроци на английски"
   carousel_heading_beginners: "Уроци за K-8"
-  carousel_heading_beyond_beginners: Уроци за начинаещи
+  carousel_heading_beyond_beginners: 'Уроци за начинаещи'
   carousel_heading_javascript: "Уроци, които преподават Javascript"
   carousel_heading_beyond_javascript: "Уроци, които преподават Javascript"
   carousel_heading_unplugged: "Нямате устройство или интернет? Опитайте \"ънплъгд\" уроците по компютърни науки"
@@ -910,11 +946,11 @@
   accelerated_name: "Ускорен курс"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(стар) Урок 1: Цифрова информация'
-  cspunit2_name: '(стар) Раздел 2: Интернет'
-  cspunit3_name: '(стар) Раздел 3: програмиране'
-  cspunit4_name: '(стар) Раздел 4: данни'
-  cspunit5_name: '(стар) Раздел 5: Изследване и създаване на PT'
+  cspunit1_name: "(стар) Урок 1: Цифрова информация"
+  cspunit2_name: "(стар) Раздел 2: Интернет"
+  cspunit3_name: "(стар) Раздел 3: програмиране"
+  cspunit4_name: "(стар) Раздел 4: данни"
+  cspunit5_name: "(стар) Раздел 5: Изследване и създаване на PT"
   cspunit6_name: 'Пост AP: Бази данни в приложения'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -923,7 +959,7 @@
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
   csp1_name: 'Раздел 1: Интернет'
-  csp2_name: Част 1 - Дигитална информация
+  csp2_name: 'Част 1 - Дигитална информация'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: 'Unit 3: Intro Programming (version A)'
   csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
@@ -933,6 +969,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Пълен тест - 50 въпроса"
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Тест част 1-25 въпроси
   cspexam2-AKwgAh1ac5_name: Тест част 2 - 25 въпроси
   cspunit3_gradelevel: "Класове 9-12"
@@ -961,6 +999,7 @@
   cspexams_category_name: "CS принципи практически тест"
   research_studies_category_name: "Research Studies"
   applab_name: "Лаборатория за приложения"
+  gamelab_name: "Играта лаборатория"
   basketball_name: "Направете баскетболна игра"
   sports_name: "Спорт"
   applab_gradelevel: "Възраст 13 +"
@@ -1345,7 +1384,7 @@
   makeschool_beyond_longdescription: "Имате ли някакви умения в ObjectiveC? Научете се да програмирате iPhone игра в рамките на един час! Ние ще ви преведем през този процес, за да напишете кода, да тествате и играете играта си изцяло в браузъра и след това, да я споделите във Facebook с приятелите си! Не е необходим предварителен опит с iPhone. Ще разберете какво са променливите, методите и обектите."
   appinventor_beyond_longdescription: "Забавни, бързи видео уроци ще ви преведат през изграждането на три прости приложения за Вашия андроид телефон или таблет. Курсът е предназначен за начинаещи и за експерти. В този Час на кодирането ще се научите да изграждате собствени програми. Представете си възможността да споделите собствените си приложения с вашите приятели! Тези дейности са подходящи индивидуално и за класове."
   touchdevelop_beyond_longdescription: "TouchDevelop ви позволява да създавате приложения за iPad, iPhone, Android, PC, Mac, Windows Phone. Нашият touch-friendly редактор прави кодирането забавно, дори на вашия телефон или таблет!"
-  codehs_beyond_longdescription: Научете основите на програмирането с кучето Карел, забавно, достъпно и визуално въведение в програмирането, където давате команди на компютъра, така както давате команди на куче. Този урок е страхотен ако се води от учител, но също така може да се направи самостоятелно
+  codehs_beyond_longdescription: 'Научете основите на програмирането с кучето Карел, забавно, достъпно и визуално въведение в програмирането, където давате команди на компютъра, така както давате команди на куче. Този урок е страхотен ако се води от учител, но също така може да се направи самостоятелно'
   udemy_beyond_longdescription: 'Независимо дали не сте виждали линия  код или кодирането е Вашия живот, Udemy има курсове за Вас, преподавани от професионални инструктори. [Забележка: изисква се плащане]'
   lynda_beyond_longdescription: 'Научете как да програмирате, създавате и изграждате уеб приложения на базата на обектно ориентираното програмиране в C и C++ и как да пишете на Java. Нашите разработени уроци може да Ви помогнат да се научите да развивате и създавате мобилни приложения, да работите с PHP и MySQL бази данни, да започнете с езика на статистическата обработка R и много повече. [Забележка: изисква се плащане]'
   edx_beyond_longdescription: "CS50x е курс на Харвардския университет за представянето на интелектуалната стойност на компютърните науки и изкуството на програмирането за специалисти и неспециалисти с или без предварителен опит в програмирането. Темите включват абстракция, алгоритми, структури от данни, капсулиране, управление на ресурсите, сигурност, софтуерно инженерство и уеб програмиране. Изучават се C, PHP и JavaScript плюс SQL, CSS и HTML."
@@ -1447,3 +1486,5 @@
   syncing_students: "Syncing your students"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
+  hero_name: 'Minecraft: Пътуването на героя'
+  applab-intro_name: App Lab Intro

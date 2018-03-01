@@ -31,7 +31,7 @@ namespace :ci do
         RakeUtils.bundle_exec 'berks', 'apply', rack_env
       end
       ChatClient.log 'Applying <b>chef</b> profile...'
-      RakeUtils.sudo 'chef-client'
+      RakeUtils.sudo '/opt/chef/bin/chef-client'
     end
   end
 
@@ -90,13 +90,13 @@ end
 
 desc 'Update the server as part of continuous integration.'
 task :ci do
-  ChatClient.wrap('CI build') {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
+  ChatClient.wrap('CI build', backtrace: true) {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
 end
 
 # Returns true if upgrade succeeded, false if failed.
 def upgrade_frontend(name, hostname)
   ChatClient.log "Upgrading <b>#{name}</b> (#{hostname})..."
-  command = 'sudo chef-client'
+  command = 'sudo /opt/chef/bin/chef-client'
   log_path = aws_dir "deploy-#{name}.log"
   begin
     RakeUtils.system "ssh -i ~/.ssh/deploy-id_rsa #{hostname} '#{command} 2>&1' >> #{log_path}"

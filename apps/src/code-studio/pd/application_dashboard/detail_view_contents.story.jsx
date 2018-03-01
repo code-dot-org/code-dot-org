@@ -1,11 +1,13 @@
 import React from 'react';
-import DetailViewContents from './detail_view_contents';
+import { DetailViewContents } from './detail_view_contents';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import reactRouterStoryDecorator from '../reactRouterStoryDecorator';
 
 export default storybook => {
   storybook
     .storiesOf('DetailViewContents', module)
     .addDecorator(reactBootstrapStoryDecorator)
+    .addDecorator(reactRouterStoryDecorator)
     .addStoryTable([
       {
         name: 'Detail view for applications',
@@ -13,12 +15,16 @@ export default storybook => {
           <DetailViewContents
             applicationId="1"
             applicationData={{
-              regionalPartner: 'partner',
+              course_name: 'CS Discoveries',
+              regional_partner_name: 'partner',
               notes: 'notes',
               status: 'unreviewed',
               school_name: 'School Name',
               district_name: 'District Name',
               email: 'email',
+              application_type: 'Facilitator',
+              meets_criteria: 'Yes',
+              bonus_points: 15,
               form_data: {
                 firstName: 'First Name',
                 lastName: 'Last Name',
@@ -28,11 +34,11 @@ export default storybook => {
                 accountEmail: 'accountEmail',
                 alternateEmail: 'alternateEmail',
                 program: 'program',
-                planOnTeachering: ['Yes'],
+                planOnTeaching: ['Yes'],
                 abilityToMeetRequirements: '10'
               }
             }}
-            updateProps={() => {}}
+            viewType="facilitator"
           />
         )
       }

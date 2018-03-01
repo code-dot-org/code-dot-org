@@ -1,15 +1,4 @@
-- video_code = nil
-- download_filename = nil
-- download_path = nil
-- facebook = nil
-- twitter = nil
+- video = Homepage.get_video
 
-- video_actions = DB[:cdo_homepage].where(type_s: "action", param1_s: "video", active_s: ["show","hide"], site_s: [request.site,"both"]).all
-- video_actions.each_with_index do |entry, index|
-  - video_code = entry[:param2_s]
-  - download_path = entry[:param3_s]
-  - facebook = {:u=>entry[:param4_s]}
-  - twitter = {:related=>'codeorg', :text=>entry[:param5_s]}
-
-  #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
-    = view :display_video_lightbox, id: "mainvideo", video_code: video_code, download_filename: download_filename, download_path: download_path, facebook:facebook, twitter:twitter
+#videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
+= view :display_video_lightbox, id: "mainvideo", video_code: video[:video_code], download_filename: nil, download_path: video[:download_path], facebook: video[:facebook], twitter: video[:twitter]

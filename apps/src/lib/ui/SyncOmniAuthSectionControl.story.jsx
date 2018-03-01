@@ -4,6 +4,7 @@ import {
   SyncOmniAuthSectionButton,
   READY, IN_PROGRESS, SUCCESS, FAILURE,
 } from './SyncOmniAuthSectionControl';
+import {action} from '@storybook/addon-actions';
 
 
 export default storybook => {
@@ -16,7 +17,7 @@ export default storybook => {
           <SyncOmniAuthSectionButton
             provider={provider}
             buttonState={buttonState}
-            onClick={storybook.action('click')}
+            onClick={action('click')}
           />
         ),
       });

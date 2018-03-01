@@ -13,13 +13,13 @@ const styles = {
   }
 };
 
-const ColumnMenu = React.createClass({
-  propTypes: {
+export default class ColumnMenu extends React.Component {
+  static propTypes = {
     coerceColumn: PropTypes.func.isRequired,
     handleDelete: PropTypes.func.isRequired,
     handleRename: PropTypes.func.isRequired,
     isEditable: PropTypes.bool.isRequired,
-  },
+  };
 
   render() {
     const menuStyle = {
@@ -61,5 +61,4 @@ const ColumnMenu = React.createClass({
       </span>
     );
   }
-});
-export default ColumnMenu;
+}

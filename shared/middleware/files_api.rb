@@ -5,6 +5,8 @@ require 'sinatra/base'
 require 'cdo/sinatra'
 
 class FilesApi < Sinatra::Base
+  set :mustermann_opts, check_anchors: false
+
   def max_file_size
     5_000_000 # 5 MB
   end
@@ -29,13 +31,13 @@ class FilesApi < Sinatra::Base
   end
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if has_permission?('reset_abuse') || new_score.nil?
+    return true if has_permission?('project_validator') || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
   def can_view_abusive_assets?(encrypted_channel_id)
-    return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('reset_abuse')
+    return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
@@ -259,9 +261,23 @@ class FilesApi < Sinatra::Base
 
     quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
     quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, params['version'])
 
-    {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
+    # Replacing a non-current version of main.json could lead to perceived data loss.
+    # Log to firehose so that we can better troubleshoot issues in this case.
+    version_to_replace = params['version']
+    timestamp = params['firstSaveTimestamp']
+    tab_id = params['tabId']
+    buckets.check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, current_user_id)
+
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
+
+    {
+      filename: filename,
+      category: category,
+      size: body.length,
+      versionId: response.version_id,
+      timestamp: Time.now # for logging purposes
+    }.to_json
   end
 
   #
@@ -456,11 +472,11 @@ class FilesApi < Sinatra::Base
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
+    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
   end
 
   #
-  # GET /v3/files/<channel-id>
+  # GET /v3/files/<channel-id>?version=<version-id>
   #
   # List filenames and sizes.
   #
@@ -469,7 +485,7 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     bucket = FileBucket.new
-    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'])
+    result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, env['HTTP_IF_MODIFIED_SINCE'], params['version'])
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
@@ -567,7 +583,7 @@ class FilesApi < Sinatra::Base
     new_entry_hash.to_json
   end
 
-  # POST /v3/files/<channel-id>/?version=<version-id>&project_version=<project-version-id>
+  # POST /v3/files/<channel-id>/?version=<version-id>&files-version=<project-version-id>
   #
   # Create or replace a file. We use this method so that IE9 can still
   # upload by posting to an iframe.
@@ -589,7 +605,7 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&project_version=<project-version-id>
+  # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&files-version=<project-version-id>
   #
   # Create or replace a file. Optionally overwrite a specific version.
   #
@@ -730,7 +746,7 @@ class FilesApi < Sinatra::Base
   METADATA_PATH = '.metadata'.freeze
   METADATA_FILENAMES = %w(
     thumbnail.png
-  )
+  ).freeze
 
   #
   # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>

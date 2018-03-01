@@ -1,4 +1,5 @@
 {
+  "startButton": "शुरू करें",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "ग्रेड 2-5",
   "filterGrades68": "6-8 ग्रेड",
   "filterGrades9": "ग्रेड 9 +",
-  "filterTeacherExperience": "शिक्षक अनुभव",
-  "filterTeacherExperienceBeginner": "शुरआती",
-  "filterTeacherExperienceComfortable": "आरामदायक",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "छात्र अनुभव",
   "filterStudentExperienceBeginner": "शुरआती",
   "filterStudentExperienceComfortable": "आरामदायक",

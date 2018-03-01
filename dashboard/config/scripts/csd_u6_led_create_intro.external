@@ -3,16 +3,9 @@ title 'Make an App Using the LED'
 display_name 'LED Games'
 description 'description here'
 markdown <<MARKDOWN
-# Make an LED App
+# LED Apps
 
-Now, you and your partner will have a chance to make your own app using the LED.  Discuss with your partner what kind of app you want to make.
+In the last level, you made an app to control the LED with different buttons on the screen.   In the next two levels, you'll see some other examples of apps, then have a chance to make one of your own.
 
-Will you need...
-
-* events?
-* variables?
-* setters?
-* random numbers?
-
-Look at the examples on the next three levels to help you finalize your plan for making your app.
+As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
 MARKDOWN

@@ -47,7 +47,7 @@ export default class AssignmentSelector extends Component {
     const { section } = props;
 
     let selectedPrimaryId, selectedSecondaryId;
-    if (!section){
+    if (!section) {
       selectedPrimaryId = noAssignment;
       selectedSecondaryId = noAssignment;
     } else if (section.courseId) {

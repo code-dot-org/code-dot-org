@@ -89,7 +89,6 @@ export function boardConnected() {
  * @param {function} opts.callback
  */
 export function onBoardEvent(opts) {
-  // TODO (bbuchanan): Validate arguments?
   let {component, event, callback} = opts;
   if (BOARD_EVENT_ALIASES[event]) {
     event = BOARD_EVENT_ALIASES[event];
@@ -105,4 +104,14 @@ export function onBoardEvent(opts) {
 export function createLed(opts) {
   apiValidateType(opts, 'createLed', 'pin', opts.pin, 'pinid');
   return board.createLed(opts.pin);
+}
+
+/**
+ * Create a Button component on the current maker board attached to the
+ * specified pin.
+ * @param {number} opts.pin
+ */
+export function createButton(opts) {
+  apiValidateType(opts, 'createButton', 'pin', opts.pin, 'pinid');
+  return board.createButton(opts.pin);
 }

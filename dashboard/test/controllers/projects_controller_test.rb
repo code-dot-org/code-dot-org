@@ -248,4 +248,35 @@ class ProjectsControllerTest < ActionController::TestCase
     get :load, params: {key: 'gamelab'}
     assert_redirected_to_sign_in
   end
+
+  test 'project validators can go to /featured' do
+    @project_validator = create :teacher
+    @project_validator.permission = UserPermission::PROJECT_VALIDATOR
+    sign_in @project_validator
+    get :featured
+    assert_response :success
+  end
+
+  test '/featured gets redirected to /public if not project validator' do
+    get :featured
+    assert_redirected_to '/projects/public'
+  end
+
+  test '/featured get redirected to sign in if signed out' do
+    sign_out :user
+    get :featured
+    assert_redirected_to '/users/sign_in'
+  end
+
+  test '/applab/new creates a channel and redirects to /applab/<channel>/edit' do
+    get :create_new, params: {key: 'applab'}
+    assert_response :redirect
+    assert @response.headers['Location'].ends_with? '/edit'
+  end
+
+  test '/applab/new with enableMaker param preserves param in redirect' do
+    get :create_new, params: {key: 'applab', enableMaker: 'true'}
+    assert_response :redirect
+    assert @response.headers['Location'].ends_with? '/edit?enableMaker=true'
+  end
 end

@@ -1,0 +1,18 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1
+  Thanks for your interest in the Professional Learning Program!
+
+%p
+  To get started, you first need to be logged into your Code.org account.
+  If you’d like more information about the program before you start your application,
+  please check out the
+  = link_to('Professional Learning Program overview', 'https://code.org/educate/professional-learning') + '.'
+
+%div
+  = link_to "/users/sign_in?user_return_to=#{request.fullpath}" do
+    %button= 'Sign in'
+
+  = link_to "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}" do
+    %button= 'Create an account'

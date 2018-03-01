@@ -1,4 +1,5 @@
 {
+  "startButton": "Початок",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Все",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "2-5 класи",
   "filterGrades68": "6-8 класи",
   "filterGrades9": "9+ класи",
-  "filterTeacherExperience": "Досвід вчителів",
-  "filterTeacherExperienceBeginner": "Початківець",
-  "filterTeacherExperienceComfortable": "Впевнений",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Досвідченість учнів",
   "filterStudentExperienceBeginner": "Початківець",
   "filterStudentExperienceComfortable": "Впевнений",

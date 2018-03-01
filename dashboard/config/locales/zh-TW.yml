@@ -177,6 +177,7 @@
       email: "電子信箱地址"
       submit: "提交"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。"
     change_form:
       title: "更改您的密碼"
@@ -627,6 +628,9 @@
         and games with objects and characters that interact with each other.
       audience: "年齡 13+"
       cta: "學習如何做"
+    hoc-encryption:
+      title: "簡單加密"
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -646,6 +650,10 @@
     minecraft2016:
       title: "當個創世神"
       body: "在 Minecraft 上為動物等其他生物編寫程式，打造屬於你自己的世界。"
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -712,6 +720,9 @@
     correct_title: "謝謝"
     correct_body: "感謝你提交這份答案。"
     hide_survey_last_answer: "這個調查是匿名的。請造訪教師控制台以匯整調查結果。注意，只有在至少五個學生提交了調查後，報告結果才會可見。"
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: "謝謝"
     wrong_body: "感謝你提交這份答案。"
@@ -815,12 +826,10 @@
     save: "儲存"
     delete: "删除"
     import: "匯入"
-    share_link_import_bad_link_header: "分享連結無法辨識"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: "有地方出錯了。"
-    share_link_import_error_body: "匯入此分享連結時出錯。請再試一次。"
+    share_link_import_bad_link_header: "無法辨識分享連結"
+    share_link_import_bad_link_body: "我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。"
+    share_link_import_error_header: "發生錯誤。"
+    share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
     exit: "返回課程"
     my_projects: "我的專案"
     project_gallery: "所有專案"
@@ -1016,7 +1025,7 @@
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: "移至單元概覽"
-  return_course_overview: "移至單元概覽"
+  return_course_overview: "移至課程概覽"
   view_all_units: "查看所有單元"
   pd:
     survey:

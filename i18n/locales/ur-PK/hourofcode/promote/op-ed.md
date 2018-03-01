@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_op_ed) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### ذیل میں کمپیوٹر سائنس ایجوکیشن ویک کی او-پڈ معاونت کا ایک سیمپل دیا گیا ہے جو کہ اسٹیٹ، لوکل لیجسلیٹرز، بزنس لیڈرز وغیرہ کے استعمال میں آ سکتا ہے۔

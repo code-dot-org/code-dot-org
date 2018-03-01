@@ -3,6 +3,7 @@ import React from 'react';
 import NetSimLogBrowser from './NetSimLogBrowser';
 import Packet from './Packet';
 import {createUuid} from '@cdo/apps/utils';
+import {withInfo} from '@storybook/addon-info';
 
 const range = function (i) {
   return new Array(i).fill().map((_, i) => i);
@@ -67,10 +68,9 @@ export default storybook => {
 
   return storybook
     .storiesOf('NetSimLogBrowser', module)
-    .addWithInfo(
+    .add(
       'No filtering allowed',
-      `Here's what the dialog looks like with minimum settings.`,
-      () => (
+      withInfo(`Here's what the dialog looks like with minimum settings.`)(() =>
         <div id="netsim">
           <NetSimLogBrowser
             isOpen
@@ -83,10 +83,9 @@ export default storybook => {
           />
         </div>
       ))
-    .addWithInfo(
+    .add(
       'Student filters',
-      `Here's what the dialog looks like with filters and more columns.`,
-      () => (
+      withInfo(`Here's what the dialog looks like with filters and more columns.`)(() =>
         <div id="netsim">
           <NetSimLogBrowser
             isOpen
@@ -103,10 +102,9 @@ export default storybook => {
           />
         </div>
       ))
-    .addWithInfo(
+    .add(
       `Teacher's View`,
-      `Here's what the teacher (or shard owner) gets to see`,
-      () => (
+      withInfo(`Here's what the teacher (or shard owner) gets to see`)(() =>
         <div id="netsim">
           <NetSimLogBrowser
             isOpen

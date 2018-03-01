@@ -90,8 +90,6 @@ var drawMap = function () {
   // Hide the left column and the resize bar.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.display = 'none';
-  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  visualizationResizeBar.style.display = 'none';
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();
@@ -122,7 +120,6 @@ Jigsaw.init = function (config) {
   }
   Blockly.SNAP_RADIUS = level.snapRadius || 90;
 
-  // TODO (br-pair) : I think this is something that's happening in all apps?
   config.loadAudio = function () {
     studioApp().loadAudio(skin.winSound, 'win');
     studioApp().loadAudio(skin.startSound, 'start');
@@ -197,8 +194,6 @@ function checkForSuccess() {
 var displayFeedback = function () {
   if (!Jigsaw.waitingForReport) {
     studioApp().displayFeedback({
-      app: 'Jigsaw',
-      skin: skin.id,
       feedbackType: Jigsaw.testResults,
       response: Jigsaw.response,
       level: level,

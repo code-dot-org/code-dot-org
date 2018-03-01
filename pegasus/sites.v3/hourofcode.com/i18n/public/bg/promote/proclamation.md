@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### По-долу е примерна резолюция в подкрепа на CSEW и нейните цели, които могат да бъдат използвани от държавните и местните законодатели.
@@ -37,22 +34,22 @@ nav: promote_nav
 
 Като има предвид, че участието в Часът на кодирането по време на Csew може да служи за демистифициране на областта на компютърните науки и да насърчи повече студенти да продължат обучението си по компютърни науки;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Като има предвид, че областта на компютърни науки има значителни капиталови бариери, включително и привличане на повече участие на жените и слабо представените малцинства на всички нива и клонове;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Като има предвид, че Грейс Мъри Хопър, една от първите жени в областта на компютърните науки, инженер, пионер в програмирането и пионер в стандартите за компютърни системи, които стават основа за много подобрения в компютърните науки; и
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Като се има предвид че седмицата на <%= campaign_date('start-long') %>, е в чест на рождения ден на Грейс Хопър, е определен като "Седмица на компютърните науки в образованието": сега, следователно, ще бъде
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Решено, че [СЕНАТЪТ, областта, градът / училището]--
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) подкрепя определянето на седмицата на компютърните науки в образованието (<%= campaign_date('full') %>);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) насърчава училища, педагози, родители и политици да участват в Csew като дават възможност на своите студенти да участват в Часът на кодирането;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) насърчава училища, учители, изследователи, университети, бизнес лидери и политици да определят механизми, по които учители да получат професионално развитие за да осигурят устойчив обучителен опит по компютърни науки на всички образователни нива и насърчава учениците даизучат компютърните концепции и понятия;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) насърчава политиците да премахнат бариерите, които пречат на изискването компютърните курсове да носят кредитни точки по математика или наука при завършване;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) насърчава възможности, включително чрез съществуващи програми, за участие на жените и слабо представените малцинства в компютърните науки.
 
 <%= view :signup_button %>

@@ -71,6 +71,12 @@
     the toolbox category will be included, allowing you to specify a subset of
     the definition blocks that you would like to include for this level.
   = boolean_check_box f, :disable_procedure_autopopulate
+.field
+  = f.label :top_level_procedure_autopopulate, 'Autopopulate function call blocks for non-categorized toolboxes'
+  %p
+    This adds a call block to the end of the toolbox for each function defined
+    in the workspace (including hidden start blocks).
+  = boolean_check_box f, :top_level_procedure_autopopulate
 
 - if @level.game.uses_droplet?
   .field
@@ -196,7 +202,7 @@
   - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
   - @level.contained_level_names.each do |level_name|
     = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
-  #plusanswer
+  #plusAnswerContainedLevel
     %i.fa.fa-plus-circle
 
 :ruby

@@ -3,14 +3,17 @@ title: Find a workshop
 theme: responsive
 ---
 # Find a workshop (for US teachers only, grades K-5)
-We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. See [what else you'll get](#get) from attending a workshop.
+We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. For more information about our goals and approach to our courses, please see our [curriculum values](/educate/curriculum/values) and our [professional learning values](/educate/professional-learning/values). See [what else you'll get](#get) from attending a workshop.
 <br />
 <br />
-### No workshop in your area? <br />
+### No workshop in your area or outside the United States? <br />
 
-[Find a CS Fundamentals Facilitator](/educate/k5-affiliates-directory) near you and ask them to host one. Many of our facilitators are happy to work with you to organize a training at your school. Or consider completing one of [our online self-paced courses](/educate/professional-development-online) on your own.
+If you are in the United States, [find a CS Fundamentals Facilitator](/educate/k5-affiliates-directory) near you and ask them to host one. Many of our facilitators are happy to work with you to organize a training at your school. 
+
+If there is no workshop near you, teachers anywhere in the world can use [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org) to connect with other teachers for support, teaching tips, and best practices.
 <br />
 <br />
+
 <%= view :workshop_search %>
 
 <a id="get"></a>
@@ -44,8 +47,26 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 
 <div style="clear:both"></div>
 
+## Benefits beyond the workshop
+
+[col-20]
+
+<img style="margin-top:-20px;margin-bottom:-30px" src="/images/avatars/fit-200/iste.png"/>
+
+[/col-20]
+
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, [we can offer an ISTE membership](https://www.iste.org/membership/code-org) exclusively to Code.org teachers at the special price of $99 (regularly $125).
+
+Check out these 3 key benefits of ISTE membership:
+
+- Professional Learning Networks made up of peer experts, including computer science educators
+- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
+- Empowered Learner, ISTE’s print and online magazine for members covering the most important topics in edtech ($49 retail value)
+
+
+
 ## Become a CS Fundamentals Facilitator
-Code.org's [Facilitator Development Program](https://docs.google.com/document/d/1aX-KH-t6tgjGk2WyvJ7ik7alH4kFTlZ0s1DsrCRBq6U/edit?usp=sharing) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Fundamentals curriculum.
+Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Fundamentals curriculum.
 
 Help bring professional learning opportunities to your community by becoming a Code.org Facilitator!
 

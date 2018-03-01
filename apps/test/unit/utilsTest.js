@@ -15,6 +15,8 @@ const {
   deepMergeConcatArrays,
   createUuid,
   normalize,
+  stringifyQueryParams,
+  getTabId,
 } = utils;
 
 describe('utils modules', () => {
@@ -716,6 +718,48 @@ describe('utils modules', () => {
     it('can be stubbed', () => {
       utils.reload();
       expect(utils.reload).to.have.been.calledOnce;
+    });
+  });
+
+  describe('stringifyQueryParams', () => {
+    it('returns the empty string when given a falsy input', () => {
+      expect('').to.equal(stringifyQueryParams(undefined));
+      expect('').to.equal(stringifyQueryParams(null));
+    });
+
+    it('returns the empty string when given no key-value pairs', () => {
+      expect('').to.equal(stringifyQueryParams({}));
+    });
+
+      it('stringifies objects containing one key-value pair', () => {
+      expect('?a=1').to.equal(stringifyQueryParams({a: 1}));
+    });
+
+    it('stringifies objects containing two key-value pairs', () => {
+      expect('?a=1&b=c').to.equal(stringifyQueryParams({a: 1, b: 'c'}));
+    });
+  });
+
+  describe('getTabId', () => {
+    it('keeps returning the same result', () => {
+      const id1 = getTabId();
+      const id2 = getTabId();
+      const id3 = getTabId();
+
+      expect(id1).to.equal(id2);
+      expect(id2).to.equal(id3);
+    });
+
+    it('changes only after session storage is cleared', () => {
+      const id1 = getTabId();
+      const id2 = getTabId();
+      sessionStorage.removeItem('tabId');
+      const id3 = getTabId();
+      const id4 = getTabId();
+
+      expect(id1).to.equal(id2);
+      expect(id2).to.not.equal(id3);
+      expect(id3).to.equal(id4);
     });
   });
 });

@@ -5,7 +5,7 @@ theme: responsive
 
 # Terms of Service
 
-Date of Last Revision: October 25, 2017
+Date of Last Revision: February 22, 2018
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the websites located at [https://code.org](https://code.org), [https://studio.code.org](https://studio.code.org), [https://csedweek.org](https://csedweek.org), [https://www.k12cs.org](https://www.k12cs.org), [https://hourofcode.com](https://hourofcode.com), [https://curriculum.code.org](https://curriculum.code.org), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”).
 
@@ -46,7 +46,7 @@ We help schools be compliant with the Family Educational Rights and Privacy Act 
 
 ### User Generated Content - Management; License Grant; Representations and Warranties
 
-Code.org may now or in the future permit you and other users to post computer code (including both source and object code), information, text, graphics, notes, questions, comments, ratings, reviews, images and videos or other communications (collectively, “**User Content**”) to the Services. You understand that whether or not such User Content is published, Code.org does not guarantee any confidentiality with respect to any submissions.
+Code.org may now or in the future permit you and other users to post computer code (including both source and object code), information, text, graphics, notes, questions, comments, ratings, reviews, images and videos or other communications (collectively, “**User Content**”) to the Services. You should not include any Student’s Personal Information (which are defined in our Privacy Policy) or Student educational records, in any of the User Content you create. If you or a Student in your class accidentally includes any Student’s Personal Information, please contact us at support@code.org. You understand that whether or not such User Content is published, Code.org does not guarantee any confidentiality with respect to any submissions.
 
 Code.org has no obligation to monitor User Content or other materials. You are responsible for evaluating all User Content including for accuracy, completeness and reliability, and you bear all risk of using such User Content. Code.org will not be responsible for any damages that you may incur as a result of the submission or use of any User Content.
 
@@ -54,7 +54,7 @@ Code.org may, but is not obligated to, monitor or review any Services where Educ
 
 Users may include links to third party websites in User Content as long as the content of such websites does not violate these Terms. Clicking on such links is at your sole risk. Code.org is not responsible for the availability or the content of linked websites, including the advertising, products or other materials thereon.
 
-By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and redistribute, adapt, prepare derivative works of, use, make, have made, import, and otherwise exploit your User Content, under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
+By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and redistribute, adapt, prepare derivative works of, use, make, have made, import, and otherwise exploit your User Content (which should not contain any Student’s Personal Information), under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
 
 In addition, by submitting or distributing User Content through the Services, you hereby grant to each user of the Services a non-exclusive license to access and use your User Content.
 
@@ -171,7 +171,7 @@ These Terms and any rights and licenses granted hereunder, may not be transferre
 
 #### E. Indemnification
 
-You agree to indemnify, defend, and hold harmless Code.org, its affiliated companies, contractors, employees, agents and its third-party suppliers, licensors, and partners (“Code.org Indemnitees”) from any claims, losses, damages, liabilities, including legal fees and expenses, arising out of any use or misuse of the website, the Services, any violation of the Terms, or any breach of the representations, warranties, and covenants made herein, whether by You or by any Child associated with you if you are a Parent. Code.org reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify Code.org, and you agree to cooperate with Code.org’s defense of these claims. Code.org will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.
+You agree, to the extent permissible by law, to indemnify, defend, and hold harmless Code.org, its affiliated companies, contractors, employees, agents and its third-party suppliers, licensors, and partners (“Code.org Indemnitees”) from any claims, losses, damages, liabilities, including legal fees and expenses, arising out of any use or misuse of the website, the Services, any violation of the Terms, or any breach of the representations, warranties, and covenants made herein, whether by You or by any Child associated with you if you are a Parent. Code.org reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify Code.org, and you agree to cooperate with Code.org’s defense of these claims. Code.org will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.
 
 We may revise these Terms from time to time, the most current version will always be at code.org/tos. If the revision, in our sole discretion, is material we will notify you via an e-mail to the email associated with your account. By continuing to access or use the Services after those revisions become effective, you agree to be bound by the revised Terms.
 

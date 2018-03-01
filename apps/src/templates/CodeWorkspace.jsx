@@ -43,6 +43,7 @@ var CodeWorkspace = React.createClass({
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
+    showMakerToggle: PropTypes.bool,
   },
 
   shouldComponentUpdate: function (nextProps) {
@@ -92,6 +93,7 @@ var CodeWorkspace = React.createClass({
       runModeIndicators,
       readonlyWorkspace,
       withSettingsCog,
+      showMakerToggle,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
@@ -101,7 +103,7 @@ var CodeWorkspace = React.createClass({
     ];
 
     const settingsCog = showSettingsCog &&
-        <SettingsCog {...{isRunning, runModeIndicators}}/>;
+        <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}}/>;
     return [
       <PaneSection
         id="toolbox-header"
@@ -229,4 +231,5 @@ module.exports = connect(state => ({
   showProjectTemplateWorkspaceIcon: !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   isMinecraft: !!state.pageConstants.isMinecraft,
   runModeIndicators: shouldUseRunModeIndicators(state),
+  showMakerToggle: !!state.pageConstants.showMakerToggle,
 }))(Radium(CodeWorkspace));

@@ -135,7 +135,7 @@ export default class JSInterpreter {
   parse(options) {
     this.calculateCodeInfo(options.code);
 
-    if (!this.studioApp.hideSource) {
+    if (!this.studioApp.hideSource && this.studioApp.editor) {
       const session = this.studioApp.editor.aceEditor.getSession();
       this.isBreakpointRow = (row) => codegen.isAceBreakpointRow(session, row);
     } else {
@@ -288,6 +288,13 @@ export default class JSInterpreter {
       // away so it can be returned in the native event handler
       this.seenReturnFromCallbackDuringExecution = true;
       this.lastCallbackRetVal = retVal;
+
+      // If we were stepping in the debugger, go back to running state:
+      if (this.paused) {
+        this.nextStep = StepType.RUN;
+        this.onNextStepChanged.notifyObservers();
+        this.handlePauseContinue();
+      }
     }
     // Provide warnings to the user if this function has been called with a
     // meaningful return value while we are no longer in the native event handler
@@ -614,8 +621,10 @@ export default class JSInterpreter {
                        stackDepth > this.firstCallStackDepthThisStep) {
               // trying to step over, and we're in deeper inside a function call... continue next onTick
             } else {
-              // Our step operation is complete, reset nextStep to StepType.RUN to
-              // return to a normal 'break' state:
+              // Our step operation is complete, set reachedBreak to ensure the
+              // current code will be selected before returning from this function.
+              reachedBreak = true;
+              // Reset nextStep to StepType.RUN to return to a normal 'break' state:
               this.nextStep = StepType.RUN;
               this.onNextStepChanged.notifyObservers();
               if (inUserCode) {
@@ -636,10 +645,14 @@ export default class JSInterpreter {
         return;
       }
     }
-    if (reachedBreak && atMaxSpeed) {
-      // If we were running atMaxSpeed and just reached a breakpoint, the
-      // code may not be selected in the editor, so do it now:
-      this.selectCurrentCode();
+    if (atMaxSpeed) {
+      if (reachedBreak) {
+        // If we were running atMaxSpeed and just reached a breakpoint, the
+        // code may not be selected in the editor, so do it now:
+        this.selectCurrentCode();
+      } else if (this.studioApp.editor) {
+        codegen.clearDropletAceHighlighting(this.studioApp.editor);
+      }
     }
     this.isExecuting = false;
   }
@@ -804,7 +817,7 @@ export default class JSInterpreter {
    * because it is outside of the userCode area, the return value is -1
    */
   selectCurrentCode(highlightClass) {
-    if (this.studioApp.hideSource) {
+    if (this.studioApp.hideSource || !this.studioApp.editCode) {
       return -1;
     }
     return codegen.selectCurrentCode(this.interpreter,

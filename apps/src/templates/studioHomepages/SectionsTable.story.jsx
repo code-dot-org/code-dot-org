@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionsTable from './SectionsTable';
+import {action} from '@storybook/addon-actions';
 
 const sections = [
   {
@@ -62,6 +63,7 @@ const sections = [
 export default storybook => {
   return storybook
     .storiesOf('SectionsTable', module)
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'Section Table - three sections for Teacher',
@@ -69,11 +71,10 @@ export default storybook => {
         story: () => (
           <SectionsTable
             sections={sections}
-            isRtl={false}
             isTeacher={true}
             canLeave={false}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       },
@@ -83,11 +84,10 @@ export default storybook => {
         story: () => (
           <SectionsTable
             sections={sections}
-            isRtl={false}
             isTeacher={false}
             canLeave={false}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       },
@@ -97,11 +97,10 @@ export default storybook => {
         story: () => (
           <SectionsTable
             sections={sections}
-            isRtl={false}
             isTeacher={false}
             canLeave={true}
-            updateSections={storybook.action('updateSections')}
-            updateSectionsResult={storybook.action('updateSectionsResult')}
+            updateSections={action('updateSections')}
+            updateSectionsResult={action('updateSectionsResult')}
           />
         )
       },

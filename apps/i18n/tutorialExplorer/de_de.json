@@ -1,4 +1,5 @@
 {
+  "startButton": "Anfang",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Alle",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "2. bis 5. Klasse",
   "filterGrades68": "6. bis 8. Klasse",
   "filterGrades9": "Klasse 9 +",
-  "filterTeacherExperience": "Lehrerfahrung",
-  "filterTeacherExperienceBeginner": "Anfänger",
-  "filterTeacherExperienceComfortable": "Komfortabel",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Schülererfahrung",
   "filterStudentExperienceBeginner": "Anfänger",
   "filterStudentExperienceComfortable": "Komfortabel",
@@ -59,7 +56,7 @@
   "headingTutorialsYourLanguage": "Aktivitäten in Ihrer Sprache",
   "showAllTutorialsButton": "Zeige Aktivitäten für weitere Sprachen",
   "hideAllTutorialsButton": "Verberge Aktivitäten für andere Sprachen als die ausgewählte",
-  "noTutorialsYourLanguage": "Es sind keine passenden Aktivitäten in ihrer Sprache vorhanden. Klicken Sie auf den untenstehenden Knopf, um Aktivitäten in anderen Sprachen zu Versuchen.",
+  "noTutorialsYourLanguage": "In Ihrer Sprache gibt es keine Aktivitäten Suchen Sie Aktivitäten in anderen Sprachen, indem Sie auf die Schaltfläche unten klicken.",
   "bottomGuidelinesLink": "Hier klicken um die Anmeldebedingungen und Anleitungen für den 'Hour of Code' Tutorials einzusehen.",
   "bottomSpecialNeedsLink": "Hier klicken für mehr Informationen, wie Sie Schüler mit geistigen oder körperlichen Beeinträchtigungen unterstützen können."
 }

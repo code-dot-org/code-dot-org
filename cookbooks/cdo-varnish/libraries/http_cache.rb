@@ -3,17 +3,17 @@
 # See cdo-varnish/README.md for more information on the configuration format.
 class HttpCache
   # Paths for files that are always cached based on their extension.
-  STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}
+  STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}.freeze
 
   # Language header and cookie are needed to separately cache language-specific pages.
-  LANGUAGE_HEADER = %w(Accept-Language)
+  LANGUAGE_HEADER = %w(Accept-Language).freeze
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
-  ]
+  ].freeze
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(
@@ -23,6 +23,7 @@ class HttpCache
     frozen
     gumball
     minecraft
+    hero
     sports
     basketball
   ).map do |script_name|
@@ -49,7 +50,7 @@ class HttpCache
 
     # Signed-in user type (student/teacher), or signed-out if cookie is not present.
     user_type = "_user_type#{env_suffix}"
-    default_cookies = DEFAULT_COOKIES.concat([user_type])
+    default_cookies = DEFAULT_COOKIES + [user_type]
 
     # These cookies are whitelisted on all session-specific (not cached) pages.
     whitelisted_cookies = [
@@ -60,6 +61,7 @@ class HttpCache
       'videos_seen',
       'callouts_seen',
       'rack.session',
+      'remember_user_token',
       session_key,
       storage_id,
     ].concat(default_cookies)
@@ -94,7 +96,6 @@ class HttpCache
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
               /pd-program-registration*
-              /ops-dashboard*
               /poste*
             ),
             headers: LANGUAGE_HEADER,

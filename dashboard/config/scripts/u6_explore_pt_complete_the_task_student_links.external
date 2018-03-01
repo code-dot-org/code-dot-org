@@ -4,7 +4,7 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 7 - Explore PT - Complete the Task
+# Explore PT - Complete the Task
 
 ## Background
 
@@ -20,17 +20,17 @@ Best of luck!
 
 ## Resources
 
+**AP CSP Performance Task Directions for Students - quick links** 
 
-**New this lesson**
-
-* Explore PT - Guidelines for completing the task ([PDF](https://docs.google.com/document/d/1QB6vo46nJcj59OoPAlTTsA8aZ32mOc98CNbKJxTJkJM/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1QB6vo46nJcj59OoPAlTTsA8aZ32mOc98CNbKJxTJkJM/export?format=doc))
+* Page 2 - [Policy on Plagiarism](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=4)
+* Page 3 - [Preparing for the Through-Course Performance Tasks](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=5)
+* Page 7 - [Preparing for the Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=9)
+* Page 8 - [Guidelines for Completing the Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=10)
 
 **College Board Documents**
 
-* Explore PT - [Guidelines before starting](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=9)
 * [Explore Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf#page=6) - Task Description
 * [Scoring Guidelines - Explore Performance Task](https://apcentral.collegeboard.org/pdf/2018-explore-performance-tasks-sg.pdf)
-
 
 **Digital Portfolio**
 
@@ -39,12 +39,7 @@ Best of luck!
 
 **Review and Planning Documents**
 
-* Explore Performance Task - Checklist ([PDF](https://docs.google.com/document/d/1_Q9D1utxDup_4yc1frFCcnEboy_THvsPeIkARZ4by0s/export?format=pdf) |  [DOCX](https://docs.google.com/document/d/1_Q9D1utxDup_4yc1frFCcnEboy_THvsPeIkARZ4by0s/export?format=doc))
-* Explore PT - Sample Timeline ([PDF](https://docs.google.com/document/d/1TQaCXMkXQ-KpKmN81I4wiRDdQvUfjuaiFLzOPCyMSb8/export?format=pdf) |  [DOCX](https://docs.google.com/document/d/1TQaCXMkXQ-KpKmN81I4wiRDdQvUfjuaiFLzOPCyMSb8/export?format=doc))
-* (Optional) Explore PT - Template for written responses ([PDF](https://docs.google.com/document/d/1dEZGM8IZoT3WX4T08NS-Nh-Hi38SVtSF65htxGJpv94/export?format=pdf)  | [DOCX](https://docs.google.com/document/d/1dEZGM8IZoT3WX4T08NS-Nh-Hi38SVtSF65htxGJpv94/export?format=doc))
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+* [Explore PT Survival Guide](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=pdf) - Student Guide (copy as [MS Word](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1savzKfWdI6qszDLWDwfNWLQKsbN7021K36kjeqDxzgk/copy))
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

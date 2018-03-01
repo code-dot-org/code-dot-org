@@ -46,20 +46,20 @@ bg:
       label: 'Добавете учител:'
       placeholder: "Код по раздел(ABCDEF)"
       instructions: "Моля въведете кода, споделен от учителя. Това е код от 6 букви като \"ABCDEF\"."
-      instructions_short: "Enter your 6 letter section code"
+      instructions_short: "Въведете вашия шестбуквен код за раздел"
     submit: 'Добавяне на учител'
   add_hint_form:
     placeholder: 'Моля, въведете вашата препоръка'
     submit: 'Добавяне на препоръка'
   appname: "Code.org"
   stage: "Етап"
-  stage_number: "Етап %{number}"
+  stage_number: "Урок %{number}"
   puzzle: "Пъзел"
   trophies: "Трофеи"
   courses: 'Курсове'
   courses_page:
     title_student: "Обучавайте се в Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Научи с Code Studio"
   unplugged_activity: 'Ънплъгд дейност'
   of: "на"
   more: "ПОВЕЧЕ"
@@ -69,7 +69,7 @@ bg:
   try_k8intro: "Или опитайте нашите начални встъпителни курсове по компютърни науки (15-25 часа)"
   k8intro: "K-8 представяне на курс по компютърни науки (15-25 часа)"
   already_started: "Вече сте започнали? Продължете оттук >> "
-  demos: 'Администратор: Всички демо версии'
+  demos: "Администратор: Всички демо версии"
   continue: 'Продължи'
   prize: 'награда'
   more_info: 'Повече информация'
@@ -84,12 +84,12 @@ bg:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Microsoft профил'
-    clever: 'Clever Account'
+    clever: 'Умен профил'
     forgot_password: 'Забравили сте паролата си?'
     need_confirmation: "Не сте получили инструкции за потвърждение ?"
     need_unlock: "Не сте получили инструкции за отключване?"
     not_linked: "За съжаление, твоят Code.org акаунт не е свързан с %{provider}. Ще се наложи да влезеш като въведеш паролата си по-долу."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "За съжаление, този Code.org акаунт не е свързан с вашият %{provider}. Моля, влезте през вашия умен портал."
   signup_form:
     student_count: '%{count} ученици вече са се регистрирали.'
     teacher_count: '%{count} учители вече са се регистрирали.'
@@ -122,7 +122,7 @@ bg:
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
-    error: "An error occurred."
+    error: "Възникна грешка."
   school_info:
     title: 'Информацшя за училището (по избор)'
     school_country: 'Училищен район'
@@ -171,6 +171,7 @@ bg:
       email: 'Имейл адрес'
       submit: 'Изпрати'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Като че ли сте се регистрирали с невалиден имейл адрес. Моля пишете на support@code.org, за да получите парола за възстановяване на връзката.'
     change_form:
       title: 'Смяна на паролата'
@@ -188,7 +189,7 @@ bg:
   parent_mailer:
     student_associated_subject: 'Информация за вход в Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Добре дошли в Code.org!'
   section:
     your_section:
       one: 'Вашата секция:'
@@ -198,8 +199,8 @@ bg:
       remove: 'Наистина ли искате да изтриете този раздел/секция?'
     remove: '(remove section)'
     type:
-      picture: 'Picture Password'
-      word: 'Secret Words'
+      picture: 'Снимка парола'
+      word: 'Тайни думи'
       email: 'Имейл'
       google_classroom: 'Google класна стая'
       clever: 'Clever'
@@ -215,10 +216,10 @@ bg:
       section_not_found: "Не е намерена раздел с код \"%{section_code}\"."
       blank_code: "Моля въведете код за раздела"
       cant_join_own_section: "За съжаление, не можете да се присъедините към вашият собствен раздел."
-      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
+      provider_managed_section: "Този раздел се управлява от друг доставчик и не може да се присъединете. Помолете учителите си да ви добавят чрез %{provider} и повторно синхронизирайте раздела."
     mail:
       student_disassociated:
-        subject: 'Code.org уведомление: %{student_name} вече не свързан като ваш ученик.'
+        subject: "Code.org уведомление: %{student_name} вече не свързан като ваш ученик."
   reports:
     error:
       access_denied: "Нямате достъп до статистиката на този човек"
@@ -239,7 +240,7 @@ bg:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        user_type_change_email_mismatch: "Имейл адреса, който сте посочили не съвпада с имейл адреса за този акаунт"
         personal_login_created_email: 'Съдадохте парсонална регистрация за вход успешно. Сега можете да влезете в Code.org с вашия имейл и парола'
         personal_login_created_username: 'Съдадохте парсонална регистрация за вход успешно. Сега можете да влезете в Code.org с вашия имейл и парола'
   nav:
@@ -350,7 +351,7 @@ bg:
     current_password_hint: '(нуждаем се от вашата текуща парола, за да потвърдим вашите промени)'
     delete: 'Изтриване на вашия акаунт'
     delete_text: "Щракнете върху бутона по-долу, за да изтриете вашия акаунт."
-    delete_text_teacher_note: 'Моля, обърнете внимание: изтриването на вашия акаунт няма да изтрие акаунтите на вашите ученици.'
+    delete_text_teacher_note: "Моля, обърнете внимание: изтриването на вашия акаунт няма да изтрие акаунтите на вашите ученици."
     delete_confirm: 'Наистина ли искате да изтриете профила си?'
     deleted_user: 'изтрит потребител'
     no_password_because_oauth: 'Без парола, защото можете да влезете от трета страна доставчик.'
@@ -361,7 +362,7 @@ bg:
     create_personal_login_under_13_parent_email: 'Имейл на родителя/настойника (за да възстановите паролата си)'
     create_personal_login_info: 'Ако искате да продължите да използвате профила си Code.org дори и след края на учебната година, можете да се регистрирате самостоятелно.'
     create_personal_login_terms: "Чрез създаване на лична регистрация, съм съгласен да се обвържа с Code.org <a href='%{terms_of_service_url}', target='_blank'> условията за ползване</a>. Ако съм на възраст под 13 години, аз потвърждавам, че имам разрашение от моя родител или законен настойник за използване на услугите на Code.org дори и без учител."
-    create_personal_login_email_note: 'Забележка: Имейл адресите не се съхраняват във форма, която да позволява да се свържете с ученици. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href=''%{privacy_policy_url}'', target=''_blank''> декларация за поверителност</a> за повече информация.'
+    create_personal_login_email_note: "Забележка: Имейл адресите не се съхраняват във форма, която да позволява да се свържете с ученици. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href='%{privacy_policy_url}', target='_blank'> декларация за поверителност</a> за повече информация."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -565,6 +566,9 @@ bg:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Възраст 13 +"
       cta: "Научете как"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -583,6 +587,9 @@ bg:
     minecraft2016:
       title: "Minecraft"
       body: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код."
     sports:
       title: "Спорт"
       body: "Make a basketball game or mix and match across sports."
@@ -646,6 +653,7 @@ bg:
     correct_title: "Благодаря"
     correct_body: "Благодаря Ви, че подадохте отговор"
     hide_survey_last_answer: "Това анкета е анонимна.  Моля, посетете учителското таблото за обобщени резултати.  Имайте предвид, че резултатите ще се виждат само ако най-малко пет ученици са направили анкетата."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Благодаря"
     wrong_body: "Благодаря Ви, че подадохте отговор"
@@ -693,7 +701,7 @@ bg:
     sign_out: 'Ако не искате да предоставите информация за вашата възраст, може да <a href="%{url}"> излезете</a>.'
   terms_interstitial:
     title: "Актуализираните условия за ползване и поверителност"
-    intro_desc: 'Обновихме нашите условия за ползване и поверителност, както е показано по-долу. Промените са в действие от 24 август 2016 г.  Най-голямата промяна: ние  <i>вече не съхраняваме имейл адреси на ученическите акаунти в Студиото по кодиране.</i> Това е от значение за нас, и ние се надяваме това да подпомогне сигурността на учениците в образованието по Cs. Ние ще изпратим Резюме на другите промени по електронна поща.'
+    intro_desc: "Обновихме нашите условия за ползване и поверителност, както е показано по-долу. Промените са в действие от 24 август 2016 г.  Най-голямата промяна: ние  <i>вече не съхраняваме имейл адреси на ученическите акаунти в Студиото по кодиране.</i> Това е от значение за нас, и ние се надяваме това да подпомогне сигурността на учениците в образованието по Cs. Ние ще изпратим Резюме на другите промени по електронна поща."
     intro_instructions: "Трябва да приемете тези условия за ученици на възраст под 13 във вашия клас, за да имат пълен достъп до всички най-нови функции в Студиото по кодиране.  Когато се регистрира акаунт за ученик под 13, вие ще бъдете помолени да потвърдите, че вашето училище има родителско съгласие за събиране на лична информация на учениците за използването от училището на образователните програми в Студиото по кодиране."
     tos: "Термини"
     privacy: "Защита на личните данни"
@@ -709,7 +717,7 @@ bg:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Запазване"
   race_interstitial:
-    title: 'По желание: Помогнете ни подобрим многообразието от уроци по компютърни науки'
+    title: "По желание: Помогнете ни подобрим многообразието от уроци по компютърни науки"
     message: "Моля да ни кажете вашата раса (проверка на всички, които се прилагат)"
     races:
       - 
@@ -751,11 +759,11 @@ bg:
     rename: "Преименуване"
     save: "Запазване"
     delete: "Изтриване"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Импортиране"
+    share_link_import_bad_link_header: "Връзката за споделяне не е разпозната"
+    share_link_import_bad_link_body: "Не успяхме да импортираме тази връзка за споделяне. Уверете се, че използвате връзка от Minecraft: Agent puzzle и сте копирали пълната връзка."
+    share_link_import_error_header: "Възникна грешка."
+    share_link_import_error_body: "Възникна проблем при импортирането на връзката за споделяне. Опитайте отново."
     exit: "Връщане към курса"
     my_projects: "Моите проекти"
     project_gallery: "Проекти"
@@ -856,8 +864,8 @@ bg:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

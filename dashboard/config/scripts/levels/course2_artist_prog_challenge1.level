@@ -38,10 +38,12 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/7c7840f73d9e88e374fcffcd202224b0=levelbuilder/27192.png",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-18 00:10:31 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Medianı Kod Saatı tədbirinə necə cəlb edə bilərsiniz
@@ -14,20 +11,20 @@ nav: promote_nav
 
 ### Əsas məsləhətlər
 
-  * Tədbirdən iki həftə əvvəl medianı e-poçt vasitəsilə məlumatlandırın. Cavab almadıqda, e-poçt və ya telefonla təkrar müraciət edin.
-  * Məktəb heyətindən və ya könüllərdən onlayn paylaşmaq üçün və ya mətbuata göndərmək üçün şəkillər çəkməyi xahiş edin.
-  * Kod Saatı barədə öz veb-saytınızın ev səhifəsində və ya məktəbinizin divar qəzetində yazın. Tədbiriniz barədə ətraflı məlumat və şagirdlərin fəaliyyətini göstərən şəkillər yerləşdirin.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Tədbirdən iki həftə əvvəl medianı e-poçt vasitəsilə məlumatlandırın. Cavab almadıqda, e-poçt və ya telefonla təkrar müraciət edin.
+- Məktəb heyətindən və ya könüllərdən onlayn paylaşmaq üçün və ya mətbuata göndərmək üçün şəkillər çəkməyi xahiş edin.
+- Kod Saatı barədə öz veb-saytınızın ev səhifəsində və ya məktəbinizin divar qəzetində yazın. Tədbiriniz barədə ətraflı məlumat və şagirdlərin fəaliyyətini göstərən şəkillər yerləşdirin.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Mərhələlər üzrə bələdçi:
 
 **1. Tədbirinizi planlaşdırın**
 
-  * Kod Saatəna başlamaq üçün yığıncaq təşkil edin.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Qrup məşğələləri təşkil edin (məsələn, proqramlaşdırma məşğələsini avadalıq olmadan necə keçirmək mümkün olduğunu göstərin), yaxud şagirdlərin yaratdığı və təşkil etdiyi çalışmaları nümayiş etdirin.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+- Kod Saatəna başlamaq üçün yığıncaq təşkil edin.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Qrup məşğələləri təşkil edin (məsələn, proqramlaşdırma məşğələsini avadalıq olmadan necə keçirmək mümkün olduğunu göstərin), yaxud şagirdlərin yaratdığı və təşkil etdiyi çalışmaları nümayiş etdirin.
+- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

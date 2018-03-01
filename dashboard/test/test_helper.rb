@@ -1,3 +1,10 @@
+require 'test_reporter'
+
+# This is a workaround for https://github.com/kern/minitest-reporters/issues/230
+Minitest.load_plugins
+Minitest.extensions.delete('rails')
+Minitest.extensions.unshift('rails')
+
 if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
@@ -8,8 +15,7 @@ if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when runni
   end
 end
 
-require 'minitest/reporters'
-reporters = [Minitest::Reporters::ProgressReporter.new]
+reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
 end
@@ -30,7 +36,10 @@ Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.applicatio
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+CDO.override_pegasus = nil
+CDO.override_dashboard = nil
 
+Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
@@ -152,9 +161,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map do |e|
-      # rubocop:disable Lint/Eval
+      # rubocop:disable Security/Eval
       e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
-      # rubocop:enable Lint/Eval
+      # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
 
@@ -173,9 +182,9 @@ class ActiveSupport::TestCase
     expressions = Array(expressions)
 
     exps = expressions.map do |e|
-      # rubocop:disable Lint/Eval
+      # rubocop:disable Security/Eval
       e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
-      # rubocop:enable Lint/Eval
+      # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
 

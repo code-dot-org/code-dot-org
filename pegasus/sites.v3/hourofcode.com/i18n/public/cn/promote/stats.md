@@ -1,10 +1,9 @@
 ---
-
 title: <%= hoc_s(:title_stats) %>
 layout: wide
 nav: promote_nav
-
 ---
+
 
 <a id="blurb"></a>
 
@@ -14,11 +13,11 @@ nav: promote_nav
 
 ## 在简讯中使用这则导语
 
-### 以编程一小时开启你学校的计算机科学
+### 将计算机科学带到你的学校。从《编程一小时》开始。
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! 好消息是，我们正在着手改变现状。 If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+科技正改变着这星球上的每一行业，计算机知识也已成为人类必备的技能之一。 但只有不到一半的学校有在讲授计算机科学！ 好消息是，我们正在着手改变现状。 如果你以前听说过《编程一小时》，你应该知道它创造了历史。 1亿名学生正通过编程一小时活动入门计算机科学并体验着其中的乐趣。
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+编程一小时是个一小时的计算机科学介绍活动，希望能揭开编程的神秘面纱，并说明它是任何人都可以学会的基础知识。 通过<http://HourofCode.com>进一步了解，自己尝试体验一小时，或者举办一个编程一小时的活动来向他人介绍计算机世界！
 
 <a id="infographics"></a>
 

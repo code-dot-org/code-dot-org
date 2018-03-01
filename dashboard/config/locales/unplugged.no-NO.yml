@@ -284,26 +284,26 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: I denne oppgaven skal du lære om løkker!
       courseB_unplugged_MRF:
         title: Frakoblet Aktivitet
-        desc: In this lesson, you will 'program' your friends!
+        desc: I denne oppgaven skal du 'programmere' vennene dine!
       courseB_unplugged_loopyMRF:
         title: Frakoblet Aktivitet
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Akkurat som i "Mine robotvenner" skal du "programmere" vennene dine,
+          men denne gangen med løkker!
       courseC_Unplugged_ScreenOutTheMean:
         title: Frakoblet Aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       courseD_unplugged_digitalCitizenship:
         title: Frakoblet Aktivitet
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: I dag skal du lære hva det vil si å være en digital borger.
       courseE_unplugged_privateInformation:
-        title: Frakoblet Aktivitet
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Sunn fornuft opplæring: Privat og personlig informasjon '
+        desc: I dag vil du lære forskjellen mellom privat og personlig informasjon!
       courseF_unplugged_powerOfWords:
         title: Frakoblet Aktivitet
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
@@ -373,7 +373,7 @@
           videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
           informasjon (som for eksempel bilder og farger) binært også.
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: 'Virkelige algoritmer: Terningrace'
         desc: Denne leksjonen viser måter vi bruker algoritmer på i vårt daglige liv.
           Som en del av dette, vil studentene identifisere og skrive ned algoritmen
           for terningracet.
@@ -419,7 +419,7 @@
           forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig
           nyttig praksis.  '
       swipeRightPassThrough:
-        title: Recruitment Scenarios Session
+        title: "Økt med rekruttering rekrutterings scenarier"
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -432,7 +432,7 @@
           \r
           When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
       swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
+        title: "Økt med rekruttering rekrutterings scenarier"
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -453,3 +453,42 @@
           1. started with an `unplugged` level. populated with info. hit save and publish.\r
           2. “destroyed” the level\r
           3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''

@@ -7,8 +7,11 @@ import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
+import {sandboxDocumentBody} from "../util/testUtils";
 
 describe("StudioApp", () => {
+  sandboxDocumentBody();
+
   describe('StudioApp.singleton', () => {
     beforeEach(stubStudioApp);
     afterEach(restoreStudioApp);

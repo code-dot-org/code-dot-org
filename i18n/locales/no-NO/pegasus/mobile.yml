@@ -25,10 +25,15 @@
   submit: "Send"
   twentyhours_heading: "Prøv vår introduksjon til koding"
   twentyhours_text: "Fullført din første kodetime? Lær mer grunnleggende koding og programmering i dette oppfølgingskurset."
-  og_title: Alle kan lære
+  og_title: 'Alle kan lære'
+  og_title_soon: "Kodetimen kommer"
+  og_title_here: "Kodetimen er kommet!"
   og_description: "Alle elever i alle skoler fortjener mulighet til å lære seg å programmere."
+  og_description_celeb: "Prøv de nye opplæringsprogrammene, vinne en kjendis videochat for deg selv eller klassen!"
   csedweek_og_title: "Kodetimen kommer"
   csedweek_og_description: "4.-10. desember 2017. Informatikk er grunnleggende for alle elever."
+  csedweek_og_description_soon: "Kodetimen er 4.-10. desember 2017. Programmering er en grunnleggende ferdighet for alle elever."
+  csedweek_og_description_here: "Kodetimen er kommet. Programmering er en grunnleggende ferdighet for alle elever."
   hoc2014_heading: "Bli med i <a href=\"http://hourofcode.com\">Kodetimen</a><br/> 8. – 14. desember 2014<br/>"
   hoc2014_students: "Elever"
   hoc2014_try: "Prøv"
@@ -110,9 +115,9 @@
   third_party_scratch_desc: "Med Scratch kan du programmere dine egne interaktive historier, spill og animasjoner og dele det du har laget med andre i nettsamfunnet. Scratch hjelper unge mennesker å lære hvordan de kan tenke kreativt, tenke systematisk og samarbeide - grunnleggende ferdigheter for livet i det 21. århundre."
   third_party_scratch_btn_curriculum: "Last ned Scratch Curriculum"
   third_party_scratch_btn_forum: "Scratch lærer-forum"
-  third_party_scratch_btn_site: "Besøk Bunnen"
+  third_party_scratch_btn_site: "Besøk Scratch"
   third_party_lightbot_desc: "I Lightbot må elever programmere en robot med kommandoer for å løse oppgaver. Elevene kan spille det i en nettleser (krever Flash Player), på Android- eller iOS-enheter. Elevene spiller det første settet med \"Grunnleggende\" nivåer i Lightbot. De vil lære hvordan fortelle en datamaskin hva den skal gjøre ved en serie med grunnleggende kommandoer og de vil få brukt den generelle prosessen som dataprogrammer er skrevet med."
-  third_party_lightbot_btn_curriculum: "Last ned Lightbot Curriculun"
+  third_party_lightbot_btn_curriculum: "Last ned Lightbot Curriculum"
   third_party_lightbot_btn_site: "Besøk Lightbot"
   third_party_khan_desc: "Lær hvordan du kan programmere tegninger, animasjoner og spill ved bruk av JavaScript og ProcessingJS, eller lær hvordan du kan lage nettsider med HTML og CSS. Du kan dele alt du lager, se hva andre lager og lære av hverandre!"
   third_party_khan_btn_learn: "Lær CS med Khan Akadamiet"
@@ -255,6 +260,12 @@
   studiobar_donate_body: "Et barn vil få mulighet til å lære for hver 10 du bidrar med"
   studiobar_shop_title: "Butikk"
   studiobar_shop_body: "Bryt stereotyper. Bruk vår logo med stolthet."
+  homepage_stats_students: "av Amerikanske elever har konto på Code.org"
+  homepage_stats_female: "av våre elever er jenter"
+  homepage_stats_teachers: "lærere bruker Code.org"
+  homepage_stats_hourofcodde: "av verdens elever som har prøvd kodetimen"
+  homepage_stats_policy: "stater forandret regler for å støtte dataforskning"
+  homepage_stats_title: "Vi utgjør en forskjell"
   homepage_hero_text_malala: "\"Jeg utfordrer jenter i alle land til å lære en kodetime\" Malala, fredsprisvinner"
   homepage_hero_text_susan: |-
     "Hvis du kan endre teknologi, kan du endre verden." Susan, administrerende direktør i YouTube
@@ -291,6 +302,8 @@
   homepage_hero_text_stat_loc: "8,5 millioner jenter er registrert på Code.org"
   homepage_hero_text_stat_students: "#student_count elevkontoer på Code.org"
   homepage_hero_text_stat_served: 'Kodetimen: #served har prøvd'
+  homepage_hero_hoc_is_coming: "Kodetimen kommer"
+  homepage_hero_hoc_is_here: "Kodetimen er kommet"
   homepage_slot_text_hoc: "Kodetimen"
   homepage_slot_text_frozen: "Frost med Anna og Elsa"
   homepage_slot_text_teacher: "Lærersider"
@@ -310,6 +323,7 @@
   homepage_action_text_girlvideo: "Inspirere en jente"
   homepage_action_text_learn: "Begynne å lære"
   homepage_action_text_signpetition: "Signér oppropet"
+  homepage_action_text_wincelebritychat: "Vinne en kjendis-chat"
   homepage_signpetition_dropdown: "Signér vår underskriftskampanje ▾"
   homepage_diversity_pledge: "Slå et slag for mangfoldet"
   homepage_banner_text_prizes: 'Kodetimen kommer igjen, 7.-13. desember. '
@@ -416,17 +430,33 @@
   mc_gradelevel: "Passer for de som er 6 år og eldre"
   mc_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
   mc_specs: "Mange språk | Moderne nettlesere og nettbrett | Alderen 6-106"
+  minecraft_agent: 'Minecraft: Heltens reise'
   minecraft_designer: "Minecraft-designer"
   minecraft_adventurer: "Minecraft-eventyrer"
   minecraft_tutorials: "Minecraft Kodetime-oppgaver"
   minecraft_specs: "Mange språk | Moderne nettlesere og nettbrett | 2. klasse og oppover"
+  minecraft_agent_description: "Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode."
+  minecraft_agent_button: "Start"
   minecraft_designer_description: "Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft."
   minecraft_designer_button: "Start"
-  minecraft_adventurer_description: "Bruke kode for å ta med Alex eller Steve på et eventyr."
+  minecraft_adventurer_description: "Bruk kode for å ta med Alex eller Steve på et eventyr."
   minecraft_adventurer_button: "Start"
   minecraft_no_internet: "Har du ikke internett?"
   minecraft_download_adventurer: "Last ned Minecraft-eventyrer for bruk uten internett."
   minecraft_subtitle: "Kodetimen med Minecraft"
+  minecraft_store_camps: "Gratis Minecraft Kodetime-leir på Microsoft Store"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'> Registrer deg</a> for gratis Minecraft time koden arbeidsoppgavene på Microsoft Stores i Australia, Canada, Puerto Rico eller USA. Lær hvordan koding for alle og kombinerer kreativitet, problemløsning og masse moro."
+  minecraft_host_event: "Hold en Minecraft Kodetime-arrangement"
+  minecraft_teach_resources: "Lærerressurser og oppgaveplan."
+  minecraft_leader_guide: "Last ned ressurser for å få hjelp deg til å planlegge og lede en Kodetime."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'> Last ned</a> tilrettelagt hurtigstartveiledning og PowerPoint-presentasjoner for yngre og eldre studenter nå."
+  minecraft_join_online_training: "Klar til å ha din eigen Kodetime med Minecraft, men ikke sikker på hvor du skal starte? Sjekk ut våre <a href='%{minecraft_webinar_url}'>etterspurde webinar</a>. Du vil lære de beste fremgangsmåtene, få tilgang til tilretteleggingsmateriale og få en gjennomgang av rettleiinga til den nye reisa til helten frå Minecraft-teamet. Få et forsprang på ved å gå gjennom kva du treng for å ha Kodetimen for unge under Kodetimen-veka (4.-10. desember) og etterpå."
+  minecraft_continue_learning: 'Informatikk for alle: etter Kodetimen på Microsoft Store'
+  minecraft_continue_learning_description: "Ingen programmeringserfaring trengs! Hjelp til å sikre at alle unge kan lære verdifulle ferdigheiter ein når gjennom ei utdanning i informatikk. Bli med oss på Microsoft Store for å vere med på ein gratis serie på tre seminar på ein time kor du opplev koding i eit morosamt og stressfritt miljø, bli kjent med nøkkelomgrep i datavitskap og gjer deg klar til å halde ein Kodetime i klasserommet eller i lokalsamfunnet. Du får til dette! <a href='%{minecraft_continue_learning_url}'>Registrer deg i dag</a>."
+  minecraft_future: "Hjelp alle unge med å bli klare for fremtiden"
+  minecraft_future_description: "Finn ut hvordan andre skuler og ideelle organisasjoner lærer bort digitale ferdigheter, fra digital kompetanse til informatikkutdanning, til lokalsamfunna sine. Vurder ulike modeller, få tips og triks, og <a href='%{minecraft_future_url}'>få tilgang til ressursene</a> de fant mest verdifulle."
+  minecraft_og_designer: "Minecraft er tilbake med en ny aktivitet for Kodetimen. Programmer dyr og andre Minecraft-skapninger i din egen versjon av Minecraft."
+  minecraft_og_agent: "Minecraft er tilbake til Kodetimen - og du er helten! Skriv koden for å reise gjennom Minecraft-universet."
   sports_page_title: "Kodetimen med sport"
   sports_og_title: "Press deg selv. Alle kan lære."
   sports_og_description: "Velg mellom kodeoppgaver i basketball eller andre idretter."
@@ -463,6 +493,7 @@
   video_title_obama: "President Obama om informatikk"
   video_title_hoc_is_here: "Kodetimen er her - alle kan lære"
   video_title_anybody_can_learn: "Alle kan lære"
+  video_title_steph_curry: "Kodetimen med Steph Curry"
   video_title_draymond_green: "Kodetimen med Draymond Green"
   video_title_russell_okung: "Kodetimen med Russell Okung"
   video_title_real_madrid: "Kodetimen med Real Madrid"
@@ -486,7 +517,7 @@
   volunteer_engineer_submission_intro_signup: "Angi følgende informasjon hvis du er en informatikkelev eller jobber med programmering. Feltene markert med en <span class=\"form-required-field\">*</span> er obligatoriske."
   volunteer_engineer_submission_intro_links: "Ser du ikke etter en frivillig? <a href=\"%{learn_more}\"> Lær mer</a> om å organisere din egen \"Hour of code\" begivenhet og finne en lokal frivillig på våre <a href=\"%{volunteer_local}\"> frivillige kart</a>."
   volunteer_engineer_submission_update_information: "Oppdater din informasjon"
-  volunteer_engineer_submission_header_shared: "Informasjon deles med lærere på frivillig-kartet"
+  volunteer_engineer_submission_header_shared: "Informasjon som deles med lærere på frivillig-kartet"
   volunteer_engineer_submission_field_name: "Navn"
   volunteer_engineer_submission_field_name_placeholder: "Fullt navn"
   volunteer_engineer_submission_field_company: "Bedrift (eller universitet)"
@@ -542,7 +573,7 @@
   volunteer_engineer_submission_type_task_remote: "Jeg ønsker at du skal besøke mitt klasserom via Skype og si noen inspirerende ord til barna"
   volunteer_engineer_submission_type_task_mentor: "Jeg ser etter en veileder som kan hjelpe meg med forberedelsene til Kodetimen"
   petition_age: "Alder"
-  dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
+  dashboard_announce_hoc_scaling_progress: "Uff! Vi opplever høg Kodetime-trafikk. Vi kan ikke lagre framgangen denne uken, men framgangen fra før denne uken er framleis trygg og lagret."
   dashboard_announce_learn_more_button: "Lær mer"
   dashboard_landing_title: "Hjemmeside for lærere"
   dashboard_landing_welcome: "Velkommen til det nye og forbedrede lærerdashboardet."
@@ -605,7 +636,7 @@
   dashboard_action_print_certificates: "Skriv ut diplomer"
   dashboard_assessments_view: 'Se vurderinger i:'
   dashboard_assessments_none: "Mange lærere måler sine elevers framgang ved å bruke \"Se framgang\"-fanen. Hvis du er interessert i å gi dine elever flere vurderinger kan du finne anbefalte spørsmål og områder i oppgaveplanene. Disse blir gjort utenfor CodeStudio."
-  dashboard_assessments_none_part2: "Hvis du underviser på ungdomstrinnet eller videregående, har vi vurdering spørsmål tilgjengelig som en del av Code Studio for å hjelpe studentene med å forberede AP testen. For å bruke disse vurderingene, må du først tilordne kurset til klassen og deretter velge kurset fra rullegardinmenyen ovenfor og du vil se elevsvarene her."
+  dashboard_assessments_none_part2: "Hvis du underviser på ungdomstrinnet eller videregående, har vi vurderingsspørsmål tilgjengelig som en del av Code Studio for å hjelpe elevenemed å forberede AP testen. For å bruke disse vurderingene, må du først tilordne kurset til klassen og deretter velge kurset fra rullegardinmenyen ovenfor og du vil se elevsvarene her."
   dashboard_assessments_summaries: "Vurderings-oppsummeringer"
   dashboard_assessments_answers: "Alle svar fra vurderinger"
   dashboard_surveys_answers: "Undersøkelser"
@@ -723,13 +754,16 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Kurs A: '
+  dashboard_courseb: 'Kurs B: '
+  dashboard_coursec: 'Kurs C: '
+  dashboard_coursed: 'Kurs D: '
+  dashboard_coursee: 'Kurs E: '
+  dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve disse analoge leksjonene</a>."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Skoleplan"
   dashboard_curriculum_overview: "K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)"
   dashboard_overview: "Oversikt"
@@ -747,9 +781,11 @@
   dashboard_curriculum_csins: 'Datavitenskap i Vitenskap:'
   dashboard_curriculum_csp: 'AP® Datavitenskapsprinsipper:'
   dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Andre"
-  dashboard_login_word: "ord"
+  dashboard_login_word: "Ord"
   dashboard_login_picture: "Bilde"
   dashboard_login_none: "E-post"
   dashboard_new_password: "nytt passord"
@@ -777,7 +813,7 @@
   dashboard_sections_account_creation_question: "Hvem lager elevens konto?"
   dashboard_sections_password_question: "Hva bruker elevene som \"passord\"?"
   dashboard_sections_picture_account_creation: "Et bilde tildelt av Code.org"
-  dashboard_sections_word_account_creation: "Et enkelt ord tildelt av Code.org"
+  dashboard_sections_word_account_creation: "Et par enkle ord tildelt av Code.org"
   dashboard_sections_sign_in_question: "Hvor logger elevene på?"
   dashboard_sections_sign_in_unique: "Unik nettside listet opp under fanen \"Administrer elever\""
   dashboard_sections_sign_in_main: "http://code.org og klikk \"Logg på\""
@@ -793,15 +829,15 @@
   learn_more: "Lær mer"
   learn_sign_up_description: "Registrer deg for å delta på Kodetimen under CS Code Week"
   learn_sign_up_button: "Meld deg på"
-  learn_videos_watch: "Se på denne inspirerende filmen"
+  learn_videos_watch: "Se på denne inspirerende filmen med klassen"
   learn_videos_show: "Vis denne inspirerende filmen til klassen din"
   learn_videos_before_hoc: "Se en inspirerende film før Kodetimen"
   learn_educator_resources_description: "Lær om hvordan du kan gjennomføre Kodetimen"
   learn_educator_resources_button: "Lærerressurser"
   learn_are_you_educator: "Du er lærer? Sjekk<a href=\"http://hourofcode.com/resources/how-to\"> hvordan du kan gjennomføre Kodetimen</a>"
-  learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\"> Finn en lokal frivillig</a> å hjelpe deg under \"Hour of Code\""
+  learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\"> Finn en lokal frivillig</a> som kan hjelpe deg under Kodetimen"
   learn_teacher_led_lesson_plans: "Bli inspirert av <a href=\"https://code.org/teacher-led\">Kodetimens oppgaveplaner</a>"
-  learn_how_to_hoc: "Følg <a href=\"https://hourofcode.com/how-to\"> vår \"how-to guide\"</a> for undervisning av \"Hour of Code\""
+  learn_how_to_hoc: "Følg <a href=\"https://hourofcode.com/how-to\"> vår \"how-to guide\"</a> for å gjennomføre Kodetimen"
   learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\">Lær mer</a> om premiene for hver lærer."
   learn_inspirational_videos: "Inspirere elevene ved å vise dem <a href=\"https://code.org/educate/inspire\"> disse videoene</a>"
   hoc2014_try_new_tutorials: "Prøv våre nye Kodetime-øvinger"
@@ -815,7 +851,7 @@
   carousel_heading_international: "Gjennomganger på norsk"
   carousel_heading_domestic: "Øvinger tilgjengelig på engelsk"
   carousel_heading_beginners: "Øvinger for nybegynnere"
-  carousel_heading_beyond_beginners: Øvinger for nybegynnere
+  carousel_heading_beyond_beginners: 'Øvinger for nybegynnere'
   carousel_heading_javascript: "Øvinger som underviser JavaScript"
   carousel_heading_beyond_javascript: "Øvinger som lærer deg JavaScript"
   carousel_heading_unplugged: "Ingen enhet eller Internett? Prøv 'frakoblet' koding"
@@ -828,18 +864,18 @@
   carousel_heading_webpages: "Lær hvordan å lage nettsider"
   carousel_heading_robots: "Lær å programmere med roboter"
   carousel_heading_ide: "Plattformer som er populære blant lærere"
-  carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
-  carousel_heading_prereader: "For pre-readers"
-  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
+  carousel_heading_desktop: "Lære å kode på en datamaskin"
+  carousel_heading_mobtabelem: "For telefoner og nettbrett"
+  carousel_heading_prereader: "For de som ikke kan lese enda"
+  carousel_heading_beyondblocks: "Gå videre fra blokkene - lær et programmeringsspråk"
+  carousel_heading_nointernet: "Tregt internett? Installer disse programmene på datamaskinen"
   educator_notes: "Lærernotater"
   teach_led_lesson_plans: "Planlegging av Kodetimen"
   learn_footer_all_tutorials: "Se en <a href=\"https://code.org/educate/allhourofcode\">omfattende liste over veiledninger i Kodetimen</a>. For å se kriteriene for å sende inn en Kodetimeveiledning, <a href=\"https://hourofcode.com/tutorial-guidelines\">klikk her.</a>"
   how_to_teach_hoc: "Hvordan lære bort en Kodetime"
   more_resources_educators: "Flere lærerressurser"
   beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og innlevering skjemaet."
-  third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
+  third_party_submission: "Vil du registrere ett opplæringsprogram for visning her? <a href=\"%{submission_url}\">Se kriterier og registrerings skjema.</a>"
   participants: "deltakere"
   teachers_notes: "Lærernotater"
   teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
@@ -869,9 +905,9 @@
   codecademy_name: "Codecademy"
   codecombat_name: "CodeCombat"
   codemonkey_name: "CodeMonkey"
-  codeavengers_name: "Bygg eit spel med JavaScript"
-  processing_name: "Å teikne med kode"
-  robomind_name: "Programmer ein virtuell robot"
+  codeavengers_name: "Bygg et spill med JavaScript"
+  processing_name: "Å tegne med kode"
+  robomind_name: "Programmer en virtuell robot"
   groklearning_name: "Chatterbot-doktotren Eliza"
   quorum_name: "Tilgjengelig koding (med skjemleserstøtte)"
   codespark_name: "Foos (velkommen, førskolebarn)"
@@ -879,14 +915,14 @@
   tynkerapp_name: "Tynker – på nettbrett"
   robomindnl_name: "Programmer ein virtuell robot"
   flappy_name: "Lag et Flappy spill"
-  bitsbox_name: "Blitsbox - lag et spill"
-  makeschool_name: "Bygg eit iphone-spel i nettlesaren din!"
+  bitsbox_name: "Bitsbox - lag et spill"
+  makeschool_name: "Lag et spill til iPhone i nettleseren!"
   touchdevelop_name: "TouchDevelop"
   appinventor_name: "AppInventor Kodetimen"
   blockly_name: "Blockly"
   thinkersmith2_name: "Binary Baubles"
   kodableunplugged_name: "fuzzFamily Frenzy"
-  projguts_name: "Stein, saks papir"
+  projguts_name: "Stein, saks, papir"
   hourofcode_name: "Klassisk labyrint"
   playlab_name: "Spill-lab"
   infinity_name: "Infinity Spill-Lab"
@@ -902,44 +938,46 @@
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
-  coursea-draft_name: Course A
-  coursea_name: "Course A"
-  courseb-draft_name: Course B
-  courseb_name: "Course B"
-  coursec-draft_name: Course C
-  coursec_name: "Course C"
-  coursed-draft_name: Course D
-  coursed_name: "Course D"
-  coursee-draft_name: Course E
-  coursee_name: "Course E"
-  coursef-draft_name: Course F
-  coursef_name: "Course F"
+  coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
+  courseb-draft_name: Kurs B
+  courseb_name: "Kurs B"
+  coursec-draft_name: Kurs C
+  coursec_name: "Kurs C"
+  coursed-draft_name: Kurs D
+  coursed_name: "Kurs D"
+  coursee-draft_name: Kurs E
+  coursee_name: "Kurs E"
+  coursef-draft_name: Kurs F
+  coursef_name: "Kurs F"
   accelerated_name: "Framskyndet kurs"
   express_name: "Express Course"
-  pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(gammel) Enhet 1: Digital informasjon'
-  cspunit2_name: '(gammel) Enhet 2: Internett'
-  cspunit3_name: '(gammel) Enhet 3: Programmering'
-  cspunit4_name: '(gammel) Enhet 4: Data'
-  cspunit5_name: '(gammel) Enhet 5: Utforsk og lag PT'
+  pre-express_name: Hurtigprogram for de som ikke leser
+  cspunit1_name: "(gammel) Enhet 1: Digital informasjon"
+  cspunit2_name: "(gammel) Enhet 2: Internett"
+  cspunit3_name: "(gammel) Enhet 3: Programmering"
+  cspunit4_name: "(gammel) Enhet 4: Data"
+  cspunit5_name: "(gammel) Enhet 5: Utforsk og lag PT"
   cspunit6_name: 'Post-AP: Databaser i apper'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'Enhet 5: Data og samfunn'
+  csd6_name: 'Enhet 6: Praktisk programmering'
   csp1_name: 'Enhet 1: Internett'
   csp2_name: 'Enhet 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-a_name: 'Enhet 3: Introduksjon til programmering(Versjon A)'
+  csp3-research-mxghyt_name: 'Enhet 3: Introduksjon til programmering (Del mål)'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
+  csp-ap_name: AP ytelsesaktiviteter
+  csppostap_name: 'Post AP: Databaser i appen'
   cspassessment_name: "Full Test - 50 spørsmål"
+  csp-explore_name: 'Utforsk PT forberedelse'
+  csp-create_name: 'Lag en PT forberedelse'
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
   cspunit3_gradelevel: "9.-12. klasse"
@@ -955,21 +993,22 @@
   starwarsblocks_name: "Star Wars (blokker)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Enkel kryptering
   text-compression_name: Text Compression
   math_category_name: "Matematikk"
   hoc_category_name: "Kodetimen"
   csf_category_name: "Grunnleggende informatikk"
-  csf_international_category_name: "CS Fundamentals International"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  csf_international_category_name: "Grunnleggende informatikk internasjonalt"
+  csf2_draft_category_name: 'Under utvikling: Kurs A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 Prinsipper i informatikk"
   csp17_category_name: "'16-'17 Prinsipper i informatikk"
   cspexams_category_name: "Prinsipper i informatikk teoriprøve"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Spill-lab"
   basketball_name: "Lag et basketball-spill"
-  sports_name: "Sport"
+  sports_name: "Kod ditt eget sportsspill"
   applab_gradelevel: "Minstealder 13 år"
   applab_shortdescription_congrats: "App Lab er et programmeringsmiljø hvor du kan lage enkle apper. Design en app, programmer med blokker eller JavaScript for å få den til å fungere og del appen din på få sekunder"
   codeorg_gradelevel: "Alder 4-104"
@@ -1026,12 +1065,12 @@
   course2_gradelevel: "Alder 6+ (leseferdigheter kreves)"
   course3_gradelevel: "Alder 8+ (etter kurs 2)"
   course4_gradelevel: "Alder 10+ (etter kurs 3)"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Klasse 5 +"
+  courseb_gradelevel: "Klasse 6 +"
+  coursec_gradelevel: "Klasse 7 +"
   coursed_gradelevel: "8.+ klasse"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "Klasse 9 +"
+  coursef_gradelevel: "Klasse 10 +"
   accelerated_gradelevel: "Alder 10+ (etter kurs 3)"
   codeorg_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
   codeintl_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
@@ -1383,67 +1422,67 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
-  header_home: "Home"
+  header_home: "Hjem"
   header_my_dashboard: "Mitt Kontrollpanel"
   header_courses: "kurs"
-  header_course_catalog: "Course Catalog"
+  header_course_catalog: "Kurskatalog"
   header_project_gallery: "Prosjekter"
-  header_sections: "Sections"
+  header_sections: "Seksjoner"
   header_professional_learning: "Profesjonell opplæring"
-  header_educate_overview: "Educator Overview"
-  header_educate_elementary: "Elementary School"
-  header_educate_middle: "Middle School"
-  header_educate_high: "High School"
+  header_educate_overview: "Oversikt for lærere"
+  header_educate_elementary: "Barneskole"
+  header_educate_middle: "Ungdomsskole"
+  header_educate_high: "Videregående skole"
   header_educate_hoc: "Kodetimen"
-  header_educate_partner: "Partner with Us"
-  header_educate_beyond: "Beyond Code.org"
-  header_educate_inspire: "Inspire a Student"
-  header_educate_community: "Online Community"
-  header_educate_tools: "Tools and Videos"
-  header_about_us: "About Us"
-  header_about_leadership: "Leadership"
-  header_about_donors: "Donors"
-  header_about_partners: "Partners"
-  header_about_team: "Full Team"
-  header_about_news: "Newsroom"
-  header_about_evaluation: "Evaluation"
-  header_about_jobs: "Jobs"
-  header_about_contact: "Contact Us"
-  header_about_faqs: "FAQs"
-  header_learn: "Learn"
-  header_teach: "Teach"
+  header_educate_partner: "Jobb med oss"
+  header_educate_beyond: "Utover Code.org"
+  header_educate_inspire: "Inspirer en elev"
+  header_educate_community: "Nettsamfunn"
+  header_educate_tools: "Verktøy og videoer"
+  header_about_us: "Om oss"
+  header_about_leadership: "Lederskap"
+  header_about_donors: "Sponsorer"
+  header_about_partners: "Partnere"
+  header_about_team: "Hele teamet"
+  header_about_news: "Nyhetsrom"
+  header_about_evaluation: "Evaluering"
+  header_about_jobs: "Jobber"
+  header_about_contact: "Kontakt oss"
+  header_about_faqs: "Vanlige spørsmål"
+  header_learn: "Lær"
+  header_teach: "Undervis"
   header_stats: "Statistikk"
-  header_help_us: "Help Us"
-  header_about: "About"
-  header_teacher_community: "Teacher community"
-  header_help_support: 'Help and support '
-  header_report_bug: "Report bug"
-  header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
+  header_help_us: "Hjelp oss"
+  header_about: "Om"
+  header_teacher_community: "Brukergruppe for lærere"
+  header_help_support: 'Hjelp og støtte '
+  header_report_bug: "Rapporter feil"
+  header_tutorials: "Guide"
+  header_documentation: "Dokumentasjon"
   csp_name: "'16-'17 Prinsipper i informatikk"
   csd_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
+  full_course_category_name: "Alle kurs"
   user_header_label: "Hei %{username}"
   user_header_settings: "Min konto"
   user_header_logout: "Logg ut"
   user_header_signin: "Logg inn"
-  view_all_sections: "View All Sections"
-  view_section: "View Section"
-  view_named_section: "View %{section_name}"
-  privacy_doc_explanation: "Click here for our privacy document that can be shared or printed for your students."
-  signing_in: "Signing In"
-  sign_in_overview: 'Your students can sign in to their Code.org accounts by following these steps:'
-  sign_in_instruct_website: "Go to %{code_org_url}."
-  sign_in_instruct_code: 'Type in their section code: %{section_code}.'
-  sign_in_instruct_name: "Choose their display name."
-  sign_in_instruct_secret: "Choose their secret %{secret}."
-  sign_in_instruct_button: "Click the “Sign in” button."
-  sign_in_overview_cards: "Students can find all of this information, including their secret %{secret}, in the login cards below."
-  reset_student_password: "Resetting student passwords"
-  reset_student_password_instructions: "You can reset the secret <word/picture> for any of your students by going to the “Manage Students” tab for the section, clicking the “Show secret” button under the “Password” column, and clicking the “Reset secret” button."
-  login_cards: "Login Cards"
+  view_all_sections: "Vis alle avsnitt"
+  view_section: "Vis avsnitt"
+  view_named_section: "Vis %{section_name}"
+  privacy_doc_explanation: "Klikk her for å se vårt personvern dokument som kan deles eller skrives ut til elevene."
+  signing_in: "Logger på"
+  sign_in_overview: 'Elevene kan logge på kontoene sine på Code.org på følgende måte:'
+  sign_in_instruct_website: "Gå til %{code_org_url}."
+  sign_in_instruct_code: 'Skriv inn seksjonskoden: %{section_code}.'
+  sign_in_instruct_name: "Velg visningsnavn."
+  sign_in_instruct_secret: "Velg hemmelighet %{secret}."
+  sign_in_instruct_button: "Klikk på \"Logg på\" knappen."
+  sign_in_overview_cards: "Elevene kan finne denne informasjonen, inkludert deres hemmelighet %{secret}, i innloggingskortet nedenfor."
+  reset_student_password: "Tilbakestille student passord"
+  reset_student_password_instructions: "Du kan tilbakestille hemmeligheten <word/picture> for dine elever ved å gå til \"Administrere elever\" kategorien for inndelingen, klikke \"Vis hemmelighet\" knappen under \"Passord\" kolonnen og så klikke \"tilbakestille hemmelighet\"."
+  login_cards: "Innloggingskort"
   print_login_cards: "Skriv ut innloggingskort"
-  joining_section: "Joining your section (one-time only)"
+  joining_section: "Blir med på din del ( engangstilfelle)"
   joining_section_overview: "Om en elev ikke allerede har blitt med i seksjonen din, be dem om å gjøre følgende steg. Merk at de bare trenger å gjøre dette én gang. Ved å bli med i seksjonen din vil elevene se hvilket kurs de er blitt tildelt og du kan spore fremdriften på det fullførte arbeidet når de er innlogget."
   joining_section_instruct_website: 'Opprett en konto på Code.org dersom de ikke har gjort det allerede. De kan gjøre dette på https://studio.code.org/users/sign_up. Merk at de kan enten registrere seg med en epost-adresse og et passord, eller registrerer seg gjennom Google, Facebook eller Microsoft ved å klikke på en av disse knappene:'
   joining_section_instruct_account: "Logg inn på kontoen på Code.org."
@@ -1454,3 +1493,5 @@
   syncing_students: "Synkroniserer elevene"
   syncing_students_instructions: 'Hvis Code.org-seksjonen din blir utdatert etter listen din over elever i Google Classroom, klikk på knappen "Synkroniser elever fra Google Classroom" i fanen "Administrer elever":'
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
+  hero_name: 'Minecraft: Heltens reise'
+  applab-intro_name: Lab-intro til appen

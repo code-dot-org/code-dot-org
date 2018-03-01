@@ -3376,3 +3376,854 @@
         text: Cuando termines de crear tu juego, elige compartir para obtener un enlace
           con el que compartirlo con tus amigos o para jugarlo en tu teléfono. ¡Diviértete!
           Estoy deseando jugar a tu versión de Minecraft.
+    applab_intro_welcome:
+      1:
+        image: notes/applab_intro_welcome_1.png
+        text: Mi nombre es Mei'lani. Soy una pasante en code.org y soy también estudiante
+          de informática. Me gusta la informática porque es bastante creativa. Logro
+          ser la solución a los problemas. Logro hacer cualquier función como yo prefiero.
+          Pero también logro se el diseñador. Logro ser el artista y escojo todo desde
+          el punto de vista creativo de esto.
+      2:
+        image: notes/applab_intro_welcome_2.png
+        text: "¡Hacer tus propias aplicaciones es muy fácil con App Lab! Sin importar
+          que seas nuevo programando o tienes alguna experiencia. App Lap es una buena
+          herramienta para la creación de nuevas aplicaciones y para compartirlas
+          con sus amigos."
+      3:
+        image: notes/applab_intro_welcome_3.png
+        text: Esta es App Lab. Del lado izquierdo se encuentra su aplicación. Del
+          lado derehco se encuentra el código que hará que se ejecute. Usted construye
+          su programa arrastrando en bloques desde la caja de herramientas. Para empezar
+          usted sólo necesitará un bloque denominano 'setProperty'.
+      4:
+        image: notes/applab_intro_welcome_4.png
+        text: El bloque de configuración de propiedades cambia la apariencia de los
+          elementos en su pantalla. Como los botones, rótulos, o incluso la pantalla
+          en sí. Primero usted necesita decidir cuál elemento desea cambiar. Si pasa
+          el ratón por un elemento en su aplicación podrá ver el nombre o el ID acá.
+          Luego va a seleccionar ese ID desde la primera bajada.
+      5:
+        image: notes/applab_intro_welcome_5.png
+        text: Elements have lots of properties you can change like their text color,
+          background color or font size. You can see the full list and choose which
+          property you want to change in the second drop down.
+      6:
+        image: notes/applab_intro_welcome_6.png
+        text: The last drop down is where you'll write the value you want to use value
+          you want to use. The block will make a suggestion for you. But you can always
+          type in different colors or numbers yourself.
+      7:
+        image: notes/applab_intro_welcome_7.png
+        text: Una vez que lo haga hecho, el bloque leerá un bit como una oración:'Configura
+          el color de fondo del botón 1's a verde.' Seleccione ejecutar para ver los
+          cambios que esta construyendo en el programa. Si se resetea usted puede
+          arrastrar más bloques para modificar otras cosas sobre su aplicación. ¡Como
+          el texto!
+      8:
+        image: notes/applab_intro_welcome_8.png
+        text: En este tutorial se trabajará en modo de bloques pero App Lab también
+          es compatible para trabajar en texto.
+      9:
+        image: notes/applab_intro_welcome_9.png
+        text: De cualquier manera se va a estar programando en JavaScript, el lenguaje
+          de la web. Cada nivel tiene una meta, instrucciones y una imagen de lo que
+          usted está apuntando a crear.
+      10:
+        image: notes/applab_intro_welcome_10.png
+        text: Si alguna vez queda estancado, haga clic en la imagen y se le mostrará
+          exactamente cómo completa el nivel. Pero intenta hacerlo primero por tu
+          cuenta.
+      11:
+        image: notes/applab_intro_welcome_11.png
+        text: Una vez que hayas completado la meta para este nivel haga clic en Terminar
+          para seguir adelante. ¡Esto es todo al respecto! ¡Seleccione el botón naranja
+          "Continuar" para ir al siguiente nivel y empezar su aventura con App Lab!
+    applab_intro_events:
+      1:
+        image: notes/applab_intro_events_1.png
+        text: Las aplicaciones son geniales porque es como comenzar su propio negocio,
+          es decir, llegar a diseñar todo desde el suelo, usted llega a gestionar
+          todo, y usted el dueño de esta obra que acaba de crear con el código.
+      2:
+        image: notes/applab_intro_events_2.png
+        text: Ahora que usted puede cambiar la apariencia de su aplicación ¡hagámoslo
+          interactivo al responder a los eventos! Los eventos son acciones del usuario
+          como es hacer clic al botón, moviéndose por el menú o por una imagen. Aplicaciones
+          interactivas necesitan siempre responder a eventos, como reproducir un sonido
+          cuando hago clic este botón. Para hacer esto en App Lab usted necesita usar
+          un nuevo bloque denominado 'onEvent'.
+      3:
+        image: notes/applab_intro_events_3.png
+        text: Este programa configura la pantalla en azul. Yo quiero que la pantalla
+          se cambie a verde cuando haga clic en este botón. Primero necesitaré arrastrar
+          un bloque de onEvent. Por filtrado, sé que el botón ID es "bigButton" así
+          que lo seleccionaré en el primer menú desplegable.
+      4:
+        image: notes/applab_intro_events_4.png
+        text: Luego seleccionare el tipo de evento. Hay un montón de opciones que
+          se pueden escoger pero ahora voy a dejarlo como un clic regular antiguo.
+      5:
+        image: notes/applab_intro_events_5.png
+        text: 'Finalmente añadiré el código dentro del evento que cambiará el color
+          de fonde de la pantalla. Usted puede leer este bloque como una oración:
+          "En el evento que se hace clic en el botón se ejecuta todo este código."'
+      6:
+        image: notes/applab_intro_events_6.png
+        text: Probémoslo. Bloques afuera de un onEvent todavía se ejecutan justo después
+          así que la pantalla empieza azul.
+      7:
+        image: notes/applab_intro_events_7.png
+        text: Y cuando hago clic en el botón grande se ejecuta el código dentro de
+          mi onEvent y mi pantalla se pone verde.
+      8:
+        image: notes/applab_intro_events_8.png
+        text: Si desea cambiar más cosas después de este evento, como el texto en
+          la pantalla sólo añada más código para el onEvent
+      9:
+        image: notes/applab_intro_events_9.png
+        text: Para hacer que su programa responda a más eventos añada mas bloques
+          de onEvent. Solo asegñurese de no colocarlos uno dentro del otro. Ahora
+          es momento de intentarlo por cuenta propia. ¡Diviértase!
+    applab_intro_sounds:
+      1:
+        image: notes/applab_intro_sounds_1.png
+        text: A continuación usted aprenderá sobre agregar imágenes y sonidos a su
+          aplicación. Empecemos revisando las opciones de sonido.
+      2:
+        image: notes/applab_intro_sounds_2.png
+        text: En la caja de herramientas usted encontrará un nuevo bloque llamado
+          "playSound". Arrástrelo al área de trabajo. Usted puede seleccionar un sonido
+          haciendo clic en el menú desplegable y luego haciendo clic en "Choose".
+      3:
+        image: notes/applab_intro_sounds_3.png
+        text: Desde aquí usted puede carga un archivo de sonido desde su computadora,
+          o buscar un sonido de la librería de sonidos. Esta tiene diferentes categorías
+          como instrumentos, música de fondo o animales.
+      4:
+        image: notes/applab_intro_sounds_4.png
+        text: Una vez que haya escogido el sonido que quiere, haga clic en "Choose".
+          Cuando el bloque se ejecute, se reproducirá el sonido que se escogió.
+      5:
+        image: notes/applab_intro_sounds_5.png
+        text: Para agregar imágenes a sus elementos usted puede usar el bloque setProperty.
+          Seleccione la propiedad de la imagen en el segundo menú desplegable
+      6:
+        image: notes/applab_intro_sounds_6.png
+        text: Luego selecione "Choose" de la tercera pestaña desplegable.
+      7:
+        image: notes/applab_intro_sounds_7.png
+        text: Desde acá usted puede subir una imagen de su computadora o bueno revisar
+          una gran librería de iconos en la librería de iconos.
+      8:
+        image: notes/applab_intro_sounds_8.png
+        text: De vuelta en el modo de código usted puede usar el bloque "setProperty"
+          para cambiar el color de icono de su icono. Una vez que haya seleccionado
+          que icono va a usar haga clic en "Run" para ver como se ve.
+      9:
+        image: notes/applab_intro_sounds_9.png
+        text: "¡Esto es todo al respecto! Ahora usted ya puede a empezar a agregar
+          imágenes y sonidos para hacer sus aplicaciones aún mas divertidas y dinámicas."
+    applab_intro_designmode:
+      1:
+        image: notes/applab_intro_designmode_1.png
+        text: Para construir tus propias aplicaciones vas a necesitar empezar diseñando
+          pantallas y elementos desde cero. App Lab hace esto fácil de hacer con el
+          Modo de Diseño.
+      2:
+        image: notes/applab_intro_designmode_2.png
+        text: Use the switch on top of your app to go into Design Mode.
+      3:
+        image: notes/applab_intro_designmode_3.png
+        text: You can add new elements by dragging them onto the screen. You can move
+          them around to different locations and change their size by dragging the
+          bottom right corner.
+      4:
+        image: notes/applab_intro_designmode_4.png
+        text: To change an element's properties use the controls on the right. For
+          example, it's really easy to change this button's text, color, and font
+          size.
+      5:
+        image: notes/applab_intro_designmode_5.png
+        text: When you add a new element to your screen it'll get a generic ID like
+          button1. It's a good idea to change this button's ID to something more meaningful
+          like "rightButton". So that you'll know which one it is when you go to the
+          program.
+      6:
+        image: notes/applab_intro_designmode_6.png
+        text: If you add an element to your app by mistake, just drag it out or hit
+          the delete.
+      7:
+        image: notes/applab_intro_designmode_7.png
+        text: You can add entirely new screens to your app by dragging in a screen
+          element
+      8:
+        image: notes/applab_intro_designmode_8.png
+        text: From the drop-down at the top you can quickly switch back and forth
+          between the screens you create.
+      9:
+        image: notes/applab_intro_designmode_9.png
+        text: Inside your app, you'll need a way to switch between all of these screens,
+          so the setScreen block has been added to the toolbox. Use "setScreen" inside
+          the "onEvent" block to change screens at the click of a button.
+      10:
+        image: notes/applab_intro_designmode_10.png
+        text: In the next few levels you'll be working on a single project. First
+          you'll add a button then you'll add a new screen and finally you'll write
+          code so that the button switches to the new screen.
+    applab_intro_share:
+      1:
+        image: notes/applab_intro_share_1.png
+        text: Now that you've learned some of the basics of App Lab like adding buttons,
+          sounds, images, text and new screens you can make all sorts of apps.
+      2:
+        image: notes/applab_intro_share_2.png
+        text: In the next level you'll find the app you just finished building. With
+          a little creativity, you can turn this into a personality quiz for your
+          friends, a greeting card that you can share with your family or a choose-your-own-adventure
+          game. All of these apps are just a combination of the skills you've already
+          learned, and I bet you can come up with even more.
+      3:
+        image: notes/applab_intro_share_3.png
+        text: Once you're done with your app you can easily send it to your phone
+          to see how it looks. Just click "Share" and enter your phone number here.
+      4:
+        image: notes/applab_intro_share_4.png
+        text: You'll receive a text message that'll let you open up your app instantly.
+      5:
+        image: notes/applab_intro_share_5.png
+        text: You can also share a link to your app over social media or post it to
+          the code.org public gallery for other people to play and share.
+      6:
+        image: notes/applab_intro_share_6.png
+        text: You've just scratched the surface of what App Lab can do. Full App Lab
+          features more advanced user interactions, new screen elements and even a
+          built-in database so you can quickly build full featured apps. At "code.org/applab"
+          you'll find the full tool and lots of ideas if you want to keep going.
+      7:
+        image: notes/applab_intro_share_7.png
+        text: Thanks for coming along the ride. Now go build and share your first
+          app, and keep on building apps with App Lab!
+    mc_2017_agent_intro:
+      1:
+        image: notes/mc_2017_agent_intro_1.png
+        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What
+          I want to show you is just over this mesa plateau. I think you''re going
+          to love it!'
+      2:
+        image: notes/mc_2017_agent_intro_2.png
+        text: Wait a minute - there's a hole in the track! (screaming)
+      3:
+        image: notes/mc_2017_agent_intro_3.png
+        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a
+          hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather
+          blocks to fix it. Preston: Let''s make it a race. First one back to the
+          top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather
+          some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy:
+          I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine?
+          Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game
+          broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy:
+          Does anyone know how to write Minecraft code?'
+      4:
+        image: notes/mc_2017_agent_intro_4.png
+        text: "(poof) Preston: What is that? Stampy: I've never seen one of these
+          before. Lizzy: It's so adorable! Stacy: Is it...is it tameable? Preston:
+          Okay, what is going on? Someone needs to go back to the real world and fix
+          this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I'll go."
+      5:
+        image: notes/mc_2017_agent_intro_5.png
+        text: Oh, okay, hey, so I'm in the real world now. I'm going to go try to
+          find the Minecraft offices.
+      6:
+        image: notes/mc_2017_agent_intro_6.png
+        text: But, I'm going to need your help. Start doing the tutorial, start learning
+          how to code, and I'll catch up with you guys after a few levels, okay? Wish
+          me luck! I think it's this way. Ow! Cactus! I'm okay!
+      7:
+        image: notes/mc_2017_agent_intro_7.png
+        text: To complete the Hour of Code challenge, you'll need to write code to
+          program the agent. You'll work together with The Agent to clear any obstacles
+          in your path, so you can pick up the items you'll need for your journey.
+          Only the Agent can place and break blocks, and only you can collect items.
+          Your screen is split into three main parts. On the left is Minecraft.
+      8:
+        image: notes/mc_2017_agent_intro_8.png
+        text: The middle area is the toolbox with commands that the Agent can understand.
+      9:
+        image: notes/mc_2017_agent_intro_9.png
+        text: And on the right, is the workspace. That's where you stack the commands
+          to build your program to control the Agent.
+      10:
+        image: notes/mc_2017_agent_intro_10.png
+        text: The Agent can walk, turn, and activate pressure plates. It can also
+          destroy blocks and place blocks. When it places the block like these minecart
+          rails, it places it underneath itself.
+      11:
+        image: notes/mc_2017_agent_intro_11.png
+        text: Si te olvidas de qué hacer, las instrucciones de cada nivel están en
+          la parte superior.
+      12:
+        image: notes/mc_2017_agent_intro_12.png
+        text: If you want to try again, you can hit the blue reset button to reset
+          everything to where it started. And if you need to delete a block of code,
+          drag it from your workspace to the toolbox. Remember to hit run to get the
+          Agent moving. Okay, go ahead and try out the first few levels. Good luck!
+    mc_2017_repeat:
+      1:
+        image: notes/mc_2017_repeat_1.png
+        text: 'Stampy: I wonder what Stacy is up to?'
+      2:
+        image: notes/mc_2017_repeat_2.png
+        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+      3:
+        image: notes/mc_2017_repeat_3.png
+        text: I feel like I'm back in Minecraft! Hello. How are you? Hello?
+      4:
+        image: notes/mc_2017_repeat_4.png
+        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy?
+          Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+      5:
+        image: notes/mc_2017_repeat_5.png
+        text: 'Stacy: This is amazing. So you work here every day as a developer,
+          right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft
+          marketplace team. Stacy: How many coding languages do you know? Katie: In
+          my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie:
+          Yeah. Stacy: So now, you wouldn''t happen to know anything about this little
+          golem guy that calls himself the Agent? Katie: We use the Agent to do things
+          that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn
+          how to code, and they want to learn how to code, so what is one of the first
+          things that you need to know when you''re learning?'
+      6:
+        image: notes/mc_2017_repeat_6.png
+        text: 'Katie: Well, you need to learn how to use loops. Loops are things that
+          developers write to give commands to a computer that can be run over and
+          over again. Stacy: Got it, so I think there''s actually some of that coming
+          up in the levels ahead, so go ahead and give loops a try.'
+      7:
+        image: notes/mc_2017_repeat_7.png
+        text: In the next level, you can use a loop to move the Agent along the path.
+          Drag the repeat block into the workspace and place the move forward block
+          inside the repeat block. This tells the computer to do the same thing many
+          times in a row without having to drag a whole bunch of blocks into the workspace.
+          You can choose how many times to repeat by putting a number in the repeat
+          block.
+      8:
+        image: notes/mc_2017_repeat_8.png
+        text: You can put turns and multiple commands in the repeat block too, but
+          for now try using a repeat to move the Agent forward a few steps. Remember,
+          if you get stuck on a puzzle you can always hit the blue reset button and
+          try again.
+      9:
+        image: notes/mc_2017_repeat_9.png
+        text: 'Si usted estan pensando en tener un trabajo genial como el de Katie,
+          siga adelante y haga clic en el botón de mostrar código cuando usted finalice
+          cada nivel. Eso hará que se muestre el código Javascript que alguien como
+          Katie usa cuando ella esta realmente programando Minecraft. Katie: Si, ¡Buena
+          suerte a todos!'
+    mc_2017_functions:
+      1:
+        image: notes/mc_2017_functions_1.png
+        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour.
+          Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+      2:
+        image: notes/mc_2017_functions_2.png
+        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I
+          know how to solve the problem I''m having in my game. I think I can use
+          a function. Let me just open this.'
+      3:
+        image: notes/mc_2017_functions_3.png
+        text: Así que una función es conjunto específico de instrucciones para llevar
+          a cabo una determinada tarea, como una receta. En los próximos niveles,
+          usted tendrá acceso a funciones que puede usar para resolver los rompecabezas.
+      4:
+        image: notes/mc_2017_functions_4.png
+        text: Look at the code in the function when it's in the workspace to see what
+          it does.
+      5:
+        image: notes/mc_2017_functions_5.png
+        text: Luego, busque un bloque con ese nombre en la caja de herramientas y
+          arrástrelo desde la caja de herramientas hasta cuando se ejecuta el bloque.
+      6:
+        image: notes/mc_2017_functions_6.png
+        text: Recuerde, usted puede usar la misma función cada vez que usted necesite
+          ejecutar la misma configuración de instrucciones para hacer algo, como construir
+          un puente. Buena suerte, ¡Yo se que usted puede hacerlo!
+    mc_2017_congratulations:
+      1:
+        image: notes/mc_2017_congratulations_1.png
+        text: 'Preston: Congratulations!'
+      2:
+        image: notes/mc_2017_congratulations_2.png
+        text: 'Lizzy: Congratulations!'
+      3:
+        image: notes/mc_2017_congratulations_3.png
+        text: 'Stampy: Congratulations, you did it!'
+      4:
+        image: notes/mc_2017_congratulations_4.png
+        text: 'Stacy: Congratulations guys, you totally rocked that! And now that
+          you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve
+          learned about loops, functions, and what a software Agent does.'
+      5:
+        image: notes/mc_2017_congratulations_5.png
+        text: Now, it's time for the free play level, where you are the developer.
+          Use any remaining time to write your own functions to explore, mine, and
+          build.
+      6:
+        image: notes/mc_2017_congratulations_6.png
+        text: 'You can take the code that you write in this level into your Minecraft
+          world on Minecraft: Education Edition. Just click ''Finish'' and follow
+          the instructions for getting the link to use in your world. to continue
+          coding with the Agent. Have fun, and good job!'
+      7:
+        image: notes/mc_2017_congratulations_7.png
+        text: 'Stacy: ¡Y estoy de regreso! Okey, chicos, ¡este es el agente! Les mostraré
+          qué puede hacer. Mire ¡está haciéndolo! Yo le dije a él para construir una
+          escalera fuera de estos bloques de terracota, ahora sólo podemos utilizar
+          esto para salir de acá. Y chicos, no son sólo escaleras. Puedo decirle al
+          agente que haga lo que yo quiera, y lo hará para mí.'
+      8:
+        image: notes/mc_2017_congratulations_8.png
+        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used
+          code!'
+    csd_concept_how_computers_work:
+      1:
+        image: notes/csd_concept_how_computers_work_1.png
+        text: 'Everywhere you look, computers are changing the world. Whether they''re
+          on our desktops, in our homes, our pockets, or just about anywhere else.
+          But while most of us use this revolutionary technology daily, we don''t
+          often ask: "How do computers work?" In this series, you''re going to learn
+          how computers really work, starting with what makes a computer a computer.
+          Then, you''ll look at how information is represented inside the computer
+          using tiny electrical signals going on and off at mind-boggling speeds.'
+      2:
+        image: notes/csd_concept_how_computers_work_2.png
+        text: After that, you'll learn how computers use circuits to do everything
+          from simple math to simulating entire virtual worlds. Next, you'll zoom
+          out and look at the different parts of a computer that actually input, output,
+          and store all that information. Finally, you'll take a look at what code
+          actually is and how software controls hardware. So whether you're just curious
+          about the devices you use every day or you want to design the innovations
+          of the future, the first step is learning how computers work.
+    csd_concept_computer:
+      1:
+        image: notes/csd_concept_computer_1.png
+        text: My name is May-Li Khoe and I'm a designer and an inventor. So some of
+          the things I've designed have been at Apple, and now I design products for
+          kids to use so that they can have an easier time in school. My other jobs
+          include DJ-ing and dancing.
+      2:
+        image: notes/csd_concept_computer_2.png
+        text: Computers are everywhere! They're in people's pockets, they're in people's
+          cars, people have them on their wrists. They might be in your backpack right
+          now. But what makes a computer a computer? What does make a computer a computer
+          anyway? And how does it even work?
+      3:
+        image: notes/csd_concept_computer_3.png
+        text: Hi I'm Nat! I was one of the original designers of the Xbox. I've been
+          working with computers since I was maybe seven years old and now I work
+          on virtual reality. As humans, we've always built tools to help us solve
+          problems. Tools like a wheelbarrow, a hammer, or a printing press, or a
+          tractor-trailer.
+      4:
+        image: notes/csd_concept_computer_4.png
+        text: All of these inventions helped us with manual work. Over time, people
+          began to wonder if a machine could be designed and built to help us with
+          the thinking work we do, like solving equations or tracking the stars in
+          the sky. Rather than moving or manipulating physical things like dirt and
+          stone, these machines would need to be designed to manipulate information.
+          As the pioneers of computer science explored how to design a thinking machine,
+          they realized that it had to perform four different tasks.
+      5:
+        image: notes/csd_concept_computer_5.png
+        text: It would need to take input, store information process it and then output
+          the results. Now this might sound simple, but these four things are common
+          to all computers. That's what makes a computer a computer.
+      6:
+        image: notes/csd_concept_computer_6.png
+        text: Computers started out as basic calculators, which was already really
+          awesome at the time, and they were only manipulating numbers back then.
+          But now we can use them to talk to each other, we can use them to play games,
+          control robots, and do any crazy thing that you could probably imagine.
+          Modern computers look nothing like those clunky old machines but they still
+          do these same four things.
+      7:
+        image: notes/csd_concept_computer_7.png
+        text: First, we're going to talk about input. You can tell computers what
+          to do with the keyboard, you can tell them what to do with the mouse, the
+          microphone, the camera. All these different inputs give a computer information,
+          which is then stored in memory.
+      8:
+        image: notes/csd_concept_computer_8.png
+        text: A computer's processor takes information from memory. It manipulates
+          it or changes it using an algorithm, which is just a series of commands.
+          And then it sends the processed information back to be stored in memory
+          again. This continues until the processed information is ready to be output.
+      9:
+        image: notes/csd_concept_computer_9.png
+        text: How a computer outputs information depends on what the computer is designed
+          to do. A computer display can show text, photos, videos, or interactive
+          games -- even virtual reality! The output of a computer may even include
+          signals to control a robot.
+      10:
+        image: notes/csd_concept_computer_10.png
+        text: And who knows what the computers of tomorrow will be like? My hope is
+          that you get to help decide what you want the computers of tomorrow to look
+          like. But across all computers, regardless of the different types of technology
+          they use, they're always doing those same four things. They take in information,
+          they store it as data, they process it, and then they output the results.
+    csd_concept_binary_data:
+      1:
+        image: notes/csd_concept_binary_data_1.png
+        text: Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries.
+          And this is where I do engineering and design, and I design circuits for
+          fashion and music and technology.
+      2:
+        image: notes/csd_concept_binary_data_2.png
+        text: My name is Federico Gomez Suarez, and I'm a software developer with
+          Microsoft Hack for Good. And I look into using technology to help us solve
+          some of the big social problems of our times.
+      3:
+        image: notes/csd_concept_binary_data_3.png
+        text: You may have heard that computers work on ones and zeros. But almost
+          nobody today actually deals directly with these ones and zeros. But ones
+          and zeroes do play a big role in how computers work on the inside.
+      4:
+        image: notes/csd_concept_binary_data_4.png
+        text: Inside a computer are electric wires and circuits that carry all the
+          information in a computer. How do you store or represent information using
+          electricity?
+      5:
+        image: notes/csd_concept_binary_data_5.png
+        text: Well, if you have a single wire with electricity flowing through it,
+          the signal could either be on or off. That's not a lot of choices, but it's
+          a really important start. With one wire, we can represent a yes or no, true
+          or false, a one or zero, or anything else with only two options. This on/off
+          state of a single wire is called a bit, and it's the smallest piece of information
+          a computer can store.
+      6:
+        image: notes/csd_concept_binary_data_6.png
+        text: 'If you use more wires you get more bits: more ones and zeros. With
+          more bits you can represent more complex information. But to understand
+          that, we need to learn about something called the binary number system.'
+      7:
+        image: notes/csd_concept_binary_data_7.png
+        text: 'In the decimal number system, we have ten digits from zero to nine,
+          and that''s how we''ve all learned to count. In the binary number system,
+          we only have two digits: zero and one. With these two digits, we can count
+          up to any number.'
+      8:
+        image: notes/csd_concept_binary_data_8.png
+        text: Here's how this works. In a decimal number system we're all used to,
+          each position in a number has a different value. There's a 1 position, the
+          10 position, the 100 position, and so on. For example, a 9 in the 100 position
+          is a 900. In binary, each position also carries a value. But instead of
+          multiplying by 10 each time, we multiply by 2. So there's the 1 position,
+          the 2 position, the 4 position, the 8 position, and so on. For example,
+          the number 9 in binary is 1001. To calculate the value, we add 1 times 8,
+          plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this
+          math because computers do it for us. What's important is that any number
+          can be represented with only ones and zeros, or by a bunch of wires that
+          are on or off. The more wires you use, the larger the numbers you can store.
+          With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With
+          just 32 wires, you can store all the way from 0 to over 4 billion. Using
+          the binary number system, you can represent any number you like.
+      9:
+        image: notes/csd_concept_binary_data_9.png
+        text: But what about other types of information? Like text, images, or sound?
+          It turns out that all these things can also be represented with numbers.
+          Think of all the letters in the alphabet. You could assign a number to each
+          letter. A could be 1, B could be 2, and so on. You can then represent any
+          word or paragraph as a sequence of numbers. And as we saw, these numbers
+          can be stored as on or off electrical signals. Every word you see on every
+          webpage or your phone is represented using a system like this.
+      10:
+        image: notes/csd_concept_binary_data_10.png
+        text: Now, let's consider photos, videos, and all the graphics you see on
+          a screen.
+      11:
+        image: notes/csd_concept_binary_data_11.png
+        text: All of these images are made out of teeny dots called pixels, and each
+          pixel has a color. Each of the colors can be represented with numbers. When
+          you consider the typical image has millions of these pixels, and the typical
+          video shows 30 images per second now we're talking about a lot of data here.
+      12:
+        image: notes/csd_concept_binary_data_12.png
+        text: Cada sonido es básicamente una serie de vibraciones en el aire. Las
+          vibraciones pueden representarse gráficamente como una onda. Cualquier punto
+          en esta onda puede ser representado por un número. Y de esta manera, cualquier
+          sonido puede ser dividido en una serie de números. Si usted quiere una calidad
+          de sonido alta, seleccionaría un audio de 32-bit o uno de 8-bit. Mayor número
+          de bits significa mayor rango de números.
+      13:
+        image: notes/csd_concept_binary_data_13.png
+        text: Cuando usted usa una computadora para escribir código o para hacer su
+          propia aplicación, usted no está trabajando directamente con estos ceros
+          y unos. Pero si está trabajando con imágenes o sonido o vídeos. Así que
+          si quiere entender cómo funcionan las computadoras por dentro, todo se reduce
+          a estos simples ceros y unos y las señales eléctricas en los circuitos detrás
+          de ellos.
+    csd_concept_circuits_logic:
+      1:
+        image: notes/csd_concept_circuits_logic_1.png
+        text: Una de las mejores cosa que he descubierto sobre circuitos es que la
+          circuitería puede ser una forma de arte si poseo una idea creativa, puedo
+          lograr esa idea creativa usando circuitos. Así que si usted tiene ideas,
+          puede usar la tecnología para hacer que esas ideas cobren vida.
+      2:
+        image: notes/csd_concept_circuits_logic_2.png
+        text: Cada entrada o salida de la computadora es efectivamente un tipo de
+          información, que puede ser representado por señales de encendido o apagado
+          o ceros y unos.
+      3:
+        image: notes/csd_concept_circuits_logic_3.png
+        text: Para lograr procesar la información que ingresa como entrada y para
+          generar la información que sale, una computadora necesita modificar y combinar
+          las señales de entrada. Para hacer esto, una computadora usa millones de
+          componentes electrónicos teeny, que al juntarse todos forman los circuitos.
+      4:
+        image: notes/csd_concept_circuits_logic_4.png
+        text: Echemos un vistazo mas de cerca a cómo los circuitos pueden ser modificados
+          y procesar información que es representada con ceros y unos. Este es increíblemente
+          un circuito simple. Utiliza una señal eléctrica, encendida o apagada, y
+          la voltea. Así que si la señal que proporciona es un 1, el circuito proporciona
+          un cero, y si usted ingresa un 0 al circuito, el mismo retornará un 1. La
+          señal que entra no es la misma que sale, y así denominamos este circuito
+          como NOT.
+      5:
+        image: notes/csd_concept_circuits_logic_5.png
+        text: Circuitos más complicados pueden realizar señales múltiples y combinarlas,
+          y dará un resultado diferente. Por ejemplo, un circuito con dos señales
+          eléctricas, donde cada uno debe ser un 1 o un 0. Si alguno de las señales
+          que entra es un 0, el resultado es también un cero. Este circuito sólo retornará
+          un 1, si la primera y la segunda señal son ambas un 1, este se denomina
+          circuito AND.
+      6:
+        image: notes/csd_concept_circuits_logic_6.png
+        text: Hay muchos pequeños circuitos como este que realiza cálculos sencillos
+          lógicos. Mediante la conexión de estos circuitos juntos, podemos hacer circuitos
+          más complejos que realizan cálculos más complejos.
+      7:
+        image: notes/csd_concept_circuits_logic_7.png
+        text: Por ejemplo, usted puede hacer un circuito que agregue 2 bits juntos
+          denominado sumador. Este circuito toma dos bits individuales, cada uno un
+          1 o un 0, y los coloca juntos para calcular la suma de ellos. La suma puede
+          ser 0 mas 0 igual a 0, 0 mas 1 igual a 1, o 1 mas 1 igual a 2. Usted necesita
+          dos cables de salida porque puede necesitarse hasta dos bits de salida para
+          representar la suma. Una vez que usted tiene un sumador simple para añadir
+          dos bits de información, usted puede colocar juntos varios de estos circuitos
+          sumadores lado a lado para agregar una mayor cantidad de números.
+      8:
+        image: notes/csd_concept_circuits_logic_8.png
+        text: Por ejemplo, así es cómo un sumador de 8-bit suma el numero 25 y 50.
+          Cada número es presentado usando 8 bits, resultando en 16 señales eléctricas
+          diferentes que entran al circuito. El circuito para una sumador de 8-bit
+          posee muchos sumadores pequeños dentro de él, que todos juntos, calculan
+          la suma.
+      9:
+        image: notes/csd_concept_circuits_logic_9.png
+        text: Diferentes circuitos eléctricos pueden realizar otros cálculos simples
+          como la resta o multiplicación. De hecho, toda esta información que está
+          procesando su computadora es cantidades enormes de pequeños operadores simples
+          colocados juntos. Cada operador individual realizado por una computadora
+          es tan, tan simple que puede ser hecho por un humano, pero estos circuitos
+          dentro de las computadoras son muy muy rápidos.
+      10:
+        image: notes/csd_concept_circuits_logic_10.png
+        text: Antiguamente, estos circuitos eran grandes e inadecuados, y un sumador
+          de 8-bit podía ser tan grande como un refrigerador y podía tomar minutos
+          para que se realizara un cáculo sencillo. Hoy en día, circuitos computacionales
+          son de tamaño microscópico, y muy muy rápidos. ¿Por qué las computadoras
+          pequeñas son también pequeñas? Bueno, porque mientras más pequeño sea el
+          circuito, menor es la distancia que la señal eléctrica debe recorrer. La
+          electricidad se mueve a la velocidad de la luz, lo cual explica por qué
+          circuitos modernos pueden realizar billones de cálculos por segundo.
+      11:
+        image: notes/csd_concept_circuits_logic_11.png
+        text: Así que si usted está jugando un juego, grabando un vídeo, o viendo
+          los cosmos, cualquier cosa que usted puede hacer con tecnología requiere
+          cantidades enormes de información que será procesada rápidamente. Por debajo
+          de toda esta complejidad sólo están los pequeños circuitos que convierten
+          señales binarias en sitios web, vídeos, música y juegos. Estos circuitos
+          pueden incluso ayudarnos a decodificar el ADN para diagnosticar y curar
+          la enfermedad.¿Así que qué es lo que va a hacer con todos estos circuitos?
+    csd_concept_memory_cpu_input_output:
+      1:
+        image: notes/csd_concept_memory_cpu_input_output_1.png
+        text: Hi, my name is Madison Maxey. I have a company called Loomia, and we
+          focus on making smart fabrics for smart clothing and smart soft good products.
+          The sky's the limit when it comes to textiles.
+      2:
+        image: notes/csd_concept_memory_cpu_input_output_2.png
+        text: My name is Danielle Applestone, and I'm CEO of Othermachine Company.
+          We build a desktop milling machine. A milling machine takes a rotating cutting
+          tool and moves it through material to create a 3D object.
+      3:
+        image: notes/csd_concept_memory_cpu_input_output_3.png
+        text: Under the hood, all computers do the same four basic things. They input
+          information, store and process the information, and then, output information.
+          Each of these things is done by a different part of the computer.
+      4:
+        image: notes/csd_concept_memory_cpu_input_output_4.png
+        text: There are input devices that take input from the outside world and convert
+          it into binary information. There is memory to store this information. There's
+          a central processing unit or CPU, where all the calculations are done. And,
+          finally, there are output devices that take information and convert it into
+          a physical output.
+      5:
+        image: notes/csd_concept_memory_cpu_input_output_5.png
+        text: Let's talk about input first. Computers can take many different types
+          of input, like the keyboard of a computer, the touchpad of a phone, a camera,
+          a microphone, or a GPS. But even the sensors on a car, a thermostat, or
+          a drone are also different input devices.
+      6:
+        image: notes/csd_concept_memory_cpu_input_output_6.png
+        text: Ahora, veamos como un simple ejemplo de cómo una entrada viaja a través
+          de la computadora y se convierte en salida. Cuando usted presiona una tecla
+          en su teclaso - digamos la leta "B". El teclado convierte la letra en un
+          número. Ese número es enviado como binario, ceros y unos, dentro de la computadora.
+      7:
+        image: notes/csd_concept_memory_cpu_input_output_7.png
+        text: Empezando por este número, el CPU calcula cómo mostrar la letra "B"
+          pixel por pixel. El CPU pide instrucciones paso a paso de la memoria, que
+          dice cómo dibujar la letra "B". El CPU ejecuta estas instrucciones y almacena
+          en la memoria el resultado como píxeles.
+      8:
+        image: notes/csd_concept_memory_cpu_input_output_8.png
+        text: Finalmente, esta información en píxel es enviada en binario a la pantalla.
+          La pantalla es un dispositivo de salida, el cual convierte las señales binarias
+          en las pequeñas luces y colores que conforman lo que se ve.
+      9:
+        image: notes/csd_concept_memory_cpu_input_output_9.png
+        text: Todo esto sucede tan rápido que se siente instantáneo, pero para mostrar
+          cada letra una computadora ejecuta miles de instrucciones, empezando desde
+          el momento que su dedo presiona el punto clave.
+      10:
+        image: notes/csd_concept_memory_cpu_input_output_10.png
+        text: En ese ejemplo, el dispositivo de salida fue la pantalla pero hay varios
+          diferentes tipos de salida que toman una señal binaria de la computadora
+          y hacen algo con el ella en el mundo físico. Por ejemplo, una corneta reproducirá
+          un sonido, y una impresora 3D imprimirá un objeto. Dispositivos de salida
+          pueden también controlar movimientos físicos como el brazo de un robot,
+          el motor de un carro, o la herramienta cortadora de la máquina fresadora
+          que mi compañia posee. Nuevos tipos de entradas y salidas permiten que computadoras
+          interactúen con el mundo en nuevas maneras. Esto ha sido facilitado por
+          mejoras a la velocidad y tamaño de l memoria y CPU.
+      11:
+        image: notes/csd_concept_memory_cpu_input_output_11.png
+        text: Mientras más complicada sea la tarea y más información que es entrada
+          o salida, mayor sera el poder de procesamiento y memoria que una computadora
+          necesita. Escribir letras en una pantalla puede ser sencillo pero para hacer
+          gráficos complicados en 3D o grabar una película en alta definición, computadoras
+          modernas a menudo tienen múltiples CPUs para procesar toda esa información
+          y muchos gigabytes de memoria para almacenarlo.
+      12:
+        image: notes/csd_concept_memory_cpu_input_output_12.png
+        text: 'No importa qué es lo que quiere hacer con la computadora, cada acción
+          sencilla trata sobre: introduciendo información del mundo físico, almacenando
+          y procesando esa información, y obteniendo alguna salida que retorne al
+          mundo físico.'
+    csd_concept_hardware_software:
+      1:
+        image: notes/csd_concept_hardware_software_1.png
+        text: Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com.
+          One of the best things about working in tech, and at Amazon in particular,
+          is that I get to bring my dog with me to work every day. My job is to help
+          make sure software gets out the door and her job is to nap under my desk
+          and snore very loudly.
+      2:
+        image: notes/csd_concept_hardware_software_2.png
+        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and
+          I have a really fun job: Basically bringing the hardware and the software
+          together to give you all the games that you love on your Xbox.'
+      3:
+        image: notes/csd_concept_hardware_software_3.png
+        text: Cuando se mira dentro de un dispositivo informático uno ve un montón
+          de circuitos, chips, cables, altavoces, enchufes y todo tipo de cosas. Esto
+          es lo que se conoce como el hardware.
+      4:
+        image: notes/csd_concept_hardware_software_4.png
+        text: Pero lo que no ves es el software. Este es todo los programas de la
+          computadora, o código que se ejecuta en este equipo. El software puede ser
+          cualquier cosas desde aplicaciones y juegos hasta páginas web y el software
+          de ciencia de los datos que mi equipo de Amazon y yo usamos para entender
+          cómo se comportan los clientes.
+      5:
+        image: notes/csd_concept_hardware_software_5.png
+        text: But how do the hardware and the software interact with one another?
+          Let's start at looking at a computer's central processing unit, or CPU.
+      6:
+        image: notes/csd_concept_hardware_software_6.png
+        text: The CPU is the master chip that controls all the other parts of the
+          computer. A CPU needs to do different things so inside it has smaller, simpler
+          parts that handle specific tasks. It has circuits to do simple math and
+          logic. It has other circuits to send and receive information to and from
+          different parts of the computer.
+      7:
+        image: notes/csd_concept_hardware_software_7.png
+        text: The real magic of the CPU is how it knows which circuits to use and
+          when to use them. The CPU receives simple commands that tell it which circuit
+          to use to do a specific job. For example, an "add" command tells the CPU
+          to use its outer circuit to calculate a new number. And then the "store"
+          command tells the CPU to use a different circuit to save that result into
+          memory.
+      8:
+        image: notes/csd_concept_hardware_software_8.png
+        text: Just like numbers, all of these simple commands can be represented in
+          binary ones and zeros or on and off electrical signals. The binary commands
+          are stored in memory and the CPU fetches and executes them in sequence one
+          after the other. This sequence of commands is, in fact, a very simple computer
+          program.
+      9:
+        image: notes/csd_concept_hardware_software_9.png
+        text: Binary code is the most basic form of software and it controls all the
+          hardware of a computer. These days, nobody writes software in binary. It
+          would take forever!
+      10:
+        image: notes/csd_concept_hardware_software_10.png
+        text: Today, the software we write looks more like this (Python), or this
+          (Ruby), or even this (Blockly). Programming languages like these let you
+          type in commands in something that looks a lot like English.
+      11:
+        image: notes/csd_concept_hardware_software_11.png
+        text: To draw a rectangle on the screen, you just need a single command. This
+          high-level command is converted into hundreds, or thousands, of simpler
+          binary commands that the CPU understands. Software tells the CPU what to
+          do, but when you're listening to music, and browsing the web, and chatting
+          with a friend, your computer is running multiple pieces of software all
+          at once.
+      12:
+        image: notes/csd_concept_hardware_software_12.png
+        text: So, how do all of these programs get on the computer in the first place,
+          and how can the CPU run them all at once? To find out we'll have to take
+          a look at the operating system.
+      13:
+        image: notes/csd_concept_hardware_software_13.png
+        text: El sistema operativo de la computadora es el programa principal que
+          gestiona cómo el software consigue usar el hardware de la computadora. Por
+          ejemplo, yo ayudé a crear el sistema operativo de Windows que se ejecuta
+          en la mayoría de computadoras personales.
+      14:
+        image: notes/csd_concept_hardware_software_14.png
+        text: El sistema operativo es un programa con habilidades especiales que permiten
+          controlar el otro software en la computadora. Permite instalar nuevos programa
+          cargándolos en la memoria del su computadora. Él decido cuándo un programa
+          es ejecutado por la unidad de procesamiento central, y si ese programa puede
+          acceder al sistema de salida o entrada del dispositivo. Y cuándo usted piensa
+          que su computadora está ejecutando varios programa al mismo tiempo, en realidad,
+          es el sistema operativo que funciona rápido cambiando entre los programas
+          que comparte ese CPU por fracciones de un segundo.
+      15:
+        image: notes/csd_concept_hardware_software_15.png
+        text: Dentro de cada computadora hay un sistema operativo manejando un software
+          que controla el hardware de la computadora.
+      16:
+        image: notes/csd_concept_hardware_software_16.png
+        text: El software es una serie de comandos hechos de un código binario simple,
+          y ese código binario simple son sólo señales eléctricas fluyendo a través
+          de millones de pequeños circuitos.
+      17:
+        image: notes/csd_concept_hardware_software_17.png
+        text: Computers have the potential to do all kinds of amazing things. But
+          the only thing that makes the computer smart, or useful, is you. When you
+          learn to code you get to define the problem you want to solve, and write
+          the software that turns those ideas into reality.

@@ -1,95 +1,91 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_companies) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# Πώς να φέρετε την Ώρα του Κώδικα στην εταιρεία σας
 
 ## Εμπνεύστε μαθητές και εθελοντές για την Ώρα του Κώδικα
 
-**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-  * [Εγγραφή](%= resolve_url('https://code.org/volunteer') %) εθελοντών.
-  * Για περισσότερες πληροφορίες σχετικά με τη σύνδεση των εργαζομένων σας με τις σχολικές τάξεις, συμβουλευθείτε τον [οδηγό για εταιρικούς συνεργάτες](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %) μας.
+- [Εγγραφή](%= resolve_url('https://code.org/volunteer') %) εθελοντών.
+- For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Πρόσθετοι τρόποι υποστήριξης της Ώρας του Κώδικα από εταιρείες:
 
-  * Χρησιμοποιήστε το [κουτί εργαλείων μάρκετινγκ](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) για να δημιουργήσετε ένα χρονοδιάγραμμα επικοινωνιών και να μοιραστείτε διαφημιστικό περιεχόμενο.
-  * Ζητήστε από τον Διευθύνοντα Σύμβουλο να στείλει ηλεκτρονικό μήνυμα σε όλη την εταιρεία που να τονίζει τη σημασία της επιστήμης των υπολογιστών και να ενθαρρύνει στου εργαζόμενους να το διαδώσουν. [Δείτε αυτό το email](%= resolve_url('/promote/resources#sample-emails') %).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
-  * Φιλοξενήστε κάποια εκδήλωση για την Ώρα του Κώδικα για μια τοπική σχολική τάξη μαθητών ή για έναν μη κερδοσκοπικό οργανισμό στα γραφεία της εταιρείας σας. Δείτε τον σχετικό οδηγό παρακάτω.
+- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
+- Φιλοξενήστε κάποια εκδήλωση για την Ώρα του Κώδικα για μια τοπική σχολική τάξη μαθητών ή για έναν μη κερδοσκοπικό οργανισμό στα γραφεία της εταιρείας σας. Δείτε τον σχετικό οδηγό παρακάτω.
 
-## Πώς να φιλοξενήσετε μια εκδήλωση για την Ώρα του Κώδικα
+# How to host an Hour of Code event with students
 
-## 1) Προωθήστε τη δική σας Ώρα του Κώδικα
+## 1. Promote your Hour of Code
 
-  * Προωθήστε τη δική σας [Ώρα του κώδικα](%= resolve_url('/promote') %) και ενθαρρύνετε κι άλλους.
-  * Ενθαρρύνετε τους **μηχανικούς λογισμικού** της εταιρείας σας να επισκεφθούν μια τάξη για να βοηθήσουν σε μια Ώρα του Κώδικα και να εμπνεύσουν μαθητές να σπουδάσουν την επιστήμη των υπολογιστών. Μπορούν να [εγγραφούν](%= resolve_url('https://code.org/volunteer/engineer') %) για να συνδεθούν με μια τάξη.
+- Προωθήστε τη δική σας εκδήλωση [Ώρα του κώδικα](%= resolve_url('/promote') %) και ενθαρρύνετε κι άλλους να την φιλοξενήσουν.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Μπορούν να [εγγραφούν](%= resolve_url('https://code.org/volunteer/engineer') %) για να συνδεθούν με μια τάξη.
 
-## 2) Δες το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Επέλεξε ένα φροντιστήριο:
+## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 3. Choose an activity
 
-**Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
+We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Δοκιμάστε τους!](%= resolve_url('/learn') %)
 
-  * Απαιτούν ελάχιστη προετοιμασία χρόνου
-  * Είναι αυτο-καθοδηγούμενα- επιτρέποντας στους μαθητές να δουλεύουν με τον δικό τους ρυθμό και σύμφωνα με τις ικανότητές τους
+**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 4) Σχεδίασε τις τεχνολογικές σου ανάγκες - οι υπολογιστές είναι προαιρετικοί
+## 4. Plan your technology needs - computers are optional
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Για την καλύτερη εμπειρία στην Ώρα του Κώδικα απαιτούνται υπολογιστές που συνδέονται στο διαδίκτυο. Αλλά **δεν** χρειάζεστε υπολογιστή για κάθε συμμετέχοντα, και μπορείτε επίσης να κάνετε την Ώρα του Κώδικα ακόμη και χωρίς υπολογιστή.
 
-**Plan Ahead!** Do the following before your event starts:
+**Προετοιμαστείτε!** Πριν από την έναρξη της εκδήλωσής σας, κάντε τα εξής:
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Δεν έχεις αρκετές συσκευές;** Χρησιμοποίησε τον [προγραμματισμό σε ζευγάρια](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
+- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+- **Δεν έχετε αρκετές συσκευές;** Χρησιμοποιήστε την τεχνική του [προγραμματισμού σε ζεύγη](https://www.youtube.com/watch?v=vgkahOzFH2Q). Όταν οι συμμετέχοντες συνεργάζονται, βοηθούν ο ένας τον άλλον και βασίζονται λιγότερο στον εκπαιδευτικό. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
+- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
-![](/images/fit-350/group_ipad.jpg)
+<img src="/images/fit-350/group_ipad.jpg" />
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5. Start your Hour of Code off with an inspiring video
 
-Ξεκινήστε την Ώρα του Κώδικά σας δίνοντας έμπνευση στους συμμετέχοντες και συζητώντας πώς η επιστήμη των υπολογιστών επηρεάζει κάθε μέρος της ζωής μας. Share more about what inspired you to pursue computer science and your role at your company.
+Ξεκινήστε την Ώρα του Κώδικα δίνοντας έμπνευση στους συμμετέχοντες και συζητώντας μαζί τους τον τρόπο με τον οποίο η επιστήμη των υπολογιστών επηρεάζει κάθε μέρος της ζωής μας. Μοιραστείτε τους λόγους που σας οδήγησαν να ασχοληθείτε με την επιστήμη των υπολογιστών και τον ρόλο σας στην εταιρία.
 
-**Δείξε ένα βίντεο που να εμπνέει:**
+**Δείξτε ένα βίντεο που να εμπνέει:**
 
-  * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * Το [βίντεο που εξηγεί για την ώρα του Κώδικα 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ή το <% if @country == 'uk' %> [Ώρα του Κώδικα 2015 βίντεο](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ώρα Κώδικα 2015 βίντεο](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [Ο πρόεδρος Ομπάμα καλεί όλους του μαθητές να μάθουν την Επιστήμη της Πληροφορικής](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Βρείτε περισσότερα εμπνευσμένα βίντεο [εδώ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
+- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity:**
+**Ideas to introduce your Hour of Code activity to students:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * - Δείτε συμβουλές για να προκαλέσετε το ενδιαφέρον των κοριτσιών στην επιστήμη των υπολογιστών [εδώ](%= resolve_url('https://code.org/girls') %).
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- - Αν είστε εταιρία τεχνολογίας, παρουσιάστε διασκεδαστικά, καινοτόμα προϊόντα πάνω στα οποία εργάζεται η εταιρία σας.
+- - Αν δεν είστε τέτοιου είδους εταιρία, συζητήστε τρόπους χρήσης της τεχνολογίας από την εταιρία σας για να επιλύσει προβλήματα και να ολοκληρώσει τους στόχους της.
+- - Καλέστε προγραμματιστές από την εταιρία σας να μιλήσουν σχετικά με τους λόγους που τους οδήγησαν να μελετήσουν την επιστήμη των υπολογιστών και για τα έργα στα οποία εργάζονται.
+- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
-## 6) Δημιουργήστε Κώδικα!
+## 6. Code!
 
-**Κατευθύνετε τους συμμετέχοντες σε αυτήν την δραστηριότητα**
+**Κατευθύνετε τους συμμετέχοντες στην δραστηριότητα**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
+- For younger students, load the activity page ahead of time or save it as a bookmark.
 
-**When participants come across difficulties it's okay to respond:**
+**Όταν οι συμμετέχοντες συναντήσουν δυσκολίες, δεν πειράζει να απαντήσετε:**
 
-  * «Δεν ξέρω. Ας το κάνουμε αυτό μαζί."
-  * «Η Τεχνολογία δεν λειτουργεί πάντα με τον τρόπο που θέλουμε.»
-  * «Η εκμάθηση προγραμματισμού είναι όπως η εκμάθηση μιας νέας γλώσσας? δεν θα είστε άπταιστοι αμέσως."
+- «Δεν ξέρω. Ας το κάνουμε αυτό μαζί."
+- «Η Τεχνολογία δεν λειτουργεί πάντα με τον τρόπο που θέλουμε.»
+- «Η εκμάθηση προγραμματισμού είναι όπως η εκμάθηση μιας νέας γλώσσας. Δεν θα έχετε ευφράδεια κατευθείαν."
 
 **Τι να κάνετε εάν κάποιος τελειώσει νωρίτερα;**
 
-  * They can try another Hour of Code activity at hourofcode.com/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+- Μπορούν να δοκιμάσουν μια άλλη δραστηριότητα από την Ώρα του Κώδικα στο hourofcode.com/learn
+- Ή ζητήστε τους να βοηθήσουν έναν φίλο που συναντά δυσκολίες με τη δραστηριότητα.
 
 [col-33]
 
@@ -103,16 +99,14 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## 7) γιορτάστε
+## 7) Γιορτάστε
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Μοιραστείτε φωτογραφίες και βίντεο της εκδήλωσής σας στα social media. Χρησιμοποιήστε #HourOfCode και @codeorg, έτσι ώστε να μπορούμε να αναδείξουμε την επιτυχία σας επίσης!
+- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+- Εκτυπώστε αυτοκόλλητα [«Έκανα μια Ώρα του Κώδικα!»](%= resolve_url('/promote/resources#stickers') %).
+- [Παραγγείλτε σχετικά t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) για τους εργαζόμενούς σας.
+- Μοιραστείτε φωτογραφίες και βίντεο της εκδήλωσής σας στα μέσα κοινωνικής δικτύωσης. Χρησιμοποιήστε #HourOfCode και @codeorg, ώστε να μπορούμε να αναδείξουμε την επιτυχία σας επίσης!
 
 [col-33]
 
@@ -132,12 +126,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
-
-## Τι γίνεται μετά την Ώρα του Κώδικα;
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+<p style="clear:both">&nbsp;</p>
 
 <%= view :signup_button %>

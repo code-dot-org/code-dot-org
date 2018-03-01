@@ -9,14 +9,23 @@ import { hidePublishDialog, publishProject } from './publishDialogRedux';
 
 class PublishDialog extends Component {
   static propTypes = {
+    // from redux state
     isOpen: PropTypes.bool.isRequired,
     isPublishPending: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired,
-    onConfirmPublish: PropTypes.func.isRequired,
     projectId: PropTypes.string,
     projectType: PropTypes.string,
+
+    // from redux dispatch
+    onClose: PropTypes.func.isRequired,
+    onConfirmPublish: PropTypes.func.isRequired,
+
+    // specify alternate behavior of onConfirmPublish
     onConfirmPublishOverride: PropTypes.func,
-  }
+
+    // specify additional behavior after successful call to onConfirmPublish,
+    // if not overridden by onConfirmPublishOverride.
+    afterPublish: PropTypes.func,
+  };
 
   confirm = () => {
     if (this.props.onConfirmPublishOverride) {
@@ -26,7 +35,7 @@ class PublishDialog extends Component {
     this.props.onConfirmPublish(
       this.props.projectId,
       this.props.projectType,
-    );
+    ).then(this.props.afterPublish);
   };
 
   close = () => this.props.onClose();
@@ -72,6 +81,6 @@ export default connect(state => ({
     dispatch(hidePublishDialog());
   },
   onConfirmPublish(projectId, projectType) {
-    dispatch(publishProject(projectId, projectType));
+    return dispatch(publishProject(projectId, projectType));
   },
 }))(Radium(PublishDialog));

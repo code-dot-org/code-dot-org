@@ -1,10 +1,9 @@
 ---
 title: 3rd Party AP Computer Science A Educator Resources
-nav: educate_nav
 theme: responsive
 ---
 
-[](If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS) -->
 
 # Educator Resources for Advanced Placement Computer Science A
 

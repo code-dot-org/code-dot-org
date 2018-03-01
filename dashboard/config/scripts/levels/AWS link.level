@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2017-12-14T19:17:51.000Z",
+  "level_num": "custom",
+  "user_id": 766,
+  "properties": {
+    "markdown_instructions": "# Use this tool for stuff",
+    "instructions_important": "false",
+    "link_title": "Amazon Chime",
+    "url": "http://chime.aws"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</ExternalLink>

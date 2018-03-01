@@ -73,7 +73,7 @@
         dei i å jakte på deg. Om dei er for raske, legg til ei "vent"-blokk for å
         sinke dei.
       MC HOC 2016 Level 8_failure_message_override: Du må bruke den eksploderande
-        Creeperen til å sprenge muren slik at du kan nå sauane.
+        Creeperen til å sprenge muren slik at du kan nå sauene.
       MC HOC 2016 New Drop_failure_message_override: Bruk piltastane for å gå til
         sauene og trykk mellomromstasten eller trykk klikk på spelebrettet for å bruke
         sauene. Ikkje gløym å legge til "Slepp"-blokka i koden din.
@@ -86,13 +86,17 @@
         5 Golem, prøv å endre poenga til 2 per merking.
       MC HOC 2016 Village Test_failure_message_override: Du må få Jerngolemane til
         å jakte på og angripe zombiane for å vinne.
+      Valentine_playlab_01_failure_message_override: Almost!  Try again.
       WhileAdventure_failure_message_override: Gratulerer! Du har samla X myntar!
       courseE_playLab_scaffold3_failure_message_override: Du må leggje til to eller
         fleire nye aktørar til spelet ditt og kode dei til å røre på seg.
+      courseE_playLab_scaffold3_2018_failure_message_override: |-
+        You must add two
+        or more new actors to your game and program them to move.
       grade4_scaffolded_project3_failure_message_override: Du må legge til to eller
         fleire nye aktørar som kan røre på seg til spelet ditt.
       kikiTesta_failure_message_override: Gratulerer! Du har samla X myntar!
       sample1_failure_message_override: Gratulerer! Du har samla X myntar!
       sample4_failure_message_override: Gratulerer! Du har samla X myntar!
-      sample6_failure_message_override: Ikkje heilt. Prøv igjen! [Gå til Play Zone]
+      sample6_failure_message_override: Ikkje heilt. Prøv igjen! [Gå til Spelsona]
       sample8_failure_message_override: Gratulerer! Du har samla X myntar!

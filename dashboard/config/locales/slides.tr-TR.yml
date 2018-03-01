@@ -160,7 +160,7 @@
           kaç kez tekrarlaması gerektiğini gösteren bir sayı yazabiliriz.'
       6:
         image: notes/hoc2_6.jpg
-        text: 've bu önemli: "Tekrar" blogunun içine birden fazla komut yerleştirebiliriz.'
+        text: 'Bu önemli: "Tekrar" bloğunun içine birden fazla komut yerleştirebiliriz.'
       7:
         image: notes/hoc2_7.jpg
         text: Yeni "Tekrar" blogunu kullanmanın keyfini çıkar!
@@ -1027,20 +1027,19 @@
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: On your head you hold your hat and your smarts will tell you where you're
-          at and to think about the zoo, and to nod hello to you and you! Use your
-          head when you're online to keep what's yours inside your mind and to know
-          how to be safe, how to give your life some private space! From your head
-          down to your toes, pause, think about it. From your feet up to your nose,
-          pause and think online!
+        text: "Şapkanı kafanda tut ve aklın sana nerede olduğunu söyleyecek ve hayvanat
+          bahçesini düşün, ve sana merhaba için kafa sallamayı ve seni! Çevrimiçi
+          olduğunda zihninin içindekileri tutmak ve nasıl güvende olunacağını, hayatına
+          nasıl özel bir alan verileceğini bilmek için kafanı kullan! Başından ayak
+          parmağına, durdur, düşün. Ayaklarından burnuna kadar, durdur ve çevrimiçi
+          düşün!"
       2:
         image: notes/C2_digital_footprint_2.png
-        text: Use your heart to grow and grow, and to give yourself a healthy glow,
-          and to make a valentine, tell someone that you'll be mine! Use your heart
-          when you're online, feel what's right and always kind, and show your friends
-          respect, to be fair and nice on the internet. From your head down to your
-          toes, pause, think about it. From your feet up to your nose, pause and think
-          online!
+        text: Kalbini kullanarak büyü ve büyü, ve kendine sağlıklı bir parlaklık ver,
+          ve bir sevgiliye sahip olmak için, birine benim olacaksın de! İnternette
+          adil ve iyi olabilmek için aktif olduğunda kalbini kullan, doğru ve kibar
+          olanı hisset, ve arkadaşlarına saygı göster. Baştan aşağı durakla, düşün.
+          Ayaktan başa durakla ve aktif düşün!
       3:
         image: notes/C2_digital_footprint_3.png
         text: Evcil hayvanını kucaklamak, kıyafetlerinin ıslanmasını önlemek için
@@ -1051,26 +1050,24 @@
           kadar durakla ve çevrimiçi düşün!
       4:
         image: notes/C2_digital_footprint_4.png
-        text: Use your gut to store your food, and to listen to its growling mood,
-          to make a belly flop, and to feel the gas in soda pop. Use your gut when
-          you're online, to know to watch for certain signs, and to let it guide the
-          way and tell you when it's not ok. From your head down to your toes, pause,
-          think about it. From your feet up to your nose, pause and think online!
+        text: Mideye tüm yemekler, içindeki sese kulak ver, havuzda göbek pişirmek,
+          sodadaki gazı hissetmek. Çevrimiçi gezerken, içindeki sese güven, bir şey
+          ters giderse, o, sana doğru yolu gösteren. Baştan ayağa, dur ve iyi düşün.
+          ayaktan buruna, dur ve online düşün!
       5:
         image: notes/C2_digital_footprint_5.png
-        text: So think with your head, and feel with your heart, balance with your
-          arms, listen to your gut, online. Use your legs to run and kick, and to
-          jump and bounce on a pogo stick, and to dance around the block, and to skip
-          along in your smelly socks. Use your legs when you're online, to stand up
-          to bullies who cross the line, and remember to stand tall, be nice to creatures
-          great and small.
+        text: Kafanla düşün ve kalbinle hisset, kollarınla dengede dur, bağırsaklarını
+          çevrimiçi dinle. Koşmak ve tekme atmak için ayaklarını kullan, ve zıpla
+          ve sırıkla sıçra, ve kütüğün etrafında dans et, ve kokulu çoraplarınla birlikte
+          atla. Çevrimiçi olduğunda ayaklarını kullan çizgiyi aşan zorbalara karşı
+          dur ve uzun boylu durmayı unutma, büyük ve küçük yaratıklara karşı nazik
+          ol.
       6:
         image: notes/C2_digital_footprint_6.png
-        text: From your head down to your toes, pause, think about it. From your feet
-          up to your nose, pause and think online! So think with your head, and feel
-          with your heart, balance with your arms, listen to your gut, stand up with
-          your legs. From your head down to your toes, pause, think about it. From
-          your feet up to your nose, pause and think online!
+        text: Başından parmağına, duraklat, düşün. Ayaklarından burnuna kadar, duraklat
+          ve çevrimiçi düşün! Kafanla düşün ve kalbinle hisset, kollarınla dengede
+          dur, bağırsağını dinle, bacaklarınla ayağa kalk. Başından parmağına, durdur,
+          düşün. Ayaklarından burnuna kadar, duraklat ve çevrimiçi düşün!
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
@@ -1850,22 +1847,22 @@
           ikili formda tutabilirsin.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: You imagine that we're going to put a grid over this panda bear and
-          for each square, we're going to decide whether that square is more black
-          or more white. And then we're going to color it that way. Now each cell
-          on the grid is either black or white and then the black squares we say those
-          are zeros (binary digit) and the white squares are ones, the other binary
-          digit. At the end, you're left with just a bunch of ones and zeros. That's
-          how you represent this image in binary.
+        text: Her kare için ve bu panda ayısının üzerine bir ızgara koyduğumuzu hayal
+          edin, o karenin daha siyah ya da daha beyaz olup olmadığına karar vereceğiz.
+          Ve sonra o şekilde boyayacağız. Artık ızgaradaki her hücre siyah ya da beyaz
+          olur ve daha sonra söylediğimiz siyah kareler sıfırlar ( çift basamak),
+          ve beyaz kareler birler, diğeri çift basamaklardır. En sonunda bir deste
+          bir ve sıfırlarla ayrılırsınız. Bu, bu görüntüyü ikili olarak temsil etme
+          şeklinizdir.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: This lesson is called for loop fun. In this lesson, we'll use a number
-          line to play a dice game. Each player will roll three times to assign a
-          starting value, a stopping value, and our interval. During each turn, we
-          circle our starting value, and every value that is the same number of steps
-          forward as our interval value. We stop circling when we get to our stopping
-          value. The person with the highest score wins!
+        text: Bu ders, döngü eğlencesi için çağrılır. Bu derste bir zar oyunu oynamak
+          için bir sayı satırı kullanacağız. Her oyuncu, bir başlangıç değeri, durdurma
+          değeri ve zaman aralığı atamak için üç kez oynar. Her dönüş sırasında başlangıç
+          değerimizi ve aralık değerimizle aynı adımları aşan her değeri daire içine
+          alırız. Durdurma değerimize ulaştığımızda dolaşmayı bırakırız. En yüksek
+          skora sahip olan kişi kazanır!
       2:
         image: notes/C4_unplugged_forloops_2.png
         text: Döngüler birçok alanda işe yaramaktadır ve eğer bir meteorolojist olmak
@@ -1891,67 +1888,67 @@
           gibi şeyleri hesaplamak zorundayız.
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: Since these are fairly big grids and we're doing this in a lot of points
-          we're looping over these things millions and millions of times. Everything
-          I do I'll use for loops. Here for example is a for loop right there. When
-          you're forecasting wind, there's so many different parameters that go into
-          it it would be impossible for a human to sit down and do all those calculations.
-          There's so many different aspects to what's going to be affecting what's
-          happening to the wind that we need a computer model in order to forecast
-          it.
+        text: Bunlar büsbütün büyük ızgaralar olduklarından biz bunu birçok noktada
+          yapıyoruz bu şeyleri milyonlarca ve milyonlarca kez arka arkaya baştan yapıyoruz.
+          Yaptığım her şeyi döngüler için kullanacağım. Mesela tam orada bir for döngüsü
+          var. Rüzgarı önceden tahmin ederken, bir insan için oturması ve tüm o hesaplamaları
+          yapmasının imkansız olacağını inceleyen pek çok farklı parametre vardır.
+          Tahmin edebilmek için bir bilgisayar modeline ihtiyacımız olan rüzgarın
+          nasıl etkileneceğini ona ne olacağını tahmin edebilmeye dair çok farklı
+          yönler var.
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: In this lesson, we'll be playing with some fill in the blank stories.
-          You have a template that you can fill in to create similar stories that
-          have very amusing differences.
+        text: Bu derste bazı boş hikayeleri doldurma ile oynuyor olacağız. Çok eğlenceli
+          farklılıklar içeren benzer hikayeler oluşturmak için doldurabileceğiniz
+          bir şablonunuz var.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: In this lesson, we also learned how to make an abstracted template from
-          two stories that have already been created. Abstraction is the art of removing
-          differences and details so that you can see how one solution might work
-          for many different problems. It's very helpful in computer science because
-          it allows us to create functions that may be useful in several different
-          situations.
+        text: Bu derste, biz ayrıca daha önce oluşturulmuş iki hikayeden soyutlanmış
+          bir şablon nasıl oluşturulacağını öğrendik. Soyutlama, farklılıkların ve
+          ayrıntıların kaldırılması sanatıdır, böylece bir çözümün birçok farklı sorun
+          için nasıl işe yaradığını görebilirsiniz. Bu bilgisayar bilimlerinde çok
+          faydalıdır çünkü farklı durumlarda yararlı olabilecek işlevler oluşturmamızı
+          sağlar.
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: This lesson is called songwriting with parameters. We're going to be
-          writing some songs here. Sometimes the chorus is just a little bit different
-          each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus
-          is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o.
-          The small change in each chorus can be shown using something we call parameters.
+        text: Bu derse, parametrelerle şarkı sözü yazma deniyor. Burada bazı şarkılar
+          yazıyor olacağız. Bazen nakarat her şarkı söylediğiniz zaman birazcık farklıdır.
+          Old Macdonald'ın Bir Çiftliği Var'ı hatırlıyor musunuz? Nakarat, her hayvan
+          için nispeten farklıdır. Ve çiftliğinde bir ineği vardı, i-a-i-a-o. Her
+          nakaratta küçük bir değişiklik, parametreler dediğimiz şeyi kullanarak gösterilebilir.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece
-          of information you can pass to a function to customize it for a special
-          need. When you make ice cream sundaes with your friends, you are using a
-          process similar to parameters in a computer program.
+        text: Bazen bir işlevin bir parametreye ihtiyaç duyar. Bir parametre, özel
+          bir ihtiyaç için onu ayarlamak amacıyla bir işleve geçirebileceğiniz ek
+          bir bilgi parçasıdır. Arkadaşlarınızla (üstü şuruplu) dondurma yaptığınızda,
+          bir bilgisayar programındaki parametrelere benzeyen bir işlem kullanıyorsunuz.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: The disk of vanilla ice cream might be the same for every sundae but
-          when you ask your friends which two toppings they'd like, you could get
-          lots of different combinations. Topping is the function name but each type
-          of topping is a parameter. Functions and parameters work together to make
-          great computer programs and great sundaes too.
+        text: Vanilyalı dondurma çarkı her şuruplu dondurma için aynı olabilir fakat
+          arkadaşlarınıza hangi iki üst malzemeyi istediklerini sorduğunuz zaman birçok
+          farklı kombinasyon edinebilirsiniz. Üst malzeme işlevin adıdır, ama her
+          üst malzeme türü bir parametredir. İşlevler ve parametreler, harika bilgisayar
+          programları ve muhteşem şuruplu dondurmalar yapmak için birlikte çalışırlar.
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: This lesson is called variables in envelopes. We're going to learn how
-          we can build sentences when we're still missing pieces of information. Most
-          of us are already familiar with the idea of filling in a blank. We do it
-          when we're putting our name on our homework. Sometimes there's more than
-          one word that needs to be filled out and in that case, we give that blank
-          a label so that we know which piece of information goes where.
+        text: Bu derse zarflardaki değişkenler deniyor. Hala bilgi parçalarını kaçırırken
+          nasıl cümleler kurabileceğimizi öğreneceğiz. Çoğumuz halihazırda boşluk
+          doldurma fikrine aşinayız. Bunu ödevlerimize adlarımızı koyduğumuz zaman
+          yaparız. Kimi zaman doldurulması gereken birden fazla sözcük vardır ve bu
+          durumda o boşluğa bir etiket veririz ki böylece hangi bilgi parçasının nereye
+          gittiğini bilelim.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change.
-          By using a variable for the missing information, we can continue working
-          on whatever we were doing and let someone else fill in the missing information
-          later. In software, we use variables a lot. We use variables as placeholders
-          for name, email address, and even username. That way we can let the program
-          know where those details will appear after the user fills them in. We use
-          variables all the time in our work.
+        text: Değişkenler, değişebilen bilgi parçaları için yer tutucudur. Eksik bilgi
+          için bir değişken kullanarak, yaptığımız her şey üzerinde çalışmaya devam
+          edebilir ve başka birinin eksik bilgileri daha sonra doldurmasına izin verebiliriz.
+          Yazılımda, değişkenleri çok kullanıyoruz. Değişkenleri ad, e-posta adresi
+          ve kullanıcı adı için yer tutucu olarak kullanırız. Bu şekilde, kullanıcıya
+          bunları doldurduktan sonra bu bilgilerin nerelerde görüntüleneceğini programa
+          bildirebiliriz. Değişkenlerİ Çalışmalarımızda her zaman kullanırız.
       3:
         image: notes/C4_unplugged_variables_3.png
         text: Daha sonra ihtiyacımız olacak bilgileri saklamak için değişkenleri kullanırız.
@@ -1988,17 +1985,17 @@
           daha akıllı algoritmalar yazma olanağı tanır.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: Now you're going to try playlab where you are given different games
-          and you can change the values of variables like speed, height, score, in
-          order to change the game. You won't have to change the algorithm of the
-          game to change how it plays, just the variable.
+        text: "Şimdi size farklı oyunların verildiği ve oyunu değiştirmek amacıyla
+          hız, yükseklik, skor gibi değişken değerlerini değiştirebileceğiniz playlab'ı
+          deneyeceksiniz. Oyunun nasıl oynanacağını değiştirmek için oyunun algoritmasını
+          değiştirmek zorunda kalmayacaksınız, sadece uyuşmazlığı."
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in
-          many different ways. One way that you can use a variable is to store page
-          numbers of a book. A user can increase and decrease the size of the font
-          on a page. Based on the font size, the number of pages in the book can change.
-          We can adjust it by storing the number of pages in the variable.
+        text: Kitaplar için X-ray ve Kindle için yaptığım çalışmada, bir çok farklı
+          şekildeki değişkeni kullanıyoruz. Bir kitabın sayfa numaralarını saklamak
+          değişken kullanmanın bir yolu. Kullanıcı, yazı tipi boyutunu artırabilir
+          veya azaltabilir. Yazı tipi boyutuna bağlı olarak, kitaptaki sayfa sayısı
+          değişebilir. Bunu, değişkene sayfa numarası girerek ayarlayabiliyoruz.
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
@@ -2006,12 +2003,12 @@
           Olay bir şey olduğunda bunu algılayıp bu eylemle ilgili eylemi gerçekleştir.
       2:
         image: notes/infinity_playlab_events_2.png
-        text: Here, we're going to make Baymax move up to touch Hiro and move down
-          to touch Rapunzel when the player uses the up/down arrow keys or the up/down
-          buttons. We'll use the when up arrow block and attach the move actor up
-          block to it, so when the player presses the up arrow key, everything attached
-          to the "when up arrow" block is run. We'll do the same thing to make Baymax
-          move down. Step by step your game is getting more interactive.
+        text: Burada, Baymax'ı Hiro'ya dokunacak ve yukarı / aşağı ok tuşlarını veya
+          yukarı / aşağı düğmeleri kullandığında Rapunzel'e dokunacak şekilde hareket
+          ettireceğiz. Yukarı ok bloğunu kullanacağız ve hareket aktörünü yukarı ok
+          bloğuna ekleyeceğiz, böylece oyuncu yukarı ok tuşuna bastığında, "yukarı
+          ok olduğunda" bloğuna eklenen her şey çalıştırılır. Baymax'ı geride bırakmak
+          için aynı şeyi yapacağız. Adım adım oyunu daha interaktif hale geliyor.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
@@ -2053,13 +2050,13 @@
           yer.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow outline, and then they'll snap together. In this first
-          puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get
-          to Baymax by dragging the "move right" block out and linking it to the "when
-          run" block. Once you have your blocks in place, hit the "Run" button to
-          see what you've programmed.
+        text: Başlamak için bloklarınızı turuncu renkli “çalıştırma zamanı” bloğu
+          ile bağlamanız gerekecek. Sarı çerçeveyi görene kadar sürükleyerek birçok
+          bloğu birbirine bağlayabilirsiniz daha sonra birbirlerine yaslanacaklardır.
+          Bu ilk bulmacada Hiro Oyuncu 1 ve Baymax Oyuncu 2’dir. Baymax’a ulaşmak
+          için Hiro’yu, “saga taşı” bloğunu sürükleyip “çalıştırma zamanı” bloğuna
+          bağlayarak hareket ettirmeliyiz. Bloklarınızı mevcut konuma getirdiğinizde,
+          programladıklarınızı görmek için “Çalıştır” butonuna basın.
       7:
         image: notes/infinity_playlab_intro_7.png
         text: Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular
@@ -2075,136 +2072,136 @@
           oyunda olacak.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
-        text: So if we wanted an actor to do something repeatedly without the player
-          having to do anything, we'll put those blocks inside the repeat forever
-          block. In this next puzzle, our goal is to help Anna walk up and down continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Eğer oyuncunun birşey yapmasına gerek kalmadan bir aktörün defalarca
+          birşey yapmasını istediysek, bu blokları sürekli tekrarla bloğunun içine
+          koyarız. Sıradaki bulmacada hedefimiz Anna'nın sürekli olarak yukarı ve
+          aşağı yürümesine yardım etmek. Tekrar komutlarının nasıl çalıştığını öğrenmek,
+          daha sonra kendi oyununuzu yaparken size çok zaman kazandıracaktır.
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: What do you want to be when you grow up Olivia? An astronaut. Do you
-          happen to know what a computer programmer is? Yeah um no. Ummm wait what?
-          I'm not really sure how to explain it computer programming is pretty simple.
-          It's a set of instructions like a recipe, you have to follow them step-by-step
-          to get the end result you want.
+        text: Oliva büyüdüğünde ne olmak istiyorsun? Bir astronot. Bir bilgisayar
+          programcısı nedir bilirmisin? Hmmm hayır. Bekle ne dedin? Nasıl açıklayacağımı
+          bilmiyorum bilgisayar programlama gayet basittir. Bir takım yöntemleri vardır
+          aynı yemek tarifleri gibi, istediğin sonuca ulaşmak bu yöntemleri aşama
+          aşama takip etmen lazım.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: I can change the number of pixels, the length of the line, using this
-          dropdown. How long was it again? You can see the instructions again by looking
-          under the run button. Here I used the move forward block and I'm going to
-          select 100 pixels. I can delete a block by dragging it into the toolbox
-          or the trash can. Let's put it back.
+        text: Pixel sayısını ve hat uzunluğunu bu yıkma işlemi ile değiştirebilirim.
+          Ne kadar uzun demiştin? Talimatları tekrar görmek için başlat butonun altına
+          bakabilirsin. Şimdi bloğu ileri götürmeyi kullandım ve 100 pixeli seçicem.
+          Bir bloğu silmel için onu çöp bidonuna sürükleyebilirim. Hadi onu geri koyalım.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
-        text: Run the code by pressing run. Well that didn't work! I'll press reset
-          and figure out what's wrong. You can try a puzzle as many times as you'd
-          like and skip puzzles and come back to them. Just make sure to try your
-          best and don't give up. Let's add another move forward. That still didn't
-          work. I can place a block between other blocks.
+        text: Başlata basarak kodu başlat. Hmmm bu çalışmadı! Neyin yanlış olduğunu
+          anlamak için yenileye basıcam. Bir bulmacayı istediğin kadar deneyebilirsin
+          ve bırakıp tekrar gelebilirsin. Sadece elinden gelenin en iyisini yaptığına
+          emin ol ve pes etme. Hadi bir ilerle daha ekleyelim. Hala çalışmıyor. Diğer
+          bloklar arasına bir blok daha koyabilirim.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: Let's take a turn block and place it in between the move forwards. Turn
-          left 45 degrees. Let's run it again. Reset, run, awesome! Here's another
-          puzzle. Sometimes you are given starter code to complete. Here I need to
-          add the appropriate lengths and degrees.
+        text: Bir tane dönüş bloğu alalım ve ilerle bloğunun içine yerleştirelim.
+          45 derece sola dönün. Tekrar çalıştıralım. Sıfırla, çalıştır, harika! İşte
+          başka bir bulmaca. Tamamlamak için bazen size başlangıç kodu verilir. Burada,
+          uygun uzunlukları ve dereceleri eklemem gerekiyor.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: You may sometimes accidentally trash the starter code. What do you do
-          then? You can press clear puzzle and start all over again. I'm going to
-          drag this number block into the different pixel areas. Select 100 for pixels,
-          45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio
-          bee. I need to move the bee to each flower and get nectar.
+        text: Bazen yanlışlıkla başlangıç kodunu çöpe atabilirsiniz. O zaman ne yapacaksınız?
+          Bulmacayı temizleye basabilir ve en baştan başlayabilirsiniz. Bu sayı bloğunu
+          farklı piksel alanlarına sürükleyeceğim. Pikseller için 100'ü, dereceler
+          için 45'i ve tekrar pikseller için 100'ü seçin. Harika! İşte Code Studio
+          arısı. Arıyı her çiçeğe götürmem ve nektarı almam gerekiyor.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: The first flower is three blocks away so I need three move forwards.
-          1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work!
-          I'll place another move forward between the get nectars and run it again.
-          Yay, it works! You just learned how to use the Code Studio artist and bee
-          puzzles. Good luck on the Code Studio puzzle challenge.
+        text: "İlk çiçek üç blok ötede, böyle bir durumda 3 kere ileri gitmeliyim.
+          1, 2, 3. Sonra nektarı al, ve başka bir nektarı daha. Meh, bu işe yaramadı!
+          Şimdi nektar almalar arasına başka bir ileri hareket etme ekleyeceğim ve
+          tekrar çalıştıracağım. Yuppi, çalıştı! Code Studio artist ve arı bulmacalarını
+          nasıl kullanacağınızı öğrendiniz. Code Studio bulmaca meydan okumasında
+          iyi şanslar."
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: What do you want to be when you grow up Olivia? Umm, an astronaut! Do
-          you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what
-          what? I'm not really sure how to explain it. Computer programming is pretty
-          simple. It's a set of instructions, like a recipe. You have to follow them
-          step by step to get the end result you want.
+        text: Oliva büyüdüğünde ne olmak istiyorsun? Umm, astronot. Bir bilgisayar
+          programcısının ne olduğunu biliyor musun?? Evet, umm, hayır. Umm, ne ne?
+          Nasıl açıklayacağımı bilmiyorum bilgisayar programlama gayet basittir. Bir
+          takım yöntemleri vardır, bir yemek tarifi gibi. İstediğin sonucu elde etmek
+          için adım adım takip etmen gerekir.
       2:
         image: notes/unplug1_2.png
-        text: Computer science is a way to impact the world. It can be music videos,
-          it can be games, detect whether or not someone is related to someone else.
-          Find you know, people's friends. You can do all sorts of other crazy things
-          that actually save lives. You do have to have a drive I think. It is to
-          me like a paintbrush. I think great programming is not all that dissimilar
-          from great art.
+        text: Bilgisayar bilimi dünyayı etkilemek için bir yoldur. Müzik videoları
+          olabilir, oyunlar olabilir, birisinin başkasıyla alakalı ilişkisinin olup
+          olmadığını tespit edebilir. Bilirsiniz, insanların arkadaşları. Hayatları
+          kurtaran her türlü çılgınlığı yapabilirsiniz. Bence bir sürücüye sahip olmak
+          zorundasın. Benim için bir fırça gibi. Bence büyük programlama tümüyle büyük
+          sanattan farklı değildir.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall
-          resolved into a bunch of doors and you open them and of course then you
-          find behind them is another hallway filled with a bunch of doors. Programming
-          is fun and easy. You can do anything your mind wants to do. Finally you
-          start to open enough doors the light comes in. To me a finished program
-          is like a structure filled with light. All the corners are illuminated.
-          The number of people that you can touch and interact with is something the
-          world has never seen before.
+        text: Sonunda birazcık olsa programlama öğrendiğimde, o boş duvar bir anda
+          bir sürü kapıya dönüştü. Onları açarsınız ve şüphesiz arkasında birsürü
+          kapı olan başka bir koridor bulursunuz. Programlama kolay ve eğlencelidir.
+          Aklınızın yapmak istediği her şeyi yapabilirsiniz. Ve sonunda içeri ışığın
+          girmesi için yeterli kapıyı açmış olursunuz. Bence, bitirilmiş bir program
+          ışıkla dolu bir strüktüre benziyor. Tüm köşeleri aydınlatılmış. Ulaşıp iletişim
+          kurabileceğiniz kişi sayısı dünyada görülmemiş bir şey.
       4:
         image: notes/unplug1_4.png
-        text: Our first lesson in this series is all about what computer science is,
-          what a computer scientist does and how you can be more responsible in your
-          use of technology. It's a very important lesson but it is a little text-heavy.
-          At the end, you get to make your very own customized encoding using your
-          initials. It's a fun activity and it's very empowering because binary is
-          one of those things that feels very technical but once you understand it,
-          it's like you speak a secret language.
+        text: Bu dizideki ilk dersimiz, bilgisayar biliminin ne olduğu, bir bilgisayar
+          bilimcisinin ne yaptığı ve teknoloji kullanımınızda nasıl daha çok sorumluluk
+          sahibi olabileceğiniz hakkında her şeydir. Bu çok önemli bir ders ancak
+          biraz metin ağırlıklı. Sonunda, baş harflerinizi kullanarak kendi size özel
+          kodlamanızı yapacaksınız. Bu eğlenceli bir etkinlik ve çok güçlendirici
+          çünkü ikili değer çok teknik hissedilen o şeylerden biri, ama bir kere anladığınızda,
+          gizli bir dili konuşuyormuşsunuz gibidir.
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to
-          take a big difficult problem and break it down into several simpler problems.
-          The goal of this lesson is to write a set of instructions that someone can
-          follow to draw one of the monsters included in the lesson plan.
+        text: Bilgi işlemsel düşünce üzerine olan bu ders, büyük bir problemi ele
+          alıp, bunu nasıl bir kaç küçük probleme çevireceğinizi öğretmek için hazırlanmıştır.
+          Bu dersin amacı, ders planında yer alan canavarlardan birini çizmek için
+          birinin takip edebileceği bir dizi talimat yazmak.
       2:
         image: notes/unplug2_2.png
-        text: 'Students will break into groups to write instructions and then they''ll
-          switch them with another group that will have to draw the monster. Groups
-          will write instructions using the four steps of computational thinking:
-          decomposition, pattern location, abstraction and algorithms.'
+        text: "Öğrenciler talimatları yazmak için gruplara ayrılır. Daha sonrasında
+          talimatları canavarı çizecek grup ile değiştirir. Gruplar bilgi işlemsel
+          düşünmenin dört aşamasını kullanarak bu talimatları yazacaktır: ayrıştırma,
+          desen konumu, soyutlama ve algoritmalar."
       3:
         image: notes/unplug2_3.png
-        text: First groups will decompose the task which means make a game plan. Then
-          they'll look for patterns between all the monsters in the catalog. When
-          they come across differences between the monsters, they'll abstract or remove
-          those details. For instance, one monster in the catalog has vegitas eyes
-          and another has spritem eyes. But they both have eyes so we can write a
-          line that says the monster has blank eyes.
+        text: "İlk olarak, gruplar görevi ayrıştırırlar. Bu bir oyun prlanı yapmaları
+          anlamına geliyor. Daha sonra, katalogdaki tüm canavarlar arasında desenler
+          aramaya başlarlar. Canavarlar arasında bir farklılığa rastlarlarsa bu detayları
+          soyutlar veya çıkarırlar. Örneğin, katalogdaki bir canavarın vegitas gözleri
+          var, bir diğerinin ise spritem gözleri. Ancak her ikisinin de gözleri vardır,
+          öyleyse canavarın boş gözlerinin olduğu bir satır yazabiliriz."
       4:
         image: notes/unplug2_4.png
-        text: So students will be able to write a set of instructions, called an algorithm,
-          that list the monsters' parts with blanks for what the styles should be.
-          This is the set of instructions they'll pass to other students to recreate
-          their very own monster.
+        text: Böylece öğrenciler, canavarların parçalarını olması gereken stillere
+          göre boşluklarla listeleyen, algoritma adı verilen, bir dizi talimatı yazabilecek
+          hale gelir. Bu, diğer öğrencilere kendi canavarını yeniden yaratmak için
+          verecekleritalimatlar dizisidir.
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Grafik kağıdı programlama ile, insanların çizimleri sadece ok yönlendirmeleri
+          ve karalamalar ile tekrar yaratmalarını sağlayarak, kodlamanın nasıl çalıştığını
+          açıklanmasına yardımcı oluyoruz. Bir kişiye grafik kağıdında küçük bir çizim
+          verilir ve kişinin bu çizimi sadece belli okları kullanarak nasıl yeniden
+          oluşturacağını anlatması gerekir.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one
-          square forward, one square backward, move one square up, move one square
-          down, change to next color, and fill in your square with color. Once we
-          have that coded up, we can hand it off to another person who can read the
-          code and try and recreate the picture.'
+        text: 'Bu etkinlikte kullanabileceğiniz semboller sadece şunlar: bir kare
+          ileri git, bir kare geri git, bir kare yukarı git, bir kare aşağı git, sıradaki
+          renge geç, kareni renkle doldur. Bunu kodladığımızda, kod okuyabilen ve
+          deneyip resmi tekrar oluşturabilen başka bir kişiye verebiliriz.'
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Grafik kağıdı programlama ile, insanların çizimleri sadece ok yönlendirmeleri
+          ve karalamalar ile tekrar yaratmalarını sağlayarak, kodlamanın nasıl çalıştığını
+          açıklanmasına yardımcı oluyoruz. Bir kişiye grafik kağıdında küçük bir çizim
+          verilir ve kişinin bu çizimi sadece belli okları kullanarak nasıl yeniden
+          oluşturacağını anlatması gerekir.
       2:
         image: notes/unplug4_2.png
         text: Etkinliğin ikinci yarısında, kağıda katlayıp biz kaç farklı şekilde
@@ -2214,10 +2211,11 @@
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: In graph paper programming, we help explain how coding works by trying
-          to help people recreate drawings using only arrows and scribbles. One person
-          is given a small drawing on graph paper and they need to go through using
-          only specific arrows and try to describe how to recreate that drawing.
+        text: Grafik kağıdı programlama ile, insanların çizimleri sadece ok yönlendirmeleri
+          ve karalamalar ile tekrar yaratmalarını sağlayarak, kodlamanın nasıl çalıştığını
+          açıklanmasına yardımcı oluyoruz. Bir kişiye grafik kağıdında küçük bir çizim
+          verilir ve kişinin bu çizimi sadece belli okları kullanarak nasıl yeniden
+          oluşturacağını anlatması gerekir.
       2:
         image: notes/unplug5_2.png
         text: Etkinliğin ikinci yarısında, kağıda katlayıp biz kaç farklı şekilde
@@ -2232,55 +2230,56 @@
           Bu koşullar  farklı şekillerde kullanılabilir.
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run
-          using a random draw of playing cards. You might have an if statement that
-          says something like if the card you draw is greater than 8, you get a point.
-          Otherwise, your opponent gets a point. You can make it as simple or as complicated
-          as you feel comfortable.
+        text: Rasgele çekilmiş oyun kartları kullanarak, kağıt üzerinde çalıştırdığımız
+          programlar yaratarak bundan faydalanıyoruz. Eğer çektiğiniz kart 8'den büyükse
+          bir puan kazanmanızı sağlayan bir if komutunuz olabilir. Büyük değilse,
+          rakibiniz bir puan kazanır. Bunu istediğiniz kadar basit yapabilir veya
+          karmaşıklaştırabilirsiniz.
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: You know how when you look up the lyrics for a song and they define
-          the chorus at the very beginning and then for the rest of the song, they
-          just refer you back to the chorus? That's how you call a function.
+        text: Bir şarkı için şarkı sözlerine baktığınızda ve en baştaki koroyu tanımladıklarında
+          ve o zaman şarkının geri kalanı için nasıl koroya geri döndüğünü biliyor
+          musunuz? Bu senin bir fonksiyonu nasıl adlandırdığındır.
       2:
         image: notes/unplug7_2.png
-        text: In this lesson, we define the chorus at the beginning of our song and
-          then we sing through our song and go back and we notice that the class doesn't
-          sing the word chorus, they automatically go up to the top where we define
-          the chorus and sing through that. We use that as a great introduction to
-          how to understand what a program is doing when it defines and calls a function.
+        text: Bu derste, şarkımızın başına bir koro tanımlıyoruz ve sonrasında şarkımızla
+          beraber söylüyor ve geri dönüyoruz. Ve farkediyoruz ki, sınıf kelime korosunu
+          söylemiyor, otomatik olarak koroyu tanımladığımız ve şarkımızla beraber
+          söylediğimiz yere atlıyorlar. Bunu, bir programın, bir fonksiyonu tanımlarken
+          ve çağırırken ne yaptığını anlamada harika bir tanıtım olarak kullanıyoruz.
       3:
         image: notes/unplug7_3.png
-        text: We use familiar songs including Old Macdonald to talk about how a chorus
-          is called over and over and how sometimes a chorus can change. When you
-          have a song like Old Macdonald, where certain words change, that's a great
-          place to introduce the idea of parameters. Passing certain words through
-          so that you can send extra information to your function. Once we're sure
-          everybody gets it, you can take your own familiar songs and break them up
-          yourself. See if you can figure it out together.
+        text: Nakaratın tekrar tekrar nasıl söyleneceği ve kimi zaman bir nakaratın
+          nasıl değişeceği hakkında konuşmak için Old Macdonald'ı da kapsayan aşina
+          şarkıları kullanıyoruz. Belirli kelimelerin değiştiği Old Macdonald gibi
+          bir şarkınız olduğu zaman bu, parametreler fikrini tanıtmak için harika
+          bir yerdir. İçinde belli kelimeler geçer ki böylece işlevinize fazladan
+          bilgi gönderebilirsiniz. Bir kere herkesin anladığından emin olduğumuzda
+          kendi aşina şarkılarınızı alabilir ve kendiniz de bölebilirsiniz. Birlikte
+          halledebilecek misiniz bakalım.
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where
-          you basically insert a blank in a story that can be filled with lots of
-          different words. We take that idea, challenge kids to come up with their
-          own words for their own stories, and really explain the concept of abstraction.
+        text: Soyutlama hakkındaki dersimiz temelde bir sürü farklı kelimeyle doldurulabilen
+          bir hikayeye boşluk eklediğiniz bilindik madlisp kavramını kullanır. Bu
+          fikri ele alır, çocukları kendi hikayeleri için kendi kelimeleriyle gelmeye
+          zorlarız ve soyutlama kavramını gerçekten açıklarız.
       2:
         image: notes/unplug8_2.png
-        text: It's all about functions and how you can have a function, like in Old
-          Macdonald, where you have a structure for your chorus but you have something
-          little that changes and you abstract out that little thing that changes
-          and you can fill it in with your own word every time through. But sometimes
-          you have three words that change and so you fill those in with three parameters,
-          that's still pretty helpful.
+        text: Bu tamamen fonksiyonlarla ve bir fonksiyona nasıl sahip olabileceğiniz
+          ile alakalı. Aynı Ali Babanın Çiftliği'nde olduğu gibi, koronuz için bir
+          yapıya sahipiniz, ama bir küçük değişkeniniz var, ve bu değişkeni soyutlarsınız,
+          ve her seferinde kendi sözcüğünüzle doldurabilirsiniz. Ancak bazen değişen
+          üç kelimeniz vardır ve bunları üç parametreyle doldurursunuz. Bu bile oldukça
+          yararlıdır.
       3:
         image: notes/unplug8_3.png
-        text: You can have one function that handles lots of different problems. Lots
-          of times people will write separate functions for all those problems, not
-          realizing there's only one little difference. If they could just find a
-          way to handle that one little difference, they could just reuse one function
-          over and over again, instead of having 14 different functions.
+        text: Birçok farklı problemi işleyen bir fonksiyona sahip olabilirsiniz. Birçok
+          kere insanlar sadece küçük bir fark olduğunu fark etmeden bütün bu problemler
+          için ayrı fonksiyonlar yazacaklar. O küçük farkı halledebilecekleri bir
+          yol bulabilselerdi, 14 farklı fonksiyona sahip olmak yerine sadece bir işlevi
+          defalarca yeniden kullanabilirlerdi.
     unplug9:
       1:
         image: notes/unplug9_1.png
@@ -2289,18 +2288,17 @@
           Bu bilgisayar bilimine biraz heyecan eklemenin bir yoludur.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and
-          run relay style. The first person in each group runs to the other side of
-          the room where you have a graph paper drawing and a blank piece of paper
-          waiting for them. They write down the first step to creating that image,
-          run back to their line, tag the next player who goes back up to write the
-          next step.
+        text: Herkesi bir sırada bekledikleri iki gruba ayırır ve röle stilini çalıştırırsınız.
+          Her gruptaki ilk kişi, onları bir grafik kağıdı çiziminin ve bir boş kağıdın
+          beklediği odanın diğer tarafına geçer. Görseli oluşturmak için gereken ilk
+          aşamayı yazarlar ve kendi sıralarına geçerler. Bir sonraki adımı yazması
+          için sıradaki oyuncuyu etiketler.
       3:
         image: notes/unplug9_3.png
-        text: This is a great way to get across the idea of debugging, needing to
-          proofread your own work, and needing to check the work of the people done
-          before you. You'll quickly understand how important it is that you be careful
-          in your coding when a whole team is depending on you.
+        text: Bu, hata yakalama düşüncesini benimsemek, kendi çalışmalarınızın hatalarını
+          düzeltme gereği ve sizden önce yapmış insanların çalışmasını kontrol etme
+          ihtiyacı için harika bir yoldur. Tüm bir ekip size bel bağladığında kodlamanızda
+          dikkatli olmanın ne denli önemli olduğunu çabucak anlayacaksınız.
     unplug10:
       1:
         image: notes/unplug10_1.png
@@ -2310,17 +2308,17 @@
           yapabiliyor.
       2:
         image: notes/unplug10_2.png
-        text: Students will transmit messages while pretending to be one of three
-          transmission methods. Wireless internet, DSL or fiber optic. The students
-          who represent wi-fi will have to wear the message they're transmitting on
-          their head because wifi is the most likely to drop some information.
+        text: "Öğrenciler şu üç iletim metodundan birini taklit ederek mesaj iletecekler:
+          Kablosuz internet, DSL yada fiber optik. Wi-fi'yi taklit eden öğrenciler
+          iletecekleri mesajları başlarına takmak zorundalardır, çünkü wifi'nin bazı
+          bilgileri bırakma olasılığı daha yüksektir."
       3:
         image: notes/unplug10_3.png
-        text: The students pretending to be DSL or cable will carry the message on
-          the back of their hand, where they're slightly less likely to drop information.
-          And the students representing fiber optic will get to carry them with both
-          hands. This activity is a great way to understand something that many of
-          us use every day.
+        text: DSL yada kablo bağlantısını taklit eden öğrenciler iletileri ellerinin
+          arkasında taşıyacaklar, çünkü bunların bilgiyi düşürme olasılığı daha düşüktür.
+          Ve fiber optik bağlantıyı temsil eden öğrenciler iletileri her iki elleri
+          ile taşıyacaklardır. Bu aktivite, hepimizin her gün kullandığı bir şeyi
+          anlamanın harika bir yoludur.
     unplug11:
       1:
         image: notes/unplug11_1.png
@@ -2339,10 +2337,10 @@
           yada bazı öğrecilerin yapılan aktiviteleri için başka bir gün ayırın.
       3:
         image: notes/unplug11_3.png
-        text: From everyone here at Code.org, we hope you've had a TON of fun during
-          this course. And whether your dream is to create the best new app, use programming
-          to help cure diseases, or you just want to be a stellar problem-solver,
-          this course was the first step in achieving those dreams.
+        text: Code.org'daki herkes olarak, umarız bu ders esnasında İNANILMAZ eğlenmişsinizdir.
+          En iyi yeni uygulamayı yaratmak, programlamayı kullanarak hastalıkların
+          iyileşmesine yardımcı olmak yada sadece yıldız problemi çözücü olmak gibi
+          hayalleriniz varsa, bu kurs rüyalarınıza ulaşmanın ilk adımıydı.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
@@ -2479,13 +2477,14 @@
           ok tuşuna her basıldığında bu parantez içindeki komutlar çalışır.
       8:
         image: notes/starwars_events_8.JPG
-        text: We want R2-D2 to go up so let's put a goUp(); block inside the command.
-          And we'll do the same thing to make R2-D2 go down.
+        text: R2-D2'nun yukarı çıkmasını istiyoruz, öyleyse komutun içine bir goUp();
+          bloğu koyalım. Ve R2-D2'unun aşağı inmesini sağlamak için aynısını tekrarlayacağız.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: "Şimdi robotumuzu kontrol etmek için gereken kodu önceden yazmak yerine,
+          R2-D2'nun çevresinde onu hareket ettiren tuş basım olaylarına reaksiyon
+          göstermesine izin verebiliriz. Adım adım, oyununuz dahada etkileşimli hale
+          geliyor."
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -2500,10 +2499,10 @@
           hatta daha fazlasını yapman için yeni komutları ve yeni sesleri açtık.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: "[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win."
+        text: "[öğrenciler konuşuyor] Şimdi basitçe kirpi domuzu toplayarak puan topladığınız
+          bir oyun yaptık. Sürpriz ise her kirpi domuzu topladığınızda bir strom trooper
+          karşınıza çıkıyor. Aslında tüm ekran kirpi domuzlarıyla dolu ve 10,000 tanesine
+          dokunduğunuzda kazanıyorsunuz."
       4:
         image: notes/starwars_congrats_4.JPG
         text: Kaybedemeyeceğin bir oyun yaptık ve bu oyunda ortadan kaldırdığın her
@@ -2594,11 +2593,12 @@
           yukarı/aşağı ok tuşlarını veya yukarı/aşağı düğmelerini kullabilir.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down. Now instead
-          of writing all the code to control our droid in advance, we can let R2-D2
-          react to button press events that move him around the screen.
+        text: Biz whenUp() etkinlik bloğunu kullanıyoruz ve goUp() bloğunu buna bağlıyoruz.
+          Oyuncu yukarı ok tuşuna ne zaman basarsa, whenUp() bloğuna bağlı olan kod
+          çalışır. Ve aynısını R2-D2'yu aşağı hareket ettirmek için yapacağız. Ancak
+          bu sefer, droid'imizi kontrol etmek için tüm kodu yazmak yerine, R2-D2'yi
+          ekranın etrafında hareket ettiren düğme basma olaylarına tepki vermesini
+          sağlayabiliriz.
       7:
         image: notes/starwars_blocks_events_7.JPG
         text: Adım adım oyunun daha interaktif oluyor.
@@ -2616,10 +2616,10 @@
           hatta daha fazlasını yapman için yeni komutları ve yeni sesleri açtık.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: "[students speaking] So we made a game basically where you get points
-          when you get puffer pigs. The twist is everytime you get a puffer pig a
-          storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win."
+        text: "[öğrenciler konuşuyor] Şimdi basitçe kirpi domuzu toplayarak puan topladığınız
+          bir oyun yaptık. Sürpriz ise her kirpi domuzu topladığınızda bir strom trooper
+          karşınıza çıkıyor. Aslında tüm ekran kirpi domuzlarıyla dolu ve 10,000 tanesine
+          dokunduğunuzda kazanıyorsunuz."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
         text: Kaybedemeyeceğin bir oyun yaptık ve bu oyunda ortadan kaldırdığın her
@@ -3068,3 +3068,835 @@
         text: Oyunu yapmayı bitirdiğinde, link paylaşmak için ya da telefonunda oynamak
           için paylaş linkini seç. İyi eğlenceler. Senin oluşturduğun Minecraft sürümünü
           oynamak için sabırsızlanıyorum.
+    applab_intro_welcome:
+      1:
+        image: notes/applab_intro_welcome_1.png
+        text: Benim adım Mei'lani. Ben code.org'da bir stajyerim ve aynı zamanda bir
+          bilgisayar bilimi öğrencisiyim. Bilgisayar bilimini severim çünkü gerçekten
+          yaratıcıdır. Sorun çözücü olmaya başlıyorum. Herşeyin istediğim gibi çalışmasını
+          sağlayacağım. Ama aynı zamanda tasarımcı da oluyorum. Sanatçı olacağım ve
+          yaratıcı tarafında her şeyi seçeceğim.
+      2:
+        image: notes/applab_intro_welcome_2.png
+        text: Kendi uygulamalarınızı yapmak uygulama labıyla çok kolay! Kodlamada
+          yeni de olsanız biraz tecrübeniz olsa da. Uygulama Laboratuarı yeni uygulamalar
+          inşa etmek ve onları arkadaşlarınızla paylaşmak için mükemmel bir araçtır.
+      3:
+        image: notes/applab_intro_welcome_3.png
+        text: Burası program laboratuarı. Solda senin programın var. Sağda ise bu
+          programı çalıştıracak kod mevcut. Programını alet kutusundan bloklar çekerek
+          kurabilirsin. Başlangıç için sadece 'setProperty' yazan bloğa sahip olacaksın.
+      4:
+        image: notes/applab_intro_welcome_4.png
+        text: Belirlenen özellik bloğu, ekranınızdaki elemanların görünüşünü değiştirir.
+          Tuşlar, etiketler ya da ekranın kendisi gibi. İlk olarak hangi elemanı değiştirmek
+          istediğinize karar vermeniz gerekir. Uygulamanızda bir elemanın üzerinde
+          kalıyorsanız ismi ya da kimliği burada görebilirsiniz. O halde ilk açılandan
+          o kimliği seçin.
+      5:
+        image: notes/applab_intro_welcome_5.png
+        text: "Ögeler; yazı renkleri, arkaplan renkleri ya da font büyüklükleri gibi
+          değiştirebileceğiniz bir çok özellik barındırır. İkinci açılır listede tüm
+          listeyi görebilir ve değiştirmek istediğiniz herhangi bir özelliği seçebilirsiniz."
+      6:
+        image: notes/applab_intro_welcome_6.png
+        text: Son açılır listede ise kullanmak istediğiniz değeri girebilirsiniz.
+          Blok sizin için bir öneri yapacaktır. Ama her zaman farklı renklerde ve
+          numaralarda kendiniz yazabilirsiniz.
+      7:
+        image: notes/applab_intro_welcome_7.png
+        text: "İşinizi bitirdiğinizde, blok biraz cümle gibi okunabilir:'buton1'in
+          arkaplan rengini yeşil yapın.' Kodda oluşturduğunuz değişiklikleri görmek
+          için çalıştır'a basın. Sıfırladıysanız, uygulamanızla alakalı başka değişiklikler
+          yapmak isterseniz içine daha çok blok sürükleyebilirsiniz!"
+      8:
+        image: notes/applab_intro_welcome_8.png
+        text: Bu eğitimde blok modunun üstünde durucaz fakat program labarotuarı yazım
+          ile çalışmayıda destekler.
+      9:
+        image: notes/applab_intro_welcome_9.png
+        text: Her iki durumda da webin dili olan JavaScript'te programlıyor olacaksınız.
+          Her seviyede yaratmayı amaçladığınız şeyin hedefi, açıklamaları ve görüntüsü
+          vardır.
+      10:
+        image: notes/applab_intro_welcome_10.png
+        text: Eğer bu seviyede tıkanırsan bu resime tıkla ve sana bu seviyeyi nasıl
+          geçeceğini göstersin. Ama önce kendin geçmeye çalış.
+      11:
+        image: notes/applab_intro_welcome_11.png
+        text: Bu hedefin amacını tamamladığında Bitir'e bas ve devam et. Hepsi işte
+          bu kadar! Bir sonraki seviyeye geçmek ve App Lab ile maceraya atılmak için
+          turuncu "devam" butonuna bas!
+    applab_intro_events:
+      1:
+        image: notes/applab_intro_events_1.png
+        text: Uygulamalar gerçekten havalı çünkü bu baya kendi işinizi açmak gibi
+          bir şey, yani demek istiyorum ki, her şeyi başından tasarlayacak, yöneteceksiniz
+          ve kod ile daha yeni oluşturduğunuz bu iş parçasının sahibisiniz.
+      2:
+        image: notes/applab_intro_events_2.png
+        text: "Şimdi programının görünümü değiştirebilirsin. Hadi onu etkinliklere
+          tepki gösterecek şekilde yapalım! Etkinlikler kullanıcı eylemleridir bir
+          tuşa tıklamak, menüde gezmek yada bir fotoğrafı yerleştirmek gibi. Etkileşimli
+          programlar etkinliklere reaksiyon gösterecek yollara ihtiyaç duyar, bir
+          tuşa bastığımda ses çıkması gibi. Bunu program labarotuarında yapabilmek
+          için 'onEvent' isimli yeni bloğu kullanmalısın."
+      3:
+        image: notes/applab_intro_events_3.png
+        text: Bu program ekranı maviye çeviriyor. Tuşa bastığımda ekranımın yeşile
+          dönmesini istiyorum. İlk olarak bir onEvent bloğu çekmeliyim. Bir bakışta
+          tuşun isminin ''bigButton'' olduğunu anlıyorum ve onu ilk düşürmede seçiyorum.
+      4:
+        image: notes/applab_intro_events_4.png
+        text: Sıradaki etkinliği ben seçicem.Seçebileceğin birçok opsiyon var ama
+          şuan sana sadece eski klasik bir tık bırakıcam.
+      5:
+        image: notes/applab_intro_events_5.png
+        text: 'Son olarak, etkinliğin içine ekranın arka plan rengini değiştirecek
+          kod ekleyeceğim. Bu bloğu bir cümle olarak okuyabilirsiniz: "Düğmenin tıklanması
+          durumunda tüm kodu çalıştır."'
+      6:
+        image: notes/applab_intro_events_6.png
+        text: Hadi test edelim. onEvent dışındaki bloklar yinede çalışmaya devam ederi
+          yani ekran mavi başlar.
+      7:
+        image: notes/applab_intro_events_7.png
+        text: Ve ne zaman büyük tuşa bassam onEvent içindeki kodum çalışır ve ekranım
+          yeşile döner.
+      8:
+        image: notes/applab_intro_events_8.png
+        text: Eğer etkinlikten sonra daha fazla şeyi değiştirmek istiyorsan, tıpkı
+          ekrandaki yazı gibi. Sadece onEvent'e daha fazla kod ekle
+      9:
+        image: notes/applab_intro_events_9.png
+        text: Programının daha fazla etkinliğe tepki vermesi için onEvent bloklarından
+          daha fazlasını ekle. Sadece iç içe koymadığından emin ol. Şimdi sıra tek
+          başına denemende iyi eğlenceler!
+    applab_intro_sounds:
+      1:
+        image: notes/applab_intro_sounds_1.png
+        text: Sırada programına resim ve ses eklemeyi öğreniceksin. Hadi ses opsiyonlarını
+          inceleyerek başlıyalım.
+      2:
+        image: notes/applab_intro_sounds_2.png
+        text: Alet kutusunun içinde ''playSound'' isimli bir blok görüceksin. Çalışma
+          alanına onu çek. Drop-down tuşuna basıp ardından ''Choose'' tuşuna basarak
+          bir sesi seçebilirsin.
+      3:
+        image: notes/applab_intro_sounds_3.png
+        text: Buradan bilgisayarınızdan bir ses dosyası yükleyebilir ya da ses kütüphanesinden
+          bir ses arayabilirsiniz. Ses kütüphanesinin enstrümanlar, arka plan müziği
+          ya da hayvan gibi pek çok farklı bölümü vardır.
+      4:
+        image: notes/applab_intro_sounds_4.png
+        text: İstediğiniz sesi seçtikten sonra "Seç" düğmesine tıklayın. Bu blok çalıştığında
+          seçtiğiniz sesi çalar.
+      5:
+        image: notes/applab_intro_sounds_5.png
+        text: "Ögelerinize görüntü eklemek için sadece setProperty bloğunu kullanabilirsiniz.
+          İkinci açılır menüdeki resim özelliğini seçin"
+      6:
+        image: notes/applab_intro_sounds_6.png
+        text: Daha sonra üçüncü açılır listeden "Seç"i seçin.
+      7:
+        image: notes/applab_intro_sounds_7.png
+        text: Buradan, bilgisayarınızdan bir resim yükleyebilir ya da simgelerden
+          oluşan büyük bir kütüphaneye simge kitaplığından göz atabilirsiniz.
+      8:
+        image: notes/applab_intro_sounds_8.png
+        text: Kod moduna döndüğünüzde simgenizin simge rengini değiştirmek için "setProperty"
+          bloğunu kullanabilirsiniz. Simgenizin hangi resmi kulanacağını seçtikten
+          sonra nasıl göründüğünü görmek için "Çalıştır"a tıklayın.
+      9:
+        image: notes/applab_intro_sounds_9.png
+        text: Burada yapcaklar bu kadar! Artık, uygulamalarınızı daha eğlenceli ve
+          dinamik hale getirmek için resimler ve sesler eklemeye başlayabilirsiniz.
+    applab_intro_designmode:
+      1:
+        image: notes/applab_intro_designmode_1.png
+        text: Kendi uygulamalarınızı oluşturmak için sıfırdan ekranlar ve elemanlar
+          tasarlamaya başlamanız gerekecek. Uygulama Laboratuarı, bunu Tasarım Modu
+          ile kolaylaştırır.
+      2:
+        image: notes/applab_intro_designmode_2.png
+        text: Tasarım Modu'na girmek için uygulamanızın üst kısmındaki değiştirme
+          anahtarını kullanın.
+      3:
+        image: notes/applab_intro_designmode_3.png
+        text: Yeni ögeleri onları ekrana sürükleyerek ekleyebilirsiniz. Sağ alt köşeyi
+          çekerek onları farklı konumlara taşıyabilir ve ölçülerini değiştirebilirsiniz.
+      4:
+        image: notes/applab_intro_designmode_4.png
+        text: Bir ögenin niteliklerini değiştirmek için sağdaki denetimleri kullanın.
+          Örneğin, bu tuşun metnini, rengini ve yazı tipi boyutunu değiştirmek hakikaten
+          kolay.
+      5:
+        image: notes/applab_intro_designmode_5.png
+        text: Ekranınıza yeni bir öge eklediğiniz zaman buton1 gibi genel bir isim
+          alır. Bu düğmenin ismini "sağButon" gibi daha anlamli bir şeyle değiştirmek
+          iyi bir fikirdir. Böylece programa gittiğinizde hangisinin o olduğunu bileceksiniz.
+      6:
+        image: notes/applab_intro_designmode_6.png
+        text: Uygulamanıza bir ögeyi yanlışlıkla eklerseniz, delete tuşuna basın ya
+          da sadece dışarı sürükleyin.
+      7:
+        image: notes/applab_intro_designmode_7.png
+        text: Bir ekran öğesine sürükleyerek uygulamanıza tamamen yeni ekranlar ekleyebilirsiniz
+      8:
+        image: notes/applab_intro_designmode_8.png
+        text: "Üst kısımdaki açılır menüden oluşturduğunuz ekranlar arasında hızlıca
+          ileri ve geri geçiş yapabilirsiniz."
+      9:
+        image: notes/applab_intro_designmode_9.png
+        text: Uygulamanızın içinde tüm bu ekranlar arasında geçiş yapmak için bir
+          yola ihtiyacınız var, bu yüzden setScreen bloğu araç setine eklendi. Bir
+          düğmeye tıklatarak ekranları değiştirmek için "onEvent" bloğu içinde "setScreen
+          kullanın.
+      10:
+        image: notes/applab_intro_designmode_10.png
+        text: Sonraki bir kaç seviyede sadece bir proje üzerinde çalışıyor olacaksın.
+          Önce bir düğme ekleyeceksin ve sonra yeni bir ekran ekleyeceksin ve son
+          olarak butonun yeni bir ekrana geçmesini sağlayacak kodu yazacaksın.
+    applab_intro_share:
+      1:
+        image: notes/applab_intro_share_1.png
+        text: "Şimdi, Uygulama Laboratuarının temellerinden bazılarını düğmeler, sesler,
+          resimler, metinler ve yeni ekranlar ekleme gibi öğrendiniz her çeşit uygulama
+          yapabilirsiniz."
+      2:
+        image: notes/applab_intro_share_2.png
+        text: Bir sonraki seviyede, oluşturmayı tamamladığınız uygulamayı bulacaksınız.
+          Biraz yaratıcılık ile bunu arkadaşlarınız için bir kişilik testine, ailenizle
+          paylaşabileceğiniz bir tebrik kartına veya kendi-maceranı-seç oyununa dönüştürabilirsiniz.
+          Tüm bu uygulamalar zaten öğrenmiş olduğun becerilerin bir birleşimi, ve
+          bahse girerim daha da fazlasını ortaya çıkarabilirsin.
+      3:
+        image: notes/applab_intro_share_3.png
+        text: Uygulamanız bittiğinde, nasıl göründüğünü görmek için kolayca telefonunuza
+          gönderebilirsiniz. Sadece "Paylaş" ı tıklayın ve telefon numaranızı buraya
+          girin.
+      4:
+        image: notes/applab_intro_share_4.png
+        text: Uygulamanızı anında açmanıza olanak sağlayacak bir kısa mesaj alırsınız.
+      5:
+        image: notes/applab_intro_share_5.png
+        text: Ayrıca, sosyal medya üzerinden uygulamanızın bir bağlantısını paylaşabilir
+          ya da başkalarının oynaması ve paylaşması için code.org genel galerisinde
+          yayınlayabilirsiniz.
+      6:
+        image: notes/applab_intro_share_6.png
+        text: Gördükleriniz App Lab'ın yapabileceklerinin sadece su üstündeki kısmı.
+          Full App Lab tam donanımlı uygulamaları hızlıca oluşturmanızı sağlamak için
+          daha gelişmiş kullanıcı etkileşimleri, yeni ekran elemanları ve hatta bir
+          dahili veritabanı bile içeriyor. Eğer devam etmek isterseniz, "code.org/applab"
+          adresinde tam aracı ve bir çok fikri bulacaksınız.
+      7:
+        image: notes/applab_intro_share_7.png
+        text: Yolculuk boyunca geldiğiniz için teşekkürler. Şimdi, ilk uygulamanızı
+          kurun ve paylaşın ve Uygulama Laboratuarı'yla uygulamalar inşa etmeye devam
+          edin!
+    mc_2017_agent_intro:
+      1:
+        image: notes/mc_2017_agent_intro_1.png
+        text: 'Stacy: Stampy, Lizzy, Preston - benimle geldiğiniz için teşekkürler.
+          Göstermek istediğim şey bu mesa platosunun biraz ötesinde. Bence buna bayılacaksın!'
+      2:
+        image: notes/mc_2017_agent_intro_2.png
+        text: Bir dakika - parkurda bir delik var! (çığlık çığlığa)
+      3:
+        image: notes/mc_2017_agent_intro_3.png
+        text: 'Herkes iyi mi? Stampy: Ah problemi anlıyorum. Bak! Ray’da bir delik
+          var. Stacy: Gerçekten mi Stampy? Lizzy: Belkide tamir etmek için blokları
+          toplamalıyız. Preston: Hadi bunu bir yarışa çevirelim. İlk geri dönen kazanır.
+          Stacy: Tamam, işaret edince, hazır ol BAŞLA! Tamam, bu toprak parçalarından
+          birazını bir araya toplayacağım. Bekleyin. Millet kazamıyorum! Preston:
+          Aynı. Lizzy: Bende. Stacy: Tamam, bu cidden garip. Stampy sen kazabiliyor
+          musun? Stampy: Kazamıyorum! Stacy: Tamam, herkes sakin olsun. Stampy: Oyun
+          bozuldu mu? Stacy: Eğer öyleyse nasıl düzelteceğiz? Lizzy: Bilmiyorum. Stampy:
+          MineCraft codunun nasıl yazılacağını bilen biri var mı?'
+      4:
+        image: notes/mc_2017_agent_intro_4.png
+        text: "(puff) Preston: Bu ne? Stampy: Bunlardan birini daha önce hiç görmedim.
+          Lizzy: Çok sevimli! Stacy: Ev...evcilleştirebilinir mi? Preston: Tamam,
+          neler oluyor? Birinin gerçek dünyaya dönmesi ve bunu düzeltmesi gerekiyor.
+          \ Hepsi: Onu değil! Stacy: O deği- (İç çeker.) Tamam, ben giderim."
+      5:
+        image: notes/mc_2017_agent_intro_5.png
+        text: Hah, tamam, hey, şimdi gerçek dünyadayım. Gidip Minecraft ofislerini
+          bulmaya çalışacağım.
+      6:
+        image: notes/mc_2017_agent_intro_6.png
+        text: Ancak yardımınıza ihtiyacım olacak. Eğitimi yapmaya başlayın, kodlamayı
+          öğrenmeye başlayın, ben birkaç seviye sonra size yetişirim, tamam mı? Bana
+          şans dileyin! Bence bu yönden. Ah! Kaktüs! Ben iyiyim!
+      7:
+        image: notes/mc_2017_agent_intro_7.png
+        text: Kod Saati meydan okumasını tamamlamak için Ajan'ı programlamak için
+          kod yazmanız gerekmekte. Yolunuzdaki tüm engelleri kaldırmak için Ajan ile
+          birlikte çalışacaksınız ki yolculuğunuz için ihtiyaç duyacağınız öğeleri
+          alabilin. Yalnızca Ajan blokları yerleştirebilir ve kırabilir, ve öğeleri
+          yalnızca siz toplayabilirsiniz. Ekranınız üç ana kısma ayrılmıştır. Solda
+          Minecraft var.
+      8:
+        image: notes/mc_2017_agent_intro_8.png
+        text: Orta alan Ajan'ın anlayabileceği komutları içeren bir araç kutusu.
+      9:
+        image: notes/mc_2017_agent_intro_9.png
+        text: Ve sağ tarafta, çalışma alanı. Agent'ı kullanmak için komutları biriktireceğin
+          yer.
+      10:
+        image: notes/mc_2017_agent_intro_10.png
+        text: Ajan, yürüyebilir, baskı plakalarını, döndürebilir ve etkinleştirebilir.
+          Aynı zamanda blokları yok edebilir ve blokları yerleştirebilir. Bu minecraft
+          rayları gibi bir bloğu yerleştirdiğinde, kendi altına yerleştirir.
+      11:
+        image: notes/mc_2017_agent_intro_11.png
+        text: Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın
+          üst kısmında bulabilirsiniz.
+      12:
+        image: notes/mc_2017_agent_intro_12.png
+        text: Tekrar denemek isterseniz, her şeyi sıfırlamak için mavi sıfırlama düğmesine
+          basabilirsiniz. Eğer bir kod bloğunu silmeniz gerekiyorsa çalışma alanından
+          alet kutusuna sürükleyin. Ajan'ı hareket ettirmek için çalıştıra basmayı
+          unutmayın. Tamam, durmayın ve ilk birkaç seviyeyi deneyin. İyi şanslar!
+    mc_2017_repeat:
+      1:
+        image: notes/mc_2017_repeat_1.png
+        text: 'Stampy: Acaba Stacy neyin peşinde?'
+      2:
+        image: notes/mc_2017_repeat_2.png
+        text: 'Stacy: Vaay, sanırım doğru yerdeyim. Bu inanılmaz!'
+      3:
+        image: notes/mc_2017_repeat_3.png
+        text: Minecrafta geri döndüm gibi hissediyorum! Merhaba. Nasılsın? Merhaba?
+      4:
+        image: notes/mc_2017_repeat_4.png
+        text: 'Ah, bir sarmaşık var. Hiçbir şey yapmıyorsun, değil mi? Katie: Stacy?
+          Stacy: Merhaba, Katie? Katie: Evet, Minecraft''a hoşgeldiniz!'
+      5:
+        image: notes/mc_2017_repeat_5.png
+        text: 'Stacy: Bu inanılmaz. Yani sen hergün burada geliştirici olarak çalışıyorsun
+          öyle mi? Katie: Evet, baya harika. Ben Minecraft piyasa ekibinde bir geliştiriciyim.
+          Stacy: Kaç tane kodlama dili biliyorsun? Katie: Kariyerimde muhtemelen bir
+          düzineden fazlasıyla çalıştım. Stacy: Bir düzine mi? Katie: Evet. Stacy:
+          O zaman şimdi, kendisini Ajan olarak adlandıran bu küçük golem adam hakkında
+          hiçbir şey bilmiyorsun? Katie: Ajan''ı, Steve ya da Alex''in yapamayacağı
+          örneğin lavı geçmek gibi şeyleri yapmak için kullanıyoruz. Stacy: O zaman,
+          kodlamayı öğrenmek istiyorum ve onlar kodlamanın nasıl yapıldığını öğrenmek
+          istiyorlar, öyleyse öğrenirken bilmeniz gereken ilk şeylerden biri nedir?'
+      6:
+        image: notes/mc_2017_repeat_6.png
+        text: 'Katie: Eh, döngülerin nasıl kullanılacağını öğrenmelisin. Döngüler,
+          geliştiricilerin bir bilgisayara komutlar vermek için yazdıkları ve tekrar
+          tekrar çalıştırılabilen şeylerdir. Stacy: Anladım, dolayısıyla bazılarının
+          ilerideki seviyelere geldiğini düşünüyorum., bu yüzden devam edin ve döngüleri
+          bir deneyin.'
+      7:
+        image: notes/mc_2017_repeat_7.png
+        text: Bir sonraki seviyede, Ajan'ı yol boyunca hareket ettirmek için bir döngü
+          kullanabilirsiniz. Yineleme bloğunu çalışma alanına sürükleyin ve ilerletme
+          bloğunu yineleme bloğunun içine yerleştirin. Bu, bir sürü bloğu çalışma
+          alanına sürüklemeye gerek kalmadan, bilgisayara aynı şeyi bir çok kez arka
+          arkaya yapmasını söyler. Yineleme bloğuna bir sayı koyarak kaç kez tekrarlanacağını
+          seçebilirsiniz.
+      8:
+        image: notes/mc_2017_repeat_8.png
+        text: Yineleme bloğuna dönüşler ve birden fazla komut koyabilirsiniz, ama
+          şimdilik Ajan'ı bir kaç adım ileri hareket ettirmek için tekrarlamayı kullanmayı
+          deneyin. Unutmayın, bir bulmacada takılıp kaldıysanız her zaman mavi reset
+          düğmesine basarak tekrar deneyebilirsiniz.
+      9:
+        image: notes/mc_2017_repeat_9.png
+        text: 'Katie''s gibi harika bir iş bulmayı düşünüyorsanız, her seviyeyi bitirdiğinizde
+          devam edin ve kodu göster düğmesine tıklayın. Bu size Katie gibi birinin
+          Minecraft''ı programladığı sırada kullandığı Javascript kodunu gösterecektir.
+          Katie: Evet, herkese bol şans!'
+    mc_2017_functions:
+      1:
+        image: notes/mc_2017_functions_1.png
+        text: 'Preston: Övünmeye çalışmıyorum, ama parkurda oldukça iyiyim. Lizzy:
+          Hadi uyuyalım, Stacy geri döndüğünde gün doğmuş olur.'
+      2:
+        image: notes/mc_2017_functions_2.png
+        text: 'Stacy: Tamam millet, Minecraft ofislerinden döndüm ve sanırım oyunda
+          yaşadığım sorunu nasıl çözeceğini biliyorum. Sanırım bir fonksiyonu kullanabilirim.
+          İzin ver sadece şunu açayım.'
+      3:
+        image: notes/mc_2017_functions_3.png
+        text: Yani bir fonksiyon, belirli bir görevi yerine getirmek için belirli
+          talimatlar kümesidir, bir tür tarife benzemektedir. Sonraki birkaç seviyede,
+          bulmacaları çözmek için kullanabileceğiniz fonksiyonlara erişiminiz olacak.
+      4:
+        image: notes/mc_2017_functions_4.png
+        text: "İşlevdeki kodun alet çantasına ne işe yaradığına bak."
+      5:
+        image: notes/mc_2017_functions_5.png
+        text: Daha sonra o isimli bloğu alet kutusundan bulup o bloğu çalıştırmak
+          istediğinizde dışarı sürükleyin.
+      6:
+        image: notes/mc_2017_functions_6.png
+        text: Unutma, aynı fonksiyonu benzer talimatları uygulamaya ihtiyacın olduğunda
+          tekrar kullanabilirsin mesela bir köprü yap. İyi şanslar, yapabiliceğini
+          biliyorum!
+    mc_2017_congratulations:
+      1:
+        image: notes/mc_2017_congratulations_1.png
+        text: 'Perston: Tebrikler!'
+      2:
+        image: notes/mc_2017_congratulations_2.png
+        text: 'Lizzy: Tebrikler!'
+      3:
+        image: notes/mc_2017_congratulations_3.png
+        text: 'Stampy: Tebrikler, başardın!'
+      4:
+        image: notes/mc_2017_congratulations_4.png
+        text: 'Stacy: Tebrikler çocuklar, çok iyiydin! Ve Hour of Code''u bitirdin,
+          Minecrafta kodlamaya başlayabilirsin. Döngüler, işlevler ve bir yazılım
+          aracı ne işe yara öğrendin.'
+      5:
+        image: notes/mc_2017_congratulations_5.png
+        text: "Şimdi sıra senin geliştirici olduğun serbest seviyede. Kalan tüm zamanınla
+          keşfetmek, kurulmak ve maden kazmak için kendi kodlarını yaz."
+      6:
+        image: notes/mc_2017_congratulations_6.png
+        text: 'Bu seviyede yazdığınız kodu Minecraft: Eğitim Sürümü ile Minecraft
+          dünyanıza ekleyebilirsiniz. Ajan ile kodlamaya devam etmek için ''Son''u
+          tıklamanız ve dünyanızda kullanabilmeniz için oluşturulmuş linki almak için
+          talimatları takip etmeniz yeterli. İyi eğlenceler ve güzel işler!'
+      7:
+        image: notes/mc_2017_congratulations_7.png
+        text: 'Stacy: Ve geri döndüm! Tamam millet, bu Ajan! Size ne yapabileceğini
+          göstereyim. Bakın, yapıyor! Ona bu terra cotta bloklarından bir merdiven
+          inşa ettirmesini söyledim, şimdi buradan çıkmak için bunu kullanmamız yeterli.
+          Ve millet, sadece merdivenler değil. Ajan''a istediğim her şeyi yapmasını
+          söyleyebilirim ve bunu benim için yapar.'
+      8:
+        image: notes/mc_2017_congratulations_8.png
+        text: 'Stampy: Bunu nasıl yaptın? Stacy: Çok kolay, aslında sadece kod kullandım!'
+    csd_concept_how_computers_work:
+      1:
+        image: notes/csd_concept_how_computers_work_1.png
+        text: Baktığın her yerde, bilgisayarlar dünyayı değiştiriyor. Masaüstülerinde,
+          evlerimizde, ceplerimizde ya da hemen hemen her yerde. Çoğumuz bu devrimci
+          teknolojiyi günlük kullanıyor olsa da, sıklıkla "Bilgisayarlar nasıl çalışır"
+          diye sormuyoruz. Bu seride, bilgisayarların gerçekten nasıl çalıştığını,
+          bilgisayarın bilgisayar haline getirilmesiyle başlayarak öğreneceksiniz.
+          Ardından, bilginin akıl-almaz hızlarda açılıp kapanan minik elektrik sinyalleri
+          kullanarak bilgisayarın içinde nasıl gösterildiğine bakacaksınız.
+      2:
+        image: notes/csd_concept_how_computers_work_2.png
+        text: Bu işlemden sonra, bilgisayarların basit matematikten tüm sanal dünyaların
+          benzetimine kadar her şeyi yapmak için devreleri nasıl kullandıklarını öğreneceksiniz.
+          Hemen sonra, aslında tüm bilgilerin girişini, çıkışını ve depolanmasını
+          yapan bir bilgisayarın farklı parçaların uzaklaştırıp bakacaksınız. En sonunda,
+          kodun aslında ne olduğuna ve yazılımın donanımları nasıl kontrol ettiğine
+          bir göz atacaksınız. İster sadece günlük kullandığınız cihazları merak edin
+          ister geleceğin buluşlarını tasarlamak isteyin, ilk adım bilgisayarların
+          nasıl çalıştıklarını öğrenmektir.
+    csd_concept_computer:
+      1:
+        image: notes/csd_concept_computer_1.png
+        text: Benim adım May-Li Khoe, ve bir tasarımcı ve bir mucitim. Yani, tasarladığım
+          şeylerden bazıları Apple'daydı, ve şimdi ise çocukların kullanması için
+          okulda geçen zamanlarını kolaylaştıracak ürünler tasarlıyorum. Diğer işlerim
+          DJ'lik ve dans sayılabilir.
+      2:
+        image: notes/csd_concept_computer_2.png
+        text: Bilgisayarlar her yerde! İnsanların cebinde, arabaların içinde, insanların
+          bileklerinde... Şu anda sırt çantanızda olabilirler. Ama bir bilgisayarı
+          bilgisayar yapan şey nedir?  Bu arada bir bilgisayarı bir bilgisayar yapan
+          nedir? Ve hatta nasıl çalışır?
+      3:
+        image: notes/csd_concept_computer_3.png
+        text: Merhaba ben Nat! Xbox'un orijinal tasarımcılarından biriydim. Yedi yaşımdan
+          beri bilgisayarlarla çalışıyordum ve şimdi sanal gerçeklikte çalışıyorum.
+          İnsanlar olarak, biz her zaman sorunları çözmemize yardımcı olacak araçlar
+          ürettik. Aletler bir el arabası, bir çekiç veya bir matbaa veya bir traktör-römorku
+          gibi.
+      4:
+        image: notes/csd_concept_computer_4.png
+        text: Bu icatların hepsi manuel çalışmada bize yardımcı oldu. Zamanla insanlar,
+          denklemleri çözme ya da gökyüzündeki yıldızları takip etme gibi yaptığımız
+          düşünce çalışmalarında bizlere yardımcı olacak bir makinenin tasarlanıp
+          kurulabilir olup olmadığını merak etmeye başladı. Bu makinelerin kum ve
+          taş gibi fiziksel şeyleri hareket ettirmek ya da işlemekten ziyade, bilgi
+          işlemek için tasarlanması gerekirdi. Bilgisayar bilimi önderleri bir düşünce
+          makinasını nasıl tasarlayacaklarını araştırdıklarında, bu makinenin dört
+          farklı görevi gerçekleştirmek zorunda olduğunu fark ettiler.
+      5:
+        image: notes/csd_concept_computer_5.png
+        text: Girdi almalı, bilgiyi depolamalı, işlemeli ve daha sonra sonuçlarını
+          çıktılamalı. Bu şimdi basit gibi gelebilir, ancak bu dört şey tüm bilgisayarlar
+          için ortaktır. Bir bilgisayarı bilgisayar yapan şey budur.
+      6:
+        image: notes/csd_concept_computer_6.png
+        text: Bilgisayarlar zamanında zaten harika olan basit hesap makineleri olarak
+          başladı ve o zamanlar sadece sayıları değiştiriyorlardı. Ama şimdi onları
+          birbirimizle konuşmak için kullanıyoruz, oyun oynamak için kullanıyoruz,
+          robotları kontrol ediyoruz, ve muhtemelen hayal edebileceğiniz tüm çılgın
+          şeyleri yapıyoruz. Modern bilgisayarlar ile o eski aksak makinelerin alakası
+          yok ama yine de aynı dört şeyi yapıyorlar.
+      7:
+        image: notes/csd_concept_computer_7.png
+        text: "İlk önce, girdi hakkında konuşacağız. Bilgisayarlara klavye ile ne
+          yapılacağını söyleyebilirsiniz, bilgisayarlara fare, mikrofon ve kamera
+          ile ne yapılacağını söyleyebilirsiniz. Tüm bu farklı girdiler, daha sonra
+          bellekte saklanacak bir bilgisayar bilgisi verir."
+      8:
+        image: notes/csd_concept_computer_8.png
+        text: Bilgisayarın işlemcisi bilgileri bellekten alır. Yalnızca bir komut
+          dizisi olan bir algoritmayı kullanarak onu değiştirir veya manipüle eder.
+          Ve daha sonra işlenmiş bilgileri tekrar bellekte saklar İşlenmiş bilgiler
+          çıktıya hazır olana kadar bu işlem devam eder.
+      9:
+        image: notes/csd_concept_computer_9.png
+        text: Bir bilgisayarın bilgiyi nasıl çıkardığı bilgisayarın ne yapmak üzere
+          tasarlandığına bağlıdır. Bilgisayar ekranı yazı, fotoğraflar, videolar yada
+          interaktif oyunlar gösterebilir -- hatta sanal gerçeklikte buna dahil! Bir
+          bilgisayarın çıktı birimi, bir robotu kontrol etmek gereken sinyalleri bile
+          içerebilir.
+      10:
+        image: notes/csd_concept_computer_10.png
+        text: Ve kim bilir yarının bilgisayarları nasıl olacak? Umudum, yarının bilgisayarlarının
+          neye benzeyeceğini kararlaştırmaya yardım etmen. Ama tüm bilgisayarlar,
+          kullandıkları farklı teknoloji tiplerine bakılmaksızın, her zaman aynı dört
+          şeyi yapıyorlar. Bilgi alıyorlar, veri olarak saklıyorlar, işliyorlar ve
+          sonuçları çıktılıyorlar.
+    csd_concept_binary_data:
+      1:
+        image: notes/csd_concept_binary_data_1.png
+        text: Merhaba! Benim adım Limor Fried, ve ben Adafruit Industries'te mühendisim.
+          Ve burada mühendislik ve tasarım yapıyor ve moda, müzik ve teknoloji devrelerini
+          tasarlıyorum.
+      2:
+        image: notes/csd_concept_binary_data_2.png
+        text: Benim adım Federico Gomez Suarez, ve Microsoft Hack for Good'da yazılım
+          geliştiricisiyim. Ve günümüzün büyük toplumsal sorunlarından bazılarını
+          çözmemize yardımcı olmak için teknolojiyi inceliyorum.
+      3:
+        image: notes/csd_concept_binary_data_3.png
+        text: Bilgisayarların sıfır ve birler ile çalışıtığını duymuş olabilirsin.
+          Fakat günümüzde neredeyse kimse direk olarak bu sıfır ile birler ile uğraşmaz.
+          Fakat sıfır ve birler bilgisayarların içeride nasıl çalıştığı hakkında büyük
+          rol oynar.
+      4:
+        image: notes/csd_concept_binary_data_4.png
+        text: Bilgasayarın için elektrik kabloları ve devreler bilgisayarın içindeki
+          bilgi akışını sağlar. Fakat bilgiyi elektrik ile nasıl saklarsın?
+      5:
+        image: notes/csd_concept_binary_data_5.png
+        text: Elektriği akan tek bir teliniz varsa, sinyal açık ya da kapalı olabilir.
+          Bu pek çok seçenek değil, ama bu gerçekten önemli bir başlangıçtır. Tek
+          bir tel ile, evet ya da hayır, doğru ya da yanlış, bir veya sıfır veya sadece
+          iki seçenekli başka herhangi bir şeyi temsil edebiliriz. Tek bir teli açma/kapama
+          durumu bit denir ve bu bilgisayarın saklayabileceği en küçük bilgidir.
+      6:
+        image: notes/csd_concept_binary_data_6.png
+        text: 'Daha fazla kablo kullanırsanız, daha fazla bit alabilirsiniz: daha
+          fazla ve sıfırlar. Daha fazla bit ile daha karmaşık bilgileri temsil edebilirsiniz.
+          Ancak bunu anlamak için, ikili sayı sistemi denilen şey hakkında bilgi almalıyız.'
+      7:
+        image: notes/csd_concept_binary_data_7.png
+        text: 'Onlu sayı sisteminde, sıfırdan dokuza kadar on basamağa sahibiz ve
+          hepimiz saymayı vb. öğrendik. İkili sayı sisteminde, sadece iki basamağımız
+          var: sıfır ve bir. Bu iki basamak ile herhangi bir sayıyı sayabiliriz.'
+      8:
+        image: notes/csd_concept_binary_data_8.png
+        text: "İşte böyle işler. Bir onlu sayı sistemine hepimiz alışkınızdır, bir
+          sayıdaki her bir konumun değeri farklıdır. 1 konum, 10 konum, 100 konum
+          vb. var. Örneğin, 100 pozisyondaki 9, 900'dür. İkili olarak, her konum bir
+          değer taşır. Fakat, her defasında 10 ile çarpmak yerine 2 ile çarparsak,
+          1 konum, 2 konum, 4 konum, 8 konum vb. olur. Örneğin, ikili 9 sayısı 1001'dir.
+          Değeri hesaplamak için, 8 kat art artı 0 kat 4 artı 0 kat 2 artı 1 kat 1
+          ekleriz. Bilgisayarlar bizim için bunu yaptığından dolayı neredeyse hiç
+          kimse bu matematiğini yapmaz. Önemli olan, herhangi bir sayının yalnızca
+          bir ve sıfırlarla veya açık veya kapalı tellerin bir demetiyle temsil edilebilmesidir.
+          Ne kadar çok tel kullanırsanız, saklayabileceğiniz sayı da o kadar artar.
+          8 tel ile, 0 ile 255 arasında sayıları saklayabilirsiniz. Bu 8 olanıdır.
+          Sadece 32 tel ile, 0'dan 4 milyondan fazla depolayabilirsiniz. İkili sayı
+          sistemini kullanarak, istediğiniz herhangi bir sayıyı temsil edebilirsiniz."
+      9:
+        image: notes/csd_concept_binary_data_9.png
+        text: Peki ya diğer bilgi türleri? Metin, görüntü, ses gibi? Tüm bu şeylerin
+          rakamlar ile temsil edilebileceği ortaya çıkar. Alfabedeki tüm harfleri
+          düşünün. Her harfe bir rakam atayabilirsiniz. A 1, B 2, vb. olabilir. Sonrasında,
+          herhangi bir kelimeyi bir sıra rakam olarak gösterebilirsiniz. Ve gördüğümüz
+          gibi, bu rakamlar elektrik sinyalleri açık ya da kapalı olarak depolanabilir.
+          Her web sayfasında ya da telefonunuzda gördüğünüz her kelime bu şekilde
+          bir sistem kullanılarak gösterilir.
+      10:
+        image: notes/csd_concept_binary_data_10.png
+        text: "Şimdi, fotoğraflar, videolar ve bir ekranda gördüğünüz tüm grafikleri
+          düşünelim."
+      11:
+        image: notes/csd_concept_binary_data_11.png
+        text: Tüm bu görüntüler piksel adı verilen küçük noktalardan oluşur ve her
+          pikselde bir renk vardır. Her renk numaralar ile temsil edilebilir. Tipik
+          bir görüntüyü düşündüğünüzde içinde milyonlarca pixel barındırır, ve tipik
+          bir video saniyede 30 resim gösterir burada çok fazla veriden söz ediyoruz.
+      12:
+        image: notes/csd_concept_binary_data_12.png
+        text: Her sese temelde havadaki bir dizi titreşimdir. Titreşimler grafik olarak
+          bir dalga formu olarak gösterilebilir. Bu dalga formundaki herhangi bir
+          nokta bir sayı ile gösterilebilir. Ve bu şekilde, herhangi bir ses bir dizi
+          sayıya bölünebilir. Daha kaliteli bir ses istiyor iseniz, 32-bit ses ya
+          da 8-bit ses seçersiniz. Daha çok bit, daha yüksek aralıkta sayı anlamına
+          gelir.
+      13:
+        image: notes/csd_concept_binary_data_13.png
+        text: Kod yazmak ya da kendi uygulamanızı yapmak için bir bilgisayar kullandığınız
+          zaman, doğrudan bunlarla ve sıfırlarla uğraşmazsınız. Fakat resim, ses veya
+          video ile uğraşacaksınız. Bundan dolayı, bilgisayarların içte nasıl işlediğini
+          anlamak isterseniz, hepsi bu basit olanlardan, sıfırlardan ve arkasındaki
+          devrelerdeki elektrik sinyallerinden oluşur.
+    csd_concept_circuits_logic:
+      1:
+        image: notes/csd_concept_circuits_logic_1.png
+        text: Devreler hakkında keşfettiğim en havalı şeylerden biri de, devrim, yaratıcı
+          bir fikrim varsa devreyi kullanarak bu yaratıcı fikri elde edebileceğim
+          gibi bir sanat formu olabilir. Yani fikir sahibiyseniz, bu fikirleri hayata
+          geçirmek amacıyla teknoloji kullanabilirsiniz.
+      2:
+        image: notes/csd_concept_circuits_logic_2.png
+        text: Bir bilgisayarın her girişi veya çıkışı etkili bir şekilde elektrik
+          sinyalleri veya birler veya sıfırlar ile gösterilebilen bir bilgi türüdür.
+      3:
+        image: notes/csd_concept_circuits_logic_3.png
+        text: Giriş olarak gelen bilgileri işlemek ve bilgiyi çıktı yapmak için bir
+          bilgisayarın giriş sinyallerini değiştirmesi ve birleştirmesi gerekir. Bunu
+          yapmak için, bir bilgisayar, bir araya gelerek devreyi oluşturan milyonlarca
+          ufacık elektronik bileşeni kullanır.
+      4:
+        image: notes/csd_concept_circuits_logic_4.png
+        text: Devrelerin, bir ve sıfırlar ile temsil edilen bilgileri nasıl değiştirebileceğini
+          ve işleyeceğini daha yakından inceleyelim. Bu inanılmaz basit bir devredir.
+          Bir elektrik sinyali alıyor ya da kapanıyor ve sinyali çeviriyor. Bundan
+          dolayı, verdiğiniz sinyal 1, devre size 0, veriyorsa ve 0'a bir devre verirseniz
+          size 1 veriyor. Giden sinyaller çıkan sinyal ile aynı değildir ve bu yüzden
+          bu devre DEĞİL diyoruz.
+      5:
+        image: notes/csd_concept_circuits_logic_5.png
+        text: Daha karmaşık devreler birden fazla sinyali alıp birleştirebilir, ve
+          size farklı bir sonuç verebilir. Bu örnekte bir devre iki elektrik sinyali
+          alacaktır, her biri bir 1 yada bir 0 olabilir. Gelen sinyallerden herhangi
+          biri 0 ise sonuçta 0 olur. AND dediğimiz bu devre, size ancak ilk ve ikinci
+          sinyalin her ikiside 1 olduğu zaman 1 sonucu verebilir.
+      6:
+        image: notes/csd_concept_circuits_logic_6.png
+        text: Bu gibi basit mantıksal hesaplamalar yapan birçok küçük devre vardır.
+          Bu devreleri bir araya getirerek, daha karmaşık hesaplamalar yapan daha
+          karmaşık devreler oluşturabiliriz.
+      7:
+        image: notes/csd_concept_circuits_logic_7.png
+        text: "Örneğin, toplayıcı adı verilen 2 bit’i bir araya toplayan bir devre
+          yapabilirsiniz. Bu devre, her biri 1 veya 0 olan 2 ayrı bit alır, ve toplamı
+          hesaplamak için onları bir araya toplar. Toplam 0 artı 0 eşittir 0, 0 artı
+          1 eşittir 1 veya 1 artı 1 eşittir 2 olabilir. Çıkan iki kabloya da ihtiyacınız
+          var, çünkü toplamı temsil etmek için ikili basamak alabilir. İki bit bilgi
+          eklemek için tek bir toplayıcıya sahip olduğunuzda, daha büyük sayıları
+          bir araya getirmek için bu toplama devrelerinin katlarını yan yana koyabilirsiniz."
+      8:
+        image: notes/csd_concept_circuits_logic_8.png
+        text: "Örneğin, 8-bitlik bir toplayıcının 25 ve 50 sayılarını nasıl eklediği
+          işte burada. Her numara 8'lik bitler kullanılarak temsil edilmiş ve devreye
+          giren 16 farklı elektrik sinyali elde edilmiş. 8-bit ekleyici için olan
+          devrenin içinde bir çok küçük toplayıcı bulunur, bunların hepsi ile toplam
+          hesaplanır."
+      9:
+        image: notes/csd_concept_circuits_logic_9.png
+        text: Farklı elektrik devreleri, çıkarma veya çarpma gibi diğer basit hesaplamaları
+          gerçekleştirebilir. Aslında, bilgisayarınızın yaptığı tüm bilgi işlemleri
+          sadece birsürü küçük operasyonun bir araya gelmesidir. Bir bilgisayar tarafından
+          yapılan her bir işlem o kadar basittir ki bir insan tarafından yapılabilir,
+          ama bilgisayarın içindeki bu devreler çok çok daha hızlıdır.
+      10:
+        image: notes/csd_concept_circuits_logic_10.png
+        text: Eskiden, bu devreler ağır ve kullanışsızdı. 8 -bit toplayıcı bir buzdolabı
+          kadar büyük olabiliyor ve basit bir hesaplama yapmaları dakikalar alabiliyordu.
+          Günümüzde, bilgisayar devreleri mikroskobik boyutta ve daha hızlı işliyor.
+          Daha küçük bilgisayarlar neden daha hızlıdır? Peki, devre daha küçük olduğu
+          için elektrik sinyalinin gitmesi gereken mesafe de daha az olur. Elektrik,
+          yaklaşık olarak ışık hızında hareket eder, modern devrelerin saniyede milyarlarca
+          hesap yapabilmesinin nedeni de budur.
+      11:
+        image: notes/csd_concept_circuits_logic_11.png
+        text: Oyun oynamak, video kaydetmek ya da evrenin keşfedilmesine bakmaksızın,
+          teknolojiyle yapabileceğiniz her şey çok miktarda bilginin son derece hızlı
+          bir biçimde işlenmesini gerektirir. Bütün bu karmaşıklığın altında ikili
+          sistem sinyallerine, web sitelerine, videolara, müziğe ve oyunlara dönüşen
+          küçük devreler var. Bu devreler, hastalık teşhis ve tedavi için DNA'nın
+          şifresini çözmede bile yardımcı olabilir. Bütün bu devreler ile ne yapmak
+          istersin?
+    csd_concept_memory_cpu_input_output:
+      1:
+        image: notes/csd_concept_memory_cpu_input_output_1.png
+        text: Merhaba, benim adım Madison Maxey. Loomia adında bir şirketim var ve
+          biz akıllı kıyafetler ve akıllı yumuşak ürünler için akıllı kumaşlar üretmeye
+          odaklanıyoruz. Tekstil söz konusu olduğunda gökyüzü limittir.
+      2:
+        image: notes/csd_concept_memory_cpu_input_output_2.png
+        text: Benim adım Danielle Applestone, ve ben Othermachine Company'nin CEO'suyum.
+          Biz bir masaüstü freze makinesi inşa ediyoruz. Bir freze makinesi, dönen
+          bir kesici aleti alır ve bir 3B nesne oluşturmak için malzeme boyunca hareket
+          ettirir.
+      3:
+        image: notes/csd_concept_memory_cpu_input_output_3.png
+        text: Kapağının altında tüm bilgisayarlar aynı dört temel şeyi yapar. Bilgi
+          girer, saklar ve işlerler ve sonrasında bilgileri çıktı alırlar. Bunların
+          her biri bilgisayarın farklı bir bölümü tarafından yapılır.
+      4:
+        image: notes/csd_concept_memory_cpu_input_output_4.png
+        text: Dış dünyadan girdiyi alıp ikili bilgiye dönüştüren giriş aygıtları var.
+          Bu bilgiyi depolamak için bir bellek var. Tüm hesaplamaların yapıldığı bir
+          merkezi işlem birimi veya CPU var. Ve son olarak, bilgiyi alıp onu fiziksel
+          çıktıya dönüştüren çıktı aygıtları var.
+      5:
+        image: notes/csd_concept_memory_cpu_input_output_5.png
+        text: "İlk olarak girdiden bahsedelim. Bilgisayarlar, bir bilgisayar klavyesi,
+          bir telefonun dokunmatik yüzeyi, kamera, mikrofon veya GPS gibi bir çok
+          farklı girdi türünü alabilir. Fakat bir arabadaki, termostattaki veya dronedaki
+          sensörler bile farklı girdi cihazlarıdır."
+      6:
+        image: notes/csd_concept_memory_cpu_input_output_6.png
+        text: Şimdi, girişin bir bilgisayarda nasıl bir yol izlediği ve çıktı haline
+          geldiğine ilişkin basit bir örneği inceleyelim. Klavyenizdeki bir tuşa bastığınızda
+          - hadi "B" harfi diyelim. Klavye harfi bir sayıya çevirir. Bu sayı bir ve
+          sıfırlar halinde ikili olarak bilgisayara gönderilir.
+      7:
+        image: notes/csd_concept_memory_cpu_input_output_7.png
+        text: Bu sayıdan başlayarak CPU, "B" harfini piksel piksel olarak nasıl göstereceğini
+          hesaplar. CPU, "B" harfini çizmeyi anlatan adım-adım talimatları bellekten
+          ister. CPU bu talimatları çalıştırır ve sonuçları piksel olarak hafızaya
+          alır.
+      8:
+        image: notes/csd_concept_memory_cpu_input_output_8.png
+        text: Son olarak, bu piksel bilgisi ekranda ikili olarak gönderilir. Ekran,
+          ikili sinyalleri, gördüklerini oluşturan küçük ışıklara ve renklere dönüştüren
+          bir çıkış aygıtıdır.
+      9:
+        image: notes/csd_concept_memory_cpu_input_output_9.png
+        text: Bu o kadar hızlı gerçekleşir ki anlıkmış gibi hissedilir, ancak parmağınız
+          anahtar noktaya bastığı andan itibaren bilgisayar her harfi görüntülemek
+          için binlerce talimat çalıştırır.
+      10:
+        image: notes/csd_concept_memory_cpu_input_output_10.png
+        text: Bu örnekte çıkış aygıtı ekran idi, ancak, bilgisayardan ikili sinyal
+          alan ve fiziksel dünyada bir şeyler yapan birçok farklı çıktı türü vardır.
+          Örneğin, bir hoparlör ses çıkaracaktır ve bir 3B yazıcı bir nesne basacaktır.
+          Çıkış cihazları, bir robot kolu, bir otomobilin motoru yada şirketimin yaptığı
+          freze makinesinin kesme aleti gibi cihazların fiziksel hareketini de kontrol
+          edebilir. Yeni girdi ve çıktı türleri, bilgisayarların dünyayla tamamen
+          yeni yollarla etkileşime girmesini sağladı. Bunlar, hafıza biriminin ve
+          CPU'nun hız ve boyutundaki iyileştirmeler sayesinde oldu.
+      11:
+        image: notes/csd_concept_memory_cpu_input_output_11.png
+        text: Bir görev ne kadar karmaşıksa ve girdi veya çıktı olarak o kadar çok
+          bilgi vardır, bilgisayar daha fazla işlem gücü ve belleğine ihtiyaç duyar.
+          Ekranda harf yazdırmak kolay olabilir ama, karmaşık 3d grafikler yapmak
+          ya da yüksek çözünürlüklü bir film kaydetmek için, modern bilgisayarlar
+          tüm bu bilgileri işleyen çoğu zaman birden çok CPU'ya ve bunları depolayan
+          birçok gigabaytlık hafızaya sahiptirler.
+      12:
+        image: notes/csd_concept_memory_cpu_input_output_12.png
+        text: 'Bilgisayarla yapmak istediğiniz ne olursa olsun, her bir eylem şu şekildedir:
+          fiziksel dünyadan bilgi girmek, bu bilgiyi depolamak ve işlemek, ve bazı
+          çıktıları fiziksel dünyaya geri getirmek.'
+    csd_concept_hardware_software:
+      1:
+        image: notes/csd_concept_hardware_software_1.png
+        text: Merhaba, adım Erica Gomez ve Amazon.com'da mühendislik müdürüyüm. Teknolojide
+          ve özellikle Amazon'da çalışmakla ilgili en iyi şeylerden biri köpeğimi
+          her gün çalışmak için yanıma almamdır. Benim işim yazılımın kapıyı açtığından
+          emin olmaktır ve onun işi ise masamın altında uyumak ve çok yüksek sesle
+          horlamaktır.
+      2:
+        image: notes/csd_concept_hardware_software_2.png
+        text: 'Benim adım Jerome Holman ve Team Xbox''ta Program Yöneticisiyim ve
+          çok eğlenceli bir işim var: Xbox''ınızdaki sevdiğiniz tüm oyunları size
+          getirebilmek için basitçe donanımı ve yazılımı bir araya getiriyorum.'
+      3:
+        image: notes/csd_concept_hardware_software_3.png
+        text: Bir bilgi işlem cihazına baktığınızda, devreler, çipler, kablolar, hoparlörler,
+          fişler ve diğer her türlü şeyi görürsünüz. Bu donanımdır.
+      4:
+        image: notes/csd_concept_hardware_software_4.png
+        text: Ama görmediğiniz şey yazılımdır. Yazılım, bu makinede çalışan tüm bilgisayar
+          programları veya kodlarıdır. Yazılım, uygulamalar ve oyunlardan web sayfalarına,
+          ve ekibimin ve benim müşterilerin nasıl davrandığını anlamak için Amazon'da
+          kullandığımız veri bilim yazılımına kadar her şey olabilir.
+      5:
+        image: notes/csd_concept_hardware_software_5.png
+        text: Peki, donanım ve yazılım birbirleriyle nasıl etkileşim kurar? Bir bilgisayarın
+          merkezi işlem birimine yani CPU'ya bir göz atalım.
+      6:
+        image: notes/csd_concept_hardware_software_6.png
+        text: "CPU, bilgisayarın diğer tüm bölümlerini kontrol eden ana yongadır.
+          \nBir CPU'nun farklı şeyler yapması gerekir, bu nedenle içinde özel görevleri
+          yerine getiren daha küçük, daha basit parçalar bulunur. Basit matematik
+          ve mantık işlemleri yapan devrelere sahiptir. Bilgisayarın farklı bölümlerine
+          bilgi göndermek ve almak için başka devreleri de vardır."
+      7:
+        image: notes/csd_concept_hardware_software_7.png
+        text: İşlemcinin gerçek büyüsü, hangi devrelerin kullanılacağını ve ne zaman
+          kullanılacağını nasıl bildiğidir. CPU belirli bir işi yapmak için hangi
+          devrenin kullanılacağını söyleyen basit bir komut alır. Örneğin, bir "add"
+          komutu, CPU'ya yeni bir sayı hesaplamak için dış devresini kullanmasını
+          söyler. Ve "store" komutu, CPU'ya bu sonucu bellekte kaydetmek için farklı
+          bir devre kullanmasını söyler.
+      8:
+        image: notes/csd_concept_hardware_software_8.png
+        text: Tıpkı rakamlar gibi, bu basit komutların tümü ikili olarak, bir ve sıfırlarla
+          yada açık ve kapalı elektrik sinyalleri ile temsil edilebilir. İkili komutlar
+          belleğe kaydedilir ve CPU bunları sırayla birbiri ardına getirir ve çalıştırır.
+          Aslına bakarsak bu komut dizisi çok basit bir bilgisayar programıdır.
+      9:
+        image: notes/csd_concept_hardware_software_9.png
+        text: "İkili kodu, yazılımın en temel formu ve bir bilgisayarın tüm donanımını
+          kontrol eder. Şu günlerde kimse ikili olarak yazılım yazmıyor. Bu daima
+          sürer!"
+      10:
+        image: notes/csd_concept_hardware_software_10.png
+        text: Bugün yazdığımız yazılımlar bu (Python) gibi görünüyor, yada bu (Ruby),
+          hatta bu (Blockly). Bunun gibi programlama dilleri, İngilizce'ye çok benzeyen
+          bir şekilde komutlar yazmanızı sağlar.
+      11:
+        image: notes/csd_concept_hardware_software_11.png
+        text: Ekranda dikdörtgen çizmek için tek bir komuta ihtiyacınız vardır. Bu
+          üst düzey komut, CPU'nun anladığı yüzlerce ya da binlerce basit ikili sistem
+          komutuna dönüştürülür. Yazılım, CPU'ya ne yapacağını söyler; fakat müzik
+          dinlerken, web'de gezinirken ve bir arkadaşınızla sohbet ederken bilgisayarınız
+          birden fazla yazılım çalıştırır.
+      12:
+        image: notes/csd_concept_hardware_software_12.png
+        text: Peki, her şeyden önce bu programların tümü bilgisayarda nasıl olur ve
+          CPU bunları bir defada nasıl çalıştırabilir? Öğrenmek için işletim sistemine
+          bir göz atacağız.
+      13:
+        image: notes/csd_concept_hardware_software_13.png
+        text: Bilgisayarın işletim sistemi, yazılımın bilgisayarın donanımını nasıl
+          kullanacağını yöneten temelprogramdır. Örneğin, çoğu kişisel bilgisayarda
+          çalışan Windows işletim sisteminin yaratılmasına yardım ettim.
+      14:
+        image: notes/csd_concept_hardware_software_14.png
+        text: "İşletim sistemi, bilgisayardaki diğer yazılımların kontrol edilmesine
+          izin veren özel becerilere sahip bir programdır. Bilgisayar programınızın
+          hafızasına yükleyerek yeni programlar yüklemenizi sağlar. Bir programın
+          merkezi işlem birimi tarafından ne zaman çalıştırıldığına ve o programın
+          bilgisayarın giriş ve çıkış aygıtlarına erişip erişemeyeceğine karar verir.
+          Ve bilgisayarınızın bir anda birden çok programı çalıştırdığını düşündüğünüzde,
+          gerçekte, bu CPU'yu saniyenin kesirleri için paylaşan programlar arasında
+          hızla geçiş yapan bir işletim sistemidir."
+      15:
+        image: notes/csd_concept_hardware_software_15.png
+        text: Her bilgisayarın içinde, bilgisayarın donanımını kontrol eden bir işletim
+          sistemi yönetim yazılımı vardır.
+      16:
+        image: notes/csd_concept_hardware_software_16.png
+        text: Yazılım, basit ikili koddan yapılmış bir dizi komuttur ve bu ikili kod
+          sadece milyarlarca minik devrenin üzerinden akan elektrik sinyalleridir.
+      17:
+        image: notes/csd_concept_hardware_software_17.png
+        text: Bilgisayarlar, her türlü şaşırtıcı şeyi yapma potansiyeline sahiptir.
+          Ancak bilgisayarın akıllı ya da faydalı olmasını sağlayan tek şey sizsiniz.
+          Kodlama öğrendiğinizde çözmek istediğiniz sorunu tanımlar ve bu fikirleri
+          gerçeğe dönüştüren yazılımı yazarsınız.

@@ -1,13 +1,11 @@
-* * *
-
-title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_resources) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
-<link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
-</link>
+<link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Khuthaza iHora loKufingqwa
 
@@ -37,15 +35,15 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 [Thwebula ukuhumushelwa kwehi-res](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"iHora loKufingqwa" limakelwe uhwebo. Asifuni ukuvimba ukusetshenziswa, kodwa sifuna ukwenza isiqiniseko sokuba kufanelana ngaphakathi kwemigcele embalwa:**
+**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-  1. Nayiphi na inkomba ku "Hora loKufingqwa" kufanele isetshenziswe ngomkhuba ongakhombi ukuba umkhiqizo wakho, kodwa ekhombisa iHora loKufingqwa njengesisekelo somnyakazo. Isibonelo esihle: "Hlanganyela kuHora loKufingqwa ku ACMECorp.com". Isibonakaliso esibi: "Zama iHora loKufingqwa ngenkampani yeACME".
-  2. Sebenzisa umbhalo ongezansi we"TM" kuzindawo eziqavileyo lapho ukhuluma ngeHora loKufingqwa, kuwebhisayithi yakho kanye nakuncazelo yehlelo lakho.
-  3. Hlanganisa ulwimi kukhasi (noma kunyaweni wekhasi), okubala izixhumaniso kumawebhusayithi eCSEdWeek kanye neCode.org, akhuluma lokhu okulandelayo:
+1. Nayiphi na inkomba ku "Hora loKufingqwa" kufanele isetshenziswe ngomkhuba ongakhombi ukuba umkhiqizo wakho, kodwa ekhombisa iHora loKufingqwa njengesisekelo somnyakazo. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
+2. Sebenzisa umbhalo ongezansi we"TM" kuzindawo eziqavileyo lapho ukhuluma ngeHora loKufingqwa, kuwebhisayithi yakho kanye nakuncazelo yehlelo lakho.
+3. Hlanganisa ulwimi kukhasi (noma kunyaweni wekhasi), okubala izixhumaniso kumawebhusayithi eCSEdWeek kanye neCode.org, akhuluma lokhu okulandelayo:
     
     *"IHora loKufingqwa ngelokuhweba liyisinyathelo somhlaba wonke evela kuMfundiso yeViki ngeKhompyutha Sayensi [csedweek.org] kanye neCode.org[code.org] ukwazisa izinkulungwane nezinkulungwane zabafundi kuhora elilodwa lekhompyutha sayensi kanye nakuzinhlelo zekhompyutha."*
 
-  4. Akusetshenziswa "iHora loKufingqwa" emagameni amahlelo okwenza.
+4. Akusetshenziswa "iHora loKufingqwa" emagameni amahlelo okwenza.
 
 <a id="stickers"></a>
 
@@ -60,80 +58,108 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="email"></a>
 
-## Cela isikole sakho, umcashi okanye izihlobo ukuba zibhalise:
+### Ask your school, employer, or friends to sign up:
 
-Amakhompyutha atholakala kuyo yonke indawo, ekushintsheni imboni zonke mhlaba wonke jikelele. Kodwa zingaphansi kwengxenye izikole ezifundisa ikhompyutha sayensi. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu. Uma uzwile ngeHora loKufingqwa ngaphambilini, kungenzeka uyazi ukuthi yenza umlando. Badlulele kukhulu lezigidi abafundi abasebezame iHora loKufingqwa.
+**Subject line:** Join me and over 100 million students for an Hour of Code
 
-NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-Kulonyaka, asiyenzeni ibenkudlwana. Nginicela ukuba nizibandakanye neHora loKufingqwa 2016. Nginicela ukuba nibambe ichaza kumcimbi weHora loKufingqwa ngeViki leMfundiso yeKhompyutha Sayensi, <%= campaign_date('full') %>.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Yazisa abantu. Hlela umcimbi. Cela isikole esigodini ukuba sibhalise. Okanye zama iHora loKufingqwa ngokwakho-wonke umuntu angazuza ngokufunda izisekelo.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
-Qalisa ku http://hourofcode.com/<%= @country %>
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+
+Get started at http://hourofcode.com/<%= @country %>
+
+<a id="help-schools"></a>
+
+### Volunteer at a school:
+
+**Subject line:** Can we help you host and Hour of Code?
+
+Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code.
+
+Thanks to the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+You can read more about the event at http://hourofcode.com/. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate.
+
+Thanks!
+
+[Your name], [Your organization]
 
 <a id="media-pitch"></a>
 
-## Mema abezindaba/abokusasaza ukuba babekhona kumcimbi wakho:
+### Invite media to attend your event:
 
-**Umugqa kuncike:** Isokole sendawo sizibandakanya kumsebenzi wokwenziwa ukwazisa abafundi kukhompyutha sayensi
+**Subject line:** Local school joins mission to introduce students to computer science
 
-Amakhompyutha akhona kuyonke indawo, ashinstha kumabhizinisi umhlaba wonke, kodwa ayicosana kusigamu sezikole ezifundisa ikhompwutha sayensi. Amantombazane kanye nabangamelwanga abamelwanga kumakilasi ekhompyutha sayensi ngendlela efanele, kanye nakumbhoni yethekhi. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu.
 
-NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-Yingakho wonke omunye we [X inombolo] abafundi base [IGAMA LESIKOLE] bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (<%= campaign_date('full') %>).
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-Ngibhalela ukukumema ukuba ubekhona kumhlangano wethu wokuqala, ubese ubona izingane ziqala umsebenzi ngo [USUKU].
+I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-IHora loKufingqwa, elihlelwe nguCode.org ongananzuzo kanye nabanye abadlulela ngale kukhulu, ingumnyakazo oyimbulunga okholwa ukuba abafundi banamhlanje bakulungele ukufunda amakhono abucayi ukuze baphumelele esikhathini samanje. Sicela uhlanganyele nathi.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
 
-**Xhumana:** [IGAMA LAKHO], [ISIHLOKO], umakhalekhukhwini: (212) 555-5555
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555 **When:** [DATE and TIME of your event] **Where:** [ADDRESS and DIRECTIONS]
 
-**Nini:** [USUKU kanye NESIKHATHI somcimbi wakho]
+I look forward to being in touch.
 
-**Kuphi:** [IKHELI kanye INDLELA]
-
-Ngithokozela ukuxhumana njalo.
+[Your Name]
 
 <a id="parents"></a>
 
-## Xoxela abazali ngomcimbi wesikole sakho:
+### Tell parents about your school's event:
 
-Bazali abathandekayo,
+**Subject line:** Our students are changing the future with an Hour of Code
 
-Sihlala kumhlaba ozungezwe yithekhinoloji. Kanti siyazi ukuba noma kuyiphi inkambu abafundi bethu abazokhetha ukuya kuyo ebudaleni babo, ikhono lwabo lokuphumelela lizonqika kakhulu ekuqondeni kwabo ukuba ithekhinoloji isebenza kanjani.
+Dear Parents,
 
-Kodwa kungabambalwa kithi abafundayo **indlela** ithekhinoloji iyasebenza. Kungesodwa isikole kwezine esifundisa ikhompyutha thekhinoloji. Zingaphansi kwengxenye izikole ezifundisa ikhompyutha sayensi.
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-Yingakho isikole sethu sonke bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (%=usuku_umkhankaso('olugcwele') %>). Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa.
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
-IHora loKufingqwa lwethu lwenza isitatimende ukuba [IGAMA LESIKOLE] sikulungele ukufundisa lamakhona ayisisekelo esikhathini samanje. Ukuqhubeka ukuletha imisebenzi yokuphrogrema kubafundi bakho, sifuna ukwenza umcimbi wethu weHora loKufingqwa ubemkhulu. Ngiyakukhuthaza ukuba uvolontiye, finyelela kwezokusasa zendawo, yabelana lezindaba kwezokusasaza zokuxhumana uphinde ucabangisise ukuhlela eminye imicimbi yeHora loKufingqwa kumpthakathi.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Leli ithuba lokushintsha ikusasa lemfundo ku [IGAMA LEDOLOBHA].
+Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
-Bona http://hourofcode.com/<%= @ilizwe %> ukuze uthole imininingwane, nokusiza ukuthuthukisa izwi.
+This is a chance to change the future of education in [TOWN/CITY NAME].
 
-Ngokuzithoba,
+See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Ithisha Nhloko Wakho
+Sincerely,
+
+Your principal
 
 <a id="politicians"></a>
 
-## Mema owezepolotiki wendawo kumcimbi wesikole sakho:
+### Invite a local politician to your school's event:
 
-Othandekayo [Mphathi Dolobha/Umkhulumeli/Umbusi ISIBONGO]:
+**Subject line:** Join our school as we change the future with an Hour of Code
 
-Uthi bewazi ukuba ezekhompyutha #1 umthombo wezenkokhelo eU.S.? Idlulele ku 500,000 imisebenzi yezekhompyutha evulekile izwe lonke, kodwa unyaka odlule abafundi abatheswe iziqu zokuba basebenze bangu 42,969 kuphela.
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Ikhompyutha sayensi iyisisekelo yawo *wonke* umkhakha namhlanje. Kodwa 75% yezikole ziyayifundisa. Ku [IGAMA LESIKOLE], sizama ukushintsha lokho.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Yingakho isikole sethu sonke bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (%=usuku_umkhankaso('olugcwele') %>). Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa.
+Computer science is foundational for *every* industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Ngibhalela ukukumema ukuba ubambe ichaza kumcimbi wethu weHora loKufingqwa nokuba ukhulume kumhlangano wethu wokuqala. Uzothatha indawo ngo [USUKU, ISIKHATHI, INDAWO], sizophinda senze isitatimende esiqinile ukuthi [igama leNdawo, Dolobha] ikulungele ukufundisa abafundi bethu amakhono abucayi esikhathini samanje. Sifuna ukuqinisekisa ukuba abafundi bethu baphambili ekudaleni ithekhinoloji yakusasa-hhayi ukuyithenga.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Ngicela uxhumane nami ku [INOMBOLO ZOCINGO OKAYE IKHELI LE IMEYILI]. Ngiyothokozela ukuzwa impendulo yakho.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
-Ngokuzithoba, [IGAMA], [ISIHLOKO]
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+
+Sincerely,
+
+[Your Name], [Title]
 
 <%= view :signup_button %>

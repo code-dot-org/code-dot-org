@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { assert } from '../../../util/configuredChai';
 import ScriptAnnouncementsEditor from '@cdo/apps/lib/script-editor/ScriptAnnouncementsEditor';
 
@@ -59,7 +59,7 @@ describe('ScriptAnnouncementsEditor', () => {
   });
 
   it('removes announcements when we click remove', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
       />
@@ -69,57 +69,60 @@ describe('ScriptAnnouncementsEditor', () => {
     // had trouble getting two state updates working, so instead just call .add
     // instead of a second click
     wrapper.instance().add();
-    assert.equal(wrapper.find('Announce').length, 2);
-    assert.equal(wrapper.find('Announce button').length, 2);
-    wrapper.find('Announce button').first().simulate('click');
+    const announce = wrapper.find('Announce');
+    assert.equal(announce.length, 2);
+    assert.equal(announce.first().dive().find('button').length, 1);
+    assert.equal(announce.last().dive().find('button').length, 1);
+
+    announce.first().dive().find('button').simulate('click');
     assert.equal(wrapper.find('Announce').length, 1);
   });
 
   it('updates notice', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
       />
     );
 
     wrapper.find('button').simulate('click');
-    wrapper.find('Announce input').at(0).simulate('change', { target: { value: 'notice' }});
+    wrapper.find('Announce').dive().find('input').at(0).simulate('change', { target: { value: 'notice' }});
     assert.equal(wrapper.state('announcements')[0].notice, 'notice');
   });
 
   it('updates details', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
       />
     );
 
     wrapper.find('button').simulate('click');
-    wrapper.find('Announce input').at(1).simulate('change', { target: { value: 'details' }});
+    wrapper.find('Announce').dive().find('input').at(1).simulate('change', { target: { value: 'details' }});
     assert.equal(wrapper.state('announcements')[0].details, 'details');
   });
 
   it('updates link', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
       />
     );
 
     wrapper.find('button').simulate('click');
-    wrapper.find('Announce input').at(2).simulate('change', { target: { value: 'link' }});
+    wrapper.find('Announce').dive().find('input').at(2).simulate('change', { target: { value: 'link' }});
     assert.equal(wrapper.state('announcements')[0].link, 'link');
   });
 
   it('updates type', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <ScriptAnnouncementsEditor
         {...defaultProps}
       />
     );
 
     wrapper.find('button').simulate('click');
-    wrapper.find('Announce select').simulate('change', { target: { value: 'bullhorn' }});
+    wrapper.find('Announce').dive().find('select').simulate('change', { target: { value: 'bullhorn' }});
     assert.equal(wrapper.state('announcements')[0].type, 'bullhorn');
   });
 

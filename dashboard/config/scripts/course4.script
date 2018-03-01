@@ -1,4 +1,6 @@
 hidden false
+hideable_stages true
+has_lesson_plan true
 
 stage 'Unplugged: Tangrams'
 level 'TangramAlgorithms'

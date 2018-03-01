@@ -5,6 +5,8 @@
 
 require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
+UNCACHED_HOC_SCRIPTS = %w(playlab artist infinity iceage).freeze
+
 class ScriptConfig
   # Returns true if the script levels for `script_name` can be publicly cached
   # by proxies.
@@ -12,14 +14,12 @@ class ScriptConfig
     HttpCache.allows_public_caching_for_script(script_name)
   end
 
-  # Returns the names of the scripts whose levels can be publicly cached.
-  def self.cached_scripts
-    HttpCache.cached_scripts
+  def self.hoc_scripts
+    HttpCache.cached_scripts + UNCACHED_HOC_SCRIPTS
   end
 
-  # Returns the names of the scripts affected by the 'Scale Mode' feature setting.
-  def self.scale_mode_scripts
-    cached_scripts + %w(
+  def self.csf_scripts
+    %w(
       20-hour
       course1
       course2
@@ -33,10 +33,6 @@ class ScriptConfig
       coursef
       express
       pre-express
-      playlab
-      artist
-      infinity
-      iceage
     )
   end
 end

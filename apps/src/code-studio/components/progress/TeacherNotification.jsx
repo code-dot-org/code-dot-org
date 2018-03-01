@@ -16,7 +16,6 @@ function TeacherNotification({viewAs}) {
       buttonText={i18n.learnMore()}
       buttonLink="https://support.code.org/hc/en-us/articles/115001931251"
       dismissible={true}
-      isRtl={false}
       width={1100}
     />
   );

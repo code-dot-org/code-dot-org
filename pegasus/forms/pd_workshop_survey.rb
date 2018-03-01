@@ -134,14 +134,14 @@ class PdWorkshopSurvey < Form
     OPTIONS[symbolized_field_name]
   end
 
-  OTHER = 'Other'
+  OTHER = 'Other'.freeze
 
   GRADE_OPTIONS = [
     'pre-K',
     'Elementary',
     'Middle School/Junior High',
     'High School'
-  ]
+  ].freeze
 
   AGREE_SCALE_OPTIONS = [
     'Strongly Disagree',
@@ -150,7 +150,7 @@ class PdWorkshopSurvey < Form
     'Slightly Agree',
     'Agree',
     'Strongly Agree'
-  ]
+  ].freeze
 
   def self.agree_scale_options
     AGREE_SCALE_OPTIONS
@@ -326,5 +326,5 @@ class PdWorkshopSurvey < Form
       'Library or Technology Education',
       'Other'
     ]
-  }
+  }.freeze
 end

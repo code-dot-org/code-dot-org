@@ -7,6 +7,7 @@ require 'cdo/shared_constants'
 
 class ChannelsApi < Sinatra::Base
   include SharedConstants
+  set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
   helpers do
     %w(
@@ -56,47 +57,49 @@ class ChannelsApi < Sinatra::Base
   #
   # Create a channel.
   #
-  # Optional query string param: ?src=<src-channel-id> creates the channel as
-  # a copy of the given src channel.
+  # Optional query string param: ?parent=<remix-parent-channel-id> sets
+  # the remix parent of the newly-created channel.
   #
   post '/v3/channels' do
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    src_channel = request.GET['src']
     storage_app = StorageApps.new(storage_id('user'))
 
-    if src_channel
-      begin
-        data = storage_app.get(src_channel)
-      rescue ArgumentError, OpenSSL::Cipher::CipherError
-        bad_request
-      end
-      data['name'] = "Remix: #{data['name']}"
-      data['hidden'] = false
-      data['frozen'] = false
-    else
-      begin
-        data = JSON.parse(request.body.read)
-      rescue JSON::ParserError
-        bad_request
-      end
-      bad_request unless data.is_a? Hash
+    begin
+      _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
     end
+
+    begin
+      data = JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      bad_request
+    end
+    bad_request unless data.is_a? Hash
 
     timestamp = Time.now
 
-    # The client decides whether to publish the project, but we rely on the
-    # server to generate the timestamp. Remove shouldPublish from the project
-    # data because it doesn't make sense to persist it.
-    published_at = data['shouldPublish'] ? timestamp : nil
-    data.delete('shouldPublish')
+    published_at = nil
+    if data['shouldPublish']
+      project_type = data['projectType']
+      bad_request unless PUBLISHABLE_PROJECT_TYPES_OVER_13.include?(project_type)
+      forbidden if under_13? && !PUBLISHABLE_PROJECT_TYPES_UNDER_13.include?(project_type)
+
+      # The client decides whether to publish the project, but we rely on the
+      # server to generate the timestamp. Remove shouldPublish from the project
+      # data because it doesn't make sense to persist it.
+      published_at = timestamp
+      data.delete('shouldPublish')
+    end
 
     id = storage_app.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
       ip: request.ip,
       type: data['projectType'],
       published_at: published_at,
+      remix_parent_id: remix_parent_id,
     )
 
     redirect "/v3/channels/#{id}", 301
@@ -261,11 +264,11 @@ class ChannelsApi < Sinatra::Base
   #
   # DELETE /v3/channels/<channel-id>/abuse
   #
-  # Clear an abuse score. Requires reset_abuse permission
+  # Clear an abuse score. Requires project_validator permission
   #
   delete %r{/v3/channels/([^/]+)/abuse$} do |id|
-    # UserPermission::RESET_ABUSE
-    not_authorized unless has_permission?('reset_abuse')
+    # UserPermission::PROJECT_VALIDATOR
+    not_authorized unless has_permission?('project_validator')
 
     dont_cache
     content_type :json

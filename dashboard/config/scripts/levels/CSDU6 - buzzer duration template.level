@@ -61,10 +61,7 @@
     "expand_debugger": "false",
     "disable_procedure_autopopulate": "false",
     "start_blocks": "//Drag out your buzzer block here",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

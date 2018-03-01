@@ -7,11 +7,6 @@ namespace :build do
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
-      if rack_env?(:staging)
-        ChatClient.log 'Updating <b>apps</b> i18n strings...'
-        RakeUtils.system './sync-apps.sh'
-      end
-
       # Only rebuild if apps contents have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(apps_dir) &&
@@ -24,9 +19,6 @@ namespace :build do
 
       ChatClient.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
-
-      # Workaround for https://github.com/sass/node-sass/issues/1804
-      RakeUtils.npm_rebuild 'node-sass'
 
       # Workaround for https://github.com/karma-runner/karma-phantomjs-launcher/issues/120
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
@@ -89,7 +81,7 @@ namespace :build do
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
           ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
-          RakeUtils.rake 'seed:all'
+          RakeUtils.rake 'seed:all', (rack_env?(:test) ? '--trace' : nil)
         end
 
         # Commit dsls.en.yml changes on staging
@@ -133,7 +125,7 @@ namespace :build do
       if CDO.daemon
         ChatClient.log 'Updating <b>pegasus</b> database...'
         begin
-          RakeUtils.rake 'pegasus:setup_db'
+          RakeUtils.rake 'pegasus:setup_db', (rack_env?(:test) ? '--trace' : nil)
         rescue => e
           ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
           raise e

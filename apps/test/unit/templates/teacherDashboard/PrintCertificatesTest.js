@@ -27,9 +27,9 @@ describe('PrintCertificates', () => {
     assert.equal(wrapper.childAt(0).props().defaultValue, 'playlab');
   });
 
-  it('has a submission button', () => {
-    assert.equal(wrapper.find('Button').length, 1);
-    assert.equal(wrapper.find('Button').props().text, 'Print certificates');
+  it('has trigger to open /certificates', () => {
+    assert.equal(wrapper.find('div').length, 2);
+    assert(wrapper.find('div').last().contains('Print Certificates'));
   });
 
   it('loads student names', finish => {
@@ -51,6 +51,6 @@ describe('PrintCertificates', () => {
     };
 
     assert.deepEqual(wrapper.state('names'), []);
-    wrapper.find('Button').simulate('click');
+    wrapper.find('div').last().simulate('click');
   });
 });

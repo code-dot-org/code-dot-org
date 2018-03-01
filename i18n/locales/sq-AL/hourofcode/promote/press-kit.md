@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_kit) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ## Si të tërheqësh mediat në eventin e Orës së Kodimit
@@ -12,20 +11,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Këshilla të rëndësishme
 
-  * Kontaktoni mediat dy javë para eventit tuaj përmes email-it. Ndiqeni përmes email-it apo telefon-it nëse nuk merrni përgjigje fillestare.
-  * Kërko nga një anëtar i stafit të shkollës apo vullnetar të bëjë foto për t'i postuar online apo për t'ia dërguar shtypit.
-  * Shkruani për Orën e Kodimit në faqen kryesore të internetit që ju keni dhe në gazetën e shkollës tuaj. Postoni detajet e eventit, dhe fotot e aktiviteteve të studentve.
-  * Në Facebook dhe Twitter, postoni lajmet dhe ndryshimet për planet tuaja, ngjarjet tuaja dhe foto gjatë 5-11 Dhjetorit. Përdoreni hashtag-un **#HourOfCode** që Code.org të mund t'i shohë dhe t'i promovojë ngjarjet tuaja.
+- Kontaktoni mediat dy javë para eventit tuaj përmes email-it. Ndiqeni përmes email-it apo telefon-it nëse nuk merrni përgjigje fillestare.
+- Kërko nga një anëtar i stafit të shkollës apo vullnetar të bëjë foto për t'i postuar online apo për t'ia dërguar shtypit.
+- Shkruani për Orën e Kodimit në faqen kryesore të internetit që ju keni dhe në gazetën e shkollës tuaj. Postoni detajet e eventit, dhe fotot e aktiviteteve të studentve.
+- Në Facebook dhe Twitter, postoni lajmet dhe ndryshimet për planet tuaja, ngjarjet tuaja dhe foto gjatë 5-11 Dhjetorit. Përdoreni hashtag-un **#HourOfCode** që Code.org të mund t'i shohë dhe t'i promovojë ngjarjet tuaja.
 
 ### Udhëzues hap-pas-hapi:
 
 **1. Planifiko eventin tënd**
 
-  * Planifiko një takim të përgjithshëm për të nisur Orën e Kodimit.
-  * Dërgo [një letër](%= resolve_url('/promote/resources#sample-emails') %) prindërve. Kërkoni nga ata të shpërndajnë fjalën.
-  * Dërgo [një letër](%= resolve_url('/promote/resources#sample-emails') %) për të ftuar kryetarin e bashkisë, deputetët, guvernatorin, apo një biznesmen me ndikim për të marrë pjesë dhe folur te studentët e tu.
-  * Organizoni aktivitete grupi (siç është prezantimi i ndonjë programimi 'unplugged'), apo aktivitete të nxitura e të drejtuara nga nxënësit/studentët.
-  * Paraqit [Videon Ora e Kodimit](%= resolve_url('/') %) të Code.org apo njërën nga [këto](%= resolve_url('/promote/resources#videos') %) për motivacion.
+- Planifiko një takim të përgjithshëm për të nisur Orën e Kodimit.
+- Dërgo [një letër](%= resolve_url('/promote/resources#sample-emails') %) prindërve. Kërkoni nga ata të shpërndajnë fjalën.
+- Dërgo [një letër](%= resolve_url('/promote/resources#sample-emails') %) për të ftuar kryetarin e bashkisë, deputetët, guvernatorin, apo një biznesmen me ndikim për të marrë pjesë dhe folur te studentët e tu.
+- Organizoni aktivitete grupi (siç është prezantimi i ndonjë programimi 'unplugged'), apo aktivitete të nxitura e të drejtuara nga nxënësit/studentët.
+- Paraqit [Videon Ora e Kodimit](%= resolve_url('/') %) të Code.org apo njërën nga [këto](%= resolve_url('/promote/resources#videos') %) për motivacion.
 
 **2. Identifiko gazetarë specifik lokale që mbulojnë arsimin apo ngjarjet lokale.**
 
@@ -55,9 +54,9 @@ Teknologjia po transformon çdo industri në planet. Në 2015, 7 milion vende pu
 
 **Rreth Code.org**
 
-Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rrisë pjesëmarrjen e femrave dhe nxënësit me ngjyrë më pak të përfaqësuar. Vizioni i saj është që çdo student në çdo shkollë duhet të ketë mundësinë të mësojë programim kompjuterik. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org mbështetet nga donacione bamirësie nga korporatat, fondacionet, dhe individë bujar, përfshi Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network dhe të tjerë. Për më shumë informacion, ju lutem vizitoni: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® është 501c3 organizatë publike jo-fitimprurëse e dedikuar të zgjerojë pjesëmarrjen në shkencat kompjuterike dhe të rrisë pjesëmarrjen e femrave dhe nxënësit me ngjyrë më pak të përfaqësuar. Vizioni i saj është që çdo student në çdo shkollë duhet të ketë mundësinë të mësojë programim kompjuterik. Pas nisjes në 2013, Code.org organizoj fushatën Ora e Kodimit – e cila ka prezantuar më shumë se 100 milion studentë me shkencën kompjuterike – dhe ka partneritet me 70 shkolla publike të ndodhura në të gjithë vendin për të zgjeruar programet e shkencës kompjuterike. Code.org mbështetet nga donacione bamirësie nga korporatat, fondacionet, dhe individë bujar, përfshi Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network dhe të tjerë. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Gjeni më shumë burime dhe shembuj emaili [këtu](%= resolve_url('/promote') %).
+Find more resources and sample emails [here](%= resolve_url('/promote') %).
 
 <%= view :signup_button %>

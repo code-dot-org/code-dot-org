@@ -1,4 +1,5 @@
 {
+  "startButton": "Покрени",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Разреди 2-5",
   "filterGrades68": "Разреди 6-8",
   "filterGrades9": "Разреди 9+",
-  "filterTeacherExperience": "Искуство учитеља",
-  "filterTeacherExperienceBeginner": "Почетник",
-  "filterTeacherExperienceComfortable": "Удобно",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Ученичко искуство",
   "filterStudentExperienceBeginner": "Почетник",
   "filterStudentExperienceComfortable": "Удобно",

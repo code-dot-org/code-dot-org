@@ -1,8 +1,9 @@
-* * *
+---
+title: <%= hoc_s(:title_stats) %>
+layout: wide
+nav: promote_nav
+---
 
-title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
-
-* * *
 
 <a id="blurb"></a>
 
@@ -12,11 +13,11 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 ## Utiliser ce court texte de présentation dans vos newsletters
 
-### Demandez plus d'informatique dans votre école. Commencez avec Une Heure de Code
+### Bring computer science to your school. Start with an Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! La bonne nouvelle, c'est nous sommes sur le point de changer cela. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Comme la technologie impacte tous les secteurs de la planète, la connaissance de l'informatique fait maintenant partie d’un ensemble de compétences bien équilibrée. Mais moins de la moitié de toutes les écoles enseignent l'informatique ! La bonne nouvelle, c'est que nous sommes en train de changer cela. Si vous avez entendu parler de l'Heure de Code, l'année dernière, vous savez probablement qu'elle a marqué l'histoire. 100 millions d’étudiants ont depuis découvert à quel point l'informatique peut être accessible et amusante en faisant juste une Heure de Code.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+L'Heure de Code est une introduction d'une heure à l'informatique, conçue pour démystifier la programmation et montrer que n'importe qui peut en apprendre les rudiments. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
 <a id="infographics"></a>
 

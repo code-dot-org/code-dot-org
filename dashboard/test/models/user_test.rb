@@ -75,11 +75,7 @@ class UserTest < ActiveSupport::TestCase
       state: 'CA'
     }
     teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
-    attr = teachers[0].process_school_info_attributes(school_attributes)
-    school_info = SchoolInfo.where(attr).first
-    assert teachers[0].school_info == school_info, "Teacher info: #{teachers[0].school_info.inspect} not equal to #{school_info.inspect}"
-    assert teachers[1].school_info == school_info, "Teacher info: #{teachers[1].school_info.inspect} not equal to #{school_info.inspect}"
-    assert SchoolInfo.where(attr).count == 1
+    assert_equal teachers[0].school_info, teachers[1].school_info
   end
 
   test 'normalize_email' do
@@ -1390,6 +1386,34 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).once
     track_progress(user.id, csf_script_level, 100)
+  end
+
+  test 'track_level_progress_sync stops incrementing attempts for perfect results' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    ul = UserLevel.create!(
+      user: user,
+      level: csf_script_level.level,
+      script: Script.get_from_cache('20-hour'),
+      best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
+    )
+
+    track_progress(user.id, csf_script_level, 10)
+    track_progress(user.id, csf_script_level, 20)
+    track_progress(user.id, csf_script_level, 30)
+
+    assert_equal 3, ul.reload.attempts
+
+    track_progress(user.id, csf_script_level, 31)
+
+    assert_equal 4, ul.reload.attempts
+
+    track_progress(user.id, csf_script_level, 31)
+    track_progress(user.id, csf_script_level, 31)
+    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, csf_script_level, 101)
+
+    assert_equal 4, ul.reload.attempts
   end
 
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do

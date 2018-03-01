@@ -1,4 +1,5 @@
 {
+  "startButton": "Бастау",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Барлығы",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "2-5 сыныптар",
   "filterGrades68": "6-8 сыныптар",
   "filterGrades9": "9-сыныптан бастап",
-  "filterTeacherExperience": "Мұғалім тәжірибесі",
-  "filterTeacherExperienceBeginner": "Бастаушы",
-  "filterTeacherExperienceComfortable": "Ыңғайлы",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Студент тәжірибесі",
   "filterStudentExperienceBeginner": "Бастаушы",
   "filterStudentExperienceComfortable": "Ыңғайлы",

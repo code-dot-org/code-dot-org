@@ -59,7 +59,7 @@ cs:
   courses: 'kurzy'
   courses_page:
     title_student: "Poznat Code studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Aktivita bez počítače'
   of: "z"
   more: "VÍCE"
@@ -69,7 +69,7 @@ cs:
   try_k8intro: "Vyzkoušej náš kurz K-8 Úvod do informatiky (15-25 hodin)"
   k8intro: "Kurz K-8 Úvod do počítačové vědy (15-25 hodin)"
   already_started: "Už jsi začal? Pokračuj zde >> "
-  demos: 'Admin: Všechny Ukázky'
+  demos: "Admin: Všechny Ukázky"
   continue: 'Pokračovat'
   prize: 'odměna'
   more_info: 'Více informací'
@@ -171,6 +171,7 @@ cs:
       email: 'E-mailová adresa'
       submit: 'Odeslat'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Změň si heslo'
@@ -220,7 +221,7 @@ cs:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org upozornění: %{student_name} už není vašim studentem.'
+        subject: "Code.org upozornění: %{student_name} už není vašim studentem."
   reports:
     error:
       access_denied: "Nemáš přístup k statistikám této osoby"
@@ -352,7 +353,7 @@ cs:
     current_password_hint: '(potřebujeme tvé aktuální heslo pro potvrzení změn)'
     delete: 'Vymazat účet'
     delete_text: "Klepnutím na následující tlačítko se vymaže váš účet."
-    delete_text_teacher_note: 'Upozornění: smazáním účtu nebudou vymazané vaše studentské účty.'
+    delete_text_teacher_note: "Upozornění: smazáním účtu nebudou vymazané vaše studentské účty."
     delete_confirm: 'Jste si jisti, že chcete vymazat tento účet?'
     deleted_user: 'odstraněný uživatel'
     no_password_because_oauth: 'Bez hesla, protože se přihlašujete pomocí jiného poskytovatele.'
@@ -363,7 +364,7 @@ cs:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -567,6 +568,9 @@ cs:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Věk 13 +"
       cta: "Jak na to"
+    hoc-encryption:
+      title: "Jednoduché šifrování"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +589,9 @@ cs:
     minecraft2016:
       title: "Minecraft"
       body: "Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní verzi Minecraftu."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -648,6 +655,7 @@ cs:
     correct_title: "Děkuji"
     correct_body: "Děkujeme vám za odeslání odpovědí."
     hide_survey_last_answer: "Tento průzkum je anonymní. Pro souhrné informace o výsledcích navštiv prosím nástěnku tvého učitele. Výsledky budou zobrazené pouze při účasti pěti žáků."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Děkuji"
     wrong_body: "Děkujeme vám za odeslání odpovědí."
@@ -695,7 +703,7 @@ cs:
     sign_out: 'Když si nepřeješ poskytovat svůj věk můžeš <a href="%{url}"> se odhlásit</a>.'
   terms_interstitial:
     title: "Aktualizované podmínky služeb a ochrana osobních údajů"
-    intro_desc: Aktualizovali jsme naše smluvní podmínky a ochranu osobních údajů. Změny jsou platné od 24. srpna 2016. Největší změnou je, že <i> už více nebudeme uchovávat e-mailové adresy studentských účtů na Studiu kódu. </i> Je to pro nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem.
+    intro_desc: "Aktualizovali jsme naše smluvní podmínky a ochranu osobních údajů. Změny jsou platné od 24. srpna 2016. Největší změnou je, že <i> už více nebudeme uchovávat e-mailové adresy studentských účtů na Studiu kódu. </i> Je to pro nás velký krok a doufáme, že jsme nastavili nový standard pro soukromí studentů v technologiích ve vzdělávání. Souhrn změn sme vám poslali e-mailem."
     intro_instructions: "Je třeba, aby jste potvrdili tyto podmínky u studentů mladších 13 let ve vaší třídě, aby získali plný přístup ke všem nejnovějším funkcím ve Studiu kódu. Při registraci účtu pro tyto studenty, je potřeba potvrdit, že vaše škola má souhlas rodičů pro shromažďování osobních údajů studenta a jejich využívání ve prospěch školy, zahrnující vzdělávací programy jako je Studio kódu."
     tos: "Podmínky"
     privacy: "Zásady ochrany osobních údajů"
@@ -711,7 +719,7 @@ cs:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Uložit"
   race_interstitial:
-    title: 'Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity'
+    title: "Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity"
     message: "Prosím vyberte vaši rasovou příslušnost (označte všechna platná políčka)"
     races:
       - 
@@ -753,11 +761,11 @@ cs:
     rename: "Přejmenovat"
     save: "Uložit"
     delete: "Odstranit"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Importovat"
+    share_link_import_bad_link_header: "Odkaz pro sdílení nebyl rozpoznán"
+    share_link_import_bad_link_body: "Daný odkaz pro sdílení se nám nepodařilo naimportovat. Ověřte, zda používáte odkaz z hádanky Minecraft: Agent a zda jste zkopírovali úplný odkaz."
+    share_link_import_error_header: "Něco se nepovedlo."
+    share_link_import_error_body: "Došlo k problému při importu daného odkazu pro sdílení. Zkuste to znovu."
     exit: "Návrat ke kurzu"
     my_projects: "Moje projekty"
     project_gallery: "Projekty"
@@ -858,8 +866,8 @@ cs:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

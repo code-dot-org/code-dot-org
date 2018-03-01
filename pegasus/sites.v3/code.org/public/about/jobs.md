@@ -27,61 +27,234 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
-- **Administration**
-	- [Director of Finance & Accounting](#accounting)
-	
+- **Advocacy**
+	- [Director of State Government Affairs](#govaffairs)
+- **Education**
+	- [Program Associate](#associate)
+- **Engineering**
+	- [Director/VP Engineering](#vpeng)
+	- [Software Engineer](#softwareengineer)
+	- [Technical Lead](#techlead)
+- **Outreach**
+ 	- [Program Associate](#outreach)
 - **Internships**
-	- [Education Team intern (Chicago, IL)](#edintern)
+	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
+	- [Events Intern (Seattle, WA)](#eventsintern)
+	
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="accounting"href="#accounting">Director of Accounting & Finance (Seattle, WA)</a>
+## <a name="govaffairs"href="#govaffairs">Director of State Government Affairs (location flexible)</a>
 
 **Job Summary:**
 
-Code.org is looking for an experienced Director of Accounting & Finance to oversee all finance and accounting workflows, including regulatory and financial reporting, budget and forecast preparation, contract administration, and the development of internal control policies and procedures.
+Code.org is a leading voice in the national dialogue on expanding access to K-12 computer science education. We are looking for an experienced professional with a background in state government affairs and/or policy development to lead the transformation of the K-12 US education policy landscape as it relates to computer science. 
 
-Responsibilities of the position include:
+Our team is working with policymakers and education leaders to advance policy reforms that reduce barriers or boost access to K-12 computer science courses. We’ve helped build a movement for K-12 computer scinece that has changed policies across dozens of states. This is a unique opportunity to harness unprecedented bipartisan support for this important issue to shape education policy at the state and local levels. You will have a chance to bring computer science policies to a state for the first time, rather than just incrementally changing existing education policy.
 
-- Management of a small accounting and finance team 
-- Monitoring all aspects of the company’s accounting and financial operations, ensuring quality control over financial transactions and reporting.
-- Supervising the month and year-end close procedures, including review of journal entries, account reconciliations, and analysis of results
-- Overseeing the preparation and distribution of timely internal financial statements
-- Supervising the external audit of the company’s financial statements and preparation of annual tax return 
-- Collaborate with Controller on annual budgeting and monthly re-forecasting
-- Reviewing all payables and receivables 
-- Cash flow planning and cash management
-- Contract administration: prepare and/or negotiate standard contracts (partnerships, licensing, grants, contractors, vendors)
-- Providing data modeling and analysis, as needed
-- Supporting the Fundraising team through the development of grant budgets, including government grants
-- Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
+The primary role for this position is managing existing and developing new relationships with state leaders (state departments of education, state boards of education, legislators and governors) across multiple states. You will develop overall strategy for engagement in your states while leading and carrying out the tactics associated with the strategy. 
+
+In this role, you will be responsible for: 
+
+- Developing and managing campaigns and state-based coalitions in states that you are responsible for
+- Developing and updating policy positions
+- Public speaking at events, including testimony before state authorities and interviews with the media
+- Communicating policy agenda to various audiences (stakeholder groups, legislators, Governors and staff, educators, media, etc.) and tailoring messaging for each
+- Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
+- Creating, organizing and managing policy-related events with policy makers and/or partner organizations
+- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
+- Creating and managing grassroots support for policy-related efforts
+- Coordinating state and federal policy efforts internally and with partners
 
 **Experience and Qualifications:**
 
-The ideal candidate has at least a Bachelor’s degree in Accounting, Finance, or related field and possesses the following skills:
+We are a small, tight-knit, fast-moving dynamic team that leverages each person’s unique backgrounds to support one another in our work with states. We are seeking a team member with expertise and experience that will enable them to contribute ideas and support in areas such as higher education policy development experience, marketing and PR, and coalition and partnership development.
 
-- 3+ years experience in an accounting management role, plus additional experience in an accountant role
-- 2+ years experience in contract administration  
-- Strong knowledge of GAAP and financial reporting requirements as well as financial audits
-- Experience with Quickbooks Online
-- Advanced or expert user of spreadsheets
-- Experience and aptitude for managing complex projects and reports 
-- Advanced analytical, organizational and problem solving skills
-- Be highly comfortable working in a fast-paced, ambiguous, informal work environment
-- Fund accounting experience a plus
-- Experience with government grant programs preferred
-- CPA preferred
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
+To be successful in this role, your main experience should be in working directly with legislators and governors’ education advisors and/or with state boards of education and state departments of education. You should have experience with and working knowledge of the legislative process or policy development process within 
+state education authorities. 
 
-Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure. Proficiency in working with Microsoft Office and Google Docs a must.
+We are a non-partisan organization, and the position requires working with representatives from all political parties at the state, local (and possibly federal) level. You should have a demonstrated ability to work across political parties and ideologies.
+
+You must be extremely detail-oriented, possess exceptional writing and interpersonal communication ability in English, and be tech-savvy (computer science background/experience a plus, but not required). You should be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Google Docs is required.
+
+As our ideal candidate, you have:
+
+- Passion for our mission
+- At least a Bachelor’s degree; Master’s degree desired
+- 5-8+ years of experience in government relations/advocacy/policy development in education, preferably at the state level
+- Ability and willingness to travel. You will be managing multiple states and should expect to travel up to 30% time.
+- Experience in developing K-12 computer science education policy (nice to have, but not required) 
 
 To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL strongly preferred)</a>
+
+
+## <a name="associate"href="#associate">Program Associate, Education Team (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for a detail and customer-service oriented Program Associate to join Code.org’s Education team. The Education team is responsible for the creation of Code.org’s K-12 computer science courses and the success of Code.org professional development across the U.S. The Education team supports a network of roughly 400 computer science facilitators in their delivery of these professional development workshops, which have reached over 50,000 teachers in the past 3 years.
+
+Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators. This is a full-time, exempt position. 
+
+In this role you will: 
+
+- Communicate through our customer service system to respond to professional development questions from teachers and facilitators in a timely manner
+- Communicate via email and other channels to send reminders, requests for information, and other updates to facilitators
+- Track and manage the teacher recruitment numbers and application status for Code.org’s year-long Professional Learning Program
+- Coordinate and schedule the interview and onboarding process for new facilitators
+- Update and ensure the accuracy of our teacher and facilitator lists
+- Document common workflows and processes for internal use
+- For teacher and facilitator related in-person events, support the Events Manager with upfront and onsite logistics
+- As new programs are developed to support teachers and facilitators, support the operational aspects of these programs 
+
+**Experience and Qualifications:**
+
+We are looking for a customer-service oriented self-starter who is skilled in successfully delivering projects, enjoys multi-tasking, cheerfully excels under pressure, and works independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
+
+You will be successful in this role if you have:
+
+- Passion for Code.org’s mission (experience or background in education preferred)
+- Proficiency in working with Microsoft Office and Google Docs 
+- Proficient with Excel and/or Google Sheets. 
+- 2-3 years experience in a customer support role
+- A bachelors degree (Computer science background/experience not required)
+- Ability and willingness to travel up to 15% time
+
+To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="vpeng"href="#vpeng">Director/VP Engineering (Seattle, WA)</a>
+
+**Job Summary:**
+ 
+ Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive, diverse workforce of the future.
+As Director/VP of Engineering at Code.org, you’ll be responsible for leading and supporting a high-powered, agile software engineering team of 15-20 engineers, and supporting a learning+coding platform for tens of millions students. You’ll set technical strategy and direction, drive big bets and investments, and address technical debt. You’ll manage, mentor and grow individual contributors and managers. Partnering with product management, you will lead execution on delivering product features. You’ll be responsible for engineering recruiting and hiring. You’ll deliver great live site operational results for our millions of students and teachers around the world.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Desire to support the growth of female and underrepresented minority students
+- 10+ years of professional software engineering experience
+- 5+ years experience as a people manager
+- Top-notch technical ability - must have technical credibility as a leader of a highly accomplished engineering team
+- Demonstrated ability to lead and energize others
+- Supportive manager with experience managing well functioning teams
+- Expertise in some of these technologies preferred:
+	- JavaScript
+	- React
+	- Ruby on Rails
+	- SQL/Databases/MySQL
+- Experience operating a live high-scale web-based software product or service
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="softwareengineer"href="#softwareengineer">Software Engineer (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions of students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Bachelor’s degree with a major in Computer Science
+- 3+ years as a software engineer
+- Expertise in some of these technologies preferred: 
+	- JavaScript
+	- React
+	- Ruby on Rails
+	- SQL/Databases/MySQL
+
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="techlead"href="#techlead">Technical Lead (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
+
+As Technical Lead at Code.org, you’ll be both a technical leader and a key coding contributor on the team. As a technical leader, you’ll be helping drive technology decisions and investments, architecture, tools and process. You’ll be mentoring (and, depending on experience and desire, managing) other team members.
+
+As a direct contributor, you’ll be delivering features in Code Studio, used by tens of millions of students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Passion for our mission of increasing access to computer science education
+- Bachelor’s degree with a major in Computer Science
+- 7+ years as a software engineer
+- Top-notch technical ability
+- Proven ability to lead and energize others
+- Expertise in some of these technologies preferred:
+	- JavaScript
+	- React
+	- Ruby on Rails
+	- SQL/Databases/MySQL
+	
+In addition, candidates:
+
+- Must be a U.S. Citizen or Permanent Resident
+- Must pass a pre-employment background check
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="outreach"href="#outreach">Program Associate, Outreach Team (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for a detail and customer-service oriented Program Associate to join Code.org’s Outreach team. The primary responsibility of this role will be to support Code.org’s <a href="/educate/regional-partner">Regional Partner Program</a>. The goal of this program is to help independent organizations throughout the U.S. establish themselves as a K-12 computer science hub for their region, offering professional learning opportunities for teachers and building a strong local community. 
+
+Under the direction of the Director of Outreach, you will provide operational and administrative assistance. This role will work collaboratively with the other team members supporting Regional Partners. This is a full-time, exempt position. 
+
+In this role you will: 
+
+- Manage communication channels with our Regional Partners
+	- Draft and send weekly communication to partners; draft templates Regional Managers can use to email partners
+	- Respond to customer support tickets
+- Provide general support to the team Program Manager and other outreach team members. Typical duties may include:  
+	- Managing the MOU process with partners, reviewing partner annual reports for missing data, updating information sheets and slides 
+	- Tracking teacher and facilitator application data and summarizing findings for team
+- Provide logistical support for events, such as our annual Regional Partner Summit
+
+**Experience and Qualifications:**
+
+We are looking for a customer-service oriented self-starter who is skilled in successfully delivering projects, enjoys multi-tasking, cheerfully excels under pressure, and works independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
+
+You will be successful in this role if you have:
+
+- Passion for Code.org’s mission 
+- Proficiency in working with Microsoft Office and Google Docs 
+- Proficient with Excel and/or Google Sheets. 
+- 2-3 years experience in a program support role
+- A bachelors degree (Computer science background/experience not required)
+- Ability and willingness to travel up to 15% time 
+
+To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+
+
+## <a name="edintern"href="#edintern">Education Team Intern (Chicago, IL or Seattle, WA preferred)</a>
 
 **Internship Summary:**
 
@@ -114,6 +287,45 @@ Please include lesson plan samples that are your original work, and highlight re
 
 You may also choose to include a LinkedIn or related online profile.
 
+## <a name="eventsintern"href="#eventsintern">Events Intern (Seattle, WA)</a>
+
+**Internship Summary:**
+
+Code.org is looking for an Events Intern to work with and support Code.org’s Events Manager. Internship will primarily support events for Code.org facilitator and teacher professional development workshops across the U.S. This is a spring/summer internship, part-time, approximately 20-30 hours per week.
+
+Intern’s responsibilities would include:
+
+- Coordinating event logistics (booking travel, accommodations, catering); act as logistics point-of-contact for event attendees 
+- Assisting Events Manager with on-site event support
+- Formatting, printing and organizing materials, packing and mailing supplies, proofreading and checking information (rooming lists, flight information, attendee lists and program tracks), and more.
+- Utilizing our customer service system to respond to events-related questions from teachers and facilitators in a timely manner.
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate.
+- Responding to requests for information, distributing materials externally.
+- Special projects (enter data, prepare documentation, develop templates, etc.)
+- Opportunity to travel to and support up to three events this spring/summer
+
+
+**Experience and Qualifications:**
+
+Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+Qualifications:
+
+- 2 years of undergraduate studies preferred (no Computer Science background necessary) 
+- 1 year of work experience preferred 
+- Experience with Google Sheets and suite of products
+- Ability to work legally in the United States
+- Ability to and willingness to travel to support events in the United States, if needed
+
+**Salary and Perks:**
+
+Code.org offers the following:
+
+- $15/hr, 20-30 hours per week expected
+- Flexible working environment
+- ORCA transit card
+
+Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
 
 
 ## <a name="info" href="#info">Working at Code.org</a>

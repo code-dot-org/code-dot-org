@@ -15,7 +15,6 @@ export default function ScriptAnnouncements({announcements}) {
           buttonText={i18n.learnMore()}
           buttonLink={announcement.link}
           dismissible={true}
-          isRtl={false}
           width={1100}
         />
       ))}

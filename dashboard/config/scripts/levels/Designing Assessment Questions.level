@@ -5,11 +5,15 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "## Designing Test Questions\r\n\r\nThe following resource is from the University of North Carolina Charlotte's Center for Teaching and Learning. In it you will find a breakdown of the uses, tradeoffs for common assessment types, along with tips for writing good items.\r\n\r\n\r\n\r\n",
-    "link_title": "Creating good assessments ",
-    "url": "http://teaching.uncc.edu/learning-resources/articles-books/best-practice/assessment-grading/designing-test-questions"
+    "markdown_instructions": "## Designing Test Questions\r\n\r\nThe following resource is from the University of North Carolina Charlotte's Center for Teaching and Learning. In it you will find a breakdown of the uses and tradeoffs for common assessment types, along with tips for writing good items.\r\n\r\n\r\n",
+    "link_title": "\"Designing Test Questions\"",
+    "url": "https://drive.google.com/file/d/1n9Pr4m2DkESTX0-RNQLSVUHQ5C9G_OSo/view?usp=sharing",
+    "instructions_important": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-03 18:36:30 +0000\",\"changed\":[\"markdown_instructions\",\"link_title\",\"url\"],\"changed_by_id\":37,\"changed_by_email\":\"brook@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </ExternalLink>

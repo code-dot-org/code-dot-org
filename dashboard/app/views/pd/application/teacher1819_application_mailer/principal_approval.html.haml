@@ -1,0 +1,41 @@
+%p
+  Dear
+  = @application.principal_greeting + ','
+
+%p
+  A teacher at your school,
+  = @application.teacher_full_name + ','
+  has submitted an application to participate in Code.org's Professional Learning Program in order to teach the
+  = @application.program
+  curriculum during the 2018-19 school year.
+  We are excited that this teacher is committed to computer science education!
+
+%p
+  %strong In order for us to consider your teacher’s application, we first need your approval.
+  Please take five minutes to
+  = link_to('complete this form as soon as possible', @application.principal_approval_url) + '.'
+  Please note that all applications and principal approvals are due no later than March 30, 2018.
+
+%p
+  This program requires the following time commitment:
+  %ul
+    %li
+      One five-day summer workshop in 2018, hosted by Code.org at TeacherCon or by your local Code.org
+      Regional Partner. Flights, lodging, and meals will be provided for TeacherCon attendees;
+      meals (and potentially some travel) will be provided for Regional Partner-hosted workshop.
+    %li
+      Up to four one-day local workshops during the 2018-19 school year (usually held on Saturdays)
+
+%p
+  For more information about Code.org’s Professional Learning Programs, please visit
+  = link_to('https://code.org/educate', 'https://code.org/educate') + '.'
+  Please send any additional questions to
+  = link_to('teacher@code.org', 'mailto:teacher@code.org') + '.'
+  Thank you very much for your support of computer science for all!
+
+%p
+  Sarah Fairweather
+  %br
+  Education Team Program Manager
+  %br
+  Code.org

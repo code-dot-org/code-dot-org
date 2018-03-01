@@ -18,7 +18,7 @@
   }
 }
 
-$projects-table-width: 850px;
+$projects-table-width: 970px;
 
 .projects-table-wrapper {
   width: $projects-table-width;
@@ -77,4 +77,21 @@ $projects-table-width: 850px;
 .loading {
   height: 200px;
   background: image-url("spinner-big.gif") no-repeat center center;
+}
+
+.start_new_project_header {
+  font-family: "Gotham 4r";
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.new_project_links_wrapper {
+  margin-left: -5px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#legacy-project-links {
+  margin-bottom: 20px;
 }

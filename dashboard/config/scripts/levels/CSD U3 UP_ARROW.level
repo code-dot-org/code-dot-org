@@ -63,7 +63,6 @@
     "edit_code": true,
     "embed": "false",
     "markdown_instructions": "# Moving Sprites\r\n\r\nYou can change your sprite's position based on key presses in the same way you changed its animations.\r\n\r\n# Do This\r\nYou have been provided with the start of a bug sprite. You need to pick the bug picture you want to use from the animation tab.\r\n\r\n* Set the animation of the sprite to your favorite bug.\r\n* Add an `if` statement inside your draw loop.\r\n* Add a call to `keyDown` as the input to the `if` statement to check if the **up** arrow was pressed.\r\n* Add code inside the conditional to move the sprite up if the up arrow is down.\r\n\r\n_Do you need to change sprite's x or y property to move it up?_",
-    "start_blocks": "var sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"something.png\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  // Add Code for: If the up arrow is pressed,\r\n  // move the sprite up on the screen\r\n\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -85,7 +84,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add an if statement and place your movement code inside it\",\r\n  \"element_id\": \".droplet-gutter-line:nth-child(5)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "CSD U3- arrows template",
     "instructions_important": "false",
@@ -94,15 +93,17 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "XJoQm+fF7RSkwBmlWnu/0FlEAGIymn+h73teAXjUTYNFwGsoxvjF/wBIXe9a\nVqQQ\n",
+    "encrypted_examples": "VPGz4CnhyiBplGelgsn0/TL9fHKePyJ+E/xvgThuWB9AT+nRxsd7Zkn9ku9S\nkptlqoo7VhTARzImNYmm4gc5Kw==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:24:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:24:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-17 16:15:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-27 19:07:33 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

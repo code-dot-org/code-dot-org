@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.\",\"hint_id\":\"courseA_artist_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f830f86737c6bf500e401a085e644bec/courseA_artist_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need 2 blocks in 2 directions to solve this puzzle.\",\"hint_id\":\"courseA_artist_loops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b614400617bda002138f99431a3621fc/courseA_artist_loops6.mp3\"}]",
-    "markdown_instructions": "##Let's put a nice hill in the back.\r\n\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)",
+    "markdown_instructions": "## Let's put a nice hill in the back.\r\n\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)",
     "ideal": "3",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/6a9171979a8e734e6c4fbb7e5205fec0-image-1477106973527.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",

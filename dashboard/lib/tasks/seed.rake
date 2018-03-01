@@ -17,7 +17,7 @@ namespace :seed do
     Game.setup
   end
 
-  SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten
+  SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
   UI_TEST_SCRIPTS = [
     '20-hour',
     'algebra',
@@ -38,10 +38,13 @@ namespace :seed do
     'csp4',
     'csp5',
     'csp-ap',
+    'csp-explore',
+    'csp-create',
     'csppostap',
     'events',
     'flappy',
     'frozen',
+    'hero',
     'hourofcode',
     'infinity',
     'mc',
@@ -50,8 +53,8 @@ namespace :seed do
     'starwars',
     'starwarsblocks',
     'step',
-  ].map {|script| "config/scripts/#{script}.script"}
-  SEEDED = 'config/scripts/.seeded'
+  ].map {|script| "config/scripts/#{script}.script"}.freeze
+  SEEDED = 'config/scripts/.seeded'.freeze
 
   file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
     update_scripts
@@ -74,7 +77,7 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls]
+  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls].freeze
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -95,18 +98,15 @@ namespace :seed do
 
   task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    UI_TEST_COURSES = [
-      'allthethingscourse',
-      'csp',
-    ].each do |course_name|
+    %w(allthethingscourse csp).each do |course_name|
       Course.load_from_path("config/courses/#{course_name}.course")
     end
   end
 
   # detect changes to dsldefined level files
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti LevelGroup)
-  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten
+  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti LevelGroup).freeze
+  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name
@@ -163,35 +163,24 @@ namespace :seed do
     School.seed_all
   end
 
-  # Seeds the data in regional_partners
-  task regional_partners: :environment do
-    RegionalPartner.transaction do
-      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
-    end
+  task ap_school_codes: :environment do
+    Census::ApSchoolCode.seed
   end
 
-  task regional_partners_school_districts: :environment do
-    seed_regional_partners_school_districts(false)
+  task ap_cs_offerings: :environment do
+    Census::ApCsOffering.seed
   end
 
-  task force_regional_partners_school_districts: :environment do
-    seed_regional_partners_school_districts(true)
+  task ib_school_codes: :environment do
+    Census::IbSchoolCode.seed
   end
 
-  def seed_regional_partners_school_districts(force)
-    # use a much smaller dataset in environments that reseed data frequently.
-    mapping_tsv = CDO.stub_school_data ?
-        'test/fixtures/regional_partners_school_districts.tsv' :
-        'config/regional_partners_school_districts.tsv'
+  task ib_cs_offerings: :environment do
+    Census::IbCsOffering.seed
+  end
 
-    expected_count = `grep -v 'NO PARTNER' #{mapping_tsv} | wc -l`.to_i - 1
-    raise "#{mapping_tsv} contains no data" unless expected_count > 0
-    RegionalPartnersSchoolDistrict.transaction do
-      if (RegionalPartnersSchoolDistrict.count < expected_count) || force
-        # This step can take up to 1 minute to complete when not using stubbed data.
-        RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv(mapping_tsv)
-      end
-    end
+  task state_cs_offerings: :environment do
+    Census::StateCsOffering.seed
   end
 
   MAX_LEVEL_SOURCES = 10_000
@@ -269,11 +258,11 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
-  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses]
+  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
+  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
 end

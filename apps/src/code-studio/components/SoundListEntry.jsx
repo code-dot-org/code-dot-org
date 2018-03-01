@@ -54,6 +54,7 @@ class SoundListEntry extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (!nextProps.isSelected) {
+      this.props.soundsRegistry.stopPlayingURL(this.props.soundMetadata.sourceUrl);
       this.setState({isPlaying: false});
     }
   }

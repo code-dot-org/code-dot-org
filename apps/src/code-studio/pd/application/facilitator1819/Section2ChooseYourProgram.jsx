@@ -1,17 +1,16 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {FormGroup} from "react-bootstrap";
-import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
 const PROGRAM_CSF = "CS Fundamentals (Pre-K - 5th grade)";
 const CSF_AVAILABILITY_ONLY_WEEKEND = "I will only be able to attend Saturday and Sunday of the training";
 
-export default class Section2ChooseYourProgram extends Facilitator1819FormComponent {
-  static propTypes = {
-    ...Facilitator1819FormComponent.propTypes,
-    accountEmail: PropTypes.string.isRequired
-  };
-
+export default class Section2ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.section2ChooseYourProgram;
 
   static associatedFields = [
@@ -28,7 +27,7 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
         {this.radioButtonsFor("program")}
 
         {this.radioButtonsWithAdditionalTextFieldsFor("planOnTeaching", {
-          "Other:": "other"
+          [TextFields.otherWithText]: "other"
         })}
 
         {this.radioButtonsFor("abilityToMeetRequirements")}
@@ -57,11 +56,11 @@ export default class Section2ChooseYourProgram extends Facilitator1819FormCompon
             </h4>
 
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspTeacherconAvailability", {
-              "I'm not available for either TeacherCon. (Please Explain):" : "unavailableReason"
+              [TextFields.notAvailableForTeachercon] : "unavailableReason"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("csdCspFitAvailability", {
-              "I'm not available for either Facilitator-in-Training workshop. (Please Explain):" : "unavailableReason"
+              [TextFields.notAvailableForFitWeekend] : "unavailableReason"
             })}
           </div>
         }

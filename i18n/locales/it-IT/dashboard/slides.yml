@@ -118,7 +118,7 @@ it:
         text: "Puoi mettere il blocco \"vai avanti\" all'interno del blocco di ripetizione \"ripeti ... volte\" e scrivere un numero nel blocco \"ripeti ... volte\" per stabilire quante ripetizioni fare."
       6:
         image: 'notes/hoc2_6.jpg'
-        text: 'Fai attenzione: è possibile inserire più di un blocco all''interno di un blocco di ripetizione "ripeti ... volte" .'
+        text: "Fai attenzione: è possibile inserire più di un blocco all'interno di un blocco di ripetizione \"ripeti ... volte\" ."
       7:
         image: 'notes/hoc2_7.jpg'
         text: "Divertiti ad usare il blocco di ripetizione \"ripeti ... volte\" !"
@@ -138,7 +138,7 @@ it:
     if:
       1:
         image: 'notes/hoc4_1.jpg'
-        text: 'Ciao, sono Bill! Impariamo un nuovo concetto fondamentale: l''istruzione "se". I calcolatori prendono le decisioni utilizzando proprio questa istruzione.'
+        text: "Ciao, sono Bill! Impariamo un nuovo concetto fondamentale: l'istruzione \"se\". I calcolatori prendono le decisioni utilizzando proprio questa istruzione."
       2:
         image: 'notes/hoc4_2.jpg'
         text: "Tu stesso usi le istruzioni \"se\" ogni giorno. Prima di uscire di casa al mattino ti dici: SE (IF) fuori piove ALLORA (THEN) devo prendere l'impermeabile."
@@ -259,7 +259,7 @@ it:
         text: "Se ti è piaciuta la tua prima Ora del Codice, visita code.org per continuare la tua formazione sull'informatica! Dopo che avrai completato il nostro corso in 20 lezioni, avrai imparato i concetti base della programmazione e potrai iniziare ad imparare come scrivere applicazioni per smart-phone, programmi per robot, giochi, e molto altro."
       4:
         image: 'notes/hoc6_4.jpg'
-        text: 'La tecnologia sta cambiando tutto ciò che facciamo e non importa se sei giovane o anziano: la programmazione è divertente, è creativa, e chiunque può impararla!'
+        text: "La tecnologia sta cambiando tutto ciò che facciamo e non importa se sei giovane o anziano: la programmazione è divertente, è creativa, e chiunque può impararla!"
     20_wrapup:
       1:
         image: 'notes/bird.png'
@@ -388,7 +388,7 @@ it:
         text: "Le api non sono super mitiche? In questa serie di esercizi, il tuo obiettivo è quello di aiutare l'ape a raggiungere i fiori, a raccogliere il nettare dai fiori e a volare verso il favo per produrre il miele. Per questo esercizio, devi usare i blocchi \"prendi il nettare\" e \"fai il miele\"."
       2:
         image: 'notes/C1_bee_level_intro_2.png'
-        text: 'Ogni fiore ha una quantità diversa di nettare: 1, 2, 3 o più. Sappiamo quanto nettare è presente nei fiori rossi grazie al numerino visibile nell''angolo in basso. In questo modo sei sicuro di raccogliere tutto il nettare da un fiore prima di volare via. Inoltre, ogni favo può contenere solo una certa quantità di miele: 1, 2, 3 o più. In questo modo sei sicuro di produrre tanto miele quanto il favo può contenerne.'
+        text: "Ogni fiore ha una quantità diversa di nettare: 1, 2, 3 o più. Sappiamo quanto nettare è presente nei fiori rossi grazie al numerino visibile nell'angolo in basso. In questo modo sei sicuro di raccogliere tutto il nettare da un fiore prima di volare via. Inoltre, ogni favo può contenere solo una certa quantità di miele: 1, 2, 3 o più. In questo modo sei sicuro di produrre tanto miele quanto il favo può contenerne."
       3:
         image: 'notes/C1_bee_level_intro_3.png'
         text: "Se sei capace di raccogliere tutto il nettare e produrre tutto il miele, hai risolto l'esercizio e puoi passare al prossimo. Altrimenti, devi cercare di nuovo di risolverlo. Giocherella un po' e vedi come ci si sente ad essere un'ape che programma!"
@@ -524,7 +524,7 @@ it:
         text: "Ciò che mi piace di più in Internet è che posso fare giochi divertenti. Ho fatto punto! Mi piace anche disegnare e creare cose nuove e condividerle con i miei amici. Bello! A volte visito siti dove posso imparare cose nuove, ma rimango sempre in siti che conosco. Wow, dinosauri!"
       6:
         image: 'notes/C1_going_places_safely_6.png'
-        text: 'Internet è un posto fantastico. Ma come devi stare attento ad attraversare la strada nel tuo quartiere, devi stare anche attento quando vai online. Qui ci sono tre regole da ricordare. Regola numero 1: Chiedi sempre ai tuoi genitori prima. Regola numero 2: Parla solo con persone che conosci. Regola numero 3: Rimani in siti che conosci.'
+        text: "Internet è un posto fantastico. Ma come devi stare attento ad attraversare la strada nel tuo quartiere, devi stare anche attento quando vai online. Qui ci sono tre regole da ricordare. Regola numero 1: Chiedi sempre ai tuoi genitori prima. Regola numero 2: Parla solo con persone che conosci. Regola numero 3: Rimani in siti che conosci."
       7:
         image: 'notes/C1_going_places_safely_7.png'
         text: "Wow, è stato divertente! E' ora di cena. Sto spegnendo. Non vedo l'ora di ricollegarmi per visitare qualcosa di nuovo."
@@ -1106,7 +1106,7 @@ it:
         text: "Il modo più comune di utilizzare il codice binario è in un'istruzione if ... then ... (se ... allora ...). È un classico della programmazione. Il programma viene eseguito e ci dice se qualcosa è true (vero), allora procedi. O se non lo è, fa' qualcos'altro. Cosa succede se si desidera fare qualcosa di forse un po' più complicato? Al posto di un'istruzione if ... then ... , puoi voler trattare un'immagine o un suono al computer."
       3:
         image: 'notes/C4_unplugged_binary_3.png'
-        text: Un computer conosce solo il codice binario ma un'immagine, non è binaria, non si tratta di zeri e uno. Come fare allora a farlo? Ecco un esempio con questa bella foto. Ora una foto è sostanzialmente un insieme di informazioni. Tutte le informazioni possono essere codificate in binario in un modo o in un altro, devi solo capire come farlo.
+        text: "Un computer conosce solo il codice binario ma un'immagine, non è binaria, non si tratta di zeri e uno. Come fare allora a farlo? Ecco un esempio con questa bella foto. Ora una foto è sostanzialmente un insieme di informazioni. Tutte le informazioni possono essere codificate in binario in un modo o in un altro, devi solo capire come farlo."
       4:
         image: 'notes/C4_unplugged_binary_4.png'
         text: "Immagina di mettere una griglia su un panda. Per ogni quadrato di questa griglia, decideremo se sia più nero o più bianco. Una volta presa la decisione, lo coloreremo di conseguenza.\nA questo punto, ogni quadrato della griglia sarà per forza tutto nero o tutto bianco.\nAi quadrati neri assegneremo lo zero, a quelli bianchi l'altra cifra binaria. Dunque ci ritroveremo davanti nient'altro che un mucchio di \"uno\" e di \"zero\".\nEcco, questa è la rappresentazione di un'immagine attraverso il sistema binario."
@@ -1247,7 +1247,7 @@ it:
         text: "La lezione sul pensiero computazionale ha come obiettivo quello di insegnarvi ad affrontare un complesso e difficile problema e a scomporlo in diversi problemi più semplici. L'obiettivo di questa lezione è quello di scrivere un insieme di istruzioni che qualcuno possa seguire per disegnare uno dei mostri inclusi nel piano della lezione."
       2:
         image: 'notes/unplug2_2.png'
-        text: 'Gli studenti dovranno dividersi in gruppi per scrivere le istruzioni. Successivamente, dovranno cambiare gruppo per disegnare il mostro. I gruppi dovranno scrivere le istruzioni utilizzando i quattro passi del pensiero informatico: scomposizione, individuazione di un modello, astrazione ed algoritmi.'
+        text: "Gli studenti dovranno dividersi in gruppi per scrivere le istruzioni. Successivamente, dovranno cambiare gruppo per disegnare il mostro. I gruppi dovranno scrivere le istruzioni utilizzando i quattro passi del pensiero informatico: scomposizione, individuazione di un modello, astrazione ed algoritmi."
       3:
         image: 'notes/unplug2_3.png'
         text: "Per prima cosa i gruppi dovranno scomporre il compito loro affidato, il che significa creare un piano di gioco. Subito dopo dovranno cercare dei modelli tra tutti i mostri presenti nel catalogo. Quando s'imbatteranno in alcune differenze tra un mostro e l'altro, dovranno astrarre ossia rimuovere quelle differenze. Per esempio, un mostro possiede gli occhi da Vegitas mentre un altro possiede gli occhi da Spritem. Dal momento che entrambi hanno gli occhi, possiamo scrivere una riga per dire che il mostro ha degli occhi, senza specificarne il tipo."
@@ -1260,7 +1260,7 @@ it:
         text: "L'utilizzo della carta millimetrata ci aiuta a spiegare cosa significhi scrivere del codice, chiedendo alla gente di ricreare un determinato disegno utilizzando soltanto frecce e scarabocchi.\nAd una persona verrà consegnato un piccolo disegno su carta millimetrata. Attraverso l'uso di particolari frecce, questa persona dovrà cercare di spiegare come ricreare il disegno ricevuto."
       2:
         image: 'notes/unplug3_2.png'
-        text: 'Per questo compito, gli unici simboli che puoi usare sono questi: muovi un quadrato avanti, muovi un quadrato indietro, muovi un quadrato su, muovi un quadrato giù, passa al colore successivo, riempi il quadrato col colore. Una volta scritto il codice, lo passeremo ad un''altra persona che sia in grado di leggerlo, affinché possa provare a ricreare l''immagine.'
+        text: "Per questo compito, gli unici simboli che puoi usare sono questi: muovi un quadrato avanti, muovi un quadrato indietro, muovi un quadrato su, muovi un quadrato giù, passa al colore successivo, riempi il quadrato col colore. Una volta scritto il codice, lo passeremo ad un'altra persona che sia in grado di leggerlo, affinché possa provare a ricreare l'immagine."
     unplug4:
       1:
         image: 'notes/unplug4_1.png'
@@ -1335,7 +1335,7 @@ it:
     starwars_intro:
       1:
         image: 'notes/starwars_intro_1.JPG'
-        text: 'Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari: Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento che fa è controllato dal software, cioè da programmi informatici. L''informatica influisce su ogni settore industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio della Forza, hanno lavorato insieme centinaia di informatici.'
+        text: "Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari: Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento che fa è controllato dal software, cioè da programmi informatici. L'informatica influisce su ogni settore industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio della Forza, hanno lavorato insieme centinaia di informatici."
       2:
         image: 'notes/starwars_intro_2.JPG'
         text: "Ciao, sono Rachel Rose, un'informatica senior nel settore Ricerca e Sviluppo alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle creature. Nel Risveglio della Forza, mi occupo di aiutare gli artisti a sviluppare gli equipaggiamenti che costituiscono quelle parti che permettono ai personaggi di apparire credibili come creature di una galassia lontana lontana..."
@@ -1394,7 +1394,7 @@ it:
         text: "Complimenti, ce l'hai fatta! Hai programmato BB-8. Ora sei pronto per qualcosa di un po' più difficile. Facciamola. Ora che hai imparato i concetti fondamentali della programmazione, torniamo indietro e impara a costruire la tua versione del gioco con R2-D2 e C-3PO."
       3:
         image: 'notes/starwars_events_3.JPG'
-        text: 'Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i programmatori di giochi utilizzano ogni giorno: gli "eventi". Gli "eventi" dicono al programma di ascoltare o aspettare qualcosa che succederà: quando questo avviene, il programma esegue un''azione.'
+        text: "Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i programmatori di giochi utilizzano ogni giorno: gli \"eventi\". Gli \"eventi\" dicono al programma di ascoltare o aspettare qualcosa che succederà: quando questo avviene, il programma esegue un'azione."
       4:
         image: 'notes/starwars_events_4.JPG'
         text: "Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo."
@@ -1432,7 +1432,7 @@ it:
     starwars_blocks_intro:
       1:
         image: 'notes/starwars_blocks_intro_1.JPG'
-        text: 'Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari: Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento che fa è controllato dal software, cioè da programmi informatici. L''informatica influisce su ogni settore industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio della Forza, hanno lavorato insieme centinaia di informatici.'
+        text: "Ciao, sono Kathleen Kennedy e sono la produttrice di Guerre Stellari: Episodio VII - Il Risveglio della Forza. Oggi lavoreremo con una delle nostre celebrità, BB-8. BB-8 è un droide sferico. Tutto ciò che fa e ogni movimento che fa è controllato dal software, cioè da programmi informatici. L'informatica influisce su ogni settore industriale, dal marketing alle cure sanitarie e perfino nel cinema. Infatti, per realizzare un film come Il Risveglio della Forza, hanno lavorato insieme centinaia di informatici."
       2:
         image: 'notes/starwars_blocks_intro_2.JPG'
         text: "Ciao, sono Rachel Rose, un'informatica senior nel settore Ricerca e Sviluppo alla ILM e mi occupo dell'animazione e del gruppo di sviluppo delle creature. Nel Risveglio della Forza, mi occupo di aiutare gli artisti a sviluppare gli equipaggiamenti che costituiscono quelle parti che permettono ai personaggi di apparire credibili come creature di una galassia lontana lontana..."
@@ -1469,7 +1469,7 @@ it:
         text: "Complimenti, ce l'hai fatta! Hai programmato BB-8. Ora sei pronto per qualcosa di un po' più difficile. Facciamola. Ora che hai imparato i concetti fondamentali della programmazione, torniamo indietro e impara a costruire la tua versione del gioco con R2-D2 e C-3PO."
       3:
         image: 'notes/starwars_blocks_events_3.JPG'
-        text: 'Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i programmatori di giochi utilizzano ogni giorno: gli "eventi". Gli "eventi" dicono al programma di ascoltare o aspettare qualcosa che succederà: quando questo avviene, il programma esegue un''azione.'
+        text: "Per costruire un gioco, abbiamo bisogno di imparare qualcosa che i programmatori di giochi utilizzano ogni giorno: gli \"eventi\". Gli \"eventi\" dicono al programma di ascoltare o aspettare qualcosa che succederà: quando questo avviene, il programma esegue un'azione."
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
         text: "Alcuni esempi di eventi sono quelli rappresentati da un clic del mouse, dall'uso di un tasto freccia o dalla pressione di un dito sullo schermo."
@@ -1534,7 +1534,7 @@ it:
         text: "Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro e rimetterlo nella cassetta degli attrezzi."
       12:
         image: 'notes/mc_intro_12.JPG'
-        text: 'Per annullare le modifiche e tornare nella situazione iniziale, usa il pulsante "Ripristina" che trovi sull''angolo in alto a destra della tua area di lavoro. Un''ultima cosa: hai notato il triangolino con la punta verso il basso nei blocchi "gira a ...."? Ogni volta che vedi questi triangolini, significa che puoi selezionare una tra più opzioni a tua disposizione. Inizia a programmare!'
+        text: "Per annullare le modifiche e tornare nella situazione iniziale, usa il pulsante \"Ripristina\" che trovi sull'angolo in alto a destra della tua area di lavoro. Un'ultima cosa: hai notato il triangolino con la punta verso il basso nei blocchi \"gira a ....\"? Ogni volta che vedi questi triangolini, significa che puoi selezionare una tra più opzioni a tua disposizione. Inizia a programmare!"
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
@@ -1704,7 +1704,7 @@ it:
         text: "Ciao, mi chiamo Jens e sono il capo progettista creativo di Minecraft. Nella prossima ora svilupperai la tua versione di Minecraft. All'inizio il tempo sembra essersi fermato in Minecraft. Le pecore non si muovono, le galline non depongono uova e gli zombie sono immobili. Devi scrivere tu il codice che mette in moto il mondo di Minecraft."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'Mi chiamo Melissa e sono una studiosa dell''interazione con l''utente a Minecraft. Quello che mi interessa davvero è come la gente pensa e interagisce con la tecnologia e quindi questo lavoro è il lavoro perfetto per me perché unisce l''informatica e la psicologia: come pensano e si comportano le persone.'
+        text: "Mi chiamo Melissa e sono una studiosa dell'interazione con l'utente a Minecraft. Quello che mi interessa davvero è come la gente pensa e interagisce con la tecnologia e quindi questo lavoro è il lavoro perfetto per me perché unisce l'informatica e la psicologia: come pensano e si comportano le persone."
       3:
         image: 'notes/mc_2016_intro_3.jpg'
         text: "La schermata è suddivisa in tre aree principali. 1) Sulla sinistra abbiamo lo scenario di gioco di Minecraft. All'inizio è tutto immobile, ma presto lo animeremo con il codice."
@@ -1742,7 +1742,7 @@ it:
         text: "Nel prossimo esercizio puoi scegliere se controllare Steve o Alex. Premi i tasti di direzione sulla tastiera per muoverti in su, in giù, a sinistra e a destra. Ora puoi spostarti dove vuoi all’interno dello scenario di gioco. Per usare una creatura, avvicinati, girati verso di essa e premi la barra spaziatrice."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "Se utilizzi un touchscreen, puoi muoverti scorrendo verso l’alto, il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto che hai di fronte."
+        text: "Se utilizzi un schermo tattile (touchscreen), puoi muoverti scorrendo verso l’alto, il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto che hai di fronte."
       3:
         image: 'notes/mc_2016_events_3.jpg'
         text: "Cosa succede quando usi una creatura? In Minecraft, le pecore producono lana quando le tosi, le mucche scappano se le colpisci e i Creeper esplodono quando ti avvicini. Queste reazioni sono rese possibili dai cosiddetti \"gestori di eventi\". I gestori di eventi sono blocchi che permettono al programma di attendere e riconoscere determinate circostanze, \"gli eventi\". Se gli eventi si verificano, i gestori di evento attivano delle azioni."
@@ -1763,3 +1763,456 @@ it:
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
         text: "Quando hai completato il tuo gioco, clicca su \"Termina\" per ottenere un link per condividerlo con gli amici o provare il tuo gioco su smartphone. Buon divertimento! Non vedo l’ora di giocare la tua versione di Minecraft."
+    applab_intro_welcome:
+      1:
+        image: 'notes/applab_intro_welcome_1.png'
+        text: "Mi chiamo Mei'lani, studio informatica e sono una stagista in Code.org. Mi piace l'informatica perché è davvero creativa. Devo risolvere problemi. Devo far funzionare tutto come voglio. Ma devo anche essere la progettista e l'artista e fare tutte le scelte dal punto di vista creativo.\n"
+      2:
+        image: 'notes/applab_intro_welcome_2.png'
+        text: "Costruire la tua app è facile con Sviluppo App! Sia che tu sia un principiante, sia che tu abbia già programmato, Sviluppo App è un ottimo strumento per costruire nuove App e condividerle con i tuoi amici."
+      3:
+        image: 'notes/applab_intro_welcome_3.png'
+        text: "Questo è Sviluppo App. Sul lato sinistro c'è la tua app. Sulla destra c'è il codice che la fa funzionare. Tu costruisci il tuo programma trascinando blocchi dalla cassetta degli attrezzi. Per iniziare hai un unico blocco chiamato `setProperty`."
+      4:
+        image: 'notes/applab_intro_welcome_4.png'
+        text: "Il blocco `setProperty` cambia le caratteristiche degli elementi sul tuo schermo. Come i bottoni, le etichette o l'intero schermo. Prima devi definire quale elemento vuoi cambiare. Se passi sopra ad un elemento della tua app, puoi vedere il suo nome o ID. Quindi seleziona questo ID dal primo elenco a discesa."
+      5:
+        image: 'notes/applab_intro_welcome_5.png'
+        text: "Gli elementi hanno molte proprietà da gestire come il colore di sfondo, quello del testo o la sua dimensione. Puoi vedere la lista completa e scegliere quale proprietà cambiare nel secondo elenco a discesa."
+      6:
+        image: 'notes/applab_intro_welcome_6.png'
+        text: "Nell'ultimo elenco scrivi il valore da utilizzare. Il blocco ti dà un suggerimento. Ma tu puoi sempre modificare le sue proposte."
+      7:
+        image: 'notes/applab_intro_welcome_7.png'
+        text: "Quando hai terminato, il blocco si può leggere un po 'come una frase: \"Imposta il colore di sfondo di button1 a verde.\" Premi \"Esegui\" per vedere i cambiamenti che stai programmando. Se premi \"Ricomincia\", puoi trascinare altri blocchi per cambiare altre caratteristiche della tua app. Come il testo!"
+      8:
+        image: 'notes/applab_intro_welcome_8.png'
+        text: "In questa esercitazione lavoreremo con i blocchi, ma Sviluppo App supporta anche la programmazione testuale."
+      9:
+        image: 'notes/applab_intro_welcome_9.png'
+        text: "Sappi che stai programmando in JavaScript, il linguaggio del web. Ogni esercizio ha un obiettivo, le istruzioni ed un'immagine di ciò che stai cercando di creare."
+      10:
+        image: 'notes/applab_intro_welcome_10.png'
+        text: "Se ti blocchi, fai clic su questa immagine e vedrai esattamente come devi completare l'esercizio. Ma prima, provaci da solo."
+      11:
+        image: 'notes/applab_intro_welcome_11.png'
+        text: "Quando hai raggiunto l'obiettivo di questo esercizio clicca su \"Termina\" per proseguire. Questo è tutto ciò che c'è da fare! Premi il pulsante arancione \"Prosegui\" per iniziare la tua avventura con Sviluppo App!"
+    applab_intro_events:
+      1:
+        image: 'notes/applab_intro_events_1.png'
+        text: "Le App sono forti perché è un po' come avviare una nuova attività nel senso che devi progettare tutto da zero, devi gestire tutto e sei il creatore di questo capolavoro che stai realizzando con il codice."
+      2:
+        image: 'notes/applab_intro_events_2.png'
+        text: "Ora che puoi cambiare il look della tua app, rendila interattiva facendola reagire agli eventi. Gli eventi sono azioni dell'utente come cliccare un pulsante, far scorrere un menù o passare sopra un'immagine. Le app interattive devono saper come rispondere agli eventi. Come riprodurre un suono quando premo un pulsante. Per fare questo su Sviluppo App devi usare un nuovo blocco chiamato `onEvent`."
+      3:
+        image: 'notes/applab_intro_events_3.png'
+        text: "Questo programma rende lo schermo blu. Voglio che lo schermo torni verde quando premo questo pulsante. Prima devo trascinare il blocco `onEvent`. Passando sul pulsante scopro che l'ID è \"bigButton\" così lo selezionerò nel primo elenco a discesa."
+      4:
+        image: 'notes/applab_intro_events_4.png'
+        text: "Poi scelgo il tipo di evento. Ci sono molte alternative ma per ora scegliamo il caro vecchio \"click\"."
+      5:
+        image: 'notes/applab_intro_events_5.png'
+        text: "Alla fine aggiungo all'interno del blocco `onEvent` il codice per cambiare il colore di sfondo dello schermo. Puoi leggere questo blocco come una frase: \"Quando il pulsante viene premuto esegui questo codice.\""
+      6:
+        image: 'notes/applab_intro_events_6.png'
+        text: "Proviamoci. I blocchi al di fuori di `onEvent` continuano a lavorare, quindi all'inizio lo schermo è blu."
+      7:
+        image: 'notes/applab_intro_events_7.png'
+        text: "E quando clicco il pulsante \"bigButton\" viene eseguito il codice all'interno di `onEvent` e lo schermo diventa verde."
+      8:
+        image: 'notes/applab_intro_events_8.png'
+        text: "Se vuoi cambiare altre cose dopo l'evento, come il testo sullo schermo aggiungi semplicemente altro codice in `onEvent`."
+      9:
+        image: 'notes/applab_intro_events_9.png'
+        text: "Per far rispondere il tuo programma a più eventi, aggiungi altri blocchi `onEvent`. Fai solo attenzione a non posizionarli uno dentro l'altro. Ora è il tuo momento. Divertiti!"
+    applab_intro_sounds:
+      1:
+        image: 'notes/applab_intro_sounds_1.png'
+        text: "Adesso imparerai come aggiungere immagini e suoni alla tua app. Iniziamo verificando le opzioni audio."
+      2:
+        image: 'notes/applab_intro_sounds_2.png'
+        text: "Nella cassetta degli attrezzi trovi un nuovo blocco chiamato `playSound`. Trascinalo nell'area di lavoro. Puoi scegliere un suono da riprodurre cliccando \"Scegli\" nell'elenco a discesa."
+      3:
+        image: 'notes/applab_intro_sounds_3.png'
+        text: "Da qui puoi sia caricare un file audio dal tuo computer, sia cercare all'interno di una libreria di suoni. La libreria è suddivisa in molte categorie come strumenti, musiche di sottofondo o animali."
+      4:
+        image: 'notes/applab_intro_sounds_4.png'
+        text: "Quando hai individuato il suono che interessa, clicca \"Choose\". Quando questo blocco viene eseguito, riproduce il suono scelto."
+      5:
+        image: 'notes/applab_intro_sounds_5.png'
+        text: "Per associare immagini ai tuoi elementi puoi usare il blocco `setProperty`. Seleziona la proprietà \"image\" nel secondo elenco a discesa."
+      6:
+        image: 'notes/applab_intro_sounds_6.png'
+        text: "Quindi clicca \"Scegli\" nel terzo elenco a discesa."
+      7:
+        image: 'notes/applab_intro_sounds_7.png'
+        text: "Qui puoi caricare un'immagine dal tuo computer o cercare tra un'ampia scelta nella libreria di icone."
+      8:
+        image: 'notes/applab_intro_sounds_8.png'
+        text: "Tornando alla modalità di programmazione, puoi usare il blocco `setProperty` per cambiare il colore della tua icona. Una volta scelta l'immagine, fai clic su \"Esegui\" per vedere come appare."
+      9:
+        image: 'notes/applab_intro_sounds_9.png'
+        text: "Questo è tutto! Ora puoi iniziare ad aggiungere immagini e suoni per rendere la tua app ancora più divertente e dinamica."
+    applab_intro_designmode:
+      1:
+        image: 'notes/applab_intro_designmode_1.png'
+        text: "Per costruire le tue app dovrai progettare da zero le tue schermate con i vari elementi. È facile farlo con la modalità \"Interfaccia\" di Sviluppo App."
+      2:
+        image: 'notes/applab_intro_designmode_2.png'
+        text: "Usa l'interruttore in alto a sinistra per passare alla modalità \"Interfaccia\"."
+      3:
+        image: 'notes/applab_intro_designmode_3.png'
+        text: "Puoi aggiungere nuovi elementi trascinandoli sullo schermo. Puoi muoverli in diverse posizioni e cambiarne le dimensioni trascinando l'angolo in basso a destra."
+      4:
+        image: 'notes/applab_intro_designmode_4.png'
+        text: "Per cambiare le proprietà di un elemento usa il pannello di controllo sulla destra. Per esempio, è davvero semplice cambiare il testo di questo pulsante, il colore e la dimensione del testo."
+      5:
+        image: 'notes/applab_intro_designmode_5.png'
+        text: "Quando aggiungi un nuovo elemento alla tua schermata ottieni un ID generico come button1. Sarebbe un'ottima cosa cambiare questo ID generico con qualcosa di più significativo come \"rightButton\" (\"pulsanteDestro\"). In modo da riconoscerlo facilmente nel programma."
+      6:
+        image: 'notes/applab_intro_designmode_6.png'
+        text: "Se aggiungi un elemento per sbaglio, basta trascinarlo via o premere \"Delete\"."
+      7:
+        image: 'notes/applab_intro_designmode_7.png'
+        text: "Puoi aggiungere nuove schermate alla tua app trascinando un elemento \"Screen\"."
+      8:
+        image: 'notes/applab_intro_designmode_8.png'
+        text: "Dall'elenco a discesa in alto puoi velocemente muoverti tra le schermate che hai creato."
+      9:
+        image: 'notes/applab_intro_designmode_9.png'
+        text: "Nella tua app, hai bisogno di un modo per commutare tra tutte queste schermate per questo è stato aggiunto il blocco `setScreen` nella cassetta degli attrezzi. Usa `setScreen` dentro al blocco `onEvent` per cambiare schermata alla pressione di un pulsante."
+      10:
+        image: 'notes/applab_intro_designmode_10.png'
+        text: "Nei prossimi esercizi lavorerai su un singolo progetto. Prima aggiungerai un pulsante, poi una schermata ed infine scriverai del codice per fare in modo che il pulsante faccia passare alla nuova schermata."
+    applab_intro_share:
+      1:
+        image: 'notes/applab_intro_share_1.png'
+        text: "Ora che hai imparato le basi di Sviluppo App come aggiungere pulsanti, suoni, immagini, testo e nuove schermate puoi creare ogni genere di app."
+      2:
+        image: 'notes/applab_intro_share_2.png'
+        text: "Nel prossimo esercizio troverai l'app che hai appena costruito. Con un po' di creatività, puoi trasformarla in quiz sulla personalità per i tuoi amici, in una cartolina di auguri da condividere con la tua famiglia oppure in un gioco di ruolo (\"choose-your-own-adventure\"). Tutte queste app sono semplicemente una combinazione delle funzionalità che hai già imparato e scommetto che puoi inventarne ancora altre."
+      3:
+        image: 'notes/applab_intro_share_3.png'
+        text: "Quando hai terminato con la tua app puoi spedirla al tuo telefono per vedere come appare. Clicca su \"Condividi\" ed inserisci il numero di telefono."
+      4:
+        image: 'notes/applab_intro_share_4.png'
+        text: "(Ma questo funziona solo negli Stati Uniti.)"
+      5:
+        image: 'notes/applab_intro_share_5.png'
+        text: "Puoi anche condividere un link alla tua app sui Social Network o pubblicarla nella galleria pubblica di Code.org così anche altre persone potranno usarla e condividerla."
+      6:
+        image: 'notes/applab_intro_share_6.png'
+        text: "Hai solo visto la punta dell'iceberg di ciò che puoi fare con Sviluppo App. Sviluppo App con funzionalità complete, interazioni più evolute con l'utente, nuovi elementi per lo schermo e anche un database incorporato, ti permetteranno di costruire app ricche di funzionalità. Su \"code.org/applab\" trovi lo strumento completo e tante idee per proseguire."
+      7:
+        image: 'notes/applab_intro_share_7.png'
+        text: "Grazie per averci seguito fin qui. Ora vai a costruire e condividere la tua prima app. E continua a creare app con Sviluppo App."
+    mc_2017_agent_intro:
+      1:
+        image: 'notes/mc_2017_agent_intro_1.png'
+        text: "Stacy: Stampy, Lizzy, Preston grazie per essere venuti con me. Vorrei solo mostrarvi questo altopiano della mesa. Penso proprio che vi piacerà!"
+      2:
+        image: 'notes/mc_2017_agent_intro_2.png'
+        text: "Un attimo - c'è un'interruzione nelle rotaie! (urla)"
+      3:
+        image: 'notes/mc_2017_agent_intro_3.png'
+        text: "Tutti OK? Stampy - Ah, Ecco il problema. Guardate: c'è un'interruzione nella rotaia. Stacy: Davvero, Stampy? Lizzy: Potremmo raccogliere dei blocchi per aggiustarla. Preston: Facciamo una gara. Il primo che ritorna in cima vince. Stacy: OK, pronti, attenti, VIA! OK, raccoglierò un po' di questa terracotta. Aspetta. ragazzi, non riesco a scavare! Preston: Uguale. Lizzy: Neanch'io. Stacy: OK, è proprio strano. Stampy, tu riesci a scavare? Stampy: no, non riesco! Stacy: OK, stiamo calmi. Stampy: Il gioco si è rotto? Stacy: Se è così, come possiamo aggiustarlo? Lizzy: Non so. Stampy: Qualcuno sa programmare in Minecraft?"
+      4:
+        image: 'notes/mc_2017_agent_intro_4.png'
+        text: "(puff) Preston: Cos'è? Stampy: Non ho mai visto nulla del genere. Lizzy: È adorabile! Stacy: Si può... addomesticare? Preston: OK, cosa sta succedendo? Qualcuno dovrebbe tornare nel mondo reale e sistemare tutto. Tutti: Io no! Stacy: Io... (ooh) OK, vado."
+      5:
+        image: 'notes/mc_2017_agent_intro_5.png'
+        text: "Ehi! Oh, OK, così ora sono nel mondo reale. Ora andrò a cercare gli uffici di Minecraft."
+      6:
+        image: 'notes/mc_2017_agent_intro_6.png'
+        text: "Ma, ho bisogno del tuo aiuto. Inizia a fare l'esercitazione, inizia ad imparare a programmare e ci vediamo più tardi tra qualche livello, OK? Auguratemi buona fortuna! Penso sia da questa parte. Ahi! Cactus! Tutto OK!"
+      7:
+        image: 'notes/mc_2017_agent_intro_7.png'
+        text: "Per completare questa sfida dell'Ora del Codice, dovrai scrivere del codice per programmare l'Agente. Lavorerai insieme all'Agente per eliminare ogni ostacolo sul tuo passaggio, così potrai raccogliere tutti gli oggetti di cui avrai bisogno nel tuo viaggio. Solo l'Agente può posizionare e rompere i blocchi e solo tu puoi collezionare oggetti. Lo schermo è diviso in tre pari. Sulla sinistra Minecraft."
+      8:
+        image: 'notes/mc_2017_agent_intro_8.png'
+        text: "La zona centrale è la cassetta degli attrezzi con i comandi che conosce l'Agente."
+      9:
+        image: 'notes/mc_2017_agent_intro_9.png'
+        text: "Sulla destra l'area di lavoro. Qui è dove concateni i comandi per creare il tuo programma per controllare l'Agente."
+      10:
+        image: 'notes/mc_2017_agent_intro_10.png'
+        text: "L'Agente può camminare, girarsi e attivare le pedane a pressione. Può anche distruggere e posizionare blocchi. Quando posa blocchi come queste rotaie, le posiziona sotto di sé."
+      11:
+        image: 'notes/mc_2017_agent_intro_11.png'
+        text: "Se non ricordi cosa fare, le istruzioni per ogni esercizio sono mostrate in alto."
+      12:
+        image: 'notes/mc_2017_agent_intro_12.png'
+        text: "Se vuoi provare di nuovo, puoi premere il pulsante blu \"Ricomincia\" per riportare tutto come all'inizio dell'esercizio. E se hai bisogno di cancellare un blocco di codice, trascinalo nella cassetta degli attrezzi. Ricorda di premere \"Esegui\" per avviare l'Agente. OK, vai avanti e prova i primi livelli. Buona fortuna!"
+    mc_2017_repeat:
+      1:
+        image: 'notes/mc_2017_repeat_1.png'
+        text: "Stampy: Mi chiedo cosa stia facendo Stacy..."
+      2:
+        image: 'notes/mc_2017_repeat_2.png'
+        text: "Stacy: Wow, credo di essere nel posto giusto. È incredibile!"
+      3:
+        image: 'notes/mc_2017_repeat_3.png'
+        text: "Mi sembra di essere di nuovo in Minecraft! Ciao. Come stai? Ciao?"
+      4:
+        image: 'notes/mc_2017_repeat_4.png'
+        text: "Oh dev'essere un Creeper. Non fai niente, vero? Katie: Stacy? Stacy: Ciao, Katie? Katie: Si! Benvenuta in Minecraft!"
+      5:
+        image: 'notes/mc_2017_repeat_5.png'
+        text: "Stacy: È incredibile! Così tu lavori qui ogni giorno come sviluppatrice, giusto? Katie: Certo, è davvero fantastico. Sono una sviluppatrice del gruppo Minecraft marketplace. Stacy: Quanti linguaggi di programmazione conosci? Katie: Probabilmente nella mia carriera ho lavorato con più di una dozzina. Satcy: Una dozzina? Katie: Oh si! Stacy: Dunque, ne sai qualcosa di questo piccolo golem che si fa chiamate \"Agente\"? Katie: Usiamo l'Agente per svolgere azioni che Steve o Alex non possono fare, come attraversare la lava. Stacy: Bene, voglio imparare come programmare e loro vogliono imparare a programmare, quindi, qual'è una delle prime cose da imparare?"
+      6:
+        image: 'notes/mc_2017_repeat_6.png'
+        text: "Katie: Bene, hai bisogno di imparare i \"cicli\". Gli sviluppatori usano i cicli per fare in modo che i computer ripetano delle istruzioni più e più volte di seguito. Stacy: Capisco, penso che ce ne siano nei prossimi esercizi, allora andiamo avanti e facciamo qualche prova con i cicli."
+      7:
+        image: 'notes/mc_2017_repeat_7.png'
+        text: "Nel prossimo esercizio, puoi usare un ciclo per muovere l'Agente lungo il percorso. Trascina il blocco \"ripeti...volte\" nell'area di lavoro e posiziona il blocco \"vai avanti\" dentro al blocco \"ripeti...volte\". Questo dice al computer di fare alcune cose molte volte di seguito, senza dover trascinare un mucchio di blocchi nell'area di lavoro. Puoi scegliere quante volte ripetere, scrivendo un numero nel blocco \"ripeti...volte\"."
+      8:
+        image: 'notes/mc_2017_repeat_8.png'
+        text: "Puoi anche mettere molti comandi diversi all'interno del blocco \"ripeti...volte\", ma per ora prova ad usarlo per far avanzare l'Agente di pochi passi. Ricorda, se ti blocchi su un esercizio, puoi sempre premere il pulsante blu \"ricomincia\" e provare di nuovo."
+      9:
+        image: 'notes/mc_2017_repeat_9.png'
+        text: "Stacy: Se stai pensando che ti piacerebbe fare un lavoro come quello di Katie, vai avanti e clicca sul pulsante \"mostra il codice\" alla fine di ogni esercizio. Potrai vedere il codice JavaScript che qualcuno come Katie usa quando programma veramente Minecraft. Perfetto, grazie mille! Katie: Prego, buona fortuna a tutti!"
+    mc_2017_functions:
+      1:
+        image: 'notes/mc_2017_functions_1.png'
+        text: "Preston: Non per vantarmi, ma sono abbastanza bravo in Parkour. Lizzy: Dormi, che quando sarà giorno tornerà Stacy."
+      2:
+        image: 'notes/mc_2017_functions_2.png'
+        text: "Stacy: OK ragazzi, eccomi di nuovo qui dagli uffici di Minecraft e penso di sapere come risolvere il problema che avevamo nel gioco. Penso di poter usare una funzione. Fammi solo aprire questo."
+      3:
+        image: 'notes/mc_2017_functions_3.png'
+        text: "Allora, una funzione è uno specifico insieme di istruzioni per lo svolgimento di una certa attività, come una specie di ricetta. Nei prossimi esercizi, potrai usare le funzioni per portare a termine le tue missioni."
+      4:
+        image: 'notes/mc_2017_functions_4.png'
+        text: "Guarda il codice dentro alle funzioni, quando le trovi nell'area di lavoro, per capire cosa fanno."
+      5:
+        image: 'notes/mc_2017_functions_5.png'
+        text: "Quindi, cerca il blocco con quel nome nella cassetta degli attrezzi trascinalo nell'area di lavoro e aggancialo al blocco \"Quando si clicca si \"Esegui\"."
+      6:
+        image: 'notes/mc_2017_functions_6.png'
+        text: "Ricorda, puoi usare la stessa funzione ogni volta che hai bisogno di eseguire lo stesso insieme di istruzioni per fare qualcosa, come costruire un ponte. Buona fortuna, so che ce la puoi fare!"
+    mc_2017_congratulations:
+      1:
+        image: 'notes/mc_2017_congratulations_1.png'
+        text: "Preston: Congratulazioni!"
+      2:
+        image: 'notes/mc_2017_congratulations_2.png'
+        text: "Lizzy: Congratulazioni!"
+      3:
+        image: 'notes/mc_2017_congratulations_3.png'
+        text: "Stampy: Congratulazioni, ce l'avete fatta!"
+      4:
+        image: 'notes/mc_2017_congratulations_4.png'
+        text: "Stacy: Congratulazioni ragazzi, ce l'avete fatta alla grande! Ed ora che avete completato l'Ora del Codice, potete iniziare a programmare in Minecraft. Avete imparato: cicli, funzioni e cosa può fare un Agente."
+      5:
+        image: 'notes/mc_2017_congratulations_5.png'
+        text: "Adesso è il momento dell'esercizio libero, dove tu sei il programmatore. Usa tutto il tempo che ti resta per scrivere le tue funzioni per esplorare, scavare e costruire."
+      6:
+        image: 'notes/mc_2017_congratulations_6.png'
+        text: "Puoi portare il codice che scrivi in questo esercizio nel tuo mondo Minecraft su Minecraft: Education Edition e continuare a programmare con l'Agente. Clicca su \"Termina\" e segui le istruzioni per ottenere il link. Buon divertimento e buon lavoro!"
+      7:
+        image: 'notes/mc_2017_congratulations_7.png'
+        text: "Stacy: Ed eccomi di nuovo qui! OK, questo è l'Agente! Vi faccio vedere cosa può fare. Guardate, lo sta facendo! Gli avevo detto di costruire una scala, ora possiamo usarla per uscire da questi blocchi di terra cotta. E voi ragazzi? Non si tratta solo di scale. Posso dire all'Agente di fare quello che voglio, e lui lo farà per me."
+      8:
+        image: 'notes/mc_2017_congratulations_8.png'
+        text: "Stampy: Come hai fatto? Stacy: È facile, in realtà. Ho semplicemente programmato!"
+    csd_concept_how_computers_work:
+      1:
+        image: 'notes/csd_concept_how_computers_work_1.png'
+        text: "Dovunque guardi, i computer stanno cambiando il mondo.\nChe si trovino sulle nostre scrivanie, nelle nostre case, nelle nostre tasche o in qualsiasi altro posto. Ma nonostante la maggior parte di noi usi ogni giorno questa rivoluzionaria tecnologia, non ci chiediamo tanto spesso: \"Come funzionano i computer\"? In questa serie, imparerai come funzionano realmente i computer, a partire da ciò che fa sì che un computer sia un computer. Poi, vedrai come sono rappresentati i dati all'interno del computer utilizzando segnali elettrici che vengono accesi e spenti a velocità sbalorditive."
+      2:
+        image: 'notes/csd_concept_how_computers_work_2.png'
+        text: "Dopo di che, imparerai come i computer usano i circuiti integrati per fare tutto: da semplici operazioni matematiche, alla simulazione di interi mondi virtuali. Poi potrai allargare lo sguardo e osservare le diverse parti di un computer che gestiscono gli ingressi e le uscite e memorizzano tutti questi dati. Infine, darai un'occhiata a cos'è il software e come questo controlla l'hardware. Quindi, che tu sia solo curioso di capire i dispositivi che usi ogni giorno o che tu voglia progettare l'innovazione del futuro, il primo passo è imparare come funzionano i computer."
+    csd_concept_computer:
+      1:
+        image: 'notes/csd_concept_computer_1.png'
+        text: "Mi chiamo May-Li Khoe e sono progettista ed inventrice.\nAlcune delle cose che ho progettato, sono finite alla Apple e ora progetto prodotti per rendere la scuola più facile ai bambini.\nFaccio anche altri lavori come la DJ e la ballerina."
+      2:
+        image: 'notes/csd_concept_computer_2.png'
+        text: "I computer sono ovunque!\nSono nelle tasche delle persone, nelle loro macchine, ai loro polsi.\nPossono essere nei vostri zaini proprio adesso.\nMa cosa rende un computer un computer?\nE come funziona?"
+      3:
+        image: 'notes/csd_concept_computer_3.png'
+        text: "Ciao, sono Nat!\nSono uno dei primi progettisti dell'Xbox.\nLavoro con il computer più o meno da quando avevo sette anni\ne adesso lavoro sulla realtà virtuale.\nCome umani, abbiamo sempre creato strumenti per aiutarci a risolvere problemi.\nStrumenti come una carriola, un martello, una macchina da stampa o un camion."
+      4:
+        image: 'notes/csd_concept_computer_4.png'
+        text: "Tutte queste invenzioni ci hanno aiutati con il lavoro manuale.\nNel tempo le persone hanno iniziato a chiedersi se fosse stato possibile progettare e costruire macchine che ci aiutassero nel ragionamento, come risolvere equazioni o mappare le stelle nel cielo.\nInvece di muovere o manipolare oggetti fisici come terra e sassi, queste macchine avrebbero dovuto essere progettate per manipolare dati.\nQuando i pionieri dell'informatica studiarono come progettare una macchina che ragiona, capirono che questa doveva eseguire quattro diverse attività."
+      5:
+        image: 'notes/csd_concept_computer_5.png'
+        text: "Doveva acquisire dati in ingresso (INPUT),\nmemorizzare dati (STORAGE),\nelaborarli (PROCESSING),\ne fornire dati in uscita (OUTPUT).\nOra questo può sembrare semplice, ma queste quattro cose sono comuni a tutti i computer.\nQuesto è ciò che rende un computer un computer."
+      6:
+        image: 'notes/csd_concept_computer_6.png'
+        text: "I computer iniziarono come semplici calcolatrici, il che all'epoca era già impressionante, e si limitavano ad elaborare e restituire numeri.\nMa ora possiamo usarli per parlarci, li possiamo usare per fare dei giochi, per controllare dei robot e probabilmente fare qualsiasi cosa che tu possa immaginare.\nI computer moderni non assomigliano affatto a quelle vecchie goffe macchine, ma continuano a fare quelle stesse quattro cose."
+      7:
+        image: 'notes/csd_concept_computer_7.png'
+        text: "Prima di tutto parleremo degli input.\nPuoi dire al computer cosa fare con la tastiera, puoi dirlo con il mouse, il microfono o la telecamera.\nTutti questi input forniscono dati al computer, che devono essere archiviati in una memoria."
+      8:
+        image: 'notes/csd_concept_computer_8.png'
+        text: "Il processore del computer prende i dati dalla memoria, li manipola e li trasforma usando un algoritmo, che è semplicemente costituito da una serie di istruzioni.\nQuindi invia alla memoria i dati elaborati.\nQuesto continua fino a che l'elaborazione dei dati ha fornito un risultato."
+      9:
+        image: 'notes/csd_concept_computer_9.png'
+        text: "Il modo in cui un computer fornisce i dati in uscita, dipende dallo scopo per il quale è stato progettato.\nLo schermo di un computer può mostrare testo, foto, filmati o giochi interattivi... e anche realtà virtuale!\nL'output di un computer può anche includere dei segnali per controllare un robot."
+      10:
+        image: 'notes/csd_concept_computer_10.png'
+        text: "I computer che usiamo oggi appaiono molto diversi dalle prime macchine realizzate. E chissà come saranno i computer di domani?\nSpero che tu possa aiutare a definire come saranno fatti i computer di domani.\nMa tutti i computer, indipendentemente dalla tecnologia che usano, fanno sempre le stesse quattro cose.\nRicevono dei dati in ingresso (INPUT),\nli memorizzano (STORAGE),\nli elaborano (PROCESSING),\ne infine danno dei risultati in uscita (OUTPUT)."
+    csd_concept_binary_data:
+      1:
+        image: 'notes/csd_concept_binary_data_1.png'
+        text: "Ciao! Mi chiamo Limor Fried e sono un'ingegnera qui alle Adafruit Industries.\nE qui è dove sviluppo i miei progetti, dove progetto circuiti per la moda, la musica e la tecnologia."
+      2:
+        image: 'notes/csd_concept_binary_data_2.png'
+        text: "Io sono Federico Gomez Suarez e sono uno sviluppatore di software con Microsoft Hack for Good.\nE cerco di usare la tecnologia per aiutarci a risolvere alcuni dei grandi problemi sociali del nostro tempo."
+      3:
+        image: 'notes/csd_concept_binary_data_3.png'
+        text: "Puoi aver sentito dire che il funzionamento dei computer è basato su uni e zeri.\nMa quasi nessuno oggi in realtà si occupa direttamente di questi uni e zeri.\nMa uni e zeri giocano un ruolo fondamentale nel funzionamento interno dei computer."
+      4:
+        image: 'notes/csd_concept_binary_data_4.png'
+        text: "All'interno di un computer ci sono fili e circuiti elettrici che trasportano tutti i dati.\nCome si fa a memorizzare o rappresentare i dati usando l'elettricità?"
+      5:
+        image: 'notes/csd_concept_binary_data_5.png'
+        text: "Dunque, se hai un singolo filo percorso da elettricità, il segnale può essere acceso o spento (ON o OFF).\nNon sono molte possibilità, ma è veramente un ottimo inizio.\nCon un filo, possiamo rappresentare un sì o un no, vero o falso, uno o zero, o qualunque altra cosa che abbia due opzioni.\nQuesto stato acceso/spento di un singolo filo è chiamato BIT, ed è il più piccolo dato che un computer può memorizzare."
+      6:
+        image: 'notes/csd_concept_binary_data_6.png'
+        text: "Se usi più fili (\"wires\"), hai a disposizione più BIT: quindi più uni e zeri.\nCon più BIT puoi rappresentare dati più complessi.\nMa per capire questo, dobbiamo imparare qualcosa sul SISTEMA NUMERICO BINARIO."
+      7:
+        image: 'notes/csd_concept_binary_data_7.png'
+        text: "Nel sistema numerico decimale, abbiamo 10 cifre da 0 a 9, ed è il modo in cui tutti abbiamo imparato a contare.\nNel sistema numerico binario, abbiamo solo due cifre: zero e uno.\nCon queste due cifre possiamo contare fino a qualunque numero."
+      8:
+        image: 'notes/csd_concept_binary_data_8.png'
+        text: "Ecco come funziona.\nNel sistema decimale, siamo tutti abituati al fatto che la posizione di ogni cifra ha un valore diverso.\nC'è la posizione 1, la posizione 10, la posizione 100, e così via.\nPer esempio, un 9 nella posizione 100 equivale a 900.\nAnche in binario ogni posizione ha un particolare valore.\nMa invece di moltiplicare per 10 ogni volta, si moltiplica per 2.\nQuindi, c'è la posizione 1, la posizione 2, la posizione 4, la posizione 8, e così via.\nPer esempio, il numero 9 in binario diventa 1001.\nPer calcolare il valore, sommiamo 1x8+0x4+0x2+1x1.\nQuasi nessuno fa questi calcoli, perché il computer lo fa per noi.\nIl fatto importante è che ogni numero può essere rappresentato semplicemente da uni e zeri o da un gruppo di fili che sono accesi o spenti.\nPiù fili usi, più grandi sono i numeri che puoi memorizzare.\nCon 8 fili, puoi memorizzare numeri tra 0 e 255.\nChe corrisponde a 8 uni.\nCon solo 32 fili, è possibile memorizzare da 0 a oltre 4 miliardi.\nUsando il sistema numerico binario, puoi rappresentare qualunque numero."
+      9:
+        image: 'notes/csd_concept_binary_data_9.png'
+        text: "Ma come fare con altri tipi di dati?\nCome testo, immagini o suoni?\nAnche tutti questi dati possono essere rappresentate con numeri.\nPensa a tutte le lettere dell'alfabeto.\nPuoi assegnare un numero ad ogni lettera.\nA può essere 1, B può essere 2 ecc.\nPuoi quindi rappresentare ogni parola o frase con una sequenza di numeri.\nE come si vede, questi numeri possono essere memorizzati come segnali elettrici accesi o spenti.\nOgni parola che vedi in ogni pagina web o sul tuo telefono è rappresentata usando un sistema come questo."
+      10:
+        image: 'notes/csd_concept_binary_data_10.png'
+        text: "Ora consideriamo foto, video e tutta la grafica che vedi su uno schermo."
+      11:
+        image: 'notes/csd_concept_binary_data_11.png'
+        text: "Tutte queste immagini sono fatte di piccolissimi puntini chiamati PIXEL e ogni pixel ha un colore.\nOgni colore può essere rappresentato con dei numeri.\nUna tipica immagine ha milioni di questi pixel e un tipico video visualizza 30 immagini al secondo, quindi stiamo parlando proprio di molti dati."
+      12:
+        image: 'notes/csd_concept_binary_data_12.png'
+        text: "Ogni suono è costituito da una serie di vibrazioni dell'aria.\nLe vibrazioni possono essere rappresentate graficamente con una forma d'onda.\nOgni punto in questa forma d'onda può essere rappresentato con dei numeri.\nE in questo modo, ogni suono può essere trasformato in una serie di numeri.\nSe vuoi una migliore qualità del suono, scegli un sistema audio a 32 bit o a 8 bit?\nPiù bit significa un intervallo di numeri più ampio."
+      13:
+        image: 'notes/csd_concept_binary_data_13.png'
+        text: "Quando usi un computer per scrivere programmi o per creare la tua app, non hai direttamente a che fare con questi uni e zeri.\nMa gestisci immagini, suoni o video.\nQuindi, se vuoi capire come funzionano i computer al loro interno, tutto si basa su questi uni e zeri e sui segnali elettrici nei circuiti."
+    csd_concept_circuits_logic:
+      1:
+        image: 'notes/csd_concept_circuits_logic_1.png'
+        text: "Una delle cose più fantastiche che ho scoperto sui circuiti elettrici è che possono assumere una forma artistica: se ho un'idea creativa, posso realizzarla con dei circuiti.\nQuindi, se hai delle idee, puoi usare la tecnologia per fargli prendere vita!"
+      2:
+        image: 'notes/csd_concept_circuits_logic_2.png'
+        text: "Ogni ingresso (INPUT) o uscita (OUTPUT) di un computer è un tipo di dato che può essere rappresentata con segnali elettrici accesi (ON) o spenti (OFF) o con uni e zeri."
+      3:
+        image: 'notes/csd_concept_circuits_logic_3.png'
+        text: "Per elaborare i dati ricevuti in ingresso (INPUT) e per generare quelli in uscita (OUTPUT), un computer deve modificare e combinare i dati in ingresso.\nPer fare ciò, un computer usa milioni di minuscoli componenti elettronici, che insieme formano i circuiti."
+      4:
+        image: 'notes/csd_concept_circuits_logic_4.png'
+        text: "Guardiamo più da vicino come i circuiti possono modificare i dati rappresentati con uni e zeri.\nQuesto è un circuito semplicissimo.\nPrende un segnale elettrico, ON o OFF, e lo inverte.\nQuindi, se il segnale che fornisci è 1, il circuito ti risponde 0 e se dai al circuito uno 0, lui ti restituisce un 1.\nIl segnale che entra NON è uguale a quello che esce, perciò chiamiamo questo circuito NOT."
+      5:
+        image: 'notes/csd_concept_circuits_logic_5.png'
+        text: "Dei circuiti più complessi possono combinare insieme alcuni segnali e fornire in uscita diversi risultati.\nIn questo esempio, un circuito riceve in ingresso due segnali, ognuno può essere 1 o 0.\nSe entrambi i segnali in ingresso sono 0, allora anche il risultato è 0.\nQuesto circuito restituisce 1 solo se il primo segnale e (AND) il secondo segnale sono entrambi 1, perciò chiamiamo questo circuito AND."
+      6:
+        image: 'notes/csd_concept_circuits_logic_6.png'
+        text: "Ci sono molti piccoli circuiti come questo che svolgono semplici operazioni logiche.\nCollegando insieme questi circuiti, possiamo creare circuiti più complessi che eseguono operazioni più complesse."
+      7:
+        image: 'notes/csd_concept_circuits_logic_7.png'
+        text: "Per esempio, puoi realizzare un circuito che somma due bit, chiamato sommatore (ADDER).\nQuesto circuito riceve in ingresso due singoli bit, ognuno 1 o 0, e li elabora per calcolare la somma.\nLa somma può essere 0+0=0, 0+1=1 oppure 1+1=10 (2 in binario).\nHai bisogno di due fili in uscita, perché servono due cifre binarie per rappresentare la somma.\nOra che hai un singolo sommatore per due bit di informazione, puoi collegare insieme molti di questi sommatori per elaborare numeri più grandi."
+      8:
+        image: 'notes/csd_concept_circuits_logic_8.png'
+        text: "Per esempio, ecco come un sommatore da 8 bit addiziona i numeri 25 e 50.\nOgni numero è rappresentato usando 8 bit, si hanno quindi 16 differenti segnali elettrici in ingresso al circuito.\nIl circuito di un sommatore da 8 bit contiene molti piccoli sommatori, che insieme calcolano la somma."
+      9:
+        image: 'notes/csd_concept_circuits_logic_9.png'
+        text: "Altri circuiti elettrici possono eseguire altre semplici operazioni, come sottrazione o moltiplicazione.\nInfatti, tutte le elaborazioni che il tuo computer svolge non sono niente altre che tantissime semplici operazioni messe insieme.\nOgni singola operazione svolta da un computer è così semplice che potrebbe essere svolta da una persona, ma questi circuiti dentro al computer sono estremamente più veloci."
+      10:
+        image: 'notes/csd_concept_circuits_logic_10.png'
+        text: "Tanto tempo fa, questi circuiti erano grandi e lenti, un sommatore da 8 bit poteva essere grande come un frigorifero e ci metteva dei minuti per eseguire un semplice calcolo.\nOggi, i circuiti dei computer sono di dimensioni microscopiche ed estremamente più veloci.\nPerché computer più piccoli sono anche più veloci?\nBeh, perché più piccoli sono i circuiti, più breve è la distanza che deve percorrere il segnale elettrico.\nL'elettricità si muove quasi alla velocità della luce, per questo i circuiti moderni possono eseguire miliardi di calcoli al secondo."
+      11:
+        image: 'notes/csd_concept_circuits_logic_11.png'
+        text: "Così, sia che tu stia giocando, producendo un video o esplorando il cosmo, o qualunque altra cosa tu possa fare con la tecnologia, richiede di elaborare molti dati molto velocemente.\nSotto tutta questa complessità ci sono solo tantissimi minuscoli circuiti che trasformano segnali binari in siti web, video, musica e giochi.\nQuesti circuiti possono anche aiutarci a decodificare il DNA per diagnosticare e curare delle malattie.\nAllora, cosa vorresti fare tu con tutti questi circuiti?"
+    csd_concept_memory_cpu_input_output:
+      1:
+        image: 'notes/csd_concept_memory_cpu_input_output_1.png'
+        text: "Ciao, mi chiamo Madison Maxey.\nHo un'azienda chiamata Loomia in cui produciamo tessuti \"intelligenti\" per vestiti adattabili ed altri oggetti flessibili.\nNon ci sono limiti quando si tratta di tessuti."
+      2:
+        image: 'notes/csd_concept_memory_cpu_input_output_2.png'
+        text: "Il mio nome è Danielle Applestone e sono l'amministratrice delegata dell'azienda Othermachine Company.\nCostruiamo una fresa da tavolo.\nUna fresa utilizza un utensile rotante per incidere un materiale e creare oggetti 3D."
+      3:
+        image: 'notes/csd_concept_memory_cpu_input_output_3.png'
+        text: "Alla fin fine, tutti i computer fanno le stesse quattro cose.\nRicevono dati in ingresso (INPUT), memorizzano ed elaborano dati, e quindi restituiscono un risultato in uscita (OUTPUT).\nOgnuna di queste attività è svolta da un diverso elemento del computer."
+      4:
+        image: 'notes/csd_concept_memory_cpu_input_output_4.png'
+        text: "Ci sono i dispositivi di ingresso (INPUT) che rilevano fenomeni nel mondo esterno e li convertono in dati in binario.\nC'è la memoria per memorizzare questi dati.\nC'è un'unità centrale di elaborazione CPU (Central Processing Unit), dove vengono eseguiti tutti i calcoli.\nE, infine, ci sono i dispositivi di uscita (OUTPUT) che convertono i dati di uscita in forma fisica."
+      5:
+        image: 'notes/csd_concept_memory_cpu_input_output_5.png'
+        text: "Prima di tutto, parliamo degli ingressi (INPUT).\nI computer possono acquisire dati da molti tipi di dispositivi di ingresso, come la tastiera di un computer, lo schermo tattile di un telefono, una telecamera, un microfono o un GPS.\nMa anche i sensori di un'auto, di un termostato o di un drone sono dispositivi di ingresso."
+      6:
+        image: 'notes/csd_concept_memory_cpu_input_output_6.png'
+        text: "Ora, osserviamo un semplice esempio di come i dati in ingresso viaggiano attraverso un computer e diventano uscite.\nQuando premi un tasto su una tastiera, diciamo la lettera \"B\", la tastiera converte la lettera in un numero.\nQuesto numero viene spedito al computer in formato binario (uni e zeri)."
+      7:
+        image: 'notes/csd_concept_memory_cpu_input_output_7.png'
+        text: "A partire da questo numero, la CPU deve calcolare come visualizzare, pixel per pixel, la lettera \"B\".\nLa CPU richiede alla memoria, una dopo l'altra, le istruzioni per poter disegnare la lettera \"B\".\nLa CPU esegue queste istruzioni ed invia alla memoria il risultato come insieme di pixel."
+      8:
+        image: 'notes/csd_concept_memory_cpu_input_output_8.png'
+        text: "Infine, questi pixel vengono spediti allo schermo in formato binario.\nLo schermo è un dispositivo di uscita che converte i segnali binari nei colori dei puntini luminosi che costituiscono l'immagine che vediamo."
+      9:
+        image: 'notes/csd_concept_memory_cpu_input_output_9.png'
+        text: "Tutto ciò avviene così velocemente che sembra istantaneo, ma per visualizzare ogni lettera, un computer esegue migliaia di istruzioni, iniziando dall'istante in cui il tuo dito preme il tasto."
+      10:
+        image: 'notes/csd_concept_memory_cpu_input_output_10.png'
+        text: "In questo esempio, il dispositivo di uscita era lo schermo, ma ce ne sono molte altre tipologie che ricevono un segnale binario dal computer e fanno qualcosa nel mondo esterno.\nPer esempio, un altoparlante riproduce dei suoni e una stampante 3D realizza degli oggetti.\nI dispositivi di uscita possono anche controllare il movimento di un oggetto, come un braccio robotico, il motore di un auto o l'utensile da taglio della fresa prodotta dalla mia azienda.\nNuovi tipi di dispositivi di ingresso e di uscita permettono ai computer di interagire con il mondo in modi del tutto nuovi.\nQuesto si è reso possibile grazie all'aumento della velocità e della miniaturizzazione di memoria e CPU."
+      11:
+        image: 'notes/csd_concept_memory_cpu_input_output_11.png'
+        text: "Più un'attività è complicata e con tanti dati che richiede in ingresso o restituisce in uscita più il computer deve avere potenza di elaborazione e capacità di memoria.\nScrivere delle lettere su uno schermo può essere semplice, ma per realizzare una grafica complessa in 3D o produrre un film ad alta definizione, spesso i computer moderni sono dotati di CPU multiple per elaborare tutti i dati e molti gigabytes (GB) di memoria per memorizzarli."
+      12:
+        image: 'notes/csd_concept_memory_cpu_input_output_12.png'
+        text: "Non importa che cosa vuoi fare con il computer, ogni singola azione riguarda:\ninserire dati dal mondo esterno,\nmemorizzare ed elaborare questi dati\ne restituire un risultato al mondo esterno."
+    csd_concept_hardware_software:
+      1:
+        image: 'notes/csd_concept_hardware_software_1.png'
+        text: "Ciao, sono Erica Gomez e sono una responsabile tecnica in Amazon.com.\nUno dei vantaggi di lavorare in ambito tecnologico, e in particolare in Amazon, è che posso portare la mia cagnolina con me al lavoro tutti i giorni.\nIl mio lavoro è di aiutare a fare in modo che il software veda la luce e il suo lavoro è quello di appisolarsi sotto la mia scrivania e russare molto forte."
+      2:
+        image: 'notes/csd_concept_hardware_software_2.png'
+        text: "Il mio nome è Jerome Holman e sono un responsabile di programma nel Team Xbox e ho un lavoro davvero divertente: fondamentalmente unisco hardware e software per farvi avere tutti i giochi che amate sulla vostra Xbox."
+      3:
+        image: 'notes/csd_concept_hardware_software_3.png'
+        text: "Quando guardate dentro ad un computer vedete un mucchio di circuiti, circuiti integrati, fili, altoparlanti, connettori e molto altro.\nQuesto è l'HARDWARE."
+      4:
+        image: 'notes/csd_concept_hardware_software_4.png'
+        text: "Ma quello che non vedete è il SOFTWARE.\nIl software è l'insieme di tutti i programmi eseguiti nel computer.\nUn programma (detto anche CODICE) può essere un'applicazione per giocare, una pagina web, o un'applicazione per analizzare i dati come quella che io e il mio gruppo qui in Amazon usiamo per capire come si comportano i clienti."
+      5:
+        image: 'notes/csd_concept_hardware_software_5.png'
+        text: "Ma come interagiscono tra loro hardware e software?\nIniziamo analizzando l'unità centrale di elaborazione (CPU)."
+      6:
+        image: 'notes/csd_concept_hardware_software_6.png'
+        text: "La CPU è il principale circuito integrato che controlla tutte le altre parti del computer.\nUna CPU deve fare varie cose, per questo all'interno è suddivisa in componenti più piccoli che gestiscono specifiche attività.\nHa un componente per eseguire semplici operazioni matematiche e logiche.\nE ne ha altri per inviare e ricevere dati da e verso altre parti del computer."
+      7:
+        image: 'notes/csd_concept_hardware_software_7.png'
+        text: "La vera magia della CPU sta nel sapere quali componenti usare e quando.\nLa CPU riceve semplici istruzioni che le dicono quale componente usare per un particolare lavoro.\nPer esempio, un'istruzione di SOMMA (ADD) dice alla CPU di usare il componente matematico-logico per calcolare un nuovo numero.\nE l'istruzione MEMORIZZA (STORE) dice alla CPU di usare un componente diverso per archiviare il risultato in memoria."
+      8:
+        image: 'notes/csd_concept_hardware_software_8.png'
+        text: "Proprio come i numeri, tutte queste semplici istruzioni possono essere rappresentate con gli uni e zeri del sistema binario ovvero segnali elettrici accesi e spenti.\nLe istruzioni scritte in binario sono archiviate in memoria e la CPU le recupera ed esegue in sequenza una dopo l'altra.\nInfatti, questa sequenza di istruzioni è un programma molto semplice, detto codice binario."
+      9:
+        image: 'notes/csd_concept_hardware_software_9.png'
+        text: "Il codice binario è la forma più semplice di software e controlla tutto l'hardware di un computer.\nAl giorno d'oggi nessuno scrive più codice binario.\nCi vorrebbe un'eternità!"
+      10:
+        image: 'notes/csd_concept_hardware_software_10.png'
+        text: "Oggi, il software che scriviamo ha questo aspetto questo (Python),\no questo (Ruby)\no anche questo (Blockly).\nI linguaggi di programmazione come questi permettono di scrivere programmi usando un linguaggio più simile a quello umano (in inglese)."
+      11:
+        image: 'notes/csd_concept_hardware_software_11.png'
+        text: "Per disegnare un rettangolo sullo schermo, serve un'unica istruzione.\nQuest'istruzione di alto livello è convertita in centinaia o migliaia di semplici istruzioni binarie che la CPU è in grado di capire.\nIl software dice alla CPU cosa fare, ma quando ascolti musica, navighi sul web e chiacchieri con un amico, il computer utilizza più programmi contemporaneamente."
+      12:
+        image: 'notes/csd_concept_hardware_software_12.png'
+        text: "Innanzitutto, come fanno tutti questi programmi ad arrivare sul computer?\nE come può la CPU eseguirli tutti insieme?\nPer scoprirlo dobbiamo dare un'occhiata al sistema operativo."
+      13:
+        image: 'notes/csd_concept_hardware_software_13.png'
+        text: "Il sistema operativo (OS) di un computer è il programma principale che decide come il software deve usare l'hardware del computer.\nAd esempio, io ho creato il sistema operativo Windows installato su molti computer."
+      14:
+        image: 'notes/csd_concept_hardware_software_14.png'
+        text: "Il sistema operativo è un programma con speciali caratteristiche che gli permettono di controllare gli altri programmi eseguiti dal computer.\nTi permette di installare nuovi programmi caricandoli nella memoria del tuo computer.\nDecide quando un programma deve essere eseguito dalla CPU e se può accedere ai dispositivi di ingresso e uscita del computer.\nE quando pensi che il tuo computer stia eseguendo molti programmi contemporaneamente, in realtà, è il sistema operativo che velocemente fa eseguire alla CPU un programma dopo l'altro ognuno per qualche frazione di secondo."
+      15:
+        image: 'notes/csd_concept_hardware_software_15.png'
+        text: "All'interno di ogni computer c'è un sistema operativo che gestisce il software che controlla l'hardware del computer."
+      16:
+        image: 'notes/csd_concept_hardware_software_16.png'
+        text: "Il software è l'insieme dei programmi, ognuno dei quali è una sequenza di istruzioni scritte col sistema binario e queste istruzioni in binario corrispondono a segnali elettrici che scorrono attraverso miliardi di minuscoli circuiti."
+      17:
+        image: 'notes/csd_concept_hardware_software_17.png'
+        text: "I computer hanno la potenzialità di fare cose fantastiche.\nMa l'unica cosa che rende i computer intelligenti o utili, sei tu.\nQuando impari a programmare, devi definire il problema da risolvere e scrivere il software che trasforma queste idee in realtà."

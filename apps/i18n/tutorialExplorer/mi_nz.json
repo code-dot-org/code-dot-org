@@ -1,4 +1,5 @@
 {
+  "startButton": "Start",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Tau 2-5",
   "filterGrades68": "Tau 6-8",
   "filterGrades9": "Tau 9+",
-  "filterTeacherExperience": "Te matatau o te kaiwhakaako",
-  "filterTeacherExperienceBeginner": "Beginner",
-  "filterTeacherExperienceComfortable": "Hāneanea",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Te matatau o te ākonga",
   "filterStudentExperienceBeginner": "Beginner",
   "filterStudentExperienceComfortable": "Hāneanea",

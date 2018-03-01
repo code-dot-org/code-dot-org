@@ -1,95 +1,91 @@
-* * *
-
-title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_how_to_companies) %>
+layout: wide
+nav: how_to_nav
+---
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# Jak wprowadzić Godzinę Kodowania do Twojej firmy
 
-## Inspire students and volunteer for the Hour of Code
+## Zainspiruj uczniów i wolontariuszy do Godziny Kodowania
 
-**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+Code.org umożliwia połączenie się Twoich pracowników [połączenia ](%= resolve_url('https://code.org/volunteer') %) z lokalnymi klasami, które wykonują Godzinę Kodowania, aby mogli opowiedzieć uczniom o swoich doświadczeniach z pracy i zainspirować ich do studiowania informatyki.
 
-  * [Sign up](%= resolve_url('https://code.org/volunteer') %) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
+- [Zarejestruj się](%= resolve_url('https://code.org/volunteer') %) jako wolontariusz.
+- Więcej wskazówek dotyczących udziału pracowników w zajęciach lekcyjnych znajdziesz w naszym [Przewodniku dla partnerów korporacyjnych](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
 
-## Additional ways companies can support the Hour of Code:
+## Dodatkowe sposoby, firm mogą wspomóc Godzinę Kodowania:
 
-  * Use our [marketing toolkit](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
-  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Poproś swojego CEO, aby [ rozesłał w firmie mail ](%= resolve_url('/promote/resources#sample-emails') %), podkreślający znaczenie informatyki i zachęcający pracowników, aby to rozpowszechniali. 
+- Bądź gospodarzem radosnej Godziny Kodowania ze współpracownikami, aby spróbowali [ tych aktywności ](%= resolve_url('/learn') %).
+- Zorganizuj wydarzenie Godziny Kodowania dla lokalnej klasy uczniów lub dla partnerów niekomercyjnych w biurze Twojej firmy. Zobacz poniżej poradnik, jak to zrobić.
 
-## Jak zostać gospodarzem Godziny Kodowania
+# Jak zorganizować Godzinę Kodowania dla uczniów
 
-## 1) Promuj swoją Godzinę Kodowania
+## 1. Promuj swoją Godzinę Kodowania
 
-  * Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+- Promuj swoją [Godzinę Kodowania](%= resolve_url('/promote') %) i zachęć innych do jej zorganizowania.
+- Zachęć programistów w swojej firmie do odwiedzenia lokalnej klasy, aby pomogli w poprowadzeniu Godziny Kodowania i zainspirowali uczniów do studiowania informatyki. Mogą oni [zarejestrować się](%= resolve_url('https://code.org/volunteer/engineer') %), by przyłączyć się do klasy.
 
-## 2) Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Wybierz poradnik:
+## 2. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+## 3. Wybierz aktywność
 
-**Wszystkie samouczki Godziny Kodowania:**
+Gościmy wiele [zabawnych, godzinnych aktywności ](%= resolve_url('/learn') %) dla wszystkich grup wiekowych, zorganizowanych przez różnych partnerów. [ Wypróbuj je! ](%= resolve_url('/learn') %)
 
-  * Require minimal prep-time
-  * Are self-guided - allowing participants to work at their own pace and skill-level
+**Wszystkie aktywności Godziny Kodowania** wymagają niewielkiego czasu na przygotowanie i są samo objaśniające się - umożliwiając uczestnikom pracę we własnym tempie i na własnym poziomie przygotowania.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 4) Zaplanuj swoje potrzeby technologiczne - komputery są opcjonalne
+## 4. Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Najlepsze doświadczenia z Godziną Kodowania zapewnią komputery z dostępem do Internetu. Ale **nie** potrzebujesz komputera dla każdego uczestnika, możesz przeprowadzić Godzinę Kodowania nawet bez żadnych komputerów.
 
-**Plan Ahead!** Do the following before your event starts:
+**Planuj!** Przed rozpoczęciem Twojego wydarzenia, wykonaj następujące czynności:
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Nie masz wystarczająco urządzeń?** Użyj [programowania parami](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
+- Przetestuj samouczki na komputerach lub innych urządzeniach. Upewnij się, że działają poprawnie w przeglądarkach z dźwiękiem i wideo.
+- Zapewnij słuchawki lub poproś uczestników, by przynieśli swoje, jeśli samouczek, który wybrałeś, działa najlepiej z dźwiękiem.
+- **Czy nie masz wystarczająco urządzeń?** Wykorzystaj [programowanie parami](https://www.youtube.com/watch?v=vgkahOzFH2Q). Gdy uczniowie współpracują ze sobą, pomagają sobie nawzajem i mniej zależą od nauczyciela. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
+- **Jeśli masz zbyt wolne łącze internetowe,** to pokazuj filmy przed całą klasą, aby każdy uczeń nie musiał pobierać swojego filmu. Możesz też wypróbować samouczki bez komputera lub offline.
 
-![](/images/fit-350/group_ipad.jpg)
+<img src="/images/fit-350/group_ipad.jpg" />
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5. Rozpocznij swoją Godzinę Kodowania od obejrzenia inspirującego filmu
 
-Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest wpływ informatyki na każdą sferę naszego życia. Share more about what inspired you to pursue computer science and your role at your company.
+Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest wpływ informatyki na każdą sferę naszego życia. Podziel się ponadto, co zainspirowało Ciebie, by zajmować się informatyką i jaka jest Twoja rola w Twojej firmie.
 
 **Pokaż inspirujący film:**
 
-  * Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Znajdź więcej inspirujących filmów [tutaj](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- [ Wideo na Światową Godzinę Kodowania](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Prezydent Obama wzywa wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Więcej inspirujących filmów znajdziesz [tutaj](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity:**
+**Pomysły, jak przybliżyć aktywności Godziny Kodowania Twoim uczniom:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * Zobacz porady dotyczące zainteresowania dziewcząt informatyką [tutaj](%= resolve_url('https://code.org/girls') %).
+- Wyjaśnij, w jaki sposób technologia wpływa na nasze życie, użyj przykładów, które zainteresują zarówno chłopców, jak i dziewczęta - opowiedz o aplikacjach i technologii, które ratują życie, pomagają ludziom, łączą ludzi. 
+- Jeśli jesteście firmą technologiczną, macie zabawne demo, innowacyjne produkty, nad którymi pracuje Wasza firma.
+- Jeśli nie jesteście firmą technologiczną, omówcie sposoby, Wasza firma korzysta z technologii do rozwiązywania problemów i realizacji celów.
+- Zaproście programistów z Waszej firmy, by opowiedzieli, dlaczego postanowili studiować informatykę i o projektach, nad którymi pracują.
+- Zobacz [tutaj](%= resolve_url('https://code.org/girls') %) porady, jak zainteresować informatyką dziewczęta.
 
-## 6) Programuj!
+## 6. Programuj!
 
 **Skieruj uczestników na aktywności**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+- Napisz link do samouczka na tablicy. Znajdź link wymieniony w [informacji dla Twojego wybranego samouczka](%= resolve_url('/learn') %) pod liczbą uczestników.
+- Dla młodszych uczniów, załaduj stronę samouczka wcześniej lub zapisz go jako zakładkę.
 
-**When participants come across difficulties it's okay to respond:**
+**Oto, co można powiedzieć, kiedy Twoi uczniowie napotkają trudności:**
 
-  * "Nie wiem. Sprawdźmy to razem."
-  * "Technologia nie zawsze działa na sposób, w jaki chcemy."
-  * "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
+- "Nie wiem. Sprawdźmy to razem."
+- "Technologia nie zawsze działa w sposób, jaki chcemy."
+- "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
 
 **Co zrobić, jeśli ktoś kończy wcześniej?**
 
-  * They can try another Hour of Code activity at hourofcode.com/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+- Mogą spróbować innej aktywności Godziny Kodowania na hourofcode.com/learn
+- Lub poproś ich, by pomogli innym, którzy maja problemy z swoimi zadaniami.
 
 [col-33]
 
@@ -103,16 +99,14 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
-## 7) Świętuj
+## 7. Świętuj
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
+- [Wydrukuj świadectwa](%= resolve_url('https://code.org/certificates') %) dla swoich uczniów.
+- [Wydrukuj naklejki "Wykonałem Godzinę Kodowania!"](%= resolve_url('/promote/resources#stickers') %).
+- [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twoich pracowników.
+- Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
 [col-33]
 
@@ -132,12 +126,6 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
-
-## Co będzie się działo po Godzinie Kodowania?
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+<p style="clear:both">&nbsp;</p>
 
 <%= view :signup_button %>

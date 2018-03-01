@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
 import {connect} from 'react-redux';
+import i18n from "@cdo/locale";
 
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -23,7 +24,7 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
     }),
-  }
+  };
 
   /**
    * Transform the projectLists data from the format expected by the
@@ -53,6 +54,12 @@ class PublicGallery extends Component {
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
         />
+        <a
+          href="https://support.code.org/hc/en-us/articles/360001143952"
+          style={{textAlign: 'center'}}
+        >
+          <h3>{i18n.reportAbuse()}</h3>
+        </a>
       </div>
     );
   }

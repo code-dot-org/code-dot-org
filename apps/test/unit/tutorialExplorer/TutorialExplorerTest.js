@@ -2,6 +2,7 @@
 
 var assert = require('assert');
 import TutorialExplorer from '@cdo/apps/tutorialExplorer/tutorialExplorer';
+import {orgNameCodeOrg, orgNameMinecraft} from '@cdo/apps/tutorialExplorer/util';
 
 describe("TutorialExplorer filterTutorials tests", function () {
   const longOrgName = "them-012345678901234567890123456789";
@@ -19,8 +20,7 @@ describe("TutorialExplorer filterTutorials tests", function () {
 
   it("no filter, but do-not-show works", function () {
     const props = {
-      filters: {
-      },
+      filters: {},
       locale: "en-us",
       sortBy: "displayweight",
       orgname: "all",
@@ -165,6 +165,32 @@ describe("TutorialExplorer filterTutorials tests", function () {
     assert.equal(filtered.length, 2);
     assert.equal(filtered[0].name, "tut3");
     assert.equal(filtered[1].name, "tut4");
+  });
+
+  it("shows Minecraft as Codeorg tutorial", function () {
+    const tutorialsWithMinecraft = tutorials.concat([{
+      name: "minecraft",
+      orgname: orgNameMinecraft,
+      tags: "",
+      languages_supported: "en,fr",
+      tags_platform: "browser,ipad",
+      tags_subject: "",
+      tags_activity_type: "robotics",
+      displayweight: 5,
+      popularityrank: 9
+    }]);
+
+    const props = {
+      filters: {},
+      orgName: orgNameCodeOrg,
+      locale: "en-us",
+      sortByFieldName: "displayweight"
+    };
+
+    const filtered = TutorialExplorer.filterTutorials(tutorialsWithMinecraft, props);
+
+    assert.equal(filtered.length, 1);
+    assert.equal(filtered[0].name, "minecraft");
   });
 
   it("get unique orgnames for non-robotics", function () {

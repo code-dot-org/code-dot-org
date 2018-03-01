@@ -1,4 +1,5 @@
 {
+  "startButton": "Começar",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Todos",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Notas 2-5",
   "filterGrades68": "Notas 6-8",
   "filterGrades9": "Notas 9 +",
-  "filterTeacherExperience": "Experiência de educação",
-  "filterTeacherExperienceBeginner": "Iniciante",
-  "filterTeacherExperienceComfortable": "Confortável",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Experiência do estudante",
   "filterStudentExperienceBeginner": "Iniciante",
   "filterStudentExperienceComfortable": "Confortável",

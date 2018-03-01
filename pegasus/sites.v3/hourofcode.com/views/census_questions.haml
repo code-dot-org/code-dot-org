@@ -2,22 +2,22 @@
   how_many_questions = [
     {
       id: "hoc-how-much",
-      name: "hoc_s",
+      name: "how_many_do_hoc",
       label: hoc_s(:census_how_many_hoc)
     },
     {
       id: "after-school-how-much",
-      name: "after_school_s",
+      name: "how_many_after_school",
       label: hoc_s(:census_how_many_after_school)
     },
     {
       id: "ten-hour-how-much",
-      name: "ten_hours_s",
+      name: "how_many_10_hours",
       label: hoc_s(:census_how_many_ten_hours)
     },
     {
       id: "twenty-hour-how-much",
-      name: "twenty_hours_s",
+      name: "how_many_20_hours",
       label: hoc_s(:census_how_many_twenty_hours)
     }
   ]
@@ -26,11 +26,11 @@
   %label.control-label=hoc_s(:census_connection)
   %select#role.form-control{name: "role_s", type: "select"}
     %option{value: "", selected: true, disabled: true}
-    %option{value: "teacher"}=hoc_s(:teacher)
-    %option{value: "administrator"}=hoc_s(:administrator)
-    %option{value: "parent"}=hoc_s(:parent)
-    %option{value: "volunteer"}=hoc_s(:volunteer_or_advocate)
-    %option{value: "other"}=hoc_s(:other)
+    %option{value: "TEACHER"}=hoc_s(:teacher)
+    %option{value: "ADMINISTRATOR"}=hoc_s(:administrator)
+    %option{value: "PARENT"}=hoc_s(:parent)
+    %option{value: "VOLUNTEER"}=hoc_s(:volunteer_or_advocate)
+    %option{value: "OTHER"}=hoc_s(:other)
 
 .form-group#how-much-cs
   .census_heading
@@ -41,10 +41,10 @@
     %label.control-label=question[:label]
     %select.form-control{name: question[:name], type: "select", id: "#{question[:id]}"}
       %option{value: "", selected: true, disabled: true}
-      %option{value: "none"}=hoc_s(:none)
-      %option{value: "some"}=hoc_s(:some)
-      %option{value: "all"}=hoc_s(:all)
-      %option{value: "dont_know"}=hoc_s(:dont_know)
+      %option{value: "NONE"}=hoc_s(:none)
+      %option{value: "SOME"}=hoc_s(:some)
+      %option{value: "ALL"}=hoc_s(:all)
+      %option{value: "I DON'T KNOW"}=hoc_s(:dont_know)
     %br
 
   #followup_questions{style: "display: none;"}
@@ -53,5 +53,5 @@
   .form-group#pledge{style: "display: none;"}
     .checkbox
       %label
-        %input{name: "pledge_b", type: "checkbox", value: "1"}/
+        %input{name: "pledged", type: "checkbox", value: "1"}/
         =hoc_s(:census_pledge)

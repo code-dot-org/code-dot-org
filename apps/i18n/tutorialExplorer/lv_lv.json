@@ -1,4 +1,5 @@
 {
+  "startButton": "Sākt",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Klases 2-5",
   "filterGrades68": "Klases 6-8",
   "filterGrades9": "Klases 9+",
-  "filterTeacherExperience": "Skolotāja pieredze",
-  "filterTeacherExperienceBeginner": "Iesācējs",
-  "filterTeacherExperienceComfortable": "Comfortable",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Student experience",
   "filterStudentExperienceBeginner": "Iesācējs",
   "filterStudentExperienceComfortable": "Comfortable",
@@ -56,10 +53,10 @@
   "tutorialDetailInternationalLanguages": "Languages",
   "tutorialDetailStandards": "Standarts",
   "tutorialDetailDisabled": "This tutorial is temporarily unavailable.",
-  "headingTutorialsYourLanguage": "Pamācības tavā valodā",
-  "showAllTutorialsButton": "Show activities for many languages",
-  "hideAllTutorialsButton": "Hide activities for many languages",
-  "noTutorialsYourLanguage": "There are no activities supported in your language. Try activities in other languages by clicking the button below.",
+  "headingTutorialsYourLanguage": "Aktivitātes tavā valodā",
+  "showAllTutorialsButton": "Parādīt aktivitātes daudzās valodās",
+  "hideAllTutorialsButton": "Paslēpt aktivitātes daudzās valodās",
+  "noTutorialsYourLanguage": "Jūsu valodā atbalstītu aktivitāšu nav. Izmēģiniet aktivitātes citās valodās, noklikšķinot uz zemāk esošās pogas.",
   "bottomGuidelinesLink": "Click here to see our criteria and submission guidelines for Hour of Code tutorials.",
   "bottomSpecialNeedsLink": "Click here for more information on supporting special needs students."
 }

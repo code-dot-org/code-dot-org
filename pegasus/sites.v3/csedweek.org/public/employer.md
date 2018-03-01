@@ -15,8 +15,7 @@ PLEASE share this with your employer.
 <a href="/files/handout-for-elected-officials.pdf"><img style="width: 40px; height: 42px;" src="/images/Adobe_PDF_Icon.png"></a>
 </div>
 
-This is the primary [handout and participation guide](/files
-/handout-for-employers.pdf) for employers to become familiar with Hour of
+This is the primary [handout and participation guide](/files/handout-for-employers.pdf) for employers to become familiar with Hour of
 Code, and to organize their employees to participate.
 
 ## Share this video with fellow employees

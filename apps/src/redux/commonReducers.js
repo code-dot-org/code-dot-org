@@ -9,6 +9,7 @@ import pageConstants from './pageConstants';
 import instructions from './instructions';
 import instructionsDialog from './instructionsDialog';
 import watchedExpressions from './watchedExpressions';
+import feedback from './feedback';
 
 module.exports = {
   runState,
@@ -17,5 +18,6 @@ module.exports = {
   pageConstants,
   instructions,
   instructionsDialog,
-  watchedExpressions
+  watchedExpressions,
+  feedback,
 };

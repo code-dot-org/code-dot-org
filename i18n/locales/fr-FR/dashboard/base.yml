@@ -59,7 +59,7 @@ fr:
   courses: 'Cours'
   courses_page:
     title_student: "Apprends avec Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Activité manuelle'
   of: "de"
   more: "PLUS"
@@ -69,7 +69,7 @@ fr:
   try_k8intro: "Essaie notre cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)"
   k8intro: "Cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)"
   already_started: "Déjà commencé ? Reprendre ici >> "
-  demos: 'Admin : Toutes les démos'
+  demos: "Admin : Toutes les démos"
   continue: 'Continuer'
   prize: 'prix'
   more_info: 'Plus d''informations'
@@ -171,6 +171,7 @@ fr:
       email: 'Adresse e-mail'
       submit: 'Envoyer'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Il semble que vous vous êtes identifié avec une adresse Email incorrecte. Veuillez envoyer un mail à support@code.org pour recevoir un lien de récupération de mot de passe.'
     change_form:
       title: 'Changer son mot de passe'
@@ -220,7 +221,7 @@ fr:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Notification de Code.org: %{student_name} n''est plus considéré comme l''un de vos élèves.'
+        subject: "Notification de Code.org: %{student_name} n'est plus considéré comme l'un de vos élèves."
   reports:
     error:
       access_denied: "Accès impossible aux statistiques de cette personne"
@@ -352,7 +353,7 @@ fr:
     current_password_hint: '(nous avons besoin de votre mot de passe pour confirmer les modifications)'
     delete: 'Supprimer votre compte'
     delete_text: "Cliquer sur le bouton ci-dessous supprimera votre compte."
-    delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera pas les comptes de vos élèves.'
+    delete_text_teacher_note: "Veuillez noter : supprimer votre compte ne supprimera pas les comptes de vos élèves."
     delete_confirm: 'Êtes-vous sûr de vouloir supprimer votre compte ?'
     deleted_user: 'utilisateur supprimé'
     no_password_because_oauth: 'Aucun mot de passe parce que vous vous connectez avec un fournisseur tiers.'
@@ -363,7 +364,7 @@ fr:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -567,6 +568,9 @@ fr:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
+    hoc-encryption:
+      title: "Cryptage simple"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +589,9 @@ fr:
     minecraft2016:
       title: "Minecraft"
       body: "Programmez des animaux et d'autres créatures Minecraft dans votre propre version de Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -648,6 +655,7 @@ fr:
     correct_title: "Merci"
     correct_body: "Merci d'avoir envoyé des réponses."
     hide_survey_last_answer: "Cette enquête est anonyme. Veuillez consulter le tableau de bord de l'enseignant pour des résultats agrégés.  Notez que les résultats ne sont visibles que si au moins cinq élèves ont répondu à l’enquête."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Merci"
     wrong_body: "Merci d'avoir envoyé des réponses."
@@ -695,7 +703,7 @@ fr:
     sign_out: 'Si tu ne souhaites pas donner ton âge, tu peux te <a href="%{url}">déconnecter</a>.'
   terms_interstitial:
     title: "Mise à jour des conditions d’utilisation et de la politique de confidentialité"
-    intro_desc: Nous avons mis à jour nos conditions d’utilisation et politique de confidentialité, tel que montré ci-dessous. Les changements sont en vigueur à partir du 24 août 2016.  Le changement le plus important est que nous n'allons <i>plus stocker les adresses e-mail des élèves sur Code Studio.</i> C'est très important pour nous et nous espérons établir ainsi un nouveau standard pour la protection de la vie privée des élèves dans les technologies de l’éducation. Nous vous avons envoyé un résumé des autres modifications par e-mail.
+    intro_desc: "Nous avons mis à jour nos conditions d’utilisation et politique de confidentialité, tel que montré ci-dessous. Les changements sont en vigueur à partir du 24 août 2016.  Le changement le plus important est que nous n'allons <i>plus stocker les adresses e-mail des élèves sur Code Studio.</i> C'est très important pour nous et nous espérons établir ainsi un nouveau standard pour la protection de la vie privée des élèves dans les technologies de l’éducation. Nous vous avons envoyé un résumé des autres modifications par e-mail."
     intro_instructions: "Vous devrez accepter ces nouvelles conditions pour que vos élèves âgés de moins de 13 ans aient un accès complet aux dernières fonctionnalités de Code Studio. Lorsque vous créez un compte pour un élève de moins de 13 ans, vous devrez confirmer que votre école a un accord des parents pour la collecte de renseignements personnels de l’élève à l’usage et au profit de l’école, y compris les programmes éducatifs tels que Code Studio."
     tos: "Conditions Générales d'Utilisation"
     privacy: "Politique de confidentialité"
@@ -711,7 +719,7 @@ fr:
     message_with_suggestion: "S’il vous plaît vérifiez que les informations suivantes sont correctes et corrigez-les si nécessaire."
     save: "Sauvegarder"
   race_interstitial:
-    title: 'En option : Aidez-nous à évaluer les progrès de nos actions en faveur de la diversité en informatique'
+    title: "En option : Aidez-nous à évaluer les progrès de nos actions en faveur de la diversité en informatique"
     message: "Veuillez nous dire votre ethnicité (plusieurs choix possibles)"
     races:
       - 
@@ -753,11 +761,11 @@ fr:
     rename: "Renommer"
     save: "Sauvegarder"
     delete: "Supprimer"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
+    import: "Importer"
+    share_link_import_bad_link_header: "Lien de partage non reconnu"
+    share_link_import_bad_link_body: "Nous n'avons pas pu importer ce lien de partage. Assurez-vous d'utiliser un lien issu du casse-tête Minecraft: Agent et de copier le lien complet."
+    share_link_import_error_header: "Une erreur est survenue."
+    share_link_import_error_body: "Un problème est survenu lors de l'importation de ce lien de partage. Veuillez réessayer."
     exit: "Retourner au cours"
     my_projects: "Mes projets"
     project_gallery: "Projets"

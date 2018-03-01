@@ -59,7 +59,7 @@ lv:
   courses: 'Kursi'
   courses_page:
     title_student: "Mācies Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Atvienota aktivitāte'
   of: "no"
   more: "VAIRĀK"
@@ -69,7 +69,7 @@ lv:
   try_k8intro: "Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)"
   k8intro: "K-8 Ievads Datorzinātņu kursos (15-25stundas)"
   already_started: "Jau iesāki? Atsākt šeit > "
-  demos: 'Administrators: Visas demonstrācijas'
+  demos: "Administrators: Visas demonstrācijas"
   continue: 'Turpināt'
   prize: 'balva'
   more_info: 'Vairāk informācijas'
@@ -171,6 +171,7 @@ lv:
       email: 'E-pasta adrese'
       submit: 'Iesniegt'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Mainīt paroli'
@@ -220,7 +221,7 @@ lv:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org paziņojums: %{student_name} vairs nav jūsu students.'
+        subject: "Code.org paziņojums: %{student_name} vairs nav jūsu students."
   reports:
     error:
       access_denied: "Jums nav pieejas šīs personas statistikai"
@@ -352,7 +353,7 @@ lv:
     current_password_hint: '(nepieciešama jūsu pašreizējā parole, lai apstiprinātu izmaiņas)'
     delete: 'Izdzēst jūsu kontu'
     delete_text: "Nospiežot šo pogu, jūs izdzēsīsiet savu kontu."
-    delete_text_teacher_note: Lūdzu, ņemiet vērā, ka jūsu konta dzēšana neizdzēsīs jūsu skolēnu kontus.
+    delete_text_teacher_note: "Lūdzu, ņemiet vērā, ka jūsu konta dzēšana neizdzēsīs jūsu skolēnu kontus."
     delete_confirm: 'Vai jūs tiešām vēlaties dzēst savu kontu?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,7 +364,7 @@ lv:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -567,6 +568,9 @@ lv:
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Ages 13+"
       cta: "Learn how"
+    hoc-encryption:
+      title: "Simple Encryption"
+      body: "Students will learn techniques to create and crack encrypted messages."
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
@@ -585,6 +589,9 @@ lv:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
       title: "Sports"
       body: "Make a basketball game or mix and match across sports."
@@ -648,6 +655,7 @@ lv:
     correct_title: "Paldies"
     correct_body: "Thank you for submitting answers."
     hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
+    survey_submission_thankyou: "Thank you for submitting this survey! The survey has been cleared so that your responses stay anonymous. Note that your teacher will still be able to see responses for the whole class, but without names attached."
   level_group-submittable:
     wrong_title: "Paldies"
     wrong_body: "Thank you for submitting answers."
@@ -695,7 +703,7 @@ lv:
     sign_out: 'Ja nevēlaties sniegt savu vecumu, jūs varat <a href="%{url}">izrakstīties</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Nosacījumi"
     privacy: "Privātuma politika"
@@ -711,7 +719,7 @@ lv:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Saglabāt"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -755,7 +763,7 @@ lv:
     delete: "Izdzēst"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
@@ -858,8 +866,8 @@ lv:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

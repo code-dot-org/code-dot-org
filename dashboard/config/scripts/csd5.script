@@ -5,6 +5,8 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd/unit5/standards/"]]
 has_verified_resources true
+has_lesson_plan true
+script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}]
 
 stage 'Representation Matters', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representation Matters'
@@ -33,8 +35,9 @@ level 'CSD U5 binary 6-new', progression: 'Binary Numbers'
 level 'CSD U5 binary 7-new', progression: 'Binary Numbers'
 named_level 'CSD U5 binary video'
 
-stage 'Encryption', flex_category: 'csd5_1'
+stage 'Keeping Data Secret', flex_category: 'csd5_1'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'
+level 'CSD U5 Encryption 2', progression: 'Keeping Data Secret'
 level 'CSD U5 Encryption 1', progression: 'Keeping Data Secret'
 
 stage 'Combining Representations', flex_category: 'csd5_1'
@@ -51,8 +54,8 @@ named_level 'CSD-U5-SFLP Problem Solving and Data'
 
 stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
 named_level 'CSD-U5-SFLP Problem Solving with Big Data'
-level 'CSD U5 video2', progression: 'Problem Solving'
-level 'CSD U5 collection UPS2', progression: 'Problem Solving'
+level 'CSD U5 Netflix Data Video', progression: 'Problem Solving'
+level 'CSD U5 Waze Data Video', progression: 'Problem Solving'
 level 'CSD U5 Amazon Data Video', progression: 'Problem Solving'
 
 stage 'Structuring Data', flex_category: 'csd5_2'

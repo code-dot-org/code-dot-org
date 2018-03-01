@@ -124,6 +124,7 @@ class Script < ActiveRecord::Base
     teacher_resources
     stage_extras_available
     has_verified_resources
+    has_lesson_plan
     script_announcements
   )
 
@@ -422,12 +423,26 @@ class Script < ActiveRecord::Base
     script_levels[chapter - 1] # order is by chapter
   end
 
+  def get_bonus_script_levels(current_stage)
+    unless @all_bonus_script_levels
+      @all_bonus_script_levels = stages.map do |stage|
+        {
+          stageNumber: stage.relative_position,
+          levels: stage.script_levels.select(&:bonus).map(&:summarize_as_bonus)
+        }
+      end
+      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
+    end
+
+    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+  end
+
   def beta?
     Script.beta? name
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd6'
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft'
   end
 
   def k1?
@@ -501,10 +516,6 @@ class Script < ActiveRecord::Base
 
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
-  end
-
-  def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csp3-research-mxghyt csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_lesson_pdf?
@@ -891,6 +902,7 @@ class Script < ActiveRecord::Base
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
+      has_lesson_plan: has_lesson_plan?,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
     }
@@ -958,6 +970,7 @@ class Script < ActiveRecord::Base
       teacher_resources: script_data[:teacher_resources],
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
+      has_lesson_plan: !!script_data[:has_lesson_plan],
       script_announcements: script_data[:script_announcements],
     }.compact
   end
@@ -971,7 +984,21 @@ class Script < ActiveRecord::Base
 
   # @return {String|nil} path to the course overview page for this script if there
   #   is one.
-  def course_link
-    course_path(course) if course
+  def course_link(section_id = nil)
+    return nil unless course
+    path = course_path(course)
+    path += "?section_id=#{section_id}" if section_id
+    path
+  end
+
+  # If there is an alternate version of this script which the user should be on
+  # due to existing progress or a course experiment, return that script. Otherwise,
+  # return nil.
+  def alternate_script(user)
+    course_scripts.each do |cs|
+      alternate_cs = cs.course.select_course_script(user, cs)
+      return alternate_cs.script if cs != alternate_cs
+    end
+    nil
   end
 end

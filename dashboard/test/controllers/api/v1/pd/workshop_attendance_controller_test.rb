@@ -5,7 +5,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
 
   self.use_transactional_test_case = true
   setup_all do
-    @organizer = create :workshop_organizer
+    @organizer = create :program_manager
+    @workshop_organizer = create :workshop_organizer
     @facilitator = create :facilitator
 
     @workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator], num_sessions: 1
@@ -14,6 +15,14 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, sign_in_count: 1
     @enrollment = Pd::Enrollment.find_by!(workshop: @workshop, user: @teacher)
     @session = @workshop.sessions.first
+
+    # TODO: remove this test when workshop_organizer is deprecated
+    @organizer_workshop = create :pd_workshop, organizer: @workshop_organizer, facilitators: [@facilitator], num_sessions: 1
+    @organizer_workshop.start!
+
+    @organizer_workshop_teacher = create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, sign_in_count: 1
+    @organizer_workshop_enrollment = Pd::Enrollment.find_by!(workshop: @organizer_workshop, user: @organizer_workshop_teacher)
+    @organizer_workshop_session = @organizer_workshop.sessions.first
 
     @other_workshop = create :pd_workshop, num_sessions: 1
     @other_workshop.start!
@@ -26,6 +35,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     # Some test cases modify @workshop. Reload from the DB,
     # which will be reset to setup_all state (see use_transactional_test_case).
     @workshop.reload
+    @organizer_workshop.reload
   end
 
   API = '/api/v1/pd/workshops'
@@ -63,7 +73,17 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_manage_response :forbidden, workshop: @other_workshop, user: @other_teacher
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can manage attendance for their workshops only' do
+    sign_in @workshop_organizer
+    assert_read_response :success, workshop: @organizer_workshop
+    assert_manage_response :success, workshop: @organizer_workshop, user: @organizer_workshop_teacher
+
+    assert_read_response :forbidden, workshop: @other_workshop
+    assert_manage_response :forbidden, workshop: @other_workshop, user: @other_teacher
+  end
+
+  test 'program manager workshop organizers can manage attendance for their workshops only' do
     sign_in @organizer
     assert_read_response :success
     assert_manage_response :success
@@ -98,7 +118,16 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_manage_response :forbidden
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers can read, but cannot manage, attendance for ended workshops' do
+    @organizer_workshop.end!
+    sign_in @workshop_organizer
+
+    assert_read_response :success, workshop: @organizer_workshop
+    assert_manage_response :forbidden, workshop: @organizer_workshop
+  end
+
+  test 'program manager organizers can read, but cannot manage, attendance for ended workshops' do
     @workshop.end!
     sign_in @organizer
 
@@ -247,7 +276,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
 
   test 'create attendance by enrollment succeeds when an account is not required' do
     # Admin courses do not require attendance
-    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN)
+    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN, subject: nil)
 
     sign_in @organizer
     enrollment = create :pd_enrollment, workshop: @workshop

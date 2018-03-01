@@ -40,12 +40,17 @@
   - title = t('upsell.text-compression.title')
   - body = t('upsell.text-compression.body')
 
+- elsif id == 'hoc_encryption'
+  - url = CDO.studio_url('/s/hoc-encryption/reset')
+  - title = t('upsell.hoc-encryption.title')
+  - body = t('upsell.hoc-encryption.body')
+
 - elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::COURSEA_NAME, Script::COURSEB_NAME, Script::COURSEC_NAME, Script::COURSED_NAME, Script::COURSEE_NAME, Script::COURSEF_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME].include? id
+- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::STARWARS_NAME, Script::STARWARS_BLOCKS_NAME, Script::MINECRAFT_NAME, Script::MINECRAFT_DESIGNER_NAME, Script::MINECRAFT_HERO_NAME].include? id
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
@@ -57,6 +62,9 @@
     - url = CDO.code_org_url('/api/hour/begin/mc')
   - elsif id == 'minecraft'
     - title = t('upsell.minecraft2016.title')
+    - url = CDO.code_org_url('/api/hour/begin/mc')
+  - elsif id == 'hero'
+    - title = t('upsell.hero.title')
     - url = CDO.code_org_url('/api/hour/begin/mc')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')

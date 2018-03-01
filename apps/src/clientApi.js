@@ -66,6 +66,19 @@ class CollectionsApi {
     return ajaxInternal(method, this.basePath(file), success, error, data);
   }
 
+  getFile(file, version, success, error, data) {
+    error = error || function () {};
+    if (!window.dashboard && !this.projectId) {
+      error({status: "No dashboard"});
+      return;
+    }
+    let url = this.basePath(file);
+    if (version) {
+      url = `${url}?version=${version}`;
+    }
+    return ajaxInternal('GET', url, success, error);
+  }
+
   /*
    * Restore this file to the state of a previous version
    * @param file {String} name of file
@@ -139,8 +152,9 @@ class AssetsApi extends CollectionsApi {
    * Get a list of all files
    * @callback success {getFiles~success} callback when successful
    * @callback error {Function} callback when failed (includes xhr parameter)
+   * @param version {string} Ignored for this API, but matches other getFiles()
    */
-  getFiles(success, error) {
+  getFiles(success, error, version) {
     return ajaxInternal('GET', this.basePath(''), xhr => {
         var parsedResponse;
         try {
@@ -299,7 +313,7 @@ class FilesApi extends CollectionsApi {
   }
 
   /*
-   * Delete all files in project
+   * Delete all files in project (always creates a new version)
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed (includes xhr parameter)
    */
@@ -307,7 +321,7 @@ class FilesApi extends CollectionsApi {
     // Note: just reset the _beforeFirstWriteHook, but don't call it
     // since we're deleting everything:
     this._beforeFirstWriteHook = null;
-    return ajaxInternal('DELETE', this.basePathWithFilesVersion('*'), xhr => {
+    return ajaxInternal('DELETE', this.basePath('*'), xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
@@ -361,9 +375,14 @@ class FilesApi extends CollectionsApi {
    * Get a list of all files
    * @callback success {getFiles~success} callback when successful
    * @callback error {Function} callback when failed (includes xhr parameter)
+   * @param version {string} Optional filesVersionId for project
    */
-  getFiles(success, error) {
-    return ajaxInternal('GET', this.basePath(''), xhr => {
+  getFiles(success, error, version) {
+    let path = this.basePath('');
+    if (version) {
+      path = path + `?version=${version}`;
+    }
+    return ajaxInternal('GET', path, xhr => {
         var parsedResponse;
         try {
           parsedResponse = JSON.parse(xhr.responseText);

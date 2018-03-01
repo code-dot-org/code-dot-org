@@ -56,7 +56,7 @@
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "contained_level_names": null
   },

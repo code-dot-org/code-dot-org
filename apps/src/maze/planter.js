@@ -120,12 +120,12 @@ export default class Planter extends Subtype {
       case TerminationValue.PLANT_IN_NON_SOIL:
         return TestResults.APP_SPECIFIC_FAIL;
       case TerminationValue.DID_NOT_PLANT_EVERYWHERE:
-        var testResults = this.studioApp_.getTestResults(true);
+        var testResults = this.maze_.getTestResults(true);
         // If we have a non-app specific failure, we want that to take precedence.
         // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
         // a suboptimal solution, so in those cases we want to return our
-        // app specific fail
-        if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+        // app specific fail. Same goes for BLOCK_LIMIT_FAIL.
+        if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL || testResults === TestResults.BLOCK_LIMIT_FAIL) {
           testResults = TestResults.APP_SPECIFIC_FAIL;
         }
         return testResults;

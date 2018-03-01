@@ -207,6 +207,7 @@
       email: Seoladh ríomhphoist
       submit: Seol
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Dealraíonn sé gur chláraigh tú le seoladh ríomhphoist neamhbhailí.
         Cuir ríomhphost chugainn ag support@code.org agus seolfaimid nasc chugat lenar
         féidir d'fhocal faire a athshocrú.
@@ -776,6 +777,9 @@
         and games with objects and characters that interact with each other.
       audience: Aois 13+
       cta: Foghlaim anois
+    hoc-encryption:
+      title: Criptiú Simplí
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -796,6 +800,10 @@
     minecraft2016:
       title: Minecraft
       body: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Sports
       body: Make a basketball game or mix and match across sports.
@@ -877,6 +885,9 @@
     hide_survey_last_answer: Suirbhé gan ainm é seo. Tabhair cuairt ar phainéal na
       múinteoirí chun torthaí comhbhailithe a fháil. Ní bheidh na torthaí ar fáil
       go dtí go ndéanfaidh ar a laghad cúigear daltaí an suirbhé.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Go raibh maith agat
     wrong_body: Go raibh maith agat as do fhreagraí.

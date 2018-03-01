@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_press_release) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 # Imbonakaliso yokukhululiwe yezikhulu ezikhethwe ngokusemthethweni
@@ -14,37 +13,50 @@ Xhumana: [**ULWAZI LOKUXHUMANA**]
   
 
 
-**
+<strong>
 
 <center>
-  UNDUNANKULU/UMBUSI/ILUNGALENHLANGANO/UMKHULUMELI/UMPHATHIDOLOBHA/iLUNGULOMKHANDLU [FAKA IGAMA][BAMBE IQHAZA KUHORA LOKUFINGQWA NEBAFUNDI BENDAWO]</strong><br /> uPhakathi uhlanganyela ukuqwashisa ngokubaluleka kwemfundiso yekhompyutha sayensi ngokuzibandakanya kuViki leMfundiso yeKhompyutha Sayensi
+  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
 </center>
 
-  
-  
-</p> 
+<br /> <br /></p> 
 
-**USUKU** - [**FAKA IGAMA**] ungenelele nothishanhloko kanye nothisha be [**FAKA IGAMA LESIKOLE**], abaholi bezohwebo kanye nemindeni yekhaya namhlanje [**IGAMA LOMCIMBI**] ukuzibandakanya neHora loKufingqwa njengengxenye yeViki leMfundiso yeKhompyutha Sayensi. [FAGA IGAMA] kanye namalunga omphakathi bewephakathi kwamakhulu abantu emhlabeni wonke jikelele athethe ichaza kowona mcimbi omkhulu kumlandu.
+<p>
+  <strong>USUKU</strong> - [<strong>FAKA IGAMA</strong>] ungenelele nothishanhloko kanye nothisha be [<strong>FAKA IGAMA LESIKOLE</strong>], abaholi bezohwebo kanye nemindeni yekhaya namhlanje [<strong>IGAMA LOMCIMBI</strong>] ukuzibandakanya neHora loKufingqwa njengengxenye yeViki leMfundiso yeKhompyutha Sayensi. [FAGA IGAMA] kanye namalunga omphakathi bewephakathi kwamakhulu abantu emhlabeni wonke jikelele athethe ichaza kowona mcimbi omkhulu kumlandu.
+</p>
 
-[**FAKA IMINININGWANE YOMCIMBI, SEBENZISA INCAZELO EJULILE FUTHI NOLWIMI OLUQAVILE. ISIBONELO:**]  
-"Daniels Run Elementary School ibambe umcimbi esikoleni sonke weHora loKufingqwa ukuze yambulele abafundi bayo ikhompyutha sayensi. Badlulela kumakhulu ayisikhombisa abafundi bawowonke amabanga abenze ihora elilodwa leHora loKufingqwa. Kanti abazali novolontiya abayishumi nambili abavela kumphakathi basizile ngosuku baletha nezingane ndawonye kumhlangano obukhombisa ngokuthi kungani ikhompyutha sayensi ibaluleke kanjani ezimpilweni yalaba bafundi."
+<p>
+  [<strong>FAKA IMINININGWANE YOMCIMBI, SEBENZISA INCAZELO EJULILE FUTHI NOLWIMI OLUQAVILE. ISIBONELO:</strong>]<br />"Daniels Run Elementary School ibambe umcimbi esikoleni sonke weHora loKufingqwa ukuze yambulele abafundi bayo ikhompyutha sayensi. Badlulela kumakhulu ayisikhombisa abafundi bawowonke amabanga abenze ihora elilodwa leHora loKufingqwa. Kanti abazali novolontiya abayishumi nambili abavela kumphakathi basizile ngosuku baletha nezingane ndawonye kumhlangano obukhombisa ngokuthi kungani ikhompyutha sayensi ibaluleke kanjani ezimpilweni yalaba bafundi."
+</p>
 
-[**ISIBONAKALISO SESITOKWE SOMBALO WENDIKIMBA:**]  
-Amakhompyutha akhona indawo yonke, kodwa ngezimbalwa izikole ezifundisa ikhompyutha sayensi kuneminyaka eyishumi endlule. Amantombazane kanye nabafundi bombala abamelwanga kahle. Izindaba ezinhle ukuba sishintsha loku ngokuka ngcono. IHora loKufingqwa liyisango eliya ekuletheni kubafundi bonke ukufinyelela emfundisweni yekhompyutha sayensi eseqopheleleni eliphezulu.
+<p>
+  [<strong>ISIBONAKALISO SESITOKWE SOMBALO WENDIKIMBA:</strong>]<br /> Amakhompyutha akhona indawo yonke, kodwa ngezimbalwa izikole ezifundisa ikhompyutha sayensi kuneminyaka eyishumi endlule. Amantombazane kanye nabafundi bombala abamelwanga kahle. Izindaba ezinhle ukuba sishintsha loku ngokuka ngcono. IHora loKufingqwa liyisango eliya ekuletheni kubafundi bonke ukufinyelela emfundisweni yekhompyutha sayensi eseqopheleleni eliphezulu.
+</p>
 
-Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa. Sibonga kuHora loKufingqwa, ngokuba ikhompyutha sayensi ibivele kukhasikhaya lakwa Google, MSN, Yahoo! Kanye neDisney. Umongameli uObama, Shakira kanye no Ashton Kutcher bonke baqale iHora loKufingqwa ngama vidiyo. Badlulele kukhulu abahlanganyeli abeze ukuzosingatha lomnyakazo.
+<p>
+  Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa. Sibonga kuHora loKufingqwa, ngokuba ikhompyutha sayensi ibivele kukhasikhaya lakwa Google, MSN, Yahoo! Kanye neDisney. Umongameli uObama, Shakira kanye no Ashton Kutcher bonke baqale iHora loKufingqwa ngama vidiyo. Badlulele kukhulu abahlanganyeli abeze ukuzosingatha lomnyakazo.
+</p>
 
-[**FAKA INKULUMO EVELA KUMKHULUMELI, ISIBONELO NGEZANSI:**]  
-"Sidinga ukukhuthaza kanye nokusingatha intshisakalo zabafundi bethu kukhompyutha sayensi," kusho [** FAKA IGAMA**]. "Wonke umfundi ufanelwe ukuba athole ithuba lokufunda ikhompyutha sayensi ukuze afinyelele kumsebenzi owona ophambili esikhathini samanje."
+<p>
+  [<strong>FAKA INKULUMO EVELA KUMKHULUMELI, ISIBONELO NGEZANSI:</strong>]<br /> "Sidinga ukukhuthaza kanye nokusingatha intshisakalo zabafundi bethu kukhompyutha sayensi," kusho [<strong> FAKA IGAMA</strong>]. "Wonke umfundi ufanelwe ukuba athole ithuba lokufunda ikhompyutha sayensi ukuze afinyelele kumsebenzi owona ophambili esikhathini samanje."
+</p>
 
-[** FAKA ULWZAZI OLUBANZI NGOMCIMBI WAKHO OKANYE NGENHLANGANO YAKHO**]
+<p>
+  [<strong> FAKA ULWZAZI OLUBANZI NGOMCIMBI WAKHO OKANYE NGENHLANGANO YAKHO</strong>]
+</p>
 
-[**FAKA UKUHUMUSHA OKUVELA KUNKAMPANI ETHILE OKANYE KOMUNYE OBEKADE EKHONA KUMCIMBI**]
+<p>
+  [<strong>FAKA UKUHUMUSHA OKUVELA KUNKAMPANI ETHILE OKANYE KOMUNYE OBEKADE EKHONA KUMCIMBI</strong>]
+</p>
 
-Ngemininingane ebanzi nge [**UMCIMBI/UHLELO/NJLL**, vakashela [**FAKA IWEBHUSAYITHI**] okanye xhumana [**FAKA IMINININGWANE YOKUXHUMANA**]
+<p>
+  Ngemininingane ebanzi nge [<strong>UMCIMBI/UHLELO/NJLL</strong>, vakashela [<strong>FAKA IWEBHUSAYITHI</strong>] okanye xhumana [<strong>FAKA IMINININGWANE YOKUXHUMANA</strong>]
+</p>
 
-  
-  
+<p>
+  <br /> <br />
+</p>
 
-
-<%= view :signup_button %>
+<p>
+  <%= view :signup_button %>
+</p>

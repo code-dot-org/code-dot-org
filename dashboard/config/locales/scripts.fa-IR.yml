@@ -2301,11 +2301,10 @@
               name: Practice PT - Encode an Experience
         csp3:
           title: CSP Unit 3 - Programming
-          description: This unit introduces the foundational concepts of computer
-            programming, which unlocks the ability to make rich, interactive apps.
-            This course uses JavaScript as the programming language, and App Lab as
-            the programming environment to build apps, but the concepts learned in
-            these lessons span all programming languages and tools.
+          description: |-
+            This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
+            \r
+            This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: "برنامه نویسی"
           description_audience: ''
           stages:
@@ -2341,13 +2340,18 @@
               name: CSP Student Post-Course Survey
             Creating Functions with Parameters:
               name: Creating Functions with Parameters
+            CSP End-of-Semester Mid-course survey:
+              name: CSP End-of-Semester Mid-course survey
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey!:
+              name: Please complete the CSP Mid-course survey!
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
-          description: The data-rich world we live in introduces many complex questions
-            related to public policy, law, ethics and societal impact. The goals of
-            this unit are to develop a well-rounded and balanced view about data in
-            the world, including the positive and negative effects of it, and to understand
-            the basics of how and why modern encryption works.
+          description: |-
+            The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
           description_short: Big Data and Privacy
           description_audience: ''
           stages:
@@ -3771,6 +3775,8 @@
               name: Parameters and Randomization
             Shapes and Randomization:
               name: Shapes and Randomization
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -5527,6 +5533,18 @@
               name: Getting Properties
             Designing Screens with Code:
               name: Designing Screens with Code
+            Arrays:
+              name: Arrays
+            Making Music:
+              name: Making Music
+            Arrays and For Loops:
+              name: Arrays and For Loops
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+            Accelerometer:
+              name: Accelerometer
+            Functions with Parameters:
+              name: "معادله با پارامترها"
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5672,7 +5690,7 @@
             Conditionals:
               name: "مشروط"
             'Real Life Algorithms: Dice Race':
-              name: 'Real Life Algorithms: Dice Race'
+              name: "الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن"
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -5836,6 +5854,213 @@
                 based on the Circuit Playground. Using the inputs and outputs available
                 on the board, groups will create programs that allow for interesting
                 and unique user interactions.
+            Designing Screens with Code:
+              name: Designing Screens with Code
+              description_student: By reading and changing the content on the screen
+                of an app, the class starts to build apps that only need a single
+                screen. Even with just one screen, these techniques allow for lots
+                of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach
+                to app development in App Lab that required a separate screen for
+                most interactions. To expand the kinds of apps that students can make,
+                and to encourage them to think in new ways about how users interact
+                with apps, we introduce the `setProperty()` block. This command can
+                be used to set the content and properties of various UI elements,
+                allowing students to write programs that update information on a single
+                screen, instead of manually creating duplicate screens. In this lesson
+                students build up simple apps that only require a single screen, the
+                content of which is changed using `setProperty()`.
+            Board Events:
+              name: Board Events
+              description_student: Using the hardware buttons and switch, the class
+                develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider
+                the Circuit Playground as strictly an output device towards using
+                it as a tool for both input and output. Starting with the hardware
+                buttons and switch,sing the hardware buttons and switch, students
+                learn to use `onBoardEvent()`, analogously to `onEvent()`, in order
+                to take input from their Circuit Playgrounds.
+            Getting Properties:
+              name: Getting Properties
+              description_student: This lesson introduces students to the getProperty
+                block, which allows them to access the properties of different elements
+                with code.  Students first practice using the block to determine what
+                the user has input in various user interface elements. Students later
+                use getProperty and setProperty together with the counter patters
+                to make elements move across the screen.  A new screen element, the
+                slider, and a new event trigger, onChange, are also introduced.
+              description_teacher: This lesson introduces students to the `getProperty`
+                block, which allows them to access the properties of different elements
+                with code.  Students first practice using the block to determine what
+                the user has input in various user interface elements. Students later
+                use `getProperty` and `setProperty` together with the counter patters
+                to make elements move across the screen.  A new screen element, the
+                slider, and a new event trigger, `onChange`, are also introduced.
+            The Program Design Process:
+              name: The Program Design Process
+              description_student: This lesson introduces students to the process
+                they will use to design programs of their own throughout this unit.
+                This process is centered around a project guide which asks students
+                to sketch out their screens, identify elements of the Circuit Playground
+                to be used, define variables, and describe events before they begin
+                programming. This process is similar to the Game Design Process that
+                we used in Unit 3. In this lesson students begin by playing a tug
+                o' war style game where the code is hidden. They discuss what they
+                think the board components, events, and variables would need to be
+                to make the program. They are then given a completed project guide
+                which shows one way to implement the project. Students are then walked
+                through this process through a series of levels. At the end of the
+                lesson students have an opportunity to make improvements to the program
+                to make it their own.
+              description_teacher: This lesson introduces students to the process
+                they will use to design programs of their own throughout this unit.
+                This process is centered around a project guide which asks students
+                to sketch out their screens, identify elements of the Circuit Playground
+                to be used, define variables, and describe events before they begin
+                programming. This process is similar to the Game Design Process that
+                we used in Unit 3. In this lesson students begin by playing a tug
+                o' war style game where the code is hidden. They discuss what they
+                think the board components, events, and variables would need to be
+                to make the program. They are then given a completed project guide
+                which shows one way to implement the project. Students are then walked
+                through this process through a series of levels. At the end of the
+                lesson students have an opportunity to make improvements to the program
+                to make it their own.
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
+              description_student: Students take what they've learned through chapter
+                one, and develop an app of their own design that uses the board to
+                output information.
+              description_teacher: Students take what they've learned through chapter
+                one, and develop an app of their own design that uses the board to
+                output information.
+            Arrays:
+              name: Arrays
+              description_student: Learn how lists can be used to store multiple values
+                in a single variable name.
+              description_teacher: An array is an ordered collection of items, usually
+                of the same type. In this lesson, students learn ways to access either
+                a specific or random value from a list using its index.  They then
+                learn how to access the colorLEDs array that controls the behavior
+                of the color LEDs on the Circuit Playground.  Students will control
+                the color and intensity of each LED, then use what they have learned
+                to program light patterns to create a light show on their Circuit
+                Playground.
+            Making Music:
+              name: Making Music
+              description_student: In this lesson students will use the buzzer to
+                its full extent by producing sounds, notes, and songs with the buzzer.
+                Students start with a short review of the buzzer's frequency and duration
+                parameters, then move on to the concept of notes.  Notes allow students
+                to constrain themselves to frequencies that are used in Western music
+                and provide a layer of abstraction that helps them to understand which
+                frequencies might sound good together.  Onces students are able to
+                play notes on the buzzer, they use arrays to hold and play sequences
+                of notes, forming simple songs.
+              description_teacher: In this lesson students will use the buzzer to
+                its full extent by producing sounds, notes, and songs with the buzzer.
+                Students start with a short review of the buzzer's frequency and duration
+                parameters, then move on to the concept of notes.  Notes allow students
+                to constrain themselves to frequencies that are used in Western music
+                and provide a layer of abstraction that helps them to understand which
+                frequencies might sound good together.  Onces students are able to
+                play notes on the buzzer, they use arrays to hold and play sequences
+                of notes, forming simple songs.
+            Arrays and For Loops:
+              name: Arrays and For Loops
+              description_student: Combining _lists_ and _for loops_ allows you to
+                write code that impacts every element of a list, regardless of how
+                long it is. The class uses this structure to write programs that process
+                all of the elements in lists, include the list of color LEDs.
+              description_teacher: Using a _for loop_ to iterate over all of the elements
+                in an array is a really useful construct in most programming languages.
+                In this lesson, students learn the basics of how a _for loop_ can
+                be used to repeat code, and then combine it with what they've already
+                learned about arrays to write programs that process all elements in
+                an array. Students use for loops to go through each element in a list
+                one at a time without having to write code for each element. Towards
+                the end of the lesson students will apply this with the `colorLed`
+                list on the board to create an app that changes all of the LEDs each
+                time a button is clicked.
+            Accelerometer:
+              name: Accelerometer
+              description_student: In this lesson, students will explore the accelerometer
+                and its capabilities. They’ll become familiar with its events and
+                properties, as well as create multiple programs utilizing the accelerometer
+                similar to those they’ve likely come across in real world applications.
+              description_teacher: In this lesson, students will explore the accelerometer
+                and its capabilities. They’ll become familiar with its events and
+                properties, as well as create multiple programs utilizing the accelerometer
+                similar to those they’ve likely come across in real world applications.
+            Functions with Parameters:
+              name: "معادله با پارامترها"
+              description_student: The lesson starts with a quick review of parameters,
+                in the context of App Lab blocks that they students have seen recently.  Students
+                then look at examples of parameters within user-created functions
+                in App Lab and create and call functions with parameters for themselves,
+                using them to control multiple elements on a screen.  Afterwards,
+                students use for loops to iterate over an array, passing each element
+                into a function.  Last, students use what they have learned to create
+                a star catching game.
+              description_teacher: The lesson starts with a quick review of parameters,
+                in the context of App Lab blocks that they students have seen recently.  Students
+                then look at examples of parameters within user-created functions
+                in App Lab and create and call functions with parameters for themselves,
+                using them to control multiple elements on a screen.  Afterwards,
+                students use for loops to iterate over an array, passing each element
+                into a function.  Last, students use what they have learned to create
+                a star catching game.
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+              description_student: Wire simple circuits to create a physical prototype
+                using cheap and easily found materials.
+              description_teacher: In preparation for this chapter's final project,
+                students will learn how to develop a prototype of a physical object
+                that includes a Circuit Playground. Using a modelled project planning
+                guide, students will learn how to wire a couple of simple circuits
+                and to build prototypes that can communicate the intended design of
+                a product, using cheap and easily found materials such as cardboard
+                and duct tape.
+            Innovations in Computing:
+              name: Innovations in Computing
+            Arrays and Color LEDs:
+              name: Arrays and Color LEDs
+            Innovations in Computing_:
+              name: Innovations in Computing
+            Designing Screens with Code_:
+              name: Designing Screens with Code
+            The Circuit Playground_:
+              name: The Circuit Playground
+            Input Unplugged_:
+              name: Input Unplugged
+            Board Events_:
+              name: Board Events
+            Getting Properties_:
+              name: Getting Properties
+            Analog Input_:
+              name: Analog Input
+            The Program Design Process_:
+              name: The Program Design Process
+            Arrays and Color LEDs_:
+              name: Arrays and Color LEDs
+            'Project: Make a Game_':
+              name: 'Project: Make a Game'
+            Making Music_:
+              name: Making Music
+            Arrays and For Loops_:
+              name: Arrays and For Loops
+            Accelerometer_:
+              name: Accelerometer
+            Functions with Parameters_:
+              name: "معادله با پارامترها"
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation'
+            'Project: Make a Game__':
+              name: 'Project: Make a Game'
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
@@ -6227,6 +6452,22 @@
                 deciding what to do with data that does not easily fit into the visualization
                 scheme that they have chosen.  Last, students look at what parts of
                 this process can be automated, and what need a human to make decisions.
+            Keeping Data Secret:
+              name: Keeping Data Secret
+              description_student: Students have a discussion on the different levels
+                of security they would like for personal data.  Once the class has
+                developed an understanding of the importance of privacy, they learn
+                about the process of encrypting information by enciphering a note
+                for a partner and deciphering the partner's note.  The class concludes
+                with a discussion about the importance of both physical and digital
+                security.
+              description_teacher: Students have a discussion on the different levels
+                of security they would like for personal data.  Once the class has
+                developed an understanding of the importance of privacy, they learn
+                about the process of encrypting information by enciphering a note
+                for a partner and deciphering the partner's note.  The class concludes
+                with a discussion about the importance of both physical and digital
+                security.
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -6565,6 +6806,8 @@
               name: "پریدن"
             NewBounce:
               name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab Variables
           title: ''
           description_audience: ''
           description_short: ''
@@ -7874,6 +8117,10 @@
               name: Unit 3 Chapter 1 Assessment
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: CSP Mid-course survey
+            Please complete the CSP Mid-course survey:
+              name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
           description_short: "برنامه نویسی"
@@ -7944,6 +8191,10 @@
               name: Intro to AppLab - Your First App 4
             Intro to AppLab - Getting Started:
               name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+            'Lesson 1: App Lab Intro':
+              name: 'Lesson 1: App Lab Intro'
           title: Intro to App Lab
           description_audience: ''
           description_short: ''
@@ -8463,6 +8714,32 @@
               name: 'Technology Foundations: What is a Computer?'
             'Data Science: Problem Solving with Big Data':
               name: 'Data Science: Problem Solving with Big Data'
+            Personal Innovations:
+              name: Personal Innovations
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+            Programming - Hour of Code:
+              name: Programming - Hour of Code
+            Simple Encryption:
+              name: Simple Encryption
+            Web Development - Creating Webpages:
+              name: Web Development - Creating Webpages
+            App Development Unplugged - User Interfaces:
+              name: App Development Unplugged - User Interfaces
+            App Development - Intro to App Lab:
+              name: App Development - Intro to App Lab
+            Creating Webpages:
+              name: Creating Webpages
+            User Interfaces:
+              name: User Interfaces
+            Intro to App Lab:
+              name: Intro to App Lab
+            Smart Clothing Design:
+              name: Smart Clothing Design
+            Intro to App Lab (13+):
+              name: Intro to App Lab (13+)
           title: PwC Access Your Potential
           description_audience: ''
           description_short: ''
@@ -8489,6 +8766,8 @@
               name: CSD/P pulse check survey 2017
             CSD mid and post survey 2017 staging:
               name: CSD mid and post survey 2017 staging
+            CSP mid and post survey 2017 staging:
+              name: CSP mid and post survey 2017 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -8508,6 +8787,282 @@
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           title: 'Minecraft: Hero''s Journey'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Intro to AppLab - Choose Your Own Adventure
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Intro to AppLab - Choose Your Own Adventure 2
+            Intro to AppLab - Your First App:
+              name: Intro to AppLab - Your First App
+            Intro to AppLab - Your First App 2:
+              name: Intro to AppLab - Your First App 2
+            Intro to AppLab - Your First App 3:
+              name: Intro to AppLab - Your First App 3
+            Intro to AppLab - Your First App 4:
+              name: Intro to AppLab - Your First App 4
+            Intro to AppLab - Getting Started:
+              name: Intro to AppLab - Getting Started
+            Intro to App Lab:
+              name: Intro to App Lab
+          title: Intro to App Lab Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-explore:
+          stages:
+            new stage:
+              name: new stage
+            Explore PT Prep - Reviewing the Task:
+              name: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan:
+              name: Explore PT - Making a Plan
+            Explore PT - Complete the Task:
+              name: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            'Setup: Digital Portfolio and Other Tools':
+              name: 'Setup: Digital Portfolio and Other Tools'
+          title: Explore - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Explore Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp-create:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+            Create PT Prep - Reviewing the Task:
+              name: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan:
+              name: Create PT Prep - Making a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: Create - AP Performance Task Prep
+          description_audience: ''
+          description_short: Lessons and resources to help students prepare for and
+            complete the AP Create Performance Tasks.
+          description: |-
+            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            \r
+            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+        csp3-reovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+          title: 'csp3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-recovery:
+          stages:
+            Under the sea recovery:
+              name: Under the sea recovery
+            standalone template:
+              name: standalone template
+          title: 'CSP3 under the sea student work recovery '
+          description_audience: ''
+          description_short: ''
+          description: ''
+        aws-demo:
+          stages:
+            new stage:
+              name: new stage
+          title: AWS Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+        halloween:
+          stages:
+            Halloween Artist:
+              name: Halloween Artist
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        valentine:
+          stages:
+            special valentine:
+              name: special valentine
+            Valentine Puzzles:
+              name: Valentine Puzzles
+          title: Valentine Special
+          description_audience: ''
+          description_short: Have fun creating valentines
+          description: ''
+        colehoc17:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-e-2018:
+          stages:
+            courseB_unplugged_MRF_2018:
+              name: courseB_unplugged_MRF_2018
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: "ساختن بنیان"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: "حلقه های تو در تو"
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Introduction:
+              name: "مقدمه"
+            Conditionals:
+              name: "مشروط"
+            Private and Personal Information:
+              name: Private and Personal Information
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            MINECRAFT STAGE GOES HERE:
+              name: MINECRAFT STAGE GOES HERE
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Present Your Project:
+              name: Present Your Project
+            Internet:
+              name: "اینترنت"
+            Crowdsourcing:
+              name: "کمک گیری جمعی"
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+          title: Course E 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-f-2018:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: "ساختن بنیان"
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Introduction:
+              name: "مقدمه"
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: "آزمایشگاه بازی عصر یخبندان"
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Envelope Variables:
+              name: "متغیرهای پاکت"
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: "برای تفریح حلقه ای"
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: "ترانه نویسی با پارامترها"
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+          title: Course F 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd6-old:
+          stages:
+            Computing Innovations:
+              name: Computing Innovations
+            Input Unplugged:
+              name: Input Unplugged
+            Event Types:
+              name: Event Types
+            Getters and Setters:
+              name: Getters and Setters
+            The Circuit Playground:
+              name: The Circuit Playground
+            Lists:
+              name: "فهرست‌ها"
+            Lights:
+              name: Lights
+            For Loops:
+              name: حلقه های "برای"
+            Lists and For Loops:
+              name: Lists and For Loops
+            Timed Loops:
+              name: Timed Loops
+            'Project: Board Output':
+              name: 'Project: Board Output'
+            Physical Input:
+              name: Physical Input
+            Analog Input:
+              name: Analog Input
+            Sensor Applications:
+              name: Sensor Applications
+            'Project: Prototype an Innovation':
+              name: 'Project: Prototype an Innovation'
+          title: "(DEPRECATED) CSD Unit 6 - Physical Computing"
           description_audience: ''
           description_short: ''
           description: ''

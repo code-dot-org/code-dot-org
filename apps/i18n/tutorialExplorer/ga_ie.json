@@ -1,4 +1,5 @@
 {
+  "startButton": "Tosaigh",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Uile",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Aois 7-10",
   "filterGrades68": "Aois 11-13",
   "filterGrades9": "Aois 14+",
-  "filterTeacherExperience": "Taithí an mhúinteora",
-  "filterTeacherExperienceBeginner": "Tosaitheoir",
-  "filterTeacherExperienceComfortable": "Compordach",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Taithí na ndaltaí",
   "filterStudentExperienceBeginner": "Tosaitheoir",
   "filterStudentExperienceComfortable": "Compordach",

@@ -37,7 +37,7 @@
     "encrypted_examples": "8MrvS0E5eMdRaN0C0oU4U115dG5R7E3MEPqfHUBpkGz6shljXs6gE1aOYbCV\n6tgA\n",
     "embed": "false",
     "instructions": "Make the 3x3 square as efficiently as you can. (Click to see full instructions)",
-    "markdown_instructions": "#Do This:\r\n\r\nWe're going to revisit a familiar problem, **drawing the 3x3 square as efficiently as possible**. The only difference is that this time you are armed with the ability to create **layers of functions** to help you design more elegant and efficient solutions. Use the techniques you've learned for **breaking down problems into layers of functions** in order to improve upon your previous solution.\r\n\r\n![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18 PM.png)",
+    "markdown_instructions": "# Do This:\r\n\r\nWe're going to revisit a familiar problem, **drawing the 3x3 square as efficiently as possible**. The only difference is that this time you are armed with the ability to create **layers of functions** to help you design more elegant and efficient solutions. Use the techniques you've learned for **breaking down problems into layers of functions** in order to improve upon your previous solution.\r\n\r\n![](https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

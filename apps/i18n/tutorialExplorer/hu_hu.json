@@ -1,4 +1,5 @@
 {
+  "startButton": "Kezdés",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "2-5. osztály",
   "filterGrades68": "6-8. osztály",
   "filterGrades9": "9+ osztály",
-  "filterTeacherExperience": "Oktatói tapasztalat",
-  "filterTeacherExperienceBeginner": "Kezdő",
-  "filterTeacherExperienceComfortable": "Kényelmes",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Tanulói tapasztalat",
   "filterStudentExperienceBeginner": "Kezdő",
   "filterStudentExperienceComfortable": "Kényelmes",

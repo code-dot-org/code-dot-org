@@ -37,11 +37,19 @@
   twentyhours_text: Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut
     inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya.
   og_title: Setiap anak berhak atas kesempatan
+  og_title_soon: Jam kode akan segera hadir
+  og_title_here: Jam kode di sini!
   og_description: Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk
     belajar ilmu komputer. Ini mengubah segalanya.
+  og_description_celeb: Mencoba tutorial yang baru, memenangkan video selebriti untuk
+    dirimu sendiri atau chat kelasmu!
   csedweek_og_title: Minggu pendidikan ilmu komputer
   csedweek_og_description: 4-10 Desember 2017. Ilmu komputer adalah dasar bagi setiap
     siswa untuk belajar.
+  csedweek_og_description_soon: Jam kode itu akan datang 4-10, Desember 2017. Ilmu
+    komputer adalah dasar bagi setiap siswa untuk belajar.
+  csedweek_og_description_here: Jam kode di sini. Ilmu komputer adalah dasar bagi
+    setiap siswa untuk belajar.
   hoc2014_heading: Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a>
     <br/> 8-14 Desember 2014 <br/>
   hoc2014_students: Siswa
@@ -93,12 +101,12 @@
   congratulations_on_completing_course2: Selamat atas penyelesaian Kursus 2
   congratulations_on_completing_course3: Selamat atas penyelesaian Kursus 3
   congratulations_on_completing_course4: Selamat atas penyelesaian Kursus 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Selamat menyelesaikan Kursus A
+  congratulations_on_completing_courseb: Selamat menyelesaikan Kursus B
+  congratulations_on_completing_coursec: Selamat menyelesaikan Kursus C
+  congratulations_on_completing_coursed: Selamat menyelesaikan Kursus D
+  congratulations_on_completing_coursee: Selamat menyelesaikan Kursus E
+  congratulations_on_completing_coursef: Selamat menyelesaikan Kursus F
   congratulations_on_completing_accelerated: Selamat atas menyelesaikan Kursus Akselerasi
   congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: Cobalah yang lebih pendek, tutorial 1 jam ini atau
@@ -171,25 +179,27 @@
     dibuat orang lain dan saling belajar satu sama lain!
   third_party_khan_btn_learn: Belajar CS bersama Khan Academy
   third_party_khan_btn_forum: Forum CS Khan Academy
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
+  third_party_appinv_desc: Aplikasi MIT Inventor adalah sebuah tool pemrograman berbasis-blok
+    yang memungkinkan semua orang, bahkan pemula, untuk memulai pemrograman dan membangun
+    berfungsi penuh dengan perangkat aplikasi untuk Android. Pendatang baru ke Aplikasi
+    Inventor dapat menjalankan aplikasi pertama mereka dan berjalan dalam waktu kurang
+    lebih satu jam, dan dapat memprogram aplikasi yang lebih lengkap dalam waktu yang
+    jauh lebih singkat dari pada teks berbasis bahasa-bahasa yang tradisional.
   third_party_appinv_btn_curriculum: Unduh Kurikulum App Inventor 2
   third_party_appinv_btn_forum: Forum App Inventor 2
   third_party_appinv_btn_site: Kunjungi App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
+  third_party_codehs_desc: CodeHS memperkenalkan blok bangunan pemrograman dengan
+    video pendek, contoh kode, dan banyak latihan pemrograman yang membuat coding
+    jadi menyenangkan dan dapat diakses untuk pemula. Untuk sekolah-sekolah dan Guru
+    CodeHS menyediakan kurikulum, peralatan guru dan PD. Untuk para peserta didik
+    perorangan, Anda bisa mendapatkan bantuan yang Anda butuhkan sepanjang jaringan
+    dari beberapa tutorial.
   third_party_codehs_btn_try: Introduksi CS Pelajari Lebih Lanjut untuk Sekolah
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_desc: Kami telah memikirkan kembali pendidikan dari dasar
+    ke atas. Layanan telah memikirkan kembali hampir semua hal - perdagangan, jejaring
+    sosial, perawatan kesehatan, dan lainnya. Kami sedang membangun pendidikan kebutuhan
+    dunia - pertama pendidikan pribumi yang benar-benar bersih.
+  third_party_codecademy_btn_curriculum: Unduh Kurikulum Kode cademy
   third_party_codecademy_btn_site: Kunjungi Codecademy
   third_party_organization: Organisasi
   third_party_curriculum: Kurikulum
@@ -200,19 +210,17 @@
   third_party_cost_free_399: Gratis untuk mencoba, $399/kelas
   third_party_cost_free_2: Gratis untuk mencoba, $2/mahasiswa
   third_party_cost_free_10: Gratis untuk mencoba, $9,99/bulan
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_5_4to8: Sekitar 5 pelajaran, diarahkan ke kelas 4 sampai 8
+  third_party_desc_10to12_kto3: Sekitar 10-12 pelajaran, ditujukan ke nilai K-3
+  third_party_desc_11_kto5: Sekitar 11 pelajaran, ditujukan ke nilai K-5
+  third_party_desc_10to12_kto5: Sekitar 10-12 pelajaran, ditujukan ke nilai K-5
+  third_party_desc_40_4to8: Lebih dari 40 pelajaran, ditujukan ke nilai 4-8
+  third_party_desc_dozens_kto8: Puluhan pelajaran untuk semua nilai K-8
+  third_party_desc_10to15_3to12: Antara 10 & 15 pelajaran, ditujukan ke nilai 3-12
+  third_party_desc_25to40_3to12: Dari 25 - 40 pelajaran, ditujukan ke nilai 3-12
+  third_party_desc_20_2to8: Sekitar 20 pelajaran, ditujukan ke nilai 2-8
+  third_party_desc_7to22_5to12: Antara 7 & 22 pelajaran, ditujukan ke nilai 5-12
+  third_party_desc_20_4to12: Lebih dari 20 pelajaran, ditujukan ke nilai 4-12
   enter_valid_age: Silakan pilih usia yang berlaku
   enter_valid_email: Masukkan alamat email yang valid
   get_a_certificate_message: Kami akan kirimkan sertifikat dan informasi tentang cara
@@ -274,55 +282,44 @@
     https://youtu.be/KsOIlDT145A.
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   just_did_course1: Saya baru saja menyelesaikan Kursus 1 - coba lihat! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! Thanks
-    @Microsoft for supporting @codeorg
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
-  twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer?
-    Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/
-    untuk mempelajari lebih lanjut.
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
+  just_did_course2: Saya hanya menyelesaikan 2 Kursus - coba periksa! @codeorg
+  just_did_course3: Saya hanya menyelesaikan 3 Kursus - coba periksa! @codeorg
+  just_did_course4: Saya hanya menyelesaikan 4 Kursus - coba periksa! @codeorg
+  just_did_coursea: Saya hanya menyelesaikan Kursus A - coba periksa! @codeorg
+  just_did_courseb: Saya hanya menyelesaikan Kursus B - coba periksa! @codeorg
+  just_did_coursec: Saya hanya menyelesaikan Kursus C - coba periksa! @codeorg
+  just_did_coursed: Saya hanya menyelesaikan Kursus D - coba periksa! @codeorg
+  just_did_coursee: Saya hanya menyelesaikan Kursus E - coba periksa! @codeorg
+  just_did_coursef: Saya hanya menyelesaikan Kursus F - coba periksa! @codeorg
+  just_did_accelerated: Saya hanya menyelesaikan Kursus Akselerasi - coba periksa!
+    @codeorg
+  just_did_hoc_donor: 'Saya hanya melakukan #HourOfCode - coba periksa! (Terima kasih
+    %{donor_twitter} untuk mendukung @codeorg)'
+  just_did_course1_donor: Saya hanya menyelesaikan 1 Kursus - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_course2_donor: Saya hanya menyelesaikan 2 Kursus - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_course3_donor: Saya hanya menyelesaikan 3 Kursus - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_course4_donor: Saya hanya menyelesaikan 4 Kursus - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_coursea_donor: Saya hanya menyelesaikan Kursus A - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_courseb_donor: Saya hanya menyelesaikan Kursus B - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_coursec_donor: Saya hanya menyelesaikan Kursus C - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_coursed_donor: Saya hanya menyelesaikan Kursus D - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_coursee_donor: Saya hanya menyelesaikan Kursus E - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_coursef_donor: Saya hanya menyelesaikan Kursus F - coba periksa! Terima
+    kasih %{donor_twitter} untuk mendukung @codeorg
+  just_did_accelerated_donor: Saya hanya menyelesaikan Kursus Akselerasi - coba periksa!
+    Terima kasih %{donor_twitter} untuk mendukung @codeorg
+  twitter_teach_cs: 9 dari 10 orang menyetujuinya, sekolah harus mengajarkan ilmu
+    komputer. http://youtu.be/nKIu9yen5nc. Kunjungi https://code.org/.
+  twitter_cs_foundational: Ilmu komputer adalah dasar bagi siswa untuk belajar. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Belajar Kode selama satu Jam
   beyond_hoc: Setelah Satu Jam
   what_gender: Apa jenis kelamin Anda?
@@ -334,8 +331,8 @@
   lines_of_code: Sebanyak <b># baris kode</b> telah ditulis sampai saat ini.
   lines_of_code_alt: "<b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI"
   who_has_done_hoc: 'Siapakah yang telah menyelesaikan #HourOfCode? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Siapa yang telah kerjakan #HourOfCode? (Terima kasih %{donor_twitter}
+    untuk mendukung @codeorg)'
   hoc_leaderboards: 'Papan Prestasi Jam kode '
   students_and_lines: Sebanyak %{students} siswa telah menyelesaikan jam kode dan
     menulis %{lines} baris kode.
@@ -363,6 +360,12 @@
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   studiobar_shop_title: Belanja
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
+  homepage_stats_students: Kami dari siswa mempunyai akun di Code.org
+  homepage_stats_female: Kami adalah siswa perempuan
+  homepage_stats_teachers: Guru menggunakan Code.org
+  homepage_stats_hourofcodde: Siswa di dunia telah mencoba Jam Kode
+  homepage_stats_policy: Negara mengubah kebijakan untuk mendukung ilmu komputer
+  homepage_stats_title: Kami membuat sebuah perbedaan
   homepage_hero_text_malala: "&ldquo;Saya menantang anak-anak di setiap negara untuk
     belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian"
   homepage_hero_text_susan: |-
@@ -379,10 +382,8 @@
   homepage_hero_text_satya: |-
     &ldquo;Ilmu komputer dapat membuka kesempatan-kesempatan terbaik di dunia.&rdquo;
     Satya, Direktur Utama Microsoft
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+  homepage_hero_text_satya_new: "&ldquo; Ilmu komputer memberdayakan siswa untuk menciptakan
+    dunia di masa yang akan datang. &rdquo; Satya, CEO dari Microsoft"
   homepage_hero_text_bosh: |-
     &ldquo;Jika Anda belajar mengkode, Anda dapat mempelajari pelajaran terbaik dalam kehidupan Anda.&rdquo;
     Chris Bosh
@@ -412,6 +413,8 @@
   homepage_hero_text_stat_loc: "#loc baris kode ditulis oleh para pelajar"
   homepage_hero_text_stat_students: "#student_count akun pelajar pada kode Studio"
   homepage_hero_text_stat_served: 'Hour of Code: #served disediakan'
+  homepage_hero_hoc_is_coming: Jam kode akan segera hadir
+  homepage_hero_hoc_is_here: Jam kode telah hadir
   homepage_slot_text_hoc: Jam Kode
   homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
   homepage_slot_text_teacher: Dashboard untuk Guru
@@ -431,6 +434,7 @@
   homepage_action_text_girlvideo: Inspirasi seorang gadis
   homepage_action_text_learn: Mulailah belajar
   homepage_action_text_signpetition: Tandatangani petisi
+  homepage_action_text_wincelebritychat: Menangkan sebuah obrolan selebriti
   homepage_signpetition_dropdown: Tandatangani petisi kami &#x25BE;
   homepage_diversity_pledge: Ambil jaminan diversitas
   homepage_banner_text_prizes: 'The Hour of Code akan datang lagi, Desember 7-13. '
@@ -447,15 +451,15 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
+  homepage_banner_emailprivacy: Kami membuat perubahan penting tentang bagaimana kami
+    mendukung privasi siswa.
   homepage_banner_emailprivacy_link: Baca selengkapnya
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: Tentang Hour of Code
   homepage_slot_text_link_host: Selenggarakan Hour of Code
   homepage_slot_text_link_hocserved: "# disajikan"
   homepage_solot_text_link_volunteer: Relawan untuk Hour of Code
@@ -479,7 +483,7 @@
   homepage_slot_text_link_buy: Terlibat
   homepage_slot_text_link_donate: Membuat sumbangan
   homepage_slot_text_link_shop: Kaos, topi, & banyak lagi
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Bawa CS ke sekolah mu
   homepage_header_codestudio: Code Studio kreasi siswa
   homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
   homepage_donors_seall: Lihat semua
@@ -523,10 +527,10 @@
   class_submission_level_college: Perguruan tinggi
   class_submission_level_vocational: Sekolah Kejuruan
   class_submission_languages_other: Bahasa yang lain
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
+  videos_more: Selengkapnya <a href='%{inspiring_videos_playlist}'>video inspiratif
+    </a> menampilkan role model dan selebriti
+  careers_page_more: Selengkapnya <a href='%{careers_url}' target='_blank'> video
+    inspiratif</a> menampilkan beberapa ahli di bidang teknologi
   playlab_choose_theme: Pilih laboratorium bermain-mu
   playlab_classic_title: Klasik
   playlab_gumball_title: Dunia Gumball yang menakjubkan
@@ -550,18 +554,58 @@
   mc_gradelevel: Usia 6 Keatas
   mc_platformtext: Browser modern, smartphone, tablet
   mc_specs: Berbagai bahasa | Situs pencarian | Ages 6-106
+  minecraft_agent: 'Minecraft: Perjalanan Pahlawan'
   minecraft_designer: Perancang Minecraft
   minecraft_adventurer: Petualang Minecraft
   minecraft_tutorials: Tutorial Minecraft Jam Kode
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_specs: Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+
+  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
+    new activity! Journey through Minecraft with code.
+  minecraft_agent_button: Mulai
+  minecraft_designer_description: Program animal dan objek - objek Minecraft lainnya
+    dalam versi Minecraft Anda sendiri.
   minecraft_designer_button: Mulai
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: Gunakan kode untuk menggunakan Alex atau Steve
+    pada petualangan.
   minecraft_adventurer_button: Mulai
   minecraft_no_internet: Tidak ada koneksi Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_download_adventurer: Download Petualang Mincraft versi offline.
   minecraft_subtitle: Minecraft Hour of Code
+  minecraft_store_camps: Perkemahan Minecraft Hour of Code Gratis di Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Mendaftar</a>
+    untuk Workshop Minecraft Hour Of Code Gratis di Microsoft Stores Australia, Kanada,
+    Puerto Rico atau Amerika Serikat. Pelajari bagaimana coding untuk semua orang
+    dan mengkombinasikan kreativitas, pemecahan masalah dan banyak hal menarik."
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'>Download</a>
+    facilitator quick start guide and PowerPoint presentations for younger and older
+    students now."
+  minecraft_join_online_training: Ready to facilitate your own Hour of Code with Minecraft,
+    but not sure where to start? Check out our <a href='%{minecraft_webinar_url}'>on-demand
+    webinar</a>. You will learn best practices, access ready-to-go facilitator materials,
+    and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
+    Get a head start on thinking through what you need to bring Hour of Code to young
+    people during Computer Science Education week (December 4-10) and beyond.
+  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
+    at the Microsoft Store'
+  minecraft_continue_learning_description: No computer science experience required!
+    Help ensure all youth can learn the valuable skills gained through computer science
+    education. Join us at the Microsoft Store to engage in a free series of three,
+    1-hour workshops where you will experience coding in a fun and stress-free environment,
+    become familiar with key computer science concepts, and get ready to lead an Hour
+    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
+    up today</a>.
+  minecraft_future: Help all youth become future ready
+  minecraft_future_description: Find out how other schools and nonprofits are bringing
+    digital skills, from digital literacy to computer science education, to their
+    communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
+    the resources</a> they found most valuable.
+  minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
+    Program animals and other Minecraft creatures in your own version of Minecraft.
+  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
+    Write code to journey through Minecraft biomes.
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
@@ -610,20 +654,21 @@
   video_title_obama: President Obama pada Ilmu Komputer
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Siapa pun bisa belajar
+  video_title_steph_curry: Hour of Code with Steph Curry
   video_title_draymond_green: Hour of Code with Draymond Green
   video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
-  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_title_real_madrid: Jam kode dengan Real Madrid
+  video_title_marco_belinelli: Jam kode dengan Marco Belinelli
+  video_title_chris_bosh: Ilmu komputer di Chris Bosh
   video_1min: 1 menit
   video_2min: 2 menit
   video_5min: 5 min
   speak_another_language: Berbicara bahasa lain?
   help_translate: Bantuk kami menerjemahkan.
   no_internet: Tidak ada koneksi Internet?
-  download_offline: Download the offline version.
+  download_offline: Versi unduh secara offline.
   are_you_teacher: Apakah anda seorang guru?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Meninjau rencana pelajaran dan sumber daya guru lainnya.
   volunteer_engineer_submission_title: Inspirasi siswa dan relawan untuk Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan
     rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh
@@ -640,8 +685,8 @@
     untuk seseorang yang dapat <span style="font-family: ''Gotham 7r'', sans-serif;">
     menginspirasi</span> siswa mereka dengan berbicara tentang luasnya kemungkinan
     dengan ilmu komputer.'
-  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
-    program here</a>.
+  volunteer_engineer_submission_intro_guide: kami belajar lebih tentang <a href="%{volunteer_guide}">
+    secara sukarela program disini </a>.
   volunteer_engineer_submission_intro_signup: Masukkan informasi berikut jika Anda
     seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai
     dengan <span class="form-required-field"> *</span> diperlukan.
@@ -694,8 +739,8 @@
   volunteer_engineer_submission_checkbox_contact: 'Saya sepakat dengan para guru dapat
     menghubungi saya untuk kesempatan-kesempatan bersukarela (Catatan: alamat surel
     Anda tidak akan dibagikan)'
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
+  volunteer_engineer_submission_checkbox_age_18_plus: Saya menyatakan bahwa saya minimal
+    berusia 18 tahun.
   volunteer_engineer_submission_submit: Kirim
   volunteer_engineer_submission_thankyou: Terima kasih sudah mendaftar untuk bersukarela.
     Para guru akan menggunakan <a href="%{url}">peta ini</a> untuk mencari dan menghubungi
@@ -736,9 +781,9 @@
   volunteer_engineer_submission_type_task_mentor: Saya mencari mentor untuk membantu
     mempersiapkan diri saya untuk koding dengan murid-murid saya
   petition_age: Umur
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
+  dashboard_announce_hoc_scaling_progress: Kami mengalami Jam kode lalu lintas tinggi.
+    Kami tidak bisa untuk menyimpan apa saja kemajuan minggu ini, tapi kemajuan ini
+    dari minggu sebelumnya masih aman.
   dashboard_announce_learn_more_button: Pelajari lebih banyak
   dashboard_landing_title: Beranda guru
   dashboard_landing_welcome: Selamat datang di dasbot guru yang baru dan termutakhir.
@@ -755,7 +800,7 @@
     5 SD.
   dashboard_landing_useful_links: Tautan lainnya yang bermanfaat (hanya dalam bahasa
     Inggris)
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: 'Sumber daya untuk anda di ruang kelas '
   dashboard_landing_office_hours: Ajukan pertanyaan secara langsung! Kunjungi kami
     melalui sambungan video setiap bulannya.
   dashboard_landing_print_certificates: Cetak sertifikat untuk siswa yang telah menyelesaikan
@@ -776,10 +821,10 @@
     ditawarkan oleh mitra kami.</a> Belajar untuk program dengan robot, membuat halaman
     web, membuat aplikasi Anda sendiri, atau menjelajahi bahasa pemrograman lain seperti
     C ++, Ruby, atau Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_inspire: Menghilhami siswa anda dengan poster, vidio, dan lainnya.
+  dashboard_landing_video_library: Menggunakan vidio dari vidio perpustakaan untuk
+    konsep ilmu komputer.
+  dashboard_landing_report_bug: Meminta sebuah fitur atau melaporkan bug.
   dashboard_landing_teacher_forum: Bergabung dengan komunitas belajar profesional.
   dashboard_hoc_courses: The Hour of Code untuk segala usia
   dashboard_hoc_courses_desc: Coba salah satu tutorial pendek 1 jam  ini dengan siswa
@@ -835,22 +880,22 @@
   dashboard_action_required: diperlukan
   dashboard_action_print_certificates: Cetak Sertifikat
   dashboard_assessments_view: 'Lihat penilaian di:'
-  dashboard_assessments_none: Most teachers measure their students' progress using
-    the "View Progress" tab. If you are interested in giving your students additional
-    assessments, you can find recommended questions and areas in the lesson plans.
-    These are done outside of Code Studio.
+  dashboard_assessments_none: Kebanyakan guru mengukur siswa mereka ''Melihat Kemajuan''
+    menggunakan tab. Jika anda tertarik untuk memberikan siswa anda nilai tambahan,
+    anda bisa menemukan direkomendasi pertanyaan dan daerah dalam rencana pelajaran.
+    Ini adalah dilakukan di luar Code.org.
   dashboard_assessments_none_part2: If you are teaching a middle or high school course,
     we have assessment questions available as part of Code Studio to help your students
     prepare for the AP test. To use these assessments, first assign the course to
     your class and then pick the course from the drop down above and you'll see your
     students' answers here.
   dashboard_assessments_summaries: Ringkasan penilaian
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_answers: 'Menjawab semua penilaian '
   dashboard_surveys_answers: Survei
   dashboard_percent: Persen
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: Semua
-  dashboard_download_csv: Download CSV
+  dashboard_download_csv: Mengunduh CSV
   dashboard_navigation_home_page: Beranda guru
   dashboard_navigation_section_student_progress: Akun dan perkembangan siswa
   dashboard_navigation_section_teacher_progress: Kemajuan studi Anda
@@ -881,9 +926,14 @@
     %{script_name}
   dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_responses_none: Sebagian besar kelas kami dirancang untuk bekerja pada
+    usia muda dan tidak mengharuskan siswa mengetik respon teks terhadap pertanyaan,
+    jadi anda tidak akan melihat respon teks apapun disini. Kursus untuk siswa di
+    kelas menengah dan kelas atas, Anda bisa melihat kiriman mereka untuk membuka
+    respon teks berakhir dengan pertanyaan memilih kursus yang di tugaskan dari penurunan
+    diatas.
   dashboard_sections_new_section: Kelompok baru
-  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_new_google_section: Bagian impor dari ruang kelas Google
   dashboard_sections_jumbotron_instruction: Buatlah kelompok baru dan tambahkan murid
     di dalamnya. Kelompok dapat membagi murid-murid menjadi kelompok yang lebih kecil
     agar Anda bisa memantau perkembangan dan mengelola akun mereka.
@@ -892,7 +942,7 @@
   dashboard_sections_table_grade: Kelas
   dashboard_sections_table_course: Kursus
   dashboard_sections_table_pairing_allowed: Pemrograman berpasangan
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Tahapan Tambahan
   dashboard_sections_table_students: Siswa
   dashboard_sections_table_code: Kode Sesi
   dashboard_sections_name: Nama kelompok
@@ -910,37 +960,36 @@
     informasi akun untuk dibagikan kepada masing-masing siswa-siswi.
   dashboard_sections_switch_section: 'Beralih bagian:'
   dashboard_sections_close: Tutup
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
+  dashboard_sections_move_students_desc: Pilih siswa untuk di pindahkan ke bagian
+    yang baru. siswa yang di pindahkan tidak akan jelas kemajuan mereka.
+  dashboard_sections_one_per_teacher: Siswa hanya bisa masuk dalam satu bagian untuk
+    setiap guru. Siswa anda akan di tambahkan di bagian baru dan meninggalkan bagian
+    lama mereka.
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
+  dashboard_sections_code_placeholder: Kode 6-karakter (ABCDEF)
+  dashboard_sections_other_section: Guru lainnya
+  dashboard_sections_both_sections: Apakah anda suka siswa anda berada dalam kedua
+    bagian?
+  dashboard_sections_yes_both: Ya, Saya ingin siswa menyalin untuk menjadi bagian
+    saat ini dan seperti bagian baru
+  dashboard_sections_no_move: Tidak, Saya tidak ingin memindahkan siswa hanya untuk
+    berada di bagian baru.
   dashboard_sections_move_students: Siswa pindahan
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
+  dashboard_sections_assign_hoc_script_desc: Berpartisipasi dalam Jam kode?
+  dashboard_sections_assign_hoc_script_msg: Silahkan dicatat bahwa kami tidak akan
+    dapat untuk menyimpan kemajuan dalam kursus 3- 11 Desember karena banyaknya lalu
+    lintas situs kami akan diterima untuk Jam kode. Segala sesuatu yang lainnya dalam
+    tutorial akan terus bekerja seperti yang diharapakan. Anda mungkin masih menetapkan
+    kursus dan memberi semua murid sertifikat untuk partisipasi. (Sebagian guru <a
+    href='%{certificate_url}'> mencetak ini di muka</a>.) Kami akan menyimpan dan
+    melaporkan kemajuan siswa dari setiap minggu untuk pertahun.
   dashboard_sections_assign_activity: Menetapkan kursus
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_error_none_selected: Anda tidak memilih siswa untuk di pindah. Silahkan
+    pilih setidaknya satu siswa.
+  dashboard_error_other_section: Jika anda memindahkan siswa di antara bagian anda
+    sendiri, pilih bagian dari dropdown. Hanya pilih bagian lainnya untuk memindahkan
+    siswa anda ke bagian guru lainnya.
   dashboard_students_add_student: Tambahkan siswa
   dashboard_students_add_students: Tambahkan beberapa siswa
   dashboard_students_add_multiple: 'Ketik atau sisipkan nama siswa Anda, satu siswa
@@ -1010,8 +1059,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Jika Anda tidak memiliki komputer, <a href='%{unplugged_url}'>cobalah
     pelajaran tanpa penggunaan komputer </a> di kelas Anda.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Kurikulum
   dashboard_curriculum_overview: Tinjauan Kurikulum K-5
   dashboard_overview: Tinjauan
@@ -1029,6 +1081,8 @@
   dashboard_curriculum_csins: 'Ilmu komputer dalam ilmu pengetahuan:'
   dashboard_curriculum_csp: "® AP Prinsip-prinsip ilmu komputer :"
   dashboard_curriculum_ecs: 'Menjelajahi ilmu komputer:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Lain
   dashboard_login_word: Kata
@@ -1250,6 +1304,8 @@
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
+  csp-explore_name: 'AP: Explore PT Prep'
+  csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
   cspunit3_gradelevel: Grades 9-12
@@ -1282,6 +1338,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Laboratorium Aplikasi
+  gamelab_name: Laboratorium Game
   basketball_name: Buat sebuah permainan basket
   sports_name: Kode permainan olahraga Anda
   applab_gradelevel: Usia 13+
@@ -2024,10 +2081,10 @@
     SPRK memberikan anak-anak kursus singkat yang menyenangkan dalam memprogram robot
     ketika mengasah keterampilan mereka dalam matematika dan sains.
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: Peramban kamu tidak didukung. Harap tingkatkan
+    Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu
+    peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi
+    beberapa fungsi tidak dapat bekerja.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -2037,12 +2094,12 @@
   playlab_shortcode: mainkan
   artist_shortcode: art
   header_home: Beranda
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Dasbor saya
   header_courses: Kursus
-  header_course_catalog: Course Catalog
+  header_course_catalog: Katalog kursus
   header_project_gallery: Proyek
   header_sections: Sesi
-  header_professional_learning: Professional Learning
+  header_professional_learning: Belajar profesional
   header_educate_overview: Ikhtisar Pendidik
   header_educate_elementary: Sekolah Dasar
   header_educate_middle: Sekolah Menengah Pertama
@@ -2133,3 +2190,5 @@
     Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
     Account” option:'
+  hero_name: 'Minecraft: Hero''s Journey'
+  applab-intro_name: App Lab Intro

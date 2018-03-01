@@ -98,6 +98,7 @@ export function publishProject(projectId, projectType) {
             lastPublishedAt: data.publishedAt,
             lastPublishedProjectData: data,
           });
+          resolve();
         },
         err => {
           dispatch({type: PUBLISH_FAILURE});

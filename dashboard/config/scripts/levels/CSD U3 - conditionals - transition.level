@@ -29,7 +29,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "markdown_instructions": "# Booleans\r\n\r\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\r\n\r\n# Do This\r\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\r\n\r\n* Add a `console.log` statement inside the draw loop. ( [Show me where](#triggercallout=callout) )\r\n* Add an Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\r\n* Look at the output of the program as the car moves. When does the output change? Why?",
     "callout_json": "[ {\r\n  \"localization_key\": \"CSD_U3_L8_S6_C1\",\r\n  \"callout_text\": \"Put the console log statement here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"callout\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"raceCar.x = raceCar.x - 2;\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "show_d_pad": "false",

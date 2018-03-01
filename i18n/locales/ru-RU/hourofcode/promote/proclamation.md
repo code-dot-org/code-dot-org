@@ -1,9 +1,8 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### Ниже приведен пример разрешения поддержку Недели Компьютерные науки, образования и ее цели, которые могут быть использованы государственными и местными законодателями.
@@ -15,13 +14,13 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [ДАТА]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Компьютерные технологии стали неотъемлимой частью нашей жизни, они меняют взаимоотношения между людьми и трансформирую мир вокруг нас;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Информационные технологии преобразовывают существующие отрасли промышленности, создают новые направления коммерции, открывают неизведанные горизонты на всех направлениях развития науки, а также являются мощным толчком для повышения производительности труда во всех отраслях экономики;
 
 Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Whereas the field of computer science is a foundational science for the digital age;
+В нашу цифровую эпоху информационные технологии являются основополагающим фундаментом развития науки и технологий;
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 

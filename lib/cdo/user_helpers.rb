@@ -14,7 +14,7 @@ module UserHelpers
       tr(' ', '_')
 
     if prefix.empty? || prefix == ''
-      prefix = 'coder' + (rand(900000) + 100000).to_s
+      prefix = 'coder' + rand(100000..999999).to_s
     end
     prefix = "coder_#{prefix}" if prefix.length < 5
 

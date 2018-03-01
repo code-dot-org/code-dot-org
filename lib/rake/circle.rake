@@ -56,6 +56,11 @@ SKIP_EYES = 'skip eyes'.freeze
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   task :run_tests do
+    unless CircleUtils.unit_test_container?
+      ChatClient.log "Wrong container, skipping"
+      next
+    end
+
     if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
@@ -72,6 +77,11 @@ namespace :circle do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task run_ui_tests: [:recompile_assets] do
+    unless CircleUtils.ui_test_container?
+      ChatClient.log "Wrong container, skipping"
+      next
+    end
+
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -141,6 +151,11 @@ namespace :circle do
   end
 
   task :seed_ui_test do
+    unless CircleUtils.ui_test_container?
+      ChatClient.log "Wrong container, skipping"
+      next
+    end
+
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next

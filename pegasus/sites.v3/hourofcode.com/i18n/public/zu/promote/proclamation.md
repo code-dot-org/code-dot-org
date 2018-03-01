@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_proclamation) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ### Ngaphansi yisampula yesixazululo esisekela iViki leMfundiso yeKhompyutha Sayensi kanye nemigomo engasetshenziswa ngumbuso kanye nezishayamthetho zendawo.

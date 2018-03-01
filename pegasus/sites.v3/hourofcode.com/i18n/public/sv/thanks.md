@@ -18,7 +18,6 @@ social:
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
   "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -26,42 +25,39 @@ social:
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Tack för att du anmält dig som värd för ett Hour of Code-evenemang!
+# Tack för att du anmält dig att hålla ett Hour of Code-evenemang!
 
-Du gör det möjligt för elever runt om i världen att lära sig en timme av kod som kan *ändra resten av deras liv*, under < % = campaign_date('full') % >. Vi hör av oss om nya guider och andra spännande uppdateringar. Vad kan du göra redan nu?
+As a thank you for helping make it possible for students to start learning computer science, we'd like to give you a free set of professionally printed posters featuring diverse role models for your classroom. Use offer code **FREEPOSTERS** at checkout. (Note: this is only available while supplies last and you'll need to cover shipping costs. Since these posters ship from the United States, shipping costs can be quite high if shipping to Canada and internationally. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
+<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
 
-## 1. Sprid ordet
+<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
 
-Du har nu gått med i Hour of Code rörelsen. Berätta för dina vänner med **#HourOfCode**!
+<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+## 1. Spread the word in your school and community
+
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Du behöver inte vara i skolan för att lära sig nya färdigheter. Invite a local politician or policy maker to visit your school for the Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i din kommun efter Hour of Code.
+
+Använda dessa [affischer, banderoller, klistermärken, videor och mycket mer](<%= resolve_url('/promote/resources') %>) för dina evenemang.
 
 ## 1. Hitta en lokal volontär som hjälper dig med ditt evenemang.
 
-[Sök på vår karta med volontärer](<%= resolve_url('https://code.org/volunteer/local') %>) efter någon som kan besöka ditt klassrum eller som kan videochatta på distans för att inspirera dina elever om de stora möjligheterna med datavetenskap.
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 2. Be din skola att arrangera Hour of Code
+## 3. Plan your Hour of Code
 
-[Skicka detta mail](<%= resolve_url('/promote/resources#sample-emails') %>) till din huvudman och utmana varje klassrum på din skola för att registrera dig.
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
-## 4. Be din arbetsgivare att engagera sig
+# Go beyond an Hour of Code
 
-[Skicka detta e-postmeddelande](<%= resolve_url('/promote/resources#sample-emails') %>) till din chef eller VD.
+<% if @country == 'us' %> An Hour of Code is just the beginning. Whether you are an administrator, teacher, or advocate, we have [professional development, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://code.org/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support from your administration, parents, and community.
 
-## 5. Gör reklam för Hour of Code i din kommun
+You have many choices to fit your school. Most of the organizations offering Hour of Code tutorials also have curriculum and professional development available. If you find a lesson you like, ask about going further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-[Rekrytera en lokal grupp](<%= resolve_url('/promote/resources#sample-emails') %>) — scouter, kyrkan, universitet, veteraner, fackförening eller några vänner. Du behöver inte vara i skolan för att lära sig nya färdigheter. Använda dessa [affischer, banderoller, klistermärken, videor och mycket mer](<%= resolve_url('/promote/resources') %>) för dina evenemang.
+<% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://hourofcode.com/beyond)
 
-## 6. Be dina lokala politiker stötta Hour of Code
-
-[Skicka detta e-postmeddelande](<%= resolve_url('/promote/resources#sample-emails') %>) till din lokala politiker, stadsfullmäktige eller skolans ledning och bjud in dem att besöka din skola under Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i din kommun efter Hour of Code.
-
-## 7. Planera din Hour of Code
-
-Välj en Hour of Code aktivitet och [titta påndenna handledning](<%= resolve_url('/how-to') %>).
-
-## 8. Go beyond an Hour of Code
-
-Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
+Code.org also offers full [introductory computer science courses](https://code.org/educate/curriculum/cs-fundamentals-international) translated into over 25 languages at no cost to you or your school. <% end %>
 
 <%= view 'popup_window.js' %>

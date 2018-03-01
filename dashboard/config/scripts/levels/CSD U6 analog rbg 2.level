@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Putting Color on the Screen\r\n\r\nNow that your sensor data is in a scale that works for RGB, you can go about setting the screen color.\r\n\r\n# Do This\r\n\r\n* Add a `setProperty()` block and set it to change the \"background-color\" property of \"screen1\".\r\n* Add an `rgb()` block to the last parameter of `setProperty()`.\r\n* Use the three color variables you created as inputs to the `rgb()` block.",
+    "markdown_instructions": "# Putting Color on the Screen\r\n\r\nNow that your sensor data is in a scale that works for RGB, you can go about setting the screen color.\r\n\r\n# Do This\r\n\r\n* Add a `setProperty()` block and set it to change the screen's background color.\r\n* Add an `rgb()` block to the last parameter of `setProperty()`.\r\n* Use the three color variables you created as inputs to the `rgb()` block.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -212,11 +212,12 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSD U6 analog data template",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 22:58:54 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:58:54 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:16:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

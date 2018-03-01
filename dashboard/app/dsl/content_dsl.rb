@@ -22,9 +22,12 @@ class ContentDSL < BaseDSL
   # Markdown (i18n not yet supported)
   def markdown(md) @hash[:markdown] = md end
   def teacher_markdown(md) @hash[:teacher_markdown] = md end
+
+  # Deprecated: This was used by three levels, each of which were using the identical
+  # pre dialog.  That dialog has since been hardcoded, and this has become essentially
+  # a bool, where the presence of any contents will result in our dialog (on match
+  # levels only)
   def pre_title(text) @hash[:pre_title] = text end
-  def pre_body(text) @hash[:pre_body] = text end
-  def pre_ani(text) @hash[:pre_ani] = text end
 
   def parse_output
     {name: @name, properties: @hash}
@@ -43,8 +46,6 @@ class ContentDSL < BaseDSL
       content2
       content3
       pre_title
-      pre_body
-      pre_ani
     ).each do |property|
       strings[@hash[property]] = @hash[property] unless @hash[property].blank?
     end

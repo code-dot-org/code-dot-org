@@ -7,44 +7,73 @@ import i18n from "@cdo/locale";
 import { styles } from './census2017/censusFormStyles';
 import { COUNTRIES } from '../geographyConstants';
 
+const singleLineLayoutStyles = {
+  display: "table-cell",
+  width: 210,
+  verticalAlign: "middle",
+  minHeight: 42,
+  fontSize: 13,
+  fontFamily: '"Gotham 4r", sans-serif',
+  color: "#333",
+  padding: 0,
+};
+const singleLineContainerStyles = {
+  display: "table",
+  width: "100%",
+};
+
 export default class CountryAutocompleteDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func,
     showErrorMsg: PropTypes.bool,
-    required: PropTypes.bool,
-    value: PropTypes.string
+    showRequiredIndicator: PropTypes.bool,
+    value: PropTypes.string,
+    fieldName: PropTypes.string,
+    singleLineLayout: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    fieldName: "country_s"
   };
 
   handleChange = (event) => {
     this.props.onChange("country", event);
-  }
+  };
 
   render() {
-    const {required, showErrorMsg, value} = this.props;
+    const {showRequiredIndicator, showErrorMsg, value, singleLineLayout} = this.props;
+
+    const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
+    const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
+    const showError = showErrorMsg && !value;
+    const errorDiv = (
+      <div style={styles.errors}>
+        {i18n.censusRequiredSelect()}
+      </div>
+    );
 
     return (
       <div>
-        <div style={styles.question}>
-          {i18n.schoolCountry()}
-          {required && (
-            <span style={styles.asterisk}> *</span>
-          )}
-          {showErrorMsg && (
-            <div style={styles.errors}>
-              {i18n.censusRequiredSelect()}
-            </div>
-          )}
+        <div style={containerStyle}>
+          <div style={questionStyle}>
+            {singleLineLayout ? i18n.country() : i18n.schoolCountry()}
+            {showRequiredIndicator && (
+               <span style={styles.asterisk}> *</span>
+            )}
+            {showError && !singleLineLayout && errorDiv}
+          </div>
+          <VirtualizedSelect
+            id="country"
+            name={this.props.fieldName}
+            options={COUNTRIES}
+            value={value}
+            onChange={this.handleChange}
+            placeholder={i18n.searchForCountry()}
+            labelKey="value"
+            matchPos="start"
+          />
         </div>
-        <VirtualizedSelect
-          id="country"
-          name="country_s"
-          options={COUNTRIES}
-          value={value}
-          onChange={this.handleChange}
-          placeholder={i18n.searchForCountry()}
-          labelKey="value"
-          matchPos="start"
-        />
+        {showError && singleLineLayout && errorDiv}
       </div>
     );
   }

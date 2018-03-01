@@ -1,56 +1,55 @@
-* * *
-
-title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
-
-* * *
-
+---
+title: <%= hoc_s(:title_proclamation) %>
+layout: wide
+nav: promote_nav
+---
 <%= view :signup_button %>
 
 ### A continuación hay una muestra de resolución de apoyo a la Semana de Educación en Ciencias de la Computación y sus metas que puedan ser utilizados por los legisladores locales y estatales.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+[CÁMARA, SENADO, ESTADO, PROPÓSITO DEL CONDADO O DE LA CIUDAD O PROCLAMACIÓN ###] – Visto que la Semana de la Educación de Ciencias de la Computación destaca el papel crucial que las Ciencias de la Computación desempeñan transformando nuestra sociedad y cómo las Ciencias de la Computación permiten la innovación y crean oportunidades económicas;
 
-[HOUSE OR SENATE RESOLUTION ###]
+[PROPOSITO DEL SENADO O CAMARA ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Visto que la tecnología de computación es una parte integral de la cultura y está transformando cómo la gente interactúa unos con otros y con el mundo alrededor de ellos;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Considerando que Ciencias de la Computación están transformando la industria, creando nuevos campos de comercio, impulsando la innovación en todos los campos de la ciencia y fortaleciendo la productividad en los sectores económicos establecidos;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Considerando que el campo de las Ciencias de computación sustenta el sector de tecnología de la información de nuestra economía, que es un contribuyente significativo al Pib de Estados Unidos;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Considerando que el campo de la informática es una ciencia fundamental para la era digital;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Considerando que el sector de tecnología de la información está posicionado excepcionalmente para ayudar con la recuperación económica a través de la investigación y desarrollo de nuevas innovaciones;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Considerando que las perspectivas para los trabajos de informática son brillantes, con más de 500,000 puestos vacantes en todo el país;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Considerando que proporcionar a los estudiantes la oportunidad de participar en actividades informáticas de alta calidad los expone a las ricas oportunidades que ofrece el campo y proporciona habilidades de pensamiento crítico que les servirán a lo largo de sus vidas;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Considerando que todos los estudiantes merecen una preparación completa en la educación en ciencias de la computación, incluido el acceso a los docentes calificados, la tecnología y el currículo apropiado para la edad, necesarios para aprender informática en los niveles de educación primaria y secundaria;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Considerando que la enseñanza de las Ciencias de la Computación tiene desafíos para abordar, incluyendo que las clases de Ciencias de la Computación cuenten para los requisitos de graduación de la secundaria y proveer desarrollo profesional para maestros de informática;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Considerando que la participación en la Hora del Código en la semana de la educación en Ciencias de la Computación puede servir para desmitificar el campo de las Ciencias de la Computación y alentar a más estudiantes a hacer estudios más avanzados de informática;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Considerando que el campo de las Ciencias de la Computación aborda importantes problemas de equidad, que incluye atraer más la participación de mujeres y minorías poco representadas en todos los niveles y ramas;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Considerando que Grace Murray Hopper, una de las primeras mujeres en el campo de las Ciencias de la Computación, diseñó nuevos lenguajes de programación y fue pionera en las normas para los sistemas informáticos que sentaron las bases de muchos adelantos en Ciencias de la Computación; y
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
+Considerando que la semana de <%= campaign_date('start-long') %>, en honor al cumpleaños de Grace Hopper, es designada como la 'Semana de la Educación en Ciencias de la Computación': por lo tanto, será
 
-Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
+Se resuelve, que la [CASA O SENADO, ESTADO, CONDADO, CIUDAD O JUNTA ESCOLAR] --
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) apoyar la designación de la Semana de la Educación en Ciencias de la Computación (<%= campaign_date('full') %>);
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) motivar a las escuelas, educadores, padres y legisladores a participar en la Semana de la Educación en Ciencias de la Computación permitiendo a sus estudiantes a participar en la Hora del Código;
 
-(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) motivar a las escuelas, maestros, investigadores, universidades, líderes empresariales y legisladores a identificar mecanismos para que los maestros reciban desarrollo profesional de vanguardia para proporcionar experiencias de aprendizaje sostenible en ciencias de la computación en todos los niveles educativos y alentar a los estudiantes a estar expuestos a conceptos de informática;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) motivar a los legisladores para eliminar las barreras que impiden que las clases de Ciencias de la Computación sean tomadas en cuenta como los créditos de matemáticas o ciencias en los requisitos de graduación;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) fomentar oportunidades, incluso a través de los programas existentes, para mujeres y minorías subrepresentadas en Ciencias de la Computación.
 
 <%= view :signup_button %>

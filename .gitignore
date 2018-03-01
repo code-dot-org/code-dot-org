@@ -20,6 +20,7 @@ npm-debug.log
 /apps/build-times.log
 /apps/build-times-to-upload.log
 /apps/coverage
+/apps/log
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log
@@ -38,6 +39,8 @@ npm-debug.log
 /aws/.code-studio-commit-built
 /aws/.shared-built
 /aws/.shared-commit-built
+/aws/offsite/lambda/*/node_modules/
+/aws/offsite/lambda/*.zip
 /bin/cron/.dts
 /bin/cron/log
 /build-started

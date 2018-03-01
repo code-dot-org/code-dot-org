@@ -273,17 +273,31 @@ myCallback("this message is coming from inside the interpreter");
   });
 
   let aceEditor;
+  let Range = function (startRow, startColumn, endRow, endColumn) {
+      this.start = {
+          row: startRow,
+          column: startColumn
+      };
+
+      this.end = {
+          row: endRow,
+          column: endColumn
+      };
+  };
+
   function setupFakeAce() {
     let oldAce;
+    let markerId = 1;
     beforeEach(() => {
       oldAce = window.ace;
       window.ace = {
-        require: sinon.stub().returns({Range: sinon.stub()}),
+        require: sinon.stub().returns({Range}),
       };
       const breakpoints = [];
       const aceSession = {
-        addMarker: sinon.spy(),
+        addMarker: sinon.spy(() => markerId++),
         getBreakpoints: sinon.stub().returns(breakpoints),
+        removeMarker: sinon.spy(),
       };
       aceEditor = {
         isRowFullyVisible: () => true,
@@ -312,6 +326,7 @@ myCallback("this message is coming from inside the interpreter");
           editor: {
             aceEditor: aceEditor,
           },
+          editCode: true,
         },
       });
       onPauseObserver = sinon.spy();
@@ -380,6 +395,18 @@ myCallback("this message is coming from inside the interpreter");
       it("will stop executing at the breakpoint", () => {
         expect(getCurrentLine()).to.equal(1);
       });
+      it("will highlight the line after the breakpoint", () => {
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+          start: {
+            row: 2,
+            column: 10,
+          },
+          end: {
+            row: 2,
+            column: 26,
+          },
+        });
+      });
       it("will notify the onPause observer", () => {
         expect(onPauseObserver).to.have.been.called;
       });
@@ -393,12 +420,27 @@ myCallback("this message is coming from inside the interpreter");
         it("will stop at the next breakpoint", () => {
           expect(getCurrentLine()).to.equal(3);
         });
+        it("will highlight the line after the breakpoint", () => {
+          expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+            start: {
+              row: 4,
+              column: 10,
+            },
+            end: {
+              row: 4,
+              column: 26,
+            },
+          });
+        });
         describe("and executed again after all breakpoints have been reached", () => {
           beforeEach(() => {
             jsInterpreter.executeInterpreter(false);
           });
           it("will execute the rest of the code", () => {
             expect(getCurrentLine()).to.equal(5);
+          });
+          it("will remove the highlight marker for the most recent highlight", () => {
+            expect(aceEditor.getSession().removeMarker.lastCall.args[0]).to.equal(aceEditor.getSession().addMarker.lastCall.returnValue);
           });
         });
       });
@@ -421,6 +463,18 @@ myCallback("this message is coming from inside the interpreter");
 
       it("will execute the line that the breakpoint is on and move to the next one", () => {
         expect(getCurrentLine()).to.equal(2);
+      });
+      it("will highlight the line after the step over", () => {
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+          start: {
+            row: 3,
+            column: 10,
+          },
+          end: {
+            row: 3,
+            column: 26,
+          },
+        });
       });
     });
 
@@ -448,6 +502,18 @@ myCallback("this message is coming from inside the interpreter");
           'innerFunctionScope'
         )).to.be.false;
         expect(getCurrentLine()).to.equal(3);
+      });
+      it("will highlight the line after the function call", () => {
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+          start: {
+            row: 7,
+            column: 10,
+          },
+          end: {
+            row: 7,
+            column: 26,
+          },
+        });
       });
     });
 
@@ -485,6 +551,18 @@ myCallback("this message is coming from inside the interpreter");
           'middleFunctionScope'
         )).to.be.true;
       });
+      it("will highlight the line after the inner function call", () => {
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+          start: {
+            row: 8,
+            column: 12,
+          },
+          end: {
+            row: 8,
+            column: 28,
+          },
+        });
+      });
 
       describe("and we step out again", () => {
         beforeEach(() => {
@@ -493,6 +571,18 @@ myCallback("this message is coming from inside the interpreter");
         });
         it("will step out again", () => {
           expect(getCurrentLine()).to.equal(8);
+        });
+        it("will highlight the line after the inner function call", () => {
+          expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+            start: {
+              row: 12,
+              column: 10,
+            },
+            end: {
+              row: 12,
+              column: 27,
+            },
+          });
         });
       });
     });
@@ -530,6 +620,18 @@ myCallback("this message is coming from inside the interpreter");
         jsInterpreter.executeInterpreter(false);
         expect(getCurrentLine()).to.equal(4);
       });
+      it("will highlight the line at the inner breakpoint", () => {
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+          start: {
+            row: 4,
+            column: 12,
+          },
+          end: {
+            row: 4,
+            column: 28,
+          },
+        });
+      });
     });
 
     describe("When executed after handleStepIn() is called", () => {
@@ -551,6 +653,18 @@ myCallback("this message is coming from inside the interpreter");
       it("will not execute the line it steps onto", () => {
         expect(getCurrentLine()).to.be.undefined;
       });
+      it("will highlight the first line", () => {
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+          start: {
+            row: 1,
+            column: 10,
+          },
+          end: {
+            row: 1,
+            column: 30,
+          },
+        });
+      });
 
       describe("And after handleStepOver is subsequently called", () => {
         beforeEach(() => {
@@ -559,6 +673,18 @@ myCallback("this message is coming from inside the interpreter");
         });
         it("will execute the line it is currently on", () => {
           expect(getCurrentLine()).to.equal(1);
+        });
+        it("will highlight the line after the step over", () => {
+          expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+            start: {
+              row: 2,
+              column: 10,
+            },
+            end: {
+              row: 2,
+              column: 26,
+            },
+          });
         });
         it("will keep the interpreter in the paused state", () => {
           expect(jsInterpreter.paused).to.be.true;
@@ -571,6 +697,9 @@ myCallback("this message is coming from inside the interpreter");
           });
           it("will execute the rest of the code", () => {
             expect(getCurrentLine()).to.equal(3);
+          });
+          it("will remove the highlight marker for the most recent highlight", () => {
+            expect(aceEditor.getSession().removeMarker.lastCall.args[0]).to.equal(aceEditor.getSession().addMarker.lastCall.returnValue);
           });
           it("will make the interpreter no longer paused", () => {
             expect(jsInterpreter.paused).to.be.false;
@@ -593,6 +722,19 @@ myCallback("this message is coming from inside the interpreter");
         it("will call the handleError method with the line number the error occurred on.", () => {
           expect(jsInterpreter.handleError).to.have.been.called;
           expect(jsInterpreter.handleError).to.have.been.calledWith(2);
+        });
+        it("will highlight as an error the first character of the program since the exception wasn't handled", () => {
+          expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal({
+            start: {
+              row: 0,
+              column: 0,
+            },
+            end: {
+              row: 1,
+              column: 0,
+            },
+          });
+          expect(aceEditor.getSession().addMarker.lastCall.args[1]).to.equal('ace_error');
         });
       });
       describe("with hideSource=true", () => {

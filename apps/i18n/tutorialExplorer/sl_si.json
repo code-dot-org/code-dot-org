@@ -1,4 +1,5 @@
 {
+  "startButton": "Začni",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "Vse",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "2. - 5. razred",
   "filterGrades68": "6. - 8. razred",
   "filterGrades9": "9. razred in višje",
-  "filterTeacherExperience": "Znanje učitelja",
-  "filterTeacherExperienceBeginner": "Začetnik",
-  "filterTeacherExperienceComfortable": "Udobno",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Znanje učenca",
   "filterStudentExperienceBeginner": "Začetnik",
   "filterStudentExperienceComfortable": "Udobno",

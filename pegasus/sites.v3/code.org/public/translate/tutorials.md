@@ -5,11 +5,11 @@ theme: responsive
 ---
 
 # Translating the site and tutorials
-The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. There are currently three projects open for translations:
+The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. There are currently two projects open for translations:
 
 * [Code.org Project](https://crowdin.com/project/codeorg) - For the Code.org site and all Code Studio tutorials. Learn more below.
 * [Hour of Code Project](https://crowdin.com/project/hour-of-code) - For the HourofCode.com site. Learn more [here](https://code.org/translate/hourofcode).
-* [Curriculum Project](https://crowdin.com/project/lesson-plans) - For teacher lesson plans that accompany our courses. Learn more [here](https://code.org/translate/curriculum).
+
 
 Please complete translations for these projects in the above order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
 
@@ -93,16 +93,12 @@ And, Star Wars will be coming soon for translation.
 1. blockly-mooc/bounce.json - context: [Bounce](https://studio.code.org/s/course3/stage/15/puzzle/1)
 1. blockly-mooc/jigsaw.json - context: [Jigsaw](https://studio.code.org/s/course1/stage/3/puzzle/1)
 
+<a name="crowdinhowto"href="#crowdinhowto"></a>
 ## How to Use CrowdIn
 
 <embed src="/files/crowdin.swf" style="max-width: 100%; max-height: 550px;"/>
 
 Watch the [demo video](/files/crowdin.swf) in full screen.
-
-## Strings that may still change
-
-Course 4 is still in Beta, so the instructions may still change as we prepare to release it. If you've completed all other translations, you can save these translations for last. We recommend that you still complete them and approve them as they are, and if changes are made then they will be mark as "unapproved" so that you can review and update the translation, if needed.
-
 
 ## How translations are selected
 

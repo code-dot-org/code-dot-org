@@ -27,7 +27,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === Planter.TerminationValue.PLANT_IN_NON_SOIL;
+        return Maze.controller.executionInfo.terminationValue() === Planter.TerminationValue.PLANT_IN_NON_SOIL;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +
@@ -48,7 +48,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === Planter.TerminationValue.PLANT_IN_NON_SOIL;
+        return Maze.controller.executionInfo.terminationValue() === Planter.TerminationValue.PLANT_IN_NON_SOIL;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +
@@ -79,7 +79,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === Planter.TerminationValue.DID_NOT_PLANT_EVERYWHERE;
+        return Maze.controller.executionInfo.terminationValue() === Planter.TerminationValue.DID_NOT_PLANT_EVERYWHERE;
       },
       xml: '<xml>' +
          ' <block type="when_run" deletable="false" movable="false">' +

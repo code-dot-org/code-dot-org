@@ -1,4 +1,5 @@
 {
+  "startButton": "دەستپێبکە",
   "filterOrgNames": "Created by",
   "filterOrgNamesAll": "All",
   "filterSortBy": "Sort by",
@@ -10,10 +11,6 @@
   "filterGrades25": "Grades 2-5",
   "filterGrades68": "Grades 6-8",
   "filterGrades9": "پلەی +٩",
-  "filterTeacherExperience": "Educator experience",
-  "filterTeacherExperienceBeginner": "شاگرد",
-  "filterTeacherExperienceComfortable": "Comfortable",
-  "filterTeacherExperienceExperienced": "Experienced",
   "filterStudentExperience": "Student experience",
   "filterStudentExperienceBeginner": "شاگرد",
   "filterStudentExperienceComfortable": "Comfortable",

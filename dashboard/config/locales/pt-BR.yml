@@ -210,6 +210,7 @@
       email: Endereço de email
       submit: Enviar
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Parece que você se inscreveu com um endereço de e-mail inválido.
         Envie um e-mail para support@code.org para receber um link de recuperação
         de senha.
@@ -706,9 +707,9 @@
       gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
-      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
-        with loading Web Lab on this browser. You may want to use a different browser
-        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_browser: Infelizmente, estamos com problemas com o carregamento
+        do Web Lab neste navegador. Você pode tentar usar um navegador diferente até
+        que isso seja resolvido. Desculpe pela inconveniência.
       weblab_unsupported_locale_storage: You may experience issues using Web Lab in
         Private Browsing mode. Please reload your project in normal mode. Sorry for
         the inconvenience.
@@ -784,6 +785,9 @@
         and games with objects and characters that interact with each other.
       audience: A partir de 13 anos
       cta: Saiba como
+    hoc-encryption:
+      title: Criptografia simples
+      body: Students will learn techniques to create and crack encrypted messages.
     weblab:
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
@@ -805,6 +809,10 @@
       title: Minecraft
       body: Crie animais e outras criaturas de Minecraft em sua própria versão do
         Minecraft.
+    hero:
+      title: Minecraft
+      body: Minecraft is back for the Hour of Code with a brand new activity! Journey
+        through Minecraft with code.
     sports:
       title: Esportes
       body: Make a basketball game or mix and match across sports.
@@ -888,6 +896,9 @@
     hide_survey_last_answer: Esta pesquisa é anônima. Acesse o painel do professor
       para ver os resultados gerais. Observe que os resultados só poderão ser vistos
       se, no mínimo, cinco alunos enviarem suas respostas.
+    survey_submission_thankyou: Thank you for submitting this survey! The survey has
+      been cleared so that your responses stay anonymous. Note that your teacher will
+      still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar respostas.
@@ -1016,13 +1027,13 @@
     save: Salvar
     delete: Excluir
     import: Importar
-    share_link_import_bad_link_header: Share link not recognized
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
-      you are using a link from a Minecraft: Agent puzzle, and that you have copied
-      the full link.'
-    share_link_import_error_header: Something went wrong.
-    share_link_import_error_body: There was a problem importing that share link. Please
-      try again.
+    share_link_import_bad_link_header: link de compartilhamento não reconhecido
+    share_link_import_bad_link_body: 'Não foi possível importar o link de compartilhamento.
+      Verifique se você está usando um link de um enigma do Minecraft: Agent e se
+      copiou o link completo.'
+    share_link_import_error_header: Ocorreu um erro.
+    share_link_import_error_body: Houve um problema ao importar o link de compartilhamento.
+      Tente novamente.
     exit: Voltar ao curso
     my_projects: Meus projetos
     project_gallery: Projetos
@@ -1303,4 +1314,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Cursos Completos
