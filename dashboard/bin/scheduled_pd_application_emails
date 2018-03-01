@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require_relative '../../lib/cdo/only_one'
+require_relative '../config/environment'
+
+def main
+  Pd::Application::ApplicationBase.send_all_decision_notification_emails
+end
+
+main if only_one_running?(__FILE__)

@@ -7,8 +7,8 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import reducers from '@cdo/apps/gamelab/reducers';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setExternalGlobals} from '../../util/testUtils';
-import "script!@code-dot-org/p5.play/examples/lib/p5";
-import "script!@code-dot-org/p5.play/lib/p5.play";
+import "script-loader!@code-dot-org/p5.play/examples/lib/p5";
+import "script-loader!@code-dot-org/p5.play/lib/p5.play";
 
 describe("GameLab", () => {
   setExternalGlobals();
@@ -61,9 +61,17 @@ describe("GameLab", () => {
       beforeEach(() => instance.injectStudioApp(studioApp));
 
       describe("The init method", () => {
-        it("requires droplet to be in the config", () => {
-          expect(() => instance.init({level:{}}))
-            .to.throw("Game Lab requires Droplet");
+        it("does not require droplet to be in the config", () => {
+          expect(() => instance.init(
+            {
+              ...config,
+              level: {
+                ...config.level,
+                editCode: false,
+              },
+            }
+          ))
+            .not.to.throw;
           expect(() => instance.init(config))
             .not.to.throw;
         });

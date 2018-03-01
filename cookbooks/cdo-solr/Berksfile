@@ -1,0 +1,5 @@
+source 'https://supermarket.chef.io'
+metadata
+
+cookbook 'cdo-java-7', path: '../cdo-java-7'
+cookbook 'apt'

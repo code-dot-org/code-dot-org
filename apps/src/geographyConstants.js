@@ -294,6 +294,7 @@ export const COUNTRIES = [
   {label: "VU", value: "Vanuatu"},
   {label: "WF", value: "Wallis and Futuna"},
   {label: "WS", value: "Samoa"},
+  {label: "XK", value: "Kosovo"},
   {label: "YE", value: "Yemen"},
   {label: "YT", value: "Mayotte"},
   {label: "ZA", value: "South Africa"},

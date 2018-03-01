@@ -122,7 +122,6 @@ class ChangeLoginTypeDialog extends Component {
         fixedWidth={useWideDialog ? 1010 : undefined}
         isOpen={isOpen}
         handleClose={handleClose}
-        assetUrl={()=>''}
         hideBackdrop={hideBackdrop}
         style={style}
         uncloseable={isSaveInProgress}

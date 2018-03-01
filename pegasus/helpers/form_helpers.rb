@@ -1,6 +1,7 @@
 require 'digest/md5'
 require_relative '../../deployment'
 require lib_dir 'forms/pegasus_form_validation'
+require lib_dir 'utf8mb4_extensions'
 
 include PegasusFormValidation
 
@@ -29,6 +30,11 @@ def insert_or_upsert_form(kind, data, options={})
   if dashboard_user
     data[:email_s] ||= dashboard_user[:email]
     data[:name_s] ||= dashboard_user[:name]
+  end
+
+  # The DB cannot store utf8mb4 characters so make sure they are all stripped out.
+  data.each do |k, v|
+    data[k] = v.strip_utf8mb4 if v.is_a? String
   end
 
   data = validate_form(kind, data, Pegasus.logger)

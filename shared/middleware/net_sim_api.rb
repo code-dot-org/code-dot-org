@@ -10,25 +10,27 @@ require_relative '../middleware/channels_api'
 
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
+  set :mustermann_opts, check_anchors: false
+
   TABLE_NAMES = {
     node: 'n',
     wire: 'w',
     message: 'm',
     log: 'l'
-  }
+  }.freeze
 
   NODE_TYPES = {
     client: 'client',
     router: 'router'
-  }
+  }.freeze
 
   VALIDATION_ERRORS = {
     malformed: 'malformed',
     conflict: 'conflict',
     limit_reached: 'limit_reached'
-  }
+  }.freeze
 
-  DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'
+  DEFAULT_LOCAL_REDIS = 'redis://localhost:6379'.freeze
 
   # Largest request we allow from NetSim clients.
   # Max request size we've observed in normal traffic: 9KB

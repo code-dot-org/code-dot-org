@@ -138,8 +138,7 @@ describe('The Exporter,', function () {
       "channel":"Wc1JaBxTP04gGolQ9xuhNw",
       "readonlyWorkspace":true,
       "isLegacyShare":false,
-      "postMilestone":true,
-      "postFinalMilestone":true,
+      "postMilestoneMode":true,
       "puzzleRatingsUrl":"/puzzle_ratings",
       "authoredHintViewRequestsUrl":"/authored_hint_view_requests.json",
       "serverLevelId":2176,
@@ -411,6 +410,8 @@ describe('The Exporter,', function () {
   }
 
   describe("Regression tests", () => {
+    testUtils.sandboxDocumentBody();
+
     it("should allow screens to be switched programmatically", (done) => {
       runExportedApp(
         `console.log("before switch"); setScreen("screen2"); console.log("after switch");`,

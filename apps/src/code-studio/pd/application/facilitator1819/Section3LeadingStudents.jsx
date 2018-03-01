@@ -1,15 +1,14 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {FormGroup} from "react-bootstrap";
-import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES, NONE} from '../ApplicationConstants';
 
-export default class Section3LeadingStudents extends Facilitator1819FormComponent {
-  static propTypes = {
-    ...Facilitator1819FormComponent.propTypes,
-    accountEmail: PropTypes.string.isRequired
-  };
-
+export default class Section3LeadingStudents extends LabeledFormComponent {
   static labels = PageLabels.section3LeadingStudents;
 
   static associatedFields = [
@@ -28,21 +27,21 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
         {this.radioButtonsFor("teachingExperience")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("ledCsExtracurriculars", {
-          "Other (Please List):" : "other"
+          [TextFields.otherPleaseList] : "other"
         })}
 
         {this.props.data.teachingExperience === YES &&
           <div>
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesTaught", {
-              "Other:" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("gradesCurrentlyTeaching", {
-              "Other:" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.checkBoxesWithAdditionalTextFieldsFor("subjectsTaught", {
-              "Other:" : "other"
+              [TextFields.otherWithText] : "other"
             })}
 
             {this.radioButtonsFor("yearsExperience")}
@@ -50,7 +49,7 @@ export default class Section3LeadingStudents extends Facilitator1819FormComponen
             {this.props.data.yearsExperience && this.props.data.yearsExperience !== NONE &&
               <div>
                 {this.checkBoxesWithAdditionalTextFieldsFor("experienceLeading", {
-                  "Other:" : "other"
+                  [TextFields.otherWithText] : "other"
                 })}
 
                 {this.checkBoxesFor("completedPd")}

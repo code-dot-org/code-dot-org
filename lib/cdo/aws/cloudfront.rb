@@ -29,9 +29,9 @@ module AWS
     # - `log`: `log.bucket` and `log.prefix` specify where to store CloudFront access logs (or disable if `log` is not provided).
     # - `ssl_cert`: ACM domain name for an SSL certificate previously uploaded to AWS.
     #   If not provided, the default *.cloudfront.net SSL certificate is used.
-    CONFIG = {
+    cloudfront_config = {
       pegasus: {
-        aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map {|x| CDO.canonical_hostname("#{x}.code.org")},
+        aliases: [CDO.pegasus_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
         origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
         # ACM domain name
         ssl_cert: 'code.org',
@@ -62,12 +62,13 @@ module AWS
 
     # Integration environment has a slightly different setup
     if ENV['RACK_ENV'] == 'integration'
-      CONFIG[:pegasus][:aliases] << 'cdo-pegasus.ngrok.io'
-      CONFIG[:pegasus][:origin] = 'cdo-pegasus.ngrok.io'
-      CONFIG[:dashboard][:aliases] << 'cdo.ngrok.io'
-      CONFIG[:dashboard][:origin] = 'cdo.ngrok.io'
-      puts "CONFIG: #{CONFIG}"
+      cloudfront_config[:pegasus][:aliases] << 'cdo-pegasus.ngrok.io'
+      cloudfront_config[:pegasus][:origin] = 'cdo-pegasus.ngrok.io'
+      cloudfront_config[:dashboard][:aliases] << 'cdo.ngrok.io'
+      cloudfront_config[:dashboard][:origin] = 'cdo.ngrok.io'
+      puts "CONFIG: #{cloudfront_config}"
     end
+    CONFIG = cloudfront_config.freeze
 
     # File path for caching mappings from CloudFront Distribution id to alias CNAMEs.
     # Reduces number of required API calls to ListDistributions.
@@ -155,7 +156,7 @@ module AWS
           {
             Id: 'cdo-assets',
             DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
-            OriginPath: "/#{rack_env}",
+            OriginPath: "/#{CDO.assets_bucket_prefix}",
             S3OriginConfig: {
               OriginAccessIdentity: ''
             },

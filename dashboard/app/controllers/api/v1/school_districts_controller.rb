@@ -3,6 +3,7 @@ class Api::V1::SchoolDistrictsController < ApplicationController
   EXCLUDED_DISTRICT_IDS = [
     3620580, # NEW YORK CITY PUBLIC SCHOOLS
   ].freeze
+  # rubocop:enable Style/NumericLiterals
 
   # GET /api/v1/school_district
   # GET /api/v1/school_district.csv

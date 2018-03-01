@@ -1,6 +1,6 @@
 import React from 'react';
 import QuickActionsCell from './QuickActionsCell';
-import QuickAction from './QuickAction';
+import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 
 export default storybook => {
   storybook
@@ -11,18 +11,17 @@ export default storybook => {
           description: 'Shown with 2 QuickActions as children',
           story: () => (
             <QuickActionsCell>
-              <QuickAction
-                text={"Action one"}
-                action={()=>{}}
-                hasLineAbove={false}
-                isDelete={false}
-              />
-              <QuickAction
-                text={"Delete project"}
-                action={()=>{}}
-                hasLineAbove={true}
-                isDelete={true}
-              />
+              <PopUpMenu.Item
+                onClick={() => {console.log("clicked");}}
+              >
+                {"Action 1"}
+              </PopUpMenu.Item>
+              <MenuBreak/>
+              <PopUpMenu.Item
+                onClick={() => {console.log("clicked");}}
+              >
+                {"Action 2"}
+              </PopUpMenu.Item>
             </QuickActionsCell>
           )
         },

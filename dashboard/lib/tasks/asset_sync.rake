@@ -3,7 +3,7 @@ namespace :assets do
   task sync: :environment do
     require 'cdo/rake_utils'
     # AWS CLI implements an optimized `sync` utility without any Ruby SDK equivalent.
-    cmd = "aws s3 sync #{dashboard_dir}/public/assets s3://#{CDO.assets_bucket}/#{rack_env}/assets --acl public-read --cache-control 'max-age=31536000'"
+    cmd = "aws s3 sync #{dashboard_dir}/public/assets s3://#{CDO.assets_bucket}/#{CDO.assets_bucket_prefix}/assets --acl public-read --cache-control 'max-age=31536000'"
     RakeUtils.system cmd
   end
 

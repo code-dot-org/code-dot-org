@@ -43,9 +43,12 @@ class Ability
       :pd_workshop_admins,
       :peer_review_submissions,
       RegionalPartner,
+      :regional_partner_workshops,
       Pd::RegionalPartnerMapping,
       Pd::Application::ApplicationBase,
-      Pd::Application::Facilitator1819Application
+      Pd::Application::Facilitator1819Application,
+      Pd::Application::Teacher1819Application,
+      :maker_discount
     ]
 
     if user.persisted?
@@ -83,8 +86,11 @@ class Ability
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
+        can [:read, :find], :regional_partner_workshops
         can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
+        can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
+        can :manage, :maker_discount
       end
 
       if user.facilitator?
@@ -100,8 +106,13 @@ class Ability
           workshop.facilitators.include? user
         end
         can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :update], Pd::Workshop, organizer_id: user.id
+        can :create, Pd::Workshop do |_|
+          Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
+        end
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
         can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
+        can :read, Pd::CourseFacilitator, facilitator_id: user.id
       end
 
       if user.district_contact?
@@ -117,7 +128,7 @@ class Ability
         end
       end
 
-      if user.workshop_organizer?
+      if user.workshop_organizer? || user.program_manager?
         can :create, Pd::Workshop
         can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
@@ -126,7 +137,15 @@ class Ability
         can :read, :pd_workshop_summary_report
         can :read, :pd_teacher_attendance_report
         if user.regional_partners.any?
-          can [:read, :quick_view, :update], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+          # regional partners by default have read, quick_view, and update
+          # permissions
+          can [:read, :quick_view, :cohort_view, :update, :search], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
+
+          # G3 regional partners should have full management permission
+          group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
+          unless group_3_partner_ids.empty?
+            can :manage, Pd::Application::ApplicationBase, regional_partner_id: group_3_partner_ids
+          end
         end
       end
 
@@ -145,6 +164,11 @@ class Ability
         can :manage, Pd::RegionalPartnerMapping
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1819Application
+        can :manage, Pd::Application::Teacher1819Application
+      end
+
+      if user.permission?(UserPermission::PROJECT_VALIDATOR)
+        can :manage, FeaturedProject
       end
 
       if user.permission?(UserPermission::PLC_REVIEWER)
@@ -191,7 +215,8 @@ class Ability
         Level,
         Course,
         Script,
-        ScriptLevel
+        ScriptLevel,
+        Video,
       ]
 
       # Only custom levels are editable.
@@ -200,7 +225,7 @@ class Ability
       end
     end
 
-    if user.persisted? && user.permission?(UserPermission::RESET_ABUSE)
+    if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
     end

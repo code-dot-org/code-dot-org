@@ -1,12 +1,22 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
-import {Panel} from 'react-bootstrap';
+import {
+  Row,
+  Col,
+  FormControl,
+  Panel
+} from 'react-bootstrap';
 import MarkdownSpan from '../components/markdownSpan';
 
 const styles = {
   lineItem: {
     fontFamily: '"Gotham 7r"',
-    marginRight: '10px'
+    marginRight: '10px',
+    display: 'inline-block'
+  },
+  panel: {
+    width: '66%',
+    minWidth: 500
   }
 };
 
@@ -26,8 +36,36 @@ Question.propTypes = {
 export default class DetailViewResponse extends React.Component {
   static propTypes = {
     question: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool]),
-    layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired
+    questionId: PropTypes.string,
+    answer: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.bool, PropTypes.element]),
+    layout: PropTypes.oneOf(['lineItem', 'panel']).isRequired,
+    score: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    possibleScores: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
+    editing: PropTypes.bool,
+    handleScoreChange: PropTypes.func
+  };
+
+  renderScoreOptions() {
+    return this.props.possibleScores.map((score, i) => (
+      <option value={score} key={i}>
+        {score}
+      </option>
+    ));
+  }
+
+  renderScore = () => {
+    return (
+      <FormControl
+        componentClass="select"
+        disabled={!this.props.editing}
+        value={this.props.score}
+        onChange={this.props.handleScoreChange}
+        id={`${this.props.questionId}-score`}
+      >
+        <option>--</option>
+        {this.renderScoreOptions()}
+      </FormControl>
+    );
   };
 
   render() {
@@ -37,6 +75,8 @@ export default class DetailViewResponse extends React.Component {
         renderedValue = _.join(renderedValue, ', ');
       }
 
+      const scoredQuestion = !!(this.props.possibleScores);
+
       if (this.props.layout === 'lineItem') {
         return (
           <div>
@@ -45,18 +85,38 @@ export default class DetailViewResponse extends React.Component {
           </div>
         );
       } else {
+        const heading = (
+          <Row>
+            <Col xs={scoredQuestion ? 9 : 12}>
+              <Question text={this.props.question}/>
+            </Col>
+            {
+              scoredQuestion && (
+                <Col xs={3}>
+                  {
+                    _.isEqual(this.props.possibleScores, ['Yes', 'No']) ? 'Meets requirements' : 'Score'
+                  }
+                </Col>
+              )
+            }
+          </Row>
+        );
+
         return (
-          <div className="row">
-            <div className="col-md-8">
-              <Panel
-                header={
-                  <Question text={this.props.question}/>
-                }
-              >
+          <Panel header={heading} style={styles.panel}>
+            <Row>
+              <Col xs={scoredQuestion ? 9 : 12}>
                 {renderedValue}
-              </Panel>
-            </div>
-          </div>
+              </Col>
+              {
+                scoredQuestion && (
+                  <Col xs={3}>
+                    {this.renderScore()}
+                  </Col>
+                )
+              }
+            </Row>
+          </Panel>
         );
       }
     } else {

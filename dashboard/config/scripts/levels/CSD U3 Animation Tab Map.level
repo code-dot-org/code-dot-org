@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "The Animation Tab",
-    "reference": "/csd/animation_tab/index.html"
+    "reference": "/docs/csd/animation_tab/index.html"
   },
   "published": true,
   "notes": ""

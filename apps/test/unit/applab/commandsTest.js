@@ -1,6 +1,7 @@
-import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
-import {rgb, timedLoop, stopTimedLoop} from '@cdo/apps/applab/commands';
+import sinon from 'sinon';
+import {rgb, setSelectionRange} from '@cdo/apps/applab/commands';
+import {injectErrorHandler} from "@cdo/apps/lib/util/javascriptMode";
 
 describe("rgb command", () => {
   it('returns an rgba string with no alpha', function () {
@@ -24,27 +25,103 @@ describe("rgb command", () => {
   });
 });
 
-describe('timedLoop({ms, callback})', () => {
-  it('runs code on an interval', () => {
-    const clock = sinon.useFakeTimers();
+describe("setSelectionRange", () => {
+  let errorHandler, testDivApplab, testInput, testInputId;
 
-    const spy = sinon.spy();
-    timedLoop({ ms: 50, callback: spy });
-    expect(spy).not.to.have.been.called;
+  beforeEach(() => {
+    errorHandler = {
+      outputWarning: sinon.spy(),
+    };
+    injectErrorHandler(errorHandler);
 
-    clock.tick(49);
-    expect(spy).not.to.have.been.called;
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
 
-    clock.tick(1);
-    expect(spy).to.have.been.calledOnce;
+    testInputId = 'test-input';
+    testInput = document.createElement('input');
+    testInput.setAttribute('id', testInputId);
+    testInput.setAttribute('type', 'text');
+    testInput.setAttribute('value', 'example content');
+    testDivApplab.appendChild(testInput);
+  });
 
-    clock.tick(50);
-    expect(spy).to.have.been.calledTwice;
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+    injectErrorHandler(null);
+  });
 
-    stopTimedLoop({});
-    clock.tick(50);
-    expect(spy).to.have.been.calledTwice;
+  it('sets the selection range on the found element', () => {
+    expect(testInput.selectionStart).to.equal(0);
+    expect(testInput.selectionEnd).to.equal(0);
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 3,
+      selectionEnd: 6,
+    });
+    expect(testInput.selectionStart).to.equal(3);
+    expect(testInput.selectionEnd).to.equal(6);
+  });
 
-    clock.restore();
+  it('sets the selection direction on the found element', () => {
+    testInput.selectionDirection = 'forward';
+    expect(testInput.selectionDirection).to.equal('forward');
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 3,
+      selectionEnd: 6,
+      selectionDirection: 'backward',
+    });
+    expect(testInput.selectionDirection).to.equal('backward');
+  });
+
+  it('warns if element is not found', () => {
+    setSelectionRange({
+      elementId: 'fakeElementId',
+      selectionStart: 0,
+      selectionEnd: 0,
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() elementId parameter refers to ' +
+        'an id ("fakeElementId") which does not exist.');
+  });
+
+  it('warns if start is not a number', () => {
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 'string',
+      selectionEnd: 0,
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() start parameter value (string) is not a number.');
+  });
+
+  it('warns if end is not a number', () => {
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 0,
+      selectionEnd: 'string',
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() end parameter value (string) is not a number.');
+  });
+
+  it('warns if direction is not a string', () => {
+    setSelectionRange({
+      elementId: testInputId,
+      selectionStart: 0,
+      selectionEnd: 0,
+      selectionDirection: () => {}
+    });
+    expect(errorHandler.outputWarning)
+      .to.have.been.calledOnce
+      .and.calledWith(
+        'setSelectionRange() direction parameter value (function) is not a string.');
   });
 });

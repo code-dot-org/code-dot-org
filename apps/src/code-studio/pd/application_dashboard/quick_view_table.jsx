@@ -1,31 +1,85 @@
 import React, {PropTypes} from 'react';
-import {Table} from 'reactabular';
-import {Button} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
-import _ from 'lodash';
+import {Button} from 'react-bootstrap';
+import _, {orderBy} from 'lodash';
+import { StatusColors } from './constants';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const styles = {
   table: {
     width: '100%',
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors,
+  notesCell: {
+    maxWidth: '200px',
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
   }
 };
 
-export default class QuickViewTable extends React.Component {
+export class QuickViewTable extends React.Component {
   static propTypes = {
+    showLocked: PropTypes.bool,
     path: PropTypes.string.isRequired,
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    statusFilter: PropTypes.string,
+    regionalPartnerName: PropTypes.string,
+    viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
 
+  constructor(props) {
+    super(props);
+    this.constructColumns();
+
+    // default
+    let sortColumnIndex = 0;
+    let direction = 'desc';
+
+    this.state = {
+      sortingColumns: {
+        [sortColumnIndex]: {
+          direction,
+          position: 0
+        }
+      }
+    };
+  }
+
+  formatBoolean(bool) {
+    return bool ? "Yes" : "No";
+  }
+
   constructColumns() {
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      {
+        container: {whiteSpace: 'nowrap'},
+        default: {color: color.light_gray}
+      }
+    );
+
     let columns = [];
     columns.push({
       property: 'created_at',
       header: {
         label: 'Submitted',
+        transforms: [sortable]
       },
       cell: {
         format: (created_at) => {
@@ -36,36 +90,83 @@ export default class QuickViewTable extends React.Component {
       property: 'applicant_name',
       header: {
         label: 'Name',
+        transforms: [sortable]
       },
     },{
       property: 'district_name',
       header: {
         label: 'School District',
+        transforms: [sortable]
       },
     },{
       property: 'school_name',
       header: {
         label: 'School Name',
+        transforms: [sortable]
       },
     },{
       property: 'status',
       header: {
         label: 'Status',
+        transforms: [sortable]
       },
       cell: {
         format: (status) => {
-          if (status === 'move_to_interview') {
-            return 'Move to Interview';
-          }
           return _.upperFirst(status);
         },
         transforms: [
           (status) => ({
-            style: {
-              backgroundColor: this.getViewColor(status),
-              color: this.getTextColor(status),
-              padding: '5px'
-            }
+            style: {...styles.statusCellCommon, ...styles.statusCell[status]}
+          })
+        ]
+      }
+    });
+
+    if (this.props.showLocked) {
+      columns.push({
+        property: 'locked',
+        cell: {
+          format: this.formatBoolean
+        },
+        header: {
+          label: 'Locked?',
+          transforms: [sortable]
+        }
+      });
+    }
+
+    if (this.props.viewType === 'teacher') {
+      columns.push({
+        property: 'principal_approval',
+        header: {
+          label: 'Principal Approval',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'meets_criteria',
+        header: {
+          label: 'Meets Criteria',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'total_score',
+        header: {
+          label: 'Total Score',
+          transforms: [sortable]
+        }
+      });
+    }
+
+    columns.push({
+      property: 'notes',
+      header: {
+        label: 'Notes'
+      },
+      cell: {
+        format: this.formatNotesTooltip,
+        transforms: [
+          () => ({
+            style: {...styles.notesCell}
           })
         ]
       }
@@ -78,58 +179,94 @@ export default class QuickViewTable extends React.Component {
         format: this.formatViewButton
       }
     });
-    return columns;
+
+    this.columns = columns;
   }
 
-  getViewColor = (status) => {
-    switch (status) {
-      case 'unreviewed': return color.charcoal;
-      case 'pending': return color.lighter_orange;
-      case 'accepted': return color.level_perfect;
-      case 'declined': return color.red;
-      case 'waitlisted': return color.level_passed;
-      case 'move_to_interview': return color.orange;
-      case 'withdrawn': return color.lightest_red;
-    }
+  getSortingColumns = () => this.state.sortingColumns || {};
+
+  onSort = (selectedColumn) => {
+    const sortingColumns = sort.byColumn({
+      sortingColumns: this.state.sortingColumns,
+      // Custom sortingOrder removes 'no-sort' from the cycle
+      sortingOrder: {
+        FIRST: 'asc',
+        asc: 'desc',
+        desc: 'asc'
+      },
+      selectedColumn
+    });
+
+    this.setState({sortingColumns});
+  };
+
+  constructRows() {
+    let rows = this.props.data;
+    rows = this.props.statusFilter ? rows.filter(row => row.status === this.props.statusFilter) : rows;
+    return rows;
   }
 
-  getTextColor = (status) => {
-    if (status === 'declined' || status === 'unreviewed') {
-      return color.white;
-    }
-    return color.black;
-  }
+  formatNotesTooltip = (notes) => {
+    let tooltipId = _.uniqueId();
+    return (
+      <div>
+        <div
+          data-tip
+          data-for={tooltipId}
+          aria-describedby={tooltipId}
+          style={styles.notesCellContent}
+        >
+          {notes}
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {notes}
+        </ReactTooltip>
+      </div>
+    );
+  };
 
   formatViewButton = (id) => {
     return (
       <Button
         bsSize="xsmall"
+        target="_blank"
         href={this.context.router.createHref(`/${this.props.path}/${id}`)}
-        onClick={this.handleViewClick.bind(this, id)}
       >
         View Application
       </Button>
     );
   };
 
-  handleViewClick = (id, event) => {
-    event.preventDefault();
-    this.context.router.push(`/${this.props.path}/${id}`);
-  };
-
   render() {
-    const rows = this.props.data;
-    const columns = this.constructColumns();
+    const rows = this.constructRows();
+
+    const {sortingColumns} = this.state;
+    const sortedRows = sort.sorter({
+      columns: this.columns,
+      sortingColumns,
+      sort: orderBy
+    })(rows);
 
     return (
       <Table.Provider
+        id="quick-view"
         className="pure-table table-striped"
-        columns={columns}
+        columns={this.columns}
         style={styles.table}
       >
         <Table.Header />
-        <Table.Body rows={rows} rowKey="id" />
+        <Table.Body rows={sortedRows} rowKey="id" />
       </Table.Provider>
     );
   }
 }
+
+export default connect(state => ({
+  showLocked: state.permissions.lockApplication,
+  isWorkshopAdmin: state.permissions.workshopAdmin,
+}))(QuickViewTable);

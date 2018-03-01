@@ -29,11 +29,13 @@ require 'cdo/github'
 require 'cdo/git_utils'
 require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
+require 'cdo/infra_test_topic'
 require 'cdo/rake_utils'
 require 'cdo/only_one'
+require 'cdo/metrics_helper'
+require 'dynamic_config/dcdo'
 
 STARTED = 'build-started'.freeze
-CHAT_LOG_TAIL_LENGTH = 40
 S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
 S3_LOGS_PREFIX = CDO.name.freeze
 
@@ -69,7 +71,7 @@ def build
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
     IO.write(deploy_dir('rebuild'), log)
 
-    git_revision = `git rev-parse HEAD`
+    git_revision = RakeUtils.git_revision
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
     Honeybadger.notify_new_release(rack_env, git_revision)
 
@@ -77,7 +79,14 @@ def build
     RakeUtils.bundle_install
 
     status = begin
-      RakeUtils.rake_stream_output 'ci'
+      result = RakeUtils.rake_stream_output 'ci'
+
+      if rack_env == :test && git_revision != RakeUtils.git_revision
+        ChatClient.log "git revision unexpectedly changed from #{git_revision} to #{RakeUtils.git_revision} during DTT", color: 'red'
+        raise
+      end
+
+      result
     rescue => e
       CDO.backtrace e
     end
@@ -134,7 +143,7 @@ def main
 
       if rack_env == :test
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
-        DevelopersTopic.set_dtt 'no (robo-DTT built)'
+        mark_dtt_green
       end
 
       if rack_env == :levelbuilder
@@ -146,16 +155,15 @@ def main
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
         DevelopersTopic.set_dtp 'yes'
         InfraProductionTopic.set_dtp_commit GitHub.sha('production')
+
+        # Check hoc_mode only on successful DTPs, so that we get about 1 reminder per day to bring
+        # staging, test and production to the same hoc_mode after a hoc_mode change. Note
+        # that this will only warn us if test and production (but not staging) are out of sync.
+        check_hoc_mode
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
-      truncated_log = <<-LOG
-Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
-#{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
-      LOG
       ChatClient.log message, color: 'red'
-      ChatClient.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
-      ChatClient.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
       ChatClient.log '<!here> build failure', color: 'red'
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
@@ -172,6 +180,35 @@ Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
   # Return the same output and status code that BUILD returned.
   puts log
   status
+end
+
+def check_hoc_mode
+  hoc_mode = DCDO.get('hoc_mode', false)
+  if hoc_mode != CDO.default_hoc_mode
+    # The test machine cannot remember DCDO params, so its hoc_mode is controlled by
+    # CDO.default_hoc_mode.
+    msg = "<!here> #{rack_env} hoc_mode (#{hoc_mode.inspect}) and default_hoc_mode "\
+      "(#{CDO.default_hoc_mode.inspect}) are out of sync. Please update CDO.default_hoc_mode in "\
+      "github, DCDO hoc_mode in staging, and DCDO hoc_mode in production to the same values, so "\
+      "that our staging, test and production environments all show the same version of our site."
+    ChatClient.log msg
+  end
+end
+
+def mark_dtt_green
+  # Look at the HEAD revision on the test machine, rather than the one in
+  # GitHub. Otherwise, if someone pushes more changes to the test branch while
+  # the DTT is running, we might accidentally, automatically mark those
+  # untested changes green.
+  test_branch_sha = GitUtils.git_revision_short
+
+  msg = "Automatically marking commit #{test_branch_sha} green"
+  ChatClient.log msg
+  ChatClient.message 'deploy-status', msg
+
+  DevelopersTopic.set_dtt 'yes'
+  InfraTestTopic.set_green_commit test_branch_sha
+  Metrics.write_metric('dtt_green', test_branch_sha, Metrics::AUTOMATIC)
 end
 
 def emit_deploy_metric(deployment_stage, successful)

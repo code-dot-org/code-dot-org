@@ -1,6 +1,17 @@
 import React from 'react';
-import ManageStudentsTable from './ManageStudentsTable';
+import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {combineReducers, createStore} from 'redux';
+import manageStudents, {RowType} from './manageStudentsRedux';
+import {Provider} from 'react-redux';
+
+const initialState = {
+  manageStudents: {
+    loginType: '',
+    studentData: {},
+    sectionId: null,
+  },
+};
 
 // Student names out of alphabetical order to demonstrate
 // sorting functionality in the storybook
@@ -17,6 +28,8 @@ const passwordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -30,6 +43,8 @@ const passwordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -43,6 +58,8 @@ const passwordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -59,6 +76,8 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -72,6 +91,8 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -85,6 +106,7 @@ const wordAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: '/wizard.jpg',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -101,6 +123,8 @@ const pictureAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -114,6 +138,8 @@ const pictureAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   },
   {
     id: 3,
@@ -127,6 +153,8 @@ const pictureAccountData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    isEditing: false,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -143,6 +171,7 @@ const googleData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -156,6 +185,7 @@ const googleData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
@@ -172,6 +202,7 @@ const cleverData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   },
   {
     id: 2,
@@ -185,10 +216,12 @@ const cleverData = [
     secretPictureName: 'wizard',
     secretPicturePath: 'http://code.org/images/password_images/pirate_thumb@2x.png',
     sectionId: 53,
+    rowType: RowType.STUDENT,
   }
 ];
 
 export default storybook => {
+  const store = createStore(combineReducers({manageStudents}), initialState);
   storybook
     .storiesOf('ManageStudentsTable', module)
     .addStoryTable([
@@ -196,55 +229,70 @@ export default storybook => {
         name: 'Table for email accounts',
         description: 'Ability to edit/delete all data including the password',
         story: () => (
-          <ManageStudentsTable
-            studentData={passwordAccountData}
-            id={53}
-            loginType={SectionLoginType.email}
-          />
+          <Provider store={store}>
+            <UnconnectedManageStudentsTable
+              studentData={passwordAccountData}
+              editingData={{}}
+              id={53}
+              loginType={SectionLoginType.email}
+            />
+          </Provider>
         )
       },
       {
         name: 'Table for word accounts',
         description: 'Ability to edit/delete all data and reset the secret word',
         story: () => (
-          <ManageStudentsTable
-            studentData={wordAccountData}
-            id={53}
-            loginType={SectionLoginType.word}
-          />
+          <Provider store={store}>
+            <UnconnectedManageStudentsTable
+              studentData={wordAccountData}
+              editingData={{}}
+              id={53}
+              loginType={SectionLoginType.word}
+            />
+          </Provider>
         )
       },
       {
         name: 'Table for picture accounts',
         description: 'Ability to edit/delete all data and reset the secret picture',
         story: () => (
-          <ManageStudentsTable
-            studentData={pictureAccountData}
-            id={53}
-            loginType={SectionLoginType.picture}
-          />
+          <Provider store={store}>
+            <UnconnectedManageStudentsTable
+              studentData={pictureAccountData}
+              editingData={{}}
+              id={53}
+              loginType={SectionLoginType.picture}
+            />
+          </Provider>
         )
       },
       {
         name: 'Table for Google accounts',
         description: 'Read only table',
         story: () => (
-          <ManageStudentsTable
-            studentData={googleData}
-            id={53}
-            loginType={SectionLoginType.google_classroom}
-          />
+          <Provider store={store}>
+            <UnconnectedManageStudentsTable
+              studentData={googleData}
+              editingData={{}}
+              id={53}
+              loginType={SectionLoginType.google_classroom}
+            />
+          </Provider>
         )
       },
       {
         name: 'Table for Clever accounts',
         description: 'Ready only table',
         story: () => (
-          <ManageStudentsTable
-            studentData={cleverData}
-            id={53}
-            loginType={SectionLoginType.clever}
-          />
+          <Provider store={store}>
+            <UnconnectedManageStudentsTable
+              studentData={cleverData}
+              editingData={{}}
+              id={53}
+              loginType={SectionLoginType.clever}
+            />
+          </Provider>
         )
       },
     ]);

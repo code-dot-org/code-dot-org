@@ -102,7 +102,7 @@ Students might need to be reminded here that there is no right answer.  A graph 
 
 [tip]
 
-#Teaching Tip
+# Teaching Tip
 An important part of this lesson (and all of the lessons in this unit) is to develop students skills in articulating and describing complicated processes. That, in essence, is the work of developing an algorithm. A shortest path algorithm is fairly difficult to describe so this will be a real challenge.
 
 [/tip]

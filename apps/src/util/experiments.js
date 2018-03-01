@@ -15,6 +15,8 @@ const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
+experiments.MANAGE_STUDENTS = 'manageStudents';
+
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */

@@ -51,7 +51,7 @@
     "video_key": "csp_internetsimulator_1",
     "show_log_browser_button": "false",
     "connected_routers": "false",
-    "markdown_instructions": "#Sending bits with the Internet Simulator\r\n\r\nYou and your partner share a single wire that can only be in state A or state B. You can set the wire to either state at any time, and you can read the state of the wire at any time. Can you figure out a way to effectively communicate with just this system?\r\n\r\nYour teacher will hand out more specific instructions for this activity."
+    "markdown_instructions": "# Sending bits with the Internet Simulator\r\n\r\nYou and your partner share a single wire that can only be in state A or state B. You can set the wire to either state at any time, and you can read the state of the wire at any time. Can you figure out a way to effectively communicate with just this system?\r\n\r\nYour teacher will hand out more specific instructions for this activity."
   }
 }]]></config>
   <blocks/>

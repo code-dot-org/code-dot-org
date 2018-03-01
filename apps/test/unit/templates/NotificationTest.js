@@ -4,6 +4,8 @@ import {expect} from '../../util/configuredChai';
 import Notification from '@cdo/apps/templates/Notification';
 import Button from '@cdo/apps/templates//Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {combineReducers, createStore} from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 const announcement = {
   heading: "Go beyond an Hour of Code",
@@ -45,6 +47,8 @@ const findCourse = {
 };
 
 describe('Notification', () => {
+  const store = createStore(combineReducers({isRtl}));
+
   it('renders an announcement notification', () => {
     const wrapper = shallow(
       <Notification
@@ -56,9 +60,8 @@ describe('Notification', () => {
         buttonLink={announcement.link}
         newWindow={true}
         analyticId={announcement.id}
-        isRtl={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -90,9 +93,8 @@ describe('Notification', () => {
         notice={information.notice}
         details={information.details}
         dismissible={false}
-        isRtl={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -119,9 +121,8 @@ describe('Notification', () => {
         notice={success.notice}
         details={success.details}
         dismissible={false}
-        isRtl={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -148,9 +149,8 @@ describe('Notification', () => {
         notice={failure.notice}
         details={failure.details}
         dismissible={false}
-        isRtl={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -177,9 +177,8 @@ describe('Notification', () => {
         notice={warning.notice}
         details={warning.details}
         dismissible={false}
-        isRtl={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -209,9 +208,8 @@ describe('Notification', () => {
         buttonText={findCourse.buttonText}
         buttonLink={findCourse.link}
         newWindow={true}
-        isRtl={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -240,9 +238,8 @@ describe('Notification', () => {
         notice={information.notice}
         details={information.details}
         dismissible={true}
-        isRtl={false}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper.find('FontAwesome').length).to.equal(2);
     expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('info-circle');
     expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');

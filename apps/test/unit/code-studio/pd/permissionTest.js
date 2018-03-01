@@ -16,6 +16,7 @@ describe("Permission class", () => {
     expect(permission.isWorkshopAdmin).to.be.true;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.false;
+    expect(permission.isProgramManager).to.be.false;
     expect(permission.isPartner).to.be.false;
   });
 
@@ -34,6 +35,17 @@ describe("Permission class", () => {
     expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.true;
+    expect(permission.isProgramManager).to.be.false;
+    expect(permission.isPartner).to.be.false;
+  });
+
+  it("Detects program manager", () => {
+    setGlobalPermissionString("[program_manager]");
+    const permission = new Permission();
+    expect(permission.isWorkshopAdmin).to.be.false;
+    expect(permission.isFacilitator).to.be.false;
+    expect(permission.isOrganizer).to.be.false;
+    expect(permission.isProgramManager).to.be.true;
     expect(permission.isPartner).to.be.false;
   });
 
@@ -43,6 +55,7 @@ describe("Permission class", () => {
     expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.false;
+    expect(permission.isProgramManager).to.be.false;
     expect(permission.isPartner).to.be.true;
   });
 
@@ -52,6 +65,7 @@ describe("Permission class", () => {
     expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.false;
     expect(permission.isOrganizer).to.be.true;
+    expect(permission.isProgramManager).to.be.false;
     expect(permission.isPartner).to.be.true;
   });
 
@@ -61,6 +75,17 @@ describe("Permission class", () => {
     expect(permission.isWorkshopAdmin).to.be.false;
     expect(permission.isFacilitator).to.be.true;
     expect(permission.isOrganizer).to.be.true;
+    expect(permission.isProgramManager).to.be.false;
+    expect(permission.isPartner).to.be.false;
+  });
+
+  it("Detects multiple permissions for organizer-program_managers", () => {
+    setGlobalPermissionString("[program_manager,workshop_organizer]");
+    const permission = new Permission();
+    expect(permission.isWorkshopAdmin).to.be.false;
+    expect(permission.isFacilitator).to.be.false;
+    expect(permission.isOrganizer).to.be.true;
+    expect(permission.isProgramManager).to.be.true;
     expect(permission.isPartner).to.be.false;
   });
 });

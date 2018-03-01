@@ -125,6 +125,9 @@ Each of these activities can either be used alone or with other computer science
         <%	if lesson[:teacherVid_t].present? %>
 		  | <a href="<%= lesson[:teacherVid_t] %>">Teacher Video</a><br/>
 		<% end %>
+		 <%	if lesson[:answers_t].present? %>
+		   <%= lesson[:answers_t] %>
+		<% end %>
 
       </td>
       <td style="border:1px solid #999999;">

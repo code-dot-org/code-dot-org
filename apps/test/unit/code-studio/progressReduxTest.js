@@ -4,6 +4,7 @@ import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { ViewType, setViewTypeNonThunk } from '@cdo/apps/code-studio/viewAsRedux';
 import reducer, {
   initProgress,
+  isPerfect,
   mergeProgress,
   mergePeerReviewProgress,
   disablePostMilestone,
@@ -22,6 +23,7 @@ import reducer, {
   setCurrentStageId,
   stageExtrasUrl,
   setStageExtrasEnabled,
+  getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -1088,6 +1090,75 @@ describe('progressReduxTest', () => {
       assert.equal(levels[0].url, '/peer_reviews/1');
       assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
       assert.equal(levels[0].icon, undefined);
+    });
+  });
+
+  describe('isPerfect', () => {
+    const levelId = 1;
+
+    it('returns false if progress was not initialized', () => {
+      const state = {};
+      assert.isFalse(isPerfect(state, levelId));
+    });
+
+    it('returns false if the level was not started', () => {
+      const state = {
+        levelProgress: {},
+      };
+      assert.isFalse(isPerfect(state, levelId));
+    });
+
+    it('returns false if the level was not perfected', () => {
+      const state = {
+        levelProgress: {
+          1: TestResults.MINIMUM_PASS_RESULT,
+        },
+      };
+      assert.isFalse(isPerfect(state, levelId));
+    });
+
+    it('returns true if the level was perfected', () => {
+      const state = {
+        levelProgress: {
+          1: TestResults.ALL_PASS,
+        },
+      };
+      assert.isTrue(isPerfect(state, levelId));
+    });
+  });
+
+  describe('getLevelResult', () => {
+    it('returns the provided result for standard levels', () => {
+      const result = getLevelResult({
+        status: LevelStatus.perfect,
+        result: TestResults.ALL_PASS
+      });
+      assert.strictEqual(result, TestResults.ALL_PASS);
+    });
+
+    it('returns LOCKED_RESULT for locked levels', () => {
+      const result = getLevelResult({
+        status: LevelStatus.locked,
+        // No result provided by server in this case
+      });
+      assert.strictEqual(result, TestResults.LOCKED_RESULT);
+    });
+
+    it('returns SUBMITTED_RESULT for a submitted level', () => {
+      const result = getLevelResult({
+        status: LevelStatus.submitted,
+        result: TestResults.ALL_PASS,
+        submitted: true,
+        readonly_answers: true,
+        pages_completed: [
+          -50,
+          null,
+          null,
+          null,
+          null
+        ]
+      });
+      assert.strictEqual(result, TestResults.SUBMITTED_RESULT);
     });
   });
 });

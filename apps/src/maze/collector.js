@@ -8,13 +8,15 @@
  * available collectibles.
  */
 
+const studioApp = require('../StudioApp').singleton;
+
 import { TestResults } from '../constants.js';
 
 import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
+import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from './locale';
 
-import {getStore} from '../redux';
 import {
   resetCollectorCurrentCollected,
   setCollectorCurrentCollected,
@@ -28,21 +30,24 @@ const COLLECTED_NOT_ENOUGH = 5;
 const COLLECTED_ENOUGH_BUT_NOT_ALL = 6;
 
 export default class Collector extends Subtype {
-  constructor(maze, studioApp, config) {
-    super(maze, studioApp, config);
+  constructor(maze, config) {
+    super(maze, config);
 
     // Collector level types treat the "ideal" block count as a hard
     // requirement
     this.maxBlocks_ = config.level.ideal;
 
     this.minCollected_ = config.level.minCollected;
-    this.store_ = getStore();
 
-    this.store_.dispatch(setCollectorMinRequired(this.minCollected_));
+    if (this.maze_.store) {
+      this.maze_.store.dispatch(setCollectorMinRequired(this.minCollected_));
+    }
   }
 
   reset() {
-    this.store_.dispatch(resetCollectorCurrentCollected());
+    if (this.maze_.store) {
+      this.maze_.store.dispatch(resetCollectorCurrentCollected());
+    }
   }
 
   scheduleDirtChange(row, col) {
@@ -56,7 +61,9 @@ export default class Collector extends Subtype {
       this.collectSoundsI %= this.collectSoundsCount;
     }
 
-    this.store_.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
+    if (this.maze_.store) {
+      this.maze_.store.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
+    }
   }
 
   /**
@@ -83,7 +90,7 @@ export default class Collector extends Subtype {
     if (skin.collectSounds) {
       this.collectSoundsCount = skin.collectSounds.length;
       skin.collectSounds.forEach((sound, i) => {
-        this.studioApp_.loadAudio(sound, 'collect' + i);
+        this.maze_.loadAudio(sound, 'collect' + i);
       });
     }
   }
@@ -135,7 +142,9 @@ export default class Collector extends Subtype {
    *         on the previous run (persists through resets)
    */
   getLastTotalCollected() {
-    return this.store_.getState().maze.collectorLastCollected;
+    if (this.maze_.store) {
+      return this.maze_.store.getState().maze.collectorLastCollected;
+    }
   }
 
   /**
@@ -156,7 +165,7 @@ export default class Collector extends Subtype {
    */
   succeeded() {
     const usedFewEnoughBlocks =
-      this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+      studioApp().feedback_.getNumCountableBlocks() <= this.maxBlocks_;
 
     return this.collectedAll() && usedFewEnoughBlocks;
   }
@@ -178,7 +187,7 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(COLLECTED_NOTHING);
     } else if (this.collectedTooMany()) {
       executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
-    } else if (this.studioApp_.feedback_.getNumCountableBlocks() > this.maxBlocks_) {
+    } else if (studioApp().feedback_.getNumCountableBlocks() > this.maxBlocks_) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
@@ -214,9 +223,14 @@ export default class Collector extends Subtype {
           count: this.getLastTotalCollected(),
         });
       case true:
-        return mazeMsg.collectorCollectedEverything({
-          count: this.getPotentialMaxCollected(),
-        });
+        // Remove this case when we turn the bubble dialog on for everyone
+        if (!experiments.isEnabled('bubbleDialog')) {
+          return mazeMsg.collectorCollectedEverything({
+            count: this.getPotentialMaxCollected(),
+          });
+        } else {
+          return super.getMessage(terminationValue);
+        }
       default:
         return super.getMessage(terminationValue);
     }

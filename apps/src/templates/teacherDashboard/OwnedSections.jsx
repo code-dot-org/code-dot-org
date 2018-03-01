@@ -40,7 +40,6 @@ const styles = {
 
 class OwnedSections extends React.Component {
   static propTypes = {
-    isRtl: PropTypes.bool,
     queryStringOpen: PropTypes.string,
 
     // redux provided
@@ -74,11 +73,10 @@ class OwnedSections extends React.Component {
     this.setState({
       viewHidden: !this.state.viewHidden
     });
-  }
+  };
 
   render() {
     const {
-      isRtl,
       sectionIds,
       hiddenSectionIds,
       asyncLoadComplete,
@@ -96,7 +94,7 @@ class OwnedSections extends React.Component {
     return (
       <div className="uitest-owned-sections">
         {!hasSections &&
-          <SetUpSections isRtl={isRtl}/>
+          <SetUpSections/>
         }
         {hasSections && (
           <div>
@@ -107,7 +105,6 @@ class OwnedSections extends React.Component {
               dismissible={false}
               buttonText={i18n.newSectionCreate()}
               newWindow={true}
-              isRtl={isRtl}
               onButtonClick={this.beginEditingNewSection}
               buttonClassName="uitest-newsection"
             />
@@ -120,6 +117,7 @@ class OwnedSections extends React.Component {
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
+                  className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
                   icon={viewHidden ? "caret-up" : "caret-down"}
                   text={viewHidden ? i18n.hideHiddenSections() : i18n.viewHiddenSections()}

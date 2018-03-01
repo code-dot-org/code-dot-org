@@ -29,7 +29,7 @@
     "instructions": "What do you need to add this program to check whether a sprout is corn or lettuce?",
     "instructions_important": "false",
     "ideal": "14",
-    "markdown_instructions": "*\"Lettuce pick all of the produce!\"*\r\n\r\nNow the sprouts can be either corn **or** lettuce.  What do you need to add to this program to check each sprout before you pick?\r\n___\r\n#####Note: Each sprout will turn into either **one** corn or **one** lettuce.",
+    "markdown_instructions": "*\"Lettuce pick all of the produce!\"*\r\n\r\nNow the sprouts can be either corn **or** lettuce.  What do you need to add to this program to check each sprout before you pick?\r\n___\r\n##### Note: Each sprout will turn into either **one** corn or **one** lettuce.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Edit your function to check for the lettuce as well.\",\"hint_id\":\"courseE_farmer_functions6c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9d5c602dd221cd4833dd526479956ffd/courseE_farmer_functions6c.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Would an `if/else` block help to check if there is lettuce in a space?\",\"hint_id\":\"courseE_farmer_functions6c_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/72bfdc2b0600d66ed0bb41c073d8337e/courseE_farmer_functions6c.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to keep checking for corn!\",\"hint_id\":\"courseE_farmer_functions6c_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b74419b7f47b17a1ca15022475905c85/courseE_farmer_functions6c.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",

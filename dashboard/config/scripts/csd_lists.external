@@ -1,21 +1,21 @@
 name 'CSD: Lists'
 display_name 'Lists'
 markdown <<MARKDOWN
-# List
+# Arrays
 
-## Creating a List
+## Creating an Array
 
-Lists have many features which make them different from variables, but **most of what you've learned about variables also applies to lists**. For example, just like a variable:
+Arrays have many features which make them different from variables, but **most of what you've learned about variables also applies to arrays**. For example, just like a variable:
 
-* Lists should be given a **descriptive and meaningful** name.
-* Lists are created using `var`.
-* Lists can be initialized/set using `=`.
+* Arrays should be given a **descriptive and meaningful** name.
+* Arrays are created using `var`.
+* Arrays can be initialized/set using `=`.
 
-List commands can be found in the Variables toolbox. 
+Array commands can be found in the Variables toolbox. 
 
 <img src="https://images.code.org/b21cdf00a2c673437c786aef3476734b-image-1486668653247.29.06 PM.png" style="width:150px">
 
-The list command looks this: 
+The array command looks this: 
 
 <img src="https://images.code.org/d941a693850a6a7027d0902f463d2382-image-1486668640890.28.55 PM.png" style="width:225px">
 
@@ -23,10 +23,12 @@ The list command looks this:
 
 ![](https://images.code.org/0b7d201db2990f0189963bb6a565a057-image-1447097600773.33.08 PM.png)
 
-This list contains 3 values: 100, 250, 500. Notice that the values are separated with commas `,` and that the entire list is enclosed in brackets `[ ]` . We can use `console.log` to display the contents of an list just like we would a variable.
+This array contains 3 values: 100, 250, 500. Notice that the values are separated with commas `,` and that the entire array is enclosed in brackets `[ ]` . We can use `console.log` to display the contents of an array just like we would a variable.
 
 ![](https://images.code.org/7d4be70330108e3e5d6325fa4e721ef4-image-1447097904253.38.18 PM.png)
 
 This will print out [100, 250, 500] in the console area.
+
+
 
 MARKDOWN

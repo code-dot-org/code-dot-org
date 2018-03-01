@@ -39,7 +39,7 @@ module CDO
         run_opts = run_options(cwd: @new_resource.destination)
         # PATCH: support shallow fetch.
         converge_by("fetch updates for #{@new_resource.remote}") do
-          shell_out!("git fetch #{@new_resource.remote}#{" --depth #{@new_resource.depth}" if @new_resource.depth}", run_opts)
+          shell_out!("git fetch #{@new_resource.remote}", run_opts)
         end
         # PATCH: support switching to a new checkout branch after the initial clone.
         if @new_resource.checkout_branch != current_branch

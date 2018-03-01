@@ -4,6 +4,7 @@ import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
@@ -34,6 +35,7 @@ function applabExecuteCmd(...args) {
   return Applab.executeCmd.call(Applab, ...args);
 }
 audioApi.injectExecuteCmd(applabExecuteCmd);
+timeoutApi.injectExecuteCmd(applabExecuteCmd);
 makerApi.injectExecuteCmd(applabExecuteCmd);
 
 /**
@@ -158,12 +160,12 @@ export var blocks = [
   {func: 'hide', parent: api, category: 'Turtle' },
   {func: 'speed', parent: api, category: 'Turtle', paletteParams: ['value'], params: ["50"], dropdown: { 0: ["25", "50", "75", "100"] } },
 
-  {func: 'setTimeout', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"], allowFunctionDrop: { 0: true } },
-  {func: 'clearTimeout', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
-  {func: 'setInterval', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"], allowFunctionDrop: { 0: true } },
-  {func: 'clearInterval', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
-  {func: 'timedLoop', parent: api, category: 'Control', paletteParams: ['ms', 'callback'], params: ['1000', 'function() {\n  \n}'], allowFunctionDrop: { 1: true } },
-  {func: 'stopTimedLoop', parent: api, category: 'Control', paramButtons: { minArgs: 0, maxArgs: 1 }},
+  {...timeoutApi.dropletConfig.setTimeout},
+  {...timeoutApi.dropletConfig.clearTimeout},
+  {...timeoutApi.dropletConfig.setInterval},
+  {...timeoutApi.dropletConfig.clearInterval},
+  {...timeoutApi.dropletConfig.timedLoop},
+  {...timeoutApi.dropletConfig.stopTimedLoop},
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
@@ -174,6 +176,7 @@ export var blocks = [
   {func: 'toUpperCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toUpperCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'toLowerCase', blockPrefix: stringBlockPrefix, category: 'Variables', modeOptionName: '*.toLowerCase', tipPrefix: stringMethodPrefix, type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
+  {func: 'accessListItem', block: 'list[0]', category: 'Variables', noAutocomplete: true },
   {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true, tipPrefix: arrayMethodPrefix, type: 'property' },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
   {func: 'appendItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','item'], params: ["list", '"f"'], dontMarshal: true },
@@ -186,27 +189,28 @@ export var blocks = [
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
   {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
+  {func: 'setSelectionRange', parent: api, category: 'Advanced', paletteParams: ['id', 'start', 'end'], params: ['"id"', '0', '0'], paramButtons: { minArgs: 3, maxArgs: 4 }},
 
-  {func: 'comment_Goals_1', block: '// Goal 1', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_2', block: '// Goal 2', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_3', block: '// Goal 3', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_4', block: '// Goal 4', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_5', block: '// Goal 5', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_6', block: '// Goal 6', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_7', block: '// Goal 7', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_8', block: '// Goal 8', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_9', block: '// Goal 9', docFunc: 'comment',category: 'Goals' },
-  {func: 'comment_Goals_10', block: '// Goal 10', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_11', block: '// Goal 11', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_12', block: '// Goal 12', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_13', block: '// Goal 13', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_14', block: '// Goal 14', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_15', block: '// Goal 15', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_16', block: '// Goal 16', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_17', block: '// Goal 17', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_18', block: '// Goal 18', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_19', block: '// Goal 19', docFunc: 'comment', category: 'Goals' },
-  {func: 'comment_Goals_20', block: '// Goal 20', docFunc: 'comment', category: 'Goals' },
+  {func: 'comment_Goals_1', block: '// Goal 1', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_2', block: '// Goal 2', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_3', block: '// Goal 3', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_4', block: '// Goal 4', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_5', block: '// Goal 5', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_6', block: '// Goal 6', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_7', block: '// Goal 7', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_8', block: '// Goal 8', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_9', block: '// Goal 9', docFunc: 'comment',category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_10', block: '// Goal 10', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_11', block: '// Goal 11', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_12', block: '// Goal 12', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_13', block: '// Goal 13', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_14', block: '// Goal 14', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_15', block: '// Goal 15', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_16', block: '// Goal 16', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_17', block: '// Goal 17', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_18', block: '// Goal 18', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_19', block: '// Goal 19', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
+  {func: 'comment_Goals_20', block: '// Goal 20', docFunc: 'comment', category: 'Goals', noAutocomplete: true },
 ];
 
 export const categories = {

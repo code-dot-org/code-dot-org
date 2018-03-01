@@ -48,6 +48,7 @@ const ScriptEditor = React.createClass({
     stageExtrasAvailable: PropTypes.bool,
     stageLevelData: PropTypes.string,
     hasVerifiedResources: PropTypes.bool,
+    hasLessonPlan: PropTypes.bool,
     announcements: PropTypes.arrayOf(announcementShape),
   },
 
@@ -195,6 +196,19 @@ const ScriptEditor = React.createClass({
           </p>
         </label>
         <label>
+          Lesson Plan
+          <input
+            name="has_lesson_plan"
+            type="checkbox"
+            defaultChecked={this.props.hasLessonPlan}
+            style={styles.checkbox}
+          />
+          <p>
+            Check if this course has lesson plans (on Curriculum Builder or in
+            PDF form) that we should provide links to.
+          </p>
+        </label>
+        <label>
           Professional Learning Course. When filled out, the course unit associated with
           this script will be associated with the course named in this box. If the course
           unit does not exist, and if the course does not exist it will be created.
@@ -262,8 +276,9 @@ const ScriptEditor = React.createClass({
             <option value="calc">Calc</option>
             <option value="eval">Eval</option>
             <option value="frozen">Frozen</option>
-            <option value="mc">Minecraft Adventurer</option>
-            <option value="minecraft">Minecraft Designer</option>
+            <option value="minecraft_adventurer">Minecraft Adventurer</option>
+            <option value="minecraft_designer">Minecraft Designer</option>
+            <option value="minecraft_hero">Minecraft Hero</option>
             <option value="starwars">Star Wars</option>
             <option value="starwarsblocks">Star Wars Blocks</option>
             <option value="flappy">Flappy</option>

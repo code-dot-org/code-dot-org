@@ -6,15 +6,17 @@ import { CourseBlocksAll } from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import Responsive from '../../responsive';
-import _ from 'lodash';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
+import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
   content: {
+    width: '100%',
+    maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   }
 };
 
@@ -27,53 +29,15 @@ class Courses extends Component {
     studentsCount: PropTypes.string.isRequired,
     showInitialTips: PropTypes.bool.isRequired,
     userId: PropTypes.number,
-    isRtl: PropTypes.bool.isRequired
   };
-
-  constructor(props) {
-    super(props);
-    this.responsive = new Responsive();
-    this.state = {
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height(),
-      mobileLayout: this.responsive.isResponsiveCategoryInactive('md')
-    };
-  }
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
-
-    // Resize handler.
-    window.addEventListener('resize', _.debounce(this.onResize, 100).bind(this));
-  }
-
-  onResize() {
-    const windowWidth = $(window).width();
-    const windowHeight = $(window).height();
-
-    // We fire window resize events when the grippy is dragged so that non-React
-    // controlled components are able to rerender the editor. If width/height
-    // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.windowWidth &&
-        windowHeight === this.state.windowHeight) {
-      return;
-    }
-
-    this.setState({
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height()
-    });
-
-    this.setState({mobileLayout: this.responsive.isResponsiveCategoryInactive('md')});
   }
 
   render() {
-    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips, isRtl } = this.props;
-    const contentStyle = {
-      ...styles.content,
-      width: this.responsive.getResponsiveContainerWidth()
-    };
+    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips } = this.props;
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -81,13 +45,12 @@ class Courses extends Component {
     const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
-      <div style={contentStyle}>
+      <div style={styles.content}>
         <HeaderBanner
           headingText={headingText}
           subHeadingText={subHeadingText}
           description={headingDescription}
           short={!isSignedOut}
-          responsive={this.responsive}
         >
           {isSignedOut && (
             <Button
@@ -104,29 +67,25 @@ class Courses extends Component {
 
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {(isEnglish && isTeacher) && (
-          <CoursesTeacherEnglish
-            isSignedOut={isSignedOut}
-            showInitialTips={showInitialTips}
-            userId={userId}
-            isRtl={isRtl}
-            responsive={this.responsive}
-          />
+          <div>
+            <SpecialAnnouncementActionBlock/>
+            <CoursesTeacherEnglish
+              isSignedOut={isSignedOut}
+              showInitialTips={showInitialTips}
+              userId={userId}
+            />
+          </div>
         )}
 
         {/* English, student.  (Also the default to be shown when signed out.) */}
         {(isEnglish && !isTeacher) && (
-          <CoursesStudentEnglish
-            isRtl={isRtl}
-            responsive={this.responsive}
-          />
+          <CoursesStudentEnglish/>
         )}
 
         {/* Non-English */}
         {(!isEnglish) && (
           <CourseBlocksAll
             isEnglish={false}
-            isRtl={isRtl}
-            responsive={this.responsive}
           />
         )}
       </div>

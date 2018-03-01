@@ -9,7 +9,7 @@
 
   user_type = nil
 
-  header_class = 'header2-wrapper'
+  header_class = 'header-wrapper'
   header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
   header_class = header_class + (script_level || level ? ' hide_on_mobile' : '')
 
@@ -75,8 +75,8 @@
                 = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
               - else
                 = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
-            .project_info.hide_on_mobile
-          .header_middle.hide_on_mobile
+            .project_info
+          .header_middle
             - if should_show_progress
               = render partial: 'shared/header_progress'
             - elsif level
@@ -85,7 +85,7 @@
                 - Hamburger.get_header_contents(header_contents_options).each do |entry|
                   %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
 
-          .header_right.hide_on_mobile
+          .header_right
             %span.freeplay_links
               %a.header_status_bar.level_free_play.playlab_free_play{title: t('nav.header.free_play.playlab'), href: playlab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-rocket

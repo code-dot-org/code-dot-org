@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Cara menarik untuk menarik perhatian media terhadap Kegiatan Hour of Code anda
@@ -14,20 +11,20 @@ nav: promote_nav
 
 ### Tips
 
-  * Hubungi media dua minggu sebelum kegiatan melalui email. Tindaklanjuti dengan email dan telepon jika belum menerima respon awal.
-  * Minta staff sekolah atau sukarelawan untuk mengambil foto untuk dibagikan atau dikirim kepada pers.
-  * Tuliskan mengenai Hour of Code pada homepage website anda dan pada koran sekolah anda. Posting rincian kegiatan anda, dan gambar dari aktivitas pelajar.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Hubungi media dua minggu sebelum kegiatan melalui email. Tindaklanjuti dengan email dan telepon jika belum menerima respon awal.
+- Minta staff sekolah atau sukarelawan untuk mengambil foto untuk dibagikan atau dikirim kepada pers.
+- Tuliskan mengenai Hour of Code pada homepage website anda dan pada koran sekolah anda. Posting rincian kegiatan anda, dan gambar dari aktivitas pelajar.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Panduan langkah demi langkah:
 
 **1. Plan your event**
 
-  * Rencanakan pertemuan awal Hour of Code anda.
-  * Kirim [surat](<%= resolve_url('/promote/resources#sample-emails') %>) kepada orang tua. Minta mereka untuk menyebarkan berita.
-  * Kirim [surat](<%= resolve_url('/promote/resources#sample-emails') %>) untuk mengundang walikota Anda, anggota kongres, gubernur atau pebisnis berpengaruh untuk menghadiri dan berbicara kepada murid-murid Anda.
-  * Selengarakan aktivitas kelompok(seperti melakukan aktivitas tanpa perangkat keras). atau pamerkan apa yang dibuat pelajar dan aktivitasnya.
-  * Menunjukkan [video Hour of Code ](<%= resolve_url('/') %>)dari Code.org atau salah satu dari [ini](<%= resolve_url('/promote/resources#videos') %>) untuk menginspirasi.
+- Rencanakan pertemuan awal Hour of Code anda.
+- Kirim [surat](<%= resolve_url('/promote/resources#sample-emails') %>) kepada orang tua. Minta mereka untuk menyebarkan berita.
+- Kirim [surat](<%= resolve_url('/promote/resources#sample-emails') %>) untuk mengundang walikota Anda, anggota kongres, gubernur atau pebisnis berpengaruh untuk menghadiri dan berbicara kepada murid-murid Anda.
+- Selengarakan aktivitas kelompok(seperti melakukan aktivitas tanpa perangkat keras). atau pamerkan apa yang dibuat pelajar dan aktivitasnya.
+- Menunjukkan [video Hour of Code ](<%= resolve_url('/') %>)dari Code.org atau salah satu dari [ini](<%= resolve_url('/promote/resources#videos') %>) untuk menginspirasi.
 
 **2. Identify specific local reporters that cover education or local events.**
 

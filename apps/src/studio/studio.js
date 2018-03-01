@@ -72,7 +72,6 @@ const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
-import experiments from '../util/experiments';
 import {SignInState} from '../code-studio/progressRedux';
 
 // Whether we are showing debug information
@@ -122,8 +121,8 @@ let skin;
 
 // These skins can be published as projects.
 const PUBLISHABLE_SKINS = [
-  'gumball', 'studio', 'iceage', 'infinity'
-].concat(experiments.isEnabled('publishMoreProjects') ? 'hoc2015' : undefined);
+  'gumball', 'studio', 'iceage', 'infinity', 'hoc2015'
+];
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -2163,6 +2162,18 @@ Studio.init = function (config) {
     hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/),
   };
 
+  if (
+    config.embed &&
+    config.level.markdownInstructions &&
+    !config.level.instructions
+  ) {
+    // if we are an embedded level with markdown instructions but no regular
+    // instructions, we want to display CSP-style instructions and not be
+    // centered
+    config.noInstructionsWhenCollapsed = true;
+    config.centerEmbedded = false;
+  }
+
   // for hoc2015x, we only have permission to show the Rey avatar for approved
   // scripts. For all others, we override the avatars with an empty image
   if (config.skin.avatarAllowedScripts &&
@@ -2789,8 +2800,6 @@ Studio.displayFeedback = function () {
     const isSignedIn = getStore().getState().progress.signInState === SignInState.SignedIn;
 
     studioApp().displayFeedback({
-      app: 'studio', //XXX
-      skin: skin.id,
       feedbackType: Studio.testResults,
       executionError: Studio.executionError,
       tryAgainText: tryAgainText,

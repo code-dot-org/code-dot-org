@@ -1,19 +1,14 @@
 name 'CSD U2 Top Websites'
 display_name 'Top Websites'
 markdown <<MARKDOWN
-# Top 10 Websites in the US
+# Top 5 Websites in the US
 
 The following are the top ten most frequently visited websites in the United States. Each includes a brief description of the website's core function.
 
 
-1. [Google.com](https://www.google.com) - Search engine for websites, pictures, videos, and other media
-2. [Youtube.com](https://www.youtube.com) - User-submitted video site with ratings and comments
-3. [Facebook.com](https://www.facebook.com) - Social media community that allows users to share information with friends
-4. [Reddit.com](https://www.reddit.com/) - User-generated news site where users can submit and vote on links
-5. [Amazon.com](https://www.amazon.com) - Online shopping sites for all kinds of goods
-6. [Wikipedia.org](https://www.wikipedia.org/) - Free encyclopedia with content created by volunteer users
-7. [Yahoo.com](https://www.yahoo.com/) - News portal and search engine
-8. [Twitter.com](https://twitter.com/) - Microblogging service for users to share short messages with a wide audience
-9. [Netflix.com](https://www.netflix.com/) - TV and movie streaming service
-10. [Ebay.com](https://www.ebay.com/) - International auction site
+1. Google.com - Search engine for websites, pictures, videos, and other media
+2. Youtube.com - User-submitted video site with ratings and comments
+3. Facebook.com - Social media community that allows users to share information with friends
+4. Reddit.com - User-generated news site where users can submit and vote on links
+5. Amazon.com - Online shopping sites for all kinds of goods
 MARKDOWN

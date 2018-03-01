@@ -120,10 +120,24 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
     },
     this);
 
-  if (dropdownList && !editor.completer.activated) {
-    // The cursor is positioned where a parameter with a dropdown should appear
-    // and autocomplete is not already active, so let's pop up a special dropdown
-    // autocomplete
+  if (dropdownList) {
+    // The cursor is positioned where a parameter with a dropdown should appear,
+    // so let's pop up a special dropdown autocomplete
+
+    if (editor.completer.activated) {
+      if (!editor.completer.lastGatheredWithOverride) {
+        // autocomplete was active, but not with an override completer, so we must
+        // have entered this autocomplete parameter state while still showing a
+        // different type of autocomplete dropdown (e.g. a function). Let's
+        // dismiss the function dropdown so we can present the parameter one...
+        editor.completer.detach();
+      } else {
+        // A completer with an overrideCompleter is already active, which likely
+        // means that the autocomplete parameter dropdown for this parameter is
+        // already present - no need to show it again...
+        return;
+      }
+    }
 
     // First, install our hooks to modify the normal ace AutoComplete (these are
     // safe to leave in place, and we can call this multiple times):
@@ -274,10 +288,14 @@ DropletAutocompleteParameterTooltipManager.gatherCompletions = function (editor,
 
     // Ensure that autoInsert is off so we don't insert immediately when there is only one option:
     editor.completer.autoInsert = false;
+    // Mark that this set of completions were gathered with our overrideCompleter:
+    editor.completer.lastGatheredWithOverride = true;
 
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions.call(this, editor, callback);
     editor.completers = allCompleters;
   } else {
+    // Mark that this set of completions were not gathered with our overrideCompleter:
+    editor.completer.lastGatheredWithOverride = false;
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions.call(this, editor, callback);
   }
 };
@@ -333,9 +351,67 @@ DropletAutocompleteParameterTooltipManager.insertMatch = function (self, data) {
     }.bind(this));
 
     clickFunc.schedule();
+  } else if (this.editor.completer.lastGatheredWithOverride) {
+    // Parameter autocomplete:
+    DropletAutocompleteParameterTooltipManager.customInsertMatch(data, this.editor);
   } else {
+    // Other, unrelated autocomplete:
     DropletAutocompleteParameterTooltipManager.originalInsertMatch.call(this, data);
   }
+};
+
+
+/**
+ * @param {string} line text containing code
+ * @param {number} pos position within line to start searching
+ * @param {string} character quote character: (e.g. ' or ")
+ *
+ * @returns {string} remainder of quoted text (starting from pos, including quote character)
+ */
+DropletAutocompleteParameterTooltipManager.retrieveToEndOfQuotedText = function (line, pos, character) {
+  const remainingLine = line.substring(pos);
+  if (remainingLine) {
+    const endQuotePos = remainingLine.indexOf(character);
+    if (endQuotePos === -1) {
+      return remainingLine;
+    } else {
+      return remainingLine.substring(0, endQuotePos + 1);
+    }
+  } else {
+    return remainingLine;
+  }
+};
+
+/**
+ * @param {string} value new value to insert into editor
+ * @param {ace editor} editor ace editor instance
+ */
+DropletAutocompleteParameterTooltipManager.customInsertMatch = function (data, editor) {
+  const acUtil = ace.require("ace/autocomplete/util");
+  const { filterText } = editor.completer.completions;
+
+  // Remove the filterText that was already typed (ace's built-in
+  // insertMatch would normally do this automatically) plus the rest of
+  // the identifier OR quotes text after the filterText...
+  if (filterText) {
+    const ranges = editor.selection.getAllRanges();
+    for (let i = 0, range; !!(range = ranges[i]); i++) {
+      range.start.column -= editor.completer.completions.filterText.length;
+      const line = editor.session.getLine(range.end.row);
+      const firstFilterChar = filterText[0];
+      if (firstFilterChar === '"' || firstFilterChar === "'") {
+        const lengthOfRestOfQuotedText =
+            this.retrieveToEndOfQuotedText(line, range.end.column, firstFilterChar).length;
+        range.end.column += lengthOfRestOfQuotedText;
+      } else {
+        const lengthOfRestOfIdentifier =
+            acUtil.retrieveFollowingIdentifier(line, range.end.column).length;
+        range.end.column += lengthOfRestOfIdentifier;
+      }
+      editor.session.remove(range);
+    }
+  }
+  editor.execCommand("insertstring", data.value || data);
 };
 
 

@@ -28,12 +28,14 @@ class XhrProxyController < ApplicationController
     accuweather.com
     apex.oracle.com
     api.data.gov
+    api.football-data.org
     api.nasa.gov
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
     api.spotify.com
+    api.themoviedb.org
     api.zippopotam.us
     atlas.media.mit.edu
     code.org
@@ -44,6 +46,7 @@ class XhrProxyController < ApplicationController
     enclout.com
     githubusercontent.com
     googleapis.com
+    hamlin.myschoolapp.com
     herokuapp.com
     isenseproject.org
     lakeside-cs.org
@@ -55,6 +58,8 @@ class XhrProxyController < ApplicationController
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
     rhcloud.com
+    sheets.googleapis.com
+    spreadsheets.google.com
     swapi.co
     transitchicago.com
     translate.yandex.net

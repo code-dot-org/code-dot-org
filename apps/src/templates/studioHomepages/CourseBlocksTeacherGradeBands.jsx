@@ -1,27 +1,27 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
-import Responsive from '../../responsive';
 import i18n from "@cdo/locale";
 
 class CourseBlocksTeacherGradeBands extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    responsive: PropTypes.instanceOf(Responsive).isRequired
-  };
-
   cards = [
     {
+      linkId: 'course-block-grade-band-elementary',
+      linkClass: 'linktag',
       heading: i18n.courseBlocksGradeBandsElementary(),
       description: i18n.courseBlocksGradeBandsElementaryDescription(),
       path: '/educate/curriculum/elementary-school'
     },
     {
+      linkId: 'course-block-grade-band-middle',
+      linkClass: 'linktag',
       heading: i18n.courseBlocksGradeBandsMiddle(),
       description: i18n.courseBlocksGradeBandsMiddleDescription(),
       path: '/educate/curriculum/middle-school'
     },
     {
+      linkId: 'course-block-grade-band-high',
+      linkClass: 'linktag',
       heading: i18n.courseBlocksGradeBandsHigh(),
       description: i18n.courseBlocksGradeBandsHighDescription(),
       path: '/educate/curriculum/high-school'
@@ -33,13 +33,9 @@ class CourseBlocksTeacherGradeBands extends Component {
       <ContentContainer
         heading={i18n.courseBlocksGradeBandsContainerHeading()}
         description={i18n.courseBlocksGradeBandsContainerDescription()}
-        isRtl={this.props.isRtl}
-        responsive={this.props.responsive}
       >
         <CourseBlocksGradeBands
           cards={this.cards}
-          isRtl={this.props.isRtl}
-          responsive={this.props.responsive}
         />
       </ContentContainer>
     );

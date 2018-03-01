@@ -3,6 +3,7 @@ require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
+require 'cdo/pegasus/donor'
 require 'dynamic_config/gatekeeper'
 require 'cdo/shared_constants'
 
@@ -160,7 +161,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB].include? app
       asset_url "#{app}_sharing_drawing.png"
     elsif app == Game::BOUNCE
       if ["basketball", "sports"].include? skin

@@ -23,10 +23,6 @@ const styles = {
     borderColor: color.border_gray,
     background: color.white
   },
-  rtlCard: {
-    paddingLeft: 10,
-    paddingRight: 20,
-  },
   title: {
     paddingTop: 10,
     paddingBottom: 5,
@@ -68,7 +64,6 @@ class LoginTypeCard extends Component {
     subtitle: PropTypes.string,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
     disabled: PropTypes.bool,
@@ -81,16 +76,11 @@ class LoginTypeCard extends Component {
       description,
       buttonText,
       onClick,
-      isRtl,
       disabled
     } = this.props;
-    const cardStyle = {
-      ...styles.card,
-      ...(isRtl && styles.rtlCard),
-    };
 
     return (
-      <div style={cardStyle} className={this.props.className}>
+      <div style={styles.card} className={this.props.className}>
         <div>
           <div style={styles.title}>
             {title}

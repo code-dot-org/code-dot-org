@@ -131,7 +131,7 @@
     "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
     "embed": "false",
     "instructions": "Use the randomNumber() blocks to test the functions you designed with random input. (Click to see full instructions)",
-    "markdown_instructions": "# Random Input\r\n\r\nYou have a new block that allows you to generate a random number. You can use this instead of hard-coding in values every time you call a function.\r\n\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\r\n\r\n**Read the documentation** for the randomNumber block.\r\n\r\n# Do This\r\n**Use randomNumber to provide random input** to *all three* of your drawing functions.  Just insert the call to randomNumber where you would otherwise put numbers.  \r\n\r\nLike this:\r\n![](https://images.code.org/ad87d7d122ac585a6de9e46a49736228-image-1470146652402.png)\r\n\r\nUse randomNumber in calls to all three of your drawing functions:\r\n\r\n* drawStarfish\r\n* drawSeagrass\r\n* drawFish\r\n\r\nThis is a great way to **test** out functions and also get some **interesting looking images**. Every time you run the program you can get slightly different looking scenes like the ones below.\r\n\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)\r\n",
+    "markdown_instructions": "# Random Input\r\n\r\nYou have a new block that allows you to generate a random number. You can use this instead of hard-coding in values every time you call a function.\r\n\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\r\n\r\n**Read the documentation** for the randomNumber block.\r\n\r\n# Do This\r\n**Use randomNumber to provide random input** to *all three* of your drawing functions.  Just insert the call to randomNumber where you would otherwise put numbers.  \r\n\r\nLike this:\r\n![](https://images.code.org/ad87d7d122ac585a6de9e46a49736228-image-1470146652402.png)\r\n\r\nUse randomNumber in calls to all three of your drawing functions:\r\n\r\n* drawStarfish\r\n* drawSeagrass\r\n* drawFish\r\n\r\nThis is a great way to **test** out functions and also get some **interesting looking images**. Every time you run the program you can get slightly different looking scenes like the ones below.\r\n\r\n![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -202,11 +202,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-30 14:46:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-30 14:46:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"project_template_level_name\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-12-04 21:47:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-04 21:48:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

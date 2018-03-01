@@ -786,8 +786,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     last_attempt_data = 'test'
     level = @custom_s1_l1.level
+    script = @custom_s1_l1.script
     level_source = LevelSource.find_identical_or_create(level, last_attempt_data)
-    UserLevel.create!(level: level, user: @student, level_source: level_source)
+    UserLevel.create!(script: script, level: level, user: @student, level_source: level_source)
 
     get :show, params: {
       script_id: @custom_script,
@@ -1094,17 +1095,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should have milestone posting disabled if Milestone is set" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     get_show_script_level_page @script_level
-    assert_equal false, assigns(:view_options)[:post_milestone]
+    assert_equal POST_MILESTONE_MODE.final_level_only, assigns(:view_options)[:post_milestone_mode]
   end
 
   test "should not have milestone posting disabled if Milestone is not set" do
     Gatekeeper.set('postMilestone', where: {script_name: 'Some other level'}, value: false)
     get_show_script_level_page(@script_level)
-    assert_equal true, assigns(:view_options)[:post_milestone]
+    assert_equal POST_MILESTONE_MODE.all, assigns(:view_options)[:post_milestone_mode]
   end
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   test "should not see examples if an unauthorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     sign_in create(:teacher)
 
@@ -1117,7 +1120,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should see examples if an authorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     authorized_teacher = create(:teacher)
     cohort = create(:cohort)

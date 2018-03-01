@@ -12,13 +12,13 @@ class Pd::MimeoRestClient
     Scheduled: 102,
     Pending: 103,
     Expired: 104
-  }
+  }.freeze
 
   STATUS_SHIPPED = 'Shipped'.freeze
 
   RETRYABLE_ERROR_TEXT = 'An unexpected error occurred while processing the request. '\
       'Information related to the error has been logged and will be reviewed. '\
-      'Please attempt to submit your request again at a future time.'
+			'Please attempt to submit your request again at a future time.'.freeze
 
   # @param max_attempts [Integer] Number of attempts on known retryable errors
   #   (Default 2, i.e. one retry)

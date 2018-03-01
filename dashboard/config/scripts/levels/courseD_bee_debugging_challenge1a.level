@@ -1,0 +1,188 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2017-12-16T00:14:59.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "bee",
+    "step_mode": "1",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "start_direction": "1",
+    "nectar_goal": "10",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,2,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,5,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "14",
+    "markdown_instructions": "*\"Buzz buzz! I know how to get nectar, now help me make honey!\"*\r\n\r\nWatch how the bee gets the nectar. Can you use the same kind of pattern to help the bee make all of the honey?",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false",
+    "step_speed": "1",
+    "instructions_important": "false",
+    "honey_goal": "10",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":1},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":1},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":1},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":0},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":0},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":0},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Why does the first half of this program work? Think about why the bee needs to move backward. How much nectar does the bee collect each time it moves over a flower?\",\"hint_id\":\"courseD_bee_debugging_challenge1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0716bb778e54641e6e961013fffd3bb6/courseD_bee_debugging_challenge1a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To solve this puzzle, have the bee follow the same pattern to make honey that it does when collecting nectar.\",\"hint_id\":\"courseD_bee_debugging_challenge1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bad80232943fca0f53a3ed9484d43e3b/courseD_bee_debugging_challenge1a.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"After the bee makes it to the bottom row, have it repeat these commands:\\n\\n<xml><block type=\\\"controls_repeat\\\">\\n                    <title name=\\\"TIMES\\\">2</title>\\n                    <statement name=\\\"DO\\\">\\n                      <block type=\\\"maze_move\\\">\\n                        <title name=\\\"DIR\\\">moveForward</title>\\n                        <next>\\n                          <block type=\\\"maze_honey\\\"/>\\n                        </next>\\n                      </block>\\n                    </statement>\\n                    <next>\\n                      <block type=\\\"maze_move\\\">\\n                        <title name=\\\"DIR\\\">moveBackward</title>\\n                      </block>\\n                    </next>\\n                  </block></xml>\",\"hint_id\":\"courseD_bee_debugging_challenge1_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7b54af295ab01ef686ca1c03803f02c5/courseD_bee_debugging_challenge1a.mp3\"}]",
+    "instructions": "Watch how the bee gets the nectar. Use the same pattern to help the bee make all the honey.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_bee_debugging_challenge1_callout1\",\r\n  \"callout_text\": \"Use this command to move the bee backward.\",\r\n  \"element_id\": \"#backward\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-30 22:44:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 19:51:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-09-13 15:53:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-12-16 00:15:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"honey_goal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-16 00:17:12 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-16 00:20:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-31 22:00:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-31 22:06:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-31 22:08:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat" deletable="false" movable="false">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="controls_repeat" deletable="false">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="maze_move" deletable="false">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="maze_nectar" deletable="false"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_move" deletable="false">
+                      <title name="DIR">moveBackward</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_move" id="backward">
+          <title name="DIR">moveBackward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_nectar" limit="1"/>
+        <block type="maze_honey" limit="1"/>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">5</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="maze_nectar"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_move">
+                      <title name="DIR">moveBackward</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">5</title>
+                      <statement name="DO">
+                        <block type="controls_repeat">
+                          <title name="TIMES">2</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="maze_honey"/>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "getProperty",
-    "reference": "/csd/getProperty_input/index.html"
+    "reference": "/docs/csd/getProperty_input/index.html"
   },
   "published": true,
   "notes": ""

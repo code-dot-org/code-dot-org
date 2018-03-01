@@ -26,8 +26,8 @@ const styles = {
   }
 };
 
-const DataWorkspace = React.createClass({
-  propTypes: {
+class DataWorkspace extends React.Component {
+  static propTypes = {
     // from redux state
     isRtl: PropTypes.bool.isRequired,
     handleVersionHistory: PropTypes.func.isRequired,
@@ -39,10 +39,10 @@ const DataWorkspace = React.createClass({
 
     // from redux dispatch
     onClearWarning: PropTypes.func.isRequired,
-  },
+  };
 
   render() {
-    var style = {
+    const style = {
       display: this.props.isVisible ? 'block' : 'none'
     };
     return (
@@ -86,7 +86,7 @@ const DataWorkspace = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default connect(state => ({
   isRtl: state.isRtl,

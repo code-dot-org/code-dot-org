@@ -10,10 +10,7 @@ After a brief review of how the counter pattern is used to move sprites, the cla
 
 ## Introduced Code
 
-* [playSound()](//docs.code.org/gamelab/playSound/)
 * [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
 * [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
 * [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
-* [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
-
 MARKDOWN

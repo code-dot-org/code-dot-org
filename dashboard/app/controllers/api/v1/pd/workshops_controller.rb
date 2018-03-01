@@ -1,6 +1,7 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Pd::WorkshopFilters
   include Api::CsvDownload
+  include Pd::Application::RegionalPartnerTeacherconMapping
 
   load_and_authorize_resource class: 'Pd::Workshop', only: [:show, :update, :create, :destroy, :start, :end, :summary]
   before_action :load_collection, only: [:index, :filter]
@@ -60,6 +61,43 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: {error: e.message}, status: :bad_request
   end
 
+  # GET /api/v1/pd/workshops/upcoming_teachercons
+  # returns all upcoming teachercons for admins, associated teachercons for
+  # regional partners, and an empty set for everyone else.
+  def upcoming_teachercons
+    workshops = Pd::Workshop.
+      scheduled_start_on_or_after(Date.today.beginning_of_day).
+      where(subject: Pd::Workshop::SUBJECT_TEACHER_CON)
+
+    if params[:course]
+      workshops = workshops.where(course: params[:course])
+    end
+
+    if current_user.admin? || current_user.workshop_admin?
+      # admins get to see everything
+    elsif current_user.regional_partners.any?
+      # regional partners get to see workshops associated with their matching
+      # teachercon
+      cities = current_user.
+        regional_partners.
+        map {|partner| get_matching_teachercon(partner)}.
+        compact.
+        to_set.
+        pluck(:city).
+        map {|city| "%#{city}%"}
+
+      query = Array.new(cities.length, "location_address like ?").join(" OR ")
+      workshops = workshops.where(query, *cities)
+    else
+      # everyone else gets to see nothing
+      workshops = Pd::Workshop.none
+    end
+
+    render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+  rescue ArgumentError => e
+    render json: {error: e.message}, status: :bad_request
+  end
+
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
@@ -78,6 +116,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
+
+    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      params.require(:pd_workshop).delete(:regional_partner_id)
+    end
+
     if @workshop.update(workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -132,15 +175,16 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     authenticate_user!
 
     unless current_user.admin? || current_user.workshop_admin? ||
-      current_user.workshop_organizer? || current_user.facilitator?
+      current_user.workshop_organizer? || current_user.program_manager? || current_user.facilitator?
       raise CanCan::AccessDenied.new
     end
 
-    if current_user.admin? || current_user.workshop_admin?
-      @workshops = Pd::Workshop.all
-    else
-      @workshops = Pd::Workshop.facilitated_or_organized_by(current_user)
-    end
+    @workshops =
+      if current_user.admin? || current_user.workshop_admin?
+        Pd::Workshop.all
+      else
+        Pd::Workshop.facilitated_or_organized_by(current_user)
+      end
   end
 
   def should_notify?
@@ -189,7 +233,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :course,
       :subject,
       :notes,
-      sessions_attributes: [:id, :start, :end, :_destroy]
+      :regional_partner_id,
+      sessions_attributes: [:id, :start, :end, :_destroy],
     )
   end
 end

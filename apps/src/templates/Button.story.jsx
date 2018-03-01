@@ -4,7 +4,7 @@ import Button from './Button';
 export default storybook => {
 
   storybook
-    .storiesOf('Button', module)
+    .storiesOf('Buttons/Button', module)
     .addStoryTable([
       {
         name:'Button with href',
@@ -113,20 +113,6 @@ export default storybook => {
             icon="caret-down"
             iconStyle={{fontSize: 24, position: 'relative', top: 3}}
             text="Assign Course"
-          />
-        )
-      },
-
-      {
-        name:'mega button',
-        story: () => (
-          <Button
-            href="/foo/bar"
-            color={Button.ButtonColor.gray}
-            icon="angle-right"
-            iconStyle={{fontSize: 40, float: 'right', lineHeight: '70px'}}
-            text="Teachers"
-            size={Button.ButtonSize.mega}
           />
         )
       },

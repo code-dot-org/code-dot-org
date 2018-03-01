@@ -34,10 +34,12 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use loops like this to create the walls and the roof. Try repeating different blocks.\\n\\n\\n\\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\\n\\nDesign your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!\\n\\n\",\"hint_id\":\"courseA_artist_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2f3647257f5a07200cf50e77a8e339fb/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)\",\"hint_id\":\"courseA_artist_loops_challenge1_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseA_artist_loops_challenge1.mp3\"}]",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/c3187462519b51c8d9604de9569e0c36=levelbuilder/32329.png",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-11-18 00:03:01 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-11-18 00:03:16 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-11-18 00:03:22 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-11-18 00:03:47 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-11-18 00:03:53 +0000\",\"changed\":[\"solution_blocks\",\"solution_image_url\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-11-18 00:04:01 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>
@@ -67,7 +69,13 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="&quot;simple&quot; solution"/>
+            </block>
+          </next>
+        </block>
         <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">"simple" solution</title>

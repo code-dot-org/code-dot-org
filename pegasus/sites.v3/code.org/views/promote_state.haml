@@ -79,7 +79,7 @@
     .fact{style: "margin-left: 20px;"}
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
-      = "#{format_integer_with_commas(data[:ap_cs_exams_i])} students took the AP exam last year"
+      = "#{format_integer_with_commas(data[:ap_cs_exams_i])} AP CS exams were taken last year"
     .fact{style: "margin-left: 20px;"}
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
@@ -89,7 +89,7 @@
       &nbsp;
       = "#{format_integer_with_commas(data[:total_ap_students_color_i])} were underrepresented minorities"
 
--if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
+-if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
   %div.download-fact-sheet
     %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
       %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<

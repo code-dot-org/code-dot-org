@@ -1,14 +1,16 @@
 import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
-import Responsive from '../../responsive';
-import {UnconnectedCensusForm as CensusForm} from './CensusForm';
+import { connect } from 'react-redux';
+import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
+import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from "@cdo/locale";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import _ from 'lodash';
+import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 
 const styles = {
   heading: {
@@ -30,57 +32,58 @@ const styles = {
   }
 };
 
-export default class YourSchool extends Component {
+class YourSchool extends Component {
   static propTypes = {
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
-    hideMap: PropTypes.bool
+    prefillData: censusFormPrefillDataShape,
+    hideMap: PropTypes.bool,
+    updateCensusMapSchool: PropTypes.func.isRequired,
+    schoolDropdownOption: PropTypes.object,
   };
-
-  constructor(props) {
-    super(props);
-    this.responsive = new Responsive();
-    this.state = {
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height(),
-      mobileLayout: this.responsive.isResponsiveCategoryInactive('md')
-    };
-  }
 
   componentDidMount() {
     if (!this.props.hideMap) {
       $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
     }
-    // Resize handler.
-    window.addEventListener('resize', _.debounce(this.onResize, 100).bind(this));
   }
 
-  onResize() {
-    const windowWidth = $(window).width();
-    const windowHeight = $(window).height();
-
-    // We fire window resize events when the grippy is dragged so that non-React
-    // controlled components are able to rerender the editor. If width/height
-    // didn't change, we don't need to do anything else here
-    if (windowWidth === this.state.windowWidth &&
-        windowHeight === this.state.windowHeight) {
-      return;
+  componentWillReceiveProps(newProps) {
+    if (newProps.schoolDropdownOption !== this.props.schoolDropdownOption) {
+      this.setState({
+        schoolDropdownOption: newProps.schoolDropdownOption,
+      });
     }
+  }
 
+  state = {
+    schoolDropdownOption: this.props.schoolDropdownOption,
+  };
+
+  handleSchoolDropdownChange = (option) => {
     this.setState({
-      windowWidth: $(window).width(),
-      windowHeight: $(window).height()
+      schoolDropdownOption: option,
     });
 
-    this.setState({mobileLayout: this.responsive.isResponsiveCategoryInactive('md')});
-  }
+    const schoolId = option ? option.value.toString() : '';
+    if (option && schoolId !== '-1') {
+      this.props.updateCensusMapSchool(option.school);
+    }
+  };
+
+  hasLocation = (school) => {
+    return !!(school.latitude && school.longitude);
+  };
 
   render() {
-    const desktop = (this.responsive.isResponsiveCategoryActive('lg') || this.responsive.isResponsiveCategoryActive('md'));
-
+    const {responsiveSize} = this.props;
+    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
+    const schoolDropdownOption = this.state.schoolDropdownOption;
     return (
       <div>
+        <SpecialAnnouncementActionBlock/>
         {this.props.alertHeading && this.props.alertText && this.props.alertUrl && desktop && (
           <Notification
             type={NotificationType.bullhorn}
@@ -90,7 +93,6 @@ export default class YourSchool extends Component {
             buttonLink={this.props.alertUrl}
             dismissible={false}
             newWindow={true}
-            isRtl={false}
             width="100%"
           />
         )}
@@ -110,17 +112,36 @@ export default class YourSchool extends Component {
           {i18n.yourSchoolDescription()}
         </h3>
         <YourSchoolResources/>
-        <h1 style={styles.heading}>
-          Put your school on the map
-        </h1>
-        <h3 style={styles.description}>
-          {i18n.yourSchoolMapDesc()}
-          If you are located in the US, please <a href="#form">fill out the form below</a>.
-          If you are outside the US, <a href="/learn/local">add your school here</a>.
-        </h3>
-        <ProtectedStatefulDiv ref="map"/>
-        <CensusForm/>
+        {!this.props.hideMap && (
+           <div>
+             <h1 style={styles.heading}>
+               Does your school teach Computer Science?
+             </h1>
+             <h3 style={styles.description}>
+               Find your school on the map to see if computer science is already being offered.
+               Can't find your school on the map? <a href="#form">Fill out the survey below</a>.
+             </h3>
+             <SchoolAutocompleteDropdown
+               value={this.props.prefillData ? this.props.prefillData['schoolId'] : undefined}
+               fieldName="census-map-school-dropdown"
+               schoolDropdownOption={schoolDropdownOption}
+               onChange={this.handleSchoolDropdownChange}
+               schoolFilter={this.hasLocation}
+             />
+             <br/>
+             <ProtectedStatefulDiv ref="map"/>
+           </div>
+        )}
+        <CensusForm
+          prefillData={this.props.prefillData}
+          schoolDropdownOption={schoolDropdownOption}
+          onSchoolDropdownChange={this.handleSchoolDropdownChange}
+        />
       </div>
     );
   }
 }
+
+export default connect(state => ({
+  responsiveSize: state.responsive.responsiveSize,
+}))(YourSchool);

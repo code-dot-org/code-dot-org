@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
@@ -98,7 +99,7 @@ const styles = {
   }
 };
 
-export default class SectionsTable extends React.Component {
+class SectionsTable extends React.Component {
   // isTeacher will be set false for teachers who are seeing this table as a student in another teacher's section.
   static propTypes = {
     sections: shapes.sections,
@@ -233,3 +234,7 @@ export default class SectionsTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(SectionsTable);

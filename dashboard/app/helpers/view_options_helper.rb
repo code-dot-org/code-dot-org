@@ -15,8 +15,8 @@ module ViewOptionsHelper
     :is_channel_backed,
     :is_legacy_share,
     :is_challenge_level,
-    :post_milestone,
-    :post_final_milestone,
+    :post_milestone_mode,
+    :is_bonus_level,
     :puzzle_ratings_url,
     :authored_hint_view_requests_url,
     :authored_hints_used_ids,
@@ -28,6 +28,7 @@ module ViewOptionsHelper
     :level_position,
     :public_caching,
     :is_13_plus,
+    :user_id,
     :has_contained_levels,
     :next_level_url,
     :responsive_content

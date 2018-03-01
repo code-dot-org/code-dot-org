@@ -2,10 +2,10 @@
 require_relative '../config/environment'
 require 'csv'
 
-COL_ID = 'NCES District/School ID'
-COL_COURSE = 'Course Name'
-COL_HOURLY = 'Hourly Rate'
-COL_DAILY = 'Daily Rate'
+COL_ID = 'NCES District/School ID'.freeze
+COL_COURSE = 'Course Name'.freeze
+COL_HOURLY = 'Hourly Rate'.freeze
+COL_DAILY = 'Daily Rate'.freeze
 
 COURSE_TRANSLATION = {
   'CSP' => Pd::Workshop::COURSE_CSP,
@@ -13,7 +13,7 @@ COURSE_TRANSLATION = {
   'CSinA' => Pd::Workshop::COURSE_CS_IN_A,
   'CSinS' => Pd::Workshop::COURSE_CS_IN_S,
   'CSD' => Pd::Workshop::COURSE_CSD,
-}
+}.freeze
 
 terms_csv = ARGV[0]
 unless terms_csv

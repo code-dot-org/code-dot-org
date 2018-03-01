@@ -5,12 +5,12 @@ social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
   "twitter:url": "http://code.org/minecraft"
-  "twitter:image:src" : "https://code.org/images/mc/mc_social_2016.jpg"
+  "twitter:image:src" : "https://code.org/images/mc/mc_social_2017.jpg"
   "twitter:title": "Minecraft Hour of Code"
-  "twitter:description": "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
+  "twitter:description": "<%= I18n.t(:minecraft_og_agent) %>"
   "og:title": "Minecraft Hour of Code"
-  "og:description": "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
-  "og:image" : "https://code.org/images/mc/mc_social_2016.jpg"
+  "og:description": "<%= I18n.t(:minecraft_og_agent) %>"
+  "og:image" : "https://code.org/images/mc/mc_social_2017.jpg"
   "og:image:width": "1200"
   "og:image:height": "630"
   "og:video": ""
@@ -27,6 +27,17 @@ style_min: true
 %div{style: "clear:both"}
 .mc-container
   .mc-tutorials
+    .tutorial-box{style: "margin-bottom: 14px;"}
+      .img-container
+        %img.mc-img-wide{src: '/images/mc/fit-1940/mc_landing_2017_wide.jpg'}
+        %img.mc-img.mc-img-narrow{src: '/images/mc/mc_landing_2017_narrow.jpg'}
+        .mc-tutorial-info.mc-tutorial-info-wide
+          .mc-tutorial-details
+            %h2.mc-h1-second-box= I18n.t(:minecraft_agent)
+            %p.mc-tutorial-description= I18n.t(:minecraft_agent_description)
+            %a{href: CDO.studio_url('/s/hero/reset'), target: '_self'}
+              %button.primary= I18n.t(:minecraft_agent_button)
+        %img.mc-new-tag{src: '/images/mc/new_tag.png'}
     .tutorial-box{style: "margin-right: 14px;"}
       .img-container
         %img.mc-img{:src => '/images/mc/mc_landing_2016.jpg'}
@@ -50,6 +61,29 @@ style_min: true
 %h2.mc-header2.responsive-padding
   =I18n.t(:minecraft_no_internet)
   %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
+
+.color-block.mc-store
+  %h2.white-text= I18n.t(:minecraft_store_camps)
+  = I18n.t(:minecraft_signup_store_camps).gsub('%{signup_store_camp}', 'https://www.microsoft.com/youthsparkprograms')
+
+.color-block.mc-host-event
+  %h2.white-text= I18n.t(:minecraft_host_event)
+  = I18n.t(:minecraft_join_online_training).gsub('%{minecraft_webinar_url}', 'https://aka.ms/mcheroworkshop')
+  %br
+  %br
+  %span= I18n.t(:minecraft_facilitating_event).gsub('%{minecraft_facilitator_download}', '/minecraft/facilitator')
+
+.clear
+
+.color-block.mc-continue-learning
+  %h2.white-text= I18n.t(:minecraft_continue_learning)
+  = I18n.t(:minecraft_continue_learning_description).gsub('%{minecraft_continue_learning_url}', 'https://www.microsoft.com/en-us/store/locations/events-for-educators')
+
+.color-block.mc-future
+  %h2.white-text= I18n.t(:minecraft_future)
+  = I18n.t(:minecraft_future_description).gsub('%{minecraft_future_url}', 'https://www.microsoft.com/digitalskills')
+
+.clear
 
 .mc-videos{style: "clear: both;"}
   %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)

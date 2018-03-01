@@ -345,6 +345,16 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
   end
 
+  test 'redirects back to correct stage extras from bonus level' do
+    script = create :script
+    stage1 = create :stage
+    stage2 = create :stage
+    script_level = create :script_level, stage: stage1, script: script, bonus: true
+
+    assert_equal script_stage_extras_path(script.name, stage2.absolute_position),
+      script_level.next_level_or_redirect_path_for_user(@user, stage2)
+  end
+
   test 'can view my last attempt for regular levelgroup' do
     script = create :script
 
@@ -356,7 +366,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     student = create :student
 
-    assert script_level.can_view_last_attempt(student, nil)
+    refute script_level.should_hide_survey(student, nil)
   end
 
   test 'can view other user last attempt for regular levelgroup' do
@@ -371,10 +381,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     teacher = create :teacher
     student = create :student
 
-    assert script_level.can_view_last_attempt(teacher, student)
+    refute script_level.should_hide_survey(teacher, student)
   end
 
-  test 'can view my last attempt for anonymous levelgroup' do
+  test 'student can view last attempt for anonymous levelgroup' do
     script = create :script
 
     level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
@@ -386,7 +396,35 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     student = create :student
 
-    assert script_level.can_view_last_attempt(student, nil)
+    refute script_level.should_hide_survey(student, nil)
+  end
+
+  test 'teacher can view last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    teacher = create :teacher
+
+    refute script_level.should_hide_survey(teacher, nil)
+  end
+
+  test 'anonymous can view last attempt for anonymous levelgroup' do
+    script = create :script
+
+    level = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    level.properties['title'] = 'Survey'
+    level.properties['anonymous'] = 'true'
+    level.save!
+
+    script_level = create :script_level, script: script, levels: [level], assessment: true
+
+    refute script_level.should_hide_survey(nil, nil)
   end
 
   test 'can not view other user last attempt for anonymous levelgroup' do
@@ -402,7 +440,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student = create :student
     teacher = create :teacher
 
-    assert_not script_level.can_view_last_attempt(teacher, student)
+    assert script_level.should_hide_survey(teacher, student)
   end
 
   test 'anonymous levels must be assessments' do

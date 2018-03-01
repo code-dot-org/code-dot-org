@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import Radium from 'radium';
+import { connect } from 'react-redux';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import Button from "../Button";
@@ -89,4 +90,6 @@ class SetUpMessage extends Component {
   }
 }
 
-export default Radium(SetUpMessage);
+export default connect(state => ({
+  isRtl: state.isRtl,
+}))(Radium(SetUpMessage));

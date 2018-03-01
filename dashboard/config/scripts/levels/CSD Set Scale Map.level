@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Changing Sensor Scale",
-    "reference": "/csd/sensor_setScale/index.html"
+    "reference": "/docs/csd/sensor_setScale/index.html"
   },
   "published": true,
   "notes": ""

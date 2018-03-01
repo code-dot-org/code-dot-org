@@ -21,6 +21,56 @@ function getChildNodeByName(node, type) {
   }
 }
 
+function getTitleByNameAttr(node, name) {
+  for (let i = 0, child; (child = node.childNodes[i]); i++) {
+    if (child.nodeName.toLowerCase() === "title" && child.getAttribute('name') === name) {
+      return child;
+    }
+  }
+}
+
+// The order of blocks as they appear in the agent inventory within MC:EE, so we
+// can translate the placeBlock block from string identifiers to indexes.
+const blockPlaceOrder = [
+  "bricks",
+  "cobblestone",
+  "dirt",
+  "grass",
+  "gravel",
+  "ice",
+  "logAcacia",
+  "logBirch",
+  "logJungle",
+  "logOak",
+  "logSpruce",
+  "planksAcacia",
+  "planksBirch",
+  "planksJungle",
+  "planksOak",
+  "planksSpruce",
+  "rails",
+  "sand",
+  "sandstone",
+  "snow",
+  "stone",
+  "wool_blue",
+  "wool_magenta",
+  "wool_orange",
+  "wool_pink",
+  "wool_red",
+  "wool_yellow",
+];
+
+// Agent code uses numbers for relative directions; semantically they represent
+// the number of 90-degree right turns from forward. CodeBuilder uses strings,
+// this is the simple mapping
+const directionToString = Object.freeze({
+  0: 'forward',
+  1: 'right',
+  2: 'back',
+  3: 'left'
+});
+
 // Map naming scheme for Agent-style block types to CodeBuilder-style block
 // types. BlockTypes not included here should be identical between the two
 // versions
@@ -90,12 +140,36 @@ const blockConversions = Object.freeze({
 
   craft_placeBlock: function (xml) {
     const next = getChildNodeByName(xml, 'next');
+    const title = getChildNodeByName(xml, 'title');
+    const blockType = title.textContent;
+    // placement slots are one-indexed and should default to 1
+    const blockIndex = (blockPlaceOrder.indexOf(blockType) + 1) || 1;
     return (`
       <block type="craft_place" inline="false">
         <title name="DIR">down</title>
         <value name="SLOTNUM">
           <block type="math_number">
-            <title name="NUM">1</title>
+            <title name="NUM">${blockIndex}</title>
+          </block>
+        </value>
+        ${next ? serialize(next) : ''}
+      </block>
+    `);
+  },
+
+  craft_placeBlockDirection: function (xml) {
+    const next = getChildNodeByName(xml, 'next');
+    const blockType = getTitleByNameAttr(xml, 'TYPE').textContent;
+    const direction = getTitleByNameAttr(xml, 'DIR').textContent;
+    // placement slots are one-indexed and should default to 1
+    const blockIndex = (blockPlaceOrder.indexOf(blockType) + 1) || 1;
+
+    return (`
+      <block type="craft_place" inline="false">
+        <title name="DIR">${directionToString[direction]}</title>
+        <value name="SLOTNUM">
+          <block type="math_number">
+            <title name="NUM">${blockIndex}</title>
           </block>
         </value>
         ${next ? serialize(next) : ''}

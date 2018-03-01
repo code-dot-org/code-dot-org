@@ -1,5 +1,6 @@
 import {mount} from 'enzyme';
 import experiments from '@cdo/apps/util/experiments';
+import {withReduxStore} from '../../util/withReduxStore';
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided
@@ -14,6 +15,10 @@ export default function testStorybook(storiesFn) {
 }
 
 class FakeStorybook {
+  constructor() {
+    this.withReduxStore = withReduxStore;
+  }
+
   groups = [];
 
   storiesOf(name) {

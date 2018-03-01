@@ -40,7 +40,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Drag out the subgoal label block you want.",
-    "markdown_instructions": "##instructions\r\n\r\nDrag out the subgoal label block you want.",
+    "markdown_instructions": "## instructions\r\n\r\nDrag out the subgoal label block you want.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

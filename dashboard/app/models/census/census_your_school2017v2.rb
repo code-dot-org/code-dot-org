@@ -25,10 +25,11 @@
 #  topic_other_description      :string(255)
 #  topic_do_not_know            :boolean
 #  class_frequency              :string(255)
-#  tell_us_more                 :string(255)
+#  tell_us_more                 :text(65535)
 #  pledged                      :boolean
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
+#  share_with_regional_partners :boolean
 #
 # Indexes
 #
@@ -36,10 +37,15 @@
 #
 
 # This version of the /yourschool census form added a text field to describe what
-# you meant if you selected the "other" topic.
+# you meant if you selected the "other" topic. There is no check in the form to
+# ensure that this value isn't an empty string.
 #
 class Census::CensusYourSchool2017v2 < Census::CensusYourSchool2017v1
-  validates :topic_other_description, presence: true, if: :require_other_description
+  validates :topic_other_description, exclusion: {in: [nil], message: "cannot be nil"}, if: :require_other_description
+
+  def show_followup?
+    how_many_20_hours_some? || how_many_20_hours_all?
+  end
 
   def require_other_description
     show_followup? && topic_other

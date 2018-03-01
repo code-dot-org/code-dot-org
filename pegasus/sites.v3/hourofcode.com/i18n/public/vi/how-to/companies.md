@@ -1,97 +1,91 @@
 ---
-
 title: <%= hoc_s(:title_how_to_companies) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# Làm thế nào để mang Giờ Lập trình tới chỗ của bạn
 
-## Inspire students and volunteer for the Hour of Code
+## Truyền cảm hứng về Giờ Lập trình cho các học sinh và tình nguyện viên
 
-**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+Code.org đem đến cơ hội cho các nhân viên của bạn [kết nối](<%= resolve_url('https://code.org/volunteer') %>) với lớp học địa phương đang thực hiện Giờ Lập trình nơi họ có thể chia sẻ các kinh nghiệm về công nghệ của mình và truyền cảm hứng cho các học sinh học khoa học máy tính.
 
-  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+- [Đăng kí](<%= resolve_url('https://code.org/volunteer') %>) để tình nguyện.
+- Để có nhiều hướng dẫn hơn để khuyến khích các nhân viên và kết nối nhân viên của bạn với lớp học, hãy vào [ phần hướng dẫn cho đối tác doanh nghiệp](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
-## Additional ways companies can support the Hour of Code:
+## Các cách khác mà các công ty có thể hỗ trợ Giờ Lập trình:
 
-  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
-  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Hãy yêu cầu CEO của bạn [ gửi một email cho toàn thể công ty ](<%= resolve_url('/promote/resources#sample-emails') %>) nhấn mạnh tầm quan trọng của khoa học máy tính và khuyến khích các nhân viên để nhân rộng. 
+- Tổ chức một Giờ Lập trình dưới dạng Happy Hour với các đồng nghiệp để thử [các hoạt động](<%= resolve_url('/learn') %>).
+- Tổ chức một sự kiện Giờ Lập trình cho lớp học địa phương hay các đối tác phi lợi nhuận để thực hiện một Giờ Lập trình tại văn phòng công ty bạn. Hãy xem hướng dẫn tổ chức sự kiện bên dưới.
 
-## How to host an Hour of Code event
+# Làm thế nào để tổ chức một sự kiện Giờ Lập trình với học sinh
 
-## 1) Promote your Hour of Code
+## 1. Quảng bá Giờ Lập trình của bạn
 
-  * Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+- Quảng bá sự kiện [ Giờ Lập trình](<%= resolve_url('/promote') %>) của bạn và khuyến khích những người khác cùng tổ chức.
+- Khuyến khích các kỹ sư phần mềm tại công ty của bạn tới thăm một lớp học địa phương để giúp hướng dẫn Giờ Lập trình và truyền cảm hứng cho học sinh để học khoa học máy tính. Họ có thể [đăng ký](<%= resolve_url('https://code.org/volunteer/engineer') %>) để kết được kết nối với một lớp học,.
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2. Xem video hướng dẫn <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+## Chọn một hoạt động
 
-**Tất cả những khóa học Hour of Code:**
+Chúng tôi tổ chức một loạt [hoạt động vui vẻ, kéo dài trong một giờ](<%= resolve_url('/learn') %>) cho mọi lứa tuổi, do một loạt các đối tác xây dựng. [Hãy thử chúng!](<%= resolve_url('/learn') %>)
 
-  * Require minimal prep-time
-  * Are self-guided - allowing participants to work at their own pace and skill-level
+**Tất cả hoạt động Giờ Lập trình** yêu cầu thời gian chuẩn bị tối thiểu và họ có thể tự làm - cho phép người tham gia tự làm việc ở tốc độ và trình độ kỹ năng của họ.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 4) Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn
+## 4. Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn không bắt buộc
 
-Trải nghiệm Một Giờ Lập Trình tốt nhất cần có máy tính được kết nối Internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Trải nghiệm Giờ Lập Trình tốt nhất cần có máy tính được kết nối Internet. Nhưng bạn **không** cần máy tính cho mỗi người tham, và bạn có thể thậm chí có thể thực hiện Giờ Lập trình mà không hề cần máy tính.
 
-**Kế hoạch trước!** Thực hiện các bước dưới đây trước khi chương trình bắt đầu:
+**Hãy lên kế hoạch trước!** Thực hiện các bước dưới đây trước khi sự kiện bắt đầu:
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Chúng cũng sẽ thấy rằng khoa học máy tính có tính xã hội ,hợp tác.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
+- Hãy thử các hoạt động trên máy tính hoặc thiết bị. Hãy chắc chắn rằng họ làm việc đúng trên trình duyệt với âm thanh và video.
+- Hãy cung cấp tai nghe hoặc yêu cầu người tham gia tự mang theo đồ của họ nếu hoạt động bạn chọn diễn ra hiệu quả nhất khi có âm thanh.
+- **Không có đủ thiết bị?** Sử dụng phương thức [ lập trình theo cặp](https://www.youtube.com/watch?v=vgkahOzFH2Q). Khi học sinh học theo nhóm, chúng sẽ giúp đỡ nhau và sẽ ít phải nhờ tới giáo viên hơn. Các em cũng sẽ thấy được tính xã hội và hợp tác trong khoa học máy tính.
+- **Nếu kết nối internet chậm** hãy chiếu video trước sự kiện để mọi người không phải tải video của họ. Hoặc thử các hoạt động không cần mạng/ lập trình không cần máy tính.
 
-![](/images/fit-350/group_ipad.jpg)
+<img src="/images/fit-350/group_ipad.jpg" />
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5. Bắt đầu buổi Giờ Lập Trình của bạn với một video truyền cảm hứng
 
-Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm hứng cho những người tham gia và bàn luận về cách mà khoa học máy tính tác động đến mọi lĩnh vực trong cuộc sống của chúng ta. Share more about what inspired you to pursue computer science and your role at your company.
+Khởi động Giờ Lập Trình của bạn bằng cách truyền cảm hứng cho những người tham gia và thảo luận về cách mà khoa học máy tính tác động đến mọi lĩnh vực trong cuộc sống của chúng ta. Chia sẻ thêm về những gì truyền cảm hứng cho bạn để theo đuổi khoa học máy tính và vai trò của bạn tại công ty của bạn.
 
 **Chiếu một video truyền cảm hứng:**
 
-  * Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [Tổng thống Obama kêu gọi tất cả học sinh nên học môn tin học](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Video giới thiệu chính thức của Code.org, với các nhân vật là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- [Video toàn thế giới Giờ Lập Trình](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [ Tổng thống Obama kêu gọi tất cả các sinh viên học khoa học máy tính](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Tìm nhiều video cảm hứng hơn [tại đây](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity:**
+**Ý tưởng để giới thiệu hoạt động Giờ Lập trình tới học sinh:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * Xem những bí kíp làm cho các bé gái quan tâm vào khoa học máy tính [tại đây](<%= resolve_url('https://code.org/girls') %>).
+- Diễn giải cách mà công nghệ tác động lên cuộc sống của chúng ta, với những ví dụ mà các bé trai và bé gái đều quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để tiết kiệm cuộc sống, giúp đỡ con người, kết nối con người, v. v.). 
+- Nếu bạn là một công ty công nghệ, giới thiệu sản phẩm thú vị, sáng tạo, công ty của bạn đang thực hiện.
+- Nếu bạn không phải là một công ty công nghệ, thảo luận về cách thức công ty của bạn sử dụng công nghệ để giải quyết vấn đề và đạt mục tiêu.
+- Mời các kỹ sư phần mềm từ công ty của bạn để nói chuyện về lý do tại sao họ đã quyết định nghiên cứu khoa học máy tính và các dự án mà họ làm việc trên.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-## 6) Lập Trình!
+## 6. Lập trình!
 
 **Chỉ dẫn những người tham gia vào các hoạt động**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+- Viết địa chỉ hoạt động lên bảng trắng. Tìm địa chỉ được liệt kê trên [ thông tin cho hoạt động bạn đã chọn ](<%= resolve_url('/learn') %>) theo số lượng người tham gia.
+- Đối với học sinh tỏ tuổi, tải trang hoạt động trước thời hạn hoặc đánh dấu trang đó lại.
 
-**When participants come across difficulties it's okay to respond:**
+**Khi người tham gia gặp khó khăn, bạn có thể trả lời:**
 
-  * "Tôi không biết. Chúng ta sẽ cùng nhau tìm cách giải quyết nhé."
-  * "Công nghệ không phải luôn luôn hoạt động theo ý chúng ta muốn."
-  * "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; bạn chưa thể thành thực ngay lập tức."
+- "Tôi không biết. Chúng ta sẽ cùng nhau tìm cách giải quyết nhé."
+- "Công nghệ không phải luôn luôn hoạt động theo ý chúng ta muốn."
+- "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; bạn chưa thể thành thực ngay lập tức."
 
 **Phải làm gì nếu ai đó hoàn thành sớm?**
 
-  * They can try another Hour of Code activity at hourofcode.com/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+- Họ có thể thử một hoạt động Giờ Lập Trình khác tại trang hourofcode.com/learn
+- Hoặc, yêu cầu họ giúp đỡ bạn khác đang gặp khó khăn với hoạt động đó.
 
 [col-33]
 
@@ -105,16 +99,14 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
+<p style="clear:both">&nbsp;</p>
 
 ## 7) Chúc mừng
 
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
-  * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
+- [In Giấy chứng nhận](<%= resolve_url('https://code.org/certificates') %>) cho người tham gia và học sinh.
+- [In nhãn dán "Tôi đã hoàn thành một Giờ Lập Trình!"](<%= resolve_url('/promote/resources#stickers') %>).
+- [Đặt áo phông](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) cho nhân viên của bạn.
+- Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
 
 [col-33]
 
@@ -134,12 +126,6 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 [/col-33]
 
-<p style="clear:both">
-  &nbsp;
-</p>
-
-## Tiếp theo Hour of Code sẽ là gì?
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+<p style="clear:both">&nbsp;</p>
 
 <%= view :signup_button %>

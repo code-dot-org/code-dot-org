@@ -56,7 +56,7 @@
     "encrypted_examples": "OgFutPCohIyY4j1vOD0dj390mqKRlik2ZbyOOdi2qZnLYvj0juPDGe1LWbCH\n7e3l\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "markdown_instructions": "#Do This:\r\n**Define** a function called `turnAround` which turns the turtle around. Once you've defined the function **call** it to make sure it works as you expect and then move the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)",
+    "markdown_instructions": "# Do This:\r\n**Define** a function called `turnAround` which turns the turtle around. Once you've defined the function **call** it to make sure it works as you expect and then move the turtle forward, as shown below. \r\n\r\n![](https://images.code.org/4c31307ec14cc6dfd65589f2a813120e-image-1447884881189.gif)",
     "submittable": "false",
     "hide_view_data_button": "true",
     "video_key": "csp_applab_functions",
@@ -104,7 +104,8 @@
         "maxTimes": 1,
         "message": "You’re using the right set of blocks, but not in the right order.  Make sure your picture matches exactly with the instructions."
       }
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": ""

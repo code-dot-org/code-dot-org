@@ -47,7 +47,7 @@ module Cdo
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        domains = (%w(studio learn i18n) + CDO.partners).map {|x| x + '.code.org'}
+        domains = (%w(studio learn) + CDO.partners).map {|x| x + '.code.org'}
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end
@@ -91,7 +91,7 @@ module Cdo
       )
 
       encryptor = ActiveSupport::MessageEncryptor.new(
-        key_generator.generate_key('encrypted cookie'),
+        key_generator.generate_key('encrypted cookie')[0, ActiveSupport::MessageEncryptor.key_len],
         key_generator.generate_key('signed encrypted cookie')
       )
 

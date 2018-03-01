@@ -30,7 +30,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "code_functions": {
@@ -59,7 +59,8 @@
       "x": null,
       "y": null,
       "rotation": null,
-      "World.frameRate": null
+      "World.frameRate": null,
+      "assign_x": null
     },
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
@@ -69,14 +70,16 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "markdown_instructions": "# Extend Your Scene\r\n\r\nThis is the sprite scene you made in the last lesson. You'll now be updating it a little bit to use the draw loop and sprite properties.\r\n\r\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\r\n\r\n# Do This\r\n\r\n* Add a draw loop to your program (you should only have one).\r\n* Use the lasso selector (click, hold and drag) to select all your code and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\r\n* Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that they move. You'll need to update them with `randomNumber()`.\r\n\r\n",
+    "markdown_instructions": "# Extend Your Scene\r\n\r\nThis is the sprite scene you made in the last lesson. You'll now be updating it a little bit to use the draw loop and sprite properties.\r\n\r\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\r\n\r\n# Do This\r\n\r\n* Add a draw loop to your program (you should only have one).\r\n* Use the lasso selector (click, hold and drag) to select all your code and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\r\n* Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that they move. You'll need to update them with `randomNumber()`.\r\n",
     "project_template_level_name": "CSD U3 Sprites scene template",
     "display_name": "Challenge: Extend Your Scene",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 18:20:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:23:27 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:46:02 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 18:20:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:23:27 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:46:02 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-20 16:21:45 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

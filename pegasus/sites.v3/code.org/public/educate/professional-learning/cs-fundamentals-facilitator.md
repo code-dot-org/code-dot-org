@@ -14,5 +14,5 @@ The ideal CS Fundamentals Facilitator is an enthusiastic supporter of computer s
 
 **Find a [CS Fundamentals Facilitator](/educate/professional-learning/cs-fundamentals-directory) near you.**
 
-If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).
+If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](mailto:facilitators@code.org).
 

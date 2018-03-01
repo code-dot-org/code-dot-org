@@ -1,18 +1,21 @@
 import React, {PropTypes} from 'react';
 import {FormGroup} from "react-bootstrap";
-import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import UsPhoneNumberInput from "../../form_components/UsPhoneNumberInput";
-import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
+import {
+  PageLabels,
+  SectionHeaders,
+  TextFields
+} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 import {YES} from '../ApplicationConstants';
-import {isEmail} from '@cdo/apps/util/formatValidation';
+import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 
 const FACILITATOR_URL = "https://code.org/educate/facilitator";
 const FACILITATOR_EMAIL = "facilitators@code.org";
-const ZIP_CODE_REGEX = /^\d{5}([\W-]?\d{4})?$/;
 
-export default class Section1AboutYou extends Facilitator1819FormComponent {
+export default class Section1AboutYou extends LabeledFormComponent {
   static propTypes = {
-    ...Facilitator1819FormComponent.propTypes,
+    ...LabeledFormComponent.propTypes,
     accountEmail: PropTypes.string.isRequired
   };
 
@@ -37,7 +40,7 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
           This application should take 30 - 45 minutes to complete and includes both multiple choice and
           free response questions. Fields marked with a
           {' '}<span style={{color: "red"}}>*</span>{' '}
-          are required. If you need more information on the program before you apply, please visit
+          are required. If you need more information about the program before you apply, please visit
           {' '}<a href={FACILITATOR_URL} target="_blank">{FACILITATOR_URL}</a>.{' '}
           If you have questions regarding the Facilitator Development Program or application, please contact
           {' '}<a href={`mailto:${FACILITATOR_EMAIL}`}>{FACILITATOR_EMAIL}</a>.
@@ -75,7 +78,7 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
         {this.checkBoxesFor("race")}
 
         {this.checkBoxesWithAdditionalTextFieldsFor("institutionType", {
-          "Other:" : "other"
+          [TextFields.otherWithText] : "other"
         })}
 
         {this.inputFor("currentEmployer")}
@@ -90,7 +93,7 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("completedCsCoursesAndActivities", {
-          "Other:" : "other"
+          [TextFields.otherWithText] : "other"
         })}
 
         {this.radioButtonsFor("diversityTraining")}
@@ -99,10 +102,10 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
         }
 
         {this.checkBoxesWithAdditionalTextFieldsFor("howHeard", {
-          "A Code.org facilitator (please share name):": "facilitator",
-          "A Code.org staff member (please share name):": "codeOrgStaff",
-          "A Code.org Regional Partner (please share name):": "regionalPartner",
-          "Other:": "other"
+          [TextFields.howHeardFacilitator] : "facilitator",
+          [TextFields.howHeardCodeOrgStaff] : "codeOrgStaff",
+          [TextFields.howHeardRegionalPartner] : "regionalPartner",
+          [TextFields.otherWithText] : "other"
         })}
       </FormGroup>
     );
@@ -134,7 +137,7 @@ export default class Section1AboutYou extends Facilitator1819FormComponent {
       formatErrors.alternateEmail = "Must be a valid email address";
     }
 
-    if (data.zipCode && !ZIP_CODE_REGEX.exec(data.zipCode)) {
+    if (data.zipCode && !isZipCode(data.zipCode)) {
       formatErrors.zipCode = "Must be a valid zip code";
     }
 

@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import 'whatwg-fetch';
 import {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
@@ -8,7 +9,7 @@ import {
 
 var integrationContext = require.context("./integration", false, /Tests?\.js$/);
 
-describe('integration tests', () => {
+describe('integration tests', function () {
   throwOnConsoleErrorsEverywhere();
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();

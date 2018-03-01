@@ -14,7 +14,6 @@ import { getStore } from './redux';
 import { authorizeLockable } from './stageLockRedux';
 import { setViewType, ViewType } from './viewAsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 import {
   initProgress,
@@ -29,6 +28,7 @@ import {
   setCurrentStageId,
   setScriptCompleted,
   setStageExtrasEnabled,
+  getLevelResult,
 } from './progressRedux';
 import { setVerified } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import { renderTeacherPanel } from './teacher';
@@ -48,7 +48,7 @@ function showDisabledBubblesModal() {
  */
 progress.showDisabledBubblesAlert = function () {
   const store = getStore();
-  const { isHocScript, postMilestoneDisabled } = store.getState().progress;
+  const { postMilestoneDisabled } = store.getState().progress;
   const showAlert = postMilestoneDisabled || experiments.isEnabled('postMilestoneDisabledUI');
   if (!showAlert) {
     return;
@@ -63,7 +63,7 @@ progress.showDisabledBubblesAlert = function () {
   });
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesAlert isHocScript={isHocScript}/>, div[0]);
+  ReactDOM.render(<DisabledBubblesAlert/>, div[0]);
 };
 
 /**
@@ -90,7 +90,8 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     name,
     stages: [stageData],
     disablePostMilestone,
-    age_13_required
+    age_13_required,
+    id: stageData.script_id,
   }, currentLevelId, false, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
@@ -249,16 +250,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     // Merge progress from server (loaded via AJAX)
     if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, level => {
-        if (level.status === LevelStatus.locked) {
-          return TestResults.LOCKED_RESULT;
-        }
-        if (level.submitted || level.readonly_answers) {
-          return TestResults.SUBMITTED_RESULT;
-        }
-
-        return level.result;
-      });
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
       store.dispatch(mergeProgress(levelProgress));
       if (data.peerReviewsPerformed) {
         store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));

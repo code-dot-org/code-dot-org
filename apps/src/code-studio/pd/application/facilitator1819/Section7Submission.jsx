@@ -1,25 +1,14 @@
-import React, {PropTypes} from 'react';
-import {FormGroup, Checkbox} from "react-bootstrap";
-import Facilitator1819FormComponent from "./Facilitator1819FormComponent";
+import React from 'react';
+import {FormGroup} from "react-bootstrap";
+import LabeledFormComponent from "../../form_components/LabeledFormComponent";
 import {PageLabels, SectionHeaders} from '@cdo/apps/generated/pd/facilitator1819ApplicationConstants';
 
-export default class Section7Submission extends Facilitator1819FormComponent {
-  static propTypes = {
-    ...Facilitator1819FormComponent.propTypes,
-    accountEmail: PropTypes.string.isRequired
-  };
-
+export default class Section7Submission extends LabeledFormComponent {
   static labels = PageLabels.section7Submission;
 
   static associatedFields = [
     ...Object.keys(PageLabels.section7Submission)
   ];
-
-  handleAgreeChange = event => {
-    this.handleChange({
-      agree: event.target.checked
-    });
-  };
 
   render() {
     return (
@@ -41,17 +30,7 @@ export default class Section7Submission extends Facilitator1819FormComponent {
         aggregated. Our Regional Partners are contractually obliged to treat this information with the same level of
         confidentiality as Code.org.
 
-        <FormGroup
-          validationState={this.getValidationState("agree")}
-        >
-          <Checkbox
-            checked={!!this.props.data.agree}
-            onChange={this.handleAgreeChange}
-          >
-            {this.labelFor("agree")}
-          </Checkbox>
-        </FormGroup>
-
+        {this.singleCheckboxFor("agree")}
       </FormGroup>
     );
   }

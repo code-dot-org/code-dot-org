@@ -5,18 +5,21 @@ import i18n from "@cdo/locale";
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import Button from '@cdo/apps/templates/Button';
 import { topCourse } from './homepagesTestData';
+import { combineReducers, createStore } from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('TopCourse', () => {
+  const store = createStore(combineReducers({isRtl}));
+
   it('renders a TopCourse with 2 buttons', () => {
     const wrapper = shallow(
       <TopCourse
-        isRtl={false}
         assignableName={topCourse.assignableName}
         lessonName={topCourse.lessonName}
         linkToOverview={topCourse.linkToOverview}
         linkToLesson={topCourse.linkToLesson}
-      />
-    );
+      />, {context: {store}},
+    ).dive();
     expect(wrapper).to.containMatchingElement(
       <div>
         <img/>

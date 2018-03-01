@@ -1,21 +1,19 @@
 ---
-
 title: <%= hoc_s(:title_how_to_parents) %>
 layout: wide
 nav: how_to_nav
-
 ---
-
 <%= view :signup_button %>
 
 # Cum sa organizezi o Ora de Programare cu copilul tau
 
 Realizeaza o Ora de Programare acasa, sau organizeaza Hour of Code voluntar, in cadrul clasei copilului tau! Iata cum:
 
-## 1) Priveşte acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
 ## 2) Alegeți un tutorial:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+Noi oferim o varietate de tutoriale distractive, de o oră, pentru elevi de toate vârstele, create de către o varietate de parteneri. [Încercați-le!](<%= resolve_url('/learn') %>)
 
 **Toate tutorialele Hour of Code sunt auto-ghidate - astfel, copiii pot lucra in propriul ritm si la propriul nivel de cunostinte**
 
@@ -32,10 +30,10 @@ Cea mai buna experienta Hour of Code va fi cu calculatoare care au conexiune la 
 
 Puteti spori succesul evenimentului vostru Hour of Code inspirandu-ti copilul sa discute despre care este impactul tehnologiei computer-ului si programarii asupra vietii noastre.
 
-**Arată-i un filmulet inspirational:**
+**Arată-le un filmulet inspirational:**
 
 - Videoclipul original al lansării Hour of Code, care îi înfățișează pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh ( există versiuni de [1](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5](https://www.youtube.com/watch?v=nKIu9yen5nc) sau [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Video-ul de lansare[Hour of Code 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw), sau<% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [Videoclipul Ora de Cod la nivel mondial](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Găseşte mai multe [resurse inspirationale](<%= resolve_url('https://code.org/inspire') %>) şi [clipuri video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -57,7 +55,7 @@ Atunci când aţi ales tutorialul pe care ati dori sa il prcurgeti, puteţi marc
 
 Este bine să răspunzi:
 
-- "Nu ştiu. Dar hai să ne dam seama de asta împreună."
+- "Nu ştiu. Dar haideţi să ne dam seama de asta împreună."
 - "Tehnologia nu funcţionează întotdeauna în modul în care vrem noi."
 - "Învăţarea programarii este ca învăţarea unei limbi noi; nu veţi fi fluent imediat."
 

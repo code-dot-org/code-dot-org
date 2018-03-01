@@ -182,7 +182,9 @@ function installJoinBlock(blockly) {
           enabled: true,
           callback: function () {
             var ret = prompt('Number of inputs', this.inputCount);
-            if (ret !== '') {
+            if (ret === '???') {
+              this.setInputCount(ret);
+            } else if (ret !== '') {
               this.setInputCount(parseInt(ret));
             }
           }.bind(this)
@@ -191,8 +193,13 @@ function installJoinBlock(blockly) {
     },
 
     setInputCount: function (inputCount) {
-      var newInputCount = Math.max(parseInt(inputCount), 2);
-      if (inputCount > this.inputCount) {
+      let newInputCount;
+      if (inputCount === '???') {
+        newInputCount = 2;
+      } else {
+        newInputCount = Math.max(parseInt(inputCount), 2);
+      }
+      if (newInputCount > this.inputCount) {
         for (var i = this.inputCount; i < newInputCount; i++) {
           var input = this.appendValueInput('ADD' + i);
           if (i === 0) {
@@ -204,7 +211,11 @@ function installJoinBlock(blockly) {
           this.removeInput('ADD' + i);
         }
       }
-      this.inputCount = newInputCount;
+      if (inputCount === '???') {
+        this.inputCount = inputCount;
+      } else {
+        this.inputCount = newInputCount;
+      }
     },
 
     pendingConnection: function (oldConnection, newConnection) {
@@ -241,7 +252,7 @@ function installJoinBlock(blockly) {
   };
 
   blockly.JavaScript.text_join_simple = function () {
-    var parts = new Array(this.inputCount);
+    var parts = new Array(this.inputCount === '???' ? 2 : this.inputCount);
     for (var n = 0; n < this.inputCount; n++) {
       parts[n] = Blockly.JavaScript.valueToCode(this, 'ADD' + n,
           Blockly.JavaScript.ORDER_COMMA) || '\'\'';

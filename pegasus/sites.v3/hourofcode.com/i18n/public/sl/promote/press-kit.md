@@ -1,11 +1,8 @@
 ---
-
 title: <%= hoc_s(:title_press_kit) %>
 layout: wide
 nav: promote_nav
-
 ---
-
 <%= view :signup_button %>
 
 ## Kako privabiti medije na vaš dogodek Ura za kodo?
@@ -14,20 +11,20 @@ nav: promote_nav
 
 ### Ključni nasveti
 
-  * Dva tedna pred dogodkom stopite v stik z mediji, najbolje preko elektronske pošte. Če ni odziva, poskusite še enkrat z elektronsko pošto, lahko pa jih pokličete tudi po telefonu.
-  * Prosite člana šolskega osebja ali prostovoljca, da posname fotografije za objavo na spletu ali v tisku.
-  * Objavite reportažo o Uri za kodo na svoji spletni strani in v šolskem časopisu. Objavite podatke o dogodku in fotografije dejavnosti učencev.
-  * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Dva tedna pred dogodkom stopite v stik z mediji, najbolje preko elektronske pošte. Če ni odziva, poskusite še enkrat z elektronsko pošto, lahko pa jih pokličete tudi po telefonu.
+- Prosite člana šolskega osebja ali prostovoljca, da posname fotografije za objavo na spletu ali v tisku.
+- Objavite reportažo o Uri za kodo na svoji spletni strani in v šolskem časopisu. Objavite podatke o dogodku in fotografije dejavnosti učencev.
+- On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ### Vodič po korakih:
 
 **1. Plan your event**
 
-  * Razčlenite svoj načrt Ure za kodo.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
-  * Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * Organizirajte skupinske dejavnosti (lahko predstavite "nepovezane" programsko dejavnosti), ali pokažite, kaj so učenci ustvarili.
-  * Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
+- Razčlenite svoj načrt Ure za kodo.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to parents. Ask them to spread the word.
+- Send [a letter](<%= resolve_url('/promote/resources#sample-emails') %>) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
+- Organizirajte skupinske dejavnosti (lahko predstavite "nepovezane" programsko dejavnosti), ali pokažite, kaj so učenci ustvarili.
+- Show Code.org’s [Hour of Code video](<%= resolve_url('/') %>) or one of [these](<%= resolve_url('/promote/resources#videos') %>) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**
 

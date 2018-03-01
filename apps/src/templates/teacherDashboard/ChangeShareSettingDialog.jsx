@@ -52,7 +52,6 @@ class ChangeShareSettingDialog extends Component {
         useUpdatedStyles
         isOpen={isOpen}
         handleClose={handleClose}
-        assetUrl={()=>''}
         uncloseable={isSaveInProgress}
       >
         <PadAndCenter>

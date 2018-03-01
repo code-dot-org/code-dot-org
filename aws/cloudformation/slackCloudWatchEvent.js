@@ -21,8 +21,8 @@ slack_req_opts.headers = {
   'Content-Type': 'application/json'
 };
 
-exports.handler = function(event, context, callback) {
-  var req = https.request(slack_req_opts, function(res) {
+exports.handler = function (event, context, callback) {
+  var req = https.request(slack_req_opts, function (res) {
     if (res.statusCode === 200) {
       callback(null, 'posted to slack');
     } else {
@@ -30,19 +30,38 @@ exports.handler = function(event, context, callback) {
     }
   });
 
-  req.on('error', function(e) {
+  req.on('error', function (e) {
     console.log('problem with request: ' + e.message);
     callback(e.message);
   });
 
-  var cause = event.detail.Cause;
-  var error = event.detail.StatusCode == "Failed";
-  if (error) {
-    cause = cause + "\n" + event.detail.StatusMessage;
+  var message;
+  var detail = event.detail;
+  var type = event['detail-type'];
+  switch (event.source) {
+    case "aws.autoscaling":
+      message = autoScaling(detail, type);
+      break;
+    case "aws.health":
+      message = health(detail, type);
+      break;
+    default:
+      message = {};
+      break;
   }
-  var instanceId = event.detail.EC2InstanceId;
+  req.write(JSON.stringify(message));
+  req.end();
+};
+
+function autoScaling(detail, type) {
+  var cause = detail.Cause;
+  var error = detail.StatusCode === "Failed";
+  if (error) {
+    cause = cause + "\n" + detail.StatusMessage;
+  }
+  var instanceId = detail.EC2InstanceId;
   var instanceLink = `https://console.aws.amazon.com/ec2/v2/home?&region=us-east-1#Instances:search=${instanceId}`;
-  var asg = event.detail.AutoScalingGroupName;
+  var asg = detail.AutoScalingGroupName;
   var channel = channelMap[Object.keys(channelMap).find(asgName => asg.match(asgName))];
   if (asg.match('autoscale-prod')) {
     asg = 'Auto Scaling';
@@ -52,13 +71,12 @@ exports.handler = function(event, context, callback) {
     username: asg,
     channel: channel
   };
-  var type = event["detail-type"];
-  var action;
-  if (action = type.match(/EC2 Instance-(launch|terminate) Lifecycle Action/)) {
-    message.text = `<${instanceLink}|${instanceId}> - EC2 Instance ${action[1].replace(/^./, x=>x.toUpperCase())}`
+  var action = type.match(/EC2 Instance-(launch|terminate) Lifecycle Action/);
+  if (action) {
+    message.text = `<${instanceLink}|${instanceId}> - EC2 Instance ${action[1].replace(/^./, x=>x.toUpperCase())}`;
   } else if (type.match("EC2 Instance (Launch|Terminate) Successful")) {
     var capacity = cause.match(' the capacity from (\\d+) to (\\d+)');
-    var duration = (Date.parse(event.detail.EndTime) - Date.parse(event.detail.StartTime)) / 1000;
+    var duration = (Date.parse(detail.EndTime) - Date.parse(detail.StartTime)) / 1000;
     message.attachments = [{
       author_name: `${instanceId} - ${type}`,
       author_link: instanceLink,
@@ -81,7 +99,17 @@ exports.handler = function(event, context, callback) {
       }]
     }];
   }
+  return message;
+}
 
-  req.write(JSON.stringify(message));
-  req.end();
-};
+function health(detail, type) {
+  return {
+    username: type,
+    channel: 'infra-production',
+    attachments: [{
+      author_name: detail.eventTypeCode,
+      color: detail.eventTypeCategory === 'issue' ? 'danger' : 'warning',
+      text: detail.eventDescription[0].latestDescription,
+    }]
+  };
+}

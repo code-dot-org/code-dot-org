@@ -127,7 +127,7 @@ Recommended courses from 3rd parties
 
 [/solid-block-header]
 
-[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+<!--- If you update the resources here, don't forget to also update /educate/curriculum/3rdparty -->
 
 | Organization                             | Curriculum                               | Professional Development                 |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |

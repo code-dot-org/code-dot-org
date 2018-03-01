@@ -63,7 +63,10 @@ export function fixPath(filename) {
     return filename;
   }
 
-  return assetPathPrefix + channelId + '/' + filename;
+  // Use encodeURIComponent() on files in the user's project, to make sure we
+  // catch any characters which could break urls such as # or ?, without
+  // modifying extended ascii or unicode characters.
+  return assetPathPrefix + channelId + '/' + encodeURIComponent(filename);
 }
 
 /**

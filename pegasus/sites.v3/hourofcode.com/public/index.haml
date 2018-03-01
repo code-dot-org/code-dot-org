@@ -2,31 +2,17 @@
 layout: wide_index
 title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('full-year')) %>"
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "og:image:width": '1920'
-  "og:image:height": '1080'
-  "og:video:url": "<%= 'http://youtube.com/v/KsOIlDT145A' %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/KsOIlDT145A' %>"
-  "og:video:type": "video/mp4"
-  "og:video:width": "640"
-  "og:video:height": "360"
-  "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "https://hourofcode.com"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "twitter:player": "<%= 'https://youtube.com/embed/KsOIlDT145A' %>"
-  "twitter:player:width": "640"
-  "twitter:player:height": "360"
 ---
 %link{href: "/css/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -facebook = {:u=>"http://#{request.host}/us"}
--# We set the DCDO default to "soon-hoc" here because we can't change the DCDO flag on the test machine, but ui tests rely on hourofcode.com being in a hoc_mode consistent with production. NOTE: Erin B. needs to update this default when we flip to "actual-hoc".
--hoc_mode = DCDO.get("hoc_mode", "soon-hoc")
+
+-# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
+-# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
+-# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
 :ruby
   HIGHLIGHTS_CONSTANTS = [
@@ -152,59 +138,15 @@ social:
           %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
         .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
 
+  -# Signup and Highlights
 
-  -if @language == 'en'
-    .row
-      .col-md-8
-        %br/
-        %h2 Hour of Code 2017
-        %a.twitter-grid{href: "https://twitter.com/codeorg/timelines/925449654308704256?limit=4?ref_src=twsrc%5Etfw?limit=4"} The Hour of Code 2017
-        %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
-      .col-md-3.highlights-column
-        %h2 Highlights from previous years
-        %div.highlight-tiles
-          - HIGHLIGHTS_CONSTANTS.each do |item|
-            = view :highlight_item, item: item
-          .clear
-          %a{href: "/highlights"}
-            %button See more highlights
+  -# Show sign up form above highlights when we're trying to increase sign ups. Otherwise, feature highlights first which is more engaging and evergreen.
+  -if ["pre-hoc", "soon-hoc"].include?(hoc_mode)
+    = view :home_signup, hoc_mode: hoc_mode
+    = view :home_highlights
   -else
-    -# Highlights
-    %br/
-
-    .row
-      .col-xs-6.col-sm-4
-        %img{src: localized_image("/images/fill-600x400/highlight-girl-hawaii.jpg"), style: "width: 100%;"}
-
-      .col-xs-6.col-sm-4
-        %img{src: localized_image("/images/fill-600x400/highlight-robot.jpg"), style: "width: 100%;"}
-
-      .hidden-xs.col-sm-4
-        %img{src: localized_image("/images/fill-600x400/highlight-girl-purple.jpg"), style: "width: 100%;"}
-
-    .gap{style: "height:30px"}
-
-    .row
-      .col-xs-6.col-sm-4
-        .hidden-xs
-          %img{src: localized_image("/images/fill-600x400/highlight-india.jpg"), style: "width: 100%; padding-bottom:30px"}
-        %img{src: localized_image("/images/fill-600x400/highlight-celebrate.jpg"), style: "width: 100%;"}
-
-      .col-xs-6.col-sm-8
-        %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
-
-    .gap{style: "height:30px"}
-
-    .row
-      .col-xs-6.col-sm-4
-        %img{src: localized_image("/images/fill-600x400/highlight-stickers.jpg"), style: "width: 100%;"}
-
-      .hidden-xs.col-sm-4
-        %img{src: localized_image("/images/fill-600x400/highlight-girl-star-wars.jpg"), style: "width: 100%;"}
-
-      .col-xs-6.col-sm-4
-        %img{src: localized_image("/images/fill-600x400/highlight-kids-certificates.jpg"), style: "width: 100%;"}
-
+    = view :home_highlights
+    = view :home_signup, hoc_mode: hoc_mode
 
   -# Stats
 
@@ -219,10 +161,10 @@ social:
       %img{src: "/images/fit-300/stats-languages.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
+      %p=hoc_s(:stats_global)
       -if @language == "en"
         %img{src: "/images/fit-300/stats-400m.jpg", style: "width: 100%;"}
       -else
-        %p=hoc_s(:stats_global)
         %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
 
     .hidden-xs.col-sm-4{style: "text-align:center"}
@@ -233,36 +175,6 @@ social:
       -else
         %p=hoc_s(:stats_girls_more)
         %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
-
-  -# Signup
-
-  %a#hocsignupform{name: 'signup'}
-  #join
-    %h1#join-us-header=hoc_s(:front_join_us_button)
-    -if ["post-hoc", false].include?(hoc_mode)
-      %h3#signup-closed=hoc_s(:signup_closed)
-    %h1#thanks-header{style: "display:none;"}=hoc_s(:census_thanks)
-    %div
-      .row
-        -# During Hour of Code season, show signup form and announcements.
-        -# When it's not Hour of Code, hide signup form and show announcements and highlights.
-        -if ["pre-hoc", "soon-hoc", "actual-hoc"].include?(hoc_mode)
-          .col-md-6
-            =view :signup_form
-          .col-md-5
-            =view :announcements
-          .col-md-1
-        -else
-          .col-md-5
-            =view :announcements
-          .col-md-1
-          .col-md-6.highlights-column
-            %h2.join-us-header=hoc_s(:highlights_title)
-            - HIGHLIGHTS_CONSTANTS.reverse_each do |item|
-              = view :highlight_item, item: item
-            .clear
-            %a{href: "/highlights"}
-              %button=hoc_s(:higlights_see_more)
 
   -# FAQ
 

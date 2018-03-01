@@ -10,7 +10,6 @@ export const projectDataPropType = PropTypes.shape({
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
   publishedToPublic: PropTypes.bool.isRequired,
-  publishedToClass: PropTypes.bool.isRequired,
 });
 
 
@@ -23,6 +22,16 @@ export const personalProjectDataPropType = PropTypes.shape({
   isPublished: PropTypes.bool
 });
 
+export const featuredProjectDataPropType = PropTypes.shape({
+  projectName: PropTypes.string.isRequired,
+  channel: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string,
+  thumbnailUrl: PropTypes.string,
+  featuredAt: PropTypes.string.isRequired,
+  unfeaturedAt: PropTypes.string,
+});
+
 export const projectPropType = PropTypes.shape({
   projectData: projectDataPropType.isRequired,
   currentGallery: PropTypes.string.isRequired,
@@ -31,6 +40,11 @@ export const projectPropType = PropTypes.shape({
 export const Galleries = {
   PUBLIC: 'PUBLIC',
   PRIVATE: 'PRIVATE',
+};
+
+export const featuredProjectTableTypes = {
+  current: 'currentFeatured',
+  archived: 'archivedUnfeatured'
 };
 
 export const MAX_PROJECTS_PER_CATEGORY = 100;

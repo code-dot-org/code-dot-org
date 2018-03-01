@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "video_key": "applab_hoc_onevent",
+    "video_key": "applab_intro_events",
     "instructions_important": "false",
     "display_name": "Using onEvent",
     "skip_dialog": true,

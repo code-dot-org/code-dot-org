@@ -3,21 +3,20 @@ title: <%= hoc_s(:title_how_to_promote) %>
 layout: wide
 nav: promote_nav
 ---
-
 <%= view :signup_button %>
 
 <%
-  facebook = {:u=>"http://#{request.host}/us"}
+    facebook = {:u=>"http://#{request.host}/us"}
 
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+    twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+    twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# Si të përfshihem
+# Get your community involved in the Hour of Code
 
 ## 1. Përhap fjalën
 
-Tregoji miqëve të tu për **#OraEKodimit**!
+Tell your friends about the **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

@@ -5,8 +5,10 @@ require 'sinatra'
 # DynamoTable
 #
 class DynamoTable
-  MAX_BATCH_SIZE ||= 25
-  CHANNEL_TABLE_NAME_INDEX ||= "channel_id-table_name-index"
+  MAX_BATCH_SIZE = 25
+  # TODO: The `||=` is used below instead of `=` so as to avoid a constant redefinition warning.
+  # Fix this, so that direct assignment can be used.
+  CHANNEL_TABLE_NAME_INDEX ||= "channel_id-table_name-index".freeze
 
   class NotFound < Sinatra::NotFound
   end

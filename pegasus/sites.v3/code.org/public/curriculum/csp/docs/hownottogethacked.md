@@ -1,6 +1,7 @@
 ---
 title: How Not to Get Hacked
 video_player: true
+theme: responsive
 ---
 
 # How Not to Get Hacked #

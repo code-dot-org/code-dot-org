@@ -137,6 +137,40 @@ Resources:
       Path: /
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  S3Object:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: S3 Object Custom Resource
+      FunctionName: S3Object
+      Role: !GetAtt S3ObjectRole.Arn
+      Code:
+        ZipFile: <%=js 's3Object.js' %>
+      Handler: index.handler
+      Timeout: 30
+      Runtime: nodejs6.10
+  S3ObjectRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal: {Service: [lambda.amazonaws.com]}
+          Action: ['sts:AssumeRole']
+      Path: /
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+      Policies:
+      - PolicyName: S3Policy
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - 's3:PutObject'
+                - 's3:PutObjectAcl'
+                - 'S3:DeleteObject'
+              Resource: !Sub "arn:aws:s3:::*"
 Outputs:
   AMIManager:
     Value: !GetAtt AMIManager.Arn
@@ -148,3 +182,6 @@ Outputs:
   SlackEvent:
     Value: !GetAtt SlackEvent.Arn
     Export: {Name: SlackEvent}
+  S3Object:
+    Value: !GetAtt S3Object.Arn
+    Export: {Name: S3Object}

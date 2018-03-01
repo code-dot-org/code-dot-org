@@ -8,27 +8,36 @@ import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import projects, { setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
 import { MAX_PROJECTS_PER_CATEGORY } from '@cdo/apps/templates/projects/projectConstants';
+import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 
 $(document).ready(() => {
+  const showFeatured = window.location.href.includes("showFeatured");
+  const originalUrl = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
+  const url = showFeatured ? originalUrl + `?showFeatured=1` : originalUrl;
+
   registerReducers({projects});
   $.ajax({
     method: 'GET',
-    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+    url: url,
     dataType: 'json'
   }).done(projectLists => {
     getStore().dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <div>
-        <HeaderBanner
-          headingText={i18n.projects()}
-          subHeadingText={i18n.projectsSubHeading()}
-          short={true}
-        />
-        <Provider store={getStore()}>
+      <Provider store={getStore()}>
+        <div>
+          <HeaderBanner
+            headingText={i18n.projects()}
+            subHeadingText={i18n.projectsSubHeading()}
+            short
+          />
+          <StartNewProject
+            canViewFullList
+            canViewAdvancedTools
+          />
           <PublicGallery />
-        </Provider>,
-      </div>,
+        </div>
+      </Provider>,
       publicGallery);
   });
 });

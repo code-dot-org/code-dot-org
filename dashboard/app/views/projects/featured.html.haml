@@ -1,0 +1,7 @@
+#featured-projects-container
+- featured_projects_data = {}
+- featured_projects_data[:currently_featured_projects] = @featured
+- featured_projects_data[:archived_unfeatured_projects] = @unfeatured
+
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/projects/featured.js'), data: {featuredProjects: featured_projects_data.to_json}}

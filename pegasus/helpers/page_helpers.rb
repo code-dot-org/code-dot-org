@@ -1,4 +1,6 @@
 require 'active_support/core_ext/string/indent'
+require 'honeybadger'
+require 'cdo/pegasus/donor'
 
 def page_title_with_tagline
   title = @header['title'] || @config[:page_default_title].to_s
@@ -55,24 +57,17 @@ def css_retina?(is_retina = true)
   css_query_parts.map {|q| "#{!is_retina ? 'not all and ' : ''}(#{q})"}.join(', ')
 end
 
-# Returns a concatenated, minified CSS string from all CSS files in the given paths.
+# Returns a concatenated, minified CSS string from all CSS files in the given paths,
+# along with a digest of same.
 def combine_css(*paths)
   files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request.site, path, '*.css'))}.flatten
-  css_last_modified = Time.at(0)
   css = files.sort_by(&File.method(:basename)).map do |i|
-    css_last_modified = [css_last_modified, File.mtime(i)].max
     IO.read(i)
   end.join("\n\n")
   css_min = Sass::Engine.new(css,
     syntax: :scss,
     style: :compressed
   ).render
-  [css_min, css_last_modified]
-end
-
-# Returns a random donor's twitter handle.
-def get_random_donor_twitter
-  weight = SecureRandom.random_number
-  donor = DB[:cdo_donors].where('((twitter_weight_f - ?) >= 0)', weight).first
-  return donor[:twitter_s]
+  digest = Digest::MD5.hexdigest(css_min)
+  [css_min, digest]
 end

@@ -21,31 +21,6 @@ require_relative 'i18n_script_utils'
 IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d')}".freeze
 DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime('%m-%d')}".freeze
 
-def should_i(question)
-  loop do
-    print "Should I #{question}? [Yes]/Skip/Quit: "
-    response = gets.strip.downcase
-    puts ''
-    if 'yes'.start_with?(response) # also catches blank/return ;)
-      return true
-    elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
-      return false
-    elsif 'quit'.start_with?(response)
-      puts "quitting"
-      exit(-1)
-    else
-      puts "Sorry, I didn't understand that.\n\n"
-    end
-  end
-end
-
-def git_add_and_commit(paths, commit_message)
-  paths.each do |path|
-    `git add -u #{path}`
-  end
-  `git commit -m "#{commit_message}"`
-end
-
 def update_repo
   return unless should_i "update the repo"
   `git checkout staging`
@@ -81,12 +56,20 @@ def create_in_up_pr
     "pegasus i18n sync"
   )
 
+  git_add_and_commit(
+    [
+      "i18n/locales/source/blockly-mooc",
+    ],
+    "apps i18n sync"
+  )
+
   `git push origin #{IN_UP_BRANCH}`
   in_up_pr = GitHub.create_pull_request(
     base: 'staging',
     head: IN_UP_BRANCH,
     title: "I18n sync In & Up #{Date.today.strftime('%m/%d')}"
   )
+  GitHub.label_pull_request(in_up_pr, ["i18n"])
   puts "Created In & Up PR: #{GitHub.url(in_up_pr)}"
 end
 
@@ -142,6 +125,7 @@ def create_down_out_pr
     head: DOWN_OUT_BRANCH,
     title: "I18n sync Down & Out #{Date.today.strftime('%m/%d')}"
   )
+  GitHub.label_pull_request(down_out_pr, ["i18n"])
 
   puts "Created Down & Out PR: #{GitHub.url(down_out_pr)}"
 

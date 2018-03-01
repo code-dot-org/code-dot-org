@@ -166,8 +166,8 @@ describe('SectionTable', () => {
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
       const courseLink = courseLinkCol.find('a').at(0).props().href;
       const sectionLink = courseLinkCol.find('a').at(1).props().href;
-      assert.equal(courseLink, '//localhost-studio.code.org:3000/courses/csd');
-      assert.equal(sectionLink, '//localhost-studio.code.org:3000/s/csd1');
+      assert.equal(courseLink, '//localhost-studio.code.org:3000/courses/csd?section_id=1');
+      assert.equal(sectionLink, '//localhost-studio.code.org:3000/s/csd1?section_id=1');
     });
 
     it('courseLinkFormatter contains course text and section text', () => {

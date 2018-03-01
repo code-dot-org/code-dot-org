@@ -1,1035 +1,772 @@
-/**
- * Blockly Apps: Maze
- *
- * Copyright 2012 Google Inc.
- * http://blockly.googlecode.com/
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+const React = require('react');
+const ReactDOM = require('react-dom');
+const Provider = require('react-redux').Provider;
 
-/**
- * @fileoverview JavaScript for Blockly's Maze application.
- * @author fraser@google.com (Neil Fraser)
- */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var tiles = require('./tiles');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
-var AppView = require('../templates/AppView');
-var MazeVisualizationColumn = require('./MazeVisualizationColumn');
-var dom = require('../dom');
-var utils = require('../utils');
-import {generateCodeAliases} from '../dropletUtils';
-var getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
-var dropletConfig = require('./dropletConfig');
+const timeoutList = require('../lib/util/timeoutList');
+const AppView = require('../templates/AppView');
+const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter');
+const codegen = require('../lib/tools/jsinterpreter/codegen');
+const dom = require('../dom');
+const utils = require('../utils');
+const constants = require('../constants');
+const TestResults = constants.TestResults;
+const ResultType = constants.ResultType;
+const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
+const getStore = require('../redux').getStore;
+const studioApp = require('../StudioApp').singleton;
+const containedLevels = require('../containedLevels');
+const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
+const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
+const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
 
-var MazeMap = require('./mazeMap');
-import drawMap, {displayPegman, getPegmanYForRow} from './drawMap';
+const ExecutionInfo = require('./executionInfo');
+const MazeVisualizationColumn = require('./MazeVisualizationColumn');
+const api = require('./api');
+const dropletConfig = require('./dropletConfig');
+const mazeReducer = require('./redux');
+const tiles = require('./tiles');
 
-import {
-  getContainedLevelResultInfo,
-  postContainedLevelAttempt,
-  runAfterPostContainedLevel
-} from '../containedLevels';
-import {getStore} from '../redux';
-import mazeReducer from './redux';
+const MazeController = require('./mazeController');
 
-var ExecutionInfo = require('./executionInfo');
+module.exports = class Maze {
+  constructor() {
+    this.scale = {
+      snapRadius: 1,
+      stepSpeed: 5
+    };
 
-var Direction = tiles.Direction;
-var SquareType = tiles.SquareType;
-var TurnDirection = tiles.TurnDirection;
-import {TestResults, ResultType} from '../constants';
+    this.stepSpeed = 100;
+    this.animating_ = false;
 
-var SVG_NS = require('../constants').SVG_NS;
+    this.cachedBlockStates = [];
 
-/**
- * Create a namespace for the application.
- */
-var Maze = module.exports;
+    this.response;
+    this.result;
+    this.testResults;
+    this.waitingForReport;
 
-var level;
-var skin;
-
-/**
- * Milliseconds between each animation frame.
- */
-var stepSpeed = 100;
-
-//TODO: Make configurable.
-studioApp().setCheckForEmptyBlocks(true);
-
-// Default Scalings
-Maze.scale = {
-  'snapRadius': 1,
-  'stepSpeed': 5
-};
-
-var loadLevel = function () {
-  // Load maps.
-  //
-  // "serializedMaze" is the new way of storing maps; it's a JSON array
-  // containing complex map data.
-  //
-  // "map" plus optionally "levelDirt" is the old way of storing maps;
-  // they are each arrays of a combination of strings and ints with
-  // their own complex syntax. This way is deprecated for new levels,
-  // and only exists for backwards compatibility for not-yet-updated
-  // levels.
-  if (level.serializedMaze) {
-    Maze.map = MazeMap.deserialize(level.serializedMaze, Maze.subtype.getCellClass());
-  } else {
-    Maze.map = MazeMap.parseFromOldValues(level.map, level.initialDirt, Maze.subtype.getCellClass());
+    //TODO: Make configurable.
+    studioApp().setCheckForEmptyBlocks(true);
   }
 
-  Maze.startDirection = level.startDirection;
-
-  Maze.animating_ = false;
-
-  // Override scalars.
-  for (var key in level.scale) {
-    Maze.scale[key] = level.scale[key];
+  /**
+   * Used by appMain to register reducers
+   * TODO elijah should this be a static method?
+   */
+  getAppReducers() {
+    return {
+      maze: mazeReducer.default
+    };
   }
 
-  if (level.fastGetNectarAnimation) {
-    skin.actionSpeedScale.nectar = 0.5;
-  }
+  init(config) {
+    // replace studioApp() methods with our own
+    studioApp().runButtonClick = this.runButtonClick_;
+    studioApp().reset = this.reset_;
 
-  // Pixel height and width of each maze square (i.e. tile).
-  Maze.SQUARE_SIZE = 50;
-  Maze.PEGMAN_HEIGHT = skin.pegmanHeight;
-  Maze.PEGMAN_WIDTH = skin.pegmanWidth;
-  Maze.PEGMAN_X_OFFSET = skin.pegmanXOffset || 0;
-  Maze.PEGMAN_Y_OFFSET = skin.pegmanYOffset;
+    const skin = config.skin;
+    const level = config.level;
 
-  Maze.MAZE_WIDTH = Maze.SQUARE_SIZE * Maze.map.COLS;
-  Maze.MAZE_HEIGHT = Maze.SQUARE_SIZE * Maze.map.ROWS;
-  Maze.PATH_WIDTH = Maze.SQUARE_SIZE / 3;
-};
-
-/**
- * PIDs of animation tasks currently executing.
- */
-import * as timeoutList from '../lib/util/timeoutList';
-
-function createAnimations(svg) {
-  // Add idle pegman.
-  if (skin.idlePegmanAnimation) {
-    createPegmanAnimation(svg, {
-      idStr: 'idle',
-      pegmanImage: skin.idlePegmanAnimation,
-      row: Maze.subtype.start.y,
-      col: Maze.subtype.start.x,
-      direction: Maze.startDirection,
-      numColPegman: skin.idlePegmanCol,
-      numRowPegman: skin.idlePegmanRow
-    });
-
-
-    if (skin.idlePegmanCol > 1 || skin.idlePegmanRow > 1) {
-      // our idle is a sprite sheet instead of a gif. schedule cycling through
-      // the frames
-      var numFrames = skin.idlePegmanRow;
-      var idlePegmanIcon = document.getElementById('idlePegman');
-      var timePerFrame = 600; // timeForAnimation / numFrames;
-      var idleAnimationFrame = 0;
-
-      setInterval(function () {
-        if (idlePegmanIcon.getAttribute('visibility') === 'visible') {
-          updatePegmanAnimation({
-            idStr: 'idle',
-            row: Maze.subtype.start.y,
-            col: Maze.subtype.start.x,
-            direction: Maze.startDirection,
-            animationRow: idleAnimationFrame
-          });
-          idleAnimationFrame = (idleAnimationFrame + 1) % numFrames;
-        }
-      }, timePerFrame);
-    }
-  }
-
-  if (skin.celebrateAnimation) {
-    createPegmanAnimation(svg, {
-      idStr: 'celebrate',
-      pegmanImage: skin.celebrateAnimation,
-      row: Maze.subtype.start.y,
-      col: Maze.subtype.start.x,
-      direction: Direction.NORTH,
-      numColPegman: skin.celebratePegmanCol,
-      numRowPegman: skin.celebratePegmanRow
-    });
-  }
-
-  // Add the hidden dazed pegman when hitting the wall.
-  if (skin.wallPegmanAnimation) {
-    createPegmanAnimation(svg, {
-      idStr: 'wall',
-      pegmanImage: skin.wallPegmanAnimation
-    });
-  }
-
-  // create element for our hitting wall spritesheet
-  if (skin.hittingWallAnimation && skin.hittingWallAnimationFrameNumber) {
-    createPegmanAnimation(svg, {
-      idStr: 'wall',
-      pegmanImage: skin.hittingWallAnimation,
-      numColPegman: skin.hittingWallPegmanCol,
-      numRowPegman: skin.hittingWallPegmanRow
-    });
-    document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
-  }
-
-  // Add the hidden moving pegman animation.
-  if (skin.movePegmanAnimation) {
-    createPegmanAnimation(svg, {
-      idStr: 'move',
-      pegmanImage: skin.movePegmanAnimation,
-      numColPegman: 4,
-      numRowPegman: (skin.movePegmanAnimationFrameNumber || 9)
-    });
-  }
-
-  // Add wall hitting animation
-  if (skin.hittingWallAnimation) {
-    var wallAnimationIcon = document.createElementNS(SVG_NS, 'image');
-    wallAnimationIcon.setAttribute('id', 'wallAnimation');
-    wallAnimationIcon.setAttribute('height', Maze.SQUARE_SIZE);
-    wallAnimationIcon.setAttribute('width', Maze.SQUARE_SIZE);
-    wallAnimationIcon.setAttribute('visibility', 'hidden');
-    svg.appendChild(wallAnimationIcon);
-  }
-}
-
-/**
- * Redraw all dirt images
- * @param {boolean} running Whether or not user program is currently running
- */
-function resetDirtImages(running) {
-  Maze.map.forEachCell(function (cell, row, col) {
-    Maze.subtype.drawer.updateItemImage(row, col, running);
-  });
-}
-
-/**
- * Rotate the given 2d array.
- * @param data
- */
-function rotate(data) {
-  return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
-}
-
-Maze.getAppReducers = function () {
-  return {
-    maze: mazeReducer
-  };
-};
-
-/**
- * Initialize Blockly and the maze.  Called on page load.
- */
-Maze.init = function (config) {
-  // replace studioApp() methods with our own
-  studioApp().runButtonClick = this.runButtonClick.bind(this);
-  studioApp().reset = this.reset.bind(this);
-
-  skin = config.skin;
-  level = config.level;
-
-  if (level.map && level.shapeShift) {
-    for (let i = 1, max = Math.random() * 4; i < max; i++) {
-      level.map = rotate(level.map);
-      level.startDirection = (level.startDirection + 3) % 4;
-    }
-  }
-
-  config.grayOutUndeletableBlocks = true;
-  config.forceInsertTopBlock = 'when_run';
-  config.dropletConfig = dropletConfig;
-
-  const Type = getSubtypeForSkin(config.skinId);
-  Maze.subtype = new Type(Maze, studioApp(), config);
-
-  if (Maze.subtype.overrideStepSpeed) {
-    Maze.scale.stepSpeed = Maze.subtype.overrideStepSpeed;
-  }
-
-  loadLevel();
-
-  Maze.cachedBlockStates = [];
-
-  config.loadAudio = function () {
-    studioApp().loadAudio(skin.winSound, 'win');
-    studioApp().loadAudio(skin.startSound, 'start');
-    studioApp().loadAudio(skin.failureSound, 'failure');
-    studioApp().loadAudio(skin.obstacleSound, 'obstacle');
-    // Load wall sounds.
-    studioApp().loadAudio(skin.wallSound, 'wall');
-
-    if (skin.walkSound) {
-      studioApp().loadAudio(skin.walkSound, 'walk');
+    // Override scalars.
+    for (var key in level.scale) {
+      this.scale[key] = level.scale[key];
     }
 
-    // todo - longterm, instead of having sound related flags we should just
-    // have the skin tell us the set of sounds it needs
-    if (skin.additionalSound) {
-      studioApp().loadAudio(skin.wall0Sound, 'wall0');
-      studioApp().loadAudio(skin.wall1Sound, 'wall1');
-      studioApp().loadAudio(skin.wall2Sound, 'wall2');
-      studioApp().loadAudio(skin.wall3Sound, 'wall3');
-      studioApp().loadAudio(skin.wall4Sound, 'wall4');
-      studioApp().loadAudio(skin.winGoalSound, 'winGoal');
-    }
-    if (skin.dirtSound) {
-      studioApp().loadAudio(skin.fillSound, 'fill');
-      studioApp().loadAudio(skin.digSound, 'dig');
-    }
-    Maze.subtype.loadAudio(skin);
-  };
-
-  config.afterInject = function () {
-    if (studioApp().isUsingBlockly()) {
-      /**
-       * The richness of block colours, regardless of the hue.
-       * MOOC blocks should be brighter (target audience is younger).
-       * Must be in the range of 0 (inclusive) to 1 (exclusive).
-       * Blockly's default is 0.45.
-       */
-      Blockly.HSV_SATURATION = 0.6;
-
-      Blockly.SNAP_RADIUS *= Maze.scale.snapRadius;
-      Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
-    }
-
-    const svg = document.getElementById('svgMaze');
-    Maze.map.resetDirt();
-
-    Maze.subtype.initStartFinish();
-    Maze.subtype.createDrawer(svg);
-    Maze.subtype.initWallMap();
-
-
-    // Adjust outer element size.
-    svg.setAttribute('width', Maze.MAZE_WIDTH);
-    svg.setAttribute('height', Maze.MAZE_HEIGHT);
-
-    // Adjust visualizationColumn width.
-    var visualizationColumn = document.getElementById('visualizationColumn');
-    visualizationColumn.style.width = Maze.MAZE_WIDTH + 'px';
-
-    drawMap(svg, skin, Maze.subtype, Maze.map, Maze.SQUARE_SIZE);
-    createAnimations(svg);
-
-    var stepButton = document.getElementById('stepButton');
-    dom.addClickTouchEvent(stepButton, stepButtonClick);
-
-    // base's studioApp().resetButtonClick will be called first
-    var resetButton = document.getElementById('resetButton');
-    dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
-
-    var finishButton = document.getElementById('finishButton');
-    if (finishButton) {
-      finishButton.setAttribute('disabled', 'disabled');
-      dom.addClickTouchEvent(finishButton, Maze.finishButtonClick);
-    }
-
-    // Listen for hint events that draw a path in the game.
-    window.addEventListener('displayHintPath', e => {
-      Maze.drawHintPath(svg, e.detail);
-    });
-  };
-
-  // Push initial level properties into the Redux store
-  studioApp().setPageConstants(config, {
-    hideRunButton: !!(level.stepOnly && !level.edit_blocks)
-  });
-
-  var visualizationColumn = (
-    <MazeVisualizationColumn
-      searchWord={level.searchWord}
-      showCollectorGemCounter={Maze.subtype.isCollector()}
-      showFinishButton={Maze.subtype.isCollector() && !studioApp().hasContainedLevels}
-      showStepButton={!!(level.step && !level.edit_blocks)}
-    />
-  );
-
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={visualizationColumn}
-        onMount={studioApp().init.bind(studioApp(), config)}
-      />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
-};
-
-function gridNumberToPosition(n) {
-  return (n + 0.5) * Maze.SQUARE_SIZE;
-}
-
-/**
- * @param svg
- * @param {Array<Array>} coordinates An array of x and y grid coordinates.
- */
-Maze.drawHintPath = function (svg, coordinates) {
-  const path = svg.getElementById('hintPath');
-  path.setAttribute('d', 'M' + coordinates.map(([x, y]) => {
-    return `${gridNumberToPosition(x)},${gridNumberToPosition(y)}`;
-  }).join(' '));
-};
-
-/**
- * Handle a click on the step button.  If we're already animating, we should
- * perform a single step.  Otherwise, we call beginAttempt which will do
- * some initial setup, and then perform the first step.
- */
-function stepButtonClick() {
-  var stepButton = document.getElementById('stepButton');
-  stepButton.setAttribute('disabled', '');
-
-  if (Maze.animating_) {
-    Maze.scheduleAnimations(true);
-  } else {
-    Maze.execute(true);
-  }
-}
-
-/**
- * Handle a click on the finish button; stop animating if we are, and display
- * whatever feedback we currently have.
- *
- * Currently only used by Collector levels to allow users to continue iterating
- * on a pass-but-not-perfect solution, but still finish whenever they want.
- */
-Maze.finishButtonClick = function () {
-  timeoutList.clearTimeouts();
-  Maze.animating_ = false;
-  displayFeedback(true);
-};
-
-/**
- * Calculate the Y offset within the sheet
- */
-var getPegmanFrameOffsetY = function (animationRow) {
-  animationRow = animationRow || 0;
-  return animationRow * Maze.PEGMAN_HEIGHT;
-};
-
-/**
- * Create sprite assets for pegman.
- * @param svg
- * @param options Specify different features of the pegman animation.
- * idStr required identifier for the pegman.
- * pegmanImage required which image to use for the animation.
- * col which column the pegman is at.
- * row which row the pegman is at.
- * direction which direction the pegman is facing at.
- * numColPegman number of the pegman in each row, default is 4.
- * numRowPegman number of the pegman in each column, default is 1.
- */
-var createPegmanAnimation = function (svg, options) {
-  // Create clip path.
-  var clip = document.createElementNS(SVG_NS, 'clipPath');
-  clip.setAttribute('id', options.idStr + 'PegmanClip');
-  var rect = document.createElementNS(SVG_NS, 'rect');
-  rect.setAttribute('id', options.idStr + 'PegmanClipRect');
-  if (options.col !== undefined) {
-    rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
-  }
-  if (options.row !== undefined) {
-    rect.setAttribute('y', getPegmanYForRow(skin, options.row));
-  }
-  rect.setAttribute('width', Maze.PEGMAN_WIDTH);
-  rect.setAttribute('height', Maze.PEGMAN_HEIGHT);
-  clip.appendChild(rect);
-  svg.appendChild(clip);
-  // Create image.
-  var imgSrc = options.pegmanImage;
-  var img = document.createElementNS(SVG_NS, 'image');
-  img.setAttributeNS(
-      'http://www.w3.org/1999/xlink', 'xlink:href', imgSrc);
-  img.setAttribute('height', Maze.PEGMAN_HEIGHT * (options.numRowPegman || 1));
-  img.setAttribute('width', Maze.PEGMAN_WIDTH * (options.numColPegman || 4));
-  img.setAttribute('clip-path', 'url(#' + options.idStr + 'PegmanClip)');
-  img.setAttribute('id', options.idStr + 'Pegman');
-  svg.appendChild(img);
-  // Update pegman icon & clip path.
-  if (options.col !== undefined && options.direction !== undefined) {
-    var x = Maze.SQUARE_SIZE * options.col -
-      options.direction * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET;
-    img.setAttribute('x', x);
-  }
-  if (options.row !== undefined) {
-    img.setAttribute('y', getPegmanYForRow(skin, options.row));
-  }
-};
-
-/**
-  * Update sprite assets for pegman.
-  * @param options Specify different features of the pegman animation.
-  * idStr required identifier for the pegman.
-  * col required which column the pegman is at.
-  * row required which row the pegman is at.
-  * direction required which direction the pegman is facing at.
-  * animationRow which row of the sprite sheet the pegman animation needs
-  */
-var updatePegmanAnimation = function (options) {
-  var rect = document.getElementById(options.idStr + 'PegmanClipRect');
-  rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
-  rect.setAttribute('y', getPegmanYForRow(skin, options.row));
-  var img = document.getElementById(options.idStr + 'Pegman');
-  var x = Maze.SQUARE_SIZE * options.col -
-      options.direction * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET;
-  img.setAttribute('x', x);
-  var y = getPegmanYForRow(skin, options.row) - getPegmanFrameOffsetY(options.animationRow);
-  img.setAttribute('y', y);
-  img.setAttribute('visibility', 'visible');
-};
-
-/**
- * Reset the maze to the start position and kill any pending animation tasks.
- * @param {boolean} first True if an opening animation is to be played.
- */
-Maze.reset = function (first) {
-  Maze.subtype.reset();
-
-  var i;
-  // Kill all tasks.
-  timeoutList.clearTimeouts();
-
-  Maze.animating_ = false;
-
-  // Move Pegman into position.
-  Maze.pegmanX = Maze.subtype.start.x;
-  Maze.pegmanY = Maze.subtype.start.y;
-
-  Maze.pegmanD = Maze.startDirection;
-  if (first) {
-    // Dance consists of 5 animations, each of which get 150ms
-    var danceTime = 150 * 5;
-    if (skin.danceOnLoad) {
-      scheduleDance(false, danceTime);
-    }
-    timeoutList.setTimeout(function () {
-      stepSpeed = 100;
-      Maze.scheduleTurn(Maze.startDirection);
-    }, danceTime + 150);
-  } else {
-    Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
-
-    const finishIcon = document.getElementById('finish');
-    if (finishIcon) {
-      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skin.goalIdle);
-    }
-  }
-
-  // Make 'look' icon invisible and promote to top.
-  var lookIcon = document.getElementById('look');
-  lookIcon.style.display = 'none';
-  lookIcon.parentNode.appendChild(lookIcon);
-  var paths = lookIcon.getElementsByTagName('path');
-  for (i = 0; i < paths.length; i++) {
-    var path = paths[i];
-    path.setAttribute('stroke', skin.look);
-  }
-
-  // Reset pegman's visibility.
-  var pegmanIcon = document.getElementById('pegman');
-  pegmanIcon.setAttribute('opacity', 1);
-
-  if (skin.idlePegmanAnimation) {
-    pegmanIcon.setAttribute('visibility', 'hidden');
-    var idlePegmanIcon = document.getElementById('idlePegman');
-    idlePegmanIcon.setAttribute('visibility', 'visible');
-  } else {
-    pegmanIcon.setAttribute('visibility', 'visible');
-  }
-
-  if (skin.wallPegmanAnimation) {
-    var wallPegmanIcon = document.getElementById('wallPegman');
-    wallPegmanIcon.setAttribute('visibility', 'hidden');
-  }
-
-  if (skin.movePegmanAnimation) {
-    var movePegmanIcon = document.getElementById('movePegman');
-    movePegmanIcon.setAttribute('visibility', 'hidden');
-  }
-
-  if (skin.celebrateAnimation) {
-    var celebrateAnimation = document.getElementById('celebratePegman');
-    celebrateAnimation.setAttribute('visibility', 'hidden');
-  }
-
-  // Move the init dirt marker icons into position.
-  Maze.map.resetDirt();
-  resetDirtImages(false);
-
-  // Reset the obstacle image.
-  var obsId = 0;
-  var x, y;
-  for (y = 0; y < Maze.map.ROWS; y++) {
-    for (x = 0; x < Maze.map.COLS; x++) {
-      var obsIcon = document.getElementById('obstacle' + obsId);
-      if (obsIcon) {
-        obsIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-                               skin.obstacleIdle);
+    if (level.map && level.shapeShift) {
+      for (let i = 1, max = Math.random() * 4; i < max; i++) {
+        level.map = utils.rotate(level.map);
+        level.startDirection = (level.startDirection + 3) % 4;
       }
-      ++obsId;
     }
-  }
 
-  if (Maze.subtype.resetTiles) {
-    Maze.subtype.resetTiles();
-  } else {
-    resetTiles();
-  }
-};
+    config.grayOutUndeletableBlocks = true;
+    config.forceInsertTopBlock = 'when_run';
+    config.dropletConfig = dropletConfig;
 
-function resetTiles() {
-  // Reset the tiles
-  var tileId = 0;
-  for (var y = 0; y < Maze.map.ROWS; y++) {
-    for (var x = 0; x < Maze.map.COLS; x++) {
-      // Tile's clipPath element.
-      var tileClip = document.getElementById('tileClipPath' + tileId);
-      tileClip.setAttribute('visibility', 'visible');
-      // Tile sprite.
-      var tileElement = document.getElementById('tileElement' + tileId);
-      tileElement.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', skin.tiles);
-      tileElement.setAttribute('opacity', 1);
-      tileId++;
-    }
-  }
-}
-
-/**
- * Click the run button.  Start the program.
- */
-// XXX This is the only method used by the templates!
-Maze.runButtonClick = function () {
-  var stepButton = document.getElementById('stepButton');
-  if (stepButton) {
-    stepButton.setAttribute('disabled', '');
-  }
-  Maze.execute(false);
-};
-
-function beginAttempt() {
-  var runButton = document.getElementById('runButton');
-  var resetButton = document.getElementById('resetButton');
-  // Ensure that Reset button is at least as wide as Run button.
-  if (!resetButton.style.minWidth) {
-    resetButton.style.minWidth = runButton.offsetWidth + 'px';
-  }
-  studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
-  studioApp().reset(false);
-  studioApp().attempts++;
-}
-
-/**
- * App specific reset button click logic.  studioApp().resetButtonClick will be
- * called first.
- */
-Maze.resetButtonClick = function () {
-  var stepButton = document.getElementById('stepButton');
-  stepButton.removeAttribute('disabled');
-
-  reenableCachedBlockStates();
-};
-
-function reenableCachedBlockStates() {
-  if (Maze.cachedBlockStates) {
-    // restore moveable/deletable/editable state from before we started stepping
-    Maze.cachedBlockStates.forEach(function (cached) {
-      cached.block.setMovable(cached.movable);
-      cached.block.setDeletable(cached.deletable);
-      cached.block.setEditable(cached.editable);
+    this.controller = new MazeController(level, skin, config, {
+      methods: {
+        playAudio: studioApp().playAudio.bind(studioApp()),
+        playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
+        loadAudio: studioApp().loadAudio.bind(studioApp()),
+        getTestResults: studioApp().getTestResults.bind(studioApp()),
+      },
+      reduxStore: getStore()
     });
-    Maze.cachedBlockStates = [];
-  }
-}
 
-/**
- * App specific displayFeedback function that calls into
- * studioApp().displayFeedback when appropriate
- */
-var displayFeedback = function (finalFeedback = false) {
-  if (Maze.waitingForReport || Maze.animating_) {
-    return;
-  }
-  var options = {
-    app: 'maze', //XXX
-    skin: skin.id,
-    feedbackType: Maze.testResults,
-    response: Maze.response,
-    level: level
-  };
+    if (this.controller.subtype.overrideStepSpeed) {
+      this.scale.stepSpeed = this.controller.subtype.overrideStepSpeed;
+    }
 
-  let message;
-  if (studioApp().hasContainedLevels) {
-    message = getContainedLevelResultInfo().feedback;
-  } else if (Maze.subtype.hasMessage(Maze.testResults)) {
-    // If there was an app-specific error
-    // add it to the options passed to studioApp().displayFeedback().
-    message = Maze.subtype.getMessage(Maze.executionInfo.terminationValue());
-  }
+    config.loadAudio = () => {
+      studioApp().loadAudio(this.controller.skin.winSound, 'win');
+      studioApp().loadAudio(this.controller.skin.startSound, 'start');
+      studioApp().loadAudio(this.controller.skin.failureSound, 'failure');
+      studioApp().loadAudio(this.controller.skin.obstacleSound, 'obstacle');
+      // Load wall sounds.
+      studioApp().loadAudio(this.controller.skin.wallSound, 'wall');
 
-  if (message) {
-    options.message = message;
-  }
+      if (this.controller.skin.walkSound) {
+        studioApp().loadAudio(this.controller.skin.walkSound, 'walk');
+      }
 
-  // We will usually want to allow subtypes to situationally prevent a dialog
-  // from being shown if they want to allow the user to pass but keep them on
-  // the page for iteration; we only refrain from doing so if we know this is
-  // the "final" feedback display triggered by the Finish Button
-  if (!finalFeedback) {
-    options.preventDialog = Maze.subtype.shouldPreventFeedbackDialog(
-      options.feedbackType,
+      // todo - longterm, instead of having sound related flags we should just
+      // have the skin tell us the set of sounds it needs
+      if (this.controller.skin.additionalSound) {
+        studioApp().loadAudio(this.controller.skin.wall0Sound, 'wall0');
+        studioApp().loadAudio(this.controller.skin.wall1Sound, 'wall1');
+        studioApp().loadAudio(this.controller.skin.wall2Sound, 'wall2');
+        studioApp().loadAudio(this.controller.skin.wall3Sound, 'wall3');
+        studioApp().loadAudio(this.controller.skin.wall4Sound, 'wall4');
+        studioApp().loadAudio(this.controller.skin.winGoalSound, 'winGoal');
+      }
+      if (this.controller.skin.dirtSound) {
+        studioApp().loadAudio(this.controller.skin.fillSound, 'fill');
+        studioApp().loadAudio(this.controller.skin.digSound, 'dig');
+      }
+      this.controller.subtype.loadAudio(this.controller.skin);
+    };
+
+    config.afterInject = () => {
+      if (studioApp().isUsingBlockly()) {
+        /**
+         * The richness of block colours, regardless of the hue.
+         * MOOC blocks should be brighter (target audience is younger).
+         * Must be in the range of 0 (inclusive) to 1 (exclusive).
+         * Blockly's default is 0.45.
+         */
+        Blockly.HSV_SATURATION = 0.6;
+
+        Blockly.SNAP_RADIUS *= this.scale.snapRadius;
+        Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
+      }
+
+      const svg = document.getElementById('svgMaze');
+      this.controller.map.resetDirt();
+
+      this.controller.subtype.initStartFinish();
+      this.controller.subtype.createDrawer(svg);
+      this.controller.subtype.initWallMap();
+
+      // Adjust visualizationColumn width.
+      var visualizationColumn = document.getElementById('visualizationColumn');
+      visualizationColumn.style.width = this.controller.MAZE_WIDTH + 'px';
+
+      this.controller.initWithSvg(svg);
+
+      var stepButton = document.getElementById('stepButton');
+      dom.addClickTouchEvent(stepButton, this.stepButtonClick_);
+
+      // base's studioApp().resetButtonClick will be called first
+      var resetButton = document.getElementById('resetButton');
+      dom.addClickTouchEvent(resetButton, this.resetButtonClick_);
+
+      var finishButton = document.getElementById('finishButton');
+      if (finishButton) {
+        finishButton.setAttribute('disabled', 'disabled');
+        dom.addClickTouchEvent(finishButton, this.finishButtonClick_);
+      }
+
+      // Listen for hint events that draw a path in the game.
+      window.addEventListener('displayHintPath', e => {
+        this.controller.drawHintPath(svg, e.detail);
+      });
+    };
+
+    if (
+      config.embed &&
+      config.level.markdownInstructions &&
+      !config.level.instructions
+    ) {
+      // if we are an embedded level with markdown instructions but no regular
+      // instructions, we want to display CSP-style instructions and not be
+      // centered
+      config.noInstructionsWhenCollapsed = true;
+      config.centerEmbedded = false;
+    }
+
+    // Push initial level properties into the Redux store
+    studioApp().setPageConstants(config, {
+      hideRunButton: !!(this.controller.level.stepOnly && !this.controller.level.edit_blocks)
+    });
+
+    var visualizationColumn = (
+      <MazeVisualizationColumn
+        searchWord={this.controller.level.searchWord}
+        showCollectorGemCounter={this.controller.subtype.isCollector()}
+        showFinishButton={this.controller.subtype.isCollector() && !studioApp().hasContainedLevels}
+        showStepButton={!!(this.controller.level.step && !this.controller.level.edit_blocks)}
+      />
+    );
+
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AppView
+          visualizationColumn={visualizationColumn}
+          onMount={studioApp().init.bind(studioApp(), config)}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
     );
   }
 
-  studioApp().displayFeedback(options);
-};
-
-/**
- * Function to be called when the service report call is complete
- * @param {MilestoneResponse} response - JSON response (if available)
- */
-Maze.onReportComplete = function (response) {
-  Maze.response = response;
-  Maze.waitingForReport = false;
-  studioApp().onReportComplete(response);
-  displayFeedback();
-};
-
-/**
- * Perform some basic initialization/resetting operations before
- * execution. This function should be idempotent, as it can be called
- * during execution when running multiple trials.
- */
-Maze.prepareForExecution = function () {
-  Maze.executionInfo = new ExecutionInfo({
-    ticks: 100
-  });
-  Maze.result = ResultType.UNSET;
-  Maze.testResults = TestResults.NO_TESTS_RUN;
-  Maze.waitingForReport = false;
-  Maze.animating_ = false;
-  Maze.response = null;
-};
-
-Maze.isPreAnimationFailure = function (testResult) {
-  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
-    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
-    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
-    testResult === TestResults.EXAMPLE_FAILED ||
-    testResult === TestResults.EMPTY_BLOCK_FAIL ||
-    testResult === TestResults.EMPTY_FUNCTION_NAME;
-};
-
-/**
- * Execute the user's code.  Heaven help us...
- */
-Maze.execute = function (stepMode) {
-  beginAttempt();
-  Maze.prepareForExecution();
-
-  var code = '';
-  if (studioApp().isUsingBlockly()) {
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-    if (studioApp().initializationBlocks) {
-      codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
+  /**
+   * Click the run button.  Start the program.
+   */
+  // XXX This is the only method used by the templates!
+  // TODO confirm that the above XXX comment is accurate
+  runButtonClick_ = () => {
+    var stepButton = document.getElementById('stepButton');
+    if (stepButton) {
+      stepButton.setAttribute('disabled', '');
     }
+    this.execute_(false);
+  };
 
-    code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-  } else {
-    code = generateCodeAliases(dropletConfig, 'Maze');
-    code += studioApp().editor.getValue();
+  /**
+   * Handle a click on the step button.  If we're already animating, we should
+   * perform a single step.  Otherwise, we call beginAttempt which will do
+   * some initial setup, and then perform the first step.
+   */
+  stepButtonClick_ = () => {
+    var stepButton = document.getElementById('stepButton');
+    stepButton.setAttribute('disabled', '');
+
+    if (this.animating_) {
+      this.scheduleAnimations_(true);
+    } else {
+      this.execute_(true);
+    }
+  };
+
+  /**
+   * App specific reset button click logic.  studioApp().resetButtonClick will be
+   * called first.
+   */
+  resetButtonClick_ = () => {
+    var stepButton = document.getElementById('stepButton');
+    stepButton.removeAttribute('disabled');
+
+    this.reenableCachedBlockStates_();
+  };
+
+  /**
+   * Handle a click on the finish button; stop animating if we are, and display
+   * whatever feedback we currently have.
+   *
+   * Currently only used by Collector levels to allow users to continue iterating
+   * on a pass-but-not-perfect solution, but still finish whenever they want.
+   */
+  finishButtonClick_ = () => {
+    timeoutList.clearTimeouts();
+    this.animating_ = false;
+    this.displayFeedback_(true);
+  };
+
+  reset_ = () => {
+    this.animating_ = false;
+    this.controller.reset();
+  };
+
+  beginAttempt() {
+    var runButton = document.getElementById('runButton');
+    var resetButton = document.getElementById('resetButton');
+    // Ensure that Reset button is at least as wide as Run button.
+    if (!resetButton.style.minWidth) {
+      resetButton.style.minWidth = runButton.offsetWidth + 'px';
+    }
+    studioApp().toggleRunReset('reset');
+    if (studioApp().isUsingBlockly()) {
+      Blockly.mainBlockSpace.traceOn(true);
+    }
+    studioApp().reset(false);
+    studioApp().attempts++;
   }
 
-  // Try running the user's code.  There are a few possible outcomes:
-  // 1. If pegman reaches the finish [SUCCESS], executionInfo's termination
-  //    value is set to true.
-  // 2. If the program is terminated due to running too long [TIMEOUT],
-  //    the termination value is set to Infinity
-  // 3. If the program terminated because of hitting a wall/obstacle, the
-  //    termination value is set to false and the ResultType is ERROR
-  // 4. If the program finishes without meeting success condition, we have no
-  //    termination value and set ResultType to FAILURE
-  // 5. The only other time we should fail should be if an exception is thrown
-  //    during execution, in which case we set ResultType to ERROR.
-  // The animation should be fast if execution was successful, slow otherwise
-  // to help the user see the mistake.
-  studioApp().playAudio('start');
-  try {
-    // don't bother running code if we're just editting required blocks. all
-    // we care about is the contents of report.
-    var initialTestResults = studioApp().getTestResults(false);
-    var runCode = !Maze.isPreAnimationFailure(initialTestResults) && !level.edit_blocks;
+  isPreAnimationFailure(testResult) {
+    return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+      testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+      testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
+      testResult === TestResults.EXAMPLE_FAILED ||
+      testResult === TestResults.EMPTY_BLOCK_FAIL ||
+      testResult === TestResults.EMPTY_FUNCTION_NAME;
+  }
 
-    if (runCode) {
-      if (Maze.map.hasMultiplePossibleGrids()) {
-        // If this level is a level with multiple possible grids, we
-        // need to run against all grids and sort them into successes
-        // and failures
-        var successes = [];
-        var failures = [];
+  /**
+   * Execute the user's code.  Heaven help us...
+   */
+  execute_(stepMode) {
+    this.beginAttempt();
+    this.prepareForExecution_();
 
-        Maze.map.staticGrids.forEach(function (grid, i) {
-          Maze.map.useGridWithId(i);
-          Maze.subtype.reset();
+    var code = '';
+    if (studioApp().isUsingBlockly()) {
+      let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+      if (studioApp().initializationBlocks) {
+        codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
+      }
 
-          // Run trial
-          CustomMarshalingInterpreter.evalWith(code, {
-            Maze: api,
-            executionInfo: Maze.executionInfo
+      code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+    } else {
+      code = generateCodeAliases(dropletConfig, 'Maze');
+      code += studioApp().editor.getValue();
+    }
+
+    // Try running the user's code.  There are a few possible outcomes:
+    // 1. If pegman reaches the finish [SUCCESS], executionInfo's termination
+    //    value is set to true.
+    // 2. If the program is terminated due to running too long [TIMEOUT],
+    //    the termination value is set to Infinity
+    // 3. If the program terminated because of hitting a wall/obstacle, the
+    //    termination value is set to false and the ResultType is ERROR
+    // 4. If the program finishes without meeting success condition, we have no
+    //    termination value and set ResultType to FAILURE
+    // 5. The only other time we should fail should be if an exception is thrown
+    //    during execution, in which case we set ResultType to ERROR.
+    // The animation should be fast if execution was successful, slow otherwise
+    // to help the user see the mistake.
+    studioApp().playAudio('start');
+    try {
+      // don't bother running code if we're just editting required blocks. all
+      // we care about is the contents of report.
+      var initialTestResults = studioApp().getTestResults(false);
+      var runCode = !this.isPreAnimationFailure(initialTestResults) && !this.controller.level.edit_blocks;
+
+      if (runCode) {
+        if (this.controller.map.hasMultiplePossibleGrids()) {
+          // If this.controller.level is a level with multiple possible grids, we
+          // need to run against all grids and sort them into successes
+          // and failures
+          var successes = [];
+          var failures = [];
+
+          this.controller.map.staticGrids.forEach((grid, i) => {
+            this.controller.map.useGridWithId(i);
+            this.controller.subtype.reset();
+
+            // Run trial
+            CustomMarshalingInterpreter.evalWith(code, {
+              Maze: api,
+              executionInfo: this.executionInfo
+            });
+
+            // Sort static grids based on trial result
+            this.onExecutionFinish_();
+            if (this.executionInfo.terminationValue() === true) {
+              successes.push(i);
+            } else {
+              failures.push(i);
+            }
+
+            // Reset for next trial
+            this.controller.subtype.drawer.reset();
+            this.prepareForExecution_();
+            studioApp().reset(false);
           });
 
-          // Sort static grids based on trial result
-          Maze.onExecutionFinish();
-          if (Maze.executionInfo.terminationValue() === true) {
-            successes.push(i);
-          } else {
-            failures.push(i);
-          }
+          // The user's code needs to succeed against all possible grids
+          // to be considered actually successful; if there are any
+          // failures, randomly select one of the failing grids to be the
+          // "real" state of the map. If all grids are successful,
+          // randomly select any one of them.
+          var i = (failures.length > 0) ?
+              utils.randomValue(failures) :
+              utils.randomValue(successes);
 
-          // Reset for next trial
-          Maze.subtype.drawer.reset();
-          Maze.prepareForExecution();
-          studioApp().reset(false);
+          this.controller.map.useGridWithId(i);
+          this.controller.subtype.reset();
+        }
+
+        CustomMarshalingInterpreter.evalWith(code, {
+          Maze: api,
+          executionInfo: this.executionInfo
         });
-
-        // The user's code needs to succeed against all possible grids
-        // to be considered actually successful; if there are any
-        // failures, randomly select one of the failing grids to be the
-        // "real" state of the map. If all grids are successful,
-        // randomly select any one of them.
-        var i = (failures.length > 0) ?
-            utils.randomValue(failures) :
-            utils.randomValue(successes);
-
-        Maze.map.useGridWithId(i);
-        Maze.subtype.reset();
       }
 
-      CustomMarshalingInterpreter.evalWith(code, {
-        Maze: api,
-        executionInfo: Maze.executionInfo
-      });
-    }
+      this.onExecutionFinish_();
 
-    Maze.onExecutionFinish();
-
-    switch (Maze.executionInfo.terminationValue()) {
-      case null:
-        // didn't terminate
-        Maze.executionInfo.queueAction('finish', null);
-        Maze.result = ResultType.FAILURE;
-        stepSpeed = 150;
-        break;
-      case Infinity:
-        // Detected an infinite loop.  Animate what we have as quickly as
-        // possible
-        Maze.result = ResultType.TIMEOUT;
-        Maze.executionInfo.queueAction('finish', null);
-        stepSpeed = 0;
-        break;
-      case true:
-        Maze.result = ResultType.SUCCESS;
-        stepSpeed = 100;
-        break;
-      case false:
-        Maze.result = ResultType.ERROR;
-        stepSpeed = 150;
-        break;
-      default:
-        // App-specific failure.
-        Maze.testResults = Maze.subtype.getTestResults(
-          Maze.executionInfo.terminationValue());
-        Maze.result =
-          Maze.testResults >= TestResults.MINIMUM_PASS_RESULT
-            ? ResultType.SUCCESS
-            : ResultType.ERROR;
-        Maze.executionInfo.queueAction('finish', null);
-        break;
-    }
-  } catch (e) {
-    // Syntax error, can't happen.
-    Maze.result = ResultType.ERROR;
-    console.error("Unexpected exception: " + e + "\n" + e.stack);
-    // call window.onerror so that we get new relic collection.  prepend with
-    // UserCode so that it's clear this is in eval'ed code.
-    if (window.onerror) {
-      window.onerror("UserCode:" + e.message, document.URL, 0);
-    }
-    return;
-  }
-
-  // If we know they succeeded, mark levelComplete true
-  // Note that we have not yet animated the successful run
-  var levelComplete = (Maze.result === ResultType.SUCCESS);
-
-  // Set testResults unless app-specific results were set in the default
-  // branch of the above switch statement.
-  if (Maze.testResults === TestResults.NO_TESTS_RUN) {
-    Maze.testResults = studioApp().getTestResults(levelComplete);
-  }
-
-  var program;
-  if (level.editCode) {
-    // If we want to "normalize" the JavaScript to avoid proliferation of nearly
-    // identical versions of the code on the service, we could do either of these:
-
-    // do an acorn.parse and then use escodegen to generate back a "clean" version
-    // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
-
-    program = studioApp().editor.getValue();
-  } else {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    program = Blockly.Xml.domToText(xml);
-  }
-
-  Maze.waitingForReport = true;
-
-  if (studioApp().hasContainedLevels && !level.edit_blocks) {
-    // Contained levels post progress in a special way, and always pass
-    postContainedLevelAttempt(studioApp());
-    Maze.testResults = TestResults.ALL_PASS;
-    runAfterPostContainedLevel(Maze.onReportComplete);
-  } else {
-    // Report result to server.
-    studioApp().report({
-      app: 'maze',
-      level: level.id,
-      result: Maze.result === ResultType.SUCCESS,
-      testResult: Maze.testResults,
-      program: encodeURIComponent(program),
-      onComplete: Maze.onReportComplete
-    });
-  }
-
-  // Maze. now contains a transcript of all the user's actions.
-  // Reset the maze and animate the transcript.
-  studioApp().reset(false);
-  resetDirtImages(true);
-
-  // if we have extra top blocks, don't even bother animating
-  if (Maze.testResults === TestResults.EXTRA_TOP_BLOCKS_FAIL) {
-    Maze.result = ResultType.ERROR;
-    displayFeedback();
-    return;
-  }
-
-  Maze.animating_ = true;
-
-  if (studioApp().isUsingBlockly()) {
-    // Disable toolbox while running
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
-
-    if (stepMode) {
-      if (Maze.cachedBlockStates.length !== 0) {
-        throw new Error('Unexpected cachedBlockStates');
+      switch (this.executionInfo.terminationValue()) {
+        case null:
+          // didn't terminate
+          this.executionInfo.queueAction('finish', null);
+          this.result = ResultType.FAILURE;
+          this.stepSpeed = 150;
+          break;
+        case Infinity:
+          // Detected an infinite loop.  Animate what we have as quickly as
+          // possible
+          this.result = ResultType.TIMEOUT;
+          this.executionInfo.queueAction('finish', null);
+          this.stepSpeed = 0;
+          break;
+        case true:
+          this.result = ResultType.SUCCESS;
+          this.stepSpeed = 100;
+          break;
+        case false:
+          this.result = ResultType.ERROR;
+          this.stepSpeed = 150;
+          break;
+        default:
+          // App-specific failure.
+          this.testResults = this.controller.subtype.getTestResults(
+            this.executionInfo.terminationValue());
+          this.result =
+            this.testResults >= TestResults.MINIMUM_PASS_RESULT
+              ? ResultType.SUCCESS
+              : ResultType.ERROR;
+          this.executionInfo.queueAction('finish', null);
+          break;
       }
-      // Disable all blocks, caching their state first
-      Blockly.mainBlockSpace.getAllBlocks().forEach(function (block) {
-        Maze.cachedBlockStates.push({
-          block: block,
-          movable: block.isMovable(),
-          deletable: block.isDeletable(),
-          editable: block.isEditable()
-        });
-        block.setMovable(false);
-        block.setDeletable(false);
-        block.setEditable(false);
-      });
-    }
-  }
-
-  // Removing the idle animation and replace with pegman sprite
-  if (skin.idlePegmanAnimation) {
-    var pegmanIcon = document.getElementById('pegman');
-    var idlePegmanIcon = document.getElementById('idlePegman');
-    idlePegmanIcon.setAttribute('visibility', 'hidden');
-    pegmanIcon.setAttribute('visibility', 'visible');
-  }
-
-  // Speeding up specific levels
-  var scaledStepSpeed = stepSpeed * Maze.scale.stepSpeed *
-  skin.movePegmanAnimationSpeedScale;
-  timeoutList.setTimeout(function () {
-    Maze.scheduleAnimations(stepMode);
-  }, scaledStepSpeed);
-};
-
-/**
- * Perform our animations, either all of them or those of a single step
- */
-Maze.scheduleAnimations = function (singleStep) {
-  var stepButton = document.getElementById('stepButton');
-
-  timeoutList.clearTimeouts();
-
-  var timePerAction = stepSpeed * Maze.scale.stepSpeed *
-    skin.movePegmanAnimationSpeedScale;
-  // get a flat list of actions we want to schedule
-  var actions = Maze.executionInfo.getActions(singleStep);
-
-  scheduleSingleAnimation(0);
-
-  // schedule animations in sequence
-  // The reason we do this recursively instead of iteratively is that we want to
-  // ensure that we finish scheduling action1 before starting to schedule
-  // action2. Otherwise we get into trouble when stepSpeed is 0.
-  function scheduleSingleAnimation(index) {
-    if (index >= actions.length) {
-      finishAnimations();
+    } catch (e) {
+      // Syntax error, can't happen.
+      this.result = ResultType.ERROR;
+      console.error("Unexpected exception: " + e + "\n" + e.stack);
+      // call window.onerror so that we get new relic collection.  prepend with
+      // UserCode so that it's clear this is in eval'ed code.
+      if (window.onerror) {
+        window.onerror("UserCode:" + e.message, document.URL, 0);
+      }
       return;
     }
 
-    animateAction(actions[index], singleStep, timePerAction);
+    // If we know they succeeded, mark levelComplete true
+    // Note that we have not yet animated the successful run
+    var levelComplete = (this.result === ResultType.SUCCESS);
+
+    // Set testResults unless app-specific results were set in the default
+    // branch of the above switch statement.
+    if (this.testResults === TestResults.NO_TESTS_RUN) {
+      this.testResults = studioApp().getTestResults(levelComplete);
+    }
+
+    var program;
+    if (this.controller.level.editCode) {
+      // If we want to "normalize" the JavaScript to avoid proliferation of nearly
+      // identical versions of the code on the service, we could do either of these:
+
+      // do an acorn.parse and then use escodegen to generate back a "clean" version
+      // or minify (uglifyjs) and that or js-beautify to restore a "clean" version
+
+      program = studioApp().editor.getValue();
+    } else {
+      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+      program = Blockly.Xml.domToText(xml);
+    }
+
+    this.waitingForReport = true;
+
+    if (studioApp().hasContainedLevels && !this.controller.level.edit_blocks) {
+      // Contained levels post progress in a special way, and always pass
+      postContainedLevelAttempt(studioApp());
+      this.testResults = TestResults.ALL_PASS;
+      runAfterPostContainedLevel(this.onReportComplete_);
+    } else {
+      // Report result to server.
+      studioApp().report({
+        app: 'maze',
+        level: this.controller.level.id,
+        result: this.result === ResultType.SUCCESS,
+        testResult: this.testResults,
+        program: encodeURIComponent(program),
+        onComplete: this.onReportComplete_
+      });
+    }
+
+    // Maze. now contains a transcript of all the user's actions.
+    // Reset the maze and animate the transcript.
+    studioApp().reset(false);
+    this.controller.resetDirtImages(true);
+
+    // if we have extra top blocks, don't even bother animating
+    if (this.testResults === TestResults.EXTRA_TOP_BLOCKS_FAIL) {
+      this.result = ResultType.ERROR;
+      this.displayFeedback_();
+      return;
+    }
+
+    this.animating_ = true;
+
+    if (studioApp().isUsingBlockly()) {
+      // Disable toolbox while running
+      Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
+
+      if (stepMode) {
+        if (this.cachedBlockStates.length !== 0) {
+          throw new Error('Unexpected cachedBlockStates');
+        }
+        // Disable all blocks, caching their state first
+        Blockly.mainBlockSpace.getAllBlocks().forEach((block) => {
+          this.cachedBlockStates.push({
+            block: block,
+            movable: block.isMovable(),
+            deletable: block.isDeletable(),
+            editable: block.isEditable()
+          });
+          block.setMovable(false);
+          block.setDeletable(false);
+          block.setEditable(false);
+        });
+      }
+    }
+
+    this.controller.animationsController.stopIdling();
+
+    // Speeding up specific levels
+    var scaledStepSpeed = this.stepSpeed * this.scale.stepSpeed *
+    this.controller.skin.movePegmanAnimationSpeedScale;
+    timeoutList.setTimeout(() => {
+      this.scheduleAnimations_(stepMode);
+    }, scaledStepSpeed);
+  }
+
+  scheduleAnimations_(singleStep) {
+    timeoutList.clearTimeouts();
+
+    var timePerAction = this.stepSpeed * this.scale.stepSpeed *
+      this.controller.skin.movePegmanAnimationSpeedScale;
+    // get a flat list of actions we want to schedule
+    var actions = this.executionInfo.getActions(singleStep);
+
+    this.scheduleSingleAnimation_(0, actions, singleStep, timePerAction);
+  }
+
+  reenableCachedBlockStates_() {
+    if (this.cachedBlockStates) {
+      // restore moveable/deletable/editable state from before we started stepping
+      this.cachedBlockStates.forEach(function (cached) {
+        cached.block.setMovable(cached.movable);
+        cached.block.setDeletable(cached.deletable);
+        cached.block.setEditable(cached.editable);
+      });
+      this.cachedBlockStates = [];
+    }
+  }
+
+  /**
+   * Called after user's code has finished being executed, giving us one more
+   * chance to check if we've accomplished our goals. This is required in part
+   * because elsewhere we only check for success after movement.
+   */
+  onExecutionFinish_() {
+    // If we haven't terminated, make one last check for success
+    if (!this.executionInfo.isTerminated()) {
+      this.checkSuccess();
+    }
+
+    this.controller.subtype.onExecutionFinish();
+  }
+
+  /**
+   * App specific displayFeedback function that calls into
+   * studioApp().displayFeedback when appropriate
+   */
+  displayFeedback_(finalFeedback = false) {
+    if (this.waitingForReport || this.animating_) {
+      return;
+    }
+    var options = {
+      feedbackType: this.testResults,
+      response: this.response,
+      level: this.controller.level
+    };
+
+    let message;
+    if (studioApp().hasContainedLevels) {
+      message = getContainedLevelResultInfo().feedback;
+    } else if (this.controller.subtype.hasMessage(this.testResults)) {
+      // If there was an app-specific error
+      // add it to the options passed to studioApp().displayFeedback().
+      message = this.controller.subtype.getMessage(this.executionInfo.terminationValue());
+    }
+
+    if (message) {
+      options.message = message;
+    }
+
+    // We will usually want to allow subtypes to situationally prevent a dialog
+    // from being shown if they want to allow the user to pass but keep them on
+    // the page for iteration; we only refrain from doing so if we know this is
+    // the "final" feedback display triggered by the Finish Button
+    if (!finalFeedback) {
+      options.preventDialog = this.controller.subtype.shouldPreventFeedbackDialog(
+        options.feedbackType,
+      );
+    }
+
+    studioApp().displayFeedback(options);
+  }
+
+  /**
+   * Function to be called when the service report call is complete
+   * @param {MilestoneResponse} response - JSON response (if available)
+   */
+  onReportComplete_ = (response) => {
+    this.response = response;
+    this.waitingForReport = false;
+    studioApp().onReportComplete(response);
+    this.displayFeedback_();
+  };
+
+  /**
+   * Perform some basic initialization/resetting operations before
+   * execution. This function should be idempotent, as it can be called
+   * during execution when running multiple trials.
+   */
+  prepareForExecution_() {
+    this.executionInfo = new ExecutionInfo({
+      ticks: 100
+    });
+    // TODO
+    this.controller.executionInfo = this.executionInfo;
+    this.result = ResultType.UNSET;
+    this.testResults = TestResults.NO_TESTS_RUN;
+    this.waitingForReport = false;
+    this.animating_ = false;
+    this.response = null;
+  }
+
+  /**
+   * Animates a single action
+   * @param {string} action The action to animate
+   * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
+   * @param {integer} timePerStep How much time we have allocated before the next step
+   */
+  animateAction_(action, spotlightBlocks, timePerStep) {
+    if (action.blockId) {
+      studioApp().highlight(String(action.blockId), spotlightBlocks);
+    }
+
+    switch (action.command) {
+      case 'north':
+        this.controller.animatedMove(tiles.Direction.NORTH, timePerStep);
+        break;
+      case 'east':
+        this.controller.animatedMove(tiles.Direction.EAST, timePerStep);
+        break;
+      case 'south':
+        this.controller.animatedMove(tiles.Direction.SOUTH, timePerStep);
+        break;
+      case 'west':
+        this.controller.animatedMove(tiles.Direction.WEST, timePerStep);
+        break;
+      case 'look_north':
+        this.controller.animatedLook(tiles.Direction.NORTH);
+        break;
+      case 'look_east':
+        this.controller.animatedLook(tiles.Direction.EAST);
+        break;
+      case 'look_south':
+        this.controller.animatedLook(tiles.Direction.SOUTH);
+        break;
+      case 'look_west':
+        this.controller.animatedLook(tiles.Direction.WEST);
+        break;
+      case 'fail_forward':
+        this.controller.animatedFail(true);
+        break;
+      case 'fail_backward':
+        this.controller.animatedFail(false);
+        break;
+      case 'left':
+        this.controller.animatedTurn(tiles.TurnDirection.LEFT);
+        break;
+      case 'right':
+        this.controller.animatedTurn(tiles.TurnDirection.RIGHT);
+        break;
+      case 'finish':
+        this.finish_(timePerStep);
+        break;
+      case 'putdown':
+        this.controller.scheduleFill();
+        break;
+      case 'pickup':
+        this.controller.scheduleDig();
+        break;
+      case 'nectar':
+        this.controller.subtype.animateGetNectar();
+        break;
+      case 'honey':
+        this.controller.subtype.animateMakeHoney();
+        break;
+      case 'get_corn':
+        this.controller.subtype.animateGetCorn();
+        break;
+      case 'get_pumpkin':
+        this.controller.subtype.animateGetPumpkin();
+        break;
+      case 'get_lettuce':
+        this.controller.subtype.animateGetLettuce();
+        break;
+      case 'plant':
+        this.controller.subtype.animatePlant();
+        break;
+      default:
+        // action[0] is null if generated by studioApp().checkTimeout().
+        break;
+    }
+  }
+
+  finish_(timePerStep) {
+    // Only schedule victory animation for certain conditions:
+    if (this.testResults >= TestResults.MINIMUM_PASS_RESULT) {
+
+      var finishButton = document.getElementById('finishButton');
+      if (finishButton) {
+        finishButton.removeAttribute('disabled');
+      }
+      var finishIcon = document.getElementById('finish');
+      if (finishIcon) {
+        studioApp().playAudio('winGoal');
+      }
+      studioApp().playAudioOnWin();
+      this.controller.animatedFinish(timePerStep);
+    } else {
+      timeoutList.setTimeout(function () {
+        studioApp().playAudioOnFailure();
+      }, this.stepSpeed);
+    }
+  }
+
+  /**
+   * schedule animations in sequence
+   * The reason we do this recursively instead of iteratively is that we want to
+   * ensure that we finish scheduling action1 before starting to schedule
+   * action2. Otherwise we get into trouble when stepSpeed is 0.
+   */
+  scheduleSingleAnimation_(index, actions, singleStep, timePerAction) {
+    if (index >= actions.length) {
+      this.finishAnimations_(singleStep);
+      return;
+    }
+
+    this.animateAction_(actions[index], singleStep, timePerAction);
 
     var command = actions[index] && actions[index].command;
-    var timeModifier = (skin.actionSpeedScale && skin.actionSpeedScale[command]) || 1;
+    var timeModifier = (this.controller.skin.actionSpeedScale && this.controller.skin.actionSpeedScale[command]) || 1;
     var timeForThisAction = Math.round(timePerAction * timeModifier);
 
-    timeoutList.setTimeout(function () {
-      scheduleSingleAnimation(index + 1);
+    timeoutList.setTimeout(() => {
+      this.scheduleSingleAnimation_(index + 1, actions, singleStep, timePerAction);
     }, timeForThisAction);
   }
 
-  // Once animations are complete, we want to reenable the step button if we
-  // have steps left, otherwise we're done with this execution.
-  function finishAnimations() {
-    var stepsRemaining = Maze.executionInfo.stepsRemaining();
+  /**
+   * Once animations are complete, we want to reenable the step button if we
+   * have steps left, otherwise we're done with this execution.
+   */
+  finishAnimations_(singleStep) {
+    var stepsRemaining = this.executionInfo.stepsRemaining();
+    var stepButton = document.getElementById('stepButton');
 
     // allow time for  additional pause if we're completely done
     var waitTime = (stepsRemaining ? 0 : 1000);
 
     // run after all animations
-    timeoutList.setTimeout(function () {
+    timeoutList.setTimeout(() => {
       if (stepsRemaining) {
         stepButton.removeAttribute('disabled');
       } else {
-        Maze.animating_ = false;
+        this.animating_ = false;
         if (studioApp().isUsingBlockly()) {
           // reenable toolbox
           Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
@@ -1037,640 +774,27 @@ Maze.scheduleAnimations = function (singleStep) {
         // If stepping and we failed, we want to retain highlighting until
         // clicking reset.  Otherwise we can clear highlighting/disabled
         // blocks now
-        if (!singleStep || Maze.result === ResultType.SUCCESS) {
-          reenableCachedBlockStates();
+        if (!singleStep || this.result === ResultType.SUCCESS) {
+          this.reenableCachedBlockStates_();
           studioApp().clearHighlighting();
         }
-        displayFeedback();
+        this.displayFeedback_();
       }
     }, waitTime);
   }
-};
 
-/**
- * Animates a single action
- * @param {string} action The action to animate
- * @param {boolean} spotlightBlocks Whether or not we should highlight entire blocks
- * @param {integer} timePerStep How much time we have allocated before the next step
- */
-function animateAction(action, spotlightBlocks, timePerStep) {
-  if (action.blockId) {
-    studioApp().highlight(String(action.blockId), spotlightBlocks);
-  }
+  /**
+   * Check whether all goals have been accomplished
+   */
+  checkSuccess() {
+    const succeeded = this.controller.subtype.succeeded();
 
-  switch (action.command) {
-    case 'north':
-      animatedMove(Direction.NORTH, timePerStep);
-      break;
-    case 'east':
-      animatedMove(Direction.EAST, timePerStep);
-      break;
-    case 'south':
-      animatedMove(Direction.SOUTH, timePerStep);
-      break;
-    case 'west':
-      animatedMove(Direction.WEST, timePerStep);
-      break;
-    case 'look_north':
-      Maze.scheduleLook(Direction.NORTH);
-      break;
-    case 'look_east':
-      Maze.scheduleLook(Direction.EAST);
-      break;
-    case 'look_south':
-      Maze.scheduleLook(Direction.SOUTH);
-      break;
-    case 'look_west':
-      Maze.scheduleLook(Direction.WEST);
-      break;
-    case 'fail_forward':
-      Maze.scheduleFail(true);
-      break;
-    case 'fail_backward':
-      Maze.scheduleFail(false);
-      break;
-    case 'left':
-      var newDirection = Maze.pegmanD + TurnDirection.LEFT;
-      Maze.scheduleTurn(newDirection);
-      Maze.pegmanD = tiles.constrainDirection4(newDirection);
-      break;
-    case 'right':
-      newDirection = Maze.pegmanD + TurnDirection.RIGHT;
-      Maze.scheduleTurn(newDirection);
-      Maze.pegmanD = tiles.constrainDirection4(newDirection);
-      break;
-    case 'finish':
-      // Only schedule victory animation for certain conditions:
-      if (Maze.testResults >= TestResults.MINIMUM_PASS_RESULT) {
-        scheduleDance(true, timePerStep);
-      } else {
-        timeoutList.setTimeout(function () {
-          studioApp().playAudioOnFailure();
-        }, stepSpeed);
-      }
-      break;
-    case 'putdown':
-      Maze.scheduleFill();
-      break;
-    case 'pickup':
-      Maze.scheduleDig();
-      break;
-    case 'nectar':
-      Maze.subtype.animateGetNectar();
-      break;
-    case 'honey':
-      Maze.subtype.animateMakeHoney();
-      break;
-    case 'get_corn':
-      Maze.subtype.animateGetCorn();
-      break;
-    case 'get_pumpkin':
-      Maze.subtype.animateGetPumpkin();
-      break;
-    case 'get_lettuce':
-      Maze.subtype.animateGetLettuce();
-      break;
-    case 'plant':
-      Maze.subtype.animatePlant();
-      break;
-    default:
-      // action[0] is null if generated by studioApp().checkTimeout().
-      break;
-  }
-}
-
-function animatedMove(direction, timeForMove) {
-  var positionChange = tiles.directionToDxDy(direction);
-  var newX = Maze.pegmanX + positionChange.dx;
-  var newY = Maze.pegmanY + positionChange.dy;
-  scheduleMove(newX, newY, timeForMove);
-  Maze.pegmanX = newX;
-  Maze.pegmanY = newY;
-}
-
-/**
- * Schedule a movement animating using a spritesheet.
- */
-Maze.scheduleSheetedMovement = function (start, delta, numFrames, timePerFrame,
-    idStr, direction, hidePegman) {
-  var pegmanIcon = document.getElementById('pegman');
-  utils.range(0, numFrames - 1).forEach(function (frame) {
-    timeoutList.setTimeout(function () {
-      if (hidePegman) {
-        pegmanIcon.setAttribute('visibility', 'hidden');
-      }
-      updatePegmanAnimation({
-        idStr: idStr,
-        col: start.x + delta.x * frame / numFrames,
-        row: start.y + delta.y * frame / numFrames,
-        direction: direction,
-        animationRow: frame
-      });
-    }, timePerFrame * frame);
-  });
-};
-
-/**
- * Schedule the animations for a move from the current position
- * @param {number} endX X coordinate of the target position
- * @param {number} endY Y coordinate of the target position
- */
-function scheduleMove(endX, endY, timeForAnimation) {
-  var startX = Maze.pegmanX;
-  var startY = Maze.pegmanY;
-  var direction = Maze.pegmanD;
-
-  var deltaX = (endX - startX);
-  var deltaY = (endY - startY);
-  var numFrames;
-  var timePerFrame;
-
-  if (skin.movePegmanAnimation) {
-    numFrames = skin.movePegmanAnimationFrameNumber;
-    // If move animation of pegman is set, and this is not a turn.
-    // Show the animation.
-    var pegmanIcon = document.getElementById('pegman');
-    var movePegmanIcon = document.getElementById('movePegman');
-    timePerFrame = timeForAnimation / numFrames;
-
-    Maze.scheduleSheetedMovement({
-        x: startX,
-        y: startY
-      }, {
-        x: deltaX,
-        y: deltaY
-      },
-      numFrames, timePerFrame, 'move', direction, true);
-
-    // Hide movePegman and set pegman to the end position.
-    timeoutList.setTimeout(function () {
-      movePegmanIcon.setAttribute('visibility', 'hidden');
-      pegmanIcon.setAttribute('visibility', 'visible');
-      Maze.displayPegman(endX, endY, tiles.directionToFrame(direction));
-      if (Maze.subtype.isWordSearch()) {
-        Maze.subtype.markTileVisited(endY, endX, true);
-      }
-    }, timePerFrame * numFrames);
-  } else {
-    // we don't have an animation, so just move the x/y pos
-    numFrames = 4;
-    timePerFrame = timeForAnimation / numFrames;
-    utils.range(1, numFrames).forEach(function (frame) {
-      timeoutList.setTimeout(function () {
-        Maze.displayPegman(
-          startX + deltaX * frame / numFrames,
-          startY + deltaY * frame / numFrames,
-          tiles.directionToFrame(direction));
-      }, timePerFrame * frame);
-    });
-  }
-
-  if (skin.approachingGoalAnimation) {
-    var finishIcon = document.getElementById('finish');
-    // If pegman is close to the goal
-    // Replace the goal file with approachingGoalAnimation
-    if (Maze.subtype.finish && Math.abs(endX - Maze.subtype.finish.x) <= 1 &&
-        Math.abs(endY - Maze.subtype.finish.y) <= 1) {
-      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        skin.approachingGoalAnimation);
-    } else {
-      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-        skin.goalIdle);
-    }
-  }
-
-  studioApp().playAudio('walk');
-}
-
-
-/**
- * Schedule the animations for a turn from the current direction
- * @param {number} endDirection The direction we're turning to
- */
-Maze.scheduleTurn = function (endDirection) {
-  var numFrames = 4;
-  var startDirection = Maze.pegmanD;
-  var deltaDirection = endDirection - startDirection;
-  utils.range(1, numFrames).forEach(function (frame) {
-    timeoutList.setTimeout(function () {
-      Maze.displayPegman(
-        Maze.pegmanX,
-        Maze.pegmanY,
-        tiles.directionToFrame(startDirection + deltaDirection * frame / numFrames));
-    }, stepSpeed * (frame - 1));
-  });
-};
-
-/**
- * Replace the tiles surrounding the obstacle with broken tiles.
- */
-Maze.updateSurroundingTiles = function (obstacleY, obstacleX, callback) {
-  var tileCoords = [
-    [obstacleY - 1, obstacleX - 1],
-    [obstacleY - 1, obstacleX],
-    [obstacleY - 1, obstacleX + 1],
-    [obstacleY, obstacleX - 1],
-    [obstacleY, obstacleX],
-    [obstacleY, obstacleX + 1],
-    [obstacleY + 1, obstacleX - 1],
-    [obstacleY + 1, obstacleX],
-    [obstacleY + 1, obstacleX + 1]
-  ];
-  for (let idx = 0; idx < tileCoords.length; ++idx) {
-    const row = tileCoords[idx][1];
-    const col = tileCoords[idx][0];
-    const tileIdx = row + Maze.map.COLS * col;
-    const tileElement = document.getElementById('tileElement' + tileIdx);
-    if (tileElement) {
-      callback(tileElement, Maze.map.getCell(col, row));
-    }
-  }
-};
-
-/**
- * Schedule the animations and sounds for a failed move.
- * @param {boolean} forward True if forward, false if backward.
- */
-Maze.scheduleFail = function (forward) {
-  var dxDy = tiles.directionToDxDy(Maze.pegmanD);
-  var deltaX = dxDy.dx;
-  var deltaY = dxDy.dy;
-
-  if (!forward) {
-    deltaX = -deltaX;
-    deltaY = -deltaY;
-  }
-
-  var targetX = Maze.pegmanX + deltaX;
-  var targetY = Maze.pegmanY + deltaY;
-  var frame = tiles.directionToFrame(Maze.pegmanD);
-  Maze.displayPegman(Maze.pegmanX + deltaX / 4,
-                     Maze.pegmanY + deltaY / 4,
-                     frame);
-  // Play sound and animation for hitting wall or obstacle
-  var squareType = Maze.map.getTile(targetY, targetX);
-  if (squareType === SquareType.WALL || squareType === undefined ||
-    (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE)) {
-    // Play the sound
-    studioApp().playAudio('wall');
-    if (squareType !== undefined) {
-      // Check which type of wall pegman is hitting
-      studioApp().playAudio('wall' + Maze.subtype.wallMap[targetY][targetX]);
+    if (succeeded) {
+      // Finished.  Terminate the user's program.
+      this.executionInfo.queueAction('finish', null);
+      this.executionInfo.terminateWithValue(true);
     }
 
-    if (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE) {
-      // Remove cracked ice, replace surrounding ice with cracked ice.
-      Maze.updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
-        if (cell.getTile() === SquareType.OPEN) {
-          tileElement.setAttributeNS(
-            'http://www.w3.org/1999/xlink', 'xlink:href',
-            skin.largerObstacleAnimationTiles
-          );
-        } else if (cell.getTile() === SquareType.OBSTACLE) {
-          tileElement.setAttribute('opacity', 0);
-        }
-      });
-    }
-
-    // Play the animation of hitting the wall
-    if (skin.hittingWallAnimation) {
-      var wallAnimationIcon = document.getElementById('wallAnimation');
-      var numFrames = skin.hittingWallAnimationFrameNumber || 0;
-
-      if (numFrames > 1) {
-
-        // The Scrat "wall" animation has him falling backwards into the water.
-        // This looks great when he falls into the water above him, but looks a
-        // little off when falling to the side/forward. Tune that by bumping the
-        // deltaY by one. Hacky, but looks much better
-        if (deltaY >= 0) {
-          deltaY += 1;
-        }
-        // animate our sprite sheet
-        var timePerFrame = 100;
-        Maze.scheduleSheetedMovement({
-            x: Maze.pegmanX,
-            y: Maze.pegmanY
-          }, {
-            x: deltaX,
-            y: deltaY
-          }, numFrames, timePerFrame, 'wall',
-          Direction.NORTH, true);
-        setTimeout(function () {
-          document.getElementById('wallPegman').setAttribute('visibility', 'hidden');
-        }, numFrames * timePerFrame);
-      } else {
-        // active our gif
-        timeoutList.setTimeout(function () {
-          wallAnimationIcon.setAttribute('x',
-            Maze.SQUARE_SIZE * (Maze.pegmanX + 0.5 + deltaX * 0.5) -
-            wallAnimationIcon.getAttribute('width') / 2);
-          wallAnimationIcon.setAttribute('y',
-            Maze.SQUARE_SIZE * (Maze.pegmanY + 1 + deltaY * 0.5) -
-            wallAnimationIcon.getAttribute('height'));
-          wallAnimationIcon.setAttribute('visibility', 'visible');
-          wallAnimationIcon.setAttributeNS(
-            'http://www.w3.org/1999/xlink', 'xlink:href',
-            skin.hittingWallAnimation);
-        }, stepSpeed / 2);
-      }
-    }
-    timeoutList.setTimeout(function () {
-      Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
-    }, stepSpeed);
-    timeoutList.setTimeout(function () {
-      Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
-        frame);
-      studioApp().playAudioOnFailure();
-    }, stepSpeed * 2);
-    timeoutList.setTimeout(function () {
-      Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
-    }, stepSpeed * 3);
-
-    if (skin.wallPegmanAnimation) {
-      timeoutList.setTimeout(function () {
-        var pegmanIcon = document.getElementById('pegman');
-        pegmanIcon.setAttribute('visibility', 'hidden');
-        updatePegmanAnimation({
-          idStr: 'wall',
-          row: Maze.pegmanY,
-          col: Maze.pegmanX,
-          direction: Maze.pegmanD
-        });
-      }, stepSpeed * 4);
-    }
-  } else if (squareType === SquareType.OBSTACLE) {
-    // Play the sound
-    studioApp().playAudio('obstacle');
-
-    // Play the animation
-    var obsId = targetX + Maze.map.COLS * targetY;
-    var obsIcon = document.getElementById('obstacle' + obsId);
-    obsIcon.setAttributeNS(
-        'http://www.w3.org/1999/xlink', 'xlink:href',
-        skin.obstacleAnimation);
-    timeoutList.setTimeout(function () {
-      Maze.displayPegman(Maze.pegmanX + deltaX / 2,
-                         Maze.pegmanY + deltaY / 2,
-                         frame);
-    }, stepSpeed);
-
-    // Replace the objects around obstacles with broken objects
-    if (skin.largerObstacleAnimationTiles) {
-      timeoutList.setTimeout(function () {
-        Maze.updateSurroundingTiles(targetY, targetX, tileElement => (
-          tileElement.setAttributeNS(
-            'http://www.w3.org/1999/xlink', 'xlink:href',
-            skin.largerObstacleAnimationTiles
-          )
-        ));
-      }, stepSpeed);
-    }
-
-    // Remove pegman
-    if (!skin.nonDisappearingPegmanHittingObstacle) {
-      var pegmanIcon = document.getElementById('pegman');
-
-      timeoutList.setTimeout(function () {
-        pegmanIcon.setAttribute('visibility', 'hidden');
-      }, stepSpeed * 2);
-    }
-    timeoutList.setTimeout(function () {
-      studioApp().playAudioOnFailure();
-    }, stepSpeed);
+    return succeeded;
   }
-};
-
-/**
- * Set the tiles to be transparent gradually.
- */
-function setTileTransparent() {
-  var tileId = 0;
-  for (var y = 0; y < Maze.map.ROWS; y++) {
-    for (var x = 0; x < Maze.map.COLS; x++) {
-      // Tile sprite.
-      var tileElement = document.getElementById('tileElement' + tileId);
-      var tileAnimation = document.getElementById('tileAnimation' + tileId);
-      if (tileElement) {
-        tileElement.setAttribute('opacity', 0);
-      }
-      if (tileAnimation && tileAnimation.beginElement) {
-        // IE doesn't support beginElement, so check for it.
-        tileAnimation.beginElement();
-      }
-      tileId++;
-    }
-  }
-}
-
-function setPegmanTransparent() {
-  var pegmanFadeoutAnimation = document.getElementById('pegmanFadeoutAnimation');
-  var pegmanIcon = document.getElementById('pegman');
-  if (pegmanIcon) {
-    pegmanIcon.setAttribute('opacity', 0);
-  }
-  if (pegmanFadeoutAnimation && pegmanFadeoutAnimation.beginElement) {
-    // IE doesn't support beginElement, so check for it.
-    pegmanFadeoutAnimation.beginElement();
-  }
-}
-
-/**
- * Schedule the animations and sound for a dance.
- * @param {boolean} victoryDance This is a victory dance after completing the
- *   puzzle (vs. dancing on load).
- * @param {integer} timeAlloted How much time we have for our animations
- */
-function scheduleDance(victoryDance, timeAlloted) {
-  if (Maze.subtype.scheduleDance) {
-    Maze.subtype.scheduleDance(victoryDance, timeAlloted, skin);
-    return;
-  }
-
-  var finishButton = document.getElementById('finishButton');
-  if (victoryDance && finishButton) {
-    finishButton.removeAttribute('disabled');
-  }
-
-  var originalFrame = tiles.directionToFrame(Maze.pegmanD);
-  Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 16);
-
-  // If victoryDance === true, play the goal animation, else reset it
-  var finishIcon = document.getElementById('finish');
-  if (victoryDance && finishIcon) {
-    studioApp().playAudio('winGoal');
-    finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin.goalAnimation);
-  }
-
-  if (victoryDance) {
-    studioApp().playAudioOnWin();
-  }
-
-  var danceSpeed = timeAlloted / 5;
-  timeoutList.setTimeout(function () {
-    Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 18);
-  }, danceSpeed);
-  timeoutList.setTimeout(function () {
-    Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 20);
-  }, danceSpeed * 2);
-  timeoutList.setTimeout(function () {
-    Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 18);
-  }, danceSpeed * 3);
-  timeoutList.setTimeout(function () {
-    Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, 20);
-  }, danceSpeed * 4);
-
-  timeoutList.setTimeout(function () {
-    if (!victoryDance || skin.turnAfterVictory) {
-      Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, originalFrame);
-    }
-
-    if (victoryDance && skin.transparentTileEnding) {
-      setTileTransparent();
-    }
-
-    if (Maze.subtype.isWordSearch()) {
-      setPegmanTransparent();
-    }
-  }, danceSpeed * 5);
-}
-
-/**
- * Display Pegman at the specified location, facing the specified direction.
- * @param {number} x Horizontal grid (or fraction thereof).
- * @param {number} y Vertical grid (or fraction thereof).
- * @param {number} frame Direction (0 - 15) or dance (16 - 17).
- */
-Maze.displayPegman = function (x, y, frame) {
-  var pegmanIcon = document.getElementById('pegman');
-  var clipRect = document.getElementById('clipRect');
-  displayPegman(skin, pegmanIcon, clipRect, x, y, frame);
-};
-
-var scheduleDirtChange = function (options) {
-  var col = Maze.pegmanX;
-  var row = Maze.pegmanY;
-
-  // cells that started as "flat" will be undefined
-  var previousValue = Maze.map.getValue(row, col) || 0;
-
-  Maze.map.setValue(row, col, previousValue + options.amount);
-  Maze.subtype.scheduleDirtChange(row, col);
-  studioApp().playAudio(options.sound);
-};
-
-/**
- * Schedule to add dirt at pegman's current position.
- */
-Maze.scheduleFill = function () {
-  scheduleDirtChange({
-    amount: 1,
-    sound: 'fill'
-  });
-};
-
-/**
- * Schedule to remove dirt at pegman's current location.
- */
-Maze.scheduleDig = function () {
-  scheduleDirtChange({
-    amount: -1,
-    sound: 'dig'
-  });
-};
-
-/**
- * Display the look icon at Pegman's current location,
- * in the specified direction.
- * @param {!Direction} d Direction (0 - 3).
- */
-Maze.scheduleLook = function (d) {
-  var x = Maze.pegmanX;
-  var y = Maze.pegmanY;
-  switch (d) {
-    case Direction.NORTH:
-      x += 0.5;
-      break;
-    case Direction.EAST:
-      x += 1;
-      y += 0.5;
-      break;
-    case Direction.SOUTH:
-      x += 0.5;
-      y += 1;
-      break;
-    case Direction.WEST:
-      y += 0.5;
-      break;
-  }
-  x *= Maze.SQUARE_SIZE;
-  y *= Maze.SQUARE_SIZE;
-  d = d * 90 - 45;
-
-  var lookIcon = document.getElementById('look');
-  lookIcon.setAttribute('transform',
-      'translate(' + x + ', ' + y + ') ' +
-      'rotate(' + d + ' 0 0) scale(.4)');
-  var paths = lookIcon.getElementsByTagName('path');
-  lookIcon.style.display = 'inline';
-  for (var i = 0; i < paths.length; i++) {
-    var path = paths[i];
-    Maze.scheduleLookStep(path, stepSpeed * i);
-  }
-};
-
-/**
- * Schedule one of the 'look' icon's waves to appear, then disappear.
- * @param {!Element} path Element to make appear.
- * @param {number} delay Milliseconds to wait before making wave appear.
- */
-Maze.scheduleLookStep = function (path, delay) {
-  timeoutList.setTimeout(function () {
-    path.style.display = 'inline';
-    window.setTimeout(function () {
-      path.style.display = 'none';
-    }, stepSpeed * 2);
-  }, delay);
-};
-
-/**
- * Certain Maze types - namely, WordSearch, Collector, and any Maze with
- * Quantum maps, don't want to check for success until the user's code
- * has finished running completely.
- */
-Maze.shouldCheckSuccessOnMove = function () {
-  if (Maze.map.hasMultiplePossibleGrids()) {
-    return false;
-  }
-  return Maze.subtype.shouldCheckSuccessOnMove();
-};
-
-/**
- * Check whether all goals have been accomplished
- */
-Maze.checkSuccess = function () {
-  const succeeded = Maze.subtype.succeeded();
-
-  if (succeeded) {
-    // Finished.  Terminate the user's program.
-    Maze.executionInfo.queueAction('finish', null);
-    Maze.executionInfo.terminateWithValue(true);
-  }
-
-  return succeeded;
-};
-
-/**
- * Called after user's code has finished being executed, giving us one more
- * chance to check if we've accomplished our goals. This is required in part
- * because elsewhere we only check for success after movement.
- */
-Maze.onExecutionFinish = function () {
-  // If we haven't terminated, make one last check for success
-  if (!Maze.executionInfo.isTerminated()) {
-    Maze.checkSuccess();
-  }
-
-  Maze.subtype.onExecutionFinish();
 };

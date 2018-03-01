@@ -11,6 +11,8 @@ require 'fileutils'
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/pd/facilitator1819_application_constants'
 require_relative '../../lib/cdo/shared_constants/pd/teacher1819_application_constants'
+require_relative '../../lib/cdo/shared_constants/pd/principal_approval1819_application_constants'
+require_relative '../../lib/cdo/shared_constants/pd/teachercon1819_registration_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
@@ -68,6 +70,7 @@ def main
     LEVEL_KIND
     LEVEL_STATUS
     SECTION_LOGIN_TYPE
+    POST_MILESTONE_MODE
     PUBLISHABLE_PROJECT_TYPES_UNDER_13
     PUBLISHABLE_PROJECT_TYPES_OVER_13
   )
@@ -79,7 +82,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS),
+      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS),
       source_module: Facilitator1819ApplicationConstants,
       transform_keys: true
     ),
@@ -88,11 +91,28 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS),
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
       source_module: Teacher1819ApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/teacher1819ApplicationConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(PAGE_LABELS TEXT_FIELDS),
+      source_module: PrincipalApproval1819ApplicationConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1819ApplicationConstants.js"
+  )
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(TEACHER_SEAT_ACCEPTANCE_OPTIONS TEXT_FIELDS),
+      source_module: Teachercon1819RegistrationConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
   )
 end
 

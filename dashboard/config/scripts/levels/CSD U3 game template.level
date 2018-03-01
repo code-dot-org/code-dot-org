@@ -33,7 +33,7 @@
     "show_d_pad": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "debugger_disabled": "false",
+    "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "contained_level_names": null
