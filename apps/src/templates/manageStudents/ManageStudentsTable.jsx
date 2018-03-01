@@ -11,7 +11,7 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import {convertStudentDataToArray, AddStatus, RowType} from './manageStudentsRedux';
+import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
@@ -100,7 +100,8 @@ class ManageStudentsTable extends Component {
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
-    addStatus: PropTypes.oneOf(Object.values(AddStatus)),
+    addStatus: PropTypes.object,
+    saveAllStudents: PropTypes.func,
   };
 
   state = {
@@ -169,7 +170,7 @@ class ManageStudentsTable extends Component {
       <div>
         {numberOfEditingRows > 1 &&
           <Button
-            onClick={()=>{console.log("save all");}}
+            onClick={this.props.saveAllStudents}
             color={Button.ButtonColor.orange}
             text={i18n.saveAll()}
           />
@@ -333,19 +334,19 @@ class ManageStudentsTable extends Component {
 
     return (
       <div>
-        {addStatus === AddStatus.SUCCESS &&
+        {addStatus.status === AddStatus.SUCCESS &&
           <Notification
             type={NotificationType.success}
             notice={i18n.manageStudentsNotificationSuccess()}
-            details={i18n.manageStudentsNotificationAddSuccess()}
+            details={i18n.manageStudentsNotificationAddSuccess({numStudents: addStatus.numStudents})}
             dismissible={false}
           />
         }
-        {addStatus === AddStatus.FAIL &&
+        {addStatus.status === AddStatus.FAIL &&
           <Notification
             type={NotificationType.failure}
             notice={i18n.manageStudentsNotificationFailure()}
-            details={i18n.manageStudentsNotificationCannotAdd()}
+            details={i18n.manageStudentsNotificationCannotAdd({numStudents: addStatus.numStudents})}
             dismissible={false}
           />
         }
@@ -371,4 +372,8 @@ export default connect(state => ({
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
   addStatus: state.manageStudents.addStatus,
+}), dispatch => ({
+  saveAllStudents() {
+    dispatch(saveAllStudents());
+  },
 }))(ManageStudentsTable);
