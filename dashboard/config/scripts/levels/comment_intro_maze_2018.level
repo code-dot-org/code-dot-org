@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Comments are also helpful when other people try to read your code.\",\"hint_id\":\"courseC_maze_programming4_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/94e837bb4793a4a925f124b537583365/comment_intro_maze_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Add a comment when you change directions- what would have happened if you turned the other way?\",\"hint_id\":\"courseC_maze_programming4_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cf7908b894161204d072f084a9476039/comment_intro_maze_2018.mp3\"}]",
-    "markdown_instructions": "*\"I'm confused. Help me remember how to solve this maze\"* \r\n\r\nUse the new `comment` block to leave yourself quick reminders to know what you were doing. Comments are only used for **you** (and anyone else who reads your code)- nothing will change in the Play Area because of a comment.",
+    "markdown_instructions": "*\"I'm confused. Help me remember how to solve this maze.\"* \r\n\r\nUse the new `comment` block to leave yourself quick reminders to know what you were doing. Comments are only used for **you** (and anyone else who reads your code)- nothing will change in the Play Area because of a comment.",
     "callout_json": "[]",
     "instructions_important": "true",
     "hide_share_and_remix": "false",
@@ -39,7 +39,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-22 19:13:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 19:16:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:06:00 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"instructions_important\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:11:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:13:58 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:15:19 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-22 19:13:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 19:16:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:06:00 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"instructions_important\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:11:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:13:58 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-22 20:15:19 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-28 20:27:37 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,7 +61,7 @@
     <required_blocks>
       <xml>
         <block type="comment">
-          <title name="TEXT"/>
+          <title name="TEXT">???</title>
         </block>
       </xml>
     </required_blocks>
