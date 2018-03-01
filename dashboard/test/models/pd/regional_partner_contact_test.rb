@@ -92,48 +92,24 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
   end
 
-  test 'Updates regional partner' do
-    school_district = create :school_district
-    regional_partner_hs = create :regional_partner, name: 'High School regional Partner'
-    regional_partner_ms = create :regional_partner, name: 'Middle School regional Partner'
+  test 'Matches regional partner' do
+    state = 'OH'
+    zip = '45242'
 
-    create :regional_partners_school_district, school_district: school_district, course: 'csp', regional_partner: regional_partner_hs
-    create :regional_partners_school_district, school_district: school_district, course: 'csd', regional_partner: regional_partner_ms
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: state)
+    regional_partner.mappings.find_or_create_by!(zip_code: zip)
 
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: school_district.id,
-          grade_levels: ['High School']
-        }
-      ).to_json
-    )
+    regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      {
+        school_type: 'public',
+        school_district_other: false,
+        school_district: 'District',
+        school_state: state,
+        school_zipcode: zip
+      }
+    ).to_json
 
-    assert_equal regional_partner_hs.name, regional_partner_contact.regional_partner.name
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: school_district.id,
-          grade_levels: ['Middle School']
-        }
-      ).to_json
-    )
-
-    assert_equal regional_partner_ms.name, regional_partner_contact.regional_partner.name
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: school_district.id,
-          grade_levels: ['Elementary School']
-        }
-      ).to_json
-    )
-
-    assert_nil regional_partner_contact.regional_partner
+    assert_equal regional_partner.id, regional_partner_contact.regional_partner_id
   end
 end
