@@ -110,11 +110,11 @@ class Ability
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
         can :create, Pd::FacilitatorProgramRegistration, user_id: user.id
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
-      end
 
-      if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
-        can :create, Pd::Workshop
-        can :update, Pd::Workshop, facilitators: {id: user.id}
+        if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
+          can :create, Pd::Workshop
+          can :update, Pd::Workshop, facilitators: {id: user.id}
+        end
       end
 
       if user.district_contact?
