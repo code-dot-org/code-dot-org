@@ -29,13 +29,10 @@ export default class CollectorHandler extends ResultsHandler {
     if (this.maze_.store) {
       this.maze_.store.dispatch(setCollectorMinRequired(this.minCollected_));
     }
-  }
 
-  /**
-   * @override
-   */
-  setEventHandlers() {
-    this.maze_.subtype.setCollectedTooManyHandler(() => {
+    // Initialize subtype-specific event listeners
+
+    this.maze_.subtype.on('collectedTooMany', () => {
       this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
     });
   }
