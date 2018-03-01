@@ -12,6 +12,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @workshop_organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
     @regional_partner = create(:regional_partner)
+    @csf_facilitator = create :facilitator
 
     @workshop = create(
       :pd_workshop,
@@ -29,6 +30,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     )
 
     @standalone_workshop = create(:pd_workshop)
+
+    Pd::CourseFacilitator.create(facilitator: @csf_facilitator, course: Pd::Workshop::COURSE_CSF)
   end
 
   setup do
@@ -327,10 +330,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   )
 
   test 'csf facilitators can create workshops' do
-    facilitator = create :facilitator
-    Pd::CourseFacilitator.create(facilitator: facilitator, course: Pd::Workshop::COURSE_CSF)
-
-    sign_in(facilitator)
+    sign_in(@csf_facilitator)
 
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
@@ -447,10 +447,22 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     sign_in(@facilitator)
 
     workshop = create :pd_workshop, organizer: @facilitator
-    params_with_regional_partner = workshop_params.merge({regional_partner_id: @regional_partner.id})
     put :update, params: {
       id: workshop.id,
-      pd_workshop: params_with_regional_partner
+      pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
+    }
+    assert_response :success
+    workshop.reload
+    assert_nil workshop.regional_partner_id
+  end
+
+  test 'CSF Facilitators can update workshops they are assigned to' do
+    sign_in(@csf_facilitator)
+
+    workshop = create :pd_workshop, facilitators: [@csf_facilitator]
+    put :update, params: {
+      id: workshop.id,
+      pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
     }
     assert_response :success
     workshop.reload
