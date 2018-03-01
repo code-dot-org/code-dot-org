@@ -18,7 +18,7 @@ export default class CohortViewCalculator extends React.Component {
     return (
       <div style={styles.tableWrapper}>
         <Table striped condensed>
-          <caption>Cohort Calulator</caption>
+          <caption>Cohort Calculator</caption>
           <thead>
               <tr>
                 <th />
