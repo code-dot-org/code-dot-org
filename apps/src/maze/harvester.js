@@ -88,18 +88,6 @@ export default class Harvester extends Gatherer {
     return this.tryGetCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
-  // Overridable event handlers
-
-  onWrongCrop = () => {};
-  setWrongCropHandler(handler) {
-    this.onWrongCrop = handler;
-  }
-
-  onEmptyCrop = () => {};
-  setEmptyCropHandler(handler) {
-    this.onEmptyCrop = handler;
-  }
-
   /**
    * Attempt to harvest the specified crop from the current location; terminate
    * the execution if this is not a valid place at which to get that crop.
@@ -107,6 +95,8 @@ export default class Harvester extends Gatherer {
    * This method is preferred over animateGetCrop for "headless" operation (ie
    * when validating quantum levels)
    *
+   * @fires wrongCrop
+   * @fires emptyCrop
    * @return {boolean} whether or not this attempt was successful
    */
   tryGetCrop(crop) {
@@ -116,12 +106,12 @@ export default class Harvester extends Gatherer {
     const cell = this.getCell(row, col);
 
     if (cell.featureType() !== crop) {
-      this.onWrongCrop();
+      this.emit('wrongCrop');
       return false;
     }
 
     if (cell.getCurrentValue() === 0) {
-      this.onEmptyCrop();
+      this.emit('emptyCrop');
       return false;
     }
 

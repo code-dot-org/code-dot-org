@@ -47,13 +47,6 @@ export default class Collector extends Subtype {
     return true;
   }
 
-  // Overridable event handlers
-
-  onCollectedTooMany = () => {};
-  setCollectedTooManyHandler(handler) {
-    this.onCollectedTooMany = handler;
-  }
-
   /**
    * Attempt to collect from the specified location; terminate the execution if
    * there is nothing there to collect.
@@ -61,13 +54,14 @@ export default class Collector extends Subtype {
    * Note that the animation for this action is handled by the default
    * "scheduleDig" operation
    *
+   * @fires collectedTooMany
    * @return {boolean} whether or not this attempt was successful
    */
   tryCollect(row, col) {
     const currVal = this.maze_.map.getValue(row, col);
 
     if (currVal === undefined || currVal < 1) {
-      this.onCollectedTooMany();
+      this.emit('collectedTooMany');
       return false;
     }
 
