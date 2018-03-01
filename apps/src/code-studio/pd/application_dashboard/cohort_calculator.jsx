@@ -7,7 +7,7 @@ const styles = {
   }
 };
 
-export default class CohortViewCalculator extends React.Component {
+export default class CohortCalculator extends React.Component {
   static propTypes = {
     accepted: PropTypes.number.isRequired,
     registered: PropTypes.number.isRequired,
