@@ -80,26 +80,10 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
   end
 
   def update_regional_partner
-    return if sanitize_form_data_hash[:grade_levels] == ['Elementary School']
+    hash = sanitize_form_data_hash
+    zipcode = hash[:school_zipcode]
+    state = hash[:school_state]
 
-    school_district = SchoolDistrict.find_by_id(sanitize_form_data_hash[:school_district])
-
-    return unless school_district
-
-    possible_partners = school_district.regional_partners_school_districts
-
-    if possible_partners.size == 1
-      self.regional_partner = possible_partners.first.regional_partner
-    elsif possible_partners.size > 1
-      grade_levels = sanitize_form_data_hash[:grade_levels]
-
-      if grade_levels.include? 'High School'
-        self.regional_partner = possible_partners.find_by(course: 'csp').try(:regional_partner)
-      elsif grade_levels.include? 'Middle School'
-        self.regional_partner = possible_partners.find_by(course: 'csd').try(:regional_partner)
-      end
-
-      self.regional_partner = possible_partners.first.regional_partner if regional_partner.nil?
-    end
+    self.regional_partner = RegionalPartner.find_by_region(zipcode, state)
   end
 end
