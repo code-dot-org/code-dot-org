@@ -1,4 +1,3 @@
-/* global updateCensusMapSchool, setShowYourSchoolFunction */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -34,8 +33,8 @@ function showYourSchool(schoolDropdownOption) {
         alertText={$('#your-school').data("parameters-alert-text")}
         alertUrl={$('#your-school').data("parameters-alert-url")}
         hideMap={$('#your-school').data("parameters-hide-map")}
+        fusionTableId={$('#your-school').data("parameters-table-id")}
         prefillData={prefillData}
-        updateCensusMapSchool={updateCensusMapSchool}
         schoolDropdownOption={schoolDropdownOption}
       />
     </Provider>,
@@ -44,6 +43,5 @@ function showYourSchool(schoolDropdownOption) {
 }
 
 function initYourSchool() {
-  setShowYourSchoolFunction(showYourSchool);
   showYourSchool();
 }
