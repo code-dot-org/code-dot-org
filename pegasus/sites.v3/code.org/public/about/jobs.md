@@ -18,7 +18,7 @@ theme: responsive
 
 [col-50]
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
+Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
 
 [/col-50]
 
@@ -65,7 +65,7 @@ In this role, you will be responsible for:
 - Communicating policy agenda to various audiences (stakeholder groups, legislators, Governors and staff, educators, media, etc.) and tailoring messaging for each
 - Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
 - Creating, organizing and managing policy-related events with policy makers and/or partner organizations
-- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
+- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and nonprofits with shared goals
 - Creating and managing grassroots support for policy-related efforts
 - Coordinating state and federal policy efforts internally and with partners
 
@@ -332,7 +332,7 @@ Interested candidates should email a resume and cover letter, outlining how your
 
 **Company Profile**
 
-Code.org is a non-profit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+Code.org is a nonprofit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
 
 We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 
