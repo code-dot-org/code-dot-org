@@ -44,7 +44,7 @@ export default class CollectorHandler extends ResultsHandler {
     });
 
     this.maze_.subtype.on('collectedTooMany', () => {
-      this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
+      this.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
     });
   }
 
@@ -112,7 +112,7 @@ export default class CollectorHandler extends ResultsHandler {
    * @override
    */
   terminateWithAppSpecificValue() {
-    const executionInfo = this.maze_.executionInfo;
+    const executionInfo = this.executionInfo;
 
     if (this.maze_.subtype.getTotalCollected() === 0) {
       executionInfo.terminateWithValue(COLLECTED_NOTHING);
