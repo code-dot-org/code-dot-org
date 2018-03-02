@@ -1239,6 +1239,7 @@ designMode.renderDesignWorkspace = function (element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
+    screenIds: designMode.getAllScreenIds(),
     store: getStore(),
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);

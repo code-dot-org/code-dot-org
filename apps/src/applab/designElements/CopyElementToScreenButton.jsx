@@ -2,6 +2,8 @@ import React, {PropTypes} from 'react';
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
 import designMode from "../designMode";
+import {connect} from "react-redux";
+import * as screens from "../redux/screens";
 
 const styles = {
   copyElementToScreenButton: {
@@ -18,7 +20,10 @@ const styles = {
  */
 class CopyElementToScreenButton extends React.Component {
   static propTypes = {
+    // From connect
     currentScreenId: PropTypes.string.isRequired,
+
+    // Passed explicitly
     handleCopyElementToScreen: PropTypes.func.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
@@ -36,21 +41,32 @@ class CopyElementToScreenButton extends React.Component {
   render() {
     const isVisible = this.props.screenIds.length > 1;
     const showDropdown = isVisible && this.state.opened;
+    const button = (
+        <button style={[commonStyles.button, styles.copyElementToScreenButton]}
+          onClick={this.handleDropdownClick}
+        >
+          Copy to screen
+        </button>);
     const otherScreens = !showDropdown ? '' : this.props.screenIds
         .filter((screenId) => screenId !== this.props.currentScreenId)
-        .map((screenId) => <button style={styles.screen} id = {screenId) onClick={this.handleCopyElementToScreen}>);
+        .map((screenId) => function(screenId) {
+          /* return (
+              <button style={styles.screen} id={screenId}
+                   onClick={this.handleCopyElementToScreen}
+              >
+          ); */
+        });
     return (
         <div style={styles.main}>
-          {isVisible && <button
-              style={[commonStyles.button, styles.copyElementToScreenButton]}
-              onClick={this.handleDropdownClick}
-          >
-            Copy to screen
-          </button>}
-          {otherScreens}}
+          {isVisible && button}
+          {isVisible && otherScreens}
         </div>
     );
   }
 }
 
-export default Radium(CopyElementToScreenButton);
+export default connect(function propsFromStore(state) {
+  return {
+    currentScreenId: state.screens.currentScreenId,
+  };
+})(Radium(CopyElementToScreenButton));
