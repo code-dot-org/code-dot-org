@@ -70,8 +70,9 @@ describe('Artist', () => {
 
       expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(img, 50, 0, -100, 100, -25, -50, -50, 100);
 
-      setDrawPatternBackwardSpy.restore()
+      setDrawPatternBackwardSpy.restore();
     });
+
     it('draws a pattern forward', () => {
       let artist = new Artist();
       let width = 100;
@@ -85,7 +86,7 @@ describe('Artist', () => {
 
       expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(img, 50, 0, 100, 100, -25, -50, 150, 100);
 
-      setDrawPatternForwardSpy.restore()
+      setDrawPatternForwardSpy.restore();
     });
   });
 
