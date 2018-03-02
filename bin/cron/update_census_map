@@ -24,6 +24,9 @@ def make_location(lat, long)
   "#{format('%.6f', lat)}, #{format('%.6f', long)}"
 end
 
+# Update summaries before updating the fusion table
+Census::CensusSummary.summarize_census_data
+
 # The map should show the data from the school year that began
 # in the previous calendar year. So, Aug-Dec we show the previous school
 # year's data and then switch over to the current school year in Jan.

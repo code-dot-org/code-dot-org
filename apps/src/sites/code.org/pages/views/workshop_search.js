@@ -12,8 +12,6 @@ const markerCustererOptions = {
 var gmap,
   markersByLocation = {},
   infoWindow,
-  processingPdWorkshops = true,
-  processingLegacyWorkshops = true,
   markerClusterer;
 
 $(document).ready(function () {
@@ -39,35 +37,6 @@ function loadWorkshops() {
   $.get('/dashboardapi/v1/pd/k5workshops').done(function (data) {
     processPdWorkshops(data);
   }).always(completeProcessingPdWorkshops);
-
-  $.post('/forms/ProfessionalDevelopmentWorkshop/query', function (data) {
-    processLegacyWorkshops(data);
-  }).always(completeProcessingLegacyWorkshops);
-}
-
-function processLegacyWorkshops(response) {
-  var results = JSON.parse(response);
-
-  $.each(results.response.docs, function (index, workshop) {
-    if (workshop.location_p !== undefined) {
-      var location = workshop.location_p.split(',');
-      var latLng = new google.maps.LatLng(location[0], location[1]);
-
-      // This hash will round the latLngs to 6 decimals.
-      var hash = latLng.toUrlValue();
-
-      var infoWindowContent = '';
-
-      if (markersByLocation[hash] === undefined) {
-        infoWindowContent = compileHtml(workshop, true);
-        markersByLocation[hash] = createNewMarker(latLng, workshop.location_name_p, infoWindowContent);
-      } else {
-        // Extend existing marker.
-        infoWindowContent = compileHtml(workshop, false);
-        markersByLocation[hash].infoWindowContent += infoWindowContent;
-      }
-    }
-  });
 }
 
 function processPdWorkshops(workshops) {
@@ -79,11 +48,11 @@ function processPdWorkshops(workshops) {
     var infoWindowContent = '';
 
     if (markersByLocation[hash] === undefined) {
-      infoWindowContent = compileHtmlNew(workshop, true);
+      infoWindowContent = compileHtml(workshop, true);
       markersByLocation[hash] = createNewMarker(latLng, workshop.location_name, infoWindowContent);
     } else {
       // Extend existing marker.
-      infoWindowContent = compileHtmlNew(workshop, false);
+      infoWindowContent = compileHtml(workshop, false);
       markersByLocation[hash].infoWindowContent += infoWindowContent;
     }
   });
@@ -105,49 +74,11 @@ function createNewMarker(latLng, title, infoWindowContent) {
   return marker;
 }
 
-function completeProcessingLegacyWorkshops() {
-  processingLegacyWorkshops = false;
-  if (!processingPdWorkshops) {
-    addGeocomplete();
-  }
-}
-
 function completeProcessingPdWorkshops() {
-  processingPdWorkshops = false;
-  if (!processingLegacyWorkshops) {
-    addGeocomplete();
-  }
+  addGeocomplete();
 }
 
 function compileHtml(workshop, first) {
-  // Compile HTML.
-  var html = '';
-
-  if (first) {
-    html += '<div class="workshop-item workshop-item-first">';
-  } else {
-    html += '<div class="workshop-item">';
-  }
-
-  html += '<div class="workshop-location-name"><strong>' + workshop.location_name_s + '</strong></div>';
-
-  // Add the date(s).
-  html += '<div class="workshop-dates">';
-  $.each(workshop.dates_ss, function (key, value) {
-    html += '<div class="workshop-date" style="white-space: nowrap;">' + value + '</div>';
-  });
-  html += '</div>';
-
-  if (workshop.id) {
-    html += '<div class="workshop-link"><a style="" href="/professional-development-workshops/' + workshop.id + '">Info and Signup</a></div>';
-  }
-
-  html += '</div>';
-
-  return html;
-}
-
-function compileHtmlNew(workshop, first) {
   // Compile HTML.
   var html = '';
 

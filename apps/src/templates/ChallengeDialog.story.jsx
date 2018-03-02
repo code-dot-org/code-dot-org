@@ -9,7 +9,7 @@ const wrapperStyle = {
 
 export default storybook => {
   return storybook
-    .storiesOf('ChallengeDialog', module)
+    .storiesOf('Dialogs/ChallengeDialog', module)
     .addStoryTable([
       {
         name: 'Starting Dialog',

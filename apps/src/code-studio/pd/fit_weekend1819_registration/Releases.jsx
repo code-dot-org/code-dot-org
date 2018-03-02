@@ -15,15 +15,15 @@ export default class Releases extends LabeledFormComponent {
   ];
 
   static labels = {
-    photoRelease: "Do you agree to the conditions in the photo release?",
-    liabilityWaiver: "Do you agree to the conditions in the liability waiver?",
+    photoRelease: "I agree to the conditions in the photo release",
+    liabilityWaiver: "I agree to the conditions in the liability waiver",
     agreeShareContact: "By submitting this application, I agree to share my contact information and registration with Code.org's Regional Partners.",
   };
 
   render() {
     return (
       <FormGroup>
-        <h4>Section 4: Releases</h4>
+        <h4>Section 3: Releases</h4>
         <FormGroup>
           <ControlLabel>
             Please read this <a target="_blank" href="https://docs.google.com/document/d/12NVUcqccNRbVukoGMCserwSpg4vfG0vNlEqTxr6oit0/edit">photo release.</a>
@@ -56,6 +56,15 @@ export default class Releases extends LabeledFormComponent {
             </strong>
           </ControlLabel>
           {this.singleCheckboxFor("agreeShareContact")}
+        </FormGroup>
+        <FormGroup>
+          <p>
+            We're excited you're planning to join us this summer! You will receive
+            more information about travel approximately six weeks before the FiT
+            Weekend. In the meantime, please <strong>do not</strong> book your flight,
+            and make sure to contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> with any questions. We look
+            forward to meeting you this summer!
+          </p>
         </FormGroup>
       </FormGroup>
     );

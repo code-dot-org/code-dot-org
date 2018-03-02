@@ -33,7 +33,8 @@ export default class Teachercon1819Registration extends FormController {
       preferredFirstName: this.props.firstName,
       lastName: this.props.lastName,
       phone: this.props.phone,
-      course: this.props.course
+      course: this.props.course,
+      applicationType: this.props.applicationType
     };
   }
 
@@ -43,18 +44,25 @@ export default class Teachercon1819Registration extends FormController {
    * @override
    */
   getPageComponents() {
-    const pageComponents = [
-      Joining,
-      TravelPlans,
-    ];
+    if (
+        this.state.data.teacherAcceptSeat === TeacherSeatAcceptanceOptions['decline'] ||
+        this.state.data.ableToAttend === 'No'
+    ) {
+      return [Joining];
+    } else {
+      const pageComponents = [
+        Joining,
+        TravelPlans,
+      ];
 
-    if (this.props.applicationType === "Teacher") {
-      pageComponents.push(CoursePlans);
+      if (this.props.applicationType === "Teacher") {
+        pageComponents.push(CoursePlans);
+      }
+
+      pageComponents.push(Releases);
+
+      return pageComponents;
     }
-
-    pageComponents.push(Releases);
-
-    return pageComponents;
   }
 
   /**

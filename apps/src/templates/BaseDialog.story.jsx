@@ -10,7 +10,7 @@ const EXAMPLE_DIALOG_BODY = (
 
 export default storybook => {
   return storybook
-    .storiesOf('BaseDialog', module)
+    .storiesOf('Dialogs/BaseDialog', module)
     .addStoryTable([
       {
         name:'hiding the backdrop',

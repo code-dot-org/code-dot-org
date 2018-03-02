@@ -3,7 +3,6 @@ var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
 import { GamelabBlocks } from '@cdo/apps/gamelab/sharedGamelabBlocks';
 
-// TODO (bbuchanan): Continue documenting the game lab level object properties.
 /**
  * Properties of the game lab level object
  * @typedef {Object} GameLabLevel

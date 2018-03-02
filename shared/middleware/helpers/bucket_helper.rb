@@ -3,6 +3,7 @@ require 'active_support/core_ext/object/try'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'cdo/aws/s3'
 require 'honeybadger'
+require 'cdo/firehose'
 
 #
 # BucketHelper
@@ -173,6 +174,46 @@ class BucketHelper
     response
   end
 
+  def check_current_version(encrypted_channel_id, filename, version_to_replace, timestamp, tab_id, user_id)
+    return unless filename == 'main.json' && @bucket == CDO.sources_s3_bucket && version_to_replace
+
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    # check current version id without pulling down the whole object.
+    current_version = s3.get_object_tagging(bucket: @bucket, key: key).version_id
+
+    return if version_to_replace == current_version
+
+    FirehoseClient.instance.put_record(
+      'analysis-events',
+      study: 'project-data-integrity',
+      study_group: 'v2',
+      event: 'replace-non-current-main-json',
+
+      project_id: encrypted_channel_id,
+      user_id: user_id,
+
+      data_json: {
+        replacedVersionId: version_to_replace,
+        currentVersionId: current_version,
+        tabId: tab_id,
+        key: key,
+
+        # Server timestamp indicating when the first version of main.json was saved by the browser
+        # tab making this request. This is for diagnosing problems with writes from multiple browser
+        # tabs.
+        firstSaveTimestamp: timestamp
+      }.to_json
+    )
+  rescue Aws::S3::Errors::NoSuchKey
+    # Because create and update operations are both handled as PUT OBJECT,
+    # we sometimes call this helper when we're creating a new object and there's
+    # no existing object to check against.  In such a case we can be confident
+    # that we're not replacing a non-current version so no logging needs to
+    # occur - we can ignore this exception.
+  end
+
   #
   # Copy an object within a channel, creating a new object in the channel.
   #
@@ -227,11 +268,34 @@ class BucketHelper
 
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
-  def restore_previous_version(encrypted_channel_id, filename, version_id)
+  def restore_previous_version(encrypted_channel_id, filename, version_id, user_id)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
+    response = s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
+
+    # If we get this far, the restore request has succeeded.
+    FirehoseClient.instance.put_record(
+      'analysis-events',
+      study: 'project-data-integrity',
+      study_group: 'v2',
+      event: 'version-restored',
+
+      # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      project_id: encrypted_channel_id,
+      data_string: @bucket,
+
+      user_id: user_id,
+      data_json: {
+        restoredVersionId: version_id,
+        newVersionId: response.version_id,
+        bucket: @bucket,
+        key: key,
+        filename: filename,
+      }.to_json
+    )
+
+    response
   end
 
   protected

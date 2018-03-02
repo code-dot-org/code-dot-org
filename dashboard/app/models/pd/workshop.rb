@@ -106,6 +106,11 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
       SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
       SUBJECT_CSD_FIT = SUBJECT_FIT
+    ],
+    COURSE_CSF => [
+      SUBJECT_CSF_101 = 'Intro Workshop'.freeze,
+      SUBJECT_CSF_201 = 'Deep Dive Workshop'.freeze,
+      SUBJECT_CSF_FIT = SUBJECT_FIT
     ]
   }.freeze
 
@@ -192,6 +197,11 @@ class Pd::Workshop < ActiveRecord::Base
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 
+  before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
+  def assign_regional_partner
+    self.regional_partner = organizer.try {|o| o.regional_partners.first}
+  end
+
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
       unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
@@ -220,10 +230,18 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
   end
 
-  def self.facilitated_or_organized_by(user)
+  # scopes to workshops managed by the user, which means the user is any of:
+  # - the organizer
+  # - a facilitator
+  # - a program manager for the assigned regional partner
+  def self.managed_by(user)
     left_outer_joins(:facilitators).
-      where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id).
-      distinct
+      where(
+        'pd_workshops_facilitators.user_id = ? OR organizer_id = ? OR regional_partner_id IN (?)',
+        user.id,
+        user.id,
+        user.regional_partner_program_managers.select(:regional_partner_id)
+      ).distinct
   end
 
   def self.attended_by(teacher)
@@ -398,7 +416,8 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_TEACHER_CON,
       SUBJECT_CSP_FIT,
       SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include? subject
   end
 
@@ -609,7 +628,8 @@ class Pd::Workshop < ActiveRecord::Base
   def fit_weekend?
     [
       SUBJECT_CSP_FIT,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include?(subject)
   end
 

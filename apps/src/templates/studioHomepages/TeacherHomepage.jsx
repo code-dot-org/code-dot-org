@@ -2,6 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
+import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
 import StudentSections from './StudentSections';
@@ -132,7 +133,10 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        {this.state.showCensusBanner && isEnglish && (
+        {(isEnglish &&
+          <SpecialAnnouncementActionBlock/>
+        )}
+        {this.state.showCensusBanner && (
            <div>
              <CensusTeacherBanner
                ref={this.bindCensusBanner}

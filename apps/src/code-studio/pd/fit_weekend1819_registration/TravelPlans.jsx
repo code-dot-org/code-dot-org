@@ -17,6 +17,7 @@ export default class TravelPlans extends LabeledFormComponent {
     contactRelationship: "Relationship to you:",
     contactPhone: "Phone number:",
     dietaryNeeds: "Do you have any dietary needs or food allergies?",
+    dietaryNeedsDetails: "Please provide details about your food allergy.",
     addressStreet: "Street",
     addressCity: "City",
     addressState: "State",
@@ -62,8 +63,16 @@ export default class TravelPlans extends LabeledFormComponent {
       );
     }
 
+    if (data.dietaryNeeds && data.dietaryNeeds.includes('Food Allergy')) {
+      requiredFields.push('dietaryNeedsDetails');
+    }
+
     if (data.needHotel === 'Yes') {
       requiredFields.push("needAda");
+
+      if (data.needAda === 'Yes') {
+        requiredFields.push("explainAda");
+      }
     }
 
     return requiredFields;
@@ -86,9 +95,12 @@ export default class TravelPlans extends LabeledFormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsWithAdditionalTextFieldsFor("dietaryNeeds", {
-            "Food Allergy (please list):": "food_allergy_details"
-          })}
+          {this.checkBoxesFor("dietaryNeeds")}
+          {
+            this.props.data.dietaryNeeds &&
+            this.props.data.dietaryNeeds.includes('Food Allergy') &&
+            this.largeInputFor("dietaryNeedsDetails")
+          }
         </FormGroup>
 
         <FormGroup>
@@ -113,7 +125,9 @@ export default class TravelPlans extends LabeledFormComponent {
         </FormGroup>
 
         <FormGroup>
-          {this.radioButtonsFor("howTraveling")}
+          {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
+            'I will carpool with another FiT Weekend attendee (Please note who)': 'carpooling_with_attendee'
+          })}
           {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel === 'Yes' &&
@@ -122,7 +136,7 @@ export default class TravelPlans extends LabeledFormComponent {
           {
             this.props.data.needHotel === 'Yes' &&
             this.props.data.needAda === 'Yes' &&
-            this.largeInputFor("explainAda", {required: false})
+            this.largeInputFor("explainAda")
           }
         </FormGroup>
       </FormGroup>
@@ -142,6 +156,10 @@ export default class TravelPlans extends LabeledFormComponent {
     }
     if (changes.needAda !== 'Yes') {
       changes.explainAda = undefined;
+    }
+
+    if (data.dietaryNeeds && !data.dietaryNeeds.includes('Food Allergy')) {
+      changes.dietaryNeedsDetails = undefined;
     }
 
     return changes;
