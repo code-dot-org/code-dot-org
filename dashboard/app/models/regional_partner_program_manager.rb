@@ -17,4 +17,14 @@ class RegionalPartnerProgramManager < ActiveRecord::Base
   belongs_to :regional_partner
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :program_manager
+
+  after_create do
+    program_manager.permission = UserPermission::PROGRAM_MANAGER
+  end
+
+  after_destroy do
+    if program_manager.regional_partners.empty?
+      program_manager.delete_permission UserPermission::PROGRAM_MANAGER
+    end
+  end
 end

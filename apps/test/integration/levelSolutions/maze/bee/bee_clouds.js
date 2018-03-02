@@ -40,7 +40,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.executionInfo.terminationValue() === 5; //TerminationValue.UNCHECKED_CLOUD;
+        return Maze.controller.executionInfo.terminationValue() === 5; //TerminationValue.UNCHECKED_CLOUD;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',

@@ -55,11 +55,8 @@
       "var sprite = createSprite": null,
       "draw": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "start_blocks": "var ghost = createSprite(200, 200);\r\nghost.setAnimation(\"ghost_standing_1\");\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (keyDown(\"up\")) {\r\n    ghost.y = ghost.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    ghost.y = ghost.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    ghost.x = ghost.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    ghost.x = ghost.x + 1;\r\n  }\r\n  drawSprites();\r\n}"
+    "start_blocks": "var ghost = createSprite(200, 200);\r\nghost.setAnimation(\"ghost_standing_1\");\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (keyDown(\"up\")) {\r\n    ghost.y = ghost.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    ghost.y = ghost.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    ghost.x = ghost.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    ghost.x = ghost.x + 1;\r\n  }\r\n  drawSprites();\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
