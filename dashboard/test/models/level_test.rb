@@ -3,11 +3,14 @@ require 'test_helper'
 class LevelTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
     @custom_turtle_data = {user_id: 1}
     @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
     @custom_maze_data = @maze_data.merge(user_id: 1)
+    @gamelab_data = {game_id: 48, name: 'some gamelab level', level_num: 'custom', type: 'Gamelab'}
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -360,7 +363,7 @@ EOS
   end
 
   test 'applab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Applab.create(name: 'applab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -390,7 +393,7 @@ EOS
   end
 
   test 'gamelab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Gamelab.create(name: 'gamelab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -420,7 +423,7 @@ EOS
   end
 
   test 'weblab examples' do
-    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
     level = Weblab.create(name: 'weblab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
@@ -644,5 +647,32 @@ EOS
     # new actual entry
     assert_equal 65533, level.audit_log.length
     assert_equal 9351, JSON.parse(level.audit_log).length
+  end
+
+  test "can validate XML field with valid XML" do
+    level = Level.new(@turtle_data.merge({name: 'xml validation level'}))
+
+    level.start_blocks = '<xml>blah blah</xml>'
+
+    assert level.valid?
+  end
+
+  test "can save non-XML in a non-XML field" do
+    Level.find_by_name(@gamelab_data[:name]).try(:destroy)
+    level = Level.new(@gamelab_data)
+
+    level.start_blocks = 'var i = 1;'
+
+    assert level.valid?
+  end
+
+  test "cannot save non-XML in an XML field" do
+    level = Level.new(@turtle_data.merge({name: 'xml validation level'}))
+
+    level.start_blocks = 'var i = 1'
+
+    assert_raises(Nokogiri::XML::SyntaxError) do
+      level.valid?
+    end
   end
 end

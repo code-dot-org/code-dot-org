@@ -26,7 +26,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: () => Maze.executionInfo.terminationValue() === 1, // COLLECTED_NOTHING
+      customValidator: () => Maze.controller.executionInfo.terminationValue() === 1, // COLLECTED_NOTHING
       xml: '<xml></xml>'
     },
     {
@@ -35,7 +35,7 @@ module.exports = {
         result: true,
         testResult: TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL
       },
-      customValidator: () => Maze.executionInfo.terminationValue() === 6, // COLLECTED_ENOUGH_BUT_NOT_ALL
+      customValidator: () => Maze.controller.executionInfo.terminationValue() === 6, // COLLECTED_ENOUGH_BUT_NOT_ALL
       xml: '<xml>' +
            '  <block type="when_run">' +
            '    <next>' +
@@ -77,7 +77,7 @@ module.exports = {
         result: false,
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
-      customValidator: () => Maze.executionInfo.terminationValue() === 0, // TOO_MANY_BLOCKS
+      customValidator: () => Maze.controller.executionInfo.terminationValue() === 0, // TOO_MANY_BLOCKS
       xml: '<xml>' +
             '  <block type="when_run">' +
             '    <next>' +

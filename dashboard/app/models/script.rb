@@ -124,6 +124,7 @@ class Script < ActiveRecord::Base
     teacher_resources
     stage_extras_available
     has_verified_resources
+    has_lesson_plan
     script_announcements
   )
 
@@ -517,10 +518,6 @@ class Script < ActiveRecord::Base
     name.match(Regexp.union('algebra', 'Algebra'))
   end
 
-  def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csp3-research-mxghyt csd1 csd2 csd3 csd4 csd5 csd6 csp-ap text-compression netsim pixelation frequency_analysis vigenere applab-intro csp-explore csp-create).include?(name)
-  end
-
   def has_lesson_pdf?
     return false if %w(coursea courseb coursec coursed coursee coursef express pre-express).include?(name)
 
@@ -905,6 +902,7 @@ class Script < ActiveRecord::Base
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
+      has_lesson_plan: has_lesson_plan?,
       script_announcements: script_announcements,
       age_13_required: logged_out_age_13_required?,
     }
@@ -972,6 +970,7 @@ class Script < ActiveRecord::Base
       teacher_resources: script_data[:teacher_resources],
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
+      has_lesson_plan: !!script_data[:has_lesson_plan],
       script_announcements: script_data[:script_announcements],
     }.compact
   end
