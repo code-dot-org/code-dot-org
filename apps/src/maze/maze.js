@@ -620,8 +620,7 @@ module.exports = class Maze {
     this.executionInfo = new ExecutionInfo({
       ticks: 100
     });
-    // TODO
-    this.controller.executionInfo = this.executionInfo;
+    this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;
     this.testResults = TestResults.NO_TESTS_RUN;
     this.waitingForReport = false;
