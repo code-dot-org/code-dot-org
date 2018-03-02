@@ -1,9 +1,10 @@
+<meta name="robots" content="noindex">
 ---
 title: Payment Information
 nav: regional_partner_playbook_nav
 ---
 
-#Payment Information
+# Payment Information
 <a id="top"></a>
 ________________
 
@@ -45,18 +46,19 @@ ________________
 - Some facilitators will have a different payment structure because they work for a district.
 Facilitators can host workshops that are not associated with their Regional Partner, but these will no longer be paid for by Code.org. Two common cases for this will be:
   - Working with another Regional Partner to help meet demand in their region
-  - Facilitating a workshop for in-service elementary school teachers in districts that have funding to compensate the facilitator directly.
-    - In this case Code.org will strongly encourage actively coordinating and collaborating with the Regional Partner that covers that district.
+  - Facilitating a workshop for in-service elementary school teachers in districts that have funding to compensate the facilitator directly. In this case Code.org will strongly encourage actively coordinating and collaborating with the Regional Partner that covers that district.
   - Code.org will continue to pay for and provide swag and curriculum guides in both of these cases.
 
 ****This Code.org's general recommendation, and on a case-by-case basis, payment may differ.
 
-**Timeline for the Funding Model Transition**
+**Timeline for the CS Fundamentals Funding Model Transition**
+
+
 - February 2018 - Code.org is requesting facilitators to not schedule any more Code.org paid workshops or put them in the dashboard.
 - As soon as March 9, 2018 - Regional Partners and facilitators can start workshops under this agreement and new funding model, in consultation together.
 - No later than June 1, 2018 - host your first workshop in collaboration with your CS Fundamentals facilitator(s), *unless otherwise arranged with your Regional Manager.*
-- In some regions, there may be existing Code.org paid workshops that facilitators have already listed in the dashboard. We have clarified with facilitators that these can still be paid under existing facilitator agreements until September 1, 2018.
-- However, our expectation is that facilitators will work in close coordination with the Regional Partner to possibly transition these existing workshops to the new model where Regional Partners pay facilitators directly.
+	- In some regions, there may be existing Code.org paid workshops that facilitators have already listed in the dashboard. We have clarified with facilitators that these can still be paid under existing facilitator agreements until September 1, 2018.
+  - However, our expectation is that facilitators will work in close coordination with the Regional Partner to possibly transition these existing workshops to the new model where Regional Partners pay facilitators directly.
 
 [**Back to the top**](#top)
 

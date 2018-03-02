@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
@@ -22,20 +23,20 @@ const styles = {
  * Toggle that lets us change between seeing a page as a teacher, or as the
  * student sees it
  */
-const ViewAsToggle = React.createClass({
-  propTypes: {
+class ViewAsToggle extends React.Component {
+  static propTypes = {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     setViewType: PropTypes.func.isRequired
-  },
+  };
 
   componentDidMount() {
     // Upon loading, toggle hide-as-student appropriately (this is so that if we
     // load a page with ?viewAs=Student we still hide stuff)
     const { viewAs } = this.props;
     $(".hide-as-student").toggle(viewAs === ViewType.Teacher);
-  },
+  }
 
-  onChange(viewType) {
+  onChange = (viewType) => {
     const { setViewType } = this.props;
 
     updateQueryParam('viewAs', viewType);
@@ -51,7 +52,7 @@ const ViewAsToggle = React.createClass({
     }
 
     setViewType(viewType);
-  },
+  };
 
   render() {
     const { viewAs } = this.props;
@@ -74,12 +75,12 @@ const ViewAsToggle = React.createClass({
       </div>
     );
   }
-});
-
+}
+export const UnconnectedViewAsToggle = ViewAsToggle;
 export default connect(state => ({
   viewAs: state.viewAs
 }), dispatch => ({
   setViewType(viewAs) {
     dispatch(setViewType(viewAs));
   }
-}))(ViewAsToggle);
+}))(UnconnectedViewAsToggle);

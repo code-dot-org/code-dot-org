@@ -96,8 +96,10 @@ class FilesApiTestHelper
     last_response.body
   end
 
-  def put_object_version(filename, version_id, body = '', headers = {})
-    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
+  def put_object_version(filename, version_id, body = '', headers = {}, timestamp = nil)
+    params = "?version=#{version_id}"
+    params += "&firstSaveTimestamp=#{timestamp}" if timestamp
+    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}#{params}", body, headers
     last_response.body
   end
 

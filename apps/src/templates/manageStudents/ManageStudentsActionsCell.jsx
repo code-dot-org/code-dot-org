@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent, RowType} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -19,15 +19,17 @@ const styles = {
 class ManageStudentActionsCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
-    sectionId: PropTypes.number.isRequired,
+    sectionId: PropTypes.number,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
+    rowType: PropTypes.oneOf(Object.values(RowType)),
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
     removeStudent: PropTypes.func,
     saveStudent: PropTypes.func,
+    addStudent: PropTypes.func,
   };
 
   state = {
@@ -64,17 +66,30 @@ class ManageStudentActionsCell extends Component {
   };
 
   onCancel = () => {
-    this.props.cancelEditingStudent(this.props.id);
+    if (this.props.rowType === RowType.NEW_STUDENT) {
+      this.props.removeStudent(this.props.id);
+    } else {
+      this.props.cancelEditingStudent(this.props.id);
+    }
   };
 
   onSave = () => {
-    this.props.saveStudent(this.props.id);
+    if (this.props.rowType === RowType.NEW_STUDENT) {
+      this.onAdd();
+    } else {
+      this.props.saveStudent(this.props.id);
+    }
+  };
+
+  onAdd = () => {
+    this.props.addStudent(this.props.id);
   };
 
   render() {
+    const {rowType, isEditing} = this.props;
     return (
       <div>
-        {!this.props.isEditing &&
+        {!isEditing &&
           <QuickActionsCell>
             <PopUpMenu.Item
               onClick={this.onEdit}
@@ -91,18 +106,28 @@ class ManageStudentActionsCell extends Component {
             </PopUpMenu.Item>
           </QuickActionsCell>
         }
-        {this.props.isEditing &&
+        {(isEditing && (rowType !== RowType.ADD)) &&
           <div>
             <Button
               onClick={this.onSave}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.orange}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
             />
             <Button
               onClick={this.onCancel}
-              color={Button.ButtonColor.blue}
+              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+            />
+          </div>
+        }
+        {(rowType === RowType.ADD) &&
+          <div>
+            <Button
+              onClick={this.onAdd}
+              color={Button.ButtonColor.gray}
+              text={i18n.add()}
+              disabled={this.props.isSaving || this.props.disableSaving}
             />
           </div>
         }
@@ -112,8 +137,14 @@ class ManageStudentActionsCell extends Component {
           isOpen={this.state.deleting}
           style={{paddingLeft: 20, paddingRight: 20, paddingBottom: 20}}
         >
-          <h2 style={styles.heading}>{i18n.removeStudent()}</h2>
-          <div>{i18n.removeStudentConfirm()}</div>
+          <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
+          <div>
+            {i18n.removeStudentConfirm1() + ' '}
+            <a href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
+              {i18n.removeStudentConfirm2()}
+            </a>
+            {' ' + i18n.removeStudentConfirm3()}
+          </div>
           <DialogFooter>
             <Button
               text={i18n.dialogCancel()}
@@ -147,5 +178,8 @@ export default connect(state => ({}), dispatch => ({
   },
   saveStudent(id) {
     dispatch(saveStudent(id));
+  },
+  addStudent(id) {
+    dispatch(addStudent(id));
   },
 }))(ManageStudentActionsCell);

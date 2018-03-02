@@ -103,13 +103,6 @@ jobs:
             yarn -V
 
       - run:
-          name: fix weird gem issue
-          command: |
-            bundle exec gem install rmagick
-            bundle update rmagick
-            sudo ldconfig /usr/local/lib
-
-      - run:
           name: rake install
           command: |
             mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"

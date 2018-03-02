@@ -39,7 +39,7 @@ Hear from current students as they talk about the topics covered in each course 
 
 ### **Sign up for CS Discoveries**
 
-<%=view :display_video_thumbnail, id: "signup", video_code: "g4qfsH8bc8s", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "g4qfsH8bc8s", play_button: 'center' %>
 
 [**YouTube**](http://www.youtube.com/watch?v=g4qfsH8bc8s) |
 [**Download**](https://videos.code.org/cs-discoveries/what-is-cs-discoveries.mp4)

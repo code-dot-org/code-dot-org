@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 ---
 title: Workshops & Professional Learning Program
 nav: regional_partner_playbook_nav

@@ -7,8 +7,8 @@ import { randomValue } from '../utils';
  * Create a new WordSearch.
  */
 export default class WordSearch extends Subtype {
-  constructor(maze, studioApp, config) {
-    super(maze, studioApp, config);
+  constructor(maze, config) {
+    super(maze, config);
     this.goal_ = config.level.searchWord;
     this.visited_ = '';
     this.map_ = config.level.map;

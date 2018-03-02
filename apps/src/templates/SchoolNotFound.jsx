@@ -1,9 +1,8 @@
-/* globals google */
-
 import React, { Component, PropTypes } from 'react';
 import i18n from "@cdo/locale";
 import { STATES } from '../geographyConstants';
 import { styles } from './census2017/censusFormStyles';
+import GoogleSchoolLocationSearchField from './GoogleSchoolLocationSearchField';
 
 const schoolTypes = [
   '',
@@ -269,56 +268,6 @@ export default class SchoolNotFound extends Component {
         <div style={styles.clear}/>
         {singleLineLayout && showError && errorDiv}
       </div>
-    );
-  }
-
-}
-
-class GoogleSchoolLocationSearchField extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    // If true, this field uses the React controlled input pattern and must
-    // have the value/onChange handlers hooked up to work properly.
-    // If false, is uncontrolled and used only as a submittable <form> element.
-    // @see https://reactpatterns.com/#controlled-input
-    isControlledInput: PropTypes.bool,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-    style: PropTypes.object,
-  };
-
-  value() {
-    if (this.props.isControlledInput) {
-      return this.props.value;
-    }
-    return this.searchBoxRef.value;
-  }
-
-  componentDidMount() {
-    // Docs: https://developers.google.com/maps/documentation/javascript/places-autocomplete#places_searchbox
-    const searchBox = new google.maps.places.SearchBox(this.searchBoxRef);
-    if (this.props.isControlledInput) {
-      searchBox.addListener('places_changed', () => {
-        this.props.onChange({target: this.searchBoxRef});
-      });
-    }
-  }
-
-  render() {
-    const conditionalProps = this.props.isControlledInput ? {
-      value: this.props.value,
-      onChange: this.props.onChange,
-    } : {};
-
-    return (
-      <input
-        ref={el => this.searchBoxRef = el}
-        type="text"
-        name={this.props.name}
-        placeholder={i18n.schoolLocationSearchPlaceholder()}
-        style={this.props.style}
-        {...conditionalProps}
-      />
     );
   }
 }

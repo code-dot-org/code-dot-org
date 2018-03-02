@@ -10,7 +10,7 @@ const exampleCard = {
 
 export default storybook => {
   return storybook
-    .storiesOf('VerticalImageResourceCard', module)
+    .storiesOf('Cards/VerticalImageResourceCard', module)
     .withReduxStore()
     .addStoryTable([
       {

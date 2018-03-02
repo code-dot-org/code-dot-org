@@ -106,6 +106,11 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
       SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
       SUBJECT_CSD_FIT = SUBJECT_FIT
+    ],
+    COURSE_CSF => [
+      SUBJECT_CSF_101 = 'Intro Workshop'.freeze,
+      SUBJECT_CSF_201 = 'Deep Dive Workshop'.freeze,
+      SUBJECT_CSF_FIT = SUBJECT_FIT
     ]
   }.freeze
 
@@ -191,6 +196,11 @@ class Pd::Workshop < ActiveRecord::Base
 
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
+
+  before_save :assign_regional_partner, if: -> {organizer_id_changed?}
+  def assign_regional_partner
+    self.regional_partner = organizer.try {|o| o.regional_partners.first}
+  end
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
@@ -398,7 +408,8 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_TEACHER_CON,
       SUBJECT_CSP_FIT,
       SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include? subject
   end
 
@@ -609,7 +620,8 @@ class Pd::Workshop < ActiveRecord::Base
   def fit_weekend?
     [
       SUBJECT_CSP_FIT,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include?(subject)
   end
 

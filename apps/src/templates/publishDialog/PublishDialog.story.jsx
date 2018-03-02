@@ -7,7 +7,7 @@ const PROJECT_TYPE = 'MY_PROJECT_TYPE';
 
 export default storybook => {
   return storybook
-    .storiesOf('PublishDialog', module)
+    .storiesOf('Dialogs/PublishDialog', module)
     .addStoryTable([
       {
         name: 'dialog open',

@@ -60,7 +60,13 @@ end
 gem 'rack-cache'
 
 group :development, :test do
-  gem 'rerun', '~> 0.10.0'
+  gem 'rerun'
+
+  # Ref: https://github.com/e2/ruby_dep/issues/24
+  # https://github.com/e2/ruby_dep/issues/25
+  # https://github.com/e2/ruby_dep/issues/30
+  gem 'ruby_dep', '~> 1.3.1'
+
   gem 'shotgun'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
@@ -89,7 +95,7 @@ group :development, :test do
   gem 'eyes_selenium', '3.14.2'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
-  gem 'minitest-reporters'
+  gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
@@ -113,7 +119,8 @@ gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
 
-gem 'gctools'
+# Ref: https://github.com/tmm1/gctools/pull/17
+gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -138,7 +145,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 1.15.0'
-gem 'devise', '~> 4.2.0'
+gem 'devise', '~> 4.4.0'
 gem 'devise_invitable', '~> 1.6.0'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
@@ -162,7 +169,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger' # error monitoring
 
-gem 'newrelic_rpm', '~> 3.16.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
