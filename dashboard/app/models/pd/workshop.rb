@@ -197,7 +197,7 @@ class Pd::Workshop < ActiveRecord::Base
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 
-  before_save :assign_regional_partner, if: -> {organizer_id_changed?}
+  before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
   def assign_regional_partner
     self.regional_partner = organizer.try {|o| o.regional_partners.first}
   end
@@ -230,10 +230,18 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
   end
 
-  def self.facilitated_or_organized_by(user)
+  # scopes to workshops managed by the user, which means the user is any of:
+  # - the organizer
+  # - a facilitator
+  # - a program manager for the assigned regional partner
+  def self.managed_by(user)
     left_outer_joins(:facilitators).
-      where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id).
-      distinct
+      where(
+        'pd_workshops_facilitators.user_id = ? OR organizer_id = ? OR regional_partner_id IN (?)',
+        user.id,
+        user.id,
+        user.regional_partner_program_managers.select(:regional_partner_id)
+      ).distinct
   end
 
   def self.attended_by(teacher)
