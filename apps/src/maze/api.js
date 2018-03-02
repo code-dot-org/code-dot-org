@@ -360,14 +360,18 @@ exports.hasLettuce = API_FUNCTION(function (id) {
  */
 
 exports.plant = API_FUNCTION(function (id) {
-  Maze.controller.subtype.plant(id);
+  if (Maze.controller.subtype.tryPlant()) {
+    Maze.executionInfo.queueAction('plant', id);
+  }
 });
 
 exports.atSoil = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_soil', id);
   return Maze.controller.subtype.atSoil(id);
 });
 
 exports.atSprout = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_sprout', id);
   return Maze.controller.subtype.atSprout(id);
 });
 
