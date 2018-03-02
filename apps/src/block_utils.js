@@ -5,6 +5,7 @@ const ATTRIBUTES_TO_CLEAN = [
   'deletable',
   'movable',
 ];
+const DEFAULT_COLOR = [184, 1.00, 0.74];
 
 /**
  * Create the xml for a level's toolbox
@@ -376,7 +377,7 @@ const determineInputs = function (text, args) {
           options: arg.options,
           label,
         });
-      } else if (arg.type) {
+      } else {
         inputs.push({
           mode: VALUE_INPUT,
           name: arg.name,
@@ -475,6 +476,8 @@ exports.createJsWrapperBlockCreator = function (
    *   block without a previous statement connector.
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
+   *
+   * @returns {string} the name of the generated block
    */
   return ({
     color,
@@ -496,6 +499,7 @@ exports.createJsWrapperBlockCreator = function (
       throw new Error('Expression blocks require a name');
     }
     args = args || [];
+    color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
 
     blockly.Blocks[blockName] = {
@@ -570,5 +574,7 @@ exports.createJsWrapperBlockCreator = function (
         return `${prefix}${func}(${values.join(', ')});\n`;
       }
     };
+
+    return blockName;
   };
 };
