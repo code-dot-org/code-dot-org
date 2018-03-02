@@ -59,26 +59,18 @@ describe('Artist', () => {
   describe('drawing with patterns', () => {
     it('draws a pattern backwards', () => {
       let artist = new Artist();
-      let distance = -100;
       let width = 100;
       let height = 100;
-      let img = new Image();
-      let imgSourceX = width/2;
-      let imgSourceY = 0;
-      let imgSourceWidth = distance;
-      let imgSourceHeight = height;
-      let canvasX = -height / 4
-      let canvasY = -height / 2;
-      let imgWidth = distance + imgSourceHeight;
-      let imgHeight = height;
+      let img = new Image(width, height);
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const output = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      debugger
+      const setDrawPatternBackwardSpy = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
       artist.visualization.drawForwardLineWithPattern_(-100);
 
-      expect(artist.visualization.ctxScratch.drawImage.calledWith(img,imgSourceX, imgSourceY, imgSourceWidth, imgSourceHeight, canvasX, canvasY, imgWidth, imgHeight)).to.be.true;
+      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(img, 50, 0, -100, 100, -25, -50, -50, 100)
+
+      setDrawPatternBackwardSpy.restore()
     });
   });
 
