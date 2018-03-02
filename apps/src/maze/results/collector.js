@@ -2,12 +2,15 @@ const studioApp = require('../../StudioApp').singleton;
 
 import ResultsHandler from './resultsHandler';
 import { TestResults } from '../../constants.js';
+const getStore = require('../../redux').getStore;
 
 import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from '../locale';
 
 import {
   setCollectorMinRequired,
+  resetCollectorCurrentCollected,
+  setCollectorCurrentCollected,
 } from '../redux';
 
 const TOO_MANY_BLOCKS = 0;
@@ -26,11 +29,19 @@ export default class CollectorHandler extends ResultsHandler {
 
     this.minCollected_ = config.level.minCollected;
 
-    if (this.maze_.store) {
-      this.maze_.store.dispatch(setCollectorMinRequired(this.minCollected_));
-    }
+    this.store_ = getStore();
+
+    this.store_.dispatch(setCollectorMinRequired(this.minCollected_));
 
     // Initialize subtype-specific event listeners
+
+    this.maze_.subtype.on('reset', () => {
+      this.store_.dispatch(resetCollectorCurrentCollected());
+    });
+
+    this.maze_.subtype.on('collected', (totalCollected) => {
+      this.store_.dispatch(setCollectorCurrentCollected(totalCollected));
+    });
 
     this.maze_.subtype.on('collectedTooMany', () => {
       this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
@@ -77,9 +88,7 @@ export default class CollectorHandler extends ResultsHandler {
    *         on the previous run (persists through resets)
    */
   getLastTotalCollected() {
-    if (this.maze_.store) {
-      return this.maze_.store.getState().maze.collectorLastCollected;
-    }
+    return this.store_.getState().maze.collectorLastCollected;
   }
 
   /**
