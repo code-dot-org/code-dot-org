@@ -28,8 +28,6 @@ const tiles = require('./tiles');
 
 const MazeController = require('./mazeController');
 
-const createResultsHandlerForSubtype = require('./results/utils').createResultsHandlerForSubtype;
-
 module.exports = class Maze {
   constructor() {
     this.scale = {
@@ -42,11 +40,10 @@ module.exports = class Maze {
 
     this.cachedBlockStates = [];
 
-    this.resultsHandler = undefined;
-    this.response = undefined;
-    this.result = undefined;
-    this.testResults = undefined;
-    this.waitingForReport = undefined;
+    this.response;
+    this.result;
+    this.testResults;
+    this.waitingForReport;
 
     //TODO: Make configurable.
     studioApp().setCheckForEmptyBlocks(true);
@@ -95,8 +92,6 @@ module.exports = class Maze {
       },
       reduxStore: getStore()
     });
-
-    this.resultsHandler = createResultsHandlerForSubtype(this.controller, config);
 
     if (this.controller.subtype.overrideStepSpeed) {
       this.scale.stepSpeed = this.controller.subtype.overrideStepSpeed;
@@ -413,7 +408,7 @@ module.exports = class Maze {
           break;
         default:
           // App-specific failure.
-          this.testResults = this.resultsHandler.getTestResults(
+          this.testResults = this.controller.subtype.getTestResults(
             this.executionInfo.terminationValue());
           this.result =
             this.testResults >= TestResults.MINIMUM_PASS_RESULT
@@ -558,7 +553,7 @@ module.exports = class Maze {
       this.checkSuccess();
     }
 
-    this.resultsHandler.onExecutionFinish();
+    this.controller.subtype.onExecutionFinish();
   }
 
   /**
@@ -578,10 +573,10 @@ module.exports = class Maze {
     let message;
     if (studioApp().hasContainedLevels) {
       message = getContainedLevelResultInfo().feedback;
-    } else if (this.resultsHandler.hasMessage(this.testResults)) {
+    } else if (this.controller.subtype.hasMessage(this.testResults)) {
       // If there was an app-specific error
       // add it to the options passed to studioApp().displayFeedback().
-      message = this.resultsHandler.getMessage(this.executionInfo.terminationValue());
+      message = this.controller.subtype.getMessage(this.executionInfo.terminationValue());
     }
 
     if (message) {
@@ -593,7 +588,7 @@ module.exports = class Maze {
     // the page for iteration; we only refrain from doing so if we know this is
     // the "final" feedback display triggered by the Finish Button
     if (!finalFeedback) {
-      options.preventDialog = this.resultsHandler.shouldPreventFeedbackDialog(
+      options.preventDialog = this.controller.subtype.shouldPreventFeedbackDialog(
         options.feedbackType,
       );
     }
@@ -789,22 +784,10 @@ module.exports = class Maze {
   }
 
   /**
-   * Certain Maze types - namely, WordSearch, Collector, and any Maze with
-   * Quantum maps, don't want to check for success until the user's code
-   * has finished running completely.
-   */
-  shouldCheckSuccessOnMove() {
-    if (this.controller.map.hasMultiplePossibleGrids()) {
-      return false;
-    }
-    return this.resultsHandler.shouldCheckSuccessOnMove();
-  }
-
-  /**
    * Check whether all goals have been accomplished
    */
   checkSuccess() {
-    const succeeded = this.resultsHandler.succeeded();
+    const succeeded = this.controller.subtype.succeeded();
 
     if (succeeded) {
       // Finished.  Terminate the user's program.
