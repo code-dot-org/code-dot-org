@@ -93,7 +93,6 @@ module.exports = class Maze {
         loadAudio: studioApp().loadAudio.bind(studioApp()),
         getTestResults: studioApp().getTestResults.bind(studioApp()),
       },
-      reduxStore: getStore()
     });
 
     this.resultsHandler = createResultsHandlerForSubtype(this.controller, config);
