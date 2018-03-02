@@ -526,6 +526,23 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
+  DaemonLowDiskspaceAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - arn:aws:sns:us-east-1:475661607190:CDO-Urgent
+      AlarmDescription: Send page if daemon disk space utilization exceeds 80% for an hour
+      AlarmName: LowDiskSpace
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: StackName
+          Value: <%=stack_name%>
+      EvaluationPeriods: 60
+      MetricName: DiskSpaceUtilization
+      Namespace: Linux System
+      Period: 60
+      Statistic: Average
+      Threshold: 90
 <%end-%>
 <% if database -%>
   Database:
