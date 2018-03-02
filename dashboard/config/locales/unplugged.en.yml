@@ -164,9 +164,6 @@ en:
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: 'translation missing: en-US.data.unplugged.SongwritingWithParameters_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.SongwritingWithParameters_2018.desc'
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
