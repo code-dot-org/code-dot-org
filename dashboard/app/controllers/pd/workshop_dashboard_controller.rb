@@ -10,6 +10,7 @@ module Pd
       else
         permission_list = []
         permission_list << :workshop_organizer if current_user.workshop_organizer?
+        permission_list << :program_manager if current_user.program_manager?
         permission_list << :facilitator if current_user.facilitator?
         # CSF Facilitators have special permissions. For the time being, they are the only ones that have special permissions
         permission_list << :csf_facilitator if Pd::CourseFacilitator.exists?(facilitator: current_user, course: Pd::Workshop::COURSE_CSF)
