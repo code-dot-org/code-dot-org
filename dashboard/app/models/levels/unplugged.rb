@@ -29,9 +29,11 @@ class Unplugged < Level
   end
 
   def assign_attributes(new_attributes)
+    # Use the existing title and description if they are not provided. When cloning,
+    # This gives the new level the title and description of the old level.
     i18n_strings = {
-      'title' => new_attributes.delete(:title),
-      'desc' => new_attributes.delete(:description),
+      'title' => new_attributes[:title] ? new_attributes.delete(:title) : title,
+      'desc' => new_attributes[:description] ? new_attributes.delete(:description) : description,
     }
     update_i18n(new_attributes[:name], i18n_strings)
 
