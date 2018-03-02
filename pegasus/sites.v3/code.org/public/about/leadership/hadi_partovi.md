@@ -8,7 +8,7 @@ theme: responsive
 <img src='<%= avatar_image('Hadi Partovi') %>'/ width='320px'>
 <br/>
 <br/>
-Hadi Partovi is a tech entrepreneur and investor, and CEO of the education non-profit Code.org. 
+Hadi Partovi is a tech entrepreneur and investor, and CEO of the education nonprofit Code.org. 
 
 Born in Tehran, Iran, Hadi grew up during the Iran-Iraq war. His school did not offer computer science classes, so he taught himself to code at home on a Commodore 64. After immigrating to the United States, he spent his summers working as a software engineer to help pay his way through high school and college. Upon graduating from Harvard University with a Masters degree in computer science, Hadi pursued a career in technology starting at Microsoft where he rose into the executive ranks. He founded two startups – the first was a huge success and the second a dismal failure – and he now invests and advises other technology startups.
 
