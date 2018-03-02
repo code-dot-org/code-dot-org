@@ -292,7 +292,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    assert_queries 8 do
+    assert_queries 9 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
