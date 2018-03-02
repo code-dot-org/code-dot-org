@@ -7,7 +7,6 @@ class DesignWorkspace extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
     handleDragStart: PropTypes.func,
-    currentScreenId: PropTypes.string.isRequired,
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -44,7 +43,6 @@ class DesignWorkspace extends React.Component {
         showMakerToggle={this.props.showMakerToggle}
       />
       <DesignModeBox
-        currentScreenId={this.props.currentScreenId}
         element={this.props.element}
         elementIdList={this.props.elementIdList}
         handleChange={this.props.handleChange}

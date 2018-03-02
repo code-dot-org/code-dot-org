@@ -5,7 +5,6 @@ import DesignProperties from './designProperties';
 
 export default class DesignModeBox extends React.Component {
   static propTypes = {
-    currentScreenId: PropTypes.string.isRequired,
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -67,7 +66,6 @@ export default class DesignModeBox extends React.Component {
         />
         <div id="design-properties" style={styles.designProperties}>
           <DesignProperties
-            currentScreenId={this.props.currentScreenId}
             element={this.props.element}
             elementIdList={this.props.elementIdList}
             handleChange={this.props.handleChange}

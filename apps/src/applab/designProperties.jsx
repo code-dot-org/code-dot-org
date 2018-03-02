@@ -7,12 +7,12 @@ import * as elementUtils from './designElements/elementUtils';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
+import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
 
 let nextKey = 0;
 
 export default class DesignProperties extends React.Component {
   static propTypes = {
-    currentScreenId: PropTypes.string.isRequired,
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -208,7 +208,6 @@ export default class DesignProperties extends React.Component {
                 }
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
                 <CopyElementToScreenButton
-                  currentScreenId={this.props.currentScreenId}
                   handleCopyElementToScreen={function() { debugger; }}
                   screenIds={this.props.screenIds}
                 />
