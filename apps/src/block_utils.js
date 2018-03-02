@@ -15,6 +15,20 @@ exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
+exports.appendCategory = function (toolboxXml, blockTypes) {
+  const parser = new DOMParser();
+  const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
+  const customCategory = toolboxDom.createElement('category');
+  customCategory.setAttribute('name', 'Custom');
+  blockTypes.forEach(blockName => {
+    const block = toolboxDom.createElement('block');
+    block.setAttribute('type', blockName);
+    customCategory.appendChild(block);
+  });
+  toolboxDom.getRootNode().firstChild.appendChild(customCategory);
+  return xml.serialize(toolboxDom);
+};
+
 /**
  * Create the xml for a block of the given type
  * @param {string} type The type of the block
