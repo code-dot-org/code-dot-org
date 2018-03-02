@@ -276,41 +276,59 @@ export default class Bee extends Gatherer {
 
   // API
 
-  getNectar(id) {
+  /**
+   * Attempt to harvest nectar from the current location; terminate the
+   * execution if this is not a valid place at which to get nectar.
+   *
+   * This method is preferred over animateGetNectar for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @return {boolean} whether or not this attempt was successful
+   */
+  tryGetNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     // Make sure we're at a flower.
     if (!this.isFlower(row, col)) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
-      return;
+      return false;
     }
     // Nectar is positive.  Make sure we have it.
     if (this.flowerRemainingCapacity(row, col) === 0) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.FLOWER_EMPTY);
-      return;
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('nectar', id);
     this.gotNectarAt(row, col);
+    return true;
   }
 
-  // Note that this deliberately does not check whether bee has gathered nectar.
-  makeHoney(id) {
+  /**
+   * Attempt to make honey at the current location; terminate the execution if
+   * this is not a valid place at which to make honey.
+   * Note that this deliberately does not check whether bee has gathered nectar.
+   *
+   * This method is preferred over animateGetHoney for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @return {boolean} whether or not this attempt was successful
+   */
+  tryMakeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     if (!this.isHive(row, col)) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_HONEYCOMB);
-      return;
+      return false;
     }
     if (this.hiveRemainingCapacity(row, col) === 0) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.HONEYCOMB_FULL);
-      return;
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('honey', id);
     this.madeHoneyAt(row, col);
+    return true;
   }
 
   nectarRemaining(userCheck=false) {
@@ -331,6 +349,16 @@ export default class Bee extends Gatherer {
     return this.hiveRemainingCapacity(row, col);
   }
 
+  /**
+   * Display the harvesting of nectar from the current location; raise a runtime
+   * error if the current location is not a valid spot from which to gather
+   * nectar.
+   *
+   * This method is preferred over tryGetNectar for live operation (ie when
+   * actually displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell has no nectar.
+   */
   animateGetNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
@@ -347,6 +375,15 @@ export default class Bee extends Gatherer {
     this.drawer.updateNectarCounter(this.nectars_);
   }
 
+  /**
+   * Display the making of honey from the current location; raise a runtime
+   * error if the current location is not a valid spot at which to make honey.
+   *
+   * This method is preferred over tryMakeHoney for live operation (ie when
+   * actually displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell is not a hive.
+   */
   animateMakeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
@@ -360,7 +397,6 @@ export default class Bee extends Gatherer {
     this.madeHoneyAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);
-
     this.drawer.updateHoneyCounter(this.honey_);
   }
 

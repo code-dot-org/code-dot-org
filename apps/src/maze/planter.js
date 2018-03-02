@@ -29,25 +29,33 @@ export default class Planter extends Subtype {
     this.drawer = new PlanterDrawer(this.maze_.map, this.skin_, svg, this);
   }
 
-  atSprout(id) {
-    return this.atType(PlanterCell.FeatureType.SPROUT, id);
+  atSprout() {
+    return this.atType(PlanterCell.FeatureType.SPROUT);
   }
 
-  atSoil(id) {
-    return this.atType(PlanterCell.FeatureType.SOIL, id);
+  atSoil() {
+    return this.atType(PlanterCell.FeatureType.SOIL);
   }
 
-  atType(type, id) {
+  atType(type) {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     const cell = this.getCell(row, col);
 
-    this.maze_.executionInfo.queueAction('at_' + cell.featureName(), id);
     return cell.featureType() === type;
   }
 
-  plant(id) {
+  /**
+   * Attempt to plant a sprout at the current location; terminate the execution
+   * if this is not a valid place at which to plant.
+   *
+   * This method is preferred over animatePlant for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @return {boolean} whether or not this attempt was successful
+   */
+  tryPlant() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
@@ -55,14 +63,23 @@ export default class Planter extends Subtype {
 
     if (cell.featureType() !== PlanterCell.FeatureType.SOIL) {
       this.maze_.executionInfo.terminateWithValue(TerminationValue.PLANT_IN_NON_SOIL);
-      return;
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('plant', id);
     cell.setFeatureType(PlanterCell.FeatureType.SPROUT);
+    return true;
   }
 
-  animatePlant(id) {
+  /**
+   * Display the planting of a sprout at the current location; raise a runtime
+   * error if the current location is not a valid spot at which to plant.
+   *
+   * This method is preferred over tryPlant for live operation (ie when actually
+   * displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell has no nectar.
+   */
+  animatePlant() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
