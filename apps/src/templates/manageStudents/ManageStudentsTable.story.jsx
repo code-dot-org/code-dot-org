@@ -10,6 +10,7 @@ const initialState = {
     loginType: '',
     studentData: {},
     sectionId: null,
+    addStatus: {},
   },
 };
 
@@ -235,6 +236,7 @@ export default storybook => {
               editingData={{}}
               id={53}
               loginType={SectionLoginType.email}
+              addStatus={{}}
             />
           </Provider>
         )
@@ -249,6 +251,7 @@ export default storybook => {
               editingData={{}}
               id={53}
               loginType={SectionLoginType.word}
+              addStatus={{}}
             />
           </Provider>
         )
@@ -263,6 +266,7 @@ export default storybook => {
               editingData={{}}
               id={53}
               loginType={SectionLoginType.picture}
+              addStatus={{}}
             />
           </Provider>
         )
@@ -277,6 +281,7 @@ export default storybook => {
               editingData={{}}
               id={53}
               loginType={SectionLoginType.google_classroom}
+              addStatus={{}}
             />
           </Provider>
         )
@@ -291,6 +296,7 @@ export default storybook => {
               editingData={{}}
               id={53}
               loginType={SectionLoginType.clever}
+              addStatus={{}}
             />
           </Provider>
         )
