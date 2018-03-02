@@ -14,7 +14,7 @@ export default class PlanterHandler extends ResultsHandler {
     // Initialize subtype-specific event listeners
 
     this.maze_.subtype.on('plantInNonSoil', () => {
-      this.maze_.executionInfo.terminateWithValue(PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL);
+      this.executionInfo.terminateWithValue(PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL);
     });
   }
 
@@ -45,7 +45,7 @@ export default class PlanterHandler extends ResultsHandler {
    * @override
    */
   terminateWithAppSpecificValue() {
-    const executionInfo = this.maze_.executionInfo;
+    const executionInfo = this.executionInfo;
 
     if (!this.plantedEverything()) {
       executionInfo.terminateWithValue(PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE);
