@@ -96,7 +96,7 @@ class YourSchool extends Component {
         </h3>
         <YourSchoolResources/>
         {!this.props.hideMap && (
-           <div>
+           <div id="census-map">
              <h1 style={styles.heading}>
                Does your school teach Computer Science?
              </h1>
