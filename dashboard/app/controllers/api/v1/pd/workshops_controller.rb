@@ -120,11 +120,13 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def update
     adjust_facilitators
 
-    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-      params.require(:pd_workshop).delete(:regional_partner_id)
-    end
+    # The below user types have permission to set the regional partner. CSF Facilitators
+    # can initially set the regional partner, but cannot edit it once it is set.
+    can_update_regional_partner = current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) ||
+      current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
+      current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
-    if @workshop.update(workshop_params)
+    if @workshop.update(workshop_params(can_update_regional_partner))
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -225,8 +227,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
   end
 
-  def workshop_params
-    params.require(:pd_workshop).permit(
+  def workshop_params(can_update_regional_partner = true)
+    allowed_params = [
       :location_name,
       :location_address,
       :capacity,
@@ -237,6 +239,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :notes,
       :regional_partner_id,
       sessions_attributes: [:id, :start, :end, :_destroy],
-    )
+    ]
+
+    allowed_params.delete :regional_partner_id unless can_update_regional_partner
+
+    params.require(:pd_workshop).permit(*allowed_params)
   end
 end
