@@ -24,6 +24,8 @@ export const censusFormPrefillDataShape = PropTypes.shape({
 class CensusForm extends Component {
   static propTypes = {
     prefillData: censusFormPrefillDataShape,
+    schoolDropdownOption: PropTypes.object,
+    onSchoolDropdownChange: PropTypes.func,
   };
 
   constructor(props) {
@@ -44,7 +46,6 @@ class CensusForm extends Component {
         role: prefillData['isTeacher'] ? 'TEACHER' : '',
         country: prefillData['schoolCountry'] || 'United States',
         hoc: '',
-        nces: prefillData['schoolId'] || '',
         schoolName: prefillData['schoolName'] || '',
         schoolCity: '',
         schoolState: prefillData['schoolState'] || '',
@@ -72,6 +73,10 @@ class CensusForm extends Component {
         [field]: event.target.value
       }
     }, this.checkShowFollowUp);
+  };
+
+  handleSchoolDropdownChange = (field, event) => {
+    this.props.onSchoolDropdownChange(event);
   };
 
   handleDropdownChange = (field, event) => {
@@ -187,9 +192,19 @@ class CensusForm extends Component {
     });
   }
 
+  schoolId() {
+    if (this.props.schoolDropdownOption) {
+      return this.props.schoolDropdownOption.value;
+    } else if (this.props.prefillData && this.props.prefillData['schoolId']) {
+      return this.props.prefillData['schoolId'];
+    } else {
+      return '';
+    }
+  }
+
   validateSchoolDropdown() {
     if (this.state.submission.country === "United States") {
-      if (this.state.submission.nces) {
+      if (this.schoolId()) {
         return false;
       } else {
         return true;
@@ -201,7 +216,7 @@ class CensusForm extends Component {
 
   validateSchool() {
     const {submission} = this.state;
-    if (submission.country === "United States" && submission.nces === "-1") {
+    if (submission.country === "United States" && this.schoolId() === "-1") {
       return (this.validateNotBlank(submission.schoolName) || this.validateNotBlank(submission.schoolState) || this.validateNotBlank(submission.schoolCity)
       || this.validateNotBlank(submission.schoolType) || this.validateNotBlank(submission.schoolZip));
     } else {
@@ -296,6 +311,13 @@ class CensusForm extends Component {
                             errors.nces ||
                             errors.share);
     const US = submission.country === "United States";
+    const prefillData = this.props.prefillData || {};
+    let schoolId = prefillData['schoolId'] || '';
+    const schoolDropdownOption = this.props.schoolDropdownOption;
+    if (schoolDropdownOption) {
+      schoolId = undefined;
+    }
+    const showSchoolNotFound = US && (schoolId === '-1' || (schoolDropdownOption && schoolDropdownOption.value === "-1"));
 
     return (
       <div id="form">
@@ -312,12 +334,13 @@ class CensusForm extends Component {
           />
           {US && (
             <SchoolAutocompleteDropdownWithLabel
-              setField={this.handleDropdownChange}
-              value={submission.nces}
+              setField={this.handleSchoolDropdownChange}
+              value={schoolId}
+              schoolDropdownOption={schoolDropdownOption}
               showErrorMsg={errors.nces}
             />
           )}
-          {US && this.state.submission.nces === "-1" && (
+          {showSchoolNotFound && (
             <SchoolNotFound
               onChange={this.handleChange}
               schoolName={submission.schoolName}
