@@ -7,7 +7,7 @@ Code.org is selecting organizations to become Regional Partners.  These partners
 
 The ideal Regional Partner is a regional education unit, a non-profit, university, or educational service district with existing, positive relationships with nearby school districts and the local education community.
 
-Applications for the Regional Partner program close on July 21, 2017!
+Applications for the Regional Partner program close on March 30, 2018!
 
 <br>
 [<button>Learn more about the program and apply today!</button>](/educate/regional-partner)

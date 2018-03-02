@@ -1,4 +1,5 @@
 hidden false
+has_lesson_plan true
 
 stage 'Text Compression'
 named_level 'Text Compression'

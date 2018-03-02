@@ -13,10 +13,9 @@ var TestResults = constants.TestResults;
  * @param {FeedbackOptions} options
  * @param {DisplayBlocks} missingRequiredBlocks
  * @param {DisplayBlocks} missingRecommendedBlocks
- * @param {Object} studioApp TODO (br-pair): can we not pass in the studioApp
  * @constructor
  */
-var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommendedBlocks, studioApp) {
+var FeedbackBlocks = function (options, missingRequiredBlocks, missingRecommendedBlocks) {
   // Check whether blocks are embedded in the hint returned from dashboard.
   // See below comment for format.
   if (options.feedbackType !== TestResults.MISSING_BLOCK_UNFINISHED &&

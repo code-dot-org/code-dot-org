@@ -92,65 +92,24 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     ).valid?
   end
 
-  test 'Updates regional partner' do
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '1200390',
-          grade_levels: ['High School']
-        }
-      ).to_json
-    )
+  test 'Matches regional partner' do
+    state = 'OH'
+    zip = '45242'
 
-    assert_equal 'A+ College Ready', regional_partner_contact.regional_partner.name
+    regional_partner = create :regional_partner, name: "partner_OH_45242"
+    regional_partner.mappings.find_or_create_by!(state: state)
+    regional_partner.mappings.find_or_create_by!(zip_code: zip)
 
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '1200390',
-          grade_levels: ['Middle School']
-        }
-      ).to_json
-    )
+    regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.merge(
+      {
+        school_type: 'public',
+        school_district_other: false,
+        school_district: 'District',
+        school_state: state,
+        school_zipcode: zip
+      }
+    ).to_json
 
-    assert_equal 'Academy for CS Education - Florida International University', regional_partner_contact.regional_partner.name
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '1200390',
-          grade_levels: ['Elementary School']
-        }
-      ).to_json
-    )
-
-    assert_nil regional_partner_contact.regional_partner
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '4800004',
-          grade_levels: ['High School']
-        }
-      ).to_json
-    )
-
-    assert_equal 'Center for STEM Education, The University of Texas at Austin', regional_partner_contact.regional_partner.name
-
-    regional_partner_contact = create(
-      :pd_regional_partner_contact, form_data: FORM_DATA.merge(
-        {
-          school_type: 'public',
-          school_district: '100005',
-          grade_levels: ['Elementary School']
-        }
-      ).to_json
-    )
-
-    assert_nil regional_partner_contact.regional_partner
+    assert_equal regional_partner.id, regional_partner_contact.regional_partner_id
   end
 end

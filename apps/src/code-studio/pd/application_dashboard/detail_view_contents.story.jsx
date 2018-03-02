@@ -15,7 +15,8 @@ export default storybook => {
           <DetailViewContents
             applicationId="1"
             applicationData={{
-              regionalPartner: 'partner',
+              course_name: 'CS Discoveries',
+              regional_partner_name: 'partner',
               notes: 'notes',
               status: 'unreviewed',
               school_name: 'School Name',

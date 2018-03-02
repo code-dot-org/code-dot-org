@@ -3,7 +3,7 @@ import TopCourse from './TopCourse';
 
 export default storybook => {
   return storybook
-    .storiesOf('TopCourse', module)
+    .storiesOf('Cards/TopCourse', module)
     .withReduxStore()
     .addStoryTable([
       {

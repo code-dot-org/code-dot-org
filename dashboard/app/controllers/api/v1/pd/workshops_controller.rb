@@ -116,6 +116,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
+
+    unless current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) || current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      params.require(:pd_workshop).delete(:regional_partner_id)
+    end
+
     if @workshop.update(workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -170,7 +175,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     authenticate_user!
 
     unless current_user.admin? || current_user.workshop_admin? ||
-      current_user.workshop_organizer? || current_user.facilitator?
+      current_user.workshop_organizer? || current_user.program_manager? || current_user.facilitator?
       raise CanCan::AccessDenied.new
     end
 
@@ -228,7 +233,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :course,
       :subject,
       :notes,
-      sessions_attributes: [:id, :start, :end, :_destroy]
+      :regional_partner_id,
+      sessions_attributes: [:id, :start, :end, :_destroy],
     )
   end
 end

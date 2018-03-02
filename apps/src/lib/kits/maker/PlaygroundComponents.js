@@ -240,7 +240,6 @@ function initializeAccelerometer(board) {
     board,
     controller: PlaygroundIO.Accelerometer
   });
-  // TODO (bbuchanan): Push these helpers down into playground-io
   accelerometer.start = function () {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };

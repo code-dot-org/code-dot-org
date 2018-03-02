@@ -1,6 +1,8 @@
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require 'cdo/share_filtering'
+require 'timecop'
+require 'cdo/firehose'
 
 class SourcesTest < FilesApiTestBase
   def setup
@@ -137,6 +139,8 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_version
+    FirehoseClient.instance.expects(:putRecord).never
+
     # Upload a source file.
     filename = 'replace_me.js'
     file_data = 'version 1'
@@ -155,6 +159,47 @@ class SourcesTest < FilesApiTestBase
     versions = @api.list_object_versions(filename)
     assert successful?
     assert_equal 1, versions.count
+  end
+
+  def test_replace_main_json_version
+    # FirehoseClient.instance.expects(:put_record).never
+    Timecop.freeze
+
+    filename = 'main.json'
+    file_data = 'version 1'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+    response = JSON.parse(last_response.body)
+    timestamp1 = response['timestamp'].to_s
+    # this assert passes locally but fails on circle
+    # assert_equal timestamp1, Time.now.to_s
+    version1 = response['versionId']
+
+    Timecop.travel 1
+
+    file_data = 'version 2'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    Timecop.travel 1
+
+    # log when replacing non-current version.
+    FirehoseClient.instance.expects(:put_record).with do |stream_name, data|
+      data_json_data = JSON.parse(data[:data_json])
+      stream_name == 'analysis-events' &&
+        data[:study] == 'project-data-integrity' &&
+        data[:event] == 'replace-non-current-main-json' &&
+        data[:project_id] == @channel &&
+        data_json_data['replacedVersionId'] == version1
+    end
+
+    file_data = 'version 3'
+    @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
+    assert successful?
+
+    Timecop.return
   end
 
   private

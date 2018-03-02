@@ -4,8 +4,10 @@ require 'test_helper'
 # and would fail if they did.
 
 class DslTest < ActiveSupport::TestCase
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
-    CDO.stubs(:properties_encryption_key).returns('this is a key for testing that is long enough that nothing is complaining')
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
   end
 
   test 'remove property' do

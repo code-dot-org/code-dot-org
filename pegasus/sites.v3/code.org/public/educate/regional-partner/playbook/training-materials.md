@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 ---
 title: training materials
 nav: regional_partner_playbook_nav
@@ -25,6 +27,7 @@ ________________
 
 February 2018
 
+- Feb 15 Teacher Recruitment Office Hours & Video Chat with Hadi ([Video](https://zoom.us/recording/play/zhCfZbsJmnYHyNbLHu45FbO7Hb5Q5-frDAEMcU9xEc3mQMS91AGbXBzQW2C9RYKR))
 - Feb 1 Teacher Recruitment Strategies ([Video](https://code.zoom.us/recording/play/1zNBEQIEdZz1mNF1ZB1dfMc712T8QZytT8S3-9HKcinn7aL8SHdwLLaE9Ufd2j0Q), [Slides](https://drive.google.com/drive/folders/1KZBZvHP9OwDm_4VqOp6v-i7ICvivnGzo))
 
 January 2018

@@ -1,13 +1,16 @@
 module Encryption
   class KeyMissingError < RuntimeError; end
 
+  # Cipher key length in bits.
+  KEY_LENGTH = 128
+
   def self.key
     raise KeyMissingError.new("please define CDO.properties_encryption_key") if CDO.properties_encryption_key.blank?
     CDO.properties_encryption_key
   end
 
   def self.encrypt_string(string)
-    cipher = OpenSSL::Cipher::AES.new(128, :CBC)
+    cipher = OpenSSL::Cipher::AES.new(KEY_LENGTH, :CBC)
     cipher.encrypt
     cipher.key = Base64.decode64(key)
 
@@ -21,7 +24,7 @@ module Encryption
   end
 
   def self.decrypt_string(string)
-    cipher = OpenSSL::Cipher::AES.new(128, :CBC)
+    cipher = OpenSSL::Cipher::AES.new(KEY_LENGTH, :CBC)
     cipher.decrypt
     cipher.key = Base64.decode64(key)
 
