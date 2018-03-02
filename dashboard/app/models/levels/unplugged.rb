@@ -41,11 +41,11 @@ class Unplugged < Level
   end
 
   def title
-    I18n.t("data.unplugged.#{name}.title")
+    I18n.t("data.unplugged.#{name}.title") if name
   end
 
   def description
-    I18n.t("data.unplugged.#{name}.desc")
+    I18n.t("data.unplugged.#{name}.desc") if name
   end
 
   def update_i18n(name, new_strings)
