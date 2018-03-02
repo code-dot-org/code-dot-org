@@ -51,16 +51,12 @@ const blankNewStudentRow = {
 };
 
 // Initial state for the manageStudents redux store.
-
-// addStatus should be an object with the following keys
-// status - AddStatus enum describing the result of the add
-// numStudents - number of students that were attempted to add
 const initialState = {
   loginType: '',
   studentData: {},
   editingData: {},
   sectionId: null,
-  addStatus: {},
+  addStatus: {status: null, numStudents: null},
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -119,14 +115,13 @@ export const saveAllStudents = () => {
     // Currently, every update is an individual call to the server.
     const currentlyEditedData = convertStudentDataToArray(state.editingData);
     let studentsToSave = currentlyEditedData.filter(student => student.rowType === RowType.STUDENT);
-    for (let i = 0; i<studentsToSave.length; i++) {
-      dispatch(saveStudent(studentsToSave[i].id));
-    }
+    studentsToSave.forEach(student => dispatch(saveStudent(student.id)));
 
     // Adding students can be saved together.
     const arrayOfEditedData = convertStudentDataToArray(state.editingData);
-    const newStudentsToAdd = arrayOfEditedData.filter(student => student.rowType === RowType.NEW_STUDENT).map(
-      student => student.id);
+    const newStudentsToAdd = arrayOfEditedData
+      .filter(student => student.rowType === RowType.NEW_STUDENT)
+      .map(student => student.id);
     if (newStudentsToAdd.length > 0) {
       dispatch(addStudents(newStudentsToAdd));
     }
