@@ -42,7 +42,6 @@ module.exports = class MazeController {
     this.subtype = null;
     this.map = null;
     this.animationsController = null;
-    this.executionInfo = null;
     this.store = null;
 
     this.pegmanD = null;
