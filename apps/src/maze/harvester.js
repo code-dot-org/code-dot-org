@@ -1,8 +1,7 @@
 import Gatherer from './gatherer';
 import HarvesterCell from './harvesterCell';
 import HarvesterDrawer from './harvesterDrawer';
-import mazeMsg from './locale';
-import { HarvesterTerminationValue, TestResults } from '../constants.js';
+import { HarvesterTerminationValue } from '../constants.js';
 
 const HARVEST_SOUND = 'harvest';
 
@@ -143,63 +142,5 @@ export default class Harvester extends Gatherer {
     this.gotCropAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);
-  }
-
-  /**
-   * @override
-   */
-  succeeeded() {
-    return this.collectedEverything();
-  }
-
-  /**
-   * @override
-   */
-  terminateWithAppSpecificValue() {
-    const executionInfo = this.maze_.executionInfo;
-
-    if (!this.collectedEverything()) {
-      executionInfo.terminateWithValue(HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING);
-    }
-  }
-
-  /**
-   * @override
-   */
-  getTestResults(terminationValue) {
-    switch (terminationValue) {
-      case HarvesterTerminationValue.WRONG_CROP:
-      case HarvesterTerminationValue.EMPTY_CROP:
-        return TestResults.APP_SPECIFIC_FAIL;
-
-      case HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING:
-        var testResults = this.maze_.getTestResults(true);
-        // If we have a non-app specific failure, we want that to take precedence.
-        // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
-        // a suboptimal solution, so in those cases we want to return our
-        // app specific fail. Same goes for BLOCK_LIMIT_FAIL.
-        if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL || testResults === TestResults.BLOCK_LIMIT_FAIL) {
-          testResults = TestResults.APP_SPECIFIC_FAIL;
-        }
-        return testResults;
-    }
-
-    return super.getTestResults(terminationValue);
-  }
-
-  /**
-   * @override
-   */
-  getMessage(terminationValue) {
-    switch (terminationValue) {
-      case HarvesterTerminationValue.WRONG_CROP:
-        return mazeMsg.wrongCropError();
-      case HarvesterTerminationValue.EMPTY_CROP:
-        return mazeMsg.emptyCropError();
-      case HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING:
-        return mazeMsg.didNotCollectAllCrops();
-      default:
-        return super.getMessage(terminationValue);
-    }
   }
 }
