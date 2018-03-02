@@ -230,10 +230,18 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
   end
 
-  def self.facilitated_or_organized_by(user)
+  # scopes to workshops managed by the user, which means the user is any of:
+  # - the organizer
+  # - a facilitator
+  # - a program manager for the assigned regional partner
+  def self.managed_by(user)
     left_outer_joins(:facilitators).
-      where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id).
-      distinct
+      where(
+        'pd_workshops_facilitators.user_id = ? OR organizer_id = ? OR regional_partner_id IN (?)',
+        user.id,
+        user.id,
+        user.regional_partner_program_managers.select(:regional_partner_id)
+      ).distinct
   end
 
   def self.attended_by(teacher)
