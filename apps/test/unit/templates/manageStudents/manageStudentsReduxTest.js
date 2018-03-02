@@ -338,7 +338,7 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(nextState.editingData[0], {...expectedBlankRow, loginType: 'picture'});
     });
 
-    it('addStudentsSuccess updates studentData,removes editingData, and adds new blank row', () => {
+    it('addStudentsSuccess updates studentData, removes editingData, and adds new blank row', () => {
       // Initial state with blank row
       const initialState = {
         loginType: 'picture',
