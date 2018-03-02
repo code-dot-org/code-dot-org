@@ -308,38 +308,50 @@ exports.honeyCreated = API_FUNCTION(function (id) {
  */
 
 exports.getCorn = API_FUNCTION(function (id) {
-  Maze.controller.subtype.getCorn(id);
+  if (Maze.controller.subtype.tryGetCorn()) {
+    Maze.executionInfo.queueAction("get_corn", id);
+  }
 });
 
 exports.getPumpkin = API_FUNCTION(function (id) {
-  Maze.controller.subtype.getPumpkin(id);
+  if (Maze.controller.subtype.tryGetPumpkin()) {
+    Maze.executionInfo.queueAction("get_pumpkin", id);
+  }
 });
 
 exports.getLettuce = API_FUNCTION(function (id) {
-  Maze.controller.subtype.getLettuce(id);
+  if (Maze.controller.subtype.tryGetLettuce()) {
+    Maze.executionInfo.queueAction("get_lettuce", id);
+  }
 });
 
 exports.atCorn = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_corn', id);
   return Maze.controller.subtype.atCorn(id);
 });
 
 exports.atPumpkin = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_pumpkin', id);
   return Maze.controller.subtype.atPumpkin(id);
 });
 
 exports.atLettuce = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_lettuce', id);
   return Maze.controller.subtype.atLettuce(id);
 });
 
 exports.hasCorn = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('has_corn', id);
   return Maze.controller.subtype.hasCorn(id);
 });
 
 exports.hasPumpkin = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('has_pumpkin', id);
   return Maze.controller.subtype.hasPumpkin(id);
 });
 
 exports.hasLettuce = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('has_lettuce', id);
   return Maze.controller.subtype.hasLettuce(id);
 });
 
