@@ -1377,6 +1377,10 @@ def get_section_id_from_table(row_index)
   section_id
 end
 
+Then /^I scroll the "([^"]*)" element into view$/ do |selector|
+  @browser.execute_script("$('#{selector}')[0].scrollIntoView(true)")
+end
+
 Then /^I scroll the save button into view$/ do
   @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
 end
