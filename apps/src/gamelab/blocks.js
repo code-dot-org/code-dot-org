@@ -1,5 +1,4 @@
-import { createJsWrapperBlockCreator } from '../block_utils';
-import { serialize } from '../xml';
+import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -218,16 +217,6 @@ export default {
     const blockNames =
       customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab_custom'));
 
-    const parser = new DOMParser();
-    const toolboxDom = parser.parseFromString(level.toolbox, 'text/xml');
-    const customCategory = toolboxDom.createElement('category');
-    customCategory.setAttribute('name', 'Custom');
-    blockNames.forEach(blockName => {
-      const block = toolboxDom.createElement('block');
-      block.setAttribute('type', blockName);
-      customCategory.appendChild(block);
-    });
-    toolboxDom.getRootNode().firstChild.appendChild(customCategory);
-    level.toolbox = serialize(toolboxDom);
+    level.toolbox = appendCategory(level.toolbox, blockNames);
   },
 };
