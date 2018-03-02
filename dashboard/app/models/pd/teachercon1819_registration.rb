@@ -199,7 +199,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
     if pd_application
       requireds.concat [
-        :agreeShareContact
+        :agree_share_contact
       ]
     end
 
