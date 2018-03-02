@@ -32,12 +32,6 @@ const tiles = require('./tiles');
 
 module.exports = class MazeController {
   constructor(level, skin, config, options = {}) {
-    if (options.reduxStore) {
-      this.addReduxStore(options.reduxStore);
-    }
-
-    const Type = getSubtypeForSkin(config.skinId);
-    const subtype = new Type(this, config);
 
     this.stepSpeed = 100;
 
@@ -45,7 +39,7 @@ module.exports = class MazeController {
     this.skin = skin;
     this.startDirection = null;
 
-    this.subtype = subtype;
+    this.subtype = null;
     this.map = null;
     this.animationsController = null;
     this.executionInfo = null;
@@ -64,11 +58,17 @@ module.exports = class MazeController {
     this.PEGMAN_Y_OFFSET = null;
     this.SQUARE_SIZE = null;
 
-    this.loadLevel_();
+    if (options.reduxStore) {
+      this.addReduxStore(options.reduxStore);
+    }
 
     if (options.methods) {
       this.rebindMethods(options.methods);
     }
+
+    const Type = getSubtypeForSkin(config.skinId);
+    this.subtype = new Type(this, config);
+    this.loadLevel_();
   }
 
   /**
