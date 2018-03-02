@@ -52,8 +52,8 @@ const blankNewStudentRow = {
 
 // Initial state for the manageStudents redux store.
 
-// addStatus should be an object with the follow keys
-// status - AddStatus enum descripting the result of the add
+// addStatus should be an object with the following keys
+// status - AddStatus enum describing the result of the add
 // numStudents - number of students that were attempted to add
 const initialState = {
   loginType: '',
