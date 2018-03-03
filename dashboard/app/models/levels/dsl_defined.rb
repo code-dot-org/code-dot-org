@@ -119,6 +119,13 @@ class DSLDefined < Level
     return dsl_text
   end
 
+  def clone(new_name)
+    level = super.dup
+    new_dsl = dsl_text.sub("name '#{name}'", "name '#{new_name}'")
+    level.update!(dsl_text: new_dsl)
+    level
+  end
+
   def dsl_text
     self.class.decrypt_dsl_text_if_necessary(File.read(file_path)) if file_path && File.exist?(file_path)
   end

@@ -477,6 +477,12 @@ class Level < ActiveRecord::Base
     summary
   end
 
+  def clone(new_name)
+    level = dup
+    level.update!(name: new_name)
+    level
+  end
+
   private
 
   def write_to_file?
