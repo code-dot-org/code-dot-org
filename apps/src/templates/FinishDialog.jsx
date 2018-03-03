@@ -6,6 +6,7 @@ import BaseDialog from './BaseDialog';
 import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
+import Confetti from 'react-dom-confetti';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
 import msg from '@cdo/locale';
@@ -36,6 +37,11 @@ const styles = {
   },
   content: {
     padding: '42px 56px 5px',
+  },
+  confetti: {
+    position: 'relative',
+    left: '50%',
+    top: 150,
   },
   bubbleContainer: {
     width: 74,
@@ -167,6 +173,7 @@ export class UnconnectedFinishDialog extends Component {
     onContinue: PropTypes.func,
     onReplay: PropTypes.func,
 
+    isChallenge: PropTypes.bool,
     isPerfect: PropTypes.bool,
     blocksUsed: PropTypes.number,
     blockLimit: PropTypes.number,
@@ -409,6 +416,8 @@ export class UnconnectedFinishDialog extends Component {
       return null;
     }
 
+    const confetti = this.props.isChallenge && this.props.isPerfect && this.state.blocksCounted;
+
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -422,6 +431,9 @@ export class UnconnectedFinishDialog extends Component {
             <div
               style={styles.modal}
             >
+              <div style={styles.confetti}>
+                <Confetti active={confetti} />
+              </div>
               <div style={styles.header}>
                 {this.getBubble()}
               </div>
@@ -451,6 +463,7 @@ export class UnconnectedFinishDialog extends Component {
 
 export default connect(state => ({
   isOpen: state.feedback.displayingFeedback,
+  isChallenge: state.feedback.isChallenge,
   isPerfect:  state.feedback.isPerfect,
   blocksUsed: state.feedback.blocksUsed,
   blockLimit: state.feedback.blockLimit,
