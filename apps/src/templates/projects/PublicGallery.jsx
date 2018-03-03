@@ -4,6 +4,20 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 
+const styles = {
+  clear: {
+    clear: 'both'
+  },
+  linkBox: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: 10,
+  },
+  link: {
+    display: 'inline-block'
+  },
+};
+
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   name: PropTypes.string,
@@ -60,12 +74,17 @@ class PublicGallery extends Component {
           galleryType="public"
           showApplabGamelab={this.props.showApplabGamelab}
         />
-        <a
-          href="https://support.code.org/hc/en-us/articles/360001143952"
-          style={{textAlign: 'center'}}
-        >
-          <h3>{i18n.reportAbuse()}</h3>
-        </a>
+        <div style={styles.clear}/>
+        <div style={styles.linkBox}>
+          <a
+            href="https://support.code.org/hc/en-us/articles/360001143952"
+            style={styles.link}
+          >
+            <h3>
+              {i18n.reportAbuse()}
+            </h3>
+          </a>
+        </div>
       </div>
     );
   }
