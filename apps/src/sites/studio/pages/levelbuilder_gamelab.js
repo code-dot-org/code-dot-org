@@ -26,4 +26,10 @@ $(document).ready(function () {
   initializeCodeMirror('level_start_animations', 'json', codeMirror => {
     validateAnimationJSON(codeMirror.getValue());
   });
+  if (document.getElementById('level_custom_blocks')) {
+    initializeCodeMirror('level_custom_blocks', 'application/json');
+  }
+  if (document.getElementById('level_custom_helper_library')) {
+    initializeCodeMirror('level_custom_helper_library', 'javascript');
+  }
 });
