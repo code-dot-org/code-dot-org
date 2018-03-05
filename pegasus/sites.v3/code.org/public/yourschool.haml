@@ -14,11 +14,11 @@ social:
   - census_announcement['hide_map'] = 'true'
 - census_announcement['user_name'] = request.params["name"] if request.params["name"]
 - census_announcement['user_email'] = request.params["email"] if request.params["email"]
-- census_announcement['is_teacher'] = 'true' if request.params["is_teacher"] == 'true'
+- census_announcement['is_teacher'] = 'true' if request.params["isTeacher"] == 'true'
 - census_announcement['school_country'] = request.params["country"] if request.params["country"]
-- census_announcement['school_id'] = request.params["school_id"] if request.params["school_id"]
-- census_announcement['school_type'] = request.params["school_type"].capitalize if request.params["school_type"]
-- census_announcement['school_name'] = request.params["school_name"] if request.params["school_name"]
+- census_announcement['school_id'] = request.params["schoolId"] if request.params["schoolId"]
+- census_announcement['school_type'] = request.params["schoolType"].capitalize if request.params["schoolType"]
+- census_announcement['school_name'] = request.params["schoolName"] if request.params["schoolName"]
 - census_announcement['school_state'] = request.params["state"] if request.params["state"]
 - census_announcement['school_zip'] = request.params["zip"] if request.params["zip"]
 
