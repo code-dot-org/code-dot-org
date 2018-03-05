@@ -2,9 +2,6 @@ import { randomValue } from '../utils';
 import Gatherer from './gatherer';
 import BeeCell from './beeCell';
 import BeeItemDrawer from './beeItemDrawer';
-import {
-  BeeTerminationValue as TerminationValue
-} from '../constants.js';
 
 const UNLIMITED_HONEY = -99;
 const UNLIMITED_NECTAR = 99;
@@ -283,6 +280,8 @@ export default class Bee extends Gatherer {
    * This method is preferred over animateGetNectar for "headless" operation (ie
    * when validating quantum levels)
    *
+   * @fires notAtFlower
+   * @fires flowerEmpty
    * @return {boolean} whether or not this attempt was successful
    */
   tryGetNectar() {
@@ -291,12 +290,12 @@ export default class Bee extends Gatherer {
 
     // Make sure we're at a flower.
     if (!this.isFlower(row, col)) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
+      this.emit('notAtFlower');
       return false;
     }
     // Nectar is positive.  Make sure we have it.
     if (this.flowerRemainingCapacity(row, col) === 0) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.FLOWER_EMPTY);
+      this.emit('flowerEmpty');
       return false;
     }
 
@@ -312,6 +311,8 @@ export default class Bee extends Gatherer {
    * This method is preferred over animateGetHoney for "headless" operation (ie
    * when validating quantum levels)
    *
+   * @fires notAtHive
+   * @fires hiveFull
    * @return {boolean} whether or not this attempt was successful
    */
   tryMakeHoney() {
@@ -319,11 +320,11 @@ export default class Bee extends Gatherer {
     const row = this.maze_.pegmanY;
 
     if (!this.isHive(row, col)) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_HONEYCOMB);
+      this.emit('notAtHive');
       return false;
     }
     if (this.hiveRemainingCapacity(row, col) === 0) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.HONEYCOMB_FULL);
+      this.emit('hiveFull');
       return false;
     }
 
