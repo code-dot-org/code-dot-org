@@ -1,7 +1,6 @@
 import Gatherer from './gatherer';
 import HarvesterCell from './harvesterCell';
 import HarvesterDrawer from './harvesterDrawer';
-import { HarvesterTerminationValue } from '../constants.js';
 
 const HARVEST_SOUND = 'harvest';
 
@@ -30,47 +29,45 @@ export default class Harvester extends Gatherer {
     this.drawer = new HarvesterDrawer(this.maze_.map, this.skin_, svg, this);
   }
 
-  hasCorn(id) {
-    return this.hasCrop(HarvesterCell.FeatureType.CORN, id);
+  hasCorn() {
+    return this.hasCrop(HarvesterCell.FeatureType.CORN);
   }
 
-  hasPumpkin(id) {
-    return this.hasCrop(HarvesterCell.FeatureType.PUMPKIN, id);
+  hasPumpkin() {
+    return this.hasCrop(HarvesterCell.FeatureType.PUMPKIN);
   }
 
-  hasLettuce(id) {
-    return this.hasCrop(HarvesterCell.FeatureType.LETTUCE, id);
+  hasLettuce() {
+    return this.hasCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
-  hasCrop(crop, id) {
+  hasCrop(crop) {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     const cell = this.getCell(row, col);
 
-    this.maze_.executionInfo.queueAction('has_' + cell.featureName(), id);
     return cell.featureType() === crop && cell.getCurrentValue() > 0;
   }
 
-  atCorn(id) {
-    return this.atCrop(HarvesterCell.FeatureType.CORN, id);
+  atCorn() {
+    return this.atCrop(HarvesterCell.FeatureType.CORN);
   }
 
-  atPumpkin(id) {
-    return this.atCrop(HarvesterCell.FeatureType.PUMPKIN, id);
+  atPumpkin() {
+    return this.atCrop(HarvesterCell.FeatureType.PUMPKIN);
   }
 
-  atLettuce(id) {
-    return this.atCrop(HarvesterCell.FeatureType.LETTUCE, id);
+  atLettuce() {
+    return this.atCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
-  atCrop(crop, id) {
+  atCrop(crop) {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     const cell = this.getCell(row, col);
 
-    this.maze_.executionInfo.queueAction('at_' + cell.featureName(), id);
     return cell.featureType() === crop;
   }
 
@@ -79,50 +76,72 @@ export default class Harvester extends Gatherer {
     cell.setCurrentValue(cell.getCurrentValue() - 1);
   }
 
-  getCorn(id) {
-    this.getCrop(HarvesterCell.FeatureType.CORN, id);
+  tryGetCorn() {
+    return this.tryGetCrop(HarvesterCell.FeatureType.CORN);
   }
 
-  getPumpkin(id) {
-    this.getCrop(HarvesterCell.FeatureType.PUMPKIN, id);
+  tryGetPumpkin() {
+    return this.tryGetCrop(HarvesterCell.FeatureType.PUMPKIN);
   }
 
-  getLettuce(id) {
-    this.getCrop(HarvesterCell.FeatureType.LETTUCE, id);
+  tryGetLettuce() {
+    return this.tryGetCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
-  getCrop(crop, id) {
+  /**
+   * Attempt to harvest the specified crop from the current location; terminate
+   * the execution if this is not a valid place at which to get that crop.
+   *
+   * This method is preferred over animateGetCrop for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @fires wrongCrop
+   * @fires emptyCrop
+   * @return {boolean} whether or not this attempt was successful
+   */
+  tryGetCrop(crop) {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     const cell = this.getCell(row, col);
 
     if (cell.featureType() !== crop) {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
-      return;
+      this.emit('wrongCrop');
+      return false;
     }
 
     if (cell.getCurrentValue() === 0) {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.EMPTY_CROP);
-      return;
+      this.emit('emptyCrop');
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('get_' + cell.featureName(), id);
     this.gotCropAt(row, col);
+    return true;
   }
 
-  animateGetCorn(id) {
+  animateGetCorn() {
     this.animateGetCrop(HarvesterCell.FeatureType.CORN);
   }
 
-  animateGetPumpkin(id) {
+  animateGetPumpkin() {
     this.animateGetCrop(HarvesterCell.FeatureType.PUMPKIN);
   }
 
-  animateGetLettuce(id) {
+  animateGetLettuce() {
     this.animateGetCrop(HarvesterCell.FeatureType.LETTUCE);
   }
 
+  /**
+   * Display the harvesting of the specified from the current location; raise a
+   * runtime error if the current location is not a valid spot from which to
+   * gather that crop.
+   *
+   * This method is preferred over tryGetCrop for live operation (ie when actually
+   * displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell does not have that crop
+   *         available to harvest.
+   */
   animateGetCrop(crop) {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;

@@ -2,12 +2,22 @@ import ResultsHandler from './resultsHandler';
 import mazeMsg from '../locale';
 import { TestResults } from '../../constants.js';
 
-const TerminationValue = {
-  PLANT_IN_NON_SOIL: 0,
-  DID_NOT_PLANT_EVERYWHERE: 1,
-};
-
 export default class PlanterHandler extends ResultsHandler {
+  static TerminationValue = {
+    PLANT_IN_NON_SOIL: 0,
+    DID_NOT_PLANT_EVERYWHERE: 1,
+  };
+
+  constructor(maze, config) {
+    super(maze, config);
+
+    // Initialize subtype-specific event listeners
+
+    this.maze_.subtype.on('plantInNonSoil', () => {
+      this.maze_.executionInfo.terminateWithValue(PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL);
+    });
+  }
+
   /**
    * @override
    */
@@ -38,7 +48,7 @@ export default class PlanterHandler extends ResultsHandler {
     const executionInfo = this.maze_.executionInfo;
 
     if (!this.plantedEverything()) {
-      executionInfo.terminateWithValue(TerminationValue.DID_NOT_PLANT_EVERYWHERE);
+      executionInfo.terminateWithValue(PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE);
     }
   }
 
@@ -47,9 +57,9 @@ export default class PlanterHandler extends ResultsHandler {
    */
   getTestResults(terminationValue) {
     switch (terminationValue) {
-      case TerminationValue.PLANT_IN_NON_SOIL:
+      case PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL:
         return TestResults.APP_SPECIFIC_FAIL;
-      case TerminationValue.DID_NOT_PLANT_EVERYWHERE:
+      case PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE:
         var testResults = this.maze_.getTestResults(true);
         // If we have a non-app specific failure, we want that to take precedence.
         // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
@@ -76,9 +86,9 @@ export default class PlanterHandler extends ResultsHandler {
    */
   getMessage(terminationValue) {
     switch (terminationValue) {
-      case TerminationValue.PLANT_IN_NON_SOIL:
+      case PlanterHandler.TerminationValue.PLANT_IN_NON_SOIL:
         return mazeMsg.plantInNonSoilError();
-      case TerminationValue.DID_NOT_PLANT_EVERYWHERE:
+      case PlanterHandler.TerminationValue.DID_NOT_PLANT_EVERYWHERE:
         return mazeMsg.didNotPlantEverywhere();
       default:
         return super.getMessage(terminationValue);

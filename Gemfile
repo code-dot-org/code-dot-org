@@ -159,14 +159,11 @@ gem 'omniauth-google-oauth2', '~> 0.3.1'
 gem 'omniauth-windowslive', '~> 0.0.11', github: 'wjordan/omniauth-windowslive', ref: 'cdo'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
-
-# Ref: https://github.com/haml/haml/issues/940
-# https://github.com/haml/haml/issues/982
-gem 'haml', github: 'wjordan/haml', ref: 'cdo'
+gem 'haml'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '~> 1.8.2'
+gem 'nokogiri', '~> 1.6.1'
 
 gem 'highline', '~> 1.6.21'
 
