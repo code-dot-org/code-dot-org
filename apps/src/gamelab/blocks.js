@@ -215,7 +215,7 @@ export default {
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level) {
     const blockNames =
-      customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab_custom'));
+      customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
 
     level.toolbox = appendCategory(level.toolbox, blockNames);
   },
