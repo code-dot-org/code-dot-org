@@ -228,10 +228,6 @@ class Visualization {
     this.turtleFrame_ = 0;
   }
 
-  clipImage() {
-
-  }
-
   // Helper for creating canvas elements.
   createCanvas_(id, width, height) {
     var el = document.createElement('canvas');
@@ -551,24 +547,15 @@ class Visualization {
       // Need to subtract 90 to accommodate difference in canvas vs. Turtle direction
       this.ctxScratch.rotate(this.degreesToRadians_(this.heading - 90));
 
-      if ((distance > 0) && (img.width !== 0)) {
-          this.ctxScratch.drawImage(img,
-            // Start point for clipping image forward
-            0, 0,
-            // clip region size
-            distance, img.height,
-            // draw location relative to the ctx.translate point pre-rotation
-            -img.height / 4, -img.height / 2,
-            distance+img.height / 2, img.height);
-      } else if ((distance < 0) && (img.width !== 0)) {
-            this.ctxScratch.drawImage(img,
-              // Start point for clipping image backward
-              img.width, 0,
-              // clip region size
-              distance, img.height,
-              // draw location relative to the ctx.translate point pre-rotation
-              -img.height / 4, -img.height / 2,
-              distance+img.height / 2, img.height);
+      if (img.width !== 0) {
+        this.ctxScratch.drawImage(img,
+          // Start point for clipping image
+          0, 0,
+          // clip region size
+          distance + img.height / 2, img.height,
+          // draw location relative to the ctx.translate point pre-rotation
+          -img.height / 4, -img.height / 2,
+          distance+img.height / 2, img.height);
       }
 
       this.ctxScratch.restore();
@@ -915,7 +902,6 @@ Artist.prototype.afterInject_ = function (config) {
   var visualization = document.getElementById('visualization');
   visualization.appendChild(this.visualization.displayCanvas);
 
-  // TODO (br-pair): - pull this out?
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
@@ -1524,7 +1510,7 @@ Artist.prototype.step = function (command, values, options) {
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       this.visualization.setHeading(heading);
-      this.jumpForward(result.distance);
+      this.visualization.jumpForward(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
