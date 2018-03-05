@@ -211,9 +211,13 @@ export default function manageStudents(state=initialState, action) {
     return {
       ...state,
       studentData: {
-        ...state.studentData,
-        ...action.studentData
+        ...action.studentData,
+        [addRowId]: {
+          ...blankAddRow,
+          loginType: state.loginType,
+        }
       },
+      addStatus: {status: null, numStudents: null},
     };
   }
   if (action.type === START_EDITING_STUDENT) {
