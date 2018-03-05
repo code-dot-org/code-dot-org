@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
     on_map true
-    funded true
+    funded false
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     trait :teachercon do
