@@ -4,7 +4,6 @@
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
-%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
 
@@ -130,9 +129,7 @@
   $(document).ready(function() {
     new google.maps.places.SearchBox(document.getElementById('volunteer-location'));
 
-    $('#volunteer-engineer-submit-form select').selectize({
-      plugins: ['fast_click']
-    });
+    $('#volunteer-engineer-submit-form select').selectize();
 
     $('#volunteer-languages').change(function() {
       if ($.inArray('other', $(this).val()) > -1) {
