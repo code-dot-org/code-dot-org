@@ -103,6 +103,17 @@ const studentPictureData = {
     },
 };
 
+const expectedBlankRow = {
+  id: 0,
+  name: '',
+  age: '',
+  gender: '',
+  username: '',
+  loginType: '',
+  isEditing: true,
+  rowType: RowType.ADD,
+};
+
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
 
@@ -126,7 +137,41 @@ describe('manageStudentsRedux', () => {
     it('sets student data for the section in view', () => {
       const action = setStudents(studentEmailData);
       const nextState = manageStudents(initialState, action);
-      assert.deepEqual(nextState.studentData, studentEmailData);
+      assert.deepEqual(nextState.studentData, {
+        ...studentEmailData,
+        0: {
+          ...expectedBlankRow
+        }
+      });
+    });
+
+    it('overrides old section data', () => {
+      const setStudents1 = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudents1);
+
+      const newSectionData = {
+        5: {
+          id: 1,
+          name: 'StudentName5',
+          username: 'student5',
+          userType: 'student',
+          age: 14,
+          gender: 'f',
+          loginType: 'email',
+          secretWords: 'wizard',
+          secretPictureName: 'wizard',
+          secretPicturePath: '/wizard.jpg',
+          sectionId: 53,
+        }
+      };
+      const setStudents2 = setStudents(newSectionData);
+      const finalState = manageStudents(nextState, setStudents2);
+      assert.deepEqual(finalState.studentData, {
+        ...newSectionData,
+        0: {
+          ...expectedBlankRow
+        }
+      });
     });
   });
 
