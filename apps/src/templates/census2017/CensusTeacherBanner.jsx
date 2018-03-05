@@ -347,7 +347,7 @@ export default class CensusTeacherBanner extends Component {
         </div>
       );
       const schoolId = this.state.ncesSchoolId ? this.state.ncesSchoolId : this.props.ncesSchoolId;
-      const link = encodeURI(`/yourschool?school_id=${schoolId}&is_teacher=true&name=${this.props.teacherName}&email=${this.props.teacherEmail}#form`);
+      const link = encodeURI(`/yourschool?schoolId=${schoolId}&isTeacher=true&name=${this.props.teacherName}&email=${this.props.teacherEmail}#form`);
       buttons = (
         <div style={styles.buttonDiv}>
           <Button
