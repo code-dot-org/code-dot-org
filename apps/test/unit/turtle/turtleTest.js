@@ -68,7 +68,7 @@ describe('Artist', () => {
       const setDrawPatternBackwardSpy = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
       artist.visualization.drawForwardLineWithPattern_(-100);
 
-      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(img, 50, 0, -100, 100, -25, -50, -50, 100);
+      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(img, 100, 0, -100, 100, -25, -50, -50, 100);
 
       setDrawPatternBackwardSpy.restore();
     });
@@ -84,7 +84,7 @@ describe('Artist', () => {
       const setDrawPatternForwardSpy = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
       artist.visualization.drawForwardLineWithPattern_(100);
 
-      expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(img, 50, 0, 100, 100, -25, -50, 150, 100);
+      expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(img, 0, 0, 100, 100, -25, -50, 150, 100);
 
       setDrawPatternForwardSpy.restore();
     });
