@@ -6,7 +6,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
-  PROJECT_TYPE_MAP,
+  FEATURED_PROJECT_TYPE_MAP,
   featuredProjectDataPropType,
   featuredProjectTableTypes
 } from './projectConstants';
@@ -149,7 +149,7 @@ const dateFormatter = (time) => {
 };
 
 const typeFormatter = (type) => {
-  return PROJECT_TYPE_MAP[type];
+  return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
 class FeaturedProjectsTable extends React.Component {
