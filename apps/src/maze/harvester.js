@@ -1,7 +1,6 @@
 import Gatherer from './gatherer';
 import HarvesterCell from './harvesterCell';
 import HarvesterDrawer from './harvesterDrawer';
-import { HarvesterTerminationValue } from '../constants.js';
 
 const HARVEST_SOUND = 'harvest';
 
@@ -96,6 +95,8 @@ export default class Harvester extends Gatherer {
    * This method is preferred over animateGetCrop for "headless" operation (ie
    * when validating quantum levels)
    *
+   * @fires wrongCrop
+   * @fires emptyCrop
    * @return {boolean} whether or not this attempt was successful
    */
   tryGetCrop(crop) {
@@ -105,12 +106,12 @@ export default class Harvester extends Gatherer {
     const cell = this.getCell(row, col);
 
     if (cell.featureType() !== crop) {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
+      this.emit('wrongCrop');
       return false;
     }
 
     if (cell.getCurrentValue() === 0) {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.EMPTY_CROP);
+      this.emit('emptyCrop');
       return false;
     }
 

@@ -17,8 +17,6 @@ import {
   setCollectorCurrentCollected,
 } from './redux';
 
-const COLLECTED_TOO_MANY = 4;
-
 export default class Collector extends Subtype {
   reset() {
     if (this.maze_.store) {
@@ -56,13 +54,14 @@ export default class Collector extends Subtype {
    * Note that the animation for this action is handled by the default
    * "scheduleDig" operation
    *
+   * @fires collectedTooMany
    * @return {boolean} whether or not this attempt was successful
    */
   tryCollect(row, col) {
     const currVal = this.maze_.map.getValue(row, col);
 
     if (currVal === undefined || currVal < 1) {
-      this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
+      this.emit('collectedTooMany');
       return false;
     }
 

@@ -2,11 +2,6 @@ import Subtype from './subtype';
 import PlanterCell from './planterCell';
 import PlanterDrawer from './planterDrawer';
 
-const TerminationValue = {
-  PLANT_IN_NON_SOIL: 0,
-  DID_NOT_PLANT_EVERYWHERE: 1,
-};
-
 export default class Planter extends Subtype {
 
   reset() {
@@ -53,6 +48,7 @@ export default class Planter extends Subtype {
    * This method is preferred over animatePlant for "headless" operation (ie
    * when validating quantum levels)
    *
+   * @fires plantInNonSoil
    * @return {boolean} whether or not this attempt was successful
    */
   tryPlant() {
@@ -62,7 +58,7 @@ export default class Planter extends Subtype {
     const cell = this.getCell(row, col);
 
     if (cell.featureType() !== PlanterCell.FeatureType.SOIL) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.PLANT_IN_NON_SOIL);
+      this.emit('plantInNonSoil');
       return false;
     }
 
@@ -93,5 +89,3 @@ export default class Planter extends Subtype {
     this.drawer.updateItemImage(row, col, true);
   }
 }
-
-Planter.TerminationValue = TerminationValue;
