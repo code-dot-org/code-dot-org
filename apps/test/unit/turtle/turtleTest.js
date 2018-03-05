@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {parseElement} from '@cdo/apps/xml';
 const Artist = require('@cdo/apps/turtle/turtle');
@@ -53,40 +52,6 @@ describe('Artist', () => {
 
       expect(joints).to.equal(0);
       expect(segments).to.eql([SHORT_DIAGONAL - 1]);
-    });
-  });
-
-  describe('drawing with patterns', () => {
-    it('draws a pattern backwards', () => {
-      let artist = new Artist();
-      let width = 100;
-      let height = 100;
-      let img = new Image(width, height);
-
-      artist.visualization = new Artist.Visualization();
-      artist.visualization.currentPathPattern = img;
-      const setDrawPatternBackwardSpy = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      artist.visualization.drawForwardLineWithPattern_(-100);
-
-      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(img, 100, 0, -100, 100, -25, -50, -50, 100);
-
-      setDrawPatternBackwardSpy.restore();
-    });
-
-    it('draws a pattern forward', () => {
-      let artist = new Artist();
-      let width = 100;
-      let height = 100;
-      let img = new Image(width, height);
-
-      artist.visualization = new Artist.Visualization();
-      artist.visualization.currentPathPattern = img;
-      const setDrawPatternForwardSpy = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
-      artist.visualization.drawForwardLineWithPattern_(100);
-
-      expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(img, 0, 0, 100, 100, -25, -50, 150, 100);
-
-      setDrawPatternForwardSpy.restore();
     });
   });
 
