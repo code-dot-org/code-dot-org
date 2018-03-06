@@ -59,9 +59,7 @@ $(document).ready(() => {
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
       <Provider store={store}>
-        <PublicGallery
-          showApplabGamelab={projectsData.showApplabGamelab}
-        />
+        <PublicGallery/>
       </Provider>,
       publicGallery);
   });

@@ -40,11 +40,6 @@ class ProjectCardGrid extends Component {
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
-    // We are hiding Applab and Gamelab projects because of inappropriate
-    // content in the projects. Except project validators still need to see
-    // these project types so they can select which should be featured.
-    // TODO: Erin B - remove this when we unhide applab and gamelab.
-    showApplabGamelab: PropTypes.bool
   };
 
   componentWillReceiveProps(nextProps) {
@@ -112,32 +107,28 @@ class ProjectCardGrid extends Component {
               isDetailView={false}
               hideWithoutThumbnails={true}
             />
-            {this.props.showApplabGamelab &&
-              <ProjectAppTypeArea
-                labKey="applab"
-                labName={i18n.projectTypeApplab()}
-                labViewMoreString={i18n.projectTypeApplabViewMore()}
-                projectList={projectLists.applab}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.onSelectApp}
-                isDetailView={false}
-                hideWithoutThumbnails={true}
-              />
-            }
-            {this.props.showApplabGamelab &&
-              <ProjectAppTypeArea
-                labKey="gamelab"
-                labName={i18n.projectTypeGamelab()}
-                labViewMoreString={i18n.projectTypeGamelabViewMore()}
-                projectList={projectLists.gamelab}
-                numProjectsToShow={numProjects}
-                galleryType={this.props.galleryType}
-                navigateFunction={this.onSelectApp}
-                isDetailView={false}
-                hideWithoutThumbnails={true}
-              />
-            }
+            <ProjectAppTypeArea
+              labKey="applab"
+              labName={i18n.projectTypeApplab()}
+              labViewMoreString={i18n.projectTypeApplabViewMore()}
+              projectList={projectLists.applab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
+            <ProjectAppTypeArea
+              labKey="gamelab"
+              labName={i18n.projectTypeGamelab()}
+              labViewMoreString={i18n.projectTypeGamelabViewMore()}
+              projectList={projectLists.gamelab}
+              numProjectsToShow={numProjects}
+              galleryType={this.props.galleryType}
+              navigateFunction={this.onSelectApp}
+              isDetailView={false}
+              hideWithoutThumbnails={true}
+            />
             <ProjectAppTypeArea
               labKey="k1"
               labName={i18n.projectGroupPreReader()}
@@ -202,7 +193,7 @@ class ProjectCardGrid extends Component {
                 isDetailView={true}
               />
             }
-            {this.state.showApp === 'applab' && this.props.showApplabGamelab &&
+            {this.state.showApp === 'applab' &&
               <ProjectAppTypeArea
                 labKey="applab"
                 labName={i18n.projectTypeAllProjectsApplab()}
@@ -214,7 +205,7 @@ class ProjectCardGrid extends Component {
                 isDetailView={true}
               />
             }
-            {this.state.showApp === 'gamelab' && this.props.showApplabGamelab &&
+            {this.state.showApp === 'gamelab' &&
               <ProjectAppTypeArea
                 labKey="gamelab"
                 labName={i18n.projectTypeAllProjectsGamelab()}
