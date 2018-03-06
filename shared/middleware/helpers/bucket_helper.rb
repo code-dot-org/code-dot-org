@@ -186,7 +186,6 @@ class BucketHelper
     return if version_to_replace == current_version
 
     FirehoseClient.instance.put_record(
-      'analysis-events',
       study: 'project-data-integrity',
       study_group: 'v2',
       event: 'replace-non-current-main-json',
