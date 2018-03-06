@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent, RowType} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudents, RowType} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -180,6 +180,6 @@ export default connect(state => ({}), dispatch => ({
     dispatch(saveStudent(id));
   },
   addStudent(id) {
-    dispatch(addStudent(id));
+    dispatch(addStudents([id]));
   },
 }))(ManageStudentActionsCell);
