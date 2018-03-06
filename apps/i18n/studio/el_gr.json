@@ -219,6 +219,7 @@
   "iceAge": "Εποχή των Παγετώνων!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "ηθοποιός",
   "ifSpriteN": "ηθοποιός {spriteIndex}",
   "incrementPlayerScore": "σκόραρε πόντο",
   "isSet": "έχει οριστεί",

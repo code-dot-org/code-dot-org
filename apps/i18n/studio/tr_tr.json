@@ -219,6 +219,7 @@
   "iceAge": "Buz Devri!",
   "ifDroid": "droid",
   "ifDroidN": "Robot{spriteIndex}",
+  "ifSprite": "aktör",
   "ifSpriteN": "aktör {spriteIndex} de",
   "incrementPlayerScore": "Skor puanı",
   "isSet": "ayarlandı mı",
