@@ -60,17 +60,13 @@ module ProjectsList
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before:, prepend_featured:)
+    def fetch_published_projects(project_group, limit:, published_before:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_group == 'all'
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        if prepend_featured
-          return include_featured(limit: limit)
-        else
-          return fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
-        end
+        return include_featured(limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
       fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
