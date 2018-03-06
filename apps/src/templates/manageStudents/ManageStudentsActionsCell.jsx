@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudents, RowType} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -23,7 +23,7 @@ class ManageStudentActionsCell extends Component {
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
-    isAddRow: PropTypes.bool,
+    rowType: PropTypes.oneOf(Object.values(RowType)),
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -66,11 +66,19 @@ class ManageStudentActionsCell extends Component {
   };
 
   onCancel = () => {
-    this.props.cancelEditingStudent(this.props.id);
+    if (this.props.rowType === RowType.NEW_STUDENT) {
+      this.props.removeStudent(this.props.id);
+    } else {
+      this.props.cancelEditingStudent(this.props.id);
+    }
   };
 
   onSave = () => {
-    this.props.saveStudent(this.props.id);
+    if (this.props.rowType === RowType.NEW_STUDENT) {
+      this.onAdd();
+    } else {
+      this.props.saveStudent(this.props.id);
+    }
   };
 
   onAdd = () => {
@@ -78,9 +86,10 @@ class ManageStudentActionsCell extends Component {
   };
 
   render() {
+    const {rowType, isEditing} = this.props;
     return (
       <div>
-        {!this.props.isEditing &&
+        {!isEditing &&
           <QuickActionsCell>
             <PopUpMenu.Item
               onClick={this.onEdit}
@@ -97,26 +106,26 @@ class ManageStudentActionsCell extends Component {
             </PopUpMenu.Item>
           </QuickActionsCell>
         }
-        {(this.props.isEditing && !this.props.isAddRow) &&
+        {(isEditing && (rowType !== RowType.ADD)) &&
           <div>
             <Button
               onClick={this.onSave}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.orange}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
             />
             <Button
               onClick={this.onCancel}
-              color={Button.ButtonColor.blue}
+              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
             />
           </div>
         }
-        {this.props.isAddRow &&
+        {(rowType === RowType.ADD) &&
           <div>
             <Button
               onClick={this.onAdd}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.gray}
               text={i18n.add()}
               disabled={this.props.isSaving || this.props.disableSaving}
             />
@@ -171,6 +180,6 @@ export default connect(state => ({}), dispatch => ({
     dispatch(saveStudent(id));
   },
   addStudent(id) {
-    dispatch(addStudent(id));
+    dispatch(addStudents([id]));
   },
 }))(ManageStudentActionsCell);

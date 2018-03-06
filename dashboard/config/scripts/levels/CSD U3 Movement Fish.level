@@ -78,8 +78,8 @@
     "encrypted_examples": "anMQPIUd+WRm37Dyx7COPPHROWqZ58g9d0j7QKZevdphBmrQjmJhFG3Ouyil\nTlEhpfhOnD4C39C8gkjF8UyxGg==\n",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}"
+    "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
