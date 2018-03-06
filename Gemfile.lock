@@ -64,7 +64,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/haml.git
-  revision: b43eeefb5b58583084570add5ee61dbc0cad9177
+  revision: 22739a012fb34765d9d4b733f997862547a2b9cf
   ref: cdo
   specs:
     haml (5.0.4)
@@ -152,7 +152,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/sprockets.git
-  revision: 69ead85e8f9f8ef293090064e582847b1d659ec6
+  revision: df60ba28584d51235cb0af23cef1b2bbd9d8d2dc
   ref: concurrent_asset_bundle_3.x
   specs:
     sprockets (3.7.1)

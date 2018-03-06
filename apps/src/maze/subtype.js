@@ -2,6 +2,7 @@ import Cell from './cell';
 import DirtDrawer from './dirtDrawer';
 
 import { SquareType } from './tiles';
+import { EventEmitter } from 'events'; // provided by webpack's node-libs-browser
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/West/South/East squares.
@@ -29,8 +30,10 @@ const TILE_SHAPES = {
   'null4': [1, 3],
 };
 
-export default class Subtype {
+export default class Subtype extends EventEmitter {
   constructor(maze, config) {
+    super();
+
     this.maze_ = maze;
     this.skin_ = config.skin;
     this.level_ = config.level;

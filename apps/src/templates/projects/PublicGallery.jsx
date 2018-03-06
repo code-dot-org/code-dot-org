@@ -4,6 +4,20 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 
+const styles = {
+  clear: {
+    clear: 'both'
+  },
+  linkBox: {
+    textAlign: 'center',
+    width: '100%',
+    marginTop: 10,
+  },
+  link: {
+    display: 'inline-block'
+  },
+};
+
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   name: PropTypes.string,
@@ -24,11 +38,9 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
     }),
-    // We are hiding Applab and Gamelab projects because of inappropriate
-    // content in the projects. Except project validators still need to see
-    // these project types so they can select which should be featured.
-    // TODO: Erin B - remove this when we unhide applab and gamelab.
-    showApplabGamelab: PropTypes.bool
+    // Project Validators need access to view more links for App Lab and Game Lab, hidden for everyone else.
+    // TODO: Erin B - remove when we have profanity filter and/or enough featured projects.
+    projectValidator: PropTypes.bool
   };
 
   /**
@@ -58,14 +70,19 @@ class PublicGallery extends Component {
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
-          showApplabGamelab={this.props.showApplabGamelab}
+          projectValidator={this.props.projectValidator}
         />
-        <a
-          href="https://support.code.org/hc/en-us/articles/360001143952"
-          style={{textAlign: 'center'}}
-        >
-          <h3>{i18n.reportAbuse()}</h3>
-        </a>
+        <div style={styles.clear}/>
+        <div style={styles.linkBox}>
+          <a
+            href="https://support.code.org/hc/en-us/articles/360001143952"
+            style={styles.link}
+          >
+            <h3>
+              {i18n.reportAbuse()}
+            </h3>
+          </a>
+        </div>
       </div>
     );
   }
