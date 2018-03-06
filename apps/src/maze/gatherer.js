@@ -1,5 +1,4 @@
 import Subtype from './subtype';
-import { TestResults } from '../constants.js';
 
 export default class Gatherer extends Subtype {
 
@@ -25,12 +24,5 @@ export default class Gatherer extends Subtype {
    */
   succeeded() {
     return this.collectedEverything();
-  }
-
-  /**
-   * @override
-   */
-  hasMessage(testResults) {
-    return testResults === TestResults.APP_SPECIFIC_FAIL;
   }
 }
