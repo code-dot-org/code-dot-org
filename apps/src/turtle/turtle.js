@@ -1512,7 +1512,6 @@ Artist.prototype.step = function (command, values, options) {
       tupleDone = result.tupleDone;
       this.visualization.setHeading(heading);
       this.visualization.moveForward(result.distance, true);
-      this.visualization.jumpForward(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
@@ -1520,6 +1519,7 @@ Artist.prototype.step = function (command, values, options) {
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       this.visualization.setHeading(heading);
+      this.visualization.jumpForward(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
