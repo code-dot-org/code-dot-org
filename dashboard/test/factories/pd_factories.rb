@@ -4,7 +4,6 @@ FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
     on_map true
-    funded false
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     trait :teachercon do
@@ -51,6 +50,11 @@ FactoryGirl.define do
         teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
+    end
+
+    trait :funded do
+      funded true
+      funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
     end
 
     after(:create) do |workshop, evaluator|
