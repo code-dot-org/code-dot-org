@@ -36,6 +36,11 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://ro.code.org/about', url_converter.replace_origin('http://ro.code.org/about')
   end
 
+  def test_dont_raise_on_learn_code_org_in_production_configuration
+    url_converter = production_url_converter
+    assert_equal 'https://learn.code.org', url_converter.replace_origin('https://learn.code.org')
+  end
+
   def tst_url_converter
     UrlConverter.new(
       pegasus_host: 'test.code.org',
@@ -66,6 +71,13 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://test-studio.code.org', url_converter.replace_origin('http://studio.code.org')
   end
 
+  def test_raises_on_learn_code_org_in_test_configuration
+    url_converter = tst_url_converter
+    assert_raises do
+      url_converter.replace_origin('https://learn.code.org')
+    end
+  end
+
   def local_url_converter
     UrlConverter.new(
       pegasus_host: 'localhost.code.org:3000',
@@ -94,5 +106,12 @@ class UrlConverterTest < Minitest::Test
     url_converter = local_url_converter
     assert_equal 'http://localhost.code.org:3000', url_converter.replace_origin('http://code.org')
     assert_equal 'http://localhost-studio.code.org:3000', url_converter.replace_origin('http://studio.code.org')
+  end
+
+  def test_raises_on_learn_code_org_in_local_configuration
+    url_converter = local_url_converter
+    assert_raises do
+      url_converter.replace_origin('https://learn.code.org')
+    end
   end
 end
