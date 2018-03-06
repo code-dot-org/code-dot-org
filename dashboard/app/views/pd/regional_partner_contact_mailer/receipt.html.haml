@@ -1,0 +1,57 @@
+%p
+  Hello
+  = "#{@form[:first_name]}" + ','
+
+%p
+  Thank you for your interest in Code.org's
+  = "#{@interest}" + '. '
+  We will notify you about opportunities in your area when they become available. Below is a confirmation of the information you submitted to us.
+
+%p
+  %b Name:
+  - unless @form[:title] == ""
+    = "#{@form[:title]}" + ' '
+  = "#{@form[:first_name]}" + ' ' + "#{@form[:last_name]}"
+  %br
+  %b Email:
+  = "#{@form[:email]}"
+  %br
+  %b Job Role:
+  = "#{@form[:role]}"
+  %br
+  %b Job Title:
+  = "#{@form[:job_title]}"
+
+%p
+  %b School State:
+  = "#{@form[:school_state]}"
+  %br
+  - unless @form[:school_district] == ""
+    %b School District:
+    = "#{@form[:school_district]}"
+    %br
+  - unless @form[:school_name] == ""
+    %b School Name:
+    = "#{@form[:school_name]}"
+    %br
+  %b School Type:
+  = "#{@form[:school_type].capitalize}"
+  %br
+  %b Grade Levels:
+  = "#{@form[:grade_levels].join(', ')}"
+  %br
+  - unless @form[:program] == ""
+    %b Program:
+    = "#{@form[:program].map {|item| item.gsub(/\((.*)\)/, '').strip}.join(', ')}"
+
+- unless @form[:message] == ""
+  %p
+    %b Message:
+    = "#{@form[:notes]}"
+
+%p
+  Best,
+  %br
+  Tanya Parker
+  %br
+  Product Manager, Code.org
