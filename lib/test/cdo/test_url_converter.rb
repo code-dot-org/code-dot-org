@@ -59,10 +59,10 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://test.hourofcode.com', url_converter.replace_origin('https://hourofcode.com')
     assert_equal 'https://test.csedweek.org', url_converter.replace_origin('https://csedweek.org')
     assert_equal 'https://test.csedweek.org/about', url_converter.replace_origin('https://csedweek.org/about')
-    # assert_equal 'https://test-uk.code.org', url_converter.replace_origin('https://uk.code.org')
-    # assert_equal 'https://test-uk.code.org/about', url_converter.replace_origin('https://uk.code.org/about')
-    # assert_equal 'https://test-ro.code.org', url_converter.replace_origin('https://ro.code.org')
-    # assert_equal 'https://test-ro.code.org/about', url_converter.replace_origin('https://ro.code.org/about')
+    assert_equal 'https://test-uk.code.org', url_converter.replace_origin('https://uk.code.org')
+    assert_equal 'https://test-uk.code.org/about', url_converter.replace_origin('https://uk.code.org/about')
+    assert_equal 'https://test-ro.code.org', url_converter.replace_origin('https://ro.code.org')
+    assert_equal 'https://test-ro.code.org/about', url_converter.replace_origin('https://ro.code.org/about')
   end
 
   def test_upgrades_protocol_in_test_configuration
@@ -96,10 +96,10 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://localhost.hourofcode.com:3000', url_converter.replace_origin('https://hourofcode.com')
     assert_equal 'https://localhost.csedweek.org:3000', url_converter.replace_origin('https://csedweek.org')
     assert_equal 'https://localhost.csedweek.org:3000/about', url_converter.replace_origin('https://csedweek.org/about')
-    # assert_equal 'https://localhost-uk.code.org:3000', url_converter.replace_origin('https://uk.code.org')
-    # assert_equal 'https://localhost-uk.code.org:3000/about', url_converter.replace_origin('https://uk.code.org/about')
-    # assert_equal 'https://localhost-ro.code.org:3000', url_converter.replace_origin('https://ro.code.org')
-    # assert_equal 'https://localhost-ro.code.org:3000/about', url_converter.replace_origin('https://ro.code.org/about')
+    assert_equal 'https://localhost-uk.code.org:3000', url_converter.replace_origin('https://uk.code.org')
+    assert_equal 'https://localhost-uk.code.org:3000/about', url_converter.replace_origin('https://uk.code.org/about')
+    assert_equal 'https://localhost-ro.code.org:3000', url_converter.replace_origin('https://ro.code.org')
+    assert_equal 'https://localhost-ro.code.org:3000/about', url_converter.replace_origin('https://ro.code.org/about')
   end
 
   def test_does_not_upgrade_protocol_in_local_configuration

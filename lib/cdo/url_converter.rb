@@ -1,4 +1,9 @@
 class UrlConverter
+  LEARN_CODE_ORG_REGEX = /\/\/learn.code.org(?=$|\/)/
+  HOUROFCODE_COM_REGEX = /\/\/hourofcode\.com(?=$|\/)/
+  CSEDWEEK_ORG_REGEX = /\/\/csedweek\.org(?=$|\/)/
+  DASHBOARD_REGEX = /\/\/studio.code.org(?=$|\/)/
+
   # For reference, a 'host' is a domain and (optionally) port without a protocol.
   # Examples: code.org, studio.code.org, localhost-studio.code.org:3000
   # @see https://developer.mozilla.org/en-US/docs/Web/API/Location
@@ -14,18 +19,24 @@ class UrlConverter
   # replace all three.
   def replace_origin(url)
     if @dashboard_host
-      raise 'Should not use learn.code.org' unless /\/\/learn.code.org(?=$|\/)/.match(url).nil?
-      url = url.
-        gsub(/\/\/studio.code.org(?=$|\/)/, "//" + @dashboard_host)
+      raise 'Should not use learn.code.org' unless LEARN_CODE_ORG_REGEX.match(url).nil?
     end
-    if @pegasus_host
-      url = url.gsub(/\/\/code.org(?=$|\/)/, "//" + @pegasus_host)
-    end
-    if @hourofcode_host
-      url = url.gsub(/\/\/hourofcode.com(?=$|\/)/, "//" + @hourofcode_host)
-    end
-    if @csedweek_host
-      url = url.gsub(/\/\/csedweek.org(?=$|\/)/, "//" + @csedweek_host)
+
+    if @hourofcode_host && HOUROFCODE_COM_REGEX =~ url
+      url = url.gsub(HOUROFCODE_COM_REGEX, "//" + @hourofcode_host)
+    elsif @csedweek_host && CSEDWEEK_ORG_REGEX =~ url
+      url = url.gsub(CSEDWEEK_ORG_REGEX, "//" + @csedweek_host)
+    elsif @dashboard_host && DASHBOARD_REGEX =~ url
+      url = url.gsub(DASHBOARD_REGEX, "//" + @dashboard_host)
+    elsif @pegasus_host
+      # Handle i18n subdomains
+      if url =~ /\/\/\w+\.code\.org/
+        subdomain = /(?<=\/\/)\w+(?=\.code\.org)/.match(url)[0]
+        url = url.gsub(/\/\/\w+\.code\.org(?=$|\/)/, "//" + @pegasus_host)
+        url = url.gsub(/\.code\.org/, "-#{subdomain}.code.org")
+      else
+        url = url.gsub(/\/\/code.org(?=$|\/)/, "//" + @pegasus_host)
+      end
     end
 
     # Convert http to https
