@@ -50,8 +50,8 @@ content-type: text/ng-template
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
 
-  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage' && teacher_managed_section(section)"}
-    %button.btn.btn-white{"ng-click" => "showModal()", "ng-controller" => "MovingStudentsController"}= I18n.t('dashboard_sections_move_students')
+  .managebuttons{style: "margin-bottom: 9px;", "ng-if" => "tab == 'manage' && teacher_managed_section(section)"}
+    %button.btn.btn-gray-override{"ng-click" => "showModal()", "ng-controller" => "MovingStudentsController"}= I18n.t('dashboard_sections_move_students')
 
 .clear
 
