@@ -450,7 +450,7 @@ class Documents < Sinatra::Base
       when '.md', '.txt'
         preprocessed = erb body, locals: locals
         preprocessed = preprocess_markdown preprocessed
-        html = markdown preprocessed, locals: locals
+        html = markdown preprocessed, lax_spacing: true, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'
         redirect erb(body, locals: locals), 301

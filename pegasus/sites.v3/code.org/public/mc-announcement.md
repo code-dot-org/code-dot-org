@@ -50,7 +50,7 @@ In support of Code.org and the global Hour of Code campaign, Microsoft will also
 
 **About Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding access to computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer science. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Ballmer Family Giving, Google, Infosys Foundation USA, Microsoft, Omidyar Network and others.
+Code.org is a 501c3 public nonprofit dedicated to expanding access to computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer science. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Ballmer Family Giving, Google, Infosys Foundation USA, Microsoft, Omidyar Network and others.
 
  **About Microsoft**
 

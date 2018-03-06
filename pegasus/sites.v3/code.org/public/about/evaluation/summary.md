@@ -7,7 +7,7 @@ theme: responsive
 # Code.org's Impact on Computer Science Education: June 2014 - June 2015 Program Report
 <img src="/images/summary-2014-15.png" width="100%"/>
 
-Code.org is is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. 
+Code.org is is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. 
 
 Code.org partners with [Outlier Research & Evaluation at the University of Chicago](http://outlier.uchicago.edu/), a third-party evaluator, to understand our impact and progress towards meeting our mission. This report summarizes our program evaluation work for June 2014 through June 2015, which focused on answering the following key questions:
 

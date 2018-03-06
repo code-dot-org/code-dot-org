@@ -184,6 +184,7 @@
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
+    "is_project_level": true,
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -425,6 +426,9 @@
           <block type="logic_boolean">
             <title name="BOOL">TRUE</title>
           </block>
+        </category>
+        <category name="Text">
+          <block type="text_join_simple" inputcount="2"/>
         </category>
       </xml>
     </toolbox_blocks>
