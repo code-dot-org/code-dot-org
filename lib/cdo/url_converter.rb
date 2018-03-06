@@ -14,7 +14,7 @@ class UrlConverter
   # replace all three.
   def replace_origin(url)
     if @dashboard_host
-      raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
+      raise 'Should not use learn.code.org' unless /\/\/learn.code.org(?=$|\/)/.match(url).nil?
       url = url.
         gsub(/\/\/studio.code.org(?=$|\/)/, "//" + @dashboard_host)
     end
