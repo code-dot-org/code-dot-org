@@ -9006,3 +9006,80 @@
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Shapes and Randomization:
+              name: Kształty oraz losowość
+            Variables:
+              name: Zmienne
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Warunkowe
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: Programowanie
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."

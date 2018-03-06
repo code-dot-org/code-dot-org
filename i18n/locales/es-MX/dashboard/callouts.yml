@@ -692,6 +692,7 @@ es-MX:
         artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas.
+      comment_intro_maze_2018_callout: [ ]
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa este ciclo para recolectar todo el néctar (o miel) de una flor (o panal).
@@ -1151,6 +1152,7 @@ es-MX:
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
       courseF_artist_variables_template_callout: [ ]
+      courseF_artist_variables_template_2018_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: La caja de herramientas ahora está en modo categoría. ¡Todos los bloques que necesitas están debajo de estas etiquetas!
@@ -1259,6 +1261,8 @@ es-MX:
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variables8c_2018_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: Encontrarás tu bloque de variable aquí.
+      courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: Encontrarás tu bloque de variable aquí.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: Así es como se establece el valor de tu variable. Cambia el texto conectado a este bloque para cambiar lo que está siendo retenido en tu variable.
@@ -1494,6 +1498,7 @@ es-MX:
         playlab_add_score: ""
       iceage_throw_hearts_callout: [ ]
       iceage_throw_hearts_2018_callout: [ ]
+      iceage_warn_embed_ice_age_callout: [ ]
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ""
       iceage_warn_ice_age_2018_callout:

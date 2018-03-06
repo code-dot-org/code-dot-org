@@ -276,9 +276,6 @@
           useimmissa peleissä. Tällä oppitunnilla katsomme kuinka Pythagoraan lausetta
           ja etäisyysfunktiota voidaan käyttää mittaamaan kahden pisteen välinen etäisyys
           tasolla, ja sitten päätellä koskevatko nämä pisteet (tai pelin hahmot) toisiaan.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

@@ -163,9 +163,6 @@ vi:
       CollisionDetection:
         title: Phát hiện sự va chạm và định lý Pythagore
         desc: Xác định các đối tượng trên màn hình cảm ứng là một khía cạnh quan trọng của hầu hết các trò chơi. Trong bài học này, chúng ta sẽ xem cách định lý Pythagore và công thức Khoảng cách được sử dụng để đo khoảng cách giữa hai điểm trên mặt phẳng, và tính xem khi nào hai điểm đó (hoặc các nhân vật điện tử) chạm vào nhau.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Trong bài học này, bạn sẽ học về vòng lặp!

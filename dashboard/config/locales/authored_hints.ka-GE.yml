@@ -4475,6 +4475,11 @@
         artistLoopsKB_a: "ამ თავსატეხის ამოსახსნელად, თქვენს ციკლში უნდა იყოს სამი
           ბლოკი."
       artistLoopsKFP_authored_hint: []
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Comments are also helpful when other people try
+          to read your code.
+        courseC_maze_programming4_b: Add a comment when you change directions- what
+          would have happened if you turned the other way?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           კედლების და სახურავის შესაქმნელად შეგიძლიათ გამოიყენოთ ციკლები. სცადეთ სხვადასხვა ბლოკის გამეორება.
@@ -6919,6 +6924,7 @@
           თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება."
         courseB_starWars_prog9_b: "ამ თავსატეხის ამოხსნის ბევრი გზა არსებობს."
         courseB_starWars_prog9_c: "გამოგვადეგებოდა თუ არა აქ`გამეორების` ციკლი?"
+      courseC_PlayLab_embed_events9_authored_hint: []
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           მიამაგრეთ ეს ბლოკი, ბლოკს `გაშვებისას`:
@@ -7934,6 +7940,7 @@
           ორიგინალ პროგრამაში მხოლოდ რამდენიმე ხაზია შეცდომით. თუ პირველ მცდელობას ჩააფლავებთ, დაბრუნდით და ისევ სცადეთ. გამოსავალი ნამდვილად არსებობს!
       courseD_artist_embed_frozen_authored_hint: []
       courseD_artist_embed_frozen2_authored_hint: []
+      courseD_artist_embedded_project1a_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -8151,6 +8158,7 @@
         courseD_artist_project2_b: "მას შემდეგ, რაც დახატავთ და გადაადგილდებით პირველად,
           თქვენ შეგიძლიათ კოდის გამეორება მისი ციკლში მოთავსებით."
       courseD_artist_project2Template_authored_hint: []
+      courseD_artist_project2Template_2018_authored_hint: []
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: "გაიხსენეთ, რომ `წინ გადაადგილება` ხატავს ხაზს,
           ხოლო `წინ გადახტომა` - არა."
@@ -8235,6 +8243,7 @@
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: []
+      courseD_artist_projectTemplate_2018_authored_hint: []
       courseD_artist_project_embedded_authored_hint: []
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: "გვერდის დასახატად, გამოიყენეთ `გადაადგილდი წინ 100
@@ -9540,6 +9549,7 @@
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: []
       courseD_playLab_embedded_authored_hint: []
       courseD_scrat_predict1_authored_hint: []
       courseD_scrat_predict1_2018_authored_hint: []
@@ -10759,6 +10769,7 @@
           * ათქმევინეთ დინოზავრს რამე.
           * შეცვლაეთ ფონი.
           * გააქრეთ ყველა მოქმედი პირი და გამოაჩინეთ "თამაში დასრულებულია!" ტექსტი.
+      courseE_playLab_embed_scaffold5_authored_hint: []
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: "`მსახიობი 1-ისთვის ??? სურათის დაყენების` ბლოკი
           შეიძლება გამოყენებული იქნას სცენაზე მსახიობის დასამატებლად."
@@ -16053,6 +16064,7 @@
         iceage_throw_hearts_b: "იმისათვის, რომ ბებო გააბედნიეროთ გულის მიღების შემდეგ,
           თქვენ მოგიწევთ დააკავშიროთ `განსაზღვრე 2 მსახიობის ხასიათი, როგორც ბედნიერი`
           ბლოკი `როდესაც მეორე მსახიობი შეეხება ნივთს` მოვლენას."
+      iceage_warn_embed_ice_age_authored_hint: []
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: "ამ თავსატეხის დასასრულებლად თქვენ მხოლოდ ორი ბლოკის
           დამატება დაგჭირდებათ. "

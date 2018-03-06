@@ -269,9 +269,6 @@
           většiny her. V této lekci se budeme zabývat, jak Pythagorova věta a vzorec
           vzdálenosti slouží k měření vzdálenosti mezi dvěma body v rovině a pak se
           rozhodnout, zda tyto dva body (nebo postavy her) se dotýkají.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
