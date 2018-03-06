@@ -228,10 +228,6 @@ class Visualization {
     this.turtleFrame_ = 0;
   }
 
-  clipImage() {
-
-  }
-
   // Helper for creating canvas elements.
   createCanvas_(id, width, height) {
     var el = document.createElement('canvas');
@@ -915,7 +911,6 @@ Artist.prototype.afterInject_ = function (config) {
   var visualization = document.getElementById('visualization');
   visualization.appendChild(this.visualization.displayCanvas);
 
-  // TODO (br-pair): - pull this out?
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
@@ -1524,7 +1519,6 @@ Artist.prototype.step = function (command, values, options) {
       result = this.calculateSmoothAnimate(options, distance);
       tupleDone = result.tupleDone;
       this.visualization.setHeading(heading);
-      this.jumpForward(result.distance);
       break;
     case 'RT':  // Right Turn
       distance = values[0];
