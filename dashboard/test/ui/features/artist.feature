@@ -9,7 +9,7 @@ Background:
   And element "#resetButton" is hidden
 
 Scenario: Loading the first level
-  Then there's an image "video_thumbnails/2"
+  Then there's an image "video_thumbnails/artist_intro"
   Then there's an image "artist/small_static_avatar"
 
 Scenario: Winning the first level

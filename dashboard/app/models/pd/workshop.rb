@@ -21,6 +21,7 @@
 #  regional_partner_id :integer
 #  on_map              :boolean
 #  funded              :boolean
+#  funding_type        :string(255)
 #
 # Indexes
 #
