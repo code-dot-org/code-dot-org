@@ -235,7 +235,7 @@
   beyond_hour_message: "همینطور با <a href='http://studio.code.org'>دوره های دیگر</a>
     ادامه دهید، یا گزینه های بیشتری را در مورد <a href='/learn/beyond'>یادگیری فراتر
     از یک ساعت</a> ببینید."
-  leaderboards_for_hoc: "برترین‌های ساعتِ کدنویسی."
+  leaderboards_for_hoc: "تابلو اعلانات برای ساعتی با کد."
   support_url: http://support.code.org/
   country: "کشور"
   city: "شهر"
@@ -341,7 +341,7 @@
   who_has_done_hoc: "کیا #HourOfCode رو انجام دادن؟ codeorg@"
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: "برترین‌های ساعتِ کدنویسی"
+  hoc_leaderboards: "صفحه پیشگامان ساعت کد"
   students_and_lines: "%{students} دانش آموز ساعت کد را انجام داده اند و %{lines}
     خط کد نوشته شده است."
   start_hoc: "هم اکنون ساعتِ کدنویسی را آغاز کنید"
@@ -1400,7 +1400,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: "رده ی سنی 8+"
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "سنین 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "سنین 10 به بالا (پس از دوره 3)"
   codeorg_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
