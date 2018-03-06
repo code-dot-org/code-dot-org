@@ -18,7 +18,7 @@ require 'singleton'
 #     }
 #   )
 
-STREAM_NAME = 'analysis-events'
+STREAM_NAME = 'analysis-events'.freeze
 
 class FirehoseClient
   include Singleton
