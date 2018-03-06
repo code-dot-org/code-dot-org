@@ -94,8 +94,15 @@ module Api::V1::Pd::WorkshopScoreSummarizer
       responses = PEGASUS_DB[:forms].where(source_id: enrollment_ids, kind: 'PdWorkshopSurvey')
 
       if facilitator_breakdown
+        # We need to figure out how many responses each facilitator got - the below two lines
+        # return a histogram showing FacilitatorName=># Responses.
+        # Using 'how_often_given_feedback_s' for no particular reason - any of the facilitator
+        # specific responses would do fine here
+        facilitator_name_responses = responses.map {|x| JSON.parse x[:data]}.map {|x| x['how_often_given_feedback_s']}.flat_map(&:keys)
+        facilitator_name_frequency = Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
+
         workshop.facilitators.each do |facilitator|
-          facilitator_scores[facilitator.name][:response_count] += responses.count
+          facilitator_scores[facilitator.name][:response_count] += facilitator_name_frequency[facilitator.name]
           facilitator_scores[facilitator.name][:number_teachers] += workshop.enrollments.size
         end
       end
@@ -112,7 +119,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
             # Then "answer" is actually a hash of answers for each
             # facilitator name
             answer.each do |facilitator_name, actual_answer|
-              process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, actual_answer, facilitator_name)
+              process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, actual_answer, facilitator_breakdown ? facilitator_name : nil)
             end
           else
             process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, answer)
