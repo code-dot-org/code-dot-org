@@ -1512,6 +1512,7 @@ Artist.prototype.step = function (command, values, options) {
       tupleDone = result.tupleDone;
       this.visualization.setHeading(heading);
       this.visualization.moveForward(result.distance, true);
+      this.visualization.jumpForward(result.distance);
       break;
     case 'JD':  // Jump (direction)
       distance = values[0];
