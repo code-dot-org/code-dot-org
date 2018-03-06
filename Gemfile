@@ -162,6 +162,7 @@ gem 'bootstrap-sass', '~> 2.3.2.2'
 
 # Ref: https://github.com/haml/haml/issues/940
 # https://github.com/haml/haml/issues/982
+# https://github.com/haml/haml/issues/985
 gem 'haml', github: 'wjordan/haml', ref: 'cdo'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
