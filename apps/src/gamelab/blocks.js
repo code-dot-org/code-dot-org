@@ -211,5 +211,34 @@ export default {
         { name: 'COLOR', type: blockly.BlockValueType.COLOUR },
       ],
     });
+
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'clickedOn',
+      blockText: 'when {SPRITE} clicked on',
+      args: [
+        { name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'setPosition',
+      blockText: 'move {THIS} to the {POSITION} position',
+      args: [
+        {
+          name: 'POSITION',
+          options: [
+            ['top left', '"top left"'],
+            ['top center', '"top center"'],
+            ['bottom right', '"bottom right"'],
+            ['center right', '"center right"'],
+            ['random', '"random"'],
+          ],
+        },
+      ],
+      methodCall: true,
+    });
   },
 };
