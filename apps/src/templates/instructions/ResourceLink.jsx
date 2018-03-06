@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import BaseDialog from '../BaseDialog';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   textLink: {
@@ -43,14 +44,14 @@ const styles = {
 
 class ResourceLink extends React.Component {
   static propTypes = {
-    map: PropTypes.bool,
+    highlight: PropTypes.bool,
+    icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     reference: PropTypes.string.isRequired,
   };
 
   state = {
-    dialogSelected: false,
-    text: this.props.reference
+    dialogSelected: false
   };
 
   selectResource = () => {
@@ -62,16 +63,20 @@ class ResourceLink extends React.Component {
   };
 
   render() {
-    const { map, reference, text } = this.props;
+    const { icon, reference, text, highlight} = this.props;
 
-    const iconStyle = map ? {...styles.commonIcon, ...styles.mapIcon} : {...styles.commonIcon, ...styles.resourceIcon};
-    const thumbnailStyle = map ? {...styles.commonThumbnail, ...styles.mapThumbnail} : {...styles.commonThumbnail};
+    const iconStyle = highlight ? {...styles.commonIcon, ...styles.mapIcon} : {...styles.commonIcon, ...styles.resourceIcon};
+    const thumbnailStyle = highlight ? {...styles.commonThumbnail, ...styles.mapThumbnail} : {...styles.commonThumbnail};
 
     return (
       <div>
         <div style={styles.resourceStyle} onClick={this.selectResource}>
           <span style={thumbnailStyle}>
-              <i style={iconStyle} className={map ? "fa fa-map" : "fa fa-book"}/>
+            <FontAwesome
+              icon={icon}
+              style={iconStyle}
+              title={text}
+            />
           </span>
           <a style={styles.textLink}>
             {text}
