@@ -45,9 +45,7 @@ $(document).ready(function () {
 
   new google.maps.places.SearchBox(document.getElementById('hoc-event-location'));
 
-  $('#hoc-signup-form select').selectize({
-    plugins: ['fast_click']
-  });
+  $('#hoc-signup-form select').selectize();
 
   renderSchoolDropdown();
 

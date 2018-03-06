@@ -132,6 +132,4 @@
       -else
         = partial('page_footer')
 
-    = partial('fastclick.js')
-
     = partial('google_analytics') if File.exists?(sites_dir("#{request.site}/views/google_analytics.haml"))
