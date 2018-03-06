@@ -3,10 +3,6 @@
 - projects_data = {}
 - if current_user
   - projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
-  // Due to inappropriate content, we're only showing Applab and Gamelab
-  // projects internally to project_validators.
-  // TODO Erin B - remove when we unhide applab and gamelab
-  - projects_data[:showApplabGamelab] = current_user.permission?  UserPermission::PROJECT_VALIDATOR
 
 = render partial: 'shared/angular'
 
