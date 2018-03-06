@@ -113,12 +113,12 @@ export const saveAllStudents = () => {
     const state = getState().manageStudents;
 
     // Currently, every update is an individual call to the server.
-    const currentlyEditedData = convertStudentDataToArray(state.editingData);
+    const currentlyEditedData = Object.values(state.editingData);
     let studentsToSave = currentlyEditedData.filter(student => student.rowType === RowType.STUDENT);
     studentsToSave.forEach(student => dispatch(saveStudent(student.id)));
 
     // Adding students can be saved together.
-    const arrayOfEditedData = convertStudentDataToArray(state.editingData);
+    const arrayOfEditedData = Object.values(state.editingData);
     const newStudentsToAdd = arrayOfEditedData
       .filter(student => student.rowType === RowType.NEW_STUDENT)
       .map(student => student.id);
@@ -140,7 +140,7 @@ export const addStudents = (studentIds) => {
       dispatch(startSavingStudent(studentIds[i]));
     }
 
-    const arrayOfEditedData = convertStudentDataToArray(state.editingData);
+    const arrayOfEditedData = Object.values(state.editingData);
     const filteredData = arrayOfEditedData.filter(student => studentIds.includes(student.id));
     addStudentOnServer(filteredData,
       state.sectionId, (error, data) => {
@@ -408,7 +408,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
 // component to display
 // TODO(caleybrock): memoize this - sections could be a few thousand students
 export const convertStudentDataToArray = (studentData) => {
-  return Object.values(studentData);
+  return Object.values(studentData).reverse();
 };
 
 // Make a post request to edit a student.
