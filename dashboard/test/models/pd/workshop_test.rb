@@ -967,7 +967,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       workshop = build :pd_workshop, **params
       assert_equal(
         expected,
-        workshop.funded_friendly_name,
+        workshop.funding_summary,
         "Expected #{params} funded_friendly_name to be #{expected}"
       )
     end

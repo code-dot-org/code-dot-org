@@ -648,7 +648,7 @@ class Pd::Workshop < ActiveRecord::Base
     course == COURSE_CSF && funded
   end
 
-  def funded_friendly_name
+  def funding_summary
     (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
 
