@@ -52,7 +52,7 @@ content-type: text/ng-template
               %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
               %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= I18n.t('dashboard_sections_move_students')
 
-#uitest-manage-tab{style: "padding-left:20px"}
+#uitest-manage-tab
 
   #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
     .panel-heading
