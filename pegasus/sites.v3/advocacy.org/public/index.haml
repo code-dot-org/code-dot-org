@@ -1,0 +1,54 @@
+---
+theme: responsive_wide
+layout: wide
+social:
+
+  "og:title": "Advocate for computer science education"
+  "og:description": "The Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system."
+  "twitter:site": "@codeorg"
+  "twitter:title": "Advocate for computer science education"
+  "twitter:description": "The Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system."
+  "twitter:url": "https://advocacy.code.org/"
+video_player: false
+---
+
+#homepage
+
+  #fullwidth
+    = view :header
+
+    .banner.container_responsive
+      %h1 Advocate for computer science education
+      The Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system.
+      %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf")}
+        %button
+          Learn more
+
+    .clear{style: "clear:both"}
+
+  .container_responsive
+
+    %h1 Map
+
+    -state ||= nil
+    %link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
+    = view :interactive_map, use_url: false, fill_color: '#00484F'
+
+
+    %h1 Links
+
+    =inline_css 'homepage.css'
+
+    #audienceblocks{style: "text-align:center; margin-top:0px"}
+      - blocks = AdvocacySite.get_blocks(request)
+      - blocks.each do |block|
+        .block
+          - if block[:type] == "block"
+            = view :homepage_quarterslot_links, entry: block
+
+    .clear{style: "clear: both"}
+
+    %h1 Our Coalition
+
+    = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'major')
+

@@ -3,6 +3,8 @@
 
 - require 'state_abbr'
 
+- fill_color ||= '#3E484F'
+
 #state-list.phone-feature
   %h2 Choose a State
   %form
@@ -106,7 +108,7 @@
 
       // Map styling
       stateHoverAnimation: 0,
-      stateStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
+      stateStyles: {fill: '#{fill_color}', stroke: '#7A7A7A'},
       labelBackingStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
       labelBackingHoverStyles: {fill: '#DCDF8A'},
       stateHoverStyles: {fill: '#DCDF8A'},

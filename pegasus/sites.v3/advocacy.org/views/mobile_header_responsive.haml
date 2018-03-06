@@ -1,0 +1,7 @@
+-# an ultra-simple mobile header
+- opacity = ["/learn", "/learn/robotics"].include?(request.path_info) ? 1 : 0.8
+#pageheader{style: "background-color:rgba(255,255,255,#{opacity})"}
+  .container_responsive
+    #left
+      %a{:href=>"/"}
+        %img#logo{:src=>'/images/logo.png'}

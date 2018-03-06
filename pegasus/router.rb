@@ -37,6 +37,7 @@ require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 require src_dir 'homepage'
+require src_dir 'advocacy_site'
 
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
@@ -65,6 +66,9 @@ class Documents < Sinatra::Base
       next if site == '.' || site == '..' || !File.directory?(site_dir)
       configs[site] = load_config_in(site_dir)
     end
+
+    puts 'configs'
+    puts configs.to_json
 
     configs
   end
@@ -133,13 +137,23 @@ class Documents < Sinatra::Base
 
     @dirs << request.site
 
+    puts 'dirs'
+    puts @dirs.to_json
+
     if @config
       base = @config[:base]
+      puts base
       while base
         @dirs << base
+        puts @dirs.to_json
         base = settings.configs[base][:base]
       end
     end
+
+    puts 'base'
+    puts base.to_json
+
+    puts 'done'
 
     @locals = {header: {}}
   end
@@ -173,7 +187,9 @@ class Documents < Sinatra::Base
 
   # Static files
   get '*' do |uri|
+    puts 'get star'
     pass unless path = resolve_static('public', uri)
+    puts path
     cache :static
     NewRelic::Agent.set_transaction_name(uri) if defined? NewRelic
     send_file(path)
@@ -205,6 +221,7 @@ class Documents < Sinatra::Base
 
   # Documents
   get_head_or_post '*' do |uri|
+    puts 'get head or post'
     pass unless path = resolve_document(uri)
     if defined? NewRelic
       transaction_name = uri
@@ -216,6 +233,8 @@ class Documents < Sinatra::Base
   end
 
   after do
+    puts 'after'
+
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
 
@@ -251,6 +270,8 @@ class Documents < Sinatra::Base
 
   helpers(Dashboard) do
     def content_dir(*paths)
+      puts 'content_dir'
+      puts File.join(settings.views, *paths)
       File.join(settings.views, *paths)
     end
 
@@ -277,6 +298,7 @@ class Documents < Sinatra::Base
     end
 
     def document(path)
+      puts 'document'
       content = IO.read(path)
       original_line_count = content.lines.count
       match = content.match(/^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
@@ -349,6 +371,7 @@ class Documents < Sinatra::Base
     end
 
     def resolve_static(subdir, uri)
+      puts 'resolve static'
       return nil if settings.non_static_extnames.include?(File.extname(uri))
 
       @dirs.each do |dir|
@@ -362,6 +385,7 @@ class Documents < Sinatra::Base
     end
 
     def resolve_template(subdir, extnames, uri)
+      puts 'resolve template'
       @dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
@@ -384,6 +408,7 @@ class Documents < Sinatra::Base
     end
 
     def resolve_document(uri)
+      puts 'resolve document'
       extnames = settings.non_static_extnames
 
       path = resolve_template('public', extnames, uri)
@@ -417,6 +442,7 @@ class Documents < Sinatra::Base
     end
 
     def render_template(path, locals={})
+      puts 'render template'
       render_(IO.read(path), File.extname(path), locals)
     rescue Haml::Error => e
       if e.backtrace.first =~ /router\.rb:/
@@ -429,6 +455,7 @@ class Documents < Sinatra::Base
     end
 
     def render_(body, extname, locals={})
+      puts 'render'
       locals = @locals.merge(locals).symbolize_keys
       case extname
       when '.erb', '.html'
