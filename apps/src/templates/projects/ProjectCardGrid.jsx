@@ -111,6 +111,7 @@ class ProjectCardGrid extends Component {
               labKey="applab"
               labName={i18n.projectTypeApplab()}
               labViewMoreString={i18n.projectTypeApplabViewMore()}
+              hideViewMoreLink={true}
               projectList={projectLists.applab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -122,6 +123,7 @@ class ProjectCardGrid extends Component {
               labKey="gamelab"
               labName={i18n.projectTypeGamelab()}
               labViewMoreString={i18n.projectTypeGamelabViewMore()}
+              hideViewMoreLink={true}
               projectList={projectLists.gamelab}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
@@ -198,6 +200,7 @@ class ProjectCardGrid extends Component {
                 labKey="applab"
                 labName={i18n.projectTypeAllProjectsApplab()}
                 labViewMoreString={i18n.projectsViewAll()}
+                hideViewMoreLink={true}
                 projectList={projectLists.applab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
@@ -210,6 +213,7 @@ class ProjectCardGrid extends Component {
                 labKey="gamelab"
                 labName={i18n.projectTypeAllProjectsGamelab()}
                 labViewMoreString={i18n.projectsViewAll()}
+                hideViewMoreLink={true}
                 projectList={projectLists.gamelab}
                 numProjectsToShow={numProjects}
                 galleryType={this.props.galleryType}
