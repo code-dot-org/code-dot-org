@@ -1001,6 +1001,12 @@ And(/^I give user "([^"]*)" project validator permission$/) do |name|
   user.save!
 end
 
+Then(/^I remove featured projects from the gallery$/) do
+  puts "Wiping out the gallery!"
+  require_rails_env
+  FeaturedProject.delete_all
+end
+
 Then(/^I make a playlab project named "([^"]*)"$/) do |name|
   steps %Q{
     Then I am on "http://studio.code.org/projects/playlab/new"
