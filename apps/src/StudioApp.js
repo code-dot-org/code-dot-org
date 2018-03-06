@@ -1454,6 +1454,7 @@ StudioApp.prototype.displayFeedback = function (options) {
         code: generatedCodeProperties.code,
       };
       store.dispatch(setFeedbackData({
+        isChallenge: this.config.isChallengeLevel,
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
