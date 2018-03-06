@@ -29,7 +29,7 @@ end.parse!
 
 missing_args = [:filename, :state, :school_year].select {|arg| options[arg].nil?}
 raise OptionParser::MissingArgument.new(missing_args.join(', ')) unless missing_args.empty?
-raise OptionParser::InvalidOption.new("State code must be two characters") unless options[:state].length == 2
+raise OptionParser::InvalidOption.new("State code must be a two-character US state code") unless us_state_abbr?(options[:state], true)
 raise OptionParser::InvalidOption.new("School year must be four digits") unless options[:school_year] =~ /^\d{4}$/
 
 bucket_name = Census::StateCsOffering::CENSUS_BUCKET_NAME
