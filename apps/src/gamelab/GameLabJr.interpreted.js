@@ -184,12 +184,27 @@ function makeNewSprite(animation, x, y) {
     } else if (position === "top center") {
       sprite.x = 200;
       sprite.y = 50;
-    } else if (position === "bottom right") {
+    } else if (position === "top right") {
       sprite.x = 350;
-      sprite.y = 350;
+      sprite.y = 50;
+    } else if (position === "center left") {
+      sprite.x = 50;
+      sprite.y = 200;
+    } else if (position === "center") {
+      sprite.x = 200;
+      sprite.y = 200;
     } else if (position === "center right") {
       sprite.x = 350;
       sprite.y = 200;
+    } else if (position === "bottom left") {
+      sprite.x = 50;
+      sprite.y = 350;
+    } else if (position === "bottom center") {
+      sprite.x = 200;
+      sprite.y = 350;
+    } else if (position === "bottom right") {
+      sprite.x = 350;
+      sprite.y = 350;
     } else if (position === "random") {
       sprite.x = randomNumber(50, 350);
       sprite.y = randomNumber(50, 350);
