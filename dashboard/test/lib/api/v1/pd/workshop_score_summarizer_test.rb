@@ -320,6 +320,37 @@ module Api::V1::Pd
       validate(expected_results)
     end
 
+    test 'correct averaging of facilitator specific questions with no facilitator specific breakdown' do
+      @pegasus_db_stub.stubs(:where).returns(
+        [
+          {
+            data: {
+              how_often_given_feedback_s: {'Tom': 'Sometimes'}
+            }.to_json
+          }, {
+            data: {
+              how_often_given_feedback_s: {'Dick': 'Sometimes'}
+            }.to_json
+          }, {
+            data: {
+              how_often_given_feedback_s: {'Harry': 'Almost never'}
+            }.to_json
+          }, {
+            data: {
+              how_often_given_feedback_s: {'Tom': 'All the time'}
+            }.to_json
+          }
+        ]
+      )
+
+      non_breakdown_score = get_score_for_workshops(@workshops)
+      assert_equal 3.0, non_breakdown_score[:how_often_given_feedback_s]
+
+      breakdown_scores = get_score_for_workshops(@workshops, facilitator_breakdown: true)
+
+      assert_equal [{'Tom' => 4.0}, {'Dick' => 3.0}, {'Harry' => 1.0},], breakdown_scores[1].map {|k, v| {k => v[:how_often_given_feedback_s]}}
+    end
+
     private
 
     def validate(expected_results, expected_facilitator_results=nil)
