@@ -32,8 +32,6 @@ const tiles = require('./tiles');
 
 module.exports = class MazeController {
   constructor(level, skin, config, options = {}) {
-    const Type = getSubtypeForSkin(config.skinId);
-    const subtype = new Type(this, config);
 
     this.stepSpeed = 100;
 
@@ -41,7 +39,7 @@ module.exports = class MazeController {
     this.skin = skin;
     this.startDirection = null;
 
-    this.subtype = subtype;
+    this.subtype = null;
     this.map = null;
     this.animationsController = null;
     this.executionInfo = null;
@@ -60,15 +58,17 @@ module.exports = class MazeController {
     this.PEGMAN_Y_OFFSET = null;
     this.SQUARE_SIZE = null;
 
-    this.loadLevel_();
+    if (options.reduxStore) {
+      this.addReduxStore(options.reduxStore);
+    }
 
     if (options.methods) {
       this.rebindMethods(options.methods);
     }
 
-    if (options.reduxStore) {
-      this.addReduxStore(options.reduxStore);
-    }
+    const Type = getSubtypeForSkin(config.skinId);
+    this.subtype = new Type(this, config);
+    this.loadLevel_();
   }
 
   /**
@@ -303,7 +303,7 @@ module.exports = class MazeController {
       // Play the sound
       this.playAudio('obstacle');
       this.animationsController.scheduleObstacleHit(targetX, targetY, deltaX, deltaY, frame);
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         this.playAudioOnFailure();
       }, this.stepSpeed);
     }
@@ -370,17 +370,5 @@ module.exports = class MazeController {
       amount: -1,
       sound: 'dig',
     });
-  }
-
-  /**
-   * Certain Maze types - namely, WordSearch, Collector, and any Maze with
-   * Quantum maps, don't want to check for success until the user's code
-   * has finished running completely.
-   */
-  shouldCheckSuccessOnMove() {
-    if (this.map.hasMultiplePossibleGrids()) {
-      return false;
-    }
-    return this.subtype.shouldCheckSuccessOnMove();
   }
 };

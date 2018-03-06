@@ -346,6 +346,8 @@ export default class CensusTeacherBanner extends Component {
           <p>We’d love to know more about computer science opportunities at your school. Please take our survey to increase access to Computer Science in the US.</p>
         </div>
       );
+      const schoolId = this.state.ncesSchoolId ? this.state.ncesSchoolId : this.props.ncesSchoolId;
+      const link = encodeURI(`/yourschool?schoolId=${schoolId}&isTeacher=true&name=${this.props.teacherName}&email=${this.props.teacherEmail}#form`);
       buttons = (
         <div style={styles.buttonDiv}>
           <Button
@@ -357,7 +359,7 @@ export default class CensusTeacherBanner extends Component {
           />
           <Button
             onClick={this.props.onPostpone}
-            href={pegasus('/yourschool')}
+            href={pegasus(link)}
             target="_blank"
             style={styles.button}
             size="large"
