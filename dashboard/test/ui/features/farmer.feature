@@ -9,7 +9,7 @@ Background:
   And element "#resetButton" is hidden
 
 Scenario: Loading the first level
-  Then there's an image "video_thumbnails/3"
+  Then there's an image "video_thumbnails/farmer_intro"
   Then there's an image "farmer/small_static_avatar"
   Then I see "#pegman"
   Then there's 1 dirt at (4, 4)
