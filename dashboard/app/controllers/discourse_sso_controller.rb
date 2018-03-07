@@ -11,8 +11,7 @@ class DiscourseSsoController < ApplicationController
     sso.username = current_user.email # from devise
     sso.external_id = current_user.id # from devise
     sso.sso_secret = secret
-    sso.sso_url = CDO.discourse_sso_url
 
-    redirect_to sso.to_url(CDO.discourse_sso_url)
+    redirect_to sso.to_url(sso.return_sso_url)
   end
 end

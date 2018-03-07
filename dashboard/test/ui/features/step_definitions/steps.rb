@@ -1,3 +1,5 @@
+require 'cdo/url_converter'
+
 # coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
@@ -38,25 +40,12 @@ def page_load(wait_until_unload)
 end
 
 def replace_hostname(url)
-  if ENV['DASHBOARD_TEST_DOMAIN']
-    raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
-    url = url.
-      gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
-  end
-  if ENV['PEGASUS_TEST_DOMAIN']
-    url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
-  end
-  if ENV['HOUROFCODE_TEST_DOMAIN']
-    url = url.gsub(/\/\/hourofcode.com\//, "//" + ENV['HOUROFCODE_TEST_DOMAIN'] + "/")
-  end
-  if ENV['CSEDWEEK_TEST_DOMAIN']
-    url = url.gsub(/\/\/csedweek.org\//, "//" + ENV['CSEDWEEK_TEST_DOMAIN'] + "/")
-  end
-
-  # Convert http to https
-  url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
-  # Convert x.y.code.org to x-y.code.org
-  url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
+  UrlConverter.new(
+    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
+    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
+    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
+    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN']
+  ).replace_origin(url)
 end
 
 # When an individual step fails in a call to steps, one gets no feedback about
