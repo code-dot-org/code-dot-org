@@ -13,6 +13,9 @@ import i18n from '@cdo/locale';
 const styles = {
   xIcon: {
     paddingRight: 5,
+  },
+  saveButton: {
+    marginRight: 5,
   }
 };
 
@@ -113,6 +116,7 @@ class ManageStudentActionsCell extends Component {
               color={Button.ButtonColor.orange}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
+              style={styles.saveButton}
             />
             <Button
               onClick={this.onCancel}

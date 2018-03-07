@@ -8,7 +8,7 @@ describe('feedback redux module', () => {
       displayingCode: false,
       displayingShareControls: false,
 
-
+      isChallenge: false,
       isPerfect: true,
       blocksUsed: 0,
       blockLimit: undefined,
@@ -77,6 +77,7 @@ describe('feedback redux module', () => {
     it('sets all the properties', () => {
       const state = {};
       const newState = reducer(state, feedback.setFeedbackData({
+        isChallenge: true,
         isPerfect: true,
         blocksUsed: 19,
         displayFunometer: false,
@@ -84,6 +85,7 @@ describe('feedback redux module', () => {
         canShare: true,
       }));
       expect(newState).to.deep.equal({
+        isChallenge: true,
         isPerfect: true,
         blocksUsed: 19,
         displayFunometer: false,

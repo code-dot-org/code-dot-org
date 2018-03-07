@@ -103,6 +103,17 @@ const studentPictureData = {
     },
 };
 
+const expectedBlankRow = {
+  id: 0,
+  name: '',
+  age: '',
+  gender: '',
+  username: '',
+  loginType: '',
+  isEditing: true,
+  rowType: RowType.ADD,
+};
+
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
 
@@ -126,7 +137,51 @@ describe('manageStudentsRedux', () => {
     it('sets student data for the section in view', () => {
       const action = setStudents(studentEmailData);
       const nextState = manageStudents(initialState, action);
-      assert.deepEqual(nextState.studentData, studentEmailData);
+      assert.deepEqual(nextState.studentData, {
+        ...studentEmailData,
+      });
+    });
+
+    it('sets student data and an empty row for picture section', () => {
+      const startingState = {
+        ...initialState,
+        loginType: 'picture'
+      };
+      const action = setStudents(studentPictureData);
+      const nextState = manageStudents(startingState, action);
+      assert.deepEqual(nextState.studentData, {
+        ...studentPictureData,
+        [0]: {
+          ...expectedBlankRow,
+          loginType: 'picture',
+        }
+      });
+    });
+
+    it('overrides old section data', () => {
+      const setStudents1 = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudents1);
+
+      const newSectionData = {
+        5: {
+          id: 1,
+          name: 'StudentName5',
+          username: 'student5',
+          userType: 'student',
+          age: 14,
+          gender: 'f',
+          loginType: 'email',
+          secretWords: 'wizard',
+          secretPictureName: 'wizard',
+          secretPicturePath: '/wizard.jpg',
+          sectionId: 53,
+        }
+      };
+      const setStudents2 = setStudents(newSectionData);
+      const finalState = manageStudents(nextState, setStudents2);
+      assert.deepEqual(finalState.studentData, {
+        ...newSectionData,
+      });
     });
   });
 
@@ -314,16 +369,6 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('add student', () => {
-    const expectedBlankRow = {
-      id: 0,
-      name: '',
-      age: '',
-      gender: '',
-      username: '',
-      loginType: '',
-      isEditing: true,
-      rowType: RowType.ADD,
-    };
     it('setLoginType creates an add row for word login types', () => {
       const action = setLoginType('word');
       const nextState = manageStudents(initialState, action);

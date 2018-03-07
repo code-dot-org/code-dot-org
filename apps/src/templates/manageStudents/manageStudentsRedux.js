@@ -208,12 +208,19 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === SET_STUDENTS) {
+    let studentData = {
+      ...action.studentData
+    };
+    if (state.loginType === SectionLoginType.word || state.loginType === SectionLoginType.picture) {
+      studentData[addRowId] = {
+        ...blankAddRow,
+        loginType: state.loginType,
+      };
+    }
     return {
       ...state,
-      studentData: {
-        ...state.studentData,
-        ...action.studentData
-      },
+      studentData: studentData,
+      addStatus: {status: null, numStudents: null},
     };
   }
   if (action.type === START_EDITING_STUDENT) {
