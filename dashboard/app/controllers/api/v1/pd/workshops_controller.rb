@@ -234,6 +234,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :capacity,
       :on_map,
       :funded,
+      :funding_type,
       :course,
       :subject,
       :notes,
