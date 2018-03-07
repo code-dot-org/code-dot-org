@@ -6,6 +6,7 @@
 
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
+import Select from "react-select";
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
@@ -422,31 +423,36 @@ export default class WorkshopForm extends React.Component {
       !(this.permission.isCsfFacilitator && !this.props.workshop) //Enabled  for CSF facilitators when they are creating a new workshop
     );
 
+    const options = [{value: '', label: 'None'}];
+    if (this.state.regionalPartners) {
+      const sortedPartners = _.sortBy(this.state.regionalPartners, partner => partner.name);
+      options.push(...sortedPartners.map(partner => ({
+        value: partner.id,
+        label: partner.name
+      })));
+    } else {
+      // Display the currently selected partner name, even if the list hasn't yet loaded.
+      options.push({
+        value: this.props.workshop.regional_partner_id || '',
+        label: this.props.workshop.regional_partner_name
+      });
+    }
+
     return (
       <FormGroup>
         <ControlLabel>
           Regional Partner
         </ControlLabel>
-        <FormControl
-          componentClass="select"
+        <Select
           name="regional_partner_id"
-          onChange={this.handleFieldChange}
+          onChange={this.handleRegionalPartnerSelect}
           style={this.getInputStyle()}
           value={this.state.regional_partner_id || ''}
+          options={options}
+
           // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
           disabled={editDisabled}
-        >
-          <option value="">None</option>
-          {
-            this.state.regionalPartners && this.state.regionalPartners.map((partner, i) => {
-              return (
-                <option key={i} value={partner['id']}>
-                  {partner['name']}
-                </option>
-              );
-            })
-          }
-        </FormControl>
+        />
       </FormGroup>
     );
   }
@@ -553,6 +559,10 @@ export default class WorkshopForm extends React.Component {
     const value = event.target.value;
     this.setState({[fieldName]: value});
     return value;
+  };
+
+  handleRegionalPartnerSelect = (selection) => {
+    this.setState({regional_partner_id: selection ? selection.value : null});
   };
 
   handleRadioChange = (event) => {
