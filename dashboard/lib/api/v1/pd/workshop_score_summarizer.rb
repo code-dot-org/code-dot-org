@@ -97,7 +97,13 @@ module Api::V1::Pd::WorkshopScoreSummarizer
         facilitator_name_frequency = calculate_facilitator_name_frequencies(responses)
 
         workshop.facilitators.each do |facilitator|
-          facilitator_scores[facilitator.name][:response_count] += facilitator_name_frequency[facilitator.name]
+          facilitator_scores[facilitator.name][:response_count] =
+            if workshop.course == Pd::Workshop::COURSE_CSF
+              responses.count
+            else
+              facilitator_name_frequency[facilitator.name]
+            end
+
           facilitator_scores[facilitator.name][:number_teachers] += workshop.enrollments.size
         end
       end
