@@ -394,6 +394,6 @@ class Blockly < Level
   # droplet (starwars, and a few test levels). They all have level records of
   # type 'Blockly', so they can't override this as needed
   def uses_droplet?
-    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? name
+    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? game.name
   end
 end
