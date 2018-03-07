@@ -51,9 +51,9 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.light_teal,
     backgroundColor: color.white,
-    margin: 'auto',
     position: 'relative',
     top: -30,
+    left: -20,
     padding: 8,
   },
   bubble: {
