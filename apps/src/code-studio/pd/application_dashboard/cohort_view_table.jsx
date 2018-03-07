@@ -81,6 +81,12 @@ export default class CohortViewTable extends React.Component {
           label: 'Email',
           transforms: [sortable]
         }
+      }, {
+        property: 'status',
+        header: {
+          label: 'Status',
+          transforms: [sortable]
+        }
       }
     ];
 

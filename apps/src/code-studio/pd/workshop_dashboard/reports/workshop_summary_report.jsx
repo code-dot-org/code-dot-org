@@ -120,6 +120,12 @@ export default class WorkshopSummaryReport extends React.Component {
       property: 'workshop_name',
       header: {label: 'Workshop Name'}
     }, {
+      property: 'on_map',
+      header: {label: 'Shown on Map'},
+    }, {
+      property: 'funded',
+      header: {label: 'Funded'}
+    }, {
       property: 'workshop_dates',
       header: {label: 'Dates'}
     }, {
