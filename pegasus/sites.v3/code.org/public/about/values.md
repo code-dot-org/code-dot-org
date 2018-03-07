@@ -19,7 +19,7 @@ We make decisions and move quickly. We are *always* open and thankful to receive
 We openly share good news *and* bad news. If we screw up, we own up. We make decisions based on data, and we want the numbers to speak for themselves. Everything we create is open-source. None of our work or our ideas are secret or protected (*unless* they’re other people’s secrets or brands. We protect those, of course). 
 
 ## We’re thankful
-We’re lucky for the support of students, parents, educators, donors, and all the partners we work with. We strive to always communicate our gratitude with humility, and continue to work hard to earn this support. 
+We’re lucky for the support of students, parents, educators, donors, and all the [partners](/about/partners) we work with. We strive to always [communicate our gratitude](https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924) with humility, and continue to work hard to earn this support. 
 
 ## This is a community effort
 We consider anybody pursuing similar goals to be part of the movement. We’re here to lift all boats, *not* to compete. We should strive hard to recognize, promote and amplify the work of partners in our mission. We don’t compete with or bad-mouth other groups, in fact we promote them. If a school adopts *any* computer science curriculum, whether it’s ours or not, we’re one step closer to our goal. 

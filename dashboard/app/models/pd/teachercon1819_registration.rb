@@ -11,8 +11,8 @@
 #
 # Indexes
 #
-#  index_pd_summer_event1819_registrations_on_pd_application_id    (pd_application_id)
-#  index_pd_summer_event1819_registrations_on_regional_partner_id  (regional_partner_id)
+#  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
+#  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
@@ -129,7 +129,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       :need_hotel,
       :photo_release,
       :liability_waiver,
-      :agree_share_contact,
     ].freeze
   end
 
@@ -195,6 +194,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     if hash[:dietary_needs].try(:include?, 'Food Allergy')
       requireds.concat [
         :dietary_needs_details
+      ]
+    end
+
+    if pd_application
+      requireds.concat [
+        :agree_share_contact
       ]
     end
 

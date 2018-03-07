@@ -65,6 +65,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_moveDown" />
   <block type="gamelab_moveLeft" />
   <block type="gamelab_moveRight" />
+  <block type="gamelab_setPosition" />
   <block type="gamelab_displace" />
   <block type="gamelab_destroy" />
   <block type="gamelab_firstTouched" />
@@ -85,6 +86,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_whileLeftArrow" />
   <block type="gamelab_whileRightArrow" />
   <block type="gamelab_whenTouching" />
+  <block type="gamelab_clickedOn" />
 </category>
 <category name="Math">
   <block type="math_number" />
@@ -155,5 +157,10 @@ class GamelabJr < Gamelab
 </category>
 #{common_blocks(type)}
     XML
+  end
+
+  # These serialized fields will be serialized/deserialized as straight XML
+  def xml_blocks
+    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 end
