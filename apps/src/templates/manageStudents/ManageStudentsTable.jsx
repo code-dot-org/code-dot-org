@@ -21,6 +21,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
+  email: PropTypes.string,
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   secretWords: PropTypes.string,
@@ -142,8 +143,8 @@ class ManageStudentsTable extends Component {
         id={rowData.id}
         sectionId={rowData.sectionId}
         name={name}
-        loginType={rowData.loginType}
         username={rowData.username}
+        email={rowData.email}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />

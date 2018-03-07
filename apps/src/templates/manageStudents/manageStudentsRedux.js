@@ -393,6 +393,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       id: student.id,
       name: student.name,
       username: student.username,
+      email: student.email,
       age: student.age || '',
       gender: student.gender || '',
       secretWords: student.secret_words,
