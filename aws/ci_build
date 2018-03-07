@@ -155,6 +155,8 @@ def main
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
         DevelopersTopic.set_dtp 'yes'
         InfraProductionTopic.set_dtp_commit GitHub.sha('production')
+        zendesk_reminder = "/remind <@#{DevelopersTopic.dotd}> to check Zendesk in 2 hours"
+        ChatClient.message 'developers', zendesk_reminder
 
         # Check hoc_mode only on successful DTPs, so that we get about 1 reminder per day to bring
         # staging, test and production to the same hoc_mode after a hoc_mode change. Note

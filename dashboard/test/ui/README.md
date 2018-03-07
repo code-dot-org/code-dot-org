@@ -71,11 +71,11 @@ Run all UI tests for a given browser
 
 Run all tests in a given feature file for all browser/os combinations
 
-`./runner.rb --feature features/awesomeStuff.feature`
+`./runner.rb --feature features/awesome_stuff.feature`
 
 Run exactly one UI test in a given feature file for all browser/os combinations
 
-`./runner.rb --feature features/awesomeStuff.feature:40` will run the feature on line 40
+`./runner.rb --feature features/awesome_stuff.feature:40` will run the feature on line 40
 
 Run the eyes tests
 
@@ -83,11 +83,11 @@ Run the eyes tests
 
 Run one feature using chromedriver against your local machine with html output
 
-`./runner.rb -l -f features/bigGameRemix.feature --html`
+`./runner.rb -l -f features/big_game_remix.feature --html`
 
 Run one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
 
-`./runner.rb -l -f features/bigGameRemix.feature -c ChromeLatestWin7 --html`
+`./runner.rb -l -f features/big_game_remix.feature -c ChromeLatestWin7 --html`
 
 ## Tips
 
