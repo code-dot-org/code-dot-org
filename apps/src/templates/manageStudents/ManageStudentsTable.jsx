@@ -6,6 +6,7 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
+import FontAwesome from '../FontAwesome';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
@@ -16,6 +17,16 @@ import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
+import experiments from '@cdo/apps/util/experiments';
+
+const styles = {
+  cog: {
+    marginLeft: 10,
+    fontSize: 20,
+  },
+};
+
+const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -176,7 +187,12 @@ class ManageStudentsTable extends Component {
           />
         }
         {numberOfEditingRows <= 1 &&
-          i18n.actions()
+          <span>
+            {i18n.actions()}
+            {showShareColumn &&
+              <FontAwesome icon="cog" style={styles.cog}/>
+            }
+          </span>
         }
       </div>
     );
