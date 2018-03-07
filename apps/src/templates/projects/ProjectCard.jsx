@@ -114,12 +114,7 @@ export default class ProjectCard extends React.Component {
             href={url}
             target={isPublicGallery ? '_blank' : undefined}
           >
-            <div
-              style={styles.title}
-              id="ui-project-name"
-            >
-              {projectData.name}
-            </div>
+            <div style={styles.title}>{projectData.name}</div>
           </a>
           <span>
             {isPublicGallery && projectData.studentName && (
