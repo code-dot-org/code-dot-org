@@ -1,2 +1,0 @@
-#!/bin/sh
-cd apps && npm run build:log
