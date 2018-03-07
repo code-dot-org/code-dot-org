@@ -856,7 +856,7 @@ FactoryGirl.define do
       with_full_form_data
     end
 
-    trait :withdrawn do
+    trait :declined do
       teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
     end
 
@@ -916,7 +916,7 @@ FactoryGirl.define do
       contact_phone "1597534862"
       contact_relationship "it's complicated"
       dietary_needs "Food Allergy"
-      dietary_needs_food_allergy_details "memories"
+      dietary_needs_details "memories"
       how_traveling "Amtrak or regional train service"
       liability_waiver "Yes"
       live_far_away "Yes"
