@@ -103,17 +103,6 @@ const studentPictureData = {
     },
 };
 
-const expectedBlankRow = {
-  id: 0,
-  name: '',
-  age: '',
-  gender: '',
-  username: '',
-  loginType: '',
-  isEditing: true,
-  rowType: RowType.ADD,
-};
-
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
 
@@ -139,9 +128,6 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.studentData, {
         ...studentEmailData,
-        0: {
-          ...expectedBlankRow
-        }
       });
     });
 
@@ -168,9 +154,6 @@ describe('manageStudentsRedux', () => {
       const finalState = manageStudents(nextState, setStudents2);
       assert.deepEqual(finalState.studentData, {
         ...newSectionData,
-        0: {
-          ...expectedBlankRow
-        }
       });
     });
   });

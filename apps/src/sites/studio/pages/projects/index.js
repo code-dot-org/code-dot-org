@@ -58,7 +58,7 @@ $(document).ready(() => {
     ReactDOM.render(
       <Provider store={store}>
         <PublicGallery
-          showApplabGamelab={projectsData.showApplabGamelab}
+          projectValidator={projectsData.projectValidator}
         />
       </Provider>,
       publicGallery);
