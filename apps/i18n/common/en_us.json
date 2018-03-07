@@ -415,6 +415,7 @@
   "emailConfirmationText": "You must confirm the email address you use to sign into this account before we can convert your account to a teacher account.",
   "emailConfirmationTitle": "Please confirm your email",
   "emailAddressPolicy": "Code.org will not store student email addresses in a retrievable format, for privacy reasons.",
+  "emailLabel": "Email: ",
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyBlocksErrorMsg": "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
