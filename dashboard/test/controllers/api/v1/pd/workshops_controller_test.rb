@@ -18,18 +18,18 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     @workshop = create(
       :pd_workshop,
+      :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner,
-      on_map: true,
-      funded: true
+      on_map: true
     )
     @organizer_workshop = create(
       :pd_workshop,
+      :funded,
       organizer: @workshop_organizer,
       facilitators: [@facilitator],
-      on_map: true,
-      funded: true
+      on_map: true
     )
 
     @standalone_workshop = create(:pd_workshop)
@@ -988,6 +988,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       location_address: 'Seattle, WA',
       on_map: true,
       funded: true,
+      funding_type: Pd::Workshop::FUNDING_TYPE_PARTNER,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101,
       capacity: 10,

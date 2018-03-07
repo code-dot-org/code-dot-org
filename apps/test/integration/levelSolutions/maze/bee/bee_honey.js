@@ -96,7 +96,7 @@ module.exports = {
       },
       customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 2 && Maze.controller.subtype.honey_ === 1 &&
-          Maze.controller.executionInfo.terminationValue() === TerminationValue.INSUFFICIENT_HONEY;
+          Maze.executionInfo.terminationValue() === TerminationValue.INSUFFICIENT_HONEY;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -114,7 +114,7 @@ module.exports = {
       },
       customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 2 && Maze.controller.subtype.honey_ === 0 &&
-          Maze.controller.executionInfo.terminationValue() === TerminationValue.NOT_AT_HONEYCOMB;
+          Maze.executionInfo.terminationValue() === TerminationValue.NOT_AT_HONEYCOMB;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',

@@ -164,6 +164,11 @@ class Pd::Workshop < ActiveRecord::Base
     }
   }.freeze
 
+  FUNDING_TYPES = [
+    FUNDING_TYPE_FACILITATOR = 'facilitator',
+    FUNDING_TYPE_PARTNER = 'partner'
+  ]
+
   WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
     COURSE_CSP => 'CSP Support',
     COURSE_ECS => 'ECS Support',
@@ -185,6 +190,11 @@ class Pd::Workshop < ActiveRecord::Base
   validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
+
+  validates :funding_type,
+    presence: {if: :funded_csf?},
+    inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
+    absence: {unless: :funded_csf?}
 
   belongs_to :organizer, class_name: 'User'
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
@@ -632,6 +642,14 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSD_FIT,
       SUBJECT_CSF_FIT
     ].include?(subject)
+  end
+
+  def funded_csf?
+    course == COURSE_CSF && funded
+  end
+
+  def funding_summary
+    (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
 
   # Get all enrollments for this workshop with no associated attendances
