@@ -235,7 +235,13 @@ export function isInfiniteRecursionError(err) {
 export function browserSupportsCssMedia() {
   var styleSheets = document.styleSheets;
   for (var i = 0; i < styleSheets.length; i++) {
-    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
+    var rules;
+    try {
+      rules = styleSheets[i].cssRules || styleSheets[i].rules;
+    } catch (e) {
+      // Some versions of Chrome give an error when accessing cssRules.
+      return false;
+    }
     try {
       if (rules.length > 0) {
         // see if we can access media
