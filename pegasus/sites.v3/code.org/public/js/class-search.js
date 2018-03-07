@@ -2,9 +2,7 @@ var gmap;
 var gmap_loc;
 
 $(function () {
-  selectize = $('#class-search-facets select').selectize({
-    plugins: ['fast_click']
-  });
+  selectize = $('#class-search-facets select').selectize();
 
   setFacetDefaults();
 
