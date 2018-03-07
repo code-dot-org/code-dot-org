@@ -11,11 +11,15 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
+import experiments from '@cdo/apps/util/experiments';
+
+const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -176,7 +180,16 @@ class ManageStudentsTable extends Component {
           />
         }
         {numberOfEditingRows <= 1 &&
-          i18n.actions()
+          <span>
+            <div style={{width: '40%', float: 'left'}}>
+              {i18n.actions()}
+            </div>
+            <div style={{width: '40%', float: 'left'}}>
+              {showShareColumn &&
+                <ManageStudentsActionsHeaderCell/>
+              }
+            </div>
+          </span>
         }
       </div>
     );

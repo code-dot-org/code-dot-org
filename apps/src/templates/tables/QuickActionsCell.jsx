@@ -1,30 +1,62 @@
 import React, {Component, PropTypes} from 'react';
+import Radium from 'radium';
 import color from "../../util/color";
 import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
 import styleConstants from '../../styleConstants';
 import throttle from 'lodash/debounce';
+import FontAwesome from '../FontAwesome';
+
+export const QuickActionsCellType = {
+  header: 'header',
+  body: 'body'
+};
 
 const styles = {
-  actionButton:{
-    border: '1px solid ' + color.white,
-    paddingLeft: 5,
-    paddingRight: 5,
-    paddingTop: 4,
-    paddingBottom: 4,
-    borderRadius: 5,
-    color: color.lighter_gray,
-    margin: 3,
-    cursor: 'pointer',
+  actionButton: {
+    [QuickActionsCellType.body]: {
+      border: '1px solid ' + color.white,
+      paddingLeft: 5,
+      paddingRight: 5,
+      paddingTop: 4,
+      paddingBottom: 4,
+      borderRadius: 5,
+      color: color.lighter_gray,
+      margin: 3,
+      cursor: 'pointer',
+    },
+    [QuickActionsCellType.header]: {
+      paddingLeft: 5,
+      paddingRight: 5,
+      paddingTop: 4,
+      paddingBottom: 4,
+      fontSize: 20,
+      marginTop: -3,
+      color: color.darker_gray,
+      cursor: 'pointer',
+    }
   },
   hoverFocus: {
-    backgroundColor: color.lighter_gray,
-    border: '1px solid ' + color.light_gray,
-    borderRadius: 5,
-    paddingTop: 4,
-    paddingBottom: 4,
-    paddingLeft: 5,
-    paddingRight: 5,
-    color: color.white,
+    [QuickActionsCellType.body]: {
+      backgroundColor: color.lighter_gray,
+      border: '1px solid ' + color.light_gray,
+      borderRadius: 5,
+      paddingTop: 4,
+      paddingBottom: 4,
+      paddingLeft: 5,
+      paddingRight: 5,
+      color: color.white,
+    },
+    [QuickActionsCellType.header]: {
+      paddingLeft: 5,
+      paddingRight: 5,
+      paddingTop: 4,
+      paddingBottom: 4,
+      fontSize: 20,
+      // float: 'right',
+      color: color.darker_gray,
+      margin: 3,
+      cursor: 'pointer',
+    }
   },
 };
 
@@ -33,7 +65,12 @@ class QuickActionsCell extends Component {
     children: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.array
-    ]).isRequired
+    ]).isRequired,
+    type: PropTypes.oneOf(Object.keys(QuickActionsCellType))
+  };
+
+  static defaultProps = {
+    type: 'body'
   };
 
   state = {
@@ -81,17 +118,22 @@ class QuickActionsCell extends Component {
   };
 
   render() {
+    const {type} = this.props;
     const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
+
+    const icons = {
+      header: 'cog',
+      body: 'chevron-down'
+    };
 
     return (
       <span ref={span => this.icon = span}>
-        <a
-          icon="chevron-down"
-          style={this.state.open ? {...styles.actionButton, ...styles.hoverFocus} : styles.actionButton}
+        <FontAwesome
+          icon={icons[type]}
+          style={this.state.open ? styles.hoverFocus[type] : styles.actionButton[type]}
           onClick={this.state.canOpen ? this.open : undefined}
-        >
-          <i className="fa fa-chevron-down ui-test-section-dropdown"></i>
-        </a>
+          className="ui-test-section-dropdown"
+        />
         <PopUpMenu
           targetPoint={targetPoint}
           isOpen={this.state.open}
@@ -105,4 +147,4 @@ class QuickActionsCell extends Component {
   }
 }
 
-export default QuickActionsCell;
+export default Radium(QuickActionsCell);
