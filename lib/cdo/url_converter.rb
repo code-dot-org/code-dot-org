@@ -1,8 +1,11 @@
 class UrlConverter
-  LEARN_CODE_ORG_REGEX = /\/\/learn.code.org(?=$|\/)/
-  HOUROFCODE_COM_REGEX = /\/\/hourofcode\.com(?=$|\/)/
-  CSEDWEEK_ORG_REGEX = /\/\/csedweek\.org(?=$|\/)/
-  DASHBOARD_REGEX = /\/\/studio.code.org(?=$|\/)/
+  # (?=$|\/) is a lookahead.
+  # It means "The next thing must be the end of the string or a forward slash"
+  # It prevents us from matching something like //code.org.example.com
+  LEARN_CODE_ORG_REGEX = /#{'//learn.code.org'}(?=$|\/)/
+  HOUROFCODE_COM_REGEX = /#{'//hourofcode.com'}(?=$|\/)/
+  CSEDWEEK_ORG_REGEX = /#{'//csedweek.org'}(?=$|\/)/
+  DASHBOARD_REGEX = /#{'//studio.code.org'}(?=$|\/)/
 
   # For reference, a 'host' is a domain and (optionally) port without a protocol.
   # Examples: code.org, studio.code.org, localhost-studio.code.org:3000
@@ -29,19 +32,20 @@ class UrlConverter
     elsif @dashboard_host && DASHBOARD_REGEX =~ url
       url = url.gsub(DASHBOARD_REGEX, "//" + @dashboard_host)
     elsif @pegasus_host
-      # Handle i18n subdomains
-      if url =~ /\/\/\w+\.code\.org/
-        subdomain = /(?<=\/\/)\w+(?=\.code\.org)/.match(url)[0]
-        url = url.gsub(/\/\/\w+\.code\.org(?=$|\/)/, "//" + @pegasus_host)
-        url = url.gsub(/\.code\.org/, "-#{subdomain}.code.org")
+      # Handle pegasus subdomains
+      # This regex has a named capture group for the particular subdomain
+      if url =~ /#{'//'}(?<subdomain>\w+)#{'.code.org'}/
+        subdomain = $~[:subdomain]
+        url = url.gsub(/#{'//'}\w+#{'.code.org'}(?=$|\/)/, "//" + @pegasus_host)
+        url = url.gsub(/#{'.code.org'}/, "-#{subdomain}.code.org")
       else
-        url = url.gsub(/\/\/code.org(?=$|\/)/, "//" + @pegasus_host)
+        url = url.gsub(/#{'//code.org'}(?=$|\/)/, "//" + @pegasus_host)
       end
     end
 
     # Convert http to https
-    url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
+    url = url.gsub(/^#{'http://'}/, 'https://') unless url.start_with? 'http://localhost'
     # Convert x.y.code.org to x-y.code.org
-    url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
+    url.gsub(/(\w+)\.(\w+)#{'.code.org'}/, '\1-\2.code.org')
   end
 end
