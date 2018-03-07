@@ -56,6 +56,9 @@ Layout/SpaceInsideHashLiteralBraces:
 Style/WordArray:
   MinSize: 5
 
+Style/FrozenStringLiteral:
+  Enabled: true
+
 # END CODE.ORG OVERRIDES
 
 # BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
