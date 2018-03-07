@@ -115,7 +115,11 @@ export const saveAllStudents = () => {
     // Currently, every update is an individual call to the server.
     const currentlyEditedData = convertStudentDataToArray(state.editingData);
     let studentsToSave = currentlyEditedData.filter(student => student.rowType === RowType.STUDENT);
-    studentsToSave.forEach(student => dispatch(saveStudent(student.id)));
+    studentsToSave.forEach((student) => {
+      if (student.name !== '') {
+        dispatch(saveStudent(student.id));
+      }
+    });
 
     // Adding students can be saved together.
     const arrayOfEditedData = convertStudentDataToArray(state.editingData);
