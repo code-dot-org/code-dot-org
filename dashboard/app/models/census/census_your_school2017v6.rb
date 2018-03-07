@@ -37,9 +37,14 @@
 #  index_census_submissions_on_school_year_and_id  (school_year,id)
 #
 
-# This class represents census submissions coming from the original /yourschool
-# census page.
+# This class represents census submissions coming from /yourschool after
+# adding the topic_ethical_social checkbox.
 #
-class Census::CensusYourSchool2017v0 < Census::CensusSubmission
-  validates :submitter_role, presence: true
+
+class Census::CensusYourSchool2017v6 < Census::CensusYourSchool2017v5
+  # These questions are shown conditionally based on other answers.
+  # Only validate under those conditions.
+  with_options if: :show_followup? do
+    validates :topic_ethical_social, exclusion: {in: [nil], message: "cannot be nil"}
+  end
 end
