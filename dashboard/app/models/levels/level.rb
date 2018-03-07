@@ -479,6 +479,8 @@ class Level < ActiveRecord::Base
     summary
   end
 
+  # Create a copy of this level named new_name, and store the id of the original
+  # level in parent_level_id.
   def clone(new_name)
     level = dup
     level.update!(name: new_name, parent_level_id: id)
@@ -486,7 +488,20 @@ class Level < ActiveRecord::Base
   end
 
   # Create a copy of this level by appending new_suffix to the name, removing
-  # any previous suffix from the name first.
+  # any previous suffix from the name first. Store the id of the original
+  # level in parent_level_id, and store the suffix in name_suffix.
+  #
+  # Also, copy over any project template level. If two levels with the same
+  # project template level are copied using the same new_suffix, then the new
+  # levels should both point to the same new project template level.
+  #
+  # @param [String] new_suffix The suffix to append to the name of the original
+  #   level when choosing a name for the new level, replacing any existing
+  #   name_suffix if one exists.
+  # @param [Boolean] allow_existing If true, use the existing level with the
+  #   same name, if one exists.
+  # @raise [ActiveRecord::RecordInvalid] if !allow_existing and the new level
+  #   name is already taken.
   def clone_with_suffix(new_suffix, allow_existing: false)
     new_name = "#{base_name}#{new_suffix}"
 
