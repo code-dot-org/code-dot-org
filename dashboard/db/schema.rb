@@ -120,7 +120,7 @@ ActiveRecord::Schema.define(version: 20180305045530) do
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
     t.boolean  "share_with_regional_partners"
-    t.boolean  "topic_ethical_social"
+    t.boolean  "topic_ethical_social",                                    comment: "Survey option for school courses including ethical and social issues"
     t.index ["school_year", "id"], name: "index_census_submissions_on_school_year_and_id", using: :btree
   end
 
