@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppLoading } from 'expo';
-import { StyleSheet, StatusBar, View, Text, WebView } from 'react-native';
+import { Platform, StyleSheet, StatusBar, View, Text, WebView } from 'react-native';
 import resolveAssetSource from 'resolveAssetSource';
 
 import CustomAsset from './CustomAsset';
@@ -34,12 +34,16 @@ export default class App extends React.Component {
     });
   };
 
-  webViewContainerStyle() {
+  webViewScale() {
     const { height, width } = this.state;
 
     const heightScale = height / App.APPLAB_HEIGHT;
     const widthScale = width / App.APPLAB_WIDTH;
-    const scale = Math.min(heightScale, widthScale);
+    return Math.min(heightScale, widthScale);
+  }
+
+  webViewContainerStyle() {
+    const scale = this.webViewScale();
 
     return {
       height: App.APPLAB_HEIGHT * scale,
@@ -65,7 +69,7 @@ export default class App extends React.Component {
             javaScriptEnabled={true}
             scrollEnabled={false}
             bounces={false}
-            scalesPageToFit={true}
+            scalesPageToFit={Platform.OS === 'ios'}
           />
         </View>}
       </View>
