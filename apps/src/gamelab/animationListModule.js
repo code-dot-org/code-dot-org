@@ -321,10 +321,9 @@ export function setInitialAnimationList(serializedAnimationList) {
 }
 
 export function addBlankAnimation() {
-  const key = createUuid();
-  return (dispatch, getState) => {
-    dispatch(addAnimationAction(key, {
-      name: generateAnimationName('animation', getState().animationList.propsByKey),
+  return addLibraryAnimation(
+    {
+      name: 'animation',
       sourceUrl: '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
       frameSize: {x: 100, y: 100},
       frameCount: 1,
@@ -333,12 +332,8 @@ export function addBlankAnimation() {
       version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz',
       loadedFromSource: true,
       saved: false
-    }));
-    dispatch(loadAnimationFromSource(key, () => {
-      dispatch(selectAnimation(key));
-    }));
-    projectChanged();
-  };
+    }
+  );
 }
 
 /**
