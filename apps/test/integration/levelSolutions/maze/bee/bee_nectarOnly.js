@@ -76,7 +76,7 @@ module.exports = {
       },
       customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 1 &&
-          Maze.controller.executionInfo.terminationValue() === TerminationValue.INSUFFICIENT_NECTAR;
+          Maze.executionInfo.terminationValue() === TerminationValue.INSUFFICIENT_NECTAR;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',
@@ -91,7 +91,7 @@ module.exports = {
       },
       customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 0 &&
-          Maze.controller.executionInfo.terminationValue() === TerminationValue.NOT_AT_FLOWER;
+          Maze.executionInfo.terminationValue() === TerminationValue.NOT_AT_FLOWER;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_nectar',
@@ -121,7 +121,7 @@ module.exports = {
       },
       customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 1 &&
-          Maze.controller.executionInfo.terminationValue() === TerminationValue.FLOWER_EMPTY;
+          Maze.executionInfo.terminationValue() === TerminationValue.FLOWER_EMPTY;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',

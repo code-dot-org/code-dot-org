@@ -12,18 +12,10 @@
 import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
 
-import {
-  resetCollectorCurrentCollected,
-  setCollectorCurrentCollected,
-} from './redux';
-
 export default class Collector extends Subtype {
-  reset() {
-    if (this.maze_.store) {
-      this.maze_.store.dispatch(resetCollectorCurrentCollected());
-    }
-  }
-
+  /**
+   * @fires collected
+   */
   scheduleDirtChange(row, col) {
     super.scheduleDirtChange(row, col);
 
@@ -34,10 +26,7 @@ export default class Collector extends Subtype {
       this.collectSoundsI += 1;
       this.collectSoundsI %= this.collectSoundsCount;
     }
-
-    if (this.maze_.store) {
-      this.maze_.store.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
-    }
+    this.emit("collected", this.getTotalCollected());
   }
 
   /**
