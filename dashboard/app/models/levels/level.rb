@@ -61,6 +61,7 @@ class Level < ActiveRecord::Base
     map_reference
     reference_links
     name_suffix
+    parent_level_id
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -480,7 +481,7 @@ class Level < ActiveRecord::Base
 
   def clone(new_name)
     level = dup
-    level.update!(name: new_name)
+    level.update!(name: new_name, parent_level_id: id)
     level
   end
 
