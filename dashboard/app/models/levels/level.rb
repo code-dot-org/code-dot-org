@@ -487,10 +487,21 @@ class Level < ActiveRecord::Base
 
   # Create a copy of this level by appending new_suffix to the name, removing
   # any previous suffix from the name first.
-  def clone_with_suffix(new_suffix)
+  def clone_with_suffix(new_suffix, allow_existing: false)
     new_name = "#{base_name}#{new_suffix}"
-    level = clone(new_name)
-    level.update!(name_suffix: new_suffix)
+
+    level = allow_existing && Level.find_by_name(new_name) ?
+       Level.find_by_name(new_name) :
+       clone(new_name)
+
+    update_params = {name_suffix: new_suffix}
+
+    if project_template_level
+      new_template_level = project_template_level.clone_with_suffix(new_suffix, allow_existing: true)
+      update_params[:project_template_level_name] = new_template_level.name
+    end
+
+    level.update!(update_params)
     level
   end
 
@@ -498,6 +509,7 @@ class Level < ActiveRecord::Base
 
   # Returns the level name, removing the name_suffix first (if present).
   def base_name
+    return name unless name_suffix
     strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
     name[strip_suffix_regex, 1] || name
   end
