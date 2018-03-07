@@ -40,10 +40,10 @@ class ManageStudentNameCell extends Component {
             >
               {name}
             </a>
-            {(username && username !== '') &&
+            {username &&
               <div style={styles.details}>{i18n.usernameLabel() + username}</div>
             }
-            {(email && email !== '') &&
+            {email &&
               <div style={styles.details}>{i18n.emailLabel() + email}</div>
             }
           </div>
