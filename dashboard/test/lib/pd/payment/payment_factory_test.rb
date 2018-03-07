@@ -14,8 +14,8 @@ module Pd::Payment
     end
 
     test 'CSF calculator' do
-      workshop_csf_public = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, on_map: true, funded: true
-      workshop_csf_private = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, on_map: false, funded: true
+      workshop_csf_public = create :pd_ended_workshop, :funded, course: Pd::Workshop::COURSE_CSF, on_map: true
+      workshop_csf_private = create :pd_ended_workshop, :funded, course: Pd::Workshop::COURSE_CSF, on_map: false
 
       assert_equal PaymentCalculatorCSF, PaymentFactory.get_calculator_class(workshop_csf_public)
       assert_equal PaymentCalculatorCSF, PaymentFactory.get_calculator_class(workshop_csf_private)
