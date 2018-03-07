@@ -8,7 +8,14 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/exportProject.html.ejs';
+import exportExpoProjectEjs from '../templates/exportExpoProject.html.ejs';
 import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
+import exportExpoPackageJson from '../templates/exportExpoPackage.json.ejs';
+import exportExpoAppJson from '../templates/exportExpoApp.json.ejs';
+import exportExpoAppJs from '../templates/exportExpoApp.js.ejs';
+import exportExpoCustomAssetJs from '../templates/exportExpoCustomAsset.js.ejs';
+import exportExpoPackagedFiles from '../templates/exportExpoPackagedFiles.js.ejs';
+import exportExpoPackagedFilesEntry from '../templates/exportExpoPackagedFilesEntry.js.ejs';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 
@@ -216,7 +223,7 @@ function extractCSSFromHTML(el) {
 }
 
 export default {
-  exportAppToZip(appName, code, levelHtml) {
+  exportAppToZip(appName, code, levelHtml, expoMode) {
     var holder = document.createElement('div');
     holder.innerHTML = levelHtml;
     var appElement = holder.children[0];
@@ -225,37 +232,45 @@ export default {
     appElement.classList.remove('notRunning');
     appElement.classList.remove('withCrosshair');
 
+    const jQueryBaseName = 'jquery-1.12.1.min';
+    const exportHtmlEjs = expoMode ? exportExpoProjectEjs : exportProjectEjs;
     var css = extractCSSFromHTML(appElement);
-    var html = exportProjectEjs({htmlBody: appElement.outerHTML});
+    var html = exportHtmlEjs({htmlBody: appElement.outerHTML});
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
     const staticAssets = [
       {
         url: '/blockly/js/en_us/common_locale.js' + cacheBust,
-        zipPath: appName + '/common_locale.js'
       }, {
         url: '/blockly/js/en_us/applab_locale.js' + cacheBust,
-        zipPath: appName + '/applab_locale.js'
       }, {
         url: '/blockly/js/applab-api.js' + cacheBust,
-        zipPath: appName + '/applab/applab-api.js'
       }, {
         url: '/blockly/css/applab.css' + cacheBust,
-        zipPath: appName + '/applab/applab.css'
       }, {
         url: '/blockly/css/common.css' + cacheBust,
-        zipPath: appName + '/applab/common.css'
       },
     ];
+    if (expoMode) {
+      staticAssets.push({
+        url: 'https://code.jquery.com/' + jQueryBaseName + '.js',
+      });
+    }
+
+    const rootRelativeAssetPrefix = expoMode ? '' : 'assets/';
+    const zipAssetPrefix = appName + '/assets/';
 
     const appAssets = dashboard.assets.listStore.list().map(asset => ({
       url: assetPrefix.fixPath(asset.filename),
-      rootRelativePath: 'assets/' + asset.filename,
-      zipPath: appName + '/assets/' + asset.filename,
+      rootRelativePath: rootRelativeAssetPrefix + asset.filename,
+      zipPath: zipAssetPrefix + asset.filename,
       dataType: 'binary',
       filename: asset.filename,
     }));
 
+    // TODO: for expoMode, replace spaces in asset filenames or wait for this fix
+    // to make it into Metro Bundler:
+    // https://github.com/facebook/react-native/pull/10365
     function rewriteAssetUrls(data) {
       return appAssets.reduce(function (data, assetToDownload) {
         if (data.indexOf(assetToDownload.url) >= 0) {
@@ -265,19 +280,43 @@ export default {
       }, data);
     }
 
+    const mainProjectFilesPrefix = appName + (expoMode ? '/assets/' : '/');
+
     var zip = new JSZip();
-    zip.file(appName + "/README.txt", readme);
-    zip.file(appName + "/index.html", rewriteAssetUrls(html));
-    zip.file(appName + "/style.css", rewriteAssetUrls(css));
-    zip.file(appName + "/code.js", rewriteAssetUrls(code));
+    if (expoMode) {
+      const packageJson = exportExpoPackageJson();
+      const appJson = exportExpoAppJson({appName: appName});
+      const appJs = exportExpoAppJs();
+      const customAssetJs = exportExpoCustomAssetJs();
+
+      zip.file(appName + "/package.json", packageJson);
+      zip.file(appName + "/app.json", appJson);
+      zip.file(appName + "/App.js", appJs);
+      zip.file(appName + "/CustomAsset.js", customAssetJs);
+    }
+    // NOTE: for expoMode, it is important that index.html comes first...
+    zip.file(mainProjectFilesPrefix + "index.html", rewriteAssetUrls(html));
+    zip.file(mainProjectFilesPrefix + "README.txt", readme);
+    zip.file(mainProjectFilesPrefix + "style.css", rewriteAssetUrls(css));
+    zip.file(mainProjectFilesPrefix + (expoMode ? "code.j" : "code.js"), rewriteAssetUrls(code));
+
+    const rootApplabPrefix = expoMode ? 'assets/applab/' : 'applab/';
+    const rootRelativeApplabAssetPrefix = rootApplabPrefix + 'assets';
+    const zipApplabAssetPrefix = appName + '/' + rootRelativeApplabAssetPrefix;
 
     return new Promise((resolve, reject) => {
       $.when(...[...staticAssets, ...appAssets].map(
         (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
       )).then(
         ([commonLocale], [applabLocale], [applabApi], [applabCSS], [commonCSS], ...rest) => {
-          zip.file(appName + "/applab/applab-api.js",
+          zip.file(appName + "/" + (expoMode ? "assets/applab-api.j" : rootApplabPrefix + "applab-api.js"),
                    [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
+          if (expoMode) {
+            const [data] = rest[0];
+            zip.file(mainProjectFilesPrefix + jQueryBaseName + '.j', data);
+            // Remove the jquery file from the rest array:
+            rest = rest.slice(1);
+          }
           rest.forEach(([data], index) => {
             zip.file(appAssets[index].zipPath, data, {binary: true});
           });
@@ -304,12 +343,12 @@ export default {
             .map(
               url => ({
                 url,
-                rootRelativePath: 'applab/assets' + url,
-                zipPath: appName + '/applab/assets' + url,
+                rootRelativePath: rootRelativeApplabAssetPrefix + url,
+                zipPath: zipApplabAssetPrefix + url,
               })
             );
 
-          zip.file(appName + "/applab/applab.css", applabCSS);
+          zip.file(appName + "/" + rootApplabPrefix + "applab.css", applabCSS);
 
           $.when(
             ...cssAssetsToDownload.map(
@@ -320,6 +359,28 @@ export default {
               assetResponses.forEach(([data], index) => {
                 zip.file(cssAssetsToDownload[index].zipPath, data, {binary: true});
               });
+              if (expoMode) {
+                // Write a packagedFiles.js into the zip that contains require
+                // statements for each file under assets. This will allow the
+                // Expo app to locally install of these files onto the device.
+                const moduleList = [];
+                zip.folder(appName + "/assets").forEach((relativePath, file) => {
+                    if (!file.dir) {
+                      const localDir = relativePath.substr(0, relativePath.lastIndexOf('/'));
+                      if (localDir) {
+                        moduleList.push({
+                          fileName: relativePath,
+                          localDir,
+                        });
+                      } else {
+                        moduleList.push({ fileName: relativePath });
+                      }
+                    }
+                });
+                const entries = moduleList.map(module => exportExpoPackagedFilesEntry({ module }));
+                const packagedFilesJs = exportExpoPackagedFiles({ entries });
+                zip.file(appName + "/packagedFiles.js", packagedFilesJs);
+              }
               return resolve(zip);
             },
             () => {
@@ -337,8 +398,8 @@ export default {
     });
   },
 
-  exportApp(appName, code, levelHtml) {
-    return this.exportAppToZip(appName, code, levelHtml)
+  exportApp(appName, code, levelHtml, expoMode) {
+    return this.exportAppToZip(appName, code, levelHtml, expoMode)
       .then(function (zip) {
         zip.generateAsync({type:"blob"}).then(function (blob) {
           saveAs(blob, appName + ".zip");

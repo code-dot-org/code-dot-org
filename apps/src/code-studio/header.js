@@ -176,6 +176,14 @@ function shareProject() {
     const canPublish = !!appOptions.isSignedIn &&
       PublishableProjectTypesOver13.includes(appType);
 
+    const exportExpoApp = () => {
+      if (window.Applab) {
+        return window.Applab.exportApp(true);
+      } else {
+        return Promise.reject(new Error('No Global Applab'));
+      }
+    };
+
     ReactDOM.render(
       <Provider store={getStore()}>
         <ShareDialog
@@ -191,6 +199,7 @@ function shareProject() {
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
+          onClickExportExpo={exportExpoApp}
           canShareSocial={canShareSocial}
           userSharingDisabled={appOptions.userSharingDisabled}
         />

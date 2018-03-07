@@ -122,6 +122,7 @@ class ShareAllowedDialog extends React.Component {
     appType: PropTypes.string.isRequired,
     onClickPopup: PropTypes.func.isRequired,
     onClickExport: PropTypes.func,
+    onClickExportExpo: PropTypes.func,
     onClose: PropTypes.func.isRequired,
     onShowPublishDialog: PropTypes.func.isRequired,
     onUnpublish: PropTypes.func.isRequired,
@@ -170,19 +171,6 @@ class ShareAllowedDialog extends React.Component {
       showSendToPhone: false,
       showAdvancedOptions: true,
     });
-  };
-
-  clickExport = () => {
-    this.setState({exporting: true});
-    this.props.onClickExport().then(
-      () => this.setState({exporting: false}),
-      () => {
-        this.setState({
-          exporting: false,
-          exportError: 'Failed to export project. Please try again later.'
-        });
-      }
-    );
   };
 
   publish = () => {
@@ -362,6 +350,7 @@ class ShareAllowedDialog extends React.Component {
                     i18n={this.props.i18n}
                     shareUrl={this.props.shareUrl}
                     onClickExport={this.props.onClickExport}
+                    onClickExportExpo={this.props.onClickExportExpo}
                     expanded={this.state.showAdvancedOptions}
                     onExpand={this.showAdvancedOptions}
                     channelId={this.props.channelId}
