@@ -1,17 +1,22 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles} from "../tables/tableConstants";
 import i18n from "@cdo/locale";
 import {editStudent} from './manageStudentsRedux';
+
+const styles = {
+  details: {
+    fontSize: 12
+  },
+};
 
 class ManageStudentNameCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number,
     name: PropTypes.string.isRequired,
-    loginType: PropTypes.string.isRequired,
     username: PropTypes.string,
+    email: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
     //Provided by redux
@@ -23,7 +28,7 @@ class ManageStudentNameCell extends Component {
   };
 
   render() {
-    const {id, sectionId, name, loginType, username, editedValue} = this.props;
+    const {id, sectionId, name, username, email, editedValue} = this.props;
     return (
       <div>
         {!this.props.isEditing &&
@@ -35,8 +40,11 @@ class ManageStudentNameCell extends Component {
             >
               {name}
             </a>
-            {loginType === SectionLoginType.email &&
-              <p>{i18n.usernameLabel() + username}</p>
+            {(username && username !== '') &&
+              <div style={styles.details}>{i18n.usernameLabel() + username}</div>
+            }
+            {(email && email !== '') &&
+              <div style={styles.details}>{i18n.emailLabel() + email}</div>
             }
           </div>
         }
