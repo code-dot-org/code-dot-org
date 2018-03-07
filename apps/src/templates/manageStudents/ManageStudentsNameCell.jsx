@@ -5,6 +5,12 @@ import {tableLayoutStyles} from "../tables/tableConstants";
 import i18n from "@cdo/locale";
 import {editStudent} from './manageStudentsRedux';
 
+const styles = {
+  inputBox: {
+    width: 225
+  }
+};
+
 class ManageStudentNameCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
@@ -41,11 +47,13 @@ class ManageStudentNameCell extends Component {
           </div>
         }
         {this.props.isEditing &&
-          <div style={{paddingTop: 10}}>
-            <input value={editedValue} onChange={this.onChangeName}/>
-            <div style={{color: 'red', fontSize: 9, height: 10}}>
-              {this.props.editedValue.length === 0 ? i18n.required() : ''}
-            </div>
+          <div>
+            <input
+              style={styles.inputBox}
+              value={editedValue}
+              onChange={this.onChangeName}
+              placeholder={i18n.nameRequired()}
+            />
           </div>
         }
       </div>
