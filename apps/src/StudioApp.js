@@ -1347,12 +1347,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
 
-  // We don't get the benefits of our responsive styling, so set height
-  // explicitly
-  if (!utils.browserSupportsCssMedia()) {
-    visualization.style.height = newVizHeightString;
-    visualization.style.width = newVizWidthString;
-  }
   var scale = (newVizWidth / this.nativeVizWidth);
   getStore().dispatch(setVisualizationScale(scale));
 

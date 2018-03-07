@@ -186,12 +186,12 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('convertStudentDataToArray', () => {
-    it('converts studentData to an array of student objects', () => {
+    it('converts studentData to an array of student objects in reverse order', () => {
       const studentDataArray = convertStudentDataToArray(studentEmailData);
       assert.equal(studentDataArray.length, 3);
-      assert.equal(studentDataArray[0], studentEmailData[1]);
+      assert.equal(studentDataArray[0], studentEmailData[3]);
       assert.equal(studentDataArray[1], studentEmailData[2]);
-      assert.equal(studentDataArray[2], studentEmailData[3]);
+      assert.equal(studentDataArray[2], studentEmailData[1]);
     });
   });
 
