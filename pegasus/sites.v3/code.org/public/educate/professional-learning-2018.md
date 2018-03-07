@@ -62,9 +62,9 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 ## Professional Learning Program features
 
 <details>
-<summary>**Cost should not be a barrier**</summary>
-<p>
-<br>
+  <summary>**Cost should not be a barrier**</summary>
+  <p>
+  <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
 
 In New York and North Carolina, there is a fee to cover the costs of the workshop. But, we have worked with many school districts in these regions and they have allocated funds to cover the costs for you and your school. If your principal or administration has any questions around the costs to support this, please encourage them to reach out to our partners in <a href="mailto:programs@codeinteractive.org">New York</a> and <a href="mailto:srmorri3@ncsu.edu">North Carolina</a> so we can help you.
@@ -72,9 +72,9 @@ In New York and North Carolina, there is a fee to cover the costs of the worksho
 </details>
 
 <details>
-<summary>**One cohesive set of resources**</summary>
-<p>
-<br>
+  <summary>**One cohesive set of resources**</summary>
+  <p>
+  <br>
 ​Our professional learning and curriculum flow seamlessly together, empowering teachers to deliver the course with confidence. In-person workshops combine with online tools to provide participants with a broad selection of resources to help them plan ahead for implementing the course in their classrooms, while also collaborating with other educators.
 </p>
 </details>
@@ -88,9 +88,9 @@ Participants will engage with the curriculum both as instructors and as learners
 </details>
 
 <details>
-<summary>**A collaborative, participant-centric approach**</summary>
-<p>
-<br>
+  <summary>**A collaborative, participant-centric approach**</summary>
+  <p>
+  <br>
 ​Teachers and facilitators will have the opportunity to share their expertise from the field and collaborate on strategies to bring to the CS Principles and CS Discoveries classrooms, giving participants a chance to learn from everyone in the room. Facilitators model pedagogical strategies and participants share their own approaches by planning and delivering lessons.
 ​</p>
 ​</details>
