@@ -48,6 +48,7 @@ class AdvancedShareOptions extends React.Component {
   static propTypes = {
     shareUrl: PropTypes.string.isRequired,
     onClickExport: PropTypes.func,
+    onClickExportExpo: PropTypes.func,
     onExpand: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired,
     i18n: PropTypes.object.isRequired,
@@ -63,7 +64,9 @@ class AdvancedShareOptions extends React.Component {
     this.state = {
       selectedOption: props.onClickExport ? 'export' : 'embed',
       exporting: false,
+      exportingExpo: false,
       exportError: null,
+      exportExpoError: null,
       embedWithoutCode: false,
     };
   }
@@ -76,6 +79,19 @@ class AdvancedShareOptions extends React.Component {
         this.setState({
           exporting: false,
           exportError: 'Failed to export project. Please try again later.'
+        });
+      }
+    );
+  };
+
+  downloadExpoExport = () => {
+    this.setState({exportingExpo: true});
+    this.props.onClickExportExpo().then(
+      this.setState.bind(this, {exportingExpo: false}),
+      () => {
+        this.setState({
+          exportingExpo: false,
+          exportExpoError: 'Failed to export project. Please try again later.'
         });
       }
     );
@@ -152,6 +168,33 @@ class AdvancedShareOptions extends React.Component {
     );
   }
 
+  renderExportExpoTab() {
+    const spinner = this.state.exportingExpo ?
+          <i className="fa fa-spinner fa-spin"></i> :
+          null;
+    // TODO: Make this use a nice UI component from somewhere.
+    const alert = this.state.exportExpoError ? (
+      <div className="alert fade in">
+        {this.state.exportExpoError}
+      </div>
+    ) : null;
+
+    return (
+      <div>
+        <p style={style.p}>
+          Export your project as a zipped file for use in Expo, which will
+          contain the HTML/CSS/JS files, as well as any assets, for your
+          project. Note that data APIs will not work outside of Code Studio.
+        </p>
+        <button onClick={this.downloadExpoExport} style={{marginLeft: 0}}>
+          {spinner}
+          Export to Expo
+        </button>
+        {alert}
+      </div>
+    );
+  }
+
   render() {
     if (!this.state.selectedOption) {
       // no options are available. Render nothing.
@@ -161,6 +204,7 @@ class AdvancedShareOptions extends React.Component {
     let selectedOption;
     if (this.props.expanded) {
       let exportTab = null;
+      let exportExpoTab = null;
       if (this.props.onClickExport) {
         exportTab = (
           <li
@@ -171,6 +215,19 @@ class AdvancedShareOptions extends React.Component {
             onClick={() => this.setState({selectedOption: 'export'})}
           >
             Export
+          </li>
+        );
+      }
+      if (this.props.onClickExportExpo) {
+        exportExpoTab = (
+          <li
+            style={[
+              style.nav.li,
+              this.state.selectedOption === 'exportExpo' && style.nav.selectedLi
+            ]}
+            onClick={() => this.setState({selectedOption: 'exportExpo'})}
+          >
+            Export to Expo
           </li>
         );
       }
@@ -189,14 +246,21 @@ class AdvancedShareOptions extends React.Component {
         <div>
           <ul style={style.nav.ul}>
             {exportTab}
+            {exportExpoTab}
             {embedTab}
           </ul>
         </div>
       );
-      if (this.state.selectedOption === 'export') {
-        selectedOption = this.renderExportTab();
-      } else if (this.state.selectedOption === 'embed') {
-        selectedOption = this.renderEmbedTab();
+      switch (this.state.selectedOption) {
+        case 'export':
+          selectedOption = this.renderExportTab();
+          break;
+        case 'exportExpo':
+          selectedOption = this.renderExportExpoTab();
+          break;
+        case 'embed':
+          selectedOption = this.renderEmbedTab();
+          break;
       }
     }
     const expand = this.props.expanded && this.state.selectedOption ? null :
