@@ -60,6 +60,7 @@ class Level < ActiveRecord::Base
     display_name
     map_reference
     reference_links
+    name_suffix
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -483,7 +484,22 @@ class Level < ActiveRecord::Base
     level
   end
 
+  # Create a copy of this level by appending new_suffix to the name, removing
+  # any previous suffix from the name first.
+  def clone_with_suffix(new_suffix)
+    new_name = "#{base_name}#{new_suffix}"
+    level = clone(new_name)
+    level.update!(name_suffix: new_suffix)
+    level
+  end
+
   private
+
+  # Returns the level name, removing the name_suffix first (if present).
+  def base_name
+    strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
+    name[strip_suffix_regex, 1] || name
+  end
 
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
