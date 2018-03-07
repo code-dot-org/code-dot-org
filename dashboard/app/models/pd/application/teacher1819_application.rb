@@ -606,7 +606,7 @@ module Pd::Application
     def self.csv_header(course)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
+        columns = filtered_label_values(course).map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
           'Principal Approval',
           'Meets Criteria',
@@ -638,7 +638,7 @@ module Pd::Application
     def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
-        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row = self.class.filtered_labels(course).map {|k| answers[k]}
         row.push(
           principal_approval,
           meets_criteria,
@@ -675,6 +675,7 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers based on selected program (course)
+    # @returns [Array] label keys to keep
     def self.filtered_labels(course)
       labels_to_remove = (course == 'csd' ?
         [
@@ -696,7 +697,11 @@ module Pd::Application
       # so we add it when we construct the csv row.
       labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      ALL_LABELS_WITH_OVERRIDES.keys - labels_to_remove
+    end
+
+    def self.filtered_label_values(course)
+      ALL_LABELS_WITH_OVERRIDES.slice(*filtered_labels(course)).values
     end
 
     # @override

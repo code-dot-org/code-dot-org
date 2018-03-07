@@ -428,6 +428,7 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers, based on selected program (course)
+    # @returns [Array] label keys to keep
     def self.filtered_labels(course)
       labels_to_remove = (course == 'csf' ?
         [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
@@ -435,7 +436,11 @@ module Pd::Application
         [:csf_availability, :csf_partial_attendance_reason]
       )
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      ALL_LABELS_WITH_OVERRIDES.keys - labels_to_remove
+    end
+
+    def self.filtered_label_values(course)
+      ALL_LABELS_WITH_OVERRIDES.slice(*filtered_labels(course)).values
     end
 
     # @override
@@ -443,7 +448,7 @@ module Pd::Application
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
-        columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
+        columns = filtered_label_values(course).map {|l| markdown.render(l)}.map(&:strip)
         columns.push 'Status', 'Locked', 'Notes', 'Regional Partner'
         csv << columns
       end
@@ -453,7 +458,7 @@ module Pd::Application
     def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
-        row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
+        row = self.class.filtered_labels(course).map {|k| answers[k]}
         row.push status, locked?, notes, regional_partner_name
         csv << row
       end
