@@ -46,7 +46,7 @@ module Api::V1::Pd
       survey_report[:all_my_teachercons] = summarize_workshop_surveys(
         workshops: Pd::Workshop.where(
           subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]
-        ).facilitated_or_organized_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
+        ).managed_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
         include_free_response: false,
         facilitator_breakdown: false,
         facilitator_name_filter: facilitator_name
@@ -84,7 +84,7 @@ module Api::V1::Pd
         workshops: Pd::Workshop.where(
           subject: @workshop.subject,
           course: @workshop.course
-        ).facilitated_or_organized_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
+        ).managed_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
         facilitator_breakdown: false,
         facilitator_name_filter: facilitator_name,
         include_free_response: false
@@ -108,7 +108,7 @@ module Api::V1::Pd
     # We want to filter facilitator-specific responses if the user is a facilitator and
     # NOT a workshop organizer - the filter is the user's name.
     def facilitator_name_filter
-      current_user.facilitator? && !current_user.workshop_organizer? ? current_user.name : nil
+      current_user.facilitator? && !(current_user.workshop_organizer? || current_user.program_manager?) ? current_user.name : nil
     end
   end
 end
