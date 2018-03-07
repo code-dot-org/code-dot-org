@@ -24,8 +24,6 @@ import {
   Button,
   ButtonToolbar,
   Radio,
-  Table,
-  Clearfix,
   Alert
 } from 'react-bootstrap';
 import {
@@ -33,6 +31,7 @@ import {
   DATE_FORMAT,
   DATETIME_FORMAT
 } from '../workshopConstants';
+import Permission from '../../permission';
 
 const styles = {
   readOnlyInput: {
@@ -80,6 +79,7 @@ export default class WorkshopForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.computeInitialState(props);
+    this.permission = new Permission();
   }
 
   computeInitialState(props) {
@@ -326,9 +326,30 @@ export default class WorkshopForm extends React.Component {
   }
 
   renderFundedSelect(validation) {
+    const options = [];
+    if (this.state.course === 'CS Fundamentals') {
+      options.push({
+        value: {funded: true, funding_type: 'partner'},
+        text: "Yes, it is funded. Please pay the Regional Partner."
+      }, {
+        value: {funded: true, funding_type: 'facilitator'},
+        text: "Yes, it is funded. Please pay the Facilitator directly."
+      });
+    } else {
+      options.push({
+        value: {funded: true},
+        text: "Yes, it is funded."
+      });
+    }
+    options.push({
+      value: {funded: false},
+      text: "No, it is not funded."
+    });
+    const value = JSON.stringify(_.pick(this.state, ['funded', 'funding_type']));
+
     return (
       <Row>
-        <Col sm={4}>
+        <Col sm={6}>
           <FormGroup validationState={validation.style.funded}>
             <ControlLabel>
               Is this a Code.org paid workshop?
@@ -336,14 +357,17 @@ export default class WorkshopForm extends React.Component {
             <FormControl
               componentClass="select"
               name="funded"
-              value={this.state.funded}
-              onChange={this.handleFieldChange}
+              value={value}
+              onChange={this.handleFundingChange}
               style={this.getInputStyle()}
               disabled={this.props.readOnly}
             >
               <option />
-              <option value={true}>Yes, it is funded.</option>
-              <option value={false}>No, it is not funded.</option>
+              {options.map((o, i) => (
+                <option key={i} value={JSON.stringify(o.value)}>
+                  {o.text}
+                </option>
+              ))}
             </FormControl>
             <HelpBlock>{validation.help.funded}</HelpBlock>
           </FormGroup>
@@ -356,7 +380,48 @@ export default class WorkshopForm extends React.Component {
     return this.state.course && window.dashboard.workshop.SUBJECTS[this.state.course];
   }
 
+  renderWorkshopTypeOptions(validation) {
+    const isCsf = this.state.course === 'CS Fundamentals';
+    return (
+      <FormGroup>
+        <ControlLabel>
+          Workshop Type Options&nbsp;
+          {isCsf &&
+            <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>
+          }
+        </ControlLabel>
+        {this.state.showTypeOptionsHelpDisplay && isCsf &&
+        <FormGroup>
+          <p>
+            If you’d like to make your workshop open to the public, select Yes to show it on the K-5 workshop map.
+          </p>
+          <p>
+            Next, please specify if this is a Code.org paid workshop.
+            If it is a Code.org paid workshop, select whether payment should be made directly to the Facilitator or
+            if the Regional Partner selected is responsible for payments to the Facilitator.
+          </p>
+        </FormGroup>
+        }
+        <Row>
+          <Col smOffset={1}>
+            {isCsf && this.renderOnMapRadios(validation)}
+            {this.renderFundedSelect(validation)}
+          </Col>
+        </Row>
+      </FormGroup>
+    );
+  }
+
   renderRegionalPartnerSelect() {
+    const editDisabled = this.props.readOnly ||
+    (
+      !this.permission.isWorkshopAdmin && //Enabled for these permissions
+      !this.permission.isOrganizer &&
+      !this.permission.isProgramManager &&
+      !this.permission.isPartner &&
+      !(this.permission.isCsfFacilitator && !this.props.workshop) //Enabled  for CSF facilitators when they are creating a new workshop
+    );
+
     return (
       <FormGroup>
         <ControlLabel>
@@ -368,7 +433,8 @@ export default class WorkshopForm extends React.Component {
           onChange={this.handleFieldChange}
           style={this.getInputStyle()}
           value={this.state.regional_partner_id || ''}
-          disabled={this.props.readOnly}
+          // Facilitators (who are not organizers, partners, nor admins) cannot edit this field
+          disabled={editDisabled}
         >
           <option value="">None</option>
           {
@@ -501,11 +567,21 @@ export default class WorkshopForm extends React.Component {
     return enabled;
   };
 
+  handleFundingChange = (event) => {
+    const {funded, funding_type} = JSON.parse(event.target.value);
+    this.setState({funded, funding_type});
+  };
+
   handleCourseChange = (event) => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators and subject
-    this.setState({facilitators: [], subject: null});
+    // clear facilitators, subject, and funding
+    this.setState({
+      facilitators: [],
+      subject: null,
+      funded: null,
+      funding_type: null
+    });
     this.loadAvailableFacilitators(course);
   };
 
@@ -517,6 +593,7 @@ export default class WorkshopForm extends React.Component {
       capacity: this.state.capacity,
       on_map: this.state.on_map,
       funded: this.state.funded,
+      funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
       notes: this.state.notes,
@@ -737,45 +814,7 @@ export default class WorkshopForm extends React.Component {
           </Row>
           <Row>
             <Col sm={10}>
-              <FormGroup>
-                <ControlLabel>
-                  Workshop Type Options
-                  &nbsp;<a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>
-                </ControlLabel>
-                {this.state.showTypeOptionsHelpDisplay &&
-                  <FormGroup>
-                    <p>These options have replaced the old "Workshop Type" dropdown. Here's how these options map to the old workshop types:</p>
-                    <Col sm={7}>
-                      <Table bordered condensed>
-                        <tbody>
-                          <tr>
-                            <td></td>
-                            <td><strong>Code.org Paid</strong></td>
-                            <td><strong>Not Code.org Paid</strong></td>
-                          </tr>
-                          <tr>
-                            <td><strong>On the map</strong></td>
-                            <td>Previously called Public</td>
-                            <td>New!</td>
-                          </tr>
-                          <tr>
-                            <td><strong>Not on the map</strong></td>
-                            <td>Previously called Private</td>
-                            <td>Previously called District</td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </Col>
-                    <Clearfix />
-                  </FormGroup>
-                }
-                <Row>
-                  <Col smOffset={1}>
-                    {this.renderOnMapRadios(validation)}
-                    {this.renderFundedSelect(validation)}
-                  </Col>
-                </Row>
-              </FormGroup>
+              {this.state.course && this.renderWorkshopTypeOptions(validation)}
             </Col>
           </Row>
           <Row>

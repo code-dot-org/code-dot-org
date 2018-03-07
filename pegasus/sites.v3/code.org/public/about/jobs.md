@@ -18,7 +18,7 @@ theme: responsive
 
 [col-50]
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
+Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
 
 [/col-50]
 
@@ -29,16 +29,13 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 - **Advocacy**
 	- [Director of State Government Affairs](#govaffairs)
-- **Education**
-	- [Program Associate](#associate)
 - **Engineering**
-	- [Software Engineer](#softwareengineer)
+	- [Director/VP Engineering](#vpeng)
 	- [Technical Lead](#techlead)
 - **Outreach**
  	- [Program Associate](#outreach)
 - **Internships**
 	- [Education Team intern (Chicago, IL or Seattle, WA)](#edintern)
-	- [Events Intern (Seattle, WA)](#eventsintern)
 	
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
@@ -64,7 +61,7 @@ In this role, you will be responsible for:
 - Communicating policy agenda to various audiences (stakeholder groups, legislators, Governors and staff, educators, media, etc.) and tailoring messaging for each
 - Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
 - Creating, organizing and managing policy-related events with policy makers and/or partner organizations
-- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
+- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and nonprofits with shared goals
 - Creating and managing grassroots support for policy-related efforts
 - Coordinating state and federal policy efforts internally and with partners
 
@@ -91,60 +88,30 @@ To apply, please email resume and cover letter to <a href="mailto:jobs@code.org"
 
 
 
-## <a name="associate"href="#associate">Program Associate, Education Team (Seattle, WA)</a>
+## <a name="vpeng"href="#vpeng">Director/VP Engineering (Seattle, WA)</a>
 
 **Job Summary:**
-
-Code.org is looking for a detail and customer-service oriented Program Associate to join Code.org’s Education team. The Education team is responsible for the creation of Code.org’s K-12 computer science courses and the success of Code.org professional development across the U.S. The Education team supports a network of roughly 400 computer science facilitators in their delivery of these professional development workshops, which have reached over 50,000 teachers in the past 3 years.
-
-Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators. This is a full-time, exempt position. 
-
-In this role you will: 
-
-- Communicate through our customer service system to respond to professional development questions from teachers and facilitators in a timely manner
-- Communicate via email and other channels to send reminders, requests for information, and other updates to facilitators
-- Track and manage the teacher recruitment numbers and application status for Code.org’s year-long Professional Learning Program
-- Coordinate and schedule the interview and onboarding process for new facilitators
-- Update and ensure the accuracy of our teacher and facilitator lists
-- Document common workflows and processes for internal use
-- For teacher and facilitator related in-person events, support the Events Manager with upfront and onsite logistics
-- As new programs are developed to support teachers and facilitators, support the operational aspects of these programs 
-
-**Experience and Qualifications:**
-
-We are looking for a customer-service oriented self-starter who is skilled in successfully delivering projects, enjoys multi-tasking, cheerfully excels under pressure, and works independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
-
-You will be successful in this role if you have:
-
-- Passion for Code.org’s mission (experience or background in education preferred)
-- Proficiency in working with Microsoft Office and Google Docs 
-- Proficient with Excel and/or Google Sheets. 
-- 2-3 years experience in a customer support role
-- A bachelors degree (Computer science background/experience not required)
-- Ability and willingness to travel up to 15% time
-
-To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="softwareengineer"href="#softwareengineer">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions of students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
+ 
+ Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive, diverse workforce of the future.
+As Director/VP of Engineering at Code.org, you’ll be responsible for leading and supporting a high-powered, agile software engineering team of 15-20 engineers, and supporting a learning+coding platform for tens of millions students. You’ll set technical strategy and direction, drive big bets and investments, and address technical debt. You’ll manage, mentor and grow individual contributors and managers. Partnering with product management, you will lead execution on delivering product features. You’ll be responsible for engineering recruiting and hiring. You’ll deliver great live site operational results for our millions of students and teachers around the world.
 
 **Experience and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
 - Passion for our mission of increasing access to computer science education
-- Bachelor’s degree with a major in Computer Science
-- 3+ years as a software engineer
-- Expertise in some of these technologies preferred: 
+- Desire to support the growth of female and underrepresented minority students
+- 10+ years of professional software engineering experience
+- 5+ years experience as a people manager
+- Top-notch technical ability - must have technical credibility as a leader of a highly accomplished engineering team
+- Demonstrated ability to lead and energize others
+- Supportive manager with experience managing well functioning teams
+- Expertise in some of these technologies preferred:
 	- JavaScript
 	- React
 	- Ruby on Rails
 	- SQL/Databases/MySQL
+- Experience operating a live high-scale web-based software product or service
 
 In addition, candidates:
 
@@ -152,6 +119,7 @@ In addition, candidates:
 - Must pass a pre-employment background check
 
 To apply, please email resume and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 
 ## <a name="techlead"href="#techlead">Technical Lead (Seattle, WA)</a>
 
@@ -254,52 +222,12 @@ Please include lesson plan samples that are your original work, and highlight re
 
 You may also choose to include a LinkedIn or related online profile.
 
-## <a name="eventsintern"href="#eventsintern">Events Intern (Seattle, WA)</a>
-
-**Internship Summary:**
-
-Code.org is looking for an Events Intern to work with and support Code.org’s Events Manager. Internship will primarily support events for Code.org facilitator and teacher professional development workshops across the U.S. This is a spring/summer internship, part-time, approximately 20-30 hours per week.
-
-Intern’s responsibilities would include:
-
-- Coordinating event logistics (booking travel, accommodations, catering); act as logistics point-of-contact for event attendees 
-- Assisting Events Manager with on-site event support
-- Formatting, printing and organizing materials, packing and mailing supplies, proofreading and checking information (rooming lists, flight information, attendee lists and program tracks), and more.
-- Utilizing our customer service system to respond to events-related questions from teachers and facilitators in a timely manner.
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate.
-- Responding to requests for information, distributing materials externally.
-- Special projects (enter data, prepare documentation, develop templates, etc.)
-- Opportunity to travel to and support up to three events this spring/summer
-
-
-**Experience and Qualifications:**
-
-Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-Qualifications:
-
-- 2 years of undergraduate studies preferred (no Computer Science background necessary) 
-- 1 year of work experience preferred 
-- Experience with Google Sheets and suite of products
-- Ability to work legally in the United States
-- Ability to and willingness to travel to support events in the United States, if needed
-
-**Salary and Perks:**
-
-Code.org offers the following:
-
-- $15/hr, 20-30 hours per week expected
-- Flexible working environment
-- ORCA transit card
-
-Interested candidates should email a resume and cover letter, outlining how your skills and experience meet the qualifications of the position, to jobs@code.org. You may also choose to include a LinkedIn or related online profile.
-
 
 ## <a name="info" href="#info">Working at Code.org</a>
 
 **Company Profile**
 
-Code.org is a non-profit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+Code.org is a nonprofit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
 
 We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 

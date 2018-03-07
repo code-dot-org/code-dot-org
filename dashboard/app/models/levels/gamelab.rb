@@ -74,6 +74,9 @@ class Gamelab < Blockly
     )
   end
 
+  # By default, level types that inherit from Blockly will try to store a bunch
+  # of fields as normalized xml, discarding anything that's not actually XML.
+  # Gamelab doesn't use blockly, so don't do that to any of our fields.
   def xml_blocks
     %w()
   end

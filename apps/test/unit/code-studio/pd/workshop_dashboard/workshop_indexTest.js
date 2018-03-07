@@ -29,7 +29,23 @@ describe("WorkshopIndex", () => {
         ]
       ],
       [
+        "csf_facilitator",
+        [
+          "New Workshop",
+          "Facilitator Survey Results",
+          "Filter View"
+        ]
+      ],
+      [
         "workshop_organizer",
+        [
+          "New Workshop",
+          "Attendance Reports",
+          "Filter View"
+        ]
+      ],
+      [
+        "program_manager",
         [
           "New Workshop",
           "Attendance Reports",
