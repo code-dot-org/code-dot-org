@@ -1002,7 +1002,6 @@ And(/^I give user "([^"]*)" project validator permission$/) do |name|
 end
 
 Then(/^I remove featured projects from the gallery$/) do
-  puts "Wiping out the gallery!"
   require_rails_env
   FeaturedProject.delete_all
 end
