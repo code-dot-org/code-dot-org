@@ -37,10 +37,17 @@ ________________
 
 ## Announcements
 
+- [2018 Local Summer Workshop Process Doc Now Available](#summer)
 - [Sending Welcome Kits for Local Summer Workshops](#welkit)
 - [Academic Year PD Options](#options)
 - [Quarter 3 & 4 Options for AP/non-AP Teachers CS Principles Teachers](#q34)
 
+<a id="summer"></a>
+### 2018 Local Summer Workshop Process Doc Now Available
+
+Check out your local summer workshop process doc **<a href="https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit" target=_blank>here</a>**!
+
+<br/>
 
 <a id="welkit"></a>
 ### Sending Welcome Kits for Local Summer Workshops (Only G1/G2)
@@ -126,7 +133,7 @@ ________________
   <p>
 
 - **[Academic Year Workshop Process Document](https://docs.google.com/document/d/1lI8E7IE0MOYktAPsmssb6vRVI5--s_5zK8OkUAcw158/edit?disco=AAAAA_lL-1o&ts=59833f89)** - Everything you need to know to plan, prepare, and run academic year workshops.
-- 2017 [Local Summer Workshop Process Document](https://docs.google.com/document/d/12rsY1FMkiVN90-83yvEsikawtsiQzy5wc1xQER1QoyM/edit) - Everything you need to know to plan and run a local summer workshop. 2018 info to come.
+- 2018 [Local Summer Workshop Process Document](https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit) - Everything you need to know to plan and run a local summer workshop!
 - [Survey Report Process](https://docs.google.com/document/d/1nC9wEPnTkYO6tzZM6QIHnVzSSNySEVykIFlADdS_xEM/edit) - How to navigate to and view the surveys sent at the end of a workshop.
 
 </p>
