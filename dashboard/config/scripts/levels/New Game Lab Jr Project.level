@@ -288,6 +288,9 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_setPosition" inline="true">
+            <title name="POSITION">"top left"</title>
+          </block>
           <block type="gamelab_displace" inline="true">
             <value name="THIS">
               <block type="variables_get">
@@ -352,6 +355,7 @@
           </block>
           <block type="gamelab_firstTouched"/>
           <block type="gamelab_secondTouched"/>
+          <block type="gamelab_clickedOn" inline="true"/>
         </category>
         <category name="Variables" custom="VARIABLE"/>
         <category name="Loops">

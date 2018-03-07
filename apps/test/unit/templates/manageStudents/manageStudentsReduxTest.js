@@ -103,6 +103,17 @@ const studentPictureData = {
     },
 };
 
+const expectedBlankRow = {
+  id: 0,
+  name: '',
+  age: '',
+  gender: '',
+  username: '',
+  loginType: '',
+  isEditing: true,
+  rowType: RowType.ADD,
+};
+
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
 
@@ -128,6 +139,22 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.studentData, {
         ...studentEmailData,
+      });
+    });
+
+    it('sets student data and an empty row for picture section', () => {
+      const startingState = {
+        ...initialState,
+        loginType: 'picture'
+      };
+      const action = setStudents(studentPictureData);
+      const nextState = manageStudents(startingState, action);
+      assert.deepEqual(nextState.studentData, {
+        ...studentPictureData,
+        [0]: {
+          ...expectedBlankRow,
+          loginType: 'picture',
+        }
       });
     });
 
@@ -159,12 +186,12 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('convertStudentDataToArray', () => {
-    it('converts studentData to an array of student objects', () => {
+    it('converts studentData to an array of student objects in reverse order', () => {
       const studentDataArray = convertStudentDataToArray(studentEmailData);
       assert.equal(studentDataArray.length, 3);
-      assert.equal(studentDataArray[0], studentEmailData[1]);
+      assert.equal(studentDataArray[0], studentEmailData[3]);
       assert.equal(studentDataArray[1], studentEmailData[2]);
-      assert.equal(studentDataArray[2], studentEmailData[3]);
+      assert.equal(studentDataArray[2], studentEmailData[1]);
     });
   });
 
@@ -342,16 +369,6 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('add student', () => {
-    const expectedBlankRow = {
-      id: 0,
-      name: '',
-      age: '',
-      gender: '',
-      username: '',
-      loginType: '',
-      isEditing: true,
-      rowType: RowType.ADD,
-    };
     it('setLoginType creates an add row for word login types', () => {
       const action = setLoginType('word');
       const nextState = manageStudents(initialState, action);
