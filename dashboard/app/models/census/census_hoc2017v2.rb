@@ -30,6 +30,7 @@
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
 #  share_with_regional_partners :boolean
+#  topic_ethical_social         :boolean
 #
 # Indexes
 #
