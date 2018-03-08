@@ -387,7 +387,7 @@ export default function manageStudents(state=initialState, action) {
   return state;
 }
 
-// Converts data from /v2/sections/sectionid/students to a set of key/value
+// Converts data from /dashboardapi/sections/sectionid/students to a set of key/value
 // objects for the redux store
 export const convertStudentServerData = (studentData, loginType, sectionId) => {
   let studentLookup = {};
