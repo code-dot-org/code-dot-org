@@ -7,8 +7,8 @@ export default storybook => {
     .storiesOf('QuickActionsCell', module)
     .addStoryTable([
         {
-          name: 'QuickActionsCell - 2 children',
-          description: 'Shown with 2 QuickActions as children',
+          name: 'QuickActionsCell - default body',
+          description: 'Shown with 2 QuickActions as children, the default body cell has a down chevron',
           story: () => (
             <QuickActionsCell>
               <PopUpMenu.Item
@@ -26,8 +26,8 @@ export default storybook => {
           )
         },
         {
-          name: 'QuickActionsCell - different icon',
-          description: 'Override the default cheveron down icon',
+          name: 'QuickActionsCell - header',
+          description: 'Override the default cheveron down icon for use in the header cell',
           story: () => (
             <QuickActionsCell
               type="header"

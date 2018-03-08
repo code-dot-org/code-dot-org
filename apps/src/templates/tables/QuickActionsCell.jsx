@@ -12,27 +12,24 @@ export const QuickActionsCellType = {
 };
 
 const styles = {
+  icon: {
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingTop: 4,
+    paddingBottom: 4,
+    cursor: 'pointer',
+  },
   actionButton: {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
-      paddingLeft: 5,
-      paddingRight: 5,
-      paddingTop: 4,
-      paddingBottom: 4,
       borderRadius: 5,
       color: color.lighter_gray,
       margin: 3,
-      cursor: 'pointer',
     },
     [QuickActionsCellType.header]: {
-      paddingLeft: 5,
-      paddingRight: 5,
-      paddingTop: 4,
-      paddingBottom: 4,
       fontSize: 20,
       marginTop: -3,
       color: color.darker_gray,
-      cursor: 'pointer',
     }
   },
   hoverFocus: {
@@ -40,23 +37,8 @@ const styles = {
       backgroundColor: color.lighter_gray,
       border: '1px solid ' + color.light_gray,
       borderRadius: 5,
-      paddingTop: 4,
-      paddingBottom: 4,
-      paddingLeft: 5,
-      paddingRight: 5,
       color: color.white,
     },
-    [QuickActionsCellType.header]: {
-      paddingLeft: 5,
-      paddingRight: 5,
-      paddingTop: 4,
-      paddingBottom: 4,
-      fontSize: 20,
-      // float: 'right',
-      color: color.darker_gray,
-      margin: 3,
-      cursor: 'pointer',
-    }
   },
 };
 
@@ -126,11 +108,22 @@ class QuickActionsCell extends Component {
       body: 'chevron-down'
     };
 
+    const styleByType = type === "header" ?
+      styles.actionButton["header"] :
+      this.state.open ?
+        styles.hoverFocus["body"] :
+        styles.actionButton["body"];
+
+    const iconStyle = {
+      ...styles.icon,
+      ...styleByType
+    };
+
     return (
       <span ref={span => this.icon = span}>
         <FontAwesome
           icon={icons[type]}
-          style={this.state.open ? styles.hoverFocus[type] : styles.actionButton[type]}
+          style={iconStyle}
           onClick={this.state.canOpen ? this.open : undefined}
           className="ui-test-section-dropdown"
         />
