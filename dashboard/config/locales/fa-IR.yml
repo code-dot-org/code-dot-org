@@ -986,7 +986,7 @@
     projects: "پروژه ها"
     create: "پروژه ایجاد کنید"
     create_a_project: "یک پروژه جدید بساز:"
-    new: "جدید ایجاد کنید"
+    new: "ایجاد مورد جدید"
     rename: "تغییر نام"
     save: "ذخيره"
     delete: "پاک کردن"
@@ -998,7 +998,7 @@
     share_link_import_error_header: Something went wrong.
     share_link_import_error_body: There was a problem importing that share link. Please
       try again.
-    exit: "به درس برگرد"
+    exit: "بازگشت به درس"
     my_projects: "پروژه های من"
     project_gallery: "پروژه ها"
     publish: Publish

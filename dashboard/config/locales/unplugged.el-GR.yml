@@ -304,9 +304,6 @@
           για να μετρήσουμε την απόσταση μεταξύ δύο σημείων στο επίπεδο και στη συνέχεια
           να αποφασίσουμε αν αυτά τα σημεία (ή οι χαρακτήρες του παιχνιδού) ακουμπούν
           μεταξύ τους."
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

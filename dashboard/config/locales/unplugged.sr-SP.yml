@@ -261,9 +261,6 @@
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

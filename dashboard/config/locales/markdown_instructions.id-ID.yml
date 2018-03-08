@@ -35,9 +35,9 @@
         \r
         <img src="https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif"
         width="300"/>
-      2-3 Artist 7_markdown_instruction: "Finish drawing the last set of windows\non
-        the school so that everyone in class can see outside. \\r\n\\r\nThe sides\nof
-        each square window pane are 25 pixels long. "
+      2-3 Artist 7_markdown_instruction: "Selesai menggambar yang terakhir set dari
+        jendela di sekolah sehingga semua orang di kelas dapat melihat di luar. \\
+        r \n\\ r \nThe sisi \nmasing-masing panel jendela persegi 25 piksel panjang. "
       2-3 Artist 8_markdown_instruction: |-
         Waktunya membangun sebuah gudang!\r
         \r
@@ -106,13 +106,9 @@
         \r
         kode batang ini salah. Anda bisa mencari tahu bagaimana cara mendapatkan artis untuk melacak
         batang yang tepat?
-      2-3 Artist Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:** \r
-        Why
-        does this square end up being 75 pixels too small on each side?  \r
-        \r
-        Where
-        does the code go wrong?
+      2-3 Artist Debugging Assessment 1_markdown_instruction: "** Penilaian: ** \\
+        r \nMengapa\n tidak persegi ini berakhir menjadi 75 piksel terlalu kecil di
+        setiap sisi?  \\ r \n\\ r \nDimana\n tidak kode salah?"
       2-3 Artist Free Play_markdown_instruction: Bebas bermain! gambarlah apapun yan
         kamu suka.
       2-3 Artist Functions 1_markdown_instruction: |
@@ -241,38 +237,26 @@
       2-3 Artist Nested Loops 12_markdown_instruction: |-
         Loop kode ini sebanyak 12 kali untu
         Melengkapi ikal.
-      2-3 Artist Nested Loops 2_markdown_instruction: |-
-        Now loop the triangle 6 times.
-        \r
-        \r
-        After each triangle, you'll need to turn 60 degrees before drawing
-        the next.
+      2-3 Artist Nested Loops 2_markdown_instruction: "Sekarang lingkari segitiga
+        6 kali.\n\\ r \n\\ r \nSetelah setiap segitiga, Anda harus mengubah 60 derajat
+        sebelum menggambar \nberikutnya."
       2-3 Artist Nested Loops 3_markdown_instruction: |-
         Anda harus memutar segitiga anda 12 kali untuk menggambar pola ini. \r
         \r
         Bagilah jumlah derajat dalam lingkaran (360) dengan jumlah bentuk yang anda gambar (12) untuk mencari tahu
         seberapa jauh untuk mengubah setiap bentuknya.
-      2-3 Artist Nested Loops 4_markdown_instruction: |-
-        Loop this diamond 12 times
-        to draw a flower!\r
-        \r
-        Note: We'll use the same angle to loop 12 diamonds
-        as we did for 12 triangles.  \r
-        How much do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_markdown_instruction: |-
-        Fill in this building's windows
-        using a nested loop. \r
-        \r
-        The windows are 20 pixels long and 20 pixels
-        apart.
-      2-3 Artist Nested Loops 6_markdown_instruction: |-
-        This dinosaur has 8 spikes
-        running up its tail.\r
-        \r
-        Each spike is 30 pixels long. \r
-        \r
-        Loop the
-        triangle 8 times, but make sure to jump forward after each one!
+      2-3 Artist Nested Loops 4_markdown_instruction: "Lingkaran berlian ini 12 kali
+        untuk menarik  sebuah bunga! \\ r \n\\ r \nCatatan: Kami akan menggunakan
+        sudut yang sama untuk lingkaran 12 berlian seperti yang kita lakukan selama
+        12 segitiga.  \\ r \nBerapa banyak yang Anda butuhkan untuk mengubah setelah
+        setiap bentuk?"
+      2-3 Artist Nested Loops 5_markdown_instruction: "Isi jendela bangunan ini menggunakan
+        sebuah bersarang lingkaran. \\ r \n\\ r \nJendela 20 piksel panjang dan 20
+        pixel \nterpisah."
+      2-3 Artist Nested Loops 6_markdown_instruction: "Dinosaurus ini memiliki 8 lonjakan
+        yang membentang di ekornya. \\ r \n\\ r \nSetiap lonjakan adalah 30 piksel
+        panjang. \\ r \n\\ r \nloop segitiga 8 kali, tetapi membuat yakin untuk melompat
+        ke depan setelah masing-masing!\n \n"
       2-3 Artist Nested Loops 7_markdown_instruction: |-
         Putar segitiga ini 10 kali
         untuk menggambar matahari. \r
@@ -292,35 +276,24 @@
         dengan menambahkan bunga kita. \r
         \r
         ulangi bentuk belah ketupat 12 kali untuk menggambar bunga.
-      2-3 Artist Nested Loops Free Play_markdown_instruction: |-
-        Free play, draw something
-        cool with nested loops.
+      2-3 Artist Nested Loops Free Play_markdown_instruction: Bermain bebas, menggambar
+        sesuatu yang keren dengan loop bersarang.
       2-3 Bee Conditionals 11_markdown_instruction: Kumpulkan nektar di bunga yang
         memilikinya.
       2-3 Bee Conditionals 13_markdown_instruction: 'Kumpulkan nektar dan buatlah
         madu. Petunjuk: Apa yang terjadi jika Anda menggunakan syarat "jika nektar"
         pada bunga merah? Anda dapat menyelesaikan hal ini dengan pengulangan?'
-      2-3 Bee Conditionals 14_markdown_instruction: |-
-        Let's put everything together!\r
-        \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  \r
-        \r
-        Don't forget to make honey
-        at the end.
-      2-3 Bee Conditionals 15_markdown_instruction: |-
-        This stair step pattern should
-        look familiar.  \r
-        \r
-        Can you collect nectar only from the flowers that
-        have some, using as few blocks as possible?
-      2-3 Bee Conditionals 2_markdown_instruction: |-
-        I'm a hungry bee! \r
-        \r
-        \r
-        Help
-        me collect all of the nectar from the flowers using the fewest number of blocks.
+      2-3 Bee Conditionals 14_markdown_instruction: "Mari kita menggabungkan semuanya!
+        \\ r \n\\ r \nGunakan apa yang telah Anda pelajari untuk membantu saya mengumpulkan
+        nektar hanya dari bunga yang memilikinya, menggunakan sebagai beberapa blok
+        mungkin.  \\ r \n\\ r \nJangan lupa untuk membuat madu di akhir."
+      2-3 Bee Conditionals 15_markdown_instruction: "Pola langkah tangga ini seharusnya
+        terlihat familier.  \\ r \nr \\ \nDapatkah Anda mengumpulkan nektar hanya
+        dari bunga-bunga yang memiliki beberapa , menggunakan sebagai beberapa blok
+        mungkin?"
+      2-3 Bee Conditionals 2_markdown_instruction: "Saya seorang lebah lapar! \\ r
+        \n\\ r \n\\ r \nBantu saya mengumpulkan semua nektar dari bunga menggunakan
+        jumlah paling sedikit blok ."
       2-3 Bee Conditionals 3_markdown_instruction: Bantu saya kumpulkan nektar dari
         bunga-bunga ini dan buatlah madu. Gunakan pengulangan.
       2-3 Bee Conditionals 5_markdown_instruction: |-
@@ -331,16 +304,11 @@
         \r
         Berhati-hati jangan sampai pertamamengumpulkan nektar dari bunga ungu jika itu tidak memiliki apapun. \r
         Pertama Anda harus terlebih dahulu memeriksa apakah nektar sama dengan 1 `jika...`menggunakan blok.
-      2-3 Bee Conditionals Assessment 1_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar.  \r
-        Be careful not to try to collect nectar from a purple
-        flower if it doesn't have any.
-      2-3 Bee Debugging 1_markdown_instruction: |-
-        These blocks are really bugging
-        me!\r
-        \r
-        Fix the error(s) to collect all of the nectar.
+      2-3 Bee Conditionals Assessment 1_markdown_instruction: "** Penilaian : ** Kumpulkan
+        semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar
+        dari sebuah bunga ungu jika itu tidak memiliki."
+      2-3 Bee Debugging 1_markdown_instruction: "Ini blok benar-benar menggangguku!
+        \\ r \n\\ r \nPerbaiki kesalahan (s) untuk mengumpulkan semua nektar."
       2-3 Bee Debugging 10_markdown_instruction: |-
         Teka-teki ini membuatku gila!
         \r
@@ -356,144 +324,92 @@
         \r
         perbaiki
         kesalahannya(s) untuk mengumpulkan semua madu bunganya.
-      2-3 Bee Debugging 5_markdown_instruction: |-
-        That flower looks tasty! \r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.  \r
-        You can now use both run and
-        step.
-      2-3 Bee Debugging 6_markdown_instruction: |-
-        What a sweet challenge!\r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.
+      2-3 Bee Debugging 5_markdown_instruction: "Bunga itu terlihat lezat! \\ r \n\\
+        r \nPerbaiki \nkesalahan (s) untuk mengumpulkan semua nektar.  \\ r \nAnda
+        sekarang dapat menggunakan kedua run dan langkah.\n "
+      2-3 Bee Debugging 6_markdown_instruction: "Apa yang tantangan yang manis! \\
+        r \n\\ r \nPerbaiki \nkesalahan (s) untuk mengumpulkan semua nektar.\n "
       2-3 Bee Debugging 9_markdown_instruction: Blok ini benar-benar menggangguku.
         Perbaiki yang salah untuk mengumpulkan semua nektar dan membuat madu.
-      2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:**  Now
-        it's time to show what you know!\r
-        \r
-        Fix the error(s) to collect all of
-        the nectar and make all of the honey.
-      2-3 Bee Functions 1_markdown_instruction: |-
-        Functions are blocks of code that
-        perform a task.  \r
-        \r
-        Use the `get 2 nectar` function to collect the nectar
-        from each flower.
-      2-3 Bee Functions 10_markdown_instruction: |-
-        Purple flowers change between either
-        1 or 0 nectar each time you run the puzzle.   \r
-        \r
-        Create a function that
-        collects nectar only from purple flowers that have nectar.
-      2-3 Bee Functions 2_markdown_instruction: |-
-        Functions are blocks of code that
-        perform a task.  \r
-        \r
-        Use the `get 5` function to get 5 nectars at a time.
-      2-3 Bee Functions 4_markdown_instruction: |-
-        The `move and get nectar` function
-        turns the bee, collects nectar, and then returns the bee to where it started.  \r
-        \r
-        Use
-        the function to collect all of the nectar.
-      2-3 Bee Functions Assessment 1_markdown_instruction: |-
-        **Assessment:** Use the
-        given function to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_markdown_instruction: |-
-        **Assessment:** Create
-        a function to turn, move forward and make 3 honey, then return the bee to
-        where it started and turn back.
+      2-3 Bee Debugging Assessment 1_markdown_instruction: "** Penilaian : ** Sekarang
+        saatnya untuk menunjukkan apa yang Anda ketahui! \\ r \n\\ r \nPerbaiki kesalahan
+        (s) untuk mengumpulkan semua nektar dan membuat semua madu.\n \n"
+      2-3 Bee Functions 1_markdown_instruction: "Fungsi adalah blok kode yang melakukan
+        suatu tugas.  \\ r \n\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan
+        nektar dari bunga masing-masing."
+      2-3 Bee Functions 10_markdown_instruction: "Bunga ungu berubah antara 1 atau
+        0 nektar setiap kali Anda menjalankan teka - teki .   \\ r \n\\ r \nBuat  sebuah
+        \ fungsi yang mengumpulkan nektar hanya dari bunga ungu yang memiliki nektar.\n
+        \n"
+      2-3 Bee Functions 2_markdown_instruction: "Fungsi adalah blok kode yang melakukan
+        suatu tugas.  \\ r \n\\ r \nGunakan `mendapatkan 5` fungsi untuk mendapatkan
+        5 saripati pada suatu waktu."
+      2-3 Bee Functions 4_markdown_instruction: "The ` bergerak dan mendapatkan nectar`
+        fungsi \nternyata lebah, mengumpulkan nektar, dan kemudian kembali lebah ke
+        tempat itu dimulai.  \\ r \n\\ r \nGunakan fungsi untuk mengumpulkan semua
+        nektar.\n \n"
+      2-3 Bee Functions Assessment 1_markdown_instruction: "** Penilaian : ** Gunakan
+        fungsi yang diberikan untuk mengumpulkan nektar dari masing-masing bunga."
+      2-3 Bee Functions Assessment 2_markdown_instruction: "** Penilaian : ** Buat
+        \nsebuah  fungsi untuk mengubah, bergerak maju dan membuat 3 madu, kemudian
+        kembali lebah ke tempat itu mulai dan kembali."
       2-3 Bee Loops 1_markdown_instruction: |-
         Those flowers look tasty!\r
         \r
         Collect
         nectar from each of the flowers using the fewest blocks possible.
-      2-3 Bee Loops 13_markdown_instruction: |-
-        **Assessment:** Collect all of the
-        nectar using the fewest blocks possible.
-      2-3 Bee Loops 3A_markdown_instruction: |-
-        Use a `repeat` loop to collect all
-        of the nectar.
-      2-3 Bee Loops 3B_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
-      2-3 Bee Loops 4_markdown_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help Bee collect
-        all of the nectar and make all of the honey with the fewest blocks possible.
-      2-3 Bee Loops 4A_markdown_instruction: |-
-        How many times can loops help you in
-        this puzzle?  \r
-        \r
-        Loops are your friend! Use a few of them to complete
-        this puzzle with the fewest blocks possible.
-      2-3 Bee Loops 5_markdown_instruction: |-
-        The shape of this path is different
-        from the others. \r
-        \r
-        Can you collect all of the nectar using as few blocks
-        as possible?
-      2-3 Bee Loops 7_markdown_instruction: |-
-        What a beautiful field of flowers!   \r
-        \r
-        Help
-        the bee visit each one.\r
-        \r
-        Can you find a way to do it with fewer than
-        7 blocks?
-      2-3 Bee Loops 8_markdown_instruction: |-
-        These purple flowers have different
-        amount of nectar each time you run the puzzle. \r
-        \r
-        Use the `while nectar`
-        loop to collect all of the nectar. \r
-        \r
-        This loop will run as long as the
-        condition is true, in this case `nectar > 0`.
+      2-3 Bee Loops 13_markdown_instruction: "** Penilaian : ** Kumpulkan semua nektar
+        dengan menggunakan blok sesedikit mungkin.\n \n"
+      2-3 Bee Loops 3A_markdown_instruction: Gunakan sebuah `repeat` lingkaran untuk
+        mengumpulkan semua nektar.
+      2-3 Bee Loops 3B_markdown_instruction: Sekarang gunakan blok `repeat` untuk
+        mengumpulkan semua nektar dan buatlah semua madu.
+      2-3 Bee Loops 4_markdown_instruction: "Seperti sebuah lebah sibuk! \\ r \n\\
+        r \nBantuan Bee mengumpulkan semua nektar dan membuat semua madu dengan paling
+        sedikit blok mungkin.\n \n"
+      2-3 Bee Loops 4A_markdown_instruction: "Berapa kali loop bisa membantu Anda
+        dalam teka-teki ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah
+        beberapa dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit
+        blok mungkin.\n \n"
+      2-3 Bee Loops 5_markdown_instruction: "Bentuk jalan ini berbeda dengan yang
+        lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai
+        beberapa blok \nmungkin?"
+      2-3 Bee Loops 7_markdown_instruction: "Apa yang indah bidang bunga!   \\ r \n\\
+        r \nBantuan kunjungan lebah masing-masing. \\ r \n\\ r \nDapatkah Anda menemukan
+        \ sebuah cara untuk melakukan itu dengan kurang dari 7 blok ?\n \n"
+      2-3 Bee Loops 8_markdown_instruction: "Bunga ungu ini memiliki jumlah nektar
+        yang berbeda setiap kali Anda menjalankan teka-teki. \\ r \n\\ r \nGunakan
+        `sementara loop nectar` untuk mengumpulkan semua nektar. \\ r \n\\ r \nlingkaran
+        ini akan berjalan selama kondisi benar, dalam hal ini `nektar> 0`."
       2-3 Bee Loops Assessment 1_markdown_instruction: |-
-        **Assessment:** Use a `while`
-        loop to collect all of the nectar from these flowers.
-      2-3 Maze 1_markdown_instruction: |
-        Can you help me catch the naughty pig? \r
-        \r
-        Stack
-        a couple of `move forward` blocks below the `when run` block and press "Run".
-      2-3 Maze 12 - One Move Block_markdown_instruction: |-
-        Get the mean pig! But this
-        time, you can only use one `move forward` block...\r
-        \r
-        Ah, look closely
-        - do you see any other blocks that can help you get there?
-      2-3 Maze 12_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
-        \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
-      2-3 Maze 13_markdown_instruction: |-
-        Get me to the pig! You can only use one
-        `move forward` block this time
+        ** Penilaian : ** Gunakan sebuah ` sementara `
+         lingkaran untuk mengumpulkan semua nektar dari bunga-bunga ini.
+      2-3 Maze 1_markdown_instruction: "Dapatkah Anda membantu saya menangkap babi
+        nakal ? \\ r \n\\ r \nStack \nsebuah beberapa ` langkah forward` blok  bawah
+        yang` ketika run` blok dan tekan \"Run\".\n \n"
+      2-3 Maze 12 - One Move Block_markdown_instruction: "Dapatkan babi jahat ! Tapi
+        kali ini, Anda hanya dapat menggunakan satu ` bergerak forward` blok ... \\
+        r \n\\ r \nAh, melihat dari dekat - jangan Anda melihat lain blok yang dapat
+        membantu Anda sampai di sana?"
+      2-3 Maze 12_markdown_instruction: "Tiba-tiba, sebuah blok magis muncul! Dengan
+        blok `repeat` , Anda bisa mengulang kode berulang-ulang. \\ r \nr \\ \nBisakah
+        Anda mendapatkan ke babi dengan menciptakan  sebuah  lingkaran yang menggunakan
+        hanya satu ` bergerak forward` blok dalam sebuah ` repeat`?"
+      2-3 Maze 13_markdown_instruction: Bawa aku ke babi ! Anda hanya bisa menggunakan
+        satu blok ` move forward` kali ini
       2-3 Maze 15_markdown_instruction: |-
         In this puzzle, two `repeat` loops will
         help you get to the pig with the fewest number of blocks!
-      2-3 Maze Loops 18_markdown_instruction: |-
-        Get me to the sunflower using the
-        fewest blocks possible!  \r
-        \r
-        Try using one `repeat` loop inside of another
-        to cut down on the amount of code you need.
+      2-3 Maze Loops 18_markdown_instruction: "Bawa aku ke bunga matahari dengan menggunakan
+        blok sesedikit mungkin!  \\ r \n\\ r \nCobalah menggunakan salah satu `repeat`
+        lingkaran dalam lain untuk mengurangi jumlah kode yang Anda butuhkan."
       2-3 Maze Loops 19_markdown_instruction: |-
         Ayo bawa ini ke tingkat lain!
         \r
         \r
         gunakan putaran agar saya mendapatkan bunga matahari dengan putaran paling sedikit jika memungkinkan.
-      2-3 Maze Loops Assessment 1_markdown_instruction: "**Assessment:**  Get me\nto
-        the sunflower using only 5 blocks! "
+      2-3 Maze Loops Assessment 1_markdown_instruction: "** Penilaian : ** Bawa saya
+        ke bunga matahari dengan hanya 5 blok ! \n \n"
       4-5 Artist 1_markdown_instruction: |
         Bantu saya menyelesaikan menggambar kotak saya. (setiap garis
         panjangnya 300 piksel) \r
@@ -506,27 +422,20 @@
         \r
         garis
         itu panjangnya 300 piksel dan lebar 15 piksel.
-      4-5 Artist 2_markdown_instruction: |-
-        Loop this code using the `repeat` block
-        to complete the square.
+      4-5 Artist 2_markdown_instruction: "Loop kode ini menggunakan blok `repeat`
+        \nuntuk menyelesaikan kuadrat.\n \n"
       4-5 Artist 3.5_markdown_instruction: "Coba cari tahu apa yang terjadi jika kamu\nmenjalankan
         kode ini ( atau hanya dengan menekan \"run\" dan coba itu). \\r\n\\r\nselanjutnya,
         ulangi \nkodenya sampai menggambarnya selesai!"
-      4-5 Artist 3_markdown_instruction: |-
-        This rectangular flower bed has a perimeter
-        of 600.  \r
-        The long side has a length of 200. \r
-        \r
-        Draw the rectangle
-        using as few blocks as possible.
-      4-5 Artist 4_markdown_instruction: |-
-        How many degrees are in a circle?  \r
-        \r
-        Loop
-        the blocks to create a circle of colors.
-      4-5 Artist 5_markdown_instruction: |-
-        What can we replace "???" with to make
-        sure that the zombie completes this drawing using the loop provided?
+      4-5 Artist 3_markdown_instruction: "Bunga tidur persegi panjang ini memiliki
+        sebuah perimeter 600.   \\ r \nPanjang sisi memiliki sebuah  panjang dari
+        200. \\ r \n\\ r \nMenggambar dengan persegi panjang \nmenggunakan sebagai
+        beberapa blok mungkin."
+      4-5 Artist 4_markdown_instruction: "Berapa derajat berada di sebuah lingkaran?
+        \ \\ r \n\\ r \nloop \nyang blok untuk membuat  sebuah lingkaran warna."
+      4-5 Artist 5_markdown_instruction: "Apa yang bisa kita ganti \"???\" dengan
+        untuk membuat \nyakin bahwa zombie melengkapi ini menggambar menggunakan lingkaran
+        yang disediakan?"
       4-5 Artist 6_markdown_instruction: |-
         Segi tiga sama sisi ini memiliki sudut
         60, 60, dan 60 derajat. ukuran masing - masing sisinya 200 piksel. lengkapi gambarnya.
@@ -540,49 +449,37 @@
         lurus*\nsampai ke garis pinggir lapangan. \\r\nkotak ini memiliki total parameternya
         800 piksel,\ndan panjangnya 240 piksel. seberapa tinggi itu? \\r\n\\r\ngambar
         batas dan \ngaris tengah."
-      4-5 Artist 9_markdown_instruction: |-
-        Draw the right half of this image so that
-        the design is symmetrical. \r
-        The triangles are equilateral and have sides
-        that are 50 pixels long.
+      4-5 Artist 9_markdown_instruction: "Gambarlah bagian kanan gambar ini agar desain
+        simetris. \\ r \nThe segitiga sama sisi dan memiliki sisi \nyang 50 pixel
+        panjang."
       4-5 Artist Assessment 1_markdown_instruction: |-
-        **Assessment:** Use a loop to
-        draw the equilateral triangle. Each side is 300 pixels.
+        ** Penilaian : ** Gunakan satu  lingkaran untuk
+         menggambar segitiga sama sisi. Masing-masing sisi adalah 300 piksel .
       4-5 Artist Free Draw 1_markdown_instruction: |-
         Menggambar bebas! gambar apapun yang
         menginspirasi mu untuk berkarya.
       4-5 Artist Patterns 1_markdown_instruction: Dapatkah kamu menggambar kotak ini
         menggunakan sebuah putaran? Setiap sisi memiliki panjang 20 pixel.
-      4-5 Artist Patterns 10_markdown_instruction: |-
-        This code draws two rows of hexagons
-        - loop the whole thing 4 times to draw the whole honeycomb. \r
-        \r
-        You'll
-        need to jump back 120 pixels in your outermost loop to make sure the artist
-        doesn't draw off the screen.
+      4-5 Artist Patterns 10_markdown_instruction: "Kode ini menarik dua baris segi
+        enam - mengulangi semuanya 4 kali untuk menarik keseluruhan sarang lebah.
+        \\ r \n\\ r \nAnda harus melompat kembali 120 piksel di terluar Anda lingkaran
+        untuk membuat memastikan artis tidak menarik dari layar."
       4-5 Artist Patterns 11_markdown_instruction: |-
-        How many times do you need to
-        loop this to draw a half circle?
-      4-5 Artist Patterns 12_markdown_instruction: |-
-        If you create another loop like
-        this one, but turn left instead of right, what happens? \r
-        \r
-        Can you repeat
-        all of that to draw this wave?
-      4-5 Artist Patterns 13_markdown_instruction: |-
-        Now let's loop that whole thing
-        four times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! \r
-        \r
-        If looping a 3 degree turn 60 times makes a
-        half circle, which of these blocks of code will make an additional quarter
-        circle for the corners?
-      4-5 Artist Patterns 2_markdown_instruction: |-
-        If you place your square loop
-        inside another loop, we call that a nested loop. \r
-        \r
-        What do you need
-        to add as an outer loop to make sure all 15 squares line up next to each other?
+        Berapa kali yang Anda butuhkan untuk
+         lingkaran ini untuk menggambar  sebuah setengah lingkaran?
+      4-5 Artist Patterns 12_markdown_instruction: "Jika Anda membuat lingkaran lain
+        seperti ini, tapi belok kiri bukan kanan, apa yang terjadi? \\ r \n\\ r \nDapatkah
+        Anda mengulangi semua itu untuk menarik gelombang ini?"
+      4-5 Artist Patterns 13_markdown_instruction: "Sekarang mari kita lingkaran yang
+        semuanya empat kali untuk membuat bingkai foto ini. Hati-hati untuk sudut
+        - Anda tidak bisa hanya mengubah 90 derajat! \\ r \n\\ r \nJika  perulangan
+        \ suatu 3 derajat 60 kali membuat  sebuah \nsetengah lingkaran, yang ini blok
+        kode akan membuat  sebuah lingkaran kuartal tambahan untuk sudut?\n \n"
+      4-5 Artist Patterns 2_markdown_instruction: "Jika Anda menempatkan persegi Anda
+        lingkaran \ndalam yang lain lingkaran , kita menyebutnya sebuah bersarang
+        lingkaran . \\ r \n\\ r \nApa yang Anda perlu menambahkan sebagai sebuah luar
+        lingkaran untuk membuat memastikan semua 15 kotak berbaris di samping satu
+        sama lain?"
       4-5 Artist Patterns 3_markdown_instruction: |-
         Sekarang mari kita pergi satu tingkat lebih dalam lagi!
         Kami telah menemukan seluruh blok dari kode ke loop lain, tetapi anda perlu untuk
@@ -604,14 +501,10 @@
         mengulang blok ini untuk menggambar kisi-kisi belah ketupat secara penuh?\r
         \r
       4-5 Artist Patterns 7_markdown_instruction: |
-        Let's modify the code from the
-        last puzzle to make this more complex pattern. Notice how the diamonds overlap
-        now, try changing the first "jump backwards" from 100 to 50 (half as far)
-        - now how far should the artist go in the second "jump backwards"?\r
-        \r
-      4-5 Artist Patterns 8_markdown_instruction: |-
-        Use a loop to draw this hexagon
-        with 40 pixel sides and 60 degree angles.
+        Mari kita ubah kode dari
+         puzzle terakhir  untuk membuat pola yang lebih kompleks ini. Perhatikan bagaimana berlian tumpang tindih sekarang, cobalah mengubah yang pertama " melompat mundur " 100-50 (setengah sejauh) - sekarang seberapa jauh harus artis pergi di kedua " melompat mundur "? \ r \ r
+      4-5 Artist Patterns 8_markdown_instruction: "Gunakan satu  lingkaran untuk menggambar
+        segi enam ini dengan 40 sisi pixel  dan sudut 60 derajat.\n \n"
       4-5 Artist Patterns 9.5_markdown_instruction: |-
         Mari kita loop kode ini untuk menggambar
         dua baris segi enam. \r
@@ -665,14 +558,10 @@
         \r
         lengkapi fungsi ' periksa bunga ungu ' dan gunakan itu
         untuk mengumpulkan semua madu bunga pada bunga.
-      4-5 Bee Conditionals 8_markdown_instruction: |-
-        Write the function for `check
-        flower make honey`. \r
-        \r
-        Your function should check if the purple flower
-        has 3, 2, or 1 nectar and get all of the nectar. \r
-        Then, move forward and
-        make honey.
+      4-5 Bee Conditionals 8_markdown_instruction: "Tuliskan fungsi untuk `check flower
+        make honey`. \\ r \n\\ r \nAnda fungsi harus memeriksa apakah bunga ungu memiliki
+        3, 2, atau 1 nektar dan mendapatkan semua nektar. \\ r \nKemudian, bergerak
+        maju dan\n membuat madu."
       4-5 Bee Conditionals Assessment 1_markdown_instruction: |
         **Assessment:** This
         cloud is either hiding a flower with one nectar or a honeycomb that needs
@@ -715,8 +604,8 @@
         **Assessment:** Get to the sunflower
         using as few blocks as possible.
       4-5 Maze Conditionals 1_markdown_instruction: |-
-        Use the `repeat until` block
-        to get the zombie to the sunflower.
+        Gunakan blok `repeat until`
+        untuk mendapatkan zombie untuk bunga matahari.
       4-5 Maze Conditionals 10_markdown_instruction: |-
         Anda dapat menambahkan hanya 3 blok untuk
         membantu zombie memecahkan sebuah masalah labirin yang lebih lengkap? \r
@@ -724,8 +613,8 @@
         Jika anda melakukannya dengan benar, dia
         dapat berjalan melengkung yang tidak peduli masalah panjang!
       4-5 Maze Conditionals 2_markdown_instruction: |-
-        Use the `repeat until` block
-        to get the zombie to the sunflower.
+        Gunakan blok `repeat until`
+        untuk mendapatkan zombie untuk bunga matahari.
       4-5 Maze Conditionals 3_markdown_instruction: |
         Gunakan `jika` block untuk membantu saya
         memutuskan kapan untuk berbalik. \r
@@ -5128,6 +5017,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         Background Color\r
         \r
@@ -5141,12 +5031,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -5220,6 +5109,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         The Body Element\r
         \r
@@ -5521,12 +5411,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -5558,6 +5447,7 @@
         - CSS float Property</a>\r
         </details>\r
         </div>\r
+        \r
         # Layout and Style\r
         \r
         *
@@ -5810,13 +5700,58 @@
         * Fix the code so that the
         second item in each list displays correctly
       CSD U2 navigation_markdown_instruction: |
-        # Create a Navigation Bar\r
+        <div style="float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\r
+        <details>\r
+        <summary>**What are hyperlinks?**</summary>\r
+        Hyperlinks
+        can connect to local web pages or external web pages. To add navigation to
+        your website you will need to add hyperlinks which connect your individual
+        web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The
+        text you want to display as the hyperlink goes between the opening and closing
+        hyperlink tags. The `<a>` element has an attribute `href` which is the location
+        to link to.  The location of a local page is just the file path for that page.
+        <br> <br>\r
         \r
-        Here's
-        your project from before.  You'll be linking the two pages by creating a
-        **navigation bar** at the top of the page.  Websites usually have the same
-        navigation bar across all of their pages so you can get back and forth between
-        things on the site.  You can see an example of a navigation bar on <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
+        For example to link to the unique houses page you would add
+        the following code inside your `<body>` element. <br><br>\r
+        \r
+        <pre>\r
+        &lt;a
+        href=”houses.html”&gt; Unique Houses &lt;/a&gt;\r
+        </pre>\r
+        \r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I add a hyperlink?**</summary>\r
+        You can **add hyperlinks to your web
+        page using the `<a>` element**.  The text you want to display as the hyperlink
+        goes between the opening and closing hyperlink tags. The `<a>` element has
+        an attribute `href` which is the location to link to.  The location of a local
+        page is just the file path for that page. <br> <br>\r
+        \r
+        For example to
+        link to the unique houses page you would add the following code inside your
+        `<body>` element. <br><br>\r
+        \r
+        <pre>\r
+        &lt;a href=”houses.html”&gt; Unique
+        Houses &lt;/a&gt;\r
+        </pre>\r
+        \r
+        </details>\r
+        </div>\r
+        \r
+        # Create a
+        Navigation Bar\r
+        \r
+        Here's your project from before.  You'll be linking
+        the two pages by creating a **navigation bar** at the top of the page.  Websites
+        usually have the same navigation bar across all of their pages so you can
+        get back and forth between things on the site.  You can see an example of
+        a navigation bar on <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
         target="_new">this page</a>\r
         \r
         # Do This\r
@@ -5830,7 +5765,6 @@
         the top of your lists page.\r
         * Test your links in the preview area by clicking
         on them.\r
-        \r
       CSD U2 new page_markdown_instruction: |
         # Create a New Page for Your Website.\r
         \r
@@ -6939,9 +6873,8 @@
          * Write down all of the attribution
         information that you need.\r
          * Upload all of the images into your project.  Visit
-        <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 8 Level 6</a>
+        <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 7 Level 5</a>
         if you've forgotten how.\r
-        \r
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: |
         # The Counter Pattern\r
@@ -7883,7 +7816,7 @@
         * Go to the
         Animation tab and check out the multi-frame animations already added to your
         project. Choose one for each of your characters.\r
-      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |
+      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |-
         # Using
         Multiframe Animations\r
         \r
@@ -7901,7 +7834,7 @@
         to your project. Choose one for each of your characters.\r
         * Remember you
         can use `setAnimation` to give your sprites animations you've created in
-        the Animation Tab.\r
+        the Animation Tab.
       CSD U3 AnimationsMulti mirror animation_markdown_instruction: |-
         # Editing Multiframe
         Animations\r
@@ -8939,6 +8872,13 @@
         if block to add an else.\r
         * Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed.
+      CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: |-
+        # Alien Jumper\r
+        \r
+        Press
+        "Run" to play the game on the left.  You can make the alien jump with the
+        space bar, and move it to the left and right with the arrow keys.  You score
+        by collecting stars, and if you score high enough, the background will change.
       CSD U3 Entertainment Sample 1_markdown_instruction: |-
         # Alien Jumper\r
         \r
@@ -9817,6 +9757,18 @@
         \r
         _Tip: If your counter pattern
         isn't working like you expect, add watchers to help debug your program._
+      CSD U3 Plotting Shapes Shape Lab - unembed_markdown_instruction: |-
+        # Drawing
+        Shapes\r
+        \r
+        Explore using this tool that lets you draw different colored
+        shapes. \r
+        \r
+        Make sure you hit "Run" and try out turning on the grid
+        to help you place shapes precisely.\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
       CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: |-
         # Drawing Shapes\r
         \r
@@ -12342,7 +12294,7 @@
         is not less than 325, use the `velocityY` to change its vertical velocity
         to zero. [Show me where](#triggercallout=code_triggered2)\r
         \r
-      CSD U3 abstraction jump_markdown_instruction: |
+      CSD U3 abstraction jump_markdown_instruction: |-
         # Jumping\r
         \r
         You now have
@@ -12373,8 +12325,7 @@
         )\r
           * Checks whether the frog sprite has reached its highest point.\r
           *
-        If so, use the `velocityY` block to make the sprite fall back down.\r
-        \r
+        If so, use the `velocityY` block to make the sprite fall back down.
       CSD U3 abstraction jumper intro_markdown_instruction: |
         # Horse Jumper\r
         \r
@@ -14874,7 +14825,7 @@
         item position.\r
         * Inside your `if` statement, add a counter pattern that
         will increase the score every time the player touches an item.  Look at [Lesson
-        12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example.\r
+        16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example.\r
         * Call the function
         inside the draw loop, in the "update sprites" area of your code.\r
         * Run
@@ -16820,12 +16771,12 @@
         #
         Do This\r
         * Using the LED code as a model, add new code inside the buttonL
-        event that will play a long or short buzz according to the text property of
-        the *buzzer_input* dropdown menu.\r
-        * Add new code that will turn the buzzer
-        off when the right button is pressed.\r
-          * (Hint: the event is already in
-        the code.)
+        event that will play a long or short buzz according to the chosen value property
+        of the *buzzer_input* dropdown menu.\r
+        * Add new code that will turn the
+        buzzer off when the right button is pressed.\r
+          * (Hint: the event is already
+        in the code.)
       CSD U6 getProperty debug_markdown_instruction: |-
         # Debug\r
         \r
@@ -17072,9 +17023,8 @@
         your partner and answer the following questions:\r
         \r
         * What does this line
-        of code do: `  setProperty("screen","background-color",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r
-        });`?  ([Show
-        me where.](#triggercallout=code_triggered))\r
+        of code do: `setProperty("screen", "background-color", rgb(randomNumber(0,255),
+        randomNumber(0,255), randomNumber(0,255)));`?\r
         \r
         Once you have answered
         the question, run the code and click the buttons to see what happens.
@@ -17365,16 +17315,16 @@
         # Changing With a Click\r
         \r
         It's
-        not really useful to only set a property when your program is run. After all,
-        you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty`, you're able to do things you couldn't do with Design
-        Mode alone.\r
+        not really useful to only set a property when your program is first run. After
+        all, you could just do all of that in Design Mode. When you use an `onEvent`
+        block with `setProperty`, you're able to do things you couldn't do with
+        Design Mode alone.\r
         \r
         # Do This\r
         \r
-        We've provided an empty `onEvent` block
-        that's watching the "smiley" image. Inside the `onEvent` block, use two
-        `setProperty` blocks to move the smiley somewhere else (it doesn't really
+        We've provided an empty `onEvent`
+        block that's watching the "smiley" image. Inside the `onEvent` block, use
+        two `setProperty` blocks to move the smiley somewhere else (it doesn't really
         matter where for now). Test your program by running it and clicking on the
         smiley.
       CSD U6 setProperty xy random_markdown_instruction: |-
@@ -23448,8 +23398,8 @@
         Read
         the code in this program and make a prediction below. What do you think this
         program will do when you run it? How is the user intended to interact with
-        the board? You may need to use a flashlight or other bright light source to
-        see the full range of this app.
+        the board? You may need to blow onto the board to see the full range of this
+        app.
       CSDU6 - sensors rgb part 1_markdown_instruction: |-
         # Displaying Sensor Readings
         in Color\r
@@ -25671,11 +25621,18 @@
         are indicated at the top.\r
             * You may **add a new entry** at the current
         location in your list.
-      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\n\nYour\napp
-        needs to store the following information. For each type of information,\ndecide
-        whether you would use an array or a variable to store it:\n \n* All\nthe messages
-        a user has sent\n* The highest score a user has ever reached\non the app\n*
-        A username and password to unlock the app\n\n"
+      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: |
+        ## Choose: Array or Variable?\r
+        \r
+        Your
+        app needs to store the following information. For each type of information,
+        decide whether you would use an array or a variable to store it:\r
+         \r
+        *
+        All the messages a user has sent\r
+        * The highest score a user has ever reached
+        on the app\r
+        * A username and password to unlock the app\r
       CSPU5_U3 - Arrays - Wrap Up 2_markdown_instruction: |
         ## Free Response: Choosing
         Array or Variable
@@ -37469,11 +37426,9 @@
         Check to see if there's a flower under the cloud, and only
         get nectar if there's a flower.   \r
         Be careful, it can change!
-      Mike Test Bee Conditionals 2_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar.  \r
-        Be careful not to try to collect nectar from a purple
-        flower if it doesn't have any.
+      Mike Test Bee Conditionals 2_markdown_instruction: "** Penilaian : ** Kumpulkan
+        semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar
+        dari sebuah bunga ungu jika itu tidak memiliki."
       MikeTest1_markdown_instruction: Markdown
       Modular Arithmetic_markdown_instruction: |-
         # Modular Arithmetic\r
@@ -54153,7 +54108,7 @@
         was the difference between the two, and why is that an issue?
         - How did you
         fix the bug?
-      U3L16 - challenge say hi app_markdown_instruction: |
+      U3L16 - challenge say hi app_markdown_instruction: |-
         # Introducing the  *change*
         Event\r
         \r
@@ -54178,7 +54133,7 @@
         - Attach a __'change'__ event handler to the
         text input.\r
         - When the 'change' event triggers, __write the user's name
-        and a greeting__.\r
+        and a greeting__.
       U3L16 - chaserApp_markdown_instruction: |
         # Chaser Game\r
         \r
@@ -61082,14 +61037,13 @@
                 \t\r
                     //
         generate random color\r
-                    // make all 4 buttons have same bg color\r
+                    // make all 4 buttons have same color\r
                     //
         pick a random Button Id\r
-                    // set it's bg color to something
-        different\r
+                    // set its color to something different\r
                     \r
-                    console.log("correct one is: "
-        + randButtonId);  <-- Add this line\r
+                    console.log("correct
+        one is: " + randButtonId);  <-- Add this line\r
         \t\t}
       U5 ColorSleuth add score variables and update with console_markdown_instruction: |
         Fun
@@ -64301,6 +64255,16 @@
         \r
         Collect one pile of treasure to pass this
         level.
+      comment_intro_maze_2018_markdown_instruction: |-
+        *"I'm confused. Help me remember
+        how to solve this maze."* \r
+        \r
+        Use the new `comment` block to leave yourself
+        quick reminders. They can help you remember what you were doing and why!\r
+        \r
+        Comments
+        are only used for **you**. Your Play Area won't look different because of
+        a comment.
       course1_artist_loops_challenge2_markdown_instruction: |-
         Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?
@@ -65881,7 +65845,7 @@
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
         ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r
-      courseD_artist_project1_2018_markdown_instruction: |
+      courseD_artist_project1_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r
         \r
@@ -65901,7 +65865,7 @@
         even an abstract shape, like one of these:  \r
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
-        ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r
+        ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)
       courseD_artist_project1a_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Let’s try something new. This time, skate in a zig-zag."_\r
@@ -66114,7 +66078,7 @@
         happens if you make your diamond pattern longer or shorter?\r
         - What does
         it look like to draw two snowflakes on top of one another?\r
-      courseD_artist_project4a_2018_markdown_instruction: |
+      courseD_artist_project4a_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
         what should we do? Let’s explore and create our own winter wonderland!"_\r
         \r
@@ -66125,15 +66089,15 @@
         - What
         happens if you make your diamond pattern longer or shorter?\r
         - What does
-        it look like to draw two snowflakes on top of one another?\r
+        it look like to draw two snowflakes on top of one another?
       courseD_artist_project5_markdown_instruction: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Get creative with shapes and angles to see what kind of new snowflakes
         we can draw!"_\r
-      courseD_artist_project5_2018_markdown_instruction: |
+      courseD_artist_project5_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Get creative with shapes and angles to see what kind of new snowflakes
-        we can draw!"_\r
+        we can draw!"_
       courseD_artist_project_embedded_markdown_instruction: |-
         Here's what you will
         soon be making!
@@ -67255,9 +67219,8 @@
       courseE_artist_functions_predict1_markdown_instruction: |
         Here is a puzzle that
         uses a function that we have defined. \r
-      courseE_artist_functions_predict1_2018_markdown_instruction: |
-        Here is a puzzle
-        that uses a function that we have defined. \r
+      courseE_artist_functions_predict1_2018_markdown_instruction: "Here is a puzzle\nthat
+        uses a function that we have defined. "
       courseE_artist_ramp10_markdown_instruction: |-
         Did you know you can put loops
         inside of other loops to make them more powerful?  That's called making a
@@ -68097,6 +68060,13 @@
       courseF_artist_for_Template_markdown_instruction: |-
         If you turn a little bit
         more or less than you normally would for a shape, it creates a neat effect.\r
+        \r
+        Try
+        using some of the code from the last level, but turning 89 degrees to create
+        this twisted square spiral.
+      courseF_artist_for_Template_2018_markdown_instruction: |-
+        If you turn a little
+        bit more or less than you normally would for a shape, it creates a neat effect.\r
         \r
         Try
         using some of the code from the last level, but turning 89 degrees to create
@@ -72694,13 +72664,10 @@
         \r
         Help me finish my pinwheel. Can you figure out what's
         wrong?
-      grade2_PuppyLoops_2_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
-        \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
+      grade2_PuppyLoops_2_markdown_instruction: "Tiba-tiba, sebuah blok magis muncul!
+        Dengan blok `repeat` , Anda bisa mengulang kode berulang-ulang. \\ r \nr \\
+        \nBisakah Anda mendapatkan ke babi dengan menciptakan  sebuah  lingkaran yang
+        menggunakan hanya satu ` bergerak forward` blok dalam sebuah ` repeat`?"
       grade2_PuppyLoops_3_markdown_instruction: |-
         Get me to the pig! Solve this puzzle
         by creating a loop!
@@ -72853,13 +72820,10 @@
         \t</h5>\r
         </details>\r
         </h5>\r
-      grade2_puppy_loops2_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
-        \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
+      grade2_puppy_loops2_markdown_instruction: "Tiba-tiba, sebuah blok magis muncul!
+        Dengan blok `repeat` , Anda bisa mengulang kode berulang-ulang. \\ r \nr \\
+        \nBisakah Anda mendapatkan ke babi dengan menciptakan  sebuah  lingkaran yang
+        menggunakan hanya satu ` bergerak forward` blok dalam sebuah ` repeat`?"
       grade2_puppy_loops3_markdown_instruction: |-
         *"Get me to the pig!"*\r
         \r
@@ -72926,14 +72890,10 @@
         \r
         Complete the `check purple flower` function and use
         it to collect all of the nectar at the flowers.
-      grade3_ConditionalsElse_8_markdown_instruction: |-
-        Write the function for `check
-        flower make honey`. \r
-        \r
-        Your function should check if the purple flower
-        has 3, 2, or 1 nectar and get all of the nectar. \r
-        Then, move forward and
-        make honey.
+      grade3_ConditionalsElse_8_markdown_instruction: "Tuliskan fungsi untuk `check
+        flower make honey`. \\ r \n\\ r \nAnda fungsi harus memeriksa apakah bunga
+        ungu memiliki 3, 2, atau 1 nektar dan mendapatkan semua nektar. \\ r \nKemudian,
+        bergerak maju dan\n membuat madu."
       grade3_ConditionalsElse_9_markdown_instruction: 'Penilaian: Kode ini salah.
         Selesaikan fungsi "mendapatkan nektar atau membuat madu", lalu panggilkan
         untuk mengumpulkan semua nektar dan madu. Ingat bahwa bunga-bunga ungu dapat
@@ -72946,33 +72906,23 @@
         block to collect nectar if there is a flower.\r
         Otherwise, make honey (because
         there is a honeycomb).
-      grade3_Conditionals_1_markdown_instruction: |-
-        I'm a hungry bee! \r
-        \r
-        \r
-        Help
-        me collect all of the nectar from the flowers using the fewest number of blocks.
+      grade3_Conditionals_1_markdown_instruction: "Saya seorang lebah lapar! \\ r
+        \n\\ r \n\\ r \nBantu saya mengumpulkan semua nektar dari bunga menggunakan
+        jumlah paling sedikit blok ."
       grade3_Conditionals_10_markdown_instruction: 'Kumpulkan nektar dan buatlah madu.
         Petunjuk: Apa yang terjadi jika Anda menggunakan syarat "jika nektar" pada
         bunga merah? Anda dapat menyelesaikan hal ini dengan pengulangan?'
       grade3_Conditionals_11 BAD_markdown_instruction: |-
-        **Assessment:** Use a `while`
-        loop to collect all of the nectar from these flowers.
-      grade3_Conditionals_11_markdown_instruction: |-
-        Let's put everything together!\r
-        \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  \r
-        \r
-        Don't forget to make honey
-        at the end.
-      grade3_Conditionals_12_markdown_instruction: |-
-        This stair step pattern should
-        look familiar.  \r
-        \r
-        Can you collect nectar only from the flowers that
-        have some, using as few blocks as possible?
+        ** Penilaian : ** Gunakan sebuah ` sementara `
+         lingkaran untuk mengumpulkan semua nektar dari bunga-bunga ini.
+      grade3_Conditionals_11_markdown_instruction: "Mari kita menggabungkan semuanya!
+        \\ r \n\\ r \nGunakan apa yang telah Anda pelajari untuk membantu saya mengumpulkan
+        nektar hanya dari bunga yang memilikinya, menggunakan sebagai beberapa blok
+        mungkin.  \\ r \n\\ r \nJangan lupa untuk membuat madu di akhir."
+      grade3_Conditionals_12_markdown_instruction: "Pola langkah tangga ini seharusnya
+        terlihat familier.  \\ r \nr \\ \nDapatkah Anda mengumpulkan nektar hanya
+        dari bunga-bunga yang memiliki beberapa , menggunakan sebagai beberapa blok
+        mungkin?"
       grade3_Conditionals_13_markdown_instruction: |-
         **Assessment:** Collect all of
         the nectar.  \r
@@ -73019,18 +72969,11 @@
         \r
         Fix the error(s) to collect all of the nectar and make all of
         the honey.
-      grade3_Debugging_5_markdown_instruction: |-
-        That flower looks tasty! \r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.  \r
-        You can now use both run and
-        step.
-      grade3_Debugging_6_markdown_instruction: |-
-        What a sweet challenge!\r
-        \r
-        Fix
-        the error(s) to collect all of the nectar.
+      grade3_Debugging_5_markdown_instruction: "Bunga itu terlihat lezat! \\ r \n\\
+        r \nPerbaiki \nkesalahan (s) untuk mengumpulkan semua nektar.  \\ r \nAnda
+        sekarang dapat menggunakan kedua run dan langkah.\n "
+      grade3_Debugging_6_markdown_instruction: "Apa yang tantangan yang manis! \\
+        r \n\\ r \nPerbaiki \nkesalahan (s) untuk mengumpulkan semua nektar.\n "
       grade3_Debugging_8_markdown_instruction: |-
         *"This could be sweet!"*\r
         \r
@@ -73038,23 +72981,17 @@
         the error(s) to make all of the honey.
       grade3_Debugging_9_markdown_instruction: Blok ini benar-benar menggangguku.
         Perbaiki yang salah untuk mengumpulkan semua nektar dan membuat madu.
-      grade3_Loops_10_markdown_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help Bee collect
-        all of the nectar and make all of the honey with the fewest blocks possible.
-      grade3_Loops_11_markdown_instruction: |-
-        The shape of this path is different
-        from the others. \r
-        \r
-        Can you collect all of the nectar using as few blocks
-        as possible?
+      grade3_Loops_10_markdown_instruction: "Seperti sebuah lebah sibuk! \\ r \n\\
+        r \nBantuan Bee mengumpulkan semua nektar dan membuat semua madu dengan paling
+        sedikit blok mungkin.\n \n"
+      grade3_Loops_11_markdown_instruction: "Bentuk jalan ini berbeda dengan yang
+        lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan sebagai
+        beberapa blok \nmungkin?"
       grade3_Loops_3_markdown_instruction: |-
         Use a `repeat` loop to collect all of
         the nectar.
-      grade3_Loops_4_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
+      grade3_Loops_4_markdown_instruction: Sekarang gunakan blok `repeat` untuk mengumpulkan
+        semua nektar dan buatlah semua madu.
       grade3_Loops_5_markdown_instruction: |-
         What a beautiful field of flowers!\r
         \r
@@ -73063,12 +73000,10 @@
         \r
         Can you find a way to do it with fewer than
         7 blocks?
-      grade3_Loops_6_markdown_instruction: |-
-        How many times can loops help you in
-        this puzzle?  \r
-        \r
-        Loops are your friend! Use a few of them to complete
-        this puzzle with the fewest blocks possible.
+      grade3_Loops_6_markdown_instruction: "Berapa kali loop bisa membantu Anda dalam
+        teka-teki ini ?  \\ r \n\\ r \nLoops adalah teman Anda! Gunakan sebuah beberapa
+        dari mereka untuk menyelesaikan ini teka-teki dengan paling sedikit blok mungkin.\n
+        \n"
       grade3_Loops_7_markdown_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -73195,13 +73130,10 @@
         \r
         Get
         the zombie to the sunflower using only the blocks available.
-      grade3_maze_nestedLoops2_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
-        \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
+      grade3_maze_nestedLoops2_markdown_instruction: "Tiba-tiba, sebuah blok magis
+        muncul! Dengan blok `repeat` , Anda bisa mengulang kode berulang-ulang. \\
+        r \nr \\ \nBisakah Anda mendapatkan ke babi dengan menciptakan  sebuah  lingkaran
+        yang menggunakan hanya satu ` bergerak forward` blok dalam sebuah ` repeat`?"
       grade3_maze_nestedLoops3_markdown_instruction: |-
         Get me to the pig! You can
         only use one `move forward` block this time
@@ -73499,11 +73431,9 @@
         Collect all of the nectar.  \r
         Be careful not to try to collect nectar from
         a purple flower if it doesn't have any.
-      grade4_bee_conditionals_new1_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar.  \r
-        Be careful not to try to collect nectar from a purple
-        flower if it doesn't have any.
+      grade4_bee_conditionals_new1_markdown_instruction: "** Penilaian : ** Kumpulkan
+        semua nektar.  \\ r \nHati-hati untuk tidak mencoba untuk mengumpulkan nektar
+        dari sebuah bunga ungu jika itu tidak memiliki."
       grade4_bee_conditionals_quantum1_markdown_instruction: |-
         This cloud is blocking
         my view! \r
@@ -73535,12 +73465,9 @@
         block to collect nectar if there is a flower.\r
         Otherwise, make honey (because
         there is a honeycomb).
-      grade4_bee_functions2_markdown_instruction: |-
-        Functions are blocks of code that
-        perform a task.  \r
-        \r
-        Use the `get 2 nectar` function to collect the nectar
-        from each flower.
+      grade4_bee_functions2_markdown_instruction: "Fungsi adalah blok kode yang melakukan
+        suatu tugas.  \\ r \n\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan
+        nektar dari bunga masing-masing."
       grade4_bee_functions3_markdown_instruction: |-
         Build the `get 5` function to
         use in this puzzle.
@@ -73704,9 +73631,8 @@
         The jump block moves the artist
         without drawing. Draw the dashed line using both the `jump forward` and `move
         forward` blocks. Each line is 50 pixels long.
-      grade4_review_bee1_markdown_instruction: |-
-        Now use the `repeat` block to collect
-        all of the nectar and make all of the honey.
+      grade4_review_bee1_markdown_instruction: Sekarang gunakan blok `repeat` untuk
+        mengumpulkan semua nektar dan buatlah semua madu.
       grade4_review_bee3_markdown_instruction: |-
         Such a busy bee!\r
         \r
@@ -74929,26 +74855,18 @@
         Help
         Bee collect all of the nectar and make all of the honey with the fewest blocks
         possible.
-      level 'grade3_Loops_11_markdown_instruction: |-
-        The shape of this path is different
-        from the others. \r
-        \r
-        Can you collect all of the nectar using as few blocks
-        as possible?
+      level 'grade3_Loops_11_markdown_instruction: "Bentuk jalan ini berbeda dengan
+        yang lain. \\ r \nr \\ \nDapatkah Anda mengumpulkan semua nektar menggunakan
+        sebagai beberapa blok \nmungkin?"
       level 'grade3_Loops_3_markdown_instruction: |-
         Use a `repeat` loop to collect
         all of the nectar.
       level 'grade3_Loops_4_markdown_instruction: |-
         Now use the `repeat` block to
         collect all of the nectar and make all of the honey.
-      level 'grade3_Loops_5_markdown_instruction: |-
-        What a beautiful field of flowers!   \r
-        \r
-        Help
-        the bee visit each one.\r
-        \r
-        Can you find a way to do it with fewer than
-        7 blocks?
+      level 'grade3_Loops_5_markdown_instruction: "Apa yang indah bidang bunga!   \\
+        r \n\\ r \nBantuan kunjungan lebah masing-masing. \\ r \n\\ r \nDapatkah Anda
+        menemukan  sebuah cara untuk melakukan itu dengan kurang dari 7 blok ?\n \n"
       level 'grade3_Loops_6_markdown_instruction: |-
         How many times can loops help
         you in this puzzle?  \r

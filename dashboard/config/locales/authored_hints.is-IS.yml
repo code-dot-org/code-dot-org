@@ -1699,6 +1699,11 @@
         artistLoopsKB_a: "Það ættu að vera 3 kubbar innan í lykkjunni til að leysa
           þessa þraut."
       artistLoopsKFP_authored_hint: []
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Comments are also helpful when other people try
+          to read your code.
+        courseC_maze_programming4_b: Add a comment when you change directions- what
+          would have happened if you turned the other way?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           Þú getur notað svona lykkjur til að búa til veggina og þakið. Prófaðu að endurtaka mismunandi kubba.
@@ -4152,6 +4157,7 @@
         courseB_starWars_prog9_c: Ekki hræðast að gera mistök! Prófaðu að bæta við
           kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
+      courseC_PlayLab_embed_events9_authored_hint: []
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Tengdu þennan kubb við `þegar keyrt` kubbinn:
@@ -5169,6 +5175,7 @@
           Það eru aðeins nokkrar rangar línur í upphaflega forritinu. Ef ein nálgun virkar ekki, er best að fara til baka og reyna aftur. Það er til lausn!
       courseD_artist_embed_frozen_authored_hint: []
       courseD_artist_embed_frozen2_authored_hint: []
+      courseD_artist_embedded_project1a_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -5388,6 +5395,7 @@
         courseD_artist_project2_b: Eftir að þú teiknar og færir í fyrsta skipti, getur
           þú endurtekið kóðann með því að setja lykkju utan um hann.
       courseD_artist_project2Template_authored_hint: []
+      courseD_artist_project2Template_2018_authored_hint: []
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Mundu að `færa áfram` teiknar línu, en `hoppa fram`
           gerir það ekki.
@@ -5476,6 +5484,7 @@
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: []
+      courseD_artist_projectTemplate_2018_authored_hint: []
       courseD_artist_project_embedded_authored_hint: []
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Teiknaðu hlið með því að nota `færa áfram 100 díla`
@@ -6767,6 +6776,7 @@
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: []
       courseD_playLab_embedded_authored_hint: []
       courseD_scrat_predict1_authored_hint: []
       courseD_scrat_predict1_2018_authored_hint: []
@@ -7953,6 +7963,7 @@
           * Látið risaeðluna segja eitthvað.
           * Skipt um bakgrunn.
           * Látið alla leikmenn hverfa og birt skilaboðin "Leik lokið!"
+      courseE_playLab_embed_scaffold5_authored_hint: []
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: Kubburinn `stilla leikmann 1 á ??? mynd` er notaður
           til að bæta leikmanni á sviðið.
@@ -12800,6 +12811,7 @@
         iceage_throw_hearts_b: Til að gera ömmu glaða þegar hún fær hjarta verður
           þú að tengja kubbinn `hafa leikmann 2 í góðu skapi` neðan á atburðinn `þegar
           leikmaður 2 snertir sendingu`.
+      iceage_warn_embed_ice_age_authored_hint: []
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: "Þú þarft aðeins að bæta við tveimur kubbum til að
           koma þessari þraut í rétt horf. "

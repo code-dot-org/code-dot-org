@@ -163,9 +163,6 @@
       CollisionDetection:
         title: Collision Detection og Pytagoras læresetning
         desc: Å finne ut når objekter på skjermen berører hverandre er et viktig aspekt i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører hverandre.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgaven skal du lære om løkker!

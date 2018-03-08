@@ -219,6 +219,7 @@
   "iceAge": "Ledeno Doba!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "lik",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "osvoji bod",
   "isSet": "is set",

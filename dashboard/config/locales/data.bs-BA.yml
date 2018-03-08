@@ -721,7 +721,7 @@
         frozen_functions: Uvod u Funkcije
         playlab_intro: Uvod u Laboratorij Igara
         playlab_events: Događaji u Laboratoriju Igara
-        playlab_repeat_forever: 'Laboratorij Igara - Beskonačno Ponavljanje '
+        playlab_repeat_forever: Laboratorij Igara - Beskonačno Ponavljanje
         tutorial_puzzle_challenge: Upustvo za slagalicu
         infinity_playlab_intro: Laboratorij igara - uvod
         infinity_playlab_events: Laboratorij igara - događaji
@@ -871,6 +871,7 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod nekok drugog bloka
@@ -946,8 +947,8 @@
         function_editor_draw_square: Ovo je definicija tvoje funkcije. Ovi blokovi
           se pokreću svaki put kad koristiš blok "nacrtaj kvadrat"
         change_here: Ovdje napravi promjene
-        write_draw_square_function: 'Za crtanje kvadrata dovuci blokove s alatne trake
-          ovamo '
+        write_draw_square_function: Za crtanje kvadrata dovuci blokove s alatne trake
+          ovamo
         write_draw_triangle_function: Za crtanje trokuta dovuci blokove s alatne trake
           ovamo
         edit_add_parameter: Klikni na Uredi da bi dodao parametar u svoju funkciju

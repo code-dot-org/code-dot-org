@@ -219,6 +219,7 @@
   "iceAge": "Doba ľadová!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "postava",
   "ifSpriteN": "postava {spriteIndex}",
   "incrementPlayerScore": "získať bod",
   "isSet": "je nastavená",
