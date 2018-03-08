@@ -851,7 +851,7 @@ module Api::V1::Pd
 
     test 'search finds applications by email for workshop admins' do
       sign_in @workshop_admin
-      get :search, format: 'csv', params: {email: @csd_teacher_application.user.email}
+      get :search, params: {email: @csd_teacher_application.user.email}
       assert_response :success
       result = JSON.parse response.body
       expected = [{
