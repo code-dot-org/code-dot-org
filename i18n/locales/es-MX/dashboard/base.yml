@@ -171,7 +171,7 @@ es-MX:
       email: 'Dirección de correo electrónico'
       submit: 'Enviar'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Por favor complete el CAPTCHA para restablecer su contraseña.'
       invalid_email: 'Se ve como si te hubieras registrado con una dirección email inválida. Por favor escríbele a support@code.org para recibir un link y obtener una contraseña de recuperación.'
     change_form:
       title: 'Cambiar tu contraseña'
@@ -558,7 +558,7 @@ es-MX:
       title: "Galería"
       body: "Ver una galería de aplicaciones y de imágenes de artistas creadas por nuestros usuarios"
     gamelab:
-      title: "Game Lab"
+      title: "Laboratorio de juego"
       body: "Game Lab es un ambiente de programación en donde puedes hacer animaciones sencillas y juegos con objetos y personajes que interactúan entre ellos."
       audience: "Mayores de 13 años"
       cta: "Aprende cómo"
@@ -566,7 +566,7 @@ es-MX:
       title: "Encripción simple"
       body: "Los estudiantes aprenderán técnicas para crear y modificar mensajes cifrados."
     weblab:
-      title: "Web Lab (beta)"
+      title: "Laboratorio Web (beta)"
       body: "Web Lab es un ambiente de programación dónde usted puede hacer páginas web simples usando HTML y CSS. Diseñe sus páginas web y comparta su sitio en segundos."
       audience: "Mayores de 13 años"
       cta: "Aprende cómo"
@@ -763,8 +763,8 @@ es-MX:
     exit: "Regresar al Curso"
     my_projects: "Mis Proyectos"
     project_gallery: "Proyectos"
-    publish: "Publish"
-    unpublish: "Unpublish"
+    publish: "Publicar"
+    unpublish: "No publicar"
     share: "Compartir"
     share_title: Compartir tu proyecto
     share_copy_link: "Copiar el enlace:"
@@ -841,40 +841,40 @@ es-MX:
     content: 'Contenido'
     practice: 'Prácticas de Profesor'
     peer_review: 'Revisión por pares'
-    ramp_up: 'Ramp-Up'
+    ramp_up: 'Avanzar'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
-    csf_e_1: 'Ramp Up to Course E (Optional)'
-    csf_e_2: 'Course E Content'
-    csf_f_1: 'Ramp Up to Course F (Optional)'
-    csf_f_2: 'Course F Content'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Programming with Hardware'
-    csd6_2: 'Chapter 2: Building Physical Prototypes'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    main_course: 'Curso principal'
+    extra_course_content: 'Contenido adicional del curso'
+    csf_e_1: 'Aavnzar al Curso E (Opcional)'
+    csf_e_2: 'Contenido del Curso E'
+    csf_f_1: 'Avanzar al Curso F (Opcional)'
+    csf_f_2: 'Contenido del Curso F'
+    csd1_1: 'Capítulo 1: El proceso de resolución de problemas'
+    csd1_2: 'Capítulo 2: Computadoras y resolución de problemas'
+    csd2_1: 'Capítulo 1: Contenido Web y HTML'
+    csd2_2: 'Capítulo 2: Estilo y CCS'
+    csd3_1: 'Capítulo 1: Imágenes y animaciones'
+    csd3_2: 'Capítulo 2: Construcción de juegos'
+    csd4_1: 'Capítulo 1: Diseño orientado al usuario'
+    csd4_2: 'Capítulo 2: Prototipo de aplicaciones'
+    csd5_1: 'Capítulo 1: Representación de la información'
+    csd5_2: 'Capítulo 2: Resolviendo problemas de datos'
+    csd6_1: 'Capítulo 1: Programación con Hardware'
+    csd6_2: 'Capítulo 2: Construcción de prototipos físicos'
+    csp1_1: 'Capítulo 1: Representación y transmisión de información'
+    csp1_2: 'Capítulo 2: Inventando el Internet'
+    csp2_1: 'Capítulo 1: Codificación y compresión de información compleja'
+    csp2_2: 'Capítulo 2: Manipulación y visualización de datos'
+    csp3_1: 'Capítulo 1: Lenguajes de programación y algoritmos'
+    csp4_1: 'Capítulo 1: El mundo de los grandes datos y la encriptación'
+    csp5_1: 'Capítulo 1: Programación orientada a eventos'
+    csp5_2: 'Capítulo 2: Programación con estructuras de datos'
+    cspSurvey: 'Encuesta'
+    cspAssessment: 'Evaluación del capítulo'
+    csp_ap_1: 'Capítulo 1: Configuración de AP Tech'
+    csp_ap_2: 'Capítulo 2: AP Examinar tareas de rendimiento'
+    csp_ap_3: 'Capítulo 3: AP Crear tareas de rendimiento'
     dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Descargo de responsabilidad
@@ -945,10 +945,10 @@ es-MX:
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'Los contenidos de esta etapa no son visibles ya que se encuentra actualmente bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar en ella o para revisar tus respuestas.'
   hidden_stage: "Tu instructor no esperaba que estuvieras aquí. Por favor pregunta a tu instructor en qué lección deberías estar."
-  hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
-  return_unit_overview: 'Go to unit overview'
+  hidden_script: "Tu maestro no esparaba que estuvieras aquí. Por favor pregúntale a tu maestro en cual unidad deberías estar."
+  return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ve a la vista general de la unidad'
-  view_all_units: 'View all units'
+  view_all_units: 'Ver todas las unidades'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

@@ -63,26 +63,31 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.first, @workshop
   end
 
-  test 'facilitated_or_organized_by' do
+  test 'managed_by' do
     user = create :workshop_organizer
     user.permission = UserPermission::FACILITATOR
+    regional_partner = create(:regional_partner_program_manager, program_manager: user).regional_partner
 
     expected_workshops = [
       create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, organizer: user),
+      create(:pd_workshop, regional_partner: regional_partner),
+
+      # combos
       create(:pd_workshop, num_facilitators: 1, organizer: user),
       create(:pd_workshop, facilitators: [user], organizer: user),
-      create(:pd_workshop, organizer: user)
+      create(:pd_workshop, regional_partner: regional_partner, facilitators: [user], organizer: user)
     ]
 
     # extra (not included)
-    create :pd_workshop, num_facilitators: 1
+    create :pd_workshop, num_facilitators: 1, regional_partner: create(:regional_partner)
 
-    filtered = Pd::Workshop.facilitated_or_organized_by(user)
-    assert_equal 4, filtered.count
+    filtered = Pd::Workshop.managed_by(user)
+    assert_equal 6, filtered.count
     assert_equal expected_workshops.map(&:id).sort, filtered.pluck(:id).sort
 
-    assert_equal 3, filtered.organized_by(user).count
-    assert_equal 2, filtered.facilitated_by(user).count
+    assert_equal 4, filtered.organized_by(user).count
+    assert_equal 3, filtered.facilitated_by(user).count
   end
 
   test 'query by attended teacher' do
@@ -904,6 +909,68 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create :pd_workshop, organizer: program_manager
 
     assert_equal regional_partner, workshop.regional_partner
+  end
+
+  test 'csf funded workshops require a funding type' do
+    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSF,
+      funded: true, funding_type: nil
+    refute workshop.valid?
+
+    workshop.funding_type = Pd::Workshop::FUNDING_TYPE_FACILITATOR
+    assert workshop.valid?
+  end
+
+  test 'csf unfunded workshops do not accept a funding type' do
+    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSF,
+      funded: false, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR
+    refute workshop.valid?
+
+    workshop.funding_type = nil
+    assert workshop.valid?
+  end
+
+  test 'non-csf workshops do not accept a funding type' do
+    [
+      [{funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR}, false],
+      [{funded: false, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR}, false],
+      [{funded: true, funding_type: nil}, true],
+      [{funded: false, funding_type: nil}, true]
+    ].each do |params, expected_validity|
+      workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSP, **params
+      assert_equal(
+        expected_validity,
+        workshop.valid?,
+        "Expected #{params} to be #{expected_validity ? 'valid' : 'invalid'}"
+      )
+    end
+  end
+
+  test 'funded_friendly_name' do
+    [
+      [
+        {funded: false},
+        'No'
+      ],
+      [
+        {course: Pd::Workshop::COURSE_CSP, funded: true},
+        'Yes'
+      ],
+      [
+        {course: Pd::Workshop::COURSE_CSF, funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_PARTNER},
+        'Yes: partner'
+      ],
+      [
+        {course: Pd::Workshop::COURSE_CSF, funded: true, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR},
+        'Yes: facilitator'
+      ]
+    ].each do |params, expected|
+      workshop = build :pd_workshop, **params
+      assert_equal(
+        expected,
+        workshop.funding_summary,
+        "Expected #{params} funded_friendly_name to be #{expected}"
+      )
+    end
   end
 
   private

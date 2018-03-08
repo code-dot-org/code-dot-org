@@ -6631,6 +6631,9 @@
       collectorDebugVideo2_instruction: "金のカタマリを全部集めてパズルを解くため、これらのブロックを置きましょう。"
       collectorSkinVideo1_instruction: "４つの山をすべて集め、このレベルをクリアしましょう。"
       collectorSkinVideo2_instruction: "金の山を一つ集めて、このレベルをクリアしましょう。"
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9111,6 +9114,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -9708,7 +9714,8 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: "「クリックしたとき」ブロックに、「パタパタ」ブロックをくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、フラッピーはパタパタして、もくひょうにむかって行きます。"
+      flappy_1_instruction: "「クリックしたとき」ブロックに「パタパタする」ブロックを くっつけて、「実行」ボタンを おしてください。クリック（または
+        がめんをタップ）すると、フラッピーは もくひょうにむかって とんでいきます。"
       flappy_2_instruction: "こんどは、じめんを みてください。じめんに ぶつかったとき、ゲームがおわる ようにプログラミングしてみよう。「ゲームオーバー」ブロックを
         つかってね。"
       flappy_3_instruction: "フラッピーが とぶ はやさを かえてみよう。「実行したとき」ブロックに、スピードをかえるブロックを くっつければいいよ。"

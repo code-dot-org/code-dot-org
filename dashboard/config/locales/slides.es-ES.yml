@@ -3532,23 +3532,24 @@
           Modo de Diseño.
       2:
         image: notes/applab_intro_designmode_2.png
-        text: Use the switch on top of your app to go into Design Mode.
+        text: Utilice el interruptor en la parte superior de su aplicación para entrar
+          en modo de diseño.
       3:
         image: notes/applab_intro_designmode_3.png
-        text: You can add new elements by dragging them onto the screen. You can move
-          them around to different locations and change their size by dragging the
-          bottom right corner.
+        text: Puedes agregar nuevos elementos arrastrándolos a la pantalla. Puedes
+          moverlos a diferentes lugares y cambiar su tamaño arrastrando la esquina
+          inferior derecha.
       4:
         image: notes/applab_intro_designmode_4.png
-        text: To change an element's properties use the controls on the right. For
-          example, it's really easy to change this button's text, color, and font
-          size.
+        text: Para cambiar las propiedades de un elemento utilice los controles a
+          la derecha. Por ejemplo, es muy fácil cambiar el texto, color y tamaño de
+          la fuente de este botón.
       5:
         image: notes/applab_intro_designmode_5.png
-        text: When you add a new element to your screen it'll get a generic ID like
-          button1. It's a good idea to change this button's ID to something more meaningful
-          like "rightButton". So that you'll know which one it is when you go to the
-          program.
+        text: Cuando agregue un nuevo elemento a su pantalla obtendrá una indentiicación
+          genérica como button1. Es una buena idea cambiar el identificador de este
+          botón a algo más significativo como "botonDerecho". Así sabrá cuál es cuando
+          vaya al programa.
       6:
         image: notes/applab_intro_designmode_6.png
         text: If you add an element to your app by mistake, just drag it out or hit
@@ -3737,8 +3738,8 @@
           usted tendrá acceso a funciones que puede usar para resolver los rompecabezas.
       4:
         image: notes/mc_2017_functions_4.png
-        text: Look at the code in the function when it's in the workspace to see what
-          it does.
+        text: Mira el código en la función cuanto está en el espacio de trabajo para
+          ver lo que hace.
       5:
         image: notes/mc_2017_functions_5.png
         text: Luego, busque un bloque con ese nombre en la caja de herramientas y

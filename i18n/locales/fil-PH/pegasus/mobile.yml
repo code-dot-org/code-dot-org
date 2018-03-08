@@ -440,7 +440,7 @@
   minecraft_adventurer: "Tagapaglakbay sa Minecraft"
   minecraft_tutorials: "Mga Tutoryal sa Minecraft Hour of Code"
   minecraft_specs: "Maraming wika | Modernong mga browser at mga tablet | Baitang 2+"
-  minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  minecraft_agent_description: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
   minecraft_agent_button: "Panimula"
   minecraft_designer_description: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
   minecraft_designer_button: "Panimula"
@@ -465,12 +465,12 @@
   sports_page_title: "Palakasan sa Hour of Code"
   sports_og_title: "Sikapin ang iyong sarili. Kahit na sino ay maaaring matuto."
   sports_og_description: "Ang mga kampeon at mga nakakuha ng gintong medalya ay hinihikayat na subukan ang Hour of Code. I-code ang iyong sariling laro sa palakasan."
-  sports_title: "Code your own sports game"
+  sports_title: "Mag-code ng sarili mong laro sa palakasan"
   sports_watch_video: "Panoorin ang mga video"
   sports_video_title: "Sikapin ang iyong sarili. Kahit na sino ay maaaring matuto."
   sports_select_theme: "Pumili ng iyong tema sa tutoryal"
   sports_basketball_title: "Gumawa ng isang basketbol na laro"
-  sports_all_sports_title: "Mix and match across sports"
+  sports_all_sports_title: "Maghalo at magtugma sa iba't ibang palakasan"
   sports_featured_athletes: "Tingnan ang mga nakatampok na mga manlalaro"
   sports_athletes_title: "Nakatampok na mga Manlalaro"
   sports_athlete_Draymond: "Draymond Greem, Gold Medalist sa Olympic at Kampeon sa NBA, Golden State Warriors"
@@ -956,7 +956,7 @@
   coursef-draft_name: Kursong F
   coursef_name: "Kursong F"
   accelerated_name: "Pinabilis na Kurso"
-  express_name: "Express Course"
+  express_name: "Mabilis na Kurso"
   pre-express_name: Pre-reader na Kursong Express
   cspunit1_name: "(luma) Yunit 1: Digital na Impormasyon"
   cspunit2_name: "(luma) Yunit 2: Ang Internet"
@@ -1013,7 +1013,7 @@
   applab_name: "App na Lab"
   gamelab_name: "Game Lab"
   basketball_name: "Gumawa ng isang basketbol na laro"
-  sports_name: "Code your own sports game"
+  sports_name: "Mag-code ng sarili mong laro sa palakasan"
   applab_gradelevel: "Edad 13+"
   applab_shortdescription_congrats: "Ang App Lab ay isang kapaligiran sa pagprogram kung saan maaari kang gumawa ng mga simpleng mga apps. Magdisenyo ng app, mag-code gamit ang mga bloke, o JavaScript para mapagana ito, pagkatapos ay ibahagi ang iyong app sa ilang segundo lang"
   codeorg_gradelevel: "Edad 4-104"
@@ -1178,12 +1178,12 @@
   course2_shortdescription_congrats: "Para sa mga estudyante na may kakayahan sa pangunahing kaalaman sa pagbabasa, ang kursong ito ay bumubuo sa Kursong 1. Ang mga estudyante ay lilikha ng mga programa na lulutas ng mga problema at gagawa ng mga inter-aktib na laro o mga kuwento na maari nilang maibahagi. Nirerekomenda sa mga nasa gradong 2-5."
   course3_shortdescription_congrats: "Handa na para sa susunod na antas? Ang mga estudyante ay susulong sa mas malalim pa na mga paksa sa pagprogram na pinakilala sa nakaraang mga kurso para makahanap ng flexible na mga solusyon para sa mga kumplikadong problema. Pagkatapos ng kursong ito, ang mga esyudyante ay lilikha ng mga inter-aktib na mga kuwento at laro na maaari nilang ibahagi sa kahit na sino. Inirerekomenda sa mga nasa gradong 4-5."
   course4_shortdescription_congrats: "Handa nang lulusob? Ang mga estudyante ay lulusob sa mas malalim pa na mga paksa sa pagprogram na pinakilala sa nakaraang mga kurso para makahanap ng magandang solusyon sa mga mahihirap na problema. Pagkatapos ng kursong ito, ang mga estudyante ay lilikha ng mga interk-aktib na mga kuwento at mga laro na maaari nilang ibahagi sa kahit na sino. Inirerekomenda sa mga nasa gradong 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "Isang panimula sa computer science para sa mga hindi pa marunong magbasa."
+  courseb_shortdescription_congrats: "Isang panimula sa computer science para sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba para sa mga nakakatandang mga estudyante.)"
+  coursec_shortdescription_congrats: "Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro."
+  coursed_shortdescription_congrats: "Mabilis na dinaanan ang mga konsepto mula sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at iba pa."
+  coursee_shortdescription_congrats: "Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function."
+  coursef_shortdescription_congrats: "Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro."
   codeorg_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   codeintl_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1498,5 +1498,5 @@
   syncing_students: "Nag-sync sa iyong mga estudyante"
   syncing_students_instructions: 'Kung ang iyong seksiyon sa Code.org ay hindi pareho sa iyong lista ng mga estudyante sa Google Classroom, i-click ang "Sync students from Google Classroom" na button sa "Manage students" na tab:'
   google_sign_in_instruct: 'Mula dito, sila ay dapat pipili sa "Sign in with Google Account" na opsyon:'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab

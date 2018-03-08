@@ -29,7 +29,6 @@ main(scriptData);
 // disableExperiments url params will cause a persistent setting to be stored
 // from any page in teacher dashboard.
 const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
-const showManageStudentsReact = experiments.isEnabled(experiments.MANAGE_STUDENTS);
 
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
@@ -288,7 +287,6 @@ function main() {
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionsController'
@@ -305,7 +303,6 @@ function main() {
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
                                              function ($scope, $routeParams, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'StudentDetailController'
@@ -327,7 +324,6 @@ function main() {
   app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionDetailController'
@@ -397,11 +393,9 @@ function main() {
         $scope.section.$promise.then(section => renderLoginTypeAndSharingControls(section.id));
       });
 
-      if (showManageStudentsReact) {
-        $scope.$on('student-table-react-rendered', () => {
-          $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type));
-        });
-      }
+      $scope.$on('student-table-react-rendered', () => {
+        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type));
+      });
 
       $scope.$on('$destroy', () => {
         unmountSyncOauthSectionControl();
@@ -565,7 +559,6 @@ function main() {
 
   app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'MovingStudentsController'
@@ -661,7 +654,6 @@ function main() {
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
                                              function ($scope, $routeParams, $window, $q, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionSigninCardsController'
@@ -704,7 +696,6 @@ function main() {
   app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
       function ($scope, $routeParams,  sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionProjectsController'
@@ -741,7 +732,6 @@ function main() {
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService', 'paginatedSectionProgressService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService, paginatedSectionProgressService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionProgressController'
@@ -907,7 +897,6 @@ function main() {
   app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionResponsesController'
@@ -982,7 +971,6 @@ function main() {
   app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionAssessmentsController'

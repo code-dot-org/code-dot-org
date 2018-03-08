@@ -39,7 +39,7 @@ fil:
   next_resource: Susunod na resource
   done_with_module: Done with this Learning Module
   cancel: "Kanselahin"
-  okay: "Okay"
+  okay: "Okey"
   heading_x_of_y: "%{heading} (pahina %{x} ng %{y})"
   add_teacher_form:
     code:
@@ -171,7 +171,7 @@ fil:
       email: 'Email address'
       submit: 'Ipasa'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Mangyaring punan ang CAPTCHA para ma-reset ang iyong password.'
       invalid_email: 'Parang nagsign-up ka gamit ang email address na hindi balido. Paki-email sa support@code.org para makatanggap ng password na recovery link.'
     change_form:
       title: 'Palitan ang iyong password'
@@ -591,9 +591,9 @@ fil:
       body: "Mag-program ng mga hayop at iba pang nilalang sa mga Minecraft sa iyong sariling bersyon ng Minecraft."
     hero:
       title: "Minecraft"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+      body: "Ang Minecraft ay nagbabalik para sa Oras ng Code na may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code."
     sports:
-      title: "Sports"
+      title: "Mga Palakasan"
       body: "Gumawa ka ng basketbol na laro o mix at match sa mga palakasan."
     text-compression:
       title: "Text Compression"
@@ -643,23 +643,23 @@ fil:
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   multi-submittable:
-    wrong_title: "Thank you"
+    wrong_title: "Maraming Salamat"
     wrong_body: "Salamat sa pagpasa ng sagot."
-    correct_title: "Thank you"
+    correct_title: "Maraming Salamat"
     correct_body: "Salamat sa pagpasa ng sagot."
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   level_group:
-    wrong_title: "Thank you"
+    wrong_title: "Maraming Salamat"
     wrong_body: "Salamat sa pagpasa ng mga sagot."
-    correct_title: "Thank you"
+    correct_title: "Maraming Salamat"
     correct_body: "Salamat sa pagpasa ng mga sagot."
     hide_survey_last_answer: "Ang survey na ito ay anonymous. Pakibisita sa dashboard ng guro para sa buong resulta, Tandaan na ang mga resulta ay makikita lang kung may hindi bababa sa 5 estudyang ang nagpasa sa survery na ito."
     survey_submission_thankyou: "Salamat sa pagpasa sa pagsisiyasat na ito! Ang pagsiyasat ay nalinis na para gawing anonymous ang iyong mga sagot. Tandaan na ang iyong guro ay maaari pa ring makakita ng iyong mga sagot para sa buong klase, ngunit walang pangalan na nakalakip."
   level_group-submittable:
-    wrong_title: "Thank you"
+    wrong_title: "Maraming Salamat"
     wrong_body: "Salamat sa pagpasa ng mga sagot."
-    correct_title: "Thank you"
+    correct_title: "Maraming Salamat"
     correct_body: "Salamat sa pagpasa ng mga sagot."
     unsubmit-title: "Huwag na ipasa ang iyong assessment"
     unsubmit-body: "Ang pagbawi sa pagpasa ng iyong assessment ay mag-rereset ng petsa at oras ng pagpasa. Sigurado ka ba?"
@@ -847,7 +847,7 @@ fil:
     content: 'Content'
     practice: 'Teaching Practices'
     peer_review: 'Peer Review'
-    ramp_up: 'Ramp-Up'
+    ramp_up: 'Pabilisin'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: 'Pangunahing Kurso'

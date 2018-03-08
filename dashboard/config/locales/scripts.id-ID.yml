@@ -408,7 +408,7 @@
             Peer to Peer - Sending Ascii:
               name: Peer to Peer - Sending Ascii
             Peer to Peer - Sending Bits on a Shared Wire:
-              name: Peer to Peer - Sending Bits on a Shared Wire
+              name: Peer to Peer - Pengiriman Bit pada Ruang Kawat
             Peer to Peer - Sending Numbers:
               name: Peer to Peer - Mengirim Nomor
             Routers and addresses:
@@ -787,21 +787,21 @@
             Introduction to Arrays:
               name: Pengenalan untuk array
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: Pengantar Logika kondisional
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: Pengenalan Digital Asisten
             Looping and Random Numbers:
               name: Perulangan dan acak angka
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Loop dan Simulasi
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: Multi-layar Aplikasi
             Practice PT - Design a Digital Scene:
               name: Latihan PT - desain sebuah adegan digital
             'Practice PT: Create':
               name: 'Latihan PT: membuat'
             Processing Arrays:
-              name: Processing Arrays
+              name: Pengolahan Array
             The Need For Programming Languages:
               name: Kebutuhan untuk bahasa pemograman
             Understanding Program Flow and Logic:
@@ -980,7 +980,7 @@
             Creating Breeds in Starlogo Nova:
               name: Creating Breeds in Starlogo Nova
             Epidemic Model Extensions:
-              name: Epidemic Model Extensions
+              name: Model Wabah Ekstensi
             Review StarLogo Nova:
               name: Tinjauan StarLogo Nova
             Revisiting Agent Movement:
@@ -1022,13 +1022,13 @@
             Algorithms Detour - How Routers Learn:
               name: Bagaimana belajar router
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: Algoritma Memutar - Minimum Spanning Tree
             Algorithms Detour - Shortest Path:
               name: Algorithms Detour - Shortest Path
             Alice and Bob and Asymmetric Keys:
-              name: Asymmetric Keys - Cups and Beans
+              name: Kunci asimetris - Cangkir dan Kacang-kacangan
             Cracking the Code:
-              name: Cracking the Code
+              name: Code itu retak
             DNS in the Real World:
               name: DNS di dunia nyata
             Encryption Algorithms:
@@ -1038,7 +1038,7 @@
             Invent an Addressing Protocol:
               name: Menciptakan sebuah protokol pengelamatan
             One Way Functions - Ice Cream Vans:
-              name: One-Way Functions - The WiFi Hotspot Problem
+              name: Satu-Cara - Fungsi- Masalah Hotspot Wifi
             Packets and Making a Reliable Internet:
               name: Paket dan membuat internet yang dapat diandalkan
             Practice PT - Cybersecurity Innovations:
@@ -1157,11 +1157,11 @@
             Studio:
               name: Studio
             Swapped Levels:
-              name: Swapped Levels
+              name: Tingkat bertukar
             Text Compression:
               name: kompresi Teks
             TextMatch:
-              name: TextMatch
+              name: Teks Pertandingan
             Web Lab:
               name: Web lab
             Multi page assessment:
@@ -1169,7 +1169,7 @@
             Single page assessment:
               name: Satu halaman penilaian
             Standalone video:
-              name: Standalone video
+              name: Video mandiri
             Curriculum Reference:
               name: Referensi kurikulum
         algebraPD2b:
@@ -1215,11 +1215,11 @@
             Internet Simulator:
               name: Simulator Internet
             Pixelation Widget:
-              name: Pixelation Widget
+              name: Widget Pixelasi
             Text Compression Lesson:
               name: Pelajaran Teks Kompresi
             Text Compression Widget:
-              name: Text Compression Widget
+              name: Kompresi Teks Widget
             Welcome!:
               name: Selamat Datang!
         K5-OnlinePD:
@@ -1515,10 +1515,10 @@
           stages: []
         vigenere:
           title: Vigenere Cipher Widget
-          description: Use the Vigenere Cipher Widget to explore encrypting and decrypting
-            messages using a Vigenere Cipher.
-          description_short: Use the Vigenere Cipher Widget to explore encrypting
-            and decrypting messages using a Vigenere Cipher.
+          description: Menggunakan Vigenere Cipher Widget untuk memulai enkripsi dan
+            dekripsi pesan menggunakan Vigenere Cipher.
+          description_short: Menggunakan Vigenere Cipher Widget untuk memulai enkripsi
+            dan dekripsi pesan menggunakan Vigenere Cipher.
           description_audience: ''
           stages:
             Vigenere:
@@ -1536,7 +1536,7 @@
             Updates - The Design Recipe:
               name: Memperbarui - Resep desain
             Updates - Tweaks and Polish:
-              name: Updates - Tweaks and Polish
+              name: Memperbarui - Tweak dan polandia
         sciencePD3_pre1:
           title: Computer Science in Science PD Phase 3 Before 1st In-Person
           description: Phase 3 Blended Summer Study (Segment One)
@@ -1835,11 +1835,11 @@
             Getting Started:
               name: Dapat Dimulai
             Practice Performance Task:
-              name: Practice Performance Task
+              name: Praktek Tugas Kinerja
             Share out and Submit:
               name: Berbagi dan Kirim
             Unit 3 Overview:
-              name: Unit 3 Overview
+              name: 3 satuan ikhtisar
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description: This unit introduces the foundational concepts of computer
@@ -1859,11 +1859,11 @@
             Introduction to Arrays:
               name: Pengenalan untuk array
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Loop dan Simulasi
             'Practice PT: Create':
               name: 'Latihan PT: membuat'
             Processing Arrays:
-              name: Processing Arrays
+              name: Pengolahan Array
             While Loops:
               name: Perulangan Selagi
         CSP-Unit3-Support:
@@ -1882,9 +1882,9 @@
             Chunk 5 Overview:
               name: Peninjauan bagian 5
             Practice Performance Task:
-              name: Practice Performance Task
+              name: Praktek Tugas Kinerja
             Unit 3 Overview:
-              name: Unit 3 Overview
+              name: 3 satuan ikhtisar
         gumball:
           title: Laboratorium Bermain Gumball
           description: Membuat cerita atau membuat permainan dengan laboratorium bermain
@@ -1941,7 +1941,7 @@
           description_audience: ''
           stages:
             "(optional) Refresh your connection to Complex Adaptive Systems":
-              name: "(optional) Refresh your connection to Complex Adaptive Systems"
+              name: "(pilihan) Menyegarkan koneksi anda ke Sistem Adaptif Kompleks"
             Assessing Computer Models:
               name: Assessing Computer Models
             Welcome!:
@@ -2203,7 +2203,7 @@
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
-              name: Encoding and Sending Formatted Text
+              name: Mengkodekan dan Mengirim Teks yang Diformat
             HTTP and Abstraction:
               name: HTTP dan pemisahan
             Number Systems:
@@ -2353,7 +2353,7 @@
             Alice and Bob and Asymmetric Keys:
               name: Alice dan Bob dan kunci asimetris
             Cracking the Code:
-              name: Cracking the Code
+              name: Code itu retak
             Encryption with Keys and Passwords:
               name: Enkripsi dengan kunci dan kata sandi
             Identifying People with Data:
@@ -2417,17 +2417,17 @@
             Introduction to Arrays:
               name: Pengenalan untuk array
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: Pengantar Logika kondisional
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: Pengenalan Digital Asisten
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Loop dan Simulasi
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: Multi-layar Aplikasi
             'Practice PT: Create':
               name: 'Latihan PT: membuat'
             Processing Arrays:
-              name: Processing Arrays
+              name: Pengolahan Array
             Understanding Program Flow and Logic:
               name: Memahami aliran program dan logika
             User Input and Strings:
@@ -2437,7 +2437,7 @@
             While Loops:
               name: Perulangan Selagi
             Edited lessons ABOVE this line:
-              name: Edited lessons ABOVE this line
+              name: Pelajaran diedit di ATAS garis ini
             Buttons and Events:
               name: Tombol dan peristiwa
             Make Your Own Multi-Screen App:
@@ -2461,7 +2461,7 @@
             Unit 3 Assessment 4:
               name: Unit 3 penillaian 4
             If-else-if and Conditional Logic:
-              name: If-else-if and Conditional Logic
+              name: Jika-lain-jika dan Logika Kondisional
             'Building an App: Color Sleuth':
               name: 'Membangun aplikasi: Warna detektif'
             Possibly use later:
@@ -2526,7 +2526,8 @@
             Explore PT - Complete the Task:
               name: Jelajahi PT - Menyelesaikan tugas
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Mempersiapkan teknologi - AP Portofolio Digital dan alat-Alat
+                Lain
             CSP Student Post Survey Staging:
               name: CSP Mahasiswa pasca survei pementasan
             Participate in a longitudinal study!:
@@ -2566,11 +2567,11 @@
             Variables Unplugged:
               name: Variabel dicabut
             Variables and Animation:
-              name: Variables and Animation
+              name: Variabel dan Animasi
             Functions:
               name: Fungsi
             Platform Jumper:
-              name: Platform Jumper
+              name: Peloncat platform
             Defender:
               name: Penjaga
             'Project: Build a Game':
@@ -2580,7 +2581,7 @@
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
-              name: Using the Game Design Process
+              name: Proses menggunakan desain permainan
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
           description: In Partnership with Project GUTS
@@ -2700,9 +2701,9 @@
           description_audience: ''
           stages:
             Algorithms Detour - How Routers Learn:
-              name: Algorithms Detour - How Routers Learn
+              name: Algoritma Memutar - Bagaimana Cara Router Mempelajari
             Algorithms Detour - Minimum Spanning Tree:
-              name: Algorithms Detour - Minimum Spanning Tree
+              name: Algoritma Memutar - Minimum Spanning Tree
             Algorithms Detour - Shortest Path:
               name: Algorithms Detour - Shortest Path
             Unit 1 - Encoding Numbers in the Real World:
@@ -2710,15 +2711,15 @@
             Unit 1 - Sending Bits in the Real World:
               name: Unit 1 - mengirim bit di dunia nyata
             Unit 1 - Algorithms Detour - Minimum Spanning Tree:
-              name: Unit 1 - Algorithms Detour - Minimum Spanning Tree
+              name: Unit 1 - Algoritma Memutar - Minimum Spanning Tree
             Unit 1 - Algorithms Detour - Shortest Path:
               name: Unit 1 - Algorithms Detour - Shortest Path
             Unit 1 - How Routers Learn:
-              name: Unit 1 - How Routers Learn
+              name: Unit 1 - Cara Mempelajari Router
             Unit 4 - Hard Problems - The Traveling Salesperson Problem:
               name: Unit 4 - Hard Problems - The Traveling Salesperson Problem
             Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
-              name: Unit 4 - One-Way Functions - The WiFi Hotspot Problem
+              name: Unit 4 - Satu-Cara - Fungsi- Masalah Hotspot Wifi
         cspunit1-support:
           title: Online Support for CSP Unit 1
           description: This is a test Professional Learning Course
@@ -2726,9 +2727,9 @@
           description_short: ''
           stages:
             Chapter Overviews:
-              name: Chapter Overviews
+              name: Bab Ikhtisar
             Encoding and Sending Numbers:
-              name: Encoding and Sending Numbers
+              name: Menyandi dan Mengirimkan Nomor
             Intro to the Unit:
               name: Introduksi ke unit
             Running a Constructive Classroom:
@@ -2736,9 +2737,9 @@
             Sending Binary Messages:
               name: Mengirim pesan biner
             Strategies for Student Writing:
-              name: Strategies for Student Writing
+              name: Strategi Mahasiawa untuk Menulis
             Supporting Peer Learning:
-              name: Supporting Peer Learning
+              name: Mendukung Rekan belajar
             'Tool Talk: Intro to Netsim':
               name: 'Alat untuk bicara: introduksi ke netsim'
         test-teaching-ap-cs-unit-1:
@@ -2748,15 +2749,15 @@
           description: ''
           stages:
             test Unit 1 content module Alpha:
-              name: test Unit 1 content module Alpha
+              name: tes Unit 1 modul konten Alpha
             test Unit 1 content module Bravo:
-              name: test Unit 1 content module Bravo
+              name: tes Unit 1 modul konten Bravo
             test Unit 1 content module Charlie:
-              name: test Unit 1 content module Charlie
+              name: tes Unit 1 modul konten Charlie
             test Unit 1 practice module Delta:
-              name: test Unit 1 practice module Delta
+              name: tes Unit 1 modul praktek Delta
             test Unit 1 practice module Echo:
-              name: test Unit 1 practice module Echo
+              name: tes Unit 1 modul praktek gema
             test Unit 1 practice module Foxtrot:
               name: menguji unit 1 latihan modul Foxtrot
             test Unit 1 required reading:
@@ -2813,7 +2814,7 @@
             CSP Student Post Survey Staging:
               name: CSP Mahasiswa pasca survei pementasan
             CSP Longitudinal Contact Request:
-              name: CSP Longitudinal Contact Request
+              name: Permintaan kontak CSP Menbujur
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
             "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
@@ -2889,9 +2890,9 @@
             Low Fidelity Prototyping:
               name: Low Fidelity Prototyping
             Preparing for Prototype Testing:
-              name: Preparing for Prototype Testing
+              name: Mempersiapkan untuk Pengujian Prototipe
             Prototype Testing:
-              name: Prototype Testing
+              name: Pengujian Prototipe
             Preparing for App Testing:
               name: Persiapan untuk menguji aplikasi
             App Testing:
@@ -2920,13 +2921,13 @@
           description_audience: ''
           stages:
             Clean Code and Debugging:
-              name: Clean Code and Debugging
+              name: Kode yang bersih dan Debugging
             Describing Webpages:
               name: Membayangkan halaman web
             Designing Code for Computers:
               name: Merancang kode untuk komputer
             Digital Footprint:
-              name: Digital Footprint
+              name: Jejak Digital
             Images on the Web:
               name: Gambar di web
             'Personal Website: Finalizing Site':
@@ -2940,7 +2941,7 @@
             Intellectual Property:
               name: Hak milik intelektual
             Introduction to Styling with CSS:
-              name: Introduction to Styling with CSS
+              name: Pendahuluan untuk Styling dengan CSS
             'Personal Website: Connecting Pages':
               name: 'Situs web pribadi: halaman menghubungkan'
             Classes and External Style Sheets:
@@ -2956,7 +2957,7 @@
             Introduction to HTML:
               name: Pengenalan HTML
             Headers and Lists:
-              name: Headers and Lists
+              name: Header dan Daftar
             Designing Web Pages:
               name: Merancang halaman web
             Holding:
@@ -2964,17 +2965,17 @@
             Describing Web pages:
               name: Menggambarkan halaman web
             Multi-Page Websites:
-              name: Multi-Page Websites
+              name: Banyak-Halaman Situs
             Classes:
               name: Kelas
             External Style Sheets:
-              name: External Style Sheets
+              name: Gaya lembar Eksternal
             Usability and Accessibility:
-              name: Usability and Accessibility
+              name: Kegunaan dan Aksesibilitas
             Peer Review:
               name: Peer Review
             Describing Web Pages:
-              name: Describing Web Pages
+              name: Mendeskripsikan Halaman Web
         CSDU5-Draft:
           title: " TEMP CSD Unit 5"
           description: Temp place to work on U5 of Disco
@@ -3026,9 +3027,9 @@
           description_audience: ''
           stages:
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Discovery Learning:
-              name: Discovery Learning
+              name: Mempelajari Penemuan
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Introduction to Teachercon:
@@ -3038,19 +3039,19 @@
             Lesson 1,11:
               name: 'Lesson 1.11: Packets and Making a Reliable Internet'
             Lesson 1,4:
-              name: 'Lesson 1.4: Number Systems (Circle Triangle Square)'
+              name: 'Pelajaran 1.4: Sistem Nomor (Lingkaran, Segitiga, Persegi)'
             Lesson 1,6:
               name: 'Lesson 1.6: Sending Numbers'
             Lesson 1,9:
               name: 'Lesson 1.9: Internet Addressing (Battleship)'
             Lesson 2,10:
-              name: 'Lesson 2.10: Good and Bad Data Visualizations'
+              name: 'Pelajaran 2.10: Baik dan Buruk Visualisasi Data'
             Lesson 2,2:
-              name: 'Lesson 2.2: Text Compression'
+              name: 'Pelajaran 2.2: Kompresi Teks'
             Lesson 2,3:
-              name: 'Lesson 2.3: Black and White Pixelation'
+              name: 'Pelajaran 2.3: Hitam dan Putih Pixelasi'
             Measuring Student Learning:
-              name: Measuring Student Learning
+              name: Mengukur Belajar Siswa
         kinderTest:
           title: ''
           description_audience: ''
@@ -3068,7 +3069,7 @@
           description_audience: Ages 5-18
           stages:
             Being Safe Online:
-              name: Being Safe Online
+              name: Aman Online
             Debugging:
               name: Debugging
             Events:
@@ -3086,13 +3087,13 @@
             Loops Unplugged:
               name: Loops Unplugged
             Persistence & Frustration:
-              name: Persistence & Frustration
+              name: Kegigihan & Frustrasi
             Programming:
               name: Pemrograman
             Programming Unplugged:
               name: Programming Unplugged
             Sequences & Algorithms:
-              name: Sequences & Algorithms
+              name: Urutan & Algoritma
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             'Programming Unplugged: Happy Maps':
@@ -3138,7 +3139,7 @@
           description_audience: Ages 5-18
           stages:
             Being Safe Online:
-              name: Being Safe Online
+              name: Aman Online
             Debugging:
               name: Debugging
             Events:
@@ -3156,13 +3157,13 @@
             More Computer Science:
               name: More Computer Science
             Persistence & Frustration:
-              name: Persistence & Frustration
+              name: Kegigihan & Frustrasi
             Programming:
               name: Pemrograman
             Programming Unplugged:
               name: Programming Unplugged
             Sequences & Algorithms:
-              name: Sequences & Algorithms
+              name: Urutan & Algoritma
             Unspotted Bugs:
               name: Unspotted Bugs
             'Debugging: Unspotted Bugs':
@@ -3375,7 +3376,7 @@
           description_audience: ''
           stages:
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Introduction to Teachercon:
@@ -3440,7 +3441,7 @@
             Variables Unplugged:
               name: Variabel dicabut
             Variables and Animation:
-              name: Variables and Animation
+              name: Variabel dan Animasi
             Velocity:
               name: Velocity
               description_student: Setelah pengarahan singkat tentang bagaimana menggunakan
@@ -3545,7 +3546,7 @@
                 animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan
                 untuk membuat perbaikan untuk permainan buatan mereka sendiri.
             Using the Game Design Process:
-              name: Using the Game Design Process
+              name: Proses menggunakan desain permainan
               description_student: In this multi-day lesson, the class uses the problem
                 solving process from Unit 1 to create a platform jumper game.  After
                 looking at a sample game, the class defines what their games will
@@ -3565,7 +3566,7 @@
             'Project: Design a Game':
               name: 'Project: Design a Game'
             Programming for Entertainment:
-              name: Programming for Entertainment
+              name: Pemrograman untuk Hiburan
               description_student: The class is asked to consider the "problems" of
                 boredom and self expression, and to reflect on how they approach those
                 problems in their own lives. From there, they will explore how Computer
@@ -3600,7 +3601,7 @@
                 will encounter when programming in Game Lab. Students optionally create
                 their own image to communicate before a debrief discussion.
             Shapes and Randomness:
-              name: Shapes and Randomness
+              name: Bentuk dan keserampangan
               description_student: This lesson extends the drawing skills to include
                 width and height and introduces the concept of random number generation.
                 The class learns to draw with versions of ellipse() and rect() that
@@ -3883,7 +3884,7 @@
           description: ''
           stages:
             Anonymous student pre-survey:
-              name: Anonymous student pre-survey
+              name: Anonim mahasiswa pra-survei
             NEW Unit 1 Chapter 1 Assessment:
               name: NEW Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 1 Assessment:
@@ -3919,7 +3920,7 @@
                 with the activity and make connections to the types of problem solving
                 they will be doing for the rest of the course. '
             The Problem Solving Process:
-              name: The Problem Solving Process
+              name: Proses Pemecahan Masalah
               description_student: This lesson introduces the formal problem solving
                 process that the class will use over the course of the year, Define
                 - Prepare - Try - Reflect.  The class relates these steps to the aluminum
@@ -3941,7 +3942,7 @@
                 generally useful strategies for each step of the process to put on
                 posters that will be used throughout the unit and year.
             Exploring Problem Solving:
-              name: Exploring Problem Solving
+              name: Eksplorasi Pemecahan Masalah
               description_student: 'In this lesson the class applies the problem solving
                 process to three different problems: a word search, a seating arrangement
                 for a birthday party, and planning a trip. The problems grow increasingly
@@ -4035,7 +4036,7 @@
                 of storage students saw in this lesson and the importance of storage
                 while processing information.
             Apps and Problem Solving:
-              name: Apps and Problem Solving
+              name: Aplikasi dan Pemecahan Masalah
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek
                 komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps.
                 Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah
@@ -4085,11 +4086,11 @@
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Discovery Learning:
-              name: Discovery Learning
+              name: Mempelajari Penemuan
             Measuring Student Learning:
-              name: Measuring Student Learning
+              name: Mengukur Belajar Siswa
             'Lessons 4-6: Encoding and Sending Numbers':
               name: 'Pelajaran 4-6: pengkodean dan mengirim nomor'
             'Lesson 7: Encoding and Sending Text':
@@ -4133,7 +4134,7 @@
               name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding
                 Scheme'
             Unit 3 Overview:
-              name: Unit 3 Overview
+              name: 3 satuan ikhtisar
             'Lessons 1 - 3: Algorithms':
               name: 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
@@ -4176,11 +4177,11 @@
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Discovery Learning:
-              name: Discovery Learning
+              name: Mempelajari Penemuan
             Measuring Student Learning:
-              name: Measuring Student Learning
+              name: Mengukur Belajar Siswa
             AP Preparation and Support:
               name: AP Preparation and Support
         basketball:
@@ -4245,7 +4246,7 @@
             Images on the Web:
               name: Gambar di web
             Clean Code and Debugging:
-              name: Clean Code and Debugging
+              name: Kode yang bersih dan Debugging
               description_student: In this lesson covers common issues that arise
                 when designing web pages in HTML. The class will correct errors in
                 a sequence of increasingly complex web pages found on Code Studio
@@ -4259,19 +4260,19 @@
                 read. At the end of the lesson students create a list of strategies
                 for debugging web pages and ensuring they are easy to read and maintain.
             Introduction to Styling with CSS:
-              name: Introduction to Styling with CSS
+              name: Pendahuluan untuk Styling dengan CSS
             Multi-Page Websites:
-              name: Multi-Page Websites
+              name: Banyak-Halaman Situs
             Classes:
               name: Kelas
             External Style Sheets:
-              name: External Style Sheets
+              name: Gaya lembar Eksternal
             Peer Review:
               name: Peer Review
             Box Model and Page Layout:
               name: Model kotak dan tata letak halaman
             Digital Footprint:
-              name: Digital Footprint
+              name: Jejak Digital
               description_student: Pelajaran kali ini mengulang  kembali ke pembuatan
                 situs pribadi untuk membahas tentang informasi pribadi yang orang
                 pilih untuk dibagikan secara digital. kelas dimulai dengan membahas
@@ -4346,7 +4347,7 @@
                 States and try to figure out how each of those sites is useful for
                 users and how they might also serve their creators.
             'Websites for Expression ':
-              name: 'Websites for Expression '
+              name: 'Situs-situs untuk Ekspresi '
               description_student: 'This lesson introduces websites as a means of
                 personal expression.  The class first discusses different ways that
                 people express and share their interests and ideas, then looks at
@@ -4446,7 +4447,7 @@
                 Using classes, students add more styles to the Four Seasons web page,
                 then use them to style their personal websites.
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: Proyek - Situs web Portfolio Pribadi
               description_student: In the last few days of the unit, the class finalizes
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
@@ -4491,11 +4492,11 @@
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Discovery Learning:
-              name: Discovery Learning
+              name: Mempelajari Penemuan
             Measuring Student Learning:
-              name: Measuring Student Learning
+              name: Mengukur Belajar Siswa
             AP Preparation and Support:
               name: AP Preparation and Support
         csd4:
@@ -4621,7 +4622,7 @@
               description_teacher: |
                 Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
             Prototype Testing:
-              name: Prototype Testing
+              name: Pengujian Prototipe
               description_student: Teams will develop a plan to test with users before
                 running prototype tests with multiple other students in the class.
                 In order to test the prototype with the users, the students will have
@@ -4817,7 +4818,7 @@
                 After "using" the provided prototype students begin to identify ways
                 to improve the next iteration.
             Feedback and Testing:
-              name: Feedback and Testing
+              name: Umpan balik dan Pengujian
               description_student: Users have been testing an app, and they have lots
                 of feedback for the developer. The class needs to sort through all
                 of this feedback, identify the common themes and needs, and start
@@ -4893,7 +4894,7 @@
             Programming in Maze:
               name: Programming in Maze
             Being Safe Online:
-              name: Being Safe Online
+              name: Aman Online
             'Loops: Happy Loops':
               name: 'Loops: Happy Loops'
             Loops in Collector:
@@ -4929,7 +4930,7 @@
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Being Safe Online:
-              name: Being Safe Online
+              name: Aman Online
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
@@ -4992,7 +4993,7 @@
             Building a Foundation:
               name: Membangun dasar
             Screen Out the Mean:
-              name: Screen Out the Mean
+              name: Berarti keluar layar
             Debugging in Maze:
               name: Debugging in Maze
             Loops in Harvester:
@@ -5007,7 +5008,7 @@
             3rd grade.
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritma: Kertas Grafik Pemrograman'
             Events in Bounce:
               name: Events in Bounce
             Nested Loops in Maze:
@@ -5029,7 +5030,7 @@
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Impacts of Computing:
-              name: Impacts of Computing
+              name: Dampak dari Komputasi
             More Programming with CS4FN:
               name: Pemograman lebih lanjut dengan CS4FN
             Build a Play Lab Game:
@@ -5084,7 +5085,7 @@
             Build Your Project:
               name: Build Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
             More Programming with Scratch:
               name: Pemograman lebih dengan Scratch
             Private and Personal Information:
@@ -5137,13 +5138,13 @@
             Build Your Project:
               name: Build Your Project
             Revise Your Project:
-              name: Revise Your Project
+              name: Merevisi Proyek Anda
             Presentation Your Project:
-              name: Presentation Your Project
+              name: Menyajikan Proyek Anda
             Try programming with Khan Academy:
               name: Mencoba pemograman dengan akademi khan
             The Power of Words:
-              name: The Power of Words
+              name: Kekuatan kata-Kata
             Songwriting with Parameters:
               name: Penulisan lagu dengan Parameter
             Introduction:
@@ -5253,7 +5254,7 @@
           description: ''
           stages:
             Unit 3 Overview:
-              name: Unit 3 Overview
+              name: 3 satuan ikhtisar
             'Lessons 1 - 3: Algorithms':
               name: 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
@@ -5263,11 +5264,11 @@
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Discovery Learning:
-              name: Discovery Learning
+              name: Mempelajari Penemuan
             Measuring Student Learning:
-              name: Measuring Student Learning
+              name: Mengukur Belajar Siswa
             AP Preparation and Support:
               name: AP Preparation and Support
         csdgraveyard:
@@ -5281,9 +5282,9 @@
             Introduction to Styling with CSS (2.7):
               name: Introduction to Styling with CSS (2.7)
             Introduction to Styling with CSS:
-              name: Introduction to Styling with CSS
+              name: Pendahuluan untuk Styling dengan CSS
             External Style Sheets:
-              name: External Style Sheets
+              name: Gaya lembar Eksternal
         csp4-support:
           title: CSP Unit 4 Online Support
           description_audience: ''
@@ -5291,7 +5292,7 @@
           description: ''
           stages:
             Unit 3 Overview:
-              name: Unit 3 Overview
+              name: 3 satuan ikhtisar
             'Lessons 1 - 2: Data in the Real World':
               name: 'Lessons 1 - 2: Data in the Real World'
             'Lessons 1 - 4: Data in the Real World':
@@ -5303,11 +5304,11 @@
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Discovery Learning:
-              name: Discovery Learning
+              name: Mempelajari Penemuan
             Measuring Student Learning:
-              name: Measuring Student Learning
+              name: Mengukur Belajar Siswa
             Unit 4 Overview:
               name: Rangkuman unit 4
         sciencepd4:
@@ -5319,7 +5320,7 @@
             Welcome!:
               name: Selamat Datang!
             Revisiting Complex Adaptive Systems:
-              name: Revisiting Complex Adaptive Systems
+              name: Meninjau Kembali Sistem Adaptif Kompleks
             Thinking About Implementation:
               name: Berfikir tentang pelaksanaan
             Wrap-Up:
@@ -5408,11 +5409,11 @@
             Group Work and Peer Learning:
               name: Berkerja kelompok dan belajar dengan rekan
             Balancing Teachers and Tools:
-              name: Balancing Teachers and Tools
+              name: Menyeimbangkan Guru dan alat-Alat
             Discovery Learning:
-              name: Discovery Learning
+              name: Mempelajari Penemuan
             Measuring Student Learning:
-              name: Measuring Student Learning
+              name: Mengukur Belajar Siswa
         csp6-support:
           stage: []
           title: AP Preparation and Resources for Teachers
@@ -5457,7 +5458,7 @@
             UI and Input:
               name: UI and Input
             Computing Innovations:
-              name: Computing Innovations
+              name: Inovasi Komputasi
             Input Unplugged:
               name: Input Unplugged
             '':
@@ -5465,7 +5466,7 @@
         gamelab-demo:
           stages:
             Simple Sprite Movement:
-              name: Simple Sprite Movement
+              name: Gerakan Sprite Sederhana
         csd6-draft:
           title: Draft Unit 6
           description_audience: ''
@@ -5475,11 +5476,11 @@
             UI and Input:
               name: UI and Input
             Computing Innovations:
-              name: Computing Innovations
+              name: Inovasi Komputasi
             Input Uplugged:
               name: Input Uplugged
             The Circuit Playground:
-              name: The Circuit Playground
+              name: Sirkuit Bermain Anak
             Foo:
               name: Foo
             Lists:
@@ -5525,13 +5526,13 @@
             Getting and Setting Properties:
               name: Getting and Setting Properties
             The Program Design Process:
-              name: The Program Design Process
+              name: Proses Desain Program
             Getters:
               name: Getters
             Getting Properties:
               name: Getting Properties
             Designing Screens with Code:
-              name: Designing Screens with Code
+              name: Perancangan Layar dengan Kode
             Arrays:
               name: Arrays
             Making Music:
@@ -5585,19 +5586,19 @@
             ASCII and Binary Representation:
               name: ASCII and Binary Representation
             Representing Numbers Part 1:
-              name: Representing Numbers Part 1
+              name: Mewakili Angka Bagian 1
             Representing Numbers Part 2:
-              name: Representing Numbers Part 2
+              name: Mewakili Angka Bagian 2
             Project - Create a Representation:
               name: Project - Create a Representation
             Problem Solving and Data:
-              name: Problem Solving and Data
+              name: Pemecahan masalah dan Data
             Making Decisions with Data:
               name: Making Decisions with Data
             Automating Data Decisions:
-              name: Automating Data Decisions
+              name: Mengotomatisasi Data Keputusan
             Problem Solving with Big Data:
-              name: Problem Solving with Big Data
+              name: Pemecahan masalah dengan Data Besar
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
             Representing Numbers:
@@ -5607,10 +5608,10 @@
             Encryption:
               name: Encryption
             Structuring Data:
-              name: Structuring Data
+              name: Penataan Data
         applab-1hour:
           title: App Lab 1 Hour Workshop
-          description_audience: Middle and High School Students
+          description_audience: Sekolah Dan Siswa Menengah Tinggi
           description_short: ''
           description: This workshop is designed to give students a basic introduction
             to app lab in 1 hour. Students should be able to come in with different
@@ -5634,7 +5635,7 @@
               name: Tambahan
         applab-2hour:
           title: App Lab 2 Hour Workshop
-          description_audience: Middle and High School Students
+          description_audience: Sekolah Dan Siswa Menengah Tinggi
           description_short: ''
           description: This workshop is designed to give students a basic introduction
             to app lab in 2 hours. Students should be able to come in with different
@@ -5673,7 +5674,7 @@
             App Lab Basics:
               name: App Lab Basics
             The Circuit Playground:
-              name: The Circuit Playground
+              name: Sirkuit Bermain Anak
             Physical Input:
               name: Physical Input
             Analog Input:
@@ -5693,7 +5694,7 @@
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
-          description_short: Learn to program with physical devices.
+          description_short: Belajar program dengan perangkat fisik.
           description: Unit 6 explores the role of hardware platforms in computing
             and how different sensors can provide more effective input and output
             than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s
@@ -5704,7 +5705,7 @@
             an innovation of your own design.
           stages:
             Computing Innovations:
-              name: Computing Innovations
+              name: Inovasi Komputasi
               description_student: Explore a wide variety of new and innovative computing
                 platforms while expanding your understanding of what a computer can
                 be.
@@ -5748,7 +5749,7 @@
                 commands which can get and set (or change) the content and properties
                 of various design elements.
             The Circuit Playground:
-              name: The Circuit Playground
+              name: Sirkuit Bermain Anak
               description_student: Students are introduced to the Circuit Playground,
                 a microcomputer that will be the platform used throughout the rest
                 of this unit.
@@ -5854,7 +5855,7 @@
                 on the board, groups will create programs that allow for interesting
                 and unique user interactions.
             Designing Screens with Code:
-              name: Designing Screens with Code
+              name: Perancangan Layar dengan Kode
               description_student: By reading and changing the content on the screen
                 of an app, the class starts to build apps that only need a single
                 screen. Even with just one screen, these techniques allow for lots
@@ -5896,7 +5897,7 @@
                 to make elements move across the screen.  A new screen element, the
                 slider, and a new event trigger, `onChange`, are also introduced.
             The Program Design Process:
-              name: The Program Design Process
+              name: Proses Desain Program
               description_student: This lesson introduces students to the process
                 they will use to design programs of their own throughout this unit.
                 This process is centered around a project guide which asks students
@@ -6021,15 +6022,15 @@
                 a product, using cheap and easily found materials such as cardboard
                 and duct tape.
             Innovations in Computing:
-              name: Innovations in Computing
+              name: Inovasi dalam Komputasi
             Arrays and Color LEDs:
               name: Arrays and Color LEDs
             Innovations in Computing_:
-              name: Innovations in Computing
+              name: Inovasi dalam Komputasi
             Designing Screens with Code_:
-              name: Designing Screens with Code
+              name: Perancangan Layar dengan Kode
             The Circuit Playground_:
-              name: The Circuit Playground
+              name: Sirkuit Bermain Anak
             Input Unplugged_:
               name: Input Unplugged
             Board Events_:
@@ -6039,7 +6040,7 @@
             Analog Input_:
               name: Analog Input
             The Program Design Process_:
-              name: The Program Design Process
+              name: Proses Desain Program
             Arrays and Color LEDs_:
               name: Arrays and Color LEDs
             'Project: Make a Game_':
@@ -6063,19 +6064,19 @@
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
-          description_short: Animations and Games
+          description_short: Permainan Dan Animasi
           description: ''
           stages:
             Shapes and Randomess:
-              name: Shapes and Randomess
+              name: Bentuk dan Keserampangan
             Shapes and Randomness:
-              name: Shapes and Randomness
+              name: Bentuk dan keserampangan
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Variables:
               name: Variabel
             Programming for Entertainment:
-              name: Programming for Entertainment
+              name: Pemrograman untuk Hiburan
             Sprites:
               name: Sprites
             Plotting Shapes:
@@ -6113,7 +6114,7 @@
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
-              name: Using the Game Design Process
+              name: Proses menggunakan desain permainan
             'Project: Design a Game':
               name: 'Project: Design a Game'
         csd5:
@@ -6228,9 +6229,9 @@
                 images and the system for representing text they learned in the previous
                 lesson.
             Representing Numbers Part 1:
-              name: Representing Numbers Part 1
+              name: Mewakili Angka Bagian 1
             Representing Numbers Part 2:
-              name: Representing Numbers Part 2
+              name: Mewakili Angka Bagian 2
             Combining Representations:
               name: Combining Representations
               description_student: In this lesson, students use all three types of
@@ -6274,7 +6275,7 @@
                 cards and try to decipher what the other student's perfect day is
                 like. The lesson ends with a reflection.
             Problem Solving and Data:
-              name: Problem Solving and Data
+              name: Pemecahan masalah dan Data
               description_student: In this lesson, students use the problem solving
                 process from earlier in the course to solve a data problem.
               description_teacher: In this lesson, students use the problem solving
@@ -6318,7 +6319,7 @@
                 have chosen.  Last, students look at what parts of this process can
                 be automated, and what need a human to make decisions.
             Automating Data Decisions:
-              name: Automating Data Decisions
+              name: Mengotomatisasi Data Keputusan
               description_student: In this lesson students look at a simple example
                 of how a computer could be used to complete essentially every step
                 of the data problem solving process. To begin students are given the
@@ -6346,7 +6347,7 @@
                 a discussion about the benefits and drawbacks of using computers to
                 automate the data problem solving process.
             Problem Solving with Big Data:
-              name: Problem Solving with Big Data
+              name: Pemecahan masalah dengan Data Besar
               description_student: In this lesson, students look at how data is collected
                 and used by a organizations to solve problems in the real world. The
                 lesson begins with a quick review of the data problem solving process
@@ -6436,7 +6437,7 @@
                 with a discussion about the importance of both physical and digital
                 security.
             Structuring Data:
-              name: Structuring Data
+              name: Penataan Data
               description_student: This lesson goes further into the interpretation
                 of data, including cleaning and visualizing raw data sets.  The class
                 first looks at the how presenting data in different ways can help
@@ -6483,7 +6484,7 @@
             Variables Unplugged:
               name: Variabel dicabut
             Variables and Animation:
-              name: Variables and Animation
+              name: Variabel dan Animasi
             Sprites and Properties:
               name: Spite dan properti
             Sprites and Images:
@@ -6509,7 +6510,7 @@
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
-              name: Using the Game Design Process
+              name: Proses menggunakan desain permainan
             'Project: Design a Game':
               name: 'Project: Design a Game'
         csd1-old:
@@ -6524,9 +6525,9 @@
             Intro to Problem Solving:
               name: Intro to Problem Solving
             The Problem Solving Process:
-              name: The Problem Solving Process
+              name: Proses Pemecahan Masalah
             Exploring Problem Solving:
-              name: Exploring Problem Solving
+              name: Eksplorasi Pemecahan Masalah
             What is a Computer?:
               name: Apa itu komputer?
             Representing Information:
@@ -6548,23 +6549,23 @@
             Text on the Web:
               name: Teks di web
             Digital Footprint:
-              name: Digital Footprint
+              name: Jejak Digital
             Images in HTML:
               name: Images in HTML
             Exploring Websites:
               name: Exploring Websites
             'Websites for Expression ':
-              name: 'Websites for Expression '
+              name: 'Situs-situs untuk Ekspresi '
             Intro to HTML:
               name: Intro to HTML
             Headers and Lists:
-              name: Headers and Lists
+              name: Header dan Daftar
             Intellectual Property:
               name: Hak milik intelektual
             Images:
               name: Images
             Clean Code and Debugging:
-              name: Clean Code and Debugging
+              name: Kode yang bersih dan Debugging
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
             Styling Text with CSS:
@@ -6576,7 +6577,7 @@
             RGB Colors and Classes:
               name: RGB Colors and Classes
             Project - Personal Portfolio Website:
-              name: Project - Personal Portfolio Website
+              name: Proyek - Situs web Portfolio Pribadi
             Headers:
               name: Headers
             Intellectual Property and Images:
@@ -6592,19 +6593,19 @@
             Intro to Problem Solving:
               name: Intro to Problem Solving
             The Problem Solving Process:
-              name: The Problem Solving Process
+              name: Proses Pemecahan Masalah
             Exploring Problem Solving:
-              name: Exploring Problem Solving
+              name: Eksplorasi Pemecahan Masalah
             What is a Computer?:
               name: Apa itu komputer?
             Inputs and Outputs:
-              name: Inputs and Outputs
+              name: Masukan dan keluaran
             Processing:
               name: Sedang memproses
             Storage:
               name: Penyimpanan
             Apps and Problem Solving:
-              name: Apps and Problem Solving
+              name: Aplikasi dan Pemecahan Masalah
             Project - Propose an App:
               name: Project - Propose an App
             Input and Output:
@@ -6616,13 +6617,13 @@
           description: ''
           stages:
             Programming for Entertainment:
-              name: Programming for Entertainment
+              name: Pemrograman untuk Hiburan
             Plotting Shapes:
               name: Plotting Shapes
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
             Shapes and Randomness:
-              name: Shapes and Randomness
+              name: Bentuk dan keserampangan
             Variables:
               name: Variabel
             Sprites:
@@ -6656,7 +6657,7 @@
             The Game Design Process:
               name: Proses perancangan permainan
             Using the Game Design Process:
-              name: Using the Game Design Process
+              name: Proses menggunakan desain permainan
             'Project: Design a Game':
               name: 'Project: Design a Game'
             'Chapter 1: Images and Animation':
@@ -6698,7 +6699,7 @@
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
           title: CSD - Drawing in Game Lab
-          description_audience: Falmouth Middle School (Mike Harvey)
+          description_audience: Falmouth Sekolah Menengah (Mike Harvey)
           description_short: ''
           description: ''
         csppostsurvey:
@@ -6748,19 +6749,19 @@
             Images in HTML:
               name: Images in HTML
             Clean Code and Debugging:
-              name: Clean Code and Debugging
+              name: Kode yang bersih dan Debugging
             Styling Text with CSS:
               name: Styling Text with CSS
             Styling Elements with CSS:
               name: Styling Elements with CSS
             Multi-Page Websites:
-              name: Multi-Page Websites
+              name: Banyak-Halaman Situs
             Classes:
               name: Kelas
             Peer Review:
               name: Peer Review
             Digital Footprint:
-              name: Digital Footprint
+              name: Jejak Digital
             Publishing a Website:
               name: Penerbitan sebuah situs web
             Sources and Search Engines:
@@ -6820,7 +6821,7 @@
                 of debugging.  Students will learn the mantra: "What happened?  What
                 was supposed to happen? What does that tell you?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Ketekunan: Stevie dan Proyek Besar'
               description_student: ''
               description_teacher: |-
                 When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
@@ -6832,14 +6833,14 @@
               description_teacher: |
                 In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Urutan dengan menyeret dan penurunan
               description_student: ''
               description_teacher: This lesson will give students an idea of what
                 to expect when they head to the computer lab. It begins with a brief
                 discussion introducing them to computer lab manners, then they will
                 progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: 'Pemrograman: peta bahagia'
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be
                 a short one if students understand the difference between planning
@@ -6857,7 +6858,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: Pergi ke tempat-tempat dengan aman
+              name: 'Digital Kewarganegaraan: Tempat-Tempat Yang Aman'
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -6913,11 +6914,11 @@
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Ketekunan: Stevie dan Proyek Besar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Urutan dengan menyeret dan penurunan
             Your Digital Footprint:
               name: Digital Footprint Kamu
             'Programming: My Robotic Friends':
@@ -6990,7 +6991,7 @@
         coursed:
           stages:
             Introduction:
-              name: Pendahuluan
+              name: Pengantar teka-Teki secara Online
               description_student: This lesson will give you practice in the skills
                 you will need for this course.
               description_teacher: 'In this set of puzzles, students will begin with
@@ -7003,7 +7004,7 @@
                 maze. From there, students will see new types of puzzles like Collector,
                 Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Pemrograman: Kertas Grafik Pemrograman'
               description_student: In this lesson, you will program your friend to
                 draw pictures!
               description_teacher: By "programming" one another to draw pictures,
@@ -7074,7 +7075,7 @@
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
               description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+                Pelajaran ini menunjukkan bagaimana conditional dapat digunakan untuk menyesuaikan program untuk informasi spesifik. Kita tidak selalu memiliki semua informasi yang kita butuhkan ketika menulis program. Kadang-kadang anda akan ingin melakukan sesuatu yang berbeda dalam situasi yang satu dari pada yang lain, bahkan jika anda tidak tahu situasi apa yang akan terjadi ketika kode anda berjalan. Itu adalah di mana conditional datang. Conditional memungkinkan komputer untuk membuat keputusan berdasarkan informasi yang benar setiap saat kode dijalankan.
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7103,7 +7104,7 @@
                 By practicing all three, students will learn to write complex and
                 flexible code.
             Digital Citizenship:
-              name: Kewarganegaraaan Digital
+              name: 'Digital Kewarganegaraan: Berlatih Digital Kewarganegaraan'
               description_student: Some information is not safe to share online. This
                 lesson will help you learn the difference between safe and private
                 information.
@@ -7169,7 +7170,7 @@
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: Pendahuluan
+              name: Pengantar teka-Teki secara Online
               description_student: This fast-paced introduction will give you the
                 chance to practice most of the skills that you will need to solve
                 the puzzles in this course.
@@ -7181,13 +7182,13 @@
                 in the beginning video. In the puzzles, students will practice their
                 sequencing and debugging skills in Maze and Artist.
             The Power of Words:
-              name: The Power of Words
+              name: Kekuatan kata-Kata
             Ice Age Play Lab:
               name: Laboratorium Bermain Ice Age
             Envelope Variables:
               name: Sampul Variabel
             Variables in Artist:
-              name: Variables in Artist
+              name: Artis dalam Variabel
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
@@ -7206,8 +7207,9 @@
               name: Functions with Parameters in Bee
             Explore Project Ideas:
               name: Explore Project Ideas
-              description_student: Here are several games and drawings. Play with
-                each of them to get ideas for projects of your own!
+              description_student: Berikut ini adalah beberapa game dan gambar. Bermain
+                dengan masing-masing dari mereka untuk mendapatkan ide-ide untuk proyek-proyek
+                anda sendiri!
               description_teacher: "The next four lessons provide an opportunity for
                 students to put their coding skills to use in a capstone project.
                 This project will help individuals gain experience with coding and
@@ -7223,10 +7225,10 @@
                 Finally, students will be able to present their finished work to their
                 peers."
             The Design Process:
-              name: The Design Process
-              description_student: Projects this big take time and plenty planning.
-                Here, you will learn about the design process that you'll use to build
-                your own creation.
+              name: Proses Desain
+              description_student: Proyek besar ini memakan waktu dan banyak perencanaan.
+                Di sini, anda akan belajar tentang proses desain yang akan anda gunakan
+                untuk membangun kreasi anda sendiri.
               description_teacher: Over the course of four lessons, students will
                 be building up to programming a project of their own design using
                 either Play Lab or Artist as their programming environment. In this
@@ -7236,8 +7238,8 @@
                 this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Build Your Project
-              description_student: Get those hands ready for plenty of coding! It's
-                time to start building your project.
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean!
+                Saatnya untuk mulai membangun proyek anda.
               description_teacher: Over the course of four lessons, students will
                 be building up to programming a project of their own design using
                 either Play Lab or Artist as their programming environment. Now the
@@ -7246,9 +7248,9 @@
                 of the project. The lesson guide for all four stages of the process
                 can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
-              name: Revise Your Project
+              name: Merevisi Proyek Anda
             Presentation Your Project:
-              name: Presentation Your Project
+              name: Presentasi Proyek Anda
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
               description_student: Learn how to describe a game from the computer's
@@ -7271,18 +7273,19 @@
                 sections of code only if something is true, otherwise it runs something
                 else.
             Private and Personal Information:
-              name: Private and Personal Information
-              description_student: The internet is fun and exciting, but it's important
-                to stay safe too. This lesson teaches you the difference between information
-                that is safe to share and information that is private.
+              name: 'Digital Kewarganegaraan: Pribadi dan Informasi Pribadi'
+              description_student: Internet adalah menyenangkan dan menarik, tetapi
+                sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan
+                antara informasi yang aman untuk berbagi dan informasi yang bersifat
+                pribadi.
               description_teacher: |-
                 Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
 
                 As students visit sites that request information about their identities, they learn to adopt a critical inquiry process that empowers them to protect themselves and their families from identity theft. In this lesson, students learn to think critically about the user information that some websites request or require. They learn the difference between private information and personal information, as well as how to distinguish what is safe or unsafe to share online.
             Build a Star Wars Game:
               name: Build a Star Wars Game
-              description_student: Feel the force as you build your own Star Wars
-                game in this lesson.
+              description_student: Merasakan kekuatan seperti yang anda membangun
+                anda sendiri Peran Bintang Permainan dalam pelajaran ini.
               description_teacher: In this lesson, students will practice using events
                 to build a game that they can share online. Featuring R2-D2 and other
                 Star Wars characters, students will be guided through events, then
@@ -7322,8 +7325,9 @@
                 `if / else` statements.
             Determine the Concept:
               name: Determine the Concept
-              description_student: "We aren't giving away any secrets! \nThis lesson
-                could use any of the skills you've learned so far."
+              description_student: "Kami tidak memberikan rahasia! \nPelajaran ini
+                bisa menggunakan semua keterampilan yang telah anda pelajari sejauh
+                ini."
               description_teacher: This lesson brings together concepts from the previous
                 lessons and gives students a chance to think critically about how
                 they would solve each problem, but without telling them which concept
@@ -7339,7 +7343,7 @@
                 keyboard controls. This set of puzzles will also loosely guide students
                 through game development, but with freedom to add their own ideas.
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
               description_student: Get ready to show off! It's time to present your
                 finished project to your peers.
               description_teacher: Over the course of four lessons, students will
@@ -7412,7 +7416,7 @@
                 will learn the difference between a detailed and general algorithm
                 while playing with tangrams.
             Introduction:
-              name: Pendahuluan
+              name: Pengantar teka-Teki secara Online
               description_student: This lesson will give you a brief introduction
                 to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to
@@ -7420,9 +7424,10 @@
                 concepts in the later part of the course. This "ramp up" lesson equalizes
                 the playing field between the experts and the beginners in your class. '
             The Power of Words:
-              name: The Power of Words
-              description_student: Bullying is never okay. This lesson will teach
-                you about what is and isn't okay to say online.
+              name: 'Digital Kewarganegaraan: Kekuatan kata-Kata'
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran
+                ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa
+                untuk mengatakan secara online.
               description_teacher: "Students consider that while they are enjoying
                 their favorite websites they may encounter messages from other kids
                 that can make them feel angry, hurt, sad, or fearful. They explore
@@ -7552,9 +7557,9 @@
                 students will be able to present their finished work to their peers."
             The Design Process:
               name: The Design Process
-              description_student: Projects this big take time and plenty planning.
-                Here, you will learn about the design process that you'll use to build
-                your own creation.
+              description_student: Proyek besar ini memakan waktu dan banyak perencanaan.
+                Di sini, anda akan belajar tentang proses desain yang akan anda gunakan
+                untuk membangun kreasi anda sendiri.
               description_teacher: Over the course of five lessons, students will
                 be building up to building a project of their own design using either
                 Play Lab or Artist as their programming environment. In this portion
@@ -7564,7 +7569,7 @@
                 project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
               name: Build Your Project
-              description_student: Finally you can start building your project!
+              description_student: Akhirnya anda dapat mulai membangun proyek anda!
               description_teacher: Over the course of five lessons, students will
                 be building up to building a project of their own design using either
                 Play Lab or Artist as their programming environment. Now the students
@@ -7573,7 +7578,7 @@
                 The lesson guide overviewing all five stages of the process can be
                 found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
-              name: Revise Your Project
+              name: Merevisi Proyek Anda
               description_student: Rome wasn't built in a day and your project shouldn't
                 be, either. Take time to edit and revise your project to make it the
                 best it can be.
@@ -7585,11 +7590,11 @@
                 all five stages of the process can be found in the beginning of the
                 project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Presentation Your Project:
-              name: Presentation Your Project
+              name: Presentasi Proyek Anda
             Present Your Project:
-              name: Present Your Project
-              description_student: Time to show your work! Here you will be presenting
-                your awesome project to your peers.
+              name: Menyajikan Proyek Anda
+              description_student: Waktu untuk menunjukkan pekerjaan anda! Di sini
+                anda akan menyajikan proyek mengagumkan untuk teman-teman anda.
               description_teacher: Over the course of five lessons, students will
                 be building up to building a project of their own design using either
                 Play Lab or Artist as their programming environment. Finally, students
@@ -7649,7 +7654,7 @@
               name: Penutupan
           title: CS Discoveries TeacherCon Novice Facilitators
           description_audience: CSD Novice Facilitators
-          description_short: Reflection questions for novice facilitators at TeacherCon.
+          description_short: Pertanyaan refleksi bagi pemula fasilitator di TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as
             a novice facilitator. '
         csp-explore-task:
@@ -7683,7 +7688,8 @@
         csp-ap-tech-setup:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Mempersiapkan teknologi - AP Portofolio Digital dan alat-Alat
+                Lain
           title: CSP AP Digital Portfolio and Other Tools
           description_audience: ''
           description_short: ''
@@ -7692,7 +7698,8 @@
         csp-ap:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Mempersiapkan teknologi - AP Portofolio Digital dan alat-Alat
+                Lain
             Create PT Prep - Reviewing the Task:
               name: Membuat persiapan PT - Meninjau tugas
             Create PT Prep - Making a Plan:
@@ -7709,10 +7716,10 @@
               name: Participate in a longitudinal study!
           title: CSP AP Exam and Performance Tasks
           description_audience: ''
-          description_short: Lessons guide students to prepare for and complete the
-            AP exam and Performance Tasks.
-          description: Lessons guide students to prepare for and complete the AP exam
-            and Performance Tasks.
+          description_short: Pelajaran membimbing siswa untuk mempersiapkan dan menyelesaikan
+            ujian AP dan Kinerja Tugas.
+          description: Pelajaran membimbing siswa untuk mempersiapkan dan menyelesaikan
+            ujian AP dan Kinerja Tugas.
         cspnovice:
           stages:
             Welcome:
@@ -7727,7 +7734,7 @@
               name: Penutupan
           title: CS Principles TeacherCon Novice Facilitators
           description_audience: CSP Novice Facilitators
-          description_short: Reflection questions for novice facilitators at TeacherCon.
+          description_short: Pertanyaan refleksi bagi pemula fasilitator di TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as
             a novice facilitator. '
         novice-view:
@@ -7744,7 +7751,7 @@
               name: CSD Wednesday
             CSD Thursday:
               name: CSD Thursday
-          title: view novice responses
+          title: melihat tanggapan pemula
           description_audience: brook, dani, mal
           description_short: NA
           description: NA
@@ -7925,7 +7932,7 @@
             Introduction:
               name: Pendahuluan
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Pemrograman: Kertas Grafik Pemrograman'
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Collector:
@@ -7941,7 +7948,7 @@
             Digital Citizenship:
               name: Kewarganegaraaan Digital
             Screen Out the Mean:
-              name: Screen Out the Mean
+              name: Berarti keluar layar
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Build a Star Wars Game:
@@ -7987,15 +7994,15 @@
             Build Your Project:
               name: Build Your Project
             Revise Your Project:
-              name: Revise Your Project
+              name: Merevisi Proyek Anda
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
             Nested Loops Project in Frozen:
               name: Nested Loops Project in Frozen
             'How it Works: The Internet':
               name: 'How it Works: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Common Sense Education: Digital Citizenship'
+              name: 'Digital Kewarganegaraan: Berlatih Digital Kewarganegaraan'
             'Common Sense Education: Screen Out the Mean':
               name: 'Common Sense Education: Screen Out the Mean'
             Events in Star Wars:
@@ -8025,11 +8032,11 @@
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Ketekunan: Stevie dan Proyek Besar'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Learn to Drag and Drop:
-              name: Learn to Drag and Drop
+              name: Urutan dengan menyeret dan penurunan
             'Online Safety: Your Digital Footprint':
               name: 'Online Safety: Your Digital Footprint'
             'Programming: My Robotic Friends':
@@ -8147,7 +8154,7 @@
             Paper Prototypes:
               name: Paper Prototypes
             Prototype Testing:
-              name: Prototype Testing
+              name: Pengujian Prototipe
             Digital Design:
               name: Digital Design
             Event Driven Programming:
@@ -8250,7 +8257,7 @@
             Build Your Project:
               name: Build Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
             Internet:
               name: Internet
             Crowdsourcing:
@@ -8268,7 +8275,7 @@
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritma: Kertas Grafik Pemrograman'
             Introduction:
               name: Pendahuluan
             Events in Bounce:
@@ -8326,7 +8333,7 @@
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: 'Algoritma: Kertas Grafik Pemrograman'
             Introduction:
               name: Pendahuluan
             'Algorithms: Relay Programming':
@@ -8390,9 +8397,9 @@
             Build Your Project:
               name: Build Your Project
             Revise Your Project:
-              name: Revise Your Project
+              name: Merevisi Proyek Anda
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
             Building a Foundation:
               name: Membangun dasar
             Debugging with Scrat:
@@ -8468,7 +8475,7 @@
             Build Your Project:
               name: Build Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
             Internet:
               name: Internet
             Crowdsourcing:
@@ -8502,7 +8509,7 @@
             Course E Introduction:
               name: Course E Introduction
             The Power of Words:
-              name: The Power of Words
+              name: Kekuatan kata-Kata
             Ice Age Play Lab:
               name: Laboratorium Bermain Ice Age
             Conditionals in Minecraft:
@@ -8534,9 +8541,9 @@
             Build Your Project:
               name: Build Your Project
             Revise Your Project:
-              name: Revise Your Project
+              name: Merevisi Proyek Anda
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
           title: New Script for F
           description_audience: ''
           description_short: ''
@@ -8560,15 +8567,15 @@
             Project - Create a Representation:
               name: Project - Create a Representation
             Problem Solving and Data:
-              name: Problem Solving and Data
+              name: Pemecahan masalah dan Data
             Making Decisions with Data:
               name: Making Decisions with Data
             Interpreting Data:
               name: Interpreting Data
             Automating Data Decisions:
-              name: Automating Data Decisions
+              name: Mengotomatisasi Data Keputusan
             Problem Solving with Big Data:
-              name: Problem Solving with Big Data
+              name: Pemecahan masalah dengan Data Besar
             Project - Solve a Data Problem:
               name: Project - Solve a Data Problem
           title: CSD Unit 5 - Data and Society
@@ -8657,7 +8664,7 @@
             Paper Prototypes:
               name: Paper Prototypes
             Prototype Testing:
-              name: Prototype Testing
+              name: Pengujian Prototipe
             Digital Design:
               name: Digital Design
             Event Driven Programming:
@@ -8718,7 +8725,7 @@
             What is a Computer?:
               name: Apa itu komputer?
             Problem Solving with Big Data:
-              name: Problem Solving with Big Data
+              name: Pemecahan masalah dengan Data Besar
             Programming - Hour of Code:
               name: Programming - Hour of Code
             Simple Encryption:
@@ -8736,7 +8743,7 @@
             Intro to App Lab:
               name: Intro to App Lab
             Smart Clothing Design:
-              name: Smart Clothing Design
+              name: Pintar Desain Pakaian
             Intro to App Lab (13+):
               name: Intro to App Lab (13+)
           title: PwC Access Your Potential
@@ -8822,13 +8829,14 @@
             Explore PT - Complete the Task:
               name: Jelajahi PT - Menyelesaikan tugas
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Mempersiapkan teknologi - AP Portofolio Digital dan alat-Alat
+                Lain
             'Setup: Digital Portfolio and Other Tools':
               name: 'Setup: Digital Portfolio and Other Tools'
           title: Explore - AP Performance Task Prep
           description_audience: ''
-          description_short: Lessons and resources to help students prepare for and
-            complete the AP Explore Performance Tasks.
+          description_short: Pelajaran dan sumber daya untuk membantu siswa mempersiapkan
+            dan menyelesaikan AP Tepat Kinerja Tugas.
           description: |-
             These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
             \r
@@ -8836,7 +8844,8 @@
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
-              name: Tech Setup - Your AP Digital Portfolio and Other Tools
+              name: Mempersiapkan teknologi - AP Portofolio Digital dan alat-Alat
+                Lain
             Create PT Prep - Reviewing the Task:
               name: Membuat persiapan PT - Meninjau tugas
             Create PT Prep - Making a Plan:
@@ -8854,7 +8863,7 @@
         csp3-reovery:
           stages:
             Under the sea recovery:
-              name: Under the sea recovery
+              name: Pemulihan Di bawah laut
           title: 'csp3 under the sea student work recovery '
           description_audience: ''
           description_short: ''
@@ -8862,7 +8871,7 @@
         csp3-recovery:
           stages:
             Under the sea recovery:
-              name: Under the sea recovery
+              name: Pemulihan Di bawah laut
             standalone template:
               name: standalone template
           title: 'CSP3 under the sea student work recovery '
@@ -8954,7 +8963,7 @@
             Build Your Project:
               name: Build Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
             Internet:
               name: Internet
             Crowdsourcing:
@@ -8990,7 +8999,7 @@
             Introduction:
               name: Pendahuluan
             The Power of Words:
-              name: The Power of Words
+              name: Kekuatan kata-Kata
             Ice Age Play Lab:
               name: Laboratorium Bermain Ice Age
             Conditionals in Minecraft:
@@ -9022,9 +9031,9 @@
             Build Your Project:
               name: Build Your Project
             Revise Your Project:
-              name: Revise Your Project
+              name: Merevisi Proyek Anda
             Present Your Project:
-              name: Present Your Project
+              name: Menyajikan Proyek Anda
           title: Course F 2018
           description_audience: ''
           description_short: ''
@@ -9032,7 +9041,7 @@
         csd6-old:
           stages:
             Computing Innovations:
-              name: Computing Innovations
+              name: Inovasi Komputasi
             Input Unplugged:
               name: Input Unplugged
             Event Types:
@@ -9040,7 +9049,7 @@
             Getters and Setters:
               name: Getters and Setters
             The Circuit Playground:
-              name: The Circuit Playground
+              name: Sirkuit Bermain Anak
             Lists:
               name: List
             Lights:
@@ -9065,3 +9074,80 @@
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Pemrograman untuk Hiburan
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Menggambar dalam lab permaianan
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: Variabel
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Booleans dicabut
+            Conditionals:
+              name: Kondisi
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: Proyek - kartu interaktif
+            Velocity:
+              name: Velocity
+            Collision Detection:
+              name: Deteksi tumbukan
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Tumbukan
+            Functions:
+              name: Fungsi
+            The Game Design Process:
+              name: Proses perancangan permainan
+            Using the Game Design Process:
+              name: Proses menggunakan desain permainan
+            Project - Design a Game:
+              name: Proyek - merancang sebuah permainan
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: Pemrograman
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."
