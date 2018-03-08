@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import Radium from 'radium';
 import color from "../../util/color";
 import PopUpMenu from "@cdo/apps/lib/ui/PopUpMenu";
 import styleConstants from '../../styleConstants';
@@ -42,7 +41,7 @@ const styles = {
   },
 };
 
-class QuickActionsCell extends Component {
+export default class QuickActionsCell extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.node,
@@ -52,7 +51,7 @@ class QuickActionsCell extends Component {
   };
 
   static defaultProps = {
-    type: 'body'
+    type: QuickActionsCellType.body
   };
 
   state = {
@@ -108,7 +107,7 @@ class QuickActionsCell extends Component {
       body: 'chevron-down'
     };
 
-    const styleByType = type === "header" ?
+    const styleByType = type === QuickActionsCellType.header ?
       styles.actionButton["header"] :
       this.state.open ?
         styles.hoverFocus["body"] :
@@ -139,5 +138,3 @@ class QuickActionsCell extends Component {
     );
   }
 }
-
-export default Radium(QuickActionsCell);
