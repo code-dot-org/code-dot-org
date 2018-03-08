@@ -77,7 +77,7 @@ You will not need to rent a vehicle while at TeacherCon since all conference ses
 <summary>**Can I share a ride from the airport to the hotel with fellow TeacherCon attendees?**</summary>
 <p>
 <br>
-For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the [designated rideshare pickup locations at ATL Hartsfield-Jackson](http://www.atl.com/rideshare/). Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the rideshare pickup locations at ATL Hartsfield-Jackson (for more info, please visit http://www.atl.com/rideshare). Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
 </p> 
 </details>
 
