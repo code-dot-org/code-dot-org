@@ -27,7 +27,7 @@
   twentyhours_text: "İlk Kod Saati'ni bitirdin mi? Bir sonraki kursta daha fazla bilgisayar bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: 'Code.org: Herkes öğrenebilir'
   og_title_soon: "Kodlama Saati geliyor"
-  og_title_here: "Kodlama saati buradadır!"
+  og_title_here: "Kod Saati burada!"
   og_description: "Her okulda her öğrenci bilgisayar bilimi öğrenme fırsatını hakkediyor. "
   og_description_celeb: "Yeni öğreticileri deneyin, kendiniz veya sınıfınız için ünlü bir video sohbet edinin!"
   csedweek_og_title: "Kodlama Saati geliyor"
@@ -256,7 +256,7 @@
   studiobar_teacher_body: "Sınıfınıza Code Studio 'yu tanıtın"
   studiobar_frozen_title: "Saat Kodu"
   studiobar_frozen_body: "Anna ve Elsa ile kış diyarı oluştur"
-  studiobar_donate_title: "Bağışla"
+  studiobar_donate_title: "Bağış Yap"
   studiobar_donate_body: "Bağış yapacağın her dolar ile bir çocuk daha öğrenecek"
   studiobar_shop_title: "Mağaza"
   studiobar_shop_body: "Kalıplarını kır. Logomuzu gururla taşı."
@@ -307,7 +307,7 @@
   homepage_slot_text_frozen: "Frozen: Anna ve Elsa "
   homepage_slot_text_teacher: "Öğretmen Panosu"
   homepage_slot_text_studio: "Tüm eğitim içeriklerimiz"
-  homepage_slot_text_course4: "Ders 4"
+  homepage_slot_text_course4: "Kurs 4"
   homepage_slot_text_shop: "Mağaza"
   homepage_slot_text_flappy: "Flappy Kod"
   homepage_action_text_hoc: "Kodlama Saati her öğrenci içindir."
@@ -370,7 +370,7 @@
   homepage_header_codestudio: "Code Studio öğrencilerinin yaptıkları"
   homepage_header_donors: "Code.org destekleyenlere teşekkürler"
   homepage_donors_seall: "Tümünü göster"
-  homepage_donors_donate: "Bağışla"
+  homepage_donors_donate: "Bağış Yap"
   contact_form_topic_student: "Ben öğrenciyim"
   contact_form_topic_parent: "Bir ebeveynim"
   contact_form_topic_teacher: "Bir öğretmen/eğitimciyim"
@@ -760,7 +760,7 @@
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
+  dashboard_express: 'Hızlandırılmış Kurs:'
   dashboard_unplugged: "Bilgisayarlarınız yok ise bu <a href='%{unplugged_url}'>bilgisayarsız dersleri sınıfınızda</a> kullanın."
   dashboard_tools: 'Tools: '
   dashboard_curriculum: "Müfredat"
@@ -1172,12 +1172,12 @@
   course2_shortdescription_congrats: "Temel okuma becerileri olan öğrenciler için. Bu kurs Kurs 1 üzerine koyarak devam eder. Öğrenciler program oluşturarak problem çözecek, etkileşimli oyunlar ya da hikaye geliştirecek ve bunları paylaşabilecektir. 2-5 sınıflar için önerilir."
   course3_shortdescription_congrats: "Bir sonraki seviyeye hazırmısın? Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir."
   course4_shortdescription_congrats: "Bir sonraki seviyeye hazır mısın? Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "Okumaya yeni başlayanlar için bilgisayar bilimine giriş."
+  courseb_shortdescription_congrats: "Okumaya yeni başlayanlar için bilgisayar bilimine giriş."
+  coursec_shortdescription_congrats: "Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun."
+  coursed_shortdescription_congrats: "Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun."
+  coursee_shortdescription_congrats: "Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun."
+  coursef_shortdescription_congrats: "Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun."
   codeorg_longdescription: "Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir."
   codeintl_longdescription: "Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten eğitimli oyun denebilir."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

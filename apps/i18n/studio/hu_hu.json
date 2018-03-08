@@ -219,6 +219,7 @@
   "iceAge": "Jégkorszak!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "szereplő",
   "ifSpriteN": "színész {spriteIndex}",
   "incrementPlayerScore": "pontszám",
   "isSet": "beállítva",

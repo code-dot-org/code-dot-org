@@ -163,9 +163,6 @@ ro:
       CollisionDetection:
         title: Detectarea coliziunilor şi teorema lui Pitagora
         desc: A determina când se ating obiectele de pe ecran este un aspect important în cele mai multe jocuri. În această lecţie ne vom uita la modul în care Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste două puncte (sau caractere ale jocului) se ating.
-      ! '':
-        title: '[șir gol]'
-        desc: '[șir gol]'
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
