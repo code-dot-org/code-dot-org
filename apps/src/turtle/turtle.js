@@ -1563,13 +1563,22 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.avatar.visible = true;
       break;
     case 'sticker':
+
+      let size = MAX_STICKER_SIZE;
+
+      if (values[1]) {
+        if (typeof values[1] === 'number'){
+          size = values[1];
+        }
+      }
+
       if (this.visualization.shouldDrawNormalized_) {
         values = Object.keys(this.stickers);
       }
 
       var img = this.stickers[values[0]];
 
-      var dimensions = scaleToBoundingBox(MAX_STICKER_SIZE, img.width, img.height);
+      var dimensions = scaleToBoundingBox(size, img.width, img.height);
       var width = dimensions.width;
       var height = dimensions.height;
 
