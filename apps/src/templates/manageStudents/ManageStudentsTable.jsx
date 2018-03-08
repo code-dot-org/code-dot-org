@@ -21,6 +21,13 @@ import experiments from '@cdo/apps/util/experiments';
 
 const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
+const styles = {
+  inline: {
+    width: '40%',
+    float: 'left',
+  },
+};
+
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
@@ -182,10 +189,10 @@ class ManageStudentsTable extends Component {
         }
         {numberOfEditingRows <= 1 &&
           <span>
-            <div style={{width: '40%', float: 'left'}}>
+            <div style={styles.inline}>
               {i18n.actions()}
             </div>
-            <div style={{width: '40%', float: 'left'}}>
+            <div style={styles.inline}>
               {showShareColumn &&
                 <ManageStudentsActionsHeaderCell/>
               }
