@@ -1,5 +1,5 @@
 .quarterslot-links.div.col-25.col-mobile-50
-  %a{href: entry[:url]}
+  %a.linktag{href: entry[:url], id: entry[:id]}
     - entry[:image] = entry[:image].gsub("/images/", "/images/fit-400/")
     .slotbox{style: "background-image: url(#{entry[:image]})"}
       .headerbox{style: "background-color: rgb(#{entry[:color1]}); background-color: rgba(#{entry[:color1]}, 0.92)"}
@@ -11,7 +11,7 @@
           - else
             &nbsp;
   .thelinks{style: "background-color: rgb(#{entry[:color2]})"}
-    - entry[:links].each do |link|
+    - entry[:links].each_with_index do |link, link_index|
       %p.linkentry
-        %a.link{href: link[:url]}
+        %a.link.linktag{href: link[:url], id: "#{entry[:id]}-#{link_index}" }
           = I18n.t(link[:text]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)

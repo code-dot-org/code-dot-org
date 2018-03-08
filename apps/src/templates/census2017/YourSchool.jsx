@@ -1,6 +1,4 @@
-import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
@@ -8,8 +6,9 @@ import Notification, { NotificationType } from '../Notification';
 import MobileNotification from '../MobileNotification';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from "@cdo/locale";
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import CensusMap from './CensusMap';
 
 const styles = {
   heading: {
@@ -38,19 +37,33 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    hideMap: PropTypes.bool
+    fusionTableId: PropTypes.string,
+    hideMap: PropTypes.bool,
   };
 
-  componentDidMount() {
-    if (!this.props.hideMap) {
-      $('#map').appendTo(ReactDOM.findDOMNode(this.refs.map)).show();
-    }
-  }
+  state = {
+    schoolDropdownOption: undefined,
+  };
+
+  handleSchoolDropdownChange = (option) => {
+    this.setState({
+      schoolDropdownOption: option,
+    });
+  };
+
+  hasLocation = (school) => {
+    return !!(school.latitude && school.longitude);
+  };
 
   render() {
     const {responsiveSize} = this.props;
     const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
-
+    const schoolDropdownOption = this.state.schoolDropdownOption;
+    const schoolId = schoolDropdownOption ? schoolDropdownOption.value.toString() : '';
+    let schoolForMap;
+    if (schoolDropdownOption && schoolId !== '-1') {
+      schoolForMap = schoolDropdownOption.school;
+    }
     return (
       <div>
         <SpecialAnnouncementActionBlock/>
@@ -85,18 +98,31 @@ class YourSchool extends Component {
         {!this.props.hideMap && (
            <div>
              <h1 style={styles.heading}>
-               Put your school on the map
+               Does your school teach Computer Science?
              </h1>
              <h3 style={styles.description}>
-               {i18n.yourSchoolMapDesc()}
-               If you are located in the US, please <a href="#form">fill out the form below</a>.
-               If you are outside the US, <a href="/learn/local">add your school here</a>.
+               Find your school on the map to see if computer science is already being offered.
+               Can't find your school on the map? <a href="#form">Fill out the survey below</a>.
              </h3>
-             <ProtectedStatefulDiv ref="map"/>
+             <SchoolAutocompleteDropdown
+               value={this.props.prefillData ? this.props.prefillData['schoolId'] : undefined}
+               fieldName="census-map-school-dropdown"
+               schoolDropdownOption={schoolDropdownOption}
+               onChange={this.handleSchoolDropdownChange}
+               schoolFilter={this.hasLocation}
+             />
+             <br/>
+             <CensusMap
+               fusionTableId={this.props.fusionTableId}
+               school={schoolForMap}
+               onSchoolChange={this.handleSchoolDropdownChange}
+             />
            </div>
         )}
         <CensusForm
           prefillData={this.props.prefillData}
+          schoolDropdownOption={schoolDropdownOption}
+          onSchoolDropdownChange={this.handleSchoolDropdownChange}
         />
       </div>
     );

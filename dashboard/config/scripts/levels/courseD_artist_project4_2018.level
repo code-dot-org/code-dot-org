@@ -37,8 +37,8 @@
     "markdown_instructions": "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _\"What happens if we draw snowflakes on top of each other?\"_\r\n\r\nTry layering two different shapes of snowflakes on top of one another with a little turn in between - see what you get! ",
     "project_template_level_name": "courseD_artist_projectTemplate_2018",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

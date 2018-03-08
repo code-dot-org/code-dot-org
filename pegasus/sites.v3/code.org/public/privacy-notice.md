@@ -8,7 +8,7 @@ theme: responsive
 Date of Last Revision: August 24, 2016
 
 
-Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
+Code.org® is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
 Code.org is committed to protecting the privacy of children who use our sites and applications.  This notice describes our practices of collecting, using, and disclosing personal information from children under 13.  Please review our general [Privacy Policy](<%= CDO.code_org_url('/privacy') %>) and [Terms of Use Agreement](<%= CDO.code_org_url('/tos') %>) for additional information.  These policies are in accordance with the U.S. Children’s Online Privacy Protection Act (COPPA).  If you have any questions about these policies, you may write us at [http://code.org/contact](<%= CDO.code_org_url('/contact') %>) or at 1501 4th Avenue, Suite 900, Seattle, WA 98101. 
 

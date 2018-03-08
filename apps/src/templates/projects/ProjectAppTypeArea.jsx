@@ -27,7 +27,7 @@ const styles = {
     float: 'left'
   },
   viewMore: {
-    color: color.light_teal,
+    color: color.teal,
     float: 'right',
     marginTop: 35,
     cursor: 'pointer',
@@ -47,6 +47,10 @@ class ProjectAppTypeArea extends React.Component {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
     labViewMoreString: PropTypes.string.isRequired,
+    // Ability to hide link for Applab and Gamelab
+    // TODO (Erin B.) remove when we have enough featured projects and a solid profanity filter
+    // that we can ensure there won't be inappropriate projects.
+    hideViewMoreLink: PropTypes.bool,
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
@@ -192,15 +196,17 @@ class ProjectAppTypeArea extends React.Component {
     return (
       <div style={styles.grid}>
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
-        <span
-          className="viewMoreLink"
-          style={styles.viewMore}
-          onClick={this.viewMore}
-        >
-          {this.props.isDetailView && <i className="fa fa-angle-left" style={{paddingRight: 6}} ></i>}
-          {this.props.labViewMoreString}
-          {!this.props.isDetailView && <i className="fa fa-angle-right" style={{paddingLeft: 6}} ></i>}
-        </span>
+        {!this.props.hideViewMoreLink &&
+          <span
+            className="viewMoreLink"
+            style={styles.viewMore}
+            onClick={this.viewMore}
+          >
+            {this.props.isDetailView && <i className="fa fa-angle-left" style={{paddingRight: 6}} ></i>}
+            {this.props.labViewMoreString}
+            {!this.props.isDetailView && <i className="fa fa-angle-right" style={{paddingLeft: 6}} ></i>}
+          </span>
+        }
         <div style={{clear: 'both'}}></div>
         {this.renderProjectCardList(this.props.projectList, this.state.numProjects)}
         {this.props.isDetailView && this.renderViewMoreButtons()}
