@@ -655,7 +655,7 @@
     video:
       name:
         maze_intro: Intro Labirint
-        artist_intro: 'Intro Artist '
+        artist_intro: Intro Artist
         farmer_intro: Intro Fermier
         flappy_intro: Introducere Flappy
         loop_times: Bloc Repetă ori
@@ -687,7 +687,7 @@
         C1_maze_intro_sequencing: Introducere în secvențierea unui labirint
         C1_maze_debugging: Labirint Depanare
         C1_bee_level_intro: Albină Nivel - Introducere
-        C1_artist_intro: 'Intro Artist '
+        C1_artist_intro: Intro Artist
         C1_spelling_bee_intro: Introducere în Albina ortografiind
         C1_zuck_repeat_loop: Bucle de Labirint
         C1_bee_loops: Bucle de Ortografie
@@ -697,7 +697,7 @@
         C1_building_foundation: Construirea unei Fundaţii
         C1_going_places_safely: Mergând în locuri în siguranţă
         C2_maze_intro: Intro Labirint
-        C2_artist_intro: 'Intro Artist '
+        C2_artist_intro: Intro Artist
         C2_zuck_repeat_loop: Bucle de Labirint
         C2_artist_loops: Bucle de Artist
         C2_artist_debugging: Depanare Artist
@@ -713,7 +713,7 @@
         C2_digital_footprint: Amprenta ta Digitală
         C2_digital_footprint_v2: Amprenta ta Digitală
         C3_maze_level_4: Bucle de Labirint
-        C3_artist_intro: 'Intro Artist '
+        C3_artist_intro: Intro Artist
         C3_artist_functions: Funcţii de Artist
         C3_bee_functions: Funcţii de Ortografie
         C3_bee_conditionals: Condiţii de Ortografie
@@ -922,6 +922,7 @@
         applab_intro_sounds: Laborator de applicații - imagini şi sunete
         applab_intro_designmode: Laborator de aplicații - mod de proiectare
         applab_intro_share: Laborator de applicații - Distribuie applicația ta
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

@@ -281,9 +281,6 @@
           i wzór na odległość mogą być użyte do pomiaru odległości między dwoma punktami
           na płaszczyźnie, a następnie określenia, czy te dwa punkty (lub postacie
           w grze) dotykają się.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Pętle bez komputera
         desc: W tej lekcji dowiesz się, jak używać pętli!

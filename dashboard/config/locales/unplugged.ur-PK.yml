@@ -263,9 +263,6 @@
       CollisionDetection:
         title: "تصادم کا پتہ لگانے اور مسئلۂ فیثا غورث"
         desc: Collision Detection lesson description
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

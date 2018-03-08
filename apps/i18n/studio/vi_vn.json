@@ -219,6 +219,7 @@
   "iceAge": "Kỷ băng hà!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "nhân vật",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "điểm số ghi được",
   "isSet": "is set",

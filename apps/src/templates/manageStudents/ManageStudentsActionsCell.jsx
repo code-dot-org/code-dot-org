@@ -4,7 +4,7 @@ import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import Button from '../Button';
-import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudent, RowType} from './manageStudentsRedux';
+import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, addStudents, RowType} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
@@ -13,6 +13,9 @@ import i18n from '@cdo/locale';
 const styles = {
   xIcon: {
     paddingRight: 5,
+  },
+  saveButton: {
+    marginRight: 5,
   }
 };
 
@@ -113,6 +116,7 @@ class ManageStudentActionsCell extends Component {
               color={Button.ButtonColor.orange}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
+              style={styles.saveButton}
             />
             <Button
               onClick={this.onCancel}
@@ -140,7 +144,7 @@ class ManageStudentActionsCell extends Component {
           <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
           <div>
             {i18n.removeStudentConfirm1() + ' '}
-            <a href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
+            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
               {i18n.removeStudentConfirm2()}
             </a>
             {' ' + i18n.removeStudentConfirm3()}
@@ -180,6 +184,6 @@ export default connect(state => ({}), dispatch => ({
     dispatch(saveStudent(id));
   },
   addStudent(id) {
-    dispatch(addStudent(id));
+    dispatch(addStudents([id]));
   },
 }))(ManageStudentActionsCell);
