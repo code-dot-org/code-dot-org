@@ -3,6 +3,7 @@ FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
+    funded false
     on_map true
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}

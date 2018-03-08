@@ -5,6 +5,9 @@ import i18n from "@cdo/locale";
 import {editStudent} from './manageStudentsRedux';
 
 const styles = {
+  inputBox: {
+    width: 225
+  },
   details: {
     fontSize: 12
   },
@@ -49,11 +52,14 @@ class ManageStudentNameCell extends Component {
           </div>
         }
         {this.props.isEditing &&
-          <div style={{paddingTop: 10}}>
-            <input value={editedValue} onChange={this.onChangeName}/>
-            <div style={{color: 'red', fontSize: 9, height: 10}}>
-              {this.props.editedValue.length === 0 ? i18n.required() : ''}
-            </div>
+          <div>
+            <input
+              required
+              style={styles.inputBox}
+              value={editedValue}
+              onChange={this.onChangeName}
+              placeholder={i18n.nameRequired()}
+            />
           </div>
         }
       </div>

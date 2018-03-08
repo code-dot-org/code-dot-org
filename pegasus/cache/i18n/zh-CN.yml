@@ -433,8 +433,7 @@
   minecraft_adventurer: "《我的世界》大冒险"
   minecraft_tutorials: "编程一小时《我的世界》教程"
   minecraft_specs: "多种语言|最新的浏览器或平板电脑|2年级以上"
-  minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
-    new activity! Journey through Minecraft with code.
+  minecraft_agent_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   minecraft_agent_button: "开始"
   minecraft_designer_description: "在你自己的《我的世界》中编写各种动物和其他生物。"
   minecraft_designer_button: "开始"
@@ -982,7 +981,7 @@
   coursef-draft_name: "课程 F"
   coursef_name: "课程 F"
   accelerated_name: "加速课程"
-  express_name: Express Course
+  express_name: "快速课程"
   pre-express_name: "适用于还不能阅读的学生的快捷课程"
   cspunit1_name: "（旧）单元 1︰ 数字信息"
   cspunit2_name: "（旧）单元 2︰ 互联网"
@@ -1211,12 +1210,12 @@
     学生将创造可以与任何人分享的的交互式故事和游戏。 建议4-5年级学习。"
   course4_shortdescription_congrats: "准备好继续了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
     学生将创造可以与任何人分享的的交互式故事和游戏。 建议 4-8年级。"
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: "为学前学生准备的计算机科学介绍"
+  courseb_shortdescription_congrats: "为学前学生准备的计算机科学介绍。（类似于课程A，但是对年长的学生有更多变化。)"
+  coursec_shortdescription_congrats: "学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。"
+  coursed_shortdescription_congrats: "快速浏览课程C中的概念，然后进一步学习算法、嵌套循环、条件等等。"
+  coursee_shortdescription_congrats: "在课程C&D中快速覆盖概念，然后继续使用函数。"
+  coursef_shortdescription_congrats: "学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。"
   codeorg_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样的自学教程，并由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。通过学习，会了解到重复，循环，条件和基本算法。"
   codeintl_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。"
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
@@ -1576,5 +1575,5 @@
   syncing_students_instructions: '如果您的 Code.org 小组与您在 google 教室中的学生名单不够新, 请点击 "管理学生"
     标签 上的"从 google 教室同步学生信息" 按钮:'
   google_sign_in_instruct: '从那里, 他们应该选择 "使用谷歌帐户登录" 选项:'
-  hero_name: 'Minecraft: Hero''s Journey'
+  hero_name: "《我的世界》: 英雄之旅"
   applab-intro_name: "应用程序实验室简介"

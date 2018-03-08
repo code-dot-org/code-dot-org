@@ -48,7 +48,6 @@ export default class VideoThumbnail extends Component {
           }, true);
           if ((experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) && this.props.logText) {
             firehoseClient.putRecord(
-              'analysis-events',
               {
                 study: 'instructions-resources-tab',
                 study_group: 'resources-tab',

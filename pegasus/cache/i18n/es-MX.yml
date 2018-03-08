@@ -1348,7 +1348,7 @@
   cspexams_category_name: Prueba de práctica de principios de CS
   research_studies_category_name: Research Studies
   applab_name: Laboratorio de App
-  gamelab_name: Game Lab
+  gamelab_name: Laboratorio de juego
   basketball_name: Crear un juego de baloncesto
   sports_name: Crea tu propio Juego de deportes
   applab_gradelevel: Mayores de 13 años
@@ -1413,7 +1413,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Califación 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Edad 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta

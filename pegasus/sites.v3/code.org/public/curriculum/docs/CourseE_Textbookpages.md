@@ -26,6 +26,10 @@ Play through it one or two times so that you know what to expect.
 
 All in one place for now, will be split up at horizontal lines for each concept
 
+
+
+
+
 ------
 
 1. Algorithms
