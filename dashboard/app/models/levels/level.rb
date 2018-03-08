@@ -448,7 +448,7 @@ class Level < ActiveRecord::Base
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels
-    return nil if try(:contained_level_names).nil?
+    return [] unless is_a? Blockly
     names = properties["contained_level_names"]
     return [] unless names.present?
     properties["contained_level_names"].map do |contained_level_name|
@@ -521,7 +521,7 @@ class Level < ActiveRecord::Base
       update_params[:project_template_level_name] = new_template_level.name
     end
 
-    if contained_levels
+    unless contained_levels.empty?
       update_params[:contained_level_names] = contained_levels.map do |contained_level|
         contained_level.clone_with_suffix(new_suffix, allow_existing: true).name
       end
