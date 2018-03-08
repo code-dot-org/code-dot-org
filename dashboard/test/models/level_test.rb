@@ -757,7 +757,7 @@ EOS
   end
 
   test 'clone with suffix copies contained levels' do
-    contained_level_1 = create :level, name: 'contained level 1'
+    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
     contained_level_2 = create :level, name: 'contained level 2'
 
     # level 1 has 1 contained level
@@ -769,6 +769,7 @@ EOS
     refute_nil level_1_copy.contained_levels
     assert_equal 1, level_1_copy.contained_levels.size
     contained_level_1_copy = Level.find_by_name('contained level 1 copy')
+    assert_equal 'FreeResponse', contained_level_1_copy.type
     assert_equal contained_level_1_copy, level_1_copy.contained_levels.first
 
     # level 2 has 2 contained levels, one of which has already been copied
