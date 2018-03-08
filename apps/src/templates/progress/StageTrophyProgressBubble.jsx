@@ -27,12 +27,18 @@ export default class StageExtrasProgressBubble extends Component {
             cx="20"
             cy="20"
             r="20"
+            fill={color.light_gray}
+          />
+          <circle
+            cx="20"
+            cy="20"
+            r="16"
             fill={color.lightest_gray}
           />
           <path
             d="M 20 2 A 18 18 0 1 1 2 20"
             fill="none"
-            stroke={color.light_gray}
+            stroke={color.level_perfect}
             strokeWidth="3"
           />
           <g transform="translate(8, 10)">
@@ -42,6 +48,17 @@ export default class StageExtrasProgressBubble extends Component {
               fill={color.light_gray}
             />
           </g>
+        </g>
+        <g transform="translate(25, 70)">
+          <text
+            textAnchor="middle"
+            alignmentBaseline="hanging"
+            fill={color.level_perfect}
+            fontSize="14"
+            fontFamily='"Gotham 5r", sans-serif'
+          >
+            75%
+          </text>
         </g>
       </svg>
     );
