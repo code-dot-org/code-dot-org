@@ -24,7 +24,14 @@ class CensusMapInfoWindow extends Component {
       case 'NO':
         censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
         break;
+      case 'HISTORICAL_YES':
+        censusMessage = "We believe this school historically offered Computer Science.";
+        break;
+      case 'HISTORICAL_NO':
+        censusMessage = "We believe this school historically offered limited or no Computer Science opportunities.";
+        break;
       case 'MAYBE':
+      case 'HISTORICAL_MAYBE':
         censusMessage = "We have conflicting data for this school.";
         break;
       default:

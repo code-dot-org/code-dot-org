@@ -11,6 +11,11 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert summary.valid?, summary.errors.full_messages
   end
 
+  test "Summary creation with valid historic teaches_cs succeeds" do
+    summary = build :census_summary, :with_valid_historic_teaches_cs
+    assert summary.valid?, summary.errors.full_messages
+  end
+
   test "Summary creation with invalid teaches_cs fails" do
     assert_raises ArgumentError do
       build :census_summary, :with_invalid_teaches_cs
