@@ -90,6 +90,23 @@ describe('Artist', () => {
     });
   });
 
+  describe('Accepts a third argument parameter', () => {
+    it('draws a sticker when size is null', () => {
+      let artist = new Artist();
+      let sticker = new Image(100, 100);
+      let img = sticker;
+      let size = null;
+      let block_id = "block_id_4";
+
+      artist.visualization = new Artist.Visualization();
+      const setDrawSticker = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+
+      expect(setDrawSticker).to.be.have.been.calledWith(img, -50, -100, 100, 100)
+
+      setDrawSticker.restore()
+    });
+  });
+
   describe('jumpTo', () => {
     let artist;
     beforeEach(() => {
