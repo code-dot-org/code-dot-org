@@ -335,8 +335,6 @@ export function addBlankAnimation() {
       looping: true,
       frameDelay: 4,
       version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz',
-      loadedFromSource: true,
-      saved: false
     }
   );
 }
