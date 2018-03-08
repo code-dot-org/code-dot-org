@@ -36,12 +36,31 @@ When /^I switch to(?: the)? animation (?:mode|tab)$/ do
   steps 'When I press "animationMode"'
 end
 
+When /^I switch to(?: the)? code (?:mode|tab)$/ do
+  @browser.execute_script("$(\"#codeMode\")[0].click();")
+end
+
 Then /^I do not see "([^"]*)" in the Game Lab console$/ do |message|
   expect(element_contains_text?('#debug-output', message)).to be false
 end
 
 Then /^I see (\d+) animations in the animation column$/ do |num_animations|
   expect(@browser.execute_script('return $(".animationList>div>div").not(".newListItem").length')).to eq num_animations.to_i
+end
+
+Then /^I open the animation picker$/ do
+  @browser.execute_script("$(\".animationList>div>div\")[0].click();")
+end
+
+Then /^I select a blank animation$/ do
+  @browser.execute_script("$(\".uitest-animation-picker-item\")[0].click();")
+end
+
+Then /^I add a new, blank animation$/ do
+  steps <<-STEPS
+    And I open the animation picker
+    And I select a blank animation
+  STEPS
 end
 
 Then /^I append gamelab code to draw a ninja$/ do
