@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import BaseDialog from '../BaseDialog';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   textLink: {
@@ -43,13 +44,14 @@ const styles = {
 
 class ResourceLink extends React.Component {
   static propTypes = {
-    map: PropTypes.bool.isRequired,
-    reference: PropTypes.string,
+    highlight: PropTypes.bool,
+    icon: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    reference: PropTypes.string.isRequired,
   };
 
   state = {
     dialogSelected: false,
-    text: this.props.reference
   };
 
   selectResource = () => {
@@ -60,30 +62,28 @@ class ResourceLink extends React.Component {
     this.setState({dialogSelected: false});
   };
 
-  getLinkText = (data) => {
-    this.setState({text: data});
-  };
-
-  componentWillMount = () => {
-    // Gets the text content from the meta description tag from the
-    // reference to which we're linking
-    $.get(this.props.reference, (data) => { this.getLinkText($(data).filter("meta[name='description']").attr("content"));});
-  };
-
   render() {
-    const { map } = this.props;
+    const {icon, reference, text, highlight} = this.props;
 
-    const iconStyle = map ? {...styles.commonIcon, ...styles.mapIcon} : {...styles.commonIcon, ...styles.resourceIcon};
-    const thumbnailStyle = map ? {...styles.commonThumbnail, ...styles.mapThumbnail} : {...styles.commonThumbnail};
+    const iconStyle = {
+      ...styles.commonIcon,
+      ...(highlight ? styles.mapIcon : styles.resourceIcon)};
+    const thumbnailStyle = {
+      ...styles.commonThumbnail,
+      ...(highlight && styles.mapThumbnail)};
 
     return (
       <div>
         <div style={styles.resourceStyle} onClick={this.selectResource}>
           <span style={thumbnailStyle}>
-              <i style={iconStyle} className={map ? "fa fa-map" : "fa fa-book"}/>
+            <FontAwesome
+              icon={icon}
+              style={iconStyle}
+              title={text}
+            />
           </span>
           <a style={styles.textLink}>
-            {this.state.text}
+            {text}
           </a>
         </div>
         <BaseDialog
@@ -92,7 +92,7 @@ class ResourceLink extends React.Component {
           fullWidth={true}
           fullHeight={true}
         >
-          <iframe style={styles.linkFrame} src={this.props.reference}/>
+          <iframe style={styles.linkFrame} src={reference}/>
         </BaseDialog>
       </div>
     );

@@ -43,11 +43,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "start_blocks": "var bug = createSprite(200, 200);\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  // Update Values\r\n  // If the up arrow is pressed, \r\n  // move the sprite up on the screen\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}"
+    "start_blocks": "var bug = createSprite(200, 200);\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  // Update Values\r\n  // If the up arrow is pressed, \r\n  // move the sprite up on the screen\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

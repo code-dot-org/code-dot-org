@@ -311,6 +311,11 @@ class ContactRollups
     CASE LOCATE(values(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
       WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''),values(forms_submitted)),255)
       ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END,
+    roles =
+    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
+      ELSE #{DEST_TABLE_NAME}.roles
     END"
 
     log_completion(start)
