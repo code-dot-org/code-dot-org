@@ -9,7 +9,7 @@ import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from "../../../../templates/FontAwesome";
 
-const DOWNLOAD_PREFIX = 'https://downloads.code.org/makertoolkit/';
+const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
