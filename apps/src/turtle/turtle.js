@@ -1563,7 +1563,6 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.avatar.visible = true;
       break;
     case 'sticker':
-
       let size = MAX_STICKER_SIZE;
 
       if (values[1]) {
