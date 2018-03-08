@@ -162,4 +162,24 @@ export default storybook =>
           </div>
         ),
       },
+      {
+        name: 'Perfect Finish of challenge level',
+        description: 'Perfectly finished a challenge level',
+        story: () => (
+          <div style={dialogWrapper}>
+            <FinishDialog
+              hideBackdrop
+
+              isChallenge
+              isPerfect
+              blockLimit={98}
+              blocksUsed={98}
+              achievements={achievements}
+              studentCode={studentCode}
+              showFunometer
+              canShare
+            />
+          </div>
+        ),
+      },
     ]);

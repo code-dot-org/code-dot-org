@@ -472,7 +472,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
-            registered_workshop: 'Yes'
+            registered_workshop: 'Yes',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -508,7 +509,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: '',
-            registered_workshop: ''
+            registered_workshop: '',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -543,6 +545,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -631,7 +634,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
-            registered_workshop: 'Yes'
+            registered_workshop: 'Yes',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -666,7 +670,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: '',
-            registered_workshop: ''
+            registered_workshop: '',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -700,6 +705,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end

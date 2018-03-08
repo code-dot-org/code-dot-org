@@ -223,7 +223,6 @@ var TopInstructions = React.createClass({
   //TODO - remove 'wip' from study. There for just testing purposes
   recordResourcesTabButtonClick() {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'instructions-resources-tab',
         study_group: 'resources-tab',

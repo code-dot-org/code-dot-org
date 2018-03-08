@@ -30,7 +30,6 @@ const InlineHint = React.createClass({
 
   onVideoClick() {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'hint-videos',
         event: 'click',
