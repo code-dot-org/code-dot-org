@@ -96,6 +96,10 @@ module Pd::Application
       return Pd::Workshop::COURSE_CSP if course == 'csp'
     end
 
+    def registered_workshop?
+      pd_workshop_id.present? && Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user)
+    end
+
     # Assigns the default workshop, if one is not yet assigned
     def assign_default_workshop!
       return if pd_workshop_id

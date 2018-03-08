@@ -105,25 +105,21 @@ export default class CohortViewTable extends React.Component {
           }
         }
       );
-    } else {
-      columns.push(
-        {
-          property: 'assigned_workshop',
-          header: {
-            label: 'Assigned Workshop',
-            transforms: [sortable]
-          }
-        }, {
-          property: 'registered_workshop',
-          header: {
-            label: 'Registered Workshop',
-            transforms: [sortable]
-          }
-        }
-      );
     }
 
     columns.push({
+      property: 'assigned_workshop',
+      header: {
+        label: 'Assigned Workshop',
+        transforms: [sortable]
+      }
+    }, {
+      property: 'registered_workshop',
+      header: {
+        label: 'Registered Workshop',
+        transforms: [sortable]
+      }
+    }, {
       property: 'id',
       header: {
         label: 'View Application'
