@@ -130,7 +130,7 @@ const hiddenFormatter = function (id) {
 /**
  * This is a component that shows information about the sections that a teacher
  * owns, and allows for editing, deleting and sorting them.
- * It shows some of the same information as the SectionsTable used on the teacher
+ * It shows some of the same information as the SectionsAsStudentTable used on the teacher
  * homepage. However, for historical reasons it unfortunately has a somewhat
  * different set/shape of input data. This component gets its data from
  * section_api_helpers in pegasus via an AJAX call, whereas that component gets
