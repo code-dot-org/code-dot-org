@@ -24,6 +24,9 @@ class Census::CensusSummary < ApplicationRecord
     YES: "Y",
     NO: "N",
     MAYBE: "M",
+    HISTORICAL_YES: "HY",
+    HISTORICAL_NO: "HN",
+    HISTORICAL_MAYBE: "HM",
   }.freeze
   enum teaches_cs: TEACHES
 
