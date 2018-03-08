@@ -8,6 +8,7 @@ import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, a
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -27,6 +28,7 @@ class ManageStudentActionsCell extends Component {
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
     rowType: PropTypes.oneOf(Object.values(RowType)),
+    loginType: PropTypes.string,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -89,7 +91,8 @@ class ManageStudentActionsCell extends Component {
   };
 
   render() {
-    const {rowType, isEditing} = this.props;
+    const {rowType, isEditing, loginType} = this.props;
+    const canDelete = [SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email].includes(loginType);
     return (
       <div>
         {!isEditing &&
@@ -99,14 +102,18 @@ class ManageStudentActionsCell extends Component {
             >
               {i18n.edit()}
             </PopUpMenu.Item>
-            <MenuBreak/>
-            <PopUpMenu.Item
-              onClick={this.onRequestDelete}
-              color={color.red}
-            >
-              <FontAwesome icon="times-circle" style={styles.xIcon}/>
-              {i18n.removeStudent()}
-            </PopUpMenu.Item>
+            {canDelete &&
+              <MenuBreak/>
+            }
+            {canDelete &&
+              <PopUpMenu.Item
+                onClick={this.onRequestDelete}
+                color={color.red}
+              >
+                <FontAwesome icon="times-circle" style={styles.xIcon}/>
+                {i18n.removeStudent()}
+              </PopUpMenu.Item>
+            }
           </QuickActionsCell>
         }
         {(isEditing && (rowType !== RowType.ADD)) &&
