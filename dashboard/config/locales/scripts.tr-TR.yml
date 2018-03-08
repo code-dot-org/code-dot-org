@@ -3,7 +3,7 @@
     script:
       name:
         course1:
-          title: Ders 1
+          title: Kurs 1
           description: Yeni okuyucular için Ders 1 ile başlayın. Yeni okuyucuların
             bilgisayar programı oluşturmalarında yardımcı olması, problem çözmedeki
             becerilerini geliştirmeleri, zor görevleri yapabilmeleri ve başkaları
@@ -50,7 +50,7 @@
             The Big Event:
               name: Büyük Olay
         course2:
-          title: Ders 2
+          title: Kurs 2
           description: Ders 2 önceden herhangi bir programlama deneyimi olmayan ve
             okuma-yazma bilen öğrenciler için tasarlanmıştır. Bu derste öğrenciler
             problem çözmek için programlama yaparken paylaşabilecekleri hikayeler
@@ -97,7 +97,7 @@
             Your Digital Footprint:
               name: Dijital İziniz
         course3:
-          title: Ders 3
+          title: Kurs 3
           description: Ders 3, Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler,
             daha karmaşık sorunlar için esnek çözümler bulmak için önceki derste öğrendikleri
             programlama konularını daha çok inceleyecekler. Bu dersin sonunda, öğrenciler,
@@ -184,7 +184,7 @@
             Artist:
               name: Sanatçı
         course4:
-          title: Ders 4
+          title: Kurs 4
           description: Ders 4, ders 2 ve 3'ü almış öğrenciler için tasarlanmıştır.
             Öğrenciler daha zor bulmacaları ve problemleri öğrendikleri çeşitli kavramları
             birleştirip kullanarak çözerler.  Bu ders tamamlandığında, öğrencilerin
@@ -362,7 +362,7 @@
             Introduction to PD:
               name: Kişisel Geliştirme Giriş
             K-5 Courses:
-              name: K-5 dersleri
+              name: K-5 Kursları
             Next Steps:
               name: Sonraki Adımlar
             'Programming Concept: Conditionals':
@@ -378,7 +378,7 @@
             Teacher Dashboard:
               name: "Öğretmen Panosu"
             Unplugged lessons:
-              name: Bağımsız dersler
+              name: Bağlantısız Dersler
             Writing computer programs:
               name: Bilgisayar programları yazma
         netsim:
@@ -9050,3 +9050,80 @@
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Eğlence için programlama
+            Plotting Shapes:
+              name: "Şekiller çizme"
+            Drawing in Game Lab:
+              name: Game Lab' da Çizim
+            Shapes and Randomization:
+              name: "Şekiller ve Rastgelelik"
+            Variables:
+              name: Değişkenler
+            Sprites:
+              name: Hareketli Nesneler
+            The Draw Loop:
+              name: Döngü çiz
+            The Counter Pattern Unplugged:
+              name: Sayaç deseni
+            Sprite Movement:
+              name: Hareketli Nesnelerin Hareketi
+            Booleans Unplugged:
+              name: Mantıksallar
+            Conditionals:
+              name: Koşullar
+            Keyboard Input:
+              name: Klavye girişi
+            Other Forms of Input:
+              name: " Diğer girdi yöntemi"
+            Project - Interactive Card:
+              name: Proje - interaktif kart
+            Velocity:
+              name: Hız
+            Collision Detection:
+              name: "Çarpışmanın algılanması"
+            Complex Sprite Movement:
+              name: Karmaşık Hareketli Nesne Hareketi
+            Collisions:
+              name: "Çarpışmalar"
+            Functions:
+              name: Fonksiyonlar
+            The Game Design Process:
+              name: Oyun tasarım süreci
+            Using the Game Design Process:
+              name: Oyun tasarım süreci kullanarak
+            Project - Design a Game:
+              name: Proje - Bir oyun tasarla
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: Programlama
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."

@@ -18,6 +18,11 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
 
+  after_create :update_application_status
+  def update_application_status
+    pd_application.update!(status: 'withdrawn') unless accepted?
+  end
+
   after_create :send_fit_weekend_confirmation_email
   def send_fit_weekend_confirmation_email
     Pd::FitWeekend1819RegistrationMailer.confirmation(self).deliver_now

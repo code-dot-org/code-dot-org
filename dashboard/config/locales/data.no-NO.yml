@@ -872,6 +872,7 @@
         applab_intro_sounds: App Lab - Bilder og lyder
         applab_intro_designmode: 'App Lab: Design modus'
         applab_intro_share: App Lab - del Appen din
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

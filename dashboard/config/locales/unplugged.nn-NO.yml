@@ -277,9 +277,6 @@
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på eit plan, og så avgjøre om dei to punkta (eller spelefigurane) rører
           kvarandre."
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgåve skal du lære om løkker!

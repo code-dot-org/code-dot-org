@@ -273,9 +273,6 @@
           Pythagorase teoreemi ja kauguse valemit saab kasutada tasandil oleva kahe
           punkti kauguse mõõtmiseks ja seejärel saab otsustada, kas need kaks punkti
           (või mängu tegelast) puudutavad teineteist.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Selles õppetunnis õpid sa tundma tsükleid!

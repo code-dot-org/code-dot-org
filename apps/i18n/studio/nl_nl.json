@@ -219,6 +219,7 @@
   "iceAge": "IJstijd!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "speler",
   "ifSpriteN": "acteur {spriteIndex}",
   "incrementPlayerScore": "Scoor punt",
   "isSet": "is ingesteld",

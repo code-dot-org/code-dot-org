@@ -219,6 +219,7 @@
   "iceAge": "Ледено доба!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "учесник",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "освоји поен",
   "isSet": "is set",

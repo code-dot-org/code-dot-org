@@ -163,9 +163,6 @@ da:
       CollisionDetection:
         title: Opdage sammenstød og den pythagoræiske læresætning
         desc: At afgøre hvornår objekter på skærmen røre er et vigtigt aspekt af de fleste spil. I denne lektion vil vi se på hvordan den pythagoræiske læresætning og afstandsformlen kan bruges til at måle afstanden mellem to punkter på skærmen, og derefter beslutte, om disse to punkter (eller spilobjekter) rører.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

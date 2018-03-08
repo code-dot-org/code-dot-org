@@ -280,9 +280,6 @@
           and the Distance Formula can be used to measure the distance between two
           points on the plane, and then decide whether those two points (or game characters)
           are touching.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

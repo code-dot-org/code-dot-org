@@ -692,6 +692,7 @@ is:
         artistLoopsK2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut.
+      comment_intro_maze_2018_callout: [ ]
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Notaðu þessa lykkju til að safna öllum blómasafanum (eða hunangi) frá einu blómi (eða búi).
@@ -1151,6 +1152,7 @@ is:
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
       courseF_artist_variables_template_callout: [ ]
+      courseF_artist_variables_template_2018_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: Nú er verkfærakassinn flokkaður. Allir kubbar sem þú þarft eru í þessum flokkum!
@@ -1259,6 +1261,8 @@ is:
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variables8c_2018_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: Þú finnur breytukubbinn hér.
+      courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: Þú finnur breytukubbinn hér.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: Svona setur þú gildi í breytuna þína. Breyttu textanum sem er tengdur við þennan kubb til að breyta því sem er geymt í breytunni.
@@ -1494,6 +1498,7 @@ is:
         playlab_add_score: ""
       iceage_throw_hearts_callout: [ ]
       iceage_throw_hearts_2018_callout: [ ]
+      iceage_warn_embed_ice_age_callout: [ ]
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ""
       iceage_warn_ice_age_2018_callout:
