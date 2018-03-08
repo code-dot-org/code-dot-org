@@ -28,6 +28,19 @@ const styles = {
 
 const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
+const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
+  SectionLoginType.word,
+  SectionLoginType.picture,
+  SectionLoginType.email,
+];
+const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
+  SectionLoginType.word,
+  SectionLoginType.picture,
+  SectionLoginType.email,
+  SectionLoginType.google_classroom,
+  SectionLoginType.clever,
+];
+
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
@@ -331,23 +344,10 @@ class ManageStudentsTable extends Component {
       },
     ];
 
-    const allowedPasswordColumn = [
-      SectionLoginType.word,
-      SectionLoginType.picture,
-      SectionLoginType.email,
-    ];
-    const allowedControlsColumn = [
-      SectionLoginType.word,
-      SectionLoginType.picture,
-      SectionLoginType.email,
-      SectionLoginType.google_classroom,
-      SectionLoginType.clever,
-    ];
-
-    if (allowedPasswordColumn.includes(loginType)) {
+    if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(passwordColumn);
     }
-    if (allowedControlsColumn.includes(loginType)) {
+    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(controlsColumn);
     }
 

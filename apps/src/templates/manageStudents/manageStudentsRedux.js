@@ -426,6 +426,7 @@ const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
     name: updatedStudentInfo.name,
     age: updatedStudentInfo.age,
     gender: updatedStudentInfo.gender,
+    sharing_disabled: true,
   };
   $.ajax({
     url: `/v2/students/${dataToUpdate.id}/update`,
