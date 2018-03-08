@@ -589,8 +589,8 @@ export default class WorkshopForm extends React.Component {
     this.setState({
       facilitators: [],
       subject: null,
-      funded: null,
-      funding_type: null
+      funded: '',
+      funding_type: ''
     });
     this.loadAvailableFacilitators(course);
   };
