@@ -163,9 +163,6 @@ is:
       CollisionDetection:
         title: Skynjun árekstra og regla Pýþagórasar
         desc: Það er mikilvægur þáttur í flestum leikjum að skynja hvenær hlutir á skjánum snertast. Í þessari námseiningu munum við skoða hvernig regla Pýþagórasar og fjarlægðarformúlan nýtast til að mæla fjarlægðina milli tveggja punkta á skjánum og hvernig við ákveðum hvort þessi tveir punktar (eða leikverur) snertist.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Lykkjur án tölvu
         desc: Í þessum tíma munt þú læra um lykkjur!

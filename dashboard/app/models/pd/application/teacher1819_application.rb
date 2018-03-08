@@ -536,10 +536,6 @@ module Pd::Application
       sanitize_form_data_hash[:principal_approval] || ''
     end
 
-    def date_accepted
-      accepted_at.try(:strftime, '%b %e')
-    end
-
     def assigned_workshop
       pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
     end

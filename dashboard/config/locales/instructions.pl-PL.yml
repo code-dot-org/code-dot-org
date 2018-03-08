@@ -888,9 +888,7 @@
         mi wypełnić otwory i usunąć sterty, by wyrównać teren.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Idea projektu: Stwórz grę obronną w Play Lab!'
-      Alien Defender_2018_instruction: |-
-        Project Idea: Make a defender game in Play
-        Lab!
+      Alien Defender_2018_instruction: 'Idea projektu: Stwórz grę obronną w Play Lab!'
       AllTheThings Applab - Turtle move with button_instruction: Dodaj przycisk, który
         przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': 'Stwórz
@@ -7271,6 +7269,9 @@
         ten poziom.
       collectorSkinVideo2_instruction: Zbierz jedną stertę złota żeby ukończyć ten
         poziom.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         Możesz wykorzystać pętlę aby narysować wiele linii w wierszu.\r
         \r
@@ -9654,6 +9655,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?

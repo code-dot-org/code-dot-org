@@ -163,9 +163,6 @@ gl:
       CollisionDetection:
         title: Detección de colisións e o teorema de Pitágoras
         desc: Determinar cando se tocan os obxectos na pantalla é un aspecto importante na maioría dos xogos. Nesta lección, imos ver como o teorema de Pitágoras e a fórmula da distancia poden ser usados para medir a distancia entre dous puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo) están se tocando.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

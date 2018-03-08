@@ -7250,6 +7250,9 @@
         te verzamelen en de puzzel op te lossen.
       collectorSkinVideo1_instruction: Verzamel de vier stapels om dit level te voltooien.
       collectorSkinVideo2_instruction: Verzamel één pot goud om dit level te voltooien.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         Je kan een lus gebruiken om meerdere lijnen in één keer te tekenen.\r
         \r
@@ -9599,6 +9602,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?

@@ -810,6 +810,7 @@
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Dette talet seier kor mange av desse blokkene du kan bruke
           i denne oppgåva.
+      comment_intro_maze_2018_callout: []
       course2_artist_nestedLoops_challenge2_callout: []
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Bruk denne løkka for å samle all nektar
@@ -1406,6 +1407,7 @@
       courseF_artist_variables_9_callout: []
       courseF_artist_variables_FP_callout: []
       courseF_artist_variables_template_callout: []
+      courseF_artist_variables_template_2018_callout: []
       courseF_artistembed_variables9_callout: []
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: Verktøykassa er no i kategori-modus.  Alle blokkene
@@ -1540,6 +1542,8 @@
       courseF_playlab_variables8c_callout: []
       courseF_playlab_variables8c_2018_callout: []
       courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: Du vil finne variabel-blokka inni her.
+      courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: Du vil finne variabel-blokka inni her.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: Slik setter du verdien for variabelen.  Endre
@@ -1843,6 +1847,7 @@
         playlab_add_score: ''
       iceage_throw_hearts_callout: []
       iceage_throw_hearts_2018_callout: []
+      iceage_warn_embed_ice_age_callout: []
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ''
       iceage_warn_ice_age_2018_callout:
