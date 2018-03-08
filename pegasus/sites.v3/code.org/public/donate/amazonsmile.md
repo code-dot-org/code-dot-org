@@ -12,7 +12,7 @@ Did you know you can support Code.org anytime you shop on Amazon at no extra cos
 ## What is AmazonSmile?
 AmazonSmile is a website operated by Amazon with the same products, prices, and shopping features as Amazon.com using your Amazon account. The difference is that when you shop on AmazonSmile, the AmazonSmile Foundation will donate 0.5% of your purchase to Code.org!
 
-[<button>Make Code.org your AmazonSmile non-profit</button>](http://smile.amazon.com/ch/46-0858543)
+[<button>Make Code.org your AmazonSmile nonprofit</button>](http://smile.amazon.com/ch/46-0858543)
 
 To learn more about AmazonSmile, check out the [program details](http://smile.amazon.com/gp/chpf/pd/ref=smi_se_saas_lpd_spd).
 

@@ -38,6 +38,18 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
 
+  def teacher_enrollment_receipt__formatted_notes
+    notes = <<-NOTES.strip_heredoc
+      This is a multi-line, formatted notes section, with preserved whitespace:
+
+      I have skipped lines ^,
+      double  spaces,
+        and indentation.
+    NOTES
+
+    mail :teacher_enrollment_receipt, workshop_params: {notes: notes}
+  end
+
   def teacher_enrollment_reminder__csf
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSF
   end
@@ -159,7 +171,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   private
 
-  def mail(method, course = nil, subject = nil, options: nil, target: :enrollment)
+  def mail(method, course = nil, subject = nil, options: nil, target: :enrollment, workshop_params: {})
     unless course
       course = DEFAULT_COURSE
       subject = DEFAULT_SUBJECT
@@ -167,9 +179,16 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     facilitator = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
     organizer = build :workshop_organizer, name: 'Oscar Organizer', email: 'oscar_organizer@example.net'
-    workshop = build :pd_workshop, organizer: organizer, num_sessions: 2, course: course, subject: subject,
-      location_name: 'Code.org office', location_address: '1501 4th Ave, Suite 900, Seattle, WA',
+    default_workshop_params = {
+      organizer: organizer,
+      num_sessions: 2,
+      course: course,
+      subject: subject,
+      location_name: 'Code.org office',
+      location_address: '1501 4th Ave, Suite 900, Seattle, WA',
       facilitators: [facilitator]
+    }
+    workshop = build :pd_workshop, default_workshop_params.merge(workshop_params)
 
     teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
 

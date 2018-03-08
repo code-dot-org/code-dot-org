@@ -1238,7 +1238,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8 학년 이상
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "나이 8세-12세"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "나이 10세-13세"
   codeorg_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"

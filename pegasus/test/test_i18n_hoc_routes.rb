@@ -1,3 +1,4 @@
+require_relative './test_helper'
 require 'rack/test'
 require 'minitest/autorun'
 
@@ -19,6 +20,14 @@ class I18nHocRoutesTest < Minitest::Test
 
       # Tests all other hoc subpages
       subpages.each {|path| assert_successful_get("/us/#{lang}/#{path}")}
+    end
+  end
+
+  def test_hoc_partner_pages
+    CDO.partners.each do |partner|
+      header 'Host', "#{partner}.code.org"
+      resp = get('/')
+      assert_equal 200, resp.status, "#{partner}/"
     end
   end
 

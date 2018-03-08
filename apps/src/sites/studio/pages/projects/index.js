@@ -46,9 +46,7 @@ $(document).ready(() => {
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
   store.dispatch(selectGallery(initialState));
-  const showFeatured = window.location.href.includes("showFeatured");
-  const originalUrl = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
-  const url = showFeatured ? originalUrl + `?showFeatured=1` : originalUrl;
+  const url = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
 
   $.ajax({
     method: 'GET',
@@ -60,7 +58,7 @@ $(document).ready(() => {
     ReactDOM.render(
       <Provider store={store}>
         <PublicGallery
-          showApplabGamelab={projectsData.showApplabGamelab}
+          projectValidator={projectsData.projectValidator}
         />
       </Provider>,
       publicGallery);

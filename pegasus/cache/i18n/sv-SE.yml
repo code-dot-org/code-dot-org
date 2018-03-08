@@ -1370,7 +1370,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Åldrarna 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Åldrar 10 + (efter kurs 3)"
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor

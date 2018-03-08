@@ -6,21 +6,33 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
+import FontAwesome from '../FontAwesome';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import {convertStudentDataToArray, AddStatus, RowType} from './manageStudentsRedux';
+import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
+import experiments from '@cdo/apps/util/experiments';
+
+const styles = {
+  cog: {
+    marginLeft: 10,
+    fontSize: 20,
+  },
+};
+
+const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
+  email: PropTypes.string,
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   secretWords: PropTypes.string,
@@ -100,7 +112,8 @@ class ManageStudentsTable extends Component {
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
-    addStatus: PropTypes.oneOf(Object.values(AddStatus)),
+    addStatus: PropTypes.object,
+    saveAllStudents: PropTypes.func,
   };
 
   state = {
@@ -141,8 +154,8 @@ class ManageStudentsTable extends Component {
         id={rowData.id}
         sectionId={rowData.sectionId}
         name={name}
-        loginType={rowData.loginType}
         username={rowData.username}
+        email={rowData.email}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />
@@ -169,13 +182,18 @@ class ManageStudentsTable extends Component {
       <div>
         {numberOfEditingRows > 1 &&
           <Button
-            onClick={()=>{console.log("save all");}}
+            onClick={this.props.saveAllStudents}
             color={Button.ButtonColor.orange}
             text={i18n.saveAll()}
           />
         }
         {numberOfEditingRows <= 1 &&
-          i18n.actions()
+          <span>
+            {i18n.actions()}
+            {showShareColumn &&
+              <FontAwesome icon="cog" style={styles.cog}/>
+            }
+          </span>
         }
       </div>
     );
@@ -333,19 +351,19 @@ class ManageStudentsTable extends Component {
 
     return (
       <div>
-        {addStatus === AddStatus.SUCCESS &&
+        {addStatus.status === AddStatus.SUCCESS &&
           <Notification
             type={NotificationType.success}
             notice={i18n.manageStudentsNotificationSuccess()}
-            details={i18n.manageStudentsNotificationAddSuccess()}
+            details={i18n.manageStudentsNotificationAddSuccess({numStudents: addStatus.numStudents})}
             dismissible={false}
           />
         }
-        {addStatus === AddStatus.FAIL &&
+        {addStatus.status === AddStatus.FAIL &&
           <Notification
             type={NotificationType.failure}
             notice={i18n.manageStudentsNotificationFailure()}
-            details={i18n.manageStudentsNotificationCannotAdd()}
+            details={i18n.manageStudentsNotificationCannotAdd({numStudents: addStatus.numStudents})}
             dismissible={false}
           />
         }
@@ -371,4 +389,8 @@ export default connect(state => ({
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
   addStatus: state.manageStudents.addStatus,
+}), dispatch => ({
+  saveAllStudents() {
+    dispatch(saveAllStudents());
+  },
 }))(ManageStudentsTable);
