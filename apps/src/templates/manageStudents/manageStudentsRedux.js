@@ -122,9 +122,10 @@ export const saveAllStudents = () => {
     });
 
     // Adding students can be saved together.
+    // Only add students that currently are not in progress saving.
     const arrayOfEditedData = Object.values(state.editingData);
     const newStudentsToAdd = arrayOfEditedData
-      .filter(student => student.rowType === RowType.NEW_STUDENT)
+      .filter(student => (student.rowType === RowType.NEW_STUDENT && !student.isSaving))
       .map(student => student.id);
     if (newStudentsToAdd.length > 0) {
       dispatch(addStudents(newStudentsToAdd));
@@ -269,6 +270,13 @@ export default function manageStudents(state=initialState, action) {
           isSaving: true
         }
       },
+      editingData: {
+        ...state.editingData,
+        [action.studentId]: {
+          ...state.editingData[action.studentId],
+          isSaving: true
+        }
+      },
     };
   }
   if (action.type === SAVE_STUDENT_SUCCESS) {
@@ -295,6 +303,10 @@ export default function manageStudents(state=initialState, action) {
     for (let i = 0; i<action.studentIds.length; i++) {
       newState.studentData[action.studentIds[i]] = {
         ...state.studentData[action.studentIds[i]],
+        isSaving: false,
+      };
+      newState.editingData[action.studentIds[i]] = {
+        ...state.editingData[action.studentIds[i]],
         isSaving: false,
       };
     }
