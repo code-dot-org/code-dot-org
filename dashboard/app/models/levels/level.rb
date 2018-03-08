@@ -520,6 +520,12 @@ class Level < ActiveRecord::Base
       update_params[:project_template_level_name] = new_template_level.name
     end
 
+    if contained_levels
+      update_params[:contained_level_names] = contained_levels.map do |contained_level|
+        contained_level.clone_with_suffix(new_suffix, allow_existing: true).name
+      end
+    end
+
     level.update!(update_params)
     level
   end
