@@ -63,10 +63,14 @@ class ResourceLink extends React.Component {
   };
 
   render() {
-    const { icon, reference, text, highlight} = this.props;
+    const {icon, reference, text, highlight} = this.props;
 
-    const iconStyle = highlight ? {...styles.commonIcon, ...styles.mapIcon} : {...styles.commonIcon, ...styles.resourceIcon};
-    const thumbnailStyle = highlight ? {...styles.commonThumbnail, ...styles.mapThumbnail} : {...styles.commonThumbnail};
+    const iconStyle = {
+      ...styles.commonIcon,
+      ...(highlight ? styles.mapIcon : styles.resourceIcon)};
+    const thumbnailStyle = {
+      ...styles.commonThumbnail,
+      ...(highlight && styles.mapThumbnail)};
 
     return (
       <div>
