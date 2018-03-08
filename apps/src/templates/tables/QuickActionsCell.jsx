@@ -27,7 +27,7 @@ const styles = {
     },
     [QuickActionsCellType.header]: {
       fontSize: 20,
-      marginTop: -3,
+      lineHeight: '15px',
       color: color.darker_gray,
     }
   },
