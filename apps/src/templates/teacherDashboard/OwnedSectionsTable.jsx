@@ -54,7 +54,7 @@ const styles = {
   },
 };
 
-// Cell formatters for sortable SectionTable.
+// Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   const pegasusUrl = pegasus('/teacher-dashboard#/sections/' + rowData.id);
   return <a style={tableLayoutStyles.link} href={pegasusUrl}>{rowData.name}</a>;
@@ -139,7 +139,7 @@ const hiddenFormatter = function (id) {
  * Long term it would be ideal if section_api_helpers went away and both components
  * used dashboard.
  */
-class SectionTable extends Component {
+class OwnedSectionsTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func.isRequired,
@@ -289,8 +289,8 @@ class SectionTable extends Component {
   }
 }
 
-export const UnconnectedSectionTable = SectionTable;
+export const UnconnectedOwnedSectionsTable = OwnedSectionsTable;
 
 export default connect((state, ownProps) => ({
   sectionRows: getSectionRows(state, ownProps.sectionIds)
-}))(SectionTable);
+}))(OwnedSectionsTable);
