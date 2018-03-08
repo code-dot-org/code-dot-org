@@ -23,6 +23,11 @@ const styles = {
     marginLeft: 4,
     marginRight: 4,
   },
+  stageTrophyContainer: {
+    border: 0,
+    borderRadius: 20,
+    paddingRight: 0,
+  },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
     paddingTop: 4,
@@ -46,7 +51,13 @@ const StageProgress = React.createClass({
     const { levels, stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
 
     return (
-      <div className="react_stage" style={styles.headerContainer}>
+      <div
+        className="react_stage"
+        style={{
+          ...styles.headerContainer,
+          ...(stageTrophyEnabled && styles.stageTrophyContainer),
+        }}
+      >
         {levels.map((level, index) =>
           <div
             key={index}
