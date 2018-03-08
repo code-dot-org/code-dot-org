@@ -448,6 +448,7 @@ class Level < ActiveRecord::Base
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels
+    return nil if try(:contained_level_names).nil?
     names = properties["contained_level_names"]
     return [] unless names.present?
     properties["contained_level_names"].map do |contained_level_name|
