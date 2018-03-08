@@ -76,7 +76,7 @@ describe('OwnedSections', () => {
     expect(wrapper.find('Button').at(0).props().text).to.equal('Hide hidden sections');
   });
 
-  it('renders just unhidden SectionsTable if hide sections clicked', () => {
+  it('renders just unhidden SectionsAsStudentTable if hide sections clicked', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
