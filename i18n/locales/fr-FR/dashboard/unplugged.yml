@@ -163,9 +163,6 @@ fr:
       CollisionDetection:
         title: La détection de collision et le théorème de Pythagore
         desc: Déterminer quand les objets sur l'écran se touchent est un aspect important de la plupart des jeux. Dans le cadre de cette leçon, nous verrons comment le Théorème de Pythagore et la formule de distance peuvent servir à mesurer la distance entre deux points sur le plan et décider ensuite si ces deux points (ou les personnages du jeu) se touchent.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

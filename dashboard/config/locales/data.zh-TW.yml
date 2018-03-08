@@ -9,19 +9,19 @@
         Unplug3: "方格紙編程"
         Artist: "藝術家"
         Unplug4: "演算法"
-        Artist2: "藝術家 2 "
+        Artist2: "藝術家 2"
         Unplug5: "函數類別"
         Farmer: "農夫"
         Unplug6: "條件判斷（Conditionals）"
-        Artist3: "藝術家 3 "
+        Artist3: "藝術家 3"
         Unplug7: "歌曲創作"
-        Farmer2: "農夫 2 "
+        Farmer2: "農夫 2"
         Unplug8: "抽象概念"
-        Artist4: "藝術家 4 "
+        Artist4: "藝術家 4"
         Unplug9: "接力編程"
-        Farmer3: "農夫 3 "
+        Farmer3: "農夫 3"
         Unplug10: "網際網路"
-        Artist5: "藝術家 5 "
+        Artist5: "藝術家 5"
         Unplug11: "總結"
         MazeEC: "迷宮"
         Bounce: "彈跳"
@@ -45,7 +45,7 @@
         Gold: "金牌"
     concept:
       description:
-        sequence: "序列 "
+        sequence: "序列"
         if: "「如果」積木"
         if_else: "「如果…否則」積木"
         loop_times: "「重複... 次」積木"
@@ -589,6 +589,7 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: "拖曳一個「移動」積木並將它放到其他積木下方"

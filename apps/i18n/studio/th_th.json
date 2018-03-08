@@ -219,6 +219,7 @@
   "iceAge": "ยุคน้ำแข็ง!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "ตัวละคร",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "คะแนนที่ได้",
   "isSet": "is set",

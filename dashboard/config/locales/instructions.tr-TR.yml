@@ -7054,6 +7054,9 @@
         toplayın.
       collectorSkinVideo1_instruction: Bu seviyeyi geçmek için dört yığını da toplayın.
       collectorSkinVideo2_instruction: Bu seviyeyi geçmek için bir yığın altın toplayın.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: Birçok çizgi çizmek için bir döngü
         kullanabilirsin. \r \r bir ev çizebilir misin? İstediğiniz şekilde görünmesini
         sağla!  Yinelenen kodları görmeyi deneyin!
@@ -8307,7 +8310,7 @@
         komutlar burada... Şimdi hata ayıklama becerilerinizi kullanarak bu bulmacayı
         nasıl çözeceğinizi bulun.'
       courseD_collector_debugging_challenge2_instruction: "İç içe döngülerin uzmanı
-        mısınız? Hazinenin tümünü toplamak öğrendiklerinizi kullanın!"
+        mısınız? Hazinenin tümünü toplamak için öğrendiklerinizi kullanın!"
       courseD_collector_nested_loops_challenge2_instruction: Hadi döngüler kullanarak
         hazine avı yapalım! Toplayıcıya yardımcı ol ve araç kutusunda ki blokları
         kullanarak en az iki yığın hazine topla. 3 yığın toplamak mümkün.
@@ -8361,9 +8364,8 @@
       courseD_farmer_condLoops9_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
-      courseD_farmer_condLoops9_predict1_instruction: |-
-        Collect all of the corn and
-        lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_instruction: Mısır ve marulların hepsini
+        topla sonra kabakları seç.
       courseD_farmer_condLoops_challenge1_instruction: "Kabaklarda sağa dönün. \nBölümü
         tamamlamak için her şeyi toplayın. Her gizli üründe sadece bir adet mısır
         veya marul var."
@@ -8494,8 +8496,8 @@
       courseD_maze_ramp5b_2018_instruction: |-
         Navigate this maze to help the bird
         find the pig!
-      courseD_maze_ramp5c_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5c_2018_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5c_instruction: Domuza ulaşması için kuşa yardım et.
+      courseD_maze_ramp5c_2018_instruction: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5d_instruction: Get the bird to the pig.
       courseD_maze_ramp5d_2018_instruction: Get the bird to the pig.
       courseD_maze_ramp6_instruction: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa
@@ -8811,6 +8813,7 @@
         You are on your own for
         this challenge. This could "bee" harder than it looks!
       courseE_bee_functions_challenge2_instruction: Bu mücadelede tamamen kendi başınasın!
+        Ne güzel!
       courseE_bee_functions_challenge2_2018_instruction: |-
         You are on your own for
         this challenge. Sweet!
@@ -9187,6 +9190,9 @@
         the `set alpha` block to get this faded center.
       courseF_artist_for_Template_instruction: Bazı kodları son seviyeden kullanmayı
         deneyin, ama bu bükülmüş sarmalı oluşturmak için 89 derece dön.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: Bu çizimi tekrar nasıl yapabileceğini
         çözebildin mi?
       courseF_artist_for_challenge1_2018_instruction: |-

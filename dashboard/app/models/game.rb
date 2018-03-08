@@ -191,10 +191,6 @@ class Game < ActiveRecord::Base
     app == FLAPPY
   end
 
-  def uses_droplet?
-    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? name
-  end
-
   def uses_pusher?
     app == NETSIM
   end

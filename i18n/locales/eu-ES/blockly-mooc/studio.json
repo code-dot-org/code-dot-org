@@ -219,6 +219,7 @@
   "iceAge": "Izotz Aldia!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "aktore",
   "ifSpriteN": "aktorea {spriteIndex}",
   "incrementPlayerScore": "eskuratu puntu bat",
   "isSet": "ezarririk dago",

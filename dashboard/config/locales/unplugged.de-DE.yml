@@ -291,9 +291,6 @@
           Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die
           Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden,
           ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

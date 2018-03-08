@@ -207,9 +207,6 @@
       CollisionDetection:
         title: "衝突検出とピタゴラスの定理"
         desc: Collision Detection lesson description
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

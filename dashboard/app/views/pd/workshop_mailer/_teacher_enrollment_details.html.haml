@@ -50,10 +50,7 @@
 
 = render partial: 'workshop_logistics'
 
-- unless @workshop.notes.blank?
-  %p
-    = @workshop.notes
-
+= render partial: 'workshop_notes'
 
 - if @workshop.local_summer?
   %p

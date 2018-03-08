@@ -4285,9 +4285,8 @@
       K2.0 sequence FP_instruction: |-
         Now figure out how to get the pig any way you
         can!
-      K2.0 sequence pre_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
+      K2.0 sequence pre_instruction: Gioca con questi blocchi per vedere se riesci
+        a farmi arrivare al maiale!
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
@@ -7536,9 +7535,9 @@
       artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
       artistFunctionsVideo1_instruction: Segui le istruzioni per costruire la tua
         funzione.
-      artistLoopsK1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      artistLoopsK1_instruction: Questo è un nuovo tipo di esercizio chiamato "Artista".
+        Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
+        per passare all'esercizio successivo.
       artistLoopsK2_instruction: |-
         Now, use a `repeat` loop to draw this line five
         times!
@@ -7667,6 +7666,9 @@
         l'oro e risolvere il puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -7931,33 +7933,30 @@
       course4_playlab_variables_challenge3_instruction: |-
         Can you figure out how this
         "Fortune Teller" app works? Click `MORE` to see your challenges.
-      courseA_artist_loops1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      courseA_artist_loops1_instruction: Questo è un nuovo tipo di esercizio chiamato
+        "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto,
+        premi "Termina" per passare all'esercizio successivo.
       courseA_artist_loops10_instruction: Aiutami a posare delle pietre per non cadere
         in acqua!
-      courseA_artist_loops11_instruction: Aiutami a creare degli scalini per vedere
-        la barca salpare.
-      courseA_artist_loops12_instruction: L'artista ha visto qualcosa di buffo in
-        lontananza. Disegna ciò che pensi abbia visto.
-      courseA_artist_loops2_instruction: |-
-        Help the artist draw this line two times
-        forward.
+      courseA_artist_loops11_instruction: Aiutami a costruire i gradini per vedere
+        la barca che salpa.
+      courseA_artist_loops12_instruction: L'Artista ha visto qualcosa di divertente
+        al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi
+        "Termina" per completare la lezione.
+      courseA_artist_loops2_instruction: 'Aiuta l''artista a disegnare questa linea:
+        due volte avanti.'
       courseA_artist_loops3_instruction: Disegna cinque volte una linea in avanti.
-      courseA_artist_loops4_instruction: |-
-        Now, use a `repeat` loop to draw this line
-        five times!
-      courseA_artist_loops5_instruction: |-
-        Draw a line seven steps long. This will
-        become our horizon.
-      courseA_artist_loops6_instruction: Let's put a nice hill in the back.
-      courseA_artist_loops7_instruction: |-
-        Use the `repeat` loop to add waves to the
-        water.
+      courseA_artist_loops4_instruction: Ora, usa un ciclo`ripeti` per disegnare questa
+        linea cinque volte!
+      courseA_artist_loops5_instruction: Disegna una linea composta da sette segmenti.
+        Questo diventerà il nostro orizzonte.
+      courseA_artist_loops6_instruction: Mettiamo una bella collina sullo sfondo.
+      courseA_artist_loops7_instruction: Usa il ciclo `ripeti` per aggiungere le onde
+        all'acqua.
       courseA_artist_loops7_forVideo_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
-      courseA_artist_loops8_instruction: We need a ladder up to the boat.
+      courseA_artist_loops8_instruction: Ci serve una scala per salire sulla barca.
       courseA_artist_loops9_instruction: 'Sfida: ripara la scaletta.'
       courseA_artist_loops_challenge1_instruction: |-
         Can you draw a house? Make it
@@ -7971,23 +7970,21 @@
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
       courseA_collector_loops1_instruction: |-
-        Muovi Laurel raccogliendo più tesori che puoi!\r
+        Muovi Laurel raccogliendo più tesori che puoi! <br>
         (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
         lungo questo percorso.
       courseA_collector_loops11_instruction: Aiuta Laurel a raccogliere tutti i tesori
         da questa grotta.
-      courseA_collector_loops12_instruction: |-
-        Evviva! Raccogli più tesori che puoi!\r
-        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
+      courseA_collector_loops12_instruction: '*"Evviva! Raccogli più tesori che puoi!"*'
       courseA_collector_loops2_instruction: Raccogli tutte e tre le gemme per completare
         l'esercizio.
       courseA_collector_loops4_instruction: Correggi il percorso di Laurel per raccogliere
         tutti i tesori.
       courseA_collector_loops5_instruction: Usa quanto imparato sinora per raccogliere
         tutti i tesori.
-      courseA_collector_loops6_instruction: Aggiungi dei blocchi al codice per raccogliere
-        tutti i tesori.
+      courseA_collector_loops6_instruction: Aggiungi dei blocchi a questo programma
+        per raccogliere tutti i tesori.
       courseA_collector_loops7_instruction: Cosa devi aggiungere al codice per raccogliere
         tutti i tesori?
       courseA_collector_loops8_instruction: Scrivi del codice per raccogliere tutti
@@ -8030,11 +8027,10 @@
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
-      courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
-        the pig! "
-      courseA_maze_seq11_instruction: |-
-        Move one way, then another to get the bird
-        to the pig.
+      courseA_maze_seq10_instruction: 'Sfida: aggira la dinamite (TNT) per portare
+        l''uccellino fino al maialino! '
+      courseA_maze_seq11_instruction: Muovi in una direzione, poi in un'altra, per
+        portare l'uccellino fino al maialino.
       courseA_maze_seq12_instruction: 'Prendi quel maialino! '
       courseA_maze_seq13_instruction: Prendi quel maialino in qualsiasi modo!
       courseA_maze_seq2_instruction: Modifica il codice per farmi arrivare al maialino!
@@ -8044,44 +8040,37 @@
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
         blocks.
-      courseA_maze_seq5_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseA_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
-      courseA_maze_seq9_instruction: |-
-        Debug this level by adding blocks to get the
-        bird to the pig!
+      courseA_maze_seq5_instruction: Prova questo da solo dall'inizio.
+      courseA_maze_seq6_instruction: Muovi in una direzione, poi in un'altra per far
+        arrivare l'uccellino fino al maialino!
+      courseA_maze_seq7_instruction: Cerca di capire cosa manca, quindi aggiungi i
+        blocchi necessari per far arrivare l'uccellino fino al maialino!
+      courseA_maze_seq8_instruction: Risolvi questo esercizio per portare l'uccellino
+        fino al maialino!
+      courseA_maze_seq9_instruction: Correggi gli errori in questo esercizio, aggiungendo
+        i blocchi necessari per portare l'uccellino fino al maialino!
       courseA_maze_seq_challenge1_instruction: |-
         Something is wrong here. Help fix
         the code to get the bird to the pig!
       courseA_maze_seq_challenge2_instruction: |-
         Trace the path to lead the bird to
         the pig. Avoid TNT or feathers will fly!
-      courseA_playLab_events1_instruction: |-
-        This is a Play Lab level.  Move blocks
-        to the workspace and see what happens!
-      courseA_playLab_events2_instruction: |-
-        Jorge the Dog wants to say "Hi there."  Can
-        you help him?
+      courseA_playLab_events1_instruction: Questo è il Laboratorio. Metti dei blocchi
+        nell'area di lavoro e prova a vedere cosa succede!
+      courseA_playLab_events2_instruction: Jorge, il cane, vuole dire "Ciao". Riesci
+        ad aiutarlo ?
       courseA_playLab_events3_instruction: Aggancia il blocco `sposta il cane a sinistra`
-        al blocco verde `quando si preme la freccia sinistra` che si trova già nell'area
-        di lavoro.
-      courseA_playLab_events4_instruction: |-
-        Now, get Jorge to move right when the
-        `right` button is clicked.
-      courseA_playLab_events5_instruction: |-
-        Add events to have Jorge move up and
-        down when the `up` and `down` buttons are pressed.
-      courseA_playLab_events6_instruction: |-
-        Make this more interesting by changing
-        the background and playing a random sound when Jorge is clicked.
-      courseA_playLab_events7_instruction: |-
-        Add anything you want to this game.  Can
-        you make the dinosaur disappear when Jorge runs into him?
+        al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
+        già nell'area di lavoro.
+      courseA_playLab_events4_instruction: Ora fai muovere Jorge a destra quando si
+        preme la freccia a destra.
+      courseA_playLab_events5_instruction: Aggiungi gli eventi per far muovere Jorge
+        su e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events6_instruction: Rendi questa scena più interessante, cambiando
+        lo sfondo e riproducendo un suono casuale quando si clicca su Jorge.
+      courseA_playLab_events7_instruction: Aggiungi ciò che vuoi a questo gioco. Riesci
+        a fare in modo che il dinosauro scompaia quando Jorge sbatte contro di lui?
+        (Quando sei soddisfatto, premi "Termina" per completare il corso.)
       courseA_playlab_events_challenge1_instruction: |-
         Can you write code to show
         the rest of my friends? The hints will help you do this project step-by-step.
@@ -8095,9 +8084,9 @@
         Loops let you do whatever
         is inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
-      courseB_artist_loops1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      courseB_artist_loops1_instruction: Questo è un nuovo tipo di esercizio chiamato
+        "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto,
+        premi "Termina" per passare all'esercizio successivo.
       courseB_artist_loops10_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
@@ -8187,12 +8176,10 @@
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseB_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
+      courseB_maze_seq6_instruction: Muovi in una direzione, poi in un'altra per far
+        arrivare l'uccellino fino al maialino!
+      courseB_maze_seq7_instruction: Cerca di capire cosa manca, quindi aggiungi i
+        blocchi necessari per far arrivare l'uccellino fino al maialino!
       courseB_maze_seq8_instruction: |-
         Your turn!  What do you need to do to get the
         bird to the pig?
@@ -10105,6 +10092,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -12497,9 +12487,8 @@
       gradek_adventurer_loopsPre_instruction: |-
         This is Laurel the Adventurer.  Mover
         her around and get as much gold as you can!
-      gradek_artist_loops1_instruction: |-
-        Help the artist draw this line two times
-        forward.
+      gradek_artist_loops1_instruction: 'Aiuta l''artista a disegnare questa linea:
+        due volte avanti.'
       gradek_artist_loops2_instruction: |-
         Our artist is trying to draw a line five
         times, but can't get it right.  Can you help?
@@ -12526,9 +12515,9 @@
       gradek_artist_loopsFP_instruction: |-
         The artist saw something funny in the distance.  Draw
         what you think he saw.
-      gradek_artist_loopsPre_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      gradek_artist_loopsPre_instruction: Questo è un nuovo tipo di esercizio chiamato
+        "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto,
+        premi "Termina" per passare all'esercizio successivo.
       gradek_playlab_events1_instruction: |-
         Make your robot say "Hello!" when the
         button is clicked.

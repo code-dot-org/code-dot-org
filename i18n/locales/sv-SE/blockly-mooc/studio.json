@@ -219,6 +219,7 @@
   "iceAge": "Istid!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "aktör",
   "ifSpriteN": "figur {spriteIndex}",
   "incrementPlayerScore": "poäng punkt",
   "isSet": "är inställd",

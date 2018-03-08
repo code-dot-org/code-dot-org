@@ -38,7 +38,7 @@ ky:
   next_page: Next page
   next_resource: Next resource
   done_with_module: Done with this Learning Module
-  cancel: "Жокко"
+  cancel: "Жок кыл"
   okay: "Okay"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
@@ -417,7 +417,7 @@ ky:
     announcement_title: "Announcements"
     announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-    announcement_learn_more_button: "Learn more"
+    announcement_learn_more_button: "Дагы кара"
     announcement_try_now_button: "Try now"
     announcement_host_an_hour_button: "Host an Hour"
     announcement_watch_video_button: "Watch video"
@@ -503,7 +503,7 @@ ky:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      link: "Learn more"
+      link: "Дагы кара"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
@@ -691,7 +691,7 @@ ky:
     startover_title: "Кайрадан баштагыңыз келгени аныкпы?"
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
     startover_ok: "Кайра баштоо"
-    startover_cancel: "Жокко"
+    startover_cancel: "Жок кыл"
   time:
     hour: '1 hour'
     day: 'day'
@@ -792,7 +792,7 @@ ky:
     delete_no: 'No'
     saved: "Saved"
     not_saved: "Not saved"
-    cancel: 'Жокко'
+    cancel: 'Жок кыл'
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
     view_all: 'View My Projects'

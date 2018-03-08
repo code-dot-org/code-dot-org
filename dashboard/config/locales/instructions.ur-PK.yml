@@ -8112,6 +8112,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -10620,6 +10623,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
