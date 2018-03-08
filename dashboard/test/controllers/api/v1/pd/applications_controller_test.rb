@@ -831,9 +831,27 @@ module Api::V1::Pd
       end
     end
 
+    test 'cohort csv download returns expected columns for teachers' do
+      sign_in @workshop_admin
+      get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert_equal ['Date Accepted', 'Applicant Name', 'District Name', 'School Name', 'Email', 'Assigned Workshop', 'Registered Workshop'], response_csv.first
+    end
+
+    test 'cohort csv download returns expected columns for facilitators' do
+      sign_in @workshop_admin
+      get :cohort_view, format: 'csv', params: {role: 'csf_facilitators'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert_equal ['Date Accepted', 'Name', 'School District', 'School Name', 'Email', 'Status'], response_csv.first
+    end
+
     test 'search finds applications by email for workshop admins' do
       sign_in @workshop_admin
-      get :search, params: {email: @csd_teacher_application.user.email}
+      get :search, format: 'csv', params: {email: @csd_teacher_application.user.email}
       assert_response :success
       result = JSON.parse response.body
       expected = [{
