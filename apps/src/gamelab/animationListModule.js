@@ -321,6 +321,11 @@ export function setInitialAnimationList(serializedAnimationList) {
 }
 
 export function addBlankAnimation() {
+  // To avoid special cases and saving tons of blank animations to our server,
+  // we're actually adding a secret blank library animation any time the user
+  // picks "Draw my own."  As soon as the user makes any changes to the
+  // animation it gets saved as a custom animation in their own project, just
+  // like we do with other library animations.
   return addLibraryAnimation(
     {
       name: 'animation',
