@@ -217,8 +217,9 @@ export default storybook => {
         story: () => {
           const store = createStoreForLevels([
             activityPuzzle,
-            conceptPuzzle,
-          ], 1, false /* showStageExtras */, false /* onStageExtras */, true /* showStageTrophy */);
+            activityPuzzle,
+            activityPuzzle,
+          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>

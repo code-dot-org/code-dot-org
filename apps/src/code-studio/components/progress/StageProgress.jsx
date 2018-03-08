@@ -26,6 +26,7 @@ const styles = {
   stageTrophyContainer: {
     border: 0,
     borderRadius: 20,
+    paddingLeft: 10,
     paddingRight: 0,
   },
   pillContainer: {
