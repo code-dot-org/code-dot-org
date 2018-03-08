@@ -190,9 +190,10 @@ class Pd::Workshop < ActiveRecord::Base
   validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
+  validates_inclusion_of :on_map, in: [true, false]
+  validates_inclusion_of :funded, in: [true, false]
 
   validates :funding_type,
-    presence: {if: :funded_csf?},
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
 
