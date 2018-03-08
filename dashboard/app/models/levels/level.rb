@@ -478,11 +478,10 @@ class Level < ActiveRecord::Base
   end
 
   def additional_reference_links
-    links = {
+    {
       mapReference: map_reference,
       referenceLinks: reference_links
     }
-    links
   end
 
   private
