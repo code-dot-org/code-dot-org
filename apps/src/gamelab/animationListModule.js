@@ -567,7 +567,6 @@ function loadAnimationFromSource(key, callback) {
 
         // Log data about when this scenario occurs
         firehoseClient.putRecord(
-         'analysis-events',
           {
             study: 'animation_no_load',
             study_group: 'animation_no_load_v4',
