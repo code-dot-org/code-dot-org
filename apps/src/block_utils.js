@@ -427,6 +427,20 @@ const interpolateInputs = function (blockly, block, inputs) {
 exports.interpolateInputs = interpolateInputs;
 
 /**
+ * Add pre-labeled inputs
+ */
+const addInputs = function (blockly, block, args) {
+  block.appendDummyInput()
+    .appendTitle('show title screen');
+  args.forEach(arg => {
+    block.appendValueInput(arg.name)
+      .setCheck(arg.type || Blockly.BlockValueType.NONE)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendTitle(arg.label);
+  });
+};
+
+/**
  * Create a block generator that creats blocks that directly map to a javascript
  * function call, method call, or other (hopefully simple) expression.
  *
@@ -488,6 +502,7 @@ exports.createJsWrapperBlockCreator = function (
     methodCall,
     eventBlock,
     eventLoopBlock,
+    inline,
   }) => {
     if (!func === !expression) {
       throw new Error('Provide either func or expression, but not both');
@@ -510,9 +525,13 @@ exports.createJsWrapperBlockCreator = function (
           });
         }
 
-        interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+        if (inline === false) {
+          addInputs(blockly, this, args);
+        } else {
+          interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+          this.setInputsInline(true);
+        }
 
-        this.setInputsInline(true);
         if (returnType) {
           this.setOutput(true, returnType);
         } else if (eventLoopBlock) {
