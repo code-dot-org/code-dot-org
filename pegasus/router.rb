@@ -100,11 +100,21 @@ class Documents < Sinatra::Base
     set :redirect_extnames, ['.redirect', '.moved', '.found', '.301', '.302']
     set :template_extnames, ['.erb', '.fetch', '.haml', '.html', '.md', '.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
+    set :markdown,
+      renderer: ::TextRender::MarkdownEngine::HTMLWithTags,
+      autolink: true,
+      tables: true,
+      space_after_headers: true,
+      fenced_code_blocks: true,
+      lax_spacing: true
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
     Sass::Plugin.options[:template_location] = shared_dir('css')
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
+
+    # Haml/Temple engine doesn't recognize the `path` option
+    # which is used by Sinatra/Tilt for correct template backtraces.
+    Haml::TempleEngine.disable_option_validator!
   end
 
   before do
@@ -141,7 +151,7 @@ class Documents < Sinatra::Base
       end
     end
 
-    @locals = {header: {}}
+    @locals = {header: @header}
   end
 
   # Language selection
@@ -246,7 +256,7 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document(path).tap {dont_cache}
+    document(path).tap {dont_cache} if path
   end
 
   helpers(Dashboard) do
@@ -276,15 +286,26 @@ class Documents < Sinatra::Base
       request.user_id
     end
 
+    def parse_yaml_header(path)
+      content = IO.read path
+      match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
+      return [{}, content, 1] unless match
+
+      yaml = erb(match[:yaml], path: path, line: 1)
+      header = YAML.load(yaml, path) || {}
+      raise "YAML header error: expected Hash, not #{header.class}" unless header.is_a?(Hash)
+      remaining_content = match.post_match
+      line = content.lines.count - remaining_content.lines.count + 1
+      [header, remaining_content, line]
+    rescue => e
+      # Append rendered header to error message.
+      e.message << "\n#{yaml}" if yaml
+      raise
+    end
+
     def document(path)
-      content = IO.read(path)
-      original_line_count = content.lines.count
-      match = content.match(/^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
-      if match
-        @header = @locals[:header] = YAML.load(render_(match[:yaml], '.erb'))
-        content = match.post_match
-      end
-      line_number_offset = content.lines.count - original_line_count
+      header, content, line = parse_yaml_header(path)
+      @header.merge!(header)
       @header['social'] = social_metadata
 
       if @header['require_https'] && rack_env == :production
@@ -304,37 +325,17 @@ class Documents < Sinatra::Base
       end
 
       response.headers['X-Pegasus-Version'] = '3'
-      begin
-        render_(content, File.extname(path))
-      rescue Haml::Error => e
-        if e.backtrace.first =~ /router\.rb:/ && e.line
-          actual_line_number = e.line - line_number_offset + 1
-          e.set_backtrace e.backtrace.unshift("#{path}:#{actual_line_number}")
-        end
-        raise e
+      render_(content, File.extname(path), path, line)
+    rescue => e
+      # Add document path to backtrace if not already included.
+      if path && [e.message, *e.backtrace].none? {|location| location.include?(path)}
+        e.set_backtrace e.backtrace.unshift(path)
       end
+      raise
     end
 
     def preprocess_markdown(markdown_content)
       markdown_content.gsub(/```/, "```\n")
-    end
-
-    def post_process_html_from_markdown(full_document)
-      full_document.gsub!(/<p>\[\/(.*)\]<\/p>/) do
-        "</div>"
-      end
-      full_document.gsub!(/<p>\[(.*)\]<\/p>/) do
-        value = $1
-        if value[0] == '#'
-          attribute = 'id'
-          value = value[1..-1]
-        else
-          attribute = 'class'
-        end
-
-        "<div #{attribute}='#{value}'>"
-      end
-      full_document
     end
 
     def log_drupal_link(dir, uri, path)
@@ -383,6 +384,36 @@ class Documents < Sinatra::Base
       nil
     end
 
+    # Scans the filesystem and finds all documents served by Pegasus CMS.
+    # @return [Array<Hash<Symbol, String>] An array of :site, :uri hash entries for all found documents.
+    def all_documents
+      dirs = Dir.children(content_dir).select {|file| Dir.exist?(content_dir(file))}
+      dirs.map do |site|
+        (settings.template_extnames - ['.fetch']).map do |ext|
+          site_glob = site_sub = content_dir(site, 'public')
+
+          if site == 'hourofcode.com'
+            # hourofcode.com has custom logic to include
+            # optional `/i18n` folder in its file-search path.
+            site_glob.sub!(site, "{#{site},#{site}/i18n}")
+            site_sub = /#{content_dir(site)}(\/i18n)?\/public/
+          end
+
+          Dir.glob("#{site_glob}/**/*#{ext}").map do |file|
+            # Reduce file to URI.
+            uri = file.
+              sub(site_sub, '').
+              sub(/#{File.extname(file)}$/, '').
+              sub(/\/index$/, '')
+            next if uri.start_with?('/private')
+            uri.prepend('/us') if site == 'hourofcode.com'
+            site = 'italia.code.org' if site == 'i18n.code.org'
+            {site: site, uri: uri}
+          end
+        end
+      end.flatten.compact
+    end
+
     def resolve_document(uri)
       extnames = settings.non_static_extnames
 
@@ -392,6 +423,8 @@ class Documents < Sinatra::Base
       path = resolve_template('public', extnames, File.join(uri, 'index'))
       return path if path
 
+      # Recursively resolve '/splat.[ext]' template from the given URI.
+      # env[:splat_path_info] contains the path_info following the splat template's folder.
       at = uri
       while at != '/'
         parent = File.dirname(at)
@@ -417,26 +450,23 @@ class Documents < Sinatra::Base
     end
 
     def render_template(path, locals={})
-      render_(IO.read(path), File.extname(path), locals)
-    rescue Haml::Error => e
-      if e.backtrace.first =~ /router\.rb:/
-        e.set_backtrace e.backtrace.unshift("#{path}:#{e.line}")
-      end
-      raise e
+      render_(IO.read(path), File.extname(path), path, 0, locals)
     rescue => e
       Honeybadger.context({path: path, e: e})
       raise "Error rendering #{path}: #{e}"
     end
 
-    def render_(body, extname, locals={})
+    def render_(body, extname, path=nil, line=0, locals={})
       locals = @locals.merge(locals).symbolize_keys
+      options = {locals: locals, line: line, path: path}
+
       case extname
       when '.erb', '.html'
-        erb body, locals: locals
+        erb body, options
       when '.haml'
-        haml body, locals: locals
+        haml body, options
       when '.fetch'
-        url = erb(body, locals: locals)
+        url = erb(body, options)
 
         cache_file = cache_dir('fetch', request.site, request.path_info)
         unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
@@ -448,14 +478,13 @@ class Documents < Sinatra::Base
         cache :static
         send_file(cache_file)
       when '.md', '.txt'
-        preprocessed = erb body, locals: locals
+        preprocessed = erb body, options
         preprocessed = preprocess_markdown preprocessed
-        html = markdown preprocessed, lax_spacing: true, locals: locals
-        post_process_html_from_markdown html
+        markdown preprocessed, options
       when '.redirect', '.moved', '.301'
-        redirect erb(body, locals: locals), 301
+        redirect erb(body, options), 301
       when '.found', '.302'
-        redirect erb(body, locals: locals), 302
+        redirect erb(body, options), 302
       else
         raise "'#{extname}' isn't supported."
       end
