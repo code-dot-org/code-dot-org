@@ -316,6 +316,9 @@ module AWS
         change_status = route53_client.get_change({id: change_id}).change_info.status
         CDO.log.info "DNS update status - #{change_status}"
         CDO.log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
+        stack.outputs.each do |output|
+          CDO.log.info "#{output.output_key}: #{output.output_value}"
+        end
       end
 
       def stop

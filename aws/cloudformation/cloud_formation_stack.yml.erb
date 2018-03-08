@@ -565,9 +565,9 @@ Outputs:
   PegasusURL:
     Value: "https://<%=subdomain%>"
     Description: Pegasus URL
-  # display information about how to ssh to console if this is a single instance adhoc environment
-  <% if rack_env?(:adhoc) && !frontends -%>
-    ServerConsole:
-      Value: <%=subdomain%>
-      Description: ssh <%=subdomain%> from gateway.code.org console
-  <%end-%>
+# display information about how to ssh to console if this is a single instance adhoc environment
+<% if rack_env?(:adhoc) && !frontends -%>
+  InternalSSHServerName:
+    Value: <%=stack_name%>
+    Description: ssh to <%=stack_name%> from gateway.code.org console
+<%end-%>
