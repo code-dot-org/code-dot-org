@@ -309,6 +309,7 @@ describe('manageStudentsRedux', () => {
       const startedSavingState = manageStudents(editingState, startSavingAction);
       assert.equal(startedSavingState.studentData[1].isEditing, true);
       assert.equal(startedSavingState.studentData[1].isSaving, true);
+      assert.equal(startedSavingState.editingData[1].isSaving, true);
     });
 
     it('saveStudentSuccess updates studentData and removes editingData', () => {
