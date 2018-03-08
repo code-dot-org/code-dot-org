@@ -285,9 +285,6 @@
           og afstandsformlen kan bruges til at måle afstanden mellem to punkter på
           skærmen, og derefter beslutte, om disse to punkter (eller spilobjekter)
           rører.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

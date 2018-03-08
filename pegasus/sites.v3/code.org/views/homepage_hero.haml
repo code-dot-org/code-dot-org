@@ -8,12 +8,12 @@
     .action
       - if entry[:type] == "cta_button"
         .buttongroup{style: "margin-bottom: 15px"}
-          %a{href: entry[:url]}
+          %a.linktag#hero-hoc{href: entry[:url]}
             %button.herohocbutton{style: "min-width: 230px; margin-right: 0px"}= I18n.t(entry[:text])
         %div{style: "clear: both;"}
       - elsif entry[:type] == "video"
-        %button{onclick: "return showVideo_mainvideo();", style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
-          %span#playtext{style: "font-size: 18px;"}= I18n.t(entry[:text])
+        %button.clicktag#hero-video{onclick: "return showVideo_mainvideo();", style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
+          %span#playtext{style: "font-size: 18px; pointer-events: none"}= I18n.t(entry[:text])
 
   - if show_census_announcement
     %br/

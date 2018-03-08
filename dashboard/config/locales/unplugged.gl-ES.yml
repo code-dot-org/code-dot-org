@@ -285,9 +285,6 @@
           e a fórmula da distancia poden ser usados para medir a distancia entre dous
           puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo)
           están se tocando.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

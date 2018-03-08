@@ -90,7 +90,7 @@ var move = function (direction, id) {
   if (Maze.controller.subtype.isWordSearch()) {
     Maze.controller.subtype.markTileVisited(Maze.controller.pegmanY, Maze.controller.pegmanX, false);
   }
-  if (Maze.controller.shouldCheckSuccessOnMove()) {
+  if (Maze.shouldCheckSuccessOnMove()) {
     Maze.checkSuccess();
   }
 };
@@ -258,11 +258,15 @@ exports.loopHighlight = API_FUNCTION(function (id) {
  * whether or not we're a Bee level
  */
 exports.getNectar = API_FUNCTION(function (id) {
-  Maze.controller.subtype.getNectar(id);
+  if (Maze.controller.subtype.tryGetNectar()) {
+    Maze.executionInfo.queueAction("nectar", id);
+  }
 });
 
 exports.makeHoney = API_FUNCTION(function (id) {
-  Maze.controller.subtype.makeHoney(id);
+  if (Maze.controller.subtype.tryMakeHoney()) {
+    Maze.executionInfo.queueAction("honey", id);
+  }
 });
 
 exports.atFlower = API_FUNCTION(function (id) {
@@ -304,38 +308,50 @@ exports.honeyCreated = API_FUNCTION(function (id) {
  */
 
 exports.getCorn = API_FUNCTION(function (id) {
-  Maze.controller.subtype.getCorn(id);
+  if (Maze.controller.subtype.tryGetCorn()) {
+    Maze.executionInfo.queueAction("get_corn", id);
+  }
 });
 
 exports.getPumpkin = API_FUNCTION(function (id) {
-  Maze.controller.subtype.getPumpkin(id);
+  if (Maze.controller.subtype.tryGetPumpkin()) {
+    Maze.executionInfo.queueAction("get_pumpkin", id);
+  }
 });
 
 exports.getLettuce = API_FUNCTION(function (id) {
-  Maze.controller.subtype.getLettuce(id);
+  if (Maze.controller.subtype.tryGetLettuce()) {
+    Maze.executionInfo.queueAction("get_lettuce", id);
+  }
 });
 
 exports.atCorn = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_corn', id);
   return Maze.controller.subtype.atCorn(id);
 });
 
 exports.atPumpkin = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_pumpkin', id);
   return Maze.controller.subtype.atPumpkin(id);
 });
 
 exports.atLettuce = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_lettuce', id);
   return Maze.controller.subtype.atLettuce(id);
 });
 
 exports.hasCorn = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('has_corn', id);
   return Maze.controller.subtype.hasCorn(id);
 });
 
 exports.hasPumpkin = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('has_pumpkin', id);
   return Maze.controller.subtype.hasPumpkin(id);
 });
 
 exports.hasLettuce = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('has_lettuce', id);
   return Maze.controller.subtype.hasLettuce(id);
 });
 
@@ -344,14 +360,18 @@ exports.hasLettuce = API_FUNCTION(function (id) {
  */
 
 exports.plant = API_FUNCTION(function (id) {
-  Maze.controller.subtype.plant(id);
+  if (Maze.controller.subtype.tryPlant()) {
+    Maze.executionInfo.queueAction('plant', id);
+  }
 });
 
 exports.atSoil = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_soil', id);
   return Maze.controller.subtype.atSoil(id);
 });
 
 exports.atSprout = API_FUNCTION(function (id) {
+  Maze.executionInfo.queueAction('at_sprout', id);
   return Maze.controller.subtype.atSprout(id);
 });
 
@@ -362,5 +382,7 @@ exports.atSprout = API_FUNCTION(function (id) {
 exports.collect = API_FUNCTION(function (id) {
   var col = Maze.controller.pegmanX;
   var row = Maze.controller.pegmanY;
-  Maze.controller.subtype.collect(id, row, col);
+  if (Maze.controller.subtype.tryCollect(row, col)) {
+    Maze.executionInfo.queueAction('pickup', id);
+  }
 });

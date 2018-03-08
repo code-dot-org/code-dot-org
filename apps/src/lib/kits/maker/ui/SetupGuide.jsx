@@ -9,7 +9,7 @@ import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from "../../../../templates/FontAwesome";
 
-const DOWNLOAD_PREFIX = 'https://downloads.code.org/makertoolkit/';
+const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
@@ -183,7 +183,7 @@ class LinuxDownloads extends React.Component {
     if (!this.state.installer) {
       return null;
     }
-    return this.state.installer.filename.replace(/x86_64\.AppImage/, 'linux.deb');
+    return null; // TODO - derive from latest-linux.yml correctly
   }
 
   render() {

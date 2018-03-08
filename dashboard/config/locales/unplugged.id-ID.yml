@@ -298,9 +298,6 @@
           Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak
           antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau
           karakter game) yang menyentuh.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!

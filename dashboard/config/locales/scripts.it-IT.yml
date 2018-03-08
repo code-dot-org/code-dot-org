@@ -3115,7 +3115,7 @@
             Loops Unplugged:
               name: 'Cicli: Lezioni Tradizionali'
             Persistence & Frustration:
-              name: Persistence & Frustration
+              name: Perseveranza & Frustrazione
             Programming:
               name: Programmazione
             Programming Unplugged:
@@ -3185,7 +3185,7 @@
             More Computer Science:
               name: More Computer Science
             Persistence & Frustration:
-              name: Persistence & Frustration
+              name: Perseveranza & Frustrazione
             Programming:
               name: Programmazione
             Programming Unplugged:
@@ -4903,7 +4903,8 @@
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Un'introduzione all'informatica per bambini che stanno
+            imparando a leggere.
           description: |-
             Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
             Recommended for grade K.
@@ -4941,7 +4942,8 @@
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Un'introduzione all'informatica per bambini che stanno
+            imparando a leggere.
           description: Course B is for early readers. Students will create computer
             programs that will help them learn to collaborate with others, develop
             problem-solving skills, and persist through difficult tasks. By the end
@@ -6852,17 +6854,25 @@
                 il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo
                 cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Perseveranza: Stevie e il Grande Progetto'
               description_student: ''
-              description_teacher: |-
-                Quando gli studenti si imbattono in una difficoltà mentre rispondono a una domanda o lavorano su un progetto, è molto facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce agli studenti il concetto che la frustrazione può essere una parte importante dell'apprendimento. Qui, la frustrazione è presentata come una fase nel processo creativo, piuttosto che un segno di fallimento. \r
-                \r
-                Questa lezione può essere svolta in una o due sessioni con la classe. Se avete più tempo, non esitate a prolungare la durata della fase di costruzione e revisione dell'attività Corsa delle Biglie.
+              description_teacher: Quando gli studenti si imbattono in una difficoltà
+                mentre rispondono a una domanda o lavorano su un progetto, è molto
+                facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce
+                agli studenti il concetto che la frustrazione può essere una parte
+                importante dell'apprendimento. Qui, la frustrazione è presentata come
+                una fase nel processo creativo, piuttosto che un segno di fallimento.
+                Questa lezione può essere svolta in una o due sessioni con la classe.
+                Se avete più tempo, non esitate a prolungare la durata della fase
+                di costruzione e revisione dell'attività Corsa delle Biglie.
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
               description_student: ''
-              description_teacher: |
-                In questa lezione, gli studenti metteranno in relazione il concetto di algoritmo con le attività di ogni giorno, nella vita reale, piantando un vero seme. L'obiettivo è quello di iniziare a costruire le competenze per tradurre le situazioni del mondo reale in algoritmi e viceversa.\r
+              description_teacher: In questa lezione, gli studenti metteranno in relazione
+                il concetto di algoritmo con le attività di ogni giorno, nella vita
+                reale, piantando un vero seme. L'obiettivo è quello di iniziare a
+                costruire le competenze per tradurre le situazioni del mondo reale
+                in algoritmi e viceversa.
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
               description_student: ''
@@ -6937,21 +6947,17 @@
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 una storia nel Laboratorio!
           title: Corso A
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: Course A offers computer science curriculum for beginning readers
-            around the kindergarten age range. Students will learn to program using
-            commands like loops and events. The lessons featured in this course also
-            teach students to collaborate with others meaningfully, investigate different
-            problem-solving techniques, persist in the face of difficult tasks, and
-            learn about internet safety. By the end of this course, students create
-            their very own custom game or story from Play Lab that they can share.
+          description_audience: 'Età: da 4 a 7 anni'
+          description_short: Un'introduzione all'informatica per bambini che non leggono
+            ancora.
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Perseveranza: Stevie e il Grande Progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
@@ -6979,10 +6985,8 @@
           title: Corso B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
-          description: |-
-            Course B was developed with first graders in mind. Tailored to a novice reading level, this course also assumes limited knowledge of shapes and numbers.\r
-            \r
-            At the moment, Course B closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course students will create their very own custom game from Play Lab that they can share with a link.
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         coursec:
           stages:
             Building a Foundation:
@@ -8057,13 +8061,14 @@
           title: Corso Rapido
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Perseveranza: Stevie e il Grande Progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
@@ -8091,7 +8096,8 @@
           title: ''
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Impara le basi dell'informatica e della sicurezza su Internet.
+            Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -9104,3 +9110,81 @@
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Conditionals:
+              name: Istruzioni condizionali
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Funzioni
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            Project - Design a Game:
+              name: Project - Design a Game
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: Impara a programmare animazioni, arte interattiva e giochi
+            in Sviluppo Giochi.
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."

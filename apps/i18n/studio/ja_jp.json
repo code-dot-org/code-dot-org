@@ -219,6 +219,7 @@
   "iceAge": "氷河期！",
   "ifDroid": "droid",
   "ifDroidN": "ドロイド {spriteIndex}",
+  "ifSprite": "キャラ",
   "ifSpriteN": "キャラ {spriteIndex}",
   "incrementPlayerScore": "ポイントを ふやす",
   "isSet": "＝",

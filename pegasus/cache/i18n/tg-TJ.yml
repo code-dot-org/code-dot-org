@@ -1385,7 +1385,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Синну сол: 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets

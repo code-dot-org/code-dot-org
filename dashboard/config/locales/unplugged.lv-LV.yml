@@ -249,9 +249,6 @@
       CollisionDetection:
         title: Sadursmes noteikšana
         desc: Sadrusmes noteikšanas nodarbības apraksts
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

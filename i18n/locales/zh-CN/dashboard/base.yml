@@ -59,7 +59,7 @@ zh-CN:
   courses: '课程'
   courses_page:
     title_student: "在代码工作室学习"
-    title_teacher: "用代码工作室来教学"
+    title_teacher: "教授计算机科学"
   unplugged_activity: '不用电脑的活动'
   of: "的"
   more: "更多"
@@ -171,7 +171,7 @@ zh-CN:
       email: '电子邮件地址'
       submit: '提交'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: '请填写验证码以重置您的密码。'
       invalid_email: '您也许用了无效的电子邮件地址来登录。请联系support@code.org 来获得恢复密码的链接。'
     change_form:
       title: '更换密码'
@@ -588,7 +588,7 @@ zh-CN:
       body: "在你自己的《我的世界》中编写各种动物和其他生物。"
     hero:
       title: "我的世界"
-      body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+      body: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
     sports:
       title: "运动"
       body: "创造一个篮球游戏或跨越各种运动的混合比赛。"
@@ -844,7 +844,7 @@ zh-CN:
     content: '内容'
     practice: '教学训练'
     peer_review: '互相检查'
-    ramp_up: 'Ramp-Up'
+    ramp_up: '热身'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
     main_course: '主要课程'
@@ -863,8 +863,8 @@ zh-CN:
     csd4_2: '第 2 章︰ 应用程序原型'
     csd5_1: '第 1 章︰ 表达信息'
     csd5_2: '第 2 章︰ 解决数据问题'
-    csd6_1: '第 1 章︰ 硬件输出'
-    csd6_2: '第 2 章︰ 硬件输入'
+    csd6_1: '第 1 章︰ 用硬件编程'
+    csd6_2: '第 2 章︰ 创建物理原型'
     csp1_1: '第一章：表达和传输信息'
     csp1_2: '第二章：发明互联网'
     csp2_1: '第一章：编码和压缩复杂信息'

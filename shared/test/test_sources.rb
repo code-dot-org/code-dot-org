@@ -186,10 +186,9 @@ class SourcesTest < FilesApiTestBase
     Timecop.travel 1
 
     # log when replacing non-current version.
-    FirehoseClient.instance.expects(:put_record).with do |stream_name, data|
+    FirehoseClient.instance.expects(:put_record).with do |data|
       data_json_data = JSON.parse(data[:data_json])
-      stream_name == 'analysis-events' &&
-        data[:study] == 'project-data-integrity' &&
+      data[:study] == 'project-data-integrity' &&
         data[:event] == 'replace-non-current-main-json' &&
         data[:project_id] == @channel &&
         data_json_data['replacedVersionId'] == version1

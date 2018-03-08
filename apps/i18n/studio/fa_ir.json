@@ -219,6 +219,7 @@
   "iceAge": "عصر یخبندان!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "بازیگر",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "نمره امتیاز",
   "isSet": "is set",

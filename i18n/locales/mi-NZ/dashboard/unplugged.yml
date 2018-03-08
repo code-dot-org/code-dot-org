@@ -163,9 +163,6 @@ mi:
       CollisionDetection:
         title: Te Mātai Tūtuki me te Huatau Pythagorean
         desc: He mea nui i te nuinga o ngā kēmu te whakatau āhea puta mai ai ngā ahanoa i te pānga o te mata. I tēnei whakaakoranga ka aro tātou ki te whakamahi o te Ariā Pythagorean me te Tātai Tawhiti ki te ine i te tawhiti i waenganui i tētahi pūwāhi me tētahi atu pūwāhi o te waka rererangi. Mutu ana, ka whakatauhia mēnā rā e pā ana aua pūwāhi (kiripuaki rānei).
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
