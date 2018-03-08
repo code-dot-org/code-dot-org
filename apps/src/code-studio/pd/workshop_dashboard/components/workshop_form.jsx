@@ -430,7 +430,7 @@ export default class WorkshopForm extends React.Component {
         value: partner.id,
         label: partner.name
       })));
-    } else {
+    } else if (this.props.workshop) {
       // Display the currently selected partner name, even if the list hasn't yet loaded.
       options.push({
         value: this.props.workshop.regional_partner_id || '',
@@ -589,8 +589,8 @@ export default class WorkshopForm extends React.Component {
     this.setState({
       facilitators: [],
       subject: null,
-      funded: null,
-      funding_type: null
+      funded: '',
+      funding_type: ''
     });
     this.loadAvailableFacilitators(course);
   };
