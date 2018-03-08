@@ -183,7 +183,7 @@ class LinuxDownloads extends React.Component {
     if (!this.state.installer) {
       return null;
     }
-    return this.state.installer.filename.replace(/x86_64\.AppImage/, 'linux.deb');
+    return null; // TODO - derive from latest-linux.yml correctly
   }
 
   render() {
