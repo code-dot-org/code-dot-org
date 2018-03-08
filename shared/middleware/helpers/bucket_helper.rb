@@ -186,7 +186,6 @@ class BucketHelper
     return if version_to_replace == current_version
 
     FirehoseClient.instance.put_record(
-      'analysis-events',
       study: 'project-data-integrity',
       study_group: 'v2',
       event: 'replace-non-current-main-json',
@@ -276,7 +275,6 @@ class BucketHelper
 
     # If we get this far, the restore request has succeeded.
     FirehoseClient.instance.put_record(
-      'analysis-events',
       study: 'project-data-integrity',
       study_group: 'v2',
       event: 'version-restored',
