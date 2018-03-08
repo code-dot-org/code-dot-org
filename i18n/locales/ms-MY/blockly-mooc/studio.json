@@ -219,6 +219,7 @@
   "iceAge": "Ice Age!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "pelakon",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "markah skor",
   "isSet": "is set",

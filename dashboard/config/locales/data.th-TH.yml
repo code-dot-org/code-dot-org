@@ -12,7 +12,7 @@
         Artist2: "ศิลปิน 2"
         Unplug5: "ฟังก์ชัน"
         Farmer: "ชาวนา"
-        Unplug6: "เงื่อนไข "
+        Unplug6: "เงื่อนไข"
         Artist3: "ศิลปิน 3"
         Unplug7: "การแต่งเพลง"
         Farmer2: "ชาวนา 2"
@@ -601,7 +601,7 @@
         Unplug3: "การเขียนกระดาษกราฟ"
         Unplug4: "อัลกอริทึม"
         Unplug5: "ฟังก์ชัน"
-        Unplug6: "เงื่อนไข "
+        Unplug6: "เงื่อนไข"
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -634,7 +634,7 @@
         C2_bee_conditionals: "ผึ้ง Conditionals"
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: "การเขียนกระดาษกราฟ"
-        C2_conditionals_with_cards: "เงื่อนไข "
+        C2_conditionals_with_cards: "เงื่อนไข"
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: "โปรแกรมการถ่ายทอดข้อมูล"
         C2_paper_airplanes: Paper Airplanes
@@ -670,7 +670,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: "ฟังก์ชันกับพารามิเตอร์"
-        C4_conditionals: "เงื่อนไข "
+        C4_conditionals: "เงื่อนไข"
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -849,6 +849,7 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

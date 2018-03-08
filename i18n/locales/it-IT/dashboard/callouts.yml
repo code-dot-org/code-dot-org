@@ -692,6 +692,7 @@ it:
         artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
+      comment_intro_maze_2018_callout: [ ]
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto il nettare (o miele) da un fiore (o nido d'ape).
@@ -729,14 +730,14 @@ it:
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: Questo numero significa che solo uno di questo tipo di blocchi può essere usato nella risposta finale.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+        courseA_artist_loops8_1: Sapevi che puoi anche disegnare andando all'indietro?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: Click here to watch the code run!
+        courseA_collector_preLoops1_1: Clicca qui per eseguire il codice!
       courseA_collector_preLoops2_callout:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_preLoops3_callout:
@@ -753,7 +754,7 @@ it:
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Usa il bottone passo per andare passo dopo passo nel programma. Ti aiuterà a trovare il bug!
       courseA_maze_seq4_callout:
-        made_of_stone: These blocks are made of stone.  You can move them, but you can't delete them!
+        made_of_stone: Questi blocchi sono fatti di pietra. Puoi muoverli, ma non puoi cancellarli!
       courseA_maze_seq4a_callout: [ ]
       courseA_playLab_events2_callout: [ ]
       courseA_playLab_events3_callout: [ ]
@@ -762,7 +763,7 @@ it:
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Clicca qui per cambiare la direzine dell'evento freccia.
       courseA_playLab_events6_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Questo ti permette di scegliere un suono "casuale", quindi non saprai quale suono verrà riprodotto ogni volta!
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
@@ -1151,6 +1152,7 @@ it:
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
       courseF_artist_variables_template_callout: [ ]
+      courseF_artist_variables_template_2018_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: La sezione degli strumenti è ora in modalità categorie. Tutti i blocchi di cui hai bisogno sono al di sotto di queste etichette!
@@ -1259,6 +1261,8 @@ it:
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variables8c_2018_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
+      courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: Questo è come imposti il valore della tua variabile. Cambia il testo allegato a questo blocco per cambiare cosa è memorizzato nella tua variabile.
@@ -1454,13 +1458,13 @@ it:
       gradek_artist_loops3_callout:
         artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
+        gradek_artist_loops7_1: Sapevi che puoi anche disegnare andando all'indietro?
       gradek_playlab_events1c_callout: [ ]
       gradek_playlab_events2c_callout: [ ]
       gradek_playlab_events3c_callout: [ ]
       gradek_playlab_events4c_callout: [ ]
       gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+        gradek_playlab_events5c_1: Questo ti permette di scegliere un suono "casuale", quindi non saprai quale suono verrà riprodotto ogni volta!
       iceage_click_hello_callout: [ ]
       iceage_click_hello_2018_callout: [ ]
       iceage_free_play_callout: [ ]
@@ -1494,6 +1498,7 @@ it:
         playlab_add_score: ""
       iceage_throw_hearts_callout: [ ]
       iceage_throw_hearts_2018_callout: [ ]
+      iceage_warn_embed_ice_age_callout: [ ]
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ""
       iceage_warn_ice_age_2018_callout:

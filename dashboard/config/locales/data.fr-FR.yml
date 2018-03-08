@@ -798,7 +798,7 @@
         playlab_repeat_forever: Répétition à l’infinie du Labo de jeux
         tutorial_puzzle_challenge: Tutoriel Défi du puzzle
         infinity_playlab_intro: Labo de jeux - Introduction
-        infinity_playlab_events: 'Labo de jeux - Événements '
+        infinity_playlab_events: Labo de jeux - Événements
         infinity_playlab_repeat_forever: Labo de jeux  - Répétition à l’infinie
         csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: What Makes a Computer, a Computer?
@@ -948,6 +948,7 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

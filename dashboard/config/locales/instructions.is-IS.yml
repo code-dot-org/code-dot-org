@@ -6956,6 +6956,9 @@
         borðinu.
       collectorSkinVideo2_instruction: Safnaðu einni gullhrúgu til að klára þennan
         áfanga.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         Þú getur teiknað lykkju til að teikna margar línur í röð.\r
         \r
@@ -9100,6 +9103,9 @@
         the `set alpha` block to get this faded center.
       courseF_artist_for_Template_instruction: Prófaðu að nota eitthvað af kóðanum
         úr síðasta stigi, en með 89 gráðu snúningi til að búa til þennan snúna ferningaspíral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: Getur þú fundið út hvernig á að endurgera
         þessa teikningu?
       courseF_artist_for_challenge1_2018_instruction: |-

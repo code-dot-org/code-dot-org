@@ -273,9 +273,6 @@
           ölçmeye bakacağız. Daha sonra bunu iki nokta (veya oyun karakterleri) arası
           mesafe ölçek için kullanıp dokunup dokunmadığına karar için kullanılabilir
           bakacağız.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Bağımsız (Unplugged) Döngüler
         desc: Bu derste, döngüler hakkında bilgi edineceksiniz!

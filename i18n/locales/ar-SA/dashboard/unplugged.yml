@@ -163,9 +163,6 @@ ar:
       CollisionDetection:
         title: اكتشاف التصادم ونظرية فيثاغورس
         desc: تحديد عند لمس الأشياء على الشاشة أحد جوانب هامة لمعظم الألعاب. في هذا الدرس سنلقي نظرة على كيفية استخدام نظرية فيثاغورس وصيغة المسافة قياس المسافة بين نقطتين على متن الطائرة، ومن ثم تقرر ما إذا كان لمس تلك نقطتان (أو لعبة الأحرف).
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
