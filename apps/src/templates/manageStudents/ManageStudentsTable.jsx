@@ -375,7 +375,7 @@ class ManageStudentsTable extends Component {
           style={tableLayoutStyles.table}
         >
           <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="name" />
+          <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>
       </div>
     );
