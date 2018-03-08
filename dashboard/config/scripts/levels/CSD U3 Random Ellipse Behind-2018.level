@@ -48,9 +48,9 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "KcYpRQkU3CO/Ka/bLmVxZNZDc4TK9rqXYP0L2mqp3y7kF4vAO3OH2nB57mS3\nHKd0cubXWBwLxqA6XOAolFJSXw==\n",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

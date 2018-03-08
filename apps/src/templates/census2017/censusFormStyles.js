@@ -90,7 +90,8 @@ export const styles = {
     height: 25,
     width: 390,
     fontFamily: '"Gotham 3r", sans-serif',
-    padding: 5
+    padding: 5,
+    maxWidth: "80%"
   },
   textArea: {
     height: 100,

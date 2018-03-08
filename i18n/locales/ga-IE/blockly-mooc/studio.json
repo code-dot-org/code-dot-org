@@ -219,6 +219,7 @@
   "iceAge": "Oighearaois!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "aisteoir",
   "ifSpriteN": "aisteoir {spriteIndex}",
   "incrementPlayerScore": "tabhair pointe don imreoir",
   "isSet": "socraithe",

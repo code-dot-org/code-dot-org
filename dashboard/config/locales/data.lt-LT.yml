@@ -219,7 +219,7 @@
           blokelį.'
         maze_karel_2_2: "„Komandų kūrimas“ skyriuje atsirado naujas blokelis, pavadintas
           „užpildyk 5“. Panaudok jį ir užpildyk šią duobę."
-        maze_karel_2_3: 'Panaudok blokelį „užpildyk 5“, kad užpildytum visas duobes. '
+        maze_karel_2_3: Panaudok blokelį „užpildyk 5“, kad užpildytum visas duobes.
         maze_karel_2_4: Sukurk naują komandą, kuri pašalina 7 kastuvus žemių. Tada
           panaudok ją, kad galėčiau pašalinti visas krūvas.
         maze_karel_2_5: Sukurk naują komandą, kuri pašalina 6 kastuvus žemių nuo krūvos,
@@ -883,6 +883,7 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat

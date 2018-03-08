@@ -958,6 +958,9 @@ zh-TW:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: 要完成關卡的話，你的迴圈裡應該要有 3 個積木。
       artistLoopsKFP_authored_hint: [ ]
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Comments are also helpful when other people try to read your code.
+        courseC_maze_programming4_b: Add a comment when you change directions- what would have happened if you turned the other way?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
           你可以使用像這樣的迴圈來創建圍牆和屋頂。試試重複不同的積木。
@@ -2907,6 +2910,7 @@ zh-TW:
         courseB_starWars_prog9_a: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
         courseB_starWars_prog9_b: There are many ways to solve this puzzle.
         courseB_starWars_prog9_c: Could a `repeat` loop help out here?
+      courseC_PlayLab_embed_events9_authored_hint: [ ]
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
@@ -3680,6 +3684,7 @@ zh-TW:
           There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
       courseD_artist_embed_frozen_authored_hint: [ ]
       courseD_artist_embed_frozen2_authored_hint: [ ]
+      courseD_artist_embedded_project1a_authored_hint: [ ]
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
@@ -3832,6 +3837,7 @@ zh-TW:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while `jump forward` does not.
         courseD_artist_project2_b: After you draw and move the first time, you can repeat the code by adding a loop around the outside.
       courseD_artist_project2Template_authored_hint: [ ]
+      courseD_artist_project2Template_2018_authored_hint: [ ]
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while `jump forward` does not.
         courseD_artist_project2_b: After you draw and move the first time, you can repeat the code by adding a loop around the outside.
@@ -3898,6 +3904,7 @@ zh-TW:
           
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: [ ]
+      courseD_artist_projectTemplate_2018_authored_hint: [ ]
       courseD_artist_project_embedded_authored_hint: [ ]
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
@@ -4786,6 +4793,7 @@ zh-TW:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: [ ]
       courseD_playLab_embedded_authored_hint: [ ]
       courseD_scrat_predict1_authored_hint: [ ]
       courseD_scrat_predict1_2018_authored_hint: [ ]
@@ -5537,6 +5545,7 @@ zh-TW:
           * Make the dinosaur say something.
           * Set a new background.
           * Make all of the actors vanish and show a "Game Over" message.
+      courseE_playLab_embed_scaffold5_authored_hint: [ ]
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used to add an actor to the stage.
         courseE_playLab_scaffold1_b: Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.
@@ -9175,6 +9184,7 @@ zh-TW:
       iceage_throw_hearts_2018_authored_hint:
         iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an arrow is pressed? When you click on Sid?  When you click on Granny?  The choice is yours!
         iceage_throw_hearts_b: To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event.
+      iceage_warn_embed_ice_age_authored_hint: [ ]
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'You should only have to add two blocks to get this puzzle where it needs to be. '
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.
