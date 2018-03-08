@@ -1,24 +1,47 @@
 import React, { Component } from 'react';
+import color from "@cdo/apps/util/color";
 import trophy from '!!file-loader!./images/trophy.svg';
+
+const styles = {
+  main: {
+    marginLeft: 4,
+  },
+};
 
 export default class StageExtrasProgressBubble extends Component {
   render() {
     return (
       <svg
-        width="40"
-        height="40"
+        style={styles.main}
+        width="50"
+        height="90"
       >
-        <path
-          d="M 20 0 A 20 20 0 1 1 0 20"
-          fill="none"
-          stroke="black"
-          strokeWidth="3"
-        />
-        <g transform="translate(8, 10)">
-          <use
-            href={`${trophy}#trophy`}
-            transform="scale(0.04)"
+        <g transform="translate(5, 25)">
+          <circle
+            cx="20"
+            cy="20"
+            r="25"
+            fill="white"
           />
+          <circle
+            cx="20"
+            cy="20"
+            r="20"
+            fill={color.lightest_gray}
+          />
+          <path
+            d="M 20 2 A 18 18 0 1 1 2 20"
+            fill="none"
+            stroke={color.light_gray}
+            strokeWidth="3"
+          />
+          <g transform="translate(8, 10)">
+            <use
+              href={`${trophy}#trophy`}
+              transform="scale(0.04)"
+              fill={color.light_gray}
+            />
+          </g>
         </g>
       </svg>
     );
