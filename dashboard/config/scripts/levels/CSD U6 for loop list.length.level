@@ -82,10 +82,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Array Length\r\n\r\nIn the last program we told the loop to run three times with the code `for (var i = 0; i < 3; i++)`. This works, but we could write smarter programs by using the length of the array to decide how many times to loop.\r\n\r\n# Do This\r\n\r\nChange the exit condition of this for loop so that it runs while `i < buttons.length`.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

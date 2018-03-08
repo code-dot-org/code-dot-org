@@ -32,4 +32,5 @@
     - if @workshop.subject
       = "(#{@workshop.subject})"
 %br
-= simple_format(@workshop.notes)
+  %p{style: 'white-space: pre'}
+    = @workshop.notes
