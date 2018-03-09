@@ -67,6 +67,7 @@ class Gamelab < Blockly
         properties: {
           code_functions: JSON.parse(palette),
           show_d_pad: true,
+          edit_code: true,
           show_debug_watch: true
         }
       )
@@ -87,10 +88,6 @@ class Gamelab < Blockly
   rescue JSON::ParserError => e
     errors.add(:code_functions, "#{e.class.name}: #{e.message}")
     return false
-  end
-
-  def uses_droplet?
-    true
   end
 
   def self.palette
