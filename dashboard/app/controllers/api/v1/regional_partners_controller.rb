@@ -9,7 +9,7 @@ class Api::V1::RegionalPartnersController < ApplicationController
   # GET /api/v1/regional_partners/capacity?role=:role&regional_partner_filter=:regional_partner
   def capacity
     role = params[:role]
-    regional_partner_filter = params[:regional_partner_filter]
+    regional_partner_filter = current_user.workshop_admin? ? params[:regional_partner_filter] : current_user.regional_partners.first.try(:id)
 
     render json: {capacity: get_partner_cohort_capacity(regional_partner_filter, role)}
   end
