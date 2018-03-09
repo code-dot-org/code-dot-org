@@ -15,11 +15,26 @@ exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-exports.appendCategory = function (toolboxXml, blockTypes) {
+const appendBlocks = function (toolboxDom, blockTypes) {
+  const root = toolboxDom.getRootNode().firstChild;
+  blockTypes.forEach(blockName => {
+    const block = toolboxDom.createElement('block');
+    block.setAttribute('type', blockName);
+    root.appendChild(block);
+  });
+  return xml.serialize(toolboxDom);
+};
+exports.appendBlocks = appendBlocks;
+
+exports.appendCategory = function (toolboxXml, blockTypes, categoryName) {
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
+  if (!toolboxDom.querySelector('category')) {
+    // Uncategorized toolbox, just add blocks to the end
+    return appendBlocks(toolboxDom, blockTypes);
+  }
   const customCategory = toolboxDom.createElement('category');
-  customCategory.setAttribute('name', 'Custom');
+  customCategory.setAttribute('name', categoryName);
   blockTypes.forEach(blockName => {
     const block = toolboxDom.createElement('block');
     block.setAttribute('type', blockName);

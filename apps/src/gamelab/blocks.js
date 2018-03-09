@@ -269,6 +269,6 @@ export default {
     const blockNames =
       customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
 
-    level.toolbox = appendCategory(level.toolbox, blockNames);
+    level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
   },
 };
