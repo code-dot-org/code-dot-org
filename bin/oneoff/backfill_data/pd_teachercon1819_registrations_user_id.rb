@@ -2,7 +2,7 @@
 
 require_relative '../../../dashboard/config/environment'
 
-Pd::Teachercon1819Registration.all.each do |registration|
+Pd::Teachercon1819Registration.find_each do |registration|
   if registration.pd_application_id?
     registration.update(user_id: registration.pd_application.user_id)
   elsif registration.regional_partner_id?
