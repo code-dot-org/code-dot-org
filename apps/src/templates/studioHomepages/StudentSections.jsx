@@ -3,7 +3,7 @@ import i18n from "@cdo/locale";
 import ContentContainer from '../ContentContainer';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
-import SectionsTable from '../studioHomepages/SectionsTable';
+import SectionsAsStudentTable from './SectionsAsStudentTable';
 
 export default class StudentSections extends Component {
   // isTeacher will be set false for teachers who are seeing this as a student in another teacher's section.
@@ -54,7 +54,7 @@ export default class StudentSections extends Component {
           id={resultId}
         />
         {enrolledInASection &&
-          <SectionsTable
+          <SectionsAsStudentTable
             sections={sections}
             isTeacher={false}
             canLeave={canLeave}

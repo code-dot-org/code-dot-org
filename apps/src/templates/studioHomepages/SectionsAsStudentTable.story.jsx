@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionsTable from './SectionsTable';
+import SectionsAsStudentTable from './SectionsAsStudentTable';
 import {action} from '@storybook/addon-actions';
 
 const sections = [
@@ -62,14 +62,14 @@ const sections = [
 
 export default storybook => {
   return storybook
-    .storiesOf('SectionsTable', module)
+    .storiesOf('SectionsAsStudentTable', module)
     .withReduxStore()
     .addStoryTable([
       {
         name: 'Section Table - three sections for Teacher',
         description: 'This is an example of a basic Section Table when the teacher has three sections',
         story: () => (
-          <SectionsTable
+          <SectionsAsStudentTable
             sections={sections}
             isTeacher={true}
             canLeave={false}
@@ -82,7 +82,7 @@ export default storybook => {
         name: 'Section Table - three sections for students, can NOT leave',
         description: 'This is an example of a basic Section Table when a student has three sections and does not have permission to leave those sections',
         story: () => (
-          <SectionsTable
+          <SectionsAsStudentTable
             sections={sections}
             isTeacher={false}
             canLeave={false}
@@ -95,7 +95,7 @@ export default storybook => {
         name: 'Section Table - three sections for students, can leave',
         description: 'This is an example of a basic Section Table when a student has three sections and does not have permission to leave those sections',
         story: () => (
-          <SectionsTable
+          <SectionsAsStudentTable
             sections={sections}
             isTeacher={false}
             canLeave={true}
