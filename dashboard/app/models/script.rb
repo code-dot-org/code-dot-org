@@ -658,7 +658,7 @@ class Script < ActiveRecord::Base
       end
 
       stage_name = raw_script_level.delete(:stage)
-      properties = raw_script_level.delete(:properties)
+      properties = raw_script_level.delete(:properties) || {}
 
       script_level_attributes = {
         script_id: script.id,
