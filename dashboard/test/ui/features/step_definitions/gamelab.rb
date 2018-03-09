@@ -36,7 +36,7 @@ When /^I switch to(?: the)? animation (?:mode|tab)$/ do
   steps 'When I press "animationMode"'
 end
 
-When /^I switch to(?: the)? code (?:mode|tab)$ in Game Lab/ do
+When /^I switch to(?: the)? code (?:mode|tab) in Game Lab$/ do
   @browser.execute_script("$(\"#codeMode\")[0].click();")
 end
 
