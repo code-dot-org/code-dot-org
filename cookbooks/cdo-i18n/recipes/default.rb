@@ -1,3 +1,6 @@
+# Install Java dependency
+# https://support.crowdin.com/cli-tool/#requirements
+include_recipe 'cdo-java-7'
 
 # Add crowdin debian repository, based on instructions provided at
 # https://support.crowdin.com/cli-tool/#debian
