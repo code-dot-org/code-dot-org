@@ -38,7 +38,6 @@ class CohortView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    capacity: null,
     regionalPartnerName: this.props.regionalPartnerName,
     regionalPartnerFilter: UnmatchedFilter
   };
@@ -65,8 +64,7 @@ class CohortView extends React.Component {
       .done(data => {
         this.setState({
           loading: false,
-          applications: data.applications,
-          capacity: data.capacity
+          applications: data,
         });
       });
   }
@@ -101,13 +99,12 @@ class CohortView extends React.Component {
         .length;
       return (
         <div>
-          {this.state.capacity &&
-            <CohortCalculator
-              accepted={this.state.applications.length}
-              registered={registered}
-              totalCapacity={this.state.capacity}
-            />
-          }
+          <CohortCalculator
+            role={this.props.route.path.replace('_cohort', '')}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            accepted={this.state.applications.length}
+            registered={registered}
+          />
           {this.props.isWorkshopAdmin &&
             <RegionalPartnerDropdown
               onChange={this.handleRegionalPartnerChange}
