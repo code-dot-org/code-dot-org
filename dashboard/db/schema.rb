@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308210145) do
+ActiveRecord::Schema.define(version: 20180309002548) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -704,8 +704,10 @@ ActiveRecord::Schema.define(version: 20180308210145) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.integer  "regional_partner_id"
+    t.integer  "user_id"
     t.index ["pd_application_id"], name: "index_pd_teachercon1819_registrations_on_pd_application_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_teachercon1819_registrations_on_regional_partner_id", using: :btree
+    t.index ["user_id"], name: "index_pd_teachercon1819_registrations_on_user_id", using: :btree
   end
 
   create_table "pd_teachercon_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1419,6 +1421,7 @@ ActiveRecord::Schema.define(version: 20180308210145) do
   add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
+  add_foreign_key "pd_teachercon1819_registrations", "users"
   add_foreign_key "pd_workshops", "regional_partners"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
