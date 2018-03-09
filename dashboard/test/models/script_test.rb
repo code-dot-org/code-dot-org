@@ -791,4 +791,28 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, bonus_levels3[0][:levels].length
     assert_equal 2, bonus_levels3[1][:levels].length
   end
+
+  test 'can make a challenge level not a challenge level' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}', challenge: true
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script = Script.add_script(
+      {name: 'challengeTestScript'},
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+    )
+    assert script.script_levels.first.challenge
+
+    script = Script.add_script(
+      {name: 'challengeTestScript'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+    )
+
+    refute script.script_levels.first.challenge
+  end
 end
