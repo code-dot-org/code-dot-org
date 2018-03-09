@@ -93,8 +93,8 @@
     "watchers_prepopulated": "[\"apple.scale\"]",
     "encrypted_examples": "2eMP4R7hopbR2Q4+VjpQr+1omA2X37TWHmW0fCJYVAb6+Krl6cgghAOZqiIF\na+OqMKccfNAweFCH7QB05xWIoGS0suG69m4rpxxo47IXuoQUky/H45Jd2iQk\neZDG9pSe+JRiQ7ZM+N2gCwejxaJkeA==\n",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
