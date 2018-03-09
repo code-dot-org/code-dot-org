@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import color from "../../../util/color";
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
 import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
-import { levelsForLessonId, stageExtrasUrl } from '@cdo/apps/code-studio/progressRedux';
+import { levelsForLessonId, stageExtrasUrl, getPercentPerfect } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 
@@ -80,7 +80,9 @@ const StageProgress = React.createClass({
           />
         }
         {stageTrophyEnabled &&
-          <StageTrophyProgressBubble/>
+          <StageTrophyProgressBubble
+            percentPerfect={getPercentPerfect(levels)}
+          />
         }
       </div>
     );

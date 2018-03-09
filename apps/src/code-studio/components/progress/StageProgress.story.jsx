@@ -3,7 +3,8 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import StageProgress from './StageProgress';
 import stageLock from '../../stageLockRedux';
-import progress, { initProgress, setStageExtrasEnabled, setStageTrophyEnabled } from '../../progressRedux';
+import progress, { initProgress, mergeProgress, setStageExtrasEnabled, setStageTrophyEnabled } from '../../progressRedux';
+import { TestResults } from '@cdo/apps/constants';
 
 const activityPuzzle = {
   ids: [
@@ -104,6 +105,7 @@ export default storybook => {
         levels
       }]
     }));
+    store.dispatch(mergeProgress({123: TestResults.ALL_PASS}));
     store.dispatch(setStageExtrasEnabled(showStageExtras));
     store.dispatch(setStageTrophyEnabled(showStageTrophy));
     return store;
@@ -219,6 +221,7 @@ export default storybook => {
             activityPuzzle,
             activityPuzzle,
             activityPuzzle,
+            assessment1,
           ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
