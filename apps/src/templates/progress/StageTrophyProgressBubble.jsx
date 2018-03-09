@@ -37,18 +37,18 @@ export default class StageExtrasProgressBubble extends Component {
               fill="white"
             />
             <circle
-              r="20"
+              r="19.8"
               fill={color.lighter_gray}
             />
             <circle
-              r="16"
-              fill={color.lightest_gray}
+              r="16.2"
+              fill={ratio === 1 ? color.white : color.lightest_gray}
             />
             <g transform="rotate(-90)">
               <path
                 d={`M 18 0.00001 A 18 18 0 ${largeArc} 1 ${x} ${y}${close}`}
                 fill="none"
-                stroke={color.level_perfect}
+                stroke={ratio === 1 ? color.yellow : color.level_perfect}
                 strokeWidth="3"
               />
             </g>
@@ -57,7 +57,7 @@ export default class StageExtrasProgressBubble extends Component {
             <use
               href={`${trophy}#trophy`}
               transform="scale(0.04)"
-              fill={color.lighter_gray}
+              fill={ratio === 1 ? color.yellow : color.lighter_gray}
             />
           </g>
         </g>
@@ -65,7 +65,7 @@ export default class StageExtrasProgressBubble extends Component {
           <text
             textAnchor="middle"
             alignmentBaseline="hanging"
-            fill={color.level_perfect}
+            fill={ratio === 1 ? color.yellow : color.level_perfect}
             fontSize="14"
             fontFamily='"Gotham 5r", sans-serif'
           >
