@@ -11,7 +11,7 @@ const initialState = {
   displayingCode: false,
   displayingShareControls: false,
 
-
+  isChallenge: false,
   isPerfect: true,
   blocksUsed: 0,
   blockLimit: undefined,
@@ -48,6 +48,7 @@ export default function reducer(state = initialState, action) {
   }
   if (action.type === SET_FEEDBACK_DATA) {
     const {
+      isChallenge,
       isPerfect,
       blocksUsed,
       displayFunometer,
@@ -56,6 +57,7 @@ export default function reducer(state = initialState, action) {
     } = action;
     return {
       ...state,
+      isChallenge,
       isPerfect,
       blocksUsed,
       displayFunometer,

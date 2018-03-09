@@ -21,12 +21,15 @@ class Census::StateCsOffering < ApplicationRecord
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2016, less_than_or_equal_to: 2030}
 
   SUPPORTED_STATES = [
+    'CA',
     'GA',
     'ID',
-  ]
+  ].freeze
 
   def self.construct_state_school_id(state_code, row_hash)
     case state_code
+    when 'CA'
+      School.construct_state_school_id('CA', row_hash['DistrictCode'], row_hash['schoolCode'])
     when 'GA'
       school_id = format("%04d", row_hash['SCHOOL_ID'].to_i)
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
@@ -37,8 +40,29 @@ class Census::StateCsOffering < ApplicationRecord
     end
   end
 
+  CA_COURSE_CODES = %w(
+    2451
+    2453
+    2465
+    2470
+    2471
+    2472
+    4601
+    4616
+    4619
+    4631
+    4634
+    4640
+    4641
+    4647
+    5612
+    8131
+  ).freeze
+
   def self.get_courses(state_code, row_hash)
     case state_code
+    when 'CA'
+      CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
     when 'GA'
       # One course per row
       [row_hash['COURSE_NUMBER']]
@@ -77,6 +101,10 @@ class Census::StateCsOffering < ApplicationRecord
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
+  def self.construct_object_key(state_code, school_year)
+    "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}.csv"
+  end
+
   def self.seed_from_s3
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
@@ -84,7 +112,7 @@ class Census::StateCsOffering < ApplicationRecord
     current_year = Date.today.year
     (2016..current_year).each do |school_year|
       SUPPORTED_STATES.each do |state_code|
-        object_key = "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}.csv"
+        object_key = construct_object_key(state_code, school_year)
         begin
           AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
             seed_from_csv(state_code, school_year, filename)

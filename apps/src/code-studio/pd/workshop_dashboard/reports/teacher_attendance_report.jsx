@@ -89,10 +89,6 @@ export default class TeacherAttendanceReport extends React.Component {
     return <a href={href} target="_blank" style={styles.link}>{workshop_id}</a>;
   };
 
-  formatUrl = (url) => {
-    return <a href={url} target="_blank" style={styles.link}>{url}</a>;
-  };
-
   formatYesNo = (value) => {
     return value ? "YES" : "NO";
   };
