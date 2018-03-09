@@ -4,6 +4,20 @@ import mazeMsg from '../locale';
 import { HarvesterTerminationValue, TestResults } from '../../constants.js';
 
 export default class HarvesterHandler extends GathererHandler {
+  constructor(maze, config) {
+    super(maze, config);
+
+    // Initialize subtype-specific event listeners
+
+    this.maze_.subtype.on('wrongCrop', () => {
+      this.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
+    });
+
+    this.maze_.subtype.on('emptyCrop', () => {
+      this.executionInfo.terminateWithValue(HarvesterTerminationValue.EMPTY_CROP);
+    });
+  }
+
   /**
    * @override
    */
@@ -15,7 +29,7 @@ export default class HarvesterHandler extends GathererHandler {
    * @override
    */
   terminateWithAppSpecificValue() {
-    const executionInfo = this.maze_.executionInfo;
+    const executionInfo = this.executionInfo;
 
     if (!this.collectedEverything()) {
       executionInfo.terminateWithValue(HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING);

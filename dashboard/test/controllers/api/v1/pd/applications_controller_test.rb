@@ -472,7 +472,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
-            registered_workshop: 'Yes'
+            registered_workshop: 'Yes',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -508,7 +509,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: '',
-            registered_workshop: ''
+            registered_workshop: '',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -543,6 +545,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -631,7 +634,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
-            registered_workshop: 'Yes'
+            registered_workshop: 'Yes',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -666,7 +670,8 @@ module Api::V1::Pd
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
             assigned_workshop: '',
-            registered_workshop: ''
+            registered_workshop: '',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -700,6 +705,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
+            status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body)['applications'].first
         )
       end
@@ -823,6 +829,24 @@ module Api::V1::Pd
 
         assert_equal(25, JSON.parse(@response.body)['capacity'])
       end
+    end
+
+    test 'cohort csv download returns expected columns for teachers' do
+      sign_in @workshop_admin
+      get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert_equal ['Date Accepted', 'Applicant Name', 'District Name', 'School Name', 'Email', 'Assigned Workshop', 'Registered Workshop'], response_csv.first
+    end
+
+    test 'cohort csv download returns expected columns for facilitators' do
+      sign_in @workshop_admin
+      get :cohort_view, format: 'csv', params: {role: 'csf_facilitators'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
+
+      assert_equal ['Date Accepted', 'Name', 'School District', 'School Name', 'Email', 'Status'], response_csv.first
     end
 
     test 'search finds applications by email for workshop admins' do

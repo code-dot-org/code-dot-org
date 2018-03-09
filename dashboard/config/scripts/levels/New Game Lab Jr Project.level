@@ -184,6 +184,7 @@
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
+    "is_project_level": true,
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -287,6 +288,9 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_setPosition" inline="true">
+            <title name="POSITION">"top left"</title>
+          </block>
           <block type="gamelab_displace" inline="true">
             <value name="THIS">
               <block type="variables_get">
@@ -351,6 +355,7 @@
           </block>
           <block type="gamelab_firstTouched"/>
           <block type="gamelab_secondTouched"/>
+          <block type="gamelab_clickedOn" inline="true"/>
         </category>
         <category name="Variables" custom="VARIABLE"/>
         <category name="Loops">
@@ -425,6 +430,9 @@
           <block type="logic_boolean">
             <title name="BOOL">TRUE</title>
           </block>
+        </category>
+        <category name="Text">
+          <block type="text_join_simple" inputcount="2"/>
         </category>
       </xml>
     </toolbox_blocks>

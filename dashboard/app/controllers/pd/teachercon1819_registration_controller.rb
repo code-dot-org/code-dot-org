@@ -3,7 +3,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
 
   load_and_authorize_resource :application,
     class: 'Pd::Application::ApplicationBase', find_by: :application_guid,
-    id_param: :application_guid, except: :partner
+    id_param: :application_guid, except: [:partner, :partner_submitted]
 
   # here we handle the CanCan error manually so that we can present
   # non-authorized users with a custom page explaining that they must be logged
@@ -75,7 +75,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
 
     if Pd::Teachercon1819Registration.exists?(regional_partner_id: regional_partner.id)
       @email = 'partner@code.org'
-      render :submitted
+      render :partner_submitted
       return
     end
 

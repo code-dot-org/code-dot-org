@@ -9,9 +9,9 @@ import responsive from '@cdo/apps/code-studio/responsiveRedux';
 
 registerReducers({isRtl, responsive});
 
-$(document).ready(showYourSchool);
+$(document).ready(initYourSchool);
 
-function showYourSchool() {
+function showYourSchool(schoolDropdownOption) {
   const rawSchoolId = $('#your-school').data("parameters-schoolId");
   const rawSchoolZip = $('#your-school').data("parameters-schoolZip");
   const prefillData = {
@@ -33,9 +33,15 @@ function showYourSchool() {
         alertText={$('#your-school').data("parameters-alert-text")}
         alertUrl={$('#your-school').data("parameters-alert-url")}
         hideMap={$('#your-school').data("parameters-hide-map")}
+        fusionTableId={$('#your-school').data("parameters-table-id")}
         prefillData={prefillData}
+        schoolDropdownOption={schoolDropdownOption}
       />
     </Provider>,
     $('#your-school')[0]
   );
+}
+
+function initYourSchool() {
+  showYourSchool();
 }

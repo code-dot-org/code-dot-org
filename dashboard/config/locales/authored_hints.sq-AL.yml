@@ -2,10 +2,10 @@
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Nese ti perdor bllokun per te me bere mua "te leviz perpara
+          me 100 piksels", un do te vizatoj automatikisht nje vije.
+        2-3_Artist_1_new_b: Keni probleme per tu kthyer ne qoshe? Perdor bllokun "kthehu
+          90 grade djathtas".
       2-3 Artist 11_authored_hint:
         2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees
           in 8 turns.  What is 360/8? '
@@ -4381,6 +4381,11 @@
         artistLoopsKB_a: There should be 3 blocks inside of your loop to solve this
           puzzle.
       artistLoopsKFP_authored_hint: []
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Comments are also helpful when other people try
+          to read your code.
+        courseC_maze_programming4_b: Add a comment when you change directions- what
+          would have happened if you turned the other way?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           You can use loops like this to create the walls and the roof. Try repeating different blocks.
@@ -6823,6 +6828,7 @@
         courseB_starWars_prog9_c: Don't be afraid to make a mistake! Try adding blocks
           and running the code to see what will happen, even if you don't think you've
           solved the puzzle yet.
+      courseC_PlayLab_embed_events9_authored_hint: []
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
@@ -7855,6 +7861,7 @@
           There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
       courseD_artist_embed_frozen_authored_hint: []
       courseD_artist_embed_frozen2_authored_hint: []
+      courseD_artist_embedded_project1a_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -8069,6 +8076,7 @@
         courseD_artist_project2_b: If you draw an image, then jump forward, you can
           draw more than one by putting a loop around the entire block of code.
       courseD_artist_project2Template_authored_hint: []
+      courseD_artist_project2Template_2018_authored_hint: []
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while
           `jump forward` does not.
@@ -8152,6 +8160,7 @@
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: []
+      courseD_artist_projectTemplate_2018_authored_hint: []
       courseD_artist_project_embedded_authored_hint: []
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels`
@@ -9442,6 +9451,7 @@
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: []
       courseD_playLab_embedded_authored_hint: []
       courseD_scrat_predict1_authored_hint: []
       courseD_scrat_predict1_2018_authored_hint: []
@@ -10624,6 +10634,7 @@
           * Make the dinosaur say something.
           * Set a new background.
           * Make all of the actors vanish and show a "Game Over" message.
+      courseE_playLab_embed_scaffold5_authored_hint: []
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used
           to add an actor to the stage.
@@ -14774,10 +14785,10 @@
         grade2_CaringForNewPet_7D_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Nese ti perdor bllokun per te me bere mua "te leviz perpara
+          me 100 piksels", un do te vizatoj automatikisht nje vije.
+        2-3_Artist_1_new_b: Keni probleme per tu kthyer ne qoshe? Perdor bllokun "kthehu
+          90 grade djathtas".
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
           sides.
@@ -15365,10 +15376,10 @@
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Nese ti perdor bllokun per te me bere mua "te leviz perpara
+          me 100 piksels", un do te vizatoj automatikisht nje vije.
+        2-3_Artist_1_new_b: Keni probleme per tu kthyer ne qoshe? Perdor bllokun "kthehu
+          90 grade djathtas".
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
           time than you did with the square.   '
@@ -15836,6 +15847,7 @@
         iceage_throw_hearts_b: To get granny to be happy when she receives a heart,
           you will need to connect the `set actor 2 mood to happy` block beneath the
           `when actor 2 touches projectile` event.
+      iceage_warn_embed_ice_age_authored_hint: []
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'You should only have to add two blocks to get this
           puzzle where it needs to be. '

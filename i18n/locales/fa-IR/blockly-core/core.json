@@ -173,7 +173,7 @@
     "LISTS_SET_INDEX_TOOLTIP_SET_LAST": "آخرین مورد را در یک فهرست قرار میدهد.",
     "LISTS_SET_INDEX_TOOLTIP_SET_RANDOM": "یک مورد تصادفی را در یک فهرست قرار میدهد.",
     "LISTS_TOOLTIP": "اگر فهرست خالی باشد، مقدار بولین true را بر می‌گرداند.",
-    "LOGIC_BOOLEAN_FALSE": "ناصحیح",
+    "LOGIC_BOOLEAN_FALSE": "غلط",
     "LOGIC_BOOLEAN_HELPURL": "http://code.google.com/p/blockly/wiki/True_False",
     "LOGIC_BOOLEAN_TOOLTIP": "بازگرداندن یکی از مقادیر بولین true یا false.",
     "LOGIC_BOOLEAN_TRUE": "صحیح",

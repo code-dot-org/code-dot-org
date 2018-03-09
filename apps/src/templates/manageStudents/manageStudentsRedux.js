@@ -56,6 +56,7 @@ const initialState = {
   studentData: {},
   editingData: {},
   sectionId: null,
+  addStatus: {status: null, numStudents: null},
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -84,8 +85,12 @@ export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, s
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
-export const addStudentSuccess = (rowId, studentData) => ({ type: ADD_STUDENT_SUCCESS, rowId, studentData });
-export const addStudentFailure = (error, studentId) => ({ type: ADD_STUDENT_FAILURE, error, studentId });
+export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
+  { type: ADD_STUDENT_SUCCESS, numStudents, rowIds, studentData }
+);
+export const addStudentsFailure = (numStudents, error, studentIds) => (
+  { type: ADD_STUDENT_FAILURE, numStudents, error, studentIds }
+);
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
 
 export const saveStudent = (studentId) => {
@@ -101,24 +106,60 @@ export const saveStudent = (studentId) => {
   };
 };
 
-// Adds a student, with the given row id (studentId), from an addRow or
-// a newStudentRow.
-export const addStudent = (studentId) => {
+// Saves all RowType.STUDENT currently being edited and adds all
+// RowType.NEW_STUDENT currently being edited.
+export const saveAllStudents = () => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
-    dispatch(startSavingStudent(studentId));
-    addStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
+
+    // Currently, every update is an individual call to the server.
+    const currentlyEditedData = Object.values(state.editingData);
+    let studentsToSave = currentlyEditedData.filter(student => student.rowType === RowType.STUDENT);
+    studentsToSave.forEach((student) => {
+      if (student.name !== '') {
+        dispatch(saveStudent(student.id));
+      }
+    });
+
+    // Adding students can be saved together.
+    const arrayOfEditedData = Object.values(state.editingData);
+    const newStudentsToAdd = arrayOfEditedData
+      .filter(student => student.rowType === RowType.NEW_STUDENT)
+      .map(student => student.id);
+    if (newStudentsToAdd.length > 0) {
+      dispatch(addStudents(newStudentsToAdd));
+    }
+  };
+};
+
+// Adds a student, with the given row id (studentIds), from RowType.ADD or
+// RowType.NEW_STUDENT.
+export const addStudents = (studentIds) => {
+  return (dispatch, getState) => {
+    const state = getState().manageStudents;
+    const numStudentsToAdd = studentIds.length;
+
+    // Update each row to saving in progress.
+    for (let i = 0; i<studentIds.length; i++) {
+      dispatch(startSavingStudent(studentIds[i]));
+    }
+
+    const arrayOfEditedData = Object.values(state.editingData);
+    const filteredData = arrayOfEditedData.filter(student => studentIds.includes(student.id));
+    addStudentOnServer(filteredData,
+      state.sectionId, (error, data) => {
       if (error) {
-        dispatch(addStudentFailure(error, studentId));
+        dispatch(addStudentsFailure(numStudentsToAdd, error, studentIds));
         console.error(error);
       } else {
-        dispatch(addStudentSuccess(studentId, convertAddedStudent(data)));
+        dispatch(addStudentsSuccess(numStudentsToAdd, studentIds,
+          convertStudentServerData(data, state.loginType, state.sectionId)));
       }
     });
   };
 };
 
-// Creates a new "new student" add row for each name in the array.
+// Creates a new RowType.NEW_STUDENT for each name in the array.
 export const addMultipleAddRows = (studentNames) => {
   return (dispatch, getState) => {
     let studentData = {};
@@ -171,12 +212,19 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === SET_STUDENTS) {
+    let studentData = {
+      ...action.studentData
+    };
+    if (state.loginType === SectionLoginType.word || state.loginType === SectionLoginType.picture) {
+      studentData[addRowId] = {
+        ...blankAddRow,
+        loginType: state.loginType,
+      };
+    }
     return {
       ...state,
-      studentData: {
-        ...state.studentData,
-        ...action.studentData
-      },
+      studentData: studentData,
+      addStatus: {status: null, numStudents: null},
     };
   }
   if (action.type === START_EDITING_STUDENT) {
@@ -240,43 +288,39 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === ADD_STUDENT_FAILURE) {
-    return {
+    let newState = {
       ...state,
-      studentData: {
-        ...state.studentData,
-        [action.studentId]: {
-          ...state.studentData[action.studentId],
-          isSaving: false,
-        }
-      },
-      addStatus: AddStatus.FAIL
+      addStatus: {status: AddStatus.FAIL, numStudents: action.numStudents}
     };
+    for (let i = 0; i<action.studentIds.length; i++) {
+      newState.studentData[action.studentIds[i]] = {
+        ...state.studentData[action.studentIds[i]],
+        isSaving: false,
+      };
+    }
+    return newState;
   }
   if (action.type === ADD_STUDENT_SUCCESS) {
-    // omit action.rowId
-    return {
+    let newState = {
       ...state,
       studentData: {
-        [action.studentData.id]: {
-          ...action.studentData,
+        ..._.omit(state.studentData, action.rowIds),
+        ...action.studentData,
+        [addRowId]: {
+          ...blankAddRow,
           loginType: state.loginType,
-          sectionId: state.sectionId,
-        },
-        ..._.omit(state.studentData, action.rowId),
-        [addRowId]: {
-          ...blankAddRow,
-          loginType: state.loginType
-        },
-      },
-      editingData: {
-        ..._.omit(state.editingData, action.rowId),
-        [addRowId]: {
-          ...blankAddRow,
-          loginType: state.loginType
         }
       },
-      addStatus: AddStatus.SUCCESS,
+      editingData: {
+        ..._.omit(state.editingData, action.rowIds),
+        [addRowId]: {
+          ...blankAddRow,
+          loginType: state.loginType,
+        }
+      },
+      addStatus: {status: AddStatus.SUCCESS, numStudents: action.numStudents}
     };
+    return newState;
   }
   if (action.type === EDIT_STUDENT) {
     return {
@@ -343,7 +387,7 @@ export default function manageStudents(state=initialState, action) {
   return state;
 }
 
-// Converts data from /v2/sections/sectionid/students to a set of key/value
+// Converts data from /dashboardapi/sections/sectionid/students to a set of key/value
 // objects for the redux store
 export const convertStudentServerData = (studentData, loginType, sectionId) => {
   let studentLookup = {};
@@ -353,44 +397,26 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       id: student.id,
       name: student.name,
       username: student.username,
-      age: student.age,
-      gender: student.gender,
+      email: student.email,
+      age: student.age || '',
+      gender: student.gender || '',
       secretWords: student.secret_words,
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
       isEditing: false,
+      isSaving: false,
       rowType: RowType.STUDENT,
     };
   }
   return studentLookup;
 };
 
-// Converts added student from /v2/sections/sectionid/students to a key/value
-// object for the redux store
-export const convertAddedStudent = (studentData, loginType, sectionId) => {
-  let student = studentData[0];
-  const studentObject = {
-    id: student.id,
-    name: student.name,
-    username: student.username,
-    age: student.age,
-    gender: student.gender,
-    secretWords: student.secret_words,
-    secretPicturePath: student.secret_picture_path,
-    loginType: loginType,
-    sectionId: sectionId,
-    isEditing: false,
-    rowType: RowType.STUDENT,
-  };
-  return studentObject;
-};
-
 // Converts key/value id/student pairs to an array of student objects for the
 // component to display
 // TODO(caleybrock): memoize this - sections could be a few thousand students
 export const convertStudentDataToArray = (studentData) => {
-  return Object.values(studentData);
+  return Object.values(studentData).reverse();
 };
 
 // Make a post request to edit a student.
@@ -413,19 +439,22 @@ const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
   });
 };
 
-// Make a post request to add a student.
-const addStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
-  const studentToAdd = [{
-    editing: true,
-    name: updatedStudentInfo.name,
-    age: updatedStudentInfo.age,
-    gender: updatedStudentInfo.gender,
-  }];
+// Make a post request to add students.
+const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
+  const studentsToAdd = [];
+  for (let i = 0; i<updatedStudentsInfo.length; i++) {
+    studentsToAdd[i] = {
+      editing: true,
+      name: updatedStudentsInfo[i].name,
+      age: updatedStudentsInfo[i].age,
+      gender: updatedStudentsInfo[i].gender,
+    };
+  }
   $.ajax({
     url: `/v2/sections/${sectionId}/students`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(studentToAdd),
+    data: JSON.stringify(studentsToAdd),
   }).done((data) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {

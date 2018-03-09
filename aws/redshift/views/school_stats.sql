@@ -22,6 +22,8 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            (CASE WHEN (grade_06_offered +
                        grade_07_offered +
                        grade_08_offered) > 0
+                 -- exclude K-6 and pre-K-6 schools from being classified as middle schools
+                 AND ((grades_offered_lo = 'PK' and grades_offered_hi = '06') or (grades_offered_lo = 'KG' and grades_offered_hi = '06')) = 0                                      
                  THEN 1
                  ELSE 0 END)                        AS stage_mi,
            (CASE WHEN (grade_09_offered +
@@ -47,6 +49,7 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            school_stats_by_years.frl_eligible_total AS frl_eligible,
            (CASE WHEN frl_eligible_total IS NULL
                    OR students_total IS NULL
+                   OR frl_eligible_total > students_total
                  THEN NULL
                  ELSE frl_eligible_total /
                        students_total::float END) AS frl_eligible_percent,           

@@ -290,9 +290,6 @@
           Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura
           distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste
           două puncte (sau caractere ale jocului) se ating.
-      ! '':
-        title: "[șir gol]"
-        desc: "[șir gol]"
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

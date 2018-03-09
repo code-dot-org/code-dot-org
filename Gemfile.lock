@@ -63,6 +63,15 @@ GIT
     geocoder (1.3.7)
 
 GIT
+  remote: https://github.com/wjordan/haml.git
+  revision: 22739a012fb34765d9d4b733f997862547a2b9cf
+  ref: cdo
+  specs:
+    haml (5.0.4)
+      temple (>= 0.8.0)
+      tilt
+
+GIT
   remote: https://github.com/wjordan/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
@@ -143,7 +152,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/sprockets.git
-  revision: 69ead85e8f9f8ef293090064e582847b1d659ec6
+  revision: df60ba28584d51235cb0af23cef1b2bbd9d8d2dc
   ref: concurrent_asset_bundle_3.x
   specs:
     sprockets (3.7.1)
@@ -359,12 +368,10 @@ GEM
       multi_json (~> 1.11)
       os (~> 0.9)
       signet (~> 0.7)
-    haml (4.0.7)
-      tilt
-    haml-rails (0.9.0)
+    haml-rails (1.0.0)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
-      haml (>= 4.0.6, < 5.0)
+      haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
     haml_lint (0.27.0)
@@ -378,10 +385,10 @@ GEM
     hashie (3.4.4)
     highline (1.6.21)
     honeybadger (2.6.0)
-    html2haml (2.0.0)
+    html2haml (2.2.0)
       erubis (~> 2.7.0)
-      haml (~> 4.0.0)
-      nokogiri (~> 1.6.0)
+      haml (>= 4.0, < 6)
+      nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -450,7 +457,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_magick (4.5.1)
     mini_mime (1.0.0)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.3.0)
     minitest (5.11.3)
     minitest-around (0.4.1)
       minitest (~> 5.0)
@@ -475,8 +482,8 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (4.8.0.341)
     nio4r (2.2.0)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     oauth (0.5.1)
     oauth2 (1.2.0)
       faraday (>= 0.8, < 0.10)
@@ -640,8 +647,8 @@ GEM
     ruby-progressbar (1.9.0)
     ruby-rc4 (0.1.5)
     ruby_dep (1.3.1)
-    ruby_parser (3.8.2)
-      sexp_processor (~> 4.1)
+    ruby_parser (3.11.0)
+      sexp_processor (~> 4.9)
     rubyzip (1.2.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
@@ -659,7 +666,7 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
     sequel (4.45.0)
-    sexp_processor (4.7.0)
+    sexp_processor (4.10.1)
     shotgun (0.9.1)
       rack (>= 1.0)
     signet (0.7.3)
@@ -667,11 +674,11 @@ GEM
       faraday (~> 0.9)
       jwt (~> 1.5)
       multi_json (~> 1.10)
-    simplecov (0.12.0)
+    simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.0)
+    simplecov-html (0.10.2)
     sinatra (2.0.1.rc1)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -697,6 +704,7 @@ GEM
       i18n
       json (>= 1.4.3)
     sysexits (1.2.0)
+    temple (0.8.0)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -808,7 +816,7 @@ DEPENDENCIES
   geocoder!
   google-api-client
   google_drive
-  haml
+  haml!
   haml-rails
   haml_lint
   highline (~> 1.6.21)
@@ -840,7 +848,7 @@ DEPENDENCIES
   net-scp
   net-ssh
   newrelic_rpm (~> 4.8.0)
-  nokogiri (~> 1.6.1)
+  nokogiri (~> 1.8.2)
   octokit
   oj
   omniauth-clever (~> 1.2.1)!

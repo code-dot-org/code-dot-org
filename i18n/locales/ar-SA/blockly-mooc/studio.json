@@ -219,6 +219,7 @@
   "iceAge": "العصر الجليدي!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "الممثل",
   "ifSpriteN": "الشخصية",
   "incrementPlayerScore": "تحصيل نقطة",
   "isSet": "تم التعيين",
