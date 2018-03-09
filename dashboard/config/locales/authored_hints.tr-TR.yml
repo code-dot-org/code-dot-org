@@ -1397,6 +1397,11 @@
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Bu bulmacayı çözmek için döngü içinde 3 blok olmalıdır.
       artistLoopsKFP_authored_hint: []
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Comments are also helpful when other people try
+          to read your code.
+        courseC_maze_programming4_b: Add a comment when you change directions- what
+          would have happened if you turned the other way?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           Bu tarz döngüleri duvarlar ve çatı oluşturmak için kullanabilirsiniz. Farklı blokları tekrar deneyin. !
@@ -1734,9 +1739,9 @@
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       course3_bee_debugging_challenge1_authored_hint:
-        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışır? Neden
-          arılar geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde ne
-          kadar nektar toplamalı?
+        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışıyor?
+          Arıların neden geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde
+          ne kadar nektar toplamalı?
         courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip
           etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında
           ne kadar bal yapmaya ihtiyacı var?
@@ -2569,7 +2574,7 @@
           kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi
           'tekrarlayabilirsin'!
         courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden
-          uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine
+          uzaklaştırmak amacıyla bir döngü kullan. Sağa veya sola dön, sonra ilk hazine
           yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince
           tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
         courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en
@@ -3663,9 +3668,9 @@
       courseB_starWars_prog6_authored_hint:
         courseB_starWars_prog6_a: Daha kısa kod için `tekrar et` bloğunu kullanmayı
           deneyin.
-        courseB_starWars_prog6_b: Bu bulmaca merdiven basamağı deseninin daha büyük
-          versiyonu gibi görünüyor. İki basamağı tam olarak aynı yapmak için "tekrarla"
-          bloğu kullanabilir misin?
+        courseB_starWars_prog6_b: Bu bulmaca merdiven adımı eseninin daha büyük versiyonu
+          gibi görünüyor. iki adımı tam olarak aynı yapmak için "tekrarla" bloğu kullanabilir
+          misin?
       courseB_starWars_prog7_authored_hint:
         courseB_starWars_prog7_a: Bu desen, son bulmacaya biraz benzemiyor mu?
         courseB_starWars_prog7_b: BB-8 uzayda yuvarlanırken hurda metal toplar.
@@ -3682,6 +3687,7 @@
         courseB_starWars_prog9_b: Bu bulmacayı çözmek için bir çok yol vardır!
         courseB_starWars_prog9_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü
           düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
+      courseC_PlayLab_embed_events9_authored_hint: []
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Bu blokları 'Çalıştığı zaman'(when run) bloğuna ekleyin:
@@ -4381,7 +4387,7 @@
         courseC_maze_debugging_challenge2_b: Eğer takılırsan, kodundaki hataları ayıklamayı
           dene. Nerede işler yanlış gidiyor görebildin mi?
         courseC_maze_debugging_challenge2_c: |-
-          'İleri git' ve dört dönüş kullanarak izleyebileceğiniz iki farklı yol var. 'Tekrarla' bloğunu kullanmanın bir yolunu bulursanız, daha da fazlası olabilir!
+          'İlerle' ve dört dönüş kullanarak izleyebileceğiniz iki farklı yol var. 'Tekrarla' bloğunu kullanmanın bir yolunu bulursanız, daha da fazlası olabilir!
 
           ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_loops10_authored_hint: []
@@ -4651,6 +4657,7 @@
           Orjinal programda sadece bir kaç satır hatalı. Bir yaklaşım başarısız olursa, geri dön ve yeniden dene. Bir çözüm var!
       courseD_artist_embed_frozen_authored_hint: []
       courseD_artist_embed_frozen2_authored_hint: []
+      courseD_artist_embedded_project1a_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -4800,13 +4807,8 @@
           her birinden sonra 90 derce dön.
         courseD_artist_nestedLoops_challenge1_b: "İç içe geçmiş döngü içerisinde kod
           kullanarak bir üçgen çizin. Üçgeniniz için 120 derecelik dönüşler kullanın."
-        courseD_artist_nestedLoops_challenge1_c: |-
-          Bir içi içe döngü kullanın:
-          - 8 defa tekrarla
-          - bir sekizgen çiz
-          - bir üçgen çiz
-          - 50 pixel ileri atla
-          - 90 derece sağa dön
+        courseD_artist_nestedLoops_challenge1_c: Her iki şekli de çizdikten sonra
+          90 derece sağa dönmeden evvel ileriye 50 piksel atlamalısın.
         courseD_artist_nestedLoops_challenge1_d: Bitimek için '4 kez tekrarla' döngüsünün
           içine kodunuzun tamamını koyunuz.
       courseD_artist_nestedLoops_challenge2_authored_hint:
@@ -4815,23 +4817,13 @@
         courseD_artist_nestedLoops_challenge2_b: Bir kare çizmek için, sanatçının
           4 kez 90 derece dönmesi gerekiyor.
       courseD_artist_project1_authored_hint:
-        courseD_artist_project1_a: |-
-          İç içe döngüleri dene!
-
-          Şekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.
-
-          - Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene
-          - Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene
+        courseD_artist_project1_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
         courseD_artist_project1_b: "'ileri git' komutu bir çizgi çizerek ilerler,
           fakat 'ileri zıpla' komutu çizmeden ileri atlatır."
       courseD_artist_project1_2018_authored_hint:
-        courseD_artist_project1_a: |-
-          İç içe döngüleri dene!
-
-          Şekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.
-
-          - Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene
-          - Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene
+        courseD_artist_project1_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
         courseD_artist_project1_b: "'ileri git' komutu bir çizgi çizerek ilerler,
           fakat 'ileri zıpla' komutu çizmeden ileri atlatır."
       courseD_artist_project1a_authored_hint:
@@ -4852,6 +4844,7 @@
         courseD_artist_project2_b: "İlk çiziminizi yapıp ilerlediğinizde, bütün kodun
           etrafına bir döngü yerleştirerek birden fazla tekrar edebilirsiniz."
       courseD_artist_project2Template_authored_hint: []
+      courseD_artist_project2Template_2018_authored_hint: []
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: "'ileri git' komutu bir çizgi çizerek ilerler,
           fakat 'ileri zıpla' komutu çizmeden ileri atlatır."
@@ -4868,13 +4861,8 @@
           \n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\"
           width=\"200px\" />\n"
       courseD_artist_project3_authored_hint:
-        courseD_artist_project3_a: |-
-          İç içe döngüleri dene!
-
-          Şekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.
-
-          - Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene
-          - Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene
+        courseD_artist_project3_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
         courseD_artist_project3_b: |-
           İç içe döngüleri dene!
 
@@ -4883,13 +4871,8 @@
           - Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene
           - Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene
       courseD_artist_project3_2018_authored_hint:
-        courseD_artist_project3_a: |-
-          İç içe döngüleri dene!
-
-          Şekillerin çizgilerini çizmek için oluşturduğun kodları kullan ve başka bir döngünün içinde iç içe yerleştir. Altta, dıştaki döngü bitmeden önce Elsa'yı etrafında çeviren bir blok ekle.
-
-          - Eğer dıştaki döngüyü 5 defa tekrarlıyorsan 72 dereceyi dene
-          - Eğer dıştaki döngüyü 6 defa tekrarlıyorsan 60 dereceyi dene
+        courseD_artist_project3_a: Dönüş bloklarının üzerindeki oktan gerekli olan
+          dönüş açısını seçebilirsin!
         courseD_artist_project3_b: |-
           İç içe döngüleri dene!
 
@@ -4946,6 +4929,7 @@
           2 altıgen ve 4 üçgen çizgileri:
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: []
+      courseD_artist_projectTemplate_2018_authored_hint: []
       courseD_artist_project_embedded_authored_hint: []
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Kenar çizmek içim 100 piksel ilerle bloğunu kullan
@@ -5020,16 +5004,16 @@
         courseD_bee_conditionals5_hintVid1: Başlangıçta yardıma ihtiyacınız mı var?
           Videoyu izleyin!
         courseD_bee_conditionals5_a: Dikdörtgen yolun her tarafını ayrı bir yol olarak
-          düşün. "Tekrarla" bloğu içine "sürece bir yol var" bloğu koy. Bütün çiçekleri
-          yoklamak için kaç tane yol gitmek gerekir?
+          düşün. "Tekrarla" bloğu içine "yol olduğu sürece" bloğu koy. Arının bütün
+          çiçekleri yoklaması gerekiyor, bunun için kaç tane yol gitmeksi gerekir?
         courseD_bee_conditionals5_c: Bir üçgenin 3 kenarı vardır bu yüzden 'Tekrarla
-          3 kez ' döngüsü kullanman gerekir. Her tekrarda 'sürece bir yol' döngüsü
-          ile yol boyunca devam etmek gerekir. Yola devam etmek için 'ilerle ' gerekir.
-          Yolda iken, arının çiçekleri denetlemesi gerekir. 'eğer çiçek ise', 'nektar
-          almalısınız'.
-        courseD_bee_conditionals5_b: "'Sürece bir yol' bloğu içinde ilerle ve bir
-          çiçek varmı kontrol et. Bir çiçek olup olmadığını nasıl kontrol edebilirim?
-          Bir çiçek ise ne yapıyorsun?"
+          3 kez ' döngüsü kullanman gerekir. Her tekrarda 'yol olduğu sürece' döngüsü
+          ile yol boyunca devam etmesi gerekir. Yola devam etmek için 'ilerle ' gerekir.
+          Yolda iken, arının çiçekleri denetlemesi gerekir. 'eğer çiçek ise', arı
+          'nektar almalı'.
+        courseD_bee_conditionals5_b: "'Yol olduğu süresince' bloğu içinde ilerle ve
+          bir çiçek varmı kontrol et blokları kullanmalısın. Bir çiçek olup olmadığını
+          nasıl kontrol edebilirim? Bir çiçek varsa ne yapıyorsun?"
         courseD_bee_conditionals5_hintVid2: Bu bulmacayı çözerken yardım almak için
           bu videoyu izleyin.
       courseD_bee_conditionals6_authored_hint:
@@ -5037,8 +5021,8 @@
           Videoyu izleyin!
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
-        courseD_bee_conditionals6_b: Bu durumda, bulutların altında nektar var mı
-          diye kontrol etmek zorunda değilsiniz.
+        courseD_bee_conditionals6_b: Bu durumda, bulutların altında çiçek var mı diye
+          kontrol etmek zorunda değilsiniz.
         courseD_bee_conditionals6_c: Kodunu daha basit hale getirmek için kullanabileceğin
           bir döngü var mı?
         courseD_bee_conditionals6_hintVid2: Bu bulmacayı çözerken yardım almak için
@@ -5076,10 +5060,8 @@
           bu videoyu izleyin.
       courseD_bee_conditionals9_authored_hint: []
       courseD_bee_conditionals_challenge1_authored_hint:
-        courseD_bee_conditionals_challenge1_a: |-
+        courseD_bee_conditionals_challenge1_a: |
           Herhangi bir ağaca vurmadan her çiçeğe ve peteklere ulaşan bir yol bulabilir misin? En iyi yol bir spiraldir.
-
-          ** Bunu çözmek için sağa dönmeniz yeterlidir **
         courseD_bee_conditionals_challenge1_b: Bu bulmacada her alanda çiçek, petek
           olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse
           (if/else) koşulunu tekrarlayabilirsin.
@@ -5178,9 +5160,9 @@
 
       courseD_bee_debugging9_predict1_authored_hint: []
       courseD_bee_debugging_challenge1_authored_hint:
-        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışır? Neden
-          arılar geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde ne
-          kadar nektar toplamalı?
+        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışıyor?
+          Arıların neden geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde
+          ne kadar nektar toplamalı?
         courseD_bee_debugging_challenge1_b: Dönüş yolunda arının aynı deseni takip
           etmesini sağlayın. Arının peteğin üzerinde hareket ettiği her defasında
           ne kadar bal yapmaya ihtiyacı var?
@@ -5191,18 +5173,29 @@
           * 3 bal yap
           * Geriye git
       courseD_bee_debugging_challenge1a_authored_hint:
-        courseD_bee_debugging_challenge1_a: Neden programın ilk yarısı çalışır? Neden
-          arılar geri gitmeye ihtiyaç duyduğunu düşün. Arı her çiçeğe gittiğinde ne
-          kadar nektar toplamalı?
+        courseD_bee_debugging_challenge1_a: Bu programın neden ilk yarısı çalıştı?
+          Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden
+          her geçtiklerinde arılar ne kadar nektar toplarlar?
         courseD_bee_debugging_challenge1_b: Bu bulmacayı çözmek için, arıya bal yapması
           için nektar toplarken izlediği yolun aynısını izlettirin.
         courseD_bee_debugging_challenge1_c: |-
           Arı alt diziye ulaştıktan sonra, ona bu komutları tekrarlattırın:
-
-          *2 kere tekrarla:
-          *İleri git
-          *Bal yap
-          *Geri git
+          <xml><block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">ilerle</title>
+          <next>
+          <block type="maze_honey"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">gerigit</title>
+          </block>
+          </next>
+          </block></xml>
       courseD_bee_debugging_challenge2_authored_hint:
         courseD_bee_debugging_challenge1_a: Bu programın neden ilk yarısı çalıştı?
           Arıların neden geriye gitmeleri gerektiği hakkında düşünün. Çiçeklerin üzerinden
@@ -5219,15 +5212,15 @@
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see
           what happens line by line.
-        courseD_bee_nestedLoops1_b: "Önce karenin ilk kenarı için koda yazmayı deneyin.
-          Bütün nektarları almak için bir döngü kurabilir misiniz?"
+        courseD_bee_nestedLoops1_b: "Önce karenin ilk kenarı için kodu yazmayı deneyin.
+          Bütün nektarları almak için bununla bir döngü kurabilir misiniz?"
         courseD_bee_nestedLoops1_c: "Çiçekli bir alan üzerindeyken 'nektar al' bloğunu
           kullanmayı unutmayın."
       courseD_bee_nestedLoops1_2018_authored_hint:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see
           what happens line by line.
-        courseD_bee_nestedLoops1_b: "Önce karenin ilk kenarı için koda yazmayı deneyin.
-          Bütün nektarları almak için bir döngü kurabilir misiniz?"
+        courseD_bee_nestedLoops1_b: "Önce karenin ilk kenarı için kodu yazmayı deneyin.
+          Bütün nektarları almak için bununla bir döngü kurabilir misiniz?"
         courseD_bee_nestedLoops1_c: "Çiçekli bir alan üzerindeyken 'nektar al' bloğunu
           kullanmayı unutmayın."
       courseD_bee_nestedLoops1a_authored_hint:
@@ -5314,7 +5307,7 @@
           kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi
           'tekrarlayabilirsin'!
         courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden
-          uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine
+          uzaklaştırmak amacıyla bir döngü kullan. Sağa veya sola dön, sonra ilk hazine
           yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince
           tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
         courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en
@@ -5324,9 +5317,9 @@
           kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi
           'tekrarlayabilirsin'!
         courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden
-          uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine
+          uzaklaştırmak amacıyla bir döngü kullan. Sağa veya sola dön, sonra ilk hazine
           yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince
-          tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
+          tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir.
         courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en
           kısa program, bir adet 'topla' bloğu ve iki adet dönüş içerir.
         courseD_bee_nested_loops_challenge2_d: Tüm hazineye ulaşmanı sağlayacak en
@@ -5344,7 +5337,7 @@
         courseD_bounce_events12s_b: Her atışın değerini 2 puan yapmayı ve takım logosunu
           sizin memleketinizin logosuyla değiştirmeyi deneyin!
       courseD_bounce_events1s_authored_hint:
-        courseD_bounce_events1s_a: "Bu oyunun çalışması için 'sola ilerle' blokunu
+        courseD_bounce_events1s_a: "Bu oyunun çalışması için 'sola ilerle' bloğunu
           'sol oka basıldığında' olayına eklemeniz gerekir:\n<xml> <block type=\"bounce_whenLeft\"
           deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n
           \   </next>\n  </block>\n   \n   </xml>"
@@ -5484,7 +5477,7 @@
 
           Where do things go wrong?
         courseD_collector_debugging6_b: Doğru adımların tamamı burada gibi görünüyor,
-          sadece onlardan biraz daha fazla kullanmalısın. 'topla' komutunu birden
+          sadece onlardan biraz daha fazla kullanmalısın. 'Topla' komutunu birden
           çok kez nasıl tekrarlayabilirsin?
       courseD_collector_debugging6a_authored_hint:
         courseD_collector_debugging6_a: |-
@@ -5493,7 +5486,7 @@
           How about the second?
 
           Where do things go wrong?
-        courseD_collector_debugging6_b: İhtiyacınız olan bütün kareler çalışma alanında
+        courseD_collector_debugging6_b: İhtiyacınız olan bütün bloklar çalışma alanında
           gibi görünüyor. İşler çok kafa karıştırıcı olursa "baştan başla"ya tıklamayı
           deneyin.
       courseD_collector_debugging7_authored_hint:
@@ -5522,7 +5515,7 @@
       courseD_collector_debugging_challenge2_authored_hint:
         courseD_collector_debugging_challenge2_a: "İlk iki yığının her birinden ikişer
           adet mücevher toplamaya odaklanarak başlayın .\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
-          AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          AM copy.png)\nBu blokları kullan.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
           type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">ilerle</title>\n\n                  </block>\n                  \n
@@ -5589,7 +5582,7 @@
           kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi
           'tekrarlayabilirsin'!
         courseD_bee_nested_loops_challenge2_b: 4 taşı elde etmek için öncelikle merkezden
-          uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine
+          uzaklaştırmak amacıyla bir döngü kullan. Sağa veya sola dön, sonra ilk hazine
           yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince
           tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
         courseD_bee_nested_loops_challenge2_c: Tüm hazineye ulaşmanı sağlayacak en
@@ -5654,7 +5647,7 @@
           bir kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi
           'tekrarlayabilirsin'!
         courseD_collector_nested_loops_challenge2a_b: 2 tane elmas toplamak için gerekenden
-          fazla kare kullanmadan nasıl 4 elmasın hepsini toplayacağınızı bulabilir
+          fazla blok kullanmadan nasıl 4 elmasın hepsini toplayacağınızı bulabilir
           misiniz?
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: 'Dört blok ''ilerle'' bloğu kullanmak yerine, tekrarla
@@ -5662,7 +5655,7 @@
           <title name="TIMES">4</title> <statement name="DO"> <block type="maze_moveForward"/>
           </statement> </block></xml>'
         courseD_artist_ramp10_b: |
-          Önce bir parça hazine toplayın sonra her bir dizi adımdan sonra dönün!
+          Önce bir parça hazine toplayın sonra karenin bir başka kenarından başlamak için dönüş yapın!
         courseD_artist_ramp10_c: Eğer kodlarını daha fazla basitleştirmek istersen,
           bir 'tekrarla' bloğunun içine başka bir tane daha ekleyebilirsin. Buna **iç
           içe döngü** denir.
@@ -5917,7 +5910,7 @@
           kalıbı 'tekrarlayabileceğini' unutma. Hatta bir 'tekrarla' bloğunu dahi
           'tekrarlayabilirsin'!
         courseD_bee_nested_loops_challenge1_b: 4 taşı elde etmek için öncelikle merkezden
-          uzaklaştırmak amacıyla bir döngü kullan. Sağa ve sola dön, sonra ilk hazine
+          uzaklaştırmak amacıyla bir döngü kullan. Sağa veya sola dön, sonra ilk hazine
           yığınından diğerine geçmek için iç içe döngü kullan. İç içe döngüyü yeterince
           tekrarlarsan, toplayıcı mağara *boyunca* hareket edecektir!
         courseD_bee_nested_loops_challenge1_c: Tüm hazineye ulaşmanı sağlayacak en
@@ -6207,6 +6200,7 @@
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: []
       courseD_playLab_embedded_authored_hint: []
       courseD_scrat_predict1_authored_hint: []
       courseD_scrat_predict1_2018_authored_hint: []
@@ -7333,6 +7327,7 @@
           * Dinozora bir şeyler söylet.
           * Yeni bir arka plan ayarla.
           * Bütün aktörleri yok et ve "Oyun Bitti" mesajı göster.
+      courseE_playLab_embed_scaffold5_authored_hint: []
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: "'ayarla aktör 1 ??? görünümüne' bloku sahneye
           aktör eklemek için kullanılabilir."
@@ -12291,6 +12286,7 @@
         iceage_throw_hearts_b: Kalp aldığında Granny'yi mutlu etmek için, 'ayarla
           aktör 2 mutlu ruh haline' blokunu 'aktör 2 mermiye dokunduğunda' olayına
           bağlaman gerekir.
+      iceage_warn_embed_ice_age_authored_hint: []
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'Bulmacayı çözmek için sadece uygun olan yere 2 blok
           eklemelisin. '

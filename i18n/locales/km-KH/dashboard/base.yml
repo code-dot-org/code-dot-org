@@ -69,7 +69,7 @@ km:
   try_k8intro: "សាកល្បងជាមួយការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)"
   k8intro: "ការណែនាំពី K-8 នៃមុខវិទ្យាវិទ្យាសាស្រ្តកុំព្យូទ័រ(15-25ម៉ោង)"
   already_started: "បាន​ចាប់​ផ្ដើម​ហើយ? បន្ត​នៅ​ទីនេះ >> "
-  demos: រដ្ឋបា​លៈ ការធ្វេើបទបង្ហាយទាំងអស់
+  demos: "រដ្ឋបា​លៈ ការធ្វេើបទបង្ហាយទាំងអស់"
   continue: 'បន្ត'
   prize: 'រង្វាន់'
   more_info: 'ព័ត៌មាន​បន្ថែម'
@@ -171,6 +171,7 @@ km:
       email: 'អាសយដ្ឋាន​អ៊ីមែល'
       submit: 'ដាក់ស្នើរ'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'មើលទៅអ្នកប្រហែលជាបានចូលទៅកាន់គណនីជាមួយនឹងអស័យដ្ឋានអ៊ីម៉េលដែលមិនត្រឹមត្រូវ។​ សូមមេត្តាផ្ញើរអ៊ីម៉ែលទៅកាន់ support@code.org​ ដើម្បីទទួលនូវតំណរភ្ជាប់យកលេខសំងាត់មកវិញ។'
     change_form:
       title: 'ប្ដូរ​ពាក្យ​សម្ងាត់​របស់​អ្នក'
@@ -220,7 +221,7 @@ km:
       provider_managed_section: "វគ្គនេះដែរត្រូវបានគ្រប់គ្រងដោយអ្នកបង្កើតដ៏ទៃទៀត និងមិនអាចដាកអោយចូលរួមបានទេ។​ សូមមេត្តាសួរគ្រូរបស់អ្នកដើម្បីដាក់អ្នកចូលជាសមាជិកថ្មីតាមរយៈ%{provider} រួចហើយធ្វើការកែរទម្រង់sectionរបស់ពួកគាត់សារជាថ្មី។"
     mail:
       student_disassociated:
-        subject: Code.org notification:​​ %{student_name} មិនបានបន្តដំណើរការជាសិស្សរបស់អ្នកទៀតទេ។
+        subject: "Code.org notification:​​ %{student_name} មិនបានបន្តដំណើរការជាសិស្សរបស់អ្នកទៀតទេ។"
   reports:
     error:
       access_denied: "អ្នកមិនអាចដំណើរការទៅកាន់ទិន្នន័យរបស់អ្នកប្រើប្រាស់នេះបានទេ។"
@@ -309,7 +310,7 @@ km:
     popup:
       progress_for_user: "ដំណើរការរបស់%{name}"
       progress: 'ដំណើរការ​របស់​អ្នក'
-      lines: បន្ទាត់​កូដ​សរុប៖ %{lines}
+      lines: 'បន្ទាត់​កូដ​សរុប៖ %{lines}'
       close: 'បិទ'
       mastery: 'គោល​គំនិត'
       puzzle_map: 'ដំណាក់កាល'
@@ -352,7 +353,7 @@ km:
     current_password_hint: '(យើងត្រូការលេខសម្ងាត់របស់អ្នកដើម្បីយល់ព្រមសម្រាប់ការផ្លាស់ប្តូររបស់អ្នក)'
     delete: 'លុបចោលគណនីរបស់អ្នកចោល'
     delete_text: "ចុចប៊ូតុងខាងក្រោមនឹងធ្វើការលុបគណនីរបស់អ្នកចោល។"
-    delete_text_teacher_note: សូមធ្វើការកំណ់ចំណាំ ការលុបគណនីរបស់អ្នកនឹងមិនធ្វើការលុបគណនីរបស់សិស្សរបស់អ្នកទេ។
+    delete_text_teacher_note: "សូមធ្វើការកំណ់ចំណាំ ការលុបគណនីរបស់អ្នកនឹងមិនធ្វើការលុបគណនីរបស់សិស្សរបស់អ្នកទេ។"
     delete_confirm: 'តើអ្នកប្រាកដទេថាចង់លុបគណនីរបស់អ្នក?'
     deleted_user: 'លុបអ្នកប្រើប្រាស់ចោល'
     no_password_because_oauth: 'មិនចាំបាច់មានលេខកូដពីព្រោះអ្នកធ្វើការចូលប្រើប្រាស់គណនីជាមួយកម្មវិធីដែលផ្តល់អោយផ្សេងទៀត។'
@@ -363,7 +364,7 @@ km:
     create_personal_login_under_13_parent_email: 'អ៊ីម៉ែលរបស់ឪពុកម្តាយឬអ្នកណែនាំ'
     create_personal_login_info: 'បើសិនជាអ្នកនៅតែចង់បន្តរការប្រើប្រាស់គណនីទោះបន្ទាប់ពីការបញ្ចប់ការសិក្សារបស់អ្នក អ្នកអាចបង្កើតការចូលទៅកាន់គណនីសម្រាប់ខ្លួនឯងផ្ទាល់ នៅខាងក្រោមនេះ។'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក'
     confirm_secret_words: 'ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -702,7 +703,7 @@ km:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "លក្ខខណ្ឌ"
     privacy: "សិទ្ធបុគ្គល"
@@ -718,7 +719,7 @@ km:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "រក្សា​ទុក"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -762,7 +763,7 @@ km:
     delete: "លុប"
     import: "ទាញយក"
     share_link_import_bad_link_header: "អត់ស្គាល់តំណដែលបានចែកចាយ"
-    share_link_import_bad_link_body: 'យើងមិនអាចទាញយកតំណដែលបានចែកចាយទេ។ ប្រាកដថាអ្នកបានប្រើប្រាស់តំណចេញពីហ្គេម Minecraft: Agent puzzle ហើយត្រូវច្បាស់ថាតំណពេញលេញ។'
+    share_link_import_bad_link_body: "យើងមិនអាចទាញយកតំណដែលបានចែកចាយទេ។ ប្រាកដថាអ្នកបានប្រើប្រាស់តំណចេញពីហ្គេម Minecraft: Agent puzzle ហើយត្រូវច្បាស់ថាតំណពេញលេញ។"
     share_link_import_error_header: "មានកំហុសមួយចំនួន។"
     share_link_import_error_body: "មានបញ្ហាក្នុងការទាញយកតំណដែលបានចែកចាយ។ សូមព្យាយាមម្តងទៀត។"
     exit: "Return to Course"
@@ -865,8 +866,8 @@ km:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

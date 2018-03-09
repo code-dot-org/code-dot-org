@@ -191,12 +191,6 @@ class Game < ActiveRecord::Base
     app == FLAPPY
   end
 
-  def uses_droplet?
-    # This is only applicable to levels.js levels. Everything else
-    # specifies droplet usage in the corresponding level class
-    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? name
-  end
-
   def uses_pusher?
     app == NETSIM
   end

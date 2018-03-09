@@ -3,6 +3,12 @@ export default class ResultsHandler {
     this.maze_ = maze;
     this.skin_ = config.skin;
     this.level_ = config.level;
+
+    /**
+     * ExecutionInfo instance, assigned at runtime
+     * @see Maze.prepareForExecution_
+     */
+    this.executionInfo = undefined;
   }
 
   /**
@@ -62,7 +68,7 @@ export default class ResultsHandler {
    * @see terminateWithAppSpecificValue
    */
   onExecutionFinish() {
-    const executionInfo = this.maze_.executionInfo;
+    const executionInfo = this.executionInfo;
     if (executionInfo.isTerminated()) {
       return;
     }

@@ -38,11 +38,9 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
     }),
-    // We are hiding Applab and Gamelab projects because of inappropriate
-    // content in the projects. Except project validators still need to see
-    // these project types so they can select which should be featured.
-    // TODO: Erin B - remove this when we unhide applab and gamelab.
-    showApplabGamelab: PropTypes.bool
+    // Project Validators need access to view more links for App Lab and Game Lab, hidden for everyone else.
+    // TODO: Erin B - remove when we have profanity filter and/or enough featured projects.
+    projectValidator: PropTypes.bool
   };
 
   /**
@@ -72,7 +70,7 @@ class PublicGallery extends Component {
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
-          showApplabGamelab={this.props.showApplabGamelab}
+          projectValidator={this.props.projectValidator}
         />
         <div style={styles.clear}/>
         <div style={styles.linkBox}>

@@ -289,9 +289,6 @@
           Pythagore và công thức Khoảng cách được sử dụng để đo khoảng cách giữa hai
           điểm trên mặt phẳng, và tính xem khi nào hai điểm đó (hoặc các nhân vật
           điện tử) chạm vào nhau.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Trong bài học này, bạn sẽ học về vòng lặp!

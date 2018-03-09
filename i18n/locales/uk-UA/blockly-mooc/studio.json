@@ -219,6 +219,7 @@
   "iceAge": "Льодовиковий період!",
   "ifDroid": "droid",
   "ifDroidN": "дроїд {spriteIndex}",
+  "ifSprite": "персонаж",
   "ifSpriteN": "персонаж {spriteIndex}",
   "incrementPlayerScore": "додати бал",
   "isSet": "встановлено",

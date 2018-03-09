@@ -532,7 +532,7 @@
     თავგადასავლებში."
   mc_gradelevel: "ასაკი 6-106"
   mc_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
-  mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6–106"
+  mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+"
   minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "მაინკრაფტის დიზაინერი"
   minecraft_adventurer: "მაინკრაფტის თავაგადასავლები"
@@ -1517,8 +1517,10 @@
     ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები შექმნიან ინტერაქტიულ
     ისტორიებს და თამაშებს, რომელთა გაზიარება ნებისმიერთან შეუძლიათ. რეკომენდებულია
     4-5 კლასებისთვის."
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: "შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც
+    ჯერ კითხვა არ იცის."
+  courseb_shortdescription_congrats: "შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
+    (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)"
   coursec_shortdescription_congrats: ''
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''

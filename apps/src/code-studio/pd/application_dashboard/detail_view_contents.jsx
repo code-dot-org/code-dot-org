@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {
+  Row,
+  Col,
   Button,
   SplitButton,
   MenuItem,
@@ -308,7 +310,11 @@ export class DetailViewContents extends React.Component {
     } else {
       // Render just the select; otherwise, rendering a single element in an
       // InputGroup makes it look funky
-      return selectControl;
+      return (
+        <div style={styles.statusSelectGroup}>
+          {selectControl}
+        </div>
+      );
     }
   };
 
@@ -450,8 +456,8 @@ export class DetailViewContents extends React.Component {
         <h4>
           Notes
         </h4>
-        <div className="row">
-          <div className="col-md-8">
+        <Row>
+          <Col md={8}>
             <FormControl
               id="Notes"
               disabled={!this.state.editing}
@@ -460,8 +466,8 @@ export class DetailViewContents extends React.Component {
               onChange={this.handleNotesChange}
               style={styles.notes}
             />
-          </div>
-        </div>
+          </Col>
+        </Row>
         <br />
       </div>
     );

@@ -219,6 +219,7 @@
   "iceAge": "아이스 에이지!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "캐릭터",
   "ifSpriteN": "캐릭터 {spriteIndex}",
   "incrementPlayerScore": "점수 올리기",
   "isSet": "가 다음 상태로 설정되었습니다.:",

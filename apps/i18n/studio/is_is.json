@@ -219,6 +219,7 @@
   "iceAge": "Ísöld!",
   "ifDroid": "droid",
   "ifDroidN": "vélmenni {spriteIndex}",
+  "ifSprite": "leikmaður",
   "ifSpriteN": "leikmaður {spriteIndex}",
   "incrementPlayerScore": "skora stig",
   "isSet": "er stillt",

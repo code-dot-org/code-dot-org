@@ -113,14 +113,19 @@ export const saveAllStudents = () => {
     const state = getState().manageStudents;
 
     // Currently, every update is an individual call to the server.
-    const currentlyEditedData = convertStudentDataToArray(state.editingData);
+    const currentlyEditedData = Object.values(state.editingData);
     let studentsToSave = currentlyEditedData.filter(student => student.rowType === RowType.STUDENT);
-    studentsToSave.forEach(student => dispatch(saveStudent(student.id)));
+    studentsToSave.forEach((student) => {
+      if (student.name !== '') {
+        dispatch(saveStudent(student.id));
+      }
+    });
 
     // Adding students can be saved together.
-    const arrayOfEditedData = convertStudentDataToArray(state.editingData);
+    // Only add students that currently are not in progress saving.
+    const arrayOfEditedData = Object.values(state.editingData);
     const newStudentsToAdd = arrayOfEditedData
-      .filter(student => student.rowType === RowType.NEW_STUDENT)
+      .filter(student => (student.rowType === RowType.NEW_STUDENT && !student.isSaving))
       .map(student => student.id);
     if (newStudentsToAdd.length > 0) {
       dispatch(addStudents(newStudentsToAdd));
@@ -140,7 +145,7 @@ export const addStudents = (studentIds) => {
       dispatch(startSavingStudent(studentIds[i]));
     }
 
-    const arrayOfEditedData = convertStudentDataToArray(state.editingData);
+    const arrayOfEditedData = Object.values(state.editingData);
     const filteredData = arrayOfEditedData.filter(student => studentIds.includes(student.id));
     addStudentOnServer(filteredData,
       state.sectionId, (error, data) => {
@@ -208,12 +213,19 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === SET_STUDENTS) {
+    let studentData = {
+      ...action.studentData
+    };
+    if (state.loginType === SectionLoginType.word || state.loginType === SectionLoginType.picture) {
+      studentData[addRowId] = {
+        ...blankAddRow,
+        loginType: state.loginType,
+      };
+    }
     return {
       ...state,
-      studentData: {
-        ...state.studentData,
-        ...action.studentData
-      },
+      studentData: studentData,
+      addStatus: {status: null, numStudents: null},
     };
   }
   if (action.type === START_EDITING_STUDENT) {
@@ -258,6 +270,13 @@ export default function manageStudents(state=initialState, action) {
           isSaving: true
         }
       },
+      editingData: {
+        ...state.editingData,
+        [action.studentId]: {
+          ...state.editingData[action.studentId],
+          isSaving: true
+        }
+      },
     };
   }
   if (action.type === SAVE_STUDENT_SUCCESS) {
@@ -284,6 +303,10 @@ export default function manageStudents(state=initialState, action) {
     for (let i = 0; i<action.studentIds.length; i++) {
       newState.studentData[action.studentIds[i]] = {
         ...state.studentData[action.studentIds[i]],
+        isSaving: false,
+      };
+      newState.editingData[action.studentIds[i]] = {
+        ...state.editingData[action.studentIds[i]],
         isSaving: false,
       };
     }
@@ -376,7 +399,7 @@ export default function manageStudents(state=initialState, action) {
   return state;
 }
 
-// Converts data from /v2/sections/sectionid/students to a set of key/value
+// Converts data from /dashboardapi/sections/sectionid/students to a set of key/value
 // objects for the redux store
 export const convertStudentServerData = (studentData, loginType, sectionId) => {
   let studentLookup = {};
@@ -386,6 +409,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       id: student.id,
       name: student.name,
       username: student.username,
+      email: student.email,
       age: student.age || '',
       gender: student.gender || '',
       secretWords: student.secret_words,
@@ -404,7 +428,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
 // component to display
 // TODO(caleybrock): memoize this - sections could be a few thousand students
 export const convertStudentDataToArray = (studentData) => {
-  return Object.values(studentData);
+  return Object.values(studentData).reverse();
 };
 
 // Make a post request to edit a student.

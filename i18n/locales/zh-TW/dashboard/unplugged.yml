@@ -163,9 +163,6 @@ zh-TW:
       CollisionDetection:
         title: 碰撞檢測和畢氏定理
         desc: 偵測畫面上的物件有沒有碰到一起，是大多數遊戲中很重要的設計環節。在這堂課中，我們將看看畢氏定理和距離公式是怎麼用來測量平面上兩點間的距離，以及判斷這兩點（或遊戲角色）有沒有碰在一起。
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

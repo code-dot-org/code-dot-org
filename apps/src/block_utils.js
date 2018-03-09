@@ -442,6 +442,27 @@ const interpolateInputs = function (blockly, block, inputs) {
 exports.interpolateInputs = interpolateInputs;
 
 /**
+ * Add pre-labeled inputs
+ * @param {Blockly} blockly The Blockly object provided to install()
+ * @param {Block} block The block to add the inputs to
+ * @param {Object[]} args The list of inputs
+ * @param {String} args[].name The name for this input, conventionally all-caps
+ * @param {String} args[].type The type for this input, defaults to allowing any
+ *   type
+ * @param {String} args[].label The text to display to the left of the input
+ */
+const addInputs = function (blockly, block, args) {
+  block.appendDummyInput()
+    .appendTitle('show title screen');
+  args.forEach(arg => {
+    block.appendValueInput(arg.name)
+      .setCheck(arg.type || Blockly.BlockValueType.NONE)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendTitle(arg.label);
+  });
+};
+
+/**
  * Create a block generator that creats blocks that directly map to a javascript
  * function call, method call, or other (hopefully simple) expression.
  *
@@ -490,6 +511,7 @@ exports.createJsWrapperBlockCreator = function (
    *   block without a previous statement connector.
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
+   * @param {boolean} opts.inline Render inputs inline, defaults to false
    *
    * @returns {string} the name of the generated block
    */
@@ -505,6 +527,7 @@ exports.createJsWrapperBlockCreator = function (
     methodCall,
     eventBlock,
     eventLoopBlock,
+    inline,
   }) => {
     if (!func === !expression) {
       throw new Error('Provide either func or expression, but not both');
@@ -528,9 +551,13 @@ exports.createJsWrapperBlockCreator = function (
           });
         }
 
-        interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+        if (inline === false) {
+          addInputs(blockly, this, args);
+        } else {
+          interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+          this.setInputsInline(true);
+        }
 
-        this.setInputsInline(true);
         if (returnType) {
           this.setOutput(true, returnType);
         } else if (eventLoopBlock) {

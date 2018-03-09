@@ -2418,16 +2418,16 @@ en:
         an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
         {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
         example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n\r\n#
         Background Color\r\n\r\n* Find the code in the style sheet that is making
         the background of the entire page light blue.\r\n* Change the code to make
         the page a different color.\r\n* Try to change the background color of just
         the paragraphs."
       CSD U2 layout style body_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
-        markdown=\"1\">\r\n\r\n<details>\r\n<summary>**What does the `body` selector
-        do?**</summary>\r\nBecause the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
+        markdown=\"1\">\r\n<details>\r\n<summary>**What does the `body` selector do?**</summary>\r\nBecause
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `color` property do?**</summary>\r\nThe `color` property specifies
         the color of the text.  If there’s no text, it won’t do anything. Read more
         at <a href=\"http://www.w3schools.com/cssref/pr_text_color.asp\"> W3Schools
@@ -2460,7 +2460,7 @@ en:
         an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
         {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
         example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n\r\n#
         The Body Element\r\n\r\n* Find the `body` rule-set in the style sheet.\r\n*
         Discuss with a partner what you think will happen if you add `text-align`,
         `color`, or other text properties to the `body` rule set.\r\n* Try out some
@@ -2588,9 +2588,9 @@ en:
         too."
       CSD U2 layout style sample_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
-        markdown=\"1\">\r\n\r\n<details>\r\n<summary>**What does the `body` selector
-        do?**</summary>\r\nBecause the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
+        markdown=\"1\">\r\n<details>\r\n<summary>**What does the `body` selector do?**</summary>\r\nBecause
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `border-style` property do?**</summary>\r\nThe `border-style` property
         determines what kind of border (solid, dotted, dashed, etc.) the element has.  You
         can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_border-style.asp\">W3Schools
@@ -2607,7 +2607,7 @@ en:
         the elements after it will show up on its right.  If the `float` value is
         `right`, the element will float to the right, and the elements after it will
         show up on its left.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_class_float.asp\">W3Schools
-        - CSS float Property</a>\r\n</details>\r\n</div>\r\n# Layout and Style\r\n\r\n*
+        - CSS float Property</a>\r\n</details>\r\n</div>\r\n\r\n# Layout and Style\r\n\r\n*
         Look through web page below for new styles.\r\n* Open the style sheet\r\n*
         With your partner, discuss which parts of the CSS code you think are making
         the page appear different.\r\n * What makes the entire page blue?\r\n * How
@@ -2726,18 +2726,38 @@ en:
         that is making the two different kinds of lists.\r\n* Make sure you and your
         partner agree on what the different tags do.\r\n* Fix the code so that the
         second item in each list displays correctly"
-      CSD U2 navigation_markdown_instruction: "# Create a Navigation Bar\r\n\r\nHere's
-        your project from before.  You'll be linking the two pages by creating a
-        **navigation bar** at the top of the page.  Websites usually have the same
-        navigation bar across all of their pages so you can get back and forth between
-        things on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"
+      CSD U2 navigation_markdown_instruction: "<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are hyperlinks?**</summary>\r\nHyperlinks
+        can connect to local web pages or external web pages. To add navigation to
+        your website you will need to add hyperlinks which connect your individual
+        web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The
+        text you want to display as the hyperlink goes between the opening and closing
+        hyperlink tags. The `<a>` element has an attribute `href` which is the location
+        to link to.  The location of a local page is just the file path for that page.
+        <br> <br>\r\n\r\nFor example to link to the unique houses page you would add
+        the following code inside your `<body>` element. <br><br>\r\n\r\n<pre>\r\n&lt;a
+        href=”houses.html”&gt; Unique Houses &lt;/a&gt;\r\n</pre>\r\n\r\n</details>\r\n<details>\r\n<summary>**How
+        do I add a hyperlink?**</summary>\r\nYou can **add hyperlinks to your web
+        page using the `<a>` element**.  The text you want to display as the hyperlink
+        goes between the opening and closing hyperlink tags. The `<a>` element has
+        an attribute `href` which is the location to link to.  The location of a local
+        page is just the file path for that page. <br> <br>\r\n\r\nFor example to
+        link to the unique houses page you would add the following code inside your
+        `<body>` element. <br><br>\r\n\r\n<pre>\r\n&lt;a href=”houses.html”&gt; Unique
+        Houses &lt;/a&gt;\r\n</pre>\r\n\r\n</details>\r\n</div>\r\n\r\n# Create a
+        Navigation Bar\r\n\r\nHere's your project from before.  You'll be linking
+        the two pages by creating a **navigation bar** at the top of the page.  Websites
+        usually have the same navigation bar across all of their pages so you can
+        get back and forth between things on the site.  You can see an example of
+        a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"
         target=\"_new\">this page</a>\r\n\r\n# Do This\r\n* In your home page (index.html),
         add two hyperlinks at the top of the page, one to your lists page, and one
         to the home page.\r\n * *Even though it might seem strange to link a page
         to itself, it's less confusing if the navigation bar is exactly the same
         on every page.*\r\n* Copy the code for the navigation bar, then add it to
         the top of your lists page.\r\n* Test your links in the preview area by clicking
-        on them.\r\n\r\n"
+        on them.\r\n"
       CSD U2 new page_markdown_instruction: "# Create a New Page for Your Website.\r\n\r\nHere's
         your project from before.  You'll be adding another page.  Your new page
         can be a top 10 list, a recipe, or anything you like.\r\n\r\n# Do This\r\n*
@@ -3192,8 +3212,8 @@ en:
         target=\"_new\">Lesson 7 Level 5</a> for help if you need it.\r\n * Make sure
         you have the right to use these images.\r\n * Write down all of the attribution
         information that you need.\r\n * Upload all of the images into your project.  Visit
-        <a href=\"/s/csd2/stage/7/puzzle/5\" target=\"_new\">Lesson 8 Level 6</a>
-        if you've forgotten how.\r\n\r\n"
+        <a href=\"/s/csd2/stage/7/puzzle/5\" target=\"_new\">Lesson 7 Level 5</a>
+        if you've forgotten how.\r\n"
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\r\n\r\nThis
         pattern is one of the most important ones in all of programming. \r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
@@ -3624,7 +3644,7 @@ en:
         Go to the Animation Tab and check out the multi-frame animations already added
         to your project. Choose one for each of your characters.\r\n* Remember you
         can use `setAnimation` to give your sprites animations you've created in
-        the Animation Tab.\r\n"
+        the Animation Tab."
       CSD U3 AnimationsMulti mirror animation_markdown_instruction: "# Editing Multiframe
         Animations\r\n\r\nYour sprites will look a lot more realistic if they turn
         around when they're moving. You can switch back and forth between multiframe
@@ -4073,6 +4093,10 @@ en:
         style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the
         if block to add an else.\r\n* Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed."
+      CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: "# Alien Jumper\r\n\r\nPress
+        \"Run\" to play the game on the left.  You can make the alien jump with the
+        space bar, and move it to the left and right with the arrow keys.  You score
+        by collecting stars, and if you score high enough, the background will change."
       CSD U3 Entertainment Sample 1_markdown_instruction: "# Alien Jumper\r\n\r\nPress
         \"Run\" to play the game on the left.  You can make the alien jump with the
         space bar, and move it to the left and right with the arrow keys.  You score
@@ -4484,6 +4508,11 @@ en:
         the draw loop\r\n\r\n* Identify which sprite properties to change.\r\n* Update
         those properties using the counter pattern.\r\n\r\n_Tip: If your counter pattern
         isn't working like you expect, add watchers to help debug your program._"
+      CSD U3 Plotting Shapes Shape Lab - unembed_markdown_instruction: "# Drawing
+        Shapes\r\n\r\nExplore using this tool that lets you draw different colored
+        shapes. \r\n\r\nMake sure you hit \"Run\" and try out turning on the grid
+        to help you place shapes precisely.\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)"
       CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: "# Drawing Shapes\r\n\r\nExplore
         using this tool that lets you draw different colored shapes. \r\n\r\nMake
         sure you hit \"Run\" and try out turning on the grid to help you place shapes
@@ -5619,7 +5648,7 @@ en:
         Use the `velocityY` block to make the frog stop moving otherwise.\r\n* Add
         an if statement that does the following  ( [Show me where](#triggercallout=code_triggered2)
         )\r\n  * Checks whether the frog sprite has reached its highest point.\r\n  *
-        If so, use the `velocityY` block to make the sprite fall back down.\r\n\r\n"
+        If so, use the `velocityY` block to make the sprite fall back down."
       CSD U3 abstraction jumper intro_markdown_instruction: "# Horse Jumper\r\n\r\nNow
         that you've learned these new blocks, you can start to make a horse jumper
         game.  Press \"Run\" to play the game on the left.  You can use the up arrow
@@ -6758,7 +6787,7 @@ en:
         them.  You can look at the `loopItem` function for clues in how to reset the
         item position.\r\n* Inside your `if` statement, add a counter pattern that
         will increase the score every time the player touches an item.  Look at [Lesson
-        12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example.\r\n* Call the function
+        16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example.\r\n* Call the function
         inside the draw loop, in the \"update sprites\" area of your code.\r\n* Run
         the code to test your function."
       CSD U3 platform sample_markdown_instruction: "# Platform Jumper\r\n\r\nThe
@@ -7632,10 +7661,10 @@ en:
         the same code you saw in the last level, but this time there's another dropdown
         menu to control the buzzer.  You'll have to add the code to make it work.\r\n\r\n#
         Do This\r\n* Using the LED code as a model, add new code inside the buttonL
-        event that will play a long or short buzz according to the text property of
-        the *buzzer_input* dropdown menu.\r\n* Add new code that will turn the buzzer
-        off when the right button is pressed.\r\n  * (Hint: the event is already in
-        the code.)"
+        event that will play a long or short buzz according to the chosen value property
+        of the *buzzer_input* dropdown menu.\r\n* Add new code that will turn the
+        buzzer off when the right button is pressed.\r\n  * (Hint: the event is already
+        in the code.)"
       CSD U6 getProperty debug_markdown_instruction: "# Debug\r\n\r\nThis program
         should change the background color, text color, and text of the button \"click_me\"
         when it is clicked, but nothing seems to be working. Fix the code so that
@@ -7749,8 +7778,8 @@ en:
       CSD U6 light show predict_markdown_instruction: "# Put on a Light Show\r\n\r\nThis
         app lets you put on a light show with the LED.\r\n\r\nLook at the code with
         your partner and answer the following questions:\r\n\r\n* What does this line
-        of code do: `  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r\n});`?  ([Show
-        me where.](#triggercallout=code_triggered))\r\n\r\nOnce you have answered
+        of code do: `setProperty(\"screen\", \"background-color\", rgb(randomNumber(0,255),
+        randomNumber(0,255), randomNumber(0,255)));`?\r\n\r\nOnce you have answered
         the question, run the code and click the buttons to see what happens."
       CSD U6 making music w arrays mod_markdown_instruction: "# Changing Elements
         in Arrays\r\n\r\nSo far you’ve just been using the elements of arrays. Now,
@@ -7877,12 +7906,12 @@ en:
         the button \"stopAlarmButton\" is already on the screen, but because its \"hidden\"
         property is marked true, it isn't shown when the program starts._"
       CSD U6 setProperty xy click_markdown_instruction: "# Changing With a Click\r\n\r\nIt's
-        not really useful to only set a property when your program is run. After all,
-        you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty`, you're able to do things you couldn't do with Design
-        Mode alone.\r\n\r\n# Do This\r\n\r\nWe've provided an empty `onEvent` block
-        that's watching the \"smiley\" image. Inside the `onEvent` block, use two
-        `setProperty` blocks to move the smiley somewhere else (it doesn't really
+        not really useful to only set a property when your program is first run. After
+        all, you could just do all of that in Design Mode. When you use an `onEvent`
+        block with `setProperty`, you're able to do things you couldn't do with
+        Design Mode alone.\r\n\r\n# Do This\r\n\r\nWe've provided an empty `onEvent`
+        block that's watching the \"smiley\" image. Inside the `onEvent` block, use
+        two `setProperty` blocks to move the smiley somewhere else (it doesn't really
         matter where for now). Test your program by running it and clicking on the
         smiley."
       CSD U6 setProperty xy random_markdown_instruction: "<img src=\"https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif\"
@@ -10672,8 +10701,8 @@ en:
       CSDU6 - sensors predict question_markdown_instruction: "# Make a Prediction\r\n\r\nRead
         the code in this program and make a prediction below. What do you think this
         program will do when you run it? How is the user intended to interact with
-        the board? You may need to use a flashlight or other bright light source to
-        see the full range of this app."
+        the board? You may need to blow onto the board to see the full range of this
+        app."
       CSDU6 - sensors rgb part 1_markdown_instruction: "# Displaying Sensor Readings
         in Color\r\n\r\nIn the previous prediction level you saw how the `setScale()`
         method can convert the full range of sensor readings (0-1023) into a range
@@ -11693,11 +11722,11 @@ en:
         through your list**.\r\n    * The **current entry and total number of entries**
         are indicated at the top.\r\n    * You may **add a new entry** at the current
         location in your list."
-      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\n\nYour
+      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\r\n\r\nYour
         app needs to store the following information. For each type of information,
-        decide whether you would use an array or a variable to store it:\n \n* All
-        the messages a user has sent\n* The highest score a user has ever reached
-        on the app\n* A username and password to unlock the app\n\n"
+        decide whether you would use an array or a variable to store it:\r\n \r\n*
+        All the messages a user has sent\r\n* The highest score a user has ever reached
+        on the app\r\n* A username and password to unlock the app\r\n"
       CSPU5_U3 - Arrays - Wrap Up 2_markdown_instruction: "## Free Response: Choosing
         Array or Variable\n\nIn general, when do you think you should store information
         in an array, and when should you use a variable?\n"
@@ -25737,7 +25766,7 @@ en:
         style=\"width:250px;\">\r\n- A __text input__ has been created for you that
         asks for a user's name.\r\n- Attach a __'change'__ event handler to the
         text input.\r\n- When the 'change' event triggers, __write the user's name
-        and a greeting__.\r\n"
+        and a greeting__."
       U3L16 - chaserApp_markdown_instruction: "# Chaser Game\r\n\r\nYou now have
         all the skills you need to make a simple \"chaser\" game. A chaser game is
         just a game where an image runs away from your mouse.\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\"
@@ -28825,10 +28854,9 @@ en:
         add a console.log message like `console.log(\"correct one is: \" + randButtonId)`
         at the end of the `setBoard` function.\r\n* overall the setBoard function
         will look like this:\r\n\r\n\t\tfunction setBoard(){\r\n        \t\r\n            //
-        generate random color\r\n            // make all 4 buttons have same bg color\r\n            //
-        pick a random Button Id\r\n            // set it's bg color to something
-        different\r\n            \r\n            console.log(\"correct one is: \"
-        + randButtonId);  <-- Add this line\r\n\t\t}"
+        generate random color\r\n            // make all 4 buttons have same color\r\n            //
+        pick a random Button Id\r\n            // set its color to something different\r\n            \r\n            console.log(\"correct
+        one is: \" + randButtonId);  <-- Add this line\r\n\t\t}"
       U5 ColorSleuth add score variables and update with console_markdown_instruction: "Fun
         part - hide/show player highlight in app.\r\n\r\nDO THIS:\r\n\r\n* in nextTurn()
         hide both player highlights\r\n* in if statement show the correct one in \r\n\r\n[anigif
@@ -30561,6 +30589,11 @@ en:
       collectorSkinVideo2_markdown_instruction: "Move Laurel to the treasure, then
         use `collect` to pick it up.\r\n\r\nCollect one pile of treasure to pass this
         level."
+      comment_intro_maze_2018_markdown_instruction: "*\"I'm confused. Help me remember
+        how to solve this maze.\"* \r\n\r\nUse the new `comment` block to leave yourself
+        quick reminders. They can help you remember what you were doing and why!\r\n\r\nComments
+        are only used for **you**. Your Play Area won't look different because of
+        a comment."
       course1_artist_loops_challenge2_markdown_instruction: "Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?"
       course1_artist_loops_challenge3_markdown_instruction: "**Tweet!**\r\n\r\n*\"Can
@@ -31367,7 +31400,7 @@ en:
         _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r\n\r\nDraw a small shape,
         between **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou
         can try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r\n\r\n  \r\n  \r\nOr
-        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n"
+        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Let’s try something new. This time, skate in a zig-zag.\"_\r\n\r\n\r\n<img
         src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
@@ -31451,13 +31484,13 @@ en:
         playing around with what you've created. Draw whatever you like!\r\n- What
         happens if you use two different angles in your stair step pattern?\r\n- What
         happens if you make your diamond pattern longer or shorter?\r\n- What does
-        it look like to draw two snowflakes on top of one another?\r\n"
+        it look like to draw two snowflakes on top of one another?"
       courseD_artist_project5_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Get creative with shapes and angles to see what kind of new snowflakes
         we can draw!\"_\r\n"
       courseD_artist_project5_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Get creative with shapes and angles to see what kind of new snowflakes
-        we can draw!\"_\r\n"
+        we can draw!\"_"
       courseD_artist_project_embedded_markdown_instruction: "Here's what you will
         soon be making!"
       courseD_artist_ramp11_markdown_instruction: "Great!  Now let's make a square
@@ -32064,7 +32097,7 @@ en:
       courseE_artist_functions_predict1_markdown_instruction: "Here is a puzzle that
         uses a function that we have defined. \r\n"
       courseE_artist_functions_predict1_2018_markdown_instruction: "Here is a puzzle
-        that uses a function that we have defined. \r\n"
+        that uses a function that we have defined. "
       courseE_artist_ramp10_markdown_instruction: "Did you know you can put loops
         inside of other loops to make them more powerful?  That's called making a
         \"nested loop\".\r\n\r\n___\r\n\r\nDrag the code for the last triangle into
@@ -32535,6 +32568,10 @@ en:
         hexagon pattern was made using a 60 degree turn.)"
       courseF_artist_for_Template_markdown_instruction: "If you turn a little bit
         more or less than you normally would for a shape, it creates a neat effect.\r\n\r\nTry
+        using some of the code from the last level, but turning 89 degrees to create
+        this twisted square spiral."
+      courseF_artist_for_Template_2018_markdown_instruction: "If you turn a little
+        bit more or less than you normally would for a shape, it creates a neat effect.\r\n\r\nTry
         using some of the code from the last level, but turning 89 degrees to create
         this twisted square spiral."
       courseF_artist_for_challenge1_markdown_instruction: "Can you figure out how

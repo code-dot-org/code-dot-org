@@ -885,6 +885,7 @@
         applab_intro_sounds: Sovelluslabra - Kuvat ja Äänet
         applab_intro_designmode: Sovelluslabra - Suunnittelumoodi
         applab_intro_share: Sovelluslabra - Jaa Sovelluksesi
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan
@@ -975,7 +976,7 @@
           kukasta ja tekee hunajaa jos se ei ole kukassa
         repeat_full_circle: Syötä se määrä kertoja, jonka zombin pitää liikkua tehdäkseen
           täysi ympyrä
-        place_length_variable: 'Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän '
+        place_length_variable: Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän
         arrows_move_actor: Käytä nuolia liikuttaaksesi hahmoa
         right_arrow_fireball: Käytä oikeaa nuolta ampuaksesi tulipalloja
         name_function: Kirjoita funktiosi nimi tähän

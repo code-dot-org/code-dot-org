@@ -6,7 +6,7 @@ theme: responsive
 
 # Our Team
 
-<img src="/images/fullteam.png" width="100%;" >
+<img src="/images/fullteam.jpg" width="100%;" >
 
 
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'team') %>

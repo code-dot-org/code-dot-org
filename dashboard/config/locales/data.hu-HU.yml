@@ -901,11 +901,12 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
         run: Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat
-        watch_again: 'Kattints ide, hogy újra megnézhesd a videót '
+        watch_again: Kattints ide, hogy újra megnézhesd a videót
         gray_block_explanation: A szürke blokkok nem törölhetők. Így is meg tudod
           oldani a feladatot?
         show_code_explanation: Kattints ide, hogy lásd a kódot, amit írtál
