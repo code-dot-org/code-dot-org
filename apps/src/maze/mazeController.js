@@ -42,7 +42,6 @@ module.exports = class MazeController {
     this.subtype = null;
     this.map = null;
     this.animationsController = null;
-    this.executionInfo = null;
     this.store = null;
 
     this.pegmanD = null;
@@ -303,7 +302,7 @@ module.exports = class MazeController {
       // Play the sound
       this.playAudio('obstacle');
       this.animationsController.scheduleObstacleHit(targetX, targetY, deltaX, deltaY, frame);
-      timeoutList.setTimeout(function () {
+      timeoutList.setTimeout(() => {
         this.playAudioOnFailure();
       }, this.stepSpeed);
     }

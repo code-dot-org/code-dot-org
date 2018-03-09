@@ -211,6 +211,58 @@ export default {
         { name: 'COLOR', type: blockly.BlockValueType.COLOUR },
       ],
     });
+
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'clickedOn',
+      blockText: 'when {SPRITE} clicked on',
+      args: [
+        { name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'setPosition',
+      blockText: 'move {THIS} to the {POSITION} position',
+      args: [
+        {
+          name: 'POSITION',
+          options: [
+            ['top left', '{x: 50, y: 50}'],
+            ['top center', '{x: 200, y: 50}'],
+            ['top right', '{x: 350, y: 50}'],
+            ['center left', '{x: 50, y: 200}'],
+            ['center', '{x: 200, y: 200}'],
+            ['center right', '{x: 350, y: 200}'],
+            ['bottom left', '{x: 50, y: 350}'],
+            ['bottom center', '{x: 200, y: 350}'],
+            ['bottom right', '{x: 350, y: 350}'],
+            ['random', '"random"'],
+          ],
+        },
+      ],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'showTitleScreen',
+      blockText: 'show title screen',
+      args: [
+        { name: 'TITLE', label: 'title', type: blockly.BlockValueType.STRING },
+        { name: 'SUBTITLE', label: 'text', type: blockly.BlockValueType.STRING }
+      ],
+      inline: false,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'hideTitleScreen',
+      blockText: 'hide title screen',
+      args: [],
+    });
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level) {

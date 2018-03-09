@@ -111,7 +111,7 @@ class Video < ActiveRecord::Base
 
   def thumbnail_path
     if id
-      path = "/c/video_thumbnails/#{id}.jpg"
+      path = "/c/video_thumbnails/#{key}.jpg"
       return path if File.exist? dashboard_dir('public', path)
     end
     thumbnail_url

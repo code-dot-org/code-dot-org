@@ -393,5 +393,7 @@ class Blockly < Level
   # This should just return false, but we have a few levels.js levels that use
   # droplet (starwars, and a few test levels). They all have level records of
   # type 'Blockly', so they can't override this as needed
-  delegate :uses_droplet?, to: :game
+  def uses_droplet?
+    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? game.name
+  end
 end

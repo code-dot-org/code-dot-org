@@ -11,16 +11,41 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
+import experiments from '@cdo/apps/util/experiments';
+
+const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
+
+const styles = {
+  inline: {
+    width: '40%',
+    float: 'left',
+  },
+};
+
+const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
+  SectionLoginType.word,
+  SectionLoginType.picture,
+  SectionLoginType.email,
+];
+const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
+  SectionLoginType.word,
+  SectionLoginType.picture,
+  SectionLoginType.email,
+  SectionLoginType.google_classroom,
+  SectionLoginType.clever,
+];
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
+  email: PropTypes.string,
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   secretWords: PropTypes.string,
@@ -142,8 +167,8 @@ class ManageStudentsTable extends Component {
         id={rowData.id}
         sectionId={rowData.sectionId}
         name={name}
-        loginType={rowData.loginType}
         username={rowData.username}
+        email={rowData.email}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />
@@ -160,6 +185,7 @@ class ManageStudentsTable extends Component {
         isSaving={rowData.isSaving}
         disableSaving={disableSaving}
         rowType={rowData.rowType}
+        loginType={rowData.loginType}
       />
     );
   };
@@ -176,7 +202,16 @@ class ManageStudentsTable extends Component {
           />
         }
         {numberOfEditingRows <= 1 &&
-          i18n.actions()
+          <span>
+            <div style={styles.inline}>
+              {i18n.actions()}
+            </div>
+            <div style={styles.inline}>
+              {showShareColumn &&
+                <ManageStudentsActionsHeaderCell/>
+              }
+            </div>
+          </span>
         }
       </div>
     );
@@ -205,7 +240,7 @@ class ManageStudentsTable extends Component {
   getColumns = (sortable) => {
     const {loginType} = this.props;
     const passwordLabel = loginType === SectionLoginType.email ? i18n.password() : i18n.secret();
-    const dataColumns = [
+    let dataColumns = [
       {
         property: 'name',
         header: {
@@ -267,7 +302,7 @@ class ManageStudentsTable extends Component {
         }
       },
     ];
-    const controlsColumns = [
+    const passwordColumn = [
       {
         property: 'password',
         header: {
@@ -288,6 +323,8 @@ class ManageStudentsTable extends Component {
           }}
         }
       },
+    ];
+    const controlsColumn = [
       {
         property: 'actions',
         header: {
@@ -311,11 +348,14 @@ class ManageStudentsTable extends Component {
       },
     ];
 
-    if (loginType === SectionLoginType.word || loginType === SectionLoginType.picture || loginType === SectionLoginType.email) {
-      return dataColumns.concat(controlsColumns);
-    } else {
-      return dataColumns;
+    if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
+      dataColumns = dataColumns.concat(passwordColumn);
     }
+    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
+      dataColumns = dataColumns.concat(controlsColumn);
+    }
+
+    return dataColumns;
   };
 
   render() {
@@ -358,7 +398,7 @@ class ManageStudentsTable extends Component {
           style={tableLayoutStyles.table}
         >
           <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="name" />
+          <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>
       </div>
     );

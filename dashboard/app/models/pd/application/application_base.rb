@@ -293,5 +293,9 @@ module Pd::Application
     def course_name
       COURSE_NAME_MAP[course.to_sym]
     end
+
+    def date_accepted
+      accepted_at.try(:strftime, '%b %e')
+    end
   end
 end

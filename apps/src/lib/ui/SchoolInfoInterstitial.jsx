@@ -102,7 +102,7 @@ export default class SchoolInfoInterstitial extends React.Component {
   }
 
   logEvent(eventName, data = {}) {
-    firehoseClient.putRecord('analysis-events', {
+    firehoseClient.putRecord({
       study: 'school_info_interstitial',
       study_group: 'control',
       event: eventName,

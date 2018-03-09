@@ -96,8 +96,11 @@ export default class Subtype extends EventEmitter {
     this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt, svg);
   }
 
+  /**
+   * @fires reset
+   */
   reset() {
-    // noop; overridable
+    this.emit('reset');
   }
 
   isFarmer() {

@@ -5,7 +5,8 @@
     "name": "ChromeLatestWin7",
     "browserName": "chrome",
     "version": "latest",
-    "platform": "Windows 7"
+    "platform": "Windows 7",
+    "screenResolution": "1280x1024"
   },
   {
     "name": "Chrome44Win7",

@@ -103,6 +103,17 @@ const studentPictureData = {
     },
 };
 
+const expectedBlankRow = {
+  id: 0,
+  name: '',
+  age: '',
+  gender: '',
+  username: '',
+  loginType: '',
+  isEditing: true,
+  rowType: RowType.ADD,
+};
+
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
 
@@ -126,17 +137,61 @@ describe('manageStudentsRedux', () => {
     it('sets student data for the section in view', () => {
       const action = setStudents(studentEmailData);
       const nextState = manageStudents(initialState, action);
-      assert.deepEqual(nextState.studentData, studentEmailData);
+      assert.deepEqual(nextState.studentData, {
+        ...studentEmailData,
+      });
+    });
+
+    it('sets student data and an empty row for picture section', () => {
+      const startingState = {
+        ...initialState,
+        loginType: 'picture'
+      };
+      const action = setStudents(studentPictureData);
+      const nextState = manageStudents(startingState, action);
+      assert.deepEqual(nextState.studentData, {
+        ...studentPictureData,
+        [0]: {
+          ...expectedBlankRow,
+          loginType: 'picture',
+        }
+      });
+    });
+
+    it('overrides old section data', () => {
+      const setStudents1 = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudents1);
+
+      const newSectionData = {
+        5: {
+          id: 1,
+          name: 'StudentName5',
+          username: 'student5',
+          userType: 'student',
+          age: 14,
+          gender: 'f',
+          loginType: 'email',
+          secretWords: 'wizard',
+          secretPictureName: 'wizard',
+          secretPicturePath: '/wizard.jpg',
+          sectionId: 53,
+        }
+      };
+      const setStudents2 = setStudents(newSectionData);
+      const finalState = manageStudents(nextState, setStudents2);
+      assert.deepEqual(finalState.studentData, {
+        ...newSectionData,
+      });
     });
   });
 
   describe('convertStudentDataToArray', () => {
-    it('converts studentData to an array of student objects', () => {
+    it('converts studentData to an array of student objects in reverse order', () => {
       const studentDataArray = convertStudentDataToArray(studentEmailData);
       assert.equal(studentDataArray.length, 3);
-      assert.equal(studentDataArray[0], studentEmailData[1]);
+      assert.equal(studentDataArray[0], studentEmailData[3]);
       assert.equal(studentDataArray[1], studentEmailData[2]);
-      assert.equal(studentDataArray[2], studentEmailData[3]);
+      assert.equal(studentDataArray[2], studentEmailData[1]);
     });
   });
 
@@ -254,6 +309,7 @@ describe('manageStudentsRedux', () => {
       const startedSavingState = manageStudents(editingState, startSavingAction);
       assert.equal(startedSavingState.studentData[1].isEditing, true);
       assert.equal(startedSavingState.studentData[1].isSaving, true);
+      assert.equal(startedSavingState.editingData[1].isSaving, true);
     });
 
     it('saveStudentSuccess updates studentData and removes editingData', () => {
@@ -314,16 +370,6 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('add student', () => {
-    const expectedBlankRow = {
-      id: 0,
-      name: '',
-      age: '',
-      gender: '',
-      username: '',
-      loginType: '',
-      isEditing: true,
-      rowType: RowType.ADD,
-    };
     it('setLoginType creates an add row for word login types', () => {
       const action = setLoginType('word');
       const nextState = manageStudents(initialState, action);
@@ -470,6 +516,7 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...initialState.editingData[0],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...initialState.studentData[0],
@@ -514,9 +561,11 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[1], {
         ...initialState.editingData[1],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.editingData[2], {
         ...initialState.editingData[2],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[1], {
         ...initialState.studentData[1],

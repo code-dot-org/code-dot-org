@@ -864,7 +864,6 @@ var projects = module.exports = {
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'project-data-integrity',
         study_group: 'v2',
