@@ -567,7 +567,7 @@ Outputs:
     Description: Pegasus URL
 # display information about how to ssh to console if this is a single instance adhoc environment
 <% if rack_env?(:adhoc) && !frontends -%>
-  InternalSSHServerName:
-    Value: <%=stack_name%>
-    Description: ssh to <%=stack_name%> from gateway.code.org console
+  SSHServerName:
+    Value: <%=subdomain%>
+    Description: SSH server name
 <%end-%>
