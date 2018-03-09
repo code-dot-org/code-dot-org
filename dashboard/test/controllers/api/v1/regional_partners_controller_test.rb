@@ -81,7 +81,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
-  test 'cohort view as a workshop organizer returns nil regional partner cohort capacity for facilitator applications' do
+  test 'capacity as a workshop organizer returns nil regional partner cohort capacity for facilitator applications' do
     time = Date.new(2017, 3, 15)
 
     Timecop.freeze(time) do
@@ -105,7 +105,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
-  test 'cohort view returns regional partner cohort capacity for teacher applications' do
+  test 'capacity returns regional partner cohort capacity for teacher applications' do
     time = Date.new(2017, 3, 15)
 
     Timecop.freeze(time) do
@@ -129,7 +129,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
-  test 'cohort view returns nil regional partner cohort capacity for facilitator applications' do
+  test 'capacity returns nil regional partner cohort capacity for facilitator applications' do
     time = Date.new(2017, 3, 15)
 
     Timecop.freeze(time) do
@@ -153,7 +153,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
-  test 'cohort view returns nil cohort capacity for all applications filter' do
+  test 'capacity returns nil cohort capacity for all applications filter' do
     time = Date.new(2017, 3, 15)
 
     Timecop.freeze(time) do
@@ -177,7 +177,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
-  test 'cohort view returns nil cohort capacity for unmatched applications filter' do
+  test 'capacity returns nil cohort capacity for unmatched applications filter' do
     time = Date.new(2017, 3, 15)
 
     Timecop.freeze(time) do
@@ -201,7 +201,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
-  test 'cohort view returns cohort capacity for admin with regional partner filter' do
+  test 'capacity returns cohort capacity for admin with regional partner filter' do
     time = Date.new(2017, 3, 15)
 
     Timecop.freeze(time) do
