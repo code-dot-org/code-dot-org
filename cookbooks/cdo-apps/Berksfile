@@ -16,6 +16,7 @@ metadata
   cloudwatch-extra-metrics
   redis
   solr
+  i18n
 ).map {|x| "cdo-#{x}"}.
   push('sudo-user').
   each do |dep|
