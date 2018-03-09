@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import QuickActionsCell from "../tables/QuickActionsCell";
+import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 
@@ -9,7 +9,7 @@ export default class ManageStudentsActionsHeaderCell extends Component {
     return (
       <div>
         <QuickActionsCell
-          type="header"
+          type={QuickActionsCellType.header}
         >
           <PopUpMenu.Item
             onClick={() => console.log('edit all was clicked!')}
