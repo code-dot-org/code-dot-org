@@ -7,7 +7,7 @@ module Api::V1::Pd
     )
 
     def assigned_fit
-      object.fit_workshop.try(&:date_and_location_name) || ''
+      object.fit_workshop.try(&:date_and_location_name)
     end
 
     def registered_fit
