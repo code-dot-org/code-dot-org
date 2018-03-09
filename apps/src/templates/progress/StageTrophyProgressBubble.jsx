@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import trophy from '!!file-loader!./images/trophy.svg';
 
@@ -9,7 +9,12 @@ const styles = {
 };
 
 export default class StageExtrasProgressBubble extends Component {
+  static propTypes = {
+    percentPerfect: PropTypes.number.isRequired,
+  };
+
   render() {
+    const percentage = Math.round(this.props.percentPerfect * 100);
     return (
       <svg
         style={styles.main}
@@ -57,7 +62,7 @@ export default class StageExtrasProgressBubble extends Component {
             fontSize="14"
             fontFamily='"Gotham 5r", sans-serif'
           >
-            75%
+            {percentage}%
           </text>
         </g>
       </svg>
