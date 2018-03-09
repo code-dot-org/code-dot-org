@@ -66,6 +66,7 @@ export default class CohortCalculator extends React.Component {
           accepted: this.props.accepted,
           registered: this.props.registered
         });
+        this.loadRequest = null;
       });
   }
 

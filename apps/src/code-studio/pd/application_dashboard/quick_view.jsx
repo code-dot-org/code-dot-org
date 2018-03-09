@@ -97,6 +97,7 @@ export class QuickView extends React.Component {
         loading: false,
         applications: data
       });
+      this.loadRequest = null;
     });
   }
 
