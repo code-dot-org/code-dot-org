@@ -536,10 +536,6 @@ module Pd::Application
       sanitize_form_data_hash[:principal_approval] || ''
     end
 
-    def date_accepted
-      accepted_at.try(:strftime, '%b %e')
-    end
-
     # Called once after the application is submitted, and the principal approval is done
     # Automatically scores the application based on given responses for this and the
     # principal approval application. It is idempotent, and will not override existing
