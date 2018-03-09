@@ -470,18 +470,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  function createHiddenPrintWindow(src) {
-    var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
-    iframe.appendTo("body");
-    iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
-    iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
-    $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
-  }
-
   var printButton = feedback.querySelector('#print-button');
   if (printButton) {
     dom.addClickTouchEvent(printButton, function () {
-      createHiddenPrintWindow(options.feedbackImage);
+      FeedbackUtils.createHiddenPrintWindow(options.feedbackImage);
     });
   }
 
@@ -541,6 +533,14 @@ FeedbackUtils.saveThumbnail = function (image) {
     .then(project.saveThumbnail)
     // Don't pass any arguments to project.save().
     .then(() => project.save());
+};
+
+FeedbackUtils.createHiddenPrintWindow = function (src) {
+  var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
+  iframe.appendTo("body");
+  iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
+  iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
+  $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
 };
 
 FeedbackUtils.isLastLevel = function () {
