@@ -221,24 +221,4 @@ XML
 
     assert_nil level.localized_authored_hints
   end
-
-  test 'uses_droplet for StudioEC levels' do
-    level = Level.new(
-      name: 'test studioEC level',
-      type: 'Blockly',
-      game: Game.studio_ec,
-    )
-
-    assert level.uses_droplet?
-  end
-
-  test 'does not use droplet for maze levels' do
-    level = Level.new(
-      name: 'test studioEC level',
-      type: 'Blockly',
-      game_id: Game.by_name('Maze'),
-    )
-
-    refute level.uses_droplet?
-  end
 end
