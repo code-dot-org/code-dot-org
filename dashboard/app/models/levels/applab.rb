@@ -75,6 +75,7 @@ class Applab < Blockly
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
+          edit_code: true
         }
       )
     )
@@ -122,10 +123,6 @@ class Applab < Blockly
             "but 'Enable Maker APIs' is not checked."
       )
     end
-  end
-
-  def uses_droplet?
-    true
   end
 
   def self.palette
