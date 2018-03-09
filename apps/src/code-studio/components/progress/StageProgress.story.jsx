@@ -213,7 +213,48 @@ export default storybook => {
       },
 
       {
-        name: 'with stage trophy',
+        name: 'with stage empty trophy',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            assessment1,
+            assessment1,
+          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage incomplete trophy',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            activityPuzzle,
+            assessment1,
+            assessment1,
+            assessment1,
+            assessment1,
+          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage mastered trophy',
         // Provide an outer div to simulate some of the CSS that gets leaked into
         // this component
         story: () => {
@@ -221,7 +262,6 @@ export default storybook => {
             activityPuzzle,
             activityPuzzle,
             activityPuzzle,
-            assessment1,
           ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
