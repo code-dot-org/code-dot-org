@@ -3,7 +3,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
-import SectionTable from './SectionTable';
+import OwnedSectionsTable from './OwnedSectionsTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
 import {
@@ -109,7 +109,7 @@ class OwnedSections extends React.Component {
               buttonClassName="uitest-newsection"
             />
             {visibleSectionIds.length > 0 &&
-              <SectionTable
+              <OwnedSectionsTable
                 sectionIds={visibleSectionIds}
                 onEdit={beginEditingSection}
               />
@@ -130,7 +130,7 @@ class OwnedSections extends React.Component {
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.hiddenSections()}
                 </div>
-                <SectionTable
+                <OwnedSectionsTable
                   sectionIds={hiddenSectionIds}
                   onEdit={beginEditingSection}
                 />
