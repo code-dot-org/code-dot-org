@@ -20,6 +20,7 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_other_description,
     :topic_do_not_know,
@@ -39,6 +40,7 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_do_not_know,
     :pledged
@@ -101,6 +103,9 @@ class Api::V1::Census::CensusController < ApplicationController
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
+    when 'CensusYourSchool2017v6'
+      submission = ::Census::CensusYourSchool2017v6.new census_params
+      template = 'census_form_receipt'
     when 'CensusYourSchool2017v5'
       submission = ::Census::CensusYourSchool2017v5.new census_params
       template = 'census_form_receipt'

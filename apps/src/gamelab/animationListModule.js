@@ -321,31 +321,22 @@ export function setInitialAnimationList(serializedAnimationList) {
 }
 
 export function addBlankAnimation() {
-  const key = createUuid();
-  return (dispatch, getState) => {
-    // Special behavior here:
-    // By pushing an animation that is "loadedFromSource" but has a null
-    // blob and dataURI, Piskel will know to create a new document with
-    // the given dimensions.
-    dispatch(addAnimationAction(
-      key,
-      {
-        name: generateAnimationName('animation', getState().animationList.propsByKey),
-        sourceUrl: null,
-        frameSize: {x: 100, y: 100},
-        frameCount: 1,
-        looping: true,
-        frameDelay: 4,
-        version: null,
-        loadedFromSource: true,
-        saved: false,
-        blob: null,
-        dataURI: null,
-        hasNewVersionThisSession: false
-      }));
-    dispatch(selectAnimation(key));
-    projectChanged();
-  };
+  // To avoid special cases and saving tons of blank animations to our server,
+  // we're actually adding a secret blank library animation any time the user
+  // picks "Draw my own."  As soon as the user makes any changes to the
+  // animation it gets saved as a custom animation in their own project, just
+  // like we do with other library animations.
+  return addLibraryAnimation(
+    {
+      name: 'animation',
+      sourceUrl: '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
+      frameSize: {x: 100, y: 100},
+      frameCount: 1,
+      looping: true,
+      frameDelay: 4,
+      version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz',
+    }
+  );
 }
 
 /**
