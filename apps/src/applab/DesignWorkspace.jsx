@@ -10,6 +10,7 @@ class DesignWorkspace extends React.Component {
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
+    onCopyElementToScreen: PropTypes.func.isRequired,
     onChangeElement: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
@@ -49,6 +50,7 @@ class DesignWorkspace extends React.Component {
         handleDragStart={this.props.handleDragStart}
         isDimmed={this.props.isDimmed}
         isToolboxVisible={this.state.isToolboxVisible}
+        onCopyElementToScreen={this.props.onCopyElementToScreen}
         onChangeElement={this.props.onChangeElement}
         onDelete={this.props.onDelete}
         onDepthChange={this.props.onDepthChange}

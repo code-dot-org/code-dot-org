@@ -11,6 +11,7 @@ export default class DesignModeBox extends React.Component {
     handleDragStart: PropTypes.func,
     isDimmed: PropTypes.bool.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
+    onCopyElementToScreen: PropTypes.func.isRequired,
     onChangeElement: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired,
@@ -69,6 +70,7 @@ export default class DesignModeBox extends React.Component {
             element={this.props.element}
             elementIdList={this.props.elementIdList}
             handleChange={this.props.handleChange}
+            onCopyElementToScreen={this.props.onCopyElementToScreen}
             onChangeElement={this.props.onChangeElement}
             onDepthChange={this.props.onDepthChange}
             onDuplicate={this.props.onDuplicate}

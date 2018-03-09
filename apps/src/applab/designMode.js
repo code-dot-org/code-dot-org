@@ -67,7 +67,7 @@ designMode.onDesignModeVizClick = function (event) {
   var element = event.target;
   if (element.id === 'designModeViz') {
     element = designMode.activeScreen();
-  }
+
 
   if ($(element).is('.ui-resizable')) {
     element = getInnerElement(element);
@@ -119,6 +119,10 @@ designMode.attachElement = function (element) {
     makeDraggable($(element));
   }
   designMode.editElementProperties(element);
+};
+
+designMode.onCopyElementToScreen = function (element) {
+  debugger;
 };
 
 designMode.editElementProperties = function (element) {
@@ -1232,6 +1236,7 @@ designMode.renderDesignWorkspace = function (element) {
     element: element || null,
     elementIdList: Applab.getIdDropdownForCurrentScreen(),
     handleChange: designMode.onPropertyChange.bind(this, element),
+    onCopyElementToScreen: designMode.onCopyElementToScreen.bind(this),
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
     onDuplicate: designMode.onDuplicate.bind(this, element),
@@ -1242,7 +1247,12 @@ designMode.renderDesignWorkspace = function (element) {
     screenIds: designMode.getAllScreenIds(),
     store: getStore(),
   };
-  ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
+  ReactDOM.render(
+      <Provider store={getStore()}>
+        <DesignWorkspace {...props}/>
+      </Provider>,
+      designWorkspace
+  );
 };
 
 /**
