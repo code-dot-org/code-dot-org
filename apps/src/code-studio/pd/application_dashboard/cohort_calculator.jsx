@@ -31,10 +31,6 @@ export default class CohortCalculator extends React.Component {
   }
 
   componentWillMount() {
-    this.setState({
-      accepted: this.props.accepted,
-      registered: this.props.registered
-    });
     this.load(this.props.regionalPartnerFilter);
   }
 
