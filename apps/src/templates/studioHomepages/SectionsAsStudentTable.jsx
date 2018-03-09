@@ -99,7 +99,7 @@ const styles = {
   }
 };
 
-class SectionsTable extends React.Component {
+class SectionsAsStudentTable extends React.Component {
   // isTeacher will be set false for teachers who are seeing this table as a student in another teacher's section.
   static propTypes = {
     sections: shapes.sections,
@@ -237,4 +237,4 @@ class SectionsTable extends React.Component {
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(SectionsTable);
+}))(SectionsAsStudentTable);
