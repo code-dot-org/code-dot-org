@@ -100,6 +100,10 @@ FactoryGirl.define do
     share_with_regional_partners true
   end
 
+  factory :census_your_school2017v6, parent: :census_your_school2017v5, class: Census::CensusYourSchool2017v6 do
+    topic_ethical_social true
+  end
+
   factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
     submitter_name "Hoc Submitter"
   end
