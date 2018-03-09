@@ -257,6 +257,10 @@ FactoryGirl.define do
       teaches_cs "N"
     end
 
+    trait :with_valid_historic_teaches_cs do
+      teaches_cs "HN"
+    end
+
     trait :with_invalid_teaches_cs do
       teaches_cs "X"
     end
