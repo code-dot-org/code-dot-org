@@ -14,6 +14,12 @@ class Api::V1::RegionalPartnersController < ApplicationController
     render json: {capacity: get_partner_cohort_capacity(regional_partner_filter, role)}
   end
 
+  private
+
+  # Get the regional partner's cohort capacity for a specific role
+  # @param role (ex: 'csd_teachers' or 'csf_facilitators')
+  # @param regional_partner_filter is 'none', 'all', or a regional partner's id
+  # @return the partner's capacity for that role if an id is given, otherwise nil
   def get_partner_cohort_capacity(regional_partner_filter, role)
     unless ['none', 'all'].include? regional_partner_filter
       partner_id = regional_partner_filter ? regional_partner_filter : current_user.regional_partners.first
