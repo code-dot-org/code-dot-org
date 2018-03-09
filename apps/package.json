@@ -48,6 +48,7 @@
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
+    "@code-dot-org/maze": "github:code-dot-org/maze#95c4844947d8673fc655b3398f636e4eeceec0d6",
     "@code-dot-org/p5.play": "1.2.0-cdo",
     "@code-dot-org/piskel": "0.13.0-cdo.2",
     "@storybook/addon-info": "3.2.11",
