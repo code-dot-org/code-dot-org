@@ -3,7 +3,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
 
   load_and_authorize_resource :application,
     class: 'Pd::Application::ApplicationBase', find_by: :application_guid,
-    id_param: :application_guid, except: [:partner, :partner_submitted]
+    id_param: :application_guid, except: [:partner, :partner_submitted, :lead_facilitator, :lead_facilitator_submitted]
 
   # here we handle the CanCan error manually so that we can present
   # non-authorized users with a custom page explaining that they must be logged
@@ -92,6 +92,23 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       }.to_json
     }
 
+    render :new
+  end
+
+  def lead_facilitator
+    unless current_user.facilitator?
+      render :unauthorized
+    end
+
+    @script_data = {
+      props: {
+        options: Pd::Teachercon1819Registration.options.camelize_keys,
+        requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
+        apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
+        applicationType: "LeadFacilitator",
+        email: current_user.email
+      }
+    }
     render :new
   end
 end
