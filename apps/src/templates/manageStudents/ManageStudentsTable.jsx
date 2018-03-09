@@ -6,12 +6,12 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
-import FontAwesome from '../FontAwesome';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
+import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
@@ -19,14 +19,14 @@ import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
 import experiments from '@cdo/apps/util/experiments';
 
+const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
+
 const styles = {
-  cog: {
-    marginLeft: 10,
-    fontSize: 20,
+  inline: {
+    width: '40%',
+    float: 'left',
   },
 };
-
-const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -203,10 +203,14 @@ class ManageStudentsTable extends Component {
         }
         {numberOfEditingRows <= 1 &&
           <span>
-            {i18n.actions()}
-            {showShareColumn &&
-              <FontAwesome icon="cog" style={styles.cog}/>
-            }
+            <div style={styles.inline}>
+              {i18n.actions()}
+            </div>
+            <div style={styles.inline}>
+              {showShareColumn &&
+                <ManageStudentsActionsHeaderCell/>
+              }
+            </div>
           </span>
         }
       </div>
