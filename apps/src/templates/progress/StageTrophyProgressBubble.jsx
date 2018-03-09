@@ -14,43 +14,50 @@ export default class StageExtrasProgressBubble extends Component {
   };
 
   render() {
-    const percentage = Math.round(this.props.percentPerfect * 100);
+    const ratio = this.props.percentPerfect;
+    const percentage = Math.round(ratio * 100);
+
+    const theta = Math.PI * 2 * ratio;
+    const x = Math.cos(theta) * 18;
+    const y = Math.sin(theta) * 18;
+
+    const largeArc = (ratio > 0.5) ? 1 : 0;
+    const close = (ratio === 1) ? 'Z' : '';
+
     return (
       <svg
         style={styles.main}
         width="50"
         height="90"
       >
-        <g transform="translate(5, 25)">
-          <circle
-            cx="20"
-            cy="20"
-            r="25"
-            fill="white"
-          />
-          <circle
-            cx="20"
-            cy="20"
-            r="20"
-            fill={color.light_gray}
-          />
-          <circle
-            cx="20"
-            cy="20"
-            r="16"
-            fill={color.lightest_gray}
-          />
-          <path
-            d="M 20 2 A 18 18 0 1 1 2 20"
-            fill="none"
-            stroke={color.level_perfect}
-            strokeWidth="3"
-          />
-          <g transform="translate(8, 10)">
+        <g transform="translate(7, 27)">
+          <g transform="translate(18, 18)">
+            <circle
+              r="25"
+              fill="white"
+            />
+            <circle
+              r="20"
+              fill={color.lighter_gray}
+            />
+            <circle
+              r="16"
+              fill={color.lightest_gray}
+            />
+            <g transform="rotate(-90)">
+              <path
+                d={`M 18 0.00001 A 18 18 0 ${largeArc} 1 ${x} ${y}${close}`}
+                fill="none"
+                stroke={color.level_perfect}
+                strokeWidth="3"
+              />
+            </g>
+          </g>
+          <g transform="translate(6, 8)">
             <use
               href={`${trophy}#trophy`}
               transform="scale(0.04)"
-              fill={color.light_gray}
+              fill={color.lighter_gray}
             />
           </g>
         </g>
