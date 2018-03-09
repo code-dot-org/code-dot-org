@@ -89,7 +89,7 @@ If you've been teaching Courses 1-4 and want to know how to transition to teachi
 
 [col-50]
 
-<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/coursec', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Recommended for 2nd grade', description: 'Students will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share.'%>
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/coursec'), cta_text: 'View course', lesson_plans: 'https://curriculum.code.org/csf/coursec', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Recommended for 2nd grade', description: 'Students will create programs with loops and events. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share.'%>
 
 [/col-50]
 

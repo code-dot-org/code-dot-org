@@ -47,6 +47,12 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            school_stats_by_years.frl_eligible_total AS frl_eligible,
            (CASE WHEN frl_eligible_total IS NULL
                    OR students_total IS NULL
+                   OR frl_eligible_total > students_total
+                 THEN NULL
+                 ELSE frl_eligible_total /
+                       students_total::float END) AS frl_eligible_percent,           
+           (CASE WHEN frl_eligible_total IS NULL
+                   OR students_total IS NULL
                  THEN NULL
                  WHEN (frl_eligible_total /
                        students_total::float) > 0.5
