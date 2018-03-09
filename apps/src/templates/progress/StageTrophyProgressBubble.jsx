@@ -24,6 +24,13 @@ export default class StageExtrasProgressBubble extends Component {
     const largeArc = (ratio > 0.5) ? 1 : 0;
     const close = (ratio === 1) ? 'Z' : '';
 
+    let shapeColor = color.level_perfect;
+    if (ratio === 1) {
+      shapeColor = color.yellow;
+    } else if (ratio === 0) {
+      shapeColor = color.lighter_gray;
+    }
+
     return (
       <svg
         style={styles.main}
@@ -48,7 +55,7 @@ export default class StageExtrasProgressBubble extends Component {
               <path
                 d={`M 18 0.00001 A 18 18 0 ${largeArc} 1 ${x} ${y}${close}`}
                 fill="none"
-                stroke={ratio === 1 ? color.yellow : color.level_perfect}
+                stroke={shapeColor}
                 strokeWidth="3"
               />
             </g>
@@ -65,7 +72,7 @@ export default class StageExtrasProgressBubble extends Component {
           <text
             textAnchor="middle"
             alignmentBaseline="hanging"
-            fill={ratio === 1 ? color.yellow : color.level_perfect}
+            fill={shapeColor}
             fontSize="14"
             fontFamily='"Gotham 5r", sans-serif'
           >
