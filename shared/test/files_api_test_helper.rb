@@ -108,6 +108,11 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def restore_sources_version(filename, version_id, body = '', headers = {})
+    put "/v3/sources/#{@channel_id}/#{filename}/restore?version=#{version_id}", body, headers
+    JSON.parse(last_response.body)
+  end
+
   def list_files_versions
     get "/v3/#{@endpoint}-version/#{@channel_id}"
     JSON.parse(last_response.body)
