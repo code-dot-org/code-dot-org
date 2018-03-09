@@ -155,8 +155,13 @@ def main
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
         DevelopersTopic.set_dtp 'yes'
         InfraProductionTopic.set_dtp_commit GitHub.sha('production')
-        zendesk_reminder = "/remind <@#{DevelopersTopic.dotd}> to check Zendesk in 2 hours"
-        ChatClient.message 'developers', zendesk_reminder
+        # You can find the channel id at the end of the url for a given channel using
+        # Slack in the browser, e.g https://codedotorg.slack.com/messages/<channel_id>
+        developers_channel_id = "C0T0PNTM3"
+        command = "remind"
+        zendesk_reminder = "<@#{DevelopersTopic.dotd}> to check Zendesk in 2 hours"
+        Slack.command developers_channel_id,
+          command, zendesk_reminder
 
         # Check hoc_mode only on successful DTPs, so that we get about 1 reminder per day to bring
         # staging, test and production to the same hoc_mode after a hoc_mode change. Note

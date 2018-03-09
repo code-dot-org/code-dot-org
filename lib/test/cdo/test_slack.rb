@@ -7,6 +7,7 @@ class SlackTest < Minitest::Test
   FAKE_ENDPOINT = 'fake-endpoint'.freeze
   FAKE_MESSAGE = 'fake-message'.freeze
   FAKE_TOPIC = 'fake-topic'.freeze
+  FAKE_COMMAND = 'fake-command'.freeze
 
   def setup
     Slack.stubs(:get_channel_id).with(FAKE_CHANNEL).returns(FAKE_CHANNEL_ID)
@@ -43,6 +44,11 @@ class SlackTest < Minitest::Test
   def test_join_room
     Slack.expects(:open).returns(stub(read: {'ok' => true}.to_json))
     assert Slack.join_room(FAKE_CHANNEL)
+  end
+
+  def test_command
+    Slack.expects(:open).returns(stub(read: {'ok' => true}.to_json))
+    assert Slack.command(FAKE_CHANNEL_ID, FAKE_COMMAND)
   end
 
   def test_update_topic_with_error_response
