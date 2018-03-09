@@ -1,12 +1,12 @@
 - content_for(:head) do
-  - if @level.is_a?(Blockly) && !@level.uses_droplet?
+  - if @level.is_a?(Blockly) && !@level.game.uses_droplet?
     = javascript_include_tag 'js/blockly'
     = javascript_include_tag "js/en_us/blockly_locale"
     = javascript_include_tag "js/en_us/common_locale"
     = javascript_include_tag "js/en_us/#{@level.game.app}_locale"
 
 .field
-  = f.label :edit_code, @level.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
+  = f.label :edit_code, @level.game.uses_droplet? ? 'Droplet JavaScript level' : 'Blockly level'
 = render partial: 'levels/editors/ani_gif', locals: {f: f}
 .field
   = f.label :skin
@@ -78,7 +78,7 @@
     in the workspace (including hidden start blocks).
   = boolean_check_box f, :top_level_procedure_autopopulate
 
-- if @level.uses_droplet?
+- if @level.game.uses_droplet?
   .field
     = f.label :code_functions, 'Edit Droplet Palette'
     = f.text_area :code_functions, placeholder: 'Droplet Palette', rows: 4, value: @level.code_functions ? JSON.pretty_generate(@level.code_functions) : ''
@@ -91,17 +91,17 @@
       #toolbox-preview.span4
 
 .field
-  - if @level.uses_droplet?
+  - if @level.game.uses_droplet?
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
   - else
     = link_to 'Edit Start Blocks', level_edit_blocks_path(@level, :start_blocks) unless @level.new_record?
   .row
     .span8
-      ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
+      ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.game.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
     #start-preview.span4
 
 .field
-  - if @level.uses_droplet?
+  - if @level.game.uses_droplet?
     = f.label :required_blocks, 'Edit Required Blocks'
   - else
     = link_to 'Edit Required Blocks', level_edit_blocks_path(@level, :required_blocks) unless @level.new_record?
@@ -111,7 +111,7 @@
     #required-preview.span4
 
 .field
-  - if @level.uses_droplet?
+  - if @level.game.uses_droplet?
     = f.label :recommended_blocks, 'Edit Recommended Blocks'
   - else
     = link_to 'Edit Recommended Blocks', level_edit_blocks_path(@level, :recommended_blocks) unless @level.new_record?
@@ -120,7 +120,7 @@
       ~ f.text_area :recommended_blocks, placeholder: 'Recommended Blocks', rows: 4, value: @level.pretty_block('recommended')
     #recommended-preview.span4
 
-- unless @level.uses_droplet?
+- unless @level.game.uses_droplet?
   .field
     = link_to 'Edit Initialization Blocks', level_edit_blocks_path(@level, :initialization_blocks) unless @level.new_record?
   .row
@@ -178,7 +178,7 @@
   = f.text_area :input_output_table, placeholder: 'Input/Output', rows: 4, value: @level.input_output_table
 -if @level.respond_to? :solution_blocks
   .field
-    - if @level.uses_droplet?
+    - if @level.game.uses_droplet?
       = f.label :solution_blocks, 'Edit Solution Blocks'
     - else
       = link_to 'Edit Solution Blocks', level_edit_blocks_path(@level, :solution_blocks) unless @level.new_record?
@@ -186,7 +186,7 @@
       .span8
         ~ f.text_area :solution_blocks, placeholder: 'Solution Blocks', rows: 4, value: @level.pretty_block('solution')
       #solution-preview.span4
--if @level.uses_droplet?
+-if @level.game.uses_droplet?
   .field
     = f.label :palette_category_at_start
     = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
@@ -212,7 +212,7 @@
       isK1: @level.try(:isK1),
       app: @level.game.app,
       solution_blocks: @level.respond_to?(:solution_blocks),
-      uses_droplet: @level.uses_droplet?,
+      uses_droplet: @level.game.uses_droplet?,
       input_output_table: @level.respond_to?(:input_output_table),
       original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
     }.to_json
