@@ -94,15 +94,20 @@ class CohortView extends React.Component {
         <Spinner/>
       );
     } else {
-      const registered = this.state.applications
-        .filter(app => app.registered_workshop === 'Yes')
-        .length;
+      let accepted = 0;
+      let registered = 0;
+      if (this.state.applications !== null) {
+        accepted = this.state.applications.length;
+        registered = this.state.applications
+          .filter(app => app.registered_workshop === 'Yes')
+          .length;
+      }
       return (
         <div>
           <CohortCalculator
             role={this.props.route.path.replace('_cohort', '')}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
-            accepted={this.state.applications.length}
+            accepted={accepted}
             registered={registered}
           />
           {this.props.isWorkshopAdmin &&
