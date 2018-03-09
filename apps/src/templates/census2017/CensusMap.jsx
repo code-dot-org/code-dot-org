@@ -140,20 +140,20 @@ export default class CensusMap extends Component {
           }
         },
         {
-          where: "teaches_cs IN 'YES'",
+          where: "teaches_cs IN ('YES', 'HISTORICAL_YES')",
           markerOptions: {
             iconName: "grn_blank"
           }
         },
         {
-          where: "teaches_cs IN 'NO'",
+          where: "teaches_cs IN ('NO', 'HISTORICAL_NO')",
           markerOptions: {
             iconName: "small_blue"
           }
         },
 
         {
-          where: "teaches_cs IN 'MAYBE'",
+          where: "teaches_cs IN ('MAYBE', 'HISTORICAL_MAYBE')",
           markerOptions: {
             iconName: "small_yellow"
           }
