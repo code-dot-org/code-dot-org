@@ -428,6 +428,13 @@ exports.interpolateInputs = interpolateInputs;
 
 /**
  * Add pre-labeled inputs
+ * @param {Blockly} blockly The Blockly object provided to install()
+ * @param {Block} block The block to add the inputs to
+ * @param {Object[]} args The list of inputs
+ * @param {String} args[].name The name for this input, conventionally all-caps
+ * @param {String} args[].type The type for this input, defaults to allowing any
+ *   type
+ * @param {String} args[].label The text to display to the left of the input
  */
 const addInputs = function (blockly, block, args) {
   block.appendDummyInput()
@@ -489,6 +496,7 @@ exports.createJsWrapperBlockCreator = function (
    *   block without a previous statement connector.
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
+   * @param {boolean} opts.inline Render inputs inline, defaults to false
    */
   return ({
     color,
