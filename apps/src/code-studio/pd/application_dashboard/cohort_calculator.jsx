@@ -22,10 +22,12 @@ export default class CohortCalculator extends React.Component {
     super(props);
 
     this.state = {
+      loading: true,
       capacity: null,
       accepted: null,
       registered: null,
     };
+    this.loadRequest = null;
   }
 
   componentWillMount() {
@@ -42,14 +44,28 @@ export default class CohortCalculator extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.abortLoad();
+  }
+
+  abortLoad() {
+    if (this.loadRequest) {
+      this.loadRequest.abort();
+    }
+  }
+
   load(regionalPartnerFilter) {
-    $.ajax({
+    this.abortLoad();
+    this.setState({loading: true});
+
+    this.loadRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/regional_partners/capacity?role=${this.props.role}&regional_partner_filter=${regionalPartnerFilter}`,
       dataType: 'json'
     })
       .done(data => {
         this.setState({
+          loading: false,
           capacity: data.capacity,
           accepted: this.props.accepted,
           registered: this.props.registered
