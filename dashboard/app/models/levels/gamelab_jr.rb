@@ -57,6 +57,8 @@ class GamelabJr < Gamelab
       <block type="colour_picker"></block>
     </value>
   </block>
+  <block type="gamelab_showTitleScreen" />
+  <block type="gamelab_hideTitleScreen" />
 </category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
@@ -144,6 +146,10 @@ class GamelabJr < Gamelab
     </value>
   </block>
   <block type="controls_flow_statements" />
+</category>
+<category name="Text">
+  <block type="text_join_simple" inputcount="2" />
+  <block type="text" />
 </category>
     XML
   end
