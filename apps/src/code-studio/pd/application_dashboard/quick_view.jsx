@@ -45,7 +45,8 @@ export class QuickView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+      role: PropTypes.string.isRequired
     })
   };
 
@@ -105,7 +106,7 @@ export class QuickView extends React.Component {
     `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilter))}`
   );
   getApiParams = (regionalPartnerFilter) => ({
-    role: this.props.route.path,
+    role: this.props.route.role,
     regional_partner_filter: regionalPartnerFilter
   });
   getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
@@ -143,7 +144,7 @@ export class QuickView extends React.Component {
       <div>
         {this.state.applications &&
           <CohortCalculator
-            role={this.props.route.path.replace('_cohort', '')}
+            role={this.props.route.role}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
             accepted={accepted}
             registered={registered}

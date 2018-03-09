@@ -27,7 +27,8 @@ class CohortView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+      role: PropTypes.string.isRequired
     })
   };
 
@@ -73,7 +74,7 @@ class CohortView extends React.Component {
     this.load(selected);
   };
 
-  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.path.replace('_cohort', '')}`;
+  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.role}`;
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
@@ -105,7 +106,7 @@ class CohortView extends React.Component {
       return (
         <div>
           <CohortCalculator
-            role={this.props.route.path.replace('_cohort', '')}
+            role={this.props.route.role}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
             accepted={accepted}
             registered={registered}
