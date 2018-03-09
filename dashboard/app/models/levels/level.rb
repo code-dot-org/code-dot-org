@@ -477,13 +477,13 @@ class Level < ActiveRecord::Base
     summary
   end
 
+  def uses_droplet?
+    false
+  end
+
   private
 
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
-  end
-
-  def uses_droplet?
-    false
   end
 end
