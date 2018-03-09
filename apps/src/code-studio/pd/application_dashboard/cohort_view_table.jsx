@@ -3,6 +3,7 @@ import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import {orderBy} from 'lodash';
+import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const styles = {
@@ -56,6 +57,9 @@ export default class CohortViewTable extends React.Component {
         header: {
           label: 'Date Accepted',
           transforms: [sortable]
+        },
+        cell: {
+          format: this.formatDate
         }
       }, {
         property: 'applicant_name',
@@ -148,6 +152,9 @@ export default class CohortViewTable extends React.Component {
 
     this.setState({sortingColumns});
   };
+
+  // Format dates as abbreviated month and day, e.g. "Mar 9"
+  formatDate = (iso8601Date) => moment(iso8601Date).format("MMM D");
 
   formatViewButton = (id) => {
     return (

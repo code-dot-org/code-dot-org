@@ -11,10 +11,6 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     :status
   )
 
-  def date_accepted
-    object.accepted_at.try(:strftime, '%b %e')
-  end
-
   def email
     object.user.email
   end
