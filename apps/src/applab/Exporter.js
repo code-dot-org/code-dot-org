@@ -3,6 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
+import {SnackSession} from 'snack-sdk';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
@@ -18,6 +19,7 @@ import exportExpoPackagedFiles from '../templates/exportExpoPackagedFiles.js.ejs
 import exportExpoPackagedFilesEntry from '../templates/exportExpoPackagedFilesEntry.js.ejs';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 // This whitelist determines which appOptions properties
 // will get exported with the applab app, appearing in the
@@ -398,12 +400,73 @@ export default {
     });
   },
 
-  exportApp(appName, code, levelHtml, expoMode) {
+  async exportApp(appName, code, levelHtml, expoMode) {
+    if (expoMode) {
+      const session = this.publishToExpo(appName, code, levelHtml);
+      const sessionId = await session.startAsync();
+      const url = await session.getUrlAsync();
+      const appJs = exportExpoAppJs();
+      const files = {
+        'App.js': { contents: appJs, type: 'CODE'},
+        'test.js': { contents: appJs, type: 'CODE'},
+  //      'assets/jquery-1.12.1.min.j': { content: 'https://code.jquery.com/jquery-1.12.1.min.js', type: 'ASSET'},
+      };
+      await session.sendCodeAsync(files);
+      const saveResult = await session.saveAsync();
+      return Promise.resolve();
+    }
     return this.exportAppToZip(appName, code, levelHtml, expoMode)
       .then(function (zip) {
         zip.generateAsync({type:"blob"}).then(function (blob) {
           saveAs(blob, appName + ".zip");
         });
       });
+  },
+
+  publishToExpo(appName, code, levelHtml) {
+    const appJs = exportExpoAppJs();
+    const files = {
+      'App.js': { contents: appJs, type: 'CODE'},
+      'test.js': { contents: appJs, type: 'CODE'},
+//      'assets/jquery-1.12.1.min.j': { content: 'https://code.jquery.com/jquery-1.12.1.min.js', type: 'ASSET'},
+    };
+    // const dependencies = {
+    //   "expo": "^25.0.0",
+    //   "react": "16.2.0",
+    //   "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz"
+    // };
+
+    let session = new SnackSession({
+      sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
+      files,
+      name: project.getCurrentName(),
+      sdkVersion: '25.0.0',
+    });
+
+    return session;
   }
 };
+
+function getEnvironmentPrefix() {
+  const hostname = window.location.hostname;
+  if (hostname.includes("adhoc")) {
+    // As adhoc hostnames may include other keywords, check it first.
+    return "cdo-adhoc";
+  }
+  if (hostname.includes("test")) {
+    return "cdo-test";
+  }
+  if (hostname.includes("levelbuilder")) {
+    return "cdo-levelbuilder";
+  }
+  if (hostname.includes("staging")) {
+    return "cdo-staging";
+  }
+  if (hostname.includes("localhost")) {
+    return "cdo-development";
+  }
+  if (hostname.includes("code.org")) {
+    return "cdo";
+  }
+  return "cdo-unknown";
+}
