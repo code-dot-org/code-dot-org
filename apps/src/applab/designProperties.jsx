@@ -16,6 +16,7 @@ export default class DesignProperties extends React.Component {
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
+    onCopyElementToScreen: PropTypes.func.isRequired,
     onChangeElement: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
@@ -208,7 +209,7 @@ export default class DesignProperties extends React.Component {
                 }
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
                 <CopyElementToScreenButton
-                  handleCopyElementToScreen={function() { debugger; }}
+                  handleCopyElementToScreen={this.props.onCopyElementToScreen}
                   screenIds={this.props.screenIds}
                 />
               </div>
