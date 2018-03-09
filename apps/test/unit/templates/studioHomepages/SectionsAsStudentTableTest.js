@@ -3,16 +3,16 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import i18n from '@cdo/locale';
 import {joinedSections} from './homepagesTestData';
-import SectionsTable from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import {combineReducers, createStore} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
-describe('SectionsTable', () => {
+describe('SectionsAsStudentTable', () => {
   const store = createStore(combineReducers({isRtl}));
 
   it('shows column headers for students', () => {
     const wrapper = shallow(
-      <SectionsTable
+      <SectionsAsStudentTable
         sections={joinedSections}
         isTeacher={false}
         canLeave={false}
@@ -36,7 +36,7 @@ describe('SectionsTable', () => {
 
   it('shows column headers for teachers', () => {
     const wrapper = shallow(
-      <SectionsTable
+      <SectionsAsStudentTable
         sections={joinedSections}
         isTeacher={true}
         canLeave={false}
@@ -60,7 +60,7 @@ describe('SectionsTable', () => {
 
   it('does not show a leave section button for teacher-managed student accounts', () => {
     const wrapper = shallow(
-      <SectionsTable
+      <SectionsAsStudentTable
         sections={joinedSections}
         isTeacher={false}
         canLeave={false}
@@ -71,7 +71,7 @@ describe('SectionsTable', () => {
 
   it('shows a leave section button for students who do not have teacher-managed accounts', () => {
     const wrapper = shallow(
-      <SectionsTable
+      <SectionsAsStudentTable
         sections={joinedSections}
         isTeacher={false}
         canLeave={true}
@@ -82,7 +82,7 @@ describe('SectionsTable', () => {
 
   it('does not show a leave section button for teacher accounts', () => {
     const wrapper = shallow(
-      <SectionsTable
+      <SectionsAsStudentTable
         sections={joinedSections}
         isTeacher={true}
         canLeave={false}
@@ -93,7 +93,7 @@ describe('SectionsTable', () => {
 
   it('renders a row for each joined section', () => {
     const wrapper = shallow(
-      <SectionsTable
+      <SectionsAsStudentTable
         sections={joinedSections}
         isTeacher={false}
         canLeave={false}
