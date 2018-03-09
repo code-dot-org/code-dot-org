@@ -211,7 +211,7 @@ class Section < ActiveRecord::Base
     return course.try(:default_course_scripts).try(:first).try(:script)
   end
 
-  # Provides some information about a section. This is consumed by our SectionsTable
+  # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')

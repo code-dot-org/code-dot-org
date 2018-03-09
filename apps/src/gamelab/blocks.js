@@ -245,5 +245,23 @@ export default {
       ],
       methodCall: true,
     });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'showTitleScreen',
+      blockText: 'show title screen',
+      args: [
+        { name: 'TITLE', label: 'title', type: blockly.BlockValueType.STRING },
+        { name: 'SUBTITLE', label: 'text', type: blockly.BlockValueType.STRING }
+      ],
+      inline: false,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'hideTitleScreen',
+      blockText: 'hide title screen',
+      args: [],
+    });
   },
 };

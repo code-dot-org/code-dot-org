@@ -31,6 +31,7 @@ let sprites = [];
 let score = 0;
 let game_over = false;
 let show_score = false;
+let title = '', subTitle = '';
 
 // Behaviors
 
@@ -233,6 +234,15 @@ function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
 }
 
+function showTitleScreen(titleArg, subTitleArg) {
+  title = titleArg;
+  subTitle = subTitleArg;
+}
+
+function hideTitleScreen() {
+  title = subTitle = '';
+}
+
 function draw() {
   background(World.background_color || "white");
 
@@ -303,5 +313,12 @@ function draw() {
     textAlign(CENTER);
     textSize(50);
     text("Game Over", 200, 200);
+  } else if (title) {
+    fill("black");
+    textAlign(CENTER);
+    textSize(50);
+    text(title, 200, 150);
+    textSize(35);
+    text(subTitle, 200, 250);
   }
 }

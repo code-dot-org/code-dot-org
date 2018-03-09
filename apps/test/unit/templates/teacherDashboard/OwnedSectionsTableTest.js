@@ -3,13 +3,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import {Table} from 'reactabular';
 import {
-  UnconnectedSectionTable as SectionTable,
+  UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
   courseLinkFormatter,
   gradeFormatter,
   loginInfoFormatter,
   studentsFormatter
-} from '@cdo/apps/templates/teacherDashboard/SectionTable';
+} from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import Button from '@cdo/apps/templates/Button';
 
@@ -70,10 +70,10 @@ const sectionRowData = [
   },
 ];
 
-describe('SectionTable', () => {
+describe('OwnedSectionsTable', () => {
   it('has a header and a body', () => {
     const wrapper = shallow(
-      <SectionTable
+      <OwnedSectionsTable
         sectionIds={[1]}
         sectionRows={sectionRowData.slice(0, 1)}
         onEdit={() => {}}
@@ -88,7 +88,7 @@ describe('SectionTable', () => {
 
   it('is 970px wide', () => {
     const wrapper = shallow(
-      <SectionTable
+      <OwnedSectionsTable
         sectionIds={[1]}
         sectionRows={sectionRowData.slice(0, 1)}
         onEdit={() => {}}
@@ -97,7 +97,7 @@ describe('SectionTable', () => {
     expect(style).to.include({'width': 970});
   });
 
-  describe('SectionTableFormatters', () => {
+  describe('OwnedSectionsTable Formatters', () => {
     it('studentsFormatter provides a link to add or manage students', () => {
       const rowData = sectionRowData[0];
       const studentsCol = shallow(studentsFormatter(null, {rowData}));

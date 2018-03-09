@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import SectionTable from './SectionTable';
+import OwnedSectionsTable from './OwnedSectionsTable';
 import teacherSections, {
   setValidGrades,
   setValidAssignments,
@@ -166,7 +166,7 @@ const validCourses = [
 
 export default storybook => {
   storybook
-    .storiesOf('SectionTable (teacher dashboard)', module)
+    .storiesOf('OwnedSectionsTable (teacher dashboard)', module)
     .addStoryTable([
       {
         name: 'section table',
@@ -177,7 +177,7 @@ export default storybook => {
           store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>
-              <SectionTable
+              <OwnedSectionsTable
                 sectionIds={[11, 12, 20, 21, 307]}
                 onEdit={() => {}}
               />
