@@ -14,6 +14,8 @@ const FeatureType = {
 };
 
 export default class HarvesterCell extends Cell {
+  static FeatureType = FeatureType;
+
   constructor(tileType, value, range, possibleFeatures, startsHidden) {
 
     // possible features should default to an array containing
@@ -144,15 +146,17 @@ export default class HarvesterCell extends Cell {
       startsHidden: this.startsHidden_
     });
   }
+
+  /**
+   * @override
+   */
+  static deserialize(serialized) {
+    return new HarvesterCell(
+      serialized.tileType,
+      serialized.value,
+      serialized.range,
+      serialized.possibleFeatures,
+      serialized.startsHidden
+    );
+  }
 }
-
-HarvesterCell.deserialize = serialized => new HarvesterCell(
-  serialized.tileType,
-  serialized.value,
-  serialized.range,
-  serialized.possibleFeatures,
-  serialized.startsHidden
-);
-
-
-HarvesterCell.FeatureType = FeatureType;

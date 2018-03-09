@@ -12,6 +12,8 @@ const FeatureType = {
 };
 
 export default class PlanterCell extends Cell {
+  static FeatureType = FeatureType;
+
   constructor(tileType, featureType) {
     if (featureType === undefined) {
       featureType = FeatureType.NONE;
@@ -71,11 +73,14 @@ export default class PlanterCell extends Cell {
       featureType: this.originalFeatureType_,
     });
   }
+
+  /**
+   * @override
+   */
+  static deserialize(serialized) {
+    return new PlanterCell(
+      serialized.tileType,
+      serialized.featureType
+    );
+  }
 }
-
-PlanterCell.deserialize = serialized => new PlanterCell(
-  serialized.tileType,
-  serialized.featureType
-);
-
-PlanterCell.FeatureType = FeatureType;
