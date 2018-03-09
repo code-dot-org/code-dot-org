@@ -12,20 +12,10 @@
 import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
 
-import {
-  resetCollectorCurrentCollected,
-  setCollectorCurrentCollected,
-} from './redux';
-
-const COLLECTED_TOO_MANY = 4;
-
 export default class Collector extends Subtype {
-  reset() {
-    if (this.maze_.store) {
-      this.maze_.store.dispatch(resetCollectorCurrentCollected());
-    }
-  }
-
+  /**
+   * @fires collected
+   */
   scheduleDirtChange(row, col) {
     super.scheduleDirtChange(row, col);
 
@@ -36,10 +26,7 @@ export default class Collector extends Subtype {
       this.collectSoundsI += 1;
       this.collectSoundsI %= this.collectSoundsCount;
     }
-
-    if (this.maze_.store) {
-      this.maze_.store.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
-    }
+    this.emit("collected", this.getTotalCollected());
   }
 
   /**
@@ -49,14 +36,26 @@ export default class Collector extends Subtype {
     return true;
   }
 
-  collect(id, row, col) {
+  /**
+   * Attempt to collect from the specified location; terminate the execution if
+   * there is nothing there to collect.
+   *
+   * Note that the animation for this action is handled by the default
+   * "scheduleDig" operation
+   *
+   * @fires collectedTooMany
+   * @return {boolean} whether or not this attempt was successful
+   */
+  tryCollect(row, col) {
     const currVal = this.maze_.map.getValue(row, col);
+
     if (currVal === undefined || currVal < 1) {
-      this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
-    } else {
-      this.maze_.executionInfo.queueAction('pickup', id);
-      this.maze_.map.setValue(row, col, currVal - 1);
+      this.emit('collectedTooMany');
+      return false;
     }
+
+    this.maze_.map.setValue(row, col, currVal - 1);
+    return true;
   }
 
   /**

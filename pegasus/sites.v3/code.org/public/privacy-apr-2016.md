@@ -13,7 +13,7 @@ Planning to update privacy policy: Aug 24, 2016
 
 
 ## About Code.org
-Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
+Code.org® is a nonprofit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
 
 Please read this Privacy Policy carefully before accessing or using the Website.
 
@@ -177,7 +177,7 @@ To participate in the evaluation, these school districts are asked provide stude
 
 ## Limitations on Access to your Personal Information by Employees and Authorized Parties
 
-Code.org’s officers, directors,employees, agents and contractors must have a legitimate business reason (related directly to furthering our charitable, non-profit education-focused mission) to access Personal Information you provide to Code.org, for example to assist in product support. Code.org will require our officers, directors, employees, agents, and contractors to comply with this Privacy Policy, and to treat any Personal Information of Code.org Users as confidential information.
+Code.org’s officers, directors,employees, agents and contractors must have a legitimate business reason (related directly to furthering our charitable, nonprofit education-focused mission) to access Personal Information you provide to Code.org, for example to assist in product support. Code.org will require our officers, directors, employees, agents, and contractors to comply with this Privacy Policy, and to treat any Personal Information of Code.org Users as confidential information.
 
 <a id="sharedata"></a>
 ## How We Share or Transfer Data

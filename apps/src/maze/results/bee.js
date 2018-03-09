@@ -11,6 +11,24 @@ export default class BeeHandler extends GathererHandler {
 
     this.nectarGoal_ = config.level.nectarGoal || 0;
     this.honeyGoal_ = config.level.honeyGoal || 0;
+
+    // Initialize subtype-specific event listeners
+
+    this.maze_.subtype.on('notAtFlower', () => {
+      this.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
+    });
+
+    this.maze_.subtype.on('flowerEmpty', () => {
+      this.executionInfo.terminateWithValue(TerminationValue.FLOWER_EMPTY);
+    });
+
+    this.maze_.subtype.on('notAtHive', () => {
+      this.executionInfo.terminateWithValue(TerminationValue.NOT_AT_HONEYCOMB);
+    });
+
+    this.maze_.subtype.on('hiveFull', () => {
+      this.executionInfo.terminateWithValue(TerminationValue.HONEYCOMB_FULL);
+    });
   }
 
   /**
@@ -51,7 +69,7 @@ export default class BeeHandler extends GathererHandler {
    * @override
    */
   terminateWithAppSpecificValue() {
-    const executionInfo = this.maze_.executionInfo;
+    const executionInfo = this.executionInfo;
 
     if (this.maze_.subtype.getNectarCount() < this.nectarGoal_) {
       executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_NECTAR);

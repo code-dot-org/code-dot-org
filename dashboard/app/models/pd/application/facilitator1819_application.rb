@@ -450,12 +450,33 @@ module Pd::Application
     end
 
     # @override
+    def self.cohort_csv_header
+      CSV.generate do |csv|
+        csv << ['Date Accepted', 'Name', 'School District', 'School Name', 'Email', 'Status']
+      end
+    end
+
+    # @override
     def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push status, locked?, notes, regional_partner_name
         csv << row
+      end
+    end
+
+    # @override
+    def to_cohort_csv_row
+      CSV.generate do |csv|
+        csv << [
+          date_accepted,
+          applicant_name,
+          district_name,
+          school_name,
+          user.email,
+          status
+        ]
       end
     end
 

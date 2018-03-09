@@ -11,7 +11,7 @@
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: Del 8 al 14 de diciembre de 2014
+  csedweek_dates: 8-14 de Diciembre, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hora de Code</a>. Se convoca
     a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color:
@@ -1340,7 +1340,7 @@
   cspexams_category_name: Prueba de práctica de principios de CS
   research_studies_category_name: Research Studies
   applab_name: Laboratorio de Aplicaciones
-  gamelab_name: Game Lab
+  gamelab_name: Laboratorio de juego
   basketball_name: Crear un juego de baloncesto
   sports_name: Crea tu propio Juego de deportes
   applab_gradelevel: Edad 13+
@@ -1405,7 +1405,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grado 8 +
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Edad 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
