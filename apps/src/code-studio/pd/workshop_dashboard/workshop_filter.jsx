@@ -27,6 +27,12 @@ import {
   Clearfix
 } from "react-bootstrap";
 
+const styles = {
+  teacherEmailInput: {
+    zIndex: 'auto'
+  }
+};
+
 const limitOptions = [
   {value: 25, text: 'first 25'},
   {value: 50, text: 'first 50'},
@@ -357,6 +363,7 @@ export default class WorkshopFilter extends React.Component {
                     value={filters.teacher_email || ''}
                     placeholder="Enter email"
                     onChange={this.handleTeacherEmailChange}
+                    style={styles.teacherEmailInput}
                   />
                   <InputGroup.Addon>
                     <FormControl.Static componentClass="span">
