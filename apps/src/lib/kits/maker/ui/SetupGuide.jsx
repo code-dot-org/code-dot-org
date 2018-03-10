@@ -194,10 +194,7 @@ class LinuxDownloads extends React.Component {
   componentDidMount() {
     latestLinuxInstaller()
       .then(installer => this.setState({installer}))
-      .catch((error) => {
-        console.error(error);
-        this.setState({error});
-      });
+      .catch(error => this.setState({error}));
   }
 
   debFile() {
