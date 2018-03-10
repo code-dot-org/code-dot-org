@@ -271,8 +271,27 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    response = s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
-
+    begin
+      response = s3.copy_object(
+        bucket: @bucket,
+        key: key,
+        copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
+      )
+    rescue
+      response = s3.copy_object(
+        bucket: @bucket,
+        key: key,
+        copy_source: "#{@bucket}/#{key}",
+        metadata_directive: 'REPLACE',
+        metadata: {
+          abuse_score: get_abuse_score(encrypted_channel_id, filename).to_s,
+          failed_restore_at: Time.now.to_s,
+          failed_restore_from_version: version_id
+        }
+      )
+      Honeybadger.notify("Restore at Specified Version Failed. Restored most recent.")
+      # TODO(ERINPEACH) ADD MORE DATA HERE SO WE CAN TRACK THIS DOWN
+    end
     # If we get this far, the restore request has succeeded.
     FirehoseClient.instance.put_record(
       study: 'project-data-integrity',
