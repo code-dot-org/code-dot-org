@@ -1,4 +1,4 @@
-import { createJsWrapperBlockCreator } from '../block_utils';
+import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -245,5 +245,30 @@ export default {
       ],
       methodCall: true,
     });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'showTitleScreen',
+      blockText: 'show title screen',
+      args: [
+        { name: 'TITLE', label: 'title', type: blockly.BlockValueType.STRING },
+        { name: 'SUBTITLE', label: 'text', type: blockly.BlockValueType.STRING }
+      ],
+      inline: false,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'hideTitleScreen',
+      blockText: 'hide title screen',
+      args: [],
+    });
+  },
+
+  installCustomBlocks(blockly, blockInstallOptions, customBlocks, level) {
+    const blockNames =
+      customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
+
+    level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
   },
 };

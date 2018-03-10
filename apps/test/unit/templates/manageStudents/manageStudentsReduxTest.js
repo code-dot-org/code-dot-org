@@ -309,6 +309,7 @@ describe('manageStudentsRedux', () => {
       const startedSavingState = manageStudents(editingState, startSavingAction);
       assert.equal(startedSavingState.studentData[1].isEditing, true);
       assert.equal(startedSavingState.studentData[1].isSaving, true);
+      assert.equal(startedSavingState.editingData[1].isSaving, true);
     });
 
     it('saveStudentSuccess updates studentData and removes editingData', () => {
@@ -515,6 +516,7 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...initialState.editingData[0],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...initialState.studentData[0],
@@ -559,9 +561,11 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[1], {
         ...initialState.editingData[1],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.editingData[2], {
         ...initialState.editingData[2],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[1], {
         ...initialState.studentData[1],

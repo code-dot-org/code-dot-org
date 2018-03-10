@@ -5,7 +5,7 @@
 #  id          :integer          not null, primary key
 #  school_id   :string(12)       not null
 #  school_year :integer          not null
-#  teaches_cs  :string(1)
+#  teaches_cs  :string(2)
 #  audit_data  :text(65535)      not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -24,6 +24,9 @@ class Census::CensusSummary < ApplicationRecord
     YES: "Y",
     NO: "N",
     MAYBE: "M",
+    HISTORICAL_YES: "HY",
+    HISTORICAL_NO: "HN",
+    HISTORICAL_MAYBE: "HM",
   }.freeze
   enum teaches_cs: TEACHES
 
