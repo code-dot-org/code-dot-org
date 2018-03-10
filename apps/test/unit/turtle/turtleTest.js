@@ -96,14 +96,17 @@ describe('Artist', () => {
       let sticker = new Image(100, 100);
       let img = sticker;
       let size = null;
-      let block_id = "block_id_4";
+      let blockId = "block_id_4";
+      let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setDrawSticker = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      artist.stickers = {Alien:img};
+      artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setDrawSticker).to.be.have.been.calledWith(img, -50, -100, 100, 100)
+      expect(setStickerSize).to.be.have.been.calledWith(img, -50, -100, 100, 100);
 
-      setDrawSticker.restore()
+      setStickerSize.restore();
     });
   });
 
