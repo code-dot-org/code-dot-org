@@ -89,19 +89,24 @@ const downloadButtonStyle = {
 };
 
 class WindowsDownloads extends React.Component {
-  state = {installer: null};
+  state = {installer: null, error: null};
 
   componentDidMount() {
-    latestWindowsInstaller().then(installer => this.setState({installer}));
+    latestWindowsInstaller()
+      .then(installer => this.setState({installer}))
+      .catch(error => this.setState({error}));
   }
 
 
   render() {
-    const {installer} = this.state;
+    const {installer, error} = this.state;
     return (
       <div>
         <h2>Code.org Maker App for Windows</h2>
-        {installer &&
+        {!installer && !error &&
+          <FetchingLatestVersionMessage/>
+        }
+        {installer && !error &&
           <Button
             text={`Download Code.org Maker App for Windows (${installer.version})`}
             icon="download"
@@ -110,6 +115,9 @@ class WindowsDownloads extends React.Component {
             style={downloadButtonStyle}
             href={DOWNLOAD_PREFIX + installer.filename}
           />
+        }
+        {error &&
+          <FetchingLatestVersionError/>
         }
         <br/>
         <Button
