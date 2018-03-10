@@ -304,13 +304,15 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
 
   def generate_summary(school, year)
     summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year - 2, year - 1, year],
-      [year],
-      [year],
       {
-        school.state => [year]
-      },
+        school: school,
+        school_years: [year - 2, year - 1, year],
+        years_with_ap_data: [year],
+        years_with_ib_data: [year],
+        state_years_with_data: {
+          school.state => [year]
+        },
+      }
     )
     summaries.last
   end
