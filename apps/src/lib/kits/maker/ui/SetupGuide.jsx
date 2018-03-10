@@ -173,10 +173,15 @@ class MacDownloads extends React.Component {
 }
 
 class LinuxDownloads extends React.Component {
-  state = {installer: null};
+  state = {installer: null, error: null};
 
   componentDidMount() {
-    latestLinuxInstaller().then(installer => this.setState({installer}));
+    latestLinuxInstaller()
+      .then(installer => this.setState({installer}))
+      .catch((error) => {
+        console.error(error);
+        this.setState({error});
+      });
   }
 
   debFile() {
@@ -187,12 +192,15 @@ class LinuxDownloads extends React.Component {
   }
 
   render() {
-    const {installer} = this.state;
+    const {installer, error} = this.state;
     const debFile = this.debFile();
     return (
       <div>
         <h2>Code.org Maker App for Linux</h2>
-        {installer &&
+        {!installer && !error &&
+          <FetchingLatestVersionMessage/>
+        }
+        {installer && !error &&
           <Button
             text={`Download Code.org Maker App for Linux (${installer.version})`}
             icon="download"
@@ -201,6 +209,9 @@ class LinuxDownloads extends React.Component {
             style={downloadButtonStyle}
             href={DOWNLOAD_PREFIX + installer.filename}
           />
+        }
+        {error &&
+          <FetchingLatestVersionError/>
         }
         <div>
           <h4>Instructions:</h4>
@@ -233,6 +244,40 @@ class LinuxDownloads extends React.Component {
     );
   }
 }
+
+const FETCH_STATUS_STYLE = {
+  fontSize: 'large',
+  margin: '0.5em 0',
+};
+
+const FetchingLatestVersionMessage = () => (
+  <div style={FETCH_STATUS_STYLE}>
+    <FontAwesome icon="spinner" className="fa-fw fa-spin"/>
+    {' '}
+    <em>
+      Getting the latest version...
+    </em>
+  </div>
+);
+
+const FetchingLatestVersionError = () => (
+  <div>
+    <div style={FETCH_STATUS_STYLE}>
+      <FontAwesome icon="times-circle" className="fa-fw" style={{color: 'darkred'}}/>
+      {' '}
+      <strong>
+        There was a problem getting your download link.
+      </strong>
+    </div>
+    <div>
+      Please make sure you are connected to the internet, and
+      {' '}
+      <a href="https://downloads.code.org/index.html">https://downloads.code.org/</a>
+      {' '}
+      is reachable from your network.
+    </div>
+  </div>
+);
 
 const CHROME_APP_WEBSTORE_URL = "https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg";
 const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
