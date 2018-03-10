@@ -464,14 +464,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
+            status: 'accepted',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
-            registered_workshop: 'Yes',
-            status: 'accepted'
+            registered_workshop: 'Yes'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -501,14 +501,14 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: '',
-            registered_workshop: '',
-            status: 'accepted'
+            status: 'accepted',
+            assigned_workshop: nil,
+            registered_workshop: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -538,12 +538,16 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
-            status: 'accepted'
+            status: 'accepted',
+            assigned_workshop: nil,
+            registered_workshop: 'No',
+            assigned_fit: nil,
+            registered_fit: 'No'
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
@@ -576,7 +580,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
@@ -612,13 +616,13 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: '',
-            registered_workshop: '',
+            assigned_workshop: nil,
+            registered_workshop: 'No',
             status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body).first
         )
@@ -648,11 +652,15 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
+            assigned_workshop: nil,
+            registered_workshop: 'No',
+            assigned_fit: nil,
+            registered_fit: 'No',
             status: 'accepted'
           }.stringify_keys, JSON.parse(@response.body).first
         )
