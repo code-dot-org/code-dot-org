@@ -38,13 +38,19 @@ require 'cdo/cron'
 self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
 
 # Don't provision daemon where manually-provisioned daemon instances already exist.
+# Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
 # TODO migrate stacks to cloudformation-provisioned instances.
-self.daemon = 'Daemon' unless %w(
-  autoscale-prod
-  test
-  staging
-  levelbuilder
-).include? stack_name
+if %w(autoscale-prod test staging levelbuilder).include? stack_name
+  self.daemon_instance_id = {
+    'autoscale-prod' => 'i-436d69dd',
+    'test' => 'i-f85e6666',
+    'staging' => 'i-57a3afc7',
+    'levelbuilder' => 'i-03a540ccf70cc8138'
+  }[stack_name]
+else
+  self.daemon = 'Daemon'
+end
+
 # Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
 self.daemon = 'WebServer' if rack_env?(:adhoc) && !frontends
 -%>
@@ -535,8 +541,17 @@ Resources:
       AlarmName: LowDiskSpace
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
-        - Name: StackName
-          Value: <%=stack_name%>
+        - Name: Filesystem
+          Value: '/dev/xvda1'
+        - Name: MountPath
+          Value: '/'
+        - Name: InstanceId
+<% if daemon_instance_id -%>
+          Value: <%=daemon_instance_id%>
+<% else -%>
+          Value: !Ref <%=daemon%>
+<% end -%>
+
       EvaluationPeriods: 60
       MetricName: DiskSpaceUtilization
       Namespace: Linux System
