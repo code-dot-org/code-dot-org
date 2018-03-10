@@ -5,11 +5,10 @@
 import React, {PropTypes} from 'react';
 import PlcEnrollment from './plcElements/plcEnrollment';
 
-
-const ProfessionalLearningCourseProgress = React.createClass({
-  propTypes: {
+export default class ProfessionalLearningCourseProgress extends React.Component {
+  static propTypes = {
     professionalLearningCourseData: PropTypes.array
-  },
+  };
 
   renderProfessionalLearningEnrollments() {
     return (
@@ -26,7 +25,7 @@ const ProfessionalLearningCourseProgress = React.createClass({
         }
       </div>
     );
-  },
+  }
 
   render() {
     if (this.props.professionalLearningCourseData && this.props.professionalLearningCourseData.length > 0) {
@@ -42,6 +41,4 @@ const ProfessionalLearningCourseProgress = React.createClass({
       return null;
     }
   }
-});
-
-export default ProfessionalLearningCourseProgress;
+}

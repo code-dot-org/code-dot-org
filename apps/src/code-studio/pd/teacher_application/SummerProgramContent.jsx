@@ -4,10 +4,8 @@ import {Modal, Button} from 'react-bootstrap';
 import {ButtonList, otherString} from '../form_components/button_list.jsx';
 import {groupTwoOrGroupOneCsdWorkshops, workshopNamePlaceholder} from './applicationConstants';
 
-export default React.createClass({
-
-  displayName: 'SummerProgramContent',
-  propTypes: {
+export default class SummerProgramContent extends React.Component {
+  static propTypes = {
     onChange: PropTypes.func.isRequired,
     formData: PropTypes.shape({
       committedToSummer: PropTypes.string,
@@ -20,30 +18,23 @@ export default React.createClass({
       fallbackSummerWorkshops: PropTypes.string
     }).isRequired,
     selectedWorkshop: PropTypes.string
-  },
+  };
 
-  getInitialState() {
-    return {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       dialogWasDismissed: false,
     };
-  },
+  }
 
-  checkListChange(event) {
-    const selectedButtons = $(`[name=${event.target.name}]:checked`).map( (index, element) => element.value).toArray();
-    this.props.onChange({[event.target.name]: selectedButtons});
-  },
-
-  radioButtonListChange(event) {
-    this.props.onChange({[event.target.name]: event.target.value});
-  },
-
-  dismissDialog() {
+  dismissDialog = () => {
     this.setState({dialogWasDismissed: true});
-  },
+  };
 
-  cancelApplication() {
+  cancelApplication = () => {
     window.location.href = '/pd/teacher_application/thanks';
-  },
+  };
 
   render() {
     const showDialog = !!(this.props.formData.committedToSummer && this.props.formData.committedToSummer !== 'Yes' && !this.state.dialogWasDismissed);
@@ -134,4 +125,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}

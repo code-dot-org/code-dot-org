@@ -42,20 +42,20 @@ const styles = {
   }
 };
 
-const TwoPartBanner = React.createClass({
-  propTypes: {
+class TwoPartBanner extends React.Component {
+  static propTypes = {
     textElement: PropTypes.element.isRequired,
     imageUrl: PropTypes.string.isRequired,
     imagePosition: PropTypes.oneOf(['imageLeft', 'imageRight']).isRequired
-  },
+  };
 
   getImageAlignmentStyle() {
     return this.props.imagePosition === 'imageLeft' ? styles.left : styles.right;
-  },
+  }
 
   getTextAlignmentStyle() {
     return this.props.imagePosition === 'imageLeft' ? styles.right : styles.left;
-  },
+  }
 
   renderInterior() {
     const appliedImageStyle = {
@@ -83,7 +83,7 @@ const TwoPartBanner = React.createClass({
     );
 
     return this.props.imagePosition === 'imageLeft' ? [imageElement, wrappedTextElement] : [wrappedTextElement, imageElement];
-  },
+  }
 
   render() {
     return (
@@ -92,6 +92,6 @@ const TwoPartBanner = React.createClass({
       </div>
     );
   }
-});
+}
 
 export {TwoPartBanner};

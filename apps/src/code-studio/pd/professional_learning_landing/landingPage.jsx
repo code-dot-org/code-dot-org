@@ -9,12 +9,12 @@ import {TwoPartBanner} from './twoPartBanner';
 import {EnrolledWorkshops} from './enrolledWorkshops';
 import _ from 'lodash';
 
-const LandingPage = React.createClass({
-  propTypes: {
+export default class LandingPage extends React.Component {
+  static propTypes = {
     lastWorkshopSurveyUrl: PropTypes.string,
     lastWorkshopSurveyCourse: PropTypes.string,
     professionalLearningCourseData: PropTypes.array
-  },
+  };
 
   renderHeaderImage() {
     return (
@@ -44,7 +44,7 @@ const LandingPage = React.createClass({
         </div>
       </div>
     );
-  },
+  }
 
   renderWorkshopSurveyInterior() {
     if (this.props.lastWorkshopSurveyCourse === 'CS Fundamentals') {
@@ -79,7 +79,7 @@ const LandingPage = React.createClass({
         </div>
       );
     }
-  },
+  }
 
   render() {
     const lastWorkshopSurveyBanner = this.props.lastWorkshopSurveyUrl && (
@@ -113,6 +113,4 @@ const LandingPage = React.createClass({
       </div>
     );
   }
-});
-
-export default LandingPage;
+}

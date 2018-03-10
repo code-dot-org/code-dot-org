@@ -87,8 +87,8 @@ const isUnder1000Chars = (value) => {
   }
 };
 
-const TeacherApplication = React.createClass({
-  propTypes: {
+class TeacherApplication extends React.Component {
+  static propTypes = {
     regionalPartnerGroup: PropTypes.number,
     regionalPartnerName: PropTypes.string,
     workshopDays: PropTypes.string,
@@ -96,7 +96,7 @@ const TeacherApplication = React.createClass({
     districtErrorMessageHandler: PropTypes.func.isRequired,
     accountEmail: PropTypes.string,
     hashedAccountEmail: PropTypes.string.isRequired
-  },
+  };
 
   componentWillMount() {
     // Validate primary email is a valid email string, and that it matches the account email.
@@ -130,27 +130,23 @@ const TeacherApplication = React.createClass({
       whyCsIsImportant: isUnder1000Chars,
       whatTeachingSteps: isUnder1000Chars,
     };
-  },
+  }
 
-  getInitialState() {
-    return this.props.accountEmail ? {primaryEmail: this.props.accountEmail} : {};
-  },
-
-  handleSubformDataChange(changedData) {
+  handleSubformDataChange = (changedData) => {
     this.setState(changedData);
-  },
+  };
 
-  handleTextChange(event) {
+  handleTextChange = (event) => {
     this.setState({[event.target.id]: event.target.value});
-  },
+  };
 
-  handleRadioListChange(event) {
+  handleRadioListChange = (event) => {
     this.setState({[event.target.name]: event.target.value});
-  },
+  };
 
-  handleButtonListChange(changedData) {
+  handleButtonListChange = (changedData) => {
     this.setState(changedData);
-  },
+  };
 
   getRequiredValidationErrorMessage(key) {
     if (this.state[key] !== undefined) {
@@ -162,23 +158,23 @@ const TeacherApplication = React.createClass({
         return 'This field is required';
       }
     }
-  },
+  }
 
   getRequiredValidationState(key) {
     if (this.state[key] !== undefined) {
       return this.getRequiredValidationErrorMessage(key) ? 'error' : null;
     }
-  },
+  }
 
   getLikertValidationState(key) {
     if (this.state[key] !== undefined && this.state[key].length === 0) {
       return 'error';
     }
-  },
+  }
 
   componentWillUpdate() {
     this._errorData = null;
-  },
+  }
 
   get errorData() {
     if (!this._errorData) {
@@ -189,11 +185,11 @@ const TeacherApplication = React.createClass({
     }
 
     return this._errorData;
-  },
+  }
 
   shouldShowRegionalPartnersOnlyWarning() {
     return ['private', 'other'].includes(this.props.schoolDistrictData['school-type'].toLowerCase());
-  },
+  }
 
   shouldShowWorkingToIdentifyRegionalPartnerWarning() {
     return !!(
@@ -201,7 +197,7 @@ const TeacherApplication = React.createClass({
       !(this.props.regionalPartnerGroup) &&
       (this.props.schoolDistrictData['school-district'] || this.props.schoolDistrictData['school-district-other'])
     );
-  },
+  }
 
   generateTeacherInformationSection() {
     return (
@@ -384,7 +380,7 @@ const TeacherApplication = React.createClass({
         />
       </div>
     );
-  },
+  }
 
   renderCourseSelection() {
     return (
@@ -415,7 +411,7 @@ const TeacherApplication = React.createClass({
         </Radio>
       </FormGroup>
     );
-  },
+  }
 
   renderCSDSpecificContent() {
     if (this.state.selectedCourse === 'csd') {
@@ -434,7 +430,7 @@ const TeacherApplication = React.createClass({
         </div>
       );
     }
-  },
+  }
 
   renderCSPSpecificContent() {
     if (this.state.selectedCourse === 'csp') {
@@ -496,7 +492,7 @@ const TeacherApplication = React.createClass({
         </div>
       );
     }
-  },
+  }
 
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
@@ -561,7 +557,7 @@ const TeacherApplication = React.createClass({
         <hr/>
       </div>
     );
-  },
+  }
 
   renderComputerScienceAtYourSchool() {
     return (
@@ -605,9 +601,9 @@ const TeacherApplication = React.createClass({
         />
       </div>
     );
-  },
+  }
 
-  onSubmitButtonClick() {
+  onSubmitButtonClick = () => {
     this.setState({submitting: true});
 
     const formData = _.omit(_.cloneDeep(this.state), ['submitting']);
@@ -687,7 +683,7 @@ const TeacherApplication = React.createClass({
     } else {
       this.save(formData);
     }
-  },
+  };
 
   save(formData) {
     this.startRequest = $.ajax({
@@ -702,7 +698,7 @@ const TeacherApplication = React.createClass({
       // TODO: render error message(s) nicely on client.
       alert(`error: ${data.responseJSON}`);
     });
-  },
+  }
 
   renderSubmitButton() {
     return (
@@ -720,7 +716,7 @@ const TeacherApplication = React.createClass({
         </Button>
       </div>
     );
-  },
+  }
 
   renderAfterCourseSelectionSection() {
     return (
@@ -744,7 +740,7 @@ const TeacherApplication = React.createClass({
         {this.renderComputerScienceAtYourSchool()}
       </div>
     );
-  },
+  }
 
   render() {
     return (
@@ -758,6 +754,6 @@ const TeacherApplication = React.createClass({
       </div>
     );
   }
-});
+}
 
 export {TeacherApplication, likertAnswers};

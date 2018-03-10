@@ -14,10 +14,10 @@ const styles = {
   },
 };
 
-const PlcEnrollment = React.createClass({
-  propTypes: {
+export default class PlcEnrollment extends React.Component {
+  static propTypes = {
     plcData: PropTypes.object
-  },
+  };
 
   renderEnrollmentUnitAssignments() {
     const courseUnits = this.props.plcData['courseUnits'].map((courseUnit, i) => {
@@ -34,7 +34,7 @@ const PlcEnrollment = React.createClass({
         {courseUnits}
       </div>
     );
-  },
+  }
 
   render() {
     return (
@@ -49,6 +49,4 @@ const PlcEnrollment = React.createClass({
       </div>
     );
   }
-});
-
-export default PlcEnrollment;
+}
