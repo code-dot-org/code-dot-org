@@ -136,18 +136,23 @@ class WindowsDownloads extends React.Component {
 }
 
 class MacDownloads extends React.Component {
-  state = {installer: null};
+  state = {installer: null, error: null};
 
   componentDidMount() {
-    latestMacInstaller().then(installer => this.setState({installer}));
+    latestMacInstaller()
+      .then(installer => this.setState({installer}))
+      .catch(error => this.setState({error}));
   }
 
   render() {
-    const {installer} = this.state;
+    const {installer, error} = this.state;
     return (
       <div>
         <h2>Code.org Maker App for Mac</h2>
-        {installer &&
+        {!installer && !error &&
+          <FetchingLatestVersionMessage/>
+        }
+        {installer && !error &&
           <Button
             text={`Download Code.org Maker App for Mac (${installer.version})`}
             icon="download"
@@ -156,6 +161,9 @@ class MacDownloads extends React.Component {
             style={downloadButtonStyle}
             href={DOWNLOAD_PREFIX + installer.filename}
           />
+        }
+        {error &&
+          <FetchingLatestVersionError/>
         }
         <div>
           <h4>Instructions:</h4>
