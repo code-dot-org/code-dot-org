@@ -3,8 +3,8 @@ FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
+    funded false
     on_map true
-    funded true
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
     trait :teachercon do
@@ -51,6 +51,11 @@ FactoryGirl.define do
         teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
+    end
+
+    trait :funded do
+      funded true
+      funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
     end
 
     after(:create) do |workshop, evaluator|
@@ -672,7 +677,7 @@ FactoryGirl.define do
     cs_offered_at_school ['AP CS A']
     cs_opportunities_at_school ['Courses for credit']
     plan_to_teach 'Yes, I plan to teach this course'
-    able_to_attend_single 'Yes'
+    able_to_attend_single "Yes, I'm able to attend"
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
     agree 'Yes'
@@ -737,6 +742,8 @@ FactoryGirl.define do
       end
     end
   end
+
+  factory :pd_workshop_autoenrolled_application, parent: :pd_teacher1819_application
 
   # default to do_you_approve: other
   factory :pd_principal_approval1819_application_hash, parent: :pd_principal_approval1819_application_hash_common do
@@ -835,7 +842,7 @@ FactoryGirl.define do
       contact_phone "1597534862"
       contact_relationship "it's complicated"
       dietary_needs "Food Allergy"
-      dietary_needs_food_allergy_details "memories"
+      dietary_needs_details "memories"
       how_traveling "Amtrak or regional train service"
       liability_waiver "Yes"
       live_far_away "Yes"
@@ -854,13 +861,22 @@ FactoryGirl.define do
       with_full_form_data
     end
 
-    trait :withdrawn do
+    trait :declined do
       teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
     end
 
     trait :waitlisted do
       teacher_accept_seat Pd::Teachercon1819Registration::TEACHER_SEAT_ACCEPTANCE_OPTIONS[:waitlist_date]
       with_full_form_data
+    end
+
+    trait :facilitator_accepted do
+      able_to_attend 'Yes'
+      with_full_form_data
+    end
+
+    trait :facilitator_declined do
+      able_to_attend 'No'
     end
 
     trait :partner_registration do
@@ -905,12 +921,16 @@ FactoryGirl.define do
       contact_phone "1597534862"
       contact_relationship "it's complicated"
       dietary_needs "Food Allergy"
-      dietary_needs_food_allergy_details "memories"
+      dietary_needs_details "memories"
       how_traveling "Amtrak or regional train service"
       liability_waiver "Yes"
       live_far_away "Yes"
       need_hotel "No"
       photo_release "Yes"
+    end
+
+    trait :declined do
+      able_to_attend "No"
     end
   end
 

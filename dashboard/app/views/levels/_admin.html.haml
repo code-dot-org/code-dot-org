@@ -90,6 +90,9 @@
             %button{id: "feature", class: "btn btn-default btn-sm"}
               Stop featuring in gallery
 
+          #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
+            * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
+
     - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
       %br
       %div.admin-abuse{ :style => "display: none" }

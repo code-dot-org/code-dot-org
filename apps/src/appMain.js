@@ -7,8 +7,6 @@ import {addReadyListener} from './dom';
 import * as blocksCommon from './blocksCommon';
 import * as commonReducers from './redux/commonReducers';
 
-// TODO (br-pair) : This is to expose methods we need in the global namespace
-// for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
   arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
@@ -77,6 +75,15 @@ export default function (app, levels, options) {
 
     blocksCommon.install(Blockly, blockInstallOptions);
     options.blocksModule.install(Blockly, blockInstallOptions);
+
+    if (options.blocksModule.installCustomBlocks && level.customBlocks) {
+      options.blocksModule.installCustomBlocks(
+        Blockly,
+        blockInstallOptions,
+        JSON.parse(level.customBlocks),
+        options.level,
+      );
+    }
   }
 
   function onReady() {

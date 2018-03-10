@@ -358,9 +358,9 @@
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
   studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_students: amerykańskich studentów mają konta na Code.org
+  homepage_stats_female: naszych studentów to kobiety
+  homepage_stats_teachers: nauczyciele korzystają z Code.org
   homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
   homepage_stats_policy: states changed policy to support computer science
   homepage_stats_title: We're making a difference
@@ -646,7 +646,7 @@
   video_title_obama: Prezydent Obama o informatyce
   video_title_hoc_is_here: Godzina Kodowania jest tutaj - każdy może się uczyć
   video_title_anybody_can_learn: Każdy może się uczyć
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: Godzina Kodowania z Steph Curry
   video_title_draymond_green: Godzina Kodowania z Draymond Green
   video_title_russell_okung: Godzina Kodowania z Russell Okung
   video_title_real_madrid: Godzina Kodowania z Realem Madryt
@@ -1044,8 +1044,11 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj
     tych lekcji bez komputera</a> w klasie.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
   dashboard_overview: Streszczenie
@@ -1063,6 +1066,8 @@
   dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
   dashboard_curriculum_csp: 'AP ® Podstawy Informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne
   dashboard_login_word: Słowo
@@ -1323,6 +1328,7 @@
   cspexams_category_name: Praktyczny Test Podstaw Informatyki
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Laboratorium Gier (Game Lab)
   basketball_name: Utwórz grę w koszykówkę
   sports_name: Zakoduj własne zawody
   applab_gradelevel: Wiek 13+
@@ -2167,9 +2173,3 @@
     się używając konta Google&rdquo;:'
   hero_name: 'Minecraft: Podróż Bohatera'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

@@ -275,6 +275,9 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
   };
 
+  // Always hide DPad until better UI is created.
+  this.level.showDPad = false;
+
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
 
@@ -864,7 +867,7 @@ GameLab.prototype.initInterpreter = function () {
   getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   let code = this.studioApp_.getCode();
   if (this.level.customHelperLibrary) {
-    code = this.customHelperLibrary + code;
+    code = this.level.customHelperLibrary + code;
   }
   if (this.level.helperLibraries) {
     const libs = this.level.helperLibraries

@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+
+program_manager_ids = RegionalPartnerProgramManager.distinct.pluck(:program_manager_id)
+
+count = 0
+Pd::Workshop.where(organizer_id: program_manager_ids, regional_partner_id: nil).find_each do |workshop|
+  workshop.update!(regional_partner: workshop.organizer.regional_partners.first)
+  count += 1
+end
+
+puts "#{count} workshops updated with regional partners"

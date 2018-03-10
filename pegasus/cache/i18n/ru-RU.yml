@@ -1060,8 +1060,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте
     эти оффлайн уроки в вашем классе."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Учебная программа"
   dashboard_curriculum_overview: "Обзор программы для дошкольников и учеников начальной
     школы"
@@ -1080,6 +1083,8 @@
   dashboard_curriculum_csins: "Информатика в науке:"
   dashboard_curriculum_csp: "Принципы информатики AP®:"
   dashboard_curriculum_ecs: "Изучение информатики:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Детский сад"
   dashboard_grade_other: "Другое"
   dashboard_login_word: "Слово"
@@ -1333,6 +1338,7 @@
   cspexams_category_name: "Практический тест по основам информатики"
   research_studies_category_name: Research Studies
   applab_name: "Лаборатория приложений"
+  gamelab_name: "Игровая лаборатория"
   basketball_name: "Создать игру в баскетбол"
   sports_name: "Создай свою спортивную игру"
   applab_gradelevel: "Возраст 13+"
@@ -1397,7 +1403,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: "Класс 8 и выше"
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Возраст 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
@@ -2184,9 +2190,3 @@
     Account” option:'
   hero_name: "Майнкрафт: Путешествие Героя"
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

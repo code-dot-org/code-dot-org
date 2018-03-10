@@ -19,9 +19,7 @@
 
 = render partial: 'workshop_logistics'
 
-- unless @workshop.notes.blank?
-  %p
-    = @workshop.notes
+= render partial: 'workshop_notes'
 
 %p
   We strongly encourage you to connect with other educators on Twitter

@@ -104,6 +104,7 @@ class Documents < Sinatra::Base
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
     Sass::Plugin.options[:template_location] = shared_dir('css')
+    set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
   end
 
   before do
@@ -449,7 +450,7 @@ class Documents < Sinatra::Base
       when '.md', '.txt'
         preprocessed = erb body, locals: locals
         preprocessed = preprocess_markdown preprocessed
-        html = markdown preprocessed, locals: locals
+        html = markdown preprocessed, lax_spacing: true, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'
         redirect erb(body, locals: locals), 301

@@ -89,7 +89,7 @@
       &nbsp;
       = "#{format_integer_with_commas(data[:total_ap_students_color_i])} were underrepresented minorities"
 
--if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/files/states/#{state}.pdf"))
+-if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
   %div.download-fact-sheet
     %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
       %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<

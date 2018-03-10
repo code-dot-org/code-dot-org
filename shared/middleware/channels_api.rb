@@ -7,6 +7,7 @@ require 'cdo/shared_constants'
 
 class ChannelsApi < Sinatra::Base
   include SharedConstants
+  set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
   helpers do
     %w(

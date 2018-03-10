@@ -1041,8 +1041,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Yekun
@@ -1060,6 +1063,8 @@
   dashboard_curriculum_csins: 'Computer Science in Science:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Digər
   dashboard_login_word: Söz
@@ -1308,6 +1313,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Proqram Labı
+  gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
   applab_gradelevel: 13+ yaş
@@ -1372,7 +1378,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8+ siniflər
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: 8-12 yaş
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10+ yaş (Kurs 3-dən sonra)
   codeorg_platformtext: Modern browsers, smartphones, tablets
@@ -2106,9 +2112,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

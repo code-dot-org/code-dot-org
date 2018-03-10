@@ -1,2 +1,4 @@
+has_lesson_plan true
+
 stage 'Vigenere'
 level 'Vigenere'

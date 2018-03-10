@@ -319,7 +319,7 @@ class ApiController < ApplicationController
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      user_level = current_user.last_attempt(level)
+      user_level = current_user.last_attempt(level, script)
       level_source = user_level.try(:level_source).try(:data)
 
       response[:progress] = current_user.user_progress_by_stage(stage)

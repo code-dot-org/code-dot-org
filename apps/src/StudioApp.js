@@ -203,8 +203,6 @@ StudioApp.prototype.configure = function (options) {
   this.scratch = options.level && options.level.scratch;
   this.usingBlockly_ = !this.editCode && !this.scratch;
 
-  // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
-  // or (even better) inject an appropriate editor-adaptor.
   if (options.isEditorless) {
     this.editCode = false;
     this.usingBlockly_ = false;
@@ -275,7 +273,6 @@ StudioApp.prototype.init = function (config) {
   if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')) {
     if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) {
       firehoseClient.putRecord(
-        'analysis-events',
         {
           study: 'instructions-resources-tab',
           study_group: 'resources-tab',
@@ -287,7 +284,6 @@ StudioApp.prototype.init = function (config) {
       );
     } else {
       firehoseClient.putRecord(
-        'analysis-events',
         {
           study: 'instructions-resources-tab',
           study_group: 'under-app',
@@ -691,11 +687,11 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
-    // TODO (bbuchanan): This getValue() call is a workaround for a Droplet bug,
+    // This getValue() call is a workaround for a Droplet bug,
     // See https://github.com/droplet-editor/droplet/issues/137
     // Calling getValue() updates the cached ace editor value, which can be
     // out-of-date in droplet and cause an incorrect early-out.
-    // Remove this line once that bug is fixed and our Droplet lib is updated.
+    // Could remove this line once that bug is fixed and Droplet is updated.
     this.editor.getValue();
     this.editor.setValue(resetValue);
 
@@ -851,7 +847,6 @@ StudioApp.prototype.assetUrl_ = function (path) {
  *   to be played.
  */
 StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
-  // TODO (bbuchanan): Look for comon reset logic we can pull here
   // Override in app subclass
 };
 
@@ -1350,12 +1345,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
 
-  // We don't get the benefits of our responsive styling, so set height
-  // explicitly
-  if (!utils.browserSupportsCssMedia()) {
-    visualization.style.height = newVizHeightString;
-    visualization.style.width = newVizWidthString;
-  }
   var scale = (newVizWidth / this.nativeVizWidth);
   getStore().dispatch(setVisualizationScale(scale));
 
@@ -1457,6 +1446,7 @@ StudioApp.prototype.displayFeedback = function (options) {
         code: generatedCodeProperties.code,
       };
       store.dispatch(setFeedbackData({
+        isChallenge: this.config.isChallengeLevel,
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
@@ -1469,6 +1459,9 @@ StudioApp.prototype.displayFeedback = function (options) {
         this.onFeedback(options);
         return;
       }
+    } else {
+      console.warn('Unexpected feedback props:');
+      console.warn(otherOptions);
     }
   }
   options.onContinue = this.onContinue;
@@ -1863,7 +1856,6 @@ StudioApp.prototype.configureDom = function (config) {
     if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')) {
       videoThumbnail[0].addEventListener('click', () => {
         firehoseClient.putRecord(
-          'analysis-events',
           {
             study: 'instructions-resources-tab',
             study_group: 'under-app',

@@ -8,9 +8,6 @@ import $ from 'jquery';
  * @property {number} id - Section's numeric identifier in Dashboard.
  */
 
-// TODO (bbuchanan): This whole file should go away when we have a shared
-//                   Javascript User object that can be available on page load.
-
 /**
  * Represents a Dashboard user account - could be a teacher, a student, etc.
  * @constructor

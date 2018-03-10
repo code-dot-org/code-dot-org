@@ -254,6 +254,7 @@ export class QuickViewTable extends React.Component {
 
     return (
       <Table.Provider
+        id="quick-view"
         className="pure-table table-striped"
         columns={this.columns}
         style={styles.table}

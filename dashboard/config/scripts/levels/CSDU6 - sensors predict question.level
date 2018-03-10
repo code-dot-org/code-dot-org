@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "# Make a Prediction\r\n\r\nRead the code in this program and make a prediction below. What do you think this program will do when you run it? How is the user intended to interact with the board? You may need to use a flashlight or other bright light source to see the full range of this app.",
+    "markdown_instructions": "# Make a Prediction\r\n\r\nRead the code in this program and make a prediction below. What do you think this program will do when you run it? How is the user intended to interact with the board? You may need to blow onto the board to see the full range of this app.",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",
@@ -15,6 +15,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-06 17:19:17 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

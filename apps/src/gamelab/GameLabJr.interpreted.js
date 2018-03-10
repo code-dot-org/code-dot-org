@@ -31,6 +31,7 @@ let sprites = [];
 let score = 0;
 let game_over = false;
 let show_score = false;
+let title = '', subTitle = '';
 
 // Behaviors
 
@@ -178,21 +179,12 @@ function makeNewSprite(animation, x, y) {
   };
 
   sprite.setPosition = function (position) {
-    if (position === "top left") {
-      sprite.x = 50;
-      sprite.y = 50;
-    } else if (position === "top center") {
-      sprite.x = 200;
-      sprite.y = 50;
-    } else if (position === "bottom right") {
-      sprite.x = 350;
-      sprite.y = 350;
-    } else if (position === "center right") {
-      sprite.x = 350;
-      sprite.y = 200;
-    } else if (position === "random") {
+    if (position === "random") {
       sprite.x = randomNumber(50, 350);
       sprite.y = randomNumber(50, 350);
+    } else {
+      sprite.x = position.x;
+      sprite.y = position.y;
     }
   };
   sprite.setScale = function (scale) {
@@ -216,6 +208,7 @@ function makeNewGroup() {
       addBehavior(group[i], behavior, name);
     }
   };
+  group.destroy = group.destroyEach;
   return group;
 }
 
@@ -239,6 +232,15 @@ function endGame() {
 
 function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
+}
+
+function showTitleScreen(titleArg, subTitleArg) {
+  title = titleArg;
+  subTitle = subTitleArg;
+}
+
+function hideTitleScreen() {
+  title = subTitle = '';
 }
 
 function draw() {
@@ -311,5 +313,12 @@ function draw() {
     textAlign(CENTER);
     textSize(50);
     text("Game Over", 200, 200);
+  } else if (title) {
+    fill("black");
+    textAlign(CENTER);
+    textSize(50);
+    text(title, 200, 150);
+    textSize(35);
+    text(subTitle, 200, 250);
   }
 }

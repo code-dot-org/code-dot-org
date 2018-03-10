@@ -46,9 +46,9 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
-"@code-dot-org/craft@github:code-dot-org/craft#ea9da01f6512bcd2c8ea562d6a4ff4d2c0549e4f":
-  version "0.1.1"
-  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/ea9da01f6512bcd2c8ea562d6a4ff4d2c0549e4f"
+"@code-dot-org/craft@github:code-dot-org/craft#46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf":
+  version "0.1.2"
+  resolved "https://codeload.github.com/code-dot-org/craft/tar.gz/46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf"
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
@@ -93,9 +93,9 @@
   version "1.2.0-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.0-cdo.tgz#7b6f70d7a29a34976fa66dc2758e69875fda2d71"
 
-"@code-dot-org/piskel@0.13.0-cdo.1":
-  version "0.13.0-cdo.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.1.tgz#7a6b67726ddd07a163f239eed4e4dfec423b0f49"
+"@code-dot-org/piskel@0.13.0-cdo.2":
+  version "0.13.0-cdo.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.2.tgz#ee1134953e54f1644aeee028f1280bc2bee32b64"
 
 "@storybook/addon-actions@^3.2.11":
   version "3.3.11"
@@ -129,7 +129,7 @@
     global "^4.3.2"
     prop-types "^15.5.10"
 
-"@storybook/addons@^3.2.10", "@storybook/addons@^3.2.11":
+"@storybook/addons@^3.2.10":
   version "3.3.11"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.3.11.tgz#7f85136d6da785160658aee512fd3cac99780f42"
 
@@ -274,7 +274,7 @@
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/inline-style-prefixer/-/inline-style-prefixer-3.0.1.tgz#8541e636b029124b747952e9a28848286d2b5bf6"
 
-"@types/react@^16.0.18":
+"@types/react@^16.0.18", "@types/react@^16.0.7":
   version "16.0.34"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.34.tgz#7a8f795afd8a404a9c4af9539b24c75d3996914e"
 
@@ -643,7 +643,7 @@ assert@^1.1.1:
   dependencies:
     util "0.10.3"
 
-assertion-error@^1.0.1:
+assertion-error@^1.0.1, assertion-error@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.0.2.tgz#13ca515d86206da0bac66e834dd397d87581094c"
 
@@ -3369,7 +3369,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.6.2:
+create-react-class@^15.6.0, create-react-class@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.2.tgz#cf1ed15f12aad7f14ef5f2dfe05e6c42f91ef02a"
   dependencies:
@@ -4141,6 +4141,12 @@ ent@~2.2.0:
 entities@^1.1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
+
+enzyme-wait@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/enzyme-wait/-/enzyme-wait-1.0.9.tgz#f7a08bf49c7047358fa03e1f411a565c3a15101a"
+  dependencies:
+    assertion-error "^1.0.2"
 
 enzyme@2.8.0:
   version "2.8.0"
@@ -6855,6 +6861,10 @@ json-loader@0.5.4, json-loader@^0.5.4:
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/json-loader/-/json-loader-0.5.4.tgz#8baa1365a632f58a3c46d20175fc6002c96e37de"
 
+json-parse-better-errors@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.1.tgz#50183cd1b2d25275de069e9e71b467ac9eab973a"
+
 json-schema-traverse@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-0.3.1.tgz#349a6d44c53a51de89b40805c5d5e59b417d3340"
@@ -6890,6 +6900,10 @@ jsonfile@^2.1.0:
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+jsonic@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/jsonic/-/jsonic-0.3.0.tgz#b545da95f54392e58b3dda05f5f2e377a6c9d1bf"
 
 jsonify@~0.0.0:
   version "0.0.0"
@@ -9944,6 +9958,13 @@ react-virtualized@^9.0.0, react-virtualized@^9.7.3:
     loose-envify "^1.3.0"
     prop-types "^15.5.4"
 
+react-with-context@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-with-context/-/react-with-context-2.0.0.tgz#5e51e3349e31e0b7fced0b3d37f5d353a8cdb517"
+  dependencies:
+    "@types/react" "^16.0.7"
+    react "^15.6.2"
+
 react@^15.3.2, react@~15.4.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
@@ -9951,6 +9972,16 @@ react@^15.3.2, react@~15.4.0:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react@^15.6.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 reactabular-highlight@^2.0.1:
   version "2.0.1"

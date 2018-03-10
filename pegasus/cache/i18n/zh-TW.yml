@@ -816,14 +816,17 @@
   dashboard_course1: "課程 1："
   dashboard_course2: "課程 2："
   dashboard_course3: "課程 3："
-  dashboard_course4: "課程 4："
+  dashboard_course4: "課程 4： "
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
   dashboard_coursec: 'Course C: '
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "如果你沒有電腦，你可以在你的教室<a href='%{unplugged_url}'>試試這些不插電教學活動 </a>。"
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "課程"
   dashboard_curriculum_overview: K-5 課程概覽
   dashboard_overview: "概覽"
@@ -841,6 +844,8 @@
   dashboard_curriculum_csins: "科學裡的計算機科學："
   dashboard_curriculum_csp: AP® 計算機科學原理：
   dashboard_curriculum_ecs: "計算機科學探索："
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "學前"
   dashboard_grade_other: "其它"
   dashboard_login_word: "通關密語"
@@ -1073,6 +1078,7 @@
   cspexams_category_name: "計算機科學原理應用測驗"
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Game Lab
   basketball_name: "製作一個籃球遊戲"
   sports_name: "編寫一個你自己的運動遊戲程式"
   applab_gradelevel: "年齡 13+"
@@ -1136,7 +1142,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: "年級 8+"
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "年齡 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "現代瀏覽器、手機、平板"
@@ -1635,9 +1641,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

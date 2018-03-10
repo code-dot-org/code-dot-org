@@ -159,15 +159,15 @@ class S3PackagingTest < Minitest::Test
     client.delete_object(bucket: S3Packaging::BUCKET_NAME, key: @packager.send(:s3_key))
 
     # upload a package
-    assert @packager.upload_package_to_s3('/build')
+    assert @packager.upload_package_to_s3(@packager.create_package('/build'))
 
     # upload the same package again, it works
-    assert @packager.upload_package_to_s3('/build')
+    assert @packager.upload_package_to_s3(@packager.create_package('/build'))
 
     # try uploading a different package under the same name, it fails
     threw = false
     begin
-      refute @packager.upload_package_to_s3('/src')
+      refute @packager.upload_package_to_s3(@packager.create_package('/src'))
     rescue
       threw = true
     end

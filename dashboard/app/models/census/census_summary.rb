@@ -5,7 +5,7 @@
 #  id          :integer          not null, primary key
 #  school_id   :string(12)       not null
 #  school_year :integer          not null
-#  teaches_cs  :string(1)
+#  teaches_cs  :string(2)
 #  audit_data  :text(65535)      not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -24,19 +24,29 @@ class Census::CensusSummary < ApplicationRecord
     YES: "Y",
     NO: "N",
     MAYBE: "M",
+    HISTORICAL_YES: "HY",
+    HISTORICAL_NO: "HN",
+    HISTORICAL_MAYBE: "HM",
   }.freeze
   enum teaches_cs: TEACHES
 
   validates_presence_of :audit_data
 
+  AUDIT_DATA_VERSIONS = {
+    INITIAL_IMPLEMENTATION: 0.1,
+    NAIVE_BAYES: 0.2,
+    SIMPLE: 0.3,
+  }.freeze
+
   # High schools need to teach a 20 hour course with either
   # block- or text-based programming for it to count as CS.
   # Other schools can teach any 10 or 20 hour courses.
+  # Schools that are a mix of K8 and high school use the K8 logic.
   # The teacher banner does not have the topic check boxes
   # so we count those submissions even though they don't have
   # those options checked.
-  def self.submission_teaches_cs?(submission, is_high_school:)
-    if is_high_school
+  def self.submission_teaches_cs?(submission, is_high_school:, is_k8_school:)
+    if is_high_school && !is_k8_school
       (
         (
           submission.how_many_20_hours_some? ||
@@ -146,13 +156,157 @@ class Census::CensusSummary < ApplicationRecord
   end
 
   def self.summarize_school_data(school, school_years, years_with_ap_data, years_with_ib_data, state_years_with_data)
+    summarize_school_data_simple(
+      {
+        school: school,
+        school_years: school_years,
+        years_with_ap_data: years_with_ap_data,
+        years_with_ib_data: years_with_ib_data,
+        state_years_with_data: state_years_with_data,
+      }
+    )
+  end
+
+  def self.summarize_school_data_simple(summarization_data)
+    school = summarization_data[:school]
+    school_years = summarization_data[:school_years]
+    state_years_with_data = summarization_data[:state_years_with_data]
+
+    summaries = []
+
+    school_years.each do |school_year|
+      audit = {
+        version: AUDIT_DATA_VERSIONS[:SIMPLE],
+        stats: {},
+        census_submissions: [],
+        ap_cs_offerings: [],
+        ib_cs_offerings: [],
+        state_cs_offerings: [],
+      }
+
+      count_yes = 0
+      count_no = 0
+
+      # If the school doesn't have stats then treat it as not high school.
+      # The lack of stats will show up in the audit data as a null value for high_school.
+      # k8_school will behave similarly.
+      stats = school.school_stats_by_year.try(:sort).try(:last)
+      high_school = stats.try(:has_high_school_grades?)
+      k8_school = stats.try(:has_k8_grades?)
+      audit[:stats][:high_school] = high_school
+      audit[:stats][:k8_school] = k8_school
+
+      # Census Submissions
+      submissions = school.school_info.map(&:census_submissions).flatten
+      # Lack of a submission for a school isn't considered evidence
+      # so we only look at actual submissions.
+      submissions.select {|s| s.school_year == school_year}.each do |submission|
+        teaches =
+          if submission_has_response(submission, high_school)
+            submission_teaches_cs?(submission, is_high_school: high_school, is_k8_school: k8_school)
+          else
+            nil
+          end
+
+        audit[:census_submissions].push(
+          {
+            id: submission.id,
+            teaches: teaches
+          }
+        )
+
+        next if teaches.nil?
+
+        if teaches
+          count_yes += 1
+        else
+          count_no += 1
+        end
+      end
+
+      # AP data
+
+      ap_offerings = school.ap_school_code.try(:ap_cs_offering) || []
+      ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
+      ap_offerings_this_year.each do |offering|
+        audit[:ap_cs_offerings].push(offering.id)
+      end
+      count_yes += 1 unless ap_offerings_this_year.empty?
+
+      # IB data
+
+      ib_offerings = school.ib_school_code.try(:ib_cs_offering) || []
+      ib_offerings_this_year = ib_offerings.select {|o| o.school_year == school_year}
+      ib_offerings_this_year.each do |offering|
+        audit[:ib_cs_offerings].push(offering.id)
+      end
+      count_yes += 1 unless ib_offerings_this_year.empty?
+
+      # State data
+
+      # Schools without state school ids cannot have state data.
+      # Ignore those schools so that we won't count the lack of
+      # state data as a NO.
+      if school.state_school_id
+        state_offerings = school.state_cs_offering || []
+        state_offerings = state_offerings.select {|o| o.school_year == school_year}
+        # If we have any state data for this year then a high school
+        # without a row is counted as a NO
+        if high_school &&
+           state_offerings.empty? &&
+           Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
+           state_years_with_data[school.state].include?(school_year)
+          audit[:state_cs_offerings].push(nil)
+          count_no += 1
+        else
+          state_offerings.each do |offering|
+            audit[:state_cs_offerings].push(offering.id)
+          end
+          count_yes += 1 unless state_offerings.empty?
+        end
+      end
+
+      audit[:count_yes] = count_yes
+      audit[:count_no] = count_no
+
+      summary = Census::CensusSummary.find_or_initialize_by(
+        school: school,
+        school_year: school_year,
+      )
+
+      summary.teaches_cs =
+        if count_no == 0 && count_yes == 0
+          nil
+        elsif count_no == 0
+          'Y'
+        elsif count_yes == 0
+          'N'
+        else
+          'M'
+        end
+
+      summary.audit_data = JSON.generate(audit)
+
+      summaries.push summary
+    end
+
+    return summaries
+  end
+
+  def self.summarize_school_data_naive_bayes(summarization_data)
+    school = summarization_data[:school]
+    school_years = summarization_data[:school_years]
+    years_with_ap_data = summarization_data[:years_with_ap_data]
+    years_with_ib_data = summarization_data[:years_with_ib_data]
+    state_years_with_data = summarization_data[:state_years_with_data]
+
     previous_years_belief = nil
     summaries = []
 
     school_years.each do |school_year|
       audit = {
-        version: 0.2,
-        stats: [],
+        version: AUDIT_DATA_VERSIONS[:NAIVE_BAYES],
+        stats: {},
         census_submissions: [],
         ap_cs_offerings: [],
         ib_cs_offerings: [],
@@ -173,9 +327,12 @@ class Census::CensusSummary < ApplicationRecord
 
       # If the school doesn't have stats then treat it as not high school.
       # The lack of stats will show up in the audit data as a null value for high_school.
+      # k8_school will behave similarly.
       stats = school.school_stats_by_year.try(:sort).try(:last)
       high_school = stats.try(:has_high_school_grades?)
-      audit[:stats].push({high_school: high_school})
+      k8_school = stats.try(:has_k8_grades?)
+      audit[:stats][:high_school] = high_school
+      audit[:stats][:k8_school] = k8_school
 
       # Census Submissions
       submissions = school.school_info.map(&:census_submissions).flatten
@@ -184,7 +341,7 @@ class Census::CensusSummary < ApplicationRecord
       submissions.select {|s| s.school_year == school_year}.each do |submission|
         teaches =
           if submission_has_response(submission, high_school)
-            submission_teaches_cs?(submission, is_high_school: high_school)
+            submission_teaches_cs?(submission, is_high_school: high_school, is_k8_school: k8_school)
           else
             nil
           end
@@ -313,7 +470,7 @@ class Census::CensusSummary < ApplicationRecord
     return summaries
   end
 
-  def self.summarize_census_data
+  def self.summarize_census_data(algorithm=:summarize_school_data_simple.to_proc)
     latest_survey_year = Census::CensusSubmission.maximum(:school_year)
     years_with_ap_data = Census::ApCsOffering.select(:school_year).group(:school_year).map(&:school_year)
     latest_ap_data_year = years_with_ap_data.max
@@ -348,13 +505,22 @@ class Census::CensusSummary < ApplicationRecord
         eager_load(:school_stats_by_year).
         find_each do |school|
 
-        summarize_school_data(
-          school,
-          school_years,
-          years_with_ap_data,
-          years_with_ib_data,
-          state_years_with_data
-        ).each(&:save!)
+        algorithm.call(
+          self,
+          {
+            school: school,
+            school_years: school_years,
+            years_with_ap_data: years_with_ap_data,
+            years_with_ib_data: years_with_ib_data,
+            state_years_with_data: state_years_with_data,
+          }
+        ).each do |summary|
+          if block_given?
+            yield summary
+          else
+            summary.save!
+          end
+        end
       end
     end
   end
