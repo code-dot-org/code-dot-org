@@ -561,8 +561,8 @@ bs:
           description_audience: ''
         algebraPD:
           title: Računarstvo u Algebri Profesionalni Razvoj
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Course Overview:
@@ -644,8 +644,8 @@ bs:
               name: Lekcija 15
         ECSPD:
           title: Exploring Computer Science PD
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           stages:
             Growth Mindset:
               name: Growth Mindset
@@ -661,8 +661,8 @@ bs:
               name: What is ECS?
         sciencePD:
           title: Computer Science in Science PD
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -792,8 +792,8 @@ bs:
               name: Recept za Dizajn
         ECSPD-NexTech:
           title: Exploring Computer Science PD
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           logo_image: nextech_logo.png
           stages:
             Growth Mindset:
@@ -810,8 +810,8 @@ bs:
               name: What is ECS?
         ECSPD-iZone:
           title: Exploring Computer Science PD
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           logo_image: izone_logo.png
           stages:
             Growth Mindset:
@@ -828,8 +828,8 @@ bs:
               name: What is ECS?
         algebraPD-NexTech:
           title: Računarstvo u Algebri Profesionalni Razvoj
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           logo_image: nextech_logo.png
           description_audience: ''
           stages:
@@ -847,8 +847,8 @@ bs:
               name: Why Computer Science belongs in Algebra
         algebraPD-iZone:
           title: Računarstvo u Algebri Profesionalni Razvoj
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           logo_image: izone_logo.png
           description_audience: ''
           stages:
@@ -866,8 +866,8 @@ bs:
               name: Why Computer Science belongs in Algebra
         sciencePD-NexTech:
           title: Computer Science in Science PD
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           logo_image: nextech_logo.png
           description_audience: ''
           stages:
@@ -897,8 +897,8 @@ bs:
               name: What to Expect
         sciencePD-iZone:
           title: Computer Science in Science PD
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           logo_image: izone_logo.png
           description_audience: ''
           stages:
@@ -1011,8 +1011,8 @@ bs:
           description_audience: ''
         algebraPD2a:
           title: Računarstvo u Algebri Profesionalni Razvoj
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Big Game - Animation:
@@ -1125,8 +1125,8 @@ bs:
               name: Curriculum Reference
         algebraPD2b:
           title: Računarstvo u Algebri Profesionalni Razvoj
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Best Practices for Teaching Computer Science:
@@ -1203,8 +1203,8 @@ bs:
               name: Planiranje
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
@@ -1260,8 +1260,8 @@ bs:
               name: Dobrodošli!
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1324,8 +1324,8 @@ bs:
               name: Slijedeći Koraci
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1344,8 +1344,8 @@ bs:
               name: Wrap-Up
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unit 1, Day 10 Telling a Story with Data
@@ -1373,8 +1373,8 @@ bs:
               name: Zamotavanje
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Predaji Funkcionalno Programiranje kroz Algebru
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description: 'Predaji Funkcionalno Programiranje kroz Algebru'
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unit 1, Day 10 Telling a Story with Data
@@ -1563,7 +1563,7 @@ bs:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Dovrši izazov
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -1699,9 +1699,9 @@ bs:
           description_audience: ''
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Pregled izazova
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Dovrši izazov
             Getting Started:
               name: Getting Started
             Share out and Submit:
@@ -1752,7 +1752,7 @@ bs:
           description_short: Online Exploration of CSP Unit 3
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Pregled izazova
             Chunk 1 Overview:
               name: Chunk 1 Overview
             Chunk 2 Overview:
@@ -1764,7 +1764,7 @@ bs:
             Chunk 5 Overview:
               name: Chunk 5 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Dovrši izazov
             Getting Started:
               name: Getting Started
             Practice Performance Task:
@@ -1851,9 +1851,9 @@ bs:
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Pregled izazova
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Dovrši izazov
             Share out and Submit:
               name: Share out and Submit
         ScienceP3OLPT3:
@@ -1924,13 +1924,13 @@ bs:
           description_short: Support for CSP Unit 4
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Pregled izazova
             Chapter 1 Overview:
               name: Chapter 1 Overview
             Chapter 2 Overview:
               name: Chapter 2 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Dovrši izazov
             Getting Started:
               name: Getting Started
             Practice Performance Tasks:
@@ -1947,9 +1947,9 @@ bs:
             Creating Javascript Objects:
               name: Kreiranje JavaScript objekata
             Deleting Records:
-              name: Deleting Records
+              name: Brisanje zapisa
             Final Project:
-              name: Final Project
+              name: Završni projekat
             Importing and Exporting Data:
               name: Importing and Exporting Data
             Permanent Data Storage:
@@ -1957,7 +1957,7 @@ bs:
             Reading Records:
               name: Reading Records
             Sample Apps:
-              name: Sample Apps
+              name: Primjeri aplikacija
             Updating Records:
               name: Updating Records
             Visualizing Data:
@@ -1968,9 +1968,9 @@ bs:
           description_short: Support for CSP Unit 5
           stages:
             Challenge Overview:
-              name: Challenge Overview
+              name: Pregled izazova
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Dovrši izazov
             Create PT Breakdown:
               name: Create PT Breakdown
             Explore PT Breakdown:
@@ -1990,9 +1990,9 @@ bs:
             Creating Javascript Objects:
               name: Kreiranje JavaScript objekata
             Deleting Records:
-              name: Deleting Records
+              name: Brisanje zapisa
             Final Project:
-              name: Final Project
+              name: Završni projekat
             Importing and Exporting Data:
               name: Importing and Exporting Data
             Permanent Data Storage:
@@ -2000,7 +2000,7 @@ bs:
             Reading Records:
               name: Reading Records
             Sample Apps:
-              name: Sample Apps
+              name: Primjeri aplikacija
             Updating Records:
               name: Updating Records
             Visualizing Data:
@@ -2069,7 +2069,7 @@ bs:
         algebraPD1:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Teach Algebra through Functional Programming
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Course Overview:
@@ -2203,7 +2203,7 @@ bs:
             Creating functions with Parameters:
               name: Creating functions with Parameters
             Creativity in Algorithms:
-              name: Creativity in Algorithms
+              name: Kreativnost u algoritmima
             Functions and Top-Down Design:
               name: Functions and Top-Down Design
             Looping and Random Numbers:
@@ -2213,7 +2213,7 @@ bs:
             The Need For Programming Languages:
               name: The Need For Programming Languages
             The Need for Algorithms:
-              name: The Need for Algorithms
+              name: Potreba za algoritmima
             Using Simple Commands:
               name: Using Simple Commands
             Unit 3 Chapter 1 Assessment:
@@ -2515,7 +2515,7 @@ bs:
         ECSPD1:
           title: ECS Part 1
           description: Two hour introduction to your Professional Learning Program for the ECS Version 5 curriculum
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Background and Context:
@@ -2549,7 +2549,7 @@ bs:
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
-          description_short: Predaji Funkcionalno Programiranje kroz Algebru
+          description_short: 'Predaji Funkcionalno Programiranje kroz Algebru'
           description_audience: ''
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -2740,11 +2740,11 @@ bs:
             Conducting User-Centered Interviews:
               name: Conducting User-Centered Interviews
             Analyzing Interviews:
-              name: Analyzing Interviews
+              name: Analiziranje intervijua
             Re-designing a Space:
               name: Re-designing a Space
             Presenting Your Design:
-              name: Presenting Your Design
+              name: Predstavljanje Vašeg dizajna
             Designing Apps for Good:
               name: Designing Apps for Good
             Market Research:
@@ -2760,7 +2760,7 @@ bs:
             Preparing for App Testing:
               name: Preparing for App Testing
             App Testing:
-              name: App Testing
+              name: Testiranje aplikacije
             Planning for Improvements:
               name: Planning for Improvements
             Improving and Iterating:
@@ -2775,7 +2775,7 @@ bs:
           description_short: Problem Solving
           stages:
             Exploring Apps:
-              name: Exploring Apps
+              name: Istraživanje aplikacija
             Processing Information:
               name: Processing Information
         CSDU2-Draft:
@@ -2831,7 +2831,7 @@ bs:
             Multi-Page Websites:
               name: Multi-Page Websites
             Classes:
-              name: Classes
+              name: Razredi
             External Style Sheets:
               name: External Style Sheets
             Usability and Accessibility:
@@ -3161,7 +3161,7 @@ bs:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Dovrši izazov
             Getting Started:
               name: Getting Started
             Introduction to the Unit 5 Challenge:
@@ -3203,7 +3203,7 @@ bs:
           description_audience: Ages 5-18
           stages:
             " Bee: Conditionals":
-              name: ' Bee: Conditionals'
+              name: " Bee: Conditionals"
             'Artist: Nested Loops':
               name: 'Umjetnik: Ugniježdene Petlje'
             Bee Debugging:
@@ -3211,7 +3211,7 @@ bs:
             Bounce:
               name: Odskok
             Build a Game:
-              name: Build a Game
+              name: Napravi igru
             Farmer Conditional with Cards:
               name: Farmer Conditional with Cards
             Farmer Debug Relay Programming:
@@ -3476,7 +3476,7 @@ bs:
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
-          description_short: '\tPhase 3: School Year Support'
+          description_short: "\\tPhase 3: School Year Support"
           description_audience: ''
           stages:
             Lesson Prep:
@@ -3742,7 +3742,7 @@ bs:
             Multi-Page Websites:
               name: Multi-Page Websites
             Classes:
-              name: Classes
+              name: Razredi
             External Style Sheets:
               name: External Style Sheets
             Peer Review:
@@ -3868,11 +3868,11 @@ bs:
             Conducting User-Centered Interviews:
               name: Conducting User-Centered Interviews
             Analyzing Interviews:
-              name: Analyzing Interviews
+              name: Analiziranje intervijua
             Redesigning a Space:
               name: Redesigning a Space
             Presenting Your Design:
-              name: Presenting Your Design
+              name: Predstavljanje Vašeg dizajna
             Designing Apps for Good:
               name: Designing Apps for Good
               description_student: To kick off the app design project, the class organizes into teams and starts exploring app topics. Several example socially impactful apps serve as inspiration for the project.
@@ -4056,7 +4056,7 @@ bs:
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
-              name: Loops in Maze
+              name: Petlje u labirintu
             'Events: The Big Event':
               name: 'Events: The Big Event'
             Puppy Introduction:
@@ -4160,9 +4160,9 @@ bs:
             The Design Process:
               name: The Design Process
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
             More Programming with Scratch:
               name: More Programming with Scratch
             Private and Personal Information:
@@ -4210,11 +4210,11 @@ bs:
             The Design Process:
               name: The Design Process
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
             Revise Your Project:
               name: Revise Your Project
             Presentation Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             The Power of Words:
@@ -4436,7 +4436,7 @@ bs:
             Binary:
               name: Binarno
             Snowflakes:
-              name: Snowflakes
+              name: Pahulje
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -4499,7 +4499,7 @@ bs:
             Reading Records:
               name: Reading Records
             Deleting Records:
-              name: Deleting Records
+              name: Brisanje zapisa
             Updating Records:
               name: Updating Records
             Importing and Exporting Data:
@@ -4507,9 +4507,9 @@ bs:
             Visualizing Data:
               name: Visualizing Data
             Sample Apps:
-              name: Sample Apps
+              name: Primjeri aplikacija
             Final Project:
-              name: Final Project
+              name: Završni projekat
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -4547,9 +4547,9 @@ bs:
             Lists:
               name: Liste
             Lights:
-              name: Lights
+              name: Svjetla
             Event Types:
-              name: Event Types
+              name: Vrste događaja
             Getters and Setters:
               name: Getters and Setters
             Input Unplugged:
@@ -4681,7 +4681,7 @@ bs:
             Basic App Functionality:
               name: Basic App Functionality
             Event Types:
-              name: Event Types
+              name: Vrste događaja
             Getters and Setters:
               name: Getters and Setters
             Room Escape:
@@ -4703,7 +4703,7 @@ bs:
             Basic App Functionality:
               name: Basic App Functionality
             Event Types:
-              name: Event Types
+              name: Vrste događaja
             Getters and Setters:
               name: Getters and Setters
         coursed-ramp:
@@ -4753,9 +4753,9 @@ bs:
             Input Unplugged:
               name: Input Unplugged
               description_student: Experience two different ways that an app can take input from a user, while learning more about the event-driven programming model used in App Lab.
-              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite and asynchronous events) to gain a better understanding of how they work.
+              description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Event Types:
-              name: Event Types
+              name: Vrste događaja
               description_student: Review the basics of programming in App Lab and explore some new event types that can be used in your programs.
               description_teacher: In this lesson students review the material they learned about creating apps in App Lab from Unit 4 in order to prepare for a return to App Lab in this unit. This review should be modified to best meet the needs of your students and their experience and familiarity with programming in App Lab. In addition to the review the students will also experiment with a variety of new event types that they likely have not seen before.
             Getters and Setters:
@@ -4765,13 +4765,13 @@ bs:
             The Circuit Playground:
               name: The Circuit Playground
               description_student: Get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, develop programs that use the Circuit Playground for output.
-              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that blink an LED and make noise with a buzzer. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Lists:
               name: Liste
               description_student: Learn how lists can be used to store multiple values in a single variable name.
               description_teacher: A list, also commonly known as an array, is a type of variable that can store many values at once. In this lesson, students learn to create lists which store a series of related values in a single variable. After creating lists of their own, students will learn about ways to extract either a specific or random value from a list using its index.
             Lights:
-              name: Lights
+              name: Svjetla
               description_student: Using the concept of lists from the previous lesson, the class writes programs that control the ten color LEDs on the Circuit Playground.
               description_teacher: The Circuit Playground includes 10 color LEDs in a ring around the outside edge. These LEDs are accessible in code as a list called `colorLeds`. Building on the understanding of lists from the previous lesson, students write programs that control the color LEDs by accessing them from a list.
             For Loops:
@@ -4805,7 +4805,91 @@ bs:
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
               description_student: Develop innovative computing devices of your own design, using everything you've learned throughout this course.
-              description_teacher: 'In this final project for the course, student team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+            Designing Screens with Code:
+              name: Designing Screens with Code
+              description_student: By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, these techniques allow for lots of user interaction and functionality.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
+            Board Events:
+              name: Board Events
+              description_student: Using the hardware buttons and switch, the class develops programs that use the Circuit Playground as an input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+            Getting Properties:
+              name: Getting Properties
+              description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, onChange, are also introduced.
+              description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter patters to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
+            The Program Design Process:
+              name: The Program Design Process
+              description_student: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+              description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
+              description_student: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+            Arrays:
+              name: Arrays
+              description_student: Learn how lists can be used to store multiple values in a single variable name.
+              description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+            Making Music:
+              name: Pravljenje muzike
+              description_student: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Onces students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+            Arrays and For Loops:
+              name: Arrays and For Loops
+              description_student: Combining _lists_ and _for loops_ allows you to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, include the list of color LEDs.
+              description_teacher: Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.
+            Accelerometer:
+              name: Accelerometer
+              description_student: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
+              description_student: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+              description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+              description_student: Wire simple circuits to create a physical prototype using cheap and easily found materials.
+              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
+            Innovations in Computing:
+              name: Innovations in Computing
+            Arrays and Color LEDs:
+              name: Arrays and Color LEDs
+            Innovations in Computing_:
+              name: Innovations in Computing
+            Designing Screens with Code_:
+              name: Designing Screens with Code
+            The Circuit Playground_:
+              name: The Circuit Playground
+            Input Unplugged_:
+              name: Input Unplugged
+            Board Events_:
+              name: Board Events
+            Getting Properties_:
+              name: Getting Properties
+            Analog Input_:
+              name: Analog Input
+            The Program Design Process_:
+              name: The Program Design Process
+            Arrays and Color LEDs_:
+              name: Arrays and Color LEDs
+            'Project: Make a Game_':
+              name: 'Project: Make a Game'
+            Making Music_:
+              name: Pravljenje muzike
+            Arrays and For Loops_:
+              name: Arrays and For Loops
+            Accelerometer_:
+              name: Accelerometer
+            Functions with Parameters_:
+              name: Funkcije sa Parametrima
+            Circuits and Physical Prototypes_:
+              name: Circuits and Physical Prototypes
+            'Project: Prototype an Innovation_':
+              name: 'Project: Prototype an Innovation'
+            'Project: Make a Game__':
+              name: 'Project: Make a Game'
+            Arrays and Color LEDs__:
+              name: Arrays and Color LEDs
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
@@ -4866,7 +4950,7 @@ bs:
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
-          description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the your choosing.
+          description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           stages:
             Representation Matters:
               name: Representation Matters
@@ -4935,9 +5019,11 @@ bs:
             Structuring Data:
               name: Structuring Data
               description_student: This lesson goes further into the interpretation of data, including cleaning and visualizing raw data sets.  The class first looks at the how presenting data in different ways can help people to understand it better.  After seeing how cleaning and visualization can help people make better decisions, the class looks at what parts of this process can be automated, and what need a human.
-              description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing raw data sets.  Students first look at the how presenting data in different ways can help people to understand it better.  They then visualize their own raw data set, in the context of a pizza topping survey, deciding what to do with data that does not easily fit into the visualization scheme that they have chosen.  Last, students look at what parts of this process can be automated, and what need a human to make decisions.
+              description_teacher: In this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing data.  Students first look at the how presenting data in different ways can help people to understand it better, and they then create visualizations of their own data. Using a the results of a preferred pizza topping survey, students must decide what to do with data that does not easily fit into the visualization scheme that they have chosen.  Finally, students look at which parts of this process can be automated by a computer and which need a human to make decisions.
             Keeping Data Secret:
               name: Keeping Data Secret
+              description_student: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
+              description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -5027,7 +5113,7 @@ bs:
             Intellectual Property:
               name: Intellectual Property
             Images:
-              name: Images
+              name: Slike
             Clean Code and Debugging:
               name: Clean Code and Debugging
             Project - Multi-Page Websites:
@@ -5217,7 +5303,7 @@ bs:
             Multi-Page Websites:
               name: Multi-Page Websites
             Classes:
-              name: Classes
+              name: Razredi
             Peer Review:
               name: Peer Review
             Digital Footprint:
@@ -5356,7 +5442,7 @@ bs:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: Course B
+          title: Kurs B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -5377,7 +5463,7 @@ bs:
             'Loops: Getting Loopy':
               name: 'Loops: Getting Loopy'
             Loops in Maze:
-              name: Loops in Maze
+              name: Petlje u labirintu
             Loops in Harvester:
               name: Loops in Harvester
             'Events: The Big Event':
@@ -5397,7 +5483,7 @@ bs:
           title: Course C
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: Create programs with loops, events, and conditionals. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share.
+          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed:
           stages:
             Introduction:
@@ -5519,7 +5605,7 @@ bs:
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This is likely to be the longest stage of the project. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Revise Your Project:
@@ -5570,7 +5656,7 @@ bs:
               description_student: Practice making games to share with your friends and family.
               description_teacher: This lesson features Play Lab, a platform where students can create their own games and have interactions between characters and user input. Students will work with events to create keyboard controls. This set of puzzles will also loosely guide students through game development, but with freedom to add their own ideas.
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
               description_student: Get ready to show off! It's time to present your finished project to your peers.
               description_teacher: Over the course of four lessons, students will be building up to programming a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide for all four stages of the process can be found in the first stage of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
@@ -5621,8 +5707,8 @@ bs:
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
-              description_student: Think of your favorite video game. Ever wondered how it was made? In these puzzles you will develop a video game of your own with friends from Ice Age!
-              description_teacher: In this lesson, students are guided through a story featuring characters from Ice Age. Students will work with events and loops to make characters move on the screen, and will get the chance to create their own game or story after the guided levels.
+              description_student: Zamisli svoju omiljenu video igru. Jesi li se ikad pitao kako je napravljena? U ovim slagalicama ti ćeš razviti vlastitu video igru sa prijateljima iz Ledenog Doba!
+              description_teacher: U ovoj lekciji, učenici su vođeni kroz priču sa likove iz Ledenog Doba. Učenici će raditi sa događajima i petljama da učine da se likovi kreću po ekranu, i dobiti će šansi da naprave vlastitu igru ili priču nakon razina na kojima su vođeni.
             Envelope Variables:
               name: 'Variables: Envelope Variables'
               description_student: 'Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.'
@@ -5672,7 +5758,7 @@ bs:
               description_student: Projects this big take time and plenty planning. Here, you will learn about the design process that you'll use to build your own creation.
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. In this portion of the project, students will learn about the design process and how to implement it in their own projects. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
               description_student: Finally you can start building your project!
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Now the students will be given their own space to create their project with either Artist or Play Lab. This will be the longest portion of the project. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Revise Your Project:
@@ -5682,7 +5768,7 @@ bs:
             Presentation Your Project:
               name: Presentation Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
               description_student: Time to show your work! Here you will be presenting your awesome project to your peers.
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
@@ -6004,11 +6090,11 @@ bs:
             The Design Process:
               name: The Design Process
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
             Revise Your Project:
               name: Revise Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
             Nested Loops Project in Frozen:
               name: Nested Loops in Frozen
             'How it Works: The Internet':
@@ -6114,9 +6200,9 @@ bs:
             The Need For Programming Languages:
               name: The Need For Programming Languages
             The Need for Algorithms:
-              name: The Need for Algorithms
+              name: Potreba za algoritmima
             Creativity in Algorithms:
-              name: Creativity in Algorithms
+              name: Kreativnost u algoritmima
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
@@ -6266,9 +6352,9 @@ bs:
             The Design Process:
               name: The Design Process
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
             Internet:
               name: Internet
             Crowdsourcing:
@@ -6404,11 +6490,11 @@ bs:
             The Design Process:
               name: The Design Process
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
             Revise Your Project:
               name: Revise Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
             Building a Foundation:
               name: Izrada Temelja
             Debugging with Scrat:
@@ -6482,9 +6568,9 @@ bs:
             The Design Process:
               name: The Design Process
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
             Internet:
               name: Internet
             Crowdsourcing:
@@ -6548,11 +6634,11 @@ bs:
             The Design Process:
               name: The Design Process
             Build Your Project:
-              name: Build Your Project
+              name: Napravite Vaš projekat
             Revise Your Project:
               name: Revise Your Project
             Present Your Project:
-              name: Present Your Project
+              name: Predstavite Vaš projekat
           title: New Script for F
           description_audience: ''
           description_short: ''
@@ -6688,9 +6774,9 @@ bs:
             The Need For Programming Languages:
               name: The Need For Programming Languages
             The Need for Algorithms:
-              name: The Need for Algorithms
+              name: Potreba za algoritmima
             Creativity in Algorithms:
-              name: Creativity in Algorithms
+              name: Kreativnost u algoritmima
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
@@ -6889,7 +6975,251 @@ bs:
           stages:
             special valentine:
               name: special valentine
+            Valentine Puzzles:
+              name: Valentine Puzzles
           title: Valentine Special
           description_audience: ''
           description_short: Have fun creating valentines
           description: ''
+        colehoc17:
+          stages:
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-e-2018:
+          stages:
+            courseB_unplugged_MRF_2018:
+              name: courseB_unplugged_MRF_2018
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Izrada Temelja
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Ugniježdene Petlje
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Dice Race':
+              name: 'Algorithms: Dice Race'
+            Introduction:
+              name: Uvod
+            Conditionals:
+              name: Uvjeti
+            Private and Personal Information:
+              name: Private and Personal Information
+            'Functions: Songwriting':
+              name: 'Functions: Songwriting'
+            MINECRAFT STAGE GOES HERE:
+              name: MINECRAFT STAGE GOES HERE
+            Functions in Artist:
+              name: Functions in Artist
+            Functions in Bee:
+              name: Functions in Bee
+            Functions in Farmer:
+              name: Functions in Farmer
+            Determine the Concept:
+              name: Determine the Concept
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Present Your Project:
+              name: Predstavite Vaš projekat
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+          title: Course E 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
+        course-f-2018:
+          stages:
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Sequence in Maze:
+              name: Sequence in Maze
+            Building a Foundation:
+              name: Izrada Temelja
+            Debugging with Scrat:
+              name: Debugging with Scrat
+            Programming in Artist:
+              name: Programming in Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops in Bee/Zombie:
+              name: Nested Loops in Bee/Zombie
+            Nested Loops with Frozen:
+              name: Nested Loops with Frozen
+            'Algorithms: Tangrams':
+              name: 'Algorithms: Tangrams'
+            Introduction:
+              name: Uvod
+            The Power of Words:
+              name: The Power of Words
+            Ice Age Play Lab:
+              name: Ledeno doba Play Lab
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Envelope Variables:
+              name: Envelope Variables
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: For Loop Fun
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Songwriting with Parameters
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Napravite Vaš projekat
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Predstavite Vaš projekat
+          title: Course F 2018
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd6-old:
+          stages:
+            Computing Innovations:
+              name: Computing Innovations
+            Input Unplugged:
+              name: Input Unplugged
+            Event Types:
+              name: Vrste događaja
+            Getters and Setters:
+              name: Getters and Setters
+            The Circuit Playground:
+              name: The Circuit Playground
+            Lists:
+              name: Liste
+            Lights:
+              name: Svjetla
+            For Loops:
+              name: Od-Do-Za Petlje
+            Lists and For Loops:
+              name: Lists and For Loops
+            Timed Loops:
+              name: Timed Loops
+            'Project: Board Output':
+              name: 'Project: Board Output'
+            Physical Input:
+              name: Physical Input
+            Analog Input:
+              name: Analog Input
+            Sensor Applications:
+              name: Sensor Applications
+            'Project: Prototype an Innovation':
+              name: 'Project: Prototype an Innovation'
+          title: "(DEPRECATED) CSD Unit 6 - Physical Computing"
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: Varijable
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Conditionals:
+              name: Uvjeti
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Velocity:
+              name: Brzina
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Funkcije
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            Project - Design a Game:
+              name: Project - Design a Game
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: " Learn to program animations, interactive art, and games in Game Lab."
+          description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."

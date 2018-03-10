@@ -1042,8 +1042,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Pokud nemáte přístup k počítačům, vyzkoušejte ve třídě tyto
     <a href='%{unplugged_url}'>lekce bez počítače</a>.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Kurikulum
   dashboard_curriculum_overview: Přehled učiva 1. stupně ZŠ
   dashboard_overview: Přehled
@@ -1061,6 +1064,8 @@
   dashboard_curriculum_csins: 'Informatika ve vědě:'
   dashboard_curriculum_csp: 'AP ® Informatika principy:'
   dashboard_curriculum_ecs: 'Zkoumání informatiky:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Ostatní
   dashboard_login_word: Slovo
@@ -1310,6 +1315,7 @@
   cspexams_category_name: Praktický test z principů informatiky
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Game Lab
   basketball_name: Vytvoř basketbalovou hru
   sports_name: Code your own sports game
   applab_gradelevel: Věk 13 +
@@ -1374,7 +1380,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Známky 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Věk 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Stáří 10-13
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
@@ -2103,9 +2109,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

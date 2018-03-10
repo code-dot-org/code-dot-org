@@ -11,7 +11,7 @@
   upgrade_ie_link: Află mai mult
   en: Tehnologia computerului si programare
   computer_science_edweek: Săptămâna Educatiei in Tehnologia computerului si programare
-  csedweek_dates: 8-14 Decembrie 2014
+  csedweek_dates: 8-14 decembrie 2014
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white;
     text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemăm toți profesorii
     şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -1071,8 +1071,11 @@
   dashboard_coursed: 'Curs D: '
   dashboard_coursee: 'Curs E: '
   dashboard_coursef: 'Curs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați
     aceste lecţii offline</a> în clasa dvs.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Prezentare generală Curriculum pentru clasele 1-5
   dashboard_overview: Prezentare generală
@@ -1090,6 +1093,8 @@
   dashboard_curriculum_csins: 'Informatica în știință:'
   dashboard_curriculum_csp: 'AP ® Principiile Informaticii:'
   dashboard_curriculum_ecs: 'Explorând Informatica:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Clase
   dashboard_grade_other: Alte
   dashboard_login_word: Cuvânt
@@ -1346,6 +1351,7 @@
   cspexams_category_name: Principiile practicilor test CS
   research_studies_category_name: Research Studies
   applab_name: Laboratului Aplicației
+  gamelab_name: Laborator de jocuri
   basketball_name: Realizeaza un joc de baschet
   sports_name: Prorgramează propriul joc sportiv
   applab_gradelevel: Vârste 13 +
@@ -2195,9 +2201,3 @@
     contul Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

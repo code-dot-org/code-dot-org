@@ -11,7 +11,7 @@
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: Del 8 al 14 de diciembre de 2014
+  csedweek_dates: 8-14 de Diciembre, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hora de Code</a>. Se convoca
     a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color:
@@ -473,7 +473,7 @@
   homepage_slot_text_link_donate: Haga una donación
   homepage_slot_text_link_shop: Camisetas, sombreros y más
   homepage_slot_text_link_administrators: Trae a tu escuela o distrito
-  homepage_header_codestudio: Creaciones estudiantiles para Code.org
+  homepage_header_codestudio: Creaciones de estudiantes de Code.org
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
@@ -696,7 +696,7 @@
     un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.
   volunteer_engineer_submission_update_information: Actualiza tu información
   volunteer_engineer_submission_header_shared: Información compartida con maestros
-    del mapa de voluntarios
+    en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
   volunteer_engineer_submission_field_company: Empresa (o Universidad)
@@ -723,8 +723,8 @@
   volunteer_engineer_submission_field_description_placeholder: Descripción de participación
     o de experiencia. Si hablas idiomas aparte del inglés, asegúrese de incluirlo
     aquí.
-  volunteer_engineer_submission_header_private: La información es privada y nunca
-    se comparte
+  volunteer_engineer_submission_header_private: La información se mantiene privada
+    y nunca se comparte
   volunteer_engineer_submission_field_email: Dirección de correo electrónico
   volunteer_engineer_submission_field_email_desc: Tu dirección de correo electrónico
     nunca será compartida, pero te enviaremos solicitudes enviadas por docentes.
@@ -1059,8 +1059,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Si no tienes equipos, <a href='%{unplugged_url}'> prueba estas
     clases de unplugged</a> en su aula.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
   dashboard_overview: Vista previa
@@ -1078,6 +1081,8 @@
   dashboard_curriculum_csins: 'Informática en Ciencia:'
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -1335,6 +1340,7 @@
   cspexams_category_name: Prueba de práctica de principios de CS
   research_studies_category_name: Research Studies
   applab_name: Laboratorio de Aplicaciones
+  gamelab_name: Laboratorio de juego
   basketball_name: Crear un juego de baloncesto
   sports_name: Crea tu propio Juego de deportes
   applab_gradelevel: Edad 13+
@@ -1399,7 +1405,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grado 8 +
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Edad 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
@@ -2083,20 +2089,20 @@
   playlab_shortcode: jugar
   artist_shortcode: art
   header_home: Inicio
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Mi Panel de Control
   header_courses: Cursos
-  header_course_catalog: Course Catalog
+  header_course_catalog: Catalogo de cursos
   header_project_gallery: Proyectos
   header_sections: Secciones
   header_professional_learning: Aprendizaje Profesional
-  header_educate_overview: Resumen del docente
+  header_educate_overview: Resumen del Educador
   header_educate_elementary: Escuela primaria
-  header_educate_middle: Secundaria
-  header_educate_high: Escuela Secundaria
+  header_educate_middle: Escuela Secundaria
+  header_educate_high: Instituto
   header_educate_hoc: Hora del Código
-  header_educate_partner: Asociese con nosotros
+  header_educate_partner: Colabora con nosotros
   header_educate_beyond: Más allá de Code.org
-  header_educate_inspire: Inspire a un estudiante
+  header_educate_inspire: Inspira a un estudiante
   header_educate_community: Comunidad en línea
   header_educate_tools: Herramientas y videos
   header_about_us: Acerca de nosotros
@@ -2117,8 +2123,8 @@
   header_teacher_community: Comunidad de profesores
   header_help_support: 'Ayuda y soporte técnico '
   header_report_bug: Reporte los errores
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_tutorials: Tutoriales
+  header_documentation: Documentacion
   csp_name: "'16-'17 Principios de CS"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
@@ -2181,9 +2187,3 @@
     cuenta de Google":'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

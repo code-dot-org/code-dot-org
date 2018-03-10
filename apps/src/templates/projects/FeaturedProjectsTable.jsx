@@ -6,7 +6,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
-  PROJECT_TYPE_MAP,
+  FEATURED_PROJECT_TYPE_MAP,
   featuredProjectDataPropType,
   featuredProjectTableTypes
 } from './projectConstants';
@@ -115,8 +115,11 @@ const actionsFormatterFeatured = (actions, {rowData}) => {
   );
 };
 
-const feature = (channel) => {
+const feature = (channel, publishedAt) => {
   var url = `/featured_projects/${channel}/feature`;
+  if (!publishedAt) {
+    alert(i18n.featureUnpublishedWarning());
+  }
   $.ajax({
     url: url,
     type:'PUT',
@@ -128,7 +131,7 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => feature(rowData.channel)}
+        onClick={() => feature(rowData.channel, rowData.publishedAt)}
       >
         {i18n.featureAgain()}
       </PopUpMenu.Item>
@@ -137,12 +140,16 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
 };
 
 const dateFormatter = (time) => {
-  const date = new Date(time);
-  return date.toLocaleDateString();
+  if (time) {
+    const date = new Date(time);
+    return date.toLocaleDateString();
+  } else {
+    return i18n.no();
+  }
 };
 
 const typeFormatter = (type) => {
-  return PROJECT_TYPE_MAP[type];
+  return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
 class FeaturedProjectsTable extends React.Component {

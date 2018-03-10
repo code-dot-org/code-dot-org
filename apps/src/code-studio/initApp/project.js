@@ -4,6 +4,7 @@ import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -19,7 +20,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-import {queryParams, hasQueryParam} from '../utils';
+import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -30,6 +31,12 @@ var events = {
   appInitialized: 'appInitialized',
   workspaceChange: 'workspaceChange'
 };
+
+// Number of consecutive failed attempts to update the channel.
+let saveChannelErrorCount = 0;
+
+// Number of consecutive failed attempts to update the sources.
+let saveSourcesErrorCount = 0;
 
 /**
  * Helper for when we split our pathname by /. channel_id and action may end up
@@ -62,6 +69,9 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
+// Server time at which the first project version was saved from this browser tab,
+// for logging purposes.
+var firstSaveTimestamp;
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
@@ -757,8 +767,23 @@ var projects = module.exports = {
     };
 
     if (this.useSourcesApi()) {
-      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+      let params = '';
+      if (currentSourceVersionId) {
+        params = `?version=${currentSourceVersionId}` +
+          `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
+          `&tabId=${utils.getTabId()}`;
+      }
+      const filename = SOURCE_FILE + params;
       sources.put(channelId, packSources(), filename, function (err, response) {
+        if (err) {
+          saveSourcesErrorCount++;
+          this.showSaveError_('save-sources-error', saveSourcesErrorCount, err + '');
+          return;
+        }
+        saveSourcesErrorCount = 0;
+        if (!firstSaveTimestamp) {
+          firstSaveTimestamp = response.timestamp;
+        }
         currentSourceVersionId = response.versionId;
         current.migratedToS3 = true;
 
@@ -836,12 +861,39 @@ var projects = module.exports = {
       });
     });
   },
+  showSaveError_(errorType, errorCount, errorText) {
+    header.showProjectSaveError();
+    firehoseClient.putRecord(
+      {
+        study: 'project-data-integrity',
+        study_group: 'v2',
+        event: errorType,
+        data_int: errorCount,
+        project_id: current.id + '',
+        data_string: errorText,
+        // Some fields in the data_json are repeated in separate fields above, so
+        // that they can be easily searched on as separate fields, and also have
+        // appropriately descriptive names in the data_json.
+        data_json: JSON.stringify({
+          errorCount: errorCount,
+          errorText: errorText,
+          isOwner: this.isOwner(),
+          currentUrl: window.location.href,
+          shareUrl: this.getShareUrl(),
+          currentSourceVersionId: currentSourceVersionId,
+        }),
+      },
+      {includeUserId: true}
+    );
+  },
   updateCurrentData_(err, data, options = {}) {
     const { shouldNavigate } = options;
     if (err) {
-      $('.project_updated_at').text('Error saving project');  // TODO i18n
+      saveChannelErrorCount++;
+      this.showSaveError_('save-channel-error', saveChannelErrorCount, err + '');
       return;
     }
+    saveChannelErrorCount = 0;
 
     // The following race condition can lead to thumbnail URLs not being stored
     // in the project metadata:
@@ -1243,15 +1295,17 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
 }
 
 /**
- * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ * Allow setting Maker APIs enabled / disabled via URL parameters.
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
     currentSources.makerAPIsEnabled = true;
+    updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = false;
+    updateQueryParam('disableMaker', undefined, true);
   }
 }
 

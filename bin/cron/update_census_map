@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+
+# The map on code.org/yourschool is run off of a Google Fusion Table
+# (documentation: https://developers.google.com/maps/documentation/javascript/fusiontableslayer).
+# This script updates the fusion table using the REST API
+# (documentation: https://developers.google.com/fusiontables/docs/v2/using),
+# populating it with all rows from the census_summaries table for the appropriate school year.
+
+# After setting up authentication, provide the following CDO.* attributes:
+#   CDO.hoc_map_account: (JSON of a credential which can edit the FusionTables table)
+#   CDO.census_map_table_id: (the id of the fusion table)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/properties'
+
+require 'google/apis/fusiontables_v2'
+require 'googleauth'
+
+TABLE_ID = CDO.census_map_table_id.freeze
+
+def make_location(lat, long)
+  return nil if lat.nil? || long.nil?
+
+  "#{format('%.6f', lat)}, #{format('%.6f', long)}"
+end
+
+# Update summaries before updating the fusion table
+Census::CensusSummary.summarize_census_data
+
+# The map should show the data from the school year that began
+# in the previous calendar year. So, Aug-Dec we show the previous school
+# year's data and then switch over to the current school year in Jan.
+year = Date.today.year - 1
+
+file = Tempfile.new(['data', '.csv'])
+begin
+  CSV.open(file.path, 'w') do |csv|
+    Census::CensusSummary.where(school_year: year).find_each do |summary|
+      school = summary.school
+      location = make_location(school.latitude, school.longitude)
+      csv << [school.id, year, school.name.titleize, school.city.titleize, school.state, location, summary.teaches_cs]
+    end
+  end
+ensure
+  file.close
+end
+
+tables = Google::Apis::FusiontablesV2::FusiontablesService.new
+
+tables.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
+  scope: 'https://www.googleapis.com/auth/fusiontables',
+  json_key_io: StringIO.new(CDO.hoc_map_account.to_json)
+)
+
+tables.replace_table_rows(TABLE_ID, content_type: 'application/octet-stream', upload_source: file.path)

@@ -5,7 +5,7 @@ theme: responsive
 
 # Privacy Policy
 
-Date of Last Revision: February 2, 2018
+Date of Last Revision: February 22, 2018
 
 
 ## About Code.org
@@ -75,7 +75,7 @@ Forum posts and profiles | Optional | For Teachers who choose to participate in 
 <br>
 \* A Teacher account on Code.org has all the functionality of a Student account, and as a result the data collected and stored for a Teacher account is a superset of the data stored for a Student account.
 
-\*\* Code.org partners with local non-profit professional learning organizations, our “Regional Partners.” We share limited information (as outlined in this privacy policy, and never including Student personal information) with these partners to allow them to run local professional development workshops and support teachers and schools in their region. Each Regional Partner signs an Agreement with Code.org that requires them to comply with this privacy policy and to treat any information received through the partnership as confidential.
+\*\* Code.org partners with local nonprofit professional learning organizations, our “Regional Partners.” We share limited information (as outlined in this privacy policy, and never including Student Personal Information) with these partners to allow them to run local professional development workshops and support teachers and schools in their region. Each Regional Partner signs an Agreement with Code.org that requires them to comply with this privacy policy and to treat any information received through the partnership as confidential.
 
 Students and Teachers may update, correct, or delete Personal Information in their Code.org accounts at any time via the account settings page. Teachers can go to their section’s “Manage Students” tab to update the most common settings or to access a Student’s login information. Teachers also have the ability to reset the password of any Student in their section. A parent or legal guardian of a Student under the age of 18 may also review Personal Information and correct erroneous information, if any, by asking the Student or Teacher to access the Student account.
 
@@ -198,9 +198,9 @@ In particular, we do not share any Personal Information you provide with our don
 
 If your use of the Code.org Website is in the context of a partnership with your school or school district, we may allow the school or school district to access the same Student progress report that is also shared with your Teacher(s).
 
-### We may share teacher information with the teacher's training facilitators, Regional Partner, and school district
+### We may share teacher information with the teacher's training facilitators, Regional Partner, and school district, as well as other partners
 
-Part of our educational program is to offer professional learning workshops to prepare teachers to offer computer science courses. If you are a Teacher participating in one of these workshops, your name and contact information will be shared with the facilitator and/or the local Code.org Regional Partner who runs the professional learning program in your area. In addition, the facilitator, Regional Partner, and your school district will have the opportunity to access your continued progress in our in-person and online professional learning courses in order to coach you, facilitate your additional learning, and follow your professional development progress. (In some cases, your school district may require this information in order to compensate you for workshop attendance). They may also be able to see your overall class progress to support your classroom. The Regional Partner and facilitator will not have any data on specific Students, but they will be able to see the overall number of students and class demographics. If Code.org is paying for your travel to our professional learning workshops for Teachers, we will - with your explicit permission - share your name and contact information with our travel partner to facilitate booking your travel.
+Part of our educational program is to offer professional learning workshops to prepare teachers to offer computer science courses. If you are a Teacher participating in one of these workshops, your name and contact information will be shared with the facilitator and/or the local Code.org Regional Partner who runs the professional learning program in your area. In addition, the facilitator, Regional Partner, and your school district will have the opportunity to access your continued progress in our in-person and online professional learning courses in order to coach you, facilitate your additional learning, and follow your professional development progress. (In some cases, your school district may require this information in order to compensate you for workshop attendance). They may also be able to see your overall class progress to support your classroom. The Regional Partner and facilitator will not have any data on specific Students, but they will be able to see the overall number of students and class demographics. If Code.org is paying for your travel to our professional learning workshops for Teachers, we will - with your explicit permission - share your name and contact information with our travel partner to facilitate booking your travel. We may also share the list of schools (solely the school identities, without any information about teachers or students) that have participated in our professional learning program with select partners, such as a local government department of education, so long as such partners agree to treat the information as confidential. 
 
 We also provide teachers other opportunities (such as when adding their school to the map of schools teaching Computer Science) to share their contact information (name, school, email) — at their option and under their control — with a Code.org Regional Partner so that teachers can be contacted about local professional learning workshops, resources, and events. 
 
@@ -268,7 +268,7 @@ If any provision of this Privacy Policy or our Terms of Service is held invalid 
 
 ## No Commercial Use of Student Data and How to Delete Student Data
 
-Some laws, such as California’s Student Online Personal Information Protection Act (SOPIPA), prohibit the gathering of the personal information of K-12 students. Code.org abides by such laws and shall not use, disclose, or compile any student personal information for the purpose of marketing or advertising commercial products or services. We do not disclose any Personal Information to third parties for marketing purposes. You may request to have your Personal Information deleted from the Code.org database at any time.
+Some laws, such as California’s Student Online Personal Information Protection Act (SOPIPA), prohibit the gathering of the Personal Information of K-12 students. Code.org abides by such laws and shall not use, disclose, or compile any student Personal Information for the purpose of marketing or advertising commercial products or services. We do not disclose any student Personal Information to third parties for marketing purposes. A student may request to have their Personal Information deleted from the Code.org database at any time.
 
 For additional information about our privacy practices, please contact us at https://code.org/contact. You can also send us a request to review and/or delete any Personal Information you have shared with us.
 

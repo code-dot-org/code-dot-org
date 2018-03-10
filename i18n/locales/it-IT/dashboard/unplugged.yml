@@ -90,9 +90,9 @@ it:
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
         title: Gli Eventi
-        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\\r\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
-        title: Visitare Luoghi in Modo Sicuro
+        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
       GraphPaperProgramming:
         title: Programmazione su carta a quadretti
@@ -163,9 +163,6 @@ it:
       CollisionDetection:
         title: Rilevamento delle collisioni e il teorema di Pitagora
         desc: Determinare quando si toccano degli oggetti sullo schermo è un aspetto importante della maggior parte dei giochi. In questa lezione vedremo come il teorema di Pitagora e la formula per la distanza possono essere utilizzati per misurare la distanza tra due punti sul piano e poi decidere quando questi due punti o personaggi del gioco si toccano.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
@@ -182,7 +179,7 @@ it:
         title: Attività Tradizionale
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
+        title: 'Cittadinanza Digitale - Dati Personali'
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
@@ -197,11 +194,11 @@ it:
         title: Mappe Felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       courseA_unplugged_goingPlacesSafely:
-        title: Visitare Luoghi in Modo Sicuro
+        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
         title: Gli Eventi
-        desc: "Gli studenti vengono introdotti al concetto di \"eventi\" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\\r\nIn questa lezione l'insegnante \"cliccherà\" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato."
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua Impronta Digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
@@ -265,3 +262,42 @@ it:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ""
+        desc: ""
+      courseB_unplugged_loopyMRF_2018:
+        title: ""
+        desc: ""
+      DiceRace_2018:
+        title: ""
+        desc: ""
+      courseE_unplugged_privateInformation_2018:
+        title: ""
+        desc: ""
+      SongwritingParameters_2018:
+        title: ""
+        desc: ""
+      Internet_2018:
+        title: ""
+        desc: ""
+      Crowdsourcing_2018:
+        title: ""
+        desc: ""
+      TangramAlgorithms_2018:
+        title: ""
+        desc: ""
+      courseF_unplugged_powerOfWords_2018:
+        title: ""
+        desc: ""
+      EnvelopeVariables_2018:
+        title: ""
+        desc: ""
+      ForLoopFun_2018:
+        title: ""
+        desc: ""
+      SongwritingWithParameters_2018:
+        title: ""
+        desc: ""

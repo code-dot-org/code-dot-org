@@ -204,9 +204,6 @@
         title: "충돌 감지와 피타고라스의 정리"
         desc: "화면상의 오브젝트들이 언제 터치되는지 결정하는 것은 대부분의 게임에서 매우 중요하다. 이 단원에서는 피타고라스의 정리와
           거리 공식을 사용해서 평면상에 위치한 두 점사이의 거리를 측정하는 방법을 배우고, 두 점이나(게임 캐릭터)의 터치 여부를 결정해보자."
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: "이번 과정에서는 반복에 대해 배우게 됩니다."
@@ -350,3 +347,42 @@
           1. started with an `unplugged` level. populated with info. hit save and publish.\r
           2. “destroyed” the level\r
           3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''

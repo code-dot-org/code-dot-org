@@ -69,7 +69,7 @@ et:
   try_k8intro: "Proovige meie K-8 Sissejuhatus arvutiteadusesse kursust (15-25 tundi)"
   k8intro: "K-8 Sissejuhatus Arvutiteadusesse kursusele (15-25 tundi)"
   already_started: "Oled juba alustanud? Jätka siin>> "
-  demos: 'Admin: Kõik demod'
+  demos: "Admin: Kõik demod"
   continue: 'Jätka'
   prize: 'auhind'
   more_info: 'Rohkem infot'
@@ -171,6 +171,7 @@ et:
       email: 'E-posti aadress'
       submit: 'Esita'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Muuda salasõna'
@@ -214,7 +215,7 @@ et:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie õpilane.'
+        subject: "Code.org teade: %{student_name} pole enam seotud teiega kui teie õpilane."
   reports:
     error:
       access_denied: "Teil pole juurdepääsu selle isiku andmetele"
@@ -346,7 +347,7 @@ et:
     current_password_hint: '(sisesta oma parool muudatuste kinnitamiseks)'
     delete: 'Kustuta oma konto'
     delete_text: "Allolevale nupule klikkimine kustutab sinu konto."
-    delete_text_teacher_note: 'Pange tähele: konto kustutamine ei kustuta sinu õpilaste kontosid.'
+    delete_text_teacher_note: "Pange tähele: konto kustutamine ei kustuta sinu õpilaste kontosid."
     delete_confirm: 'Kas soovite kindlasti kustutada oma konto?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -357,7 +358,7 @@ et:
     create_personal_login_under_13_parent_email: 'Lapsevanem/hooldaja e-posti aadress'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -696,7 +697,7 @@ et:
     sign_out: 'Kui te ei soovi oma vanust avaldada, võite <a href="%{url}">välja logida</a>.'
   terms_interstitial:
     title: "Uuendatud teenusetingimused ja privaatsustingimused"
-    intro_desc: 'Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi. Muudatused kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta enam Code Studios <i> õpilaste kasutajakontode jaoks nende e-posti aadresse. </i> See on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti aadressile.'
+    intro_desc: "Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi. Muudatused kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta enam Code Studios <i> õpilaste kasutajakontode jaoks nende e-posti aadresse. </i> See on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti aadressile."
     intro_instructions: "Selleks, et saada ligipääs kõikidele Code Studio uutele võimalustele pead nõustuma uute tingimustega, mis on seotud alla 13-aastaste õpilastega sinu klassis. Õpilase kontot registreerides palume kinnitada, et teie koolil on vanemate nõusolek õpilaste isiklike andmete kogumiseks ja kasutamiseks kooliga seotud eesmärkidel k. a. hariduslikes programmides nagu Code Studio."
     tos: "Teenuse tingimused"
     privacy: "Privaatsuspoliitika"
@@ -712,7 +713,7 @@ et:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Salvesta"
   race_interstitial:
-    title: 'Valikuline: aita meil jälgida meie edusamme mitmekesisuse parendamisel arvutiteaduses'
+    title: "Valikuline: aita meil jälgida meie edusamme mitmekesisuse parendamisel arvutiteaduses"
     message: "Palun ütle meile, millisesse rassi kuulud (märgi kõik, millega end identifitseerid)"
     races:
       - 
@@ -756,7 +757,7 @@ et:
     delete: "Kustuta"
     import: "Impordi"
     share_link_import_bad_link_header: "Jagamise linki ei tuvastatud"
-    share_link_import_bad_link_body: 'Me ei saanud importida jagamise linki. Veenduge, et kasutate Minecrafti linki: Agent puzzle ja et olete kopeerinud terve lingi.'
+    share_link_import_bad_link_body: "Me ei saanud importida jagamise linki. Veenduge, et kasutate Minecrafti linki: Agent puzzle ja et olete kopeerinud terve lingi."
     share_link_import_error_header: "Midagi läks valesti."
     share_link_import_error_body: "Ilmnes probleem lingi importimisel. Palun proovige uuesti."
     exit: "Tagasi kursuse juurde"
@@ -859,8 +860,8 @@ et:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

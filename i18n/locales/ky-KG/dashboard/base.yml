@@ -38,7 +38,7 @@ ky:
   next_page: Next page
   next_resource: Next resource
   done_with_module: Done with this Learning Module
-  cancel: "Жокко"
+  cancel: "Жок кыл"
   okay: "Okay"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
@@ -58,8 +58,8 @@ ky:
   trophies: "Trophies"
   courses: 'Courses'
   courses_page:
-    title_student: "Learn on Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_student: "Learn Computer Science"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Unplugged Activity'
   of: "of"
   more: "MORE"
@@ -69,7 +69,7 @@ ky:
   try_k8intro: "Try our K-8 Intro to Computer Science Course (15-25 hours)"
   k8intro: "K-8 Intro to Computer Science Course (15-25 hours)"
   already_started: "Already started? Resume here >> "
-  demos: 'Admin: All Demos'
+  demos: "Admin: All Demos"
   continue: 'Улантуу'
   prize: 'prize'
   more_info: 'More info'
@@ -171,6 +171,7 @@ ky:
       email: 'Email address'
       submit: 'Кошуу'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Change your password'
@@ -220,7 +221,7 @@ ky:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
+        subject: "Code.org notification: %{student_name} is no longer associated as your student."
   reports:
     error:
       access_denied: "You don't have access to this person's stats"
@@ -352,7 +353,7 @@ ky:
     current_password_hint: '(we need your current password to confirm your changes)'
     delete: 'Delete your account'
     delete_text: "Clicking the button below will delete your account."
-    delete_text_teacher_note: 'Please note: deleting your account will not delete your students'' accounts.'
+    delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,7 +364,7 @@ ky:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -416,7 +417,7 @@ ky:
     announcement_title: "Announcements"
     announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-    announcement_learn_more_button: "Learn more"
+    announcement_learn_more_button: "Дагы кара"
     announcement_try_now_button: "Try now"
     announcement_host_an_hour_button: "Host an Hour"
     announcement_watch_video_button: "Watch video"
@@ -502,7 +503,7 @@ ky:
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      link: "Learn more"
+      link: "Дагы кара"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
@@ -690,7 +691,7 @@ ky:
     startover_title: "Кайрадан баштагыңыз келгени аныкпы?"
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
     startover_ok: "Кайра баштоо"
-    startover_cancel: "Жокко"
+    startover_cancel: "Жок кыл"
   time:
     hour: '1 hour'
     day: 'day'
@@ -702,7 +703,7 @@ ky:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Terms of Service"
     privacy: "Privacy Policy"
@@ -718,7 +719,7 @@ ky:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Save"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -762,7 +763,7 @@ ky:
     delete: "Delete"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
@@ -791,7 +792,7 @@ ky:
     delete_no: 'No'
     saved: "Saved"
     not_saved: "Not saved"
-    cancel: 'Жокко'
+    cancel: 'Жок кыл'
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
     view_all: 'View My Projects'
@@ -865,8 +866,8 @@ ky:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

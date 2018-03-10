@@ -260,9 +260,9 @@
   studiobar_donate_body: "Jedno dziecko się uczy za każdego dolara, który podarujesz"
   studiobar_shop_title: "Sklep"
   studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
-  homepage_stats_students: "of US students have accounts on Code.org"
-  homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_students: "amerykańskich studentów mają konta na Code.org"
+  homepage_stats_female: "naszych studentów to kobiety"
+  homepage_stats_teachers: "nauczyciele korzystają z Code.org"
   homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
   homepage_stats_policy: "states changed policy to support computer science"
   homepage_stats_title: "We're making a difference"
@@ -495,7 +495,7 @@
   video_title_obama: "Prezydent Obama o informatyce"
   video_title_hoc_is_here: "Godzina Kodowania jest tutaj - każdy może się uczyć"
   video_title_anybody_can_learn: "Każdy może się uczyć"
-  video_title_steph_curry: "Hour of Code with Steph Curry"
+  video_title_steph_curry: "Godzina Kodowania z Steph Curry"
   video_title_draymond_green: "Godzina Kodowania z Draymond Green"
   video_title_russell_okung: "Godzina Kodowania z Russell Okung"
   video_title_real_madrid: "Godzina Kodowania z Realem Madryt"
@@ -762,7 +762,10 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj tych lekcji bez komputera</a> w klasie."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Program nauczania"
   dashboard_curriculum_overview: "Streszczenie programu (curriculum) dla K-5"
   dashboard_overview: "Streszczenie"
@@ -780,6 +783,8 @@
   dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
   dashboard_curriculum_csp: 'AP ® Podstawy Informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Inni/inne"
   dashboard_login_word: "Słowo"
@@ -848,7 +853,7 @@
   carousel_heading_international: "Samouczki partnerów w Twoim języku"
   carousel_heading_domestic: "Samouczki partnerów dostępne w języku angielskim"
   carousel_heading_beginners: "Samouczki partnerów dla uczniów z K-8"
-  carousel_heading_beyond_beginners: Samouczki dla początkujących
+  carousel_heading_beyond_beginners: 'Samouczki dla początkujących'
   carousel_heading_javascript: "Samouczki partnerów do nauki JavaScript"
   carousel_heading_beyond_javascript: "Samouczki uczące JavaScript"
   carousel_heading_unplugged: "Nie masz komputera lub dostępu do Internet? Poznaj informatykę \"unplugged\", czyli informatykę bez komputera"
@@ -950,11 +955,11 @@
   accelerated_name: "Przyspieszony Kurs"
   express_name: "Express Course"
   pre-express_name: Ekspresowy kurs dla dzieci, które nie umieją czytać
-  cspunit1_name: '(stary) Unit 1: Informacje cyfrowe'
-  cspunit2_name: '(stary) Unit 2: Internet'
-  cspunit3_name: '(stary) Unit 3: Programowanie'
-  cspunit4_name: '(stary) Unit 4: Dane'
-  cspunit5_name: '(stary) Unit 5: Wypróbuj i Utwórz PT'
+  cspunit1_name: "(stary) Unit 1: Informacje cyfrowe"
+  cspunit2_name: "(stary) Unit 2: Internet"
+  cspunit3_name: "(stary) Unit 3: Programowanie"
+  cspunit4_name: "(stary) Unit 4: Dane"
+  cspunit5_name: "(stary) Unit 5: Wypróbuj i Utwórz PT"
   cspunit6_name: 'Post-AP: Baz Danych w Aplikacjach'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1003,6 +1008,7 @@
   cspexams_category_name: "Praktyczny Test Podstaw Informatyki"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Laboratorium Gier (Game Lab)"
   basketball_name: "Utwórz grę w koszykówkę"
   sports_name: "Zakoduj własne zawody"
   applab_gradelevel: "Wiek 13+"
@@ -1169,12 +1175,12 @@
   course2_shortdescription_congrats: "Dla uczniów z podstawową umiejętnością czytania, ten kurs jest oparty na Kursie 1. Uczniowie będą tworzyli programy, by rozwiązywać problemy i rozwijać interaktywne gry lub historyjki, którymi mogą się dzielić. Zalecane dla klas 2-5."
   course3_shortdescription_congrats: "Czy jesteście gotowi na następny poziom? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-5."
   course4_shortdescription_congrats: "Czy jesteście gotowi iść dalej? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

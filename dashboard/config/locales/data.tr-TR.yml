@@ -105,10 +105,9 @@
         turtle_1_3: Sadece 3 blok kullanarak bir kare yapın.
         turtle_1_4: 'Her seferinde farklı bir renk alan "rastgele renk" seçeneğini
           kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar
-          uzağa dönmeniz gerektiğini dönüş blogundaki numaraya tıklayarak bulmanız
+          uzağa dönmeniz gerektiğini dönüş bloğundaki numaraya tıklayarak bulmanız
           gerek.'
-        turtle_1_5: "Şimdi, uygulama için bir üçgen ve sonra bir zarf çizmek için
-          bir kare çizin."
+        turtle_1_5: "Şimdi, bir üçgen ve sonra bir kare çizerek zarf oluşturun."
         turtle_1_6: 'Bir karenin ve bir üçgenin nasıl çizileceğini anlayabildiniz
           mi? İpucu: Önce üçgeni çizin, sonra kare çizmeden önce kaç kez dönmeniz
           gerektiğini bulun.'
@@ -708,7 +707,7 @@
         C4_unplugged_forloops: For Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
         C4_unplugged_binary: "İkili"
-        CSF_a_b_artist_loops: Loops in Artist
+        CSF_a_b_artist_loops: Sanatçıların Döngüleri
         CSF_artist_angles: Sanatçı açılarda
         CSF_collector_k1_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
         CSF_collector_repeat_loops: Toplayıcı tekrarlama döngüleri
@@ -884,6 +883,7 @@
         applab_intro_sounds: App Lab - resimler ve sesler
         applab_intro_designmode: App Lab - tasarım modu
         applab_intro_share: App Lab - Uygulamanı paylaş
+        csd_applab_arrays: Dizilere Giriş
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

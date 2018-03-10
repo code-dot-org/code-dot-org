@@ -5,9 +5,9 @@ require_relative '../../lib/cdo/github'
 require_relative '../../lib/cdo/infra_test_topic'
 require_relative 'fixtures/mock_pegasus'
 
-BUILD_STARTED_PATH = deploy_dir('build-started')
-FAKE_SLACK_SLASH_TOKEN = 'fake-start-build-token'
-FAKE_GITHUB_WEBHOOK_SECRET = 'fake-github-secret'
+BUILD_STARTED_PATH = deploy_dir('build-started').freeze
+FAKE_SLACK_SLASH_TOKEN = 'fake-start-build-token'.freeze
+FAKE_GITHUB_WEBHOOK_SECRET = 'fake-github-secret'.freeze
 
 class DevRoutesTest < Minitest::Test
   describe '/api/dev/ routes' do
@@ -216,10 +216,10 @@ class DevRoutesTest < Minitest::Test
             ref: 'staging',
           },
         },
-      }
+      }.freeze
       GITHUB_PARAMS = {
         payload: GITHUB_PAYLOAD.to_json,
-      }
+      }.freeze
       before do
         $log.level = Logger::ERROR
         CDO.github_webhook_secret = FAKE_GITHUB_WEBHOOK_SECRET

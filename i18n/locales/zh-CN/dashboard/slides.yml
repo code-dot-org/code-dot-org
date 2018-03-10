@@ -118,7 +118,7 @@ zh-CN:
         text: "我们可以在“重复”块里放入”向前移动“块，并且在上面写一个数字来表示要重复多少次。"
       6:
         image: 'notes/hoc2_6.jpg'
-        text: 这一点很重要： 你可以在"重复"块中放多个命令。
+        text: "这一点很重要： 你可以在\"重复\"块中放多个命令。"
       7:
         image: 'notes/hoc2_7.jpg'
         text: "试试看使用新的\"重复\"模块吧！"
@@ -134,11 +134,11 @@ zh-CN:
         text: "如果我们在”重复直到“块里放一个”向前移动“块，小鸟会向前移动直到它抓到猪（或者撞上一堵墙）。"
       4:
         image: 'notes/hoc3_4.jpg'
-        text: 这一点很重要： 就像之前，我们可以在"重复直到"模块里放多个模块，所有这些模块都会被重复。
+        text: '这一点很重要： 就像之前，我们可以在"重复直到"模块里放多个模块，所有这些模块都会被重复。'
     if:
       1:
         image: 'notes/hoc4_1.jpg'
-        text: 你好，我是比尔！让我们来学习一个新的基本概念："如果"语句。计算机通过这个语句做决定。
+        text: "你好，我是比尔！让我们来学习一个新的基本概念：\"如果\"语句。计算机通过这个语句做决定。"
       2:
         image: 'notes/hoc4_2.jpg'
         text: "你每天都在使用\"如果\"语句。在你早上出门之前，你会想如果外面在下雨，我最好穿上我的夹克。"
@@ -259,7 +259,7 @@ zh-CN:
         text: "如果你很喜欢这一个小时的编程体验，欢迎访问 code.org 来继续你在计算机科学的学习！当你完成我们的20小时课程，你就熟练掌握了编程的基础，可以开始学习如何编写手机应用程序，机器人程序，游戏，随便你。"
       4:
         image: 'notes/hoc6_4.jpg'
-        text: 技术正在改变我们所做的一切，而不管你是否年轻： 编程是一件很好玩、 很有创意的事，任何人都可以学习 ！
+        text: "技术正在改变我们所做的一切，而不管你是否年轻： 编程是一件很好玩、 很有创意的事，任何人都可以学习 ！"
     20_wrapup:
       1:
         image: 'notes/bird.png'
@@ -388,7 +388,7 @@ zh-CN:
         text: "这些蜜蜂是不是很酷？下面的关卡中，你的目标是帮助蜜蜂到花那里采花蜜，并且到蜂窝那里酿蜂蜜。你需要用到“采花蜜”和“酿蜂蜜”模块。"
       2:
         image: 'notes/C1_bee_level_intro_2.png'
-        text: 每朵花里面的花蜜数量都不一样，有可能有1，2，3或者更多的花蜜。在红色花朵上面有个小小的数字，上面写了它有多少花蜜。所以在前进到下一格之前，确保每朵花所有花蜜都被采集了。同样的，每个蜂窝只能装一定量的蜂蜜：1个，2个，3个或者更多。确保每个蜂窝不要超过它能装的蜂蜜数量。
+        text: "每朵花里面的花蜜数量都不一样，有可能有1，2，3或者更多的花蜜。在红色花朵上面有个小小的数字，上面写了它有多少花蜜。所以在前进到下一格之前，确保每朵花所有花蜜都被采集了。同样的，每个蜂窝只能装一定量的蜂蜜：1个，2个，3个或者更多。确保每个蜂窝不要超过它能装的蜂蜜数量。"
       3:
         image: 'notes/C1_bee_level_intro_3.png'
         text: "如果你能采集所有的花米，并且都酿成蜂蜜了，就能成功通过，并到达下一关。否则，你需要再试试这一关。玩一会儿吧，看看当程序员是什么感觉。"
@@ -524,7 +524,7 @@ zh-CN:
         text: "互联网让我最喜欢的一点是，我能玩到很有趣的游戏。得分！我也喜欢画画，并且创造一些新东西分享给我的朋友。太酷了！有时候，我会浏览网站学会一些新东西，但是我只会去那些我应该去的网站。哇，恐龙！"
       6:
         image: 'notes/C1_going_places_safely_6.png'
-        text: 互联网是很有趣的地方。但是就像当你穿过家附近的街道一样，在网络中也必须小心。必须记住这些规则。规则1：每次都要经过父母同意才能玩。规则2：只和你认识的人交谈。规则3：只去你应该去的网站。
+        text: "互联网是很有趣的地方。但是就像当你穿过家附近的街道一样，在网络中也必须小心。必须记住这些规则。规则1：每次都要经过父母同意才能玩。规则2：只和你认识的人交谈。规则3：只去你应该去的网站。"
       7:
         image: 'notes/C1_going_places_safely_7.png'
         text: "哇，太有趣了！该吃饭了，我要退出了。我下次再登录的时候，会再去四处浏览。"
@@ -1106,7 +1106,7 @@ zh-CN:
         text: "使用二进制最常用的例子就是在“如果”语句中。它是编程里的经典。程序会一直往前运行，它会说，如果某件事情为真，那么做这个。否则，它不为真，就做别的。如果你想做一些复杂的事情要怎样。除了如果语句，你想在计算机里使用图片或者声音。"
       3:
         image: 'notes/C4_unplugged_binary_3.png'
-        text: 计算机只知道二进制，不知道图片，它不是二进制的，这里面没有1和0。那么你应该怎么办？这里有个例子：你有一张美丽的图片。现在这个图片实际上是某种形式的信息。所有信息都能被编码为二进制或别的，你刚刚已经弄清楚怎么做了。
+        text: "计算机只知道二进制，不知道图片，它不是二进制的，这里面没有1和0。那么你应该怎么办？这里有个例子：你有一张美丽的图片。现在这个图片实际上是某种形式的信息。所有信息都能被编码为二进制或别的，你刚刚已经弄清楚怎么做了。"
       4:
         image: 'notes/C4_unplugged_binary_4.png'
         text: "想象一下，我们将一个网格放到修毛上面，对于每个方格，我们要决定这里面是黑色多，还是白色多。我们要按照这种方法来涂色。现在，网格的每个单元格都是黑的或者白的了，然后我们说黑找那个方形就是0（二进制数字的0），白方块是1，另一个二进制的数字。你已经留下了很多1和0了。这就是你怎样用二进制表达这幅画。"
@@ -1192,7 +1192,7 @@ zh-CN:
         text: "我是约翰·维奇。我是宝开游戏公司的联合创始人之一。我们制作了像植物大战僵尸，宝石迷阵，幻幻球这样的游戏。关于游戏，不在于你能写出多好的代码，不在于你的艺术水平如何，而是你怎样让它被感到有趣，有多有趣。唯一能够检验的办法，就是多尝试，多做。通过多学习，多调整，提高你自己制作游戏的技能。"
       4:
         image: 'notes/infinity_playlab_intro_4.png'
-        text: "你有喜欢的电视游戏吗？好吧，我们会用游戏实验室，在创造游戏的路上往前一步。一个好游戏需要一个故事，每个故事都需要演员。演员会做些像说话、移动、相互交互这样的事情。也许还需要一些游戏规则来得分。今天，我们会和迪斯尼的演员们，安娜、艾莎、阿宽、大白、长发公主，来一样一样的学到怎样做到这些事情。我们会从头创造一个游戏，你可以将它共享出来，在手机上玩。"
+        text: "你有喜欢的电子游戏吗？好吧，我们会用游戏实验室，在创造游戏的路上往前一步。一个好游戏需要一个故事，每个故事都需要演员。演员会做些像说话、移动、相互交互这样的事情。也许还需要一些游戏规则来得分。今天，我们会和迪斯尼的演员们，安娜、艾莎、阿宽、大白、长发公主，来一样一样的学到怎样做到这些事情。我们会从头创造一个游戏，你可以将它共享出来，在手机上玩。"
       5:
         image: 'notes/infinity_playlab_intro_5.png'
         text: "你的屏幕被分成了三个主要的部分。左边是游戏区，是你的程序运行的地方。每一关的说明都是写在下面。中间是工具箱，里面的每个模块都是一段代码。右边的白色区域叫做工作区，是我们编写程序的地方。"
@@ -1247,7 +1247,7 @@ zh-CN:
         text: "这一课是关于计算式思维技巧，会教你如何将一个大的难的问题分解成几个简单的问题。这课的目标是写一组指令，然后别人能够跟随这些指令画出课程计划中的一个怪物出来。"
       2:
         image: 'notes/unplug2_2.png'
-        text: 同学们会被分成几个小组来写指令，然后他们会互相交换来画出怪物。小组们会使用计算式思维技巧中的4个步骤来写指令：分解和寻找模式、抽象、算法。
+        text: "同学们会被分成几个小组来写指令，然后他们会互相交换来画出怪物。小组们会使用计算式思维技巧中的4个步骤来写指令：分解和寻找模式、抽象、算法。"
       3:
         image: 'notes/unplug2_3.png'
         text: "首先，小组需要分解任务，这意味着要做一个行动计划。然后他们需要在目录里所有怪物中寻找模式。当他们找到怪物间的不同点后，他们需要抽象，或者移除那些细节。例如，目录中的怪物有不同的眼睛。但他们都有眼睛，因此我们能画出一条线，表明怪物都有眼睛。"
@@ -1260,7 +1260,7 @@ zh-CN:
         text: "在图纸编程中，我们会通过怎么只用箭头和涂鸦帮助别人重新画出图画来解释了代码是如何工作的。一个人会有一张小的图画，他们要通过只用明确的箭头来试图描述怎样重新这张图。"
       2:
         image: 'notes/unplug3_2.png'
-        text: 在这个活动中，你只能使用这些符号：向前移动一个正方形，向后移动，向上移动，向下移动，改变颜色，和用颜色填充正方形。一旦你写好代码后，将它交给另一个人来读代码，并试着重新画出这张图。
+        text: "在这个活动中，你只能使用这些符号：向前移动一个正方形，向后移动，向上移动，向下移动，改变颜色，和用颜色填充正方形。一旦你写好代码后，将它交给另一个人来读代码，并试着重新画出这张图。"
     unplug4:
       1:
         image: 'notes/unplug4_1.png'
@@ -1335,7 +1335,7 @@ zh-CN:
     starwars_intro:
       1:
         image: 'notes/starwars_intro_1.JPG'
-        text: 嗨，我是凯瑟琳 · 肯尼迪，我是《星球大战：原力觉醒》的制作人。今天你将与我们的明星之一--BB-8--合作。BB-8 是一个球形的机器人。他所做的每一个动作都由计算机软件控制。计算机影响着每一个行业，从市场营销到健康再到电影。事实上，一部像《原力觉醒》一样的电影需要数以百计的电脑工程师一起工作才能完成。
+        text: "嗨，我是凯瑟琳 · 肯尼迪，我是《星球大战：原力觉醒》的制作人。今天你将与我们的明星之一--BB-8--合作。BB-8 是一个球形的机器人。他所做的每一个动作都由计算机软件控制。计算机影响着每一个行业，从市场营销到健康再到电影。事实上，一部像《原力觉醒》一样的电影需要数以百计的电脑工程师一起工作才能完成。"
       2:
         image: 'notes/starwars_intro_2.JPG'
         text: "Hi，我是Rachel Rose，我是ILM的一名高级研发工程师，我带领动画和生物开发团队。在《原力觉醒》中，我负责帮助艺术家开发飞船的一部分，这让角色移动起来象是真的在非常遥远的星系上。"
@@ -1394,7 +1394,7 @@ zh-CN:
         text: "恭喜，你做到了! 你编写了 BB-8。我认为我们现在该准备做更难点的事情。让我们继续吧！既然你已经学会了编程的基础知识，是时候回来创建由R2-D2 和 C3PO主演的你自己的游戏了。"
       3:
         image: 'notes/starwars_events_3.JPG'
-        text: '要制作一个游戏，我们需要了解的游戏程序员每天在使用的东西: 他们被称为事件。事件告诉你的程序侦听并等待其发生。当它发生时，就会执行对应的动作。'
+        text: "要制作一个游戏，我们需要了解的游戏程序员每天在使用的东西: 他们被称为事件。事件告诉你的程序侦听并等待其发生。当它发生时，就会执行对应的动作。"
       4:
         image: 'notes/starwars_events_4.JPG'
         text: "一些事件的例子：侦听鼠标单击，方向键或触碰屏幕。"
@@ -1432,7 +1432,7 @@ zh-CN:
     starwars_blocks_intro:
       1:
         image: 'notes/starwars_blocks_intro_1.JPG'
-        text: 嗨，我是凯瑟琳 · 肯尼迪，我是《星球大战：原力觉醒》的制作人。今天你将与我们的明星之一--BB-8--合作。BB-8 是一个球形的机器人。他所做的一切和每一个动作都由计算机软件控制。计算机影响着每一个行业，从市场营销到生理健康再到电影。事实上，一部像《原力觉醒》一样的电影需要数以百计的电脑工程师一起工作才能完成。
+        text: "嗨，我是凯瑟琳 · 肯尼迪，我是《星球大战：原力觉醒》的制作人。今天你将与我们的明星之一--BB-8--合作。BB-8 是一个球形的机器人。他所做的一切和每一个动作都由计算机软件控制。计算机影响着每一个行业，从市场营销到生理健康再到电影。事实上，一部像《原力觉醒》一样的电影需要数以百计的电脑工程师一起工作才能完成。"
       2:
         image: 'notes/starwars_blocks_intro_2.JPG'
         text: "Hi，我是Rachel Rose，我是ILM的一名高级研发工程师，我带领动画和生物开发团队。在The Force Awaken原力唤醒中，我负责帮助艺术家开发飞船，那些角色中的一部分，让它们移动起来象是真的在非常遥远的星系上。"
@@ -1469,7 +1469,7 @@ zh-CN:
         text: "恭喜，你做到了! 你编写了 BB-8。我认为我们现在该准备做更难点的事情。让我们继续吧！既然你已经学会了编程的基础知识，是时候回来创建由R2-D2 和 C3PO主演的你自己的游戏了。"
       3:
         image: 'notes/starwars_blocks_events_3.JPG'
-        text: '要制作一个游戏，我们需要了解的游戏程序员每天在使用的东西: 他们被称为事件。事件告诉你的程序侦听并等待其发生。当它发生时，就会执行对应的动作。'
+        text: "要制作一个游戏，我们需要了解的游戏程序员每天在使用的东西: 他们被称为事件。事件告诉你的程序侦听并等待其发生。当它发生时，就会执行对应的动作。"
       4:
         image: 'notes/starwars_blocks_events_4.JPG'
         text: "一些事件的例子：侦听鼠标单击，方向键或触碰屏幕。"
@@ -1534,7 +1534,7 @@ zh-CN:
         text: "如果要删除方块，只要将它从堆栈拖回工具箱就行了。"
       12:
         image: 'notes/mc_intro_12.JPG'
-        text: 要想撤销更改，回到关卡开始时，使用工作区右上角的“重头开始”按钮。还有一件事，你们看到转向方块上的小三角了吗？任何时候只要看到这类三角，就表示你可以选择其他选项。我们开始编码吧！
+        text: "要想撤销更改，回到关卡开始时，使用工作区右上角的“重头开始”按钮。还有一件事，你们看到转向方块上的小三角了吗？任何时候只要看到这类三角，就表示你可以选择其他选项。我们开始编码吧！"
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
@@ -1602,7 +1602,7 @@ zh-CN:
         text: "如果你想创造自己的游戏，那真的很容易。所有你需要的只是一些基础的编程知识，然后你就可以开始玩你创造的游戏了。"
       2:
         image: 'notes/gumball_intro_2.JPG'
-        text: "你有喜欢的电视游戏吗？我们会用游戏实验室，在创造游戏的路上往前一步。一个好游戏需要一个故事，每个故事都需要演员。演员会做些像说话、移动、相互交互这样的事情。也许还需要一些游戏规则来得分。今天，我们会一样一样的学到怎样做这些事情。我们会从头创造一个游戏，你可以将它共享出来，在手机上玩。"
+        text: "你有喜欢的电子游戏吗？我们会用游戏实验室，在创造游戏的路上往前一步。一个好游戏需要一个故事，每个故事都需要演员。演员会做些像说话、移动、相互交互这样的事情。也许还需要一些游戏规则来得分。今天，我们会一样一样的学到怎样做这些事情。我们会从头创造一个游戏，你可以将它共享出来，在手机上玩。"
       3:
         image: 'notes/gumball_intro_3.JPG'
         text: "今天，我们会一样一样的学到怎样做这些事情，然后会从头创造一个游戏。你可以将它共享出来，在手机上玩。"
@@ -1653,7 +1653,7 @@ zh-CN:
         text: "如果你想创造自己的游戏，那真的很容易。所有你需要的只是一些基础的编程知识，然后你就可以开始玩你创造的游戏了。"
       2:
         image: 'notes/iceage_intro_2.JPG'
-        text: "你有喜欢的电视游戏吗？我们会用游戏实验室，在创造游戏的路上往前一步。一个好游戏需要一个故事，每个故事都需要演员。演员会做些像说话、移动、相互交互这样的事情。也许还需要一些游戏规则来得分。今天，我们会一样一样的学到怎样做这些事情。我们会从头创造一个游戏，你可以将它共享出来，在手机上玩。"
+        text: "你有喜欢的电子游戏吗？我们会用游戏实验室，在创造游戏的路上往前一步。一个好游戏需要一个故事，每个故事都需要演员。演员会做些像说话、移动、相互交互这样的事情。也许还需要一些游戏规则来得分。今天，我们会一样一样的学到怎样做这些事情。我们会从头创造一个游戏，你可以将它共享出来，在手机上玩。"
       3:
         image: 'notes/iceage_intro_3.JPG'
         text: "今天，我们会一样一样的学到怎样做这些事情，然后会从头创造一个游戏。你可以将它共享出来，在手机上玩。"
@@ -1704,7 +1704,7 @@ zh-CN:
         text: "嗨，我叫 Jens，是 我的世界 的主创意设计师。在接下来的一小时里，您将会制作自己的 我的世界 游戏。这看起来很像 我的世界，但整个世界停止了。羊没有移动，鸡没有生蛋，僵尸也傻站着不动。要让 我的世界 运转起来，全靠您添加代码。"
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 我叫梅丽莎（Melissa）我是一个我的世界研究员。我真正感兴趣的是人们如何思考以及与技术的相互作用，所以这是一份很好的工作让我如何把电子工程与心理学的结合：人们如何思考和行动。
+        text: "我叫梅丽莎（Melissa）我是一个我的世界研究员。我真正感兴趣的是人们如何思考以及与技术的相互作用，所以这是一份很好的工作让我如何把电子工程与心理学的结合：人们如何思考和行动。"
       3:
         image: 'notes/mc_2016_intro_3.jpg'
         text: "您会看到屏幕分成三个主要部分。1) 左边是 我的世界 游戏。现在这个世界冻住了，不过我们会用代码来修好。"
@@ -1812,407 +1812,407 @@ zh-CN:
         text: "接下来，我将选择事件的种类。有很多你可以选择的选项。但现在我先保留传统的老式点击的方法。"
       5:
         image: 'notes/applab_intro_events_5.png'
-        text: 'Finally I''ll add code inside the on event that will change the background color of the screen. You can read this block like a sentence: "On the event that the button is clicked run all this code."'
+        text: "最后, 我将在\"打开\"事件中添加更改屏幕背景颜色的代码。您可将代码块读作一句话：\"在单击按钮时运行所有这些代码。“"
       6:
         image: 'notes/applab_intro_events_6.png'
-        text: "Let's test it. Blocks outside an onEvent still run right away so the screen starts blue."
+        text: "我们来测试一下。`onEvent()`（当事件发生时）以外的代码块即刻运行, 所以屏幕变为蓝色。"
       7:
         image: 'notes/applab_intro_events_7.png'
-        text: "And when I click the big button the code inside my onEvent runs and my screen turns green."
+        text: "当我点击大按钮时, 在`onEvent()`（当事件发生时）中的代码运行了，所以我的屏幕变成绿色。"
       8:
         image: 'notes/applab_intro_events_8.png'
-        text: "If you want to change more things after the event, like the text on the screen just add more code to the onEvent"
+        text: "如果你想在事件发生后改变更多的东西，比如屏幕上的文本，在onEvent里增加更多的代码就行。"
       9:
         image: 'notes/applab_intro_events_9.png'
-        text: "To make your program respond to more events add more onEvent blocks. Just make sure not to put them inside of each other. Now it's time to try it out for yourself. Have fun!"
+        text: "为了让你的程序能够响应更多的时间，可以增加更多的onEvent模块。但要确保不要将它们相互嵌套了。现在是时候自己试试了！好好玩！"
     applab_intro_sounds:
       1:
         image: 'notes/applab_intro_sounds_1.png'
-        text: "Next you'll learn about adding images and sounds to your app. Let's start by checking out the sound options."
+        text: "现在你会学习往应用里增加图片和声音。让我们先看看声音的选项。"
       2:
         image: 'notes/applab_intro_sounds_2.png'
-        text: "In the tool box you'll find a new block called \"playSound\". Drag it into the workspace. You can pick a sound to play by clicking the drop-down then clicking \"Choose\"."
+        text: "在工具箱中，你会找到一个叫做\"playSound\"的新模块。将它拖拽到工作区中。你可以通过点击下拉框，然后点击\"选择\"来选择一个声音播放。"
       3:
         image: 'notes/applab_intro_sounds_3.png'
-        text: "From here you can either upload a sound file from your computer, or search for a sound from the sound library. The sound library has lots of different categories like instruments, background music or animals."
+        text: "在这里，你可以选择从电脑里上传一个声音，或者从声音库里搜索一个声音。声音库有很多不同类别，比如指令，背景音乐或动画。"
       4:
         image: 'notes/applab_intro_sounds_4.png'
-        text: "Once you've got the sound you want, click \"Choose\". When this block runs, it will play the sound you chose."
+        text: "一旦你选好了声音，点击\"选择\"。当模块开始运行时，它会播放你选择的声音。"
       5:
         image: 'notes/applab_intro_sounds_5.png'
-        text: "To add images to your elements you can just use the setProperty block. Select the image property in the second drop-down"
+        text: "为了往你的元素里添加图片，你可以使用setProperty（设置属性）模块。在第二个下拉框中选择image（图片）属性。"
       6:
         image: 'notes/applab_intro_sounds_6.png'
-        text: "Then select \"Choose\" from the third drop down."
+        text: "然后从第三个下拉框中\"选择\"。"
       7:
         image: 'notes/applab_intro_sounds_7.png'
-        text: "From here you can upload an image from your computer or you can look through a huge library of icons in the icon library."
+        text: "在这里，你能从电脑里上传一张图片，或者从巨大的图标库中选择一个。"
       8:
         image: 'notes/applab_intro_sounds_8.png'
-        text: "Back in code mode you can use the \"setProperty\" block to change the icon color of your icon. Once you've picked what image your icon to use click \"Run\" to see how it looks."
+        text: "返回代码模式，你能使用\"setProperty\"（设置属性）来改变图标的颜色。一旦你选好了使用什么图片，点击\"运行\"来看看它是否工作。"
       9:
         image: 'notes/applab_intro_sounds_9.png'
-        text: "That's all there is to it! Now you can start adding images and sounds to make your apps even more fun and dynamic."
+        text: "就这些了！现在开始增加图片和声音来让你的应用更有趣，并有更多变化吧。"
     applab_intro_designmode:
       1:
         image: 'notes/applab_intro_designmode_1.png'
-        text: "To build your own apps you're going to need to start designing screens and elements from scratch. App Lab makes this easy to do with Design Mode."
+        text: "为了建立你自己的应用，你要从头开始设计屏幕和元素。使用应用实验室的设计模式会更容易。"
       2:
         image: 'notes/applab_intro_designmode_2.png'
-        text: "Use the switch on top of your app to go into Design Mode."
+        text: "用你应用上的这个开关来进入设计模式。"
       3:
         image: 'notes/applab_intro_designmode_3.png'
-        text: "You can add new elements by dragging them onto the screen. You can move them around to different locations and change their size by dragging the bottom right corner."
+        text: "你能通过将新元素拽到屏幕上来增加它。你也能将他们挪动到不同的地方，通过拖拽他们的右下角来改变尺寸。"
       4:
         image: 'notes/applab_intro_designmode_4.png'
-        text: "To change an element's properties use the controls on the right. For example, it's really easy to change this button's text, color, and font size."
+        text: "用右边的控制台能够改变一个元素的属性。例如，这里很容易能改变按钮的文本、颜色和字体。"
       5:
         image: 'notes/applab_intro_designmode_5.png'
-        text: "When you add a new element to your screen it'll get a generic ID like button1. It's a good idea to change this button's ID to something more meaningful like \"rightButton\". So that you'll know which one it is when you go to the program."
+        text: "当你将一个新元素添加到屏幕上后，它会有一个通用的ID（标识），如button1（按钮1）。最好将这个按钮的ID改为有意义的内容，比如\"右按钮\"。这样返回程序时能知道这个哪一个按钮。"
       6:
         image: 'notes/applab_intro_designmode_6.png'
-        text: "If you add an element to your app by mistake, just drag it out or hit the delete."
+        text: "如果你不小心添加了一个错误的元素到应用里，只需要将它拖出来，或者点击\"删除\"。"
       7:
         image: 'notes/applab_intro_designmode_7.png'
-        text: "You can add entirely new screens to your app by dragging in a screen element"
+        text: "你能通过往应用里拖出一个screen（屏幕）元素来增加一整个新屏幕。"
       8:
         image: 'notes/applab_intro_designmode_8.png'
-        text: "From the drop-down at the top you can quickly switch back and forth between the screens you create."
+        text: "从最上面的下拉框里，你能很快的在创建的屏幕间切换。"
       9:
         image: 'notes/applab_intro_designmode_9.png'
-        text: "Inside your app, you'll need a way to switch between all of these screens, so the setScreen block has been added to the toolbox. Use \"setScreen\" inside the \"onEvent\" block to change screens at the click of a button."
+        text: "在你的应用里，你需要一个方法在所有这些屏幕间切换。工具箱中的setScreen（设置屏幕）模块能做到这一点。将\"setScreen\"（设置屏幕）放到\"onEvent\"（当事件发生时）模块中，当点击按钮时切换屏幕。"
       10:
         image: 'notes/applab_intro_designmode_10.png'
-        text: "In the next few levels you'll be working on a single project. First you'll add a button then you'll add a new screen and finally you'll write code so that the button switches to the new screen."
+        text: "在接下来的几关里，你会一直做一个项目。首先，你会添加一个按钮，然后添加一个新屏幕。最后你会写一些代码，在按下这个按钮时切换到这个新屏幕。"
     applab_intro_share:
       1:
         image: 'notes/applab_intro_share_1.png'
-        text: "Now that you've learned some of the basics of App Lab like adding buttons, sounds, images, text and new screens you can make all sorts of apps."
+        text: "现在，你已经学会了应用实验室的一些基础知识，比如添加按钮，声音，图片，文本和新屏幕。你可以做任何应用了。"
       2:
         image: 'notes/applab_intro_share_2.png'
-        text: "In the next level you'll find the app you just finished building. With a little creativity, you can turn this into a personality quiz for your friends, a greeting card that you can share with your family or a choose-your-own-adventure game. All of these apps are just a combination of the skills you've already learned, and I bet you can come up with even more."
+        text: "在下一关，你能找到刚刚创建的应用。加上一点小创新，你能将它变成一个给朋友的小测试，一张分享给家庭的贺卡，或者一个《惊险岔路口》游戏。所有这些应用，通过你已经学会的技巧来组合一下就可以做到，你一定有更多的主意。"
       3:
         image: 'notes/applab_intro_share_3.png'
-        text: "Once you're done with your app you can easily send it to your phone to see how it looks. Just click \"Share\" and enter your phone number here."
+        text: "一旦你完成了应用，就能很容易的发到手机上看看效果。只需要点击\"分享\"，然后输入你的手机号码。"
       4:
         image: 'notes/applab_intro_share_4.png'
-        text: "You'll receive a text message that'll let you open up your app instantly."
+        text: "你会收到一条短信，让你能立刻打开你的应用。"
       5:
         image: 'notes/applab_intro_share_5.png'
-        text: "You can also share a link to your app over social media or post it to the code.org public gallery for other people to play and share."
+        text: "你也可以把应用的链接通过社交媒体分享，或者将它发布到code.org的公开应用库里，这样其他人就能玩了。"
       6:
         image: 'notes/applab_intro_share_6.png'
-        text: "You've just scratched the surface of what App Lab can do. Full App Lab features more advanced user interactions, new screen elements and even a built-in database so you can quickly build full featured apps. At \"code.org/applab\" you'll find the full tool and lots of ideas if you want to keep going."
+        text: "你刚刚接触的是应用实验室能够做的一小部分。完整的应用实验室的功能能够进行更高级的用户交互，有新的屏幕元素，甚至可以内建一个数据库，这样你能够很快创建一个有完整功能的应用。如果你继续下去，就能在\"code.org/applab\"你能够找到所有的工具，以及大量的创意。"
       7:
         image: 'notes/applab_intro_share_7.png'
-        text: "Thanks for coming along the ride. Now go build and share your first app, and keep on building apps with App Lab!"
+        text: "感谢你看完整个介绍。现在，去应用实验室创建并分享你的第一个应用，然后接着创建更多的吧！"
     mc_2017_agent_intro:
       1:
         image: 'notes/mc_2017_agent_intro_1.png'
-        text: 'Stacy: Stampy, Lizzy, Preston - thank you for coming with me. What I want to show you is just over this mesa plateau. I think you''re going to love it!'
+        text: "史黛西：斯坦佩，丽琪，普雷斯顿 - 谢谢你们和我一起来。我想给你们看看这个平台高原。我想你们会爱上它的。"
       2:
         image: 'notes/mc_2017_agent_intro_2.png'
-        text: "Wait a minute - there's a hole in the track! (screaming)"
+        text: "等等 - 轨道上有个洞！（尖叫）"
       3:
         image: 'notes/mc_2017_agent_intro_3.png'
-        text: 'Is everyone okay? Stampy: Ah, I see the problem. Look! There was a hole in the track. Stacy: Really, Stampy? Lizzy: Maybe we should gather blocks to fix it. Preston: Let''s make it a race. First one back to the top wins. Stacy: Ok, on your mark, get set, GO! Ok, I''m just gonna gather some of this terracotta. Wait. Guys, I can''t mine! Preston: Same. Lizzy: I can''t either. Stacy: Ok, that is really strange. Stampy, can you mine? Stampy: I can''t mine! Stacy: Ok, everyone stay calm. Stampy: Is the game broken? Stacy: If it is, how do we fix it? Lizzy: I don''t know. Stampy: Does anyone know how to write Minecraft code?'
+        text: "大家都还好吗？斯坦佩：啊，我看到问题了。看！轨道上有个洞。史黛西：斯坦佩，真的？丽琪：也许我们能收集一些方块来修好它。普雷斯顿：我们来比赛吧，第一个返回上面的人算赢。史黛西，好，各就各位，预备，开始！好，我要手机一些粘土。等等。伙计们，我挖不动！普雷斯顿：我也是。丽琪：我也挖不动。史黛西：好了，这也太奇怪了。斯坦佩，你能挖吗？斯坦佩：我也不能！史黛西：好吧，大家先冷静一下。斯坦佩：这个游戏坏了吧？史黛西：如果是的话，我们能修好它吗？丽琪：我不知道。斯坦佩：有谁知道怎么写《我的世界》代码吗？"
       4:
         image: 'notes/mc_2017_agent_intro_4.png'
-        text: '(poof) Preston: What is that? Stampy: I''ve never seen one of these before. Lizzy: It''s so adorable! Stacy: Is it...is it tameable? Preston: Okay, what is going on? Someone needs to go back to the real world and fix this.  All: Not it! Stacy: Not i- (Sigh.) Ok, I''ll go.'
+        text: "（嗖）普雷斯顿：那是什么？斯坦佩：我从没见过这个。丽琪：太可爱了！史黛西：这个可以驯服吗？普雷斯顿：好吧，怎么回事？有人需要返回真实世界，并且修好它。大家说：不！史黛西：我不去 - （唉）好吧，我去。"
       5:
         image: 'notes/mc_2017_agent_intro_5.png'
-        text: "Oh, okay, hey, so I'm in the real world now. I'm going to go try to find the Minecraft offices."
+        text: "哦，好了。嗨，我现在在真实世界里了。我要去找找《我的世界》的办公室。"
       6:
         image: 'notes/mc_2017_agent_intro_6.png'
-        text: "But, I'm going to need your help. Start doing the tutorial, start learning how to code, and I'll catch up with you guys after a few levels, okay? Wish me luck! I think it's this way. Ow! Cactus! I'm okay!"
+        text: "但是 ，我需要你的帮助。从教程开始，学习如何编写代码，我会在几关之后赶上你的进度。好吗？祝我好运！我觉得应该是这条路。嗷！仙人掌！我还好！"
       7:
         image: 'notes/mc_2017_agent_intro_7.png'
-        text: "To complete the Hour of Code challenge, you'll need to write code to program the agent. You'll work together with The Agent to clear any obstacles in your path, so you can pick up the items you'll need for your journey. Only the Agent can place and break blocks, and only you can collect items. Your screen is split into three main parts. On the left is Minecraft."
+        text: "为了完成编程一小时挑战，你需要写代码来给代理人变成。你要和代理人一起协作，来清除路径上的任何路障，让你能捡起探险需要的物品。只有代理人能够放置或摧毁方块，而你只能收集它们。你的屏幕被分成了三个部分。左边是《我的世界》。"
       8:
         image: 'notes/mc_2017_agent_intro_8.png'
-        text: "The middle area is the toolbox with commands that the Agent can understand."
+        text: "中间区域是代理人能够理解的命令的工具箱。"
       9:
         image: 'notes/mc_2017_agent_intro_9.png'
-        text: "And on the right, is the workspace. That's where you stack the commands to build your program to control the Agent."
+        text: "右边是工作区。这是你堆放命令来构建程序，控制代理人的地方。"
       10:
         image: 'notes/mc_2017_agent_intro_10.png'
-        text: "The Agent can walk, turn, and activate pressure plates. It can also destroy blocks and place blocks. When it places the block like these minecart rails, it places it underneath itself."
+        text: "代理人可可以走，转向，激活压力板。他也能摧毁、放置方块。当它将方块像这些铁轨一样放下时，方块会被放到它下面。"
       11:
         image: 'notes/mc_2017_agent_intro_11.png'
         text: "如果您忘记要做什么，顶部会显示每一关的说明。"
       12:
         image: 'notes/mc_2017_agent_intro_12.png'
-        text: "If you want to try again, you can hit the blue reset button to reset everything to where it started. And if you need to delete a block of code, drag it from your workspace to the toolbox. Remember to hit run to get the Agent moving. Okay, go ahead and try out the first few levels. Good luck!"
+        text: "如果你想再来一次，你可以点击蓝色的重置按钮来将所有东西恢复到开始的状态。如果你需要删除一个代码模块，就将它从工作区拖回工具箱。记住点击运行来让代理人移动。好了，开始尝试前几关吧。祝你好运！"
     mc_2017_repeat:
       1:
         image: 'notes/mc_2017_repeat_1.png'
-        text: 'Stampy: I wonder what Stacy is up to?'
+        text: "斯坦佩：我想知道史黛西在干什么？"
       2:
         image: 'notes/mc_2017_repeat_2.png'
-        text: 'Stacy: Woah, I think I''m in the right place. This is amazing!'
+        text: "史黛西：哇哦，我觉得我到了。真是太棒了！"
       3:
         image: 'notes/mc_2017_repeat_3.png'
-        text: "I feel like I'm back in Minecraft! Hello. How are you? Hello?"
+        text: "我觉得我还在《我的世界》里！你好吗？你好？"
       4:
         image: 'notes/mc_2017_repeat_4.png'
-        text: 'Oh, there''s a creeper. You don''t do anything, do you? Katie: Stacy? Stacy:Hi, Katie? Katie: Yes, welcome to Minecraft!'
+        text: "哦，这是个苦力怕。别做任何事情…… 凯蒂：史黛西？ 史黛西：你好，凯蒂？ 凯蒂：是的，欢迎来到《我的世界》！"
       5:
         image: 'notes/mc_2017_repeat_5.png'
-        text: 'Stacy: This is amazing. So you work here every day as a developer, right? Katie: Yeah, it''s pretty awesome. I''m a developer on the Minecraft marketplace team. Stacy: How many coding languages do you know? Katie: In my career I''ve probably worked with over a dozen. Stacy: A dozen? Katie: Yeah. Stacy: So now, you wouldn''t happen to know anything about this little golem guy that calls himself the Agent? Katie: We use the Agent to do things that Steve or Alex can''t, like go across lava. Stacy: Well, I want to learn how to code, and they want to learn how to code, so what is one of the first things that you need to know when you''re learning?'
+        text: "史黛西：这太棒了。所以你是个程序员，每天都在这里工作，对吗？ 凯蒂：是的，的确非常棒。我是一个《我的世界》市场团队的程序源。 史黛西：你会多少种编程语言？ 凯蒂：在我的整个职业生涯中，我可能使用过超过一打的语言。 史黛西：一打？ 凯蒂：是啊。 史黛西：所以现在，你不会正好知道这个管自己叫做”代理人“的小机器人的事情吧？ 凯蒂：我们用代理人来做一些斯蒂夫和艾利克斯不能做的事情，比如穿过熔岩。 史黛西：好的，我想学一些代码了，并且他们也想学习如何写代码。那么当你开始学习时，什么是首先需要知道的事情？"
       6:
         image: 'notes/mc_2017_repeat_6.png'
-        text: 'Katie: Well, you need to learn how to use loops. Loops are things that developers write to give commands to a computer that can be run over and over again. Stacy: Got it, so I think there''s actually some of that coming up in the levels ahead, so go ahead and give loops a try.'
+        text: "凯蒂：嗯，你需要学习如何使用循环。循环让程序员写给计算机的命令能够一遍又一遍的执行。 史黛西：明白了，所以我想实际上在接下来的几关里，会开始尝试循环。"
       7:
         image: 'notes/mc_2017_repeat_7.png'
-        text: "In the next level, you can use a loop to move the Agent along the path. Drag the repeat block into the workspace and place the move forward block inside the repeat block. This tells the computer to do the same thing many times in a row without having to drag a whole bunch of blocks into the workspace. You can choose how many times to repeat by putting a number in the repeat block."
+        text: "在下一关中，你会用循环来让代理人沿着路径移动。将重复模块拖拽到工作区中，并将向前移动模块放到重复模块中。这告诉计算机连续的做一件事情多次，而不用将一大堆同样的模块拖入工作区中。你可以通过在重复模块中放一个数字来选择重复多少次。"
       8:
         image: 'notes/mc_2017_repeat_8.png'
-        text: "You can put turns and multiple commands in the repeat block too, but for now try using a repeat to move the Agent forward a few steps. Remember, if you get stuck on a puzzle you can always hit the blue reset button and try again."
+        text: "你也能在重复模块中放上转向、和多个命令。但现在，我们只需要试着用重复来将代理人向前移动几步。记住。如果你在某关被男主了，随时可以点击重置按钮来重试。"
       9:
         image: 'notes/mc_2017_repeat_9.png'
-        text: 'If you are thinking about having a cool job like Katie''s, go ahead and click the show code button when you finish every level. That''s going to actually show you the Javascript code that someone like Katie uses when she''s actually programming Minecraft. Katie: Yeah, good luck everyone!'
+        text: "如果你想有一份像凯蒂一样酷的工作，当你完成每个关卡后，点击显示代码按钮。这会让你看看像凯蒂一样的程序员，在《我的世界》编程时，所使用的真正的Javascript代码。 凯蒂：是的，祝大家好运！"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
-        text: 'Preston: I''m not trying to brag, but I''m pretty good at parkour. Lizzy: Let''s sleep so it''s day when Stacy comes back.'
+        text: "普雷斯顿：我不是在吹牛，但我确实很擅长跑酷。 丽琪：让我们睡一下吧，这样史黛西回来的时候会是白天的。"
       2:
         image: 'notes/mc_2017_functions_2.png'
-        text: 'Stacy: Ok guys, I am back from the Minecraft offices, and I think I know how to solve the problem I''m having in my game. I think I can use a function. Let me just open this.'
+        text: "史黛西：好了，伙计们，我从《我的世界》办公室回来了。我也想到了应该如何解决我的游戏里的这个问题了。我想我能用一个函数。让我先打开这个。"
       3:
         image: 'notes/mc_2017_functions_3.png'
-        text: "So a function is a specific set of instructions to accomplish a certain task, kind of like a recipe. In the next few levels, you'll have access to functions that you can use to solve the puzzles."
+        text: "函数是完成一个特殊任务的一系列指令的集合，就像一个食谱。在接下来的几关里，你会使用函数来通过这些关卡。"
       4:
         image: 'notes/mc_2017_functions_4.png'
-        text: "Look at the code in the function when it's in the workspace to see what it does."
+        text: "看看工作区里函数的代码，来理解它做了些什么。"
       5:
         image: 'notes/mc_2017_functions_5.png'
-        text: "Then, find the block with that name in the toolbox and drag it from the toolbox to the when run block."
+        text: "然后，在工具箱里找找有这个名字的模块，将它从工具箱里拖出来，放到当运行时模块下。"
       6:
         image: 'notes/mc_2017_functions_6.png'
-        text: "Remember, you can use the same function every time you need to run the same set of instructions to do something, like build a bridge. Good luck, I know you can do it!"
+        text: "记住，你每次需要运行同一组指令来做什么事情时，就可以用同一个函数了。比如建造一座桥。祝你好运，我知道你能做到！"
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: 'Preston: Congratulations!'
+        text: "普雷斯顿：祝贺你！"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: 'Lizzy: Congratulations!'
+        text: "丽琪：祝贺你！"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: 'Stampy: Congratulations, you did it!'
+        text: "斯坦佩：祝贺你，你做到了！"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: 'Stacy: Congratulations guys, you totally rocked that! And now that you''ve completed the Hour of Code, you can start coding in Minecraft. You''ve learned about loops, functions, and what a software Agent does.'
+        text: "史黛西：祝贺你，伙计。你完全做到了！现在你已经完成了编程一小时，你可以开始在《我的世界》写代码了。你已经学到了循环，函数和一个软件代理人能够做到的事情。"
       5:
         image: 'notes/mc_2017_congratulations_5.png'
-        text: "Now, it's time for the free play level, where you are the developer. Use any remaining time to write your own functions to explore, mine, and build."
+        text: "现在，是时候作为一个程序员，进行自由发挥了。用接下来的时间写你自己的函数来探索，采矿，并创建吧。"
       6:
         image: 'notes/mc_2017_congratulations_6.png'
-        text: 'You can take the code that you write in this level into your Minecraft world on Minecraft: Education Edition. Just click ''Finish'' and follow the instructions for getting the link to use in your world. to continue coding with the Agent. Have fun, and good job!'
+        text: "你可以将这个关卡的代码写的代码放到你的《我的世界》：教育版中。只用点击完成，然后跟着说明来获得链接，并在你的世界中使用。继续用代理人编程。做得好，好好玩！"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
-        text: 'Stacy: And I''m back! Okay, you guys, this is the Agent! Let me show you what it can do. Look, it''s doing it! I told it to build a staircase out of these terra cotta blocks, now we can just use this to get out of here. And you guys, it''s not just staircases. I can tell the Agent to do anything I want, and it will do it for me.'
+        text: "史黛西：我回来了！好的，伙计们，这是代理人！让我给你们展示一下它能做什么。看，它在干活儿！我告诉它用粘土块做一个楼梯，现在，我们可以用它离开这里了。伙计们，它不仅仅能做楼梯，我能让代理人做任何我想的事情，它都能帮我做到。"
       8:
         image: 'notes/mc_2017_congratulations_8.png'
-        text: 'Stampy: How did you do that? Stacy: It was easy, actually. I just used code!'
+        text: "斯坦佩：你是怎样做到的？ 史黛西：很简单。实际上，我在使用代码！"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
-        text: 'Everywhere you look, computers are changing the world. Whether they''re on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don''t often ask: "How do computers work?" In this series, you''re going to learn how computers really work, starting with what makes a computer a computer. Then, you''ll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds.'
+        text: "你能看到的每个地方，计算机都在改变世界。无论它们在我们的桌子上，家里，口袋里，或者别的地方，今天，我们大部分人都在用这些革命性的技术。我们不常说：“计算机是如何工作的？“在这一系列中，从计算机由什么组成来开始，你会学习到计算机实际上是如何工作的。然后，你会看到信息是如何在计算机内部表达的，即如何通过微小的电信号超高速的开和关来实现的。"
       2:
         image: 'notes/csd_concept_how_computers_work_2.png'
-        text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."
+        text: "这之后，你会学习到计算机如何通过电路来做到从简单的数学计算到模拟整个虚拟世界的所有事情。然后，你会从概括的角度看到计算机的不同部分，包括输入、输出、计算和存储所有的信息。最后，你会看看代码实际上是什么，软件是如何控制硬件的。你是否好奇你每天使用的谁，或者你还想做一些未来的创新，那么，第一步就是学习计算机是如何工作的。"
     csd_concept_computer:
       1:
         image: 'notes/csd_concept_computer_1.png'
-        text: "My name is May-Li Khoe and I'm a designer and an inventor. So some of the things I've designed have been at Apple, and now I design products for kids to use so that they can have an easier time in school. My other jobs include DJ-ing and dancing."
+        text: "我是May-Li Khoe，我是一名设计师，也是一位发明家。我以前是在苹果做设计，现在我为孩子们做设计，让他们能够在学校里更容易的学习。除此之外，我的工作还包括音乐主持人和跳舞。"
       2:
         image: 'notes/csd_concept_computer_2.png'
-        text: "Computers are everywhere! They're in people's pockets, they're in people's cars, people have them on their wrists. They might be in your backpack right now. But what makes a computer a computer? What does make a computer a computer anyway? And how does it even work?"
+        text: "计算机无处不在！它们在人们的口袋里，汽车里，手腕上。它们也许现在就在你的背包里。但是，计算机是由什么组成的呢？什么是计算机呢？而且，计算机是如何工作的呢?"
       3:
         image: 'notes/csd_concept_computer_3.png'
-        text: "Hi I'm Nat! I was one of the original designers of the Xbox. I've been working with computers since I was maybe seven years old and now I work on virtual reality. As humans, we've always built tools to help us solve problems. Tools like a wheelbarrow, a hammer, or a printing press, or a tractor-trailer."
+        text: "大家好，我是Nat！我原来是一名Xbox的设计师。我从7岁大时就开始用电脑工作，现在我在做虚拟现实方面的工作。作为人类，我们一直都在构建工具来帮助我们解决问题。比如，手推车，锤子，或者印刷机，再比如载重拖车。"
       4:
         image: 'notes/csd_concept_computer_4.png'
-        text: "All of these inventions helped us with manual work. Over time, people began to wonder if a machine could be designed and built to help us with the thinking work we do, like solving equations or tracking the stars in the sky. Rather than moving or manipulating physical things like dirt and stone, these machines would need to be designed to manipulate information. As the pioneers of computer science explored how to design a thinking machine, they realized that it had to perform four different tasks."
+        text: "所有这些都能帮助我们做体力劳动。随着时间的过去，人们开始好奇，是否机器能够帮助我们设计，或做一些脑力劳动，比如解决方程，或者跟踪天上的星星。除了被用来移动或操作物质，如泥土、石头，这些机器也许能够被设计来操作信息。计算机科学的先驱们开始探索如何设计一台会思考的机器，他们也意识到，它应该能执行4种不同的任务。"
       5:
         image: 'notes/csd_concept_computer_5.png'
-        text: "It would need to take input, store information process it and then output the results. Now this might sound simple, but these four things are common to all computers. That's what makes a computer a computer."
+        text: "它应该能获取输入，存储并处理信息，然后输出结果。现在，这个也许听起来很简单。但这是所有计算机都具有的功能，是计算机不可或缺的部分。"
       6:
         image: 'notes/csd_concept_computer_6.png'
-        text: "Computers started out as basic calculators, which was already really awesome at the time, and they were only manipulating numbers back then. But now we can use them to talk to each other, we can use them to play games, control robots, and do any crazy thing that you could probably imagine. Modern computers look nothing like those clunky old machines but they still do these same four things."
+        text: "计算机从最简单的基本的计算器开始，虽然他们只能操作一些数字，这在当时也是非常令人震惊的。但现在，我们能用计算机互相聊天，玩游戏，控制机器人，做任何你可能想到的疯狂的事情。现代计算机一点也不像最早的笨重的计算机，但它们一样拥有这4样东西。"
       7:
         image: 'notes/csd_concept_computer_7.png'
-        text: "First, we're going to talk about input. You can tell computers what to do with the keyboard, you can tell them what to do with the mouse, the microphone, the camera. All these different inputs give a computer information, which is then stored in memory."
+        text: "首先，我们来谈谈输入。你能通过键盘告诉计算机做什么，也能通过鼠标、麦克风、摄像头告诉计算机。这些不同的输入都给了计算机信息，计算机将信息存入存储中。"
       8:
         image: 'notes/csd_concept_computer_8.png'
-        text: "A computer's processor takes information from memory. It manipulates it or changes it using an algorithm, which is just a series of commands. And then it sends the processed information back to be stored in memory again. This continues until the processed information is ready to be output."
+        text: "计算机的处理器从存储中获取信息。然后操作它，或者用一系列命令构成的算法来改变它。然后将处理玩的信息再返回到存储中。这个过程不停的重复，直到信息准备好输出了。"
       9:
         image: 'notes/csd_concept_computer_9.png'
-        text: "How a computer outputs information depends on what the computer is designed to do. A computer display can show text, photos, videos, or interactive games -- even virtual reality! The output of a computer may even include signals to control a robot."
+        text: "计算机如何输出信息，是取决于计算机被用来做什么。计算机能够显示文本、照片、视频或者交互游戏 -- 甚至虚拟现实！计算机的输出甚至包括用信号来控制机器人。"
       10:
         image: 'notes/csd_concept_computer_10.png'
-        text: "And who knows what the computers of tomorrow will be like? My hope is that you get to help decide what you want the computers of tomorrow to look like. But across all computers, regardless of the different types of technology they use, they're always doing those same four things. They take in information, they store it as data, they process it, and then they output the results."
+        text: "谁能知道未来的计算机长什么样子呢？我希望你能够帮助决定未来的计算机是什么样的。但是所有的计算机，不管用了什么用的技术，他们都会有这4样相同的东西。它们会获取信息，存储成数据，处理它，然后再输出结果。"
     csd_concept_binary_data:
       1:
         image: 'notes/csd_concept_binary_data_1.png'
-        text: "Hi! My name is Limor Fried, and I'm an engineer here at Adafruit Industries. And this is where I do engineering and design, and I design circuits for fashion and music and technology."
+        text: "嗨！我是Limomr Fried，我是Adafruit工业的一名工程师。这是我做工程和设计的地方，我为时尚、音乐和科技设计电路。"
       2:
         image: 'notes/csd_concept_binary_data_2.png'
-        text: "My name is Federico Gomez Suarez, and I'm a software developer with Microsoft Hack for Good. And I look into using technology to help us solve some of the big social problems of our times."
+        text: "我叫Federico Gomez Suarez，我是微软编程至善的一名软件开发工程师。我通过使用技术来解决当前时代的一些大的社会问题。"
       3:
         image: 'notes/csd_concept_binary_data_3.png'
-        text: "You may have heard that computers work on ones and zeros. But almost nobody today actually deals directly with these ones and zeros. But ones and zeroes do play a big role in how computers work on the inside."
+        text: "你可能听说过计算机是通过1和0来工作的。但今天，几乎没人直接使用这些1和0与据算计打交道。但是1和0在计算机内部的工作原理上，发挥了巨大的作用。"
       4:
         image: 'notes/csd_concept_binary_data_4.png'
-        text: "Inside a computer are electric wires and circuits that carry all the information in a computer. How do you store or represent information using electricity?"
+        text: "在计算机里，电线和电路运送所有的信息。那我们是如何用电流来存储或表达信息的呢？"
       5:
         image: 'notes/csd_concept_binary_data_5.png'
-        text: "Well, if you have a single wire with electricity flowing through it, the signal could either be on or off. That's not a lot of choices, but it's a really important start. With one wire, we can represent a yes or no, true or false, a one or zero, or anything else with only two options. This on/off state of a single wire is called a bit, and it's the smallest piece of information a computer can store."
+        text: "如果你有一条线，当有电流通过它时，电信号要么是开，要么是关。这没有太多的选择，但这是非常重要的开始。通过一条电线，我们能表达是或否，真或假，1或0，或者别的有两个选项的东西。单条线路的开/关状态被称作一个比特，它是计算机能够存储的信息的最小单元。"
       6:
         image: 'notes/csd_concept_binary_data_6.png'
-        text: 'If you use more wires you get more bits: more ones and zeros. With more bits you can represent more complex information. But to understand that, we need to learn about something called the binary number system.'
+        text: "如果用更多的线路，就能得到更多的比特：也就是更多的1和0。有了更多的比特，你就能表达更复杂的信息了，但是为了理解这些，我们需要学习二进制数字系统。"
       7:
         image: 'notes/csd_concept_binary_data_7.png'
-        text: 'In the decimal number system, we have ten digits from zero to nine, and that''s how we''ve all learned to count. In the binary number system, we only have two digits: zero and one. With these two digits, we can count up to any number.'
+        text: "在十进制系统中，我们有从0到9的10个数字，这是我们学到的如何来计数的方式。在二进制系统中，我们只有两个数字：0和1。用这两个数字，我们能数出任何数字。"
       8:
         image: 'notes/csd_concept_binary_data_8.png'
-        text: "Here's how this works. In a decimal number system we're all used to, each position in a number has a different value. There's a 1 position, the 10 position, the 100 position, and so on. For example, a 9 in the 100 position is a 900. In binary, each position also carries a value. But instead of multiplying by 10 each time, we multiply by 2. So there's the 1 position, the 2 position, the 4 position, the 8 position, and so on. For example, the number 9 in binary is 1001. To calculate the value, we add 1 times 8, plus 0 times 4, plus 0 times 2, plus 1 times 1. Almost nobody does this math because computers do it for us. What's important is that any number can be represented with only ones and zeros, or by a bunch of wires that are on or off. The more wires you use, the larger the numbers you can store. With 8 wires, you can store numbers between 0 and 255. That's 8 ones. With just 32 wires, you can store all the way from 0 to over 4 billion. Using the binary number system, you can represent any number you like."
+        text: "它是这样工作的。在一个我们常用的十进制数字系统中，每一位数字都表达bu不同的数值。有个位、十位、百位等等。例如，百位上的9表示900。在二进制中，每一位也表达一个值。但它不像十进制系统那样每次乘以10，而是乘以2。因此，有1位，2位，4位，8位等等。例如，十进制的数字9在二进制系统中是1001。为了计算这样一个数，我们加上了1个8，0个4，0个2，1个1。几乎没人这样数数，因为计算机会帮我们数。最重要的是，任何数字都能只用1和0，或者通过一系列的线路的开和关来表示。你用的线路越多，存储的数字就越大。用8条线，你就能存储0到255之间的数字。这是8个1。只用32条线，你能存储从0到超过40亿的数字。通过二进制数字系统，你能表达任何数字。"
       9:
         image: 'notes/csd_concept_binary_data_9.png'
-        text: "But what about other types of information? Like text, images, or sound? It turns out that all these things can also be represented with numbers. Think of all the letters in the alphabet. You could assign a number to each letter. A could be 1, B could be 2, and so on. You can then represent any word or paragraph as a sequence of numbers. And as we saw, these numbers can be stored as on or off electrical signals. Every word you see on every webpage or your phone is represented using a system like this."
+        text: "但是别的类型的信息怎么办呢？比如文本、图片或声音？所有这些都会被表达成数字。思考一下字母表中的所有字母。你可以给每个字母都分派一个数字。1表示A，2表示B，等等。然后你能用一系列的数字表示任何词语或段落。正如我们开始提到的，这些数字能被存储成电信号的开或关。你看到的网页上的每一个词，或你的电话使用的系统，都是这样的。"
       10:
         image: 'notes/csd_concept_binary_data_10.png'
-        text: "Now, let's consider photos, videos, and all the graphics you see on a screen."
+        text: "现在，让我们思考一下图片、视频、以及屏幕上，你能看到的所有图形。"
       11:
         image: 'notes/csd_concept_binary_data_11.png'
-        text: "All of these images are made out of teeny dots called pixels, and each pixel has a color. Each of the colors can be represented with numbers. When you consider the typical image has millions of these pixels, and the typical video shows 30 images per second now we're talking about a lot of data here."
+        text: "所有这些图片都是由叫做像素的微小的点组成的，每个像素都有一个颜色。每种颜色都能表达位数字。想象一下，一张普通的图片有几百万个像素，一个普通的视频每秒会显示30张图片，这是非常多的数据。"
       12:
         image: 'notes/csd_concept_binary_data_12.png'
-        text: "Every sound is basically a series of vibrations in the air. Vibrations can be represented graphically as a waveform. Any point on this waveform can be represented by a number. And this way, any sound can be broken down into a series of numbers. If you want higher quality sound, you will pick 32-bit audio or an 8-bit audio. More bits means a higher range of numbers."
+        text: "每个声音实际上都是空气中一系列的振动。振动能够被表达为波形。波形上的任何一点都能够被表示为一个数字。通过这种方法，任何声音都能够被分解成一系列的数字。如果你想听到高质量的声音，你可以用32位的音频或者8位的音频。更多的比特意味着更大范围的数字。"
       13:
         image: 'notes/csd_concept_binary_data_13.png'
-        text: "When you use a computer to write code or make your own app, you're not dealing directly with these ones and zeros. But you will be dealing with images or sound or video. So if you want to understand how computers work on the inside, it all comes down these simple ones and zeros and the electrical signals in the circuits behind them."
+        text: "当你用计算机写代码或者制作自己的应用时，你不会直接处理1和0。但你需要处理图片、声音或视频。因此，如果你希望理解计算机内部时如何工作的，这都可以归结为简单的1和0，以及它们后面的线路上的电信号。"
     csd_concept_circuits_logic:
       1:
         image: 'notes/csd_concept_circuits_logic_1.png'
-        text: "One of the coolest things I've discovered about circuits is circuitry can be an art form like if I have a creative idea, I can get that creative idea out using circuits. So if you have ideas, you can use technology to make those ideas come to life."
+        text: "关于电路，我发现最酷的事情之一，就是如果我有了一个创意，电路能用来表现艺术。我也能用电路来获得灵感。因此，如果你有了好主意，你可以通过技术来实现这些创意。"
       2:
         image: 'notes/csd_concept_circuits_logic_2.png'
-        text: "Every input or output of a computer is effectively a type of information, which can be represented by on or off electrical signals or ones and zeros."
+        text: "计算机的每个输入输出实际上都是一种信息，都是通过电信号的开或关，或者叫做1和0来表示的。"
       3:
         image: 'notes/csd_concept_circuits_logic_3.png'
-        text: "In order to process the information that comes in as input, and to make the information that is output, a computer needs to modify and combine the input signals. To do this, a computer uses millions of teeny electronic components, which come together to form circuits."
+        text: "为了处理输入的信息，并且输出信息，计算机需要修改并混合输入信号。为了做到这点，计算机有数百万个微小的电子组件，来组成整个电路。"
       4:
         image: 'notes/csd_concept_circuits_logic_4.png'
-        text: "Let's take a closer look at how circuits can modify and process information that's represented in ones and zeros. This is an incredibly simple circuit. It takes an electrical signal, on or off, and it flips it. So if the signal you give it is a 1, the circuit gives you a 0, and if you give the circuit a 0, it gives you a 1. The signal that goes in is not the same as the signal that comes out, and so we call this circuit NOT."
+        text: "让我们更深入的看看线路如何更改并处理这些用1和0表达的信息的。这是一个非常简单的线路。它输入了一个电信号，开或关，然后翻转了它。因此，如果你给它的信号是1，那么电路会给你0，并且如果你给电路一个0，它会给你一个1。进去的信号总是和输出的信号不同，我们称它为”否“。"
       5:
         image: 'notes/csd_concept_circuits_logic_5.png'
-        text: "More complicated circuits can take multiple signals and combine them, and give you a different result. In this example, a circuit will take two electrical signals, now each one might be a 1 or a 0. If either of the signals coming in is a 0, then the result is also a 0. This circuit will only give you a 1, if the first signal and the second signal are both a 1, and so we call the circuit AND."
+        text: "更复杂的一些线路能够获取多个输入，并很合它们，然后给出一个不同的结果。在这个例子中，线路有两个电信号输入，每一个都有可能是1或0。如果其中一个信号是0，那么结果就是0。只有第一个和第二个信号都是1时，它才会给你1。我们将这个电路叫做”与“。"
       6:
         image: 'notes/csd_concept_circuits_logic_6.png'
-        text: "There are many small circuits like this that perform simple logical calculations. By connecting these circuits together, we can make more complex circuits that perform more complex calculations."
+        text: "这里有非常多像这样执行简单逻辑的微小的线路。通过将这些线路连接到一起，我们能制造出更复杂的线路，执行更复杂的计算。"
       7:
         image: 'notes/csd_concept_circuits_logic_7.png'
-        text: "For example, you can make a circuit that adds 2 bits together called an adder. This circuit takes in 2 individual bits, each one a 1 or a 0, and adds them together to calculate the sum. The sum can be 0 plus 0 equals 0, 0 plus 1 equals 1, or 1 plus 1 equals 2. You need two wires coming out because it can take up to two binary digits to represent the sum. Once you have a single adder for adding two bits of information, you can put together multiples of these adder circuits side-by-side to add together much larger numbers."
+        text: "例如，你能制造一个电路将两个比特加到一起，这叫做加法器。这个电路有两个独立的输入的比特，每一个都能是1或0，将它们加到一起来计算和。和有可能是0加0等于0，0加1等于1，或者1加1等于2。你需要两条线路输出，因为它有可能需要两个二进制位来表达和。一旦你有了一个加法器能将两个比特的信息加到一起，你能将多个加法电路并排到一起，将更大的数字加到一起。"
       8:
         image: 'notes/csd_concept_circuits_logic_8.png'
-        text: "For example, here's how an 8-bit adder adds the numbers 25 and 50. Each number is represented using 8 bits, resulting in 16 different electrical signals that go into the circuit. The circuit for an 8-bit adder has lots of little adders inside of it, which together, calculate the sum."
+        text: "例如，这是一个8比特的加法器，将25和50加到一起。每个数字都用8比特来表示，需要16个不同的电信号进入电路。这个8比特的加法器内部由很多小加法器组合在一起，来计算结果。"
       9:
         image: 'notes/csd_concept_circuits_logic_9.png'
-        text: "Different electrical circuits can perform other simple calculations like subtraction or multiplication. In fact, all the information processing your computer does is just lots and lots of small simple operations put together. Each individual operation done by a computer is so, so simple it could be done by a human, but these circuits inside computers are way way faster."
+        text: "不同的电路能够执行不同的简单计算，比如减法或乘法。事实上，你的计算机在处理信息时所做的，就是将许多简单的操作放到一起。每个独立的操作通过计算机完成的操作，对于人来说都非常简单，但计算机里的电路非常的快。"
       10:
         image: 'notes/csd_concept_circuits_logic_10.png'
-        text: "Back in the day, these circuits were big and clunky, and an 8-bit adder could be as big as a fridge, and it would take minutes for them to perform a simple calculation. Today, computer circuits are microscopic in size, and way way faster. Why are smaller computers also faster? Well, because the smaller the circuit is, the less distance the electrical signal has to go. Electricity moves at just about the speed of light, which is why modern circuits can perform billions of calculations per second."
+        text: "以前，这些电路非常的杯中，一个8位的加法器和bing'xiang冰箱一样大，并且需要数分钟才能完成一个简单的额计算。今天，计算机的电路非常的小，而且比以前快了很多。为什么越小的计算机越快呢？因为电路越小，电信号需要走过的距离就越小。电子移动速度和光速差不多，这也是为什么现代电路每秒能执行数十亿次计算的原因。"
       11:
         image: 'notes/csd_concept_circuits_logic_11.png'
-        text: "So whether you're playing a game, recording a video, or exploring the cosmos, everything you could possibly do with technology requires lots of information to be processed extremely quickly. Underneath all this complexity is just lots of teeny little circuits that turn binary signals into websites, videos, music, and games. These circuits can even help us decode DNA to diagnose and cure disease. So what would you like to do with all these circuits?"
+        text: "因此，无论是你玩游戏、录视频，或是探索太空，每一件事情都需要技术用非常快的速度处理非常多的信息。在这些复杂的事务背后，是非常多的微小的电路来将二进制信号转换为网站、视频、音乐和游戏。这些电路也帮助我们解码DNS来诊断并治疗疾病。那么，你想用这些线路做什么呢？"
     csd_concept_memory_cpu_input_output:
       1:
         image: 'notes/csd_concept_memory_cpu_input_output_1.png'
-        text: "Hi, my name is Madison Maxey. I have a company called Loomia, and we focus on making smart fabrics for smart clothing and smart soft good products. The sky's the limit when it comes to textiles."
+        text: "嗨，我是Madison Maxey。我有一家公司，叫做Loomia，我们在制作一些聪明的布料，从而制作出聪明的衣服和软的产品。当它做好后，能够颠覆整个纺织行业。"
       2:
         image: 'notes/csd_concept_memory_cpu_input_output_2.png'
-        text: "My name is Danielle Applestone, and I'm CEO of Othermachine Company. We build a desktop milling machine. A milling machine takes a rotating cutting tool and moves it through material to create a 3D object."
+        text: "我是Danielle Applestone，我是Othermachine公司的CEO。我们在制作桌面级的铣床。铣床有一个旋转的切割工具，通过移动它来切割材料，创建3D物体。"
       3:
         image: 'notes/csd_concept_memory_cpu_input_output_3.png'
-        text: "Under the hood, all computers do the same four basic things. They input information, store and process the information, and then, output information. Each of these things is done by a different part of the computer."
+        text: "在这之下，所有计算机都在做同样的4件基础的事情。它们输入信息，存储和处理信息，然后输出信息。这些每一件事情都是由计算机的不同部分完成的。"
       4:
         image: 'notes/csd_concept_memory_cpu_input_output_4.png'
-        text: "There are input devices that take input from the outside world and convert it into binary information. There is memory to store this information. There's a central processing unit or CPU, where all the calculations are done. And, finally, there are output devices that take information and convert it into a physical output."
+        text: "输入设备从外部世界获取输入，并转换为二进制信息。存储用来存下这些信息。还有一个中央处理单元（CPU），处理所有的计算。最后，输出设备将这些信息转换为物理的输出。"
       5:
         image: 'notes/csd_concept_memory_cpu_input_output_5.png'
-        text: "Let's talk about input first. Computers can take many different types of input, like the keyboard of a computer, the touchpad of a phone, a camera, a microphone, or a GPS. But even the sensors on a car, a thermostat, or a drone are also different input devices."
+        text: "让我们先说说输入。计算机能够huo获取很多不同种类的输入，例如计算机的键盘，手机的触摸屏，照相机，麦克风或者GPS。甚至是汽车上的传感器，恒温器或无人飞机也是不同的输入设备。"
       6:
         image: 'notes/csd_concept_memory_cpu_input_output_6.png'
-        text: "Now, let's look at a simple example of how input travels through a computer and becomes output. When you press a key on your keyboard - let's say the letter \"B\". The keyboard converts the letter to a number. That number is sent as binary, ones and zeros, into the computer."
+        text: "现在，让我们看一个简单的例子，看看输入是如何在计算机中旅行，并变成输出的。当你按下键盘上的键时 - 比如字母”B“。键盘会将这个字母转换为一个数字。这个数字通过二进制，1和0，来发送至计算机。"
       7:
         image: 'notes/csd_concept_memory_cpu_input_output_7.png'
-        text: "Starting from this number, the CPU calculates how to display the letter \"B\" pixel by pixel. The CPU requests step-by-step instructions from memory, which tell it how to draw the letter \"B\". The CPU runs these instructions and stores the results as pixels in memory."
+        text: "从这个数字开始，CPU开始计算如何显示字母\"B\"的每个像素。计算器从内存中请求一步步的指令，然后告诉它如何画出字母”B”。CPU运行这些指令，然后将结果按照像素存在存储中。"
       8:
         image: 'notes/csd_concept_memory_cpu_input_output_8.png'
-        text: "Finally, this pixel information is sent in binary to the screen. The screen is an output device, which converts the binary signals into the tiny lights and colors that make up what you see."
+        text: "最后，这些像素信息作为二进制信息发送给屏幕。屏幕是一个输出设备，能够将二进制信号转换为有颜色的小光点，从而让你能看见。"
       9:
         image: 'notes/csd_concept_memory_cpu_input_output_9.png'
-        text: "This all happens so quickly it feels instantaneous, but to display each letter a computer runs thousands of instructions, starting from the moment your finger presses the key point."
+        text: "这些发生得非常快，感觉是实时的。但计算机在你的手指按下字母开始，显示每个字母都需要运行好几千条指令。"
       10:
         image: 'notes/csd_concept_memory_cpu_input_output_10.png'
-        text: "In that example, the output device was the screen, but there are many different types of output which take a binary signal from the computer and do something in the physical world. For example, a speaker will play sound, and a 3D printer will print an object. Output devices can also control physical motion like a robotic arm, the motor of a car, or the cutting tool of the milling machine that my company makes. New types of inputs and outputs let computers interact with the world in entirely new ways. This has been helped out by improvements to the speed and size of the memory and CPU."
+        text: "在那个例子中，输出设备是屏幕。还有很多中不同的输出设备，它们从计算机接收二进制信号，然后输出到物理世界中。例如，扬声器能播放声音，3D打印机能够打印物体。输出设备也能控制物理世界的移动，比如机器人的手臂，汽车的马达，或者我的公司的铣床切割工具。通过提高计算与存储的尺寸和速度，各种新的输入和输出让计算机能够与世界进行全新的交互方法。"
       11:
         image: 'notes/csd_concept_memory_cpu_input_output_11.png'
-        text: "The more complicated a task is and the more information that is input or output, the more processing power and memory a computer needs. Typing letters on a screen may be easy but to do complicated 3d graphics or record a high-definition movie, modern computers often have multiple CPUs to process all that information and many gigabytes of memory to store it."
+        text: "越复杂的任务，就越需要更多的输入输出的信息，更强大的处理能力和存储。往屏幕上打印字母可能很容易，但是做出复杂的三维图像或录制高清电影，现代计算机经常也需要多个CPU来处理所有的信息，还需要好几十亿字节的存储来保存它。"
       12:
         image: 'notes/csd_concept_memory_cpu_input_output_12.png'
-        text: 'No matter what it is you want to do with the computer, every single action is about: inputting information from the physical world, storing and processing that information, and getting some output back into the physical world.'
+        text: "无论你用计算机做什么，都有这些单独的步骤：从物理世界输入信息，存储和处理这些信息，然后输出到物理世界。"
     csd_concept_hardware_software:
       1:
         image: 'notes/csd_concept_hardware_software_1.png'
-        text: "Hi, my name is Erica Gomez and I'm an engineering manager at Amazon.com. One of the best things about working in tech, and at Amazon in particular, is that I get to bring my dog with me to work every day. My job is to help make sure software gets out the door and her job is to nap under my desk and snore very loudly."
+        text: "嗨，我是Erica Gomez，我是亚马逊网站的一名工程师经理。做技术工作最好的一件事，就是每天我都能带上我的狗一起去上班。我的工作是保证软件产品能够正常发布，而她的工作是躺在我的桌下打盹，还大声的打鼾。"
       2:
         image: 'notes/csd_concept_hardware_software_2.png'
-        text: 'My name is Jerome Holman, and I''m a Program Manager on Team Xbox and I have a really fun job: Basically bringing the hardware and the software together to give you all the games that you love on your Xbox.'
+        text: "我是Jerome Holman，我是Xbox团队的一名产品经理，我在做一项非常有趣的工作：基本上是将硬件和软件组合到一起，成为你喜爱的Xbox上的游戏。"
       3:
         image: 'notes/csd_concept_hardware_software_3.png'
-        text: "When you look inside a computing device you see a bunch of circuits, chips, wires, speakers, plugs, and all sorts of other stuff. This is the hardware."
+        text: "当你观察计算机设备内部时，能够看到一大堆电路、芯片，电线，扬声器，插头等等所有东西。这些都是硬件。"
       4:
         image: 'notes/csd_concept_hardware_software_4.png'
-        text: "But what you don't see is the software. Software is all of the computer programs, or code, running on this machine. Software can be anything from apps and games to webpages and the data science software that me and my teams use at Amazon to understand how customers behave."
+        text: "但你看不见软件。软件是所有的计算机程序，或者叫做代码，它们在机器上运行。软件从应用程序、游戏到网页无所不包，还有我们亚马逊团队用来理解客户行为的数据科学程序也是软件。"
       5:
         image: 'notes/csd_concept_hardware_software_5.png'
-        text: "But how do the hardware and the software interact with one another? Let's start at looking at a computer's central processing unit, or CPU."
+        text: "但是硬件和软件是如何交互的呢？让我们先看看计算机的中央处理单元，或者成为CPU。"
       6:
         image: 'notes/csd_concept_hardware_software_6.png'
-        text: "The CPU is the master chip that controls all the other parts of the computer. A CPU needs to do different things so inside it has smaller, simpler parts that handle specific tasks. It has circuits to do simple math and logic. It has other circuits to send and receive information to and from different parts of the computer."
+        text: "CPU是计算机的主芯片，控制了所有其它部分。一个CPU需要做不同的事情，因此它的里面会有小一点的，能够处理更简单一些的特定任务的部分。它有电路来做简单的数学和逻辑运算。还有其它电路向计算机的其它部分发送和接收信息。"
       7:
         image: 'notes/csd_concept_hardware_software_7.png'
-        text: "The real magic of the CPU is how it knows which circuits to use and when to use them. The CPU receives simple commands that tell it which circuit to use to do a specific job. For example, an \"add\" command tells the CPU to use its outer circuit to calculate a new number. And then the \"store\" command tells the CPU to use a different circuit to save that result into memory."
+        text: "CPU最神奇的地方是，它知道何时用哪部分线路。CPU接收简单的命令来明白用哪一部分来完成一个特定的任务。例如，一个“add”（加法）命令告诉计算机用它的外电路来计算一个新的数字，然后用\"store\"（存储）命令来告诉CPU用不同的电路来将结果放到存储中。"
       8:
         image: 'notes/csd_concept_hardware_software_8.png'
-        text: "Just like numbers, all of these simple commands can be represented in binary ones and zeros or on and off electrical signals. The binary commands are stored in memory and the CPU fetches and executes them in sequence one after the other. This sequence of commands is, in fact, a very simple computer program."
+        text: "像数字一样，所有这些简单的命令都被表达为1和0，或电信号的开关。二进制命令被存储在内存中，CPU将它们一条条取出并执行。实际上，命令序列就是一个非常简单的计算机程序。"
       9:
         image: 'notes/csd_concept_hardware_software_9.png'
-        text: "Binary code is the most basic form of software and it controls all the hardware of a computer. These days, nobody writes software in binary. It would take forever!"
+        text: "二进制代码是最基本的软件形式，它控制着计算机的所有硬件。现在，没人再用二进制编写软件了。它太费时间了！"
       10:
         image: 'notes/csd_concept_hardware_software_10.png'
-        text: "Today, the software we write looks more like this (Python), or this (Ruby), or even this (Blockly). Programming languages like these let you type in commands in something that looks a lot like English."
+        text: "今天，我们用这个（Python），或这个（Ruby），甚至这个（模块化编程）来写软件。像这些一样的程序语言让你能输入像英语一样的命令。"
       11:
         image: 'notes/csd_concept_hardware_software_11.png'
-        text: "To draw a rectangle on the screen, you just need a single command. This high-level command is converted into hundreds, or thousands, of simpler binary commands that the CPU understands. Software tells the CPU what to do, but when you're listening to music, and browsing the web, and chatting with a friend, your computer is running multiple pieces of software all at once."
+        text: "要在屏幕上画一个矩形，你只需要一个命令。高级的命令会转换为几百条，甚至几千条CPU能够理解的简单的二进制命令。软件告诉CPU要做什么。当你一边听音乐，一边浏览网页，还一边和朋友聊天，你的计算机在同时运行多个软件。"
       12:
         image: 'notes/csd_concept_hardware_software_12.png'
-        text: "So, how do all of these programs get on the computer in the first place, and how can the CPU run them all at once? To find out we'll have to take a look at the operating system."
+        text: "那么，计算机如何在同时处理所有这些程序，CPU又是如何同时运行它们呢？为了理解它，我们需要看一看操作系统。"
       13:
         image: 'notes/csd_concept_hardware_software_13.png'
-        text: "The operating system of the computer is the master program that manages how software gets to use the hardware of the computer. For example, I helped create the Windows operating system that runs on most personal computers."
+        text: "操作系统是计算机的主程序，它管理着其它软件如何使用计算机的硬件。例如，我帮助创建了运行在大多数个人电脑上的Windows操作系统。"
       14:
         image: 'notes/csd_concept_hardware_software_14.png'
-        text: "The operating system is a program with special abilities that let it control the other software on the computer. It lets you install new programs by loading them into your computer's memory. It decides when a program is run by the central processing unit, and whether that program can access the computer's input and output devices. And when you think your computer is running many programs at once, in reality, it's the operating system that's quickly switching between programs sharing that CPU for fractions of a second."
+        text: "操作系统是一个有着特殊能力的程序，它会控制计算机上的其它软件。它让你通过将新程序读入计算机的存储来安装它。它决定了什么时候一个程序能被中央处理器运行，是否这个程序能存储计算机的输入和输出设备。当你认为你的计算机同时在运行多个程序时，实际上，你的操作系统只是在非常快速的在这些程序间切换，将一秒分成多个部分来共享CPU。"
       15:
         image: 'notes/csd_concept_hardware_software_15.png'
-        text: "Inside every computer is an operating system managing software that controls the computer's hardware."
+        text: "每个计算机都有一个操作系统来管理软件，控制硬件。"
       16:
         image: 'notes/csd_concept_hardware_software_16.png'
-        text: "The software is a series of commands made of simple binary code, and that binary code is just electrical signals flowing through billions of tiny circuits."
+        text: "软件是一系列命令组成的简单的二进制代码，而二进制代码只是流动在几十亿个微小电路上的电信号。"
       17:
-        image: 'notes/csd_concept_hardware_software_17.png'
-        text: "Computers have the potential to do all kinds of amazing things. But the only thing that makes the computer smart, or useful, is you. When you learn to code you get to define the problem you want to solve, and write the software that turns those ideas into reality."
+        image: 'notes/csd_concept_hardware_software_16.png'
+        text: "计算机有潜力能做各种令人惊奇的事情。但能让计算机变聪明，或者有用处的，只有你。当你学学习编程序时，你会定义想要解决的问题，然后写软件来将这些想法变为现实。"

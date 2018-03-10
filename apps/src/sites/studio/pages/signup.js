@@ -6,6 +6,7 @@ import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocomplete
 import { COUNTRIES } from '@cdo/apps/geographyConstants';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from "@cdo/locale";
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -20,6 +21,9 @@ const SCHOOL_TYPES_HAVING_NAMES = [
 window.SignupManager = function (options) {
   this.options = options;
   var self = this;
+
+  const optionalTestGroup = (Math.random() < 0.5 ? 'control' : 'optional-removed');
+  const showOptional = optionalTestGroup === 'control';
 
   let schoolData = {
     country: options.usIP ? 'United States' : '',
@@ -40,6 +44,24 @@ window.SignupManager = function (options) {
     showTeacher();
   }
 
+  function getSchoolInfoSplitTestData() {
+    return JSON.stringify({
+      'country': schoolData.country,
+      'nces': schoolData.nces
+    });
+  }
+
+  function sendSchoolInfoSplitTestEvent(event) {
+    firehoseClient.putRecord(
+      {
+        study: 'school-info-optional',
+        study_group: optionalTestGroup,
+        event: event,
+        data_json: getSchoolInfoSplitTestData(),
+      }
+    );
+  }
+
   function formSuccess(success) {
     var url;
     if (self.options.returnToUrl !== "") {
@@ -48,6 +70,9 @@ window.SignupManager = function (options) {
       url = self.options.teacherDashboardUrl;
     } else {
       url = "/";
+    }
+    if (isTeacherSelected()) {
+      sendSchoolInfoSplitTestEvent('signup-success');
     }
     window.location.href = url;
   }
@@ -94,6 +119,10 @@ window.SignupManager = function (options) {
     // show a generic error
     if (fieldsWithErrors === 0) {
       $('#signup-error').show();
+    }
+
+    if (isTeacherSelected()) {
+      sendSchoolInfoSplitTestEvent('signup-error');
     }
   }
 
@@ -164,7 +193,7 @@ window.SignupManager = function (options) {
     ReactDOM.render(
       <div>
         <h5 style={{fontWeight: "bold"}}>
-          {i18n.schoolInformationOptionalHeader()}
+          {showOptional ? i18n.schoolInformationOptionalHeader() : i18n.schoolInformationHeader()}
         </h5>
         <hr/>
         <CountryAutocompleteDropdown
@@ -230,6 +259,8 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', false);
 
     updateAutocompleteSchoolFields(schoolData);
+
+    sendSchoolInfoSplitTestEvent('signup-loaded');
   }
 
   function getUserTypeSelected() {
@@ -302,6 +333,7 @@ window.SignupManager = function (options) {
 
     if (isTeacherSelected()) {
       updateAutocompleteSchoolFields(schoolData);
+      sendSchoolInfoSplitTestEvent('signup-submitted');
     }
 
     $.ajax({

@@ -64,7 +64,7 @@ class SharedResources < Sinatra::Base
   end
 
   # JavaScripts
-  get "/shared/js/*" do |path|
+  get "/shared/js/*" do |_path|
     path = deploy_dir(request.path_info)
 
     extname = File.extname(path).downcase
@@ -87,7 +87,7 @@ class SharedResources < Sinatra::Base
   end
 
   # Images
-  get '/shared/images/*' do |path|
+  get '/shared/images/*' do |_path|
     path = request.path_info
     image_data = process_image(path, settings.image_extnames)
     pass if image_data.nil?

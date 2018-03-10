@@ -32,7 +32,7 @@
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Tá an Uair Chódála anseo"
   csedweek_og_description: "4-10 Nollaig 2017. Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Glac páirt san <a href=\"http://hourofcode.com\">Uair Chódála</a><br/>8-14 Nollaig 2014<br/>"
   hoc2014_students: "Daltaí"
@@ -69,7 +69,7 @@
   thank_you_: "Go raibh maith agat!"
   congratulations: "Comhghairdeas!"
   congratulations_on_completing_hoc: "Comhghairdeas! Chríochnaigh tú Uair Amháin Chódála"
-  congratulations_volunteer: Comhghairdeas! Agus An Uair Chódála déanta agat, <a href="https://code.org/volunteer">cláraigh mar shaorálaí i seomra ranga</a> agus cabhraigh le daltaí Uair Chódála a fhoghlaim!
+  congratulations_volunteer: 'Comhghairdeas! Agus An Uair Chódála déanta agat, <a href="https://code.org/volunteer">cláraigh mar shaorálaí i seomra ranga</a> agus cabhraigh le daltaí Uair Chódála a fhoghlaim!'
   congratulations_on_completing_course1: "Comhghairdeas as Cúrsa 1 a chríochnú"
   congratulations_on_completing_course2: "Comhghairdeas as Cúrsa 2 a chríochnú"
   congratulations_on_completing_course3: "Comhghairdeas as Cúrsa 3 a chríochnú"
@@ -771,7 +771,10 @@
   dashboard_coursed: 'Cúrsa D: '
   dashboard_coursee: 'Cúrsa E: '
   dashboard_coursef: 'Cúrsa F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na ceachtanna \"díphlugáilte\" seo</a> i do sheomra ranga."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Curaclam"
   dashboard_curriculum_overview: "Foramharc ar an gCuraclam Bunscoile"
   dashboard_overview: "Foramharc"
@@ -789,6 +792,8 @@
   dashboard_curriculum_csins: 'An Ríomheolaíocht san Eolaíocht:'
   dashboard_curriculum_csp: 'Foras Feasa ar an Ríomheolaíocht AP®:'
   dashboard_curriculum_ecs: 'Taiscéalaíocht na Ríomheolaíochta:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Naíscoil"
   dashboard_grade_other: "Eile"
   dashboard_login_word: "Focal"
@@ -857,7 +862,7 @@
   carousel_heading_international: "Cúrsaí teagaisc ó eagraíochtaí eile i do theanga"
   carousel_heading_domestic: "Cúrsaí teagaisc ó eagraíochtaí eile i mBéarla"
   carousel_heading_beginners: "Cúrsaí teagaisc ó eagraíochtaí eile: Blianta 1-8"
-  carousel_heading_beyond_beginners: Cúrsaí Teagaisc do Thosaitheoirí
+  carousel_heading_beyond_beginners: 'Cúrsaí Teagaisc do Thosaitheoirí'
   carousel_heading_javascript: "Cúrsaí teagaisc tríú páirtí a mhúineann JavaScript"
   carousel_heading_beyond_javascript: "Cúrsaí teagaisc JavaScript"
   carousel_heading_unplugged: "Níl gléas ná ceangal Idirlín agat? Bain triail as an ríomheolaíocht \"díphlugáilte\""
@@ -959,11 +964,11 @@
   accelerated_name: "Cúrsa Luathaithe"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
-  cspunit2_name: 'Aonad 2: An tIdirlíon'
-  cspunit3_name: 'Aonad 3: Ríomhchlárú'
-  cspunit4_name: 'Aonad 4: Sonraí'
-  cspunit5_name: 'Aonad 5: Taiscéaladh agus Cruthú (Tasc Feidhmíochta)'
+  cspunit1_name: "Aonad 1: Faisnéis dhigiteach"
+  cspunit2_name: "Aonad 2: An tIdirlíon"
+  cspunit3_name: "Aonad 3: Ríomhchlárú"
+  cspunit4_name: "Aonad 4: Sonraí"
+  cspunit5_name: "Aonad 5: Taiscéaladh agus Cruthú (Tasc Feidhmíochta)"
   cspunit6_name: 'Tar Éis AP: Bunachair Sonraí in Aipeanna'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1012,6 +1017,7 @@
   cspexams_category_name: "Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht"
   research_studies_category_name: "Research Studies"
   applab_name: "Saotharlann Aipeanna"
+  gamelab_name: "An tSaotharlann Cluichíochta"
   basketball_name: "Déan do chluiche cispheile féin"
   sports_name: "Códáil do chluiche spóirt féin"
   applab_gradelevel: "Aois 13+"
@@ -1178,12 +1184,12 @@
   course2_shortdescription_congrats: "Tá an cúrsa seo dírithe ar dhaltaí a bhfuil bunchumas léitheoireachta acu, agus tógann sé ar an ábhar ó Chúrsa 1. Cruthóidh na daltaí ríomhchláir chun fadhbanna a réiteach, agus forbróidh siad cluichí nó scéalta is féidir leo a chomhroinnt. Molta do bhlianta 2-5."
   course3_shortdescription_congrats: "An bhfuil tú réidh don chéad leibhéal eile? Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad i gcúrsaí roimhe seo, chun réitigh níos solúbtha a thabhairt ar fhadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-10."
   course4_shortdescription_congrats: "An bhfuil tú réidh dul ar aghaidh? Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad i gcúrsaí roimhe seo, chun réitigh níos solúbtha a thabhairt ar fhadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-13."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Foghlaim buntús na ríomheolaíochta trí ríomhchlárú \"tarraingt is scaoileadh\". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga."
   codeintl_longdescription: "Foghlaim buntús na ríomheolaíochta trí ríomhchlárú \"tarraingt is scaoileadh\". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

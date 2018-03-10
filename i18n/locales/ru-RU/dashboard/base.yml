@@ -69,7 +69,7 @@ ru:
   try_k8intro: "Попробуйте наш курс «Введение в информатику» для учеников до 8 класса (15-25 часов)"
   k8intro: "Курс «Введение в информатику» для учеников до 8 класса (15-25 часов)"
   already_started: "Уже начали? Продолжить здесь >> "
-  demos: 'Администратор: Все демоверсии'
+  demos: "Администратор: Все демоверсии"
   continue: 'Продолжить'
   prize: 'подарок'
   more_info: 'Подробнее'
@@ -171,6 +171,7 @@ ru:
       email: 'Адрес электронной почты'
       submit: 'Отправить'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Похоже, Вы зарегистрировались с неверным адрес электронной почты. Пожалуйста, напишите об этом в support@code.org, и Вы получите ссылку на восстановление пароля.'
     change_form:
       title: 'Смена пароля'
@@ -220,7 +221,7 @@ ru:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Уведомление от Code.org: %{student_name} больше не является вашим учеником.'
+        subject: "Уведомление от Code.org: %{student_name} больше не является вашим учеником."
   reports:
     error:
       access_denied: "Вы не имеете доступа к статистике этого пользователя"
@@ -352,7 +353,7 @@ ru:
     current_password_hint: '(нам нужен Ваш текущий пароль для подтверждения изменений)'
     delete: 'Удалить свою учетную запись'
     delete_text: "Нажатие на кнопку ниже удалит вашу учетную запись."
-    delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не удалит учетные записи ваших учеников.'
+    delete_text_teacher_note: "Обратите внимание: удаление вашей учетной записи не удалит учетные записи ваших учеников."
     delete_confirm: 'Вы действительно хотите удалить свою учетную запись?'
     deleted_user: 'пользователь удален'
     no_password_because_oauth: 'Нет пароля, поскольку вы вошли с другого компьютера.'
@@ -363,7 +364,7 @@ ru:
     create_personal_login_under_13_parent_email: 'Адрес электронной почты родителя/опекуна'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Введите адрес электронной почты своих родителей или опекунов (для восстановления пароля)"
@@ -702,7 +703,7 @@ ru:
     sign_out: 'Если вы не хотите указывать свой возраст, вы можете <a href="%{url}"> выйти из системы</a>.'
   terms_interstitial:
     title: "Обновленные Условия предоставления услуг и условия конфиденциальности"
-    intro_desc: 'Мы обновили наши Условия предоставления услуг и Политику конфиденциальности, как показано ниже. Изменения вступают в силу с 24 августа 2016 года.  Самое большое отличие: мы <i>больше не будем хранить адреса электронной почты для учетных записей студентов на Code Studio.</i> Это важно для нас, и мы надеемся тем самым установить новый стандарт конфиденциальности в технологии обучения. Мы отправили вам список остальных изменений по электронной почте.'
+    intro_desc: "Мы обновили наши Условия предоставления услуг и Политику конфиденциальности, как показано ниже. Изменения вступают в силу с 24 августа 2016 года.  Самое большое отличие: мы <i>больше не будем хранить адреса электронной почты для учетных записей студентов на Code Studio.</i> Это важно для нас, и мы надеемся тем самым установить новый стандарт конфиденциальности в технологии обучения. Мы отправили вам список остальных изменений по электронной почте."
     intro_instructions: "Вам нужно принять эти новые условия для студентов младше 13 лет в вашем классе, чтобы иметь полный доступ ко всем новым функциям в Code Studio.  При регистрации учетной записи студента младше 13 лет, вам будет предложено подтвердить, что ваша школа имеет согласие родителей на сбор личной информации студентов для использования на благо школы, включая образовательные программы, такие как Code Studio."
     tos: "Условия предоставления услуг"
     privacy: "Политика конфиденциальности"
@@ -718,7 +719,7 @@ ru:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Сохранить"
   race_interstitial:
-    title: 'Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения разнообразия в области компьютерных наук'
+    title: "Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения разнообразия в области компьютерных наук"
     message: "Пожалуйста, укажите вашу расу (отметьте всё, что подходит)"
     races:
       - 
@@ -762,7 +763,7 @@ ru:
     delete: "Удалить"
     import: "Импортировать"
     share_link_import_bad_link_header: "Ссылка общего доступа не распознана"
-    share_link_import_bad_link_body: 'Не удалось импортировать ссылку общего доступа. Убедитесь, что вы используете ссылку из задачи Minecraft: Исполнитель и что вы скопировали ссылку целиком.'
+    share_link_import_bad_link_body: "Не удалось импортировать ссылку общего доступа. Убедитесь, что вы используете ссылку из задачи Minecraft: Исполнитель и что вы скопировали ссылку целиком."
     share_link_import_error_header: "Что-то пошло не так."
     share_link_import_error_body: "При импорте ссылки общего доступа возникла проблема. Попробуйте еще раз."
     exit: "Вернуться к курсу"
@@ -865,8 +866,8 @@ ru:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

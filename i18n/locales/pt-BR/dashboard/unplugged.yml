@@ -163,9 +163,6 @@ pt-BR:
       CollisionDetection:
         title: Detecção de colisão e o teorema de Pitágoras
         desc: Determinar quando os objetos na tela se tocam é um aspecto importante na maioria dos jogos. Nesta lição, vamos ver como o teorema de Pitágoras e a fórmula da distância podem ser usados para medir a distância entre dois pontos no plano, e então decidir se esses dois pontos (ou personagens do jogo) estão se tocando.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Nesta aula, você vai aprender mais sobre os laços!
@@ -265,3 +262,42 @@ pt-BR:
       brad-repro-bug-000:
         title: Brad Repro Bug 000
         desc: "# Brad Repro Bug 000\\r\n## Attempt to recreate a bug Brooke reported\\r\nprocess as follows:\\r\n1. started with an `unplugged` level. populated with info. hit save and publish.\\r\n2. “destroyed” the level\\r\n3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ""
+        desc: ""
+      courseB_unplugged_loopyMRF_2018:
+        title: ""
+        desc: ""
+      DiceRace_2018:
+        title: ""
+        desc: ""
+      courseE_unplugged_privateInformation_2018:
+        title: ""
+        desc: ""
+      SongwritingParameters_2018:
+        title: ""
+        desc: ""
+      Internet_2018:
+        title: ""
+        desc: ""
+      Crowdsourcing_2018:
+        title: ""
+        desc: ""
+      TangramAlgorithms_2018:
+        title: ""
+        desc: ""
+      courseF_unplugged_powerOfWords_2018:
+        title: ""
+        desc: ""
+      EnvelopeVariables_2018:
+        title: ""
+        desc: ""
+      ForLoopFun_2018:
+        title: ""
+        desc: ""
+      SongwritingWithParameters_2018:
+        title: ""
+        desc: ""

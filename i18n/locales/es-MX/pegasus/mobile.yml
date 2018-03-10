@@ -25,7 +25,7 @@
   submit: "Enviar"
   twentyhours_heading: "Prueba nuestro curso de Introducción a la Informática"
   twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática y conceptos de programación en este curso de seguimiento."
-  og_title: Todos los niños merecen oportunidades
+  og_title: 'Todos los niños merecen oportunidades'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Every student in every school deserves the opportunity to study computer science."
@@ -752,7 +752,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Si no tiene computadoras, <a href='%{unplugged_url}'> intente estas lecciones desenchufados</a> en su salón del clase."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Currículum"
   dashboard_curriculum_overview: "Resumen de currículo K-5"
   dashboard_overview: "Resumen"
@@ -770,6 +773,8 @@
   dashboard_curriculum_csins: 'Informática en Ciencia:'
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Kah"
   dashboard_grade_other: "Otros"
   dashboard_login_word: "Palabra"
@@ -838,7 +843,7 @@
   carousel_heading_international: "Tutoriales en tu idioma"
   carousel_heading_domestic: "Guías disponibles en inglés"
   carousel_heading_beginners: "Tutoriales para principiantes (en inglés)"
-  carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
+  carousel_heading_beyond_beginners: 'Tutoriales para principiantes (en inglés)'
   carousel_heading_javascript: "Guías que enseñan JavaScript"
   carousel_heading_beyond_javascript: "Tutoriales para aprender JavaScript"
   carousel_heading_unplugged: "¿No tienes dispositivo o Internet? Prueba informática sin conexión"
@@ -940,11 +945,11 @@
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: 'Tema 1: Información digital'
-  cspunit2_name: 'Tema 2: El Internet'
-  cspunit3_name: 'Unidad 3: programación'
-  cspunit4_name: 'Tema 4: Datos'
-  cspunit5_name: 'Unidad 5: Explorar y Crear PT'
+  cspunit1_name: "Tema 1: Información digital"
+  cspunit2_name: "Tema 2: El Internet"
+  cspunit3_name: "Unidad 3: programación"
+  cspunit4_name: "Tema 4: Datos"
+  cspunit5_name: "Unidad 5: Explorar y Crear PT"
   cspunit6_name: 'Post-AP: Bases de Datos en Aplicaciones'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -993,6 +998,7 @@
   cspexams_category_name: "Prueba de práctica de principios de CS"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratorio de App"
+  gamelab_name: "Laboratorio de juego"
   basketball_name: "Crear un juego de baloncesto"
   sports_name: "Crea tu propio Juego de deportes"
   applab_gradelevel: "Mayores de 13 años"
@@ -1051,12 +1057,12 @@
   course2_gradelevel: "Edades de 6 a 18 años"
   course3_gradelevel: "Edades de 8 a 18 años"
   course4_gradelevel: "Edades de 10 a 18 años"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "Califación 8+"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "Edad 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "Edades de 10 a 18 años"
   codeorg_platformtext: "Cualquier navegador moderno, smartphone, tableta"
   codeintl_platformtext: "Cualquier navegador moderno, smartphone, tableta"
@@ -1159,12 +1165,12 @@
   course2_shortdescription_congrats: "Para los estudiantes con habilidades básicas de lectura, este curso se basa en el Curso 1. Los estudiantes crearán programas para resolver problemas y desarrollar juegos interactivos o historias que puedan compartir. Recomendado para los grados del 2 al 5."
   course3_shortdescription_congrats: "¿Listo para el siguiente nivel? Los estudiantes profundizarán en los temas de programación introducidos en cursos previos para encontrar soluciones flexibles a los problemas más complejos. Al terminar este curso, los estudiantes crearán historias interactivas y juegos que puedan compartir con cualquier persona. Recomendado para los grados del 4 al 5."
   course4_shortdescription_congrats: "¿Listo para ir más lejos? Los estudiantes profundizarán en los temas de programación introducidos en cursos previos para encontrar soluciones flexibles a los problemas más complejos. Al terminar este curso, los estudiantes crearán historias interactivas y juegos que puedan compartir con cualquier persona. Recomendado para los grados del 4 al 8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas."
   codeintl_longdescription: "Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1411,7 +1417,7 @@
   header_home: "Inicio"
   header_my_dashboard: "My Dashboard"
   header_courses: "cursos"
-  header_course_catalog: "Course Catalog"
+  header_course_catalog: "Catálogo de cursos"
   header_project_gallery: "Proyectos"
   header_sections: "Secciones"
   header_professional_learning: "Aprendizaje Profesional"
@@ -1443,8 +1449,8 @@
   header_teacher_community: "Comunidad de profesores"
   header_help_support: 'Ayuda y soporte técnico '
   header_report_bug: "Reportar un error"
-  header_tutorials: "Tutorials"
-  header_documentation: "Documentation"
+  header_tutorials: "Tutoriales"
+  header_documentation: "Documentación"
   csp_name: "'16-'17 Principios de CS"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
@@ -1472,7 +1478,7 @@
   joining_section_overview: "Si un estudiante todavía no se ha unido a su sección, pídale que realicen los siguientes pasos. Tenga en cuenta que solo necesitan hacer esto una vez. Al unirte a tu sección, los estudiantes podrán ver el curso que se les asignó y podrás seguir el progreso del trabajo que se ha completado mientras estén registrados."
   joining_section_instruct_website: 'Cree una cuenta de Code.org si aún no lo han hecho. Pueden hacer esto en https://studio.code.org/users/sign_up. Tenga en cuenta que pueden registrarse con una dirección de correo electrónico y contraseña, o registrarse en Google, Facebook o Microsoft haciendo clic en uno de estos botones:'
   joining_section_instruct_account: "Inicie sesión con su cuenta de Code.org."
-  joining_section_instruct_code: Navegue a %{code_org_url} y escriba su seccion de sodigo:%{section_code}.
+  joining_section_instruct_code: 'Navegue a %{code_org_url} y escriba su seccion de sodigo:%{section_code}.'
   joining_section_instruct_button: "Una vez que ellos presionen el botón \"comenzar\", se deben agregar a su sección."
   signing_in_single_instruct: "Sus alumnos pueden iniciar sesión en sus cuentas de Code.org accediendo a https://code.org/ y haciendo clic en el botón \"Iniciar sesión\" en la esquina superior derecha."
   reset_student_password_email: "Si su estudiante creó una cuenta de Code.org usando su dirección de correo electrónico y contraseña (en lugar de iniciar sesión a través de su cuenta de Google, Facebook, Microsoft o Clever), puede restablecer su contraseña yendo a la pestaña \"Administrar estudiantes\" para la sección y haciendo clic en el botón \"Restablecer contraseña\" en la columna \"Contraseña\"."

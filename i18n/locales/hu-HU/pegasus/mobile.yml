@@ -25,14 +25,14 @@
   submit: "Elküldés"
   twentyhours_heading: "Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat"
   twentyhours_text: "Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról és a programozási koncepciókról a következő tanfolyamon."
-  og_title: Minden gyermek megérdemli lehetőséget
+  og_title: 'Minden gyermek megérdemli lehetőséget'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "A kódolás órája elérkezett"
   csedweek_og_description: "2017. december 4-10. A számítás tudomány minden diák számára fontos tudást ad."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Csatlakozz a <a href=\"http://hourofcode.com\"> Kódolás Órájához</a><br/>2014. December 8-14.<br/>"
   hoc2014_students: "Tanuló"
@@ -69,7 +69,7 @@
   thank_you_: "Köszönjük!"
   congratulations: "Gratulálok!"
   congratulations_on_completing_hoc: "Gratulálunk egy Kód Órája befejezéséhez"
-  congratulations_volunteer: Gratulálunk, most, hogy kipróbáltad a Kódolás óráját, <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts a tanulóknak egy órán át a kódolásról tanulni!
+  congratulations_volunteer: 'Gratulálunk, most, hogy kipróbáltad a Kódolás óráját, <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts a tanulóknak egy órán át a kódolásról tanulni!'
   congratulations_on_completing_course1: "Gratulálok, teljesítetted az 1. Szintet!"
   congratulations_on_completing_course2: "Gratulálok, teljesítetted a 2. Szintet"
   congratulations_on_completing_course3: "Gratulálok, teljesítetted a 3. Szintet"
@@ -766,7 +766,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Ha nincs számítógép,  <a href='%{unplugged_url}'>próbálja ki ezeket az offline tanórákat </a> az osztályával!"
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Tanterv"
   dashboard_curriculum_overview: "K-5 (alsó tagozatos) tananyag áttekintés"
   dashboard_overview: "Összefoglaló"
@@ -784,6 +787,8 @@
   dashboard_curriculum_csins: 'A számítógép-tudomány a tudományok között:'
   dashboard_curriculum_csp: 'Az AP® számítástechnika alapelvei:'
   dashboard_curriculum_ecs: 'A számítástechnika felfedezése:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Egyéb"
   dashboard_login_word: "Szó"
@@ -852,7 +857,7 @@
   carousel_heading_international: "Oktatóanyagok az anyanyelveden"
   carousel_heading_domestic: "Az angolul elérhető oktatóanyagok"
   carousel_heading_beginners: "Oktatóanyagok kezdőknek"
-  carousel_heading_beyond_beginners: Oktatóanyagok kezdőknek
+  carousel_heading_beyond_beginners: 'Oktatóanyagok kezdőknek'
   carousel_heading_javascript: "Oktatóanyagok JavaScript oktatásához"
   carousel_heading_beyond_javascript: "Oktatóanyagok JavaScript oktatásához"
   carousel_heading_unplugged: "Nincs eszközöd vagy internet kapcsolatod? Próbáld ki az offline számítástechnikát"
@@ -954,11 +959,11 @@
   accelerated_name: "Gyorsított tanfolyam"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1007,6 +1012,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Kódold le a saját sportjátékodat"
   applab_gradelevel: "Kor 13+"
@@ -1065,12 +1071,12 @@
   course2_gradelevel: "6-tól 18 éves korig"
   course3_gradelevel: "8-tól 18 éves korig"
   course4_gradelevel: "10-től 18 éves korig"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "8+ évfolyam"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "8-tól 12 éves korig"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "10-től 18 éves korig"
   codeorg_platformtext: "Modern böngészők, okostelefonok, tabletek"
   codeintl_platformtext: "Modern böngészők, okostelefonok, tabletek"
@@ -1173,12 +1179,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Készen állsz a továbbhaladásra? A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amelyeket bárkivel megoszthatnak. 4-5. osztályosok számára ajánlott."
   course4_shortdescription_congrats: "Készen állsz a továbbhaladásra? A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amelyeket bárkivel megoszthatnak. 4.-8. osztályosok számára ajánlott."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   codeintl_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   thinkersmithspanish_longdescription: "Az előre meghatározott \"Robot Szótár\" használatával a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában, anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen értékű hibakeresési tapasztalatot nyújt."

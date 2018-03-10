@@ -40,7 +40,6 @@ class StudioEC < Studio
         properties: {
           code_functions: JSON.parse(palette),
           goal_override: JSON.parse(goal_override),
-          edit_code: true
         }
       )
     )
@@ -87,6 +86,10 @@ class StudioEC < Studio
         "goalAnimation": null
       }
     JSON
+  end
+
+  def uses_droplet?
+    true
   end
 end
 

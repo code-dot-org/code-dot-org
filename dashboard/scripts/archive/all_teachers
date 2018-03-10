@@ -5,10 +5,10 @@
 require_relative '../../config/environment'
 
 # users who either said they were teachers or have students
-ALL_TEACHERS = 'user_type = "teacher" or (select id from followers where user_id = users.id limit 1)'
+ALL_TEACHERS = 'user_type = "teacher" or (select id from followers where user_id = users.id limit 1)'.freeze
 
 # all users with teacher prizes (above is implied)
-WITH_PRIZES = "teacher_prize_id IS NOT NULL OR teacher_bonus_prize_id IS NOT NULL"
+WITH_PRIZES = "teacher_prize_id IS NOT NULL OR teacher_bonus_prize_id IS NOT NULL".freeze
 
 teachers_with_prizes = User.where(WITH_PRIZES)
 

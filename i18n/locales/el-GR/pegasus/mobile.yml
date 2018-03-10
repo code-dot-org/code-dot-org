@@ -25,14 +25,14 @@
   submit: "Υποβολή"
   twentyhours_heading: "Δοκιμάστε την εισαγωγή μας στη Σειρά Μαθημάτων Επιστήμης των Υπολογιστών"
   twentyhours_text: "Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο μάθημα."
-  og_title: Κάθε παιδί δικαιούται μία ευκαιρία
+  og_title: 'Κάθε παιδί δικαιούται μία ευκαιρία'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να μελετήσει την Πληροφορική. Αλλάζει τα πάντα."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών"
   csedweek_og_description: "4-10 Δεκεμβρίου 2017. Η Πληροφορική είναι θεμελιώδης μάθηση για κάθε μαθητή."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Συμμετάσχετε στην <a href=\"http://hourofcode.com\"> Ώρα του Κώδικα</a><br/>8-14 Δεκεμβρίου 2014<br/>"
   hoc2014_students: "Μαθητές"
@@ -753,7 +753,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Πρόγραμμα σπουδών"
   dashboard_curriculum_overview: "Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως Ε΄ Δημοτικού"
   dashboard_overview: "Επισκόπηση"
@@ -771,6 +774,8 @@
   dashboard_curriculum_csins: 'Η Πληροφορική στην Επιστήμη:'
   dashboard_curriculum_csp: 'AP® Αρχές Πληροφορικής:'
   dashboard_curriculum_ecs: 'Εξερευνώντας την Πληροφορική:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Άλλα"
   dashboard_login_word: "Λέξη"
@@ -839,7 +844,7 @@
   carousel_heading_international: "Σεμινάρια στη γλώσσα σας"
   carousel_heading_domestic: "Βοηθήματα εκμάθησης που είναι διαθέσιμα στα αγγλικά"
   carousel_heading_beginners: "Βοηθήματα εκμάθησης για αρχάριους"
-  carousel_heading_beyond_beginners: Βοηθήματα εκμάθησης για αρχάριους
+  carousel_heading_beyond_beginners: 'Βοηθήματα εκμάθησης για αρχάριους'
   carousel_heading_javascript: "Μαθήματα που διδάσκουν JavaScript"
   carousel_heading_beyond_javascript: "Οδηγοί που διδάσκουν JavaScript"
   carousel_heading_unplugged: "Δεν διαθέτετε ψηφιακή συσκευή ή πρόσβαση στο Διαδίκτυο; Δοκιμάστε την 'unplugged' Πληροφορική"
@@ -941,11 +946,11 @@
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: Αρχές CS - Ενότητα 3
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "Αρχές CS - Ενότητα 3"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -994,6 +999,7 @@
   cspexams_category_name: "Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών"
   research_studies_category_name: "Research Studies"
   applab_name: "Εργαστήριο εφαρμογών"
+  gamelab_name: "Game Lab"
   basketball_name: "Φτιάξτε ένα παιχνίδι μπάσκετ"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ηλικίες 13+"
@@ -1053,7 +1059,7 @@
   course3_gradelevel: "Ηλικίες 8+ (μετά το Μάθημα 2)"
   course4_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   coursea_gradelevel: "Τάξεις Ε' Δημοτικού +"
-  courseb_gradelevel: "Grade 6+"
+  courseb_gradelevel: "Ages 5-8"
   coursec_gradelevel: "Τάξεις Α' Γυμνασίου +"
   coursed_gradelevel: "Τάξεις Β' Γυμνασίου +"
   coursee_gradelevel: "Τάξεις Γ' Γυμνασίου +"
@@ -1160,12 +1166,12 @@
   course2_shortdescription_congrats: "Για τους μαθητές με βασική δεξιότητα ανάγνωσης, αυτό το μάθημα βασίζεται στο Μάθημα 1. Οι μαθητές θα δημιουργήσουν προγράμματα για να λύσουν προβλήματα και να δημιουργήσουν διαδραστικά παιχνίδια ή ιστορίες που μπορούν να μοιραστούν. Συνιστάται για τάξεις Β' Δημοτικού έως Ε' Δημοτικού."
   course3_shortdescription_congrats: "Ετοιμος για το επόμενο επίπεδο; Οι μαθητές θα εμβαθύνουν σε θέματα προγραμματισμού που εσήχθησαν σε προηγούμενα μαθήματα και να βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού."
   course4_shortdescription_congrats: "Ετοιμος για το επόμενο επίπεδο; Οι μαθητές θα εμβαθύνουν σε θέματα προγραμματισμού που εσήχθησαν σε προηγούμενα μαθήματα και θα βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα Αngry Birds και τα Φυτά  εναντίον Ζόμπι. Μάθετε επαναληπτικούς βρόχους, συνθήκες και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες."
   codeintl_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα Αngry Birds και τα Φυτά  εναντίον Ζόμπι. Μάθετε επαναληπτικούς βρόχους, συνθήκες και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες."
   thinkersmithspanish_longdescription: "Οι μαθητές χρησιμοποιώντας ένα προκαθορισμένο \"Λεξικό του Ρομπότ\" θα ανακαλύψουν τρόπους  να  κατευθύνουν ο ένας τον άλλο ώστε να τελειώσουν συγκεκριμένες εργασίες για τις οποίες δεν έχουν συζητήσει προηγουμένως.  Με αυτό το μάθημα τα παιδιά μαθαίνουν την σύνδεση ανάμεσα στα σύμβολα και τις ενέργειες, όπως επίσης και την ανεκτίμητη δεξιότητα του εντοπισμού σφαλμάτων."

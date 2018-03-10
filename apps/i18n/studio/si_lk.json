@@ -219,6 +219,7 @@
   "iceAge": "හිම යුගය",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "නළුවා",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "ජයග්‍රාහී ලකුණ",
   "isSet": "is set",

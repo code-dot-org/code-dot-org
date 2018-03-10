@@ -7,15 +7,10 @@
  */
 
 import React, {PropTypes} from 'react';
-import Spinner from '../components/spinner';
-import $ from 'jquery';
-import DetailViewContents from './detail_view_contents';
+import ApplicationLoader from './application_loader';
+import DetailViewContents from "./detail_view_contents";
 
 export default class DetailView extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired
-  };
-
   static propTypes = {
     params: PropTypes.shape({
       applicationId: PropTypes.string.isRequired
@@ -26,48 +21,37 @@ export default class DetailView extends React.Component {
     })
   };
 
-  state = {
-    loading: true
+  static contextTypes = {
+    router: PropTypes.object.isRequired
   };
 
-  componentWillMount() {
-    this.load();
-  }
+  handleApplicationLoaded = applicationData => {
+    const {course, application_type} = applicationData;
+    const applicationId = this.props.params.applicationId;
 
-
-  load = () => {
-    this.loadRequest = $.ajax({
-      method: 'GET',
-      url: `/api/v1/pd/applications/${this.props.params.applicationId}`
-    }).done(data => {
-      this.setState({
-        data,
-        loading: false
-      });
-    });
+    // Wrong course or application type? No problem. Redirect to the correct route.
+    // Note this will re-query the API for application data
+    if (course !== this.props.route.course || application_type.toLowerCase() !== this.props.route.viewType) {
+      this.context.router.replace(`/${course}_${application_type.toLowerCase()}s/${applicationId}`);
+    }
   };
 
-  updateData = (newProps) => {
-    this.setState({
-      data: Object.assign({}, this.state.data, newProps)
-    });
-  };
+  renderApplication = ({applicationData, handleUpdate}) => (
+    <DetailViewContents
+      applicationId={this.props.params.applicationId}
+      viewType={this.props.route.viewType}
+      applicationData={applicationData}
+      onUpdate={handleUpdate}
+    />
+  );
 
   render() {
-    if (this.state.loading) {
-      return (<Spinner />);
-    } else {
-      return (
-        (
-          <DetailViewContents
-            applicationId={this.props.params.applicationId}
-            applicationData={this.state.data}
-            viewType={this.props.route.viewType}
-            course={this.props.route.course}
-            reload={this.load}
-          />
-        )
-      );
-    }
+    return (
+      <ApplicationLoader
+        applicationId={this.props.params.applicationId}
+        onApplicationLoaded={this.handleApplicationLoaded}
+        renderApplication={this.renderApplication}
+      />
+    );
   }
 }

@@ -1058,8 +1058,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ <a href='%{unplugged_url}'>මෙම
     එළිදැක්වූ පාඩම් උත්සාහ කරන්න</a>."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "විෂයමාලාව"
   dashboard_curriculum_overview: K-5 විශය මාලාවේ සාරංශය
   dashboard_overview: "දළ විශ්ලේෂණය"
@@ -1077,6 +1080,8 @@
   dashboard_curriculum_csins: "විද්‍යාවේ පරිගණක විද්‍යාව:"
   dashboard_curriculum_csp: 'AP® පරිගණක විද්‍යා මූලධර්ම:'
   dashboard_curriculum_ecs: "පරිගණක විද්‍යාව ගවේශණය:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "පෙරපාසල්"
   dashboard_grade_other: "වෙනත්"
   dashboard_login_word: "වචනය"
@@ -1329,6 +1334,7 @@
   cspexams_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය"
   research_studies_category_name: Research Studies
   applab_name: "මෘදුකාංග විද්‍යාගාරය"
+  gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
   applab_gradelevel: "වයස් 13+"
@@ -1393,7 +1399,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "වයස 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "වයස අවුරුදු 10-18"
   codeorg_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
@@ -2132,9 +2138,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

@@ -1034,8 +1034,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Оқу бағдарламасы"
   dashboard_curriculum_overview: "Мектепке дейінгі және бастауыш мектеп оқушылары
     үшін бағдарламаны шолу"
@@ -1054,6 +1057,8 @@
   dashboard_curriculum_csins: "Компьютер ғылымдары, ғылымның өзінде түсіндіріледі:"
   dashboard_curriculum_csp: 'AP® Информатика қағидалары:'
   dashboard_curriculum_ecs: "Информатика пәнін оқу:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Балабақша"
   dashboard_grade_other: "Басқасы"
   dashboard_login_word: "Сөз"
@@ -1310,6 +1315,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: "Қосымшалар Лабораториясы"
+  gamelab_name: Game Lab
   basketball_name: "Баскетбол ойынды жасау"
   sports_name: "Спорттар"
   applab_gradelevel: 13+ жастағылар үшін
@@ -1374,7 +1380,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8-сыныптан бастап
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Жас аралығы 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-18 жастағылар үшін
   codeorg_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
@@ -2132,9 +2138,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

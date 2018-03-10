@@ -690,8 +690,8 @@
         C2_binary_bracelets: Vòng đeo tay nhị phân
         C2_relay_programming: Chương trình chuyển tiếp
         C2_paper_airplanes: Máy bay giấy
-        C2_digital_footprint: 'Dấu chân kỹ thuật số '
-        C2_digital_footprint_v2: 'Dấu chân kỹ thuật số '
+        C2_digital_footprint: Dấu chân kỹ thuật số
+        C2_digital_footprint_v2: Dấu chân kỹ thuật số
         C3_maze_level_4: Vòng lặp mê cung
         C3_artist_intro: Giới thiệu về nghệ sĩ
         C3_artist_functions: 'Nghệ sĩ: chức năng'
@@ -901,6 +901,7 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Giới thiệu Danh sách
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

@@ -1,4 +1,4 @@
-no:
+"no":
   errors:
     messages:
       not_saved: 'Vennligst korriger følgende feil:'
@@ -69,7 +69,7 @@ no:
   try_k8intro: "Prøv vårt introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)"
   k8intro: "Introduksjonskurs i informatikk for elever opp til 8. klasse (15-25 timer)"
   already_started: "Har du allerede startet? Fortsett her >> "
-  demos: 'Administrator: Alle demoer'
+  demos: "Administrator: Alle demoer"
   continue: 'Fortsett'
   prize: 'premie'
   more_info: 'Mer info'
@@ -171,6 +171,7 @@ no:
       email: 'E-postadresse'
       submit: 'Send'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Det ser ut til at du har registrert deg med en ugyldig e-post adresse. Vennligst send epost til support@code.org for å få tilsendt en lenke for tilbakestilling av passord.'
     change_form:
       title: 'Endre passordet ditt'
@@ -220,7 +221,7 @@ no:
       provider_managed_section: "Denne seksjonen er administrert av en annen leverandør, og du mangler tilgang. Spør læreren om å registrere deg via %{provider} og last seksjonen på nytt."
     mail:
       student_disassociated:
-        subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet som din elev.'
+        subject: "Melding fra Code.org: %{student_name} er ikke lenger tilknyttet som din elev."
   reports:
     error:
       access_denied: "Du har ikke tilgang til denne personens statistikk"
@@ -352,7 +353,7 @@ no:
     current_password_hint: '(vi trenger ditt gjeldende passord for å bekrefte dine endringer)'
     delete: 'Slett kontoen'
     delete_text: "Klikk på knappen under for å slette kontoen din."
-    delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers kontoer.'
+    delete_text_teacher_note: "NB: Hvis du sletter din konto, slettes ikke dine elevers kontoer."
     delete_confirm: 'Er du sikker på at du vil slette denne kontoen?'
     deleted_user: 'slettet bruker'
     no_password_because_oauth: 'Ingen passord fordi du logger inn med en tredjepartsleverandør.'
@@ -363,7 +364,7 @@ no:
     create_personal_login_under_13_parent_email: 'Foreldre/foresatt epost'
     create_personal_login_info: 'Hvis du vil fortsette å bruke din Code.org konto, selv etter slutten av skoleåret, kan du opprette din egen personlige pålogging nedenfor.'
     create_personal_login_terms: "Ved å opprette en personlig pålogging, godtar jeg Code.org <a href='%{terms_of_service_url}', target='_blank'> sine vilkår for bruk</a>. Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller verges tillatelse til å bruke Code.org tjenestene selv uten en lærer."
-    create_personal_login_email_note: 'Merk: E-postadresser er ikke lagret i et format som tillater oss å kontakte studentene. Studenter vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre <a href=''%{privacy_policy_url}'', target=''_blank''> retningslinjer for personvern</a> for mer informasjon.'
+    create_personal_login_email_note: "Merk: E-postadresser er ikke lagret i et format som tillater oss å kontakte studentene. Studenter vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre <a href='%{privacy_policy_url}', target='_blank'> retningslinjer for personvern</a> for mer informasjon."
     enter_new_login_info: 'Angi ny påloggingsinformasjon'
     confirm_secret_words: 'Bekreft at det er deg ved å angi gjeldende hemmelige ord'
     enter_parent_email: "Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)"
@@ -702,7 +703,7 @@ no:
     sign_out: 'Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   terms_interstitial:
     title: "Oppdaterte tjenestebetingelser og personvernbetingelser"
-    intro_desc: 'Vi har oppdatert våre tjenestebetingelser og personvernbetingelser, som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største endringen: Vi vil <i>ikke lenger lagre epost-adressene til elevenes kontoer på Code Studio</i>. Dette er viktig for oss, og vi håper det setter en ny personvernstandard for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige endringer via epost.'
+    intro_desc: "Vi har oppdatert våre tjenestebetingelser og personvernbetingelser, som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største endringen: Vi vil <i>ikke lenger lagre epost-adressene til elevenes kontoer på Code Studio</i>. Dette er viktig for oss, og vi håper det setter en ny personvernstandard for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige endringer via epost."
     intro_instructions: "Du vil måtte akseptere disse nye betingelsene for at elever yngre enn 13 år kan ha full tilgang på all den nyeste funksjonaliteten i Code Studio. Når du registrerer en konto for en elev under 13, vil du måtte bekrefte at skolen har foreldrenes tillatelse til å samle inn elevens personlige informasjon til bruk i skolen, herunder til undervisningsprogrammer som Code Studio."
     tos: "Vilkår"
     privacy: "Personvern"
@@ -718,7 +719,7 @@ no:
     message_with_suggestion: "Vennlist kontroller at følgende informasjon er korrekt, eller oppdater etter behov."
     save: "Lagre"
   race_interstitial:
-    title: 'Valgfritt: Hjelp oss å spore fremdriften av forbedringen av mangfoldet innen programmering'
+    title: "Valgfritt: Hjelp oss å spore fremdriften av forbedringen av mangfoldet innen programmering"
     message: "Oppgi din etnisitet (kryss av alle som passer)"
     races:
       - 
@@ -762,7 +763,7 @@ no:
     delete: "Slett"
     import: "Importer"
     share_link_import_bad_link_header: "Lenke ikke gjenkjent"
-    share_link_import_bad_link_body: 'Vi kunne ikke importere lenken. Kontroller at du bruker en kobling fra en Minecraft: Agent puslespill, og at du har kopiert hele koblingen.'
+    share_link_import_bad_link_body: "Vi kunne ikke importere lenken. Kontroller at du bruker en kobling fra en Minecraft: Agent puslespill, og at du har kopiert hele koblingen."
     share_link_import_error_header: "Noe gikk galt."
     share_link_import_error_body: "Det oppstod et problem ved import av lenken. Vennligst prøv igjen."
     exit: "Tilbake til kurset"

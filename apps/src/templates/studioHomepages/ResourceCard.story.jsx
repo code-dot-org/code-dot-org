@@ -3,7 +3,7 @@ import ResourceCard from './ResourceCard';
 
 export default storybook => {
   return storybook
-    .storiesOf('ResourceCard', module)
+    .storiesOf('Cards/ResourceCard', module)
     .withReduxStore()
     .addStoryTable([
       {

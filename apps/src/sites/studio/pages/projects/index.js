@@ -46,17 +46,20 @@ $(document).ready(() => {
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
   store.dispatch(selectGallery(initialState));
+  const url = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
 
   $.ajax({
     method: 'GET',
-    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+    url: url,
     dataType: 'json'
   }).done(projectLists => {
     store.dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
       <Provider store={store}>
-        <PublicGallery />
+        <PublicGallery
+          projectValidator={projectsData.projectValidator}
+        />
       </Provider>,
       publicGallery);
   });

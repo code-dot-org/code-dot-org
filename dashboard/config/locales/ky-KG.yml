@@ -45,7 +45,7 @@
   next_page: Next page
   next_resource: Next resource
   done_with_module: Done with this Learning Module
-  cancel: "Жокко"
+  cancel: "Жок кыл"
   okay: Okay
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
@@ -205,6 +205,7 @@
       email: Email address
       submit: "Кошуу"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -492,7 +493,7 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: Learn more
+    announcement_learn_more_button: "Дагы кара"
     announcement_try_now_button: Try now
     announcement_host_an_hour_button: Host an Hour
     announcement_watch_video_button: Watch video
@@ -678,7 +679,7 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      link: Learn more
+      link: "Дагы кара"
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -913,7 +914,7 @@
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
     startover_ok: "Кайра баштоо"
-    startover_cancel: "Жокко"
+    startover_cancel: "Жок кыл"
   time:
     hour: 1 hour
     day: day
@@ -1040,7 +1041,7 @@
     delete_no: 'No'
     saved: Saved
     not_saved: Not saved
-    cancel: "Жокко"
+    cancel: "Жок кыл"
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able

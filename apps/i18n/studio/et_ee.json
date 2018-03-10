@@ -219,6 +219,7 @@
   "iceAge": "Jääaeg!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "tegelane",
   "ifSpriteN": "tegelane {spriteIndex}",
   "incrementPlayerScore": "lisa punkt",
   "isSet": "on valmis seatud",

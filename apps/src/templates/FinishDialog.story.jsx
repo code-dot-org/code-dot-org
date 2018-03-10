@@ -44,7 +44,7 @@ const studentCode = {
 
 export default storybook =>
   storybook
-    .storiesOf('FinishDialog', module)
+    .storiesOf('Dialogs/FinishDialog', module)
     .addStoryTable([
       {
         name: 'Dialog with overlay',
@@ -158,6 +158,26 @@ export default storybook =>
               blocksUsed={98}
               achievements={[]}
               studentCode={studentCode}
+            />
+          </div>
+        ),
+      },
+      {
+        name: 'Perfect Finish of challenge level',
+        description: 'Perfectly finished a challenge level',
+        story: () => (
+          <div style={dialogWrapper}>
+            <FinishDialog
+              hideBackdrop
+
+              isChallenge
+              isPerfect
+              blockLimit={98}
+              blocksUsed={98}
+              achievements={achievements}
+              studentCode={studentCode}
+              showFunometer
+              canShare
             />
           </div>
         ),

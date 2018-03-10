@@ -67,11 +67,17 @@ class Gamelab < Blockly
         properties: {
           code_functions: JSON.parse(palette),
           show_d_pad: true,
-          edit_code: true,
           show_debug_watch: true
         }
       )
     )
+  end
+
+  # By default, level types that inherit from Blockly will try to store a bunch
+  # of fields as normalized xml, discarding anything that's not actually XML.
+  # Gamelab doesn't use blockly, so don't do that to any of our fields.
+  def xml_blocks
+    %w()
   end
 
   def update_palette
@@ -81,6 +87,10 @@ class Gamelab < Blockly
   rescue JSON::ParserError => e
     errors.add(:code_functions, "#{e.class.name}: #{e.message}")
     return false
+  end
+
+  def uses_droplet?
+    true
   end
 
   def self.palette

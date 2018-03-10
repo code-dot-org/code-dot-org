@@ -11,7 +11,7 @@
   upgrade_ie_link: Pour en savoir plus
   en: Informatique/Sciences informatiques
   computer_science_edweek: Semaine de l'enseignement de l’informatique
-  csedweek_dates: Du 8 au 14 décembre 2014
+  csedweek_dates: 8-14 décembre 2014
   csedweek_banner_hoc: 'L’<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Heure de Code</a> arrive. Appel à tous les enseignants et organisateurs
     -<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -1089,8 +1089,11 @@
   dashboard_coursed: 'Cours D: '
   dashboard_coursee: 'Cours E: '
   dashboard_coursef: 'Cours F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez
     ces leçons en mode "déconnecté" </a> dans votre classe.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Programme
   dashboard_curriculum_overview: Aperçu du programme pour les élèves de primaire
   dashboard_overview: Aperçu
@@ -1108,6 +1111,8 @@
   dashboard_curriculum_csins: 'Les sciences par le biais des sciences informatiques&#160;:'
   dashboard_curriculum_csp: 'Les principes des sciences informatiques AP®&#160;:'
   dashboard_curriculum_ecs: 'Découvrir les sciences informatiques :'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Classe
   dashboard_grade_other: Autre
   dashboard_login_word: Mot
@@ -1368,6 +1373,7 @@
   cspexams_category_name: Test d'entrainement aux principes du CS
   research_studies_category_name: Research Studies
   applab_name: Labo des applis
+  gamelab_name: Game Lab
   basketball_name: Faire un match de basket
   sports_name: Sports
   applab_gradelevel: "Âge recommandé: 13 ans et plus"
@@ -2248,9 +2254,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

@@ -25,14 +25,14 @@
   submit: "ส่ง"
   twentyhours_heading: "ทดลองเรียนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้นของเรา"
   twentyhours_text: "เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์ และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้"
-  og_title: เด็กทุกคนสมควรได้รับโอกาส
+  og_title: 'เด็กทุกคนสมควรได้รับโอกาส'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์. มันมีการเปลี่ยนแปลงทุกๆ อย่าง."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code กำลังมา"
   csedweek_og_description: "4-10 ธันวาคม พ.ศ.2560  วิทยาศาสตร์คอมพิวเตอร์คือพื้นฐานสำหรับนักเรียนทุกคนได้เรียนรู้"
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "เข้าร่วม <a href=\"http://hourofcode.com\">Hour of Code</a><br/> ในวันที่ 8 - 14 ธันวาคม 2014<br/>"
   hoc2014_students: "นักเรียน"
@@ -670,8 +670,8 @@
   dashboard_navigation_manage_students: "จัดการนักเรียน"
   dashboard_navigation_lesson_plans_resources: "แผนการเรียนและแหล่งข้อมูล"
   dashboard_navigation_view_stats: "Stats"
-  dashboard_navigation_section: กลุ่ม %{section_name}
-  dashboard_navigation_student: นักเรียน %{student_name}
+  dashboard_navigation_section: 'กลุ่ม %{section_name}'
+  dashboard_navigation_student: 'นักเรียน %{student_name}'
   dashboard_progress_not_started: "not started"
   dashboard_progress_in_progress: "in progress"
   dashboard_progress_not_completed: "ไม่สมบูรณ์"
@@ -770,7 +770,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "หลักสูตร"
   dashboard_curriculum_overview: "ภาพรวมของหลักสูตรประถมศึกษา"
   dashboard_overview: "ภาพรวม"
@@ -786,8 +789,10 @@
   dashboard_teacher_worksheet: "งานคุณครู"
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'ทำความรู้จักกับวิทยาการคอมพิวเตอร์:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "อาชีพอื่น ๆ"
   dashboard_login_word: "คำ"
@@ -958,11 +963,11 @@
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1011,6 +1016,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "แอ๊ปแล็บ"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"
@@ -1069,12 +1075,12 @@
   course2_gradelevel: "อายุ 6-18 ปี"
   course3_gradelevel: "อายุ 8-18 ปี"
   course4_gradelevel: "อายุ 10-18 ปี"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "เกรด 8 +"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "อายุ 8-12 ปี"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "อายุ 10-18 ปี"
   codeorg_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   codeintl_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
@@ -1177,12 +1183,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา"
   codeintl_longdescription: "เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา"
   thinkersmithspanish_longdescription: "ด้วยการใช้คำศัพท์ของ Robot (ซึ่งมีมาให้แล้ว) นักเรียนจะได้ศึกษาวิธีการทำกิจกรรมต่างๆให้สำเร็จโดยไม่ต้องปรึกษากันมาก่อน บทเรียนนนี้สอนให้นักเรียนรู้จักการเชื่อมต่อของสัญลักษณ์และการกระทำ รวมไปถึงทักษะในการแก้ไขจุดบกพร่องต่างๆ"
@@ -1399,12 +1405,12 @@
   udemy_beyond_longdescription: 'Whether you''ve never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]'
   lynda_beyond_longdescription: 'Learn how to code, create, and build web applications, from the foundations of object-oriented programming in C and C++, to how to write Java. Our developer tutorials can help you learn to develop and create mobile apps, work with PHP and MySQL databases, get started with the statistical processing language R, and much more. [Note: payment is required]'
   edx_beyond_longdescription: "CS50x is Harvard College's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, PHP, and JavaScript plus SQL, CSS, and HTML. The on-campus version of CS50x is Harvard's second-largest course."
-  coursera_beyond_longdescription: คลาสเรียน CS 101 ของ Stanford โดย Parlante Nick (ฟรี)!  CS101 สอนความคิดสำคัญของวิทยาการคอมพิวเตอร์สำหรับผู้เรียนที่ไม่มีประสบการณ์มาก่อน เล่นและทดลองกับโค้ดสั้นๆ เพื่อให้เข้าใจคอมพิวเตอร์ มากยิ่งขึ้น  CS101 ยังสอนหลักคอมพิวเตอร์พื้นฐาน เช่น คอมพิวเตอร์ ฮาร์ดแวร์ ซอฟต์แวร์ อินเทอร์เน็ต คืออะไร?  ฉะนั้นไม่จำเป็นประสบการณ์ก่อนหน้านี้ แค่คุณใช้เว็บเบราว์เซอร์ได้ก็พอ
+  coursera_beyond_longdescription: 'คลาสเรียน CS 101 ของ Stanford โดย Parlante Nick (ฟรี)!  CS101 สอนความคิดสำคัญของวิทยาการคอมพิวเตอร์สำหรับผู้เรียนที่ไม่มีประสบการณ์มาก่อน เล่นและทดลองกับโค้ดสั้นๆ เพื่อให้เข้าใจคอมพิวเตอร์ มากยิ่งขึ้น  CS101 ยังสอนหลักคอมพิวเตอร์พื้นฐาน เช่น คอมพิวเตอร์ ฮาร์ดแวร์ ซอฟต์แวร์ อินเทอร์เน็ต คืออะไร?  ฉะนั้นไม่จำเป็นประสบการณ์ก่อนหน้านี้ แค่คุณใช้เว็บเบราว์เซอร์ได้ก็พอ'
   udacity_beyond_longdescription: "In this course you will learn key concepts in computer science and learn how to write your own computer programs in the context of building a web crawler. There is no prior programming knowledge needed for this course. Beginners are welcome! At the end of this course, you will have learned key concepts in computer science and enough programming to be able to write Python programs to solve problems on your own. This course will prepare you to move on to intermediate-level computing courses."
   teachingtree_beyond_longdescription: "TeachingTree เป็นแพลตฟอร์แบบเปิด ที่จะช่วยให้ทุกคนจัดระเบียบเนื้อหาที่จะศึกษา เป้าหมายของเราคือให้นักเรียนเข้าถึงคลิปวิดีโอได้อย่างถูกต้องและรวดเร็ว นักเรียนทุกคนจะให้การช่วยเหลือโดยการเพิ่มวิดีโอและกำหนดคอนเซ็ปต์"
   kodu_beyond_longdescription: "Kodu lets kids create games on the PC and XBox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the XBox is also available in the USA on the XBox Marketplace, in the Indie Games channel for about $5."
   cargobot_beyond_longdescription: "Cargo-Bot เป็นเกมปริศนาที่คุณจะสั่งหุ่นยนต์ให้เคลื่อนย้ายกล่อง ดูเหมือนจะง่ายใช่ไหม? ปริศนานี้มีถึง 36 ด่านให้คุณทดสอบ รวมทั้งเพลงและกราฟฟิคที่ตื่นเต้น คุณสามารถบันทึกวิธีการของคุณแล้วแชร์ให้เพื่อนๆดูได้ผ่าน Youtube"
-  kidsruby_beyond_longdescription: สนุกกับการสร้างเกม หรือ แฮกการบ้านของคุณด้วยภาษา Ruby! เพียงแค่บอกผู้ปกครองหรือคุณครูว่าคุณกำลังเรียนเขียนโปรแกรมด้วยภาษา Ruby :) ฟรีและทำงานได้บนทุกคอมพิวเตอร์ (ต้องติดตั้ง)
+  kidsruby_beyond_longdescription: 'สนุกกับการสร้างเกม หรือ แฮกการบ้านของคุณด้วยภาษา Ruby! เพียงแค่บอกผู้ปกครองหรือคุณครูว่าคุณกำลังเรียนเขียนโปรแกรมด้วยภาษา Ruby :) ฟรีและทำงานได้บนทุกคอมพิวเตอร์ (ต้องติดตั้ง)'
   w3schools_beyond_longdescription: "เรียนรู้วิธีสร้างเว็บไซต์บนคอมพิวเตอร์ของคุณเอง เรียนรู้พื้นฐานเซิร์ฟเวอร์ในเวลาไม่ถึงหนึ่งวัน เรียนรู้การสร้างฐานข้อมูลสำหรับเว็บไซต์ของคุณ"
   codeavengers_beyond_longdescription: "เรียนรู้วิธีการสร้างเกม แอปพลิเคชัน และเว็บไซต์โดยผู้เชี่ยวชาญ ด้วยระดับความยาก-ง่ายที่เหมาะสำหรับผู้เริ่มต้น เข้าใจง่าย คอร์สภาษา HTML, CSS และ JavaScript ของเรามีโค้ดที่มีความท้าทายและการปรับปรุงเกม ที่ทำให้การเรียนสนุกสนานและมีประสิทธิภาพเหมาะสำหรับทุกเพศทุกวัย"
   mozilla_beyond_longdescription: "Thimble เป็นเครื่องมือช่วยในการสร้างหน้าเว็บของคุณ เขียนและแก้ไขโค้ด HTML และ CSS แล้วแสดงตัวอย่างงานของคุณทันที จัดการและแชร์โปรเวจของคุณด้วยคลิกเดียว เหมาะสำหรับผู้เริ่มต้นและผู้เชี่ยวชาญ"

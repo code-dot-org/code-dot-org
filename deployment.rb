@@ -46,6 +46,7 @@ def load_configuration
     'build_apps'                  => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
+    'census_map_table_id'         => rack_env == :production ? '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13' : nil,
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",

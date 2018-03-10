@@ -11,7 +11,8 @@ import MarkdownSpan from '../components/markdownSpan';
 const styles = {
   lineItem: {
     fontFamily: '"Gotham 7r"',
-    marginRight: '10px'
+    marginRight: '10px',
+    display: 'inline-block'
   },
   panel: {
     width: '66%',

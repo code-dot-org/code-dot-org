@@ -532,7 +532,7 @@
     თავგადასავლებში."
   mc_gradelevel: "ასაკი 6-106"
   mc_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
-  mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6–106"
+  mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+"
   minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: "მაინკრაფტის დიზაინერი"
   minecraft_adventurer: "მაინკრაფტის თავაგადასავლები"
@@ -1030,8 +1030,11 @@
   dashboard_coursed: "კურსი D: "
   dashboard_coursee: "კურსი E: "
   dashboard_coursef: "კურსი F: "
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "თუ არ გაქვთ კომპიუტერები, <a href='%{unplugged_url}'>ჩაატარეთ
     ეს გაკვეთილები, რომლებსაც არ სჭირდებათ კომპიუტერი</a> თქვენს საკლასო ოთახში."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "კურიკულუმი"
   dashboard_curriculum_overview: K-5 კურიკულუმის მომიხილვა
   dashboard_overview: "მიმოხილვა"
@@ -1049,6 +1052,8 @@
   dashboard_curriculum_csins: "ინფორმატიკა მეცნიერებაში:"
   dashboard_curriculum_csp: 'AP® ინფორმატიკის პრინციპები:'
   dashboard_curriculum_ecs: "ინფორმატიკის შესწავლა:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K (საბავშვო ბაღი)
   dashboard_grade_other: "სხვა"
   dashboard_login_word: "სიტყვა"
@@ -1303,6 +1308,7 @@
   cspexams_category_name: CS საფუძვლების სავარჯიშო ტესტი
   research_studies_category_name: Research Studies
   applab_name: "აპლიკაციების ლაბორატორია"
+  gamelab_name: "თამაშების ლაბი"
   basketball_name: "კალათბურთის თამაშის შექმნა"
   sports_name: "შექმენით საკუთარი სპორტული თამაში"
   applab_gradelevel: "ასაკი 13+"
@@ -1511,8 +1517,10 @@
     ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები შექმნიან ინტერაქტიულ
     ისტორიებს და თამაშებს, რომელთა გაზიარება ნებისმიერთან შეუძლიათ. რეკომენდებულია
     4-5 კლასებისთვის."
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: "შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც
+    ჯერ კითხვა არ იცის."
+  courseb_shortdescription_congrats: "შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
+    (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)"
   coursec_shortdescription_congrats: ''
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
@@ -2103,9 +2111,3 @@
     ვარიანტი:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

@@ -25,14 +25,14 @@
   submit: "שלח"
   twentyhours_heading: "נסה את קורס המבוא למדעי המחשב"
   twentyhours_text: "גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים בתכנות בקורס הבא הזה."
-  og_title: לכל ילד מגיע הזדמנות
+  og_title: 'לכל ילד מגיע הזדמנות'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science. It's changing everything."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "שבוע החינוך למדעי המחשב"
   csedweek_og_description: "4-10 בדצמבר, 2017. מדעי המחשב הם הבסיס שעל כל תלמידה ללמוד."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "הצטרפו ל <a href=\"http://hourofcode.com\">שעה של קוד </a><br/>דצמבר 8-14, 2014<br/>"
   hoc2014_students: "סטודנטים"
@@ -101,7 +101,7 @@
   third_party_platform_all: 'פלטפורמה: דפדפן, אייפד ואנדרואיד'
   third_party_platform_mobile: 'פלטפורמה: אייפד ואנדרואיד'
   third_party_platform_web: 'פלטפורמה: דפדפן'
-  third_party_price_varies: המחיר משתנה לפי התוכנית
+  third_party_price_varies: 'המחיר משתנה לפי התוכנית'
   third_party_price_free: 'מחיר: חינם'
   third_party_price_299: 'מחיר: $2.99/הורדה'
   third_party_price_individual: 'מחיר יחיד: ניסיון חינם ו - $25/לחודש'
@@ -536,7 +536,7 @@
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "כתובת דואר אלקטרוני"
   volunteer_engineer_submission_final_paragraph: "You will be listed on a map for local teachers to contact you for the Hour of Code or other volunteer opportunities. Your email and exact address will NEVER be shared by us. But the other information (including approximate location) will be publicly viewable by local teachers."
-  volunteer_engineer_submission_checkbox_contact: אני מסכים כי מורים יוכלו ליצור עימי קשר לגבי אפשרויות התנדבות (כתובת הדוא"ל שלך לא תפורסם)
+  volunteer_engineer_submission_checkbox_contact: 'אני מסכים כי מורים יוכלו ליצור עימי קשר לגבי אפשרויות התנדבות (כתובת הדוא"ל שלך לא תפורסם)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
   volunteer_engineer_submission_submit: "שלח"
   volunteer_engineer_submission_thankyou: "תודה על ההתנדבותך ל\"שעת תיכנות\". כדי להתכונן לקראת \"שעת תיכנות\" ועל מנת לגייס מתנדבים אחרים, <a href=\"%{url}\"> המשך לקרוא כאן.</a>"
@@ -755,7 +755,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "תוכנית לימוד"
   dashboard_curriculum_overview: "סקירה על תוכנית הלימודים מגן חובה עד כיתה ה'"
   dashboard_overview: "סקירה"
@@ -773,6 +776,8 @@
   dashboard_curriculum_csins: 'מדעי המחשב במדע:'
   dashboard_curriculum_csp: 'עקרונות מדעי המחשב ®AP:'
   dashboard_curriculum_ecs: 'חקר מדעי המחשב:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "כיתה"
   dashboard_grade_other: "אחר"
   dashboard_login_word: "מילה"
@@ -943,11 +948,11 @@
   accelerated_name: "קורס מואץ"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -996,6 +1001,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "מעבדת היישומים"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"
@@ -1054,12 +1060,12 @@
   course2_gradelevel: "גילאי 6-18"
   course3_gradelevel: "גילאי 8-18"
   course4_gradelevel: "גילאי 10-18"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "כיתות ח' ומעלה"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "גילאי 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "גילאי 10-18"
   codeorg_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
@@ -1162,12 +1168,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   codeintl_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   thinkersmithspanish_longdescription: "באמצעות שימוש ב\"מילון רובוטי\" המוגדר מראש, התלמידים ילמדו להנחות אחד את השני בהשלמת משימות ללא דיון מקדים. השיעור הזה מלמד את הילדים את הקשר בין סמלים לפעולות, וגם את היכולת החשובה מאוד של לדבג."
@@ -1224,7 +1230,7 @@
   codecademy_beyond_name: "Codecademy"
   kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "סקראץ' ג'וניור לגילאי טרום קריאה"
-  hopscotch_beyond_name: הופסקוץ' :תכנות על האייפד שלך
+  hopscotch_beyond_name: 'הופסקוץ'' :תכנות על האייפד שלך'
   pocketcode_beyond_name: "Pocket Code"
   groklearning_beyond_name: "ללמוד תכנות Python"
   hacketyhack_beyond_name: "למד רובי"

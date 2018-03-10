@@ -25,14 +25,14 @@
   submit: "Pošalji"
   twentyhours_heading: "Isprobajte naš Uvod u Tečaj informatike"
   twentyhours_text: "Završio si svoj prvi Sat Kodiranja? Nauči više o Informatici i konceptima programiranja u narednom tečaju."
-  og_title: Svako dijete zaslužuje priliku
+  og_title: 'Svako dijete zaslužuje priliku'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Svaki učenik u svakoj školi zaslužuje priliku studirati informatiku. Ona mijenja sve."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Tjedan podučavanja Računalstva"
-  csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description: "December 3-9, 2018. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Pridružite se <a href=\"http://hourofcode.com\">Satu Kodiranja</a><br/>8. - 14. prosinca 2014.<br/>"
   hoc2014_students: "Učenici"
@@ -761,7 +761,10 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Nastavni plan"
   dashboard_curriculum_overview: "Pregled kurikuluma razredne nastave"
   dashboard_overview: "Pregled"
@@ -777,8 +780,10 @@
   dashboard_teacher_worksheet: "učiteljski radni list"
   dashboard_curriculum_csina: 'Računarstvo u algebri:'
   dashboard_curriculum_csins: 'Računarstvo u znanosti:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csp: 'Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "predškolski"
   dashboard_grade_other: "Ostalo"
   dashboard_login_word: "Riječ"
@@ -949,11 +954,11 @@
   accelerated_name: "Ubrzani tečaj"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
+  cspunit1_name: "(old) Unit 1: Digital Information"
+  cspunit2_name: "(old) Unit 2: The Internet"
+  cspunit3_name: "(old) Unit 3: Programming"
+  cspunit4_name: "(old) Unit 4: Data"
+  cspunit5_name: "(old) Unit 5: Explore and Create PT"
   cspunit6_name: 'Post-AP: Databases in Apps'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1002,6 +1007,7 @@
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratorij aplikacija"
+  gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ages 13+"
@@ -1060,12 +1066,12 @@
   course2_gradelevel: "Dob 6+ (potrebno čitanje)"
   course3_gradelevel: "Godine 8-18"
   course4_gradelevel: "Dob 10+ (nakon Tečaja 3)"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
-  coursed_gradelevel: "Grade 8+"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
+  coursed_gradelevel: "Ages 7-11"
+  coursee_gradelevel: "Dob 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "Dob 10+ (nakon Tečaja 3)"
   codeorg_platformtext: "Suvremeni preglednici, mobiteli, tableti"
   codeintl_platformtext: "Suvremeni preglednici, mobiteli, tableti"
@@ -1168,12 +1174,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika."
   codeintl_longdescription: "Nauči osnovne informatičke pojmove pomoću povuci-i-ispusti programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči programske petlje ponavljanja, uvjete i osnovne algoritme. Dostupno na 34 jezika."
   thinkersmithspanish_longdescription: "Korištenjem ugrađenog \"Robotskog rječnika\" učenici će otkriti kako navoditi jedan drugog ka izvršavanju određene zadaće bez prethodnog dogovaranja. Ova lekcija poučava djecu vezi između simbola i akcije, kao i neprocjenjivo vrijednoj vještini ispravljanja grešaka."
