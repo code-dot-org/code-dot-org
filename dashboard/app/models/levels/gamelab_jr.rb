@@ -27,6 +27,7 @@ class GamelabJr < Gamelab
   serialized_attrs %w(
     helper_libraries
     custom_helper_library
+    custom_blocks
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -37,9 +38,10 @@ class GamelabJr < Gamelab
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-          show_d_pad: true,
           show_debug_watch: true,
-          use_helper_lib: true,
+          helper_libraries: [
+            "GameLabJr",
+          ],
         }
       )
     )
