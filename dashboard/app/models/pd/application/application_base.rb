@@ -294,8 +294,9 @@ module Pd::Application
       COURSE_NAME_MAP[course.to_sym]
     end
 
+    # displays the iso8601 date (yyyy-mm-dd)
     def date_accepted
-      accepted_at.try(:strftime, '%b %e')
+      accepted_at.try {|datetime| datetime.to_date.iso8601}
     end
   end
 end
