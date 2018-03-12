@@ -194,69 +194,69 @@
         2-3_Bee_Debugging_4_a: "¿Hay algún lugar donde la abeja haga algo que no tiene
           sentido? ¿Qué pasa cuando cambias ese bloque?"
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: No tienes que usar un bucle con una función. Intenta
-          moverte, usa las funciones, luego avanza y usa las funciones de nuevo.
+        2-3_Bee_Functions_4_a: No tiene que usar un bucle con una función. Intenta
+          moverte, usando la función, luego avanza y usa la función nuevamente.
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: No tienes que usar un bucle con una función. Intenta
-          moverte, usa las funciones, luego avanza y usa las funciones de nuevo.
+        2-3_Bee_Functions_6_a: No tiene que usar un bucle con una función. Intenta
+          moverte, usando la función, luego avanza y usa la función nuevamente.
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco
-          Agrega algunos bloques, luego pruébalo. Agrega más, luego intenta de nuevo. ¡Pronto, lo lograras!
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        2-3_Bee_Functions_8_a: "Si el rompecabezas parece desafiante, intente construir
+          su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
+          Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
-        2-3_Bee_Functions_8_b: |-
-          Recuerda construir tu código dentro del bloque de función verde.
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        2-3_Bee_Functions_8_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        2-3_Bee_Functions_8_b: Recuerda construir tu código dentro del bloque de función
+          verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
         2-3_Bee_Loops_2_a: Deberías terminar con cuatro bloques dentro de tu bucle.
       2-3 Bee Loops 3_authored_hint:
         2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu bucle.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles `repetir` diferentes, uno después
+        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
           del otro.
       2-3 Bee Loops 4_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       2-3 Bee Loops 4A_authored_hint:
         2-3_Bee_Loops_4A_a: La primera acción será un giro, en lugar de un movimiento.
         2-3_Bee_Loops_4A_b: La última parte del programa puede terminarse escribiendo
-          código al final de su programa fuera de su bucle.
+          código al final de su programa fuera del bucle.
         2-3_Bee_Loops_4A_c: Si aún no puedes detectar los bucles, intenta codificarlo
           primero, luego ve lo que puedes combinar en un bucle 'repetir' al final.
       2-3 Bee Loops 5_authored_hint:
-        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar `repetir`
-          inmediatamente, comienza por codificar cada movimiento y busca un patrón.
+        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar 'repetir`
+          inmediatamente, comienza a codificar cada movimiento y busca un patrón.
       2-3 Bee Loops 6_authored_hint:
-        2-3_Bee_Loops_6_a: Si no puedes decir qué debería ir en el bucle 'repetir',
+        2-3_Bee_Loops_6_a: Si no puedes indicar que debería ir en el bucle 'repeat',
           intenta arrastrar los bloques uno por uno y ve si puedes encontrar un patrón.
-        2-3_Bee_Loops_6_b: Aquí deberían haber 6 bloques dentro del bucle 'repetir'
-          cuando hayas terminado.
+        2-3_Bee_Loops_6_b: Debería haber 6 bloques dentro de su bucle `repeat` cuando
+          haya terminado.
       2-3 Bee Loops 7_authored_hint:
         2-3_Bee_Loops_7_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_7_b: 'Si no puedes imaginar el bucle desde el principio, intenta
+        2-3_Bee_Loops_7_b: 'Si no puedes programar el bucle desde el principio, intenta
           programarlo a lo largo del camino, luego busca un patrón.  '
       2-3 Maze 1_authored_hint:
         2-3_Maze_1_a: Para usar un bloque `avanzar`, arrástralo desde el área de la
           barra de herramientas al espacio de trabajo y conéctelo al bloque`al ejecutar`.
       2-3 Maze 16_authored_hint:
         2-3_Maze_16_a: Si el patrón es difícil de ver, intenta programarlo todo primero
-          y ve qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle 'repetir', simplemente
-          arrastra un bucle hacia el espacio de trabajo, luego arrastra todos los
-          bloques desde el programa de inicio dentro de él!
+          y mira qué cosas se repiten una y otra vez antes de colocar los bucles.
+        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle de "repetición",
+          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
+          todos los bloques desde el programa de inicio dentro de él!
       2-3 Maze 6_authored_hint:
-        2-3_Maze_6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        2-3_Maze_6_a: "¡Hay dos formas de resolver este rompecabezas!"
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y ve qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio? ¡Haga clic en "volver
-          a empezar" para recuperarlo!
+          primero y mira qué cosas se repiten una y otra vez antes de colocar los
+          bucles.
+        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio?  ¡Haga clic en "Comenzar
+          de nuevo" para recuperarlo!
       2-3 Maze Loops 18_authored_hint:
         2-3_Maze_Loops_18_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y ve qué cosas se repiten una y otra vez antes de colocar los bucles.
+          primero y mira qué cosas se repiten una y otra vez antes de colocar los
+          bucles.
       2-3 Maze Loops 19_authored_hint:
         2-3_Maze_Loops_19_a: Si estas atascado, intenta escribir el código sin bucles
           primero y busca patrones.
@@ -4787,15 +4787,15 @@
           * Make 3 honey
           * Move backward
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
+          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
+          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
+          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
+          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       course3_bee_functions_challenge3_authored_hint:
@@ -6521,7 +6521,7 @@
       courseB_maze_seq8_authored_hint:
         courseB_maze_seq8_a: If you're stuck, try adding one block at a time until
           you solve the puzzle.
-        courseB_maze_seq8_b: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseB_maze_seq8_b: "¡Hay dos formas de resolver este rompecabezas!"
         courseB_maze_seq8_c: Don't know which way to go? Try this path!
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: If you're having trouble, try writing down the steps
@@ -7609,13 +7609,13 @@
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_a: If the pattern is hard to see, try coding it all out
           first and see what repeats over and over before you put the loops in.
-        courseC_maze_loops6_b: Para poner muchos bloques dentro de un bucle 'repetir',
-          simplemente arrastra un bucle hacia el espacio de trabajo, luego arrastra
+        courseC_maze_loops6_b: Para poner muchos bloques dentro de un bucle de "repetición",
+          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
           todos los bloques desde el programa de inicio dentro de él!
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: Si el patrón es difícil de ver, intenta programarlo
-          todo primero y ve qué cosas se repiten una y otra vez antes de colocar los
-          bucles.
+          todo primero y mira qué cosas se repiten una y otra vez antes de colocar
+          los bucles.
       courseC_maze_loops8_authored_hint:
         courseC_puppy_loops8courseC_maze_loops8_a: Try thinking about this problem
           in small parts. Take your time. You don't need to solve it on the first
@@ -7674,7 +7674,7 @@
         courseC_maze_programming5_c: The solution will have two `move forward` blocks,
           a turn, and two more `move forward` blocks.
       courseC_maze_programming6_authored_hint:
-        courseC_maze_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseC_maze_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
         courseC_maze_programming6_c: Remember you have to turn first, since the bird
@@ -9303,7 +9303,7 @@
       courseD_maze_ramp5d_authored_hint: []
       courseD_maze_ramp5d_2018_authored_hint: []
       courseD_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseC_maze_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseC_maze_programming6_b: The bird starts facing a wall, so remember to
           turn before you move.
         courseC_maze_programming6_c: Remember you can write one piece of the code
@@ -9519,14 +9519,14 @@
       courseD_scrat_ramp6_2018_authored_hint:
         courseC_maze_programming6a_a: Use a `repeat` loop to get Scrat moving!
       courseD_scrat_ramp7_authored_hint:
-        courseD_scrat_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseD_scrat_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
           blocks and running the code to see what will happen, even if you don't think
           you've solved the puzzle yet.
       courseD_scrat_ramp7_2018_authored_hint:
-        courseD_scrat_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseD_scrat_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseD_scrat_programming6_b: Remember to turn first before moving, since
           Scrat is facing the wrong direction.
         courseD_scrat_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -10084,43 +10084,38 @@
           move forward\n- collect all of the nectar\n- move backward\n- turn back
           to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco
-          Agrega algunos bloques, luego pruébalo. Agrega más, luego intenta de nuevo. ¡Pronto, lo lograras!
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseE_bee_functions6_a: "Si el rompecabezas parece desafiante, intente construir
+          su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
+          Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6_2018_authored_hint:
-        courseE_bee_functions6_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco
-          Agrega algunos bloques, luego pruébalo. Agrega más, luego intenta de nuevo. ¡Pronto, lo lograras!
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseE_bee_functions6_a: "Si el rompecabezas parece desafiante, intente construir
+          su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
+          Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions6test_authored_hint:
-        courseE_bee_functions6_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco
-          Agrega algunos bloques, luego pruébalo. Agrega más, luego intenta de nuevo. ¡Pronto, lo lograras!
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseE_bee_functions6_a: "Si el rompecabezas parece desafiante, intente construir
+          su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
+          Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the
           function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
-        courseE_bee_functions7_b: |-
-          Recuerda construir tu código dentro del bloque de función verde.
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseE_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions7_b: Recuerda construir tu código dentro del bloque de
+          función verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
           bring him back.
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
-        courseE_bee_functions7_b: |-
-          Recuerda construir tu código dentro del bloque de función verde.
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseE_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions7_b: Recuerda construir tu código dentro del bloque de
+          función verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
           bring him back.
@@ -10152,27 +10147,27 @@
         courseE_bee_functions9_b: Even though you know how much nectar some of the
           flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
+          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
+          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
+          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
+          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
+          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
+          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseE_bee_functions_challenge1_a: Si el rompecabezas parece desafiante,
+          intenta construir tu función de poco a poco. Agregue algunos bloques, luego
+          pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseE_bee_functions_challenge1_b: Remember to build your code inside of
           the green function block.
       courseE_bee_ramp14_authored_hint:
@@ -10570,7 +10565,7 @@
         courseC_maze_programming5_c: You will need to turn left at the corner to get
           to the pig.
       courseE_maze_ramp6_authored_hint:
-        courseC_maze_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseC_maze_programming6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseC_maze_programming6_b: Remember to turn first before moving, since the
           bird starts facing a wall.
         courseC_maze_programming6_c: Don't be afraid to make a mistake! Try adding
@@ -13107,19 +13102,17 @@
         courseF_bee_functions5a_c: Dentro de tu bucle `siempre que`, asegúrate de
           avanzar, luego usa tu función para buscar una ruta.
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco
-          Agrega algunos bloques, luego pruébalo. Agrega más, luego intenta de nuevo. ¡Pronto, lo lograras!
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseF_bee_functions6_a: "Si el rompecabezas parece desafiante, intente construir
+          su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
+          Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseF_bee_functions6_b: Tu función debe verificar si hay una flor o un panal,
           obtener néctar o hacer miel, luego girar.
         courseF_bee_functions6_c: Dado que estás girando dentro de tu función, solo
           necesitas un bucle `siempre que` para atravesar este laberinto.
       courseF_bee_functions6_2018_authored_hint:
-        courseF_bee_functions6_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco
-          Agrega algunos bloques, luego pruébalo. Agrega más, luego intenta de nuevo. ¡Pronto, lo lograras!
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        courseF_bee_functions6_a: "Si el rompecabezas parece desafiante, intente construir
+          su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
+          Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseF_bee_functions6_b: Tu función debe verificar si hay una flor o un panal,
           obtener néctar o hacer miel, luego girar.
         courseF_bee_functions6_c: Dado que estás girando dentro de tu función, solo
@@ -13135,21 +13128,21 @@
         courseF_bee_functions7_b: Trata de dibujar un camino a través de este laberinto
           con tu dedo. ¿Dónde tendrá que tomar la abeja una decisión?
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions8a_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseF_bee_functions8a_b: |
           Recuerda construir código dentro del editor de funciones.
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions8a_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseF_bee_functions8a_b: |
           Recuerda construir código dentro del editor de funciones.
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
@@ -13157,9 +13150,9 @@
         courseF_bee_functions7_c: "¿De qué manera deberías girar si hay un panal?
           ¿Qué tal una flor? ¿Qué pasa si no hay nada?"
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions7_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
 
@@ -13399,9 +13392,9 @@
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        courseF_bee_functions8a_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
         courseF_bee_functions8a_b: |
           Recuerda construir código dentro del editor de funciones.
       courseF_bee_fwp1_authored_hint:
@@ -14212,7 +14205,7 @@
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
         courseF_maze_ramp5_c: Try using a `repeat` loop for shorter code!
       courseF_maze_ramp6_authored_hint:
-        courseF_maze_ramp6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseF_maze_ramp6_a: "¡Hay dos formas de resolver este rompecabezas!"
         courseF_maze_ramp6_b: El pájaro comienza a mirar hacia la pared, ¡así que
           recuerda girar antes de moverte!
         courseF_maze_ramp6_c: Don't be afraid to make a mistake! Try adding blocks
@@ -14796,7 +14789,7 @@
           and turn the opposite way. Move forward one more time to reach the pig.
       grade2_CaringForNewPet_3D_authored_hint: []
       grade2_CaringForNewPet_4_authored_hint:
-        2-3_Maze_6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        2-3_Maze_6_a: "¡Hay dos formas de resolver este rompecabezas!"
       grade2_CaringForNewPet_5_authored_hint:
         grade2_CaringForNewPet_5_a: If you can't quite see what you need to do, try
           saying the steps that your bird will take out loud one-by-one and see if
@@ -14854,15 +14847,16 @@
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: Si el patrón es difícil de ver, intenta programarlo todo primero
-          y ve qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle 'repetir', simplemente
-          arrastra un bucle hacia el espacio de trabajo, luego arrastra todos los
-          bloques desde el programa de inicio dentro de él!
+          y mira qué cosas se repiten una y otra vez antes de colocar los bucles.
+        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle de "repetición",
+          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
+          todos los bloques desde el programa de inicio dentro de él!
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y ve qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio? ¡Haga clic en "volver
-          a empezar" para recuperarlo!
+          primero y mira qué cosas se repiten una y otra vez antes de colocar los
+          bucles.
+        2-3_Maze_Loops_17_b: ¿Se borró el código de inicio?  ¡Haga clic en "Comenzar
+          de nuevo" para recuperarlo!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Pista: cada hebra tiene una longitud de 75 pixeles.'
       grade2_PuppyLoops_9_authored_hint:
@@ -14910,13 +14904,14 @@
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_puppy_loops6_authored_hint:
         2-3_Maze_16_a: Si el patrón es difícil de ver, intenta programarlo todo primero
-          y ve qué cosas se repiten una y otra vez antes de colocar los bucles.
-        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle 'repetir', simplemente
-          arrastra un bucle hacia el espacio de trabajo, luego arrastra todos los
-          bloques desde el programa de inicio dentro de él!
+          y mira qué cosas se repiten una y otra vez antes de colocar los bucles.
+        2-3_Maze_16_b: Para poner muchos bloques dentro de un bucle de "repetición",
+          simplemente arrastre un bucle hacia el espacio de trabajo, luego arrastre
+          todos los bloques desde el programa de inicio dentro de él!
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: Si el patrón es difícil de ver, intenta programarlo todo
-          primero y ve qué cosas se repiten una y otra vez antes de colocar los bucles.
+          primero y mira qué cosas se repiten una y otra vez antes de colocar los
+          bucles.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: |-
           ** Recuerda: ** Este puzzle cambia cada vez que se ejecuta.
@@ -15021,24 +15016,24 @@
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar `repetir`
-          inmediatamente, comienza por codificar cada movimiento y busca un patrón.
+        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar 'repetir`
+          inmediatamente, comienza a codificar cada movimiento y busca un patrón.
       grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: Si no puedes decir qué debería ir en el bucle 'repetir',
+        2-3_Bee_Loops_6_a: Si no puedes indicar que debería ir en el bucle 'repeat',
           intenta arrastrar los bloques uno por uno y ve si puedes encontrar un patrón.
-        2-3_Bee_Loops_6_b: Aquí deberían haber 6 bloques dentro del bucle 'repetir'
-          cuando hayas terminado.
+        2-3_Bee_Loops_6_b: Debería haber 6 bloques dentro de su bucle `repeat` cuando
+          haya terminado.
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles `repetir` diferentes, uno después
+        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
           del otro.
       grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_7_b: 'Si no puedes imaginar el bucle desde el principio, intenta
+        2-3_Bee_Loops_7_b: 'Si no puedes programar el bucle desde el principio, intenta
           programarlo a lo largo del camino, luego busca un patrón.  '
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: La primera acción será un giro, en lugar de un movimiento.
         2-3_Bee_Loops_4A_b: La última parte del programa puede terminarse escribiendo
-          código al final de su programa fuera de su bucle.
+          código al final de su programa fuera del bucle.
         2-3_Bee_Loops_4A_c: Si aún no puedes detectar los bucles, intenta codificarlo
           primero, luego ve lo que puedes combinar en un bucle 'repetir' al final.
       grade3_Loops_8_authored_hint:
@@ -15135,8 +15130,8 @@
 
           ![](https://images.code.org/6a8b4b97a8eef813d8a827b0b7b2d36b-image-1480446509692.05.22.png)
         grade3_maze_loops2_b: Si el patrón es difícil de ver, intenta programarlo
-          todo primero y ve qué cosas se repiten una y otra vez antes de colocar los
-          bucles.
+          todo primero y mira qué cosas se repiten una y otra vez antes de colocar
+          los bucles.
         grade3_maze_loops2_c: Try using one `repeat` loop inside of another to cut
           down on the amount of code you need.
       grade3_maze_loops2a_authored_hint:
@@ -15354,17 +15349,15 @@
           forward\n- collect all of the nectar\n- turn around\n- move back to the
           main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco
-          Agrega algunos bloques, luego pruébalo. Agrega más, luego intenta de nuevo. ¡Pronto, lo lograras!
-          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+        2-3_Bee_Functions_8_a: "Si el rompecabezas parece desafiante, intente construir
+          su función un poco a la vez.   \n\nAgregue algunos  bloques , luego pruébelo.
+          Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí! ! [] (https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: |-
-          Si el rompecabezas parece desafiante, intenta construir tu función de poco a poco.
-          Agregue algunos bloques, luego pruébelo. Agrega más, luego intenta de nuevo. ¡Pronto, llegarás allí!
-        2-3_Bee_Functions_8_b: |-
-          Recuerda construir tu código dentro del bloque de función verde.
-          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        2-3_Bee_Functions_8_a: Si el rompecabezas parece desafiante, intenta construir
+          tu función de poco a poco. Agregue algunos bloques, luego pruébelo. Agrega
+          más, luego intenta de nuevo. ¡Pronto, llegarás allí!
+        2-3_Bee_Functions_8_b: Recuerda construir tu código dentro del bloque de función
+          verde. ! [] (https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down
           the path, collect the nectar, make the honey, then turn the bee around and
           bring him back.
@@ -15417,7 +15410,7 @@
         2-3_Artist_6_c: Cada lado del triángulo tienen el mismo tamaño como los lados
           del cuadrado...¡100 pixeles!
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles `repetir` diferentes, uno después
+        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
           del otro.
       grade4_review_bee2_authored_hint:
         2-3_Bee_Loops_3_a: Deberías tener 6 bloques dentro de tu bucle.
@@ -15897,24 +15890,24 @@
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: Deberías terminar con cinco bloques dentro de tu bucle.
       level 'grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar `repetir`
-          inmediatamente, comienza por codificar cada movimiento y busca un patrón.
+        2-3_Bee_Loops_5_a: Si no puedes detectar los bloques para colocar 'repetir`
+          inmediatamente, comienza a codificar cada movimiento y busca un patrón.
       level 'grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: Si no puedes decir qué debería ir en el bucle 'repetir',
+        2-3_Bee_Loops_6_a: Si no puedes indicar que debería ir en el bucle 'repeat',
           intenta arrastrar los bloques uno por uno y ve si puedes encontrar un patrón.
-        2-3_Bee_Loops_6_b: Aquí deberían haber 6 bloques dentro del bucle 'repetir'
-          cuando hayas terminado.
+        2-3_Bee_Loops_6_b: Debería haber 6 bloques dentro de su bucle `repeat` cuando
+          haya terminado.
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: Necesitas dos bucles `repetir` diferentes, uno después
+        2-3_Bee_Loops_3B_a: Necesitas dos bucles 'repetir' diferentes, un después
           del otro.
       level 'grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: La primera acción será un giro, en lugar de un movimiento.
-        2-3_Bee_Loops_7_b: 'Si no puedes imaginar el bucle desde el principio, intenta
+        2-3_Bee_Loops_7_b: 'Si no puedes programar el bucle desde el principio, intenta
           programarlo a lo largo del camino, luego busca un patrón.  '
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: La primera acción será un giro, en lugar de un movimiento.
         2-3_Bee_Loops_4A_b: La última parte del programa puede terminarse escribiendo
-          código al final de su programa fuera de su bucle.
+          código al final de su programa fuera del bucle.
         2-3_Bee_Loops_4A_c: Si aún no puedes detectar los bucles, intenta codificarlo
           primero, luego ve lo que puedes combinar en un bucle 'repetir' al final.
       level 'grade3_Loops_8_authored_hint:

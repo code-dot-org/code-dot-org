@@ -7946,8 +7946,8 @@
       courseA_artist_loops2_instruction: 'Aiuta l''artista a disegnare questa linea:
         due volte avanti.'
       courseA_artist_loops3_instruction: Disegna cinque volte una linea in avanti.
-      courseA_artist_loops4_instruction: Ora, usa un ciclo`ripeti` per disegnare questa
-        linea cinque volte!
+      courseA_artist_loops4_instruction: Ora, usa un ciclo `ripeti` per disegnare
+        questa linea cinque volte!
       courseA_artist_loops5_instruction: Disegna una linea composta da sette segmenti.
         Questo diventerà il nostro orizzonte.
       courseA_artist_loops6_instruction: Mettiamo una bella collina sullo sfondo.
@@ -8024,9 +8024,7 @@
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
-      courseA_maze_seq1_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
+      courseA_maze_seq1_instruction: Fai andare l'uccellino fino al maiale cattivo!
       courseA_maze_seq10_instruction: 'Sfida: aggira la dinamite (TNT) per portare
         l''uccellino fino al maialino! '
       courseA_maze_seq11_instruction: Muovi in una direzione, poi in un'altra, per
@@ -8047,8 +8045,8 @@
         blocchi necessari per far arrivare l'uccellino fino al maialino!
       courseA_maze_seq8_instruction: Risolvi questo esercizio per portare l'uccellino
         fino al maialino!
-      courseA_maze_seq9_instruction: Correggi gli errori in questo esercizio, aggiungendo
-        i blocchi necessari per portare l'uccellino fino al maialino!
+      courseA_maze_seq9_instruction: 'Sfida: Correggi gli errori in questo esercizio,
+        aggiungendo i blocchi necessari per portare l''uccellino fino al maialino!'
       courseA_maze_seq_challenge1_instruction: |-
         Something is wrong here. Help fix
         the code to get the bird to the pig!
@@ -8058,7 +8056,7 @@
       courseA_playLab_events1_instruction: Questo è il Laboratorio. Metti dei blocchi
         nell'area di lavoro e prova a vedere cosa succede!
       courseA_playLab_events2_instruction: Jorge, il cane, vuole dire "Ciao". Riesci
-        ad aiutarlo ?
+        ad aiutarlo?
       courseA_playLab_events3_instruction: Aggancia il blocco `sposta il cane a sinistra`
         al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
         già nell'area di lavoro.
@@ -8123,7 +8121,7 @@
       courseB_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
         da questa grotta.
       courseB_collector_loops11_instruction: |-
-        Evviva! Raccogli più tesori che puoi!\r
+        Evviva! Raccogli più tesori che puoi!
         (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops2_instruction: |-
         Collect all four piles to pass this

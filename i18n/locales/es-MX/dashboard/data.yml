@@ -566,6 +566,7 @@ es-MX:
         applab_intro_designmode: App Lab - Modo de diseño
         applab_intro_share: App Lab - Comparte tu aplicación
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

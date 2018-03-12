@@ -566,6 +566,7 @@ nn:
         applab_intro_designmode: App Lab - utformingsmodus
         applab_intro_share: App Lab - del Appen din
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

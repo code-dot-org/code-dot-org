@@ -237,8 +237,8 @@
       picture: Foro contraseña
       word: Palabras secretas
       email: Correo electrónico
-      google_classroom: Google Classroom
-      clever: Clever
+      google_classroom: Aula de Google
+      clever: Inteligente
   follower:
     invite_sent: Invitación enviada
     added_teacher: "%{name} añadido como tu maestro"
@@ -299,7 +299,7 @@
         gamelab: Hacer un proyecto de laboratorio de Juegos
         weblab: Hacer un proyecto de laboratorio de Juegos (beta)
       home: Inicio
-      my_dashboard: My Dashboard
+      my_dashboard: Mi panel de control
       courses: cursos
       course_catalog: Catálogo de cursos
       project_gallery: Proyectos

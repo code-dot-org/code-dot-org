@@ -902,6 +902,7 @@
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Giới thiệu Danh sách
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

@@ -566,6 +566,7 @@ fil:
         applab_intro_designmode: App Lab - Pag-design na Mode
         applab_intro_share: App Lab - Ibahagi ang Iyong App
         csd_applab_arrays: Introduksyon sa mga Array
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke

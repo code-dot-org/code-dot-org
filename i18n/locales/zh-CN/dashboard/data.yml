@@ -566,6 +566,7 @@ zh-CN:
         applab_intro_designmode: 应用程序实验室 - 设计模式
         applab_intro_share: 应用程序实验室 - 共享您的应用程序
         csd_applab_arrays: 数组的简介
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面
