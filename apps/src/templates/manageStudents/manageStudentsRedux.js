@@ -97,7 +97,7 @@ export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
     dispatch(startSavingStudent(studentId));
-    updateStudentOnServer(state.editingData[studentId], (error, data) => {
+    updateStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
       if (error) {
         console.error(error);
       }
@@ -420,7 +420,7 @@ export const convertStudentDataToArray = (studentData) => {
 };
 
 // Make a post request to edit a student.
-const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
+const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
   const dataToUpdate = {
     id: updatedStudentInfo.id,
     name: updatedStudentInfo.name,
@@ -428,8 +428,9 @@ const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
     gender: updatedStudentInfo.gender,
   };
   $.ajax({
-    url: `/v2/students/${dataToUpdate.id}/update`,
-    method: 'POST',
+    url: `/dashboardapi/sections/${sectionId}/students/${dataToUpdate.id}`,
+    method: 'PATCH',
+    type: 'json',
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(dataToUpdate),
   }).done((data) => {
