@@ -117,7 +117,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   initializeEventForwarding() {
     if (!this.fiveBoard_) {
-      throw new Error('Cannot initialize event forwarding: Not connected to board firmware.');
+      throw new Error(i18n.maker_error_cannotInitializeEventForwarding());
     }
 
     this.fiveBoard_.on('disconnect', () => this.emit('disconnect'));
