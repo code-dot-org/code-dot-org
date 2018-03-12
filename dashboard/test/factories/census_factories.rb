@@ -119,6 +119,24 @@ FactoryGirl.define do
         create :census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 2
       end
     end
+
+    trait :with_three_years_ago_teaches_yes do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 3
+      end
+    end
+
+    trait :with_three_years_ago_teaches_no do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, school: school, school_year: evaluator.school_year - 3
+      end
+    end
+
+    trait :with_three_years_ago_teaches_maybe do
+      after(:create) do |school, evaluator|
+        create :census_submission_school_info, :with_teaches_no_teacher_census_submission, :with_teaches_yes_teacher_census_submission, school: school, school_year: evaluator.school_year - 3
+      end
+    end
   end
 
   factory :census_submission, class: Census::CensusSubmission do

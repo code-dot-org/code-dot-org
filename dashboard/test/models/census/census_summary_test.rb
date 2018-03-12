@@ -149,6 +149,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_ap_cs_offering,
       :with_one_year_ago_teaches_no,
       :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "YES")
   end
@@ -160,6 +161,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_ib_cs_offering,
       :with_one_year_ago_teaches_no,
       :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "YES")
   end
@@ -181,6 +183,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_state_cs_offering,
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
       school_year: school_year
     validate_summary(school, school_year, "NO")
   end
@@ -194,6 +197,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_state_cs_offering,
       :with_one_year_ago_teaches_no,
       :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "YES")
   end
@@ -206,6 +210,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_teaches_yes_parent_census_submission,
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
       school_year: school_year
     validate_summary(school, school_year, "NO")
   end
@@ -219,6 +224,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_state_not_having_state_data,
       :with_one_year_ago_teaches_no,
       :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "YES")
   end
@@ -232,6 +238,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_state_not_having_state_data,
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
       school_year: school_year
     validate_summary(school, school_year, "NO")
   end
@@ -242,6 +249,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_state_not_having_state_data,
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "HISTORICAL_YES")
   end
@@ -252,6 +260,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_state_not_having_state_data,
       :with_one_year_ago_teaches_no,
       :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
       school_year: school_year
     validate_summary(school, school_year, "HISTORICAL_NO")
   end
@@ -262,6 +271,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_state_not_having_state_data,
       :with_one_year_ago_teaches_maybe,
       :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "HISTORICAL_MAYBE")
   end
@@ -271,6 +281,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     school = create :census_school,
       :with_state_not_having_state_data,
       :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "HISTORICAL_YES")
   end
@@ -280,6 +291,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     school = create :census_school,
       :with_state_not_having_state_data,
       :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_yes,
       school_year: school_year
     validate_summary(school, school_year, "HISTORICAL_NO")
   end
@@ -289,8 +301,19 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     school = create :census_school,
       :with_state_not_having_state_data,
       :with_two_years_ago_teaches_maybe,
+      :with_three_years_ago_teaches_no,
       school_year: school_year
     validate_summary(school, school_year, "HISTORICAL_MAYBE")
+  end
+
+  test "Three years ago data is not used" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_three_years_ago_teaches_maybe,
+      school_year: school_year
+    summary = generate_summary(school, school_year)
+    assert_nil summary.teaches_cs, summary.audit_data
   end
 
   test "No data is a nil teaches_cs" do
@@ -306,7 +329,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     summaries = Census::CensusSummary.summarize_school_data(
       {
         school: school,
-        school_years: [year - 2, year - 1, year],
+        school_years: [year - 3, year - 2, year - 1, year],
         years_with_ap_data: [year],
         years_with_ib_data: [year],
         state_years_with_data: {
