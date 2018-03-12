@@ -32,13 +32,6 @@ class Census::CensusSummary < ApplicationRecord
 
   validates_presence_of :audit_data
 
-  AUDIT_DATA_VERSIONS = {
-    INITIAL_IMPLEMENTATION: 0.1,
-    NAIVE_BAYES: 0.2,
-    SIMPLE: 0.3,
-    PRECEDENCE_V1: 1.1,
-  }.freeze
-
   # High schools need to teach a 20 hour course with either
   # block- or text-based programming for it to count as CS.
   # Other schools can teach any 10 or 20 hour courses.
@@ -100,7 +93,7 @@ class Census::CensusSummary < ApplicationRecord
 
     school_years.each do |school_year|
       audit = {
-        version: AUDIT_DATA_VERSIONS[:PRECEDENCE_V1],
+        version: 1.0,
         stats: {},
         census_submissions: [],
         ap_cs_offerings: [],
