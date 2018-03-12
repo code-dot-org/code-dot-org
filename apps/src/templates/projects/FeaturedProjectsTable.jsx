@@ -68,13 +68,18 @@ export const styles = {
 };
 
 // Cell formatters.
-const thumbnailFormatter = function (thumbnailUrl) {
+const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
+  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
-  return (<ImageWithStatus
-    src={thumbnailUrl}
-    width={THUMBNAIL_SIZE}
-    wrapperStyle={styles.thumbnailWrapper}
-          />);
+  return (
+    <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
+      <ImageWithStatus
+        src={thumbnailUrl}
+        width={THUMBNAIL_SIZE}
+        wrapperStyle={styles.thumbnailWrapper}
+      />
+    </a>
+  );
 };
 
 const nameFormatter = (projectName, {rowData}) => {
