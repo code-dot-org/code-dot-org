@@ -211,7 +211,7 @@ class LevelsController < ApplicationController
       old_level = Level.find(params[:level_id])
 
       begin
-        @level = old_level.clone(params[:name])
+        @level = old_level.clone_with_name(params[:name])
       rescue ArgumentError => e
         render(status: :not_acceptable, text: e.message) && return
       rescue ActiveRecord::RecordInvalid => invalid
