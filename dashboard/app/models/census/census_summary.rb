@@ -83,9 +83,6 @@ class Census::CensusSummary < ApplicationRecord
     "YES" => "HISTORICAL_YES",
     "NO" => "HISTORICAL_NO",
     "MAYBE" => "HISTORICAL_MAYBE",
-    "HISTORICAL_YES" => "HISTORICAL_YES",
-    "HISTORICAL_NO" => "HISTORICAL_NO",
-    "HISTORICAL_MAYBE" => "HISTORICAL_MAYBE",
   }
 
   def self.map_historical_teaches_cs(historical_value)
@@ -255,10 +252,10 @@ class Census::CensusSummary < ApplicationRecord
           consistency[:not_teacher_or_admin]
         elsif has_inconsistent_surveys
           'MAYBE'
-        elsif last_years_result
-          map_historical_teaches_cs(last_years_result)
-        elsif two_years_ago_result
-          map_historical_teaches_cs(two_years_ago_result)
+        elsif map_historical_teaches_cs last_years_result
+          map_historical_teaches_cs last_years_result
+        elsif map_historical_teaches_cs two_years_ago_result
+          map_historical_teaches_cs two_years_ago_result
         else
           nil
         end
