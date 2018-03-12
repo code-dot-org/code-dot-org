@@ -20,6 +20,7 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_other_description,
     :topic_do_not_know,
@@ -39,9 +40,17 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_do_not_know,
     :pledged
+  ].freeze
+
+  FREE_TEXT_FIELDS = [
+    :submitter_email_address,
+    :submitter_name,
+    :topic_other_description,
+    :tell_us_more,
   ].freeze
 
   # POST /dashboardapi/v1/census/<form_version>
@@ -81,12 +90,22 @@ class Api::V1::Census::CensusController < ApplicationController
 
     # Checkboxes don't get submitted if they aren't checked.
     # Set them to false if they are nil
-    CHECKBOX_FIELDS.map do |field|
+    CHECKBOX_FIELDS.each do |field|
       census_params[field] = false unless census_params[field]
     end
+
+    # The database cannot handle utf8mb4 characters.
+    # Strip them out before saving.
+    FREE_TEXT_FIELDS.each do |field|
+      census_params[field] = census_params[field].strip_utf8mb4 unless census_params[field].nil?
+    end
+
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
+    when 'CensusYourSchool2017v6'
+      submission = ::Census::CensusYourSchool2017v6.new census_params
+      template = 'census_form_receipt'
     when 'CensusYourSchool2017v5'
       submission = ::Census::CensusYourSchool2017v5.new census_params
       template = 'census_form_receipt'

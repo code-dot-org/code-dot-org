@@ -27,15 +27,15 @@ class ErrorDialogStack extends React.Component {
   handleDeleteChoice(key) {
     // Log data about when this scenario occurs
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'animation_no_load',
-        study_group: 'animation_no_load_v3',
+        study_group: 'animation_no_load_v4',
         event: 'delete_selected',
         project_id: getCurrentId(),
         data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
           'animationName': this.props.animationList.propsByKey[key].name})
-      }
+      },
+      {includeUserId: true}
     );
     this.props.deleteAnimation(key);
     this.props.dismissError();
@@ -44,15 +44,15 @@ class ErrorDialogStack extends React.Component {
   handleReloadChoice(key) {
     // Log data about when this scenario occurs
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'animation_no_load',
-        study_group: 'animation_no_load_v3',
+        study_group: 'animation_no_load_v4',
         event: 'reload_selected',
         project_id: getCurrentId(),
         data_json: JSON.stringify({'version': this.props.animationList.propsByKey[key].version,
           'animationName': this.props.animationList.propsByKey[key].name})
-      }
+      },
+      {includeUserId: true}
     );
     location.reload();
   }

@@ -60,7 +60,6 @@ We are particularly looking for new Regional Partners in:
 - Louisiana
 - North California (Humboldt or Shasta County preferred)
 - Oregon
-- Southern Illinois
 - Vermont
 
 

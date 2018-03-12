@@ -2,6 +2,7 @@ import Cell from './cell';
 import DirtDrawer from './dirtDrawer';
 
 import { SquareType } from './tiles';
+import { EventEmitter } from 'events'; // provided by webpack's node-libs-browser
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/West/South/East squares.
@@ -29,26 +30,14 @@ const TILE_SHAPES = {
   'null4': [1, 3],
 };
 
-export default class Subtype {
-  constructor(maze, studioApp, config) {
+export default class Subtype extends EventEmitter {
+  constructor(maze, config) {
+    super();
+
     this.maze_ = maze;
-    this.studioApp_ = studioApp;
     this.skin_ = config.skin;
     this.level_ = config.level;
     this.startDirection = config.level.startDirection;
-  }
-
-  /**
-   * Did the user successfully complete this level?
-   * @returns {Boolean} success
-   */
-  succeeded() {
-    if (this.finish) {
-      return (
-        this.maze_.pegmanX === this.finish.x &&
-        this.maze_.pegmanY === this.finish.y
-      );
-    }
   }
 
   /**
@@ -98,8 +87,8 @@ export default class Subtype {
    */
   playAudio_(sound) {
     // Check for StudioApp, which will often be undefined in unit tests
-    if (this.studioApp_) {
-      this.studioApp_.playAudio(sound);
+    if (this.maze_.playAudio) {
+      this.maze_.playAudio(sound);
     }
   }
 
@@ -107,63 +96,11 @@ export default class Subtype {
     this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt, svg);
   }
 
-  shouldCheckSuccessOnMove() {
-    return true;
-  }
-
+  /**
+   * @fires reset
+   */
   reset() {
-    // noop; overridable
-  }
-
-  hasMessage(testResults) {
-    return false;
-  }
-
-  /**
-   * Get any app-specific message, based on the termination value, or return
-   * null if none applies.
-   * @param {Number} terminationValue - from Maze.executionInfo
-   * @returns {(String|null)} message
-   */
-  getMessage(terminationValue) {
-    return null;
-  }
-
-  /**
-   * Get the test results based on the termination value.  If there is no
-   * app-specific failure, this returns StudioApp.getTestResults().
-   * @param {Number} terminationValue - from Maze.executionInfo
-   * @returns {Number} testResult
-   */
-  getTestResults(terminationValue) {
-    return this.studioApp_.getTestResults(false);
-  }
-
-  /**
-   * Set the termination results to something app-specific, so that getMessage
-   * and getTestResults can return custom values based on the specifc way in
-   * which we terminated
-   * @modifies Maze.executionInfo.terminationValue
-   */
-  terminateWithAppSpecificValue() {
-    // noop; overridable
-  }
-
-  /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
-   * @see terminateWithAppSpecificValue
-   */
-  onExecutionFinish() {
-    const executionInfo = this.maze_.executionInfo;
-    if (executionInfo.isTerminated()) {
-      return;
-    }
-    if (this.succeeded()) {
-      return;
-    }
-
-    this.terminateWithAppSpecificValue();
+    this.emit('reset');
   }
 
   isFarmer() {
@@ -183,18 +120,6 @@ export default class Subtype {
   }
 
   isBee() {
-    return false;
-  }
-
-  /**
-   * Used by StudioApp.displayFeedback to allow subtypes to conditionally
-   * prevent the feedback dialog from showing up and the page from automatically
-   * advancing to the next level.
-   *
-   * @param {Number} feedbackType
-   * @return {boolean}
-   */
-  shouldPreventFeedbackDialog(feedbackType) {
     return false;
   }
 

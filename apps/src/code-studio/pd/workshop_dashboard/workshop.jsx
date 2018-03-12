@@ -101,7 +101,9 @@ export default class Workshop extends React.Component {
           'sessions',
           'state',
           'account_required_for_attendance?',
-          'ready_to_close?'
+          'ready_to_close?',
+          'regional_partner_name',
+          'regional_partner_id'
         ])
       });
     }).fail(data => {

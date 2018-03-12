@@ -7,11 +7,15 @@ import { randomValue } from '../utils';
  * Create a new WordSearch.
  */
 export default class WordSearch extends Subtype {
-  constructor(maze, studioApp, config) {
-    super(maze, studioApp, config);
+  constructor(maze, config) {
+    super(maze, config);
     this.goal_ = config.level.searchWord;
     this.visited_ = '';
     this.map_ = config.level.map;
+  }
+
+  getVisited() {
+    return this.visited_;
   }
 
   /**
@@ -26,21 +30,6 @@ export default class WordSearch extends Subtype {
    */
   createDrawer(svg) {
     this.drawer = new WordSearchDrawer(this.maze_.map, '', svg);
-  }
-
-  /**
-   * Returns true if we've spelled the right word.
-   * @override
-   */
-  succeeded() {
-    return this.visited_ === this.goal_;
-  }
-
-  /**
-   * @override
-   */
-  shouldCheckSuccessOnMove() {
-    return false;
   }
 
   /**

@@ -126,6 +126,7 @@ class Homepage
     if request.language == "en"
       [
         {
+          id: "students-en",
           type: "block",
           title: "homepage_slot_text_title_students",
           text: "homepage_slot_text_blurb_students_courses",
@@ -151,6 +152,7 @@ class Homepage
         },
 
         {
+          id: "educators-en",
           type: "block",
           title: "homepage_slot_text_title_educators",
           text: "homepage_slot_text_blurb_educators",
@@ -176,6 +178,7 @@ class Homepage
         },
 
         {
+          id: "hoc-en",
           type: "block",
           title: "homepage_slot_text_title_hoc",
           text: "homepage_slot_text_blurb_hoc",
@@ -201,6 +204,7 @@ class Homepage
         },
 
         {
+          id: "advocate-en",
           type: "block",
           title: "homepage_slot_text_link_buy",
           text: "homepage_slot_text_blurb_advocates",
@@ -228,6 +232,7 @@ class Homepage
     else
       [
         {
+          id: "students-nonen",
           type: "blockshort",
           title: "homepage_slot_text_title_students",
           text: "homepage_slot_text_blurb_students",
@@ -237,6 +242,7 @@ class Homepage
           image: "/shared/images/courses/logo_tall_elementary.jpg"
         },
         {
+          id: "educators-nonen",
           type: "blockshort",
           title: "homepage_slot_text_title_educators",
           text: "homepage_slot_text_blurb_educators",
@@ -246,6 +252,7 @@ class Homepage
           image: "/shared/images/courses/logo_tall_teacher2.jpg"
         },
         {
+          id: "hoc-nonen",
           type: "blockshort",
           title: "homepage_slot_text_title_hoc",
           text: "homepage_slot_text_blurb_hoc",
@@ -255,6 +262,7 @@ class Homepage
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
+          id: "flappy-nonen",
           type: "blockshort",
           title: "studiobar_flappy_title",
           text: "studiobar_flappy_body",
