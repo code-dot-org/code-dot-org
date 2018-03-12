@@ -437,11 +437,6 @@ class CurriculumRouter < Pegasus::Base
 
     lesson_dir = filename.nil? ? dir : File.join(dir, unit_lesson)
 
-    lesson_info_filename = File.join(lesson_dir, unit_lesson, 'info.yml')
-    unless File.file?(lesson_info_filename)
-      halt 404
-    end
-
     document = resolve_document(lesson_dir, filename || 'lesson')
     return render(document, unit_lesson: unit_lesson, partials_dir: lesson_dir) unless document.nil?
 
