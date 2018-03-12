@@ -279,9 +279,9 @@ class AnimationsTest < FilesApiTestBase
     assert_equal v2_file_data, restored_file_data
 
     #Check that the metadata exists and includes the expected keys and values
-    assert_equal '0', restored_metadata['abuse_score']
-    refute_nil restored_metadata['failed_restore_at']
-    assert_equal 'bad_version_id', restored_metadata['failed_restore_from_version']
+    assert_equal '0', restored_metadata['abuse-score']
+    refute_nil restored_metadata['failed-restore-at']
+    assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version']
 
     @api.delete_object(anim)
   end
