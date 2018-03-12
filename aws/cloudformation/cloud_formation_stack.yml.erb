@@ -538,7 +538,7 @@ Resources:
       AlarmActions:
         - arn:aws:sns:us-east-1:475661607190:CDO-Urgent
       AlarmDescription: Send page if daemon disk space utilization exceeds 80% for an hour
-      AlarmName: daemon_low_disk_space
+      AlarmName: <%="#{rack_env}_daemon_low_disk_space" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: Filesystem
@@ -549,10 +549,12 @@ Resources:
           Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
       EvaluationPeriods: 60
       MetricName: DiskSpaceUtilization
-      Namespace: Linux System
+      Namespace: 'System/Linux'
       Period: 60
       Statistic: Average
       Threshold: 80
+      # absence of custom disk utilization Metric could be due to a serious problem on the Instance
+      TreatMissingData: breaching
 <%end-%>
 <% if database -%>
   Database:
