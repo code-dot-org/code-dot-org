@@ -18,7 +18,7 @@ const styles = {
   textItem: {
     backgroundColor: color.teal,
     padding: 25,
-    height: 260,
+    minHeight: 260,
     boxSizing: 'border-box'
   },
   subheading: {
@@ -31,7 +31,7 @@ const styles = {
   },
   image: {
     width: 485,
-    height: 260
+    minHeight: 260
   },
   description: {
     paddingRight: 10,
