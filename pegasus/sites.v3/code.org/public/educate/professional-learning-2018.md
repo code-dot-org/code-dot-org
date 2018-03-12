@@ -53,7 +53,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
-{img: '/images/testimonials/fit-150/teacher-renee.jpg', text: '"I would absolutely recommend anything Code.org has to offer to any teacher. Period. The lesson plans are incredible."'},
+{img: '/images/testimonials/fit-150/teacher-alisha.JPG', text: '"It was refreshing to meet others who were taking a leap to learn something new. We all came to the table with weaknesses, but we could all put our strengths together and solve puzzles."'},
 {img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
 <br/>
@@ -105,14 +105,14 @@ The Code.org Professional Learning Program has both in-person and online support
 
 **Summer Workshop:**
 
-* Participants kick off the Professional Learning Program with a 5-day workshop
+* Participants kick off the Professional Learning Program with a 5-day workshop.
 * Explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
 * With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.<br/>
 
 **Ongoing Support, throughout following academic year:**  
 
-* Participants attend local, 1-day quarterly workshops hosted by Code.org Regional Partners
-* Usually held on Saturdays, these workshops are run by local Code.org-trained facilitators
+* Participants attend local, 1-day quarterly workshops hosted by Code.org Regional Partners.
+* Usually held on Saturdays, these workshops are run by local Code.org-trained facilitators.
 * They focus on the essential elements of the course, such as teaching new content, keeping the classroom environment equitable and engaging, and continue to build pedagogical strategies.
 
 
