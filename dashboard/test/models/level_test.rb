@@ -703,31 +703,31 @@ EOS
   end
 
   test 'clone with suffix replaces old suffix' do
-    level_1 = create :level, name: 'level_1'
+    level_1 = create :level, name: 'my_level_1'
 
     # level_1 has no name suffix, so the new suffix is appended.
     level_2 = level_1.clone_with_suffix('_2')
-    assert_equal 'level_1_2', level_2.name
+    assert_equal 'my_level_1_2', level_2.name
     assert_equal level_1.id, level_2.parent_level_id
     assert_equal '_2', level_2.name_suffix
 
     # level_2 has a name suffix, which the new suffix replaces.
     level_3 = level_2.clone_with_suffix('_3')
-    assert_equal 'level_1_3', level_3.name
+    assert_equal 'my_level_1_3', level_3.name
     assert_equal level_2.id, level_3.parent_level_id
     assert_equal '_3', level_3.name_suffix
   end
 
   test 'clone with suffix properly escapes suffixes' do
-    level_1 = create :level, name: 'level_1'
+    level_1 = create :level, name: 'your_level_1'
 
     tricky_suffix = '[(.\\'
 
     level_2 = level_1.clone_with_suffix(tricky_suffix)
-    assert_equal "level_1#{tricky_suffix}", level_2.name
+    assert_equal "your_level_1#{tricky_suffix}", level_2.name
 
     level_3 = level_2.clone_with_suffix('_3')
-    assert_equal 'level_1_3', level_3.name
+    assert_equal 'your_level_1_3', level_3.name
   end
 
   test 'clone with same suffix copies and shares project template level' do
