@@ -117,7 +117,11 @@ module ProjectsList
         join(storage_apps, id: :storage_app_id).
         join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
         join(:users, id: Sequel[:user_storage_ids][:user_id]).
-        where(unfeatured_at: nil, project_type: project_type.to_s, abuse_score: 0).
+        where(unfeatured_at: nil,
+          project_type: project_type.to_s,
+          abuse_score: 0,
+          state: 'active'
+        ).
         exclude(published_at: nil).
         order(Sequel.lit('RAND()')).limit(24).all
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
