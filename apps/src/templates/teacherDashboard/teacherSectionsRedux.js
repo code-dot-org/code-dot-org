@@ -857,11 +857,15 @@ const assignmentsForSection = (validAssignments, section) => {
   const assignments = [];
   if (section.courseId) {
     const assignId = assignmentId(section.courseId, null);
-    assignments.push(validAssignments[assignId]);
+    if (validAssignments[assignId]) {
+      assignments.push(validAssignments[assignId]);
+    }
   }
   if (section.scriptId) {
     const assignId = assignmentId(null, section.scriptId);
-    assignments.push(validAssignments[assignId]);
+    if (validAssignments[assignId]) {
+      assignments.push(validAssignments[assignId]);
+    }
   }
   return assignments;
 };

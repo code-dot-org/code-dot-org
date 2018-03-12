@@ -2,7 +2,7 @@
 - bgc_body = "255, 164, 0"        # "0,148,202" * 0.05
 
 #gallerycolumn.same-height-column
-  %a.nounderscorehover{href: CDO.studio_url("projects/public")}
+  %a.nounderscorehover.linktag#projects-images{href: CDO.studio_url("projects/public")}
     .headingbox{style: "background-color: rgb(#{bgc_body})"}
       -if request.language  == 'en'
         = I18n.t(:homepage_header_codestudio)

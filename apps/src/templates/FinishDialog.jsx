@@ -25,13 +25,14 @@ const styles = {
     zIndex: 1050,
   },
   modal: {
+    position: 'relative',
     width: 375,
     backgroundColor: color.white,
     borderRadius: 10,
   },
   header: {
     backgroundColor: color.light_teal,
-    height: 40,
+    height: 50,
     width: '100%',
     borderRadius: '10px 10px 0px 0px',
   },
@@ -51,9 +52,9 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.light_teal,
     backgroundColor: color.white,
-    margin: 'auto',
-    position: 'relative',
-    top: -30,
+    position: 'absolute',
+    top: -25,
+    left: -20,
     padding: 8,
   },
   bubble: {
@@ -71,17 +72,18 @@ const styles = {
     justifyContent: 'center',
   },
   blockCountWrapper: {
-    textAlign: 'center',
+    color: color.white,
+    textAlign: 'right',
+    marginRight: 10,
   },
   blockCountLabel: {
     fontSize: 20,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.dark_charcoal,
+    fontFamily: '"Gotham 5r", sans-serif',
     verticalAlign: 'middle',
   },
   blockCount: {
     fontSize: 30,
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     margin: 7,
     verticalAlign: 'middle',
   },
@@ -93,12 +95,11 @@ const styles = {
   },
   blockCountDescriptor: {
     borderRadius: 5,
-    borderWidth: 1,
-    borderStyle: 'solid',
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
     padding: 5,
     verticalAlign: 'middle',
+    background: color.white,
   },
   achievements: {
     width: 217,
@@ -277,18 +278,18 @@ export class UnconnectedFinishDialog extends Component {
         <span style={styles.blockCountLabel}>
           {msg.numBlocksUsedLabel()}:
         </span>
+        <span style={styles.blockCount}>
+          <Odometer
+            defaultValue={this.state.blocksCounted ? this.props.blocksUsed : 0}
+            value={this.props.blocksUsed}
+            onRest={() => this.setState({blocksCounted: true})}
+          />
+          {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
+        </span>
         <span
           style={tooManyBlocks ?
             styles.blockCountPass : styles.blockCountPerfect}
         >
-          <span style={styles.blockCount}>
-            <Odometer
-              defaultValue={this.state.blocksCounted ? this.props.blocksUsed : 0}
-              value={this.props.blocksUsed}
-              onRest={() => this.setState({blocksCounted: true})}
-            />
-            {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
-          </span>
           {this.getBlockCountDescription()}
         </span>
       </div>
@@ -436,6 +437,7 @@ export class UnconnectedFinishDialog extends Component {
               </div>
               <div style={styles.header}>
                 {this.getBubble()}
+                {this.getBlockCounter()}
               </div>
               {this.state.showingCode ?
                 <div style={styles.generatedCodeWrapper}>
@@ -446,7 +448,6 @@ export class UnconnectedFinishDialog extends Component {
                   />
                 </div> :
                 <div style={styles.content}>
-                  {this.getBlockCounter()}
                   {this.getAchievements()}
                   {this.getFunometer()}
                 </div>}
