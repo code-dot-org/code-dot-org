@@ -343,6 +343,7 @@
   "makeMyOwnApp": "Make my own app",
   "maker_error_cannotInitializeEventForwarding": "Cannot initialize event forwarding: Not connected to board firmware.",
   "maker_error_cannotInitializeWithNoBoard": "Cannot initialize components: Not connected to board firmware.",
+  "maker_error_unsupportedDynamicComponent": "Added an unsupported component to dynamic components.",
   "manageAssets": "Click to view or update your images and sounds.",
   "nextLevel": "Congratulations! You have completed this puzzle.",
   "no": "No",

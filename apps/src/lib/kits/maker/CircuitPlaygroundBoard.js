@@ -135,7 +135,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       } else if (component instanceof five.Button) {
         // No special cleanup required for five.Button
       } else {
-        throw new Error('Added an unsupported component to dynamic components');
+        throw new Error(i18n.maker_error_unsupportedDynamicComponent());
       }
     });
     this.dynamicComponents_.length = 0;
