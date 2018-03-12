@@ -68,8 +68,7 @@ export function isAvailable() {
  */
 export function connect({interpreter, onDisconnect}) {
   if (!isEnabled()) {
-    return Promise.reject(new Error('Attempted to connect to a maker board, ' +
-        'but Maker Toolkit is not enabled.'));
+    return Promise.reject(new Error(i18n.maker_error_cannotConnectWhenDisabled()));
   }
 
   if (currentBoard) {

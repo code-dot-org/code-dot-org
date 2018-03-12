@@ -341,6 +341,7 @@
   "dropletBlock_write_param0_description": "The text or HTML you want appended to the bottom of your application",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "makeMyOwnApp": "Make my own app",
+  "maker_error_cannotConnectWhenDisabled": "Attempted to connect to a maker board, but Maker Toolkit is not enabled.",
   "maker_error_cannotInitializeEventForwarding": "Cannot initialize event forwarding: Not connected to board firmware.",
   "maker_error_cannotInitializeWithNoBoard": "Cannot initialize components: Not connected to board firmware.",
   "maker_error_deviceNotFound": "Did not find a usable device on a serial port.",
