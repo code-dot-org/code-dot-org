@@ -72,8 +72,7 @@ export function connect({interpreter, onDisconnect}) {
   }
 
   if (currentBoard) {
-    return Promise.reject(new Error('Attempted to connect Maker Toolkit when ' +
-        'an existing board is already connected.'));
+    return Promise.reject(new Error(i18n.maker_error_cannotConnectAlreadyConnected()));
   }
 
   const store = getStore();
