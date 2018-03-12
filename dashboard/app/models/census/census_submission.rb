@@ -32,6 +32,8 @@
 #  updated_at                   :datetime         not null
 #  share_with_regional_partners :boolean
 #  topic_ethical_social         :boolean
+#  inaccuracy_reported          :boolean
+#  inaccuracy_comment           :text(65535)
 #
 # Indexes
 #
@@ -44,6 +46,8 @@
 #
 class Census::CensusSubmission < ApplicationRecord
   has_and_belongs_to_many :school_infos
+  has_many :census_inaccuracy_investigations, class_name: 'Census::CensusInaccuracyInvestigation'
+
   validates :school_infos, presence: true
   validates_email_format_of :submitter_email_address
 
