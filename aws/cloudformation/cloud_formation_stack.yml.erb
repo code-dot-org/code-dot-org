@@ -546,12 +546,7 @@ Resources:
         - Name: MountPath
           Value: '/'
         - Name: InstanceId
-<% if daemon_instance_id -%>
-          Value: <%=daemon_instance_id%>
-<% else -%>
-          Value: !Ref <%=daemon%>
-<% end -%>
-
+          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
       EvaluationPeriods: 60
       MetricName: DiskSpaceUtilization
       Namespace: Linux System
