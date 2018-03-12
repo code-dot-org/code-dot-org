@@ -485,7 +485,7 @@ class Level < ActiveRecord::Base
 
   # Create a copy of this level named new_name, and store the id of the original
   # level in parent_level_id.
-  def clone(new_name)
+  def clone_with_name(new_name)
     level = dup
     level.update!(name: new_name, parent_level_id: id)
     level
@@ -511,7 +511,7 @@ class Level < ActiveRecord::Base
 
     level = allow_existing && Level.find_by_name(new_name) ?
        Level.find_by_name(new_name) :
-       clone(new_name)
+       clone_with_name(new_name)
 
     update_params = {name_suffix: new_suffix}
 

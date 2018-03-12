@@ -119,7 +119,7 @@ class DSLDefined < Level
     return dsl_text
   end
 
-  def clone(new_name)
+  def clone_with_name(new_name)
     level = super(new_name)
     new_dsl = dsl_text.sub("name '#{name}'", "name '#{new_name}'")
     level.update!(dsl_text: new_dsl)
