@@ -24,7 +24,14 @@ class CensusMapInfoWindow extends Component {
       case 'NO':
         censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
         break;
+      case 'HISTORICAL_YES':
+        censusMessage = "We believe this school historically offered Computer Science.";
+        break;
+      case 'HISTORICAL_NO':
+        censusMessage = "We believe this school historically offered limited or no Computer Science opportunities.";
+        break;
       case 'MAYBE':
+      case 'HISTORICAL_MAYBE':
         censusMessage = "We have conflicting data for this school.";
         break;
       default:
@@ -133,20 +140,20 @@ export default class CensusMap extends Component {
           }
         },
         {
-          where: "teaches_cs IN 'YES'",
+          where: "teaches_cs IN ('YES', 'HISTORICAL_YES')",
           markerOptions: {
             iconName: "grn_blank"
           }
         },
         {
-          where: "teaches_cs IN 'NO'",
+          where: "teaches_cs IN ('NO', 'HISTORICAL_NO')",
           markerOptions: {
             iconName: "small_blue"
           }
         },
 
         {
-          where: "teaches_cs IN 'MAYBE'",
+          where: "teaches_cs IN ('MAYBE', 'HISTORICAL_MAYBE')",
           markerOptions: {
             iconName: "small_yellow"
           }
