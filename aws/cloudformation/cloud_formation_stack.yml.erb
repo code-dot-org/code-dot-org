@@ -538,7 +538,7 @@ Resources:
       AlarmActions:
         - arn:aws:sns:us-east-1:475661607190:CDO-Urgent
       AlarmDescription: Send page if daemon disk space utilization exceeds 80% for an hour
-      AlarmName: LowDiskSpace
+      AlarmName: DaemonLowDiskSpace
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: Filesystem
