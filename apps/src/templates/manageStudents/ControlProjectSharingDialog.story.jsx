@@ -1,7 +1,6 @@
 import React from 'react';
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
 
-
 export default storybook => {
   storybook
     .storiesOf('ControlProjectSharingDialog', module)
@@ -12,6 +11,7 @@ export default storybook => {
         story: () => (
           <ControlProjectSharingDialog
             isDialogOpen={true}
+            closeDialog={() => console.log('close was clicked!')}
           />
         )
       },
