@@ -6,6 +6,7 @@ import YourSchool from '@cdo/apps/templates/census2017/YourSchool';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import initResponsive from '@cdo/apps/code-studio/responsive';
 
 registerReducers({isRtl, responsive});
 
@@ -43,5 +44,6 @@ function showYourSchool(schoolDropdownOption) {
 }
 
 function initYourSchool() {
+  initResponsive();
   showYourSchool();
 }
