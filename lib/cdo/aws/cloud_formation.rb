@@ -474,7 +474,7 @@ module AWS
           raise "\nError on #{action}."
         end
         CDO.log.info "\nStack #{action} complete." unless ENV['QUIET']
-        CDO.log.info "Don't forget to remove up AWS resources by running `rake adhoc:delete` after you're done testing your instance!" if action == :create
+        CDO.log.info "Don't forget to remove AWS resources by running `rake adhoc:delete` after you're done testing your instance!" if action == :create
       end
 
       def render_template(template: TEMPLATE, dry_run: false)
