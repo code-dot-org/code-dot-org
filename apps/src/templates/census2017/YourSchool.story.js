@@ -10,7 +10,9 @@ export default storybook => {
         name: 'YourSchool',
         description: `Container component for /yourschool`,
         story: () => (
-          <YourSchool/>
+          <YourSchool
+            hideMap={true}
+          />
         )
       },
     ]);

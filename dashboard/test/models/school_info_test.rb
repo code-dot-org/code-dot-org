@@ -446,4 +446,20 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'Standard School', school_info_standard_school.effective_school_name
     assert_equal 'Custom School', school_info_custom_school.effective_school_name
   end
+
+  test 'school_info factory build does not persist dependencies' do
+    assert_does_not_create School do
+      assert_does_not_create SchoolDistrict do
+        build :school_info
+      end
+    end
+  end
+
+  test 'school_info factory create does persist dependencies' do
+    assert_creates School do
+      assert_creates SchoolDistrict do
+        create :school_info
+      end
+    end
+  end
 end

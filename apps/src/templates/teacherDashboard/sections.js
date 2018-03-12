@@ -16,6 +16,7 @@ import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionCont
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 /**
  * On the manage students tab of an oauth section, use React to render a button
@@ -77,13 +78,13 @@ export function renderLoginTypeAndSharingControls(sectionId) {
 }
 
 export function renderSectionTable(sectionId, loginType) {
-  registerReducers({manageStudents});
+  registerReducers({manageStudents, isRtl});
   const store = getStore();
 
   store.dispatch(setLoginType(loginType));
   store.dispatch(setSectionId(sectionId));
 
-  const dataUrl = `/v2/sections/${sectionId}/students`;
+  const dataUrl = `/dashboardapi/sections/${sectionId}/students`;
   const element = document.getElementById('student-table-react');
 
   $.ajax({

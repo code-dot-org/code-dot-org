@@ -477,6 +477,10 @@ class Level < ActiveRecord::Base
     summary
   end
 
+  def uses_droplet?
+    false
+  end
+
   private
 
   def write_to_file?

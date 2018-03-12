@@ -2753,13 +2753,8 @@
         s trikotnikom in vedno doda eno stranico, dokler ne konča z desetkotnikom
         (10 stranic). Vsaka stranica je dolga 100 pikslov.
       Course 4 Artist For Loops 11a_instruction: |-
-        Let's put it all together!  Using
-        your knowledge of `for` loops and the `counter` variable, create this drawing
-        where each shape has two more sides than the last.  Make sure that each side
-        is 10 times as long as the number of sides in the polygon.\r
-        \r
-        Very little
-        of the code has been provided for you.
+        Zdaj pa združimo znanje od prej! S poznavanjem zanke "za vsako število", in s poznavanjem spremenjlivke "counter" narišemo te večkotnike, kjer ima vsak večkotnik za dve stranici "sides" več kot prejšnja. Zagotovite, da je dolžina stranice v večkotniku 10 krat daljša od števila stranic.
+        Le majhen delček kode smo ti pripravili.
       Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
         like to draw each shape next to the last one. This time each side is\n20 pixels.
         Use a jump block to jump forward 40 pixels after each shape. "
@@ -2769,9 +2764,9 @@
         we use the counter variable to make the sides smaller as there are more of
         them? Instead of moving forward by a set amount, try moving forward (100 /
         counter) pixels.
-      Course 4 Artist For Loops 14_instruction: "Če se obrneš amlo manj ali malo več,
-        kot bi se pri risanju lika, lahko nastane ličen učinek. Poskusi uporabiti
-        del kode iz prejšnje naloge, vendar obračanje za 89 stopinj naredi tako zanimivo
+      Course 4 Artist For Loops 14_instruction: "Če se obrneš malo manj ali malo več,
+        kot bi se pri risanju lika, lahko nastane zanimiv učinek. Poskusi uporabiti
+        del kode iz prejšnje naloge z obračanjem za 89 stopinj, ki naredi tako zanimivo
         kvadratno spiralo."
       Course 4 Artist For Loops 15_instruction: |-
         Free Play: Try making some drawings
@@ -2809,9 +2804,8 @@
         Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time.
       Course 4 Artist For Loops Challenge_instruction: |-
-        **Challenge:** Can you figure
-        out how to use all of the things you've learned to create this image of polygons,
-        all with 40 pixel sides?
+        **Izziv:**
+        Poskusi z znanjem, ki si ga pridobil do sedaj narisati te večkotnike, ki imajo vsi dolžino stranice 40 pikslov?
       Course 4 Artist For Loops Challenge_a_instruction: |-
         Can you figure out how
         to use all of the things you've learned to create this image?\r
@@ -7513,6 +7507,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -10003,6 +10000,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?

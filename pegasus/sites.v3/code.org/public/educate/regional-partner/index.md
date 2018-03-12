@@ -13,7 +13,7 @@ Code.org is selecting United States based organizations, as partners, to help sp
 To begin the partnership, each partner's Program Manager will attend TeacherCon in Phoenix, Arizona July 
 21-27, 2018 to experience Code.org teacher professional devleopment first-hand.  In September, the partner will attend our Regional Partner Summit, a fabulous experience designed to welcome Regional Partners to the extended Code.org family. In addition, we will provide funding based on demonstrated need to help each organization establish itself as a local Code.org Regional Partner.
 
-The ideal Regional Partner is a U.S. based regional education unit, a non-profit, or a university with existing, positive relationships with nearby school districts and the local education community.
+The ideal Regional Partner is a U.S. based regional education unit, a nonprofit, or a university with existing, positive relationships with nearby school districts and the local education community.
 
 ### Applications are now open and will close on *March 30, 2018*. ###
 
@@ -44,7 +44,7 @@ Below is a list of program commitments:
 ## What Code.org will provide in return
 - Appropriate levels of Code.org funding needed for the first three years of partnership by evaluating funding needs and funding opportunities in your region that can support and sustain this work. 
 - Marketing your organization as the official Code.org Regional Partner for your state or region
-Support and guidance from a dedicated Code.org Regional Manager
+- Support and guidance from a dedicated Code.org Regional Manager
 - Coaching and tools for the Regional Partner on teacher recruitment, facilitator capacity, funding, regional CS expansion, workshop quality, diversity, and community building and reputation.
 - Support for the Regional Partner community, including hosting Code.org Regional Partner Summits during the length of the partnership.
 - Ongoing facilitator development and support through in-person and virtual training events. 

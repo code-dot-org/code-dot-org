@@ -282,29 +282,29 @@
         \r
         Arregla el/los error(s) para recolectar todo el nectar.
       2-3 Bee Debugging 3_markdown_instruction: |-
-        Ooh, this one stings!\r
+        Ooh, este pica!\r
         \r
-        Fix
-        the error(s) to collect all of the nectar.
+        Arregla
+        el error(s) para recoger todo el néctar.
       2-3 Bee Debugging 5_markdown_instruction: |-
         ¡Esa flor se ve deliciosa! \r
         \r
         Arregle el/los error (s) para recoger todo el néctar. \r
         Ahora puede usar tanto la ejecución como el paso.
       2-3 Bee Debugging 6_markdown_instruction: |-
-        What a sweet challenge!\r
+        ¡Qué desafío tan dulce!\r
         \r
-        Fix
-        the error(s) to collect all of the nectar.
+        Arregla
+        el error(s) para recoger todo el néctar.
       2-3 Bee Debugging 9_markdown_instruction: Estos bloques realmente me molestan.
         Corregir el (los) error(es) para recoger todo el néctar y hacer todo de la
         miel.
       2-3 Bee Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:**  Now
-        it's time to show what you know!\r
+        ** Evaluación: ** Ahora
+        es tiempo de mostrar lo que sabes!\r
         \r
-        Fix the error(s) to collect all of
-        the nectar and make all of the honey.
+        Repare el error(s) para recojer todo
+        el néctar y hacer toda la miel.
       2-3 Bee Functions 1_markdown_instruction: |-
         Las funciones son bloques de código que realizan una tarea. \r
         \r
@@ -350,13 +350,12 @@
         \r
         ¿Puedes recolectar todo el néctar usando la menor cantidad de bloques posible?
       2-3 Bee Loops 7_markdown_instruction: |-
-        What a beautiful field of flowers!   \r
+        Que hermoso campo de flores! \r
         \r
-        Help
-        the bee visit each one.\r
+        Ayuda
+        a la abeja a visitar cada uno.\r
         \r
-        Can you find a way to do it with fewer than
-        7 blocks?
+        Puedes conseguir la manera de hacerlo con menos de 7 bloques?
       2-3 Bee Loops 8_markdown_instruction: |-
         Estas flores de color púrpura tienen diferentes cantidades de néctar cada vez que ejecutas el rompecabezas. \r
         \r
@@ -371,128 +370,125 @@
         \r
         Apila un par de bloques `avanzar` debajo del bloque`cuando se ejecuta` y presiona "ejecutar".
       2-3 Maze 12 - One Move Block_markdown_instruction: |-
-        Get the mean pig! But this
-        time, you can only use one `move forward` block...\r
+        Obtén el cerdo malo!
+        Pero esta vez, solo puedes usar un bloque de `avanzar`\r
         \r
-        Ah, look closely
-        - do you see any other blocks that can help you get there?
+        Ah observa de cerca
+        ¿Ves algunos otros bloques que puedan ayudarte a llegar allí?
       2-3 Maze 12_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
+        Subitamente, aparece un bloque mágico! Con
+        el bloque `repetir`, puede repetir el código una y otra vez.\r
         \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
+        Puedes llegar a
+        el cerdo creando un circuito que usa solo un bloque `adelante' en el interior
+        de una 'repetición'?
       2-3 Maze 13_markdown_instruction: |-
-        Get me to the pig! You can only use one
-        `move forward` block this time
+        Llévame al cerdo! tu solo puedes usar un
+        bloque de `avanzar`en esta oportunidad
       2-3 Maze 15_markdown_instruction: |-
         In this puzzle, two `repeat` loops will
         help you get to the pig with the fewest number of blocks!
       2-3 Maze Loops 18_markdown_instruction: |-
-        Get me to the sunflower using the
-        fewest blocks possible!  \r
+        Llévame al girasol usando la
+        menor cantidad de bloques posibles! \r
         \r
-        Try using one `repeat` loop inside of another
-        to cut down on the amount of code you need.
+        Intenta usar un ciclo de`repetición` dentro de otro
+        para reducir la cantidad de códigos que necesitas.
       2-3 Maze Loops 19_markdown_instruction: |-
-        Let's take this to another level!
+        ¡Llevemos esto a otro nivel!
         \r
         \r
-        Use loops to get me to the sunflower with the fewest loops possible.
-      2-3 Maze Loops Assessment 1_markdown_instruction: "**Assessment:**  Get me\nto
-        the sunflower using only 5 blocks! "
+        Usa las curvas para llevarme al girasol usando el menor número posible de ellas.
+      2-3 Maze Loops Assessment 1_markdown_instruction: "**Evaluación:** Llévame\nal
+        girasol usando solo 5 bloques! "
       4-5 Artist 1_markdown_instruction: |
-        Help me finish drawing my box. (Each line
-        is 300 pixels long) \r
+        Ayúdame a terminar de dibujar mi caja. (Cada línea
+        tiene 300 píxeles de largo) \r
         \r
       4-5 Artist 10_markdown_instruction: |-
-        Press "Run" to try the code. Then, repeat
-        it enough times to complete the drawing. The colors will be different every
-        time.
-      4-5 Artist 11_markdown_instruction: |-
-        Complete the green lines.  \r
-        \r
-        The
-        lines are 300 pixels long and 15 pixels apart.
+        Presiona "Ejecutar" para probar el código. Entonces, repite
+        las veces necesarias para completar el dibujo. Los colores serán diferentes cada
+        hora.
+      4-5 Artist 11_markdown_instruction: "Completa las líneas verdes. \\r \n\\r\nlas\nlíneas
+        tienen 300 píxeles de largo y 15 píxeles de separación."
       4-5 Artist 2_markdown_instruction: |-
-        Loop this code using the `repeat` block
-        to complete the square.
+        Pasa este código usando el bloque `repetir`
+        para completar el cuadrado.
       4-5 Artist 3.5_markdown_instruction: |-
-        Try to figure out what happens if you
-        run this code (or just press "Run" and try it). \r
+        Intenta descubrir qué sucede si
+        ejecutas este código (o simplemente presiona "Ejecutar" y pruébalo). \r
         \r
-        Next, repeat the
-        code enough times to complete the drawing!
+        Luego, repite el
+        código las veces necesarias para completar el dibujo!
       4-5 Artist 3_markdown_instruction: |-
-        This rectangular flower bed has a perimeter
-        of 600.  \r
-        The long side has a length of 200. \r
+        Esta cama rectangular de flores tiene un perímetro
+        de 600. \r
+        El lado largo tiene una longitud de 200. \r
         \r
-        Draw the rectangle
-        using as few blocks as possible.
+        Dibuja el rectángulo
+        usando la menor cantidad de bloques posible.
       4-5 Artist 4_markdown_instruction: |-
-        How many degrees are in a circle?  \r
+        ¿Cuántos grados hay en un círculo? \r
         \r
-        Loop
-        the blocks to create a circle of colors.
+        Enlaza
+        los bloques para crear un círculo de colores.
       4-5 Artist 5_markdown_instruction: |-
-        What can we replace "???" with to make
-        sure that the zombie completes this drawing using the loop provided?
+        ¿Qué podemos reemplazar "???" con hacer
+        seguro que el zombi completa este dibujo usando el circuito proporcionado?
       4-5 Artist 6_markdown_instruction: |-
-        This equilateral triangle has angles of
-        60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing.
+        Este triángulo equilátero tiene ángulos de
+        60, 60 y 60 grados Cada lado tiene 200 píxeles. Completa el dibujo.
       4-5 Artist 7_markdown_instruction: |-
-        This right triangle has angles of 30, 60,
-        and 90 degrees.  The slanted side's length (length of the hypotenuse) is
-        200 pixels. \r
+        Este triángulo rectángulo tiene ángulos de 30, 60,
+        y 90 grados. La longitud de los lados inclinados (longitud de la hipotenusa) es
+        200 píxeles. \r
         \r
-        Complete the drawing.
+        Completa el dibujo.
       4-5 Artist 8_markdown_instruction: |-
-        The halfway line on a soccer field is *perpendicular*
-        to the sidelines.   \r
-        This rectangle has a perimeter of 800 pixels total,
-        and it is 240 pixels long. How tall is it?   \r
+        La línea de mitad de un campo de fútbol es * perpendicular *
+        a los lados. \r
+        Este rectángulo tiene un perímetro total de 800 píxeles,
+        y tiene 240 píxeles de largo. ¿Qué tan alto es? \r
         \r
-        Draw the bounds and the
-        halfway line.
+        Dibuja los límites y la
+        linea central.
       4-5 Artist 9_markdown_instruction: |-
-        Draw the right half of this image so that
-        the design is symmetrical. \r
-        The triangles are equilateral and have sides
-        that are 50 pixels long.
+        Dibuje la mitad derecha de esta imagen para que
+        el diseño sea simétrico \r
+        Los triángulos son equiláteros y tienen lados
+        que tienen 50 píxeles de largo.
       4-5 Artist Assessment 1_markdown_instruction: |-
-        **Assessment:** Use a loop to
-        draw the equilateral triangle. Each side is 300 pixels.
+        ** Evaluación: ** Use un circuito para
+        dibujar el triángulo equilátero. Cada lado tiene 300 píxeles.
       4-5 Artist Free Draw 1_markdown_instruction: |-
-        Free Draw!  Draw whatever you
-        are inspired to create.
+        ¡Dibujo libre! Dibuja cualquier cosa que tu
+        estés inspirado para crear.
       4-5 Artist Patterns 1_markdown_instruction: "¿Puedes dibujar esta cuadro utilizando
         un bucle? Cada lado es de 20 píxeles de largo."
       4-5 Artist Patterns 10_markdown_instruction: |-
-        This code draws two rows of hexagons
-        - loop the whole thing 4 times to draw the whole honeycomb. \r
+        Este código dibuja dos filas de hexágonos
+        - Circule todo 4 veces para dibujar todo el panal. \r
         \r
-        You'll
-        need to jump back 120 pixels in your outermost loop to make sure the artist
-        doesn't draw off the screen.
+        Usted
+        necesita retroceder 120 píxeles en su ciclo más externo para asegurarse de que el artista
+        no dibuja fuera de la pantalla.
       4-5 Artist Patterns 11_markdown_instruction: |-
-        How many times do you need to
-        loop this to draw a half circle?
+        Cuantas veces necesitas
+        curvar esto para dibujar un medio círculo?
       4-5 Artist Patterns 12_markdown_instruction: |-
-        If you create another loop like
-        this one, but turn left instead of right, what happens? \r
+        Si tu creas otro circuito como
+        este, pero gira a la izquierda en lugar de a la derecha, ¿qué sucede? \r
         \r
-        Can you repeat
-        all of that to draw this wave?
+        Puedes repetir
+        todo eso para dibujar esta ola?
       4-5 Artist Patterns 13_markdown_instruction: |-
-        Now let's loop that whole thing
-        four times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! \r
+        Ahora recorramos todo eso
+        cuatro veces para crear este marco de imagen. Ten cuidado con las esquinas: no puedes
+        solamente girar 90 grados! \r
         \r
-        If looping a 3 degree turn 60 times makes a
-        half circle, which of these blocks of code will make an additional quarter
-        circle for the corners?
+        Si haciendo un giro de 3 grados 60 veces haces un
+        medio círculo, ¿cuál de estos bloques de código hará un cuarto de círculo adicional
+        para las esquinas?
       4-5 Artist Patterns 2_markdown_instruction: |-
         Si coloca su bucle del cuadrado dentro de otro ciclo, llamamos a eso un bucle anidado. \r
         \r
@@ -501,19 +497,19 @@
         ¡Ahora vayamos un nivel más profundo!
         Nosotros hemos anidado todo ese bloque de código en otro ciclo, pero debes volver a colocar al artista en su lugar para dibujar la siguiente línea. ¿Cuál de estos bloques de código puede colocar al final del ciclo externo para dibujar toda la cuadrícula?
       4-5 Artist Patterns 4_markdown_instruction: |-
-        This diamond has 50 pixel sides
-        and angles of 120 and 60 degrees. \r
+        Este diamante tiene lados de 50 píxeles
+        y ángulos de 120 y 60 grados. \r
         \r
-        Use a loop to draw it.
+        Usa un recodo para dibujarlo.
       4-5 Artist Patterns 5_markdown_instruction: |-
-        Repeat this code to make a row
-        of 6 diamonds. \r
+        Repite este código para hacer una fila
+        de 6 diamantes \r
         \r
-        Notice that we changed our diamond code to repeat 3
-        times instead of 2 - why do you think that is?
+        Tenga en cuenta que hemos cambiado nuestro código de diamante para repetir 3
+        veces en lugar de 2 - ¿por qué crees que se hizo?
       4-5 Artist Patterns 6_markdown_instruction: |
-        How many times do you need to
-        repeat this block to draw the full grid of diamonds?\r
+        Cuantas veces necesitas
+        repetir este bloque para dibujar la rejilla completa de diamantes?\r
         \r
       4-5 Artist Patterns 7_markdown_instruction: |
         Modifiquemos el código del último puzzle para hacer este patrón más complejo. Observe cómo los diamantes se superponen ahora, intente cambiar el primer "retroceso" de 100 a 50 (la mitad de distancia)
@@ -530,26 +526,26 @@
         \r
         Cada hexágono tiene 80 píxeles de ancho desde los puntos más alejados de izquierda a derecha.
       4-5 Artist Patterns Free Play_markdown_instruction: |-
-        Free play - try your hand
-        at making a pattern of your own!
+        Juego libre: prueba tu mano
+        al hacer un patrón tuyo!
       4-5 Bee Conditionals 1_markdown_instruction: |-
-        This cloud is blocking my view!
+        ¡Esta nube está bloqueando mi vista!
         \r
         \r
-        Check to see if there's a flower under the cloud, and only get nectar
-        if there's a flower.   \r
-        Be careful, it can change!
+        Comprueba si hay una flor debajo de la nube, y solo consigue el néctar
+        si hay una flor.  \r
+        ¡Ten cuidado, esta puede cambiar!
       4-5 Bee Conditionals 2_markdown_instruction: La abeja sólo quiere néctar ahora.
         Recuerda que no todos los objetos son flores, recoge néctar solamente de las
         flores.
       4-5 Bee Conditionals 4_markdown_instruction: |-
-        Sometimes this cloud covers a
-        flower, and sometimes it covers a honeycomb! \r
+        A veces, esta nube cubre una
+        flor, y a veces cubre un panal! \r
         \r
-        Use the `if/else` block
-        to collect nectar only if it is a flower.  \r
-        Else, make honey (because it
-        is a honeycomb).
+        Use el bloque `si/no`
+        para recolectar néctar solo si es una flor. \r
+        De lo contrario, haz miel (porque
+        es un panal de miel).
       4-5 Bee Conditionals 5_markdown_instruction: |-
         There will be either a flower
         or a honeycomb under each of those clouds!\r
@@ -559,66 +555,65 @@
         Otherwise, make honey (because
         there is a honeycomb).
       4-5 Bee Conditionals 6_markdown_instruction: |-
-        I am not sure how much nectar
-        this flower has, but I know it has either 1, 2, or 3 nectar. \r
+        No estoy seguro de cuánto néctar
+        esta flor tiene, pero sé que tiene 1, 2 o 3 néctar. \r
         \r
-        Combine
-        the conditional blocks (`if` and/or `if/else`) to only get as much nectar
-        as the flower has. \r
+        Combinar
+        los bloques condicionales (`si` y/o` si/no`) solo para obtener el mayor néctar
+        como la flor tiene disponible. \r
         \r
-        Remember, the amount of nectar can change each
-        time you run the puzzle!
+        Recuerde, la cantidad de néctar puede cambiar cada
+        vez que ejecutas el rompecabezas!
       4-5 Bee Conditionals 7_markdown_instruction: |-
-        These flowers can have 3, 2,
-        or 1 nectar. \r
+        Estas flores pueden tener 3, 2,
+        o 1 néctar. \r
         \r
-        Complete the `check purple flower` function and use it
-        to collect all of the nectar at the flowers.
+        Complete la función `revisar la flor purpura` y úselo
+        para recoger todo el néctar de las flores.
       4-5 Bee Conditionals 8_markdown_instruction: |-
-        Write the function for `check
-        flower make honey`. \r
+        Escribe la función para `verificar
+        la flor que hace la miel`. \r
         \r
-        Your function should check if the purple flower
-        has 3, 2, or 1 nectar and get all of the nectar. \r
-        Then, move forward and
-        make honey.
+        Tu función debería verificar si la flor morada
+        tiene 3, 2 o 1 néctar y obtiene todo el néctar. \r
+        Luego, avanza y
+        haz miel.
       4-5 Bee Conditionals Assessment 1_markdown_instruction: |
-        **Assessment:** This
-        cloud is either hiding a flower with one nectar or a honeycomb that needs
-        one honey.  \r
+        ** Evaluación: ** Esta
+        nube esconde una flor con un néctar o un panal que necesita
+        una miel \r
         \r
-        Complete the `get nectar or make honey` function, then
-        call it to collect the nectar or honey. \r
+        Completa la función `obtener néctar o hacer miel`, luego
+        llámalo para recoger el néctar o la miel. \r
       4-5 Bee Debugging 1_markdown_instruction: |-
-        These blocks are really bugging
-        me. \r
+        Estos bloques realmente están molestándome. \r
         \r
-        Can you fix them?
+        ¿Puedes tu arreglarlos?
       4-5 Bee Debugging 6_markdown_instruction: |-
-        The purple flower has a different
-        amount of nectar each time you run the puzzle. \r
+        La flor morada tiene una diferente
+        cantidad de néctar cada vez que ejecutas el rompecabezas. \r
         \r
-        Fix the blocks to get
-        all of the nectar from the flower each time.
+        Arregla los bloques para obtener
+        todo el néctar de la flor cada vez.
       4-5 Bee Debugging Assessment 1_markdown_instruction: |-
-        **Assessment:** Fix the
-        code.
+        ** Evaluación: ** Repare el
+        código.
       4-5 Bee Nested Loops 2_markdown_instruction: "Collect all of the nectar from\neach
         flower. \\r\n\\r\nUse a nested loop. "
       4-5 Bee Nested Loops 4_markdown_instruction: "Collect all of the nectar from\neach
         flower and make honey at the honeycomb. \\r\n\\r\nUse a nested loop. "
       4-5 Bee Nested Loops Assessment 1_markdown_instruction: |-
-        **Assessment:** Collect
-        all of the nectar and make all of the honey using loops.
+        ** Evaluación: ** Reunir
+        todo el néctar y hacer toda la miel usando lazos.
       4-5 Maze 7_markdown_instruction: |-
-        Get the zombie to the sunflower quickly!  \r
+        Obtiene el Zombie para el girasol rápidamente! \r
         \r
-        Can
-        you solve the puzzle in fewer than 11 blocks?
+        Puedes
+        tu resolver el rompecabezas en menos de 11 bloques?
       4-5 Maze 9_markdown_instruction: Crear un lazo en el bloque "repetir hasta".
       4-5 Maze Assessment 1_markdown_instruction: |-
-        **Assessment:** Get to the sunflower
-        using as few blocks as possible.
+        ** Evaluación: ** Llega al girasol
+        usando la menor cantidad posible de bloques.
       4-5 Maze Conditionals 1_markdown_instruction: |-
         Use el bloque 'repetir hasta'
         para llevar al zombi al girasol.
@@ -630,51 +625,51 @@
         Use el bloque 'repetir hasta'
         para llevar al zombi al girasol.
       4-5 Maze Conditionals 3_markdown_instruction: |
-        Use the `if` block to help me
-        decide when to turn. \r
+        Usa el bloque `si` para ayudarme
+        a decidir cuándo girar. \r
       4-5 Maze Conditionals 4_markdown_instruction: |-
         Ok, resuelve este como el último puzzle, pero necesitas recordar cómo usaste los bloques `si` y
         `repetir hasta` juntos.
       4-5 Maze Conditionals 5_markdown_instruction: |-
-        "Me want sunflower!"  \r
+        "¡Quiero girasol!" \r
         \r
-        Use
-        an `if` statement to get the zombie to the sunflower with the fewest number
-        of blocks.
+        Usa
+        una declaración `si` para llevar al zombi al girasol con el menor número
+        de bloques.
       4-5 Maze Conditionals 6_markdown_instruction: |-
-        "Eat sunflower!"\r
+        "¡Come girasol!"\r
         \r
-        Use
-        an `if` statement to get the zombie to the sunflower with the fewest number
-        of blocks.
+        Usa
+        una declaración `si` para llevar al zombi al girasol con el menor número
+        de bloques.
       4-5 Maze Conditionals 7_markdown_instruction: |-
-        The solution to this puzzle
-        isn't very different, but watch out for the chompers!
+        La solución a este rompecabezas
+        no es muy diferente, ¡pero ten cuidado con los chompers!
       4-5 Maze Conditionals 8_markdown_instruction: |-
-        The `if/else` block checks a
-        condition, and then does one thing OR another. \r
+        El bloque `si/ no` verifica una
+        condición, entonces hace una cosa u otra. \r
         \r
-        Use this new block
-        to get me to the sunflower.
+        Usa este nuevo bloque
+        para llevarme al girasol.
       4-5 Maze Conditionals 9_markdown_instruction: |-
-        One more practice puzzle with
-        the `if/else` block!\r
+        Practica un rompecabezas más con
+        el bloque `si/no`!\r
         \r
-        Trace it with your finger to see if you can figure
-        it out on your first try.
+        Síguelo con tu dedo para ver si puedes lograr
+        en tu primer intento.
       4-5 Maze Conditionals Assessment 1_markdown_instruction: |-
-        **Assessment:** Use
-        a `repeat until` and an `if/else` block to get me to the sunflower in as few
-        blocks as possible.
+        ** Evaluación: ** Usa
+        un `repetir hasta` y un bloque`si/no` para llevarme al girasol usando la menor cantidad de
+        bloques como sea posible.
       4-5 Nested Loops 1_markdown_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.\r
+        Completa el código para dibujar estos triángulos. El
+        primero está hecho para ti. Sugerencia: 3 triángulos en una rotación de 360 grados.\r
         \r
       4-5 Nested Loops 11_markdown_instruction: |-
-        Can you draw these 10 squares of
-        this sidewalk using a nested loop? \r
+        ¿Puedes tu dibujar los 10 cuadrados de
+        esta acera usando un circuito insertado? \r
         \r
-        Each square is 30 pixels.
+        Cada cuadrado tiene 30 píxeles.
       4-5 Nested Loops 12_markdown_instruction: |-
         Can you draw these 36 triangles
         using a nested loop?
@@ -688,8 +683,8 @@
         you'll need to jump forward by the length of the triangle before turning.
       4-5 Nested Loops 5_markdown_instruction: Loop the given code to create a windmill.
       4-5 Nested Loops 6_markdown_instruction: |-
-        Can you draw a hexagon by looping
-        the triangle code?
+        ¿Puedes dibujar un hexágono haciendo un enlace
+        con el código triangular?
       4-5 Nested Loops 7_markdown_instruction: |-
         Loop this design 10 times. \r
         \r
@@ -704,37 +699,37 @@
         **Assessment:** Use a
         nested loop to complete the design.
       4-5 While Loops 1_markdown_instruction: |-
-        Move me to the hole and fill it with
-        two shovelfuls of dirt, using the `fill` block.
+        Muéveme al hoyo y llénalo con
+        dos paladas de tierra, usando el bloque `llenar`.
       4-5 While Loops 2_markdown_instruction: |-
-        Move me to the pile of dirt and remove
-        it with 5 shovel scoops, using the `remove 1` block.
+        Moverme a la pila de tierra y eliminar
+        eso con 5 palas de cuchara, usando el bloque `remover 1`.
       4-5 While Loops 3_markdown_instruction: |-
-        Use as few blocks as possible to complete
-        this puzzle!  \r
+        Use la menor cantidad de bloques posible para completar
+        este rompecabezas! \r
         \r
-        Move me to the pile and remove all the dirt, then move
-        to the hole and fill it completely.
-      4-5 While Loops 4_markdown_instruction: "Wow, look at that! \\r\n\\r\nI don't\nknow
-        how many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
-        keeps using the `fill` block until the ground is even?  "
+        Muéveme al montón y quita todo el sucio, luego muévete
+        al agujero y llénalo completamente.
+      4-5 While Loops 4_markdown_instruction: "Wow, mira eso! \\r\n\\r\nYo no\nse
+        cuántas palas de tierra necesita este hoyo. \\r\n¿Puedes tu escribir un programa\nque
+        siga usando el bloque `llenar` hasta que el suelo esté parejo?\n  "
       AWS applab_markdown_instruction: |-
         # Do this stuff now\r
         \r
         * step one\r
         *
         step two
-      AWS link_markdown_instruction: "# Use this tool for stuff"
+      AWS link_markdown_instruction: "# Usa esta herramienta para cosas"
       AlgPD DR Free Play_markdown_instruction: |-
         Using a word problem from your existing
         curriculum or elswhere, complete the Design Recipe and program a function.
         Use a Design Recipe form from your workbook or download a copy [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
       Alien Defender_markdown_instruction: |-
-        **Project Idea**: Make a defender game
-        in Play Lab!
+        ** La Idea del proyecto **: hacer un juego protector
+        en Play Lab!
       Alien Defender_2018_markdown_instruction: |-
-        **Project Idea**: Make a defender
-        game in Play Lab!
+        ** La Idea del proyecto **: hacer un juego protector
+        en Play Lab!
       AllTheThings Applab - Turtle move with button_markdown_instruction: |-
         # Please
         sign in to test applab levels (By design, applab levels only work if signed
@@ -795,10 +790,15 @@
          *
         Row 3 - shades of blue. \r
          * Row 4 - shades of gray.\r
-      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "#\nColor
-        Pixelation: Task 1\n**Directions:**\n\n* We start you with the 4x2 image\nMaddie
-        was creating, but we've left out the last two squares. \n* Finish\noff the
-        image by figuring out which two colors are missing and encode them.\n"
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': |
+        #
+        Color de Pixelacion: Tarea 1
+        **Direcciones:**
+
+        * Comenzamos con la imagen de 4x2
+        Maddie estaba creando, pero hemos omitido las dos últimas cuadriculas.
+        * Terminar
+        la imagen al descubrir qué dos colores faltan y codificarlos.
       App Lab test_markdown_instruction: |-
         <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
         target="_blank">Innovation Project</a>
@@ -924,21 +924,21 @@
         \r
         Cuando hayas terminado, puedes "Compartir" tu trabajo con un amigo por teléfono o con un enlace. ¡Crea tu propia cuenta para seguir construyendo en App Lab!
       AppLab Intro 1 - Template_markdown_instruction: |-
-        # Getting Started - Try this
-        app\r
+        # Primeros pasos: prueba esta
+        aplicación\r
         \r
-        Before you build your own Choose Your Own Adventure app, practice
-        using AppLab by building this one about a visit to a pet shop. To get started,
-        click "Run" and then navigate to the "Dogs" screen. Once you've made
-        it there click "Finish" to move on.
+        Antes de construir su propia elija su propia aplicación de aventura, practique
+        usando AppLab y construya esta sobre una visita a una tienda de mascotas. Para empezar,
+        haga clic en "Ejecutar" y luego navegue a la pantalla "Perros". Una vez que hayas hecho
+        eso haga clic en "Finalizar" para continuar.
       AppLab Intro 1 - Try App_markdown_instruction: |-
-        # Getting Started - Try this
-        app\r
+        # Primeros pasos: prueba esta
+        aplicación\r
         \r
-        Before you build your own Choose Your Own Adventure app, practice
-        using AppLab by building this one about a visit to a pet shop. To get started,
-        click "Run" and then navigate to the "Dogs" screen. Once you've made
-        it there click "Finish" to move on.
+        Antes de construir su propia elija su propia aplicación de aventura, practique
+        usando AppLab y construya esta sobre una visita a una tienda de mascotas. Para empezar,
+        haga clic en "Ejecutar" y luego navegue a la pantalla "Perros". Una vez que hayas hecho
+        eso haga clic en "Finalizar" para continuar.
       AppLab Intro 2 - Edit place1 2_markdown_instruction: |-
         Think about how you want
         your adventure to continue on this screen. Then add some text to tell your
@@ -1009,13 +1009,13 @@
         Hit
         "Run" once to make everything looks good. Then hit "Finish" to move on!
       AppLab Intro 2 - Template_markdown_instruction: |-
-        # Getting Started - Try this
-        app\r
+        # Primeros pasos: prueba esta
+        aplicación\r
         \r
-        Before you build your own Choose Your Own Adventure app, practice
-        using AppLab by building this one about a visit to a pet shop. To get started,
-        click "Run" and then navigate to the "Dogs" screen. Once you've made
-        it there click "Finish" to move on.
+        Antes de construir su propia elija su propia aplicación de aventura, practique
+        usando AppLab y construya esta sobre una visita a una tienda de mascotas. Para empezar,
+        haga clic en "Ejecutar" y luego navegue a la pantalla "Perros". Una vez que hayas hecho
+        eso haga clic en "Finalizar" para continuar.
       AppLab Intro 2 - Try App_markdown_instruction: |-
         <img src="https://images.code.org/1f43ffc6a6da4c3a7644802cdbbff58b-image-1504737782528.jpg",
         style="float:right;width:200px">\r
@@ -1031,13 +1031,13 @@
         Once you see how the project already works hit "Finish" to start
         making it yours.
       AppLab Intro 2 - Try Cat Commander_markdown_instruction: |-
-        This is what the
-        code for Cat Commander looks like. Take one minute to scroll through the code
-        and see if you can understand how it works. Talk about it with a partner.
-        What patterns do you see? \r
+        Esto es lo que
+        luce como el código Cat Commander. Tómese un minuto para desplazarse por el código
+        y mira si puedes entender cómo esto funciona. Discute de eso con un compañero.
+        ¿Que patrones puedes ves? \r
         \r
-        Once you're done, move on by clicking "Run"
-        then "Finish", to learn to build your own adventure.
+        Una vez que hayas terminado, continúa haciendo clic en "Ejecutar"
+        entonces, "Finaliza", para aprender como construir tu propia aventura.
       AppLab Intro 2 - add Button_markdown_instruction: |-
         Now you have two screens,
         but no way to get between them. Time to start adding buttons!\r
@@ -1060,26 +1060,26 @@
         ![expandable](https://images.code.org/43f2678e4748a1fa09556f75cad65e97-image-1505766882756.gif)
         Click to see a GIF of all steps
       AppLab Intro 2 - add images_markdown_instruction: |-
-        You now know everything
-        you need to make a simple Choose Your Own Adventure app, but you can add so
-        much more! If you want to add images to your screen it's easy!\r
+        Ahora lo sabes todo
+        necesitas hacer una simple selección elige tu propia aplicación de aventura, pero puedes agregarla y
+        ¡mucho más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\r
         \r
         1.
-        In another tab in your browser go online and find an image you want to use\r
+        En otra pestaña de tu navegador, ve en línea y encuentra una imagen que quieras usar.\r
         2.
-        Right click the image and save its URL (usually "Copy link address" or "Copy
-        image URL")\r
-        3. Back in App Lab go to Design Mode\r
-        4. Drag an "image"
-        element onto your screen\r
-        5. Paste the URL you copied into the "image"
-        property\r
+        Haga clic con el botón derecho en la imagen y guarde su URL (generalmente "Copiar la dirección del enlace" o "Copiar"
+        imagen URL ") \r
+        3. De vuelta en App Lab, vaya a Modo de diseño \r
+        4. Arrastra una "imagen"
+        o elemento a su pantalla \r
+        5. Pegue la URL que copió en la "imagen"
+        propiedad\r
         \r
-        "Run" your app once to test it. Then hit "Finish" to move
-        to learn to add sounds.\r
+        "Ejecuta" tu aplicación una vez para probarla. Luego presiona "Finalizar" para moverte
+        para aprender a agregar sonidos.\r
         \r
         ![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif)
-        Click to see GIF of all steps
+        Haga clic para ver GIF de todos los pasos
       AppLab Intro 2 - add more buttons 2_markdown_instruction: |-
         Time to add a second
         button and write the code to make it work.\r
@@ -1162,13 +1162,13 @@
         Run your app. There should
         be sound playing now too!
       AppLab Intro 2 - finish and share_markdown_instruction: |-
-        Congrats on finishing
-        your Hour of Code! You can share your work with friends! Click "Share" to
-        get a link or even text it to them.\r
+        ¡Felicidades por terminar
+        tu hora de código! ¡Puedes compartir tu trabajo con amigos! Haga clic en "Compartir" para
+        obtener un enlace o incluso enviarle un texto. \r
         \r
-        You can keep working on your project
-        here. Whenever your friends go to the link you shared they'll get the latest
-        version you made. How far will you build your adventure?
+        Puedes seguir trabajando en tu proyecto
+        aquí. Cada vez que tus amigos vayan al enlace que compartiste, recibirán la última
+        versión que hiciste ¿Cuán lejos construirás tu aventura?
       AppLab Intro 3 - Change Screen Color_markdown_instruction: |
         Set the screen's
         `"background-color"` to `"red"`. Click the picture to see how. \r
@@ -1416,20 +1416,20 @@
         \r
         **Show Me:** ![expandable](https://images.code.org/a5081cce1969c5a784b4440369706801-image-1505941723405.gif)
       AppLab Intro 4 - thisOrThat design_markdown_instruction: |-
-        **Goal:** Try out
-        Design Mode to keep making changes to your This or That App. There's also
-        some new blocks in your toolbox! You'll learn more about these in later lessons.\r
+        ** Objetivo: ** probar
+        Modo de diseño para seguir haciendo cambios a esta o aquella aplicación. También hay
+        algunos nuevos bloques en tu caja de herramientas! Aprenderá más sobre esto en lecciones posteriores.\r
         \r
-        **How:**
-        Click into "Design" to quickly edit how your app looks or add screen elements
-        yourself. Experiment with some of the new blocks in the toolbox.
+        **Cómo:**
+        Haga clic en "Diseño" para editar rápidamente el aspecto de su aplicación o agregar elementos de pantalla
+        usted mismo. Experimente con algunos de los nuevos bloques en la caja de herramientas.
       AppLab Intro 4 - thisOrThat template_markdown_instruction: |-
-        **Goal:** Try out
-        Design Mode to keep making changes to your This or That App. You'll learn
-        more in later lessons.\r
+        ** Objetivo: ** probar
+        el modo de diseño para seguir haciendo cambios a esta o aquella aplicación. Aprenderás
+        más en lecciones posteriores.\r
         \r
-        **How:** Click into "Design" to quickly edit
-        how your app looks or add screen elements yourself.
+        ** Cómo: ** Haz clic en "Diseño" para editar rápidamente
+        cómo se ve tu aplicación o agrega elementos de pantalla tú mismo.
       AppLab Intro 4 - thisOrThat_markdown_instruction: |-
         **Goal:** Make a "This
         or That" app, then share it with friends\r
@@ -1525,9 +1525,9 @@
         **Show
         Me:** ![expandable](https://images.code.org/066245e52135c038502620a19f961667-image-1507570682956.gif)
       AppLab Intro 5 - go further_markdown_instruction: |-
-        **Goal:** This is a blank
-        App Lab project. Build whatever you like here! You also have a few more blocks
-        you can try out if you like. Don't forget to share your work!
+        ** Objetivo: ** Esto es un espacio en blanco
+        Proyecto App Lab. ¡Construye lo que quieras aquí! También tienes algunos bloques más
+        puedes probar si quieres. ¡No olvides compartir tu trabajo!
       AppLab Intro 5 - onEvent intro_markdown_instruction: |-
         <img src="https://images.code.org/d793e711e9e2ea74f68cebf228fcb360-image-1506618780451.gif"
         style="float:right;height:150px">\r
@@ -1587,23 +1587,24 @@
         **Show
         Me:** ![expandable](https://images.code.org/9ac5102ec678c1ecd0278446560ba617-image-1507571425597.gif)
       AppLab Intro 5 - share keep going_markdown_instruction: |-
-        **Goal:** Share your
-        app with someone, or just send it to yourself! Then keep building it out!\r
+        ** Objetivo: ** Comparte tu
+        aplicación con alguien, ¡o simplemente envíala! ¡Entonces sigue desarrollándola!\r
         \r
-        **How:**
-        Click "Share" to find lots of ways to share your app. Here's some ideas
-        to try\r
+        **Cómo:**
+        Haz clic en "Compartir" para encontrar muchas formas de compartir tu aplicación. Aquí hay algunas ideas
+        para probar\r
         \r
-        * Add a button that takes you back from `"screen2"` to `"screen1"`\r
+        * Agregue un botón que lo lleve de regreso de `" pantalla2 "` a `" pantalla1 "` \r
         *
-        Add more screens with more images\r
-        * Add more types of reaction buttons
-        that users can click
-      AppLab Intro 5 - socialTemplate_markdown_instruction: "**Goal:** Add a button\nto
-        the screen for scrolling to the next image. Give it a good icon, like a\nright
-        arrow. In the next level you'll make it work.\\r\n\\r\n**How:** Use Design\nMode
-        to drag in a button. The icon library has many different arrows to choose\nfrom.
-        Don't forget you can search for them.\\r\n\\r\n**Show Me:** "
+        Agregue más pantallas con más imágenes\r
+        * Agregue más tipos de botones de reacción
+        donde los usuarios puedan hacer clic
+      AppLab Intro 5 - socialTemplate_markdown_instruction: "** Objetivo: ** Agregar
+        un botón\na la pantalla para desplazarse a la siguiente imagen. Dale un buen
+        ícono, como una\nflecha correcta. En el siguiente nivel lo harás funcionar.\\r\n\\r\n**
+        Cómo: ** Usa el modo\ndiseño para arrastrar en un botón. La biblioteca de
+        iconos tiene muchas flechas diferentes para seleccionar.\\r\nNo olvides que
+        puedes buscarlos.\\r\n\\r\n**Muéstrame:** "
       AppLab Intro 6 - Change Screen Color_markdown_instruction: |-
         <div style="float:right">\r
         \t<img
@@ -1648,18 +1649,18 @@
         \r
         **Stuck? Click here:** ![expandable](https://images.code.org/709ff200e5b5f553b24d1d0a769db6ed-image-1507565545993.gif)
       AppLab Intro 6 - animalSoundBoard_markdown_instruction: |-
-        **Goal:** Keep building
-        out the Animal Sound board. Then make sure to "Share" it.\r
+        ** Objetivo: ** Seguir construyendo
+        fuera del tablero de sonido animal. Luego asegúrate de "Compartirlo".\r
         \r
-        **How:**
-        Add new buttons for more animals. Or make the soundboard for a totally different
-        topic entirely!
+        **Cómo:**
+        Agrega nuevos botones para más animales. O haz la caja de resonancia para un tema totalmente diferente
+        por completo!
       AppLab Intro 6 - blankApp_markdown_instruction: |-
-        **Goal:** This is a completely
-        blank App Lab App. Build whatever you want from scratch!?\r
+        ** Objetivo: ** Esto es completamente
+        una aplicación en blanco App Lab. Construye lo que quieras desde cero!?\r
         \r
-        **How:**
-        You're in control here. You decide what you want to make!
+        **Cómo:**
+        Tú tienes el control aquí. ¡Tú decides lo que quieres hacer!
       AppLab Intro 6 - onEvent intro_markdown_instruction: |-
         <img src="https://images.code.org/d793e711e9e2ea74f68cebf228fcb360-image-1506618780451.gif"
         style="float:right;height:150px">\r
@@ -1716,19 +1717,20 @@
         \r
         **Stuck? Click here:** ![expandable](https://images.code.org/80b30e5bd85dd5430e2c375568d53580-image-1508432171734.gif)
       AppLab Intro 6 - quizApp_markdown_instruction: |-
-        **Goal:** Build out three questions
-        in this Quiz App. You can always make more questions by duplicating screens.
-        Then send it to a friend!\r
+        ** Objetivo: ** Desarrollar tres preguntas
+        en esta aplicación Quiz. Tu siempre puedes hacer más preguntas duplicando las pantallas.
+        ¡Entonces, envíala a un amigo!\r
         \r
-        **How:** Run the app first and try clicked
-        all the buttons to see how it works. Then from Design Mode you can change
-        the default text for the questions and buttons. In Code mode create response
-        text for when the user clicks the different buttons. Customize the colors
-        or add images if you want too!
-      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**Goal:**\nAdd
-        a second button to the screen that says \"Right!\"\\r\n\\r\n**How:** In\nDesign
-        Mode drag in a new button. Position and resize it. Then set its `\"text\"`,\n`\"background
-        color\"`, and `\"font size\"`\\r\n\\r\n**Show Me:** "
+        ** Cómo: ** Ejecuta la aplicación primero e intenta hacer clic
+        en todos los botones para ver cómo funciona. Luego, desde el modo de diseño se puede cambiar
+        el texto predeterminado para las preguntas y los botones. En modo Código crea respuesta
+        texto para cuando el usuario haga clic en los diferentes botones. ¡Personaliza los colores
+        o si quieres también puedes agregar imágenes!
+      AppLab Intro 6 - thisOrThatAddButton Template_markdown_instruction: "**Meta:**\nAgregar
+        un segundo botón a la pantalla que dice \"¡Bien!\"\\r\n\\r\n**Cómo:** En\nmodo
+        de diseño arrastrar en un nuevo botón. Posicionar y redimensionarlo. Luego
+        configure su `\" texto \"`,\n`\" color de fondo \"`, y `\" tamaño de fuente
+        \"\\r`\n\\r\n**Muéstrame:** "
       AppLab Intro 6 - thisOrThatAddButton_markdown_instruction: |-
         <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00
         PM.png" style="float:right;height:200px">\r
@@ -2027,9 +2029,9 @@
         \r
         Notice:
         We've used the `set alpha` block to make the "petals" fade toward the outside.
-      Bergeron Robot Maze1_markdown_instruction: "Can you help me catch the naughty\npig?
-        \\r\n\\r\nStack a couple of `move forward` blocks below the `when run`\nblock
-        and press \"Run\". "
+      Bergeron Robot Maze1_markdown_instruction: "¿Puedes ayudarme a atrapar el cerdo\nrevoltoso?
+        \\r\n\\r\njunta un par de bloques `adelante 'debajo del` cuando se ejecute`\nbloquea
+        y presiona \"Ejecutar\". "
       Big Game Animation 1_markdown_instruction: |-
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -5030,6 +5032,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         Background Color\r
         \r
@@ -5043,12 +5046,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -5122,6 +5124,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         The Body Element\r
         \r
@@ -5423,12 +5426,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -5460,6 +5462,7 @@
         - CSS float Property</a>\r
         </details>\r
         </div>\r
+        \r
         # Layout and Style\r
         \r
         *
@@ -5712,13 +5715,58 @@
         * Fix the code so that the
         second item in each list displays correctly
       CSD U2 navigation_markdown_instruction: |
-        # Create a Navigation Bar\r
+        <div style="float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\r
+        <details>\r
+        <summary>**What are hyperlinks?**</summary>\r
+        Hyperlinks
+        can connect to local web pages or external web pages. To add navigation to
+        your website you will need to add hyperlinks which connect your individual
+        web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The
+        text you want to display as the hyperlink goes between the opening and closing
+        hyperlink tags. The `<a>` element has an attribute `href` which is the location
+        to link to.  The location of a local page is just the file path for that page.
+        <br> <br>\r
         \r
-        Here's
-        your project from before.  You'll be linking the two pages by creating a
-        **navigation bar** at the top of the page.  Websites usually have the same
-        navigation bar across all of their pages so you can get back and forth between
-        things on the site.  You can see an example of a navigation bar on <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
+        For example to link to the unique houses page you would add
+        the following code inside your `<body>` element. <br><br>\r
+        \r
+        <pre>\r
+        &lt;a
+        href=”houses.html”&gt; Unique Houses &lt;/a&gt;\r
+        </pre>\r
+        \r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I add a hyperlink?**</summary>\r
+        You can **add hyperlinks to your web
+        page using the `<a>` element**.  The text you want to display as the hyperlink
+        goes between the opening and closing hyperlink tags. The `<a>` element has
+        an attribute `href` which is the location to link to.  The location of a local
+        page is just the file path for that page. <br> <br>\r
+        \r
+        For example to
+        link to the unique houses page you would add the following code inside your
+        `<body>` element. <br><br>\r
+        \r
+        <pre>\r
+        &lt;a href=”houses.html”&gt; Unique
+        Houses &lt;/a&gt;\r
+        </pre>\r
+        \r
+        </details>\r
+        </div>\r
+        \r
+        # Create a
+        Navigation Bar\r
+        \r
+        Here's your project from before.  You'll be linking
+        the two pages by creating a **navigation bar** at the top of the page.  Websites
+        usually have the same navigation bar across all of their pages so you can
+        get back and forth between things on the site.  You can see an example of
+        a navigation bar on <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/"
         target="_new">this page</a>\r
         \r
         # Do This\r
@@ -5732,7 +5780,6 @@
         the top of your lists page.\r
         * Test your links in the preview area by clicking
         on them.\r
-        \r
       CSD U2 new page_markdown_instruction: |
         # Create a New Page for Your Website.\r
         \r
@@ -6841,9 +6888,8 @@
          * Write down all of the attribution
         information that you need.\r
          * Upload all of the images into your project.  Visit
-        <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 8 Level 6</a>
+        <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lesson 7 Level 5</a>
         if you've forgotten how.\r
-        \r
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: |
         # The Counter Pattern\r
@@ -7785,7 +7831,7 @@
         * Go to the
         Animation tab and check out the multi-frame animations already added to your
         project. Choose one for each of your characters.\r
-      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |
+      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |-
         # Using
         Multiframe Animations\r
         \r
@@ -7803,7 +7849,7 @@
         to your project. Choose one for each of your characters.\r
         * Remember you
         can use `setAnimation` to give your sprites animations you've created in
-        the Animation Tab.\r
+        the Animation Tab.
       CSD U3 AnimationsMulti mirror animation_markdown_instruction: |-
         # Editing Multiframe
         Animations\r
@@ -8841,43 +8887,50 @@
         if block to add an else.\r
         * Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed.
+      CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: |-
+        # Alienígena Saltador\r
+        \r
+        Presiona
+        "Ejecutar" para jugar el juego de la izquierda. Puedes hacer que el alienígena salte con el
+        barra espaciadora, y moverlo hacia la izquierda y hacia la derecha con las teclas de flecha. Tu puntuación
+        sera al recolectar estrellas, y si puntúas lo suficiente, el fondo cambiará.
       CSD U3 Entertainment Sample 1_markdown_instruction: |-
-        # Alien Jumper\r
+        # Alienígena Saltador\r
         \r
-        Press
-        "Run" to play the game on the left.  You can make the alien jump with the
-        space bar, and move it to the left and right with the arrow keys.  You score
-        by collecting stars, and if you score high enough, the background will change.
+        Presiona
+        "Ejecutar" para jugar el juego de la izquierda. Puedes hacer que el alienígena salte con el
+        barra espaciadora, y moverlo hacia la izquierda y hacia la derecha con las teclas de flecha. Tu puntuación
+        sera al recolectar estrellas, y si puntúas lo suficiente, el fondo cambiará.
       CSD U3 Entertainment Sample 2_markdown_instruction: |-
-        # Hungry Bunny\r
+        # Conejito Hambriento\r
         \r
-        The
-        bunny is hungry, and it's looking for mushrooms and carrots for dinner.\r
+        El
+        Conejito tiene hambre, y está buscando hongos y zanahorias para la cena.\r
         \r
-        To
-        win, you'll need to find a dinner bowl, then collect at least ten carrots
-        and five mushrooms.\r
+        Para
+        ganar, tendrás que encontrar un envace para la cena, luego recoger al menos diez zanahorias
+        y cinco hongos.\r
         \r
-        Make sure to avoid the bugs.  Ladybugs and snails
-        will eat your food, and bees will sting you, making you drop everything!\r
+        Asegúrate de evitar los insectos. Mariquitas y caracoles
+        comerán tu comida, y las abejas te picarán, ¡haciéndote soltar todo!\r
         \r
-        Use
-        the space bar to jump.  You can squash ladybugs and snails by jumping on them.\r
+        Uza
+        la barra espaciadora para saltar. Puedes aplastar mariquitas y caracoles saltando sobre ellos.\r
         \r
-        Click
-        "Run" to start the program.
+        Haz clic
+        en "Ejecutar" para iniciar el programa.
       CSD U3 Entertainment Sample 3_markdown_instruction: |
-        # Animated Comics\r
+        # Caricaturas animadas\r
         \r
-        Combining
-        images, text, and some subtle animation can make for really interesting comics
-        or graphic stories.  Click "Run" to see an example.\r
+        Combinando
+        imágenes, texto y alguna animación sutil pueden hacer cómics realmente interesantes
+        o historias gráficas. Haga clic en "Ejecutar" para ver un ejemplo.\r
       CSD U3 Entertainment Sample 4_markdown_instruction: |
-        # Stamp Pad\r
+        # Timbre de sello\r
         \r
-        Click
-        "Run" to start the program, then use the stamp pad to draw pictures with
-        simple colors and animal stamps.\r
+        Hacer clic
+        En "Ejecutar" para iniciar el programa, luego use la almohadilla de sello para dibujar con
+        colores simples y sellos de animales.\r
       CSD U3 Expressions calculator_markdown_instruction: |-
         # Adding and Multiplying\r
         \r
@@ -9223,32 +9276,32 @@
         of each bee inside both the if and else statements appropriately to make the
         bees only show near the flower.
       CSD U3 Input Fish_markdown_instruction: |-
-        # Fish With Arrows\r
+        # Pez con flechas\r
         \r
-        The fish
-        are back. Can you make the fish move left only when the left arrow key is
-        pressed down?\r
+        El pez
+        está de regreso. ¿Puedes hacer que el pez se mueva hacia la izquierda solo cuando la tecla de la flecha esta
+        presionada?\r
         \r
-        # Do This\r
+        # Hacer esto\r
         \r
-        * Add an if statement to check when
-        the left arrow key is pressed down.\r
-        * Move the commands for moving the
-        fish inside the if statement.
+        * Agregue una declaración if para verificar cuando
+        la tecla de flecha izquierda está presionada hacia abajo.\r
+        * Mueva los comandos para mover el
+        pez dentro de la declaración if.
       CSD U3 Input Gears_markdown_instruction: |-
-        # Gears with Conditionals\r
+        # Engranajes con Condicionales\r
         \r
-        Let's
-        make the gears spin only when the space key is being held down.\r
+        Vamos a
+        hacer girar los engranajes solo cuando la tecla de espacio se mantiene presionada.\r
         \r
-        # Do
-        This\r
+        # Hagamos
+        Esto\r
         \r
-        * Add an `if` statement.\r
-        * Use `keyDown` as input to the if
-        statement to check when the space key is pressed.\r
-        * Move the code that
-        makes the gears rotate inside the `if`.
+        * Agregar una instrucción `if`.\r
+        * Use `Flecha bajando` como entrada para la
+        declaración if para verificar cuando se presiona la tecla de espacio.\r
+        * Mueve el código que
+        hace que los engranajes giren dentro del `if`.
       CSD U3 Interactive Card Background_markdown_instruction: |-
         # Laying Out Your
         Background\r
@@ -9376,22 +9429,22 @@
         Can you create more sophisticated conditionals by nesting them or using compound
         booleans?
       CSD U3 Keyboard Input Challenge_markdown_instruction: |-
-        # Challenge\r
-        _Check
-        with your teacher before trying this challenge._\r
+        # Desafío\r
+        _Comprobar
+        con tu maestra antes de intentar este desafío._\r
         \r
-        Here's the bug program
-        you've been working on for the past few levels. Choose one or more of following
-        challenges, or add new features of your own!\r
+        Aquí está el programa de errores
+        has estado trabajando durante los últimos niveles. Elija uno o más de los siguientes
+        desafíos, o agrega nuevas características tuyas!\r
         \r
-        * Use the "space" key
-        to control another property of your bug sprite, such as rotation or scale.\r
+        * Use la tecla "espacio"
+        para controlar otra propiedad de su sprite de error, como la rotación o la escala.\r
         *
-        Add some randomization to your movement.\r
-        * Add a second sprite and control
-        it with a different set of keys ("w", "a", "s", and "d" are common
-        choices).\r
-        * Add some shapes to your background to make the scene more interesting.
+        Agregue una asignación al azar a su movimiento.\r
+        * Agregue un segundo sprite y control
+        eso con un conjunto diferente de teclas ("w", "a", "s" y "d" son comunes
+        opciones).\r
+        * Agregue algunas formas a su fondo para que la escena sea más interesante.
       CSD U3 Keypress Boolean Predict_markdown_instruction: |-
         # Make a Prediction:
         keyDown()\r
@@ -9702,24 +9755,36 @@
         * Set
         up the draw loop to draw a background and your sprites.
       CSD U3 Movement Your Own 2_markdown_instruction: |-
-        # Add movement to your animation\r
+        # Agregar movimiento a tu animación\r
         \r
-        With
-        your static scene set up, you can now add some movement. When you are satisfied
-        with your program, click the "Submit" button to turn it in. You can always
-        unsubmit and continue working if you want to add features.\r
+        Con
+        su escena estática configurada, ahora puede agregar algún movimiento. Cuando está satisfecho
+        con su programa, haga clic en el botón "Enviar" para activarlo. Usted siempre puede
+        no enviarlo y continuar trabajando si desea agregar funciones.\r
         \r
-        # Do This\r
+        # Hacer esto\r
         \r
-        In
-        the draw loop\r
+        En
+        el lazo de drenaje\r
         \r
-        * Identify which sprite properties to change.\r
-        * Update
-        those properties using the counter pattern.\r
+        * Identificar qué propiedades de los sprites cambiarán.\r
+        * Actualiza
+        esas propiedades usando el patrón de contador.\r
         \r
-        _Tip: If your counter pattern
-        isn't working like you expect, add watchers to help debug your program._
+        _ Sugerencia: si tu patrón de contador
+        no funciona como esperaba, agregue vigilantes para ayudar a depurar su programa._
+      CSD U3 Plotting Shapes Shape Lab - unembed_markdown_instruction: |-
+        # Drawing
+        Shapes\r
+        \r
+        Explore using this tool that lets you draw different colored
+        shapes. \r
+        \r
+        Make sure you hit "Run" and try out turning on the grid
+        to help you place shapes precisely.\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
       CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: |-
         # Drawing Shapes\r
         \r
@@ -10094,22 +10159,22 @@
         _Notice that the `console.log()` block is now in
         the Variables drawer and the `randomNumber()` block is in the Math drawer._
       CSD U3 Random background_markdown_instruction: |-
-        # Background\r
+        # Fondo\r
         \r
-        Sometimes
-        you'll want to fill the entire screen with a color.  For that, you can use
-        `background`.  It covers everything on the screen with the color you choose.\r
+        A veces
+        querrás llenar toda la pantalla con un color. Para eso, puedes usar
+        `fondo`. Cubre todo en la pantalla con el color que elija.\r
         \r
         #
-        Do This\r
+        Hacer esto\r
         \r
-        * Run the code to see `background` work.\r
-        * Change the background
-        from yellow to orange.\r
+        * Ejecute el código para ver `el trabajo de fondo.\r
+        * Cambiar el fondo
+        de amarillo a naranja.\r
         \r
-        *Challenge: There is a purple square that is
-        covered up by the background.  Can you change the order of the code so you
-        can see both the purple and blue squares?*
+        * Desafío: hay un cuadrado morado que esta
+        cubierto por el fondo. ¿Puedes cambiar el orden del código para que
+        puedas ver los cuadros morados y azules? *
       CSD U3 Random background2_markdown_instruction: |-
         <img src="https://images.code.org/a68cfd23a13b6bdeef91dc9fd584f657-image-1491332601738.03.04
         PM.png" style="float:right;height:150px">\r
@@ -10146,20 +10211,20 @@
         *Challenge:
         Can you make size of some of the circles random, too?*
       CSD U3 Random random ellipse_markdown_instruction: |-
-        # Random Numbers\r
+        # Números aleatorios\r
         \r
-        `randomNumber()`
-        chooses a random number between a minimum and maximum value. You can use this
-        code instead of writing in the specific number.  If you make your drawings
-        with random numbers it will look a little bit different every time you run
-        your program.\r
+        `randomNumber ()`
+        elige un número aleatorio entre un valor mínimo y máximo. Puedes usar este
+        código en lugar de escribir en el número específico. Si haces tus dibujos
+        con números aleatorios se verá un poco diferente cada vez que corra
+        su programa.\r
         \r
-        # Do This\r
+        # Hacer esto\r
         \r
-        * Run the program several times to see
-        how it works.\r
-        * Change the numbers inside `randomNumber` and run the code
-        again a few times to see what changes.
+        * Ejecute el programa varias veces para ver
+        cómo este funciona.\r
+        * Cambie los números dentro de `Numero Aleatorio` y ejecute el código
+        de nuevo algunas veces para ver qué cambia.
       CSD U3 Random random ellipse2_markdown_instruction: |-
         <img src="https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
         PM.png" style="float:right;height:150px">\r
@@ -10808,63 +10873,56 @@
         * Your animation should look similar to the example
         at the right.
       CSD U3 Sprites scene challenge_markdown_instruction: |-
-        # Challenge: Extend your
-        scene\r
+        # Desafío: Extiende tu
+        escena\r
         \r
-        _Check with your teacher before starting this challenge._\r
+        _Comprueba con tu maestro antes de comenzar este desafío._\r
         \r
-        Now
-        that you've finished your scene, consider adding to it or creating another.
-      CSD U3 Sprites scene drawing_markdown_instruction: |-
-        # Create Your Scene - Drawing\r
-        \r
-        You're
-        going to start creating a scene of your own. If you haven't already, take
-        a minute to sketch out a picture of your scene (consider using graph paper).
-        Once you have an idea and plan for your scene, start drawing the background.\r
-        \r
-        #
-        Do This\r
-        \r
-        * Use a `background()` command to fill the screen with a color.\r
-        *
-        Add any necessary shape commands to draw the non-sprite elements of your scene.
+        Ahora
+        que hayas terminado tu escena, considera agregarla o crear otra.
+      CSD U3 Sprites scene drawing_markdown_instruction: "# Crea tu escena - Dibujando\\r\n\\r\nTu
+        \nvas a comenzar a crear una escena por ti mismo. Si aún no lo has hecho,
+        toma\nun minuto para esbozar una imagen de su escena (considere usar papel
+        cuadriculado).\nUna vez que tengas una idea y un plan para tu escena, comienza
+        a dibujar el fondo.\\r\n\\r\n#\nHacer esto\\r\n\\r\n* Use un comando `background()`
+        para llenar la pantalla con un color.\\r\n*\nAgregue los comandos de forma
+        necesarios para dibujar los elementos que no son de sprite de su escena."
       CSD U3 Sprites scene sprites_markdown_instruction: |-
-        # Create Your Scene - Sprites\r
+        # Crea tu escena - Sprites\r
         \r
-        With
-        your background in place, it's time to add your sprites.\r
-        # Do This\r
+        Con
+        el fondo en su lugar, es hora de agregar sus sprites.\r
+        # Hacer esto\r
         \r
         *
-        Add or create all of your sprite images in the Animation Tab.\r
-        * Create
-        a variable for each sprite at the top of your program and use `setAnimation()`
-        to assign the images you created in the Animation Tab.\r
-        * Call `drawSprites()`
-        once at the end of your program.\r
+        Agrega o crea todas tus imágenes de sprite en la pestaña Animación.\r
+        * Crea
+        una variable para cada sprite en la parte superior de tu programa y usa `setAnimation ()`
+        para asignar las imágenes que ha creado en la pestaña Animación.\r
+        * Llamar a `drawSprites ()`
+        una vez al final de su programa.\r
         \r
-        _Hint: You probably want to call `drawSprites()`
-        at the very end of your program so the sprites are on top of your background,
-        but for some designs you may want to call `drawSprites()` earlier so that
-        your sprites are on top of some shapes but below others._
+        _Iniciar: es probable que desee llamar a `drawSprites ()`
+        al final de tu programa para que los sprites estén sobre tu fondo,
+        pero para algunos diseños es posible que desee llamar `drawSprites ()` antes para que
+        tus sprites están encima de algunas formas pero debajo de otras._
       CSD U3 Sprites scene text_markdown_instruction: |-
-        # Create Your Scene - Text\r
+        # Crea tu escena - Texto\r
         \r
-        The
-        final piece of your scene is to add text.\r
+        La
+        pieza final de tu escena es agregar texto.\r
         \r
-        # Do This\r
+        # Hacer esto\r
         \r
-        * Add a
-        `text()` command for each separate line of text.\r
-        * If necessary, use `fill()`
-        and `textSize()` to change the appearance of your text.\r
+        * Agrega un
+        `text ()` comando para cada línea de texto por separado.\r
+        * Si es necesario, use `fill ()`
+        y `textSize ()` para cambiar la apariencia de su texto.\r
         \r
-        _Hint: Most
-        scenes have the text on top of everything else, which would require your `text()`
-        commands to be the last lines in your program. If, however, you want the text
-        layered in with other elements, you might consider changing the order._
+        _ Sugerencia: la mayoría
+        de las escenas tienen el texto encima de todo, lo que requeriría su `text ()`
+        comandos para ser las últimas líneas en su programa. Sin embargo, si quieres el texto
+        en capas con otros elementos, puede considerar cambiar el orden._
       CSD U3 Sprites setting properties_markdown_instruction: |-
         # Properties\r
         \r
@@ -10974,17 +11032,13 @@
         scene has all the right code, but it's not in the right order. The scene
         should look like the image to the right.  Can you reorder the blocks so that
         each part of the scene is drawn in the correct order?
-      CSD U3 Sprites text_markdown_instruction: |-
-        # Adding Text\r
-        \r
-        You can put
-        text anywhere you'd like on the screen using `text`. Change the displayed
-        text in the provided code, then add a second `text` to write in a different
-        part of the screen.\r
-        \r
-        _Tip: The default text size is pretty small, but
-        you can use the `textSize` block to change that. You can also use `fill` to
-        change the color of your text._
+      CSD U3 Sprites text_markdown_instruction: "# Agregar texto\\r\n\\r\nPuedes poner\ntexto
+        en cualquier lugar que desee en la pantalla usando `text`. Cambiar el texto
+        \nvisualizado en el código provisto, luego agregue un segundo `texto` para
+        escribir en un\nparte diferente de la pantalla.\\r\n\\r\n_ Sugerencia: el
+        tamaño del texto predeterminado es bastante pequeño, pero\npuedes usar el
+        bloque `textSize` para cambiar eso. También puede usar `fill` para\ncambia
+        el color de tu texto._"
       CSD U3 Sprites width and height_markdown_instruction: |-
         # Setting Properties\r
         \r
@@ -11167,17 +11221,17 @@
         <img src="https://images.code.org/acf7b8223b3a87594e20348306464de7-image-1493161823305.png"
         style="width:150px; border: 1px solid grey; margin:20px;">\r
       CSD U3 Variables Draw Challenge_markdown_instruction: |
-        # Challenge: Draw an
-        Image\r
+        # Desafío: dibujar una
+        Imagen\r
         \r
-        _Check with your teacher before tackling this challenge level._\r
+        _Comprueba con tu profesor antes de abordar este nivel de desafío._\r
         \r
-        Using
-        variables, draw an image where many of the items rely on a common variable
-        for size or placement. For example, draw a face with variables controlling
-        the size and/or placement of both eyes, ears, and nostrils. Once you have
-        your drawing completed, try changing the values of your variables to make
-        sure that the whole image changes together.\r
+        Utilizando
+        variables, dibuja una imagen donde muchos de los elementos se basan en una variable común
+        para el tamaño o la ubicación. Por ejemplo, dibuja un rostro con variables que controlan
+        el tamaño y o la ubicación de ambos ojos, oídos y fosas nasales. Una vez que hayas
+        completado tu dibujo, intenta cambiar los valores de las variables para estar
+        seguro de que toda la imagen cambia junto.\r
       CSD U3 Variables Draw Poppy_markdown_instruction: |-
         # Using a Variable Many
         Times\r
@@ -12237,7 +12291,7 @@
         is not less than 325, use the `velocityY` to change its vertical velocity
         to zero. [Show me where](#triggercallout=code_triggered2)\r
         \r
-      CSD U3 abstraction jump_markdown_instruction: |
+      CSD U3 abstraction jump_markdown_instruction: |-
         # Jumping\r
         \r
         You now have
@@ -12268,8 +12322,7 @@
         )\r
           * Checks whether the frog sprite has reached its highest point.\r
           *
-        If so, use the `velocityY` block to make the sprite fall back down.\r
-        \r
+        If so, use the `velocityY` block to make the sprite fall back down.
       CSD U3 abstraction jumper intro_markdown_instruction: |
         # Horse Jumper\r
         \r
@@ -14769,7 +14822,7 @@
         item position.\r
         * Inside your `if` statement, add a counter pattern that
         will increase the score every time the player touches an item.  Look at [Lesson
-        12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example.\r
+        16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example.\r
         * Call the function
         inside the draw loop, in the "update sprites" area of your code.\r
         * Run
@@ -16699,12 +16752,12 @@
         #
         Do This\r
         * Using the LED code as a model, add new code inside the buttonL
-        event that will play a long or short buzz according to the text property of
-        the *buzzer_input* dropdown menu.\r
-        * Add new code that will turn the buzzer
-        off when the right button is pressed.\r
-          * (Hint: the event is already in
-        the code.)
+        event that will play a long or short buzz according to the chosen value property
+        of the *buzzer_input* dropdown menu.\r
+        * Add new code that will turn the
+        buzzer off when the right button is pressed.\r
+          * (Hint: the event is already
+        in the code.)
       CSD U6 getProperty debug_markdown_instruction: |-
         # Debug\r
         \r
@@ -16951,9 +17004,8 @@
         your partner and answer the following questions:\r
         \r
         * What does this line
-        of code do: `  setProperty("screen","background-color",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r
-        });`?  ([Show
-        me where.](#triggercallout=code_triggered))\r
+        of code do: `setProperty("screen", "background-color", rgb(randomNumber(0,255),
+        randomNumber(0,255), randomNumber(0,255)));`?\r
         \r
         Once you have answered
         the question, run the code and click the buttons to see what happens.
@@ -17244,16 +17296,16 @@
         # Changing With a Click\r
         \r
         It's
-        not really useful to only set a property when your program is run. After all,
-        you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty`, you're able to do things you couldn't do with Design
-        Mode alone.\r
+        not really useful to only set a property when your program is first run. After
+        all, you could just do all of that in Design Mode. When you use an `onEvent`
+        block with `setProperty`, you're able to do things you couldn't do with
+        Design Mode alone.\r
         \r
         # Do This\r
         \r
-        We've provided an empty `onEvent` block
-        that's watching the "smiley" image. Inside the `onEvent` block, use two
-        `setProperty` blocks to move the smiley somewhere else (it doesn't really
+        We've provided an empty `onEvent`
+        block that's watching the "smiley" image. Inside the `onEvent` block, use
+        two `setProperty` blocks to move the smiley somewhere else (it doesn't really
         matter where for now). Test your program by running it and clicking on the
         smiley.
       CSD U6 setProperty xy random_markdown_instruction: |-
@@ -23330,8 +23382,8 @@
         Read
         the code in this program and make a prediction below. What do you think this
         program will do when you run it? How is the user intended to interact with
-        the board? You may need to use a flashlight or other bright light source to
-        see the full range of this app.
+        the board? You may need to blow onto the board to see the full range of this
+        app.
       CSDU6 - sensors rgb part 1_markdown_instruction: |-
         # Displaying Sensor Readings
         in Color\r
@@ -25553,11 +25605,18 @@
         are indicated at the top.\r
             * You may **add a new entry** at the current
         location in your list.
-      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\n\nYour\napp
-        needs to store the following information. For each type of information,\ndecide
-        whether you would use an array or a variable to store it:\n \n* All\nthe messages
-        a user has sent\n* The highest score a user has ever reached\non the app\n*
-        A username and password to unlock the app\n\n"
+      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: |
+        ## Choose: Array or Variable?\r
+        \r
+        Your
+        app needs to store the following information. For each type of information,
+        decide whether you would use an array or a variable to store it:\r
+         \r
+        *
+        All the messages a user has sent\r
+        * The highest score a user has ever reached
+        on the app\r
+        * A username and password to unlock the app\r
       CSPU5_U3 - Arrays - Wrap Up 2_markdown_instruction: |
         ## Free Response: Choosing
         Array or Variable
@@ -54039,7 +54098,7 @@
         was the difference between the two, and why is that an issue?
         - How did you
         fix the bug?
-      U3L16 - challenge say hi app_markdown_instruction: |
+      U3L16 - challenge say hi app_markdown_instruction: |-
         # Introducing the  *change*
         Event\r
         \r
@@ -54064,7 +54123,7 @@
         - Attach a __'change'__ event handler to the
         text input.\r
         - When the 'change' event triggers, __write the user's name
-        and a greeting__.\r
+        and a greeting__.
       U3L16 - chaserApp_markdown_instruction: |
         # Chaser Game\r
         \r
@@ -60968,14 +61027,13 @@
                 \t\r
                     //
         generate random color\r
-                    // make all 4 buttons have same bg color\r
+                    // make all 4 buttons have same color\r
                     //
         pick a random Button Id\r
-                    // set it's bg color to something
-        different\r
+                    // set its color to something different\r
                     \r
-                    console.log("correct one is: "
-        + randButtonId);  <-- Add this line\r
+                    console.log("correct
+        one is: " + randButtonId);  <-- Add this line\r
         \t\t}
       U5 ColorSleuth add score variables and update with console_markdown_instruction: |
         Fun
@@ -64187,6 +64245,16 @@
         \r
         Collect one pile of treasure to pass this
         level.
+      comment_intro_maze_2018_markdown_instruction: |-
+        *"I'm confused. Help me remember
+        how to solve this maze."* \r
+        \r
+        Use the new `comment` block to leave yourself
+        quick reminders. They can help you remember what you were doing and why!\r
+        \r
+        Comments
+        are only used for **you**. Your Play Area won't look different because of
+        a comment.
       course1_artist_loops_challenge2_markdown_instruction: |-
         Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?
@@ -65767,7 +65835,7 @@
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
         ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r
-      courseD_artist_project1_2018_markdown_instruction: |
+      courseD_artist_project1_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r
         \r
@@ -65787,7 +65855,7 @@
         even an abstract shape, like one of these:  \r
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
-        ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r
+        ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)
       courseD_artist_project1a_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Let’s try something new. This time, skate in a zig-zag."_\r
@@ -66000,7 +66068,7 @@
         happens if you make your diamond pattern longer or shorter?\r
         - What does
         it look like to draw two snowflakes on top of one another?\r
-      courseD_artist_project4a_2018_markdown_instruction: |
+      courseD_artist_project4a_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
         what should we do? Let’s explore and create our own winter wonderland!"_\r
         \r
@@ -66011,15 +66079,15 @@
         - What
         happens if you make your diamond pattern longer or shorter?\r
         - What does
-        it look like to draw two snowflakes on top of one another?\r
+        it look like to draw two snowflakes on top of one another?
       courseD_artist_project5_markdown_instruction: |
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Get creative with shapes and angles to see what kind of new snowflakes
         we can draw!"_\r
-      courseD_artist_project5_2018_markdown_instruction: |
+      courseD_artist_project5_2018_markdown_instruction: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Get creative with shapes and angles to see what kind of new snowflakes
-        we can draw!"_\r
+        we can draw!"_
       courseD_artist_project_embedded_markdown_instruction: |-
         Here's what you will
         soon be making!
@@ -67141,9 +67209,8 @@
       courseE_artist_functions_predict1_markdown_instruction: |
         Here is a puzzle that
         uses a function that we have defined. \r
-      courseE_artist_functions_predict1_2018_markdown_instruction: |
-        Here is a puzzle
-        that uses a function that we have defined. \r
+      courseE_artist_functions_predict1_2018_markdown_instruction: "Here is a puzzle\nthat
+        uses a function that we have defined. "
       courseE_artist_ramp10_markdown_instruction: |-
         Did you know you can put loops
         inside of other loops to make them more powerful?  That's called making a
@@ -67981,6 +68048,13 @@
       courseF_artist_for_Template_markdown_instruction: |-
         If you turn a little bit
         more or less than you normally would for a shape, it creates a neat effect.\r
+        \r
+        Try
+        using some of the code from the last level, but turning 89 degrees to create
+        this twisted square spiral.
+      courseF_artist_for_Template_2018_markdown_instruction: |-
+        If you turn a little
+        bit more or less than you normally would for a shape, it creates a neat effect.\r
         \r
         Try
         using some of the code from the last level, but turning 89 degrees to create
@@ -72579,12 +72653,12 @@
         Help me finish my pinwheel. Can you figure out what's
         wrong?
       grade2_PuppyLoops_2_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
+        Subitamente, aparece un bloque mágico! Con
+        el bloque `repetir`, puede repetir el código una y otra vez.\r
         \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
+        Puedes llegar a
+        el cerdo creando un circuito que usa solo un bloque `adelante' en el interior
+        de una 'repetición'?
       grade2_PuppyLoops_3_markdown_instruction: |-
         Get me to the pig! Solve this puzzle
         by creating a loop!
@@ -72738,12 +72812,12 @@
         </details>\r
         </h5>\r
       grade2_puppy_loops2_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
+        Subitamente, aparece un bloque mágico! Con
+        el bloque `repetir`, puede repetir el código una y otra vez.\r
         \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
+        Puedes llegar a
+        el cerdo creando un circuito que usa solo un bloque `adelante' en el interior
+        de una 'repetición'?
       grade2_puppy_loops3_markdown_instruction: |-
         *"Get me to the pig!"*\r
         \r
@@ -72797,15 +72871,15 @@
         Otherwise, make honey (because
         there is a honeycomb).
       grade3_ConditionalsElse_6_markdown_instruction: |-
-        I am not sure how much nectar
-        this flower has, but I know it has either 1, 2, or 3 nectar. \r
+        No estoy seguro de cuánto néctar
+        esta flor tiene, pero sé que tiene 1, 2 o 3 néctar. \r
         \r
-        Combine
-        the conditional blocks (`if` and/or `if/else`) to only get as much nectar
-        as the flower has. \r
+        Combinar
+        los bloques condicionales (`si` y/o` si/no`) solo para obtener el mayor néctar
+        como la flor tiene disponible. \r
         \r
-        Remember, the amount of nectar can change each
-        time you run the puzzle!
+        Recuerde, la cantidad de néctar puede cambiar cada
+        vez que ejecutas el rompecabezas!
       grade3_ConditionalsElse_7_markdown_instruction: |-
         These flowers can have 3,
         2, or 1 nectar. \r
@@ -72813,13 +72887,13 @@
         Complete the `check purple flower` function and use
         it to collect all of the nectar at the flowers.
       grade3_ConditionalsElse_8_markdown_instruction: |-
-        Write the function for `check
-        flower make honey`. \r
+        Escribe la función para `verificar
+        la flor que hace la miel`. \r
         \r
-        Your function should check if the purple flower
-        has 3, 2, or 1 nectar and get all of the nectar. \r
-        Then, move forward and
-        make honey.
+        Tu función debería verificar si la flor morada
+        tiene 3, 2 o 1 néctar y obtiene todo el néctar. \r
+        Luego, avanza y
+        haz miel.
       grade3_ConditionalsElse_9_markdown_instruction: 'Evaluación: Este código está
         errado. Completa la función "consigue néctar o produce miel", entonces llámalo
         para recolectar todo el néctar y la miel. Recuerda que las rosas púrpuras
@@ -72905,10 +72979,10 @@
         Arregle el/los error (s) para recoger todo el néctar. \r
         Ahora puede usar tanto la ejecución como el paso.
       grade3_Debugging_6_markdown_instruction: |-
-        What a sweet challenge!\r
+        ¡Qué desafío tan dulce!\r
         \r
-        Fix
-        the error(s) to collect all of the nectar.
+        Arregla
+        el error(s) para recoger todo el néctar.
       grade3_Debugging_8_markdown_instruction: |-
         *"This could be sweet!"*\r
         \r
@@ -73069,12 +73143,12 @@
         Get
         the zombie to the sunflower using only the blocks available.
       grade3_maze_nestedLoops2_markdown_instruction: |-
-        Suddenly, a magical block appears!  With
-        the `repeat` block, you can loop code over and over.\r
+        Subitamente, aparece un bloque mágico! Con
+        el bloque `repetir`, puede repetir el código una y otra vez.\r
         \r
-        Can you get to
-        the pig by creating a loop that uses only one `move forward` block inside
-        of a `repeat`?
+        Puedes llegar a
+        el cerdo creando un circuito que usa solo un bloque `adelante' en el interior
+        de una 'repetición'?
       grade3_maze_nestedLoops3_markdown_instruction: |-
         Get me to the pig! You can
         only use one `move forward` block this time
@@ -74802,13 +74876,12 @@
         Now use the `repeat` block to
         collect all of the nectar and make all of the honey.
       level 'grade3_Loops_5_markdown_instruction: |-
-        What a beautiful field of flowers!   \r
+        Que hermoso campo de flores! \r
         \r
-        Help
-        the bee visit each one.\r
+        Ayuda
+        a la abeja a visitar cada uno.\r
         \r
-        Can you find a way to do it with fewer than
-        7 blocks?
+        Puedes conseguir la manera de hacerlo con menos de 7 bloques?
       level 'grade3_Loops_6_markdown_instruction: |-
         How many times can loops help
         you in this puzzle?  \r

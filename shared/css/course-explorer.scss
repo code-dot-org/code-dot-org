@@ -92,6 +92,7 @@ $color_border_invisible: rgba(170, 170, 170, 0);
   .title {
     font-size: 16px;
     font-family: $gotham-regular;
+    pointer-events: none;
   }
   .groupname {
     font-size: 12px;
@@ -141,10 +142,16 @@ $color_border_invisible: rgba(170, 170, 170, 0);
   }
   .left {
     float: left;
+    pointer-events: none;
   }
   .arrow {
     float: right;
     margin-top: -12px;
+    pointer-events: none;
+
+    i {
+      pointer-events: none;
+    }
   }
 }
 .arrow_box {

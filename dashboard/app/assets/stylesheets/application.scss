@@ -173,8 +173,7 @@ img.video_thumbnail {
 }
 
 .header-wrapper {
-  &.hide_on_mobile,
-  .hide_on_mobile {
+  &.hide_on_mobile {
     @media screen and (max-device-width: 500px) {
       display: none;
     }

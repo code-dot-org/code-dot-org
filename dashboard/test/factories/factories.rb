@@ -108,6 +108,14 @@ FactoryGirl.define do
           end
         end
       end
+      factory :program_manager do
+        transient do
+          regional_partner {build :regional_partner}
+        end
+        after(:create) do |user, evaluator|
+          create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
+        end
+      end
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
         sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
@@ -628,33 +636,39 @@ FactoryGirl.define do
   factory :school_info_without_country, class: SchoolInfo do
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
     state 'WA'
-    association :school_district
+    association :school_district, strategy: :build
   end
 
   factory :school_info_non_us, class: SchoolInfo do
     country 'GB'
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
-    school_name 'Grazebrook'
     full_address '31 West Bank, London, England'
+    school_name 'Grazebrook'
   end
 
   factory :school_info_us, class: SchoolInfo do
     country 'US'
+
+    trait :with_district do
+      association :school_district, strategy: :build
+    end
+
+    trait :with_school do
+      # Use state and school_type from the parent school_info
+      school {build :public_school, state: state, school_type: school_type}
+    end
   end
 
   # although some US school types behave identically, we keep their factories separate here
   # because the behavior of each school type may diverge over time.
-
-  factory :school_info_us_private, class: SchoolInfo do
-    country 'US'
+  factory :school_info_us_private, parent: :school_info_us do
     school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
     state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
 
-  factory :school_info_us_other, class: SchoolInfo do
-    country 'US'
+  factory :school_info_us_other, parent: :school_info_us do
     school_type SchoolInfo::SCHOOL_TYPE_OTHER
     state 'NJ'
     zip '08534'
@@ -662,76 +676,55 @@ FactoryGirl.define do
   end
 
   factory :school_info_with_public_school_only, class: SchoolInfo do
-    association :school, factory: :public_school
+    association :school, strategy: :build, factory: :public_school
   end
 
   factory :school_info_with_private_school_only, class: SchoolInfo do
-    association :school, factory: :private_school
+    association :school, strategy: :build, factory: :private_school
   end
 
   factory :school_info_with_charter_school_only, class: SchoolInfo do
-    association :school, factory: :charter_school
+    association :school, strategy: :build, factory: :charter_school
   end
 
-  factory :school_info_us_public, class: SchoolInfo do
-    country 'US'
+  factory :school_info_us_public, parent: :school_info_us do
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
     state 'WA'
-
-    trait :with_district do
-      association :school_district
-    end
-
-    trait :with_school do
-      association :school, factory: :public_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC
-    end
   end
 
-  factory :school_info_us_charter, class: SchoolInfo do
-    country 'US'
+  factory :school_info_us_charter, parent: :school_info_us do
     school_type SchoolInfo::SCHOOL_TYPE_CHARTER
     state 'WA'
-
-    trait :with_district do
-      association :school_district
-    end
-
-    trait :with_school do
-      association :school, factory: :charter_school, state: 'WA', school_type: SchoolInfo::SCHOOL_TYPE_CHARTER
-    end
   end
 
-  factory :school_info_us_homeschool, class: SchoolInfo do
-    country 'US'
+  factory :school_info_us_homeschool, parent: :school_info_us do
     school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
     state 'NJ'
     zip '08534'
   end
 
-  factory :school_info_us_after_school, class: SchoolInfo do
-    country 'US'
+  factory :school_info_us_after_school, parent: :school_info_us do
     school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
     state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
 
-  factory :school_info_non_us_homeschool, class: SchoolInfo do
-    country 'GB'
+  factory :school_info_non_us_homeschool, parent: :school_info_non_us do
     school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
-    full_address '31 West Bank, London, England'
+    school_name nil
   end
 
-  factory :school_info_non_us_after_school, class: SchoolInfo do
-    country 'GB'
+  factory :school_info_non_us_after_school, parent: :school_info_non_us do
     school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
-    school_name 'Grazebrook'
-    full_address '31 West Bank, London, England'
   end
 
   # end school info
 
   factory :school_district do
+    # School district ids are provided
+    id {(SchoolDistrict.maximum(:id) + 1)}
+
     name "A school district"
     city "Seattle"
     state "WA"
@@ -747,15 +740,22 @@ FactoryGirl.define do
   # Default school to public school. More specific factories below
   factory :school, parent: :public_school
 
-  factory :public_school, class: School do
+  factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {(School.maximum(:id).to_i + 1).to_s}
-    name "A seattle public school"
     city "Seattle"
     state "WA"
     zip "98122"
+
+    trait :with_district do
+      association :school_district, strategy: :build
+    end
+  end
+
+  factory :public_school, parent: :school_common do
     school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
-    association :school_district
+    name "A seattle public school"
+    with_district
 
     state_school_id {School.construct_state_school_id(state, school_district.try(:id), id)}
 
@@ -768,25 +768,15 @@ FactoryGirl.define do
     end
   end
 
-  factory :private_school, class: School do
-    # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).to_i + 1).to_s}
-    name "A seattle private school"
-    city "Seattle"
-    state "WA"
-    zip "98122"
+  factory :private_school, parent: :school_common do
     school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    name "A seattle private school"
   end
 
-  factory :charter_school, class: School do
-    # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).to_i + 1).to_s}
-    name "A seattle charter school"
-    city "Seattle"
-    state "WA"
-    zip "98122"
+  factory :charter_school, parent: :school_common do
     school_type SchoolInfo::SCHOOL_TYPE_CHARTER
-    association :school_district
+    name "A seattle charter school"
+    with_district
   end
 
   factory :regional_partner do

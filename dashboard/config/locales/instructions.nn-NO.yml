@@ -7231,6 +7231,9 @@
         nivået.
       collectorSkinVideo2_instruction: Samle inn ein haug med gull for å klare dette
         nivået.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: "Du kan bruke ei løkke for å trekke
         mange linjer i ei rad.\\r \n\\r \nKan du teikne eit hus? Få det til å sjå
         ut akkurat slik du likar det!  Prøv å leite etter mønstre som du kan gjenta!"
@@ -9446,6 +9449,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?

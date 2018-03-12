@@ -255,7 +255,7 @@
         turtle_3_9: Можеш ли поново да напишеш "нацртај кућу" функцију, без ичије
           помоћи? Покушај, а затим нацртај ред кућа.
         turtle_3_10: "Много сте научили! А сада искористите то знање да нацртате шта
-          год пожелите. Покушајте да нацртате звезду, или спиралу, или кул пахуљицу. "
+          год пожелите. Покушајте да нацртате звезду, или спиралу, или кул пахуљицу."
         maze_karel_debug_seq_1: "Добро дошао у дебаговање! Мој код не ради како бих
           требало. Можеш ли открити проблем и исправити га, тако да могу да поравнам
           своје поље како бих било спремно за сејање?"
@@ -865,6 +865,7 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

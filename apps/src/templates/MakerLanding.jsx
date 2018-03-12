@@ -2,7 +2,6 @@
 import TopCourse from './studioHomepages/TopCourse';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import shapes from './studioHomepages/shapes';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -26,7 +25,7 @@ export default class MakerLanding extends Component {
        {
         title: i18n.makerNewProjectTitle(),
         description: i18n.makerNewProjectDesc(),
-        link: pegasus('/applab'),
+        link: '/projects/applab/new?enableMaker=true',
         image: "applab-project",
         buttonText: i18n.makerNewProjectButton()
       },

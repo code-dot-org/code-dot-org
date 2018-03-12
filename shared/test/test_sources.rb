@@ -43,13 +43,24 @@ class SourcesTest < FilesApiTestBase
     assert_equal 2, versions.count
 
     # Get the first and second version.
-    first_version = @api.get_object_version(filename, versions.last['versionId'])
+    first_version_id = versions.last['versionId']
+    first_version = @api.get_object_version(filename, first_version_id)
     assert_equal file_data, first_version
-    second_version = @api.get_object_version(filename, versions.first['versionId'])
+    second_version_id = versions.first['versionId']
+    second_version = @api.get_object_version(filename, second_version_id)
     assert_equal new_file_data, second_version
 
     # Check cache headers
     assert_match 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+
+    # Restore the first version
+    restore_result = @api.restore_sources_version(filename, first_version_id)
+    restored_version_id = restore_result['version_id']
+    third_version = @api.get_object_version(filename, restored_version_id)
+
+    # New version id, same body
+    refute_equal first_version_id, restored_version_id
+    assert_equal file_data, third_version
   end
 
   def test_get_source_blocks_profanity_violations
@@ -186,10 +197,9 @@ class SourcesTest < FilesApiTestBase
     Timecop.travel 1
 
     # log when replacing non-current version.
-    FirehoseClient.instance.expects(:put_record).with do |stream_name, data|
+    FirehoseClient.instance.expects(:put_record).with do |data|
       data_json_data = JSON.parse(data[:data_json])
-      stream_name == 'analysis-events' &&
-        data[:study] == 'project-data-integrity' &&
+      data[:study] == 'project-data-integrity' &&
         data[:event] == 'replace-non-current-main-json' &&
         data[:project_id] == @channel &&
         data_json_data['replacedVersionId'] == version1

@@ -219,6 +219,7 @@
   "iceAge": "Սառցե դարաշրջան!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "դերասան",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "վաստակել միավոր",
   "isSet": "is set",

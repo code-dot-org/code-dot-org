@@ -219,6 +219,7 @@
   "iceAge": "עידן הקרח!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "שחקן",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "נקודת דרוג",
   "isSet": "is set",

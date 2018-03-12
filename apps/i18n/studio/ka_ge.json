@@ -219,6 +219,7 @@
   "iceAge": "გამყინვარების პერიოდი!",
   "ifDroid": "droid",
   "ifDroidN": "დროიდი {spriteIndex}",
+  "ifSprite": "პერსონაჟი",
   "ifSpriteN": "პერსონაჟი {spriteIndex}",
   "incrementPlayerScore": "ქულის აღება",
   "isSet": "განსაზღვრულია",

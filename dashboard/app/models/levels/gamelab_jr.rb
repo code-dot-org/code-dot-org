@@ -38,7 +38,6 @@ class GamelabJr < Gamelab
         properties: {
           code_functions: JSON.parse(palette),
           show_d_pad: true,
-          edit_code: "false",
           show_debug_watch: true,
           use_helper_lib: true,
         }
@@ -52,12 +51,22 @@ class GamelabJr < Gamelab
   <block type="when_run" />
 </category>
 <category name="Variables" custom="VARIABLE" />
+<category name="World">
+  <block type="gamelab_setBackground">
+    <value name="COLOR">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+  <block type="gamelab_showTitleScreen" />
+  <block type="gamelab_hideTitleScreen" />
+</category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
   <block type="gamelab_moveUp" />
   <block type="gamelab_moveDown" />
   <block type="gamelab_moveLeft" />
   <block type="gamelab_moveRight" />
+  <block type="gamelab_setPosition" />
   <block type="gamelab_displace" />
   <block type="gamelab_destroy" />
   <block type="gamelab_firstTouched" />
@@ -66,6 +75,7 @@ class GamelabJr < Gamelab
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />
   <block type="gamelab_add" />
+  <block type="gamelab_groupLength" />
 </category>
 <category name="Events">
   <block type="gamelab_whenUpArrow" />
@@ -77,6 +87,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_whileLeftArrow" />
   <block type="gamelab_whileRightArrow" />
   <block type="gamelab_whenTouching" />
+  <block type="gamelab_clickedOn" />
 </category>
 <category name="Math">
   <block type="math_number" />
@@ -136,6 +147,10 @@ class GamelabJr < Gamelab
   </block>
   <block type="controls_flow_statements" />
 </category>
+<category name="Text">
+  <block type="text_join_simple" inputcount="2" />
+  <block type="text" />
+</category>
     XML
   end
 
@@ -147,5 +162,14 @@ class GamelabJr < Gamelab
 </category>
 #{common_blocks(type)}
     XML
+  end
+
+  # These serialized fields will be serialized/deserialized as straight XML
+  def xml_blocks
+    %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
+  end
+
+  def uses_droplet?
+    false
   end
 end

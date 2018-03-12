@@ -692,6 +692,7 @@ zh-TW:
         artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
+      comment_intro_maze_2018_callout: [ ]
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
@@ -1151,6 +1152,7 @@ zh-TW:
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
       courseF_artist_variables_template_callout: [ ]
+      courseF_artist_variables_template_2018_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: 這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！
@@ -1259,6 +1261,8 @@ zh-TW:
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variables8c_2018_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: 這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。
@@ -1494,6 +1498,7 @@ zh-TW:
         playlab_add_score: ""
       iceage_throw_hearts_callout: [ ]
       iceage_throw_hearts_2018_callout: [ ]
+      iceage_warn_embed_ice_age_callout: [ ]
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ""
       iceage_warn_ice_age_2018_callout:

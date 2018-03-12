@@ -54,6 +54,10 @@ class Census::ApCsOffering < ApplicationRecord
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
+  def self.construct_object_key(course, school_year)
+    "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
+  end
+
   def self.seed_from_s3
     # AP CS Offering data files in S3 are named
     # "ap_cs_offerings/<COURSE>-<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
@@ -62,7 +66,7 @@ class Census::ApCsOffering < ApplicationRecord
     current_year = Date.today.year
     (2016..current_year).each do |school_year|
       ['CSP', 'CSA'].each do |course|
-        object_key = "ap_cs_offerings/#{course}-#{school_year}-#{school_year + 1}.csv"
+        object_key = construct_object_key(course, school_year)
         begin
           AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
             seed_from_csv(course, school_year, filename)

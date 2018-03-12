@@ -100,7 +100,6 @@ class SchoolInfo < ActiveRecord::Base
       original[:school_name] = school_name
       original[:full_address] = full_address
 
-      school = School.find(school_id) if school.nil?
       self.country = 'US' # Everything in SCHOOLS is a US school
       self.school_type = school.school_type
       self.state = school.state

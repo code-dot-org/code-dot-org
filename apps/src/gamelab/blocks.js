@@ -1,26 +1,10 @@
-import {
-  interpolateInputs,
-  determineInputs,
-} from '../block_utils';
+import { createJsWrapperBlockCreator } from '../block_utils';
 
-const SPRITE_CATEGORY = 'sprites';
-const EVENT_CATEGORY = 'events';
-const EVENT_LOOP_CATEGORY = 'event_loop';
-const VARIABLES_CATEGORY = 'variables';
-const CATEGORIES = {
-  [SPRITE_CATEGORY]: {
-    color: [184, 1.00, 0.74],
-  },
-  [EVENT_CATEGORY]: {
-    color: [140, 1.00, 0.74],
-  },
-  [EVENT_LOOP_CATEGORY]: {
-    color: [322, 0.90, 0.95],
-  },
-  [VARIABLES_CATEGORY]: {
-    color: [312, 0.32, 0.62],
-  },
-};
+const SPRITE_COLOR = [184, 1.00, 0.74];
+const EVENT_COLOR = [140, 1.00, 0.74];
+const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
+const VARIABLES_COLOR = [312, 0.32, 0.62];
+const WORLD_COLOR = [240, 0.45, 0.65];
 
 const SPRITES = [
   ['dog', '"dog"'],
@@ -29,111 +13,15 @@ const SPRITES = [
 
 export default {
   install(blockly, blockInstallOptions) {
-    const {
-      ORDER_COMMA,
-      ORDER_FUNCTION_CALL,
-      ORDER_MEMBER,
-      ORDER_NONE,
-    } = Blockly.JavaScript;
-
     // TODO(ram): Create Blockly.BlockValueType.SPRITE
     const SPRITE_TYPE = blockly.BlockValueType.NONE;
-    const generator = blockly.Generator.get('JavaScript');
+    const { ORDER_MEMBER } = Blockly.JavaScript;
 
-    const createJsWrapperBlock = ({
-      category,
-      func,
-      expression,
-      orderPrecedence,
-      name,
-      blockText,
-      args,
-      returnType,
-      methodCall,
-      eventBlock,
-      eventLoopBlock,
-    }) => {
-      args = args || [];
-      const blockName = `gamelab_${name || func}`;
-
-      blockly.Blocks[blockName] = {
-        helpUrl: '',
-        init: function () {
-          this.setHSV(...CATEGORIES[category].color);
-          if (methodCall) {
-            args.push({
-              name: 'THIS',
-              type: Blockly.BlockValueType.NONE,
-            });
-          }
-
-          interpolateInputs(blockly, this, determineInputs(blockText, args));
-
-          this.setInputsInline(true);
-          if (returnType) {
-            this.setOutput(true, returnType);
-          } else {
-            if (eventLoopBlock) {
-              this.appendStatementInput('DO');
-            } else {
-              this.setNextStatement(true);
-              if (eventBlock) {
-                this.skipNextBlockGeneration = true;
-              } else {
-                this.setPreviousStatement(true);
-              }
-            }
-          }
-        },
-      };
-
-      generator[blockName] = function () {
-        const values = args.map(arg => {
-          if (arg.options) {
-            return this.getTitleValue(arg.name);
-          } else {
-            return Blockly.JavaScript.valueToCode(this, arg.name, ORDER_COMMA);
-          }
-        });
-
-        let prefix = '';
-        if (methodCall) {
-          const object =
-            Blockly.JavaScript.valueToCode(this, 'THIS', ORDER_MEMBER);
-          prefix = `${object}.`;
-        }
-
-        if (eventLoopBlock || eventBlock) {
-          let handlerCode = '';
-          if (eventBlock) {
-            const nextBlock = this.nextConnection &&
-              this.nextConnection.targetBlock();
-            handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
-          } else if (eventLoopBlock) {
-            handlerCode = Blockly.JavaScript.statementToCode(this, 'DO');
-          }
-          handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
-          values.push(`function () {\n${handlerCode}}`);
-        }
-
-        if (expression) {
-          if (returnType !== undefined) {
-            return [`${prefix}${expression}`, orderPrecedence || ORDER_NONE];
-          } else {
-            return `${prefix}${expression}`;
-          }
-        }
-
-        if (returnType !== undefined) {
-          return [`${prefix}${func}(${values.join(', ')})`, ORDER_FUNCTION_CALL];
-        } else {
-          return `${prefix}${func}(${values.join(', ')});\n`;
-        }
-      };
-    };
+    const createJsWrapperBlock =
+      createJsWrapperBlockCreator(blockly, 'gamelab');
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'makeNewSprite',
       blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
@@ -145,7 +33,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'makeNewGroup',
       blockText: 'make a new group',
       args: [],
@@ -153,7 +41,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'add',
       blockText: 'add {SPRITE} to group {THIS}',
       args: [
@@ -163,7 +51,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'moveUp',
       blockText: '{THIS} move up',
       args: [],
@@ -171,7 +59,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'moveDown',
       blockText: '{THIS} move down',
       args: [],
@@ -179,7 +67,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'moveLeft',
       blockText: '{THIS} move left',
       args: [],
@@ -187,7 +75,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'moveRight',
       blockText: '{THIS} move right',
       args: [],
@@ -195,7 +83,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      color: EVENT_COLOR,
       func: 'whenUpArrow',
       blockText: 'when up arrow presssed',
       args: [],
@@ -203,7 +91,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      color: EVENT_COLOR,
       func: 'whenDownArrow',
       blockText: 'when down arrow presssed',
       args: [],
@@ -211,7 +99,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      color: EVENT_COLOR,
       func: 'whenLeftArrow',
       blockText: 'when left arrow presssed',
       args: [],
@@ -219,7 +107,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      color: EVENT_COLOR,
       func: 'whenRightArrow',
       blockText: 'when right arrow presssed',
       args: [],
@@ -227,7 +115,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_LOOP_CATEGORY,
+      color: EVENT_LOOP_COLOR,
       func: 'whileUpArrow',
       blockText: 'while up arrow presssed',
       args: [],
@@ -235,7 +123,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_LOOP_CATEGORY,
+      color: EVENT_LOOP_COLOR,
       func: 'whileDownArrow',
       blockText: 'while down arrow presssed',
       args: [],
@@ -243,7 +131,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_LOOP_CATEGORY,
+      color: EVENT_LOOP_COLOR,
       func: 'whileLeftArrow',
       blockText: 'while left arrow presssed',
       args: [],
@@ -251,7 +139,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_LOOP_CATEGORY,
+      color: EVENT_LOOP_COLOR,
       func: 'whileRightArrow',
       blockText: 'while right arrow presssed',
       args: [],
@@ -259,7 +147,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: EVENT_CATEGORY,
+      color: EVENT_COLOR,
       func: 'whenTouching',
       blockText: 'when {SPRITE1} is touching {SPRITE2}',
       args: [
@@ -270,7 +158,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'displace',
       blockText: '{THIS} blocks {SPRITE} from moving',
       args: [
@@ -280,7 +168,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: SPRITE_CATEGORY,
+      color: SPRITE_COLOR,
       func: 'destroy',
       blockText: 'remove {THIS}',
       args: [],
@@ -288,7 +176,7 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: VARIABLES_CATEGORY,
+      color: VARIABLES_COLOR,
       expression: 'arguments[0]',
       orderPrecedence: ORDER_MEMBER,
       name: 'firstTouched',
@@ -297,12 +185,83 @@ export default {
     });
 
     createJsWrapperBlock({
-      category: VARIABLES_CATEGORY,
+      color: VARIABLES_COLOR,
       expression: 'arguments[1]',
       orderPrecedence: ORDER_MEMBER,
       name: 'secondTouched',
       blockText: 'second touched sprite',
       returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      expression: 'length',
+      orderPrecedence: ORDER_MEMBER,
+      name: 'groupLength',
+      blockText: 'number of sprites in {THIS}',
+      methodCall: true,
+      returnType: blockly.BlockValueType.NUMBER,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'setBackground',
+      blockText: 'set background color {COLOR}',
+      args: [
+        { name: 'COLOR', type: blockly.BlockValueType.COLOUR },
+      ],
+    });
+
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'clickedOn',
+      blockText: 'when {SPRITE} clicked on',
+      args: [
+        { name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'setPosition',
+      blockText: 'move {THIS} to the {POSITION} position',
+      args: [
+        {
+          name: 'POSITION',
+          options: [
+            ['top left', '{x: 50, y: 50}'],
+            ['top center', '{x: 200, y: 50}'],
+            ['top right', '{x: 350, y: 50}'],
+            ['center left', '{x: 50, y: 200}'],
+            ['center', '{x: 200, y: 200}'],
+            ['center right', '{x: 350, y: 200}'],
+            ['bottom left', '{x: 50, y: 350}'],
+            ['bottom center', '{x: 200, y: 350}'],
+            ['bottom right', '{x: 350, y: 350}'],
+            ['random', '"random"'],
+          ],
+        },
+      ],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'showTitleScreen',
+      blockText: 'show title screen',
+      args: [
+        { name: 'TITLE', label: 'title', type: blockly.BlockValueType.STRING },
+        { name: 'SUBTITLE', label: 'text', type: blockly.BlockValueType.STRING }
+      ],
+      inline: false,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'hideTitleScreen',
+      blockText: 'hide title screen',
+      args: [],
     });
   },
 };

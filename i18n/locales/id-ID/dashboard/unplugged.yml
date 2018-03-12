@@ -163,9 +163,6 @@ id:
       CollisionDetection:
         title: Pendeteksian Benturan dan Teorema Pythagoras
         desc: Menentukan kapan objek pada layar sentuh merupakan aspek penting dari sebagian besar permainan. Dalam pelajaran ini kita akan melihat bagaimana Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau karakter game) yang menyentuh.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
