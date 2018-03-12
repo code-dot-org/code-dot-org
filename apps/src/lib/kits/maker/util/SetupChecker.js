@@ -2,6 +2,7 @@
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
 import {isCodeOrgBrowser, isChrome, gtChrome33, isChromeOS} from './browserChecks';
+import i18n from '@cdo/applab/locale';
 
 export default class SetupChecker {
   port = null;
@@ -22,7 +23,7 @@ export default class SetupChecker {
         // Legacy support for Chrome App on Desktop
         resolve();
       } else {
-        reject(new Error('Not using a supported browser.'));
+        reject(new Error(i18n.maker_error_unsupportedBrowser()));
       }
     });
   }

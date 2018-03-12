@@ -124,7 +124,7 @@ function confirmSupportedBrowser() {
   if (isCodeOrgBrowser() || (isChrome() && gtChrome33())) {
     return Promise.resolve();
   } else {
-    return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));
+    return Promise.reject(new UnsupportedBrowserError(i18n.maker_error_unsupportedBrowser()));
   }
 }
 
