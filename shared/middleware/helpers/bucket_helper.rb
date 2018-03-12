@@ -289,8 +289,12 @@ class BucketHelper
           failed_restore_from_version: version_id
         }
       )
-      Honeybadger.notify("Restore at Specified Version Failed. Restored most recent.")
-      # TODO(ERINPEACH) ADD MORE DATA HERE SO WE CAN TRACK THIS DOWN
+      Honeybadger.notify(
+        "Restore at Specified Version Failed. Restored most recent.",
+        context: {
+          source: "#{@bucket}/#{key}?versionId=#{version_id}"
+        }
+      )
     end
     # If we get this far, the restore request has succeeded.
     FirehoseClient.instance.put_record(
