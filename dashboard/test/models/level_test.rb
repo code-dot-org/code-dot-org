@@ -688,7 +688,7 @@ EOS
 
   test 'can clone' do
     old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>'
-    new_level = old_level.clone('new level')
+    new_level = old_level.clone_with_name('new level')
     assert_equal 'new level', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
   end
