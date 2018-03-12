@@ -344,6 +344,7 @@
   "maker_error_cannotInitializeEventForwarding": "Cannot initialize event forwarding: Not connected to board firmware.",
   "maker_error_cannotInitializeWithNoBoard": "Cannot initialize components: Not connected to board firmware.",
   "maker_error_deviceNotFound": "Did not find a usable device on a serial port.",
+  "maker_error_noReducerRegistered": "Maker cannot be enabled: Its reducer was not registered.",
   "maker_error_unsupportedDynamicComponent": "Added an unsupported component to dynamic components.",
   "manageAssets": "Click to view or update your images and sounds.",
   "nextLevel": "Congratulations! You have completed this puzzle.",

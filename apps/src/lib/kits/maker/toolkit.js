@@ -16,6 +16,7 @@ import MakerError, {
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import i18n from '@cdo/applab/locale';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -31,7 +32,7 @@ let currentBoard = null;
  */
 export function enable() {
   if (!isAvailable()) {
-    throw new MakerError('Maker cannot be enabled: Its reducer was not registered.');
+    throw new MakerError(i18n.maker_error_noReducerRegistered());
   }
   getStore().dispatch(redux.enable());
 }
