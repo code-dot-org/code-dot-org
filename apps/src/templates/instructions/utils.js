@@ -44,21 +44,36 @@ export function scrollTo(element, scrollTop, animate=400) {
 export function convertXmlToBlockly(container) {
   const xmls = container.getElementsByTagName('xml');
   Array.prototype.forEach.call(xmls, function (xml) {
+    // embedded blocks can be displayed either "inline" as part of a paragraph
+    // or "block" all on their own. "block" is the default.
+    const inline = xml.parentNode.tagName === "P";
+
     // create a container and insert the blockspace into it
-    const container = xml.parentNode.insertBefore(document.createElement('div'), xml);
+    const container = document.createElement('div');
+    xml.parentNode.insertBefore(container, xml);
     const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
-      noScrolling: true
+      noScrolling: true,
+      inline: inline
     });
 
     // then, calculate the minimum required size for the container
     const metrics = blockSpace.getMetrics();
-    const height = metrics.contentHeight + (metrics.contentTop * 2);
-    const width = metrics.contentWidth + metrics.contentLeft;
+    let height = metrics.contentHeight;
+    let width = metrics.contentWidth;
+
+    if (!inline) {
+      height += metrics.contentTop * 2;
+      width += metrics.contentLeft;
+    }
 
     // and shrink it, triggering a blockspace resize when we do so
     container.style.height = height + "px";
     container.style.width = width + "px";
     blockSpace.blockSpaceEditor.svgResize();
+
+    if (inline) {
+      container.style.display = "inline";
+    }
   });
 }
 
