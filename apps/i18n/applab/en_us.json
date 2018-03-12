@@ -341,6 +341,7 @@
   "dropletBlock_write_param0_description": "The text or HTML you want appended to the bottom of your application",
   "finalLevel": "Congratulations! You have solved the final puzzle.",
   "makeMyOwnApp": "Make my own app",
+  "maker_error_cannotInitializeWithNoBoard": "Cannot initialize components: Not connected to board firmware.",
   "manageAssets": "Click to view or update your images and sounds.",
   "nextLevel": "Congratulations! You have completed this puzzle.",
   "no": "No",

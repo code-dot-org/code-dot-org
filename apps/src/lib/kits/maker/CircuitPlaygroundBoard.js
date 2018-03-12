@@ -22,6 +22,7 @@ import {
 import Button from './Button';
 import Led from './Led';
 import {isNodeSerialAvailable} from './portScanning';
+import i18n from '@cdo/applab/locale';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -96,7 +97,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   initializeComponents() {
     if (!this.fiveBoard_) {
-      throw new Error('Cannot initialize components: Not connected to board firmware.');
+      throw new Error(i18n.maker_error_cannotInitializeWithNoBoard());
     }
 
     return createCircuitPlaygroundComponents(this.fiveBoard_).then(components => {
