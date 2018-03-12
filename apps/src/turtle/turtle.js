@@ -1565,10 +1565,8 @@ Artist.prototype.step = function (command, values, options) {
     case 'sticker':
       let size = MAX_STICKER_SIZE;
 
-      if (values[1]) {
-        if (typeof values[1] === 'number'){
-          size = values[1];
-        }
+      if (typeof values[1] === 'number') {
+        size = values[1];
       }
 
       if (this.visualization.shouldDrawNormalized_) {
