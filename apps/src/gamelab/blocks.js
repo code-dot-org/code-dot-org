@@ -1,4 +1,4 @@
-import { createJsWrapperBlockCreator } from '../block_utils';
+import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -263,5 +263,12 @@ export default {
       blockText: 'hide title screen',
       args: [],
     });
+  },
+
+  installCustomBlocks(blockly, blockInstallOptions, customBlocks, level) {
+    const blockNames =
+      customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
+
+    level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
   },
 };
