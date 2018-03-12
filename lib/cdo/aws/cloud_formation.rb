@@ -41,6 +41,7 @@ module AWS
 
     class << self
       attr_accessor :daemon
+      attr_accessor :daemon_instance_id
       attr_accessor :log_resource_filter
       CloudFormation.log_resource_filter = []
 
