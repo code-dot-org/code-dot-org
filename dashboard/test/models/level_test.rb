@@ -676,6 +676,16 @@ EOS
     end
   end
 
+  test 'does not use droplet for weblab levels' do
+    level = Weblab.new(
+      name: 'test studioEC level',
+      type: 'Blockly',
+      game_id: Game.by_name('weblab'),
+    )
+
+    refute level.uses_droplet?
+  end
+
   test 'can clone' do
     old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>'
     new_level = old_level.clone('new level')

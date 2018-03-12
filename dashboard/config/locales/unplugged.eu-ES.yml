@@ -280,9 +280,6 @@
           eta Distantzia formula nola erabili ikusiko dugu plano batean dauden bi
           puntuen (edo objetu, pertsonaia...) arteko distantzia neurtu eta ea elkar
           ukitzen duten jakiteko.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

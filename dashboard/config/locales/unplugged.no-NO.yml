@@ -279,9 +279,6 @@
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører
           hverandre."
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgaven skal du lære om løkker!

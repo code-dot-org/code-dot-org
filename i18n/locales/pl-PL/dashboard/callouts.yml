@@ -692,6 +692,7 @@ pl:
         artistLoopsK2_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce.
+      comment_intro_maze_2018_callout: [ ]
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Użyj tej pętli, aby zebrać cały nektar (lub miód) z jednego kwiatka (lub plastra).
@@ -1151,6 +1152,7 @@ pl:
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
       courseF_artist_variables_template_callout: [ ]
+      courseF_artist_variables_template_2018_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: Przybornik jest teraz w trybie kategorii. Wszystkie bloki, których potrzebujesz są pod tymi etykietami!
@@ -1259,6 +1261,8 @@ pl:
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variables8c_2018_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: Tutaj znajdziesz swój blok zmiennej.
+      courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: Tutaj znajdziesz swój blok zmiennej.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: W ten sposób ustawiasz wartość zmiennej. Edytuj tekst połączony z tym blokiem, aby zmienić to, co jest przechowywane w Twojej zmiennej.
@@ -1494,6 +1498,7 @@ pl:
         playlab_add_score: ""
       iceage_throw_hearts_callout: [ ]
       iceage_throw_hearts_2018_callout: [ ]
+      iceage_warn_embed_ice_age_callout: [ ]
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ""
       iceage_warn_ice_age_2018_callout:

@@ -219,6 +219,7 @@
   "iceAge": "Era do Gelo!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "personagem",
   "ifSpriteN": "ator {spriteIndex}",
   "incrementPlayerScore": "marque o ponto",
   "isSet": "está definido",

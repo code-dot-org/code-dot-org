@@ -160,9 +160,10 @@
           e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
         title: Gli Eventi
-        desc: |-
-          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\r
-          In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
+          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
+          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
         title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
@@ -301,9 +302,6 @@
           il teorema di Pitagora e la formula per la distanza possono essere utilizzati
           per misurare la distanza tra due punti sul piano e poi decidere quando questi
           due punti o personaggi del gioco si toccano.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
@@ -345,9 +343,10 @@
           introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
         title: Gli Eventi
-        desc: |-
-          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\r
-          In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
+          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
+          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua Impronta Digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet

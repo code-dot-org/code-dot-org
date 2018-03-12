@@ -219,6 +219,7 @@
   "iceAge": "Ice Age!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "नायक",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "प्राप्ताङ्क",
   "isSet": "is set",

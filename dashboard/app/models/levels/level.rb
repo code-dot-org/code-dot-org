@@ -479,6 +479,10 @@ class Level < ActiveRecord::Base
     summary
   end
 
+  def uses_droplet?
+    false
+  end
+
   # Create a copy of this level named new_name, and store the id of the original
   # level in parent_level_id.
   def clone(new_name)

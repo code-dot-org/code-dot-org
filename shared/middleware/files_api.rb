@@ -461,18 +461,17 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # PUT /v3/(animations|sources)/<channel-id>/<filename>/restore?version=<version-id>
+  # PUT /v3/sources/<channel-id>/<filename>/restore?version=<version-id>
   #
-  # Copies the given version of the file to make it the current revision.
-  # NOTE: Not yet implemented for assets.
+  # Copies the given version of the source to make it the current revision.
   #
-  put %r{/v3/(animations|sources)/([^/]+)/([^/]+)/restore$} do |endpoint, encrypted_channel_id, filename|
+  put %r{/v3/sources/([^/]+)/([^/]+)/restore$} do |encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
+    SourceBucket.new.restore_previous_version(encrypted_channel_id, filename, request.GET['version'], current_user_id).to_json
   end
 
   #

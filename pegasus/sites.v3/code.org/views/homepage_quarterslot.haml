@@ -1,5 +1,5 @@
 .quarterslot.div.col-25.col-mobile-50
-  %a{href: entry[:url]}
+  %a.linktag{href: entry[:url], id: entry[:id]}
     .slotbox{style: "background-image: url(#{entry[:image]})"}
       .headerbox{style: "background-color: rgb(#{entry[:color1]}); background-color: rgba(#{entry[:color1]}, 0.92); "}
         .header.underscorehover

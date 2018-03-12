@@ -284,9 +284,6 @@
           и формула расстояния могут использоваться для измерения расстояния между
           двумя точками на плоскости, а затем решить, соприкасаются ли эти две точки
           (или игровые персонажи)."
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
