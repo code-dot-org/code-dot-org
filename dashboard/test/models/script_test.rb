@@ -839,4 +839,37 @@ class ScriptTest < ActiveSupport::TestCase
 
     refute script.script_levels.first.bonus
   end
+
+  test 'can unset the project_widget_visible attribute' do
+    l = create :level
+    old_dsl = <<-SCRIPT
+      project_widget_visible true
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      stage 'Stage1'
+      level '#{l.name}'
+    SCRIPT
+    script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+    assert script.project_widget_visible
+
+    script_data, _ = ScriptDSL.parse(new_dsl, 'a filename')
+    script = Script.add_script(
+      {
+        name: 'challengeTestScript',
+        properties: Script.build_property_hash(script_data)
+      },
+      script_data[:stages]
+    )
+
+    refute script.project_widget_visible
+  end
 end
