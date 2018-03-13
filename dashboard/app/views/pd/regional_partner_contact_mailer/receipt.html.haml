@@ -9,7 +9,7 @@
 
 %p
   %b Name:
-  - unless @form[:title] == ""
+  - if @form[:title]
     = "#{@form[:title]}" + ' '
   = "#{@form[:first_name]}" + ' ' + "#{@form[:last_name]}"
   %br
@@ -26,11 +26,11 @@
   %b School State:
   = "#{@form[:school_state]}"
   %br
-  - unless @form[:school_district] == ""
+  - if @form[:school_district]
     %b School District:
     = "#{@form[:school_district]}"
     %br
-  - unless @form[:school_name] == ""
+  - if @form[:school_name]
     %b School Name:
     = "#{@form[:school_name]}"
     %br
@@ -40,11 +40,11 @@
   %b Grade Levels:
   = "#{@form[:grade_levels].join(', ')}"
   %br
-  - unless @form[:program] == ""
+  - if @form[:program]
     %b Program:
     = "#{@form[:program].map {|item| item.gsub(/\((.*)\)/, '').strip}.join(', ')}"
 
-- unless @form[:message] == ""
+- if @form[:message]
   %p
     %b Message:
     = "#{@form[:notes]}"
