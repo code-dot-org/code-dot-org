@@ -1,7 +1,5 @@
 class Pd::RegionalPartnerContactMailer < ActionMailer::Base
-  #tanya_parker@code.org is giving an error?
-  #just putting teacher in here for now to stop giving errors
-  default from: 'Tanya Parker <teacher@code.org>'
+  default from: 'Tanya Parker <tanya_parker@code.org>'
 
   def matched(form, pm)
     @form = form
