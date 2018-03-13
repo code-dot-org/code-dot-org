@@ -17,7 +17,8 @@ describe("Quick View", () => {
   const routeProps = {
     path:'csf_facilitators',
     applicationType:'CSF Facilitators',
-    viewType: 'facilitator'
+    viewType: 'facilitator',
+    role: 'csf_facilitators'
   };
 
   describe("Initially", () => {

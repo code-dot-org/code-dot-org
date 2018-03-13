@@ -69,7 +69,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
   end
 
-  # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner_name
+  # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner
   def cohort_view
     role = params[:role]
     regional_partner_filter = params[:regional_partner_filter]
@@ -89,10 +89,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     respond_to do |format|
       format.json do
         serialized_applications = applications.map {|a| serializer.new(a).attributes}
-        render json: {
-          applications: serialized_applications,
-          capacity: get_partner_cohort_capacity(regional_partner_filter, role)
-        }
+        render json: serialized_applications
       end
       format.csv do
         csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
@@ -207,18 +204,5 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         end
       end
     end
-  end
-
-  def get_partner_cohort_capacity(regional_partner_filter, role)
-    unless ['none', 'all'].include? regional_partner_filter
-      partner_id = regional_partner_filter ? regional_partner_filter : current_user.regional_partners.first
-      regional_partner = RegionalPartner.find_by(id: partner_id)
-      if role == 'csd_teachers'
-        return regional_partner.cohort_capacity_csd
-      elsif role == 'csp_teachers'
-        return regional_partner.cohort_capacity_csp
-      end
-    end
-    nil
   end
 end
