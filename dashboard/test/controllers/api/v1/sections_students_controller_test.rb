@@ -44,7 +44,11 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal 'f', JSON.parse(@response.body)['gender']
     assert_equal 9, JSON.parse(@response.body)['age']
-    assert_equal 'testname', JSON.parse(@response.body)['age']
+    assert_equal 'testname', JSON.parse(@response.body)['name']
+
+    assert_equal 'testname', @student.reload.name
+    assert_equal 9, @student.reload.age
+    assert_equal 'f', @student.reload.gender
   end
 
   test 'teacher can not update username info for their student' do
