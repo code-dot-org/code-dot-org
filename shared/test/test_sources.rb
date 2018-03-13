@@ -55,6 +55,7 @@ class SourcesTest < FilesApiTestBase
 
     # Restore the first version
     restore_result = @api.restore_sources_version(filename, first_version_id)
+    assert successful?
     restored_version_id = restore_result['version_id']
     third_version = @api.get_object_version(filename, restored_version_id)
 
