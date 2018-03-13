@@ -27,7 +27,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
 
   after_create :send_regional_partner_contact_emails
   def send_regional_partner_contact_emails
-    form = sanitize_form_data_hash
+    form = sanitize_and_trim_form_data_hash
     matched_but_no_pms = false
 
     if regional_partner_id
