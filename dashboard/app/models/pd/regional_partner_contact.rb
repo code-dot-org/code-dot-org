@@ -31,11 +31,11 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
 
     if regional_partner_id
       partner_id = RegionalPartner.find(regional_partner_id)
-      program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner_id)
+      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner_id)
       #what if there aren't any pms?
       #tanya said there should be one, could be more than one
-      program_managers.each do |pm|
-        Pd::RegionalPartnerContactMailer.matched(form, pm).deliver_now
+      regional_partner_program_managers.each do |rp_pm|
+        Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
       end
     else
       Pd::RegionalPartnerContactMailer.unmatched(form).deliver_now
