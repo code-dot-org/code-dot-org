@@ -1562,7 +1562,7 @@ Artist.prototype.step = function (command, values, options) {
     case 'ST':  // Show Turtle
       this.visualization.avatar.visible = true;
       break;
-    case 'sticker':
+    case 'sticker': {
       let size = MAX_STICKER_SIZE;
 
       if (typeof values[1] === 'number') {
@@ -1589,6 +1589,7 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.ctxScratch.restore();
 
       break;
+    }
     case 'setArtist':
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
