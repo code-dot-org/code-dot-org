@@ -206,7 +206,7 @@ class Census::CensusSummary < ApplicationRecord
   # 8	teaches_cs from 2 years ago
   # 9 nil
   #
-  def self.compute_teaches_cs(has_ap_data, has_ib_data, submissions_summary, state_summary, last_years_result, two_years_ago_result)
+  def self.compute_teaches_cs(has_ap_data, has_ib_data, submissions_summary, state_summary, previous_years_results)
     if has_ap_data || has_ib_data
       'YES'
     elsif submissions_summary[:consistency][:teacher_or_admin]
@@ -217,10 +217,10 @@ class Census::CensusSummary < ApplicationRecord
       submissions_summary[:consistency][:not_teacher_or_admin]
     elsif submissions_summary[:has_inconsistent_surveys]
       'MAYBE'
-    elsif map_historical_teaches_cs last_years_result
-      map_historical_teaches_cs last_years_result
-    elsif map_historical_teaches_cs two_years_ago_result
-      map_historical_teaches_cs two_years_ago_result
+    elsif map_historical_teaches_cs previous_years_results.first
+      map_historical_teaches_cs previous_years_results.first
+    elsif map_historical_teaches_cs previous_years_results.second
+      map_historical_teaches_cs previous_years_results.second
     else
       nil
     end
@@ -255,8 +255,7 @@ class Census::CensusSummary < ApplicationRecord
     state_years_with_data = summarization_data[:state_years_with_data]
 
     summaries = []
-    last_years_result = nil
-    two_years_ago_result = nil
+    previous_years_results = []
 
     school_years.each do |school_year|
       audit = empty_audit_data
@@ -282,14 +281,11 @@ class Census::CensusSummary < ApplicationRecord
         has_ib_data,
         submissions_summary,
         state_summary,
-        last_years_result,
-        two_years_ago_result
+        previous_years_results
       )
 
-      audit[:last_years_result] = last_years_result
-      audit[:two_years_ago_result] = two_years_ago_result
-      two_years_ago_result = last_years_result
-      last_years_result = summary.teaches_cs
+      audit[:previous_years_results] = previous_years_results
+      previous_years_results.unshift summary.teaches_cs
 
       summary.audit_data = JSON.generate(audit)
       summaries.push summary
