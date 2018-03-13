@@ -112,6 +112,7 @@ export default class ApplicationDashboard extends React.Component {
                       component={QuickView}
                       applicationType={paths[path].name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   ),
                   (
@@ -122,6 +123,7 @@ export default class ApplicationDashboard extends React.Component {
                       component={CohortView}
                       applicationType={cohort_path_name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   )
                 ];
