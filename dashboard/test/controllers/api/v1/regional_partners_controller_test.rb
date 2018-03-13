@@ -13,7 +13,6 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       cohort_capacity_csp: 50
 
     @serializing_teacher = create(:teacher,
-      email: 'minerva@hogwarts.edu',
       school_info: create(
         :school_info,
         school: create(
