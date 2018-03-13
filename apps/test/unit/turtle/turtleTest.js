@@ -103,7 +103,7 @@ describe('Artist', () => {
       artist.stickers = {Alien:img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(img, -50, -100, 100, 100);
+      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
 
       setStickerSize.restore();
     });
