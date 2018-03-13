@@ -279,11 +279,43 @@ class AnimationsTest < FilesApiTestBase
     assert_equal v2_file_data, restored_file_data
 
     #Check that the metadata exists and includes the expected keys and values
+    pp restored_metadata
     assert_equal '0', restored_metadata['abuse-score']
     refute_nil restored_metadata['failed-restore-at']
     assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version']
 
     @api.delete_object(anim)
+  end
+
+  def test_restore_deleted_animation_with_invalid_version_does_nothing
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    @api.post_file(filename, v1_file_data, 'image/png')
+    assert successful?
+
+    # Delete it.
+    @api.delete_object(filename)
+    assert successful?
+
+    # List object versions
+    # List versions.
+    versions_old = @api.list_object_versions(filename)
+    assert successful?
+
+    # Attempt restore with bad version ID
+    animation_bucket = AnimationBucket.new
+    response = animation_bucket.restore_previous_version(@channel_id, filename, "bad_version_id", nil)
+
+    # List object versions, check nothing changed.
+    versions_new = @api.list_object_versions(filename)
+    assert_equal versions_old, versions_new
+  end
+
+  def test_doesnt_mask_unrelated_errors
+
   end
 
   private
