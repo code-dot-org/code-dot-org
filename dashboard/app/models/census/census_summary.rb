@@ -82,6 +82,173 @@ class Census::CensusSummary < ApplicationRecord
     HISTORICAL_RESULTS_MAP[historical_value]
   end
 
+  def self.summarize_submission_data(school, school_year, high_school, k8_school, audit)
+    submissions = school.school_info.map(&:census_submissions).flatten
+    # Lack of a submission for a school isn't considered evidence
+    # so we only look at actual submissions.
+    counts = {
+      teacher_or_admin: {
+        yes: 0,
+        no: 0,
+      },
+      not_teacher_or_admin: {
+        yes: 0,
+        no: 0,
+      },
+    }
+    submissions.select {|s| s.school_year == school_year}.each do |submission|
+      teaches =
+        if submission_has_response(submission, high_school)
+          submission_teaches_cs?(submission, is_high_school: high_school, is_k8_school: k8_school)
+        else
+          nil
+        end
+
+      is_teacher_or_admin = (submission.submitter_role_teacher? || submission.submitter_role_administrator?)
+      teacher_or_admin = is_teacher_or_admin ? :teacher_or_admin : :not_teacher_or_admin
+
+      audit[:census_submissions].push(
+        {
+          id: submission.id,
+          teaches: teaches,
+          teacher_or_admin: teacher_or_admin,
+        }
+      )
+
+      next if teaches.nil?
+
+      if teaches
+        counts[teacher_or_admin][:yes] += 1
+      else
+        counts[teacher_or_admin][:no] += 1
+      end
+    end
+
+    audit[:census_submissions].push({counts: counts})
+
+    consistency = {
+      teacher_or_admin: nil,
+      not_teacher_or_admin: nil,
+    }
+    has_inconsistent_surveys = false
+
+    [:teacher_or_admin, :not_teacher_or_admin].each do |role|
+      unless counts[role][:no] == 0 && counts[role][:yes] == 0
+        if counts[role][:no] == 0
+          consistency[role] = "YES"
+        elsif counts[role][:yes] == 0
+          consistency[role] = "NO"
+        else
+          has_inconsistent_surveys = true
+        end
+      end
+    end
+
+    return {
+      consistency: consistency,
+      has_inconsistent_surveys: has_inconsistent_surveys,
+    }
+  end
+
+  def self.summarize_ap_data(school, school_year, audit)
+    ap_offerings = school.ap_school_code.try(:ap_cs_offering) || []
+    ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
+    ap_offerings_this_year.each do |offering|
+      audit[:ap_cs_offerings].push(offering.id)
+    end
+    ap_offerings_this_year.present?
+  end
+
+  def self.summarize_ib_data(school, school_year, audit)
+    ib_offerings = school.ib_school_code.try(:ib_cs_offering) || []
+    ib_offerings_this_year = ib_offerings.select {|o| o.school_year == school_year}
+    ib_offerings_this_year.each do |offering|
+      audit[:ib_cs_offerings].push(offering.id)
+    end
+    ib_offerings_this_year.present?
+  end
+
+  def self.summarize_state_data(school, school_year, high_school, state_years_with_data, audit)
+    # Schools without state school ids cannot have state data.
+    # Ignore those schools so that we won't count the lack of
+    # state data as a NO.
+    state_data = nil
+    if school.state_school_id
+      state_offerings = school.state_cs_offering || []
+      state_offerings = state_offerings.select {|o| o.school_year == school_year}
+      # If we have any state data for this year then a high school
+      # without a row is counted as a NO
+      if high_school &&
+         state_offerings.empty? &&
+         Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
+         state_years_with_data[school.state].include?(school_year)
+        audit[:state_cs_offerings].push(nil)
+        state_data = 'NO'
+      else
+        state_offerings.each do |offering|
+          audit[:state_cs_offerings].push(offering.id)
+        end
+        state_data = 'YES' unless state_offerings.empty?
+      end
+    end
+    state_data
+  end
+
+  #
+  # We will set teaches_cs to the first value we find in this order:
+  # 1	This year's AP data
+  # 2	This year's IB data
+  # 3	This year's surveys from teachers/administrators - consistent
+  # 4	State data
+  # 5	This year's surveys from non-teachers/admins - consistent
+  # 6	This year's surveys - inconsistent
+  # 7	teaches_cs from last year
+  # 8	teaches_cs from 2 years ago
+  # 9 nil
+  #
+  def self.compute_teaches_cs(has_ap_data, has_ib_data, submissions_summary, state_summary, last_years_result, two_years_ago_result)
+    if has_ap_data || has_ib_data
+      'YES'
+    elsif submissions_summary[:consistency][:teacher_or_admin]
+      submissions_summary[:consistency][:teacher_or_admin]
+    elsif state_summary
+      state_summary
+    elsif submissions_summary[:consistency][:not_teacher_or_admin]
+      submissions_summary[:consistency][:not_teacher_or_admin]
+    elsif submissions_summary[:has_inconsistent_surveys]
+      'MAYBE'
+    elsif map_historical_teaches_cs last_years_result
+      map_historical_teaches_cs last_years_result
+    elsif map_historical_teaches_cs two_years_ago_result
+      map_historical_teaches_cs two_years_ago_result
+    else
+      nil
+    end
+  end
+
+  def self.empty_audit_data
+    {
+      version: 1.0,
+      stats: {},
+      census_submissions: [],
+      ap_cs_offerings: [],
+      ib_cs_offerings: [],
+      state_cs_offerings: [],
+    }
+  end
+
+  def self.get_school_stats(school, audit)
+    # If the school doesn't have stats then treat it as not high school.
+    # The lack of stats will show up in the audit data as a null value for high_school.
+    # k8_school will behave similarly.
+    stats = school.school_stats_by_year.try(:sort).try(:last)
+    high_school = stats.try(:has_high_school_grades?)
+    k8_school = stats.try(:has_k8_grades?)
+    audit[:stats][:high_school] = high_school
+    audit[:stats][:k8_school] = k8_school
+    {high_school: high_school, k8_school: k8_school}
+  end
+
   def self.summarize_school_data(summarization_data)
     school = summarization_data[:school]
     school_years = summarization_data[:school_years]
@@ -92,176 +259,40 @@ class Census::CensusSummary < ApplicationRecord
     two_years_ago_result = nil
 
     school_years.each do |school_year|
-      audit = {
-        version: 1.0,
-        stats: {},
-        census_submissions: [],
-        ap_cs_offerings: [],
-        ib_cs_offerings: [],
-        state_cs_offerings: [],
-      }
+      audit = empty_audit_data
+      stats = get_school_stats(school, audit)
 
-      # If the school doesn't have stats then treat it as not high school.
-      # The lack of stats will show up in the audit data as a null value for high_school.
-      # k8_school will behave similarly.
-      stats = school.school_stats_by_year.try(:sort).try(:last)
-      high_school = stats.try(:has_high_school_grades?)
-      k8_school = stats.try(:has_k8_grades?)
-      audit[:stats][:high_school] = high_school
-      audit[:stats][:k8_school] = k8_school
-
-      # Census Submissions
-      submissions = school.school_info.map(&:census_submissions).flatten
-      # Lack of a submission for a school isn't considered evidence
-      # so we only look at actual submissions.
-      counts = {
-        teacher_or_admin: {
-          yes: 0,
-          no: 0,
-        },
-        not_teacher_or_admin: {
-          yes: 0,
-          no: 0,
-        },
-      }
-      submissions.select {|s| s.school_year == school_year}.each do |submission|
-        teaches =
-          if submission_has_response(submission, high_school)
-            submission_teaches_cs?(submission, is_high_school: high_school, is_k8_school: k8_school)
-          else
-            nil
-          end
-
-        is_teacher_or_admin = (submission.submitter_role_teacher? || submission.submitter_role_administrator?)
-        teacher_or_admin = is_teacher_or_admin ? :teacher_or_admin : :not_teacher_or_admin
-
-        audit[:census_submissions].push(
-          {
-            id: submission.id,
-            teaches: teaches,
-            teacher_or_admin: teacher_or_admin,
-          }
-        )
-
-        next if teaches.nil?
-
-        if teaches
-          counts[teacher_or_admin][:yes] += 1
-        else
-          counts[teacher_or_admin][:no] += 1
-        end
-      end
-
-      audit[:census_submissions].push({counts: counts})
-
-      consistency = {
-        teacher_or_admin: nil,
-        not_teacher_or_admin: nil,
-      }
-      has_inconsistent_surveys = false
-
-      [:teacher_or_admin, :not_teacher_or_admin].each do |role|
-        unless counts[role][:no] == 0 && counts[role][:yes] == 0
-          if counts[role][:no] == 0
-            consistency[role] = "YES"
-          elsif counts[role][:yes] == 0
-            consistency[role] = "NO"
-          else
-            has_inconsistent_surveys = true
-          end
-        end
-      end
-
-      # AP data
-
-      has_ap_data = false
-      ap_offerings = school.ap_school_code.try(:ap_cs_offering) || []
-      ap_offerings_this_year = ap_offerings.select {|o| o.school_year == school_year}
-      ap_offerings_this_year.each do |offering|
-        audit[:ap_cs_offerings].push(offering.id)
-      end
-      has_ap_data = true unless ap_offerings_this_year.empty?
-
-      # IB data
-
-      has_ib_data = false
-      ib_offerings = school.ib_school_code.try(:ib_cs_offering) || []
-      ib_offerings_this_year = ib_offerings.select {|o| o.school_year == school_year}
-      ib_offerings_this_year.each do |offering|
-        audit[:ib_cs_offerings].push(offering.id)
-      end
-      has_ib_data = true unless ib_offerings_this_year.empty?
-
-      # State data
-
-      # Schools without state school ids cannot have state data.
-      # Ignore those schools so that we won't count the lack of
-      # state data as a NO.
-      state_data = nil
-      if school.state_school_id
-        state_offerings = school.state_cs_offering || []
-        state_offerings = state_offerings.select {|o| o.school_year == school_year}
-        # If we have any state data for this year then a high school
-        # without a row is counted as a NO
-        if high_school &&
-           state_offerings.empty? &&
-           Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
-           state_years_with_data[school.state].include?(school_year)
-          audit[:state_cs_offerings].push(nil)
-          state_data = 'NO'
-        else
-          state_offerings.each do |offering|
-            audit[:state_cs_offerings].push(offering.id)
-          end
-          state_data = 'YES' unless state_offerings.empty?
-        end
-      end
+      submissions_summary = summarize_submission_data(
+        school,
+        school_year,
+        stats[:high_school],
+        stats[:k8_school],
+        audit
+      )
+      has_ap_data = summarize_ap_data(school, school_year, audit)
+      has_ib_data = summarize_ib_data(school, school_year, audit)
+      state_summary = summarize_state_data(school, school_year, stats[:high_school], state_years_with_data, audit)
 
       summary = Census::CensusSummary.find_or_initialize_by(
         school: school,
         school_year: school_year,
       )
-
-      #
-      # We will set teaches_cs to the first value we find in this order:
-      # 1	This year's AP data
-      # 2	This year's IB data
-      # 3	This year's surveys from teachers/administrators - consistent
-      # 4	State data
-      # 5	This year's surveys from non-teachers/admins - consistent
-      # 6	This year's surveys - inconsistent
-      # 7	teaches_cs from last year
-      # 8	teaches_cs from 2 years ago
-      # 9 nil
-      #
-      summary.teaches_cs =
-        if has_ap_data || has_ib_data
-          'YES'
-        elsif consistency[:teacher_or_admin]
-          consistency[:teacher_or_admin]
-        elsif state_data
-          state_data
-        elsif consistency[:not_teacher_or_admin]
-          consistency[:not_teacher_or_admin]
-        elsif has_inconsistent_surveys
-          'MAYBE'
-        elsif map_historical_teaches_cs last_years_result
-          map_historical_teaches_cs last_years_result
-        elsif map_historical_teaches_cs two_years_ago_result
-          map_historical_teaches_cs two_years_ago_result
-        else
-          nil
-        end
+      summary.teaches_cs = compute_teaches_cs(
+        has_ap_data,
+        has_ib_data,
+        submissions_summary,
+        state_summary,
+        last_years_result,
+        two_years_ago_result
+      )
 
       audit[:last_years_result] = last_years_result
       audit[:two_years_ago_result] = two_years_ago_result
-
-      summary.audit_data = JSON.generate(audit)
-
-      summaries.push summary
-
       two_years_ago_result = last_years_result
       last_years_result = summary.teaches_cs
+
+      summary.audit_data = JSON.generate(audit)
+      summaries.push summary
     end
 
     return summaries
