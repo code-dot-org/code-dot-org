@@ -1,9 +1,22 @@
 import React, {Component} from 'react';
 import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";
+import ControlProjectSharingDialog from './ControlProjectSharingDialog';
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 
 export default class ManageStudentsActionsHeaderCell extends Component {
+
+  state = {
+    isProjectSharingDialogOpen: false
+  };
+
+  openProjectSharingDialog = () => {
+    this.setState({isProjectSharingDialogOpen: true});
+  };
+
+  closeProjectSharingDialog = () => {
+    this.setState({isProjectSharingDialogOpen: false});
+  };
 
   render() {
     return (
@@ -18,11 +31,15 @@ export default class ManageStudentsActionsHeaderCell extends Component {
           </PopUpMenu.Item>
           <MenuBreak/>
           <PopUpMenu.Item
-            onClick={() => console.log('control project sharing was clicked!')}
+            onClick={this.openProjectSharingDialog}
           >
             {i18n.controlProjectSharing()}
           </PopUpMenu.Item>
         </QuickActionsCell>
+        <ControlProjectSharingDialog
+          isDialogOpen={this.state.isProjectSharingDialogOpen}
+          closeDialog={this.closeProjectSharingDialog}
+        />
       </div>
     );
   }
