@@ -213,9 +213,54 @@ class SourcesTest < FilesApiTestBase
     Timecop.return
   end
 
+  def test_restore_main_json_version
+    filename = 'main.json'
+    v1_data = <<-JSON
+      {"source":"//version 1"}
+    JSON
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    delete_all_source_versions(filename)
+
+    # Upload version 1
+    v1_result = @api.put_object(filename, v1_data, file_headers)
+    assert successful?
+    v1_version_id = JSON.parse(v1_result)['versionId']
+
+    # Write version 2
+    v2_data = <<-JSON
+      {"source":"//version 2"}
+    JSON
+    v2_result = @api.put_object(filename, v2_data, file_headers)
+    assert successful?
+    v2_version_id = JSON.parse(v2_result)['versionId']
+
+    # Restore version 1
+    restore_result = @api.restore_sources_version(filename, v1_version_id)
+    restored_version_id = restore_result['version_id']
+
+    # List versions.
+    versions = @api.list_object_versions(filename)
+    assert successful?
+    assert_equal 3, versions.count
+    assert_equal(
+      [restored_version_id, v2_version_id, v1_version_id],
+      versions.map {|v| v['versionId']}
+    )
+
+    # New version id, same body
+    restored_data = @api.get_object(filename)
+    assert_equal_json v1_data, restored_data
+  end
+
   private
 
   def delete_all_source_versions(filename)
     delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/1/#{filename}")
+  end
+
+  def assert_equal_json(expected_json, actual_json)
+    pretty_expected = JSON.pretty_generate JSON.parse expected_json
+    pretty_actual = JSON.pretty_generate JSON.parse actual_json
+    assert_equal pretty_expected, pretty_actual
   end
 end
