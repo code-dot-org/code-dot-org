@@ -1,16 +1,16 @@
 class Pd::RegionalPartnerContactMailer < ActionMailer::Base
   default from: 'Tanya Parker <tanya_parker@code.org>'
 
-  def matched(form, pm)
+  def matched(form, rp_pm)
     @form = form
     role = form[:role].downcase
 
-    pm_id = pm.program_manager_id
-    user = User.find(pm_id)
-    @name = user.name
+    pm_id = rp_pm.program_manager_id
+    pm = User.find(pm_id)
+    @name = pm.name
 
     mail(
-      to: user.email,
+      to: pm.email,
       subject: "A " + role + " would like to connect with you"
     )
   end
