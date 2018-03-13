@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Table} from 'react-bootstrap';
+import $ from 'jquery';
 
 const styles = {
   tableWrapper: {
