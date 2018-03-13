@@ -185,6 +185,7 @@ class Item extends Component {
     const textStyle = {
       color: this.props.color? this.props.color : color.dark_charcoal,
       textDecoration: 'none', // Remove underline from anchor tags
+      fontFamily: "'Gotham 4r', sans-serif"
     };
     return (
       <div style={paddingStyle}>
@@ -193,6 +194,7 @@ class Item extends Component {
             className="pop-up-menu-item"
             href={href}
             style={{...textStyle, ...areaStyle}}
+            target="_blank"
           >
             {children}
           </a>
