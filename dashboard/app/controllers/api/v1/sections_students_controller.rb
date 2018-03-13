@@ -25,7 +25,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   end
 
   def student_params
-    params.permit(
+    params.require(:student).permit(
       :age,
       :gender,
       :name,

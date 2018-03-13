@@ -422,13 +422,15 @@ export const convertStudentDataToArray = (studentData) => {
 // Make a post request to edit a student.
 const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
   const dataToUpdate = {
-    id: updatedStudentInfo.id,
-    name: updatedStudentInfo.name,
-    age: updatedStudentInfo.age,
-    gender: updatedStudentInfo.gender,
+    student: {
+      id: updatedStudentInfo.id,
+      name: updatedStudentInfo.name,
+      age: updatedStudentInfo.age,
+      gender: updatedStudentInfo.gender,
+    }
   };
   $.ajax({
-    url: `/dashboardapi/sections/${sectionId}/students/${dataToUpdate.id}`,
+    url: `/dashboardapi/sections/${sectionId}/students/${dataToUpdate.student.id}`,
     method: 'PATCH',
     type: 'json',
     contentType: 'application/json;charset=UTF-8',
