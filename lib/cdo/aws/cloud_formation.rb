@@ -316,6 +316,9 @@ module AWS
         change_status = route53_client.get_change({id: change_id}).change_info.status
         CDO.log.info "DNS update status - #{change_status}"
         CDO.log.info "Wait up to the configured Time To Live (#{DNS_TTL} seconds) to lookup new IP address."
+        stack.outputs.each do |output|
+          CDO.log.info "#{output.output_key}: #{output.output_value}"
+        end
       end
 
       def stop
@@ -471,7 +474,7 @@ module AWS
           raise "\nError on #{action}."
         end
         CDO.log.info "\nStack #{action} complete." unless ENV['QUIET']
-        CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
+        CDO.log.info "Don't forget to remove AWS resources by running `rake adhoc:delete` after you're done testing your instance!" if action == :create
       end
 
       def render_template(template: TEMPLATE, dry_run: false)
