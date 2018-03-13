@@ -260,7 +260,10 @@ class Blockly < Level
 
       if is_a? Blockly
         level_prop['startBlocks'] = try(:project_template_level).try(:start_blocks) || start_blocks
-        level_prop['toolbox'] = try(:project_template_level).try(:toolbox_blocks) || toolbox_blocks
+        level_prop['toolbox'] =
+          try(:project_template_level).try(:toolbox_blocks) ||
+          toolbox_blocks ||
+          default_toolbox_blocks
         level_prop['codeFunctions'] = try(:project_template_level).try(:code_functions) || code_functions
       end
 
@@ -395,5 +398,9 @@ class Blockly < Level
   # type 'Blockly', so they can't override this as needed
   def uses_droplet?
     %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? game.name
+  end
+
+  def default_toolbox_blocks
+    nil
   end
 end
