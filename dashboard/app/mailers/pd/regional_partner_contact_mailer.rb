@@ -15,8 +15,9 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     )
   end
 
-  def unmatched(form)
+  def unmatched(form, matched_but_no_pms)
     @form = form
+    @matched_but_no_pms = matched_but_no_pms
     role = form[:role].downcase
 
     mail(
