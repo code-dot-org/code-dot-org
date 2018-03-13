@@ -98,8 +98,6 @@ class BucketHelper
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
       {status: 'NOT_FOUND'}
-    rescue Aws::S3::Errors::NoSuchVersion
-      {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::InvalidArgument
       # Can happen when passed an invalid S3 version id
       {status: 'NOT_FOUND'}
@@ -108,7 +106,7 @@ class BucketHelper
 
   def get_abuse_score(encrypted_channel_id, filename, version = nil)
     response = get(encrypted_channel_id, filename, nil, version)
-    if response.nil?
+    if response.nil? || response[:status] == 'NOT_FOUND'
       0
     else
       metadata = response[:metadata]
@@ -271,55 +269,84 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
+    version_restored = false
+
     begin
       response = s3.copy_object(
         bucket: @bucket,
         key: key,
         copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
       )
-    rescue
-      response = s3.copy_object(
-        bucket: @bucket,
-        key: key,
-        copy_source: "#{@bucket}/#{key}",
-        metadata_directive: 'REPLACE',
-        metadata: {
-          abuse_score: get_abuse_score(encrypted_channel_id, filename).to_s,
-          failed_restore_at: Time.now.to_s,
-          failed_restore_from_version: version_id
-        }
-      )
-      Honeybadger.notify(
-        "Restore at Specified Version Failed. Restored most recent.",
-        context: {
-          source: "#{@bucket}/#{key}?versionId=#{version_id}"
-        }
+      version_restored = true
+    rescue Aws::S3::Errors::InvalidArgument => err
+      raise err unless err.message =~ %r{Invalid version id specified}
+
+      if object_exists?(key)
+        response = s3.copy_object(
+          bucket: @bucket,
+          key: key,
+          copy_source: "#{@bucket}/#{key}",
+          metadata_directive: 'REPLACE',
+          metadata: {
+            abuse_score: get_abuse_score(encrypted_channel_id, filename).to_s,
+            failed_restore_at: Time.now.to_s,
+            failed_restore_from_version: version_id
+          }
+        )
+        version_restored = true
+        Honeybadger.notify(
+          "Restore at Specified Version Failed. Restored most recent.",
+          context: {
+            source: "#{@bucket}/#{key}?versionId=#{version_id}"
+          }
+        )
+      else
+        # Couldn't restore specific version and didn't find a latest version either.
+        # It is probably deleted.
+        # In this case, we want to do nothing.
+        response = {status: 'NOT_MODIFIED'}
+        Honeybadger.notify(
+          "Restore at Specified Version Failed on deleted object. No action taken.",
+          context: {
+            source: "#{@bucket}/#{key}?versionId=#{version_id}"
+          }
+        )
+      end
+    end
+
+    if version_restored
+      # If we get this far, the restore request has succeeded.
+      FirehoseClient.instance.put_record(
+        study: 'project-data-integrity',
+        study_group: 'v2',
+        event: 'version-restored',
+
+        # Make it easy to limit our search to restores in the sources bucket for a certain project.
+        project_id: encrypted_channel_id,
+        data_string: @bucket,
+
+        user_id: user_id,
+        data_json: {
+          restoredVersionId: version_id,
+          newVersionId: response.version_id,
+          bucket: @bucket,
+          key: key,
+          filename: filename,
+        }.to_json
       )
     end
-    # If we get this far, the restore request has succeeded.
-    FirehoseClient.instance.put_record(
-      study: 'project-data-integrity',
-      study_group: 'v2',
-      event: 'version-restored',
-
-      # Make it easy to limit our search to restores in the sources bucket for a certain project.
-      project_id: encrypted_channel_id,
-      data_string: @bucket,
-
-      user_id: user_id,
-      data_json: {
-        restoredVersionId: version_id,
-        newVersionId: response.version_id,
-        bucket: @bucket,
-        key: key,
-        filename: filename,
-      }.to_json
-    )
 
     response
   end
 
   protected
+
+  def object_exists?(key)
+    response = s3.get_object(bucket: @bucket, key: key)
+    response && !response[:delete_marker]
+  rescue Aws::S3::Errors::NoSuchKey
+    false
+  end
 
   def s3_path(owner_id, channel_id, filename = nil)
     "#{@base_dir}/#{owner_id}/#{channel_id}/#{Addressable::URI.unencode(filename)}"
