@@ -48,7 +48,9 @@ class UserPermission < ActiveRecord::Base
     AUTHORIZED_TEACHER = 'authorized_teacher'.freeze,
     # Granted to regional partner program managers.
     # Initially has the same abilities as workshop organizer.
-    PROGRAM_MANAGER = 'program_manager'.freeze
+    PROGRAM_MANAGER = 'program_manager'.freeze,
+    # Garnts access to review reported inaccuracies in census data
+    CENSUS_REVIEWER = 'census_reviewer'.freeze,
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack
