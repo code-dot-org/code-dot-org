@@ -9,7 +9,7 @@ nav: promote_nav
 
 # Kodlama Saatini tanıtın
 
-## Bir Kodlama Saatine ev sahipliği mi yapacaksınız? <a href="<%= hoc_uri('/resources/how-to') %>Nasıl yapılır rehberimize bir göz atın</a>
+## Bir Kodlama Saatine ev sahipliği mi yapacaksınız? <a href="<%= hoc_uri('/resources/how-to') %>"Nasıl yapılır rehberimize bir göz atın</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
