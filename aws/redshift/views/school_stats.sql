@@ -4,6 +4,8 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            schools.city                             AS city,
            schools.zip                              AS zip,
            schools.state                            AS state,
+           schools.latitude                         AS latitude,
+           schools.longitude                        AS longitude,
            schools.school_type                      AS school_type,
            schools.school_district_id               AS school_district_id,
            school_districts.name                    AS school_district_name,

@@ -60,6 +60,8 @@ class Level < ActiveRecord::Base
     display_name
     map_reference
     reference_links
+    name_suffix
+    parent_level_id
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -481,7 +483,55 @@ class Level < ActiveRecord::Base
     false
   end
 
+  # Create a copy of this level named new_name, and store the id of the original
+  # level in parent_level_id.
+  def clone_with_name(new_name)
+    level = dup
+    level.update!(name: new_name, parent_level_id: id)
+    level
+  end
+
+  # Create a copy of this level by appending new_suffix to the name, removing
+  # any previous suffix from the name first. Store the id of the original
+  # level in parent_level_id, and store the suffix in name_suffix.
+  #
+  # Also, copy over any project template level. If two levels with the same
+  # project template level are copied using the same new_suffix, then the new
+  # levels should both point to the same new project template level.
+  #
+  # @param [String] new_suffix The suffix to append to the name of the original
+  #   level when choosing a name for the new level, replacing any existing
+  #   name_suffix if one exists.
+  # @param [Boolean] allow_existing If true, use the existing level with the
+  #   same name, if one exists.
+  # @raise [ActiveRecord::RecordInvalid] if !allow_existing and the new level
+  #   name is already taken.
+  def clone_with_suffix(new_suffix, allow_existing: false)
+    new_name = "#{base_name}#{new_suffix}"
+
+    level = allow_existing && Level.find_by_name(new_name) ?
+       Level.find_by_name(new_name) :
+       clone_with_name(new_name)
+
+    update_params = {name_suffix: new_suffix}
+
+    if project_template_level
+      new_template_level = project_template_level.clone_with_suffix(new_suffix, allow_existing: true)
+      update_params[:project_template_level_name] = new_template_level.name
+    end
+
+    level.update!(update_params)
+    level
+  end
+
   private
+
+  # Returns the level name, removing the name_suffix first (if present).
+  def base_name
+    return name unless name_suffix
+    strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
+    name[strip_suffix_regex, 1] || name
+  end
 
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
