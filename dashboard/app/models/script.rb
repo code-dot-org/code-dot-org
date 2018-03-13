@@ -667,7 +667,7 @@ class Script < ActiveRecord::Base
         bonus: bonus,
         assessment: assessment
       }
-      script_level_attributes[:properties] = properties.with_indifferent_access if properties
+      script_level_attributes[:properties] = properties.with_indifferent_access
       script_level = script.script_levels.detect do |sl|
         script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
