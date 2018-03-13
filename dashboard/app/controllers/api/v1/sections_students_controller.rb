@@ -25,12 +25,11 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   end
 
   def student_params
-    allowed_params = [
+    params.permit(
       :age,
       :gender,
       :name,
       :sharing_disabled,
-    ]
-    params.permit(*allowed_params)
+    )
   end
 end
