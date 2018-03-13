@@ -2,14 +2,19 @@ import React, {PropTypes} from 'react';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
-import {orderBy} from 'lodash';
+import _, {orderBy} from 'lodash';
+import { StatusColors } from './constants';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const styles = {
   table: {
     width: '100%'
-  }
+  },
+  statusCellCommon: {
+    padding: '5px'
+  },
+  statusCell: StatusColors
 };
 
 export default class CohortViewTable extends React.Component {
@@ -90,6 +95,16 @@ export default class CohortViewTable extends React.Component {
         header: {
           label: 'Status',
           transforms: [sortable]
+        },
+        cell: {
+          format: (status) => {
+            return _.upperFirst(status);
+          },
+          transforms: [
+            (status) => ({
+              style: {...styles.statusCellCommon, ...styles.statusCell[status]}
+            })
+          ]
         }
       }
     ];
