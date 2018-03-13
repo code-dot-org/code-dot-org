@@ -336,7 +336,7 @@ class BucketHelper
       )
     end
 
-    response
+    response.to_h
   end
 
   protected
