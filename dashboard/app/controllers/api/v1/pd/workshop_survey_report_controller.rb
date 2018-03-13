@@ -10,9 +10,9 @@ module Api::V1::Pd
     def workshop_survey_report
       survey_report = Hash.new
 
-      survey_report[:this_workshop] = get_score_for_workshops([@workshop], include_free_responses: true)
+      survey_report[:this_workshop] = get_score_for_workshops([@workshop], include_free_responses: true, facilitator_name_filter: facilitator_name_filter)
       all_my_workshops = (params[:organizer_view] ? Pd::Workshop.organized_by(current_user) : Pd::Workshop.facilitated_by(current_user)).where(course: @workshop.course).in_state(Pd::Workshop::STATE_ENDED)
-      survey_report[:all_my_workshops_for_course] = get_score_for_workshops(all_my_workshops)
+      survey_report[:all_my_workshops_for_course] = get_score_for_workshops(all_my_workshops, facilitator_name_filter: facilitator_name_filter)
 
       aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
       survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[@workshop.course].try(&:symbolize_keys) || {}

@@ -59,104 +59,138 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     :how_clearly_presented_s,
     :how_interesting_s,
     :how_often_given_feedback_s,
-    :help_quality_s,
     :how_comfortable_asking_questions_s,
     :how_often_taught_new_things_s,
     :things_facilitator_did_well_s,
     :things_facilitator_could_improve_s
   ].freeze
 
-  def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false)
-    report_rows = Hash.new(0).merge({number_teachers: 0, response_count: 0})
+  FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS - FREE_RESPONSE_QUESTIONS
+  FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS & FREE_RESPONSE_QUESTIONS
+  GENERAL_FREE_RESPONSE_QUESTIONS = FREE_RESPONSE_QUESTIONS - FACILITATOR_SPECIFIC_QUESTIONS
 
-    response_count = 0
+  def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false, facilitator_name_filter: nil)
+    facilitators = workshops.flat_map(&:facilitators).map(&:name)
+    #facilitators = ['Mike Harvey', 'Laura Johns', 'Dani McAvoy', 'Hannah Walden']
 
-    facilitator_scores = nil
-    free_responses = Hash.new
+    response_summary = {}
+    facilitator_specific_summary = Hash.new({})
 
-    if facilitator_breakdown
-      facilitator_scores = Hash.new
+    # Initalize a hash of non facilitator specific questions to answer sums
+    response_sums = Hash[(INDIVIDUAL_RESPONSE_QUESTIONS - FACILITATOR_SPECIFIC_QUESTIONS).map {|question| [question, 0]}]
 
-      workshops.flat_map(&:facilitators).uniq.each do |facilitator|
-        facilitator_scores[facilitator.name] = Hash.new(0)
-      end
-    end
-
-    if include_free_responses
-      FREE_RESPONSE_QUESTIONS.each do |question|
-        free_responses[question] = []
-      end
-    end
-
-    workshops.each do |workshop|
-      enrollment_ids = workshop.enrollments.pluck(:id)
-
-      responses = PEGASUS_DB[:forms].where(source_id: enrollment_ids, kind: 'PdWorkshopSurvey')
-
-      if facilitator_breakdown
-        if workshop.course == Pd::Workshop::COURSE_CSF
-          workshop.facilitators.each do |facilitator|
-            facilitator_scores[facilitator.name][:response_count] += responses.count
-            facilitator_scores[facilitator.name][:number_teachers] += workshop.enrollments.size
-          end
-        else
-          facilitator_name_frequency = calculate_facilitator_name_frequencies(responses)
-
-          workshop.facilitators.each do |facilitator|
-            facilitator_scores[facilitator.name][:response_count] += facilitator_name_frequency[facilitator.name]
-            facilitator_scores[facilitator.name][:number_teachers] += workshop.enrollments.size
-          end
-        end
+    # Initialize a hash of facilitator specific questions to hashes of facilitator->answer sums.
+    facilitator_specific_response_sums =
+      if facilitator_name_filter
+        Hash[FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.map {|question| [question, {facilitator_name_filter => 0}]}]
+      else
+        Hash[FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.map {|question| [question, Hash[facilitators.map {|facilitator| [facilitator, 0]}]]}]
       end
 
-      responses.each do |response|
-        next if response.nil?
+    free_response_summary = Hash[GENERAL_FREE_RESPONSE_QUESTIONS.map {|question| [question, []]}]
 
-        response_count += 1
+    # Initialize a hash of free response questions to hashes of facilitators->answers
+    facilitator_specific_free_response_sums =
+      if facilitator_name_filter
+        Hash[FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS.map {|question| [question, {facilitator_name_filter => []}]}]
+      else
+        Hash[FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS.map {|question| [question, Hash[facilitators.map {|facilitator| [facilitator, []]}]]}]
+      end
 
-        survey_response = JSON.parse(response[:data])
+    responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
+    #responses = sample_data
+    total_response_count = responses.compact.count
 
-        survey_response.symbolize_keys.each do |question, answer|
+    responses.each do |response|
+      next if response.nil?
+
+      response.symbolize_keys.each do |question, answer|
+        if INDIVIDUAL_RESPONSE_QUESTIONS.include? question
+          # Some individual response questions are facilitator specific - these are
+          # all hashes in the response. For each answer in the hash, add it to the sum
+          # total for facilitators
           if answer.is_a? Hash
-            # Then "answer" is actually a hash of answers for each
-            # facilitator name
-            answer.each do |facilitator_name, actual_answer|
-              process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, actual_answer, facilitator_breakdown ? facilitator_name : nil)
+            if facilitator_name_filter
+              # If we are only filtering for a certain user, just pluck the answer for that particular user
+              next unless answer[facilitator_name_filter]
+              facilitator_specific_response_sums[question][facilitator_name_filter] += get_score_for_response(question, answer[facilitator_name_filter])
+            else
+              answer.each do |facilitator, facilitator_answer|
+                facilitator_specific_response_sums[question][facilitator.to_s] += get_score_for_response(question, facilitator_answer)
+              end
             end
           else
-            process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, answer)
+            response_sums[question] += get_score_for_response(question, answer)
+          end
+        elsif FREE_RESPONSE_QUESTIONS.include? question
+          next unless include_free_responses
+          if answer.is_a? Hash
+            if facilitator_name_filter
+              next unless answer[facilitator_name_filter]
+              facilitator_specific_free_response_sums[question][facilitator_name_filter] << answer[facilitator_name_filter]
+            else
+              answer.each do |facilitator, facilitator_answer|
+                facilitator_specific_free_response_sums[question][facilitator.to_s] << facilitator_answer
+              end
+            end
+          else
+            free_response_summary[question] << answer
           end
         end
       end
     end
 
-    report_rows[:number_teachers] = workshops.map(&:enrollments).map(&:size).reduce(:+)
-    report_rows[:response_count] = response_count
-    report_rows[:facilitator_effectiveness] = (report_rows[:facilitator_effectiveness] / (FACILITATOR_EFFECTIVENESS_QUESTIONS.size.to_f * response_count)).round(2)
-    report_rows[:teacher_engagement] = (report_rows[:teacher_engagement] / (TEACHER_ENGAGEMENT_QUESTIONS.size.to_f * response_count)).round(2)
-    report_rows[:overall_success] = (report_rows[:overall_success] / (OVERALL_SUCCESS_QUESTIONS.size.to_f * response_count)).round(2)
+    facilitator_response_count = calculate_facilitator_name_frequencies(responses).stringify_keys
+    # Note that this is not the number of responses. Some responses apply for multiple
+    # facilitators. If a workshop has 5 responses, 4 may be for facilitator A, 3 may be
+    # for facilitator B, we'd expect this to be 7.
+    responses_for_all_facilitators_count = facilitator_response_count.values.reduce(:+).to_f
 
-    INDIVIDUAL_RESPONSE_QUESTIONS.each do |question|
-      report_rows[question] = (report_rows[question].to_f / response_count).round(2)
+    response_sums.each do |question, answer_sum|
+      response_summary[question] = (answer_sum / total_response_count.to_f).round(2)
     end
 
-    FREE_RESPONSE_QUESTIONS.map.each do |question|
-      report_rows[question] = free_responses[question]
-    end
-
-    if facilitator_breakdown
-      facilitator_scores.each_value do |scores|
-        scores[:facilitator_effectiveness] = (scores[:facilitator_effectiveness] / (FACILITATOR_EFFECTIVENESS_QUESTIONS.size.to_f * scores[:response_count])).round(2)
-        scores[:teacher_engagement] = (scores[:teacher_engagement] / (TEACHER_ENGAGEMENT_QUESTIONS.size.to_f * scores[:response_count])).round(2)
-        scores[:overall_success] = (scores[:overall_success] / (OVERALL_SUCCESS_QUESTIONS.size.to_f * scores[:response_count])).round(2)
-
-        INDIVIDUAL_RESPONSE_QUESTIONS.each do |question|
-          scores[question] = (scores[question].to_f / scores[:response_count]).round(2)
-        end
+    facilitator_specific_response_sums.each do |question, facilitators_for_response|
+      facilitators_for_response.each do |facilitator, answer_sum|
+        facilitator_specific_summary[facilitator][question] =
+          if facilitator_response_count[facilitator] > 0
+            (answer_sum / facilitator_response_count[facilitator].to_f).round(2)
+          else
+            0
+          end
       end
+
+      answer_sum = facilitator_specific_response_sums[question].values.reduce(:+)
+
+      response_summary[question] = (answer_sum / responses_for_all_facilitators_count).round(2)
     end
 
-    facilitator_breakdown ? [report_rows, facilitator_scores] : report_rows
+    if facilitator_name_filter
+      # If there was a facilitator name filter, then make all the facilitator specific
+      # answer hashes look like the general hashes
+      facilitator_specific_response_sums.each do |question, facilitator_answer|
+        response_summary[question] = facilitator_answer[facilitator_name_filter]
+      end
+
+      facilitator_specific_free_response_sums.each do |question, facilitator_answer|
+        free_response_summary[question] = facilitator_answer[facilitator_name_filter]
+      end
+    else
+      response_sums.merge!(facilitator_specific_response_sums)
+      free_response_summary.merge!(facilitator_specific_free_response_sums)
+    end
+
+    response_summary.merge!(free_response_summary)
+
+    response_summary[:teacher_engagement] = (response_summary.values_at(*TEACHER_ENGAGEMENT_QUESTIONS).reduce(:+) / TEACHER_ENGAGEMENT_QUESTIONS.length.to_f).round(2)
+    response_summary[:overall_success] = (response_summary.values_at(*OVERALL_SUCCESS_QUESTIONS).reduce(:+) / OVERALL_SUCCESS_QUESTIONS.length.to_f).round(2)
+
+    # Compute aggregate scores
+    response_summary[:facilitator_effectiveness] = (response_summary.values_at(*FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS).reduce(:+) / FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.length.to_f).round(2)
+    response_summary[:number_teachers] = workshops.flat_map(&:attending_teachers).count
+    response_summary[:response_count] = responses.count
+
+    response_summary
   end
 
   def calculate_facilitator_name_frequencies(responses)
@@ -164,63 +198,17 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     # return a histogram showing FacilitatorName=># Responses.
     # Using 'how_often_given_feedback_s' for no particular reason - any of the facilitator
     # specific responses would do fine here
-    facilitator_name_responses = responses.map {|x| JSON.parse x[:data]}.map {|x| x['how_often_given_feedback_s']}.flat_map(&:keys)
+    facilitator_name_responses = responses.map {|x| x[:how_often_given_feedback_s]}.flat_map(&:keys)
     Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
   end
 
   private
 
-  def process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, answer, facilitator_name=nil)
-    # if the response is for an individual facilitator, we expect to be
-    # getting once such response for each individual facilitator, so
-    # weight the score appropriately
-    if facilitator_name.nil?
-      score_weight = 1
-      facilitators = workshop.facilitators
-    else
-      score_weight = 1.0 / workshop.facilitators.length
-      facilitators = workshop.facilitators.select do |facilitator|
-        facilitator.name == facilitator_name
-      end
-    end
-
+  def get_score_for_response(question, answer)
     if OVERALL_SUCCESS_QUESTIONS.include?(question)
-      score = ::PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(answer) + 1
-    elsif FREE_RESPONSE_QUESTIONS.include?(question)
-      # Do nothing - no score to compute but don't skip this
+      ::PdWorkshopSurvey::AGREE_SCALE_OPTIONS.index(answer) + 1
     else
-      return unless ::PdWorkshopSurvey::OPTIONS.key?(question) && INDIVIDUAL_RESPONSE_QUESTIONS.include?(question)
-      score = get_score_for_response(::PdWorkshopSurvey::OPTIONS, question, answer)
-    end
-
-    if FACILITATOR_EFFECTIVENESS_QUESTIONS.include?(question)
-      add_score_to_hash(report_rows, :facilitator_effectiveness, facilitators, facilitator_scores, score, score_weight)
-    elsif TEACHER_ENGAGEMENT_QUESTIONS.include?(question)
-      add_score_to_hash(report_rows, :teacher_engagement, facilitators, facilitator_scores, score, score_weight)
-    elsif OVERALL_SUCCESS_QUESTIONS.include?(question)
-      add_score_to_hash(report_rows, :overall_success, facilitators, facilitator_scores, score, score_weight)
-    end
-
-    if INDIVIDUAL_RESPONSE_QUESTIONS.include?(question)
-      add_score_to_hash(report_rows, question, facilitators, facilitator_scores, score, score_weight)
-    end
-
-    if include_free_responses && FREE_RESPONSE_QUESTIONS.include?(question)
-      free_responses[question].append(answer)
-    end
-  end
-
-  def get_score_for_response(questions, question, answer)
-    questions[question].index(answer) + 1
-  end
-
-  def add_score_to_hash(report_rows, key, facilitators, facilitator_scores, score, score_weight)
-    report_rows[key] += score * score_weight
-
-    if facilitator_scores
-      facilitators.each do |facilitator|
-        facilitator_scores[facilitator.name][key] += score
-      end
+      ::PdWorkshopSurvey::OPTIONS[question].index(answer) + 1
     end
   end
 end

@@ -320,7 +320,7 @@ module Api::V1::Pd
       validate(expected_results)
     end
 
-    test 'correct averaging of facilitator specific questions with no facilitator specific breakdown' do
+    test 'correct averaging of facilitator specific questions' do
       csd_workshop = create(:pd_workshop, facilitators: @facilitators, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNIT_3_4)
 
       responses = [
@@ -351,6 +351,10 @@ module Api::V1::Pd
       breakdown_scores = get_score_for_workshops([csd_workshop], facilitator_breakdown: true)
 
       assert_equal [{'Tom' => 4.0}, {'Dick' => 3.0}, {'Harry' => 1.0},], breakdown_scores[1].map {|k, v| {k => v[:how_often_given_feedback_s]}}
+
+      assert_equal 4.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Tom'))[:how_often_given_feedback_s]
+      assert_equal 3.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Dick'))[:how_often_given_feedback_s]
+      assert_equal 1.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Harry'))[:how_often_given_feedback_s]
 
       assert_equal({'Tom' => 2, 'Dick' => 1, 'Harry' => 1}, calculate_facilitator_name_frequencies(responses))
     end
