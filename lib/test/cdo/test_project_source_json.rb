@@ -7,45 +7,52 @@ class ProjectSourceJsonTest < Minitest::Test
   ANIMATION_2_KEY = '961474d2-d06d-4c10-941e-79c6bde06d2c'
   EXAMPLE_JSON = %{
     {
-       "source":"//comment",
-       "animations":{
-          "orderedKeys":[
-             "#{ANIMATION_1_KEY}",
-             "#{ANIMATION_2_KEY}"
-          ],
-          "propsByKey":{
-             "#{ANIMATION_1_KEY}":{
-                "name":"pine_trees",
-                "sourceUrl":null,
-                "frameSize":{
-                   "x":400,
-                   "y":400
-                },
-                "frameCount":1,
-                "looping":true,
-                "frameDelay":12,
-                "version":"_9WUARCAgtYNZf8EZR3HyNVetFkRM5H5"
-             },
-             "#{ANIMATION_2_KEY}":{
-                "name":"sun",
-                "sourceUrl":null,
-                "frameSize":{
-                   "x":150,
-                   "y":150
-                },
-                "frameCount":2,
-                "looping":true,
-                "frameDelay":12,
-                "version":"Wt3TJpURB1tUZvr6GMyMfyGefEXJI9BM"
-             }
+      "source":"//comment",
+      "animations":{
+        "orderedKeys":[
+          "#{ANIMATION_1_KEY}",
+          "#{ANIMATION_2_KEY}"
+        ],
+        "propsByKey":{
+          "#{ANIMATION_1_KEY}":{
+            "name":"pine_trees",
+            "sourceUrl":null,
+            "frameSize":{
+              "x":400,
+              "y":400
+            },
+            "frameCount":1,
+            "looping":true,
+            "frameDelay":12,
+            "version":"_9WUARCAgtYNZf8EZR3HyNVetFkRM5H5"
+          },
+          "#{ANIMATION_2_KEY}":{
+            "name":"sun",
+            "sourceUrl":null,
+            "frameSize":{
+              "x":150,
+              "y":150
+            },
+            "frameCount":2,
+            "looping":true,
+            "frameDelay":12,
+            "version":"Wt3TJpURB1tUZvr6GMyMfyGefEXJI9BM"
           }
-       }
+        }
+      }
     }
   }
 
   def test_generates_equivalent_json
     psj = ProjectSourceJson.new(EXAMPLE_JSON)
     assert_equal_json EXAMPLE_JSON, psj.to_json
+  end
+
+  def test_raise_on_to_json_if_unparseable
+    psj = ProjectSourceJson.new("ceci n'est pas du json")
+    assert_raises do
+      psj.to_json
+    end
   end
 
   def test_iterates_animation_props
@@ -93,6 +100,26 @@ class ProjectSourceJsonTest < Minitest::Test
     )
   end
 
+  def test_iterates_no_animations_if_unparseable
+    psj = ProjectSourceJson.new("ceci n'est pas du json")
+    iteration_count = 0
+    psj.each_animation {|_| iteration_count += 1}
+    assert_equal 0, iteration_count
+  end
+
+  def test_iterates_no_animations_if_no_manifest
+    psj = ProjectSourceJson.new(<<-JSON)
+      {
+        "source":"//comment"
+      }
+    JSON
+    refute psj.animation_manifest?
+
+    iteration_count = 0
+    psj.each_animation {|_| iteration_count += 1}
+    assert_equal 0, iteration_count
+  end
+
   def test_can_update_animation_version_in_project_source
     psj = ProjectSourceJson.new(EXAMPLE_JSON)
 
@@ -109,6 +136,72 @@ class ProjectSourceJsonTest < Minitest::Test
     refute_equal initial_animation_1_version, new_animation_1_version
     assert_equal 'new-key', new_animation_1_version
     assert_equal initial_animation_2_version, new_animation_2_version
+  end
+
+  def test_assert_animation_manifest_on_well_formed_manifest
+    psj = ProjectSourceJson.new(EXAMPLE_JSON)
+    assert psj.animation_manifest?
+
+    # And a minimal example, for illustration
+    psj = ProjectSourceJson.new(<<-JSON)
+      {
+        "animations": {
+          "orderedKeys": [],
+          "propsByKey": {}
+        }
+      }
+    JSON
+    assert psj.animation_manifest?
+  end
+
+  def test_refute_animation_manifest_if_missing_or_malformed_manifest
+    # No animations key at all
+    psj = ProjectSourceJson.new(<<-JSON)
+      {
+        "source":"//comment"
+      }
+    JSON
+    refute psj.animation_manifest?
+
+    # Animations key isn't an object
+    psj = ProjectSourceJson.new(<<-JSON)
+      {
+        "source":"//comment",
+        "animations": "something else"
+      }
+    JSON
+    refute psj.animation_manifest?
+
+    # Animations without orderedKeys or propsByKey
+    psj = ProjectSourceJson.new(<<-JSON)
+      {
+        "source":"//comment",
+        "animations": {}
+      }
+    JSON
+    refute psj.animation_manifest?
+
+    # Animations without orderedKeys
+    psj = ProjectSourceJson.new(<<-JSON)
+      {
+        "source":"//comment",
+        "animations": {
+          "propsByKey": {}
+        }
+      }
+    JSON
+    refute psj.animation_manifest?
+
+    # Animations without propsByKey
+    psj = ProjectSourceJson.new(<<-JSON)
+      {
+        "source":"//comment",
+        "animations": {
+          "orderedKeys": []
+        }
+      }
+    JSON
+    refute psj.animation_manifest?
   end
 
   private
