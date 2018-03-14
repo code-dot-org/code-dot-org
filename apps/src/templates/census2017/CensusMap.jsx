@@ -90,16 +90,20 @@ export default class CensusMap extends Component {
     school: PropTypes.object,
   };
 
-  gmap;
+  gmap = undefined;
   scrollwheelOption = false;
   draggableOption = false;
-  resizeThrottleTimerId;
+  resizeThrottleTimerId = undefined;
   resizeThrottleTimeoutMs = 500;
   maxHeightPercentage = 0.65;
-  infoWindow;
+  infoWindow = undefined;
 
   componentWillMount() {
     this.infoWindow = new google.maps.InfoWindow();
+  }
+
+  componentWillUnmount() {
+    this.InfoWindow.close();
   }
 
   componentDidMount = () => {
