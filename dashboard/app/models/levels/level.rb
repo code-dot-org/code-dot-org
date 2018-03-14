@@ -448,10 +448,9 @@ class Level < ActiveRecord::Base
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels
-    return [] unless is_a? Blockly
-    names = properties["contained_level_names"]
+    names = try('contained_level_names')
     return [] unless names.present?
-    properties["contained_level_names"].map do |contained_level_name|
+    names.map do |contained_level_name|
       Script.cache_find_level(contained_level_name)
     end
   end
