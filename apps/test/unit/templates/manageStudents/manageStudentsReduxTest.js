@@ -10,6 +10,7 @@ import manageStudents, {
   setSecretImage,
   setSecretWords,
   editStudent,
+  editAll,
   startSavingStudent,
   saveStudentSuccess,
   addStudentsSuccess,
@@ -210,6 +211,22 @@ describe('manageStudentsRedux', () => {
       const startEditingStudentAction = startEditingStudent(1);
       const finalState = manageStudents(nextState, startEditingStudentAction);
       assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
+    });
+  });
+
+  describe('editAll', () => {
+    it('sets students isEditing to true', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = editAll();
+      const finalState = manageStudents(nextState, startEditingStudentAction);
+      assert.deepEqual(finalState.studentData[1].isEditing, true);
+      assert.deepEqual(finalState.studentData[2].isEditing, true);
+      assert.deepEqual(finalState.studentData[3].isEditing, true);
+
+      assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
+      assert.deepEqual(finalState.editingData[2], studentEmailData[2]);
+      assert.deepEqual(finalState.editingData[3], studentEmailData[3]);
     });
   });
 
