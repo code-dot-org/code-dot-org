@@ -39,8 +39,13 @@ class SourceBucket < BucketHelper
       # Update the manifest to reference the copied animations
       anim_bucket = AnimationBucket.new
       psj.each_animation do |a|
-        anim_response = anim_bucket.restore_previous_version(encrypted_channel_id, a.key, a.version_id, a.user_id)
-        psj.set_animation_version(a.key, anim_response.version_id)
+        anim_response = anim_bucket.restore_previous_version(
+          encrypted_channel_id,
+          "#{a['key']}.png",
+          a['version'],
+          user_id
+        )
+        psj.set_animation_version(a['key'], anim_response[:version_id])
       end
     end
 
