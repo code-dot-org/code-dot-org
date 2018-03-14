@@ -594,6 +594,7 @@ class Script < ActiveRecord::Base
   def self.add_script(options, raw_stages, new_suffix: nil)
     raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
+    script.update!(hidden: true) if new_suffix
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
