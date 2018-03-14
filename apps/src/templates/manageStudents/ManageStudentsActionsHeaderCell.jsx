@@ -1,10 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 
 export default class ManageStudentsActionsHeaderCell extends Component {
+  static propTypes = {
+    editAll: PropTypes.func,
+  };
 
   state = {
     isProjectSharingDialogOpen: false
@@ -18,6 +21,10 @@ export default class ManageStudentsActionsHeaderCell extends Component {
     this.setState({isProjectSharingDialogOpen: false});
   };
 
+  onEditAll = () => {
+    this.props.editAll();
+  };
+
   render() {
     return (
       <div>
@@ -25,7 +32,7 @@ export default class ManageStudentsActionsHeaderCell extends Component {
           type={QuickActionsCellType.header}
         >
           <PopUpMenu.Item
-            onClick={() => console.log('edit all was clicked!')}
+            onClick={this.onEditAll}
           >
             {i18n.editAll()}
           </PopUpMenu.Item>

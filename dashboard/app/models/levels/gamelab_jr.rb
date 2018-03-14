@@ -166,6 +166,10 @@ class GamelabJr < Gamelab
     XML
   end
 
+  def default_toolbox_blocks
+    complete_toolbox 'default_blocks'
+  end
+
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
