@@ -241,8 +241,7 @@ class SourcesTest < FilesApiTestBase
     v2_version_id = put_main_json(v2_data)
 
     # Restore version 1
-    restore_result = @api.restore_sources_version(MAIN_JSON, v1_version_id)
-    restored_version_id = restore_result['version_id']
+    restored_version_id = restore_main_json(v1_version_id)
 
     # List versions.
     versions = @api.list_object_versions(MAIN_JSON)
@@ -303,9 +302,7 @@ class SourcesTest < FilesApiTestBase
     main_json_v2_vid = put_main_json(main_json_v2)
 
     # Restore main.json to v1
-    @api.restore_sources_version(MAIN_JSON, main_json_v1_vid)
-    assert successful?
-    main_json_restored_vid = JSON.parse(last_response.body)['version_id']
+    main_json_restored_vid = restore_main_json(main_json_v1_vid)
 
     # Expect animation to have a v3 based on v1
     animation_versions = @animations_api.list_object_versions(animation_filename)
@@ -386,9 +383,7 @@ class SourcesTest < FilesApiTestBase
     main_json_v2_vid = put_main_json(main_json_v2)
 
     # Restore main.json to v1
-    @api.restore_sources_version(MAIN_JSON, main_json_v1_vid)
-    assert successful?
-    main_json_restored_vid = JSON.parse(last_response.body)['version_id']
+    main_json_restored_vid = restore_main_json(main_json_v1_vid)
 
     # Expect animation to have a v3 based on v2
     animation_versions = @animations_api.list_object_versions(animation_filename)
@@ -449,6 +444,17 @@ class SourcesTest < FilesApiTestBase
     @animations_api.post_file(filename, body, 'image/png')
     assert successful?
     JSON.parse(last_response.body)['versionId']
+  end
+
+  #
+  # Restore a source file to the requested version
+  # @param [String] version_id The S3 version id to restore
+  # @return [String] S3 version id of the newly-restored main.json
+  #
+  def restore_main_json(version_id)
+    @api.restore_sources_version(MAIN_JSON, version_id)
+    assert successful?
+    JSON.parse(last_response.body)['version_id']
   end
 
   def delete_all_source_versions(filename)
