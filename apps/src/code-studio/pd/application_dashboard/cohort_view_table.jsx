@@ -18,7 +18,7 @@ const styles = {
   statusCell: StatusColors
 };
 
-class CohortViewTable extends React.Component {
+export class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
