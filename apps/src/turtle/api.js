@@ -235,8 +235,8 @@ ArtistAPI.prototype.showTurtle = function (id) {
   this.log.push(['ST', id]);
 };
 
-ArtistAPI.prototype.drawSticker = function (sticker, id) {
-  this.log.push(['sticker', sticker, id]);
+ArtistAPI.prototype.drawSticker = function (sticker, size, id) {
+  this.log.push(['sticker', sticker, size, id]);
 };
 
 ArtistAPI.prototype.setArtist = function (artist, id) {
