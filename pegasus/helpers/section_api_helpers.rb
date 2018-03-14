@@ -24,7 +24,7 @@ class DashboardStudent
     gender = valid_gender?(params[:gender]) ? params[:gender] : nil
     birthday = age_to_birthday(params[:age]) ?
       age_to_birthday(params[:age]) : params[:birthday]
-    sharing_disabled = params[:sharing_disabled]
+    sharing_disabled = !!params[:sharing_disabled]
     created_at = DateTime.now
 
     row = Dashboard.db[:users].insert(
