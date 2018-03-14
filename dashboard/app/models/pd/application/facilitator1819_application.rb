@@ -443,7 +443,7 @@ module Pd::Application
     end
 
     # @override
-    def self.csv_header(course)
+    def self.csv_header(course, user)
       # strip all markdown formatting out of the labels
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
@@ -461,7 +461,7 @@ module Pd::Application
     end
 
     # @override
-    def to_csv_row
+    def to_csv_row(user)
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
