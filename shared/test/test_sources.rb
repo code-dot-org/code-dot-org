@@ -255,7 +255,7 @@ class SourcesTest < FilesApiTestBase
   def test_restore_main_json_and_animations
     animations_api = FilesApiTestHelper.new(current_session, 'animations', @channel)
 
-    animation_key = 'animation-key'
+    animation_key = @api.add_random_suffix('animation-key')
     animation_filename = "#{animation_key}.png"
     delete_all_animation_versions(animation_filename)
 
