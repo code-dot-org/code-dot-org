@@ -105,30 +105,30 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns([@happy_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 0,
         response_count: 1,
-        facilitator_effectiveness: 5,
-        how_much_learned_s: 5,
-        how_motivating_s: 5,
-        how_clearly_presented_s: 5,
-        how_interesting_s: 5,
-        how_often_given_feedback_s: 5,
-        how_comfortable_asking_questions_s: 5,
-        how_often_taught_new_things_s: 5,
-        teacher_engagement: 5,
-        how_much_participated_s: 5,
-        how_often_talk_about_ideas_outside_s: 5,
-        how_often_lost_track_of_time_s: 5,
-        how_excited_before_s: 5,
-        overall_how_interested_s: 5,
-        overall_success: 6,
-        more_prepared_than_before_s: 6,
-        know_where_to_go_for_help_s: 6,
-        suitable_for_my_experience_s: 6,
-        would_recommend_s: 6,
-        part_of_community_s: 6,
-        things_facilitator_did_well_s: ['Great!', 'Great!', 'Great!'],
-        things_facilitator_could_improve_s: ['Great!', 'Great!', 'Great!'],
+        facilitator_effectiveness: 5.0,
+        how_much_learned_s: 5.0,
+        how_motivating_s: 5.0,
+        how_clearly_presented_s: 5.0,
+        how_interesting_s: 5.0,
+        how_often_given_feedback_s: 5.0,
+        how_comfortable_asking_questions_s: 5.0,
+        how_often_taught_new_things_s: 5.0,
+        teacher_engagement: 5.0,
+        how_much_participated_s: 5.0,
+        how_often_talk_about_ideas_outside_s: 5.0,
+        how_often_lost_track_of_time_s: 5.0,
+        how_excited_before_s: 5.0,
+        overall_how_interested_s: 5.0,
+        overall_success: 6.0,
+        more_prepared_than_before_s: 6.0,
+        know_where_to_go_for_help_s: 6.0,
+        suitable_for_my_experience_s: 6.0,
+        would_recommend_s: 6.0,
+        part_of_community_s: 6.0,
+        things_facilitator_did_well_s: Hash[TEST_FACILITATORS.map {|facilitator| [facilitator, ['Great!']]}],
+        things_facilitator_could_improve_s: Hash[TEST_FACILITATORS.map {|facilitator| [facilitator, ['Great!']]}],
         things_you_liked_s: ['Great!'],
         things_you_would_change_s: ['Great!'],
         anything_else_s: ['Great!']
@@ -141,30 +141,30 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns([@angry_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 0,
         response_count: 1,
-        facilitator_effectiveness: 1,
-        how_much_learned_s: 1,
-        how_motivating_s: 1,
-        how_clearly_presented_s: 1,
-        how_interesting_s: 1,
-        how_often_given_feedback_s: 1,
-        how_comfortable_asking_questions_s: 1,
-        how_often_taught_new_things_s: 1,
-        teacher_engagement: 1,
-        how_much_participated_s: 1,
-        how_often_talk_about_ideas_outside_s: 1,
-        how_often_lost_track_of_time_s: 1,
-        how_excited_before_s: 1,
-        overall_how_interested_s: 1,
-        overall_success: 1,
-        more_prepared_than_before_s: 1,
-        know_where_to_go_for_help_s: 1,
-        suitable_for_my_experience_s: 1,
-        would_recommend_s: 1,
-        part_of_community_s: 1,
-        things_facilitator_did_well_s: ['Lousy :(', 'Lousy :(', 'Lousy :('],
-        things_facilitator_could_improve_s: ['Lousy :(', 'Lousy :(', 'Lousy :('],
+        facilitator_effectiveness: 1.0,
+        how_much_learned_s: 1.0,
+        how_motivating_s: 1.0,
+        how_clearly_presented_s: 1.0,
+        how_interesting_s: 1.0,
+        how_often_given_feedback_s: 1.0,
+        how_comfortable_asking_questions_s: 1.0,
+        how_often_taught_new_things_s: 1.0,
+        teacher_engagement: 1.0,
+        how_much_participated_s: 1.0,
+        how_often_talk_about_ideas_outside_s: 1.0,
+        how_often_lost_track_of_time_s: 1.0,
+        how_excited_before_s: 1.0,
+        overall_how_interested_s: 1.0,
+        overall_success: 1.0,
+        more_prepared_than_before_s: 1.0,
+        know_where_to_go_for_help_s: 1.0,
+        suitable_for_my_experience_s: 1.0,
+        would_recommend_s: 1.0,
+        part_of_community_s: 1.0,
+        things_facilitator_did_well_s: Hash[TEST_FACILITATORS.map {|facilitator| [facilitator, ['Lousy :(']]}],
+        things_facilitator_could_improve_s: Hash[TEST_FACILITATORS.map {|facilitator| [facilitator, ['Lousy :(']]}],
         things_you_liked_s: ['Lousy :('],
         things_you_would_change_s: ['Lousy :('],
         anything_else_s: ['Lousy :(']
@@ -177,7 +177,7 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns([@mixed_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 0,
         response_count: 1,
         facilitator_effectiveness: 1.95,
         how_much_learned_s: 1,
@@ -187,131 +187,56 @@ module Api::V1::Pd
         how_often_given_feedback_s: 2.33,
         how_comfortable_asking_questions_s: 2.33,
         how_often_taught_new_things_s: 2.33,
-        teacher_engagement: 5,
-        how_much_participated_s: 5,
-        how_often_talk_about_ideas_outside_s: 5,
-        how_often_lost_track_of_time_s: 5,
-        how_excited_before_s: 5,
-        overall_how_interested_s: 5,
-        overall_success: 1,
-        more_prepared_than_before_s: 1,
-        know_where_to_go_for_help_s: 1,
-        suitable_for_my_experience_s: 1,
-        would_recommend_s: 1,
-        part_of_community_s: 1,
-        things_facilitator_did_well_s: ['Lousy :(', 'Great!', 'Lousy :('],
-        things_facilitator_could_improve_s: ['Lousy :(', 'Great!', 'Lousy :('],
+        teacher_engagement: 5.0,
+        how_much_participated_s: 5.0,
+        how_often_talk_about_ideas_outside_s: 5.0,
+        how_often_lost_track_of_time_s: 5.0,
+        how_excited_before_s: 5.0,
+        overall_how_interested_s: 5.0,
+        overall_success: 1.0,
+        more_prepared_than_before_s: 1.0,
+        know_where_to_go_for_help_s: 1.0,
+        suitable_for_my_experience_s: 1.0,
+        would_recommend_s: 1.0,
+        part_of_community_s: 1.0,
+        things_facilitator_did_well_s: {'Tom' => ['Lousy :('], 'Dick' => ['Great!'], 'Harry' => ['Lousy :(']},
+        things_facilitator_could_improve_s: {'Tom' => ['Lousy :('], 'Dick' => ['Great!'], 'Harry' => ['Lousy :(']},
         things_you_liked_s: ['Lousy :('],
         things_you_would_change_s: ['Lousy :('],
         anything_else_s: ['Lousy :(']
       }
 
-      expected_facilitator_results = {
-        "Tom" => {
-          response_count: 1,
-          number_teachers: 1,
-          facilitator_effectiveness: 1.0,
-          how_much_learned_s: 1.0,
-          how_motivating_s: 1.0,
-          how_clearly_presented_s: 1.0,
-          how_interesting_s: 1.0,
-          how_often_given_feedback_s: 1.0,
-          how_comfortable_asking_questions_s: 1.0,
-          how_often_taught_new_things_s: 1.0,
-          teacher_engagement: 5.0,
-          how_much_participated_s: 5.0,
-          how_often_talk_about_ideas_outside_s: 5.0,
-          how_often_lost_track_of_time_s: 5.0,
-          how_excited_before_s: 5.0,
-          overall_how_interested_s: 5.0,
-          overall_success: 1.0,
-          more_prepared_than_before_s: 1.0,
-          know_where_to_go_for_help_s: 1.0,
-          suitable_for_my_experience_s: 1.0,
-          would_recommend_s: 1.0,
-          part_of_community_s: 1.0
-        },
-        "Dick" => {
-          response_count: 1,
-          number_teachers: 1,
-          facilitator_effectiveness: 3.86,
-          how_much_learned_s: 1.0,
-          how_motivating_s: 1.0,
-          how_clearly_presented_s: 5.0,
-          how_interesting_s: 5.0,
-          how_often_given_feedback_s: 5.0,
-          how_comfortable_asking_questions_s: 5.0,
-          how_often_taught_new_things_s: 5.0,
-          teacher_engagement: 5.0,
-          how_much_participated_s: 5.0,
-          how_often_talk_about_ideas_outside_s: 5.0,
-          how_often_lost_track_of_time_s: 5.0,
-          how_excited_before_s: 5.0,
-          overall_how_interested_s: 5.0,
-          overall_success: 1.0,
-          more_prepared_than_before_s: 1.0,
-          know_where_to_go_for_help_s: 1.0,
-          suitable_for_my_experience_s: 1.0,
-          would_recommend_s: 1.0,
-          part_of_community_s: 1.0
-        },
-        "Harry" => {
-          response_count: 1,
-          number_teachers: 1,
-          facilitator_effectiveness: 1.0,
-          how_much_learned_s: 1.0,
-          how_motivating_s: 1.0,
-          how_clearly_presented_s: 1.0,
-          how_interesting_s: 1.0,
-          how_often_given_feedback_s: 1.0,
-          how_comfortable_asking_questions_s: 1.0,
-          how_often_taught_new_things_s: 1.0,
-          teacher_engagement: 5.0,
-          how_much_participated_s: 5.0,
-          how_often_talk_about_ideas_outside_s: 5.0,
-          how_often_lost_track_of_time_s: 5.0,
-          how_excited_before_s: 5.0,
-          overall_how_interested_s: 5.0,
-          overall_success: 1.0,
-          more_prepared_than_before_s: 1.0,
-          know_where_to_go_for_help_s: 1.0,
-          suitable_for_my_experience_s: 1.0,
-          would_recommend_s: 1.0,
-          part_of_community_s: 1.0
-        }
-      }
-
-      validate(expected_results, expected_facilitator_results)
+      validate(expected_results)
     end
 
     test 'one angry and one happy teacher' do
       @pegasus_db_stub.stubs(:where).returns([@happy_teacher_response, @angry_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 0,
         response_count: 2,
-        facilitator_effectiveness: 3,
-        how_much_learned_s: 3,
-        how_motivating_s: 3,
-        how_clearly_presented_s: 3,
-        how_interesting_s: 3,
-        how_often_given_feedback_s: 3,
-        how_comfortable_asking_questions_s: 3,
-        how_often_taught_new_things_s: 3,
-        teacher_engagement: 3,
-        how_much_participated_s: 3,
-        how_often_talk_about_ideas_outside_s: 3,
-        how_often_lost_track_of_time_s: 3,
-        how_excited_before_s: 3,
-        overall_how_interested_s: 3,
+        facilitator_effectiveness: 3.0,
+        how_much_learned_s: 3.0,
+        how_motivating_s: 3.0,
+        how_clearly_presented_s: 3.0,
+        how_interesting_s: 3.0,
+        how_often_given_feedback_s: 3.0,
+        how_comfortable_asking_questions_s: 3.0,
+        how_often_taught_new_things_s: 3.0,
+        teacher_engagement: 3.0,
+        how_much_participated_s: 3.0,
+        how_often_talk_about_ideas_outside_s: 3.0,
+        how_often_lost_track_of_time_s: 3.0,
+        how_excited_before_s: 3.0,
+        overall_how_interested_s: 3.0,
         overall_success: 3.5,
         more_prepared_than_before_s: 3.5,
         know_where_to_go_for_help_s: 3.5,
         suitable_for_my_experience_s: 3.5,
         would_recommend_s: 3.5,
         part_of_community_s: 3.5,
-        things_facilitator_did_well_s: ['Great!', 'Great!', 'Great!', 'Lousy :(', 'Lousy :(', 'Lousy :('],
-        things_facilitator_could_improve_s: ['Great!', 'Great!', 'Great!', 'Lousy :(', 'Lousy :(', 'Lousy :('],
+        things_facilitator_did_well_s: Hash[TEST_FACILITATORS.map {|facilitator| [facilitator, ['Great!', 'Lousy :(']]}],
+        things_facilitator_could_improve_s: Hash[TEST_FACILITATORS.map {|facilitator| [facilitator, ['Great!', 'Lousy :(']]}],
         things_you_liked_s: ['Great!', 'Lousy :('],
         things_you_would_change_s: ['Great!', 'Lousy :('],
         anything_else_s: ['Great!', 'Lousy :(']
@@ -345,33 +270,21 @@ module Api::V1::Pd
 
       @pegasus_db_stub.stubs(:where).returns(responses)
 
-      non_breakdown_score = get_score_for_workshops([csd_workshop])
-      assert_equal 3.0, non_breakdown_score[:how_often_given_feedback_s]
-
-      breakdown_scores = get_score_for_workshops([csd_workshop], facilitator_breakdown: true)
-
-      assert_equal [{'Tom' => 4.0}, {'Dick' => 3.0}, {'Harry' => 1.0},], breakdown_scores[1].map {|k, v| {k => v[:how_often_given_feedback_s]}}
+      # average_score = get_score_for_workshops([csd_workshop])
+      # assert_equal 3.0, average_score[:how_often_given_feedback_s]
 
       assert_equal 4.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Tom'))[:how_often_given_feedback_s]
       assert_equal 3.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Dick'))[:how_often_given_feedback_s]
       assert_equal 1.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Harry'))[:how_often_given_feedback_s]
 
-      assert_equal({'Tom' => 2, 'Dick' => 1, 'Harry' => 1}, calculate_facilitator_name_frequencies(responses))
+      assert_equal({'Tom' => 2, 'Dick' => 1, 'Harry' => 1}, calculate_facilitator_name_frequencies(responses.map {|response| JSON.parse response[:data]}))
     end
 
     private
 
-    def validate(expected_results, expected_facilitator_results=nil)
-      if expected_facilitator_results.nil?
-        expected_facilitator_results = Hash.new
-        TEST_FACILITATORS.each do |facilitator_name|
-          expected_facilitator_results[facilitator_name] = expected_results.reject {|k, _| FREE_RESPONSE_QUESTIONS.include?(k)}
-        end
-      end
-
-      actual_results, actual_facilitator_results = get_score_for_workshops(@workshops, facilitator_breakdown: true, include_free_responses: true)
+    def validate(expected_results)
+      actual_results = get_score_for_workshops(@workshops, include_free_responses: true)
       assert_equal expected_results, actual_results
-      assert_equal expected_facilitator_results, actual_facilitator_results
     end
 
     def get_best_response_for_question(question, answers)

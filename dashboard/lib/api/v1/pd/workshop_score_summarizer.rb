@@ -69,12 +69,12 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS & FREE_RESPONSE_QUESTIONS
   GENERAL_FREE_RESPONSE_QUESTIONS = FREE_RESPONSE_QUESTIONS - FACILITATOR_SPECIFIC_QUESTIONS
 
-  def get_score_for_workshops(workshops, facilitator_breakdown: false, include_free_responses: false, facilitator_name_filter: nil)
+  def get_score_for_workshops(workshops, include_free_responses: false, facilitator_name_filter: nil)
     facilitators = workshops.flat_map(&:facilitators).map(&:name)
     #facilitators = ['Mike Harvey', 'Laura Johns', 'Dani McAvoy', 'Hannah Walden']
 
     response_summary = {}
-    facilitator_specific_summary = Hash.new({})
+    facilitator_specific_summary = Hash[facilitators.map {|facilitator| [facilitator, {}]}]
 
     # Initalize a hash of non facilitator specific questions to answer sums
     response_sums = Hash[(INDIVIDUAL_RESPONSE_QUESTIONS - FACILITATOR_SPECIFIC_QUESTIONS).map {|question| [question, 0]}]
@@ -98,7 +98,6 @@ module Api::V1::Pd::WorkshopScoreSummarizer
       end
 
     responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
-    #responses = sample_data
     total_response_count = responses.compact.count
 
     responses.each do |response|
@@ -116,7 +115,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
               facilitator_specific_response_sums[question][facilitator_name_filter] += get_score_for_response(question, answer[facilitator_name_filter])
             else
               answer.each do |facilitator, facilitator_answer|
-                facilitator_specific_response_sums[question][facilitator.to_s] += get_score_for_response(question, facilitator_answer)
+                facilitator_specific_response_sums[question][facilitator] += get_score_for_response(question, facilitator_answer)
               end
             end
           else
@@ -130,7 +129,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
               facilitator_specific_free_response_sums[question][facilitator_name_filter] << answer[facilitator_name_filter]
             else
               answer.each do |facilitator, facilitator_answer|
-                facilitator_specific_free_response_sums[question][facilitator.to_s] << facilitator_answer
+                facilitator_specific_free_response_sums[question][facilitator] << facilitator_answer
               end
             end
           else
@@ -160,7 +159,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
           end
       end
 
-      answer_sum = facilitator_specific_response_sums[question].values.reduce(:+)
+      answer_sum = facilitator_specific_response_sums[question].values.reduce(:+) || 0
 
       response_summary[question] = (answer_sum / responses_for_all_facilitators_count).round(2)
     end
@@ -168,15 +167,14 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     if facilitator_name_filter
       # If there was a facilitator name filter, then make all the facilitator specific
       # answer hashes look like the general hashes
-      facilitator_specific_response_sums.each do |question, facilitator_answer|
-        response_summary[question] = facilitator_answer[facilitator_name_filter]
+      facilitator_specific_summary[facilitator_name_filter].each do |question, facilitator_answer|
+        response_summary[question] = facilitator_answer
       end
 
       facilitator_specific_free_response_sums.each do |question, facilitator_answer|
         free_response_summary[question] = facilitator_answer[facilitator_name_filter]
       end
     else
-      response_sums.merge!(facilitator_specific_response_sums)
       free_response_summary.merge!(facilitator_specific_free_response_sums)
     end
 
@@ -186,7 +184,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     response_summary[:overall_success] = (response_summary.values_at(*OVERALL_SUCCESS_QUESTIONS).reduce(:+) / OVERALL_SUCCESS_QUESTIONS.length.to_f).round(2)
 
     # Compute aggregate scores
-    response_summary[:facilitator_effectiveness] = (response_summary.values_at(*FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS).reduce(:+) / FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.length.to_f).round(2)
+    response_summary[:facilitator_effectiveness] = (response_summary.values_at(*FACILITATOR_EFFECTIVENESS_QUESTIONS).reduce(:+) / FACILITATOR_EFFECTIVENESS_QUESTIONS.length.to_f).round(2)
     response_summary[:number_teachers] = workshops.flat_map(&:attending_teachers).count
     response_summary[:response_count] = responses.count
 
@@ -198,7 +196,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     # return a histogram showing FacilitatorName=># Responses.
     # Using 'how_often_given_feedback_s' for no particular reason - any of the facilitator
     # specific responses would do fine here
-    facilitator_name_responses = responses.map {|x| x[:how_often_given_feedback_s]}.flat_map(&:keys)
+    facilitator_name_responses = responses.map {|x| x['how_often_given_feedback_s']}.flat_map(&:keys)
     Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
   end
 
