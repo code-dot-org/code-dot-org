@@ -33,11 +33,13 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def workshops_user_enrolled_in
     authorize! :workshops_user_enrolled_in, Pd::Workshop
 
-    workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
-      unless future_or_current_teachercon_or_fit?(enrollment.workshop)
-        Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
+    enrollments = ::Pd::Enrollment.for_user(current_user).all.
+      reject do |enrollment|
+        future_or_current_teachercon_or_fit?(enrollment.workshop)
       end
-    end.compact
+    workshops = enrollments.map do |enrollment|
+      Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
+    end
 
     render json: workshops
   end
