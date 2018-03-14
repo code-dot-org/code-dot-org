@@ -7,45 +7,4 @@
     but we were unable to match them with a Regional Partner.
   Please follow up with them directly at your convenience.
 
-%p
-  %b Name:
-  - if @form[:title]
-    = "#{@form[:title]}" + ' '
-  = "#{@form[:first_name]}" + ' ' + "#{@form[:last_name]}"
-  %br
-  %b Email:
-  = "#{@form[:email]}"
-  %br
-  %b Job Role:
-  = "#{@form[:role]}"
-  %br
-  %b Job Title:
-  = "#{@form[:job_title]}"
-
-%p
-  %b School State:
-  = "#{@form[:school_state]}"
-
-%p
-  - if @form[:school_district]
-    %b School District:
-    = "#{@form[:school_district]}"
-    %br
-  - if @form[:school_name]
-    %b School Name:
-    = "#{@form[:school_name]}"
-    %br
-  %b School Type:
-  = "#{@form[:school_type].capitalize}"
-  %br
-  %b Grade Levels:
-  = "#{@form[:grade_levels].join(', ')}"
-  %br
-  - if @form[:program]
-    %b Program:
-    = "#{@form[:program].map {|item| item.gsub(/\((.*)\)/, '').strip}.join(', ')}"
-
-- if @form[:message]
-  %p
-    %b Message:
-    = "#{@form[:notes]}"
+= render partial: 'form_body'
