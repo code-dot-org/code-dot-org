@@ -17,35 +17,21 @@ export function pegasus(relativeUrl) {
 }
 
 /**
- * Retrieve the meta description tag from the specified url
+ * Fetch the meta description tag from the specified url
  * Memoize so that we only request once per relative url.
  */
-export function metaTagDescription(relativeUrl) {
-  return metaTagMemoized(relativeUrl);
-}
-
-/**
-* Fetch the html of the given page and parse to get content of
-* 'description' meta tag.
-*/
-const metaTagMemoized = _.memoize((relativeUrl) => {
+export const metaTagDescription = _.memoize((relativeUrl) => {
   return fetch(relativeUrl)
-    .then(
-      response => {
-        // Catch fetch's 400 errors
-        if (response.status < 200 || response.status >= 300) {
-          return relativeUrl;
-        } else {
-          return response.text().then(data => {
-            const metaTag = $(data).filter("meta[name='description']").attr("content");
-            // Return url if there was no description meta tag
-            if (metaTag) {
-              return metaTag;
-            } else {
-              return relativeUrl;
-            }
-          });
-        }
+    .then(response => Promise.all([response.status, response.text()]))
+    .then((status,text) => {
+      // Catch fetch's 400 errors
+      if (status < 200 || status >= 300) {
+        return relativeUrl;
+      } else {
+        const metaTag = $(text).filter("meta[name='description']").attr("content");
+        // Return url if there was no description meta tag
+        return metaTag || relativeUrl;
       }
-    ).catch(error => relativeUrl);
+    })
+    .catch(error => relativeUrl);
 });
