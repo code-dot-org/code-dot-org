@@ -23,7 +23,8 @@ export default class SharingControlActionsHeaderCell extends Component {
           </PopUpMenu.Item>
           <MenuBreak/>
           <PopUpMenu.Item
-            onClick={() => console.log('learn more was clicked')}
+            href={'https://support.code.org/hc/en-us/articles/115001554911-Configuring-sharing-options-for-students-using-App-Lab-Game-Lab-and-Web-Lab'}
+            openInNewTab
           >
             {i18n.learnMore()}
           </PopUpMenu.Item>
