@@ -50,6 +50,7 @@ class AddMultipleStudents extends Component {
           useUpdatedStyles
           isOpen={this.state.isDialogOpen}
           style={styles.dialog}
+          handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
           <div>
