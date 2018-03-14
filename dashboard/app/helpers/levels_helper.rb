@@ -236,8 +236,8 @@ module LevelsHelper
     # Sets video and additional reference options for this level
     if @app_options[:level]
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
-      @app_options[:level][:mapReference] = @level.additional_reference_links[:mapReference]
-      @app_options[:level][:referenceLinks] = @level.additional_reference_links[:referenceLinks]
+      @app_options[:level][:mapReference] = @level.map_reference
+      @app_options[:level][:referenceLinks] = @level.reference_links
     end
 
     if current_user
