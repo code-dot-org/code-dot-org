@@ -1,7 +1,7 @@
 class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   load_and_authorize_resource :section
 
-  skip_before_action :verify_authenticity_token, only: :update
+  skip_before_action :verify_authenticity_token, only: :update, :bulk_add
 
   # GET /sections/<section_id>/students
   def index
@@ -22,6 +22,18 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     else
       render json: {errors: student.errors.full_messages}, status: :bad_request
     end
+  end
+
+  def bulk_add
+    puts "hi we're going to bulk add some students"
+    new_students = []
+    params[:students].each do |student|
+      new_student = User.create(age: student["age"], name: student["name"], gender: student["gender"], sharing_disabled: student["sharing_disabled"])
+      @section.add_student(new_student)
+      new_students.push(new_student.summarize)
+    end
+
+    render json: new_students
   end
 
   def student_params
