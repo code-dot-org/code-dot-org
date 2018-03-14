@@ -97,11 +97,10 @@ class DashboardStudent
 
     # Add user age and sharing_disabled to the hash.
     ids.map do |id|
-      if allowed_rows.key? id
-        allowed_rows[id][:age] = birthday_to_age(allowed_rows[id][:birthday])
-        allowed_rows[id][:sharing_disabled] = JSON.parse(allowed_rows[id][:properties])["sharing_disabled"]
-        allowed_rows[id].delete(:properties)
-      end
+      next unless allowed_rows.key? id
+      allowed_rows[id][:age] = birthday_to_age(allowed_rows[id][:birthday])
+      allowed_rows[id][:sharing_disabled] = JSON.parse(allowed_rows[id][:properties])["sharing_disabled"]
+      allowed_rows[id].delete(:properties)
     end
 
     # Return an array of hashes.
