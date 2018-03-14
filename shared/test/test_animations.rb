@@ -279,10 +279,10 @@ class AnimationsTest < FilesApiTestBase
     assert_equal v2_file_data, restored_file_data
 
     #Check that the metadata exists and includes the expected keys and values
-    pp restored_metadata
-    assert_equal '0', restored_metadata['abuse-score']
-    refute_nil restored_metadata['failed-restore-at']
-    assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version']
+    #Observed inconsistency with metadata using underline and hyphen - check both for resiliency
+    assert_equal '0', restored_metadata['abuse-score'] ? restored_metadata['abuse-score'] : restored_metadata['abuse_score']
+    refute_nil restored_metadata['failed-restore-at'] ? restored_metadata['failed-restore-at'] : restored_metadata['failed_restore_at']
+    assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version'] ? restored_metadata['failed-restore-from-version'] : restored_metadata['failed_restore_from_version']
 
     @api.delete_object(anim)
   end
@@ -301,7 +301,6 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # List object versions
-    # List versions.
     versions_old = @api.list_object_versions(filename)
     assert successful?
 
@@ -309,13 +308,38 @@ class AnimationsTest < FilesApiTestBase
     animation_bucket = AnimationBucket.new
     response = animation_bucket.restore_previous_version(@channel_id, filename, "bad_version_id", nil)
 
+    # Response indicates mot modified
+    assert_equal 'NOT_MODIFIED', response[:status]
+
     # List object versions, check nothing changed.
     versions_new = @api.list_object_versions(filename)
     assert_equal versions_old, versions_new
+
+    @api.delete_object(filename)
   end
 
   def test_doesnt_mask_unrelated_errors
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
 
+    # Stub copy_object to give an error
+    BucketHelper.s3.stubs(:copy_object).raises("Test Error")
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    @api.post_file(filename, v1_file_data, 'image/png')
+    assert successful?
+    original_version_id = JSON.parse(last_response.body)['versionId']
+
+    # Attempt restore with version id
+    animation_bucket = AnimationBucket.new
+
+    # Check that restoring raises an error per above stub
+    assert_raises do
+      animation_bucket.restore_previous_version(@channel_id, filename, original_version_id, nil)
+    end
+
+    @api.delete_object(filename)
   end
 
   private
