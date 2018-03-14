@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
-import ResourceLink from './ResourceLink';
+import NetworkResourceLink from './NetworkResourceLink';
 import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
@@ -36,16 +36,17 @@ export default class HelpTabContents extends Component {
           />
         }
         {displayMapLinks &&
-          <ResourceLink
-            map={true}
+          <NetworkResourceLink
+            highlight
+            icon="map"
             reference={this.props.mapReference}
           />
         }
         {displayReferenceLinks &&
           this.props.referenceLinks.map((link, index) => (
-            <ResourceLink
+            <NetworkResourceLink
               key={index}
-              map={false}
+              icon="book"
               reference={link}
             />
           ))

@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import _ from 'lodash';
 /**
  * Attempt to construct an absolute Pegasus url (that is,
  * starting with https://code.org or the appropriate
@@ -13,3 +15,37 @@ export function pegasus(relativeUrl) {
   }
   return relativeUrl;
 }
+
+/**
+ * Retrieve the meta description tag from the specified url
+ * Memoize so that we only request once per relative url.
+ */
+export function metaTagDescription(relativeUrl) {
+  return metaTagMemoized(relativeUrl);
+}
+
+/**
+* Fetch the html of the given page and parse to get content of
+* 'description' meta tag.
+*/
+const metaTagMemoized = _.memoize((relativeUrl) => {
+  return fetch(relativeUrl)
+    .then(
+      response => {
+        // Catch fetch's 400 errors
+        if (response.status < 200 || response.status >= 300) {
+          return relativeUrl;
+        } else {
+          return response.text().then(data => {
+            const metaTag = $(data).filter("meta[name='description']").attr("content");
+            // Return url if there was no description meta tag
+            if (metaTag) {
+              return metaTag;
+            } else {
+              return relativeUrl;
+            }
+          });
+        }
+      }
+    ).catch(error => relativeUrl);
+});
