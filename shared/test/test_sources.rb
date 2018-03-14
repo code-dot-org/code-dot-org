@@ -4,6 +4,8 @@ require 'cdo/share_filtering'
 require 'timecop'
 require 'cdo/firehose'
 
+MAIN_JSON = 'main.json'
+
 class SourcesTest < FilesApiTestBase
   def setup
     # Stub out helpers that make remote API calls
@@ -12,6 +14,7 @@ class SourcesTest < FilesApiTestBase
 
     @channel = create_channel
     @api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+
     # Sources operations are animation-manifest aware, so some of our tests
     # also interact with the animations API.
     @animations_api = FilesApiTestHelper.new(current_session, 'animations', @channel)
@@ -81,7 +84,6 @@ class SourcesTest < FilesApiTestBase
     filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
-    delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
@@ -107,7 +109,6 @@ class SourcesTest < FilesApiTestBase
     filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
-    delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
@@ -152,7 +153,6 @@ class SourcesTest < FilesApiTestBase
     filename = 'main.json'
     file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
-    delete_all_source_versions(filename)
     @api.put_object(filename, file_data, file_headers)
     assert successful?
     policy_check_response = @api.channel_policy_violation
@@ -237,7 +237,6 @@ class SourcesTest < FilesApiTestBase
       {"source":"//version 1"}
     JSON
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
-    delete_all_source_versions(filename)
 
     # Upload version 1
     v1_result = @api.put_object(filename, v1_data, file_headers)
@@ -285,7 +284,6 @@ class SourcesTest < FilesApiTestBase
 
     # Upload main.json version 1
     main_json_filename = 'main.json'
-    delete_all_source_versions(main_json_filename)
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     main_json_v1 = <<-JSON
       {
@@ -391,7 +389,6 @@ class SourcesTest < FilesApiTestBase
 
     # Upload main.json version 1 with bad animation version
     main_json_filename = 'main.json'
-    delete_all_source_versions(main_json_filename)
     file_headers = {'CONTENT_TYPE' => 'text/javascript'}
     main_json_v1 = <<-JSON
       {
