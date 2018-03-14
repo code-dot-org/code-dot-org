@@ -24,7 +24,7 @@ class DashboardStudent
     gender = valid_gender?(params[:gender]) ? params[:gender] : nil
     birthday = age_to_birthday(params[:age]) ?
       age_to_birthday(params[:age]) : params[:birthday]
-
+    sharing_disabled = params[:sharing_disabled]
     created_at = DateTime.now
 
     row = Dashboard.db[:users].insert(
@@ -33,6 +33,7 @@ class DashboardStudent
         user_type: 'student',
         provider: 'sponsored',
         gender: gender,
+        properties: {sharing_disabled: sharing_disabled}.to_json,
         birthday: birthday,
         created_at: created_at,
         updated_at: created_at,
@@ -82,7 +83,8 @@ class DashboardStudent
       left_outer_join(:secret_pictures, id: :secret_picture_id).
       select(*fields,
         :secret_pictures__name___secret_picture_name,
-        :secret_pictures__path___secret_picture_path
+        :secret_pictures__path___secret_picture_path,
+        :properties___properties,
       )
 
     # Convert allowed_rows from an array of hashes (each representing a user)
@@ -93,10 +95,12 @@ class DashboardStudent
       end
     end
 
-    # Add user age to the hash.
+    # Add user age and sharing_disabled to the hash.
     ids.map do |id|
       if allowed_rows.key? id
         allowed_rows[id][:age] = birthday_to_age(allowed_rows[id][:birthday])
+        allowed_rows[id][:sharing_disabled] = JSON.parse(allowed_rows[id][:properties])["sharing_disabled"]
+        allowed_rows[id].delete(:properties)
       end
     end
 
