@@ -232,31 +232,20 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_restore_main_json_version
-    filename = 'main.json'
-    v1_data = <<-JSON
-      {"source":"//version 1"}
-    JSON
-    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
-
-    # Upload version 1
-    v1_result = @api.put_object(filename, v1_data, file_headers)
-    assert successful?
-    v1_version_id = JSON.parse(v1_result)['versionId']
+    # Write version 1
+    v1_data = {"source": "//version 1"}.stringify_keys
+    v1_version_id = put_main_json(v1_data)
 
     # Write version 2
-    v2_data = <<-JSON
-      {"source":"//version 2"}
-    JSON
-    v2_result = @api.put_object(filename, v2_data, file_headers)
-    assert successful?
-    v2_version_id = JSON.parse(v2_result)['versionId']
+    v2_data = {"source": "//version 2"}.stringify_keys
+    v2_version_id = put_main_json(v2_data)
 
     # Restore version 1
-    restore_result = @api.restore_sources_version(filename, v1_version_id)
+    restore_result = @api.restore_sources_version(MAIN_JSON, v1_version_id)
     restored_version_id = restore_result['version_id']
 
     # List versions.
-    versions = @api.list_object_versions(filename)
+    versions = @api.list_object_versions(MAIN_JSON)
     assert successful?
     assert_equal 3, versions.count
     assert_equal(
@@ -265,10 +254,10 @@ class SourcesTest < FilesApiTestBase
     )
 
     # New version id, same body
-    restored_data = @api.get_object(filename)
-    assert_equal_json v1_data, restored_data
+    restored_data = @api.get_object(MAIN_JSON)
+    assert_equal_json v1_data.to_json, restored_data
 
-    delete_all_source_versions(filename)
+    delete_all_source_versions(MAIN_JSON)
   end
 
   def test_restore_main_json_and_animations
@@ -283,29 +272,19 @@ class SourcesTest < FilesApiTestBase
     animation_v1_vid = JSON.parse(last_response.body)['versionId']
 
     # Upload main.json version 1
-    main_json_filename = 'main.json'
-    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
-    main_json_v1 = <<-JSON
-      {
-        "source":"//version 1",
-        "animations": {
-          "orderedKeys": [
-            "#{animation_key}"
-          ],
-          "propsByKey": {
-            "#{animation_key}": {
-              "name": "Test animation",
-              "frameCount": 3,
-              "version": "#{animation_v1_vid}"
-            }
+    v1_parsed = {
+      "source": "//version 1",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "Test animation",
+            "version": animation_v1_vid
           }
         }
       }
-    JSON
-    v1_parsed = JSON.parse(main_json_v1)
-    @api.put_object(main_json_filename, main_json_v1, file_headers)
-    assert successful?
-    main_json_v1_vid = JSON.parse(last_response.body)['versionId']
+    }.stringify_keys
+    main_json_v1_vid = put_main_json(v1_parsed)
 
     # Modify the animation
     animation_v2 = 'stub-png-v2'
@@ -314,29 +293,22 @@ class SourcesTest < FilesApiTestBase
     animation_v2_vid = JSON.parse(last_response.body)['versionId']
 
     # Update main.json
-    main_json_v2 = <<-JSON
-      {
-        "source":"//version 2",
-        "animations": {
-          "orderedKeys": [
-            "#{animation_key}"
-          ],
-          "propsByKey": {
-            "#{animation_key}": {
-              "name": "Test animation",
-              "frameCount": 3,
-              "version": "#{animation_v2_vid}"
-            }
+    main_json_v2 = {
+      "source": "//version 2",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "Test animation",
+            "version": animation_v2_vid
           }
         }
       }
-    JSON
-    @api.put_object(main_json_filename, main_json_v2, file_headers)
-    assert successful?
-    main_json_v2_vid = JSON.parse(last_response.body)['versionId']
+    }.stringify_keys
+    main_json_v2_vid = put_main_json(main_json_v2)
 
     # Restore main.json to v1
-    @api.restore_sources_version(main_json_filename, main_json_v1_vid)
+    @api.restore_sources_version(MAIN_JSON, main_json_v1_vid)
     assert successful?
     main_json_restored_vid = JSON.parse(last_response.body)['version_id']
 
@@ -354,7 +326,7 @@ class SourcesTest < FilesApiTestBase
     assert_equal(animation_v1, last_response.body)
 
     # Expect main.json to have a v3 based on v1
-    main_json_versions = @api.list_object_versions(main_json_filename)
+    main_json_versions = @api.list_object_versions(MAIN_JSON)
     assert successful?
     assert_equal 3, main_json_versions.count
     assert_equal main_json_restored_vid, main_json_versions[0]['versionId']
@@ -364,7 +336,7 @@ class SourcesTest < FilesApiTestBase
     refute_equal main_json_v2_vid, main_json_restored_vid
 
     # Expect latest main.json v3 to reference animation v3
-    @api.get_object(main_json_filename)
+    @api.get_object(MAIN_JSON)
     v3_parsed = JSON.parse(last_response.body)
     assert_equal(v1_parsed['source'], v3_parsed['source'])
     assert_equal(
@@ -373,7 +345,7 @@ class SourcesTest < FilesApiTestBase
     )
 
     delete_all_animation_versions(animation_filename)
-    delete_all_source_versions(main_json_filename)
+    delete_all_source_versions(MAIN_JSON)
   end
 
   def test_restore_main_json_with_bad_animation_versions
@@ -388,28 +360,19 @@ class SourcesTest < FilesApiTestBase
     animation_v1_vid = JSON.parse(last_response.body)['versionId']
 
     # Upload main.json version 1 with bad animation version
-    main_json_filename = 'main.json'
-    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
-    main_json_v1 = <<-JSON
-      {
-        "source":"//version 1",
-        "animations": {
-          "orderedKeys": [
-            "#{animation_key}"
-          ],
-          "propsByKey": {
-            "#{animation_key}": {
-              "name": "Test animation v1",
-              "version": "not_a_real_version_id_v1"
-            }
+    v1_parsed = {
+      "source": "//version 1",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "Test animation v1",
+            "version": "not_a_real_version_id_v1"
           }
         }
       }
-    JSON
-    v1_parsed = JSON.parse(main_json_v1)
-    @api.put_object(main_json_filename, main_json_v1, file_headers)
-    assert successful?
-    main_json_v1_vid = JSON.parse(last_response.body)['versionId']
+    }.stringify_keys
+    main_json_v1_vid = put_main_json(v1_parsed)
 
     # Modify the animation
     animation_v2 = 'stub-png-v2'
@@ -418,28 +381,22 @@ class SourcesTest < FilesApiTestBase
     animation_v2_vid = JSON.parse(last_response.body)['versionId']
 
     # Update main.json, with new bad version
-    main_json_v2 = <<-JSON
-      {
-        "source":"//version 2",
-        "animations": {
-          "orderedKeys": [
-            "#{animation_key}"
-          ],
-          "propsByKey": {
-            "#{animation_key}": {
-              "name": "Test animation v2",
-              "version": "not_a_real_version_id_v2"
-            }
+    main_json_v2 = {
+      "source": "//version 2",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "Test animation v2",
+            "version": "not_a_real_version_id_v2"
           }
         }
       }
-    JSON
-    @api.put_object(main_json_filename, main_json_v2, file_headers)
-    assert successful?
-    main_json_v2_vid = JSON.parse(last_response.body)['versionId']
+    }.stringify_keys
+    main_json_v2_vid = put_main_json(main_json_v2)
 
     # Restore main.json to v1
-    @api.restore_sources_version(main_json_filename, main_json_v1_vid)
+    @api.restore_sources_version(MAIN_JSON, main_json_v1_vid)
     assert successful?
     main_json_restored_vid = JSON.parse(last_response.body)['version_id']
 
@@ -457,7 +414,7 @@ class SourcesTest < FilesApiTestBase
     assert_equal(animation_v2, last_response.body)
 
     # Expect main.json to have a v3 based on v1
-    main_json_versions = @api.list_object_versions(main_json_filename)
+    main_json_versions = @api.list_object_versions(MAIN_JSON)
     assert successful?
     assert_equal 3, main_json_versions.count
     assert_equal main_json_restored_vid, main_json_versions[0]['versionId']
@@ -467,7 +424,7 @@ class SourcesTest < FilesApiTestBase
     refute_equal main_json_v2_vid, main_json_restored_vid
 
     # Expect latest main.json v3 to reference animation v3
-    @api.get_object(main_json_filename)
+    @api.get_object(MAIN_JSON)
     v3_parsed = JSON.parse(last_response.body)
     assert_equal(v1_parsed['source'], v3_parsed['source'])
     assert_equal(
@@ -476,10 +433,21 @@ class SourcesTest < FilesApiTestBase
     )
 
     delete_all_animation_versions(animation_filename)
-    delete_all_source_versions(main_json_filename)
+    delete_all_source_versions(MAIN_JSON)
   end
 
   private
+
+  #
+  # Upload a new main.json version to the API
+  # @param [Hash] body The main.json data given as a hash with string keys.
+  # @return [String] S3 version id of the uploaded file
+  #
+  def put_main_json(body)
+    @api.put_object(MAIN_JSON, body.to_json, {'CONTENT_TYPE' => 'application/json'})
+    assert successful?
+    JSON.parse(last_response.body)['versionId']
+  end
 
   def delete_all_source_versions(filename)
     delete_all_versions(CDO.sources_s3_bucket, "sources_test/1/1/#{filename}")
