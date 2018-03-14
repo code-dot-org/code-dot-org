@@ -56,6 +56,7 @@ const initialState = {
   studentData: {},
   editingData: {},
   sectionId: null,
+  showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
 };
 
@@ -73,6 +74,7 @@ const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
+const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -92,6 +94,7 @@ export const addStudentsFailure = (numStudents, error, studentIds) => (
   { type: ADD_STUDENT_FAILURE, numStudents, error, studentIds }
 );
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
+export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -393,6 +396,12 @@ export default function manageStudents(state=initialState, action) {
         ...state.editingData,
         ...action.studentData
       }
+    };
+  }
+  if (action.type === TOGGLE_SHARING_COLUMN) {
+    return {
+      ...state,
+      showSharingColumn: !state.showSharingColumn,
     };
   }
 
