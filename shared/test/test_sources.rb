@@ -267,9 +267,7 @@ class SourcesTest < FilesApiTestBase
 
     # Create an animation
     animation_v1 = 'stub-png-v1'
-    @animations_api.post_file(animation_filename, animation_v1, 'image/png')
-    assert successful?
-    animation_v1_vid = JSON.parse(last_response.body)['versionId']
+    animation_v1_vid = put_animation(animation_filename, animation_v1)
 
     # Upload main.json version 1
     v1_parsed = {
@@ -287,10 +285,7 @@ class SourcesTest < FilesApiTestBase
     main_json_v1_vid = put_main_json(v1_parsed)
 
     # Modify the animation
-    animation_v2 = 'stub-png-v2'
-    @animations_api.post_file(animation_filename, animation_v2, 'image/png')
-    assert successful?
-    animation_v2_vid = JSON.parse(last_response.body)['versionId']
+    animation_v2_vid = put_animation(animation_filename, 'stub-png-v2')
 
     # Update main.json
     main_json_v2 = {
@@ -354,10 +349,7 @@ class SourcesTest < FilesApiTestBase
     delete_all_animation_versions(animation_filename)
 
     # Create an animation
-    animation_v1 = 'stub-png-v1'
-    @animations_api.post_file(animation_filename, animation_v1, 'image/png')
-    assert successful?
-    animation_v1_vid = JSON.parse(last_response.body)['versionId']
+    animation_v1_vid = put_animation(animation_filename, 'stub-png-v1')
 
     # Upload main.json version 1 with bad animation version
     v1_parsed = {
@@ -376,11 +368,9 @@ class SourcesTest < FilesApiTestBase
 
     # Modify the animation
     animation_v2 = 'stub-png-v2'
-    @animations_api.post_file(animation_filename, animation_v2, 'image/png')
-    assert successful?
-    animation_v2_vid = JSON.parse(last_response.body)['versionId']
+    animation_v2_vid = put_animation(animation_filename, animation_v2)
 
-    # Update main.json, with new bad version
+    # Update main.json, with different bad version
     main_json_v2 = {
       "source": "//version 2",
       "animations": {
@@ -445,6 +435,18 @@ class SourcesTest < FilesApiTestBase
   #
   def put_main_json(body)
     @api.put_object(MAIN_JSON, body.to_json, {'CONTENT_TYPE' => 'application/json'})
+    assert successful?
+    JSON.parse(last_response.body)['versionId']
+  end
+
+  #
+  # Upload a new animation version to the API
+  # @param [String] filename The animation filename (usually <key>.png)
+  # @param [String] body The animation file body
+  # @return [String] S3 version id of the uploaded file
+  #
+  def put_animation(filename, body)
+    @animations_api.post_file(filename, body, 'image/png')
     assert successful?
     JSON.parse(last_response.body)['versionId']
   end
