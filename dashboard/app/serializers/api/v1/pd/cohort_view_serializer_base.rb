@@ -8,7 +8,8 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     :email,
     :assigned_workshop,
     :registered_workshop,
-    :status
+    :status,
+    :locked
   )
 
   def email
@@ -21,5 +22,9 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
 
   def registered_workshop
     object.registered_workshop? ? 'Yes' : 'No'
+  end
+
+  def locked
+    object.class.can_see_locked_status?(@scope[:user]) ? object.locked? : nil
   end
 end
