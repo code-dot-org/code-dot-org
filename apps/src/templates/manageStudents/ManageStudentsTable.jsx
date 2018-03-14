@@ -218,6 +218,7 @@ class ManageStudentsTable extends Component {
               {showShareColumn &&
                 <ManageStudentsActionsHeaderCell
                   editAll={this.props.editAll}
+                  isShareColumnVisible={this.props.showSharingColumn}
                 />
               }
             </div>
