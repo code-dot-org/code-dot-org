@@ -741,5 +741,28 @@ module Pd::Application
       application.assign_default_workshop!
       assert_equal workshop.id, application.reload.pd_workshop_id
     end
+
+    test 'can_see_locked_status?' do
+      teacher = create :teacher
+      g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
+      g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
+      workshop_admin = create :workshop_admin
+
+      refute Teacher1819Application.can_see_locked_status?(teacher)
+      refute Teacher1819Application.can_see_locked_status?(g1_program_manager)
+
+      assert Teacher1819Application.can_see_locked_status?(g3_program_manager)
+      assert Teacher1819Application.can_see_locked_status?(workshop_admin)
+    end
+
+    test 'locked status appears in csv only when the supplied user can_see_locked_status' do
+      mock_user = mock
+
+      Teacher1819Application.stubs(:can_see_locked_status?).returns(false)
+      refute Teacher1819Application.csv_header('csf', mock_user).include? 'Locked'
+
+      Teacher1819Application.stubs(:can_see_locked_status?).returns(true)
+      assert Teacher1819Application.csv_header('csf', mock_user).include? 'Locked'
+    end
   end
 end

@@ -9,6 +9,7 @@ import {
   FormControl,
   InputGroup
 } from 'react-bootstrap';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailViewApplicationSpecificQuestions from './detail_view_application_specific_questions';
 import $ from 'jquery';
 import DetailViewResponse from './detail_view_response';
@@ -30,8 +31,16 @@ const styles = {
   statusSelect: {
     marginRight: '5px'
   },
+  editMenuContainer: {
+    display: 'inline-block' // fit contents
+  },
   editMenu: {
-    display: 'flex',
+    display: 'flex'
+  },
+  // React-Bootstrap components don't play well inside a flex box,
+  // so this is required to get the contained split button to stay together.
+  flexSplitButtonContainer: {
+    flex: '0 0 auto'
   },
   detailViewHeader: {
     marginLeft: 'auto'
@@ -47,6 +56,10 @@ const styles = {
     maxWidth: 200,
     marginRight: 5,
     marginLeft: 5,
+  },
+  lockedStatus: {
+    fontFamily: '"Gotham 7r"',
+    marginTop: 10
   }
 };
 
@@ -82,7 +95,8 @@ export class DetailViewContents extends React.Component {
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
+    regionalPartnerGroup: PropTypes.number
   };
 
   static contextTypes = {
@@ -255,18 +269,20 @@ export class DetailViewContents extends React.Component {
       )];
     } else if (this.props.isWorkshopAdmin) {
       return (
-        <SplitButton
-          id="admin-edit"
-          pullRight
-          title="Edit"
-          onClick={this.handleEditClick}
-        >
-          <MenuItem
-            onSelect={this.handleAdminEditClick}
+        <div style={styles.flexSplitButtonContainer}>
+          <SplitButton
+            id="admin-edit"
+            pullRight
+            title="Edit"
+            onClick={this.handleEditClick}
           >
-            (Admin) Edit Form Data
-          </MenuItem>
-        </SplitButton>
+            <MenuItem
+              onSelect={this.handleAdminEditClick}
+            >
+              (Admin) Edit Form Data
+            </MenuItem>
+          </SplitButton>
+        </div>
       );
     } else {
       return (
@@ -318,11 +334,27 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  renderEditMenu = () => {
+  showLocked = () => (
+    this.props.isWorkshopAdmin
+    || this.props.viewType === 'facilitator'
+    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
+  );
+
+  renderEditMenu = (textAlign='left') => {
     return (
-      <div style={styles.editMenu}>
-        {this.renderStatusSelect()}
-        {this.renderEditButtons()}
+      <div style={styles.editMenuContainer}>
+        <div style={styles.editMenu}>
+          {this.renderStatusSelect()}
+          {this.renderEditButtons()}
+        </div>
+        {
+          this.showLocked() &&
+          <div style={{...styles.lockedStatus, textAlign}}>
+            <FontAwesome icon={this.state.locked ? 'lock' : 'unlock'}/>&nbsp;
+            Application is&nbsp;
+            {this.state.locked ? 'Locked' : 'Unlocked'}
+          </div>
+        }
       </div>
     );
   };
@@ -357,7 +389,7 @@ export class DetailViewContents extends React.Component {
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
-          {this.renderEditMenu()}
+          {this.renderEditMenu('right')}
         </div>
       </div>
     );
@@ -488,6 +520,7 @@ export class DetailViewContents extends React.Component {
 }
 
 export default connect(state => ({
+  regionalPartnerGroup: state.regionalPartnerGroup,
   canLock: state.permissions.lockApplication,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(DetailViewContents);
