@@ -568,7 +568,7 @@ class Script < ActiveRecord::Base
       custom_files.map do |script|
         name = File.basename(script, '.script')
         name += new_suffix if new_suffix
-        script_data, i18n = ScriptDSL.parse_file(script)
+        script_data, i18n = ScriptDSL.parse_file(script, name)
 
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
@@ -749,9 +749,14 @@ class Script < ActiveRecord::Base
 
   def clone_with_suffix(new_suffix)
     script_filename = "config/scripts/#{name}.script"
-    _, custom_i18n = Script.setup([script_filename], new_suffix: new_suffix)
-    Script.merge_and_write_i18n(custom_i18n)
     new_name = "#{name}#{new_suffix}"
+    _, custom_i18n = Script.setup([script_filename], new_suffix: new_suffix)
+
+    # Omit any unused stage names. custom_i18n will already contain any stage
+    # still in use, and summarize_i18n(true) may return some stage names which
+    # are no longer in use.
+    metadata_i18n = summarize_i18n(false)
+    Script.merge_and_write_i18n(custom_i18n, new_name, metadata_i18n)
 
     new_filename = "config/scripts/#{new_name}.script"
     ScriptDSL.serialize(Script.find_by_name(new_name), new_filename)
