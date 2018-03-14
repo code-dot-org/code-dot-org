@@ -18,6 +18,7 @@ import manageStudents, {
   AddStatus,
   addMultipleRows,
   RowType,
+  toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -117,6 +118,15 @@ const expectedBlankRow = {
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
+
+  describe('toggleSharingColumn', () => {
+    it('toggle showSharingColumn state', () => {
+      const action = toggleSharingColumn();
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.showSharingColumn,
+        !initialState.showSharingColumn);
+    });
+  });
 
   describe('setLoginType', () => {
     it('sets login type for the section in view', () => {

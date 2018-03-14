@@ -56,6 +56,7 @@ const blankNewStudentRow = {
  * studentData - represents student information persisted on the server.
  * if isEditing (in studentData), then editingData represents the data
  * in the edit fields on the client which has not yet been persisted to the server.
+ * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
  * addStatus - status is of type AddStatus and numStudents is how many students were added.
  */
 const initialState = {
