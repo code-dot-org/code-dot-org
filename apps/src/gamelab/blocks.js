@@ -6,7 +6,7 @@ const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
 const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
 
-const SPRITES = [
+const DEFAULT_SPRITES = [
   ['dog', '"dog"'],
   ['cat', '"cat"'],
 ];
@@ -17,6 +17,19 @@ export default {
     const SPRITE_TYPE = blockly.BlockValueType.NONE;
     const { ORDER_MEMBER } = Blockly.JavaScript;
 
+    let sprites = DEFAULT_SPRITES;
+    if (blockInstallOptions.level.startAnimations) {
+      const animationList = JSON.parse(blockInstallOptions.level.startAnimations);
+      if (animationList.orderedKeys.length === 0) {
+        console.warn("No sprites available");
+      } else {
+        sprites = animationList.orderedKeys.map(key => {
+          const name = animationList.propsByKey[key].name;
+          return [name, `"${name}"`];
+        });
+      }
+    }
+
     const createJsWrapperBlock =
       createJsWrapperBlockCreator(blockly, 'gamelab');
 
@@ -25,7 +38,7 @@ export default {
       func: 'makeNewSprite',
       blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
-        { name: 'ANIMATION', options: SPRITES },
+        { name: 'ANIMATION', options: sprites },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
