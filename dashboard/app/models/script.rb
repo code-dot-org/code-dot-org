@@ -559,7 +559,7 @@ class Script < ActiveRecord::Base
     script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
   end
 
-  def self.setup(custom_files)
+  def self.setup(custom_files, new_suffix: nil)
     transaction do
       scripts_to_add = []
 
@@ -567,6 +567,7 @@ class Script < ActiveRecord::Base
       # Load custom scripts from Script DSL format
       custom_files.map do |script|
         name = File.basename(script, '.script')
+        name += new_suffix if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script)
 
         stages = script_data[:stages]
@@ -584,13 +585,13 @@ class Script < ActiveRecord::Base
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |args|
-        add_script(*args)
+        add_script(args[0], args[1], new_suffix: new_suffix)
       end
       [added_scripts, custom_i18n]
     end
   end
 
-  def self.add_script(options, raw_stages)
+  def self.add_script(options, raw_stages, new_suffix: nil)
     raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
     chapter = 0
@@ -633,7 +634,12 @@ class Script < ActiveRecord::Base
           key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
         end
 
-        level = levels_by_key[key] || Level.find_by_key(key)
+        level =
+          if new_suffix && !key.starts_with?('blockly')
+            Level.find_by_name(key).clone_with_suffix(new_suffix, allow_existing: true)
+          else
+            levels_by_key[key] || Level.find_by_key(key)
+          end
 
         if key.starts_with?('blockly')
           # this level is defined in levels.js. find/create the reference to this level
@@ -739,6 +745,16 @@ class Script < ActiveRecord::Base
     script.generate_plc_objects
 
     script
+  end
+
+  def clone_with_suffix(new_suffix)
+    script_filename = "config/scripts/#{name}.script"
+    _, custom_i18n = Script.setup([script_filename], new_suffix: new_suffix)
+    Script.merge_and_write_i18n(custom_i18n)
+    new_name = "#{name}#{new_suffix}"
+
+    new_filename = "config/scripts/#{new_name}.script"
+    ScriptDSL.serialize(Script.find_by_name(new_name), new_filename)
   end
 
   # script is found/created by 'id' (if provided) otherwise by 'name'
