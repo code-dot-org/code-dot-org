@@ -50,7 +50,14 @@ const blankNewStudentRow = {
   rowType: RowType.NEW_STUDENT,
 };
 
-// Initial state for the manageStudents redux store.
+/** Initial state for the manageStudents redux store.
+ * loginType - a SectionLoginType for the active section.
+ * sectionId - the sectionId number for the active section.
+ * studentData - represents student information persisted on the server.
+ * if isEditing (in studentData), then editingData represents the data
+ * in the edit fields on the client which has not yet been persisted to the server.
+ * addStatus - status is of type AddStatus and numStudents is how many students were added.
+ */
 const initialState = {
   loginType: '',
   studentData: {},
@@ -75,6 +82,7 @@ const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
+const EDIT_ALL = 'manageStudents/EDIT_ALL';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -85,6 +93,7 @@ export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId }
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
+export const editAll = () => ({ type: EDIT_ALL });
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
@@ -100,7 +109,7 @@ export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
     dispatch(startSavingStudent(studentId));
-    updateStudentOnServer(state.editingData[studentId], (error, data) => {
+    updateStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
       if (error) {
         console.error(error);
       }
@@ -350,6 +359,20 @@ export default function manageStudents(state=initialState, action) {
       }
     };
   }
+  if (action.type === EDIT_ALL) {
+    let newState = {
+      ...state
+    };
+    for (const studentKey in state.studentData) {
+      const student = state.studentData[studentKey];
+      newState.studentData[student.id].isEditing = true;
+      newState.editingData[student.id] = {
+        ...newState.studentData[student.id],
+        ...state.editingData[student.id],
+      };
+    }
+    return newState;
+  }
   if (action.type === SET_SECRET_IMAGE) {
     return {
       ...state,
@@ -441,16 +464,19 @@ export const convertStudentDataToArray = (studentData) => {
 };
 
 // Make a post request to edit a student.
-const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
+const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
   const dataToUpdate = {
-    id: updatedStudentInfo.id,
-    name: updatedStudentInfo.name,
-    age: updatedStudentInfo.age,
-    gender: updatedStudentInfo.gender,
+    student: {
+      id: updatedStudentInfo.id,
+      name: updatedStudentInfo.name,
+      age: updatedStudentInfo.age,
+      gender: updatedStudentInfo.gender,
+    }
   };
   $.ajax({
-    url: `/v2/students/${dataToUpdate.id}/update`,
-    method: 'POST',
+    url: `/dashboardapi/sections/${sectionId}/students/${dataToUpdate.student.id}`,
+    method: 'PATCH',
+    type: 'json',
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(dataToUpdate),
   }).done((data) => {

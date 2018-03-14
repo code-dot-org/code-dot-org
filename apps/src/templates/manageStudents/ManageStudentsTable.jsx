@@ -13,7 +13,7 @@ import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
-import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
+import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents, editAll} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
@@ -134,6 +134,7 @@ class ManageStudentsTable extends Component {
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
     showSharingColumn: PropTypes.bool,
+    editAll: PropTypes.func,
   };
 
   state = {
@@ -215,7 +216,9 @@ class ManageStudentsTable extends Component {
             </div>
             <div style={styles.headerIcon}>
               {showShareColumn &&
-                <ManageStudentsActionsHeaderCell/>
+                <ManageStudentsActionsHeaderCell
+                  editAll={this.props.editAll}
+                />
               }
             </div>
           </span>
@@ -459,5 +462,8 @@ export default connect(state => ({
 }), dispatch => ({
   saveAllStudents() {
     dispatch(saveAllStudents());
+  },
+  editAll() {
+    dispatch(editAll());
   },
 }))(ManageStudentsTable);
