@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import { connect } from 'react-redux';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
@@ -17,11 +18,13 @@ const styles = {
   statusCell: StatusColors
 };
 
-export default class CohortViewTable extends React.Component {
+class CohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
     path: PropTypes.string.isRequired,
-    viewType: PropTypes.oneOf(['facilitator', 'teacher']).isRequired
+    viewType: PropTypes.oneOf(['facilitator', 'teacher']).isRequired,
+    regionalPartnerGroup: PropTypes.number,
+    isWorkshopAdmin: PropTypes.bool
   };
 
   static contextTypes = {
@@ -45,6 +48,12 @@ export default class CohortViewTable extends React.Component {
       }
     };
   }
+
+  showLocked = () => (
+    this.props.isWorkshopAdmin
+    || this.props.viewType === 'facilitator'
+    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
+  );
 
   constructColumns() {
     const sortable = wrappedSortable(
@@ -109,6 +118,18 @@ export default class CohortViewTable extends React.Component {
       }
     ];
 
+    if (this.showLocked()) {
+      columns.push({
+        property: 'locked',
+        header: {
+          label: 'Locked'
+        },
+        cell: {
+          format: this.formatBoolean
+        }
+      });
+    }
+
     if (this.props.viewType === 'facilitator') {
       columns.push({
           property: 'assigned_fit',
@@ -171,6 +192,8 @@ export default class CohortViewTable extends React.Component {
   // Format dates as abbreviated month and day, e.g. "Mar 9"
   formatDate = (iso8601Date) => moment(iso8601Date).format("MMM D");
 
+  formatBoolean = (bool) => bool ? "Yes" : "No";
+
   formatViewButton = (id) => {
     return (
       <Button
@@ -212,3 +235,8 @@ export default class CohortViewTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  regionalPartnerGroup: state.regionalPartnerGroup,
+  isWorkshopAdmin: state.permissions.workshopAdmin
+}))(CohortViewTable);
