@@ -24,6 +24,7 @@ class Census::StateCsOffering < ApplicationRecord
     'CA',
     'GA',
     'ID',
+    'SC'
   ].freeze
 
   def self.construct_state_school_id(state_code, row_hash)
@@ -35,6 +36,8 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
+    when 'SC'
+      School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
@@ -69,6 +72,9 @@ class Census::StateCsOffering < ApplicationRecord
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
+    when 'SC'
+      # One source per row
+      [row_hash['coursecode']]
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
