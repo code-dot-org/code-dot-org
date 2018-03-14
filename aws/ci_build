@@ -166,7 +166,7 @@ def main
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
       ChatClient.log message, color: 'red'
-      ChatClient.log '<!here> build failure', color: 'red'
+      ChatClient.log "<@#{DevelopersTopic.dotd}> build failure", color: 'red'
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
