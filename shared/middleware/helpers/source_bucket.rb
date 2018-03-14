@@ -53,23 +53,12 @@ class SourceBucket < BucketHelper
     response = s3.put_object(bucket: @bucket, key: key, body: psj.to_json)
 
     # If we get this far, the restore request has succeeded.
-    FirehoseClient.instance.put_record(
-      study: 'project-data-integrity',
-      study_group: 'v2',
-      event: 'version-restored',
-
-      # Make it easy to limit our search to restores in the sources bucket for a certain project.
+    log_restored_file(
       project_id: encrypted_channel_id,
-      data_string: @bucket,
-
       user_id: user_id,
-      data_json: {
-        restoredVersionId: version_id,
-        newVersionId: response.version_id,
-        bucket: @bucket,
-        key: key,
-        filename: filename,
-      }.to_json
+      filename: filename,
+      source_version_id: version_id,
+      new_version_id: response.version_id
     )
 
     response.to_h
