@@ -9,7 +9,7 @@ class ProjectSourceJson
   def each_animation
     return unless animation_manifest?
     @parsed_json['animations']['orderedKeys'].each do |key|
-      yield @parsed_json['animations']['propsByKey'][key]
+      yield @parsed_json['animations']['propsByKey'][key].merge({'key' => key})
     end
   end
 
