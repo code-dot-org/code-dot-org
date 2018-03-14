@@ -43,6 +43,8 @@ class Census::StateCsOffering < ApplicationRecord
     end
   end
 
+  UNSPECIFIED_COURSE = 'unspecified'
+
   CA_COURSE_CODES = %w(
     2451
     2453
@@ -74,7 +76,7 @@ class Census::StateCsOffering < ApplicationRecord
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
     when 'SC'
       # One source per row
-      [row_hash['coursecode']]
+      [UNSPECIFIED_COURSE]
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
