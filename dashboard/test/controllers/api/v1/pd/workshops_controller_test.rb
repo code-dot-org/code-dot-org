@@ -111,6 +111,81 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal enrollment_2.code, response.find {|workshop| workshop_2.id == workshop['id']}['enrollment_code']
   end
 
+  test 'workshops_user_enrolled_in does not return future or in progress teachercon or fit workshops' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    teachercon = create(
+      :pd_workshop,
+      :teachercon,
+      :funded,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner
+    )
+
+    fit_weekend = create(
+      :pd_workshop,
+      :funded,
+      subject: Pd::Workshop::SUBJECT_CSD_FIT,
+      course: Pd::Workshop::COURSE_CSD,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner
+    )
+
+    create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
+    create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
+
+    session = create(:pd_session, workshop: teachercon)
+    teachercon.sessions << session
+    teachercon.start!
+
+    assert teachercon.state == Pd::Workshop::STATE_IN_PROGRESS
+    assert fit_weekend.state == Pd::Workshop::STATE_NOT_STARTED
+
+    get :workshops_user_enrolled_in
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+    assert_equal 0, response.length
+  end
+
+  test 'workshops_user_enrolled_in returns ended teachercon and fit workshops' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    teachercon = create(
+      :pd_ended_workshop,
+      :teachercon,
+      :funded,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner
+    )
+
+    fit_weekend = create(
+      :pd_ended_workshop,
+      :funded,
+      subject: Pd::Workshop::SUBJECT_CSD_FIT,
+      course: Pd::Workshop::COURSE_CSD,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner
+    )
+
+    teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
+    fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
+
+    get :workshops_user_enrolled_in
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+    assert_equal 2, response.length
+    assert_equal teachercon_enrollment.code, response.find {|workshop| teachercon.id == workshop['id']}['enrollment_code']
+    assert_equal fit_weekend_enrollment.code, response.find {|workshop| fit_weekend.id == workshop['id']}['enrollment_code']
+  end
+
   test 'workshop organizers cannot list workshops they are not organizing' do
     sign_in create(:workshop_organizer)
     get :index
