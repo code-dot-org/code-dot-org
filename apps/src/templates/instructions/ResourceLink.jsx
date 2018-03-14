@@ -51,7 +51,7 @@ class ResourceLink extends React.Component {
   };
 
   state = {
-    dialogSelected: false,
+    dialogSelected: false
   };
 
   selectResource = () => {
