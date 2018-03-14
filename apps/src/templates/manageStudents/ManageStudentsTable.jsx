@@ -392,8 +392,6 @@ class ManageStudentsTable extends Component {
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(passwordColumn);
     }
-    //For now always show this column if the experiment flag is on.
-    // TODO: (Erin B & Caley) update so visibility is controlled by project sharing dialog.
     if (this.props.showSharingColumn) {
       dataColumns = dataColumns.concat(projectSharingColumn);
     }
