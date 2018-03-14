@@ -37,8 +37,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       unless future_or_current_teachercon_or_fit?(enrollment.workshop)
         Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
       end
-    end
-    workshops = workshops.compact
+    end.compact
 
     render json: workshops
   end

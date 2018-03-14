@@ -121,7 +121,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
-      regional_partner: @regional_partner
+      regional_partner: @regional_partner,
+      num_sessions: 1
     )
 
     fit_weekend = create(
@@ -137,8 +138,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
 
-    session = create(:pd_session, workshop: teachercon)
-    teachercon.sessions << session
     teachercon.start!
 
     assert teachercon.state == Pd::Workshop::STATE_IN_PROGRESS
