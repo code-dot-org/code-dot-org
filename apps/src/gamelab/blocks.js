@@ -1,4 +1,5 @@
 import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
+import { getStore } from '../redux';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -6,29 +7,23 @@ const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
 const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
 
-const DEFAULT_SPRITES = [
-  ['dog', '"dog"'],
-  ['cat', '"cat"'],
-];
-
 export default {
   install(blockly, blockInstallOptions) {
     // TODO(ram): Create Blockly.BlockValueType.SPRITE
     const SPRITE_TYPE = blockly.BlockValueType.NONE;
     const { ORDER_MEMBER } = Blockly.JavaScript;
 
-    let sprites = DEFAULT_SPRITES;
-    if (blockInstallOptions.level.startAnimations) {
-      const animationList = JSON.parse(blockInstallOptions.level.startAnimations);
+    const sprites = () => {
+      const animationList = getStore().getState().animationList;
       if (animationList.orderedKeys.length === 0) {
         console.warn("No sprites available");
-      } else {
-        sprites = animationList.orderedKeys.map(key => {
-          const name = animationList.propsByKey[key].name;
-          return [name, `"${name}"`];
-        });
+        return null;
       }
-    }
+      return animationList.orderedKeys.map(key => {
+        const name = animationList.propsByKey[key].name;
+        return [name, `"${name}"`];
+      });
+    };
 
     const createJsWrapperBlock =
       createJsWrapperBlockCreator(blockly, 'gamelab');
