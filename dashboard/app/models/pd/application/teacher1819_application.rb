@@ -536,22 +536,6 @@ module Pd::Application
       sanitize_form_data_hash[:principal_approval] || ''
     end
 
-    def date_accepted
-      accepted_at.try(:strftime, '%b %e')
-    end
-
-    def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
-    end
-
-    def registered_workshop
-      if pd_workshop_id
-        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
-      else
-        ''
-      end
-    end
-
     # Called once after the application is submitted, and the principal approval is done
     # Automatically scores the application based on given responses for this and the
     # principal approval application. It is idempotent, and will not override existing

@@ -264,7 +264,7 @@ module LevelsHelper
   # Helper that renders the _apps_dependencies partial with a configuration
   # appropriate to the level being rendered.
   def render_app_dependencies
-    use_droplet = app_options[:droplet]
+    use_droplet = @level.uses_droplet?
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game.app == Game::GAMELAB

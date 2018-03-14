@@ -50,8 +50,6 @@ module Api::V1::Pd
           )
         )
       )
-
-      @workshop_admin = create :workshop_admin
     end
 
     test_redirect_to_sign_in_for :index
@@ -434,7 +432,7 @@ module Api::V1::Pd
 
       assert_equal(
         expected_applications.map {|application| application[:id]}.sort,
-        JSON.parse(@response.body)['applications'].map {|application| application['id']}.sort
+        JSON.parse(@response.body).map {|application| application['id']}.sort
       )
     end
 
@@ -466,15 +464,15 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
+            status: 'accepted',
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
-            registered_workshop: 'Yes',
-            status: 'accepted'
-          }.stringify_keys, JSON.parse(@response.body)['applications'].first
+            registered_workshop: 'Yes'
+          }.stringify_keys, JSON.parse(@response.body).first
         )
       end
     end
@@ -503,15 +501,15 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: '',
-            registered_workshop: '',
-            status: 'accepted'
-          }.stringify_keys, JSON.parse(@response.body)['applications'].first
+            status: 'accepted',
+            assigned_workshop: nil,
+            registered_workshop: 'No'
+          }.stringify_keys, JSON.parse(@response.body).first
         )
       end
     end
@@ -540,64 +538,18 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
-            status: 'accepted'
-          }.stringify_keys, JSON.parse(@response.body)['applications'].first
+            status: 'accepted',
+            assigned_workshop: nil,
+            registered_workshop: 'No',
+            assigned_fit: nil,
+            registered_fit: 'No'
+          }.stringify_keys, JSON.parse(@response.body).first
         )
-      end
-    end
-
-    # TODO: remove this test when workshop_organizer is deprecated
-    test 'cohort view as a workshop organizer returns regional partner cohort capacity for teacher applications' do
-      time = Date.new(2017, 3, 15)
-
-      Timecop.freeze(time) do
-        application = create(
-          :pd_teacher1819_application,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @workshop_organizer
-        get :cohort_view, params: {role: 'csp_teachers'}
-        assert_response :success
-
-        assert_equal(50, JSON.parse(@response.body)['capacity'])
-      end
-    end
-
-    # TODO: remove this test when workshop_organizer is deprecated
-    test 'cohort view as a workshop organizer returns nil regional partner cohort capacity for facilitator applications' do
-      time = Date.new(2017, 3, 15)
-
-      Timecop.freeze(time) do
-        application = create(
-          :pd_facilitator1819_application,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @workshop_organizer
-        get :cohort_view, params: {role: 'csp_facilitators'}
-        assert_response :success
-
-        assert_nil JSON.parse(@response.body)['capacity']
       end
     end
 
@@ -628,7 +580,7 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
@@ -636,7 +588,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted'
-          }.stringify_keys, JSON.parse(@response.body)['applications'].first
+          }.stringify_keys, JSON.parse(@response.body).first
         )
       end
     end
@@ -664,15 +616,15 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: '',
-            registered_workshop: '',
+            assigned_workshop: nil,
+            registered_workshop: 'No',
             status: 'accepted'
-          }.stringify_keys, JSON.parse(@response.body)['applications'].first
+          }.stringify_keys, JSON.parse(@response.body).first
         )
       end
     end
@@ -700,135 +652,37 @@ module Api::V1::Pd
         assert_equal(
           {
             id: application.id,
-            date_accepted: 'Mar 15',
+            date_accepted: '2017-03-15',
             applicant_name: 'Minerva McGonagall',
             district_name: 'A School District',
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
+            assigned_workshop: nil,
+            registered_workshop: 'No',
+            assigned_fit: nil,
+            registered_fit: 'No',
             status: 'accepted'
-          }.stringify_keys, JSON.parse(@response.body)['applications'].first
+          }.stringify_keys, JSON.parse(@response.body).first
         )
       end
     end
 
-    test 'cohort view returns regional partner cohort capacity for teacher applications' do
-      time = Date.new(2017, 3, 15)
+    test 'cohort csv download returns expected columns for teachers' do
+      sign_in @workshop_admin
+      get :cohort_view, format: 'csv', params: {role: 'csd_teachers'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
 
-      Timecop.freeze(time) do
-        application = create(
-          :pd_teacher1819_application,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @program_manager
-        get :cohort_view, params: {role: 'csp_teachers'}
-        assert_response :success
-
-        assert_equal(50, JSON.parse(@response.body)['capacity'])
-      end
+      assert_equal ['Date Accepted', 'Applicant Name', 'District Name', 'School Name', 'Email', 'Assigned Workshop', 'Registered Workshop'], response_csv.first
     end
 
-    test 'cohort view returns nil regional partner cohort capacity for facilitator applications' do
-      time = Date.new(2017, 3, 15)
+    test 'cohort csv download returns expected columns for facilitators' do
+      sign_in @workshop_admin
+      get :cohort_view, format: 'csv', params: {role: 'csf_facilitators'}
+      assert_response :success
+      response_csv = CSV.parse @response.body
 
-      Timecop.freeze(time) do
-        application = create(
-          :pd_facilitator1819_application,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @program_manager
-        get :cohort_view, params: {role: 'csp_facilitators'}
-        assert_response :success
-
-        assert_nil JSON.parse(@response.body)['capacity']
-      end
-    end
-
-    test 'cohort view returns nil cohort capacity for all applications filter' do
-      time = Date.new(2017, 3, 15)
-
-      Timecop.freeze(time) do
-        application = create(
-          :pd_teacher1819_application,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @workshop_admin
-        get :cohort_view, params: {role: 'csp_teachers', regional_partner_filter: 'all'}
-        assert_response :success
-
-        assert_nil JSON.parse(@response.body)['capacity']
-      end
-    end
-
-    test 'cohort view returns nil cohort capacity for unmatched applications filter' do
-      time = Date.new(2017, 3, 15)
-
-      Timecop.freeze(time) do
-        application = create(
-          :pd_teacher1819_application,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @workshop_admin
-        get :cohort_view, params: {role: 'csp_teachers', regional_partner_filter: 'none'}
-        assert_response :success
-
-        assert_nil JSON.parse(@response.body)['capacity']
-      end
-    end
-
-    test 'cohort view returns cohort capacity for admin with regional partner filter' do
-      time = Date.new(2017, 3, 15)
-
-      Timecop.freeze(time) do
-        application = create(
-          :pd_teacher1819_application,
-          course: 'csd',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
-        )
-
-        application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-        application.status = 'accepted'
-        application.save!
-        application.lock!
-
-        sign_in @workshop_admin
-        get :cohort_view, params: {role: 'csd_teachers', regional_partner_filter: @regional_partner.id}
-        assert_response :success
-
-        assert_equal(25, JSON.parse(@response.body)['capacity'])
-      end
+      assert_equal ['Date Accepted', 'Name', 'School District', 'School Name', 'Email', 'Status'], response_csv.first
     end
 
     test 'search finds applications by email for workshop admins' do

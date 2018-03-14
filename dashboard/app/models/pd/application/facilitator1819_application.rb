@@ -83,6 +83,10 @@ module Pd::Application
       Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
     end
 
+    def registered_fit_workshop?
+      fit_workshop_id.present? && Pd::Enrollment.exists?(pd_workshop_id: fit_workshop_id, user: user)
+    end
+
     GRADES = [
       'Pre-K'.freeze,
       'Kindergarten'.freeze,
@@ -450,12 +454,33 @@ module Pd::Application
     end
 
     # @override
+    def self.cohort_csv_header
+      CSV.generate do |csv|
+        csv << ['Date Accepted', 'Name', 'School District', 'School Name', 'Email', 'Status']
+      end
+    end
+
+    # @override
     def to_csv_row
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push status, locked?, notes, regional_partner_name
         csv << row
+      end
+    end
+
+    # @override
+    def to_cohort_csv_row
+      CSV.generate do |csv|
+        csv << [
+          date_accepted,
+          applicant_name,
+          district_name,
+          school_name,
+          user.email,
+          status
+        ]
       end
     end
 
@@ -482,10 +507,6 @@ module Pd::Application
 
       Pd::Enrollment.find_by(id: auto_assigned_fit_enrollment_id).try(:destroy)
       self.auto_assigned_fit_enrollment_id = nil
-    end
-
-    def fit_workshop
-      Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
     end
 
     # override
