@@ -527,6 +527,7 @@ ActiveRecord::Schema.define(version: 20180308210145) do
     t.integer "facilitator_id", null: false
     t.string  "course",         null: false
     t.index ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
+    t.index ["facilitator_id", "course"], name: "index_pd_course_facilitators_on_facilitator_id_and_course", unique: true, using: :btree
   end
 
   create_table "pd_district_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import Select from "react-select";
 import "react-select/dist/react-select.css";
 import { SelectStyleProps } from '../constants';
+import CohortCalculator from './cohort_calculator';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
@@ -44,7 +45,8 @@ export class QuickView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+      role: PropTypes.string.isRequired
     })
   };
 
@@ -96,6 +98,7 @@ export class QuickView extends React.Component {
         loading: false,
         applications: data
       });
+      this.loadRequest = null;
     });
   }
 
@@ -103,7 +106,7 @@ export class QuickView extends React.Component {
     `/api/v1/pd/applications/quick_view${format}?${$.param(this.getApiParams(regionalPartnerFilter))}`
   );
   getApiParams = (regionalPartnerFilter) => ({
-    role: this.props.route.path,
+    role: this.props.route.role,
     regional_partner_filter: regionalPartnerFilter
   });
   getJsonUrl = (regionalPartnerFilter) => this.getApiUrl('', regionalPartnerFilter);
@@ -127,8 +130,26 @@ export class QuickView extends React.Component {
   };
 
   render() {
+    let accepted = 0;
+    let registered = 0;
+    if (this.state.applications !== null) {
+      accepted = this.state.applications
+        .filter(app => app.status === 'accepted')
+        .length;
+      registered = this.state.applications
+        .filter(app => app.registered_workshop === 'Yes')
+        .length;
+    }
     return (
       <div>
+        {this.state.applications &&
+          <CohortCalculator
+            role={this.props.route.role}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            accepted={accepted}
+            registered={registered}
+          />
+        }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
