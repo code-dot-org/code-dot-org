@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Feb 2018 06:38:39 GMT
+      - Wed, 14 Mar 2018 22:25:14 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -26,59 +26,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/replace_me.js</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>sources_test/1/1/replace_me.js</Key><VersionId>CAvtb1zd61llV87v1ItiA9hVgw5nE7By</VersionId><IsLatest>true</IsLatest><LastModified>2018-02-20T06:33:08.000Z</LastModified><ETag>&quot;db3ec040e20dfc657dab510aeab74759&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>sources_test/1/1/replace_me.js</Key><VersionId>QI1sO97134wYNq9pz6vKQ6Eh6EDluYWs</VersionId><IsLatest>false</IsLatest><LastModified>2018-02-20T06:33:07.000Z</LastModified><ETag>&quot;db3ec040e20dfc657dab510aeab74759&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>sources_test/1/1/replace_me.js</Key><VersionId>oEOSgB75MD_e7AANG2hVII6eyTR.U95m</VersionId><IsLatest>false</IsLatest><LastModified>2018-02-20T06:33:03.000Z</LastModified><ETag>&quot;d4ca1ed7571e2e7b1f1c375bd50fa220&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/replace_me.js</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:38 GMT
-- request:
-    method: post
-    uri: https://cdo-v3-sources.s3.amazonaws.com/?delete
-    body:
-      encoding: UTF-8
-      string: |
-        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-          <Object>
-            <Key>sources_test/1/1/replace_me.js</Key>
-            <VersionId>CAvtb1zd61llV87v1ItiA9hVgw5nE7By</VersionId>
-          </Object>
-          <Object>
-            <Key>sources_test/1/1/replace_me.js</Key>
-            <VersionId>QI1sO97134wYNq9pz6vKQ6Eh6EDluYWs</VersionId>
-          </Object>
-          <Object>
-            <Key>sources_test/1/1/replace_me.js</Key>
-            <VersionId>oEOSgB75MD_e7AANG2hVII6eyTR.U95m</VersionId>
-          </Object>
-          <Quiet>true</Quiet>
-        </Delete>
-    headers:
-      Expect:
-      - 100-continue
-      Content-Md5:
-      - 16nH7jfHmUvFpSMbMoP7xg==
-      Content-Length:
-      - '476'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 20 Feb 2018 06:38:39 GMT
-      Connection:
-      - close
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Server:
-      - AmazonS3
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
-    http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:39 GMT
+  recorded_at: Wed, 14 Mar 2018 22:25:13 GMT
 - request:
     method: get
     uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
@@ -94,7 +44,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Feb 2018 06:38:40 GMT
+      - Wed, 14 Mar 2018 22:25:15 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -107,9 +57,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/main.json</Key><LastModified>2018-02-20T05:44:32.000Z</LastModified><ETag>&quot;4ceb22ebb7134b0eaa2b60d01615b302&quot;</ETag><Size>10676</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:39 GMT
+  recorded_at: Wed, 14 Mar 2018 22:25:14 GMT
 - request:
     method: put
     uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/replace_me.js
@@ -131,9 +81,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Feb 2018 06:38:41 GMT
+      - Wed, 14 Mar 2018 22:25:15 GMT
       X-Amz-Version-Id:
-      - 8tkvt3QTtWs1Z8x1q.nn.yfOeYMXilOj
+      - xafX8vSBujtXsRS9oW.AXwADQcxX5Jjv
       Etag:
       - '"db3ec040e20dfc657dab510aeab74759"'
       Content-Length:
@@ -144,7 +94,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:39 GMT
+  recorded_at: Wed, 14 Mar 2018 22:25:14 GMT
 - request:
     method: get
     uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
@@ -160,7 +110,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Feb 2018 06:38:43 GMT
+      - Wed, 14 Mar 2018 22:25:16 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -173,9 +123,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/main.json</Key><LastModified>2018-02-20T05:44:32.000Z</LastModified><ETag>&quot;4ceb22ebb7134b0eaa2b60d01615b302&quot;</ETag><Size>10676</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>sources_test/1/1/replace_me.js</Key><LastModified>2018-02-20T06:38:41.000Z</LastModified><ETag>&quot;db3ec040e20dfc657dab510aeab74759&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/replace_me.js</Key><LastModified>2018-03-14T22:25:15.000Z</LastModified><ETag>&quot;db3ec040e20dfc657dab510aeab74759&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:42 GMT
+  recorded_at: Wed, 14 Mar 2018 22:25:15 GMT
 - request:
     method: put
     uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/replace_me.js
@@ -197,9 +147,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Feb 2018 06:38:43 GMT
+      - Wed, 14 Mar 2018 22:25:16 GMT
       X-Amz-Version-Id:
-      - WTV3NjRqIVaK9.5M9ijPeyV2ahyUw9UU
+      - 6MedVOL13S5ohkGGEIWjwbtkLONe4W4q
       Etag:
       - '"d4ca1ed7571e2e7b1f1c375bd50fa220"'
       Content-Length:
@@ -210,10 +160,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:42 GMT
+  recorded_at: Wed, 14 Mar 2018 22:25:15 GMT
 - request:
     method: delete
-    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/replace_me.js?versionId=8tkvt3QTtWs1Z8x1q.nn.yfOeYMXilOj
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/replace_me.js?versionId=xafX8vSBujtXsRS9oW.AXwADQcxX5Jjv
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -226,16 +176,16 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Tue, 20 Feb 2018 06:38:44 GMT
+      - Wed, 14 Mar 2018 22:25:16 GMT
       X-Amz-Version-Id:
-      - 8tkvt3QTtWs1Z8x1q.nn.yfOeYMXilOj
+      - xafX8vSBujtXsRS9oW.AXwADQcxX5Jjv
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:43 GMT
+  recorded_at: Wed, 14 Mar 2018 22:25:15 GMT
 - request:
     method: get
     uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/replace_me.js&versions
@@ -251,7 +201,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Feb 2018 06:38:44 GMT
+      - Wed, 14 Mar 2018 22:25:17 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -262,7 +212,136 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/replace_me.js</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>sources_test/1/1/replace_me.js</Key><VersionId>WTV3NjRqIVaK9.5M9ijPeyV2ahyUw9UU</VersionId><IsLatest>true</IsLatest><LastModified>2018-02-20T06:38:43.000Z</LastModified><ETag>&quot;d4ca1ed7571e2e7b1f1c375bd50fa220&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/replace_me.js</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>sources_test/1/1/replace_me.js</Key><VersionId>6MedVOL13S5ohkGGEIWjwbtkLONe4W4q</VersionId><IsLatest>true</IsLatest><LastModified>2018-03-14T22:25:16.000Z</LastModified><ETag>&quot;d4ca1ed7571e2e7b1f1c375bd50fa220&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 06:38:43 GMT
+  recorded_at: Wed, 14 Mar 2018 22:25:16 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/replace_me.js&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Mar 2018 22:25:17 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/replace_me.js</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>sources_test/1/1/replace_me.js</Key><VersionId>6MedVOL13S5ohkGGEIWjwbtkLONe4W4q</VersionId><IsLatest>true</IsLatest><LastModified>2018-03-14T22:25:16.000Z</LastModified><ETag>&quot;d4ca1ed7571e2e7b1f1c375bd50fa220&quot;</ETag><Size>9</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Wed, 14 Mar 2018 22:25:16 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>sources_test/1/1/replace_me.js</Key>
+            <VersionId>6MedVOL13S5ohkGGEIWjwbtkLONe4W4q</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - JJruk3Xld6I6hCFgraXSEg==
+      Content-Length:
+      - '218'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Mar 2018 22:25:18 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Wed, 14 Mar 2018 22:25:17 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Mar 2018 22:25:18 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Wed, 14 Mar 2018 22:25:17 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-animations.s3.amazonaws.com/?encoding-type=url&prefix=animations_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Mar 2018 22:25:19 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Wed, 14 Mar 2018 22:25:18 GMT
 recorded_with: VCR 3.0.3
