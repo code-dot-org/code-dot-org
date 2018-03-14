@@ -4,6 +4,8 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            schools.city                             AS city,
            schools.zip                              AS zip,
            schools.state                            AS state,
+           schools.latitude                         AS latitude,
+           schools.longitude                        AS longitude,
            schools.school_type                      AS school_type,
            schools.school_district_id               AS school_district_id,
            school_districts.name                    AS school_district_name,
@@ -22,6 +24,8 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            (CASE WHEN (grade_06_offered +
                        grade_07_offered +
                        grade_08_offered) > 0
+                 -- exclude K-6 and pre-K-6 schools from being classified as middle schools
+                 AND ((grades_offered_lo = 'PK' and grades_offered_hi = '06') or (grades_offered_lo = 'KG' and grades_offered_hi = '06')) = 0                                      
                  THEN 1
                  ELSE 0 END)                        AS stage_mi,
            (CASE WHEN (grade_09_offered +

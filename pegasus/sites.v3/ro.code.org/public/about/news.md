@@ -53,7 +53,7 @@ Dedicat elevilor si studentilor din toata lumea, Hour of Code este o miscare glo
 
 <b>Cum functioneaza?</b>
 
-Participantii trebuie sa aiba la dispozitie o ora si un device (computer, tableta sau telefon) si sa acceseze tutorialele online de pe <a href="http://ro.code.org”>ro.code.org</a>. 
+Participantii trebuie sa aiba la dispozitie o ora si un device (computer, tableta sau telefon) si sa acceseze tutorialele online de pe <a href="http://ro.code.org">ro.code.org</a>. 
 
 Usor de parcurs si entertaining, oricine poate parcurge aceste tutoriale, acasa sau in cadrul unui eveniment organizat, alaturi de un grup de cursanti.
 

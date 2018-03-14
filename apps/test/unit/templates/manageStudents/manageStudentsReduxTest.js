@@ -10,6 +10,7 @@ import manageStudents, {
   setSecretImage,
   setSecretWords,
   editStudent,
+  editAll,
   startSavingStudent,
   saveStudentSuccess,
   addStudentsSuccess,
@@ -213,6 +214,22 @@ describe('manageStudentsRedux', () => {
     });
   });
 
+  describe('editAll', () => {
+    it('sets students isEditing to true', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = editAll();
+      const finalState = manageStudents(nextState, startEditingStudentAction);
+      assert.deepEqual(finalState.studentData[1].isEditing, true);
+      assert.deepEqual(finalState.studentData[2].isEditing, true);
+      assert.deepEqual(finalState.studentData[3].isEditing, true);
+
+      assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
+      assert.deepEqual(finalState.editingData[2], studentEmailData[2]);
+      assert.deepEqual(finalState.editingData[3], studentEmailData[3]);
+    });
+  });
+
   describe('cancelEditingStudent', () => {
     it('sets student isEditing to false', () => {
       const setStudentsAction = setStudents(studentEmailData);
@@ -309,6 +326,7 @@ describe('manageStudentsRedux', () => {
       const startedSavingState = manageStudents(editingState, startSavingAction);
       assert.equal(startedSavingState.studentData[1].isEditing, true);
       assert.equal(startedSavingState.studentData[1].isSaving, true);
+      assert.equal(startedSavingState.editingData[1].isSaving, true);
     });
 
     it('saveStudentSuccess updates studentData and removes editingData', () => {
@@ -515,6 +533,7 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...initialState.editingData[0],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...initialState.studentData[0],
@@ -559,9 +578,11 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[1], {
         ...initialState.editingData[1],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.editingData[2], {
         ...initialState.editingData[2],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[1], {
         ...initialState.studentData[1],

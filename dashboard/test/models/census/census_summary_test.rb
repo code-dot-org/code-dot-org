@@ -11,6 +11,11 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert summary.valid?, summary.errors.full_messages
   end
 
+  test "Summary creation with valid historic teaches_cs succeeds" do
+    summary = build :census_summary, :with_valid_historic_teaches_cs
+    assert summary.valid?, summary.errors.full_messages
+  end
+
   test "Summary creation with invalid teaches_cs fails" do
     assert_raises ArgumentError do
       build :census_summary, :with_invalid_teaches_cs
@@ -137,308 +142,206 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school: nil, is_k8_school: nil)
   end
 
-  test "School with only state data is a yes" do
-    offering = create :state_cs_offering
-    school = offering.school
-    year = offering.school_year
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+  test "AP data overrides surveys, state data, and previous years" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_ap_cs_offering,
+      :with_one_year_ago_teaches_no,
+      :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "YES")
   end
 
-  test "School with only AP data is a yes" do
-    offering = create :ap_cs_offering
-    school = offering.ap_school_code.school
-    year = offering.school_year
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+  test "IB data overrides surveys and state data" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_ib_cs_offering,
+      :with_one_year_ago_teaches_no,
+      :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "YES")
   end
 
-  test "School with only IB data is a yes" do
-    offering = create :ib_cs_offering
-    school = offering.ib_school_code.school
-    year = offering.school_year
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+  test "Consistent yes teacher surveys override other surveys and state data" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_no_parent_census_submission,
+      school_year: school_year
+    validate_summary(school, school_year, "YES")
   end
 
-  test "School with only yes survey is a yes" do
-    submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL'
-    school = submission.school_infos[0].school
-    year = submission.school_year
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
+  test "Consistent no teacher surveys override other surveys and state data" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_yes_parent_census_submission,
+      :with_state_cs_offering,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      school_year: school_year
+    validate_summary(school, school_year, "NO")
   end
 
-  test "School with only null survey is a null" do
-    submission = create :census_teacher_banner_v1,
-      how_many_10_hours: nil,
-      how_many_20_hours: nil
-    school = submission.school_infos[0].school
-    year = submission.school_year
+  test "State data overrides consistent non-teacher surveys and inconsistent teacher surveys" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_no_parent_census_submission,
+      :with_state_cs_offering,
+      :with_one_year_ago_teaches_no,
+      :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "YES")
+  end
 
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
+  test "High school lack of state data overrides consistent non-teacher surveys and inconsistent teacher surveys" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_yes_parent_census_submission,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      school_year: school_year
+    validate_summary(school, school_year, "NO")
+  end
 
-    assert_equal 1, summaries.length
+  test "Consistent yes non-teacher surveys override other surveys" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_yes_parent_census_submission,
+      :with_state_not_having_state_data,
+      :with_one_year_ago_teaches_no,
+      :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "YES")
+  end
 
-    summary = summaries[0]
+  test "Consistent no non-teacher surveys override other surveys" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_no_parent_census_submission,
+      :with_state_not_having_state_data,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      school_year: school_year
+    validate_summary(school, school_year, "NO")
+  end
+
+  test "Last year yes overrides two years ago data" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "HISTORICAL_YES")
+  end
+
+  test "Last year no overrides two years ago data" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_one_year_ago_teaches_no,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      school_year: school_year
+    validate_summary(school, school_year, "HISTORICAL_NO")
+  end
+
+  test "Last year maybe overrides two years ago data" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_one_year_ago_teaches_maybe,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "HISTORICAL_MAYBE")
+  end
+
+  test "Just two years ago yes is used" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "HISTORICAL_YES")
+  end
+
+  test "Just two years ago no is used" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_yes,
+      school_year: school_year
+    validate_summary(school, school_year, "HISTORICAL_NO")
+  end
+
+  test "Just two years ago maybe is used" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_two_years_ago_teaches_maybe,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
+    validate_summary(school, school_year, "HISTORICAL_MAYBE")
+  end
+
+  test "Three years ago data is not used" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      :with_three_years_ago_teaches_maybe,
+      school_year: school_year
+    summary = generate_summary(school, school_year)
     assert_nil summary.teaches_cs, summary.audit_data
   end
 
-  test "School with one yes survey and one no survey is a maybe" do
-    submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL'
-    school = submission.school_infos[0].school
-    year = submission.school_year
-    create :census_teacher_banner_v1,
-      school_year: year,
-      how_many_20_hours: 'NONE',
-      how_many_10_hours: 'NONE',
-      school_infos: submission.school_infos
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert_equal "MAYBE", summary.teaches_cs, summary.audit_data
+  test "No data is a nil teaches_cs" do
+    school_year = 2020
+    school = create :census_school,
+      :with_state_not_having_state_data,
+      school_year: school_year
+    summary = generate_summary(school, school_year)
+    assert_nil summary.teaches_cs, summary.audit_data
   end
 
-  test "School with state data and a no survey is a yes or maybe" do
-    offering = create :state_cs_offering
-    school = offering.school
-    year = offering.school_year
-    school_info = create :school_info, school: school
-    create :census_teacher_banner_v1,
-      school_year: year,
-      how_many_20_hours: 'NONE',
-      how_many_10_hours: 'NONE',
-      school_infos: [school_info]
-
+  def generate_summary(school, year)
     summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
       {
-        school.state => [year]
-      },
+        school: school,
+        school_years: [year - 3, year - 2, year - 1, year],
+        years_with_ap_data: [year],
+        years_with_ib_data: [year],
+        state_years_with_data: {
+          school.state => [year]
+        },
+      }
     )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
+    summaries.last
   end
 
-  test "High school without AP, or IB data and a yes survey is a yes" do
-    submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL', topic_text: true
-    school = submission.school_infos[0].school
-    year = submission.school_year
-    create :school_stats_by_year, school: school
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert_equal "YES", summary.teaches_cs, summary.audit_data
-  end
-
-  test "High school without state, AP, or IB data and a yes survey is a no or maybe" do
-    submission = create :census_teacher_banner_v1, how_many_20_hours: 'ALL'
-    school = submission.school_infos[0].school
-    school.state = Census::StateCsOffering::SUPPORTED_STATES[0]
-    year = submission.school_year
-    create :school_stats_by_year, school: school
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert ["NO", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
-  end
-
-  test "School with AP data and a no survey is a yes or maybe" do
-    offering = create :ap_cs_offering
-    school = offering.ap_school_code.school
-    year = offering.school_year
-    school_info = create :school_info, school: school
-    create :census_teacher_banner_v1,
-      school_year: year,
-      how_many_20_hours: 'NONE',
-      how_many_10_hours: 'NONE',
-      school_infos: [school_info]
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
-  end
-
-  test "School with IB data and a no survey is a yes or maybe" do
-    offering = create :ib_cs_offering
-    school = offering.ib_school_code.school
-    year = offering.school_year
-    school_info = create :school_info, school: school
-    create :census_teacher_banner_v1,
-      school_year: year,
-      how_many_20_hours: 'NONE',
-      how_many_10_hours: 'NONE',
-      school_infos: [school_info]
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
-  end
-
-  test "High school with AP data but not state data is a yes or maybe" do
-    offering = create :ap_cs_offering
-    school = offering.ap_school_code.school
-    school.state = Census::StateCsOffering::SUPPORTED_STATES[0]
-    year = offering.school_year
-    create :school_stats_by_year, school: school
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
-  end
-
-  test "High school with IB data but not state data is a yes or maybe" do
-    offering = create :ib_cs_offering
-    school = offering.ib_school_code.school
-    school.state = Census::StateCsOffering::SUPPORTED_STATES[0]
-    year = offering.school_year
-    create :school_stats_by_year, school: school
-
-    summaries = Census::CensusSummary.summarize_school_data(
-      school,
-      [year],
-      [year],
-      [year],
-      {
-        school.state => [year]
-      },
-    )
-
-    assert_equal 1, summaries.length
-
-    summary = summaries[0]
-    assert ["YES", "MAYBE"].include?(summary.teaches_cs), summary.audit_data
+  def validate_summary(school, year, expected_result)
+    summary = generate_summary(school, year)
+    assert_equal expected_result, summary.teaches_cs, summary.audit_data
   end
 end
