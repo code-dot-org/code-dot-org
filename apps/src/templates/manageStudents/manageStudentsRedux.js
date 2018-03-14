@@ -50,7 +50,14 @@ const blankNewStudentRow = {
   rowType: RowType.NEW_STUDENT,
 };
 
-// Initial state for the manageStudents redux store.
+/** Initial state for the manageStudents redux store.
+ * loginType - a SectionLoginType for the active section.
+ * sectionId - the sectionId number for the active section.
+ * studentData - represents student information persisted on the server.
+ * if isEditing (in studentData), then editingData represents the data
+ * in the edit fields on the client which has not yet been persisted to the server.
+ * addStatus - status is of type AddStatus and numStudents is how many students were added.
+ */
 const initialState = {
   loginType: '',
   studentData: {},
