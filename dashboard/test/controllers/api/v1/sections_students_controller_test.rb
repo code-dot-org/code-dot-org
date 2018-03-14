@@ -37,4 +37,38 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     ].to_json
     assert_equal expected_summary, @response.body
   end
+
+  test 'teacher can update gender, name and age info for their student' do
+    sign_in @teacher
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f', age: 9, name: 'testname'}}
+    assert_response :success
+    assert_equal 'f', JSON.parse(@response.body)['gender']
+    assert_equal 9, JSON.parse(@response.body)['age']
+    assert_equal 'testname', JSON.parse(@response.body)['name']
+
+    assert_equal 'testname', @student.reload.name
+    assert_equal 9, @student.age
+    assert_equal 'f', @student.gender
+  end
+
+  test 'teacher can not update username info for their student' do
+    sign_in @teacher
+    current_username = @student.username
+    put :update, params: {section_id: @section.id, id: @student.id, student: {username: 'newname'}}
+    assert_response :success
+    assert_equal current_username, JSON.parse(@response.body)['username']
+  end
+
+  test 'teacher can not update invalid info for their student' do
+    sign_in @teacher
+    User.any_instance.stubs(:update).returns(false)
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'd'}}
+    assert_response :bad_request
+  end
+
+  test 'non-owner can not update student info' do
+    sign_in @other_teacher
+    put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f'}}
+    assert_response :forbidden
+  end
 end

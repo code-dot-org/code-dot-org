@@ -448,9 +448,9 @@ class Level < ActiveRecord::Base
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels
-    names = properties["contained_level_names"]
+    names = try('contained_level_names')
     return [] unless names.present?
-    properties["contained_level_names"].map do |contained_level_name|
+    names.map do |contained_level_name|
       Script.cache_find_level(contained_level_name)
     end
   end
@@ -518,6 +518,12 @@ class Level < ActiveRecord::Base
     if project_template_level
       new_template_level = project_template_level.clone_with_suffix(new_suffix, allow_existing: true)
       update_params[:project_template_level_name] = new_template_level.name
+    end
+
+    unless contained_levels.empty?
+      update_params[:contained_level_names] = contained_levels.map do |contained_level|
+        contained_level.clone_with_suffix(new_suffix, allow_existing: true).name
+      end
     end
 
     level.update!(update_params)
