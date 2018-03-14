@@ -254,6 +254,16 @@ FactoryGirl.define do
     topic_ethical_social true
   end
 
+  factory :census_your_school2017v7, parent: :census_your_school2017v6, class: Census::CensusYourSchool2017v7 do
+    trait :with_inaccuracy_reported do
+      inaccuracy_reported true
+    end
+
+    trait :with_inaccuracy_comment do
+      inaccuracy_comment "That ain't right!"
+    end
+  end
+
   factory :census_hoc2017v1, parent: :census_submission, class: Census::CensusHoc2017v1 do
     submitter_name "Hoc Submitter"
   end
@@ -443,6 +453,50 @@ FactoryGirl.define do
 
     trait :without_audit_data do
       audit_data nil
+    end
+  end
+
+  factory :census_override, class: 'Census::CensusOverride' do
+    school {build :school}
+    school_year 2017
+    teaches_cs nil
+
+    trait :with_valid_teaches_cs do
+      teaches_cs "N"
+    end
+
+    trait :with_invalid_teaches_cs do
+      teaches_cs "X"
+    end
+
+    trait :with_invalid_school_year do
+      school_year 1900
+    end
+
+    trait :without_school_year do
+      school_year nil
+    end
+
+    trait :without_school do
+      school nil
+    end
+  end
+
+  factory :census_inaccuracy_investigation, class: 'Census::CensusInaccuracyInvestigation' do
+    user {build :user}
+    notes "Some notes from my investigation"
+    census_submission {build :census_your_school2017v7}
+
+    trait :without_submission do
+      census_submission nil
+    end
+
+    trait :without_user do
+      user nil
+    end
+
+    trait :without_notes do
+      notes nil
     end
   end
 end
