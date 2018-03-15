@@ -567,7 +567,7 @@ class Script < ActiveRecord::Base
       # Load custom scripts from Script DSL format
       custom_files.map do |script|
         name = File.basename(script, '.script')
-        name += new_suffix if new_suffix
+        name += "-#{new_suffix}" if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
         stages = script_data[:stages]
@@ -637,7 +637,7 @@ class Script < ActiveRecord::Base
 
         level =
           if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix(new_suffix, allow_existing: true)
+            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", allow_existing: true)
           else
             levels_by_key[key] || Level.find_by_key(key)
           end
@@ -750,7 +750,7 @@ class Script < ActiveRecord::Base
 
   def clone_with_suffix(new_suffix)
     script_filename = "config/scripts/#{name}.script"
-    new_name = "#{name}#{new_suffix}"
+    new_name = "#{name}-#{new_suffix}"
     _, custom_i18n = Script.setup([script_filename], new_suffix: new_suffix)
 
     # Omit any unused stage names. custom_i18n will already contain any stage
