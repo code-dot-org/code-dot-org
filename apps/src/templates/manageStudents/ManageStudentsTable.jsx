@@ -133,6 +133,7 @@ class ManageStudentsTable extends Component {
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
+    showSharingColumn: PropTypes.bool,
     editAll: PropTypes.func,
   };
 
@@ -217,6 +218,7 @@ class ManageStudentsTable extends Component {
               {showShareColumn &&
                 <ManageStudentsActionsHeaderCell
                   editAll={this.props.editAll}
+                  isShareColumnVisible={this.props.showSharingColumn}
                 />
               }
             </div>
@@ -391,9 +393,7 @@ class ManageStudentsTable extends Component {
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(passwordColumn);
     }
-    //For now always show this column if the experiment flag is on.
-    // TODO: (Erin B & Caley) update so visibility is controlled by project sharing dialog.
-    if (showShareColumn) {
+    if (this.props.showSharingColumn) {
       dataColumns = dataColumns.concat(projectSharingColumn);
     }
     if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
@@ -456,6 +456,7 @@ export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
+  showSharingColumn: state.manageStudents.showSharingColumn,
   addStatus: state.manageStudents.addStatus,
 }), dispatch => ({
   saveAllStudents() {

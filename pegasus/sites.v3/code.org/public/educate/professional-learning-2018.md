@@ -53,7 +53,7 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/twoteachers.jpg', text: '"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."'},
-{img: '/images/testimonials/fit-150/teacher-alisha.JPG', text: '"It was refreshing to meet others who were taking a leap to learn something new. We all came to the table with weaknesses, but we could all put our strengths together and solve puzzles."'},
+{img: '/images/testimonials/fit-150/teacher-alisha.png', text: '"It was refreshing to meet others who were taking a leap to learn something new. We all came to the table with weaknesses, but we could all put our strengths together and solve puzzles."'},
 {img: '/images/testimonials/fit-150/teacher-juan.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
 <br/>
