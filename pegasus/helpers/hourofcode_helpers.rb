@@ -59,10 +59,13 @@ def hoc_canonicalized_i18n_path(uri, query_string)
     redirect canonical_urls.last + (query_string.empty? ? '' : "?#{query_string}")
   end
 
-  # We no longer want the country to be part of the path we use to search:
-  search_uri = File.join('/', [@language, path].compact)
-  return search_uri if resolve_document(search_uri)
-  return "/#{path}"
+  # Try to resolve document in order:
+  # /:country/:language/:path
+  # /:country/:path (if language == country_language)
+  # /:language/:path
+  # /:path
+  search_uris = canonical_urls + [File.join('/', [@language, path].compact)]
+  search_uris.detect(&method(:resolve_document)) || "/#{path}"
 end
 
 def hoc_detect_country
