@@ -53,6 +53,7 @@ class GamelabJr < Gamelab
   <block type="when_run" />
 </category>
 <category name="Variables" custom="VARIABLE" />
+<category name="Functions" custom="PROCEDURE" />
 <category name="World">
   <block type="gamelab_setBackground">
     <value name="COLOR">
