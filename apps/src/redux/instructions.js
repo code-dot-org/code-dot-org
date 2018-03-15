@@ -52,6 +52,8 @@ const instructionsInitialState = {
   hasAuthoredHints: false,
   overlayVisible: false,
   levelVideos: [],
+  mapReference: undefined,
+  referenceLinks: []
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -69,6 +71,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       overlayVisible,
       teacherMarkdown,
       levelVideos,
+      mapReference,
+      referenceLinks
     } = action;
     let collapsed = state.collapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -86,6 +90,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       overlayVisible,
       collapsed,
       levelVideos,
+      mapReference,
+      referenceLinks
     });
   }
 
@@ -141,7 +147,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
 export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
     shortInstructions, shortInstructions2, longInstructions,
-    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos}) => ({
+    hasContainedLevels, hasInlineImages, overlayVisible, teacherMarkdown, levelVideos,
+    mapReference, referenceLinks}) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
   hasInlineImages,
@@ -152,6 +159,8 @@ export const setInstructionsConstants = ({noInstructionsWhenCollapsed,
   overlayVisible,
   teacherMarkdown,
   levelVideos,
+  mapReference,
+  referenceLinks
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -241,6 +250,8 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.level.markdownInstructions
  * @param {array} config.level.inputOutputTable
  * @param {array} config.level.levelVideos
+ * @param {stirng} config.level.mapReference,
+ * @param {array} config.level.referenceLinks,
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels
@@ -259,7 +270,9 @@ export const determineInstructionsConstants = config => {
     instructions2,
     markdownInstructions,
     inputOutputTable,
-    levelVideos
+    levelVideos,
+    mapReference,
+    referenceLinks,
   } = level;
 
   let longInstructions, shortInstructions, shortInstructions2;
@@ -332,6 +345,8 @@ export const determineInstructionsConstants = config => {
     longInstructions,
     teacherMarkdown,
     hasContainedLevels,
-    levelVideos
+    levelVideos,
+    mapReference,
+    referenceLinks
   };
 };
