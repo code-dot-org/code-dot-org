@@ -27,18 +27,34 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   # Used only for picture and word sections
   # POST /sections/<section_id>/students/bulk_add
   def bulk_add
+    unless @section.login_type == Section::LOGIN_TYPE_WORD || @section.login_type == Section::LOGIN_TYPE_PICTURE
+      render json: {errors: 'Not a valid section type'}, status: :bad_request
+      return
+    end
+
+    errors = []
     new_students = []
-    params[:students].each do |student|
-      new_student = User.create!(
-        user_type: User::TYPE_STUDENT,
-        provider: User::PROVIDER_SPONSORED,
-        name: student["name"],
-        age: student["age"],
-        gender: student["gender"],
-        sharing_disabled: student["sharing_disabled"],
-      )
-      @section.add_student(new_student)
-      new_students.push(new_student.summarize)
+    ActiveRecord::Base.transaction do
+      params[:students].each do |student|
+        begin
+          new_student = User.create(
+            user_type: User::TYPE_STUDENT,
+            provider: User::PROVIDER_SPONSORED,
+            name: student["name"],
+            age: student["age"],
+            gender: student["gender"],
+            sharing_disabled: student["sharing_disabled"],
+          )
+          @section.add_student(new_student)
+          new_students.push(new_student.summarize)
+        rescue StandardError => e
+          errors << e.message
+        end
+      end
+      if errors.count > 0
+        render json: {errors: errors}, status: :bad_request
+        raise ActiveRecord::Rollback
+      end
     end
 
     render json: new_students
