@@ -28,11 +28,10 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
   after_create :send_regional_partner_contact_emails
   def send_regional_partner_contact_emails
     form = sanitize_and_trim_form_data_hash
-    matched_but_no_pms = false
 
     if regional_partner_id
-      partner_id = RegionalPartner.find(regional_partner_id)
-      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner_id)
+      partner = RegionalPartner.find(regional_partner_id)
+      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner)
 
       if regional_partner_program_managers.empty?
         matched_but_no_pms = true
@@ -43,7 +42,7 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
         end
       end
     else
-      Pd::RegionalPartnerContactMailer.unmatched(form, matched_but_no_pms).deliver_now
+      Pd::RegionalPartnerContactMailer.unmatched(form).deliver_now
     end
 
     Pd::RegionalPartnerContactMailer.receipt(form).deliver_now

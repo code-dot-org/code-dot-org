@@ -5,8 +5,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     @form = form
     role = form[:role].downcase
 
-    pm_id = rp_pm.program_manager_id
-    pm = User.find(pm_id)
+    pm = User.find(rp_pm.program_manager_id)
     @name = pm.name
 
     mail(
@@ -15,7 +14,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     )
   end
 
-  def unmatched(form, matched_but_no_pms)
+  def unmatched(form, matched_but_no_pms = false)
     @form = form
     @matched_but_no_pms = matched_but_no_pms
     role = form[:role].downcase
@@ -28,12 +27,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
 
   def receipt(form)
     @form = form
-
-    interest = "professional learning program"
-    unless form[:role] == "Teacher"
-      interest = "administrator support"
-    end
-    @interest = interest
+    @interest = form[:role] == "Teacher" ? "professional learning program" : "administrator support"
 
     mail(
       to: form[:email],
