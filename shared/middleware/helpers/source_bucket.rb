@@ -49,7 +49,7 @@ class SourceBucket < BucketHelper
       end
     end
 
-    # Write the updated main.json file back to S3 as the latest versino
+    # Write the updated main.json file back to S3 as the latest version
     response = s3.put_object(bucket: @bucket, key: key, body: psj.to_json)
 
     # If we get this far, the restore request has succeeded.
