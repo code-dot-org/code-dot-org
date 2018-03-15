@@ -1,6 +1,8 @@
 import React, {PropTypes, Component} from 'react';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
+import NetworkResourceLink from './NetworkResourceLink';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   referenceArea: {
@@ -14,9 +16,15 @@ export default class HelpTabContents extends Component {
     serverLevelId: PropTypes.number,
     logText: PropTypes.string,
     videoData: videoDataShape,
+    mapReference: PropTypes.string,
+    referenceLinks: PropTypes.array
   };
 
   render() {
+    const displayReferenceLinks = experiments.isEnabled('additionalResources') &&
+          this.props.referenceLinks;
+    const displayMapLinks = experiments.isEnabled('additionalResources') &&
+          this.props.mapReference;
     return (
       <div style={styles.referenceArea}>
         {this.props.videoData &&
@@ -26,6 +34,22 @@ export default class HelpTabContents extends Component {
             logText={this.props.logText}
             video={this.props.videoData}
           />
+        }
+        {displayMapLinks &&
+          <NetworkResourceLink
+            highlight
+            icon="map"
+            reference={this.props.mapReference}
+          />
+        }
+        {displayReferenceLinks &&
+          this.props.referenceLinks.map((link, index) => (
+            <NetworkResourceLink
+              key={index}
+              icon="book"
+              reference={link}
+            />
+          ))
         }
       </div>
     );
