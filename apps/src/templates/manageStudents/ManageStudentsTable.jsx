@@ -243,11 +243,14 @@ class ManageStudentsTable extends Component {
   };
 
   projectSharingFormatter = (projectSharing, {rowData}) => {
-    const isAgeSet = this.props.editingData[rowData.id]==="";
+    let disabled = rowData.isEditing ?
+      this.props.editingData[rowData.id].age.length === 0 :
+      true;
+
     return (
       <span>
         <Checkbox
-          disabled={isAgeSet}
+          disabled={disabled}
         />
       </span>
     );
@@ -284,7 +287,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 300
+            width: 260
           }},
           transforms: [sortable],
         },
@@ -293,7 +296,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 300
+            width: 260
           }}
         }
       },
@@ -370,6 +373,7 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 130
           }},
         },
         cell: {
@@ -377,7 +381,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            ...{textAlign: 'center'}
+            ...{textAlign: 'center', width: 130}
           }}
         }
       },
