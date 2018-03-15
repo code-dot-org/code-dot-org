@@ -158,10 +158,11 @@ class Item extends Component {
     first: PropTypes.bool,
     last: PropTypes.bool,
     color: PropTypes.string,
+    openInNewTab: PropTypes.bool,
   };
 
   render() {
-    const {first, last, onClick, children, href} = this.props;
+    const {first, last, onClick, children, href, openInNewTab} = this.props;
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
     }
@@ -185,7 +186,11 @@ class Item extends Component {
     const textStyle = {
       color: this.props.color? this.props.color : color.dark_charcoal,
       textDecoration: 'none', // Remove underline from anchor tags
+      fontFamily: "'Gotham 4r', sans-serif"
     };
+
+    const target = openInNewTab ? "_blank" : "";
+
     return (
       <div style={paddingStyle}>
         {this.props.href &&
@@ -193,6 +198,7 @@ class Item extends Component {
             className="pop-up-menu-item"
             href={href}
             style={{...textStyle, ...areaStyle}}
+            target={target}
           >
             {children}
           </a>
