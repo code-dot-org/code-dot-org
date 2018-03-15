@@ -32,6 +32,7 @@ const blankAddRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.ADD,
 };
@@ -46,6 +47,7 @@ const blankNewStudentRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
 };
@@ -449,6 +451,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
+      sharingDisabled: student.sharing_disabled,
       isEditing: false,
       isSaving: false,
       rowType: RowType.STUDENT,
