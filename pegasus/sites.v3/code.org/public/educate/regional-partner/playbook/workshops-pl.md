@@ -37,14 +37,70 @@ ________________
 
 ## Announcements
 
+- [2018 Local Summer Workshop Process Doc Now Available](#summer)
+- [Sending Welcome Kits for Local Summer Workshops](#welkit)
+- [Academic Year PD Options](#options)
+- [Quarter 3 & 4 Options for AP/non-AP Teachers CS Principles Teachers](#q34)
 
-#### Academic Year PD Options
+<a id="summer"></a>
+### 2018 Local Summer Workshop Process Doc Now Available
+
+Check out your local summer workshop process doc **<a href="https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit" target=_blank>here</a>**!
+
+<br/>
+
+<a id="welkit"></a>
+### Sending Welcome Kits for Local Summer Workshops (Only G1/G2)
+
+More information to come during the March Summit about hosting your local summer workshops (G1 and G2 partners).  
+
+Code.org has prepared a digital **Welcome Kit** for each teacher accepted into a Code.org 6-12 Professional Learning Program. Since teachers are receiving all communications directly from you, their Regional Partner, we’d like for you to send them their Welcome Kits after they register for your local summer workshop. 
+
+The Welcome Kits are an opportunity for teachers to learn more about the course and Professional Learning Program, as well as tips and tools to help spread the word about their course to students, fellow educators, and school administrators. 
+
+**Who sends the Welcome Kits?**
+
+All partners who are hosting their own local summer workshops are responsible for sending Welcome Kits to teachers accepted into their cohort. 
+
+
+**When should I send the Welcome Kits?**
+
+You should send out the welcome kit to a teacher only after they have accepted their spot in the program and registered for their local summer workshop. You do not need to send them out with your accept messages! You can send them out one at a time as teachers register, or you can send them out in batches. Sending them out sooner, rather than later, after the teacher confirms their seat, is recommended. This allows the teachers to have maximum time to utilize the resources provided. 
+
+
+**Where can I find the Welcome Kits?**
+
+The Welcome Kits are located in our shared Google Drive, in the <a href="https://drive.google.com/drive/folders/1DFzRglfRbCghxABHWzv1fstwCwIJwy3d" target=_blank>2018 Welcome Kits folder</a>. Be sure to make a copy of the kit for your own use before sending!
+
+- <a href="https://drive.google.com/drive/folders/10-AvYrdev19YUd9vJujMmay1jgp0N2UQ" target=_blank>2018 CS Discoveries Teacher Welcome Kit</a>
+- <a href="https://drive.google.com/drive/folders/1sRs25CdbJa0FrbJH61LfYYBhaJyAIV93" target=_blank>2018 CS Principles Teacher Welcome Kit</a>
+
+
+**What do I need to do before sending the Welcome Kits?**
+
+1. Read through the CS Discoveries Teacher Welcome Letter and the CS Principles Teacher Welcome Letters. This will give you an overview of what is included in the Welcome Kit. 
+
+2. Make a copy of the 2018 CS Discoveries Teacher Welcome Kit and the 2018 CS Principles Teacher Welcome Kit for your own use. 
+
+3. Customize the CS Discoveries and CS Principles Teacher and Administrator Welcome Letters with your organization's name and information. Save them as PDFs. 
+
+4. You can also choose to add additional resources for teachers. If so, you should list these added resources in the Teacher Welcome Letters. 
+
+5. Decide how you are going to send them. For example, you could combine all the resources into a single PDF. (Be sure to include any resources that you might have chosen to add in this combined PDF). We recommend combining the resources into a single PDF for ease of sending. 
+
+6. Send the welcome kit to your teachers!
+
+<br/>
+
+<a id="options"></a>
+### Academic Year PD Options
 
 Be sure to review the [Recommendations for Supporting Academic Year Workshop Challenges](https://docs.google.com/document/d/1gSCtI19On4slBun5EsiYcRXs6_P7K0dkk25_mMqvVmg/edit#). Solutions you’d like to implement must be declared to your Regional Manager by February 28, 2018.
 
 <br>
 
-#### Quarter 3 & 4 Options for AP/non-AP Teachers CS Principles Teachers:
+<a id="q34"></a>
+### Quarter 3 & 4 Options for AP/non-AP Teachers CS Principles Teachers
 
 
 Content about the Advancement Placement (AP) exam is the focus of the second half of the Quarter 3 and Quarter 4 CS Principles workshop. Many of you have cohorts that are mixed, ie. AP teachers and non-AP teachers. It can be challenging for facilitators to address the needs of both groups of teachers at the same time. <br>
@@ -77,7 +133,7 @@ ________________
   <p>
 
 - **[Academic Year Workshop Process Document](https://docs.google.com/document/d/1lI8E7IE0MOYktAPsmssb6vRVI5--s_5zK8OkUAcw158/edit?disco=AAAAA_lL-1o&ts=59833f89)** - Everything you need to know to plan, prepare, and run academic year workshops.
-- 2017 [Local Summer Workshop Process Document](https://docs.google.com/document/d/12rsY1FMkiVN90-83yvEsikawtsiQzy5wc1xQER1QoyM/edit) - Everything you need to know to plan and run a local summer workshop. 2018 info to come.
+- 2018 [Local Summer Workshop Process Document](https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit) - Everything you need to know to plan and run a local summer workshop!
 - [Survey Report Process](https://docs.google.com/document/d/1nC9wEPnTkYO6tzZM6QIHnVzSSNySEVykIFlADdS_xEM/edit) - How to navigate to and view the surveys sent at the end of a workshop.
 
 </p>

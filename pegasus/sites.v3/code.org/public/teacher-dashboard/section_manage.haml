@@ -52,7 +52,7 @@ content-type: text/ng-template
               %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
               %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= I18n.t('dashboard_sections_move_students')
 
-#uitest-manage-tab{style: "padding-left:20px"}
+#uitest-manage-tab
 
   #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
     .panel-heading
@@ -65,87 +65,8 @@ content-type: text/ng-template
 
   #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
 
-  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email' && section.login_type !== 'google_classroom'", style: "line-height: 36px;"}
-    = I18n.t('dashboard_students_new_section')
-
   %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type === 'google_classroom'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_google_classroom_section')
-
-  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
-    %colgroup
-      %col{width: "300"}/
-      %col{width: "100"}/
-      %col{width: "100"}/
-      %col{width: "200"}/
-      %col{width: "250"}/
-    %tr
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'name'"}= I18n.t('dashboard_students_name')
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'age'"}= I18n.t('dashboard_students_age')
-      %th.manage-th
-        %a{href: "", "ng-click" => "order = 'gender'"}= I18n.t('dashboard_students_gender')
-      %th.manage-th{"ng-show" => "teacher_managed_section(section)"}
-        %span{"ng-if" => "section.login_type !== 'email'"}= I18n.t('dashboard_students_secret')
-        %span{"ng-if" => "section.login_type === 'email'"}= I18n.t('dashboard_students_password')
-      %th.manage-th{"ng-show" => "teacher_managed_section(section)"}
-        %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
-    %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
-      %td
-        %span{"ng-hide" => "student.editing"}
-          %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
-          %div{"ng-show" => "section.login_type == 'email' && student.username"}
-            = I18n.t('dashboard_students_username', student_username: '{{student.username}}')
-          %div{"ng-show" => "section.login_type == 'email' && student.user_type == 'teacher' && student.email"}
-            = I18n.t('dashboard_students_email', student_email: '{{student.email}}')
-        %span{"ng-show" => "student.editing"}
-          %input{"ng-model" => "student.name", placeholder: I18n.t('dashboard_students_placeholder_name'), style: "width: 100%", type: "text", required: "true"}/
-          %span.required= I18n.t('dashboard_action_required')
-      %td
-        %span{"ng-hide" => "student.editing"} {{student.age}}
-        %span{"ng-show" => "student.editing"}
-          %select{"ng-model" => "student.age", "ng-options"=>"value for value in age_list"}
-      %td
-        %span{"ng-hide" => "student.editing"} {{gender_list[student.gender]}}
-        %span{"ng-show" => "student.editing"}
-          %select{"ng-model" => "student.gender", "ng-options"=>"k as v for (k,v) in gender_list"}
-      %td{"ng-show" => "teacher_managed_section(section)"}
-        %span{"ng-if" => "section.login_type === 'word' || section.login_type === 'picture'"}
-          %button.btn.btn-white{"ng-click" => "student.showing_password = true",
-                                "ng-hide" => "student.editing || student.showing_password"}
-            &#x25BC;
-            = I18n.t('dashboard_students_show_secret')
-          %span{"ng-show" => "student.editing", style: "font-style:italic"}
-            = I18n.t('dashboard_students_auto_generated')
-          %span{"ng-show" => "!student.editing && student.showing_password"}
-            %img{"ng-if" => "section.login_type === 'picture'",
-                 "ng-src" => "/images/{{student.secret_picture_path}}",
-                 alt: "{{student.secret_picture_name}}",
-                 title: "{{student.secret_picture_name}}",
-                 height: 40}
-            %span{"ng-if" => "section.login_type === 'word'"} {{student.secret_words}}
-            %button.btn.btn-white{"ng-click" => "resetSecrets(student)"}= I18n.t('dashboard_students_reset_secret')
-        %span{"ng-if" => "section.login_type === 'email'"}
-          %button.btn.btn-white{"ng-click" => "student.editing_password = true",
-                                "ng-hide" => "student.editing || student.editing_password"}
-            = I18n.t('dashboard_students_reset_password')
-          %span{"ng-show" => "student.editing_password"}
-            %input{"ng-model" => "student.password", placeholder: I18n.t('dashboard_new_password'), style: "width: 100px", type: "text"}
-            %button.btn.btn-primary{"ng-click" => "save(student)" }= I18n.t('dashboard_action_save')
-      %td{"ng-show" => "teacher_managed_section(section)"}
-        %span{"ng-show" => "student.confirmDelete"}
-          = I18n.t('dashboard_action_remove_confirm')
-          %button.btn.btn-danger{"ng-click"=>'del(student)'}= I18n.t('dashboard_action_delete_yes')
-          %button.btn.btn-white{"ng-click"=>'student.confirmDelete = false'}= I18n.t('dashboard_action_delete_no')
-        %span{"ng-hide" => "student.confirmDelete"}
-          %button.btn.btn-white{"ng-click" => "edit(student)", "ng-hide" => "student.editing"}= I18n.t('dashboard_action_edit')
-          %button.btn.btn-primary{"ng-click" => "save(student)", "ng-show" => "student.editing", "ng-disabled" => "form.$invalid"}= I18n.t('dashboard_action_save')
-          %button.btn.btn-white{"ng-click" => "cancel(student)", "ng-show" => "student.editing"}= I18n.t('dashboard_action_cancel')
-          %button.btn.btn-danger{"ng-click" => "confirm_delete(student)", "ng-show" => "!student.editing && student.id"}= I18n.t('dashboard_action_remove')
-    %tr{"ng-show" => "teacher_managed_section(section)"}
-      %th{colspan: "4", style: "padding-top:5px;padding-bottom:5px"}
-      %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
-        %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
 
   #student-table-react{'ng-init' => '$emit("student-table-react-rendered");'}
 

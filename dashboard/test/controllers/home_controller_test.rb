@@ -264,9 +264,18 @@ class HomeControllerTest < ActionController::TestCase
     end
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 9 do
+    assert_queries 10 do
+      get :home
+    end
+    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
+  end
+
+  test 'program managers see dashboard links' do
+    sign_in create(:program_manager, :with_terms_of_service)
+    assert_queries 12 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -283,7 +292,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    assert_queries 8 do
+    assert_queries 9 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
@@ -306,18 +315,29 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    assert_queries 11 do
+    assert_queries 12 do
       get :home
     end
     assert_select 'h1', count: 1, text: 'Application Dashboard'
     assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
+  test 'program managers see application dashboard links' do
+    sign_in create(:program_manager, :with_terms_of_service)
+    assert_queries 12 do
+      get :home
+    end
+    assert_select 'h1', count: 1, text: 'Application Dashboard'
+    assert_select 'h3', count: 1, text: 'Manage Applications'
+  end
+
+  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    assert_queries 9 do
+    assert_queries 10 do
       get :home
     end
     assert_select 'h1', count: 0, text: 'Application Dashboard'

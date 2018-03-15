@@ -547,15 +547,24 @@ class Visualization {
       // Need to subtract 90 to accommodate difference in canvas vs. Turtle direction
       this.ctxScratch.rotate(this.degreesToRadians_(this.heading - 90));
 
-      if (img.width !== 0) {
-        this.ctxScratch.drawImage(img,
-          // Start point for clipping image
-          0, 0,
-          // clip region size
-          distance + img.height / 2, img.height,
-          // draw location relative to the ctx.translate point pre-rotation
-          -img.height / 4, -img.height / 2,
-          distance+img.height / 2, img.height);
+      if ((distance > 0) && (img.width !== 0)) {
+          this.ctxScratch.drawImage(img,
+            // Start point for clipping image forward
+            0, 0,
+            // clip region size
+            distance, img.height,
+            // draw location relative to the ctx.translate point pre-rotation
+            -img.height / 4, -img.height / 2,
+            distance+img.height / 2, img.height);
+      } else if ((distance < 0) && (img.width !== 0)) {
+            this.ctxScratch.drawImage(img,
+              // Start point for clipping image backward
+              img.width, 0,
+              // clip region size
+              distance, img.height,
+              // draw location relative to the ctx.translate point pre-rotation
+              -img.height / 4, -img.height / 2,
+              distance+img.height / 2, img.height);
       }
 
       this.ctxScratch.restore();
@@ -1553,14 +1562,20 @@ Artist.prototype.step = function (command, values, options) {
     case 'ST':  // Show Turtle
       this.visualization.avatar.visible = true;
       break;
-    case 'sticker':
+    case 'sticker': {
+      let size = MAX_STICKER_SIZE;
+
+      if (typeof values[1] === 'number') {
+        size = values[1];
+      }
+
       if (this.visualization.shouldDrawNormalized_) {
         values = Object.keys(this.stickers);
       }
 
       var img = this.stickers[values[0]];
 
-      var dimensions = scaleToBoundingBox(MAX_STICKER_SIZE, img.width, img.height);
+      var dimensions = scaleToBoundingBox(size, img.width, img.height);
       var width = dimensions.width;
       var height = dimensions.height;
 
@@ -1570,10 +1585,12 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.ctxScratch.save();
       this.visualization.ctxScratch.translate(this.visualization.x, this.visualization.y);
       this.visualization.ctxScratch.rotate(this.visualization.degreesToRadians_(this.visualization.heading));
-      this.visualization.ctxScratch.drawImage(img, -width / 2, -height, width, height);
+      this.visualization.ctxScratch.drawImage(img, 0, 0, width, height, -width / 2, -height, width, height);
+
       this.visualization.ctxScratch.restore();
 
       break;
+    }
     case 'setArtist':
       if (this.skin.id !== values[0]) {
         this.skin = ArtistSkins.load(this.studioApp_.assetUrl, values[0]);
