@@ -1129,6 +1129,40 @@ exports.install = function (blockly, blockInstallOptions) {
         '", \'block_id_' + this.id + '\');\n';
   };
 
+  blockly.Blocks.turtle_sticker_with_size = blockly.Blocks.turtle_stamp = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      var dropdown;
+      var input = this.appendDummyInput();
+      input.appendTitle(msg.setStickerSize());
+
+      // Generates a list of pairs of the form [[url, name]]
+      var values = [];
+      for (var name in skin.stickers) {
+        var url = skin.stickers[name];
+        values.push([url, name]);
+      }
+
+      dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+
+      input.appendTitle(dropdown, 'VALUE');
+      this.appendValueInput('SIZE');
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.drawSticker());
+      this.setTooltip(msg.setStickerSize());
+    }
+  };
+
+  generator.turtle_sticker_with_size = generator.turtle_stamp = function () {
+    return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') +
+        '", "' + this.getTitleValue('SIZE') +
+            '", \'block_id_' + this.id + '\');\n';
+  };
+
   blockly.Blocks.turtle_setArtist = {
     helpUrl: '',
     init: function () {
