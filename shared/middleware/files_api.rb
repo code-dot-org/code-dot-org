@@ -570,6 +570,7 @@ class FilesApi < Sinatra::Base
         manifest.to_json,
         params['files-version']
       )
+      new_entry_hash['filesVersionId'] = response.version_id
     end
 
     # delete a file if requested (same as src file in a rename operation)
@@ -578,7 +579,6 @@ class FilesApi < Sinatra::Base
     end
 
     # return the new entry info
-    new_entry_hash['filesVersionId'] = response.version_id
     new_entry_hash.to_json
   end
 

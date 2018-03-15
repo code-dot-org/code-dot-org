@@ -45,18 +45,15 @@ TeacherCon accomodations as well as all conference sessions will take place at:
   <p>
   <br>
 If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
-</p>
- <p>
+
 How to get here: For detailed driving instructions, please look up the hotel address in your preferred navigation app or GPS when planning your route.
-</p>
-<p>
-Where to park: Philadelphia Marriott Downtown offers several parking options. 
+
+Where to park: Philadelphia Marriott Downtown offers several parking options.
 
 * 24-hour on-site valet parking rate: $53.90/day 
 * LIMITED ONSITE PARKING during special events and weekends: $63.70/day
 
 For less expensive parking options, we recommend that you [check this website](https://www.parkwhiz.com/philadelphia-marriott-downtown-parking/) for off-site parking locations and rates.
-</p>
 </details>
 
 <details>
@@ -158,8 +155,7 @@ This section will be updated as emails are sent for this event.
 <summary>**It's time to book your travel to TeacherCon. Complete by June 26th**</summary>
  <p>
  <br>
- [Click here](http://go.pardot.com/webmail/153401/201761071/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
-</p>
+[Click here](http://go.pardot.com/webmail/153401/201761071/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
 </details>
 
 <details>
@@ -167,10 +163,8 @@ This section will be updated as emails are sent for this event.
  <p>
  <br>
 **CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/218352199/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
-</p>
-<p>
+
 **CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/218352275/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
-</p>
 </details>
 
 <details>
@@ -178,11 +172,8 @@ This section will be updated as emails are sent for this event.
 <p>
 <br>
 **CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/225470697/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
-</p>
-<p>
-**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/225472129/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
-</p>
 
+**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/225472129/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update.
 
 ## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)

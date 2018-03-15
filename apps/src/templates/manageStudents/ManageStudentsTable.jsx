@@ -13,7 +13,7 @@ import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
-import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
+import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents, editAll} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
@@ -134,6 +134,8 @@ class ManageStudentsTable extends Component {
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
+    showSharingColumn: PropTypes.bool,
+    editAll: PropTypes.func,
   };
 
   state = {
@@ -215,7 +217,10 @@ class ManageStudentsTable extends Component {
             </div>
             <div style={styles.headerIcon}>
               {showShareColumn &&
-                <ManageStudentsActionsHeaderCell/>
+                <ManageStudentsActionsHeaderCell
+                  editAll={this.props.editAll}
+                  isShareColumnVisible={this.props.showSharingColumn}
+                />
               }
             </div>
           </span>
@@ -402,9 +407,7 @@ class ManageStudentsTable extends Component {
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(passwordColumn);
     }
-    //For now always show this column if the experiment flag is on.
-    // TODO: (Erin B & Caley) update so visibility is controlled by project sharing dialog.
-    if (showShareColumn) {
+    if (this.props.showSharingColumn) {
       dataColumns = dataColumns.concat(projectSharingColumn);
     }
     if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
@@ -467,9 +470,13 @@ export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
+  showSharingColumn: state.manageStudents.showSharingColumn,
   addStatus: state.manageStudents.addStatus,
 }), dispatch => ({
   saveAllStudents() {
     dispatch(saveAllStudents());
+  },
+  editAll() {
+    dispatch(editAll());
   },
 }))(ManageStudentsTable);

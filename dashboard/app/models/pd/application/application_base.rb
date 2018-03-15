@@ -182,15 +182,18 @@ module Pd::Application
     end
 
     # Override in derived class to provide headers
+    # @param course [String] course name used to choose fields, since they differ between courses
+    # @param user [User] requesting user - used to handle field visibility differences
     # @return [String] csv text row of column headers, ending in a newline
-    def self.csv_header
+    def self.csv_header(course, user)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
     # Override in derived class to provide the relevant csv data
+    # @param user [User] requesting user - used to handle field visibility differences
     # @return [String] csv text row of values, ending in a newline
     #         The order of fields must be consistent between this and #self.csv_header
-    def to_csv_row
+    def to_csv_row(user)
       raise 'Abstract method must be overridden by inheriting class'
     end
 
@@ -223,6 +226,10 @@ module Pd::Application
 
     def self.filtered_labels(course)
       raise 'Abstract method must be overridden in base class'
+    end
+
+    def self.can_see_locked_status?(user)
+      true
     end
 
     # Include additional text for all the multi-select fields that have the option
