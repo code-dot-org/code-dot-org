@@ -29,7 +29,7 @@ Don't have an account?
 
 1. Each Regional Partner organization is provided with one partner account. 
 	* If multiple people in your organization need to access the data, we encourage you to set up your account with a password that can be shared within your organization. 
-2. Email your Regional Partner if you have not been set up with an account. 
+2. Email your Regional Manager if you have not been set up with an account. 
 	* Once your account has been set up, you will receive an email from Tableau with instructions on how to access your Tableau account, including setting up your password. 
 	* The email will say “You’ve been invited to Tableau Online”
 	* There will be an orange button prompting you to sign up for the first time and set up your password. 
@@ -49,7 +49,8 @@ Which K-12 schools across the US teach computer science? Check out the map at <a
 
 The map shows a pin for every school in the US, color coded by whether or not they teach computer science and whether or not we have any data about that school.
 
-#### How can you help?
+**How can you help?**
+
 * Include a call in your newsletters for students, teachers, parents, and districts to fill out the survey at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a>. 
 * Connect to local organizations in your region who can spread the word on your behalf.
 * Connect us to organizations that may already have this information in your region (accessreport@code.org).
