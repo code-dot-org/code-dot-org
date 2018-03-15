@@ -31,6 +31,8 @@
 #  updated_at                   :datetime         not null
 #  share_with_regional_partners :boolean
 #  topic_ethical_social         :boolean
+#  inaccuracy_reported          :boolean
+#  inaccuracy_comment           :text(65535)
 #
 # Indexes
 #

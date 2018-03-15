@@ -9,7 +9,7 @@ nav: promote_nav
 
 # Код саатын илгерилетүү
 
-## Код саатын кабыл алып жатасыңарбы?<a href="<%= resolve_url('/how-to') %>Кантип өткөзсө болорун карагыла</a>
+## Код саатын кабыл алып жатасыңарбы?<a href="<%= resolve_url('/how-to') %>">Кантип өткөзсө болорун карагыла</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 

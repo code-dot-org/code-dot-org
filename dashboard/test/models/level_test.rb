@@ -755,4 +755,35 @@ EOS
     assert_equal level_2.id, level_2_copy.parent_level_id
     assert_equal ' copy', level_2_copy.name_suffix
   end
+
+  test 'clone with suffix copies contained levels' do
+    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
+    contained_level_2 = create :level, name: 'contained level 2'
+
+    # level 1 has 1 contained level
+
+    level_1 = create :level, name: 'level 1'
+    level_1.contained_level_names = [contained_level_1.name]
+    level_1_copy = level_1.clone_with_suffix(' copy')
+
+    refute_nil level_1_copy.contained_levels
+    assert_equal 1, level_1_copy.contained_levels.size
+    contained_level_1_copy = Level.find_by_name('contained level 1 copy')
+    assert_equal 'FreeResponse', contained_level_1_copy.type
+    assert_equal contained_level_1_copy, level_1_copy.contained_levels.first
+
+    # level 2 has 2 contained levels, one of which has already been copied
+
+    level_2 = create :level, name: 'level 2'
+    level_2.contained_level_names = [
+      contained_level_1.name,
+      contained_level_2.name
+    ]
+    level_2_copy = level_2.clone_with_suffix(' copy')
+    contained_level_2_copy = Level.find_by_name('contained level 2 copy')
+    refute_nil level_2_copy.contained_levels
+    assert_equal 2, level_2_copy.contained_levels.size
+    assert_equal contained_level_1_copy, level_2_copy.contained_levels.first
+    assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
+  end
 end

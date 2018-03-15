@@ -1,4 +1,5 @@
 import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
+import { getStore } from '../redux';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -6,16 +7,23 @@ const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
 const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
 
-const SPRITES = [
-  ['dog', '"dog"'],
-  ['cat', '"cat"'],
-];
-
 export default {
   install(blockly, blockInstallOptions) {
     // TODO(ram): Create Blockly.BlockValueType.SPRITE
     const SPRITE_TYPE = blockly.BlockValueType.NONE;
     const { ORDER_MEMBER } = Blockly.JavaScript;
+
+    const sprites = () => {
+      const animationList = getStore().getState().animationList;
+      if (animationList.orderedKeys.length === 0) {
+        console.warn("No sprites available");
+        return null;
+      }
+      return animationList.orderedKeys.map(key => {
+        const name = animationList.propsByKey[key].name;
+        return [name, `"${name}"`];
+      });
+    };
 
     const createJsWrapperBlock =
       createJsWrapperBlockCreator(blockly, 'gamelab');
@@ -25,7 +33,7 @@ export default {
       func: 'makeNewSprite',
       blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
-        { name: 'ANIMATION', options: SPRITES },
+        { name: 'ANIMATION', options: sprites },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
