@@ -588,8 +588,8 @@ class Script < ActiveRecord::Base
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |args|
-        add_script(args[0], args[1], new_suffix: new_suffix)
+      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_stages|
+        add_script(options, raw_stages, new_suffix: new_suffix)
       end
       [added_scripts, custom_i18n]
     end
@@ -759,9 +759,11 @@ class Script < ActiveRecord::Base
   # the suffix to the name of each level. Mark the new script as hidden, and
   # copy any translations and other metadata associated with the original script.
   def clone_with_suffix(new_suffix)
-    script_filename = "config/scripts/#{name}.script"
     new_name = "#{name}-#{new_suffix}"
-    _, custom_i18n = Script.setup([script_filename], new_suffix: new_suffix)
+
+    script_filename = "config/scripts/#{name}.script"
+    scripts, custom_i18n = Script.setup([script_filename], new_suffix: new_suffix)
+    script = scripts.first
 
     # Omit any unused stage names. custom_i18n will already contain any stage
     # still in use, and summarize_i18n(true) may return some stage names which
@@ -770,7 +772,7 @@ class Script < ActiveRecord::Base
     Script.merge_and_write_i18n(custom_i18n, new_name, metadata_i18n)
 
     new_filename = "config/scripts/#{new_name}.script"
-    ScriptDSL.serialize(Script.find_by_name(new_name), new_filename)
+    ScriptDSL.serialize(script, new_filename)
   end
 
   # script is found/created by 'id' (if provided) otherwise by 'name'
