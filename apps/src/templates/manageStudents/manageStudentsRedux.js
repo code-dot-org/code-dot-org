@@ -475,6 +475,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
       name: updatedStudentInfo.name,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
+      sharing_disabled: updatedStudentInfo.sharingDisabled,
     }
   };
   $.ajax({
@@ -499,6 +500,7 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       name: updatedStudentsInfo[i].name,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }
   $.ajax({
