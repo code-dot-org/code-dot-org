@@ -125,10 +125,10 @@ module Pd::Application
       end
     end
 
-    test 'to_csv method' do
+    test 'to_csv_row method' do
       @application.update!(regional_partner: @regional_partner, status: 'accepted', notes: 'notes')
 
-      csv_row = @application.to_csv_row
+      csv_row = @application.to_csv_row(nil)
       csv_answers = csv_row.split(',')
       assert_equal "#{@regional_partner.name}\n", csv_answers[-1]
       assert_equal 'notes', csv_answers[-2]

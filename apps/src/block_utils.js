@@ -377,9 +377,11 @@ const DUMMY_INPUT = 'dummy';
  *   curly braces, e.g. "Move the {SPRITE} {PIXELS} to the {DIR}"
  * @param {Object[]} args Define the type/options of the block's inputs.
  * @param {string} args[].name Input name, conventionally all-caps
- * @param {string[][]} args[].options For dropdowns, the list of options. Each
- *   entry is a 2-element string array with the display name first, and the
- *   codegen-compatible (i.e. strings should be doubly-quoted) value second.
+ * @param {string[][]|Function} args[].options For dropdowns, the list of
+ *   options. Each entry is a 2-element string array with the display name
+ *   first, and the codegen-compatible (i.e. strings should be doubly-quoted)
+ *   value second. Also accepts a zero-argument function to generate these
+ *   options.
  * @param {BlockValueType} args[].type For value inputs, the type required. Use
  *   BlockValueType.NONE to accept any block.
  *
