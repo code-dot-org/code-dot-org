@@ -63,7 +63,10 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
       end
       format.csv do
         course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
-        csv_text = [TYPES_BY_ROLE[role].csv_header(course), *applications.map(&:to_csv_row)].join
+        csv_text = [
+          TYPES_BY_ROLE[role].csv_header(course, current_user),
+          *applications.map {|a| a.to_csv_row(current_user)}
+        ].join
         send_csv_attachment csv_text, "#{role}_applications.csv"
       end
     end
@@ -88,7 +91,9 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        serialized_applications = applications.map {|a| serializer.new(a).attributes}
+        serialized_applications = applications.map do |application|
+          serializer.new(application, scope: {user: current_user}).attributes
+        end
         render json: serialized_applications
       end
       format.csv do
