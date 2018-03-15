@@ -66,6 +66,8 @@ class ManageStudentsActionsHeaderCell extends Component {
   }
 }
 
+export const UnconnectedManageStudentsActionsHeaderCell = ManageStudentsActionsHeaderCell;
+
 export default connect(state => ({}), dispatch => ({
   toggleSharingColumn() {
     dispatch(toggleSharingColumn());
