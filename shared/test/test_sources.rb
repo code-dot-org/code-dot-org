@@ -340,6 +340,80 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(MAIN_JSON)
   end
 
+  def test_restore_main_json_with_library_animation
+    animation_key = @api.add_random_suffix('animation-key')
+    animation_filename = "#{animation_key}.png"
+    delete_all_animation_versions(animation_filename)
+    delete_all_source_versions(MAIN_JSON)
+
+    # Upload main.json version 1
+    v1_parsed = {
+      "source": "//version 1",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "fly_bot_1",
+            "sourceUrl": "/api/v1/animation-library/MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT/category_characters/fly_bot.png",
+            "version": "MJtsP4ka97JNo5OP2X_Csrs2A0TYgarT"
+          }.stringify_keys
+        }.stringify_keys
+      }.stringify_keys
+    }.stringify_keys
+    main_json_v1_vid = put_main_json(v1_parsed)
+
+    # Modify the animation
+    animation_v2_vid = put_animation(animation_filename, 'modified-library-animation')
+
+    # Update main.json
+    main_json_v2 = {
+      "source": "//version 2",
+      "animations": {
+        "orderedKeys": [animation_key],
+        "propsByKey": {
+          "#{animation_key}": {
+            "name": "Test animation",
+            "sourceUrl": nil,
+            "version": animation_v2_vid
+          }
+        }
+      }
+    }.stringify_keys
+    main_json_v2_vid = put_main_json(main_json_v2)
+
+    # Restore main.json to v1
+    main_json_restored_vid = restore_main_json(main_json_v1_vid)
+
+    # Expect only one animation version in the bucket - no need to make
+    # changes since we restored back to using the library animation
+    animation_versions = @animations_api.list_object_versions(animation_filename)
+    assert successful?
+    assert_equal 1, animation_versions.count
+    assert_equal animation_v2_vid, animation_versions[0]['versionId']
+
+    # Expect main.json to have a v3 based on v1
+    main_json_versions = @api.list_object_versions(MAIN_JSON)
+    assert successful?
+    assert_equal 3, main_json_versions.count
+    assert_equal main_json_restored_vid, main_json_versions[0]['versionId']
+    assert_equal main_json_v2_vid, main_json_versions[1]['versionId']
+    assert_equal main_json_v1_vid, main_json_versions[2]['versionId']
+    refute_equal main_json_v1_vid, main_json_restored_vid
+    refute_equal main_json_v2_vid, main_json_restored_vid
+
+    # Expect latest main.json v3 to reference library animation
+    @api.get_object(MAIN_JSON)
+    v3_parsed = JSON.parse(last_response.body)
+    assert_equal(v1_parsed['source'], v3_parsed['source'])
+    assert_equal(
+      v1_parsed['animations']['propsByKey'][animation_key],
+      v3_parsed['animations']['propsByKey'][animation_key]
+    )
+
+    delete_all_animation_versions(animation_filename)
+    delete_all_source_versions(MAIN_JSON)
+  end
+
   def test_restore_main_json_with_bad_animation_versions
     animation_key = @api.add_random_suffix('animation-key')
     animation_filename = "#{animation_key}.png"

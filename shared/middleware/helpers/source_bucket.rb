@@ -39,6 +39,7 @@ class SourceBucket < BucketHelper
       # Update the manifest to reference the copied animations
       anim_bucket = AnimationBucket.new
       psj.each_animation do |a|
+        next if library_animation? a
         anim_response = anim_bucket.restore_previous_version(
           encrypted_channel_id,
           "#{a['key']}.png",
@@ -62,5 +63,12 @@ class SourceBucket < BucketHelper
     )
 
     response.to_h
+  end
+
+  private
+
+  def library_animation?(animation_props)
+    source_url = animation_props['sourceUrl']
+    source_url && source_url =~ /^#{'/api/v1/animation-library'}/
   end
 end
