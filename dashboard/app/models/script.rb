@@ -559,6 +559,10 @@ class Script < ActiveRecord::Base
     script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
   end
 
+  # Create or update any scripts, script levels and stages specified in the
+  # script file definitions. If new_suffix is specified, create a copy of the
+  # script and any associated levels, appending new_suffix to the name when
+  # copying.
   def self.setup(custom_files, new_suffix: nil)
     transaction do
       scripts_to_add = []
@@ -591,6 +595,8 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # if new_suffix is specified, copy the script, hide it, and copy all its
+  # levelbuilder-defined levels.
   def self.add_script(options, raw_stages, new_suffix: nil)
     raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
@@ -748,6 +754,10 @@ class Script < ActiveRecord::Base
     script
   end
 
+  # Clone this script, appending a dash and the suffix to the name of this
+  # script. Also clone all the levels in the script, appending an underscore and
+  # the suffix to the name of each level. Mark the new script as hidden, and
+  # copy any translations and other metadata associated with the original script.
   def clone_with_suffix(new_suffix)
     script_filename = "config/scripts/#{name}.script"
     new_name = "#{name}-#{new_suffix}"
