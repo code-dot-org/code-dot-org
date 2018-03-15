@@ -23,7 +23,7 @@ export function pegasus(relativeUrl) {
 export const metaTagDescription = _.memoize((relativeUrl) => {
   return fetch(relativeUrl)
     .then(response => Promise.all([response.status, response.text()]))
-    .then((status,text) => {
+    .then(([status,text]) => {
       // Catch fetch's 400 errors
       if (status < 200 || status >= 300) {
         return relativeUrl;
