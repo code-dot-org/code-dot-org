@@ -7237,3 +7237,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        valentine-2018:
+          stages:
+            Valentine Puzzles:
+              name: Valentine Puzzles
+          title: Valentine Special
+          description: ''
+          descriptionShort: Have fun creating valentines
+          descriptionAudience: ''
