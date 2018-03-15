@@ -67,116 +67,22 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
   FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS - FREE_RESPONSE_QUESTIONS
   FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS & FREE_RESPONSE_QUESTIONS
-  GENERAL_FREE_RESPONSE_QUESTIONS = FREE_RESPONSE_QUESTIONS - FACILITATOR_SPECIFIC_QUESTIONS
 
   def get_score_for_workshops(workshops, include_free_responses: false, facilitator_name_filter: nil)
     facilitators = workshops.flat_map(&:facilitators).map(&:name)
-    #facilitators = ['Mike Harvey', 'Laura Johns', 'Dani McAvoy', 'Hannah Walden']
-
     response_summary = {}
-    facilitator_specific_summary = Hash[facilitators.map {|facilitator| [facilitator, {}]}]
 
-    # Initalize a hash of non facilitator specific questions to answer sums
-    response_sums = Hash[(INDIVIDUAL_RESPONSE_QUESTIONS - FACILITATOR_SPECIFIC_QUESTIONS).map {|question| [question, 0]}]
 
-    # Initialize a hash of facilitator specific questions to hashes of facilitator->answer sums.
-    facilitator_specific_response_sums =
-      if facilitator_name_filter
-        Hash[FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.map {|question| [question, {facilitator_name_filter => 0}]}]
-      else
-        Hash[FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.map {|question| [question, Hash[facilitators.map {|facilitator| [facilitator, 0]}]]}]
-      end
-
-    free_response_summary = Hash[GENERAL_FREE_RESPONSE_QUESTIONS.map {|question| [question, []]}]
-
-    # Initialize a hash of free response questions to hashes of facilitators->answers
-    facilitator_specific_free_response_sums =
-      if facilitator_name_filter
-        Hash[FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS.map {|question| [question, {facilitator_name_filter => []}]}]
-      else
-        Hash[FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS.map {|question| [question, Hash[facilitators.map {|facilitator| [facilitator, []]}]]}]
-      end
+    response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(facilitators, facilitator_name_filter)
 
     responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
-    total_response_count = responses.compact.count
+    responses.compact!
+    return {} if total_response_count == 0
 
-    responses.each do |response|
-      next if response.nil?
+    generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter)
+    generate_free_response_sums(response, free_response_summary, facilitator_specific_free_response_sums, facilitator_name_filter)
 
-      response.symbolize_keys.each do |question, answer|
-        if INDIVIDUAL_RESPONSE_QUESTIONS.include? question
-          # Some individual response questions are facilitator specific - these are
-          # all hashes in the response. For each answer in the hash, add it to the sum
-          # total for facilitators
-          if answer.is_a? Hash
-            if facilitator_name_filter
-              # If we are only filtering for a certain user, just pluck the answer for that particular user
-              next unless answer[facilitator_name_filter]
-              facilitator_specific_response_sums[question][facilitator_name_filter] += get_score_for_response(question, answer[facilitator_name_filter])
-            else
-              answer.each do |facilitator, facilitator_answer|
-                facilitator_specific_response_sums[question][facilitator] += get_score_for_response(question, facilitator_answer)
-              end
-            end
-          else
-            response_sums[question] += get_score_for_response(question, answer)
-          end
-        elsif FREE_RESPONSE_QUESTIONS.include? question
-          next unless include_free_responses
-          if answer.is_a? Hash
-            if facilitator_name_filter
-              next unless answer[facilitator_name_filter]
-              facilitator_specific_free_response_sums[question][facilitator_name_filter] << answer[facilitator_name_filter]
-            else
-              answer.each do |facilitator, facilitator_answer|
-                facilitator_specific_free_response_sums[question][facilitator] << facilitator_answer
-              end
-            end
-          else
-            free_response_summary[question] << answer
-          end
-        end
-      end
-    end
-
-    facilitator_response_count = calculate_facilitator_name_frequencies(responses).stringify_keys
-    # Note that this is not the number of responses. Some responses apply for multiple
-    # facilitators. If a workshop has 5 responses, 4 may be for facilitator A, 3 may be
-    # for facilitator B, we'd expect this to be 7.
-    responses_for_all_facilitators_count = facilitator_response_count.values.reduce(:+).to_f
-
-    response_sums.each do |question, answer_sum|
-      response_summary[question] = (answer_sum / total_response_count.to_f).round(2)
-    end
-
-    facilitator_specific_response_sums.each do |question, facilitators_for_response|
-      facilitators_for_response.each do |facilitator, answer_sum|
-        facilitator_specific_summary[facilitator][question] =
-          if facilitator_response_count[facilitator] > 0
-            (answer_sum / facilitator_response_count[facilitator].to_f).round(2)
-          else
-            0
-          end
-      end
-
-      answer_sum = facilitator_specific_response_sums[question].values.reduce(:+) || 0
-
-      response_summary[question] = (answer_sum / responses_for_all_facilitators_count).round(2)
-    end
-
-    if facilitator_name_filter
-      # If there was a facilitator name filter, then make all the facilitator specific
-      # answer hashes look like the general hashes
-      facilitator_specific_summary[facilitator_name_filter].each do |question, facilitator_answer|
-        response_summary[question] = facilitator_answer
-      end
-
-      facilitator_specific_free_response_sums.each do |question, facilitator_answer|
-        free_response_summary[question] = facilitator_answer[facilitator_name_filter]
-      end
-    else
-      free_response_summary.merge!(facilitator_specific_free_response_sums)
-    end
+    response_summary.merge! generate_response_averages(response_sums, facilitator_specific_response_sums, responses, facilitator_name_filter)
 
     response_summary.merge!(free_response_summary)
 
@@ -191,13 +97,108 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     response_summary
   end
 
-  def calculate_facilitator_name_frequencies(responses)
-    # We need to figure out how many responses each facilitator got - the below two lines
-    # return a histogram showing FacilitatorName=># Responses.
-    # Using 'how_often_given_feedback_s' for no particular reason - any of the facilitator
-    # specific responses would do fine here
-    facilitator_name_responses = responses.map {|x| x['how_often_given_feedback_s']}.flat_map(&:keys)
-    Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
+  def calculate_facilitator_name_frequencies(responses, facilitators)
+    if responses.first['how_often_given_feedback_s'].is_a? Hash
+      # the below two lines return a histogram showing FacilitatorName=># Responses.
+      # Using 'how_often_given_feedback_s' for no particular reason - any of the facilitator
+      # specific responses would do fine here
+      facilitator_name_responses = responses.map {|x| x['how_often_given_feedback_s']}.flat_map(&:keys)
+      return Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}], true
+    else
+      # Older surveys do not have facilitator specific answers. In that case, just assume that
+      # each facilitator has response_count answers
+      return Hash[*facilitators.flat_map {|facilitator| [facilitator, responses.count]}], false
+    end
+  end
+
+  def initialize_response_summaries(facilitator_name_filter, facilitators)
+    # Initalize a hash of non facilitator specific questions to answer sums
+    response_sums = Hash[INDIVIDUAL_RESPONSE_QUESTIONS.map {|question| [question, 0]}]
+
+    # Initialize a hash of facilitator specific questions to hashes of facilitator->answer sums.
+    facilitator_specific_response_sums =
+      if facilitator_name_filter
+        Hash[FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.map {|question| [question, {facilitator_name_filter => 0}]}]
+      else
+        Hash[FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS.map {|question| [question, Hash[facilitators.map {|facilitator| [facilitator, 0]}]]}]
+      end
+
+    free_response_summary = Hash[FREE_RESPONSE_QUESTIONS.map {|question| [question, []]}]
+
+    # Initialize a hash of free response questions to hashes of facilitators->answers
+    facilitator_specific_free_response_sums =
+      if facilitator_name_filter
+        Hash[FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS.map {|question| [question, {facilitator_name_filter => []}]}]
+      else
+        Hash[FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS.map {|question| [question, Hash[facilitators.map {|facilitator| [facilitator, []]}]]}]
+      end
+
+    return response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums
+  end
+
+  def generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter)
+    responses.each do |response|
+      response.symbolize_keys.each do |question, answer|
+        if INDIVIDUAL_RESPONSE_QUESTIONS.include? question
+          if answer.is_a? Hash
+            if facilitator_name_filter
+              next unless answer[facilitator_name_filter]
+              facilitator_specific_response_sums[question][facilitator_name_filter] += get_score_for_response(question, answer[facilitator_name_filter])
+            else
+              answer.each do |facilitator_name, facilitator_answer|
+                facilitator_specific_response_sums[question][facilitator_name] += get_score_for_response(question, facilitator_answer)
+              end
+            end
+          else
+            response_sums[question] += get_score_for_response(question, answer)
+          end
+        end
+      end
+    end
+  end
+
+  def generate_free_response_sums(responses, free_response_summary, facilitator_specific_free_response_sums, facilitator_name_filter)
+    responses.each do |response|
+      response.symbolize_keys.each do |question, answer|
+        if FREE_RESPONSE_QUESTIONS.include? question
+          if answer.is_a? Hash
+            if facilitator_name_filter
+              next unless answer[facilitator_name_filter]
+              facilitator_specific_free_response_sums[question][facilitator_name_filter].append answer[facilitator_name_filter]
+            else
+              answer.each do |facilitator_name, facilitator_answer|
+                facilitator_specific_free_response_sums[question][facilitator_name].append facilitator_answer
+              end
+            end
+          else
+            free_response_summary[question].append answer
+          end
+        end
+      end
+    end
+  end
+
+  def generate_response_averages(response_sums, facilitator_specific_response_sums, responses, facilitator_name_filter)
+    response_summary = {}
+
+    facilitator_response_count, has_facilitator_specific_answers = calculate_facilitator_name_frequencies(responses, facilitators)
+    # Note that this is not the number of responses. Some responses apply for multiple
+    # facilitators. If a workshop has 5 responses, 4 may be for facilitator A, 3 may be
+    # for facilitator B, we'd expect this to be 7.
+    responses_for_all_facilitators_count = facilitator_response_count.values.reduce(:+).to_f
+
+    response_sums.each do |question, answer_sum|
+      response_summary[question] = (answer_sum / responses.count.to_f).round(2)
+    end
+
+    if has_facilitator_specific_answers
+      facilitator_specific_response_sums.each do |question, facilitators_for_response|
+        response_sum = facilitator_specific_response_sums[question].flat_map(&:values).reduce(:+) || 0
+        response_summary[question] = (response_sum / responses_for_all_facilitators_count).round(2)
+      end
+    end
+
+    response_summary
   end
 
   private

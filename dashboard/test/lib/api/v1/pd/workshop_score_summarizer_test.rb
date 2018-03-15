@@ -277,7 +277,215 @@ module Api::V1::Pd
       assert_equal 3.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Dick'))[:how_often_given_feedback_s]
       assert_equal 1.0, (get_score_for_workshops([csd_workshop], facilitator_name_filter: 'Harry'))[:how_often_given_feedback_s]
 
-      assert_equal({'Tom' => 2, 'Dick' => 1, 'Harry' => 1}, calculate_facilitator_name_frequencies(responses.map {|response| JSON.parse response[:data]}))
+      assert_equal([{'Tom' => 2, 'Dick' => 1, 'Harry' => 1}, true], calculate_facilitator_name_frequencies(responses.map {|response| JSON.parse response[:data]}, TEST_FACILITATORS))
+    end
+
+    test 'Response summary initialization' do
+      expected_response_summary = {
+        how_much_learned_s: 0,
+        how_motivating_s: 0,
+        how_clearly_presented_s: 0,
+        how_interesting_s: 0,
+        how_often_given_feedback_s: 0,
+        how_comfortable_asking_questions_s: 0,
+        how_often_taught_new_things_s: 0,
+        how_much_participated_s: 0,
+        how_often_talk_about_ideas_outside_s: 0,
+        how_often_lost_track_of_time_s: 0,
+        how_excited_before_s: 0,
+        overall_how_interested_s: 0,
+        more_prepared_than_before_s: 0,
+        know_where_to_go_for_help_s: 0,
+        suitable_for_my_experience_s: 0,
+        would_recommend_s: 0,
+        part_of_community_s: 0
+      }
+
+      expected_free_response_summary = {
+        things_facilitator_did_well_s: [],
+        things_facilitator_could_improve_s: [],
+        things_you_liked_s: [],
+        things_you_would_change_s: [],
+        anything_else_s: []
+      }
+
+      assert_equal [expected_response_summary, {
+        how_clearly_presented_s: {'Tom' => 0, 'Dick' => 0, 'Harry' => 0},
+        how_interesting_s: {'Tom' => 0, 'Dick' => 0, 'Harry' => 0},
+        how_often_given_feedback_s: {'Tom' => 0, 'Dick' => 0, 'Harry' => 0},
+        how_comfortable_asking_questions_s: {'Tom' => 0, 'Dick' => 0, 'Harry' => 0},
+        how_often_taught_new_things_s: {'Tom' => 0, 'Dick' => 0, 'Harry' => 0},
+      }, expected_free_response_summary, {
+        things_facilitator_did_well_s: {'Tom' => [], 'Dick' => [], 'Harry' => []},
+        things_facilitator_could_improve_s: {'Tom' => [], 'Dick' => [], 'Harry' => []}
+      }], initialize_response_summaries(nil, TEST_FACILITATORS)
+
+      assert_equal [expected_response_summary, {
+        how_clearly_presented_s: {'Tom' => 0},
+        how_interesting_s: {'Tom' => 0},
+        how_often_given_feedback_s: {'Tom' => 0},
+        how_comfortable_asking_questions_s: {'Tom' => 0},
+        how_often_taught_new_things_s: {'Tom' => 0},
+      }, expected_free_response_summary, {
+        things_facilitator_did_well_s: {'Tom' => []},
+        things_facilitator_could_improve_s: {'Tom' => []}
+      }], initialize_response_summaries('Tom', TEST_FACILITATORS)
+    end
+
+    test 'Generating sums without facilitator filter' do
+      response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(nil, TEST_FACILITATORS)
+      response = JSON.parse @happy_teacher_response[:data]
+      generate_survey_response_sums([response, response], response_sums, facilitator_specific_response_sums, nil)
+      generate_free_response_sums([response, response], free_response_summary, facilitator_specific_free_response_sums, nil)
+
+      assert_equal(
+        {
+          how_much_learned_s: 10,
+          how_motivating_s: 10,
+          how_clearly_presented_s: 0,
+          how_interesting_s: 0,
+          how_often_given_feedback_s: 0,
+          how_comfortable_asking_questions_s: 0,
+          how_often_taught_new_things_s: 0,
+          how_much_participated_s: 10,
+          how_often_talk_about_ideas_outside_s: 10,
+          how_often_lost_track_of_time_s: 10,
+          how_excited_before_s: 10,
+          overall_how_interested_s: 10,
+          more_prepared_than_before_s: 12,
+          know_where_to_go_for_help_s: 12,
+          suitable_for_my_experience_s: 12,
+          would_recommend_s: 12,
+          part_of_community_s: 12
+      }, response_sums)
+
+      assert_equal(
+        {
+          how_clearly_presented_s: {'Tom' => 10, 'Dick' => 10, 'Harry' => 10},
+          how_interesting_s: {'Tom' => 10, 'Dick' => 10, 'Harry' => 10},
+          how_often_given_feedback_s: {'Tom' => 10, 'Dick' => 10, 'Harry' => 10},
+          how_comfortable_asking_questions_s: {'Tom' => 10, 'Dick' => 10, 'Harry' => 10},
+          how_often_taught_new_things_s: {'Tom' => 10, 'Dick' => 10, 'Harry' => 10},
+      }, facilitator_specific_response_sums)
+
+      assert_equal(
+        {
+          things_facilitator_did_well_s: [],
+          things_facilitator_could_improve_s: [],
+          things_you_liked_s: %w(Great! Great!),
+          things_you_would_change_s: %w(Great! Great!),
+          anything_else_s: %w(Great! Great!)
+        }, free_response_summary
+      )
+
+      assert_equal(
+        {
+          things_facilitator_did_well_s: {'Tom' => %w(Great! Great!), 'Dick' => %w(Great! Great!), 'Harry' => %w(Great! Great!)},
+          things_facilitator_could_improve_s: {'Tom' => %w(Great! Great!), 'Dick' => %w(Great! Great!), 'Harry' => %w(Great! Great!)}
+        }, facilitator_specific_free_response_sums
+      )
+    end
+
+    test 'Generating sums with facilitator filter' do
+      response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries('Tom', TEST_FACILITATORS)
+      response = JSON.parse @happy_teacher_response[:data]
+      generate_survey_response_sums([response, response], response_sums, facilitator_specific_response_sums, 'Tom')
+      generate_free_response_sums([response, response], free_response_summary, facilitator_specific_free_response_sums, 'Tom')
+
+      assert_equal(
+        {
+          how_much_learned_s: 10,
+          how_motivating_s: 10,
+          how_clearly_presented_s: 0,
+          how_interesting_s: 0,
+          how_often_given_feedback_s: 0,
+          how_comfortable_asking_questions_s: 0,
+          how_often_taught_new_things_s: 0,
+          how_much_participated_s: 10,
+          how_often_talk_about_ideas_outside_s: 10,
+          how_often_lost_track_of_time_s: 10,
+          how_excited_before_s: 10,
+          overall_how_interested_s: 10,
+          more_prepared_than_before_s: 12,
+          know_where_to_go_for_help_s: 12,
+          suitable_for_my_experience_s: 12,
+          would_recommend_s: 12,
+          part_of_community_s: 12
+        }, response_sums)
+
+      assert_equal(
+        {
+          how_clearly_presented_s: {'Tom' => 10},
+          how_interesting_s: {'Tom' => 10},
+          how_often_given_feedback_s: {'Tom' => 10},
+          how_comfortable_asking_questions_s: {'Tom' => 10},
+          how_often_taught_new_things_s: {'Tom' => 10},
+        }, facilitator_specific_response_sums)
+
+      assert_equal(
+        {
+          things_facilitator_did_well_s: [],
+          things_facilitator_could_improve_s: [],
+          things_you_liked_s: %w(Great! Great!),
+          things_you_would_change_s: %w(Great! Great!),
+          anything_else_s: %w(Great! Great!)
+        }, free_response_summary
+      )
+
+      assert_equal(
+        {
+          things_facilitator_did_well_s: {'Tom' => %w(Great! Great!)},
+          things_facilitator_could_improve_s: {'Tom' => %w(Great! Great!)}
+        }, facilitator_specific_free_response_sums
+      )
+    end
+
+    test 'Generating sums for non-facilitator specific surveys' do
+      response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries('Tom', TEST_FACILITATORS)
+      response = JSON.parse @happy_teacher_response[:data]
+      response.merge!({
+        how_clearly_presented_s: 'Extremely clearly',
+        how_interesting_s: 'Extremely interesting',
+        how_often_given_feedback_s: 'All the time',
+        how_comfortable_asking_questions_s: 'Extremely comfortable',
+        how_often_taught_new_things_s: 'All the time',
+        things_facilitator_did_well_s: 'Great!',
+        things_facilitator_could_improve_s: 'Great!',
+      })
+
+      generate_survey_response_sums([response, response], response_sums, facilitator_specific_response_sums, 'Tom')
+      generate_free_response_sums([response, response], free_response_summary, facilitator_specific_free_response_sums, 'Tom')
+
+      assert_equal(
+        {
+          how_much_learned_s: 10,
+          how_motivating_s: 10,
+          how_clearly_presented_s: 10,
+          how_interesting_s: 10,
+          how_often_given_feedback_s: 10,
+          how_comfortable_asking_questions_s: 10,
+          how_often_taught_new_things_s: 10,
+          how_much_participated_s: 10,
+          how_often_talk_about_ideas_outside_s: 10,
+          how_often_lost_track_of_time_s: 10,
+          how_excited_before_s: 10,
+          overall_how_interested_s: 10,
+          more_prepared_than_before_s: 12,
+          know_where_to_go_for_help_s: 12,
+          suitable_for_my_experience_s: 12,
+          would_recommend_s: 12,
+          part_of_community_s: 12
+        }, response_sums)
+
+      assert_equal(
+        {
+          things_facilitator_did_well_s: %w(Great! Great!),
+          things_facilitator_could_improve_s: %w(Great! Great!),
+          things_you_liked_s: %w(Great! Great!),
+          things_you_would_change_s: %w(Great! Great!),
+          anything_else_s: %w(Great! Great!)
+        }, free_response_summary
+      )
     end
 
     private
