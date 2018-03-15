@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react';
+import {toggleSharingColumn} from './manageStudentsRedux';
+import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
 import BaseDialog from '../BaseDialog';
@@ -15,10 +17,11 @@ const styles = {
   }
 };
 
-export default class AddMultipleStudents extends Component {
+class ControlProjectSharingDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func,
+    toggleSharingColumn: PropTypes.func,
   };
 
   state = {
@@ -49,7 +52,7 @@ export default class AddMultipleStudents extends Component {
             />
             <Button
               text={i18n.projectSharingDialogButton()}
-              onClick={()=> console.log("clicked!")}
+              onClick={this.props.toggleSharingColumn}
               color={Button.ButtonColor.orange}
             />
           </DialogFooter>
@@ -58,3 +61,11 @@ export default class AddMultipleStudents extends Component {
     );
   }
 }
+
+export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
+
+export default connect(state => ({}), dispatch => ({
+  toggleSharingColumn() {
+    dispatch(toggleSharingColumn());
+  }
+}))(ControlProjectSharingDialog);
