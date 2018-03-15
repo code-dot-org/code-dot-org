@@ -1152,9 +1152,9 @@
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: Bu derse gerçek hayat algoritmaları denir. Algoritmalar insanlar her
-          gün yaptığı şeyi açıklar. Kurabiye tarifleri ve kuş yuvası oluşturmak için
-          yapılması gerekenler birer algoritmadır.
+        text: Bu derse Gerçek Hayat Algoritmaları denir. Algoritmalar insanların her
+          gün yaptığı şeyleri açıklar. Kurabiye tarifleri ve kuş yuvası oluşturmak
+          için yapılması gerekenlerin listesi birer algoritmadır.
       2:
         image: notes/C2_paper_airplanes_2.png
         text: Bugün kağıttan bir uçağı yapıp, yaratıp, test edeceğimiz bir algoritma

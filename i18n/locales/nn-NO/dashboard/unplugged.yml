@@ -163,9 +163,6 @@ nn:
       CollisionDetection:
         title: Oppdage kollisjon og Pytagoras læresetning
         desc: Å finne ut når objekter på skjermen rørar kverandre er eit viktig aspekt i dei fleste videospel. No skal vi sjå på korleis Pythagoras læresetning og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter på eit plan, og så avgjøre om dei to punkta (eller spelefigurane) rører kvarandre.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgåve skal du lære om løkker!

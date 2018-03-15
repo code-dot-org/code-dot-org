@@ -219,6 +219,7 @@
   "iceAge": "Jääkausi!",
   "ifDroid": "droid",
   "ifDroidN": "droidi {spriteIndex}",
+  "ifSprite": "hahmo",
   "ifSpriteN": "hahmo {spriteIndex}",
   "incrementPlayerScore": "lisää piste",
   "isSet": "on asetettu",

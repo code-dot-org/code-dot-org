@@ -302,8 +302,8 @@ class ContactRollups
     start = Time.now
     log "Inserting contacts from dashboard.census_submissions"
     PEGASUS_REPORTING_DB_WRITER.run "
-    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted)
-    SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}'
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, form_roles)
+    SELECT submitter_email_address, submitter_name, '#{ROLE_FORM_SUBMITTER}', '#{CENSUS_FORM_NAME}', lower(submitter_role)
     FROM #{DASHBOARD_DB_NAME}.census_submissions AS census_submissions
     WHERE LENGTH(census_submissions.submitter_email_address) > 0
     ON DUPLICATE KEY
@@ -311,6 +311,16 @@ class ContactRollups
     CASE LOCATE(values(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
       WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''),values(forms_submitted)),255)
       ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END,
+    roles =
+    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END,
+    form_roles =
+     CASE LOCATE(values(form_roles), COALESCE(#{DEST_TABLE_NAME}.form_roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.form_roles, ','), ''),values(form_roles)),255)
+      ELSE #{DEST_TABLE_NAME}.form_roles
     END"
 
     log_completion(start)

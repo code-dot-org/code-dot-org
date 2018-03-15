@@ -198,18 +198,18 @@
           <block type="logic_boolean">
             <title name="BOOL">TRUE</title>
           </block>
-          <block type="studio_ifActorPositionParams" inline="true">
+          <block type="studio_ifActorPosition" inline="true">
             <title name="POSITION">x</title>
             <title name="OPERATOR">EQ</title>
           </block>
-          <block type="studio_ifActorIsVisibleParams" inline="true">
+          <block type="studio_ifActorIsVisible" inline="true">
             <title name="VISIBILITY">false</title>
           </block>
-          <block type="studio_ifActorPositionElseParams" inline="true">
+          <block type="studio_ifActorPositionElse" inline="true">
             <title name="POSITION">x</title>
             <title name="OPERATOR">EQ</title>
           </block>
-          <block type="studio_ifActorIsVisibleElseParams" inline="true">
+          <block type="studio_ifActorIsVisibleElse" inline="true">
             <title name="VISIBILITY">false</title>
           </block>
         </category>

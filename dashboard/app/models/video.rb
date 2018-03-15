@@ -14,6 +14,8 @@
 class Video < ActiveRecord::Base
   include Seeded
 
+  default_scope {order(:key)}
+
   validates_uniqueness_of :key
 
   # YouTube video IDs must be 11 characters and contain no invalid characters, such as exclamation points or asterisks.
@@ -109,7 +111,7 @@ class Video < ActiveRecord::Base
 
   def thumbnail_path
     if id
-      path = "/c/video_thumbnails/#{id}.jpg"
+      path = "/c/video_thumbnails/#{key}.jpg"
       return path if File.exist? dashboard_dir('public', path)
     end
     thumbnail_url

@@ -87,7 +87,7 @@ bonus 'CSD U6 challenge motorcycle'
 
 stage 'Analog Input_', flex_category: 'csd6_1'
 named_level 'CSD U6L07 TFMD'
-named_level 'CSDU6 - sensors experiment'
+named_level 'CSD U6 sensor experiment embedded'
 named_level 'CSD Board Sensors Map'
 level 'CSD U6 analog sound', progression: 'Reading Sensors'
 level 'CSD U6 analog light', progression: 'Reading Sensors'

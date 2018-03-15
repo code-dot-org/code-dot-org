@@ -41,8 +41,7 @@ export default class VideoThumbnail extends Component {
             enable_fallback: video.enable_fallback,
             autoplay: video.autoplay,
           }, true);
-        }
-        }
+        }}
       >
         <img
           style={styles.videoThumbnail}

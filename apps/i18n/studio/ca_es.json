@@ -219,6 +219,7 @@
   "iceAge": "Edat de gel!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "actor",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "punt",
   "isSet": "is set",
