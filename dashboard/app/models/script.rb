@@ -559,7 +559,11 @@ class Script < ActiveRecord::Base
     script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
   end
 
-  def self.setup(custom_files)
+  # Create or update any scripts, script levels and stages specified in the
+  # script file definitions. If new_suffix is specified, create a copy of the
+  # script and any associated levels, appending new_suffix to the name when
+  # copying.
+  def self.setup(custom_files, new_suffix: nil)
     transaction do
       scripts_to_add = []
 
@@ -567,7 +571,8 @@ class Script < ActiveRecord::Base
       # Load custom scripts from Script DSL format
       custom_files.map do |script|
         name = File.basename(script, '.script')
-        script_data, i18n = ScriptDSL.parse_file(script)
+        name += "-#{new_suffix}" if new_suffix
+        script_data, i18n = ScriptDSL.parse_file(script, name)
 
         stages = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
@@ -584,15 +589,18 @@ class Script < ActiveRecord::Base
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |args|
-        add_script(*args)
+        add_script(args[0], args[1], new_suffix: new_suffix)
       end
       [added_scripts, custom_i18n]
     end
   end
 
-  def self.add_script(options, raw_stages)
+  # if new_suffix is specified, copy the script, hide it, and copy all its
+  # levelbuilder-defined levels.
+  def self.add_script(options, raw_stages, new_suffix: nil)
     raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
+    script.update!(hidden: true) if new_suffix
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
@@ -633,7 +641,12 @@ class Script < ActiveRecord::Base
           key = ['blockly', raw_level.delete(:game), raw_level.delete(:level_num)].join(':')
         end
 
-        level = levels_by_key[key] || Level.find_by_key(key)
+        level =
+          if new_suffix && !key.starts_with?('blockly')
+            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", allow_existing: true)
+          else
+            levels_by_key[key] || Level.find_by_key(key)
+          end
 
         if key.starts_with?('blockly')
           # this level is defined in levels.js. find/create the reference to this level
@@ -739,6 +752,25 @@ class Script < ActiveRecord::Base
     script.generate_plc_objects
 
     script
+  end
+
+  # Clone this script, appending a dash and the suffix to the name of this
+  # script. Also clone all the levels in the script, appending an underscore and
+  # the suffix to the name of each level. Mark the new script as hidden, and
+  # copy any translations and other metadata associated with the original script.
+  def clone_with_suffix(new_suffix)
+    script_filename = "config/scripts/#{name}.script"
+    new_name = "#{name}-#{new_suffix}"
+    _, custom_i18n = Script.setup([script_filename], new_suffix: new_suffix)
+
+    # Omit any unused stage names. custom_i18n will already contain any stage
+    # still in use, and summarize_i18n(true) may return some stage names which
+    # are no longer in use.
+    metadata_i18n = summarize_i18n(false)
+    Script.merge_and_write_i18n(custom_i18n, new_name, metadata_i18n)
+
+    new_filename = "config/scripts/#{new_name}.script"
+    ScriptDSL.serialize(Script.find_by_name(new_name), new_filename)
   end
 
   # script is found/created by 'id' (if provided) otherwise by 'name'
