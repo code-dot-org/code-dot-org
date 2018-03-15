@@ -75,7 +75,8 @@ class ProjectSourceJsonTest < Minitest::Test
           "frameCount":1,
           "looping":true,
           "frameDelay":12,
-          "version":"_9WUARCAgtYNZf8EZR3HyNVetFkRM5H5"
+          "version":"_9WUARCAgtYNZf8EZR3HyNVetFkRM5H5",
+          "key":"7a31e51f-db56-4147-bee3-c5ccc8a71aee"
         }
       JSON
       iterated_props[0].to_json
@@ -93,7 +94,8 @@ class ProjectSourceJsonTest < Minitest::Test
           "frameCount":2,
           "looping":true,
           "frameDelay":12,
-          "version":"Wt3TJpURB1tUZvr6GMyMfyGefEXJI9BM"
+          "version":"Wt3TJpURB1tUZvr6GMyMfyGefEXJI9BM",
+          "key":"961474d2-d06d-4c10-941e-79c6bde06d2c"
         }
       JSON
       iterated_props[1].to_json
