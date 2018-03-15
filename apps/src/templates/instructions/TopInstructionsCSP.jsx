@@ -112,6 +112,8 @@ var TopInstructions = React.createClass({
     documentationUrl: PropTypes.string,
     ttsMarkdownInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
+    mapReference: PropTypes.string,
+    referenceLinks: PropTypes.array
   },
 
   state:{
@@ -219,6 +221,19 @@ var TopInstructions = React.createClass({
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
+
+    // If we are in the resources tab experiment, only display the help tab when
+    // are one or more videos
+    const resourcesTabDisplayTab = experiments.isEnabled('resourcesTab') && this.props.levelVideos.length > 0;
+
+    const levelResourcesAvailable = ((this.props.levelVideos && this.props.levelVideos.length > 0) ||
+      this.props.mapReference !== null ||
+      (this.props.referenceLinks && this.props.referenceLinks.length > 0));
+
+    // If we are in the additional resources experiment, only display the help tab
+    // when there are one or more videos or additional resource links.
+    const additionalResourcesDisplayTab = experiments.isEnabled('additionalResources') && levelResourcesAvailable;
+    const displayHelpTab = resourcesTabDisplayTab || additionalResourcesDisplayTab;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -234,7 +249,9 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
-            {experiments.isEnabled('resourcesTab') &&
+
+            {(experiments.isEnabled('resourcesTab') ||
+              experiments.isEnabled('additionalResources')) &&
               <div style={styles.helpTabs}>
                 <InstructionsTab
                   className="uitest-instructionsTab"
@@ -242,7 +259,7 @@ var TopInstructions = React.createClass({
                   style={this.state.helpTabSelected ? null : styles.highlighted}
                   text={msg.instructions()}
                 />
-                {this.props.levelVideos.length > 0 &&
+                {displayHelpTab &&
                   <InstructionsTab
                     className="uitest-helpTab"
                     onClick={this.handleHelpTabClick}
@@ -257,7 +274,8 @@ var TopInstructions = React.createClass({
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            {!experiments.isEnabled('resourcesTab') &&
+
+            {(!experiments.isEnabled('resourcesTab') && !experiments.isEnabled('additionalResources')) &&
               <div style={styles.title}>
                 {msg.puzzleTitle({
                   stage_total: this.props.stageTotal,
@@ -284,6 +302,8 @@ var TopInstructions = React.createClass({
                 {this.state.helpTabSelected &&
                   <HelpTabContents
                     videoData={videoData}
+                    mapReference={this.props.mapReference}
+                    referenceLinks={this.props.referenceLinks}
                   />
                 }
                 <TeacherOnlyMarkdown/>
@@ -316,6 +336,8 @@ module.exports = connect(function propsFromStore(state) {
     documentationUrl: state.pageConstants.documentationUrl,
     ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
     levelVideos: state.instructions.levelVideos,
+    mapReference: state.instructions.mapReference,
+    referenceLinks: state.instructions.referenceLinks
   };
 }, function propsFromDispatch(dispatch) {
   return {
