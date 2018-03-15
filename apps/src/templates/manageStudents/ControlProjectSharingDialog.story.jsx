@@ -1,5 +1,5 @@
 import React from 'react';
-import ControlProjectSharingDialog from './ControlProjectSharingDialog';
+import {UnconnectedControlProjectSharingDialog as ControlProjectSharingDialog} from './ControlProjectSharingDialog';
 
 export default storybook => {
   storybook
@@ -11,7 +11,8 @@ export default storybook => {
         story: () => (
           <ControlProjectSharingDialog
             isDialogOpen={true}
-            closeDialog={() => console.log('close was clicked!')}
+            closeDialog={() => console.log('click')}
+            toggleSharingColumn={() => console.log('click')}
           />
         )
       },
