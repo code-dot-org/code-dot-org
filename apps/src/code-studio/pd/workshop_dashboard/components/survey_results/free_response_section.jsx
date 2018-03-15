@@ -37,6 +37,16 @@ export default class FreeResponseSection extends React.Component {
     }
   }
 
+  renderResponseSection(responses) {
+    if (responses) {
+      if (Array.isArray(responses)) {
+        return this.renderAnswers(responses)
+      } else {
+        return this.renderFacilitatorsAndAnswers(responses)
+      }
+    }
+  }
+
   render() {
     return (
       <div>
@@ -47,11 +57,7 @@ export default class FreeResponseSection extends React.Component {
                 <b>
                   {question['text']}
                 </b>
-                {
-                  Array.isArray(this.props.responseData[question['key']]) ?
-                    this.renderAnswers(this.props.responseData[question['key']]) :
-                    this.renderFacilitatorsAndAnswers(this.props.responseData[question['key']])
-                }
+                {this.renderResponseSection(this.props.responseData[question.key])}
               </Well>
             );
           })
