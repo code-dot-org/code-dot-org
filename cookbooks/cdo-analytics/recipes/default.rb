@@ -1,5 +1,5 @@
-# Prerequisite for `pg` gem, which is used to query Redshift.
-apt_package 'libpq-dev'
+# Prerequisites for `pg` gem and `psql` console used to query Redshift.
+apt_package %w(libpq-dev postgresql-client)
 
 include_recipe 'ark'
 ark 'sql-runner' do
