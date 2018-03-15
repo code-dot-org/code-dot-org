@@ -14,7 +14,7 @@ class PegasusTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
-    Documents.new
+    @app ||= Documents.new
   end
 
   def test_pegasus_documents
@@ -31,7 +31,8 @@ class PegasusTest < Minitest::Test
       code.org/educate
       code.org/teacher-dashboard
       code.org/teacher-dashboard/review-hociyskvuwa
-      code.org/teach code.org/student
+      code.org/teach
+      code.org/student
     ],
     301 => %w[
       csedweek.org/resource_kit
@@ -65,7 +66,7 @@ class PegasusTest < Minitest::Test
   }
 
   # All documents expected to have unchanged content between runs, with the following exceptions:
-  # (TODO: remove random elements from these pages.)
+  # (TODO: remove all randomness in server-generated content from these pages.)
   CONTENT_CHANGE_EXCEPTIONS = %w[
     code.org
     code.org/about
@@ -89,7 +90,9 @@ class PegasusTest < Minitest::Test
   def test_render_pegasus_documents
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
-      page[:uri].end_with?('/splat')
+      page[:uri].end_with?('/splat') ||
+      # Private routes not yet handled.
+      page[:uri].start_with?('/private')
     end
 
     tidy = system('which tidy >/dev/null 2>&1')
@@ -102,16 +105,25 @@ class PegasusTest < Minitest::Test
     results = Parallel.map(all_documents) do |page|
       site = page[:site]
       uri = page[:uri]
+
+      # If this site isn't a live host, use an inherited site instead.
+      unless live_host?(site)
+        site = inherited_sites(site).select(&method(:live_host?)).last
+      end
+
       url = "#{site}#{uri}"
       header 'host', site
-      response = begin
+      begin
         get(uri)
+        # Follow relative redirects.
+        follow_redirect! if last_response.redirect? && last_response['Location'].start_with?('/')
       rescue Exception => e
         # Filter backtrace from current location.
         index = e.backtrace.index(caller(2..2).first)
         e.set_backtrace(e.backtrace[0..index - 1])
         next "[#{url}] Render failed:\n#{e}\n#{e.backtrace.join("\n")}"
       end
+      response = last_response
       status = response.status
 
       if status == 200
@@ -163,8 +175,21 @@ class PegasusTest < Minitest::Test
 
   private
 
+  # @return [Array<String>] sites configured with the provided site as their 'base'.
+  def inherited_sites(site)
+    Documents.load_configs_in(app.helpers.content_dir).
+      select {|_, config| config[:base] == site}.
+      keys
+  end
+
+  # If a given host isn't 'live', it won't correctly render requests routed to it as expected.
+  # @return [Boolean] whether the host matches the result returned by `request.site`.
+  def live_host?(host)
+    Rack::Request.new({'HTTP_HOST' => host}).site == host
+  end
+
   # Runs `tidy` in a subprocess to validate HTML content.
-  # Returns an array of error messages, or `nil` if no errors.
+  # @return [Array, nil] error messages, or `nil` if no errors.
   def validate(body)
     cmd = 'tidy -q -e'
     status, result = nil

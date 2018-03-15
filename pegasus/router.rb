@@ -84,6 +84,7 @@ class Documents < Sinatra::Base
 
   configure do
     dir = pegasus_dir('sites.v3')
+    set :absolute_redirects, false
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
@@ -98,8 +99,13 @@ class Documents < Sinatra::Base
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found', '.404']
     set :redirect_extnames, ['.redirect', '.moved', '.found', '.301', '.302']
-    set :template_extnames, ['.erb', '.fetch', '.haml', '.html', '.md', '.txt']
-    set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
+    set :template_extnames, ['.erb', '.haml', '.html', '.md', '.txt']
+    set :non_static_extnames,
+      settings.not_found_extnames +
+      settings.redirect_extnames +
+      settings.template_extnames +
+      settings.exclude_extnames +
+      ['.fetch']
     set :markdown,
       renderer: ::TextRender::MarkdownEngine::HTMLWithTags,
       autolink: true,
@@ -143,6 +149,8 @@ class Documents < Sinatra::Base
 
     @dirs << request.site
 
+    # Implement recursive site-inheritance feature.
+    # Site renders fallback documents from 'base' site defined in config.
     if @config
       base = @config[:base]
       while base
@@ -389,27 +397,22 @@ class Documents < Sinatra::Base
     def all_documents
       dirs = Dir.children(content_dir).select {|file| Dir.exist?(content_dir(file))}
       dirs.map do |site|
-        (settings.template_extnames - ['.fetch']).map do |ext|
-          site_glob = site_sub = content_dir(site, 'public')
+        site_glob = site_sub = content_dir(site, 'public')
 
-          if site == 'hourofcode.com'
-            # hourofcode.com has custom logic to include
-            # optional `/i18n` folder in its file-search path.
-            site_glob.sub!(site, "{#{site},#{site}/i18n}")
-            site_sub = /#{content_dir(site)}(\/i18n)?\/public/
-          end
+        if site == 'hourofcode.com'
+          # hourofcode.com has custom logic to include
+          # optional `/i18n` folder in its file-search path.
+          site_glob.sub!(site, "{#{site},#{site}/i18n}")
+          site_sub = /#{content_dir(site)}(\/i18n)?\/public/
+        end
 
-          Dir.glob("#{site_glob}/**/*#{ext}").map do |file|
-            # Reduce file to URI.
-            uri = file.
-              sub(site_sub, '').
-              sub(/#{File.extname(file)}$/, '').
-              sub(/\/index$/, '')
-            next if uri.start_with?('/private')
-            uri.prepend('/us') if site == 'hourofcode.com'
-            site = 'italia.code.org' if site == 'i18n.code.org'
-            {site: site, uri: uri}
-          end
+        Dir.glob("#{site_glob}/**/*{#{settings.template_extnames.join(',')}}").map do |file|
+          # Reduce file to URI.
+          uri = file.
+            sub(site_sub, '').
+            sub(/#{File.extname(file)}$/, '').
+            sub(/\/index$/, '')
+          {site: site, uri: uri}
         end
       end.flatten.compact
     end
