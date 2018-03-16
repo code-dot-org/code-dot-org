@@ -28,10 +28,11 @@ export default class FreeResponseSection extends React.Component {
   }
 
   renderBullet(text, key) {
-    if (_.trim(text)) {
+    const trimmedText = _.trim(text);
+    if (trimmedText) {
       return (
         <li key={key}>
-          {text}
+          {trimmedText}
         </li>
       );
     }

@@ -68,28 +68,112 @@ module Api::V1::Pd
       @workshops = [@workshop]
 
       AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
+
+      @workshop_for_course = create :pd_workshop, num_facilitators: 1
+      @other_workshop_for_course = create :pd_workshop, organizer: @workshop_for_course.organizer, num_facilitators: 1
     end
 
-    test 'generate_summary_report makes appropriate calls to get_score_for_workshops' do
-      workshop_for_course = create :pd_workshop, num_facilitators: 1
-      other_workshop_for_course = create :pd_workshop, organizer: workshop_for_course.organizer, num_facilitators: 1
+    test 'generate_summary_report makes appropriate calls to get_score_for_workshops without name filter' do
+      summary_report_sequence = sequence('Sequence for summary report')
 
       expects(:get_score_for_workshops).with(
-        workshops: [workshop_for_course, other_workshop_for_course],
+        workshops: [@workshop_for_course],
+        include_free_responses: true,
         facilitator_name_filter: nil
-      ).returns({})
+      ).returns('Single workshop scores').in_sequence(summary_report_sequence)
 
       expects(:get_score_for_workshops).with(
-        workshops: [workshop_for_course],
-        include_free_response: true,
+        workshops: [@workshop_for_course, @other_workshop_for_course],
+        include_free_responses: false,
         facilitator_name_filter: nil
-      ).returns({})
-
+      ).returns('All workshops for this course scores').in_sequence(summary_report_sequence)
 
       summary_report = generate_summary_report(
-        workshop: workshop_for_course,
-        workshops: [workshop_for_course, other_workshop_for_course],
-        course: workshop_for_course.course
+        workshop: @workshop_for_course,
+        workshops: [@workshop_for_course, @other_workshop_for_course],
+        course: @workshop_for_course.course
+      )
+
+      assert_equal(
+        {
+          this_workshop: 'Single workshop scores',
+          all_my_workshops_for_course: 'All workshops for this course scores',
+          all_workshops_for_course: {}
+        }, summary_report
+      )
+    end
+
+    test 'generate_summary_report makes appropriate calls to get_score_for_workshops with name filter' do
+      summary_report_sequence = sequence('Sequence for summary report')
+
+      name_filter = @workshop_for_course.facilitators.first.name
+
+      expects(:get_score_for_workshops).with(
+        workshops: [@workshop_for_course],
+        include_free_responses: true,
+        facilitator_name_filter: name_filter
+      ).returns('Single workshop scores').in_sequence(summary_report_sequence)
+
+      expects(:get_score_for_workshops).with(
+        workshops: [@workshop_for_course, @other_workshop_for_course],
+        include_free_responses: false,
+        facilitator_name_filter: name_filter
+      ).returns('All workshops for this course scores').in_sequence(summary_report_sequence)
+
+      summary_report = generate_summary_report(
+        workshop: @workshop_for_course,
+        workshops: [@workshop_for_course, @other_workshop_for_course],
+        course: @workshop_for_course.course,
+        facilitator_name: name_filter
+      )
+
+      assert_equal(
+        {
+          this_workshop: 'Single workshop scores',
+          all_my_workshops_for_course: 'All workshops for this course scores',
+          all_workshops_for_course: {}
+        }, summary_report
+      )
+    end
+
+    test 'generate_summary_report makes appropriate calls to get_score_for_workshops for facilitator breakdown' do
+      summary_report_sequence = sequence('Sequence for summary report')
+
+      facilitator_1_name = @workshop_for_course.facilitators.first.name
+      facilitator_2_name = @other_workshop_for_course.facilitators.first.name
+
+      expects(:get_score_for_workshops).with(
+        workshops: [@workshop_for_course, @other_workshop_for_course],
+        include_free_responses: false,
+        facilitator_name_filter: nil
+      ).returns('All workshops for this course scores').in_sequence(summary_report_sequence)
+
+      expects(:get_score_for_workshops).with(
+        workshops: [@workshop_for_course],
+        include_free_responses: false,
+        facilitator_name_filter: facilitator_1_name
+      ).returns("Scores for #{facilitator_1_name}")
+
+      expects(:get_score_for_workshops).with(
+        workshops: [@other_workshop_for_course],
+        include_free_responses: false,
+        facilitator_name_filter: facilitator_2_name
+      ).returns("Scores for #{facilitator_2_name}")
+
+      summary_report = generate_summary_report(
+        workshop: nil,
+        workshops: Pd::Workshop.where(id: [@workshop_for_course.id, @other_workshop_for_course.id]),
+        course: @workshop_for_course.course,
+        facilitator_breakdown: true
+      )
+
+      assert_equal(
+        {
+          all_my_workshops_for_course: 'All workshops for this course scores',
+          all_workshops_for_course: {},
+          facilitator_1_name => "Scores for #{facilitator_1_name}",
+          facilitator_2_name => "Scores for #{facilitator_2_name}",
+        }, summary_report
       )
     end
 
@@ -243,7 +327,7 @@ module Api::V1::Pd
 
     test 'Generating averages with facilitator filter' do
       @pegasus_db_stub.stubs(:where).returns([@happy_teacher_response, @angry_teacher_response])
-      response_summary = get_score_for_workshops(@workshops, include_free_responses: true, facilitator_name_filter: 'Tom')
+      response_summary = get_score_for_workshops(workshops: @workshops, include_free_responses: true, facilitator_name_filter: 'Tom')
 
       assert_equal(
         {
@@ -306,7 +390,7 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns(
         [{data: non_facilitator_specific_happy_teacher.to_json}, {data: non_facilitator_specific_angry_teacher.to_json}]
       )
-      response_summary = get_score_for_workshops(@workshops, include_free_responses: true, facilitator_name_filter: 'Tom')
+      response_summary = get_score_for_workshops(workshops: @workshops, include_free_responses: true, facilitator_name_filter: 'Tom')
 
       assert_equal(
         {

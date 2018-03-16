@@ -68,7 +68,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS - FREE_RESPONSE_QUESTIONS
   FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS & FREE_RESPONSE_QUESTIONS
 
-  def generate_summary_report(workshop: workshop, workshops: workshops, course: course, facilitator_name: facilitator_name = nil, facilitator_breakdown: facilitator_breakdown = false)
+  def generate_summary_report(workshop: nil, workshops:, course:, facilitator_name: nil, facilitator_breakdown: false)
     survey_report = Hash.new
 
     if workshop
@@ -81,6 +81,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
     survey_report[:all_my_workshops_for_course] = get_score_for_workshops(
       workshops: workshops,
+      include_free_responses: false,
       facilitator_name_filter: facilitator_name
     )
 
@@ -92,7 +93,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
       facilitators.each do |facilitator|
         survey_report[facilitator.name] = get_score_for_workshops(
-          workshops.facilitated_by(facilitator),
+          workshops: workshops.facilitated_by(facilitator),
+          include_free_responses: false,
           facilitator_name_filter: facilitator.name
         )
       end
@@ -101,7 +103,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     survey_report
   end
 
-  def get_score_for_workshops(workshops, include_free_responses: false, facilitator_name_filter: nil)
+  def get_score_for_workshops(workshops:, include_free_responses:, facilitator_name_filter:)
     facilitators = workshops.flat_map(&:facilitators).map(&:name)
     response_summary = {}
 
