@@ -45,7 +45,7 @@ class ChatClient
   end
 
   # @param room [String] Name of the Slack channel to post  /remind to.
-  # @param recipient [String] Slack user to remind, include @ in the arguement
+  # @param recipient [String] Slack user to remind, include @ in the argument
   # @param reminder [String] Message for the /remind commmand
   def self.set_reminder(room, recipient, reminder)
     message = recipient + " " + reminder
