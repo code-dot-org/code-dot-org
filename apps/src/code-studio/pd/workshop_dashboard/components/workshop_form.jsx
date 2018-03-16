@@ -64,6 +64,7 @@ export default class WorkshopForm extends React.Component {
       capacity: PropTypes.number.isRequired,
       on_map: PropTypes.bool.isRequired,
       funded: PropTypes.bool.isRequired,
+      funding_type: PropTypes.string,
       course: PropTypes.string.isRequired,
       subject: PropTypes.string,
       notes: PropTypes.string,
@@ -94,6 +95,7 @@ export default class WorkshopForm extends React.Component {
       capacity: '',
       on_map: false,
       funded: '',
+      funding_type: null,
       course: '',
       subject: '',
       notes:'',
@@ -114,6 +116,7 @@ export default class WorkshopForm extends React.Component {
           'capacity',
           'on_map',
           'funded',
+          'funding_type',
           'course',
           'subject',
           'notes',
@@ -338,12 +341,12 @@ export default class WorkshopForm extends React.Component {
       });
     } else {
       options.push({
-        value: {funded: true},
+        value: {funded: true, funding_type: null},
         text: "Yes, it is funded."
       });
     }
     options.push({
-      value: {funded: false},
+      value: {funded: false, funding_type: null},
       text: "No, it is not funded."
     });
     const value = JSON.stringify(_.pick(this.state, ['funded', 'funding_type']));
@@ -590,7 +593,7 @@ export default class WorkshopForm extends React.Component {
       facilitators: [],
       subject: null,
       funded: '',
-      funding_type: ''
+      funding_type: null
     });
     this.loadAvailableFacilitators(course);
   };

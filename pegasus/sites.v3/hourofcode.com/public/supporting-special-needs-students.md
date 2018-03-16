@@ -4,7 +4,7 @@ title: Supporting special needs students for the Hour of Code
 
 # Supporting special needs students for the Hour of Code
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other special needs find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate](<%= resolve_url('https://code.org/certificates') %>) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other special needs find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate](<%= codeorg_url('/certificates') %>) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
 
 ## Fit a variety of needs with unplugged and online tutorials
 
