@@ -11,7 +11,7 @@ class ManageStudentsSharingCell extends Component {
     disabled: PropTypes.bool,
     checked: PropTypes.bool,
     //Provided by redux
-    editStudent: PropTypes.func.isRequired,
+    editStudent: PropTypes.func,
   };
 
   state = {
@@ -55,6 +55,8 @@ class ManageStudentsSharingCell extends Component {
       );
   }
 }
+
+export const UnconnectedManageStudentsSharingCell = ManageStudentsSharingCell;
 
 export default connect(state => ({}), dispatch => ({
   editStudent(id, studentInfo) {
