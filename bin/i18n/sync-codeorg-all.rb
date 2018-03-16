@@ -18,6 +18,11 @@
 require_relative '../../lib/cdo/github'
 require_relative 'i18n_script_utils'
 
+require_relative 'sync-codeorg-in'
+require_relative 'sync-codeorg-up'
+require_relative 'sync-codeorg-down'
+require_relative 'sync-codeorg-out'
+
 IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d')}".freeze
 DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime('%m-%d')}".freeze
 
@@ -25,16 +30,6 @@ def update_repo
   return unless should_i "update the repo"
   `git checkout staging`
   `git pull origin staging`
-end
-
-def sync_in
-  return unless should_i "sync in"
-  run_standalone_script(File.join(__dir__, "sync-codeorg-in"))
-end
-
-def sync_up
-  return unless should_i "sync up"
-  run_standalone_script(File.join(__dir__, "sync-codeorg-up"))
 end
 
 def create_in_up_pr
@@ -71,16 +66,6 @@ def create_in_up_pr
   )
   GitHub.label_pull_request(in_up_pr, ["i18n"])
   puts "Created In & Up PR: #{GitHub.url(in_up_pr)}"
-end
-
-def sync_down
-  return unless should_i "sync down"
-  run_standalone_script(File.join(__dir__, "sync-codeorg-down"))
-end
-
-def sync_out
-  return unless should_i "sync out"
-  run_standalone_script(File.join(__dir__, "sync-codeorg-out"))
 end
 
 def create_down_out_pr
@@ -135,11 +120,11 @@ end
 
 def main
   update_repo
-  sync_in
-  sync_up
+  sync_in if should_i "sync in"
+  sync_up if should_i "sync up"
   create_in_up_pr
-  sync_down
-  sync_out
+  sync_down if should_i "sync down"
+  sync_out if should_i "sync out"
   create_down_out_pr
 end
 
