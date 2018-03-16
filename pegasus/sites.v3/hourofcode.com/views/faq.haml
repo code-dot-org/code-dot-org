@@ -3,9 +3,6 @@
 %h2#about= hoc_s(:hoc_faq_what_is_hoc_q)
 %div= hoc_s(:hoc_faq_what_is_hoc_a).gsub(/%{tutorials}/, resolve_url('/learn')).gsub(/%{partners}/, resolve_url('/partners'))
 
-country is:
-= @country
-
 -# Hide signup buttons during Hour of Code
   %br/
   %a{onclick: "adjustScroll('join');"}
