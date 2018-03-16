@@ -10,6 +10,7 @@ module Api::V1::Pd
     def workshop_survey_report
       all_my_workshops = params[:organizer_view] ? Pd::Workshop.organized_by(current_user) : Pd::Workshop.facilitated_by(current_user)
       all_my_completed_workshops = all_my_workshops.where(course: @workshop.course).in_state(Pd::Workshop::STATE_ENDED)
+
       survey_report = generate_summary_report(
         workshop: @workshop,
         workshops: all_my_completed_workshops,
