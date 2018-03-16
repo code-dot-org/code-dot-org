@@ -59,10 +59,13 @@ def hoc_canonicalized_i18n_path(uri, query_string)
     redirect canonical_urls.last + (query_string.empty? ? '' : "?#{query_string}")
   end
 
-  # We no longer want the country to be part of the path we use to search:
-  search_uri = File.join('/', [@language, path].compact)
-  return search_uri if resolve_document(search_uri)
-  return "/#{path}"
+  # Try to resolve document in order:
+  # /:country/:language/:path
+  # /:country/:path (if language == country_language)
+  # /:language/:path
+  # /:path
+  search_uris = canonical_urls + [File.join('/', [@language, path].compact)]
+  search_uris.detect(&method(:resolve_document)) || "/#{path}"
 end
 
 def hoc_detect_country
@@ -94,12 +97,8 @@ def hoc_uri(uri)
   File.join(['/', (@company || @country), @user_language, uri].reject(&:nil_or_empty?))
 end
 
-def codeorg_url
-  return 'ar.code.org' if @country == 'ar'
-  return 'br.code.org' if @country == 'br'
-  return 'ro.code.org' if @country == 'ro'
-  return 'uk.code.org' if @country == 'uk'
-  return 'code.org'
+def codeorg_url(path)
+  CDO.code_org_url(path, 'https:')
 end
 
 def chapter_partner?
@@ -108,8 +107,7 @@ end
 
 def resolve_url(url)
   if url.downcase.include? "code.org"
-    partner_page = HOC_COUNTRIES[@country]['partner_page']
-    return url.gsub('code.org', partner_page)
+    url
   else
     File.join(['/', (@company || @country), @user_language, url].reject(&:nil_or_empty?))
   end
@@ -153,6 +151,8 @@ end
 
 def country_count
   code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
+  puts code
+  puts fetch_hoc_metrics['hoc_country_totals'].to_json
   return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
 end
 
