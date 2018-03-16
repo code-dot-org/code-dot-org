@@ -23,5 +23,5 @@
             - target = entry[:target] ? entry[:target] : "_self"
             %a{id: entry[:id], href: entry[:url], target: target}= entry[:title]
 
-  #hamburger-icon{class: contents[:visibility]}
-    %span
+  #hamburger-icon.clicktag{class: contents[:visibility]}
+    %span{style: "pointer-events: none"}

@@ -9,7 +9,7 @@ nav: promote_nav
 
 # გაუწიეთ პოპულარიზაცია კოდის ერთ საათს
 
-## ატარებთ "კოდის ერთ საათს"? <a href="<%= resolve_url('/how-to') %>იხილეთ გზამკვლევი</a>
+## ატარებთ "კოდის ერთ საათს"? <a href="<%= resolve_url('/how-to') %>">იხილეთ გზამკვლევი</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 

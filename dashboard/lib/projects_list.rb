@@ -60,17 +60,13 @@ module ProjectsList
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before:, prepend_featured:)
+    def fetch_published_projects(project_group, limit:, published_before:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_group == 'all'
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        if prepend_featured
-          return include_featured(limit: limit)
-        else
-          return fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
-        end
+        return include_featured(limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
       fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
@@ -87,8 +83,13 @@ module ProjectsList
 
     def fetch_featured_published_projects
       featured_published_projects = {}
-      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
-        featured_published_projects[project_type] = fetch_featured_projects_by_type(project_type)
+      PUBLISHED_PROJECT_TYPE_GROUPS.each do |project_group, project_types|
+        featured_published_projects[project_group] = []
+        project_types.each do |project_type|
+          featured_published_projects[project_group] <<
+          fetch_featured_projects_by_type(project_type)
+        end
+        featured_published_projects[project_group].flatten!
       end
       return featured_published_projects
     end
@@ -116,7 +117,11 @@ module ProjectsList
         join(storage_apps, id: :storage_app_id).
         join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
         join(:users, id: Sequel[:user_storage_ids][:user_id]).
-        where(unfeatured_at: nil, project_type: project_type.to_s, abuse_score: 0).
+        where(unfeatured_at: nil,
+          project_type: project_type.to_s,
+          abuse_score: 0,
+          state: 'active'
+        ).
         exclude(published_at: nil).
         order(Sequel.lit('RAND()')).limit(24).all
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)

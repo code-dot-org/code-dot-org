@@ -8,24 +8,28 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   setup_all do
     @admin = create(:admin)
     @workshop_admin = create(:workshop_admin)
-    @organizer = create(:program_manager)
+
+    @regional_partner = create(:regional_partner)
+    @program_manager = create(:program_manager, regional_partner: @regional_partner)
+    @organizer = @program_manager
     @workshop_organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
-    @regional_partner = create(:regional_partner)
+    @csf_facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
 
     @workshop = create(
       :pd_workshop,
+      :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
-      on_map: true,
-      funded: true
+      regional_partner: @regional_partner,
+      on_map: true
     )
     @organizer_workshop = create(
       :pd_workshop,
+      :funded,
       organizer: @workshop_organizer,
       facilitators: [@facilitator],
-      on_map: true,
-      funded: true
+      on_map: true
     )
 
     @standalone_workshop = create(:pd_workshop)
@@ -107,6 +111,80 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal enrollment_2.code, response.find {|workshop| workshop_2.id == workshop['id']}['enrollment_code']
   end
 
+  test 'workshops_user_enrolled_in does not return future or in progress teachercon or fit workshops' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    teachercon = create(
+      :pd_workshop,
+      :teachercon,
+      :funded,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner,
+      num_sessions: 1
+    )
+
+    fit_weekend = create(
+      :pd_workshop,
+      :funded,
+      subject: Pd::Workshop::SUBJECT_CSD_FIT,
+      course: Pd::Workshop::COURSE_CSD,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner
+    )
+
+    create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
+    create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
+
+    teachercon.start!
+
+    assert teachercon.state == Pd::Workshop::STATE_IN_PROGRESS
+    assert fit_weekend.state == Pd::Workshop::STATE_NOT_STARTED
+
+    get :workshops_user_enrolled_in
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+    assert_equal 0, response.length
+  end
+
+  test 'workshops_user_enrolled_in returns ended teachercon and fit workshops' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    teachercon = create(
+      :pd_ended_workshop,
+      :teachercon,
+      :funded,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner
+    )
+
+    fit_weekend = create(
+      :pd_ended_workshop,
+      :funded,
+      subject: Pd::Workshop::SUBJECT_CSD_FIT,
+      course: Pd::Workshop::COURSE_CSD,
+      organizer: @organizer,
+      facilitators: [@facilitator],
+      regional_partner: @regional_partner
+    )
+
+    teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
+    fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
+
+    get :workshops_user_enrolled_in
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+    assert_equal 2, response.length
+    assert_equal teachercon_enrollment.code, response.find {|workshop| teachercon.id == workshop['id']}['enrollment_code']
+    assert_equal fit_weekend_enrollment.code, response.find {|workshop| fit_weekend.id == workshop['id']}['enrollment_code']
+  end
+
   test 'workshop organizers cannot list workshops they are not organizing' do
     sign_in create(:workshop_organizer)
     get :index
@@ -134,6 +212,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     get :index
     assert_response :success
     assert_equal 0, JSON.parse(@response.body).length
+  end
+
+  test 'program managers can list workshops assigned to their regional partner' do
+    sign_in @program_manager
+    get :index
+    assert_response :success
+    assert_equal 1, JSON.parse(@response.body).length
   end
 
   test 'filter by state' do
@@ -270,7 +355,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     :show,
     name: 'facilitators can view a workshop they are facilitating',
     user: -> {@facilitator},
-    params: -> {{id: @workshop}}
+    params: -> {{id: @workshop.id}}
   ) do
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
@@ -282,6 +367,22 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     user: -> {@facilitator},
     params: -> {{id: @standalone_workshop.id}}
   )
+
+  test 'program managers can view a workshop associated with their regional partner' do
+    workshop = create :pd_workshop, regional_partner: @regional_partner
+    sign_in @program_manager
+
+    get :show, params: {id: workshop.id}
+    assert_response :success
+  end
+
+  test 'program managers cannot view a workshop not associated with their regional partner' do
+    workshop = create :pd_workshop
+    sign_in @program_manager
+
+    get :show, params: {id: workshop.id}
+    assert_response :forbidden
+  end
 
   # Action: Create
 
@@ -327,15 +428,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   )
 
   test 'csf facilitators can create workshops' do
-    facilitator = create :facilitator
-    Pd::CourseFacilitator.create(facilitator: facilitator, course: Pd::Workshop::COURSE_CSF)
-
-    sign_in(facilitator)
+    sign_in(@csf_facilitator)
 
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
       assert_response :success
     end
+  end
+
+  test 'non-csf facilitators cannot create workshops' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
+    sign_in(facilitator)
+
+    post :create, params: {pd_workshop: workshop_params}
+    assert_response :forbidden
   end
 
   # Action: Destroy
@@ -447,10 +553,22 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     sign_in(@facilitator)
 
     workshop = create :pd_workshop, organizer: @facilitator
-    params_with_regional_partner = workshop_params.merge({regional_partner_id: @regional_partner.id})
     put :update, params: {
       id: workshop.id,
-      pd_workshop: params_with_regional_partner
+      pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
+    }
+    assert_response :success
+    workshop.reload
+    assert_nil workshop.regional_partner_id
+  end
+
+  test 'CSF Facilitators can update workshops they are assigned to' do
+    sign_in(@csf_facilitator)
+
+    workshop = create :pd_workshop, facilitators: [@csf_facilitator]
+    put :update, params: {
+      id: workshop.id,
+      pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
     }
     assert_response :success
     workshop.reload
@@ -816,6 +934,16 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 2, response.first['facilitators'].size
   end
 
+  test 'Loads both facilitators when calling show' do
+    workshop = create :pd_workshop, num_facilitators: 2
+    sign_in(workshop.facilitators.first)
+    get :show, params: {id: workshop.id}
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal 2, response['facilitators'].size
+  end
+
   # Facilitators who are also organizers get workshops they facilitated and organized
   test 'Facilitator-organizers get all their workshops when calling index' do
     user = create :workshop_organizer
@@ -934,6 +1062,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       location_address: 'Seattle, WA',
       on_map: true,
       funded: true,
+      funding_type: Pd::Workshop::FUNDING_TYPE_PARTNER,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101,
       capacity: 10,

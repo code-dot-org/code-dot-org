@@ -233,9 +233,11 @@ module LevelsHelper
       shouldShowDialog: @level.properties['skip_dialog'].blank? && @level.properties['options'].try(:[], 'skip_dialog').blank?
     }
 
-    # Sets video options for this level
+    # Sets video and additional reference options for this level
     if @app_options[:level]
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
+      @app_options[:level][:mapReference] = @level.map_reference
+      @app_options[:level][:referenceLinks] = @level.reference_links
     end
 
     if current_user
@@ -262,7 +264,7 @@ module LevelsHelper
   # Helper that renders the _apps_dependencies partial with a configuration
   # appropriate to the level being rendered.
   def render_app_dependencies
-    use_droplet = app_options[:droplet]
+    use_droplet = @level.uses_droplet?
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game.app == Game::GAMELAB

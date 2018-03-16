@@ -273,7 +273,6 @@ StudioApp.prototype.init = function (config) {
   if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')) {
     if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) {
       firehoseClient.putRecord(
-        'analysis-events',
         {
           study: 'instructions-resources-tab',
           study_group: 'resources-tab',
@@ -285,7 +284,6 @@ StudioApp.prototype.init = function (config) {
       );
     } else {
       firehoseClient.putRecord(
-        'analysis-events',
         {
           study: 'instructions-resources-tab',
           study_group: 'under-app',
@@ -1347,12 +1345,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
 
-  // We don't get the benefits of our responsive styling, so set height
-  // explicitly
-  if (!utils.browserSupportsCssMedia()) {
-    visualization.style.height = newVizHeightString;
-    visualization.style.width = newVizWidthString;
-  }
   var scale = (newVizWidth / this.nativeVizWidth);
   getStore().dispatch(setVisualizationScale(scale));
 
@@ -1454,6 +1446,7 @@ StudioApp.prototype.displayFeedback = function (options) {
         code: generatedCodeProperties.code,
       };
       store.dispatch(setFeedbackData({
+        isChallenge: this.config.isChallengeLevel,
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
@@ -1853,7 +1846,7 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab'));
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab') || experiments.isEnabled('additionalResources'));
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
     // TODO (epeach) - remove after resources tab A/B testing
@@ -1863,7 +1856,6 @@ StudioApp.prototype.configureDom = function (config) {
     if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')) {
       videoThumbnail[0].addEventListener('click', () => {
         firehoseClient.putRecord(
-          'analysis-events',
           {
             study: 'instructions-resources-tab',
             study_group: 'under-app',
