@@ -7,6 +7,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     organizer_name
     organizer_id
     organizer_email
+    regional_partner_name
     workshop_dates
     on_map
     funded
