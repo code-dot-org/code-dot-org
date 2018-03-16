@@ -28,8 +28,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   # POST /sections/<section_id>/students/bulk_add
   def bulk_add
     unless @section.login_type == Section::LOGIN_TYPE_WORD || @section.login_type == Section::LOGIN_TYPE_PICTURE
-      render json: {errors: 'Not a valid section type'}, status: :bad_request
-      return
+      return render json: {errors: 'Not a valid section type'}, status: :bad_request
     end
 
     errors = []

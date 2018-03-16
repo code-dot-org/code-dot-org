@@ -91,15 +91,19 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'teacher can add multiple student to a word section' do
     sign_in @teacher
-    post :bulk_add, params: {section_id: @section.id,
-      students: [{gender: 'f', age: 10, name: 'name1'}, {gender: 'm', age: 10, name: 'name2'}]}
+    assert_difference 'User.count', 2 do
+      post :bulk_add, params: {section_id: @section.id,
+        students: [{gender: 'f', age: 10, name: 'name1'}, {gender: 'm', age: 10, name: 'name2'}]}
+    end
     assert_response :success
     assert_equal 2, JSON.parse(@response.body).length
   end
 
   test 'non-owner can not add student' do
     sign_in @other_teacher
-    post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
+    assert_does_not_create User do
+      post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
+    end
     assert_response :forbidden
   end
 
