@@ -65,9 +65,6 @@ content-type: text/ng-template
 
   #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
 
-  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email' && section.login_type !== 'google_classroom'", style: "line-height: 36px;"}
-    = I18n.t('dashboard_students_new_section')
-
   %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type === 'google_classroom'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_google_classroom_section')
 

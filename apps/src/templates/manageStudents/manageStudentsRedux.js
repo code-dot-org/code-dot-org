@@ -50,12 +50,21 @@ const blankNewStudentRow = {
   rowType: RowType.NEW_STUDENT,
 };
 
-// Initial state for the manageStudents redux store.
+/** Initial state for the manageStudents redux store.
+ * loginType - a SectionLoginType for the active section.
+ * sectionId - the sectionId number for the active section.
+ * studentData - represents student information persisted on the server.
+ * if isEditing (in studentData), then editingData represents the data
+ * in the edit fields on the client which has not yet been persisted to the server.
+ * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
+ * addStatus - status is of type AddStatus and numStudents is how many students were added.
+ */
 const initialState = {
   loginType: '',
   studentData: {},
   editingData: {},
   sectionId: null,
+  showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
 };
 
@@ -73,6 +82,7 @@ const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
+const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
@@ -94,6 +104,7 @@ export const addStudentsFailure = (numStudents, error, studentIds) => (
   { type: ADD_STUDENT_FAILURE, numStudents, error, studentIds }
 );
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
+export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -409,6 +420,12 @@ export default function manageStudents(state=initialState, action) {
         ...state.editingData,
         ...action.studentData
       }
+    };
+  }
+  if (action.type === TOGGLE_SHARING_COLUMN) {
+    return {
+      ...state,
+      showSharingColumn: !state.showSharingColumn,
     };
   }
 
