@@ -10247,6 +10247,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit".
         Klikej nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
+      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
+        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
+        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       flappy_2_instruction: Teď jsme přidali terén. Připoj blok k bloku "když se dotkne
         země". Tvůj kód musí zajistit 'konec hry', když Flappy narazí.
       flappy_3_instruction: Blok "po spuštění" ti umožňuje spuštění kódu poté co hra
@@ -10266,9 +10269,6 @@
         když mine překážku.
       flappy_9_instruction: Zamíchat věci nahoru při nárazu na překážku a namísto
         ukončení hry zkuste nastavit skóre zpět na 0.
-      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
-        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
-        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       frozen circle function in circle_instruction: Vytvořme 20 překrývajících se
         kružnic tak, že je otočíme o 18 stupňů mezi každou kružnicí.
       frozen circle function with parameter_instruction: "Tady máš blok \"vytvoř kružnici\",

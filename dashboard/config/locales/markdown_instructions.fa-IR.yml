@@ -2362,16 +2362,16 @@
         can now play sounds, notes, and songs! With this new knowledge, you can even
         turn your board into a sound board.\r
         \r
-        In the toolbox you all of the buzzer
-        and led related blocks at your disposal. See what cool stuff you can come
-        up with!\r
+        In the toolbox you have all of
+        the buzzer and led-related blocks at your disposal. See what cool stuff you
+        can come up with!\r
         \r
         # Do This\r
         \r
-        * Use all of the button related board events
-        (up, down), to play a unique sound or song at each event.\r
-        * Are there any
-        other events you could use to play even more sounds/songs?
+        * Use all of the button related
+        board events (up, down), to play a unique sound or song at each event.\r
+        *
+        Are there any other events you could use to play even more sounds/songs?
       CSD - Predict - Array Length List Printing_markdown_instruction: |-
         # For Loop
         - Using List Length in For Loop\r
@@ -7241,6 +7241,36 @@
         `keyDown` as input to the if statement to check when the space key is pressed.\r
         *
         Move the code that makes the gears rotate inside the `if`.
+      CSD U3 - conditionals - first conditional 2-2018_markdown_instruction: |-
+        <img
+        src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif"
+        style="width:200px;float:right">\r
+        # Visible\r
+        \r
+        Sometimes it's useful
+        to hide the image for a while and then show it again. You can do this using
+        the `visible` property. The visible property is a little different from other
+        properties you have seen in the past: It is a Boolean value, either `true`
+        (the sprite is visible) or `false` (the sprite is **not** visible). By default,
+        visible is set to `true`.\r
+        \r
+        # Do This\r
+        Make the balloon pop when it
+        hits the edge of the game area!\r
+        \r
+        * Add a conditional that checks to
+        see whether the balloon has hit the edge.\r
+        \t* Use a watcher on `balloon.scale`
+        to help you out.\r
+        * Create a pop sprite which uses the "pop" visual in
+        the animation tab.\r
+        * Use the `visible` property to keep the "pop" sprite
+        hidden at the beginning.\r
+        * Inside the `if` add two statements.\r
+        \t* One
+        that sets the `visible` property to hide the balloon sprite.\r
+            * One
+        that sets the `visible` property to show the pop sprite.
       CSD U3 - conditionals - first conditional 2_markdown_instruction: |-
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif"
         style="width:200px;float:right">\r
@@ -8293,6 +8323,21 @@
         _You might notice some new blocks in the Sprites
         drawer, experiment with them and see if you can incorporate them into your
         conditionals._
+      CSD U3 Conditionals Apple 2-2018_markdown_instruction: |-
+        # Changing Fruit\r
+        \r
+        Now
+        that we know how to use _if_ statements, you can do more than just check if
+        the apple has reached a scale of 2. You turn it into a pear once it happens.\r
+        \r
+        #
+        Do This\r
+        \r
+        Use a conditional in the draw loop to check whether `fruit.scale`
+        is greater than 2.  If it is, change the fruit's animation to "pear".\r
+        \r
+        _Challenge:
+        Can you also make the fruit stop growing once it turns into a pear?_
       CSD U3 Conditionals Apple 2_markdown_instruction: |-
         # Turning Red\r
         \r
@@ -8308,6 +8353,20 @@
         \r
         _Challenge:
         Can you also make the apple stop growing once it turns red?_
+      CSD U3 Conditionals Apple-2018_markdown_instruction: |-
+        # More Practice With
+        Booleans\r
+        \r
+        Let's use one more Boolean expression to check the condition
+        of a sprite.  You can use a `console.log` command to check whether its scale
+        is 2 yet.\r
+        \r
+        # Do This\r
+        \r
+        * Add a `console.log` statement.\r
+        * Add
+        a Boolean expression inside the `console.log` that checks whether the `apple.scale`
+        is greater than 2.
       CSD U3 Conditionals Apple_markdown_instruction: |-
         # More Practice With Booleans\r
         \r
@@ -10094,6 +10153,26 @@
         \r
         Can you generate random colors that are limited to a narrow
         range of colors, such as a random shade or purple, or a random shade of teal?
+      CSD U3 Random Debug Cloud-2018_markdown_instruction: |
+        <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Debug - Using 4 Parameters\r
+        \r
+        Now
+        that the grass is working, let's add a cloud to the sky. Unfortunately, it
+        looks a little funny right now.\r
+        \r
+        # Do This\r
+        \r
+        * Debug this program
+        to make the cloud wider than it is tall, like in the image.\r
+        * Hint: You'll
+        need to change two parameters. Which ones set your cloud's width and height?\r
+        \r
+        _Challenge:
+        The sun is not in the exact same place as in the picture.  Can you change
+        the sun's coordinates so that the picture matches completely?_\r
       CSD U3 Random Debug Cloud_markdown_instruction: |-
         <img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
         PM.png" style="float:right;height:150px">\r
@@ -10114,6 +10193,23 @@
         _Challenge:
         The sun is not in the exact same place as in the picture.  Can you change
         the sun's coordinates so that the picture matches completely?_
+      CSD U3 Random Debug Grass-2018_markdown_instruction: |-
+        <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Debug - Using 4 Parameters\r
+        \r
+        This
+        program uses the four parameter version of `rect()` and `ellipse()` to draw
+        a simple scene.\r
+        \r
+        # Do This\r
+        \r
+        * Debug this program and correct the
+        error so that the grass extends across the entire bottom.\r
+        * Hint: You only
+        have to change one number. Which parameter makes your rectangle (the grass)
+        wider?
       CSD U3 Random Debug Grass_markdown_instruction: |-
         <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45
         PM.png" style="float:right;height:150px">\r
@@ -10131,6 +10227,17 @@
         * Hint: You only
         have to change one number. Which parameter makes your rectangle (the grass)
         wider?
+      CSD U3 Random Ellipse Behind-2018_markdown_instruction: |-
+        <img src="https://images.code.org/dd73760e7129225b1e9f53a542960b9a-image-1520402430622.59.19
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Do This\r
+        \r
+        * Write
+        code that makes an orange ellipse behind the green one.\r
+        * Don't worry
+        about the exact size as long as the green ellipse is entirely inside the orange
+        one.
       CSD U3 Random Ellipse Behind_markdown_instruction: |-
         <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
         PM.png" style="float:right;height:150px">\r
@@ -10334,6 +10441,27 @@
         \r
         * Use `background()`
         to make a "black" background behind the green circle.
+      CSD U3 Random rainbow snake-2018_markdown_instruction: |-
+        <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Rainbow Snake\r
+        \r
+        This
+        program draws a very rare breed of rainbow snake. To make the snake draw differently
+        every time you'll need to use random numbers.\r
+        \r
+        # Do This\r
+        \r
+        * Run
+        the program several times to see how the starter code works.\r
+        * Add at least
+        three new different colored circles to your rainbow snake.\r
+        * Use `randomNumber()`
+        to make the rest of the snake's body move up and down like the first three.\r
+        \r
+        *Challenge:
+        Can you make size of some of the circles random, too?*
       CSD U3 Random rainbow snake_markdown_instruction: |-
         <img src="https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
         PM.png" style="float:right;height:150px">\r
@@ -10355,6 +10483,21 @@
         \r
         *Challenge:
         Can you make size of some of the circles random, too?*
+      CSD U3 Random random ellipse-2018_markdown_instruction: |-
+        # Random Numbers\r
+        \r
+        `randomNumber()`
+        chooses a random number between a minimum and maximum value. You can use this
+        code instead of writing in the specific number.  If you make your drawings
+        with random numbers it will look a little bit different every time you run
+        your program.\r
+        \r
+        # Do This\r
+        \r
+        * Run the program several times to see
+        how it works.\r
+        * Change the numbers inside `randomNumber` and run the code
+        again a few times to see what changes.
       CSD U3 Random random ellipse_markdown_instruction: |-
         # Random Numbers\r
         \r
@@ -10370,6 +10513,23 @@
         how it works.\r
         * Change the numbers inside `randomNumber` and run the code
         again a few times to see what changes.
+      CSD U3 Random random ellipse2-2018_markdown_instruction: |-
+        <img src="https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Random Numbers\r
+        \r
+        Here's
+        the same sun from last time.  Right now only the x-coordinate is random, but
+        you can make the y-coordinate random, too.\r
+        \r
+        # Do This\r
+        \r
+        * Use `randomNumber()`
+        for the ellipse's Y parameter so the circle is drawn in a random Y position,
+        too.\r
+        * As long as your circle is appearing at random X and Y positions,
+        you can move on.
       CSD U3 Random random ellipse2_markdown_instruction: |-
         <img src="https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
         PM.png" style="float:right;height:150px">\r
@@ -10387,6 +10547,22 @@
         too.\r
         * As long as your circle is appearing at random X and Y positions,
         you can move on.
+      CSD U3 Scene Example-2018_markdown_instruction: |
+        # Sprite Scenes\r
+        \r
+        By
+        combining shapes, sprites, and text, you can create simple scenes, stories,
+        or comics. While this example is fairly simple, you can combine as many sprites
+        and shapes as you like to create scenes as complex or detailed as you like.\r
+        \r
+        ##
+        Sketch It Out\r
+        \r
+        Before moving on, take a second to sketch out a scene
+        that you'd like to make at the end of this lesson. Consider the simple shapes
+        that you've used in the past, sprites for your characters, and any text that
+        you'd like on the screen. Once you've sketched out an idea, you'll learn
+        about `text` and how to compose a scene.\r
       CSD U3 Scene Example_markdown_instruction: |
         # Sprite Scenes\r
         \r
@@ -11183,6 +11359,15 @@
         so that it entirely covers the green rectangle.\r
         * When your program works
         correctly, it should draw the image to the right.
+      CSD U3 Sprites text debug-2018_markdown_instruction: |-
+        <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
+        style="float: right; width: 200px; margin-left: 20px;">\r
+        # Debug\r
+        \r
+        This
+        scene has all the right code, but it's not in the right order. The scene
+        should look like the image to the right.  Can you reorder the blocks so that
+        each part of the scene is drawn in the correct order?
       CSD U3 Sprites text debug_markdown_instruction: |-
         <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
         style="float: right; width: 200px; margin-left: 20px;">\r
@@ -12455,6 +12640,30 @@
         is not less than 325, use the `velocityY` to change its vertical velocity
         to zero. [Show me where](#triggercallout=code_triggered2)\r
         \r
+      CSD U3 abstraction jump-2018_markdown_instruction: |-
+        # Jumping\r
+        \r
+        You now
+        have all the blocks you need to make your sprite jump!  The sprite should
+        jump up if it's on the ground and the user presses the "up" key, then should
+        start moving back down when it reaches the top of its jump.\r
+        \r
+        # Do this\r
+        \r
+        *
+        Find the `if` statement that checks whether the sprite is on the ground, and
+        look at the `if` statement inside of it that checks whether the user has pressed
+        the "up" arrow key. ( [Show me where](#triggercallout=code_triggered1) )\r
+        \t*
+        Make the frog jump up when the user presses the arrow key.\r
+        \t* Make the
+        frog stop moving otherwise.\r
+        * Add code that does the following  ( [Show
+        me where](#triggercallout=code_triggered2) )\r
+          * Checks whether the frog
+        sprite has reached its highest point.\r
+          * If so, make the sprite go back
+        down.
       CSD U3 abstraction jump_markdown_instruction: |-
         # Jumping\r
         \r
@@ -15822,14 +16031,14 @@
         In the earlier prediction level you saw how the `setScale()`
         method can convert the full range of sensor readings (0-1023) into a range
         that can be used for RGB values (0-255). Let's build on that idea to make
-        an app that can communcate the current value of all three analog sensors with
-        a single color.\r
+        an app that can communicate the current value of all three analog sensors
+        with a single color.\r
         \r
         # Do This\r
         \r
-        To start, we just need to set the
-        sensor scales correctly - don't worry about actually setting the color of
-        the background yet.\r
+        To start, we just need to set
+        the sensor scales correctly - don't worry about actually setting the color
+        of the background yet.\r
         \r
         * Using the `sensor.setScale()` block, set each
         of light and sound sensors to the right scale for an RGB color channel.\r
@@ -17409,6 +17618,19 @@
         *
         Run the program and press the left button to hear your buzzer sing its beautiful
         tune.
+      CSD U6 sensor experiment embedded_markdown_instruction: |-
+        # Sensor Experiment\r
+        \r
+        Run
+        the program to the right and experiment with your board. Try interacting with
+        your board in many different ways to figure out what each sensor might be.
+        As you experiment with each sensor, discuss with a neighbor:\r
+        \r
+        * What
+        does this sensor measure?\r
+        * What is its maximum value?\r
+        * What is its
+        minimum value?
       CSD U6 setProperty Text_markdown_instruction: |-
         # Changing the Text\r
         \r
@@ -38740,10 +38962,15 @@
         of red that Maddie created in the video. Experiment with 6-bit color by filling
         in the bottom row of the image with shades of a different color.  Here is
         an example with some shades of blue.  Try your own color!
-      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "# Color\nPixelation:
-        Task 1\n**Directions:**\n\n* We start you with the 4x2 image Maddie\nwas creating,
-        but we've left out the last two squares. \n* Finish off the\nimage by figuring
-        out which two colors are missing and encode them.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: |
+        # Color
+        Pixelation: Task 1\r
+        **Directions:**\r
+        \r
+        * We start you with the 4x2 image
+        Maddie was creating, but we've left out the last two squares. \r
+        * Finish
+        off the image by figuring out which two colors are missing and encode them.\r
       Pixelation 2_markdown_instruction: |-
         Something happened to the bits in this
         image!  Find error and fix it!

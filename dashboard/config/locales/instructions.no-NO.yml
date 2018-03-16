@@ -10276,8 +10276,11 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: Fest en blokk til "når klikk"-blokken, og trykk "Kjør".
-        Klikk eller trykk på skjermen for å fly Flappy til målet.
+      flappy_1_instruction: Fest en blokk til "når klikk"-blokken og trykk "Start".
+        Klikk eller trykk på skjermen for å fly Flakse til målet.
+      flappy_11_instruction: Lag ditt eget Flappy-spill! Du kan endre alle bilder
+        og alle regler, selv tyngdekraften. Når du er ferdig, klikk Fullfør og du
+        kan la vennene dine prøve spillet på sine telefoner.
       flappy_2_instruction: Vi har nå lagt til en bakke.  Fest en blokk til "når traff
         bakken"-blokken. Koden må "Avslutte spillet" når Flappy krasjer.
       flappy_3_instruction: Med "Når kjørt"-blokken kan du kjøre kode når spillet
@@ -10297,9 +10300,6 @@
         for eksempel når du passerer en hindring.
       flappy_9_instruction: For å blande ting, når du treffer et hinder, i stedet
         for å avslutte spillet Prøv innstillingen score tilbake til 0.
-      flappy_11_instruction: Lag ditt eget Flappy-spill! Du kan endre alle bilder
-        og alle regler, selv tyngdekraften. Når du er ferdig, klikk Fullfør og du
-        kan la vennene dine prøve spillet på sine telefoner.
       frozen circle function in circle_instruction: Nå skal vi lage 20 overlappende
         sirkler ved å snu 18 grader mellom hver sirkel.
       frozen circle function with parameter_instruction: Her er en "Lag sirkel"-blokk

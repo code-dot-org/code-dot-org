@@ -963,6 +963,7 @@ pt-BR:
           stages:
             Testing:
               name: Testando
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
@@ -2652,7 +2653,7 @@ pt-BR:
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: Laboratório de Jogos
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1

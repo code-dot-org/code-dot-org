@@ -314,133 +314,9 @@
         maze_3_3: "¿Cómo llego al cerdo? ¡Asegúrate de no pasar por la caja de TNT!"
         maze_3_4: "¡Argh! Escríbeme un programa que me haga esquivar al TNT y llegue
           hasta el cerdo."
-        bounce_1_basketball: Une un bloque al bloque "cuando flecha izquierda" y presiona
-          "Ejecutar". Mueve la mano usando la flecha izquierda para alcanzar el objetivo
-          final.
-        bounce_2_basketball: Une un bloque a los bloques "cuando flecha derecha" y
-          "cuando flecha izquierda". Mueve la mano para alcanzar los 2 objetivos finales.
-        bounce_5_basketball: Lanzaremos una pelota hacia la mano. Añade un bloque
-          al bloque "cuando la bola golpee mano" para asegurar que la pelota llegue
-          a la bandera.
-        bounce_6_basketball: Ahora la bandera está en la parte superior. Necesitas
-          añadir bloques a ambos bloques "cuando la bola golpee" para resolver este
-          acertijo.
-        bounce_7_basketball: Coloca bloques cada uno de lo bloques "cuando". Bota
-          la pelota hasta que toque la bandera.
-        bounce_10_basketball: Ahora hay una meta en la parte superior. Une los bloques
-          "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota
-          alcanza la meta" y "cuando pelota pierde mano" para crear un juego. Prueba
-          cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_11_basketball: Ahora puedes unir bloques al bloque "cuando ejecute".
-          Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar.
-          También, trata de cambiar la escena o la velocidad de la mano y la pelota
-          y ver cuantos puntos puedes anotar antes de que tu oponente anote dos veces!
-        bounce_12_basketball: Crea tu propio juego de baloncesto. Puedes cambiar todas
-          las reglas. Cuando hayas terminado, haz clic en finalizar para permitir
-          a tus amigos/as probar el juego en sus teléfonos.
-        bounce_1_sports: ¡Llegar a la bandera! Coloque un bloque en "cuando flecha"
-          bloquear y pulse "Ejecutar" para mover el jugador a la bandera.
-        bounce_2_sports: ¡Ahora hay dos banderas! Coloque un bloque en "cuando flecha
-          izquierda" y "cuando flecha derecha" para mover a tu jugador en las dos
-          direcciones.
-        bounce_5_sports: La pastilla de hockey se deslizará hacia el jugador. Coloque
-          un bloque en "cuando la bola golpea al jugador".
-        bounce_6_sports: Ahora la bandera está en la parte superior. Necesitas añadir
-          bloques a ambos bloques "cuando la bola golpee" para resolver este acertijo.
-        bounce_7_sports: Coloca bloques cada uno de lo bloques "cuando". Bota la pelota
-          hasta que toque la bandera.
-        bounce_10_sports: Ahora hay una meta en la parte superior. Une los bloques
-          "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota
-          alcanza la meta" y "cuando pelota pierde mano" para crear un juego. Prueba
-          cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_11_sports: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes
-          que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
-          trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuantos
-          puntos puedes anotar antes de que tu oponente anote dos veces!
-        bounce_12_sports: Crea tu propio juego. Puedes cambiar todas las reglas y
-          mezclar deportes. ¡Puedes ser creativo! Cuando estés listo haz clic en Terminar
-          para que tus amigos prueben tu juego en sus teléfonos.
-        bounce_1: Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar
-          Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo
-          final.
-        bounce_2: Une un bloque a los bloques "cuándo flecha derecha" y "cuándo flecha
-          izquierda". Mueve la paleta para alcanzar ambos objetivos finales.
-        bounce_3: Ahora intenta algo similar con el bloque "cuándo flecha arriba".
-          Mueve la paleta hacia el objetivo final en la parte superior.
-        bounce_4: Esta vez tienes que añadir cuatro bloques. Mueve la paleta a los
-          cuatro objetivos finales para completar este puzzle.
-        bounce_5: Vamos a lanzar una pelota hacia la paleta. Une un bloque al bloque
-          "cuando la pelota golpea la paleta" para asegurar que la pelota alcance
-          el objetivo final.
-        bounce_6: Ahora el objetivo final está en la parte superior. Tienes que unir
-          bloques a ambos bloques de "cuando la pelota choca" para resolver este puzzle.
-        bounce_7: Une bloques a cada uno de los bloques "cuando". Rebota la pelota
-          hasta que alcance el objetivo final.
-        bounce_10: Ahora hay una meta en la parte superior. Une los bloques "anotar
-          punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza
-          la meta" y "cuando pelota pasa de largo" para crear un juego. Prueba cuantos
-          puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_11: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que
-          colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
-          trata de cambiar la escena o la velocidad de la paleta y la pelota y ver
-          cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
-        bounce_12: Crea tu propio juego "Rebote". Puedes cambiar todos los efectos
-          visuales y las reglas. Cuando estés listo, haz clic en Terminar para que
-          tus amigos prueben tu juego en sus teléfonos.
         Custom_builder: Arrastra los bloques desde la caja de herramientas al espacio
           de trabajo para dibujar el nivel que deseas crear. Presiona "Ejecutar" cuando
           estés listo.
-        flappy_1: Adjunta un bloque a "cuando se haga clic en el bloque", entonces
-          presiona "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia
-          el objetivo.
-        flappy_2: Ahora hemos agregado el suelo. Adjunta un bloque al bloque "cuando
-          golpee el suelo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy golpee
-          el suelo.
-        flappy_3: El bloque "cuando ejecute" te permite ejecutar el código cuando
-          tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al
-          objetivo.
-        flappy_4: Flappy volará entre los obstáculos a menos que escribas el código
-          que lo hará estrellarse. Adjunta un bloque al bloque "cuando golpea un obstáculo".
-          Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer
-          conjunto de tubos.
-        flappy_5: Ahora agreguemos el marcador, y contaremos los puntos cuando Flappy
-          pase los obstáculos. Agrega al bloque "cuando pase un obstáculo", y entonces
-          anota un punto cuando Flappy vuele entre el primer conjunto de tubos.
-        flappy_6: Ve si puedes anotar un punto haciendo que Flappy aletee más rápido
-          o más lento.
-        flappy_7: A continuación, trata de cambiar el fondo adjuntando otro bloque
-          al bloque "cuando ejecute".
-        flappy_8: Puedes poner elementos visuales en cualquier momento, no sólo cuando
-          comience el juego. Intenta establecer una escena AL AZAR cuando sucedan
-          otros eventos, por ejemplo, al superar un obstáculo.
-        flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar
-          el juego, intente ajustar el marcador de nuevo a 0.
-        flappy_11: Crea tu propio juego Flappy, puedes cambiar todos los efectos visuales
-          y las reglas, hasta la gravedad. Cuando finalices, haz clic en Terminar
-          para que tus amigos prueben tu juego en sus teléfonos.
-        flappy_k1_1: Jugar Flappy
-        flappy_k1_2: Adjunta un bloque a "cuando se haga clic en el bloque", entonces
-          presiona "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia
-          el objetivo.
-        flappy_k1_3: Ahora hemos agregado el suelo. Adjunta un bloque al bloque "cuando
-          golpee el suelo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy golpee
-          el suelo.
-        flappy_k1_4: El bloque "cuando ejecute" te permite ejecutar el código cuando
-          tu juego inicie. Intenta establecer la velocidad del nivel y el aleteo al
-          objetivo.
-        flappy_k1_5: Flappy volará entre los obstáculos a menos que escribas el código
-          que lo hará estrellarse. Adjunta un bloque al bloque "cuando golpea un obstáculo".
-          Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy se estrelle en el primer
-          conjunto de tubos.
-        flappy_k1_6: Ahora agreguemos el marcador, y contaremos los puntos cuando
-          Flappy pase los obstáculos. Agrega al bloque "cuando pase un obstáculo",
-          y entonces anota un punto cuando Flappy vuele entre el primer conjunto de
-          tubos.
-        flappy_k1_7: Ve si puedes anotar puntos múltiples al pasar un obstáculo
-        flappy_k1_8: A continuación, trata de cambiar el fondo adjuntando otro bloque
-          al bloque "cuando ejecute".
-        flappy_k1_9: Trata de cambiar el jugador colocando un bloque "colocar jugador"
-          al bloque "cuando ejecute".
         jigsaw_1: Haz clic en el bloque
         jigsaw_2: Arrastra el bloque al objetivo
         jigsaw_3: Acomoda los bloques para formar una imagen
@@ -930,6 +806,7 @@
         applab_intro_designmode: App Lab - Modo de diseño
         applab_intro_share: App Lab - Comparte tu aplicación
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -10468,8 +10468,12 @@
         same!
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Atașează un bloc la blocul "când clic", apoi apasă "Rulează
-        Programul". Fă clic sau atinge ușor cu degetul pe ecran ca să îl muți pe Flappy
+        Programul". Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy
         la țintă.
+      flappy_11_instruction: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele
+        vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi
+        clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele
+        lor.
       flappy_2_instruction: Acum am adăugat și ceva teren.  Ataşează un bloc la blocul
         "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului"
         atunci când Flappy se prăbușește.
@@ -10491,10 +10495,6 @@
         jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
       flappy_9_instruction: Pentru diversitate, în locul opririi jocului, încearcă
         setarea scorului la 0 atunci când lovești un obstacol.
-      flappy_11_instruction: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele
-        vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi
-        clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele
-        lor.
       frozen circle function in circle_instruction: Acum haideți să creăm 20 de cercuri
         suprapuse, rotind 18 grade după fiecare cerc.
       frozen circle function with parameter_instruction: Aici este un bloc "Creează
