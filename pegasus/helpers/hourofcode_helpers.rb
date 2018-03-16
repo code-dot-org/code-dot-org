@@ -94,12 +94,8 @@ def hoc_uri(uri)
   File.join(['/', (@company || @country), @user_language, uri].reject(&:nil_or_empty?))
 end
 
-def codeorg_url
-  return 'ar.code.org' if @country == 'ar'
-  return 'br.code.org' if @country == 'br'
-  return 'ro.code.org' if @country == 'ro'
-  return 'uk.code.org' if @country == 'uk'
-  return 'code.org'
+def codeorg_url(path)
+  CDO.code_org_url(path, 'https:')
 end
 
 def chapter_partner?
@@ -108,8 +104,7 @@ end
 
 def resolve_url(url)
   if url.downcase.include? "code.org"
-    partner_page = HOC_COUNTRIES[@country]['partner_page']
-    return url.gsub('code.org', partner_page)
+    url
   else
     File.join(['/', (@company || @country), @user_language, url].reject(&:nil_or_empty?))
   end
