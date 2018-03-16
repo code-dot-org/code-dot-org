@@ -40,9 +40,9 @@ export default class FreeResponseSection extends React.Component {
   renderResponseSection(responses) {
     if (responses) {
       if (Array.isArray(responses)) {
-        return this.renderAnswers(responses)
+        return this.renderAnswers(responses);
       } else {
-        return this.renderFacilitatorsAndAnswers(responses)
+        return this.renderFacilitatorsAndAnswers(responses);
       }
     }
   }
