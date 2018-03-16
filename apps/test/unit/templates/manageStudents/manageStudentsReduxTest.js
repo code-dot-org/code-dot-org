@@ -112,6 +112,7 @@ const expectedBlankRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.ADD,
 };
