@@ -963,6 +963,7 @@ it:
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
@@ -4018,11 +4019,11 @@ it:
             Being Safe Online:
               name: Being Safe Online
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -5385,7 +5386,7 @@ it:
               description_student: ''
               description_teacher: In questa serie di esercizi online, gli studenti svilupperanno la comprensione degli algoritmi, la correzione degli errori (debugging) e i primi principi generali dell'informatica. Utilizzando i personaggi del gioco Angry Birds, gli studenti svilupperanno algoritmi sequenziali per far arrivare l'uccellino fino al maialino senza sbattere contro i muri o esplodere sulla dinamite (TNT). Alcuni esercizi di ricerca degli errori sono stati mescolati in questa lezione per far pratica con la risoluzione dei problemi (problem solving) e nello sviluppo del pensiero critico (critical thinking).
             Going Places Safely:
-              name: 'Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro'
+              name: 'Cittadinanza Digitale: Visitare Luoghi in Modo Sicuro'
               description_student: ''
               description_teacher: In collaborazione con Common-Sense-Media, questa lezione aiuta gli studenti a imparare che molti siti Web richiedono informazioni private e spiega come gestire responsabilmente tali richieste. Gli studenti scoprono anche che possono raggiungere luoghi interessanti online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
@@ -5423,13 +5424,13 @@ it:
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
             Your Digital Footprint:
-              name: 'Cittadinanza Digitale - La Mia Impronta Digitale'
+              name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -5441,7 +5442,7 @@ it:
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
-              name: Programming with Rey and BB-8
+              name: Programmare con Rey e BB-8
           title: Corso B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
@@ -5473,7 +5474,7 @@ it:
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Screen Out the Mean:
-              name: 'Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             Binary Bracelets:
               name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
@@ -5534,7 +5535,7 @@ it:
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
-              name: 'Cittadinanza Digitale - Metti in Pratica la Cittadinanza Digitale'
+              name: 'Cittadinanza Digitale: Metti in Pratica la Cittadinanza Digitale'
               description_student: Some information is not safe to share online. This lesson will help you learn the difference between safe and private information.
               description_teacher: |-
                 In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
@@ -5621,7 +5622,7 @@ it:
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
-              name: 'Cittadinanza Digitale - Dati Personali'
+              name: 'Cittadinanza Digitale: Dati Personali'
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
               description_teacher: |-
                 Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
@@ -5668,7 +5669,7 @@ it:
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -5678,7 +5679,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -5702,7 +5703,7 @@ it:
               description_student: This lesson will give you a brief introduction to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to sequences, loops, and nested loops to prepare them for more complicated concepts in the later part of the course. This "ramp up" lesson equalizes the playing field between the experts and the beginners in your class. '
             The Power of Words:
-              name: 'Cittadinanza Digitale - Il Potere delle Parole'
+              name: 'Cittadinanza Digitale: Il Potere delle Parole'
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
@@ -5778,7 +5779,7 @@ it:
             Functions in Bee:
               name: Functions in Bee
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -5788,7 +5789,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -6036,7 +6037,7 @@ it:
             Debugging in Collector:
               name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops Project in Artist:
@@ -6100,9 +6101,9 @@ it:
             'How it Works: The Internet':
               name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Cittadinanza Digitale - Metti in Pratica la Cittadinanza Digitale'
+              name: 'Cittadinanza Digitale: Metti in Pratica la Cittadinanza Digitale'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             Events in Star Wars:
               name: Events in Star Wars
             Events with Flappy:
@@ -6136,15 +6137,15 @@ it:
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
             'Online Safety: Your Digital Footprint':
-              name: 'Cittadinanza Digitale - La Mia Impronta Digitale'
+              name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -6306,7 +6307,7 @@ it:
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence and Preview in Maze:
               name: Sequence and Preview in Maze
             Building a Foundation:
@@ -6316,7 +6317,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
@@ -6436,7 +6437,7 @@ it:
             Debugging in Collector:
               name: Debugging in Collector
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops Project in Frozen:
@@ -6446,7 +6447,7 @@ it:
             'Common Sense Education: Digital Citizenship':
               name: 'Common Sense Education: Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             'Events: The Big Event':
               name: 'Eventi'
             Events in Star Wars:
@@ -6524,7 +6525,7 @@ it:
         new-e:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -6534,7 +6535,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -6582,7 +6583,7 @@ it:
         new-f:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -6592,7 +6593,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -6994,7 +6995,7 @@ it:
             courseB_unplugged_MRF_2018:
               name: courseB_unplugged_MRF_2018
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -7004,7 +7005,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
@@ -7054,7 +7055,7 @@ it:
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -7064,7 +7065,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:

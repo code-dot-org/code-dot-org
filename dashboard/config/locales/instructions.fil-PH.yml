@@ -10169,6 +10169,10 @@
       flappy_1_instruction: Maglakip ng bloke sa "when click" na bloke, at pindutin
         ang "Run". I-click o i-tap ang screen para mapagalaw si Flappy papunta sa
         target.
+      flappy_11_instruction: Lumikha ng sarili mong Flappy na laro. Maari mong palitan
+        ang lahat ng mga visuals at ang mga patakaran, kahit na ang grabidad. Kapag
+        tapos ka na, pindutin ang Finish para masubukan ng mga kaibigan mo ang laro
+        sa kanilang mga telepono.
       flappy_2_instruction: Ngayon na nadagdag na natin ang lupa. Maglakip ng bloke
         sa "when hit the ground" na bloke. Kailangan ng code mo na "TAPUSIN ANG LARO"
         kung bumagsak na si Flappy.
@@ -10192,10 +10196,6 @@
         nangyayari ang ibang mga pangyayari, halimbawa, kapag madadaan ang isang balakid.
       flappy_9_instruction: Para mahalo ang mga bagay-bagay, kapag natamaan ang isang
         balakid, sa halip na tapusin ang laro, subukang ibalik ang puntos sa 0.
-      flappy_11_instruction: Lumikha ng sarili mong Flappy na laro. Maari mong palitan
-        ang lahat ng mga visuals at ang mga patakaran, kahit na ang grabidad. Kapag
-        tapos ka na, pindutin ang Finish para masubukan ng mga kaibigan mo ang laro
-        sa kanilang mga telepono.
       frozen circle function in circle_instruction: Ngayon ay lilikha tayo nang 20
         na nagpatung-patong na mga bilog, sa pamamagitan ng pag-ikot ng 18 degrees
         sa bawat bilog.

@@ -835,18 +835,12 @@
   dashboard_course_csp_desc: Code.org har skapt eit grundig, engasjerende og omgjengelig
     kurs som utforskar det grunnleggande i databehandling.
   dashboard_landing_loading: Lastar...
-  dashboard_action_edit: Rediger
-  dashboard_action_save: Lagre
-  dashboard_action_save_all: Lagre alle
   dashboard_action_cancel: Avbryt
   dashboard_action_delete: Slett
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nei
   dashboard_action_confirm: Slette?
-  dashboard_action_remove: Fjern
-  dashboard_action_remove_confirm: Fjerne?
   dashboard_action_done: Ferdig
-  dashboard_action_required: obligatorisk
   dashboard_action_print_certificates: Skriv ut diplomar
   dashboard_assessments_view: 'Sjå vurderingar i:'
   dashboard_assessments_none: Mange lærarar måler framgangen til elevane ved å bruke
@@ -951,8 +945,6 @@
   dashboard_error_other_section: Dersom du flyttar elevar mellom eigne seksjonar,
     velg inndelinga fra rullgardinlista. Berre velg "Annan seksjon" for å flytte elevane
     til ein seksjon hos ein annan lærar.
-  dashboard_students_add_student: Legg til elev
-  dashboard_students_add_students: Legg til fleire elevar
   dashboard_students_add_multiple: 'Skriv eller lim inn namna på elevane dine, ein
     per linje:'
   dashboard_students_new_google_classroom_section: For å legge til elevar, bruk <a
@@ -960,23 +952,12 @@
     deretter på <b>Synkronisér elevar fra Google Classroom</b>-knappen over.
   dashboard_students_new_section: Du har laga ei ny seksjon! Legg til elevar ved å
     bruke knappane <b>Legg til elev</b> og <b>Legg til fleire elevar</b> ovenfor.
-  dashboard_students_placeholder_name: Elevnamn
   dashboard_students_name: Namn
   dashboard_students_progress: Framgang
-  dashboard_students_age: Alder
-  dashboard_students_gender: Kjønn
   dashboard_students_male: Mann
   dashboard_students_female: Kvinne
-  dashboard_students_secret: Hemmelegheit
-  dashboard_students_password: Passord
-  dashboard_students_username: 'Brukarnamn: %{student_username}'
-  dashboard_students_email: 'Epost: %{student_email}'
   dashboard_students_completed_levels: Fullførte nivå
   dashboard_students_total_lines: Kodelinjer
-  dashboard_students_show_secret: Vis hemmelegheit
-  dashboard_students_auto_generated: Automatisk generert
-  dashboard_students_reset_secret: Tilbakestille hemmelegheit
-  dashboard_students_reset_password: Tilbakestill passord
   dashboard_students_share_section: 'Del påloggingssida til denne seksjonen med elevane:'
   dashboard_students_share_section_secondary: 'Eventuelt kan du dele innloggingssida
     til denne seksjonen med elevane:'
@@ -1053,7 +1034,6 @@
   dashboard_login_word: Ord
   dashboard_login_picture: Bilde
   dashboard_login_none: E-post
-  dashboard_new_password: nytt passord
   dashboard_stage: Nivå
   dashboard_puzzle: Oppgåve
   dashboard_question: Spørsmål

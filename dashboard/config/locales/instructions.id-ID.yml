@@ -3347,14 +3347,9 @@
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       Course 4 Play Lab Vars 7_instruction: |-
         Bagus, sekarang mari kita pastikan permainan ini tidak terlalu mudah untuk bermain! \r
         \r
@@ -3468,21 +3463,20 @@
         "increment" by 1 and start again.\r
         3) If The Wizard does not get clicked
         at least 10 times, the game is over.
-      Course 4 Playlab For Loop Freeplay_instruction: |-
-        Freeplay: Use everything you've
-        learned so far to make a game that includes a `for` loop!
-      Course 4 Playlab For Loops 4b_instruction: |-
-        Can you change the **increment**
-        in one of the loops so that the race is a tie?
-      Course 4 Playlab For Loops 5b_instruction: |-
-        Adjust the interval on these `for`
-        loops so that the two characters end in the exact same place.
-      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na
-        game that's fun for you to play! \\r\nPress \"Run\" and click Madame Unicorn\nas
-        many times as you can.  Can you beat our score of 24? "
-      Course 4 SCF 1_instruction: |-
-        Use the suggested functions to draw four rows
-        of hexagons. Notice how our even numbered rows are shifted to the right?
+      Course 4 Playlab For Loop Freeplay_instruction: 'Permainan bebas: Gunakan semua
+        yang sudah kamu pelajari untuk membuat sebuah permainan yang menyertakan sebuah
+        loop `for`!'
+      Course 4 Playlab For Loops 4b_instruction: Bisakah kamu mengganti **kenaikan**
+        pada salah satu loop agar membuat perlombaan menjadi seri?
+      Course 4 Playlab For Loops 5b_instruction: Sesuaikan rentang waktu pada loop
+        `for` tersebut supaya dua karakter berakhir di tempat yang sama persis.
+      Course 4 Playlab For Loops 6b_instruction: "Edit loop `for` ini untu membuat
+        sebuah permainan yang akan menyenangkan untuk kamu mainkan!\\r\nTekan \"Run\"
+        dan klik Madame Unicorn sebanyak yang kamu bisa. Bisakah kamu mengalahkan
+        nilai 24 kami? "
+      Course 4 SCF 1_instruction: Gunakan fungsi yang disarankan untuk menggambar
+        empat baris segi empat. Apakah kamu memperhatikan bagaimana baris bernomor
+        genap kami bergeser ke kanan?
       Course 4 SCF 1a_instruction: Bisakah Anda mencari tahu cara mengumpulkan semua
         nektar ini dengan blok paling sedikit?
       Course 4 SCF 1b_instruction: Bisakah Anda mencari tahu cara mengumpulkan semua
@@ -3520,22 +3514,14 @@
       Course 4 SCV 1_instruction: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCV 2_instruction: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCV 3_instruction: |-
-        Now for a game of tag!  Tag Cat to get 2 points.
-        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
-        But be careful,
-        when Cat and Penguin tag each other, they take points away.\r
+        Sekarang untuk permainan memberi tanda! Tandailah Kucing untuk mendapatkan 2 poin. Tandai Pinguin untuk mendapatkan poin 3. Kumpulkan poin 10 untuk menang!\r
+        Tetapi berhati-hatilah, ketika Kucing dan Pinguin saling menandai, itu akan mengurangi poin.\r
         \r
-        Add the
-        blocks necessary to make this game work the way it's been explained.  How
-        will you get Dog to move in all directions using the arrow keys?  How will
-        you add points when Dog tags Cat or Penguin?  How will you subtract points
-        when Cat and Penguin touch?
-      Course 4 SCV 4_instruction: |-
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 5_instruction: |-
-        Solve this puzzle with the fewest number of blocks
-        possible.
+        Tambahkan blok yang dibutuhkan untuk membuat permainan ini berjalan sesuai dengan yang telah dijelaskan. Bagaimana kamu membuat Anjing berpindah kesegala arah menggunakan tanda panah? Bagaimana kamu menambahkan poin ketika Anjing menandai Kucing atau Pinguin? Bagaiman kamu mengurangi poin ketika Kucing dan Pinguin bersentuhan?
+      Course 4 SCV 4_instruction: Selesaikan teka-teki ini dengan menggunakan blok
+        sesedikit mungkin.
+      Course 4 SCV 5_instruction: Selesaikan teka-teki ini dengan menggunakan blok
+        sesedikit mungkin.
       Course 4 SCV 6_instruction: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCVP 1_instruction: |-
         Create a function with parameters that allows
@@ -3555,18 +3541,15 @@
         another to get me to the pig.
       CourseF_PlayLab_vars1_instruction: 'Untuk memainkan game ini, Anda tidak perlu
         menulis kode apapun, cukup tekan "Run"! '
-      CourseF_PlayLab_vars10_instruction: |-
-        Free Play time! Here are all of the variables
-        we've played with so far in this stage, as well as a few more in case you
-        want them. \r
-        \r
-        Notice that there are now so many blocks in our toolbox
-        that they need to be organized!  Here, we've put each piece into an appropriate
-        category.  Take some time to explore everything that is available. When you're
-        done browsing, make a game or story using repeats, variables, and events.  \r
-        \r
-        Hint:
-        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars10_instruction: "Waktu nya permainan bebas! Ini merupakan
+        semua variabel yang sudah kita mainkan pada tahap ini, juga beberapa variabel
+        lain jika kamu membutuhkannya!\\r\n\\r \nPerhatikan sekarang ada sangat banyak
+        blok didalam toolbox kita yang perlu disusun! Sekarang, kita sudah meletakkan
+        setiap potongan kedalam sebuah kategori yang sesuai. Ambil waktu sejenak untuk
+        menjelajahi semua kemungkinan yang ada. Saat kamu sudah selesai melihat-lihat,
+        buatlah sebuah permainan atau cerita menggunakan pengulangan, variabel-variabel,
+        dan kejadian-kejadian. \\r\n\\r\nPetunjuk:\nskrol kebawah untuk meilhat semua
+        perintah di dalam tempat kerja."
       CourseF_PlayLab_vars2_instruction: |-
         The race in that last puzzle wasn't very
         fair! Change the `dog_speed` variable to make sure you can collect more flags
@@ -3582,32 +3565,17 @@
         Buat kembali kode yang Anda lihat di level terakhir untuk menetapkan skor\nsampai
         10. "
       CourseF_PlayLab_vars6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       CourseF_PlayLab_vars7_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       CourseF_PlayLab_vars8_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       CourseF_PlayLab_vars9_instruction: |-
         Nice, now let's make sure this game isn't
         too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
@@ -10752,6 +10720,9 @@
       flappy_1_instruction: Tempatkan satu blok pada blok "Ketika klik", kemudian
         tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy
         menuju target.
+      flappy_11_instruction: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
+        dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
+        agar ia mencoba pada ponselnya.
       flappy_2_instruction: Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan
         blok ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN
         BERAKHIR' ketika Flappy menghantam permukaan.
@@ -10775,9 +10746,6 @@
         ketika event berganti, misalnya ketika melewati penghalang.
       flappy_9_instruction: Untuk mencampurkan berbagai hal, ketika mengenai sebuah
         rintangan, daripada mengakhiri permainan cobalah atur nilai kembali ke 0.
-      flappy_11_instruction: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
-        dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
-        agar ia mencoba pada ponselnya.
       frozen circle function in circle_instruction: Sekarang, mari kita membuat 20
         lingkaran yang tumpang tindih, berbelok 18 derajat antara setiap lingkaran.
       frozen circle function with parameter_instruction: Ini adalah blok "Buatlah
@@ -11969,14 +11937,9 @@
       grade4_playlab_freeplay_instruction: "It's free play time! Have fun with all\nthe
         blocks in your tool box. "
       grade4_playlab_test_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       grade4_playlab_test2_instruction: |-
         Here's a function called `jump` that causes
         your main character to jump up 100 pixels. Run the program and use the jump
@@ -12418,14 +12381,9 @@
         build a game! First we'll need a score. Try setting the 'points' variable
         to give yourself 10 free points!
       grade5_playlab_variables6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       grade5_playlab_variables6ask_instruction: |-
         This time, you need 100 points to
         win!  Don't worry though, you can choose how many points you earn each time

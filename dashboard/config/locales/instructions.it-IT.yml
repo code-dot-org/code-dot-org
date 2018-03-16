@@ -7946,8 +7946,8 @@
       courseA_artist_loops2_instruction: 'Aiuta l''artista a disegnare questa linea:
         due volte avanti.'
       courseA_artist_loops3_instruction: Disegna cinque volte una linea in avanti.
-      courseA_artist_loops4_instruction: Ora, usa un ciclo`ripeti` per disegnare questa
-        linea cinque volte!
+      courseA_artist_loops4_instruction: Ora, usa un ciclo `ripeti` per disegnare
+        questa linea cinque volte!
       courseA_artist_loops5_instruction: Disegna una linea composta da sette segmenti.
         Questo diventerà il nostro orizzonte.
       courseA_artist_loops6_instruction: Mettiamo una bella collina sullo sfondo.
@@ -8024,9 +8024,7 @@
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
-      courseA_maze_seq1_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
+      courseA_maze_seq1_instruction: Fai andare l'uccellino fino al maiale cattivo!
       courseA_maze_seq10_instruction: 'Sfida: aggira la dinamite (TNT) per portare
         l''uccellino fino al maialino! '
       courseA_maze_seq11_instruction: Muovi in una direzione, poi in un'altra, per
@@ -8047,8 +8045,8 @@
         blocchi necessari per far arrivare l'uccellino fino al maialino!
       courseA_maze_seq8_instruction: Risolvi questo esercizio per portare l'uccellino
         fino al maialino!
-      courseA_maze_seq9_instruction: Correggi gli errori in questo esercizio, aggiungendo
-        i blocchi necessari per portare l'uccellino fino al maialino!
+      courseA_maze_seq9_instruction: 'Sfida: Correggi gli errori in questo esercizio,
+        aggiungendo i blocchi necessari per portare l''uccellino fino al maialino!'
       courseA_maze_seq_challenge1_instruction: |-
         Something is wrong here. Help fix
         the code to get the bird to the pig!
@@ -8058,7 +8056,7 @@
       courseA_playLab_events1_instruction: Questo è il Laboratorio. Metti dei blocchi
         nell'area di lavoro e prova a vedere cosa succede!
       courseA_playLab_events2_instruction: Jorge, il cane, vuole dire "Ciao". Riesci
-        ad aiutarlo ?
+        ad aiutarlo?
       courseA_playLab_events3_instruction: Aggancia il blocco `sposta il cane a sinistra`
         al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
         già nell'area di lavoro.
@@ -8123,7 +8121,7 @@
       courseB_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
         da questa grotta.
       courseB_collector_loops11_instruction: |-
-        Evviva! Raccogli più tesori che puoi!\r
+        Evviva! Raccogli più tesori che puoi!
         (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops2_instruction: |-
         Collect all four piles to pass this
@@ -10707,9 +10705,12 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attacca un blocco al blocco `quando si clicca` e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.<br>
-        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
+      flappy_1_instruction: Attacca un blocco al blocco "quando si clicca" e premi
+        "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.
+      flappy_11_instruction: Crea la tua versione del gioco Flappy. È possibile modificare
+        tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli
+        ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici
+        il gioco sui loro smartphone.
       flappy_2_instruction: Ora nello scenario c'è anche il terreno.  Attacca un blocco
         di azione al blocco di evento `quando precipita a terra`.  Inoltre, il tuo
         codice ha bisogno del blocco `fine del gioco` quando Flappy precipita a terra.
@@ -10733,10 +10734,6 @@
         Puoi anche impostare il tipo di giocatore.
       flappy_9_instruction: Per rendere lo sviluppo più interessante, prova a riportare
         il punteggio a 0 quando si colpisce un ostacolo invece di finire il gioco.
-      flappy_11_instruction: Crea la tua versione del gioco Flappy. È possibile modificare
-        tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli
-        ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici
-        il gioco sui loro smartphone.
       frozen circle function in circle_instruction: Ora disegniamo 20 cerchi sovrapposti,
         girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
       frozen circle function with parameter_instruction: In questo esercizio il blocco
