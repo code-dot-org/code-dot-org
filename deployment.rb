@@ -256,7 +256,7 @@ class CDOImpl < OpenStruct
   end
 
   def rack_env?(env)
-    rack_env == env
+    rack_env.to_sym == env.to_sym
   end
 
   # Sets the slogger to use in a test.
@@ -353,12 +353,12 @@ CDO ||= CDOImpl.new
 ##########
 
 def rack_env
-  CDO.rack_env
+  CDO.rack_env.to_sym
 end
 
 def rack_env?(*env)
   e = *env
-  e.include? rack_env
+  e.include? rack_env.to_sym
 end
 
 def with_rack_env(temporary_env)
