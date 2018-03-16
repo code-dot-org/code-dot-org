@@ -772,7 +772,7 @@ class Script < ActiveRecord::Base
   end
 
   # Creates a copy of all translations associated with this script, and adds
-  # them as a translations for the script named new_name.
+  # them as translations for the script named new_name.
   def copy_and_write_i18n(new_name)
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
