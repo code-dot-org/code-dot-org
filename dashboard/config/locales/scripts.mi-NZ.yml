@@ -1011,6 +1011,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: |

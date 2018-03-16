@@ -10486,9 +10486,12 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: Hänge einen Baustein an den „Beim Klicken“-Baustein an
-        und drücke dann auf „Ausführen“. Klicke oder berühre den Bildschirm, um Flappy
-        zum Ziel zu bewegen.
+      flappy_1_instruction: Füge dem "Beim Klicken"-Baustein einen weiteren Baustein
+        hinzu und drücke dann "Ausführen". Klicke oder tippe auf den Bildschirm, um
+        Flappy zum Ziel zu bewegen.
+      flappy_11_instruction: Programmiere Dein eigenes "Flappy"-Spiel. Du kannst alle
+        Bilder und Regeln ändern, sogar die Schwerkraft. Wenn Du fertig bist, klicke
+        auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
       flappy_2_instruction: Jetzt haben wir etwas Boden hinzugefügt.  Hänge einen
         Baustein an den „Wenn den Boden getroffen“-Baustein.  Dein Code muss das Spiel
         beenden, wenn Flappy abstürzt.
@@ -10513,9 +10516,6 @@
       flappy_9_instruction: 'Jetzt sorgen wir für etwas Abwechslung: Statt das Spiel
         zu beenden, setze den Punktestand auf 0 zurück, wenn du auf ein Hindernis
         triffst.'
-      flappy_11_instruction: Programmiere Dein eigenes "Flappy"-Spiel. Du kannst alle
-        Bilder und Regeln ändern, sogar die Schwerkraft. Wenn Du fertig bist, klicke
-        auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
       frozen circle function in circle_instruction: Jetzt erstellen wir 20 überschneidende
         Kreise und drehen die einzelnen Kreise um 18 Grad.
       frozen circle function with parameter_instruction: Hier ist ein „Erzeuge einen

@@ -10428,6 +10428,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu
         "Hasi". Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.
+      flappy_11_instruction: Sortu zure Flappy jokoa. Ikus-efektuak eta arauak alda
+        ditzakezu, baita grabitatea ere. Bukatzean, klik egin Amaiera-n, zure lagunek
+        euren telefonoetan proba dezaten.
       flappy_2_instruction: Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua
         jotzean" blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten
         duenean.
@@ -10451,9 +10454,6 @@
         batzuk jazotzen direnean, oztopo bat gainditzean, adibidez.
       flappy_9_instruction: Gauzak nahasteko, oztopo batekin topo egitean, jokoa bukatu
         beharrean, saiatu markatzailea berriro 0-an jartzen.
-      flappy_11_instruction: Sortu zure Flappy jokoa. Ikus-efektuak eta arauak alda
-        ditzakezu, baita grabitatea ere. Bukatzean, klik egin Amaiera-n, zure lagunek
-        euren telefonoetan proba dezaten.
       frozen circle function in circle_instruction: Sor ditzagun orain 20 zirkulu
         gainjartzaile, zirkuluen artean 18 gradu biratuta.
       frozen circle function with parameter_instruction: Hona hemen "Sortu zirkulua"
