@@ -28,8 +28,14 @@ class AnimationBucket < BucketHelper
   rescue Aws::S3::Errors::NoSuchVersion
     # Rethrow if it clearly wasn't the version.
     raise if version.nil?
-    # Try getting the latest version
-    s3_object = super(key, if_modified_since, nil)
+
+    # Locate the latest non-deleted version
+    versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
+    raise if versions.empty?
+
+    # Try getting the first (non-delete-marker) version
+    s3_object = super(key, if_modified_since, versions.first.version_id)
+
     # If the fallback is successful, let's notify Honeybadger, because we'd
     # like these to go down over time.
     Honeybadger.notify(
