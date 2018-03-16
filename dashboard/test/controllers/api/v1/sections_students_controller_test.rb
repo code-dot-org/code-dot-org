@@ -109,4 +109,11 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     post :bulk_add, params: {section_id: @section.id, students: [{gender: 'f', age: 9, name: 'name'}]}
     assert_response :bad_request
   end
+
+  test 'teacher can not add invalid info for their student' do
+    sign_in @teacher
+    User.stubs(:create!).raises(ActiveRecord::RecordInvalid)
+    post :bulk_add, params: {section_id: @section.id, students: [{gender: 'm', age: 9, name: 'name'}]}
+    assert_response :bad_request
+  end
 end
