@@ -224,12 +224,12 @@ var TopInstructions = React.createClass({
 
     // If we are in the additional resources experiment, only display the help tab
     // when there are one or more videos or additional resource links.
-    const levelResourcesAvailable = ((this.props.levelVideos && this.props.levelVideos.length > 0) ||
-      this.props.mapReference !== null ||
-      (this.props.referenceLinks && this.props.referenceLinks.length > 0));
+    const videosAvailable = this.props.levelVideos && this.props.levelVideos.length > 0;
+    const levelResourcesAvailable = this.props.mapReference !== null ||
+      (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const additionalResourcesDisplayTab = experiments.isEnabled('additionalResources') && levelResourcesAvailable;
-    const displayHelpTab = this.props.levelVideos.length > 0 || additionalResourcesDisplayTab;
+    const displayHelpTab = videosAvailable || additionalResourcesDisplayTab;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
