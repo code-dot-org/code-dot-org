@@ -224,6 +224,7 @@ var TopInstructions = React.createClass({
 
     // If we are in the additional resources experiment, only display the help tab
     // when there are one or more videos or additional resource links.
+    // Otherwise, display the help tab when there are level videos to display.
     const videosAvailable = this.props.levelVideos && this.props.levelVideos.length > 0;
     const levelResourcesAvailable = this.props.mapReference !== null ||
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
