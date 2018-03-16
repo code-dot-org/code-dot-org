@@ -394,7 +394,7 @@ class Documents < Sinatra::Base
     # Scans the filesystem and finds all documents served by Pegasus CMS.
     # @return [Array<Hash<Symbol, String>] An array of :site, :uri hash entries for all found documents.
     def all_documents
-      dirs = Dir.children(content_dir).select {|file| Dir.exist?(content_dir(file))}
+      dirs = (Dir.entries(content_dir) - ['.', '..']).select {|file| Dir.exist?(content_dir(file))}
       dirs.map do |site|
         site_glob = site_sub = content_dir(site, 'public')
 
