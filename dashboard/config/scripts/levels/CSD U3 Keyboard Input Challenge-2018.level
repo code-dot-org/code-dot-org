@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-06-09T20:32:05.000Z",
+  "created_at": "2018-03-15T22:33:09.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -62,7 +62,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Changing Images as you Move\r\nRight now your conditionals only do one thing (change your sprite's x or y), but you can actually put as much code as you want inside a conditional. A common thing to do in games is to change your character's image depending on which direction they're walking.\r\n\r\n# Do This\r\nUsing the provided program and images:\r\n\r\n- Duplicate your chosen bug image four times.\r\n- Edit each of your images to point in one of the four directions.\r\n- Write code that uses `sprite.setAnimation()` to change the image on your bug sprite when different arrow keys are pressed.",
+    "markdown_instructions": "# Challenge\r\n_Check with your teacher before trying this challenge._\r\n\r\nHere's the bug program you've been working on for the past few levels. Choose one or more of following challenges, or add new features of your own!\r\n\r\n* Use the \"space\" key to control another property of your bug sprite, such as rotation or scale.\r\n* Add some randomization to your movement.\r\n* Add a second sprite and control it with a different set of keys (\"w\", \"a\", \"s\", and \"d\" are common choices).\r\n* Add some shapes to your background to make the scene more interesting.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -82,7 +82,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "text_mode_at_start": "false",
-    "submittable": "true",
+    "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "callout_json": "[]",
@@ -92,18 +92,20 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "BWkbk+TL4B3KOpzIoGhhg7dJo7pzuzhfNkQmXaH800crzXMz+pnRYGqsHghL\nFkEbO7K8I47hm++6+mdIoFyZiQ==\n",
+    "encrypted_examples": "fVh8n8wwTt5Rme5CuEhLUWfAxebu16F+1eGTEUl8FJqaQICsItQKF/CyCI1k\nWsUIgYG8txnJ34nR8xkl6BsxtA==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "project_template_level_name": "CSD U3- arrows template",
+    "project_template_level_name": "CSD U3- arrows template-2018",
+    "display_name": "Challenge: Add More Inputs",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 8891,
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:24:56 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:26:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 16:50:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-03-15 22:32:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 22:33:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 19:08:38 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-12-07 18:06:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-12-07 18:06:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-03-15 22:32:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 22:33:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
