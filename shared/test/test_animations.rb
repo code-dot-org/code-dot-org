@@ -102,6 +102,7 @@ class AnimationsTest < FilesApiTestBase
     @api.delete_object(filename) # Not a no-op - creates a delete marker
     assert successful?
 
+    Honeybadger.expects(:notify).never
     @api.get_object(filename)
     assert not_found?
   end
@@ -125,12 +126,41 @@ class AnimationsTest < FilesApiTestBase
     bad_version_id = "z" + v1_version_id[1..-1]
     Honeybadger.expects(:notify).once
     @api.get_object_version(filename, bad_version_id)
+    assert successful?
 
     # Check that we got the latest version
     assert_equal v2_file_data, last_response.body
 
     # Check cache headers
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
+
+    delete_all_animation_versions(filename)
+  end
+
+  def test_get_bad_version_returns_404_when_latest_is_deleted
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    @api.post_file(filename, v1_file_data, 'image/png')
+    assert successful?
+    v1_version_id = JSON.parse(last_response.body)['versionId']
+
+    # Overwrite it.
+    v2_file_data = 'stub-v2-body'
+    @api.post_file(filename, v2_file_data, 'image/png')
+    assert successful?
+
+    # Delete it.
+    @api.delete_object(filename)
+    assert successful?
+
+    # Ask for an invalid version
+    bad_version_id = "z" + v1_version_id[1..-1]
+    Honeybadger.expects(:notify).never
+    @api.get_object_version(filename, bad_version_id)
+    assert not_found?
 
     delete_all_animation_versions(filename)
   end
