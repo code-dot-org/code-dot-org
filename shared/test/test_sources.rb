@@ -63,6 +63,51 @@ class SourcesTest < FilesApiTestBase
     assert_equal file_data, third_version
   end
 
+  def test_404_on_malformed_version_id
+    filename = 'test.js'
+    file_data = 'abc 123'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    delete_all_source_versions(filename)
+
+    # Upload a file
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # Create a malformed version id
+    bad_version_id = 'malformed-version-id'
+
+    @api.get_object_version(filename, bad_version_id)
+    assert_equal 404, last_response.status
+
+    delete_all_source_versions(filename)
+  end
+
+  def test_404_on_version_not_found
+    filename = 'test.js'
+    file_headers = {'CONTENT_TYPE' => 'text/javascript'}
+    delete_all_source_versions(filename)
+
+    # Upload a file
+    @api.put_object(filename, 'first', file_headers)
+    assert successful?
+    v1 = JSON.parse(last_response.body)['versionId']
+
+    # Overwrite the first version
+    # (This operation deletes the first version)
+    @api.put_object_version(filename, v1, 'second', file_headers)
+    assert successful?
+    v2 = JSON.parse(last_response.body)['versionId']
+
+    # After overwrite, we have a new version id
+    refute_equal(v1, v2)
+
+    # Try to retrieve the deleted version
+    @api.get_object_version(filename, v1)
+    assert_equal 404, last_response.status
+
+    delete_all_source_versions(filename)
+  end
+
   def test_get_source_blocks_profanity_violations
     # Given a Play Lab program with a privacy violation
     filename = 'main.json'

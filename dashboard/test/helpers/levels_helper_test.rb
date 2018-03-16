@@ -577,4 +577,26 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
     assert_equal app_options[:level][:levelVideos], leveldata
   end
+
+  test 'map reference available for levels with associated map reference' do
+    map_ref = '/test/alpha.html'
+    @level = create :applab, :with_map_reference
+    assert_equal app_options[:level][:mapReference], map_ref
+  end
+
+  test 'map reference is empty for levels with no associated map reference' do
+    @level = create :applab
+    assert_nil app_options[:level][:mapReference]
+  end
+
+  test 'reference links available for levels with associated reference links' do
+    ref_links = ['/test/abc.html', '/test/def.html']
+    @level = create :applab, :with_reference_links
+    assert_equal app_options[:level][:referenceLinks], ref_links
+  end
+
+  test 'reference links is empty for levels with no associated reference links' do
+    @level = create :applab
+    assert_nil app_options[:level][:referenceLinks]
+  end
 end

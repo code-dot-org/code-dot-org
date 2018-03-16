@@ -544,6 +544,7 @@ module Api::V1::Pd
             school_name: 'Hogwarts',
             email: 'minerva@hogwarts.edu',
             status: 'accepted',
+            locked: true,
             assigned_workshop: nil,
             registered_workshop: 'No',
             assigned_fit: nil,
@@ -661,7 +662,8 @@ module Api::V1::Pd
             registered_workshop: 'No',
             assigned_fit: nil,
             registered_fit: 'No',
-            status: 'accepted'
+            status: 'accepted',
+            locked: true
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
