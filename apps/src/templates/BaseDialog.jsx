@@ -15,6 +15,7 @@ var BaseDialog = React.createClass({
     handleKeyDown: PropTypes.func,
     hideBackdrop: PropTypes.bool,
     fullWidth: PropTypes.bool,
+    fullHeight: PropTypes.bool,
     useUpdatedStyles: PropTypes.bool,
     useDeprecatedGlobalStyles: PropTypes.bool,
     noModalStyles: PropTypes.bool,
@@ -77,6 +78,9 @@ var BaseDialog = React.createClass({
         width: '90%',
         marginLeft: '-45%'
       });
+    }
+    if (this.props.fullHeight) {
+      bodyStyle.height = '75%';
     }
 
     let wrapperClassNames = "";

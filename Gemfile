@@ -282,3 +282,13 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 gem 'StreetAddress', require: "street_address"
 
 gem 'recaptcha', require: 'recaptcha/rails'
+
+# Install pg gem only on specific production hosts.
+require_pg = -> do
+  require 'socket'
+  %w[production-daemon production-console].include?(Socket.gethostname)
+end
+
+install_if require_pg do
+  gem 'pg', require: false
+end
