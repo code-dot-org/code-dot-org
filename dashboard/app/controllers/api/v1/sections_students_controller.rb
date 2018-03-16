@@ -37,17 +37,17 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     ActiveRecord::Base.transaction do
       params[:students].each do |student|
         begin
-          new_student = User.create(
+          new_student = User.create!(
             user_type: User::TYPE_STUDENT,
             provider: User::PROVIDER_SPONSORED,
             name: student["name"],
             age: student["age"],
             gender: student["gender"],
-            sharing_disabled: student["sharing_disabled"],
+            sharing_disabled: !!student["sharing_disabled"],
           )
           @section.add_student(new_student)
           new_students.push(new_student.summarize)
-        rescue StandardError => e
+        rescue ActiveRecord::RecordInvalid => e
           errors << e.message
         end
       end
