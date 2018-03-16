@@ -84,7 +84,6 @@ class Documents < Sinatra::Base
 
   configure do
     dir = pegasus_dir('sites.v3')
-    set :absolute_redirects, false
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
@@ -412,6 +411,11 @@ class Documents < Sinatra::Base
             sub(site_sub, '').
             sub(/#{File.extname(file)}$/, '').
             sub(/\/index$/, '')
+
+          # hourofcode.com has custom logic to resolve `/:country/:language/:path` URIs to
+          # `/:language/:path` document paths, so prepend default `us` country code to reduce document path to URI.
+          uri.prepend('/us') if site == 'hourofcode.com'
+
           {site: site, uri: uri}
         end
       end.flatten.compact

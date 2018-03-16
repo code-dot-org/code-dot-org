@@ -22,7 +22,7 @@ class HourOfCodeHelpersTest < Minitest::Test
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', [user_ip, cloudfront_ip, local_load_balancer].join(', ')
     response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
-    assert_equal '/uk/xyz', response.headers['Location']
+    assert_equal 'http://hourofcode.com/uk/xyz', response.headers['Location']
   end
 
   # Ensure redirect goes to original (spoofable) IP-address location,
@@ -44,7 +44,7 @@ class HourOfCodeHelpersTest < Minitest::Test
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', [user_ip, untrusted_proxy_ip, cloudfront_ip, local_load_balancer].join(', ')
     response = get '/xyz', {}, {'REMOTE_ADDR' => cloudfront_ip}
-    assert_equal '/uk/xyz', response.headers['Location']
+    assert_equal 'http://hourofcode.com/uk/xyz', response.headers['Location']
 
     # Canonical url formats shouldn't redirect.
     %w(
@@ -60,6 +60,6 @@ class HourOfCodeHelpersTest < Minitest::Test
     # Redirect to /us/ by default when IP doesn't resolve to a country.
     header 'X_FORWARDED_FOR', "#{cloudfront_ip}, #{local_load_balancer}"
     response = get '/xyz'
-    assert_equal '/us/xyz', response.headers['Location']
+    assert_equal 'http://hourofcode.com/us/xyz', response.headers['Location']
   end
 end
