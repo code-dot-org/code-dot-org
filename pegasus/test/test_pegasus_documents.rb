@@ -115,8 +115,6 @@ class PegasusTest < Minitest::Test
       header 'host', site
       begin
         get(uri)
-        # Follow relative redirects.
-        follow_redirect! if last_response.redirect? && last_response['Location'].start_with?('/')
       rescue Exception => e
         # Filter backtrace from current location.
         index = e.backtrace.index(caller(2..2).first)
