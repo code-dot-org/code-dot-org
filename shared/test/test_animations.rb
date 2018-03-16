@@ -53,11 +53,8 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(dog_image_filename)
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    @api.delete_object(dog_image_filename)
-    assert successful?
-
-    @api.delete_object(cat_image_filename)
-    assert successful?
+    soft_delete(dog_image_filename)
+    soft_delete(cat_image_filename)
   end
 
   def test_unsupported_media_type
@@ -72,8 +69,7 @@ class AnimationsTest < FilesApiTestBase
     @api.post_file(mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
 
-    @api.delete_object(mismatched_filename)
-    assert successful?
+    soft_delete(mismatched_filename)
   end
 
   def test_extension_case_sensitivity
@@ -91,16 +87,14 @@ class AnimationsTest < FilesApiTestBase
     @api.get_object(different_case_filename)
     assert not_found?
 
-    @api.delete_object(filename)
-    assert successful?
+    soft_delete(filename)
   end
 
   def test_nonexistent_animation
     filename = @api.randomize_filename('nonexistent.png')
     delete_all_animation_versions(filename)
 
-    @api.delete_object(filename) # Not a no-op - creates a delete marker
-    assert successful?
+    soft_delete(filename) # Not a no-op - creates a delete marker
 
     Honeybadger.expects(:notify).never
     @api.get_object(filename)
@@ -152,8 +146,7 @@ class AnimationsTest < FilesApiTestBase
     upload(filename, v2_file_data)
 
     # Delete the animation
-    @api.delete_object(filename)
-    assert successful?
+    soft_delete(filename)
 
     # Ask for the missing version
     Honeybadger.expects(:notify).once
@@ -204,11 +197,8 @@ class AnimationsTest < FilesApiTestBase
     assert_equal source_image_body, @api.get_object(dest_image_filename)
     assert_match 'public, max-age=3600, s-maxage=1800', last_response['Cache-Control']
 
-    @api.delete_object(source_image_filename)
-    assert successful?
-
-    @api.delete_object(dest_image_filename)
-    assert successful?
+    soft_delete(source_image_filename)
+    soft_delete(dest_image_filename)
   end
 
   def test_copy_nonexistent_animation
@@ -237,8 +227,7 @@ class AnimationsTest < FilesApiTestBase
     upload(filename, v2_file_data)
 
     # Delete it.
-    @api.delete_object(filename)
-    assert successful?
+    soft_delete(filename)
 
     # List versions.
     versions = @api.list_object_versions(filename)
@@ -276,7 +265,7 @@ class AnimationsTest < FilesApiTestBase
     # Make sure that one version has the newest content
     assert_equal v2_file_data, @api.get_object_version(filename, new_version_id)
 
-    @api.delete_object(filename)
+    soft_delete(filename)
   end
 
   def test_restore_previous_animation
@@ -305,7 +294,7 @@ class AnimationsTest < FilesApiTestBase
     #Check that the restored body is the same as the one to which it was restored
     assert_equal v1_file_data, restored_file_data
 
-    @api.delete_object(filename)
+    soft_delete(filename)
   end
 
   def test_restore_previous_animation_with_invalid_version
@@ -344,7 +333,7 @@ class AnimationsTest < FilesApiTestBase
     refute_nil restored_metadata['failed-restore-at'] ? restored_metadata['failed-restore-at'] : restored_metadata['failed_restore_at']
     assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version'] ? restored_metadata['failed-restore-from-version'] : restored_metadata['failed_restore_from_version']
 
-    @api.delete_object(filename)
+    soft_delete(filename)
   end
 
   def test_restore_deleted_animation_with_invalid_version_does_nothing
@@ -355,8 +344,7 @@ class AnimationsTest < FilesApiTestBase
     upload(filename, 'stub-v1-body')
 
     # Delete it.
-    @api.delete_object(filename)
-    assert successful?
+    soft_delete(filename)
 
     # List object versions
     versions_old = @api.list_object_versions(filename)
@@ -373,7 +361,7 @@ class AnimationsTest < FilesApiTestBase
     versions_new = @api.list_object_versions(filename)
     assert_equal versions_old, versions_new
 
-    @api.delete_object(filename)
+    soft_delete(filename)
   end
 
   def test_doesnt_mask_unrelated_errors
@@ -394,7 +382,7 @@ class AnimationsTest < FilesApiTestBase
       animation_bucket.restore_previous_version(@channel_id, filename, original_version_id, nil)
     end
 
-    @api.delete_object(filename)
+    soft_delete(filename)
   end
 
   private
@@ -423,6 +411,16 @@ class AnimationsTest < FilesApiTestBase
     @api.post_file_version(filename, version, body, 'image/png')
     assert successful?
     JSON.parse(last_response.body)['versionId']
+  end
+
+  #
+  # Deletes the file via the API, which actually just puts a delete marker
+  # on the end of its history.
+  # @param [String] filename of the animation
+  #
+  def soft_delete(filename)
+    @api.delete_object(filename)
+    assert successful?
   end
 
   def delete_all_animation_versions(filename)
