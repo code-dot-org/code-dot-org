@@ -50,13 +50,14 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
           errors << e.message
         end
       end
-      if errors.count > 0
-        render json: {errors: errors}, status: :bad_request
-        raise ActiveRecord::Rollback
-      end
+      raise ActiveRecord::Rollback if errors.any?
     end
 
-    render json: new_students
+    if errors.any?
+      render json: {errors: errors}, status: :bad_request
+    else
+      render json: new_students
+    end
   end
 
   def student_params
