@@ -149,10 +149,8 @@ class Slack
   end
 
   # For more information see
-  # https://github.com/ErikKalkoken/slackApiDoc/blob/master/chat.command.md.
-  # @param channel_id [String] Id of the Slack channel to post the command to.
-  # You can find the channel id at the end of the url for a given channel using
-  # Slack in the browser, e.g https://codedotorg.slack.com/messages/<channel_id>
+  # https://github.com/ErikKalkoken/slackApiDoc/blob/master/chat.command.md. NOTE This API is 'undocumented' and not part of the official Slack APIs.
+  # @param channel_name [String] Name of the Slack channel to post the command to.
   # @param command [String] Command to execute, excluding the /.
   # @param message [String] Optional text passed to the command.
   # @return [Boolean] Whether the command was posted to Slack successfully.
