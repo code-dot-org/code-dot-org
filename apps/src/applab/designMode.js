@@ -6,6 +6,7 @@ import 'jquery-ui/ui/widgets/droppable';
 import 'jquery-ui/ui/widgets/resizable';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
@@ -67,7 +68,7 @@ designMode.onDesignModeVizClick = function (event) {
   var element = event.target;
   if (element.id === 'designModeViz') {
     element = designMode.activeScreen();
-
+  }
 
   if ($(element).is('.ui-resizable')) {
     element = getInnerElement(element);
@@ -1245,7 +1246,6 @@ designMode.renderDesignWorkspace = function (element) {
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
     screenIds: designMode.getAllScreenIds(),
-    store: getStore(),
   };
   ReactDOM.render(
       <Provider store={getStore()}>

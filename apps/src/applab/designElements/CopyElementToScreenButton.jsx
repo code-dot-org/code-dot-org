@@ -47,14 +47,14 @@ class CopyElementToScreenButton extends React.Component {
         >
           Copy to screen
         </button>);
-    const otherScreens = !showDropdown ? '' : this.props.screenIds
+    const otherScreens = !showDropdown ? [] : this.props.screenIds
         .filter((screenId) => screenId !== this.props.currentScreenId)
         .map((screenId) => function(screenId) {
-          /* return (
+          return (
               <button style={styles.screen} id={screenId}
                    onClick={this.handleCopyElementToScreen}
-              >
-          ); */
+              />
+          );
         });
     return (
         <div style={styles.main}>
