@@ -1,0 +1,200 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/test.js&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 16 Mar 2018 01:48:36 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/test.js</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
+    http_version: 
+  recorded_at: Fri, 16 Mar 2018 01:48:35 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 16 Mar 2018 01:48:36 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sources_test/1/1/main.json</Key><LastModified>2018-03-16T01:00:53.000Z</LastModified><ETag>&quot;4ceb22ebb7134b0eaa2b60d01615b302&quot;</ETag><Size>10676</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 16 Mar 2018 01:48:35 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/test.js
+    body:
+      encoding: ASCII-8BIT
+      string: abc 123
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - yJz9td2fVoNvWfumwGLdpA==
+      Content-Length:
+      - '7'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 16 Mar 2018 01:48:36 GMT
+      X-Amz-Version-Id:
+      - CU91FA9IWN7CuH.YkQC61PdbuAHzhSPM
+      Etag:
+      - '"c89cfdb5dd9f56836f59fba6c062dda4"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 16 Mar 2018 01:48:35 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/sources_test/1/1/test.js?versionId=malformed-version-id
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 16 Mar 2018 01:48:36 GMT
+      Connection:
+      - close
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>InvalidArgument</Code><Message>Invalid version id specified</Message><ArgumentName>versionId</ArgumentName><ArgumentValue>malformed-version-id</ArgumentValue><RequestId>088F4C250FE34B43</RequestId><HostId>N7O+UPLBOHXiN0m5QOK7muRk7E2TLTzXi9D8Rh7dGx2Q7f0KXKIKMmaB8EKwoYBpaSskOKblJhw=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 16 Mar 2018 01:48:36 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?encoding-type=url&prefix=sources_test/1/1/test.js&versions
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 16 Mar 2018 01:48:37 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-sources</Name><Prefix>sources_test/1/1/test.js</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>sources_test/1/1/test.js</Key><VersionId>CU91FA9IWN7CuH.YkQC61PdbuAHzhSPM</VersionId><IsLatest>true</IsLatest><LastModified>2018-03-16T01:48:36.000Z</LastModified><ETag>&quot;c89cfdb5dd9f56836f59fba6c062dda4&quot;</ETag><Size>7</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+    http_version: 
+  recorded_at: Fri, 16 Mar 2018 01:48:36 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-sources.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>sources_test/1/1/test.js</Key>
+            <VersionId>CU91FA9IWN7CuH.YkQC61PdbuAHzhSPM</VersionId>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - XNR4cTnWQjAYjDx94w5A1g==
+      Content-Length:
+      - '212'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 16 Mar 2018 01:48:37 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Fri, 16 Mar 2018 01:48:37 GMT
+recorded_with: VCR 3.0.3
