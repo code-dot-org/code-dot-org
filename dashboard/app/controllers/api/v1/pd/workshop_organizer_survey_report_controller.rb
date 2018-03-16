@@ -12,14 +12,21 @@ module Api::V1::Pd
       aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
       survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[params[:course]]
 
-      workshops = ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id).in_state(::Pd::Workshop::STATE_ENDED)
-
       survey_report[:all_my_workshops_for_course] = get_score_for_workshops(workshops)
 
       workshops.flat_map(&:facilitators).uniq.each do |facilitator|
         scores_for_facilitator = get_score_for_workshops(workshops.facilitated_by(facilitator), facilitator_name_filter: facilitator.name)
         survey_report.merge!({facilitator.name => scores_for_facilitator})
       end
+
+      workshops = ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id).in_state(::Pd::Workshop::STATE_ENDED)
+
+      survey_report = generate_summary_report(
+        workshop: nil,
+        workshops: workshops,
+        course: params[:course],
+        facilitator_breakdown: true
+      )
 
       respond_to do |format|
         format.json do

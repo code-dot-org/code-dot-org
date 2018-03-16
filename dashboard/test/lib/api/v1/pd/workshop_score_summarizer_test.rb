@@ -66,6 +66,31 @@ module Api::V1::Pd
       @workshop = create(:pd_workshop, facilitators: @facilitators)
       create(:pd_enrollment, workshop: @workshop)
       @workshops = [@workshop]
+
+      AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
+    end
+
+    test 'generate_summary_report makes appropriate calls to get_score_for_workshops' do
+      workshop_for_course = create :pd_workshop, num_facilitators: 1
+      other_workshop_for_course = create :pd_workshop, organizer: workshop_for_course.organizer, num_facilitators: 1
+
+      expects(:get_score_for_workshops).with(
+        workshops: [workshop_for_course, other_workshop_for_course],
+        facilitator_name_filter: nil
+      ).returns({})
+
+      expects(:get_score_for_workshops).with(
+        workshops: [workshop_for_course],
+        include_free_response: true,
+        facilitator_name_filter: nil
+      ).returns({})
+
+
+      summary_report = generate_summary_report(
+        workshop: workshop_for_course,
+        workshops: [workshop_for_course, other_workshop_for_course],
+        course: workshop_for_course.course
+      )
     end
 
     test 'Response summary initialization' do
