@@ -6,4 +6,8 @@
 
 require_relative 'i18n_script_utils'
 
-exec "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} download"
+def sync_down
+  exec "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} download"
+end
+
+sync_down if __FILE__ == $0
