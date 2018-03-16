@@ -128,4 +128,4 @@ def main
   create_down_out_pr
 end
 
-main
+main if __FILE__ == $0
