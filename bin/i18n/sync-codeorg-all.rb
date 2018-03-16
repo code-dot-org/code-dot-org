@@ -28,12 +28,6 @@ require_relative 'sync-codeorg-out'
 IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d')}".freeze
 DOWN_OUT_BRANCH = "i18n-sync-down-out-#{Date.today.strftime('%m-%d')}".freeze
 
-def update_repo
-  return unless should_i "update the repo"
-  `git checkout staging`
-  `git pull origin staging`
-end
-
 def create_in_up_pr
   return unless should_i "create the in & up PR"
   `git checkout -B #{IN_UP_BRANCH}`
@@ -121,7 +115,6 @@ def create_down_out_pr
 end
 
 def main
-  update_repo
   sync_in if should_i "sync in"
   sync_up if should_i "sync up"
   create_in_up_pr
