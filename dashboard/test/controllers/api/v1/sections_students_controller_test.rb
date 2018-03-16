@@ -66,6 +66,12 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test 'teacher can not update info for a non-existant student' do
+    sign_in @teacher
+    put :update, params: {section_id: @section.id, id: 'not a user', student: {name: 'newname'}}
+    assert_response :bad_request
+  end
+
   test 'non-owner can not update student info' do
     sign_in @other_teacher
     put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f'}}
