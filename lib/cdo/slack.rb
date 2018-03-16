@@ -155,7 +155,7 @@ class Slack
   # @param message [String] Optional text passed to the command.
   # @return [Boolean] Whether the command was posted to Slack successfully.
   def self.command(channel_name, command, message="")
-    channel_id = Slack.get_channel_id(channel_name)
+    channel_id = get_channel_id(channel_name)
     response = open(
       "https://slack.com/api/chat.command?channel=#{channel_id}"\
       "&command=/#{command}"\
@@ -194,7 +194,7 @@ class Slack
   # @param channel_name [String] The name of the Slack channel.
   # @return [nil | String] The Slack channel ID for the channel, nil if not
   #   found.
-  def self.get_channel_id(channel_name)
+  private_class_method def self.get_channel_id(channel_name)
     raise "CDO.slack_token undefined" if SLACK_TOKEN.nil?
     # Documentation at https://api.slack.com/methods/channels.list.
     slack_api_url = "https://slack.com/api/channels.list?token=#{SLACK_TOKEN}"
