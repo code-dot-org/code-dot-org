@@ -321,6 +321,16 @@ describe('manageStudentsRedux', () => {
         age: 13,
         gender: 'm',
       });
+
+      const editStudentShareSettingAction = editStudent(1, {sharingDisabled: true});
+      const stateWithShareSetting = manageStudents(stateWithGender, editStudentShareSettingAction);
+      assert.deepEqual(stateWithShareSetting.editingData[1], {
+        ...studentEmailData[1],
+        name: "New name",
+        age: 13,
+        gender: 'm',
+        sharingDisabled: true,
+      });
     });
   });
 
