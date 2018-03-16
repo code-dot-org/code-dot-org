@@ -148,8 +148,6 @@ end
 
 def country_count
   code = HOC_COUNTRIES[@country]['solr_country_code'] || @country
-  puts code
-  puts fetch_hoc_metrics['hoc_country_totals'].to_json
   return fetch_hoc_metrics['hoc_country_totals'][code.upcase]
 end
 
