@@ -281,9 +281,7 @@ class AnimationsTest < FilesApiTestBase
     second_version_id = upload(filename, v2_file_data)
 
     # Restore
-    # Using AnimationBucket directly because there's no public API for this
-    animation_bucket = AnimationBucket.new
-    response = animation_bucket.restore_previous_version(@channel_id, filename, original_version_id, nil)
+    response = restore_version(filename, original_version_id)
     restored_version_id = response[:version_id]
     restored_file_data = @api.get_object_version(filename, restored_version_id)
 
@@ -309,12 +307,10 @@ class AnimationsTest < FilesApiTestBase
     second_version_id = upload(filename, v2_file_data)
 
     # Restore
-    # Using AnimationBucket directly because there's no public API for this
-    animation_bucket = AnimationBucket.new
-    response = animation_bucket.restore_previous_version(@channel_id, filename, "bad_version_id", nil)
+    response = restore_version(filename, 'bad_version_id')
     restored_version_id = response[:version_id]
     restored_file_data = @api.get_object(filename, restored_version_id)
-    restored_metadata = animation_bucket.get(@channel_id, filename)[:metadata]
+    restored_metadata = AnimationBucket.new.get(@channel_id, filename)[:metadata]
 
     # Check that the latest version is the restored version
     latest_file_data = @api.get_object(filename)
@@ -351,8 +347,7 @@ class AnimationsTest < FilesApiTestBase
     assert successful?
 
     # Attempt restore with bad version ID
-    animation_bucket = AnimationBucket.new
-    response = animation_bucket.restore_previous_version(@channel_id, filename, "bad_version_id", nil)
+    response = restore_version(filename, 'bad_version_id')
 
     # Response indicates mot modified
     assert_equal 'NOT_MODIFIED', response[:status]
@@ -374,12 +369,9 @@ class AnimationsTest < FilesApiTestBase
     # Create an animation file
     original_version_id = upload(filename, 'stub-v1-body')
 
-    # Attempt restore with version id
-    animation_bucket = AnimationBucket.new
-
     # Check that restoring raises an error per above stub
     assert_raises do
-      animation_bucket.restore_previous_version(@channel_id, filename, original_version_id, nil)
+      restore_version(filename, original_version_id)
     end
 
     soft_delete(filename)
@@ -425,5 +417,15 @@ class AnimationsTest < FilesApiTestBase
 
   def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
+  end
+
+  #
+  # Attempts to restore the file to the named version
+  # @param [String] filename of the animation
+  # @param [String] version - S3 version id
+  def restore_version(filename, version)
+    # We use AnimationBucket directly because there's no public API for this.
+    # It does happen as part of a project restore though.
+    AnimationBucket.new.restore_previous_version(@channel_id, filename, version, nil)
   end
 end
