@@ -763,14 +763,16 @@ class Script < ActiveRecord::Base
 
     script_filename = "config/scripts/#{name}.script"
     scripts, _ = Script.setup([script_filename], new_suffix: new_suffix)
-    script = scripts.first
+    new_script = scripts.first
 
     copy_and_write_i18n(new_name)
 
     new_filename = "config/scripts/#{new_name}.script"
-    ScriptDSL.serialize(script, new_filename)
+    ScriptDSL.serialize(new_script, new_filename)
   end
 
+  # Creates a copy of all translations associated with this script, and adds
+  # them as a translations for the script named new_name.
   def copy_and_write_i18n(new_name)
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
@@ -964,6 +966,9 @@ class Script < ActiveRecord::Base
     }
   end
 
+  # Creates an object representing all translations associated with this script
+  # and its stages, in a format that can be deep-merged with the contents of
+  # scripts.en.yml.
   def summarize_i18n_for_copy(new_name)
     data = %w(title description description_short description_audience).map do |key|
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
