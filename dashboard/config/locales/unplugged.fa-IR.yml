@@ -267,9 +267,6 @@
       CollisionDetection:
         title: "تشخیص تصادم"
         desc: "شرح درس تشخیص تصادم"
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

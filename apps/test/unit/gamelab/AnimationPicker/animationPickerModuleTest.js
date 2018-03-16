@@ -1,8 +1,4 @@
-import sinon from 'sinon';
 import reducer, * as animationPickerModule from '@cdo/apps/gamelab/AnimationPicker/animationPickerModule';
-import listReducer from '@cdo/apps/gamelab/animationListModule';
-import {combineReducers} from 'redux';
-import {createStore} from '../../../util/redux';
 import {expect} from '../../../util/configuredChai';
 var Goal = animationPickerModule.Goal;
 
@@ -104,47 +100,6 @@ describe('animationPickerModule', function () {
         var newState = reducer(initialState, handleUploadError(status));
         expect(newState).not.to.equal(initialState);
         expect(newState.uploadError).to.equal(status);
-      });
-    });
-
-    describe('action: handleUploadComplete', function () {
-
-      it('sets sourceUrl to null', function () {
-        const fakeDispatch = sinon.spy();
-        const newState = {animationPicker: { uploadFilename: "filename.jpg", goal: Goal.NEW_ANIMATION }};
-        var store = createStore(combineReducers({animationList: listReducer, animationPicker: reducer}), newState);
-
-        var onMetadataLoaded = animationPickerModule.buildOnImageMetadataLoaded(
-          "filename.jpg",
-          {
-            filename: "filename.jpg",
-            result: 0,
-            versionId: "string"
-          },
-          fakeDispatch,
-          store.getState
-        );
-        onMetadataLoaded({});
-        expect(fakeDispatch).to.have.been.calledTwice;
-
-        const addAnimation = fakeDispatch.firstCall.args[0];
-        expect(addAnimation).to.be.a('function');
-        expect(fakeDispatch.secondCall.args[0]).to.deep.equal(animationPickerModule.hide());
-        fakeDispatch.reset();
-
-        addAnimation(fakeDispatch, store.getState);
-        expect(fakeDispatch.firstCall.args[0]).to.deep.equal({
-          type: 'AnimationList/ADD_ANIMATION',
-          key: 'filename.jpg',
-          props:
-            {
-              name: 'filename.jpg',
-              sourceUrl: null,
-              size: undefined,
-              version: 'string',
-              looping: true
-            }
-        });
       });
     });
   });

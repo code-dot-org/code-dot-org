@@ -219,6 +219,7 @@
   "iceAge": "Ao Kōpaka!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "kaiwhakaari",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "whiwhi piro",
   "isSet": "is set",

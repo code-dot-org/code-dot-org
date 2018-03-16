@@ -219,6 +219,7 @@
   "iceAge": "Doba ledová!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "postava",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "Bod",
   "isSet": "is set",

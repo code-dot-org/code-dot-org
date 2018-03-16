@@ -219,6 +219,7 @@
   "iceAge": "Ledynmetis!",
   "ifDroid": "droid",
   "ifDroidN": "droidas {spriteIndex}",
+  "ifSprite": "veikėjas",
   "ifSpriteN": "veikėjas {spriteIndex}",
   "incrementPlayerScore": "pridėk tašką",
   "isSet": "yra nustatytas",

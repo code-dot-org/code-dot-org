@@ -107,30 +107,27 @@ export function beginUpload(filename) {
  */
 export function handleUploadComplete(result) {
   return function (dispatch, getState) {
+    const { goal, uploadFilename } = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');
     const sourceUrl = animationsApi.basePath(key + '.png');
-    const onImageMetadataLoaded = buildOnImageMetadataLoaded(key, result, dispatch, getState);
-    loadImageMetadata(sourceUrl, onImageMetadataLoaded, () => {
+
+    loadImageMetadata(sourceUrl, metadata => {
+      const animation = _.assign({}, metadata, {
+        name: uploadFilename,
+        sourceUrl: sourceUrl,
+        size: result.size,
+        version: result.versionId
+      });
+
+      if (goal === Goal.NEW_ANIMATION) {
+        dispatch(addAnimation(key, animation));
+      } else if (goal === Goal.NEW_FRAME) {
+        dispatch(appendCustomFrames(animation));
+      }
+      dispatch(hide());
+    }, () => {
       dispatch(handleUploadError(gamelabMsg.animationPicker_failedToParseImage()));
     });
-  };
-}
-
-export function buildOnImageMetadataLoaded(key, result, dispatch, getState) {
-  return (metadata) => {
-    const { goal, uploadFilename } = getState().animationPicker;
-    const animation = _.assign({}, metadata, {
-      name: uploadFilename,
-      sourceUrl: null,
-      size: result.size,
-      version: result.versionId
-    });
-    if (goal === Goal.NEW_ANIMATION) {
-      dispatch(addAnimation(key, animation));
-    } else if (goal === Goal.NEW_FRAME) {
-      dispatch(appendCustomFrames(animation));
-    }
-    dispatch(hide());
   };
 }
 

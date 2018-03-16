@@ -883,6 +883,7 @@
         applab_intro_sounds: App Lab - resimler ve sesler
         applab_intro_designmode: App Lab - tasarım modu
         applab_intro_share: App Lab - Uygulamanı paylaş
+        csd_applab_arrays: Dizilere Giriş
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

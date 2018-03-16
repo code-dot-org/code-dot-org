@@ -1,12 +1,7 @@
 import { randomValue } from '../utils';
 import Gatherer from './gatherer';
-import mazeMsg from './locale';
 import BeeCell from './beeCell';
 import BeeItemDrawer from './beeItemDrawer';
-import {
-  TestResults,
-  BeeTerminationValue as TerminationValue
-} from '../constants.js';
 
 const UNLIMITED_HONEY = -99;
 const UNLIMITED_NECTAR = 99;
@@ -28,14 +23,13 @@ export default class Bee extends Gatherer {
       throw new Error(`bad flowerType for Bee: ${config.level.flowerType}`);
     }
 
-    this.nectarGoal_ = config.level.nectarGoal || 0;
-    this.honeyGoal_ = config.level.honeyGoal || 0;
-
     // at each location, tracks whether user checked to see if it was a flower or
     // honeycomb using an if block
     this.userChecks_ = [];
 
     this.overrideStepSpeed = 2;
+    this.honey_ = undefined;
+    this.nectars_ = undefined;
   }
 
   /**
@@ -95,139 +89,17 @@ export default class Bee extends Gatherer {
   }
 
   /**
-   * Did we reach our total nectar/honey goals?
-   * @return {boolean}
-   * @override
+   * Get the total count of all honey collected
    */
-  succeeded() {
-    // nectar/honey goals
-    if (this.honey_ < this.honeyGoal_ || this.nectars_.length < this.nectarGoal_) {
-      return false;
-    }
-
-    if (!this.checkedAllClouded() || !this.checkedAllPurple()) {
-      return false;
-    }
-
-    return super.succeeded();
+  getHoneyCount() {
+    return this.honey_;
   }
 
   /**
-   * @override
+   * Get the total count of all nectar collected
    */
-  collectedEverything() {
-    // quantum maps implicity require "collect everything", non-quantum
-    // maps don't really care
-    if (!this.maze_.map.hasMultiplePossibleGrids()) {
-      return true;
-    }
-
-    return super.collectedEverything();
-  }
-
-  /**
-   * @override
-   */
-  terminateWithAppSpecificValue() {
-    const executionInfo = this.maze_.executionInfo;
-
-    if (this.nectars_.length < this.nectarGoal_) {
-      executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_NECTAR);
-    } else if (this.honey_ < this.honeyGoal_) {
-      executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_HONEY);
-    } else if (!this.checkedAllClouded()) {
-      executionInfo.terminateWithValue(TerminationValue.UNCHECKED_CLOUD);
-    } else if (!this.checkedAllPurple()) {
-      executionInfo.terminateWithValue(TerminationValue.UNCHECKED_PURPLE);
-    } else if (!this.collectedEverything()) {
-      executionInfo.terminateWithValue(TerminationValue.DID_NOT_COLLECT_EVERYTHING);
-    }
-  }
-
-  /**
-   * Did we check every flower/honey that was covered by a cloud?
-   */
-  checkedAllClouded() {
-    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
-      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
-        if (this.shouldCheckCloud(row, col) && !this.checkedCloud(row, col)) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-
-  /**
-   * Did we check every purple flower
-   */
-  checkedAllPurple() {
-    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
-      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
-        if (this.shouldCheckPurple(row, col) && !this.userChecks_[row][col].checkedForNectar) {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-
-  /**
-   * @override
-   */
-  getTestResults(terminationValue) {
-    switch (terminationValue) {
-      case TerminationValue.NOT_AT_FLOWER:
-      case TerminationValue.FLOWER_EMPTY:
-      case TerminationValue.NOT_AT_HONEYCOMB:
-      case TerminationValue.HONEYCOMB_FULL:
-        return TestResults.APP_SPECIFIC_FAIL;
-
-      case TerminationValue.UNCHECKED_CLOUD:
-      case TerminationValue.UNCHECKED_PURPLE:
-      case TerminationValue.INSUFFICIENT_NECTAR:
-      case TerminationValue.INSUFFICIENT_HONEY:
-      case TerminationValue.DID_NOT_COLLECT_EVERYTHING:
-        var testResults = this.maze_.getTestResults(true);
-        // If we have a non-app specific failure, we want that to take precedence.
-        // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
-        // a suboptimal solution, so in those cases we want to return our
-        // app specific fail. Same goes for BLOCK_LIMIT_FAIL.
-        if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL || testResults === TestResults.BLOCK_LIMIT_FAIL) {
-          testResults = TestResults.APP_SPECIFIC_FAIL;
-        }
-        return testResults;
-    }
-
-    return super.getTestResults(terminationValue);
-  }
-
-  /**
-   * @override
-   */
-  getMessage(terminationValue) {
-    switch (terminationValue) {
-      case TerminationValue.NOT_AT_FLOWER:
-        return mazeMsg.notAtFlowerError();
-      case TerminationValue.FLOWER_EMPTY:
-        return mazeMsg.flowerEmptyError();
-      case TerminationValue.NOT_AT_HONEYCOMB:
-        return mazeMsg.notAtHoneycombError();
-      case TerminationValue.HONEYCOMB_FULL:
-        return mazeMsg.honeycombFullError();
-      case TerminationValue.UNCHECKED_CLOUD:
-        return mazeMsg.uncheckedCloudError();
-      case TerminationValue.UNCHECKED_PURPLE:
-        return mazeMsg.uncheckedPurpleError();
-      case TerminationValue.INSUFFICIENT_NECTAR:
-        return mazeMsg.insufficientNectar();
-      case TerminationValue.INSUFFICIENT_HONEY:
-        return mazeMsg.insufficientHoney();
-      case TerminationValue.DID_NOT_COLLECT_EVERYTHING:
-        return mazeMsg.didNotCollectEverything();
-      default:
-        return super.getMessage(terminationValue);
-    }
+  getNectarCount() {
+    return this.nectars_.length;
   }
 
   /**
@@ -283,6 +155,34 @@ export default class Bee extends Gatherer {
    */
   checkedCloud(row, col) {
     return this.userChecks_[row][col].checkedForFlower || this.userChecks_[row][col].checkedForHive;
+  }
+
+  /**
+   * Did we check every flower/honey that was covered by a cloud?
+   */
+  checkedAllClouded() {
+    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
+      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
+        if (this.shouldCheckCloud(row, col) && !this.checkedCloud(row, col)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  /**
+   * Did we check every purple flower
+   */
+  checkedAllPurple() {
+    for (let row = 0; row < this.maze_.map.currentStaticGrid.length; row++) {
+      for (let col = 0; col < this.maze_.map.currentStaticGrid[row].length; col++) {
+        if (this.shouldCheckPurple(row, col) && !this.userChecks_[row][col].checkedForNectar) {
+          return false;
+        }
+      }
+    }
+    return true;
   }
 
   /**
@@ -373,41 +273,63 @@ export default class Bee extends Gatherer {
 
   // API
 
-  getNectar(id) {
+  /**
+   * Attempt to harvest nectar from the current location; terminate the
+   * execution if this is not a valid place at which to get nectar.
+   *
+   * This method is preferred over animateGetNectar for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @fires notAtFlower
+   * @fires flowerEmpty
+   * @return {boolean} whether or not this attempt was successful
+   */
+  tryGetNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     // Make sure we're at a flower.
     if (!this.isFlower(row, col)) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_FLOWER);
-      return;
+      this.emit('notAtFlower');
+      return false;
     }
     // Nectar is positive.  Make sure we have it.
     if (this.flowerRemainingCapacity(row, col) === 0) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.FLOWER_EMPTY);
-      return;
+      this.emit('flowerEmpty');
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('nectar', id);
     this.gotNectarAt(row, col);
+    return true;
   }
 
-  // Note that this deliberately does not check whether bee has gathered nectar.
-  makeHoney(id) {
+  /**
+   * Attempt to make honey at the current location; terminate the execution if
+   * this is not a valid place at which to make honey.
+   * Note that this deliberately does not check whether bee has gathered nectar.
+   *
+   * This method is preferred over animateGetHoney for "headless" operation (ie
+   * when validating quantum levels)
+   *
+   * @fires notAtHive
+   * @fires hiveFull
+   * @return {boolean} whether or not this attempt was successful
+   */
+  tryMakeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
 
     if (!this.isHive(row, col)) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.NOT_AT_HONEYCOMB);
-      return;
+      this.emit('notAtHive');
+      return false;
     }
     if (this.hiveRemainingCapacity(row, col) === 0) {
-      this.maze_.executionInfo.terminateWithValue(TerminationValue.HONEYCOMB_FULL);
-      return;
+      this.emit('hiveFull');
+      return false;
     }
 
-    this.maze_.executionInfo.queueAction('honey', id);
     this.madeHoneyAt(row, col);
+    return true;
   }
 
   nectarRemaining(userCheck=false) {
@@ -428,6 +350,16 @@ export default class Bee extends Gatherer {
     return this.hiveRemainingCapacity(row, col);
   }
 
+  /**
+   * Display the harvesting of nectar from the current location; raise a runtime
+   * error if the current location is not a valid spot from which to gather
+   * nectar.
+   *
+   * This method is preferred over tryGetNectar for live operation (ie when
+   * actually displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell has no nectar.
+   */
   animateGetNectar() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
@@ -444,6 +376,15 @@ export default class Bee extends Gatherer {
     this.drawer.updateNectarCounter(this.nectars_);
   }
 
+  /**
+   * Display the making of honey from the current location; raise a runtime
+   * error if the current location is not a valid spot at which to make honey.
+   *
+   * This method is preferred over tryMakeHoney for live operation (ie when
+   * actually displaying something to the user)
+   *
+   * @throws Will throw an error if the current cell is not a hive.
+   */
   animateMakeHoney() {
     const col = this.maze_.pegmanX;
     const row = this.maze_.pegmanY;
@@ -457,7 +398,6 @@ export default class Bee extends Gatherer {
     this.madeHoneyAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);
-
     this.drawer.updateHoneyCounter(this.honey_);
   }
 

@@ -28,7 +28,7 @@ module.exports = {
         testResult: TestResults.APP_SPECIFIC_FAIL
       },
       customValidator: function () {
-        return Maze.controller.executionInfo.terminationValue() === 3; //TerminationValue.NOT_AT_HONEYCOMB;
+        return Maze.executionInfo.terminationValue() === 3; //TerminationValue.NOT_AT_HONEYCOMB;
       },
       xml: '<xml>' +
           '<block type="controls_repeat">' +

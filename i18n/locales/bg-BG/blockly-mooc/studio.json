@@ -219,6 +219,7 @@
   "iceAge": "Ледена епоха!",
   "ifDroid": "droid",
   "ifDroidN": "дроид {spriteIndex}",
+  "ifSprite": "актьор",
   "ifSpriteN": "{spriteIndex} актьор",
   "incrementPlayerScore": "получава точка",
   "isSet": "е зададено",

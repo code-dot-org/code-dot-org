@@ -9,7 +9,7 @@ nav: promote_nav
 
 # Marknadsför Hour of Code
 
-## Ska du hålla en Hour of Code? <a href="<%= resolve_url('/how-to') %> Titta på guiden</a>
+## Ska du hålla en Hour of Code? <a href="<%= resolve_url('/how-to') %>"> Titta på guiden</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 

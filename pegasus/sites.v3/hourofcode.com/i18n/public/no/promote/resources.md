@@ -9,7 +9,7 @@ nav: promote_nav
 
 # Markedsfør Kodetimen
 
-## Skal du holde en Kodetime? <a href="<%= resolve_url('/how-to') %> Les hvordan det gjøres her</a>
+## Skal du holde en Kodetime? <a href="<%= resolve_url('/how-to') %>"> Les hvordan det gjøres her</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
