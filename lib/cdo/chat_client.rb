@@ -44,6 +44,11 @@ class ChatClient
     )
   end
 
+  def self.set_reminder(room, recipient, reminder)
+    message = recipient + " " + reminder
+    Slack.command(room, "remind", message)
+  end
+
   def self.snippet(message)
     Slack.snippet(CDO.slack_log_room, message)
   end
