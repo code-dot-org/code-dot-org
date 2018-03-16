@@ -53,6 +53,7 @@ class GamelabJr < Gamelab
   <block type="when_run" />
 </category>
 <category name="Variables" custom="VARIABLE" />
+<category name="Functions" custom="PROCEDURE" />
 <category name="World">
   <block type="gamelab_setBackground">
     <value name="COLOR">
@@ -164,6 +165,10 @@ class GamelabJr < Gamelab
 </category>
 #{common_blocks(type)}
     XML
+  end
+
+  def default_toolbox_blocks
+    complete_toolbox 'default_blocks'
   end
 
   # These serialized fields will be serialized/deserialized as straight XML

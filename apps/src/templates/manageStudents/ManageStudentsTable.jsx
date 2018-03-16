@@ -18,6 +18,7 @@ import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
+import {Checkbox} from 'react-bootstrap';
 import experiments from '@cdo/apps/util/experiments';
 
 const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
@@ -133,6 +134,7 @@ class ManageStudentsTable extends Component {
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
+    showSharingColumn: PropTypes.bool,
     editAll: PropTypes.func,
   };
 
@@ -217,6 +219,7 @@ class ManageStudentsTable extends Component {
               {showShareColumn &&
                 <ManageStudentsActionsHeaderCell
                   editAll={this.props.editAll}
+                  isShareColumnVisible={this.props.showSharingColumn}
                 />
               }
             </div>
@@ -235,6 +238,20 @@ class ManageStudentsTable extends Component {
         <div style={styles.headerIcon}>
           <SharingControlActionsHeaderCell/>
         </div>
+      </span>
+    );
+  };
+
+  projectSharingFormatter = (projectSharing, {rowData}) => {
+    let disabled = rowData.isEditing ?
+      this.props.editingData[rowData.id].age.length === 0 :
+      true;
+
+    return (
+      <span>
+        <Checkbox
+          disabled={disabled}
+        />
       </span>
     );
   };
@@ -270,7 +287,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 300
+            width: 260
           }},
           transforms: [sortable],
         },
@@ -279,7 +296,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 300
+            width: 260
           }}
         }
       },
@@ -356,12 +373,15 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 130
           }},
         },
         cell: {
+          format: this.projectSharingFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130}
           }}
         }
       },
@@ -391,9 +411,7 @@ class ManageStudentsTable extends Component {
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(passwordColumn);
     }
-    //For now always show this column if the experiment flag is on.
-    // TODO: (Erin B & Caley) update so visibility is controlled by project sharing dialog.
-    if (showShareColumn) {
+    if (this.props.showSharingColumn) {
       dataColumns = dataColumns.concat(projectSharingColumn);
     }
     if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
@@ -456,6 +474,7 @@ export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
+  showSharingColumn: state.manageStudents.showSharingColumn,
   addStatus: state.manageStudents.addStatus,
 }), dispatch => ({
   saveAllStudents() {
