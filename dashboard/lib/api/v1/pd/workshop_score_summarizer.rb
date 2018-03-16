@@ -68,6 +68,39 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS - FREE_RESPONSE_QUESTIONS
   FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS & FREE_RESPONSE_QUESTIONS
 
+  def generate_summary_report(workshop: workshop, workshops: workshops, course: course, facilitator_name: facilitator_name = nil, facilitator_breakdown: facilitator_breakdown = false)
+    survey_report = Hash.new
+
+    if workshop
+      survey_report[:this_workshop] = get_score_for_workshops(
+        workshops: [workshop],
+        include_free_responses: true,
+        facilitator_name_filter: facilitator_name
+      )
+    end
+
+    survey_report[:all_my_workshops_for_course] = get_score_for_workshops(
+      workshops: workshops,
+      facilitator_name_filter: facilitator_name
+    )
+
+    aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
+    survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[course].try(&:symbolize_keys) || {}
+
+    if facilitator_breakdown
+      facilitators = workshops.flat_map(&:facilitators).sort.uniq
+
+      facilitators.each do |facilitator|
+        survey_report[facilitator.name] = get_score_for_workshops(
+          workshops.facilitated_by(facilitator),
+          facilitator_name_filter: facilitator.name
+        )
+      end
+    end
+
+    survey_report
+  end
+
   def get_score_for_workshops(workshops, include_free_responses: false, facilitator_name_filter: nil)
     facilitators = workshops.flat_map(&:facilitators).map(&:name)
     response_summary = {}
