@@ -967,6 +967,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "（舊）計算機科學原理 單元 2 - 網際網路"
           description: |

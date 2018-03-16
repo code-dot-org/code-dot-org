@@ -9666,6 +9666,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra
         forrit". Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
+      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
+        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
+        vinir þínir geti prófað leikinn í símunum sínum.
       flappy_2_instruction: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar
         rekst á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til
         jarðar.
@@ -9686,9 +9689,6 @@
         t.d. þegar farið er framhjá hindrun."
       flappy_9_instruction: Prófaðu að útfæra þetta þannig að í stað þess að enda
         leikinn við árekstur þá sé skorið núllstillt.
-      flappy_11_instruction: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu
-        umhverfi og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að
-        vinir þínir geti prófað leikinn í símunum sínum.
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: Hér er "búa til hring" kubbur

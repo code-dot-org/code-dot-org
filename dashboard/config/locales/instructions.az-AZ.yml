@@ -11241,6 +11241,10 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"basanda" blokuna bir blok əlavə edin və "İcra et" düyməsini
         sıxın. Ekrana basmaqla Qanadlını hədəfə çatdırın.'
+      flappy_11_instruction: "Öz Qanadlı oyununuzu düzəldin. Siz bütün görüntüləri
+        və qaydaları dəyişə bilərsiniz, hətta yerin cazibə qüvvəsini belə. Bitirdiyinizdə
+        Son düyməsini basın və oyunu paylaşın ki, dostlarınız da sizin oyununuzu sınaqdan
+        keçirsinlər."
       flappy_2_instruction: İndi biz yer səthi də əlavə etmişik. "yerə düşəndə" blokuna
         bir blok əlavə edin. Sizin kodunuz gərək Qanadlı düşəndə "oyunu bitir"sin.
       flappy_3_instruction: '"İcra etdikdə" bloku imkan verir ki, oyun başlayanda
@@ -11261,10 +11265,6 @@
         TƏSADÜFİ səhnə təyin etməyi yoxlayın.
       flappy_9_instruction: "İşləri qarışdırmaq üçün hansısa maneəyə deyəndə oyunu
         bitirmək yerinə xalı 0 təyin etməyi yoxlayın."
-      flappy_11_instruction: "Öz Qanadlı oyununuzu düzəldin. Siz bütün görüntüləri
-        və qaydaları dəyişə bilərsiniz, hətta yerin cazibə qüvvəsini belə. Bitirdiyinizdə
-        Son düyməsini basın və oyunu paylaşın ki, dostlarınız da sizin oyununuzu sınaqdan
-        keçirsinlər."
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.

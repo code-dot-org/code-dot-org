@@ -7036,14 +7036,14 @@
         bloklarının ikisine de bloklar eklemeniz gerekiyor.
       bounce_6_basketball_instruction: Şimdi bayrak en üstte. Bulmacayı çözmek için
         "top vurduğunda" bloklarının ikisine de bloklar eklemeniz gerekiyor.
-      bounce_6_sports_instruction: Bu sefer bayrak üst tarafta. "top duvara çarptığında"
-        bloklarının ikisine ekleme yaparak bulmacayı çözmek zorundasın.
+      bounce_6_sports_instruction: Şimdi bayrak en üstte. Bulmacayı çözmek için "top
+        vurduğunda" bloklarının ikisine de bloklar eklemeniz gerekiyor.
       bounce_7_instruction: '"sırasında" bloklarının her birine bloklar ekleyin. Son
         hedefe vurana kadar topu zıplat.'
       bounce_7_basketball_instruction: Her bir "sırasında" bloğuna blokalar ekleyin.
         Son hedefe olaşana kadar topu zıplat.
-      bounce_7_sports_instruction: Blokları "ne zaman" bloklarının her birine ekleyin.
-        Bitiş hedefine ulaşana kadar topu sektirin.
+      bounce_7_sports_instruction: Her bir "sırasında" bloğuna blokalar ekleyin. Son
+        hedefe olaşana kadar topu zıplat.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -9752,6 +9752,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"Tıklandığında" bloğuna bir blok ekleyin sonra "Çalıştır"
         a basın. Flappy'' yi hedefe hareket ettirmek için tıklayın ya da ekrana dokunun.'
+      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
+        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
+        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       flappy_2_instruction: Şimdi biraz zemin ekledik. "Zemine çarptığında" bloğuna
         bir blok ekleyin. Flappy çarptığında 'OYUNU BİTİR' komutunu ihtiyaç var.
       flappy_3_instruction: '"Çalışıtığı zaman" bloğu oyun başladığında kodlarınızın
@@ -9771,9 +9774,6 @@
         geçince.
       flappy_9_instruction: "İşleri karıştırmak için, bir engele çarptığında, oyunu
         bitirmek yerine skoru 0 yapmayı deneyin."
-      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
-        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
-        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       frozen circle function in circle_instruction: "Şimdi herbirini çizdikten sonra
         18 derece bırakacağınız 20 tane çember oluşturun."
       frozen circle function with parameter_instruction: '"Çember oluştur" "create

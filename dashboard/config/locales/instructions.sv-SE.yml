@@ -10311,6 +10311,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Lägg till ett block på "när klicka" blocket och tryck
         på "Kör". Klicka eller tappa på skärmen för att flytta Flappy till målet.
+      flappy_11_instruction: Skapa ditt eget Flappy spel. Du kan ändra all grafik
+        och alla regler, även gravitationen. När du är klar, klicka på Slutför för
+        att låta vänner prova ditt spel på sina telefoner.
       flappy_2_instruction: Nu har vi lagt till lite mark. Lägg till block till  "när
         slog i marken" blocket.  Koden måste säga "Avsluta spelet" när Flappy kraschar.
       flappy_3_instruction: '"När kör" blocket gör så att kod körs när spelet startar.  Prova
@@ -10332,9 +10335,6 @@
       flappy_9_instruction: För att blanda ihop saker,  i stället för att spelet slutar
         när du slår i ett hinder så prova att sätta tillbaks poänginställningen  till
         0.
-      flappy_11_instruction: Skapa ditt eget Flappy spel. Du kan ändra all grafik
-        och alla regler, även gravitationen. När du är klar, klicka på Slutför för
-        att låta vänner prova ditt spel på sina telefoner.
       frozen circle function in circle_instruction: Låt oss nu skapa 20 överlappande
         cirklar. Vrid 18 grader mellan varje cirkel.
       frozen circle function with parameter_instruction: Här är ett "Skapa cirkel"-block

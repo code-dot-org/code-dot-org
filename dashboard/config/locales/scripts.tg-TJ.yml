@@ -1003,6 +1003,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: |-

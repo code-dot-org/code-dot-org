@@ -296,121 +296,8 @@
           sprengiefnið!
         maze_3_4: Arrg! Skrifaðu forrit fyrir mig sem kemur mér í kringum TNT sprengiefnið
           og til svínsins.
-        bounce_1_basketball: Tengdu kubb við "þegar vinstri ör" kubbinn og ýttu á
-          "Keyra". Færðu höndina með vinstri ör til að komast að endamarkinu.
-        bounce_2_basketball: Tengdu kubb við "þegar til hægri" og "þegar til vinstri"
-          kubbana. Færðu höndina til að ná báðum endamörkum.
-        bounce_5_basketball: Við ætlum að senda bolta svífandi niður í átt að höndinni.
-          Tengdu kubb við kubbinn "þegar bolti hittir hönd" til að tryggja að boltinn
-          nái að endamarkinu.
-        bounce_6_basketball: Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba
-          við báða "þegar bolti hittir" kubbana til að leysa þrautina.
-        bounce_7_basketball: Tengdu kubba við hvern "þegar" kubb. Láttu boltann skoppa
-          þar til hann hittir í endamarkið.
-        bounce_10_basketball: Nú er mark efst! Tengdu kubbana "skora stig" og "skora
-          stig andstæðings" við kubbana "þegar bolti í marki" og "þegar bolti hittir
-          ekki hönd" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
-          skorar tvisvar.
-        bounce_11_basketball: Þú getur núna tengt kubba við kubbinn "þegar keyrt".
-          Þú verður að tengja nýja "senda nýjan bolta" kubbinn á fleiri en einum stað.
-          Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu
-          hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!
-        bounce_12_basketball: Búðu til þinn eigin körfuboltaleik. Þú getur breytt
-          öllum reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til
-          að vinir geti prófað leikinn í símunum sínum.
-        bounce_1_sports: Náðu til flaggsins! Festu kubb við "þegar vinstri ör" kubbinn
-          og ýttu á "Keyra" til að færa leikmanninn að flagginu.
-        bounce_2_sports: Nú eru tvö flögg! Festu kubb við "þegar vinstri ör" og "þegar
-          hægri ör" kubbana til að láta leikmanninn færast í tvær áttir.
-        bounce_5_sports: Hokkípukkurinn mun þeytast niður í átt að leikmanninum! Festu
-          kubb við "þegar bolti hittir leikmann" til að hitta á flaggið.
-        bounce_6_sports: Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba við
-          báða "þegar bolti hittir" kubbana til að leysa þrautina.
-        bounce_7_sports: Tengdu kubba við hvern "þegar" kubb. Láttu boltann skoppa
-          þar til hann hittir í endamarkið.
-        bounce_10_sports: Nú er mark efst! Tengdu kubbana "skora stig" og "skora stig
-          andstæðings" við kubbana "þegar bolti í marki" og "þegar bolti hittir ekki
-          hönd" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
-          skorar tvisvar!
-        bounce_11_sports: Þú getur núna tengt kubba við kubbinn "þegar keyrt". Þú
-          verður að tengja nýja "senda nýjan bolta" kubbinn á fleiri en einum stað.
-          Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu
-          hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!
-        bounce_12_sports: 'Búðu til leik eftir þínu höfði! Þú stjórnar hér: þú getur
-          breytt öllum reglunum, blandað saman íþróttum, notað ímyndunaraflið! Smelltu
-          á Ljúka þegar leikurinn er tilbúinn svo að vinir þínir geti prófað hann
-          í símunum sínum.'
-        bounce_1: Tengdu kubb við "þegar vinstri ör" kubbinn og ýttu á "Keyra forrit".
-          Færðu spaðann með vinstri ör til að komast að endamarkinu.
-        bounce_2: Tengdu kubb við "þegar til hægri" og "þegar til vinstri" kubbana.
-          Færðu spaðann til að ná báðum endamörkum.
-        bounce_3: Reyndu nú eitthvað svipað með kubbnum "þegar upp ör". Færðu spaðann
-          upp að endamarkinu.
-        bounce_4: "Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann
-          að öllum fjórum endamörkum til að ljúka þessari þraut."
-        bounce_5: Við ætlum að senda bolta svífandi niður í átt að spaðanum. Tengdu
-          kubb við kubbinn "þegar bolti hittir spaða" til að tryggja að boltinn nái
-          að endamarkinu.
-        bounce_6: Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba við báða
-          "þegar bolti hittir" kubbana til að leysa þrautina.
-        bounce_7: Tengdu kubba við hvern "þegar" kubb. Láttu boltann skoppa þar til
-          hann hittir í endamarkið.
-        bounce_10: Nú er mark efst. Tengdu kubbana "skora stig" og "skora stig andstæðings"
-          við kubbana "þegar bolti í marki" og "þegar bolti hittir ekki spaða" til
-          að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
-          skorar tvisvar.
-        bounce_11: Þú getur núna tengt kubba við kubbinn "þegar keyrt". Þú verður
-          að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum stað. Prófaðu
-          líka að breyta sviðinu eða hraða spaðans og boltans og sjáðu hvað þú getur
-          skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar.
-        bounce_12: Búðu til þinn eigin Skopp leik. Þú getur breytt öllu myndefninu
-          og reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til að
-          vinir geti prófað leikinn í símunum sínum.
         Custom_builder: Dragðu kubba úr verkfærakassanum inn á vinnusvæðið til að
           teikna áfangann sem þú vilt búa til. Ýttu svo á Keyra forrit.
-        flappy_1: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit".
-          Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
-        flappy_2: Nú höfum við  bætt við jörð. Tengdu kubb við kubbinn "þegar rekst
-          á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.
-        flappy_3: Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn byrjar.
-          Prófaðu að stilla hraðann og fljúga að markinu.
-        flappy_4: Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til að
-          láta hann rekast á. Tengdu kubb við kubbinn "þegar rekst á hindrun". Kóðinn
-          þinn verður að "LJÚKA LEIK" þegar Flappy rekst á fyrstu pípurnar.
-        flappy_5: Nú skulum við bæta við stigagjöf og telja stig þegar Flappy kemst
-          fram hjá hindrunum. Bættu við kubbinn "þegar framhjá hindrun" og skoraðu
-          stig með því að fljúga Flappy framhjá fyrstu pípunum.
-        flappy_6: Prófaðu hvort þú getir enn skorað stig eftir að þú lætur Flappy
-          blaka vængjunum meira eða minna.
-        flappy_7: Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar
-          keyrt" kubbinn.
-        flappy_8: "Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
-          að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið
-          er framhjá hindrun."
-        flappy_9: Prófaðu að útfæra þetta þannig að í stað þess að enda leikinn við
-          árekstur þá sé skorið núllstillt.
-        flappy_11: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi
-          og öllum reglum, jafnvel þyngdaraflinu. Smelltu svo á Ljúka til að vinir
-          þínir geti prófað leikinn í símunum sínum.
-        flappy_k1_1: Spila Flappy
-        flappy_k1_2: Tengdu kubb við "þegar smellt" kubbinn og ýttu svo á "Keyra forrit".
-          Smelltu eða sláðu á skjáinn til að færa Flappy að markinu.
-        flappy_k1_3: Nú höfum bætt við jörð. Tengdu kubb við kubbinn "þegar rekst
-          á jörð". Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy hrapar til jarðar.
-        flappy_k1_4: Með kubbnum "þegar keyrt" getur þú keyrt kóða þegar leikurinn
-          byrjar. Prófaðu að stilla hraðann og fljúga að markinu.
-        flappy_k1_5: Flappy mun fljúga í gegnum hindranir nema þú skrifir kóða til
-          að láta hann rekast á. Tengdu kubb við kubbinn "þegar rekst á hindrun".
-          Kóðinn þinn verður að "LJÚKA LEIK" þegar Flappy rekst á fyrstu pípurnar.
-        flappy_k1_6: Nú skulum við bæta við stigagjöf og telja stig þegar Flappy kemst
-          fram hjá hindrunum. Bættu við kubbinn "þegar framhjá hindrun" og skoraðu
-          stig með því að fljúga Flappy framhjá fyrstu pípunum.
-        flappy_k1_7: Gáðu hvort þú getir skorað mörg stig fyrir að komast framhjá
-          hindrun
-        flappy_k1_8: Prófaðu svo að breyta leiknum með því að tengja annan kubb við
-          "þegar keyrt" kubbinn.
-        flappy_k1_9: Prófaðu að skipta um leikmann með því að tengja "stilla leikmann"
-          kubb við "þegar keyrt" kubbinn.
         jigsaw_1: Smelltu á kubbinn
         jigsaw_2: Dragðu kubbinn að markinu
         jigsaw_3: Raðaðu kubbunum til að búa til myndina
@@ -873,6 +760,7 @@
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Kynning á fylkjum
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
