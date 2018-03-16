@@ -72,46 +72,47 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     facilitators = workshops.flat_map(&:facilitators).map(&:name)
     response_summary = {}
 
-
     response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(facilitators, facilitator_name_filter)
 
     responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
     responses.compact!
-    return {} if total_response_count == 0
+    return {} if responses.count == 0
+
+    responses_per_facilitator = calculate_facilitator_name_frequencies(responses)
 
     generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter)
-    generate_free_response_sums(response, free_response_summary, facilitator_specific_free_response_sums, facilitator_name_filter)
 
-    response_summary.merge! generate_response_averages(response_sums, facilitator_specific_response_sums, responses, facilitator_name_filter)
+    response_summary.merge! generate_response_averages(responses, response_sums, facilitator_specific_response_sums, responses_per_facilitator, facilitator_name_filter)
 
-    response_summary.merge!(free_response_summary)
+    if include_free_responses
+      generate_free_response_sums(responses, free_response_summary, facilitator_specific_free_response_sums, responses_per_facilitator, facilitator_name_filter)
+      response_summary.merge!(free_response_summary)
+    end
 
     response_summary[:teacher_engagement] = (response_summary.values_at(*TEACHER_ENGAGEMENT_QUESTIONS).reduce(:+) / TEACHER_ENGAGEMENT_QUESTIONS.length.to_f).round(2)
     response_summary[:overall_success] = (response_summary.values_at(*OVERALL_SUCCESS_QUESTIONS).reduce(:+) / OVERALL_SUCCESS_QUESTIONS.length.to_f).round(2)
 
     # Compute aggregate scores
     response_summary[:facilitator_effectiveness] = (response_summary.values_at(*FACILITATOR_EFFECTIVENESS_QUESTIONS).reduce(:+) / FACILITATOR_EFFECTIVENESS_QUESTIONS.length.to_f).round(2)
-    response_summary[:number_teachers] = workshops.flat_map(&:attending_teachers).count
+    response_summary[:number_teachers] = workshops.flat_map(&:enrollments).count
     response_summary[:response_count] = responses.count
 
     response_summary
   end
 
-  def calculate_facilitator_name_frequencies(responses, facilitators)
+  def calculate_facilitator_name_frequencies(responses)
     if responses.first['how_often_given_feedback_s'].is_a? Hash
       # the below two lines return a histogram showing FacilitatorName=># Responses.
       # Using 'how_often_given_feedback_s' for no particular reason - any of the facilitator
       # specific responses would do fine here
       facilitator_name_responses = responses.map {|x| x['how_often_given_feedback_s']}.flat_map(&:keys)
-      return Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}], true
+      return Hash[*facilitator_name_responses.group_by {|v| v}.flat_map {|k, v| [k, v.size]}]
     else
-      # Older surveys do not have facilitator specific answers. In that case, just assume that
-      # each facilitator has response_count answers
-      return Hash[*facilitators.flat_map {|facilitator| [facilitator, responses.count]}], false
+      nil
     end
   end
 
-  def initialize_response_summaries(facilitator_name_filter, facilitators)
+  def initialize_response_summaries(facilitators, facilitator_name_filter = nil)
     # Initalize a hash of non facilitator specific questions to answer sums
     response_sums = Hash[INDIVIDUAL_RESPONSE_QUESTIONS.map {|question| [question, 0]}]
 
@@ -157,7 +158,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
   end
 
-  def generate_free_response_sums(responses, free_response_summary, facilitator_specific_free_response_sums, facilitator_name_filter)
+  def generate_free_response_sums(responses, free_response_summary, facilitator_specific_free_response_sums, responses_per_facilitator, facilitator_name_filter = nil)
     responses.each do |response|
       response.symbolize_keys.each do |question, answer|
         if FREE_RESPONSE_QUESTIONS.include? question
@@ -176,24 +177,32 @@ module Api::V1::Pd::WorkshopScoreSummarizer
         end
       end
     end
+
+    if responses_per_facilitator
+      free_response_summary.merge!(facilitator_specific_free_response_sums)
+    end
   end
 
-  def generate_response_averages(response_sums, facilitator_specific_response_sums, responses, facilitator_name_filter)
+  def generate_response_averages(responses, response_sums, facilitator_specific_response_sums, responses_per_facilitator, facilitator_name_filter = nil)
     response_summary = {}
 
-    facilitator_response_count, has_facilitator_specific_answers = calculate_facilitator_name_frequencies(responses, facilitators)
     # Note that this is not the number of responses. Some responses apply for multiple
     # facilitators. If a workshop has 5 responses, 4 may be for facilitator A, 3 may be
     # for facilitator B, we'd expect this to be 7.
-    responses_for_all_facilitators_count = facilitator_response_count.values.reduce(:+).to_f
+    responses_for_all_facilitators_count =
+      if responses_per_facilitator
+        facilitator_name_filter ? responses_per_facilitator[facilitator_name_filter] : responses_per_facilitator.values.reduce(:+)
+      else
+        responses.count
+      end.to_f
 
     response_sums.each do |question, answer_sum|
       response_summary[question] = (answer_sum / responses.count.to_f).round(2)
     end
 
-    if has_facilitator_specific_answers
-      facilitator_specific_response_sums.each do |question, facilitators_for_response|
-        response_sum = facilitator_specific_response_sums[question].flat_map(&:values).reduce(:+) || 0
+    if responses_per_facilitator
+      facilitator_specific_response_sums.each do |question, facilitator_answers|
+        response_sum = facilitator_answers.values.reduce(:+) || 0
         response_summary[question] = (response_sum / responses_for_all_facilitators_count).round(2)
       end
     end
