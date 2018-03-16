@@ -866,18 +866,12 @@
   dashboard_course_csp_desc: Code.org සිත් ඇදගන්නා සුලු සහ ඕන විටක ලබා ගත හැකි පරිගණක
     විද්‍යාවේ මූලිකාංග අධ්‍යනය කල හැකි පාඨමාලා නිර්මාණය කර තිබේ.
   dashboard_landing_loading: "පූරණය වෙමින්..."
-  dashboard_action_edit: "සංස්කරණය කරන්න"
-  dashboard_action_save: "සුරකින්න"
-  dashboard_action_save_all: "සියලුම දේ සුරකින්න"
   dashboard_action_cancel: "අවලංගු කරන්න"
   dashboard_action_delete: "මකන්න"
   dashboard_action_delete_yes: "ඔව්"
   dashboard_action_delete_no: "නැහැ"
   dashboard_action_confirm: "මකනවා ද?"
-  dashboard_action_remove: "ඉවත් කරන්න"
-  dashboard_action_remove_confirm: "ඉවත් කරනවා ද?"
   dashboard_action_done: "හරි"
-  dashboard_action_required: "අවශ්‍යයි"
   dashboard_action_print_certificates: "සහතික මුද්‍රණය කරන්න"
   dashboard_assessments_view: "ඇගයීම් දැක්ම:"
   dashboard_assessments_none: "බොහොමයක් ගුරුවරුන් සිසුන්ගේ ප්රගතිය ගණනය කරනුයේ ප්රගති
@@ -985,8 +979,6 @@
   dashboard_error_other_section: "ඔබ ඔබේ ම කොටස් අතර සිසුන් මාරු කරන්නේ නම්, ඔබේ කොටස
     dropdown මෙනුවෙන් තෝරන්න. ඔබගේ සිසුන් වෙනත් ගුරුවරුයෙකුගේ කොටසකට මාරු කිරීමට 'වෙනත්
     කොටස්' යන්න තෝරන්න."
-  dashboard_students_add_student: "සිසුවෙක් එක් කරන්න"
-  dashboard_students_add_students: "සිසුන් පිරිසක් ඇතුලත් කරන්න"
   dashboard_students_add_multiple: "එක් පේළියකට එක බැගින් වනසේ  ඔබගේ සිසුන් නම් ටයිප්
     කරන්න හෝ  paste  කරන්න :"
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -995,23 +987,12 @@
   dashboard_students_new_section: "ඔබ නව කොටසක් නිර්මාණය කර ඇත! දැන් ඔබගේ සිසුන් ඇතුලත්
     කිරීමට <b> සිසුවෙකු ඇතුලත් කරන්න </b> සහ <b> සිසුන් ඇතුලත් කරන්න </b> යන ඉහත බොත්තම්
     භාවිතා කරන්න."
-  dashboard_students_placeholder_name: "සිසුවාගේ නම"
   dashboard_students_name: "නම"
   dashboard_students_progress: "ප්‍රගතිය"
-  dashboard_students_age: "වයස"
-  dashboard_students_gender: "ලිංගභේදය"
   dashboard_students_male: "පිරිමි"
   dashboard_students_female: "ගැහැණු"
-  dashboard_students_secret: "රහස්‍ය"
-  dashboard_students_password: "මුර පදය"
-  dashboard_students_username: "පරිශීලක නාමය: %{student_username}"
-  dashboard_students_email: "ඊ මේල් ලිපිනය: %{student_email}"
   dashboard_students_completed_levels: "සම්පූර්ණ කර ඇති මට්ටම්"
   dashboard_students_total_lines: "කේත පේලි"
-  dashboard_students_show_secret: "රහස පෙන්වන්න"
-  dashboard_students_auto_generated: "ස්වයංක්රීය-ජනනය"
-  dashboard_students_reset_secret: "රහස තිබූ පරිදිම සකසන්න"
-  dashboard_students_reset_password: "මුර පදය නැවත සකස් කරන්න"
   dashboard_students_share_section: "මෙම කොටසේ පිවිසුම් පිටුව ඔබේ සිසුන් සමඟ බෙදා
     ගන්න:"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1087,7 +1068,6 @@
   dashboard_login_word: "වචනය"
   dashboard_login_picture: "පින්තූරය"
   dashboard_login_none: "විද්‍යුත් තැපැල"
-  dashboard_new_password: "නව මුරපදය"
   dashboard_stage: "අදියර"
   dashboard_puzzle: "ප්‍රහේලිකාව"
   dashboard_question: "ප්‍රශ්නය"

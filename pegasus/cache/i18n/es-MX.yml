@@ -868,18 +868,12 @@
   dashboard_course_csp_desc: Code.org ha diseñado un curso riguroso, atractivo y accesible
     que explora las ideas fundamentales de la informática.
   dashboard_landing_loading: Cargando...
-  dashboard_action_edit: Editar
-  dashboard_action_save: Guardar
-  dashboard_action_save_all: Guardar todo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Borrar
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: "¿Borrar?"
-  dashboard_action_remove: Eliminar
-  dashboard_action_remove_confirm: "¿Eliminar?"
   dashboard_action_done: Hecho
-  dashboard_action_required: obligatorio
   dashboard_action_print_certificates: Imprimir certificados
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Mayoría de los maestros medir el progreso de sus estudiantes
@@ -994,8 +988,6 @@
   dashboard_error_other_section: Si están moviendo estudiantes entre sus propias secciones,
     seleccione su sección en la lista desplegable. Solo seleccione "Otra Sección"
     para mover sus estudiantes a la sección de un profesor diferente.
-  dashboard_students_add_student: Añadir alumno
-  dashboard_students_add_students: Añadir varios alumnos
   dashboard_students_add_multiple: 'Escriba o pegue los nombres de sus alumnos, uno
     por línea:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -1004,23 +996,12 @@
   dashboard_students_new_section: "¡Ha creado una nueva sección! Ahora, agregue sus
     alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios
     alumnos</b>."
-  dashboard_students_placeholder_name: Nombre del alumno
   dashboard_students_name: Nombre
   dashboard_students_progress: Progreso
-  dashboard_students_age: Edad
-  dashboard_students_gender: Sexo
   dashboard_students_male: Varón
   dashboard_students_female: Mujer
-  dashboard_students_secret: Secreto
-  dashboard_students_password: Contraseña
-  dashboard_students_username: 'Nombre de usuario: %{student_username}'
-  dashboard_students_email: 'Correo: %{student_email}'
   dashboard_students_completed_levels: Niveles Completados
   dashboard_students_total_lines: Líneas de Código
-  dashboard_students_show_secret: Mostrar secreto
-  dashboard_students_auto_generated: Generado automáticamente
-  dashboard_students_reset_secret: Reiniciar secreto
-  dashboard_students_reset_password: Restablecer contraseña
   dashboard_students_share_section: 'Comparte la página de registro de esta sección
     con tus alumnos:'
   dashboard_students_share_section_secondary: 'Como alternativa, comparta estas secciones
@@ -1097,7 +1078,6 @@
   dashboard_login_word: Palabra
   dashboard_login_picture: Imagen
   dashboard_login_none: Correo electrónico
-  dashboard_new_password: nueva contraseña
   dashboard_stage: etapa
   dashboard_puzzle: Rompecabezas
   dashboard_question: Pregunta
@@ -2094,7 +2074,7 @@
   playlab_shortcode: ejecutar
   artist_shortcode: art
   header_home: Inicio
-  header_my_dashboard: My Dashboard
+  header_my_dashboard: Mi panel de control
   header_courses: cursos
   header_course_catalog: Catálogo de cursos
   header_project_gallery: Proyectos
