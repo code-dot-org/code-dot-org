@@ -15,7 +15,9 @@
 # Note that this script will reset the repo in which it is run to staging
 # latest, and should therefore only be run with a clean working directory.
 
+require_relative '../../lib/cdo/only_one'
 require_relative '../../lib/cdo/github'
+
 require_relative 'i18n_script_utils'
 
 require_relative 'sync-codeorg-in'
@@ -128,4 +130,4 @@ def main
   create_down_out_pr
 end
 
-main if __FILE__ == $0
+main if __FILE__ == $0 && only_one_running?(__FILE__)
