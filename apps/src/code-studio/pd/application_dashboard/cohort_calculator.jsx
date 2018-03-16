@@ -36,9 +36,7 @@ export default class CohortCalculator extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.regionalPartnerFilter !== this.props.regionalPartnerFilter) {
-      this.load(nextProps.regionalPartnerFilter);
-    }
+    this.load(nextProps.regionalPartnerFilter);
   }
 
   componentWillUnmount() {
