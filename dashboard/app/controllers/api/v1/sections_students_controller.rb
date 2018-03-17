@@ -1,7 +1,7 @@
 class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   load_and_authorize_resource :section
 
-  skip_before_action :verify_authenticity_token, only: [:update, :bulk_add]
+  skip_before_action :verify_authenticity_token, only: [:update, :bulk_add, :remove]
 
   # GET /sections/<section_id>/students
   def index
@@ -59,6 +59,22 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
     else
       render json: new_students
     end
+  end
+
+  # Remove a student from the section
+  # POST /sections/:section_id/students/:id/remove
+  def remove
+    student = @section.students.find_by_id(params[:id])
+    follower = Follower.where(section: @section.id, student_user_id: student.id).first
+    return render_404 unless student && follower
+
+    begin
+      @section.remove_student(student, follower, {})
+    rescue
+      return render json: {errors: @section.errors.full_messages}, status: :bad_request
+    end
+
+    render json: {result: 'success'}
   end
 
   def student_params
