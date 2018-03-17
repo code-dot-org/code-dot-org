@@ -27,7 +27,9 @@ class Api::V1::Census::CensusController < ApplicationController
     :class_frequency,
     :tell_us_more,
     :pledged,
-    :share_with_regional_partners
+    :share_with_regional_partners,
+    :inaccuracy_reported,
+    :inaccuracy_comment
   ].freeze
 
   CHECKBOX_FIELDS = [
@@ -43,7 +45,8 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_ethical_social,
     :topic_other,
     :topic_do_not_know,
-    :pledged
+    :pledged,
+    :inaccuracy_reported
   ].freeze
 
   FREE_TEXT_FIELDS = [
@@ -51,6 +54,7 @@ class Api::V1::Census::CensusController < ApplicationController
     :submitter_name,
     :topic_other_description,
     :tell_us_more,
+    :inaccuracy_comment
   ].freeze
 
   # POST /dashboardapi/v1/census/<form_version>
