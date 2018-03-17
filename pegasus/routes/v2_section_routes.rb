@@ -79,6 +79,7 @@ get '/v2/sections/:id/students' do |id|
   JSON.pretty_generate(section.to_owner_hash[:students])
 end
 
+# DEPRECATED: Use POST /dashboardapi/sections/<id>/students/bulk_add
 post '/v2/sections/:id/students' do |id|
   only_for 'code.org'
   dont_cache
