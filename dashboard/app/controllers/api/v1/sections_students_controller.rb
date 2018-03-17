@@ -16,6 +16,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   # PATCH /sections/<section_id>/student/<id>/update
   def update
     student = @section.students.find_by_id(params[:id])
+    return render_404 unless student
 
     if student.update(student_params)
       render json: student.summarize
