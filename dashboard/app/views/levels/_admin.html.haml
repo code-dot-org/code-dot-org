@@ -62,6 +62,11 @@
             %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
         - else
           %li (Cannot edit)
+        - if params[:channel_id]
+          %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
+          - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+          %li= "owner storage id: #{owner_storage_id}"
+          %li= "storage app id: #{storage_app_id}"
       %br/
       This level is in #{@level.script_levels.count} scripts:
       %ul
@@ -95,6 +100,7 @@
 
     - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
       %br
+
       %div.admin-abuse{ :style => "display: none" }
         Abuse score:
         %span.admin-abuse-score
