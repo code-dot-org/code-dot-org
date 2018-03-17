@@ -570,12 +570,12 @@ describe('entry tests', () => {
         new webpack.optimize.CommonsChunkPlugin({
           name: 'common',
           chunks: _.keys(appsEntries),
-          minChunks: 2
+          minChunks: 3
         }),
         new webpack.optimize.CommonsChunkPlugin({
           name: 'code-studio-common',
           chunks: _.keys(codeStudioEntries).concat(['common']),
-          minChunks: 2
+          minChunks: 3
         }),
         new webpack.optimize.CommonsChunkPlugin({
           name: 'essential',
