@@ -16,6 +16,7 @@ class CensusMapInfoWindow extends Component {
 
   render() {
     let censusMessage;
+    let missingCensusData = false;
 
     switch (this.props.teachesCs) {
       case 'YES':
@@ -36,6 +37,7 @@ class CensusMapInfoWindow extends Component {
         break;
       default:
         censusMessage = "We need data for this school.";
+        missingCensusData = true;
     }
 
     const schoolDropdownOption = {
@@ -64,7 +66,7 @@ class CensusMapInfoWindow extends Component {
         <div className="census-message">{censusMessage}</div>
         <div className="button-container">
           <div className="button-link-div">
-            <a onClick={() => this.props.handleTakeSurveyClick(schoolDropdownOption)}>
+            <a onClick={() => this.props.handleTakeSurveyClick(schoolDropdownOption, false)}>
               <div className="button">
                 <div className="button-text">Take the survey for this school</div>
               </div>
@@ -78,6 +80,13 @@ class CensusMapInfoWindow extends Component {
             </a>
           </div>
         </div>
+        {!missingCensusData && (
+          <div className="inaccuracy-link">
+            <a onClick={() => this.props.handleTakeSurveyClick(schoolDropdownOption, true)}>
+              I believe that the categorization for this school is inaccurate.
+            </a>
+          </div>
+        )}
       </div>
     );
   }
@@ -86,6 +95,8 @@ class CensusMapInfoWindow extends Component {
 export default class CensusMap extends Component {
   static propTypes = {
     onSchoolChange: PropTypes.func.isRequired,
+    onShowExistingInaccuracyChange: PropTypes.func.isRequired,
+    onExistingInaccuracyChange: PropTypes.func.isRequired,
     fusionTableId: PropTypes.string.isRequired,
     school: PropTypes.object,
   };
@@ -215,7 +226,10 @@ export default class CensusMap extends Component {
     return infoWindowDom;
   };
 
-  handleTakeSurveyClick = (schoolDropdownOption) => {
+  handleTakeSurveyClick = (schoolDropdownOption, existingInaccuracy) => {
+    this.props.onShowExistingInaccuracyChange(existingInaccuracy);
+    this.props.onExistingInaccuracyChange(existingInaccuracy);
+
     this.props.onSchoolChange(schoolDropdownOption);
     adjustScroll('form');
   };

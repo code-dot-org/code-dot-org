@@ -4,6 +4,9 @@ export const styles = {
   formHeading: {
     marginTop: 20
   },
+  clickable: {
+    cursor: 'pointer'
+  },
   question: {
     fontSize: 16,
     fontFamily: '"Gotham 3r", sans-serif',
@@ -32,6 +35,15 @@ export const styles = {
     color: color.charcoal,
     marginRight: 20,
     marginLeft: 20
+  },
+  existingInaccuracy: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.charcoal,
+    marginRight: 20,
+    marginLeft: 20
+  },
+  existingInaccuracyTooltip : {
+    width: 270
   },
   option: {
     fontFamily: '"Gotham 4r", sans-serif',
