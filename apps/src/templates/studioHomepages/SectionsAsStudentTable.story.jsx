@@ -62,7 +62,7 @@ const sections = [
 
 export default storybook => {
   return storybook
-    .storiesOf('SectionsAsStudentTable', module)
+    .storiesOf('Homepages/SectionsAsStudentTable', module)
     .withReduxStore()
     .addStoryTable([
       {
