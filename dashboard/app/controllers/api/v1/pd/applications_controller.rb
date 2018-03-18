@@ -16,7 +16,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     ROLES.each do |role|
       # count(locked_at) counts the non-null values in the locked_at column
-      apps = get_applications_by_role(role).
+      apps = get_applications_by_role(role, include_users: false).
         select(:status, "count(locked_at) AS locked, count(id) AS total").
           group(:status)
 
@@ -58,10 +58,15 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        serialized_applications = applications.map {|a| Api::V1::Pd::ApplicationQuickViewSerializer.new(a).attributes}
+        serialized_applications = prefetch_and_serialize(
+          applications,
+          role: role,
+          serializer: Api::V1::Pd::ApplicationQuickViewSerializer
+        )
         render json: serialized_applications
       end
       format.csv do
+        prefetch applications, role: role
         course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
         csv_text = [
           TYPES_BY_ROLE[role].csv_header(course, current_user),
@@ -91,11 +96,15 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        serialized_applications = applications.map do |application|
-          serializer.new(application, scope: {user: current_user}).attributes
-        end
+        serialized_applications = prefetch_and_serialize(
+          applications,
+          role: role,
+          serializer: serializer,
+          scope: {user: current_user}
+        )
         render json: serialized_applications
       end
+      prefetch applications, role: role
       format.csv do
         csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
         send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
@@ -150,8 +159,9 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   private
 
-  def get_applications_by_role(role)
+  def get_applications_by_role(role, include_users: true)
     applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
+    applications_of_type = applications_of_type.includes(:user) if include_users
     case role
     when :csf_facilitators
       return applications_of_type.csf
@@ -209,5 +219,17 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
         end
       end
     end
+  end
+
+  def prefetch_and_serialize(applications, role:, serializer:, scope: {})
+    prefetch applications, role: role
+    applications.map do |application|
+      serializer.new(application, scope: scope).attributes
+    end
+  end
+
+  def prefetch(applications, role:)
+    type = TYPES_BY_ROLE[role.to_sym]
+    type.prefetch_associated_models applications
   end
 end

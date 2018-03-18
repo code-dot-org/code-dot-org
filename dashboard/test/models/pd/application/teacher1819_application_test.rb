@@ -764,5 +764,41 @@ module Pd::Application
       Teacher1819Application.stubs(:can_see_locked_status?).returns(true)
       assert Teacher1819Application.csv_header('csf', mock_user).include? 'Locked'
     end
+
+    test 'school cache' do
+      school = create :school
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash
+
+      # Original query: School, SchoolDistrict
+      assert_queries 2 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+
+      # Cached
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+    end
+
+    test 'cache prefetch' do
+      school = create :school
+      workshop = create :pd_workshop
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash, pd_workshop_id: workshop.id
+
+      # Workshop, Session, Enrollment, School, SchoolDistrict
+      assert_queries 5 do
+        Teacher1819Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+        assert_equal workshop, application.workshop
+      end
+    end
   end
 end
