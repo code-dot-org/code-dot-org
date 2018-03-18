@@ -6,9 +6,11 @@ module Pd::Application
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
+      @fit_workshop = create :pd_workshop, :fit
       @workshop = create :pd_workshop
       @application = create :pd_facilitator1819_application
-      @application_with_fit_workshop = create :pd_facilitator1819_application, fit_workshop_id: @workshop.id
+      @application_with_fit_workshop = create :pd_facilitator1819_application,
+        pd_workshop_id: @workshop.id, fit_workshop_id: @fit_workshop.id
     end
     setup do
       @application.reload
@@ -156,19 +158,19 @@ module Pd::Application
     end
 
     test 'locking an application with fit_workshop_id automatically enrolls user' do
-      @application.fit_workshop_id = @workshop.id
+      @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
 
       assert_creates(Pd::Enrollment) do
         @application.lock!
       end
-      assert_equal Pd::Enrollment.last.workshop, @workshop
+      assert_equal Pd::Enrollment.last.workshop, @fit_workshop
       assert_equal Pd::Enrollment.last.id, @application.auto_assigned_fit_enrollment_id
     end
 
     test 'updating and re-locking an application with an auto-assigned FIT enrollment will delete old enrollment' do
-      first_workshop = @workshop
-      second_workshop = create :pd_workshop
+      first_workshop = @fit_workshop
+      second_workshop = create :pd_workshop, :fit
 
       @application.fit_workshop_id = first_workshop.id
       @application.status = "accepted"
@@ -185,7 +187,7 @@ module Pd::Application
     end
 
     test 'upading the application to unaccepted will also delete the autoenrollment' do
-      @application.fit_workshop_id = @workshop.id
+      @application.fit_workshop_id = @fit_workshop.id
       @application.status = "accepted"
       @application.lock!
       first_enrollment = Pd::Enrollment.find(@application.auto_assigned_fit_enrollment_id)
@@ -207,45 +209,45 @@ module Pd::Application
     end
 
     test 'assign_default_workshop! saves the default workshop' do
-      @application.expects(:find_default_workshop).returns(@workshop)
+      @application.expects(:find_default_workshop).returns(@fit_workshop)
 
       @application.assign_default_workshop!
-      assert_equal @workshop.id, @application.reload.pd_workshop_id
+      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
     end
 
     test 'assign_default_workshop! does nothing when a workshop is already assigned' do
-      @application.update! pd_workshop_id: @workshop.id
+      @application.update! pd_workshop_id: @fit_workshop.id
       @application.expects(:find_default_workshop).never
 
       @application.assign_default_workshop!
-      assert_equal @workshop.id, @application.reload.pd_workshop_id
+      assert_equal @fit_workshop.id, @application.reload.pd_workshop_id
     end
 
     test 'assign_default_fit_workshop! saves the default fit workshop' do
-      @application.expects(:find_default_fit_workshop).returns(@workshop)
+      @application.expects(:find_default_fit_workshop).returns(@fit_workshop)
 
       @application.assign_default_fit_workshop!
-      assert_equal @workshop.id, @application.reload.fit_workshop_id
+      assert_equal @fit_workshop.id, @application.reload.fit_workshop_id
     end
 
     test 'assign_default_fit_workshop! does nothing when a fit workshop is already assigned' do
       @application_with_fit_workshop.expects(:find_default_fit_workshop).never
 
       @application_with_fit_workshop.assign_default_fit_workshop!
-      assert_equal @workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
+      assert_equal @fit_workshop.id, @application_with_fit_workshop.reload.fit_workshop_id
     end
 
     test 'fit_workshop returns the workshop associated with the assigned fit workshop id' do
-      assert_equal @workshop, @application_with_fit_workshop.fit_workshop
+      assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
     end
 
     test 'fit_workshop returns nil if the assigned workshop has been deleted' do
-      @workshop.destroy!
-      assert_nil @application_with_fit_workshop.workshop
+      @fit_workshop.destroy!
+      assert_nil @application_with_fit_workshop.fit_workshop
     end
 
     test 'registered_fit_workshop? returns true when the applicant is enrolled in the assigned fit workshop' do
-      create :pd_enrollment, workshop: @workshop, user: @application_with_fit_workshop.user
+      create :pd_enrollment, workshop: @fit_workshop, user: @application_with_fit_workshop.user
       assert @application_with_fit_workshop.registered_fit_workshop?
     end
 
@@ -256,6 +258,35 @@ module Pd::Application
     test 'registered_fit_workshop? returns false when no fit workshop is assigned' do
       @application_with_fit_workshop.update! fit_workshop_id: nil
       refute @application_with_fit_workshop.registered_fit_workshop?
+    end
+
+    test 'workshop cache' do
+      create :pd_enrollment, workshop: @fit_workshop, user: @application_with_fit_workshop.user
+
+      # Original query: Workshop, Session, Enrollment
+      assert_queries 3 do
+        assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
+      end
+
+      # Cached
+      assert_queries 0 do
+        assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
+        assert @application_with_fit_workshop.registered_fit_workshop?
+      end
+    end
+
+    test 'workshop cache prefetch' do
+      # Workshop, Session, Enrollment
+      assert_queries 3 do
+        Facilitator1819Application.prefetch_associated_models([@application_with_fit_workshop])
+      end
+
+      assert_queries 0 do
+        assert_equal @fit_workshop, @application_with_fit_workshop.fit_workshop
+
+        # also prefetches assigned workshop
+        assert_equal @workshop, @application_with_fit_workshop.workshop
+      end
     end
   end
 end
