@@ -284,7 +284,7 @@ class CensusForm extends Component {
         !errors.share &&
         !errors.existingInaccuracyReason) {
       $.ajax({
-        url: "/dashboardapi/v1/census/CensusYourSchool2017v6",
+        url: "/dashboardapi/v1/census/CensusYourSchool2017v7",
         type: "post",
         dataType: "json",
         data: $('#census-form').serialize()

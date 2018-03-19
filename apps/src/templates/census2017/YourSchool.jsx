@@ -1,3 +1,4 @@
+/* global adjustScroll */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
@@ -47,15 +48,20 @@ class YourSchool extends Component {
     existingInaccuracy: false
   };
 
+  handleTakeSurveyClick = (schoolDropdownOption, existingInaccuracy) => {
+    this.setState({
+      schoolDropdownOption: schoolDropdownOption,
+      showExistingInaccuracy: existingInaccuracy,
+      existingInaccuracy: existingInaccuracy
+    });
+    adjustScroll('form');
+  };
+
   handleSchoolDropdownChange = (option) => {
     this.setState({
       schoolDropdownOption: option,
-    });
-  };
-
-  handleShowExistingInaccuracyChange = (option) => {
-    this.setState({
-      showExistingInaccuracy: option,
+      showExistingInaccuracy: false,
+      existingInaccuracy: false
     });
   };
 
@@ -113,7 +119,7 @@ class YourSchool extends Component {
         </h3>
         <YourSchoolResources/>
         {!this.props.hideMap && (
-           <div>
+           <div id="map">
              <h1 style={styles.heading}>
                Does your school teach Computer Science?
              </h1>
@@ -133,8 +139,7 @@ class YourSchool extends Component {
                fusionTableId={this.props.fusionTableId}
                school={schoolForMap}
                onSchoolChange={this.handleSchoolDropdownChange}
-               onShowExistingInaccuracyChange={this.handleShowExistingInaccuracyChange}
-               onExistingInaccuracyChange={this.handleExistingInaccuracyChange}
+               onTakeSurveyClick={this.handleTakeSurveyClick}
              />
            </div>
         )}

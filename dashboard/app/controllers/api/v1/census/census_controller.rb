@@ -107,6 +107,9 @@ class Api::V1::Census::CensusController < ApplicationController
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
+    when 'CensusYourSchool2017v7'
+      submission = ::Census::CensusYourSchool2017v7.new census_params
+      template = 'census_form_receipt'
     when 'CensusYourSchool2017v6'
       submission = ::Census::CensusYourSchool2017v6.new census_params
       template = 'census_form_receipt'
