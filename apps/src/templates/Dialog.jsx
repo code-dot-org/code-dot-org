@@ -28,7 +28,7 @@ export const styles = {
     color: color.purple,
     overflow: 'hidden',
     overflowY: 'scroll',
-    maxHeight: '400'
+    maxHeight: '400px'
   },
   buttons: {
     marginTop: 10,
