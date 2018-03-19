@@ -16,12 +16,12 @@ class Tutorials
   def initialize(table)
     @table = "cdo_#{table}".to_sym
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
-    column_aliases = DB.schema(:cdo_tutorials).map do |column|
+    column_aliases = DB.schema(@table).map do |column|
       db_column_name = column[0].to_s
       column_alias = db_column_name.rindex('_').nil? ? db_column_name : db_column_name.rpartition('_')[0]
       "#{db_column_name}___#{column_alias}".to_sym
     end
-    @contents = DB[:cdo_tutorials].select(*column_aliases).all
+    @contents = DB[@table].select(*column_aliases).all
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.
