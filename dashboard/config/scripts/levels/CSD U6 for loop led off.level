@@ -114,8 +114,8 @@
     "makerlab_enabled": "true",
     "markdown_instructions": "# Turning all the Color LEDs Off\r\n\r\nNow that you've got one button to turn the color LEDs on, you can make another turn them off.\r\n\r\n# Do This\r\n\r\nAdd an event handler to \"button_off\" with a for loop that turns each color LED off.",
     "project_template_level_name": "CSD U6 for loop led template",
-    "contained_level_names": null,
-    "encrypted_examples": "PxMkQnO2qZLf+J4oUXDCvWLFpdMJfLgRvV//nWEjkwB/z3hlL79aS8NZxKfo\nsDewrniraIOqvFKG9SbrbPTGxQ==\n"
+    "encrypted_examples": "PxMkQnO2qZLf+J4oUXDCvWLFpdMJfLgRvV//nWEjkwB/z3hlL79aS8NZxKfo\nsDewrniraIOqvFKG9SbrbPTGxQ==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
