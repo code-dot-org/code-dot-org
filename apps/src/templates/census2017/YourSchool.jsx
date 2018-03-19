@@ -3,10 +3,8 @@ import { connect } from 'react-redux';
 import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, { NotificationType } from '../Notification';
-import MobileNotification from '../MobileNotification';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from "@cdo/locale";
-import { ResponsiveSize } from '@cdo/apps/code-studio/responsiveRedux';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMap from './CensusMap';
 
@@ -56,8 +54,6 @@ class YourSchool extends Component {
   };
 
   render() {
-    const {responsiveSize} = this.props;
-    const desktop = (responsiveSize === ResponsiveSize.lg) || (responsiveSize === ResponsiveSize.md);
     const schoolDropdownOption = this.state.schoolDropdownOption;
     const schoolId = schoolDropdownOption ? schoolDropdownOption.value.toString() : '';
     let schoolForMap;
@@ -67,7 +63,7 @@ class YourSchool extends Component {
     return (
       <div>
         <SpecialAnnouncementActionBlock/>
-        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && desktop && (
+        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && (
           <Notification
             type={NotificationType.bullhorn}
             notice={this.props.alertHeading}
@@ -77,15 +73,6 @@ class YourSchool extends Component {
             dismissible={false}
             newWindow={true}
             width="100%"
-          />
-        )}
-        {this.props.alertHeading && this.props.alertText && this.props.alertUrl && !desktop && (
-          <MobileNotification
-            notice={this.props.alertHeading}
-            details={this.props.alertText}
-            buttonText={i18n.learnMore()}
-            buttonLink={this.props.alertUrl}
-            newWindow={true}
           />
         )}
         <h1 style={styles.heading}>
