@@ -1012,6 +1012,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: In this unit, students extend their understanding of the internet
@@ -4961,11 +4962,11 @@
             Being Safe Online:
               name: Being Safe Online
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -6902,7 +6903,7 @@
                 pratica con la risoluzione dei problemi (problem solving) e nello
                 sviluppo del pensiero critico (critical thinking).
             Going Places Safely:
-              name: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+              name: 'Cittadinanza Digitale: Visitare Luoghi in Modo Sicuro'
               description_student: ''
               description_teacher: In collaborazione con Common-Sense-Media, questa
                 lezione aiuta gli studenti a imparare che molti siti Web richiedono
@@ -6963,13 +6964,13 @@
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
             Your Digital Footprint:
-              name: Cittadinanza Digitale - La Mia Impronta Digitale
+              name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -6981,7 +6982,7 @@
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
-              name: Programming with Rey and BB-8
+              name: Programmare con Rey e BB-8
           title: Corso B
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -7014,7 +7015,7 @@
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Screen Out the Mean:
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             Binary Bracelets:
               name: Braccialetti Binari
             Loops in Artist:
@@ -7145,7 +7146,7 @@
                 By practicing all three, students will learn to write complex and
                 flexible code.
             Digital Citizenship:
-              name: Cittadinanza Digitale - Metti in Pratica la Cittadinanza Digitale
+              name: 'Cittadinanza Digitale: Metti in Pratica la Cittadinanza Digitale'
               description_student: Some information is not safe to share online. This
                 lesson will help you learn the difference between safe and private
                 information.
@@ -7313,7 +7314,7 @@
                 sections of code only if something is true, otherwise it runs something
                 else.
             Private and Personal Information:
-              name: Cittadinanza Digitale - Dati Personali
+              name: 'Cittadinanza Digitale: Dati Personali'
               description_student: The internet is fun and exciting, but it's important
                 to stay safe too. This lesson teaches you the difference between information
                 that is safe to share and information that is private.
@@ -7410,7 +7411,7 @@
                 of others makes these tasks manageable. This lesson will show your
                 students how helpful teamwork can be in the industry of computer science.
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -7420,7 +7421,7 @@
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -7462,7 +7463,7 @@
                 concepts in the later part of the course. This "ramp up" lesson equalizes
                 the playing field between the experts and the beginners in your class. '
             The Power of Words:
-              name: Cittadinanza Digitale - Il Potere delle Parole
+              name: 'Cittadinanza Digitale: Il Potere delle Parole'
               description_student: Bullying is never okay. This lesson will teach
                 you about what is and isn't okay to say online.
               description_teacher: "Students consider that while they are enjoying
@@ -7650,7 +7651,7 @@
             Functions in Bee:
               name: Functions in Bee
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -7660,7 +7661,7 @@
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -7973,7 +7974,7 @@
             Debugging in Collector:
               name: Debugging in Collector
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops Project in Artist:
@@ -8037,9 +8038,9 @@
             'How it Works: The Internet':
               name: 'How it Works: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: Cittadinanza Digitale - Metti in Pratica la Cittadinanza Digitale
+              name: 'Cittadinanza Digitale: Metti in Pratica la Cittadinanza Digitale'
             'Common Sense Education: Screen Out the Mean':
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             Events in Star Wars:
               name: Events in Star Wars
             Events with Flappy:
@@ -8074,15 +8075,15 @@
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
             'Online Safety: Your Digital Footprint':
-              name: Cittadinanza Digitale - La Mia Impronta Digitale
+              name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -8246,7 +8247,7 @@
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence and Preview in Maze:
               name: Sequence and Preview in Maze
             Building a Foundation:
@@ -8256,7 +8257,7 @@
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
@@ -8378,7 +8379,7 @@
             Debugging in Collector:
               name: Debugging in Collector
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops Project in Frozen:
@@ -8388,7 +8389,7 @@
             'Common Sense Education: Digital Citizenship':
               name: 'Common Sense Education: Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
-              name: Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             'Events: The Big Event':
               name: Eventi
             Events in Star Wars:
@@ -8466,7 +8467,7 @@
         new-e:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -8476,7 +8477,7 @@
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -8524,7 +8525,7 @@
         new-f:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -8534,7 +8535,7 @@
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -8953,7 +8954,7 @@
             courseB_unplugged_MRF_2018:
               name: courseB_unplugged_MRF_2018
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -8963,7 +8964,7 @@
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
@@ -9013,7 +9014,7 @@
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -9023,7 +9024,7 @@
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:

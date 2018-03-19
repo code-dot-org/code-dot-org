@@ -87,6 +87,7 @@ pt:
       CSD U3 - complex - mouse down_callout: [ ]
       CSD U3 - complex - mouse move_callout: [ ]
       CSD U3 - complex - nested conditional_callout: [ ]
+      CSD U3 - conditionals - first conditional 2-2018_callout: [ ]
       CSD U3 - conditionals - first conditional 2_callout: [ ]
       CSD U3 - conditionals - first conditional_callout: [ ]
       CSD U3 - conditionals - transition 2_callout: [ ]
@@ -98,7 +99,9 @@ pt:
       CSD U3 Compound Nested Challenge_callout: [ ]
       CSD U3 Compound Nested Examples_callout: [ ]
       CSD U3 Conditional Project_callout: [ ]
+      CSD U3 Conditionals Apple 2-2018_callout: [ ]
       CSD U3 Conditionals Apple 2_callout: [ ]
+      CSD U3 Conditionals Apple-2018_callout: [ ]
       CSD U3 Conditionals Apple_callout: [ ]
       CSD U3 Diagonal Movement_callout: [ ]
       CSD U3 Direction Animations_callout: [ ]
@@ -132,6 +135,7 @@ pt:
       CSD U3 Sprites scene sprites_callout: [ ]
       CSD U3 Sprites scene template_callout: [ ]
       CSD U3 Sprites scene text_callout: [ ]
+      CSD U3 Sprites text debug-2018_callout: [ ]
       CSD U3 Sprites text debug_callout: [ ]
       CSD U3 Sprites text_callout: [ ]
       CSD U3 UP_ARROW_callout: [ ]
@@ -169,6 +173,9 @@ pt:
       CSD U3 abstraction horse3_callout:
         CSD_U3_L11_S16_C1: Use the counter pattern to make the horse fall here.
         CSD_U3_L11_S16_C2: Stop the horse from falling here.
+      CSD U3 abstraction jump-2018_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
       CSD U3 abstraction jump_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
         CSD_U3_L11_S17_C2: Send the frog back down here
@@ -196,6 +203,10 @@ pt:
       CSD U3 abstraction setSpeed accelerate_callout:
         CSD_U3_L11_S14_C1: Add your code here.
       CSD U3 abstraction sidescroll intro_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template-2018_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
         CSD_U3_L11_S17_C3: Add your if statement here.

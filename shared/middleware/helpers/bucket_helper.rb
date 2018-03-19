@@ -98,6 +98,8 @@ class BucketHelper
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
       {status: 'NOT_FOUND'}
+    rescue Aws::S3::Errors::NoSuchVersion
+      {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::InvalidArgument
       # Can happen when passed an invalid S3 version id
       {status: 'NOT_FOUND'}
@@ -316,30 +318,42 @@ class BucketHelper
 
     if version_restored
       # If we get this far, the restore request has succeeded.
-      FirehoseClient.instance.put_record(
-        study: 'project-data-integrity',
-        study_group: 'v2',
-        event: 'version-restored',
-
-        # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      log_restored_file(
         project_id: encrypted_channel_id,
-        data_string: @bucket,
-
         user_id: user_id,
-        data_json: {
-          restoredVersionId: version_id,
-          newVersionId: response.version_id,
-          bucket: @bucket,
-          key: key,
-          filename: filename,
-        }.to_json
+        filename: filename,
+        source_version_id: version_id,
+        new_version_id: response.version_id
       )
     end
 
-    response
+    response.to_h
   end
 
   protected
+
+  def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
+    owner_id, channel_id = storage_decrypt_channel_id(project_id)
+    key = s3_path owner_id, channel_id, filename
+    FirehoseClient.instance.put_record(
+      study: 'project-data-integrity',
+      study_group: 'v2',
+      event: 'version-restored',
+
+      # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      project_id: project_id,
+      data_string: @bucket,
+
+      user_id: user_id,
+      data_json: {
+        restoredVersionId: source_version_id,
+        newVersionId: new_version_id,
+        bucket: @bucket,
+        key: key,
+        filename: filename,
+      }.to_json
+    )
+  end
 
   def object_exists?(key)
     response = s3.get_object(bucket: @bucket, key: key)
