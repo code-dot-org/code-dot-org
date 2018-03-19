@@ -1673,6 +1673,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Disable sharing of advanced projects for students under 13
   def update_share_setting
     if under_13?
       self.sharing_disabled = true
