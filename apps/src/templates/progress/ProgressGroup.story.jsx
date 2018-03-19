@@ -34,7 +34,7 @@ const levelsByLesson = [
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressGroup', module)
+    .storiesOf('Progress/ProgressGroup', module)
     .addStoryTable([
       {
         name:'ProgressGroup with detail view',

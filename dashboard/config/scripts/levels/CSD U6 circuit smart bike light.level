@@ -188,7 +188,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Smart Bike - Headlight\r\n\r\nThe last part of the smart bike plan that we need to figure out is the automatic headlight.\r\n\r\n# Do This\r\n\r\nFirst you'll need to decide what to use for your headlight. You could add another LED circuit, or perhaps you can find a way to mount the board that allows for using the color LEDs as a headlight. Once you've figured out the physical layout of your lights, add code to your program that turns on and off the headlight based on how light or dark it is.\r\n\r\n_Hint: If you're using the build in color LEDs, you might need to protect the light sensor to make sure that it's responding to the ambient light level and not the light from the LEDs._",
+    "markdown_instructions": "# Smart Bike - Headlight\r\n\r\nThe last part of the smart bike plan that we need to figure out is the automatic headlight.\r\n\r\n# Do This\r\n\r\nFirst you'll need to decide what to use for your headlight. You could add another LED circuit, or perhaps you can find a way to mount the board that allows for using the color LEDs as a headlight. Once you've figured out the physical layout of your lights, add code to your program that turns on and off the headlight based on how light or dark it is.\r\n\r\n_Hint: If you're using the built-in color LEDs, you might need to protect the light sensor to make sure that it's responding to the ambient light level and not the light from the LEDs._",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -226,11 +226,12 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
+    "encrypted_examples": "zNjd0Lo2PI3OnfBOQrUYYQtLfbOoLD12QE+WTQDsknlrQ2Gl+ZX+fFgULaiL\nxOaGS65CTNe/Mx6tU5F/i1IZzQ==\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:10:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:06:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 19:10:52 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 21:34:28 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 21:34:32 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

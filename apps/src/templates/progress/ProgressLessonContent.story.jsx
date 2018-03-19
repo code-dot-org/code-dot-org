@@ -5,7 +5,7 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressLessonContent', module)
+    .storiesOf('Progress/ProgressLessonContent', module)
     .addStoryTable([
       {
         name:'progress lesson content',
