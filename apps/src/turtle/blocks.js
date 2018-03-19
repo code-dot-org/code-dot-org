@@ -1126,7 +1126,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   generator.sticker = generator.turtle_stamp = function () {
     return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') +
-        '", \'block_id_' + this.id + '\');\n';
+        '", null, \'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.turtle_sticker_with_size = blockly.Blocks.turtle_stamp = {
@@ -1158,9 +1158,8 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.turtle_sticker_with_size = generator.turtle_stamp = function () {
-    return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') +
-        '", "' + this.getTitleValue('SIZE') +
-            '", \'block_id_' + this.id + '\');\n';
+    var size = generator.valueToCode(this, 'SIZE', Blockly.JavaScript.ORDER_NONE);
+    return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') + '", ' + size + ', \'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.turtle_setArtist = {
