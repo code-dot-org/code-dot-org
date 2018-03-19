@@ -103,10 +103,21 @@ module TextRender
   class MarkdownEngine
     class HTMLWithTags < Redcarpet::Render::HTML
       def postprocess(full_document)
-        full_document.gsub!(/<p>\[\/(.*)\]<\/p>/) do
-          "</div>"
-        end
-        full_document.gsub!(/<p>\[(.*)\]<\/p>/) do
+        process_div_brackets(full_document)
+      end
+
+      def preprocess(full_document)
+        wrap_details_tags_in_divs(full_document)
+      end
+
+      private
+
+      # CDO-Markdown div_brackets extension.
+      # Convert `[tag]...[/tag]` to `<div class='tag'>...</div>`.
+      def process_div_brackets(full_document)
+        full_document.
+          gsub(/<p>\[\/(.*)\]<\/p>/, '</div>').
+          gsub(/<p>\[(.*)\]<\/p>/) do
           value = $1
           if value[0] == '#'
             attribute = 'id'
@@ -117,11 +128,6 @@ module TextRender
 
           "<div #{attribute}='#{value}'>"
         end
-        full_document
-      end
-
-      def preprocess(full_document)
-        wrap_details_tags_in_divs(full_document)
       end
 
       def wrap_details_tags_in_divs(full_document)

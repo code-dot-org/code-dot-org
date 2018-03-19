@@ -108,6 +108,11 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def restore_sources_version(filename, version_id, body = '', headers = {})
+    put "/v3/sources/#{@channel_id}/#{filename}/restore?version=#{version_id}", body, headers
+    JSON.parse(last_response.body)
+  end
+
   def list_files_versions
     get "/v3/#{@endpoint}-version/#{@channel_id}"
     JSON.parse(last_response.body)
@@ -148,8 +153,12 @@ class FilesApiTestHelper
   end
 
   def randomize_filename(filename)
-    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
-    basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
+    parts = filename.split('.')
+    "#{add_random_suffix(parts[0])}.#{parts[1]}"
+  end
+
+  def add_random_suffix(key)
+    key + @random.bytes(10).unpack('H*')[0]
   end
 
   def ensure_aws_credentials

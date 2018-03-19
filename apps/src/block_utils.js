@@ -5,6 +5,7 @@ const ATTRIBUTES_TO_CLEAN = [
   'deletable',
   'movable',
 ];
+const DEFAULT_COLOR = [184, 1.00, 0.74];
 
 /**
  * Create the xml for a level's toolbox
@@ -12,6 +13,35 @@ const ATTRIBUTES_TO_CLEAN = [
  */
 exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
+};
+
+const appendBlocks = function (toolboxDom, blockTypes) {
+  const root = toolboxDom.getRootNode().firstChild;
+  blockTypes.forEach(blockName => {
+    const block = toolboxDom.createElement('block');
+    block.setAttribute('type', blockName);
+    root.appendChild(block);
+  });
+  return xml.serialize(toolboxDom);
+};
+exports.appendBlocks = appendBlocks;
+
+exports.appendCategory = function (toolboxXml, blockTypes, categoryName) {
+  const parser = new DOMParser();
+  const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
+  if (!toolboxDom.querySelector('category')) {
+    // Uncategorized toolbox, just add blocks to the end
+    return appendBlocks(toolboxDom, blockTypes);
+  }
+  const customCategory = toolboxDom.createElement('category');
+  customCategory.setAttribute('name', categoryName);
+  blockTypes.forEach(blockName => {
+    const block = toolboxDom.createElement('block');
+    block.setAttribute('type', blockName);
+    customCategory.appendChild(block);
+  });
+  toolboxDom.getRootNode().firstChild.appendChild(customCategory);
+  return xml.serialize(toolboxDom);
 };
 
 /**
@@ -347,9 +377,11 @@ const DUMMY_INPUT = 'dummy';
  *   curly braces, e.g. "Move the {SPRITE} {PIXELS} to the {DIR}"
  * @param {Object[]} args Define the type/options of the block's inputs.
  * @param {string} args[].name Input name, conventionally all-caps
- * @param {string[][]} args[].options For dropdowns, the list of options. Each
- *   entry is a 2-element string array with the display name first, and the
- *   codegen-compatible (i.e. strings should be doubly-quoted) value second.
+ * @param {string[][]|Function} args[].options For dropdowns, the list of
+ *   options. Each entry is a 2-element string array with the display name
+ *   first, and the codegen-compatible (i.e. strings should be doubly-quoted)
+ *   value second. Also accepts a zero-argument function to generate these
+ *   options.
  * @param {BlockValueType} args[].type For value inputs, the type required. Use
  *   BlockValueType.NONE to accept any block.
  *
@@ -376,7 +408,7 @@ const determineInputs = function (text, args) {
           options: arg.options,
           label,
         });
-      } else if (arg.type) {
+      } else {
         inputs.push({
           mode: VALUE_INPUT,
           name: arg.name,
@@ -497,6 +529,8 @@ exports.createJsWrapperBlockCreator = function (
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
    * @param {boolean} opts.inline Render inputs inline, defaults to false
+   *
+   * @returns {string} the name of the generated block
    */
   return ({
     color,
@@ -519,6 +553,7 @@ exports.createJsWrapperBlockCreator = function (
       throw new Error('Expression blocks require a name');
     }
     args = args || [];
+    color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
 
     blockly.Blocks[blockName] = {
@@ -597,5 +632,7 @@ exports.createJsWrapperBlockCreator = function (
         return `${prefix}${func}(${values.join(', ')});\n`;
       }
     };
+
+    return blockName;
   };
 };

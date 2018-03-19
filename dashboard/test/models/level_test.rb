@@ -685,4 +685,105 @@ EOS
 
     refute level.uses_droplet?
   end
+
+  test 'can clone' do
+    old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_name('new level')
+    assert_equal 'new level', new_level.name
+    assert_equal '<xml>foo</xml>', new_level.start_blocks
+  end
+
+  test 'can clone with suffix' do
+    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix(' copy')
+    assert_equal 'level copy', new_level.name
+    assert_equal '<xml>foo</xml>', new_level.start_blocks
+    assert_equal old_level.id, new_level.parent_level_id
+    assert_equal ' copy', new_level.name_suffix
+  end
+
+  test 'clone with suffix replaces old suffix' do
+    level_1 = create :level, name: 'my_level_1'
+
+    # level_1 has no name suffix, so the new suffix is appended.
+    level_2 = level_1.clone_with_suffix('_2')
+    assert_equal 'my_level_1_2', level_2.name
+    assert_equal level_1.id, level_2.parent_level_id
+    assert_equal '_2', level_2.name_suffix
+
+    # level_2 has a name suffix, which the new suffix replaces.
+    level_3 = level_2.clone_with_suffix('_3')
+    assert_equal 'my_level_1_3', level_3.name
+    assert_equal level_2.id, level_3.parent_level_id
+    assert_equal '_3', level_3.name_suffix
+  end
+
+  test 'clone with suffix properly escapes suffixes' do
+    level_1 = create :level, name: 'your_level_1'
+
+    tricky_suffix = '[(.\\'
+
+    level_2 = level_1.clone_with_suffix(tricky_suffix)
+    assert_equal "your_level_1#{tricky_suffix}", level_2.name
+
+    level_3 = level_2.clone_with_suffix('_3')
+    assert_equal 'your_level_1_3', level_3.name
+  end
+
+  test 'clone with same suffix copies and shares project template level' do
+    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
+    level_1 = create :level, name: 'level 1'
+    level_1.project_template_level_name = template_level.name
+    level_2 = create :level, name: 'level 2'
+    level_2.project_template_level_name = template_level.name
+
+    level_1_copy = level_1.clone_with_suffix(' copy')
+    level_2_copy = level_2.clone_with_suffix(' copy')
+
+    template_level_copy = Level.find_by_name('template level copy')
+    assert_equal template_level.id, template_level_copy.parent_level_id
+    assert_equal ' copy', template_level_copy.name_suffix
+    assert_equal '<xml>template</xml>', template_level_copy.start_blocks
+
+    assert_equal template_level_copy, level_1_copy.project_template_level
+    assert_equal 'level 1 copy', level_1_copy.name
+    assert_equal level_1.id, level_1_copy.parent_level_id
+    assert_equal ' copy', level_1_copy.name_suffix
+
+    assert_equal template_level_copy, level_2_copy.project_template_level
+    assert_equal 'level 2 copy', level_2_copy.name
+    assert_equal level_2.id, level_2_copy.parent_level_id
+    assert_equal ' copy', level_2_copy.name_suffix
+  end
+
+  test 'clone with suffix copies contained levels' do
+    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
+    contained_level_2 = create :level, name: 'contained level 2'
+
+    # level 1 has 1 contained level
+
+    level_1 = create :level, name: 'level 1'
+    level_1.contained_level_names = [contained_level_1.name]
+    level_1_copy = level_1.clone_with_suffix(' copy')
+
+    refute_nil level_1_copy.contained_levels
+    assert_equal 1, level_1_copy.contained_levels.size
+    contained_level_1_copy = Level.find_by_name('contained level 1 copy')
+    assert_equal 'FreeResponse', contained_level_1_copy.type
+    assert_equal contained_level_1_copy, level_1_copy.contained_levels.first
+
+    # level 2 has 2 contained levels, one of which has already been copied
+
+    level_2 = create :level, name: 'level 2'
+    level_2.contained_level_names = [
+      contained_level_1.name,
+      contained_level_2.name
+    ]
+    level_2_copy = level_2.clone_with_suffix(' copy')
+    contained_level_2_copy = Level.find_by_name('contained level 2 copy')
+    refute_nil level_2_copy.contained_levels
+    assert_equal 2, level_2_copy.contained_levels.size
+    assert_equal contained_level_1_copy, level_2_copy.contained_levels.first
+    assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
+  end
 end

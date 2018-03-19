@@ -28,7 +28,7 @@ const serverCourses = [
 
 export default storybook => {
   return storybook
-    .storiesOf('TeacherHomepage', module)
+    .storiesOf('Homepages/Teachers/TeacherHomepage', module)
     .addStoryTable([
       {
         name: 'Teacher Homepage - no courses, no sections',
