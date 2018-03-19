@@ -756,13 +756,31 @@ module Pd::Application
     end
 
     test 'locked status appears in csv only when the supplied user can_see_locked_status' do
+      application = build :pd_teacher1819_application
       mock_user = mock
 
       Teacher1819Application.stubs(:can_see_locked_status?).returns(false)
-      refute Teacher1819Application.csv_header('csf', mock_user).include? 'Locked'
+      header_with_locked = Teacher1819Application.csv_header('csf', mock_user)
+      refute header_with_locked.include? 'Locked'
+      row_with_locked = application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header_with_locked).length, CSV.parse(row_with_locked).length,
+        "Expected header and row to have the same number of columns, including Locked"
 
       Teacher1819Application.stubs(:can_see_locked_status?).returns(true)
-      assert Teacher1819Application.csv_header('csf', mock_user).include? 'Locked'
+      header_without_locked = Teacher1819Application.csv_header('csf', mock_user)
+      assert header_without_locked.include? 'Locked'
+      row_without_locked = application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header_without_locked).length, CSV.parse(row_without_locked).length,
+        "Expected header and row to have the same number of columns, excluding Locked"
+    end
+
+    test 'to_cohort_csv' do
+      application = build :pd_teacher1819_application
+
+      assert (header = Teacher1819Application.cohort_csv_header)
+      assert (row = application.to_cohort_csv_row)
+      assert_equal CSV.parse(header).length, CSV.parse(row).length,
+        "Expected header and row to have the same number of columns"
     end
   end
 end

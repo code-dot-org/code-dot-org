@@ -653,8 +653,8 @@ module Pd::Application
           district_name,
           school_name,
           user.email,
-          assigned_workshop,
-          registered_workshop
+          workshop_date_and_location,
+          registered_workshop? ? 'Yes' : 'No'
         ]
       end
     end
