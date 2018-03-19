@@ -246,6 +246,7 @@ class ManageStudentsTable extends Component {
     let disabled = rowData.isEditing ?
       this.props.editingData[rowData.id].age.length === 0 :
       true;
+    const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].sharingDisabled : true;
 
     return (
       <ManageStudentsSharingCell
@@ -253,6 +254,7 @@ class ManageStudentsTable extends Component {
         isEditing={rowData.isEditing}
         disabled={disabled}
         checked={!rowData.sharingDisabled}
+        editedValue={editedValue}
       />
     );
   };

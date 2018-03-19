@@ -10,22 +10,13 @@ class ManageStudentsSharingCell extends Component {
     isEditing: PropTypes.bool,
     disabled: PropTypes.bool,
     checked: PropTypes.bool,
+    editedValue: PropTypes.bool,
     //Provided by redux
     editStudent: PropTypes.func,
   };
 
-  state = {
-    checked: this.props.checked
-  };
-
-  toggleSharingCheckbox = () => {
-    this.setState({
-      checked: !this.state.checked
-    }, this.changeSharing);
-  };
-
   changeSharing = (e) => {
-    this.props.editStudent(this.props.id, {sharingDisabled: !this.state.checked});
+    this.props.editStudent(this.props.id, {sharingDisabled: !this.props.editedValue});
   };
 
   render() {
@@ -46,8 +37,8 @@ class ManageStudentsSharingCell extends Component {
           <div>
             <Checkbox
               disabled={disabled}
-              checked={this.state.checked}
-              onChange={this.toggleSharingCheckbox}
+              checked={!this.props.editedValue}
+              onChange={this.changeSharing}
             />
           </div>
         }
