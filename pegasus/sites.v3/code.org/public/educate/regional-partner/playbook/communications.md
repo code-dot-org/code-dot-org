@@ -1,8 +1,8 @@
-<meta name="robots" content="noindex">
 ---
 title: Communications
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 
 # Communications Playbook
 
