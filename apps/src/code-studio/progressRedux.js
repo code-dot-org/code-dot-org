@@ -23,6 +23,7 @@ const SET_STUDENT_DEFAULTS_SUMMARY_VIEW = 'progress/SET_STUDENT_DEFAULTS_SUMMARY
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
+const SET_STAGE_TROPHY_ENABLED = 'progress/SET_STAGE_TROPHY_ENABLED';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 const PEER_REVIEW_ID = -1;
@@ -207,6 +208,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_STAGE_TROPHY_ENABLED) {
+    return {
+      ...state,
+      stageTrophyEnabled: action.stageTrophyEnabled
+    };
+  }
+
   return state;
 }
 
@@ -325,6 +333,8 @@ export const setCurrentStageId = stageId => ({ type: SET_CURRENT_STAGE_ID, stage
 export const setScriptCompleted = () => ({type: SET_SCRIPT_COMPLETED });
 export const setStageExtrasEnabled = stageExtrasEnabled => (
   { type: SET_STAGE_EXTRAS_ENABLED, stageExtrasEnabled });
+export const setStageTrophyEnabled = stageTrophyEnabled => (
+  { type: SET_STAGE_TROPHY_ENABLED, stageTrophyEnabled });
 
 // Selectors
 
@@ -446,6 +456,10 @@ export const stageExtrasUrl = (state, stageId) => (
 export const isPerfect = (state, levelId) => (
   !!state.levelProgress &&
     state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT
+);
+
+export const getPercentPerfect = levels => (
+  levels.reduce((accumulator, level) => accumulator + (level.status === LevelStatus.perfect), 0) / levels.length
 );
 
 /**
