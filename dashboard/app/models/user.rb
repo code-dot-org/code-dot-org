@@ -196,7 +196,7 @@ class User < ActiveRecord::Base
 
   has_one :circuit_playground_discount_application
 
-  after_create :associate_with_potential_pd_enrollments
+  after_create :associate_with_potential_pd_enrollments, :update_share_setting
 
   # after_create :send_new_teacher_email
   # def send_new_teacher_email
@@ -1670,6 +1670,12 @@ class User < ActiveRecord::Base
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
       end
+    end
+  end
+
+  def update_share_setting
+    if under_13?
+      self.sharing_disabled = true
     end
   end
 
