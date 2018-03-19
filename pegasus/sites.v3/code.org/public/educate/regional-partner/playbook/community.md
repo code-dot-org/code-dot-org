@@ -1,9 +1,8 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Community Building
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Community Building

@@ -1,9 +1,8 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Timeline
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <style>
 table {width: 100%;}
 </style>
