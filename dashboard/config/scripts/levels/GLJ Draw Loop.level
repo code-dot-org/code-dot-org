@@ -182,10 +182,6 @@
     "helper_libraries": [
       "GameLabJr"
     ],
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -218,7 +214,8 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction spinClockwise(sprite) {\r\n  sprite.rotation+=6;\r\n}\r\nfunction spinCounterClockwise(sprite) {\r\n  sprite.rotation-=6;\r\n}\r\n\r\nfunction moveForward(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.velocity.x = cos(sprite.rotation) * 2;\r\n    sprite.velocity.y = sin(sprite.rotation) * 2;\r\n  }\r\n  behavior.name = 'moveForward';\r\n  return behavior;\r\n}\r\n\r\nfunction bounceOffEdges(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.bounceOff(edges);\r\n  }\r\n  behavior.name = 'bounceOffEdges';\r\n  return behavior;\r\n}\r\n\r\nfunction stopAtEdges(target) {\r\n  var behavior = function(sprite) {\r\n    edges.displace(sprite);\r\n  }\r\n  behavior.name = \"stopAtEdges\";\r\n  return behavior;\r\n}\r\n\r\n",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"spinClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} clockwise\"\r\n  },\r\n  {\r\n    \"func\": \"spinCounterClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} counterclockwise\"\r\n  },\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"moveForward\",\r\n    \"blockText\": \"always move forward\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"setVelocity\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"X\"\r\n      },\r\n      {\r\n        \"name\": \"Y\"\r\n      }\r\n    ],\r\n    \"blockText\": \"Set {THIS} velocity to {X}, {Y}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"bounceOffEdges\",\r\n    \"args\": [],\r\n    \"blockText\": \"bounce off edges\",\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"stopAtEdges\",\r\n    \"args\": [],\r\n    \"blockText\": \"stop at edges\",\r\n    \"returnType\": \"Function\"\r\n  }\r\n]"
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"spinClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} clockwise\"\r\n  },\r\n  {\r\n    \"func\": \"spinCounterClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} counterclockwise\"\r\n  },\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"moveForward\",\r\n    \"blockText\": \"always move forward\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"setVelocity\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"X\"\r\n      },\r\n      {\r\n        \"name\": \"Y\"\r\n      }\r\n    ],\r\n    \"blockText\": \"Set {THIS} velocity to {X}, {Y}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"bounceOffEdges\",\r\n    \"args\": [],\r\n    \"blockText\": \"bounce off edges\",\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"stopAtEdges\",\r\n    \"args\": [],\r\n    \"blockText\": \"stop at edges\",\r\n    \"returnType\": \"Function\"\r\n  }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

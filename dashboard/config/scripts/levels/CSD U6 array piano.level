@@ -93,8 +93,8 @@
       "soundSensor.threshold": null,
       "lightSensor.setScale": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": "ieanH4Beoi01m4AZprEhIf+BSaf9DQe5NnsdSDlfj+p+AR323rMm3ReRvj1G\nh9SXV1n9F90eLjqhbG0HGrzg1g==\n"
+    "encrypted_examples": "ieanH4Beoi01m4AZprEhIf+BSaf9DQe5NnsdSDlfj+p+AR323rMm3ReRvj1G\nh9SXV1n9F90eLjqhbG0HGrzg1g==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
