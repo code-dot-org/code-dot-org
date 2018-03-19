@@ -55,9 +55,10 @@ export default class DesignProperties extends React.Component {
     const isScreen = (elementType === elementLibrary.ElementType.SCREEN);
     // For now, limit duplication to just non-screen elements
 
+    const onlyOneScreen = (elementUtils.getScreens().length === 1);
+
     // First screen is not deletable
-    const isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
-        elementUtils.getScreens().length === 1;
+    const isOnlyScreen = (isScreen && onlyOneScreen);
 
     const tabHeight = 35;
     const borderColor = color.lighter_gray;
@@ -208,10 +209,12 @@ export default class DesignProperties extends React.Component {
                 />
                 }
                 <DuplicateElementButton handleDuplicate={this.props.onDuplicate}/>
+                {!onlyOneScreen && !isScreen &&
                 <CopyElementToScreenButton
-                  handleCopyElementToScreen={this.props.onCopyElementToScreen}
-                  screenIds={this.props.screenIds}
+                    handleCopyElementToScreen={this.props.onCopyElementToScreen}
+                    screenIds={this.props.screenIds}
                 />
+                }
               </div>
               <PropertyComponent
                 element={this.props.element}
