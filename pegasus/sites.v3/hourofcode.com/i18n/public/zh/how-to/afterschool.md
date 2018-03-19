@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # 如何在課後班和俱樂部中講授編程一小時
 
-參加到活動中，通過以下步驟為一群學生介紹他們初始一小時的計算機科學課程。 哪怕是對初學者來說，編程一小時的課程都非常容易學。 如果你有時間願意幫忙的話，你可以找一名當地的 自願者一起幫忙在你的課程裡來教編程一小時課程。</p> 
+參加到活動中，通過以下步驟為一群學生介紹他們初始一小時的計算機科學課程。 哪怕是對初學者來說，編程一小時的課程都非常容易學。 如果你有時間願意幫忙的話，你可以找一名當地的 自願者一起幫忙在你的課程裡來教編程一小時課程。
 
 ## 2. 觀看視頻指導 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -23,7 +23,7 @@ nav: how_to_nav
 
 ## 3) 推廣你的一小時玩程式活動
 
-你可以用這些工具</a>來推廣編程一小時，並鼓勵其他人去主辦自己的活動。</p> 
+你可以用這些工具</a>來推廣編程一小時，並鼓勵其他人去主辦自己的活動。
 
 ## 4. 您所需的教學設備——電腦不是必需的
 
@@ -43,7 +43,7 @@ nav: how_to_nav
 
 **展示一支激勵人心的影片**
 
-- 原版的Code.org 的視頻裡講述了比爾.蓋茨，馬克.扎克伯格，和NBA 球星克里斯.波什的勵志故事。 1 分鐘；5 分鐘[ 和9 分鐘](https://www.youtube.com/watch?v=dU1xS07N-FA) 的版本都有。</li> 
+- 原版的Code.org 的視頻裡講述了比爾.蓋茨，馬克.扎克伯格，和NBA 球星克里斯.波什的勵志故事。 1 分鐘；5 分鐘[ 和9 分鐘](https://www.youtube.com/watch?v=dU1xS07N-FA) 的版本都有。
     
     - [編程一小時 全球視頻 ](https://www.youtube.com/watch?v=KsOIlDT145A)
     - [總統奧巴馬號召所有學生學習計算機科學](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
@@ -55,13 +55,13 @@ nav: how_to_nav
     - 列出在日常生活中用到程式碼的事情。
     - 讓女孩對電腦科學產生興趣的小技巧 [ 看這裡](<%= resolve_url('https://code.org/girls') %>)
     
-    **需要更多的指南嗎？ **，請點擊</a>來下載的課程大綱模板。</p> 
+    **需要更多的指南嗎？ **，請點擊</a>來下載的課程大綱模板。
     
     ## 6) 寫程式！
     
     **在活動中指導參與者**
     
-    - 把課程指南的鏈接寫在白板上。在參加者數量下點擊</a> 找到列在裡你選擇的指南。</li> </ul> 
+    - 把課程指南的鏈接寫在白板上。在參加者數量下點擊</a> 找到列在裡你選擇的指南。 
         
         **如果有人在學的時候遇到困難的話，你可以這樣回复：**
         
@@ -86,8 +86,7 @@ nav: how_to_nav
         
         [/col-33]
 
-<p style="clear:both">&nbsp;</p>
-
+        <p style="clear:both">&nbsp;</p>
         
         ## 7. 慶祝
         
@@ -108,16 +107,15 @@ nav: how_to_nav
         
         [/col-33]
 
-<p style="clear:both">&nbsp;</p>
+        <p style="clear:both">&nbsp;</p>
 
-        
         ## 適用於教育工作者的其他編程一小時的資源
         
-        - 參照以往編程一小時組織者提供的最佳實踐指南 < /a> </li> 
+        - 參照以往編程一小時組織者提供的最佳實踐指南 
             
             - 觀看我們為教育工作者主辦的編程一小時在線會議回放。 [](https://youtu.be/EJeMeSW2-Mw)
             - 參加編程一小時討論會[](http://forum.code.org/c/plc/hour-of-code) 來聽取並獲得其他主辦人的意見，觀點和支持。 <% if @country == 'us' %>
-            - 觀看[一小時玩程式的常見問答](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %></ul> 
+            - 觀看[一小時玩程式的常見問答](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %> 
             
             ## Hour of Code之後有什麼？
             

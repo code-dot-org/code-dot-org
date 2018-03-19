@@ -95,6 +95,7 @@ export default class Workshop extends React.Component {
           'enrolled_teacher_count',
           'on_map',
           'funded',
+          'funding_type',
           'course',
           'subject',
           'notes',

@@ -966,6 +966,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: |
@@ -7499,20 +7500,20 @@
         unembeddedlevels:
           stages:
             CSD U3 Plotting Shapes Shape Lab - unembed:
-              name: CSD U3 Plotting Shapes Shape Lab - unembed
+              name: "计算机科学发现单元3 测绘形状实验室 - 解除嵌入"
             CSD U3 Entertainment Sample 1 - unembed:
-              name: CSD U3 Entertainment Sample 1 - unembed
+              name: "计算机科学发现单元3 娱乐示例1 - 接触嵌入"
             Only Stage:
-              name: Only Stage
-          title: Unembedded Levels
+              name: "只有阶段"
+          title: "未嵌入的关卡"
           description_audience: ''
           description_short: ''
           description: ''
         unembedded:
           stages:
             Only Stage:
-              name: Only Stage
-          title: Unembedded Levels
+              name: "只有阶段"
+          title: "未嵌入的关卡"
           description_audience: ''
           description_short: ''
           description: ''

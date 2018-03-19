@@ -11038,6 +11038,9 @@
       flappy_1_instruction: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“,
         o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy
         skristų į tikslą.
+      flappy_11_instruction: Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir
+        taisykles, netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo
+        draugai galėtų pažaisti tavo žaidimą savo telefonuose.
       flappy_2_instruction: Dabar pridėjome žemę žaidime. Prijunk reikalingą blokelį
         prie blokelio „kai atsitrenksi į žemę“. Kai paukštis pasieks žemę, turi baigtis
         žaidimas.
@@ -11060,9 +11063,6 @@
         tam tikri įvykiai, pavyzdžiui, kai yra pereinama per kliūtį.
       flappy_9_instruction: Paįvairinkime žaidimą. Kai atsitrenksi į kliūtį, geriau
         ne užbaik žaidimą, o panaikink visus surinktus taškus.
-      flappy_11_instruction: Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir
-        taisykles, netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo
-        draugai galėtų pažaisti tavo žaidimą savo telefonuose.
       frozen circle function in circle_instruction: O dabar sukurkime 20 persidengiančių
         apskritimų. Tarp kiekvieno apskritimo turi būti 18 laipsnių kampas.
       frozen circle function with parameter_instruction: "Štai tau naujas blokelis

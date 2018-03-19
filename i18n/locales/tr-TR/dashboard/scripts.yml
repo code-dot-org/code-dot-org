@@ -4,7 +4,7 @@ tr:
       name:
         course1:
           title: Kurs 1
-          description: Yeni okuyucular için Ders 1 ile başlayın. Yeni okuyucuların bilgisayar programı oluşturmalarında yardımcı olması, problem çözmedeki becerilerini geliştirmeleri, zor görevleri yapabilmeleri ve başkaları ile birlikte çalışabilmeleri için tasarlanmıştır. Dersin sonunda, öğrenciler, paylaşabilecekleri kendi farklı hikayelerini veya oyunlarını oluşturabilecekler. Anaokulu ve 1. sınıfları için önerilir.
+          description: Yeni okuyucular için Kurs 1 ile başlayın. Yeni okuyucuların bilgisayar programı oluşturmalarında yardımcı olması, problem çözmedeki becerilerini geliştirmeleri, zor görevleri yapabilmeleri ve başkaları ile birlikte çalışabilmeleri için tasarlanmıştır. Dersin sonunda, öğrenciler, paylaşabilecekleri kendi farklı hikayelerini veya oyunlarını oluşturabilecekler. Anaokulu ve 1. sınıfları için önerilir.
           description_short: Okumaya yeni başlayanlar için 1. Dersten başlayın.
           description_audience: 4-6 yaş arası
           stages:
@@ -46,7 +46,7 @@ tr:
               name: Büyük Olay
         course2:
           title: Kurs 2
-          description: Ders 2 önceden herhangi bir programlama deneyimi olmayan ve okuma-yazma bilen öğrenciler için tasarlanmıştır. Bu derste öğrenciler problem çözmek için programlama yaparken paylaşabilecekleri hikayeler ve interaktif oyun oluşturabilecekler. 2-5. Sınıflar için tavsiye edilir.
+          description: Kurs 2 önceden herhangi bir programlama deneyimi olmayan ve okuma-yazma bilen öğrenciler için tasarlanmıştır. Bu derste öğrenciler problem çözmek için programlama yaparken paylaşabilecekleri hikayeler ve interaktif oyun oluşturabilecekler. 2-5. Sınıflar için tavsiye edilir.
           description_short: Ders 2, okuma bilen öğrenciler için tasarlanmıştır.
           description_audience: 6 yaş ve üstü (okuma becerisi gerektirir)
           stages:
@@ -963,6 +963,7 @@ tr:
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
@@ -3301,7 +3302,7 @@ tr:
             Functions:
               name: Fonksiyonlar
               description_student: Bu ders, kodları organize etmeyi, tekrar eden blokları kaldırmayı, kodların daha okunabilir olmasını sağlayan bir yol olan fonksiyonları içerir. Sınıf, daha yüksek seviyeleri ve soyut adımları anlamayı ve daha kolay hale getirmeyi öğrenir. Daha sonra Game Lab'da fonksiyonlar oluştururlar. Dersin sonunda sınıf, bu becerilerini, oyun kaydırma çubuğu'nun son versiyonuna özellik eklemek ve düzenlemek için kullanırlar.
-              description_teacher: Öğrenciler, tekrar eden kod bloklarını kaldırmak, kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için işlevleri nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması, duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı olduğunu araştırır. Öğrenciler, daha soyut adımları ve daha yüksek seviyeleri kolaylaştırmak için adımları detaylıca düşünmeyi ve anlamayı öğrenirler. Daha sonra öğrenciler Game Lab' da işlevler oluşturmayı öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için işlevleri kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar.
+              description_teacher: Öğrenciler, tekrar eden kod bloklarını kaldırmak, kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için ifonksiyonları nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması, duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı olduğunu araştırır. Öğrenciler, daha soyut adımları ve daha yüksek seviyeleri kolaylaştırmak için adımları detaylıca düşünmeyi ve anlamayı öğrenirler. Daha sonra öğrenciler Game Lab' da fonksiyonlar oluşturmayı öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için fonksiyonları kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar.
             The Game Design Process:
               name: Oyun tasarım süreci
               description_student: Bu ders, sınıfın, bu ünitenin devamında oyunlar tasarlamak için kullanacağı süreci tanıtmaktadır. Sınıf, bu süreç boyunca bir dizi (level) seviyede ilerlemektedir. Bu dersin bir parçası olarak, sınıf ayrıca Oyun Lab'da çoklu kareli animasyonları kullanmayı da kısaca öğrenecek. Dersin sonunda, kendi oyunlarını yapmak için bu oyunu geliştirecektir.

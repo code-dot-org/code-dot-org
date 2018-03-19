@@ -867,7 +867,7 @@ GameLab.prototype.initInterpreter = function () {
   getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   let code = this.studioApp_.getCode();
   if (this.level.customHelperLibrary) {
-    code = this.customHelperLibrary + code;
+    code = this.level.customHelperLibrary + code;
   }
   if (this.level.helperLibraries) {
     const libs = this.level.helperLibraries

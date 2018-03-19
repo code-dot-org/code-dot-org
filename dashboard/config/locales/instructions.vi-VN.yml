@@ -10923,6 +10923,10 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Đính kèm khối "khi nhấp vào" sau đó bấm "chạy". Nhấp hoặc
         chạm vào màn hình để di chuyển Flappy đến mục tiêu.
+      flappy_11_instruction: Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi
+        hình ảnh, luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành,
+        nhấp vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa
+        làm ra.
       flappy_2_instruction: Bây giờ chúng ta thêm một vài vị trí. Đính kèm khối lệnh
         "khi quả bóng chạm vị trí". Mã của bạn cần để "kết thúc" khi Flappy rơi xuống
         đất.
@@ -10943,10 +10947,6 @@
         vượt chướng ngại vật.
       flappy_9_instruction: "Để kết hợp chúng, khi gặp một chướng ngại, thay vì kết
         thíc trò chơi hoặc thiết lập chi trở lại từ số 0."
-      flappy_11_instruction: Tạo trò chơi Flappy của riêng bạn. Bạn có thể thay đổi
-        hình ảnh, luật chơi, thậm chí là trọng lực của trò chơi. Sau khí hoàn thành,
-        nhấp vào "Hoàn thành" để giúp bạn của bạn có thể chơi thử trò chơi bạn vừa
-        làm ra.
       frozen circle function in circle_instruction: Bây giờ hãy tạo 20 vòng tròn chồng
         chéo, xoay 18 độ giữa mỗi vòng tròn.
       frozen circle function with parameter_instruction: Khối "Tạo vòng tròn" có thể

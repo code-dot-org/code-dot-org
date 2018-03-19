@@ -7227,3 +7227,13 @@ en:
           description_audience: ''
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+        textbook:
+          stages:
+            Test Map Level:
+              name: Test Map Level
+            new stage:
+              name: new stage
+          title: CSF Textbook Pages
+          description_audience: ''
+          description_short: ''
+          description: ''

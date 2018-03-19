@@ -9,7 +9,7 @@ nav: promote_nav
 
 # 推廣一小時玩程式活動
 
-## 舉辦一場「一小時的程式設計課程」活動？<a href="<%= resolve_url('/how-to') %>參閱活動指引</a>
+## 舉辦一場「一小時的程式設計課程」活動？<a href="<%= resolve_url('/how-to') %>">參閱活動指引</a>
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 

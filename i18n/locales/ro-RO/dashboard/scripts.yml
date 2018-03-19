@@ -963,6 +963,7 @@ ro:
           stages:
             Testing:
               name: Testing
+          description_audience: '[șir gol]'
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.

@@ -3698,8 +3698,8 @@ zh-CN:
         artistLoopsKB_a: 您的循环中应该有3个模块来解决这个关卡。
       artistLoopsKFP_authored_hint: [ ]
       comment_intro_maze_2018_authored_hint:
-        courseC_maze_programming4_a: Comments are also helpful when other people try to read your code.
-        courseC_maze_programming4_b: Add a comment when you change directions- what would have happened if you turned the other way?
+        courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
+        courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
           您可以使用这样的循环来创建墙壁和屋顶。尝试重复不同的块。 

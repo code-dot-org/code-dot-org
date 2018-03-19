@@ -6,27 +6,34 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from "@cdo/locale";
-import FontAwesome from '../FontAwesome';
 import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents} from './manageStudentsRedux';
+import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
+import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
+import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents, editAll} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
+import {Checkbox} from 'react-bootstrap';
 import experiments from '@cdo/apps/util/experiments';
 
-const styles = {
-  cog: {
-    marginLeft: 10,
-    fontSize: 20,
-  },
-};
-
 const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
+
+const styles = {
+  headerName: {
+    width: '60%',
+    float: 'left',
+    marginRight: 5,
+  },
+  headerIcon : {
+    width: '20%',
+    float: 'left',
+  }
+};
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -127,6 +134,8 @@ class ManageStudentsTable extends Component {
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
+    showSharingColumn: PropTypes.bool,
+    editAll: PropTypes.func,
   };
 
   state = {
@@ -203,13 +212,47 @@ class ManageStudentsTable extends Component {
         }
         {numberOfEditingRows <= 1 &&
           <span>
-            {i18n.actions()}
-            {showShareColumn &&
-              <FontAwesome icon="cog" style={styles.cog}/>
-            }
+            <div style={styles.headerName}>
+              {i18n.actions()}
+            </div>
+            <div style={styles.headerIcon}>
+              {showShareColumn &&
+                <ManageStudentsActionsHeaderCell
+                  editAll={this.props.editAll}
+                  isShareColumnVisible={this.props.showSharingColumn}
+                />
+              }
+            </div>
           </span>
         }
       </div>
+    );
+  };
+
+  projectSharingHeaderFormatter = () => {
+    return (
+      <span>
+        <div style={styles.headerName}>
+          {i18n.projectSharingColumnHeader()}
+        </div>
+        <div style={styles.headerIcon}>
+          <SharingControlActionsHeaderCell/>
+        </div>
+      </span>
+    );
+  };
+
+  projectSharingFormatter = (projectSharing, {rowData}) => {
+    let disabled = rowData.isEditing ?
+      this.props.editingData[rowData.id].age.length === 0 :
+      true;
+
+    return (
+      <span>
+        <Checkbox
+          disabled={disabled}
+        />
+      </span>
     );
   };
 
@@ -244,7 +287,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 300
+            width: 260
           }},
           transforms: [sortable],
         },
@@ -253,7 +296,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 300
+            width: 260
           }}
         }
       },
@@ -284,7 +327,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 150,
+            width: 130,
           }},
           transforms: [sortable],
         },
@@ -293,7 +336,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 150,
+            width: 130,
           }}
         }
       },
@@ -307,7 +350,7 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
-            width: 200,
+            width: 180,
           }},
         },
         cell: {
@@ -315,7 +358,30 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 200,
+            width: 180,
+          }}
+        }
+      },
+    ];
+    const projectSharingColumn = [
+      {
+        property: 'projectSharing',
+        header: {
+          label: i18n.projectSharingColumnHeader(),
+          format: this.projectSharingHeaderFormatter,
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
+            width: 130
+          }},
+        },
+        cell: {
+          format: this.projectSharingFormatter,
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130}
           }}
         }
       },
@@ -330,7 +396,6 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
-            width: 200,
           }},
         },
         cell: {
@@ -338,7 +403,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 200,
           }}
         }
       },
@@ -346,6 +410,9 @@ class ManageStudentsTable extends Component {
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(passwordColumn);
+    }
+    if (this.props.showSharingColumn) {
+      dataColumns = dataColumns.concat(projectSharingColumn);
     }
     if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(controlsColumn);
@@ -407,9 +474,13 @@ export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
+  showSharingColumn: state.manageStudents.showSharingColumn,
   addStatus: state.manageStudents.addStatus,
 }), dispatch => ({
   saveAllStudents() {
     dispatch(saveAllStudents());
+  },
+  editAll() {
+    dispatch(editAll());
   },
 }))(ManageStudentsTable);

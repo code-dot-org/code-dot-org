@@ -10987,6 +10987,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Liga um bloco ao bloco "quando clicar" e, depois, clica
         em "Executar". Para moveres o passarinho até ao alvo, clica no ecrã.
+      flappy_11_instruction: Crie seu próprio jogo Flappy Bird. Você pode mudar o
+        visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em
+        Concluir para que seus amigos joguem seu jogo em seus celulares.
       flappy_2_instruction: Agora passámos a ter chão. Liga um bloco ao bloco "quando
         bater no chão". O teu código tem de 'TERMINAR O JOGO' quando o passarinho
         cair ao chão.
@@ -11010,9 +11013,6 @@
         acontecerem, por exemplo, ao passar um obstáculo.
       flappy_9_instruction: Para misturar as coisas, ao invés de terminar o jogo quando
         bater em um obstáculo, tente fazer a pontuação voltar a 0.
-      flappy_11_instruction: Crie seu próprio jogo Flappy Bird. Você pode mudar o
-        visual e todas as regras, até mesmo a gravidade. Quando terminar, clique em
-        Concluir para que seus amigos joguem seu jogo em seus celulares.
       frozen circle function in circle_instruction: |-
         Agora vamos criar 20 círculos
         sobrepostos, virando 18 graus entre cada círculo.
