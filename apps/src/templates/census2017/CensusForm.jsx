@@ -495,7 +495,7 @@ class CensusForm extends Component {
               </select>
             </label>
           </div>
-          <div style={{marginTop: 20, marginLeft: 38}}>
+          <div style={styles.checkboxLine}>
             <label style={styles.clickable}>
               <input
                 type="checkbox"
@@ -511,7 +511,7 @@ class CensusForm extends Component {
 
           {showExistingInaccuracy && (
             <div>
-              <div style={{marginTop: 20, marginLeft: 38}}>
+              <div style={styles.checkboxLine}>
                 <label style={styles.clickable}>
                   <input
                     type="checkbox"
@@ -522,21 +522,30 @@ class CensusForm extends Component {
                   <span style={styles.existingInaccuracy}>
                     {i18n.censusExistingInaccuracy()}
                   </span>
-                  <span data-tip data-for="existing-inaccuracy">
-                    <FontAwesome icon="question-circle"/>
-                  </span>
                 </label>
+                <span data-tip data-for="existing-inaccuracy">
+                  <FontAwesome icon="question-circle"/>
+                </span>
               </div>
 
               <ReactTooltip
                 id="existing-inaccuracy"
+                class="react-tooltip-hover-stay"
                 role="tooltip"
                 effect="solid"
                 place="bottom"
                 offset={{bottom: 23, right: 7}}
+                delayHide={1000}
               >
                 <div style={styles.existingInaccuracyTooltip}>
                   {i18n.censusExistingInaccuracyTip()}
+                  &nbsp;
+                  <a
+                    href="/yourschool/defining-computer-science"
+                    target="_blank"
+                  >
+                    {i18n.censusExistingInaccuracyTipLink()}
+                  </a>
                 </div>
               </ReactTooltip>
             </div>
