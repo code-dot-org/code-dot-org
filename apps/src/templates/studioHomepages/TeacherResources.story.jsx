@@ -3,7 +3,7 @@ import TeacherResources from './TeacherResources';
 
 export default storybook => {
   return storybook
-    .storiesOf('TeacherResources', module)
+    .storiesOf('Homepages/Teachers/TeacherResources', module)
     .withReduxStore()
     .addStoryTable([
       {

@@ -74,6 +74,6 @@ Yabelana ngezithombe kanye namavidiyo omcimbi wakho weHora loKufingqwa kwezokusa
 IHora loKufingqwa liyisi nyathelo sokuqala kuhambo lokufunda kabanzi ngokuba ithekhinoloji isebenza kanjani kanye nokuba ama aplikheyishini amasofthiwe adalwa kanjani. Ukuqhubekela phambili ngalohambo:
 
 - Khuthaza izingane ukuba ziqhubeka[ukufunda ku inthanethi](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Siza<o>khangisa<o>Imfundiso yekhompyutha sayensi esifundeni sesikole sengane yakho.
+- Siza [khangisa](<%= resolve_url('/promote') %>) Imfundiso yekhompyutha sayensi esifundeni sesikole sengane yakho.
 
 <%= view :signup_button %>

@@ -565,3 +565,9 @@ Outputs:
   PegasusURL:
     Value: "https://<%=subdomain%>"
     Description: Pegasus URL
+# display information about how to ssh to console if this is a single instance adhoc environment
+<% if rack_env?(:adhoc) && !frontends -%>
+  SSHServerName:
+    Value: <%=subdomain%>
+    Description: SSH server name
+<%end-%>
