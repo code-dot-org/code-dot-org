@@ -857,18 +857,12 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Načítavanie...
-  dashboard_action_edit: Upraviť
-  dashboard_action_save: Uložiť
-  dashboard_action_save_all: Uložiť všetko
   dashboard_action_cancel: Zrušiť
   dashboard_action_delete: Odstrániť
   dashboard_action_delete_yes: "Áno"
   dashboard_action_delete_no: Nie
   dashboard_action_confirm: Odstrániť?
-  dashboard_action_remove: Odstrániť
-  dashboard_action_remove_confirm: Odstrániť?
   dashboard_action_done: Hotovo
-  dashboard_action_required: požadované
   dashboard_action_print_certificates: Vytlačiť certifikát
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -976,8 +970,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: Pridať študenta
-  dashboard_students_add_students: Pridať viacerých študentov
   dashboard_students_add_multiple: 'Zadajte nebo vložte mená vašich študentov, jedno
     na každý riadok:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -986,23 +978,12 @@
   dashboard_students_new_section: Vytvorili ste novú sekciu! Teraz pridajte svojich
     študentov pomocou tlačítka <b>Pridať študenta</b> a <b>Pridať viacerých študentov</b>
     vyššie.
-  dashboard_students_placeholder_name: Meno študenta
   dashboard_students_name: Meno
   dashboard_students_progress: Pokrok
-  dashboard_students_age: Vek
-  dashboard_students_gender: Pohlavie
   dashboard_students_male: Muž
   dashboard_students_female: "Žena"
-  dashboard_students_secret: Tajomstvo
-  dashboard_students_password: Heslo
-  dashboard_students_username: 'Používateľské meno: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Dokončené úrovne
   dashboard_students_total_lines: Riadky kódu
-  dashboard_students_show_secret: Zobraziť tajomstvo
-  dashboard_students_auto_generated: Automaticky vytvorené
-  dashboard_students_reset_secret: Obnoviť tajomstvo
-  dashboard_students_reset_password: Obnoviť heslo
   dashboard_students_share_section: 'Zdieľajte prihlasovaciu stránku tejto sekcie
     so svojimi žiakmi:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1073,7 +1054,6 @@
   dashboard_login_word: Slovo
   dashboard_login_picture: Obrázok
   dashboard_login_none: E-mail
-  dashboard_new_password: nové heslo
   dashboard_stage: "Úroveň"
   dashboard_puzzle: "Úloha"
   dashboard_question: Otázka

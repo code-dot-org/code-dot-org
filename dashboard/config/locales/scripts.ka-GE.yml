@@ -1008,6 +1008,7 @@
           stages:
             Testing:
               name: "გატესტვა"
+          description_audience: ''
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: In this unit, students extend their understanding of the internet

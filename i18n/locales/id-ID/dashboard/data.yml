@@ -158,52 +158,7 @@ id:
         maze_3_2: Buatkan saya sebuah program, sehingga saya bisa mencapai babi itu.
         maze_3_3: Bagaimanacara saya bisa menangkap babi itu? Pastikan saya tidak menabrak kotak TNT!
         maze_3_4: "Waduh! Buatkan saya sebuah program yang membantu saya mencapai babi tetapi menghindari TNT.\n"
-        bounce_1_basketball: Lampirkan blok ke blok "saat panah kiri" dan tekan "jalankan program". Gerakkan dengan menggunakan tangan kepanah kiri untuk mencapai target selesai.
-        bounce_2_basketball: Lampirkan blok ke blok "saat panah kanan" dan "saat panah kiri". Pindahkan tangan untuk mencapai kedua target selesai.
-        bounce_5_basketball: Kita akan mengirim bola terbang ke arah tangan. Melampirkan blok ke "ketika bola menyentuh tangan" blok untuk memastikan bola mencapai bendera.
-        bounce_6_basketball: Sekarang bendera di atas. Anda perlu melampirkan blok untuk kedua "ketika bola menyentuh" blok untuk memecahkan teka-teki ini.
-        bounce_7_basketball: Melampirkan blok untuk masing-masing "ketika" blok. Bouncing bola sampai menyentuh bendera.
-        bounce_10_basketball: Sekarang ada tujuan di atas! Melampirkan "skor point" dan "skor lawan point" blok "ketika bola di tujuan" dan "ketika bola mengenai tangan" blok untuk membuat game. Lihat berapa banyak poin yang anda dapat mencetak sebelum lawan skor dua kali.
-        bounce_11_basketball: Sekarang anda dapat melampirkan blok ke "ketika menjalankan" blok. Anda harus melampirkan baru "membuang bola baru" blok di lebih dari satu tempat. Juga, cobalah mengubah adegan atau kecepatan tangan dan bola dan melihat berapa banyak poin yang anda dapat mencetak sebelum lawan skor dua kali!
-        bounce_12_basketball: Membuat anda sendiri permainan Basket. Anda dapat mengubah semua aturan. Ketika anda sudah selesai, klik Finish untuk membiarkan teman-teman mencoba permainan anda pada ponsel mereka.
-        bounce_1_sports: Mendapatkan ke bendera! Melampirkan blok ke "ketika panah kiri" blok dan tekan "Run" untuk memindahkan pemain ke bendera.
-        bounce_2_sports: Ada dua bendera sekarang! Melampirkan blok ke "ketika panah kiri" dan "ketika panah kanan" blok untuk membuat pemain anda bergerak dalam dua arah.
-        bounce_5_sports: Hockey puck akan terbang ke arah pemain! Melampirkan blok ke "ketika bola menyentuh pemain" blok untuk mencapai bendera.
-        bounce_6_sports: Sekarang bendera di atas. Anda perlu melampirkan blok untuk kedua "ketika bola menyentuh" blok untuk memecahkan teka-teki ini.
-        bounce_7_sports: Melampirkan blok untuk masing-masing "ketika" blok. Bouncing bola sampai menyentuh bendera.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses hand" blocks to make a game. See how many points you can score before your opponent scores twice!
-        bounce_11_sports: Sekarang anda dapat melampirkan blok ke "ketika menjalankan" blok. Anda harus melampirkan baru "membuang bola baru" blok di lebih dari satu tempat. Juga, cobalah mengubah adegan atau kecepatan tangan dan bola dan melihat berapa banyak poin yang anda dapat mencetak sebelum lawan skor dua kali!
-        bounce_12_sports: 'Membuat permainan anda sendiri! Anda di sini: anda dapat mengubah semua aturan, mencampur dan mencocokkan olahraga, mendapatkan kreatif! Ketika anda sudah selesai, klik Finish untuk membiarkan teman-teman mencoba permainan anda pada ponsel mereka.'
-        bounce_1: Tempatkan satu blok ke blok "Jika anak panah kiri" dan tekan "Jalankan Program". Gerakkan menggunakan tombol panah kiri untuk mencapai target.
-        bounce_2: Tempelkan sebuah blok ke blok "Jika anak panah kanan" dan blok "Jika anak panah kiri". Pindahkan dayung untuk mencapai kedua target.
-        bounce_3: Sekarang cobalah sesuatu yang mirip dengan blok "ketika panah keatas". Jalankan dayung untuk mencapai target diatas.
-        bounce_4: Kali ini Anda perlu menambahkan empat blok. Pindahkan dayung untuk mencapai keempat target dan menyelesaikan teka-teki ini.
-        bounce_5: Kami akan melemparkan bola menuju dayung. Tempelkan satu blok ke blok "ketika bola mengenai dayung" untuk memastikan bola mencapai garis finish.
-        bounce_6: Sekarang target garis finish ada di atas. Anda harus tempelkan blok kepada dua blok "Ketika bola mengenai" untuk memecahkan teka-teki ini.
-        bounce_7: Tempelkan blok untuk masing-masing blok "Jika". Pantulkan bola sampai mengenai target.
-        bounce_10: Ada sebuah target di atas. Tempelkan blok "Skor poin" dan blok "Skor poin lawan" ke blok "Jika bola di target" dan blok "Jika bola meleset dari dayung" untuk membuat permainan. Lihat berapa banyak poin yang Anda bisa dapat, sebelum lawan Anda mendapat dua kali lebih banyak.
-        bounce_11: Anda sekarang dapat menempatkan blok-blok kepada blok "ketika permainan dimulai". Anda harus menempelkan blok "luncuran bola baru" lebih dari satu tempat. Lalu cobalah mengubah adegan atau kecepatan kayuh dan bola dan untuk melihat berapa banyak poin yang Anda dapat sebelum lawan Anda mendapatkan poin dua kali lebih banyak.
-        bounce_12: Buatlah game Bounce anda sendiri. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.
         Custom_builder: Tarik blok dari toolbox ke ruang kerja untuk menggambar tingkat yang Anda ingin buat. Tekan "Jalankan Program" ketika Anda selesai.
-        flappy_1: Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.
-        flappy_2: Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan blok ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN BERAKHIR' ketika Flappy menghantam permukaan.
-        flappy_3: Blok "ketika permainan dimulai" memungkinkan Anda untuk menjalankan kode untuk memulai permainan.  Cobalah mengatur tingkat kecepatan dan cara mengepak untuk menuju target.
-        flappy_4: Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Temaptkan blok-blok ke dalam blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam sekumpulan pipa.
-        flappy_5: Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui sekumpulan pipa.
-        flappy_6: Perhatikan apakah Anda masih bisa mendapat Skor setelah mengubah Flappy mengepak sayap lebih banyak atau lebih sedikit.
-        flappy_7: Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".
-        flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika event berganti, misalnya ketika melewati penghalang.
-        flappy_9: Untuk mencampurkan berbagai hal, ketika mengenai sebuah rintangan, daripada mengakhiri permainan cobalah atur nilai kembali ke 0.
-        flappy_11: Butalah game Flappy anda. Anda dapat merubah semua visualisasi dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda agar ia mencoba pada ponselnya.
-        flappy_k1_1: Mainkan Flappy
-        flappy_k1_2: Tempatkan satu blok pada blok "Ketika klik", kemudian tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy menuju target.
-        flappy_k1_3: Sekarang kami telah menambahkan beberapa permukaan.  Tempelkan blok ke blok "Jika mengenai permukaan".  Kode Anda memerlukan 'Permainan berakhir' jika Flappy menghantam permukaan.
-        flappy_k1_4: Blok "ketika permainan dimulai" memungkinkan Anda untuk menjalankan kode untuk memulai permainan.  Cobalah mengatur tingkat kecepatan dan cara mengepak untuk menuju target.
-        flappy_k1_5: Flappy akan terbang melalui hambatan kecuali Anda menulis kode untuk membuatnya menabrak. Lampirkan blok ke blok "ketika mengenai hambatan". Kode Anda perlu 'Permainan berakhir' ketika Flappy menghantam set pipa pertama.
-        flappy_k1_6: Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian raihlah Skor lebih dengan membuat Flappy terbang melalui set pipa pertama.
-        flappy_k1_7: Lihat jika Anda dapat mencetak nilai beberapa poin karena melewati hambatan
-        flappy_k1_8: Selanjutnya, cobalah mengubah adegan dengan melampirkan blok yang lain ke blok "ketika menjalankan".
-        flappy_k1_9: Cobalah mengubah pemain dengan menempatkan "mengatur pemain" blok ke blok "ketika menjalankan".
         jigsaw_1: Klik blok
         jigsaw_2: Tarik blok ke target
         jigsaw_3: Atur blok untuk membentuk gambar
@@ -566,6 +521,7 @@ id:
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Pengenalan untuk array
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

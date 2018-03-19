@@ -10218,6 +10218,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Plak een blok aan het "bij een klik" blok, klik dan op
         "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.
+      flappy_11_instruction: Maak je eigen Flappy spel. Je kunt de vormgeving en de
+        regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent
+        op afronden om je vrienden je spel te laten spelen op hun telefoons.
       flappy_2_instruction: Nu hebben we wat grond toegevoegd. Plak een blok aan het
         "bij het raken van de grond" blok. Je code moet 'Stop spel' als Flappy neerstort.
       flappy_3_instruction: Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer
@@ -10239,9 +10242,6 @@
         iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
       flappy_9_instruction: Probeer voor de verandering eens de score op 0 te zetten
         in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
-      flappy_11_instruction: Maak je eigen Flappy spel. Je kunt de vormgeving en de
-        regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent
-        op afronden om je vrienden je spel te laten spelen op hun telefoons.
       frozen circle function in circle_instruction: Laten we nu 20 overlappende cirkels
         maken, draai 18 graden tussen elke cirkel.
       frozen circle function with parameter_instruction: Hier is een "Maak een cirkel"

@@ -11245,6 +11245,10 @@
       flappy_1_instruction: |-
         Attach a block to the "when click" block, then press
         "Run". Click or tap the screen to move Flappy to the target.
+      flappy_11_instruction: |-
+        Create your own Flappy game. You can change all the
+        visuals and all the rules, even the gravity. When you're done, click Finish
+        to let friends try your game on their phones.
       flappy_2_instruction: |-
         Now we've added some ground.  Attach a block to the
         "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
@@ -11273,10 +11277,6 @@
       flappy_9_instruction: |-
         To mix things up, when hitting an obstacle, instead
         of ending the game try setting the score back to 0.
-      flappy_11_instruction: |-
-        Create your own Flappy game. You can change all the
-        visuals and all the rules, even the gravity. When you're done, click Finish
-        to let friends try your game on their phones.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
