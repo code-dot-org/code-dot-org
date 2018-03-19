@@ -532,13 +532,14 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
+<%end-%>
   DaemonStorageUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
       AlarmActions:
-        - <%= rack_env?(:production) ? 'arn:aws:sns:us-east-1:475661607190:CDO-Urgent' : 'arn:aws:sns:us-east-1:475661607190:CDO-LowPriority' %>
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
       AlarmDescription: Send page if daemon storage utilization exceeds 80% for an hour
-      AlarmName: <%="#{rack_env}_daemon_low_disk_space" %>
+      AlarmName: <%="#{stack_name}_daemon_low_disk_space" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: Filesystem
@@ -559,9 +560,9 @@ Resources:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
       AlarmActions:
-        - <%= rack_env?(:production) ? 'arn:aws:sns:us-east-1:475661607190:CDO-Urgent' : 'arn:aws:sns:us-east-1:475661607190:CDO-LowPriority' %>
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
       AlarmDescription: Send page if daemon memory utilization exceeds 87% for 5 minutes
-      AlarmName: <%="#{rack_env}_daemon_high_memory" %>
+      AlarmName: <%="#{stack_name}_daemon_high_memory" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: InstanceId
@@ -574,7 +575,6 @@ Resources:
       Threshold: 87
       # absence of custom memory utilization Metric could be due to a serious problem on the Instance
       TreatMissingData: breaching
-<%end-%>
 <% if database -%>
   Database:
     Type: AWS::RDS::DBInstance
