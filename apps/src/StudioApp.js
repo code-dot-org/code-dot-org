@@ -69,7 +69,6 @@ import {
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -268,33 +267,6 @@ StudioApp.prototype.init = function (config) {
   this.setConfigValues_(config);
 
   this.configureDom(config);
-
-  //Only log a page load when there are videos present
-  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')) {
-    if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) {
-      firehoseClient.putRecord(
-        {
-          study: 'instructions-resources-tab',
-          study_group: 'resources-tab',
-          event: 'resources-tab-load',
-          script_id: config.scriptId,
-          level_id: config.serverLevelId,
-          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
-        }
-      );
-    } else {
-      firehoseClient.putRecord(
-        {
-          study: 'instructions-resources-tab',
-          study_group: 'under-app',
-          event: 'under-app-load',
-          script_id: config.scriptId,
-          level_id: config.serverLevelId,
-          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
-        }
-      );
-    }
-  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -1846,27 +1818,10 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab') || experiments.isEnabled('additionalResources'));
+
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed;
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
-    // TODO (epeach) - remove after resources tab A/B testing
-    // Temporarily attach an event listener to log clicks
-    // Logs the type of app and the ids of the puzzle
-    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
-    if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')) {
-      videoThumbnail[0].addEventListener('click', () => {
-        firehoseClient.putRecord(
-          {
-            study: 'instructions-resources-tab',
-            study_group: 'under-app',
-            event: 'under-app-video-click',
-            script_id: config.scriptId,
-            level_id: config.serverLevelId,
-            data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
-          }
-        );
-      });
-    }
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');
