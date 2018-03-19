@@ -92,7 +92,7 @@ const style= {
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressLessonTeacherInfo', module)
+    .storiesOf('Progress/ProgressLessonTeacherInfo', module)
     .addStoryTable([
       {
         name:'loading',
