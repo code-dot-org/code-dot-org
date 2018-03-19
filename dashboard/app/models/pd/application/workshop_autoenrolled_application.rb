@@ -60,7 +60,7 @@ module Pd::Application
     end
 
     def workshop_date_and_location
-      workshop.try(&:date_and_location)
+      workshop.try(&:date_and_location_name)
     end
 
     # override
