@@ -1,9 +1,10 @@
 import React, {PropTypes} from 'react';
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
-import designMode from "../designMode";
+import PopUpMenu from '../../lib/ui/PopUpMenu';
 import {connect} from "react-redux";
-import * as screens from "../redux/screens";
+import throttle from "lodash/debounce";
+import styleConstants from "../../styleConstants";
 
 const styles = {
   copyElementToScreenButton: {
@@ -30,36 +31,66 @@ class CopyElementToScreenButton extends React.Component {
 
   state = {
     opened: false,
+    menuTop: 0, // location of dropdown menu
+    menuLeft: 0,
+    currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
+  };
+
+  getResizeListener() {
+    if (!this.resizeListener) {
+      this.resizeListener = throttle(this.updateMenuLocation, 50);
+    }
+    return this.resizeListener;
+  }
+
+  updateMenuLocation = () => {
+    const rect = this.element.getBoundingClientRect();
+    const windowWidth = window.innerWidth;
+    if (windowWidth > styleConstants['content-width']) { // Accounts for resizing when page is not scrollable
+      this.setState({
+        menuTop: rect.bottom + window.pageYOffset,
+        menuLeft: rect.left - rect.width - (windowWidth - this.state.currWindowWidth)/2,
+        currWindowWidth : window.innerWidth});
+    } else { // Accounts for scrolling or resizing when scrollable
+      this.setState({
+        menuTop: rect.bottom + window.pageYOffset,
+        menuLeft: rect.left - rect.width + window.pageXOffset});
+    }
   };
 
   handleDropdownClick = (event) => {
+    if (this.state.opened) {
+      window.removeEventListener("resize", this.getResizeListener());
+    } else {
+      window.addEventListener("resize", this.getResizeListener());
+      this.updateMenuLocation();
+    }
     this.setState({opened: !this.state.opened});
   };
 
-  handleCopyElementToScreen = (event) => this.props.handleCopyElementToScreen(event.id);
-
   render() {
-    const isVisible = this.props.screenIds.length > 1;
-    const showDropdown = isVisible && this.state.opened;
-    const button = (
-        <button style={[commonStyles.button, styles.copyElementToScreenButton]}
-          onClick={this.handleDropdownClick}
-        >
-          Copy to screen
-        </button>);
-    const otherScreens = !showDropdown ? [] : this.props.screenIds
+    const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
+    const otherScreens = this.props.screenIds
         .filter((screenId) => screenId !== this.props.currentScreenId)
         .map((screenId) => function(screenId) {
           return (
-              <button style={styles.screen} id={screenId}
-                   onClick={this.handleCopyElementToScreen}
-              />
+              <PopUpMenu.Item onClick={this.props.handleCopyElementToScreen(screenId)}>Screen: {screenId}</PopUpMenu.Item>
           );
         });
+
     return (
-        <div style={styles.main}>
-          {isVisible && button}
-          {isVisible && otherScreens}
+        <div style={styles.main} ref={element => this.element = element}>
+          <button style={[commonStyles.button, styles.copyElementToScreenButton]}
+                  onClick={this.handleDropdownClick}>
+            Copy to screen <i className="fa fa-chevron-down" />
+          </button>
+          <PopUpMenu
+              isOpen={this.state.opened}
+              targetPoint={targetPoint}
+              beforeClose={this.close}>
+            {otherScreens}
+            <PopUpMenu.Item onClick={() => {}}>One more that does nothing: {otherScreens.length}</PopUpMenu.Item>
+          </PopUpMenu>
         </div>
     );
   }
