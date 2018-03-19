@@ -29,6 +29,8 @@ patch '/v2/students/:id' do |id|
   content_type :json
   JSON.pretty_generate(student.to_hash)
 end
+
+# DEPRECATED: Use PATCH /dashboardapi/sections/<id>/students/<student_id>
 post '/v2/students/:id/update' do |id|
   call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/students/#{id}"))
 end

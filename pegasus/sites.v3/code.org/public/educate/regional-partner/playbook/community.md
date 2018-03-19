@@ -11,13 +11,12 @@ nav: regional_partner_playbook_nav
 As a Code.org Partner, you’ve agreed to:
 
 - Be the regional hub of a nationwide CS education movement
-- Plan and host an event for your teachers at TeacherCon in Year 1 of the partnership
-- Organize at least 4 community meetups per year
-- Host a computer science fair in Year 2 of the partnership
+- Plan and host an event for your teachers at TeacherCon in Year 1 of the partnership ([details](#teachercon))
+- Organize at least 4 community meetups per year ([details](#comm))
+- Host a computer science fair in Year 2 of the partnership ([details](#csfair))
 
 
 <img style="float: right; margin-left: 50px; width: 325px" src="/images/plpcshub.jpg"/>
-
 
 
 
@@ -33,9 +32,11 @@ The following are a list of resources and ideas you can use to build your local 
 - Go to a local [Computer Science Teacher Association (CSTA)](https://csta.acm.org/) chapter meeting
 - Have an open house for parents and other community members to participate in an Hour of Code and find out more about computer science learning opportunities
 
+<a name="teachercon"></a>
 ## TeacherCon Community Event
 See <a href="https://docs.google.com/document/d/1EZW13Z4LU60emIEsoygIo5y4eqqf_QzoaiiukOTGhLU/edit" target=_blank>these guidelines</a> for planning a successful event at TeacherCon 2018! 
 
+<a name="comm"></a>
 ## Community Events for Teachers
 **What’s the goal?**<br/>
 Teachers should feel supported as members of a teacher community. Use community events to foster that sense of support and community!
@@ -57,5 +58,6 @@ Here are a few **examples of events** you can host to build teacher community.
 - Find a local tech company or university to host a tour and information session so teachers can learn more about current research and trends in computer science careers and education.
 - Host a [teacher hackathon](https://edtechhandbook.com/case-studies/remixed-how-to-host-an-education-hackathon/) at your location for CS educators in the area. It's a great way to network and encourage teachers to code and create!
 
+<a name="csfair"></a>
 ## Computer Science Fair
 In Year 2 of your partnership, hold a computer science fair showcasing students and student projects in your region.  See [this overview](https://docs.google.com/document/d/1zdolbbIN8hQzfdivqHWTzNR-WdYQ8U3U19UTpYb20Wk/edit?ts=59c53f15) for more information and sample agenda. See the [CS Fair - Allowable Expenses](https://docs.google.com/document/d/1YXIUGohlNNZKiGjHcywuyBV9e_c3UDE6CcgAfShOWuI/edit?ts=59ef9992) for additional guidelines on expenses. 
