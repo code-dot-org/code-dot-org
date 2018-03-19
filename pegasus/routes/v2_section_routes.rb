@@ -92,6 +92,7 @@ post '/v2/sections/:id/students' do |id|
   )
 end
 
+# DEPRECATED: Use POST /dashboardapi/sections/<id>/students/<id>/remove
 delete '/v2/sections/:id/students/:student_id' do |id, student_id|
   only_for 'code.org'
   dont_cache
