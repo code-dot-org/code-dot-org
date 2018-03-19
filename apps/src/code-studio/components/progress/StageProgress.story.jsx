@@ -3,7 +3,8 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import StageProgress from './StageProgress';
 import stageLock from '../../stageLockRedux';
-import progress, { initProgress, setStageExtrasEnabled } from '../../progressRedux';
+import progress, { initProgress, mergeProgress, setStageExtrasEnabled, setStageTrophyEnabled } from '../../progressRedux';
+import { TestResults } from '@cdo/apps/constants';
 
 const activityPuzzle = {
   ids: [
@@ -90,7 +91,7 @@ const unplugged = {
 };
 
 export default storybook => {
-  const createStoreForLevels = (levels, currentLevelIndex, showStageExtras, onStageExtras) => {
+  const createStoreForLevels = (levels, currentLevelIndex, showStageExtras, onStageExtras, showStageTrophy) => {
     const store = createStore(combineReducers({progress, stageLock}));
     store.dispatch(initProgress({
       currentLevelId: onStageExtras ?
@@ -104,7 +105,9 @@ export default storybook => {
         levels
       }]
     }));
+    store.dispatch(mergeProgress({123: TestResults.ALL_PASS}));
     store.dispatch(setStageExtrasEnabled(showStageExtras));
+    store.dispatch(setStageTrophyEnabled(showStageTrophy));
     return store;
   };
 
@@ -199,6 +202,87 @@ export default storybook => {
             activityPuzzle,
             conceptPuzzle,
           ], 1, true /* showStageExtras */, true /* onStageExtras */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage empty trophy',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            assessment1,
+            assessment1,
+          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage 20% trophy',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            activityPuzzle,
+            assessment1,
+            assessment1,
+            assessment1,
+            assessment1,
+          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage 67% trophy',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            activityPuzzle,
+            activityPuzzle,
+            assessment1,
+          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          return (
+            <div style={{display: 'inline-block'}} className="header_level">
+              <Provider store={store}>
+                <StageProgress/>
+              </Provider>
+            </div>
+          );
+        }
+      },
+
+      {
+        name: 'with stage mastered trophy',
+        // Provide an outer div to simulate some of the CSS that gets leaked into
+        // this component
+        story: () => {
+          const store = createStoreForLevels([
+            activityPuzzle,
+            activityPuzzle,
+            activityPuzzle,
+          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>

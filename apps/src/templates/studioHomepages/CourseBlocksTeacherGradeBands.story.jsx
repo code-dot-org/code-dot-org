@@ -3,7 +3,7 @@ import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 
 export default storybook => {
   return storybook
-    .storiesOf('CourseBlocksTeacherGradeBands', module)
+    .storiesOf('Courses/CourseBlocksTeacherGradeBands', module)
     .withReduxStore()
     .addStoryTable([
       {

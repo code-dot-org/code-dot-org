@@ -18,6 +18,7 @@ import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
+import {Checkbox} from 'react-bootstrap';
 import experiments from '@cdo/apps/util/experiments';
 
 const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
@@ -241,6 +242,20 @@ class ManageStudentsTable extends Component {
     );
   };
 
+  projectSharingFormatter = (projectSharing, {rowData}) => {
+    let disabled = rowData.isEditing ?
+      this.props.editingData[rowData.id].age.length === 0 :
+      true;
+
+    return (
+      <span>
+        <Checkbox
+          disabled={disabled}
+        />
+      </span>
+    );
+  };
+
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
   };
@@ -272,7 +287,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 300
+            width: 260
           }},
           transforms: [sortable],
         },
@@ -281,7 +296,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 300
+            width: 260
           }}
         }
       },
@@ -358,12 +373,15 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 130
           }},
         },
         cell: {
+          format: this.projectSharingFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130}
           }}
         }
       },
