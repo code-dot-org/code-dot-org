@@ -498,11 +498,14 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       gender: updatedStudentsInfo[i].gender,
     };
   }
+  const students = {
+    students: studentsToAdd
+  };
   $.ajax({
-    url: `/v2/sections/${sectionId}/students`,
+    url: `/dashboardapi/sections/${sectionId}/students/bulk_add`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(studentsToAdd),
+    data: JSON.stringify(students),
   }).done((data) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
