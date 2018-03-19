@@ -9,7 +9,7 @@ import teacherSections, {
 import TeacherSections from './TeacherSections';
 
 export default storybook => storybook
-  .storiesOf('TeacherSections', module)
+  .storiesOf('Homepages/Teachers/TeacherSections', module)
   .addStoryTable(storyTable);
 
 const sections = [
