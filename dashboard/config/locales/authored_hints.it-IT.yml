@@ -921,7 +921,7 @@
           per capire come dovrebe muoversi l'uccellino.
       K2.0 sequence 8_authored_hint:
         K2.0_sequence_8_a: Bloccato? Prova a tracciare con le dita il percorso che
-          deve seguire dell'uccellino.
+          deve seguire l'uccellino.
       K2.0 sequence 9_authored_hint:
         K2.0_sequence_9_a: Se hai problemi, prova prima a scrivere i passaggi su un
           foglio di carta.
@@ -2837,9 +2837,11 @@
         courseA_artist_loops4_a: Per indicare quante volte vuoi che il ciclo sia ripetuto,
           devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi
           (???) che vedi nella parte superiore del blocco.
-        courseA_artist_loops4_b: Dato che puoi usare solo un blocco <xml><block type="simple_move_right"/></xml>,
-          prova a metterlo all'interno del ciclo<block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="2-6">5</title></block>
+        courseA_artist_loops4_b: |-
+          Dato che puoi utilizzare solo un blocco
+          <xml><block type="simple_move_right"/></xml>
+          prova a metterlo all'interno del ciclo
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: |-
           Prova a utilizzare quello che hai imparato sui blocchi
@@ -2864,16 +2866,18 @@
           uno schema che si ripete e sostituiscilo con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo
           per disegnare le altre due.
-        courseA_artist_loops7_c: 'Ricorda: puoi mettere più di un blocco dentro all''interno
-          di un ciclo <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>'
+        courseA_artist_loops7_c: |-
+          Ricorda: puoi mettere più di un blocco all'interno di un ciclo
+          <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora
           prima prova a scrivere il programma con tanti blocchi azzurri, poi individua
           uno schema che si ripete e sostituiscilo con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo
           per disegnare le altre due.
-        courseA_artist_loops7_c: 'Ricorda: puoi mettere più di un blocco dentro all''interno
-          di un ciclo <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>'
+        courseA_artist_loops7_c: |-
+          Ricorda: puoi mettere più di un blocco all'interno di un ciclo
+          <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>
       courseA_artist_loops8_authored_hint:
         courseA_artist_loops8_a: Prova ad eseguire il codice, per capire cosa è già
           stato scritto per te.
@@ -2952,7 +2956,7 @@
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           uno dopo l'altro.
       courseA_collector_loops7_authored_hint:
-        courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, provare
+        courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, prova
           ad eseguire il codice per vedere dove va a finire Laurel.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo
@@ -3050,8 +3054,8 @@
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: 1 dei blocchi sposta l'uccellino nella direzione sbagliata.
           Riesci a capire qual è e a sostituirlo con il blocco corretto?
-        courseA_maze_seq3_b: Try using the step button to find where the program goes
-          wrong. Is it the first step? The second?
+        courseA_maze_seq3_b: Prova ad usare il pulsante "Fai un passo" per capire
+          dov'è l'errore. È al 1^ passo? Al 2^?
         courseA_maze_seq3_c: Questo blocco <xml><block type="maze_moveNorth"/></xml>
           non sembra muovere l'uccellino nella direzione corretta. Puoi sostituirlo
           con un altro blocco?
@@ -3073,7 +3077,7 @@
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Il tuo programma finale dovrebbe avere 3 blocchi di movimento.
         courseA_maze_seq6_b: Se ti blocchi, prova a risolvere l'esercizio in due parti,
-          una parte prima della curva ed l'altra dopo la curva.
+          una parte prima della curva e l'altra dopo la curva.
       courseA_maze_seq7_authored_hint:
         courseA_maze_seq7_a: Hai bisogno di aggiungere 1 blocco per far arrivare l'uccellino
           fino al maialino.
@@ -3085,7 +3089,7 @@
           carta per capire come dovrebe muoversi l'uccellino.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Bloccato? Prova a tracciare con le dita il percorso che
-          deve seguire dell'uccellino.
+          deve seguire l'uccellino.
         courseA_maze_seq9_b: Se non sai cosa fare, prova a premere "Ripristina" e
           fai partire il programma per vedere cosa non funziona.
         courseA_maze_seq9_c: Dovrai muoverti in 3 direzioni per risolvere questo esercizio.
@@ -3133,7 +3137,7 @@
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "Ecco i blocchi degli eventi che dovresti usare
           per far muovere Jorge in su e in giù:\n<xml><block type=\"studio_whenArrow\">\n
-          \   <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\ne \n<xml><block
           type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Sapevi che puoi cambiare il verso della freccia nel blocco evento, cliccando sul disegno e scegliendone uno nuovo?
@@ -3586,7 +3590,7 @@
         courseB_maze_seq4_b: You will want to move East to solve this puzzle.
       courseB_maze_seq5_authored_hint:
         courseB_maze_seq5_a: If you get stuck, try drawing out the path on paper.
-        courseB_maze_seq5_b: There are 2 ways to solve this puzzle!
+        courseB_maze_seq5_b: Ci sono 2 modi per risolvere questo esercizio!
         courseB_maze_seq5_c: Not sure how to get to the pig?  Try this path.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_a: Your final code should have three movement blocks.
@@ -3615,7 +3619,7 @@
       courseB_maze_seq9_challenge1_authored_hint: []
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Bloccato? Prova a tracciare con le dita il percorso
-          che deve seguire dell'uccellino.
+          che deve seguire l'uccellino.
         courseB_maze_seqCold_b: The extra blocks need to be added before the last
           ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51
           PM.png )
@@ -11212,7 +11216,7 @@
           you solve the puzzle.
       grade1_maze_sequence8_authored_hint:
         grade1_maze_sequence8_a: Bloccato? Prova a tracciare con le dita il percorso
-          che deve seguire dell'uccellino.
+          che deve seguire l'uccellino.
         grade1_maze_sequence8_b: The extra blocks need to be added before the last
           ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51
           PM.png )
@@ -12160,7 +12164,7 @@
         gradek_adventurer_loops4a_a: Can't figure out what's wrong? Try running the
           code to see what happens.
       gradek_adventurer_loops5_authored_hint:
-        gradek_adventurer_loops5_a: Se non riesci a capire che cosa accade dopo, provare
+        gradek_adventurer_loops5_a: Se non riesci a capire che cosa accade dopo, prova
           ad eseguire il codice per vedere dove va a finire Laurel.
       gradek_adventurer_loops6_authored_hint:
         gradek_adventurer_loops6_a: If you are having trouble figuring this puzzle

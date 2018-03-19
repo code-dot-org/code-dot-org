@@ -11059,6 +11059,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Bloku "na klik" prikači odgovarajući blok pa klikni na
         "Pokreni". Klikni ili dodirni ekran da pomakneš Flappyja prema meti.
+      flappy_11_instruction: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke
+        elemente i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj
+        da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
       flappy_2_instruction: Sada smo dodali tlo. Prikači odgovarajući blok na blok
         "kada padne na tlo". Kad Flappy padne, tvoj kôd treba označiti 'KRAJ IGRE'.
       flappy_3_instruction: Blok "pri pokretanju" ti omogućuje da pokreneš svoj program
@@ -11078,9 +11081,6 @@
         neki drugi događaj, na primjer, kad prođe prepreku.
       flappy_9_instruction: 'Da izmijenimo pravila: napravi da se, kad udariš u prepreku,
         broj bodova vrati na 0 umjesto da igra završi.'
-      flappy_11_instruction: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke
-        elemente i sva pravila, čak i gravitaciju. Kad budeš gotov, klikni na Kraj
-        da omogućiš prijateljima da isprobaju tvoju igru na svojim mobitelima.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.

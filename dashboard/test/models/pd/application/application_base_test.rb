@@ -203,5 +203,14 @@ module Pd::Application
 
       assert_equal expected_full_answers, application.full_answers
     end
+
+    test 'date_accepted formats the accepted date as iso8601' do
+      application = ApplicationBase.new
+      assert_nil application.date_accepted
+
+      # March 9, 2018 10:15am
+      application.accepted_at = DateTime.new(2018, 3, 9, 10, 15)
+      assert_equal '2018-03-09', application.date_accepted
+    end
   end
 end

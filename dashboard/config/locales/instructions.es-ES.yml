@@ -10468,6 +10468,9 @@
       flappy_1_instruction: |-
         Adjunta un bloque al bloque "Cuanto Clica", luego presione
         "Ejecutar". Haz clic o toca la pantalla para mover Flappy al objetivo.
+      flappy_11_instruction: "Crea tu propio juego Flappy. Puedes cambiar todos\n
+        los gráficos y todas las reglas, incluso la gravedad. Cuando termines, \nhaz
+        clic en Finalizar para que tus amigos prueben tu juego en sus teléfonos."
       flappy_2_instruction: Ahora hemos agregado el suelo.  Adjunta un bloque al bloque
         "cuando golpe el suelo".  Tú código necesita 'TERMINAR EL JUEGO' cuando Flappy
         golpe el bloquea.
@@ -10490,9 +10493,6 @@
         cuando sucedan otros eventos, por ejemplo, al pasar un obstáculo.
       flappy_9_instruction: Para mezclar las cosas, al chocar con un obstáculo, en
         vez de terminar el juego, intente ajustar el marcador de nuevo a 0.
-      flappy_11_instruction: "Crea tu propio juego Flappy. Puedes cambiar todos\n
-        los gráficos y todas las reglas, incluso la gravedad. Cuando termines, \nhaz
-        clic en Finalizar para que tus amigos prueben tu juego en sus teléfonos."
       frozen circle function in circle_instruction: Ahora crearemos 20 círculos superpuestos,
         girando 18 grados entre cada círculo.
       frozen circle function with parameter_instruction: Aquí está un bloque "Crear

@@ -10317,6 +10317,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Kinnita ploki „kui klikid“ külge plokk ja vajuta nuppu
         „Käivita“. Kliki või puuduta ekraani, et Flappy liiguks sihtmärgi suunas.
+      flappy_11_instruction: Loo oma Bounce'i mäng. Võid muuta kõiki visuaalseid elemente,
+        reegleid ja isegi gravitatsiooni. Kui oled valmis, vajuta nuppu „Valmis“ ning
+        lase sõpradel telefonis mängu proovida.
       flappy_2_instruction: Nüüd lisasime maapinna.  Lisa ploki „kui puudutab maapinda“
         külge plokk.  Sinu kood peab 'MÄNGU LÕPETAMA', kui Flappy teeb kokkupõrke.
       flappy_3_instruction: Plokk „pärast käivitamist“ käivitab mängu alustamisel
@@ -10337,9 +10340,6 @@
         näiteks takistusest möödumiseks.
       flappy_9_instruction: Et asi oleks natuke huvitavam, proovi teha nii, et takistuse
         vastu põrgates mitte mäng ei lõppe, vaid punktid lähevad nulli.
-      flappy_11_instruction: Loo oma Bounce'i mäng. Võid muuta kõiki visuaalseid elemente,
-        reegleid ja isegi gravitatsiooni. Kui oled valmis, vajuta nuppu „Valmis“ ning
-        lase sõpradel telefonis mängu proovida.
       frozen circle function in circle_instruction: Nüüd loome 20 osaliselt kattuvat
         ringi, pöörates iga ringi vahel 18 kraadi.
       frozen circle function with parameter_instruction: Siin on "Create circle" blokk

@@ -38,31 +38,31 @@ describe('OwnedSections', () => {
     );
   });
 
-  it('renders a SectionTable with no extra button if no hidden sections', () => {
+  it('renders a OwnedSectionsTable with no extra button if no hidden sections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
       />
     );
-    expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
+    expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
     // No button to view hidden (notification button not counted)
     expect(wrapper.find('Button').length).to.equal(0);
   });
 
-  it('renders a SectionTable with view button if hidden sections', () => {
+  it('renders a OwnedSectionsTable with view button if hidden sections', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
         hiddenSectionIds={[13]}
       />
     );
-    expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
+    expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
     // Button to view hidden (notification not counted)
     expect(wrapper.find('Button').length).to.equal(1);
     expect(wrapper.find('Button').at(0).props().text, 'View hidden sections');
   });
 
-  it('renders two SectionsTables if view hidden sections clicked', () => {
+  it('renders two OwnedSectionsTables if view hidden sections clicked', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
@@ -70,13 +70,13 @@ describe('OwnedSections', () => {
       />
     );
     wrapper.find('Button').at(0).simulate('click');
-    expect(wrapper.find('Connect(SectionTable)').length).to.equal(2);
-    expect(wrapper.find('Connect(SectionTable)').at(0).props().sectionIds).to.deep.equal([11,12]);
-    expect(wrapper.find('Connect(SectionTable)').at(1).props().sectionIds).to.deep.equal([13]);
+    expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(2);
+    expect(wrapper.find('Connect(OwnedSectionsTable)').at(0).props().sectionIds).to.deep.equal([11,12]);
+    expect(wrapper.find('Connect(OwnedSectionsTable)').at(1).props().sectionIds).to.deep.equal([13]);
     expect(wrapper.find('Button').at(0).props().text).to.equal('Hide hidden sections');
   });
 
-  it('renders just unhidden SectionsTable if hide sections clicked', () => {
+  it('renders just unhidden SectionsAsStudentTable if hide sections clicked', () => {
     const wrapper = shallow(
       <OwnedSections
         {...defaultProps}
@@ -85,8 +85,8 @@ describe('OwnedSections', () => {
     );
     wrapper.find('Button').at(1).simulate('click');
     wrapper.find('Button').at(1).simulate('click');
-    expect(wrapper.find('Connect(SectionTable)').length).to.equal(1);
-    expect(wrapper.find('Connect(SectionTable)').props().sectionIds).to.deep.equal([11,12]);
+    expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
+    expect(wrapper.find('Connect(OwnedSectionsTable)').props().sectionIds).to.deep.equal([11,12]);
   });
 
   it('renders a Notification about adding a new section', () => {

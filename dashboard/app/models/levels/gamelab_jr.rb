@@ -27,6 +27,7 @@ class GamelabJr < Gamelab
   serialized_attrs %w(
     helper_libraries
     custom_helper_library
+    custom_blocks
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -37,10 +38,10 @@ class GamelabJr < Gamelab
         level_num: 'custom',
         properties: {
           code_functions: JSON.parse(palette),
-          show_d_pad: true,
-          edit_code: "false",
           show_debug_watch: true,
-          use_helper_lib: true,
+          helper_libraries: [
+            "GameLabJr",
+          ],
         }
       )
     )
@@ -52,12 +53,15 @@ class GamelabJr < Gamelab
   <block type="when_run" />
 </category>
 <category name="Variables" custom="VARIABLE" />
+<category name="Functions" custom="PROCEDURE" />
 <category name="World">
   <block type="gamelab_setBackground">
     <value name="COLOR">
       <block type="colour_picker"></block>
     </value>
   </block>
+  <block type="gamelab_showTitleScreen" />
+  <block type="gamelab_hideTitleScreen" />
 </category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
@@ -146,6 +150,10 @@ class GamelabJr < Gamelab
   </block>
   <block type="controls_flow_statements" />
 </category>
+<category name="Text">
+  <block type="text_join_simple" inputcount="2" />
+  <block type="text" />
+</category>
     XML
   end
 
@@ -159,8 +167,16 @@ class GamelabJr < Gamelab
     XML
   end
 
+  def default_toolbox_blocks
+    complete_toolbox 'default_blocks'
+  end
+
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
+  end
+
+  def uses_droplet?
+    false
   end
 end

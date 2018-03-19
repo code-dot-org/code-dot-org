@@ -30,7 +30,7 @@ ENV["RACK_ENV"] = "test"
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-CDO.rack_env = "test" if defined? CDO
+CDO.rack_env = :test if defined? CDO
 Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)

@@ -10780,6 +10780,9 @@
       flappy_1_instruction: Vedhæft en blok til "når der klikkes" blokken, derefter
         tryk på "Kør Program". Klik på eller tryk på skærmen for at flytte Flappy
         til målet.
+      flappy_11_instruction: Opret dit egen Flappy spil. Du kan ændre alle visuelle
+        ting og alle regler, selv tyngdekraften. Når du er færdig, klik på del for
+        at lade dine venner prøve dit spil på deres mobil-telefoner.
       flappy_2_instruction: Vi har nu tilføjet noget jord.  Vedhæft en blok til "når
         rammer jorden"-blok.  Din kode skal 'SLUTTE SPILLET' når Flappy falder.
       flappy_3_instruction: '"Når spillet starter"-blokken tillader dig at køre kode,
@@ -10800,9 +10803,6 @@
         sker, for eksempel, når de passerer en hindring.
       flappy_9_instruction: For at blande tingene, så prøv at sætte score til 0, når
         man rammer en forhindring, stedet for at afslutte spillet.
-      flappy_11_instruction: Opret dit egen Flappy spil. Du kan ændre alle visuelle
-        ting og alle regler, selv tyngdekraften. Når du er færdig, klik på del for
-        at lade dine venner prøve dit spil på deres mobil-telefoner.
       frozen circle function in circle_instruction: Lad os nu lave 20 overlappende
         cirkler mens vi drejer 18 grader mellem hver cirkel.
       frozen circle function with parameter_instruction: Her er en "Lav cirkel" blok,

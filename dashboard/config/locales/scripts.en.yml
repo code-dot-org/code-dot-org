@@ -965,6 +965,7 @@ en:
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
@@ -7226,3 +7227,13 @@ en:
           description_audience: ''
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+        textbook:
+          stages:
+            Test Map Level:
+              name: Test Map Level
+            new stage:
+              name: new stage
+          title: CSF Textbook Pages
+          description_audience: ''
+          description_short: ''
+          description: ''

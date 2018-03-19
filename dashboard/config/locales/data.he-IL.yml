@@ -271,115 +271,8 @@
         maze_3_2: "כתוב לי תוכנה כדי שאוכל להגיע עד לחזיר."
         maze_3_3: "איך אני אגיע לחזיר? תזהר שאני לא יתקל בTNT!"
         maze_3_4: "אוף! כתוב לי תוכנה שעוזרת לי לעבור מסביב לTNT ולהגיע לחזיר."
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: צרף בלוק לבלוק "כאשר לוחצים על החץ שמאלה" ולאחר מכן לחץ על "הפעל".
-          הזז את המשוט בעזרת החץ שמאלה כדי להגיע ליעד.
-        bounce_2: צרף בלוק לבלוק "כאשר לוחצים על החץ ימינה" ול-"כאשר לוחצים על החץ
-          שמאלה". הזז את המשוט כדי להגיע לשני היעדים.
-        bounce_3: עכשיו נסה משהו דומה עם הבלוק "כאשר חץ למעלה". הזז את המשוט כדי להגיע
-          למטרת הסיום בלמעלה.
-        bounce_4: "הפעם תצטרך להוסיף ארבע בלוקים. הזז את המשוט לכל ארבע מטרות הסיום
-          כדי לסיים את החידה הזה."
-        bounce_5: אנחנו הולכים לשלוח כדור לכיוון המשוט. הוסף בלוק לבלוק "כאשר כדור
-          פוגע במשוט" כדי לוודע שהכדור מגיע למטרת הסיום.
-        bounce_6: עכשיו מטרת הסיום היא למעלה. אתה צריך להוסיף בלוקים לשני הבלוקים
-          "כאשר כדור פוגע" כדי לפתור את החידה הזאת.
-        bounce_7: צרפו בלוקים לכל אחד מבלוקים ה-"כאשר...". תקפיצו את הכדור עד שהוא
-          פוגע במטרת הסיום.
-        bounce_10: There is a now a goal at the top. Attach the "score point" and
-          "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses paddle" blocks to make a game. See how many points you can score
-          before your opponent scores twice.
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
         Custom_builder: גרור בלוקים מתיבת הכלים אל סביבת העבודה כדי לצייר שלב שאתה
           רוצה ליצור. לחץ "הרץ" כשאתה מוכן.
-        flappy_1: הוסיפו בלוק לבלוק "בזמן קליק" ולאחר מכן לחץ על "הרץ". לחץ או הקש
-          על המסך כדי להעביר את פלאפי אל המטרה.
-        flappy_2: כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע באדמה". התוכנית
-          שבניתם זקוקה לבלוק "סיים המשחק" כאשר פלאפי מתרסק.
-        flappy_3: הבלוק "התחל ריצה" מאפשר להריץ קוד בתחילת המשחק. נסה להגדיר את המהירות
-          ונסה לעוף לכיוון המטרה.
-        flappy_4: פלאפי יעוף דרך המכשולים אלא אם תכתוב קוד שיגרום לו להתרסק. הוסף
-          בלוק לבלוק "כאשר פוגע במכשול". הקוד שלך צריך ל-'סיים המשחק' כאשר פלאפי מתרסק
-          לתוך סט הצינורות הראשונים.
-        flappy_5: בואו נוסיף לוח תוצאות ונספור נקודות כאשר פלאפי עובר מכשול. הוסף
-          לבלוק "כאשר עובר מכשול", ואז נוסיף נקודה כאשר פלאפי עף דרך את הסט הראשון
-          של הצינורות.
-        flappy_6: "ראו אם תוכלו עדיין לקבל נקודה אחרי שתגרמו לפלאפי לנפנף בכמות קטנה
-          או גדולה יותר."
-        flappy_7: עכשיו, נסה לשנות את הרקע על-ידי הוספת בלוק אחר לבלוק "התחל ריצה".
-        flappy_8: "באפשרותך להגדיר נראות בכל עת, לא רק כאשר המשחק מתחיל. נסה להגדיר
-          רקע אקראי כאשר קורים אירועים אחרים, לדוגמה, כאשר עוברים מכשול."
-        flappy_9: "כדי לסבך דברים, כאשר פוגעים במכשול, במקום לסיים את המשחק נסה לשנות
-          את התוצאה חזרה ל-0."
-        flappy_11: צרו משחק "פלאפי" משלכם. אתם יכולים לשנות את הדמויות ואת כל החוקים,
-          אפילו את כוח המשיכה. כשתסיימו, הקליקו על "סיים" כדי לאפשר לחברים שלכם לנסות
-          את המשחק שבניתם על המכשירים הניידים שלהם.
-        flappy_k1_1: "לשחק Flappy"
-        flappy_k1_2: הוסיפו בלוק לבלוק "בזמן קליק" ולאחר מכן לחץ על "הרץ". לחץ או
-          הקש על המסך כדי להעביר את פלאפי אל המטרה.
-        flappy_k1_3: כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע באדמה". התוכנית
-          שבניתם זקוקה לבלוק "סיים המשחק" כאשר פלאפי מתרסק.
-        flappy_k1_4: הבלוק "התחל ריצה" מאפשר להריץ קוד בתחילת המשחק. נסה להגדיר את
-          המהירות ונסה לעוף לכיוון המטרה.
-        flappy_k1_5: פלאפי יעוף דרך המכשולים אלא אם תכתוב קוד שיגרום לו להתרסק. הוסף
-          בלוק לבלוק "כאשר פוגע במכשול". הקוד שלך צריך ל-'סיים המשחק' כאשר פלאפי מתרסק
-          לתוך סט הצינורות הראשונים.
-        flappy_k1_6: בואו נוסיף לוח תוצאות ונספור נקודות כאשר פלאפי עובר מכשול. הוסף
-          לבלוק "כאשר עובר מכשול", ואז נוסיף נקודה כאשר פלאפי עף דרך את הסט הראשון
-          של הצינורות.
-        flappy_k1_7: "תראו אם תוכלו לקבל מספר נקודות כאשר עוברים מכשול"
-        flappy_k1_8: עכשיו, נסה לשנות את הרקע על-ידי הוספת בלוק אחר לבלוק "התחל ריצה".
-        flappy_k1_9: תנסו לשנות את השחקן על-ידי הוספת בלוק "קבע שחקן" לבלוק "התחל
-          ריצה".
         jigsaw_1: "לחץ על הבלוק"
         jigsaw_2: "גרור את הבלוק אל המטרה"
         jigsaw_3: "ארגן את הבלוקים כדי ליצור תמונה"
@@ -834,6 +727,7 @@
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

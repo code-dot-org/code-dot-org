@@ -73,7 +73,11 @@ Dashboard::Application.routes.draw do
   # Section API routes (JSON only)
   concern :section_api_routes do
     resources :sections, only: [:index, :show, :create, :destroy] do
-      resources :students, only: [:index], controller: 'sections_students'
+      resources :students, only: [:index, :update], controller: 'sections_students' do
+        collection do
+          post 'bulk_add'
+        end
+      end
       member do
         post 'join'
         post 'leave'
@@ -554,6 +558,7 @@ Dashboard::Application.routes.draw do
       get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
       get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
       get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
+      get 'regional_partners/capacity', to: 'regional_partners#capacity'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 

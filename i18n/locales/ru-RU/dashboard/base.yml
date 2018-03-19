@@ -9,15 +9,15 @@ ru:
     errors:
       messages:
         blank: "требуется"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "необходимы"
+        invalid_plural: "недопустимы"
     attributes:
       user:
         name: 'Отобразить имя'
         name_example: 'Отображаемое имя<br/>(например, Крутой Кодер или Джейн С.)'
         email: 'Электронная почта'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Электронная почта родителя/опекуна'
+        personal_email: "Личная электронная почта <a href=\"%{url}\"> (нажмите сюда, если у Вас нет электронной почты)</a>"
         username: 'имя пользователя'
         password: 'пароль'
         password_confirmation: 'Подтверждение пароля'
@@ -84,12 +84,12 @@ ru:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Учетная запись Майкрософт'
-    clever: 'Clever Account'
+    clever: 'Аккаунт Clever'
     forgot_password: 'Забыли пароль?'
     need_confirmation: "Не получили инструкции по подтверждению?"
     need_unlock: "Не получили инструкции для разблокированию?"
     not_linked: "Извините, но вам надо ввести ваш пароль внизу, чтобы продолжить. Ваша учётная запись не зарегистрирована в %{provider}."
-    use_clever: "Sorry, your Code.org account is not linked to your %{provider}. Please sign in through your Clever Portal instead."
+    use_clever: "Извините, Ваш аккаунт в Code.org не соединён с Вашим %{provider}. Пожалуйста, войдите в Ваш портал Clever."
   signup_form:
     student_count: 'Зарегистрировано учеников: %{count}.'
     teacher_count: 'Зарегистрировано учителей: %{count}.'
@@ -171,7 +171,7 @@ ru:
       email: 'Адрес электронной почты'
       submit: 'Отправить'
     reset_errors:
-      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
+      captcha_required: 'Пожалуйста, заполните поле CAPTCHA, чтобы сбросить Ваш пароль.'
       invalid_email: 'Похоже, Вы зарегистрировались с неверным адрес электронной почты. Пожалуйста, напишите об этом в support@code.org, и Вы получите ссылку на восстановление пароля.'
     change_form:
       title: 'Смена пароля'
@@ -189,7 +189,7 @@ ru:
       
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Входные данные для Code.org'
   teacher_mailer:
     new_teacher_subject: 'Добро пожаловать на Code.org!'
   section:
@@ -201,8 +201,8 @@ ru:
       remove: 'Вы хотите выйти из раздела?'
     remove: '(удалить раздел)'
     type:
-      picture: 'Picture Password'
-      word: 'Secret Words'
+      picture: 'Графический пароль'
+      word: 'Тайные слова'
       email: 'Электронная почта'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -218,7 +218,7 @@ ru:
       section_not_found: "Не удается найти раздел с кодом '%{section_code}'."
       blank_code: "Введите код раздела"
       cant_join_own_section: "К сожалению, вы не можете присоединиться к своему разделу."
-      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
+      provider_managed_section: "Этот раздел добавлен другим провайдер и не может быть добавлен. Пожалуйста, попросите Вашего учителя, что он добавил Вас через %{provider}, и перезагрузите раздел."
     mail:
       student_disassociated:
         subject: "Уведомление от Code.org: %{student_name} больше не является вашим учеником."
@@ -242,9 +242,9 @@ ru:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
+        user_type_change_email_mismatch: "Адрес электронной почты, который Вы ввели, не совпадает с адресом почты для этого аккаунта"
+        personal_login_created_email: 'Вы успешно создали персональный логин. Теперь Вы можете войти в свой аккаунт при помощи пароля и адреса электронной почты'
+        personal_login_created_username: 'Вы успешно создали персональный логин. Теперь Вы можете войти в свой аккаунт при помощи имени (%{username}) и пароля'
   nav:
     header:
       finished_hoc: "Я закончил свой час кода"
@@ -254,10 +254,10 @@ ru:
         artist: 'Нарисуйте что-нибудь'
         calculate: 'Calculate something'
         applab: 'Создать приложение'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
+        gamelab: 'Создать проект Игровой Лаборатории'
+        weblab: 'Создать проект Web-Лаборатории (beta)'
       home: "На главную"
-      my_dashboard: "My Dashboard"
+      my_dashboard: "Моя доска"
       courses: "курсы"
       course_catalog: "Каталог курсов"
       project_gallery: "Проекты"
@@ -358,15 +358,15 @@ ru:
     deleted_user: 'пользователь удален'
     no_password_because_oauth: 'Нет пароля, поскольку вы вошли с другого компьютера.'
     no_password_because_sponsored: 'Обратитесь к учителю для управления вашим паролем.'
-    create_personal_login: 'Create a personal login'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login: 'Создать персональный логин'
+    create_personal_login_under_13_info: 'Если Вы хотите продолжить пользоваться своим аккаунтом Code.org даже после окончания учебного года, попросите своего родителя/опекуна помочь создать свой персональный логин ниже.'
     create_personal_login_under_13_username: "Имя пользователя (не используйте своё настоящее имя!)"
     create_personal_login_under_13_parent_email: 'Адрес электронной почты родителя/опекуна'
-    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
-    enter_new_login_info: 'Enter your new login information'
-    confirm_secret_words: 'Confirm that it is you by entering your current secret words'
+    create_personal_login_info: 'Если Вы хотите продолжить пользоваться своим аккаунтом Code.org даже после окончания учебного года, Вы можете создать свой логин ниже.'
+    create_personal_login_terms: "Создавая персональный профиль, я соглашаюсь <a href='%{terms_of_service_url}', target='_blank'>с правилами поведения Code.org</a>. Если мне 13 лет или менее, я подтверждаю, что у меня есть разрешение моего родителя или опекуна, чтобы пользоваться сервисами Code.org даже без участия учителя."
+    create_personal_login_email_note: "Внимание: Адреса электронной почты не размещаются таким образом, чтобы мы могли контактировать с учениками. Ученики никогда не будут получать электронные письма от Code.org, за исключением восстановления пароля. Просмотрите наши <a href='%{privacy_policy_url}', target='_blank'>правила по политике конфиденциальности</a> для дальнейшей информации."
+    enter_new_login_info: 'Введите Вашу новую информацию о профиле'
+    confirm_secret_words: 'Подтвердите свою личность, введя свои секретные слова'
     enter_parent_email: "Введите адрес электронной почты своих родителей или опекунов (для восстановления пароля)"
   user_level:
     completed: 'Завершено'

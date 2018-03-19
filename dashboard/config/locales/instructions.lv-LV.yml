@@ -11098,6 +11098,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied
         "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.
+      flappy_11_instruction: Izveido pats savu Flappy spēli. Tu vari mainīt visus
+        vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied
+        Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
       flappy_2_instruction: Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos
         pret zemi". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.
       flappy_3_instruction: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle
@@ -11117,9 +11120,6 @@
         no šķēršļa.
       flappy_9_instruction: Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad
         atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0.
-      flappy_11_instruction: Izveido pats savu Flappy spēli. Tu vari mainīt visus
-        vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied
-        Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
