@@ -90,7 +90,7 @@ const createProjectsStore = function () {
 
 export default storybook => {
   storybook
-    .storiesOf('ProjectCardGrid', module)
+    .storiesOf('Projects/ProjectCardGrid', module)
     .addStoryTable([
       {
         name: 'Public Gallery with student info',
