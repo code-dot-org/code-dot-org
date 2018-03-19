@@ -2363,6 +2363,16 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
+  test 'under 13 students have sharing off by default' do
+    student = create :user, age: 10
+    assert student.sharing_disabled
+  end
+
+  test 'over 13 students have sharing on by default' do
+    student = create :user, age: 14
+    refute student.sharing_disabled
+  end
+
   test 'stage_extras_enabled?' do
     script = create :script
     other_script = create :script
