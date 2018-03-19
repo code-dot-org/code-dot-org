@@ -555,6 +555,25 @@ Resources:
       Threshold: 80
       # absence of custom disk utilization Metric could be due to a serious problem on the Instance
       TreatMissingData: breaching
+  DaemonMemoryUtilizationAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - <%= rack_env?(:production) ? 'arn:aws:sns:us-east-1:475661607190:CDO-Urgent' : 'arn:aws:sns:us-east-1:475661607190:CDO-LowPriority' %>
+      AlarmDescription: Send page if daemon memory utilization exceeds 87% for 5 minutes
+      AlarmName: <%="#{rack_env}_daemon_high_memory" %>
+      ComparisonOperator: GreaterThanThreshold
+      Dimensions:
+        - Name: InstanceId
+          Value: <%= daemon_instance_id || "!Ref #{daemon}" %>
+      EvaluationPeriods: 5
+      MetricName: MemoryUtilization
+      Namespace: 'System/Linux'
+      Period: 60
+      Statistic: Maximum
+      Threshold: 87
+      # absence of custom memory utilization Metric could be due to a serious problem on the Instance
+      TreatMissingData: breaching
 <%end-%>
 <% if database -%>
   Database:
