@@ -10061,6 +10061,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Fest ei blokk til "når klikk"-blokka, og trykk "Køyr".
         Klikk eller trykk på skjermen for å flyge Flakse til målet.
+      flappy_11_instruction: Lag ditt eige Flakse-spel! Du kan endre alle bilda og
+        alle reglane, til og med tyngdekrafta. Når du er ferdig, klikk Fullfør og
+        du kan la venane dine prøve spelet på sine telefonar.
       flappy_2_instruction: Vi har no lagt til bakken. Fest ei blokk til "når traff
         bakken"-blokka. Koden må "Avslutt spelet" når Flakse krasjar.
       flappy_3_instruction: Med "Når køyrt"-blokka kan du køyre kode når spelet startar.  Prøv
@@ -10080,9 +10083,6 @@
         når du passerer eit hinder.
       flappy_9_instruction: For å gjere det meir moro, prøv å sette poengsummen tilbake
         til 0 i staden for å avslutte spelet når du treff eit hinder.
-      flappy_11_instruction: Lag ditt eige Flakse-spel! Du kan endre alle bilda og
-        alle reglane, til og med tyngdekrafta. Når du er ferdig, klikk Fullfør og
-        du kan la venane dine prøve spelet på sine telefonar.
       frozen circle function in circle_instruction: Nå skal vi lage 20 overlappande
         sirklar medan vi dreier 18 grader mellom kvar sirkel.
       frozen circle function with parameter_instruction: Her er ei "Lag sirkel"-blokk

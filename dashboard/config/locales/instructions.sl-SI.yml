@@ -10617,6 +10617,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Dodaj blok pod `ko kliknjen` blok ter pritisni "Zaženi".
         Klikni ali tapni na zaslon, da premakneš Flappya do cilja.
+      flappy_11_instruction: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite
+        lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji
+        preizkusijo igrico na svojih telefonih.
       flappy_2_instruction: Sedaj smo dodali tla. Dodaj nov blok k "ko zadene tla"
         bloku. Tvoja koda mora "končaj igro", ko Flappy strmoglavi.
       flappy_3_instruction: Blok "ob zagonu" ti omogoča, da izvedeš kodo ob začetku
@@ -10641,9 +10644,6 @@
       flappy_9_instruction: |-
         To mix things up, when hitting an obstacle, instead
         of ending the game try setting the score back to 0.
-      flappy_11_instruction: Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite
-        lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji
-        preizkusijo igrico na svojih telefonih.
       frozen circle function in circle_instruction: Sedaj ustvarimo 20 prekrivajočih
         se krogov, tako da se med vsakim krogom zasukamo za 18 stopinj.
       frozen circle function with parameter_instruction: "Tu je kocka \"Ustvari krog\",\ns
