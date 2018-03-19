@@ -85,6 +85,7 @@
   "censusExistingInaccuracy": "I believe that the computer science categorization for this school is inaccurate",
   "censusExistingInaccuracyReason": "Explain why you think that the categorization for this school is inaccurate:",
   "censusExistingInaccuracyTip": "If you think that we've incorrectly categorized the school as teaching or not teaching CS, please check this box. We will review your request.",
+  "censusExistingInaccuracyTipLink": "Read more about how we define computer science and categorize schools.",
   "censusEthicalSocial": "Ethical and social issues in computing",
   "censusFollowUpFrequency": "How often per week does this class meet?",
   "censusFollowUp": "Your school offers a semester or year long computer science class! What topics does this course include?",

@@ -4,6 +4,10 @@ export const styles = {
   formHeading: {
     marginTop: 20
   },
+  checkboxLine: {
+    marginTop: 20,
+    marginLeft: 38
+  },
   clickable: {
     cursor: 'pointer'
   },
