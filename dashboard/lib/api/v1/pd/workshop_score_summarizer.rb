@@ -68,6 +68,13 @@ module Api::V1::Pd::WorkshopScoreSummarizer
   FACILITATOR_SPECIFIC_MULTIPLE_CHOICE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS - FREE_RESPONSE_QUESTIONS
   FACILITATOR_SPECIFIC_FREE_RESPONSE_QUESTIONS = FACILITATOR_SPECIFIC_QUESTIONS & FREE_RESPONSE_QUESTIONS
 
+  # Generate the summary report for a workshop / group of workshops / group of facilitators
+  # @param workshop [Pd::Workshop] The workshop in the "this workshop"
+  # @param workshops [Array(Pd::Workshop)] All the workshops related to this one via course
+  # @param course [String] Workshop course - used when getting data from S3
+  # @param facilitator_name [String] Name of the facilitator whos results we are getting
+  # @param facilitator_breakdown [bool] Whether all the facilitators for workshops should have separate line items
+  # @return [Hash] Hash of sums of survey responses
   def generate_summary_report(workshop: nil, workshops:, course:, facilitator_name: nil, facilitator_breakdown: false)
     survey_report = Hash.new
 
@@ -93,7 +100,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
       facilitators.each do |facilitator|
         survey_report[facilitator.name] = get_score_for_workshops(
-          workshops: workshops.facilitated_by(facilitator),
+          workshops: workshops.select {|w| w.facilitators.include? facilitator},
           include_free_responses: false,
           facilitator_name_filter: facilitator.name
         )
@@ -103,8 +110,13 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     survey_report
   end
 
+  # Return a column for the survey response report for a group of workshops (or just one)
+  # @param workshops [Array(Pd::Workshop)] list of workshops to get scores for
+  # @param include_free_responses [bool] whether free responses should be included
+  # @param facilitator_name_filter [String] Name of a facilitator to select responses for
+  # @return [Hash] Summary of workshop survey averages
   def get_score_for_workshops(workshops:, include_free_responses:, facilitator_name_filter:)
-    facilitators = workshops.flat_map(&:facilitators).map(&:name)
+    facilitators = workshops.flat_map(&:facilitators).uniq.map(&:name)
     response_summary = {}
 
     response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(facilitators, facilitator_name_filter)
@@ -135,6 +147,9 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     response_summary
   end
 
+  # Return a hash of facilitator name to how many responses they have
+  # @param responses [Array(Hash)] List of responses in hash form
+  # @return [Hash] Hash of names to response counts
   def calculate_facilitator_name_frequencies(responses)
     if responses.first['how_often_given_feedback_s'].is_a? Hash
       # the below two lines return a histogram showing FacilitatorName=># Responses.
@@ -147,6 +162,10 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
   end
 
+  # Initalize the hashes used for summaries and averages
+  # @param facilitators [Array(String)] List of facilitator names
+  # @param facilitator_name_filter [String] Facilitator name - used when we are only looking for one facilitators results
+  # @return [Hash] Hashes for all sums and averages
   def initialize_response_summaries(facilitators, facilitator_name_filter = nil)
     # Initalize a hash of non facilitator specific questions to answer sums
     response_sums = Hash[INDIVIDUAL_RESPONSE_QUESTIONS.map {|question| [question, 0]}]
@@ -172,6 +191,12 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     return response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums
   end
 
+  # Take all the responses and compute the answer sums for each question
+  # @param responses [Array(Hash)] Hash of all responses
+  # @param response_sums [Hash] Sum total of each question's responses
+  # @param facilitator_specific_response_sums [Hash] Sum total of question responses that are facilitator specific
+  # @param facilitator_name_filter [String] Facilitator name - used when we are only looking for one facilitators results
+  # @return nil
   def generate_survey_response_sums(responses, response_sums, facilitator_specific_response_sums, facilitator_name_filter)
     responses.each do |response|
       response.symbolize_keys.each do |question, answer|
@@ -193,6 +218,13 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
   end
 
+  # Take all the responses and get a list of all the free response answers
+  # @param responses [Array(Hash)] List of all responses
+  # @param free_response_summary [Hash] Concatenation of all free response summaries
+  # @param facilitator_specific_free_response_sums [Hash] Concatenation of all free response summaries that are response specific
+  # @param responses_per_facilitator [Hash] Number of responses for each filter
+  # @param facilitator_name_filter [String] Facilitator name - used when we are only looking for one facilitators results
+  # @return nil
   def generate_free_response_sums(responses, free_response_summary, facilitator_specific_free_response_sums, responses_per_facilitator, facilitator_name_filter = nil)
     responses.each do |response|
       response.symbolize_keys.each do |question, answer|
@@ -218,6 +250,13 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     end
   end
 
+  # Take all the response sums and compute averages
+  # @param responses [Array(Hash)] List of all responses
+  # @param response_sums [Hash] List of sums of question responses
+  # @param facilitator_specific_response_sums [Hash] List of sums of question responses that are specific to facilitators
+  # @param responses_per_facilitator [int] Hash of facilitators to number of responses
+  # @param facilitator_name_filter [String] Facilitator name - used when we are only looking for one facilitators results
+  # @return All questions and their average response score
   def generate_response_averages(responses, response_sums, facilitator_specific_response_sums, responses_per_facilitator, facilitator_name_filter = nil)
     response_summary = {}
 
