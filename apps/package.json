@@ -51,6 +51,7 @@
     "@code-dot-org/p5.play": "1.2.0-cdo",
     "@code-dot-org/piskel": "0.13.0-cdo.2",
     "@storybook/addon-info": "3.2.11",
+    "@storybook/addon-options": "^3.3.15",
     "@storybook/react": "3.2.11",
     "aws-sdk": "2.28.0",
     "babel-core": "6.9.0",
