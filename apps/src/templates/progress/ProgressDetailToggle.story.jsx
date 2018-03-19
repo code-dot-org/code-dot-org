@@ -86,7 +86,7 @@ export default storybook => {
   }
 
   storybook
-    .storiesOf('ProgressDetailToggle', module)
+    .storiesOf('Progress/ProgressDetailToggle', module)
     .addStoryTable([
       isSummaryTrue(),
       isSummaryFalse(),
