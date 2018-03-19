@@ -148,6 +148,26 @@ class Slack
     end
   end
 
+  # For more information see
+  # https://github.com/ErikKalkoken/slackApiDoc/blob/master/chat.command.md. NOTE This API is 'undocumented' and not part of the official Slack APIs.
+  # @param channel_name [String] Name of the Slack channel to post the command to.
+  # @param command [String] Command to execute, excluding the /.
+  # @param message [String] Optional text passed to the command.
+  # @return [Boolean] Whether the command was posted to Slack successfully.
+  def self.command(channel_name, command, message="")
+    channel_id = get_channel_id(channel_name)
+    response = open(
+      "https://slack.com/api/chat.command?channel=#{channel_id}"\
+      "&command=/#{command}"\
+      "&text=#{message}"\
+      "&token=#{SLACK_TOKEN}"
+    )
+
+    result = JSON.parse(response.read)
+    raise "Failed to post command with: #{result['error']}" if result['error']
+    result['ok']
+  end
+
   def self.snippet(room, text)
     # omit leading '#' when passing channel names to this API
     channel = CHANNEL_MAP[room] || room
