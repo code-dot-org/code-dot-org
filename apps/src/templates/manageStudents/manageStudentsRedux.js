@@ -32,7 +32,7 @@ const blankAddRow = {
   gender: '',
   username: '',
   loginType: '',
-  sharingDisabled: true,
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.ADD,
 };
@@ -47,7 +47,7 @@ const blankNewStudentRow = {
   gender: '',
   username: '',
   loginType: '',
-  sharingDisabled: true,
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
 };
