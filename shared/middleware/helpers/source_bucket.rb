@@ -1,6 +1,6 @@
 require 'cdo/project_source_json'
 
-# Check whether it is defined, since helpers can be double-included during test and cron tasks.
+# Check whether it is defined, since helpers can be double-included.
 MAIN_JSON_FILENAME = 'main.json'.freeze unless defined? MAIN_JSON_FILENAME
 
 #
