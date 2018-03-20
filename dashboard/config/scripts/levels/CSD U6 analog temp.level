@@ -89,8 +89,8 @@
     "makerlab_enabled": "true",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "2VrroOjIJPyKNKD4xiACnR18lf8OqR3cYU0BhEBbUfbXTTB9UBdlBNShYBkw\nlKtiSrfRaZo9iJNtNbkWGbjdxg==\n"
+    "encrypted_examples": "2VrroOjIJPyKNKD4xiACnR18lf8OqR3cYU0BhEBbUfbXTTB9UBdlBNShYBkw\nlKtiSrfRaZo9iJNtNbkWGbjdxg==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
