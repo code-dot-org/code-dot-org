@@ -101,13 +101,9 @@ module TextRender
   # Markdown
   #
   class MarkdownEngine
-    class HTMLWithTags < Redcarpet::Render::HTML
+    class HTMLWithDivBrackets < Redcarpet::Render::HTML
       def postprocess(full_document)
         process_div_brackets(full_document)
-      end
-
-      def preprocess(full_document)
-        wrap_details_tags_in_divs(full_document)
       end
 
       private
@@ -129,6 +125,14 @@ module TextRender
           "<div #{attribute}='#{value}'>"
         end
       end
+    end
+
+    class HTMLWithTags < HTMLWithDivBrackets
+      def preprocess(full_document)
+        wrap_details_tags_in_divs(full_document)
+      end
+
+      private
 
       def wrap_details_tags_in_divs(full_document)
         full_document.
