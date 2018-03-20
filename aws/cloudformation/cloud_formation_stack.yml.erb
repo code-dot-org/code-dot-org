@@ -555,7 +555,7 @@ Resources:
       Statistic: Average
       Threshold: 80
       # absence of custom disk utilization Metric could be due to a serious problem on the Instance
-      TreatMissingData: breaching
+      TreatMissingData: missing
   DaemonMemoryUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
@@ -574,7 +574,7 @@ Resources:
       Statistic: Maximum
       Threshold: 87
       # absence of custom memory utilization Metric could be due to a serious problem on the Instance
-      TreatMissingData: breaching
+      TreatMissingData: missing
 <% if database -%>
   Database:
     Type: AWS::RDS::DBInstance
