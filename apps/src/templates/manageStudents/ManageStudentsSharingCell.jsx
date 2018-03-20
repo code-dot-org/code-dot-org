@@ -40,7 +40,7 @@ class ManageStudentsSharingCell extends Component {
             <span data-tip data-for="disabled-no-age">
               <Checkbox
                 disabled={disabled}
-                checked={!this.props.editedValue}
+                checked={this.props.editedValue}
                 onChange={this.changeSharing}
               />
             </span>

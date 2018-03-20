@@ -254,7 +254,7 @@ class ManageStudentsTable extends Component {
         isEditing={rowData.isEditing}
         disabled={disabled}
         checked={!rowData.sharingDisabled}
-        editedValue={editedValue}
+        editedValue={!editedValue}
       />
     );
   };
