@@ -87,8 +87,11 @@ export function renderSectionTable(sectionId, loginType, courseId) {
   store.dispatch(setSectionId(sectionId));
 
   const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
+
   // Show share column by default for CSD and CSP courses
-  if (showShareColumn && (courseId === 18 || courseId === 17)) {
+  const CSDCourseId = 17;
+  const CSPCourseId = 18;
+  if (showShareColumn && (courseId === CSDCourseId || courseId === CSPCourseId)) {
     store.dispatch(toggleSharingColumn());
   }
 
