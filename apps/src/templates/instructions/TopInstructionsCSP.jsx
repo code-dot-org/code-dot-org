@@ -13,7 +13,6 @@ import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 import experiments from '@cdo/apps/util/experiments';
 import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
@@ -114,15 +113,7 @@ var TopInstructions = React.createClass({
     ttsMarkdownInstructionsUrl:  PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
-    referenceLinks: PropTypes.array,
-    // TODO (epeach) - remove after resources tab A/B testing
-    // provides access to script id for level data
-    app: PropTypes.string,
-    scriptName: PropTypes.string,
-    stagePosition: PropTypes.number,
-    levelPosition: PropTypes.number,
-    scriptId: PropTypes.number,
-    serverLevelId: PropTypes.number,
+    referenceLinks: PropTypes.array
   },
 
   state:{
@@ -213,25 +204,10 @@ var TopInstructions = React.createClass({
 
   handleHelpTabClick() {
     this.setState({helpTabSelected: true});
-    this.recordResourcesTabButtonClick();
   },
 
   handleInstructionTabClick() {
     this.setState({helpTabSelected: false});
-  },
-
-  //TODO - remove 'wip' from study. There for just testing purposes
-  recordResourcesTabButtonClick() {
-    firehoseClient.putRecord(
-      {
-        study: 'instructions-resources-tab',
-        study_group: 'resources-tab',
-        event: 'resources-tab-click',
-        script_id: this.props.scriptId,
-        level_id: this.props.serverLevelId,
-        data_json: JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName, 'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition}),
-      }
-    );
   },
 
   render() {
@@ -245,21 +221,16 @@ var TopInstructions = React.createClass({
     ];
     const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
-    const logText = JSON.stringify({'AppType': this.props.app, 'ScriptName': this.props.scriptName,
-      'StagePosition': this.props.stagePosition, 'LevelPosition': this.props.levelPosition});
-
-    // If we are in the resources tab experiment, only display the help tab when
-    // are one or more videos
-    const resourcesTabDisplayTab = (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) && this.props.levelVideos.length > 0;
-
-    const levelResourcesAvailable = ((this.props.levelVideos && this.props.levelVideos.length > 0) ||
-      this.props.mapReference !== null ||
-      (this.props.referenceLinks && this.props.referenceLinks.length > 0));
 
     // If we are in the additional resources experiment, only display the help tab
     // when there are one or more videos or additional resource links.
+    // Otherwise, display the help tab when there are level videos to display.
+    const videosAvailable = this.props.levelVideos && this.props.levelVideos.length > 0;
+    const levelResourcesAvailable = this.props.mapReference !== null ||
+      (this.props.referenceLinks && this.props.referenceLinks.length > 0);
+
     const additionalResourcesDisplayTab = experiments.isEnabled('additionalResources') && levelResourcesAvailable;
-    const displayHelpTab = resourcesTabDisplayTab || additionalResourcesDisplayTab;
+    const displayHelpTab = videosAvailable || additionalResourcesDisplayTab;
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
@@ -275,39 +246,27 @@ var TopInstructions = React.createClass({
                 headerHasFocus={false}
                 onClick={this.handleDocumentationClick}
               />}
-            {(experiments.isEnabled('resources_tab') ||
-              experiments.isEnabled('resourcesTab') ||
-              experiments.isEnabled('additionalResources')) &&
-              <div style={styles.helpTabs}>
+            <div style={styles.helpTabs}>
+              <InstructionsTab
+                className="uitest-instructionsTab"
+                onClick={this.handleInstructionTabClick}
+                style={this.state.helpTabSelected ? null : styles.highlighted}
+                text={msg.instructions()}
+              />
+              {displayHelpTab &&
                 <InstructionsTab
-                  className="uitest-instructionsTab"
-                  onClick={this.handleInstructionTabClick}
-                  style={this.state.helpTabSelected ? null : styles.highlighted}
-                  text={msg.instructions()}
+                  className="uitest-helpTab"
+                  onClick={this.handleHelpTabClick}
+                  style={this.state.helpTabSelected ? styles.highlighted : null}
+                  text={msg.helpTips()}
                 />
-                {displayHelpTab &&
-                  <InstructionsTab
-                    className="uitest-helpTab"
-                    onClick={this.handleHelpTabClick}
-                    style={this.state.helpTabSelected ? styles.highlighted : null}
-                    text={msg.helpTips()}
-                  />
-                }
-              </div>
-            }
+              }
+            </div>
             {!this.props.isEmbedView &&
               <CollapserIcon
                 collapsed={this.props.collapsed}
                 onClick={this.handleClickCollapser}
               />}
-            {(!experiments.isEnabled('resources_tab') && !experiments.isEnabled('resourcesTab') && !experiments.isEnabled('additionalResources')) &&
-              <div style={styles.title}>
-                {msg.puzzleTitle({
-                  stage_total: this.props.stageTotal,
-                  puzzle_number: this.props.puzzleNumber
-                })}
-              </div>
-            }
           </div>
         </PaneHeader>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
@@ -326,9 +285,6 @@ var TopInstructions = React.createClass({
                 }
                 {this.state.helpTabSelected &&
                   <HelpTabContents
-                    scriptId={this.props.scriptId}
-                    serverLevelId={this.props.serverLevelId}
-                    logText={logText}
                     videoData={videoData}
                     mapReference={this.props.mapReference}
                     referenceLinks={this.props.referenceLinks}
@@ -365,13 +321,7 @@ module.exports = connect(function propsFromStore(state) {
     ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
     levelVideos: state.instructions.levelVideos,
     mapReference: state.instructions.mapReference,
-    referenceLinks: state.instructions.referenceLinks,
-    app: state.instructions.app,
-    scriptName: state.instructions.scriptName,
-    stagePosition: state.instructions.stagePosition,
-    levelPosition: state.instructions.levelPosition,
-    scriptId: state.instructions.scriptId,
-    serverLevelId: state.instructions.serverLevelId,
+    referenceLinks: state.instructions.referenceLinks
   };
 }, function propsFromDispatch(dispatch) {
   return {
