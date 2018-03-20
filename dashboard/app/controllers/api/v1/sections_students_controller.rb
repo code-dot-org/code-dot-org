@@ -16,8 +16,6 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
 
   # PATCH /sections/<section_id>/student/<id>/update
   def update
-    puts "studnet:"
-    puts @student.inspect
     return render_404 unless @student
 
     if @student.update(student_params)
