@@ -70,6 +70,16 @@ module Pd::Application
       end
     end
 
+    test 'cache expires in 30 seconds' do
+      WorkshopAutoenrolledApplication.prefetch_associated_models([@application])
+
+      Timecop.travel(30.seconds) do
+        assert_queries 3 do
+          assert_equal @workshop, @application.workshop
+        end
+      end
+    end
+
     test 'prefetch scales without additional queries' do
       workshops = create_list :pd_workshop, 10
       applications = 10.times.map do |i|
