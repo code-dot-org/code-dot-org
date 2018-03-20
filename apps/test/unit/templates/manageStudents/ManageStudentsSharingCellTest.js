@@ -12,6 +12,7 @@ describe('ManageStudentsSharingCell', () => {
           id={123}
           isEditing={true}
           checked={true}
+          editedValue={true}
         />
     );
     expect(wrapper).to.containMatchingElement(
@@ -25,6 +26,7 @@ describe('ManageStudentsSharingCell', () => {
           id={123}
           isEditing={true}
           checked={false}
+          editedValue={false}
         />
     );
     expect(wrapper).to.containMatchingElement(
@@ -38,6 +40,7 @@ describe('ManageStudentsSharingCell', () => {
           id={123}
           isEditing={false}
           checked={false}
+          editedValue={true}
         />
     );
     expect(wrapper.containsMatchingElement(
@@ -54,6 +57,7 @@ describe('ManageStudentsSharingCell', () => {
           id={123}
           isEditing={false}
           checked={true}
+          editedValue={true}
         />
     );
     expect(wrapper).to.containMatchingElement(
