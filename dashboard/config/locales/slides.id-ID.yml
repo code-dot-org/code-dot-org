@@ -661,9 +661,9 @@
           terjadi yang memicu kita untuk melakukan sesuatu.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: Dalam video game, ada sebuah acara yang disebut "Pembaruan" dan itu
+          terjadi 30 atau 60 kali per detik. Untuk videogame programmer itu hampir
+          lebih penting sebagai event dari tombol atau joystick.
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: Acara utama yang kami tonton adalah acara "Update" yang diputar tiap
@@ -675,10 +675,10 @@
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+        text: Di patung pasir anda harus tahu bahwa kegagalan adalah bagian dari program.
+          Tetapi jika anda bertahan, itu hanya akan mendapatkan apa-apa tapi baik
+          dan lebih menarik untuk anda. Ketekunan adalah nama permainan. Tetap dengan
+          itu, anda akan menyukainya.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: Pelajaran ini disebut bangunan suatu fondasi. Dalam pelajaran ini, kami
@@ -705,9 +705,9 @@
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: Hi, nama saya adalah Miral Kotb dan aku pencipta Iluminate. Dalam pekerjaan
+          saya, ada sesuatu yang kita gunakan di kedua tarian dan dalam pemrograman
+          lightsuits. Dan itu adalah loop! Loop mengulang suatu tindakan berulang-ulang.
       2:
         image: notes/C1_getting_loopy_2.png
         text: Ketika Anda mengulangi sesuatu beberapa kali, seperti tindakan saya
@@ -729,18 +729,18 @@
           dengan beberapa langkah menari dalam Loops.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: Kami benar-benar menggunakan loop dalam menari. Para penari mengenakan
+          komputer, semua dalam jaringan yang sama. Aku mungkin loop lampu melalui
+          yang sama penari lagi dan lagi. Dalam lingkaran saya mungkin telah iterasi
+          dimana aku akan mengatakan anda ingin pergi loop melalui enam penari lagi
+          dan lagi dan kemudian dalam loop anda ingin meningkatkan kecepatan cahaya.
+          Dan itu semua dibuat melalui loop. Loop yang penting dalam ilmu komputer
+          karena mereka membuat kami bekerja lebih pendek dan lebih mudah.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: This lesson is called Happy Maps. Today we're gonna help our furry little
-          friend Flurb get to her fruit.
+        text: Pelajaran ini disebut Bahagia Maps. Hari ini kita akan membantu kita
+          sedikit berbulu teman Flurb dapatkan untuk buah hatinya.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
         text: Jadikan Flurb anda pergi ke buah anda. Untuk melakukan ini, anda perlu
@@ -749,48 +749,51 @@
           Flurb untuk membuatnya naik.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Untuk mendapatkan itu ada lingkaran arah itu telah pergi.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: Create your algorithm by gluing arrows next to the map that you're trying
-          to solve. The second one it's the same but it's going down.
+        text: Buat algoritma dengan menempelkan panah di samping peta yang anda mencoba
+          untuk memecahkan. Yang kedua itu sama tapi itu akan turun.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: Itu seperti pemrograman dengan kertas. Dan hanya itu!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: Debugging adalah menemukan dan memperbaiki masalah. Ada banyak cara
+          untuk men-debug masalah. Salah satu cara termudah adalah untuk memindahkan
+          langkah demi langkah sampai di mana anda menemukan di mana ada sesuatu yang
+          tidak beres. Di sini saya mencoba untuk melakukan back handspring pada balok
+          tapi aku terus jatuh.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: Aku berjalan melalui setiap bagian langkah demi langkah dan menyadari
+          di mana kesalahan saya. Aku tidak bisa meletakkan tangan saya pada balok
+          dengan benar. Jadi saya mencoba kembali lagi handspring pada balok dengan
+          posisi tangan dan saya mendapatkannya. Aku benar-benar senang saya debug
+          saya back handspring.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: Untuk belajar tentang debugging, kita mulai dengan satu set blok yang
+          sudah di atas panggung. Anda akan melihat bahwa blok ini tidak akan mendapatkan
+          anda ke tujuan. Kita perlu untuk men-debug solusi dan memperbaikinya. Apa
+          yang salah? Anda akan melihat bahwa anda perlu untuk terus west satu blok
+          lagi.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Let's fix this by adding another west block and hitting run to see if
-          you got it right. Yay, you got it!
+        text: Mari kita perbaiki hal ini dengan menambahkan blok barat dan memukul
+          run untuk melihat apakah anda sudah benar. Yay, anda mendapatkannya!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: Untuk teka-teki ini, anda perlu untuk mendapatkan burung ke babi. Melihat
+          teka-teki dan melihat apa arah itu perlu untuk mengambil.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: Anda perlu untuk menyeret blok dari toolbox ke ruang kerja. Pastikan
+          itu di bawah "ketika menjalankan" blok dan ketika anda berpikir anda punya
+          solusi yang tepat, maka anda dapat mengklik "Run" dan menonton burung pergi
+          ke babi.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
@@ -801,28 +804,28 @@
           bosan dan dapat melaksanakannya dengan sangat baik.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Misalnya, jika saya ingin berharap semua orang di Facebook selamat ulang
+          tahun dengan mengirimkan email kepada mereka, mungkin saya lebih dari abad
+          untuk benar-benar menulis semua email-email ke semua orang. Tetapi dengan
+          hanya beberapa baris kode, saya bisa memiliki sistem kirim email ke semua
+          orang di Facebook ucapan selamat ulang tahun.
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: Untuk mendapatkan burung ke babi di level ini... daripada menyeret tiga
+          Utara blok ke tempat kerja, anda akan menggunakan tombol "ulangi" blok.
+          Seret "ulangi" blok ke workspace dan masukkan nomor 3. Kemudian tarik "bergerak
+          ke Utara" blok "ulangi" blok dan tekan "Run" untuk melihat apakah anda sudah
+          benar. Selamat, anda berhasil!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: This lesson is called move it, move it. Together we're going to write
-          a program to get our friends from the starting with the compass rose to
-          the smiley face goal.
+        text: Pelajaran ini disebut memindahkannya, memindahkannya. Bersama-sama kita
+          akan menulis sebuah program untuk mendapatkan teman-teman kita dari awal
+          dengan kompas naik ke wajah tersenyum gol.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Tapi smiley face down dan hanya satu orang yang tahu bagaimana untuk
+          sampai ke sana. Mari kita mendapatkan program ini dimulai.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
         text: Sebuah program adalah sebuah algoritma yang telah diberi kode menjadi
@@ -975,8 +978,9 @@
           huruf-huruf untuk mengeja kata-kata.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: See if you can spell the word they give you in the box below the stage.
-          But bee careful! Moving the wrong direction will add letters you don't want.
+        text: Lihat jika anda bisa mengeja kata-kata mereka memberi anda dalam kotak
+          di bawah panggung. Tapi bee-hati! Bergerak ke arah yang salah akan menambah
+          huruf yang tidak anda inginkan.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
@@ -987,11 +991,11 @@
           bosan dan dapat melaksanakannya dengan sangat baik.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Misalnya, jika saya ingin berharap semua orang di Facebook selamat ulang
+          tahun dengan mengirimkan email kepada mereka, mungkin saya lebih dari abad
+          untuk benar-benar menulis semua email-email ke semua orang. Tetapi dengan
+          hanya beberapa baris kode, saya bisa memiliki sistem kirim email ke semua
+          orang di Facebook ucapan selamat ulang tahun.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: Pada contoh ini, tujuan anda adalah memindahkan burung itu untuk mendapatkan
@@ -1009,9 +1013,9 @@
           banyak langkah yang anda inginkan untuk membawa ke depan.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: One more thing is you can put as many commands as you want inside the
-          repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+        text: Satu hal lagi adalah anda dapat menempatkan perintah sebanyak yang anda
+          inginkan dalam mengulang blok. Jadi dalam contoh ini, anda mengatakan itu
+          untuk bergerak maju dan belok kiri, yang akan melakukan lima kali. Bersenang-senang!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
@@ -4011,12 +4015,13 @@
           modern circuits can perform billions of calculations per second.
       11:
         image: notes/csd_concept_circuits_logic_11.png
-        text: So whether you're playing a game, recording a video, or exploring the
-          cosmos, everything you could possibly do with technology requires lots of
-          information to be processed extremely quickly. Underneath all this complexity
-          is just lots of teeny little circuits that turn binary signals into websites,
-          videos, music, and games. These circuits can even help us decode DNA to
-          diagnose and cure disease. So what would you like to do with all these circuits?
+        text: Jadi apakah anda sedang bermain game, merekam video, atau menjelajahi
+          alam semesta, segala sesuatu yang mungkin anda bisa lakukan dengan teknologi
+          yang membutuhkan banyak informasi untuk diproses sangat cepat. Di balik
+          semua kompleksitas ini adalah banyak sirkuit kecil mungil yang mengubah
+          sinyal biner menjadi situs web, video, musik, dan permainan Sirkuit ini
+          bahkan dapat membantu kita memecahkan kode DNA untuk mendiagnosa dan mengobati
+          penyakit. Jadi apa yang akan anda lakukan dengan semua sirkuit ini?
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
@@ -4065,9 +4070,9 @@
           lights and colors that make up what you see.
       9:
         image: notes/csd_concept_memory_cpu_input_output_9.png
-        text: This all happens so quickly it feels instantaneous, but to display each
-          letter a computer runs thousands of instructions, starting from the moment
-          your finger presses the key point.
+        text: Ini semua terjadi begitu cepat rasanya sesaat, tapi untuk menampilkan
+          setiap huruf komputer berjalan ribuan petunjuk, mulai dari saat jari anda
+          menekan titik kunci.
       10:
         image: notes/csd_concept_memory_cpu_input_output_10.png
         text: In that example, the output device was the screen, but there are many
@@ -4136,11 +4141,11 @@
           memory.
       8:
         image: notes/csd_concept_hardware_software_8.png
-        text: Just like numbers, all of these simple commands can be represented in
-          binary ones and zeros or on and off electrical signals. The binary commands
-          are stored in memory and the CPU fetches and executes them in sequence one
-          after the other. This sequence of commands is, in fact, a very simple computer
-          program.
+        text: Sama seperti angka, semua ini perintah sederhana dapat direpresentasikan
+          dalam biner satu dan nol atau hidup dan mati sinyal-sinyal listrik. Biner
+          perintah-perintah yang disimpan di memori dan CPU mengambil dan mengeksekusi
+          mereka di urutan satu setelah yang lain. Urutan perintah ini, pada kenyataannya,
+          sebuah program komputer yang sangat sederhana.
       9:
         image: notes/csd_concept_hardware_software_9.png
         text: Binary code is the most basic form of software and it controls all the
@@ -4153,12 +4158,12 @@
           type in commands in something that looks a lot like English.
       11:
         image: notes/csd_concept_hardware_software_11.png
-        text: To draw a rectangle on the screen, you just need a single command. This
-          high-level command is converted into hundreds, or thousands, of simpler
-          binary commands that the CPU understands. Software tells the CPU what to
-          do, but when you're listening to music, and browsing the web, and chatting
-          with a friend, your computer is running multiple pieces of software all
-          at once.
+        text: Untuk menggambar sebuah persegi panjang pada layar, anda hanya perlu
+          satu perintah. Ini tingkat tinggi perintah diubah menjadi ratusan, atau
+          ribuan, biner sederhana perintah bahwa CPU mengerti. Perangkat lunak memberitahu
+          CPU apa yang harus dilakukan, tetapi ketika anda sedang mendengarkan musik,
+          dan penjelajah web, dan mengobrol dengan teman, komputer anda menjalankan
+          beberapa buah perangkat lunak sekaligus.
       12:
         image: notes/csd_concept_hardware_software_12.png
         text: So, how do all of these programs get on the computer in the first place,
@@ -4185,9 +4190,9 @@
           controls the computer's hardware.
       16:
         image: notes/csd_concept_hardware_software_16.png
-        text: The software is a series of commands made of simple binary code, and
-          that binary code is just electrical signals flowing through billions of
-          tiny circuits.
+        text: Perangkat lunak adalah serangkaian perintah yang dibuat sederhana kode
+          biner, dan kode biner adalah hanya sinyal-sinyal listrik yang mengalir melalui
+          miliaran sirkuit kecil.
       17:
         image: notes/csd_concept_hardware_software_17.png
         text: Computers have the potential to do all kinds of amazing things. But

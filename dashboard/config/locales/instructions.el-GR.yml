@@ -7493,6 +7493,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -10001,6 +10004,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10618,6 +10624,10 @@
       flappy_1_instruction: Προσάρμοσε ένα μπλοκ στο "Όταν πατήσεις με το ποντίκι"
         μπλοκ και πάτα "Εκτέλεση". Πάτα με το ποντίκι ή πίεσε στην οθόνη αφής για
         να μετακινήσεις τον "Φτερογούλη"  στον στόχο.
+      flappy_11_instruction: Δημιούργησε το δικό σου παιχνίδι του "Φτερογούλη". Μπορείς
+        να αλλάξεις όλα τα γραφικά και τους κανόνες, ακόμη και την βαρύτητα. Όταν
+        τα κάνεις, πάτα "Τέλος" και άσε τους φίλους σου να δοκιμάσουν το παιχνίδι
+        στα κινητά τους.
       flappy_2_instruction: Τώρα έχουμε προσθέσει "κάποιο" έδαφος. Προσάρμοσε ένα
         μπλοκ στο "'όταν χτυπήσεις το έδαφος" μπλοκ. Ο κώδικάς σου χρειάζεται το 'ΤΕΛΟΣ
         ΠΑΙΧΝΙΔΙΟΥ' όταν ο "Φτερογούλης" στουκάρει.
@@ -10641,10 +10651,6 @@
         για παράδειγμα, όταν προσπερνά ένα εμπόδιο."
       flappy_9_instruction: "Για να τα μπερδέψετε, όταν χτυπάτε ένα εμπόδιο, αντί
         να τελειώνετε το παιχνίδι προσπαθήστε να επαναφέρετε το σκορ στο 0."
-      flappy_11_instruction: Δημιούργησε το δικό σου παιχνίδι του "Φτερογούλη". Μπορείς
-        να αλλάξεις όλα τα γραφικά και τους κανόνες, ακόμη και την βαρύτητα. Όταν
-        τα κάνεις, πάτα "Τέλος" και άσε τους φίλους σου να δοκιμάσουν το παιχνίδι
-        στα κινητά τους.
       frozen circle function in circle_instruction: "Τώρα ας δημιουργήσουμε 20 κύκλους
         που επικαλύπτονται, στρίβοντας 18 μοίρες  μεταξύ κάθε κύκλου."
       frozen circle function with parameter_instruction: Εδώ είναι ένα μπλοκ "Δημιουργία

@@ -1192,11 +1192,11 @@ en:
         example of a brand book\r\n\r\n"
       CDU U6 Playground Sound Board_markdown_instruction: "# Sound Board 2.0\r\n\r\nYou
         can now play sounds, notes, and songs! With this new knowledge, you can even
-        turn your board into a sound board.\r\n\r\nIn the toolbox you all of the buzzer
-        and led related blocks at your disposal. See what cool stuff you can come
-        up with!\r\n\r\n# Do This\r\n\r\n* Use all of the button related board events
-        (up, down), to play a unique sound or song at each event.\r\n* Are there any
-        other events you could use to play even more sounds/songs?"
+        turn your board into a sound board.\r\n\r\nIn the toolbox you have all of
+        the buzzer and led-related blocks at your disposal. See what cool stuff you
+        can come up with!\r\n\r\n# Do This\r\n\r\n* Use all of the button related
+        board events (up, down), to play a unique sound or song at each event.\r\n*
+        Are there any other events you could use to play even more sounds/songs?"
       CSD - Predict - Array Length List Printing_markdown_instruction: "# For Loop
         - Using List Length in For Loop\r\n\r\nOne of the most common ways that for
         loops are used is with lists. In this example the condition is dependent on
@@ -2418,16 +2418,16 @@ en:
         an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
         {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
         example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n\r\n#
         Background Color\r\n\r\n* Find the code in the style sheet that is making
         the background of the entire page light blue.\r\n* Change the code to make
         the page a different color.\r\n* Try to change the background color of just
         the paragraphs."
       CSD U2 layout style body_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
-        markdown=\"1\">\r\n\r\n<details>\r\n<summary>**What does the `body` selector
-        do?**</summary>\r\nBecause the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
+        markdown=\"1\">\r\n<details>\r\n<summary>**What does the `body` selector do?**</summary>\r\nBecause
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `color` property do?**</summary>\r\nThe `color` property specifies
         the color of the text.  If there’s no text, it won’t do anything. Read more
         at <a href=\"http://www.w3schools.com/cssref/pr_text_color.asp\"> W3Schools
@@ -2460,7 +2460,7 @@ en:
         an example of a rule-set that makes the text in an `h2` tag blue and cursive:\r\n\r\n<pre>h2
         {\r\n   color: blue;\r\n   font-family: cursive;\r\n</pre>\r\n\r\nIn this
         example, `h2` is the selector, `color` and `font-family` are properties, and
-        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n#
+        `blue` and `cursive` are the values for those properties.\r\n</details>\r\n</div>\r\n\r\n#
         The Body Element\r\n\r\n* Find the `body` rule-set in the style sheet.\r\n*
         Discuss with a partner what you think will happen if you add `text-align`,
         `color`, or other text properties to the `body` rule set.\r\n* Try out some
@@ -2588,9 +2588,9 @@ en:
         too."
       CSD U2 layout style sample_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
-        markdown=\"1\">\r\n\r\n<details>\r\n<summary>**What does the `body` selector
-        do?**</summary>\r\nBecause the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
+        markdown=\"1\">\r\n<details>\r\n<summary>**What does the `body` selector do?**</summary>\r\nBecause
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r\n</details>\r\n<details>\r\n<summary>**What
         does the `border-style` property do?**</summary>\r\nThe `border-style` property
         determines what kind of border (solid, dotted, dashed, etc.) the element has.  You
         can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_border-style.asp\">W3Schools
@@ -2607,7 +2607,7 @@ en:
         the elements after it will show up on its right.  If the `float` value is
         `right`, the element will float to the right, and the elements after it will
         show up on its left.  You can read more about this property at <a href=\"http://www.w3schools.com/cssref/pr_class_float.asp\">W3Schools
-        - CSS float Property</a>\r\n</details>\r\n</div>\r\n# Layout and Style\r\n\r\n*
+        - CSS float Property</a>\r\n</details>\r\n</div>\r\n\r\n# Layout and Style\r\n\r\n*
         Look through web page below for new styles.\r\n* Open the style sheet\r\n*
         With your partner, discuss which parts of the CSS code you think are making
         the page appear different.\r\n * What makes the entire page blue?\r\n * How
@@ -2726,18 +2726,38 @@ en:
         that is making the two different kinds of lists.\r\n* Make sure you and your
         partner agree on what the different tags do.\r\n* Fix the code so that the
         second item in each list displays correctly"
-      CSD U2 navigation_markdown_instruction: "# Create a Navigation Bar\r\n\r\nHere's
-        your project from before.  You'll be linking the two pages by creating a
-        **navigation bar** at the top of the page.  Websites usually have the same
-        navigation bar across all of their pages so you can get back and forth between
-        things on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"
+      CSD U2 navigation_markdown_instruction: "<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are hyperlinks?**</summary>\r\nHyperlinks
+        can connect to local web pages or external web pages. To add navigation to
+        your website you will need to add hyperlinks which connect your individual
+        web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The
+        text you want to display as the hyperlink goes between the opening and closing
+        hyperlink tags. The `<a>` element has an attribute `href` which is the location
+        to link to.  The location of a local page is just the file path for that page.
+        <br> <br>\r\n\r\nFor example to link to the unique houses page you would add
+        the following code inside your `<body>` element. <br><br>\r\n\r\n<pre>\r\n&lt;a
+        href=”houses.html”&gt; Unique Houses &lt;/a&gt;\r\n</pre>\r\n\r\n</details>\r\n<details>\r\n<summary>**How
+        do I add a hyperlink?**</summary>\r\nYou can **add hyperlinks to your web
+        page using the `<a>` element**.  The text you want to display as the hyperlink
+        goes between the opening and closing hyperlink tags. The `<a>` element has
+        an attribute `href` which is the location to link to.  The location of a local
+        page is just the file path for that page. <br> <br>\r\n\r\nFor example to
+        link to the unique houses page you would add the following code inside your
+        `<body>` element. <br><br>\r\n\r\n<pre>\r\n&lt;a href=”houses.html”&gt; Unique
+        Houses &lt;/a&gt;\r\n</pre>\r\n\r\n</details>\r\n</div>\r\n\r\n# Create a
+        Navigation Bar\r\n\r\nHere's your project from before.  You'll be linking
+        the two pages by creating a **navigation bar** at the top of the page.  Websites
+        usually have the same navigation bar across all of their pages so you can
+        get back and forth between things on the site.  You can see an example of
+        a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"
         target=\"_new\">this page</a>\r\n\r\n# Do This\r\n* In your home page (index.html),
         add two hyperlinks at the top of the page, one to your lists page, and one
         to the home page.\r\n * *Even though it might seem strange to link a page
         to itself, it's less confusing if the navigation bar is exactly the same
         on every page.*\r\n* Copy the code for the navigation bar, then add it to
         the top of your lists page.\r\n* Test your links in the preview area by clicking
-        on them.\r\n\r\n"
+        on them.\r\n"
       CSD U2 new page_markdown_instruction: "# Create a New Page for Your Website.\r\n\r\nHere's
         your project from before.  You'll be adding another page.  Your new page
         can be a top 10 list, a recipe, or anything you like.\r\n\r\n# Do This\r\n*
@@ -3192,8 +3212,8 @@ en:
         target=\"_new\">Lesson 7 Level 5</a> for help if you need it.\r\n * Make sure
         you have the right to use these images.\r\n * Write down all of the attribution
         information that you need.\r\n * Upload all of the images into your project.  Visit
-        <a href=\"/s/csd2/stage/7/puzzle/5\" target=\"_new\">Lesson 8 Level 6</a>
-        if you've forgotten how.\r\n\r\n"
+        <a href=\"/s/csd2/stage/7/puzzle/5\" target=\"_new\">Lesson 7 Level 5</a>
+        if you've forgotten how.\r\n"
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\r\n\r\nThis
         pattern is one of the most important ones in all of programming. \r\n\r\n![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
@@ -3287,6 +3307,21 @@ en:
         being held down.\r\n\r\n# Do This\r\n\r\n* Add an `if` statement.\r\n* Use
         `keyDown` as input to the if statement to check when the space key is pressed.\r\n*
         Move the code that makes the gears rotate inside the `if`."
+      CSD U3 - conditionals - first conditional 2-2018_markdown_instruction: "<img
+        src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
+        style=\"width:200px;float:right\">\r\n# Visible\r\n\r\nSometimes it's useful
+        to hide the image for a while and then show it again. You can do this using
+        the `visible` property. The visible property is a little different from other
+        properties you have seen in the past: It is a Boolean value, either `true`
+        (the sprite is visible) or `false` (the sprite is **not** visible). By default,
+        visible is set to `true`.\r\n\r\n# Do This\r\nMake the balloon pop when it
+        hits the edge of the game area!\r\n\r\n* Add a conditional that checks to
+        see whether the balloon has hit the edge.\r\n\t* Use a watcher on `balloon.scale`
+        to help you out.\r\n* Create a pop sprite which uses the \"pop\" visual in
+        the animation tab.\r\n* Use the `visible` property to keep the \"pop\" sprite
+        hidden at the beginning.\r\n* Inside the `if` add two statements.\r\n\t* One
+        that sets the `visible` property to hide the balloon sprite.\r\n    * One
+        that sets the `visible` property to show the pop sprite."
       CSD U3 - conditionals - first conditional 2_markdown_instruction: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
         style=\"width:200px;float:right\">\r\n# Visible\r\n\r\nNow that you have conditionals
         and images, sometimes it's useful to hide the image for a while and then
@@ -3624,7 +3659,7 @@ en:
         Go to the Animation Tab and check out the multi-frame animations already added
         to your project. Choose one for each of your characters.\r\n* Remember you
         can use `setAnimation` to give your sprites animations you've created in
-        the Animation Tab.\r\n"
+        the Animation Tab."
       CSD U3 AnimationsMulti mirror animation_markdown_instruction: "# Editing Multiframe
         Animations\r\n\r\nYour sprites will look a lot more realistic if they turn
         around when they're moving. You can switch back and forth between multiframe
@@ -3760,12 +3795,24 @@ en:
         through conditionals\r\n\r\n_You might notice some new blocks in the Sprites
         drawer, experiment with them and see if you can incorporate them into your
         conditionals._"
+      CSD U3 Conditionals Apple 2-2018_markdown_instruction: "# Changing Fruit\r\n\r\nNow
+        that we know how to use _if_ statements, you can do more than just check if
+        the apple has reached a scale of 2. You turn it into a pear once it happens.\r\n\r\n#
+        Do This\r\n\r\nUse a conditional in the draw loop to check whether `fruit.scale`
+        is greater than 2.  If it is, change the fruit's animation to \"pear\".\r\n\r\n_Challenge:
+        Can you also make the fruit stop growing once it turns into a pear?_"
       CSD U3 Conditionals Apple 2_markdown_instruction: "# Turning Red\r\n\r\nNow
         that we know how to use _if_ statements, you can do more than just check if
         the apple has reached a scale of 2, you turn it red once it happens.\r\n\r\n#
         Do This\r\n\r\nUse a conditional in the draw loop to check whether `apple.scale`
         is greater than 2 - if it is, set the apples new animation to \"apple_red\".\r\n\r\n_Challenge:
         Can you also make the apple stop growing once it turns red?_"
+      CSD U3 Conditionals Apple-2018_markdown_instruction: "# More Practice With
+        Booleans\r\n\r\nLet's use one more Boolean expression to check the condition
+        of a sprite.  You can use a `console.log` command to check whether its scale
+        is 2 yet.\r\n\r\n# Do This\r\n\r\n* Add a `console.log` statement.\r\n* Add
+        a Boolean expression inside the `console.log` that checks whether the `apple.scale`
+        is greater than 2."
       CSD U3 Conditionals Apple_markdown_instruction: "# More Practice With Booleans\r\n\r\nLet's
         use one more Boolean expression to check the condition of a sprite.\r\n\r\n#
         Do This\r\nThere is a growing apple sprite created for you. It starts as green
@@ -4073,6 +4120,10 @@ en:
         style=\"float:right\">\r\n\r\n* Click the _plus_ button at the bottom of the
         if block to add an else.\r\n* Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed."
+      CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: "# Alien Jumper\r\n\r\nPress
+        \"Run\" to play the game on the left.  You can make the alien jump with the
+        space bar, and move it to the left and right with the arrow keys.  You score
+        by collecting stars, and if you score high enough, the background will change."
       CSD U3 Entertainment Sample 1_markdown_instruction: "# Alien Jumper\r\n\r\nPress
         \"Run\" to play the game on the left.  You can make the alien jump with the
         space bar, and move it to the left and right with the arrow keys.  You score
@@ -4484,6 +4535,11 @@ en:
         the draw loop\r\n\r\n* Identify which sprite properties to change.\r\n* Update
         those properties using the counter pattern.\r\n\r\n_Tip: If your counter pattern
         isn't working like you expect, add watchers to help debug your program._"
+      CSD U3 Plotting Shapes Shape Lab - unembed_markdown_instruction: "# Drawing
+        Shapes\r\n\r\nExplore using this tool that lets you draw different colored
+        shapes. \r\n\r\nMake sure you hit \"Run\" and try out turning on the grid
+        to help you place shapes precisely.\r\n\r\n![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)"
       CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: "# Drawing Shapes\r\n\r\nExplore
         using this tool that lets you draw different colored shapes. \r\n\r\nMake
         sure you hit \"Run\" and try out turning on the grid to help you place shapes
@@ -4556,6 +4612,14 @@ en:
         `color()` function, set the `fill` or `stroke` of your shape to a random color.\r\n\r\n#
         Challenge\r\n\r\nCan you generate random colors that are limited to a narrow
         range of colors, such as a random shade or purple, or a random shade of teal?"
+      CSD U3 Random Debug Cloud-2018_markdown_instruction: "<img src=\"https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28
+        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nNow
+        that the grass is working, let's add a cloud to the sky. Unfortunately, it
+        looks a little funny right now.\r\n\r\n# Do This\r\n\r\n* Debug this program
+        to make the cloud wider than it is tall, like in the image.\r\n* Hint: You'll
+        need to change two parameters. Which ones set your cloud's width and height?\r\n\r\n_Challenge:
+        The sun is not in the exact same place as in the picture.  Can you change
+        the sun's coordinates so that the picture matches completely?_\r\n"
       CSD U3 Random Debug Cloud_markdown_instruction: "<img src=\"https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nNow
         that the grass is working, let's add a cloud to the sky. Unfortunately, it
@@ -4564,6 +4628,13 @@ en:
         need to change two parameters. Which ones set your cloud's width and height?\r\n\r\n_Challenge:
         The sun is not in the exact same place as in the picture.  Can you change
         the sun's coordinates so that the picture matches completely?_"
+      CSD U3 Random Debug Grass-2018_markdown_instruction: "<img src=\"https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37
+        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis
+        program uses the four parameter version of `rect()` and `ellipse()` to draw
+        a simple scene.\r\n\r\n# Do This\r\n\r\n* Debug this program and correct the
+        error so that the grass extends across the entire bottom.\r\n* Hint: You only
+        have to change one number. Which parameter makes your rectangle (the grass)
+        wider?"
       CSD U3 Random Debug Grass_markdown_instruction: "<img src=\"https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis
         program uses the four parameter version of `rect()` and `ellipse()` to draw
@@ -4571,6 +4642,11 @@ en:
         error so that the grass extends across the entire bottom.\r\n* Hint: You only
         have to change one number. Which parameter makes your rectangle (the grass)
         wider?"
+      CSD U3 Random Ellipse Behind-2018_markdown_instruction: "<img src=\"https://images.code.org/dd73760e7129225b1e9f53a542960b9a-image-1520402430622.59.19
+        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Do This\r\n\r\n* Write
+        code that makes an orange ellipse behind the green one.\r\n* Don't worry
+        about the exact size as long as the green ellipse is entirely inside the orange
+        one."
       CSD U3 Random Ellipse Behind_markdown_instruction: "<img src=\"https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Do This\r\n\r\n* Write
         code that makes an orange ellipse behind the green one.\r\n* Don't worry
@@ -4664,6 +4740,14 @@ en:
         will draw on top of everything already in your drawing, so it's important
         to think about the order of your code.\r\n\r\n# Do This\r\n\r\n* Use `background()`
         to make a \"black\" background behind the green circle."
+      CSD U3 Random rainbow snake-2018_markdown_instruction: "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58
+        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nThis
+        program draws a very rare breed of rainbow snake. To make the snake draw differently
+        every time you'll need to use random numbers.\r\n\r\n# Do This\r\n\r\n* Run
+        the program several times to see how the starter code works.\r\n* Add at least
+        three new different colored circles to your rainbow snake.\r\n* Use `randomNumber()`
+        to make the rest of the snake's body move up and down like the first three.\r\n\r\n*Challenge:
+        Can you make size of some of the circles random, too?*"
       CSD U3 Random rainbow snake_markdown_instruction: "<img src=\"https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nThis
         program draws a very rare breed of rainbow snake. To make the snake draw differently
@@ -4672,6 +4756,13 @@ en:
         three new different colored circles to your rainbow snake.\r\n* Use `randomNumber()`
         to make the rest of the snake's body move up and down like the first three.\r\n\r\n*Challenge:
         Can you make size of some of the circles random, too?*"
+      CSD U3 Random random ellipse-2018_markdown_instruction: "# Random Numbers\r\n\r\n`randomNumber()`
+        chooses a random number between a minimum and maximum value. You can use this
+        code instead of writing in the specific number.  If you make your drawings
+        with random numbers it will look a little bit different every time you run
+        your program.\r\n\r\n# Do This\r\n\r\n* Run the program several times to see
+        how it works.\r\n* Change the numbers inside `randomNumber` and run the code
+        again a few times to see what changes."
       CSD U3 Random random ellipse_markdown_instruction: "# Random Numbers\r\n\r\n`randomNumber()`
         chooses a random number between a minimum and maximum value. You can use this
         code instead of writing in the specific number.  If you make your drawings
@@ -4679,6 +4770,13 @@ en:
         your program.\r\n\r\n# Do This\r\n\r\n* Run the program several times to see
         how it works.\r\n* Change the numbers inside `randomNumber` and run the code
         again a few times to see what changes."
+      CSD U3 Random random ellipse2-2018_markdown_instruction: "<img src=\"https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
+        PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Random Numbers\r\n\r\nHere's
+        the same sun from last time.  Right now only the x-coordinate is random, but
+        you can make the y-coordinate random, too.\r\n\r\n# Do This\r\n\r\n* Use `randomNumber()`
+        for the ellipse's Y parameter so the circle is drawn in a random Y position,
+        too.\r\n* As long as your circle is appearing at random X and Y positions,
+        you can move on."
       CSD U3 Random random ellipse2_markdown_instruction: "<img src=\"https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
         PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Random Numbers\r\n\r\nHere's
         the same sun from last time.  Right now only the x-coordinate is random, but
@@ -4686,6 +4784,15 @@ en:
         for the ellipse's Y parameter so the circle is drawn in a random Y position,
         too.\r\n* As long as your circle is appearing at random X and Y positions,
         you can move on."
+      CSD U3 Scene Example-2018_markdown_instruction: "# Sprite Scenes\r\n\r\nBy
+        combining shapes, sprites, and text, you can create simple scenes, stories,
+        or comics. While this example is fairly simple, you can combine as many sprites
+        and shapes as you like to create scenes as complex or detailed as you like.\r\n\r\n##
+        Sketch It Out\r\n\r\nBefore moving on, take a second to sketch out a scene
+        that you'd like to make at the end of this lesson. Consider the simple shapes
+        that you've used in the past, sprites for your characters, and any text that
+        you'd like on the screen. Once you've sketched out an idea, you'll learn
+        about `text` and how to compose a scene.\r\n"
       CSD U3 Scene Example_markdown_instruction: "# Sprite Scenes\r\n\r\nBy combining
         shapes, sprites, and a new block called `text`, you can create simple scenes,
         stories, or comics. While this example is fairly simple, you can combine as
@@ -5040,6 +5147,11 @@ en:
         are at its center**.\r\n\r\n* Change the `x` and `y` properties of the sprite
         so that it entirely covers the green rectangle.\r\n* When your program works
         correctly, it should draw the image to the right."
+      CSD U3 Sprites text debug-2018_markdown_instruction: "<img src=\"https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png\"
+        style=\"float: right; width: 200px; margin-left: 20px;\">\r\n# Debug\r\n\r\nThis
+        scene has all the right code, but it's not in the right order. The scene
+        should look like the image to the right.  Can you reorder the blocks so that
+        each part of the scene is drawn in the correct order?"
       CSD U3 Sprites text debug_markdown_instruction: "<img src=\"https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png\"
         style=\"float: right; width: 200px; margin-left: 20px;\">\r\n# Debug\r\n\r\nThis
         scene has all the right code, but it's not in the right order. The scene
@@ -5604,6 +5716,18 @@ en:
         velocityY by 0.1 on each tick of the draw loop. \r\n* If the horse's y position
         is not less than 325, use the `velocityY` to change its vertical velocity
         to zero. [Show me where](#triggercallout=code_triggered2)\r\n\r\n"
+      CSD U3 abstraction jump-2018_markdown_instruction: "# Jumping\r\n\r\nYou now
+        have all the blocks you need to make your sprite jump!  The sprite should
+        jump up if it's on the ground and the user presses the \"up\" key, then should
+        start moving back down when it reaches the top of its jump.\r\n\r\n# Do this\r\n\r\n*
+        Find the `if` statement that checks whether the sprite is on the ground, and
+        look at the `if` statement inside of it that checks whether the user has pressed
+        the \"up\" arrow key. ( [Show me where](#triggercallout=code_triggered1) )\r\n\t*
+        Make the frog jump up when the user presses the arrow key.\r\n\t* Make the
+        frog stop moving otherwise.\r\n* Add code that does the following  ( [Show
+        me where](#triggercallout=code_triggered2) )\r\n  * Checks whether the frog
+        sprite has reached its highest point.\r\n  * If so, make the sprite go back
+        down."
       CSD U3 abstraction jump_markdown_instruction: "# Jumping\r\n\r\nYou now have
         all the blocks you need to make your sprite jump!\r\n\r\nJust as you checked
         whether your fish was at the left edge, you'll need to check whether the
@@ -5619,7 +5743,7 @@ en:
         Use the `velocityY` block to make the frog stop moving otherwise.\r\n* Add
         an if statement that does the following  ( [Show me where](#triggercallout=code_triggered2)
         )\r\n  * Checks whether the frog sprite has reached its highest point.\r\n  *
-        If so, use the `velocityY` block to make the sprite fall back down.\r\n\r\n"
+        If so, use the `velocityY` block to make the sprite fall back down."
       CSD U3 abstraction jumper intro_markdown_instruction: "# Horse Jumper\r\n\r\nNow
         that you've learned these new blocks, you can start to make a horse jumper
         game.  Press \"Run\" to play the game on the left.  You can use the up arrow
@@ -6758,7 +6882,7 @@ en:
         them.  You can look at the `loopItem` function for clues in how to reset the
         item position.\r\n* Inside your `if` statement, add a counter pattern that
         will increase the score every time the player touches an item.  Look at [Lesson
-        12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example.\r\n* Call the function
+        16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example.\r\n* Call the function
         inside the draw loop, in the \"update sprites\" area of your code.\r\n* Run
         the code to test your function."
       CSD U3 platform sample_markdown_instruction: "# Platform Jumper\r\n\r\nThe
@@ -7128,10 +7252,10 @@ en:
         Color\r\n\r\nIn the earlier prediction level you saw how the `setScale()`
         method can convert the full range of sensor readings (0-1023) into a range
         that can be used for RGB values (0-255). Let's build on that idea to make
-        an app that can communcate the current value of all three analog sensors with
-        a single color.\r\n\r\n# Do This\r\n\r\nTo start, we just need to set the
-        sensor scales correctly - don't worry about actually setting the color of
-        the background yet.\r\n\r\n* Using the `sensor.setScale()` block, set each
+        an app that can communicate the current value of all three analog sensors
+        with a single color.\r\n\r\n# Do This\r\n\r\nTo start, we just need to set
+        the sensor scales correctly - don't worry about actually setting the color
+        of the background yet.\r\n\r\n* Using the `sensor.setScale()` block, set each
         of light and sound sensors to the right scale for an RGB color channel.\r\n*
         Create a variable for each of the three colors and assign each one to the
         value of a different sensor.\r\n* Use `console.log()` to test that your variables
@@ -7632,10 +7756,10 @@ en:
         the same code you saw in the last level, but this time there's another dropdown
         menu to control the buzzer.  You'll have to add the code to make it work.\r\n\r\n#
         Do This\r\n* Using the LED code as a model, add new code inside the buttonL
-        event that will play a long or short buzz according to the text property of
-        the *buzzer_input* dropdown menu.\r\n* Add new code that will turn the buzzer
-        off when the right button is pressed.\r\n  * (Hint: the event is already in
-        the code.)"
+        event that will play a long or short buzz according to the chosen value property
+        of the *buzzer_input* dropdown menu.\r\n* Add new code that will turn the
+        buzzer off when the right button is pressed.\r\n  * (Hint: the event is already
+        in the code.)"
       CSD U6 getProperty debug_markdown_instruction: "# Debug\r\n\r\nThis program
         should change the background color, text color, and text of the button \"click_me\"
         when it is clicked, but nothing seems to be working. Fix the code so that
@@ -7749,8 +7873,8 @@ en:
       CSD U6 light show predict_markdown_instruction: "# Put on a Light Show\r\n\r\nThis
         app lets you put on a light show with the LED.\r\n\r\nLook at the code with
         your partner and answer the following questions:\r\n\r\n* What does this line
-        of code do: `  setProperty(\"screen\",\"background-color\",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r\n});`?  ([Show
-        me where.](#triggercallout=code_triggered))\r\n\r\nOnce you have answered
+        of code do: `setProperty(\"screen\", \"background-color\", rgb(randomNumber(0,255),
+        randomNumber(0,255), randomNumber(0,255)));`?\r\n\r\nOnce you have answered
         the question, run the code and click the buttons to see what happens."
       CSD U6 making music w arrays mod_markdown_instruction: "# Changing Elements
         in Arrays\r\n\r\nSo far you’ve just been using the elements of arrays. Now,
@@ -7848,6 +7972,12 @@ en:
         Do This\r\n\r\n* Add code to randomly select a note from the `notes` array.\r\n*
         Run the program and press the left button to hear your buzzer sing its beautiful
         tune."
+      CSD U6 sensor experiment embedded_markdown_instruction: "# Sensor Experiment\r\n\r\nRun
+        the program to the right and experiment with your board. Try interacting with
+        your board in many different ways to figure out what each sensor might be.
+        As you experiment with each sensor, discuss with a neighbor:\r\n\r\n* What
+        does this sensor measure?\r\n* What is its maximum value?\r\n* What is its
+        minimum value?"
       CSD U6 setProperty Text_markdown_instruction: "# Changing the Text\r\n\r\nThe
         `setProperty` block can be used to change lots of things about your design
         elements, including the text they contain.\r\n\r\n# Do This\r\n\r\n* Drag
@@ -7877,12 +8007,12 @@ en:
         the button \"stopAlarmButton\" is already on the screen, but because its \"hidden\"
         property is marked true, it isn't shown when the program starts._"
       CSD U6 setProperty xy click_markdown_instruction: "# Changing With a Click\r\n\r\nIt's
-        not really useful to only set a property when your program is run. After all,
-        you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty`, you're able to do things you couldn't do with Design
-        Mode alone.\r\n\r\n# Do This\r\n\r\nWe've provided an empty `onEvent` block
-        that's watching the \"smiley\" image. Inside the `onEvent` block, use two
-        `setProperty` blocks to move the smiley somewhere else (it doesn't really
+        not really useful to only set a property when your program is first run. After
+        all, you could just do all of that in Design Mode. When you use an `onEvent`
+        block with `setProperty`, you're able to do things you couldn't do with
+        Design Mode alone.\r\n\r\n# Do This\r\n\r\nWe've provided an empty `onEvent`
+        block that's watching the \"smiley\" image. Inside the `onEvent` block, use
+        two `setProperty` blocks to move the smiley somewhere else (it doesn't really
         matter where for now). Test your program by running it and clicking on the
         smiley."
       CSD U6 setProperty xy random_markdown_instruction: "<img src=\"https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif\"
@@ -10672,8 +10802,8 @@ en:
       CSDU6 - sensors predict question_markdown_instruction: "# Make a Prediction\r\n\r\nRead
         the code in this program and make a prediction below. What do you think this
         program will do when you run it? How is the user intended to interact with
-        the board? You may need to use a flashlight or other bright light source to
-        see the full range of this app."
+        the board? You may need to blow onto the board to see the full range of this
+        app."
       CSDU6 - sensors rgb part 1_markdown_instruction: "# Displaying Sensor Readings
         in Color\r\n\r\nIn the previous prediction level you saw how the `setScale()`
         method can convert the full range of sensor readings (0-1023) into a range
@@ -11693,11 +11823,11 @@ en:
         through your list**.\r\n    * The **current entry and total number of entries**
         are indicated at the top.\r\n    * You may **add a new entry** at the current
         location in your list."
-      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\n\nYour
+      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\r\n\r\nYour
         app needs to store the following information. For each type of information,
-        decide whether you would use an array or a variable to store it:\n \n* All
-        the messages a user has sent\n* The highest score a user has ever reached
-        on the app\n* A username and password to unlock the app\n\n"
+        decide whether you would use an array or a variable to store it:\r\n \r\n*
+        All the messages a user has sent\r\n* The highest score a user has ever reached
+        on the app\r\n* A username and password to unlock the app\r\n"
       CSPU5_U3 - Arrays - Wrap Up 2_markdown_instruction: "## Free Response: Choosing
         Array or Variable\n\nIn general, when do you think you should store information
         in an array, and when should you use a variable?\n"
@@ -18094,9 +18224,9 @@ en:
         in the bottom row of the image with shades of a different color.  Here is
         an example with some shades of blue.  Try your own color!"
       Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "# Color
-        Pixelation: Task 1\n**Directions:**\n\n* We start you with the 4x2 image Maddie
-        was creating, but we've left out the last two squares. \n* Finish off the
-        image by figuring out which two colors are missing and encode them.\n"
+        Pixelation: Task 1\r\n**Directions:**\r\n\r\n* We start you with the 4x2 image
+        Maddie was creating, but we've left out the last two squares. \r\n* Finish
+        off the image by figuring out which two colors are missing and encode them.\r\n"
       Pixelation 2_markdown_instruction: "Something happened to the bits in this
         image!  Find error and fix it!"
       Pixelation 4x4 Empty_markdown_instruction: "The width and height are now encoded
@@ -25737,7 +25867,7 @@ en:
         style=\"width:250px;\">\r\n- A __text input__ has been created for you that
         asks for a user's name.\r\n- Attach a __'change'__ event handler to the
         text input.\r\n- When the 'change' event triggers, __write the user's name
-        and a greeting__.\r\n"
+        and a greeting__."
       U3L16 - chaserApp_markdown_instruction: "# Chaser Game\r\n\r\nYou now have
         all the skills you need to make a simple \"chaser\" game. A chaser game is
         just a game where an image runs away from your mouse.\r\n<img src=\"https://images.code.org/ed1e9852b33ca368cf8cd8e0b0159de7-image-1444336815528.gif\"
@@ -28825,10 +28955,9 @@ en:
         add a console.log message like `console.log(\"correct one is: \" + randButtonId)`
         at the end of the `setBoard` function.\r\n* overall the setBoard function
         will look like this:\r\n\r\n\t\tfunction setBoard(){\r\n        \t\r\n            //
-        generate random color\r\n            // make all 4 buttons have same bg color\r\n            //
-        pick a random Button Id\r\n            // set it's bg color to something
-        different\r\n            \r\n            console.log(\"correct one is: \"
-        + randButtonId);  <-- Add this line\r\n\t\t}"
+        generate random color\r\n            // make all 4 buttons have same color\r\n            //
+        pick a random Button Id\r\n            // set its color to something different\r\n            \r\n            console.log(\"correct
+        one is: \" + randButtonId);  <-- Add this line\r\n\t\t}"
       U5 ColorSleuth add score variables and update with console_markdown_instruction: "Fun
         part - hide/show player highlight in app.\r\n\r\nDO THIS:\r\n\r\n* in nextTurn()
         hide both player highlights\r\n* in if statement show the correct one in \r\n\r\n[anigif
@@ -30561,6 +30690,11 @@ en:
       collectorSkinVideo2_markdown_instruction: "Move Laurel to the treasure, then
         use `collect` to pick it up.\r\n\r\nCollect one pile of treasure to pass this
         level."
+      comment_intro_maze_2018_markdown_instruction: "*\"I'm confused. Help me remember
+        how to solve this maze.\"* \r\n\r\nUse the new `comment` block to leave yourself
+        quick reminders. They can help you remember what you were doing and why!\r\n\r\nComments
+        are only used for **you**. Your Play Area won't look different because of
+        a comment."
       course1_artist_loops_challenge2_markdown_instruction: "Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?"
       course1_artist_loops_challenge3_markdown_instruction: "**Tweet!**\r\n\r\n*\"Can
@@ -31367,7 +31501,7 @@ en:
         _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r\n\r\nDraw a small shape,
         between **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou
         can try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r\n\r\n  \r\n  \r\nOr
-        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n"
+        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Let’s try something new. This time, skate in a zig-zag.\"_\r\n\r\n\r\n<img
         src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
@@ -31451,13 +31585,13 @@ en:
         playing around with what you've created. Draw whatever you like!\r\n- What
         happens if you use two different angles in your stair step pattern?\r\n- What
         happens if you make your diamond pattern longer or shorter?\r\n- What does
-        it look like to draw two snowflakes on top of one another?\r\n"
+        it look like to draw two snowflakes on top of one another?"
       courseD_artist_project5_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Get creative with shapes and angles to see what kind of new snowflakes
         we can draw!\"_\r\n"
       courseD_artist_project5_2018_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Get creative with shapes and angles to see what kind of new snowflakes
-        we can draw!\"_\r\n"
+        we can draw!\"_"
       courseD_artist_project_embedded_markdown_instruction: "Here's what you will
         soon be making!"
       courseD_artist_ramp11_markdown_instruction: "Great!  Now let's make a square
@@ -32064,7 +32198,7 @@ en:
       courseE_artist_functions_predict1_markdown_instruction: "Here is a puzzle that
         uses a function that we have defined. \r\n"
       courseE_artist_functions_predict1_2018_markdown_instruction: "Here is a puzzle
-        that uses a function that we have defined. \r\n"
+        that uses a function that we have defined. "
       courseE_artist_ramp10_markdown_instruction: "Did you know you can put loops
         inside of other loops to make them more powerful?  That's called making a
         \"nested loop\".\r\n\r\n___\r\n\r\nDrag the code for the last triangle into
@@ -32535,6 +32669,10 @@ en:
         hexagon pattern was made using a 60 degree turn.)"
       courseF_artist_for_Template_markdown_instruction: "If you turn a little bit
         more or less than you normally would for a shape, it creates a neat effect.\r\n\r\nTry
+        using some of the code from the last level, but turning 89 degrees to create
+        this twisted square spiral."
+      courseF_artist_for_Template_2018_markdown_instruction: "If you turn a little
+        bit more or less than you normally would for a shape, it creates a neat effect.\r\n\r\nTry
         using some of the code from the last level, but turning 89 degrees to create
         this twisted square spiral."
       courseF_artist_for_challenge1_markdown_instruction: "Can you figure out how

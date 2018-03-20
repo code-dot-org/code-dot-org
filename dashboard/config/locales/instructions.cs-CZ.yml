@@ -7127,6 +7127,9 @@
         a vyřešil hádanku.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9627,6 +9630,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10241,6 +10247,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Připoj blok k bloku "když klikneš" a potom stiskni "Spustit".
         Klikej nebo ťukej na obrazovku, abys dostal Flappyho do cíle.
+      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
+        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
+        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       flappy_2_instruction: Teď jsme přidali terén. Připoj blok k bloku "když se dotkne
         země". Tvůj kód musí zajistit 'konec hry', když Flappy narazí.
       flappy_3_instruction: Blok "po spuštění" ti umožňuje spuštění kódu poté co hra
@@ -10260,9 +10269,6 @@
         když mine překážku.
       flappy_9_instruction: Zamíchat věci nahoru při nárazu na překážku a namísto
         ukončení hry zkuste nastavit skóre zpět na 0.
-      flappy_11_instruction: Vytvoř si vlastní Flappy hru. Můžeš měnit všechen vzhled
-        a všechna pravidla, včetně gravitace. Až budeš hotov, klikni na tlačítko 'Sdílet'
-        a nech své přátele vyzkoušet tvojí hru na jejich mobilech.
       frozen circle function in circle_instruction: Vytvořme 20 překrývajících se
         kružnic tak, že je otočíme o 18 stupňů mezi každou kružnicí.
       frozen circle function with parameter_instruction: "Tady máš blok \"vytvoř kružnici\",

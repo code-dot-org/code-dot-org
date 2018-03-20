@@ -963,6 +963,7 @@ zh-TW:
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "（舊）計算機科學原理 單元 2 - 網際網路"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
@@ -7143,3 +7144,75 @@ zh-TW:
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: 變數
+            Sprites:
+              name: 角色
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD 單元 3 -互動式遊戲和動畫
+          description_audience: ''
+          description_short: "Game Lab 編程環境介紹"
+          description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."

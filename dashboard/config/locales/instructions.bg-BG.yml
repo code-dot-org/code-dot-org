@@ -7294,6 +7294,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9767,6 +9770,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10379,8 +10385,13 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: Долепете блок до блокът "при кликване ", след това изберете
-        "Старт". Щракнете с мишка или натиснете екрана, за да движите Flappy към целта.
+      flappy_1_instruction: Долепи  блок до блокчето "при кликване" така, че когато
+        натиснеш "Старт" и щракнеш с мишката, или натиснеш екрана, птичката ще се
+        придвижи към целта.
+      flappy_11_instruction: "Време е да създадеш своя собствена Flappy игра. Можеш
+        да промениш изображенията и правилата, дори гравитацията. Изпробвай играта.
+        Когато приключиш, натисни Финал, за да позволиш на приятелите си да я изпробват
+        на техните телефони."
       flappy_2_instruction: Сега добавихме терен. Долепете блок към блокът "при сблъсък
         с терена". Вашият код се нуждае от "ПРЕКРАТИ ИГРАТА", когато Flappy се блъсне.
       flappy_3_instruction: Блокчето "при стартиране" ти позволява да избереш какво
@@ -10403,10 +10414,6 @@
       flappy_9_instruction: "За да не се объркват нещата,  когато героят удря препятствие,
         вместо да приключва играта, опитайте да настроите резултатът да се върне обратно
         към 0."
-      flappy_11_instruction: "Време е да създадеш своя собствена Flappy игра. Можеш
-        да промениш изображенията и правилата, дори гравитацията. Изпробвай играта.
-        Когато приключиш, натисни Финал, за да позволиш на приятелите си да я изпробват
-        на техните телефони."
       frozen circle function in circle_instruction: "Сега, нека да създадем 20 частично
         застъпващи се кръгове като се завъртаме на 18 градуса след всеки кръг."
       frozen circle function with parameter_instruction: Тук е "Създайте кръг" блока,

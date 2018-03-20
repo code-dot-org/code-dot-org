@@ -536,22 +536,6 @@ module Pd::Application
       sanitize_form_data_hash[:principal_approval] || ''
     end
 
-    def date_accepted
-      accepted_at.try(:strftime, '%b %e')
-    end
-
-    def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
-    end
-
-    def registered_workshop
-      if pd_workshop_id
-        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
-      else
-        ''
-      end
-    end
-
     # Called once after the application is submitted, and the principal approval is done
     # Automatically scores the application based on given responses for this and the
     # principal approval application. It is idempotent, and will not override existing
@@ -603,7 +587,7 @@ module Pd::Application
     end
 
     # @override
-    def self.csv_header(course)
+    def self.csv_header(course, user)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
@@ -622,6 +606,7 @@ module Pd::Application
           'Notes',
           'Status'
         )
+        columns.push('Locked') if can_see_locked_status?(user)
         csv << columns
       end
     end
@@ -635,7 +620,7 @@ module Pd::Application
     end
 
     # @override
-    def to_csv_row
+    def to_csv_row(user)
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
@@ -654,6 +639,7 @@ module Pd::Application
           notes,
           status
         )
+        row.push locked? if self.class.can_see_locked_status?(user)
         csv << row
       end
     end
@@ -667,8 +653,8 @@ module Pd::Application
           district_name,
           school_name,
           user.email,
-          assigned_workshop,
-          registered_workshop
+          workshop_date_and_location,
+          registered_workshop? ? 'Yes' : 'No'
         ]
       end
     end
@@ -780,6 +766,11 @@ module Pd::Application
 
       # No match? Return the first workshop
       workshops.first
+    end
+
+    # @override
+    def self.can_see_locked_status?(user)
+      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
     end
 
     protected

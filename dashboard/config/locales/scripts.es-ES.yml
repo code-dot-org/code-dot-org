@@ -1010,6 +1010,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: In this unit, students extend their understanding of the internet
@@ -1106,7 +1107,7 @@
             Anonymous student survey:
               name: Investigación de los estudiantes que son anónimos
             Anonymous student survey 2:
-              name: Anonymous student survey 2
+              name: Encuesta anónima de estudiantes 2
             AppLab:
               name: AppLab
             Artist:
@@ -1142,7 +1143,7 @@
             Multi2:
               name: Multi2
             Netsim:
-              name: Netsim
+              name: NetSim, (simulador de red)
             Odometer:
               name: Odómetro
             Online PD:
@@ -1719,7 +1720,7 @@
             Web Requests and APIs:
               name: Web Requests and APIs
             What Data Can Tell Us:
-              name: What Data Can Tell Us
+              name: Lo que los datos pueden decirnos
             Why Make Apps?:
               name: "¿Por qué crear aplicaciones?"
         ScienceP3OLPT2:
@@ -2332,7 +2333,7 @@
             Using Simple Commands:
               name: Uso de comandos simples
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unidad 3 Capitulo 1 Evaluacion
             'Anonymous student survey: Taking the AP exam':
               name: 'Anonymous student survey: Taking the AP exam'
             CSP Student Post Survey Staging:
@@ -2584,7 +2585,7 @@
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Velocidad
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -2779,7 +2780,7 @@
             Contained Levels:
               name: Contained Levels
             Game Lab:
-              name: Game Lab
+              name: Laboratorio de juego
         cspunit1-support-test:
           title: CSP Unit 1 teacher support
           description: Online Supports for CSP Unit 1
@@ -3173,7 +3174,7 @@
             Sequences & Algorithms:
               name: Sequences & Algorithms
             Unspotted Bugs:
-              name: Unspotted Bugs
+              name: Errores desapercibidos
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
@@ -3451,7 +3452,7 @@
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Velocidad
               description_student: Después de una breve revisión de cómo se usa el
                 patrón de contador para mover los sprites, se introduce la clase a
                 las propiedades que establecen la velocidad y la velocidad de rotación
@@ -3908,7 +3909,7 @@
             Unit 1 Chapter 1 Assessment:
               name: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unidad 3 Capitulo 1 Evaluacion
             Unit 4 Chapter 1 Assessment:
               name: Unit 4 Chapter 1 Assessment
             'Anonymous student survey: Taking the AP exam':
@@ -6127,7 +6128,7 @@
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Velocidad
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6525,7 +6526,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocidad
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -6672,7 +6673,7 @@
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Velocidad
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -8142,7 +8143,7 @@
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unidad 3 Capitulo 1 Evaluacion
             foo:
               name: foo
             CSP Mid-course survey:
@@ -8726,7 +8727,7 @@
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             Unit 3 Chapter 1 Assessment:
-              name: Unit 3 Chapter 1 Assessment
+              name: Unidad 3 Capitulo 1 Evaluacion
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
@@ -9094,3 +9095,80 @@
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: Variables
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Conditionals:
+              name: Condicionales
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Velocity:
+              name: Velocidad
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Funciones
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            Project - Design a Game:
+              name: Project - Design a Game
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: Programación
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."

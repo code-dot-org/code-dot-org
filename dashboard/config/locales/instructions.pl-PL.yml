@@ -888,9 +888,7 @@
         mi wypełnić otwory i usunąć sterty, by wyrównać teren.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Alien Defender_instruction: 'Idea projektu: Stwórz grę obronną w Play Lab!'
-      Alien Defender_2018_instruction: |-
-        Project Idea: Make a defender game in Play
-        Lab!
+      Alien Defender_2018_instruction: 'Idea projektu: Stwórz grę obronną w Play Lab!'
       AllTheThings Applab - Turtle move with button_instruction: Dodaj przycisk, który
         przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': 'Stwórz
@@ -7271,6 +7269,9 @@
         ten poziom.
       collectorSkinVideo2_instruction: Zbierz jedną stertę złota żeby ukończyć ten
         poziom.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         Możesz wykorzystać pętlę aby narysować wiele linii w wierszu.\r
         \r
@@ -9654,6 +9655,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10264,6 +10268,9 @@
       flappy_1_instruction: Dołącz blok do bloku "po kliknięciu", a następnie naciśnij
         przycisk "Uruchom". Kliknij lub dotknij ekranu, aby przesunąć Flappy'ego do
         miejsca docelowego.
+      flappy_11_instruction: Stwórz swoją własną grę z Flappym. Możesz zmienić wszystkie
+        efekty wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
+        przycisk "Zakończ", aby twoi znajomi mogli ją wypróbować na swoich telefonach.
       flappy_2_instruction: Teraz dodaliśmy podłoże. Dołącz blok do bloku "kiedy spadnie
         na ziemię".  Twój kod powinien kończyć grę, kiedy Flappy rozbija się.
       flappy_3_instruction: Blok "po uruchomieniu" pozwala uruchomić kod po uruchomieniu
@@ -10284,9 +10291,6 @@
         coś innego, na przykład, kiedy Flappy mija przeszkodę.
       flappy_9_instruction: Po uderzeniu w przeszkodę, zamiast kończyć grę, spróbuj
         ustawić wynik z powrotem na 0.
-      flappy_11_instruction: Stwórz swoją własną grę z Flappym. Możesz zmienić wszystkie
-        efekty wizualne i wszystkie zasady, nawet przyciąganie. Kiedy skończysz, kliknij
-        przycisk "Zakończ", aby twoi znajomi mogli ją wypróbować na swoich telefonach.
       frozen circle function in circle_instruction: Teraz utwórzmy 20 nakładających
         się na siebie okręgów, skręcając o 18 stopni przy każdym okręgu.
       frozen circle function with parameter_instruction: Tutaj jest blok "utwórz okrąg",

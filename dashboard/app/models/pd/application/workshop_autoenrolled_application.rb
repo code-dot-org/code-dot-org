@@ -56,7 +56,11 @@ module Pd::Application
     end
 
     def workshop
-      Pd::Workshop.find(pd_workshop_id) if pd_workshop_id
+      Pd::Workshop.find_by(id: pd_workshop_id) if pd_workshop_id
+    end
+
+    def workshop_date_and_location
+      workshop.try(&:date_and_location_name)
     end
 
     # override
@@ -94,6 +98,10 @@ module Pd::Application
     def workshop_course
       return Pd::Workshop::COURSE_CSD if course == 'csd'
       return Pd::Workshop::COURSE_CSP if course == 'csp'
+    end
+
+    def registered_workshop?
+      pd_workshop_id.present? && Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user)
     end
 
     # Assigns the default workshop, if one is not yet assigned

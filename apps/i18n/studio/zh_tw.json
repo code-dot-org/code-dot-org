@@ -219,6 +219,7 @@
   "iceAge": "冰河世紀！",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "角色",
   "ifSpriteN": "角色 {spriteIndex}",
   "incrementPlayerScore": "得分",
   "isSet": "被設為",

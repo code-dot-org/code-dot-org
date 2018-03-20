@@ -219,6 +219,7 @@
   "iceAge": "Jiekŋaáigi!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "figuvrra",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "score point",
   "isSet": "is set",

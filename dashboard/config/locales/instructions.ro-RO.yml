@@ -7368,6 +7368,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9849,6 +9852,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10462,8 +10468,12 @@
         same!
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Atașează un bloc la blocul "când clic", apoi apasă "Rulează
-        Programul". Fă clic sau atinge ușor cu degetul pe ecran ca să îl muți pe Flappy
+        Programul". Fă clic sau bate ușor cu degetul pe ecran ca să îl muți pe Flappy
         la țintă.
+      flappy_11_instruction: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele
+        vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi
+        clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele
+        lor.
       flappy_2_instruction: Acum am adăugat și ceva teren.  Ataşează un bloc la blocul
         "când ajunge la sol".  Codul tău trebuie să se încheie cu "Sfârşitul jocului"
         atunci când Flappy se prăbușește.
@@ -10485,10 +10495,6 @@
         jocul. Încearcă să setezi o scenă aleatorie când alte incidente se întâmplă.
       flappy_9_instruction: Pentru diversitate, în locul opririi jocului, încearcă
         setarea scorului la 0 atunci când lovești un obstacol.
-      flappy_11_instruction: Creați-vă propriul joc Flappy. Puteţi schimba toate aspectele
-        vizuale şi toate regulile, chiar şi gravitația. Când aţi terminat, faceţi
-        clic pe Terminare pentru a permite prietenilor să încerce jocul pe telefoanele
-        lor.
       frozen circle function in circle_instruction: Acum haideți să creăm 20 de cercuri
         suprapuse, rotind 18 grade după fiecare cerc.
       frozen circle function with parameter_instruction: Aici este un bloc "Creează

@@ -377,7 +377,7 @@
             Reflection:
               name: Reflection
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Unplugged lessons:
               name: Unplugged lessons
             Writing computer programs:
@@ -613,7 +613,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algPDmiami:
@@ -829,7 +829,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             The Big Game:
               name: The Big Game
             The Design Recipe:
@@ -886,7 +886,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD-iZone:
@@ -905,7 +905,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD-NexTech:
@@ -1007,6 +1007,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet
@@ -1201,7 +1202,7 @@
             Strings and Images:
               name: Strings and Images
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Writing Contracts:
               name: Writing Contracts
         cspfacilitator:
@@ -1302,7 +1303,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -2188,7 +2189,7 @@
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         algebraPD3c:
@@ -2679,7 +2680,7 @@
             Introduction to PD:
               name: Introduction to PD
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Why Computer Science belongs in Algebra:
               name: Why Computer Science belongs in Algebra
         sciencePD1:
@@ -3890,7 +3891,7 @@
             Lesson Prep:
               name: Lesson Prep
             Teacher Dashboard:
-              name: Teacher Dashboard
+              name: "Мугалимдин тактасы"
             Teaching with Puzzles:
               name: Teaching with Puzzles
             Teaching with the Design Recipe:
@@ -9077,3 +9078,81 @@
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: "Өзгөрмөлөр"
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Conditionals:
+              name: Conditionals
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Velocity:
+              name: Velocity
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Functions
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            Project - Design a Game:
+              name: Project - Design a Game
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: " Learn to program animations, interactive art, and games
+            in Game Lab."
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."

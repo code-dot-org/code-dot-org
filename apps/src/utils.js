@@ -230,25 +230,6 @@ export function isInfiniteRecursionError(err) {
 }
 
 /**
- * IE9 throws an exception when trying to access the media field of a stylesheet
- */
-export function browserSupportsCssMedia() {
-  var styleSheets = document.styleSheets;
-  for (var i = 0; i < styleSheets.length; i++) {
-    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
-    try {
-      if (rules.length > 0) {
-        // see if we can access media
-        rules[0].media;
-      }
-    } catch (e) {
-      return false;
-    }
-  }
-  return true;
-}
-
-/**
  * Remove escaped characters and HTML to convert some rendered text to what should appear in user-edited controls
  * @param text
  * @returns String that has no more escape characters and multiple divs converted to newlines

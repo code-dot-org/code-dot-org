@@ -210,6 +210,138 @@ class AnimationsTest < FilesApiTestBase
     @api.delete_object(filename)
   end
 
+  def test_restore_previous_animation
+    anim = @api.randomize_filename('animation.png')
+    delete_all_animation_versions(anim)
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    @api.post_file(anim, v1_file_data, 'image/png')
+    assert successful?
+    original_version_id = JSON.parse(last_response.body)['versionId']
+
+    # Overwrite it.
+    v2_file_data = 'stub-v2-body'
+    @api.post_file(anim, v2_file_data, 'image/png')
+    assert successful?
+    second_version_id = JSON.parse(last_response.body)['versionId']
+
+    # Restore
+    # Using AnimationBucket directly because there's no public API for this
+    animation_bucket = AnimationBucket.new
+    response = animation_bucket.restore_previous_version(@channel_id, anim, original_version_id, nil)
+    restored_version_id = response[:version_id]
+    restored_file_data = @api.get_object_version(anim, restored_version_id)
+
+    #Check that the restored version id is neither of the previous version ids
+    refute_equal original_version_id, restored_version_id
+    refute_equal second_version_id, restored_version_id
+
+    #Check that the restored body is the same as the one to which it was restored
+    assert_equal v1_file_data, restored_file_data
+
+    @api.delete_object(anim)
+  end
+
+  def test_restore_previous_animation_with_invalid_version
+    anim = @api.randomize_filename('animation.png')
+    delete_all_animation_versions(anim)
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    @api.post_file(anim, v1_file_data, 'image/png')
+    assert successful?
+    original_version_id = JSON.parse(last_response.body)['versionId']
+
+    # Overwrite it.
+    v2_file_data = 'stub-v2-body'
+    @api.post_file(anim, v2_file_data, 'image/png')
+    assert successful?
+    second_version_id = JSON.parse(last_response.body)['versionId']
+
+    # Restore
+    # Using AnimationBucket directly because there's no public API for this
+    animation_bucket = AnimationBucket.new
+    response = animation_bucket.restore_previous_version(@channel_id, anim, "bad_version_id", nil)
+    restored_version_id = response[:version_id]
+    restored_file_data = @api.get_object(anim, restored_version_id)
+    restored_metadata = animation_bucket.get(@channel_id, anim)[:metadata]
+
+    # Check that the latest version is the restored version
+    latest_file_data = @api.get_object(anim)
+    assert_equal restored_file_data, latest_file_data
+
+    #Check that the restored version id is neither of the previous version ids
+    refute_equal original_version_id, restored_version_id
+    refute_equal second_version_id, restored_version_id
+
+    #Check that the restored body is the same as the most recent animation
+    assert_equal v2_file_data, restored_file_data
+
+    #Check that the metadata exists and includes the expected keys and values
+    #Observed inconsistency with metadata using underline and hyphen - check both for resiliency
+    assert_equal '0', restored_metadata['abuse-score'] ? restored_metadata['abuse-score'] : restored_metadata['abuse_score']
+    refute_nil restored_metadata['failed-restore-at'] ? restored_metadata['failed-restore-at'] : restored_metadata['failed_restore_at']
+    assert_equal 'bad_version_id', restored_metadata['failed-restore-from-version'] ? restored_metadata['failed-restore-from-version'] : restored_metadata['failed_restore_from_version']
+
+    @api.delete_object(anim)
+  end
+
+  def test_restore_deleted_animation_with_invalid_version_does_nothing
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    @api.post_file(filename, v1_file_data, 'image/png')
+    assert successful?
+
+    # Delete it.
+    @api.delete_object(filename)
+    assert successful?
+
+    # List object versions
+    versions_old = @api.list_object_versions(filename)
+    assert successful?
+
+    # Attempt restore with bad version ID
+    animation_bucket = AnimationBucket.new
+    response = animation_bucket.restore_previous_version(@channel_id, filename, "bad_version_id", nil)
+
+    # Response indicates mot modified
+    assert_equal 'NOT_MODIFIED', response[:status]
+
+    # List object versions, check nothing changed.
+    versions_new = @api.list_object_versions(filename)
+    assert_equal versions_old, versions_new
+
+    @api.delete_object(filename)
+  end
+
+  def test_doesnt_mask_unrelated_errors
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Stub copy_object to give an error
+    BucketHelper.s3.stubs(:copy_object).raises("Test Error")
+
+    # Create an animation file
+    v1_file_data = 'stub-v1-body'
+    @api.post_file(filename, v1_file_data, 'image/png')
+    assert successful?
+    original_version_id = JSON.parse(last_response.body)['versionId']
+
+    # Attempt restore with version id
+    animation_bucket = AnimationBucket.new
+
+    # Check that restoring raises an error per above stub
+    assert_raises do
+      animation_bucket.restore_previous_version(@channel_id, filename, original_version_id, nil)
+    end
+
+    @api.delete_object(filename)
+  end
+
   private
 
   def delete_all_animation_versions(filename)

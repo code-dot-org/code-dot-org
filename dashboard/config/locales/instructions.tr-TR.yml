@@ -7036,14 +7036,14 @@
         bloklarının ikisine de bloklar eklemeniz gerekiyor.
       bounce_6_basketball_instruction: Şimdi bayrak en üstte. Bulmacayı çözmek için
         "top vurduğunda" bloklarının ikisine de bloklar eklemeniz gerekiyor.
-      bounce_6_sports_instruction: Bu sefer bayrak üst tarafta. "top duvara çarptığında"
-        bloklarının ikisine ekleme yaparak bulmacayı çözmek zorundasın.
+      bounce_6_sports_instruction: Şimdi bayrak en üstte. Bulmacayı çözmek için "top
+        vurduğunda" bloklarının ikisine de bloklar eklemeniz gerekiyor.
       bounce_7_instruction: '"sırasında" bloklarının her birine bloklar ekleyin. Son
         hedefe vurana kadar topu zıplat.'
       bounce_7_basketball_instruction: Her bir "sırasında" bloğuna blokalar ekleyin.
         Son hedefe olaşana kadar topu zıplat.
-      bounce_7_sports_instruction: Blokları "ne zaman" bloklarının her birine ekleyin.
-        Bitiş hedefine ulaşana kadar topu sektirin.
+      bounce_7_sports_instruction: Her bir "sırasında" bloğuna blokalar ekleyin. Son
+        hedefe olaşana kadar topu zıplat.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -7054,6 +7054,9 @@
         toplayın.
       collectorSkinVideo1_instruction: Bu seviyeyi geçmek için dört yığını da toplayın.
       collectorSkinVideo2_instruction: Bu seviyeyi geçmek için bir yığın altın toplayın.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: Birçok çizgi çizmek için bir döngü
         kullanabilirsin. \r \r bir ev çizebilir misin? İstediğiniz şekilde görünmesini
         sağla!  Yinelenen kodları görmeyi deneyin!
@@ -8307,7 +8310,7 @@
         komutlar burada... Şimdi hata ayıklama becerilerinizi kullanarak bu bulmacayı
         nasıl çözeceğinizi bulun.'
       courseD_collector_debugging_challenge2_instruction: "İç içe döngülerin uzmanı
-        mısınız? Hazinenin tümünü toplamak öğrendiklerinizi kullanın!"
+        mısınız? Hazinenin tümünü toplamak için öğrendiklerinizi kullanın!"
       courseD_collector_nested_loops_challenge2_instruction: Hadi döngüler kullanarak
         hazine avı yapalım! Toplayıcıya yardımcı ol ve araç kutusunda ki blokları
         kullanarak en az iki yığın hazine topla. 3 yığın toplamak mümkün.
@@ -8361,9 +8364,8 @@
       courseD_farmer_condLoops9_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
-      courseD_farmer_condLoops9_predict1_instruction: |-
-        Collect all of the corn and
-        lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_instruction: Mısır ve marulların hepsini
+        topla sonra kabakları seç.
       courseD_farmer_condLoops_challenge1_instruction: "Kabaklarda sağa dönün. \nBölümü
         tamamlamak için her şeyi toplayın. Her gizli üründe sadece bir adet mısır
         veya marul var."
@@ -8494,8 +8496,8 @@
       courseD_maze_ramp5b_2018_instruction: |-
         Navigate this maze to help the bird
         find the pig!
-      courseD_maze_ramp5c_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5c_2018_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5c_instruction: Domuza ulaşması için kuşa yardım et.
+      courseD_maze_ramp5c_2018_instruction: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5d_instruction: Get the bird to the pig.
       courseD_maze_ramp5d_2018_instruction: Get the bird to the pig.
       courseD_maze_ramp6_instruction: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa
@@ -8811,6 +8813,7 @@
         You are on your own for
         this challenge. This could "bee" harder than it looks!
       courseE_bee_functions_challenge2_instruction: Bu mücadelede tamamen kendi başınasın!
+        Ne güzel!
       courseE_bee_functions_challenge2_2018_instruction: |-
         You are on your own for
         this challenge. Sweet!
@@ -9187,6 +9190,9 @@
         the `set alpha` block to get this faded center.
       courseF_artist_for_Template_instruction: Bazı kodları son seviyeden kullanmayı
         deneyin, ama bu bükülmüş sarmalı oluşturmak için 89 derece dön.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: Bu çizimi tekrar nasıl yapabileceğini
         çözebildin mi?
       courseF_artist_for_challenge1_2018_instruction: |-
@@ -9746,6 +9752,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"Tıklandığında" bloğuna bir blok ekleyin sonra "Çalıştır"
         a basın. Flappy'' yi hedefe hareket ettirmek için tıklayın ya da ekrana dokunun.'
+      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
+        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
+        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       flappy_2_instruction: Şimdi biraz zemin ekledik. "Zemine çarptığında" bloğuna
         bir blok ekleyin. Flappy çarptığında 'OYUNU BİTİR' komutunu ihtiyaç var.
       flappy_3_instruction: '"Çalışıtığı zaman" bloğu oyun başladığında kodlarınızın
@@ -9765,9 +9774,6 @@
         geçince.
       flappy_9_instruction: "İşleri karıştırmak için, bir engele çarptığında, oyunu
         bitirmek yerine skoru 0 yapmayı deneyin."
-      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
-        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
-        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       frozen circle function in circle_instruction: "Şimdi herbirini çizdikten sonra
         18 derece bırakacağınız 20 tane çember oluşturun."
       frozen circle function with parameter_instruction: '"Çember oluştur" "create

@@ -1,9 +1,8 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Fundraising Resources
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Topics
@@ -109,7 +108,7 @@ ________________
 
 - **Diversify your revenue streams:** ex. Code.org if funded by approximately 40% corporations, 40% foundations/high net worth individuals, 20% online donations 
   * Having a mix of types of support creates more stable funding and reduces risk year over year 
-- **Program/mission focus:** Code.org best practice is lead with the ask with potential funders who have mutual goals, believe in your mission, and do not ask for you to stray away from your mission. Code.org does not pursue customized programs with funders, where the funder donates to create a specific program with the non-profit. This enables us to stay focused on achieving our mission at scale, maintain lean fundraising operations/staff, and ultimately create more impact. 
+- **Program/mission focus:** Code.org best practice is lead with the ask with potential funders who have mutual goals, believe in your mission, and do not ask for you to stray away from your mission. Code.org does not pursue customized programs with funders, where the funder donates to create a specific program with the nonprofit. This enables us to stay focused on achieving our mission at scale, maintain lean fundraising operations/staff, and ultimately create more impact. 
 - **General operating support vs. restricted funding:** Code.org best practice is to try to maintain as much general operating support to allow your organization to stay flexible to meet the needs of your program goals, and maintain low overhead and staff to manage grants and donors 
 - **Multi-Year Grants:** if possible, try to secure multi year grants to advance your mission. This will help you raise funds more efficiently and be able to better project your future income and cash flow. 
 

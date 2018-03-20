@@ -219,6 +219,7 @@
   "iceAge": "Istid!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "figur",
   "ifSpriteN": "figur {spriteIndex}",
   "incrementPlayerScore": "score poeng",
   "isSet": "er satt",

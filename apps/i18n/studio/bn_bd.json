@@ -219,6 +219,7 @@
   "iceAge": "বরফ যুগ!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "অভিনেতা",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "পয়েন্ট জিতুন",
   "isSet": "is set",

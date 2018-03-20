@@ -7261,6 +7261,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9764,6 +9767,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10378,6 +10384,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Dodaj bloku "na klik" odgovarajući blok pa klikni na "Pokreni".
         Klikni ili dodirni ekran da pomakneš Flappyja prema cilju.
+      flappy_11_instruction: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke
+        elemente i sva pravila, čak i gravitaciju. Kada je sve spremno, klikni na
+        Kraj da bi tvoji prijatelji isprobali tvoju igru na svojim mobitelima.
       flappy_2_instruction: Sada smo dodali tlo. Prikači odgovarajući blok na "kada
         padne na tlo" blok. Kad Flappy padne, tvoj kôd treba označiti 'KRAJ IGRE'.
       flappy_3_instruction: Blok "pri pokretanju" ti omogućava da pokreneš svoj program
@@ -10397,9 +10406,6 @@
         neki drugi događaj, na primjer, pri prolasku prepreke.
       flappy_9_instruction: Da bismo malo zakomplikovali, kada se naleti na prepreku,
         umjesto što će se igra završiti, pokušaj postaviti rezultat na 0.
-      flappy_11_instruction: Napravi vlastitu Flappy igru. Možeš izmijeniti sve grafičke
-        elemente i sva pravila, čak i gravitaciju. Kada je sve spremno, klikni na
-        Kraj da bi tvoji prijatelji isprobali tvoju igru na svojim mobitelima.
       frozen circle function in circle_instruction: Hajde sada da napravimo 20 preklapajućih
         krugova, okrećući za 18 stepeni između svakog kruga.
       frozen circle function with parameter_instruction: Evo "Napravi krug" blok koji

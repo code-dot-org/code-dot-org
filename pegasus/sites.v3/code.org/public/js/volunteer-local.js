@@ -6,15 +6,11 @@ var selectize;
 
 $(document).ready(function () {
   initializeMap();
-  $('#contact-volunteer-form select').selectize({
-    plugins: ['fast_click']
-  });
+  $('#contact-volunteer-form select').selectize();
 });
 
 $(function () {
-  selectize = $('#volunteer-search-facets select').selectize({
-    plugins: ['fast_click']
-  });
+  selectize = $('#volunteer-search-facets select').selectize();
 
   $("#location").geocomplete()
     .bind("geocode:result", function (event, result){

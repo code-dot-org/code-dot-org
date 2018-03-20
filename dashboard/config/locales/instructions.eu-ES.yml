@@ -7305,6 +7305,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9808,6 +9811,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10422,6 +10428,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Itsatsi bloke bat "klikatzean" blokeari; ondoren, sakatu
         "Hasi". Klikatu edo ukitu pantaila Flappy mugiarazteko helbururaino.
+      flappy_11_instruction: Sortu zure Flappy jokoa. Ikus-efektuak eta arauak alda
+        ditzakezu, baita grabitatea ere. Bukatzean, klik egin Amaiera-n, zure lagunek
+        euren telefonoetan proba dezaten.
       flappy_2_instruction: Orain, lurzorua gehitu dugu. Itsatsi bloke bat "lurzorua
         jotzean" blokeari. Zure kodeak 'JOKOA AMAITU' behar du Flappyk tupust egiten
         duenean.
@@ -10445,9 +10454,6 @@
         batzuk jazotzen direnean, oztopo bat gainditzean, adibidez.
       flappy_9_instruction: Gauzak nahasteko, oztopo batekin topo egitean, jokoa bukatu
         beharrean, saiatu markatzailea berriro 0-an jartzen.
-      flappy_11_instruction: Sortu zure Flappy jokoa. Ikus-efektuak eta arauak alda
-        ditzakezu, baita grabitatea ere. Bukatzean, klik egin Amaiera-n, zure lagunek
-        euren telefonoetan proba dezaten.
       frozen circle function in circle_instruction: Sor ditzagun orain 20 zirkulu
         gainjartzaile, zirkuluen artean 18 gradu biratuta.
       frozen circle function with parameter_instruction: Hona hemen "Sortu zirkulua"

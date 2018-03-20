@@ -7677,6 +7677,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -10183,6 +10186,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10797,6 +10803,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: إرفاق كتلة إلى "عندما انقر" كتلة، ثم اضغط على "تشغيل".
         انقر أو اضغط على الشاشة لنقل الطائر إلى الهدف.
+      flappy_11_instruction: "أنشئ لعبة Flappy الخاصة بك . يمكنك تغيير جميع المرئيات
+        وجميع القواعد ، و حتى الجاذبية . عند الانتهاء من ذلك، انقر فوق مشاركة للسماح
+        للأصدقاء بتجريب اللعبة الخاصة بك على هواتفهم ."
       flappy_2_instruction: الآن لقد أضفنا بعض الأراضي . أرفق قطعة اللغز إلى قطعة
         "عندما ترتطم بالأرض".  تعليماتك البرمجية تحتاج إلى 'إنهاء اللعبة' عندما يصطدم
         فلابي .
@@ -10817,9 +10826,6 @@
         حاول إعداد مشهد عشوائي عندما تحدث أحداث أخرى، على سبيل المثال، عند تمرير عقبة."
       flappy_9_instruction: "لخلط الأمور، عندما الارتطام بعقبة، بدلاً من إنهاء اللعبة
         جرب إعادة تعيين النتيجة مرة أخرى إلى 0."
-      flappy_11_instruction: "أنشئ لعبة Flappy الخاصة بك . يمكنك تغيير جميع المرئيات
-        وجميع القواعد ، و حتى الجاذبية . عند الانتهاء من ذلك، انقر فوق مشاركة للسماح
-        للأصدقاء بتجريب اللعبة الخاصة بك على هواتفهم ."
       frozen circle function in circle_instruction: "الآن لنقم بإنشاء 20 دائرة متداخلة،
         استدر 18 درجة بين كل دائرة."
       frozen circle function with parameter_instruction: هذه هي قطعة "إنشاء دائرة"

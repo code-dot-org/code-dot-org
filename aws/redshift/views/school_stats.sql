@@ -4,13 +4,16 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
            schools.city                             AS city,
            schools.zip                              AS zip,
            schools.state                            AS state,
+           schools.latitude                         AS latitude,
+           schools.longitude                        AS longitude,
            schools.school_type                      AS school_type,
            schools.school_district_id               AS school_district_id,
            school_districts.name                    AS school_district_name,
            max_survey_years.survey_year             AS survey_year,
            school_stats_by_years.grades_offered_lo  AS grades_lo,
            school_stats_by_years.grades_offered_hi  AS grades_hi,
-           (CASE WHEN (grade_pk_offered +
+           (CASE WHEN grades_offered_lo is null then null
+                 WHEN (grade_pk_offered +
                        grade_kg_offered +
                        grade_01_offered +
                        grade_02_offered +
@@ -19,12 +22,16 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
                        grade_05_offered) > 0
                  THEN 1
                  ELSE 0 END)                        AS stage_el,
-           (CASE WHEN (grade_06_offered +
+           (CASE WHEN grades_offered_lo is null then null
+                 WHEN (grade_06_offered +
                        grade_07_offered +
                        grade_08_offered) > 0
+                 -- exclude K-6 and pre-K-6 schools from being classified as middle schools
+                 AND ((grades_offered_lo = 'PK' and grades_offered_hi = '06') or (grades_offered_lo = 'KG' and grades_offered_hi = '06')) = 0                                      
                  THEN 1
                  ELSE 0 END)                        AS stage_mi,
-           (CASE WHEN (grade_09_offered +
+           (CASE WHEN grades_offered_lo is null then null
+                 WHEN (grade_09_offered +
                        grade_10_offered +
                        grade_11_offered +
                        grade_12_offered +
@@ -45,6 +52,12 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
              student_hp_count) /
              students_total::float)                 AS urm_percent,
            school_stats_by_years.frl_eligible_total AS frl_eligible,
+           (CASE WHEN frl_eligible_total IS NULL
+                   OR students_total IS NULL
+                   OR frl_eligible_total > students_total
+                 THEN NULL
+                 ELSE frl_eligible_total /
+                       students_total::float END) AS frl_eligible_percent,           
            (CASE WHEN frl_eligible_total IS NULL
                    OR students_total IS NULL
                  THEN NULL

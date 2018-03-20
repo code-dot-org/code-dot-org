@@ -7250,6 +7250,9 @@
         te verzamelen en de puzzel op te lossen.
       collectorSkinVideo1_instruction: Verzamel de vier stapels om dit level te voltooien.
       collectorSkinVideo2_instruction: Verzamel één pot goud om dit level te voltooien.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         Je kan een lus gebruiken om meerdere lijnen in één keer te tekenen.\r
         \r
@@ -9599,6 +9602,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10212,6 +10218,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Plak een blok aan het "bij een klik" blok, klik dan op
         "Uitvoeren". Klik of raak het scherm aan om Flappy naar zijn doel te bewegen.
+      flappy_11_instruction: Maak je eigen Flappy spel. Je kunt de vormgeving en de
+        regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent
+        op afronden om je vrienden je spel te laten spelen op hun telefoons.
       flappy_2_instruction: Nu hebben we wat grond toegevoegd. Plak een blok aan het
         "bij het raken van de grond" blok. Je code moet 'Stop spel' als Flappy neerstort.
       flappy_3_instruction: Met de "bij uitvoeren" blok  kun je code uitvoeren wanneer
@@ -10233,9 +10242,6 @@
         iets gebeurt, bijvoorbeeld als Flappy een obstakel passeert.
       flappy_9_instruction: Probeer voor de verandering eens de score op 0 te zetten
         in plaats van het spel te stoppen wanneer je tegen een obstakel botst.
-      flappy_11_instruction: Maak je eigen Flappy spel. Je kunt de vormgeving en de
-        regels helemaal veranderen, zelfs de zwaartekracht. Druk als je klaar bent
-        op afronden om je vrienden je spel te laten spelen op hun telefoons.
       frozen circle function in circle_instruction: Laten we nu 20 overlappende cirkels
         maken, draai 18 graden tussen elke cirkel.
       frozen circle function with parameter_instruction: Hier is een "Maak een cirkel"

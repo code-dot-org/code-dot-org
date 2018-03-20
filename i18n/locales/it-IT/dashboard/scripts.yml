@@ -963,6 +963,7 @@ it:
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
@@ -2949,7 +2950,7 @@ it:
             Loops Unplugged:
               name: 'Cicli: Lezioni Tradizionali'
             Persistence & Frustration:
-              name: Persistence & Frustration
+              name: Perseveranza & Frustrazione
             Programming:
               name: Programmazione
             Programming Unplugged:
@@ -3019,7 +3020,7 @@ it:
             More Computer Science:
               name: More Computer Science
             Persistence & Frustration:
-              name: Persistence & Frustration
+              name: Perseveranza & Frustrazione
             Programming:
               name: Programmazione
             Programming Unplugged:
@@ -3968,7 +3969,7 @@ it:
         coursea-draft:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Un'introduzione all'informatica per bambini che stanno imparando a leggere.
           description: "Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \\r\nRecommended for grade K."
           stages:
             'Debugging: Bugs in Codeville':
@@ -4004,7 +4005,7 @@ it:
         courseb-draft:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
-          description_short: An introduction to computer science for early readers.
+          description_short: Un'introduzione all'informatica per bambini che stanno imparando a leggere.
           description: Course B is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for 1st grade.
           stages:
             'Debugging: Unspotted Bugs':
@@ -4018,11 +4019,11 @@ it:
             Being Safe Online:
               name: Being Safe Online
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -5365,13 +5366,13 @@ it:
               description_student: ''
               description_teacher: 'Questa lezione guiderà gli studenti attraverso le fasi di ricerca degli errori (debugging).  Gli studenti impareranno il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 'Perseveranza: Stevie e il Grande Progetto'
               description_student: ''
-              description_teacher: "Quando gli studenti si imbattono in una difficoltà mentre rispondono a una domanda o lavorano su un progetto, è molto facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce agli studenti il concetto che la frustrazione può essere una parte importante dell'apprendimento. Qui, la frustrazione è presentata come una fase nel processo creativo, piuttosto che un segno di fallimento. \\r\n\\r\nQuesta lezione può essere svolta in una o due sessioni con la classe. Se avete più tempo, non esitate a prolungare la durata della fase di costruzione e revisione dell'attività Corsa delle Biglie."
+              description_teacher: "Quando gli studenti si imbattono in una difficoltà mentre rispondono a una domanda o lavorano su un progetto, è molto facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce agli studenti il concetto che la frustrazione può essere una parte importante dell'apprendimento. Qui, la frustrazione è presentata come una fase nel processo creativo, piuttosto che un segno di fallimento. Questa lezione può essere svolta in una o due sessioni con la classe. Se avete più tempo, non esitate a prolungare la durata della fase di costruzione e revisione dell'attività Corsa delle Biglie."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
               description_student: ''
-              description_teacher: "In questa lezione, gli studenti metteranno in relazione il concetto di algoritmo con le attività di ogni giorno, nella vita reale, piantando un vero seme. L'obiettivo è quello di iniziare a costruire le competenze per tradurre le situazioni del mondo reale in algoritmi e viceversa.\\r\n"
+              description_teacher: "In questa lezione, gli studenti metteranno in relazione il concetto di algoritmo con le attività di ogni giorno, nella vita reale, piantando un vero seme. L'obiettivo è quello di iniziare a costruire le competenze per tradurre le situazioni del mondo reale in algoritmi e viceversa."
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
               description_student: ''
@@ -5385,7 +5386,7 @@ it:
               description_student: ''
               description_teacher: In questa serie di esercizi online, gli studenti svilupperanno la comprensione degli algoritmi, la correzione degli errori (debugging) e i primi principi generali dell'informatica. Utilizzando i personaggi del gioco Angry Birds, gli studenti svilupperanno algoritmi sequenziali per far arrivare l'uccellino fino al maialino senza sbattere contro i muri o esplodere sulla dinamite (TNT). Alcuni esercizi di ricerca degli errori sono stati mescolati in questa lezione per far pratica con la risoluzione dei problemi (problem solving) e nello sviluppo del pensiero critico (critical thinking).
             Going Places Safely:
-              name: 'Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro'
+              name: 'Cittadinanza Digitale: Visitare Luoghi in Modo Sicuro'
               description_student: ''
               description_teacher: In collaborazione con Common-Sense-Media, questa lezione aiuta gli studenti a imparare che molti siti Web richiedono informazioni private e spiega come gestire responsabilmente tali richieste. Gli studenti scoprono anche che possono raggiungere luoghi interessanti online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
@@ -5409,27 +5410,27 @@ it:
               description_student: ''
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!
           title: Corso A
-          description_audience: 'Ages: 4-7'
-          description_short: An introduction to computer science for pre-readers.
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_audience: 'Età: da 4 a 7 anni'
+          description_short: Un'introduzione all'informatica per bambini che non leggono ancora.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 'Perseveranza: Stevie e il Grande Progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
             Your Digital Footprint:
-              name: 'Cittadinanza Digitale - La Mia Impronta Digitale'
+              name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -5441,11 +5442,11 @@ it:
             More Programming in Maze:
               name: More Programming in Maze
             Programming with Rey and BB-8:
-              name: Programming with Rey and BB-8
+              name: Programmare con Rey e BB-8
           title: Corso B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         coursec:
           stages:
             Building a Foundation:
@@ -5473,7 +5474,7 @@ it:
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Screen Out the Mean:
-              name: 'Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             Binary Bracelets:
               name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
@@ -5534,7 +5535,7 @@ it:
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
               description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Digital Citizenship:
-              name: 'Cittadinanza Digitale - Metti in Pratica la Cittadinanza Digitale'
+              name: 'Cittadinanza Digitale: Metti in Pratica la Cittadinanza Digitale'
               description_student: Some information is not safe to share online. This lesson will help you learn the difference between safe and private information.
               description_teacher: |-
                 In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
@@ -5621,7 +5622,7 @@ it:
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
-              name: 'Cittadinanza Digitale - Dati Personali'
+              name: 'Cittadinanza Digitale: Dati Personali'
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
               description_teacher: |-
                 Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
@@ -5668,7 +5669,7 @@ it:
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -5678,7 +5679,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -5702,7 +5703,7 @@ it:
               description_student: This lesson will give you a brief introduction to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to sequences, loops, and nested loops to prepare them for more complicated concepts in the later part of the course. This "ramp up" lesson equalizes the playing field between the experts and the beginners in your class. '
             The Power of Words:
-              name: 'Cittadinanza Digitale - Il Potere delle Parole'
+              name: 'Cittadinanza Digitale: Il Potere delle Parole'
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: "Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.\n\nStudents discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying. "
             Ice Age Play Lab:
@@ -5778,7 +5779,7 @@ it:
             Functions in Bee:
               name: Functions in Bee
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -5788,7 +5789,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -6036,7 +6037,7 @@ it:
             Debugging in Collector:
               name: Introduction to Debugging
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops Project in Artist:
@@ -6100,9 +6101,9 @@ it:
             'How it Works: The Internet':
               name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Cittadinanza Digitale - Metti in Pratica la Cittadinanza Digitale'
+              name: 'Cittadinanza Digitale: Metti in Pratica la Cittadinanza Digitale'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             Events in Star Wars:
               name: Events in Star Wars
             Events with Flappy:
@@ -6124,27 +6125,27 @@ it:
           title: Corso Rapido
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence: Stevie and the Big Project'
+              name: 'Perseveranza: Stevie e il Grande Progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
               name: Sequenze Trascinando i Blocchi
             'Online Safety: Your Digital Footprint':
-              name: 'Cittadinanza Digitale - La Mia Impronta Digitale'
+              name: 'Cittadinanza Digitale: La Mia Impronta Digitale'
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Programming in Maze:
               name: Programmazione nel Labirinto
             'Programming: Star Wars':
               name: 'Programming: Star Wars'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Collector:
               name: Cicli con il Collezionista
             Loops in Artist:
@@ -6158,7 +6159,7 @@ it:
           title: Pre-reader Express
           description_audience: 'Ages: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, crea il tuo gioco o la tua storia che puoi condividere.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
@@ -6306,7 +6307,7 @@ it:
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence and Preview in Maze:
               name: Sequence and Preview in Maze
             Building a Foundation:
@@ -6316,7 +6317,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
@@ -6436,7 +6437,7 @@ it:
             Debugging in Collector:
               name: Debugging in Collector
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops Project in Frozen:
@@ -6446,7 +6447,7 @@ it:
             'Common Sense Education: Digital Citizenship':
               name: 'Common Sense Education: Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Cittadinanza Digitale - Caccia Via le Cattiverie dallo Schermo'
+              name: 'Cittadinanza Digitale: Caccia Via le Cattiverie dallo Schermo'
             'Events: The Big Event':
               name: 'Eventi'
             Events in Star Wars:
@@ -6524,7 +6525,7 @@ it:
         new-e:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -6534,7 +6535,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -6582,7 +6583,7 @@ it:
         new-f:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -6592,7 +6593,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -6994,7 +6995,7 @@ it:
             courseB_unplugged_MRF_2018:
               name: courseB_unplugged_MRF_2018
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -7004,7 +7005,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops:
@@ -7054,7 +7055,7 @@ it:
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'Programmazione: I Miei Amici Robotici'
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
@@ -7064,7 +7065,7 @@ it:
             Programming in Artist:
               name: Programming in Artist
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'Cicli: I Miei Ciclici Amici Robotici'
             Loops in Artist:
               name: Cicli con l'Artista
             Nested Loops in Bee/Zombie:
@@ -7151,3 +7152,75 @@ it:
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Sprites
+            The Draw Loop:
+              name: The Draw Loop
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: Sprite Movement
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Conditionals:
+              name: Istruzioni condizionali
+            Keyboard Input:
+              name: Keyboard Input
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: Project - Interactive Card
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Funzioni
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            Project - Design a Game:
+              name: Project - Design a Game
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."

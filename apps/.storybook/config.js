@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import * as storybook from '@storybook/react';
+import { setOptions } from '@storybook/addon-options';
 import Node from '@storybook/addon-info/dist/components/Node';
 import Props from '@storybook/addon-info/dist/components/Props';
 import {Pre} from '@storybook/addon-info/dist/components/markdown/code';
@@ -104,8 +105,11 @@ function loadStories() {
       return;
     }
   });
-
 }
+
+setOptions({
+  sortStoriesByKind: true
+});
 
 function Centered({children}) {
   return <div style={styles.centeredStory}>{children}</div>;
