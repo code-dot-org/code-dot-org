@@ -604,7 +604,7 @@ module Pd::Application
           'School City',
           'School State',
           'School Zip Code',
-          'Submitted',
+          'Date Submitted',
           'Notes',
           'Status'
         )
@@ -639,7 +639,7 @@ module Pd::Application
           school_city,
           school_state,
           school_zip_code,
-          created_at.strftime('%B %e'),
+          created_at.to_date.iso8601,
           notes,
           status
         )
