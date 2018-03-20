@@ -138,6 +138,22 @@ module Pd::Application
       assert_equal 'accepted', csv_answers[-4]
     end
 
+    test 'csv_header and row return same number of columns' do
+      mock_user = mock
+
+      header = Facilitator1819Application.csv_header('csp', mock_user)
+      row = @application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header).length, CSV.parse(row).length,
+        "Expected header and row to have the same number of columns"
+    end
+
+    test 'to_cohort_csv' do
+      assert (header = Facilitator1819Application.cohort_csv_header)
+      assert (row = @application.to_cohort_csv_row)
+      assert_equal CSV.parse(header).length, CSV.parse(row).length,
+        "Expected header and row to have the same number of columns"
+    end
+
     test 'send_decision_notification_email only sends to waitlisted and declined' do
       mock_mail = mock
       mock_mail.stubs(:deliver_now).returns(nil)

@@ -593,6 +593,7 @@ module Pd::Application
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
           'Principal Approval',
+          'Principal Approval Form',
           'Meets Criteria',
           'Total Score',
           'Regional Partner',
@@ -603,6 +604,7 @@ module Pd::Application
           'School City',
           'School State',
           'School Zip Code',
+          'Date Submitted',
           'Notes',
           'Status'
         )
@@ -626,6 +628,7 @@ module Pd::Application
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
           principal_approval,
+          principal_approval_url,
           meets_criteria,
           total_score,
           regional_partner_name,
@@ -636,6 +639,7 @@ module Pd::Application
           school_city,
           school_state,
           school_zip_code,
+          created_at.to_date.iso8601,
           notes,
           status
         )
@@ -653,8 +657,8 @@ module Pd::Application
           district_name,
           school_name,
           user.email,
-          assigned_workshop,
-          registered_workshop
+          workshop_date_and_location,
+          registered_workshop? ? 'Yes' : 'No'
         ]
       end
     end
