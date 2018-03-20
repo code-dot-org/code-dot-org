@@ -3,7 +3,7 @@ import Congrats from './Congrats';
 
 export default storybook => {
   return storybook
-    .storiesOf('Congrats', module)
+    .storiesOf('Congrats/Congrats', module)
     .withReduxStore()
     .addStoryTable([
       {

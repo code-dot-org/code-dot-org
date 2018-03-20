@@ -3,7 +3,7 @@ import StudentsBeyondHoc from './StudentsBeyondHoc';
 
 export default storybook => {
   return storybook
-    .storiesOf('StudentsBeyondHoc', module)
+    .storiesOf('Congrats/StudentsBeyondHoc', module)
     .withReduxStore()
     .addStoryTable([
       {
