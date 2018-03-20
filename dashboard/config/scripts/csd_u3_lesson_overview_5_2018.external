@@ -1,0 +1,19 @@
+name 'CSD U3 Lesson Overview 5_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+This lesson introduces variables as a way to label a number in a program or save a randomly generated value. The class begins the lesson with a very basic description of the purpose of a variable and practices using the new blocks.  Afterwards, the class uses variables to save a random number, allowing the programs to use the same random number multiple times.
+## Vocabulary
+
+* **Variable** - A placeholder for a piece of information that can change.
+
+## Introduced Code
+
+* [Declare a variable](//docs.code.org/gamelab/declareNoAssign_x/)
+* [Declare and assign a value to a variable](//docs.code.org/gamelab/declareAssign_x/)
+
+## Resources
+
+* [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+MARKDOWN

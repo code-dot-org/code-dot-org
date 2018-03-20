@@ -1,0 +1,21 @@
+name 'CSD U3 Collisions SFLP_2018'
+display_name 'Lesson Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+# Overview
+
+The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
+## Vocabulary
+
+* **Abstraction** - Pulling out specific differences to make one solution work for multiple problems.
+
+## Introduced Code
+
+* [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)
+* [sprite.collide()](//docs.code.org/gamelab/collide/)
+* [sprite.displace()](//docs.code.org/gamelab/displace/)
+* [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)
+* [sprite.bounce()](//docs.code.org/gamelab/bounce/)
+* [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
+
+MARKDOWN
