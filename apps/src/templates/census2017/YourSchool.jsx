@@ -1,3 +1,4 @@
+/* global adjustScroll */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import {UnconnectedCensusForm as CensusForm, censusFormPrefillDataShape} from './CensusForm';
@@ -41,11 +42,30 @@ class YourSchool extends Component {
 
   state = {
     schoolDropdownOption: undefined,
+    showExistingInaccuracy: false,
+    existingInaccuracy: false
+  };
+
+  handleTakeSurveyClick = (schoolDropdownOption, existingInaccuracy) => {
+    this.setState({
+      schoolDropdownOption: schoolDropdownOption,
+      showExistingInaccuracy: existingInaccuracy,
+      existingInaccuracy: existingInaccuracy
+    });
+    adjustScroll('form');
   };
 
   handleSchoolDropdownChange = (option) => {
     this.setState({
       schoolDropdownOption: option,
+      showExistingInaccuracy: false,
+      existingInaccuracy: false
+    });
+  };
+
+  handleExistingInaccuracyChange = (option) => {
+    this.setState({
+      existingInaccuracy: option,
     });
   };
 
@@ -60,6 +80,9 @@ class YourSchool extends Component {
     if (schoolDropdownOption && schoolId !== '-1') {
       schoolForMap = schoolDropdownOption.school;
     }
+    const showExistingInaccuracy = this.state.showExistingInaccuracy;
+    const existingInaccuracy = this.state.existingInaccuracy;
+
     return (
       <div>
         <SpecialAnnouncementActionBlock/>
@@ -83,7 +106,7 @@ class YourSchool extends Component {
         </h3>
         <YourSchoolResources/>
         {!this.props.hideMap && (
-           <div>
+           <div id="map">
              <h1 style={styles.heading}>
                Does your school teach Computer Science?
              </h1>
@@ -103,6 +126,7 @@ class YourSchool extends Component {
                fusionTableId={this.props.fusionTableId}
                school={schoolForMap}
                onSchoolChange={this.handleSchoolDropdownChange}
+               onTakeSurveyClick={this.handleTakeSurveyClick}
              />
            </div>
         )}
@@ -110,6 +134,9 @@ class YourSchool extends Component {
           prefillData={this.props.prefillData}
           schoolDropdownOption={schoolDropdownOption}
           onSchoolDropdownChange={this.handleSchoolDropdownChange}
+          showExistingInaccuracy={showExistingInaccuracy}
+          existingInaccuracy={existingInaccuracy}
+          onExistingInaccuracyChange={this.handleExistingInaccuracyChange}
         />
       </div>
     );
