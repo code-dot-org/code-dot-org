@@ -337,142 +337,9 @@
           ng kahon ng TNT!
         maze_3_4: Argh! Sulatan mo ako ng programa na makakapag-ikot sa akin sa paligid
           ng TNT at papunta sa baboy.
-        bounce_1_basketball: Maglakip ng isang bloke sa "kung kaliwang pana" na bloke
-          at pindutin ang "Run". Galawin ang kamay gamit ang kaliwang pana para makaabot
-          sa huling layunin.
-        bounce_2_basketball: Maglakip ng bloke sa "kung kanang arrow" at "kung kaliwang
-          arrow" na mga bloke. Galawin ang kamay para makarating sa parehong huling
-          mga layunin.
-        bounce_5_basketball: Magpapadala tayo ng bola na lumilipad pababa patungo
-          sa kamay. Maglakip ng bloke sa "kung ang bola ay tatama sa kamay" na bloke
-          para masiguro na ang bola ay makakarating sa bandila.
-        bounce_6_basketball: Ngayon ang bandila ay nasa taas. Kailangan mong maglakip
-          ng mga bloke sa kapwa "kung ang bola ay tumama" na mga bloke para malutas
-          ang palaisipan na ito.
-        bounce_7_basketball: Maglakip ng mga bloke sa bawat "kailan" na mga bloke.
-          Patalbugin ang bola hanggang matatamaan nito ang bandila.
-        bounce_10_basketball: Ngayon ay may mithiin tayo sa itaas! Ilakip ang "score
-          point" at "score opponent point" na mga bloke sa "when ball in goal" at
-          "when ball misses hand" na mga bloke para makagawa ng laro. Tingnan kung
-          ilang puntos ang makukuha mo bago makapuntos ang kalaban mo nang makalawa.
-        bounce_11_basketball: Maaari mo nang ilakip ang mga bloke sa "when run" na
-          bloke. Kailangan mong ilakip ang bagong "throw new ball" na bloke sa higit
-          sa isang lugar. Gayundin, subakang baguhin ang eskena o ang bilis ng kamay
-          at ng bola at tingnan kung ilang puntos ang makuha mo bago makapuntos ng
-          makalawa ang kalaban mo!
-        bounce_12_basketball: Lumikha ng iyong sariling Basketbol na laro. Maari mong
-          palitan ang mga patakaran. Kapag tapos ka na, pindutin ang Finish para hayaang
-          masubukan ng iyong mga kaibigan ang laro sa kanilang mga telepono.
-        bounce_1_sports: Puntahan ang bandila! Maglakip ng mga bloke sa "when left
-          arrow" na bloke at pindutin ang "Run" para ilipat ang manlalaro palapit
-          sa bandila.
-        bounce_2_sports: May dalawang bandila na ngayon! Maglakip ng bloke sa "when
-          left arrow" at "when right arrow" na mga bloke para makagalaw ang iyong
-          manlalaro sa dalawang direksyon.
-        bounce_5_sports: Ang hockey puck ay lilipad pababa patungo sa manlalaro! Maglakip
-          ng bloke sa "when ball hits player" na bloke para matamaan ang bandila.
-        bounce_6_sports: Ngayon ang bandila ay nasa taas. Kailangan mong maglakip
-          ng mga bloke sa kapwa "kung ang bola ay tumama" na mga bloke para malutas
-          ang palaisipan na ito.
-        bounce_7_sports: Maglakip ng mga bloke sa bawat "kailan" na mga bloke. Patalbugin
-          ang bola hanggang matatamaan nito ang bandila.
-        bounce_10_sports: Ngayon ay may mithiin tayo sa itaas! Ilakip ang "score point"
-          at "score opponent point" na mga bloke sa "when ball in goal" at "when ball
-          misses hand" na mga bloke para makagawa ng laro. Tingnan kung ilang puntos
-          ang makukuha mo bago makapuntos ng makalawa ang iyong kalaban!
-        bounce_11_sports: Maaari mo nang ilakip ang mga bloke sa "when run" na bloke.
-          Kailangan mong ilakip ang bagong "throw new ball" na bloke sa higit sa isang
-          lugar. Gayundin, subakang baguhin ang eskena o ang bilis ng kamay at ng
-          bola at tingnan kung ilang puntos ang makuha mo bago makapuntos ng makalawa
-          ang kalaban mo!
-        bounce_12_sports: 'Lumikha ng sarili mong laro! Ikaw ang tagapangasiwa dito:
-          maari mong baguhin ang mga patakaran, mix at match na palakasan, maging
-          malikhain! Kapag tapos ka na, pindutin ang Finish para masubukan ng iyong
-          mga kaibigan ang laro sa kanilang mga telepono.'
-        bounce_1: Maglakip ng bloke sa "when left arrow" na bloke at pindutin ang
-          "Run". Galawin ang sagwan gamit ang left arrow para makaabot sa huling layunin.
-        bounce_2: Maglakip ng bloke sa "when right arrow" at "when left arrow" na
-          mga bloke. Galawin ang sagwan para makaabot sa parehong huling mga layunin.
-        bounce_3: Ngayon subukan mo ang isang bagay na katulad ng "when up arrow"
-          na bloke. Galawin ang sagwan para tapusin ang layunin sa itaas.
-        bounce_4: Sa pagkakataong ito kakailanganin mong magdagdag ng apat na mga
-          bloke. Galawin ang sagwan sa lahat ng apat na mga layunin para makompleto
-          ang palaisipang ito.
-        bounce_5: Magpapadala tayo ng bola patungo sa sagwan. Maglakip ng bloke sa
-          "when ball hits paddle" na bloke para masiguro na ang bola ay makakarating
-          sa huling layunin.
-        bounce_6: Ngayon ang huling layunin ay nasa taas. Kailangan mong maglakip
-          ng mga bloke sa dalawang "when ball hits" na mga bloke para malutas ang
-          mga palaisipan.
-        bounce_7: Maglakip ng mga bloke sa bawat "when" na mga bloke. Patalbugin ang
-          bola hanggang matamaan nito ang huling layunin.
-        bounce_10: Mayroon na tayong mithiin sa itaas. Maglakip ng "score point" at
-          "score opponent point" na mga bloke sa "when ball in goal" at "when ball
-          misses paddle" na mga bloke para makagawa ng laro. Tingnan kung ilang puntos
-          ang makukuha mo bago makapuntos ng makalawa ang kalaban mo.
-        bounce_11: Maaari mo nang ilakip ang mga bloke sa "when run" na bloke. Dapat
-          mong ilakip ang bagong "launch new ball" na bloke sa higit sa isang lugar.
-          Gayundin, subukang palitan ang eksena o ang bilis ng pampalo at ng bola
-          at tingnan kung ilang puntos ang makukuha mo bago makapuntos ng makalawa
-          ang kalaban mo.
-        bounce_12: Lumikha ng sarili mong Bounce na laro. Maaring mong palitan ang
-          lahat ng mga visuals at ang mga patakaran. Kapag tapos ka na, pindutin ang
-          Finish para masubukan ng mga kaibigan mo ang laro sa kanilang mga telepono.
         Custom_builder: I-drag ang mga bloke mula sa toolbox papunta sa workspace
           para maguhit ang antas na gusto mong ilikha. Pindutin ang "Run" kung handa
           ka na.
-        flappy_1: Maglakip ng bloke sa "when click" na bloke, at pindutin ang "Run".
-          I-click o i-tap ang screen para mapagalaw si Flappy papunta sa target.
-        flappy_2: Ngayon na nadagdag na natin ang lupa. Maglakip ng bloke sa "when
-          hit the ground" na bloke. Kailangan ng code mo na "TAPUSIN ANG LARO" kung
-          bumagsak na si Flappy.
-        flappy_3: Ang "when run" na bloke ay magbibigay sa iyo ng paraan na mapatakbo
-          ang code habang nagsisimula na ang laro. Subukang mag-set ng bilis ng antas
-          at ang pagpagaspas papunta sa target.
-        flappy_4: Si Flappy ay lilipad sa gitna ng mga balakid maliban nalang kung
-          magsulat tayo ng code para babagsak siya. Maglakip ng bloke sa "when hit
-          an obstacle" na bloke. Ang code mo ay kailangang matapos kung babagsak si
-          Flappy sa unang set ng mga tubo.
-        flappy_5: Magdagdag tayo ng palapuntusan, at bilangin natin ang puntos habang
-          nakalampas si Flappy sa mga balakid. Magdagdag ng "when pass an obstacle"
-          na block, at pagkatapos ay magkakapuntos sa pamamagitan ng pagpapalipad
-          kay Flappy sa unang set ng mga tubo.
-        flappy_6: Tingnan kung makakapuntos ka pa rin kung gawin mong maliit o malaki
-          ang pag-flap ni Flappy.
-        flappy_7: Kasunod nito, subukan mong baguhin ang eskena sa pamamagitan ng
-          paglakip ng isa pang bloke sa "when run" na bloke.
-        flappy_8: Maari mong i-set ang mga visual kahit anumang oras, hindi lang kapag
-          nagsisimula na ang laro. Subukang itakda ang iba-ibang eskena habang nangyayari
-          ang ibang mga pangyayari, halimbawa, kapag madadaan ang isang balakid.
-        flappy_9: Para mahalo ang mga bagay-bagay, kapag natamaan ang isang balakid,
-          sa halip na tapusin ang laro, subukang ibalik ang puntos sa 0.
-        flappy_11: Lumikha ng sarili mong Flappy na laro. Maari mong palitan ang lahat
-          ng mga visuals at ang mga patakaran, kahit na ang grabidad. Kapag tapos
-          ka na, pindutin ang Finish para masubukan ng mga kaibigan mo ang laro sa
-          kanilang mga telepono.
-        flappy_k1_1: Maglaro ng Flappy
-        flappy_k1_2: Maglakip ng bloke sa "when click" na bloke, at pindutin ang "Run".
-          I-click o i-tap ang screen para mapagalaw si Flappy papunta sa target.
-        flappy_k1_3: Ngayon na nadagdag na natin ang lupa. Maglakip ng bloke sa "when
-          hit the ground" na bloke. Kailangan ng code mo na "TAPUSIN ANG LARO" kung
-          bumagsak na si Flappy.
-        flappy_k1_4: Ang "when run" na bloke ay magbibigay sa iyo ng paraan na mapatakbo
-          ang code habang nagsisimula na ang laro. Subukang mag-set ng bilis ng antas
-          at ang pagpagaspas papunta sa target.
-        flappy_k1_5: Si Flappy ay lilipad sa gitna ng mga balakid maliban nalang kung
-          magsulat tayo ng code para babagsak siya. Maglakip ng bloke sa "when hit
-          an obstacle" na bloke. Ang code mo ay kailangang matapos kung babagsak si
-          Flappy sa unang set ng mga tubo.
-        flappy_k1_6: Magdagdag tayo ng palapuntusan, at bilangin natin ang puntos
-          habang nakalampas si Flappy sa mga balakid. Magdagdag ng "when pass an obstacle"
-          na block, at pagkatapos ay magkakapuntos sa pamamagitan ng pagpapalipad
-          kay Flappy sa unang set ng mga tubo.
-        flappy_k1_7: Tingnan kung mamakuha ka ng maraming puntos sa paglampas sa mga
-          balakid
-        flappy_k1_8: Kasunod nito, subukan mong baguhin ang eskena sa pamamagitan
-          ng paglakip ng isa pang bloke sa "when run" na bloke.
-        flappy_k1_9: Subakang palitan ang manlalaro sa pamamagitan ng paglakip ng
-          "set player" na bloke sa "when run" na bloke.
         jigsaw_1: Pindutin ang bloke
         jigsaw_2: I-drag ang bloke sa target
         jigsaw_3: Ayusin ang bloke para mabuo ang larawan
@@ -983,6 +850,8 @@
         applab_intro_sounds: App Lab - Mga Larawan at Mga Tunog
         applab_intro_designmode: App Lab - Pag-design na Mode
         applab_intro_share: App Lab - Ibahagi ang Iyong App
+        csd_applab_arrays: Introduksyon sa mga Array
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang

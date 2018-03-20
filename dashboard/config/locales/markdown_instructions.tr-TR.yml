@@ -517,9 +517,8 @@
         curriculum or elswhere, complete the Design Recipe and program a function.
         Use a Design Recipe form from your workbook or download a copy [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
       Alien Defender_markdown_instruction: 'Proje fikri: Bir savunma oyunu yap!'
-      Alien Defender_2018_markdown_instruction: |-
-        **Project Idea**: Make a defender
-        game in Play Lab!
+      Alien Defender_2018_markdown_instruction: "** Proje Fikri **: Play Lab'da bir
+        savunma oyunu yap!"
       AllTheThings Applab - Turtle move with button_markdown_instruction: |-
         # Please
         sign in to test applab levels (By design, applab levels only work if signed
@@ -3679,6 +3678,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         Background Color\r
         \r
@@ -3692,12 +3692,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -3771,6 +3770,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         The Body Element\r
         \r
@@ -4066,12 +4066,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -4103,6 +4102,7 @@
         - CSS float Property</a>\r
         </details>\r
         </div>\r
+        \r
         # Layout and Style\r
         \r
         *
@@ -5472,6 +5472,36 @@
         `keyDown` as input to the if statement to check when the space key is pressed.\r
         *
         Move the code that makes the gears rotate inside the `if`.
+      CSD U3 - conditionals - first conditional 2-2018_markdown_instruction: |-
+        <img
+        src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif"
+        style="width:200px;float:right">\r
+        # Visible\r
+        \r
+        Sometimes it's useful
+        to hide the image for a while and then show it again. You can do this using
+        the `visible` property. The visible property is a little different from other
+        properties you have seen in the past: It is a Boolean value, either `true`
+        (the sprite is visible) or `false` (the sprite is **not** visible). By default,
+        visible is set to `true`.\r
+        \r
+        # Do This\r
+        Make the balloon pop when it
+        hits the edge of the game area!\r
+        \r
+        * Add a conditional that checks to
+        see whether the balloon has hit the edge.\r
+        \t* Use a watcher on `balloon.scale`
+        to help you out.\r
+        * Create a pop sprite which uses the "pop" visual in
+        the animation tab.\r
+        * Use the `visible` property to keep the "pop" sprite
+        hidden at the beginning.\r
+        * Inside the `if` add two statements.\r
+        \t* One
+        that sets the `visible` property to hide the balloon sprite.\r
+            * One
+        that sets the `visible` property to show the pop sprite.
       CSD U3 - conditionals - first conditional 2_markdown_instruction: |-
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif"
         style="width:200px;float:right">\r
@@ -6207,7 +6237,7 @@
         * Go to the
         Animation tab and check out the multi-frame animations already added to your
         project. Choose one for each of your characters.\r
-      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |
+      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |-
         # Using
         Multiframe Animations\r
         \r
@@ -6225,7 +6255,7 @@
         to your project. Choose one for each of your characters.\r
         * Remember you
         can use `setAnimation` to give your sprites animations you've created in
-        the Animation Tab.\r
+        the Animation Tab.
       CSD U3 AnimationsMulti mirror animation_markdown_instruction: |-
         # Editing Multiframe
         Animations\r
@@ -6524,8 +6554,37 @@
         _You might notice some new blocks in the Sprites
         drawer, experiment with them and see if you can incorporate them into your
         conditionals._
+      CSD U3 Conditionals Apple 2-2018_markdown_instruction: |-
+        # Changing Fruit\r
+        \r
+        Now
+        that we know how to use _if_ statements, you can do more than just check if
+        the apple has reached a scale of 2. You turn it into a pear once it happens.\r
+        \r
+        #
+        Do This\r
+        \r
+        Use a conditional in the draw loop to check whether `fruit.scale`
+        is greater than 2.  If it is, change the fruit's animation to "pear".\r
+        \r
+        _Challenge:
+        Can you also make the fruit stop growing once it turns into a pear?_
       CSD U3 Conditionals Apple 2_markdown_instruction: |
         # Yeşillenmek\r \r _eğer_ ifadelerinin kullanımını öğrendik, elma 2 ölçeğine ulaştı mı kontrol yapabilirsiniz, bu gerçekleşirse elmayı kırmızı yaparsınız.Döngü içinde eğer ifadesi kullanın ve 'apple.scale' - 2'den büyük olduğunu denetleyin Eğer koşul oluştuysa animasyonu kırmızı yapın. \r \r _Meydan Okuma: kırmızıya dönen elmanın büyümesini durdurun _\r
+      CSD U3 Conditionals Apple-2018_markdown_instruction: |-
+        # More Practice With
+        Booleans\r
+        \r
+        Let's use one more Boolean expression to check the condition
+        of a sprite.  You can use a `console.log` command to check whether its scale
+        is 2 yet.\r
+        \r
+        # Do This\r
+        \r
+        * Add a `console.log` statement.\r
+        * Add
+        a Boolean expression inside the `console.log` that checks whether the `apple.scale`
+        is greater than 2.
       CSD U3 Conditionals Apple_markdown_instruction: 'Mantıksal ifadeler ile pratik
         yapalım\r \r, Perinin durumunu kontrol etmek için bir mantıksal ifade daha
         kullanalım. \r \r # \r büyüyen bir elma perisi var. Bu yeşil olarak başlar,
@@ -7191,6 +7250,10 @@
         if block to add an else.\r
         * Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed.
+      CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: |-
+        # Zıplayan Uzaylı\r
+        \r
+        Sol tarafta ki oyunu oynamak için "çalıştır"a tıklayın.  Boşluk tuşuyla uzaylıyı zıplatabilirsin ve ok tuşlarıyla sağa ve sola hareket ettirebilirsin.  Yıldızları toplayarak puan alırsın ve yeterince yüksek puan yaparsan, arka plan değişecek.
       CSD U3 Entertainment Sample 1_markdown_instruction: |-
         # Zıplayan Uzaylı\r
         \r
@@ -7954,6 +8017,18 @@
         * Bu özellikleri güncellemek için sayaç desenini kullanın.\r
         \r
         _İpucu: Eğer sayaç deseni istediğiniz gibi çalışmıyorsa, yardımcı olması için hata ayıklama programına izleyici ekleyebilirsiniz._
+      CSD U3 Plotting Shapes Shape Lab - unembed_markdown_instruction: |-
+        # Drawing
+        Shapes\r
+        \r
+        Explore using this tool that lets you draw different colored
+        shapes. \r
+        \r
+        Make sure you hit "Run" and try out turning on the grid
+        to help you place shapes precisely.\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
       CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: |-
         # Şekiller Çizme\r
         \r
@@ -8105,6 +8180,26 @@
         \r
         Can you generate random colors that are limited to a narrow
         range of colors, such as a random shade or purple, or a random shade of teal?
+      CSD U3 Random Debug Cloud-2018_markdown_instruction: |
+        <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Debug - Using 4 Parameters\r
+        \r
+        Now
+        that the grass is working, let's add a cloud to the sky. Unfortunately, it
+        looks a little funny right now.\r
+        \r
+        # Do This\r
+        \r
+        * Debug this program
+        to make the cloud wider than it is tall, like in the image.\r
+        * Hint: You'll
+        need to change two parameters. Which ones set your cloud's width and height?\r
+        \r
+        _Challenge:
+        The sun is not in the exact same place as in the picture.  Can you change
+        the sun's coordinates so that the picture matches completely?_\r
       CSD U3 Random Debug Cloud_markdown_instruction: |-
         <img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
         PM.png" style="float:right;height:150px">\r
@@ -8120,6 +8215,23 @@
         \r
         _Meydan Okuma:
         Güneş tam olarak resimdeki yerinde değil.  Güneşin koordinatlarını değiştirebilir misin böylece resimdekiyle tamamen eşleşecek?_
+      CSD U3 Random Debug Grass-2018_markdown_instruction: |-
+        <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Debug - Using 4 Parameters\r
+        \r
+        This
+        program uses the four parameter version of `rect()` and `ellipse()` to draw
+        a simple scene.\r
+        \r
+        # Do This\r
+        \r
+        * Debug this program and correct the
+        error so that the grass extends across the entire bottom.\r
+        * Hint: You only
+        have to change one number. Which parameter makes your rectangle (the grass)
+        wider?
       CSD U3 Random Debug Grass_markdown_instruction: |-
         <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45
         PM.png" style="float:right;height:150px">\r
@@ -8132,6 +8244,17 @@
         \r
         * Bu programda hata ayıklayın ve düzeltin böylece çimen alt kısmın tamamını kaplayacak.\r
         * İpucu: Sadece bir sayıyı değiştirmek zorundasın.Hangi parametre dikdörtgeni (çimen) daha geniş yapar?
+      CSD U3 Random Ellipse Behind-2018_markdown_instruction: |-
+        <img src="https://images.code.org/dd73760e7129225b1e9f53a542960b9a-image-1520402430622.59.19
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Do This\r
+        \r
+        * Write
+        code that makes an orange ellipse behind the green one.\r
+        * Don't worry
+        about the exact size as long as the green ellipse is entirely inside the orange
+        one.
       CSD U3 Random Ellipse Behind_markdown_instruction: |-
         <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
         PM.png" style="float:right;height:150px">\r
@@ -8310,6 +8433,27 @@
         # Bunları Yapın\r
         \r
         * `background()' komutunu yeşil dairenin arkasına siyah bir arka plan yapmak için kullanın.
+      CSD U3 Random rainbow snake-2018_markdown_instruction: |-
+        <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Rainbow Snake\r
+        \r
+        This
+        program draws a very rare breed of rainbow snake. To make the snake draw differently
+        every time you'll need to use random numbers.\r
+        \r
+        # Do This\r
+        \r
+        * Run
+        the program several times to see how the starter code works.\r
+        * Add at least
+        three new different colored circles to your rainbow snake.\r
+        * Use `randomNumber()`
+        to make the rest of the snake's body move up and down like the first three.\r
+        \r
+        *Challenge:
+        Can you make size of some of the circles random, too?*
       CSD U3 Random rainbow snake_markdown_instruction: |-
         <img src="https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
         PM.png" style="float:right;height:150px">\r
@@ -8326,6 +8470,15 @@
         \r
         * Meydan Okuma:
         Rastgele büyüklükte de bir kaç daire yapabilir misiniz?*
+      CSD U3 Random random ellipse-2018_markdown_instruction: |-
+        # Rastgele Syılar\r
+        \r
+        `randomNumber()`minimum ve maksimum değerleri arasından rastgele bir sayı seçer. Belirli bir sayı yazmanın yerine bu kodu kullanabilirsiniz.  Eğer çizimlerinizi rastgele sayılarla yaparsanız, programı her çalıştırdığınızda çizim biraz farklı görünecektir. \r
+        \r
+        # Bunları Yapın\r
+        \r
+        * Nasıl çalıştığını görmek için programı birkaç kez çalıştırın.\r
+        * `randomNumber` bloğunun içindeki sayıları değiştirin ve değişen şeyin ne olduğunu görmek için kodu birkaç kez tekrar çalıştırın.
       CSD U3 Random random ellipse_markdown_instruction: |-
         # Rastgele Syılar\r
         \r
@@ -8335,6 +8488,23 @@
         \r
         * Nasıl çalıştığını görmek için programı birkaç kez çalıştırın.\r
         * `randomNumber` bloğunun içindeki sayıları değiştirin ve değişen şeyin ne olduğunu görmek için kodu birkaç kez tekrar çalıştırın.
+      CSD U3 Random random ellipse2-2018_markdown_instruction: |-
+        <img src="https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Random Numbers\r
+        \r
+        Here's
+        the same sun from last time.  Right now only the x-coordinate is random, but
+        you can make the y-coordinate random, too.\r
+        \r
+        # Do This\r
+        \r
+        * Use `randomNumber()`
+        for the ellipse's Y parameter so the circle is drawn in a random Y position,
+        too.\r
+        * As long as your circle is appearing at random X and Y positions,
+        you can move on.
       CSD U3 Random random ellipse2_markdown_instruction: |-
         <img src="https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
         PM.png" style="float:right;height:150px">\r
@@ -8347,6 +8517,22 @@
         \r
         * Dairenin farklı Y konumunda çizilmesi için de elipsin Y parametresi için 'randomNumber()' bloğunu işlevini kullan.\r
         * Daireniz farklı X ve Y konumunda göründüğünde devam edebilirsiniz.
+      CSD U3 Scene Example-2018_markdown_instruction: |
+        # Sprite Scenes\r
+        \r
+        By
+        combining shapes, sprites, and text, you can create simple scenes, stories,
+        or comics. While this example is fairly simple, you can combine as many sprites
+        and shapes as you like to create scenes as complex or detailed as you like.\r
+        \r
+        ##
+        Sketch It Out\r
+        \r
+        Before moving on, take a second to sketch out a scene
+        that you'd like to make at the end of this lesson. Consider the simple shapes
+        that you've used in the past, sprites for your characters, and any text that
+        you'd like on the screen. Once you've sketched out an idea, you'll learn
+        about `text` and how to compose a scene.\r
       CSD U3 Scene Example_markdown_instruction: |
         # Sprite Sahneleri\r \r, şekilleri, spriteı ve 'metin' olarak adlandırılan yeni bir bloğu kullanarak basit öykü ya da çizgi roman sahneleri oluşturabilirsiniz. Bu örnek oldukça basit olmakla birlikte, sen istediğin kadar sprite ve şekil ekleyebilirsin \r \r Tasarla ## devam edelim, 'Metin' bloğunu kulanarak sahneyi nasıl hazırlarsın
       CSD U3 Simple Drawing - Animation 2_markdown_instruction: |-
@@ -9048,6 +9234,12 @@
         so that it entirely covers the green rectangle.\r
         * When your program works
         correctly, it should draw the image to the right.
+      CSD U3 Sprites text debug-2018_markdown_instruction: |-
+        <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
+        style="float: right; width: 200px; margin-left: 20px;">\r
+        # Hata Ayıklama\r
+        \r
+        Doğru kodların tamamı bu sahnede, fakat doğru sırada değiller. Sahne, sağdaki resim gibi görünmelidir.  Blokları yeniden sıralayabilir misin? Böylece sahnenin her bölümü doğru sırada çizilecek.
       CSD U3 Sprites text debug_markdown_instruction: |-
         <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
         style="float: right; width: 200px; margin-left: 20px;">\r
@@ -10257,7 +10449,31 @@
         is not less than 325, use the `velocityY` to change its vertical velocity
         to zero. [Show me where](#triggercallout=code_triggered2)\r
         \r
-      CSD U3 abstraction jump_markdown_instruction: |
+      CSD U3 abstraction jump-2018_markdown_instruction: |-
+        # Jumping\r
+        \r
+        You now
+        have all the blocks you need to make your sprite jump!  The sprite should
+        jump up if it's on the ground and the user presses the "up" key, then should
+        start moving back down when it reaches the top of its jump.\r
+        \r
+        # Do this\r
+        \r
+        *
+        Find the `if` statement that checks whether the sprite is on the ground, and
+        look at the `if` statement inside of it that checks whether the user has pressed
+        the "up" arrow key. ( [Show me where](#triggercallout=code_triggered1) )\r
+        \t*
+        Make the frog jump up when the user presses the arrow key.\r
+        \t* Make the
+        frog stop moving otherwise.\r
+        * Add code that does the following  ( [Show
+        me where](#triggercallout=code_triggered2) )\r
+          * Checks whether the frog
+        sprite has reached its highest point.\r
+          * If so, make the sprite go back
+        down.
+      CSD U3 abstraction jump_markdown_instruction: |-
         # Jumping\r
         \r
         You now have
@@ -10288,8 +10504,7 @@
         )\r
           * Checks whether the frog sprite has reached its highest point.\r
           *
-        If so, use the `velocityY` block to make the sprite fall back down.\r
-        \r
+        If so, use the `velocityY` block to make the sprite fall back down.
       CSD U3 abstraction jumper intro_markdown_instruction: |
         # Horse Jumper\r
         \r
@@ -12740,7 +12955,7 @@
         item position.\r
         * Inside your `if` statement, add a counter pattern that
         will increase the score every time the player touches an item.  Look at [Lesson
-        12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example.\r
+        16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example.\r
         * Call the function
         inside the draw loop, in the "update sprites" area of your code.\r
         * Run
@@ -13579,9 +13794,8 @@
         LED ve buton nesnelerinizi oluşturun.\\r\n* Olay yöneticilerinin LED'inizi
         açıp kapayan, aşağı ve yukarı\ngiden butonunuza cevap vermesi için olay yöneticilerini
         programlayın."
-      CSD U6 circuit project template_markdown_instruction: |-
-        # Prototyping Circuit
-        Project Template
+      CSD U6 circuit project template_markdown_instruction: "# Prototipleme Devresi
+        Proje Şablonu"
       CSD U6 circuit smart bike blinker buttons_markdown_instruction: "# Akıllı Bisiklet\n-
         Sinyal Lambası Kontrolleri\\r\n\\r\nDönüş sinyali LED'leri bağlandığında,
         onları kontrol etmek için sadece bazı butonları programlamanız gerekiyor.
@@ -14206,9 +14420,8 @@
         _Note: We've removed
         the Design Mode tab for now so you can practice working with `setProperty`,
         but it'll come back later once you're building apps of your own._
-      CSD U6 getProperty board predict_markdown_instruction: |-
-        Predict Level (See
-        contained level for markdown)
+      CSD U6 getProperty board predict_markdown_instruction: Tahmin Düzeyi (Markdown
+        için içerilen seviyeye bakın)
       CSD U6 getProperty buzzer_markdown_instruction: |-
         # Using the Circuit Playground\r
         \r
@@ -14219,12 +14432,12 @@
         #
         Do This\r
         * Using the LED code as a model, add new code inside the buttonL
-        event that will play a long or short buzz according to the text property of
-        the *buzzer_input* dropdown menu.\r
-        * Add new code that will turn the buzzer
-        off when the right button is pressed.\r
-          * (Hint: the event is already in
-        the code.)
+        event that will play a long or short buzz according to the chosen value property
+        of the *buzzer_input* dropdown menu.\r
+        * Add new code that will turn the
+        buzzer off when the right button is pressed.\r
+          * (Hint: the event is already
+        in the code.)
       CSD U6 getProperty debug_markdown_instruction: |-
         # Hata Ayıklama\r
         \r
@@ -14459,9 +14672,8 @@
         your partner and answer the following questions:\r
         \r
         * What does this line
-        of code do: `  setProperty("screen","background-color",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r
-        });`?  ([Show
-        me where.](#triggercallout=code_triggered))\r
+        of code do: `setProperty("screen", "background-color", rgb(randomNumber(0,255),
+        randomNumber(0,255), randomNumber(0,255)));`?\r
         \r
         Once you have answered
         the question, run the code and click the buttons to see what happens.
@@ -14673,6 +14885,19 @@
         *
         Run the program and press the left button to hear your buzzer sing its beautiful
         tune.
+      CSD U6 sensor experiment embedded_markdown_instruction: |-
+        # Sensor Experiment\r
+        \r
+        Run
+        the program to the right and experiment with your board. Try interacting with
+        your board in many different ways to figure out what each sensor might be.
+        As you experiment with each sensor, discuss with a neighbor:\r
+        \r
+        * What
+        does this sensor measure?\r
+        * What is its maximum value?\r
+        * What is its
+        minimum value?
       CSD U6 setProperty Text_markdown_instruction: |-
         # Changing the Text\r
         \r
@@ -14744,16 +14969,16 @@
         # Changing With a Click\r
         \r
         It's
-        not really useful to only set a property when your program is run. After all,
-        you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty`, you're able to do things you couldn't do with Design
-        Mode alone.\r
+        not really useful to only set a property when your program is first run. After
+        all, you could just do all of that in Design Mode. When you use an `onEvent`
+        block with `setProperty`, you're able to do things you couldn't do with
+        Design Mode alone.\r
         \r
         # Do This\r
         \r
-        We've provided an empty `onEvent` block
-        that's watching the "smiley" image. Inside the `onEvent` block, use two
-        `setProperty` blocks to move the smiley somewhere else (it doesn't really
+        We've provided an empty `onEvent`
+        block that's watching the "smiley" image. Inside the `onEvent` block, use
+        two `setProperty` blocks to move the smiley somewhere else (it doesn't really
         matter where for now). Test your program by running it and clicking on the
         smiley.
       CSD U6 setProperty xy random_markdown_instruction: |-
@@ -22833,11 +23058,18 @@
         are indicated at the top.\r
             * You may **add a new entry** at the current
         location in your list.
-      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\n\nYour\napp
-        needs to store the following information. For each type of information,\ndecide
-        whether you would use an array or a variable to store it:\n \n* All\nthe messages
-        a user has sent\n* The highest score a user has ever reached\non the app\n*
-        A username and password to unlock the app\n\n"
+      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: |
+        ## Choose: Array or Variable?\r
+        \r
+        Your
+        app needs to store the following information. For each type of information,
+        decide whether you would use an array or a variable to store it:\r
+         \r
+        *
+        All the messages a user has sent\r
+        * The highest score a user has ever reached
+        on the app\r
+        * A username and password to unlock the app\r
       CSPU5_U3 - Arrays - Wrap Up 2_markdown_instruction: |
         ## Free Response: Choosing
         Array or Variable
@@ -35010,10 +35242,15 @@
         of red that Maddie created in the video. Experiment with 6-bit color by filling
         in the bottom row of the image with shades of a different color.  Here is
         an example with some shades of blue.  Try your own color!
-      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "# Color\nPixelation:
-        Task 1\n**Directions:**\n\n* We start you with the 4x2 image Maddie\nwas creating,
-        but we've left out the last two squares. \n* Finish off the\nimage by figuring
-        out which two colors are missing and encode them.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: |
+        # Color
+        Pixelation: Task 1\r
+        **Directions:**\r
+        \r
+        * We start you with the 4x2 image
+        Maddie was creating, but we've left out the last two squares. \r
+        * Finish
+        off the image by figuring out which two colors are missing and encode them.\r
       Pixelation 2_markdown_instruction: |-
         Something happened to the bits in this
         image!  Find error and fix it!
@@ -50450,7 +50687,7 @@
         was the difference between the two, and why is that an issue?
         - How did you
         fix the bug?
-      U3L16 - challenge say hi app_markdown_instruction: |
+      U3L16 - challenge say hi app_markdown_instruction: |-
         # Introducing the  *change*
         Event\r
         \r
@@ -50475,7 +50712,7 @@
         - Attach a __'change'__ event handler to the
         text input.\r
         - When the 'change' event triggers, __write the user's name
-        and a greeting__.\r
+        and a greeting__.
       U3L16 - chaserApp_markdown_instruction: |
         # Chaser Game\r
         \r
@@ -57379,14 +57616,13 @@
                 \t\r
                     //
         generate random color\r
-                    // make all 4 buttons have same bg color\r
+                    // make all 4 buttons have same color\r
                     //
         pick a random Button Id\r
-                    // set it's bg color to something
-        different\r
+                    // set its color to something different\r
                     \r
-                    console.log("correct one is: "
-        + randButtonId);  <-- Add this line\r
+                    console.log("correct
+        one is: " + randButtonId);  <-- Add this line\r
         \t\t}
       U5 ColorSleuth add score variables and update with console_markdown_instruction: |
         Fun
@@ -60373,6 +60609,16 @@
         'topla' kullan \r \r Bu seviyeyi geçmek için bir yığın topla.
       collectorSkinVideo2_markdown_instruction: Laurel i hazine ye ilerlet, daha sonra
         'topla' kullan \r \r Bu seviyeyi geçmek için bir yığın topla.
+      comment_intro_maze_2018_markdown_instruction: |-
+        *"I'm confused. Help me remember
+        how to solve this maze."* \r
+        \r
+        Use the new `comment` block to leave yourself
+        quick reminders. They can help you remember what you were doing and why!\r
+        \r
+        Comments
+        are only used for **you**. Your Play Area won't look different because of
+        a comment.
       course1_artist_loops_challenge2_markdown_instruction: Bir oyun oynayalım! Çizebildiğin
         kadar X çiz! Üst üste 3 alabilir miyim?
       course1_artist_loops_challenge3_markdown_instruction: Tweet tweet! İki kuş evi
@@ -61199,39 +61445,33 @@
         more than moves.  \r
         \r
         Use loops to collect all four of the pumpkins.
-      courseC_harvester_loops10_markdown_instruction: |-
-        Collect all of the corn and
-        all of the pumpkins.
-      courseC_harvester_loops11_markdown_instruction: |-
-        Collect all of the corn and
-        all of the pumpkins.
+      courseC_harvester_loops10_markdown_instruction: Bütün balkabaklarını ve bütün
+        mısırı topla.
+      courseC_harvester_loops11_markdown_instruction: Bütün balkabaklarını ve bütün
+        mısırı topla.
       courseC_harvester_loops2_markdown_instruction: |-
         Can you combine two different
         loops to move toward the pumpkins, then collect them all?
-      courseC_harvester_loops3_markdown_instruction: Collect all of the pumpkins.
+      courseC_harvester_loops3_markdown_instruction: Bütün balkabaklarını topla.
       courseC_harvester_loops4_markdown_instruction: |-
         Now there is corn growing,
         too!\r
         \r
         Collect all of the corn and all of the pumpkins.
-      courseC_harvester_loops5_markdown_instruction: |-
-        Collect all of the corn and
-        all of the pumpkins.
-      courseC_harvester_loops6_markdown_instruction: |-
-        Collect all of the corn and
-        all of the pumpkins.
-      courseC_harvester_loops7_markdown_instruction: |-
-        Collect all of the corn and
-        all of the pumpkins.
+      courseC_harvester_loops5_markdown_instruction: Bütün balkabaklarını ve bütün
+        mısırı topla.
+      courseC_harvester_loops6_markdown_instruction: Bütün balkabaklarını ve bütün
+        mısırı topla.
+      courseC_harvester_loops7_markdown_instruction: Bütün balkabaklarını ve bütün
+        mısırı topla.
       courseC_harvester_loops8_markdown_instruction: |-
         **Challenge:** Collect all
         of the corn and all of the pumpkins.\r
         \r
         You can complete this challenge
         any way you want, but it will either take a lot of work or a lot of thinking!
-      courseC_harvester_loops9_markdown_instruction: |-
-        Collect all of the corn and
-        all of the pumpkins.
+      courseC_harvester_loops9_markdown_instruction: Bütün balkabaklarını ve bütün
+        mısırı topla.
       courseC_harvester_loops_challenge1_markdown_instruction: Bütün mısırları topla.
       courseC_harvester_loops_challenge2_markdown_instruction: Tüm marulları topla.
         Ağaçlardan ve tarlalardan sakın!
@@ -61960,12 +62200,11 @@
         flower and make honey at the honeycomb. "
       courseD_bee_nestedLoops8_2018_markdown_instruction: "Collect all of the nectar\nfrom
         each flower and make honey at the honeycomb. "
-      courseD_bee_nestedLoops9_markdown_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_markdown_instruction: Balın tamamını yap.
       courseD_bee_nestedLoops9_2018_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_markdown_instruction: Make all of the honey.
-      courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: |-
-        Make all of the
-        honey.
+      courseD_bee_nestedLoops9_predict2_markdown_instruction: Balın tamamını yap.
+      courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: Balın tamamını
+        yap.
       courseD_bee_nested_loops_challenge1_markdown_instruction: Haydi döngüler kullanarak
         hazine avı yapalım! Toplayıcıya, yalnızca araç çubuğundaki blokları kullanarak,
         en az iki hazine yığınına ulaşmasına yardım et.
@@ -62184,12 +62423,10 @@
       courseD_farmer_condLoops7_markdown_instruction: |-
         **Challenge:** Collect all
         of the corn and lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops8_markdown_instruction: |-
-        Collect all of the corn and
-        lettuce, then pick the pumpkin.
-      courseD_farmer_condLoops9_markdown_instruction: |-
-        Collect all of the corn and
-        lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops8_markdown_instruction: Mısır ve marulların hepsini
+        topla sonra kabakları seç.
+      courseD_farmer_condLoops9_markdown_instruction: Mısır ve marulların hepsini
+        topla sonra kabakları seç.
       courseD_farmer_condLoops9_predict1_markdown_instruction: Tüm Mısır ve marulları
         topla sonra kabak topla.
       courseD_farmer_condLoops_challenge1_markdown_instruction: |-
@@ -62339,9 +62576,10 @@
       courseD_maze_ramp5b_2018_markdown_instruction: |-
         **Challenge:** Navigate this
         maze to help the bird find the pig!
-      courseD_maze_ramp5c_markdown_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5c_2018_markdown_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5d_markdown_instruction: Get the bird to the pig.
+      courseD_maze_ramp5c_markdown_instruction: Domuza ulaşması için kuşa yardım et.
+      courseD_maze_ramp5c_2018_markdown_instruction: Domuza ulaşması için kuşa yardım
+        et.
+      courseD_maze_ramp5d_markdown_instruction: Kuşu domuza götür.
       courseD_maze_ramp5d_2018_markdown_instruction: Get the bird to the pig.
       courseD_maze_ramp6_markdown_instruction: '* "Sakin ol ve kötü domuzu bulmama
         yardım et. Aksi takdirde sinirleniyorum!" * \r \r bir satırda birkaç blok
@@ -62371,9 +62609,12 @@
       courseD_maze_until5_markdown_instruction: |-
         Use the `if` block to help the zombie
         decide when to turn, then get the zombie to the sunflower.
-      courseD_maze_until6_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until7_markdown_instruction: Help the zombie get to the sunflower.
-      courseD_maze_until8_markdown_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until6_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım
+        et.
+      courseD_maze_until7_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım
+        et.
+      courseD_maze_until8_markdown_instruction: Ayçiçeğine ulaşması için zombiye yardım
+        et.
       courseD_maze_until9_markdown_instruction: |-
         **Challenge:** Avoid the chompers
         and help the zombie get to the sunflower.
@@ -62742,9 +62983,8 @@
       courseE_artist_functions_predict1_markdown_instruction: |
         Here is a puzzle that
         uses a function that we have defined. \r
-      courseE_artist_functions_predict1_2018_markdown_instruction: |
-        Here is a puzzle
-        that uses a function that we have defined. \r
+      courseE_artist_functions_predict1_2018_markdown_instruction: "Here is a puzzle\nthat
+        uses a function that we have defined. "
       courseE_artist_ramp10_markdown_instruction: "İçiçe döngüler yapılabileceğini
         biliyor muydun? \\r \\r <hr/> \\r \\r son üçgen kodunu yeni bir föngü içine
         koy kendi etrafinda döndür ve bir kar tanesi yap! \\r \\r *( 6 defa 60 derece
@@ -63117,40 +63357,36 @@
         Now the harvester needs
         to pick all of the lettuce.  Use `while there is lettuce` inside of a `repeat`
         loop to get it all!
-      courseE_farmer_ramp12c_markdown_instruction: "The lettuce is now only at the\nend
-        of the path.  \\r\nTravel down the path **until** you reach a head of lettuce,\nthen
-        continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12c_2018_markdown_instruction: "The lettuce is now only\nat
-        the end of the path.  \\r\nTravel down the path **until** you reach a head\nof
-        lettuce, then continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12d_markdown_instruction: "The lettuce is scattered all\nover
-        the garden.  \\r\nTravel down each path **until** you reach a head of\nlettuce,
-        then continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12d_2018_markdown_instruction: "The lettuce is scattered\nall
-        over the garden.  \\r\nTravel down each path **until** you reach a head\nof
-        lettuce, then continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12e_markdown_instruction: "The lettuce is scattered all\nover
-        the garden.  \\r\nTravel down each path **until** you reach a head of\nlettuce,
-        then continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12e_2018_markdown_instruction: "The lettuce is scattered\nall
-        over the garden.  \\r\nTravel down each path **until** you reach a head\nof
-        lettuce, then continue to pick it **while** there is still some left.  "
-      courseE_farmer_ramp12f_markdown_instruction: |-
-        **Challenge**: The only way to
-        get all of the crops is to move forward until you get to the lettuce, then
-        turn left **if** there is a path to the left.  Otherwise, turn right.
-      courseE_farmer_ramp12f_2018_markdown_instruction: |-
-        **Challenge**: The only
-        way to get all of the crops is to move forward until you get to the lettuce,
-        then turn left **if** there is a path to the left.  Otherwise, turn right.
-      courseE_farmer_ramp12g_markdown_instruction: |-
-        Move forward until you get to
-        the lettuce, then turn left **if** there is a path to the left.  Otherwise,
-        turn right.
-      courseE_farmer_ramp12g_2018_markdown_instruction: |-
-        Move forward until you get
-        to the lettuce, then turn left **if** there is a path to the left.  Otherwise,
-        turn right.
+      courseE_farmer_ramp12c_markdown_instruction: "Marul şimdi sadece yolun sonundadır.\\r\nBir
+        marulun başına ulaşıncaya **kadar** yolun aşağısına inin,, ardından hala kalanlar
+        **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12c_2018_markdown_instruction: "Marul şimdi sadece yolun
+        sonundadır.\\r\nBir marulun başına ulaşıncaya **kadar** yolun aşağısına inin,,
+        ardından hala kalanlar **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12d_markdown_instruction: "Marul bahçenin her tarafına dağılmış
+        durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına
+        inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12d_2018_markdown_instruction: "Marul bahçenin her tarafına
+        dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun
+        aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.
+        \ "
+      courseE_farmer_ramp12e_markdown_instruction: "Marul bahçenin her tarafına dağılmış
+        durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun aşağısına
+        inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.  "
+      courseE_farmer_ramp12e_2018_markdown_instruction: "Marul bahçenin her tarafına
+        dağılmış durumda.\\r\nBir marulun başına ulaşıncaya **kadar** herbir yolun
+        aşağısına inin,, ardından hala kalanlar **varken** onu toplamaya devam edin.
+        \ "
+      courseE_farmer_ramp12f_markdown_instruction: "** Meydan Okuma **: Bütün bitkileri
+        elde etmenin tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra  **eğer**
+        sola giden bir yol varsa sola dönün. Aksi takdirde sağa dönün."
+      courseE_farmer_ramp12f_2018_markdown_instruction: "** Meydan Okuma **: Bütün
+        bitkileri elde etmenin tek yolu, marula ulaşıncaya kadar ileri gitmek, sonra
+        \ **eğer** sola giden bir yol varsa sola dönün. Aksi takdirde sağa dönün."
+      courseE_farmer_ramp12g_markdown_instruction: Marula ulaşana kadar ilerle, sonra
+        sola dön **eğer** sola doğru yol varsa. Aksi taktirde, sağa dön.
+      courseE_farmer_ramp12g_2018_markdown_instruction: Marula ulaşana kadar ilerle,
+        sonra sola dön **eğer** sola doğru yol varsa. Aksi taktirde, sağa dön.
       courseE_farmer_ramp13_markdown_instruction: |
         Vay be!  Bu fidelere bak. Bazıları marul mazıları Mısıra dönecek.  'Eğer Mısır / değilse' bloğu ile  Mısır ise, Mısır al ** değilse **maruldur ve marul al. \r \r \r \r
       courseE_farmer_ramp15_markdown_instruction: Yalnızca mevcut blokları kullanarak
@@ -63212,74 +63448,49 @@
         Click the
         hints for ideas!
       courseE_playLab_scaffold1_markdown_instruction: |-
-        It is amazing how much you
-        have learned! Let's make a game step by step.\r
+        Ne kadar öğrendiğin hayret verici! Adım adım bir oyun hazırlayalım.\r
         \r
-        Using new blocks in
-        your toolbox, choose a new background, then pick an actor to be in your game.
+        Araç kutusunda yeni bloklar kullanarak, yeni bir arka plan seçin, ardından oyununuzda olabilecek bir oyuncu seçin.
       courseE_playLab_scaffold1_2018_markdown_instruction: |-
-        It is amazing how much
-        you have learned! Let's make a game step by step.\r
+        Ne kadar öğrendiğin hayret verici! Adım adım bir oyun hazırlayalım.\r
         \r
-        Using new blocks
-        in your toolbox, choose a new background, then pick an actor to be in your
-        game.
+        Araç kutusunda yeni bloklar kullanarak, yeni bir arka plan seçin, ardından oyununuzda olabilecek bir oyuncu seçin.
       courseE_playLab_scaffold2_markdown_instruction: |-
-        Use  blocks like event handlers
-        and actions to make your player move according to the arrows on your keyboard.  \r
+        Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek için olay işleyicileri ve işlemler gibi blokları kullan.\r
         \r
-        Get
-        the player to the targets to complete this puzzle.
+        Bu bulmacayı tamamlamak için oyuncuyu hedeflere götürün.
       courseE_playLab_scaffold2_2018_markdown_instruction: |-
-        Use  blocks like event
-        handlers and actions to make your player move according to the arrows on your
-        keyboard.  \r
+        Oyuncunuzu klavyenizdeki oklara göre hareket ettirmek için olay işleyicileri ve işlemler gibi blokları kullan.\r
         \r
-        Get the player to the targets to complete this puzzle.
+        Bu bulmacayı tamamlamak için oyuncuyu hedeflere götürün.
       courseE_playLab_scaffold3_markdown_instruction: |-
-        Let's add some more characters
-        to your game!\r
+        Oyununa biraz daha karakter katalım!\r
         \r
-        Use the `set actor` block to add more characters then
-        move to the goal to complete this puzzle.
+        Daha fazla karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı tamamlamak için hedefe ilerleyin.
       courseE_playLab_scaffold3_2018_markdown_instruction: |-
-        Let's add some more
-        characters to your game!\r
+        Oyununa biraz daha karakter katalım!\r
         \r
-        Use the `set actor` block to add more characters
-        then move to the goal to complete this puzzle.
+        Daha fazla karakter eklemek için `aktörü ayarla` bloğunu kullanın, sonra bu bulmacayı tamamlamak için hedefe ilerleyin.
       courseE_playLab_scaffold4_markdown_instruction: |-
-        Multiple characters and getting
-        the actors moving is a great start to a game, but we need to do more to make
-        this feel like a real game. Let's add a score!\r
+        Birden fazla karakter ve aktörlerin hareket ettirilmesi oyun için büyük bir başlangıçtır, ancak bunu gerçek bir oyun gibi hissettirmek için daha fazla şey yapmak zorundayız. Bir puan ekleyelim!\r
         \r
-        Use event blocks like
-        the `when actor touches` to change the score. Score 10 points to complete
-        this puzzle.
+        Skoru değiştirmek için 'aktör dokunursa' gibi etkinlik bloklarını kullanın. Bu bulmacayı tamamlamak için 10 puan topla.
       courseE_playLab_scaffold4_2018_markdown_instruction: |-
-        Multiple characters and
-        getting the actors moving is a great start to a game, but we need to do more
-        to make this feel like a real game. Let's add a score!\r
+        Birden fazla karakter ve aktörlerin hareket ettirilmesi oyun için büyük bir başlangıçtır, ancak bunu gerçek bir oyun gibi hissettirmek için daha fazla şey yapmak zorundayız. Bir puan ekleyelim!\r
         \r
-        Use event blocks
-        like the `when actor touches` to change the score. Score 10 points to complete
-        this puzzle.
-      courseE_playLab_scaffold5_markdown_instruction: |-
-        Great job! You have all the
-        basic components of a working game. Now spend some time making sure the game
-        works the way you want. Include a way to win or lose your game, then play
-        until you meet one of those conditions.
-      courseE_playLab_scaffold5_2018_markdown_instruction: |-
-        Great job! You have all
-        the basic components of a working game. Now spend some time making sure the
-        game works the way you want. Include a way to win or lose your game, then
-        play until you meet one of those conditions.
-      courseE_playLab_scaffold6_markdown_instruction: |-
-        You've finished! Now you
-        can play your game or share it with your friends and classmates!
-      courseE_playLab_scaffold6_2018_markdown_instruction: |-
-        You've finished! Now
-        you can play your game or share it with your friends and classmates!
+        Skoru değiştirmek için 'aktör dokunursa' gibi etkinlik bloklarını kullanın. Bu bulmacayı tamamlamak için 10 puan topla.
+      courseE_playLab_scaffold5_markdown_instruction: "İyi iş! Çalışan bir oyunun
+        bütün temel bileşenlerine sahipsin. Şimdi oyunu oynamak istediğine emin olmak
+        için biraz vakit geçir. Oyunu kazanmak ya da kaybetmek için bir yol ekle,
+        sonra bu koşullardan birini yerine getirene kadar oyna."
+      courseE_playLab_scaffold5_2018_markdown_instruction: "İyi iş! Çalışan bir oyunun
+        bütün temel bileşenlerine sahipsin. Şimdi oyunu oynamak istediğine emin olmak
+        için biraz vakit geçir. Oyunu kazanmak ya da kaybetmek için bir yol ekle,
+        sonra bu koşullardan birini yerine getirene kadar oyna."
+      courseE_playLab_scaffold6_markdown_instruction: Bitirdin! Şimdi oyununuzu oynayabilir
+        veya dostlarınızla ve sınıf arkadaşlarınızla paylaşabilirsiniz!
+      courseE_playLab_scaffold6_2018_markdown_instruction: Bitirdin! Şimdi oyununuzu
+        oynayabilir veya dostlarınızla ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       courseE_playlab_challenge2_markdown_instruction: |-
         "Falcı" uygulamasının nasıl çalıştığını anlayabiliyor musun? Bu oyuna aşağıdaki özelliklerden birkaçını eklemeye çalış:\r
         \r
@@ -63334,12 +63545,10 @@
         \r
         İşin bittiğinde, oynamak için "Çalıştır" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!
       courseF_IceAge_7_markdown_instruction: |-
-        Scrat is still looking for acorns!
+        Scrat hâlâ meşe palamutlarını arıyor!
         \r
-        Help him scamper around by attaching a `move actor 1` block to each of
-        the events and changing the direction to work for each arrow key. \r
-        When
-        you’re done, click "Run" and try to collect all of the acorns.
+        Herbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\r
+        İşiniz bittiğinde, "Çalıştır" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin.
       courseF_IceAge_8_markdown_instruction: |-
         Here is your code from the last puzzle,
         as well as the code to move Granny left and right. \r
@@ -63352,12 +63561,10 @@
         Sahneyi buzlu bir arka planla değiştir ve Sid (actor 1) ' in hızını arttır.\r
         "Çalıştır" a bas ve Sid' i, Diego' yu uyarması için ona doğru hareket ettir.
       courseF_IceAge_template_markdown_instruction: |-
-        Scrat is still looking for acorns!
+        Scrat hâlâ meşe palamutlarını arıyor!
         \r
-        Help him scamper around by attaching a `move actor 1` block to each of
-        the events and changing the direction to work for each arrow key. \r
-        When
-        you’re done, click "Run" and try to collect all of the acorns.
+        Herbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\r
+        İşiniz bittiğinde, "Çalıştır" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin.
       courseF_artist_for1_markdown_instruction: |
         **Free Play:** Experiment with the
         `for` loop and the `counter` variable.  \r
@@ -63381,28 +63588,22 @@
         \r
         Drag out a few blocks
         and see what happens.  \r
-      courseF_artist_for2_markdown_instruction: |-
-        Use a `repeat` loop inside of a
-        `for` loop to create this stack of triangles that goes from 50 pixel to 100
-        pixel sides.
-      courseF_artist_for2_2018_markdown_instruction: |-
-        Use a `repeat` loop inside
-        of a `for` loop to create this stack of triangles that goes from 50 pixel
-        to 100 pixel sides.
-      courseF_artist_for3_markdown_instruction: |-
-        Create these triangles that go from
-        20 pixel sides to 200 pixel sides, where each triangle is 20 pixels larger
-        than the last.
-      courseF_artist_for3_2018_markdown_instruction: |-
-        Create these triangles that
-        go from 20 pixel sides to 200 pixel sides, where each triangle is 20 pixels
-        larger than the last.
+      courseF_artist_for2_markdown_instruction: 50 pikselden 100 piksel kenarına çıkan
+        bu üçgen yığını oluşturmak için bir `for 'döngüsü içinde bir' tekrarlama 'döngüsü
+        kullanın.
+      courseF_artist_for2_2018_markdown_instruction: 50 pikselden 100 piksel kenarına
+        çıkan bu üçgen yığını oluşturmak için bir `for 'döngüsü içinde bir' tekrarlama
+        'döngüsü kullanın.
+      courseF_artist_for3_markdown_instruction: 20 piksellik kenarından 200 piksellik
+        kenarına kadar giden bu üçgenleri oluşturun, herbir üçgen sonuncudan 20 piksel
+        daha büyüktür.
+      courseF_artist_for3_2018_markdown_instruction: 20 piksellik kenarından 200 piksellik
+        kenarına kadar giden bu üçgenleri oluşturun, herbir üçgen sonuncudan 20 piksel
+        daha büyüktür.
       courseF_artist_for5_markdown_instruction: |-
-        Just one little change to the code
-        from the last image can create this drawing. Can you figure out what that
-        change is?\r
+        Son görüntünün kodundaki sadece küçük bir değişiklik bu çizimi yaratabilir. Bu değişikliğin ne olduğunu öğrenebilir misin?\r
         ___\r
-        Hint:  You need to remove something!
+        İpucu: Bir şeyi kaldırmanız gerekiyor!
       courseF_artist_for5_2018_markdown_instruction: |-
         Just one little change to the
         code from the last image can create this drawing. Can you figure out what
@@ -63441,6 +63642,13 @@
         Bir şekil için, olması gerekenden biraz daha az ya da çok dönersen, bu "neat" efekti oluşturur.\r
         \r
         Önceki bölümden birkaç kod dene ama bu kıvrımlı kare sarmalı oluşturmak için 89 derece döndür.
+      courseF_artist_for_Template_2018_markdown_instruction: |-
+        If you turn a little
+        bit more or less than you normally would for a shape, it creates a neat effect.\r
+        \r
+        Try
+        using some of the code from the last level, but turning 89 degrees to create
+        this twisted square spiral.
       courseF_artist_for_challenge1_markdown_instruction: |
         Bu çizimi nasıl yeniden oluşturabileceğini kestirebiliyor musun?\r
         \r
@@ -63876,17 +64084,13 @@
         Feel free to make your lines any color or pattern for some
         extra zest.
       courseF_bee_conditionals10_markdown_instruction: |-
-        Conditionals can be helpful,
-        even when you know exactly what is in each spot!\r
+        Her bir noktada ne olduğunu tam olarak bilebildiğinizde bile, şartlılar yardımcı olabilir!\r
         \r
-        Collect all of the
-        nectar and make all of the honey.
+        Tüm nektarı toplayın ve balın tamamını yapın.
       courseF_bee_conditionals10_2018_markdown_instruction: |-
-        Conditionals can be
-        helpful, even when you know exactly what is in each spot!\r
+        Her bir noktada ne olduğunu tam olarak bilebildiğinizde bile, şartlılar yardımcı olabilir!\r
         \r
-        Collect all
-        of the nectar and make all of the honey.
+        Tüm nektarı toplayın ve balın tamamını yapın.
       courseF_bee_conditionals1_predict1_markdown_instruction: '* "Bu bulut görüşümü
         engelliyor!" * \r \r bir çiçek bulut altında olup olmadığını kontrol edin.
         Eğer çiçek ise, nektar al.'
@@ -63912,16 +64116,14 @@
         \r
         Remember: Not all clouds
         hide the same thing!
-      courseF_bee_conditionals3_markdown_instruction: |-
-        You can only collect nectar
-        from flowers, but you can check any space to see if there is a flower. If
-        there is a flower under any of these clouds, the bee will need to collect
-        nectar **once**.
-      courseF_bee_conditionals3_2018_markdown_instruction: |-
-        You can only collect
-        nectar from flowers, but you can check any space to see if there is a flower.
-        If there is a flower under any of these clouds, the bee will need to collect
-        nectar **once**.
+      courseF_bee_conditionals3_markdown_instruction: Sadece çiçeklerden nektar toplayabilirsiniz,
+        ancak bir çiçek olup olmadığını görmek için herhangi bir alanı kontrol edebilirsiniz.
+        Bu bulutların herhangi birinin altında bir çiçek varsa, arı nektarı toplamaya
+        **ilk defasında** ihtiyaç duyacaktır.
+      courseF_bee_conditionals3_2018_markdown_instruction: Sadece çiçeklerden nektar
+        toplayabilirsiniz, ancak bir çiçek olup olmadığını görmek için herhangi bir
+        alanı kontrol edebilirsiniz. Bu bulutların herhangi birinin altında bir çiçek
+        varsa, arı nektarı toplamaya **ilk defasında** ihtiyaç duyacaktır.
       courseF_bee_conditionals4_markdown_instruction: |-
         In this puzzle, we know that
         every flower has exactly one nectar, but the flowers aren't spaced evenly.\r
@@ -68574,9 +68776,8 @@
         \r
         ![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57
         PM.png)
-      grade4_scaffolded_project6_markdown_instruction: |-
-        You've finished! Now you
-        can play your game or share it with your friends and classmates!
+      grade4_scaffolded_project6_markdown_instruction: Bitirdin! Şimdi oyununuzu oynayabilir
+        veya dostlarınızla ve sınıf arkadaşlarınızla paylaşabilirsiniz!
       grade5_artist_binary1_markdown_instruction: |-
         Binary is a way of representing
         information using only two options.  Here, we're going to use the options
@@ -69509,19 +69710,15 @@
         1) and wants to invite him on an adventure. Help them greet each other by
         using the the `actor ___ say` block twice.
       iceage_move_events_markdown_instruction: |-
-        Scrat is still looking for acorns!
+        Scrat hâlâ meşe palamutlarını arıyor!
         \r
-        Help him scamper around by attaching a `move actor 1` block to each of
-        the events and changing the direction to work for each arrow key. \r
-        When
-        you’re done, click "Run" and try to collect all of the acorns.
+        Herbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\r
+        İşiniz bittiğinde, "Çalıştır" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin.
       iceage_move_events_2018_markdown_instruction: |-
-        Scrat is still looking for acorns!
+        Scrat hâlâ meşe palamutlarını arıyor!
         \r
-        Help him scamper around by attaching a `move actor 1` block to each of
-        the events and changing the direction to work for each arrow key. \r
-        When
-        you’re done, click "Run" and try to collect all of the acorns.
+        Herbir olaya bir 'hareket aktörü 1' bloğu ekleyerek ve herbir ok tuşu için çalısıp, yön değiştirerek onun dönüp dolaşmasına yardımcı olun.\r
+        İşiniz bittiğinde, "Çalıştır" ı tıklayın ve tüm meşe palamutlarını toplamayı deneyin.
       iceage_move_to_actor_markdown_instruction: |-
         Diego (actor 1) is searching for
         Manny (actor 2). Can you help bring the two together? Connect a block to the

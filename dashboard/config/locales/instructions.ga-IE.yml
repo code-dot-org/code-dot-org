@@ -7489,6 +7489,9 @@
         a chríochnú.
       collectorSkinVideo2_instruction: Bailigh carn óir amháin chun an leibhéal seo
         a chríochnú.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9931,6 +9934,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: An féidir leat an pictiúr seo a athchruthú?
       courseF_artist_for_challenge1_2018_instruction: |-
         Can you figure out how to
@@ -10533,6 +10539,10 @@
       flappy_1_instruction: Ceangail bloc leis an mbloc "nuair a chliceáiltear", ansin
         cliceáil "Rith". Cliceáil nó tapáil an scáileán le Flappy a threorú chuig
         an sprioc.
+      flappy_11_instruction: Cruthaigh do chluiche Flappy féin. Is féidir leat an
+        leagan amach agus na rialacha go léir a athrú, an domhantarraingt san áireamh!
+        Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde
+        an cluiche a imirt ar a nguthán.
       flappy_2_instruction: Tá an talamh ann anois. Ceangail bloc leis an mbloc "nuair
         a bhuailtear an talamh". Ní mór duit deireadh a chur leis an gcluiche nuair
         a bhuaileann Flappy leis an talamh.
@@ -10556,10 +10566,6 @@
         nuair a ghlanann Flappy constaic, mar shampla.
       flappy_9_instruction: Mar athrú, nuair a bhuaileann Flappy le constaic, athraigh
         an scór go 0, in áit deireadh a chur leis an gcluiche.
-      flappy_11_instruction: Cruthaigh do chluiche Flappy féin. Is féidir leat an
-        leagan amach agus na rialacha go léir a athrú, an domhantarraingt san áireamh!
-        Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde
-        an cluiche a imirt ar a nguthán.
       frozen circle function in circle_instruction: Anois déanaimis fiche ciorcal
         forluite, ag casadh ocht gcéim déag tar éis gach ciorcal.
       frozen circle function with parameter_instruction: Seo é bloc nua "cruthaigh

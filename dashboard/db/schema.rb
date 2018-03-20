@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180219200100) do
+ActiveRecord::Schema.define(version: 20180312211639) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -83,6 +83,27 @@ ActiveRecord::Schema.define(version: 20180219200100) do
     t.string   "callout_text"
   end
 
+  create_table "census_inaccuracy_investigations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",                            null: false
+    t.text     "notes",                limit: 65535, null: false
+    t.integer  "census_submission_id",               null: false
+    t.integer  "census_override_id"
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.index ["census_override_id"], name: "fk_rails_465d31c61e", using: :btree
+    t.index ["census_submission_id"], name: "fk_rails_18600827a9", using: :btree
+    t.index ["user_id"], name: "fk_rails_9c9f685588", using: :btree
+  end
+
+  create_table "census_overrides", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "school_id",   limit: 12, null: false
+    t.integer  "school_year", limit: 2,  null: false
+    t.string   "teaches_cs",  limit: 2,  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["school_id"], name: "fk_rails_06131f8f87", using: :btree
+  end
+
   create_table "census_submission_form_maps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "census_submission_id", null: false
     t.integer  "form_id",              null: false
@@ -120,6 +141,9 @@ ActiveRecord::Schema.define(version: 20180219200100) do
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
     t.boolean  "share_with_regional_partners"
+    t.boolean  "topic_ethical_social",                                    comment: "Survey option for school courses including ethical and social issues"
+    t.boolean  "inaccuracy_reported"
+    t.text     "inaccuracy_comment",           limit: 65535
     t.index ["school_year", "id"], name: "index_census_submissions_on_school_year_and_id", using: :btree
   end
 
@@ -135,7 +159,7 @@ ActiveRecord::Schema.define(version: 20180219200100) do
   create_table "census_summaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "school_id",   limit: 12,    null: false
     t.integer  "school_year", limit: 2,     null: false
-    t.string   "teaches_cs",  limit: 1
+    t.string   "teaches_cs",  limit: 2
     t.text     "audit_data",  limit: 65535, null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
@@ -526,6 +550,7 @@ ActiveRecord::Schema.define(version: 20180219200100) do
     t.integer "facilitator_id", null: false
     t.string  "course",         null: false
     t.index ["course"], name: "index_pd_course_facilitators_on_course", using: :btree
+    t.index ["facilitator_id", "course"], name: "index_pd_course_facilitators_on_facilitator_id_and_course", unique: true, using: :btree
   end
 
   create_table "pd_district_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -769,6 +794,7 @@ ActiveRecord::Schema.define(version: 20180219200100) do
     t.integer  "regional_partner_id"
     t.boolean  "on_map",                                         comment: "Should this workshop appear on the 'Find a Workshop' map?"
     t.boolean  "funded",                                         comment: "Should this workshop's attendees be reimbursed?"
+    t.string   "funding_type"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id", using: :btree
   end
@@ -1408,6 +1434,10 @@ ActiveRecord::Schema.define(version: 20180219200100) do
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
+  add_foreign_key "census_inaccuracy_investigations", "census_overrides"
+  add_foreign_key "census_inaccuracy_investigations", "census_submissions"
+  add_foreign_key "census_inaccuracy_investigations", "users"
+  add_foreign_key "census_overrides", "schools"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"

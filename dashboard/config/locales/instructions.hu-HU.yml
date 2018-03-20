@@ -7327,6 +7327,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9827,6 +9830,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10442,6 +10448,9 @@
       flappy_1_instruction: Csatolj egy blokkot a "kattintáskor" blokkhoz, majd nyomd
         meg a "Futtatás"-t. Kattints vagy érintsd meg a képernyőt, hogy Flappy-t a
         célba segítsd.
+      flappy_11_instruction: Hozz létre egy saját Flappy játékot! Meg tudod változtatni
+        a kinézetet és az összes szabályt, sőt még a gravitációt is. Ha elkészültél,
+        kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
       flappy_2_instruction: Most már talaj is van. Csatolj egy blokkot a "ha becsapódik
         a talajba" blokkhoz. Kell, hogy legyen "JÁTÉK VÉGE", amikor Flappy ütközik.
       flappy_3_instruction: A "futtatáskor" blokk segítségével fut végig a programod,
@@ -10464,9 +10473,6 @@
       flappy_9_instruction: Változtassuk meg úgy a dolgokat, hogy amikor leüt egy
         akadályt, ahelyett hogy véget érne a játék, inkább állítsa vissza a pontokat
         0-ra.
-      flappy_11_instruction: Hozz létre egy saját Flappy játékot! Meg tudod változtatni
-        a kinézetet és az összes szabályt, sőt még a gravitációt is. Ha elkészültél,
-        kattints a Kész gombra, hogy a barátaid is kipróbálhassák a játékodat a telefonjaikon.
       frozen circle function in circle_instruction: Most rajzoljunk 20 egymást átfedő
         kört! 18 fokot kell fordulni minden kör rajzolása után.
       frozen circle function with parameter_instruction: Van itt egy olyan "készíts

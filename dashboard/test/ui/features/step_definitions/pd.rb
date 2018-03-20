@@ -207,11 +207,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       )
     end
 
-  workshop = Pd::Workshop.create!(
+  workshop = FactoryGirl.create(:pd_workshop, :funded,
     on_map: true,
-    funded: true,
     course: course,
-    subject: Pd::Workshop::SUBJECTS[course].try(:first),
     organizer_id: organizer.id,
     capacity: number.to_i,
     location_name: 'Buffalo'

@@ -320,9 +320,6 @@
           Theorem at ang Distance Formula ay maaaring gamitin para masukat ang distansiya
           sa pagitan ng dalawang punto sa isang plane, at pagkatapos ay magpasya tayo
           kung ang dalawang punto na iyon (o mga karakter sa laro) ay nagkabanggaan.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Naka-Unplug na mga Loop
         desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!

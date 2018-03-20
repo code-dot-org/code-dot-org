@@ -65,8 +65,8 @@ export default class WorkshopIndex extends React.Component {
 
   render() {
     const showOrganizer = this.permission.isWorkshopAdmin;
-    const canDelete = this.permission.isWorkshopAdmin || this.permission.isOrganizer;
-    const canCreate = (this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isCsfFacilitator);
+    const canDelete = this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isProgramManager;
+    const canCreate = (this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isProgramManager || this.permission.isCsfFacilitator);
 
     return (
       <div>
@@ -79,7 +79,7 @@ export default class WorkshopIndex extends React.Component {
               </Button>
             )
           }
-          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
+          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer || this.permission.isProgramManager) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
           {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
           <Button

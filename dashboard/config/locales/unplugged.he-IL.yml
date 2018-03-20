@@ -261,9 +261,6 @@
           זה אנו נראה איך את משפט פיתגורס ואת הנוסחה מרחק יכול לשמש כדי למדוד את המרחק
           בין שתי נקודות על המטוס, ולאחר מכן החלט אם אלה שתי נקודות (או הדמויות במשחק)
           נוגעות."
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

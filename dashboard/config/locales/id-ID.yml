@@ -209,7 +209,7 @@
       email: Alamat email
       submit: Kirim
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
+      captcha_required: Silahkan mengisi CAPTCHA untuk me-reset password anda.
       invalid_email: Sepertinya anda mungkin telah mendaftar dengan alamat email yang
         salah. Silahkan email support@code.org untuk menerima link pemulihan kata
         sandi.
@@ -1007,13 +1007,13 @@
   race_interstitial:
     title: 'Opsional: Bantu kami melacak kemajuan untuk meningkatkan keragaman dalam
       ilmu komputer'
-    message: Please tell us your race (check all that apply)
+    message: Silakan beritahu kami ras (periksa semua yang berlaku)
     races:
     - white: Kaukasia
     - black: Hitam atau Afrika Amerika
     - hispanic: Hispanik atau Latino
     - asian: Orang Asia
-    - hawaiian: Native Hawaiian or other Pacific Islander
+    - hawaiian: Penduduk asli Hawaii atau Kepulauan Pasifik
     - american_indian: Orang Indian Amerika/Penduduk Asli Alaska
     - other: Lain
     - opt_out: Memilih untuk tidak menjawab
@@ -1142,7 +1142,7 @@
       description: Saya ingin seorang instruktur untuk meninjau kiriman ini
     instructor_feedback: Umpan balik instruktur
     peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+    outdated: Umpan balik ini telah ditambahkan sebelumnya diserahkan versi
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -1166,31 +1166,31 @@
     csf_e_2: Course E Content
     csf_f_1: Jalur naik tujuan F (opsional)
     csf_f_2: Course F Content
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
+    csd1_1: 'Bab 1: Proses Pemecahan Masalah'
+    csd1_2: 'Bab 2: Komputer dan Pemecahan Masalah'
+    csd2_1: 'Bab 1: Konten Web dan HTML'
+    csd2_2: 'Bab 2: Styling dan CSS'
+    csd3_1: 'Bab 1: Gambar dan Animasi'
+    csd3_2: 'Bab 2: Bangunan Permainan'
+    csd4_1: 'Bab 1: User Centered Design'
+    csd4_2: 'Bab 2: Aplikasi Prototyping'
+    csd5_1: 'Bab 1: Yang Mewakili Informasi'
+    csd5_2: 'Bab 2: Memecahkan Masalah Data'
+    csd6_1: 'Bab 1: Pemrograman dengan Hardware'
+    csd6_2: 'Bab 2: Membangun Prototipe Fisik'
+    csp1_1: 'Bab 1: Mewakili dan Transmisi Informasi'
+    csp1_2: 'Bab 2: Menciptakan Internet'
+    csp2_1: 'Bab 1: Encoding dan Mengompresi Informasi yang Kompleks'
+    csp2_2: 'Bab 2: Memanipulasi dan Visualing Data'
+    csp3_1: 'Bab 1: Bahasa Pemrograman dan Algoritma'
+    csp4_1: 'Bab 1: Dunia Big Data dan Enkripsi'
+    csp5_1: 'Bab 1: Pemrograman Event-Driven'
+    csp5_2: 'Bab 2: Pemrograman dengan Struktur Data'
     cspSurvey: Survey
     cspAssessment: Bab Penilaian
     csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp_ap_2: 'Bab 2: AP Tepat Kinerja Tugas'
+    csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
     dlp: Anjuran Refleksi
   external_links:
     disclaimer: Disclaimer
@@ -1214,8 +1214,8 @@
       menyimpan kemajuan, atau mencetak sertifikat. Guru dapat mencetak sertifikat
       sebelumnya<a href="%{url}">disini</a>.'
     minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    starwars_blocks_name: 'Star Wars: Membangun Galaxy Dengan Kode (Blok)'
+    starwars_javascript_name: 'Star Wars: Membangun Galaxy Dengan Kode (JavaScript)'
     download_message: Unduh %{app_name} untuk penggunaan luring (136 Mb)
     download_in_Albanian: 'Unduh dalam bahasa Albania:'
     download_in_Arabic: 'Unduh dalam bahasa Arab:'

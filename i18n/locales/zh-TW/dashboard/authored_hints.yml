@@ -558,7 +558,7 @@ zh-TW:
           ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: 這是第三個提示，也是最後的提示了。它沒有什麼特別的東西。
       Function intro Ryan_authored_hint:
-        Function_intro_Ryan_b: If you call the functions correctly, this is the path you will travel...
+        Function_intro_Ryan_b: 如果您正確地調用了函數, 那麼這就是您要移動的路徑...
         Function_intro_Ryan_a: 您可以在自己的程式中呼叫使用功能多次！請嘗試呼叫兩次以解決此版圖。
       Harvesting_authored_hint:
         pointer_harvester_test: 哪種積木可以幫助我判斷（檢查還有做決定）？
@@ -617,7 +617,7 @@ zh-TW:
           按「執行」！ 
           即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。
         MC_HOC_2017_02_Cole_c: 當 Agent 把門打開之後，使用箭頭按鍵移動玩家至地圖上！
-        MC_HOC_2017_02_Cole_d: Make sure the Agent is following the path outlined on the map!
+        MC_HOC_2017_02_Cole_d: 確保特工按照地圖上列出的路徑執行！
       MC_HOC_2017_02_Will_authored_hint:
         MC_HOC_2017_02_Cole_a: 向前移動 Agent 兩步以站在壓板上。這將為玩家開門。
         MC_HOC_2017_02_Cole_b: |-
@@ -642,16 +642,16 @@ zh-TW:
         MC_HOC_2017_04_Cole_b: 當 Agent 抵達壓板後，他將為玩家開門。
       MC_HOC_2017_05_Cole_authored_hint:
         MC_HOC_2017_05_Cole_a: 您知道嗎？您可以將代碼的多個部分放在循環中。請嘗試放置木板**並**向前移動至「重複」內以完成此版圖。
-        MC_HOC_2017_05_Cole_b: Get the Agent across the river, building a bridge as you go.
+        MC_HOC_2017_05_Cole_b: 讓特工過河，在你走的時候建一座橋。
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: 您知道嗎？您可以將代碼的多個部分放在循環中。請嘗試放置木板**並**向前移動至「重複」內以完成此版圖。
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: 此循環會執行多少次？循環*應*執行多少次？
-        MC_HOC_2017_06_Cole_b: 'Help the Agent build a bridge all the way across the water! '
+        MC_HOC_2017_06_Cole_b: '幫助特工在水面上架起一座橋！ '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: 請嘗試在「重複」循環中放置多個指令！
       MC_HOC_2017_07_Cole_authored_hint:
-        MC_HOC_2017_07_Cole_c: All you need to have the Agent do is clear the path to the Minecart.
+        MC_HOC_2017_07_Cole_c: 你所需要做的就是讓特工為你掃清通往礦車的道路。
         MC_HOC_2017_07_Cole_a: 若要解決此版圖，請找出「清除路徑」的功能，並使用工具箱中小型綠色「清除路徑」方塊，依照自己的所需次數呼叫。
         MC_HOC_2017_07_Cole_b: 請嘗試混合功能方塊與工具箱中的其他方塊，以協助您解決此版圖。
       MC_HOC_2017_08_RY_authored_hint:
@@ -667,7 +667,7 @@ zh-TW:
       MC_HOC_2017_10_Cole_authored_hint:
         MC_HOC_2017_10_Cole_a: 使用功能以更輕鬆檢決此版圖！
       MC_HOC_2017_10_RETRY_authored_hint:
-        MC_HOC_2017_10_Cole_b: Don't know where to go?  See if you can find the dotted line!
+        MC_HOC_2017_10_Cole_b: 不知道去哪兒？看看你是否能找到虛線！
         MC_HOC_2017_10_Cole_a: 使用功能以更輕鬆檢決此版圖！
       MC_HOC_2017_13_Cole_authored_hint:
         MC_HOC_2017_13_Cole_a: 請嘗試讓 Agent 建立幾座橋樑，這樣愛莉克斯或史提夫才可走出地圖邊緣。
@@ -680,7 +680,7 @@ zh-TW:
           按「執行」！ 
           即使代碼不正確，也仍然可以執行。執行並重設您的代碼，直到你找到出錯的原因為止。
         MC_HOC_2017_08_RY_b: 解決此版圖有許多方式。請嘗試採用幾個！
-        MC_HOC_2017_08_RY_c: Try following the dotted line for a simple path through the lava.
+        MC_HOC_2017_08_RY_c: 試著沿著這條虛線，找到一條穿過熔岩的簡單路徑。
       MC_HOC_2017_FP10x10_authored_hint: [ ]
       MC_HOC_2017_FP10x10_RE_authored_hint: [ ]
       MC_HOC_2017_FP20x20_authored_hint:
@@ -728,81 +728,81 @@ zh-TW:
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: 請嘗試讓 Agent 建立幾座橋樑，這樣愛莉克斯或史提夫才可走出地圖邊緣。
       Overworld Avoid Monsters_authored_hint:
-        mc_8_a: There are a few paths you can take. Which is the shortest?
-        mc_8_b: Use `repeat` loops to simplify your code.
-        mc_8_c: Your goal is to get into the doorway of the house at the top of the screen.
+        mc_8_a: 你可以走幾條路。哪條是最短的？
+        mc_8_b: 使用“重複”循環來簡化代碼。
+        mc_8_c: 你的目標是進入屏幕頂端的房子的門口。
       Overworld Avoid Monsters_2018_authored_hint:
-        mc_8_a: There are a few paths you can take. Which is the shortest?
-        mc_8_b: Use `repeat` loops to simplify your code.
-        mc_8_c: Your goal is to get into the doorway of the house at the top of the screen.
+        mc_8_a: 你可以走幾條路。哪條是最短的？
+        mc_8_b: 使用“重複”循環來簡化代碼。
+        mc_8_c: 你的目標是進入屏幕頂端的房子的門口。
       Overworld Chop Tree_authored_hint:
         mc_2_a: |
-          You need to `move forward` twice to stand in front of the tree.
-        mc_2_b: The `destroy block` command cuts down the tree in front of you.
+          你需要“前進”兩次才能站在樹前。
+        mc_2_b: '“銷毀程式積木”命令會把你面前的樹砍倒。'
       Overworld Chop Tree_2018_authored_hint:
         mc_2_a: |
-          You need to `move forward` twice to stand in front of the tree.
-        mc_2_b: The `destroy block` command cuts down the tree in front of you.
+          你需要“前進”兩次才能站在樹前。
+        mc_2_b: '“銷毀程式積木”命令會把你面前的樹砍倒。'
       Overworld Chop Trees_authored_hint:
         mc_4_a: |
-          You can chop down trees in any order. What path takes the smallest number of blocks?
-        mc_4_b: The `destroy block` command cuts down the tree in front of you.
+          你可以按任何順序砍伐樹木。哪條路徑佔用最小的程式積木？
+        mc_4_b: '“銷毀程式積木”命令會把你面前的樹砍倒。'
       Overworld Chop Trees_2018_authored_hint:
         mc_4_a: |
-          You can chop down trees in any order. What path takes the smallest number of blocks?
-        mc_4_b: The `destroy block` command cuts down the tree in front of you.
+          你可以按任何順序砍伐樹木。哪條路徑佔用最小的程式積木？
+        mc_4_b: '“銷毀程式積木”命令會把你面前的樹砍倒。'
       Overworld House Frame Chosen_authored_hint:
-        mc_6_a: Click the arrow on the `place` block to choose what you want to place.
-        mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
-        mc_6_c: You can put more than one block inside of a `repeat` loop.
+        mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
+        mc_6_b: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
+        mc_6_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld House Frame Chosen_2018_authored_hint:
-        mc_6_a: Click the arrow on the `place` block to choose what you want to place.
+        mc_6_a: 單擊“位置”程式積木的箭頭，選擇要放置的內容。
         mc_6_b: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
-        mc_6_c: You can put more than one block inside of a `repeat` loop.
+        mc_6_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld Move to Sheep_authored_hint:
         mc_1_a: |
-          The `move forward` block is at the top of the toolbox.
+          “前進”程式積木在工具箱的頂部。
         mc_1_b: |
-          Make sure both `move forward` blocks are snapped to the `when run` block.
+          確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
       Overworld Move to Sheep_2018_authored_hint:
         mc_1_a: |
-          The `move forward` block is at the top of the toolbox.
+          “前進”程式積木在工具箱的頂部。
         mc_1_b: |
-          Make sure both `move forward` blocks are snapped to the `when run` block.
+          確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
       Overworld Place Wall_authored_hint:
-        mc_5_a: Use the `place` block first, and then the `move` block.
-        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code more than once.
-        mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
+        mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
+        mc_5_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Place Wall_2018_authored_hint:
-        mc_5_a: Use the `place` block first, and then the `move` block.
-        mc_5_b: Make sure both blocks are inside of the `repeat` loop to run the code more than once.
+        mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
+        mc_5_b: 確保兩個塊都在“重複”循環的內部，以便多次運行代碼。
         mc_5_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       Overworld Plant Crops_authored_hint:
-        mc_7_a: Use the `plant crop` block to plant a crop in the space where you are standing.
-        mc_7_b: Both stripes of dark brown land by the water need to be filled with crops.
-        mc_7_c: You can put more than one block inside of a `repeat` loop.
+        mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
+        mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
+        mc_7_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld Plant Crops_2018_authored_hint:
-        mc_7_a: Use the `plant crop` block to plant a crop in the space where you are standing.
-        mc_7_b: Both stripes of dark brown land by the water need to be filled with crops.
-        mc_7_c: You can put more than one block inside of a `repeat` loop.
+        mc_7_a: 使用“植物作物”程式積木在你站立的地方種植作物。
+        mc_7_b: 兩條帶深棕色的土地都需要種滿莊稼。
+        mc_7_c: 您可以在“重複”循環中放入多個程式積木。
       Overworld Powered Minecart_authored_hint:
-        mc_13_a: Use `place rail` to lay rail on the square you are standing in.
-        mc_13_b: Use `repeat` loops to make your code shorter.
+        mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
+        mc_13_b: 使用“重複”循環來縮短代碼。
       Overworld Powered Minecart_2018_authored_hint:
-        mc_13_a: Use `place rail` to lay rail on the square you are standing in.
-        mc_13_b: Use `repeat` loops to make your code shorter.
+        mc_13_a: 在你所站的廣場上使用“放置鐵路”鋪設鐵路。
+        mc_13_b: 使用“重複”循環來縮短代碼。
       Overworld Shear Sheep_authored_hint:
         mc_3_a: |
-          The `shear` block gets the sheep in front of you. Are you facing the sheep?
+          “剪切”程式積木把羊放在你的前面。你面對著羊群嗎?
         mc_3_b: |
-          If you need to change the way you are facing, use a `turn` block.
+          如果你需要改變你面對的方式，那就用“轉動”程式積木。
         mc_3_c: |
-          Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+          不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Overworld Shear Sheep_2018_authored_hint:
         mc_3_a: |
-          The `shear` block gets the sheep in front of you. Are you facing the sheep?
+          “剪切”程式積木把羊放在你的前面。你面對著羊群嗎?
         mc_3_b: |
-          If you need to change the way you are facing, use a `turn` block.
+          如果你需要改變你面對的方式，那就用“轉動”程式積木。
         mc_3_c: |
           Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       Pattern Bee 1_authored_hint:
@@ -820,40 +820,40 @@ zh-TW:
       Quantum Bee - Ryan_authored_hint:
         test_hint: 這是測試用提示。
       Underground Avoiding Lava_authored_hint:
-        mc_11_a: All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.
-        mc_11_b: Should your `move forward` command go inside of the `if` statement or after?
+        mc_11_a: 所有的代碼都是用來檢查熔岩並處理它的。您所需要做的就是添加一個程式積木來移動。
+        mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
       Underground Avoiding Lava_2018_authored_hint:
-        mc_11_a: All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.
-        mc_11_b: Should your `move forward` command go inside of the `if` statement or after?
+        mc_11_a: 所有的代碼都是用來檢查熔岩並處理它的。您所需要做的就是添加一個程式積木來移動。
+        mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
       Underground If Statements_authored_hint:
-        mc_12_a: The spaces with red speckles are where you will find Redstone.
-        mc_12_b: Can you use a `repeat` loop to make your code shorter?
-        mc_12_c: 'Use an `if` statement to check spaces for lava, then place cobblestones. '
+        mc_12_a: 紅色斑點的空間是你找到紅石的地方。
+        mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
+        mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
       Underground If Statements_2018_authored_hint:
-        mc_12_a: The spaces with red speckles are where you will find Redstone.
-        mc_12_b: Can you use a `repeat` loop to make your code shorter?
-        mc_12_c: 'Use an `if` statement to check spaces for lava, then place cobblestones. '
+        mc_12_a: 紅色斑點的空間是你找到紅石的地方。
+        mc_12_b: 你能使用“重複”循環來縮短你的代碼嗎?
+        mc_12_c: '使用“if”語句檢查熔岩空間，然後放置鵝卵石。 '
       Underground Iron_authored_hint:
-        mc_10_a: The iron blocks are the speckled spaces behind the torch! How are you going to get over there?
-        mc_10_b: When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!
-        mc_10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
+        mc_10_a: 鐵塊是火炬背後的斑點空間！你打算怎麼去那兒？
+        mc_10_b: 當你站在熔岩邊緣的時候，用“將鵝卵石放在前面”就能使路線安全。然後，你就可以走過去了。
+        mc_10_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Underground Iron_2018_authored_hint:
-        mc_10_a: The iron blocks are the speckled spaces behind the torch! How are you going to get over there?
-        mc_10_b: When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!
+        mc_10_a: 鐵塊是火炬背後的斑點空間！你打算怎麼去那兒？
+        mc_10_b: 當你站在熔岩邊緣的時候，用“將鵝卵石放在前面”就能使路線安全。然後，你就可以走過去了。
         mc_10_c: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
       Underground Mining Coal_authored_hint:
-        mc_9_a: Are you facing the right way? The `destroy block` mines the block in front of you.
-        mc_9_b: The black specks in the wall are coal! Use `destroy block` on these to mine the coal.
-        mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+        mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
+        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       Underground Mining Coal_2018_authored_hint:
-        mc_9_a: Are you facing the right way? The `destroy block` mines the block in front of you.
-        mc_9_b: The black specks in the wall are coal! Use `destroy block` on these to mine the coal.
-        mc_9_c: Use `place torch` to put a torch in the space where you are standing.
+        mc_9_a: 你面對的是正確的方式嗎?“破壞程式積木”把你前面的程式積木埋起來。
+        mc_9_b: 牆上的黑點是煤！用“摧毀程式積木”來開採煤炭。
+        mc_9_c: 用“放置火炬”把火炬放在你站的地方。
       Valentine_artist2_01_authored_hint:
-        Valentine_artist2_01_a: Each side of the grass is 30 pixels long. Try using a stair step pattern.
-        Valentine_artist2_01_b: 'Do you see any patterns repeating? You should be using two `move forward` blocks and two different `turn` blocks inside a loop. '
+        Valentine_artist2_01_a: 草的每一面长度为30像素。尝试使用楼梯踏步模式。
+        Valentine_artist2_01_b: '你看到重複模式了嗎？你應該在一個循環中使用兩個“向前移動”程式積木和兩個不同的“轉動”程式積木。 '
         Valentine_artist2_01_c: |-
-          Try this loop
+          試一下這個迴圈
           <xml><block type="controls_repeat">
           <title name="TIMES">8</title>
           <statement name="DO">
@@ -882,14 +882,14 @@ zh-TW:
           </statement>
           </block></xml>
       Valentine_artist_01_authored_hint:
-        Valentine_artist_01_a: Which direction does the artist need to face to move? Which direction does the artist need to face to place a new llama sticker?
-        Valentine_artist_01_b: The artist needs to place 10 llama stickers and turn 90 degrees at each turn.
+        Valentine_artist_01_a: 藝術家需要朝哪個方向移動？藝術家需要往哪個方向去放置一個新的美洲駝貼紙？
+        Valentine_artist_01_b: 這位藝術家需要放置10條駱駝牌的貼紙，並在每次轉彎時旋轉90度。
       Valentine_playlab_01_authored_hint:
         Valentine_playlab_01_a: |-
-          Snap the `actor 1 throw red hearts down` block into the `when actor 1 clicked` event.
+          捕捉 “演員1拋出紅色的心”程式積木進入 “當演員1點擊” 事件。
           
-          Don't forget to change `left` to `down`!
-        Valentine_playlab_01_b: Use the `move actor 1 left` block by clicking it into place beneath the `when left arrow clicked` event.
+          別忘了把 “左”改為“下”！
+        Valentine_playlab_01_b: 使用 “移動演員1左”程式積木，點擊它在 “左箭頭點擊”事件下的地方。
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: 注意，由於餐巾是 20 像素長，你需要跳躍 20 像素，在你開始你的下一個迴圈之前。
@@ -925,15 +925,15 @@ zh-TW:
       aE8_authored_hint:
         aE8_a: "要製作出一個正方形，你需要：\n- 畫出線條\n\n- 使用轉向來轉彎\n\n重複這些步驟 4 次。"
       allHallows2017_authored_hint:
-        allHallows2017_a: Careful!  GT might follow behind you on his bike and erase your line!
-        allHallows2017_g: 'Sarah says: "Are you cold? Come sit in the corner... It''s 90 degrees!"'
-        allHallows2017_c: 'Jordyn says: "You crayon''t stop now! Keep going!"'
-        allHallows2017_d: 'Josh says: "You will need to draw on your coding skills to complete this puzzle!"'
-        allHallows2017_e: 'Dani says: "I''m not good at puns. Try using a repeat block!"'
-        allHallows2017_b: 'Baker says: "The Chicago crayon only works on the *green line*."'
-        allHallows2017_f: 'Amy says: "You can do it! Just think outside the box"'
+        allHallows2017_a: 小心！GT可能會騎他的自行車跟著你，擦去你的線！
+        allHallows2017_g: '莎拉：“你冷嗎？來坐在角落裡…這是90度！”'
+        allHallows2017_c: 'Jordyn說： “你現在不能停下來！繼續！”'
+        allHallows2017_d: 'Josh說：“你需要利用你的編碼技能來解決這個難題！”'
+        allHallows2017_e: 'Dani說：“我不擅長雙關語。試著用一個重複的程式積木！”'
+        allHallows2017_b: 'Baker說：“芝加哥的蠟筆只在*綠線*上工作。”'
+        allHallows2017_f: 'Amy說：“你可以做到！只要跳出固有的思維模式”'
       artistDebugVideo1_authored_hint:
-        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+        courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
       artistFunctionsVideo1_authored_hint: [ ]
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
@@ -958,6 +958,9 @@ zh-TW:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: 要完成關卡的話，你的迴圈裡應該要有 3 個積木。
       artistLoopsKFP_authored_hint: [ ]
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: 當其他人試圖閱讀你的代碼時，評論也很有用。
+        courseC_maze_programming4_b: 當你改變方向時添加一條評論-如果你轉向另一個方向，會發生什麼？
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |+
           你可以使用像這樣的迴圈來創建圍牆和屋頂。試試重複不同的積木。
@@ -993,7 +996,7 @@ zh-TW:
         courseB_collector_loops_challenge1_b: |
           只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
         courseB_collector_loops_challenge1_a: |
-          The north pattern is a little different than the south pattern.
+          北方模式與南方模式略有不同。
           <xml>
           <block type="collector_collect"/><next>
           <block type="maze_moveNorth"/></next>next>
@@ -1088,16 +1091,16 @@ zh-TW:
         courseB_maze_seq_challenge1_a: 這次最短的路徑不管用囉！
         courseB_maze_seq_challenge1_b: 試試先向西邊移動。
       course1_playlab_events_challenge1_authored_hint:
-        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "最後，當您單擊Spiff時，讓Wendel成為嚮導！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
-          You can make an angry monster growl.
+          你可以製造一個憤怒的怪物咆哮。
           
           <xml>  <block type="studio_whenSpriteClicked">
           <title name="SPRITE">5</title>
@@ -1108,7 +1111,7 @@ zh-TW:
           <next>
           <block type="studio_saySprite">
           <title name="SPRITE">5</title>
-          <title name="TEXT">Roar!</title>
+          <title name="TEXT">咆哮!</title>
           <next>
           <block type="studio_setSpriteEmotion">
           <title name="SPRITE">5</title>
@@ -1121,15 +1124,15 @@ zh-TW:
           </next>
           </block></xml>
       course2_artist_nestedLoops_challenge1_authored_hint:
-        courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to create four octagons. Turn 45 degrees to make the octagon. Jump, then turn 90 degrees after each one.
-        courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside of your nested loop. Use 120 degree turns for your triangle.
+        courseD_artist_nestedLoops_challenge1_a: 首先創建一個嵌套循環來創建四個八邊形。轉動45度生成八邊形。跳起來，然後每一個都轉90度。
+        courseD_artist_nestedLoops_challenge1_b: 添加代碼，在嵌套循環中繪製一個三角形。用120度的角度來改變你的三角形。
         courseD_artist_nestedLoops_challenge1_c: |-
-          Use a nested loop:
-          - Repeat 8 times
-          - draw an octagon
-          - draw a triangle
-          - jump forward 50 pixels
-          - turn right by 90 degrees
+          使用嵌套循環：
+          - 重複8次
+          - 繪製一個八邊形
+          - 繪製一個三角形
+          - 向前跳50個像素
+          - 向右轉90度
       course2_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist needs to turn 45 degrees 8 times.
         courseD_artist_nestedLoops_challenge2_b: To draw a square, the artist needs to turn 90 degrees 4 times.
@@ -1139,9 +1142,9 @@ zh-TW:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: |-
-          Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.
+          你能找到這樣一條路，能到達每一朵花和蜂巢，卻不會撞到任何樹木嗎？最好的道路是螺旋。
           
-          **You can solve this without ever turning left.**
+          **你可以不用左轉就可以解決這個問題。**
         courseD_bee_conditionals_challenge1_b: In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square.
       course2_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
@@ -1158,9 +1161,9 @@ zh-TW:
         courseC_maze_loops_challenge2_a: The original code would work great - if there was only one piece of treasure in each pile!
         courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect` blocks!
       course2_collector_prog_challenge1_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: 您可以更頻繁地使用“收集”命令來收集額外的寶藏。
       course2_collector_prog_challenge2_authored_hint:
-        courseC_collector_prog_challenge1_a: You can use the `collect` command more often to collect the extra treasure.
+        courseC_collector_prog_challenge1_a: 您可以更頻繁地使用“收集”命令來收集額外的寶藏。
       course2_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: 不用迴圈是不可能達成目標的！
         courseC_harvester_loops_challenge1_b: 你可以重複執行`移動-向前`和`收集玉米`到你想要的次數，然後在每次要轉向時使用`轉向-右邊`積木。
@@ -1206,13 +1209,13 @@ zh-TW:
         courseC_maze_loops_challenge1_a: Think about this path as being three different pieces. Each one has a pattern you can repeat.
         courseC_maze_loops_challenge1_b: In between each `repeat` block, you will need to `turn left` or `turn right` to get ready Scrat for the next pattern.
         courseC_maze_loops_challenge1_c: |-
-          If you make it this far, you just need to `turn left` then `move forward` a few times. Don't give up!
+          你只需“左轉”然後“向前走”幾次，你就能做到這一點。不要放棄！
           
           ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
       course2_maze_programming_challenge1_authored_hint: [ ]
       course2_maze_programming_challenge2_authored_hint:
-        courseC_maze_programming_challenge2_a: "*If you send me backwards, be extra careful that I turn the correct way!*"
-        courseC_maze_programming_challenge2_b: The shortest solution use only 5 blocks, but it uses the `repeat` block!
+        courseC_maze_programming_challenge2_a: "*如果你把我倒過來，要格外小心我的方向是否是正確的！*"
+        courseC_maze_programming_challenge2_b: 最短的解決方案只使用5個程式積木，但它使用的是“重複”程式積木！
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: 試著用你的手指頭點出要移動的空格數（你站的那一格不要算！）
       course2_maze_seq_challenge2_authored_hint:
@@ -1255,7 +1258,7 @@ zh-TW:
           
           **Only click for another hint if you want to see the full solution!**
         courseF_bee_functions_challenge2_b: |-
-          **Solution:**
+          **解決方案：**
           
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -1270,10 +1273,10 @@ zh-TW:
           <block type="maze_untilBlocked">
           <statement name="DO">
           <block type="maze_move">
-          <title name="DIR">moveForward</title>
+          <title name="DIR">向前走</title>
           <next>
           <block type="maze_if">
-          <title name="DIR">isPathRight</title>
+          <title name="DIR">路徑正確</title>
           <statement name="DO">
           <block type="procedures_callnoreturn" id="function">
           <mutation name="move and check"/>
@@ -1285,7 +1288,7 @@ zh-TW:
           </statement>
           <next>
           <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
+          <title name="DIR">左轉</title>
           </block>
           </next>
           </block>
@@ -1295,13 +1298,13 @@ zh-TW:
           </block>
           <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
-          <title name="NAME">check nectar or honey</title>
+          <title name="NAME">檢查花蜜和蜂蜜</title>
           <statement name="STACK">
           <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
+          <title name="LOC">花叢中</title>
           <statement name="DO">
           <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
+          <title name="ARG1">剩餘花蜜</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
           <statement name="DO">
@@ -1311,7 +1314,7 @@ zh-TW:
           </statement>
           <statement name="ELSE">
           <block type="bee_whileNectarAmount">
-          <title name="ARG1">honeyAvailable</title>
+          <title name="ARG1">可用的蜂蜜</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
           <statement name="DO">
@@ -1324,7 +1327,7 @@ zh-TW:
           </block>
           <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation/>
-          <title name="NAME">move and check</title>
+          <title name="NAME">移動和檢查</title>
           <statement name="STACK">
           <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
@@ -1337,17 +1340,17 @@ zh-TW:
           <mutation name="check nectar or honey"/>
           <next>
           <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">右轉</title>
           <next>
           <block type="maze_untilBlocked">
           <statement name="DO">
           <block type="maze_move">
-          <title name="DIR">moveForward</title>
+          <title name="DIR">向前走</title>
           </block>
           </statement>
           <next>
           <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">右轉</title>
           </block>
           </next>
           </block>
@@ -2435,7 +2438,7 @@ zh-TW:
         courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "最後，當您單擊Spiff時，讓Wendel成為嚮導！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_toMakeLoopsVideo_Collector_authored_hint: [ ]
       courseB_artist_loops10_authored_hint: [ ]
       courseB_artist_loops2_authored_hint:
@@ -2907,6 +2910,7 @@ zh-TW:
         courseB_starWars_prog9_a: Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.
         courseB_starWars_prog9_b: There are many ways to solve this puzzle.
         courseB_starWars_prog9_c: Could a `repeat` loop help out here?
+      courseC_PlayLab_embed_events9_authored_hint: [ ]
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
@@ -3680,6 +3684,7 @@ zh-TW:
           There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
       courseD_artist_embed_frozen_authored_hint: [ ]
       courseD_artist_embed_frozen2_authored_hint: [ ]
+      courseD_artist_embedded_project1a_authored_hint: [ ]
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
@@ -3832,6 +3837,7 @@ zh-TW:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while `jump forward` does not.
         courseD_artist_project2_b: After you draw and move the first time, you can repeat the code by adding a loop around the outside.
       courseD_artist_project2Template_authored_hint: [ ]
+      courseD_artist_project2Template_2018_authored_hint: [ ]
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Remember that `move forward` draws a line, while `jump forward` does not.
         courseD_artist_project2_b: After you draw and move the first time, you can repeat the code by adding a loop around the outside.
@@ -3898,6 +3904,7 @@ zh-TW:
           
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: [ ]
+      courseD_artist_projectTemplate_2018_authored_hint: [ ]
       courseD_artist_project_embedded_authored_hint: [ ]
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
@@ -4786,6 +4793,7 @@ zh-TW:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: [ ]
       courseD_playLab_embedded_authored_hint: [ ]
       courseD_scrat_predict1_authored_hint: [ ]
       courseD_scrat_predict1_2018_authored_hint: [ ]
@@ -5537,6 +5545,7 @@ zh-TW:
           * Make the dinosaur say something.
           * Set a new background.
           * Make all of the actors vanish and show a "Game Over" message.
+      courseE_playLab_embed_scaffold5_authored_hint: [ ]
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used to add an actor to the stage.
         courseE_playLab_scaffold1_b: Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.
@@ -9175,6 +9184,7 @@ zh-TW:
       iceage_throw_hearts_2018_authored_hint:
         iceage_throw_hearts_a: When do you want to throw hearts at granny?  When an arrow is pressed? When you click on Sid?  When you click on Granny?  The choice is yours!
         iceage_throw_hearts_b: To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event.
+      iceage_warn_embed_ice_age_authored_hint: [ ]
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: 'You should only have to add two blocks to get this puzzle where it needs to be. '
         iceage_warn_ice_age_b: Add both new blocks beneath the `when run` event to have them happen immediately after the program starts.

@@ -893,18 +893,12 @@
   dashboard_course_csp_desc: A Code.org desenvolveu um curso rigoroso, envolvente
     e acessível que explora as ideias fundamentais da computação.
   dashboard_landing_loading: A carregar...
-  dashboard_action_edit: Editar
-  dashboard_action_save: Guardar
-  dashboard_action_save_all: Guardar tudo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Apagar
   dashboard_action_delete_yes: Sim
   dashboard_action_delete_no: Não
   dashboard_action_confirm: Apagar?
-  dashboard_action_remove: Remover
-  dashboard_action_remove_confirm: Remover?
   dashboard_action_done: Terminado
-  dashboard_action_required: obrigatório
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -1013,8 +1007,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: Adicionar aluno
-  dashboard_students_add_students: Adicionar vários alunos
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
     linha:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -1023,23 +1015,12 @@
   dashboard_students_new_section: Você criou uma nova turma! Agora, adicione seus
     alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b>
     acima.
-  dashboard_students_placeholder_name: Nome do aluno
   dashboard_students_name: Nome
   dashboard_students_progress: Progresso
-  dashboard_students_age: Idade  
-  dashboard_students_gender: Género
   dashboard_students_male: Masculino
   dashboard_students_female: Feminino
-  dashboard_students_secret: Código
-  dashboard_students_password: palavra-passe
-  dashboard_students_username: 'Nome de utilizador: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Níveis concluídos
   dashboard_students_total_lines: Linhas de código
-  dashboard_students_show_secret: Mostrar código
-  dashboard_students_auto_generated: Gerar automaticamente
-  dashboard_students_reset_secret: Repor o código
-  dashboard_students_reset_password: Repor palavra-passe
   dashboard_students_share_section: 'Compartilhe a página de inscrição da turma com
     seus alunos:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1114,7 +1095,6 @@
   dashboard_login_word: Palavra
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
-  dashboard_new_password: palavra-passe nova
   dashboard_stage: Etapa
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta
@@ -1426,7 +1406,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Notas 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Dos 8 aos 12 anos
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Dos 10 aos 18 anos
   codeorg_platformtext: Navegadores modernos, smartphones e tablets

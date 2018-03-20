@@ -19,8 +19,8 @@
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: '"Yazı Alanı"na tıklayın ve ekranın üzerine sürükleyin'
-        screenSelectorCallout3: Yaptığınız ekranı seçin
+        dragTextAreaIn: Bir Text Alanına tıkla ve ekran üzerine sürükle
+        screenSelectorCallout3: Yaptığın ekranı seç
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: Bu ekran seçicisidir
         changePlace1ID: Buradan ekran adınızı değiştirin.
@@ -105,6 +105,7 @@
       CSD U3 - complex - mouse down_callout: []
       CSD U3 - complex - mouse move_callout: []
       CSD U3 - complex - nested conditional_callout: []
+      CSD U3 - conditionals - first conditional 2-2018_callout: []
       CSD U3 - conditionals - first conditional 2_callout: []
       CSD U3 - conditionals - first conditional_callout: []
       CSD U3 - conditionals - transition 2_callout: []
@@ -116,7 +117,9 @@
       CSD U3 Compound Nested Challenge_callout: []
       CSD U3 Compound Nested Examples_callout: []
       CSD U3 Conditional Project_callout: []
+      CSD U3 Conditionals Apple 2-2018_callout: []
       CSD U3 Conditionals Apple 2_callout: []
+      CSD U3 Conditionals Apple-2018_callout: []
       CSD U3 Conditionals Apple_callout: []
       CSD U3 Diagonal Movement_callout: []
       CSD U3 Direction Animations_callout: []
@@ -150,6 +153,7 @@
       CSD U3 Sprites scene sprites_callout: []
       CSD U3 Sprites scene template_callout: []
       CSD U3 Sprites scene text_callout: []
+      CSD U3 Sprites text debug-2018_callout: []
       CSD U3 Sprites text debug_callout: []
       CSD U3 Sprites text_callout: []
       CSD U3 UP_ARROW_callout: []
@@ -187,6 +191,9 @@
       CSD U3 abstraction horse3_callout:
         CSD_U3_L11_S16_C1: Use the counter pattern to make the horse fall here.
         CSD_U3_L11_S16_C2: Stop the horse from falling here.
+      CSD U3 abstraction jump-2018_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
       CSD U3 abstraction jump_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
         CSD_U3_L11_S17_C2: Send the frog back down here
@@ -214,6 +221,10 @@
       CSD U3 abstraction setSpeed accelerate_callout:
         CSD_U3_L11_S14_C1: Kodunu buraya ekle.
       CSD U3 abstraction sidescroll intro_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template-2018_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
         CSD_U3_L11_S17_C3: Add your if statement here.
@@ -806,6 +817,7 @@
         artistLoopsK2_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
+      comment_intro_maze_2018_callout: []
       course2_artist_nestedLoops_challenge2_callout: []
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Bu döngüyü tüm nektarları (veya bal)
@@ -856,8 +868,8 @@
         courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
           gelir.
       courseA_artist_loops8_callout:
-        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
-          you need to?
+        courseA_artist_loops8_1: "İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
+          biliyor muydun?"
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
@@ -899,12 +911,12 @@
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
       courseA_playLab_events6_callout:
-        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
+        courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
+          durumlarda ''rastgele" bir ses seçmene izin verir!
       courseA_toMakeLoopsVideo_Collector_callout: []
       courseB_artist_loops3_callout:
-        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
+          Onu nasıl kullanacaksın?
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: Bu sayı araç kutusunda blok kalmadığını belirtir.
       courseB_collector_loops1_callout:
@@ -936,8 +948,8 @@
         courseC_collector_prog1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseC_collector_prog7_callout:
-        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
-          need them!
+        courseC_collector_prog7_1: Eğer ihtiyacın olursa alet kutusunun içinden daha
+          fazla blok alabilirsin!
       courseC_collector_prog8_callout: []
       courseC_collector_prog9_callout: []
       courseC_collector_progA_callout: []
@@ -952,34 +964,32 @@
       courseC_maze_debugging5_2018_callout:
         courseC_maze_debugging5_1: Bu bloklar kilitli ve silinemez!
       courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: You only have one of these blocks available in this
-          puzzle.
+        courseC_maze_loops2_1: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
       courseC_maze_loops2_predict1_callout: []
       courseC_maze_loops_challenge2_callout: []
       courseC_maze_programming1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseC_maze_programming2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
         courseC_maze_programming3_3: Bu kareler taştan ve atılamaz.
       courseC_maze_programming4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseC_maze_programming5_callout: []
       courseC_maze_programming7_callout:
-        courseC_maze_programming7_1: This is your first challenge puzzle! These are
-          meant to be hard and may take several tries.
+        courseC_maze_programming7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor
+          oolduğu anlamına gelir ve bir kaç deneme yapman gerekir.
         courseC_maze_programming7_2: Bu bloklar taştan yapılmış ve atılabilir değildir.
       courseC_starWars_loops10_callout: []
       courseC_starWars_loops10_predict2_callout: []
       courseC_starWars_loops11_callout: []
       courseC_starWars_loops2_callout:
-        courseC_starWars_loops2: You only have one of these blocks available in this
-          puzzle.
+        courseC_starWars_loops2: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
       courseC_starWars_loops4_callout: []
       courseC_starWars_loops5_callout: []
       courseC_starWars_loops6_callout: []
@@ -987,12 +997,12 @@
       courseC_starWars_loops8_callout: []
       courseC_starWars_loops9_callout: []
       courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: |-
+          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
+          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
       courseD_artist_functions8_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved
-          under this label in the toolbox.
+        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
+          kutusunun içindeki bu etiketin altına taşındı.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: Bu bulmacayı doğru bir şekilde çözmek için
           renkleri kullanmak zorunda değilsiniz. İsterseniz, bu 'rastgele renk' bloğu
@@ -1042,31 +1052,31 @@
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseD_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseD_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseD_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseD_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
         stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
       courseD_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
         stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
       courseD_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseD_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseD_maze_ramp5_callout: []
       courseD_maze_ramp5_2018_callout: []
       courseD_maze_ramp5a_callout: []
@@ -1085,34 +1095,35 @@
           o kadar çalışır sonra devam eden bloklara geçer.
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
-        courseD_playLab_condFP_1: we have organized the blocks into categories to
-          give you more code to play with!  Click here to see where everything went.
+        courseD_playLab_condFP_1: sana oynayabileceğin şekilde daha fazla kod vermek
+          için blokları kategorilere ayrılacak şekilde organize ettik. Herşeyin nereye
+          gittiğini görmek için buraya tıkla.
       courseD_scrat_predict1_callout: []
       courseD_scrat_predict1_2018_callout: []
       courseD_scrat_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseD_scrat_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseD_scrat_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseD_scrat_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
       courseD_scrat_ramp3_2018_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
       courseD_scrat_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseD_scrat_ramp4_2018_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseD_scrat_ramp5_callout: []
       courseD_scrat_ramp5_2018_callout: []
       courseD_scrat_ramp6_callout:
@@ -1128,34 +1139,34 @@
         courseD_maze_ramp6_1: Buraya koyduğun kod kaç kere tekrarlamasını istediysen
           o kadar çalışır sonra devam eden bloklara geçer.
       courseD_scrat_ramp8_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseD_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu
+          anlamına gelir ve bir kaç deneme yapman gerekir.
       courseD_scrat_ramp8_2018_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseD_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu
+          anlamına gelir ve bir kaç deneme yapman gerekir.
       courseE_artist_concept_challenge2_callout: []
       courseE_artist_concept_challenge2_2018_callout: []
       courseE_artist_embed_functions8_callout: []
       courseE_artist_functions1_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        courseD_artist_functions1_1: "İlk karemizi oluşturmaya yardımcı olması için
+          bu bloku kullanmaya başlayalım."
       courseE_artist_functions1_2018_callout:
-        courseD_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        courseD_artist_functions1_1: "İlk karemizi oluşturmaya yardımcı olması için
+          bu bloku kullanmaya başlayalım."
       courseE_artist_functions2_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: |-
+          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
+          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
       courseE_artist_functions2_2018_callout:
-        courseD_artist_functions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        courseD_artist_functions2_1: |-
+          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
+          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
       courseE_artist_functions8_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved
-          under this label in the toolbox.
+        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
+          kutusunun içindeki bu etiketin altına taşındı.
       courseE_artist_functions8_2018_callout:
-        courseD_artist_functions8_1: Your blocks to create functions have been moved
-          under this label in the toolbox.
+        courseD_artist_functions8_1: Fonksiyonları meydana getiren blokların alet
+          kutusunun içindeki bu etiketin altına taşındı.
       courseE_artist_functions_challenge_callout:
         courseE_artist_functions_challenge_callout1: Altına daha fazla kod ekleyerek
           bu programı sürdürün.
@@ -1220,11 +1231,11 @@
         courseE_farmer_functions1_2: Araç kutusu bu sefer küçük farkla düzenlendi!
           Hangi bloklara sahip olduğunu görmek için farklı kategorilere tıkla.
       courseE_farmer_functions1a_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
       courseE_farmer_functions1a_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
       courseE_farmer_functions2a_callout:
         courseE_farmer_functions2a_2: This code might not look exactly like what you
           wrote, but it will get the job done!
@@ -1232,16 +1243,16 @@
         courseE_farmer_functions2a_2: This code might not look exactly like what you
           wrote, but it will get the job done!
       courseE_farmer_functions2b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
       courseE_farmer_functions2b_2018_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
       courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions2ba_2018_callout: []
       courseE_farmer_functions3b_callout:
-        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
-          you run the program.
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
       courseE_farmer_functions3c_callout: []
       courseE_farmer_functions3c_2018_callout: []
       courseE_farmer_functions4b_callout: []
@@ -1261,25 +1272,25 @@
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
       courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseE_maze_ramp13_callout: []
       courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
       courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseE_maze_ramp5_callout: []
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Buraya koyduğun kod kaç kere tekrarlamasını istediysen
           o kadar çalışır sonra devam eden bloklara geçer.
       courseE_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseD_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu
+          anlamına gelir ve bir kaç deneme yapman gerekir.
       courseE_maze_ramp_predict1_callout: []
       courseE_multi_maze_ramp5_callout: []
       courseE_playLab_challenge1_callout:
@@ -1401,6 +1412,7 @@
       courseF_artist_variables_9_callout: []
       courseF_artist_variables_FP_callout: []
       courseF_artist_variables_template_callout: []
+      courseF_artist_variables_template_2018_callout: []
       courseF_artistembed_variables9_callout: []
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: Araç  kutusu şimdi Kategori modundadır.  Tüm
@@ -1477,25 +1489,25 @@
           ancak diğer sebzelerde nasıl acaba?
       courseF_maze_predict1_callout: []
       courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       courseF_maze_ramp13_callout: []
       courseF_maze_ramp15_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseF_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu
+          anlamına gelir ve bir kaç deneme yapman gerekir.
       courseF_maze_ramp2_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseF_maze_ramp4_callout:
-        courseC_maze_programming4_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       courseF_maze_ramp5_callout: []
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: Buraya koyduğun kod kaç kere tekrarlamasını istediysen
           o kadar çalışır sonra devam eden bloklara geçer.
       courseF_maze_ramp7_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+        courseF_maze_ramp7_1: Bu senin ilk meydan okuma bulmacan. Bu onun zor oolduğu
+          anlamına gelir ve bir kaç deneme yapman gerekir.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Kategorilere ait blokları görmek için tıklayın!
           Çalışma alanına sürükleyin ve onları programınıza ekleyin
@@ -1534,14 +1546,16 @@
       courseF_playlab_variables8c_2018_callout: []
       courseF_playlab_variablesTemplate_callout:
         courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
+      courseF_playlab_variablesTemplate_2018_callout:
+        courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: Bu değişkenine nasıl değer atadığını göstermektedir.
           Bloğa bağlı yazı kısmını değiştir ve değişkenin aldığı değeri atamış ol.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: Bu değişkene nasıl değer atadığını göstermektedir.
       coursef_maze_ramp3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
       drawings!_callout: []
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: '"Bir daire oluştur" bloğunu
@@ -1576,27 +1590,27 @@
       frozen square snowflake_callout:
         replace_questions: Açılan menüden "???" yerine bir numara seçin
       grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
-          will you use it?
+        grade1_artist_loops2_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
+          Onu nasıl kullanacaksın?
       grade1_maze_sequence6_callout:
         grade1_maze_sequence6_1: Bu Gri bloklar taş gibi!  Yani onları çöpe atamazsın.
       grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
-          start your program.
+        grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
+          a bas ve programını başlat.
       grade2_CaringForNewPet_1_callout:
-        grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra
-          blocks to complete your puzzles.
+        grade2_CaringForNewPet_1_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       grade2_CaringForNewPet_2_callout:
         grade2_CaringForNewPet_2_1: Throw this extra block away so it doesn't cause
           problems.
-        grade2_CaringForNewPet_2_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        grade2_CaringForNewPet_2_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
-          them away.
+        courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
+          doğru \n sürükleyebilirsin."
       grade2_CaringForNewPet_3_callout:
-        grade2_CaringForNewPet_3_1: This is your block limit.  It tells you how many
-          of these blocks you have left to use.
+        grade2_CaringForNewPet_3_1: Bu senin blok limitin. Elinde kullanabileceğin
+          kaç tane blokun kaldığını söyler.
       grade2_CaringForNewPet_3D_callout: []
       grade2_CaringForNewPet_7D_callout:
         grade2_CaringForNewPet_7D: This is your first challenge puzzle! These are
@@ -1605,8 +1619,8 @@
       grade2_MakeDogTag_BFP_callout: []
       grade2_collector_10_callout: []
       grade2_collector_7_callout:
-        grade2_collector_7_1: You can take more blocks from the toolbox if you need
-          them!
+        grade2_collector_7_1: Eğer ihtiyacın olursa alet kutusunun içinden daha fazla
+          blok alabilirsin!
       grade2_collector_8_callout: []
       grade2_collector_9_callout: []
       grade2_collector_9a_callout: []
@@ -1632,8 +1646,7 @@
       grade2_maze_intro8_callout: []
       grade2_maze_intro9_callout: []
       grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: You only have one of these blocks available
-          in this puzzle.
+        grade2_puppy_loops2_callout1: Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz.
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
@@ -1655,12 +1668,12 @@
           organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
           gittiğini görebilirsin!
       grade4_artist_functions1_callout:
-        grade4_artist_functions1_1: Let's start by using this block to help create
-          the first square.
+        grade4_artist_functions1_1: "İlk karemizi oluşturmaya yardımcı olması için
+          bu bloku kullanmaya başlayalım."
       grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: When this green block runs, all of the code in
-          the function will run. What should the artist do after drawing the first
-          square?
+        grade4_artist_funcions2_1: |-
+          Bu yeşil blok çalıştığında, fonksiyondaki tüm kodlar çalışacak.
+          Sanatçı ilk kareyi çizdikten sonra ne yapabillir?
       grade4_artist_functions_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
           organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
@@ -1789,15 +1802,15 @@
       gradek_artist_loops3_callout:
         artistLoopsK2_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever
-          you need to?
+        gradek_artist_loops7_1: "İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
+          biliyor muydun?"
       gradek_playlab_events1c_callout: []
       gradek_playlab_events2c_callout: []
       gradek_playlab_events3c_callout: []
       gradek_playlab_events4c_callout: []
       gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means
-          that you don't know what you are going to get until you hear it!
+        gradek_playlab_events5c_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
+          durumlarda ''rastgele" bir ses seçmene izin verir!
       iceage_click_hello_callout: []
       iceage_click_hello_2018_callout: []
       iceage_free_play_callout: []
@@ -1831,6 +1844,7 @@
         playlab_add_score: ''
       iceage_throw_hearts_callout: []
       iceage_throw_hearts_2018_callout: []
+      iceage_warn_embed_ice_age_callout: []
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ''
       iceage_warn_ice_age_2018_callout:

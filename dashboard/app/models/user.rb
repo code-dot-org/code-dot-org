@@ -241,6 +241,10 @@ class User < ActiveRecord::Base
     permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
+  def program_manager?
+    permission? UserPermission::PROGRAM_MANAGER
+  end
+
   def workshop_admin?
     permission? UserPermission::WORKSHOP_ADMIN
   end
@@ -421,7 +425,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever'}
+  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever' || user.provider == User::PROVIDER_SPONSORED}
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
@@ -1405,7 +1409,7 @@ class User < ActiveRecord::Base
       script = Script.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result == 100 &&
+        new_result >= ActivityConstants::BEST_PASS_RESULT &&
         script_valid &&
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)

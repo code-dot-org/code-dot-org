@@ -326,141 +326,9 @@
           pas dans la boite de TNT !
         maze_3_4: Argh ! Écris-moi un programme qui me permet d'éviter le TNT et d’arriver
           au cochon.
-        bounce_1_basketball: Attache un bloc au bloc « Quand flèche vers la gauche »
-          et appuie sur « Exécuter ». Déplace la main à l'aide de la flèche de gauche
-          pour atteindre la cible visée.
-        bounce_2_basketball: Attache un bloc aux blocx « Quand flèche vers la droite »
-          et « Quand flèche vers la gauche » et appuie sur « Exécuter ». Déplace la
-          main pour atteindre les deux cibles visées.
-        bounce_5_basketball: Nous allons faire voler une balle vers le bas, jusqu’à
-          la main. Attache un bloc au bloc « Quand la balle touche la raquette » pour
-          veiller à ce que la balle atteigne le drapeau.
-        bounce_6_basketball: Maintenant le drapeau est en haut. Tu dois attacher des
-          blocs aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
-        bounce_7_basketball: Attache des blocs à tous les blocs « Quand ». Fais rebondir
-          la balle jusqu'à ce qu'elle touche le drapeau.
-        bounce_10_basketball: Il y a maintenant un but en haut. Attache les blocs
-          « Marquer un point » et « Marquer un point pour l’adversaire » aux blocs
-          « Quand la balle dans le but » et « Quand la balle manque la main » pour
-          créer un jeu. Vois combien de points tu peux marquer avant que ton adversaire
-          marque deux fois.
-        bounce_11_basketball: Tu peux maintenant attacher des blocs au bloc « Lors
-          du lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle »
-          à plusieurs endroits. Essaie également de changer la scène ou la vitesse
-          de la main et de la balle pour voir combien de points tu peux marquer avant
-          que ton adversaire marque deux fois!
-        bounce_12_basketball: Crée ton propre jeu de basketball. Tu peux changer toutes
-          les règles. Quand tu as fini, clique «Terminer» pour que tes amis puissent
-          essayer ton jeu sur leur téléphone.
-        bounce_1_sports: Rendez-vous au drapeau! Attachez un bloc au bloc "Quand la
-          flèche gauche" et appuyez sur "Exécuter" pour déplacer le joueur au drapeau.
-        bounce_2_sports: Il y a deux drapeaux maintenant! Attachez un bloc aux blocs
-          "Quand flèche à gauche" et "Quand flèche à droite" pour faire bouger votre
-          joueur dans deux directions.
-        bounce_5_sports: La rondelle de hockey va voler vers le bas vers le joueur!
-          Attachez un bloc au bloc "quand le ballon touche le joueur" pour frapper
-          le drapeau.
-        bounce_6_sports: Maintenant le drapeau est en haut. Tu dois attacher des blocs
-          aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
-        bounce_7_sports: Attache des blocs à tous les blocs « Quand ». Fais rebondir
-          la balle jusqu'à ce qu'elle touche le drapeau.
-        bounce_10_sports: Maintenant, il ya un but au sommet! Attachez les blocs «points
-          de points» et «points adverses» aux blocs «Quand la balle dans le but» et
-          «Quand la balle rate la main» pour faire une partie. Voyez combien de points
-          vous pouvez marquer avant que votre adversaire marque deux fois!
-        bounce_11_sports: Tu peux maintenant attacher des blocs au bloc « Lors du
-          lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle »
-          à plusieurs endroits. Essaie également de changer la scène ou la vitesse
-          de la main et de la balle pour voir combien de points tu peux marquer avant
-          que ton adversaire marque deux fois!
-        bounce_12_sports: 'Créez votre propre jeu! Vous êtes responsable ici: vous
-          pouvez changer toutes les règles, mélanger et faire correspondre les sports,
-          soyez créatifs! Lorsque vous avez terminé, cliquez sur Terminer pour laisser
-          les amis essayer votre jeu sur leurs téléphones.'
-        bounce_1: Attache un bloc au bloc « Quand flèche vers la gauche »  et appuie
-          sur « Exécuter ». Déplace la raquette à l'aide de la flèche de gauche pour
-          atteindre la cible visée.
-        bounce_2: Attache un bloc aux blocs « Quand flèche vers la droite »  et «
-          Quand flèche vers la gauche ». Déplace la raquette pour atteindre les deux
-          cibles visées.
-        bounce_3: Maintenant, essaie quelque chose de semblable avec le bloc « Quand
-          flèche vers le haut ». Déplace la raquette jusqu’à la cible visée en haut.
-        bounce_4: Cette fois, tu dois ajouter quatre blocs. Déplace la raquette vers
-          chacune des quatre cibles visées pour terminer ce puzzle.
-        bounce_5: Nous allons faire voler une balle vers le bas, jusqu’à la raquette.
-          Attache un bloc au bloc «Quand la balle touche la raquette» pour veiller
-          à ce que la balle atteigne la cible visée.
-        bounce_6: Maintenant la cible visée est en haut. Il faudra attacher des blocs
-          aux deux blocs « Quand la balle touche » pour résoudre ce puzzle.
-        bounce_7: Attache des blocs à chacun des blocs « Quand ». Fais rebondir la
-          balle jusqu'à ce qu'elle frappe la cible visée.
-        bounce_10: Il y a maintenant un but en haut. Attache les blocs « Marquer un
-          point » et « Marquer un point pour l’adversaire » aux blocs « Quand la balle
-          dans le but » et « Quand la balle manque la raquette » pour créer un jeu.
-          Vois combien de points tu peux marquer avant que ton adversaire marque deux
-          fois.
-        bounce_11: Tu peux maintenant attacher des blocs au bloc « Lors du lancement ».
-          Tu dois attacher le nouveau bloc « Lancer une nouvelle balle » à plusieurs
-          endroits. Essaie également de changer la scène ou la vitesse de la raquette
-          et de la balle pour voir combien de points tu peux marquer avant que ton
-          adversaire marque deux fois.
-        bounce_12: Crée ton propre jeu de Casse-briques à rebond Tu peux modifier
-          tous les visuels et les règles. Lorsque tu as fini, clique sur «Terminer»
-          pour laisser tes amis essayer ton jeu sur leur téléphone.
         Custom_builder: Fais glisser les blocs depuis la boîte à outils jusqu'à l'espace
           de travail pour dessiner le niveau que tu souhaites créer. Clique sur « Exécuter »
           quand tu es prêt.
-        flappy_1: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
-          ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
-        flappy_2: Maintenant, nous avons rajouté un sol.  Attache un bloc au bloc
-          «Quand touche le sol».  Ton code doit présenter «FIN DU JEU» lorsque Flappy
-          s’écrase.
-        flappy_3: Le bloc « Lors du lancement » te permet d'exécuter le code au démarrage
-          de ton jeu.  Essaie de régler la vitesse et de battre des ailes jusqu’à
-          la cible.
-        flappy_4: Flappy volera parmi les obstacles, sauf si tu écris du code pour
-          qu’il en heurte quelques uns. Attache un bloc au bloc «Quand heurte un obstacle»
-          Ton code doit présenter «FIN DU JEU» lorsque Flappy s’écrase dans la première
-          série de tuyaux.
-        flappy_5: Nous allons ajouter un tableau de bord et compter les points lorsque
-          Flappy dépasse les obstacles. Ajoute au bloc « Quand passe un obstacle »
-          et ensuite marque un point en faisant voler Flappy au travers la première
-          série de tuyaux.
-        flappy_6: Regarde si tu peux encore marquer un point en changeant l’intensité
-          de la force que Flappy met dans ses battements d'ailes.
-        flappy_7: Ensuite, essaie de changer la scène en attachant un autre bloc au
-          bloc « Lors du lancement ».
-        flappy_8: Tu peux changer l'apparence à tout moment, pas seulement au démarrage
-          du jeu. Essaie de choisir un arrière-plan ALÉATOIRE lorsque d'autres événements
-          se produisent, par exemple, lors du dépassement d'un obstacle.
-        flappy_9: Pour tout mélanger, lorsque tu heurte un obstacle, plutôt que d’arrêter
-          le jeu, essaie de remettre le score à 0.
-        flappy_11: Crée ton propre jeu Flappy. Tu peux modifier tous les visuels et
-          toutes les règles, même la gravité. Lorsque tu as fini, clique sur «Terminer»
-          pour laisser tes amis essayer ton jeu sur leur téléphone.
-        flappy_k1_1: Jouer à Flappy l’oiseau
-        flappy_k1_2: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
-          ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
-        flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
-          « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase."
-        flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
-          au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
-          battement d'ailes.
-        flappy_k1_5: Flappy volera à travers les obstacles à moins que vous mettiez
-          en place le code pour qu'il s'écrase. Attachez un bloc au bloc « lors de
-          la rencontre avec un obstacle ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase sur un tuyau pour la première fois.
-        flappy_k1_6: Ajoutons un tableau de scores, et comptons les points quand Flappy
-          passe les obstacles. Ajoutez les bonnes instructions au bloc « lors du dépassement
-          d'un obstacle », puis marquez des points en faisant voler Flappy à travers
-          les tuyaux.
-        flappy_k1_7: Regarde si tu peux marquer plusieurs points en dépassant des
-          obstacles.
-        flappy_k1_8: Ensuite, essayez de changer l'arrière-plan en attachant un autre
-          bloc à bloc « lors du lancement ».
-        flappy_k1_9: Essaie de modifier le joueur en attachant un bloc « Définir le
-          personnage » au bloc « Lors du lancement ».
         jigsaw_1: Clique sur le bloc
         jigsaw_2: Glisse le bloc vers la cible
         jigsaw_3: Organise les blocs pour former l'image
@@ -798,7 +666,7 @@
         playlab_repeat_forever: Répétition à l’infinie du Labo de jeux
         tutorial_puzzle_challenge: Tutoriel Défi du puzzle
         infinity_playlab_intro: Labo de jeux - Introduction
-        infinity_playlab_events: 'Labo de jeux - Événements '
+        infinity_playlab_events: Labo de jeux - Événements
         infinity_playlab_repeat_forever: Labo de jeux  - Répétition à l’infinie
         csd_concept_how_computers_work: Introducing How Computers Work
         csd_concept_computer: What Makes a Computer, a Computer?
@@ -948,6 +816,8 @@
         applab_intro_sounds: App Lab - Images and Sounds
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
+        csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

@@ -1,4 +1,5 @@
-import { createJsWrapperBlockCreator } from '../block_utils';
+import { appendCategory, createJsWrapperBlockCreator } from '../block_utils';
+import { getStore } from '../redux';
 
 const SPRITE_COLOR = [184, 1.00, 0.74];
 const EVENT_COLOR = [140, 1.00, 0.74];
@@ -6,16 +7,23 @@ const EVENT_LOOP_COLOR = [322, 0.90, 0.95];
 const VARIABLES_COLOR = [312, 0.32, 0.62];
 const WORLD_COLOR = [240, 0.45, 0.65];
 
-const SPRITES = [
-  ['dog', '"dog"'],
-  ['cat', '"cat"'],
-];
-
 export default {
   install(blockly, blockInstallOptions) {
     // TODO(ram): Create Blockly.BlockValueType.SPRITE
     const SPRITE_TYPE = blockly.BlockValueType.NONE;
     const { ORDER_MEMBER } = Blockly.JavaScript;
+
+    const sprites = () => {
+      const animationList = getStore().getState().animationList;
+      if (!animationList || animationList.orderedKeys.length === 0) {
+        console.warn("No sprites available");
+        return [['sprites missing', 'null']];
+      }
+      return animationList.orderedKeys.map(key => {
+        const name = animationList.propsByKey[key].name;
+        return [name, `"${name}"`];
+      });
+    };
 
     const createJsWrapperBlock =
       createJsWrapperBlockCreator(blockly, 'gamelab');
@@ -25,7 +33,7 @@ export default {
       func: 'makeNewSprite',
       blockText: 'make a new {ANIMATION} sprite at {X} {Y}',
       args: [
-        { name: 'ANIMATION', options: SPRITES },
+        { name: 'ANIMATION', options: sprites },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
       ],
@@ -211,5 +219,64 @@ export default {
         { name: 'COLOR', type: blockly.BlockValueType.COLOUR },
       ],
     });
+
+    createJsWrapperBlock({
+      color: EVENT_COLOR,
+      func: 'clickedOn',
+      blockText: 'when {SPRITE} clicked on',
+      args: [
+        { name: 'SPRITE', type: SPRITE_TYPE },
+      ],
+      eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'setPosition',
+      blockText: 'move {THIS} to the {POSITION} position',
+      args: [
+        {
+          name: 'POSITION',
+          options: [
+            ['top left', '{x: 50, y: 50}'],
+            ['top center', '{x: 200, y: 50}'],
+            ['top right', '{x: 350, y: 50}'],
+            ['center left', '{x: 50, y: 200}'],
+            ['center', '{x: 200, y: 200}'],
+            ['center right', '{x: 350, y: 200}'],
+            ['bottom left', '{x: 50, y: 350}'],
+            ['bottom center', '{x: 200, y: 350}'],
+            ['bottom right', '{x: 350, y: 350}'],
+            ['random', '"random"'],
+          ],
+        },
+      ],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'showTitleScreen',
+      blockText: 'show title screen',
+      args: [
+        { name: 'TITLE', label: 'title', type: blockly.BlockValueType.STRING },
+        { name: 'SUBTITLE', label: 'text', type: blockly.BlockValueType.STRING }
+      ],
+      inline: false,
+    });
+
+    createJsWrapperBlock({
+      color: WORLD_COLOR,
+      func: 'hideTitleScreen',
+      blockText: 'hide title screen',
+      args: [],
+    });
+  },
+
+  installCustomBlocks(blockly, blockInstallOptions, customBlocks, level) {
+    const blockNames =
+      customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
+
+    level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
   },
 };

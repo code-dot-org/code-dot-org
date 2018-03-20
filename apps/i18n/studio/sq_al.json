@@ -219,6 +219,7 @@
   "iceAge": "Epoka e Akullnajave",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "personazh",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "rezultati",
   "isSet": "is set",

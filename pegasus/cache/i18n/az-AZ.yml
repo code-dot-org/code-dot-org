@@ -856,18 +856,12 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Yüklənir...
-  dashboard_action_edit: Düzəliş et
-  dashboard_action_save: Yadda saxla
-  dashboard_action_save_all: Hamısını yadda saxla
   dashboard_action_cancel: "İmtina et"
   dashboard_action_delete: Sil
   dashboard_action_delete_yes: Bəli
   dashboard_action_delete_no: Xeyr
   dashboard_action_confirm: Sil?
-  dashboard_action_remove: Sil
-  dashboard_action_remove_confirm: Silinsin?
   dashboard_action_done: Tamamlandı
-  dashboard_action_required: zəruri
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -975,8 +969,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: Add student
-  dashboard_students_add_students: Add multiple students
   dashboard_students_add_multiple: "Şagirdlərinizin adlarını hər sətirdə biri olmaqla
     yazın və ya əlavə edin:"
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -984,23 +976,12 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: "Şagirdin adı"
   dashboard_students_name: Ad
   dashboard_students_progress: Nəticə
-  dashboard_students_age: Yaşınız
-  dashboard_students_gender: Cins
   dashboard_students_male: Kişi
   dashboard_students_female: Qadın
-  dashboard_students_secret: Gizli
-  dashboard_students_password: parol
-  dashboard_students_username: "İstifadəçi adı: %{student_username}"
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Tamamlanmış mərhələlər
   dashboard_students_total_lines: Lines of Code
-  dashboard_students_show_secret: Show secret
-  dashboard_students_auto_generated: Auto-generated
-  dashboard_students_reset_secret: Reset secret
-  dashboard_students_reset_password: Reset password
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1070,7 +1051,6 @@
   dashboard_login_word: Söz
   dashboard_login_picture: "Şəkil"
   dashboard_login_none: E-poçt
-  dashboard_new_password: new password
   dashboard_stage: mərhələ
   dashboard_puzzle: Tapmaca
   dashboard_question: Sual
@@ -1378,7 +1358,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8+ siniflər
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: 8-12 yaş
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10+ yaş (Kurs 3-dən sonra)
   codeorg_platformtext: Modern browsers, smartphones, tablets
