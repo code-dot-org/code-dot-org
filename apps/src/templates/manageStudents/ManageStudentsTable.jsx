@@ -11,21 +11,55 @@ import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import {convertStudentDataToArray, ADD_STATUS} from './manageStudentsRedux';
+import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
+import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
+import {convertStudentDataToArray, AddStatus, RowType, saveAllStudents, editAll} from './manageStudentsRedux';
 import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
+import AddMultipleStudents from './AddMultipleStudents';
+import Button from '../Button';
+import {Checkbox} from 'react-bootstrap';
+import experiments from '@cdo/apps/util/experiments';
+
+const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
+
+const styles = {
+  headerName: {
+    width: '60%',
+    float: 'left',
+    marginRight: 5,
+  },
+  headerIcon : {
+    width: '20%',
+    float: 'left',
+  }
+};
+
+const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
+  SectionLoginType.word,
+  SectionLoginType.picture,
+  SectionLoginType.email,
+];
+const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
+  SectionLoginType.word,
+  SectionLoginType.picture,
+  SectionLoginType.email,
+  SectionLoginType.google_classroom,
+  SectionLoginType.clever,
+];
 
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
   username: PropTypes.string,
+  email: PropTypes.string,
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   gender: PropTypes.string,
   secretWords: PropTypes.string,
   secretPicturePath: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
-  isAddRow: PropTypes.bool,
+  rowType: PropTypes.oneOf(Object.values(RowType)),
 });
 
 /** @enum {number} */
@@ -71,20 +105,25 @@ const passwordFormatter = (loginType, {rowData}) => {
 };
 
 // The "add row" should always be pinned to the top when sorting.
+// The "new student rows" should always be next.
 // This function takes into account having multiple "add rows"
-const sortRows = (data, columnIndexList, orderList) => {
+export const sortRows = (data, columnIndexList, orderList) => {
   let addRows = [];
+  let newStudentRows = [];
   let studentRows = [];
   for (let i = 0; i<data.length; i++) {
-    if (data[i].isAddRow) {
+    if (data[i].rowType === RowType.ADD) {
       addRows.push(data[i]);
+    } else if (data[i].rowType === RowType.NEW_STUDENT) {
+      newStudentRows.push(data[i]);
     } else {
       studentRows.push(data[i]);
     }
   }
   addRows = orderBy(addRows, columnIndexList, orderList);
+  newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
   studentRows = orderBy(studentRows, columnIndexList, orderList);
-  return addRows.concat(studentRows);
+  return addRows.concat(newStudentRows).concat(studentRows);
 };
 
 class ManageStudentsTable extends Component {
@@ -93,7 +132,10 @@ class ManageStudentsTable extends Component {
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     editingData: PropTypes.object,
-    addStatus: PropTypes.oneOf(Object.values(ADD_STATUS)),
+    addStatus: PropTypes.object,
+    saveAllStudents: PropTypes.func,
+    showSharingColumn: PropTypes.bool,
+    editAll: PropTypes.func,
   };
 
   state = {
@@ -134,8 +176,8 @@ class ManageStudentsTable extends Component {
         id={rowData.id}
         sectionId={rowData.sectionId}
         name={name}
-        loginType={rowData.loginType}
         username={rowData.username}
+        email={rowData.email}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
       />
@@ -151,8 +193,66 @@ class ManageStudentsTable extends Component {
         isEditing={rowData.isEditing}
         isSaving={rowData.isSaving}
         disableSaving={disableSaving}
-        isAddRow={rowData.isAddRow}
+        rowType={rowData.rowType}
+        loginType={rowData.loginType}
       />
+    );
+  };
+
+  actionsHeaderFormatter = () => {
+    const numberOfEditingRows = Object.keys(this.props.editingData).length;
+    return (
+      <div>
+        {numberOfEditingRows > 1 &&
+          <Button
+            onClick={this.props.saveAllStudents}
+            color={Button.ButtonColor.orange}
+            text={i18n.saveAll()}
+          />
+        }
+        {numberOfEditingRows <= 1 &&
+          <span>
+            <div style={styles.headerName}>
+              {i18n.actions()}
+            </div>
+            <div style={styles.headerIcon}>
+              {showShareColumn &&
+                <ManageStudentsActionsHeaderCell
+                  editAll={this.props.editAll}
+                  isShareColumnVisible={this.props.showSharingColumn}
+                />
+              }
+            </div>
+          </span>
+        }
+      </div>
+    );
+  };
+
+  projectSharingHeaderFormatter = () => {
+    return (
+      <span>
+        <div style={styles.headerName}>
+          {i18n.projectSharingColumnHeader()}
+        </div>
+        <div style={styles.headerIcon}>
+          <SharingControlActionsHeaderCell/>
+        </div>
+      </span>
+    );
+  };
+
+  projectSharingFormatter = (projectSharing, {rowData}) => {
+    let disabled = rowData.isEditing ?
+      this.props.editingData[rowData.id].age.length === 0 :
+      true;
+
+    return (
+      <span>
+        <Checkbox
+          disabled={disabled}
+        />
+      </span>
     );
   };
 
@@ -179,7 +279,7 @@ class ManageStudentsTable extends Component {
   getColumns = (sortable) => {
     const {loginType} = this.props;
     const passwordLabel = loginType === SectionLoginType.email ? i18n.password() : i18n.secret();
-    const dataColumns = [
+    let dataColumns = [
       {
         property: 'name',
         header: {
@@ -187,7 +287,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 300
+            width: 260
           }},
           transforms: [sortable],
         },
@@ -196,7 +296,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 300
+            width: 260
           }}
         }
       },
@@ -227,7 +327,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 150,
+            width: 130,
           }},
           transforms: [sortable],
         },
@@ -236,12 +336,12 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 150,
+            width: 130,
           }}
         }
       },
     ];
-    const controlsColumns = [
+    const passwordColumn = [
       {
         property: 'password',
         header: {
@@ -250,7 +350,7 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
-            width: 200,
+            width: 180,
           }},
         },
         cell: {
@@ -258,19 +358,44 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 200,
+            width: 180,
           }}
         }
       },
+    ];
+    const projectSharingColumn = [
       {
-        property: 'actions',
+        property: 'projectSharing',
         header: {
-          label: i18n.actions(),
+          label: i18n.projectSharingColumnHeader(),
+          format: this.projectSharingHeaderFormatter,
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
-            width: 200,
+            width: 130
+          }},
+        },
+        cell: {
+          format: this.projectSharingFormatter,
+          props: {
+            style: {
+            ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130}
+          }}
+        }
+      },
+    ];
+    const controlsColumn = [
+      {
+        property: 'actions',
+        header: {
+          label: i18n.actions(),
+          format: this.actionsHeaderFormatter,
+          props: {
+            style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
           }},
         },
         cell: {
@@ -278,17 +403,22 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 200,
           }}
         }
       },
     ];
 
-    if (loginType === SectionLoginType.word || loginType === SectionLoginType.picture || loginType === SectionLoginType.email) {
-      return dataColumns.concat(controlsColumns);
-    } else {
-      return dataColumns;
+    if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
+      dataColumns = dataColumns.concat(passwordColumn);
     }
+    if (this.props.showSharingColumn) {
+      dataColumns = dataColumns.concat(projectSharingColumn);
+    }
+    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
+      dataColumns = dataColumns.concat(controlsColumn);
+    }
+
+    return dataColumns;
   };
 
   render() {
@@ -303,30 +433,35 @@ class ManageStudentsTable extends Component {
       sort: sortRows,
     })(this.props.studentData);
 
+    const {addStatus, loginType} = this.props;
+
     return (
       <div>
-        {this.props.addStatus === ADD_STATUS.success &&
+        {addStatus.status === AddStatus.SUCCESS &&
           <Notification
             type={NotificationType.success}
             notice={i18n.manageStudentsNotificationSuccess()}
-            details={i18n.manageStudentsNotificationAddSuccess()}
+            details={i18n.manageStudentsNotificationAddSuccess({numStudents: addStatus.numStudents})}
             dismissible={false}
           />
         }
-        {this.props.addStatus === ADD_STATUS.fail &&
+        {addStatus.status === AddStatus.FAIL &&
           <Notification
             type={NotificationType.failure}
             notice={i18n.manageStudentsNotificationFailure()}
-            details={i18n.manageStudentsNotificationCannotAdd()}
+            details={i18n.manageStudentsNotificationCannotAdd({numStudents: addStatus.numStudents})}
             dismissible={false}
           />
+        }
+        {(loginType === SectionLoginType.word || loginType === SectionLoginType.picture) &&
+          <AddMultipleStudents/>
         }
         <Table.Provider
           columns={columns}
           style={tableLayoutStyles.table}
         >
           <Table.Header />
-          <Table.Body rows={sortedRows} rowKey="name" />
+          <Table.Body rows={sortedRows} rowKey="id" />
         </Table.Provider>
       </div>
     );
@@ -339,5 +474,13 @@ export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
+  showSharingColumn: state.manageStudents.showSharingColumn,
   addStatus: state.manageStudents.addStatus,
+}), dispatch => ({
+  saveAllStudents() {
+    dispatch(saveAllStudents());
+  },
+  editAll() {
+    dispatch(editAll());
+  },
 }))(ManageStudentsTable);

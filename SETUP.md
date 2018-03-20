@@ -15,7 +15,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      npm --version   # --> 3.10.8
      yarn -V         # --> 0.23.2
      ```
-1. `git clone https://github.com/code-dot-org/code-dot-org.git`
+1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. `gem install bundler`
 1. `rbenv rehash`
 1. `cd code-dot-org`
@@ -60,7 +60,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
     1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
     1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
-1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
+1. (El Capitan only) Ensure that openssl is linked: `brew link --force openssl`
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
         ```

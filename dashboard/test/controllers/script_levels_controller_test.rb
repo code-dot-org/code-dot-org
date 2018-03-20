@@ -1315,6 +1315,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], hidden
   end
 
+  test "hidden_stage_ids for user signed in" do
+    SectionHiddenStage.create(section_id: @section.id, stage_id: @custom_stage_1.id)
+
+    sign_in @student
+    response = get :hidden_stage_ids, params: {script_id: @script.name}
+    assert_response :success
+
+    hidden = JSON.parse(response.body)
+    assert_equal [@custom_stage_1.id.to_s], hidden
+  end
+
   def put_student_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)

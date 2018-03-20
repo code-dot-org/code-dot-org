@@ -475,12 +475,6 @@ Applab.init = function (config) {
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
     Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
-
-    // IE9 doesnt support the way we handle responsiveness. Instead, explicitly
-    // resize our visualization (user can still resize with grippy)
-    if (!utils.browserSupportsCssMedia()) {
-      studioApp().resizeVisualization(300);
-    }
   };
 
   config.afterEditorReady = function () {

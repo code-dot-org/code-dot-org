@@ -60,6 +60,11 @@ namespace :seed do
     update_scripts
   end
 
+  # Update scripts in the database from their file definitions.
+  #
+  # @param [Hash] opts the options to update the scripts with.
+  # @option opts [Boolean] :incremental Whether to only process modified scripts.
+  # @option opts [Boolean] :ui_test Whether to only update ui test scripts.
   def update_scripts(opts = {})
     # optionally, only process modified scripts to speed up seed time
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
@@ -183,37 +188,6 @@ namespace :seed do
     Census::StateCsOffering.seed
   end
 
-  # Seeds the data in regional_partners
-  task regional_partners: :environment do
-    RegionalPartner.transaction do
-      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
-    end
-  end
-
-  task regional_partners_school_districts: :environment do
-    seed_regional_partners_school_districts(false)
-  end
-
-  task force_regional_partners_school_districts: :environment do
-    seed_regional_partners_school_districts(true)
-  end
-
-  def seed_regional_partners_school_districts(force)
-    # use a much smaller dataset in environments that reseed data frequently.
-    mapping_tsv = CDO.stub_school_data ?
-        'test/fixtures/regional_partners_school_districts.tsv' :
-        'config/regional_partners_school_districts.tsv'
-
-    expected_count = `grep -v 'NO PARTNER' #{mapping_tsv} | wc -l`.to_i - 1
-    raise "#{mapping_tsv} contains no data" unless expected_count > 0
-    RegionalPartnersSchoolDistrict.transaction do
-      if (RegionalPartnersSchoolDistrict.count < expected_count) || force
-        # This step can take up to 1 minute to complete when not using stubbed data.
-        RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv(mapping_tsv)
-      end
-    end
-  end
-
   MAX_LEVEL_SOURCES = 10_000
   desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
   task ideal_solutions: :environment do
@@ -289,11 +263,11 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
-  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
+  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
+  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
 end

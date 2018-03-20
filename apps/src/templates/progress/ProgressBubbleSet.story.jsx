@@ -18,7 +18,7 @@ levels[0].isConceptLevel = true;
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressBubbleSet', module)
+    .storiesOf('Progress/ProgressBubbleSet', module)
     .addStoryTable([
       {
         name:'starting at 3',

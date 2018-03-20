@@ -84,7 +84,7 @@ export function renderSectionTable(sectionId, loginType) {
   store.dispatch(setLoginType(loginType));
   store.dispatch(setSectionId(sectionId));
 
-  const dataUrl = `/v2/sections/${sectionId}/students`;
+  const dataUrl = `/dashboardapi/sections/${sectionId}/students`;
   const element = document.getElementById('student-table-react');
 
   $.ajax({
