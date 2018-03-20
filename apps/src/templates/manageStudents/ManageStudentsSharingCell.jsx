@@ -37,7 +37,7 @@ class ManageStudentsSharingCell extends Component {
           <div>
             <Checkbox
               disabled={disabled}
-              checked={!this.props.editedValue}
+              checked={this.props.editedValue}
               onChange={this.changeSharing}
             />
           </div>
