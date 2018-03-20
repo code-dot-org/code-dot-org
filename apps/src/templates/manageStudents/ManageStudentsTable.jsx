@@ -287,7 +287,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 260
           }},
           transforms: [sortable],
         },
@@ -296,7 +295,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 260
           }}
         }
       },
@@ -307,7 +305,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 100,
+            width: 90,
           }},
           transforms: [sortable],
         },
@@ -316,7 +314,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 100,
+            width: 90,
           }}
         }
       },
@@ -327,7 +325,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 130,
+            width: 120,
           }},
           transforms: [sortable],
         },
@@ -336,7 +334,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 130,
+            width: 120,
           }}
         }
       },
