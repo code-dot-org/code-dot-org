@@ -8,11 +8,13 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  regional_partner_id :integer
+#  user_id             :integer
 #
 # Indexes
 #
 #  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
 #  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
+#  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
