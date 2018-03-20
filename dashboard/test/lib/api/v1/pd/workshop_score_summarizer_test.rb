@@ -89,14 +89,14 @@ module Api::V1::Pd
       @angry_teacher_response = {data: angry_teacher_question_responses.to_json}
       @mixed_teacher_response = {data: mixed_teacher_question_responses.to_json}
 
-      facilitators = TEST_FACILITATORS.map do |facilitator_name|
+      @facilitators = TEST_FACILITATORS.map do |facilitator_name|
         create(:facilitator, name: facilitator_name)
       end
 
       @pegasus_db_stub = {}
       PEGASUS_DB.stubs(:[]).returns(@pegasus_db_stub)
 
-      @workshop = create(:pd_workshop, facilitators: facilitators)
+      @workshop = create(:pd_workshop, facilitators: @facilitators)
       create(:pd_enrollment, workshop: @workshop)
       @workshops = [@workshop]
     end
@@ -318,6 +318,41 @@ module Api::V1::Pd
       }
 
       validate(expected_results)
+    end
+
+    test 'correct averaging of facilitator specific questions with no facilitator specific breakdown' do
+      csd_workshop = create(:pd_workshop, facilitators: @facilitators, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNIT_3_4)
+
+      responses = [
+        {
+          data: {
+            how_often_given_feedback_s: {'Tom': 'Sometimes'}
+          }.to_json
+        }, {
+          data: {
+            how_often_given_feedback_s: {'Dick': 'Sometimes'}
+          }.to_json
+        }, {
+          data: {
+            how_often_given_feedback_s: {'Harry': 'Almost never'}
+          }.to_json
+        }, {
+          data: {
+            how_often_given_feedback_s: {'Tom': 'All the time'}
+          }.to_json
+        }
+      ]
+
+      @pegasus_db_stub.stubs(:where).returns(responses)
+
+      non_breakdown_score = get_score_for_workshops([csd_workshop])
+      assert_equal 3.0, non_breakdown_score[:how_often_given_feedback_s]
+
+      breakdown_scores = get_score_for_workshops([csd_workshop], facilitator_breakdown: true)
+
+      assert_equal [{'Tom' => 4.0}, {'Dick' => 3.0}, {'Harry' => 1.0},], breakdown_scores[1].map {|k, v| {k => v[:how_often_given_feedback_s]}}
+
+      assert_equal({'Tom' => 2, 'Dick' => 1, 'Harry' => 1}, calculate_facilitator_name_frequencies(responses))
     end
 
     private

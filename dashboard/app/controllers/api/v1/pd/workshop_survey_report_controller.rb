@@ -15,7 +15,7 @@ module Api::V1::Pd
       survey_report[:all_my_workshops_for_course] = get_score_for_workshops(all_my_workshops)
 
       aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
-      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[@workshop.course].symbolize_keys
+      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[@workshop.course].try(&:symbolize_keys) || {}
 
       respond_to do |format|
         format.json do
