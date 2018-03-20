@@ -66,6 +66,10 @@ module Pd::Application
       end
     end
 
+    def workshop_date_and_location
+      workshop.try(&:date_and_location_name)
+    end
+
     # override
     def lock!
       return if locked?
