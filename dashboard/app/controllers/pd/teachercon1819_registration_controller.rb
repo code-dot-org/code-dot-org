@@ -78,7 +78,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    if Pd::Teachercon1819Registration.exists?(user_id: current_user.id)
+    if Pd::Teachercon1819Registration.exists?(user: current_user)
       @seat_accepted = Pd::Teachercon1819Registration.find_by(user: current_user).accepted?
       @email = 'partner@code.org'
       render :partner_submitted
