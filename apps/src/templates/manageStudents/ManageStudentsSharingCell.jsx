@@ -16,7 +16,7 @@ class ManageStudentsSharingCell extends Component {
   };
 
   changeSharing = (e) => {
-    this.props.editStudent(this.props.id, {sharingDisabled: !this.props.editedValue});
+    this.props.editStudent(this.props.id, {sharingDisabled: this.props.editedValue});
   };
 
   render() {
