@@ -27,6 +27,15 @@ module Pd::Application
       assert_equal guid, teacher_application.application_guid
     end
 
+    test 'principal_approval_url' do
+      teacher_application = build :pd_teacher1819_application
+      assert_nil teacher_application.principal_approval_url
+
+      # save to generate guid and therefore principal approval url
+      teacher_application.save!
+      assert teacher_application.principal_approval_url
+    end
+
     test 'principal_greeting' do
       hash_with_principal_title = build :pd_teacher1819_application_hash
       hash_without_principal_title = build :pd_teacher1819_application_hash, principal_title: nil
@@ -756,7 +765,7 @@ module Pd::Application
     end
 
     test 'locked status appears in csv only when the supplied user can_see_locked_status' do
-      application = build :pd_teacher1819_application
+      application = create :pd_teacher1819_application
       mock_user = mock
 
       Teacher1819Application.stubs(:can_see_locked_status?).returns(false)
