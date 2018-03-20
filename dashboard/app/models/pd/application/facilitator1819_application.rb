@@ -80,11 +80,17 @@ module Pd::Application
     end
 
     def fit_workshop
-      Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
+      return nil unless fit_workshop_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_workshop_cache_key(fit_workshop_id) do
+        Pd::Workshop.includes(:sessions, :enrollments).find_by(id: fit_workshop_id)
+      end
     end
 
     def registered_fit_workshop?
-      fit_workshop_id.present? && Pd::Enrollment.exists?(pd_workshop_id: fit_workshop_id, user: user)
+      # inspect the cached fit_workshop.enrollments rather than querying the DB
+      fit_workshop.enrollments.any? {|e| e.user_id == user.id} if fit_workshop_id
     end
 
     GRADES = [
@@ -562,6 +568,12 @@ module Pd::Application
         course: workshop_course,
         city: find_default_fit_teachercon[:city]
       )
+    end
+
+    # override
+    def self.prefetch_associated_models(applications)
+      # also prefetch fit workshops
+      prefetch_workshops applications.flat_map {|a| [a.pd_workshop_id, a.fit_workshop_id]}.uniq.compact
     end
   end
 end

@@ -213,8 +213,8 @@
     "project_template_level_name": "CSD U6 analog data template",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "omfmW1nF23xk9nU2brjbvwVC7ku3Ce7F8S/CwjXLVIWR2u5qukC3ZJD5DKBH\nv4x2IfJhvvyVsRTgq01MOZ8lag==\n"
+    "encrypted_examples": "omfmW1nF23xk9nU2brjbvwVC7ku3Ce7F8S/CwjXLVIWR2u5qukC3ZJD5DKBH\nv4x2IfJhvvyVsRTgq01MOZ8lag==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
