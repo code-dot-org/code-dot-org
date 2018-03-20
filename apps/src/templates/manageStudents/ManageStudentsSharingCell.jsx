@@ -17,11 +17,12 @@ class ManageStudentsSharingCell extends Component {
   };
 
   changeSharing = (e) => {
-    this.props.editStudent(this.props.id, {sharingDisabled: !this.props.editedValue});
+    this.props.editStudent(this.props.id, {sharingDisabled: this.props.editedValue});
   };
 
   render() {
     const {disabled, checked} = this.props;
+    const tooltipId = disabled ? "disabled-no-age" : "";
 
     return (
       <div>
@@ -37,7 +38,7 @@ class ManageStudentsSharingCell extends Component {
         }
         {this.props.isEditing &&
           <div>
-            <span data-tip data-for="disabled-no-age">
+            <span data-tip data-for={tooltipId}>
               <Checkbox
                 disabled={disabled}
                 checked={this.props.editedValue}
@@ -52,10 +53,9 @@ class ManageStudentsSharingCell extends Component {
               place="top"
               offset={{bottom: 10, right: 50}}
               delayHide={1000}
-              disble={!disabled}
             >
               <div>
-                Please chose the age for the student first so we can pick the right default for this setting.
+                Please select an age.
               </div>
             </ReactTooltip>
           </div>
