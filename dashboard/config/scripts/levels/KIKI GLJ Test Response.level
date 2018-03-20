@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-03-20T00:39:23.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "instructions": "Look carefully at the code below.  Where do you think the cat will end up when the code is finished running?\r\n",
+    "instructions_important": "true",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "Look carefully at the code below.  Where do you think  the cat will end up when the code is finished running?"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-20 00:40:24 +0000\",\"changed\":[\"instructions_important\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 02:17:53 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

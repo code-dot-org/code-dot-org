@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-03-20T15:17:38.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSF_unspotted_bugs",
+    "instructions_important": "false",
+    "display_name": "Unspotted Bugs",
+    "encrypted_teacher_markdown": "LpEDh996yN2/i9cyhXEnxhqqP0fYai9y8oHlq0bmTGDoy6ezsnObI/xPuHzR\nLJ8kt12L+sQRQa/0KUhUZpiZWBdGi+4foOVLlHHDxnlSTlV1poR1LjXcMSUS\nKLgSyOZ122BYu8OufFMIHP9VQKbl3jwF3Kw/oKkMRSvgFONmvHl7p5x+xpXL\nymB+ePXSVUmuzYFbBvA87eOJI5F3VgIZRmWmcK8u37OZJ6AVPBWxI0TDZRaT\np65Yr3QvcHSq/rWZ99S6KgpLkCdNwaFQy4mvhlO+edML8VwMKvfUjh0SchRw\njLUEMxzgjkLM9Yuui/xQBbBs8mVK6DnQVPrkqdWzOnhM1TJ0gI9KQG9+r2Y4\nXqxFX5OU0TnQVOssKLTmHaWPeI2kE6B+uo6Glyuq1+dVIl8ETpxRwsCo0Yok\nR5BnIfzRH17BnMqYeEzGDmxoo+p4uP4r0jYFqhsWMijA0DUHkQEyt+Qc7z6C\nn+5gT13vlSThTH7OlutLd3EFhD9v/JkDCb17IAk6rYsJntz4u31IqkLTwvxc\ndV56eryuOBZa0O4Bq5rAO+H+KT22CUYjUjdmkAgb9uHZ5sQMEgh4ou46ZKPO\ntGxnh9vf+YkZv7zVKFjgLT5GE2mv12K6sWNLY28pMjARYrjX84+a1cItdPqC\nRJKjk/LwQNwJsiGJKEFTCS78vlKHO8Hgz76mSFuwNoQuKCi0D1rI1O1zG+eS\nmG6tp4SQXLqev1Ru+xgriqk8LZLaIeZGUBfjHj0BrixXjvAJp1NJBmuzHvSA\nyE3f5s2ve/4IMsKkOdtqPUmbRsXuqiUlHAU5MSVIM2hPZi9j+s6B3KvAol6A\nPOZowUL2L50cRVUfXIai+SkOY8lnIGsGM26qERCkd2issKd+j4vgzculEIdE\nF7DCbluwadmobyGLjPAy2xd/0hfiFw5WFZX/ardMzsUib+DETME4g1dxIEsu\nZUJYVIg8pt3GSR3QhFjX9t3QoWFF69dIvK+qGHt/8CGeO4U/1sFqznJtLvF1\n0hJdz47vhSN+SKT7BBhfGtUeVUKq1UM9NsQCckBOH3sAO5T/R7va/jFgvUDo\niR/2kqguR5+jl6ts7JM11yVSHN4FMGft4MNHcGEodSsKQtXablTGzoVoAMJV\n1BXXmpqphb+BVW46FhaSuRk0Xq3Y8lsEyQ==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 8655,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 18:06:17 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 18:10:48 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+</StandaloneVideo>
