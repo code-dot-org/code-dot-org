@@ -95,8 +95,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
       if facilitator_breakdown
         workshop.facilitators.each do |facilitator|
-          facilitator_scores[facilitator.name][:response_count] += responses.count
-          facilitator_scores[facilitator.name][:number_teachers] += workshop.enrollments.size
+          facilitator_scores[facilitator.name][:response_count] += responses.size
+          facilitator_scores[facilitator.name][:number_teachers] += workshop.attending_teachers.size
         end
       end
 
@@ -121,7 +121,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
       end
     end
 
-    report_rows[:number_teachers] = workshops.map(&:enrollments).map(&:size).reduce(:+)
+    report_rows[:number_teachers] = workshops.map(&:attending_teachers).map(&:size).reduce(:+)
     report_rows[:response_count] = response_count
     report_rows[:facilitator_effectiveness] = (report_rows[:facilitator_effectiveness] / (FACILITATOR_EFFECTIVENESS_QUESTIONS.size.to_f * response_count)).round(2)
     report_rows[:teacher_engagement] = (report_rows[:teacher_engagement] / (TEACHER_ENGAGEMENT_QUESTIONS.size.to_f * response_count)).round(2)

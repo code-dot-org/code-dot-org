@@ -96,8 +96,7 @@ module Api::V1::Pd
       @pegasus_db_stub = {}
       PEGASUS_DB.stubs(:[]).returns(@pegasus_db_stub)
 
-      @workshop = create(:pd_workshop, facilitators: facilitators)
-      create(:pd_enrollment, workshop: @workshop)
+      @workshop = create(:pd_workshop, facilitators: facilitators, enrolled_and_attending_users: 5, enrolled_unattending_users: 1, num_sessions: 2)
       @workshops = [@workshop]
     end
 
@@ -105,7 +104,7 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns([@happy_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 5,
         response_count: 1,
         facilitator_effectiveness: 5,
         how_much_learned_s: 5,
@@ -141,7 +140,7 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns([@angry_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 5,
         response_count: 1,
         facilitator_effectiveness: 1,
         how_much_learned_s: 1,
@@ -177,7 +176,7 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns([@mixed_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 5,
         response_count: 1,
         facilitator_effectiveness: 1.95,
         how_much_learned_s: 1,
@@ -209,7 +208,7 @@ module Api::V1::Pd
       expected_facilitator_results = {
         "Tom" => {
           response_count: 1,
-          number_teachers: 1,
+          number_teachers: 5,
           facilitator_effectiveness: 1.0,
           how_much_learned_s: 1.0,
           how_motivating_s: 1.0,
@@ -233,7 +232,7 @@ module Api::V1::Pd
         },
         "Dick" => {
           response_count: 1,
-          number_teachers: 1,
+          number_teachers: 5,
           facilitator_effectiveness: 3.86,
           how_much_learned_s: 1.0,
           how_motivating_s: 1.0,
@@ -257,7 +256,7 @@ module Api::V1::Pd
         },
         "Harry" => {
           response_count: 1,
-          number_teachers: 1,
+          number_teachers: 5,
           facilitator_effectiveness: 1.0,
           how_much_learned_s: 1.0,
           how_motivating_s: 1.0,
@@ -288,7 +287,7 @@ module Api::V1::Pd
       @pegasus_db_stub.stubs(:where).returns([@happy_teacher_response, @angry_teacher_response])
 
       expected_results = {
-        number_teachers: 1,
+        number_teachers: 5,
         response_count: 2,
         facilitator_effectiveness: 3,
         how_much_learned_s: 3,

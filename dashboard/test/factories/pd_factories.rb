@@ -41,6 +41,7 @@ FactoryGirl.define do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
       end
       evaluator.enrolled_and_attending_users.times do
+        raise 'Must have at least one session for attendance to exist' if workshop.sessions.empty?
         teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
         workshop.sessions.each do |session|
