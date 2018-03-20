@@ -113,7 +113,7 @@ style_min: false
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
 - sort_by_popularity = request.site == 'code.org'
-- sort_by_popularity &&= [false, "pre-hoc"].include?(DCDO.get("hoc_mode", false))
+- sort_by_popularity &&= [false, "pre-hoc"].include?(DCDO.get("hoc_mode", CDO.default_hoc_mode))
 
 #tutorials
 

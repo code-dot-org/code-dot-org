@@ -1,11 +1,17 @@
-class Api::V1::Pd::FacilitatorApplicationCohortViewSerializer < ActiveModel::Serializer
-  attributes :id, :date_accepted, :applicant_name, :district_name, :school_name, :email
+module Api::V1::Pd
+  class FacilitatorApplicationCohortViewSerializer < CohortViewSerializerBase
+    attributes(
+      *superclass._attributes,
+      :assigned_fit,
+      :registered_fit
+    )
 
-  def date_accepted
-    object.accepted_at.try(:strftime, '%b %e')
-  end
+    def assigned_fit
+      object.fit_workshop.try(&:date_and_location_name)
+    end
 
-  def email
-    object.user.email
+    def registered_fit
+      object.registered_fit_workshop? ? 'Yes' : 'No'
+    end
   end
 end

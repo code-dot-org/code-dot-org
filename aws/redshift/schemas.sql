@@ -9,3 +9,13 @@ TO GROUP reader, GROUP reader_pii, GROUP admin;
 GRANT USAGE
 ON SCHEMA analysis_pii
 TO GROUP reader_pii, GROUP admin;
+
+ALTER DEFAULT PRIVILEGES
+IN SCHEMA analysis
+GRANT SELECT ON TABLES 
+TO GROUP reader, GROUP reader_pii;
+
+ALTER DEFAULT PRIVILEGES
+IN SCHEMA analysis_pii
+GRANT SELECT ON TABLES
+TO GROUP reader_pii;

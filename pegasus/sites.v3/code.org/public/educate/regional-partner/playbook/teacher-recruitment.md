@@ -1,9 +1,8 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Teacher and District Recruitment
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Teacher and District Recruitment

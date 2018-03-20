@@ -40,7 +40,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       customValidator: function () {
-        return Maze.subtype.nectars_.length === 1;
+        return Maze.controller.subtype.nectars_.length === 1;
       },
       xml: '<xml>' + blockUtils.blocksFromList([
         'maze_moveForward',

@@ -33,7 +33,7 @@ module Api::V1::Pd
     end
 
     test 'only regional partner users can submit partner registrations' do
-      partner = create :workshop_organizer, :as_regional_partner_program_manager
+      partner = create :program_manager
 
       assert_no_difference 'Pd::Teachercon1819Registration.count' do
         put :create_partner, params: {

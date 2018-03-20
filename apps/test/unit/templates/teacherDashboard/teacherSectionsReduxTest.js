@@ -978,10 +978,30 @@ describe('teacherSectionsRedux', () => {
         script: null,
       }
     });
+    const stateWithInvalidScriptAssignment = reducer(stateWithSections, {
+      type: EDIT_SECTION_SUCCESS,
+      sectionId: '12',
+      serverSection: {
+        ...sections[1],
+        course_id: null,
+        script: {id: 35, name: "netsim"},
+      }
+    });
+    const stateWithInvalidCourseAssignment = reducer(stateWithSections, {
+      type: EDIT_SECTION_SUCCESS,
+      sectionId: '12',
+      serverSection: {
+        ...sections[1],
+        course_id: 9999,
+        script: null,
+      }
+    });
 
     const assignedSection = stateWithUnassignedSection.sections["11"];
     const unassignedSection = stateWithUnassignedSection.sections["12"];
     const assignedSectionWithUnit = stateWithUnassignedSection.sections["307"];
+    const invalidScriptSection = stateWithInvalidScriptAssignment.sections['12'];
+    const invalidCourseSection = stateWithInvalidCourseAssignment.sections['12'];
 
     it('assignmentNames returns the name if the section is assigned a course/script', () => {
       const names = assignmentNames(stateWithUnassignedSection.validAssignments, assignedSection);
@@ -998,6 +1018,16 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(names, []);
     });
 
+    it('assignmentName returns empty array if assigned script is not a valid assignment', () => {
+      const names = assignmentNames(stateWithInvalidScriptAssignment.validAssignments, invalidScriptSection);
+      assert.deepEqual(names, []);
+    });
+
+    it('assignmentName returns empty array if assigned course is not a valid assignment', () => {
+      const names = assignmentNames(stateWithInvalidCourseAssignment.validAssignments, invalidCourseSection);
+      assert.deepEqual(names, []);
+    });
+
     it('assignmentPaths returns the path if the section is assigned a course/script', () => {
       const paths = assignmentPaths(stateWithUnassignedSection.validAssignments, assignedSection);
       assert.deepEqual(paths, ['/courses/csd']);
@@ -1010,6 +1040,16 @@ describe('teacherSectionsRedux', () => {
 
     it('assignmentPaths returns empty array if unassigned', () => {
       const paths = assignmentPaths(stateWithUnassignedSection, unassignedSection);
+      assert.deepEqual(paths, []);
+    });
+
+    it('assignmentPaths returns empty array if assigned script is not a valid assignment', () => {
+      const paths = assignmentPaths(stateWithInvalidScriptAssignment, invalidScriptSection);
+      assert.deepEqual(paths, []);
+    });
+
+    it('assignmentPaths returns empty array if assigned course is not a valid assignment', () => {
+      const paths = assignmentPaths(stateWithInvalidCourseAssignment, invalidCourseSection);
       assert.deepEqual(paths, []);
     });
   });

@@ -11,9 +11,9 @@ nav: how_to_nav
 
 Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- स्वयंसेवक के लिए  पंजीकरण </ 0></li> 
+- स्वयंसेवक के लिए  पंजीकरण 
     
-    - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).</ul> 
+    - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>). 
     
     ## अवर ओफ कोड के प्रोत्साहन के लिए अतिरिक्त तरीके:
     
@@ -25,9 +25,9 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
     
     ## 1. Promote your Hour of Code
     
-    - आपके </a> अवर ओफ कोड  को बढ़ावा देने के लिए और दूसरों को मेजबानी के लिए प्रोत्साहित करे ।</li> 
+    - आपके अवर ओफ कोड  को बढ़ावा देने के लिए और दूसरों को मेजबानी के लिए प्रोत्साहित करे
         
-        - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. वे किसी कक्षासे संलग्न होने के लिए [पंजीकरण](<%= resolve_url('https://code.org/volunteer/engineer') %>) कर सकते है.</ul> 
+        - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. वे किसी कक्षासे संलग्न होने के लिए [पंजीकरण](<%= resolve_url('https://code.org/volunteer/engineer') %>) कर सकते है.
         
         ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
         
@@ -101,9 +101,8 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
         
         [/col-33]
 
-<p style="clear:both">&nbsp;</p>
+        <p style="clear:both">&nbsp;</p>
 
-        
         ## ७) गतिविधि समाप्ति पर जश्न
         
         - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
@@ -129,7 +128,6 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
         
         [/col-33]
 
-<p style="clear:both">&nbsp;</p>
+        <p style="clear:both">&nbsp;</p>
 
-        
         <%= view :signup_button %>
