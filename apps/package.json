@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.7.0",
+    "@code-dot-org/blockly": "1.7.1",
     "@code-dot-org/bramble": "0.1.26",
     "@code-dot-org/craft": "github:code-dot-org/craft#46cddf8482ef7fad2cd1c4e9ce813c7fde4e8adf",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
@@ -51,6 +51,7 @@
     "@code-dot-org/p5.play": "1.2.0-cdo",
     "@code-dot-org/piskel": "0.13.0-cdo.2",
     "@storybook/addon-info": "3.2.11",
+    "@storybook/addon-options": "^3.3.15",
     "@storybook/react": "3.2.11",
     "aws-sdk": "2.28.0",
     "babel-core": "6.9.0",

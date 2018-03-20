@@ -264,13 +264,7 @@ describe('determineInstructionsConstants', () => {
           teacherMarkdown: undefined,
           levelVideos: undefined,
           mapReference: undefined,
-          referenceLinks: undefined,
-          app: undefined,
-          scriptName: undefined,
-          stagePosition: undefined,
-          levelPosition: undefined,
-          serverLevelId: undefined,
-          scriptId: undefined
+          referenceLinks: undefined
         });
       });
     });
@@ -300,13 +294,7 @@ describe('determineInstructionsConstants', () => {
         teacherMarkdown: undefined,
         levelVideos: undefined,
         mapReference: undefined,
-        referenceLinks: undefined,
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        referenceLinks: undefined
       });
     });
 
@@ -336,13 +324,7 @@ describe('determineInstructionsConstants', () => {
         teacherMarkdown: undefined,
         levelVideos: undefined,
         mapReference: undefined,
-        referenceLinks: undefined,
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        referenceLinks: undefined
       });
     });
 
@@ -429,13 +411,7 @@ describe('determineInstructionsConstants', () => {
         hasContainedLevels: undefined,
         levelVideos: ["notEmpty"],
         mapReference: undefined,
-        referenceLinks: undefined,
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        referenceLinks: undefined
       });
     });
 
@@ -463,13 +439,7 @@ describe('determineInstructionsConstants', () => {
         hasContainedLevels: undefined,
         levelVideos: undefined,
         mapReference: '/test/abc.html',
-        referenceLinks: undefined,
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        referenceLinks: undefined
       });
     });
 
@@ -497,16 +467,9 @@ describe('determineInstructionsConstants', () => {
         hasContainedLevels: undefined,
         levelVideos: undefined,
         mapReference: undefined,
-        referenceLinks: ['/test/alpha.html', '/test/beta.html'],
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        referenceLinks: ['/test/alpha.html', '/test/beta.html']
       });
     });
   });
 });
-
 });
