@@ -494,7 +494,7 @@ module Pd::Application
     end
 
     def principal_approval_url
-      pd_application_principal_approval_url(application_guid)
+      pd_application_principal_approval_url(application_guid) if application_guid
     end
 
     # @override
