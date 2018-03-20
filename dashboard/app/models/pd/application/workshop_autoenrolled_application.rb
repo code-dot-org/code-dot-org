@@ -59,6 +59,10 @@ module Pd::Application
       Pd::Workshop.find_by(id: pd_workshop_id) if pd_workshop_id
     end
 
+    def workshop_date_and_location
+      workshop.try(&:date_and_location_name)
+    end
+
     # override
     def lock!
       return if locked?
