@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {editStudent} from './manageStudentsRedux';
 import {Checkbox} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ReactTooltip from 'react-tooltip';
 
 class ManageStudentsSharingCell extends Component {
   static propTypes = {
@@ -21,6 +22,7 @@ class ManageStudentsSharingCell extends Component {
 
   render() {
     const {disabled, checked} = this.props;
+
     return (
       <div>
         {!this.props.isEditing &&
@@ -35,11 +37,27 @@ class ManageStudentsSharingCell extends Component {
         }
         {this.props.isEditing &&
           <div>
-            <Checkbox
-              disabled={disabled}
-              checked={!this.props.editedValue}
-              onChange={this.changeSharing}
-            />
+            <span data-tip data-for="disabled-no-age">
+              <Checkbox
+                disabled={disabled}
+                checked={!this.props.editedValue}
+                onChange={this.changeSharing}
+              />
+            </span>
+            <ReactTooltip
+              id="disabled-no-age"
+              class="react-tooltip-hover-stay"
+              role="tooltip"
+              effect="solid"
+              place="top"
+              offset={{bottom: 10, right: 50}}
+              delayHide={1000}
+              disble={!disabled}
+            >
+              <div>
+                Please chose the age for the student first so we can pick the right default for this setting.
+              </div>
+            </ReactTooltip>
           </div>
         }
       </div>
