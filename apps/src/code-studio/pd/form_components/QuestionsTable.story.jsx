@@ -5,7 +5,7 @@ import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   storybook
-    .storiesOf('QuestionsTable', module)
+    .storiesOf('FormComponents/QuestionsTable', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([{
       name: 'simple questions table',
