@@ -22,7 +22,6 @@ class ManageStudentsSharingCell extends Component {
 
   render() {
     const {disabled, checked} = this.props;
-    const tooltipId = disabled ? "disabled-no-age" : "";
 
     return (
       <div>
@@ -36,9 +35,9 @@ class ManageStudentsSharingCell extends Component {
             }
           </div>
         }
-        {this.props.isEditing &&
+        {(this.props.isEditing && this.props.disabled) &&
           <div>
-            <span data-tip data-for={tooltipId}>
+            <span data-tip="" data-for={'disabled-no-age'}>
               <Checkbox
                 disabled={disabled}
                 checked={this.props.editedValue}
@@ -55,9 +54,20 @@ class ManageStudentsSharingCell extends Component {
               delayHide={1000}
             >
               <div>
-                Please select an age.
+                {'Please select an age'}
               </div>
             </ReactTooltip>
+          </div>
+        }
+        {!(this.props.isEditing && this.props.disabled) &&
+          <div>
+            <span data-tip="" data-for={''}>
+              <Checkbox
+                disabled={disabled}
+                checked={this.props.editedValue}
+                onChange={this.changeSharing}
+              />
+            </span>
           </div>
         }
       </div>
