@@ -140,7 +140,7 @@ describe('Artist', () => {
       setStickerSize.restore();
     });
     it('draws a sticker when size is 200 px', () => {
-      // Test condition for when width < size && height < size
+      // Test condition when width < size && height < size
       let artist = new Artist();
       const img = new Image(100, 100);
       let size = 200;
@@ -158,7 +158,7 @@ describe('Artist', () => {
     });
     it('draws a sticker when size is 30 px', () => {
       let artist = new Artist();
-      // Test condition for when width > height
+      // Test condition when width > height
       const img = new Image(100, 40);
       let size = 30;
       let blockId = "block_id_4";
