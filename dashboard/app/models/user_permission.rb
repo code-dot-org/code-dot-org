@@ -49,7 +49,7 @@ class UserPermission < ActiveRecord::Base
     # Granted to regional partner program managers.
     # Initially has the same abilities as workshop organizer.
     PROGRAM_MANAGER = 'program_manager'.freeze,
-    # Garnts access to review reported inaccuracies in census data
+    # Grants access to review reported inaccuracies in census data
     CENSUS_REVIEWER = 'census_reviewer'.freeze,
   ].freeze
 
