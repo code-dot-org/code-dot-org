@@ -2008,15 +2008,12 @@ class UserTest < ActiveSupport::TestCase
   test 'deleting user deletes dependent pd applications' do
     teacher = create :teacher
     application = create :pd_teacher1819_application, user: teacher
-    assert_equal teacher.id, application.user_id
     assert_equal application.id, teacher.pd_applications.first.id
 
     teacher.destroy
 
     assert teacher.reload.deleted?
-    assert_raise ActiveRecord::RecordNotFound do
-      Pd::Application::Teacher1819Application.find(application.id)
-    end
+    refute Pd::Application::Teacher1819Application.exists?(application.id)
   end
 
   test 'deleting teacher deletes dependent sections and followers' do
