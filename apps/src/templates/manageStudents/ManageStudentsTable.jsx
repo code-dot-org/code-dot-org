@@ -10,6 +10,7 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
@@ -18,7 +19,6 @@ import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
-import {Checkbox} from 'react-bootstrap';
 import experiments from '@cdo/apps/util/experiments';
 
 const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
@@ -246,13 +246,16 @@ class ManageStudentsTable extends Component {
     let disabled = rowData.isEditing ?
       this.props.editingData[rowData.id].age.length === 0 :
       true;
+    const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].sharingDisabled : true;
 
     return (
-      <span>
-        <Checkbox
-          disabled={disabled}
-        />
-      </span>
+      <ManageStudentsSharingCell
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        disabled={disabled}
+        checked={!rowData.sharingDisabled}
+        editedValue={!editedValue}
+      />
     );
   };
 
