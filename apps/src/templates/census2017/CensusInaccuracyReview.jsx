@@ -115,6 +115,29 @@ export default class CensusInaccuracyReview extends Component {
       backgroundColor: "#8afc9b",
     };
 
+    const inaccuracyReportColumns = [
+      {
+        property: 'label',
+      },
+      {
+        property: 'value',
+      },
+    ];
+
+    const inaccuracyReportRows = [
+      {label: "Submitter name", value: this.state.toReview.submitter_name || 'No Name Submitted'},
+      {label: "Submitter email address", value: this.state.toReview.submitter_email_address},
+      {label: "Submitter Role", value: this.state.toReview.submitter_role},
+      {label: "Comment", value: this.state.toReview.inaccuracy_comment},
+      {label: "This Survey's Teaches CS Result", value: this.state.toReview.teaches_cs ? 'YES' : 'NO'},
+      {label: "K8 School?", value: this.state.toReview.k8_school ? 'Yes' : 'No'},
+      {label: "High School?", value: this.state.toReview.high_school ? 'Yes' : 'No'},
+      {label: "How many 10 hours?", value: this.state.toReview.how_many_10_hours},
+      {label: "How many 20 hours?", value: this.state.toReview.how_many_20_hours},
+      {label: "Block programming", value: this.state.toReview.topic_blocks ? 'Yes' : 'No'},
+      {label: "Text programming", value: this.state.toReview.topic_text ? 'Yes' : 'No'},
+    ];
+
     const overrideText = `Create a ${this.state.toReview.teaches_cs ? 'YES' : 'NO'} override for this school.`;
     return (
       <div style={{maxWidth: 615}}>
@@ -168,98 +191,15 @@ export default class CensusInaccuracyReview extends Component {
         <hr />
         <div>
           <h3>Inaccuracy Report Data:</h3>
-          <table className="table table-bordered table-striped">
-            <tbody>
-              <tr>
-                <td>
-                  Submitter name
-                </td>
-                <td>
-                  {this.state.toReview.submitter_name || 'No Name Submitted'}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Submitter email address
-                </td>
-                <td>
-                  {this.state.toReview.submitter_email_address}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Submitter Role
-                </td>
-                <td>
-                  {this.state.toReview.submitter_role}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Comment
-                </td>
-                <td>
-                  {this.state.toReview.inaccuracy_comment}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  This Survey's Teaches CS Result
-                </td>
-                <td>
-                  {this.state.toReview.teaches_cs ? 'YES' : 'NO'}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  K8 School?
-                </td>
-                <td>
-                  {this.state.toReview.k8_school ? 'Yes' : 'No'}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  High School?
-                </td>
-                <td>
-                  {this.state.toReview.high_school ? 'Yes' : 'No'}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  How many 10 hours
-                </td>
-                <td>
-                  {this.state.toReview.how_many_10_hours}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  How many 20 hours
-                </td>
-                <td>
-                  {this.state.toReview.how_many_20_hours}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Block programming
-                </td>
-                <td>
-                  {this.state.toReview.topic_blocks ? 'Yes' : 'No'}
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Text programming
-                </td>
-                <td>
-                  {this.state.toReview.topic_text ? 'Yes' : 'No'}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <Table.Provider
+            className="table table-bordered table-striped"
+            columns={inaccuracyReportColumns}
+          >
+            <Table.Body
+              rows={inaccuracyReportRows}
+              rowKey="label"
+            />
+          </Table.Provider>
         </div>
         <br />
         <div>
