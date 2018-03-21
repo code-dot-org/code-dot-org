@@ -170,7 +170,6 @@
     "slider_speed": "1",
     "project_template_level_name": "U3 - Arrays - favThings template",
     "encrypted_examples": "RUfGS+Zr4moaaijF/9tOVweaP/J/EZUR/g5syplDr2Y3LqGQlhdpWyci0tAW\n4v0D\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -179,7 +178,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

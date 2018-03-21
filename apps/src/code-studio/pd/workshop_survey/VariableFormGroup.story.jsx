@@ -4,7 +4,7 @@ import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
 export default storybook => {
   storybook
-    .storiesOf('VariableFormGroup', module)
+    .storiesOf('FormComponents/VariableFormGroup', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([{
       name: 'basic uncontrolled VariableFormGroup',
