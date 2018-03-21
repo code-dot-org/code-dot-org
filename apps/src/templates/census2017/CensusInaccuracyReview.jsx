@@ -17,7 +17,7 @@ export default class CensusInaccuracyReview extends Component {
   formatTeachesCs = (teachesCs) => {
     return (
       <div style={{textAlign: 'center', verticalAlign: 'middle'}}>
-        {teachesCs ? teachesCs : "Null"}
+        {teachesCs}
       </div>
     );
   };
@@ -28,17 +28,6 @@ export default class CensusInaccuracyReview extends Component {
         {comment}
       </div>
     );
-  };
-
-  mapHistoricSummary = (teaches_cs) => {
-    switch (teaches_cs) {
-      case null:
-        return 'Null';
-      case undefined:
-        return 'No Data';
-      default:
-        return teaches_cs.charAt(0).toUpperCase() + teaches_cs.slice(1).toLowerCase();
-    }
   };
 
   formatSchool = (school) => {
