@@ -90,7 +90,7 @@ class Census::CensusSubmission < ApplicationRecord
   def inaccuracy_review_data
     school_infos.map do |si|
       next unless si.school
-      current_summary = si.school.census_summaries.select {|s| s.school_year == school_year}.first
+      current_summary = si.school.census_summaries.find {|s| s.school_year == school_year}
       stats = si.school.school_stats_by_year.try(:sort).try(:last)
       high_school = stats.try(:has_high_school_grades?)
       k8_school = stats.try(:has_k8_grades?)
