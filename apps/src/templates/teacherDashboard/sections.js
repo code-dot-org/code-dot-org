@@ -79,7 +79,7 @@ export function renderLoginTypeAndSharingControls(sectionId) {
   );
 }
 
-export function renderSectionTable(sectionId, loginType, courseId) {
+export function renderSectionTable(sectionId, loginType, courseName) {
   registerReducers({manageStudents, isRtl});
   const store = getStore();
 
@@ -89,11 +89,8 @@ export function renderSectionTable(sectionId, loginType, courseId) {
   const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
   // Show share column by default for CSD and CSP courses
-  const coursesToShowShareSetting = {
-    csd: 17,
-    csp: 18,
-  };
-  if (showShareColumn && Object.values(coursesToShowShareSetting).includes(courseId)) {
+  const coursesToShowShareSetting = ['csd', 'csp'];
+  if (showShareColumn && coursesToShowShareSetting.includes(courseName)) {
     store.dispatch(toggleSharingColumn());
   }
 
