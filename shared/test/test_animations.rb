@@ -230,7 +230,7 @@ class AnimationsTest < FilesApiTestBase
     # Using AnimationBucket directly because there's no public API for this
     animation_bucket = AnimationBucket.new
     response = animation_bucket.restore_previous_version(@channel_id, anim, original_version_id, nil)
-    restored_version_id = response.version_id
+    restored_version_id = response[:version_id]
     restored_file_data = @api.get_object_version(anim, restored_version_id)
 
     #Check that the restored version id is neither of the previous version ids
@@ -263,7 +263,7 @@ class AnimationsTest < FilesApiTestBase
     # Using AnimationBucket directly because there's no public API for this
     animation_bucket = AnimationBucket.new
     response = animation_bucket.restore_previous_version(@channel_id, anim, "bad_version_id", nil)
-    restored_version_id = response.version_id
+    restored_version_id = response[:version_id]
     restored_file_data = @api.get_object(anim, restored_version_id)
     restored_metadata = animation_bucket.get(@channel_id, anim)[:metadata]
 

@@ -158,52 +158,7 @@ nn:
         maze_3_2: Skriv eit program til meg så eg kan kome meg helt fram til grisen.
         maze_3_3: Korleis kjem eg meg til grisen? Forsikre deg om at eg ikkje kjem borti boksen med TNT!
         maze_3_4: Argh! Skriv eit program som får meg rundt sprengstoffet og heilt fram til grisen.
-        bounce_1_basketball: Fest ei blokk til «når venstre pil»-blokka og trykk «Køyr». Flytt handa ved å bruke venstre pil for å nå målet.
-        bounce_2_basketball: Fest ei blokk til «når høgre pil»- og «når venstre pil»-blokkene. Flytt handa for å nå begge måla.
-        bounce_5_basketball: Me skal sende ein ball flygande ned mot handa. Fest ei blokk til «når ein ball treffer handa»-blokka for å vere sikker på at ballen når flagget.
-        bounce_6_basketball: No er flagget på toppen. Du må feste blokker til begge «når ein ball treffer»-blokkene for å løyse denne oppgåva.
-        bounce_7_basketball: Fest blokker til alle «når» blokkene. Sprett ballen heilt til den treff flagget.
-        bounce_10_basketball: Det er no eit mål på toppen! Fest «skår eit poeng» og «skår motstanderen et poeng» blokkene til «når ein ball i mål» og «når ein ball bommar på handa»-blokkene for å lage eit spel. Sjå kor mange poeng du greier å skåre før motstandaren din skårer to gonger.
-        bounce_11_basketball: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på handa og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger!'
-        bounce_12_basketball: Opprett ditt eget basketball-spel. Du kan endre alle reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på sine telefonar.
-        bounce_1_sports: Kom deg til flagget! Kople ei blokk til "når venstre pil"-blokka og trykk "Køyr" for å flytte spelfiguren til flagget.
-        bounce_2_sports: No er det to flagg! Kople ei blokk til "når venstre pil"- og "når høgre pil"-blokkene for å kunne flytte spelfiguren i to retningar.
-        bounce_5_sports: Hockey-pucken kjem til å flyge ned mot spelfiguren! Kople en blokk til "når ball treff spelaren"-blokka for å treffe flagget.
-        bounce_6_sports: No er flagget på toppen. Du må feste blokker til begge «når ein ball treffer»-blokkene for å løyse denne oppgåva.
-        bounce_7_sports: Fest blokker til alle «når» blokkene. Sprett ballen heilt til den treff flagget.
-        bounce_10_sports: Nå er det eit mål på toppen! Fest blokkene "auk poeng" og "auk motstandaren sine poeng" til blokkene "når ballen er i mål" og "når ballen ikkje treff handa" for å lage eit spel. Sjå kor mange poeng du greier å få før motstandaren din får to poeng!
-        bounce_11_sports: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på handa og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger!'
-        bounce_12_sports: 'Lag ditt eige spel! Du bestemmer: Du kan endre på alle reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig, trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve det på sine telefonar!'
-        bounce_1: Fest ei blokk til «når venstre pil»-blokka og trykk «Køyr». Flytt rekkerten ved å bruke venstre pil for å nå målet.
-        bounce_2: Fest ei blokk til «når høgre pil»- og «når venstre pil»-blokkene. Flytt rekkerten for å nå begge måla.
-        bounce_3: Prøv noko liknande med «når opp pil»-blokka. Flytt rekkerten til målet på toppen.
-        bounce_4: Denne gongen må du legge til fire blokker. Flytt rekkerten til alle fire måla for å fullføre denne oppgåva.
-        bounce_5: Me skal sende ein ball flygande ned mot rekkerten. Fest ei blokk til «når ein ball treffer rekkerten»-blokka for å vere sikker på at ballen når mål.
-        bounce_6: No er sluttmålet på toppen. Du må feste blokker til begge «når ein ball treffer»-blokkene for å løyse denne oppgåva.
-        bounce_7: Fest blokker til alle «når» blokkene. Sprett ballen heilt til den treff målet.
-        bounce_10: Det er no eit mål på toppen. Fest «skår eit poeng» og «skår motstanderen et poeng» blokkene til «når ein ball i mål» og «når ein ball bommar på rekkerten»-blokkene for å lage eit spel! Sjå kor mange poeng du greier å skåre før motstandaren din skårer to gonger!
-        bounce_11: 'Du kan no feste blokker til «når starta»-blokka. Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv å endre scena eller farta på rekkerten og ballen og sjå kor mange poeng du kan skåre før motstandaren din har skåra to gonger.'
-        bounce_12: Opprett ditt eget Sprett-spel. Du kan endre alle bilda og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på sine telefonar.
         Custom_builder: Dra blokker fra verktøykassa til arbeidsområdet for å tegne det du vil. Trykk "Køyr" når du er klar.
-        flappy_1: Fest ei blokk til "når klikk"-blokka, og trykk "Køyr". Klikk eller trykk på skjermen for å flyge Flakse til målet.
-        flappy_2: Vi har no lagt til bakken. Fest ei blokk til "når traff bakken"-blokka. Koden må "Avslutt spelet" når Flakse krasjar.
-        flappy_3: Med "Når køyrt"-blokka kan du køyre kode når spelet startar.  Prøv å sette farta og flyge Flakse til målet!
-        flappy_4: Flakse vil fly gjennom hindringar med mindre du skriv kode som får han til å kræsje. Fest ei blokk til "når treff ei hindring"-blokka. Koden må "AVSLUTTE SPEL" når Flakse kræsjar inn i det første settet av røyr.
-        flappy_5: La oss legge til ei resultattavle og telle poeng når Flakse kjem seg forbi hinder. Legg til meir i blokka "når hinder passert" og få poeng når du flyg Flakse forbi det første settet med rør.
-        flappy_6: Sjå om du framleis kan skåre etter at du har fått Flakse til å flakse meir eller mindre.
-        flappy_7: Prøv å endre scena ved å feste ei anna blokk til "når køyrt"-blokka.
-        flappy_8: Du kan sette utsjånad når som helst, ikkje berre når spelet startar. Prøv å sette ei tilfeldig scene når andre hendingar skjer, for eksempel når du passerer eit hinder.
-        flappy_9: For å gjere det meir moro, prøv å sette poengsummen tilbake til 0 i staden for å avslutte spelet når du treff eit hinder.
-        flappy_11: Lag ditt eige Flakse-spel! Du kan endre alle bilda og alle reglane, til og med tyngdekrafta. Når du er ferdig, klikk Fullfør og du kan la venane dine prøve spelet på sine telefonar.
-        flappy_k1_1: Spel Flakse
-        flappy_k1_2: Fest ei blokk til "når klikk"-blokka, og trykk "Køyr". Klikk eller trykk på skjermen for å flyge Flakse til målet.
-        flappy_k1_3: Vi har no lagt til bakken. Fest ei blokk til "når traff bakken"-blokka. Koden må "Avslutt spelet" når Flakse krasjar.
-        flappy_k1_4: Med "Når køyrt"-blokka kan du køyre kode når spelet startar.  Prøv å sette farta og flyge Flakse til målet!
-        flappy_k1_5: Flakse vil fly gjennom hindringar med mindre du skriv kode som får han til å kræsje. Fest ei blokk til "når treff ei hindring"-blokka. Koden må "AVSLUTTE SPEL" når Flakse kræsjar inn i det første settet av røyr.
-        flappy_k1_6: La oss legge til ei resultattavle og telle poeng når Flakse kjem seg forbi hinder. Legg til meir i blokka "når hinder passert" og få poeng når du flyg Flakse forbi det første settet med rør.
-        flappy_k1_7: Sjå om du kan skåre fleire poeng for å kome forbi eit hinder
-        flappy_k1_8: Prøv å endre scena ved å feste ei anna blokk til "når køyrt"-blokka.
-        flappy_k1_9: Prøv å forandre spelaren ved å legge til ei "set spelaren"-blokk til "når køyrt"-blokka.
         jigsaw_1: Klikk på blokka
         jigsaw_2: Dra blokka til målet
         jigsaw_3: Ordne blokkene for å danne bildet
@@ -566,6 +521,7 @@ nn:
         applab_intro_designmode: App Lab - utformingsmodus
         applab_intro_share: App Lab - del Appen din
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

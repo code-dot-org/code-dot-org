@@ -158,52 +158,7 @@ lt:
         maze_3_2: Parašyk programą, kad pasiekčiau kiaulę.
         maze_3_3: Kaip man pasiekti kiaulę? Saugokis, kad nepaliesčiau TNT dėžės!
         maze_3_4: Oi! Parašyk programą, kuri mane privers apibėgti aplinkui TNT dėžę ir pasiekti kiaulę.
-        bounce_1_basketball: Prijunk blokelį prie „kai paspausta rodyklė kairėn“ ir paleisk programą. Kad pasiektum tikslą, judink ranką spausdamas rodyklę.
-        bounce_2_basketball: Prijunk po tinkantį blokelį prie „kai... rodyklė dešinėn“ ir „kai... rodyklė kairėn“. Judink ranką, kad pasiektum abu taikinius.
-        bounce_5_basketball: Paleistas kamuolys skries link rankos. Pridėk reikiamą komandą prie bloko „kai kamuolys pataiko į ranką“, kad pasiektume savo tikslą - paliesti vėliavą.
-        bounce_6_basketball: Dabar vėliava atsirado viršuje. Tau reikia prijungti blokelius prie abiejų „kai kamuolys..“ blokų (įvykių), kad įveiktum šią užduotį.
-        bounce_7_basketball: Prikabink blokelius prie kiekvieno „kai“ blokelio (įvykio). Atmušinėk kamuolį, kol jis pasieks vėliavą.
-        bounce_10_basketball: Dabar viršuje turime taikinį! Prijunk „pridėk tašką“ ir „pridėk tašką priešininkui“ komandas prie „kai kamuolys pataiko į tikslą“ ir „kai kamuolys nepataiko į ranką“, kad sukurtum žaidimą. Išbandyk, kiek taškų spėsi surinkti, kol „priešininkas“ nesurinko jų dvigubai daugiau.
-        bounce_11_basketball: Metas prijungti blokelius prie  „paleidus“ komandos. Panaudok naują blokelį  „paleisk naują kamuolį“ daugiau nei vienoje vietoje. Taip pat, pamėgink pakeisti scenos foną ar rankos bei kamuolio greitį. Išbandyk, kiek taškų sugebėsi surinkti, kol priešininkas nesurinko jų dvigubai daugiau!
-        bounce_12_basketball: Sukurk savo krepšinio žaidimą - gali keisti visas taisykles. Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.
-        bounce_1_sports: Nusigauk iki vėliavos! Prijunk blokelį prie „kai paspausta rodyklė kairėn“ komandos ir paspausk „Paleisti“, kad nuvestum žaidėją iki vėliavos.
-        bounce_2_sports: Dabar turime ja dvi vėliavas! Pridėk tinkančius blokus prie „kai paspausta rodyklė kairėn" ir "kai paspausta rodyklė dešinėn" komandų, kad tavo žaidėjas galėtų judėti abiem kryptimis.
-        bounce_5_sports: Ledo ritulio ritulys skries žemyn link žaidėjo! Pridėk reikiamą komandą prie bloko „kai kamuolys palies žaidėją“, kad pasiektume savo tikslą - paliesti vėliavą.
-        bounce_6_sports: Dabar vėliava atsirado viršuje. Tau reikia prijungti blokelius prie abiejų „kai kamuolys..“ blokų (įvykių), kad įveiktum šią užduotį.
-        bounce_7_sports: Prikabink blokelius prie kiekvieno „kai“ blokelio (įvykio). Atmušinėk kamuolį, kol jis pasieks vėliavą.
-        bounce_10_sports: Dabar viršuje turime taikinį! Prijunk „pridėk tašką“ ir „pridėk tašką priešininkui“ komandas prie „kai kamuolys pataiko į tikslą“ ir „kai kamuolys nepataiko į ranką“, kad sukurtum žaidimą. Išbandyk, kiek taškų spėsi surinkti, kol „priešininkas“ nesurinko jų dvigubai daugiau.
-        bounce_11_sports: Metas prijungti blokelius prie  „paleidus“ komandos. Panaudok naują blokelį  „paleisk naują kamuolį“ daugiau nei vienoje vietoje. Taip pat, pamėgink pakeisti scenos foną ar rankos bei kamuolio greitį. Išbandyk, kiek taškų sugebėsi surinkti, kol priešininkas nesurinko jų dvigubai daugiau!
-        bounce_12_sports: 'Sukurk savo žaidimą! Dabar tu čia šeimininkas: gali pakeisti visas taisykles, panaudoti kelias sporto rūšis - būk kūrybingas!. Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.'
-        bounce_1: Prijunk blokelį prie  „kai ... rodyklė kairėn“ ir paleisk programą. Kad pasiektum tikslą, judink raketę su rodykle.
-        bounce_2: Prijunk blokelį prie  „kai ... rodyklė dešinėn“ ir „kai ... kairėn“ . Judink raketę, kad pasiektum abu  taikinius.
-        bounce_3: Dabar pabandyk atlikti kažką panašaus su blokeliu „kai ... rodyklė aukštyn“. Judink raketę iki taikinio viršuje.
-        bounce_4: Šį kartą reikia pridėti keturis blokelius. Nuvesk raketę į keturis taškus, kad išspręstum šią užduotį.
-        bounce_5: Link raketės pradės skristi kamuolys. Pridėk reikiamą komandą prie bloko „kai kamuolys paliečia raketę“, kad kamuolys pasiektų finišą.
-        bounce_6: Dabar finišas yra viršuje. Tau reikia prijungti blokelius prie dviejų „kai kamuolys atsitrenkia“ blokelių, kad išspręstum šią užduotį.
-        bounce_7: Prikabink blokelius prie kiekvieno „kai“ blokelio. Kamuolis tol turi judėti, kol palies finišą.
-        bounce_10: Dabar viršuje yra taikinys. Pridėk „pelnyti tašką“ ir „pelnyti tašką priešininkui“  komandas  prie „kai kamuolys pataiko į tikslą“ ir „kai kamuolys nepataiko į raketę“, kad sukurtum žaidimą. Išbandyk, kiek taškų surinksi, kol "priešininkas" surinks dvigubai daugiau.
-        bounce_11: Tau reikia prijungti naują blokelį „paleisk naują kamuolį“ daugiau nei vienoje vietoje. Taip pat pamėgink pakeisti scenos foną ar raketės greitį . Išbandyk, kiek taškų sugebėsi surinkti, kol priešininkas jų gaus dvigubai daugiau.
-        bounce_12: Sukurk savo "Pong" žaidimą. Tu gali pakeisti išvaizdą bei taisykles. Kai pabaigsi, spustelk "Finišas", ir draugai galės išbandyti jį savo telefonuose (ar pan.).
         Custom_builder: Nutempk blokelius ir įrankinės į darbo lauką, kad galėtum nupiešti lygį, kurį nori sukurti. Nuspausk „Paleisti“ kai užbaigsi.
-        flappy_1: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą.
-        flappy_2: Dabar pridėjome žemę žaidime. Prijunk reikalingą blokelį prie blokelio „kai atsitrenksi į žemę“. Kai paukštis pasieks žemę, turi baigtis žaidimas.
-        flappy_3: Blokelis „kai žaidimas prasideda“ paleis kodą, kai nuspausi žaidimo pradžios mygtuką. Pamėgink pakeisti žaidimo greitį.
-        flappy_4: Flappy paukštis skris kiaurai per kliūtis, nebent parašysi kodą, kad kažkas įvyktų, kai jis į jas atsitrenks. Prie blokelio „kai atsitrenksi į kliūtį“ pridėk reikalingą blokelį. Kai Flappy atsitrenks į pirmuosius vamzdžius, žaidimas turi pasibaigti.
-        flappy_5: Pridėkime taškų lentą, kurioje bus skaičiuojami taškai, kai Flappy pereis per kliūtis. Pridėk blokelį „kai įveiksi kliūtį“ ir prie jo pridėk reikalingą blokelį, kad paukštis gautų vieną tašką, perskridęs pro pirmuosius vamzdžius.
-        flappy_6: Patikrink, ar sugebėsi gauti tašką, pakeitęs paukščio suplasnojimo stiprumą.
-        flappy_7: Toliau, pamėgink pakeisti sceną, prijungdamas atitinkamą komandą prie "kai paleista" bloko.
-        flappy_8: Išvaizdą galima nustatyti bet kuriuo momentu - nebūtinai, kai žaidimas prasideda. Pamėgink nustatyti atsitiktinį scenos foną, kai įvyksta tam tikri įvykiai, pavyzdžiui, kai yra pereinama per kliūtį.
-        flappy_9: Paįvairinkime žaidimą. Kai atsitrenksi į kliūtį, geriau ne užbaik žaidimą, o panaikink visus surinktus taškus.
-        flappy_11: Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir taisykles, netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo draugai galėtų pažaisti tavo žaidimą savo telefonuose.
-        flappy_k1_1: Žaisk Flappy
-        flappy_k1_2: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą.
-        flappy_k1_3: Dabar pridėjome žemę žaidime. Prijunk reikalingą blokelį prie blokelio „kai atsitrenksi į žemę“. Kai paukštis pasieks žemę, turi baigtis žaidimas.
-        flappy_k1_4: Blokelis „kai žaidimas prasideda“ paleis kodą, kai nuspausi žaidimo pradžios mygtuką. Pamėgink pakeisti žaidimo greitį.
-        flappy_k1_5: Flappy paukštis skris kiaurai per kliūtis, nebent parašysi kodą, kad kažkas įvyktų, kai jis į jas atsitrenks. Prie blokelio „kai atsitrenksi į kliūtį“ pridėk reikalingą blokelį. Kai Flappy atsitrenks į pirmuosius vamzdžius, žaidimas turi pasibaigti.
-        flappy_k1_6: Pridėkime taškų lentą, kurioje bus skaičiuojami taškai, kai Flappy pereis per kliūtis. Pridėk blokelį „kai įveiksi kliūtį“ ir prie jo pridėk reikalingą blokelį, kad paukštis gautų vieną tašką, perskridęs pro pirmuosius vamzdžius.
-        flappy_k1_7: Ar galima laimėti kelis taškus už kliūties įveikimą
-        flappy_k1_8: Toliau, pamėgink pakeisti sceną, prijungdamas atitinkamą komandą prie "kai paleista" bloko.
-        flappy_k1_9: Pamėgink pakeisti žaidėją, prijungdamas komandą "žaidėjas = ..." prie "kai paleista" blokelio.
         jigsaw_1: Nuspausk ant blokelio
         jigsaw_2: Nutempk blokelį į tikslą
         jigsaw_3: Sudėliok blokelius, kad gautum vaizdą
@@ -566,6 +521,7 @@ lt:
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat blokeliu

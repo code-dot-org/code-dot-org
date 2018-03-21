@@ -3,7 +3,7 @@ import ProgressLegend from './ProgressLegend';
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressLegend', module)
+    .storiesOf('Progress/ProgressLegend', module)
     .addStoryTable([
       {
         name:'progress legend - CSF',

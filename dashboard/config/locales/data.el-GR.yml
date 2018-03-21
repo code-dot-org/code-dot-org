@@ -334,134 +334,9 @@
           με τον δυναμίτη!"
         maze_3_4: "Αααα! Γράψε μου ένα πρόγραμμα που να με πηγαίνει γύρω από το δυναμίτη
           και να φτάνω στο γουρούνι."
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
-        bounce_11_sports: You can now attach blocks to the "when run" block. You have
-          to attach the new "throw new ball" block in more than one place. Also, try
-          changing the scene or the speed of the hand and the ball and see how many
-          points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
-        bounce_1: Κόλλησε ένα μπλοκ στο μπλοκ "όταν αριστερό βέλος" και πάτησε "Εκτέλεση".
-          Μετακίνησε τη ρακέτα χρησιμοποιώντας το αριστερό βέλος για να φτάσεις το
-          στόχο τερματισμού.
-        bounce_2: Κόλλησε ένα μπλοκ στα μπλοκ "όταν δεξί βέλος" και "όταν αριστερό
-          βέλος". Μετακίνησε τα ρακέτα για να φτάσεις και τους δύο στόχους τερματισμού.
-        bounce_3: Τώρα δοκίμασε κάτι παρόμοιο με το μπλοκ "όταν επάνω βέλος". Μετακίνησε
-          τη ρακέτα στο στόχο τερματισμού στο επάνω μέρος.
-        bounce_4: "Αυτή τη φορά πρέπει να προσθέσεις τέσσερα μπλοκ. Μετακίνησε τη
-          ρακέτα σε όλους τους στόχους τερματισμούς για να ολοκληρώσεις αυτό το παζλ."
-        bounce_5: Θα στείλουμε μία μπάλα προς τη ρακέτα. Κόλλησε ένα μπλοκ στο μπλοκ
-          "όταν η μπάλα χτυπήσει τη ρακέτα" για να βεβαιωθείς ότι η μπάλα θα φτάσει
-          το στόχο τερματισμού.
-        bounce_6: Τώρα ο στόχος τερματισμού βρίσκεται στο επάνω μέρος. Πρέπει να κολλήσεις
-          μπλοκ και στα δύο μπλοκ "όταν η μπάλα χτυπήσει" για να ολοκληρώσεις το παζλ.
-        bounce_7: Επισυνάψετε τα μπλοκς σε κάθε ένα από τα "όταν" μπλοκ. Αναπήδησε
-          τη μπάλα μέχρι να χτυπήσει το τελικό στόχο.
-        bounce_10: Υπάρχει τώρα ένα στόχος στην κορυφή. Επισυνάψετε το "σημείο σκορ"
-          και "αντίπαλο σκόρ" μπλοκ για να την "όταν μπάλα στο στόχο" και "όταν μπάλα
-          χάνει κουπί " μπλοκ για να κάνει ένα παιχνίδι. Δείτε πόσους πόντους μπορείτε
-          να κερδίσετε πριν ο αντίπαλος σου κερδίσει  δύο φορές.
-        bounce_11: Μπορείς τώρα να συνδέσεις πολλά μπλοκ στο  "όταν εκτελείται" μπλοκ.  Πρέπει
-          να συνδέσεις το νέο  "χτύπα νέο μπαλάκι" μπλοκ σε περισσότερα από ένα μέρη.
-          Επίσης, προσπάθησε να αλλάξεις το σκηνικό ή την ταχύτητα της ρακέτας και
-          της μπάλας και θα δεις πόσους πόντους μπορείς να σκοράρεις πριν ο αντίπαλός
-          σου σκοράρει δυο φορές.
-        bounce_12: "Δημιούργησε το δικό σου Παιχνίδι Αναπηδήσεων. Μπορείς να αλλάξεις
-          όλα τα οπτικά και τους κανόνες. Όταν τα κάνεις, πάτα Τέλος για να αφήσεις
-          τους φίλους σου να δοκιμάσουν το δικό σου παιχνίδι στα κινητά τους."
         Custom_builder: Σύρε τα μπλοκ από την εργαλειοθήκη στον χώρο εργασίας για
           να σχεδιάσεις το επίπεδο που θέλεις να δημιουργήσεις. Πάτα "Εκτέλεση" όταν
           είσαι έτοιμος.
-        flappy_1: Προσάρμοσε ένα μπλοκ στο "Όταν πατήσεις με το ποντίκι" μπλοκ και
-          πάτα "Εκτέλεση". Πάτα με το ποντίκι ή πίεσε στην οθόνη αφής για να μετακινήσεις
-          τον "Φτερογούλη"  στον στόχο.
-        flappy_2: Τώρα έχουμε προσθέσει "κάποιο" έδαφος. Προσάρμοσε ένα μπλοκ στο
-          "'όταν χτυπήσεις το έδαφος" μπλοκ. Ο κώδικάς σου χρειάζεται το 'ΤΕΛΟΣ ΠΑΙΧΝΙΔΙΟΥ'
-          όταν ο "Φτερογούλης" στουκάρει.
-        flappy_3: Το "όταν εκτελείται" μπλοκ, σου επιτρέπει να "τρέξεις" τον κωδικά
-          σου όταν το παιχνίδι αρχίζει. Δοκίμασε να θέσεις το επίπεδο ταχύτητας και
-          το φτεροκόπημα προς τον στόχο.
-        flappy_4: Ο "Φτερογούλης" θα πετάξει μέσα από εμπόδια εκτός κι αν γράψεις
-          κώδικα για να τον κάνεις να στουκάρει. Προσάρμοσε ένα μπλοκ στο "όταν χτυπήσει
-          ένα εμπόδιο" μπλοκ. Ο κώδικάς σου χρειάζεται το "ΤΕΛΟΣ ΠΑΙΧΝΙΔΙΟΥ" όταν
-          ο "Φτερογούλης" στουκάρει στις πρώτες σωληνώσεις.
-        flappy_5: Ας προσθέσουμε έναν πίνακα αποτελεσμάτων και να μετράμε τους πόντους
-          όταν ο "Φτερογούλης" προσπερνά τα εμπόδια. Πρόσθεσε τον στο "όταν περνά
-          ένα εμπόδιο" μπλοκ, και τότε θα πετυχαίνεται ένας πόντος με την πτήση του
-          "Φτερογούλη" ανάμεσα στις πρώτες σωληνώσεις.
-        flappy_6: Δες αν μπορείς να πετύχεις πόντο μετά που θα μικρύνεις ή μεγαλώσεις
-          το φτεροκόπημα του "Φτερογούλη".
-        flappy_7: Μετά, δοκίμασε να αλλάξεις τη σκηνή με την προσαρμογή ενός άλλου
-          μπλοκ στο "όταν εκτελείται" μπλοκ.
-        flappy_8: "Μπορείς να θέσεις οπτικά κάθε στιγμή, όχι μόνο όταν αρχίζει το
-          παιχνίδι. Δοκίμασε τη ρύθμιση μιας ΤΥΧΑΙΑΣ σκηνής όταν άλλα γεγονότα συμβαίνουν,
-          για παράδειγμα, όταν προσπερνά ένα εμπόδιο."
-        flappy_9: "Για να τα μπερδέψετε, όταν χτυπάτε ένα εμπόδιο, αντί να τελειώνετε
-          το παιχνίδι προσπαθήστε να επαναφέρετε το σκορ στο 0."
-        flappy_11: Δημιούργησε το δικό σου παιχνίδι του "Φτερογούλη". Μπορείς να αλλάξεις
-          όλα τα γραφικά και τους κανόνες, ακόμη και την βαρύτητα. Όταν τα κάνεις,
-          πάτα "Τέλος" και άσε τους φίλους σου να δοκιμάσουν το παιχνίδι στα κινητά
-          τους.
-        flappy_k1_1: Παίξε "Φτερογούλη"
-        flappy_k1_2: Προσάρμοσε ένα μπλοκ στο "Όταν πατήσεις με το ποντίκι" μπλοκ
-          και πάτα "Εκτέλεση". Πάτα με το ποντίκι ή πίεσε στην οθόνη αφής για να μετακινήσεις
-          τον "Φτερογούλη"  στον στόχο.
-        flappy_k1_3: Τώρα έχουμε προσθέσει "κάποιο" έδαφος. Προσάρμοσε ένα μπλοκ στο
-          "'όταν χτυπήσεις το έδαφος" μπλοκ. Ο κώδικάς σου χρειάζεται το 'ΤΕΛΟΣ ΠΑΙΧΝΙΔΙΟΥ'
-          όταν ο "Φτερογούλης" στουκάρει.
-        flappy_k1_4: Το "όταν εκτελείται" μπλοκ, σου επιτρέπει να "τρέξεις" τον κωδικά
-          σου όταν το παιχνίδι αρχίζει. Δοκίμασε να θέσεις το επίπεδο ταχύτητας και
-          το φτεροκόπημα προς τον στόχο.
-        flappy_k1_5: Ο "Φτερογούλης" θα πετάξει μέσα από εμπόδια εκτός κι αν γράψεις
-          κώδικα για να τον κάνεις να στουκάρει. Προσάρμοσε ένα μπλοκ στο "όταν χτυπήσει
-          ένα εμπόδιο" μπλοκ. Ο κώδικάς σου χρειάζεται το "ΤΕΛΟΣ ΠΑΙΧΝΙΔΙΟΥ" όταν
-          ο "Φτερογούλης" στουκάρει στις πρώτες σωληνώσεις.
-        flappy_k1_6: Ας προσθέσουμε έναν πίνακα αποτελεσμάτων και να μετράμε τους
-          πόντους όταν ο "Φτερογούλης" προσπερνά τα εμπόδια. Πρόσθεσε τον στο "όταν
-          περνά ένα εμπόδιο" μπλοκ, και τότε θα πετυχαίνεται ένας πόντος με την πτήση
-          του "Φτερογούλη" ανάμεσα στις πρώτες σωληνώσεις.
-        flappy_k1_7: "Δες αν μπορείς να σκοράρεις πολλαπλούς πόντους με το να προσπερνά
-          ένα εμπόδιο."
-        flappy_k1_8: Μετά, δοκίμασε να αλλάξεις τη σκηνή με την προσαρμογή ενός άλλου
-          μπλοκ στο "όταν εκτελείται" μπλοκ.
-        flappy_k1_9: Δοκίμασε αλλάζοντας τον παίχτη με την προσαρμογή του "βάλε παίχτη"
-          μπλοκ στο "όταν εκτελείται" μπλοκ.
         jigsaw_1: "Πάτα με το ποντίκι πάνω στο μπλοκ"
         jigsaw_2: "Βάλε το μπλοκ στον στόχο"
         jigsaw_3: "Τακτοποίησε τα μπλοκ για να σχηματίσουν την εικόνα"
@@ -967,6 +842,7 @@
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

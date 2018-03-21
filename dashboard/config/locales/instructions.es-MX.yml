@@ -7239,12 +7239,14 @@
       bounce_12_instruction: Crea tu propio juego "Rebote". Puedes cambiar todos los
         efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar para
         que tus amigos prueben tu juego en sus teléfonos.
-      bounce_12_basketball_instruction: Crea tu propio juego de baloncesto. Puedes
-        cambiar todas las reglas. Cuando hayas terminado, haz clic en finalizar para
-        permitir a tus amigos/as probar el juego en sus teléfonos.
-      bounce_12_sports_instruction: Crea tu propio juego. Puedes cambiar todas las
-        reglas y mezclar deportes. ¡Puedes ser creativo! Cuando estés listo haz clic
-        en Terminar para que tus amigos prueben tu juego en sus teléfonos.
+      bounce_12_basketball_instruction: |-
+        Create your own Basketball game. You can
+        change all the rules. When you're done, click Finish to let friends try your
+        game on their phones.
+      bounce_12_sports_instruction: |-
+        Create your own game! You're in charge here:
+        you can change all the rules, mix and match sports, get creative! When you're
+        done, click Finish to let friends try your game on their phones.
       bounce_1_basketball_instruction: Une un bloque al bloque "cuando flecha izquierda"
         y presiona "Ejecutar". Mueve la mano usando la flecha izquierda para alcanzar
         el objetivo final.
@@ -10413,6 +10415,9 @@
       flappy_1_instruction: Adjunta un bloque a "cuando se haga clic en el bloque",
         entonces presiona "Ejecutar". Haz clic o toca la pantalla para mover a Flappy
         hacia el objetivo.
+      flappy_11_instruction: Crea tu propio juego Flappy, puedes cambiar todos los
+        efectos visuales y las reglas, hasta la gravedad. Cuando finalices, haz clic
+        en Terminar para que tus amigos prueben tu juego en sus teléfonos.
       flappy_2_instruction: Ahora hemos agregado el suelo. Adjunta un bloque al bloque
         "cuando golpee el suelo". Tu código necesita 'TERMINAR EL JUEGO' cuando Flappy
         golpee el suelo.
@@ -10436,9 +10441,6 @@
         sucedan otros eventos, por ejemplo, al superar un obstáculo.
       flappy_9_instruction: Para mezclar las cosas, al chocar con un obstáculo, en
         vez de terminar el juego, intente ajustar el marcador de nuevo a 0.
-      flappy_11_instruction: Crea tu propio juego Flappy, puedes cambiar todos los
-        efectos visuales y las reglas, hasta la gravedad. Cuando finalices, haz clic
-        en Terminar para que tus amigos prueben tu juego en sus teléfonos.
       frozen circle function in circle_instruction: Ahora crearemos 20 círculos superpuestos,
         girando 18 grados entre cada círculo.
       frozen circle function with parameter_instruction: Aquí está un bloque "Crear

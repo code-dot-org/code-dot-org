@@ -998,6 +998,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: "[șir gol]"
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: |

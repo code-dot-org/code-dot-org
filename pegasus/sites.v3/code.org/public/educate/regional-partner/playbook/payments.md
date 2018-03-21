@@ -1,11 +1,11 @@
-<meta name="robots" content="noindex">
 ---
 title: Payment Information
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
+<a id="top"></a>
 
 # Payment Information
-<a id="top"></a>
 ________________
 
 ## Table of Contents

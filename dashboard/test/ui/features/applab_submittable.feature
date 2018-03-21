@@ -57,12 +57,11 @@ Scenario: Submit anything, teacher is able to unsubmit
   Then I sign out
 
 Scenario: 'Help & Tips' and 'Instruction' tabs are visible if level has videos
-  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?enableExperiments=resourcesTab"
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1"
   When I click selector ".uitest-helpTab" once I see it
   And I wait until ".editor-column" contains text "Turtle Programming"
   And I click selector ".uitest-instructionsTab"
   And I wait until ".editor-column" contains text "Given only 4 turtle commands,"
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?disableExperiments=resourcesTab"
 
 Scenario: 'Help & Tips' and 'Instruction' tabs are visible if the level has a map reference
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/18?enableExperiments=additionalResources"

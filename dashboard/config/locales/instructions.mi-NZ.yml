@@ -11008,6 +11008,9 @@
       flappy_1_instruction: Whakapiri i tētahi paraka ki te paraka "ina pāwhiri",
         kātahi ka pāwhiritia te "Whakahaerehia". Pāwhiritia, patupatu rānei i te mata
         ke te whakaneke i a Flappy ki te ūnga.
+      flappy_11_instruction: Waihangahia tō ake kēmu Flappy. E whakaae ana kia panonihia
+        ngā atanga katoa, ngā ture, ka mutu, te tō ā-papa. Kia mutu koe, pāwhiritia
+        te Mutu kia wātea kia whakamātauria e ō hoa ki ō rātou waea.
       flappy_2_instruction: Kua tāpiritia he papa. Whakapiri i tētahi paraka ki te
         paraka "ka tau ki te papa". Me whai tō waehere i te "WHAKAMUTU I TE KĒMU"
         i te wā ka pao a Flappy ki te papa.
@@ -11031,9 +11034,6 @@
         ina puta tētahi atu āhuatanga pēnei i te wā ka hipa i tētahi taunahua.
       flappy_9_instruction: Kia rerekē noa iho, ki te tuki ki tētahi taunahua me whakahoki
         i te tapeke piro ki te 0 kaua kē ia te whakamutu i te kēmu.
-      flappy_11_instruction: Waihangahia tō ake kēmu Flappy. E whakaae ana kia panonihia
-        ngā atanga katoa, ngā ture, ka mutu, te tō ā-papa. Kia mutu koe, pāwhiritia
-        te Mutu kia wātea kia whakamātauria e ō hoa ki ō rātou waea.
       frozen circle function in circle_instruction: |-
         Now let's create 20 overlapping
         circles, turning 18 degrees between each circle.
