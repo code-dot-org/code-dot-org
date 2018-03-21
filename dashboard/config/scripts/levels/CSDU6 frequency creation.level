@@ -61,8 +61,8 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 frequency template",
-    "contained_level_names": null,
-    "encrypted_examples": "T3QqM0bNRnEY2I6fWo7xcqCX9W4j1FYvnS3dALhI2ATBx2Z2Az4ktQclTWd+\ng4SeQ2eCrYFTgzz8PQFfNJTHXw==\n"
+    "encrypted_examples": "T3QqM0bNRnEY2I6fWo7xcqCX9W4j1FYvnS3dALhI2ATBx2Z2Az4ktQclTWd+\ng4SeQ2eCrYFTgzz8PQFfNJTHXw==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

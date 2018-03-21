@@ -196,6 +196,10 @@ class User < ActiveRecord::Base
 
   has_one :circuit_playground_discount_application
 
+  has_many :pd_applications,
+    class_name: 'Pd::Application::ApplicationBase',
+    dependent: :destroy
+
   after_create :associate_with_potential_pd_enrollments, :update_share_setting
 
   # after_create :send_new_teacher_email
