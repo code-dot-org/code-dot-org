@@ -61,7 +61,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   end
 
   def partner
-    if current_user.nil? || !current_user.permission?(UserPermission::PROGRAM_MANAGER)
+    unless current_user.try(:permission?, UserPermission::PROGRAM_MANAGER)
       render :please_sign_in
       return
     end
