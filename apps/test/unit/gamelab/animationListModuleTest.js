@@ -27,6 +27,9 @@ describe('animationListModule', function () {
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
+    beforeEach(() => sinon.stub(Math, 'random').returns(0.5));
+    afterEach(() => Math.random.restore());
+
     it(`returns the sourceUrl from props if it exists`, function () {
       const props = {sourceUrl: 'bar'};
       expect(animationSourceUrl(key, props)).to.equal('bar');
@@ -45,7 +48,11 @@ describe('animationListModule', function () {
 
     it(`constructs a sourceUrl from key and project if one isn't provided in props`, function () {
       const props = {sourceUrl: null};
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png');
+      // Temporary: Local-cachebust animation requests, so after restoring
+      // and old version of the project the client isn't seeing newer animations.
+      // Should be able to tear this out once we always request animations
+      // by specific version.
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?cachebust=7fffff');
     });
 
     it(`appends version query param if props has a version id and version flag is passed`, function () {
@@ -422,14 +429,17 @@ describe('animationListModule', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
-          'foo': {}
+          'foo': {
+            version: 'test-version'
+          },
         }
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList), {
         orderedKeys: ['foo'],
         propsByKey: {
           'foo': {
-            sourceUrl: `${document.location.origin}/v3/animations/fake_id/foo.png`
+            version: 'test-version',
+            sourceUrl: `${document.location.origin}/v3/animations/fake_id/foo.png?version=test-version`
           }
         }
       });

@@ -8,7 +8,7 @@ import {featuredProjectTableTypes} from './projectConstants';
 
 export default storybook => {
   return storybook
-    .storiesOf('FeaturedProjectsTable', module)
+    .storiesOf('Projects/FeaturedProjectsTable', module)
     .addStoryTable([
       {
         name: 'Featured Project Table - current',
