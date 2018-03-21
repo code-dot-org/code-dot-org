@@ -1129,7 +1129,7 @@ exports.install = function (blockly, blockInstallOptions) {
         '", null, \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.turtle_sticker_with_size = blockly.Blocks.turtle_stamp = {
+  blockly.Blocks.turtle_sticker_with_size = {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
@@ -1157,7 +1157,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  generator.turtle_sticker_with_size = generator.turtle_stamp = function () {
+  generator.turtle_sticker_with_size = function () {
     var size = generator.valueToCode(this, 'SIZE', Blockly.JavaScript.ORDER_NONE);
     return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') + '", ' + size + ', \'block_id_' + this.id + '\');\n';
   };
