@@ -1,9 +1,24 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";
+import {updateShareSetting} from '../teacherDashboard/teacherSectionsRedux';
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 
-export default class SharingControlActionsHeaderCell extends Component {
+class SharingControlActionsHeaderCell extends Component {
+  static propTypes = {
+    // provided by Redux
+    sectionId: PropTypes.number.isRequired,
+    updateShareSetting: PropTypes.func.isRequired,
+  };
+
+  disableSharing = () => {
+    this.props.updateShareSetting(this.props.sectionId, true);
+  };
+
+  enableSharing = () => {
+    this.props.updateShareSetting(this.props.sectionId, false);
+  };
 
   render() {
     return (
@@ -12,12 +27,12 @@ export default class SharingControlActionsHeaderCell extends Component {
           type={QuickActionsCellType.header}
         >
           <PopUpMenu.Item
-            onClick={() => console.log('enable all was clicked!')}
+            onClick={this.enableSharing}
           >
             {i18n.projectSharingEnableAll()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            onClick={() => console.log('disable all was clicked!')}
+            onClick={this.disableSharing}
           >
             {i18n.projectSharingDisableAll()}
           </PopUpMenu.Item>
@@ -33,3 +48,7 @@ export default class SharingControlActionsHeaderCell extends Component {
     );
   }
 }
+
+export default connect((state, props) => ({}), {
+  updateShareSetting
+})(SharingControlActionsHeaderCell);
