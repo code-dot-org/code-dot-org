@@ -107,6 +107,22 @@ describe('Artist', () => {
 
       setStickerSize.restore();
     });
+    it('draws a sticker when size is 0', () => {
+      let artist = new Artist();
+      const img = new Image(100, 100);
+      let size = 0;
+      let blockId = "block_id_4";
+      let options = {smoothAnimate: false};
+
+      artist.visualization = new Artist.Visualization();
+      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      artist.stickers = {Alien:img};
+      artist.step('sticker', ['Alien', size, blockId], options);
+
+      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -0, -0, 0, 0);
+
+      setStickerSize.restore();
+    });
   });
 
   describe('jumpTo', () => {
