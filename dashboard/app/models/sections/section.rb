@@ -159,7 +159,7 @@ class Section < ActiveRecord::Base
     if follower
       if follower.deleted?
         follower.restore
-        student.update!(sharing_disabled: true) if sharing_disabled?
+        student.update!(sharing_disabled: sharing_disabled) unless student.sharing_disabled
         return ADD_STUDENT_SUCCESS
       end
       return ADD_STUDENT_EXISTS
@@ -188,7 +188,14 @@ class Section < ActiveRecord::Base
   # Optionally email the teacher.
   def remove_student(student, follower, options)
     follower.delete
-    student.update!(sharing_disabled: false) if student.sections_as_student.empty?
+
+    if student.sections_as_student.empty?
+      if student.under_13?
+        student.update!(sharing_disabled: true)
+      else
+        student.update!(sharing_disabled: false)
+      end
+    end
 
     if options[:notify]
       # Though in theory required, we are missing an email address for many teachers.

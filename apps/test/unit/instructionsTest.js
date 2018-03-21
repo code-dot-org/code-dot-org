@@ -263,12 +263,8 @@ describe('determineInstructionsConstants', () => {
           overlayVisible,
           teacherMarkdown: undefined,
           levelVideos: undefined,
-          app: undefined,
-          scriptName: undefined,
-          stagePosition: undefined,
-          levelPosition: undefined,
-          serverLevelId: undefined,
-          scriptId: undefined
+          mapReference: undefined,
+          referenceLinks: undefined
         });
       });
     });
@@ -297,12 +293,8 @@ describe('determineInstructionsConstants', () => {
         overlayVisible,
         teacherMarkdown: undefined,
         levelVideos: undefined,
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        mapReference: undefined,
+        referenceLinks: undefined
       });
     });
 
@@ -331,12 +323,8 @@ describe('determineInstructionsConstants', () => {
         overlayVisible,
         teacherMarkdown: undefined,
         levelVideos: undefined,
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        mapReference: undefined,
+        referenceLinks: undefined
       });
     });
 
@@ -422,15 +410,66 @@ describe('determineInstructionsConstants', () => {
         teacherMarkdown: undefined,
         hasContainedLevels: undefined,
         levelVideos: ["notEmpty"],
-        app: undefined,
-        scriptName: undefined,
-        stagePosition: undefined,
-        levelPosition: undefined,
-        serverLevelId: undefined,
-        scriptId: undefined
+        mapReference: undefined,
+        referenceLinks: undefined
+      });
+    });
+
+    it('instructions outputs mapReference data when it is associated with the given level', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          mapReference: '/test/abc.html',
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        hasInlineImages,
+        showInstructionsInTopPane,
+        overlayVisible
+      });
+
+      assert.deepEqual(result, {
+        noInstructionsWhenCollapsed: false,
+        hasInlineImages: false,
+        overlayVisible: false,
+        shortInstructions: undefined,
+        shortInstructions2: undefined,
+        longInstructions: undefined,
+        teacherMarkdown: undefined,
+        hasContainedLevels: undefined,
+        levelVideos: undefined,
+        mapReference: '/test/abc.html',
+        referenceLinks: undefined
+      });
+    });
+
+    it('instructions outputs referenceLinks data when it is associated with the given level', () => {
+      const result = determineInstructionsConstants({
+        level: {
+          referenceLinks: ['/test/alpha.html', '/test/beta.html'],
+        },
+        skin: {},
+        ENGLISH_LOCALE,
+        noInstructionsWhenCollapsed,
+        hasInlineImages,
+        showInstructionsInTopPane,
+        overlayVisible
+      });
+
+      assert.deepEqual(result, {
+        noInstructionsWhenCollapsed: false,
+        hasInlineImages: false,
+        overlayVisible: false,
+        shortInstructions: undefined,
+        shortInstructions2: undefined,
+        longInstructions: undefined,
+        teacherMarkdown: undefined,
+        hasContainedLevels: undefined,
+        levelVideos: undefined,
+        mapReference: undefined,
+        referenceLinks: ['/test/alpha.html', '/test/beta.html']
       });
     });
   });
 });
-
 });

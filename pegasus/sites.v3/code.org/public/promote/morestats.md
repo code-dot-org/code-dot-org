@@ -55,9 +55,12 @@ We are interested in seeing what's happening in computer science education inter
 ### K-12 education
 
 - The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band. 
+- The [Pre-College Computer Science Education: A Survey of the Field] (https://services.google.com/fh/files/misc/pre-college-computer-science-education-report.pdf) report from Google reviews the current state of the research into computer science education.
 - [Arkansas has seen a major boost in computer science enrollment and diversity](http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/). Arkansas passed a law requiring (and funding) every high school to teach computer science. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among female students, and a 600% increase among African American female students. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
 - The [Computational Thinking for a Computational World report] (http://digitalpromise.org/wp-content/uploads/2017/12/dp-comp-thinking-v1r5.pdf) from Digital Promise describes the role of computational thinking and provides recommendations for expanding it in K-12.
+- The [Closing the STEM Gap](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1UMWz) report from Microsoft explores why girls and women lose interest in STEM subjects and careers, and suggests strategies to reverse the trend.
+- [This](https://www.nap.edu/catalog/24926/assessing-and-responding-to-the-growth-of-computer-science-undergraduate-enrollments) National Academies report describes the growth of computer science undergraduate enrollments.  
 
 
 ### State policy
@@ -76,6 +79,7 @@ We are interested in seeing what's happening in computer science education inter
 
 ### Jobs in computing
 
+- [Projections](http://www.naceweb.org/job-market/compensation/the-top-paid-majors-for-the-class-of-2018/) for the graduating college class of 2018 shows that computer science is still one of the top-paying college degrees, coming in just under engineering.
 - On average, a computer science degree from ANY university earns a [significantly higher](http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where) financial return on investment than an arts & humanities degree from even the best schools.
 - 91% of open software jobs are [outside Silicon Valley](http://www.inc.com/salvador-rodriguez/act-software-developers-map.html), and [mid-tech jobs are increasing](https://qz.com/1212875/the-american-midwest-is-quickly-becoming-a-blue-collar-version-of-silicon-valley/) in the midwest.  
 - BSA released a report on the [economic impact of software](http://softwareimpact.bsa.org/). 

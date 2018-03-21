@@ -10,6 +10,7 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
@@ -133,6 +134,7 @@ class ManageStudentsTable extends Component {
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
+    showSharingColumn: PropTypes.bool,
     editAll: PropTypes.func,
   };
 
@@ -217,6 +219,7 @@ class ManageStudentsTable extends Component {
               {showShareColumn &&
                 <ManageStudentsActionsHeaderCell
                   editAll={this.props.editAll}
+                  isShareColumnVisible={this.props.showSharingColumn}
                 />
               }
             </div>
@@ -236,6 +239,23 @@ class ManageStudentsTable extends Component {
           <SharingControlActionsHeaderCell/>
         </div>
       </span>
+    );
+  };
+
+  projectSharingFormatter = (projectSharing, {rowData}) => {
+    let disabled = rowData.isEditing ?
+      this.props.editingData[rowData.id].age.length === 0 :
+      true;
+    const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].sharingDisabled : true;
+
+    return (
+      <ManageStudentsSharingCell
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        disabled={disabled}
+        checked={!rowData.sharingDisabled}
+        editedValue={!editedValue}
+      />
     );
   };
 
@@ -270,7 +290,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 300
           }},
           transforms: [sortable],
         },
@@ -279,7 +298,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 300
           }}
         }
       },
@@ -290,7 +308,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 100,
+            width: 90,
           }},
           transforms: [sortable],
         },
@@ -299,7 +317,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 100,
+            width: 90,
           }}
         }
       },
@@ -310,7 +328,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 130,
+            width: 120,
           }},
           transforms: [sortable],
         },
@@ -319,7 +337,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 130,
+            width: 120,
           }}
         }
       },
@@ -356,12 +374,15 @@ class ManageStudentsTable extends Component {
             style: {
             ...tableLayoutStyles.headerCell,
             ...tableLayoutStyles.unsortableHeader,
+            width: 130
           }},
         },
         cell: {
+          format: this.projectSharingFormatter,
           props: {
             style: {
             ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130}
           }}
         }
       },
@@ -391,9 +412,7 @@ class ManageStudentsTable extends Component {
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
       dataColumns = dataColumns.concat(passwordColumn);
     }
-    //For now always show this column if the experiment flag is on.
-    // TODO: (Erin B & Caley) update so visibility is controlled by project sharing dialog.
-    if (showShareColumn) {
+    if (this.props.showSharingColumn) {
       dataColumns = dataColumns.concat(projectSharingColumn);
     }
     if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
@@ -456,6 +475,7 @@ export default connect(state => ({
   loginType: state.manageStudents.loginType,
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
+  showSharingColumn: state.manageStudents.showSharingColumn,
   addStatus: state.manageStudents.addStatus,
 }), dispatch => ({
   saveAllStudents() {

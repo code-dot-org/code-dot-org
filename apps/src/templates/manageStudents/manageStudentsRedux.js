@@ -32,6 +32,7 @@ const blankAddRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.ADD,
 };
@@ -46,6 +47,7 @@ const blankNewStudentRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
 };
@@ -56,6 +58,7 @@ const blankNewStudentRow = {
  * studentData - represents student information persisted on the server.
  * if isEditing (in studentData), then editingData represents the data
  * in the edit fields on the client which has not yet been persisted to the server.
+ * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
  * addStatus - status is of type AddStatus and numStudents is how many students were added.
  */
 const initialState = {
@@ -63,6 +66,7 @@ const initialState = {
   studentData: {},
   editingData: {},
   sectionId: null,
+  showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
 };
 
@@ -80,6 +84,7 @@ const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
+const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
@@ -101,6 +106,7 @@ export const addStudentsFailure = (numStudents, error, studentIds) => (
   { type: ADD_STUDENT_FAILURE, numStudents, error, studentIds }
 );
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
+export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -418,6 +424,12 @@ export default function manageStudents(state=initialState, action) {
       }
     };
   }
+  if (action.type === TOGGLE_SHARING_COLUMN) {
+    return {
+      ...state,
+      showSharingColumn: !state.showSharingColumn,
+    };
+  }
 
   return state;
 }
@@ -439,6 +451,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
+      sharingDisabled: student.sharing_disabled,
       isEditing: false,
       isSaving: false,
       rowType: RowType.STUDENT,
@@ -462,6 +475,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
       name: updatedStudentInfo.name,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
+      sharing_disabled: updatedStudentInfo.sharingDisabled,
     }
   };
   $.ajax({
@@ -486,13 +500,17 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       name: updatedStudentsInfo[i].name,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }
+  const students = {
+    students: studentsToAdd
+  };
   $.ajax({
-    url: `/v2/sections/${sectionId}/students`,
+    url: `/dashboardapi/sections/${sectionId}/students/bulk_add`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(studentsToAdd),
+    data: JSON.stringify(students),
   }).done((data) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
