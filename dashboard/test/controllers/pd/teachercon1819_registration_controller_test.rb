@@ -106,9 +106,9 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
   end
 
   # Partner should redirect to please_sign_in for a non program manager
-  test 'Partner non-partner should redirect to please_sign_in page' do
+  test 'Partner for a non program manager should redirect to please_sign_in page' do
     sign_out(@teacher)
-    sign_in(create :facilitator)
+    sign_in(create(:facilitator))
     get :partner
     assert_template('please_sign_in')
   end
