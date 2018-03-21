@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {editStudent} from './manageStudentsRedux';
 import {Checkbox} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ReactTooltip from 'react-tooltip';
+import i18n from "@cdo/locale";
 
 class ManageStudentsSharingCell extends Component {
   static propTypes = {
@@ -19,11 +21,23 @@ class ManageStudentsSharingCell extends Component {
     this.props.editStudent(this.props.id, {sharingDisabled: this.props.editedValue});
   };
 
+  renderCheckbox = () => {
+    return (
+      <Checkbox
+        disabled={this.props.disabled}
+        checked={this.props.editedValue}
+        onChange={this.changeSharing}
+      />
+    );
+  };
+
   render() {
-    const {disabled, checked} = this.props;
+    const {disabled, checked, isEditing} = this.props;
+    const showToolTip = disabled;
+
     return (
       <div>
-        {!this.props.isEditing &&
+        {!isEditing &&
           <div>
             {checked &&
               <FontAwesome
@@ -33,13 +47,33 @@ class ManageStudentsSharingCell extends Component {
             }
           </div>
         }
-        {this.props.isEditing &&
+        {isEditing &&
           <div>
-            <Checkbox
-              disabled={disabled}
-              checked={this.props.editedValue}
-              onChange={this.changeSharing}
-            />
+            {showToolTip &&
+              <div>
+                <span data-tip="" data-for="disabled-no-age">
+                  {this.renderCheckbox()}
+                </span>
+                <ReactTooltip
+                  id="disabled-no-age"
+                  class="react-tooltip-hover-stay"
+                  role="tooltip"
+                  effect="solid"
+                  place="top"
+                  offset={{bottom: 10, right: 50}}
+                  delayHide={1000}
+                >
+                  <div>
+                    {i18n.sharingAgePrompt()}
+                  </div>
+                </ReactTooltip>
+              </div>
+            }
+            {!showToolTip &&
+              <span>
+                {this.renderCheckbox()}
+              </span>
+            }
           </div>
         }
       </div>
