@@ -7,7 +7,7 @@ puts "Starting to batch update all students under 13"
 
 min_birthday = Date.today - 13.years
 users = User.where('birthday IS NULL OR birthday > ?', min_birthday)
-users.each do |user|
+users.find_each do |user|
   user.update! sharing_disabled: true
 end
 
