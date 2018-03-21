@@ -200,7 +200,7 @@ class User < ActiveRecord::Base
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
-  after_create :associate_with_potential_pd_enrollments, :update_share_setting
+  after_create :associate_with_potential_pd_enrollments
 
   # after_create :send_new_teacher_email
   # def send_new_teacher_email
@@ -420,6 +420,8 @@ class User < ActiveRecord::Base
   before_create :generate_secret_words
 
   before_create :suppress_ui_tips_for_new_users
+
+  before_create :update_share_setting
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
@@ -1679,9 +1681,7 @@ class User < ActiveRecord::Base
 
   # Disable sharing of advanced projects for students under 13
   def update_share_setting
-    if under_13?
-      self.sharing_disabled = true
-    end
+    self.sharing_disabled = true if under_13?
   end
 
   # When creating an account, we want to look for any channels that got created
