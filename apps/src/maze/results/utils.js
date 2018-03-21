@@ -1,9 +1,9 @@
-const Farmer = require('../farmer');
-const Bee = require('../bee');
-const Collector = require('../collector');
-const Wordsearch = require('../wordsearch');
-const Harvester = require('../harvester');
-const Planter = require('../planter');
+const Farmer = require('@code-dot-org/maze/src/farmer');
+const Bee = require('@code-dot-org/maze/src/bee');
+const Collector = require('@code-dot-org/maze/src/collector');
+const Wordsearch = require('@code-dot-org/maze/src/wordsearch');
+const Harvester = require('@code-dot-org/maze/src/harvester');
+const Planter = require('@code-dot-org/maze/src/planter');
 
 const FarmerHandler = require('./farmer');
 const BeeHandler = require('./bee');
