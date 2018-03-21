@@ -3,9 +3,31 @@ require 'test_helper'
 class CensusReviewersControllerTest < ActionController::TestCase
   setup do
     @reviewer = create :census_reviewer
+    @not_reviewer = create :teacher
   end
 
-  # Add tests that you redirect to sign in, get a 403 if don't have perms.
+  test 'redirected when not logged in' do
+    submission = create :census_your_school2017v7
+    post :create,  params: {
+      census_submission_id: submission.id,
+      override: 'N',
+      notes: 'I looked into this.',
+    }
+
+    assert_response 302, @response.body.to_s
+  end
+
+  test 'post without permission gives 403' do
+    sign_in @not_reviewer
+    submission = create :census_your_school2017v7
+    post :create,  params: {
+      census_submission_id: submission.id,
+      override: 'N',
+      notes: 'I looked into this.',
+    }
+
+    assert_response 403, @response.body.to_s
+  end
 
   test 'census inaccuracy investigation with override succeeds' do
     sign_in @reviewer
