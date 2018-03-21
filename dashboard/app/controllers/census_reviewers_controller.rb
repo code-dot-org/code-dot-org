@@ -1,11 +1,5 @@
 class CensusReviewersController < ApplicationController
-  before_action :authenticate_user!
-  before_action :require_census_reviewer_permissions
-
-  def require_census_reviewer_permissions
-    return if current_user.permission?(UserPermission::CENSUS_REVIEWER)
-    raise(CanCan::AccessDenied, 'user must be a census reviewer')
-  end
+  load_and_authorize_resource class: "Census::CensusInaccuracyInvestigation"
 
   def create
     begin
