@@ -124,6 +124,8 @@ GRAPH
   cdo-repository (0.2.18)
     cdo-github-access (>= 0.0.0)
   cdo-ruby (0.2.11)
+    apt (~> 2.6.0)
+    sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
   cdo-solr (0.1.8)
     apt (>= 0.0.0)
