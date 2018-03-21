@@ -25,6 +25,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
   belongs_to :regional_partner, class_name: 'RegionalPartner'
+  belongs_to :user
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
