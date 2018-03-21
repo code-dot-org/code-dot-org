@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.7.0.tgz#e070dd9f23d64f0c35777c20a4d47d0ad4022923"
+"@code-dot-org/blockly@1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.7.1.tgz#7183abb9eedbb186c4dd45535cda72a6961e6950"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -89,6 +89,10 @@
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
 
+"@code-dot-org/maze@github:code-dot-org/maze#799c92348e4a29092ec6d798c1f777d561bcf862":
+  version "1.0.0"
+  resolved "https://codeload.github.com/code-dot-org/maze/tar.gz/799c92348e4a29092ec6d798c1f777d561bcf862"
+
 "@code-dot-org/p5.play@1.2.0-cdo":
   version "1.2.0-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.0-cdo.tgz#7b6f70d7a29a34976fa66dc2758e69875fda2d71"
@@ -128,6 +132,10 @@
     "@storybook/components" "^3.3.6"
     global "^4.3.2"
     prop-types "^15.5.10"
+
+"@storybook/addon-options@^3.3.15":
+  version "3.3.15"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.3.15.tgz#f7e38fd29d897d8954a34fdca939a51c09223a4e"
 
 "@storybook/addons@^3.2.10":
   version "3.3.11"

@@ -35,5 +35,65 @@ module Pd::Application
       @application.update! pd_workshop_id: nil
       refute @application.registered_workshop?
     end
+
+    test 'no unnecessary workshop query when none assigned' do
+      @application.update!(pd_workshop_id: nil)
+
+      assert_queries 0 do
+        assert_nil @application.workshop
+      end
+    end
+
+    test 'workshop cache' do
+      create :pd_enrollment, workshop: @workshop, user: @application.user
+
+      # Original query: Workshop, Sessions, Enrollments
+      assert_queries 3 do
+        assert_equal @workshop, @application.workshop
+      end
+
+      # Cached
+      assert_queries 0 do
+        assert_equal @workshop, @application.workshop
+        assert @application.registered_workshop?
+      end
+    end
+
+    test 'workshop cache prefetch' do
+      # Workshops, Sessions, Enrollments,
+      assert_queries 3 do
+        WorkshopAutoenrolledApplication.prefetch_associated_models([@application])
+      end
+
+      assert_queries 0 do
+        assert_equal @workshop, @application.workshop
+      end
+    end
+
+    test 'cache expires in 30 seconds' do
+      WorkshopAutoenrolledApplication.prefetch_associated_models([@application])
+
+      Timecop.travel(30.seconds) do
+        assert_queries 3 do
+          assert_equal @workshop, @application.workshop
+        end
+      end
+    end
+
+    test 'prefetch scales without additional queries' do
+      workshops = create_list :pd_workshop, 10
+      applications = 10.times.map do |i|
+        create :pd_workshop_autoenrolled_application, pd_workshop_id: workshops[i].id
+      end
+
+      # 10 applications, still only 3 queries
+      assert_queries 3 do
+        WorkshopAutoenrolledApplication.prefetch_associated_models(applications)
+      end
+
+      assert_queries 0 do
+        assert_equal workshops, applications.map(&:workshop)
+      end
+    end
   end
 end

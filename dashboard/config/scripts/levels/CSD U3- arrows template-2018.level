@@ -45,10 +45,7 @@
     "expand_debugger": "false",
     "start_blocks": "var bug = createSprite(200, 200);\r\nbug.setAnimation(\"ladybug\");\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  // Update Values\r\n  // If the right arrow is pressed, \r\n  // move the sprite right on the screen\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}",
     "parent_level_id": 5056,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

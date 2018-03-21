@@ -50,7 +50,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/gctools.git
-  revision: a318fede5cb519133a4d6bfa566b800c71c2e42c
+  revision: 729c6bbb32c4bcc2ebfed16543991e4d126f09cc
   ref: ruby-2.5
   specs:
     gctools (0.2.4)

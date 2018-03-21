@@ -218,10 +218,7 @@
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"args\": [],\r\n    \"blockText\": \"draggable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"danceBehavior\",\r\n    \"args\": [],\r\n    \"blockText\": \"dancing\",\r\n    \"returnType\": \"function\"\r\n  }\r\n]",
     "instructions": "This Corgi has been a good boy! Drag this carrot to him as a special treat.",
     "parent_level_id": 11139,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

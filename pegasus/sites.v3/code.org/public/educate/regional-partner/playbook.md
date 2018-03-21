@@ -1,8 +1,8 @@
-<meta name="robots" content="noindex">
 ---
 title: Regional Partner Virtual Playbook
 theme: responsive
 ---
+<meta name="robots" content="noindex">
 
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
