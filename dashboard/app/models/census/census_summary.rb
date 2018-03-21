@@ -232,6 +232,10 @@ class Census::CensusSummary < ApplicationRecord
     result = nil
     details = []
 
+    # Each call to conditional_result will update the result if it hasn't already
+    # been set and simultaneously add the appropriate data to the details array
+    # so that we can explain the result in the /census/review UI. We need to make
+    # the call for every data element so that we get the full data in the explanation.
     result = conditional_result('offers_ap', has_ap_data, 'YES', true, result, details)
     result = conditional_result('offers_ib', has_ib_data, 'YES', true, result, details)
     result = conditional_result(
