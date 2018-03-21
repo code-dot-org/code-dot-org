@@ -32,6 +32,7 @@ const blankAddRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.ADD,
 };
@@ -46,6 +47,7 @@ const blankNewStudentRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
 };
@@ -449,6 +451,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
+      sharingDisabled: student.sharing_disabled,
       isEditing: false,
       isSaving: false,
       rowType: RowType.STUDENT,
@@ -472,6 +475,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
       name: updatedStudentInfo.name,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
+      sharing_disabled: updatedStudentInfo.sharingDisabled,
     }
   };
   $.ajax({
@@ -496,6 +500,7 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       name: updatedStudentsInfo[i].name,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }
   const students = {
