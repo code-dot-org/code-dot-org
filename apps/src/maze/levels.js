@@ -1,4 +1,4 @@
-var Direction = require('./tiles').Direction;
+var Direction = require('@code-dot-org/maze/src/tiles').Direction;
 var karelLevels = require('./karelLevels');
 var wordsearchLevels = require('./wordsearchLevels');
 var reqBlocks = require('./requiredBlocks');
