@@ -56,7 +56,6 @@
     "slider_speed": "1",
     "start_blocks": "var sentence = [\"REMOVE\",\"Today\",\"I'm\",\"REMOVE\",\"excited\",\"to\",\"learn\",\"REMOVE\",\"REMOVE\",\"about\",\"arrays\"];\r\nconsole.log(\"Original Sentence: \" + sentence);\r\n\r\n// Your code goes here\r\n\r\nconsole.log(\"Final Sentence: \" + sentence);",
     "encrypted_examples": "szMm/cLBs+qBcGhdxYvnSqyHE3j2NC5ZNqj5OVmxkMjmUnajX/yRYp5E2w8n\nY2Bo\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -65,7 +64,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
