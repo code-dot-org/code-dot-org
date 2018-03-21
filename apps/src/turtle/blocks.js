@@ -1158,8 +1158,8 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.turtle_sticker_with_size = function () {
-    var size = generator.valueToCode(this, 'SIZE', Blockly.JavaScript.ORDER_NONE);
-    return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') + '", ' + size + ', \'block_id_' + this.id + '\');\n';
+    let size = generator.valueToCode(this, 'SIZE', Blockly.JavaScript.ORDER_NONE);
+    return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},'block_id_${this.id}');\n`;
   };
 
   blockly.Blocks.turtle_setArtist = {
