@@ -539,7 +539,7 @@ Resources:
       AlarmActions:
         - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
       AlarmDescription: Send page if daemon storage utilization exceeds 80% for an hour
-      AlarmName: <%="#{stack_name}_daemon_low_disk_space" %>
+      AlarmName: <%="#{stack_name}_daemon_high_storage_utilization" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: Filesystem
@@ -554,7 +554,6 @@ Resources:
       Period: 60
       Statistic: Average
       Threshold: 80
-      # absence of custom disk utilization Metric could be due to a serious problem on the Instance
       TreatMissingData: missing
   DaemonMemoryUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
@@ -562,7 +561,7 @@ Resources:
       AlarmActions:
         - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
       AlarmDescription: Send page if daemon memory utilization exceeds 87% for 5 minutes
-      AlarmName: <%="#{stack_name}_daemon_high_memory" %>
+      AlarmName: <%="#{stack_name}_daemon_high_memory_utilization" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: InstanceId
@@ -573,7 +572,6 @@ Resources:
       Period: 60
       Statistic: Maximum
       Threshold: 87
-      # absence of custom memory utilization Metric could be due to a serious problem on the Instance
       TreatMissingData: missing
 <% if database -%>
   Database:
