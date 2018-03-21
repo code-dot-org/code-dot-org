@@ -199,6 +199,9 @@ export default class CensusInaccuracyReview extends Component {
           <br />
           <textarea type="text" style={{height: 100, width: '100%'}} onChange={(event) => {this.setState({notes: event.target.value});}} />
           <br />
+          {this.state.error && (
+             <p>There was an error submitting the form. Please try again.</p>
+          )}
           {this.state.notes && (
              <div>
                <Button
@@ -247,13 +250,15 @@ export default class CensusInaccuracyReview extends Component {
     this.setState((prevState) => ({
       resolvedReports: prevState.resolvedReports.concat([reportId]),
       toReview: undefined,
-      notes: ''
+      notes: '',
+      error: false,
     }));
     $('#report-header')[0].scrollIntoView();
   };
 
   handleInvestigationSubmittionError = (error) => {
-    console.log(error.responseText);
+    console.error(error.responseText);
+    this.setState({error: true});
   };
 
   columns = [
