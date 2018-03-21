@@ -55,7 +55,6 @@
     "slider_speed": "1",
     "encrypted_examples": "GkNvjQeaJ8oJPwOJD583hok9v4624cOWjTPRkFH3V4PH4zfI1w+195wa7bT8\npi59\n",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -63,7 +62,8 @@
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

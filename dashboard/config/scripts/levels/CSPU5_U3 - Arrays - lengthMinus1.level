@@ -58,7 +58,6 @@
     "slider_speed": "1",
     "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\nvar numbers = [20, 40, 60, 80, 100];\r\nvar pets = [\"cat\", \"dog\", \"fish\", \"bird\"];\r\n\r\n/* Use list.length - 1 syntax to access the last \r\nelement in each array and log it to the console */",
     "encrypted_examples": "Nmbcr8fAUy/Ref6byZMAk6gbgGGla7Cqdzh2LOmWIYlW4bJDQnn3JrDuv5Go\nu9VY\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -67,7 +66,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
