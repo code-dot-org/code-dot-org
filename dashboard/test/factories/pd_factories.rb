@@ -210,7 +210,7 @@ FactoryGirl.define do
     initialize_with do
       {
         confirmTeacherconDate: 'Yes',
-        fullName: 'Imaginary RP',
+        preferred_first_name: 'Imaginary RP',
         email: 'rp@example.com',
         contactName: 'Fred',
         contactRelationship: 'Imaginary Friend',
