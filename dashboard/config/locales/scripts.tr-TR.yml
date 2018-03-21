@@ -4,7 +4,7 @@
       name:
         course1:
           title: Kurs 1
-          description: Yeni okuyucular için Ders 1 ile başlayın. Yeni okuyucuların
+          description: Yeni okuyucular için Kurs 1 ile başlayın. Yeni okuyucuların
             bilgisayar programı oluşturmalarında yardımcı olması, problem çözmedeki
             becerilerini geliştirmeleri, zor görevleri yapabilmeleri ve başkaları
             ile birlikte çalışabilmeleri için tasarlanmıştır. Dersin sonunda, öğrenciler,
@@ -51,7 +51,7 @@
               name: Büyük Olay
         course2:
           title: Kurs 2
-          description: Ders 2 önceden herhangi bir programlama deneyimi olmayan ve
+          description: Kurs 2 önceden herhangi bir programlama deneyimi olmayan ve
             okuma-yazma bilen öğrenciler için tasarlanmıştır. Bu derste öğrenciler
             problem çözmek için programlama yaparken paylaşabilecekleri hikayeler
             ve interaktif oyun oluşturabilecekler. 2-5. Sınıflar için tavsiye edilir.
@@ -999,6 +999,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: |
@@ -3493,14 +3494,14 @@
                 oyun kaydırma çubuğu'nun son versiyonuna özellik eklemek ve düzenlemek
                 için kullanırlar.
               description_teacher: "Öğrenciler, tekrar eden kod bloklarını kaldırmak,
-                kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için işlevleri
+                kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için ifonksiyonları
                 nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması,
                 duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı
                 olduğunu araştırır. Öğrenciler, daha soyut adımları ve daha yüksek
                 seviyeleri kolaylaştırmak için adımları detaylıca düşünmeyi ve anlamayı
-                öğrenirler. Daha sonra öğrenciler Game Lab' da işlevler oluşturmayı
+                öğrenirler. Daha sonra öğrenciler Game Lab' da fonksiyonlar oluşturmayı
                 öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak
-                ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için işlevleri
+                ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için fonksiyonları
                 kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek
                 ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar."
             The Game Design Process:

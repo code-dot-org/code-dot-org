@@ -3,7 +3,7 @@ import ButtonList from './button_list';
 
 export default storybook => {
   return storybook
-  .storiesOf('Pd ButtonList', module)
+  .storiesOf('FormComponents/Pd ButtonList', module)
   .addDecorator((story) => (
     // Currently the Bootstrap 3 styles required by React-Bootstrap are only applied inside div#workshop-container.
     // This is to prevent conflicts with other parts of Code Studio using Bootstrap 2.

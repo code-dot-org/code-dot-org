@@ -158,52 +158,7 @@ lv:
         maze_3_2: Uzraksti man programmu, lai es varu nokļūt līdz cūkai.
         maze_3_3: Kādā veidā man vajag tikt līdz cūkai? Pārliecinies, lai es neieskrienu dinamīta kastē!
         maze_3_4: Aahh! Uzraksti man programmu, kas aizved mani apkārt dinamītam un noved pie cūkas.
-        bounce_1_basketball: Pievieno bloku pie "kad kreisā bultiņa" un spied "Palaist". Parvieto roku pa kreisi izmantojot kreiso bultiņu kamēr sasniegsi karodziņu.
-        bounce_2_basketball: Pievieno blokus pie "kad kreisā bultiņa" un "kad labā bultiņa", spied "Palaist". Parvieto roku pa kreisi un pa labi kamēr sasniegsi abus karodziņus.
-        bounce_5_basketball: Kad bumba sasniedz roku tai jāatsitas. Pievieno bloku pie "kad bumba atsitas pret roku" tā lai atsitoties bumba sasniegtu karodziņu.
-        bounce_6_basketball: Tagad karodziņš ir augšā. Tev vajag pievienot blokus abiem "kad bumba atsitas" blokiem, lai atrisinātu šo uzdevumu.
-        bounce_7_basketball: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot, kamēr tā sasniedz karodziņu.
-        bounce_10_basketball: Tagad augšā ir grozs! Pievieno "gūt punktu" un "ieskaitīt punktu pretiniekam" blokus pie blokiem "bumba grozā" un "kad bumba netrāpa rokai", lai izveidotu spēli. Mēģini iegūt cik vien dauz punktus vari, kamēr pretinieks nav ieguvis divus punktus.
-        bounce_11_basketball: Tagad vari pievienot blokus pie "kad izpilda" bloka. Pievieno "mest jaunu bumbu" bloku vairākās vietās. Pamēģini arī mainīt fona attēlu vai rokas un bumbas ātrumu, mēģini savākt cik vien daudz vari punktus kamēr pretinieks nav ieguvis 2 punktus!
-        bounce_12_basketball: Izveido savu spēli "Basketbols". Vari mainīt visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Pabeigt" un aicini draugus spēlēt tavu spēli.
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow" block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Tagad karodziņš ir augšā. Tev vajag pievienot blokus abiem "kad bumba atsitas" blokiem, lai atrisinātu šo uzdevumu.
-        bounce_7_sports: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot, kamēr tā sasniedz karodziņu.
-        bounce_10_sports: Tagad augšā ir grozs! Pievieno "gūt punktu" un "ieskaitīt punktu pretiniekam" blokus pie blokiem "bumba grozā" un "kad bumba netrāpa rokai", lai izveidotu spēli. Mēģini iegūt cik vien dauz punktus vari, kamēr pretinieks nav ieguvis divus punktus!
-        bounce_11_sports: Tagad vari pievienot blokus pie "kad izpilda" bloka. Pievieno "mest jaunu bumbu" bloku vairākās vietās. Pamēģini arī mainīt fona attēlu vai rokas un bumbas ātrumu, mēģini savākt cik vien daudz vari punktus kamēr pretinieks nav ieguvis 2 punktus!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change all the rules, mix and match sports, get creative! When you''re done, click Finish to let friends try your game on their phones.'
-        bounce_1: Pievieno bloku pie "kad kreisā bulta" un spied "Palaist". Parvieto dēlīti ar labo bultu lai sasniegtu mērķi.
-        bounce_2: Pievieno bloku pie "kad labā bulta" un "kad kreisā bulta" blokiem. Parvieto dēlīti ar labo bultu lai sasniegtu abus mērķus.
-        bounce_3: Tagad izmēģini ko līdzīgu ar "kad bulta uz augšu" bloku. Pārvieto dēlīti, lai sasniegtu augšējo mērķi.
-        bounce_4: Šoreiz tev vajag pievienot četrus blokus. Pārvieto airi uz visiem četriem gala mērķiem, lai pabeigto šo puzli.
-        bounce_5: Liksim, lai bumba lido lejā dēlīša virzienā. Pievieno bloku pie "kad bumba atsit dēlīti", lai nodrošinātu, ka bumba sasniedz mērķi.
-        bounce_6: Tagad gala mērķis ir augšā. Tev vajag pievienot blokus abiem "kad bumba trāpa" blokiem, lai atrisinātu šo puzli.
-        bounce_7: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot, kamēr tā sasniedz mērķi.
-        bounce_10: Tagad augšā ir mērķis. Pievieno "pieskaiti punktu" un "pieskaiti pretiniekam punktu" blakus "kad bumba mērķī" un "kad bumba neatsitas pret dēlīti" blokiem, lai veidotu spēli, Paskat, cik punktus tu var nopelnīt, pirms pretinieks nopelna divtik.
-        bounce_11: Tagad vari pievienot blokus pie "kad palaists" bloka. Pievieno jaunu "palaist" bumbu bloku vairākās vietās. Pamēģini arī'mainīt fona attēlu vai dēlīša un bumbas ātrumu, un skaties, cik var savākt punktus, kamēr pretinieks nav uzvarējis!
-        bounce_12: Izveido savu spēli "Pong". Vari mainīt visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus spēlēt tavu spēli.
         Custom_builder: Vel blokus no rīku kastes uz darba virsmas lai izveidotu tādu līmeni, kādu vēlies. Spied "Palaist", kad ir gatavs.
-        flappy_1: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.
-        flappy_2: Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos pret zemi". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.
-        flappy_3: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle ir iesākta. Pielāgo līmeņa ātrumu un lidošanas uz mērķi ātrumu.'
-        flappy_4: Flappy lido cauri šķēršļiem, ja vien tu neliksi viņam ietriekties. Pievieno bloku pie "kad ieskrien šķērslī". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas pirmajās caurulēs.
-        flappy_5: Pievienosim rezultātu tabulu un skaitīsim punktus, kad Flappy pārvar šķērsli. Pievieno bloku pie "kad pārvar šķērsli" un saņem punktus, kad Flappy izvairās no pirmajām caurulēm.
-        flappy_6: Pārbaudi, vai vari saņemt punktus, ja Flappy vēzē spārnus ātrāk vai lēnāk.
-        flappy_7: Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists" bloka.
-        flappy_8: Tu vari mainīt izskatu jebkad, ne tikai iesākoties spēlei. Izmēģini uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no šķēršļa.
-        flappy_9: Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad atduries pret šķērsli, iestati punktu skaitu atpakaļ uz 0.
-        flappy_11: Izveido pats savu Flappy spēli. Tu vari mainīt visus vizuālos efektus un noteikumus, pat gravitāciju. Kad esi pabeidzis, spied Pabeigt, lai ļautu draugiem izmēģināt tavu spēli savos telefonos.
-        flappy_k1_1: Spēlēt Flappy spēli
-        flappy_k1_2: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.
-        flappy_k1_3: Tagad ir pievienota zeme. Pieliec bloku pie "kad atsitos pret zemi". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas zemē.
-        flappy_k1_4: '"Kad palaists" bloks vienmēr izpilda kodu, kad spēle ir iesākta. Pielāgo līmeņa ātrumu un lidošanas uz mērķi ātrumu.'
-        flappy_k1_5: Flappy lido cauri šķēršļiem, ja vien tu neliksi viņam ietriekties. Pievieno bloku pie "kad ieskrien šķērslī". Tavam kodam vajag "BEIGT SPĒLI", kad Flappy ietriecas pirmajās caurulēs.
-        flappy_k1_6: Pievienosim rezultātu tabulu un skaitīsim punktus, kad Flappy pārvar šķērsli. Pievieno bloku pie "kad pārvar šķērsli" un saņem punktus, kad Flappy izvairās no pirmajām caurulēm.
-        flappy_k1_7: Vai vari nopelnīt vairāk punktus, lidojot caur pirmo šķērsli?
-        flappy_k1_8: Tālāk mēģini nomainīt fonu, pievienojot jaunu bloku pie "kad palaists" bloka.
-        flappy_k1_9: Mēģini mainīt spēlētāji, pieliekot "uzstādi spēlētāju" bloku pie "Kad palaists".
         jigsaw_1: Spied uz bloka
         jigsaw_2: Aizvelc bloku līdz mērķi
         jigsaw_3: Sakārto blokus tā, lai izveidotu attēlu
@@ -566,6 +521,7 @@ lv:
         applab_intro_designmode: App Lab - Design Mode
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka

@@ -306,10 +306,10 @@
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       courseB_unplugged_MRF:
-        title: Attività Tradizionale
-        desc: In this lesson, you will 'program' your friends!
+        title: 'Attività Tradizionale: I Miei Amici Robotici'
+        desc: In questa lezione, "programmerai" i tuoi amici!
       courseB_unplugged_loopyMRF:
-        title: Attività Tradizionale
+        title: 'Attività Tradizionale: I Miei Ciclici Amici Robotici'
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
@@ -319,7 +319,7 @@
         title: Attività Tradizionale
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Cittadinanza Digitale - Dati Personali
+        title: 'Cittadinanza Digitale: Dati Personali'
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale

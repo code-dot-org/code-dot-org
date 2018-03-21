@@ -1,9 +1,8 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Timeline
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <style>
 table {width: 100%;}
 </style>
@@ -106,7 +105,10 @@ Need a different format? See more frequently updated short list and calendar vie
 <br/>
 </p>
 </details>
-
+<details>
+  <summary>February</summary>
+  <p>
+  
 ## February Areas of Focus
 
 - New Facilitators Accepted and Contracted<br/>
@@ -123,6 +125,9 @@ Need a different format? See more frequently updated short list and calendar vie
 | Feb 15, 2018| Final Day for CS Discoveries and CS Principles interviews, co-led by Code.org and Regional Partners (**Group 3 only**)|
 | Feb 16, 2018| New CS Discoveries and CS Principles facilitators accepted and contracted (**Group 1 and 2 only**)|
 | Feb 16, 2018 - March 1, 2018| Code.org reviews all recommendations and makes acceptance decisions in collaboration with partners for CS Discoveries and CS Principles Facilitators (**Group 3 only**)|
+<br/>
+</p>
+</details>
 
 
 ## March Areas of Focus

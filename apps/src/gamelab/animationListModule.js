@@ -712,7 +712,15 @@ export function animationSourceUrl(key, props, withVersion = false) {
   // 2. Otherwise it's local to this project, and we should use the animation
   //    key to look it up in the animations API.
   return animationsApi.basePath(key) + '.png' +
-      ((withVersion && props.version) ? '?version=' + props.version : '');
+      (
+        (withVersion && props.version)
+        ? '?version=' + props.version
+        // Temporary: Local-cachebust animation requests, so after restoring
+        // and old version of the project the client isn't seeing newer animations.
+        // Should be able to tear this out once we always request animations
+        // by specific version.
+        : '?cachebust=' + Math.floor(Math.random() * 0xFFFFFF).toString(16)
+      );
 }
 
 /**

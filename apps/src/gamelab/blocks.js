@@ -15,9 +15,9 @@ export default {
 
     const sprites = () => {
       const animationList = getStore().getState().animationList;
-      if (animationList.orderedKeys.length === 0) {
+      if (!animationList || animationList.orderedKeys.length === 0) {
         console.warn("No sprites available");
-        return null;
+        return [['sprites missing', 'null']];
       }
       return animationList.orderedKeys.map(key => {
         const name = animationList.propsByKey[key].name;

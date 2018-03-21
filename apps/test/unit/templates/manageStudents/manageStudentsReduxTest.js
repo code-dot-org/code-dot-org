@@ -18,6 +18,7 @@ import manageStudents, {
   AddStatus,
   addMultipleRows,
   RowType,
+  toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -111,12 +112,22 @@ const expectedBlankRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.ADD,
 };
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
+
+  describe('toggleSharingColumn', () => {
+    it('toggle showSharingColumn state', () => {
+      const action = toggleSharingColumn();
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.showSharingColumn,
+        !initialState.showSharingColumn);
+    });
+  });
 
   describe('setLoginType', () => {
     it('sets login type for the section in view', () => {
@@ -309,6 +320,16 @@ describe('manageStudentsRedux', () => {
         name: "New name",
         age: 13,
         gender: 'm',
+      });
+
+      const editStudentShareSettingAction = editStudent(1, {sharingDisabled: true});
+      const stateWithShareSetting = manageStudents(stateWithGender, editStudentShareSettingAction);
+      assert.deepEqual(stateWithShareSetting.editingData[1], {
+        ...studentEmailData[1],
+        name: "New name",
+        age: 13,
+        gender: 'm',
+        sharingDisabled: true,
       });
     });
   });

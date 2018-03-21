@@ -333,6 +333,14 @@ FactoryGirl.define do
     trait :with_autoplay_video do
       video_key {create(:video).key}
     end
+
+    trait :with_map_reference do
+      map_reference '/test/alpha.html'
+    end
+
+    trait :with_reference_links do
+      reference_links ['/test/abc.html', '/test/def.html']
+    end
   end
 
   factory :free_response, parent: :level, class: FreeResponse do

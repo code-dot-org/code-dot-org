@@ -4,7 +4,7 @@ import {UnconnectedCensusForm as CensusForm} from './CensusForm';
 export default storybook => {
 
   storybook
-    .storiesOf('CensusForm', module)
+    .storiesOf('YourSchool/CensusForm', module)
     .addStoryTable([
       {
         name:'CensusForm',

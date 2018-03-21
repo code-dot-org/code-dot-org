@@ -11,12 +11,19 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
     :status
   )
 
+  # Dynamically add locked where applicable
+  def attributes(attrs = {})
+    super(attrs).tap do |data|
+      data[:locked] = object.locked? if object.class.can_see_locked_status?(@scope[:user])
+    end
+  end
+
   def email
     object.user.email
   end
 
   def assigned_workshop
-    object.workshop.try(&:date_and_location_name)
+    object.workshop_date_and_location
   end
 
   def registered_workshop
