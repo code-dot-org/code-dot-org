@@ -69,7 +69,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test 'teacher can not update info for a non-existant student' do
     sign_in @teacher
     put :update, params: {section_id: @section.id, id: 'not a user', student: {name: 'newname'}}
-    assert_response :not_found
+    assert_response :forbidden
   end
 
   test 'non-owner can not update student info' do
@@ -125,5 +125,27 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     User.stubs(:create!).raises(ActiveRecord::RecordInvalid)
     post :bulk_add, params: {section_id: @section.id, students: [{gender: 'm', age: 9, name: 'name'}]}
     assert_response :bad_request
+  end
+
+  test 'teacher can remove a student from their section' do
+    sign_in @teacher
+    student_to_remove = User.create!(
+      user_type: User::TYPE_STUDENT,
+      provider: User::PROVIDER_SPONSORED,
+      name: "student_to_delete",
+      age: 9,
+      gender: 'm'
+    )
+    @section.add_student(student_to_remove)
+    num_students = @section.students.length
+    post :remove, params: {section_id: @section.id, id: student_to_remove.id}
+    assert_response :success
+    assert_equal num_students - 1, @section.reload.students.length
+  end
+
+  test 'non-owner can not remove student' do
+    sign_in @other_teacher
+    post :remove, params: {section_id: @section.id, id: @student.id}
+    assert_response :forbidden
   end
 end

@@ -18,6 +18,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'craft'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'maze'),
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');

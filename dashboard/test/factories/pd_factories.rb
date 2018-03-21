@@ -15,6 +15,10 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     end
+    trait :fit do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_FIT
+    end
     capacity 10
     transient do
       num_sessions 0
@@ -894,6 +898,7 @@ FactoryGirl.define do
     end
 
     association :pd_application, factory: :pd_teacher1819_application
+    association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end
 
