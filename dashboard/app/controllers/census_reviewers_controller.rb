@@ -2,12 +2,10 @@ class CensusReviewersController < ApplicationController
   load_and_authorize_resource class: "Census::CensusInaccuracyInvestigation"
 
   def create
-    begin
-      submission = Census::CensusSubmission.find(params[:census_submission_id])
-    rescue ActiveRecord::RecordNotFound
-      render json: {error_message: "Invalid census_submission_id (#{params[:census_submission_id]})"},
-             status: :bad_request
-      return
+    submission = Census::CensusSubmission.find_by(id: params[:census_submission_id])
+    if submission.nil?
+      return render json: {error_message: "Invalid census_submission_id (#{params[:census_submission_id]})"},
+        status: :bad_request
     end
 
     if params[:override].presence
@@ -17,11 +15,10 @@ class CensusReviewersController < ApplicationController
         teaches_cs: params[:override],
       )
       unless override.valid?
-        render json: {
+        return render json: {
           error_message: "Unable to create CensusOverride",
           errors: override.errors,
         }, status: :bad_request
-        return
       end
     end
 
@@ -32,11 +29,10 @@ class CensusReviewersController < ApplicationController
       census_override: override,
     )
     unless investigation.valid?
-      render json: {
+      return render json: {
         error_message: "Unable to create CensusInaccuracyInvestigation",
         errors: investigation.errors,
       }, status: :bad_request
-      return
     end
     investigation.save!
 
