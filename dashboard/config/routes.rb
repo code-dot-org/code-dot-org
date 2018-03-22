@@ -77,6 +77,9 @@ Dashboard::Application.routes.draw do
         collection do
           post 'bulk_add'
         end
+        member do
+          post 'remove'
+        end
       end
       member do
         post 'join'
