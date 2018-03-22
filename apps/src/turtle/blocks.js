@@ -1135,7 +1135,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setHSV(184, 1.00, 0.74);
       var dropdown;
       var input = this.appendDummyInput();
-      input.appendTitle(msg.setStickerSize());
+      input.appendTitle(msg.drawSticker());
 
       // Generates a list of pairs of the form [[url, name]]
       var values = [];
@@ -1147,8 +1147,12 @@ exports.install = function (blockly, blockInstallOptions) {
       dropdown = new blockly.FieldImageDropdown(values, 40, 40);
 
       input.appendTitle(dropdown, 'VALUE');
-      this.appendValueInput('SIZE');
-
+      this.appendDummyInput()
+          .appendTitle('with size');
+      this.appendValueInput('SIZE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.appendDummyInput()
+          .appendTitle(msg.pixels());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
