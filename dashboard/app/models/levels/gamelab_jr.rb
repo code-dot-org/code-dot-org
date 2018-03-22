@@ -28,6 +28,7 @@ class GamelabJr < Gamelab
     helper_libraries
     custom_helper_library
     custom_blocks
+    hide_custom_blocks
   )
 
   def self.create_from_level_builder(params, level_params)
