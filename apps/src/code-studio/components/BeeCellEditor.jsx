@@ -1,11 +1,11 @@
 /**
  * @overview React component to allow for easy editing and creation of BeeCells
- * @see @code-dot-org/maze/src/beeCell
+ * @see @cdo/apps/maze/beeCell
  */
 
 import React from 'react';
 import CellEditor from './CellEditor';
-import BeeCell from '@code-dot-org/maze/src/beeCell';
+import BeeCell from '@cdo/apps/maze/beeCell';
 
 export default class BeeCellEditor extends CellEditor {
   /**
