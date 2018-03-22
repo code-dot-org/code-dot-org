@@ -177,6 +177,14 @@ export default class WorkshopTable extends React.Component {
       }
     });
 
+    columns.push({
+      property: 'regional_partner_name',
+      header: {
+        label: 'Regional Partner',
+        transforms: [sortable]
+      }
+    });
+
     if (this.props.showStatus) {
       columns.push({
         property: 'state',
