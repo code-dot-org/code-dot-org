@@ -58,7 +58,6 @@
     "slider_speed": "1",
     "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\n\r\n// Write code that logs a random color from this array to the console",
     "encrypted_examples": "jS/uBFxm8iLhqXr4hBGUX3sbt7+IwJ0gLzM048a7armpvHgNCKtyNeoQEfZc\nVsE/\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -67,7 +66,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -55,7 +55,6 @@
     "slider_speed": "1",
     "start_blocks": "var sentence = [\"Today\",\"I\",\"want\",\"to\",\"and\",\"with\"];\r\nconsole.log(\"Original Sentence: \" + sentence);\r\n\r\n// Insert words to complete the sentence here\r\n\r\nconsole.log(\"Final Sentence: \" + sentence);",
     "encrypted_examples": "4Yb5q6O+98bYcafXhaRzt8GH33s5kPs0TeYUP58uOv8lQTRfGsPV4H++2NvP\ntg03\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -64,7 +63,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

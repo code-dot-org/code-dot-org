@@ -898,6 +898,7 @@ FactoryGirl.define do
     end
 
     association :pd_application, factory: :pd_teacher1819_application
+    association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end
 
