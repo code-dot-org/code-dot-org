@@ -45,7 +45,7 @@ class CensusReviewersController < ApplicationController
   def review_reported_inaccuracies
     @script_data = {}
     @script_data[:authenticityToken] = form_authenticity_token
-    inaccuracy_reports = Census::CensusSubmission.left_joins(:census_inaccuracy_investigations).where(inaccuracy_reported: true).where('census_inaccuracy_investigations.id is null')
+    inaccuracy_reports = Census::CensusSubmission.unresolved_reported_inaccuracies
     @script_data[:reportsToReview] = inaccuracy_reports.map(&:inaccuracy_review_data).flatten.compact.map(&:to_json)
   end
 end
