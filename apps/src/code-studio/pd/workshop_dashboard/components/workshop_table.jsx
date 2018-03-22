@@ -175,15 +175,15 @@ export default class WorkshopTable extends React.Component {
       cell: {
         format: this.formatFacilitators
       }
-    });
-
-    columns.push({
+    }, {
       property: 'regional_partner_name',
       header: {
         label: 'Regional Partner',
         transforms: [sortable]
       }
     });
+
+    columns.push();
 
     if (this.props.showStatus) {
       columns.push({
