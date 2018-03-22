@@ -37,7 +37,7 @@ module Api::V1::Pd
 
       assert_no_difference 'Pd::Teachercon1819Registration.count' do
         put :create_partner, params: {
-          form_data: build(:pd_teachercon1819_registration_hash, :partner_registration),
+          form_data: build(:pd_teachercon1819_registration_hash, :partner_accepted),
           regionalPartnerId: partner.regional_partners.first.id
         }
         assert_response :forbidden
@@ -46,7 +46,7 @@ module Api::V1::Pd
       assert_creates Pd::Teachercon1819Registration do
         sign_in partner
         put :create_partner, params: {
-          form_data: build(:pd_teachercon1819_registration_hash, :partner_registration),
+          form_data: build(:pd_teachercon1819_registration_hash, :partner_accepted),
           regionalPartnerId: partner.regional_partners.first.id
         }
         assert_response :success
