@@ -82,6 +82,7 @@ export default function (app, levels, options) {
         blockInstallOptions,
         JSON.parse(level.customBlocks),
         options.level,
+        level.hideCustomBlocks,
       );
     }
   }
