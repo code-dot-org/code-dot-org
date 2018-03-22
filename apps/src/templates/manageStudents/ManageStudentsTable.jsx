@@ -479,6 +479,7 @@ export default connect(state => ({
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
   showSharingColumn: state.manageStudents.showSharingColumn,
+  sectionId: state.manageStudents.sectionId,
   addStatus: state.manageStudents.addStatus,
 }), dispatch => ({
   saveAllStudents() {

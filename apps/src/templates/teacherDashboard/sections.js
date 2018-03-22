@@ -110,9 +110,7 @@ export function renderSectionTable(sectionId, loginType, courseId) {
     );
     ReactDOM.render(
       <Provider store={store}>
-        <ManageStudentsTable
-          sectionId={sectionId}
-        />
+        <ManageStudentsTable/>
       </Provider>,
       element);
   });
