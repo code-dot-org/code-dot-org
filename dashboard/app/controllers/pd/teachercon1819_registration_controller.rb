@@ -72,7 +72,12 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    teachercon = Pd::Application::RegionalPartnerTeacherconMapping::TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
+    teachercon =
+      if params[:city].presence
+        TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
+      else
+        get_matching_teachercon(regional_partner)
+      end
 
     unless teachercon
       render :invalid

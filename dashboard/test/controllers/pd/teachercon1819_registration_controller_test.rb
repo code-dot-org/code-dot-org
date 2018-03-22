@@ -124,13 +124,24 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
   end
 
   # Not specifying teachercon should redirect to invalid page
-  test 'Program manager with group 3 partner should have script_data values set' do
+  test 'Invalid city in city param should redirect' do
     sign_out(@teacher)
     sign_in(@program_manager)
 
     get :partner, params: {city: 'Not a city'}
     assert_template('invalid')
   end
+
+  expected_teachercon_registration_script_data = {
+    options: Pd::Teachercon1819Registration.options.camelize_keys,
+    requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
+    apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
+    regionalPartnerId: @regional_partner.id,
+    applicationType: "Partner",
+    city: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:city],
+    date: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:dates],
+    email: @program_manager.email,
+  }.to_json
 
   # Program Manager with Group 3 partner should have appropriate script_data set
   test 'Program manager with group 3 partner should have script_data values set' do
@@ -139,18 +150,17 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
 
     get :partner, params: {city: 'Phoenix'}
     assert_response :success
-    assert_equal(
-      {
-        options: Pd::Teachercon1819Registration.options.camelize_keys,
-        requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
-        apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
-        regionalPartnerId: @regional_partner.id,
-        applicationType: "Partner",
-        city: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:city],
-        date: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:dates],
-        email: @program_manager.email,
-      }.to_json, assigns(:script_data)[:props]
-    )
+    assert_equal expected_teachercon_registration_script_data, assigns(:script_data)[:props]
+  end
+
+  # If a city is not specified, try and figure out the teachercon based on the mapping
+  test 'Program manager with group 3 partner assigned to teachercon should have script_data values set even if city is not passed in' do
+    sign_out(@teacher)
+    sign_in(@program_manager)
+
+    get :partner
+    assert_response :success
+    assert_equal expected_teachercon_registration_script_data, assigns(:script_data)[:props]
   end
 
   # Program Manager with teachercon registration gets redirected to submitted
