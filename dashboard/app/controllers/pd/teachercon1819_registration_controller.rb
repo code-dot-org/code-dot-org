@@ -119,7 +119,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
         apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
         applicationType: "LeadFacilitator",
         email: current_user.email
-      }
+      }.to_json
     }
     render :new
   end
