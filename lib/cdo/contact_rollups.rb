@@ -122,6 +122,7 @@ class ContactRollups
     insert_from_dashboard_contacts
     insert_from_dashboard_pd_enrollments
     insert_from_dashboard_census_submissions
+    update_geo_from_school_data
     update_unsubscribe_info
     update_roles
     update_grades_taught
@@ -322,6 +323,40 @@ class ContactRollups
       WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.form_roles, ','), ''),values(form_roles)),255)
       ELSE #{DEST_TABLE_NAME}.form_roles
     END"
+
+    log_completion(start)
+  end
+
+  def self.update_geo_from_school_data
+    start = Time.now
+    log "Updating user geo data from school data"
+
+    # State for schools is stored in state abbreviation. We need to convert
+    # to state name, so do this row-by-row using existing Ruby code for that
+    # conversion.
+
+    sql = "
+    SELECT users.email, schools.city, schools.state, schools.zip
+    FROM users
+    INNER JOIN school_infos ON school_infos.id = users.school_info_id
+    INNER JOIN schools ON schools.id = school_infos.school_id"
+
+    dataset = DASHBOARD_REPORTING_DB_READER[sql]
+
+    dataset.each do |user_and_geo|
+      state_code = user_and_geo[:state]
+      # convert from state code to state name
+      state = get_us_state_from_abbr(state_code, true)
+      next unless state.presence
+      city = user_and_geo[:city]
+      zip = user_and_geo[:zip]
+      email = user_and_geo[:email]
+      # update the user's city/state/zip
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: email).
+        update(city: city, state: state,
+        postal_code: zip, country: 'United States'
+        )
+    end
 
     log_completion(start)
   end
