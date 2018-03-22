@@ -454,7 +454,11 @@ designMode.readProperty = function (element, name) {
     case 'style-height':
       return parseFloat(element.style.height);
     case 'text':
-      return utils.escapeText(element.innerHTML);
+      if (element.innerHTML) {
+        return utils.escapeText(element.innerHTML);
+      } else {
+        return utils.escapeText(element.value);
+      }
     case 'textColor':
       return element.style.color;
     case 'backgroundColor':
