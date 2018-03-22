@@ -49,7 +49,13 @@ const StageProgress = React.createClass({
   },
 
   render() {
-    const { levels, stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
+    const { stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
+    let levels = this.props.levels;
+
+    // Only puzzle levels (non-concept levels) should count towards mastery.
+    if (stageTrophyEnabled) {
+      levels = levels.filter(level => !level.isConceptLevel);
+    }
 
     return (
       <div
