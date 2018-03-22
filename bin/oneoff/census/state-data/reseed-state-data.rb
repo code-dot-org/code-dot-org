@@ -39,5 +39,5 @@ ActiveRecord::Base.transaction do
   CDO.log.info "Deleted #{num_deleted} StateCsOfferings with state_school_id matching '#{pattern}' and school_year #{school_year}"
   num_deleted = SeededS3Object.where(bucket: bucket_name, key: object_key).delete_all
   CDO.log.info "Deleted #{num_deleted} rows from seeded_s3_objects for bucket: '#{bucket_name}', key: '#{object_key}'"
-  Census::StateCsOffering.seed_from_s3
+  Census::StateCsOffering.seed
 end
