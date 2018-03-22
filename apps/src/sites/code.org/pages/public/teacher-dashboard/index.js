@@ -394,7 +394,7 @@ function main() {
       });
 
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type));
+        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type, section.course_name));
       });
 
       $scope.$on('$destroy', () => {

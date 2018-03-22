@@ -88,8 +88,8 @@
     "makerlab_enabled": "true",
     "start_blocks": "onBoardEvent(buttonL, \"down\", function(event) {\r\n  buzzer.frequency(500, 100);\r\n});",
     "project_template_level_name": "CSDU6 frequency template",
-    "contained_level_names": null,
-    "encrypted_examples": "xyvMC32UF4TEXr7fblgiWJMgO1xVC5prJ5rY2Aw85EzkmYt/lN/5KcPeqksX\nx0x9BnwWNzStDmi4+bvnqQx69Q==\n"
+    "encrypted_examples": "xyvMC32UF4TEXr7fblgiWJMgO1xVC5prJ5rY2Aw85EzkmYt/lN/5KcPeqksX\nx0x9BnwWNzStDmi4+bvnqQx69Q==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

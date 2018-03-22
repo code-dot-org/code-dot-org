@@ -93,8 +93,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": "fNqqp/UvrhN6tzXkiQ9w+av+/fNhyRXztGYfO43AALmbVSFYuyPEotFVaKK2\nIc3Q1NIjK1p8Cs5ViqkQudcRYg==\n"
+    "encrypted_examples": "fNqqp/UvrhN6tzXkiQ9w+av+/fNhyRXztGYfO43AALmbVSFYuyPEotFVaKK2\nIc3Q1NIjK1p8Cs5ViqkQudcRYg==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

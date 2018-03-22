@@ -223,8 +223,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
-    "encrypted_examples": "zIE/DceDzIGe7IBaunpfZMn7V61gpu81w79x7RzPNaOtaxUWjgrAvNx9kcYI\nc6YvwcsRTQVWwbrrg2dSRrCKOQ==\n"
+    "encrypted_examples": "zIE/DceDzIGe7IBaunpfZMn7V61gpu81w79x7RzPNaOtaxUWjgrAvNx9kcYI\nc6YvwcsRTQVWwbrrg2dSRrCKOQ==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
