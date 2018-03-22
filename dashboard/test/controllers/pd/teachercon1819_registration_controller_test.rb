@@ -101,7 +101,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
   test 'Not signed in should be directed to please_sign_in page' do
     sign_out(@teacher)
 
-    get :partner
+    get :partner, params: {city: 'Phoenix'}
     assert_template('please_sign_in')
   end
 
@@ -109,7 +109,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
   test 'Partner for a non program manager should redirect to please_sign_in page' do
     sign_out(@teacher)
     sign_in(create(:facilitator))
-    get :partner
+    get :partner, params: {city: 'Phoenix'}
     assert_template('please_sign_in')
   end
 
@@ -119,8 +119,17 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     regional_partner_program_manager = create :regional_partner_program_manager
     sign_in(regional_partner_program_manager.program_manager)
 
-    get :partner
+    get :partner, params: {city: 'Phoenix'}
     assert_template('only_group_3')
+  end
+
+  # Not specifying teachercon should redirect to invalid page
+  test 'Program manager with group 3 partner should have script_data values set' do
+    sign_out(@teacher)
+    sign_in(@program_manager)
+
+    get :partner, params: {city: 'Not a city'}
+    assert_template('invalid')
   end
 
   # Program Manager with Group 3 partner should have appropriate script_data set
@@ -128,7 +137,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     sign_out(@teacher)
     sign_in(@program_manager)
 
-    get :partner
+    get :partner, params: {city: 'Phoenix'}
     assert_response :success
     assert_equal(
       {
@@ -150,7 +159,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     sign_in(@program_manager)
     create :pd_teachercon1819_registration, user: @program_manager
 
-    get :partner
+    get :partner, params: {city: 'Phoenix'}
     assert_template('partner_submitted')
   end
 end
