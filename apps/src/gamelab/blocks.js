@@ -273,10 +273,12 @@ export default {
     });
   },
 
-  installCustomBlocks(blockly, blockInstallOptions, customBlocks, level) {
+  installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
     const blockNames =
       customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
 
-    level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
+    if (!hideCustomBlocks) {
+      level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
+    }
   },
 };
