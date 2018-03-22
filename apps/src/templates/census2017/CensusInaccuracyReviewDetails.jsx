@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import {Table} from 'reactabular';
 import Button from '../Button';
+import color from "../../util/color";
 
 export default class CensusInaccuracyReviewDetails extends Component {
   static propTypes = {
@@ -76,7 +77,7 @@ export default class CensusInaccuracyReviewDetails extends Component {
     const auditData = this.props.toReview.summary_audit;
     const explanation = auditData.explanation;
     const highlightedStyle = {
-      backgroundColor: "#8afc9b",
+      backgroundColor: color.highlight_green,
     };
 
     const inaccuracyReportColumns = [
