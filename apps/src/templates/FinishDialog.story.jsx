@@ -5,7 +5,7 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 
 const dialogWrapper = {
   padding: 40,
-  width: 375,
+  width: 450,
   backgroundColor: 'gray',
 };
 

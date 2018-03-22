@@ -27,7 +27,7 @@ const styles = {
   },
   modal: {
     position: 'relative',
-    width: 375,
+    width: 450,
     backgroundColor: color.white,
     borderRadius: 10,
   },
@@ -38,7 +38,7 @@ const styles = {
     borderRadius: '10px 10px 0px 0px',
   },
   content: {
-    padding: '22px 56px 5px',
+    padding: '28px 0 5px',
     textAlign: 'center',
   },
   confetti: {
@@ -109,7 +109,7 @@ const styles = {
   achievements: {
     width: 217,
     display: 'block',
-    margin: '24px 0px 0px',
+    margin: '24px auto 4px',
     padding: '0px 23px',
     borderColor: color.light_teal,
     borderWidth: 1,
