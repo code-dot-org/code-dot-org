@@ -73,12 +73,16 @@ class DSLDefined < Level
 
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
-        File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
+        level.rewrite_dsl_file(text)
         rewrite_i18n_file(i18n)
       end
 
       level
     end
+  end
+
+  def rewrite_dsl_file(text)
+    File.write(file_path, (encrypted ? encrypted_dsl_text(text) : text))
   end
 
   def self.rewrite_i18n_file(i18n)
