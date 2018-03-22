@@ -7,6 +7,7 @@ import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
 import Confetti from 'react-dom-confetti';
+import StageProgress from '@cdo/apps/code-studio/components/progress/StageProgress.jsx';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
 import msg from '@cdo/locale';
@@ -37,7 +38,8 @@ const styles = {
     borderRadius: '10px 10px 0px 0px',
   },
   content: {
-    padding: '42px 56px 5px',
+    padding: '22px 56px 5px',
+    textAlign: 'center',
   },
   confetti: {
     position: 'relative',
@@ -101,10 +103,13 @@ const styles = {
     verticalAlign: 'middle',
     background: color.white,
   },
+  mastery: {
+    display: 'inline-block',
+  },
   achievements: {
     width: 217,
     display: 'block',
-    margin: '14px 0px 0px',
+    margin: '24px 0px 0px',
     padding: '0px 23px',
     borderColor: color.light_teal,
     borderWidth: 1,
@@ -448,6 +453,9 @@ export class UnconnectedFinishDialog extends Component {
                   />
                 </div> :
                 <div style={styles.content}>
+                  <div style={styles.mastery}>
+                    <StageProgress stageTrophyEnabled />
+                  </div>
                   {this.getAchievements()}
                   {this.getFunometer()}
                 </div>}
