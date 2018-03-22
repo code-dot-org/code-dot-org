@@ -176,9 +176,9 @@ function shareProject() {
     const canPublish = !!appOptions.isSignedIn &&
       PublishableProjectTypesOver13.includes(appType);
 
-    const exportExpoApp = () => {
+    const exportExpoApp = (expoOpts) => {
       if (window.Applab) {
-        return window.Applab.exportApp(true);
+        return window.Applab.exportApp(expoOpts);
       } else {
         return Promise.reject(new Error('No Global Applab'));
       }
