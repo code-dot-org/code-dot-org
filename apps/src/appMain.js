@@ -76,7 +76,9 @@ export default function (app, levels, options) {
     blocksCommon.install(Blockly, blockInstallOptions);
     options.blocksModule.install(Blockly, blockInstallOptions);
 
-    if (options.blocksModule.installCustomBlocks && level.customBlocks) {
+    if (options.blocksModule.installCustomBlocks &&
+        level.customBlocks &&
+        !level.hideCustomBlocks) {
       options.blocksModule.installCustomBlocks(
         Blockly,
         blockInstallOptions,
