@@ -89,6 +89,11 @@ ruby
     end
   end
 
+  def assign_attributes(params)
+    @pages = nil
+    super(params)
+  end
+
   def plc_evaluation?
     levels.map(&:class).uniq == [EvaluationMulti]
   end
@@ -123,9 +128,6 @@ ruby
         page
       end
     end
-
-    # Force the pages method to recompute its output
-    @pages = nil
 
     update!(properties: new_properties)
   end
