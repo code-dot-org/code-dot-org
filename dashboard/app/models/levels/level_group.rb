@@ -96,6 +96,40 @@ ruby
   # Surveys: How many students must complete a survey before any results are shown.
   SURVEY_REQUIRED_SUBMISSION_COUNT = 5
 
+  def clone_with_suffix(new_suffix)
+    level = super(new_suffix)
+    level.add_suffix_to_grouped_levels(new_suffix)
+    level.rewrite_dsl_file(level.serialize_to_dsl)
+    level
+  end
+
+  def add_suffix_to_grouped_levels(new_suffix)
+    new_properties = properties
+
+    if new_properties['texts']
+      new_properties['texts'].map! do |text|
+        Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix, allow_existing: true)
+        text['level_name'] << new_suffix
+        text
+      end
+    end
+
+    if new_properties['pages']
+      new_properties['pages'].map! do |page|
+        page['levels'].map! do |level_name|
+          Level.find_by_name(level_name).clone_with_suffix(new_suffix, allow_existing: true)
+          level_name << new_suffix
+        end
+        page
+      end
+    end
+
+    # Force the pages method to recompute its output
+    @pages = nil
+
+    update!(properties: new_properties)
+  end
+
   def serialize_to_dsl
     new_dsl = "name '#{name}'"
     new_dsl << "\ntitle '#{properties['title']}'" if properties['title']
