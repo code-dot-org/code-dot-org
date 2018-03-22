@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";
-import {updateShareSetting} from '../teacherDashboard/teacherSectionsRedux';
+import {updateShareSetting} from './manageStudentsRedux';
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
 
