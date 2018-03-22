@@ -10,9 +10,9 @@ page
 level 'K-1 Plant a Seed Multi 1'
 level 'K-1 Plant a Seed Multi 2'
 level 'K-1 Artist 1 Multi 1'
-level 'ECSPD1 computational thinker'  # TextMatch (with no answers)
-text 'sample external 2'              # External
-level 'ECSPD your goals'              # FreeResponse
+level 'ECSPD1 computational thinker'
+text 'sample external 2'
+level 'ECSPD your goals'
 
 page
 level 'K-1 Maze Loops Multi 1'
