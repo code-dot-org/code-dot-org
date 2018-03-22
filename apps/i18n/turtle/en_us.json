@@ -38,6 +38,7 @@
   "drawUpperWave": "draw upper wave",
   "drawLowerWave": "draw lower wave",
   "drawSticker": "draw sticker",
+  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "height",
   "hideTurtle": "hide artist",
   "jump": "jump",

@@ -1152,8 +1152,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.drawSticker());
-      this.setTooltip(msg.setStickerSize());
+      this.setTooltip(msg.drawStickerWithSize());
     }
   };
 
