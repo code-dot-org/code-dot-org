@@ -15,7 +15,7 @@
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
-      "assets/**",
+      "assets/**"
     ],
     "packagerOpts": {
       "assetExts": [
@@ -31,7 +31,12 @@
       ]
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "org.code.studio.applab.<%- projectId %>",
+      "buildNumber": "1"
+    }, "android": {
+      "package": "org.code.studio.applab.<%- projectId %>",
+      "versionCode": 1
     }
   }
 }

@@ -1,9 +1,9 @@
 'use strict';
 
 import { NativeModules, PixelRatio, Platform } from 'react-native';
-import AssetRegistry from 'react-native/Libraries/Image/AssetRegistry';
-import AssetSourceResolver from 'react-native/Libraries/Image/AssetSourceResolver';
-import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
+import AssetRegistry from 'AssetRegistry';
+import AssetSourceResolver from 'AssetSourceResolver';
+import resolveAssetSource from 'resolveAssetSource';
 
 // On Android we pass the manifest in JSON form so this step is necessary
 const { ExponentConstants } = NativeModules;
@@ -50,7 +50,6 @@ const pickScale = meta => {
 
   // Allow asset processors to directly provide the URL that will be loaded
   if (meta.uri) {
-    console.log('Loading from meta URI...');
     return {
       uri: meta.uri,
       hash,
@@ -58,7 +57,6 @@ const pickScale = meta => {
   }
 
   if (/^https?:/.test(meta.httpServerLocation)) {
-    console.log('Loading from meta httpServerLocation URI...');
     // This is a full URL, so we avoid prepending bundle URL/cloudfront
     // This usually means Asset is on a different server, and the URL is present in the bundle
     return {
@@ -69,7 +67,6 @@ const pickScale = meta => {
 
   if (Constants.manifest.xde) {
     // Development server URI is pieced together
-    console.log('Loading from dev server URI...');
     return {
       uri:
         Constants.manifest.bundleUrl.match(/^https?:\/\/.*?\//)[0] +
@@ -78,8 +75,6 @@ const pickScale = meta => {
       hash,
     };
   }
-
-  console.log('Loading from CDN...');
 
   // CDN URI is based directly on the hash
   return {
@@ -106,7 +101,6 @@ export default class CustomAsset {
     this.type = type;
     this.hash = hash;
     this.uri = uri;
-    this.localUri = getUriInBundle(hash, type);
     if (typeof width === 'number') {
       this.width = width;
     }
@@ -115,7 +109,7 @@ export default class CustomAsset {
     }
 
     this.downloading = false;
-    this.downloaded = !!this.localUri;
+    this.downloaded = false;
     this.downloadCallbacks = [];
   }
 
@@ -128,10 +122,10 @@ export default class CustomAsset {
     return Promise.all(assets.map(a => a.downloadAsync()));
   }
 
-  static fromModule(moduleId, prefix) {
+  static fromModule(moduleId, fileName) {
     const meta = AssetRegistry.getAssetByID(moduleId);
     const asset = CustomAsset.fromMetadata(meta);
-    asset.prefix = prefix;
+    asset.name = fileName;
     return asset;
   }
 
@@ -139,7 +133,7 @@ export default class CustomAsset {
     // The hash of the whole asset, not to confuse with the hash of a specific
     // file returned from `pickScale`.
     const metaHash = meta.hash;
-    if (CustomAsset.byHash[metaHash]) {
+    if (meta.type && CustomAsset.byHash[metaHash]) {
       return CustomAsset.byHash[metaHash];
     }
 
@@ -153,7 +147,9 @@ export default class CustomAsset {
       width: meta.width,
       height: meta.height,
     });
-    CustomAsset.byHash[metaHash] = asset;
+    if (meta.type) {
+      CustomAsset.byHash[metaHash] = asset;
+    }
     return asset;
   }
 
@@ -167,29 +163,59 @@ export default class CustomAsset {
     }
     this.downloading = true;
     try {
-      const localUri = `${FS.cacheDirectory}${this.prefix ? this.prefix + '/' : ''}${this.name}${this.type ? '.' + this.type : ''}`;
+      const localUri = `${FS.cacheDirectory}${this.name}`;
       let exists, md5;
       ({ exists, md5 } = await FS.getInfoAsync(localUri, {
         cache: true,
         md5: true,
       }));
+      if (!this.type) {
+        // We treat "no type" as an indication that we're running as a Snack and the file contents
+        // are embedded in the hash
+        md5 = null;
+      }
       if (!exists || md5 !== this.hash) {
         const dirName = localUri.substring(0, localUri.lastIndexOf('/'));
         if (`${dirName}/` !== FS.cacheDirectory) {
-          await FS.makeDirectoryAsync(dirName, {
-            intermediates: true,
-          });
+          try {
+            await FS.makeDirectoryAsync(dirName, {
+              intermediates: true,
+            });
+          } catch (e) {
+            // Ignore this because it throws if the dir already exists on Android
+          }
         }
-        ({ md5 } = await FS.downloadAsync(this.uri, localUri, {
-          cache: true,
-          md5: true,
-        }));
-        if (md5 !== this.hash) {
-          throw new Error(
-            `Downloaded file for asset '${this.name}${this.type ? '.' + (this.type == 'j' ? 'js' : this.type) : ''}' ` +
-              `Located at ${this.uri} ` +
-              `failed MD5 integrity check`
-          );
+        if (!this.type) {
+          // We treat "no type" as an indication that we're running as a Snack and the file contents
+          // are embedded in the hash
+          try {
+            await FS.writeAsStringAsync(localUri, this.hash);
+          } catch (e) {
+            // Ignore this because it throws even when the write succeeds
+          }
+        } else {
+          const bundleUri = getUriInBundle(this.hash, this.type);
+          if (bundleUri) {
+            await FS.copyAsync({
+              from: bundleUri,
+              to: localUri,
+            });
+            ({ md5 } = await FS.getInfoAsync(localUri, {
+              cache: true,
+              md5: true,
+            }));
+          }
+          ({ md5 } = await FS.downloadAsync(this.uri, localUri, {
+            cache: true,
+            md5: true,
+          }));
+          if (md5 !== this.hash) {
+            throw new Error(
+              `Downloaded file for asset '${this.name} ` +
+                `Located at ${this.uri} ` +
+                `failed MD5 integrity check`
+            );
+          }
         }
       }
 

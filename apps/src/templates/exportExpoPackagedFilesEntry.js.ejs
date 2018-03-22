@@ -1,5 +1,1 @@
-<% if (module.localDir) { -%>
-  { module: require("./assets/<%- module.fileName %>"), localDir: "<%- module.localDir %>" },
-<% } else { -%>
-  { module: require("./assets/<%- module.fileName %>") },
-<% } -%>
+  { module: require("./assets/<%- module.fileName %>"), fileName: "<%- module.fileName %>" },

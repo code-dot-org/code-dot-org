@@ -739,7 +739,7 @@ Applab.render = function () {
     Applab.reactMountPoint_);
 };
 
-Applab.exportApp = function (expoMode) {
+Applab.exportApp = function (expoOpts) {
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
@@ -748,7 +748,7 @@ Applab.exportApp = function (expoMode) {
     window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
     html,
-    expoMode
+    expoOpts
   );
 };
 

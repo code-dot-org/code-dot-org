@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import Radium from 'radium';
+import QRCode from 'qrcode.react';
 import * as color from "../../util/color";
 import {CIPHER, ALPHABET} from '../../constants';
 
@@ -42,6 +43,22 @@ const style = {
     height: 80,
     margin: 0,
   },
+  expoButton: {
+    marginLeft: 0,
+    marginRight: 20,
+    width: 250,
+  },
+  expoContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  expoExportRow: {
+    display: 'flex',
+    alignItems: 'flex-start',
+  },
+  expoQRCodeRow: {
+    height: 128,
+  }
 };
 
 class AdvancedShareOptions extends React.Component {
@@ -64,7 +81,7 @@ class AdvancedShareOptions extends React.Component {
     this.state = {
       selectedOption: props.onClickExport ? 'export' : 'embed',
       exporting: false,
-      exportingExpo: false,
+      exportingExpo: null,
       exportError: null,
       exportExpoError: null,
       embedWithoutCode: false,
@@ -84,17 +101,24 @@ class AdvancedShareOptions extends React.Component {
     );
   };
 
-  downloadExpoExport = () => {
-    this.setState({exportingExpo: true});
-    this.props.onClickExportExpo().then(
-      this.setState.bind(this, {exportingExpo: false}),
-      () => {
-        this.setState({
-          exportingExpo: false,
-          exportExpoError: 'Failed to export project. Please try again later.'
-        });
-      }
-    );
+  downloadExpoExport = () => this.expoExport({ mode: 'zip'});
+
+  publishExpoExport = () => this.expoExport({ mode: 'publish'});
+
+  expoExport = async (opts) => {
+    this.setState({exportingExpo: opts.mode});
+    try {
+      const expoUri = await this.props.onClickExportExpo(opts);
+      this.setState({
+        exportingExpo: null,
+        expoUri,
+      });
+    } catch (e) {
+      this.setState({
+        exportingExpo: null,
+        exportExpoError: 'Failed to export project. Please try again later.',
+      });
+    }
   };
 
   renderEmbedTab() {
@@ -169,7 +193,11 @@ class AdvancedShareOptions extends React.Component {
   }
 
   renderExportExpoTab() {
-    const spinner = this.state.exportingExpo ?
+    const { expoUri } = this.state;
+    const exportSpinner = this.state.exportingExpo === 'zip' ?
+          <i className="fa fa-spinner fa-spin"></i> :
+          null;
+    const publishSpinner = this.state.exportingExpo === 'publish' ?
           <i className="fa fa-spinner fa-spin"></i> :
           null;
     // TODO: Make this use a nice UI component from somewhere.
@@ -182,15 +210,29 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p style={style.p}>
-          Export your project as a zipped file for use in Expo, which will
+          Export your project for use in Expo or as a zipped file for
+          submission to an App Store. Your exported app will
           contain the HTML/CSS/JS files, as well as any assets, for your
           project. Note that data APIs will not work outside of Code Studio.
         </p>
-        <button onClick={this.downloadExpoExport} style={{marginLeft: 0}}>
-          {spinner}
-          Export to Expo
-        </button>
-        {alert}
+        <div style={style.expoContainer}>
+          <div style={style.expoExportRow}>
+            <button onClick={this.downloadExpoExport} style={style.expoButton}>
+              {exportSpinner}
+              Export to Expo Zip
+            </button>
+          </div>
+          <div style={[style.expoExportRow, style.expoQRCodeRow]}>
+            <button onClick={this.publishExpoExport} style={style.expoButton}>
+              {publishSpinner}
+              Try in Expo App
+            </button>
+            {!!expoUri &&
+              <QRCode value={expoUri} />
+            }
+          </div>
+          {alert}
+        </div>
       </div>
     );
   }
