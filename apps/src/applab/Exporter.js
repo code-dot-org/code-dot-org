@@ -554,7 +554,7 @@ function getEnvironmentPrefix() {
     return "cdo-staging";
   }
   if (hostname.includes("localhost")) {
-    return "cdo-development-1-"; // TODO: remove
+    return "cdo-development";
   }
   if (hostname.includes("code.org")) {
     return "cdo";
