@@ -86,6 +86,12 @@ const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
+/** Reports server request has started */
+const UPDATE_SHARING_REQUEST = 'manageStudents/UPDATE_SHARING_REQUEST';
+/** Reports server request has succeeded */
+const UPDATE_SHARING_SUCCESS = 'manageStudents/UPDATE_SHARING_SUCCESS';
+/** Reports server request has failed */
+const UPDATE_SHARING_FAILURE = 'manageStudents/UPDATE_SHARING_FAILURE';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -107,6 +113,29 @@ export const addStudentsFailure = (numStudents, error, studentIds) => (
 );
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
 export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
+
+export const updateShareSetting = (sectionId, shareSetting) => dispatch => {
+  dispatch({type: UPDATE_SHARING_REQUEST});
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: `dashboardapi/sections/${sectionId}/update_sharing_disabled`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({sharing_disabled: shareSetting}),
+    }).done(result => {
+      dispatch({
+        type: UPDATE_SHARING_SUCCESS,
+        sectionId: sectionId,
+        serverSectionShareSetting: result.sharing_disabled,
+        serverStudents: result.students
+      });
+      resolve();
+    }).fail((jqXhr, status) => {
+      dispatch({type: UPDATE_SHARING_FAILURE});
+      reject(status);
+    });
+  });
+};
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -428,6 +457,27 @@ export default function manageStudents(state=initialState, action) {
     return {
       ...state,
       showSharingColumn: !state.showSharingColumn,
+    };
+  }
+  if (action.type === UPDATE_SHARING_REQUEST) {
+    return {
+      ...state,
+      saveInProgress: true,
+    };
+  }
+  if (action.type === UPDATE_SHARING_SUCCESS) {
+    const students = action.serverStudents.map(student =>
+      (student, action.sectionId));
+    return {
+      ...state,
+      saveInProgress: false,
+      selectedStudents: students
+    };
+  }
+  if (action.type === UPDATE_SHARING_FAILURE) {
+    return {
+      ...state,
+      saveInProgress: false
     };
   }
 

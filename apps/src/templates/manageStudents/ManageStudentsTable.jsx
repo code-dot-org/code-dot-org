@@ -136,6 +136,7 @@ class ManageStudentsTable extends Component {
     saveAllStudents: PropTypes.func,
     showSharingColumn: PropTypes.bool,
     editAll: PropTypes.func,
+    sectionId: PropTypes.number,
   };
 
   state = {
@@ -236,7 +237,9 @@ class ManageStudentsTable extends Component {
           {i18n.projectSharingColumnHeader()}
         </div>
         <div style={styles.headerIcon}>
-          <SharingControlActionsHeaderCell/>
+          <SharingControlActionsHeaderCell
+            sectionId={this.props.sectionId}
+          />
         </div>
       </span>
     );
@@ -476,6 +479,7 @@ export default connect(state => ({
   studentData: convertStudentDataToArray(state.manageStudents.studentData),
   editingData: state.manageStudents.editingData,
   showSharingColumn: state.manageStudents.showSharingColumn,
+  sectionId: state.manageStudents.sectionId,
   addStatus: state.manageStudents.addStatus,
 }), dispatch => ({
   saveAllStudents() {
