@@ -1165,6 +1165,41 @@ exports.install = function (blockly, blockInstallOptions) {
     return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},'block_id_${this.id}');\n`;
   };
 
+  // blockly.Blocks.turtle_sticker_with_size_non_param = {
+  //   helpUrl: '',
+  //   init: function () {
+  //     this.setHSV(184, 1.00, 0.74);
+  //     var dropdown;
+  //     var input = this.appendDummyInput();
+  //     input.appendTitle(msg.drawSticker());
+  //
+  //     // Generates a list of pairs of the form [[url, name]]
+  //     var values = [];
+  //     for (var name in skin.stickers) {
+  //       var url = skin.stickers[name];
+  //       values.push([url, name]);
+  //     }
+  //
+  //     dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+  //
+  //     input.appendTitle(dropdown, 'VALUE');
+  //     this.appendDummyInput()
+  //         .appendTitle('with size');
+  //     this.appendDummyInput()
+  //         .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'SIZE')
+  //         .appendTitle(msg.pixels());
+  //     this.setInputsInline(true);
+  //     this.setPreviousStatement(true);
+  //     this.setNextStatement(true);
+  //     this.setTooltip(msg.drawStickerWithSize());
+  //   }
+  // };
+  //
+  // generator.turtle_sticker_with_size_non_param = function () {
+  //   let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
+  //   return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},'block_id_${this.id}');\n`;
+  // };
+
   blockly.Blocks.turtle_setArtist = {
     helpUrl: '',
     init: function () {
