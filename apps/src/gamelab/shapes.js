@@ -163,15 +163,18 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
     throw new Error(`serializedAnimationList is not an object`);
   }
 
-  const {orderedKeys, propsByKey} = serializedAnimationList;
-  if (!Array.isArray(orderedKeys)) {
+  // Check orderedKeys is properly formatted
+  if (!Array.isArray(serializedAnimationList.orderedKeys)) {
     throw new Error(`orderedKeys is not an array`);
   }
+  serializedAnimationList.orderedKeys = _.uniq(serializedAnimationList.orderedKeys);
+
+  const {orderedKeys, propsByKey} = serializedAnimationList;
+
+  // Check propsByKey is properly formatted and check propsByKey shape
   if (typeof propsByKey !== 'object' || propsByKey === null) {
     throw new Error(`propsByKey is not an object`);
   }
-
-  // Check shape of propsByKey objects
   for (const animationKey in propsByKey) {
     ['name', 'frameSize', 'frameCount', 'looping', 'frameDelay'].forEach(requiredPropName => {
       if (!propsByKey[animationKey].hasOwnProperty(requiredPropName)) {
@@ -179,22 +182,6 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
       }
     });
   }
-
-  // Check for duplicates in the orderedKeys array
-  let knownKeys = {};
-  let dupIndices = [];
-  orderedKeys.forEach((key, index) => {
-    if (knownKeys.hasOwnProperty(key)) {
-      // Store indices from highest to lowest to make it easier to remove dupes
-      dupIndices.splice(0, 0, index);
-    }
-    knownKeys[key] = true;
-  });
-
-  // Remove any duplicated indices
-  dupIndices.forEach(index => {
-    orderedKeys.splice(index, 1);
-  });
 
   // The ordered keys set and the keys from propsByKey should match (but can
   // be in a different order)
