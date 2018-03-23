@@ -17,14 +17,18 @@
   %b School State:
   = "#{@form[:school_state]}"
   %br
+  %b School District:
   - if @form[:school_district]
-    %b School District:
     = "#{@form[:school_district]}"
-    %br
+  - else
+    = "None"
+  %br
+  %b School Name:
   - if @form[:school_name]
-    %b School Name:
     = "#{@form[:school_name]}"
-    %br
+  - else
+    = "None"
+  %br
   %b School Type:
   = "#{@form[:school_type].capitalize}"
   %br
@@ -35,7 +39,9 @@
     %b Program:
     = "#{@form[:program].map {|item| item.gsub(/\((.*)\)/, '').strip}.join(', ')}"
 
-- if @form[:message]
-  %p
-    %b Message:
+%p
+  %b Message:
+  - if @form[:message]
     = "#{@form[:notes]}"
+  - else
+    = "None"
