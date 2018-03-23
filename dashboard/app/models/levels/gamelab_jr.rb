@@ -42,6 +42,7 @@ class GamelabJr < Gamelab
           helper_libraries: [
             "GameLabJr",
           ],
+          hide_animation_mode: true,
         }
       )
     )
