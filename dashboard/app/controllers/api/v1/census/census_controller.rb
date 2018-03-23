@@ -20,13 +20,16 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_other_description,
     :topic_do_not_know,
     :class_frequency,
     :tell_us_more,
     :pledged,
-    :share_with_regional_partners
+    :share_with_regional_partners,
+    :inaccuracy_reported,
+    :inaccuracy_comment
   ].freeze
 
   CHECKBOX_FIELDS = [
@@ -39,9 +42,11 @@ class Api::V1::Census::CensusController < ApplicationController
     :topic_data,
     :topic_web_design,
     :topic_game_design,
+    :topic_ethical_social,
     :topic_other,
     :topic_do_not_know,
-    :pledged
+    :pledged,
+    :inaccuracy_reported
   ].freeze
 
   FREE_TEXT_FIELDS = [
@@ -49,6 +54,7 @@ class Api::V1::Census::CensusController < ApplicationController
     :submitter_name,
     :topic_other_description,
     :tell_us_more,
+    :inaccuracy_comment
   ].freeze
 
   # POST /dashboardapi/v1/census/<form_version>
@@ -101,6 +107,12 @@ class Api::V1::Census::CensusController < ApplicationController
     census_params[:school_infos] = [school_info]
 
     case params[:form_version]
+    when 'CensusYourSchool2017v7'
+      submission = ::Census::CensusYourSchool2017v7.new census_params
+      template = 'census_form_receipt'
+    when 'CensusYourSchool2017v6'
+      submission = ::Census::CensusYourSchool2017v6.new census_params
+      template = 'census_form_receipt'
     when 'CensusYourSchool2017v5'
       submission = ::Census::CensusYourSchool2017v5.new census_params
       template = 'census_form_receipt'

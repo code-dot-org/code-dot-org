@@ -676,18 +676,12 @@
   dashboard_course_csp: AP® 計算機科學原理
   dashboard_course_csp_desc: Code.org 設計了嚴謹、 緊密和容易接受的課程，專門探索計算相關的基本思想。
   dashboard_landing_loading: "正在載入..."
-  dashboard_action_edit: "编辑"
-  dashboard_action_save: "儲存"
-  dashboard_action_save_all: "儲存全部"
   dashboard_action_cancel: "取消"
   dashboard_action_delete: "删除"
   dashboard_action_delete_yes: "是"
   dashboard_action_delete_no: "否"
   dashboard_action_confirm: "要刪除嗎？"
-  dashboard_action_remove: "移除"
-  dashboard_action_remove_confirm: "移除？"
   dashboard_action_done: "完成"
-  dashboard_action_required: "必要"
   dashboard_action_print_certificates: "列印所有證書"
   dashboard_assessments_view: "檢視評量："
   dashboard_assessments_none: "大多數教師透過「檢視進度」頁籤上可以衡量學生進度。如果你有興趣給你的學生額外的評量，你可以在課程計畫找到建議的問題和領域，這些都是在
@@ -767,30 +761,17 @@
   dashboard_sections_assign_activity: "指派課程"
   dashboard_error_none_selected: "你尚未選擇要移動的學生，請選取至少一名學生。"
   dashboard_error_other_section: "如果你要在你的學習小組之間移動學生，可以從下拉清單選擇你的學習小組，只選擇「其他學習小組」可以把你的學生移動到其他的學習小組中。"
-  dashboard_students_add_student: "新增一個學生"
-  dashboard_students_add_students: "新增多個學生"
   dashboard_students_add_multiple: "輸入或貼上學生的姓名，一個學生一行："
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
   dashboard_students_new_section: "你已經創建新的學習小組了！現在用下方的<b>新增一個學生</b>和<b>新增多個學生</b>按鈕來添加學生到小組中。"
-  dashboard_students_placeholder_name: "學生姓名"
   dashboard_students_name: "你的名字"
   dashboard_students_progress: "進度"
-  dashboard_students_age: "年齡"
-  dashboard_students_gender: "性別"
   dashboard_students_male: "男性"
   dashboard_students_female: "女性"
-  dashboard_students_secret: "通關密鑰"
-  dashboard_students_password: "密碼"
-  dashboard_students_username: "用戶名稱：%{student_username}"
-  dashboard_students_email: "信箱：%{student_email}"
   dashboard_students_completed_levels: "已完成的階段"
   dashboard_students_total_lines: "程式碼行數總計"
-  dashboard_students_show_secret: "顯示通關密鑰"
-  dashboard_students_auto_generated: "自動生成"
-  dashboard_students_reset_secret: "重設通關密錀"
-  dashboard_students_reset_password: "重設密碼"
   dashboard_students_share_section: "告訴你的學生連結到 <a href=%{join_url}>%{join_url}</a>
     並輸入學習小組代碼（%{section_code}）"
   dashboard_students_share_section_secondary: "或者，分享學習小組的登入頁面給你的學生："
@@ -851,7 +832,6 @@
   dashboard_login_word: "通關密語"
   dashboard_login_picture: "通關圖片"
   dashboard_login_none: "電子郵件"
-  dashboard_new_password: "新密碼"
   dashboard_stage: "階段"
   dashboard_puzzle: "關卡"
   dashboard_question: "問題"
@@ -1142,7 +1122,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: "年級 8+"
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "年齡 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "現代瀏覽器、手機、平板"

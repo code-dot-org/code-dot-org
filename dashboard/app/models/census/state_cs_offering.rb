@@ -24,6 +24,7 @@ class Census::StateCsOffering < ApplicationRecord
     'CA',
     'GA',
     'ID',
+    'SC'
   ].freeze
 
   def self.construct_state_school_id(state_code, row_hash)
@@ -35,10 +36,14 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
+    when 'SC'
+      School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
   end
+
+  UNSPECIFIED_COURSE = 'unspecified'
 
   CA_COURSE_CODES = %w(
     2451
@@ -69,6 +74,9 @@ class Census::StateCsOffering < ApplicationRecord
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
+    when 'SC'
+      # One source per row
+      [UNSPECIFIED_COURSE]
     else
       raise ArgumentError.new("#{state_code} is not supported.")
     end
@@ -101,6 +109,10 @@ class Census::StateCsOffering < ApplicationRecord
 
   CENSUS_BUCKET_NAME = "cdo-census".freeze
 
+  def self.construct_object_key(state_code, school_year)
+    "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}.csv"
+  end
+
   def self.seed_from_s3
     # State CS Offering data files in S3 are named
     # "state_cs_offerings/<STATE_CODE>/<SCHOOL_YEAR_START>-<SCHOOL_YEAR_END>.csv"
@@ -108,7 +120,7 @@ class Census::StateCsOffering < ApplicationRecord
     current_year = Date.today.year
     (2016..current_year).each do |school_year|
       SUPPORTED_STATES.each do |state_code|
-        object_key = "state_cs_offerings/#{state_code}/#{school_year}-#{school_year + 1}.csv"
+        object_key = construct_object_key(state_code, school_year)
         begin
           AWS::S3.seed_from_file(CENSUS_BUCKET_NAME, object_key) do |filename|
             seed_from_csv(state_code, school_year, filename)

@@ -54,6 +54,7 @@ import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import GameLabJrLib from './GameLabJr.interpreted';
+import defaultSprites from './defaultSprites.json';
 
 const LIBRARIES = {
   'GameLabJr': GameLabJrLib,
@@ -172,7 +173,9 @@ GameLab.prototype.init = function (config) {
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
-  if (this.level.startAnimations && this.level.startAnimations.length > 0) {
+  if (this.level.useDefaultSprites) {
+    this.startAnimations = defaultSprites;
+  } else if (this.level.startAnimations && this.level.startAnimations.length > 0) {
     try {
       this.startAnimations = JSON.parse(this.level.startAnimations);
     } catch (err) {
@@ -867,7 +870,7 @@ GameLab.prototype.initInterpreter = function () {
   getStore().dispatch(jsDebugger.attach(this.JSInterpreter));
   let code = this.studioApp_.getCode();
   if (this.level.customHelperLibrary) {
-    code = this.customHelperLibrary + code;
+    code = this.level.customHelperLibrary + code;
   }
   if (this.level.helperLibraries) {
     const libs = this.level.helperLibraries

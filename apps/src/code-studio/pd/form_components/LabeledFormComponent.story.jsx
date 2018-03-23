@@ -87,7 +87,7 @@ export default storybook => {
   };
 
   storybook
-  .storiesOf('LabeledFormComponent', module)
+  .storiesOf('FormComponents/LabeledFormComponent', module)
   .addDecorator(reactBootstrapStoryDecorator)
   .addStoryTable([{
     name: 'Single Checkbox',

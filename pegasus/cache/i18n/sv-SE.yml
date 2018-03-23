@@ -847,18 +847,12 @@
   dashboard_course_csp_desc: Code.org har designat en rigorös, engagerande och lättillgänglig
     kurs som utforskar de grundläggande idéerna i computing.
   dashboard_landing_loading: Laddar...
-  dashboard_action_edit: Redigera
-  dashboard_action_save: Spara
-  dashboard_action_save_all: Spara alla
   dashboard_action_cancel: Avbryt
   dashboard_action_delete: Ta bort
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nej
   dashboard_action_confirm: Ta bort?
-  dashboard_action_remove: Ta bort
-  dashboard_action_remove_confirm: Ta bort?
   dashboard_action_done: Klart
-  dashboard_action_required: obligatorisk
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -965,8 +959,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: Lägg till student
-  dashboard_students_add_students: Lägga till flera elever
   dashboard_students_add_multiple: 'Skriv eller klistra in namnen på dina elever,
     en per rad:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -975,23 +967,12 @@
   dashboard_students_new_section: Du har skapt en ny sektion! Lägg nu till dina elever
     genom att använda <b>Lägg till elev</b> och <b>Lägg till flera elever</b> knapparna
     ovan.
-  dashboard_students_placeholder_name: Studentnamn
   dashboard_students_name: Namn
   dashboard_students_progress: Framsteg
-  dashboard_students_age: "Ålder"
-  dashboard_students_gender: Kön
   dashboard_students_male: Man
   dashboard_students_female: Kvinna
-  dashboard_students_secret: Hemlig
-  dashboard_students_password: Lösenord
-  dashboard_students_username: 'Användarnamn: %{student_username}'
-  dashboard_students_email: 'E-post: %{student_email}'
   dashboard_students_completed_levels: Avklarade nivåer
   dashboard_students_total_lines: Rader kod
-  dashboard_students_show_secret: Visa hemliga
-  dashboard_students_auto_generated: Auto genererade
-  dashboard_students_reset_secret: "Återställ hemlig"
-  dashboard_students_reset_password: "Återställ lösenord"
   dashboard_students_share_section: 'Dela denna sektions inloggningssida med dina
     elever:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1062,7 +1043,6 @@
   dashboard_login_word: Ord
   dashboard_login_picture: Bild
   dashboard_login_none: E-post
-  dashboard_new_password: nytt lösenord
   dashboard_stage: nivå
   dashboard_puzzle: Pussel
   dashboard_question: Fråga
@@ -1370,7 +1350,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Åldrarna 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Åldrar 10 + (efter kurs 3)"
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor

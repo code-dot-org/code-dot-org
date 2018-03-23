@@ -4,7 +4,7 @@ import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
 export default storybook => {
   return storybook
-    .storiesOf('DiscountAdminOverride', module)
+    .storiesOf('MakerToolkit/Discounts/DiscountAdminOverride', module)
     .addStoryTable([
       {
         name: 'DiscountAdminOverride',

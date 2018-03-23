@@ -29,12 +29,12 @@ const styles = {
 
 export class QuickViewTable extends React.Component {
   static propTypes = {
-    showLocked: PropTypes.bool,
     path: PropTypes.string.isRequired,
     data: PropTypes.array.isRequired,
     statusFilter: PropTypes.string,
     regionalPartnerName: PropTypes.string,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+    regionalPartnerGroup: PropTypes.number,
     isWorkshopAdmin: PropTypes.bool
   };
 
@@ -59,6 +59,12 @@ export class QuickViewTable extends React.Component {
       }
     };
   }
+
+  showLocked = () => (
+    this.props.isWorkshopAdmin
+    || this.props.viewType === 'facilitator'
+    || (this.props.viewType ==='teacher' && this.props.regionalPartnerGroup === 3)
+  );
 
   formatBoolean(bool) {
     return bool ? "Yes" : "No";
@@ -122,7 +128,7 @@ export class QuickViewTable extends React.Component {
       }
     });
 
-    if (this.props.showLocked) {
+    if (this.showLocked()) {
       columns.push({
         property: 'locked',
         cell: {
@@ -267,6 +273,6 @@ export class QuickViewTable extends React.Component {
 }
 
 export default connect(state => ({
-  showLocked: state.permissions.lockApplication,
-  isWorkshopAdmin: state.permissions.workshopAdmin,
+  regionalPartnerGroup: state.regionalPartnerGroup,
+  isWorkshopAdmin: state.permissions.workshopAdmin
 }))(QuickViewTable);

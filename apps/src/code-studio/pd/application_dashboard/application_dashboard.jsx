@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import applicationDashboardReducers, {
   setRegionalPartnerName,
+  setRegionalPartnerGroup,
   setRegionalPartners,
   setWorkshopAdminPermission,
   setLockApplicationPermission,
@@ -50,6 +51,7 @@ const paths = {
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string,
+    regionalPartnerGroup: PropTypes.number,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string
@@ -61,6 +63,10 @@ export default class ApplicationDashboard extends React.Component {
   componentWillMount() {
     if (this.props.regionalPartnerName) {
       store.dispatch(setRegionalPartnerName(this.props.regionalPartnerName));
+    }
+
+    if (this.props.regionalPartnerGroup) {
+      store.dispatch(setRegionalPartnerGroup(this.props.regionalPartnerGroup));
     }
 
     if (this.props.regionalPartners) {
@@ -112,6 +118,7 @@ export default class ApplicationDashboard extends React.Component {
                       component={QuickView}
                       applicationType={paths[path].name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   ),
                   (
@@ -122,6 +129,7 @@ export default class ApplicationDashboard extends React.Component {
                       component={CohortView}
                       applicationType={cohort_path_name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   )
                 ];

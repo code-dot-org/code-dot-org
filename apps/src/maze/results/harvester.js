@@ -10,11 +10,11 @@ export default class HarvesterHandler extends GathererHandler {
     // Initialize subtype-specific event listeners
 
     this.maze_.subtype.on('wrongCrop', () => {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
+      this.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
     });
 
     this.maze_.subtype.on('emptyCrop', () => {
-      this.maze_.executionInfo.terminateWithValue(HarvesterTerminationValue.EMPTY_CROP);
+      this.executionInfo.terminateWithValue(HarvesterTerminationValue.EMPTY_CROP);
     });
   }
 
@@ -29,7 +29,7 @@ export default class HarvesterHandler extends GathererHandler {
    * @override
    */
   terminateWithAppSpecificValue() {
-    const executionInfo = this.maze_.executionInfo;
+    const executionInfo = this.executionInfo;
 
     if (!this.collectedEverything()) {
       executionInfo.terminateWithValue(HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING);

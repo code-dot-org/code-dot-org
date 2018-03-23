@@ -203,8 +203,8 @@ class ScriptDSL < BaseDSL
     {'name' => {@name => {'stages' => i18n_strings}}}
   end
 
-  def self.parse_file(filename)
-    super(filename, File.basename(filename, '.script'))
+  def self.parse_file(filename, name = nil)
+    super(filename, name || File.basename(filename, '.script'))
   end
 
   def self.serialize(script, filename)

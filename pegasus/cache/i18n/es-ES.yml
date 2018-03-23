@@ -11,7 +11,7 @@
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
-  csedweek_dates: Del 8 al 14 de diciembre de 2014
+  csedweek_dates: 8-14 de Diciembre, 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hora de Code</a>. Se convoca
     a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color:
@@ -864,18 +864,12 @@
   dashboard_course_csp_desc: Code.org ha diseñado un curso riguroso, atractivo y accesible
     que explora las ideas fundamentales de la informática.
   dashboard_landing_loading: Cargando...
-  dashboard_action_edit: Editar
-  dashboard_action_save: Guardar
-  dashboard_action_save_all: Guardar todo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Borrar
   dashboard_action_delete_yes: Sí
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: "¿Borrar?"
-  dashboard_action_remove: Eliminar
-  dashboard_action_remove_confirm: "¿Eliminar?"
   dashboard_action_done: Hecho
-  dashboard_action_required: obligatorio
   dashboard_action_print_certificates: Imprimir certificados
   dashboard_assessments_view: 'Ver evaluaciones en:'
   dashboard_assessments_none: Sin evaluaciones
@@ -982,8 +976,6 @@
   dashboard_error_other_section: Si están moviendo estudiantes entre sus propias secciones,
     seleccione su sección en la lista desplegable. Solo seleccione "Otra Sección"
     para mover sus estudiantes a la sección de un profesor diferente.
-  dashboard_students_add_student: Añadir alumno
-  dashboard_students_add_students: Añadir varios alumnos
   dashboard_students_add_multiple: 'Escribe o pega los nombres de sus alumnos, uno
     por línea:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -992,23 +984,12 @@
   dashboard_students_new_section: "¡Has creado una nueva sección! Ahora, añade a tus
     alumnos usando los botones anteriores <b>Añadir alumno</b> y <b>Añadir varios
     alumnos</b>."
-  dashboard_students_placeholder_name: Nombre del alumno
   dashboard_students_name: Nombre
   dashboard_students_progress: Progreso
-  dashboard_students_age: Edad
-  dashboard_students_gender: Sexo
   dashboard_students_male: Hombre
   dashboard_students_female: Mujer
-  dashboard_students_secret: Secreto
-  dashboard_students_password: contraseña
-  dashboard_students_username: 'Nombre de usuario: %{student_username}'
-  dashboard_students_email: 'Correo: %{student_email}'
   dashboard_students_completed_levels: Niveles Completados
   dashboard_students_total_lines: Líneas de Código
-  dashboard_students_show_secret: Mostrar secreto
-  dashboard_students_auto_generated: Generado automáticamente
-  dashboard_students_reset_secret: Reiniciar secreto
-  dashboard_students_reset_password: Restablecer contraseña
   dashboard_students_share_section: 'Comparte la página de registro de esta sección
     con tus alumnos:'
   dashboard_students_share_section_secondary: 'Como alternativa, comparta estas secciones
@@ -1088,7 +1069,6 @@
   dashboard_login_word: Palabra
   dashboard_login_picture: Imagen
   dashboard_login_none: Correo electrónico
-  dashboard_new_password: nueva contraseña
   dashboard_stage: etapa
   dashboard_puzzle: Rompecabezas
   dashboard_question: Pregunta
@@ -1340,7 +1320,7 @@
   cspexams_category_name: Prueba de práctica de principios de CS
   research_studies_category_name: Research Studies
   applab_name: Laboratorio de Aplicaciones
-  gamelab_name: Game Lab
+  gamelab_name: Laboratorio de juego
   basketball_name: Crear un juego de baloncesto
   sports_name: Crea tu propio Juego de deportes
   applab_gradelevel: Edad 13+
@@ -1405,7 +1385,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grado 8 +
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Edad 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta

@@ -32,6 +32,7 @@ const blankAddRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.ADD,
 };
@@ -46,16 +47,26 @@ const blankNewStudentRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
 };
 
-// Initial state for the manageStudents redux store.
+/** Initial state for the manageStudents redux store.
+ * loginType - a SectionLoginType for the active section.
+ * sectionId - the sectionId number for the active section.
+ * studentData - represents student information persisted on the server.
+ * if isEditing (in studentData), then editingData represents the data
+ * in the edit fields on the client which has not yet been persisted to the server.
+ * showSharingColumn - whether the control project sharing column should be hidden or visible in the table.
+ * addStatus - status is of type AddStatus and numStudents is how many students were added.
+ */
 const initialState = {
   loginType: '',
   studentData: {},
   editingData: {},
   sectionId: null,
+  showSharingColumn: false,
   addStatus: {status: null, numStudents: null},
 };
 
@@ -73,6 +84,8 @@ const SAVE_STUDENT_SUCCESS = 'manageStudents/SAVE_STUDENT_SUCCESS';
 const ADD_STUDENT_SUCCESS = 'manageStudents/ADD_STUDENT_SUCCESS';
 const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
+const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
+const EDIT_ALL = 'manageStudents/EDIT_ALL';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -83,6 +96,7 @@ export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId }
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
+export const editAll = () => ({ type: EDIT_ALL });
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
@@ -92,12 +106,13 @@ export const addStudentsFailure = (numStudents, error, studentIds) => (
   { type: ADD_STUDENT_FAILURE, numStudents, error, studentIds }
 );
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
+export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
     dispatch(startSavingStudent(studentId));
-    updateStudentOnServer(state.editingData[studentId], (error, data) => {
+    updateStudentOnServer(state.editingData[studentId], state.sectionId, (error, data) => {
       if (error) {
         console.error(error);
       }
@@ -113,14 +128,19 @@ export const saveAllStudents = () => {
     const state = getState().manageStudents;
 
     // Currently, every update is an individual call to the server.
-    const currentlyEditedData = convertStudentDataToArray(state.editingData);
+    const currentlyEditedData = Object.values(state.editingData);
     let studentsToSave = currentlyEditedData.filter(student => student.rowType === RowType.STUDENT);
-    studentsToSave.forEach(student => dispatch(saveStudent(student.id)));
+    studentsToSave.forEach((student) => {
+      if (student.name !== '') {
+        dispatch(saveStudent(student.id));
+      }
+    });
 
     // Adding students can be saved together.
-    const arrayOfEditedData = convertStudentDataToArray(state.editingData);
+    // Only add students that currently are not in progress saving.
+    const arrayOfEditedData = Object.values(state.editingData);
     const newStudentsToAdd = arrayOfEditedData
-      .filter(student => student.rowType === RowType.NEW_STUDENT)
+      .filter(student => (student.rowType === RowType.NEW_STUDENT && !student.isSaving))
       .map(student => student.id);
     if (newStudentsToAdd.length > 0) {
       dispatch(addStudents(newStudentsToAdd));
@@ -140,7 +160,7 @@ export const addStudents = (studentIds) => {
       dispatch(startSavingStudent(studentIds[i]));
     }
 
-    const arrayOfEditedData = convertStudentDataToArray(state.editingData);
+    const arrayOfEditedData = Object.values(state.editingData);
     const filteredData = arrayOfEditedData.filter(student => studentIds.includes(student.id));
     addStudentOnServer(filteredData,
       state.sectionId, (error, data) => {
@@ -208,15 +228,18 @@ export default function manageStudents(state=initialState, action) {
     };
   }
   if (action.type === SET_STUDENTS) {
+    let studentData = {
+      ...action.studentData
+    };
+    if (state.loginType === SectionLoginType.word || state.loginType === SectionLoginType.picture) {
+      studentData[addRowId] = {
+        ...blankAddRow,
+        loginType: state.loginType,
+      };
+    }
     return {
       ...state,
-      studentData: {
-        ...action.studentData,
-        [addRowId]: {
-          ...blankAddRow,
-          loginType: state.loginType,
-        }
-      },
+      studentData: studentData,
       addStatus: {status: null, numStudents: null},
     };
   }
@@ -262,6 +285,13 @@ export default function manageStudents(state=initialState, action) {
           isSaving: true
         }
       },
+      editingData: {
+        ...state.editingData,
+        [action.studentId]: {
+          ...state.editingData[action.studentId],
+          isSaving: true
+        }
+      },
     };
   }
   if (action.type === SAVE_STUDENT_SUCCESS) {
@@ -288,6 +318,10 @@ export default function manageStudents(state=initialState, action) {
     for (let i = 0; i<action.studentIds.length; i++) {
       newState.studentData[action.studentIds[i]] = {
         ...state.studentData[action.studentIds[i]],
+        isSaving: false,
+      };
+      newState.editingData[action.studentIds[i]] = {
+        ...state.editingData[action.studentIds[i]],
         isSaving: false,
       };
     }
@@ -327,6 +361,20 @@ export default function manageStudents(state=initialState, action) {
         }
       }
     };
+  }
+  if (action.type === EDIT_ALL) {
+    let newState = {
+      ...state
+    };
+    for (const studentKey in state.studentData) {
+      const student = state.studentData[studentKey];
+      newState.studentData[student.id].isEditing = true;
+      newState.editingData[student.id] = {
+        ...newState.studentData[student.id],
+        ...state.editingData[student.id],
+      };
+    }
+    return newState;
   }
   if (action.type === SET_SECRET_IMAGE) {
     return {
@@ -376,11 +424,17 @@ export default function manageStudents(state=initialState, action) {
       }
     };
   }
+  if (action.type === TOGGLE_SHARING_COLUMN) {
+    return {
+      ...state,
+      showSharingColumn: !state.showSharingColumn,
+    };
+  }
 
   return state;
 }
 
-// Converts data from /v2/sections/sectionid/students to a set of key/value
+// Converts data from /dashboardapi/sections/sectionid/students to a set of key/value
 // objects for the redux store
 export const convertStudentServerData = (studentData, loginType, sectionId) => {
   let studentLookup = {};
@@ -390,12 +444,14 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       id: student.id,
       name: student.name,
       username: student.username,
+      email: student.email,
       age: student.age || '',
       gender: student.gender || '',
       secretWords: student.secret_words,
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
+      sharingDisabled: student.sharing_disabled,
       isEditing: false,
       isSaving: false,
       rowType: RowType.STUDENT,
@@ -408,20 +464,24 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
 // component to display
 // TODO(caleybrock): memoize this - sections could be a few thousand students
 export const convertStudentDataToArray = (studentData) => {
-  return Object.values(studentData);
+  return Object.values(studentData).reverse();
 };
 
 // Make a post request to edit a student.
-const updateStudentOnServer = (updatedStudentInfo, onComplete) => {
+const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
   const dataToUpdate = {
-    id: updatedStudentInfo.id,
-    name: updatedStudentInfo.name,
-    age: updatedStudentInfo.age,
-    gender: updatedStudentInfo.gender,
+    student: {
+      id: updatedStudentInfo.id,
+      name: updatedStudentInfo.name,
+      age: updatedStudentInfo.age,
+      gender: updatedStudentInfo.gender,
+      sharing_disabled: updatedStudentInfo.sharingDisabled,
+    }
   };
   $.ajax({
-    url: `/v2/students/${dataToUpdate.id}/update`,
-    method: 'POST',
+    url: `/dashboardapi/sections/${sectionId}/students/${dataToUpdate.student.id}`,
+    method: 'PATCH',
+    type: 'json',
     contentType: 'application/json;charset=UTF-8',
     data: JSON.stringify(dataToUpdate),
   }).done((data) => {
@@ -440,13 +500,17 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       name: updatedStudentsInfo[i].name,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }
+  const students = {
+    students: studentsToAdd
+  };
   $.ajax({
-    url: `/v2/sections/${sectionId}/students`,
+    url: `/dashboardapi/sections/${sectionId}/students/bulk_add`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(studentsToAdd),
+    data: JSON.stringify(students),
   }).done((data) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {
