@@ -34,7 +34,9 @@ export default class Teachercon1819Registration extends FormController {
       lastName: this.props.lastName,
       phone: this.props.phone,
       course: this.props.course,
-      applicationType: this.props.applicationType
+      applicationType: this.props.applicationType,
+      city: this.props.city,
+      date: this.props.date
     };
   }
 
