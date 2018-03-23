@@ -91,6 +91,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_whileLeftArrow" />
   <block type="gamelab_whileRightArrow" />
   <block type="gamelab_whenTouching" />
+  <block type="gamelab_whileTouching" />
   <block type="gamelab_clickedOn" />
 </category>
 <category name="Math">
