@@ -133,7 +133,7 @@ export default class CustomAsset {
     // The hash of the whole asset, not to confuse with the hash of a specific
     // file returned from `pickScale`.
     const metaHash = meta.hash;
-    if (meta.type && CustomAsset.byHash[metaHash]) {
+    if (CustomAsset.byHash[metaHash]) {
       return CustomAsset.byHash[metaHash];
     }
 
@@ -147,9 +147,7 @@ export default class CustomAsset {
       width: meta.width,
       height: meta.height,
     });
-    if (meta.type) {
-      CustomAsset.byHash[metaHash] = asset;
-    }
+    CustomAsset.byHash[metaHash] = asset;
     return asset;
   }
 
@@ -169,11 +167,6 @@ export default class CustomAsset {
         cache: true,
         md5: true,
       }));
-      if (!this.type) {
-        // We treat "no type" as an indication that we're running as a Snack and the file contents
-        // are embedded in the hash
-        md5 = null;
-      }
       if (!exists || md5 !== this.hash) {
         const dirName = localUri.substring(0, localUri.lastIndexOf('/'));
         if (`${dirName}/` !== FS.cacheDirectory) {
@@ -185,37 +178,27 @@ export default class CustomAsset {
             // Ignore this because it throws if the dir already exists on Android
           }
         }
-        if (!this.type) {
-          // We treat "no type" as an indication that we're running as a Snack and the file contents
-          // are embedded in the hash
-          try {
-            await FS.writeAsStringAsync(localUri, this.hash);
-          } catch (e) {
-            // Ignore this because it throws even when the write succeeds
-          }
-        } else {
-          const bundleUri = getUriInBundle(this.hash, this.type);
-          if (bundleUri) {
-            await FS.copyAsync({
-              from: bundleUri,
-              to: localUri,
-            });
-            ({ md5 } = await FS.getInfoAsync(localUri, {
-              cache: true,
-              md5: true,
-            }));
-          }
-          ({ md5 } = await FS.downloadAsync(this.uri, localUri, {
+        const bundleUri = getUriInBundle(this.hash, this.type);
+        if (bundleUri) {
+          await FS.copyAsync({
+            from: bundleUri,
+            to: localUri,
+          });
+          ({ md5 } = await FS.getInfoAsync(localUri, {
             cache: true,
             md5: true,
           }));
-          if (md5 !== this.hash) {
-            throw new Error(
-              `Downloaded file for asset '${this.name} ` +
-                `Located at ${this.uri} ` +
-                `failed MD5 integrity check`
-            );
-          }
+        }
+        ({ md5 } = await FS.downloadAsync(this.uri, localUri, {
+          cache: true,
+          md5: true,
+        }));
+        if (md5 !== this.hash) {
+          throw new Error(
+            `Downloaded file for asset '${this.name} ` +
+              `Located at ${this.uri} ` +
+              `failed MD5 integrity check`
+          );
         }
       }
 

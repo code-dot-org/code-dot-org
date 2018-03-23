@@ -46,19 +46,19 @@ const style = {
   expoButton: {
     marginLeft: 0,
     marginRight: 20,
-    width: 250,
+    width: 300,
   },
   expoContainer: {
     display: 'flex',
+  },
+  expoExportColumn: {
+    display: 'flex',
     flexDirection: 'column',
   },
-  expoExportRow: {
-    display: 'flex',
-    alignItems: 'flex-start',
+  expoInput: {
+    cursor: 'copy',
+    width: 'unset',
   },
-  expoQRCodeRow: {
-    height: 128,
-  }
 };
 
 class AdvancedShareOptions extends React.Component {
@@ -79,7 +79,8 @@ class AdvancedShareOptions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: props.onClickExport ? 'export' : 'embed',
+      selectedOption: props.onClickExportExpo ? 'exportExpo' :
+          (props.onClickExport ? 'export' : 'embed'),
       exporting: false,
       exportingExpo: null,
       exportError: null,
@@ -192,6 +193,10 @@ class AdvancedShareOptions extends React.Component {
     );
   }
 
+  onInputSelect = ({ target }) => {
+    target.select();
+  };
+
   renderExportExpoTab() {
     const { expoUri } = this.state;
     const exportSpinner = this.state.exportingExpo === 'zip' ?
@@ -210,28 +215,40 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p style={style.p}>
-          Export your project for use in Expo or as a zipped file for
-          submission to an App Store. Your exported app will
-          contain the HTML/CSS/JS files, as well as any assets, for your
-          project. Note that data APIs will not work outside of Code Studio.
+          Try running your project in the Expo app on iOS or Android.
+          Note that data APIs will not work outside of Code Studio.
+          You can also export for submission to the Apple App Store or the
+          Google Play Store (both require following our step-by-step guide).
         </p>
         <div style={style.expoContainer}>
-          <div style={style.expoExportRow}>
-            <button onClick={this.downloadExpoExport} style={style.expoButton}>
-              {exportSpinner}
-              Export to Expo Zip
-            </button>
-          </div>
-          <div style={[style.expoExportRow, style.expoQRCodeRow]}>
+          <div style={style.expoExportColumn}>
             <button onClick={this.publishExpoExport} style={style.expoButton}>
               {publishSpinner}
               Try in Expo App
             </button>
-            {!!expoUri &&
-              <QRCode value={expoUri} />
-            }
+            <button onClick={this.downloadExpoExport} style={style.expoButton}>
+              {exportSpinner}
+              Export for Store Submission
+            </button>
           </div>
-          {alert}
+          <div style={style.expoExportColumn}>
+            {!!expoUri &&
+              <div style={style.expoExportColumn}>
+                <p style={style.p}>
+                  Copy this URL or use this QR code to access your project from the Expo app.
+                </p>
+                <input
+                  type="text"
+                  onClick={this.onInputSelect}
+                  readOnly="true"
+                  value={expoUri}
+                  style={style.expoInput}
+                />
+                <QRCode value={expoUri} />
+              </div>
+            }
+            {alert}
+          </div>
         </div>
       </div>
     );
@@ -248,6 +265,19 @@ class AdvancedShareOptions extends React.Component {
       let exportTab = null;
       let exportExpoTab = null;
       if (this.props.onClickExport) {
+        if (this.props.onClickExportExpo) {
+          exportExpoTab = (
+            <li
+              style={[
+                style.nav.li,
+                this.state.selectedOption === 'exportExpo' && style.nav.selectedLi
+              ]}
+              onClick={() => this.setState({selectedOption: 'exportExpo'})}
+            >
+              Run on iOS/Android
+            </li>
+          );
+        }
         exportTab = (
           <li
             style={[
@@ -256,20 +286,7 @@ class AdvancedShareOptions extends React.Component {
             ]}
             onClick={() => this.setState({selectedOption: 'export'})}
           >
-            Export
-          </li>
-        );
-      }
-      if (this.props.onClickExportExpo) {
-        exportExpoTab = (
-          <li
-            style={[
-              style.nav.li,
-              this.state.selectedOption === 'exportExpo' && style.nav.selectedLi
-            ]}
-            onClick={() => this.setState({selectedOption: 'exportExpo'})}
-          >
-            Export to Expo
+            Export for Web
           </li>
         );
       }
@@ -287,8 +304,8 @@ class AdvancedShareOptions extends React.Component {
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
-            {exportTab}
             {exportExpoTab}
+            {exportTab}
             {embedTab}
           </ul>
         </div>

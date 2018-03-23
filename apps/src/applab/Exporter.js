@@ -386,12 +386,9 @@ export default {
     const expoOpts = suppliedExpoOpts || {};
     if (expoOpts.mode === 'publish') {
       const session = await this.publishToExpo(appName, code, levelHtml);
-      await session.startAsync();
-      const url = await session.getUrlAsync();
-      console.log(`Expo URL: ${url}`);
       const saveResult = await session.saveAsync();
-      console.log(`Expo saveResult url: ${saveResult.url}`);
-      return url;
+      const expoURL = `exp://expo.io/@snack/${saveResult.id}`;
+      return expoURL;
     }
     return this.exportAppToZip(appName, code, levelHtml, expoOpts.mode === 'zip')
       .then(function (zip) {
@@ -458,11 +455,6 @@ export default {
       'App.js': { contents: appJs, type: 'CODE'},
       'CustomAsset.js': { contents: customAssetJs, type: 'CODE'},
       'app.json': { contents: appJson, type: 'CODE'},
-      // Important that index.html comes first:
-      'assets/index.html': { contents: rewriteAssetUrls(appAssets, html), type: 'CODE'},
-      'assets/style.css': { contents: rewriteAssetUrls(appAssets, css), type: 'CODE'},
-      'assets/code.j': { contents: rewriteAssetUrls(appAssets, code), type: 'CODE'},
-      'assets/appOptions.j': { contents: appOptionsJs, type: 'CODE'},
     };
 
     return new Promise(async (resolve, reject) => {
@@ -473,20 +465,37 @@ export default {
         sdkVersion: '25.0.0',
       });
 
+      // Important that index.html comes first:
+      const fileAssets = [
+        { filename: 'index.html', data: rewriteAssetUrls(appAssets, html) },
+        { filename: 'style.css', data: rewriteAssetUrls(appAssets, css) },
+        { filename: 'code.j', data: rewriteAssetUrls(appAssets, code) },
+        { filename: 'appOptions.j', data: appOptionsJs },
+      ];
+
+      const fileUploads = fileAssets.map(({ data }) =>
+          session.uploadAssetAsync(new Blob([data]))
+      );
+      const snackFileUrls = await Promise.all(fileUploads);
+
+      snackFileUrls.forEach((url, index) => {
+        files['assets/' + fileAssets[index].filename] = {
+          contents: url,
+          type: 'ASSET',
+        };
+      });
+
       const assetDownloads = appAssets.map(asset =>
         download(asset.url, asset.dataType || 'text')
       );
-      // const asset = appAssets[0];
 
-      // const assetData = await download(asset.url, asset.dataType || 'text');
       const downloadedAssets = await Promise.all(assetDownloads);
       const assetUploads = downloadedAssets.map(downloadedAsset =>
           session.uploadAssetAsync(downloadedAsset)
       );
-      // const snackUrl = await session.uploadAssetAsync(assetData);
-      const snackUrls = await Promise.all(assetUploads);
+      const snackAssetUrls = await Promise.all(assetUploads);
 
-      snackUrls.forEach((url, index) => {
+      snackAssetUrls.forEach((url, index) => {
         files['assets/' + appAssets[index].filename] = {
           contents: url,
           type: 'ASSET',
@@ -509,12 +518,8 @@ export default {
 // https://github.com/facebook/react-native/pull/10365
 function rewriteAssetUrls(appAssets, data) {
   return appAssets.reduce(function (data, assetToDownload) {
-    // if (data.indexOf(assetToDownload.url) >= 0) {
-    //   return data.split(assetToDownload.url).join(assetToDownload.rootRelativePath);
-    // }
     data = data.replace(new RegExp(`["|']${assetToDownload.url}["|']`), `"${assetToDownload.rootRelativePath}"`);
     return data.replace(new RegExp(`["|']${assetToDownload.filename}["|']`), `"${assetToDownload.rootRelativePath}"`);
-    // return data.split(assetToDownload.filename).join(assetToDownload.rootRelativePath);
   }, data);
 }
 
