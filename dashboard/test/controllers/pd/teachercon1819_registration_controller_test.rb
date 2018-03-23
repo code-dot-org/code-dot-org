@@ -11,6 +11,17 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
       regional_partner: @regional_partner
     @program_manager = regional_partner_program_manager.program_manager
 
+    @expected_partner_teachercon_registration_script_data = {
+      options: Pd::Teachercon1819Registration.options.camelize_keys,
+      requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
+      apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
+      regionalPartnerId: @regional_partner.id,
+      applicationType: "Partner",
+      city: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:city],
+      date: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:dates],
+      email: @program_manager.email,
+    }.to_json
+
     sign_in(@teacher)
   end
   # Signed out teacher gets redirected to sign in
@@ -132,17 +143,6 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     assert_template('invalid')
   end
 
-  expected_teachercon_registration_script_data = {
-    options: Pd::Teachercon1819Registration.options.camelize_keys,
-    requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
-    apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
-    regionalPartnerId: @regional_partner.id,
-    applicationType: "Partner",
-    city: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:city],
-    date: Pd::Application::RegionalPartnerTeacherconMapping::TC_PHOENIX[:dates],
-    email: @program_manager.email,
-  }.to_json
-
   # Program Manager with Group 3 partner should have appropriate script_data set
   test 'Program manager with group 3 partner should have script_data values set' do
     sign_out(@teacher)
@@ -150,7 +150,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
 
     get :partner, params: {city: 'Phoenix'}
     assert_response :success
-    assert_equal expected_teachercon_registration_script_data, assigns(:script_data)[:props]
+    assert_equal @expected_partner_teachercon_registration_script_data, assigns(:script_data)[:props]
   end
 
   # If a city is not specified, try and figure out the teachercon based on the mapping
@@ -160,7 +160,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
 
     get :partner
     assert_response :success
-    assert_equal expected_teachercon_registration_script_data, assigns(:script_data)[:props]
+    assert_equal @expected_partner_teachercon_registration_script_data, assigns(:script_data)[:props]
   end
 
   # Program Manager with teachercon registration gets redirected to submitted
