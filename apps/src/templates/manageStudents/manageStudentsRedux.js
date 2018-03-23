@@ -86,6 +86,7 @@ const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
+const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -97,6 +98,7 @@ export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, s
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
 export const editAll = () => ({ type: EDIT_ALL });
+export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
@@ -373,6 +375,17 @@ export default function manageStudents(state=initialState, action) {
         ...newState.studentData[student.id],
         ...state.editingData[student.id],
       };
+    }
+    return newState;
+  }
+  if (action.type === UPDATE_ALL_SHARE_SETTING) {
+    let newState = {
+      ...state
+    };
+    for (const studentKey in state.studentData) {
+      const student = state.studentData[studentKey];
+      newState.studentData[student.id].isEditing = true;
+      newState.editingData[student.id].sharingDisabled = action.disable;
     }
     return newState;
   }
