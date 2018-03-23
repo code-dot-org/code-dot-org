@@ -1,5 +1,5 @@
 class CensusReviewersController < ApplicationController
-  load_and_authorize_resource class: "Census::CensusInaccuracyInvestigation"
+  authorize_resource class: "Census::CensusInaccuracyInvestigation"
 
   def create
     submission = Census::CensusSubmission.find_by(id: params[:census_submission_id])
