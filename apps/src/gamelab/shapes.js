@@ -182,11 +182,18 @@ export function throwIfSerializedAnimationListIsInvalid(serializedAnimationList)
 
   // Check for duplicates in the orderedKeys array
   let knownKeys = {};
-  orderedKeys.forEach(key => {
+  let dupIndices = [];
+  orderedKeys.forEach((key, index) => {
     if (knownKeys.hasOwnProperty(key)) {
-      throw new Error(`Key "${key}" appears more than once in orderedKeys`);
+      // Store indices from highest to lowest to make it easier to remove dupes
+      dupIndices.splice(0, 0, index);
     }
     knownKeys[key] = true;
+  });
+
+  // Remove any duplicated indices
+  dupIndices.forEach(index => {
+    orderedKeys.splice(index, 1);
   });
 
   // The ordered keys set and the keys from propsByKey should match (but can
