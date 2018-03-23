@@ -33,8 +33,8 @@ Feature: Using the YourSchool census page
     Then I click selector "button.close" if it exists
 
     # Chose school from the map school dropdown
-    Then I scroll the "#census-map input" element into view
-    Then I press keys "ALBERT EINSTEIN ACADEMY ELEMENTARY" for element "#census-map input"
+    Then I scroll the "#map input" element into view
+    Then I press keys "ALBERT EINSTEIN ACADEMY ELEMENTARY" for element "#map input"
     Then I wait until element ".VirtualizedSelectOption:contains('Albert Einstein Academy Elementary - Santa Clarita, CA 91355')" is visible
     Then I press ".VirtualizedSelectOption:contains('Albert Einstein Academy Elementary - Santa Clarita, CA 91355')" using jQuery
 
