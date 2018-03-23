@@ -6,7 +6,7 @@ class Pd::Teachercon1819RegistrationControllerTest < ::ActionController::TestCas
     @application = create :pd_teacher1819_application, :locked, user: @teacher
     @teachercon = create :pd_workshop, :teachercon, num_sessions: 5
     @application.update(pd_workshop_id: @teachercon.id)
-    @regional_partner = create :regional_partner, name: 'WNY STEM Hub', group: 3
+    @regional_partner = RegionalPartner.find_or_create_by(name: 'WNY STEM Hub', group: 3)
     regional_partner_program_manager = create :regional_partner_program_manager,
       regional_partner: @regional_partner
     @program_manager = regional_partner_program_manager.program_manager
