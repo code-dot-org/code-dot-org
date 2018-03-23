@@ -45,6 +45,7 @@ class GamelabJr < Gamelab
             "GameLabJr",
           ],
           use_default_sprites: true,
+          hide_animation_mode: true,
         }
       )
     )
