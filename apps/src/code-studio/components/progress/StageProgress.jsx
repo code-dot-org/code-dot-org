@@ -95,5 +95,4 @@ export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
   stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
   onStageExtras: state.progress.currentLevelId === 'stage_extras',
-  stageTrophyEnabled: state.progress.stageTrophyEnabled,
 }))(StageProgress);
