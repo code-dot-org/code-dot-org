@@ -73,7 +73,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
     end
 
     teachercon =
-      if params[:city].presence
+      if params[:city].present?
         TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
       else
         get_matching_teachercon(regional_partner)
