@@ -41,4 +41,11 @@ class CensusReviewersController < ApplicationController
       census_override_id: override.try(:id),
     }, status: :created
   end
+
+  def review_reported_inaccuracies
+    @script_data = {}
+    @script_data[:authenticityToken] = form_authenticity_token
+    inaccuracy_reports = Census::CensusSubmission.left_joins(:census_inaccuracy_investigations).where(inaccuracy_reported: true).where('census_inaccuracy_investigations.id is null')
+    @script_data[:reportsToReview] = inaccuracy_reports.map(&:inaccuracy_review_data).flatten.compact.map(&:to_json)
+  end
 end
