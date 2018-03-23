@@ -10,7 +10,7 @@ import initResponsive from '@cdo/apps/code-studio/responsive';
 
 registerReducers({isRtl, responsive});
 
-$(document).ready(showYourSchool);
+$(document).ready(initYourSchool);
 
 function showYourSchool() {
   const rawSchoolId = $('#your-school').data("parameters-schoolId");
