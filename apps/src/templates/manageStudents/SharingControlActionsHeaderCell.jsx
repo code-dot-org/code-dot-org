@@ -1,9 +1,22 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
+import {updateAllShareSetting} from './manageStudentsRedux';
+import {connect} from 'react-redux';
 
-export default class SharingControlActionsHeaderCell extends Component {
+class SharingControlActionsHeaderCell extends Component {
+  static propTypes = {
+    updateAllShareSetting: PropTypes.func,
+  };
+
+  onEnableAll = () => {
+    this.props.updateAllShareSetting(false);
+  };
+
+  onDisableAll = () => {
+    this.props.updateAllShareSetting(true);
+  };
 
   render() {
     return (
@@ -12,12 +25,12 @@ export default class SharingControlActionsHeaderCell extends Component {
           type={QuickActionsCellType.header}
         >
           <PopUpMenu.Item
-            onClick={() => console.log('enable all was clicked!')}
+            onClick={this.onEnableAll}
           >
             {i18n.projectSharingEnableAll()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            onClick={() => console.log('disable all was clicked!')}
+            onClick={this.onDisableAll}
           >
             {i18n.projectSharingDisableAll()}
           </PopUpMenu.Item>
@@ -33,3 +46,11 @@ export default class SharingControlActionsHeaderCell extends Component {
     );
   }
 }
+
+export const UnconnectedSharingControlActionsHeaderCell = SharingControlActionsHeaderCell;
+
+export default connect(state => ({}), dispatch => ({
+  updateAllShareSetting(disable) {
+    dispatch(updateAllShareSetting(disable));
+  }
+}))(SharingControlActionsHeaderCell);
