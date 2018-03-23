@@ -2,19 +2,22 @@ import React, {Component, PropTypes} from 'react';
 import QuickActionsCell, {QuickActionsCellType} from "../tables/QuickActionsCell";
 import PopUpMenu, {MenuBreak} from "@cdo/apps/lib/ui/PopUpMenu";
 import i18n from '@cdo/locale';
-import {updateAllShareSetting} from './manageStudentsRedux';
+import {updateAllShareSetting, editAll} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 
 class SharingControlActionsHeaderCell extends Component {
   static propTypes = {
     updateAllShareSetting: PropTypes.func,
+    editAll: PropTypes.func,
   };
 
   onEnableAll = () => {
+    this.props.editAll();
     this.props.updateAllShareSetting(false);
   };
 
   onDisableAll = () => {
+    this.props.editAll();
     this.props.updateAllShareSetting(true);
   };
 
@@ -52,5 +55,8 @@ export const UnconnectedSharingControlActionsHeaderCell = SharingControlActionsH
 export default connect(state => ({}), dispatch => ({
   updateAllShareSetting(disable) {
     dispatch(updateAllShareSetting(disable));
+  },
+  editAll() {
+    dispatch(editAll());
   }
 }))(SharingControlActionsHeaderCell);
