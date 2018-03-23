@@ -2,6 +2,7 @@
 title: Advocacy
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Advocacy

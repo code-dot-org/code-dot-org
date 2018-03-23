@@ -97,7 +97,7 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
   end
 
-  test 'removing a student from their last section resets student share setting' do
+  test 'removing a student from their last section enables student sharing when over 13' do
     section1 = Section.create @default_attrs
     section1.sharing_disabled = true
 
@@ -105,6 +105,7 @@ class SectionTest < ActiveSupport::TestCase
     section2.sharing_disabled = true
 
     student = create :student
+    student.age = 15
     section1.add_student student
     section2.add_student student
 
@@ -112,6 +113,24 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
     section1.remove_student student, section1, {}
     refute student.sharing_disabled?
+  end
+
+  test 'removing a student from their last section restricts sharing when under 13' do
+    section1 = Section.create @default_attrs
+    section1.sharing_disabled = true
+
+    section2 = Section.create @default_attrs
+    section2.sharing_disabled = true
+
+    student = create :student
+    student.age = 11
+    section1.add_student student
+    section2.add_student student
+
+    section2.remove_student student, section2, {}
+    assert student.sharing_disabled?
+    section1.remove_student student, section1, {}
+    assert student.sharing_disabled?
   end
 
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted

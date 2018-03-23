@@ -19,11 +19,6 @@ module ActivityConstants
   REVIEW_REJECTED_RESULT = 1500
   REVIEW_ACCEPTED_RESULT = 2000
 
-  def self.best?(result)
-    return false if result.nil?
-    result == BEST_PASS_RESULT
-  end
-
   def self.perfect?(result)
     return false if result.nil?
     result > MAXIMUM_NONOPTIMAL_RESULT

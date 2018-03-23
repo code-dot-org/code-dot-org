@@ -99,11 +99,6 @@ Lint/RescueException:
 Lint/ScriptPermission:
   Enabled: false
 
-# Offense count: 6
-# Configuration parameters: IgnoreImplicitReferences.
-Lint/ShadowedArgument:
-  Enabled: false
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Lint/UnneededDisable:
@@ -135,10 +130,6 @@ Naming/HeredocDelimiterNaming:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: snake_case, normalcase, non_integer
 Naming/VariableNumber:
-  Enabled: false
-
-# Offense count: 1
-Performance/Caller:
   Enabled: false
 
 # Offense count: 13

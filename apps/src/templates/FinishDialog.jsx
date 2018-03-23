@@ -6,6 +6,8 @@ import BaseDialog from './BaseDialog';
 import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
+import Confetti from 'react-dom-confetti';
+import StageProgress from '@cdo/apps/code-studio/components/progress/StageProgress.jsx';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
 import msg from '@cdo/locale';
@@ -24,18 +26,25 @@ const styles = {
     zIndex: 1050,
   },
   modal: {
+    position: 'relative',
     width: 375,
     backgroundColor: color.white,
     borderRadius: 10,
   },
   header: {
     backgroundColor: color.light_teal,
-    height: 40,
+    height: 50,
     width: '100%',
     borderRadius: '10px 10px 0px 0px',
   },
   content: {
-    padding: '42px 56px 5px',
+    padding: '22px 56px 5px',
+    textAlign: 'center',
+  },
+  confetti: {
+    position: 'relative',
+    left: '50%',
+    top: 150,
   },
   bubbleContainer: {
     width: 74,
@@ -45,9 +54,9 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.light_teal,
     backgroundColor: color.white,
-    margin: 'auto',
-    position: 'relative',
-    top: -30,
+    position: 'absolute',
+    top: -25,
+    left: -20,
     padding: 8,
   },
   bubble: {
@@ -65,17 +74,18 @@ const styles = {
     justifyContent: 'center',
   },
   blockCountWrapper: {
-    textAlign: 'center',
+    color: color.white,
+    textAlign: 'right',
+    marginRight: 10,
   },
   blockCountLabel: {
     fontSize: 20,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.dark_charcoal,
+    fontFamily: '"Gotham 5r", sans-serif',
     verticalAlign: 'middle',
   },
   blockCount: {
     fontSize: 30,
-    fontFamily: '"Gotham 7r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     margin: 7,
     verticalAlign: 'middle',
   },
@@ -87,17 +97,19 @@ const styles = {
   },
   blockCountDescriptor: {
     borderRadius: 5,
-    borderWidth: 1,
-    borderStyle: 'solid',
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
     padding: 5,
     verticalAlign: 'middle',
+    background: color.white,
+  },
+  mastery: {
+    display: 'inline-block',
   },
   achievements: {
     width: 217,
     display: 'block',
-    margin: '14px 0px 0px',
+    margin: '24px 0px 0px',
     padding: '0px 23px',
     borderColor: color.light_teal,
     borderWidth: 1,
@@ -167,6 +179,7 @@ export class UnconnectedFinishDialog extends Component {
     onContinue: PropTypes.func,
     onReplay: PropTypes.func,
 
+    isChallenge: PropTypes.bool,
     isPerfect: PropTypes.bool,
     blocksUsed: PropTypes.number,
     blockLimit: PropTypes.number,
@@ -270,18 +283,18 @@ export class UnconnectedFinishDialog extends Component {
         <span style={styles.blockCountLabel}>
           {msg.numBlocksUsedLabel()}:
         </span>
+        <span style={styles.blockCount}>
+          <Odometer
+            defaultValue={this.state.blocksCounted ? this.props.blocksUsed : 0}
+            value={this.props.blocksUsed}
+            onRest={() => this.setState({blocksCounted: true})}
+          />
+          {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
+        </span>
         <span
           style={tooManyBlocks ?
             styles.blockCountPass : styles.blockCountPerfect}
         >
-          <span style={styles.blockCount}>
-            <Odometer
-              defaultValue={this.state.blocksCounted ? this.props.blocksUsed : 0}
-              value={this.props.blocksUsed}
-              onRest={() => this.setState({blocksCounted: true})}
-            />
-            {this.props.blockLimit && ('/' + this.props.blockLimit.toString())}
-          </span>
           {this.getBlockCountDescription()}
         </span>
       </div>
@@ -409,6 +422,8 @@ export class UnconnectedFinishDialog extends Component {
       return null;
     }
 
+    const confetti = this.props.isChallenge && this.props.isPerfect && this.state.blocksCounted;
+
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -422,8 +437,12 @@ export class UnconnectedFinishDialog extends Component {
             <div
               style={styles.modal}
             >
+              <div style={styles.confetti}>
+                <Confetti active={confetti} />
+              </div>
               <div style={styles.header}>
                 {this.getBubble()}
+                {this.getBlockCounter()}
               </div>
               {this.state.showingCode ?
                 <div style={styles.generatedCodeWrapper}>
@@ -434,7 +453,9 @@ export class UnconnectedFinishDialog extends Component {
                   />
                 </div> :
                 <div style={styles.content}>
-                  {this.getBlockCounter()}
+                  <div style={styles.mastery}>
+                    <StageProgress stageTrophyEnabled />
+                  </div>
                   {this.getAchievements()}
                   {this.getFunometer()}
                 </div>}
@@ -451,6 +472,7 @@ export class UnconnectedFinishDialog extends Component {
 
 export default connect(state => ({
   isOpen: state.feedback.displayingFeedback,
+  isChallenge: state.feedback.isChallenge,
   isPerfect:  state.feedback.isPerfect,
   blocksUsed: state.feedback.blocksUsed,
   blockLimit: state.feedback.blockLimit,

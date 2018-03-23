@@ -358,9 +358,9 @@
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
   studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_students: amerykańskich studentów mają konta na Code.org
+  homepage_stats_female: naszych studentów to kobiety
+  homepage_stats_teachers: nauczyciele korzystają z Code.org
   homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
   homepage_stats_policy: states changed policy to support computer science
   homepage_stats_title: We're making a difference
@@ -646,7 +646,7 @@
   video_title_obama: Prezydent Obama o informatyce
   video_title_hoc_is_here: Godzina Kodowania jest tutaj - każdy może się uczyć
   video_title_anybody_can_learn: Każdy może się uczyć
-  video_title_steph_curry: Hour of Code with Steph Curry
+  video_title_steph_curry: Godzina Kodowania z Steph Curry
   video_title_draymond_green: Godzina Kodowania z Draymond Green
   video_title_russell_okung: Godzina Kodowania z Russell Okung
   video_title_real_madrid: Godzina Kodowania z Realem Madryt
@@ -848,18 +848,12 @@
   dashboard_course_csp_desc: Code.org zaprojektował rygorystyczny, angażujący i przystępny
     kurs, służący poznaniu podstawowych idei informatyki.
   dashboard_landing_loading: Trwa pobieranie ...
-  dashboard_action_edit: Edytuj
-  dashboard_action_save: Zapisz
-  dashboard_action_save_all: Zapisz wszystko
   dashboard_action_cancel: Anuluj
   dashboard_action_delete: Usuń
   dashboard_action_delete_yes: Tak
   dashboard_action_delete_no: Nie
   dashboard_action_confirm: Usunąć?
-  dashboard_action_remove: Usuń
-  dashboard_action_remove_confirm: Usunąć?
   dashboard_action_done: Wykonane
-  dashboard_action_required: wymagane
   dashboard_action_print_certificates: Drukuj certyfikaty
   dashboard_assessments_view: 'Zobacz oceny w:'
   dashboard_assessments_none: Większość nauczycieli mierzy postępy swoich uczniów
@@ -968,8 +962,6 @@
   dashboard_error_other_section: Jeśli przenosisz uczniów między swoimi własnymi sekcjami,
     wybierz swoją sekcję z listy rozwijanej. Wybierz "Inna Sekcja" tylko, aby przenieść
     Twoich uczniów do sekcji innego nauczyciela.
-  dashboard_students_add_student: Dodaj ucznia
-  dashboard_students_add_students: Dodawaj wielu uczniów
   dashboard_students_add_multiple: 'Wpisz lub wklej imiona swoich uczniów, po jednym
     w wierszu:'
   dashboard_students_new_google_classroom_section: Aby dodać uczniów, użyj <a href='http://classroom.google.com'
@@ -978,23 +970,12 @@
   dashboard_students_new_section: Utworzyłeś nową sekcję! Teraz dodaj swoich uczniów
     posługując się przyciskami <b>Dodaj ucznia</b> i <b>Dodaj wielu studentów</b>
     powyżej.
-  dashboard_students_placeholder_name: Imię ucznia
   dashboard_students_name: Imię/Nazwisko
   dashboard_students_progress: Postęp
-  dashboard_students_age: Wiek
-  dashboard_students_gender: Płeć
   dashboard_students_male: Mężczyzna
   dashboard_students_female: Kobieta
-  dashboard_students_secret: Sekret
-  dashboard_students_password: Hasło
-  dashboard_students_username: 'Nazwa użytkownika: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Ukończone poziomy
   dashboard_students_total_lines: Linie kodu
-  dashboard_students_show_secret: Pokaż tajne (sekret)
-  dashboard_students_auto_generated: Generowany automatycznie
-  dashboard_students_reset_secret: Resetuj sekret
-  dashboard_students_reset_password: Resetuj hasło
   dashboard_students_share_section: Poproś swoich uczniów, aby przeszli na <a href=%{join_url}>
     %{join_url}</a> i wpisz w sekcji kodu (%{section_code})
   dashboard_students_share_section_secondary: 'Zamiennie, udostępnij swoim uczniom
@@ -1044,8 +1025,11 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj
     tych lekcji bez komputera</a> w klasie.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
   dashboard_overview: Streszczenie
@@ -1063,12 +1047,13 @@
   dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
   dashboard_curriculum_csp: 'AP ® Podstawy Informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne
   dashboard_login_word: Słowo
   dashboard_login_picture: Obrazek/Zdjęcie
   dashboard_login_none: e-mail
-  dashboard_new_password: nowe hasło
   dashboard_stage: Etap
   dashboard_puzzle: "Łamigłówka"
   dashboard_question: Pytanie
@@ -1323,6 +1308,7 @@
   cspexams_category_name: Praktyczny Test Podstaw Informatyki
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Laboratorium Gier (Game Lab)
   basketball_name: Utwórz grę w koszykówkę
   sports_name: Zakoduj własne zawody
   applab_gradelevel: Wiek 13+
@@ -2167,9 +2153,3 @@
     się używając konta Google&rdquo;:'
   hero_name: 'Minecraft: Podróż Bohatera'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

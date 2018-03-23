@@ -46,6 +46,7 @@ def load_configuration
     'build_apps'                  => false,
     'build_dashboard'             => true,
     'build_pegasus'               => true,
+    'census_map_table_id'         => rack_env == :production ? '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13' : nil,
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
@@ -255,7 +256,7 @@ class CDOImpl < OpenStruct
   end
 
   def rack_env?(env)
-    rack_env == env
+    rack_env.to_sym == env.to_sym
   end
 
   # Sets the slogger to use in a test.
@@ -352,12 +353,12 @@ CDO ||= CDOImpl.new
 ##########
 
 def rack_env
-  CDO.rack_env
+  CDO.rack_env.to_sym
 end
 
 def rack_env?(*env)
   e = *env
-  e.include? rack_env
+  e.include? rack_env.to_sym
 end
 
 def with_rack_env(temporary_env)

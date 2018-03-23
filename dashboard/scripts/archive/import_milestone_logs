@@ -3,12 +3,12 @@
 require 'dbi'
 require 'mysql'
 
-DB_HOST = ''
-DB_NAME = ''
-DB_USER = ''
-DB_PASSWORD = ''
+DB_HOST = ''.freeze
+DB_NAME = ''.freeze
+DB_USER = ''.freeze
+DB_PASSWORD = ''.freeze
 
-DIR = '/mnt/backups/'
+DIR = '/mnt/backups/'.freeze
 
 # c = DBI.connect("DBI:Mysql:#{DB_NAME}:#{DB_HOST}", DB_USER, DB_PASSWORD)
 # c = DBI.connect('DBI:Mysql:dashboard_development:localhost', 'root', '')

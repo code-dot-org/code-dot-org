@@ -888,18 +888,12 @@
   dashboard_course_csp_desc: A Code.org desenvolveu um curso rigoroso, envolvente
     e acessível que explora as ideias fundamentais da computação.
   dashboard_landing_loading: Carregando...
-  dashboard_action_edit: Editar
-  dashboard_action_save: Salvar
-  dashboard_action_save_all: Salvar tudo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Excluir
   dashboard_action_delete_yes: Sim
   dashboard_action_delete_no: Não
   dashboard_action_confirm: Excluir?
-  dashboard_action_remove: Excluir
-  dashboard_action_remove_confirm: Excluir?
   dashboard_action_done: Feito
-  dashboard_action_required: obrigatório
   dashboard_action_print_certificates: Imprimir certificados
   dashboard_assessments_view: 'Ver avaliações em:'
   dashboard_assessments_none: A maioria dos professores mede o progresso de seus alunos
@@ -1012,8 +1006,6 @@
   dashboard_error_other_section: Se estiver movendo alunos entre suas próprias seções,
     selecione sua seção na lista suspensa. Selecione "Outra seção" apenas para mover
     seus alunos para a seção de outro professor.
-  dashboard_students_add_student: Adicionar aluno
-  dashboard_students_add_students: Adicionar vários alunos
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por
     linha:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -1022,23 +1014,12 @@
   dashboard_students_new_section: Você criou uma nova turma! Agora, adicione seus
     alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b>
     acima.
-  dashboard_students_placeholder_name: Nome do estudante
   dashboard_students_name: Nome
   dashboard_students_progress: Progresso
-  dashboard_students_age: Idade
-  dashboard_students_gender: Gênero
   dashboard_students_male: Masculino
   dashboard_students_female: Feminino
-  dashboard_students_secret: Segredo
-  dashboard_students_password: senha
-  dashboard_students_username: 'Nome de usuário: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Níveis concluídos
   dashboard_students_total_lines: Linhas de código
-  dashboard_students_show_secret: Mostrar segredo
-  dashboard_students_auto_generated: Gerar automaticamente
-  dashboard_students_reset_secret: Redefinir o segredo
-  dashboard_students_reset_password: Redefinir senha
   dashboard_students_share_section: 'Compartilhe a página de inscrição da turma com
     seus alunos:'
   dashboard_students_share_section_secondary: 'Ou, compartilhe esta página de login
@@ -1089,8 +1070,11 @@
   dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Se não tiver computadores, <a href='%{unplugged_url}'>use essas
     aulas off-line</a> na sua sala de aula.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Currículo
   dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
   dashboard_overview: Visão geral
@@ -1108,12 +1092,13 @@
   dashboard_curriculum_csins: 'Ciência da computação na ciência:'
   dashboard_curriculum_csp: 'AP® Princípios da ciência da computação:'
   dashboard_curriculum_ecs: 'Explorando a Ciência da Computação:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Nível
   dashboard_grade_other: Outros
   dashboard_login_word: Palavra
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
-  dashboard_new_password: nova senha
   dashboard_stage: Fase
   dashboard_puzzle: Desafio
   dashboard_question: Pergunta
@@ -1363,6 +1348,7 @@
   cspexams_category_name: Teste prático dos princípios da CC
   research_studies_category_name: Research Studies
   applab_name: Laboratório de Aplicativo
+  gamelab_name: Laboratório de Jogos
   basketball_name: Fazer um jogo de basquete
   sports_name: Esportes
   applab_gradelevel: A partir de 13 anos
@@ -1428,7 +1414,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Alunos a partir do 8º ano
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: De 8 a 12 anos
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-18 anos de idade
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
@@ -2214,9 +2200,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

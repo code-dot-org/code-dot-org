@@ -34,7 +34,7 @@ export default class WorkshopManagement extends React.Component {
       if (this.props.subject === '5-day Summer') {
         surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {
-        surveyBaseUrl = this.permission.isOrganizer ? "organizer_survey_results" : "survey_results";
+        surveyBaseUrl = (this.permission.isOrganizer || this.permission.isProgramManager) ? "organizer_survey_results" : "survey_results";
       }
 
       this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;

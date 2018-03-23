@@ -853,18 +853,12 @@
   dashboard_course_csp_desc: A Code.org egy izgalmas, könnyen érthető és teljes tantervet
     dolgozott ki amely bemutatja a programozás alapjait.
   dashboard_landing_loading: Betöltés...
-  dashboard_action_edit: Szerkeszt
-  dashboard_action_save: Mentés
-  dashboard_action_save_all: "Összes mentése"
   dashboard_action_cancel: Mégsem
   dashboard_action_delete: Törlés
   dashboard_action_delete_yes: Igen
   dashboard_action_delete_no: Nem
   dashboard_action_confirm: Biztos törölni akarod?
-  dashboard_action_remove: Töröl
-  dashboard_action_remove_confirm: Törlöd?
   dashboard_action_done: Kész
-  dashboard_action_required: szükséges
   dashboard_action_print_certificates: Oklevelek nyomtatása
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -975,8 +969,6 @@
   dashboard_error_other_section: Ha a tanulóidat másik csoportba szeretnéd tenni,
     válaszd ki a csoportot a legördülő listából. Válaszd ki a "másik csoport" lehetőséget,
     hogy áthelyezd a tanulókat egy másik tanári csoportba.
-  dashboard_students_add_student: Diák hozzáadása
-  dashboard_students_add_students: Több diák hozzáadása
   dashboard_students_add_multiple: "Írd vagy másold be diákjaid nevét, soronként egyet:"
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
@@ -984,23 +976,12 @@
   dashboard_students_new_section: Az új szekció létrehozása sikerült! Most vedd fel
     a diákokat a fenti <b>Diák hozzáadása</b> vagy a <b>Több diák hozzáadása</b> gombok
     használatával.
-  dashboard_students_placeholder_name: Diák neve
   dashboard_students_name: Név
   dashboard_students_progress: Előmenetel
-  dashboard_students_age: Kor
-  dashboard_students_gender: Nem
   dashboard_students_male: Férfi
   dashboard_students_female: Nő
-  dashboard_students_secret: Titkos
-  dashboard_students_password: jelszó
-  dashboard_students_username: 'Felhasználónév: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Befejezett szintek
   dashboard_students_total_lines: Kódsorok
-  dashboard_students_show_secret: Titok mutatása
-  dashboard_students_auto_generated: Automatikusan létrehozott
-  dashboard_students_reset_secret: Titok beállítása
-  dashboard_students_reset_password: Jelszó beállítása
   dashboard_students_share_section: 'Oszd meg a diákjaiddal ennek a szekciónak a belépési
     oldalát:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1045,8 +1026,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Ha nincs számítógép,  <a href='%{unplugged_url}'>próbálja ki
     ezeket az offline tanórákat </a> az osztályával!
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Tanterv
   dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
   dashboard_overview: "Összefoglaló"
@@ -1064,12 +1048,13 @@
   dashboard_curriculum_csins: 'A számítógép-tudomány a tudományok között:'
   dashboard_curriculum_csp: 'Az AP® számítástechnika alapelvei:'
   dashboard_curriculum_ecs: 'A számítástechnika felfedezése:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Egyéb
   dashboard_login_word: Szó
   dashboard_login_picture: Kép
   dashboard_login_none: Email
-  dashboard_new_password: "új jelszó"
   dashboard_stage: szakasz
   dashboard_puzzle: Kirakós
   dashboard_question: Kérdés
@@ -1317,6 +1302,7 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+
@@ -1381,7 +1367,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8+ évfolyam
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: 8-tól 12 éves korig
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -2152,9 +2138,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

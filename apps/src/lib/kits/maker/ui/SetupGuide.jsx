@@ -9,7 +9,7 @@ import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from "../../../../templates/FontAwesome";
 
-const DOWNLOAD_PREFIX = 'https://downloads.code.org/makertoolkit/';
+const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
@@ -89,27 +89,35 @@ const downloadButtonStyle = {
 };
 
 class WindowsDownloads extends React.Component {
-  state = {installer: null};
+  state = {installer: null, error: null};
 
   componentDidMount() {
-    latestWindowsInstaller().then(installer => this.setState({installer}));
+    latestWindowsInstaller()
+      .then(installer => this.setState({installer}))
+      .catch(error => this.setState({error}));
   }
 
 
   render() {
-    const {installer} = this.state;
+    const {installer, error} = this.state;
     return (
       <div>
-        <h2>Maker Toolkit App for Windows</h2>
-        {installer &&
+        <h2>Code.org Maker App for Windows</h2>
+        {!installer && !error &&
+          <FetchingLatestVersionMessage/>
+        }
+        {installer && !error &&
           <Button
-            text={`Download Maker Toolkit App for Windows (${installer.version})`}
+            text={`Download Code.org Maker App for Windows (${installer.version})`}
             icon="download"
             color={ButtonColor.orange}
             size={ButtonSize.large}
             style={downloadButtonStyle}
             href={DOWNLOAD_PREFIX + installer.filename}
           />
+        }
+        {error &&
+          <FetchingLatestVersionError/>
         }
         <br/>
         <Button
@@ -122,11 +130,11 @@ class WindowsDownloads extends React.Component {
         <div>
           <h4>Instructions:</h4>
           <ol>
-            <li>Download and install the Maker Toolkit app using the download
+            <li>Download and install the Code.org Maker App using the download
               button above.
             </li>
             <li>Install the Adafruit Windows drivers.</li>
-            <li>Open up the Maker Toolkit app and sign in to Code.org.</li>
+            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
             <li>Plug in your board to start using it with App Lab!</li>
           </ol>
         </div>
@@ -136,20 +144,25 @@ class WindowsDownloads extends React.Component {
 }
 
 class MacDownloads extends React.Component {
-  state = {installer: null};
+  state = {installer: null, error: null};
 
   componentDidMount() {
-    latestMacInstaller().then(installer => this.setState({installer}));
+    latestMacInstaller()
+      .then(installer => this.setState({installer}))
+      .catch(error => this.setState({error}));
   }
 
   render() {
-    const {installer} = this.state;
+    const {installer, error} = this.state;
     return (
       <div>
-        <h2>Maker Toolkit App for Mac</h2>
-        {installer &&
+        <h2>Code.org Maker App for Mac</h2>
+        {!installer && !error &&
+          <FetchingLatestVersionMessage/>
+        }
+        {installer && !error &&
           <Button
-            text={`Download Maker Toolkit App for Mac (${installer.version})`}
+            text={`Download Code.org Maker App for Mac (${installer.version})`}
             icon="download"
             color={ButtonColor.orange}
             size={ButtonSize.large}
@@ -157,13 +170,16 @@ class MacDownloads extends React.Component {
             href={DOWNLOAD_PREFIX + installer.filename}
           />
         }
+        {error &&
+          <FetchingLatestVersionError/>
+        }
         <div>
           <h4>Instructions:</h4>
           <ol>
-            <li>Download and install the Maker Toolkit app using the download
+            <li>Download and install the Code.org Maker App using the download
               button above.
             </li>
-            <li>Open up the Maker Toolkit app and sign in to Code.org.</li>
+            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
             <li>Plug in your board to start using it with App Lab!</li>
           </ol>
         </div>
@@ -173,28 +189,33 @@ class MacDownloads extends React.Component {
 }
 
 class LinuxDownloads extends React.Component {
-  state = {installer: null};
+  state = {installer: null, error: null};
 
   componentDidMount() {
-    latestLinuxInstaller().then(installer => this.setState({installer}));
+    latestLinuxInstaller()
+      .then(installer => this.setState({installer}))
+      .catch(error => this.setState({error}));
   }
 
   debFile() {
     if (!this.state.installer) {
       return null;
     }
-    return this.state.installer.filename.replace(/x86_64\.AppImage/, 'linux.deb');
+    return null; // TODO - derive from latest-linux.yml correctly
   }
 
   render() {
-    const {installer} = this.state;
+    const {installer, error} = this.state;
     const debFile = this.debFile();
     return (
       <div>
-        <h2>Maker Toolkit App for Linux</h2>
-        {installer &&
+        <h2>Code.org Maker App for Linux</h2>
+        {!installer && !error &&
+          <FetchingLatestVersionMessage/>
+        }
+        {installer && !error &&
           <Button
-            text={`Download Maker Toolkit AppImage for Linux (${installer.version})`}
+            text={`Download Code.org Maker App for Linux (${installer.version})`}
             icon="download"
             color={ButtonColor.orange}
             size={ButtonSize.large}
@@ -202,13 +223,16 @@ class LinuxDownloads extends React.Component {
             href={DOWNLOAD_PREFIX + installer.filename}
           />
         }
+        {error &&
+          <FetchingLatestVersionError/>
+        }
         <div>
           <h4>Instructions:</h4>
           <ol>
-            <li>Download and install the Maker Toolkit app using the download
+            <li>Download and install the Code.org Maker App using the download
               button above.
             </li>
-            <li>Open up the Maker Toolkit app and sign in to Code.org.</li>
+            <li>Open up the Code.org Maker App and sign in to Code.org.</li>
             <li>Plug in your board to start using it with App Lab!</li>
           </ol>
           <h4>Alternative Installers</h4>
@@ -234,6 +258,40 @@ class LinuxDownloads extends React.Component {
   }
 }
 
+const FETCH_STATUS_STYLE = {
+  fontSize: 'large',
+  margin: '0.5em 0',
+};
+
+const FetchingLatestVersionMessage = () => (
+  <div style={FETCH_STATUS_STYLE}>
+    <FontAwesome icon="spinner" className="fa-fw fa-spin"/>
+    {' '}
+    <em>
+      Getting the latest version...
+    </em>
+  </div>
+);
+
+const FetchingLatestVersionError = () => (
+  <div>
+    <div style={FETCH_STATUS_STYLE}>
+      <FontAwesome icon="times-circle" className="fa-fw" style={{color: 'darkred'}}/>
+      {' '}
+      <strong>
+        There was a problem getting your download link.
+      </strong>
+    </div>
+    <div>
+      Please make sure you are connected to the internet, and
+      {' '}
+      <a href="https://downloads.code.org/index.html">https://downloads.code.org/</a>
+      {' '}
+      is reachable from your network.
+    </div>
+  </div>
+);
+
 const CHROME_APP_WEBSTORE_URL = "https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg";
 const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
 
@@ -243,7 +301,7 @@ class ChromebookInstructions extends React.Component {
       <div>
         <h2>Maker Toolkit for Chromebook</h2>
         <p>
-          Maker Toolkit on Chromebook does not use the Maker Toolkit App.
+          Maker Toolkit on Chromebook does not use the Code.org Maker App.
           Instead, it depends on the
           {' '}
           <a href={CHROME_APP_WEBSTORE_URL}>

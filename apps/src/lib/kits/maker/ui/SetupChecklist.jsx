@@ -246,6 +246,11 @@ export default class SetupChecklist extends Component {
               stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             >
+              {this.state.caughtError && this.state.caughtError.reason &&
+                <pre>
+                  {this.state.caughtError.reason}
+                </pre>
+              }
               We couldn't detect a Circuit Playground board.
               Make sure your board is plugged in, and click <a href="#" onClick={this.redetect.bind(this)}>re-detect</a>.
               {this.surveyLink()}

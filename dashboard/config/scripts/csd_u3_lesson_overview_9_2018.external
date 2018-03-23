@@ -1,0 +1,9 @@
+name 'CSD U3 Lesson Overview 9_2018'
+display_name 'Lesson Overview'
+markdown <<MARKDOWN
+# Overview
+
+By combining the Draw Loop and the Counter Pattern, the class writes programs that move sprites across the screen, as well as animate other sprite properties.
+
+
+MARKDOWN

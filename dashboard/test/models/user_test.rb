@@ -1388,6 +1388,34 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
+  test 'track_level_progress_sync stops incrementing attempts for perfect results' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    ul = UserLevel.create!(
+      user: user,
+      level: csf_script_level.level,
+      script: Script.get_from_cache('20-hour'),
+      best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
+    )
+
+    track_progress(user.id, csf_script_level, 10)
+    track_progress(user.id, csf_script_level, 20)
+    track_progress(user.id, csf_script_level, 30)
+
+    assert_equal 3, ul.reload.attempts
+
+    track_progress(user.id, csf_script_level, 31)
+
+    assert_equal 4, ul.reload.attempts
+
+    track_progress(user.id, csf_script_level, 31)
+    track_progress(user.id, csf_script_level, 31)
+    track_progress(user.id, csf_script_level, 100)
+    track_progress(user.id, csf_script_level, 101)
+
+    assert_equal 4, ul.reload.attempts
+  end
+
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
     script_level = create :script_level
     student = create :student
@@ -1975,6 +2003,17 @@ class UserTest < ActiveSupport::TestCase
       User.find_or_create_teacher params, @admin
     end
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
+  end
+
+  test 'deleting user deletes dependent pd applications' do
+    teacher = create :teacher
+    application = create :pd_teacher1819_application, user: teacher
+    assert_equal application.id, teacher.pd_applications.first.id
+
+    teacher.destroy
+
+    assert teacher.reload.deleted?
+    refute Pd::Application::Teacher1819Application.exists?(application.id)
   end
 
   test 'deleting teacher deletes dependent sections and followers' do

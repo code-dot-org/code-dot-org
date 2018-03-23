@@ -102,7 +102,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'facilitator and organizer email links are complete urls' do
     facilitator = create :facilitator
-    csf_workshop = create :pd_workshop, num_sessions: 1, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: nil
+    csf_workshop = create :pd_workshop, num_sessions: 1, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
     ecs_workshop = create :pd_ended_workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     ecs_enrollment = create :pd_enrollment, workshop: ecs_workshop
@@ -123,7 +123,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'teacher cancel receipt links are complete urls' do
     test_cases = [
-      {course: Pd::Workshop::COURSE_CSF, subject: nil},
+      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2}
     ]
 
@@ -143,7 +143,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
       {course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2},
-      {course: Pd::Workshop::COURSE_CSF, subject: nil},
+      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
       {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_4},
@@ -167,7 +167,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     test_cases = [
       {course: Pd::Workshop::COURSE_ADMIN, subject: nil},
       {course: Pd::Workshop::COURSE_COUNSELOR, subject: nil},
-      {course: Pd::Workshop::COURSE_CSF, subject: nil},
+      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 3},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 10},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},

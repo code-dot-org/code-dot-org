@@ -1,5 +1,5 @@
 import React from 'react';
-import CohortViewTable from './cohort_view_table';
+import {CohortViewTable} from './cohort_view_table';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
 export default storybook => {
@@ -14,7 +14,7 @@ export default storybook => {
             data={[
               {
                 id: 1,
-                date_accepted: '11/1/2017',
+                date_accepted: '2017-11-01',
                 applicant_name: 'Poppy Pomfrey ',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
@@ -25,7 +25,7 @@ export default storybook => {
               },
               {
                 id: 2,
-                date_accepted: '12/1/2017',
+                date_accepted: '2017-12-01',
                 applicant_name: 'Filius Flitwick',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
@@ -46,7 +46,7 @@ export default storybook => {
             data={[
               {
                 id: 1,
-                date_accepted: '11/1/2017',
+                date_accepted: '2017-11-01',
                 applicant_name: 'Poppy Pomfrey ',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',
@@ -59,7 +59,7 @@ export default storybook => {
               },
               {
                 id: 2,
-                date_accepted: '12/1/2017',
+                date_accepted: '2017-12-01',
                 applicant_name: 'Filius Flitwick',
                 district_name: 'UK Wizarding',
                 school_name: 'Hogwarts',

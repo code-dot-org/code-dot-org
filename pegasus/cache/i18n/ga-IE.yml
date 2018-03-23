@@ -874,18 +874,12 @@
   dashboard_course_csp_desc: Chruthaigh Code.org dianchúrsa mealltach sothuigthe a
     thaiscéalann buntús na ríomheolaíochta.
   dashboard_landing_loading: "Á lódáil..."
-  dashboard_action_edit: Eagar
-  dashboard_action_save: Sábháil
-  dashboard_action_save_all: Sábháil uile
   dashboard_action_cancel: Cealaigh
   dashboard_action_delete: Scrios
   dashboard_action_delete_yes: Tá
   dashboard_action_delete_no: Níl
   dashboard_action_confirm: Scrios?
-  dashboard_action_remove: Bain
-  dashboard_action_remove_confirm: Bain?
   dashboard_action_done: Déanta
-  dashboard_action_required: riachtanach
   dashboard_action_print_certificates: Priontáil teastais
   dashboard_assessments_view: 'Féach measúnuithe i:'
   dashboard_assessments_none: Baineann go leor múinteoirí úsáid as an gcluaisín "Féach
@@ -999,8 +993,6 @@
   dashboard_error_other_section: Má tá tú ag iarraidh daltaí a bhogadh idir rannáin
     de do chuid féin, roghnaigh do rannán ón roghchlár anuas. Ná húsáid 'Rannán Eile'
     mura bhfuil tú ag iarraidh daltaí a bhogadh go dtí rannán ag múinteoir eile.
-  dashboard_students_add_student: Cuir dalta leis
-  dashboard_students_add_students: Cuir daltaí leis
   dashboard_students_add_multiple: 'Clóscríobh nó greamaigh ainmneacha na ndaltaí
     isteach, ceann amháin ar gach líne:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -1009,23 +1001,12 @@
   dashboard_students_new_section: Chruthaigh tú rannán nua! Anois bain úsáid as na
     cnaipí <b>Cuir dalta leis</b> agus <b>Cuir daltaí leis</b> le do chuid daltaí
     a chur leis an rannán.
-  dashboard_students_placeholder_name: Ainm an Dalta
   dashboard_students_name: Ainm
   dashboard_students_progress: Dul chun cinn
-  dashboard_students_age: Aois
-  dashboard_students_gender: Inscne
   dashboard_students_male: Fireannach
   dashboard_students_female: Baineannach
-  dashboard_students_secret: Rún
-  dashboard_students_password: Focal faire
-  dashboard_students_username: 'Ainm úsáideora: %{student_username}'
-  dashboard_students_email: 'Seoladh ríomhphoist: %{student_email}'
   dashboard_students_completed_levels: Leibhéil Chríochnaithe
   dashboard_students_total_lines: Línte Cóid
-  dashboard_students_show_secret: Taispeáin an rún
-  dashboard_students_auto_generated: Ginte go huathoibríoch
-  dashboard_students_reset_secret: Athshocraigh an rún
-  dashboard_students_reset_password: Athshocraigh an focal faire
   dashboard_students_share_section: Iarr ar do dhaltaí cuairt a thabhairt ar <a href=%{join_url}>%{join_url}</a>
     agus cód an rannáin a chur isteach (%{section_code})
   dashboard_students_share_section_secondary: 'Nó, tabhair an leathanach logáil isteach
@@ -1074,8 +1055,11 @@
   dashboard_coursed: 'Cúrsa D: '
   dashboard_coursee: 'Cúrsa E: '
   dashboard_coursef: 'Cúrsa F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na
     ceachtanna "díphlugáilte" seo</a> i do sheomra ranga.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Curaclam
   dashboard_curriculum_overview: Foramharc ar an gCuraclam Bunscoile
   dashboard_overview: Foramharc
@@ -1093,12 +1077,13 @@
   dashboard_curriculum_csins: 'An Ríomheolaíocht san Eolaíocht:'
   dashboard_curriculum_csp: 'Foras Feasa ar an Ríomheolaíocht AP®:'
   dashboard_curriculum_ecs: 'Taiscéalaíocht na Ríomheolaíochta:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: Naíscoil
   dashboard_grade_other: Eile
   dashboard_login_word: Focal
   dashboard_login_picture: Pictiúr
   dashboard_login_none: Ríomhphost
-  dashboard_new_password: focal faire nua
   dashboard_stage: Céim
   dashboard_puzzle: Dúshlán
   dashboard_question: Ceist
@@ -1348,6 +1333,7 @@
   cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
   research_studies_category_name: Research Studies
   applab_name: Saotharlann Aipeanna
+  gamelab_name: An tSaotharlann Cluichíochta
   basketball_name: Déan do chluiche cispheile féin
   sports_name: Códáil do chluiche spóirt féin
   applab_gradelevel: Aois 13+
@@ -2206,9 +2192,3 @@
     Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

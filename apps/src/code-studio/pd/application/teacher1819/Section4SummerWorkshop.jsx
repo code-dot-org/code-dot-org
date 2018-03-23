@@ -157,7 +157,7 @@ export default class Section4SummerWorkshop extends LabeledFormComponent {
 
   renderAbleToAttendSingle() {
     const options = [
-      "Yes, I'm able to attend",
+      TextFields.ableToAttendSingle,
       TextFields.unableToAttend
     ];
     const textFieldMap = {[TextFields.unableToAttend]: 'explain'};

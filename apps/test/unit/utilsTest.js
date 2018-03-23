@@ -16,6 +16,7 @@ const {
   createUuid,
   normalize,
   stringifyQueryParams,
+  getTabId,
 } = utils;
 
 describe('utils modules', () => {
@@ -736,6 +737,29 @@ describe('utils modules', () => {
 
     it('stringifies objects containing two key-value pairs', () => {
       expect('?a=1&b=c').to.equal(stringifyQueryParams({a: 1, b: 'c'}));
+    });
+  });
+
+  describe('getTabId', () => {
+    it('keeps returning the same result', () => {
+      const id1 = getTabId();
+      const id2 = getTabId();
+      const id3 = getTabId();
+
+      expect(id1).to.equal(id2);
+      expect(id2).to.equal(id3);
+    });
+
+    it('changes only after session storage is cleared', () => {
+      const id1 = getTabId();
+      const id2 = getTabId();
+      sessionStorage.removeItem('tabId');
+      const id3 = getTabId();
+      const id4 = getTabId();
+
+      expect(id1).to.equal(id2);
+      expect(id2).to.not.equal(id3);
+      expect(id3).to.equal(id4);
     });
   });
 });

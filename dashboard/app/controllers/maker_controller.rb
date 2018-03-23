@@ -1,7 +1,22 @@
-class MakerController < ApplicationController
-  authorize_resource class: :maker_discount, except: :setup
+require 'cdo/script_constants'
 
+class MakerController < ApplicationController
+  authorize_resource class: :maker_discount, except: [:home, :setup]
+
+  # Maker Toolkit is currently used in CSD unit 6.
+  # Retrieves the current CSD unit 6 level that the user is working on.
   def home
+    # Redirect to login if not signed in
+    authenticate_user!
+
+    csd_unit_6_script = Script.find_by_name(Script::CSD6_NAME)
+    current_level = current_user.next_unpassed_progression_level(csd_unit_6_script)
+    @csd_unit_6 = {
+      assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
+      lessonName: current_level.stage.localized_title,
+      linkToOverview: script_path(csd_unit_6_script),
+      linkToLesson: script_next_path(csd_unit_6_script, 'next')
+    }
   end
 
   def setup

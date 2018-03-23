@@ -71,9 +71,9 @@
 require 'digest/md5'
 require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
-require 'cdo/school_info_interstitial_helper'
 require 'cdo/chat_client'
 require 'cdo/shared_cache'
+require 'school_info_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -196,6 +196,10 @@ class User < ActiveRecord::Base
 
   has_one :circuit_playground_discount_application
 
+  has_many :pd_applications,
+    class_name: 'Pd::Application::ApplicationBase',
+    dependent: :destroy
+
   after_create :associate_with_potential_pd_enrollments
 
   # after_create :send_new_teacher_email
@@ -239,6 +243,10 @@ class User < ActiveRecord::Base
 
   def workshop_organizer?
     permission? UserPermission::WORKSHOP_ORGANIZER
+  end
+
+  def program_manager?
+    permission? UserPermission::PROGRAM_MANAGER
   end
 
   def workshop_admin?
@@ -421,7 +429,7 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever'}
+  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever' || user.provider == User::PROVIDER_SPONSORED}
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
@@ -1405,7 +1413,7 @@ class User < ActiveRecord::Base
       script = Script.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result == 100 &&
+        new_result >= ActivityConstants::BEST_PASS_RESULT &&
         script_valid &&
         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
@@ -1413,7 +1421,8 @@ class User < ActiveRecord::Base
       end
 
       # Update user_level with the new attempt.
-      user_level.attempts += 1 unless user_level.best?
+      # We increment the attempt count unless they've already perfected the level.
+      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted

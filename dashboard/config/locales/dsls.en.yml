@@ -571,31 +571,59 @@ en:
       CSD U2 Design Project:
         description here: description here
         title: title
+      CSD U2 Design Project_2018:
+        description here: description here
+        title: title
       CSD U2 Expression Exemplars: {}
+      CSD U2 Expression Exemplars_2018: {}
       CSD U2 L1 Overview:
         description here: description here
         title: title
+      CSD U2 L1 Overview_2018:
+        description here: description here
+        title: title
       CSD U2 L12 Overview: {}
+      CSD U2 L12 Overview_2018: {}
       CSD U2 L2 Overview:
+        description here: description here
+        title: title
+      CSD U2 L2 Overview_2018:
         description here: description here
         title: title
       CSD U2 L3 Overview:
         description here: description here
         title: title
+      CSD U2 L3 Overview_2018:
+        description here: description here
+        title: title
       CSD U2 L4 Overview:
+        description here: description here
+        title: title
+      CSD U2 L4 Overview_2018:
         description here: description here
         title: title
       CSD U2 L5 Overview:
         description here: description here
         title: title
+      CSD U2 L5 Overview_2018:
+        description here: description here
+        title: title
       CSD U2 L6 Overview:
         description here: description here
         title: title
+      CSD U2 L6 Overview_2018:
+        description here: description here
+        title: title
       CSD U2 L7 Overview: {}
+      CSD U2 L7 Overview_2018: {}
       CSD U2 Lesson 6 Overview:
         description here: description here
+      CSD U2 Lesson 6 Overview_2018:
+        description here: description here
       CSD U2 Lesson 9 Overview: {}
+      CSD U2 Lesson 9 Overview_2018: {}
       CSD U2 PSP Programming: {}
+      CSD U2 PSP Programming_2018: {}
       CSD U2 RGB Colors:
         'STOP: RGB Colors': 'STOP: RGB Colors'
         description here: description here
@@ -603,7 +631,11 @@ en:
         description here: description here
         title: title
       CSD U2 Top Websites: {}
+      CSD U2 Top Websites_2018: {}
       CSD U2 expand project:
+        description here: description here
+        title: title
+      CSD U2 expand project_2018:
         description here: description here
         title: title
       CSD U2 layout style review:
@@ -615,6 +647,9 @@ en:
       CSD U2 project guide:
         Your Personal Website: Your Personal Website
         description here: description here
+      CSD U2 project guide_2018:
+        Your Personal Website: Your Personal Website
+        description here: description here
       CSD U2 text style review:
         CSS: CSS
         description here: description here
@@ -624,40 +659,62 @@ en:
       CSD U3 - images - pick your final work: {}
       CSD U3 -conditionals - stop booleans: {}
       CSD U3 AnimationsMulti STOP project guide: {}
+      CSD U3 AnimationsMulti STOP project guide_2018: {}
       CSD U3 Collision Detection: {}
+      CSD U3 Collision Detection_2018: {}
       CSD U3 Collisions SFLP: {}
+      CSD U3 Collisions SFLP_2018: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
+      CSD U3 Defender SFLP_2018: {}
       CSD U3 Describe the Picture:
         Describe the Picture: Describe the Picture
         description here: description here
       CSD U3 Draw Loop Map 1: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Entertainment: {}
+      CSD U3 Entertainment_2018: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Functions Introduction: {}
       CSD U3 Functions SFLP: {}
+      CSD U3 Functions SFLP_2018: {}
       CSD U3 Keypress Stop: {}
       CSD U3 L2 Challenges:
         description here: description here
         title: title
       CSD U3 Lesson Overview 1: {}
       CSD U3 Lesson Overview 10: {}
+      CSD U3 Lesson Overview 10_2018: {}
       CSD U3 Lesson Overview 11: {}
+      CSD U3 Lesson Overview 11_2018: {}
       CSD U3 Lesson Overview 12: {}
+      CSD U3 Lesson Overview 12_2018: {}
       CSD U3 Lesson Overview 13: {}
+      CSD U3 Lesson Overview 13_2018: {}
       CSD U3 Lesson Overview 14: {}
+      CSD U3 Lesson Overview 14_2018: {}
+      CSD U3 Lesson Overview 1_2018: {}
       CSD U3 Lesson Overview 2: {}
+      CSD U3 Lesson Overview 2_2018: {}
       CSD U3 Lesson Overview 3: {}
+      CSD U3 Lesson Overview 3_2018: {}
       CSD U3 Lesson Overview 4: {}
+      CSD U3 Lesson Overview 4_2018: {}
       CSD U3 Lesson Overview 5: {}
+      CSD U3 Lesson Overview 5_2018: {}
       CSD U3 Lesson Overview 6: {}
+      CSD U3 Lesson Overview 6_2018: {}
       CSD U3 Lesson Overview 7: {}
+      CSD U3 Lesson Overview 7_2018: {}
       CSD U3 Lesson Overview 8: {}
+      CSD U3 Lesson Overview 8_2018: {}
       CSD U3 Lesson Overview 9: {}
+      CSD U3 Lesson Overview 9_2018: {}
       CSD U3 Movement Challenges: {}
+      CSD U3 Movement Challenges_2018: {}
       CSD U3 Project Build a Game SFLP: {}
+      CSD U3 Project Build a Game SFLP_2018: {}
       CSD U3 Random randomNumber Map: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
@@ -665,8 +722,10 @@ en:
         description here: description here
         title: title
       CSD U3 SFLP Velocity: {}
+      CSD U3 SFLP Velocity_2018: {}
       CSD U3 Sprites STOP sprites and variables: {}
       CSD U3 Using the Game Design Process SLFP: {}
+      CSD U3 Using the Game Design Process SLFP_2018: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
@@ -687,10 +746,17 @@ en:
         description here: description here
         title: title
       CSD U3 complex sprite movement SFLP: {}
+      CSD U3 complex sprite movement SFLP_2018: {}
       CSD U3 game intro:
         Create Your Own Game: Create Your Own Game
         description here: description here
+      CSD U3 game intro_2018:
+        Create Your Own Game: Create Your Own Game
+        description here: description here
       CSD U3 platform intro:
+        Build a Platform Jumper: Build a Platform Jumper
+        description here: description here
+      CSD U3 platform intro_2018:
         Build a Platform Jumper: Build a Platform Jumper
         description here: description here
       CSD U3 setSpeed STOP:
@@ -1533,6 +1599,7 @@ en:
       Editing Chart Appearance: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
+      Embedded Video Test: {}
       Empty Markdown Level: {}
       Encoding Numbers Real World Student Lesson Introduction:
         description here: description here
@@ -2058,6 +2125,7 @@ en:
         description here: description here
         title: title
       Social Sleuth: {}
+      Social Sleuth_2018: {}
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
@@ -2629,12 +2697,14 @@ en:
         description here: description here
         title: title
       Unit 2 Lesson 10 Overview: {}
+      Unit 2 Lesson 10 Overview_2018: {}
       Unit 2 Lesson 11 Overview: {}
       Unit 2 Lesson 12 Overview: {}
       Unit 2 Lesson 13 Overview: {}
       Unit 2 Lesson 14 Overview: {}
       Unit 2 Lesson 15 Overview: {}
       Unit 2 Lesson 16 Overview: {}
+      Unit 2 Lesson 16 Overview_2018: {}
       Unit 2 Lesson 17 Overview: {}
       Unit 2 Lesson 2 Overview: {}
       Unit 2 Lesson 3 Overview: {}
@@ -2642,7 +2712,9 @@ en:
       Unit 2 Lesson 5 Overview: {}
       Unit 2 Lesson 6 Overview: {}
       Unit 2 Lesson 7 Overview: {}
+      Unit 2 Lesson 7 Overview_2018: {}
       Unit 2 Lesson 8 Overview: {}
+      Unit 2 Lesson 8 Overview_2018: {}
       Unit 2 Lesson 9 Overview: {}
       Unit 2 Tool Talk: {}
       Unit 2 Vocab and Concept Review Activity: {}
@@ -3546,13 +3618,18 @@ en:
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csd-post-survey-2017-levelgroup: {}
+        csd-post-survey-2017-levelgroup_2018: {}
         csd-pre-survey-2017-levelgroup: {}
         csd-pulse-check-survey-1-levelgroup: {}
         csd-pulse-check-survey-1-levelgroup U1Ch2: {}
         csd-pulse-check-survey-1-levelgroup U2Ch1: {}
+        csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
         csd-pulse-check-survey-1-levelgroup U2Ch2: {}
+        csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
         csd-pulse-check-survey-1-levelgroup U3Ch1: {}
+        csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
         csd-pulse-check-survey-1-levelgroup U3Ch2: {}
+        csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
         csd-pulse-check-survey-1-levelgroup U4Ch1: {}
         csd-pulse-check-survey-1-levelgroup U4Ch2: {}
         csd-pulse-check-survey-1-levelgroup U5Ch1: {}
@@ -3744,7 +3821,33 @@ en:
         https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png
         https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png
         https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png
+      CSD U2 lists match_2018:
+        Lists Quick Check: Lists Quick Check
+        Match the list to the code that makes it.: Match the list to the code that makes it.
+        https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29 PM.png
+        https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21 PM.png
+        https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38 AM.png
+        https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08 PM.png
+        https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32 AM.png
+        https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09 PM.png
+        https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41 PM.png
+        https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27 PM.png
+        https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59 PM.png
+        https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24 PM.png
       CSD U3 - conditionals - Matching:
+        Is the dog sprite's rotation less than the cat sprite's rotation?: Is the dog sprite's rotation less than the cat sprite's rotation?
+        Is the dog sprite's scale greater than the cat sprite's scale?: Is the dog sprite's scale greater than the cat sprite's scale?
+        Is the dog sprite's x equal to the cat sprite's x?: Is the dog sprite's x equal to the cat sprite's x?
+        Is the dog sprite's x greater than the cat sprite's x?: Is the dog sprite's x greater than the cat sprite's x?
+        Is the dog sprite's x less than the cat sprite's x?: Is the dog sprite's x less than the cat sprite's x?
+        Match the boolean expression to the English description.: Match the boolean expression to the English description.
+        'Matching: Comparison Operators': 'Matching: Comparison Operators'
+        dog.rotation &lt; cat.rotation: dog.rotation &lt; cat.rotation
+        dog.scale &gt; cat.scale: dog.scale &gt; cat.scale
+        dog.x &gt; cat.x: dog.x &gt; cat.x
+        dog.x &lt; cat.x: dog.x &lt; cat.x
+        dog.x == cat.x: dog.x == cat.x
+      CSD U3 - conditionals - Matching_2018:
         Is the dog sprite's rotation less than the cat sprite's rotation?: Is the dog sprite's rotation less than the cat sprite's rotation?
         Is the dog sprite's scale greater than the cat sprite's scale?: Is the dog sprite's scale greater than the cat sprite's scale?
         Is the dog sprite's x equal to the cat sprite's x?: Is the dog sprite's x equal to the cat sprite's x?
@@ -3768,6 +3871,16 @@ en:
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         Maybe: Maybe
       CSD U3 Keypress Matching:
+        Is true only once when the key is pressed.: Is true only once when the key is pressed.
+        Is true only once when the key is released.: Is true only once when the key is released.
+        Is true the whole time the key is pressed or held down.: Is true the whole time the key is pressed or held down.
+        ? Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
+        : Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.
+        'Matching: Responding to Keypresses': 'Matching: Responding to Keypresses'
+        keyDown(): keyDown()
+        keyWentDown(): keyWentDown()
+        keyWentUp(): keyWentUp()
+      CSD U3 Keypress Matching_2018:
         Is true only once when the key is pressed.: Is true only once when the key is pressed.
         Is true only once when the key is released.: Is true only once when the key is released.
         Is true the whole time the key is pressed or held down.: Is true the whole time the key is pressed or held down.
@@ -4976,6 +5089,13 @@ en:
         https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
         https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
         https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png
+      CSD Header Size MC_2018:
+        Headings Quick Check: Headings Quick Check
+        Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.: Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.
+        https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png
+        https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
+        https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
+        https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png
       CSD Header Size Prediction:
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
@@ -5005,7 +5125,21 @@ en:
         Which result will be printed in the console by this program?: Which result will be printed in the console by this program?
         title: title
         true<br>false<br>true: true<br>false<br>true
+      CSD U3 Boolean MC_2018:
+        "  0<br>200<br>100": "  0<br>200<br>100"
+        "  false<br>true<br>false": "  false<br>true<br>false"
+        "  true<br>error<br>true": "  true<br>error<br>true"
+        Which result will be printed in the console by this program?: Which result will be printed in the console by this program?
+        title: title
+        true<br>false<br>true: true<br>false<br>true
       CSD U3 Functions Prediction define first:
+        Both squares will be drawn. You can create functions anywhere you like in your code.: Both squares will be drawn. You can create functions anywhere you like in your code.
+        ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        : Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
+        Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
+        The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
+        The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
+      CSD U3 Functions Prediction define first_2018:
         Both squares will be drawn. You can create functions anywhere you like in your code.: Both squares will be drawn. You can create functions anywhere you like in your code.
         ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
         : Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
@@ -5018,7 +5152,23 @@ en:
         "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
         "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
         Read this program and predict which of the following animations will be produced.: Read this program and predict which of the following animations will be produced.
+      CSD U3 Sprite Movement Predict Multi_2018:
+        "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>"
+        "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>"
+        Read this program and predict which of the following animations will be produced.: Read this program and predict which of the following animations will be produced.
       CSD U3 Sprites intro predict multi:
+        ? '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
+        When run, where will the sprite <code>mySprite</code> be located?: When run, where will the sprite <code>mySprite</code> be located?
+      CSD U3 Sprites intro predict multi_2018:
         ? '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
         : '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
         ? '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
@@ -6574,8 +6724,8 @@ en:
         041 108 108 111 119: 041 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
         065 112 112 108 101: 065 112 112 108 101
-        097 108 108 111 119: 097 108 108 111 119
-        097 112 112 108 101: 097 112 112 108 101
+        '097 108 108 111 119': '097 108 108 111 119'
+        '097 112 112 108 101': '097 112 112 108 101'
         'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
         'The word "Apple" translated into its ASCII number (decimal) equivalent is:': 'The word "Apple" translated into its ASCII number (decimal) equivalent is:'
       U1L2 Multiple Choice Assessment Question:
@@ -7760,9 +7910,9 @@ en:
         I don't know.: I don't know.
         Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
         Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
-        The bird run into the TNT.: The bird run into the TNT.
         The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
         The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will run into the TNT.: The bird will run into the TNT.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseC_multi_starWars_predict1:
         BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
@@ -8067,6 +8217,15 @@ en:
         The bird will move forward, then turn and crash into a wall.: The bird will move forward, then turn and crash into a wall.
         This code uses a new block. What do you think would happen if you pressed 'Run'?: This code uses a new block. What do you think would happen if you pressed 'Run'?
       courseE_prediction_artistFunction1:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseE_prediction_artistFunction1_2018:
         Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
         Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
         Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.

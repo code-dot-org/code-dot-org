@@ -851,18 +851,12 @@
   dashboard_course_csp_desc: Code.org е проектирал взискателен, ангажиращ и достъпен
     курс, който изследва фундаменталните идеи на изчислителната техника.
   dashboard_landing_loading: "Зареждане..."
-  dashboard_action_edit: "Редактирай"
-  dashboard_action_save: "Запазване"
-  dashboard_action_save_all: "Запазване на всичко"
   dashboard_action_cancel: "Отмяна"
   dashboard_action_delete: "Изтриване"
   dashboard_action_delete_yes: "Да"
   dashboard_action_delete_no: "Не"
   dashboard_action_confirm: "Да се изтрие ли?"
-  dashboard_action_remove: "Премахване"
-  dashboard_action_remove_confirm: "Премахване?"
   dashboard_action_done: "Готово"
-  dashboard_action_required: "изисквания"
   dashboard_action_print_certificates: "Печат на сертификати"
   dashboard_assessments_view: "Виж оценките в:"
   dashboard_assessments_none: "Няма оценки"
@@ -967,8 +961,6 @@
   dashboard_error_other_section: Ако премествате ученици между собствените си раздели,
     изберете вашия раздел от падащото меню. Само изберете "Друг раздел", за да преместите
     вашите ученици в различен учителски раздел.
-  dashboard_students_add_student: "Добавяне на ученик"
-  dashboard_students_add_students: "Добавяне на няколко ученика"
   dashboard_students_add_multiple: "Въведете или поставете имената на вашите ученици,
     по едно име на ред:"
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -977,23 +969,12 @@
   dashboard_students_new_section: "Създали сте нов раздел! Сега добавете вашите ученици,
     използвайки <b>Добавяне на ученик</b> и <b>Добавяне на няколко ученици</b> от
     бутоните по-горе."
-  dashboard_students_placeholder_name: "Име на ученика"
   dashboard_students_name: "Име"
   dashboard_students_progress: "Прогрес"
-  dashboard_students_age: "Възраст"
-  dashboard_students_gender: "Пол"
   dashboard_students_male: "Мъж"
   dashboard_students_female: "Жена"
-  dashboard_students_secret: "Парола"
-  dashboard_students_password: "Парола"
-  dashboard_students_username: "Потребителско име: %{student_username}"
-  dashboard_students_email: "Имейл: %{student_email}"
   dashboard_students_completed_levels: "Завършени нива"
   dashboard_students_total_lines: "Редове с код"
-  dashboard_students_show_secret: "Покажи тайната дума"
-  dashboard_students_auto_generated: "Автоматично генерирана"
-  dashboard_students_reset_secret: "Смяна на тайната дума"
-  dashboard_students_reset_password: "Възстанови парола"
   dashboard_students_share_section: "Споделете този код за раздел с вашите ученици:"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
     sign in page with your students:'
@@ -1042,8 +1023,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'>
     Опитайте тези уроци без компютър</a> в класната стая."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Учебна програма"
   dashboard_curriculum_overview: K-5 преглед на програмата
   dashboard_overview: "Общ преглед"
@@ -1061,12 +1045,13 @@
   dashboard_curriculum_csins: "Компютърни науки в науката:"
   dashboard_curriculum_csp: 'AP ® Принципи на компютърните науки:'
   dashboard_curriculum_ecs: "Изследване на компютърните науки:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Предучилище"
   dashboard_grade_other: "Друго"
   dashboard_login_word: "Дума"
   dashboard_login_picture: "Картина"
   dashboard_login_none: "Имейл"
-  dashboard_new_password: "нова парола"
   dashboard_stage: "Етап"
   dashboard_puzzle: "Пъзел"
   dashboard_question: "Въпрос"
@@ -1313,6 +1298,7 @@
   cspexams_category_name: CS принципи практически тест
   research_studies_category_name: Research Studies
   applab_name: "Лаборатория за приложения"
+  gamelab_name: "Играта лаборатория"
   basketball_name: "Направете баскетболна игра"
   sports_name: "Спорт"
   applab_gradelevel: "Възраст 13 +"
@@ -1377,7 +1363,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: "Клас 8 +"
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Възраст 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Възраст 10 + (след курс 3)"
   codeorg_platformtext: "Съвременни браузъри, смартфони, таблети"
@@ -2130,9 +2116,3 @@
     Account” option:'
   hero_name: 'Minecraft: Пътуването на героя'
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab

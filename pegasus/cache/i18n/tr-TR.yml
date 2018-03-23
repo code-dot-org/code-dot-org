@@ -37,10 +37,10 @@
     bilimleri ve programlama kavramlarını öğrenebilirsin."
   og_title: 'Code.org: Herkes öğrenebilir'
   og_title_soon: Kodlama Saati geliyor
-  og_title_here: Kodlama saati buradadır!
+  og_title_here: Kod Saati burada!
   og_description: 'Her okulda her öğrenci bilgisayar bilimi öğrenme fırsatını hakkediyor. '
-  og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
-    or your class!
+  og_description_celeb: Yeni öğreticileri deneyin, kendiniz veya sınıfınız için ünlü
+    bir video sohbet edinin!
   csedweek_og_title: Kodlama Saati geliyor
   csedweek_og_description: ARALIK 4-10, 2017. Bilgisayar bilimleri her öğrencinin
     öğrenmesi gereken bir temeldir.
@@ -331,8 +331,8 @@
   lines_of_code: "ÜSTÜNDE<b># KOD SATIRLARI</b> BUGÜNE KADAR YAZILAN."
   lines_of_code_alt: "<b>#</b> ÖĞRENCİLER TARAFINDAN YAZILMIŞ KOD SATIRLARI"
   who_has_done_hoc: "#HourOfCode'u kim bitirdi? @codeorg"
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
+  who_has_done_hoc_donor: "#HourOfCode'u kim yaptı? (@codeorg'u desteğiniz için teşekkürler
+    %{donor_twitter})"
   hoc_leaderboards: Kod Saatinin Liderler Sıralaması
   students_and_lines: "% {Öğrenciler} öğrenciler tarafından kod saati yapılır ve kod
     satırlarının % {hatları} yazılır."
@@ -356,16 +356,17 @@
   studiobar_teacher_body: Sınıfınıza Code Studio 'yu tanıtın
   studiobar_frozen_title: Saat Kodu
   studiobar_frozen_body: Anna ve Elsa ile kış diyarı oluştur
-  studiobar_donate_title: Bağışla
+  studiobar_donate_title: Bağış Yap
   studiobar_donate_body: Bağış yapacağın her dolar ile bir çocuk daha öğrenecek
   studiobar_shop_title: Mağaza
   studiobar_shop_body: Kalıplarını kır. Logomuzu gururla taşı.
-  homepage_stats_students: of US students have accounts on Code.org
+  homepage_stats_students: aBD'li öğrencilerin çoğunun Code.org'da hesapları var
   homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
+  homepage_stats_teachers: "öğretmenler Code.org'u kullanır"
   homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
+  homepage_stats_policy: devletler, bilgisayar bilimini desteklemek için politikayı
+    değiştirdi
+  homepage_stats_title: Fark yaratıyoruz
   homepage_hero_text_malala: |
     &ldquo;Her bir ülkedeki kızları, bir saat boyunca kod öğrenmek için kendini zorlamaya davet ediyorum.&rdquo; Malala, Nobel Barış Ödüllü aktivist
   homepage_hero_text_susan: "&ldquo;Eğer teknolojiyi değiştirebilirseniz, dünyayı
@@ -413,7 +414,7 @@
   homepage_slot_text_frozen: 'Frozen: Anna ve Elsa '
   homepage_slot_text_teacher: "Öğretmen Panosu"
   homepage_slot_text_studio: Tüm eğitim içeriklerimiz
-  homepage_slot_text_course4: Ders 4
+  homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Mağaza
   homepage_slot_text_flappy: Flappy Kod
   homepage_action_text_hoc: Kodlama Saati her öğrenci içindir.
@@ -481,7 +482,7 @@
   homepage_header_codestudio: Code Studio öğrencilerinin yaptıkları
   homepage_header_donors: Code.org destekleyenlere teşekkürler
   homepage_donors_seall: Tümünü göster
-  homepage_donors_donate: Bağışla
+  homepage_donors_donate: Bağış Yap
   contact_form_topic_student: Ben öğrenciyim
   contact_form_topic_parent: Bir ebeveynim
   contact_form_topic_teacher: Bir öğretmen/eğitimciyim
@@ -584,24 +585,24 @@
     and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team.
     Get a head start on thinking through what you need to bring Hour of Code to young
     people during Computer Science Education week (December 4-10) and beyond.
-  minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code
-    at the Microsoft Store'
-  minecraft_continue_learning_description: No computer science experience required!
-    Help ensure all youth can learn the valuable skills gained through computer science
-    education. Join us at the Microsoft Store to engage in a free series of three,
-    1-hour workshops where you will experience coding in a fun and stress-free environment,
-    become familiar with key computer science concepts, and get ready to lead an Hour
-    of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}'>Sign
-    up today</a>.
-  minecraft_future: Help all youth become future ready
+  minecraft_continue_learning: 'Herkes İçin bilgisayar bilimi: Microsoft Mağazasında
+    Bir Saatlik Bir Kod Ötesi'
+  minecraft_continue_learning_description: Bilgisayar bilimi tecrübesi gerekmiyor!
+    Tüm gençlerin bilgisayar bilimi eğitimi yoluyla edinilen değerli becerileri öğrenebilmelerini
+    sağladığınızdan emin olun. Eğlenceli ve stressiz bir ortamda kodlamayı deneyimleyeceğiniz,
+    temel bilgisayar bilimleri konseptlerine aşina olacağınız, Üç saatlik ücretsiz
+    bir atölye çalışması yapmak için Microsoft Store'da bize katılın ve sınıfınızda
+    veya topluluğunuzda bir Saat Kodu'na önderlik etmeye hazır olun. Sizindir! <a
+    href='%{minecraft_continue_learning_url}', target='_blank'>Bu gün kaydolun</a>.
+  minecraft_future: Tüm gençliğin geleceğe hazır olmasına yardım edin
   minecraft_future_description: Find out how other schools and nonprofits are bringing
     digital skills, from digital literacy to computer science education, to their
     communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}'>access
     the resources</a> they found most valuable.
   minecraft_og_designer: Minecraft is back with a new activity for the Hour of Code.
     Program animals and other Minecraft creatures in your own version of Minecraft.
-  minecraft_og_agent: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
+  minecraft_og_agent: Minecraft, Kod Saati için geri döndü ve siz kahramansınız! Minecraft
+    biyomaları boyunca yolculuk yapmak için kod yazınız.
   sports_page_title: Kodlama Saati Etkinlikleri-Spor
   sports_og_title: Kendini zorla. Herkes öğrenebilir.
   sports_og_description: "Şampiyonlar ve altın madalyalı sporcular olarak kod saatini
@@ -770,9 +771,8 @@
   volunteer_engineer_submission_type_task_mentor: "Öğrencilerime kodlama öğretebilmem
     için bana yardımcı olabilecek rehber arıyorum"
   petition_age: Yaş
-  dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
-    Code traffic. We are unable to save any progress this week, but progress from
-    before this week is still safe.
+  dashboard_announce_hoc_scaling_progress: Olmadı! Yüksek Kod Saati trafiği yaşıyoruz.
+    Bu hafta ilerleme kaydedemiyoruz, ama bu haftadan önceki ilerlemeler hala güvende.
   dashboard_announce_learn_more_button: Daha fazlasını öğren
   dashboard_landing_title: "Öğretmen ana sayfa"
   dashboard_landing_welcome: Yeni ve geliştirilmiş öğretmen panosuna hoş geldiniz.
@@ -847,18 +847,12 @@
   dashboard_course_csp_desc: Code.org titiz, ilgi çekici ve anlaşılır bir şekilde
     bilgisayar bilimlerinin keşfedilmesi için kurslar tasarlamıştır.
   dashboard_landing_loading: Yükleniyor...
-  dashboard_action_edit: Düzenle
-  dashboard_action_save: Kaydet
-  dashboard_action_save_all: Tümünü Kaydet
   dashboard_action_cancel: "İptal"
   dashboard_action_delete: Sil
   dashboard_action_delete_yes: Evet
   dashboard_action_delete_no: Hayır
   dashboard_action_confirm: Silinsin mi?
-  dashboard_action_remove: Kaldır
-  dashboard_action_remove_confirm: Kaldırılsın mı?
   dashboard_action_done: Bitti
-  dashboard_action_required: gerekli
   dashboard_action_print_certificates: Sertifika yazdır
   dashboard_assessments_view: 'Değerlendirmeleri gör:'
   dashboard_assessments_none: Değerlendirme yok
@@ -958,33 +952,20 @@
   dashboard_error_other_section: "Öğrenciler kendi bölümleri arasında taşıyorsanız,
     bölümünüzü açılan listeden seçin. Öğrencileri farklı bir öğretmenin bölümüne taşımak
     için' diğer Bölüm ü seçin."
-  dashboard_students_add_student: "Öğrenci Ekle"
-  dashboard_students_add_students: Birden fazla öğrenci Ekle
   dashboard_students_add_multiple: 'Yazın veya öğrencilerinzin isimlerini, her satırda
     bir tane olacak şekilde yapştırın:'
-  dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
-    target='_blank'>Google Classroom</a> and then click the <b>Sync students from
-    Google Classroom</b> button above.
+  dashboard_students_new_google_classroom_section: "Öğrenci eklemek için, <a href='http://classroom.google.com'
+    target='_blank'>Google Classroom'a</a> gidin ve sonra yukarıdaki <b>Google Classroom'dan
+    öğrencileri senkronize edin</b> butonuna basın."
   dashboard_students_new_section: Yeni bir bölüm oluşturdunuz. Şimdi yukarıdaki <b>öğrenci
     ekle</b> ve <b>birden fazla öğrenci Ekle</b> düğmelerini kullanarak öğrencilerinizi
     ekleyin.
-  dashboard_students_placeholder_name: "Öğrenci İsmi"
   dashboard_students_name: "İsim"
   dashboard_students_progress: "İlerleme Durumu"
-  dashboard_students_age: Yaş
-  dashboard_students_gender: Cinsiyet
   dashboard_students_male: Erkek
   dashboard_students_female: Kadın
-  dashboard_students_secret: Gizli
-  dashboard_students_password: "şifre"
-  dashboard_students_username: 'Kullanıcı adı: %{student_username}'
-  dashboard_students_email: 'E-posta: %{student_email}'
   dashboard_students_completed_levels: Tamamlanan seviyeler
   dashboard_students_total_lines: Kod satırları
-  dashboard_students_show_secret: Gizi göster
-  dashboard_students_auto_generated: Otomatik olarak oluşturulan
-  dashboard_students_reset_secret: Gizi sıfırla
-  dashboard_students_reset_password: "Şifreyi Sıfırlayın"
   dashboard_students_share_section: 'Bu bölümün oturum açma sayfasını öğrencilerinizle
     paylaşın:'
   dashboard_students_share_section_secondary: 'Bu bölümün oturum açma sayfasını öğrencilerinizle
@@ -1027,8 +1008,11 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Hızlandırılmış Kurs:'
   dashboard_unplugged: Bilgisayarlarınız yok ise bu <a href='%{unplugged_url}'>bilgisayarsız
     dersleri sınıfınızda</a> kullanın.
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: Müfredat
   dashboard_curriculum_overview: K-5 Müfredatı Ana Hatları
   dashboard_overview: Genel Bakış
@@ -1046,12 +1030,13 @@
   dashboard_curriculum_csins: 'Fen Bilimlerinde Bilgisayar Bilimi:'
   dashboard_curriculum_csp: 'AP ® Bilgisayar Bilimi İlkeleri:'
   dashboard_curriculum_ecs: 'Bilgisayar Bilimini Keşfet:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Diğer
   dashboard_login_word: Kelime
   dashboard_login_picture: Resim
   dashboard_login_none: E-posta
-  dashboard_new_password: yeni şifre
   dashboard_stage: kademe
   dashboard_puzzle: Bulmaca
   dashboard_question: Soru
@@ -1163,8 +1148,8 @@
   more_resources_educators: "Öğretmenler ve eğitimciler için daha fazla kaynak"
   beyond_submission: '"Kod Saati ve Ötesi" için eğitim programları mı göndermek istiyorsunuz?  Şartlar
     ve başvuru formunu inceleyin.'
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
+  third_party_submission: Burada listelenecek bir öğretici göndermek ister misiniz?<a
+    href="%{submission_url}">Ölçütleri ve gönderim formunu inceleyin.</a>
   participants: katılımcılar
   teachers_notes: "Öğretmen notları"
   teachers_notes_hoc: "Öğretmenler için: Önemli eğitimci notlarını buradan okuyabilirsiniz"
@@ -1225,10 +1210,10 @@
   codesters_name: Codesters
   texasinstruments_name: 10 Dakika Kod
   teacherled_name: "Öğretmenler Ders Planlarını Hazırlar"
-  course1_name: Ders 1
-  course2_name: Ders 2
-  course3_name: Ders 3
-  course4_name: Ders 4
+  course1_name: Kurs 1
+  course2_name: Kurs 2
+  course3_name: Kurs 3
+  course4_name: Kurs 4
   coursea-draft_name: Kurs A
   coursea_name: Kurs A
   courseb-draft_name: Kurs B
@@ -1260,7 +1245,7 @@
   csp2_name: "Ünite 2: Sayısal bilgi"
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp3-a_name: "Ünite 3: Programlamaya Giriş (A versiyonu)"
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
+  csp3-research-mxghyt_name: "Ünite 3: Programlamaya Giriş (Alt Amaçlar)"
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
@@ -1302,6 +1287,7 @@
   cspexams_category_name: Bilgisayar bilimi ilkeleri uygulama testi
   research_studies_category_name: Research Studies
   applab_name: App Laboratuvarı
+  gamelab_name: Oyun Laboratuvarı
   basketball_name: Besketbol oynayın
   sports_name: Spor
   applab_gradelevel: 13 + Yaş grubu
@@ -1441,7 +1427,7 @@
     için devleri yen!
   codemonkey_shortdescription: "Öğrenciler bir maymunu muzu yakalaması için programlar."
   codeavengers_shortdescription: Tarayıcıda JavaScript programlamayı öğrenin
-  processing_shortdescription: Processing dili için bir saatlik öğretici
+  processing_shortdescription: "İşleme dillerinde bir saatlik bir öğretici"
   robomind_shortdescription: Sanal robotumuz için kod yazın
   groklearning_shortdescription: Eliza'ya chatbot öğreterek arkadaşlarınızın onun
     bir insan olduğunu düşünmelerini sağlayın!
@@ -1501,12 +1487,18 @@
     öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler,
     herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler.
     4 ve 5. sınıflar için önerilir.
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
+  coursea_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar bilimine
+    giriş.
+  courseb_shortdescription_congrats: Okumaya yeni başlayanlar için bilgisayar bilimine
+    giriş.
+  coursec_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin ve kendi
+    oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursed_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin ve kendi
+    oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursee_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin ve kendi
+    oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
+  coursef_shortdescription_congrats: Bilgisayar biliminin temellerini öğrenin ve kendi
+    oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
     kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
     Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
@@ -2037,59 +2029,50 @@
   view_all_sections: Tüm Bölümleri Görüntüle
   view_section: Bölümü Görüntüle
   view_named_section: "%{section_name} Görüntüle"
-  privacy_doc_explanation: Click here for our privacy document that can be shared
-    or printed for your students.
+  privacy_doc_explanation: "Öğrencileriniz için paylaşılabilen ya da basılacak olan
+    gizlilik belgesi için burayı tıklayınız."
   signing_in: Oturum Açma
   sign_in_overview: "Öğrencileriniz aşağıdaki adımları takip ederek code.org hesaplarına
     giriş yapabilir:"
   sign_in_instruct_website: "%{code_org_url}'sine git."
   sign_in_instruct_code: 'Sınıf Kodunu gir: %{section_code}.'
-  sign_in_instruct_name: Choose their display name.
-  sign_in_instruct_secret: Choose their secret %{secret}.
-  sign_in_instruct_button: Click the “Sign in” button.
-  sign_in_overview_cards: Students can find all of this information, including their
-    secret %{secret}, in the login cards below.
-  reset_student_password: Resetting student passwords
+  sign_in_instruct_name: Ekran adlarını seçiniz.
+  sign_in_instruct_secret: "%{secret} Sırlarını seç."
+  sign_in_instruct_button: '"Oturum aç" düğmesini tıklayın.'
+  sign_in_overview_cards: "Öğrenciler, %{secret} 'in gizli bilgileri de dahil olmak
+    üzere tüm bu bilgileri aşağıdaki giriş kartlarında bulabilir."
+  reset_student_password: "Öğrenci şifreleri sıfırlanıyor"
   reset_student_password_instructions: You can reset the secret <word/picture> for
     any of your students by going to the “Manage Students” tab for the section, clicking
     the “Show secret” button under the “Password” column, and clicking the “Reset
     secret” button.
-  login_cards: Login Cards
-  print_login_cards: Print login cards
-  joining_section: Joining your section (one-time only)
-  joining_section_overview: If a student has not already joined your section, please
-    ask them to do the following steps. Note that they only need to do this once.
-    By joining your section, students will be able see the course assigned to them
-    and you will be able to track the progress of the work they complete while they
-    are signed in.
-  joining_section_instruct_website: 'Create a Code.org account if they haven’t already
-    done so. They can do this at https://studio.code.org/users/sign_up. Note that
-    they can either sign up with an email address and password, or sign up through
-    Google, Facebook, or Microsoft by clicking on one of these buttons:'
-  joining_section_instruct_account: Sign in to their Code.org account.
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section
-    code: %{section_code}.'
-  joining_section_instruct_button: Once they press the “Go” button, they should be
-    added to your section.
-  signing_in_single_instruct: Your students can sign in to their Code.org accounts
-    by going to https://code.org/ and clicking on the “Sign in” button on the top
-    right corner.
-  reset_student_password_email: If your student created a Code.org account by using
-    their email address and password (instead of signing in through their Google,
-    Facebook, Microsoft, or Clever account), you can reset their password by going
-    to the “Manage Students” tab for the section, and clicking the “Reset password”
-    button under the “Password” column.
-  syncing_students: Syncing your students
+  login_cards: Giriş Kartları
+  print_login_cards: Giriş kartlarını yazdır
+  joining_section: Bölümünüze katılmak (yalnızca bir kerelik)
+  joining_section_overview: Eğer bir öğrenci sizin şubenize hala katılmadıysa, lütfen
+    ondan aşağıdaki adımları izlemesini isteyin. Bunu bir kere yapmaları gerektiğini
+    unutmayın. Sizin şubenize katılarak, öğrenciler onlara atanan kursları görebilecek
+    ve onlar oturum açmışken bitirdikleri işlerin ilerlemesini takip edebileceksiniz.
+  joining_section_instruct_website: 'Daha önce yapmadıysanız bir Code.org hesabı oluşturun.
+    Bunu https://studio.code.org/users/sign_up adresinden yapabilirsiniz. Bunların
+    bir e-posta adresi ve şifresi ile kaydolunabileceğini ya da Google, Facebook veya
+    Microsoft üzerinden şu düğmelerden birine basarak üye olunabileceğini unutmayınız:'
+  joining_section_instruct_account: Code.org hesabında oturum açınız.
+  joining_section_instruct_code: "%{code_org_url} adresine gidin ve kendi bölüm kodunuzu
+    yazın: %{section_code}."
+  joining_section_instruct_button: '"Git" butonuna bastıklarında, sizin şubenize eklenmeliler.'
+  signing_in_single_instruct: Öğrencileriniz https://code.org/ sitesine giderek ve
+    sağ üst köşedeki "Oturum aç" butonuna tıklayarak Code.org hesaplarında oturum
+    açabilirler.
+  reset_student_password_email: Eğer öğrenciniz (Google, Facebook, Microsoft veya
+    Clever hesabı ile oturum açmak yerine) kendi eposta adresi ve şifresini kullanarak
+    bir Code.org hesabı oluşturduysa, şubenin "Öğrencileri Yönet" sekmesine giderek
+    ve "Şifre" sütunu altındaki "Şifreyi sıfırla" butonuna basarak öğrencinin şifresini
+    sıfırlayabilirsiniz.
+  syncing_students: "Öğrencilerinizi senkronize etme"
   syncing_students_instructions: 'If your Code.org section is ever out of date with
     your list of students in Google Classroom, click on the “Sync students from Google
     Classroom” button on the “Manage students” tab:'
-  google_sign_in_instruct: 'From there, they should choose the “Sign in with Google
-    Account” option:'
+  google_sign_in_instruct: 'Oradan, "Google Hesabı ile Oturum Aç" seçeneğini seçmeliler:'
   hero_name: 'Minecraft: Hero''s Journey'
-  applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
+  applab-intro_name: Uygulama Laboratuvarı Giriş

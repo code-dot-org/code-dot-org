@@ -1,0 +1,45 @@
+{
+  "orderedKeys": [
+    "d19383c3-9b64-482d-811d-07f8997533ea",
+    "62c23e14-37e1-4b40-9dc8-68553ff35ff9",
+    "c3971151-dd41-4ab2-83be-11951180825e"
+  ],
+  "propsByKey": {
+    "d19383c3-9b64-482d-811d-07f8997533ea": {
+      "name": "dog",
+      "sourceUrl": "https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2Fd19383c3-9b64-482d-811d-07f8997533ea.png%3Fversion%3Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF",
+      "frameSize": {
+        "x": 100,
+        "y": 87
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "v.GmQEfbU1j.B.l4vI46thaJVPawniCF"
+    },
+    "62c23e14-37e1-4b40-9dc8-68553ff35ff9": {
+      "name": "cat",
+      "sourceUrl": "https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2F62c23e14-37e1-4b40-9dc8-68553ff35ff9.png%3Fversion%3Dt7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k",
+      "frameSize": {
+        "x": 64,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k"
+    },
+    "c3971151-dd41-4ab2-83be-11951180825e": {
+      "name": "pig",
+      "sourceUrl": "https://studio.code.org/v3/animations/aI5VRmuwZNqKpmYz1bFBfwJU1pnMe1Q36YmU_QaYKZ4/c3971151-dd41-4ab2-83be-11951180825e.png?version=f0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9",
+      "frameSize": {
+        "x": 100,
+        "y": 89
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "f0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9"
+    }
+  }
+}

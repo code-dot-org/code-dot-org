@@ -34,12 +34,12 @@
     "permitted_errors": "0",
     "discard_background": "false",
     "instructions_important": "true",
-    "contained_level_names": null,
     "ideal": "16",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This is a challenge level and we could go one of two ways. \r\n\r\n1)  Treat it like a regular level, but harder\r\n2) Not offer suggestions, just let them solve it any way they can (remove the ideal block count) and gather data later on whether or not people use the ideal techniques.\r\n\r\nSince we're looking at roughly 5% of users that make it to this point, I'm going with #2.  \r\nIdeal blocks was 15.\r\n\r\n(Note: received complaint from someone who did it longhand that they wish it had told them that they could do it easier, so adding blocks back at 16) - Since we've NEVER looked at that data anyway. \r\n",

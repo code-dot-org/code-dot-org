@@ -74,7 +74,7 @@ Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. 
 <div style="clear: both;"></div>
 
 ## Become a Code.org Partner
-Code.org works with non-profit organizations, as partners, to help spread computer science in a local, sustainable fashion. Learn more about our program.
+Code.org works with nonprofit organizations, as partners, to help spread computer science in a local, sustainable fashion. Learn more about our program.
 
 [<button>United States</button>](/educate/regional-partner)
 [<button>International</button>](/international)

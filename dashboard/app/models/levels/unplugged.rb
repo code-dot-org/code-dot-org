@@ -29,9 +29,11 @@ class Unplugged < Level
   end
 
   def assign_attributes(new_attributes)
+    # Use the existing title and description if they are not provided. When cloning,
+    # This gives the new level the title and description of the old level.
     i18n_strings = {
-      'title' => new_attributes.delete(:title),
-      'desc' => new_attributes.delete(:description),
+      'title' => new_attributes[:title] ? new_attributes.delete(:title) : title,
+      'desc' => new_attributes[:description] ? new_attributes.delete(:description) : description,
     }
     update_i18n(new_attributes[:name], i18n_strings)
 
@@ -39,14 +41,15 @@ class Unplugged < Level
   end
 
   def title
-    I18n.t("data.unplugged.#{name}.title")
+    I18n.t("data.unplugged.#{name}.title") if name
   end
 
   def description
-    I18n.t("data.unplugged.#{name}.desc")
+    I18n.t("data.unplugged.#{name}.desc") if name
   end
 
   def update_i18n(name, new_strings)
+    return unless name
     unplugged_yml = File.expand_path('config/locales/unplugged.en.yml')
     i18n = File.exist?(unplugged_yml) ? YAML.load_file(unplugged_yml) : {}
     i18n.deep_merge!({'en' => {'data' => {'unplugged' => {name => new_strings}}}})

@@ -2,7 +2,6 @@
 title: Regional Partner Directory
 nav: regional_partner_playbook_nav
 ---
-<a id="top"></a>
 
 # Regional Partner Directory
 

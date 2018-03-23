@@ -28,7 +28,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 <br/>
 
 <details>
- <summary style="font-size: 20px; color: #7665a0;">**Elementary School Professional Learning**</summary>
+  <summary style="font-size: 20px; color: #7665a0;">**Elementary School Professional Learning**</summary>
   <p>
   
 * You don't need any previous experience teaching computer science to join us. 
@@ -47,8 +47,8 @@ Select the grade level below to learn more about our programs. Have questions ab
 </details>
 
 <details>
-<summary style="font-size: 20px; color: #7665a0;">**Middle School Professional Learning** - *Applications for 2018 are still open!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
- <p>
+  <summary style="font-size: 20px; color: #7665a0;">**Middle School Professional Learning** - *Applications for 2018 are still open!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
+  <p>
 
 * You don't need any prior computer science experience to get started
 * The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area.
@@ -65,8 +65,8 @@ Select the grade level below to learn more about our programs. Have questions ab
 
 
 <details>
-<summary style="font-size: 20px; color: #7665a0;">**High School Professional Learning** - *Applications for 2018 are still open!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
-<p> 
+  <summary style="font-size: 20px; color: #7665a0;">**High School Professional Learning** - *Applications for 2018 are still open!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
+  <p> 
 
 
 * You don't need any prior computer science experience to get started! 
@@ -87,8 +87,8 @@ Select the grade level below to learn more about our programs. Have questions ab
 </details>
 
 <details>
-<summary style="font-size: 20px; color: #7665a0;">**International Professional Learning**</summary>
-<p>
+  <summary style="font-size: 20px; color: #7665a0;">**International Professional Learning**</summary>
+  <p>
 Teachers anywhere in the world can use our free, self-paced [online workshop](https://studio.code.org/s/K5-onlinePD) to get started. The intended audience for this online workshop is primary school teachers.
 
 At this point, our in-person  workshops are only available in the United States, but the [curriculum, lesson plans, tools, and support](https://studio.code.org/courses) are available at no cost worldwide. And, [join our forums](https://forum.code.org/) to connect with other teachers for support, teaching tips, and best practices. Our forums are for teachers of all grade levels.
@@ -109,6 +109,8 @@ The majority of our workshop attendees rank it the **best professional developme
 <br>
 
 <img src="/images/k5pdcropped.jpg" width="100%"/>
+
+<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=1108",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> 
 
 
 

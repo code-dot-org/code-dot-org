@@ -5,9 +5,9 @@
 
 require 'json'
 
-CDO_ROOT = '../../../'
-FILE_LIST = "#{CDO_ROOT}pegasus/**/applab/docs/*.md"
-OUTPUT_FILE = "#{CDO_ROOT}apps/i18n/common/en_us.json"
+CDO_ROOT = '../../../'.freeze
+FILE_LIST = "#{CDO_ROOT}pegasus/**/applab/docs/*.md".freeze
+OUTPUT_FILE = "#{CDO_ROOT}apps/i18n/common/en_us.json".freeze
 PARAM_DESCRIPTION_CHARACTER_LIMIT = 140
 
 FunctionInfo = Struct.new(:name, :params)
