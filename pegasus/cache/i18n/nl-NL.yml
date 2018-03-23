@@ -876,18 +876,12 @@
   dashboard_course_csp_desc: Code.org heeft een diepgaande, boeiende, en toegankelijke
     cursus ontworpen die de grondslagen van de informatica verkent.
   dashboard_landing_loading: Laden...
-  dashboard_action_edit: Bewerk
-  dashboard_action_save: Opslaan
-  dashboard_action_save_all: Alles opslaan
   dashboard_action_cancel: Annuleren
   dashboard_action_delete: Verwijderen
   dashboard_action_delete_yes: Ja
   dashboard_action_delete_no: Nee
   dashboard_action_confirm: Verwijderen?
-  dashboard_action_remove: verwijder
-  dashboard_action_remove_confirm: Verwijder?
   dashboard_action_done: Voltooid
-  dashboard_action_required: verplicht
   dashboard_action_print_certificates: Print certificaten
   dashboard_assessments_view: 'Bekijk evaluaties in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -996,8 +990,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: Voeg leerling toe
-  dashboard_students_add_students: Voeg meerdere leerlingen toe
   dashboard_students_add_multiple: 'Typ of plak hier de namen van uw studenten, één
     per regel:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -1006,23 +998,12 @@
   dashboard_students_new_section: U hebt een nieuwe groep gemaakt! Voeg nu uw leerlingen
     toe met behulp van de knoppen <b>leerling toevoegen</b> en <b>meerdere leerlingen</b>
     hierboven.
-  dashboard_students_placeholder_name: Naam student
   dashboard_students_name: naam
   dashboard_students_progress: Voortgang
-  dashboard_students_age: Leeftijd
-  dashboard_students_gender: Geslacht
   dashboard_students_male: Man
   dashboard_students_female: Vrouw
-  dashboard_students_secret: Geheim
-  dashboard_students_password: wachtwoord
-  dashboard_students_username: 'Gebruikersnaam: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Voltooide niveaus
   dashboard_students_total_lines: regels Code
-  dashboard_students_show_secret: Toon geheim
-  dashboard_students_auto_generated: Automatisch gegenereerde
-  dashboard_students_reset_secret: Reset geheim
-  dashboard_students_reset_password: Wachtwoord resetten
   dashboard_students_share_section: 'Delen van de inlogpagina van de groep met uw
     leerlingen:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1095,7 +1076,6 @@
   dashboard_login_word: Woord
   dashboard_login_picture: Beeld
   dashboard_login_none: E-mail
-  dashboard_new_password: Nieuw wachtwoord
   dashboard_stage: niveau
   dashboard_puzzle: puzzel
   dashboard_question: Vraag
@@ -1404,7 +1384,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Rang 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: Leeftijden 8-12
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Leeftijden 10 + (na cursus 3)
   codeorg_platformtext: Moderne browsers, smartphones, tablets

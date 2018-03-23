@@ -219,6 +219,7 @@
   "iceAge": "Мұз Дәуірі!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "ойыншы",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "ұпай",
   "isSet": "is set",

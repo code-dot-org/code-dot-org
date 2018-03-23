@@ -7756,6 +7756,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -10260,6 +10263,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10874,6 +10880,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Uneix un bloc al bloc "quan faci clic", i prem "Executa".
         Fes clic a o toca la pantalla per moure en Flappy fins la meta.
+      flappy_11_instruction: Crea el teu propi joc Flappy. Pots canviar tots els aspectes
+        visuals i les normes, fins i tot la gravetat. Quan hagis acabat, fes clic
+        a Finalitza per fer que els teus amics hi juguin amb els seus mòbils.
       flappy_2_instruction: Ara hem afegit el terra. Afegeix un bloc al bloc "quan
         toqui el terra". El teu codi necessita un "fi del joc" quan Flappy xoqui.
       flappy_3_instruction: El bloc "En executar" et permet executar codi quan comença
@@ -10894,9 +10903,6 @@
         quan tinguin lloc altres esdeveniments, per exemple, quan superi un obstacle.
       flappy_9_instruction: Per embolicar-ho, quan es xoqui amb un obstable, en lloc
         d'acabar el joc prova de posar el marcador a zero.
-      flappy_11_instruction: Crea el teu propi joc Flappy. Pots canviar tots els aspectes
-        visuals i les normes, fins i tot la gravetat. Quan hagis acabat, fes clic
-        a Finalitza per fer que els teus amics hi juguin amb els seus mòbils.
       frozen circle function in circle_instruction: Ara anem a crear 20 cercles que
         es superposin, girant 18 graus entre cada cercle.
       frozen circle function with parameter_instruction: Aquí tens un bloc "Crea un

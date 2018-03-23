@@ -163,9 +163,6 @@ hu:
       CollisionDetection:
         title: Összeütközés felderítése és a Pitagorasz-tétel
         desc: Meghatározni mikor érintik a képernyő szélét az objektumok egy fontos szempont a legtöbb játékban. Ebben a leckében megnézzük hogyan használható a Pitagorasz-tétel és Távolság-tétel két pont távolságának meghatározására a síkban és hogy a két pont (vagy játék szereplő) érinti-e egymást.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

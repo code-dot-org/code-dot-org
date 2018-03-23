@@ -7911,6 +7911,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -10417,6 +10420,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -11032,6 +11038,9 @@
       flappy_1_instruction: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“,
         o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy
         skristų į tikslą.
+      flappy_11_instruction: Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir
+        taisykles, netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo
+        draugai galėtų pažaisti tavo žaidimą savo telefonuose.
       flappy_2_instruction: Dabar pridėjome žemę žaidime. Prijunk reikalingą blokelį
         prie blokelio „kai atsitrenksi į žemę“. Kai paukštis pasieks žemę, turi baigtis
         žaidimas.
@@ -11054,9 +11063,6 @@
         tam tikri įvykiai, pavyzdžiui, kai yra pereinama per kliūtį.
       flappy_9_instruction: Paįvairinkime žaidimą. Kai atsitrenksi į kliūtį, geriau
         ne užbaik žaidimą, o panaikink visus surinktus taškus.
-      flappy_11_instruction: Sukurk savo Flappy žaidimą. Gali pakeisti išvaizdą ir
-        taisykles, netgi gravitaciją. Kai baigsi, nuspausk „Pasidalinti“, kad tavo
-        draugai galėtų pažaisti tavo žaidimą savo telefonuose.
       frozen circle function in circle_instruction: O dabar sukurkime 20 persidengiančių
         apskritimų. Tarp kiekvieno apskritimo turi būti 18 laipsnių kampas.
       frozen circle function with parameter_instruction: "Štai tau naujas blokelis

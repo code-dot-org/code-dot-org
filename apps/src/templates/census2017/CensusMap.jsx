@@ -1,11 +1,11 @@
-/* global google adjustScroll*/
+/* global google */
 import $ from 'jquery';
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
 
 class CensusMapInfoWindow extends Component {
   static propTypes = {
-    handleTakeSurveyClick: PropTypes.func.isRequired,
+    onTakeSurveyClick: PropTypes.func.isRequired,
     schoolId: PropTypes.string.isRequired,
     schoolName: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
@@ -16,6 +16,7 @@ class CensusMapInfoWindow extends Component {
 
   render() {
     let censusMessage;
+    let missingCensusData = false;
 
     switch (this.props.teachesCs) {
       case 'YES':
@@ -24,11 +25,19 @@ class CensusMapInfoWindow extends Component {
       case 'NO':
         censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
         break;
+      case 'HISTORICAL_YES':
+        censusMessage = "We believe this school historically offered Computer Science.";
+        break;
+      case 'HISTORICAL_NO':
+        censusMessage = "We believe this school historically offered limited or no Computer Science opportunities.";
+        break;
       case 'MAYBE':
+      case 'HISTORICAL_MAYBE':
         censusMessage = "We have conflicting data for this school.";
         break;
       default:
         censusMessage = "We need data for this school.";
+        missingCensusData = true;
     }
 
     const schoolDropdownOption = {
@@ -57,7 +66,7 @@ class CensusMapInfoWindow extends Component {
         <div className="census-message">{censusMessage}</div>
         <div className="button-container">
           <div className="button-link-div">
-            <a onClick={() => this.props.handleTakeSurveyClick(schoolDropdownOption)}>
+            <a onClick={() => this.props.onTakeSurveyClick(schoolDropdownOption, false)}>
               <div className="button">
                 <div className="button-text">Take the survey for this school</div>
               </div>
@@ -71,6 +80,13 @@ class CensusMapInfoWindow extends Component {
             </a>
           </div>
         </div>
+        {!missingCensusData && (
+          <div className="inaccuracy-link">
+            <a onClick={() => this.props.onTakeSurveyClick(schoolDropdownOption, true)}>
+              I believe that the categorization for this school is inaccurate.
+            </a>
+          </div>
+        )}
       </div>
     );
   }
@@ -79,6 +95,7 @@ class CensusMapInfoWindow extends Component {
 export default class CensusMap extends Component {
   static propTypes = {
     onSchoolChange: PropTypes.func.isRequired,
+    onTakeSurveyClick: PropTypes.func.isRequired,
     fusionTableId: PropTypes.string.isRequired,
     school: PropTypes.object,
   };
@@ -137,20 +154,20 @@ export default class CensusMap extends Component {
           }
         },
         {
-          where: "teaches_cs IN 'YES'",
+          where: "teaches_cs IN ('YES', 'HISTORICAL_YES')",
           markerOptions: {
             iconName: "grn_blank"
           }
         },
         {
-          where: "teaches_cs IN 'NO'",
+          where: "teaches_cs IN ('NO', 'HISTORICAL_NO')",
           markerOptions: {
             iconName: "small_blue"
           }
         },
 
         {
-          where: "teaches_cs IN 'MAYBE'",
+          where: "teaches_cs IN ('MAYBE', 'HISTORICAL_MAYBE')",
           markerOptions: {
             iconName: "small_yellow"
           }
@@ -197,7 +214,7 @@ export default class CensusMap extends Component {
     const infoWindowDom = document.createElement("div");
     ReactDOM.render(
       <CensusMapInfoWindow
-        handleTakeSurveyClick={this.handleTakeSurveyClick}
+        onTakeSurveyClick={this.props.onTakeSurveyClick}
         schoolId={schoolId}
         schoolName={schoolName}
         city={city}
@@ -206,11 +223,6 @@ export default class CensusMap extends Component {
         teachesCs={teachesCs}
       />, infoWindowDom);
     return infoWindowDom;
-  };
-
-  handleTakeSurveyClick = (schoolDropdownOption) => {
-    this.props.onSchoolChange(schoolDropdownOption);
-    adjustScroll('form');
   };
 
   updateCensusMapSchool = (school) => {
@@ -271,6 +283,9 @@ export default class CensusMap extends Component {
     // Max height of map is 2/3 of screen height so user can always scroll.
     var max_height = $(window).innerHeight() * this.maxHeightPercentage;
 
+    // Min height is so that the popup info window is tall enough.
+    var min_height = 450;
+
     var window_aspect_ratio = $(window).innerHeight() / $(window).innerWidth();
 
     let map_height;
@@ -278,8 +293,11 @@ export default class CensusMap extends Component {
       // Landscape window. Use the current 1:2 ratio map size.
       map_height = map_width / 2;
 
-      // But, make sure this size doesn't exceed our max height.
+      // Make sure this size doesn't exceed our max height.
       map_height = Math.min(map_height, max_height);
+
+      // Let's finally apply the min height.
+      map_height = Math.max(map_height, min_height);
     } else {
       // Portrait window. Just use the max height so that it's taller and more usable.
       map_height = max_height;
@@ -312,7 +330,7 @@ export default class CensusMap extends Component {
 
   render() {
     return (
-      <div id="map">
+      <div>
         <div id="gmap" className="full-width" />
         <div id="belowmaplegend" className="legend">
           <div className="legend-title">

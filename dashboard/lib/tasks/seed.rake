@@ -60,6 +60,11 @@ namespace :seed do
     update_scripts
   end
 
+  # Update scripts in the database from their file definitions.
+  #
+  # @param [Hash] opts the options to update the scripts with.
+  # @option opts [Boolean] :incremental Whether to only process modified scripts.
+  # @option opts [Boolean] :ui_test Whether to only update ui test scripts.
   def update_scripts(opts = {})
     # optionally, only process modified scripts to speed up seed time
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?

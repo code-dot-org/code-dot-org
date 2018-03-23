@@ -333,6 +333,14 @@ FactoryGirl.define do
     trait :with_autoplay_video do
       video_key {create(:video).key}
     end
+
+    trait :with_map_reference do
+      map_reference '/test/alpha.html'
+    end
+
+    trait :with_reference_links do
+      reference_links ['/test/abc.html', '/test/def.html']
+    end
   end
 
   factory :free_response, parent: :level, class: FreeResponse do
@@ -735,6 +743,32 @@ FactoryGirl.define do
     grade_10_offered true
     school_year "2016-2017"
     school {build :school}
+
+    trait :is_high_school do
+      grade_09_offered true
+      grade_10_offered true
+      grade_11_offered true
+      grade_12_offered true
+      grade_13_offered true
+    end
+
+    trait :is_k8_school do
+      grade_09_offered false
+      grade_10_offered false
+      grade_11_offered false
+      grade_12_offered false
+      grade_13_offered false
+
+      grade_kg_offered true
+      grade_01_offered true
+      grade_02_offered true
+      grade_03_offered true
+      grade_04_offered true
+      grade_05_offered true
+      grade_06_offered true
+      grade_07_offered true
+      grade_08_offered true
+    end
   end
 
   # Default school to public school. More specific factories below
@@ -749,6 +783,18 @@ FactoryGirl.define do
 
     trait :with_district do
       association :school_district, strategy: :build
+    end
+
+    trait :is_high_school do
+      after(:create) do |school|
+        create :school_stats_by_year, :is_high_school, school: school
+      end
+    end
+
+    trait :is_k8_school do
+      after(:create) do |school|
+        build :school_stats_by_year, :is_k8_school, school: school
+      end
     end
   end
 

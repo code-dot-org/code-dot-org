@@ -6,9 +6,11 @@ module Pd
       view_options(full_width: true)
 
       is_workshop_admin = current_user.permission? UserPermission::WORKSHOP_ADMIN
+      regional_partner = current_user.regional_partners.first
       @script_data = {
         props: {
-          regionalPartnerName: current_user.regional_partners.first.try(:name),
+          regionalPartnerName: regional_partner.try(:name),
+          regionalPartnerGroup: regional_partner.try(:group),
           regionalPartners: RegionalPartner.select("id, name"),
           isWorkshopAdmin: is_workshop_admin,
           canLockApplications: is_workshop_admin

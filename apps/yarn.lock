@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.7.0.tgz#e070dd9f23d64f0c35777c20a4d47d0ad4022923"
+"@code-dot-org/blockly@1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.7.2.tgz#e19779b7d7d70fd1b49393adaa2f234673b48a7d"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -93,9 +93,9 @@
   version "1.2.0-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.2.0-cdo.tgz#7b6f70d7a29a34976fa66dc2758e69875fda2d71"
 
-"@code-dot-org/piskel@0.13.0-cdo.1":
-  version "0.13.0-cdo.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.1.tgz#7a6b67726ddd07a163f239eed4e4dfec423b0f49"
+"@code-dot-org/piskel@0.13.0-cdo.2":
+  version "0.13.0-cdo.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.2.tgz#ee1134953e54f1644aeee028f1280bc2bee32b64"
 
 "@storybook/addon-actions@^3.2.11":
   version "3.3.11"
@@ -128,6 +128,10 @@
     "@storybook/components" "^3.3.6"
     global "^4.3.2"
     prop-types "^15.5.10"
+
+"@storybook/addon-options@^3.3.15":
+  version "3.3.15"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.3.15.tgz#f7e38fd29d897d8954a34fdca939a51c09223a4e"
 
 "@storybook/addons@^3.2.10":
   version "3.3.11"
@@ -6900,6 +6904,10 @@ jsonfile@^2.1.0:
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+jsonic@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/jsonic/-/jsonic-0.3.0.tgz#b545da95f54392e58b3dda05f5f2e377a6c9d1bf"
 
 jsonify@~0.0.0:
   version "0.0.0"

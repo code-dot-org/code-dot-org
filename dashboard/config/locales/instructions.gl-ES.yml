@@ -7727,6 +7727,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -10234,6 +10237,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10850,6 +10856,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Liga un bloque ao bloque "cando premer" e, despois, preme
         en "Executar". Para moveres o paxariño até ao obxetivo, preme na pantalla.
+      flappy_11_instruction: Cree seu propio xogo Flappy Bird. Pode mudar o visual
+        e todas as regras, até mesmo a gravidade. Cando terminar, clic en Concluír
+        para que seus amigos xoguen seu xogo nos seus teléfonos móbeis.
       flappy_2_instruction: Agora pasamos a ter chan. Liga un bloque ao bloque "cando
         bater no chan". O teu código ten que TERMINAR O XOGO' cando o paxariño caer
         ao chan.
@@ -10873,9 +10882,6 @@
         por exemplo, ao pasar un obstáculo.
       flappy_9_instruction: Para mesturar as cousas, ao contrario de terminar o xogo
         cando bater nun obstáculo, tente facer a puntuación volver a 0.
-      flappy_11_instruction: Cree seu propio xogo Flappy Bird. Pode mudar o visual
-        e todas as regras, até mesmo a gravidade. Cando terminar, clic en Concluír
-        para que seus amigos xoguen seu xogo nos seus teléfonos móbeis.
       frozen circle function in circle_instruction: |-
         Agora imos crear 20 círculos
         sobrepostos, virando 18 graos entre cada círculo.

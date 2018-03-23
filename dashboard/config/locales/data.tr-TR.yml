@@ -297,118 +297,8 @@
         maze_3_2: Bana bir program yaz, böylece domuza giden tüm yolları yapabileyim.
         maze_3_3: Domuzu nasıl alabilirim? TNT kutusuna doğru gitmediğimden emin olun!
         maze_3_4: Ahh! Beni TNT ve domuz çevresine alan bir program yazın.
-        bounce_1_basketball: '"sol ok tıklandığında" komutuna blok ekleyin ve çalıştırın.
-          Sol ok tuşunu kullanarak hedefi sola doğru hareket ettirip bitirmeye çalışın.'
-        bounce_2_basketball: '"sol ok tıklandığında" ve "sağ ok tıklandığında" komutlarına
-          bloklar ilave edin. Eli hareket ettirip bölümü bitirin.'
-        bounce_5_basketball: Ele doğru topu göndereceğiz. "top ele vurduğunda" bloğuna
-          gerekli eklemeyi yaparak topun hedefi vurmasını sağlayınız.
-        bounce_6_basketball: Bu sefer bayrak üst tarafta. "top duvara çarptığında"
-          bloklarının ikisine ekleme yaparak bulmacayı çözmek zorundasın.
-        bounce_7_basketball: Blokları "ne zaman" bloklarının her birine ekleyin. Bitiş
-          hedefine ulaşana kadar topu sektirin.
-        bounce_10_basketball: Şimdi yukarıda bir kale var. Oyun oluşturmak için "Puan
-          yaz" ve "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top eli ıskaladığında"
-          bloklarına ekle. Bakalım rakibin 2 kere sayı almadan önce sen ne kadar sayı
-          yapabileceksin.
-        bounce_11_basketball: Şimdi "çalıştığı zaman" bloğuna ekleme yapabilirsin.
-          "Yeni top fırlat"  bloğunu birden fazla yerde kullanmalısın. Birde, arkaplanı,
-          el ve top hızını değiştirip, rakibin 2 puan almadan önce kaç puan alabileceksin
-          görelim.
-        bounce_12_basketball: Kendi basketbol oyununu oluştur. Bütün kuralları değiştirebilirsin.  Oluşturduğunda,
-          bitir düğmesine tıklayarak oyununu arkadaşlarının telefonlarında oynaması
-          için paylaş.
-        bounce_1_sports: Bayrağa gidin! "sol ok basıldığında" durumuna bir blok ekleyin.
-          ve "Çalıştır" tuşuna basın.
-        bounce_2_sports: Şimdi iki bayrak var! Bir blok için eklemek "Sol oka basıldığında"
-          ve "sağ oka basıldığında"durumlalarına birer blok ekleyerek oyuncunun iki
-          yene de hareket etmesini sağla.
-        bounce_5_sports: Hokey diski aşağı doğru oyuncuya  uçacak! "topu oyuncuyu
-          vurduğunda" bloğuna bir blok ekleyerek bayrağı vurun.
-        bounce_6_sports: Bu sefer bayrak üst tarafta. "top duvara çarptığında" bloklarının
-          ikisine ekleme yaparak bulmacayı çözmek zorundasın.
-        bounce_7_sports: Blokları "ne zaman" bloklarının her birine ekleyin. Bitiş
-          hedefine ulaşana kadar topu sektirin.
-        bounce_10_sports: Şimdi yukarıda bir kale var. Oyun oluşturmak için "Puan
-          yaz" ve "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top eli ıskaladığında"
-          bloklarına ekle. Bakalım rakibin 2 kere sayı almadan önce sen ne kadar sayı
-          yapabileceksin!
-        bounce_11_sports: Şimdi "çalıştığı zaman" bloğuna ekleme yapabilirsin. "Yeni
-          top fırlat"  bloğunu birden fazla yerde kullanmalısın. Birde, arkaplanı,
-          el ve top hızını değiştirip, rakibin 2 puan almadan önce kaç puan alabileceksin
-          görelim.
-        bounce_12_sports: Kendi oyununu yarat! Burada sen ne dersen o olur bütün kuralları
-          değiştirebilirsin, yaratıcı ol! Tamamladığında arkadaşlarının telefonlarında
-          oyunu denemeleri için Bitir düğmesine bas.
-        bounce_1: '"sol ok tıklandığında" komutuna blok ekleyin ve çalıştırın. Sol
-          ok tuşunu kullanarak hedefi sola doğru hareket ettirip bitirmeye çalışın.'
-        bounce_2: '"sol ok tıklandığında" ve "sağ ok tıklandığında" komutlarına bloklar
-          ilave edin. Hedefi hareket ettirip bölümü bitirin.'
-        bounce_3: '"yukarı oka basıldığında" raketi yukarı hedefe taşıyan kodu yazın.'
-        bounce_4: Bu sefer 4 tane blok eklemeniz gerek. Bölümü bitirmek için raketi
-          4 hedefe de ulaştırın.
-        bounce_5: Rakete doğru topu göndereceğiz.  "top rakete vurduğunda" bloğuna
-          gerekli eklemeyi yaparak topun hedefi vurmasını sağlayınız.
-        bounce_6: Bu sefer hedef üst tarafta. "top duvara çarptığında" bloklarının
-          ikisine ekleme yaparak bulmacayı çözmek zorundasın.
-        bounce_7: Blokları "ne zaman" bloklarının her birine ekleyin. Bitiş hedefine
-          ulaşana kadar topu sektirin.
-        bounce_10: Şimdi yukarıda bir kale var. Oyun oluşturmak için "Puan yaz" ve
-          "Rakibe puan yaz" bloklarını "top gol olduğunda" ve "top raketi ıskaladığında"  bloklarına
-          ekle. Bakalım rakibin 2 kere sayı almadan önce sen ne kadar sayı yapabileceksin.
-        bounce_11: Şimdi "çalıştığı zaman" bloğuna ekleme yapabilirsin. "Yeni top
-          fırlat"  bloğunu birden fazla yerde kullanmalısın. Birde, arkaplanı, raket
-          ve top hızını değiştirip, rakibin 2 puan almadan önce kaç puan alabileceksin
-          görelim.
-        bounce_12: Kendi zıplama oyununu oluştur. Tüm görünümü ve kuralları değiştirebilirsin.
-          Bitirdiğinde, "BİTİR" düğmesine tıklayıp, arkadaşlarının oyununu telefonlarında
-          denemelerine izin ver.
         Custom_builder: İstediğin seviyeyi çizmek için araç kutusundan blokları çalışma
           alanına sürükle. Hazır olduğunda "Çalıştır" a bas.
-        flappy_1: '"Tıklandığında" bloğuna ilave blok ekle sonra "Çalıştır" düğmesine
-          bas. Flappy yi hedefe hareket ettirmek için ekrana dokun veya tıklat.'
-        flappy_2: Şimdi biraz zemin ekledik. Flappy yere çarptığında oyunun sonlanması
-          için gerekli kodu "zemine çarptığında" bloğuna ilave edin.
-        flappy_3: '"Çalıştığında" bloğu oyun başladığında kodlarınızın çalışmasını
-          sağlar. Seviye hızını ayarlamayı ve hedefe doğru kanat çırpmayı deneyin.'
-        flappy_4: Flappy, siz çarpışma için kod yazmadığınız sürece engellerin içinden
-          uçacaktır. "bir engele çarptığı zaman"  bloğuna ekleme yapınız. Oyununuzun
-          bitmesi için ilk borulara çarptığında "oyunu bitir" bloğunu kullanmanız
-          gerekmekte.
-        flappy_5: Bir sayı tahtası yapalım ve Flappy bir engeli aştığında "puan kazan"sın.
-          "engel geçildiği zaman" bloğuna gerekli eklemeyi yapın ve ilk boruları geçince
-          Flappy puan kazansın.
-        flappy_6: Bakalım Flappy kısa veya uzun kanat çırpışlarında  puan kazanabilecek
-          misin.
-        flappy_7: Bir sonraki sefere, "Çalıştığında" bloğuna gerekli eklemeyi yapıp
-          manzarayı değiştirmeyi dene.
-        flappy_8: Görünümleri sadece oyun başlarken değil, isteğin an değiştirebilirsin.
-          Diğer olaylar olduğunda rastgele görünümler ayarlamaya çalış. mesela bir
-          engeli geçince.
-        flappy_9: Bir cisme vurduğun zaman, engellere çarpıp oyun bittiğinde karışıklık
-          oluşmaması için skoru 0 yap.
-        flappy_11: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları hatta
-          yer çekimini değiştirebilirsiniz. Bitirdiğinizde, "BİTİR" düğmesine tıklayıp,
-          arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
-        flappy_k1_1: Flappy Oyna
-        flappy_k1_2: '"Tıklandığında" bloğuna ilave blok ekle sonra "Çalıştır" düğmesine
-          bas. Flappy yi hedefe hareket ettirmek için ekrana dokun veya tıklat.'
-        flappy_k1_3: Şimdi biraz zemin ekledik. Flappy yere çarptığında oyunun sonlanması
-          için gerekli kodu "zemine çarptığında" bloğuna ilave edin.
-        flappy_k1_4: '"Çalıştığında" bloğu oyun başladığında kodlarınızın çalışmasını
-          sağlar. Seviye hızını ayarlamayı ve hedefe doğru kanat çırpmayı deneyin.'
-        flappy_k1_5: Flappy, siz çarpışma için kod yazmadığınız sürece engellerin
-          içinden uçacaktır. "bir engele çarptığı zaman"  bloğuna ekleme yapınız.
-          Oyununuzun bitmesi için ilk borulara çarptığında "oyunu bitir" bloğunu kullanmanız
-          gerekmekte.
-        flappy_k1_6: Bir sayı tahtası yapalım ve Flappy bir engeli aştığında "puan
-          kazan"sın. "engel geçildiği zaman" bloğuna gerekli eklemeyi yapın ve ilk
-          boruları geçince Flappy puan kazansın.
-        flappy_k1_7: Engelleri geçtiğinde çoklu puan yapabilecek misin?
-        flappy_k1_8: Bir sonraki sefere, "Çalıştığında" bloğuna gerekli eklemeyi yapıp
-          manzarayı değiştirmeyi dene.
-        flappy_k1_9: '"oyuncu ayarla" (ya da "aktör ayarla") bloğunu kullanarak "koştuğunda"
-          bloğuna ekleme yaparak oyuncuyu değiştirmeyi dene.'
         jigsaw_1: Bloğu tıklayın
         jigsaw_2: Bloğu hedefe sürükle
         jigsaw_3: "Şekli oluşturacak biçimde blokları düzenleyin"
@@ -883,6 +773,8 @@
         applab_intro_sounds: App Lab - resimler ve sesler
         applab_intro_designmode: App Lab - tasarım modu
         applab_intro_share: App Lab - Uygulamanı paylaş
+        csd_applab_arrays: Dizilere Giriş
+        CSF_skinOverview_Harvester: The Harvester
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

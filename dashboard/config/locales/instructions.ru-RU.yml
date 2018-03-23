@@ -7343,6 +7343,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9821,6 +9824,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10435,6 +10441,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: "Присоедини блок к блоку «при нажатии», затем нажми «Выполнить».
         Нажимай кнопку или касайся экрана, чтобы перемещать Порхающую птичку к цели."
+      flappy_11_instruction: "Создай свою игру про Порхающую птичку. Ты можешь изменить
+        все визуальные эффекты и правила, даже силу притяжения. После завершения нажми
+        кнопку «Готово», чтобы друзья могли сыграть в твою игру на своих телефонах."
       flappy_2_instruction: "Теперь мы добавили немного земли.  Присоедини блок к
         блоку «когда коснется земли».  Твой код должен выполнять действие «ЗАКОНЧИТЬ
         ИГРУ», когда Порхающая птичка разобьется."
@@ -10457,9 +10466,6 @@
         происходят другие события, например, при прохождении препятствий."
       flappy_9_instruction: "А теперь сделай так, чтобы при ударении о препятствие
         обнулялись очки, а не заканчивалась игра."
-      flappy_11_instruction: "Создай свою игру про Порхающую птичку. Ты можешь изменить
-        все визуальные эффекты и правила, даже силу притяжения. После завершения нажми
-        кнопку «Готово», чтобы друзья могли сыграть в твою игру на своих телефонах."
       frozen circle function in circle_instruction: "Теперь создадим 20 пересекающихся
         кругов, поворачивая на 18 градусов после каждого круга."
       frozen circle function with parameter_instruction: "Это блок «Создать круг»,

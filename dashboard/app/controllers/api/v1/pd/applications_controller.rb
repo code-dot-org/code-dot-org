@@ -16,7 +16,7 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     ROLES.each do |role|
       # count(locked_at) counts the non-null values in the locked_at column
-      apps = get_applications_by_role(role).
+      apps = get_applications_by_role(role, include_users: false).
         select(:status, "count(locked_at) AS locked, count(id) AS total").
           group(:status)
 
@@ -58,18 +58,26 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        serialized_applications = applications.map {|a| Api::V1::Pd::ApplicationQuickViewSerializer.new(a).attributes}
+        serialized_applications = prefetch_and_serialize(
+          applications,
+          role: role,
+          serializer: Api::V1::Pd::ApplicationQuickViewSerializer
+        )
         render json: serialized_applications
       end
       format.csv do
+        prefetch applications, role: role
         course = role[0..2] # course is the first 3 characters in role, e.g. 'csf'
-        csv_text = [TYPES_BY_ROLE[role].csv_header(course), *applications.map(&:to_csv_row)].join
+        csv_text = [
+          TYPES_BY_ROLE[role].csv_header(course, current_user),
+          *applications.map {|a| a.to_csv_row(current_user)}
+        ].join
         send_csv_attachment csv_text, "#{role}_applications.csv"
       end
     end
   end
 
-  # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner_name
+  # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_filter=:regional_partner
   def cohort_view
     role = params[:role]
     regional_partner_filter = params[:regional_partner_filter]
@@ -88,12 +96,15 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
     respond_to do |format|
       format.json do
-        serialized_applications = applications.map {|a| serializer.new(a).attributes}
-        render json: {
-          applications: serialized_applications,
-          capacity: get_partner_cohort_capacity(regional_partner_filter, role)
-        }
+        serialized_applications = prefetch_and_serialize(
+          applications,
+          role: role,
+          serializer: serializer,
+          scope: {user: current_user}
+        )
+        render json: serialized_applications
       end
+      prefetch applications, role: role
       format.csv do
         csv_text = [TYPES_BY_ROLE[role.to_sym].cohort_csv_header, applications.map(&:to_cohort_csv_row)].join
         send_csv_attachment csv_text, "#{role}_cohort_applications.csv"
@@ -148,8 +159,9 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
 
   private
 
-  def get_applications_by_role(role)
+  def get_applications_by_role(role, include_users: true)
     applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
+    applications_of_type = applications_of_type.includes(:user) if include_users
     case role
     when :csf_facilitators
       return applications_of_type.csf
@@ -209,16 +221,15 @@ class Api::V1::Pd::ApplicationsController < ::ApplicationController
     end
   end
 
-  def get_partner_cohort_capacity(regional_partner_filter, role)
-    unless ['none', 'all'].include? regional_partner_filter
-      partner_id = regional_partner_filter ? regional_partner_filter : current_user.regional_partners.first
-      regional_partner = RegionalPartner.find_by(id: partner_id)
-      if role == 'csd_teachers'
-        return regional_partner.cohort_capacity_csd
-      elsif role == 'csp_teachers'
-        return regional_partner.cohort_capacity_csp
-      end
+  def prefetch_and_serialize(applications, role:, serializer:, scope: {})
+    prefetch applications, role: role
+    applications.map do |application|
+      serializer.new(application, scope: scope).attributes
     end
-    nil
+  end
+
+  def prefetch(applications, role:)
+    type = TYPES_BY_ROLE[role.to_sym]
+    type.prefetch_associated_models applications
   end
 end

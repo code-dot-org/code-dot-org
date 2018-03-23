@@ -878,18 +878,12 @@
   dashboard_course_csp_desc: A Code.org desenvolveu un curso rigoroso, envolvente
     e accesíbel que explora as ideas fundamentais da computación.
   dashboard_landing_loading: Cargando...
-  dashboard_action_edit: Editar
-  dashboard_action_save: Salvar
-  dashboard_action_save_all: Salvar todo
   dashboard_action_cancel: Cancelar
   dashboard_action_delete: Eliminar
   dashboard_action_delete_yes: Si
   dashboard_action_delete_no: Non
   dashboard_action_confirm: Eliminar?
-  dashboard_action_remove: Excluír
-  dashboard_action_remove_confirm: Excluír?
   dashboard_action_done: Feito
-  dashboard_action_required: obrigatorio
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -997,8 +991,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: Engadir alumnas/os
-  dashboard_students_add_students: Agregar varios alumnas/os
   dashboard_students_add_multiple: 'Teclea ou apega os nomes dos teus alumnos, un
     por liña:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -1006,23 +998,12 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: Creaches unha nova clase! Agora, agrega os teus
     alumnos usando os botóns de enriba <b>Agregar alumno</b> e <b>Agregar varios alumnos</b>.
-  dashboard_students_placeholder_name: Nome do estudante
   dashboard_students_name: Nome
   dashboard_students_progress: Progreso
-  dashboard_students_age: Idade
-  dashboard_students_gender: Xénero
   dashboard_students_male: Masculino
   dashboard_students_female: Feminino
-  dashboard_students_secret: Segredo
-  dashboard_students_password: Contrasinal
-  dashboard_students_username: 'Nome de usuario: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: Niveis concluídos
   dashboard_students_total_lines: Liñas de código
-  dashboard_students_show_secret: Mostrar segredo
-  dashboard_students_auto_generated: Xerar automaticamente
-  dashboard_students_reset_secret: Redefinir o segredo
-  dashboard_students_reset_password: Restablecer contrasinal
   dashboard_students_share_section: 'Comparte a páxina de inscrición da clase cos
     teus alumnos:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1100,7 +1081,6 @@
   dashboard_login_word: Palabra
   dashboard_login_picture: Imaxe
   dashboard_login_none: E-mail
-  dashboard_new_password: novo contrasinal
   dashboard_stage: Etapa
   dashboard_puzzle: Quebracabeza
   dashboard_question: Pregunta
@@ -1414,7 +1394,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: De 8 a 12 anos
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Idades de 10 a 18 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
@@ -2137,7 +2117,7 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: Olá, %{username}
+  user_header_label: Ola, %{username}
   user_header_settings: A miña conta
   user_header_logout: Pechar sesión
   user_header_signin: Iniciar Sesión

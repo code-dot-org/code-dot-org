@@ -7210,6 +7210,9 @@
         of the gold and solve the puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -9691,6 +9694,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10305,6 +10311,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: Lägg till ett block på "när klicka" blocket och tryck
         på "Kör". Klicka eller tappa på skärmen för att flytta Flappy till målet.
+      flappy_11_instruction: Skapa ditt eget Flappy spel. Du kan ändra all grafik
+        och alla regler, även gravitationen. När du är klar, klicka på Slutför för
+        att låta vänner prova ditt spel på sina telefoner.
       flappy_2_instruction: Nu har vi lagt till lite mark. Lägg till block till  "när
         slog i marken" blocket.  Koden måste säga "Avsluta spelet" när Flappy kraschar.
       flappy_3_instruction: '"När kör" blocket gör så att kod körs när spelet startar.  Prova
@@ -10326,9 +10335,6 @@
       flappy_9_instruction: För att blanda ihop saker,  i stället för att spelet slutar
         när du slår i ett hinder så prova att sätta tillbaks poänginställningen  till
         0.
-      flappy_11_instruction: Skapa ditt eget Flappy spel. Du kan ändra all grafik
-        och alla regler, även gravitationen. När du är klar, klicka på Slutför för
-        att låta vänner prova ditt spel på sina telefoner.
       frozen circle function in circle_instruction: Låt oss nu skapa 20 överlappande
         cirklar. Vrid 18 grader mellan varje cirkel.
       frozen circle function with parameter_instruction: Här är ett "Skapa cirkel"-block

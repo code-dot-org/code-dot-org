@@ -849,18 +849,12 @@
   dashboard_course_csp_desc: Code.org есептеу идеяларының негізін зерттейтін қатаң,
     қызықты әрі қол жетімді курс ойлап шығарды.
   dashboard_landing_loading: "ЖҮКТЕЛУДЕ..."
-  dashboard_action_edit: "Өзгерту"
-  dashboard_action_save: "Сақтау"
-  dashboard_action_save_all: "Барлығын сақтау"
   dashboard_action_cancel: "Болдырмау"
   dashboard_action_delete: "Өшіру"
   dashboard_action_delete_yes: "Иә"
   dashboard_action_delete_no: "Жоқ"
   dashboard_action_confirm: "Өшіру?"
-  dashboard_action_remove: "Өшіру"
-  dashboard_action_remove_confirm: "Өшіру?"
   dashboard_action_done: "Дайын"
-  dashboard_action_required: "қажет"
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Бағалаулар жоқ"
@@ -966,8 +960,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: "Оқушыны қосу"
-  dashboard_students_add_students: "Бірнеше оқушыны қосу"
   dashboard_students_add_multiple: "Оқушыларыңыздың есімін жолға біртіндеп жазыңыз
     немесе қойыңыз:"
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -975,23 +967,12 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: "Сіз жаңа бөлім құрдыңыз! Енді жоғарыдағы батырманы
     басып оқушыларыңызды қосыңыз: <b>Оқушыны қосу</b> және <b>Бірнеше оқушыны қосу</b>."
-  dashboard_students_placeholder_name: "Оқушының аты"
   dashboard_students_name: "Атыңыз"
   dashboard_students_progress: "Ілгерілеуі"
-  dashboard_students_age: "Жасы"
-  dashboard_students_gender: "Жынысы"
   dashboard_students_male: "Ер"
   dashboard_students_female: "Әйел"
-  dashboard_students_secret: "Құпия"
-  dashboard_students_password: "Құпия сөз"
-  dashboard_students_username: "Қолданушы аты: %{student_username}"
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: "Аяқталған деңгейлер"
   dashboard_students_total_lines: "Код жолдары"
-  dashboard_students_show_secret: "Құпия сөзді көрсету"
-  dashboard_students_auto_generated: "Автоматты генерацияланған"
-  dashboard_students_reset_secret: "Құпиялылық түрін ауыстыру"
-  dashboard_students_reset_password: "Құпия сөзді ауыстыру"
   dashboard_students_share_section: "Бұл бөлімге кіру үшін, оқушыларыңызбен осы парақты
     бөлісіңіз:"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1064,7 +1045,6 @@
   dashboard_login_word: "Сөз"
   dashboard_login_picture: "Сурет"
   dashboard_login_none: "Электронды пошта"
-  dashboard_new_password: "жаңа құпия сөз"
   dashboard_stage: "Деңгей"
   dashboard_puzzle: "Басқатырғыш"
   dashboard_question: "Сұрақ"
@@ -1380,7 +1360,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8-сыныптан бастап
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Жас аралығы 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-18 жастағылар үшін
   codeorg_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"

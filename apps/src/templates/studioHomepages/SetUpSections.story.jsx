@@ -3,7 +3,7 @@ import SetUpSections from './SetUpSections';
 import {action} from '@storybook/addon-actions';
 
 export default storybook => storybook
-  .storiesOf('SetUpSections', module)
+  .storiesOf('Homepages/Teachers/SetUpSections', module)
   .withReduxStore()
   .addStoryTable([
     {

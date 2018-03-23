@@ -163,9 +163,6 @@ es:
       CollisionDetection:
         title: Detección de colisiones y el teorema de Pitágoras
         desc: Determinar cuándo los objetos en la pantalla táctil es un aspecto importante de la mayoría de los juegos. En esta lección analizaremos cómo la fórmula de la distancia y el teorema de Pitágoras se pueden utilizar para medir la distancia entre dos puntos en el avión y luego decidir si se tocan los dos puntos (o juego de caracteres).
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!

@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Well} from 'react-bootstrap';
+import _ from 'lodash';
 
 export default class FreeResponseSection extends React.Component {
   static propTypes = {
@@ -14,13 +15,7 @@ export default class FreeResponseSection extends React.Component {
           {facilitator_name}
           <ul>
             {
-              answers[facilitator_name].map((feedback, j) => {
-                return (
-                  <li key={j}>
-                    {feedback}
-                  </li>
-                );
-              })
+              answers[facilitator_name].map((feedback, j) => this.renderBullet(feedback, j))
             }
           </ul>
         </li>
@@ -29,13 +24,28 @@ export default class FreeResponseSection extends React.Component {
   }
 
   renderAnswers(answers) {
-    return answers.map((answer, i) => {
+    return answers.map((answer, i) => this.renderBullet(answer, i));
+  }
+
+  renderBullet(text, key) {
+    const trimmedText = _.trim(text);
+    if (trimmedText) {
       return (
-        <li key={i}>
-          {answer}
+        <li key={key}>
+          {trimmedText}
         </li>
       );
-    });
+    }
+  }
+
+  renderResponseSection(responses) {
+    if (responses) {
+      if (Array.isArray(responses)) {
+        return this.renderAnswers(responses);
+      } else {
+        return this.renderFacilitatorsAndAnswers(responses);
+      }
+    }
   }
 
   render() {
@@ -48,11 +58,7 @@ export default class FreeResponseSection extends React.Component {
                 <b>
                   {question['text']}
                 </b>
-                {
-                  Array.isArray(this.props.responseData[question['key']]) ?
-                    this.renderAnswers(this.props.responseData[question['key']]) :
-                    this.renderFacilitatorsAndAnswers(this.props.responseData[question['key']])
-                }
+                {this.renderResponseSection(this.props.responseData[question.key])}
               </Well>
             );
           })

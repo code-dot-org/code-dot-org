@@ -4,8 +4,8 @@ import FontAwesome from './FontAwesome';
 import Radium from 'radium';
 import React, {PropTypes} from 'react';
 
-const PendingButton = React.createClass({
-  propTypes: {
+class PendingButton extends React.Component {
+  static propTypes = {
     className: PropTypes.string,
     id: PropTypes.string,
     isPending: PropTypes.bool.isRequired,
@@ -14,7 +14,7 @@ const PendingButton = React.createClass({
     pendingText: PropTypes.string.isRequired,
     style: PropTypes.any,
     text: PropTypes.string.isRequired,
-  },
+  };
 
   render() {
     const style = this.props.isPending ?
@@ -37,6 +37,7 @@ const PendingButton = React.createClass({
         }
       </button>
     );
-  },
-});
+  }
+}
+
 export default Radium(PendingButton);

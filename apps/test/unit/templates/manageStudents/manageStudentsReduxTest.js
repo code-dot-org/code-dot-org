@@ -10,6 +10,7 @@ import manageStudents, {
   setSecretImage,
   setSecretWords,
   editStudent,
+  editAll,
   startSavingStudent,
   saveStudentSuccess,
   addStudentsSuccess,
@@ -17,6 +18,7 @@ import manageStudents, {
   AddStatus,
   addMultipleRows,
   RowType,
+  toggleSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -110,12 +112,22 @@ const expectedBlankRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.ADD,
 };
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
+
+  describe('toggleSharingColumn', () => {
+    it('toggle showSharingColumn state', () => {
+      const action = toggleSharingColumn();
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.showSharingColumn,
+        !initialState.showSharingColumn);
+    });
+  });
 
   describe('setLoginType', () => {
     it('sets login type for the section in view', () => {
@@ -139,8 +151,21 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.studentData, {
         ...studentEmailData,
-        0: {
-          ...expectedBlankRow
+      });
+    });
+
+    it('sets student data and an empty row for picture section', () => {
+      const startingState = {
+        ...initialState,
+        loginType: 'picture'
+      };
+      const action = setStudents(studentPictureData);
+      const nextState = manageStudents(startingState, action);
+      assert.deepEqual(nextState.studentData, {
+        ...studentPictureData,
+        [0]: {
+          ...expectedBlankRow,
+          loginType: 'picture',
         }
       });
     });
@@ -168,20 +193,17 @@ describe('manageStudentsRedux', () => {
       const finalState = manageStudents(nextState, setStudents2);
       assert.deepEqual(finalState.studentData, {
         ...newSectionData,
-        0: {
-          ...expectedBlankRow
-        }
       });
     });
   });
 
   describe('convertStudentDataToArray', () => {
-    it('converts studentData to an array of student objects', () => {
+    it('converts studentData to an array of student objects in reverse order', () => {
       const studentDataArray = convertStudentDataToArray(studentEmailData);
       assert.equal(studentDataArray.length, 3);
-      assert.equal(studentDataArray[0], studentEmailData[1]);
+      assert.equal(studentDataArray[0], studentEmailData[3]);
       assert.equal(studentDataArray[1], studentEmailData[2]);
-      assert.equal(studentDataArray[2], studentEmailData[3]);
+      assert.equal(studentDataArray[2], studentEmailData[1]);
     });
   });
 
@@ -200,6 +222,22 @@ describe('manageStudentsRedux', () => {
       const startEditingStudentAction = startEditingStudent(1);
       const finalState = manageStudents(nextState, startEditingStudentAction);
       assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
+    });
+  });
+
+  describe('editAll', () => {
+    it('sets students isEditing to true', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = editAll();
+      const finalState = manageStudents(nextState, startEditingStudentAction);
+      assert.deepEqual(finalState.studentData[1].isEditing, true);
+      assert.deepEqual(finalState.studentData[2].isEditing, true);
+      assert.deepEqual(finalState.studentData[3].isEditing, true);
+
+      assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
+      assert.deepEqual(finalState.editingData[2], studentEmailData[2]);
+      assert.deepEqual(finalState.editingData[3], studentEmailData[3]);
     });
   });
 
@@ -283,6 +321,16 @@ describe('manageStudentsRedux', () => {
         age: 13,
         gender: 'm',
       });
+
+      const editStudentShareSettingAction = editStudent(1, {sharingDisabled: true});
+      const stateWithShareSetting = manageStudents(stateWithGender, editStudentShareSettingAction);
+      assert.deepEqual(stateWithShareSetting.editingData[1], {
+        ...studentEmailData[1],
+        name: "New name",
+        age: 13,
+        gender: 'm',
+        sharingDisabled: true,
+      });
     });
   });
 
@@ -299,6 +347,7 @@ describe('manageStudentsRedux', () => {
       const startedSavingState = manageStudents(editingState, startSavingAction);
       assert.equal(startedSavingState.studentData[1].isEditing, true);
       assert.equal(startedSavingState.studentData[1].isSaving, true);
+      assert.equal(startedSavingState.editingData[1].isSaving, true);
     });
 
     it('saveStudentSuccess updates studentData and removes editingData', () => {
@@ -359,16 +408,6 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('add student', () => {
-    const expectedBlankRow = {
-      id: 0,
-      name: '',
-      age: '',
-      gender: '',
-      username: '',
-      loginType: '',
-      isEditing: true,
-      rowType: RowType.ADD,
-    };
     it('setLoginType creates an add row for word login types', () => {
       const action = setLoginType('word');
       const nextState = manageStudents(initialState, action);
@@ -515,6 +554,7 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...initialState.editingData[0],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...initialState.studentData[0],
@@ -559,9 +599,11 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[1], {
         ...initialState.editingData[1],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.editingData[2], {
         ...initialState.editingData[2],
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[1], {
         ...initialState.studentData[1],

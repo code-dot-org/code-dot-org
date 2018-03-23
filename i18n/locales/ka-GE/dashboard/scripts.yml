@@ -963,6 +963,7 @@ ka:
           stages:
             Testing:
               name: გატესტვა
+          description_audience: ''
         cspunit2:
           title: "(old) CS Principles Unit 2 - The Internet"
           description: In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. This unit is a pilot version and is no longer supported or updated. You can find the new units at code.org/educate/csp.
@@ -7151,3 +7152,75 @@ ka:
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: CSD U3 Plotting Shapes Shape Lab - unembed
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: CSD U3 Entertainment Sample 1 - unembed
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: Only Stage
+          title: Unembedded Levels
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: პროგრამირება გართობისათვის
+            Plotting Shapes:
+              name: Plotting Shapes
+            Drawing in Game Lab:
+              name: ხატვა თამაშების ლაბორატორიაში
+            Shapes and Randomization:
+              name: Shapes and Randomization
+            Variables:
+              name: ცვლადები
+            Sprites:
+              name: სპრაიტები
+            The Draw Loop:
+              name: ხატვის ციკლი
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+            Sprite Movement:
+              name: სპრაიტების მოძრაობა
+            Booleans Unplugged:
+              name: Booleans Unplugged
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Keyboard Input:
+              name: კლავიატურიდან შეყვანილი ინფორმაცია
+            Other Forms of Input:
+              name: Other Forms of Input
+            Project - Interactive Card:
+              name: პროექტი - ინტერაქტიული ბარათი
+            Velocity:
+              name: სიჩქარე
+            Collision Detection:
+              name: შეჯახების აღმოჩენა
+            Complex Sprite Movement:
+              name: სპრაიტების რთული მოძრაობა
+            Collisions:
+              name: შეჯახებები
+            Functions:
+              name: ფუნქციები
+            The Game Design Process:
+              name: თამაშის დიზაინის პროცესი
+            Using the Game Design Process:
+              name: თამაშის დიზაინის პროცესის გამოყენება
+            Project - Design a Game:
+              name: პროექტი - შექმენით თამაშის დიზაინი
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშების და თამაშების დაპროგრამება თამაშების ლაბორატორიაში."
+          description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
