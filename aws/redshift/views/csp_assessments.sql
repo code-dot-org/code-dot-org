@@ -59,3 +59,6 @@ where se.user_id in (select user_id from analysis.csp_csd_started_teachers where
   and a.questions >= 8
 group by 1,2,3
 with no schema binding;
+
+GRANT ALL PRIVILEGES ON analysis.csp_assessments TO GROUP admin;
+GRANT SELECT ON analysis.csp_assessments TO GROUP reader, GROUP reader_pii;
