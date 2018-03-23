@@ -87,3 +87,12 @@ When /^I ensure droplet is in block mode$/ do
     STEPS
   end
 end
+
+def add_code_to_editor(code)
+  script =
+    "var aceEditor = __TestInterface.getDroplet().aceEditor;\n" \
+    "aceEditor.textInput.focus();\n" \
+    "aceEditor.onTextInput(\"#{code}\");\n"
+
+  @browser.execute_script(script)
+end
