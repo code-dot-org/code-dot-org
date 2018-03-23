@@ -268,11 +268,11 @@ td {
 }
 
 .greybox {
-  background-color: rgb(88, 103, 113); color: white; padding: 20px; text-align: center; overflow:hidden
+  background-color: #fff; color: #666; border: 1px solid #888; padding: 20px; text-align: center; overflow:hidden
 }
 
 .greybox ul li:before {
-  color: white;
+  color: #666;
 }
 
 #about_nav {

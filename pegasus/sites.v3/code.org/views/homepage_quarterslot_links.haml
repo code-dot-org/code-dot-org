@@ -1,4 +1,7 @@
-.quarterslot-links.div.col-25.col-mobile-50
+- desktop_column_width ||= 25
+- layout_class ||= 'quarterslot-links-small'
+
+.quarterslot-links.col-mobile-50{class: "col-#{desktop_column_width} #{layout_class}"}
   %a.linktag{href: entry[:url], id: entry[:id]}
     - entry[:image] = entry[:image].gsub("/images/", "/images/fit-400/")
     .slotbox{style: "background-image: url(#{entry[:image]})"}

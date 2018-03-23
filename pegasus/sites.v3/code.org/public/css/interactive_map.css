@@ -23,7 +23,7 @@
 }
 
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
-  color: white;
+  color: #888;
   cursor: pointer;
   text-decoration: underline;
 }

@@ -31,7 +31,6 @@ module Cdo
       host = http_host_and_port(url.host, url.port)
       return host if host.include?('csedweek.org')
       return host if host.include?('code.org')
-      return host if host.include?('advocacy.code.org')
       return 'code.org'
     rescue URI::InvalidURIError
       return 'code.org'
@@ -48,15 +47,14 @@ module Cdo
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        #domains = (%w(studio learn) + CDO.partners).map {|x| x + '.code.org'}
-        #domain = parts.last(3).join('.').split(':').first
-        #return domain if domains.include? domain
+        domains = (%w(studio learn advocacy) + CDO.partners).map {|x| x + '.code.org'}
+        domain = parts.last(3).join('.').split(':').first
+        return domain if domains.include? domain
       end
 
-      #domain = parts.last(2).join('.').split(':').first
-      #return domain if %w(csedweek.org hourofcode.com codeprojects.org advocacy.org).include?(domain)
+      domain = parts.last(2).join('.').split(':').first
+      return domain if %w(csedweek.org hourofcode.com codeprojects.org).include?(domain)
 
-      ##'advocacy.org'
       'code.org'
     end
 
