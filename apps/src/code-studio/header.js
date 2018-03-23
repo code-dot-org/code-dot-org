@@ -511,4 +511,17 @@ header.updateTimestamp = function () {
   }
 };
 
+// TODO i18n
+header.showProjectSaveError = () => {
+  const saveErrorTooltip = "It looks like we couldn't save your progress. Make sure you have a " +
+    "good internet connection and try running the project again to save it.";
+
+  const saveErrorHtml = `
+<span class="project-save-error" title="${saveErrorTooltip}">
+  <i class="fa fa-exclamation-triangle"/> Error saving project
+</span>`;
+
+  $('.project_updated_at').html(saveErrorHtml);
+};
+
 export default header;

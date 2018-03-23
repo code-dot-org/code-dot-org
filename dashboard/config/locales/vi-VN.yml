@@ -209,6 +209,7 @@
       email: "Địa chỉ Email"
       submit: Gửi
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Có vẻ như bạn đã đăng nhập với một địa chỉ email không hợp lệ.
         Vui lòng gửi email tới support@code.org để nhận được link đặt lại mật khẩu.
     change_form:

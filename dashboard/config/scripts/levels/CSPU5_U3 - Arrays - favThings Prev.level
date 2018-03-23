@@ -132,7 +132,8 @@
       "callMyFunction_n": null,
       "return": null,
       "comment": null,
-      "stopSound": null
+      "stopSound": null,
+      "accessListItem": null
     },
     "edit_code": true,
     "embed": "false",
@@ -169,9 +170,22 @@
     "slider_speed": "1",
     "project_template_level_name": "U3 - Arrays - favThings template",
     "encrypted_examples": "2PTLY+eODrkX8FS+uI0HKQx8TEqfXfdbj+h4bdtP8yOERgTQ2J+/z+HftbwP\nQ16p\n",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-20 16:13:37 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

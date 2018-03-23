@@ -1,6 +1,7 @@
 import { UnconnectedFinishDialog as FinishDialog } from './FinishDialog';
 import ExampleDialogButton from '../util/ExampleDialogButton';
 import React from 'react';
+import progress from '@cdo/apps/code-studio/progressRedux';
 
 const dialogWrapper = {
   padding: 40,
@@ -42,9 +43,67 @@ const studentCode = {
   message,
 };
 
+const mockProgress = {
+  currentLevelId: '123',
+  professionalLearningCourse: false,
+  saveAnswersBeforeNavigation: false,
+  stages: [{
+    id: 40,
+    levels: [{
+      activeId: 1818,
+      freePlay: false,
+      icon: null,
+      ids: [1818],
+      is_concept_level: false,
+      kind: 'puzzle',
+      position: 1,
+      title: 1,
+      url: '#',
+    }, {
+      activeId: 1819,
+      freePlay: false,
+      icon: null,
+      ids: [1819],
+      is_concept_level: false,
+      kind: 'puzzle',
+      position: 2,
+      title: 2,
+      url: '#',
+    }, {
+      activeId: 1820,
+      freePlay: false,
+      icon: null,
+      ids: [1820],
+      is_concept_level: false,
+      kind: 'puzzle',
+      position: 3,
+      title: 3,
+      url: '#',
+    }],
+  }],
+  peerReviewStage: false,
+  scriptId: 1,
+  scriptName: 'test',
+  scriptTitle: 'Test Script',
+  courseId: null,
+  currentStageId: 40,
+  hasFullProgress: false,
+  levelProgress: {1815: 17,
+    1818: 100,
+    1819: 30,
+    1820: 100,
+    1824: 17,
+    1826: 17,
+    1829: 17,
+    1830: 100,
+    1831: 100,
+  },
+};
+
 export default storybook =>
   storybook
-    .storiesOf('FinishDialog', module)
+    .storiesOf('Dialogs/FinishDialog', module)
+    .withReduxStore({progress}, {progress: mockProgress})
     .addStoryTable([
       {
         name: 'Dialog with overlay',
@@ -158,6 +217,26 @@ export default storybook =>
               blocksUsed={98}
               achievements={[]}
               studentCode={studentCode}
+            />
+          </div>
+        ),
+      },
+      {
+        name: 'Perfect Finish of challenge level',
+        description: 'Perfectly finished a challenge level',
+        story: () => (
+          <div style={dialogWrapper}>
+            <FinishDialog
+              hideBackdrop
+
+              isChallenge
+              isPerfect
+              blockLimit={98}
+              blocksUsed={98}
+              achievements={achievements}
+              studentCode={studentCode}
+              showFunometer
+              canShare
             />
           </div>
         ),

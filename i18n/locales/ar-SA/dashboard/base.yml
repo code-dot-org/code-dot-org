@@ -59,7 +59,7 @@ ar:
   courses: 'الدروس'
   courses_page:
     title_student: "تعلّم على كود استوديو"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'نشاط غير موصول'
   of: "من"
   more: "أكثر"
@@ -69,7 +69,7 @@ ar:
   try_k8intro: "قم بتجربة المقدمة عن درس \"علوم الكمبيوتر\" للمستوى المبتدئ والمتوسط (من 15 إلى 25 ساعة)"
   k8intro: "مقدمة عن درس \"علوم الكمبيوتر\" للمستوى المبتدئ والمتوسط (من 15 إلى 25 ساعة)"
   already_started: "بدأت بالفعل؟ أكمل من هنا >>  "
-  demos: 'المشرف:  جميع العروض التوضيحية'
+  demos: "المشرف:  جميع العروض التوضيحية"
   continue: 'الاستمرار'
   prize: 'جائزة'
   more_info: 'المزيد من المعلومات'
@@ -171,6 +171,7 @@ ar:
       email: 'البريد الإلكتروني'
       submit: 'تسجيل'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'تغيير كلمة مرور حسابك'
@@ -221,7 +222,7 @@ ar:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب.'
+        subject: "إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب."
   reports:
     error:
       access_denied: "لا يوجد لديك الصلاحيات للوصول إلى إحصائيات الخاصة بهذا المستخدم"
@@ -353,7 +354,7 @@ ar:
     current_password_hint: '(أدخل كلمة المرور الحالية لتأكيد التغييرات الخاصة بحسابك)'
     delete: 'إحذف الحساب الخاص بك'
     delete_text: "النقر على الزر أدناه سيؤدي إلى حذف الحساب الخاص بك."
-    delete_text_teacher_note: يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات طلابك.
+    delete_text_teacher_note: "يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات طلابك."
     delete_confirm: 'هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟'
     deleted_user: 'عضو محذوف'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -364,7 +365,7 @@ ar:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -703,7 +704,7 @@ ar:
     sign_out: 'إذا كنت لا ترغب بالإدلاء بعمرك، يمكنك <a href="%{url}"> تسجيل الخروج</a>.'
   terms_interstitial:
     title: "تحديث شروط الخدمة وسياسة الخصوصية"
-    intro_desc: 'قمنا بتحديث لدينا شروط الخدمة وسياسة الخصوصية، كما هو موضح أدناه. فهذه التغييرات اعتبارا من 24 أغسطس 2016.  أكبر تغيير: أننا سوف <i>لم نعد نخزن عناوين البريد الإلكتروني لحسابات الطلاب في "استوديو البرمجية".</i> هذا فرق كبير بالنسبة لنا، ونحن نأمل أن يضع معياراً جديداً لخصوصية الطالب في التعليم والتكنولوجيا. لقد أرسلنا لك ملخص للتغييرات الأخرى عبر البريد الإلكتروني.'
+    intro_desc: "قمنا بتحديث لدينا شروط الخدمة وسياسة الخصوصية، كما هو موضح أدناه. فهذه التغييرات اعتبارا من 24 أغسطس 2016.  أكبر تغيير: أننا سوف <i>لم نعد نخزن عناوين البريد الإلكتروني لحسابات الطلاب في \"استوديو البرمجية\".</i> هذا فرق كبير بالنسبة لنا، ونحن نأمل أن يضع معياراً جديداً لخصوصية الطالب في التعليم والتكنولوجيا. لقد أرسلنا لك ملخص للتغييرات الأخرى عبر البريد الإلكتروني."
     intro_instructions: "سوف تحتاج إلى قبول هذه الشروط الجديدة للطلاب تحت سن ال 13 في الفصول الدراسية الخاصة بك للوصول الكامل إلى جميع أحدث الميزات في \"الاستوديو التعليمات البرمجية\".  عند تسجيل حساب لطالب دون سن 13، سيتم مطالبتك بتأكيد أن المدرسة الخاصة بك بموافقة الوالدين لجمع المعلومات الشخصية للطالب لاستخدام والاستفادة من المدرسة، بما في ذلك البرامج التعليمية مثل Studio التعليمات البرمجية."
     tos: "شروط الخدمة"
     privacy: "سياسة الخصوصية"
@@ -719,7 +720,7 @@ ar:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "حفظ"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -763,7 +764,7 @@ ar:
     delete: "حذف"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "العودة إلى الدورة التدريبية"
@@ -866,8 +867,8 @@ ar:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

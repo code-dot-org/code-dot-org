@@ -198,6 +198,7 @@ MARKDOWN
   end
 
   test "get_sublevel_last_attempt" do
+    script = create :script
     level1 = create :multi
     level2 = create :multi
     properties = {pages: [{levels: [level1.name]}, {levels: [level2.name]}]}
@@ -209,14 +210,16 @@ MARKDOWN
     student_level_source = create :level_source, data: '1'
     teacher_level_source = create :level_source, data: '2'
 
-    create :user_level, user: student, level: level1, level_source: student_level_source
-    create :user_level, user: teacher, level: level1, level_source: teacher_level_source
+    create :user_level, user: student, level: level1, script: script, level_source: student_level_source
+    create :user_level, user: teacher, level: level1, script: script, level_source: teacher_level_source
 
     # loads student's attempt when current_user and user are provided
-    assert_equal '1', LevelGroup.get_sublevel_last_attempt(teacher, student, level1)
+    assert_equal '1', LevelGroup.get_sublevel_last_attempt(teacher, student, level1, script)
     # loads user's attempt if user provided
-    assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1)
+    assert_equal '2', LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, script)
+    # does not load attempt for a different script
+    assert_nil LevelGroup.get_sublevel_last_attempt(teacher, nil, level1, create(:script))
     # returns undefined when signed out
-    assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1)
+    assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
 end

@@ -351,7 +351,7 @@ describe("Section4SummerWorkshop", () => {
         });
 
         it("Does not load alternate workshops when yes is selected", () => {
-          section4.instance().handleChange({ableToAttendSingle: "Yes, I'm able to attend"});
+          section4.instance().handleChange({ableToAttendSingle: ABLE_TO_ATTEND_SINGLE});
           expect(server.requests).to.have.length(0);
         });
       });

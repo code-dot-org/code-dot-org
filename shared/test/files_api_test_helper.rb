@@ -96,14 +96,21 @@ class FilesApiTestHelper
     last_response.body
   end
 
-  def put_object_version(filename, version_id, body = '', headers = {})
-    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
+  def put_object_version(filename, version_id, body = '', headers = {}, timestamp = nil)
+    params = "?version=#{version_id}"
+    params += "&firstSaveTimestamp=#{timestamp}" if timestamp
+    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}#{params}", body, headers
     last_response.body
   end
 
   def post_object_version(filename, version_id, body = '', headers = {})
     post "/v3/#{@endpoint}/#{@channel_id}/#{filename}?version=#{version_id}", body, headers
     last_response.body
+  end
+
+  def restore_sources_version(filename, version_id, body = '', headers = {})
+    put "/v3/sources/#{@channel_id}/#{filename}/restore?version=#{version_id}", body, headers
+    JSON.parse(last_response.body)
   end
 
   def list_files_versions
@@ -146,8 +153,12 @@ class FilesApiTestHelper
   end
 
   def randomize_filename(filename)
-    basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
-    basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
+    parts = filename.split('.')
+    "#{add_random_suffix(parts[0])}.#{parts[1]}"
+  end
+
+  def add_random_suffix(key)
+    key + @random.bytes(10).unpack('H*')[0]
   end
 
   def ensure_aws_credentials

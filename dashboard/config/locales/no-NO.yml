@@ -1,4 +1,4 @@
-"false":
+'no':
   errors:
     messages:
       not_saved: 'Vennligst korriger følgende feil:'
@@ -206,6 +206,7 @@
       email: E-postadresse
       submit: Send
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Det ser ut til at du har registrert deg med en ugyldig e-post
         adresse. Vennligst send epost til support@code.org for å få tilsendt en lenke
         for tilbakestilling av passord.

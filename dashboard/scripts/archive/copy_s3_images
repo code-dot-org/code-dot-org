@@ -8,7 +8,7 @@ require 'cdo/aws/s3'
 
 START_ID = 8_531_000
 #START_ID = 1
-BUCKET = 'cdo-art'
+BUCKET = 'cdo-art'.freeze
 
 AWS::S3.connect!
 

@@ -25,14 +25,14 @@
   submit: "Enviar"
   twentyhours_heading: "Experimente nosso Curso de Introdução à Ciência da Computação"
   twentyhours_text: "Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência da computação e seus conceitos nesse curso."
-  og_title: A Hora do Código está chegando
+  og_title: 'A Hora do Código está chegando'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "Cada aluno em cada escola merece a oportunidade de estudar ciência da computação. Isso muda tudo."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "A Hora do Código está chegando"
   csedweek_og_description: "A Hora do Código é um movimento global que atinge dezenas de milhões de alunos de todas as idades em mais de 180 países e em mais de 45 idiomas."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Participe da <a href=\"http://hourofcode.com\">Hora do código</a><br/>de 8 a 14 de dezembro de 2014<br/>"
   hoc2014_students: "Alunos"
@@ -632,18 +632,12 @@
   dashboard_course_csp: "AP® Princípios da ciência da computação"
   dashboard_course_csp_desc: "A Code.org desenvolveu um curso rigoroso, envolvente e acessível que explora as ideias fundamentais da computação."
   dashboard_landing_loading: "Carregando..."
-  dashboard_action_edit: "Editar"
-  dashboard_action_save: "Salvar"
-  dashboard_action_save_all: "Salvar tudo"
   dashboard_action_cancel: "Cancelar"
   dashboard_action_delete: "Excluir"
   dashboard_action_delete_yes: 'Sim'
   dashboard_action_delete_no: 'Não'
   dashboard_action_confirm: "Excluir?"
-  dashboard_action_remove: "Excluir"
-  dashboard_action_remove_confirm: "Excluir?"
   dashboard_action_done: "Feito"
-  dashboard_action_required: "obrigatório"
   dashboard_action_print_certificates: "Imprimir certificados"
   dashboard_assessments_view: 'Ver avaliações em:'
   dashboard_assessments_none: "A maioria dos professores mede o progresso de seus alunos usando a guia \"Exibir progresso\". Se você tem interesse em dar aos seus alunos avaliações adicionais, você pode encontrar perguntas e áreas recomendadas nos planos de aula, que são feitos fora do Code Studio."
@@ -719,28 +713,15 @@
   dashboard_sections_assign_activity: "Atribuir Curso"
   dashboard_error_none_selected: "Você não selecionou nenhum aluno para mover. Selecione pelo menos um aluno."
   dashboard_error_other_section: "Se estiver movendo alunos entre suas próprias seções, selecione sua seção na lista suspensa. Selecione \"Outra seção\" apenas para mover seus alunos para a seção de outro professor."
-  dashboard_students_add_student: "Adicionar aluno"
-  dashboard_students_add_students: "Adicionar vários alunos"
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por linha:'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "Você criou uma nova turma! Agora, adicione seus alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b> acima."
-  dashboard_students_placeholder_name: "Nome do estudante"
   dashboard_students_name: "Nome"
   dashboard_students_progress: "Progresso"
-  dashboard_students_age: "Idade"
-  dashboard_students_gender: "Gênero"
   dashboard_students_male: "Masculino"
   dashboard_students_female: "Feminino"
-  dashboard_students_secret: "Segredo"
-  dashboard_students_password: "senha"
-  dashboard_students_username: 'Nome de usuário: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: "Níveis concluídos"
   dashboard_students_total_lines: "Linhas de código"
-  dashboard_students_show_secret: "Mostrar segredo"
-  dashboard_students_auto_generated: "Gerar automaticamente"
-  dashboard_students_reset_secret: "Redefinir o segredo"
-  dashboard_students_reset_password: "Redefinir senha"
   dashboard_students_share_section: "Compartilhe a página de inscrição da turma com seus alunos:"
   dashboard_students_share_section_secondary: 'Ou, compartilhe esta página de login com seus alunos:'
   dashboard_students_print_info: "Imprima cartões com as informações de login de seus alunos."
@@ -771,7 +752,10 @@
   dashboard_coursed: 'Curso D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Se não tiver computadores, <a href='%{unplugged_url}'>use essas aulas off-line</a> na sua sala de aula."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Currículo"
   dashboard_curriculum_overview: "Visão geral do currículo do pré ao 5º ano"
   dashboard_overview: "Visão geral"
@@ -789,12 +773,13 @@
   dashboard_curriculum_csins: 'Ciência da computação na ciência:'
   dashboard_curriculum_csp: 'AP® Princípios da ciência da computação:'
   dashboard_curriculum_ecs: 'Explorando a Ciência da Computação:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Nível"
   dashboard_grade_other: "Outros"
   dashboard_login_word: "Palavra"
   dashboard_login_picture: "Imagem"
   dashboard_login_none: "E-mail"
-  dashboard_new_password: "nova senha"
   dashboard_stage: "Fase"
   dashboard_puzzle: "Desafio"
   dashboard_question: "Pergunta"
@@ -857,7 +842,7 @@
   carousel_heading_international: "Tutoriais de parceiros no seu idioma"
   carousel_heading_domestic: "Tutoriais disponíveis em inglês"
   carousel_heading_beginners: "Tutoriais para alunos do Ensino Fundamental"
-  carousel_heading_beyond_beginners: Tutoriais para iniciantes
+  carousel_heading_beyond_beginners: 'Tutoriais para iniciantes'
   carousel_heading_javascript: "Tutoriais que ensinam JavaScript"
   carousel_heading_beyond_javascript: "Tutoriais que ensinam JavaScript"
   carousel_heading_unplugged: "Não tem dispositivos eletrônicos nem Internet? Conheça as atividades de ciência da computação \"offline\""
@@ -959,11 +944,11 @@
   accelerated_name: "Curso acelerado"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(antigo) Unidade 1: Informação digital'
-  cspunit2_name: '(antigo) Unidade 2: A Internet'
-  cspunit3_name: '(antigo) Unidade 3: Programação'
-  cspunit4_name: '(antigo) Unidade 4: Dados'
-  cspunit5_name: '(antigo) Unidade 5: Explorar e criar tarefas de desempenho'
+  cspunit1_name: "(antigo) Unidade 1: Informação digital"
+  cspunit2_name: "(antigo) Unidade 2: A Internet"
+  cspunit3_name: "(antigo) Unidade 3: Programação"
+  cspunit4_name: "(antigo) Unidade 4: Dados"
+  cspunit5_name: "(antigo) Unidade 5: Explorar e criar tarefas de desempenho"
   cspunit6_name: 'Após NA (Nivelamento Avançado): Bancos de dados em aplicativos'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1012,6 +997,7 @@
   cspexams_category_name: "Teste prático dos princípios da CC"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratório de Aplicativo"
+  gamelab_name: "Laboratório de Jogos"
   basketball_name: "Fazer um jogo de basquete"
   sports_name: "Esportes"
   applab_gradelevel: "A partir de 13 anos"
@@ -1070,12 +1056,12 @@
   course2_gradelevel: "6-18 anos de idade"
   course3_gradelevel: "8-18 anos de idade"
   course4_gradelevel: "10-18 anos de idade"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "Alunos a partir do 8º ano"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursee_gradelevel: "De 8 a 12 anos"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "10-18 anos de idade"
   codeorg_platformtext: "Navegadores Web modernos, smartphones, tablets"
   codeintl_platformtext: "Navegadores modernos, smartphones, tablets"
@@ -1178,12 +1164,12 @@
   course2_shortdescription_congrats: "Para alunos com habilidades básicas de leitura, este curso baseia-se no Curso 1. Os alunos criarão programas para resolver problemas e desenvolver jogos interativos ou histórias que podem ser compartilhados. Recomendado para alunos do 2º ao 5º ano."
   course3_shortdescription_congrats: "Pronto para o próximo nível? Os alunos vão se aprofundar nos tópicos de programação apresentados em cursos anteriores para encontrar soluções flexíveis para problemas mais complexos. No final deste curso, os alunos criarão histórias interativas e jogos que podem ser compartilhados com outras pessoas. Recomendado para alunos do 4º ao 5º ano."
   course4_shortdescription_congrats: "Vamos mais longe? Os alunos vão se aprofundar nos tópicos de programação apresentados em cursos anteriores para encontrar soluções flexíveis para problemas mais complexos. No final deste curso, os alunos criarão histórias interativas e jogos que podem ser compartilhados com outras pessoas. Recomendado para alunos do 4º ao 8º ano."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   codeintl_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   thinkersmithspanish_longdescription: "Usando um \"Vocabulário-robô\" pré-definido, os alunos vão descobrir como orientar uns aos outros a concluir tarefas específicas sem discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos e ações, bem como sobre a habilidade individual de depuração."

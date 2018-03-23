@@ -4,11 +4,11 @@
       not_saved: 'Ispravi ove greške:'
       too_young: Ovaj sadržaj ima podešeno dobno ograničenje i nije dostupan mlađim
         studentima.
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
+      teacher_must_accept_terms: Ovaj sadržaj ima dobna ograničenja i nije dostupan
+        za mlađe učenike. Pitaj svog nastavnika da prihvati ažurirane Uslove korištenja
+        da ti da pristup za ovaj sadržaj. Tvoj nastavnik ovo može uraditi prijavom
+        na Code Studio i klikajući na dugme "Pregledaj ažurirane uslove" na vrhu početne
+        stranice Code Studija.
       pair_programmer: You are currently pair programming with a student who does
         not have access to this content. To access this content, stop pair programming
         and try again.
@@ -152,7 +152,7 @@
     user_type_student: Učenik
     field_is_required: je neophodno
     accept_terms: Morate pristati da bi napravili račun
-    error: An error occurred.
+    error: Došlo je do greške.
   school_info:
     title: Informacije o školi (nije obavezno)
     school_country: School Country
@@ -193,8 +193,8 @@
     login: Prijava
     invalid_login: Invalid login, please try again
     pair_programming: I have a partner at my computer
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    student_privacy: Nauči više o tome zašto ne vidiš svoje puno ime<a href='%{student_privacy_blog}'
+      target='_blank'>ovdje</a>.
   password:
     reset_form:
       title: Zaboravio/la si šifru?
@@ -203,6 +203,7 @@
       email: E-mail adresa
       submit: Potvrdi
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
@@ -230,8 +231,8 @@
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Slikovna lozinka
+      word: Tajne riječi
       email: Email
       google_classroom: Google učionica
       clever: Clever
@@ -297,30 +298,30 @@
       course_catalog: Course Catalog
       project_gallery: Projekti
       sections: Sections
-      help_support: Help and support
+      help_support: Pomoć i podrška
       report_bug: Report bug
       teacher_community: Teacher community
       professional_learning: Professional Learning
-      documentation: Documentation
+      documentation: Dokumentacija
       tutorials: Tutorials
       educate_overview: Educator Overview
-      educate_elementary: Elementary School
+      educate_elementary: Osnovna škola
       educate_middle: Middle School
-      educate_high: High School
+      educate_high: Srednja škola
       educate_hoc: Sat Kodiranja
       educate_partner: Partner sa nama
       educate_beyond: Beyond Code.org
       educate_inspire: Inspiriraj učenika
       educate_community: Online Community
       educate_tools: Tools and Videos
-      about_us: About Us
+      about_us: O nama
       about_leadership: Leadership
       about_donors: Donatori
       about_partners: Partners
       about_team: Full Team
       about_news: Newsroom
       about_evaluation: Evaluation
-      about_jobs: Jobs
+      about_jobs: Poslovi
       about_contact: Contact Us
       about_faqs: FAQs
       learn: Learn
@@ -339,7 +340,7 @@
       signup: Napravi račun
       already_registered: Jeste li već registrirani?
       pair_programming: Programiranje u Paru
-      team: Team
+      team: Tim
       driver: Driver
       navigator: Navigator
     popup:
@@ -589,10 +590,10 @@
       Please enter a different section code.
     student_ids_not_entered: Please provide student_ids.
     student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    all_students_must_be_in_current_section: Svi učenici trenutno moraju biti upisani
+      u vaše odjeljenje.
+    already_enrolled_in_new_section: Ne možete premjestiti ove učenike zato što su
+      oni već u novom odjeljenju.
   share:
     title: Naučite o Code Studiu
     description: Svako može naučiti računarske znanosti, te pisati kod za igre, aplikacije
@@ -781,12 +782,12 @@
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      body: Mi smo za tebe sastavili listu van mrežni aktivnosti da ih koristiš u
+        svom razredu. Sad možeš podučavati osnove računarstva, bilo da imaš računare
+        u razredu ili ne! Pokušaj koristiti ove lekcije kao samostalne kurseve ili
+        kao dopunske lekcije za bilo koji kurs računarstva.
+      body_short: Ako nemate računara, pokušajte ove van mrežne aktivnosti u Vašem
+        razredu.
     unplugged_conditionals:
       title: Uvjeti
       body: Learn about algorithms and conditional statements in this “unplugged”
@@ -827,8 +828,8 @@
     support: Potraži Pomoći
     support_url: "//support.code.org"
     help_resources: Help and Resources
-    help_support: Help and Support
-    documentation: Documentation
+    help_support: Pomoć i podrška
+    documentation: Dokumentacija
     tutorials: Tutorials
   multi:
     wrong_title: Netačan odgovor
@@ -928,7 +929,7 @@
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    accept: Prihvati
     print: Isprintaj
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
@@ -993,7 +994,7 @@
     exit: Povratak na Kurs
     my_projects: Moji Projekti
     project_gallery: Projekti
-    publish: Publish
+    publish: Objavi
     unpublish: Unpublish
     share: Podijeli
     share_title: Podijeli svoj projekat
@@ -1037,8 +1038,9 @@
     abuse:
       tos: Ovaj projekat je prijavljen da krši <a href='http://code.org/tos'>Uvjete
         Korištenja</a> Code.org-a i zbog toga ne može biti podijeljen sa ostalima.
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Ovaj projekat sadrži informacije koje ne mogu biti podijeljene
+        sa drugima. Molimo kontaktirajte vlasnika aplikacije da popravi sadržaje svoje
+        aplikacije.
       contact_us: Ako mislite da je ovo greška, molimo Vas da nas <a href='https://code.org/contact'>kontaktirate.</a>
       go_to_code_studio: Idi u Code Studio
       report_abuse_form:
@@ -1064,11 +1066,11 @@
           Privatnosti%{link_end} i %{link_start_tos}Uvjetima Korištenja%{link_end}
   peer_review:
     accepted:
-      name: Accepted
+      name: Prihvaćeno
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
-      name: Rejected
+      name: Odbijeno
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
@@ -1109,7 +1111,7 @@
     csd4_1: 'Chapter 1: User Centered Design'
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd5_2: 'Poglavlje 2: Rješavanje problema podataka'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
@@ -1128,25 +1130,25 @@
     dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od
+      strane Code.org-a.
+    disclaimer_text: Ova stranica može imati politike privatnosti koje se razlikuju
+      od onih na Code.org-u. Mi smo izabrali ova sredstva od trećih strana zato što
+      mislimo da će Vam biti od koristi. Iako mi nismo direktno odgovorni za sadržaj
+      ove stranice, molimo<a href='%{support_url}'>kontaktirajke podršku</a> ako nađete
+      sporni sadržaj, ili ako povezana stranice više nije dostupna.
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Imate li internet?
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
+    instructions_headline: Nema interneta?
+    instructions: 'Instrukcije za nastavnike: ako imate slabu internetsku uslugu,
+      ovi tutorijali Sata Kodiranja su dostupni za preuzimanje i instaliranje za izvanmrežno
+      korištenje. Izaberite Vaš jezik i platformu, preuzmite i instalirajte ih na
+      sve računare u Vašoj učionici. Možda želite koristiti USB uređaj da na njega
+      jednom preuzmete i instalirate na sve računare. Bilješka: učenici se neće moći
+      prijaviti na Code Studio, sačuvati napredak, ili isprintati certifikate. Nastavnici
+      mogu unaprijed isprintati certifikate <a href="%{url}}">ovdje</a>.'
     minecraft_name: Minecraft Hour Of Code
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
@@ -1216,7 +1218,7 @@
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
-  return_course_overview: Go to unit overview
+  return_course_overview: Idite na pregled kursa
   view_all_units: Vidi sve jedinice
   pd:
     survey:

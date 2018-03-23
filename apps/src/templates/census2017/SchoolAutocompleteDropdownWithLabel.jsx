@@ -30,7 +30,11 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
     fieldName: PropTypes.string,
     singleLineLayout: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
+    schoolDropdownOption: PropTypes.object,
+    schoolFilter: PropTypes.func,
   };
+
+  schoolDropdown = undefined;
 
   static defaultProps = {
     showRequiredIndicator: true,
@@ -43,17 +47,22 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
   handleSchoolNotFoundCheckbox(event) {
     var checkbox = event.target;
     if (checkbox.checked) {
-      this.props.setField("nces", {value: "-1"});
+      this.props.setField("nces", this.schoolDropdown.constructSchoolNotFoundOption());
     } else {
-      this.props.setField("nces", {value: ""});
+      this.props.setField("nces", this.props.schoolDropdownOption);
     }
   }
+
+  bindDropdown = (dropdown) => {
+    this.schoolDropdown=dropdown;
+  };
 
   render() {
     const {showRequiredIndicator, singleLineLayout} = this.props;
     const questionStyle = {...styles.question, ...(singleLineLayout && singleLineLayoutStyles)};
     const containerStyle = {...(singleLineLayout && singleLineContainerStyles)};
-    const showError = this.props.showErrorMsg && !this.props.value;
+    const showError = this.props.showErrorMsg && !this.props.value && !this.props.schoolDropdownOption;
+    const schoolNotFound = !!((this.props.value === "-1") || (this.props.schoolDropdownOption && this.props.schoolDropdownOption.value === "-1"));
     const errorDiv = (
       <div style={styles.errors}>
         {i18n.censusRequiredSelect()}
@@ -71,12 +80,15 @@ export default class SchoolAutocompleteDropdownWithLabel extends Component {
             {!singleLineLayout && showError && errorDiv}
           </div>
           <SchoolAutocompleteDropdown
+            ref={this.bindDropdown}
             value={this.props.value}
             fieldName={this.props.fieldName}
             onChange={this.sendToParent}
+            schoolDropdownOption={this.props.schoolDropdownOption}
+            schoolFilter={this.props.schoolFilter}
           />
           <label>
-            <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={this.props.value === "-1"}/>
+            <input id="schoolNotFoundCheckbox" type="checkbox" onChange={this.handleSchoolNotFoundCheckbox.bind(this)} checked={schoolNotFound}/>
             <span style={styles.checkboxOption}>
               {i18n.schoolNotFoundCheckboxLabel()}
             </span>

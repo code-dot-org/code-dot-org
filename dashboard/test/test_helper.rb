@@ -1,3 +1,10 @@
+require 'test_reporter'
+
+# This is a workaround for https://github.com/kern/minitest-reporters/issues/230
+Minitest.load_plugins
+Minitest.extensions.delete('rails')
+Minitest.extensions.unshift('rails')
+
 if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
@@ -8,7 +15,6 @@ if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when runni
   end
 end
 
-require 'test_reporter'
 reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
@@ -24,7 +30,7 @@ ENV["RACK_ENV"] = "test"
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-CDO.rack_env = "test" if defined? CDO
+CDO.rack_env = :test if defined? CDO
 Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)

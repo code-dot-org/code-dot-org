@@ -298,34 +298,34 @@
           Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak
           antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau
           karakter game) yang menyentuh.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
       courseB_unplugged_MRF:
         title: Kegiatan tanpa komputer
-        desc: In this lesson, you will 'program' your friends!
+        desc: Dalam perjalanan ini, anda akan 'program' teman-teman anda!
       courseB_unplugged_loopyMRF:
         title: Kegiatan tanpa komputer
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Seperti di "Teman Robot Saya", anda akan"memprogram" teman-teman anda,
+          tapi kali ini dengan loop!
       courseC_Unplugged_ScreenOutTheMean:
         title: Kegiatan tanpa komputer
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang
+          sedang online.
       courseD_unplugged_digitalCitizenship:
         title: Kegiatan tanpa komputer
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Hari ini anda akan belajar apa artinya menjadi seorang Warga negara
+          Digital.
       courseE_unplugged_privateInformation:
-        title: Kegiatan tanpa komputer
-        desc: Today you will learn the difference between private and personal information!
+        title: 'Pendidikan Akal Sehat: Privasi dan Informasi Pribadi '
+        desc: Hari ini anda akan belajar perbedaan antara privasi dan informasi pribadi!
       courseF_unplugged_powerOfWords:
         title: Kegiatan tanpa komputer
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Hari ini anda akan belajar tentang apa yang harus dilakukan jika seseorang
+          sedang online.
       deeper learning description:
         title: ''
-        desc: 'translation missing: en-US.data.unplugged.desc'
+        desc: 'terjemahan hilang: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
         desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan
@@ -446,7 +446,7 @@
           ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan
           kode ke dalam fungsi adalah sebuah praktik yang berguna.  '
       swipeRightPassThrough:
-        title: Recruitment Scenarios Session
+        title: Sesi Skenario Perekrutan
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -459,7 +459,7 @@
           \r
           When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
       swipeRightPassThrough-test123:
-        title: Recruitment Scenarios Session
+        title: Sesi Skenario Perekrutan
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -480,3 +480,42 @@
           1. started with an `unplugged` level. populated with info. hit save and publish.\r
           2. “destroyed” the level\r
           3. made a `markdown` level with the same content and same name. checked to box to encrypt it. hit save and plush
+      courseB_unplugged_MRF_2018:
+        title: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.courseB_unplugged_MRF_2018.desc'
+      BuildingAFoundation_2018:
+        title: ''
+        desc: ''
+      courseB_unplugged_loopyMRF_2018:
+        title: ''
+        desc: ''
+      DiceRace_2018:
+        title: ''
+        desc: ''
+      courseE_unplugged_privateInformation_2018:
+        title: ''
+        desc: ''
+      SongwritingParameters_2018:
+        title: ''
+        desc: ''
+      Internet_2018:
+        title: ''
+        desc: ''
+      Crowdsourcing_2018:
+        title: ''
+        desc: ''
+      TangramAlgorithms_2018:
+        title: ''
+        desc: ''
+      courseF_unplugged_powerOfWords_2018:
+        title: ''
+        desc: ''
+      EnvelopeVariables_2018:
+        title: ''
+        desc: ''
+      ForLoopFun_2018:
+        title: ''
+        desc: ''
+      SongwritingWithParameters_2018:
+        title: ''
+        desc: ''

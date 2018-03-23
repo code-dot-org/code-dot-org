@@ -69,7 +69,6 @@ import {
 } from './redux/instructions';
 import { addCallouts } from '@cdo/apps/code-studio/callouts';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 var copyrightStrings;
 
@@ -203,8 +202,6 @@ StudioApp.prototype.configure = function (options) {
   this.scratch = options.level && options.level.scratch;
   this.usingBlockly_ = !this.editCode && !this.scratch;
 
-  // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
-  // or (even better) inject an appropriate editor-adaptor.
   if (options.isEditorless) {
     this.editCode = false;
     this.usingBlockly_ = false;
@@ -270,35 +267,6 @@ StudioApp.prototype.init = function (config) {
   this.setConfigValues_(config);
 
   this.configureDom(config);
-
-  //Only log a page load when there are videos present
-  if (config.level.levelVideos && config.level.levelVideos.length > 0 && (config.app === 'applab' || config.app === 'gamelab')) {
-    if (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab')) {
-      firehoseClient.putRecord(
-        'analysis-events',
-        {
-          study: 'instructions-resources-tab',
-          study_group: 'resources-tab',
-          event: 'resources-tab-load',
-          script_id: config.scriptId,
-          level_id: config.serverLevelId,
-          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
-        }
-      );
-    } else {
-      firehoseClient.putRecord(
-        'analysis-events',
-        {
-          study: 'instructions-resources-tab',
-          study_group: 'under-app',
-          event: 'under-app-load',
-          script_id: config.scriptId,
-          level_id: config.serverLevelId,
-          data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
-        }
-      );
-    }
-  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -691,11 +659,11 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
-    // TODO (bbuchanan): This getValue() call is a workaround for a Droplet bug,
+    // This getValue() call is a workaround for a Droplet bug,
     // See https://github.com/droplet-editor/droplet/issues/137
     // Calling getValue() updates the cached ace editor value, which can be
     // out-of-date in droplet and cause an incorrect early-out.
-    // Remove this line once that bug is fixed and our Droplet lib is updated.
+    // Could remove this line once that bug is fixed and Droplet is updated.
     this.editor.getValue();
     this.editor.setValue(resetValue);
 
@@ -851,7 +819,6 @@ StudioApp.prototype.assetUrl_ = function (path) {
  *   to be played.
  */
 StudioApp.prototype.reset = function (shouldPlayOpeningAnimation) {
-  // TODO (bbuchanan): Look for comon reset logic we can pull here
   // Override in app subclass
 };
 
@@ -1350,12 +1317,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
 
-  // We don't get the benefits of our responsive styling, so set height
-  // explicitly
-  if (!utils.browserSupportsCssMedia()) {
-    visualization.style.height = newVizHeightString;
-    visualization.style.width = newVizWidthString;
-  }
   var scale = (newVizWidth / this.nativeVizWidth);
   getStore().dispatch(setVisualizationScale(scale));
 
@@ -1457,6 +1418,7 @@ StudioApp.prototype.displayFeedback = function (options) {
         code: generatedCodeProperties.code,
       };
       store.dispatch(setFeedbackData({
+        isChallenge: this.config.isChallengeLevel,
         isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
         blocksUsed: this.feedback_.getNumCountableBlocks(),
         displayFunometer: response && response.puzzle_ratings_enabled,
@@ -1469,6 +1431,9 @@ StudioApp.prototype.displayFeedback = function (options) {
         this.onFeedback(options);
         return;
       }
+    } else {
+      console.warn('Unexpected feedback props:');
+      console.warn(otherOptions);
     }
   }
   options.onContinue = this.onContinue;
@@ -1853,28 +1818,10 @@ StudioApp.prototype.configureDom = function (config) {
   var referenceArea = document.getElementById('reference_area');
   // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
   // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
-  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed && (experiments.isEnabled('resources_tab') || experiments.isEnabled('resourcesTab'));
+
+  const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed;
   if (!referenceAreaInTopInstructions && referenceArea) {
     belowViz.appendChild(referenceArea);
-    // TODO (epeach) - remove after resources tab A/B testing
-    // Temporarily attach an event listener to log clicks
-    // Logs the type of app and the ids of the puzzle
-    var videoThumbnail = document.getElementsByClassName('video_thumbnail');
-    if (videoThumbnail[0] && (config.app === 'gamelab' || config.app === 'applab')) {
-      videoThumbnail[0].addEventListener('click', () => {
-        firehoseClient.putRecord(
-          'analysis-events',
-          {
-            study: 'instructions-resources-tab',
-            study_group: 'under-app',
-            event: 'under-app-video-click',
-            script_id: config.scriptId,
-            level_id: config.serverLevelId,
-            data_json: JSON.stringify({'AppType': config.app, 'ScriptName': config.scriptName, 'StagePosition': config.stagePosition, 'LevelPosition': config.levelPosition}),
-          }
-        );
-      });
-    }
   }
 
   var visualizationColumn = document.getElementById('visualizationColumn');

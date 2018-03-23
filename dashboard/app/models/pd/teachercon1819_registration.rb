@@ -8,11 +8,13 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  regional_partner_id :integer
+#  user_id             :integer
 #
 # Indexes
 #
 #  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
 #  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
+#  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
@@ -23,6 +25,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
   belongs_to :regional_partner, class_name: 'RegionalPartner'
+  belongs_to :user
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
@@ -62,7 +65,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       address_state: get_all_states_with_dc.to_h.values,
       how_traveling: [
         'I will drive by myself',
-        'I will carpool with another TeacherCon attendee',
+        'I will carpool with another TeacherCon attendee (Please note who):',
         'Flying',
         'Amtrak or regional train service',
         'Public transit (e.g., city bus or light rail)',
@@ -129,7 +132,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       :need_hotel,
       :photo_release,
       :liability_waiver,
-      :agree_share_contact,
     ].freeze
   end
 
@@ -192,11 +194,28 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       ]
     end
 
+    if hash[:dietary_needs].try(:include?, 'Food Allergy')
+      requireds.concat [
+        :dietary_needs_details
+      ]
+    end
+
+    if pd_application
+      requireds.concat [
+        :agree_share_contact
+      ]
+    end
+
     return requireds
   end
 
   def accepted?
-    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+    accept_status ==
+      if pd_application.try(:application_type) == 'Teacher'
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+      else
+        YES
+      end
   end
 
   def waitlisted?
@@ -205,10 +224,18 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   end
 
   def declined?
-    accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+    if pd_application.try(:application_type) == 'Teacher'
+      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+    elsif pd_application.try(:application_type) == 'Facilitator'
+      accept_status == NO
+    end
   end
 
   def accept_status
-    sanitize_form_data_hash.try(:[], :teacher_accept_seat)
+    if pd_application.try(:application_type) == "Teacher"
+      sanitize_form_data_hash.try(:[], :teacher_accept_seat)
+    elsif pd_application.try(:application_type) == "Facilitator" || pd_application.nil?
+      sanitize_form_data_hash.try(:[], :able_to_attend)
+    end
   end
 end

@@ -5,6 +5,8 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd/unit6/"], ["teacherForum", "https://forum.code.org/c/csd6"], ["vocabulary", "https://curriculum.code.org/csd/unit6/vocab/"], ["standardMappings", "https://curriculum.code.org/csd/unit6/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd/unit6/code/"]]
 has_verified_resources true
+has_lesson_plan true
+project_widget_types ["applab"]
 script_announcements [{"notice"=>"Know a teacher interested in teaching computer science?", "details"=>"Applications for the 2018 middle and high school Professional Learning program are now open!  No computer science experience is necessary.", "link"=>"https://code.org/educate/professional-learning-2018", "type"=>"bullhorn"}, {"notice"=>"This Unit has been Updated!", "details"=>"In response to feedback from our pilot last year, we've recently published significant updates to this unit. To learn more about these updates, click the \"Learn more\" button.", "link"=>"http://forum.code.org/t/updated-unit-6-released/", "type"=>"information"}]
 
 stage 'Innovations in Computing_', flex_category: 'csd6_1'
@@ -85,7 +87,7 @@ bonus 'CSD U6 challenge motorcycle'
 
 stage 'Analog Input_', flex_category: 'csd6_1'
 named_level 'CSD U6L07 TFMD'
-named_level 'CSDU6 - sensors experiment'
+named_level 'CSD U6 sensor experiment embedded'
 named_level 'CSD Board Sensors Map'
 level 'CSD U6 analog sound', progression: 'Reading Sensors'
 level 'CSD U6 analog light', progression: 'Reading Sensors'
@@ -117,7 +119,19 @@ level 'CSD U6 tugowar setProperty', progression: 'Checking for a Winner'
 level 'CSD U6 tugowar buzzer', progression: 'Checking for a Winner'
 named_level 'CSD U6 tugowar final'
 
-stage 'Arrays and Color LEDs_', flex_category: 'csd6_2'
+stage 'Project: Make a Game__', flex_category: 'csd6_1'
+named_level 'CSD U6L09 TFMD'
+named_level 'CSD U6 tugowar demo'
+named_level 'CSD U6 game project stop'
+level 'CSD U6 game project screens', progression: 'Screen Design'
+level 'CSD U6 game project screen links', progression: 'Events'
+level 'CSD U6 game project board events', progression: 'Events'
+level 'CSD U6 game project functions define', progression: 'Functions'
+level 'CSD U6 game project functions call', progression: 'Functions'
+level 'CSD U6 game project finish', progression: 'Finishing Touches'
+assessment 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection'
+
+stage 'Arrays and Color LEDs__', flex_category: 'csd6_2'
 named_level 'CSD U6L10 TFMD'
 named_level 'CSD U6 arrays intro'
 level 'CSD U6 arrays select predict', progression: 'Introduction to Arrays'
@@ -135,18 +149,6 @@ level 'CSD U6 colorLeds intensity', progression: 'Color LEDs'
 level 'CSD U6 colorLeds light pattern', progression: 'Light Show'
 level 'CSD U6 light pattern off', progression: 'Light Show'
 bonus 'CSD U6 light pattern challenge', progression: 'Challenge Levels'
-
-stage 'Project: Make a Game_', flex_category: 'csd6_1'
-named_level 'CSD U6L09 TFMD'
-named_level 'CSD U6 tugowar demo'
-named_level 'CSD U6 game project stop'
-level 'CSD U6 game project screens', progression: 'Screen Design'
-level 'CSD U6 game project screen links', progression: 'Events'
-level 'CSD U6 game project board events', progression: 'Events'
-level 'CSD U6 game project functions define', progression: 'Functions'
-level 'CSD U6 game project functions call', progression: 'Functions'
-level 'CSD U6 game project finish', progression: 'Finishing Touches'
-assessment 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection'
 
 stage 'Making Music_', flex_category: 'csd6_2'
 named_level 'CSD U6L11 TFMD'

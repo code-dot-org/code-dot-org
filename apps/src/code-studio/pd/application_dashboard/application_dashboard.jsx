@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import applicationDashboardReducers, {
   setRegionalPartnerName,
+  setRegionalPartnerGroup,
   setRegionalPartners,
   setWorkshopAdminPermission,
   setLockApplicationPermission,
@@ -21,7 +22,9 @@ import {createHistory} from 'history';
 import Summary from './summary';
 import QuickView from './quick_view';
 import DetailView from './detail_view';
+import DetailViewRedirect from './detail_view_redirect';
 import CohortView from './cohort_view';
+import AdminEditView from './admin_edit_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
@@ -48,6 +51,7 @@ const paths = {
 export default class ApplicationDashboard extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string,
+    regionalPartnerGroup: PropTypes.number,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string
@@ -59,6 +63,10 @@ export default class ApplicationDashboard extends React.Component {
   componentWillMount() {
     if (this.props.regionalPartnerName) {
       store.dispatch(setRegionalPartnerName(this.props.regionalPartnerName));
+    }
+
+    if (this.props.regionalPartnerGroup) {
+      store.dispatch(setRegionalPartnerGroup(this.props.regionalPartnerGroup));
     }
 
     if (this.props.regionalPartners) {
@@ -110,6 +118,7 @@ export default class ApplicationDashboard extends React.Component {
                       component={QuickView}
                       applicationType={paths[path].name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   ),
                   (
@@ -120,10 +129,23 @@ export default class ApplicationDashboard extends React.Component {
                       component={CohortView}
                       applicationType={cohort_path_name}
                       viewType={paths[path].type}
+                      role={path}
                     />
                   )
                 ];
               }))
+            }
+            <Route
+              path=":applicationId"
+              breadcrumbs="Application"
+              component={DetailViewRedirect}
+            />
+            {this.props.isWorkshopAdmin &&
+            <Route
+              path=":applicationId/edit"
+              breadcrumbs="Application,Edit"
+              component={AdminEditView}
+            />
             }
           </Route>
         </Router>

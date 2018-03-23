@@ -2,6 +2,7 @@
 title: Regional Partner Virtual Playbook
 theme: responsive
 ---
+<meta name="robots" content="noindex">
 
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
 
@@ -16,6 +17,8 @@ theme: responsive
 
   <%= view :educate_box, item: {title_s: 'Community Building', description_t: "* Resources & Ideas<br> * Community Events for Teachers<br> * CS Fair for Students", url_s: CDO.code_org_url("/educate/regional-partner/playbook/community"), button_s: "Learn more"} %>
 
+  <%= view :educate_box, item: {title_s: 'Data', description_t: "* Resources & Ideas<br> * How to use the data dashboard", url_s: CDO.code_org_url("/educate/regional-partner/playbook/data"), button_s: "Learn more"} %>
+  
   <%= view :educate_box, item: {title_s: 'Facilitator Support', description_t: "* 1-Pager & Contract Exemplars <br> * Facilitator Recruitment Resources <br> * Facilitator Support Resources <br>  * Facilitator Payments", url_s: CDO.code_org_url("/educate/regional-partner/playbook/facilitator-support"), button_s: "Learn more"} %>
 
   <%= view :educate_box, item: {title_s: 'Fundraising Resources', description_t: "* Organization Sustainability <br> * Fundraising Playbook", url_s: CDO.code_org_url("/educate/regional-partner/playbook/funding"), button_s: "Learn more"} %>

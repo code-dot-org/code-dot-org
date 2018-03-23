@@ -8,7 +8,7 @@
 
 - if @registration.accepted?
   %p
-    We look forward to meeting you this summer! You will receive more
+    We look forward to meeting with you this summer! You will receive more
     information about travel approximately six weeks before TeacherCon. In the
     meantime, please visit
     - info_link = "code.org/educate/teachercon/#{@registration.pd_application.workshop.location_city.downcase}"
@@ -36,6 +36,10 @@
   = link_to("teacher@code.org", "mailto:teacher@code.org")
   with any questions.
 
+%p
+  Thank you,
+  %br
+  Sarah
 %p
   Sarah Fairweather
   %br

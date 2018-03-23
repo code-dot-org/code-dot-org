@@ -219,6 +219,7 @@
   "iceAge": "Epoca de gheata!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "actor",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "punct de scor",
   "isSet": "este setat",

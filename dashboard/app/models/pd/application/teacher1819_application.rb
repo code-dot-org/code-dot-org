@@ -494,7 +494,7 @@ module Pd::Application
     end
 
     def principal_approval_url
-      pd_application_principal_approval_url(application_guid)
+      pd_application_principal_approval_url(application_guid) if application_guid
     end
 
     # @override
@@ -506,10 +506,16 @@ module Pd::Application
       response_scores = response_scores_hash
       scored_questions =
         if course == 'csd'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSD
+          CRITERIA_SCORE_QUESTIONS_CSD.dup
         elsif course == 'csp'
-          Teacher1819ApplicationConstants::CRITERIA_SCORE_QUESTIONS_CSP
+          CRITERIA_SCORE_QUESTIONS_CSP.dup
         end
+
+      if response_scores[:able_to_attend_single] && !response_scores[:able_to_attend_multiple]
+        scored_questions.delete(:able_to_attend_multiple)
+      elsif response_scores[:able_to_attend_multiple] && !response_scores[:able_to_attend_single]
+        scored_questions.delete(:able_to_attend_single)
+      end
 
       responses = scored_questions.map do |key|
         response_scores[key]
@@ -530,22 +536,6 @@ module Pd::Application
       sanitize_form_data_hash[:principal_approval] || ''
     end
 
-    def date_accepted
-      accepted_at.try(:strftime, '%b %e')
-    end
-
-    def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
-    end
-
-    def registered_workshop
-      if pd_workshop_id
-        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
-      else
-        ''
-      end
-    end
-
     # Called once after the application is submitted, and the principal approval is done
     # Automatically scores the application based on given responses for this and the
     # principal approval application. It is idempotent, and will not override existing
@@ -559,7 +549,7 @@ module Pd::Application
       }
 
       if responses[:able_to_attend_single]
-        scores[:able_to_attend_single] = yes_no_response_to_yes_no_score(responses[:able_to_attend_single])
+        scores[:able_to_attend_single] = able_attend_single_to_yes_no_score(responses[:able_to_attend_single])
       elsif responses[:able_to_attend_multiple]
         scores[:able_to_attend_multiple] = able_attend_multiple_to_yes_no_score(responses[:able_to_attend_multiple])
       end
@@ -597,12 +587,13 @@ module Pd::Application
     end
 
     # @override
-    def self.csv_header(course)
+    def self.csv_header(course, user)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
           'Principal Approval',
+          'Principal Approval Form',
           'Meets Criteria',
           'Total Score',
           'Regional Partner',
@@ -613,9 +604,11 @@ module Pd::Application
           'School City',
           'School State',
           'School Zip Code',
+          'Date Submitted',
           'Notes',
           'Status'
         )
+        columns.push('Locked') if can_see_locked_status?(user)
         csv << columns
       end
     end
@@ -629,12 +622,13 @@ module Pd::Application
     end
 
     # @override
-    def to_csv_row
+    def to_csv_row(user)
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
           principal_approval,
+          principal_approval_url,
           meets_criteria,
           total_score,
           regional_partner_name,
@@ -645,9 +639,11 @@ module Pd::Application
           school_city,
           school_state,
           school_zip_code,
+          created_at.to_date.iso8601,
           notes,
           status
         )
+        row.push locked? if self.class.can_see_locked_status?(user)
         csv << row
       end
     end
@@ -661,8 +657,8 @@ module Pd::Application
           district_name,
           school_name,
           user.email,
-          assigned_workshop,
-          registered_workshop
+          workshop_date_and_location,
+          registered_workshop? ? 'Yes' : 'No'
         ]
       end
     end
@@ -756,15 +752,17 @@ module Pd::Application
 
     def get_first_selected_workshop
       hash = sanitize_form_data_hash
+      return nil if hash[:teachercon]
+
       workshop_ids = hash[:regional_partner_workshop_ids]
       return nil unless workshop_ids.try(:any?)
 
-      return Pd::Workshop.find(workshop_ids.first) if workshop_ids.length == 1
+      return Pd::Workshop.find_by(id: workshop_ids.first) if workshop_ids.length == 1
 
       # able_to_attend_multiple responses are in the format:
       # "${friendly_date_range} in ${location} hosted by ${regionalPartnerName}"
       # Map back to actual workshops by reconstructing the friendly_date_range
-      workshops = Pd::Workshop.find(workshop_ids)
+      workshops = Pd::Workshop.where(id: workshop_ids)
       hash[:able_to_attend_multiple].each do |response|
         selected_workshop = workshops.find {|w| response.start_with?(w.friendly_date_range)}
         return selected_workshop if selected_workshop
@@ -772,6 +770,31 @@ module Pd::Application
 
       # No match? Return the first workshop
       workshops.first
+    end
+
+    # @override
+    def self.can_see_locked_status?(user)
+      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
+    end
+
+    # override
+    def self.prefetch_associated_models(applications)
+      super(applications)
+
+      # also prefetch schools
+      prefetch_schools applications.map(&:school_id).uniq.compact
+    end
+
+    def self.prefetch_schools(school_ids)
+      return if school_ids.empty?
+
+      School.includes(:school_district).where(id: school_ids).each do |school|
+        Rails.cache.write get_school_cache_key(school.id), school, expires_in: CACHE_TTL
+      end
+    end
+
+    def self.get_school_cache_key(school_id)
+      "Pd::Application::Teacher1819Application.school(#{school_id})"
     end
 
     protected
@@ -797,12 +820,23 @@ module Pd::Application
       end
     end
 
-    def school
-      school_id = sanitize_form_data_hash[:school]
-      if school_id == '-1'
-        nil
+    def able_attend_single_to_yes_no_score(response)
+      if response == TEXT_FIELDS[:able_to_attend_single]
+        YES
+      elsif response && !response.include?(TEXT_FIELDS[:unable_to_attend])
+        NO
       else
-        School.find(school_id)
+        nil
+      end
+    end
+
+    def school
+      school_id = self.school_id
+      return nil unless school_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_school_cache_key(school_id) do
+        School.includes(:school_district).find_by(id: school_id)
       end
     end
   end

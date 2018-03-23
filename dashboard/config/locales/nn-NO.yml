@@ -203,6 +203,7 @@
       email: E-postadresse
       submit: Send inn
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Det kan sjå ut som om du ikkje har ei gyldig epostadresse registrert
         hos oss. Send ein epost til support@code.org for å få ei 'gjenopprett passord'-lenke.
     change_form:

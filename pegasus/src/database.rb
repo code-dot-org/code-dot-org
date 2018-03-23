@@ -5,9 +5,23 @@ require 'json'
 require 'securerandom'
 
 class Tutorials
+  # The Tutorials pages used to source data from the tutorials and beyond_tutorials tables, which were imported from
+  # the GoogleDrive://Pegasus/Data/ HocTutorials and HocBeyondTutorials Google Sheets
+  # Those sheets have been ported to the "v3" Google Sheet format in the GoogleDrive://Pegasus/v3 folder
+  # and use datatype suffixes on the column names and have new table names to match the v3 convention:
+  #      cdo_tutorials and cdo_beyond_tutorials
+  # Prefix "cdo_" on the table name to use the new tables sourced from the new v3 Google Sheets
+  # and alias the database columns with names that have the datatype suffixes stripped off so that existing
+  # tutorial pages do not need to be modified to reference the new column names
   def initialize(table)
-    @table = table
-    @contents = DB[@table].all
+    @table = "cdo_#{table}".to_sym
+    # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
+    column_aliases = DB.schema(@table).map do |column|
+      db_column_name = column[0].to_s
+      column_alias = db_column_name.rindex('_').nil? ? db_column_name : db_column_name.rpartition('_')[0]
+      "#{db_column_name}___#{column_alias}".to_sym
+    end
+    @contents = DB[@table].select(*column_aliases).all
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.
@@ -18,7 +32,7 @@ class Tutorials
   end
 
   def launch_url_for(code, domain)
-    return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
+    return @contents.find {|row| row[:code] == code}[:url] if @table == :cdo_beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org', 'code.org')
     api_domain = api_domain.gsub('hourofcode.com', 'code.org')

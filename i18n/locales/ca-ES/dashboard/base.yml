@@ -59,7 +59,7 @@ ca:
   courses: 'cursos'
   courses_page:
     title_student: "Aprendre sobre Code Studio"
-    title_teacher: "Teach with Code Studio"
+    title_teacher: "Teach Computer Science"
   unplugged_activity: 'Activitat sense connexió'
   of: "de"
   more: "MÉS"
@@ -69,7 +69,7 @@ ca:
   try_k8intro: "O proveu el nostre curs d'introducció a la Informàtica per a ESO (15-25 hores)"
   k8intro: "Curs d'introducció a la informàtica per a ESO (15-25 hores)"
   already_started: "Ja has començat? Continua aquí >> "
-  demos: 'Admin: Totes les demos'
+  demos: "Admin: Totes les demos"
   continue: 'Continuar'
   prize: 'premi'
   more_info: 'Més informació'
@@ -171,6 +171,7 @@ ca:
       email: 'Correu electrònic'
       submit: 'Envia'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Canvia la contrasenya'
@@ -220,7 +221,7 @@ ca:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Notificació Code.org: ja no s''associa %{student_name} com el vostre alumne.'
+        subject: "Notificació Code.org: ja no s'associa %{student_name} com el vostre alumne."
   reports:
     error:
       access_denied: "No pots accedir a les estadístiques d'aquesta persona"
@@ -352,7 +353,7 @@ ca:
     current_password_hint: '(necessitem la teva contrasenya actual per a confirmar els canvis)'
     delete: 'Suprimir el vostre compte'
     delete_text: "Fent clic al botó de sota suprimirà el compte."
-    delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no s''esborrarant els comptes dels seus alumnes.'
+    delete_text_teacher_note: "Tingueu en compte: Si suprimiu el vostre compte no s'esborrarant els comptes dels seus alumnes."
     delete_confirm: 'Esteu segur que voleu suprimir el vostre compte?'
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
@@ -363,7 +364,7 @@ ca:
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -702,7 +703,7 @@ ca:
     sign_out: 'Si no vols donar la teva edat tens que <a href="%{url}"> tancar la sessió</a>.'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Condicions d'ús"
     privacy: "Política de Privacitat"
@@ -718,7 +719,7 @@ ca:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Desa"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    title: "Optional: Help us track our progress toward improving diversity in computer science"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -762,7 +763,7 @@ ca:
     delete: "Elimina"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link.'
+    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Tornar al curs"
@@ -865,8 +866,8 @@ ca:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

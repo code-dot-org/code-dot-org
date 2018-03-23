@@ -108,7 +108,7 @@ const OPTIONS = {
 
 export default storybook => {
   storybook
-    .storiesOf('FormComponent', module)
+    .storiesOf('FormComponents/FormComponent', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([{
       name: 'simple form with generated radio buttons',
@@ -163,7 +163,7 @@ export default storybook => {
     }]);
 
   storybook
-    .storiesOf('FormController', module)
+    .storiesOf('FormComponents/FormController', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([{
       name: 'simple multi-page form',

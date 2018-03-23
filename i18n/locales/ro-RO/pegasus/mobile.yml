@@ -9,7 +9,7 @@
   upgrade_ie_link: "Află mai mult"
   en: "Tehnologia computerului si programare"
   computer_science_edweek: "Săptămâna Educatiei in Tehnologia computerului si programare"
-  csedweek_dates: "8-14 Decembrie 2014"
+  csedweek_dates: "8-14 decembrie 2014"
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemăm toți profesorii şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planificați-vă Ora de cod</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Ești profesor de informatică ? Vezi alte resurse CSEdWeek</a>'
   n_have_learned_an_hoc: "<h1>Încearcă o</h1><h2>Ora de cod</h2><h3># servit</h3>"
@@ -25,14 +25,14 @@
   submit: "Trimite"
   twentyhours_heading: "Încearcă Cursul nostru de Introducere în Informatică"
   twentyhours_text: "Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor."
-  og_title: Fiecare copil merită o portunitate
+  og_title: 'Fiecare copil merită o portunitate'
   og_title_soon: "Ora de Cod este aproape"
   og_title_here: "The Hour of Code is here!"
   og_description: "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 45 de limbi vorbite."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Ora de Cod este aici"
   csedweek_og_description: "4-10 decembrie, 2017. Informatica este elementară pentru fiecare student."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Alătură-te <a href=\"http://hourofcode.com\"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>"
   hoc2014_students: "Elevi"
@@ -621,18 +621,12 @@
   dashboard_course_csp: "AP ® Principiile Informaticii"
   dashboard_course_csp_desc: "Code.org a proiectat un curs riguros, antrenant şi ușor abordabil, care explorează idei fundamentale de calcul."
   dashboard_landing_loading: "Se încarcă..."
-  dashboard_action_edit: "Editează"
-  dashboard_action_save: "Salvează"
-  dashboard_action_save_all: "Salvează tot"
   dashboard_action_cancel: "Revocare"
   dashboard_action_delete: "Șterge"
   dashboard_action_delete_yes: 'Da'
   dashboard_action_delete_no: 'Nu'
   dashboard_action_confirm: "Șterge?"
-  dashboard_action_remove: "Şterge"
-  dashboard_action_remove_confirm: "Șterge?"
   dashboard_action_done: "Gata"
-  dashboard_action_required: "necesar"
   dashboard_action_print_certificates: "Tipărește certificatele"
   dashboard_assessments_view: 'Vezi evaluarile in:'
   dashboard_assessments_none: "Cei mai mulţi profesori măsoara progresul elevilor lor folosind tab-ul \"Vezi progresul\". Dacă sunteţi interesat în a da elevilor evaluări suplimentare, găsiţi întrebări recomandate şi zone în planurile de lecţie. Acestea sunt realizate în afara code studio."
@@ -708,28 +702,15 @@
   dashboard_sections_assign_activity: "Atribuiţi un curs"
   dashboard_error_none_selected: "Nu ati selectat niciun student să se mute. Vă rugăm să selectaţi cel puţin un student."
   dashboard_error_other_section: "Dacă mutați elevii între propriile secţiuni, selectaţi secţiunea dvs. din meniul derulant. Doar selectaţi 'Altă Secţiune ' pentru a muta elevii la secțiuni diferite ale profesorilor."
-  dashboard_students_add_student: "Adăugare elev"
-  dashboard_students_add_students: "Adăugare mai mulți elevi"
   dashboard_students_add_multiple: 'Tastează sau adaugă cu "paste" numele elevilor tăi, câte unul pe linie:'
   dashboard_students_new_google_classroom_section: "Pentru a adăuga elevi, utilizaţi <a href='http://classroom.google.com' target='_blank'>Clasa Google</a> şi apoi faceţi clic pe butonul <b>Sincronizare elevi din Clasa Google</b> de mai sus."
   dashboard_students_new_section: "Ai creat o nouă secţiune! Acum, adaugă elevii tăi utilizând butoanele <b>Adăugare elev</b> şi <b>Adăugare mai mulți elevi</b> de mai sus."
-  dashboard_students_placeholder_name: "Numele elevului"
   dashboard_students_name: "Nume"
   dashboard_students_progress: "Progres"
-  dashboard_students_age: "Vârsta"
-  dashboard_students_gender: "Sex"
   dashboard_students_male: "De sex masculin"
   dashboard_students_female: "De sex feminin"
-  dashboard_students_secret: "Secret"
-  dashboard_students_password: "parolă"
-  dashboard_students_username: 'Nume de utilizator: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: "Niveluri finalizate"
   dashboard_students_total_lines: "Linii de cod"
-  dashboard_students_show_secret: "Arată secret"
-  dashboard_students_auto_generated: "Auto-generat"
-  dashboard_students_reset_secret: "Resetare secret"
-  dashboard_students_reset_password: "Resetare parolă"
   dashboard_students_share_section: "Distribuie elevilor tăi această pagină de logare din cadrul secțiunii:"
   dashboard_students_share_section_secondary: 'Alternativ, distribuie elevilor tăi această pagină de logare din cadrul secțiunii:'
   dashboard_students_print_info: "Tipărește carduri cu informațiile de logare ale elevilor tăi."
@@ -760,7 +741,10 @@
   dashboard_coursed: 'Curs D: '
   dashboard_coursee: 'Curs E: '
   dashboard_coursef: 'Curs F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați aceste lecţii offline</a> în clasa dvs."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "Prezentare generală Curriculum pentru clasele 1-5"
   dashboard_overview: "Prezentare generală"
@@ -778,12 +762,13 @@
   dashboard_curriculum_csins: 'Informatica în știință:'
   dashboard_curriculum_csp: 'AP ® Principiile Informaticii:'
   dashboard_curriculum_ecs: 'Explorând Informatica:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Clase"
   dashboard_grade_other: "Alte"
   dashboard_login_word: "Cuvânt"
   dashboard_login_picture: "Poză"
   dashboard_login_none: "E-mail"
-  dashboard_new_password: "parolă nouă"
   dashboard_stage: "Etapă"
   dashboard_puzzle: "Puzzle"
   dashboard_question: "Întrebare"
@@ -846,7 +831,7 @@
   carousel_heading_international: "Tutoriale în limba ta"
   carousel_heading_domestic: "Tutoriale disponibile în limba engleză"
   carousel_heading_beginners: "Tutoriale pentru începători"
-  carousel_heading_beyond_beginners: Tutoriale pentru începători
+  carousel_heading_beyond_beginners: 'Tutoriale pentru începători'
   carousel_heading_javascript: "Tutoriale care predau JavaScript"
   carousel_heading_beyond_javascript: "Tutoriale care predau JavaScript"
   carousel_heading_unplugged: "Nu ai un dispozitiv sau internet? Încearca tehnologia computerelor 'deconectate'"
@@ -948,11 +933,11 @@
   accelerated_name: "Curs intensiv"
   express_name: "Express Course"
   pre-express_name: Curs expres pentru preșcolari
-  cspunit1_name: '(vechi) Unitatea 1: Informaţii digitale'
-  cspunit2_name: '(vechi) Unitatea 2: Internet'
-  cspunit3_name: '(vechi) Unitate 3: programare'
-  cspunit4_name: '(vechi) Unitatea 4: date'
-  cspunit5_name: '(vechi) Unitatea 5: Exploreaza şi creaza PT'
+  cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
+  cspunit2_name: "(vechi) Unitatea 2: Internet"
+  cspunit3_name: "(vechi) Unitate 3: programare"
+  cspunit4_name: "(vechi) Unitatea 4: date"
+  cspunit5_name: "(vechi) Unitatea 5: Exploreaza şi creaza PT"
   cspunit6_name: 'Post-AP: Baze de date din aplicaţii'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -1001,6 +986,7 @@
   cspexams_category_name: "Principiile practicilor test CS"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratului Aplicației"
+  gamelab_name: "Laborator de jocuri"
   basketball_name: "Realizeaza un joc de baschet"
   sports_name: "Prorgramează propriul joc sportiv"
   applab_gradelevel: "Vârste 13 +"
@@ -1167,12 +1153,12 @@
   course2_shortdescription_congrats: "Pentru elevii cu aptitudini de bază de lectură, acest curs se bazează pe curs 1. Elevii vor crea programe pentru a rezolva probleme şi vor dezvolta jocuri interactive sau poveşti pe care le pot împărtăşi. Recomandat pentru clasele 2-5."
   course3_shortdescription_congrats: "Gata pentru urmatorul nivel? Elevii se vor infiltra mai adanc in subiectele programarii introduse în cursurile anterioare pentru a găsi soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs, elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva. Recomandat pentru clasele 4-5."
   course4_shortdescription_congrats: "Gata pentru urmatorul nivel? Elevii se vor infiltra mai adanc in subiectele programarii introduse în cursuri anterioare pentru a găsi soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs, elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva. Recomandat pentru clasele 4-8."
-  coursea_shortdescription_congrats: "[șir gol]"
-  courseb_shortdescription_congrats: "[șir gol]"
-  coursec_shortdescription_congrats: "[șir gol]"
-  coursed_shortdescription_congrats: "[șir gol]"
-  coursee_shortdescription_congrats: "[șir gol]"
-  coursef_shortdescription_congrats: "[șir gol]"
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   codeintl_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   thinkersmithspanish_longdescription: "Folosind un limbaj predefinit \"Vocabularul Robotului\", elevii vor descoperi; mijloace prin care care să se ghideze pentru a duce la bun sfârșit anumite acțiuni specifice, fără a le discuta în prealabil. Această segment învață copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară de debugging."

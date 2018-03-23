@@ -69,7 +69,7 @@ fi:
   try_k8intro: "Kokeile ala-asteen johdantoa tietojenkäsittelytieteeseen (15-25 tuntia)"
   k8intro: "Johdanto tietotekniikkaan -kurssi 5–14-vuotiaille (15–25 tuntia)"
   already_started: "Aloititko jo? Jatka tästä >> "
-  demos: 'Ylläpitäjä: Kaikki demot'
+  demos: "Ylläpitäjä: Kaikki demot"
   continue: 'Jatka'
   prize: 'palkinto'
   more_info: 'Lisätietoja'
@@ -171,6 +171,7 @@ fi:
       email: 'Sähköpostiosoite'
       submit: 'Jatka'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Näyttää siltä, että olet rekisteröitynyt virheellisellä sähköpostiosoitteella. Lähetä sähköpostia support@code.org saadaksesi salasanan palautuslinkin.'
     change_form:
       title: 'Salasanan vaihtaminen'
@@ -220,7 +221,7 @@ fi:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
-        subject: 'Code.org ilmoitus: oppilasta %{student_name} ei ole enää yhdistetty sinuun.'
+        subject: "Code.org ilmoitus: oppilasta %{student_name} ei ole enää yhdistetty sinuun."
   reports:
     error:
       access_denied: "Sinulla ei ole oikeutta katsella tämän henkilön tietoja"
@@ -352,7 +353,7 @@ fi:
     current_password_hint: '(anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)'
     delete: 'Poista tilisi'
     delete_text: "Klikkaamalla alla olevaa painiketta poistat tilisi."
-    delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi käyttäjätilejä.'
+    delete_text_teacher_note: "Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi käyttäjätilejä."
     delete_confirm: 'Oletko varma, että haluat poistaa käyttäjätilisi?'
     deleted_user: 'poistettu käyttäjä'
     no_password_because_oauth: 'Ei salasanaa koska kirjaudut kolmannelta osapuolelta.'
@@ -363,7 +364,7 @@ fi:
     create_personal_login_under_13_parent_email: 'Huoltajan sähköpostiosoite'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
     enter_new_login_info: 'Enter your new login information'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
@@ -702,7 +703,7 @@ fi:
     sign_out: 'Jos et halua kertoa ikääsi voit <a href="%{url}">kirjautua ulos</a>.'
   terms_interstitial:
     title: "Päivitetyt käyttöehdot ja Tietosuojakäytäntö"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
+    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Ehdot"
     privacy: "Yksityisyyskäytäntö"
@@ -718,7 +719,7 @@ fi:
     message_with_suggestion: "Tarkista seuraavat tiedot tai päivitä tarvittaessa."
     save: "Tallenna"
   race_interstitial:
-    title: 'Valinnainen: Auta meitä seuraamaan edistymistämme kohti monimuotoista tietojenkäsittelyä'
+    title: "Valinnainen: Auta meitä seuraamaan edistymistämme kohti monimuotoista tietojenkäsittelyä"
     message: "Please tell us your race (check all that apply)"
     races:
       - 
@@ -762,7 +763,7 @@ fi:
     delete: "Poista"
     import: "Tuo"
     share_link_import_bad_link_header: "Jakolinkkiä ei tunnistettu"
-    share_link_import_bad_link_body: 'Emme voineet tuoda tuota jakolinkkiä. Varmista, että käytät Minecraft: Agent -tehtävän linkkiä ja että olet kopioinut koko linkin.'
+    share_link_import_bad_link_body: "Emme voineet tuoda tuota jakolinkkiä. Varmista, että käytät Minecraft: Agent -tehtävän linkkiä ja että olet kopioinut koko linkin."
     share_link_import_error_header: "Jokin meni pieleen."
     share_link_import_error_body: "Jakolinkin tuomisessa tapahtui virhe. Yritä uudelleen."
     exit: "Takaisin kurssiin"

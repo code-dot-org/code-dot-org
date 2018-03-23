@@ -6,7 +6,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
-  PROJECT_TYPE_MAP,
+  FEATURED_PROJECT_TYPE_MAP,
   featuredProjectDataPropType,
   featuredProjectTableTypes
 } from './projectConstants';
@@ -68,13 +68,18 @@ export const styles = {
 };
 
 // Cell formatters.
-const thumbnailFormatter = function (thumbnailUrl) {
+const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
+  const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
-  return (<ImageWithStatus
-    src={thumbnailUrl}
-    width={THUMBNAIL_SIZE}
-    wrapperStyle={styles.thumbnailWrapper}
-          />);
+  return (
+    <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
+      <ImageWithStatus
+        src={thumbnailUrl}
+        width={THUMBNAIL_SIZE}
+        wrapperStyle={styles.thumbnailWrapper}
+      />
+    </a>
+  );
 };
 
 const nameFormatter = (projectName, {rowData}) => {
@@ -115,8 +120,11 @@ const actionsFormatterFeatured = (actions, {rowData}) => {
   );
 };
 
-const feature = (channel) => {
+const feature = (channel, publishedAt) => {
   var url = `/featured_projects/${channel}/feature`;
+  if (!publishedAt) {
+    alert(i18n.featureUnpublishedWarning());
+  }
   $.ajax({
     url: url,
     type:'PUT',
@@ -128,7 +136,7 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
-        onClick={() => feature(rowData.channel)}
+        onClick={() => feature(rowData.channel, rowData.publishedAt)}
       >
         {i18n.featureAgain()}
       </PopUpMenu.Item>
@@ -137,12 +145,16 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
 };
 
 const dateFormatter = (time) => {
-  const date = new Date(time);
-  return date.toLocaleDateString();
+  if (time) {
+    const date = new Date(time);
+    return date.toLocaleDateString();
+  } else {
+    return i18n.no();
+  }
 };
 
 const typeFormatter = (type) => {
-  return PROJECT_TYPE_MAP[type];
+  return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
 class FeaturedProjectsTable extends React.Component {

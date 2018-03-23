@@ -18,7 +18,7 @@ const styles = {
   textItem: {
     backgroundColor: color.teal,
     padding: 25,
-    height: 260,
+    minHeight: 260,
     boxSizing: 'border-box'
   },
   subheading: {
@@ -31,7 +31,7 @@ const styles = {
   },
   image: {
     width: 485,
-    height: 260
+    minHeight: 260
   },
   description: {
     paddingRight: 10,
@@ -171,7 +171,7 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/images/fill-540x289/teacher-apps.png')}
+        imageUrl={pegasus('/images/fill-540x289/teacher-apps-2.png')}
         subHeading={i18n.specialAnnouncementHeading()}
         description={i18n.specialAnnouncementDescription()}
         buttons={[

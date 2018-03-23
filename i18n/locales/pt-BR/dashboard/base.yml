@@ -69,7 +69,7 @@ pt-BR:
   try_k8intro: "Experimente nossa introdução do curso de Ciência da Computação (15-25 horas) para o Ensino Fundamental"
   k8intro: "Introdução ao Curso de Ciência da Computação (15-25 horas) para estudantes do ensino fundamental"
   already_started: "Já começou? Continue aqui >> "
-  demos: 'Administrar: Todas as Demonstrações'
+  demos: "Administrar: Todas as Demonstrações"
   continue: 'Continuar'
   prize: 'prêmio'
   more_info: 'Mais informações'
@@ -171,6 +171,7 @@ pt-BR:
       email: 'Endereço de email'
       submit: 'Enviar'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: 'Parece que você se inscreveu com um endereço de e-mail inválido. Envie um e-mail para support@code.org para receber um link de recuperação de senha.'
     change_form:
       title: 'Alterar senha'
@@ -220,7 +221,7 @@ pt-BR:
       provider_managed_section: "Esta turma é dirigida por outro provedor e não pode ser entrada. Por favor pergunte a seu professor via %{provider} e re-sincronize a turma."
     mail:
       student_disassociated:
-        subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
+        subject: "Notificação Code.org: %{student_name} não é mais seu aluno."
   reports:
     error:
       access_denied: "Você não tem acesso ao status dessa pessoa"
@@ -352,7 +353,7 @@ pt-BR:
     current_password_hint: '(precisamos de sua senha atual para confirmar suas alterações)'
     delete: 'Excluir sua conta'
     delete_text: "Clicando no botão abaixo, você vai excluir sua conta."
-    delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir as contas dos seus alunos.'
+    delete_text_teacher_note: "Lembre-se: a exclusão da sua conta não vai excluir as contas dos seus alunos."
     delete_confirm: 'Tem certeza de que deseja excluir sua conta?'
     deleted_user: 'usuário removido'
     no_password_because_oauth: 'Nenhuma senha porque você entrou com um provedor de terceiros.'
@@ -363,7 +364,7 @@ pt-BR:
     create_personal_login_under_13_parent_email: 'E-mail dos pais ou responsáveis'
     create_personal_login_info: 'Se você quiser continuar usando sua conta do Code.org mesmo após o fim do ano letivo, você pode criar seu próprio login abaixo.'
     create_personal_login_terms: "Ao criar uma conta individual, eu concordo com os <a href='%{terms_of_service_url}', target='_blank'>termos de serviço</a> do Code.org. Se tenho menos de 13 anos de idade, eu confirmo que tenho permissão dos meus pais ou responsável legal para usar os serviços do Code.org mesmo sem o acompanhamento de um professor."
-    create_personal_login_email_note: 'Nota: Os endereços de E-mail não são armazenados de forma que nos permita permita entrar em contato com os alunos. Os alunos nunca irão receber e-mails do Code.org exceto para recuperação de senha. Consulte nossa <a href=''%{privacy_policy_url}'', target=''_blank''>política de privacidade</a> para obter mais informações.'
+    create_personal_login_email_note: "Nota: Os endereços de E-mail não são armazenados de forma que nos permita permita entrar em contato com os alunos. Os alunos nunca irão receber e-mails do Code.org exceto para recuperação de senha. Consulte nossa <a href='%{privacy_policy_url}', target='_blank'>política de privacidade</a> para obter mais informações."
     enter_new_login_info: 'Digite sua nova conta individual'
     confirm_secret_words: 'Confirme que é você ao digitar suas palavras secretas atuais'
     enter_parent_email: "Insira o E-Mail dos pais ou responsável legal (para recuperação de senha)"
@@ -563,7 +564,7 @@ pt-BR:
       title: "Galeria"
       body: "Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários"
     gamelab:
-      title: "Game Lab"
+      title: "Laboratório de Jogos"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "A partir de 13 anos"
       cta: "Saiba como"
@@ -702,7 +703,7 @@ pt-BR:
     sign_out: 'Se você não quer informar sua idade, você pode <a href="%{url}">sair</a>.'
   terms_interstitial:
     title: "Termos de Serviço e Política de Privacidade atualizados"
-    intro_desc: 'Atualizamos nossos Termos de Serviço e Política de Privacidade, conforme exibido abaixo. As alterações estão em vigor desde 24 de agosto de 2016.  A principal mudança: nós <i>não armazenaremos mais endereços de e-mail de contas de alunos no Code Studio.</i> Essa é uma grande mudança para nós, e esperamos que essa decisão defina um novo padrão para a privacidade dos alunos na tecnologia da educação. Enviamos um resumo das demais alterações a você por e-mail.'
+    intro_desc: "Atualizamos nossos Termos de Serviço e Política de Privacidade, conforme exibido abaixo. As alterações estão em vigor desde 24 de agosto de 2016.  A principal mudança: nós <i>não armazenaremos mais endereços de e-mail de contas de alunos no Code Studio.</i> Essa é uma grande mudança para nós, e esperamos que essa decisão defina um novo padrão para a privacidade dos alunos na tecnologia da educação. Enviamos um resumo das demais alterações a você por e-mail."
     intro_instructions: "É preciso aceitar esses novos termos para alunos com menos de 13 anos na sua sala de aula para ter acesso completo a todos os recursos mais recentes do Code Studio. Ao cadastrar uma conta para um aluno menor de 13 anos, você terá que confirmar que sua escola tem o consentimento dos pais ou responsáveis para a coleta de informações pessoais do aluno para uso e benefício da escola, incluindo programas educativos, como o Code Studio."
     tos: "Termos de Serviço"
     privacy: "Política de Privacidade"
@@ -718,7 +719,7 @@ pt-BR:
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Salvar"
   race_interstitial:
-    title: 'Opcional: Ajude-nos a acompanhar nosso progresso no aumento de diversidade na ciência da computação'
+    title: "Opcional: Ajude-nos a acompanhar nosso progresso no aumento de diversidade na ciência da computação"
     message: "Diga-nos qual é sua raça (marque todas as opções aplicáveis)"
     races:
       - 
@@ -762,7 +763,7 @@ pt-BR:
     delete: "Excluir"
     import: "Importar"
     share_link_import_bad_link_header: "link de compartilhamento não reconhecido"
-    share_link_import_bad_link_body: 'Não foi possível importar o link de compartilhamento. Verifique se você está usando um link de um enigma do Minecraft: Agent e se copiou o link completo.'
+    share_link_import_bad_link_body: "Não foi possível importar o link de compartilhamento. Verifique se você está usando um link de um enigma do Minecraft: Agent e se copiou o link completo."
     share_link_import_error_header: "Ocorreu um erro."
     share_link_import_error_body: "Houve um problema ao importar o link de compartilhamento. Tente novamente."
     exit: "Voltar ao curso"
@@ -865,8 +866,8 @@ pt-BR:
     csd4_2: 'Chapter 2: App Prototyping'
     csd5_1: 'Chapter 1: Representing Information'
     csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
+    csd6_1: 'Chapter 1: Programming with Hardware'
+    csd6_2: 'Chapter 2: Building Physical Prototypes'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

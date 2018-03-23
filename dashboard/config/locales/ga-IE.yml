@@ -207,6 +207,7 @@
       email: Seoladh ríomhphoist
       submit: Seol
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Dealraíonn sé gur chláraigh tú le seoladh ríomhphoist neamhbhailí.
         Cuir ríomhphost chugainn ag support@code.org agus seolfaimid nasc chugat lenar
         féidir d'fhocal faire a athshocrú.

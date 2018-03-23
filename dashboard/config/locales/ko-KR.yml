@@ -187,6 +187,7 @@
       email: "이메일"
       submit: "제출하기"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "잘못된 이메일 주소로 가입을 한 것으로 보입니다. 암호복구 링크를 받기 위해서 support@code.org
         로 메일을 보내주시기 바릅니다."
     change_form:

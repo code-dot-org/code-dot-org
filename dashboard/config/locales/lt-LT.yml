@@ -201,6 +201,7 @@
       email: El. pašto adresas
       submit: Pateikti
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Panašu, kad užsiregistravote su neegzistuojančiu el. pašto adresu.
         Parašykite mums laišką adresu support@code.org, kad galėtumėte gauti slaptažodžio
         keitimo nuorodą.

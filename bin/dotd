@@ -305,6 +305,7 @@ def puts_after_dtp_tasks
     * Check https://code.org and http://studio.code.org after the deploy reaches all the frontends.
     * Verify that you're able to completely load a puzzle progression page (e.g., https://studio.code.org/hoc/1).
     * Watch Honeybadger and New Relic for new errors popping up after the deploy.
+    * Check Zendesk in the next couple of hours to see if there are new reports.
 
   EOS
 end

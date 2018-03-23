@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
+import CohortCalculator from './cohort_calculator';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
 import {
@@ -26,7 +27,8 @@ class CohortView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired
+      viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
+      role: PropTypes.string.isRequired
     })
   };
 
@@ -63,7 +65,7 @@ class CohortView extends React.Component {
       .done(data => {
         this.setState({
           loading: false,
-          applications: data
+          applications: data,
         });
       });
   }
@@ -72,7 +74,7 @@ class CohortView extends React.Component {
     this.load(selected);
   };
 
-  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.path.replace('_cohort', '')}`;
+  getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.role}`;
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
@@ -93,8 +95,22 @@ class CohortView extends React.Component {
         <Spinner/>
       );
     } else {
+      let accepted = 0;
+      let registered = 0;
+      if (this.state.applications !== null) {
+        accepted = this.state.applications.length;
+        registered = this.state.applications
+          .filter(app => app.registered_workshop === 'Yes')
+          .length;
+      }
       return (
         <div>
+          <CohortCalculator
+            role={this.props.route.role}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            accepted={accepted}
+            registered={registered}
+          />
           {this.props.isWorkshopAdmin &&
             <RegionalPartnerDropdown
               onChange={this.handleRegionalPartnerChange}

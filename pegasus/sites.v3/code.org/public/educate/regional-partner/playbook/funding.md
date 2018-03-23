@@ -2,10 +2,13 @@
 title: Fundraising Resources
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Topics
 
+
+- [Announcements](#announce)
 
 **Organization Sustainability:**<br/>
 
@@ -27,6 +30,22 @@ nav: regional_partner_playbook_nav
 - [Supports for Pursuing Federal and State Grants](#grants)
 
 
+# Announcements
+<a id="announce"></a>
+### Federal Funding - Consortia Development Survey
+In March, the US Department of Education will release details about the federal grant opportunities for CS we first heard about last fall. Code.org will not be applying for these federal funds and will not lead or directly sign onto any application. We do, however, want to explore bringing together some regional partners to apply together as a consortium. There are two potential funding targets at the US Dept. of Ed -- <a href="https://www2.ed.gov/programs/edseed/index.html" target=_blank>SEED (Supporting Effective Educator Development)</a> and <a href="https://innovation.ed.gov/what-we-do/innovation/education-innovation-and-research-eir/" target=_blank>EIR (Education, Innovation and Research)</a> grant programs run by the Department of Ed. These grants typically span 3-5 years with funding of $1.5M-$5M. The grants can fund CS professional development, as well as some program management and evaluation expenses. These grants also come with compliance requirements for recipients.
+
+Code.org’s role would be to help facilitate the formation of one or more consortium (3-6 partners each) and support the development of a grant proposal with a lead partner. Each consortium member’s role would be to execute on the Code.org programs and partner with the lead for the consortium on funding and compliance requests.
+
+We’ve developed a short survey to gauge your interest and readiness for joining a consortium and to gather some initial information. 
+
+The timeline is pretty tight on this because of the budget issues Washington has faced. When Department of Ed releases the grant notices in early March, there will only be 60 days to build a consortium and write the application. Once it is filed we’d expect to know the results by late summer, with funds available sometime in the fall, if successful. 
+
+**Please complete <a href="https://goo.gl/forms/iB4vzaGZFvus1tCQ2" target=_blank>this survey</a> by February 27th**. If you are interested, we’ll get in touch with you prior to the Summit to invite you to a 30-minute meeting for prospective partners on Wednesday, March 7 (at the March Summit). 
+
+[**Back to the top**](#top)
+<br/>
+________________
 # How does your organization become sustainable?
 
 This year most of your funding will come from Code.org.
@@ -89,7 +108,7 @@ ________________
 
 - **Diversify your revenue streams:** ex. Code.org if funded by approximately 40% corporations, 40% foundations/high net worth individuals, 20% online donations 
   * Having a mix of types of support creates more stable funding and reduces risk year over year 
-- **Program/mission focus:** Code.org best practice is lead with the ask with potential funders who have mutual goals, believe in your mission, and do not ask for you to stray away from your mission. Code.org does not pursue customized programs with funders, where the funder donates to create a specific program with the non-profit. This enables us to stay focused on achieving our mission at scale, maintain lean fundraising operations/staff, and ultimately create more impact. 
+- **Program/mission focus:** Code.org best practice is lead with the ask with potential funders who have mutual goals, believe in your mission, and do not ask for you to stray away from your mission. Code.org does not pursue customized programs with funders, where the funder donates to create a specific program with the nonprofit. This enables us to stay focused on achieving our mission at scale, maintain lean fundraising operations/staff, and ultimately create more impact. 
 - **General operating support vs. restricted funding:** Code.org best practice is to try to maintain as much general operating support to allow your organization to stay flexible to meet the needs of your program goals, and maintain low overhead and staff to manage grants and donors 
 - **Multi-Year Grants:** if possible, try to secure multi year grants to advance your mission. This will help you raise funds more efficiently and be able to better project your future income and cash flow. 
 

@@ -25,14 +25,14 @@
   submit: "送信"
   twentyhours_heading: "コンピュータサイエンスコースを紹介する"
   twentyhours_text: "初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。"
-  og_title: 全ての子供に機会を得る権利があります
+  og_title: '全ての子供に機会を得る権利があります'
   og_title_soon: "The Hour of Code is coming"
   og_title_here: "The Hour of Code is here!"
   og_description: "すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。"
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Hour of Code がやってくる"
   csedweek_og_description: "Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。"
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "<a href=\"http://hourofcode.com\">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14 日まで<br/>"
   hoc2014_students: "生徒の皆さん"
@@ -614,22 +614,16 @@
   dashboard_course_csins: "理科とコンピュータサイエンス"
   dashboard_course_csins_desc: "Code.org は Project GUTS と提携して、モデリングとシミュレーションというコンテキストからコンピュータサイエンスの概念の導入部分を提供しています。"
   dashboard_course_ecs: "コンピュータサイエンスを探究する"
-  dashboard_course_ecs_desc: Exploring Computer Science は、人とコンピューターのインタラクション、問題解決、ウェブデザイン、プログラミング、コンピューティングとデータ分析、ロボットの６ユニットからなる1年プログラムです。
+  dashboard_course_ecs_desc: 'Exploring Computer Science は、人とコンピューターのインタラクション、問題解決、ウェブデザイン、プログラミング、コンピューティングとデータ分析、ロボットの６ユニットからなる1年プログラムです。'
   dashboard_course_csp: "AP® Computer Science Principles"
   dashboard_course_csp_desc: "Code.org では、コンピューティングの基礎をしっかりと学べる魅力的で親しみやすいコースを提供しています。"
   dashboard_landing_loading: "ロード中..."
-  dashboard_action_edit: "編集"
-  dashboard_action_save: "保存"
-  dashboard_action_save_all: "すべてを保存"
   dashboard_action_cancel: "キャンセル"
   dashboard_action_delete: "削除"
   dashboard_action_delete_yes: 'はい'
   dashboard_action_delete_no: 'いいえ'
   dashboard_action_confirm: "削除しますか？"
-  dashboard_action_remove: "削除"
-  dashboard_action_remove_confirm: "削除しますか？"
   dashboard_action_done: "完了"
-  dashboard_action_required: "必須"
   dashboard_action_print_certificates: "証明書を印刷する"
   dashboard_assessments_view: '評価を表示する:'
   dashboard_assessments_none: "多くの教師は、「View Progress（進捗を見る）」タブを使用して生徒の進捗状況を確認します。もし生徒に追加の評価を与えることに興味があるならば、レッスン計画の推奨される質問や計画などを見つける事が出来ます。これらは Code Studio の外で行われます。"
@@ -705,28 +699,15 @@
   dashboard_sections_assign_activity: "コースを割り当てる"
   dashboard_error_none_selected: "移動する生徒が選択されていません。少なくとも 1 人の生徒を選択してください。"
   dashboard_error_other_section: "あなたが管理するセクション間で生徒を移動する場合は、ドロップダウン リストからあなたのセクションを選択してください。生徒を別の教師のセクションに移動する場合のみ、「その他のセクション」を選択してください。"
-  dashboard_students_add_student: "生徒を追加"
-  dashboard_students_add_students: "複数の生徒の追加"
   dashboard_students_add_multiple: '１行について１人の生徒の名前をタイプまたはペーストします。'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "新しいセクションを作成しました！<b>生徒を追加</b>、<b>複数の生徒を追加</b>ボタンをつかって、生徒を追加してください。"
-  dashboard_students_placeholder_name: "生徒の名前"
   dashboard_students_name: "名前"
   dashboard_students_progress: "進行状況"
-  dashboard_students_age: "年齢"
-  dashboard_students_gender: "性別"
   dashboard_students_male: "男性"
   dashboard_students_female: "女性"
-  dashboard_students_secret: "秘密"
-  dashboard_students_password: "パスワード"
-  dashboard_students_username: 'ユーザー名: %{student_username}'
-  dashboard_students_email: 'Eメール: %{student_email}'
   dashboard_students_completed_levels: "完了したレベル"
   dashboard_students_total_lines: "コード行数"
-  dashboard_students_show_secret: "秘密の表示"
-  dashboard_students_auto_generated: "自動生成"
-  dashboard_students_reset_secret: "秘密のリセット"
-  dashboard_students_reset_password: "パスワードのリセット"
   dashboard_students_share_section: "このセクションのサインインページを生徒達と共有する："
   dashboard_students_share_section_secondary: 'または、生徒たちとセクションのサインイン ページを共有します:'
   dashboard_students_print_info: "学生用のログイン情報でカードを印刷する"
@@ -750,14 +731,17 @@
   dashboard_course1: 'コース1'
   dashboard_course2: 'コース2'
   dashboard_course3: 'コース3'
-  dashboard_course4: コース4： 
-  dashboard_coursea: コース A： 
-  dashboard_courseb: コース B： 
-  dashboard_coursec: コース C： 
-  dashboard_coursed: コース D： 
-  dashboard_coursee: コース E： 
-  dashboard_coursef: コース F： 
+  dashboard_course4: 'コース4： '
+  dashboard_coursea: 'コース A： '
+  dashboard_courseb: 'コース B： '
+  dashboard_coursec: 'コース C： '
+  dashboard_coursed: 'コース D： '
+  dashboard_coursee: 'コース E： '
+  dashboard_coursef: 'コース F： '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "コンピューターが無い場合は、 <a href='%{unplugged_url}'> コンピューター不要のレッスン</a> を教室で試してください。"
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "カリキュラム"
   dashboard_curriculum_overview: "K 5 カリキュラム概要"
   dashboard_overview: "概要"
@@ -775,12 +759,13 @@
   dashboard_curriculum_csins: '理科とコンピュータサイエンス:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: 'コンピュータサイエンスの世界を探検する:'
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "その他"
   dashboard_login_word: "単語"
   dashboard_login_picture: "画像"
   dashboard_login_none: "Eメール"
-  dashboard_new_password: "新規パスワード:"
   dashboard_stage: "ステージ"
   dashboard_puzzle: "パズル"
   dashboard_question: "質問"
@@ -843,7 +828,7 @@
   carousel_heading_international: "あなたの言語のチュートリアル"
   carousel_heading_domestic: "英語のチュートリアルもあります"
   carousel_heading_beginners: "初心者のためのチュートリアル"
-  carousel_heading_beyond_beginners: 初心者のためのチュートリアル
+  carousel_heading_beyond_beginners: '初心者のためのチュートリアル'
   carousel_heading_javascript: "JavaScriptのチュートリアル"
   carousel_heading_beyond_javascript: "JavaScript を教えるチュートリアル"
   carousel_heading_unplugged: "デバイスやインターネットがない？「アンプラグド（コンピュータを使わず学ぶ方法）」 のコンピューターサイエンスを試す"
@@ -870,7 +855,7 @@
   third_party_submission: "Want to submit a tutorial to be listed here? <a href=\"%{submission_url}\">See the criteria and submission form.</a>"
   participants: "参加者"
   teachers_notes: "先生向けの説明"
-  teachers_notes_hoc: 先生方：先生用の重要事項をお読みください
+  teachers_notes_hoc: '先生方：先生用の重要事項をお読みください'
   previous: "戻る"
   next: "次へ"
   older_systems: "古いシステム上で動作するチュートリアル"
@@ -945,11 +930,11 @@
   accelerated_name: "上級コース"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  cspunit1_name: '(old) Unit 1: デジタル情報'
-  cspunit2_name: '(old) Unit 2: インターネット'
-  cspunit3_name: '(old) Unit 3: プログラミング'
-  cspunit4_name: '(old) Unit 4: データ'
-  cspunit5_name: '(old) Unit 5: PT を探索し作成'
+  cspunit1_name: "(old) Unit 1: デジタル情報"
+  cspunit2_name: "(old) Unit 2: インターネット"
+  cspunit3_name: "(old) Unit 3: プログラミング"
+  cspunit4_name: "(old) Unit 4: データ"
+  cspunit5_name: "(old) Unit 5: PT を探索し作成"
   cspunit6_name: 'Post-AP: データベース'
   csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
@@ -998,6 +983,7 @@
   cspexams_category_name: "コンピューター・サイエンス原理実習テスト"
   research_studies_category_name: "Research Studies"
   applab_name: "アプリ ラボ"
+  gamelab_name: "ゲーム ラボ"
   basketball_name: "バスケット ボールのゲームを作る"
   sports_name: "Code your own sports game"
   applab_gradelevel: "13才以上"
@@ -1164,12 +1150,12 @@
   course2_shortdescription_congrats: "基本的な読書スキルを持つ生徒のため、このコースはコース 1になります。生徒はプログラムを作って問題を解決したり、インタラクティブなゲームや物語を開発して共有します。小学2年～5年生が対象です。"
   course3_shortdescription_congrats: "次のレベルの準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
   course4_shortdescription_congrats: "次に行く準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   codeintl_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   thinkersmithspanish_longdescription: "\"ロボット語\"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。"
@@ -1377,21 +1363,21 @@
   hopscotch_beyond_longdescription: "Hopscotch プログラミング言語を使っての iPad 用の独習教材です。生徒は iPad 用のアプリやゲームを作ることができます。生徒は個人でも友人と一緒にでも作業することができます(１台の iPad につき３人まで)。"
   pocketcode_beyond_longdescription: "Pocket Code を使ってスマートフォン用のゲームを作りましょう！スカイダイバーのスティーブが小包を配達するので、それを助けてあげましょう。友達やほかのユーザーと共有することもできます！"
   groklearning_beyond_longdescription: "プログラミングの経験がない人用の、Python というプログラミング言語を使った入門コースです。ユニークな入門用コンテンツと課題の組み合わせが用意されているので、Pyhthon とプログラミングについて理解できるようになります。私たちは、いろんな年代、いろんな背景をもつ生徒にこの教材を使ってきたので、あなたもきっとできると確信しています。"
-  hacketyhack_beyond_longdescription: Hackety Hack では、ゼロからプログラミングの基礎について学ぶことができます。未経験でも大丈夫です！Hackety Hack では Ruby というプログラミング言語について学びます。Ruby はデスクトップアプリからウェブサイトを含む、様々なプログラミングでつかわれています[注：デスクトップへのインストールが必要です]。
+  hacketyhack_beyond_longdescription: 'Hackety Hack では、ゼロからプログラミングの基礎について学ぶことができます。未経験でも大丈夫です！Hackety Hack では Ruby というプログラミング言語について学びます。Ruby はデスクトップアプリからウェブサイトを含む、様々なプログラミングでつかわれています[注：デスクトップへのインストールが必要です]。'
   robomind_beyond_longdescription: 'バーチャルロボットの制御を通して、生徒の皆さんはプログラミングの基本を学びます。このオンラインのコースは、プログラミングの実習をサポートするための簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます。 '
   makeschool_beyond_longdescription: "既に ObjectiveC を知ってますか？1時間で iPhone ゲームを作り方を学びましょう！コード、テスト、プレイといった全てのプロセスをブラウザ上で学ぶことができます。できたものは、Facebook に共有して友達に遊んでもらいましょう。iPhone での開発経験は必要ありません。変数、メソッド、オブジェクトがどのようなものなのか理解しなくてはなりません。"
   appinventor_beyond_longdescription: "楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Android携帯やタブレット用の簡単なアプリケーション3つの作り方を紹介しています。初心者もエキスパートも同じように、このHour of Codeでは、事前に何も知らなくてもあなた独自のアプリが作れるようになります。あなた独自のアプリを作って友達にシェアすることを想像してみてください！これらのアクティビティは生徒にも先生にも楽しいものとなっています"
   touchdevelop_beyond_longdescription: "TouchDevelop を使うと iPad, iPhone, Android, PC, Mac, Windows Phone で動くアプリを作ることができます。あなたのフォンやタブレットの上でも、タッチ対応のエディタを使って楽しく作業ができます。"
-  codehs_beyond_longdescription: 犬のカレルと一緒にプログラミングの基礎について学びましょう。楽しくてわかりやすいビジュアルな基礎コースで、犬に指示を出すのと同じような感覚でコンピューターのコマンドを入力します。このチュートリアルは、先生に主導してもらうのが理想的ですが、個人で学ぶこともできます [注：有料です]。
-  udemy_beyond_longdescription: コードを見たことがなくても、コードで生計を立てていたとしても、プロの先生による Udemy のコースがあります[注：有料です]。
-  lynda_beyond_longdescription: コーディングの方法を学習してウェブアプリを作りましょう。C や C++ でのオブジェクト指向の基礎から、Java の書き方を学びます。私たちの開発用チュートリアルでは、PHP や MySQL データベースを使ったモバイルアプリの作り方が学習できます。R という統計情報処理用の言語など色々なことが学べます [注：有料]。
+  codehs_beyond_longdescription: '犬のカレルと一緒にプログラミングの基礎について学びましょう。楽しくてわかりやすいビジュアルな基礎コースで、犬に指示を出すのと同じような感覚でコンピューターのコマンドを入力します。このチュートリアルは、先生に主導してもらうのが理想的ですが、個人で学ぶこともできます [注：有料です]。'
+  udemy_beyond_longdescription: 'コードを見たことがなくても、コードで生計を立てていたとしても、プロの先生による Udemy のコースがあります[注：有料です]。'
+  lynda_beyond_longdescription: 'コーディングの方法を学習してウェブアプリを作りましょう。C や C++ でのオブジェクト指向の基礎から、Java の書き方を学びます。私たちの開発用チュートリアルでは、PHP や MySQL データベースを使ったモバイルアプリの作り方が学習できます。R という統計情報処理用の言語など色々なことが学べます [注：有料]。'
   edx_beyond_longdescription: "CS50x はハーバード大学の入門用コースです。プログラミング経験の有無やプログラミング専攻に関わらず、プログラミングの芸術的側面やコンピューターサイエンスの知的な側面について学びます。抽象化、アルゴリズム、データ構造、カプセル化、リソース管理、セキュリティ、ソフトウェアエンジニアリング、ウェブ開発といったトピックがカバーされています。C, PHP, JavaScript, SQL, CSS, HTML という言語を使用します。CS50x はハーバード大学のキャンパスで２番目に人数が多いコースです。"
-  coursera_beyond_longdescription: Nick Parlante によるスタンフォードのコンピュータサイエンス入門コース（CS101）です (無料!)。CS101 では、未経験の方でもコンピューターサイエンスの本質的な考え方について学べます。短いコードを使って、実験したり遊んだりします。CS101 ではコンピューターとは、ハードウェアとは、ソフトウェアとは、インターネットとは、など今日のコンピューターの一般的な背景についても学びます。ウェブブラウザを使えれば十分で、特別な経験は不要です。
+  coursera_beyond_longdescription: 'Nick Parlante によるスタンフォードのコンピュータサイエンス入門コース（CS101）です (無料!)。CS101 では、未経験の方でもコンピューターサイエンスの本質的な考え方について学べます。短いコードを使って、実験したり遊んだりします。CS101 ではコンピューターとは、ハードウェアとは、ソフトウェアとは、インターネットとは、など今日のコンピューターの一般的な背景についても学びます。ウェブブラウザを使えれば十分で、特別な経験は不要です。'
   udacity_beyond_longdescription: "このコースでは、コンピューターサイエンスの基本的なコンセプトについて学ぶとともに、ウェブクローラーを作る過程を通してコンピュータープログラムを作成する方法を学びます。このコースでは事前の経験は必要ありません。初心者も歓迎です！コース終了時には、コンピューターサイエンスの基礎的概念を習得し、あなたの問題を解決をするための Python プログラムを書けるようになっているでしょう。このコースは、コンピューターの中程度レベルに進む前の準備段階となることを意図しています。"
   teachingtree_beyond_longdescription: "TeachingTree は誰でも教育用コンテンツを提供できるオープンなプラットフォームです。私たちのゴールは生徒が個々の概念を学ぶ上で適切なクリップを素早く見つけられるようにすることです。ビデオとそれに関連する概念を紐づけて、私たちのサイトに追加してください。"
   kodu_beyond_longdescription: "Kudo は PC や Xbox 用のゲームをつくるための視覚的なプログラミング言語です。Kudo はプログラミングと同時に、創造性、問題解決、物語の作成方法を教えるためにも利用できます。子供も大人も、デザインやプログラミングのスキルがなかったとしても、だれでも Kudo でゲームを作ることができます。PC 用の Kudo は無料でダウンロードできます。Xbox 用の Kudo は米国で利用可能で Xbox マーケットプレースのインディーズゲームで 5 ドルで購入することができます。"
   cargobot_beyond_longdescription: "Cargo-Bot はロボットに木箱を動かす方法を教えるパズルゲームです。簡単そうに聞こえますよね？恐怖の音楽と驚くほどきれいなグラフィックスからなる 36 個のすごく面白いパズルが用意されています。あなたの解き方を記録して、YouTube に共有してともだちに見せることもできます。"
-  kidsruby_beyond_longdescription: Ruby を使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生には Ruby プログラミングの勉強をしているといっておきましょう :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。
+  kidsruby_beyond_longdescription: 'Ruby を使って宿題をしたり、ゲームを作ったりして楽しみましょう。両親や先生には Ruby プログラミングの勉強をしているといっておきましょう :-)　無料でどのコンピューターでも動作します [注：インストールが必要です]。'
   w3schools_beyond_longdescription: "あなたのコンピューターでウェブサイトの作り方を学びましょう。サーバーの基本を1日以内に学びましょう。ウェブサイトにデータベースを追加する方法を学びましょう。"
   codeavengers_beyond_longdescription: "どうやってゲームやアプリ、ウェブサイトを作るか知ることができます。専門家が初心者のために難易度を設定しています。説明はわかりやすく、必要なときに使えるヘルプもあります。\nHTML、CSS、そして JavaScript のコースはコード・チャレンジと復習ゲームが含まれており、すべての年齢層へ楽しく効果的に学習できるようになっています。"
   mozilla_beyond_longdescription: "Thimble を使うと、ウェブページの作成と共有が驚くほど簡単になります。HTML と CSS をブラウザの中で編集し、その結果を簡単にプレビューすることができます。クリック一つで歓声したプロジェクトを共有できます。初心者にもエキスパートにも適しています。"

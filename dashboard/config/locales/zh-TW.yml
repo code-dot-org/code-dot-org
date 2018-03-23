@@ -177,6 +177,7 @@
       email: "電子信箱地址"
       submit: "提交"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "你註冊用的信箱似乎無效，請電郵 support@code.org 以取得密碼恢復的連結。"
     change_form:
       title: "更改您的密碼"

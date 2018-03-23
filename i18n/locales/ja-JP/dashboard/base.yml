@@ -69,7 +69,7 @@ ja:
   try_k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
   k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
   already_started: "すでに開始しましたか？ここで再開する >>"
-  demos: 管理者： 全部のデモ
+  demos: "管理者： 全部のデモ"
   continue: '次へ'
   prize: '受賞'
   more_info: 'もっと見る'
@@ -171,6 +171,7 @@ ja:
       email: 'Eメールアドレス'
       submit: '送信'
     reset_errors:
+      captcha_required: 'Please fill out the CAPTCHA to reset your password.'
       invalid_email: '無効なメール アドレスでサインアップしたようです。support@code.org にメールして、パスワードの回復リンクを受信してください。'
     change_form:
       title: 'パスワードを変更'
@@ -220,7 +221,7 @@ ja:
       provider_managed_section: "このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider} 経由で追加し、そのセクションを再同期するよう、先生に依頼してください。"
     mail:
       student_disassociated:
-        subject: 'あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません'
+        subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
   reports:
     error:
       access_denied: "統計情報へのアクセス権がありません"
@@ -229,7 +230,7 @@ ja:
     show: '表示'
     edit: '編集'
     edit_model: '%{model} を編集'
-    update: '更新のプログラム'
+    update: '更新'
     submit: '送信'
     destroy: '破壊'
     back: '戻る'
@@ -350,23 +351,23 @@ ja:
     email_resend_confirm: '確認手順の再送信'
     new_password_hint: "（変更したくない場合は空白のままにしてください）"
     current_password_hint: '(変更を確認するためにあなたの現在のパスワードが必要です)'
-    delete: 'アカウントを削除します。'
+    delete: 'アカウントを削除'
     delete_text: "下のボタンをクリックすると、あなたのアカウントが削除されます。"
-    delete_text_teacher_note: '注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。'
+    delete_text_teacher_note: "注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。"
     delete_confirm: 'このアカウントを削除しますか？'
     deleted_user: '削除されたユーザー'
     no_password_because_oauth: 'サード パーティ プロバイダーを使用してサインインしたため、パスワードはありません。'
     no_password_because_sponsored: 'あなたのパスワードの管理については、あなたの先生に聞いてください。'
     create_personal_login: '個人ログインを作成する'
-    create_personal_login_under_13_info: '学年の終了後も、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、以下より、あなた自身の個人のログインを作成してください。'
+    create_personal_login_under_13_info: 'クラスが終わったあとも、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、あなたの個人ログインを作ってください。'
     create_personal_login_under_13_username: "ユーザー名 (本名を使用しないこと)"
     create_personal_login_under_13_parent_email: '親/保護者Eメールアドレス'
-    create_personal_login_info: '学年の終了後も、Code.org アカウントを使用し続ける場合は、以下より、あなた自身の個人のログインを作成してください。'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: 'Enter your new login information'
+    create_personal_login_info: 'クラスが終わったあとも、Code.org アカウントをつかいつづける時は、あなたの個人ログインを作ってください。'
+    create_personal_login_terms: "個人ログインを作ることによって、Code.org <a href='%{terms_of_service_url}', target='_blank'>利用規約</a>によって拘束されることに同意します。13 歳未満の場合、私の親または保護者人の同意を得て Code.org サービスを使用することを確認します。"
+    create_personal_login_email_note: "注: 私たちが電子メール アドレスを使って学生に連絡することはありません。パスワード回復の場合を除き、Code.org からメールを受信することはありません。詳細は <a href='%{privacy_policy_url}', target='_blank'>プライバシーポリシー</a> を参照してください。"
+    enter_new_login_info: '新しいログイン情報の入力'
     confirm_secret_words: 'Confirm that it is you by entering your current secret words'
-    enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
+    enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
   user_level:
     completed: '完了'
     tried: '試してみました'
@@ -702,7 +703,7 @@ ja:
     sign_out: '年齢を公表しくない場合は、<a href="%{url}"> サインアウト</a> してください。'
   terms_interstitial:
     title: "最新の利用規約とプライバシー ポリシー"
-    intro_desc: '下記の通りサービス利用規約、およびプライバシー ポリシーを更新しました。変更は、2016 年 8 月 24 日現在有効です。 最大の変更: <i>コード スタジオには、生徒用アカウントのメール アドレスを保存しなくなります。</i>これは私たちにとって大きな決断であり、これが教育技術における学生プライバシーの新しい基準となることを期待します。他の変更点の要約は、電子メールでお送りしました。'
+    intro_desc: "下記の通りサービス利用規約、およびプライバシー ポリシーを更新しました。変更は、2016 年 8 月 24 日現在有効です。 最大の変更: <i>コード スタジオには、生徒用アカウントのメール アドレスを保存しなくなります。</i>これは私たちにとって大きな決断であり、これが教育技術における学生プライバシーの新しい基準となることを期待します。他の変更点の要約は、電子メールでお送りしました。"
     intro_instructions: "あなたのクラスの13 才以下の学生が、コード ・スタジオのすべての最新機能へフル アクセスするためには、新しい条項に同意する必要があります。 13才以下の学生アカウントを登録する場合、あなたの学校は、コード ・スタジオ等の教育プログラムを含む学校での使用と利用のため、学生の個人情報の収集に親の同意がなされていることが確認されます。"
     tos: "利用規約"
     privacy: "プライバシー ポリシー"
@@ -718,7 +719,7 @@ ja:
     message_with_suggestion: "次の情報が正しいことを確認し、必要に応じて更新してください。"
     save: "保存"
   race_interstitial:
-    title: 'オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください'
+    title: "オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください"
     message: "あなたの人種 (該当するものすべてチェック) を教えてください。"
     races:
       - 
@@ -762,7 +763,7 @@ ja:
     delete: "削除（さくじょ）"
     import: "インポート"
     share_link_import_bad_link_header: "共有リンクが認識されません"
-    share_link_import_bad_link_body: '共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。'
+    share_link_import_bad_link_body: "共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。"
     share_link_import_error_header: "問題が発生しました。"
     share_link_import_error_body: "共有リンクのインポート時に問題が発生しました。もう一度やり直してください。"
     exit: "コースに戻る"
@@ -856,17 +857,17 @@ ja:
     csf_f_1: 'Ramp Up to Course F (Optional)'
     csf_f_2: 'Course F Content'
     csd1_1: '第 1章: 問題解決プロセス'
-    csd1_2: 第 2 章コンピューターと問題解決
-    csd2_1: 第 1 章： Web コンテンツと HTML
-    csd2_2: 第 2 章：スタイルと CSS
+    csd1_2: '第 2 章コンピューターと問題解決'
+    csd2_1: '第 1 章： Web コンテンツと HTML'
+    csd2_2: '第 2 章：スタイルと CSS'
     csd3_1: '第 1 章: 画像とアニメーション'
     csd3_2: '第2章: ゲームを作る'
-    csd4_1: 第 1 章：ユーザーを中心にしたデザイン
-    csd4_2: 第 2 章：アプリのプロトタイピング
-    csd5_1: 第1章：情報を表現する
-    csd5_2: 第 2 章：データ問題を解決
-    csd6_1: 第 1 章：ハードウェア出力
-    csd6_2: 第 2 章：ハードウェア入力
+    csd4_1: '第 1 章：ユーザーを中心にしたデザイン'
+    csd4_2: '第 2 章：アプリのプロトタイピング'
+    csd5_1: '第1章：情報を表現する'
+    csd5_2: '第 2 章：データ問題を解決'
+    csd6_1: '第 1 章：ハードウェア出力'
+    csd6_2: '第 2 章：ハードウェア入力'
     csp1_1: 'Chapter 1: Representing and Transmitting Information'
     csp1_2: 'Chapter 2: Inventing the Internet'
     csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'

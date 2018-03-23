@@ -10,7 +10,7 @@ jobs:
   build:
     parallelism: 2
     docker:
-      - image: wjordan/code-dot-org:trusty
+      - image: wjordan/code-dot-org:ruby-2.5
         environment:
           RAILS_ENV: test
           RACK_ENV: test
@@ -55,6 +55,7 @@ jobs:
             sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
             sudo apt-get update
             sudo apt-get install -y libicu-dev enscript moreutils pdftk libmysqlclient-dev libsqlite3-dev
+            wget https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb && sudo dpkg -i tidy-5.4.0-64bit.deb
             sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
 
       # restore gems cache
@@ -101,13 +102,6 @@ jobs:
             skip_seed_all: true
             " >> locals.yml
             yarn -V
-
-      - run:
-          name: fix weird gem issue
-          command: |
-            bundle exec gem install rmagick
-            bundle update rmagick
-            sudo ldconfig /usr/local/lib
 
       - run:
           name: rake install

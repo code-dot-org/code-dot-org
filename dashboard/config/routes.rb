@@ -1,8 +1,8 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 module OPS
-  API = 'api' unless defined? API
-  DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
+  API = 'api'.freeze unless defined? API
+  DASHBOARDAPI = 'dashboardapi'.freeze unless defined? DASHBOARDAPI
 end
 
 Dashboard::Application.routes.draw do
@@ -73,7 +73,14 @@ Dashboard::Application.routes.draw do
   # Section API routes (JSON only)
   concern :section_api_routes do
     resources :sections, only: [:index, :show, :create, :destroy] do
-      resources :students, only: [:index], controller: 'sections_students'
+      resources :students, only: [:index, :update], controller: 'sections_students' do
+        collection do
+          post 'bulk_add'
+        end
+        member do
+          post 'remove'
+        end
+      end
       member do
         post 'join'
         post 'leave'
@@ -452,7 +459,7 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner', to: 'teachercon1819_registration#partner'
+    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 
@@ -552,7 +559,9 @@ Dashboard::Application.routes.draw do
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
       get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
-      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
+      get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
+      get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
+      get 'regional_partners/capacity', to: 'regional_partners#capacity'
 
       get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 

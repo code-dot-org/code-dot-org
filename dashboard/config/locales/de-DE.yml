@@ -158,7 +158,7 @@
     user_type_student: Schüler
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
-    error: An error occurred.
+    error: Ein Fehler ist aufgetreten.
   school_info:
     title: Schulinformationen (optional)
     school_country: Land der Schule
@@ -209,6 +209,7 @@
       email: E-Mail-Adresse
       submit: Absenden
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: Du scheinst dich mit einer ungültigen E-Mail-Adresse eingeloggt
         zu haben. Bitte emaile support@code.org um einen Link zur Wiederherstellung
         deines Passwortes zu erhalten.
@@ -230,7 +231,7 @@
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Willkommen bei Code.org!
   section:
     your_section:
       one: 'Dein Bereich:'
@@ -688,7 +689,7 @@
     autoplay_option: Autoplay Videos
     download: Video herunterladen
     show_notes: Show Notes
-    show_video: Show Video
+    show_video: Video anzeigen
   compatibility:
     upgrade:
       unsupported_message: Ihr Browser wird nicht unterstützt. Bitte aktualisieren

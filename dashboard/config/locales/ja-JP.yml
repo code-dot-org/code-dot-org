@@ -183,6 +183,7 @@
       email: Eメールアドレス
       submit: "送信"
     reset_errors:
+      captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: "無効なメール アドレスでサインアップしたようです。support@code.org にメールして、パスワードの回復リンクを受信してください。"
     change_form:
       title: "パスワードを変更"
@@ -242,7 +243,7 @@
     show: "表示"
     edit: "編集"
     edit_model: "%{model} を編集"
-    update: "更新のプログラム"
+    update: "更新"
     submit: "送信"
     destroy: "破壊"
     back: "戻る"
@@ -364,7 +365,7 @@
     email_resend_confirm: "確認手順の再送信"
     new_password_hint: "（変更したくない場合は空白のままにしてください）"
     current_password_hint: "(変更を確認するためにあなたの現在のパスワードが必要です)"
-    delete: "アカウントを削除します。"
+    delete: "アカウントを削除"
     delete_text: "下のボタンをクリックすると、あなたのアカウントが削除されます。"
     delete_text_teacher_note: "注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。"
     delete_confirm: "このアカウントを削除しますか？"
@@ -372,22 +373,19 @@
     no_password_because_oauth: "サード パーティ プロバイダーを使用してサインインしたため、パスワードはありません。"
     no_password_because_sponsored: "あなたのパスワードの管理については、あなたの先生に聞いてください。"
     create_personal_login: "個人ログインを作成する"
-    create_personal_login_under_13_info: "学年の終了後も、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、以下より、あなた自身の個人のログインを作成してください。"
+    create_personal_login_under_13_info: "クラスが終わったあとも、Code.org アカウントを使用し続ける場合は、親または保護者に手伝ってもらい、あなたの個人ログインを作ってください。"
     create_personal_login_under_13_username: "ユーザー名 (本名を使用しないこと)"
     create_personal_login_under_13_parent_email: "親/保護者Eメールアドレス"
-    create_personal_login_info: "学年の終了後も、Code.org アカウントを使用し続ける場合は、以下より、あなた自身の個人のログインを作成してください。"
-    create_personal_login_terms: By creating a personal login, I agree to be bound
-      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
-      service</a>. If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services even without a teacher.
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
-      that allows us to contact students. Students will never receive emails from
-      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
-      target=''_blank''>privacy policy</a> for more information.'
-    enter_new_login_info: Enter your new login information
+    create_personal_login_info: "クラスが終わったあとも、Code.org アカウントをつかいつづける時は、あなたの個人ログインを作ってください。"
+    create_personal_login_terms: "個人ログインを作ることによって、Code.org <a href='%{terms_of_service_url}',
+      target='_blank'>利用規約</a>によって拘束されることに同意します。13 歳未満の場合、私の親または保護者人の同意を得て Code.org
+      サービスを使用することを確認します。"
+    create_personal_login_email_note: "注: 私たちが電子メール アドレスを使って学生に連絡することはありません。パスワード回復の場合を除き、Code.org
+      からメールを受信することはありません。詳細は <a href='%{privacy_policy_url}', target='_blank'>プライバシーポリシー</a>
+      を参照してください。"
+    enter_new_login_info: "新しいログイン情報の入力"
     confirm_secret_words: Confirm that it is you by entering your current secret words
-    enter_parent_email: Enter your parent or guardian's email address (for password
-      recovery)
+    enter_parent_email: "あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。"
   user_level:
     completed: "完了"
     tried: "試してみました"

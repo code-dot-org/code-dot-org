@@ -641,6 +641,9 @@
         Use a Design Recipe form from your workbook or download a copy [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
       Alien Defender_markdown_instruction: "**Hugmynd að verkefni:** Búðu til Defender
         leik í Leikjasmiðjunni!"
+      Alien Defender_2018_markdown_instruction: |-
+        **Project Idea**: Make a defender
+        game in Play Lab!
       AllTheThings Applab - Turtle move with button_markdown_instruction: |-
         # Please
         sign in to test applab levels (By design, applab levels only work if signed
@@ -2108,16 +2111,16 @@
         can now play sounds, notes, and songs! With this new knowledge, you can even
         turn your board into a sound board.\r
         \r
-        In the toolbox you all of the buzzer
-        and led related blocks at your disposal. See what cool stuff you can come
-        up with!\r
+        In the toolbox you have all of
+        the buzzer and led-related blocks at your disposal. See what cool stuff you
+        can come up with!\r
         \r
         # Do This\r
         \r
-        * Use all of the button related board events
-        (up, down), to play a unique sound or song at each event.\r
-        * Are there any
-        other events you could use to play even more sounds/songs?
+        * Use all of the button related
+        board events (up, down), to play a unique sound or song at each event.\r
+        *
+        Are there any other events you could use to play even more sounds/songs?
       CSD - Predict - Array Length List Printing_markdown_instruction: |-
         # For Loop
         - Using List Length in For Loop\r
@@ -4370,6 +4373,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         Background Color\r
         \r
@@ -4383,12 +4387,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -4462,6 +4465,7 @@
         `blue` and `cursive` are the values for those properties.\r
         </details>\r
         </div>\r
+        \r
         #
         The Body Element\r
         \r
@@ -4757,12 +4761,11 @@
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
-        \r
         <details>\r
-        <summary>**What does the `body` selector
-        do?**</summary>\r
-        Because the content of the web page is all inside the `body`
-        tag, the body selector gives style rules for everything on the web page.\r
+        <summary>**What does the `body` selector do?**</summary>\r
+        Because
+        the content of the web page is all inside the `body` tag, the body selector
+        gives style rules for everything on the web page.\r
         </details>\r
         <details>\r
         <summary>**What
@@ -4794,6 +4797,7 @@
         - CSS float Property</a>\r
         </details>\r
         </div>\r
+        \r
         # Layout and Style\r
         \r
         *
@@ -6200,6 +6204,36 @@
         `keyDown` as input to the if statement to check when the space key is pressed.\r
         *
         Move the code that makes the gears rotate inside the `if`.
+      CSD U3 - conditionals - first conditional 2-2018_markdown_instruction: |-
+        <img
+        src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif"
+        style="width:200px;float:right">\r
+        # Visible\r
+        \r
+        Sometimes it's useful
+        to hide the image for a while and then show it again. You can do this using
+        the `visible` property. The visible property is a little different from other
+        properties you have seen in the past: It is a Boolean value, either `true`
+        (the sprite is visible) or `false` (the sprite is **not** visible). By default,
+        visible is set to `true`.\r
+        \r
+        # Do This\r
+        Make the balloon pop when it
+        hits the edge of the game area!\r
+        \r
+        * Add a conditional that checks to
+        see whether the balloon has hit the edge.\r
+        \t* Use a watcher on `balloon.scale`
+        to help you out.\r
+        * Create a pop sprite which uses the "pop" visual in
+        the animation tab.\r
+        * Use the `visible` property to keep the "pop" sprite
+        hidden at the beginning.\r
+        * Inside the `if` add two statements.\r
+        \t* One
+        that sets the `visible` property to hide the balloon sprite.\r
+            * One
+        that sets the `visible` property to show the pop sprite.
       CSD U3 - conditionals - first conditional 2_markdown_instruction: |-
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif"
         style="width:200px;float:right">\r
@@ -6935,7 +6969,7 @@
         * Go to the
         Animation tab and check out the multi-frame animations already added to your
         project. Choose one for each of your characters.\r
-      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |
+      CSD U3 AnimationsMulti introducing multiframe_markdown_instruction: |-
         # Using
         Multiframe Animations\r
         \r
@@ -6953,7 +6987,7 @@
         to your project. Choose one for each of your characters.\r
         * Remember you
         can use `setAnimation` to give your sprites animations you've created in
-        the Animation Tab.\r
+        the Animation Tab.
       CSD U3 AnimationsMulti mirror animation_markdown_instruction: |-
         # Editing Multiframe
         Animations\r
@@ -7252,6 +7286,21 @@
         _You might notice some new blocks in the Sprites
         drawer, experiment with them and see if you can incorporate them into your
         conditionals._
+      CSD U3 Conditionals Apple 2-2018_markdown_instruction: |-
+        # Changing Fruit\r
+        \r
+        Now
+        that we know how to use _if_ statements, you can do more than just check if
+        the apple has reached a scale of 2. You turn it into a pear once it happens.\r
+        \r
+        #
+        Do This\r
+        \r
+        Use a conditional in the draw loop to check whether `fruit.scale`
+        is greater than 2.  If it is, change the fruit's animation to "pear".\r
+        \r
+        _Challenge:
+        Can you also make the fruit stop growing once it turns into a pear?_
       CSD U3 Conditionals Apple 2_markdown_instruction: |
         # Grænkun\r
         \r
@@ -7259,6 +7308,20 @@
         \r
         _Áskorun:
         Getur þú látið eplið hætta að stækka eftir að það er orðið rautt?_\r
+      CSD U3 Conditionals Apple-2018_markdown_instruction: |-
+        # More Practice With
+        Booleans\r
+        \r
+        Let's use one more Boolean expression to check the condition
+        of a sprite.  You can use a `console.log` command to check whether its scale
+        is 2 yet.\r
+        \r
+        # Do This\r
+        \r
+        * Add a `console.log` statement.\r
+        * Add
+        a Boolean expression inside the `console.log` that checks whether the `apple.scale`
+        is greater than 2.
       CSD U3 Conditionals Apple_markdown_instruction: |-
         # Meiri æfing með Boole gildi\r
         \r
@@ -7934,6 +7997,10 @@
         if block to add an else.\r
         * Add commands to make the gears spin opposite
         of the direction that they do when the space bar is pressed.
+      CSD U3 Entertainment Sample 1 - unembed_markdown_instruction: |-
+        # Geimstökkull\r
+        \r
+        Ýttu á "Keyra" til að spila leikinn hér til vinstri.  Þú getur látið geimveruna stökkva með upp örinni og hreyft hana til vinstri og hægri með örvarlyklunum.   Þú skorar stig með því að safna stjörnum og ef þú skorar nógu hátt mun bakgrunnurinn breytast.
       CSD U3 Entertainment Sample 1_markdown_instruction: |-
         # Geimstökkull\r
         \r
@@ -8724,6 +8791,18 @@
         * Uppfærðu þá eiginleika með teljaramynstrinu\r
         \r
         _Ábending: Ef teljaramynstrið þitt er ekki að virka sem skyldi, bættu þá við vaka eða vökum (enska: watchers) til að hjálpa til við villuleit._
+      CSD U3 Plotting Shapes Shape Lab - unembed_markdown_instruction: |-
+        # Drawing
+        Shapes\r
+        \r
+        Explore using this tool that lets you draw different colored
+        shapes. \r
+        \r
+        Make sure you hit "Run" and try out turning on the grid
+        to help you place shapes precisely.\r
+        \r
+        ![](https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        PM.png)
       CSD U3 Plotting Shapes Shape Lab Open_markdown_instruction: |-
         # Að teikna form\r
         \r
@@ -8869,6 +8948,26 @@
         \r
         Can you generate random colors that are limited to a narrow
         range of colors, such as a random shade or purple, or a random shade of teal?
+      CSD U3 Random Debug Cloud-2018_markdown_instruction: |
+        <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Debug - Using 4 Parameters\r
+        \r
+        Now
+        that the grass is working, let's add a cloud to the sky. Unfortunately, it
+        looks a little funny right now.\r
+        \r
+        # Do This\r
+        \r
+        * Debug this program
+        to make the cloud wider than it is tall, like in the image.\r
+        * Hint: You'll
+        need to change two parameters. Which ones set your cloud's width and height?\r
+        \r
+        _Challenge:
+        The sun is not in the exact same place as in the picture.  Can you change
+        the sun's coordinates so that the picture matches completely?_\r
       CSD U3 Random Debug Cloud_markdown_instruction: |-
         <img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
         PM.png" style="float:right;height:150px">\r
@@ -8883,6 +8982,23 @@
         * Vísbending: Þú þarft að breyta tveimur stikum. Hvaða stikar stilla breidd og hæð skýsins?\r
         \r
         _Áskorun: Sólin er ekki á nákvæmlega sama stað og í myndinni. Getur þú breytt hnitum sólarinnar svo að myndirnar séu alveg eins?_
+      CSD U3 Random Debug Grass-2018_markdown_instruction: |-
+        <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Debug - Using 4 Parameters\r
+        \r
+        This
+        program uses the four parameter version of `rect()` and `ellipse()` to draw
+        a simple scene.\r
+        \r
+        # Do This\r
+        \r
+        * Debug this program and correct the
+        error so that the grass extends across the entire bottom.\r
+        * Hint: You only
+        have to change one number. Which parameter makes your rectangle (the grass)
+        wider?
       CSD U3 Random Debug Grass_markdown_instruction: |-
         <img src="https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45
         PM.png" style="float:right;height:150px">\r
@@ -8895,6 +9011,17 @@
         \r
         * Afslúsaðu þetta forrit og lagaðu villuna svo að grasið nái þvert yfir allan neðri hluta sviðsins.\r
         * Vísbending: Þú þarft aðeins að breyta einni tölu. Hvaða stiki gerir rétthyrninginn (grasið) breiðari?
+      CSD U3 Random Ellipse Behind-2018_markdown_instruction: |-
+        <img src="https://images.code.org/dd73760e7129225b1e9f53a542960b9a-image-1520402430622.59.19
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Do This\r
+        \r
+        * Write
+        code that makes an orange ellipse behind the green one.\r
+        * Don't worry
+        about the exact size as long as the green ellipse is entirely inside the orange
+        one.
       CSD U3 Random Ellipse Behind_markdown_instruction: |-
         <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
         PM.png" style="float:right;height:150px">\r
@@ -9074,6 +9201,27 @@
         \r
         *
         Notaðu `background()` til að setja svartan bakgrunn bak við græna hringinn.
+      CSD U3 Random rainbow snake-2018_markdown_instruction: |-
+        <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Rainbow Snake\r
+        \r
+        This
+        program draws a very rare breed of rainbow snake. To make the snake draw differently
+        every time you'll need to use random numbers.\r
+        \r
+        # Do This\r
+        \r
+        * Run
+        the program several times to see how the starter code works.\r
+        * Add at least
+        three new different colored circles to your rainbow snake.\r
+        * Use `randomNumber()`
+        to make the rest of the snake's body move up and down like the first three.\r
+        \r
+        *Challenge:
+        Can you make size of some of the circles random, too?*
       CSD U3 Random rainbow snake_markdown_instruction: |-
         <img src="https://images.code.org/d1e4780e483ffa510a27e91b2b1f1963-image-1491341267537.26.14
         PM.png" style="float:right;height:150px">\r
@@ -9091,6 +9239,16 @@
         \r
         *Áskorun:
         Getur þú látið stærð sumra hringanna líka stjórnast af handahófi?*
+      CSD U3 Random random ellipse-2018_markdown_instruction: |-
+        # Slembitölur\r
+        \r
+        `randomNumber()`
+        velur tölu af handahófi (slembitölu) úr tölum sem liggja á tilteknu talnabili. Þú getur notað þennan kubb í stað þess að skrifa ákveðna tölu.  Ef þú notar slembitölur til að teikna með, verða myndirnar mismunandi í hvert skipti sem forritið er keyrt.\r
+        \r
+        # Gerðu þetta\r
+        \r
+        * Keyrðu forritið nokkrum sinnum til að sjá hvernig það virkar.\r
+        * Breyttu tölunum í `randomNumber` kubbnum og keyrðu kóðann aftur til að sjá hvað breytist.
       CSD U3 Random random ellipse_markdown_instruction: |-
         # Slembitölur\r
         \r
@@ -9101,6 +9259,23 @@
         \r
         * Keyrðu forritið nokkrum sinnum til að sjá hvernig það virkar.\r
         * Breyttu tölunum í `randomNumber` kubbnum og keyrðu kóðann aftur til að sjá hvað breytist.
+      CSD U3 Random random ellipse2-2018_markdown_instruction: |-
+        <img src="https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Random Numbers\r
+        \r
+        Here's
+        the same sun from last time.  Right now only the x-coordinate is random, but
+        you can make the y-coordinate random, too.\r
+        \r
+        # Do This\r
+        \r
+        * Use `randomNumber()`
+        for the ellipse's Y parameter so the circle is drawn in a random Y position,
+        too.\r
+        * As long as your circle is appearing at random X and Y positions,
+        you can move on.
       CSD U3 Random random ellipse2_markdown_instruction: |-
         <img src="https://images.code.org/ff3be801c7e634d49584aac103df292a-image-1491334428729.33.18
         PM.png" style="float:right;height:150px">\r
@@ -9113,6 +9288,22 @@
         \r
         * Notaðu `randomNumber()`fyrir Y stika ellipsunnar svo að Y staður hringsins sé líka valinn af handahófi.\r
         * Ekki hætta fyrr en sólin birtist á mismunandi X og Y stöðum við hverja keyrslu
+      CSD U3 Scene Example-2018_markdown_instruction: |
+        # Sprite Scenes\r
+        \r
+        By
+        combining shapes, sprites, and text, you can create simple scenes, stories,
+        or comics. While this example is fairly simple, you can combine as many sprites
+        and shapes as you like to create scenes as complex or detailed as you like.\r
+        \r
+        ##
+        Sketch It Out\r
+        \r
+        Before moving on, take a second to sketch out a scene
+        that you'd like to make at the end of this lesson. Consider the simple shapes
+        that you've used in the past, sprites for your characters, and any text that
+        you'd like on the screen. Once you've sketched out an idea, you'll learn
+        about `text` and how to compose a scene.\r
       CSD U3 Scene Example_markdown_instruction: |
         # Kvikar á leiksviði\r
         \r
@@ -9838,6 +10029,12 @@
         so that it entirely covers the green rectangle.\r
         * When your program works
         correctly, it should draw the image to the right.
+      CSD U3 Sprites text debug-2018_markdown_instruction: |-
+        <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
+        style="float: right; width: 200px; margin-left: 20px;">\r
+        # Villuleit\r
+        \r
+        Þessi leikmynd hefur allan rétta kóðann en hann er ekki í réttri röð. Leikmyndin á að vera eins og myndin til hægri.  Getur þú breytt röð kubbanna svo að atriði leikmyndarinnar séu teiknuð í réttri röð?
       CSD U3 Sprites text debug_markdown_instruction: |-
         <img src="https://images.code.org/a313a455ef7033e840dfb21cb15cbb30-image-1491277088617.png"
         style="float: right; width: 200px; margin-left: 20px;">\r
@@ -11054,7 +11251,31 @@
         is not less than 325, use the `velocityY` to change its vertical velocity
         to zero. [Show me where](#triggercallout=code_triggered2)\r
         \r
-      CSD U3 abstraction jump_markdown_instruction: |
+      CSD U3 abstraction jump-2018_markdown_instruction: |-
+        # Jumping\r
+        \r
+        You now
+        have all the blocks you need to make your sprite jump!  The sprite should
+        jump up if it's on the ground and the user presses the "up" key, then should
+        start moving back down when it reaches the top of its jump.\r
+        \r
+        # Do this\r
+        \r
+        *
+        Find the `if` statement that checks whether the sprite is on the ground, and
+        look at the `if` statement inside of it that checks whether the user has pressed
+        the "up" arrow key. ( [Show me where](#triggercallout=code_triggered1) )\r
+        \t*
+        Make the frog jump up when the user presses the arrow key.\r
+        \t* Make the
+        frog stop moving otherwise.\r
+        * Add code that does the following  ( [Show
+        me where](#triggercallout=code_triggered2) )\r
+          * Checks whether the frog
+        sprite has reached its highest point.\r
+          * If so, make the sprite go back
+        down.
+      CSD U3 abstraction jump_markdown_instruction: |-
         # Jumping\r
         \r
         You now have
@@ -11085,8 +11306,7 @@
         )\r
           * Checks whether the frog sprite has reached its highest point.\r
           *
-        If so, use the `velocityY` block to make the sprite fall back down.\r
-        \r
+        If so, use the `velocityY` block to make the sprite fall back down.
       CSD U3 abstraction jumper intro_markdown_instruction: |
         # Horse Jumper\r
         \r
@@ -13526,7 +13746,7 @@
         item position.\r
         * Inside your `if` statement, add a counter pattern that
         will increase the score every time the player touches an item.  Look at [Lesson
-        12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example.\r
+        16 Puzzle 9](/s/csd3/stage/16/puzzle/9) for an example.\r
         * Call the function
         inside the draw loop, in the "update sprites" area of your code.\r
         * Run
@@ -14233,22 +14453,19 @@
         Use the `.color()` command to set each of
         the color LEDs to a different color.
       CSD U6 Pedometer_markdown_instruction: |-
-        # Pedometer Jog\r
+        # Jogger\r
         \r
-        The `change`
-        event is useful, but it's also really sensitive to movement. `shake` is like
-        `change`, and is triggered when the board is shaken, but it has a higher threshold
-        for changes in movement before triggering the event. \r
+        This program should
+        use the `shake` event, which is triggered when the board is shaken.  It should
+        add a step to the jogger's total every time the user shakes the board.\r
         \r
-        You're going
-        to use this event to make a pedometer.\r
+        #
+        Do This\r
         \r
-        # Do This\r
-        \r
-        * Use the counter
-        pattern to move the jogger every time the board is shaken.\r
-        * Make sure
-        the jogger moves by 5 steps every time.
+        * Change the event so it triggers every time the board is shaken.\r
+        *
+        Add code inside the event so that `steps` increases every time the board is
+        shaken.
       CSD U6 add LED button_markdown_instruction: |-
         # Using Events\r
         \r
@@ -14260,9 +14477,11 @@
         * Add code so that the second button
         turns the LED off.
       CSD U6 airplane predict markdown_markdown_instruction: |-
-        Look at the code below.
-        What do you think it's going to do? Give it a guess, and run the code to
-        find out!
+        # Accelerometer\r
+        \r
+        Look
+        at the code below. What do you think it's going to do? Give it a guess, and
+        run the code to find out!
       CSD U6 analog challenge_markdown_instruction: |-
         # Challenge\r
         \r
@@ -14329,14 +14548,14 @@
         In the earlier prediction level you saw how the `setScale()`
         method can convert the full range of sensor readings (0-1023) into a range
         that can be used for RGB values (0-255). Let's build on that idea to make
-        an app that can communcate the current value of all three analog sensors with
-        a single color.\r
+        an app that can communicate the current value of all three analog sensors
+        with a single color.\r
         \r
         # Do This\r
         \r
-        To start, we just need to set the
-        sensor scales correctly - don't worry about actually setting the color of
-        the background yet.\r
+        To start, we just need to set
+        the sensor scales correctly - don't worry about actually setting the color
+        of the background yet.\r
         \r
         * Using the `sensor.setScale()` block, set each
         of light and sound sensors to the right scale for an RGB color channel.\r
@@ -14432,7 +14651,11 @@
         now.\r
         \r
         * Fix the array so that the sharp keys on the piano can actually
-        play the right note.
+        play the right note.\r
+        \r
+        _Hint: Modifying arrays is much easier in text
+        mode.  You can always switch between block and text mode by clicking the button
+        at the top right of your code workspace._
       CSD U6 balloon clicker predict_markdown_instruction: |-
         # Make the Balloon Fly\r
         \r
@@ -14498,7 +14721,7 @@
         </div>\r
         \r
         #
-        Using createButton\r
+        Make Your Own Buttons\r
         \r
         Just like `createLed()` lets us create LED objects
         that can be used like the built-in `led`, you can use `createButton()` to
@@ -14507,19 +14730,20 @@
         \r
         # Do This\r
         \r
-        * Connect your button circuit to
-        a new pin, or add a new button circuit.\r
-        * Using the `createButton()` block,
-        create a new button object on your chosen pin.\r
-        * Add a `onBoardEvent()`
-        block, and set it to respond to your new button's "down" event.\r
-        * Program
-        your event handler so that when your button is pressed, the color LEDs turn
-        on.\r
+        * Grab two wires.\r
+        * Connect
+        one wire to an free data pin.\r
+        * Connect the second wire to a ground pin.\r
+        *
+        Update line 2 so that it's referencing the pin you chose.\r
+        * Run the provided
+        code.\r
+        * With the program running, touch the unconnected ends of both wires
+        together to "press" the button.\r
         \r
-        _Hint: The button object that you create won't be in the `onBoardEvent()`
-        dropdown, so you'll need to type the name you've chosen in. Make sure not
-        to use quotation marks!_
+        _Tip: A button circuit can be made
+        with many different kinds of materials, as long as they are electrically conductive.
+        Try making buttons with foil, silverware, or paper clips._
       CSD U6 circuit createButton_markdown_instruction: |-
         <div style="float: right"
         markdown="1">\r
@@ -14708,7 +14932,9 @@
         pressed.\r
         * Test your code!
       CSD U6 circuit smart bike blinkers_markdown_instruction: "# Smart Bike - Blinkers\\r\n\\r\nUsing\nyour
-        planning guide, wire up the two LEDs that will serve as the blinkers.\\r\n\\r\n#\nDo
+        planning guide, wire up the two LEDs that will serve as the blinkers.\nIn
+        order to make sure that the blinkers can be mounted at the end of the handlebars,\nmake
+        sure you wire them so that they can stretch out in opposite directions.\\r\n\\r\n#\nDo
         This\\r\n\\r\nUsing alligator clips, wire, or other conductive material,\nconnect
         two LEDs to your board, one for each turn signal blinker.\\r\n\\r\n*\nHook
         up each LED to a different numbered pin on the board.\\r\n* Use the `createLed()`\nblock
@@ -14725,21 +14951,21 @@
         # Do This\r
         \r
         Using the button that you've
-        already wired the the board, find a good spot to place your horn button. Then:\r
+        already wired to the board, find a good spot to place your horn button. Then:\r
         \r
         *
         Create a button object for your horn button\r
         * Add an event handler to buzz
         when button is pressed\r
         \r
-        _Tip: If you want your horn to play a song,
-        you'll need to make sure that it only plays when the button is first pressed,
-        not continually._
+        _Hint: The button object that you create won't
+        be in the `onBoardEvent()` dropdown, so you'll need to type the name you've
+        chosen in. Make sure not to use quotation marks!_
       CSD U6 circuit smart bike final_markdown_instruction: |-
         # Smart Bike - Final
         Touches\r
         \r
-        At this point your smart bike should have all of it's basic
+        At this point your smart bike should have all of its basic
         functionality in place. Now is your chance to add any finishing touches.\r
         \r
         #
@@ -14909,26 +15135,16 @@
       CSD U6 directional LEDs roll_markdown_instruction: |-
         # Roll\r
         \r
-        Now that
-        you've made the LEDs turn on when you tilt the board forward and back, see
-        if you can light LEDs 2 and 7 when you tilt the board left and right. You
-        can use `accelerometer.getOrientation('roll')` to detect side-to-side motion.\r
-        \r
-        _Remember_:
-        When roll is a positive number, the board is tilting to the right. When roll
-        is a negative number, the board is tilting to the left.\r
+        This program
+        should display "Left" or "Right" on the screen, depending on which way
+        the board is tilted.\r
         \r
         # Do this\r
+        * Use the "roll" property of the
+        accelerometer to determine whether the board is tilted to the left or right.\r
         *
-        Create something similar to what you did in the last bubble, except now using
-        `accelerometer.getOrientation("roll")`\r
-        * Run your code to see if it works.
-        Make sure that you can both move the board back and forth, and side-to-side
-        to turn the LEDs on.\r
-        \r
-        _Challenge_: The lights instantly turn on if you
-        move the board in the slightest way. Can you make it so that you have to turn
-        the board a little more in order for the lights to turn on?
+        Use a conditional to change the text for the "direction" element to be either
+        "Left" or "Right", depending on the board's orientation.
       CSD U6 directional leds pitch_markdown_instruction: |-
         # Pitch\r
         \r
@@ -15068,22 +15284,20 @@
       CSD U6 for loop click exit_markdown_instruction: |-
         # Knowing When to Stop\r
         \r
-        You
-        probably noticed in the last level that you got an error if you clicked the
-        button too many times. Whenever you're writing code that repeats (even when
-        it's repeatedly manually, like this is) it's important to consider how you'll
-        know it's time to _stop_ repeating.\r
+        If
+        you clicked the button too many times in the last level, you got an error.
+        Whenever you're writing code that repeats, you should think about when to
+        _stop_ repeating.\r
         \r
         # Do This\r
         \r
-        This program
-        is similar to the previous, except we've replaced the variable name with
-        a more descriptive one, and added a conditional inside the event handler.
-        You'll need to complete the conditional so that we don't try to toggle an
-        LED that doesn't exist.\r
+        This program is similar to the previous
+        one, but there is a conditional inside the event handler. You'll need to
+        complete the conditional so that we don't try to toggle an LED that doesn't
+        exist.\r
         \r
-        _Would your code work without changes for
-        a board with more or fewer LEDs? If not, could you modify it so it would?_
+        _Would your code work without changes for a board with more
+        or fewer LEDs? If not, could you modify it so it would?_
       CSD U6 for loop click predict question_markdown_instruction: |-
         # Make a Prediction\r
         \r
@@ -15415,12 +15629,12 @@
         #
         Do This\r
         * Using the LED code as a model, add new code inside the buttonL
-        event that will play a long or short buzz according to the text property of
-        the *buzzer_input* dropdown menu.\r
-        * Add new code that will turn the buzzer
-        off when the right button is pressed.\r
-          * (Hint: the event is already in
-        the code.)
+        event that will play a long or short buzz according to the chosen value property
+        of the *buzzer_input* dropdown menu.\r
+        * Add new code that will turn the
+        buzzer off when the right button is pressed.\r
+          * (Hint: the event is already
+        in the code.)
       CSD U6 getProperty debug_markdown_instruction: |-
         # Debug\r
         \r
@@ -15438,7 +15652,7 @@
         only choose colors that will actually work.\r
         \r
         The provided dropdown with
-        the ID "color_input" allows a use to choose from a handful of background
+        the ID "color_input" allows a user to choose from a handful of background
         colors. When the "Set Color" button is clicked, the screen will turn that
         color.\r
         \r
@@ -15451,29 +15665,25 @@
         *
         Use the `setProperty` block to set the "background-color" property of "screen1"
         to your variable `color`.\r
-        * Test your program by picking a color and clicking
-        "Set Color".
+          * Hint: Make sure you type `color` without
+        quotation marks.\r
+        * Test your program by picking a color and clicking "Set
+        Color".
       CSD U6 getProperty input_markdown_instruction: |-
         # getProperty and Variables\r
         \r
-        You
-        might have noticed in the last level that we used a _variable_ to store the
-        values collected with `getProperty()`. Using variables in this way allows
-        us to both get the properties of design elements and to use those values later
-        on.\r
+        This
+        program uses the `name` variable to display the name typed into "name_input"
+        when the Submit button is clicked. It should do the same for *friend_input*
+        and *friend_output*, but it's missing a block.\r
         \r
-        This program gets the text typed into "name_input" when the Submit
-        button is clicked, and then use that to set the text property of "name_output".
-        It does this by storing the text in a variable called `name`.  It should do
-        the same for *friend_input* and *friend_output*, but it's missing a block.\r
-        \r
-        #
-        Do This\r
-        * Run the program to see how it works. (Make sure you type in your
-        name and your friend's name before hitting "Submit".)\r
-        * Use a `getProperty`
-        block to store the text property of *friend_input* into your the variable
-        "friend_name". ([Show me where.](#triggercallout=code_triggered))
+        # Do This\r
+        * Read
+        the code and comments, then run the program to see how it works. (Make sure
+        you type in your name and your friend's name before hitting "Submit".)\r
+        *
+        Use a `getProperty` block to store the text property of *friend_input* into
+        your the variable "friend_name". ([Show me where.](#triggercallout=code_triggered))
       CSD U6 getProperty predict_markdown_instruction: |-
         # Debug\r
         \r
@@ -15557,18 +15767,14 @@
         # Updating Values with Data\r
         \r
         In
-        this program the goalie trying to block the soccer ball. If he blocks the
-        ball, he gets a point. If he misses, he loses a point. This game almost works,
-        but neither the ball nor the goalie can move right now. You're going to fix
-        this.\r
+        this program the goalie is trying to block the soccer ball, but right now
+        the ball isn't moving.\r
         \r
         \r
         # Do This\r
         \r
-        * Use the counter pattern to update the
-        ball's `x` value.\r
-        * Update the goalie's `y` position by the pitch of
-        the board.
+        * Use the counter pattern
+        to update the ball's `x` value so that it moves across the screen.
       CSD U6 interval predict_markdown_instruction: |-
         # Interval\r
         \r
@@ -15583,7 +15789,42 @@
         Read the code and predict what the program will do, then hit "Run" to test
         your prediction.
       CSD U6 interval_markdown_instruction: Predict Level
-      CSD U6 iter create notes_markdown_instruction: |
+      CSD U6 investigate orientation_markdown_instruction: |-
+        # Pitch and Roll\r
+        \r
+        This
+        program displays the board's pitch and roll, and it will also change colors
+        depending on their values.  \r
+        \r
+        # Do This\r
+        \r
+        Make the program change
+        the following colors by tilting the board to the correct pitch and roll.\r
+        \r
+        <div
+        style="display:inline-block; background-color: skyblue; height: 30px; width:30px">&nbsp;</div>
+        Pitch: 0 | Roll: -20\r
+        \r
+        <div style="display:inline-block; background-color:
+        burlywood; height: 30px; width:30px">&nbsp;</div> Pitch: 30 | Roll: 0 \r
+        \r
+        <div
+        style="display:inline-block; background-color: mistyrose; height: 30px; width:30px">&nbsp;</div>
+        Pitch: -15 | Roll: 10 \r
+        \r
+        <div style="display:inline-block; background-color:
+        yellowgreen; height: 30px; width:30px">&nbsp;</div> Pitch: 5 | Roll: -25
+        \r
+        \r
+        <div style="display:inline-block; background-color: thistle; height:
+        30px; width:30px">&nbsp;</div> Pitch: 10 | Roll: 30 \r
+        \r
+        Which way should
+        you tilt to get a positive pitch?\r
+        \r
+        Which way should you tilt to get
+        a negative roll?
+      CSD U6 iter create notes_markdown_instruction: |-
         # Music Player\r
         \r
         This
@@ -15592,7 +15833,7 @@
         \r
         # Do This\r
         * Create a `checkNotes()`
-        function that will call `checkNote(note)` on everything in the "notes" array.\r
+        function that will call `checkNote(note)` on everything in the "notes" array.
       CSD U6 iter modify bugs_markdown_instruction: |-
         # Bug Shaker\r
         \r
@@ -15638,9 +15879,8 @@
         your partner and answer the following questions:\r
         \r
         * What does this line
-        of code do: `  setProperty("screen","background-color",rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)))\r
-        });`?  ([Show
-        me where.](#triggercallout=code_triggered))\r
+        of code do: `setProperty("screen", "background-color", rgb(randomNumber(0,255),
+        randomNumber(0,255), randomNumber(0,255)));`?\r
         \r
         Once you have answered
         the question, run the code and click the buttons to see what happens.
@@ -15737,7 +15977,7 @@
         *
         Use a `for` loop inside your `loopStars()` function to make every star in
         "starArray" loop around the screen.
-      CSD U6 params starchaser 3_markdown_instruction: |
+      CSD U6 params starchaser 3_markdown_instruction: |-
         # Star Chaser\r
         \r
         All
@@ -15751,7 +15991,7 @@
         make a `checkStar(color)` function that works for any star.\r
         * Test your
         code by calling `checkStar("red")` and `checkStar("blue")` inside your
-        event block.\r
+        event block.
       CSD U6 params starchaser 4_markdown_instruction: |-
         # Star Chaser\r
         \r
@@ -15763,6 +16003,53 @@
         functions that uses a `for` loop to check every star in the star array.\r
         *
         Test your code by calling the `checkStars()` function inside the event block.
+      CSD U6 params starchaser 5_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        you can add extra stars, and your functions will work with them, too.\r
+        \r
+        #
+        Do This\r
+        * In design mode, copy one of the stars, and change its name and
+        color to "yellow".\r
+        * Add a new element, "yellow", to your star array.\r
+        *
+        Test the game with your new star.
+      CSD U6 params starchaser challenge 1_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        that you have a working game, you can challenge yourself with some different
+        features.\r
+        \r
+        # Do This\r
+        * Start the user with 5 "lives", and take
+        one away every time the user touches the **wrong** star.\r
+        * Make an end
+        screen, and change to that screen when the user runs out of lives.
+      CSD U6 params starchaser challenge 2_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        that you have a working game, you can challenge yourself with some different
+        features.\r
+        \r
+        # Do This\r
+        * Make the player go back to the middle of the
+        screen when the left button is pressed.
+      CSD U6 params starchaser challenge_markdown_instruction: |-
+        # Star Chaser\r
+        \r
+        Now
+        that you have a working game, you can challenge yourself with some different
+        features.\r
+        \r
+        # Do This\r
+        * Start the user with 5 "lives", and take
+        one away every time the user touches the **wrong** star.\r
+        * Make an end
+        screen, and change to that screen when the user runs out of lives.
       CSD U6 params starchaser intro_markdown_instruction: |-
         # Star Chaser\r
         \r
@@ -15811,13 +16098,26 @@
         \r
         * Add code to randomly select a note from the `notes` array.\r
         *
-        Run the program and press the left button to hear your buzzer sing it's beautiful
+        Run the program and press the left button to hear your buzzer sing its beautiful
         tune.
+      CSD U6 sensor experiment embedded_markdown_instruction: |-
+        # Sensor Experiment\r
+        \r
+        Run
+        the program to the right and experiment with your board. Try interacting with
+        your board in many different ways to figure out what each sensor might be.
+        As you experiment with each sensor, discuss with a neighbor:\r
+        \r
+        * What
+        does this sensor measure?\r
+        * What is its maximum value?\r
+        * What is its
+        minimum value?
       CSD U6 setProperty Text_markdown_instruction: |-
         # Changing the Text\r
         \r
         The
-        `setProperty` block can be used to changed lots of things about your design
+        `setProperty` block can be used to change lots of things about your design
         elements, including the text they contain.\r
         \r
         # Do This\r
@@ -15884,19 +16184,19 @@
         # Changing With a Click\r
         \r
         It's
-        not really useful to only set a property when your program is run. After all,
-        you could just do all of that in Design Mode. When you use an `onEvent` block
-        with `setProperty`, you're able to do things you couldn't do with Design
-        Mode alone.\r
+        not really useful to only set a property when your program is first run. After
+        all, you could just do all of that in Design Mode. When you use an `onEvent`
+        block with `setProperty`, you're able to do things you couldn't do with
+        Design Mode alone.\r
         \r
         # Do This\r
         \r
-        We've provided an empty `onEvent` block
-        that's watching the "smiley" image. Inside the `onEvent` block, use two
-        `setProperty` blocks to move the smiley somewhere else (it doesn't really
+        We've provided an empty `onEvent`
+        block that's watching the "smiley" image. Inside the `onEvent` block, use
+        two `setProperty` blocks to move the smiley somewhere else (it doesn't really
         matter where for now). Test your program by running it and clicking on the
         smiley.
-      CSD U6 setProperty xy random_markdown_instruction: |
+      CSD U6 setProperty xy random_markdown_instruction: |-
         <img src="https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif"
         style="float:right; max-width: 150px; margin: 10px;">\r
         \r
@@ -15915,7 +16215,7 @@
         \r
         _Tip:
         The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random
-        numbers will ensure that the smiley is always visible on screen?_\r
+        numbers will ensure that the smiley is always visible on screen?_
       CSD U6 setProperty xy_markdown_instruction: |-
         # Changing Position\r
         \r
@@ -15959,24 +16259,23 @@
         # Change with the
         Accelerometer\r
         \r
-        This program uses the change event to create the ultimate
-        steadiness test. Every time the board detects a change in movement, the movement
-        meter increased by 1. When the movement meter reaches 100, the alarm will
-        sound. Your goal is to pass your board to another person without setting off
-        the alarm.\r
+        This program uses the change event to increase a movement
+        meter every time the board moves. When the movement meter reaches 100, the
+        alarm will sound.\r
         \r
         \r
         # Do This\r
-        This program has some bugs in it. To fix
-        these, add code that will:\r
+        This program has two bugs that you
+        need to fix:\r
         \r
-        * Increase the `movement` variable each
-        time the `change` event is triggered.\r
-        * Display the current value of `movement`
-        under the movement meter text.\r
+        * The movement meter is being triggered by a button press,
+        instead of the accelerometer's `change` event.\r
+        * The programmer forgot
+        how to use the counter pattern to increase the movement variable.\r
         \r
-        Get a partner and test your game to
-        make sure it works!
+        Once
+        you have found the bugs, run the program and try to pass the board to your
+        partner without setting off the alerm.
       CSD U6 stillness game predict_markdown_instruction: |
         # Accelerometer Events\r
         \r
@@ -20984,14 +21283,21 @@
         # Using Board Events\r
         \r
         Right
-        now the LED turns on when the left button (`buttonL`) is pressed down. How
-        can you turn it off using a board event?\r
-        ![](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)\r
-        #
-        Do this\r
+        now the LED turns on when the left button (`buttonL`) is pressed down. It
+        should turn off when the right button (buttonR) is pressed down.\r
         \r
-        * Add another `onBoardEvent()` block to turn the LED off when
-        the right button is pressed down.
+        <div
+        style="float:right;" markdown=1> \r
+        \r
+        ![expandable](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)
+        \r
+        \r
+        </div>\r
+        \r
+        # Do this\r
+        \r
+        * Add another `onBoardEvent()` block
+        to turn the LED off when the right button is pressed down.
       CSDU6 - LED toggle buttonL down_markdown_instruction: |-
         # Other Board Events
         with the Buttons\r
@@ -21012,17 +21318,14 @@
         # Other Board Events with
         the Buttons\r
         \r
-        You might have noticed that the LED stays on even once
-        the button goes back up. Because the event was triggered for when the button
-        goes down only, the LED stays on. To turn it off, you'll need to trigger
-        an event for when the button pops back up.\r
+        Instead of using the right button, you can make the LED
+        turn off when the left button comes back up.\r
         \r
         # Do this\r
-        * Drag out
-        another `onBoardEvent` block and set the event type to `up`. Make sure that
-        it's for the same button that you used in the last level.\r
-        * Add code to
-        turn the LED off when the button pops back up.
+        * Create
+        an 'up' event for the left button.\r
+        * Add code to turn the LED off when
+        the button pops back up.
       CSDU6 - LED toggle buttonL_markdown_instruction: |-
         # Using Board Events with
         the LED\r
@@ -21369,21 +21672,17 @@
         it'll do. Once you've come up with an answer, click "Run" to check your
         answer.\r
         \r
-        * What does the button do?\r
-        * Does the light turn on once
-        the program is run?
+        * What will happen when you press the left button down?
       CSDU6 - buzzer duration buttons_markdown_instruction: |-
         # Buzzer and the Buttons\r
         \r
-        The
-        buttons on your board can interact with the buzzer as well as the LED. Using
-        the buttons, make a button that buzzes for a long duration of time, and another
-        button that buzzes for a short duration of time.\r
+        This
+        program should use the buttons to play long and short buzzes.\r
         \r
-        # Do this\r
-        * Change
-        the duration parameter of `buzzer.frequency` to make the left button play
-        a long buzz, and the right button play a short buzz.
+        # Do
+        this\r
+        * Change the duration parameter of `buzzer.frequency` to make the
+        left button play a long buzz, and the right button play a short buzz.
       CSDU6 - buzzer duration_markdown_instruction: |-
         # Buzzer Duration\r
         \r
@@ -21738,20 +22037,16 @@
         # Using the Toggle
         Switch\r
         \r
-        The toggle switch is like a light switch, it can flip in one
-        of two positions: `open` and `close`.\r
+        The toggle switch can flip in one of two positions: `open` and
+        `close`.  This program uses it to make a light switch.  Right now it can only
+        turn the light on.\r
         \r
-        Flipping the toggle switch to
-        one of these two positions can trigger an event depending on if the switch
-        is open or closed. You're going to use these events to make a light switch.\r
+        # Do this\r
         \r
-        #
-        Do this\r
-        \r
-        * Drag out another `onBoardEvent()` block for the `toggleSwitch`
-        and set its event type to `close`\r
-        * Add code so that when the toggle switch
-        is flipped to `close` the light turns off.
+        * Create a new toggle switch event
+        that is triggered when the switch is flipped to `close`.\r
+        * Add code so
+        that when the toggle switch is flipped to `close` the light turns off.
       CSDU6 - lists - lists 1_markdown_instruction: |-
         # Lists\r
         \r
@@ -22145,22 +22440,16 @@
         # State and the Toggle
         Switch\r
         \r
-        The toggle switch has the `toggleSwitch.isOpen` property, which
-        keeps track of which **state** (opened or closed) the switch is in. `toggleSwitch.isOpen`
-        is a boolean, so its value is `true` if the toggle switch is open, and `false`
-        if it's closed.\r
+        This program tells you whether the toggle switch is opened or
+        closed, but it needs the `toggleSwitch.isOpen` block to work.  `toggleSwitch.isOpen`
+        is `true` if the switch is opened and `false` if the switch is closed.\r
         \r
-        # Do this\r
-        * Complete the if-statement with the
-        `toggleSwitch.isOpen` property. Since `toggleSwitch.isOpen` is a boolean,
-        the condition reads "If true".\r
-        * If the toggle switch is open (`true`),
-        then change the text on the screen to say "Open!"\r
-        * Else, the text should
-        say "Closed!"\r
-        \r
-        ###Run the program and flip the switch. Remember to
-        press the left button, otherwise you won't see the screen change.
+        #
+        Do this\r
+        * Complete the if-statement with the `toggleSwitch.isOpen` property.\r
+        *
+        Run the program and press the left button, then flip the toggle switch and
+        press the button again.
       CSDU6 - toggleswitch state_markdown_instruction: |-
         # State and the Toggle Switch\r
         \r
@@ -22663,18 +22952,18 @@
         # Piano Notes\r
         \r
         This is
-        the same piano that you saw at the beginning of the lesson, except some keys
-        are using the `buzzer.note()` block, some are still using the `buzzer.frequency()`
-        block, and some are using the `buzzer.note()` block but are giving it a frequency
-        instead of a note.\r
+        the same piano that you saw at the beginning of the lesson, but there are
+        some bugs!\r
         \r
         # Do this\r
         \r
-        * Edit the code so that all keys
-        are using a `buzzer.note()` block to play the corresponding note.\r
+        * Edit the code so that all keys are using
+        a `buzzer.note()` block to play the corresponding note.\r
+        * Make sure that
+        all the values passed in to `buzzer.note()` are notes, and not frequencies.\r
         \r
-        Remember
-        to put quotes around the notes! e.g `buzzer.note("A4", 100);`
+        _Hint:
+        Remember to put quotes around the notes! e.g `buzzer.note("A4", 100);`_
       CSDU6 play null notes_markdown_instruction: |-
         # Null Notes\r
         \r
@@ -22699,11 +22988,13 @@
         same and side-by-side, and any other place you deem appropriate.
       CSDU6 play predict code_markdown_instruction: Markdown is in contained level
       CSDU6 play predict markdown_markdown_instruction: |-
-        Look at the code below.
-        What do you think it's going to do?\r
+        # Make a Prediction\r
         \r
-        Give it a guess and run the code
-        to find out!
+        Look
+        at the code below. What do you think it's going to do?\r
+        \r
+        Give it a guess
+        and run the code to find out!
       CSDU6 play songs_markdown_instruction: |-
         # Making Songs\r
         \r
@@ -22722,15 +23013,18 @@
         Make sure the new array you give it has at least two pairs of notes that are
         next to each other in the list (Example: `["A5", "A5", "G4", "G4"]`)\r
         \r
-        Tip:
-        Because of how the block is structured, it can be easier to edit `buzzer.playNotes()`
-        in text-mode. Feel free to switch to text-mode if that helps you.
-      CSDU6 toggle state prediction_markdown_instruction: "# More on the Toggle Switch\\r\n\\r\nThe\ntoggle
-        switch has different properties that let it be used outside of toggle\nswitch
-        related events. Look at the code below, what do you think is going\nto happen
-        when you run this program?\\r\n* Note that all of the code is contained\ninside
-        an event, why do you think that is?\\r\n\\r\nType your response and click\n\"Run\"
-        to see what happens. "
+        _Hint:
+        Don't forget that you can always switch back and forth between block and
+        text mode._
+      CSDU6 toggle state prediction_markdown_instruction: |-
+        # More on the Toggle Switch\r
+        \r
+        You
+        can also see check whether the toggle switch is in the `open` or `close` position
+        anywhere in your program. \r
+        \r
+        What different things does the button do
+        when the toggle switch is `open` or `close`?
       CSDU6- predict event types_markdown_instruction: |-
         # Predict: Event Type\r
         \r
@@ -23089,7 +23383,7 @@
         numbers**.\r
         * **Run the program** and confirm all values in your object
         appear as you expected.
-      CSP U5 AP Practice Choose the Algorithm_markdown_instruction: |
+      CSP U5 AP Practice Choose the Algorithm_markdown_instruction: |-
         # AP Practice
         - Identify the Algorithm\r
         \r
@@ -23132,8 +23426,7 @@
         criteria as a student-developed algorithm.**\r
         \r
         **Explain your answer
-        using the criteria in the scoring guide.**\r
-        \r
+        using the criteria in the scoring guide.**
       CSPPD PD goals_markdown_instruction: |
         ***Now that you've learned more about
         the CSP Professional Development, let's consider your goals***
@@ -24044,11 +24337,18 @@
         are indicated at the top.\r
             * You may **add a new entry** at the current
         location in your list.
-      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: "## Choose: Array or Variable?\n\nYour\napp
-        needs to store the following information. For each type of information,\ndecide
-        whether you would use an array or a variable to store it:\n \n* All\nthe messages
-        a user has sent\n* The highest score a user has ever reached\non the app\n*
-        A username and password to unlock the app\n\n"
+      CSPU5_U3 - Arrays - Wrap Up 1_markdown_instruction: |
+        ## Choose: Array or Variable?\r
+        \r
+        Your
+        app needs to store the following information. For each type of information,
+        decide whether you would use an array or a variable to store it:\r
+         \r
+        *
+        All the messages a user has sent\r
+        * The highest score a user has ever reached
+        on the app\r
+        * A username and password to unlock the app\r
       CSPU5_U3 - Arrays - Wrap Up 2_markdown_instruction: |
         ## Free Response: Choosing
         Array or Variable
@@ -24583,9 +24883,9 @@
         As
         we saw in the last exercise, there are many strange behaviors that can result
         from referencing array indexes that are less than 0 or greater than the highest
-        index in your array. **If want to avoid these kinds of errors then it is useful
-        to know how long your array is,** especially since we've seen that arrays
-        can grow and shrink during the course of our program.\r
+        index in your array. **If you want to avoid these kinds of errors then it
+        is useful to know how long your array is,** especially since we've seen that
+        arrays can grow and shrink during the course of our program.\r
         \r
         ![](https://images.code.org/419a610bedaaf709d400c51a6399f482-image-1447263621427.40.15
         AM.png)\r
@@ -30703,7 +31003,7 @@
         -
         __Think about how the final text is created__ based on the input from the
         user. How would you describe in words the algorithm for creating it?
-      CSPU5_U3L16 Mad Lib Student Setup_markdown_instruction: |
+      CSPU5_U3L16 Mad Lib Student Setup_markdown_instruction: |-
         # Back to Mad Libs:
         Design Your App\r
         Now that you've had some practice getting user text and
@@ -30723,7 +31023,7 @@
         you'll use the __text area__ design element to create the space where the
         user's completed Mad Libs will be displayed.\r
         - A __Play again__ button
-        takes you to back Screen 1.\r
+        takes you back to Screen 1.\r
         <br>\r
         <br>\r
         \r
@@ -30762,7 +31062,7 @@
         - Create the event handlers for the __Next__
         and __Play again__ buttons to respond to clicks.\r
         - Use `setScreen` in the
-        event handlers to get the screen navigation working.\r
+        event handlers to get the screen navigation working.
       CSPU5_U3L16 Mad Lib getText_markdown_instruction: |-
         # Make It Mad! Add the User's
         Text to Your Mad Libs Outline\r
@@ -34009,6 +34309,9 @@
       Geometric Sun_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynstur
         sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds og
         skipulags!"
+      Geometric Sun_2018_markdown_instruction: "**Hugmynd að verkefni:** Búðu til
+        mynstur sem notar hugtök úr flatarmálsfræði svo sem form. Þetta krefst úthalds
+        og skipulags!"
       Glossary O_markdown_instruction: "## Vocabulary\n\nEncouraging students to\nlearn
         and use 'professional' terms enables them to communicate correctly\nand efficiently
         with others and builds their knowledge such that it can be\nfurther developed
@@ -34174,6 +34477,10 @@
         Athugaðu:
         Við höfum notað `stilla alfa` kubbinn til að láta lit krónublaðanna dofna þegar utar dregur.
       InspirationalArtwork_markdown_instruction: |
+        Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\r
+        \r
+        Ef þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\r
+      InspirationalArtwork_2018_markdown_instruction: |
         Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur!\r
         \r
         Ef þessi mynd gefur þér hugmyndir, gætir þú glímt við eitthvað svipað. Annars bara eitthvað sem þér dettur í hug.\r
@@ -35887,19 +36194,37 @@
         Wood is a very important resource.
         Many things are made from it. Walk to the tree and use the `destroy` block
         command to chop it down.
+      Overworld Chop Tree_2018_markdown_instruction: |-
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the `destroy` block
+        command to chop it down.
       Overworld House Frame Chosen_markdown_instruction: |-
         Build the rest of your
         house from any material you'd like. The `repeat` command will come in handy.
+      Overworld House Frame Chosen_2018_markdown_instruction: |-
+        Build the rest of
+        your house from any material you'd like. The `repeat` command will come in
+        handy.
       Overworld Move to Sheep_markdown_instruction: |-
         Add a second `move forward`
-        command to reach the sheep.
+        block to reach the sheep.
+      Overworld Move to Sheep_2018_markdown_instruction: |-
+        Add a second `move forward`
+        block to reach the sheep.
       Overworld Place Wall_markdown_instruction: |-
         Every house starts with a wall.
         Build the first part of your house by putting the `place` and `move forward`
         commands inside the repeat loop.
+      Overworld Place Wall_2018_markdown_instruction: |-
+        Every house starts with a
+        wall. Build the first part of your house by putting the `place` and `move
+        forward` commands inside the repeat loop.
       Overworld Shear Sheep_markdown_instruction: |-
         Sheep-shearing time! Use the `shear`
         command to gather wool from both sheep.
+      Overworld Shear Sheep_2018_markdown_instruction: |-
+        Sheep-shearing time! Use
+        the `shear` command to gather wool from both sheep.
       PDAlg 13-16 Sam Extension Puzzle_markdown_instruction: |-
         Add a second parameter
         to `onscreen?` for Sam's y coordinate and update the function so it keeps
@@ -36455,10 +36780,15 @@
         of red that Maddie created in the video. Experiment with 6-bit color by filling
         in the bottom row of the image with shades of a different color.  Here is
         an example with some shades of blue.  Try your own color!
-      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: "# Color\nPixelation:
-        Task 1\n**Directions:**\n\n* We start you with the 4x2 image Maddie\nwas creating,
-        but we've left out the last two squares. \n* Finish off the\nimage by figuring
-        out which two colors are missing and encode them.\n"
+      Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction: |
+        # Color
+        Pixelation: Task 1\r
+        **Directions:**\r
+        \r
+        * We start you with the 4x2 image
+        Maddie was creating, but we've left out the last two squares. \r
+        * Finish
+        off the image by figuring out which two colors are missing and encode them.\r
       Pixelation 2_markdown_instruction: |-
         Something happened to the bits in this
         image!  Find error and fix it!
@@ -36790,6 +37120,9 @@
         to get familiar with functions, learn how to edit them, and create your own!
       Robot Doodle_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd af
         einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
+      Robot Doodle_2018_markdown_instruction: |-
+        **Project Idea:** Create a picture
+        of something familiar from the real world. This requires persistence and planning!
       Robot Drawing_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd
         af einhverju kunnuglegu úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Robot_markdown_instruction: "**Hugmynd að verkefni:** Búðu til mynd af einhverju
@@ -51932,7 +52265,7 @@
         was the difference between the two, and why is that an issue?
         - How did you
         fix the bug?
-      U3L16 - challenge say hi app_markdown_instruction: |
+      U3L16 - challenge say hi app_markdown_instruction: |-
         # Introducing the  *change*
         Event\r
         \r
@@ -51957,7 +52290,7 @@
         - Attach a __'change'__ event handler to the
         text input.\r
         - When the 'change' event triggers, __write the user's name
-        and a greeting__.\r
+        and a greeting__.
       U3L16 - chaserApp_markdown_instruction: |
         # Chaser Game\r
         \r
@@ -58861,14 +59194,13 @@
                 \t\r
                     //
         generate random color\r
-                    // make all 4 buttons have same bg color\r
+                    // make all 4 buttons have same color\r
                     //
         pick a random Button Id\r
-                    // set it's bg color to something
-        different\r
+                    // set its color to something different\r
                     \r
-                    console.log("correct one is: "
-        + randButtonId);  <-- Add this line\r
+                    console.log("correct
+        one is: " + randButtonId);  <-- Add this line\r
         \t\t}
       U5 ColorSleuth add score variables and update with console_markdown_instruction: |
         Fun
@@ -58970,7 +59302,7 @@
         showing the correct answer for each new board.\r
         \r
         ![](https://images.code.org/2941465a60c0f61c83979192c1de29ce-image-1481146240419.gif)
-      U5 ColorSleuth checkCorrect part2 add if statement to check correct_markdown_instruction: |
+      U5 ColorSleuth checkCorrect part2 add if statement to check correct_markdown_instruction: |-
         ##
         Step 4 - add an if-statement in *checkCorrect*\r
         \r
@@ -58978,14 +59310,14 @@
         statement inside the function `checkCorrect` that:**\r
         \r
         * Compares `buttonId`
-        and `randButtonID` and\r
+        and `randButtonId` and\r
         * Displays a message to console that they got right
         or wrong\r
         \r
         Insert something like this *between* your existing console.log
         statement and the call to setBoard()\r
         \r
-        \t\tif( buttonId == randButtonID
+        \t\tif( buttonId == randButtonId
         ) {\r
                 \tconsole.log("You got it right!");\r
                 } else {\r
@@ -59011,7 +59343,7 @@
         **TIP:** It might be useful to temporarily remove or comment
         out the call to `setBoard()` so the board doesn't change every time when
         you click.  This would let you verify that every button works right for a
-        single board setup.  Then add it back in once you're done.\r
+        single board setup.  Then add it back in once you're done.
       U5 ColorSleuth implement end game_markdown_instruction: |
         # Challenge - Pick
         a way for the game to end and implement it\r
@@ -60224,7 +60556,7 @@
         2. Why is it called a "Boolean"?\r
         3.
         Is this a legal expression?  `10 > 25`?
-      U5-AP-Algorithm-Does-It-Count_markdown_instruction: |-
+      U5-AP-Algorithm-Does-It-Count_markdown_instruction: |
         # AP Practice - Algorithm
         - Score the Response\r
         \r
@@ -60269,11 +60601,11 @@
         **Program
         Code:** \r
         \r
-        <img src="https://images.code.org/93246c79e25bce7f544382cce0a1df04-image-1515196646222.54.17
-        PM.png" style="height:300px">\r
+        <img src="https://images.code.org/e1929ddfdc31d0a96c9111a6e76f43d0-image-1517465128952.png"
+        style="height:300px">\r
         \r
-        **Explain why you would or would not
-        award the point for Row 5 based on the criteria given above**
+        **Explain why you would or would not award
+        the point for Row 5 based on the criteria given above**\r
       U5-AP-Practice-Choose-The-Algorithm_markdown_instruction: |-
         # AP Practice -
         Identify the Abstraction\r
@@ -60616,10 +60948,19 @@
         of these blocks, which you'll need to cover up before moving forward. An
         `if` command will come in handy here. Add a `move forward` command in the
         correct place to mine these blocks.
+      Underground Avoiding Lava_2018_markdown_instruction: |-
+        Lava is hiding beneath
+        some of these blocks, which you'll need to cover up before moving forward.
+        An `if` command will come in handy here. Add a `move forward` command in the
+        correct place to mine these blocks.
       Underground If Statements_markdown_instruction: |-
         Now things are getting tricky.
         Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place
         cobblestone over any lava you uncover.
+      Underground If Statements_2018_markdown_instruction: |-
+        Now things are getting
+        tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to
+        place cobblestone over any lava you uncover.
       Unit 2 RGB Mapping_markdown_instruction: |
         # RGB Colors\r
         \r
@@ -61134,13 +61475,18 @@
         to get familiar with functions, learn how to edit them, and create your own!
       Valentine_artist_01_markdown_instruction: |-
         Help the artist finish his llama
-        heart. See if you can make hearts out of other animals too!
+        heart to change it from llame to llovely! How many llamas does the artist
+        still need to draw?
       Valentine_playlab_01_markdown_instruction: |-
         Kiki the Soccer Girl wants to make
         sure her friends are loved on Valentine's Day! Program Kiki (Actor 1) to
         move left and right when the left and right arrows are pressed. When Kiki
-        is clicked, she should throw hearts towards her friends. How many friends
-        does she have to send love to to win the game?
+        is clicked, she should throw hearts towards her friends. \r
+        \r
+        ---\r
+        Click
+        "Run" and play the game to find out how many friends she has to send love
+        to in order to win!
       Validator_markdown_instruction: |-
         # Software Accessibility: Validator\r
         \r
@@ -62020,6 +62366,16 @@
         Færðu Laurel að fjársjóðnum og notaðu `taka` til að taka hann upp.\r
         \r
         Taktu eina fjársjóðshrúgu til að ljúka áfanganum.
+      comment_intro_maze_2018_markdown_instruction: |-
+        *"I'm confused. Help me remember
+        how to solve this maze."* \r
+        \r
+        Use the new `comment` block to leave yourself
+        quick reminders. They can help you remember what you were doing and why!\r
+        \r
+        Comments
+        are only used for **you**. Your Play Area won't look different because of
+        a comment.
       course1_artist_loops_challenge2_markdown_instruction: Komum í leik! Teiknaðu
         eins mörg X og þú getur! Nærðu að hafa 3 í röð?
       course1_artist_loops_challenge3_markdown_instruction: Tíst tíst! Getur þú hjálpað
@@ -62519,8 +62875,6 @@
         áfanga með þvi að bæta við kubbum svo fuglinn nái svíninu!"
       courseB_maze_seq_challenge1_markdown_instruction: "Þú mátt aðeins fara mest
         fjórum sinnum í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
-      courseB_maze_seq_challenge2_markdown_instruction: Leiðréttu þennan áfanga. Þetta
-        eru réttu kubbarnir en í rangri röð!
       courseB_playLab_events1_markdown_instruction: |-
         Þessi leikur heitir "Leikjasmiðja".\r
         \r
@@ -62701,6 +63055,12 @@
         *"Hæ, ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er."*\r
         \r
         Leiktu þér með kubbana í verkfærakassanum til að sjá hvað þeir gera!
+      courseC_artist_prog1_2018_markdown_instruction: |-
+        *"Hi, I'm an artist. You
+        can write code to make me draw almost anything."*\r
+        \r
+        Play with the blocks
+        in the toolbox to see what they do!
       courseC_artist_prog2_markdown_instruction: |-
         *"Let's make a cage for my pet
         monster!"*\r
@@ -62708,12 +63068,33 @@
         Drag blocks onto the screen to have the artist draw over
         the grey lines in the picture.  \r
         (Each line is 100 pixels long)
+      courseC_artist_prog2_2018_markdown_instruction: |-
+        *"Let's make a cage for
+        my pet monster!"*\r
+        \r
+        Drag blocks onto the screen to have the artist draw
+        over the grey lines in the picture.  \r
+        (Each line is 100 pixels long)
       courseC_artist_prog3_markdown_instruction: |-
         *"This spaceship needs a window!"*\r
         \r
         Each
         side of the inner square is 100 pixels and all of the angles are 90 degrees.
+      courseC_artist_prog3_2018_markdown_instruction: |-
+        *"This spaceship needs a
+        window!"*\r
+        \r
+        Each side of the inner square is 100 pixels and all of the
+        angles are 90 degrees.
       courseC_artist_prog4_markdown_instruction: |-
+        *"Oh no!  Starla's pet alien
+        just flew away! Let's help the spacewoman!"*\r
+        \r
+        Finish Starla's rocket
+        so she can chase her pet.  \r
+        (Each side of the triangle is 100 pixels long
+        and has 120 degree outer angles.)
+      courseC_artist_prog4_2018_markdown_instruction: |-
         *"Oh no!  Starla's pet alien
         just flew away! Let's help the spacewoman!"*\r
         \r
@@ -62729,7 +63110,20 @@
         a rectangle around the outside.  \r
         (The long sides are 200 pixels each and
         the short sides are each 100 pixels)
+      courseC_artist_prog5_2018_markdown_instruction: |-
+        *"Maybe we should make a
+        tag for each of our pets in case they get lost!"*\r
+        \r
+        Finish this tag
+        by drawing a rectangle around the outside.  \r
+        (The long sides are 200 pixels
+        each and the short sides are each 100 pixels)
       courseC_artist_prog6_markdown_instruction: |-
+        *"Now a tag for Belle!"*\r
+        \r
+        Draw
+        this diamond with 200 pixel sides.
+      courseC_artist_prog6_2018_markdown_instruction: |-
         *"Now a tag for Belle!"*\r
         \r
         Draw
@@ -62741,7 +63135,18 @@
         Can you figure out how to draw the outline?  \r
         (The long side
         is 150 pixels and each of the short sides are 75 pixels.)
+      courseC_artist_prog7_2018_markdown_instruction: |-
+        **Challenge:** This tag is
+        a special one!  \r
+        \r
+        Can you figure out how to draw the outline?  \r
+        (The
+        long side is 150 pixels and each of the short sides are 75 pixels.)
       courseC_artist_prog8_markdown_instruction: |-
+        One more tag.  This is a triangle
+        for Pi.  \r
+        (Each side is 150 pixels)
+      courseC_artist_prog8_2018_markdown_instruction: |-
         One more tag.  This is a triangle
         for Pi.  \r
         (Each side is 150 pixels)
@@ -62749,11 +63154,21 @@
         fyrir Jorge!
       courseC_artist_prog_challenge1_markdown_instruction: Teiknaðu klefa fyrir hvert
         dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
+      courseC_artist_prog_challenge1_2018_markdown_instruction: |-
+        Draw rooms for each
+        of the animals. There are many different ways to solve this puzzle, so have
+        some fun! Each square has a side length of 100 pixels.
       courseC_artist_prog_challenge2_markdown_instruction: "*Teiknum skínandi stjörnu
         á næturhimni!*"
       courseC_artist_prog_challenge2a_markdown_instruction: |-
         *"Help me paint the
         yellow lines on this road!"*\r
+        \r
+        The three line segments have lengths
+        of 150, 100, and 200 pixels!
+      courseC_artist_prog_challenge2a_2018_markdown_instruction: |-
+        *"Help me paint
+        the yellow lines on this road!"*\r
         \r
         The three line segments have lengths
         of 150, 100, and 200 pixels!
@@ -62816,8 +63231,6 @@
         \r
         Collect
         as many coins as you can to finish the stage!
-      courseC_collector_prog_challenge1_markdown_instruction: "*Gáðu vandlega! Getur
-        þú safnað öllum **10** fjársjóðunum?*"
       courseC_collector_prog_challenge2_markdown_instruction: "*Hér má finna **20**
         fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*"
       courseC_flappy_events1_markdown_instruction: |-
@@ -62929,7 +63342,6 @@
         Collect all of the corn and
         all of the pumpkins.
       courseC_harvester_loops_challenge1_markdown_instruction: Safnaðu öllum maísnum.
-      courseC_harvester_loops_challenge1a_markdown_instruction: Safnaðu öllum maísnum.
       courseC_harvester_loops_challenge2_markdown_instruction: |-
         Safnaðu öllu kálinu.
         Forðastu tré og tún!
@@ -62941,12 +63353,21 @@
         \r
         Fix
         the code to help Scrat get to the acorn.
+      courseC_maze_debugging1_2018_markdown_instruction: |-
+        This code isn't quite
+        right!  \r
+        \r
+        Fix the code to help Scrat get to the acorn.
       courseC_maze_debugging3_markdown_instruction: |-
         Something is not quite right.
         \r
         \r
         Remove blocks to get Scrat to the acorn!
-      courseC_maze_debugging_challenge1_markdown_instruction: '*"Fer ég bara í hringi?"*'
+      courseC_maze_debugging3_2018_markdown_instruction: |-
+        Something is not quite
+        right. \r
+        \r
+        Remove blocks to get Scrat to the acorn!
       courseC_maze_debugging_challenge2_markdown_instruction: '*"Ef ég snýst of oft,
         gæti mig svimað! Hjálpaðu mér að ná til svínsins með aðeins fjórum `snúa`
         skipunum."*'
@@ -63038,12 +63459,13 @@
         en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur
         en áfram!
       courseC_playLab_embedded_markdown_instruction: |-
-        Here's a game for you to play!
-        To win, get the penguin to run into the octopus. Use your arrow keys to move
-        the penguin around.\r
+        ##Here's a game for you to
+        play! \r
+        To win, get the penguin to run into the octopus. Use your arrow
+        keys to move the penguin around.\r
         \r
-        Once you are done, you will learn how to make this
-        game!
+        Once you are done, you will learn
+        how to make this game!
       courseC_puppy_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
@@ -63291,13 +63713,57 @@
         ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
         ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
         ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)
+      courseD_artist_project1_2018_markdown_instruction: |-
+        Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \r
+        <hr/>\r
+        \r
+        Þú getur prófað að búa til fjölhliðung eins og einn af þessum:  \r
+        ![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r
+        ![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r
+        ![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r
+        \r
+          \r
+          \r
+        Eða abstrakt form eins og eitt af þessum:  \r
+        ![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r
+        ![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r
+        ![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)
       courseD_artist_project1a_markdown_instruction: |-
         <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
         width="200px" style="float: left; margin: 0 15px 15px 0;" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \r
         \r
         Teiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \r
         (Seinna sérðu hvers vegna.)
+      courseD_artist_project1a_2018_markdown_instruction: |-
+        <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png"
+        width="200px" style="float: left; margin: 0 15px 15px 0;" />Í þessari þraut færðu tækifæri til að byrja á nýrri teikningu! \r
+        \r
+        Teiknaðu tröppumynstur sem notar snúninga á milli 75 og 105 gráða -- en gættu þess að vinstri og hægri snúningar noti sama horn.  \r
+        (Seinna sérðu hvers vegna.)
       courseD_artist_project2_markdown_instruction: |-
+        Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \r
+        \r
+        -
+        Ef þú stekkur fram um **minna** en breidd formsins, gætu þau skarast\r
+        -
+        Ef þú stekkur fram um **meira** en breidd formsins, verður bil á milli þeirra\r
+        \r
+        <hr/>\r
+        \r
+        Röðin gæti orðið bein eins og þessi:\r
+        \r
+        ![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r
+        ![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r
+        ![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r
+        <br/>  <br/>\r
+        \r
+        \r
+        Eða að formin gætu færst til eins og eitt af þessum: \r
+        \r
+        ![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r
+        ![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r
+        ![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)
+      courseD_artist_project2_2018_markdown_instruction: |-
         Teiknaðu nú tvö eða þrjú svona form í röð með því að stökkva fram um einhvern fjölda díla.  \r
         \r
         -
@@ -63332,7 +63798,33 @@
         Hér er dæmi um tröppur sem nota 76 gráðu snúning:\r
         \r
         ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
+      courseD_artist_project2a_2018_markdown_instruction: |-
+        Snúðu nú við um 180 gráður og teiknaðu nákvæmlega sama tröppumynstrið aftur! \r
+        \r
+        - Afgangurinn af þessu stigi verður auðveldari ef þú setur allan kóðann í lykkju sem lætur Elsu \r
+        <br/>\r
+        teikna, snúa við um 180 gráður, teikna, og snúa svo aftur við um 180 gráður. \r
+        \r
+        <hr/>\r
+        \r
+        Hér er dæmi um tröppur sem nota 76 gráðu snúning:\r
+        \r
+        ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)
       courseD_artist_project3_markdown_instruction: |-
+        Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \r
+        \r
+        Þú getur teiknað alls konar flott snjókorn!\r
+        <hr/>\r
+        Skoðaðu þessi dæmi með fjölhliðungum:  \r
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r
+        \r
+        Með abstrakt formum gæti snjókorn litið meira svona út:  \r
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_artist_project3_2018_markdown_instruction: |-
         Láttu nú Elsu hoppa aftur inn að miðju með `hoppa á 200 þvert 200 niður` kubbnum og snúðu henni svo hún teikni röð af formum aftur og aftur í mismunandi áttir. \r
         \r
         Þú getur teiknað alls konar flott snjókorn!\r
@@ -63356,7 +63848,20 @@
         Hér er dæmi þar sem Elsa snýr 6 sinnum:\r
         \r
         ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
+      courseD_artist_project3a_2018_markdown_instruction: |-
+        Snúðu forminu 5 eða 6 sinnum í hring.\r
+        - Ef þú velur 5 snúninga, er hver snúningur 72 gráður\r
+        -
+        Ef þú velur 6 snúninga, er hver snúningur 60 gráður\r
+        <hr/>\r
+        \r
+        Hér er dæmi þar sem Elsa snýr 6 sinnum:\r
+        \r
+        ![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)
       courseD_artist_project4_markdown_instruction: |-
+        Hvað mundi gerast ef við legðum tvö mismunandi löguð snjókorn saman annað ofan á hitt og snerum því síðara aðeins? \r
+        Prófaðu það og sjáðu hvað kemur út!
+      courseD_artist_project4_2018_markdown_instruction: |-
         Hvað mundi gerast ef við legðum tvö mismunandi löguð snjókorn saman annað ofan á hitt og snerum því síðara aðeins? \r
         Prófaðu það og sjáðu hvað kemur út!
       courseD_artist_project4a_markdown_instruction: |
@@ -63371,8 +63876,22 @@
         happens if you make your diamond pattern longer or shorter?\r
         - What does
         it look like to draw two snowflakes on top of one another?\r
+      courseD_artist_project4a_2018_markdown_instruction: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
+        what should we do? Let’s explore and create our own winter wonderland!"_\r
+        \r
+        Try
+        playing around with what you've created. Draw whatever you like!\r
+        - What
+        happens if you use two different angles in your stair step pattern?\r
+        - What
+        happens if you make your diamond pattern longer or shorter?\r
+        - What does
+        it look like to draw two snowflakes on top of one another?
       courseD_artist_project5_markdown_instruction: Virkjaðu sköpunargáfuna með formin
         og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?
+      courseD_artist_project5_2018_markdown_instruction: Virkjaðu sköpunargáfuna með
+        formin og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?
       courseD_artist_project_embedded_markdown_instruction: |-
         Here's what you will
         soon be making!
@@ -63528,7 +64047,17 @@
         great!"*\r
         \r
         Help the bee collect all of the nectar.
+      courseD_bee_nestedLoops1_2018_markdown_instruction: |-
+        *"This is going to **BEE**
+        great!"*\r
+        \r
+        Help the bee collect all of the nectar.
       courseD_bee_nestedLoops1a_markdown_instruction: |-
+        *"This is going to **BEE**
+        great!"*\r
+        \r
+        Help the bee collect all of the nectar.
+      courseD_bee_nestedLoops1a_2018_markdown_instruction: |-
         *"This is going to **BEE**
         great!"*\r
         \r
@@ -63536,20 +64065,40 @@
       courseD_bee_nestedLoops2_markdown_instruction: |-
         This time, help the bee collect
         all of the nectar using as few blocks as possible.
+      courseD_bee_nestedLoops2_2018_markdown_instruction: |-
+        This time, help the bee
+        collect all of the nectar using as few blocks as possible.
       courseD_bee_nestedLoops2_predict1_markdown_instruction: Nú áttu að hjálpa býflugunni
         að safna öllum blómasafanum með eins fáum kubbum og mögulegt er.
+      courseD_bee_nestedLoops2_predict1_2018_markdown_instruction: |-
+        This time, help
+        the bee collect all of the nectar using as few blocks as possible.
       courseD_bee_nestedLoops3_markdown_instruction: "*\"Can you BEE-lieve all of\nthese
         flowers?\"*\\r\n\\r\nCollect all of the nectar from each flower. "
       courseD_bee_nestedLoops5_markdown_instruction: "Collect all of the nectar from\neach
         flower and make honey at the honeycomb. "
       courseD_bee_nestedLoops6_markdown_instruction: Make all of the nectar.
+      courseD_bee_nestedLoops6_2018_markdown_instruction: |-
+        *"Must eat sunflower!"*\r
+        \r
+        Get
+        the zombie to the sunflower using only the blocks available.
       courseD_bee_nestedLoops7_markdown_instruction: |-
         **Challenge:** Figure out how
         to get all of the nectar using only the blocks available.
+      courseD_bee_nestedLoops7_2018_markdown_instruction: |-
+        **Challenge:** Figure
+        out how to get all of the nectar using only the blocks available.
       courseD_bee_nestedLoops8_markdown_instruction: "Collect all of the nectar from\neach
         flower and make honey at the honeycomb. "
+      courseD_bee_nestedLoops8_2018_markdown_instruction: "Collect all of the nectar\nfrom
+        each flower and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_markdown_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_2018_markdown_instruction: Make all of the honey.
       courseD_bee_nestedLoops9_predict2_markdown_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_predict2_2018_markdown_instruction: |-
+        Make all of the
+        honey.
       courseD_bee_nested_loops_challenge1_markdown_instruction: Komum í fjársjóðsleit
         - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en
         aðeins með kubbunum í verkfærakassanum.
@@ -63676,9 +64225,6 @@
         *"Fjársjóðseyja!"*\r
         \r
         Hjálpaðu Laurel að laga kóðann til að ná öllum fjársjóðnum.
-      courseD_collector_debugging_challenge2_markdown_instruction: Taktu eftir hvernig
-        býflugan nær í blómasafann. Getur þú notað eins reglu til að hjálpa henni
-        að búa til allt hunangið?
       courseD_collector_nested_loops_challenge2_markdown_instruction: |-
         Við skulum leita að fjársjóði
         - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 3.
@@ -63866,18 +64412,42 @@
         \r
         Get
         the zombie to the sunflower using the fewest number of blocks possible.
+      courseD_maze_nestedLoops3_2018_markdown_instruction: |-
+        *"Zombie hungry!"*\r
+        \r
+        Get
+        the zombie to the sunflower using the fewest number of blocks possible.
       courseD_maze_nestedLoops4_markdown_instruction: "Get the zombie to the sunflower\nusing
         the fewest blocks possible!  "
+      courseD_maze_nestedLoops4_2018_markdown_instruction: "Get the zombie to the\nsunflower
+        using the fewest blocks possible!  "
       courseD_maze_nestedLoops6_markdown_instruction: |-
+        *"Must eat sunflower!"*\r
+        \r
+        Get
+        the zombie to the sunflower using only the blocks available.
+      courseD_maze_nestedLoops6_2018_markdown_instruction: |-
         *"Must eat sunflower!"*\r
         \r
         Get
         the zombie to the sunflower using only the blocks available.
       courseD_maze_ramp1_markdown_instruction: 'Í þessari þraut: Dragðu alla kubbana
         saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseD_maze_ramp1_2018_markdown_instruction: |-
+        For this puzzle, snap all of
+        the blocks together and click "Run" to watch it go!
       courseD_maze_ramp2_markdown_instruction: Dragðu annan `færa áfram` kubb úr verkfærakassanum
         og festu svo alla kubbana við `þegar keyrt` kubbinn til að ljúka við kóðann.
+      courseD_maze_ramp2_2018_markdown_instruction: |-
+        Drag an extra `move forward`
+        block out of the toolbox, then attach all blocks to `when run` to finish your
+        code.
       courseD_maze_ramp3_markdown_instruction: |-
+        *"Þetta svín ýfir á mér fjaðrirnar."*\r
+        \r
+        Það er einn aukakubbur sem mun láta fuglinn hrapa. \r
+        Hentu kubbnum með því að draga hann aftur í verkfærakassann.
+      courseD_maze_ramp3_2018_markdown_instruction: |-
         *"Þetta svín ýfir á mér fjaðrirnar."*\r
         \r
         Það er einn aukakubbur sem mun láta fuglinn hrapa. \r
@@ -63886,18 +64456,36 @@
         *"Færðu mig eftir slóðinni að kjánalega svíninu."*\r
         \r
         TNT sprengiefnið gæti valdið fjaðrafoki!
+      courseD_maze_ramp4_2018_markdown_instruction: |-
+        *"Trace the path and lead me
+        to the silly pig."* \r
+        \r
+        Avoid TNT or feathers will fly!
       courseD_maze_ramp5_markdown_instruction: |-
         *"Fylgdu þessari slóð til að koma mér til svínsins!"*\r
         \r
         Gættu þín á TNT.
+      courseD_maze_ramp5_2018_markdown_instruction: |-
+        *"Follow this path to get me
+        to the pig!"*\r
+        \r
+        Avoid the TNT.
       courseD_maze_ramp5a_markdown_instruction: |-
         Pay attention to the sequence and
         see if you can figure out how to get to that pig!
+      courseD_maze_ramp5a_2018_markdown_instruction: |-
+        Pay attention to the sequence
+        and see if you can figure out how to get to that pig!
       courseD_maze_ramp5b_markdown_instruction: |-
         **Challenge:** Navigate this maze
         to help the bird find the pig!
+      courseD_maze_ramp5b_2018_markdown_instruction: |-
+        **Challenge:** Navigate this
+        maze to help the bird find the pig!
       courseD_maze_ramp5c_markdown_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5c_2018_markdown_instruction: Help the bird get to the pig.
       courseD_maze_ramp5d_markdown_instruction: Get the bird to the pig.
+      courseD_maze_ramp5d_2018_markdown_instruction: Get the bird to the pig.
       courseD_maze_ramp6_markdown_instruction: |-
         *"Slakaðu á og hjálpaðu mér að finna vonda svínið. Annars gæti ég reiðst!"*\r
         \r
@@ -64022,21 +64610,52 @@
       courseD_playLab_cond6cloneForTest_markdown_instruction: Can we make this work?
       courseD_scrat_ramp1_markdown_instruction: 'Í þessari þraut: Dragðu alla kubbana
         saman og smelltu á "Keyra" til að sjá hvað gerist!'
+      courseD_scrat_ramp1_2018_markdown_instruction: |-
+        For this puzzle, snap all of
+        the blocks together and click "Run" to watch it go!
       courseD_scrat_ramp2_markdown_instruction: Dragðu annan `færa áfram` kubb úr
         verkfærakassanum og festu svo alla kubbana við `þegar keyrt` kubbinn til að
         ljúka við kóðann.
+      courseD_scrat_ramp2_2018_markdown_instruction: |-
+        Drag an extra `move forward`
+        block out of the toolbox, then attach all blocks to `when run` to finish your
+        code.
       courseD_scrat_ramp3_markdown_instruction: |-
         Það er einn aukakubbur sem mun setja Skrat út af sporinu. \r
         Hentu honum með því að losa hann og draga hann aftur í verkfærakassann.
+      courseD_scrat_ramp3_2018_markdown_instruction: |-
+        There is one extra block that
+        is going to cause Scrat to crash.  \r
+        Throw it away by disconnecting it from
+        the other blocks and dragging it back to the toolbox.
       courseD_scrat_ramp4_markdown_instruction: Forðastu sprungna ísinn til að Skrat
         sé öruggur!
+      courseD_scrat_ramp4_2018_markdown_instruction: |-
+        Avoid the cracked ice to keep
+        Scrat safe!
       courseD_scrat_ramp5_markdown_instruction: Forðastu sprungna ísinn!
+      courseD_scrat_ramp5_2018_markdown_instruction: Forðastu sprungna ísinn!
       courseD_scrat_ramp6_markdown_instruction: Notaðu lykkju til að hjálpa Skrat
         að komast til akarnsins!
+      courseD_scrat_ramp6_2018_markdown_instruction: |-
+        Help Scrat get to the acorn
+        using a loop!
       courseD_scrat_ramp7_markdown_instruction: Hjálpaðu Skrat að komast til akarnsins!
+      courseD_scrat_ramp7_2018_markdown_instruction: Hjálpaðu Skrat að komast til
+        akarnsins!
       courseD_scrat_ramp8_markdown_instruction: "**Áskorun:** Notaðu það sem þú hefur
         lært til að koma Skrat til akarnsins!"
+      courseD_scrat_ramp8_2018_markdown_instruction: "**Áskorun:** Notaðu það sem
+        þú hefur lært til að koma Skrat til akarnsins!"
       courseE_artist_concept1_markdown_instruction: |-
+        Recreate this image. \r
+        \r
+        -
+        The hexagons have sides of 50 pixels\r
+        - The hexagons are 100 pixels apart\r
+        -
+        The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels.
+      courseE_artist_concept1_2018_markdown_instruction: |-
         Recreate this image. \r
         \r
         -
@@ -64049,13 +64668,27 @@
         \r
         Each
         square has a side length of **20 pixels** and there are **15 squares per row**.
+      courseE_artist_concept4_2018_markdown_instruction: |-
+        Recreate this drawing.
+        \r
+        \r
+        Each square has a side length of **20 pixels** and there are **15
+        squares per row**.
       courseE_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nHér
         er áskorun!  \\r\n\\r\nÞessi hönnun notar aðeins kubba sem þú hefur þegar
         séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði
         að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\\r\n\\r\nEndurtekna
         formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð
         í fyrstu lykkjunni er aðeins styttri. "
+      courseE_artist_concept_challenge1_2018_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nHér
+        er áskorun!  \\r\n\\r\nÞessi hönnun notar aðeins kubba sem þú hefur þegar
+        séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði
+        að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\\r\n\\r\nEndurtekna
+        formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð
+        í fyrstu lykkjunni er aðeins styttri. "
       courseE_artist_concept_challenge2_markdown_instruction: Búðu til fimm hjóllaga
+        mynstur með kóðanum fyrir neðan.
+      courseE_artist_concept_challenge2_2018_markdown_instruction: Búðu til fimm hjóllaga
         mynstur með kóðanum fyrir neðan.
       courseE_artist_functions1_markdown_instruction: |
         *"Me zombie artist. Me love
@@ -64075,6 +64708,24 @@
         -
         To draw a diamond, you will need to alternate between turning 60 degrees and
         120 degrees.
+      courseE_artist_functions10_2018_markdown_instruction: |-
+        This time, use lines
+        of 8 hexagons with 25 pixel sides.\r
+        \r
+        - To make each hexagon, repeat the
+        side 6 times, turning 60 degrees.\r
+        - Jump 25 pixels between each hexagon.\r
+        -
+        To draw a diamond, you will need to alternate between turning 60 degrees and
+        120 degrees.
+      courseE_artist_functions1_2018_markdown_instruction: |
+        *"Me zombie artist.
+        Me love drawing!"*\r
+        \r
+        Help the zombie draw glasses using squares with
+        sides of 100 pixels.  \r
+        The bridge between the glasses is 75 pixels long.\r
+        \r
       courseE_artist_functions2_markdown_instruction: |-
         Functions let you define new
         blocks! \r
@@ -64085,12 +64736,28 @@
         ___\r
         \r
         The squares are 75 pixels apart.
+      courseE_artist_functions2_2018_markdown_instruction: |-
+        Functions let you define
+        new blocks! \r
+        \r
+        We've moved the blocks needed for drawing a square into
+        a function called `draw a square`. This time, use the `draw a square` function
+        to create the glasses. \r
+        ___\r
+        \r
+        The squares are 75 pixels apart.
       courseE_artist_functions3_markdown_instruction: |-
         We will come back to functions
         shortly. Let's take a break to practice making this star. \r
         \r
         You can
         make this drawing by adding a repeat block.
+      courseE_artist_functions3_2018_markdown_instruction: |-
+        We will come back to
+        functions shortly. Let's take a break to practice making this star. \r
+        \r
+        You
+        can make this drawing by adding a repeat block.
       courseE_artist_functions4_markdown_instruction: |-
         Now that you can draw a star,
         try drawing four stars!\r
@@ -64099,9 +64766,24 @@
         -
         Turn 45 degrees between branches\r
         - Jump 100 pixels between each star
+      courseE_artist_functions4_2018_markdown_instruction: |-
+        Now that you can draw
+        a star, try drawing four stars!\r
+        \r
+        - Each branch of the star is 25 pixels
+        long\r
+        - Turn 45 degrees between branches\r
+        - Jump 100 pixels between each
+        star
       courseE_artist_functions5_markdown_instruction: |-
         When is drawing three stars
         harder than drawing four? When you also have to jump over the moon!\r
+        \r
+        Draw
+        only those three stars to finish this puzzle.
+      courseE_artist_functions5_2018_markdown_instruction: |-
+        When is drawing three
+        stars harder than drawing four? When you also have to jump over the moon!\r
         \r
         Draw
         only those three stars to finish this puzzle.
@@ -64111,11 +64793,32 @@
         Make
         this window by drawing a square, then turning 90 degrees before drawing another,
         and so on.
+      courseE_artist_functions6_2018_markdown_instruction: |-
+        You are doing great!
+        \r
+        \r
+        Make this window by drawing a square, then turning 90 degrees before
+        drawing another, and so on.
       courseE_artist_functions7_markdown_instruction: |-
         Let's take the code for the
         window and add it to function `draw a window`. Now, we can call the function
         any time we need to draw a window without having to write the code again.
         \r
+        \r
+        ![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)\r
+        \r
+        Try
+        solving this puzzle by creating `draw a window` and calling it five times.
+        Watch out for the door!\r
+        \r
+        - The top windows are 50 pixels away from each
+        other.  \r
+        - The bottom windows are 100 pixels below the top set.
+      courseE_artist_functions7_2018_markdown_instruction: |-
+        Let's take the code
+        for the window and add it to function `draw a window`. Now, we can call the
+        function any time we need to draw a window without having to write the code
+        again. \r
         \r
         ![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)\r
         \r
@@ -64132,9 +64835,23 @@
         \r
         Create
         as many functions as you think you need to make this drawing of 50 pixel squares.
+      courseE_artist_functions8_2018_markdown_instruction: |-
+        **Challenge:** Did you
+        know that you can call functions from *inside* other functions?!\r
+        \r
+        Create
+        as many functions as you think you need to make this drawing of 50 pixel squares.
       courseE_artist_functions9_markdown_instruction: |-
         Create this image using the
         limited blocks provided. \r
+        \r
+        - Each triangle has sides of **50 pixels**  \r
+        -
+        To draw a diamond, you will need to alternate between turning **60 degrees
+        and 120 degrees**.
+      courseE_artist_functions9_2018_markdown_instruction: |-
+        Create this image using
+        the limited blocks provided. \r
         \r
         - Each triangle has sides of **50 pixels**  \r
         -
@@ -64148,8 +64865,24 @@
         sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær
         sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu
         honum svo til að búa til þína eigin flottu hönnun!"
+      courseE_artist_functions_challenge1_2018_markdown_instruction: "Þegar þú hefur
+        einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær
+        sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu
+        honum svo til að búa til þína eigin flottu hönnun!"
       courseE_artist_functions_challenge2_markdown_instruction: |-
         Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      courseE_artist_functions_challenge2_2018_markdown_instruction: |-
+        Not only can
+        you jump to some pre-set locations, like the corners of the canvas, you can
+        also use a `jump to` command to get to absolutely any spot you like! Try this
+        code to see how it works, then make the program your own!\r
         <xml>\r
           <block
         type="jump_to_xy">\r
@@ -64160,6 +64893,8 @@
       courseE_artist_functions_predict1_markdown_instruction: |
         Here is a puzzle that
         uses a function that we have defined. \r
+      courseE_artist_functions_predict1_2018_markdown_instruction: "Here is a puzzle\nthat
+        uses a function that we have defined. "
       courseE_artist_ramp10_markdown_instruction: |-
         Veistu að þú getur sett lykkjur innan í aðrar lykkjur til að gera þær öflugri?  Það er kallað að búa til "faldaða lykkju".\r
         \r
@@ -64184,6 +64919,14 @@
         Fínt!  Nú skulum við búa til ferning með listamanninum!  Kubbarnir eru svolítið öðruvísi en í öðrum þrautum en hugmyndin sú sama.\r
         <hr/>\r
         Hver hlið ferningsins er 200 dílar á lengd og þú þarft að snúa um 90 gráður fyrir hvert horn.
+      courseE_artist_ramp8_2018_markdown_instruction: |-
+        Great!  Now let's use that
+        `repeat` loop to make a square using Artist!  The blocks for artist are a
+        little different than other puzzles, but the idea is the same.\r
+        ___\r
+        #####
+        Each side of the square has a length of 200 pixels, and you will need to turn
+        90 degrees to make each angle.
       courseE_artist_ramp9_markdown_instruction: |-
         Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
         <hr/>\r
@@ -64192,21 +64935,53 @@
         Notaðu það sem þú hefur lært til að teikna þennan þríhyrning.\r
         <hr/>\r
         Hver hlið er 100 díla löng. Þú þarft að snúa um 120 gráður á hverju horni.
+      courseE_artist_ramp9_2018_markdown_instruction: |-
+        Use what you've learned to
+        draw this triangle.\r
+        ___\r
+        ##### The sides are each 100 pixels long. You
+        will need to turn 120 degrees at each corner.
       courseE_bee_concept1_markdown_instruction: "*\"Can you BEE-lieve all of these\nflowers?\"*\\r\n\\r\nCollect
         all of the nectar from each flower. "
+      courseE_bee_concept1_2018_markdown_instruction: "*\"Can you BEE-lieve all of\nthese
+        flowers?\"*\\r\n\\r\nCollect all of the nectar from each flower. "
       courseE_bee_concept2_markdown_instruction: |-
         Help the bee make all of the honey.  \r
         \r
         You
         can only make honey at a honeycomb, but you can check any space to see if
         there is a honeycomb.
+      courseE_bee_concept2_2018_markdown_instruction: |-
+        Help the bee make all of the
+        honey.  \r
+        \r
+        You can only make honey at a honeycomb, but you can check
+        any space to see if there is a honeycomb.
       courseE_bee_concept5_markdown_instruction: |-
         Can you help the bee collect the
         nectar from the flowers? \r
         \r
         You can only collect nectar from flowers,
         but you can check any space to see if there is a flower.
+      courseE_bee_concept5_2018_markdown_instruction: |-
+        Can you help the bee collect
+        the nectar from the flowers? \r
+        \r
+        You can only collect nectar from flowers,
+        but you can check any space to see if there is a flower.
       courseE_bee_functions10_markdown_instruction: |-
+        *"Show me the HONEY!"*\r
+        \r
+        Solve
+        this puzzle by creating a function that causes the bee to: \r
+        - turn toward
+        the branch in the path\r
+        - move forward\r
+        - make all of the honey\r
+        - return
+        to the main path \r
+        - turn back to the original direction
+      courseE_bee_functions10_2018_markdown_instruction: |-
         *"Show me the HONEY!"*\r
         \r
         Solve
@@ -64224,16 +64999,38 @@
         \r
         Use the `get 2 nectar` function to collect the
         nectar from each flower.
+      courseE_bee_functions2_2018_markdown_instruction: |-
+        Functions are blocks of
+        code that perform a task.  \r
+        \r
+        Use the `get 2 nectar` function to collect
+        the nectar from each flower.
       courseE_bee_functions3_markdown_instruction: |-
         Build the `get 5` function to
         use in this puzzle.
+      courseE_bee_functions3_2018_markdown_instruction: |-
+        Build the `get 5` function
+        to use in this puzzle.
       courseE_bee_functions4_markdown_instruction: |-
         The `move and get nectar` function
         turns the bee, collects nectar, and then returns the bee to where it started.  \r
         \r
         Use
         the `move and get nectar` function to collect all of the nectar.
+      courseE_bee_functions4_2018_markdown_instruction: |-
+        The `move and get nectar`
+        function turns the bee, collects nectar, and then returns the bee to where
+        it started.  \r
+        \r
+        Use the `move and get nectar` function to collect all
+        of the nectar.
       courseE_bee_functions8_markdown_instruction: |-
+        **Challenge:** These flowers
+        can have a different amount of nectar each time you run the puzzle.   \r
+        \r
+        Create
+        a function that collects all of the nectar from each flower.
+      courseE_bee_functions8_2018_markdown_instruction: |-
         **Challenge:** These flowers
         can have a different amount of nectar each time you run the puzzle.   \r
         \r
@@ -64247,8 +65044,9 @@
         can use what you learned to solve it.
       courseE_bee_functions_challenge1_markdown_instruction: "Þú þarft að leysa þessa
         þraut á eigin spýtur. Hún gæti leynt á sér!"
-      courseE_bee_functions_challenge2_markdown_instruction: "Þú þarft að leysa þessa
-        þraut á eigin spýtur!"
+      courseE_bee_functions_challenge1_2018_markdown_instruction: |-
+        You are on your
+        own for this challenge.  This could "bee" harder than it looks!
       courseE_bee_ramp14_markdown_instruction: |
         Sama aðferðin virkar með blómasafa og hunangi! \r
         \r
@@ -64281,9 +65079,20 @@
       courseE_farmer_functions10b_markdown_instruction: |-
         Use your new function twice
         to solve this puzzle.
+      courseE_farmer_functions10b_2018_markdown_instruction: |-
+        Use your new function
+        twice to solve this puzzle.
       courseE_farmer_functions11_predict_markdown_instruction: |-
         Figure out which
         function to use and which one to delete, then solve this puzzle!
+      courseE_farmer_functions11_predict_2018_markdown_instruction: |-
+        Figure out which
+        function to use and which one to delete, then solve this puzzle!
+      courseE_farmer_functions1_2018_markdown_instruction: |-
+        *"Have we met before?
+        I'm the farmer!"*\r
+        \r
+        Help the farmer get to the pumpkin and pick it.
       courseE_farmer_functions1a_markdown_instruction: |-
         *"Oooh, veggies are cropping
         up everywhere!"*\r
@@ -64295,6 +65104,17 @@
         that leads to the pumpkin will either have *one* corn nothing.  You will need
         to use an `if` statement to check whether there is corn before you try to
         pick it!
+      courseE_farmer_functions1a_2018_markdown_instruction: |-
+        *"Oooh, veggies are
+        cropping up everywhere!"*\r
+        \r
+        Now help the farmer pick all of the corn
+        on the way to the pumpkin at the end.\r
+        ___\r
+        ##### Note: Every square on
+        the path that leads to the pumpkin will either have *one* corn nothing.  You
+        will need to use an `if` statement to check whether there is corn before you
+        try to pick it!
       courseE_farmer_functions2a_markdown_instruction: |-
         *"I feel so functional!"*\r
         \r
@@ -64313,7 +65133,28 @@
         ___\r
         ##### Each sprout will either grow *one* corn
         or nothing.
+      courseE_farmer_functions2b_2018_markdown_instruction: |-
+        Help the farmer pick
+        the corn and pumpkins.\r
+        ___\r
+        ##### Each sprout will either grow *one*
+        corn or nothing.
       courseE_farmer_functions2ba_markdown_instruction: |-
+        *"I feel so functional!"*\r
+        \r
+        Did
+        you notice that there was repeated code in the last puzzle?  It doesn't work
+        to put it all inside of a loop, but we **can** use functions.  \r
+        \r
+        For
+        this puzzle, we have moved the repeated code into a function called `corn
+        and pumpkin`. Now, all you need to do is put the small `corn and pumpkin`
+        **function call block** into the code where you need it.\r
+        \r
+        ___\r
+        #####
+        Each sprout will either grow *one* corn or nothing.
+      courseE_farmer_functions2ba_2018_markdown_instruction: |-
         *"I feel so functional!"*\r
         \r
         Did
@@ -64341,9 +65182,19 @@
         \r
         Don't forget to add the little **function call** blocks
         to use the function in your program when you're done.
+      courseE_farmer_functions3c_2018_markdown_instruction: |-
+        Now, fill-in the function
+        yourself by pulling the blocks from the code and dropping them into the **function
+        definition**.  \r
+        \r
+        Don't forget to add the little **function call** blocks
+        to use the function in your program when you're done.
       courseE_farmer_functions4b_markdown_instruction: |-
         Use your new function to
         solve this puzzle.
+      courseE_farmer_functions4b_2018_markdown_instruction: |-
+        Use your new function
+        to solve this puzzle.
       courseE_farmer_functions5b_markdown_instruction: |-
         *"They're multiplying!"*\r
         \r
@@ -64353,10 +65204,22 @@
       courseE_farmer_functions5c_markdown_instruction: |-
         Your function will come in
         handy here.
+      courseE_farmer_functions5c_2018_markdown_instruction: |-
+        Your function will come
+        in handy here.
       courseE_farmer_functions6b_markdown_instruction: Pick all of the produce.
       courseE_farmer_functions6c_markdown_instruction: |-
         *"Lettuce pick all of the
         produce!"*\r
+        \r
+        Now the sprouts can be either corn **or** lettuce.  What
+        do you need to add to this program to check each sprout before you pick?\r
+        ___\r
+        #####
+        Note: Each sprout will turn into either **one** corn or **one** lettuce.
+      courseE_farmer_functions6c_2018_markdown_instruction: |-
+        *"Lettuce pick all
+        of the produce!"*\r
         \r
         Now the sprouts can be either corn **or** lettuce.  What
         do you need to add to this program to check each sprout before you pick?\r
@@ -64372,6 +65235,15 @@
         \r
         *(Don't forget
         to collect all of the produce along the way!)*
+      courseE_farmer_functions7b_2018_markdown_instruction: |-
+        *"This harvest is a-MAZE-ing!"*\r
+        \r
+        Help
+        the farmer find her way down this confusing path and to the pumpkin by turning
+        **left** at the corn and **right** at the lettuce.  \r
+        \r
+        *(Don't forget
+        to collect all of the produce along the way!)*
       courseE_farmer_functions8b_markdown_instruction: |-
         **Challenge:** Not all corners
         are marked in this maze, that means that you will need to use your navigation
@@ -64379,9 +65251,19 @@
         \r
         Can you figure out
         what you need to do?
+      courseE_farmer_functions8b_2018_markdown_instruction: |-
+        **Challenge:** Not all
+        corners are marked in this maze, that means that you will need to use your
+        navigation code more than once to get where you need to go.  \r
+        \r
+        Can you
+        figure out what you need to do?
       courseE_farmer_functions9b_markdown_instruction: |-
         Take a good look at this
         puzzle.  Can you figure out the pattern?
+      courseE_farmer_functions9b_2018_markdown_instruction: |-
+        Take a good look at
+        this puzzle.  Can you figure out the pattern?
       courseE_farmer_functions9b_clone_markdown_instruction: |-
         Take a good look at
         this puzzle.  Can you figure out the pattern?
@@ -64401,15 +65283,27 @@
         Við höfum bætt nýjum kubbi í verkfærakassann sem heitir `meðan það er kál`. Notaðu hann til að taka upp kál á meðan eitthvað kál er!\r
         \r
         \r
+      courseE_farmer_ramp11a_2018_markdown_instruction: "Oh my!  This pile is so\nbig
+        that it's hard to guess how much dirt is in it.  \\r\n\\r\n___\\r\n\\r\nWe've\nadded
+        a new block to the toolbox called the `while there is a pile` block.  Use\nthis
+        to remove dirt only while there is still some to scoop! "
       courseE_farmer_ramp11b_markdown_instruction: |-
         Let's try that again, but with
         more piles!
+      courseE_farmer_ramp11b_2018_markdown_instruction: |-
+        Let's try that again, but
+        with more piles!
       courseE_farmer_ramp12_markdown_instruction: |
         Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\r
         \r
         \r
         \r
       courseE_farmer_ramp12_forswap_markdown_instruction: |
+        Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\r
+        \r
+        \r
+        \r
+      courseE_farmer_ramp12_forswap_2018_markdown_instruction: |
         Notaðu nú faldaðar lykkjur (`endurtaka` og `meðan`) til að leysa þessa þraut.\r
         \r
         \r
@@ -64426,22 +65320,43 @@
         Now the harvester needs to pick
         all of the lettuce.  Use `while there is lettuce` inside of a `repeat` loop
         to get it all!
+      courseE_farmer_ramp12b_2018_markdown_instruction: |-
+        Now the harvester needs
+        to pick all of the lettuce.  Use `while there is lettuce` inside of a `repeat`
+        loop to get it all!
       courseE_farmer_ramp12c_markdown_instruction: "The lettuce is now only at the\nend
         of the path.  \\r\nTravel down the path **until** you reach a head of lettuce,\nthen
         continue to pick it **while** there is still some left.  "
+      courseE_farmer_ramp12c_2018_markdown_instruction: "The lettuce is now only\nat
+        the end of the path.  \\r\nTravel down the path **until** you reach a head\nof
+        lettuce, then continue to pick it **while** there is still some left.  "
       courseE_farmer_ramp12d_markdown_instruction: "The lettuce is scattered all\nover
         the garden.  \\r\nTravel down each path **until** you reach a head of\nlettuce,
         then continue to pick it **while** there is still some left.  "
+      courseE_farmer_ramp12d_2018_markdown_instruction: "The lettuce is scattered\nall
+        over the garden.  \\r\nTravel down each path **until** you reach a head\nof
+        lettuce, then continue to pick it **while** there is still some left.  "
       courseE_farmer_ramp12e_markdown_instruction: "The lettuce is scattered all\nover
         the garden.  \\r\nTravel down each path **until** you reach a head of\nlettuce,
         then continue to pick it **while** there is still some left.  "
+      courseE_farmer_ramp12e_2018_markdown_instruction: "The lettuce is scattered\nall
+        over the garden.  \\r\nTravel down each path **until** you reach a head\nof
+        lettuce, then continue to pick it **while** there is still some left.  "
       courseE_farmer_ramp12f_markdown_instruction: |-
         **Challenge**: The only way to
         get all of the crops is to move forward until you get to the lettuce, then
         turn left **if** there is a path to the left.  Otherwise, turn right.
+      courseE_farmer_ramp12f_2018_markdown_instruction: |-
+        **Challenge**: The only
+        way to get all of the crops is to move forward until you get to the lettuce,
+        then turn left **if** there is a path to the left.  Otherwise, turn right.
       courseE_farmer_ramp12g_markdown_instruction: |-
         Move forward until you get to
         the lettuce, then turn left **if** there is a path to the left.  Otherwise,
+        turn right.
+      courseE_farmer_ramp12g_2018_markdown_instruction: |-
+        Move forward until you get
+        to the lettuce, then turn left **if** there is a path to the left.  Otherwise,
         turn right.
       courseE_farmer_ramp13_markdown_instruction: |
         Hamingjan!  Sjáðu alla þessa sprota. Sumir munu verða að maís og aðrir að káli.  Notaðu `ef við maís / annars` kubbinn til að taka upp maís á meðan það er maís, en **annars** taka upp kál á meðan það er kál. \r
@@ -64498,24 +65413,63 @@
         \r
         Eitthvað ætti að gerast þegar þú færð nógu mörg stig eða þegar þú klárar stigin. Bættu kóða í föllin `vinna leik` og `tapa leik` til að leikurinn virki eins og hann á að gera. \r
         Smelltu á vísbendingarnar til að fá hugmyndir!
+      courseE_playLab_challenge1_2018_markdown_instruction: |-
+        *The **squirrels** are
+        terrified to see that a **dinosaur** has come to town! Can the brave **knight**
+        keep them all from panicking?*\r
+        \r
+        Rules:\r
+        1. *Touching the squirrels
+        scores you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
+        \r
+        \r
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
       courseE_playLab_scaffold1_markdown_instruction: |-
         It is amazing how much you
         have learned! Let's make a game step by step.\r
         \r
         Using new blocks in
         your toolbox, choose a new background, then pick an actor to be in your game.
+      courseE_playLab_scaffold1_2018_markdown_instruction: |-
+        It is amazing how much
+        you have learned! Let's make a game step by step.\r
+        \r
+        Using new blocks
+        in your toolbox, choose a new background, then pick an actor to be in your
+        game.
       courseE_playLab_scaffold2_markdown_instruction: |-
         Use  blocks like event handlers
         and actions to make your player move according to the arrows on your keyboard.  \r
         \r
         Get
         the player to the targets to complete this puzzle.
+      courseE_playLab_scaffold2_2018_markdown_instruction: |-
+        Use  blocks like event
+        handlers and actions to make your player move according to the arrows on your
+        keyboard.  \r
+        \r
+        Get the player to the targets to complete this puzzle.
       courseE_playLab_scaffold3_markdown_instruction: |-
         Let's add some more characters
         to your game!\r
         \r
         Use the `set actor` block to add more characters then
         move to the goal to complete this puzzle.
+      courseE_playLab_scaffold3_2018_markdown_instruction: |-
+        Let's add some more
+        characters to your game!\r
+        \r
+        Use the `set actor` block to add more characters
+        then move to the goal to complete this puzzle.
       courseE_playLab_scaffold4_markdown_instruction: |-
         Multiple characters and getting
         the actors moving is a great start to a game, but we need to do more to make
@@ -64524,14 +65478,30 @@
         Use event blocks like
         the `when actor touches` to change the score. Score 10 points to complete
         this puzzle.
+      courseE_playLab_scaffold4_2018_markdown_instruction: |-
+        Multiple characters and
+        getting the actors moving is a great start to a game, but we need to do more
+        to make this feel like a real game. Let's add a score!\r
+        \r
+        Use event blocks
+        like the `when actor touches` to change the score. Score 10 points to complete
+        this puzzle.
       courseE_playLab_scaffold5_markdown_instruction: |-
         Great job! You have all the
         basic components of a working game. Now spend some time making sure the game
         works the way you want. Include a way to win or lose your game, then play
         until you meet one of those conditions.
+      courseE_playLab_scaffold5_2018_markdown_instruction: |-
+        Great job! You have all
+        the basic components of a working game. Now spend some time making sure the
+        game works the way you want. Include a way to win or lose your game, then
+        play until you meet one of those conditions.
       courseE_playLab_scaffold6_markdown_instruction: |-
         You've finished! Now you
         can play your game or share it with your friends and classmates!
+      courseE_playLab_scaffold6_2018_markdown_instruction: |-
+        You've finished! Now
+        you can play your game or share it with your friends and classmates!
       courseE_playlab_challenge2_markdown_instruction: |-
         Getur þú fundið út hvernig þetta "Völvu"-app virkar? Prófaðu að bæta einhverju af þessari virkni við leikinn:\r
         \r
@@ -64623,18 +65593,44 @@
         variable with other drawing elements to make magical images like this one.\r
         \r
         ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
+      courseF_artist_for10_2018_markdown_instruction: |-
+        **Free Play:** Try using the
+        `counter` variable with other drawing elements to make magical images like
+        this one.\r
+        \r
+        ![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)
+      courseF_artist_for1_2018_markdown_instruction: |
+        **Free Play:** Experiment with
+        the `for` loop and the `counter` variable.  \r
+        \r
+        Drag out a few blocks
+        and see what happens.  \r
       courseF_artist_for2_markdown_instruction: |-
         Use a `repeat` loop inside of a
         `for` loop to create this stack of triangles that goes from 50 pixel to 100
         pixel sides.
+      courseF_artist_for2_2018_markdown_instruction: |-
+        Use a `repeat` loop inside
+        of a `for` loop to create this stack of triangles that goes from 50 pixel
+        to 100 pixel sides.
       courseF_artist_for3_markdown_instruction: |-
         Create these triangles that go from
         20 pixel sides to 200 pixel sides, where each triangle is 20 pixels larger
         than the last.
+      courseF_artist_for3_2018_markdown_instruction: |-
+        Create these triangles that
+        go from 20 pixel sides to 200 pixel sides, where each triangle is 20 pixels
+        larger than the last.
       courseF_artist_for5_markdown_instruction: |-
         Just one little change to the code
         from the last image can create this drawing. Can you figure out what that
         change is?\r
+        ___\r
+        Hint:  You need to remove something!
+      courseF_artist_for5_2018_markdown_instruction: |-
+        Just one little change to the
+        code from the last image can create this drawing. Can you figure out what
+        that change is?\r
         ___\r
         Hint:  You need to remove something!
       courseF_artist_for6_markdown_instruction: |-
@@ -64644,9 +65640,23 @@
         Recreate
         your code from the last level, but turn 89 degrees to create this twisted
         square spiral.
+      courseF_artist_for6_2018_markdown_instruction: |-
+        If you turn a little bit more
+        or less than you normally would for a shape, it creates a neat effect.\r
+        \r
+        Recreate
+        your code from the last level, but turn 89 degrees to create this twisted
+        square spiral.
       courseF_artist_for7_markdown_instruction: "Make three small changes to the\ncode
         from the last level to get this!  "
+      courseF_artist_for7_2018_markdown_instruction: "Make three small changes to\nthe
+        code from the last level to get this!  "
       courseF_artist_for9_markdown_instruction: |-
+        **Inspiration:** Use the counter
+        inside the `set alpha` block to get something like this faded center.  \r
+        (This
+        hexagon pattern was made using a 60 degree turn.)
+      courseF_artist_for9_2018_markdown_instruction: |-
         **Inspiration:** Use the counter
         inside the `set alpha` block to get something like this faded center.  \r
         (This
@@ -64655,28 +65665,64 @@
         Ef þú snýrð aðeins meira eða minna en þú mundir venjulega gera fyrir tiltekið form, getur útkoman komið skemmtilega á óvart. \r
         \r
         Prófaðu að nota eitthvað af kóðanum úr síðasta áfanga, en snúa um 89 gráður til að búa til þennan snúna spíral úr ferningum.
+      courseF_artist_for_Template_2018_markdown_instruction: |-
+        If you turn a little
+        bit more or less than you normally would for a shape, it creates a neat effect.\r
+        \r
+        Try
+        using some of the code from the last level, but turning 89 degrees to create
+        this twisted square spiral.
       courseF_artist_for_challenge1_markdown_instruction: |
         Getur þú fundið leið til að endurgera þessa teikningu? \r
         \r
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
         width="350px"/>\r
+      courseF_artist_for_challenge1_2018_markdown_instruction: |-
+        Can you figure out
+        how to re-create this drawing? \r
+        \r
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
+        width="350px"/>
       courseF_artist_for_challenge2_markdown_instruction: |-
         Getur þú fundið leið til að endurgera þessa teikningu með einni lykkju? \r
         \r
         <img
         src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png"
         width="350px"/>
+      courseF_artist_for_challenge2_2018_markdown_instruction: |-
+        Can you figure out
+        how to re-create this drawing with a single loop? \r
+        \r
+        <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png"
+        width="350px"/>
       courseF_artist_fwp1_markdown_instruction: Nú ætlum við að prófa öflugan ritil
         fyrir föll. Reyndu að finna út úr því hvernig þú gætir unnið með og lagað
         villur í fallinu `teikna ferning`.
+      courseF_artist_fwp1_2018_markdown_instruction: |-
+        Today, we're going to keep
+        using the powerful function editor. See if you remember how to edit the `draw
+        a square` function to find the bugs.
       courseF_artist_fwp2_markdown_instruction: |-
         Breyttu fallinu svo að það taki stika með heitinu `lengd`.\r
         \r
         Hver ferningur ætti að hafa 25 lengri hliðar en næsti á undan. Sá fyrsti hefur 25 díla hliðar.
+      courseF_artist_fwp2_2018_markdown_instruction: |-
+        Edit the function to accept
+        a parameter called `length`.  \r
+        \r
+        The sides of each square should be 25
+        pixels larger than the last.  The first square has 25 pixel sides.
       courseF_artist_fwp2_predict1_markdown_instruction: |-
         Breyttu fallinu svo að það taki stika með heitinu `lengd`.\r
         \r
         Hver ferningur ætti að hafa 25 lengri hliðar en næsti á undan. Sá fyrsti hefur 25 díla hliðar. Skiptu '???' út fyrir réttu gildunum til að teikna myndina.
+      courseF_artist_fwp2_predict1_2018_markdown_instruction: |-
+        Edit the function
+        to accept a parameter called `length`.  \r
+        \r
+        The sides of each square should
+        be 25 pixels larger than the last.  The first square has 25 pixel sides. Replace
+        the '???' with the correct values to draw the picture.
       courseF_artist_fwp3_markdown_instruction: |-
         Prófaðu nú að búa til fall frá grunni!\r
         \r
@@ -64685,7 +65731,22 @@
         \r
         <hr/>\r
         Talið frá efra hægra horni eru breiddir kassanna 50, 100, 150 og 200.
+      courseF_artist_fwp3_2018_markdown_instruction: |-
+        Now try creating the function
+        from scratch!  \r
+        \r
+        Create a function called `draw a square` and use it
+        to outline these four boxes.  \r
+        Make sure to add a parameter for `length`!\r
+        \r
+        ___\r
+        Starting
+        from the upper right, the box widths are 50, 100, 150, and 200.
       courseF_artist_fwp4_markdown_instruction: |-
+        Vel gert! Breyttu nú þessu falli og bættu í það stika fyrir fjölda hliða í fjölhyrningnum.\r
+        \r
+        Hliðar allra formanna eru 100 dílar á lengd.
+      courseF_artist_fwp4_2018_markdown_instruction: |-
         Vel gert! Breyttu nú þessu falli og bættu í það stika fyrir fjölda hliða í fjölhyrningnum.\r
         \r
         Hliðar allra formanna eru 100 dílar á lengd.
@@ -64698,32 +65759,85 @@
         <hr/>\r
         `Margfalda` kubburinn lítur svona út ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r
         \r
+      courseF_artist_fwp5_2018_markdown_instruction: |-
+        Use the function from the last
+        puzzle to draw this series of shapes.  \r
+        \r
+        \r
+        The triangle has 21 pixel
+        sides, and the sides in each following shape are 7 pixels longer than the
+        last.   \r
+        Use the `multiplication` block to make this all happen with just
+        one function call.\r
+        ___\r
+        The `multipication` block looks like this <xml><block
+        type="math_arithmetic" inline="true">\r
+              <title name="OP">MULTIPLY</title>\r
+            </block></xml>
       courseF_artist_fwp6_markdown_instruction: |-
         **Áskorun:** Breyttu `teikna spíral` fallinu svo það noti stikana `lengd` og `hliðar` og búðu svo til þessi form.\r
         \r
         - Ferningurinn fer frá 3 upp í 90 díla.\r
         - Sexhyrningurinn fer frá 3 upp í 100 díla.\r
         - Þríhyrningurinn fer frá 3 upp í 105 díla.
+      courseF_artist_fwp6_2018_markdown_instruction: |-
+        **Challenge:** Edit `draw a
+        spiral edge` to use `length` and `sides` parameters, then recreate these shapes.\r
+        \r
+        -
+        The square goes from 3 pixels to 90 pixels.\r
+        - The hexagon goes from 3 pixels
+        to 100 pixels.\r
+        - The triangle goes from 3 pixels to 95 pixels.
       courseF_artist_fwp7_markdown_instruction: |
         Ljúktu við `teikna spíral` fallið svo að það biðji líka um lágmarkslengd fyrir miðju spíralsins.\r
         \r
         - Stysta hliðin í miðju þessa fernings er 50 dílar á lengd\r
         - Lengsta hliðin yst í spíralnum er 200 dílar á lengd\r
+      courseF_artist_fwp7_2018_markdown_instruction: |-
+        Finish off the `draw a spiral
+        edge` function to also ask for a minimum length for the center of the spiral.\r
+        \r
+        -
+        The smallest side in the center of this square is 50 pixels long\r
+        - The
+        longest side at the outside of this spiral is 200 pixels long
       courseF_artist_fwp8_markdown_instruction: |
         Getur þú fundið úr hvernig þú getur teiknað þessa mynd með fallinu sem þú varst að búa til?\r
         \r
         - Rauði spírallinn fer frá 50 og upp í 200 díla\r
         - Blái spírallinn fer frá 25 og upp í 125 díla\r
         - Græni spírallinn fer frá 100 og upp í 300 díla\r
+      courseF_artist_fwp8_2018_markdown_instruction: |-
+        Freeplay! Can you figure out
+        how to make this drawing using the function that you just created?\r
+        \r
+        -
+        The red spiral goes from 50 to 200 pixels\r
+        - The blue spiral goes from 25
+        to 150 pixels\r
+        - The green spiral goes from 100 to 350 pixels
       courseF_artist_fwp9_markdown_instruction: "**Frjáls æfing:** Hér fyrir neðan
         eru föll sem þú hefur skrifað og fleiri sem þú getur leikið þér með. Sjáðu
         hvaða áhrif það hefur að breyta breidd pennans! Það eru tillögur í vísbendingunum!"
+      courseF_artist_fwp9_2018_markdown_instruction: |-
+        **Freeplay:** Below there are
+        functions you've written, and more for you to play with. Play with the pen
+        width to see how different your drawings look! Suggestions are in the hints!
       courseF_artist_fwp_challenge1_markdown_instruction: Prófaðu að keyra þetta forrit
         og gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig
         það virkar? (Eða eytt því og búið til eitthvað gjörólíkt)
+      courseF_artist_fwp_challenge1_2018_markdown_instruction: |-
+        Try running this
+        program. Make changes to see what happens. Can you figure out how it works?
+        You can also delete it and replace it with something totally different.
       courseF_artist_fwp_challenge2_markdown_instruction: "Notaðu það sem þú lærðir
         í síðasta áfanga til að teikna svona mynd.\\r\n\\r\n*Athugaðu:\nKóðinn verður
         einfaldari ef þú notar stika.*\\r\n\\r\n<br/>\\r\n<img\nsrc=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
+        \ "
+      courseF_artist_fwp_challenge2_2018_markdown_instruction: "Wow! Use what you\nlearned
+        in the previous level to draw an image like this.\\r\n\\r\n*Hint: Use\nparameters
+        to make your code simpler.*\\r\n\\r\n<br/>\\r\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"\nwidth=\"300px\"/>\\r\n<br/>
         \ "
       courseF_artist_ramp10_markdown_instruction: |-
         Veistu að þú getur sett lykkjur innan í aðrar lykkjur til að gera þær öflugri?  Það er kallað að búa til "faldaða lykkju".\r
@@ -64750,13 +65864,34 @@
         your variable by 1.25 each time through?\r
         -  What will your code do if you
         turn 119 degrees?
+      courseF_artist_variables10_2018_markdown_instruction: |-
+        Here's your code from
+        the last puzzle.  Try editing the variable in other ways.  \r
+        -  What happens
+        if you start out with `length` less than 150? \r
+        -  What if you multiply
+        your variable by 1.25 each time through?\r
+        -  What will your code do if you
+        turn 119 degrees?
       courseF_artist_variables2_markdown_instruction: |-
         Now use another loop to draw
         three of those triangles right next to each other.   \r
         \r
         You can nest
         the code from your last puzzle inside.
+      courseF_artist_variables2_2018_markdown_instruction: |-
+        Now use another loop
+        to draw three of those triangles right next to each other.   \r
+        \r
+        You can
+        nest the code from your last puzzle inside.
       courseF_artist_variables3_markdown_instruction: |-
+        Before things get tricky,
+        can you move the length of 50 into a variable so we can use it in the next
+        few puzzles?  \r
+        \r
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables3_2018_markdown_instruction: |-
         Before things get tricky,
         can you move the length of 50 into a variable so we can use it in the next
         few puzzles?  \r
@@ -64765,6 +65900,10 @@
       courseF_artist_variables4_markdown_instruction: |-
         Now, use the `length` variable
         to have the artist jump forward and down by `length` pixels between triangles.
+      courseF_artist_variables4_2018_markdown_instruction: |-
+        Now, use the `length`
+        variable to have the artist jump forward and down by `length` pixels between
+        triangles.
       courseF_artist_variables6_markdown_instruction: |-
         **OOPS!**  \r
         \r
@@ -64773,11 +65912,29 @@
         \r
         Aren't
         you glad you're using a variable?
+      courseF_artist_variables6_2018_markdown_instruction: |-
+        **OOPS!**  \r
+        \r
+        We
+        actually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \r
+        \r
+        Aren't
+        you glad you're using a variable?
       courseF_artist_variables6a_markdown_instruction: |-
         Use what you've learned
         to build this design where the squares have 80 pixel sides and the artist
         jumps 80 pixels over and down between each one.
+      courseF_artist_variables6a_2018_markdown_instruction: |-
+        Use what you've learned
+        to build this design where the squares have 80 pixel sides and the artist
+        jumps 80 pixels over and down between each one.
       courseF_artist_variables7_markdown_instruction: |-
+        Let's start this section
+        by drawing a triangle with 150 pixel sides. \r
+        \r
+        Be sure to use the `length`
+        variable and a repeat loop.
+      courseF_artist_variables7_2018_markdown_instruction: |-
         Let's start this section
         by drawing a triangle with 150 pixel sides. \r
         \r
@@ -64818,7 +65975,51 @@
         \r
         The
         length of the first side of the triangle is 150 pixels.
+      courseF_artist_variables8_2018_markdown_instruction: |-
+        Rebuild the triangle
+        code from the last puzzle, but this time use the `set length to` block to
+        reset the `length` variable to `length`+10 at the end of each loop iteration.\r
+        \r
+        <xml>\r
+        <block
+        type="variables_set" inline="false">\r
+                                <title
+        name="VAR">length</title>\r
+                                <value name="VALUE">\r
+                                  <block
+        type="math_arithmetic" inline="true">\r
+                                    <title
+        name="OP">ADD</title>\r
+                                    <value name="A">\r
+                                      <block
+        type="variables_get">\r
+                                        <title name="VAR">length</title>\r
+                                      </block>\r
+                                    </value>\r
+                                    <value
+        name="B">\r
+                                      <block type="math_number">\r
+                                        <title
+        name="NUM">10</title>\r
+                                      </block>\r
+                                    </value>\r
+                                  </block>\r
+                                </value>\r
+                              </block>\r
+        </xml>\r
+        \r
+        The
+        length of the first side of the triangle is 150 pixels.
       courseF_artist_variables9_markdown_instruction: |-
+        Time to make some art!  \r
+        \r
+        See
+        what happens when you repeat the code from the last puzzle **30** times instead
+        of only 3!\r
+        \r
+        Feel free to make your lines any color or pattern for some
+        extra zest.
+      courseF_artist_variables9_2018_markdown_instruction: |-
         Time to make some art!  \r
         \r
         See
@@ -64833,6 +66034,12 @@
         \r
         How can you use variables with
         squares, pentagons, or hexagons?
+      courseF_artist_variablesFP_2018_markdown_instruction: |-
+        **Freeplay:** Take what
+        you've learned and make your own drawing. \r
+        \r
+        How can you use variables
+        with squares, pentagons, or hexagons?
       courseF_artist_variables_10_markdown_instruction: |-
         Here's your code from the
         last puzzle.  Try editing the variable in other ways.  \r
@@ -64900,12 +66107,19 @@
         with squares, pentagons, or hexagons?
       courseF_artist_variables_challenge1_markdown_instruction: Getur þú búið til
         `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
+      courseF_artist_variables_challenge1_2018_markdown_instruction: Getur þú búið
+        til `lengd` breytu og notað hana til að skapa þetta athyglisverða mynstur?
       courseF_artist_variables_challenge1a_markdown_instruction: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
         width="250px"/>\r
         \r
         Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?
       courseF_artist_variables_challenge2_markdown_instruction: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/>\r
+        \r
+        Þú hefur nú lært allt sem þú þarft til að búa til svona mynstur! Þessari þraut er ætlað að vera erfið.  Getur þú haldið þig við hana þar til þú finnur lausn?
+      courseF_artist_variables_challenge2_2018_markdown_instruction: |-
         <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
         width="250px"/>\r
         \r
@@ -64925,20 +66139,47 @@
         \r
         Collect all of the
         nectar and make all of the honey.
+      courseF_bee_conditionals10_2018_markdown_instruction: |-
+        Conditionals can be
+        helpful, even when you know exactly what is in each spot!\r
+        \r
+        Collect all
+        of the nectar and make all of the honey.
       courseF_bee_conditionals1_predict1_markdown_instruction: |-
         *"Þetta ský er fyrir mér!"\r
         \r
         Athugaðu hvort það er blóm undir skýinu. Safnaðu blómasafa ef svo er.
+      courseF_bee_conditionals1_predict1_2018_markdown_instruction: |-
+        *"This cloud
+        is blocking my view!"*\r
+        \r
+        Check to see if there's a flower under the
+        cloud. If there's a flower, get nectar.
       courseF_bee_conditionals2_markdown_instruction: |-
         *"Það er of skýjað til að sjá blóm!"*\r
         \r
         Athugaðu undir hvert ský til að sjá hvort það feli blóm. Safnaðu blómasafa ef það er. \r
         \r
         Mundu: Skýin fela ekki öll það sama!
+      courseF_bee_conditionals2_2018_markdown_instruction: |-
+        *"It's too cloudy to
+        see any flowers!"*\r
+        \r
+        Check underneath every cloud to see if it is hiding
+        a flower before you get nectar. If there is a flower underneath the cloud,
+        the bee will need to get nectar **once**.  \r
+        \r
+        Remember: Not all clouds
+        hide the same thing!
       courseF_bee_conditionals3_markdown_instruction: |-
         You can only collect nectar
         from flowers, but you can check any space to see if there is a flower. If
         there is a flower under any of these clouds, the bee will need to collect
+        nectar **once**.
+      courseF_bee_conditionals3_2018_markdown_instruction: |-
+        You can only collect
+        nectar from flowers, but you can check any space to see if there is a flower.
+        If there is a flower under any of these clouds, the bee will need to collect
         nectar **once**.
       courseF_bee_conditionals4_markdown_instruction: |-
         In this puzzle, we know that
@@ -64946,15 +66187,34 @@
         \r
         Get
         all of the nectar using as few blocks as possible.
+      courseF_bee_conditionals4_2018_markdown_instruction: |-
+        In this puzzle, we know
+        that every flower has exactly one nectar, but the flowers aren't spaced evenly.\r
+        \r
+        Get
+        all of the nectar using as few blocks as possible.
       courseF_bee_conditionals7_predict2_markdown_instruction: |-
         Stundum hylur ský blóm, stundum hylur það býkúpu!\r
         \r
         Notaðu `ef/annars` kubb til að safna blómasafa úr blómum og búa til hunang í býkúpum.
+      courseF_bee_conditionals7_predict2_2018_markdown_instruction: |-
+        Sometimes a
+        cloud covers a flower, sometimes it covers a honeycomb!\r
+        \r
+        Use the `if/else`
+        block to collect nectar at flowers and make honey at honeycomb.
       courseF_bee_conditionals8_markdown_instruction: |-
         **Áskorun:** Það er annað hvort blóm eða býkúpa undir hverju af þessum skýjum!\r
         \r
         Safnaðu blómasafa ef það er blóm.\r
         Búðu annars til hunang (því þá er það býkúpa).
+      courseF_bee_conditionals8_2018_markdown_instruction: |-
+        **Challenge:** There
+        will be either a flower or a honeycomb under each of those clouds!\r
+        \r
+        Collect
+        nectar once if there is a flower. Otherwise, make honey once (because there
+        is a honeycomb).
       courseF_bee_for10_markdown_instruction: |-
         **Challenge:** Take what you've learned
         about `for` loops and try to solve this problem. \r
@@ -64962,6 +66222,13 @@
         Remember: You may
         have to run through solutions multiple times before you figure out all of
         the steps.
+      courseF_bee_for10_2018_markdown_instruction: |-
+        **Challenge:** Take what you've
+        learned about `for` loops and try to solve this problem. \r
+        \r
+        Remember:
+        You may have to run through solutions multiple times before you figure out
+        all of the steps.
       courseF_bee_for11_markdown_instruction: |-
         If your loop is counting down, the
         increment is **subtracted** from your counter variable each time through.
@@ -64969,9 +66236,22 @@
         \r
         What should your increment be to collect 15, then 12, then 9, 6, 3
         nectar?
+      courseF_bee_for11_2018_markdown_instruction: |-
+        If your loop is counting down,
+        the increment is **subtracted** from your counter variable each time through.
+        \r
+        \r
+        What should your increment be to collect 15, then 12, then 9, 6, 3
+        nectar?
       courseF_bee_for2_markdown_instruction: |-
         Write the code to help the bee collect
         all of the nectar.\r
+        \r
+        You will need lots of blocks for this challenge,
+        but we'll learn an easier way in the next puzzle.
+      courseF_bee_for2_2018_markdown_instruction: |-
+        Write the code to help the bee
+        collect all of the nectar.\r
         \r
         You will need lots of blocks for this challenge,
         but we'll learn an easier way in the next puzzle.
@@ -64987,6 +66267,12 @@
         \r
         Try gathering this nectar by counting down from **5** to **1**
         by **1**.
+      courseF_bee_for6_2018_markdown_instruction: |-
+        You can also use a `for` loop
+        to count down. \r
+        \r
+        Try gathering this nectar by counting down from **5**
+        to **1** by **1**.
       courseF_bee_for7_markdown_instruction: |-
         The last number in your `for` loop
         is called the **"increment"**.  Each time the loop is run, the counter variable
@@ -64994,22 +66280,49 @@
         \r
         Try collecting these flowers
         using an **increment** of 2.
+      courseF_bee_for7_2018_markdown_instruction: |-
+        The last number in your `for`
+        loop is called the **"increment"**.  Each time the loop is run, the counter
+        variable changes by the value of the **increment**.\r
+        \r
+        Try collecting
+        these flowers using an **increment** of 2.
       courseF_bee_for8_markdown_instruction: |
         You've got this!  \r
         \r
         What should
         your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r
+      courseF_bee_for8_2018_markdown_instruction: |
+        You've got this!  \r
+        \r
+        What
+        should your **increment** be to collect 3, 6, 9, 12, 15 nectar?\r
       courseF_bee_for9_markdown_instruction: |-
         Now, let's combine the `counter` variable
         with a `math` block! \r
         \r
         How can you use the `counter` variable to navigate
         this garden with the fewest number of blocks possible?
+      courseF_bee_for9_2018_markdown_instruction: |-
+        Now, let's combine the `counter`
+        variable with a `math` block! \r
+        \r
+        How can you use the `counter` variable
+        to navigate this garden with the fewest number of blocks possible?
       courseF_bee_for_challenge1_markdown_instruction: Notaðu þessa `frá` lykkju til
         að safna öllum blómasafanum. Það eru nokkrar aðgerðir sem þú ættir að endurtaka
         `teljari` sinnum.
+      courseF_bee_for_challenge1_2018_markdown_instruction: |-
+        You can use this `for
+        loop` to collect all of the nectar. Un-bee-lievable!\r
+        \r
+        There are a few
+        actions that you will want to `repeat 'counter' times`.
       courseF_bee_for_challenge2_markdown_instruction: Leystu þessa þraut með eins
         fáum kubbum og mögulegt er.
+      courseF_bee_for_challenge2_2018_markdown_instruction: |-
+        Solve this puzzle with
+        the fewest number of blocks possible.
       courseF_bee_for_challenge3_markdown_instruction: "**Ofuráskorun með `frá` lykkjur:**
         Leystu þessa þraut með eins fáum kubbum og mögulegt er."
       courseF_bee_functions2_markdown_instruction: |-
@@ -65021,21 +66334,58 @@
         Við skulum æfa okkur með þetta fall sem safnar blómasafa en aðeins þegar býflugan er á blómi. Smelltu á bláa "breyta" hnappinn til að sjá kóðann innan í fallinu!\r
         \r
         Notaðu `sækja aðeins blómasafa` fallið til að safna blómasafanum úr hverju blómi.
+      courseF_bee_functions2_2018_markdown_instruction: |-
+        Til að auðvelda hlutina er kominn tími til að læra um föll (enska: functions).\r
+        \r
+        Héðan í frá munt þú nota nýjan *fallaritil* (enska: function editor). Þetta er sérstakur gluggi sem birtist þegar þú vilt búa til eða breyta falli. Kóði falls sést ekki á vinnusvæðinu en þú getur samt notað hann! \r
+        <hr/>\r
+        \r
+        Við skulum æfa okkur með þetta fall sem safnar blómasafa en aðeins þegar býflugan er á blómi. Smelltu á bláa "breyta" hnappinn til að sjá kóðann innan í fallinu!\r
+        \r
+        Notaðu `sækja aðeins blómasafa` fallið til að safna blómasafanum úr hverju blómi.
       courseF_bee_functions3_markdown_instruction: Nú er komið að þér að búa til fall
         sem býr til hunang en **aðeins** í býkúpu! Smelltu á "breyta" til að smíða
         `aðeins búa til hunang` fallið. Notaðu það svo til að leysa þessa þraut.
+      courseF_bee_functions3_2018_markdown_instruction: |-
+        Now it's your turn to make
+        a function to get some honey **only** if there is a honeycomb!  Click "edit"
+        to build the `only make honey` function, then use it to solve this puzzle.
       courseF_bee_functions3a_markdown_instruction: |-
         Hvert ský gæti falið annað hvort blóm eða býkúpu! Skrifaðu fall sem sækir blómasafa ef býflugan er á blómi, en býr annars til hunang.\r
         \r
         Notaðu fallið þitt til að leysa þrautina!
+      courseF_bee_functions3a_2018_markdown_instruction: |-
+        Each cloud could be hiding
+        either one flower or one honeycomb!  Write a function that gets nectar if
+        the bee is at a flower, otherwise it gets honey.\r
+        \r
+        Use your function
+        to solve the puzzle!
       courseF_bee_functions4_markdown_instruction: |-
         Vissir þú að þú getur kallað á fall *innan úr* öðru falli? \r
         \r
         Notaðu fallið þitt `athuga blómasafa eða hunang` innan í nýju `færa og athuga` falli til að hjálpa býflugunni að snúa, fara og sækja það sem er undir skýinu, fara svo til baka og snúa aftur í upphaflega átt!
+      courseF_bee_functions4_2018_markdown_instruction: |-
+        Did you know that you can
+        call a function from *inside* another function?  \r
+        \r
+        Use your `check nectar
+        or honey` function inside the new `move and check` function to help the bee
+        turn, go get what's under the cloud, then back-up and turn back around!
       courseF_bee_functions5a_markdown_instruction: Búðu nú til `færa og athuga` fall
         sem færir býfluguna að skýi þegar það er slóð til hægri. Notaðu fallið til
         að leysa þessa þraut!
+      courseF_bee_functions5a_2018_markdown_instruction: Búðu nú til `færa og athuga`
+        fall sem færir býfluguna að skýi þegar það er slóð til hægri. Notaðu fallið
+        til að leysa þessa þraut!
       courseF_bee_functions6_markdown_instruction: |-
+        *"This field is a-MAZE-ing!"*\r
+        \r
+        Build
+        your own function to help the bee through the maze by turning left at flowers
+        and right at honeycomb.  Don't forget to collect nectar and make honey along
+        the way!
+      courseF_bee_functions6_2018_markdown_instruction: |-
         *"This field is a-MAZE-ing!"*\r
         \r
         Build
@@ -65046,11 +66396,33 @@
         Búðu til þitt eigið fall sem fer niður hliðarslóð, nær öllum blómasafanum eða býr til allt hunangið, og skilar býflugunni aftur á aðalslóðina. \r
         \r
         Safnaðu öllum blómasafanum og búðu til allt hunangið!
+      courseF_bee_functions7_2018_markdown_instruction: |-
+        Rebuild your function from
+        the last puzzle to solve this maze.\r
+        \r
+        Turn left at the honeycomb and
+        right at the flowers.  \r
+        **Note:** Some corners are unmarked!
       courseF_bee_functions8a_markdown_instruction: |-
         Undir þessu skýi gæti verið blóm með óþekkt magn blómasafa eða býkúpa sem þarf óþekkt magn af hunangi. \r
         \r
         Getur þú skrifað forrit sem getur höndlað hvort sem er?
+      courseF_bee_functions8a_2018_markdown_instruction: |-
+        Underneath this cloud,
+        there might be a flower with an unknown amount of nectar, or a honeycomb with
+        an unknown amount of honey.  \r
+        \r
+        Can you write a program that can handle
+        either?
       courseF_bee_functionsPre7_markdown_instruction: |-
+        Now try building a function
+        to solve this maze.  How is it different from last time?  \r
+        \r
+        Turn left
+        at the honeycomb and right at the flowers.  \r
+        **Note:** Some corners are
+        unmarked!
+      courseF_bee_functionsPre7_2018_markdown_instruction: |-
         Now try building a function
         to solve this maze.  How is it different from last time?  \r
         \r
@@ -65061,28 +66433,68 @@
       courseF_bee_functions_challenge1_markdown_instruction: Búðu til nýtt fall til
         að vinna allan blómasafann og hunangið á meðan það er slóð framundan. Notaðu
         það til að ljúka þrautinni!
+      courseF_bee_functions_challenge1_2018_markdown_instruction: Búðu til nýtt fall
+        til að vinna allan blómasafann og hunangið á meðan það er slóð framundan.
+        Notaðu það til að ljúka þrautinni!
       courseF_bee_functions_challenge2_markdown_instruction: Notaðu allt sem þú hefur
         lært til að ljúka þessari þraut!
+      courseF_bee_functions_challenge2_2018_markdown_instruction: |-
+        Use everything
+        you have learned to complete this puzzle!
       courseF_bee_functions_challenge2_recursion_markdown_instruction: |-
         Undir þessu skýi gæti verið blóm með óþekkt magn blómasafa eða býkúpa sem þarf óþekkt magn af hunangi. \r
         \r
         Getur þú skrifað forrit sem getur höndlað hvort sem er?
       courseF_bee_fwp1_markdown_instruction: Gáðu undir skýin hvort blómin hafi blómasafa.
+      courseF_bee_fwp1_2018_markdown_instruction: |
+        Check beneath the clouds to see
+        if the flowers have any nectar.  \r
+        \r
+        For this whole stage, each flower
+        will have exactly **one** unit of nectar, and each honeycomb will need exactly
+        **one** unit of honey. \r
+        \r
+        \r
       courseF_bee_fwp2_markdown_instruction: |-
         Hér er kóði sem leysir síðustu þraut.  \r
         Við skulum setja hann í fall og kalla svo á fallið til að kanna blómasafa í þessu beði.  \r
         <hr/>\r
         Það virkar kannske skrítið að gera þetta núna en mun fljótlega reynast mjög hjálplegt!
+      courseF_bee_fwp2_2018_markdown_instruction: |-
+        Here's some code that solves
+        the last puzzle.  \r
+        Let's pull it into a function, then call the function
+        to check this row for nectar.  \r
+        ___\r
+        This may seem like a strange step
+        now, but it will be really helpful soon!
       courseF_bee_fwp3_markdown_instruction: |-
         Tími til að láta reyna á fallið!
         \r
         \r
         Athugum hvort það auðveldar að safna blómasafa í þessum þremur beðum.
+      courseF_bee_fwp3_2018_markdown_instruction: |-
+        Time to put the function to the
+        test! \r
+        \r
+        Let's see if it makes collecting these three rows of nectar
+        any easier.
       courseF_bee_fwp4_markdown_instruction: |-
         *"Hvernig er fallið þitt að reynast?"*   \r
         \r
         Við þurfum að fínstilla það nánar hér. Smelltu á "breyta" til að bæta við  `length` stika í fallið svo þú getir notað það fyrir mismunandi löng beð.
+      courseF_bee_fwp4_2018_markdown_instruction: |-
+        *"How is your function holding
+        up?"*   \r
+        \r
+        We need to make some adjustments here. Click "edit" to
+        add a `length` parameter to the function so that it will still work when the
+        row is a different length.
       courseF_bee_fwp5_markdown_instruction: |-
+        *"Þér gengur vel hingað til!"*\r
+        \r
+        Notum þetta fall til að safna blómasafanum.
+      courseF_bee_fwp5_2018_markdown_instruction: |-
         *"Þér gengur vel hingað til!"*\r
         \r
         Notum þetta fall til að safna blómasafanum.
@@ -65090,17 +66502,42 @@
         Þú getur stytt kóða svo færri línur afkasti meiru þegar þú notar föll með öðrum forritseiningum. \r
         <hr/>\r
         Hvaða kubba getur þú notað með fallinu þínu til að smíða stutta og snyrtilega lausn á þessari þraut?
+      courseF_bee_fwp6_2018_markdown_instruction: |-
+        You can make code shorter and
+        more efficient when you combine functions with other programming elements.  \r
+        ___\r
+        What
+        blocks can you use with your function to build a short and sweet solution
+        to this puzzle?
       courseF_bee_fwp7_markdown_instruction: "**Áskorun:** Eitthvað virðist vera öðruvísi.
         Breyttu fallinu þínu til að búa líka til hunang."
+      courseF_bee_fwp7_2018_markdown_instruction: |-
+        **Challenge:** Something looks
+        a little different. Modify your function to make honey as well.
       courseF_bee_fwp_challenge1_markdown_instruction: Notaðu eina `frá` lykkju í
         falli til að safna öllum maísnum. Sama `frá` lykkjan getur talið upp í mismunandi
         hámarkstölu með því að nota stikann `lengd`.
+      courseF_bee_fwp_challenge1_2018_markdown_instruction: |-
+        Use one `for loop` in
+        a function to collect all of the corn. The same `for loop` can count to different
+        maximum values by using the `length` parameter.
       courseF_bee_fwp_challenge2_markdown_instruction: |-
         Sjáum til hvort þú ræður við þetta síðasta próf! Gerðu eins vel og þú getur!\r
         \r
         Notaðu eina `frá` lykkju í falli til að safna öllu grænmetinu í röðinni. Láttu `frá` lykkjuna telja upp í mismunandi hámarkstölur með því að nota `lengd` breytu. Hafðu forritið eins stutt og mögulegt er með því að nota aðra `frá` lykkju utan við fallið.\r
         \r
         Gangi þér vel!
+      courseF_bee_fwp_challenge2_2018_markdown_instruction: |-
+        *"**Lettuce** see if
+        you can handle this one final test! Give it everything you've got!"*\r
+        \r
+        Use
+        one `for loop` in a function to collect all of the vegetables in the row.
+        Make the `for loop` count to different maximum values by using the `length`
+        parameter. Make your program as short as possible by using a second `for loop`
+        outside the function.\r
+        \r
+        Good luck!
       courseF_maze_ramp1_markdown_instruction: Í þessari þraut þarftu að tengja alla
         kubbana á vinnusvæðinu við `þegar keyrt` atburðinn og smella svo á "Keyra"
         til að sjá hvað gerist!
@@ -65154,6 +66591,12 @@
         \r
         Have Kiki, the soccer player,  scream
         "Goal!" by assigning that text to the `shout` variable.
+      courseF_playlab_variables1a_2018_markdown_instruction: |-
+        Variables can be used
+        to store text that you want to use later.  \r
+        \r
+        Have Kiki, the soccer player,  scream
+        "Goal!" by assigning that text to the `shout` variable.
       courseF_playlab_variables2_markdown_instruction: |
         Túlkaðu nú tal Pegleg sjóræningja með því að breyta gildum breytnanna bara á tveimur stöðum!   \r
         -
@@ -65177,6 +66620,10 @@
         Insert the variable
         `color` into the middle of a sentence by putting it into the empty slot in
         the `join` block.
+      courseF_playlab_variables2b_2018_markdown_instruction: |-
+        Við getum gert yrðingar forrits áhugaverðari með því að blanda saman textabútum og breytum.\r
+        \r
+        Settu breytuna `litur` inn í miðja setningu með því að setja hana í auða reitinn í `tengja` kubbnum.
       courseF_playlab_variables3_markdown_instruction: |
         Great!  Now that you understand
         how to have a character use a variable to speak, we can introduce the `ask`
@@ -65197,6 +66644,9 @@
       courseF_playlab_variables3b_josh_markdown_instruction: "Help Kiki have a conversation\nwith
         Brian by using the variable `age` in all of the places where age `12`\nshould
         be used. "
+      courseF_playlab_variables3b_josh_2018_markdown_instruction: "Help Kiki have\na
+        conversation with Brian by using the variable `age` in all of the places\nwhere
+        age `12` should be used. "
       courseF_playlab_variables4_markdown_instruction: |
         Now we're going to join
         a variable to the beginning of Pegleg's next sentence using the `create text
@@ -65214,6 +66664,15 @@
         \r
         Put the variables in the
         correct places to create this conversation.
+      courseF_playlab_variables4b_2018_markdown_instruction: |-
+        Now, Pirate Pegleg
+        has some questions for Brian.\r
+        \r
+        This code uses an `ask` block, so you
+        can type Brian's answers after you click "Run". \r
+        \r
+        Put the variables
+        in the correct places to create this conversation.
       courseF_playlab_variables5_markdown_instruction: |-
         Now we're going to add a
         variable into the middle of Pegleg's sentence using more than one `create
@@ -65237,6 +66696,14 @@
         Hér ætlum við að nota `spyrja` kubb með `ef/annars`yrðingu og hafa gaman af!\r
         \r
         Pegleg sjóræningi ætlar að spyrja þig spurningar.  Dragðu eintak af `svar` breytunni inn í skilyrðið fyrir `ef` yrðinguna til að athuga hvort þú hafir fært inn rétt litaheiti.
+      courseF_playlab_variables5c_2018_markdown_instruction: |-
+        Let's combine the
+        `ask` block with an `if/else` statement to have some fun!\r
+        \r
+        Pirate Pegleg
+        is going to ask you a question.  Drag a copy of the `answer` variable into
+        the conditional for the `if` statement to check whether or not you entered
+        the correct color.
       courseF_playlab_variables6b_markdown_instruction: |-
         You cannot fit much text
         in an actor's speech bubble, so sometimes you need to make the actor say
@@ -65252,6 +66719,15 @@
         \r
         \r
         \r
+      courseF_playlab_variables6c_2018_markdown_instruction: |-
+        In the rest of this
+        stage, we will use multiple `ask` blocks and multiple `if/else` statements
+        to create a game that **you** control!\r
+        \r
+        Start by setting the "codename"
+        variable to a word that you can remember.  Then, use an `ask` block to get
+        a codename from the users.  You will need an `if/else` block to see if the
+        codename entered matches the codename that you have set.
       courseF_playlab_variables7b_markdown_instruction: |-
         Time to make your own project!  \r
         \r
@@ -65260,7 +66736,22 @@
         \r
         If
         you need ideas, click the hints icon.
+      courseF_playlab_variables7b_2018_markdown_instruction: |-
+        Time to make your own
+        project!  \r
+        \r
+        Create some questions and weave the answers together into
+        your very own story.\r
+        \r
+        If you need ideas, click the hints icon.
       courseF_playlab_variables7c_markdown_instruction: |
+        Bættu við öðrum `spyrja` kubbi til að biðja notandann að giska á lit.  \r
+        \r
+        Hafðu `ef/annars` yrðinguna þannig að þitt lykilorð vinni alltaf leikinn en öll önnur lykilorð tapi honum.\r
+        \r
+        \r
+        \r
+      courseF_playlab_variables7c_2018_markdown_instruction: |
         Bættu við öðrum `spyrja` kubbi til að biðja notandann að giska á lit.  \r
         \r
         Hafðu `ef/annars` yrðinguna þannig að þitt lykilorð vinni alltaf leikinn en öll önnur lykilorð tapi honum.\r
@@ -65277,9 +66768,17 @@
         Notaðu `tengja` kubbinn til að gera skilaboðin um sigur/tap persónulegri með því að láta lykilorðið og litinn koma fram í skilaboðunum.\r
         \r
         \r
+      courseF_playlab_variables8c_2018_markdown_instruction: |-
+        Use the `join` block
+        (in the toolbox under "Text") to make the win/lose messages more personal
+        by incorporating both the `codename` and the `color` variables into the responses.
       courseF_playlab_variables_challenge1_markdown_instruction: Notaðu þessa kubba
         til að láta leikmennina segja bank-bank brandara. Breyttu uppstillingunni
         og textanum og segðu eigin brandara!
+      courseF_playlab_variables_challenge1_2018_markdown_instruction: |-
+        Use these
+        blocks to make the actors share a knock-knock joke. Change the punchline and
+        setup to tell your own joke!
       courseF_playlab_variables_challenge2_markdown_instruction: |
         Nú skulum við leika "klukk"!  Klukkaðu Kött til að fá 2 stig. Eða Mörgæs til að fá 3 stig. Náðu 10 stigum til að vinna!\r
         En farðu varlega. Ef Köttur og Mörgæs klukka hvort annað, dragast stig frá.\r
@@ -65293,6 +66792,20 @@
         \r
         <hr/>\r
         \r
+      courseF_playlab_variables_challenge2_2018_markdown_instruction: |-
+        Now for a
+        game of tag! Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly
+        10 points to win!\r
+        But be careful, when Cat and Penguin tag each other,
+        they take points away.\r
+        \r
+        Add the blocks necessary to make this game work
+        the way it's been explained.\r
+        - How will you get Dog to move in all directions
+        using the arrow keys?\r
+        - How will you add points when Dog tags Cat or Penguin?\r
+        -
+        How will you subtract points when Cat and Penguin touch?
       courseF_playlab_variables_challenge3_markdown_instruction: |-
         Getur þú fundið út hvernig þetta "Völvu"-app virkar? Prófaðu að bæta einhverju af þessari virkni við leikinn:\r
         \r
@@ -69963,6 +71476,13 @@
         \r
         It has to be exactly 50 pixels long on each side.\r
         \r
+      grade5_artist_variables_triangles1_2018_markdown_instruction: |
+        Let's draw
+        an equilateral triangle. \r
+        \r
+        It has to be exactly 50 pixels long on each
+        side.\r
+        \r
       grade5_artist_variables_triangles2_markdown_instruction: |-
         Instead of using
         `move forward by 150`, the `move` block is now referencing a variable called
@@ -70509,6 +72029,11 @@
       iceage_click_hello_markdown_instruction: |-
         Getur þú hjálpað Sid að kalla á vini sína þegar þú smellir á hann?\r
         Smelltu svo á "Keyra" til að spila. Smelltu á Sid til að sjá kóðann þinn virka!
+      iceage_click_hello_2018_markdown_instruction: |-
+        Can you help Sid call for his
+        friends when you click on him? \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
       iceage_free_play_markdown_instruction: |-
         Time to create your own game or story!  \r
         \r
@@ -70516,6 +72041,14 @@
         you're done, click "Finish" to let friends try your game on their phones,
         tablets, or computers!\r
         Don't know what to make? Click the hints for details.
+      iceage_free_play_2018_markdown_instruction: |-
+        Time to create your own game or
+        story!  \r
+        \r
+        When you're done, click "Finish" to let friends try your
+        game on their phones, tablets, or computers!\r
+        Don't know what to make?
+        Click the hints for details.
       iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
         Time to create your
         own game or story!  \r
@@ -70531,11 +72064,26 @@
         \r
         Don't
         forget to type "Hello!" inside!
+      iceage_hello1_2018_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `say`
+        block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
       iceage_hello2_markdown_instruction: |-
         Manny (actor 2) found Sid (actor 1) and
         wants to invite him on an adventure. Help them greet each other by using the
         the `actor ___ say` block twice.
+      iceage_hello2_2018_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor
+        1) and wants to invite him on an adventure. Help them greet each other by
+        using the the `actor ___ say` block twice.
       iceage_move_events_markdown_instruction: "Scrat er enn að leita að akörnum!
+        \n\\r\nHjálpaðu honum að skondrast um með því að tengja `færa leikmann 1`
+        kubbinn við hvert atvik svo að hægt sé að stjórna stefnunni með örvarlyklunum.
+        \\r\nSmelltu svo á \"Keyra\" og reyndu að safna öllum akörnunum."
+      iceage_move_events_2018_markdown_instruction: "Scrat er enn að leita að akörnum!
         \n\\r\nHjálpaðu honum að skondrast um með því að tengja `færa leikmann 1`
         kubbinn við hvert atvik svo að hægt sé að stjórna stefnunni með örvarlyklunum.
         \\r\nSmelltu svo á \"Keyra\" og reyndu að safna öllum akörnunum."
@@ -70543,12 +72091,22 @@
         Diego (actor 1) is searching for
         Manny (actor 2). Can you help bring the two together? Connect a block to the
         `when actor touches` event to play a sound when they find each other.
+      iceage_move_to_actor_2018_markdown_instruction: |-
+        Diego (actor 1) is searching
+        for Manny (actor 2). Can you help bring the two together? Connect a block
+        to the `when actor touches` event to play a sound when they find each other.
       iceage_move_to_flag_markdown_instruction: Skrat er að leita að akarninu! Getur
         þú hjálpað honum að komast síðustu 200 dílana?
+      iceage_move_to_flag_2018_markdown_instruction: Skrat er að leita að akarninu!
+        Getur þú hjálpað honum að komast síðustu 200 dílana?
       iceage_repeat_markdown_instruction: |-
         The `repeat forever` block allows you
         to run code continuously. Can you put blocks inside of it to help Granny get
         some exercise by moving left and right repeatedly?
+      iceage_repeat_2018_markdown_instruction: |-
+        The `repeat forever` block allows
+        you to run code continuously. Can you put blocks inside of it to help Granny
+        get some exercise by moving left and right repeatedly?
       iceage_sound_and_points_markdown_instruction: |-
         Here is your code from the last
         puzzle, as well as the code to move Granny left and right. \r
@@ -70556,7 +72114,18 @@
         the program to make it so that you both **play a sound** and **score a point**
         when Sid and Granny collide? \r
         Press "Run" to play the game.
+      iceage_sound_and_points_2018_markdown_instruction: |-
+        Here is your code from
+        the last puzzle, as well as the code to move Granny left and right. \r
+        Can
+        you finish the program to make it so that you both **play a sound** and **score
+        a point** when Sid and Granny collide? \r
+        Press "Run" to play the game.
       iceage_throw_hearts_markdown_instruction: "Sid vill láta ömmu sína, Granny,
+        vita að honum þyki vænt um hana. \n \\r\n\\r\nNotaðu `leikari varpar` skipunina
+        til láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \\r\nBreyttu
+        skapi Granny í gleði þegar hjörtun lenda á henni."
+      iceage_throw_hearts_2018_markdown_instruction: "Sid vill láta ömmu sína, Granny,
         vita að honum þyki vænt um hana. \n \\r\n\\r\nNotaðu `leikari varpar` skipunina
         til láta Sid (leikara 1) varpa hjörtum að Granny (leikara 2)! \\r\nBreyttu
         skapi Granny í gleði þegar hjörtun lenda á henni."
@@ -70567,6 +72136,13 @@
         Sid’s (actor 1) speed to fast.\r
         Press "Run" and move Sid to Diego to warn
         him.
+      iceage_warn_ice_age_2018_markdown_instruction: |-
+        Everyone needs to move faster
+        because an ice storm is coming! \r
+        Change the scene to an icy background
+        and set Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego
+        to warn him.
       jessie-test_markdown_instruction: |-
         # Cool\r
         \r
@@ -70845,15 +72421,29 @@
         \r
         Help
         the Artist cover his flowers before the winter by moving forward by 60 pixels.
+      ramp_artist_loops1_2018_markdown_instruction: |-
+        What a lovely day!  \r
+        \r
+        Help
+        the Artist cover his flowers before the winter by moving forward by 60 pixels.
       ramp_artist_loops2_markdown_instruction: |-
         Add some beauty by repeating that
         step five times, changing to a random color between each move.
+      ramp_artist_loops2_2018_markdown_instruction: |-
+        Add some beauty by repeating
+        that step five times, changing to a random color between each move.
       ramp_artist_loops3_markdown_instruction: |-
         Draw the colorful line 5 times again,
         this time using a `repeat` loop.
+      ramp_artist_loops3_2018_markdown_instruction: |-
+        Draw the colorful line 5 times
+        again, this time using a `repeat` loop.
       ramp_artist_loops4_markdown_instruction: |-
         What happens when you add a 72 degree
         right turn after everything else inside your loop?
+      ramp_artist_loops4_2018_markdown_instruction: |-
+        What happens when you add a
+        72 degree right turn after everything else inside your loop?
       ramp_artist_loops5_markdown_instruction: |-
         Loops sure make writing code easier!\r
         \r
@@ -70862,21 +72452,48 @@
         - Each stairstep is 50 pixels long and 50
         pixels tall\r
         - You will need to turn 90 degrees in each direction
+      ramp_artist_loops5_2018_markdown_instruction: |-
+        Loops sure make writing code
+        easier!\r
+        \r
+        Use loops to draw this staircase.\r
+        - Each stairstep is 50
+        pixels long and 50 pixels tall\r
+        - You will need to turn 90 degrees in each
+        direction
       ramp_artist_loops6_markdown_instruction: |-
         This staircase is much bigger, but
         it takes the same amount of code as the last puzzle!\r
         \r
         Fix this loop
         to complete the puzzle.
+      ramp_artist_loops6_2018_markdown_instruction: |-
+        This staircase is much bigger,
+        but it takes the same amount of code as the last puzzle!\r
+        \r
+        Fix this loop
+        to complete the puzzle.
       ramp_artist_loops7_markdown_instruction: |-
         Look for a pattern and make this
         code shorter using loops!
+      ramp_artist_loops7_2018_markdown_instruction: |-
+        Look for a pattern and make
+        this code shorter using loops!
       ramp_artist_loops8_markdown_instruction: |-
+        **Challenge:** Look for a pattern
+        and make this code shorter using loops.
+      ramp_artist_loops8_2018_markdown_instruction: |-
+        **Challenge:** Look for a pattern
+        and make this code shorter using loops.
+      ramp_artist_loops8_clone_markdown_instruction: |-
         **Challenge:** Look for a pattern
         and make this code shorter using loops.
       ramp_artist_loops9_markdown_instruction: |-
         Solve this puzzle by drawing a square
         with 200 pixel sides.
+      ramp_artist_loops9_2018_markdown_instruction: |-
+        Solve this puzzle by drawing
+        a square with 200 pixel sides.
       sample1_markdown_instruction: |-
         Our adventurer wants to collect coins.  But
         she can only use 4 blocks to get them.  \r
@@ -71054,3 +72671,6 @@
         * Notar minnst 4 mismunandi litaðar fyllingar\r
         * Notar minnst 3 mismunandi litaðar útlínur\r
         * Notar minnst 3 mismunandi kóðakubba með athugasemdum\r
+      valentine_artist_03_markdown_instruction: |-
+        Now make a valentine to share with
+        someone special!  It can be anything that you want.

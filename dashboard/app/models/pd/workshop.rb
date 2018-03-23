@@ -21,6 +21,7 @@
 #  regional_partner_id :integer
 #  on_map              :boolean
 #  funded              :boolean
+#  funding_type        :string(255)
 #
 # Indexes
 #
@@ -106,6 +107,10 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
       SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
       SUBJECT_CSD_FIT = SUBJECT_FIT
+    ],
+    COURSE_CSF => [
+      SUBJECT_CSF_101 = 'Intro Workshop'.freeze,
+      SUBJECT_CSF_FIT = SUBJECT_FIT
     ]
   }.freeze
 
@@ -158,6 +163,11 @@ class Pd::Workshop < ActiveRecord::Base
     }
   }.freeze
 
+  FUNDING_TYPES = [
+    FUNDING_TYPE_FACILITATOR = 'facilitator',
+    FUNDING_TYPE_PARTNER = 'partner'
+  ]
+
   WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
     COURSE_CSP => 'CSP Support',
     COURSE_ECS => 'ECS Support',
@@ -179,6 +189,12 @@ class Pd::Workshop < ActiveRecord::Base
   validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
+  validates_inclusion_of :on_map, in: [true, false]
+  validates_inclusion_of :funded, in: [true, false]
+
+  validates :funding_type,
+    inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
+    absence: {unless: :funded_csf?}
 
   belongs_to :organizer, class_name: 'User'
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
@@ -191,6 +207,11 @@ class Pd::Workshop < ActiveRecord::Base
 
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
+
+  before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
+  def assign_regional_partner
+    self.regional_partner = organizer.try {|o| o.regional_partners.first}
+  end
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
@@ -220,10 +241,18 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
   end
 
-  def self.facilitated_or_organized_by(user)
+  # scopes to workshops managed by the user, which means the user is any of:
+  # - the organizer
+  # - a facilitator
+  # - a program manager for the assigned regional partner
+  def self.managed_by(user)
     left_outer_joins(:facilitators).
-      where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id).
-      distinct
+      where(
+        'pd_workshops_facilitators.user_id = ? OR organizer_id = ? OR regional_partner_id IN (?)',
+        user.id,
+        user.id,
+        user.regional_partner_program_managers.select(:regional_partner_id)
+      ).distinct
   end
 
   def self.attended_by(teacher)
@@ -398,7 +427,8 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_TEACHER_CON,
       SUBJECT_CSP_FIT,
       SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include? subject
   end
 
@@ -609,8 +639,17 @@ class Pd::Workshop < ActiveRecord::Base
   def fit_weekend?
     [
       SUBJECT_CSP_FIT,
-      SUBJECT_CSD_FIT
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT
     ].include?(subject)
+  end
+
+  def funded_csf?
+    course == COURSE_CSF && funded
+  end
+
+  def funding_summary
+    (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
 
   # Get all enrollments for this workshop with no associated attendances

@@ -23,7 +23,7 @@ describe("Bee", function () {
     };
     delete config.level.flowerType;
     expect(() => {
-      new Bee(maze, null, config);
+      new Bee(maze, config);
     }).to.throw(/bad flowerType for Bee/);
   });
 
@@ -36,7 +36,7 @@ describe("Bee", function () {
       })
     };
     expect(() => {
-      new Bee(maze, null, config);
+      new Bee(maze, config);
     }).to.throw(/bad flowerType for Bee/);
   });
 
@@ -58,7 +58,7 @@ describe("Bee", function () {
       var maze = {
         map: MazeMap.parseFromOldValues(config.level.map, config.level.initialDirt, BeeCell)
       };
-      var bee = new Bee(maze, null, config);
+      var bee = new Bee(maze, config);
       expect(bee.isRedFlower(0, 0), msg).to.equal(expected);
     }
 

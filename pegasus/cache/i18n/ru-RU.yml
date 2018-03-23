@@ -865,18 +865,12 @@
   dashboard_course_csp_desc: Code.org разработал детальный, интересный и доступный
     курс, который исследует основы вычислений.
   dashboard_landing_loading: "ЗАГРУЗКА..."
-  dashboard_action_edit: "Редактировать"
-  dashboard_action_save: "Сохранить"
-  dashboard_action_save_all: "Сохранить все"
   dashboard_action_cancel: "Отменить"
   dashboard_action_delete: "Удалить"
   dashboard_action_delete_yes: "Да"
   dashboard_action_delete_no: "Нет"
   dashboard_action_confirm: "Удалить?"
-  dashboard_action_remove: "Удалить"
-  dashboard_action_remove_confirm: "Удалить?"
   dashboard_action_done: "Готово"
-  dashboard_action_required: "необходимо"
   dashboard_action_print_certificates: "Распечатать сертификаты"
   dashboard_assessments_view: "Просмотреть оценки в:"
   dashboard_assessments_none: "Нет отценок."
@@ -983,8 +977,6 @@
   dashboard_error_other_section: "Если вы двигаете студентов между своими разделами,
     выберите раздел из выпадающего списка. Только выберите 'Другой Раздел' для перемещения
     ваших студентов в раздел к другим учителям."
-  dashboard_students_add_student: "Добавить ученика"
-  dashboard_students_add_students: "Добавить несколько учеников"
   dashboard_students_add_multiple: "Введите или вставьте имена ваших учеников по одному
     в каждую строку:"
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -993,23 +985,12 @@
   dashboard_students_new_section: "Вы создали новый раздел! Теперь добавьте своих
     учеников, используя кнопки <b>«Добавить ученика»</b> и <b>«Добавить несколько
     учеников»</b>, расположенные выше."
-  dashboard_students_placeholder_name: "Имя ученика"
   dashboard_students_name: "Имя"
   dashboard_students_progress: "Прогресс"
-  dashboard_students_age: "Возраст"
-  dashboard_students_gender: "Пол"
   dashboard_students_male: "Мужской"
   dashboard_students_female: "Женский"
-  dashboard_students_secret: "Секрет"
-  dashboard_students_password: "пароль"
-  dashboard_students_username: "Имя пользователя: %{student_username}"
-  dashboard_students_email: "Адрес электронной почты: %{student_email}"
   dashboard_students_completed_levels: "Пройденные уровни"
   dashboard_students_total_lines: "Строки кода"
-  dashboard_students_show_secret: "Показать секрет"
-  dashboard_students_auto_generated: "Автоматически сгенерированные"
-  dashboard_students_reset_secret: "Переустановить секрет"
-  dashboard_students_reset_password: "Сменить пароль"
   dashboard_students_share_section: "Поделитесь страницей со своими студентами для
     входа в этот раздел:"
   dashboard_students_share_section_secondary: "Кроме того, поделитесь этой страницей
@@ -1060,8 +1041,11 @@
   dashboard_coursed: 'Course D: '
   dashboard_coursee: 'Course E: '
   dashboard_coursef: 'Course F: '
+  dashboard_pre-express: 'Pre-reader Express Course: '
+  dashboard_express: 'Express Course: '
   dashboard_unplugged: "Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте
     эти оффлайн уроки в вашем классе."
+  dashboard_tools: 'Tools: '
   dashboard_curriculum: "Учебная программа"
   dashboard_curriculum_overview: "Обзор программы для дошкольников и учеников начальной
     школы"
@@ -1080,12 +1064,13 @@
   dashboard_curriculum_csins: "Информатика в науке:"
   dashboard_curriculum_csp: "Принципы информатики AP®:"
   dashboard_curriculum_ecs: "Изучение информатики:"
+  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "Детский сад"
   dashboard_grade_other: "Другое"
   dashboard_login_word: "Слово"
   dashboard_login_picture: "Изображение"
   dashboard_login_none: "Электронная почта"
-  dashboard_new_password: "новый пароль"
   dashboard_stage: "Этап"
   dashboard_puzzle: "Головоломка"
   dashboard_question: "Вопрос"
@@ -1333,6 +1318,7 @@
   cspexams_category_name: "Практический тест по основам информатики"
   research_studies_category_name: Research Studies
   applab_name: "Лаборатория приложений"
+  gamelab_name: "Игровая лаборатория"
   basketball_name: "Создать игру в баскетбол"
   sports_name: "Создай свою спортивную игру"
   applab_gradelevel: "Возраст 13+"
@@ -1397,7 +1383,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: "Класс 8 и выше"
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "Возраст 8-12"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
@@ -2184,9 +2170,3 @@
     Account” option:'
   hero_name: "Майнкрафт: Путешествие Героя"
   applab-intro_name: App Lab Intro
-  dashboard_pre-express: 'Pre-reader Express Course: '
-  dashboard_express: 'Express Course: '
-  dashboard_tools: 'Tools: '
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
-  dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  gamelab_name: Game Lab
