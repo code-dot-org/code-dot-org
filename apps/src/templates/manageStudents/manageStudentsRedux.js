@@ -110,6 +110,13 @@ export const addStudentsFailure = (numStudents, error, studentIds) => (
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
 export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
 
+export const handleShareSetting = (disable) => {
+ return (dispatch, getState) => {
+   dispatch(editAll());
+   dispatch(updateAllShareSetting(disable));
+ };
+};
+
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
@@ -384,7 +391,6 @@ export default function manageStudents(state=initialState, action) {
     };
     for (const studentKey in state.studentData) {
       const student = state.studentData[studentKey];
-      newState.studentData[student.id].isEditing = true;
       newState.editingData[student.id].sharingDisabled = action.disable;
     }
     return newState;
