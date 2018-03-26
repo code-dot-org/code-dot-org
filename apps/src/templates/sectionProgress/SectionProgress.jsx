@@ -6,6 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import _ from 'lodash';
 import { connect } from 'react-redux';
+import {ViewType} from './sectionProgressRedux';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -15,11 +16,11 @@ import { connect } from 'react-redux';
  */
 class SectionProgress extends Component {
   static propTypes = {
+    //Provided by redux
+
     // The section we get directly from angular right now. This gives us a
     // different shape than some other places we use sections. For now, I'm just
     // going to document the parts of section that we use here
-
-    //Provided by redux
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       students: PropTypes.arrayOf(PropTypes.shape({
@@ -34,6 +35,7 @@ class SectionProgress extends Component {
       name: PropTypes.string.isRequired,
       position: PropTypes.number,
     })).isRequired,
+    currentView: PropTypes.string.isRequired
   };
 
   state = {
@@ -42,18 +44,11 @@ class SectionProgress extends Component {
     scriptId: "112",
     scriptData: null,
     studentLevelProgress: null,
-    isSummaryView: false,
   };
 
   componentDidMount() {
     this.loadScript(this.state.scriptId);
   }
-
-  toggleView = () => {
-    this.setState({
-      isSummaryView: !this.state.isSummaryView
-    });
-  };
 
   onChangeScript = scriptId => {
     this.setState({
@@ -90,8 +85,8 @@ class SectionProgress extends Component {
   }
 
   render() {
-    const { section, validScripts } = this.props;
-    const { scriptId, scriptData, studentLevelProgress, isSummaryView } = this.state;
+    const { section, validScripts, currentView } = this.props;
+    const { scriptId, scriptData, studentLevelProgress } = this.state;
 
     let levelDataInitialized = scriptData && studentLevelProgress;
 
@@ -102,12 +97,12 @@ class SectionProgress extends Component {
           scriptId={scriptId}
           onChange={this.onChangeScript}
         />
-        <SectionProgressToggle isSummaryView={isSummaryView} toggleView={this.toggleView}/>
+        <SectionProgressToggle currentView={this.props.currentView} />
         {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
-        {(levelDataInitialized && isSummaryView) &&
+        {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
           <div>{"This will be the summary view"}</div>
         }
-        {(levelDataInitialized && !isSummaryView) &&
+        {(levelDataInitialized && currentView === ViewType.DETAIL) &&
           <SectionScriptProgress
             section={section}
             scriptData={scriptData}
@@ -124,4 +119,5 @@ export const UnconnectedSectionProgress = SectionProgress;
 export default connect(state => ({
   section: state.sectionProgress.section,
   validScripts: state.sectionProgress.validScripts,
+  currentView: state.sectionProgress.currentView,
 }))(SectionProgress);
