@@ -34,6 +34,36 @@ Each school may have multiple data points for the same school year. All of that 
 
 The summaries are stored in the `census_summaries` table. There should be a row for each school in the `schools` table for each school year that we've computed summaries.
 
+# Mapping from `census_submissions` column names to census questions
+Topic questions only show up for those who indicated that their school has a 10 or 20 hr class.
+INACCURACY_REPORTED and INACCURACY_COMMENT only show when the user clicks the "I believe that the categorization for this school is inaccurate" link from the map info window.
+
+| Column Name | Question |
+| ----------- | -------- |
+| HOW_MANY_DO_HOC | How many students will do an Hour of Code?" |
+| HOW_MANY_AFTRER_SCHOOL | "How many students do computer programming in an after-school program?" |
+| HOW_MANY_10_HOURS | "How many students take at least 10 hours of computer programming integrated into a non-Computer Science course (such as TechEd, Math, Science, Art, Library or general classroom/homeroom)?" |
+| HOW_MANY_20_HOURS | "How many students take a semester or year-long computer science course that includes at least 20 hours of coding/computer programming?" |
+| OTHER_CLASSES_UNDER_20_HOURS | "This school teaches other computing classes that do not include at least 20 hours of coding/computer programming. (For example, learning to use applications, computer literacy, web design, HTML/CSS, or other)" |
+| TOPIC_BLOCKS | "Block-based programming" |
+| TOPIC_TEXT | "Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)" |
+| TOPIC_ROBOTS | "Robotics / Physical Computing" |
+| TOPIC_INTERNET | "Internet and networking” |
+| TOPIC_SECURITY | "Cybersecurity" |
+| TOPIC_DATA | "Data analysis" |
+| TOPIC_WEB_DESIGN | "Web design using HTML and CSS" |
+| TOPIC_GAME_DESIGN | "Game design using game layout tools without coding or computer programming" |
+| TOPIC_ETHICAL_SOCIAL | "Ethical and social issues in computing" |
+| TOPIC_OTHER | "Other (please describe):" or "Other (please describe below)” |
+| TOPIC_OTHER_DESCRIPTION | This is the description provided when we have the explicit box next to the Other topic option. |
+| TOPIC_DO_NOT_KNOW | "I don't know" |
+| CLASS_FREQUENCY | "How often per week does this class meet?" |
+| TELL_US_MORE | "Please tell us more about this course." |
+| PLEDGED | "I pledge to expand computer science offerings at my school, and to engage a diverse group of students, to bring opportunity to all." |
+| SHARE_WITH_REGIONAL_PARTNERS | "Share my contact information with the Code.org regional partner in my state so I can be contacted about local professional learning, resources and events." |
+| INACCURACY_REPORTED | "I believe that the computer science categorization for this school is inaccurate" |
+| INACCURACY_COMMENT | "Explain why you think that the categorization for this school is inaccurate" |
+
 # Historic Notes
 
 Originally, the Hour of Code and /yourschool census form submissions were written to the Pegasus `forms` table. That data was migrated into `census_submissions` and the mapping between the original `forms` row and the `census_submissions` row is stored in `census_submission_form_maps`. The old Pegasus form handlers are [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/census.rb) and [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/hoc_census.rb) and the script used to migrate the data is [here](https://github.com/code-dot-org/code-dot-org/blob/staging/bin/oneoff/move_census_data.rb). 
