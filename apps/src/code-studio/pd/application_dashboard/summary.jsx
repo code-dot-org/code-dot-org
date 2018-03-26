@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import SummaryTable from './summary_table';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
+import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
 import {
   UnmatchedFilter,
@@ -80,6 +81,9 @@ export class Summary extends React.Component {
     return (
       <div>
         <ApplicantSearch/>
+        {this.props.isWorkshopAdmin &&
+          <AdminNavigationButtons/>
+        }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
             onChange={this.handleRegionalPartnerChange}
