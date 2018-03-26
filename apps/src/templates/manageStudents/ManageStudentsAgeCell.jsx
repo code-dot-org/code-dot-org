@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {ages} from '../AgeDropdown';
 import {connect} from 'react-redux';
-import {editStudent} from './manageStudentsRedux';
+import {editStudent, setSharingDefault} from './manageStudentsRedux';
 
 class ManageStudentAgeCell extends Component {
   static propTypes = {
@@ -11,10 +11,13 @@ class ManageStudentAgeCell extends Component {
     editedValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     // Provided by redux
     editStudent: PropTypes.func.isRequired,
+    setSharingDefault: PropTypes.func.isRequired,
   };
 
+  // For privacy reasons, we disable sharing by default if the student is under the age of 13.
   onChangeAge = (e) => {
     this.props.editStudent(this.props.id, {age: e.target.value});
+    this.props.setSharingDefault(this.props.id);
   };
 
   render() {
@@ -44,4 +47,7 @@ export default connect(state => ({}), dispatch => ({
   editStudent(id, studentInfo) {
     dispatch(editStudent(id, studentInfo));
   },
+  setSharingDefault(id) {
+    dispatch(setSharingDefault(id));
+  }
 }))(ManageStudentAgeCell);
