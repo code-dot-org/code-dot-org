@@ -1,4 +1,4 @@
-This is a collection of notes about know issues with `schools` and `school_infos` data.
+This is a collection of notes about known issues with `schools` and `school_infos` data.
 Original doc is [here](https://docs.google.com/document/d/1db49R4ezbGGjD67jEfuoW4lxedNonmw9qo4E9TWxNdQ/edit#).
 
 # School_info validation logic is confusing/hard to follow and sometimes wrong
