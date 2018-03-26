@@ -81,6 +81,7 @@ class DSLDefined < Level
     end
   end
 
+  # Write the specified text to the dsl level definition file for this level.
   def rewrite_dsl_file(text)
     File.write(file_path, (encrypted ? encrypted_dsl_text(text) : text))
   end
