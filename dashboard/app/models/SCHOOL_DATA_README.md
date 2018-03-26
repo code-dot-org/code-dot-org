@@ -91,6 +91,8 @@ There seem to be two main explanations for why we have multiple rows for the sam
 * The school_info deduplication logic uses the validation type as part of the match. This means that if you are trying to create a school_info for a school using full validation it will not match an existing row for that school with validation type ‘none’. This issue is effectively fixed going forward since we no longer create school_infos with validation type ‘none’ when there is an associated school.
 * Deduplication needs to be explicitly called (it isn’t part of the model.) When it isn’t called we can create a additional row. This is the most likely explanation for the cases where we have more than two rows for a given school.
 
+We do not fully understand the root cause of all of the duplicates. For most of the schools with exactly two rows in school_infos it seems to be cause by the issue where deduplication was checking the validation type so we'd end up with one row with validation none and one with validation full. For the cases where there are 3 or more school_infos for the same school many of those rows have the same values for all columns. It is possible that this is caused by duplicate form submissions. Deduplication isn't transactional so if two submissions are processed concurrently then they can both end up creating a row. Another possibility is that there is (or was) a code path that isn't explicitly calling the deduplication logic. 
+
 # School info deduplication issues
 * Deduplication is not part of the model and needs to be called explicitly.
 * Deduplication was broken for a long time, resulting in accounts associated with an incorrect school info. See https://github.com/code-dot-org/code-dot-org/pull/19555
