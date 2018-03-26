@@ -115,7 +115,7 @@ select * from schools where name='FAIRVIEW ACCELERATED' AND city='SAN ANGELO' AN
 | 484404011050 |            4844040 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:47 | 2017-11-01 21:44:12 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
 | 484441007083 |            4844410 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:47 | 2017-11-01 21:44:12 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
 +--------------+--------------------+----------------------+------------+-------+-------+-------------+---------------------+---------------------+-------------------------+---------------+---------------+-----------+-------------+-----------------+
-9 rows in set (0.00 sec)```
+9 rows in set (0.00 sec)
 ```
 
 This is especially confusing in the UI where all you see is the school name, city, state, and zip code. There is no way to know which is the “right” one to select. This is also why some of the bad ids have references (school_infos rows with those ids), making potential cleanup more complex than just deleting the extra rows.
