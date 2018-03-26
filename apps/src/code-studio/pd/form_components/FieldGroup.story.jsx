@@ -43,7 +43,7 @@ TestWrapper.propTypes = {
 
 export default storybook => {
   storybook
-    .storiesOf('FieldGroup', module)
+    .storiesOf('FormComponents/FieldGroup', module)
     .addStoryTable([{
       name: 'basic example',
       story: () => (

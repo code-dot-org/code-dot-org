@@ -3,7 +3,8 @@ class Api::V1::Pd::Teachercon1819RegistrationsController < Api::V1::Pd::FormsCon
 
   def new_form
     ::Pd::Teachercon1819Registration.new(
-      pd_application_id: @application.id
+      pd_application_id: @application.id,
+      user: current_user
     )
   end
 
@@ -18,7 +19,8 @@ class Api::V1::Pd::Teachercon1819RegistrationsController < Api::V1::Pd::FormsCon
     form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
 
     form = ::Pd::Teachercon1819Registration.new(
-      regional_partner_id: regional_partner_id
+      regional_partner_id: regional_partner_id,
+      user_id: current_user.id
     )
     form.form_data_hash = JSON.parse(form_data_json)
 

@@ -138,15 +138,15 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "reference_links": [
-      "/docs/csd/maker_leds/index.html"
+      "/docs/csd-1718/maker_leds/index.html"
     ],
-    "map_reference": "/docs/csd/maker_leds/index.html",
+    "map_reference": "/docs/csd-1718/maker_leds/index.html",
     "video_key": "applab_intro_events",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-02-26 11:03:52 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"video_key\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2018-02-26 11:04:23 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2018-02-26 11:05:29 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-02-26 11:03:52 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"video_key\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2018-02-26 11:04:23 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2018-02-26 11:05:29 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2018-03-22 21:40:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"reference_links\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

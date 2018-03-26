@@ -1,0 +1,5 @@
+# Scripts for processing state data
+
+* `preprocess-ca-data.rb` - The raw file we get from CA (CoursesTaught via https://www.cde.ca.gov/ds/sd/df/filesassign.asp) has data for all courses in all schools in CA, not just CS. Rather than processing that huge file as part of seeding we just filter out the rows we don't care about. At the same time we convert it from TSV to CSV.
+* `upload-state-data.rb` - Takes a state data file and uploads it to S3 with the correctly formatted key. Makes a backup of existing S3 object if one exists.
+* `reseed-state-data.rb` - Used to replace state data that has already been seeded. This is needed if we are removing data from the file or if we have updated the import logic. If we just add new rows to the file or add a new file then the automated seeding process will pick those up without any manual steps needed.
