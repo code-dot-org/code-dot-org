@@ -135,6 +135,10 @@ function whenTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event});
 }
 
+function whileTouching(a, b, event) {
+  collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
+}
+
 // Loops
 
 function repeatWhile(condition, loop) {
@@ -259,11 +263,17 @@ function draw() {
 
   // Run collision events
   for (let i=0; i<collisionEvents.length; i++) {
-    const a = collisionEvents[i].a;
-    const b = collisionEvents[i].b;
-    const event = collisionEvents[i].event;
-    a.overlap(b, event);
-    //if (a.isTouching(b) && a.visible && b.visible) event();
+    const collisionEvent = collisionEvents[i];
+    const a = collisionEvent.a;
+    const b = collisionEvent.b;
+    if (a.overlap(b)) {
+      if (!collisionEvent.touching || collisionEvent.keepFiring) {
+        collisionEvent.event();
+      }
+      collisionEvent.touching = true;
+    } else {
+      collisionEvent.touching = false;
+    }
   }
 
   // Run loops
