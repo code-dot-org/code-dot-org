@@ -27,7 +27,7 @@ export default storybook => {
   }
 
   storybook
-    .storiesOf('TeacherDashboard/SectionProgressToggle', module)
+    .storiesOf('Progress/SectionProgressToggle', module)
     .addStoryTable([
       isSummaryTrue(),
       isSummaryFalse(),
