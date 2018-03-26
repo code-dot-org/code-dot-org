@@ -5,7 +5,7 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/es"}
+<% facebook = {: u => "http://#{request.host}/ nos"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HoraDeCódigo' %>
 
@@ -19,7 +19,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. Pide a tu escuela que ofrezca una "Hora del Código"
 
-[Envíe este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) a su director y desafíe a cada clase de su escuela para que se inscriba.
+Anime a otros a participar [con nuestros correos electrónicos de muestra.](%= resolve_url('/promote/resources#sample-emails') %) Póngase en contacto con su director y desafíe a cada aula de su escuela para que se registren.
 
 ## 3. Pide a tu empresa que se involucre
 
