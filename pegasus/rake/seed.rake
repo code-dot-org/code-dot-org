@@ -205,17 +205,20 @@ namespace :seed do
   end
 
   desc 'import any modified seeds'
-  task migrate: imports.keys.map {|i| stub_path(i)} do
+  task :migrate do
     Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import}
   end
 
   desc 'drop and import all seeds'
-  task reset: imports.keys do
+  task :reset do
     Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import!}
   end
 
-  desc 'update remote seeds and import any modified'
-  task :sync do
+  task :sync_v3 do
     Dir.glob(pegasus_dir('data/*.gsheet')) {|i| GSheetToCsv.new(i).import}
+  end
+
+  desc 'download modified Google Sheets as CSV, and import any modified CSVs into the database'
+  task sync: [:sync_v3, :migrate] do
   end
 end
