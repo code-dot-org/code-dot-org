@@ -9,8 +9,7 @@ const WORLD_COLOR = [240, 0.45, 0.65];
 
 export default {
   install(blockly, blockInstallOptions) {
-    // TODO(ram): Create Blockly.BlockValueType.SPRITE
-    const SPRITE_TYPE = blockly.BlockValueType.NONE;
+    const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
     const { ORDER_MEMBER } = Blockly.JavaScript;
 
     const sprites = () => {
@@ -25,8 +24,12 @@ export default {
       });
     };
 
-    const createJsWrapperBlock =
-      createJsWrapperBlockCreator(blockly, 'gamelab');
+    const createJsWrapperBlock = createJsWrapperBlockCreator(
+      blockly,
+      'gamelab',
+      [SPRITE_TYPE],
+      SPRITE_TYPE,
+    );
 
     createJsWrapperBlock({
       color: SPRITE_COLOR,
