@@ -1184,7 +1184,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       input.appendTitle(dropdown, 'VALUE');
       this.appendDummyInput()
-          .appendTitle('with size');
+          .appendTitle(msg.withSize());
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'SIZE')
           .appendTitle(msg.pixels());
