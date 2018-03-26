@@ -122,5 +122,6 @@ class SectionProgress extends Component {
 export const UnconnectedSectionProgress = SectionProgress;
 
 export default connect(state => ({
-  section: state.sectionProgress.section
+  section: state.sectionProgress.section,
+  validScripts: state.sectionProgress.validScripts,
 }))(SectionProgress);
