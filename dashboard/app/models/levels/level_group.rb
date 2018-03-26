@@ -101,6 +101,8 @@ ruby
   # Surveys: How many students must complete a survey before any results are shown.
   SURVEY_REQUIRED_SUBMISSION_COUNT = 5
 
+  # Perform a deep copy of this level by cloning all of the levels within it
+  # using the same suffix, and write them to the new level definition file.
   def clone_with_suffix(new_suffix)
     level = super(new_suffix)
     level.add_suffix_to_grouped_levels(new_suffix)
@@ -108,6 +110,8 @@ ruby
     level
   end
 
+  # Clone of the levels belonging to this level, adding the specified suffix to
+  # the level name.
   def add_suffix_to_grouped_levels(new_suffix)
     new_properties = properties
 
