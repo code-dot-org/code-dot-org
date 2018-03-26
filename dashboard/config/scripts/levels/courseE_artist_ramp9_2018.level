@@ -39,6 +39,7 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How is this similar to a square?  How is it different?\",\"hint_id\":\"courseD_artist_ramp12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f1d45a6f7b107fd8a2bf6648c50237/courseE_artist_ramp9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can use the drop down menu on the `turn` blocks to see which angle you need!\",\"hint_id\":\"courseD_artist_ramp12_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5b76af7795f852f315ac145422b8ea2/courseE_artist_ramp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?\",\"hint_id\":\"courseD_artist_ramp12_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f0114747005cf0d59e1ff5faaf3d1f7d/courseE_artist_ramp9.mp3\"}]",
     "video_key": "CSF_artist_angles",
     "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
