@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Пресс-релиз чыгаргыла.** Бул [үлгүнү](%= resolve_url('/promote/official-press-release') %) колдонсоңуз болот.
 
-9. **Жергиликтүү байланыш түзгүлө.** [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) сайтына кирип, өлкөңүздөгү компүтердик билим берүү тууралуу маалымат алыңыз. Ал жактан петицияга кол койсоңуз, Code.org жергиликтүү, мамлекеттик жана федералдык деңгээлдеги жаңыртууларды жөнөтүп турат.
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. Ал жактан петицияга кол койсоңуз, Code.org жергиликтүү, мамлекеттик жана федералдык деңгээлдеги жаңыртууларды жөнөтүп турат.
 
 <%= view :signup_button %>
