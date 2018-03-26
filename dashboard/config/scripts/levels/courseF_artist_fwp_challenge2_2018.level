@@ -40,6 +40,7 @@
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/e4ee7e66d46ece8d79629aebd10b0b43=levelbuilder/27800.png",
     "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
