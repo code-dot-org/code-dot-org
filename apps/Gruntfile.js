@@ -528,6 +528,8 @@ describe('entry tests', () => {
     'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
     'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js',
 
+    'census_reviewers/review_reported_inaccuracies': './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
+
     'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
     'hourofcode.com/public/index': './src/sites/hourofcode.com/pages/public/index.js'
   };
