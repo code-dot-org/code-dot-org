@@ -82,7 +82,14 @@ force-stop)
         sig TERM && exit 0
         echo >&2 "Not running"
         ;;
-restart|reload)
+restart)
+        # Stop current process and wait for it to complete.
+        sig QUIT
+        while sig 0; do sleep 2; done
+        # Start a new process.
+        run "$CMD"
+        ;;
+reload)
         sig HUP && echo reloaded OK && exit 0
         echo >&2 "Couldn't reload, starting '$CMD' instead"
         run "$CMD"

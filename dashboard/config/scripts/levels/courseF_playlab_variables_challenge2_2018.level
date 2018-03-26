@@ -52,6 +52,7 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/aa09391a50f48af3501278a4a18b2b4c=levelbuilder/27794.png",
     "top_level_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
