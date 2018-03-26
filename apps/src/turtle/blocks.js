@@ -265,7 +265,7 @@ blockly.Blocks.point_to = {
     init: function () {
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-      .appendTitle(msg.pointTo());
+          .appendTitle(msg.pointTo());
       this.appendDummyInput()
           .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
           .appendTitle(msg.degrees());
