@@ -157,12 +157,23 @@ export default {
     createJsWrapperBlock({
       color: EVENT_COLOR,
       func: 'whenTouching',
-      blockText: 'when {SPRITE1} is touching {SPRITE2}',
+      blockText: 'when {SPRITE1} touches {SPRITE2}',
       args: [
         { name: 'SPRITE1', type: SPRITE_TYPE },
         { name: 'SPRITE2', type: SPRITE_TYPE },
       ],
       eventBlock: true,
+    });
+
+    createJsWrapperBlock({
+      color: EVENT_LOOP_COLOR,
+      func: 'whileTouching',
+      blockText: 'while {SPRITE1} is touching {SPRITE2}',
+      args: [
+        { name: 'SPRITE1', type: SPRITE_TYPE },
+        { name: 'SPRITE2', type: SPRITE_TYPE },
+      ],
+      eventLoopBlock: true,
     });
 
     createJsWrapperBlock({
