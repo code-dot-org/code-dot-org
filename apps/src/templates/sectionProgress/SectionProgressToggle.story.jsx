@@ -8,6 +8,7 @@ export default storybook => {
       story: () => (
         <SectionProgressToggle
           isSummaryView={true}
+          toggleView={() => {console.log("Toggle view.");}}
         />
       )
     };
@@ -19,6 +20,7 @@ export default storybook => {
       story: () => (
         <SectionProgressToggle
           isSummaryView={false}
+          toggleView={() => {console.log("Toggle view.");}}
         />
       )
     };

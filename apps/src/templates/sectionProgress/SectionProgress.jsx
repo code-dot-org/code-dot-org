@@ -3,7 +3,7 @@ import ScriptSelector from './ScriptSelector';
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import SectionProgressToggle from '@cdo/apps/templates/teacherDashboard/SectionProgressToggle';
+import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import _ from 'lodash';
 
 /**
