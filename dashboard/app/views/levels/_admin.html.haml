@@ -76,6 +76,7 @@
         Project info:
         %ul
           - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+          - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
           %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
           %li= "owner storage id: #{owner_storage_id}"
           %li= "storage app id: #{storage_app_id}"
@@ -83,6 +84,9 @@
           - if exists
             - project = FeaturedProject.find_by storage_app_id: storage_app_id
             - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
+          %li
+            S3 link:
+            = link_to 'sources', sources_link, target: '_blank'
 
         #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
           %button{id: "feature", class: "btn btn-default btn-sm"}
