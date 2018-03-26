@@ -35,13 +35,13 @@ Begin uw CodeUur met het inspireren van uw kind en te bespreken hoe programmeren
 - De originele Code.org lanceringsvideo, in samenwerking met Bill Gates, Mark Zuckerberg en NBA ster Chris Bosh (er zijn versies van [1 minuut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuten](https://www.youtube.com/watch?v=nKIu9yen5nc), en [9 minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama roept alle leerlingen op om mee te doen met programmeren](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Vind meer inspirerende [middelen](%= resolve_url('https://code.org/inspire') %) en [video 's](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Het maakt niet uit als programmeren voor u en uw kind nog nieuw is. Hier zijn een paar ideeën om uw CodeUur activiteit te introduceren:
 
 - Leg uit hoe technologie impact heeft op ons leven, doe dit met behulp van voorbeelden zodat zowel jongens als meisjes interesse zullen tonen (Praat over apps en technologie dat wordt gebruikt om levens te redden, mensen te helpen, en mensen in contact brengt met elkaar etc).
 - Maak een lijst van dingen die gebruik maken van codes in het dagelijks leven.
-- Zie [hier](%= resolve_url('https://code.org/girls') %) tips om meisjes ook geïnteresseerd te krijgen in programmeren.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Wilt u meer ideeën? Bekijk ons [lesplan model](/files/AfterschoolEducatorLessonPlanOutline.docx) voor de beste methoden van ervaren leraren.
 
@@ -61,7 +61,7 @@ Kunt u gerust reageren met:
 
 ## 6) Vier het
 
-[Print de certificaten](%= resolve_url('https://code.org/certificates') %) voor uw kind (en uzelf!).
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
 
@@ -73,7 +73,7 @@ Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de has
 
 Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe software applicaties kunt maken. Zet deze reis voort:
 
-- Moedig uw kind te blijven [leren online](%= resolve_url('https://code.org/learn/beyond') %).
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - Help programmeren te [promoten](%= resolve_url('/promote') %) in uw kind zijn scholengemeenschap.
 
 <%= view :signup_button %>
