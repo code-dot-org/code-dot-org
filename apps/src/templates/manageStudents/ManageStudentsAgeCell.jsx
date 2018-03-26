@@ -14,10 +14,12 @@ class ManageStudentAgeCell extends Component {
     setSharingDefault: PropTypes.func.isRequired,
   };
 
-  // For privacy reasons, we disable sharing by default if the student is under the age of 13.
+  // For privacy reasons, we disable sharing by default if the student is under the age of 13 if the age was previously not set.
   onChangeAge = (e) => {
     this.props.editStudent(this.props.id, {age: e.target.value});
-    this.props.setSharingDefault(this.props.id);
+    if (this.props.age === '') {
+      this.props.setSharingDefault(this.props.id);
+    }
   };
 
   render() {
