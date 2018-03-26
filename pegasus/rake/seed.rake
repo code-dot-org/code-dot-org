@@ -209,6 +209,6 @@ namespace :seed do
   end
 
   desc 'update remote seeds and import any modified'
-  task sync: [:sync_v3].flatten do
+  task sync: :sync_v3 do
   end
 end
