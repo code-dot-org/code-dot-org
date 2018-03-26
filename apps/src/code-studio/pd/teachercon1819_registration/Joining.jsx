@@ -65,6 +65,15 @@ export default class Joining extends Teachercon1819FormComponent {
           questions.
         </p>
       );
+    } else if (this.isLeadFacilitatorApplication()) {
+      return (
+        <p>
+          We're looking forward to seeing you at TeacherCon this summer! Please complete
+          this registration form <strong>within two weeks,</strong> and contact
+          <a href="mailto:facilitators@code.org">facilitators@code.org</a> with any
+          questions.
+        </p>
+      );
     }
   }
 
@@ -132,7 +141,7 @@ export default class Joining extends Teachercon1819FormComponent {
         </FormGroup>
       }
 
-      {(this.isFacilitatorApplication() || this.isPartnerApplication()) &&
+      {(this.isFacilitatorApplication() || this.isPartnerApplication() || this.isLeadFacilitatorApplication()) &&
         <FormGroup>
           {this.radioButtonsFor("ableToAttend")}
           {this.props.data.ableToAttend === "No" &&

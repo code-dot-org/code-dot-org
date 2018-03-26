@@ -44,9 +44,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   def send_teachercon_confirmation_email
     if regional_partner_id?
       Pd::Teachercon1819RegistrationMailer.regional_partner(self).deliver_now
-    else
-      return unless pd_application.workshop && pd_application.workshop.teachercon?
+    elsif pd_application_id?
+      return unless pd_application.try(:workshop) && pd_application.workshop.teachercon?
       Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
+    else
+      Pd::Teachercon1819Registrationmailer.facilitator(self).deliver_now
     end
   end
 
@@ -224,11 +226,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   end
 
   def declined?
-    if pd_application.try(:application_type) == 'Teacher'
-      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
-    elsif pd_application.try(:application_type) == 'Facilitator'
-      accept_status == NO
-    end
+    accept_status ==
+      if pd_application.try(:application_type) == 'Teacher'
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+      else
+        NO
+      end
   end
 
   def accept_status
