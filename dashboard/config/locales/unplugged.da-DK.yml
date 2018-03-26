@@ -499,3 +499,26 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Real-life algoritmer: Plante et frø'
+        desc: Denne lektion gør opmærksom på måder, vi bruge algoritmer i vores daglige
+          liv, ved hjælp af handlingen "plant et frø" som eksempel. Der lægges også
+          vægt på det større billede i datalogi og hvordan algoritmer spiller en væsentlig
+          rolle.
+      UnplugHappyMaps_2018:
+        title: Glade Kort
+        desc: Studerende laver simple algoritmer (sæt af instruktioner) til at flytte
+          en figur gennem en labyrint, ved brug af en enkelt kommando.
+      GoingPlacesSafely_2018:
+        title: Gå til sikre steder
+        desc: Internettet er kraftfuldt, men sommetider et farligt sted. Lærere introducere
+          hvordan man kan forholde sig sikker mens man surfer på internettet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Den store begivenhed
+        desc: Eleverne introduceres til programmerings begrebet "begivenheder", som
+          er handlinger, som en computer konstant overvåger. Læreren vil tryk knapper
+          på et papir fjernbetjening og eleverne vil reagere, alt efter hvilken knap
+          er trykket.

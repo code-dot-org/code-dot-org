@@ -238,7 +238,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Secret Word
       email: "Էլ. փոստ"
       google_classroom: Google Classroom
       clever: Clever

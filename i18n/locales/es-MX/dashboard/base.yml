@@ -196,7 +196,7 @@ es-MX:
     remove: '(remover sección)'
     type:
       picture: 'Foro contraseña'
-      word: 'Palabras secretas'
+      word: 'Palabra secreta'
       email: 'Correo electrónico'
       google_classroom: 'Aula de Google'
       clever: 'Inteligente'
