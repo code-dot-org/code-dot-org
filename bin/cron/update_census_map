@@ -26,13 +26,13 @@ end
 
 # Update summaries before updating the fusion table
 # If any single teaches_cs category in a given year changes by more than
-# 10% of the total number of schools then issue a Honeybadger nofication.
-threshhold = School.count * 0.1
+# 10% of the total number of schools then issue a Honeybadger notification.
+threshold = School.count * 0.1
 old_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
 Census::CensusSummary.summarize_census_data
 new_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
 
-unless old_summary_counts.select {|k, c| (c - new_summary_counts[k]).abs > threshhold}.empty?
+unless old_summary_counts.select {|k, c| (c - new_summary_counts[k]).abs > threshold}.empty?
   Honeybadger.notify(
     error_message: "High rate of change in census_summaries. This may be expected if summary logic was recently changed or if a new data source was just added.",
     error_class: "Census Summary High Rate of Change",
