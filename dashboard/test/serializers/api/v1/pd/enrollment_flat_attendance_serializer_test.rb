@@ -76,7 +76,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
     assert_equal expected, serialized
   end
 
-  test 'deleted user that attended' do
+  test 'deleted user that attended shows as attended' do
     teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
     teacher.destroy!
 
@@ -94,7 +94,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
     assert_equal expected, serialized
   end
 
-  test 'deleted user that did not attend' do
+  test 'deleted user that did not attend shows as not attended' do
     teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: false
     teacher.destroy!
 
