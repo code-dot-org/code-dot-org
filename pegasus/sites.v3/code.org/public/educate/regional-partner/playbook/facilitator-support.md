@@ -1,8 +1,8 @@
-<meta name="robots" content="noindex">
 ---
 title: Facilitators
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 
 <a id="top"></a>
 
@@ -106,6 +106,7 @@ ________________
 - [6-12 Facilitation Guide](https://docs.google.com/document/d/1xvBjf74VL0YfVswqLwoCdau5NN3D-QRyqQHGYl20034/edit)
 - [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators 
 - [Important Resources for CS Discoveries Facilitators](https://curriculum.code.org/plcsd/) - See full list of resources and agendas for CS Discoveries Facilitators
+- [Not-so-local Facilitator Travel Policy](https://docs.google.com/document/d/1GmwNtu3r9Yi6VwAvDtPV9AFiENVD5QKJEVLNH1SMECM/edit) - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops.
 
 
 [**Back to the top**](#top)

@@ -40,6 +40,7 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

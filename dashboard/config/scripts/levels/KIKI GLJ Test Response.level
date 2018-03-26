@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-03-20T00:39:23.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "instructions": "Look carefully at the code below.  What do you think the plane will do when you click \"Run\"?\r\n",
+    "instructions_important": "true",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "Look carefully at the code below.  What do you think the plane will do when you click \"Run\"?\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-20 00:40:24 +0000\",\"changed\":[\"instructions_important\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 02:17:53 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 19:21:57 +0000\",\"changed\":[\"instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 19:22:38 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Regional Partner Directory
 nav: regional_partner_playbook_nav

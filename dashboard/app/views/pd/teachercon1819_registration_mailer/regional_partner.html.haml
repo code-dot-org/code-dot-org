@@ -1,15 +1,16 @@
 %p
   Hi
-  = @registration.regional_partner.contact.name + ','
+  = @registration.sanitize_form_data_hash[:preferred_first_name] + ','
 
-%p
-  Thank you for submitting your TeacherCon registration form! You will receive more
-  information about travel approximately six weeks before TeacherCon.
-
-%p
-  If you responded that you are not able to attend your assigned TeacherCon dates, please
-  contact your Outreach Regional Manager as soon as possible so that we may assist you.
-
+- if @registration.accepted?
+  %p
+    Thank you for submitting your TeacherCon registration form! You will receive more
+    information about travel approximately six weeks before TeacherCon.
+- else
+  %p
+    Thank you for submitting your TeacherCon registration form. You responded that you
+    are not able to attend your assigned TeacherCon dates. Please contact your Regional
+    Manager as soon as possible so that we may assist you.
 %p
   Thank you,
   %br

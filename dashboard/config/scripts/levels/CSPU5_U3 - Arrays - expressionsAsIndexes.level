@@ -20,7 +20,8 @@
       "console.log": null,
       "declareAssign_x_array_1_4": {
         "block": "var list = [];"
-      }
+      },
+      "accessListItem": null
     },
     "edit_code": true,
     "embed": "false",
@@ -57,9 +58,22 @@
     "slider_speed": "1",
     "start_blocks": "var colors = [\"red\",\"orange\",\"yellow\",\"green\",\"blue\",\"indigo\",\"violet\"];\r\n\r\n// Write code that logs a random color from this array to the console",
     "encrypted_examples": "jS/uBFxm8iLhqXr4hBGUX3sbt7+IwJ0gLzM048a7armpvHgNCKtyNeoQEfZc\nVsE/\n",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-20 16:18:28 +0000\",\"changed\":[\"notes\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

@@ -6,7 +6,7 @@ const statuses = Object.values(LevelStatus);
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressBubble', module)
+    .storiesOf('Progress/ProgressBubble', module)
     .addStoryTable(
       statuses.map(status => ({
         name: `bubble status: ${status}`,

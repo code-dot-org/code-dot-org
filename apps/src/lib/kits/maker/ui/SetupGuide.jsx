@@ -119,21 +119,11 @@ class WindowsDownloads extends React.Component {
         {error &&
           <FetchingLatestVersionError/>
         }
-        <br/>
-        <Button
-          text="Install Adafruit Windows Drivers"
-          color={ButtonColor.blue}
-          size={ButtonSize.large}
-          style={downloadButtonStyle}
-          href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only"
-        />
         <div>
           <h4>Instructions:</h4>
           <ol>
-            <li>Download and install the Code.org Maker App using the download
-              button above.
-            </li>
-            <li>Install the Adafruit Windows drivers.</li>
+            <li>Download and install the Code.org Maker App using the download button above.</li>
+            <li>(Windows 7) Install the <a href="https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only">Adafruit Windows drivers</a>.</li>
             <li>Open up the Code.org Maker App and sign in to Code.org.</li>
             <li>Plug in your board to start using it with App Lab!</li>
           </ol>

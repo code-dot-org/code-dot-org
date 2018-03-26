@@ -1,11 +1,10 @@
-<meta name="robots" content="noindex">
-
 ---
 title: training materials
 nav: regional_partner_playbook_nav
 ---
-
+<meta name="robots" content="noindex">
 <a id="top"></a>
+
 # Training Materials
 
 ## Table of Contents
@@ -37,6 +36,10 @@ ________________
 <br/>
 ## Virtual Trainings
 
+
+March 2018
+
+- Mar 16 Federal Grant Consortia Webinar ([Video](https://code.zoom.us/recording/play/DaPic_y7f-R80ZsdTan8wtrgPgfTmV6NqRHe9cVBYi7Ra9UhQIFavOH_cHfi5cgy), [Slides](https://drive.google.com/file/d/1zp-eIO7XyY9TGVv76741vEcFRlLBf-sM/view?usp=sharing))
 
 February 2018
 
