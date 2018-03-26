@@ -77,6 +77,9 @@ Dashboard::Application.routes.draw do
         collection do
           post 'bulk_add'
         end
+        member do
+          post 'remove'
+        end
       end
       member do
         post 'join'
@@ -297,6 +300,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
+  get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
+  post '/census/review', to: 'census_reviewers#create'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -456,7 +461,7 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner', to: 'teachercon1819_registration#partner'
+    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 

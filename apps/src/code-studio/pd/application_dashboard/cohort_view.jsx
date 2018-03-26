@@ -98,7 +98,9 @@ class CohortView extends React.Component {
       let accepted = 0;
       let registered = 0;
       if (this.state.applications !== null) {
-        accepted = this.state.applications.length;
+        accepted = this.state.applications
+        .filter(app => app.status === 'accepted')
+        .length;
         registered = this.state.applications
           .filter(app => app.registered_workshop === 'Yes')
           .length;

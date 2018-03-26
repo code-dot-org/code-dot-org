@@ -46,8 +46,8 @@ class ManageStudentActionsCell extends Component {
     const {removeStudent, id, sectionId} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
-        url: `/v2/sections/${sectionId}/students/${id}`,
-        method: 'DELETE',
+        url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
+        method: 'POST',
     }).done(() => {
         removeStudent(id);
     }).fail((jqXhr, status) => {

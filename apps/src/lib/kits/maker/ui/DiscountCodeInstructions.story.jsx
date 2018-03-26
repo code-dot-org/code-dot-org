@@ -3,7 +3,7 @@ import DiscountCodeInstructions from './DiscountCodeInstructions';
 
 export default storybook => {
   return storybook
-    .storiesOf('Discount Code Instructions', module)
+    .storiesOf('MakerToolkit/Discounts/Discount Code Instructions', module)
     .addStoryTable([
       {
         name: 'Full Discount',

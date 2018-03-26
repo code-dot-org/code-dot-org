@@ -23,7 +23,7 @@ class Api::V1::Pd::CohortViewSerializerBase < ActiveModel::Serializer
   end
 
   def assigned_workshop
-    object.workshop.try(&:date_and_location_name)
+    object.workshop_date_and_location
   end
 
   def registered_workshop

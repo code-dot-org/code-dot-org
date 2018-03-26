@@ -61,19 +61,31 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   end
 
   def partner
-    unless current_user.regional_partners.count > 0
-      render :unauthorized
+    unless current_user.try(:permission?, UserPermission::PROGRAM_MANAGER)
+      render :please_sign_in
       return
     end
 
-    regional_partner = current_user.regional_partners.first
-    teachercon = get_matching_teachercon(regional_partner)
+    regional_partner = current_user.regional_partners.find_by(group: 3)
+    unless regional_partner
+      render :only_group_3
+      return
+    end
+
+    teachercon =
+      if params[:city].present?
+        TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
+      else
+        get_matching_teachercon(regional_partner)
+      end
+
     unless teachercon
       render :invalid
       return
     end
 
-    if Pd::Teachercon1819Registration.exists?(regional_partner_id: regional_partner.id)
+    if Pd::Teachercon1819Registration.exists?(user: current_user)
+      @seat_accepted = Pd::Teachercon1819Registration.find_by(user: current_user).accepted?
       @email = 'partner@code.org'
       render :partner_submitted
       return

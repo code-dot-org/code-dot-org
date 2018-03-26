@@ -19,6 +19,7 @@ import manageStudents, {
   addMultipleRows,
   RowType,
   toggleSharingColumn,
+  updateAllShareSetting,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -34,6 +35,7 @@ const studentEmailData = {
       secretPictureName: 'wizard',
       secretPicturePath: '/wizard.jpg',
       sectionId: 53,
+      sharingDisabled: true,
     },
   2: {
       id: 2,
@@ -47,6 +49,7 @@ const studentEmailData = {
       secretPictureName: 'wizard',
       secretPicturePath: '/wizard.jpg',
       sectionId: 53,
+      sharingDisabled: true,
     },
   3: {
       id: 3,
@@ -60,6 +63,7 @@ const studentEmailData = {
       secretPictureName: 'wizard',
       secretPicturePath: '/wizard.jpg',
       sectionId: 53,
+      sharingDisabled: true,
     },
 };
 
@@ -112,12 +116,39 @@ const expectedBlankRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: false,
   isEditing: true,
   rowType: RowType.ADD,
 };
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
+
+  describe('updateAllShareSetting', () => {
+    it('enable all sets sharingDisabled to false', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = editAll();
+      const nextNextState = manageStudents(nextState, startEditingStudentAction);
+      const enableAllShareSettingsStudentAction = updateAllShareSetting(false);
+      const finalState = manageStudents(nextNextState, enableAllShareSettingsStudentAction);
+      assert.deepEqual(finalState.editingData[1].sharingDisabled, false);
+      assert.deepEqual(finalState.editingData[2].sharingDisabled, false);
+      assert.deepEqual(finalState.editingData[3].sharingDisabled, false);
+    });
+
+    it('disable all sets sharingDisabled to true', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = editAll();
+      const nextNextState = manageStudents(nextState, startEditingStudentAction);
+      const disableAllShareSettingsStudentAction = updateAllShareSetting(true);
+      const finalState = manageStudents(nextNextState, disableAllShareSettingsStudentAction);
+      assert.deepEqual(finalState.editingData[1].sharingDisabled, true);
+      assert.deepEqual(finalState.editingData[2].sharingDisabled, true);
+      assert.deepEqual(finalState.editingData[3].sharingDisabled, true);
+    });
+  });
 
   describe('toggleSharingColumn', () => {
     it('toggle showSharingColumn state', () => {
@@ -319,6 +350,16 @@ describe('manageStudentsRedux', () => {
         name: "New name",
         age: 13,
         gender: 'm',
+      });
+
+      const editStudentShareSettingAction = editStudent(1, {sharingDisabled: true});
+      const stateWithShareSetting = manageStudents(stateWithGender, editStudentShareSettingAction);
+      assert.deepEqual(stateWithShareSetting.editingData[1], {
+        ...studentEmailData[1],
+        name: "New name",
+        age: 13,
+        gender: 'm',
+        sharingDisabled: true,
       });
     });
   });

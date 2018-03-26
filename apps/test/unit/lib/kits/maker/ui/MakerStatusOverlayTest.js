@@ -134,14 +134,14 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include('Maker Toolkit BETA requires');
-      expect(wrapper.text()).to.include('Chrome');
+      expect(wrapper.text()).to.include('This level requires the');
+      expect(wrapper.text()).to.include('Code.org Maker App');
     });
 
     it('and a "Setup Instructions" button', () => {
       const selector = 'button.setup-instructions';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Setup Instructions');
+      expect(wrapper.find(selector).text()).to.include('Get Code.org Maker App');
     });
 
     it('that navigates to the Maker Setup page', () => {

@@ -2005,6 +2005,17 @@ class UserTest < ActiveSupport::TestCase
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
 
+  test 'deleting user deletes dependent pd applications' do
+    teacher = create :teacher
+    application = create :pd_teacher1819_application, user: teacher
+    assert_equal application.id, teacher.pd_applications.first.id
+
+    teacher.destroy
+
+    assert teacher.reload.deleted?
+    refute Pd::Application::Teacher1819Application.exists?(application.id)
+  end
+
   test 'deleting teacher deletes dependent sections and followers' do
     follower = create :follower
     teacher = follower.user
