@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Truyền cảm hứng về Giờ Lập trình cho các học sinh và tình nguyện viên
 
-Code.org đem đến cơ hội cho các nhân viên của bạn [kết nối](%= resolve_url('https://code.org/volunteer') %) với lớp học địa phương đang thực hiện Giờ Lập trình nơi họ có thể chia sẻ các kinh nghiệm về công nghệ của mình và truyền cảm hứng cho các học sinh học khoa học máy tính.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Đăng kí](%= resolve_url('https://code.org/volunteer') %) để tình nguyện.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - Để có nhiều hướng dẫn hơn để khuyến khích các nhân viên và kết nối nhân viên của bạn với lớp học, hãy vào [ phần hướng dẫn cho đối tác doanh nghiệp](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Các cách khác mà các công ty có thể hỗ trợ Giờ Lập trình:
 
-- Hãy yêu cầu CEO của bạn [ gửi một email cho toàn thể công ty ](%= resolve_url('/promote/resources#sample-emails') %) nhấn mạnh tầm quan trọng của khoa học máy tính và khuyến khích các nhân viên để nhân rộng. 
+- Hãy yêu cầu CEO của bạn [ gửi một email cho toàn thể công ty ](%= resolve_url('/promote/resources#sample-emails') %) nhấn mạnh tầm quan trọng của khoa học máy tính và khuyến khích các nhân viên để nhân rộng.
 - Tổ chức một Giờ Lập trình dưới dạng Happy Hour với các đồng nghiệp để thử [các hoạt động](%= resolve_url('/learn') %).
 - Tổ chức một sự kiện Giờ Lập trình cho lớp học địa phương hay các đối tác phi lợi nhuận để thực hiện một Giờ Lập trình tại văn phòng công ty bạn. Hãy xem hướng dẫn tổ chức sự kiện bên dưới.
 
@@ -25,7 +25,7 @@ Code.org đem đến cơ hội cho các nhân viên của bạn [kết nối](%=
 ## 1. Quảng bá Giờ Lập trình của bạn
 
 - Quảng bá sự kiện [ Giờ Lập trình](%= resolve_url('/promote') %) của bạn và khuyến khích những người khác cùng tổ chức.
-- Khuyến khích các kỹ sư phần mềm tại công ty của bạn tới thăm một lớp học địa phương để giúp hướng dẫn Giờ Lập trình và truyền cảm hứng cho học sinh để học khoa học máy tính. Họ có thể [đăng ký](%= resolve_url('https://code.org/volunteer/engineer') %) để kết được kết nối với một lớp học,.
+- Khuyến khích các kỹ sư phần mềm tại công ty của bạn tới thăm một lớp học địa phương để giúp hướng dẫn Giờ Lập trình và truyền cảm hứng cho học sinh để học khoa học máy tính. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Xem video hướng dẫn <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Khởi động Giờ Lập Trình của bạn bằng cách truyền cảm hứng
 
 **Ý tưởng để giới thiệu hoạt động Giờ Lập trình tới học sinh:**
 
-- Diễn giải cách mà công nghệ tác động lên cuộc sống của chúng ta, với những ví dụ mà các bé trai và bé gái đều quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để tiết kiệm cuộc sống, giúp đỡ con người, kết nối con người, v. v.). 
+- Diễn giải cách mà công nghệ tác động lên cuộc sống của chúng ta, với những ví dụ mà các bé trai và bé gái đều quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để tiết kiệm cuộc sống, giúp đỡ con người, kết nối con người, v. v.).
 - Nếu bạn là một công ty công nghệ, giới thiệu sản phẩm thú vị, sáng tạo, công ty của bạn đang thực hiện.
 - Nếu bạn không phải là một công ty công nghệ, thảo luận về cách thức công ty của bạn sử dụng công nghệ để giải quyết vấn đề và đạt mục tiêu.
 - Mời các kỹ sư phần mềm từ công ty của bạn để nói chuyện về lý do tại sao họ đã quyết định nghiên cứu khoa học máy tính và các dự án mà họ làm việc trên.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Lập trình!
 
@@ -103,7 +103,7 @@ Khởi động Giờ Lập Trình của bạn bằng cách truyền cảm hứng
 
 ## 7) Chúc mừng
 
-- [In Giấy chứng nhận](%= resolve_url('https://code.org/certificates') %) cho người tham gia và học sinh.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - [In nhãn dán "Tôi đã hoàn thành một Giờ Lập Trình!"](%= resolve_url('/promote/resources#stickers') %).
 - [Đặt áo phông](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) cho nhân viên của bạn.
 - Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
