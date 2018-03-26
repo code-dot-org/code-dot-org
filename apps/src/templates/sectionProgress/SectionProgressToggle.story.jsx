@@ -4,7 +4,7 @@ import SectionProgressToggle from './SectionProgressToggle';
 export default storybook => {
   function isSummaryTrue() {
     return {
-      name:'isSummary view is true',
+      name:'Summary view toggle on',
       story: () => (
         <SectionProgressToggle
           isSummaryView={true}
@@ -16,7 +16,7 @@ export default storybook => {
 
   function isSummaryFalse() {
     return {
-      name:'isSummary view is false',
+      name:'Detail view toggle on',
       story: () => (
         <SectionProgressToggle
           isSummaryView={false}
