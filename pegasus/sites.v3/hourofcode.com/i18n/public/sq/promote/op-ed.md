@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Shko te [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) për të gjetur informacion shtetëror specifike për shkenca kompjuterike.
+Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
 
 **Titulli: Informatika... Aty ku janë punët**
 
