@@ -25,6 +25,29 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
 
   before_save :update_regional_partner
 
+  after_create :send_regional_partner_contact_emails
+  def send_regional_partner_contact_emails
+    form = sanitize_and_trim_form_data_hash
+
+    if regional_partner_id
+      partner = RegionalPartner.find(regional_partner_id)
+      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner)
+
+      if regional_partner_program_managers.empty?
+        matched_but_no_pms = true
+        Pd::RegionalPartnerContactMailer.unmatched(form, matched_but_no_pms).deliver_now
+      else
+        regional_partner_program_managers.each do |rp_pm|
+          Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
+        end
+      end
+    else
+      Pd::RegionalPartnerContactMailer.unmatched(form).deliver_now
+    end
+
+    Pd::RegionalPartnerContactMailer.receipt(form).deliver_now
+  end
+
   def self.required_fields
     [
       :first_name,

@@ -190,3 +190,5 @@ Code.org's [Facilitator Development Program](/educate/professional-learning/faci
 If you're interested in becoming a Code.org Facilitator, <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAq4l_1HsjdbtRBo7fggTrTZe0H9_tcRMBrxXA893QkP6MWA/viewform", target=_"blank">let us know!</a>
 
 -->
+
+<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=1108",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> 

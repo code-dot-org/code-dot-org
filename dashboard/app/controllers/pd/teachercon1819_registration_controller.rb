@@ -66,13 +66,19 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    unless current_user.regional_partners.where(group: 3).any?
+    regional_partner = current_user.regional_partners.find_by(group: 3)
+    unless regional_partner
       render :only_group_3
       return
     end
 
-    regional_partner = current_user.regional_partners.first
-    teachercon = get_matching_teachercon(regional_partner)
+    teachercon =
+      if params[:city].present?
+        TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
+      else
+        get_matching_teachercon(regional_partner)
+      end
+
     unless teachercon
       render :invalid
       return
