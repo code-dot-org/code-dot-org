@@ -42,6 +42,7 @@
     "markdown_instructions": "*\"This field is a-MAZE-ing!\"*\r\n\r\nBuild your own function to help the bee through the maze by turning left at flowers and right at honeycomb.  Don't forget to collect nectar and make honey along the way!",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
