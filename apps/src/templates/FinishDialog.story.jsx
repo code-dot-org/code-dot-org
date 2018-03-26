@@ -18,12 +18,12 @@ const achievements = [
   {
     isAchieved: true,
     iconUrl: '',
-    message: 'Achievement got',
+    message: 'First attempt!',
   },
   {
-    isAchieved: false,
+    isAchieved: true,
     iconUrl: '',
-    message: 'Achievement missed',
+    message: 'Effecient!',
   },
 ];
 
