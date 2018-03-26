@@ -93,5 +93,6 @@
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "Changes the width of the pencil.",
+  "withSize": "with size",
   "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
 }
