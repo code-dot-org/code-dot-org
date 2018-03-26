@@ -30,7 +30,7 @@ Code.org&reg; is a nonprofit dedicated to expanding access to computer science i
 
 <div style="clear: both;"></div>
 
-## Diversity of students in our courses</h2>
+## The majority of our students are girls or underrepresented minorities</h2>
 
 <img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" class ="col-95">
 

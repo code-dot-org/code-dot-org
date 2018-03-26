@@ -77,9 +77,9 @@
     "start_blocks": "var mouse = createSprite(50, 50);\r\nmouse.setAnimation(\"mouse\");\r\nmouse.scale = 0.5;\r\n\r\nfunction draw() {\r\n  background(\"lightgreen\");\r\n  mouse.y = mouse.y + 2;\r\n  drawSprites();\r\n}",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"7cdd7bcc-4ea9-4570-9a65-43920e96c1a3\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"7cdd7bcc-4ea9-4570-9a65-43920e96c1a3\": {\r\n      \"name\": \"mouse\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS/category_animals/mouse_gray.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 296\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS\"\r\n    }\r\n  }\r\n}",
     "encrypted_examples": "FO/Nr7XQiTcpqxP+uw40XZca4VEkOCVEQKgxOk/3Vdy6A8fsL2RVDE8XKdEH\n5Tm9NA076eME0/5UPJ+7lDfz6OcnIv+mEhWRwDmYlG6CAVA6z5SiDKS/YA06\nKOCCE+wKVvutQqW/yIvfge2Al9i1Tg==\n",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

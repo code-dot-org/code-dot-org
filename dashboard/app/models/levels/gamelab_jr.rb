@@ -29,6 +29,7 @@ class GamelabJr < Gamelab
     custom_helper_library
     custom_blocks
     hide_custom_blocks
+    use_default_sprites
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -43,6 +44,8 @@ class GamelabJr < Gamelab
           helper_libraries: [
             "GameLabJr",
           ],
+          use_default_sprites: true,
+          hide_animation_mode: true,
         }
       )
     )
