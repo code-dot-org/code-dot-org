@@ -113,6 +113,34 @@ module Api::V1::Pd
       end
     end
 
+    # GET /api/v1/pd/applications/teachercon_cohort
+    def teachercon_cohort
+      applications = Pd::Application::WorkshopAutoenrolledApplication.teachercon_cohort(@applications)
+
+      serialized_applications = prefetch_and_serialize(
+        applications,
+        serializer: TcFitCohortViewSerializer,
+        scope: {user: current_user}
+      )
+
+      serialized_tc_registrations = Pd::Teachercon1819Registration.
+        where(pd_application_id: nil).
+        includes(user: {school_info: {school: :school_district}}).map do |registration|
+        TcFitCohortViewTeacherconRegistrationSerializer.new(registration).attributes
+      end
+
+      render json: serialized_applications + serialized_tc_registrations
+    end
+
+    # GET /api/v1/pd/applications/fit_cohort
+    def fit_cohort
+      serialized_fit_cohort = Pd::Application::Facilitator1819Application.fit_cohort(@applications).map do |application|
+        TcFitCohortViewSerializer.new(application).attributes
+      end
+
+      render json: serialized_fit_cohort
+    end
+
     # PATCH /api/v1/pd/applications/1
     def update
       application_data = application_params
@@ -222,15 +250,15 @@ module Api::V1::Pd
       end
     end
 
-    def prefetch_and_serialize(applications, role:, serializer:, scope: {})
+    def prefetch_and_serialize(applications, role: nil, serializer:, scope: {})
       prefetch applications, role: role
       applications.map do |application|
         serializer.new(application, scope: scope).attributes
       end
     end
 
-    def prefetch(applications, role:)
-      type = TYPES_BY_ROLE[role.to_sym]
+    def prefetch(applications, role: nil)
+      type = TYPES_BY_ROLE[role.try(&:to_sym)] || Pd::Application::WorkshopAutoenrolledApplication
       type.prefetch_associated_models applications
     end
   end
