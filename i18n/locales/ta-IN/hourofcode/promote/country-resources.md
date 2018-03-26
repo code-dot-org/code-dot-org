@@ -124,9 +124,9 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
+- பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் என்.ஏ.ஏ. நட்சத்திரம் கிறிஸ் பாஷ் ([ 1 நிமிடம் </ a > [ 5 நிமிடம் ](https://www.youtube.com/watch?v=nKIu9yen5nc), மற்றும் <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 நிமிடம் ](https://www.youtube.com/watch?v=qYZF6oIZtfc) பதிப்புகள்)
 - The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- [ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களுக்கும் கணினி விஞ்ஞானம் கற்றுக்கொடுக்க அழைப்பு விடுத்துள்ளார்](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
 
