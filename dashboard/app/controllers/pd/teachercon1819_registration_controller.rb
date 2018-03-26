@@ -72,12 +72,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    teachercon =
-      if params[:city].present?
-        TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
-      else
-        get_matching_teachercon(regional_partner)
-      end
+    teachercon = get_teachercon regional_partner
 
     unless teachercon
       render :invalid
@@ -112,15 +107,34 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       render :unauthorized
     end
 
+    teachercon = get_teachercon
+
+    unless teachercon
+      render :invalid
+      return
+    end
+
     @script_data = {
       props: {
         options: Pd::Teachercon1819Registration.options.camelize_keys,
         requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
-        apiEndpoint: "/api/v1/pd/teachercon_partner_registrations",
+        apiEndpoint: "/api/v1/pd/teachercon_lead_facilitator_registrations",
         applicationType: "LeadFacilitator",
+        city: teachercon[:city],
+        date: teachercon[:dates],
         email: current_user.email
       }.to_json
     }
     render :new
+  end
+
+  private
+
+  def get_teachercon(regional_partner = nil)
+    if params[:city].present?
+      TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
+    else
+      get_matching_teachercon(regional_partner)
+    end
   end
 end

@@ -896,6 +896,22 @@ FactoryGirl.define do
         hash.delete('teacherAcceptSeat')
       end
     end
+
+    trait :lead_facilitator_accepted do
+      after :build do |hash|
+        hash['ableToAttend'] = "Yes"
+        hash['city'] = 'Phoenix'
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :lead_facilitator_declined do
+      after :build do |hash|
+        hash['ableToAttend'] = "No"
+        hash['city'] = 'Phoenix'
+        hash.delete('teacherAcceptSeat')
+      end
+    end
   end
 
   factory :pd_teachercon1819_registration, class: 'Pd::Teachercon1819Registration' do
