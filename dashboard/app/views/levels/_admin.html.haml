@@ -62,11 +62,6 @@
             %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
         - else
           %li (Cannot edit)
-        - if params[:channel_id]
-          %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
-          - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id])
-          %li= "owner storage id: #{owner_storage_id}"
-          %li= "storage app id: #{storage_app_id}"
       %br/
       This level is in #{@level.script_levels.count} scripts:
       %ul
@@ -81,10 +76,13 @@
       - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
         %br/
         - if params[:channel_id]
-          - _, channel_id = storage_decrypt_channel_id(params[:channel_id])
-          - exists = FeaturedProject.exists?(:storage_app_id => channel_id)
+          - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+          %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
+          %li= "owner storage id: #{owner_storage_id}"
+          %li= "storage app id: #{storage_app_id}"
+          - exists = FeaturedProject.exists?(:storage_app_id => storage_app_id)
           - if exists
-            - project = FeaturedProject.find_by storage_app_id: channel_id
+            - project = FeaturedProject.find_by storage_app_id: storage_app_id
             - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
 
           #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
@@ -100,7 +98,6 @@
 
     - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
       %br
-
       %div.admin-abuse{ :style => "display: none" }
         Abuse score:
         %span.admin-abuse-score
