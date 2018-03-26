@@ -92,7 +92,7 @@ class BucketHelper
     end
     key = s3_path owner_id, channel_id, filename
     begin
-      s3_object = s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
+      s3_object = s3_get_object(key, if_modified_since, version)
       {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
@@ -364,5 +364,10 @@ class BucketHelper
 
   def s3_path(owner_id, channel_id, filename = nil)
     "#{@base_dir}/#{owner_id}/#{channel_id}/#{Addressable::URI.unencode(filename)}"
+  end
+
+  # Extracted so we can override with special behavior in AnimationBucket.
+  def s3_get_object(key, if_modified_since, version)
+    s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
   end
 end

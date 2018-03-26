@@ -1,0 +1,24 @@
+name 'CSD U2 L3 Overview_2018'
+display_name 'Lesson Overview'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Overview
+
+This lesson introduces to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. The class looks at an HTML page in Web Lab and discusses how HTML tags help solve this problem, then uses HTML to write the first web pages of the unit.
+## Vocabulary
+
+* **HTML** - Stands for Hypertext Markup Language and is used to create the content of a web page.
+* **HTML Element** - A piece of a website. Marked by a start tag and sometimes closed with an end tag. Also includes the content of the element as well.
+* **HTML Tag** - The special set of characters that tells the machine where the start and end of an HTML element is and what type it is.
+* **Website Content** - The raw text, images, and other elements included in a web page
+* **Website Structure** - The purpose of different pieces of content in a web page, used to help the computer determine how that content should be displayed
+
+## Introduced Code
+
+* **[HTML](//docs.code.org/weblab/html/)** - `<html></html>`
+* **[Doctype](//docs.code.org/weblab/doctype/)** - `<!DOCTYPE>`
+* **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+* **[Body](//docs.code.org/weblab/body/)** - `<body></body>`
+* **[Head](//docs.code.org/weblab/head/)** - `<head></head>`
+MARKDOWN

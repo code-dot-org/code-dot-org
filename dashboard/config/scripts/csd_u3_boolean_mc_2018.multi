@@ -1,0 +1,18 @@
+name 'CSD U3 Boolean MC_2018'
+title 'title'
+description ''
+question 'Which result will be printed in the console by this program?'
+right 'true<br>false<br>true'
+wrong '  0<br>200<br>100'
+wrong '  true<br>error<br>true'
+wrong '  false<br>true<br>false'
+
+markdown <<MARKDOWN
+# Boolean Expressions
+
+Decision-making on computers are based on statements called **boolean expressions**. A boolean expression is **any expression that can only evaluate to either `TRUE` or `FALSE`**. This can be particularly useful when used to compare the properties of two sprites. For example, you could figure out which one is larger or placed higher up. In the next few puzzles we'll use simple boolean expressions to compare sprite properties.
+
+# Predict
+
+Read the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question
+MARKDOWN

@@ -11,7 +11,7 @@ const defaultProps = {
 
 export default storybook => {
   return storybook
-    .storiesOf('EligibilityChecklist', module)
+    .storiesOf('MakerToolkit/Discounts/EligibilityChecklist', module)
     .addStoryTable([
       {
         name: 'Failed Checklist',

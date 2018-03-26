@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -10,6 +11,7 @@ import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
+import ManageStudentsSharingCell from './ManageStudentsSharingCell';
 import ManageStudentsActionsCell from './ManageStudentsActionsCell';
 import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
@@ -18,7 +20,6 @@ import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
-import {Checkbox} from 'react-bootstrap';
 import experiments from '@cdo/apps/util/experiments';
 
 const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
@@ -232,9 +233,25 @@ class ManageStudentsTable extends Component {
   projectSharingHeaderFormatter = () => {
     return (
       <span>
-        <div style={styles.headerName}>
+        <div
+          style={styles.headerName}
+          data-for="explain-sharing"
+          data-tip=""
+        >
           {i18n.projectSharingColumnHeader()}
         </div>
+        <ReactTooltip
+          id="explain-sharing"
+          class="react-tooltip-hover-stay"
+          role="tooltip"
+          effect="solid"
+          place="top"
+          delayHide={1000}
+        >
+          <div>
+            {i18n.shareSettingMoreDetailsTooltip()}
+          </div>
+        </ReactTooltip>
         <div style={styles.headerIcon}>
           <SharingControlActionsHeaderCell/>
         </div>
@@ -246,13 +263,16 @@ class ManageStudentsTable extends Component {
     let disabled = rowData.isEditing ?
       this.props.editingData[rowData.id].age.length === 0 :
       true;
+    const editedValue = rowData.isEditing ? this.props.editingData[rowData.id].sharingDisabled : true;
 
     return (
-      <span>
-        <Checkbox
-          disabled={disabled}
-        />
-      </span>
+      <ManageStudentsSharingCell
+        id={rowData.id}
+        isEditing={rowData.isEditing}
+        disabled={disabled}
+        checked={!rowData.sharingDisabled}
+        editedValue={!editedValue}
+      />
     );
   };
 
@@ -287,7 +307,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 260
           }},
           transforms: [sortable],
         },
@@ -296,7 +315,6 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 260
           }}
         }
       },
@@ -307,7 +325,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 100,
+            width: 90,
           }},
           transforms: [sortable],
         },
@@ -316,7 +334,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 100,
+            width: 90,
           }}
         }
       },
@@ -327,7 +345,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.headerCell,
-            width: 130,
+            width: 120,
           }},
           transforms: [sortable],
         },
@@ -336,7 +354,7 @@ class ManageStudentsTable extends Component {
           props: {
             style: {
             ...tableLayoutStyles.cell,
-            width: 130,
+            width: 120,
           }}
         }
       },
