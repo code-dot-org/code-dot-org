@@ -52,21 +52,6 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
         `orderedKeys is not an array`);
   });
 
-  it('throws if duplicates are found in the orderedKeys array', function () {
-    const validKeys = ['this', 'is', 'valid'];
-    expect(() => throwIfSerializedAnimationListIsInvalid({
-      orderedKeys: validKeys,
-      propsByKey: buildValidPropsForKeys(validKeys)
-    })).not.to.throw();
-
-    const invalidKeys = ['this', 'is', 'is', 'not'];
-    expect(() => throwIfSerializedAnimationListIsInvalid({
-      orderedKeys: invalidKeys,
-      propsByKey: buildValidPropsForKeys(invalidKeys)
-    })).to.throw(Error,
-        'Key "is" appears more than once in orderedKeys');
-  });
-
   it('throws if it finds keys without associated props', function () {
     expect(() => throwIfSerializedAnimationListIsInvalid({
       orderedKeys: ['keyWithoutProps'],
