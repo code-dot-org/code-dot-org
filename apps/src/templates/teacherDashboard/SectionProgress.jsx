@@ -3,6 +3,7 @@ import ScriptSelector from './ScriptSelector';
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SectionProgressToggle from '@cdo/apps/templates/teacherDashboard/SectionProgressToggle';
 import _ from 'lodash';
 
 /**
@@ -38,11 +39,18 @@ export default class SectionProgress extends Component {
     scriptId: "112",
     scriptData: null,
     studentLevelProgress: null,
+    isSummaryView: false,
   };
 
   componentDidMount() {
     this.loadScript(this.state.scriptId);
   }
+
+  toggleView = () => {
+    this.setState({
+      isSummaryView: !this.state.isSummaryView
+    });
+  };
 
   onChangeScript = scriptId => {
     this.setState({
@@ -80,7 +88,7 @@ export default class SectionProgress extends Component {
 
   render() {
     const { section, validScripts } = this.props;
-    const { scriptId, scriptData, studentLevelProgress } = this.state;
+    const { scriptId, scriptData, studentLevelProgress, isSummaryView } = this.state;
 
     let levelDataInitialized = scriptData && studentLevelProgress;
 
@@ -91,8 +99,12 @@ export default class SectionProgress extends Component {
           scriptId={scriptId}
           onChange={this.onChangeScript}
         />
+        <SectionProgressToggle isSummaryView={isSummaryView} toggleView={this.toggleView}/>
         {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
-        {levelDataInitialized &&
+        {(levelDataInitialized && isSummaryView) &&
+          <div>{"This will be the summary view"}</div>
+        }
+        {(levelDataInitialized && !isSummaryView) &&
           <SectionScriptProgress
             section={section}
             scriptData={scriptData}
