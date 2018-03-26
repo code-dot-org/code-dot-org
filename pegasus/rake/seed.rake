@@ -204,11 +204,18 @@ namespace :seed do
     $gdrive_ ||= Google::Drive.new
   end
 
-  task :sync_v3 do
-    Dir.glob(pegasus_dir('data/*.gsheet')) {|i| GSheetToCsv.new(i).import}
+  desc 'import any modified seeds'
+  task migrate: imports.keys.map {|i| stub_path(i)} do
+    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import}
+  end
+
+  desc 'drop and import all seeds'
+  task reset: imports.keys do
+    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import!}
   end
 
   desc 'update remote seeds and import any modified'
-  task sync: :sync_v3 do
+  task :sync do
+    Dir.glob(pegasus_dir('data/*.gsheet')) {|i| GSheetToCsv.new(i).import}
   end
 end
