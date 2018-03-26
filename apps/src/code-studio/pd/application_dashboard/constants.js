@@ -68,6 +68,7 @@ exports.ApplicationFinalStatuses = [
   'accepted',
   'declined',
   'waitlisted',
+  'withdrawn'
 ];
 
 /**
