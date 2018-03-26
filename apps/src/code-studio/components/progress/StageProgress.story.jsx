@@ -3,7 +3,7 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import StageProgress from './StageProgress';
 import stageLock from '../../stageLockRedux';
-import progress, { initProgress, mergeProgress, setStageExtrasEnabled, setStageTrophyEnabled } from '../../progressRedux';
+import progress, { initProgress, mergeProgress, setStageExtrasEnabled } from '../../progressRedux';
 import { TestResults } from '@cdo/apps/constants';
 
 const activityPuzzle = {
@@ -91,7 +91,7 @@ const unplugged = {
 };
 
 export default storybook => {
-  const createStoreForLevels = (levels, currentLevelIndex, showStageExtras, onStageExtras, showStageTrophy) => {
+  const createStoreForLevels = (levels, currentLevelIndex, showStageExtras, onStageExtras) => {
     const store = createStore(combineReducers({progress, stageLock}));
     store.dispatch(initProgress({
       currentLevelId: onStageExtras ?
@@ -107,7 +107,6 @@ export default storybook => {
     }));
     store.dispatch(mergeProgress({123: TestResults.ALL_PASS}));
     store.dispatch(setStageExtrasEnabled(showStageExtras));
-    store.dispatch(setStageTrophyEnabled(showStageTrophy));
     return store;
   };
 
@@ -220,11 +219,11 @@ export default storybook => {
           const store = createStoreForLevels([
             assessment1,
             assessment1,
-          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          ], 0, false /* showStageExtras */, true /* onStageExtras */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
-                <StageProgress/>
+                <StageProgress stageTrophyEnabled />
               </Provider>
             </div>
           );
@@ -242,11 +241,11 @@ export default storybook => {
             assessment1,
             assessment1,
             assessment1,
-          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          ], 0, false /* showStageExtras */, true /* onStageExtras */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
-                <StageProgress/>
+                <StageProgress stageTrophyEnabled />
               </Provider>
             </div>
           );
@@ -262,11 +261,11 @@ export default storybook => {
             activityPuzzle,
             activityPuzzle,
             assessment1,
-          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          ], 0, false /* showStageExtras */, true /* onStageExtras */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
-                <StageProgress/>
+                <StageProgress stageTrophyEnabled />
               </Provider>
             </div>
           );
@@ -282,11 +281,11 @@ export default storybook => {
             activityPuzzle,
             activityPuzzle,
             activityPuzzle,
-          ], 0, false /* showStageExtras */, true /* onStageExtras */, true /* showStageTrophy */);
+          ], 0, false /* showStageExtras */, true /* onStageExtras */);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
-                <StageProgress/>
+                <StageProgress stageTrophyEnabled />
               </Provider>
             </div>
           );
