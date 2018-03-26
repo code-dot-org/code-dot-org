@@ -8,7 +8,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import SectionProgress from '@cdo/apps/templates/teacherDashboard/SectionProgress';
+import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {

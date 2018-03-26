@@ -202,7 +202,7 @@ const scriptData = {
 
 export default storybook => {
   storybook
-    .storiesOf('SectionScriptProgress', module)
+    .storiesOf('Progress/SectionScriptProgress', module)
     .addStoryTable([
       {
         name: 'SectionScriptProgress',
