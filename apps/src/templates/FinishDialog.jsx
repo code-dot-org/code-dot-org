@@ -38,7 +38,7 @@ const styles = {
     borderRadius: '10px 10px 0px 0px',
   },
   content: {
-    padding: '28px 0 5px',
+    padding: '8px 0 5px',
     textAlign: 'center',
   },
   confetti: {
@@ -107,14 +107,13 @@ const styles = {
     display: 'inline-block',
   },
   achievements: {
-    width: 217,
+    width: 340,
     display: 'block',
     margin: '24px auto 4px',
     padding: '0px 23px',
-    borderColor: color.light_teal,
-    borderWidth: 1,
+    borderColor: color.lighter_gray,
+    borderWidth: "1px 0",
     borderStyle: 'solid',
-    borderRadius: 5,
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.dark_charcoal,
   },
