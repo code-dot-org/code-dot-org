@@ -5,6 +5,7 @@ import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import _ from 'lodash';
+import { connect } from 'react-redux';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -12,11 +13,13 @@ import _ from 'lodash';
  * student progress. Child components then have the responsibility for displaying
  * that progress.
  */
-export default class SectionProgress extends Component {
+class SectionProgress extends Component {
   static propTypes = {
     // The section we get directly from angular right now. This gives us a
     // different shape than some other places we use sections. For now, I'm just
     // going to document the parts of section that we use here
+
+    //Provided by redux
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       students: PropTypes.arrayOf(PropTypes.shape({
@@ -115,3 +118,9 @@ export default class SectionProgress extends Component {
     );
   }
 }
+
+export const UnconnectedSectionProgress = SectionProgress;
+
+export default connect(state => ({
+  section: state.sectionProgress.section
+}))(SectionProgress);
