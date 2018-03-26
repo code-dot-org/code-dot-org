@@ -23,11 +23,16 @@ const styles = {
     marginLeft: 4,
     marginRight: 4,
   },
+  spacer: {
+    marginRight: 'auto',
+  },
   stageTrophyContainer: {
     border: 0,
     borderRadius: 20,
-    paddingLeft: 10,
+    paddingLeft: 8,
     paddingRight: 0,
+    minWidth: 350,
+    marginLeft: 48,
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
@@ -59,6 +64,9 @@ const StageProgress = React.createClass({
           ...(stageTrophyEnabled && styles.stageTrophyContainer),
         }}
       >
+        {stageTrophyEnabled &&
+          <div style={styles.spacer}/>
+        }
         {levels.map((level, index) =>
           <div
             key={index}
@@ -70,6 +78,7 @@ const StageProgress = React.createClass({
               level={level}
               disabled={false}
               smallBubble={!level.isCurrentLevel}
+              stageTrophyEnabled={stageTrophyEnabled}
             />
           </div>
         )}
