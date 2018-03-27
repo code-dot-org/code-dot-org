@@ -5036,13 +5036,25 @@ fil:
           
           Have a friend try your app when it is finished!
       courseA_artist_loops10_authored_hint: [ ]
+      courseA_artist_loops10_2018_authored_hint: [ ]
       courseA_artist_loops11_authored_hint: [ ]
+      courseA_artist_loops11_2018_authored_hint: [ ]
       courseA_artist_loops11_predict2_authored_hint: [ ]
       courseA_artist_loops12_authored_hint: [ ]
+      courseA_artist_loops12_2018_authored_hint: [ ]
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type="when_run"/></xml> na bloke para makita kung ano ang mangyayari.
         courseA_artist_loops2_b: Gamitin ang blokeng ito <block type="simple_move_right"/> para malutas ang palaisipang ito.
+      courseA_artist_loops2_2018_authored_hint:
+        courseA_artist_loops2_a: Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type="when_run"/></xml> na bloke para makita kung ano ang mangyayari.
+        courseA_artist_loops2_b: Gamitin ang blokeng ito <block type="simple_move_right"/> para malutas ang palaisipang ito.
       courseA_artist_loops3_authored_hint:
+        courseA_artist_loops3_a: Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.
+        courseA_artist_loops3_b: |-
+          Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.
+          
+          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+      courseA_artist_loops3_2018_authored_hint:
         courseA_artist_loops3_a: Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.
         courseA_artist_loops3_b: |-
           Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.
@@ -5052,14 +5064,32 @@ fil:
         courseA_artist_loops4_a: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
         courseA_artist_loops4_b: |-
           Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
+      courseA_artist_loops4_2018_authored_hint:
+        courseA_artist_loops4_a: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
+        courseA_artist_loops4_b: |-
+          Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
       courseA_artist_loops5_authored_hint:
+        courseA_artist_loops5_a: Subukang gamitin ang natutunan mo tungkol sa <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!
+        courseA_artist_loops5_b: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
+        courseA_artist_loops5_c: "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+      courseA_artist_loops5_2018_authored_hint:
         courseA_artist_loops5_a: Subukang gamitin ang natutunan mo tungkol sa <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!
         courseA_artist_loops5_b: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
         courseA_artist_loops5_c: "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Hindi matukoy kung paano gumawa ng bundok? Subukang paglaruan ang mga blokeng ito para makita kung ano ang maiguhit ng bawat isa.
         courseA_artist_loops6_b: Kakailanganin mo nang 2 mga bloke sa 2 mga direksyon para malutas ang palaisipang ito.
+      courseA_artist_loops6_2018_authored_hint:
+        courseA_artist_loops6_a: Hindi matukoy kung paano gumawa ng bundok? Subukang paglaruan ang mga blokeng ito para makita kung ano ang maiguhit ng bawat isa.
+        courseA_artist_loops6_b: Kakailanganin mo nang 2 mga bloke sa 2 mga direksyon para malutas ang palaisipang ito.
       courseA_artist_loops7_authored_hint:
+        courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang isulat ang code sa bawat hakbang at maghanap ng pattern.
+        courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
+        courseA_artist_loops7_c: |-
+          Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> na loop.
+      courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang isulat ang code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
         courseA_artist_loops7_c: |-
@@ -5077,11 +5107,20 @@ fil:
         courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana ang naisulat para sa iyo.
         courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
         courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin nito?  \nAno ang sinabi nito sa iyo?"
+      courseA_artist_loops8_2018_authored_hint:
+        courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana ang naisulat para sa iyo.
+        courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
+        courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin nito?  \nAno ang sinabi nito sa iyo?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.
         courseA_artist_loops9_b: "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop."
         courseA_artist_loops9_c: Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.
+      courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.
+        courseA_artist_loops9_b: "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop."
+        courseA_artist_loops9_c: Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.
       courseA_artist_loops_challenge1_authored_hint: [ ]
+      courseA_artist_loops_challenge1_2018_authored_hint: [ ]
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: Ang mga bloke gaya nito <xml>  <block type="simple_move_up_left"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!
         courseA_artist_loops_challenge2_b: Kapag natapos mo na ang isang bahay ng ibon, `jump` sa susunod!
@@ -5090,17 +5129,59 @@ fil:
         courseA_artist_loops_challenge2_a: Ang mga bloke gaya nito <xml>  <block type="simple_move_up_left"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!
         courseA_artist_loops_challenge2_b: Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!
         courseA_artist_loops_challenge2_c: Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito.
+      courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_a: Ang mga bloke gaya nito <xml>  <block type="simple_move_up_left"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!
+        courseA_artist_loops_challenge2_b: Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!
+        courseA_artist_loops_challenge2_c: Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: Maaari kang gumamit ng mga `jump` na bloke para makalipat sa ibang mga puwang.
+      courseA_bee_seq1_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_bee_seq10_authored_hint: [ ]
+      courseA_bee_seq11_authored_hint: [ ]
+      courseA_bee_seq12_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_bee_seq13_authored_hint: [ ]
+      courseA_bee_seq14_authored_hint: [ ]
+      courseA_bee_seq2_authored_hint: [ ]
+      courseA_bee_seq3_authored_hint: [ ]
+      courseA_bee_seq4_authored_hint: [ ]
+      courseA_bee_seq5_authored_hint: [ ]
+      courseA_bee_seq6_authored_hint: [ ]
+      courseA_bee_seq7_authored_hint: [ ]
+      courseA_bee_seq8_authored_hint: [ ]
+      courseA_bee_seq9_authored_hint: [ ]
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.
           <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan.
       courseA_collector_loops10_authored_hint: [ ]
+      courseA_collector_loops10_2018_authored_hint: [ ]
       courseA_collector_loops11_authored_hint: [ ]
+      courseA_collector_loops11_2018_authored_hint: [ ]
       courseA_collector_loops11_predict2_authored_hint: [ ]
+      courseA_collector_loops1_2018_authored_hint:
+        courseA_collector_loops1_a: |-
+          Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan.
       courseA_collector_loops2_authored_hint:
+        courseA_collector_loops2_a: Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.
+        courseA_collector_loops2_b: |-
+          Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.
         courseA_collector_loops2_b: |-
           Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.
@@ -5108,27 +5189,68 @@ fil:
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3_a: "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
         courseA_collector_loops3_b: Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop.
+      courseA_collector_loops3_2018_authored_hint:
+        courseA_collector_loops3_a: "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+        courseA_collector_loops3_b: Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop.
       courseA_collector_loops3_predict1_authored_hint: [ ]
       courseA_collector_loops4_authored_hint:
+        courseA_collector_loops4_a: Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.
+        courseA_collector_loops4_b: Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop!
+      courseA_collector_loops4_2018_authored_hint:
         courseA_collector_loops4_a: Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.
         courseA_collector_loops4_b: Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop!
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.
         courseA_collector_loops5_b: Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.
         courseA_collector_loops5_c: Gugustuhin mong magsimula sa <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan.
+      courseA_collector_loops5_2018_authored_hint:
+        courseA_collector_loops5_a: Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.
+        courseA_collector_loops5_b: Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.
+        courseA_collector_loops5_c: Gugustuhin mong magsimula sa <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan.
       courseA_collector_loops6_authored_hint:
+        courseA_collector_loops6_a: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
+        courseA_collector_loops6_b: Ang pinakamaikling solusyon ay mayroong 2 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop, isa pagkatapos ng isa pa.
+      courseA_collector_loops6_2018_authored_hint:
         courseA_collector_loops6_a: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
         courseA_collector_loops6_b: Ang pinakamaikling solusyon ay mayroong 2 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop, isa pagkatapos ng isa pa.
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Kung hindi mo matukoy kung ano ang susunod, subukang patakbuhin ang code para makita kung saan makarating si Laurel.
+      courseA_collector_loops7_2018_authored_hint:
+        courseA_collector_loops7_a: Kung hindi mo matukoy kung ano ang susunod, subukang patakbuhin ang code para makita kung saan makarating si Laurel.
       courseA_collector_loops8_authored_hint:
+        courseA_collector_loops8_a: Kung ikay ay nahihirapan sa pag-uunawa sa palaisipang ito, subukang magsulat ng mga galaw sa isang piraso ng papel at maghanap ng pattern.
+        courseA_collector_loops8_b: Subukang hatiin ang palaisipang ito sa 3 magkahiwalay na mga problema, at nagsusulat ng mga loop para sa bawat isa.
+        courseA_collector_loops8_c: Tandaan, maaari kang magsulat ng isang pirasong code sa isang beses, pagkatapos ay pindutin ang "Run" para matukoy kung saan ka tutungo mula doon.
+      courseA_collector_loops8_2018_authored_hint:
         courseA_collector_loops8_a: Kung ikay ay nahihirapan sa pag-uunawa sa palaisipang ito, subukang magsulat ng mga galaw sa isang piraso ng papel at maghanap ng pattern.
         courseA_collector_loops8_b: Subukang hatiin ang palaisipang ito sa 3 magkahiwalay na mga problema, at nagsusulat ng mga loop para sa bawat isa.
         courseA_collector_loops8_c: Tandaan, maaari kang magsulat ng isang pirasong code sa isang beses, pagkatapos ay pindutin ang "Run" para matukoy kung saan ka tutungo mula doon.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. '
         courseA_collector_loops9_b: Subukang maglagay ng 2 sa iyong <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!
+      courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: 'Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. '
+        courseA_collector_loops9_b: Subukang maglagay ng 2 sa iyong <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!
       courseA_collector_loops_challenge1_authored_hint:
+        courseA_collector_loops_challenge1_a: Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.
+        courseA_collector_loops_challenge1_b: Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.
+        courseA_collector_loops_challenge1_c: Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?
+        courseA_collector_loops_challenge1_d: |-
+          Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.
         courseA_collector_loops_challenge1_b: Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.
         courseA_collector_loops_challenge1_c: Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?
@@ -5153,6 +5275,9 @@ fil:
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_b: Subukan ang landas na ito para makarating sa isang solusyon.
         courseA_collector_loops_challenge2kp_a: Maaari ka bang gumamit ng mga loop para malutas ang palaisipang ito?
+      courseA_collector_loops_challenge2kp_2018_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Subukan ang landas na ito para makarating sa isang solusyon.
+        courseA_collector_loops_challenge2kp_a: Maaari ka bang gumamit ng mga loop para malutas ang palaisipang ito?
       courseA_collector_preLoops1_authored_hint: [ ]
       courseA_collector_preLoops2_authored_hint: [ ]
       courseA_collector_preLoops3_authored_hint: [ ]
@@ -5168,6 +5293,27 @@ fil:
           Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.
           <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: [ ]
+      courseA_harvester_seq1_authored_hint:
+        courseA_harvester_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq12_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_harvester_seq2_authored_hint: [ ]
+      courseA_harvester_seq3_authored_hint: [ ]
+      courseA_harvester_seq4_authored_hint: [ ]
+      courseA_harvester_seq5_authored_hint: [ ]
+      courseA_harvester_seq6_authored_hint: [ ]
+      courseA_harvester_seq7_authored_hint: [ ]
+      courseA_harvester_seq8_authored_hint: [ ]
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
           Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>
@@ -5178,8 +5324,13 @@ fil:
       courseA_maze_seq10_authored_hint:
         courseA_maze_seq10_a: Kung ikaw ay nagkaproblema, subukang isulat muna ang mga hakbang sa isang pirasong papel.
         courseA_maze_seq10_b: Kailanganin mong pumunta sa 3 mga direksyon para malutas ang palaisipang ito.
+      courseA_maze_seq10_2018_authored_hint:
+        courseA_maze_seq10_a: Kung ikaw ay nagkaproblema, subukang isulat muna ang mga hakbang sa isang pirasong papel.
+        courseA_maze_seq10_b: Kailanganin mong pumunta sa 3 mga direksyon para malutas ang palaisipang ito.
       courseA_maze_seq11_authored_hint: [ ]
+      courseA_maze_seq11_2018_authored_hint: [ ]
       courseA_maze_seq12_authored_hint: [ ]
+      courseA_maze_seq12_2018_authored_hint: [ ]
       courseA_maze_seq12_predict2_authored_hint: [ ]
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
@@ -5187,7 +5338,23 @@ fil:
         courseA_maze_seq13_c: |-
           Ang mga <xml><block type="maze_moveNorth"/></xml>
           <xml><block type="maze_moveEast"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy.
+      courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
+        courseA_maze_seq13_b: Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.
+        courseA_maze_seq13_c: |-
+          Ang mga <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy.
+      courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq2_authored_hint:
+        courseA_maze_seq2_a: Ang programang ito ay kulang ng 1 bloke. Maaari mo bang matukoy kung alin sa mga ito?
+        courseA_maze_seq2_b: Subukang patakbuhin muna ang code para makita kung saan aabot ang ibon. Saan mo ba kailangang pumunta mula doon?
+      courseA_maze_seq2_2018_authored_hint:
         courseA_maze_seq2_a: Ang programang ito ay kulang ng 1 bloke. Maaari mo bang matukoy kung alin sa mga ito?
         courseA_maze_seq2_b: Subukang patakbuhin muna ang code para makita kung saan aabot ang ibon. Saan mo ba kailangang pumunta mula doon?
       courseA_maze_seq2_predict1_authored_hint: [ ]
@@ -5195,7 +5362,14 @@ fil:
         courseA_maze_seq3_a: Ang 1 sa mga bloke ay nagpapagalaw sa ion sa maling direksyon. Maaari mo bang matukoy kung alin dito at palitan ito sa tamang bloke?
         courseA_maze_seq3_b: Subukang gamitin ang pindutan na hakbang para makahanap kung saan nagkamali ang programa. Ang unang hakbang ba? Ang pangalawa?
         courseA_maze_seq3_c: Ang <xml><block type="maze_moveNorth"/></xml> na blokeng ito ay parang hindi nagpapagalaw sa ibon sa tamang direksyon. Maaari mo ba itong palitan ng ibang bloke?
+      courseA_maze_seq3_2018_authored_hint:
+        courseA_maze_seq3_a: Ang 1 sa mga bloke ay nagpapagalaw sa ion sa maling direksyon. Maaari mo bang matukoy kung alin dito at palitan ito sa tamang bloke?
+        courseA_maze_seq3_b: Subukang gamitin ang pindutan na hakbang para makahanap kung saan nagkamali ang programa. Ang unang hakbang ba? Ang pangalawa?
+        courseA_maze_seq3_c: Ang <xml><block type="maze_moveNorth"/></xml> na blokeng ito ay parang hindi nagpapagalaw sa ibon sa tamang direksyon. Maaari mo ba itong palitan ng ibang bloke?
       courseA_maze_seq4_authored_hint:
+        courseA_maze_seq4_a: Kung ikaw ay nahihirapan, subukang tukuyin kung ano ang tamang landas at pagkatapos tanggalin ang blokeng hindi tumugma.
+        courseA_maze_seq4_b: Subukang patakbuhin ang code nang ito lang. May problema ba? Aling bloke ang maaari mong tanggalin? Paano mo ito maaayos?
+      courseA_maze_seq4_2018_authored_hint:
         courseA_maze_seq4_a: Kung ikaw ay nahihirapan, subukang tukuyin kung ano ang tamang landas at pagkatapos tanggalin ang blokeng hindi tumugma.
         courseA_maze_seq4_b: Subukang patakbuhin ang code nang ito lang. May problema ba? Aling bloke ang maaari mong tanggalin? Paano mo ito maaayos?
       courseA_maze_seq4a_authored_hint:
@@ -5203,21 +5377,40 @@ fil:
       courseA_maze_seq5_authored_hint:
         courseA_maze_seq5_a: Subukang isulat ang mga hakbang sa papel para mahanap ang solusyon!
         courseA_maze_seq5_b: Kakailanganin mo nang 2 mga bloke, nag natuturo sa 2 mga direksyon.
+      courseA_maze_seq5_2018_authored_hint:
+        courseA_maze_seq5_a: Subukang isulat ang mga hakbang sa papel para mahanap ang solusyon!
+        courseA_maze_seq5_b: Kakailanganin mo nang 2 mga bloke, nag natuturo sa 2 mga direksyon.
       courseA_maze_seq6_authored_hint:
+        courseA_maze_seq6_a: Ang iyong huling code ay dapat mayroong 3 mga paggalaw na bloke.
+        courseA_maze_seq6_b: Kung ikaw ay hindi makausad, subukang lutasin ang palaisipan sa 2 mga bahagi, isa parte bago ang kanto at isa pagkatapos ng kanto.
+      courseA_maze_seq6_2018_authored_hint:
         courseA_maze_seq6_a: Ang iyong huling code ay dapat mayroong 3 mga paggalaw na bloke.
         courseA_maze_seq6_b: Kung ikaw ay hindi makausad, subukang lutasin ang palaisipan sa 2 mga bahagi, isa parte bago ang kanto at isa pagkatapos ng kanto.
       courseA_maze_seq7_authored_hint:
         courseA_maze_seq7_a: Mayroong 1 bloke na kailangan mong idagdag para mapagalaw ang ibon papunta sa baboy.
         courseA_maze_seq7_b: Kung hindi mo alam kung ano ang gagawin, subukang iguhit ang palaisipan sa papel at gamitin ang iyong mga daliri para matukoy kung aling daan ang dapat dadaanan.
+      courseA_maze_seq7_2018_authored_hint:
+        courseA_maze_seq7_a: Mayroong 1 bloke na kailangan mong idagdag para mapagalaw ang ibon papunta sa baboy.
+        courseA_maze_seq7_b: Kung hindi mo alam kung ano ang gagawin, subukang iguhit ang palaisipan sa papel at gamitin ang iyong mga daliri para matukoy kung aling daan ang dapat dadaanan.
       courseA_maze_seq8_authored_hint:
+        courseA_maze_seq8_a: Kung hindi ka makausad, subukang iguhit ang larawan sa papel para makita kung paano dapat gagalaw ang ibon.
+      courseA_maze_seq8_2018_authored_hint:
         courseA_maze_seq8_a: Kung hindi ka makausad, subukang iguhit ang larawan sa papel para makita kung paano dapat gagalaw ang ibon.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Hind makausad? Subukang bakasin ang landas ng ibon gamit ang iyong mga daliri.
         courseA_maze_seq9_b: Kung hindi ka sigurado kung ano ang gagawin, subukang pindutin ang "Start over" at patakbuhin ang code para makita kung ano ang mali.
         courseA_maze_seq9_c: Kailangan mong gumalaw sa 3 mga direksyon para malutas ang palaisipang ito.
+      courseA_maze_seq9_2018_authored_hint:
+        courseA_maze_seq9_a: Hind makausad? Subukang bakasin ang landas ng ibon gamit ang iyong mga daliri.
+        courseA_maze_seq9_b: Kung hindi ka sigurado kung ano ang gagawin, subukang pindutin ang "Start over" at patakbuhin ang code para makita kung ano ang mali.
+        courseA_maze_seq9_c: Kailangan mong gumalaw sa 3 mga direksyon para malutas ang palaisipang ito.
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Mayroong dalawang solusyon sa palaisipang ito.
+      courseA_maze_seq_challenge1_2018_authored_hint:
+        courseA_maze_seq_challenge1_a: Mayroong dalawang solusyon sa palaisipang ito.
       courseA_maze_seq_challenge2_authored_hint:
+        courseA_maze_seq_challenge2_a: Subukang bilanggin ang mga espasyo sa iyong mga daliri. Tandaan na huwag bilangin ang puwang kung saan ka nagsimula!
+      courseA_maze_seq_challenge2_2018_authored_hint:
         courseA_maze_seq_challenge2_a: Subukang bilanggin ang mga espasyo sa iyong mga daliri. Tandaan na huwag bilangin ang puwang kung saan ka nagsimula!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: Maghanap ng isang bloke na nagpapasalita sa aso ng isang bagay.
@@ -5234,7 +5427,31 @@ fil:
           </next>
           </block>
           </xml>
+      courseA_playLab_events2_2018_authored_hint:
+        courseA_playLab_events2_a: Maghanap ng isang bloke na nagpapasalita sa aso ng isang bagay.
+        courseA_playLab_events2_b: |-
+          Narito ang code na kailangan mo para makumpleto ang palaisipang ito:
+          
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_playLab_events3_authored_hint:
+        courseA_playLab_events3_a: |-
+          Drag this block  <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> out and snap it to the bottom of <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you've finished!
+      courseA_playLab_events3_2018_authored_hint:
         courseA_playLab_events3_a: |-
           Drag this block  <xml><block type="studio_move">
           <title name="SPRITE">1</title>
@@ -5261,13 +5478,56 @@ fil:
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
           </block></next></block></xml>
+      courseA_playLab_events4_2018_authored_hint:
+        courseA_playLab_events4_a: |-
+          Here is the event block that you will need to get Jorge to move right:
+          
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          This is the code you will need to complete this puzzle:
+          
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
         courseA_playLab_events5_b: |-
           Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?
           
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018_authored_hint:
+        courseA_playLab_events5_a: "Here are the event blocks that you will need to use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?
+          
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events6_authored_hint:
+        courseA_playLab_events6_a: |-
+          Here is the event block that you would use to have Jorge do something when clicked:
+          
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
+        courseA_playLab_events6_b: |-
+          Here is the block you would use to change the background:
+          
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
+        courseA_playLab_events6_c: |-
+          Here is the block you would use to play a random sound:
+          
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
+      courseA_playLab_events6_2018_authored_hint:
         courseA_playLab_events6_a: |-
           Here is the event block that you would use to have Jorge do something when clicked:
           
@@ -5294,8 +5554,22 @@ fil:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
+      courseA_playLab_events7_2018_authored_hint:
+        courseA_playLab_events7_a: |-
+          Use this block to control what happens when the actors collide.
+          
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_playlab_challengeTemplate_authored_hint: [ ]
       courseA_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018_authored_hint:
         courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
@@ -5329,6 +5603,33 @@ fil:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          You can make an angry monster growl.
+          
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_2018_authored_hint:
         courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
@@ -12758,6 +13059,9 @@ fil:
           2) Play a random sound when you click the actor.
           
           Now, make sure both of those actions are attached underneath the same event!
+      harvester_Kahoot_authored_hint:
+        courseE_farmer_functions1a_a: Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?
+        courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
       harvey_snowflake_artist1_authored_hint: [ ]
       harvey_snowflake_artist2_authored_hint: [ ]
       harvey_tictactoe_authored_hint:
