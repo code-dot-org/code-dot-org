@@ -745,6 +745,15 @@ module Pd::Application
       )
 
       assert_equal workshop_2, application.get_first_selected_workshop
+
+      application_2 = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: [workshop_1.id, workshop_2.id],
+          able_to_attend_multiple: ["#{workshop_2.friendly_date_range} in TBA hosted by Code.org"]
+        )
+      )
+
+      assert_equal workshop_1, application_2.get_first_selected_workshop
     end
 
     test 'assign_default_workshop! saves the default workshop' do
