@@ -11,7 +11,7 @@
   upgrade_ie_link: Ulteriori informazioni
   en: Informatica
   computer_science_edweek: Settimana di Educazione all'Informatica
-  csedweek_dates: 8-14 dicembre 2014
+  csedweek_dates: 3-9 dicembre 2018
   csedweek_banner_hoc: 'L''<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a
     href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate
@@ -43,9 +43,9 @@
   og_description_celeb: Prova i nuovi tutorial e vinci una video conferenza con una
     celebrità per te o la tua classe!
   csedweek_og_title: Ora di CodiceOra di Codice
-  csedweek_og_description: Dal 4 al 10 December 2017. È fondamentale che ogni studente
+  csedweek_og_description: Dal 3 al 9 dicembre 2018. È fondamentale che ogni studente
     impari l'informatica.
-  csedweek_og_description_soon: 'L''Ora del Codice è in arrivo: 4-10 dicembre 2017.
+  csedweek_og_description_soon: 'L''Ora del Codice è in arrivo: 3-9 dicembre 2018.
     Imparare l''informatica è fondamentale per ogni studente.'
   csedweek_og_description_here: L'Ora del Codice è qui. Imparare l'informatica è fondamentale
     per ogni studente.
@@ -1435,12 +1435,12 @@
   course2_gradelevel: Da 6 anni in su (per chi sa leggere)
   course3_gradelevel: Da 8 anni in su (dopo il Corso 2)
   course4_gradelevel: Da 10 anni in su (dopo il Corso 3)
-  coursea_gradelevel: Da 10 anni in su
-  courseb_gradelevel: Da 11 anni in su
-  coursec_gradelevel: Da 12 anni in su
-  coursed_gradelevel: Da 13 anni in su
-  coursee_gradelevel: Dai 14 anni in su
-  coursef_gradelevel: Da 15 anni in su
+  coursea_gradelevel: Da 4 a 7 anni
+  courseb_gradelevel: Da 5 a 8 anni
+  coursec_gradelevel: Da 6 a 10 anni
+  coursed_gradelevel: Da 7 a 11 anni
+  coursee_gradelevel: Da 8 a 12 anni
+  coursef_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, Tablet
   codeintl_platformtext: Browser moderni, smartphone, Tablet

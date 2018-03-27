@@ -798,7 +798,7 @@
   dashboard_students_secret_picture_title: "秘密の画像"
   dashboard_students_secret_picture: "このセクションでは、各生徒が秘密の<b>画像</b>をパスワードの変わりに使用してログインします。ログインする際は上記のWebアドレスにログインしてください。"
   dashboard_students_reset_picture: "<b>秘密を表示</b> し、<b>秘密をリセット</b> を選択して、いつでも学生の秘密の画像をリセットできます。新しい秘密の画像は生徒がサインインする際に生成されます"
-  dashboard_students_secret_word_title: "秘密の言葉"
+  dashboard_students_secret_word_title: "秘密の単語"
   dashboard_students_secret_word: "このセクションでは、生徒が各自で設定したパスワードを使ってログインします。ログインするためには上記のWebアドレスにアクセスしてください。"
   dashboard_students_reset_word: "<b>秘密の表示</b>と<b>秘密のリセット</b>を選ぶことで、いつでも生徒の秘密の単語をリセットすることができます。新しい秘密の単語はサインインしたときに生成されます"
   dashboard_students_join_link: "あなたのセクションに入るよう生徒に自分のアカウントの作り方を教えましょう"
