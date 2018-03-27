@@ -78,6 +78,8 @@ class GamelabJr < Gamelab
   <block type="gamelab_destroy" />
   <block type="gamelab_firstTouched" />
   <block type="gamelab_secondTouched" />
+  <block type="sprite_variables_get" />
+  <block type="sprite_variables_set" />
 </category>
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />

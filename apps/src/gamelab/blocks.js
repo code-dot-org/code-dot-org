@@ -9,8 +9,7 @@ const WORLD_COLOR = [240, 0.45, 0.65];
 
 export default {
   install(blockly, blockInstallOptions) {
-    // TODO(ram): Create Blockly.BlockValueType.SPRITE
-    const SPRITE_TYPE = blockly.BlockValueType.NONE;
+    const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
     const { ORDER_MEMBER } = Blockly.JavaScript;
 
     const sprites = () => {
@@ -25,8 +24,12 @@ export default {
       });
     };
 
-    const createJsWrapperBlock =
-      createJsWrapperBlockCreator(blockly, 'gamelab');
+    const createJsWrapperBlock = createJsWrapperBlockCreator(
+      blockly,
+      'gamelab',
+      [SPRITE_TYPE],
+      SPRITE_TYPE,
+    );
 
     createJsWrapperBlock({
       color: SPRITE_COLOR,
@@ -282,6 +285,65 @@ export default {
       blockText: 'hide title screen',
       args: [],
     });
+
+    // Legacy style block definitions :(
+    const generator = blockly.Generator.get('JavaScript');
+
+    Blockly.Blocks.sprite_variables_get = {
+      // Variable getter.
+      init: function () {
+        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        // Must be marked EDITABLE so that cloned blocks share the same var name
+        fieldLabel.EDITABLE = true;
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHSV(131, 0.64, 0.62);
+        this.appendDummyInput()
+            .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
+            .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+                : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+            .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+      },
+      getVars: function () {
+        return [this.getTitleValue('VAR')];
+      },
+      renameVar: function (oldName, newName) {
+        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+          this.setTitleValue(newName, 'VAR');
+        }
+      },
+    };
+    generator.sprite_variables_get = generator.variables_get;
+
+    Blockly.Blocks.sprite_variables_set = {
+      // Variable setter.
+      init: function () {
+        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_SET_ITEM);
+        // Must be marked EDITABLE so that cloned blocks share the same var name
+        fieldLabel.EDITABLE = true;
+        this.setHelpUrl(Blockly.Msg.VARIABLES_SET_HELPURL);
+        this.setHSV(131, 0.64, 0.62);
+        this.appendValueInput('VALUE')
+            .setStrictCheck(Blockly.BlockValueType.SPRITE)
+            .appendTitle(Blockly.Msg.VARIABLES_SET_TITLE)
+            .appendTitle(Blockly.disableVariableEditing ? fieldLabel
+              : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_SET_ITEM), 'VAR')
+            .appendTitle(Blockly.Msg.VARIABLES_SET_TAIL);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip(Blockly.Msg.VARIABLES_SET_TOOLTIP);
+      },
+      getVars: function () {
+        return [this.getTitleValue('VAR')];
+      },
+      renameVar: function (oldName, newName) {
+        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+          this.setTitleValue(newName, 'VAR');
+        }
+      },
+    };
+    generator.sprite_variables_set = generator.variables_set;
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
