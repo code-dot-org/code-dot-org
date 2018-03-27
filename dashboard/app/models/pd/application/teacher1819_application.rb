@@ -776,7 +776,8 @@ module Pd::Application
       # Map back to actual workshops by reconstructing the friendly_date_range
       workshops = Pd::Workshop.where(id: workshop_ids)
       hash[:able_to_attend_multiple].each do |response|
-        selected_workshop = workshops.find {|w| response.start_with?(w.friendly_date_range)}
+        location = response.scan(/in (.+) hosted/).first.try(:first) || ''
+        selected_workshop = workshops.find {|w| response.start_with?(w.friendly_date_range) && w.location_address == location}
         return selected_workshop if selected_workshop
       end
 
