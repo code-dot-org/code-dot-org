@@ -464,3 +464,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
+      UnplugHappyMaps_2018:
+        title: Laimingieji žemėlapiai
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
+          veikėją per labirintą, naudodami vieną komandą.
+      GoingPlacesSafely_2018:
+        title: Saugus naršymas internete
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
+          kaip būti saugiam naršant internete.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Didelis įvykis
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
+          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
+          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
+          to, kuris mygtukas bus nuspaustas.

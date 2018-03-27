@@ -202,7 +202,7 @@ lt:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Slaptas pasaulis'
       email: 'El. pašto adresas'
       google_classroom: 'Google Classroom'
       clever: 'Clever'

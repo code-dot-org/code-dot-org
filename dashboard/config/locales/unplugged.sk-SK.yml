@@ -477,3 +477,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmus z reálneho života: Zasaď semienko'
+        desc: This lesson calls out ways we use algorithms in our daily lives, using
+          the act of planting a seed as an example. It also focuses on the bigger
+          picture of computer science and how algorithms play an essential part.
+      UnplugHappyMaps_2018:
+        title: Veselé mapy
+        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov."
+      GoingPlacesSafely_2018:
+        title: Bezpečné premiestňovanie
+        desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
+          ako bezpečne surfovať po Internete.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Veľká udalosť
+        desc: Študenti sú oboznámený s úvodným konceptom programovania "events" udalostí,
+          ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom
+          diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo
+          je práve stlačené.

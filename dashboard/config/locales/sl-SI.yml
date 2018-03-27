@@ -232,7 +232,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Skrivna beseda
       email: Elektronska pošta
       google_classroom: Google Classroom
       clever: Clever

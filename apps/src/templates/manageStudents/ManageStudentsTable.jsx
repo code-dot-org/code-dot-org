@@ -154,6 +154,7 @@ class ManageStudentsTable extends Component {
         id={rowData.id}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
+        shareColumnExperimentEnabled={showShareColumn}
       />
     );
   };

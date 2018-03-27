@@ -9,15 +9,15 @@ fr:
     errors:
       messages:
         blank: "est obligatoire"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "est requis"
+        invalid_plural: "est invalide"
     attributes:
       user:
         name: 'Nom à afficher'
         name_example: 'Afficher nom <br/> (par ex. SuperCodeur ou Jeanne S.)'
         email: 'E-mail'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Email du parent/tuteur'
+        personal_email: "Email personnel <a href=\"%{url}\">(click here if you don't have an email address)</a>"
         username: 'nom d''utilisateur'
         password: 'mot de passe'
         password_confirmation: 'Confirmation du mot de passe'
@@ -46,7 +46,7 @@ fr:
       label: 'Ajouter un enseignant :'
       placeholder: "Code de la section (ABCDEF)"
       instructions: "Saisir le code que t’a donné ton professeur. Il s'agit d'un code à 6 lettres comme « ABCDEF »."
-      instructions_short: "Enter your 6 letter section code"
+      instructions_short: "Entrez les 6 lettres de votre code section"
     submit: 'Ajouter un enseignant'
   add_hint_form:
     placeholder: 'Écrire un indice ici'
@@ -59,7 +59,7 @@ fr:
   courses: 'Cours'
   courses_page:
     title_student: "Apprends avec Code Studio"
-    title_teacher: "Teach Computer Science"
+    title_teacher: "Enseignez l'informatique"
   unplugged_activity: 'Activité manuelle'
   of: "de"
   more: "PLUS"
@@ -122,7 +122,7 @@ fr:
     user_type_student: "Élève"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
-    error: "An error occurred."
+    error: "Une erreur est apparue."
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’école'
@@ -191,7 +191,7 @@ fr:
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
+    new_teacher_subject: 'Bienvenue sur Code.org!'
   section:
     your_section:
       one: 'Ta section:'
@@ -202,7 +202,7 @@ fr:
     remove: '(supprimer la section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Mot secret'
       email: 'E-mail'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
@@ -243,8 +243,8 @@ fr:
     registrations:
       user:
         user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
-        personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
+        personal_login_created_email: 'Vous avez créé vos informations de connexion avec succès. Vous pouvez désormais vous connecter avec votre mail et votre mot de passe'
+        personal_login_created_username: 'Vous avez créé vos informations de connexion avec succès. Vous pouvez désormais vous connecter avec votre nom d''utilisateur (%{username}) et votre mot de passe'
   nav:
     header:
       finished_hoc: "J'ai fini mon Heure de Code."
@@ -259,12 +259,12 @@ fr:
       home: "Accueil"
       my_dashboard: "My Dashboard"
       courses: "Cours"
-      course_catalog: "Course Catalog"
+      course_catalog: "Catalogue des cours"
       project_gallery: "Projets"
       sections: "Sections"
       help_support: "Aide et Support"
-      report_bug: "Report bug"
-      teacher_community: "Teacher community"
+      report_bug: "Rapporter un problème"
+      teacher_community: "Communauté des enseignants"
       professional_learning: "Apprentissage professionnel"
       documentation: "Documentation"
       tutorials: "Tutoriels"
@@ -359,7 +359,7 @@ fr:
     no_password_because_oauth: 'Aucun mot de passe parce que vous vous connectez avec un fournisseur tiers.'
     no_password_because_sponsored: 'Consulte ton professeur pour gérer ton mot de passe.'
     create_personal_login: 'Create a personal login'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login_under_13_info: 'Si tu veux continuer d''utiliser ton compte Code.org après la fin de ton année scolaire, demande à tes parents ou ton tuteur de t''aider à créer tes propres informations de connexion.'
     create_personal_login_under_13_username: "Username (don't use your real name!)"
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
