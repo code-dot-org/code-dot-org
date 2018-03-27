@@ -7,6 +7,8 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+ import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import experiments from '@cdo/apps/util/experiments';
@@ -19,6 +21,7 @@ import {
   renderSectionTable,
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
+import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -52,11 +55,15 @@ function renderSectionProjects(sectionId) {
 }
 
 function renderSectionProgress(section, validScripts) {
+  registerReducers({sectionProgress});
+  const store = getStore();
+  store.dispatch(setSection(section));
+  store.dispatch(setValidScripts(validScripts));
+
   ReactDOM.render(
-    <SectionProgress
-      section={section}
-      validScripts={validScripts}
-    />,
+    <Provider store={store}>
+      <SectionProgress />
+    </Provider>,
     document.getElementById('section-progress-react')
   );
 }

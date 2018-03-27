@@ -384,13 +384,15 @@ const DUMMY_INPUT = 'dummy';
  *   options.
  * @param {BlockValueType} args[].type For value inputs, the type required. Use
  *   BlockValueType.NONE to accept any block.
+ * @params {string[]} strictTypes Input/output types that are always configerd
+ *   with strict type checking.
  *
  * @returns {Object[]} a list of labeled inputs. Each one has the same fields
  *   as 'args', but additionally includes:
  * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
  * @returns {string} return[].label Text to display to the left of the input
  */
-const determineInputs = function (text, args) {
+const determineInputs = function (text, args, strictTypes=[]) {
   const tokens = text.split(/[{}]/);
   if (tokens[tokens.length - 1] === '') {
     tokens.pop();
@@ -401,12 +403,14 @@ const determineInputs = function (text, args) {
     const input = tokens[i + 1];
     if (input) {
       const arg = args.find(arg => arg.name === input);
+      const strict = arg.strict || strictTypes.includes(arg.type);
       if (arg.options) {
         inputs.push({
           mode: DROPDOWN_INPUT,
           name: arg.name,
           options: arg.options,
           label,
+          strict,
         });
       } else {
         inputs.push({
@@ -414,6 +418,7 @@ const determineInputs = function (text, args) {
           name: arg.name,
           type: arg.type,
           label,
+          strict,
         });
       }
     } else {
@@ -437,6 +442,7 @@ exports.determineInputs = determineInputs;
 const interpolateInputs = function (blockly, block, inputs) {
   inputs.map(input => {
     let dropdown;
+    let valueInput;
     switch (input.mode) {
       case DROPDOWN_INPUT:
         dropdown = new blockly.FieldDropdown(input.options);
@@ -445,9 +451,13 @@ const interpolateInputs = function (blockly, block, inputs) {
           .appendTitle(dropdown, input.name);
         break;
       case VALUE_INPUT:
-        block.appendValueInput(input.name)
-          .setCheck(input.type)
-          .appendTitle(input.label);
+        valueInput = block.appendValueInput(input.name);
+        if (input.strict) {
+          valueInput.setStrictCheck(input.type);
+        } else {
+          valueInput.setCheck(input.type);
+        }
+        valueInput.appendTitle(input.label);
         break;
       case DUMMY_INPUT:
         block.appendDummyInput()
@@ -466,6 +476,7 @@ exports.interpolateInputs = interpolateInputs;
  * @param {String} args[].name The name for this input, conventionally all-caps
  * @param {String} args[].type The type for this input, defaults to allowing any
  *   type
+ * @param {boolean} args[].strict Whether or not to enforce strict type checking
  * @param {String} args[].label The text to display to the left of the input
  */
 const addInputs = function (blockly, block, args) {
@@ -473,7 +484,7 @@ const addInputs = function (blockly, block, args) {
     .appendTitle('show title screen');
   args.forEach(arg => {
     block.appendValueInput(arg.name)
-      .setCheck(arg.type || Blockly.BlockValueType.NONE)
+      .setCheck(arg.type || Blockly.BlockValueType.NONE, arg.strict)
       .setAlign(Blockly.ALIGN_RIGHT)
       .appendTitle(arg.label);
   });
@@ -486,12 +497,18 @@ const addInputs = function (blockly, block, args) {
  * @params {Blockly} blockly The Blockly object provided to install()
  * @params {string} blocksModuleName Module name that will be prefixed to all
  *   the block names
+ * @params {string[]} strictTypes Input/output types that are always configerd
+ *   with strict type checking.
+ * @params {string} defaultObjectType Default type used for the 'THIS' input in
+ *   method call blocks.
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
 exports.createJsWrapperBlockCreator = function (
   blockly,
-  blocksModuleName
+  blocksModuleName,
+  strictTypes,
+  defaultObjectType,
 ) {
 
   const {
@@ -522,8 +539,12 @@ exports.createJsWrapperBlockCreator = function (
    * @param {Object[]} opts.args List of block inputs, see determineInputs()
    * @param {BlockValueType} opts.returnType Type of value returned by this
    *   block, omit if you want a block with no output.
+   * @param {boolean} opts.strictOutput Whether to enforce strict type checking
+   *   on the output.
    * @param {boolean} opts.methodCall Generate a method call. The blockText
    *   should contain '{THIS}' in order to create an input for the instance
+   * @params {string} opts.objectType Type used for the 'THIS' input in a method
+   *   call block.
    * @param {boolean} opts.eventBlock Generate an event block, which is just a
    *   block without a previous statement connector.
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
@@ -541,7 +562,9 @@ exports.createJsWrapperBlockCreator = function (
     blockText,
     args,
     returnType,
+    strictOutput,
     methodCall,
+    objectType,
     eventBlock,
     eventLoopBlock,
     inline,
@@ -562,21 +585,33 @@ exports.createJsWrapperBlockCreator = function (
         this.setHSV(...color);
         const inputs = [...args];
         if (methodCall) {
+          const thisType = objectType ||
+            defaultObjectType ||
+            Blockly.BlockValueType.NONE;
           inputs.push({
             name: 'THIS',
-            type: Blockly.BlockValueType.NONE,
+            type: thisType,
+            strict: strictTypes.includes(thisType),
           });
         }
 
         if (inline === false) {
           addInputs(blockly, this, args);
         } else {
-          interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+          interpolateInputs(
+            blockly,
+            this,
+            determineInputs(blockText, inputs, strictTypes),
+          );
           this.setInputsInline(true);
         }
 
         if (returnType) {
-          this.setOutput(true, returnType);
+          this.setOutput(
+            true,
+            returnType,
+            strictOutput || strictTypes.includes(returnType)
+          );
         } else if (eventLoopBlock) {
           this.appendStatementInput('DO');
         } else if (eventBlock) {
