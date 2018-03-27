@@ -280,8 +280,8 @@ class BucketHelper
         copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
       )
       version_restored = true
-    rescue Aws::S3::Errors::InvalidArgument => err
-      raise err unless err.message =~ %r{Invalid version id specified}
+    rescue Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument => err
+      raise err unless err.is_a?(Aws::S3::Errors::NoSuchVersion) || invalid_version_id?(err)
 
       if object_exists?(key)
         response = s3.copy_object(
@@ -331,6 +331,16 @@ class BucketHelper
   end
 
   protected
+
+  #
+  # Check if the given error indicates a badly-formatted version ID was passed.
+  # @param [Exception] err
+  # @return [Boolean] true if err was caused by an invalid version ID
+  #
+  def invalid_version_id?(err)
+    # S3 returns an InvalidArgument exception with a particular message for this case.
+    err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message =~ %r{Invalid version id specified}
+  end
 
   def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
     owner_id, channel_id = storage_decrypt_channel_id(project_id)
