@@ -3,13 +3,13 @@ import color from "@cdo/apps/util/color";
 
 const styles = {
   box: {
-    height: '20px',
-    width: '20px',
+    height: 20,
+    width: 20,
     borderWidth: 1,
     borderStyle: 'solid',
   },
   filler: {
-    width: '20px'
+    width: 20
   }
 };
 
@@ -32,19 +32,19 @@ export default class ProgressBox extends Component {
     const perfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_perfect,
-      height: perfect + 'px'
+      height: perfect
     };
 
     const incompleteLevels = {
       ...styles.filler,
       backgroundColor: color.level_not_tried,
-      height: incomplete + 'px'
+      height: incomplete
     };
 
     const imperfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_passed,
-      height: imperfect + 'px'
+      height: imperfect
     };
 
     return (
