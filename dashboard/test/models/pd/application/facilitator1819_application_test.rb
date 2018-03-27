@@ -306,17 +306,17 @@ module Pd::Application
     end
 
     test 'memoized filtered_labels' do
-      Facilitator1819Application.class_variable_set :@@filtered_labels, nil
+      Facilitator1819Application::FILTERED_LABELS.clear
 
       filtered_labels_csd = Facilitator1819Application.filtered_labels('csd')
       assert filtered_labels_csd.key? :csd_csp_fit_availability
       refute filtered_labels_csd.key? :csf_availability
-      assert_equal ['csd'], Facilitator1819Application.class_variable_get(:@@filtered_labels).keys
+      assert_equal ['csd'], Facilitator1819Application::FILTERED_LABELS.keys
 
       filtered_labels_csf = Facilitator1819Application.filtered_labels('csf')
       refute filtered_labels_csf.key? :csd_csp_fit_availability
       assert filtered_labels_csf.key? :csf_availability
-      assert_equal ['csd', 'csf'], Facilitator1819Application.class_variable_get(:@@filtered_labels).keys
+      assert_equal ['csd', 'csf'], Facilitator1819Application::FILTERED_LABELS.keys
     end
   end
 end

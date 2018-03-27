@@ -150,6 +150,12 @@ module Pd::Form
     self.form_data = {}.to_json
   end
 
+  def reload
+    super.tap do
+      clear_memoized_values
+    end
+  end
+
   def clear_memoized_values
     @form_data_hash = nil
     @sanitized_form_data_hash = nil

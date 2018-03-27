@@ -829,17 +829,17 @@ module Pd::Application
     end
 
     test 'memoized filtered_labels' do
-      Teacher1819Application.class_variable_set :@@filtered_labels, nil
+      Teacher1819Application::FILTERED_LABELS.clear
 
       filtered_labels_csd = Teacher1819Application.filtered_labels('csd')
       assert filtered_labels_csd.include? :csd_which_grades
       refute filtered_labels_csd.include? :csp_which_grades
-      assert_equal ['csd'], Teacher1819Application.class_variable_get(:@@filtered_labels).keys
+      assert_equal ['csd'], Teacher1819Application::FILTERED_LABELS.keys
 
       filtered_labels_csd = Teacher1819Application.filtered_labels('csp')
       refute filtered_labels_csd.include? :csd_which_grades
       assert filtered_labels_csd.include? :csp_which_grades
-      assert_equal ['csd', 'csp'], Teacher1819Application.class_variable_get(:@@filtered_labels).keys
+      assert_equal ['csd', 'csp'], Teacher1819Application::FILTERED_LABELS.keys
     end
   end
 end
