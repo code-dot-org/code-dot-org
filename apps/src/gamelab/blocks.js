@@ -42,6 +42,16 @@ export default {
 
     createJsWrapperBlock({
       color: SPRITE_COLOR,
+      func: 'setAnimation',
+      blockText: 'set {THIS} costume to {ANIMATION}',
+      args: [
+        { name: 'ANIMATION', options: sprites },
+      ],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
       func: 'makeNewGroup',
       blockText: 'make a new group',
       args: [],
