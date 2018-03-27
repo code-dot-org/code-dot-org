@@ -5,6 +5,13 @@ import {Checkbox} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
 import i18n from "@cdo/locale";
+import color from "../../util/color";
+
+const styles = {
+  checkmark: {
+    color: color.lighter_gray,
+  },
+};
 
 class ManageStudentsSharingCell extends Component {
   static propTypes = {
@@ -43,6 +50,7 @@ class ManageStudentsSharingCell extends Component {
               <FontAwesome
                 icon="check"
                 className="fa-check"
+                style={styles.checkmark}
               />
             }
           </div>

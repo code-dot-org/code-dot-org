@@ -107,6 +107,72 @@ describe('Artist', () => {
 
       setStickerSize.restore();
     });
+    it('draws a sticker when size is 0', () => {
+      let artist = new Artist();
+      const img = new Image(100, 100);
+      let size = 0;
+      let blockId = "block_id_4";
+      let options = {smoothAnimate: false};
+
+      artist.visualization = new Artist.Visualization();
+      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      artist.stickers = {Alien:img};
+      artist.step('sticker', ['Alien', size, blockId], options);
+
+      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -0, -0, 0, 0);
+
+      setStickerSize.restore();
+    });
+    it('draws a sticker when size is 50 px', () => {
+      let artist = new Artist();
+      const img = new Image(100, 100);
+      let size = 50;
+      let blockId = "block_id_4";
+      let options = {smoothAnimate: false};
+
+      artist.visualization = new Artist.Visualization();
+      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      artist.stickers = {Alien:img};
+      artist.step('sticker', ['Alien', size, blockId], options);
+
+      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -25, -50, 50, 50);
+
+      setStickerSize.restore();
+    });
+    it('draws a sticker when size is 200 px', () => {
+      // Test condition when width < size && height < size
+      let artist = new Artist();
+      const img = new Image(100, 100);
+      let size = 200;
+      let blockId = "block_id_4";
+      let options = {smoothAnimate: false};
+
+      artist.visualization = new Artist.Visualization();
+      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      artist.stickers = {Alien:img};
+      artist.step('sticker', ['Alien', size, blockId], options);
+
+      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
+
+      setStickerSize.restore();
+    });
+    it('draws a sticker when size is 30 px', () => {
+      let artist = new Artist();
+      // Test condition when width > height
+      const img = new Image(100, 40);
+      let size = 30;
+      let blockId = "block_id_4";
+      let options = {smoothAnimate: false};
+
+      artist.visualization = new Artist.Visualization();
+      const setStickerSize = sinon.spy(artist.visualization.ctxScratch, 'drawImage');
+      artist.stickers = {Alien:img};
+      artist.step('sticker', ['Alien', size, blockId], options);
+
+      expect(setStickerSize).to.be.have.been.calledWith(img, 0, 0, 100, 40, -15, -12, 30, 12);
+
+      setStickerSize.restore();
+    });
   });
 
   describe('jumpTo', () => {
