@@ -439,13 +439,18 @@ module Pd::Application
     # @override
     # Filter out extraneous answers, based on selected program (course)
     def self.filtered_labels(course)
-      labels_to_remove = (course == 'csf' ?
-        [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
-        : # csd / csp
-        [:csf_availability, :csf_partial_attendance_reason]
-      )
+      # memoize in a hash, per course
+      @@filtered_labels ||= Hash.new do |h, key|
+        labels_to_remove = (key == 'csf' ?
+          [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
+          : # csd / csp
+          [:csf_availability, :csf_partial_attendance_reason]
+        )
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+        h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      end
+
+      @@filtered_labels[course]
     end
 
     # @override
