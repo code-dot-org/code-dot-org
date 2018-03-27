@@ -10,7 +10,7 @@ class Api::V1::Pd::Teachercon1819RegistrationsController < Api::V1::Pd::FormsCon
 
   def create_partner_or_lead_facilitator
     if params[:regionalPartnerId].present?
-      unless current_user && current_user.regional_partner_ids.include?(params[:regionalPartnerId])
+      unless current_user && current_user.regional_partner_ids.include?(params[:regionalPartnerId].to_i)
         return head :forbidden
       end
     end
