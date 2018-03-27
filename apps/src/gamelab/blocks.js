@@ -357,8 +357,13 @@ export default {
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
-    const blockNames =
-      customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
+    const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
+    const blockNames = customBlocks.map(createJsWrapperBlockCreator(
+      blockly,
+      'gamelab',
+      [SPRITE_TYPE],
+      SPRITE_TYPE,
+    ));
 
     if (!hideCustomBlocks) {
       level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');
