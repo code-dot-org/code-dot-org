@@ -9,7 +9,7 @@ import {setCurrentView, ViewType} from './sectionProgressRedux';
  * A toggle that provides a way to switch between detail and summary views of
  * the progress a section of students have made in a course. Teacher view.
  */
-class SectionProgrsesToggle extends React.Component {
+class SectionProgressToggle extends React.Component {
   static propTypes = {
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
@@ -44,10 +44,12 @@ class SectionProgrsesToggle extends React.Component {
   }
 }
 
-export const UnconnectedSectionProgrsesToggle = SectionProgrsesToggle;
+export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 
-export default connect(state => ({}), dispatch => ({
+export default connect(state => ({
+  currentView: state.sectionProgress.currentView,
+}), dispatch => ({
   setCurrentView(viewType) {
     dispatch(setCurrentView(viewType));
   },
-}))(SectionProgrsesToggle);
+}))(SectionProgressToggle);

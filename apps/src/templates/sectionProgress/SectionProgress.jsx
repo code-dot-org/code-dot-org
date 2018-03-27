@@ -35,7 +35,7 @@ class SectionProgress extends Component {
       name: PropTypes.string.isRequired,
       position: PropTypes.number,
     })).isRequired,
-    currentView: PropTypes.string.isRequired
+    currentView: PropTypes.oneOf(Object.values(ViewType)),
   };
 
   state = {
@@ -97,7 +97,7 @@ class SectionProgress extends Component {
           scriptId={scriptId}
           onChange={this.onChangeScript}
         />
-        <SectionProgressToggle currentView={this.props.currentView} />
+        <SectionProgressToggle />
         {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
         {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
           <div>{"This will be the summary view"}</div>
