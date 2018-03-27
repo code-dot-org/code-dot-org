@@ -493,3 +493,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
+          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
+          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+      UnplugHappyMaps_2018:
+        title: Mapa Zoriontsuak
+        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
+          baten barnean gidatuko dute komando bakar bat erabiliz.
+      GoingPlacesSafely_2018:
+        title: Joan segurtasunez
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
+          adieraziko dute nola nabigatu modu seguruan interneten.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Gertaera Handia
+        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
+          da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
+          botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
+          dituzte.

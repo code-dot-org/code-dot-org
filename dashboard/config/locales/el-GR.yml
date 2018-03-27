@@ -246,7 +246,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: "Μυστική λέξη"
       email: "Ηλεκτρονικό ταχυδρομείο"
       google_classroom: Google Classroom
       clever: "Εξυπνο"
