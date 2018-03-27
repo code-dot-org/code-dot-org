@@ -106,7 +106,7 @@ ruby
   def clone_with_suffix(new_suffix)
     level = super(new_suffix)
     level.add_suffix_to_grouped_levels(new_suffix)
-    level.rewrite_dsl_file(level.serialize_to_dsl)
+    level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
   end
 
@@ -134,25 +134,6 @@ ruby
     end
 
     update!(properties: new_properties)
-  end
-
-  def serialize_to_dsl
-    new_dsl = "name '#{name}'"
-    new_dsl << "\ntitle '#{properties['title']}'" if properties['title']
-    new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
-    new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
-
-    texts = properties['texts'] || []
-    pages.each do |page|
-      new_dsl << "\n\npage"
-      page.levels.each_with_index do |level, index|
-        texts.select {|text| text['index'] == page.offset + index}.each do |text|
-          new_dsl << "\ntext '#{text['level_name']}'"
-        end
-        new_dsl << "\nlevel '#{level.name}'"
-      end
-    end
-    new_dsl
   end
 
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
