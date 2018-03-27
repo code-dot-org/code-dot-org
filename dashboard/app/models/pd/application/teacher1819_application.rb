@@ -666,27 +666,37 @@ module Pd::Application
     # @override
     # Filter out extraneous answers based on selected program (course)
     def self.filtered_labels(course)
-      labels_to_remove = (course == 'csd' ?
-        [
-          :csp_which_grades,
-          :csp_course_hours_per_week,
-          :csp_course_hours_per_year,
-          :csp_terms_per_year,
-          :csp_how_offer,
-          :csp_ap_exam
-        ] : [
-          :csd_which_grades,
-          :csd_course_hours_per_week,
-          :csd_course_hours_per_year,
-          :csd_terms_per_year
-        ]
-      )
-      # school contains NCES id
-      # the other fields are empty in the form data unless they selected "Other" school,
-      # so we add it when we construct the csv row.
-      labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
+      # memoize in a hash, per course
+      @@filtered_labels ||= Hash.new do |h, key|
+        labels_to_remove = (
+          if key == 'csd'
+            [
+              :csp_which_grades,
+              :csp_course_hours_per_week,
+              :csp_course_hours_per_year,
+              :csp_terms_per_year,
+              :csp_how_offer,
+              :csp_ap_exam
+            ]
+          else
+            [
+              :csd_which_grades,
+              :csd_course_hours_per_week,
+              :csd_course_hours_per_year,
+              :csd_terms_per_year
+            ]
+          end
+        )
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+        # school contains NCES id
+        # the other fields are empty in the form data unless they selected "Other" school,
+        # so we add it when we construct the csv row.
+        labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
+
+        h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      end
+
+      @@filtered_labels[course]
     end
 
     # @override
