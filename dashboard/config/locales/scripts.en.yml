@@ -7751,6 +7751,10 @@ en:
               name: Programming with Behaviors
             Programming with Forever:
               name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
           title: ''
           description_audience: ''
           description_short: ''
