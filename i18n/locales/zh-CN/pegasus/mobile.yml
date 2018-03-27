@@ -266,30 +266,40 @@
   homepage_stats_hourofcodde: "全世界已经尝试了编程一小时的学生"
   homepage_stats_policy: "国家改变了政策来支持计算机科学"
   homepage_stats_title: "我们正在有所作为"
-  homepage_hero_text_malala: "&ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;诺贝尔和平奖得主马拉拉说"
+  homepage_hero_text_malala: "&ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;\n诺贝尔和平奖得主马拉拉"
   homepage_hero_text_susan: |-
-    &ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官
+    &ldquo;如果你能改变技术，你可以改变世界。&rdquo;
+    苏珊，YouTube 首席执行官
   homepage_hero_text_fistbump: |-
-    &ldquo;别总是玩电话，写上面的程序吧。&rdquo;奥巴马总统
+    &ldquo;别总是玩电话，写上面的程序吧。&rdquo;
+    奥巴马总统
   homepage_hero_text_sheryl: |-
-    &ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo; 谢丽尔，Facebook 首席运营官说
+    &ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo; 
+    谢丽尔，Facebook 首席运营官说
   homepage_hero_text_satya: |-
-    &ldquo;计算机科学可以打开这个世界里最好的机会&rdquo;萨提亚，微软首席执行官世界。
+    &ldquo;计算机科学可以打开这个世界里最好的机会&rdquo; 
+    萨提亚，微软首席执行官
   homepage_hero_text_satya_new: |-
-    &ldquo;计算机科学给予了学生创建未来世界的力量。&rdquo;萨提亚，微软首席执行官。
+    &ldquo;计算机科学给予了学生创建未来世界的力量。&rdquo;
+    萨提亚，微软首席执行官
   homepage_hero_text_bosh: |-
-    &ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;克里斯 波什说
+    &ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;
+    克里斯 波什
   homepage_hero_text_student1: |-
-    &ldquo;这些技能已经改变了我的未来。更不用说，这其实和玩差不多。&rdquo;卢娜，七年级
+    &ldquo;这些技能已经改变了我的未来。更不用说，这其实和玩差不多。&rdquo;
+    卢娜，七年级
   homepage_hero_text_student2: |-
-    &ldquo;我从未看到我的孩子们如此兴奋的学习。 &rdquo;麦克老师
+    &ldquo;我从未看到我的孩子们如此兴奋的学习。 &rdquo;
+    麦克，老师
   homepage_hero_text_student3: |-
-    &ldquo;如果你没有尝试过，不会知道自己是不是会喜欢上计算机科学。&rdquo;杰克逊，6 年级
-  homepage_hero_text_student4: "&ldquo;通过编程序你可以做到任何想做的事情。&rdquo;玛雅，二年级"
-  homepage_hero_text_student5: "&ldquo;计算机科学，不是别人的，是你的。它就在这里，快开始吧。&rdquo;杰拉尔多老师。"
-  homepage_hero_text_teacher1: "&ldquo;编码火花讲求创意、 灵感和创新 &mdash; 这些是任何职业都不可或缺的。&rdquo;弗洛雷萨老师"
+    &ldquo;如果你没有尝试过，不会知道自己是不是会喜欢上计算机科学。&rdquo;
+    杰克逊，6 年级
+  homepage_hero_text_student4: "&ldquo;通过编程序你可以做到任何想做的事情。&rdquo;\n玛雅，二年级"
+  homepage_hero_text_student5: "&ldquo;计算机科学，不是别人的，是你的。它就在这里，快开始吧。&rdquo;\n杰拉尔多，老师"
+  homepage_hero_text_teacher1: "&ldquo;编码火花讲求创意、 灵感和创新 &mdash; 这些是任何职业都不可或缺的。&rdquo;\n弗洛雷萨，老师"
   homepage_hero_text_teacher2: |-
-    &ldquo;我所有的学生都投入，参与到了这个课程。&rdquo;亚当，老师
+    &ldquo;我所有的学生都投入，参与到了这个课程。&rdquo;
+    亚当，老师
   homepage_hero_text_stat_loc: "八百五十万女孩已经在Code.org里注册学习了。"
   homepage_hero_text_stat_students: "Code.org有 #student_count 个学生帐户"
   homepage_hero_text_stat_served: '编程一小时：已有 #served 次参与'

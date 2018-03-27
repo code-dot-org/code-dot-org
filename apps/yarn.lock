@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.7.1.tgz#7183abb9eedbb186c4dd45535cda72a6961e6950"
+"@code-dot-org/blockly@1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.7.2.tgz#e19779b7d7d70fd1b49393adaa2f234673b48a7d"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -88,10 +88,6 @@
 "@code-dot-org/js-numbers@0.1.0-cdo.0":
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
-
-"@code-dot-org/maze@github:code-dot-org/maze#799c92348e4a29092ec6d798c1f777d561bcf862":
-  version "1.0.0"
-  resolved "https://codeload.github.com/code-dot-org/maze/tar.gz/799c92348e4a29092ec6d798c1f777d561bcf862"
 
 "@code-dot-org/p5.play@1.2.0-cdo":
   version "1.2.0-cdo"

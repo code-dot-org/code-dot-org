@@ -518,3 +518,27 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Thuật toán đời sống: Trồng một hạt giống'
+        desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
+          hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
+          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
+          trò thiết yếu.
+      UnplugHappyMaps_2018:
+        title: Bản đồ thú vị
+        desc: Học sinh tạo ra những thuật toán cơ bản (một chuỗi hướng dẫn) để di
+          chuyển nhân vật qua mê cung bằng cách sử dụng từng lệnh.
+      GoingPlacesSafely_2018:
+        title: "Đến nơi an toàn"
+        desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
+          nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
+          web.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Trong bài học này, bạn sẽ học về vòng lặp!
+      BigEvent_2018:
+        title: Sự kiện lớn
+        desc: Các bạn học sinh sẽ được giới thiệu về khái niệm lập trình "sự kiện",
+          đó là những hoạt động máy tính liên tục theo dõi. Giáo viên sẽ bấm nút trên
+          tờ giấy điều khiển từ xa và học sinh sẽ phản ứng tùy thuộc vào nút được
+          nhấn.
