@@ -45,6 +45,8 @@ class ManageStudentAgeCell extends Component {
   }
 }
 
+export const UnconnectedManageStudentAgeCell = ManageStudentAgeCell;
+
 export default connect(state => ({}), dispatch => ({
   editStudent(id, studentInfo) {
     dispatch(editStudent(id, studentInfo));
