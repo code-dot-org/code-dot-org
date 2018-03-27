@@ -777,8 +777,11 @@ module Pd::Application
       workshops = Pd::Workshop.where(id: workshop_ids)
       hash[:able_to_attend_multiple].each do |response|
         location = response.scan(/in (.+) hosted/).first.try(:first) || ''
-        selected_workshop = workshops.find {|w| response.start_with?(w.friendly_date_range) && w.location_address == location}
-        return selected_workshop if selected_workshop
+        workshops_for_date = workshops.select {|w| response.start_with?(w.friendly_date_range) && w.location_address == location}
+        workshop_for_date_and_location = workshops_for_date.find {|w| w.location_address == location}
+
+        return workshop_for_date_and_location if workshop_for_date_and_location
+        return workshops_for_date.first if workshops_for_date.any?
       end
 
       # No match? Return the first workshop
