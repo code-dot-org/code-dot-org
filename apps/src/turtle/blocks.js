@@ -1122,7 +1122,6 @@ exports.install = function (blockly, blockInstallOptions) {
               .setCheck(blockly.BlockValueType.NUMBER);
           this.appendDummyInput()
               .appendTitle(msg.pixels());
-
           this.setTooltip(msg.drawStickerWithSize());
         } else if (blockName === 'turtle_sticker_with_size_non_param') {
           this.appendDummyInput()
