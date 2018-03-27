@@ -200,7 +200,7 @@ fa:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'کلمه ی محرمانه'
       email: 'ایمیل'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
