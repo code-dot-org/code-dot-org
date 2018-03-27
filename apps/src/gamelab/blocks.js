@@ -43,7 +43,7 @@ export default {
     createJsWrapperBlock({
       color: SPRITE_COLOR,
       func: 'setAnimation',
-      blockText: 'set {THIS} costume to {ANIMATION}',
+      blockText: 'change {THIS} costume to {ANIMATION}',
       args: [
         { name: 'ANIMATION', options: sprites },
       ],
