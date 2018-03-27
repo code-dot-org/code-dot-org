@@ -2391,7 +2391,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
     showUnusedBlocks: utils.valueOr(config.showUnusedBlocks, true),
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
-    showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
+    showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
+    valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
   };
 
   // Never show unused blocks or disable autopopulate in edit mode
