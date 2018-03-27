@@ -352,7 +352,7 @@ Resources:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
       AutoScalingGroupName: !Ref Frontends
-      MinSize: 5
+      MinSize: 4
       Recurrence: <%= Cdo::Cron.weekdays_at '4am' %>
   ClassroomScaleDown:
     Type: AWS::AutoScaling::ScheduledAction

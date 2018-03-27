@@ -488,3 +488,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Verklighetsalgoritmer: Så ett frö'
+        desc: Den här lektionen visar hur vi använder uppsättningar av instruktioner
+          i vårt dagliga liv genom exemplet 'att plantera ett frö'. Den fokuserar
+          också på den övergripande bilden av datorvetenskap och hur uppsättningar
+          av instruktioner är en absolut nödvändig del av den vetenskapen.
+      UnplugHappyMaps_2018:
+        title: Glada kartor
+        desc: Eleverna skapar enkla algoritmer (uppsättningar av instruktioner) för
+          att flytta en figur genom en labyrint med ett enda kommando.
+      GoingPlacesSafely_2018:
+        title: Trygg resa
+        desc: Internet är en kraftfull men ibland farlig plats. Läraren introducerar
+          säkerhet på nätet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Den stora händelsen
+        desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
+          åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
+          papper och elevernas reaktion beror på vilken knapp som blivit tryckt.

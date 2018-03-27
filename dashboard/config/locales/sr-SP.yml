@@ -233,7 +233,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: "Тајна реч"
       email: "Електронска пошта"
       google_classroom: Google Classroom
       clever: Clever

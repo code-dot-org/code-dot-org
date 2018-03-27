@@ -93,7 +93,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 * A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
-All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
+All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other travel-related incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
 </p>
 </details>
 
