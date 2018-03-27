@@ -301,3 +301,18 @@ nl:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algoritmen in het echte leven: Plant een zaadje'
+        desc: Deze les laat zien hoe we algoritmen in het dagelijkse leven gebruiken, waarbij het planten van een zaadje als voorbeeld wordt gebruikt. Het richt zich ook op het grotere geheel van computerkunde en hoe algoritmen een belangrijke rol spelen.
+      UnplugHappyMaps_2018:
+        title: Vrolijke Routes
+        desc: Leerlingen maken eenvoudige algoritmen (reeks instructies) om een figuurtje door een doolhof te bewegen waarbij ze een enkel commando gebruiken.
+      GoingPlacesSafely_2018:
+        title: Veilig Reizen
+        desc: Het internet is een krachtige, maar soms gevaarlijke plek. Leraren vertellen hoe je het veilig kunt houden wanneer je op internet surft.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In deze les leert je over lussen!
+      BigEvent_2018:
+        title: De Grote Gebeurtenis
+        desc: Leerlingen worden bekend gemaakt met het programmeerconcept van "events", wat acties zijn waar een computer constant naar kijkt. De leraar drukt op knoppen van een papieren afstandsbediening en leerlingen reageren hierop, afhankelijk van welke knop ingedrukt is.

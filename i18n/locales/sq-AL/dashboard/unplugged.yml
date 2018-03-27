@@ -301,3 +301,18 @@ sq:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algoritmet e jetës-Reale: Mbill një Farë'
+        desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
+      UnplugHappyMaps_2018:
+        title: Hartat e Gëzuara
+        desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur një personazh midis një labirinti duke përdorur një komandë të vetme.
+      GoingPlacesSafely_2018:
+        title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Eventi i Madh
+        desc: Studentët janë prezantuar me konceptet e programimit të "eventeve", të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme. Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë në varësi të butonit që është shtypur.

@@ -301,3 +301,18 @@ pl:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algorytmy z życia wzięte: sadź nasiona'
+        desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym życiu, posługując się przykładem sadzenia nasion. Koncentruje się również na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają algorytmy.
+      UnplugHappyMaps_2018:
+        title: Szczęśliwe Mapy (Happy Maps)
+        desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić postać przez labirynt posługując się pojedynczym poleceniem.
+      GoingPlacesSafely_2018:
+        title: Bezpiecznie dotrzeć na miejsce
+        desc: Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Nauczyciele przedstawiają, jak bezpiecznie nawigować po Internecie.
+      courseA_unplugged_loops_2018:
+        title: Pętle bez komputera
+        desc: W tej lekcji dowiesz się, jak używać pętli!
+      BigEvent_2018:
+        title: Wielkie Wydarzenie
+        desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał przyciski na papierze a uczniowie będą reagować w zależności od tego, który przycisk został naciśnięty.

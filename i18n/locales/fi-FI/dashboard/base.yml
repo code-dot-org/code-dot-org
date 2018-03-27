@@ -202,7 +202,7 @@ fi:
     remove: '(poista osio)'
     type:
       picture: 'Kuvallinen Salasana'
-      word: 'Secret Words'
+      word: 'Salasana'
       email: 'Sähköposti'
       google_classroom: 'Google Classroom'
       clever: 'Fiksu'

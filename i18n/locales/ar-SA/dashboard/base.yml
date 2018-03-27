@@ -203,7 +203,7 @@ ar:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'الكلمة السرية'
       email: 'البريد الإلكتروني'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
