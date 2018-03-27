@@ -103,8 +103,8 @@ ruby
 
   # Perform a deep copy of this level by cloning all of the levels within it
   # using the same suffix, and write them to the new level definition file.
-  def clone_with_suffix(new_suffix)
-    level = super(new_suffix)
+  def clone_with_suffix(new_suffix, allow_existing: false)
+    level = super(new_suffix, allow_existing: allow_existing)
     level.add_suffix_to_grouped_levels(new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
