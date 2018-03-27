@@ -66,17 +66,20 @@ level 'courseA_harvester_seq5'
 level 'courseA_harvester_seq6'
 level 'courseA_harvester_seq7'
 level 'courseA_harvester_seq8'
-level 'courseA_bee_seq7'
-level 'courseA_bee_seq9', challenge: true
-level 'courseA_bee_seq10'
-level 'courseA_bee_seq11'
-level 'courseA_bee_seq1'
+level 'courseA_harvester_seq9'
+level 'courseA_harvester_seq10', challenge: true
+level 'courseA_harvester_seq11'
+level 'courseA_harvester_seq12'
+level 'courseA_harvester_seq13'
 
 stage 'Going Places Safely'
 level 'GoingPlacesSafely_2018'
 
 stage 'Loops: Happy Loops'
 level 'courseA_unplugged_loops_2018'
+
+stage 'Loops in Harvester'
+level 'courseA_harvester_loops1'
 
 stage 'Loops in Collector'
 level 'courseAB_video_collector_2018'
