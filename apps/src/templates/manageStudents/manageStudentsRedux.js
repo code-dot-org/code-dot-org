@@ -370,7 +370,6 @@ export default function manageStudents(state=initialState, action) {
         ...state.editingData,
         [action.studentId]: {
           ...state.editingData[action.studentId],
-          ...action.studentData,
           id: action.studentId,
           sharingDisabled: sharingDisabled
         }
