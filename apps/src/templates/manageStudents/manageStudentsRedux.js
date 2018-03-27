@@ -32,7 +32,7 @@ const blankAddRow = {
   gender: '',
   username: '',
   loginType: '',
-  sharingDisabled: false,
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.ADD,
 };
@@ -47,7 +47,7 @@ const blankNewStudentRow = {
   gender: '',
   username: '',
   loginType: '',
-  sharingDisabled: false,
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
 };
@@ -87,6 +87,7 @@ const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
+const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -97,6 +98,7 @@ export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId }
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
+export const setSharingDefault = (studentId) => ({ type: SET_SHARING_DEFAULT, studentId});
 export const editAll = () => ({ type: EDIT_ALL });
 export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
@@ -357,6 +359,22 @@ export default function manageStudents(state=initialState, action) {
       addStatus: {status: AddStatus.SUCCESS, numStudents: action.numStudents}
     };
     return newState;
+  }
+  if (action.type === SET_SHARING_DEFAULT) {
+    const editedAge = state.editingData[action.studentId].age;
+    // For privacy reasons, we disable sharing by default if the student is under the age of 13.
+    const sharingDisabled = editedAge < 13;
+    return {
+      ...state,
+      editingData: {
+        ...state.editingData,
+        [action.studentId]: {
+          ...state.editingData[action.studentId],
+          id: action.studentId,
+          sharingDisabled: sharingDisabled
+        }
+      }
+    };
   }
   if (action.type === EDIT_STUDENT) {
     return {
