@@ -4,13 +4,13 @@ import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
 
+const DEFAULT_PROPS = {
+  id: 2,
+  isEditing: false,
+  editedValue: 13,
+};
 
 describe('ManageStudentAgeCell', () => {
-  const DEFAULT_PROPS = {
-    id: 2,
-    isEditing: false,
-    editedValue: 13,
-  };
 
   let editStudent, setSharingDefault;
 
@@ -73,6 +73,7 @@ describe('ManageStudentAgeCell', () => {
         isEditing={true}
         editStudent={editStudent}
         setSharingDefault={setSharingDefault}
+        shareColumnExperimentEnabled={true}
       />
     );
     expect(editStudent.callCount).to.equal(0);
