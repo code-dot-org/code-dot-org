@@ -1117,7 +1117,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
         if (blockName === 'turtle_sticker_with_size') {
           this.appendDummyInput()
-          .appendTitle(msg.withSize());
+              .appendTitle(msg.withSize());
           this.appendValueInput('SIZE')
               .setCheck(blockly.BlockValueType.NUMBER);
           this.appendDummyInput()
@@ -1127,7 +1127,7 @@ exports.install = function (blockly, blockInstallOptions) {
           this.appendDummyInput()
               .appendTitle(msg.withSize());
           this.appendDummyInput()
-              .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'SIZE')
+              .appendTitle(new blockly.FieldTextInput('0',     blockly.FieldTextInput.numberValidator), 'SIZE')
               .appendTitle(msg.pixels());
           this.setTooltip(msg.drawStickerWithSize());
         } else {
