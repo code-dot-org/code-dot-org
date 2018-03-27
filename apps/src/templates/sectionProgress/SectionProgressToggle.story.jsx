@@ -1,14 +1,15 @@
 import React from 'react';
-import SectionProgressToggle from './SectionProgressToggle';
+import {UnconnectedSectionProgressToggle as SectionProgressToggle} from './SectionProgressToggle';
+import {ViewType} from './sectionProgressRedux';
 
 export default storybook => {
   function isSummaryTrue() {
     return {
-      name:'isSummary view is true',
+      name:'Summary view toggle on',
       story: () => (
         <SectionProgressToggle
-          isSummaryView={true}
-          toggleView={() => {console.log("Toggle view.");}}
+          currentView={ViewType.SUMMARY}
+          setCurrentView={() => {console.log("Toggle view.");}}
         />
       )
     };
@@ -16,11 +17,11 @@ export default storybook => {
 
   function isSummaryFalse() {
     return {
-      name:'isSummary view is false',
+      name:'Detail view toggle on',
       story: () => (
         <SectionProgressToggle
-          isSummaryView={false}
-          toggleView={() => {console.log("Toggle view.");}}
+          currentView={ViewType.DETAIL}
+          setCurrentView={() => {console.log("Toggle view.");}}
         />
       )
     };
