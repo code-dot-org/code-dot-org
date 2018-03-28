@@ -60,9 +60,17 @@ module Pd::Application
       self.application_type = FACILITATOR_APPLICATION
     end
 
+    PROGRAMS = {
+      csf: 'CS Fundamentals (Pre-K - 5th grade)',
+      csd: 'CS Discoveries (6 - 10th grade)',
+      csp: 'CS Principles (9 - 12th grade)'
+    }.freeze
+    PROGRAM_OPTIONS = PROGRAMS.values
+    VALID_COURSES = PROGRAMS.keys.map(&:to_s)
+
     validates_uniqueness_of :user_id
 
-    validates_presence_of :course
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
@@ -100,13 +108,6 @@ module Pd::Application
       'Community college, college, or university',
       'Participants in a tech bootcamp or professional development program'
     ].freeze
-
-    PROGRAMS = {
-      csf: 'CS Fundamentals (Pre-K - 5th grade)',
-      csd: 'CS Discoveries (6 - 10th grade)',
-      csp: 'CS Principles (9 - 12th grade)'
-    }.freeze
-    PROGRAM_OPTIONS = PROGRAMS.values
 
     ONLY_WEEKEND = 'I will only be able to attend Saturday and Sunday of the training'.freeze
 
@@ -436,16 +437,22 @@ module Pd::Application
       ]
     end
 
-    # @override
-    # Filter out extraneous answers, based on selected program (course)
-    def self.filtered_labels(course)
-      labels_to_remove = (course == 'csf' ?
+    # memoize in a hash, per course
+    FILTERED_LABELS ||= Hash.new do |h, key|
+      labels_to_remove = (key == 'csf' ?
         [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
         : # csd / csp
         [:csf_availability, :csf_partial_attendance_reason]
       )
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers, based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
     end
 
     # @override
