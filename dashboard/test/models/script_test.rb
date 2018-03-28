@@ -886,7 +886,8 @@ class ScriptTest < ActiveSupport::TestCase
     script_copy.levels.each_with_index do |level, i|
       level_num = i + 1
       assert_equal "Level #{level_num}_copy", level.name
-      assert_equal "1_2_#{level_num}", level.level_num
+      old_level = Level.find_by_name("Level #{level_num}")
+      assert_equal old_level.level_num, level.level_num
       assert_equal '_copy', level.name_suffix
     end
 
