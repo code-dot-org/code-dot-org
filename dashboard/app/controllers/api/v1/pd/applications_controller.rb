@@ -17,7 +17,7 @@ module Api::V1::Pd
 
       ROLES.each do |role|
         # count(locked_at) counts the non-null values in the locked_at column
-        apps = get_applications_by_role(role, include_users: false).
+        apps = get_applications_by_role(role, include_associations: false).
           select(:status, "count(locked_at) AS locked, count(id) AS total").
           group(:status)
 
@@ -188,9 +188,9 @@ module Api::V1::Pd
 
     private
 
-    def get_applications_by_role(role, include_users: true)
+    def get_applications_by_role(role, include_associations: true)
       applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
-      applications_of_type = applications_of_type.includes(:user) if include_users
+      applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
       case role
         when :csf_facilitators
           return applications_of_type.csf

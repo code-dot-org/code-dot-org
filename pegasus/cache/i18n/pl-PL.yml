@@ -1029,7 +1029,7 @@
   dashboard_express: 'Express Course: '
   dashboard_unplugged: Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj
     tych lekcji bez komputera</a> w klasie.
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Narzędzia: '
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
   dashboard_overview: Streszczenie
@@ -1047,7 +1047,7 @@
   dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
   dashboard_curriculum_csp: 'AP ® Podstawy Informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_csd: 'Odkrycia Informatyczne: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne

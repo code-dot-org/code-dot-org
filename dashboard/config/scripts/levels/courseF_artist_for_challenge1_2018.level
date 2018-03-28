@@ -38,6 +38,7 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/21b776c3c3769458330cd84dfea40f12=levelbuilder/27796.png",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
