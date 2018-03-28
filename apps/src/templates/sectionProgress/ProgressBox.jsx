@@ -16,9 +16,9 @@ const styles = {
 export default class ProgressBox extends Component {
   static propTypes = {
     started: PropTypes.bool,
-    incomplete: PropTypes.num,
-    imperfect: PropTypes.num,
-    perfect: PropTypes.num,
+    incomplete: PropTypes.number,
+    imperfect: PropTypes.number,
+    perfect: PropTypes.number,
   };
 
   render() {
