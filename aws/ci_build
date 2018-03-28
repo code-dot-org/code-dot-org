@@ -141,6 +141,15 @@ def main
       message = "<b>#{projects}</b> built." + time_message + log_link
       ChatClient.log message, color: 'green'
 
+      if rack_env == :staging
+        # Look at the HEAD revision on the test machine, rather than the one in
+        # GitHub. Otherwise, if someone pushes more changes to the test branch while
+        # the DTT is running, we might accidentally, automatically mark those
+        # untested changes green.
+        current_build_git_commit_hash = GitUtils.git_revision_short
+        write_build_status :staging, current_build_git_commit_hash, :success
+      end
+
       if rack_env == :test
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
         mark_dtt_green
@@ -214,6 +223,14 @@ def mark_dtt_green
   DevelopersTopic.set_dtt 'yes'
   InfraTestTopic.set_green_commit test_branch_sha
   Metrics.write_metric('dtt_green', test_branch_sha, Metrics::AUTOMATIC)
+end
+
+# Log details of a build to metrics database.
+# @param [Symbol] environment - :success or :failed
+# @param [String] commit_hash
+# @param [String] status
+def write_build_status(environment, commit_hash, status)
+  Metrics.write_metric((status == :success) ? 'dts_green' : 'dts_red', commit_hash, Metrics::AUTOMATIC)
 end
 
 def emit_deploy_metric(deployment_stage, successful)

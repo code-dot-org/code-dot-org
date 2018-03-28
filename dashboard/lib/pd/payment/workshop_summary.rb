@@ -77,7 +77,7 @@ module Pd::Payment
         organizer_name: workshop.organizer.name,
         organizer_id: workshop.organizer.id,
         organizer_email: workshop.organizer.email,
-        regional_partner_name: workshop.organizer.regional_partners.try(:first).try(:name),
+        regional_partner_name: workshop.regional_partner.try(:name),
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         on_map: workshop.on_map,
         funded: workshop.funding_summary,
