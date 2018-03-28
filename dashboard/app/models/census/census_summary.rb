@@ -195,6 +195,45 @@ class Census::CensusSummary < ApplicationRecord
     state_data
   end
 
+  def self.summarize_override_data(overrides, school_year, audit)
+    counts = {
+      YES: 0,
+      NO: 0,
+      MAYBE: 0,
+      HISTORICAL_YES: 0,
+      HISTORICAL_NO: 0,
+      HISTORICAL_MAYBE: 0,
+      nil => 0,
+    }
+    audit[:overrides] = {
+      records: [],
+      counts: nil,
+    }
+
+    overrides.select {|o| o.school_year == school_year}.each do |o|
+      audit[:overrides][:records].push({id: o.id, teaches_cs: o.teaches_cs})
+      counts[o.teaches_cs.try(:to_sym)] += 1
+    end
+
+    audit[:overrides][:counts] = counts
+
+    overrides_summary = {
+      should_override: false,
+      override_value: nil,
+    }
+
+    override_values = counts.select {|_, v| v > 0}.map {|k, _| k}
+    if override_values.length == 1
+      overrides_summary[:override_value] = override_values.first.try(:to_s)
+      overrides_summary[:should_override] = true
+    elsif override_values.length > 1
+      overrides_summary[:override_value] = 'MAYBE'
+      overrides_summary[:should_override] = true
+    end
+
+    return overrides_summary
+  end
+
   def self.conditional_result(detail_label, condition, new_result, detail_value, current_result, details, set_value_when_not_used = false)
     result = current_result
     if condition
@@ -228,7 +267,7 @@ class Census::CensusSummary < ApplicationRecord
   # 8	teaches_cs from 2 years ago
   # 9 nil
   #
-  def self.compute_teaches_cs(has_ap_data, has_ib_data, submissions_summary, state_summary, previous_years_results, audit)
+  def self.compute_teaches_cs(overrides_summary, has_ap_data, has_ib_data, submissions_summary, state_summary, previous_years_results, audit)
     result = nil
     details = []
 
@@ -236,6 +275,15 @@ class Census::CensusSummary < ApplicationRecord
     # been set and simultaneously add the appropriate data to the details array
     # so that we can explain the result in the /census/review UI. We need to make
     # the call for every data element so that we get the full data in the explanation.
+    result = conditional_result(
+      'overrides',
+      overrides_summary[:should_override],
+      overrides_summary[:override_value],
+      overrides_summary[:override_value],
+      result,
+      details
+    )
+
     result = conditional_result('offers_ap', has_ap_data, 'YES', true, result, details)
     result = conditional_result('offers_ib', has_ib_data, 'YES', true, result, details)
     result = conditional_result(
@@ -347,12 +395,14 @@ class Census::CensusSummary < ApplicationRecord
       has_ap_data = summarize_ap_data(school, school_year, audit)
       has_ib_data = summarize_ib_data(school, school_year, audit)
       state_summary = summarize_state_data(school, school_year, stats[:high_school], state_years_with_data, audit)
+      overrides_summary = summarize_override_data(school.census_overrides, school_year, audit)
 
       summary = Census::CensusSummary.find_or_initialize_by(
         school: school,
         school_year: school_year,
       )
       summary.teaches_cs = compute_teaches_cs(
+        overrides_summary,
         has_ap_data,
         has_ib_data,
         submissions_summary,
@@ -404,6 +454,7 @@ class Census::CensusSummary < ApplicationRecord
         eager_load(ib_school_code: :ib_cs_offering).
         eager_load(:state_cs_offering).
         eager_load(:school_stats_by_year).
+        eager_load(:census_overrides).
         find_each do |school|
 
         summarize_school_data(
