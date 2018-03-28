@@ -5,7 +5,7 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 
 const dialogWrapper = {
   padding: 40,
-  width: 375,
+  width: 450,
   backgroundColor: 'gray',
 };
 
@@ -18,12 +18,12 @@ const achievements = [
   {
     isAchieved: true,
     iconUrl: '',
-    message: 'Achievement got',
+    message: 'First attempt!',
   },
   {
-    isAchieved: false,
+    isAchieved: true,
     iconUrl: '',
-    message: 'Achievement missed',
+    message: 'Effecient!',
   },
 ];
 
@@ -43,43 +43,28 @@ const studentCode = {
   message,
 };
 
+const levels = [];
+for (let i = 0; i < 20; i++) {
+  levels.push({
+    activeId: 1818 + i,
+    freePlay: false,
+    icon: null,
+    ids: [1818 + i],
+    is_concept_level: false,
+    kind: 'puzzle',
+    position: i + 1,
+    title: i + 1,
+    url: '#',
+  });
+}
+
 const mockProgress = {
   currentLevelId: '123',
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   stages: [{
     id: 40,
-    levels: [{
-      activeId: 1818,
-      freePlay: false,
-      icon: null,
-      ids: [1818],
-      is_concept_level: false,
-      kind: 'puzzle',
-      position: 1,
-      title: 1,
-      url: '#',
-    }, {
-      activeId: 1819,
-      freePlay: false,
-      icon: null,
-      ids: [1819],
-      is_concept_level: false,
-      kind: 'puzzle',
-      position: 2,
-      title: 2,
-      url: '#',
-    }, {
-      activeId: 1820,
-      freePlay: false,
-      icon: null,
-      ids: [1820],
-      is_concept_level: false,
-      kind: 'puzzle',
-      position: 3,
-      title: 3,
-      url: '#',
-    }],
+    levels,
   }],
   peerReviewStage: false,
   scriptId: 1,
@@ -88,7 +73,8 @@ const mockProgress = {
   courseId: null,
   currentStageId: 40,
   hasFullProgress: false,
-  levelProgress: {1815: 17,
+  levelProgress: {
+    1815: 17,
     1818: 100,
     1819: 30,
     1820: 100,
