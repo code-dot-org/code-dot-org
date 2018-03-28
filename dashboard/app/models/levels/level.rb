@@ -527,6 +527,10 @@ class Level < ActiveRecord::Base
     level
   end
 
+  def age_13_required?
+    false
+  end
+
   private
 
   # Returns the level name, removing the name_suffix first (if present).
