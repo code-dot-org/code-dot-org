@@ -61,6 +61,7 @@ export default class CensusInaccuracyReviewDetails extends Component {
   };
 
   stringForExplanationLabel = {
+    overrides: "Override",
     offers_ap: "Offers AP CS?",
     offers_ib: "Offers IB CS?",
     consistent_teacher_surveys: "Consistent Teacher/Admin Surveys",
