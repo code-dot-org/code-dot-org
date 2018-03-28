@@ -78,6 +78,12 @@ class Script < ActiveRecord::Base
 
   after_save :generate_plc_objects
 
+  SCRIPT_DIRECTORY = 'config/scripts'.freeze
+
+  def self.script_directory
+    SCRIPT_DIRECTORY
+  end
+
   def generate_plc_objects
     if professional_learning_course?
       course = Course.find_by_name(professional_learning_course)
@@ -761,14 +767,18 @@ class Script < ActiveRecord::Base
   def clone_with_suffix(new_suffix)
     new_name = "#{name}-#{new_suffix}"
 
-    script_filename = "config/scripts/#{name}.script"
+    script_filename = "#{Script.script_directory}/#{name}.script"
     scripts, _ = Script.setup([script_filename], new_suffix: new_suffix)
     new_script = scripts.first
 
-    copy_and_write_i18n(new_name)
+    # Make sure we don't modify any files in unit tests.
+    if Rails.application.config.levelbuilder_mode
+      copy_and_write_i18n(new_name)
+      new_filename = "#{Script.script_directory}/#{new_name}.script"
+      ScriptDSL.serialize(new_script, new_filename)
+    end
 
-    new_filename = "config/scripts/#{new_name}.script"
-    ScriptDSL.serialize(new_script, new_filename)
+    new_script
   end
 
   # Creates a copy of all translations associated with this script, and adds
