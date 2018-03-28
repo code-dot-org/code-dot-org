@@ -102,14 +102,25 @@ class AdvancedShareOptions extends React.Component {
     );
   };
 
-  downloadExpoExport = () => this.expoExport({ mode: 'zip'});
-
-  publishExpoExport = () => this.expoExport({ mode: 'publish'});
-
-  expoExport = async (opts) => {
-    this.setState({exportingExpo: opts.mode});
+  downloadExpoExport = async () => {
+    this.setState({exportingExpo: 'zip'});
     try {
-      const expoUri = await this.props.onClickExportExpo(opts);
+      await this.props.onClickExportExpo({ mode: 'zip'});
+      this.setState({
+        exportingExpo: null,
+      });
+    } catch (e) {
+      this.setState({
+        exportingExpo: null,
+        exportExpoError: 'Failed to export project. Please try again later.',
+      });
+    }
+  };
+
+  publishExpoExport = async () => {
+    this.setState({exportingExpo: 'publish'});
+    try {
+      const expoUri = await this.props.onClickExportExpo({ mode: 'publish'});
       this.setState({
         exportingExpo: null,
         expoUri,
@@ -117,7 +128,7 @@ class AdvancedShareOptions extends React.Component {
     } catch (e) {
       this.setState({
         exportingExpo: null,
-        exportExpoError: 'Failed to export project. Please try again later.',
+        exportExpoError: 'Failed to publish project to Expo. Please try again later.',
       });
     }
   };
