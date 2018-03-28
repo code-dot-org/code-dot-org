@@ -1,0 +1,45 @@
+<Bounce>
+  <config><![CDATA[{
+  "game_id": 22,
+  "created_at": "2018-03-26T16:21:17.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "bounce",
+    "ideal": 5,
+    "scale": {
+      "snapRadius": 2
+    },
+    "soft_buttons": [
+      "leftButton",
+      "rightButton"
+    ],
+    "instructions": "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the paddle to reach both finish targets.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,8],[0,0,0,0,0,0,0,0]]",
+    "parent_level_id": 9472,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="20"/>
+        <block type="bounce_whenRight" deletable="false" x="180" y="20"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveRight"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="bounce_moveRight"/>
+        <block type="bounce_moveLeft"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Bounce>

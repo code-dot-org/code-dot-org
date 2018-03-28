@@ -235,7 +235,7 @@
     remove: "(ta bort sektion)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Hemligt ord
       email: E-post
       google_classroom: Google Classroom
       clever: Clever

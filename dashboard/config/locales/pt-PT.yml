@@ -243,7 +243,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Palavra secreta
       email: E-mail
       google_classroom: Google Classroom
       clever: Clever

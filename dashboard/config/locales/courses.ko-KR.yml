@@ -34,9 +34,7 @@
           description_short: An introductory computer science course that empowers
             students to create authentic artifacts.
         allthethingscourse:
-          title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer
-            description for students
-          description_teacher: This is a course for allthethings and has a longer
-            description for teachers
+          title: "모든 것을 포함한 코스"
+          description_short: "이 코스는 모든것을 위한 것입니다."
+          description_student: "이 코스는 모든것을 위한 것이며 학생들을 위해 좀 더 긴 설명이 있습니다."
+          description_teacher: "이 코스는 모든것을 위한 것이며 선생님들을 위해 좀 더 긴 설명이 있습니다."

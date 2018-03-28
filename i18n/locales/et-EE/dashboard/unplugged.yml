@@ -301,3 +301,18 @@ et:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Päris elu algoritmid: Seemenda'
+        desc: Selles õppetunnis näidatakse seemendamise näitel seda, kuidas kasutame algoritme igapäevases elus. Lisaks käsitletakse selles arvutiteadust üldisemalt ja algoritmide suurt tähtsust.
+      UnplugHappyMaps_2018:
+        title: Happy Maps
+        desc: Õpilased loovad lihtsaid algoritme (juhendite komplekte), et liigutada tegelast läbi labürindi kasutades ainult üht käsku.
+      GoingPlacesSafely_2018:
+        title: Läheb asukohta turvaliselt
+        desc: Internet on võimas, kuid vahest ka ohtlik koht. Õpetajad õpetavad, kuidas end Internetis surfates kaitsta.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Selles õppetunnis õpid sa tundma tsükleid!
+      BigEvent_2018:
+        title: Suursündmus
+        desc: Õpilastele õpetatakse programmeerimismõistet "sündmused", need on tegevused, mida arvuti pidevalt jälgib. Õpetaja vajutab nuppe paberist kaugjuhtimispuldil ja õpilased reageerivad vastavalt sellele, millist nuppu vajutati.
