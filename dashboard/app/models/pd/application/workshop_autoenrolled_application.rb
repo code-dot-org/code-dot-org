@@ -57,6 +57,26 @@ module Pd::Application
       self.auto_assigned_enrollment_id = nil
     end
 
+    # Queries for locked and (accepted or withdrawn) and assigned to a teachercon workshop
+    # @param [ActiveRecord::Relation<Pd::Application::WorkshopAutoenrolledApplication>] applications_query
+    #   (optional) defaults to all
+    # @note this is not chainable since it inspects pd_workshop_id from serialized attributes,
+    #   which must be done in the model.
+    # @return [array]
+    def self.teachercon_cohort(applications_query = all)
+      teachercon_ids = Pd::Workshop.
+        in_year(2018).
+        where(subject: Pd::Workshop::SUBJECT_TEACHER_CON).
+        pluck(:id)
+
+      return applications_query.
+        where(type: descendants.map(&:name)). # this is an abstract class, so query descendant types
+        where(status: [:accepted, :withdrawn]).
+        where.not(locked_at: nil).
+        all.
+        select {|application| application.pd_workshop_id && teachercon_ids.include?(application.pd_workshop_id)}
+    end
+
     def workshop
       return nil unless pd_workshop_id
 
