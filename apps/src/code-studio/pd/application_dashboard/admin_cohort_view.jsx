@@ -30,12 +30,12 @@ const roles = [
 
 const dates = {
   TeacherCon: [
-    {display: 'June 17-22, Atlanta Georgia', city: 'Atlanta'},
-    {display: 'July 22-27, Phoenix Arizona', city: 'Phoenix'}
+    {display: 'June 17-22, Atlanta, Georgia', city: 'Atlanta'},
+    {display: 'July 22-27, Phoenix, Arizona', city: 'Phoenix'}
   ],
   FiT: [
-    {display: 'June 23-24, Atlanta Georgia', city: 'Atlanta'},
-    {display: 'July 28-29, Phoenix Arizona', city: 'Phoenix'}
+    {display: 'June 23-24, Atlanta, Georgia', city: 'Atlanta'},
+    {display: 'July 28-29, Phoenix, Arizona', city: 'Phoenix'}
   ]
 };
 
