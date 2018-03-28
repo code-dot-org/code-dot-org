@@ -10849,6 +10849,10 @@ sass-loader:
     loader-utils "^0.2.15"
     object-assign "^4.1.0"
 
+save-csv@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/save-csv/-/save-csv-4.0.6.tgz#43abb1e14b4ff02b083c0a6285450b49f0cb55d3"
+
 sax@1.1.5, sax@>=0.6.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.1.5.tgz#1da50a8d00cdecd59405659f5ff85349fe773743"

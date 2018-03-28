@@ -70,12 +70,11 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"7e757d2a-85ee-48a4-a766-35ec0be60782\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"7e757d2a-85ee-48a4-a766-35ec0be60782\": {\r\n      \"name\": \"snake\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/cqSKJcNy226Aisl3Jt3nFansw25H8kmK/category_animals/snake.png\",\r\n      \"frameSize\": {\r\n        \"x\": 256,\r\n        \"y\": 291\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"cqSKJcNy226Aisl3Jt3nFansw25H8kmK\"\r\n    }\r\n  }\r\n}",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-26 16:34:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:43:15 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-07 21:55:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-19 23:07:20 +0000\",\"changed\":[\"name\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 16:34:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:43:15 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-07 21:55:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-27 22:41:06 +0000\",\"changed\":[\"name\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

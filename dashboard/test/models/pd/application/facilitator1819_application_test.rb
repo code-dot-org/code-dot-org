@@ -305,6 +305,33 @@ module Pd::Application
       end
     end
 
+    test 'fit_cohort' do
+      included = [
+        create(:pd_facilitator1819_application, :locked, fit_workshop_id: @fit_workshop.id, status: :accepted),
+        create(:pd_facilitator1819_application, :locked, fit_workshop_id: @fit_workshop.id, status: :waitlisted)
+      ]
+
+      excluded = [
+        # not locked
+        create(:pd_facilitator1819_application, fit_workshop_id: @fit_workshop.id, status: :accepted),
+
+        # not accepted or waitlisted
+        @application_with_fit_workshop,
+
+        # no workshop
+        @application
+      ]
+
+      fit_cohort = Facilitator1819Application.fit_cohort
+
+      included.each do |application|
+        assert fit_cohort.include? application
+      end
+      excluded.each do |application|
+        refute fit_cohort.include? application
+      end
+    end
+
     test 'memoized filtered_labels' do
       Facilitator1819Application::FILTERED_LABELS.clear
 
