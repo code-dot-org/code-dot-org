@@ -4,7 +4,7 @@ import trophy from '!!file-loader!./images/trophy.svg';
 
 const styles = {
   main: {
-    marginLeft: 4,
+    marginLeft: 'auto',
   },
 };
 
