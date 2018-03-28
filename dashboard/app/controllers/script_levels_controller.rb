@@ -376,6 +376,7 @@ class ScriptLevelsController < ApplicationController
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
     )
+    readonly_view_options if @level.channel_backed? && params[:version]
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

@@ -301,3 +301,18 @@ zh-TW:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: '生活中的演算法 - 植物種植'
+        desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
+      UnplugHappyMaps_2018:
+        title: 快樂地圖
+        desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
+      GoingPlacesSafely_2018:
+        title: 安全的到達地點
+        desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: 大事件
+        desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。

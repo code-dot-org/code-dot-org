@@ -301,3 +301,18 @@ hu:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Valós algoritmusok: Ültess el egy magot!'
+        desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető szerepet.
+      UnplugHappyMaps_2018:
+        title: Vidám térképek
+        desc: A diákok egyszerű algoritmusokat (utasítások sorozta) hoznak létre, hogy egy karaktert egyetlen paranccsal átvezessenek egy labirintuson.
+      GoingPlacesSafely_2018:
+        title: Biztonságos utazás
+        desc: Az interneten egy hatalmas, de néha veszélyes hely. A tanárok bemutatják, hogyan maradhat biztonságos az interneten való jelenlét.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: A nagy esemény
+        desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy a tanár melyik gombot "nyomja meg".

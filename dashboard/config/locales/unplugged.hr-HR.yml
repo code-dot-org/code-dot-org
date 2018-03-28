@@ -471,3 +471,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+        desc: This lesson calls out ways we use algorithms in our daily lives, using
+          the act of planting a seed as an example. It also focuses on the bigger
+          picture of computer science and how algorithms play an essential part.
+      UnplugHappyMaps_2018:
+        title: Vesele karte
+        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
+          lika kroz labirint koristeći jednu naredbu.
+      GoingPlacesSafely_2018:
+        title: Sigurna putovanja
+        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
+          introduce how to stay safe while navigating the Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Veliki događaj
+        desc: Students are introduced to the programming concept of "events," which
+          are actions that a computer constantly monitors for. The teacher will press
+          buttons on a paper remote and students will react depending on which button
+          is pressed.

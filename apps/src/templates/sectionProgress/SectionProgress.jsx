@@ -3,8 +3,11 @@ import ScriptSelector from './ScriptSelector';
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import SectionProgressToggle from '@cdo/apps/templates/teacherDashboard/SectionProgressToggle';
+import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
+import VirtualizedDetailView from './VirtualizedDetailView';
 import _ from 'lodash';
+import { connect } from 'react-redux';
+import {ViewType} from './sectionProgressRedux';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -12,8 +15,10 @@ import _ from 'lodash';
  * student progress. Child components then have the responsibility for displaying
  * that progress.
  */
-export default class SectionProgress extends Component {
+class SectionProgress extends Component {
   static propTypes = {
+    //Provided by redux
+
     // The section we get directly from angular right now. This gives us a
     // different shape than some other places we use sections. For now, I'm just
     // going to document the parts of section that we use here
@@ -31,6 +36,7 @@ export default class SectionProgress extends Component {
       name: PropTypes.string.isRequired,
       position: PropTypes.number,
     })).isRequired,
+    currentView: PropTypes.oneOf(Object.values(ViewType)),
   };
 
   state = {
@@ -39,18 +45,11 @@ export default class SectionProgress extends Component {
     scriptId: "112",
     scriptData: null,
     studentLevelProgress: null,
-    isSummaryView: false,
   };
 
   componentDidMount() {
     this.loadScript(this.state.scriptId);
   }
-
-  toggleView = () => {
-    this.setState({
-      isSummaryView: !this.state.isSummaryView
-    });
-  };
 
   onChangeScript = scriptId => {
     this.setState({
@@ -87,8 +86,8 @@ export default class SectionProgress extends Component {
   }
 
   render() {
-    const { section, validScripts } = this.props;
-    const { scriptId, scriptData, studentLevelProgress, isSummaryView } = this.state;
+    const { section, validScripts, currentView } = this.props;
+    const { scriptId, scriptData, studentLevelProgress } = this.state;
 
     let levelDataInitialized = scriptData && studentLevelProgress;
 
@@ -99,19 +98,32 @@ export default class SectionProgress extends Component {
           scriptId={scriptId}
           onChange={this.onChangeScript}
         />
-        <SectionProgressToggle isSummaryView={isSummaryView} toggleView={this.toggleView}/>
+        <SectionProgressToggle />
         {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
-        {(levelDataInitialized && isSummaryView) &&
-          <div>{"This will be the summary view"}</div>
+        {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
+          <div>
+            <h1>This will be the summary view</h1>
+          </div>
         }
-        {(levelDataInitialized && !isSummaryView) &&
-          <SectionScriptProgress
-            section={section}
-            scriptData={scriptData}
-            studentLevelProgress={studentLevelProgress}
-          />
+        {(levelDataInitialized && currentView === ViewType.DETAIL) &&
+          <div>
+            <VirtualizedDetailView/>
+            <SectionScriptProgress
+              section={section}
+              scriptData={scriptData}
+              studentLevelProgress={studentLevelProgress}
+            />
+          </div>
         }
       </div>
     );
   }
 }
+
+export const UnconnectedSectionProgress = SectionProgress;
+
+export default connect(state => ({
+  section: state.sectionProgress.section,
+  validScripts: state.sectionProgress.validScripts,
+  currentView: state.sectionProgress.currentView,
+}))(SectionProgress);

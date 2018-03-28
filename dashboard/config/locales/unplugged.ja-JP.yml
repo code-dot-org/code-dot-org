@@ -402,3 +402,18 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: "現実のアルゴリズム：種を植えましょう"
+        desc: "このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。"
+      UnplugHappyMaps_2018:
+        title: "ハッピーマップ"
+        desc: "生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。"
+      GoingPlacesSafely_2018:
+        title: "安全な道を通って行く"
+        desc: "インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。"
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: The Big Event
+        desc: "ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。"

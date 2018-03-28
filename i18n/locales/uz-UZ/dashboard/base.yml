@@ -202,7 +202,7 @@ uz:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Sirli so''z'
       email: 'Elektron pochta'
       google_classroom: 'Google Classroom'
       clever: 'Clever'

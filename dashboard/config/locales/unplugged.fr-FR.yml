@@ -321,7 +321,7 @@
         title: Activité manuelle
         desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
       courseE_unplugged_privateInformation:
-        title: Activité manuelle
+        title: 'Education au sens commun : information privée et personnelle '
         desc: Aujourd'hui, tu apprendras la différence entre l'information privée
           et personnelle!
       courseF_unplugged_powerOfWords:
@@ -527,3 +527,26 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Algorithmes du monde réel: Planter une graine'
+        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
+          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
+          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
+          et la façon dont les algorithmes jouent un rôle essentiel.
+      UnplugHappyMaps_2018:
+        title: Cartes Joyeuses
+        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
+          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+      GoingPlacesSafely_2018:
+        title: Se déplacer en toute sécurité
+        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
+          présentent comment rester en sécurité en naviguant sur Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Dans cette leçon, tu découvriras les boucles!
+      BigEvent_2018:
+        title: Le Grand Événement
+        desc: Les élèves découvrent le concept de la programmation d’«événements»,
+          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
+          appuiera sur des boutons à distance et les élèves réagiront en fonction
+          du bouton choisi.
