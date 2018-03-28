@@ -872,4 +872,17 @@ class ScriptTest < ActiveSupport::TestCase
 
     refute script.project_widget_visible
   end
+
+  test 'clone script with suffix' do
+    scripts, _ = Script.setup([@script_file])
+    script = scripts[0]
+
+    Script.stubs(:script_directory).returns(self.class.fixture_path)
+    script_copy = script.clone_with_suffix('copy')
+    assert_equal 'test-fixture-copy', script_copy.name
+    assert_equal(
+      'Level 1_copy,Level 2_copy,Level 3_copy,Level 4_copy,Level 5_copy',
+      script_copy.levels.map(&:name).join(',')
+    )
+  end
 end
