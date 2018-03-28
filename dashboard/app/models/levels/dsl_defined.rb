@@ -127,8 +127,8 @@ class DSLDefined < Level
   def clone_with_name(new_name)
     raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     level = super(new_name)
-    new_dsl = dsl_text.sub("name '#{name}'", "name '#{new_name}'")
-    level.update!(dsl_text: new_dsl)
+    new_dsl = dsl_text.try(:sub, "name '#{name}'", "name '#{new_name}'")
+    level.update!(dsl_text: new_dsl) if new_dsl
     level
   end
 
