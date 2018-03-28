@@ -4,6 +4,8 @@ import color from '@cdo/apps/util/color';
 import BaseDialog from '../BaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
+const dialogRatio = 0.8;
+
 const styles = {
   textLink: {
     display: 'inline-block',
@@ -39,6 +41,10 @@ const styles = {
   linkFrame: {
     width: '98%',
     height: '94%'
+  },
+  centeredDialog: {
+    top: '50%',
+    left: '50%',
   }
 };
 
@@ -72,6 +78,12 @@ class ResourceLink extends React.Component {
       ...styles.commonThumbnail,
       ...(highlight && styles.mapThumbnail)};
 
+    const dialogHeight = $(window).height() * dialogRatio;
+    const dialogWidth = $(window).width() * dialogRatio;
+
+    const dialogStyle = {height: dialogHeight, width: dialogWidth,
+      marginTop: (dialogHeight / -2) + 'px', marginLeft: (dialogWidth / -2) + 'px'};
+
     return (
       <div>
         <div style={styles.resourceStyle} onClick={this.selectResource}>
@@ -89,8 +101,7 @@ class ResourceLink extends React.Component {
         <BaseDialog
           isOpen={this.state.dialogSelected}
           handleClose={this.closeResource}
-          fullWidth={true}
-          fullHeight={true}
+          style={{...styles.centeredDialog, ...dialogStyle}}
         >
           <iframe style={styles.linkFrame} src={reference}/>
         </BaseDialog>
