@@ -880,9 +880,28 @@ class ScriptTest < ActiveSupport::TestCase
     Script.stubs(:script_directory).returns(self.class.fixture_path)
     script_copy = script.clone_with_suffix('copy')
     assert_equal 'test-fixture-copy', script_copy.name
+
+    # Validate levels.
+    assert_equal 5, script_copy.levels.count
+    script_copy.levels.each_with_index do |level, i|
+      level_num = i + 1
+      assert_equal "Level #{level_num}_copy", level.name
+      assert_equal "1_2_#{level_num}", level.level_num
+      assert_equal '_copy', level.name_suffix
+    end
+
+    # Validate stages. We've already done some validation of level contents, so
+    # this time just validate their names.
+    assert_equal 2, script_copy.stages.count
+    stage1 = script_copy.stages.first
+    stage2 = script_copy.stages.last
     assert_equal(
-      'Level 1_copy,Level 2_copy,Level 3_copy,Level 4_copy,Level 5_copy',
-      script_copy.levels.map(&:name).join(',')
+      'Level 1_copy,Level 2_copy,Level 3_copy',
+      stage1.script_levels.map(&:levels).flatten.map(&:name).join(',')
+    )
+    assert_equal(
+      'Level 4_copy,Level 5_copy',
+      stage2.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
   end
 end
