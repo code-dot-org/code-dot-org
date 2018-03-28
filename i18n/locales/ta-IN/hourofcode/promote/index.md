@@ -1,13 +1,13 @@
 ---
-title: '& lt;% = hoc_s (: title_how_to_promote)% & gt;'
-layout: பரந்த
+title: <%= hoc_s(:title_how_to_promote) %>
+layout: wide
 nav: promote_nav
 ---
 <%= view :signup_button %>
 
-அனுமதியை & lt;%    facebook = {: u => "http: // # {request.host} / us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter =>: http://hourofcode.com ",: related => 'codeorg',: hashtags => '',: text => hoc_s (: twitter_default_text)}    twitter [: hashtags] = 'HourOfCode' hoc_s (: twitter_default_text) தவிர. '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # கோட் ஆஃப் ஹவர் பகுதியில் உங்கள் சமூகத்தை ஈடுபடுத்தவும்
 
