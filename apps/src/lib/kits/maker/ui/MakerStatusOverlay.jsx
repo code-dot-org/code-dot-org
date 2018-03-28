@@ -162,12 +162,12 @@ class UnsupportedBrowser extends Component {
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle"/>
         <Text>
-          Maker Toolkit BETA requires<br/>Chrome&nbsp;33+
+          This level requires the<br/>Code.org Maker App
         </Text>
         <UniformWidth>
           <OverlayButton
             primary
-            text="Setup Instructions"
+            text="Get Code.org Maker App"
             className="setup-instructions"
             onClick={handleOpenSetupPage}
           />

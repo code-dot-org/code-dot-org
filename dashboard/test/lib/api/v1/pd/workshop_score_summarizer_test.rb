@@ -55,6 +55,11 @@ module Api::V1::Pd
 
       @happy_teacher_response = {data: @happy_teacher_question_responses.to_json}
       @angry_teacher_response = {data: @angry_teacher_question_responses.to_json}
+      @declined_response = {
+        data: {
+          consent_b: '0'
+        }.to_json
+      }
 
       @facilitators = TEST_FACILITATORS.map do |facilitator_name|
         create(:facilitator, name: facilitator_name)
@@ -640,6 +645,14 @@ module Api::V1::Pd
           response_count: 2
         }, response_summary
       )
+    end
+
+    test 'rejections are filtered out when doing aggregation' do
+      @pegasus_db_stub.stubs(:where).returns([@happy_teacher_response, @declined_response])
+      response_summary = get_score_for_workshops(workshops: @workshops, include_free_responses: true, facilitator_name_filter: nil)
+
+      assert_equal 5.0, response_summary[:how_much_learned_s]
+      assert_equal 1, response_summary[:response_count]
     end
 
     private

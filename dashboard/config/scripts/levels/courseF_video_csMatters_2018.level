@@ -9,7 +9,8 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "display_name": "End of Course Projects"
+    "display_name": "End of Course Projects",
+    "name_suffix": "_2018"
   },
   "published": true,
   "notes": ""

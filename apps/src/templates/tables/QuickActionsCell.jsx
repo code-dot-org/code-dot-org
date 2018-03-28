@@ -22,7 +22,7 @@ const styles = {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
       borderRadius: 5,
-      color: color.lighter_gray,
+      color: color.darker_gray,
       margin: 3,
     },
     [QuickActionsCellType.header]: {

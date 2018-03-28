@@ -1,0 +1,17 @@
+%p
+  Hello
+  = "#{@form[:first_name]}" + ','
+
+%p
+  Thank you for your interest in Code.org's
+  = "#{@interest}" + '. '
+  We will notify you about opportunities in your area when they become available. Below is a confirmation of the information you submitted to us.
+
+= render partial: 'form_body'
+
+%p
+  Best,
+  %br
+  Tanya Parker
+  %br
+  Product Manager, Code.org
