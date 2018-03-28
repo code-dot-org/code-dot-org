@@ -159,6 +159,7 @@ describe('block utils', () => {
           name: 'ANIMATION',
           label: 'create a ',
           options: TEST_SPRITES,
+          strict: false,
         },
         {
           mode: 'dummy',
@@ -180,6 +181,7 @@ describe('block utils', () => {
           name: 'DISTANCE',
           type: NUMBER,
           label: 'move ',
+          strict: false,
         },
         {
           mode: 'dummy',
@@ -200,9 +202,16 @@ describe('block utils', () => {
           name: 'ANIMATION',
           options: TEST_SPRITES,
           label: 'create a ',
+          strict: false,
         },
-        { mode: 'value', name: 'X', type: NUMBER, label: ' sprite at ' },
-        { mode: 'value', name: 'Y', type: NUMBER, label: ' ' },
+        {
+          mode: 'value',
+          name: 'X',
+          type: NUMBER,
+          label: ' sprite at ',
+          strict: false,
+        },
+        { mode: 'value', name: 'Y', type: NUMBER, label: ' ', strict: false },
       ]);
     });
 
@@ -211,7 +220,14 @@ describe('block utils', () => {
         { name: 'SPEED', type: NUMBER},
       ]);
       expect(inputs).to.deep.equal([
-        { mode: 'value', name: 'SPEED', type: NUMBER, label: 'set speed to ' },
+        {
+          mode: 'value',
+          name: 'SPEED',
+          type: NUMBER,
+          label: 'set speed to ',
+          strict: false,
+
+        },
       ]);
     });
   });

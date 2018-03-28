@@ -226,10 +226,10 @@
     <toolbox_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="variables_set" inline="false">
+        <block type="sprite_variables_set" inline="false">
           <title name="VAR">i</title>
         </block>
-        <block type="variables_get">
+        <block type="sprite_variables_get">
           <title name="VAR">i</title>
         </block>
         <block type="math_number">

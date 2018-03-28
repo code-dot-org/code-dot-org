@@ -3,6 +3,7 @@ title: Workshops & Professional Learning Program
 nav: regional_partner_playbook_nav
 ---
 <meta name="robots" content="noindex">
+
 <a id="top"></a>
 
 # Workshops & Professional Learning Program
@@ -119,7 +120,7 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 ### Local Summer Workshop Specific
 
 - **<a href="https://docs.google.com/document/d/1FQV4RD8egjVv5WUTaAlGDIt-vrmSHcsotAYiUrHw_Gs/edit" target=_blank>2018 Local Summer Workshop Process Manual</a>** - Everything you need to know to plan and run a local summer workshop!
-- Multi-cohort Tips
+- <a href="https://docs.google.com/document/d/1E7_D2skkgfa3wRoNk_NO3VEUDB9vDuPzmnhZ81A8Qss/edit#heading=h.35jd6ttbmrgb" target=_blank>2018 Tips for Leading Multi-Cohort Local Summer Workshop</a>
 
 <details>
 	<summary>**Note:** Sending Welcome Kits for Local Summer Workshops (Only G1/G2)</summary>
