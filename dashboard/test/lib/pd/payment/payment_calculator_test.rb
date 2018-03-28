@@ -26,15 +26,14 @@ module Pd::Payment
     end
 
     test 'Calculate CSF Workshop payment' do
-      workshop = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
-
+      workshop = create(:pd_ended_workshop, :funded, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
       create_passed_levels(workshop.enrollments[0..9])
 
       assert_equal 500, PaymentCalculator.instance.calculate(workshop)
     end
 
     test 'Calculate CSF Workshop with only some teachers who did puzzles' do
-      insufficient_puzzles = create(:pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
+      insufficient_puzzles = create(:pd_ended_workshop, :funded, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 20)
       create_passed_levels(insufficient_puzzles.enrollments[0..5])
       assert_equal 300, PaymentCalculator.instance.calculate(insufficient_puzzles)
     end

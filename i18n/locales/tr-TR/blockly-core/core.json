@@ -33,7 +33,7 @@
     "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "döngüden çık",
     "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "Döngünün sonraki adımından devam et",
     "CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK": "İçeren döngüden çık.",
-    "CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE": "Bu döngünün geri kalanını atlar ve sonraki adım ile devam eder.",
+    "CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE": "Bu döngünün geri kalanını atlayın ve sonraki adım ile devam edin.",
     "CONTROLS_FLOW_STATEMENTS_WARNING": "Uyarı: Bu blok sadece bir döngü içinde kullanılabilir.",
     "CONTROLS_FOREACH_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#for_each",
     "CONTROLS_FOREACH_INPUT_INLIST": "Listede",

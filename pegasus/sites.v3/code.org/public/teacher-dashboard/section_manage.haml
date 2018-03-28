@@ -65,23 +65,20 @@ content-type: text/ng-template
 
   #react-sync-oauth-section{'ng-init' => '$emit("react-sync-oauth-section-rendered");'}
 
-  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email' && section.login_type !== 'google_classroom'", style: "line-height: 36px;"}
-    = I18n.t('dashboard_students_new_section')
-
   %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type === 'google_classroom'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_google_classroom_section')
 
   #student-table-react{'ng-init' => '$emit("student-table-react-rendered");'}
 
   %div{"ng-if" => "section.login_type === 'picture' || section.login_type === 'word'"}
-    %h3{"ng-show" => 'section.students.length > 0'}
+    %h3
       = I18n.t 'dashboard_students_share_section', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
       %br/
       %br/
       = I18n.t('dashboard_students_share_section_secondary')
       %a{"ng-href" => CDO.studio_url("/sections/{{section.code}}"), target: "_blank"}
         http:#{CDO.studio_url('/sections/{{section.code}}')}
-    %h3{"ng-show" => 'section.students.length > 0'}
+    %h3
       %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
         = I18n.t('dashboard_students_print_info')
     %br/

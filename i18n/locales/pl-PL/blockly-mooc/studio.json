@@ -219,6 +219,7 @@
   "iceAge": "Epoka Lodowcowa (Ice Age)!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "postać",
   "ifSpriteN": "postać {spriteIndex}",
   "incrementPlayerScore": "wynik punktowy",
   "isSet": "ustawiono",

@@ -494,7 +494,7 @@ module Pd::Application
     end
 
     def principal_approval_url
-      pd_application_principal_approval_url(application_guid)
+      pd_application_principal_approval_url(application_guid) if application_guid
     end
 
     # @override
@@ -534,22 +534,6 @@ module Pd::Application
 
     def principal_approval
       sanitize_form_data_hash[:principal_approval] || ''
-    end
-
-    def date_accepted
-      accepted_at.try(:strftime, '%b %e')
-    end
-
-    def assigned_workshop
-      pd_workshop_id ? Pd::Workshop.find(pd_workshop_id).date_and_location_name : ''
-    end
-
-    def registered_workshop
-      if pd_workshop_id
-        Pd::Enrollment.exists?(pd_workshop_id: pd_workshop_id, user: user) ? 'Yes' : 'No'
-      else
-        ''
-      end
     end
 
     # Called once after the application is submitted, and the principal approval is done
@@ -603,12 +587,13 @@ module Pd::Application
     end
 
     # @override
-    def self.csv_header(course)
+    def self.csv_header(course, user)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       CSV.generate do |csv|
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
           'Principal Approval',
+          'Principal Approval Form',
           'Meets Criteria',
           'Total Score',
           'Regional Partner',
@@ -619,9 +604,11 @@ module Pd::Application
           'School City',
           'School State',
           'School Zip Code',
+          'Date Submitted',
           'Notes',
           'Status'
         )
+        columns.push('Locked') if can_see_locked_status?(user)
         csv << columns
       end
     end
@@ -635,12 +622,13 @@ module Pd::Application
     end
 
     # @override
-    def to_csv_row
+    def to_csv_row(user)
       answers = full_answers
       CSV.generate do |csv|
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
           principal_approval,
+          principal_approval_url,
           meets_criteria,
           total_score,
           regional_partner_name,
@@ -651,9 +639,11 @@ module Pd::Application
           school_city,
           school_state,
           school_zip_code,
+          created_at.to_date.iso8601,
           notes,
           status
         )
+        row.push locked? if self.class.can_see_locked_status?(user)
         csv << row
       end
     end
@@ -667,8 +657,8 @@ module Pd::Application
           district_name,
           school_name,
           user.email,
-          assigned_workshop,
-          registered_workshop
+          workshop_date_and_location,
+          registered_workshop? ? 'Yes' : 'No'
         ]
       end
     end
@@ -782,6 +772,31 @@ module Pd::Application
       workshops.first
     end
 
+    # @override
+    def self.can_see_locked_status?(user)
+      user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
+    end
+
+    # override
+    def self.prefetch_associated_models(applications)
+      super(applications)
+
+      # also prefetch schools
+      prefetch_schools applications.map(&:school_id).uniq.compact
+    end
+
+    def self.prefetch_schools(school_ids)
+      return if school_ids.empty?
+
+      School.includes(:school_district).where(id: school_ids).each do |school|
+        Rails.cache.write get_school_cache_key(school.id), school, expires_in: CACHE_TTL
+      end
+    end
+
+    def self.get_school_cache_key(school_id)
+      "Pd::Application::Teacher1819Application.school(#{school_id})"
+    end
+
     protected
 
     def yes_no_response_to_yes_no_score(response)
@@ -816,11 +831,12 @@ module Pd::Application
     end
 
     def school
-      school_id = sanitize_form_data_hash[:school]
-      if school_id == '-1'
-        nil
-      else
-        School.find(school_id)
+      school_id = self.school_id
+      return nil unless school_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_school_cache_key(school_id) do
+        School.includes(:school_district).find_by(id: school_id)
       end
     end
   end

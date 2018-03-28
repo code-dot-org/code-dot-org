@@ -276,9 +276,6 @@
           useimmissa peleissä. Tällä oppitunnilla katsomme kuinka Pythagoraan lausetta
           ja etäisyysfunktiota voidaan käyttää mittaamaan kahden pisteen välinen etäisyys
           tasolla, ja sitten päätellä koskevatko nämä pisteet (tai pelin hahmot) toisiaan.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -490,3 +487,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Tosielämän algoritmit: kylvä siemen'
+        desc: Tämä oppitunti auttaa huomaamaan tavat joilla käytämme algoritmejä arkipäivässä,
+          käyttäen siemenen istutusta esimerkkinä. Siinä keskitytään myös tietojenkäsittelytieteen
+          kokonaiskuvaan ja kuinka algoritmeillä on oleellinen rooli.
+      UnplugHappyMaps_2018:
+        title: Iloiset kartat
+        desc: Oppilaat ohjaavat hahmon labyrintin läpi luomalla yksinkertaisia algoritmeja
+          (sarja ohjeita).
+      GoingPlacesSafely_2018:
+        title: Menossa turvallisesti
+        desc: Internet on voimakas, mutta joskus vaarallinenkin paikka. Opettajat
+          neuvovat kuinka pysyä turvassa internettiä selaillessa.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Suuri tapahtuma
+        desc: Opiskelijat tutustutetaan "tapahtumien" ohjelmointikäsitteeseen, ne
+          ovat toimenpiteitä, joita tietokone monitoroi koko ajan. Opettaja painelee
+          paperisen kaukosäätimen nappuloita ja opiskelijat reagoivat riippuen mitä
+          nappulaa painettiin.

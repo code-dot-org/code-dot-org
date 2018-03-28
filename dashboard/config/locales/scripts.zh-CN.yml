@@ -966,6 +966,7 @@
           stages:
             Testing:
               name: Testing
+          description_audience: ''
         cspunit2:
           title: CSP Unit 2 - The Internet
           description: |
@@ -3657,8 +3658,8 @@
               name: "什么是电脑？"
               description_student: "在本课中，该班对计算机进行了初步定义。经过集思广益之后对计算机的可能定义，班级分组工作在海报上将图片分类为
                 “是计算机” 或 “不是计算机” ，并解释他们选择一些最难归类的动机。然后老师介绍计算机的定义，允许小组根据新的定义修改他们的海报。"
-              description_teacher: |
-                在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机” 或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。
+              description_teacher: "在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机”
+                或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。"
             Representing Information:
               name: "代表信息"
             Processing with Bits:
@@ -4152,7 +4153,7 @@
               description_teacher: 根据上一课的同行访谈, 每个学生都会提出一个应用程序的想法, 以解决用户的问题。然后, 学生通过在个人卡片上绘制
                 "屏幕" 来创建他们自己的应用程序想法的纸原型。项目指南指导学生完成这一过程, 包括构建应用程序并与用户进行测试, 看看他们对所创建的用户界面的假设是否准确。
             Linking Screens:
-              name: Linking Screens
+              name: "连接屏幕"
               description_student: "在上一节课该班设计的屏幕上构建, 小组将屏幕组合成一个单一的应用程序. 然后可以添加简单的代码,
                 单击按钮转换到适当的屏幕。"
               description_teacher: "在本课中, 团队将上一课中设计的屏幕合并到一个应用程序中, 然后用代码将它们链接在一起。学生利用上一节课学习的有关基本的事件驱动编程通过建立模型应用程序。除了学生昨天设计的屏幕外,
@@ -4971,7 +4972,7 @@
             Getters and Setters:
               name: "取值器和设置器"
         coursed-ramp:
-          title: 'CS Fundamentals: Course D'
+          title: "计算机科学基础：课程D"
           description_audience: ''
           description_short: ''
           description: ''
@@ -5039,7 +5040,7 @@
             The Circuit Playground:
               name: "电路游乐场"
               description_student: "我们要来了解将贯穿剩余单元的赛道操场这个电路主板。我们要使用应用实验室来，开发使用电路主板输出的程序。"
-              description_teacher: "在这一课程中，学生们第一次有机会使用电路操场来编写程序。 在初次虚拟查看主板和假想的可能功能后，学生们将上网来书写应用程序，它可以使用蜂鸣器制造噪音并让LED
+              description_teacher: "在这一课程中，学生们第一次有机会使用电路游戏板来编写程序。 在初次虚拟查看主板和假想的可能功能后，学生们将在线编写应用程序，它可以使用蜂鸣器制造噪音并让LED
                 灯闪烁。 通过结合应用实验室的屏幕和电路游戏板， 学生们可以逐步开始将主板的元素集成为输出设备，同时又依靠APP 实验室来进行用户输入。"
             Lists:
               name: "列表"
@@ -5097,16 +5098,7 @@
               name: "使用代码设计屏幕"
               description_student: "通过阅读和更改应用程序屏幕上的内容, 该类开始构建只需要单个屏幕的应用程序。即使只有一个屏幕,
                 这些技术也允许大量的用户交互和功能。"
-              description_teacher: In Unit 4 students learned a very simple approach
-                to app development in App Lab that required a separate screen for
-                most interactions. To expand the kinds of apps that students can make,
-                and to encourage them to think in new ways about how users interact
-                with apps, we introduce the `setProperty()` block. This command can
-                be used to set the content and properties of various UI elements,
-                allowing students to write programs that update information on a single
-                screen, instead of manually creating duplicate screens. In this lesson
-                students build up simple apps that only require a single screen, the
-                content of which is changed using `setProperty()`.
+              description_teacher: "在单元4中，学生们学习了一个非常简单的方法在应用实验室中进行应用开发，它需要一个独立的屏幕来进行大多数互动。为了扩展这类学生们能制作的应用，并且鼓励它们能够用新的方法思考用户与交互，我们引入了`setProperty()`（设置属性）模块。这个命令能够用来设置各种界面元素的内容和属性，允许学生们写程序来在当前屏幕上更新信息，而不是手工创建重复的屏幕。在这堂课中，学生们会创建只需要一个屏幕的简单应用，它的内容会被`setProperty()`（设置属性）改变。"
             Board Events:
               name: "主板事件"
               description_student: "使用硬件按钮和开关，班级开发使用电路游戏板作为输入的程序。"
@@ -5114,50 +5106,13 @@
                 从按钮和开关开始，到硬件开关和按钮的熟悉，学生们将学会运用`onBoardEvent()`（当主板上发生事件时）类似于`onEvent()`（当事件发生时），来从他们的电路游戏板得到输入。"
             Getting Properties:
               name: "取值器属性"
-              description_student: This lesson introduces students to the getProperty
-                block, which allows them to access the properties of different elements
-                with code.  Students first practice using the block to determine what
-                the user has input in various user interface elements. Students later
-                use getProperty and setProperty together with the counter patters
-                to make elements move across the screen.  A new screen element, the
-                slider, and a new event trigger, onChange, are also introduced.
-              description_teacher: This lesson introduces students to the `getProperty`
-                block, which allows them to access the properties of different elements
-                with code.  Students first practice using the block to determine what
-                the user has input in various user interface elements. Students later
-                use `getProperty` and `setProperty` together with the counter patters
-                to make elements move across the screen.  A new screen element, the
-                slider, and a new event trigger, `onChange`, are also introduced.
+              description_student: "这堂课向学生们介绍了getProperty（获取属性）模块，它能让学生们用代码存取不同元素的属性。学生们会首先练习用模块来检测是否用户在不同的界面元素中进行了输入。然后同时使用
+                getProperty（获取属性）和setProperty（设置属性）模块的counter来让元素在屏幕上移动。同时，也会引入一个新元素-滑动条，以及一个新的事件-“onChange”（当改变时）。"
+              description_teacher: "这堂课向学生们介绍了`getProperty`（获取属性）模块，它能让学生们用代码存取不同元素的属性。学生们会首先练习用模块来检测是否用户在不同的界面元素中进行了输入。然后同时使用`getProperty`（获取属性）和`setProperty()`（设置属性）模块的counter来让元素在屏幕上移动。同时，也会引入一个新元素-滑动条，以及一个新的事件`onChange`（当改变时）。"
             The Program Design Process:
               name: "程序设计过程"
-              description_student: This lesson introduces students to the process
-                they will use to design programs of their own throughout this unit.
-                This process is centered around a project guide which asks students
-                to sketch out their screens, identify elements of the Circuit Playground
-                to be used, define variables, and describe events before they begin
-                programming. This process is similar to the Game Design Process that
-                we used in Unit 3. In this lesson students begin by playing a tug
-                o' war style game where the code is hidden. They discuss what they
-                think the board components, events, and variables would need to be
-                to make the program. They are then given a completed project guide
-                which shows one way to implement the project. Students are then walked
-                through this process through a series of levels. At the end of the
-                lesson students have an opportunity to make improvements to the program
-                to make it their own.
-              description_teacher: This lesson introduces students to the process
-                they will use to design programs of their own throughout this unit.
-                This process is centered around a project guide which asks students
-                to sketch out their screens, identify elements of the Circuit Playground
-                to be used, define variables, and describe events before they begin
-                programming. This process is similar to the Game Design Process that
-                we used in Unit 3. In this lesson students begin by playing a tug
-                o' war style game where the code is hidden. They discuss what they
-                think the board components, events, and variables would need to be
-                to make the program. They are then given a completed project guide
-                which shows one way to implement the project. Students are then walked
-                through this process through a series of levels. At the end of the
-                lesson students have an opportunity to make improvements to the program
-                to make it their own.
+              description_student: "这堂课向学生们介绍了设计他们自己的程序的流程。这个流程围绕着一个项目指南，让他们在开始前，先描绘出屏幕的构架，找到电路游戏板需要使用的元素。定义变量，描述事件。这个流程和我们在单元3中的游戏设计流程很像。在这节课中，学生们从玩一个拔河游戏开始，它的代码是隐藏起来的。他们会讨论主板组件是什么，需要使用的事件和变量是什么。然后会给他们完整的项目指南来实现这个项目。学生们然后会通过一系列的关卡来过一下这个流程。在课程结束时，他们有机会改进这个程序，做出自己的版本。"
+              description_teacher: "这堂课向学生们介绍了设计他们自己的程序的流程。这个流程围绕着一个项目指南，让他们在开始前，先描绘出屏幕的构架，找到电路游戏板需要使用的元素。定义变量，描述事件。这个流程和我们在单元3中的游戏设计流程很像。在这节课中，学生们从玩一个拔河游戏开始，它的代码是隐藏起来的。他们会讨论主板组件是什么，需要使用的事件和变量是什么。然后会给他们完整的项目指南来实现这个项目。学生们然后会通过一系列的关卡来过一下这个流程。在课程结束时，他们有机会改进这个程序，做出自己的版本。"
             'Project: Make a Game':
               name: "项目: 建立游戏"
               description_student: "学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。"
@@ -5165,93 +5120,34 @@
             Arrays:
               name: "数组"
               description_student: "学习如果使用列表来存储单一变量名称的多个数值。"
-              description_teacher: An array is an ordered collection of items, usually
-                of the same type. In this lesson, students learn ways to access either
-                a specific or random value from a list using its index.  They then
-                learn how to access the colorLEDs array that controls the behavior
-                of the color LEDs on the Circuit Playground.  Students will control
-                the color and intensity of each LED, then use what they have learned
-                to program light patterns to create a light show on their Circuit
-                Playground.
+              description_teacher: "数组是一个有序的项目的集合，通常是相同类型的项目。在这节课中，学生们学习如何从列表中，用索引来存储某一个或者随机的值。ta'men他们然后会学习到如何存取colorLEDs来控制电路游戏板上的彩色LED等。学生们需要控制每个LED灯的颜色和强度，然后用学到的程序来画一个光线图案，从而在电路游戏板上展示一场灯光秀。"
             Making Music:
               name: "制作音乐"
-              description_student: In this lesson students will use the buzzer to
-                its full extent by producing sounds, notes, and songs with the buzzer.
-                Students start with a short review of the buzzer's frequency and duration
-                parameters, then move on to the concept of notes.  Notes allow students
-                to constrain themselves to frequencies that are used in Western music
-                and provide a layer of abstraction that helps them to understand which
-                frequencies might sound good together.  Onces students are able to
-                play notes on the buzzer, they use arrays to hold and play sequences
-                of notes, forming simple songs.
-              description_teacher: In this lesson students will use the buzzer to
-                its full extent by producing sounds, notes, and songs with the buzzer.
-                Students start with a short review of the buzzer's frequency and duration
-                parameters, then move on to the concept of notes.  Notes allow students
-                to constrain themselves to frequencies that are used in Western music
-                and provide a layer of abstraction that helps them to understand which
-                frequencies might sound good together.  Onces students are able to
-                play notes on the buzzer, they use arrays to hold and play sequences
-                of notes, forming simple songs.
+              description_student: "这节课中，学生们会使用蜂鸣器来达到它的全部能力，包括制造声音，音符和歌曲。学生们从回顾蜂鸣器的频率和持续时间参数开始，然后是音符的概念。音符允许学生们将频率限制在西洋音乐需要的范围内，并提供了一个抽象层来帮助他们理解什么声音听起来更好。一旦学生们能在蜂鸣器上播放音符了，他们就能用数组来播放一组音符，形成简单的歌曲。"
+              description_teacher: "这节课中，学生们会使用蜂鸣器来达到它的全部能力，包括制造声音，音符和歌曲。学生们从回顾蜂鸣器的频率和持续时间参数开始，然后是音符的概念。音符允许学生们将频率限制在西洋音乐需要的范围内，并提供了一个抽象层来帮助他们理解什么声音听起来更好。一旦学生们能在蜂鸣器上播放音符了，他们就能用数组来播放一组音符，形成简单的歌曲。"
             Arrays and For Loops:
               name: "数组和计数循环"
               description_student: "将列表和计数循环混合起来，可以让你编写无论多长，都能操作列表中每个元素的程序。课堂使用此结构来编写程序，
                 它可以处理在列表中的所有元素，包括彩色LED灯的列表。"
-              description_teacher: Using a _for loop_ to iterate over all of the elements
-                in an array is a really useful construct in most programming languages.
-                In this lesson, students learn the basics of how a _for loop_ can
-                be used to repeat code, and then combine it with what they've already
-                learned about arrays to write programs that process all elements in
-                an array. Students use for loops to go through each element in a list
-                one at a time without having to write code for each element. Towards
-                the end of the lesson students will apply this with the `colorLed`
-                list on the board to create an app that changes all of the LEDs each
-                time a button is clicked.
+              description_teacher: "使用_计数循环_来枚举数组中的所有元素，这在大部分编程语言中都非常有用。在这一课中，学生们会学习如何用_计数循环_来重复代码的基础，然后将它与已学习的数组结合起来，编程处理数组中的所有元素。学生们使用计数循环来遍历列表中的每个元素，而不必为每个元素写一遍代码。到了课程结束时，学生们会将这个应用到主板的`colorLed`（彩色LED灯）数组上，来创建应用，能够在每次按钮被点击时改变所有LED灯的颜色。"
             Accelerometer:
               name: "加速传感器"
-              description_student: In this lesson, students will explore the accelerometer
-                and its capabilities. They’ll become familiar with its events and
-                properties, as well as create multiple programs utilizing the accelerometer
-                similar to those they’ve likely come across in real world applications.
-              description_teacher: In this lesson, students will explore the accelerometer
-                and its capabilities. They’ll become familiar with its events and
-                properties, as well as create multiple programs utilizing the accelerometer
-                similar to those they’ve likely come across in real world applications.
+              description_student: "这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。"
+              description_teacher: "这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。"
             Functions with Parameters:
               name: "有参数的函数"
-              description_student: The lesson starts with a quick review of parameters,
-                in the context of App Lab blocks that they students have seen recently.  Students
-                then look at examples of parameters within user-created functions
-                in App Lab and create and call functions with parameters for themselves,
-                using them to control multiple elements on a screen.  Afterwards,
-                students use for loops to iterate over an array, passing each element
-                into a function.  Last, students use what they have learned to create
-                a star catching game.
-              description_teacher: The lesson starts with a quick review of parameters,
-                in the context of App Lab blocks that they students have seen recently.  Students
-                then look at examples of parameters within user-created functions
-                in App Lab and create and call functions with parameters for themselves,
-                using them to control multiple elements on a screen.  Afterwards,
-                students use for loops to iterate over an array, passing each element
-                into a function.  Last, students use what they have learned to create
-                a star catching game.
+              description_student: "这堂课在最近用到的应用实验室模块的环境中，从快速回顾参数开始。学生们然后会看看用户创建函数的例子，并创建和调用自己的有参数的函数，用它们来控制屏幕上的多个元素。然后，学生们用循环来枚举一个数组，将每个元素传递到函数中。最后，学生们用学过的内容来创建一个捉星星的游戏。"
+              description_teacher: "这堂课在最近用到的应用实验室模块的环境中，从快速回顾参数开始。学生们然后会看看用户创建函数的例子，并创建和调用自己的有参数的函数，用它们来控制屏幕上的多个元素。然后，学生们用循环来枚举一个数组，将每个元素传递到函数中。最后，学生们用学过的内容来创建一个捉星星的游戏。"
             Circuits and Physical Prototypes:
               name: "电路和物理原型"
-              description_student: Wire simple circuits to create a physical prototype
-                using cheap and easily found materials.
-              description_teacher: In preparation for this chapter's final project,
-                students will learn how to develop a prototype of a physical object
-                that includes a Circuit Playground. Using a modelled project planning
-                guide, students will learn how to wire a couple of simple circuits
-                and to build prototypes that can communicate the intended design of
-                a product, using cheap and easily found materials such as cardboard
-                and duct tape.
+              description_student: "用便宜和容易找到的材料来创造一个简单电路的物理原型。"
+              description_teacher: "在准备本章的最终项目时，学生们会学习到如何用电路游戏板开发一个物理对象的原型。用一个模型化的项目规划指南，学生们会使用便宜并容易找到的材料，如纸板、胶带，组合一些简单的电路来做出达到设计意图的产品。"
             Innovations in Computing:
-              name: Innovations in Computing
+              name: "计算中的创新"
             Arrays and Color LEDs:
-              name: Arrays and Color LEDs
+              name: "数组和彩色LED灯"
             Innovations in Computing_:
-              name: Innovations in Computing
+              name: "计算中的创新"
             Designing Screens with Code_:
               name: "使用代码设计屏幕"
             The Circuit Playground_:
@@ -5267,7 +5163,7 @@
             The Program Design Process_:
               name: "程序设计过程"
             Arrays and Color LEDs_:
-              name: Arrays and Color LEDs
+              name: "数组和彩色LED灯"
             'Project: Make a Game_':
               name: "项目: 建立游戏"
             Making Music_:
@@ -5285,7 +5181,7 @@
             'Project: Make a Game__':
               name: "项目: 建立游戏"
             Arrays and Color LEDs__:
-              name: Arrays and Color LEDs
+              name: "数组和彩色LED灯"
         csd3-draft:
           title: CSD单元 3 - 编程： 动画和游戏
           description_audience: ''
@@ -5449,8 +5345,8 @@
             Structuring Data:
               name: "构造数据"
               description_student: "班级同学进一步来学习包含清除和可视化原始数据设置的数据解密。首先，让班级同学来看不同数据的表现方法是如何帮助人们来更好地了解它。在了解完清除和可视化是如何帮助人们做更好的决定以后，同学们将查看该流程的哪些部分是可以自动化，哪些需要人力来完成。"
-              description_teacher: "在本课程中，学生们要进一步学习包含原始数据设定的清除和可视数据的收集和解译。首先，学生们将看数据的不同表现方法是如何帮助人们更好地理解它。然后，他们将通过对比萨饼配料的调查来可视化他们自己的原始数据设置，
-                接着决定要如何处理那些无法轻易满足他们选定的可视化方案的数据。 最后，学生们将检查在这流程中有哪些部分是可以自动化，哪些需要人来做决定。"
+              description_teacher: "在本课程中，学生们要进一步学习包含原始数据设定的清除和可视数据的收集和解译。首先，学生们将看数据的不同表现方法是如何帮助人们更好地理解它。然后，他们可视化自己的数据。用一个比萨佐料的调查结果，学生们必须决定决定要如何处理那些无法轻易满足他们选定的可视化方案的数据。
+                最后，学生们将检查在这流程中有哪些部分是可以自动化，哪些需要人来做决定。"
             Keeping Data Secret:
               name: "数据保密"
               description_student: "学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。"
@@ -5959,8 +5855,7 @@
             Conditionals with Cards:
               name: "如果/否则：用卡片的条件语句"
               description_student: "是时候玩游戏了，你只会在满足某种条件下才能得分。"
-              description_teacher: |
-                这堂课演示了如何用条件来为特定的信息定制一个程序。当我们写程序时，不会每次都有所有的信息。有时，你需要在某种情况下做出一些不同的事情，甚至当代码运行时，你不知道什么情况是真。这时，就需要用条件了。条件允许计算机基于代码运行时的条件来做出决定。
+              description_teacher: "这堂课演示了如何用条件来为特定的信息定制一个程序。当我们写程序时，不会每次都有所有的信息。有时，你需要在某种情况下做出一些不同的事情，甚至当代码运行时，你不知道什么情况是真。这时，就需要用条件了。条件允许计算机基于代码运行时的条件来做出决定。"
             Conditionals in Bee:
               name: "蜜蜂里的条件"
               description_student: "现在，你理解条件了。是时候来给蜜蜂编程，让他们何时收集花蜜并酿蜂蜜了。 "
@@ -6115,7 +6010,7 @@
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Programming in Artist:
               name: "艺术家里的编程"
             'Loops: My Loopy Robotic Friends':
@@ -6123,9 +6018,9 @@
             Loops in Artist:
               name: "艺术家里的循环"
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: "蜜蜂/僵尸里的嵌套循环"
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: "冰雪奇缘和嵌套循环"
             Nested Loops:
               name: "循环嵌套"
           title: "课程 E"
@@ -6215,12 +6110,8 @@
               description_teacher: "通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最后，学生们能向同伴们展示他们完成的工作，或者通过链接分享给亲友们。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。"
             Conditionals in Minecraft:
               name: "《我的世界》中的条件"
-              description_student: Avoid the lava! Here you will learn about conditionals
-                in the world of Minecraft.
-              description_teacher: This lesson gives students a chance to learn and
-                practice conditionals. It features characters and settings from Minecraft,
-                and students will complete tasks such as mining and building structures
-                using their programs.
+              description_student: "躲开岩浆！在《我的世界》里，你会学习条件。"
+              description_teacher: "这节课会让学生们学习并练习条件。这是《我的世界》里的角色和设定，学生们会用程序完成一些任务，比如挖矿、创建建筑物。"
             Functions in Bee:
               name: "蜜蜂中的函数"
             'Programming: My Robotic Friends':
@@ -6230,7 +6121,7 @@
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Programming in Artist:
               name: "艺术家里的编程"
             'Loops: My Loopy Robotic Friends':
@@ -6238,36 +6129,31 @@
             Loops in Artist:
               name: "艺术家里的循环"
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: "蜜蜂/僵尸里的嵌套循环"
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: "冰雪奇缘和嵌套循环"
           title: "课程 F"
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your
-            own art, stories, and games.
-          description: |-
-            The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\r
-            \r
-            In these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family.
+          description_audience: "年龄：9-13"
+          description_short: "学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。"
+          description: "学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。"
         csdnovice:
           stages:
             Tuesday:
-              name: Tuesday
+              name: "星期二"
             Wednesday:
-              name: Wednesday
+              name: "星期三"
             Thursday:
-              name: Thursday
+              name: "星期四"
             Welcome:
-              name: Welcome
+              name: "欢迎"
             Congrats:
-              name: Congrats
+              name: "恭喜"
             Wrap Up:
               name: "总结"
-          title: CS Discoveries TeacherCon Novice Facilitators
-          description_audience: CSD Novice Facilitators
-          description_short: Reflection questions for novice facilitators at TeacherCon.
-          description: 'A place to keep track of your reflection from TeacherCon as
-            a novice facilitator. '
+          title: "计算机科学发现教师会议的新手引导员"
+          description_audience: "计算机科学发现新手引导员"
+          description_short: "给教师会议新手引导员的反思性问题。"
+          description: "记录你在教师会议上作为一个新手引导员的反思。 "
         csp-explore-task:
           stages:
             Explore PT Prep - Reviewing the Task:
@@ -6276,12 +6162,10 @@
               name: "探索 表演任务 - 制定计划"
             Explore PT - Complete the Task:
               name: "探索 表演任务 - 完成任务"
-          title: CSP Explore PT Prep
+          title: "准备计算机科学原理探索的表演任务"
           description_audience: ''
-          description_short: These lessons cover the preparation and completion of
-            the CS Principles AP Explore Performance Task.
-          description: These lessons cover the preparation and completion of the CS
-            Principles AP Explore Performance Task.
+          description_short: "这些课程覆盖了计算机科学原理探索表演任务的准备和完成。"
+          description: "这些课程覆盖了计算机科学原理探索表演任务的准备和完成。"
         csp-create-task:
           stages:
             Create PT Prep - Reviewing the Task:
@@ -6292,19 +6176,16 @@
               name: "创建 表演任务- 完成任务"
           title: ''
           description_audience: ''
-          description_short: These lessons cover the preparation and completion of
-            the CS Principles AP Create Performance Task.
-          description: These lessons cover the preparation and completion of the CS
-            Principles AP Create Performance Task.
+          description_short: "这些课程覆盖了计算机科学原理创建表演任务的准备和完成。"
+          description: "这些课程覆盖了计算机科学原理创建表演任务的准备和完成。"
         csp-ap-tech-setup:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: "技术设置 - 您的 AP 数字组合和其他工具"
-          title: CSP AP Digital Portfolio and Other Tools
+          title: "计算机科学原理AP数字文件和其它工具"
           description_audience: ''
           description_short: ''
-          description: Covers AP Digital Portfolio setup and other technical tools
-            required for completing and submitting the AP Performance Tasks.
+          description: "覆盖AP数字档案的设置和其它技术工具，是完成和提交AP表演任务所要求的。"
         csp-ap:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6323,221 +6204,166 @@
               name: "探索 表演任务 - 完成任务"
             Participate in a longitudinal study!:
               name: "参与纵向研究!"
-          title: CSP AP Exam and Performance Tasks
+          title: "计算机科学原理AP测验和表演任务"
           description_audience: ''
-          description_short: Lessons guide students to prepare for and complete the
-            AP exam and Performance Tasks.
-          description: Lessons guide students to prepare for and complete the AP exam
-            and Performance Tasks.
+          description_short: "课程引导学生们准备和完成AP测验和表演任务。"
+          description: "课程引导学生们准备和完成AP测验和表演任务。"
         cspnovice:
           stages:
             Welcome:
-              name: Welcome
+              name: "欢迎"
             Tuesday:
-              name: Tuesday
+              name: "星期二"
             Wednesday:
-              name: Wednesday
+              name: "星期三"
             Thursday:
-              name: Thursday
+              name: "星期四"
             Wrap Up:
               name: "总结"
-          title: CS Principles TeacherCon Novice Facilitators
-          description_audience: CSP Novice Facilitators
-          description_short: Reflection questions for novice facilitators at TeacherCon.
-          description: 'A place to keep track of your reflection from TeacherCon as
-            a novice facilitator. '
+          title: "计算机科学原理教师会议新手引导员反思"
+          description_audience: "计算机科学原理新手引导员"
+          description_short: "给教师会议新手引导员的反思性问题。"
+          description: "记录你在教师会议上作为一个新手引导员的反思。 "
         novice-view:
           stages:
             CSP Tuesday:
-              name: CSP Tuesday
+              name: "计算机科学原理 星期二"
             CSP Wednesday:
-              name: CSP Wednesday
+              name: "计算机科学原理 星期三"
             CSP Thursday:
-              name: CSP Thursday
+              name: "计算机科学原理 星期四"
             CSD Tuesday:
-              name: CSD Tuesday
+              name: "计算机科学发现 星期二"
             CSD Wednesday:
-              name: CSD Wednesday
+              name: "计算机科学发现 星期三"
             CSD Thursday:
-              name: CSD Thursday
-          title: view novice responses
+              name: "计算机科学发现 星期四"
+          title: "查看新手的回应"
           description_audience: brook, dani, mal
-          description_short: NA
-          description: NA
+          description_short: "不适用"
+          description: "不适用"
         csp1-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete your Deeper Learning:
-              name: Complete your Deeper Learning
+              name: "完成你的更深入的学习"
             Complete Unit 1 Deeper Learning Reflections:
-              name: Complete Unit 1 Deeper Learning Reflections
-          title: CSP Unit 1 Deeper Learning
-          description_audience: CS Principles Facilitators in Training
-          description_short: 'Deeper Learning materials for CSP facilitators in training '
-          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CSP
-            facilitators in training. Here you will find reflection prompts and guidances
-            for demonstrating proficiency of Unit 1 of the Code.org CSP Curriculum.
-            Peer review items are available at the bottom of this page, once you''ve
-            submitted your own reflections for the unit. '
+              name: "完成单元1深入学习的反思"
+          title: "计算机科学原理单元1的深入学习"
+          description_audience: "计算机科学原理引导员培训"
+          description_short: "计算机科学原理引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元1的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 "
         csp2-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 2 Deeper Learning:
-              name: Complete Unit 2 Deeper Learning
+              name: "完成单元2深入学习"
             Complete Unit 2 Deeper Learning Reflections:
-              name: Complete Unit 2 Deeper Learning Reflections
-          title: CSP Unit 2 Deeper Learning
-          description_audience: CS Principles Facilitators in Training
-          description_short: 'Unit 2 Deeper Learning materials for CSP facilitators
-            in training '
-          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CSP
-            facilitators in training. Here you will find reflection prompts and guidances
-            for demonstrating proficiency of Unit 2 of the Code.org CSP Curriculum.
-            Peer review items are available at the bottom of this page, once you''ve
-            submitted your own reflections for the unit. '
+              name: "完成单元2深入学习的反思"
+          title: "计算机科学原理单元2的深入学习"
+          description_audience: "计算机科学原理引导员培训"
+          description_short: "单元2的计算机科学原理引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元2的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 "
         csp3-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 3 Deeper Learning Reflections:
-              name: Complete Unit 3 Deeper Learning Reflections
-          title: CSP Unit 3 Deeper Learning
-          description_audience: CS Principles Facilitators in Training
-          description_short: 'Unit 3 Deeper Learning materials for CSP facilitators
-            in training '
-          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CSP
-            facilitators in training. Here you will find reflection prompts and guidances
-            for demonstrating proficiency of Unit 3 of the Code.org CSP Curriculum.
-            Peer review items are available at the bottom of this page, once you''ve
-            submitted your own reflections for the unit. '
+              name: "完成单元3深入学习的反思"
+          title: "计算机科学原理单元3的深入学习"
+          description_audience: "计算机科学原理引导员培训"
+          description_short: "单元3的计算机科学原理引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元3的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 "
         csp4-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 4 Deeper Learning Reflections:
-              name: Complete Unit 4 Deeper Learning Reflections
-          title: CSP Unit 4 Deeper Learning
-          description_audience: CS Principles Facilitators in Training
-          description_short: 'Deeper Learning materials for CSP facilitators in training '
-          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CSP
-            facilitators in training. Here you will find reflection prompts and guidances
-            for demonstrating proficiency of Unit 4 of the Code.org CSP Curriculum.
-            Peer review items are available at the bottom of this page, once you''ve
-            submitted your own reflections for the unit. '
+              name: "完成单元4深入学习的反思"
+          title: "计算机科学原理单元4的深入学习"
+          description_audience: "计算机科学原理引导员培训"
+          description_short: "计算机科学原理引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元4的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 "
         csp5-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 5 Deeper Learning Reflections:
-              name: Complete Unit 5 Deeper Learning Reflections
-          title: CSP Unit 5 Deeper Learning
-          description_audience: CS Principles Facilitators in Training
-          description_short: 'Deeper Learning materials for CSP facilitators in training '
-          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CSP
-            facilitators in training. Here you will find reflection prompts and guidances
-            for demonstrating proficiency of Unit 5 of the Code.org CSP Curriculum.
-            Peer review items are available at the bottom of this page, once you''ve
-            submitted your own reflections for the unit. '
+              name: "完成单元5深入学习的反思"
+          title: "计算机科学原理单元5的深入学习"
+          description_audience: "计算机科学原理引导员培训"
+          description_short: "计算机科学原理引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元5的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 "
         csd1-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 1 Deeper Learning Reflections:
-              name: Complete Unit 1 Deeper Learning Reflections
-          title: CS Discoveries Unit 1 Deeper Learning
-          description_audience: CS Discoveries Facilitators in Training
-          description_short: 'Deeper Learning materials for CS Discoveries facilitators
-            in training '
-          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS
-            Discoveries facilitators in training. Here you will find reflection prompts
-            and guidances for demonstrating proficiency of Unit 1 of the Code.org
-            CS Discoveries Curriculum. Peer review items are available at the bottom
-            of this page, once you''ve submitted your own reflections for the unit. '
+              name: "完成单元1深入学习的反思"
+          title: "计算机科学发现单元1的深入学习"
+          description_audience: "计算机科学发现引导员培训"
+          description_short: "计算机科学发现引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元1的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。 "
         csd6-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 6 Deeper Learning Reflections:
-              name: Complete Unit 6 Deeper Learning Reflections
-          title: CS Discoveries Unit 6 Deeper Learning
-          description_audience: CS Discoveries Facilitators in Training
-          description_short: 'Deeper Learning materials for CS Discoveries facilitators
-            in training '
-          description: This is Unit 6 of the Deeper Learning Plan for Code.org CS
-            Discoveries facilitators in training. Here you will find reflection prompts
-            and guidances for demonstrating proficiency of Unit 6 of the Code.org
-            CS Discoveries Curriculum. Peer review items are available at the bottom
-            of this page, once you've submitted your own reflections for the unit.
+              name: "完成单元6深入学习的反思"
+          title: "计算机科学发现单元6的深入学习"
+          description_audience: "计算机科学发现引导员培训"
+          description_short: "计算机科学发现引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元6的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。"
         csd5-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 5 Deeper Learning Reflections:
-              name: Complete Unit 5 Deeper Learning Reflections
-          title: CS Discoveries Unit 5 Deeper Learning
-          description_audience: CS Discoveries Facilitators in Training
-          description_short: 'Deeper Learning materials for CS Discoveries facilitators
-            in training '
-          description: This is Unit 5 of the Deeper Learning Plan for Code.org CS
-            Discoveries facilitators in training. Here you will find reflection prompts
-            and guidances for demonstrating proficiency of Unit 5 of the Code.org
-            CS Discoveries Curriculum. Peer review items are available at the bottom
-            of this page, once you've submitted your own reflections for the unit.
+              name: "完成单元5深入学习的反思"
+          title: "计算机科学发现单元5的深入学习"
+          description_audience: "计算机科学发现引导员培训"
+          description_short: "计算机科学发现引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元5的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。"
         csd4-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 4 Deeper Learning Reflections:
-              name: Complete Unit 4 Deeper Learning Reflections
-          title: CS Discoveries Unit 4 Deeper Learning
-          description_audience: CS Discoveries Facilitators in Training
-          description_short: 'Deeper Learning materials for CS Discoveries facilitators
-            in training '
-          description: This is Unit 4 of the Deeper Learning Plan for Code.org CS
-            Discoveries facilitators in training. Here you will find reflection prompts
-            and guidances for demonstrating proficiency of Unit 4 of the Code.org
-            CS Discoveries Curriculum. Peer review items are available at the bottom
-            of this page, once you've submitted your own reflections for the unit.
+              name: "完成单元4深入学习的反思"
+          title: "计算机科学发现单元4的深入学习"
+          description_audience: "计算机科学发现引导员培训"
+          description_short: "计算机科学发现引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元4的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。"
         csd3-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 3 Deeper Learning Reflections:
-              name: Complete Unit 3 Deeper Learning Reflections
-          title: CS Discoveries Unit 3 Deeper Learning
-          description_audience: CS Discoveries Facilitators in Training
-          description_short: 'Deeper Learning materials for CS Discoveries facilitators
-            in training '
-          description: This is Unit 3 of the Deeper Learning Plan for Code.org CS
-            Discoveries facilitators in training. Here you will find reflection prompts
-            and guidances for demonstrating proficiency of Unit 3 of the Code.org
-            CS Discoveries Curriculum. Peer review items are available at the bottom
-            of this page, once you've submitted your own reflections for the unit.
+              name: "完成单元3深入学习的反思"
+          title: "计算机科学发现单元3的深入学习"
+          description_audience: "计算机科学发现引导员培训"
+          description_short: "计算机科学发现引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元3的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。"
         csd2-dlp:
           stages:
             Deeper Learning Overview:
-              name: Deeper Learning Overview
+              name: "更深的学习概览"
             Complete Unit 2 Deeper Learning Reflections:
-              name: Complete Unit 2 Deeper Learning Reflections
-          title: CS Discoveries Unit 2 Deeper Learning
-          description_audience: CS Discoveries Facilitators in Training
-          description_short: 'Deeper Learning materials for CS Discoveries facilitators
-            in training '
-          description: This is Unit 2 of the Deeper Learning Plan for Code.org CS
-            Discoveries facilitators in training. Here you will find reflection prompts
-            and guidances for demonstrating proficiency of Unit 2 of the Code.org
-            CS Discoveries Curriculum. Peer review items are available at the bottom
-            of this page, once you've submitted your own reflections for the unit.
+              name: "完成单元2深入学习的反思"
+          title: "计算机科学发现单元2的深入学习"
+          description_audience: "计算机科学发现引导员培训"
+          description_short: "计算机科学发现引导员培训的深入学习材料 "
+          description: "这是为code.org计算机科学原理引导员准备的单元2的深入学习计划。在这里你能找到有效演示code.org计算机科学原理教案的反思提示和指南。一旦你提交了自己的单元反思，在页面的底部还有结对回顾。"
         allthettsthings:
           stages:
             TTS:
-              name: TTS
+              name: "文字转语音"
         express:
           stages:
             'Programming Unplugged: My Robotic Friends':
-              name: 'Programming Unplugged: My Robotic Friends'
+              name: "离线编程：我的机器人朋友"
             Introduction:
               name: "介绍"
             'Algorithms: Graph Paper Programming':
@@ -6545,7 +6371,7 @@
             'Algorithms: Relay Programming':
               name: "调试：接力编程"
             Debugging in Collector:
-              name: Debugging in Collector
+              name: "调试简介"
             'Loops: My Loopy Robotic Friends':
               name: "循环: 我糊涂的机器人朋友"
             Loops in Artist:
@@ -6615,11 +6441,11 @@
             'Common Sense Education: Screen Out the Mean':
               name: "数字公民：选出平均值"
             Events in Star Wars:
-              name: Events in Star Wars
+              name: "星球大战里的事件"
             Events with Flappy:
-              name: Events with Flappy
+              name: "像素鸟和事件"
             'Conditionals: Conditionals with Cards':
-              name: 'Conditionals: Conditionals with Cards'
+              name: "条件：卡片和条件"
             Conditional Loops in Maze:
               name: "迷宫里的条件和循环"
             'Variables: Envelope Variables':
@@ -6632,9 +6458,9 @@
               name: "打基础"
             Nested Loops:
               name: "循环嵌套"
-          title: ''
-          description_audience: ''
-          description_short: ''
+          title: "快速课程"
+          description_audience: "年龄：9-18"
+          description_short: "计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。"
           description: "学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。"
         pre-express:
           stages:
@@ -6653,7 +6479,7 @@
             Programming in Maze:
               name: "迷宫编程"
             'Programming: Star Wars':
-              name: 'Programming: Star Wars'
+              name: "编程：星球大战"
             'Loops: My Loopy Robotic Friends':
               name: "循环: 我糊涂的机器人朋友"
             Loops in Collector:
@@ -6666,25 +6492,25 @@
               name: "游戏实验室中的事件"
             Spelling Bee:
               name: "拼字比赛"
-          title: ''
-          description_audience: ''
-          description_short: ''
+          title: "学龄前读者的快速课程"
+          description_audience: "年龄： 4-8"
+          description_short: "学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。"
           description: "学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。"
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:
-              name: Subgoal Labels Study Opt-In
+              name: "加入子目标学习"
             deprecated:
-              name: deprecated
+              name: "已弃用"
             other:
-              name: other
+              name: "其他"
             Thanks:
               name: "感谢"
             '':
               name: ''
             " ":
               name: " "
-          title: ''
+          title: "加入子目标学习"
           description_audience: ''
           description_short: ''
           description: ''
@@ -6693,13 +6519,13 @@
             new stage:
               name: "新的阶段"
             test satge:
-              name: test satge
+              name: "测试阶段"
             CSP pre survey Test:
-              name: CSP pre survey Test
+              name: "计算机科学原理调研测试"
             CSD pre survey test:
-              name: CSD pre survey test
+              name: "计算机科学发现调研测试"
             CSD pulse check survey:
-              name: CSD pulse check survey
+              name: "计算机科学发现检查调研"
           title: ''
           description_audience: ''
           description_short: ''
@@ -6735,8 +6561,8 @@
             CSP Mid-course survey:
               name: "计算机科学原理中级课程调查"
             Please complete the CSP Mid-course survey:
-              name: Please complete the CSP Mid-course survey
-          title: ''
+              name: "请完成计算机科学原理中期课程调查"
+          title: "计算机科学原理单元3：介绍编程（子目标）"
           description_audience: ''
           description_short: "通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。"
           description: ''
@@ -6777,16 +6603,16 @@
             App Presentation:
               name: "应用程序演示"
             Linking Screens:
-              name: Linking Screens
-          title: CSD Unit 4 Revisions Draft
+              name: "连接屏幕"
+          title: "计算机科学发现单元4修订草稿"
           description_audience: ''
           description_short: ''
           description: ''
         craft17:
           stages:
             craft17 stage:
-              name: craft17 stage
-          title: Craft17 Development Script
+              name: craft17阶段
+          title: Craft17开发脚本
           description_audience: ''
           description_short: ''
           description: ''
@@ -6797,34 +6623,33 @@
             Intro to AppLab - Choose Your Own Adventure 2:
               name: "应用实验室介绍 - 《惊险岔路口》2"
             Intro to AppLab - Your First App:
-              name: Intro to AppLab - Your First App
+              name: "应用实验室介绍 - 你的第一个应用程序"
             Intro to AppLab - Your First App 2:
-              name: Intro to AppLab - Your First App 2
+              name: "应用实验室介绍 - 你的第一个应用程序2"
             Intro to AppLab - Your First App 3:
-              name: Intro to AppLab - Your First App 3
+              name: "应用实验室介绍 - 你的第一个应用程序3"
             Intro to AppLab - Your First App 4:
-              name: Intro to AppLab - Your First App 4
+              name: "应用实验室介绍 - 你的第一个应用程序4"
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: "应用实验室介绍 - 开始"
             Intro to App Lab:
-              name: Intro to App Lab
+              name: "应用程序实验室简介"
             'Lesson 1: App Lab Intro':
-              name: 'Lesson 1: App Lab Intro'
-          title: Intro to App Lab
+              name: "课程1： 应用实验室简介"
+          title: "应用程序实验室简介"
           description_audience: ''
-          description_short: ''
-          description: These lessons introduce you to App Lab through a series of
-            creative projects.
+          description_short: "基于模块或文本创建你自己的Javascript应用程序。如果你已经做过一些模块编程了，开始挑战下个阶段的技能。"
+          description: "基于模块或文本创建你自己的Javascript应用程序。如果你已经做过一些模块编程了，开始挑战下个阶段的技能。"
         e-f-ramp:
           stages:
             'Programming: My Robotic Friends':
               name: "编程: 我的机器人朋友"
             Sequence and Preview in Maze:
-              name: Sequence and Preview in Maze
+              name: "迷宫中的序列和预览"
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Programming in Artist:
               name: "艺术家里的编程"
             'Loops: My Loopy Robotic Friends':
@@ -6834,13 +6659,13 @@
             Nested Loops:
               name: "循环嵌套"
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: "冰雪奇缘和嵌套循环"
             Intro to Conditionals with Farmer:
-              name: Intro to Conditionals with Farmer
+              name: "介绍条件和农夫"
             'Algorithms: Dice Race':
               name: "算法: 骰子竞赛"
             Course E Introduction:
-              name: Course E Introduction
+              name: "课程E介绍"
             Conditionals:
               name: "条件语句"
             Private and Personal Information:
@@ -6874,10 +6699,10 @@
             Nested Loops in Bee:
               name: "蜜蜂里的嵌套循环"
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: "蜜蜂/僵尸里的嵌套循环"
             Sequence in Maze:
               name: "迷宫中的序列"
-          title: Course E & F Ramp
+          title: "课程 E 和 F 热身"
           description_audience: ''
           description_short: ''
           description: ''
@@ -6923,7 +6748,7 @@
               name: "艺术家里的循环"
             Nested Loops in Bee:
               name: "蜜蜂里的嵌套循环"
-          title: New Course D Script
+          title: "新的课程D脚本"
           description_audience: ''
           description_short: ''
           description: ''
@@ -6932,13 +6757,11 @@
             new stage:
               name: "新的阶段"
             'CSP3A: Using Simple Commands':
-              name: 'CSP3A: Using Simple Commands'
-          title: CSP Unit 3 - Subgoals Group A
+              name: "计算机科学原理3A：使用简单命令"
+          title: "计算机科学原理单元3 - 小组A的子目标"
           description_audience: ''
-          description_short: Alternate version of CSP Unit 3 for subgoal labels experiment
-            group A.
-          description: This unit introduces the foundational concepts of computer
-            programming, for students in Subgoals Group A.
+          description_short: "计算机科学原理单元3的子目标标签体验小组A的替代版本。"
+          description: "这个单元为子目标小组A的学生介绍了计算机变成的基础概念。"
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -6954,27 +6777,27 @@
             Loops in Artist:
               name: "艺术家里的循环"
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: "冰雪奇缘里的嵌套循环项目"
             'How it Works: The Internet':
-              name: 'How it Works: The Internet'
+              name: "工作原理：互联网"
             'Common Sense Education: Digital Citizenship':
-              name: 'Common Sense Education: Digital Citizenship'
+              name: "常识教育: 数字公民"
             'Common Sense Education: Screen Out the Mean':
-              name: 'Common Sense Education: Screen Out the Mean'
+              name: "常识教育：筛选平均值"
             'Events: The Big Event':
               name: "事件: 大事件"
             Events in Star Wars:
-              name: Events in Star Wars
+              name: "星球大战里的事件"
             Events with Flappy:
-              name: Events with Flappy
+              name: "像素鸟和事件"
             Events in Bounce:
               name: "反弹事件"
             'Conditionals: Conditionals with Cards':
-              name: 'Conditionals: Conditionals with Cards'
+              name: "条件：卡片和条件"
             While Loops in Farmer:
               name: "当在农民循环中"
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: "迷宫里的条件循环"
             Conditionals in Minecraft:
               name: "《我的世界》中的条件"
             Conditionals & Loops in Farmer:
@@ -7012,14 +6835,14 @@
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Nested Loops:
               name: "循环嵌套"
             Loops in Artist (UPDATED!):
-              name: Loops in Artist (UPDATED!)
+              name: "小艺术家里的循环（更新了！）"
             Sarah test stage:
-              name: Sarah test stage
-          title: New Express Script
+              name: "萨拉测试阶段"
+          title: "新的快速脚本"
           description_audience: ''
           description_short: ''
           description: ''
@@ -7028,10 +6851,10 @@
             Loops in Artist:
               name: "艺术家里的循环"
             Sequences with Scrat:
-              name: Sequences with Scrat
+              name: "斯奎特和序列"
             Testing Template:
-              name: Testing Template
-          title: New stages for 9/17
+              name: "测试模板"
+          title: 9/17 的新阶段
           description_audience: ''
           description_short: ''
           description: ''
@@ -7044,7 +6867,7 @@
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Programming in Artist:
               name: "艺术家里的编程"
             'Loops: My Loopy Robotic Friends':
@@ -7052,13 +6875,13 @@
             Loops in Artist:
               name: "艺术家里的循环"
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: "蜜蜂/僵尸里的嵌套循环"
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: "冰雪奇缘和嵌套循环"
             'Algorithms: Dice Race':
               name: "算法: 骰子竞赛"
             Course E Introduction:
-              name: Course E Introduction
+              name: "课程E介绍"
             Conditionals:
               name: "条件语句"
             Private and Personal Information:
@@ -7089,7 +6912,7 @@
               name: "互联网"
             Crowdsourcing:
               name: "众包"
-          title: New Script for E
+          title: E 的新脚本
           description_audience: ''
           description_short: ''
           description: ''
@@ -7102,7 +6925,7 @@
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Programming in Artist:
               name: "艺术家里的编程"
             'Loops: My Loopy Robotic Friends':
@@ -7110,13 +6933,13 @@
             Loops in Artist:
               name: "艺术家里的循环"
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: "蜜蜂/僵尸里的嵌套循环"
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: "冰雪奇缘和嵌套循环"
             'Algorithms: Tangrams':
               name: "算法：七巧板"
             Course E Introduction:
-              name: Course E Introduction
+              name: "课程E介绍"
             The Power of Words:
               name: "语言的力量"
             Ice Age Play Lab:
@@ -7153,7 +6976,7 @@
               name: "修改您的项目"
             Present Your Project:
               name: "介绍您的项目"
-          title: New Script for F
+          title: F 的新脚本
           description_audience: ''
           description_short: ''
           description: ''
@@ -7195,27 +7018,27 @@
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
-              name: subgoal assessments
+              name: "子目标评估"
             lg by itself:
-              name: lg by itself
+              name: lg 本身
             test of single level lg:
-              name: test of single level lg
+              name: "单级别lg的测试"
             submittable question at end of lessson:
-              name: submittable question at end of lessson
+              name: "课程结束可提交的问题"
             all assessment items as standalone assessment levels:
-              name: all assessment items as standalone assessment levels
+              name: "所有评估条目都是独立的评估级别"
             all assessment items clustered in levelgroup:
-              name: all assessment items clustered in levelgroup
+              name: "所有的评估条目都按照基本分组了"
             submittable if last assessment item:
-              name: submittable if last assessment item
+              name: "如果是最后一个评估条目，则可提交"
             assessment sandwiched between app lab levels:
-              name: assessment sandwiched between app lab levels
+              name: "在应用实验室关卡之间的评估"
             all assessment items clustered in levelgroup as a single "test":
-              name: all assessment items clustered in levelgroup as a single "test"
+              name: 所有评估条目都按照级别分组作为一个单独的"测试"
             dummy:
-              name: dummy
+              name: "假的"
             CSP 3 updates staging ground:
-              name: CSP 3 updates staging ground
+              name: "计算机科学原理3更新集结地"
           title: ''
           description_audience: ''
           description_short: ''
@@ -7231,15 +7054,15 @@
         colehoc2017:
           stages:
             colehoc2017 stage:
-              name: colehoc2017 stage
-          title: 'HoC 17 - Cole '
+              name: colehoc2017阶段
+          title: 'HoC 17 - 科尔 '
           description_audience: ''
           description_short: ''
           description: ''
         craft17-kiki:
           stages:
             craft17 stage:
-              name: craft17 stage
+              name: craft17阶段
           title: ''
           description_audience: ''
           description_short: ''
@@ -7280,9 +7103,9 @@
               name: "改进和迭代"
             App Presentation:
               name: "应用程序演示"
-          title: "(DEPRECATED) CSD Unit 4 - The Design Process"
+          title: "（被废弃的）计算机科学发现单元4 - 设计过程"
           description_audience: ''
-          description_short: 2016/17 Beta version of CSD Unit 4
+          description_short: 2016/17 计算机科学发现单元4的测试版本
           description: ''
         csp3-staging:
           stages:
@@ -7308,21 +7131,21 @@
               name: PT练习 - 设计一个数字场景
             Unit 3 Chapter 1 Assessment:
               name: "第3单元 第1章 评估"
-          title: CSP 3 Proposed Changes Temporary Staging Ground
+          title: "计算机科学原理3建议的改动临时存放地"
           description_audience: ''
-          description_short: Temporary staging ground for Oct. changes to csp3
+          description_short: "十月计算机科学原理的临时改动"
           description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+            这是 /s/csp3的新的和修改过的复制ban'ben版本。不要编辑当前关卡。\r
         pwc:
           stages:
             new stage:
               name: "新的阶段"
             'Problem Solving: Personal Innovations':
-              name: 'Problem Solving: Personal Innovations'
+              name: "解决问题：个人创新"
             'Technology Foundations: What is a Computer?':
-              name: 'Technology Foundations: What is a Computer?'
+              name: "技术基础：什么是计算机？"
             'Data Science: Problem Solving with Big Data':
-              name: 'Data Science: Problem Solving with Big Data'
+              name: "数据科学: 用大数据解决问题"
             Personal Innovations:
               name: "个人发明"
             What is a Computer?:
@@ -7330,75 +7153,75 @@
             Problem Solving with Big Data:
               name: "用大数据解决问题"
             Programming - Hour of Code:
-              name: Programming - Hour of Code
+              name: "编程 - 编程一小时"
             Simple Encryption:
               name: "简单加密"
             Web Development - Creating Webpages:
-              name: Web Development - Creating Webpages
+              name: "网页开发 - 创建网页"
             App Development Unplugged - User Interfaces:
-              name: App Development Unplugged - User Interfaces
+              name: "线下应用开发 - 用户接口"
             App Development - Intro to App Lab:
-              name: App Development - Intro to App Lab
+              name: "应用程序开发 - 应用实验室介绍"
             Creating Webpages:
-              name: Creating Webpages
+              name: "创建网页"
             User Interfaces:
               name: "用户界面"
             Intro to App Lab:
-              name: Intro to App Lab
+              name: "应用程序实验室简介"
             Smart Clothing Design:
-              name: Smart Clothing Design
+              name: "聪明的服装设计"
             Intro to App Lab (13+):
-              name: Intro to App Lab (13+)
-          title: PwC Access Your Potential
+              name: "应用实验室简介 （13岁以上）"
+          title: "普华永道的获得你的潜能课程"
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "在普华永道，我们相信所有学生都有潜力成为明天的领导者和技术驱动的人。获得你的潜能是我们的承诺，通过为年轻人，特别是贫困地区的年轻人所需要的cai财务、技术和职业选择技能，以改变它们的生活轨迹，帮助减小机会的差距。作为我们承诺的一部分，我们非常高兴启动获得你的潜能的中学技术和职业课程。"
         allthesurveys:
           stages:
             CSP pre survey Test:
-              name: CSP pre survey Test
+              name: "计算机科学原理调研测试"
             CSD pre survey test:
-              name: CSD pre survey test
+              name: "计算机科学发现调研测试"
             CSD pulse check survey:
-              name: CSD pulse check survey
+              name: "计算机科学发现检查调研"
             CSD mid-post survey staging:
-              name: CSD mid-post survey staging
+              name: "计算机科学发现中后期调查阶段"
             CSP pre survey Test 2017:
-              name: CSP pre survey Test 2017
+              name: "计算机科学原理预调查测试2017"
             CSD mid-post survey 2017 staging:
-              name: CSD mid-post survey 2017 staging
+              name: "计算机科学发现中后期调查阶段2017"
             CSP pre survey 2017 staging:
-              name: CSP pre survey 2017 staging
+              name: "计算机科学原理预调查阶段2017"
             CSD pre survey 2017 staging:
-              name: CSD pre survey 2017 staging
+              name: "计算机科学发现预调查阶段2017"
             CSD/P pulse check survey 2017:
-              name: CSD/P pulse check survey 2017
+              name: "计算机科学发现/原理检查调研2017"
             CSD mid and post survey 2017 staging:
-              name: CSD mid and post survey 2017 staging
+              name: "计算机科学发现中后期调查阶段2017"
             CSP mid and post survey 2017 staging:
-              name: CSP mid and post survey 2017 staging
-          title: All the surveys
+              name: "计算机科学原理中后期调查阶段2017"
+          title: "所有调查"
           description_audience: ''
-          description_short: Place to stage and test Code.org surveys
+          description_short: "极端和测试code.org调查的地方"
           description: ''
         k1hoc2017:
           stages:
             Collector Hour of Code 2017:
-              name: Collector Hour of Code 2017
-          title: K-1 Hour of Code 2017
+              name: "编程一小时2017 收集器"
+          title: K-1 编程一小时 2017
           description_audience: ''
           description_short: ''
           description: ''
         hero:
           stages:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: Hero''s Journey Hour of Code'
+              name: "《我的世界》\\: 编程一小时英雄之旅"
             Minecraft Hour of Code:
               name: "我的世界 编程一小时"
-          title: 'Minecraft: Hero''s Journey'
+          title: "《我的世界》: 英雄之旅"
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: "《我的世界》编程一小时的全新的活动回来了！"
+          description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
         applab-intro-staging:
           stages:
             Intro to AppLab - Choose Your Own Adventure:
@@ -7406,18 +7229,18 @@
             Intro to AppLab - Choose Your Own Adventure 2:
               name: "应用实验室介绍 - 《惊险岔路口》2"
             Intro to AppLab - Your First App:
-              name: Intro to AppLab - Your First App
+              name: "应用实验室介绍 - 你的第一个应用程序"
             Intro to AppLab - Your First App 2:
-              name: Intro to AppLab - Your First App 2
+              name: "应用实验室介绍 - 你的第一个应用程序2"
             Intro to AppLab - Your First App 3:
-              name: Intro to AppLab - Your First App 3
+              name: "应用实验室介绍 - 你的第一个应用程序3"
             Intro to AppLab - Your First App 4:
-              name: Intro to AppLab - Your First App 4
+              name: "应用实验室介绍 - 你的第一个应用程序4"
             Intro to AppLab - Getting Started:
-              name: Intro to AppLab - Getting Started
+              name: "应用实验室介绍 - 开始"
             Intro to App Lab:
-              name: Intro to App Lab
-          title: Intro to App Lab Staging
+              name: "应用程序实验室简介"
+          title: "应用实验室阶段简介"
           description_audience: ''
           description_short: ''
           description: ''
@@ -7434,15 +7257,14 @@
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: "技术设置 - 您的 AP 数字组合和其他工具"
             'Setup: Digital Portfolio and Other Tools':
-              name: 'Setup: Digital Portfolio and Other Tools'
-          title: Explore - AP Performance Task Prep
+              name: "设置：数字文件和其它工具"
+          title: "探索 - AP表演任务准备"
           description_audience: ''
-          description_short: Lessons and resources to help students prepare for and
-            complete the AP Explore Performance Tasks.
+          description_short: "课程和资源会帮助学生们准备和完成AP探索的表演任务。"
           description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第二个项目与探索表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r
             \r
-            This unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+            此单元最后更新2017年11月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。
         csp-create:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -7453,29 +7275,28 @@
               name: "创建 表演任务 准备 - 制定计划"
             Create PT - Complete the Task:
               name: "创建 表演任务- 完成任务"
-          title: Create - AP Performance Task Prep
+          title: "创建 - AP表演任务准备"
           description_audience: ''
-          description_short: Lessons and resources to help students prepare for and
-            complete the AP Create Performance Tasks.
+          description_short: "课程和资源会帮助学生们准备和完成创建AP表演任务。"
           description: |-
-            These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r
+            这些课程是为了帮助你理解、准备和执行 AP 创建表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注: 第一节课中的第一个项目与创建表演任务不是直接相关，但涵盖了通用的技术设置和工具, 你需要在开发和创建任务中执行各种元素。\r
             \r
-            This unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
+            此单元最后更新2017年12月。在forum.code.org/c/csp/updates阅读更多关于课程的更新。
         csp3-reovery:
           stages:
             Under the sea recovery:
-              name: Under the sea recovery
-          title: 'csp3 under the sea student work recovery '
+              name: "在海洋恢复下"
+          title: "计算机原理3在海洋恢复学生工作下 "
           description_audience: ''
           description_short: ''
           description: ''
         csp3-recovery:
           stages:
             Under the sea recovery:
-              name: Under the sea recovery
+              name: "在海洋恢复下"
             standalone template:
-              name: standalone template
-          title: 'CSP3 under the sea student work recovery '
+              name: "独立模板"
+          title: "计算机原理3在海洋恢复学生工作下 "
           description_audience: ''
           description_short: ''
           description: ''
@@ -7483,14 +7304,14 @@
           stages:
             new stage:
               name: "新的阶段"
-          title: AWS Demo
+          title: AWS演示
           description_audience: ''
           description_short: ''
           description: ''
         halloween:
           stages:
             Halloween Artist:
-              name: Halloween Artist
+              name: "万圣节艺术家"
           title: ''
           description_audience: ''
           description_short: ''
@@ -7498,12 +7319,12 @@
         valentine:
           stages:
             special valentine:
-              name: special valentine
+              name: "特别情人节"
             Valentine Puzzles:
-              name: Valentine Puzzles
-          title: Valentine Special
+              name: "情人节拼图"
+          title: "情人节特价"
           description_audience: ''
-          description_short: Have fun creating valentines
+          description_short: "创造情人节的乐趣"
           description: ''
         colehoc17:
           stages:
@@ -7524,7 +7345,7 @@
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Programming in Artist:
               name: "艺术家里的编程"
             'Loops: My Loopy Robotic Friends':
@@ -7534,7 +7355,7 @@
             Nested Loops:
               name: "循环嵌套"
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: "冰雪奇缘和嵌套循环"
             'Algorithms: Dice Race':
               name: "算法: 骰子竞赛"
             Introduction:
@@ -7546,7 +7367,7 @@
             'Functions: Songwriting':
               name: "功能: 作曲"
             MINECRAFT STAGE GOES HERE:
-              name: MINECRAFT STAGE GOES HERE
+              name: "我的世界舞台在这里"
             Functions in Artist:
               name: "艺术家之间的功能"
             Functions in Bee:
@@ -7571,7 +7392,7 @@
               name: "众包"
             Build a Star Wars Game:
               name: "建立一个星球大战游戏!"
-          title: Course E 2018
+          title: "课程 E 2018"
           description_audience: ''
           description_short: ''
           description: ''
@@ -7584,7 +7405,7 @@
             Building a Foundation:
               name: "打基础"
             Debugging with Scrat:
-              name: Debugging with Scrat
+              name: "斯奎特和调试"
             Programming in Artist:
               name: "艺术家里的编程"
             'Loops: My Loopy Robotic Friends':
@@ -7592,9 +7413,9 @@
             Loops in Artist:
               name: "艺术家里的循环"
             Nested Loops in Bee/Zombie:
-              name: Nested Loops in Bee/Zombie
+              name: "蜜蜂/僵尸里的嵌套循环"
             Nested Loops with Frozen:
-              name: Nested Loops with Frozen
+              name: "冰雪奇缘和嵌套循环"
             'Algorithms: Tangrams':
               name: "算法：七巧板"
             Introduction:
@@ -7635,7 +7456,7 @@
               name: "修改您的项目"
             Present Your Project:
               name: "介绍您的项目"
-          title: Course F 2018
+          title: "课程 F 2018"
           description_audience: ''
           description_short: ''
           description: ''
@@ -7671,7 +7492,408 @@
               name: "传感器应用"
             'Project: Prototype an Innovation':
               name: "项目：创新原型"
-          title: "(DEPRECATED) CSD Unit 6 - Physical Computing"
+          title: "（已弃用）CSD 6 单元- 物理计算"
           description_audience: ''
           description_short: ''
           description: ''
+        unembeddedlevels:
+          stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: "计算机科学发现单元3 测绘形状实验室 - 解除嵌入"
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: "计算机科学发现单元3 娱乐示例1 - 接触嵌入"
+            Only Stage:
+              name: "只有阶段"
+          title: "未嵌入的关卡"
+          description_audience: ''
+          description_short: ''
+          description: ''
+        unembedded:
+          stages:
+            Only Stage:
+              name: "只有阶段"
+          title: "未嵌入的关卡"
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-1819draft:
+          stages:
+            Programming for Entertainment:
+              name: "娱乐编程"
+            Plotting Shapes:
+              name: "绘制形状"
+            Drawing in Game Lab:
+              name: "在游戏实验室绘画"
+            Shapes and Randomization:
+              name: "形状和随机化"
+            Variables:
+              name: "变量"
+            Sprites:
+              name: "精灵"
+            The Draw Loop:
+              name: "绘制循环"
+            The Counter Pattern Unplugged:
+              name: "计数器模式的线下活动"
+            Sprite Movement:
+              name: "精灵移动"
+            Booleans Unplugged:
+              name: "线下布尔"
+            Conditionals:
+              name: "条件语句"
+            Keyboard Input:
+              name: "键盘输入"
+            Other Forms of Input:
+              name: "其他输入形式"
+            Project - Interactive Card:
+              name: "项目 - 互动卡"
+            Velocity:
+              name: "矢量"
+            Collision Detection:
+              name: "碰撞检测"
+            Complex Sprite Movement:
+              name: "复杂的精灵动作"
+            Collisions:
+              name: "碰撞"
+            Functions:
+              name: "函数"
+            The Game Design Process:
+              name: "游戏设计过程"
+            Using the Game Design Process:
+              name: "使用游戏设计过程"
+            Project - Design a Game:
+              name: "项目 - 设计一个游戏"
+            CS Discoveries End of Semester Survey:
+              name: "计算机科学发现期末调查"
+          title: CSD Unit 3 - Animations and Games
+          description_audience: ''
+          description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."
+        textbook:
+          stages:
+            Test Map Level:
+              name: Test Map Level
+            new stage:
+              name: "新的阶段"
+          title: CSF Textbook Pages
+          description_audience: ''
+          description_short: ''
+          description: ''
+        glj-behavior-test:
+          stages:
+            Cats and Dogs:
+              name: Cats and Dogs
+          title: Game Lab Jr. Test - Behavior
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-2018:
+          title: CSD Unit 3 - Animations and Games
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."
+          description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
+          description_audience: ''
+          stages:
+            Programming for Entertainment:
+              name: "娱乐编程"
+              description_student: 该班级被要求考虑无聊和自我表达的 "问题", 并思考他们在自己的生活中如何处理这些问题。从那里，他们将探索一般的计算机科学,
+                以及特定的编程中，是如何在特定形式的娱乐或者交通工具中自我表达的。
+              description_teacher: 学生被要求考虑无聊和自我表达的 "问题", 并思考他们如何在自己的生活中处理这些问题。从那里,
+                学生将探索一般的计算机科学, 以及特定的编程中，是如何在特定形式的娱乐或者交通工具中自我表达的。
+            Plotting Shapes:
+              name: "绘制形状"
+              description_student: "学生探索如何使用形状进行交流的挑战, 并使用一个工具介绍如何在游戏实验室中解决这个问题。热身活动在没有共享参照点的情况下,
+                快速地展示了沟通立场的挑战。在主要活动中, 学生探索一个游戏实验室工具, 允许学生在游戏实验室400 的400 网格上交互地放置形状。然后,
+                他们轮流指示合作伙伴如何使用此工具绘制一个隐藏图像, 在游戏实验室编程时, 学生将遇到许多挑战. 学生可以选择创建自己的图像在汇报讨论之前进行交流。"
+              description_teacher: "学生探索如何使用形状进行交流的挑战, 并使用一个工具介绍如何在游戏实验室中解决这个问题。热身活动在没有共享参照点的情况下,
+                快速地展示了沟通立场的挑战。在主要活动中, 学生探索一个游戏实验室工具, 允许学生在游戏实验室400 的400 网格上交互地放置形状。然后,
+                他们轮流指示合作伙伴如何使用此工具绘制一个隐藏图像, 在游戏实验室编程时, 学生将遇到许多挑战. 学生可以选择创建自己的图像在汇报讨论之前进行交流。"
+            Drawing in Game Lab:
+              name: "在游戏实验室绘画"
+              description_student: "该班级被引入游戏实验室, 即这个单元的编程环境，并开始使用它来在屏幕上定位形状。课程涵盖了排序和调试的基础知识,
+                以及一些简单的命令。在本课结束时, 该班级创建了上一课中所设计的图像的在线版本。"
+              description_teacher: "学生被引入到游戏实验室, 即这个单元的编程环境, 并开始使用它来在屏幕上定位形状。他们学习了排序和调试的基础知识,
+                以及一些简单的命令。在课程结束时, 学生将能够像在上一课中使用绘图工具制作的图像一样进行编程。"
+            Shapes and Randomization:
+              name: "形状和随机化"
+              description_student: ''
+              description_teacher: ''
+            Variables:
+              name: "变量"
+              description_student: "本课将介绍变量作为在程序中标记数字或保存随机生成的值的方法。课程开始时，对变量的用途和使用新块的实践进行了非常基本的描述。然后，该班级使用变量来保存一个随机数,
+                使程序可以多次使用相同的随机数。"
+              description_teacher: "在本课中, 学生学习如何使用变量在程序中标记一个数字或保存一个随机生成的值。学生从一个变量的用途的非常基本的描述开始这堂课。然后学生完成一个级别的进展,
+                加强模型的变量, 作为一种方式来标记或命名一个数字。学生使用变量来保存随机数, 以查看变量实际存储或保存其值, 允许他们在程序中多次使用相同的随机数。"
+            Sprites:
+              name: "精灵"
+              description_student: "为了创建更有趣和详细的图像, 该班级被引入到精灵对象。每个精灵可以被分配一个图像来显示, 并且精灵也保存自己的多个变量,
+                这将证明在今后制作动画上是很有用的。在本课结束时, 每个人都使用精灵创建一个场景。"
+              description_teacher: "为了创造更多有趣和详细的图像, 学生被引入到精灵对象。每个精灵可以被指定一个图像来显示, 精灵也保持保存自己的多个变量
+                这将证明在制作动画的道路上是很有用。"
+            The Draw Loop:
+              name: "绘制循环"
+              description_student: "本课介绍了游戏实验室中的核心编程范例之一的绘制循环。课堂结合随机数绘制循环来操作一些简单的动画。之后，每个人都利用他们学到的东西更新前一课中的精灵场景。"
+              description_teacher: 在这一课中, 学生被引入到了游戏实验室的核心编程范式之一 "绘制循环" 中。开始上课的学生看一些手翻书,
+                会看到有许多帧不同的图像创造了运动的印象。然后学生观看一段视频，解释游戏实验室中的绘制循环是如何在他们的程序中产生同样的印象的。学生把绘制循环和随机数结合起来,
+                先用Dots来操纵一些简单的动画, 然后用精灵。在课程结束的时候, 学生们用他们学到的东西来更新他们在上一课中的精灵场景。
+            The Counter Pattern Unplugged:
+              name: "计数器模式的线下活动"
+              description_student: "这个线下课程探讨了变量的基本行为。使用卡片和字符串来模拟程序中的变量, 该类实现了几个短编程。一旦对此语法感到满意,
+                该类将使用与精灵属性相同的过程, 在屏幕上跟踪精灵的进度。"
+              description_teacher: "学生通过线下活动探索变量的基本行为。使用卡片和字符串来模拟程序中的变量, 学生可以执行一些简短的程序。一旦习惯了这种语法,
+                学生就会使用与精灵属性相同的过程, 在屏幕上跟踪精灵的进度。"
+            Sprite Movement:
+              name: "精灵移动"
+              description_student: "通过结合绘制回路和计数器模式, 该班级编写程序, 在屏幕上移动精灵, 以及激活其他精灵属性。"
+              description_teacher: "通过结合绘制回路和计数器模式, 学生编写程序, 在屏幕上移动精灵, 以及激活其他精灵属性。"
+            Booleans Unplugged:
+              name: "线下布尔"
+              description_student: "本课介绍布尔值和逻辑，以及条件语句。开始上课时，我们先玩一个简单的站立游戏，坐下来，其中的布尔（真/假）陈述描述了个人的属性（头发或眼睛的颜色，衣服的类型，年龄等）。课堂基于越来越复杂的布尔语句对对象进行分组，然后看看条件会影响程序的流程。"
+              description_teacher: "在本课中，学生将被介绍到布尔值和逻辑，以及条件语句。开始上课时，我们先玩一个简单的站立游戏，坐下来，其中的布尔（真/假）陈述描述了个人的属性（头发或眼睛的颜色，衣服的类型，年龄等）。这让学生思考如何用二进制问题来构建一个具有多重潜在值（如年龄）的属性。
+                \n\n在那里，学生们得到了一组具有相似但却不同的物理性质的物体。与合作伙伴一起，基于日益复杂的布尔语句将这些对象分组，包括复合布尔
+                与 和 或。 \n\n最后揭示条件句作为一种工具来做决定或影响使用布尔语句输入的程序流程。"
+            Conditionals:
+              name: "条件语句"
+              description_student: "该班级首先使用布尔比较与目标值的精灵属性的当前值，然后使用该比较来确定当精灵到达屏幕上的某个点时,
+                增长到给定的大小, 或者使用计数器模式以其他方式达到一个值。在直接使用布尔来调查数值或精灵属性之后, 该班级添加条件的如果语句来编写代码来响应这些布尔的这些比较。"
+              description_teacher: "学生首先使用布尔比较与目标值的精灵属性的当前值，然后使用该比较来确定当精灵到达屏幕上的某个点时,
+                增长到给定的大小, 或者使用计数器模式以其他方式达到一个值。在直接使用布尔来调查数值或精灵属性之后, 学生添加条件的如果语句来编写代码来响应这些布尔的这些比较。"
+            Keyboard Input:
+              name: "键盘输入"
+              description_student: "在前面的课程中介绍布尔和如果语句之后, 将学生引入一个称为 按下键() 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵。在本课结束时,
+                学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵。"
+              description_teacher: "在前面的课程中介绍布尔和_如果_语句之后, 将学生引入一个称为 '按下键()' 的新块, 它返回一个布尔，可用于条件语句在屏幕上移动精灵。在本课结束时,
+                学生将编写程序, 从用户那里获得键盘输入来控制屏幕上的精灵。"
+            Other Forms of Input:
+              name: "其他输入形式"
+              description_student: 该班级将继续探索使用条件语句进行用户输入的方法。除了昨天学到的简单的 "按下键()" 命令之外,
+                该班级还将学习其他几个键盘输入命令以及采取鼠标输入的方法。
+              description_teacher: 在本课中, 学生将继续探索使用条件语句进行用户输入的方法。除了昨天学到的简单的 "v()" 命令之外,
+                学生还将学习其他几个键盘输入命令以及采取鼠标输入的方法。
+            Project - Interactive Card:
+              name: "项目 - 互动卡"
+              description_student: "在这个第1章的累积项目中，该班计划使用他们学到的所有编程技巧来开发一个交互式贺卡。"
+              description_teacher: "在第1章的这个积累的项目中, 学生将计划使用他们学到的所有编程技巧来开发一个交互式贺卡。"
+            Velocity:
+              name: "矢量"
+              description_student: "在简要回顾了如何使用计数器模式移动精灵后，班级就开始接触设定速度和旋转的属性。当他们用不同的方式使用这些新属性，创建一个基本的侧边滚动条游戏时，他们就掌握了新的技能。"
+              description_teacher: "接触在简要的回顾了以前的课堂上如何使用计数器模式移动精灵后，班级开始设定速度和旋转属性。当他们用不同的方式使用这些新属性，创建一个基本的侧边滚动条游戏时，他们就掌握了新的技能。"
+            Collision Detection:
+              name: "碰撞检测"
+              description_student: "该班级学习有关计算机上的碰撞检测。 学生们配对来探讨计算机如何使用精灵的位置、大小属性和数学来检测两个精灵是否有接触。
+                然后，该类使用 isTouching () 块在精灵碰撞时创建不同的效果,  包括播放声音。 最后, 他们使用他们的新技能来改进他们在上一课中开始的
+                sidescroller 游戏。"
+              description_teacher: "学生学习有关计算机上的碰撞检测。在配对的学习中, 他们探讨了计算机可以使用精灵的位置，大小属性和数学来检测两个精灵是否有接触。
+                然后, 他们使用 ‘isTouching ()’ 块在精灵碰撞时，来创建不同的效果 ，比如播放声音。 最后, 他们使用他们的新技能来改进他们在上一课中开始的
+                sidescroller 游戏。"
+            Complex Sprite Movement:
+              name: "复杂的精灵动作"
+              description_student: "该班级将学习组合精灵的速度特性与计数器模式, 以创建更复杂的精灵运动，如模拟重力、使精灵跳跃、允许精灵向左或向右浮动。在最后一级，课堂将这些动作结合起来，对单个精灵进行动画和控制，并建立一个简单的游戏,
+                其中一个人物飞来飞去收集硬币。 "
+              description_teacher: |-
+                学生学习将精灵的速度特性与计数器模式结合起来, 以创造更复杂的精灵运动。特别是学生将学习如何模拟重力, 使一个精灵跳跃, 并允许一个精灵向左或向右浮动。在最后一级的代码工作室的进步学生结合这些动作, 对单个精灵进行动画和控制, 并建立一个简单的游戏中的一个人物飞来飞去收集硬币。
+                鼓励学生在最后一级对游戏进行创造。
+            Collisions:
+              name: "碰撞"
+              description_student: 课堂编程他们的精灵新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 课堂里发挥灵感讨论其他的方法，两个精灵可以相互作用。
+                然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"置换"、"弹跳" 和 "反弹 "), 让一个精灵推走另一个穿过屏幕。
+              description_teacher: 学生将编码出精灵新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 学生们发挥灵感讨论其他的方法，两个精灵可以相互作用。
+                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"置换"、"弹跳" 和 "反弹 "), 让一个精灵推走另一个穿过屏幕。
+            Functions:
+              name: "函数"
+              description_student: "本课将介绍函数作为组织代码的方法，使其更易读，并删除重复的代码块。课堂学习更高层次或更抽象的步骤，更容易理解和推理的步骤，然后开始在游戏实验室创建函数。
+                在课程结束时, 使用这些技能来组织和添加功能到他们的侧滚动游戏的最终版本。"
+              description_teacher: "学生学习如何创建函数来组织他们的代码, 使其可读性更强, 并删除重复的代码块。线下预热探讨如何在不同的层次细节如何取决于上下文。学生学习更高层次或更抽象的步骤,
+                使它更容易理解和推理的步骤。之后学生学习在游戏实验室中创建函数。他们将使用函数从其绘制循环中删除长代码块, 并用单个函数替换重复的代码段。在课程结束时,
+                学生使用这些技能来组织和添加功能到他们的侧滚动游戏的最终版本。"
+            The Game Design Process:
+              name: "游戏设计过程"
+              description_student: "本课介绍了该班级将用于为单元的其余部分设计游戏的过程。该班级在一系列级别中经历这个过程。作为本课的一部分,
+                该班级还简要地学习在游戏实验室中使用多帧动画。在课程结束时, 他们有机会对游戏进行改进, 做出自己的版本。"
+              description_teacher: "本课将向学生介绍他们将用来为剩下的单元设计游戏的过程。这个过程是围绕一个项目指南, 要求学生定义他们的精灵,
+                变量, 和函数在他们开始编程他们的游戏之前。在本课中, 学生首先在游戏实验室玩游戏, 代码隐藏在里面。他们讨论认为在游戏中需要的精灵,
+                变量, 和函数等。然后给他们一个完整的项目指南, 它显示了一个实现游戏的方法。然后, 学生们通过一系列的水平关卡来完成这个过程。作为这一课的一部分,
+                学生们还简要地学习了在游戏实验室使用多帧动画。在课程结束时, 学生有机会对游戏进行改进, 做出自己的版本。"
+            Using the Game Design Process:
+              name: "使用游戏设计过程"
+              description_student: "在这个为期多日的课程中, 该班级使用第1单元的问题解决过程来创建一个平台跳跃游戏。在看了一个示例游戏后，该班级将定义他们的游戏将是什么样子，并使用结构化的过程来构建它们。最后，该班级将反映如何改进游戏，并实现这些改动。"
+              description_teacher: "在这个为期多日的课程中, 学生使用第1单元的问题解决过程来创建一个平台跳跃游戏。 他们开始会看一个平台跳线的例子,
+                然后将定义他们的游戏是什么样子。 接下来, 他们使用一个结构化的过程来规划他们将需要的背景、变量、精灵和函数，来实现他们的游戏。 在编写游戏代码之后,
+                学生将思考如何改进游戏, 并实现这些改动。"
+            Project - Design a Game:
+              name: "项目 - 设计一个游戏"
+              description_student: "班级使用前两个课程的项目指南计划和构建原始游戏。大家单独或成对一起工作, 班级计划, 开发,
+                并对游戏提供反馈。结合了相互反馈后，会共享已完成的游戏。"
+              description_teacher: "学生将计划和创建自己的游戏，使用头两节课中的项目指南来指导他们的项目。单独或成对地工作, 学生将首先决定他们想要建立的游戏类型,
+                从一组示例游戏找到灵感。然后, 他们将完成一个空白的项目指南, 他们将描述游戏的行为和范围的变量, 精灵，和需要建立的函数。在代码工作室中,
+                一系列级别将提示他们使用可用于实现此计划的序列。完成后，学生将分享他们项目，并进行相互评审。在课程结束时, 学生们将与同学们分享他们完成的游戏。此项目将扩展到多个班级，可以轻松地在合适的场地支持3到5个班一起进行。"
+            CS Discoveries End of Semester Survey:
+              name: "计算机科学发现期末调查"
+              description_student: ''
+              description_teacher: ''
+        csd2-2018:
+          title: CSD Unit 2 - Web Development
+          description: " 在第2单元中, 您将学习如何在自己的网页上创建和共享内容。在决定要与世界共享哪些内容之后, 您将学习如何使用 HTML
+            和 CSS 来构造和样式化页面。您还将练习有价值的编程技能, 如调试和注释。 在该单元的末尾, 您将有一个个人的网站可以发布到互联网上。"
+          description_short: "  了解如何在 Web 实验室中构建自己的网站。"
+          description_audience: ''
+          stages:
+            Exploring Websites:
+              name: "探索网站"
+              description_student: "本课程涵盖了网站可能为用户和创作者服务的目的。该课程探讨了一些在美国最常用的网站，并讨论了这些网站对用户的用处以及它如何也可能为其创建者服务。"
+              description_teacher: "每个网站都有目的，这是创造它，其它人用它的原因。在本课中, 学生将开始考虑网站可能为用户和创作者服务的目的。学生将探索在美国的一些最常用的网站,
+                并试图弄清楚这些网站对用户是如何有用的，以及他们如何也可能为他们的创造者服务。"
+            'Websites for Expression ':
+              name: "网址表达式 "
+              description_student: "本课介绍了网站作为个人表达的一种手段。 该课程首先讨论了人们表达和分享他们的兴趣和想法的不同方式,
+                然后看看以前课程中学生所做的一些范例网站。最后大家集思广益，分享包括话题和兴趣列表，以便在该单元的其余部分创建一个用于开发个人网站的资源。 "
+              description_teacher: "在本课中, 学生将研究如何使用网站作为个人表达方式, 并开发出他们希望在个人网站上包含的主题和兴趣列表。开始上课时,
+                学生们集思广益讨论人们表达和分享他们的兴趣和想法的不同方式。学生然后看一些先前的计算机科学发现课程的学生所做的几个范例网站，以确定他们表达他们的想法的方式。最后,
+                学生集思广益和分享他们可能想要包括在个人网站上的主题和兴趣列表, 他们可以随着单元的进展来参考想法。"
+            Intro to HTML:
+              name: HTML介绍
+              description_student: "本课将介绍 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始,
+                演示了有效交流网页结构的挑战。该课堂在网络实验室中查看 HTML页面, 并讨论 HTML 标记如何帮助解决此问题, 然后使用 HTML
+                编写该单元的第一个网页。"
+              description_teacher: "在本课中, 引入 HTML 作为解决如何将网站的内容和结构与计算机进行通信问题的方法。本课从一个简短的线下活动开始,
+                演示了有效交流网页结构的挑战。学生然后在网络实验室中查看 HTML页面，并与他们的同学讨论 HTML 标记如何帮助解决此问题。学生然后写他们的第一个
+                HTML。总结讨论有助于巩固对在整个课程中开发的内容与结构的理解。"
+            Headings:
+              name: "标题"
+              description_student: "本课将继续介绍 HTML 标记, 这一次使用标题。 该课程练习使用标题标记来创建页面和节标题,
+                并了解在默认情况下如何显示不同的标题元素。 接下来, 该课程计划如何在将在整个单元中构建的个人 网页上组织其内容, 并开始该项目的第一页。"
+              description_teacher: "在本课中, 学生们继续使用 HTML 在网页上构建文本，这次使用标题。学生学习如何在默认情况下显示不同的标题元素,
+                并练习使用它们来创建页面和段落标题。 然后, 学生开始决定他们将如何在自己的个人网页上组织内容。 在最后一级, 学生开始他们将继续在整个单位工作的项目。"
+            Digital Footprint:
+              name: "数字足迹"
+              description_student: "这堂课退后了一步从创建个人网站到谈论人们选择共享数字的个人信息。 该课堂开始讨论哪些类型的信息是可以与他人分享的,
+                然后看几个社交媒体的页面样本, 以了解哪些类型的个人信息会被有意或无意地共享。最后, 该课堂提出一套在网上发布信息时遵循的准则 。"
+              description_teacher: "由于学生们最近花了一些时间思考将进入他们的个人网站的实际内容，这一课从一个单元长的项目 (个人网站的发布）中退后一步，以帮助学生阐明他们选择哪些个人数字信息共享以及与谁共享。它还强化了一个概念，即他们选择的数字共享的大部分信息在发布时大部分都失去了控制。\\r
+                \n\\r \n学生首先各自识别合适的听众, 他们将会感到自在的分享一些个人信息。 然后, 他们查看几个社交媒体页面, 以确定人们在分享自己或彼此的信息的种类。
+                最后, 学生反思他们认为适合在网上发布信息的指导方针. \\r\n\\r\n这一课的最终目的不是吓唬学生, 而是让学生去体验并准确地认识到，在网络上发布信息时哪些控制级别是他们所没有的。"
+            Lists:
+              name: "列表"
+              description_student: "本课介绍了有序和无序列表以及相关 &lt; ul &gt;、&lt; ol &gt; 和 &lt;
+                li &gt; HTML 标签。 该课堂使用标记进行练习, 然后返回到个人网页项目, 以添加一个包含新标记的新 HTML 页面。"
+              description_teacher: "学生被引入到 HTML中有序和无序的列表中，并通过几个级别，其中他们使用 &lt; ul &gt;,
+                &lt; ol &gt;, 和 &lt; li &gt; 标签。 然后, 他们返回到他们的项目, 在那里他们添加一个新的 HTML
+                页面。 在新页面中, 他们编写 HTML 来显示食谱、前十列表或使用他们所学的新标签的任何其他内容。"
+            Intellectual Property and Images:
+              name: "知识产权和图像"
+              description_student: "本课将介绍如何使用媒体，如由他人创建的图像、视频或音乐作为网站, 同时尊重该媒体创建者的权利。在首次研究了创作共享许可之后,
+                该课程学习如何在网页中添加图像, 以及如何在这样做时给予正确的属性。"
+              description_teacher: |-
+                从讨论如何允许他人使用他们的作品的个人观点出发, 该课程探讨了创作内容的创造者和使用者的著作权的目的和作用。 然后, 他们继续进行一项探索各种创作共享许可证的活动,作为解决版权难题的一个办法。 \r
+                \r
+                最后, 通过对各种创作共享许可的限制的共同理解, 学生可以学习如何使用 &lt; img &gt; 标签将图像添加到他们的网页中。
+            Clean Code and Debugging:
+              name: "规整代码和调试"
+              description_student: "本课将介绍在 HTML 中设计网页时出现的常见问题。该课堂将纠正在代码工作室中找到的一系列日益复杂的网页中的错误,
+                并了解注释、空格和缩进作为使网页更易于阅读的工具的重要性。"
+              description_teacher: "学生处理在 HTML 中设计网页时出现的常见问题。学生将在一系列日益复杂的网页中改正错误。在这一过程中,
+                他们将了解注释、空白和缩进作为使网页更易于阅读的工具的重要性。在课程结束时，学生们创建了一系列的策略来调试网页，并确保它们易于阅读和维护。"
+            Project - Multi-Page Websites:
+              name: "项目- 多页面网站"
+              description_student: "本课包含超链接, 它允许网络开发人员将网页连接到一个网站上。 该课堂将所有以前的页面链接到一个项目中,
+                并在将整个站点发布到网络之前为每个页面创建导航栏。  "
+              description_teacher: "在学习如何将网页链接到另一个网站后，学生们终于能够发布他们一直工作的网站了。在本课中,    他们将以前创建的所有页面链接到一个项目中，创建一个新页面，并在将整个站点发布到网络之前在页面之间添加导航。\\r
+                \            \n\\r\n"
+            Styling Text with CSS:
+              name: "使用 CSS 设置文本样式"
+              description_student: "本课介绍了 CSS 作为网页上样式元素的一种方式。该课堂学习 CSS 规则集的基本语法, 然后探讨影响
+                HTML 文本元素的属性。 最后, 每个人都将文本样式应用于他们的个人网站上。"
+              description_teacher: |
+                本课介绍了 CSS 作为网页上样式元素的一种方式。学生学习 CSS 规则集的基本语法, 然后探讨影响 HTML 文本元素的属性。他们在一个关于吉尼斯世界纪录保持者的 HTML 页面上工作, 在提供的页面中添加他们自己的风格。在最后一级中, 学生将他们所学到的关于文本元素的样式应用到他们的个人网页上。\r
+                \r
+            Styling Elements with CSS:
+              name: "使用 CSS 设置元素的样式"
+              description_student: "本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。该课堂从调查和修改在甜点世界页面上的新
+                CSS 样式开始。之后, 每个人都将这些新知识应用到他们的个人网站上。"
+              description_teacher: "本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。学生们从一个关于世界甜点的网站上开始这一课。他们在这个网站上调查和修改新的
+                CSS 样式, 在页面中添加他们自己的样式。在甜点页面上工作后, 学生们运用他们的新 CSS 属性的知识来对他们的个人网站做更多的造型。"
+            Sources and Search Engines:
+              name: "来源和搜索引擎"
+              description_student: "在第一次完成网络搜索寻宝游戏后, 该课堂学习了搜索引擎的内部运作, 并有机会在寻找奇怪的和不太可能的动物时灵活运用分析技巧。"
+              description_teacher: "本课鼓励学生更严谨地思考网络搜索如何工作, 以及如何在网上查找相关和可靠的信息。在观看和讨论了一个关于搜索引擎如何运作的视频后,
+                学生们将搜索一些不太可能的动物的信息。他们需要分析他们发现的网站的可靠性, 以确定哪些动物实际上是一个骗局。"
+            RGB Colors and Classes:
+              name: RGB（红绿蓝） 颜色和分类
+              description_student: "本课包括了类和自定义颜色。该课堂首先学习如何使用 RGB (红色、绿色、蓝色) 值指定自定义颜色,
+                然后将这些颜色应用于新的四季网页, 该网页使用 CSS 类。 使用类, 该课堂为四季的网页添加更多的样式, 然后使用它们来定制他们的个人网站。"
+              description_teacher: "在本课中, 学生首先学习如何使用 RGB (红色、绿色、蓝色) 值指定自定义颜色。 然后,
+                他们将这些颜色应用于一个新的四个季节网页, 它使用 CSS 类。 CSS 类允许网络开发人员处理他们想要的元素组与其他同类型的元素不同样式。使用类,
+                学生为四个季节的网页添加更多的样式，然后使用它们来定制他们的个人网站。"
+            Project - Personal Portfolio Website:
+              name: "项目- 个人文件集网站"
+              description_student: "在该单元的最后几天, 该课堂完成了他们的个人网站, 与同行们一起工作反馈, 评论专栏, 并在网站上进行收尾。为了完成这个单位,
+                每个人都分享他们的项目以及他们是如何开发的。"
+              description_teacher: |
+                学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。 他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\r
+        coursea-2018:
+          title: "课程 A"
+          description: "学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。"
+          description_short: "为学前学生准备的计算机科学介绍"
+          description_audience: "年龄：4-7"
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: "调试: 没有错误"
+              description_student: ''
+              description_teacher: "这一个会引导学生完成调试的步骤。学生会学习到这个咒语：“发生什么了？应该发生什么？这告诉了你什么？”"
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: "坚持与挫折 就像史蒂夫和天使。"
+              description_student: ''
+              description_teacher: |-
+                当学生在回答问题或者做一个项目遇到困难时，很容易感到沮丧并放弃。这堂课会告诉学生一个思想，沮丧是学习中很重要的部分。在这里，沮丧是创造性过程中的一步，而不只是失败的信号。\r
+                \r
+                这堂课可以在一次或两次课堂阶段完成。如果你有更多时间，尽管创建或修订这个滚珠活动阶段。
+            'Real-life Algorithms: Plant a Seed':
+              name: "真实算法： 播种一颗种子"
+              description_student: ''
+              description_teacher: |
+                在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r
+            Learn to Drag and Drop:
+              name: "学习拖放"
+              description_student: ''
+              description_teacher: "这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。"
+            'Programming: Happy Maps':
+              name: "编程: 快乐地图"
+              description_student: ''
+              description_teacher: "如果学生理解了计划一个序列和将序列编码成合适的语言的不同，从算法到编程的过渡可能会很简短。这个活动会帮助学生获得读写简短代码的体验。"
+            Programming in Maze:
+              name: "迷宫编程"
+              description_student: ''
+              description_teacher: "在这一系列的在线难题中，学生们会建立对算法的理解，调试程序，和一般的计算机素养。来自愤怒的小鸟游戏的角色，会让学生们开发序列算法来让小鸟在不碰到墙或TNT炸药的情况下抓住猪。调试难题也会混合在在一些关卡中，来增加解决问题和批判性性思维的练习。"
+            Going Places Safely:
+              name: "去安全的地方"
+              description_student: ''
+              description_teacher: "通过与[r 常识媒体] 合作，本课程帮助学生学习到许多网站会要求 提供私人信息，并讨论如何负责任的处理这类请求。学生们也会发现，它们可以去网上令人兴奋的地方，但也需要遵循一定的规则来保证安全。"
+            'Loops: Happy Loops':
+              name: "循环: 快乐循环"
+              description_student: ''
+              description_teacher: "循环是编程中非常有用而又强大的工具。为了理解循环的用处，学生们需要被驱动去用简单的方法来解决单调的问题。"
+            Loops in Collector:
+              name: "收集器中的循环"
+              description_student: ''
+              description_teacher: 基于"快乐循环"中重复指令的概念，这个阶段会让学生用循环来在Code.org上更有效的收集宝藏。
+            Loops in Artist:
+              name: "艺术家里的循环"
+              description_student: ''
+              description_teacher: "回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。"
+            'Events: The Big Event':
+              name: "事件: 大事件"
+              description_student: ''
+              description_teacher: "事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。"
+            Events in Play Lab:
+              name: "游戏实验室中的事件"
+              description_student: ''
+              description_teacher: "在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！"
+            Programming in Bee:
+              name: Programming in Bee

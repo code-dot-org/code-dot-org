@@ -2,7 +2,7 @@ import React from 'react';
 import JoinSectionNotifications from './JoinSectionNotifications';
 
 export default storybook => storybook
-  .storiesOf('JoinSectionNotifications', module)
+  .storiesOf('Homepages/JoinSectionNotifications', module)
   .withReduxStore()
   .addStoryTable([
     {

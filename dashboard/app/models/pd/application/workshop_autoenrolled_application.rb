@@ -42,6 +42,8 @@ module Pd::Application
     include RegionalPartnerTeacherconMapping
     include SerializedProperties
 
+    CACHE_TTL = 30.seconds.freeze
+
     serialized_attrs %w(
       pd_workshop_id
       auto_assigned_enrollment_id
@@ -56,7 +58,16 @@ module Pd::Application
     end
 
     def workshop
-      Pd::Workshop.find_by(id: pd_workshop_id) if pd_workshop_id
+      return nil unless pd_workshop_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_workshop_cache_key(pd_workshop_id) do
+        Pd::Workshop.includes(:sessions, :enrollments).find_by(id: pd_workshop_id)
+      end
+    end
+
+    def workshop_date_and_location
+      workshop.try(&:date_and_location_name)
     end
 
     # override
@@ -96,6 +107,11 @@ module Pd::Application
       return Pd::Workshop::COURSE_CSP if course == 'csp'
     end
 
+    def registered_workshop?
+      # inspect the cached workshop.enrollments rather than querying the DB
+      workshop.enrollments.any? {|e| e.user_id == user.id} if pd_workshop_id
+    end
+
     # Assigns the default workshop, if one is not yet assigned
     def assign_default_workshop!
       return if pd_workshop_id
@@ -129,6 +145,33 @@ module Pd::Application
         ).
         order_by_scheduled_start.
         first
+    end
+
+    def self.prefetch_associated_models(applications)
+      prefetch_workshops applications.map(&:pd_workshop_id).uniq.compact
+    end
+
+    def self.prefetch_workshops(workshop_ids)
+      return if workshop_ids.empty?
+
+      Pd::Workshop.includes(:sessions, :enrollments).where(id: workshop_ids).each do |workshop|
+        Rails.cache.write get_workshop_cache_key(workshop.id), workshop, expires_in: CACHE_TTL
+      end
+    end
+
+    def self.get_workshop_cache_key(workshop_id)
+      "Pd::Application::WorkshopAutoenrolledApplication.workshop(#{workshop_id})"
+    end
+
+    # Attempts to fetch a value from the Rails cache, executing the supplied block
+    # when the specified key doesn't exist or has expired
+    # @param key [String] cache key
+    # @yieldreturn [Object] the raw, uncached, object.
+    #   Note, when this is run, the result will be stored in the cache
+    def cache_fetch(key, &block)
+      Rails.cache.fetch(key, expires_in: CACHE_TTL) do
+        yield
+      end
     end
   end
 end

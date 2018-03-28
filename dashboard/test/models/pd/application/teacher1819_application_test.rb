@@ -27,6 +27,15 @@ module Pd::Application
       assert_equal guid, teacher_application.application_guid
     end
 
+    test 'principal_approval_url' do
+      teacher_application = build :pd_teacher1819_application
+      assert_nil teacher_application.principal_approval_url
+
+      # save to generate guid and therefore principal approval url
+      teacher_application.save!
+      assert teacher_application.principal_approval_url
+    end
+
     test 'principal_greeting' do
       hash_with_principal_title = build :pd_teacher1819_application_hash
       hash_without_principal_title = build :pd_teacher1819_application_hash, principal_title: nil
@@ -740,6 +749,83 @@ module Pd::Application
 
       application.assign_default_workshop!
       assert_equal workshop.id, application.reload.pd_workshop_id
+    end
+
+    test 'can_see_locked_status?' do
+      teacher = create :teacher
+      g1_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 1)
+      g3_program_manager = create :program_manager, regional_partner: create(:regional_partner, group: 3)
+      workshop_admin = create :workshop_admin
+
+      refute Teacher1819Application.can_see_locked_status?(teacher)
+      refute Teacher1819Application.can_see_locked_status?(g1_program_manager)
+
+      assert Teacher1819Application.can_see_locked_status?(g3_program_manager)
+      assert Teacher1819Application.can_see_locked_status?(workshop_admin)
+    end
+
+    test 'locked status appears in csv only when the supplied user can_see_locked_status' do
+      application = create :pd_teacher1819_application
+      mock_user = mock
+
+      Teacher1819Application.stubs(:can_see_locked_status?).returns(false)
+      header_without_locked = Teacher1819Application.csv_header('csf', mock_user)
+      refute header_without_locked.include? 'Locked'
+      row_without_locked = application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header_without_locked).length, CSV.parse(row_without_locked).length,
+        "Expected header and row to have the same number of columns, excluding Locked"
+
+      Teacher1819Application.stubs(:can_see_locked_status?).returns(true)
+      header_with_locked = Teacher1819Application.csv_header('csf', mock_user)
+      assert header_with_locked.include? 'Locked'
+      row_with_locked = application.to_csv_row(mock_user)
+      assert_equal CSV.parse(header_with_locked).length, CSV.parse(row_with_locked).length,
+        "Expected header and row to have the same number of columns, including Locked"
+    end
+
+    test 'to_cohort_csv' do
+      application = build :pd_teacher1819_application
+
+      assert (header = Teacher1819Application.cohort_csv_header)
+      assert (row = application.to_cohort_csv_row)
+      assert_equal CSV.parse(header).length, CSV.parse(row).length,
+        "Expected header and row to have the same number of columns"
+    end
+
+    test 'school cache' do
+      school = create :school
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash
+
+      # Original query: School, SchoolDistrict
+      assert_queries 2 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+
+      # Cached
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+    end
+
+    test 'cache prefetch' do
+      school = create :school
+      workshop = create :pd_workshop
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash, pd_workshop_id: workshop.id
+
+      # Workshop, Session, Enrollment, School, SchoolDistrict
+      assert_queries 5 do
+        Teacher1819Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+        assert_equal workshop, application.workshop
+      end
     end
   end
 end

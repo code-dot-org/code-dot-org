@@ -891,6 +891,18 @@
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
         view full instructions.
+      Applab AllTheThings ResourcesTab AllResources_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab MapReference_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab ReferenceLinks_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
       Applab allthethings onRecordEvent_instruction: |-
         Please sign in to test applab
         levels (By design, applab levels only work if signed in. Normally, we make
@@ -1145,10 +1157,17 @@
       CSD U3 Boolean Modify_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Boolean Modify_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Boolean Predict_instruction: |-
         What do you think this code will do when
         it is run? Predict what each console.log() command will print, then run the
         program to check your predictions.
+      CSD U3 Boolean Predict_2018_instruction: |-
+        What do you think this code will
+        do when it is run? Predict what each console.log() command will print, then
+        run the program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |-
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -1162,15 +1181,28 @@
         Add the numbers 1 through 10. Multiply
         the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Keypress Boolean-2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Boolean_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Boolean_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Watchers_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Watchers_2018_instruction: |-
+        Modify the code so that all of
+        the console.log commands print true
       CSD U3 L5 Freeplay_instruction: PetalSize değeri birden çok kez değiştirin.
         Çizim değişiyor mu?
+      CSD U3 L5 Freeplay_2018_instruction: |-
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
       CSD U3 Mouse Input Bee 2_instruction: Do this
+      CSD U3 Mouse Input Bee 2_2018_instruction: Do this
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
         mouth.
@@ -1204,6 +1236,7 @@
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: Bunu yap
       CSD U3 Sprites intro sprites_instruction: Bunu yap
+      CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
         be displayed in the console?
@@ -1249,6 +1282,9 @@
       CSD U3 Variables change circle size_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables change circle size_2018_instruction: |-
+        Change the value of
+        petalSize multiple times. How does it change your drawing?
       CSD U3 Variables create and assign_instruction: |-
         Create and assign size in
         a single line of code.
@@ -1275,7 +1311,13 @@
       CSD U3 Variables multiple assignments_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2-2018_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables naming rules v2_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
       CSD U3 Variables naming rules_instruction: |-
@@ -1293,6 +1335,9 @@
       CSD U3 Variables random with assignment_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2018_instruction: |-
+        Change the value
+        of petalSize multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |-
         Predict: What will get displayed
         in the console?
@@ -3534,6 +3579,13 @@
       Frequency Analysis_instruction: Test
       Function intro Ryan_instruction: Meşaleye giden bir yol açmak için `köprü inşa
         et` işlevini iki kez kullan.
+      GLJ Drag and fall_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Dragity_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Flappy2_instruction: Click to flap - don't touch the ground!
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3834,6 +3886,9 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
+      KIKI GLJ Test Response_instruction: |
+        Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?\r
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
@@ -6968,6 +7023,9 @@
       artistLoopsKFP_instruction: |-
         Picture time!  Use what you have learned to draw
         a picture of what you think the Artist saw on stage.
+      asteroids_instruction: |-
+        This Corgi has been a good boy! Drag this carrot to
+        him as a special treat.
       beeDebugVideo1_instruction: Tüm nektarları toplamak için bir döngü kullanabilir
         misin?
       birdsDebugVideo1_instruction: Yolu izleyin ve aptal domuza ulaşmamda bana öncülük
@@ -7036,14 +7094,14 @@
         bloklarının ikisine de bloklar eklemeniz gerekiyor.
       bounce_6_basketball_instruction: Şimdi bayrak en üstte. Bulmacayı çözmek için
         "top vurduğunda" bloklarının ikisine de bloklar eklemeniz gerekiyor.
-      bounce_6_sports_instruction: Bu sefer bayrak üst tarafta. "top duvara çarptığında"
-        bloklarının ikisine ekleme yaparak bulmacayı çözmek zorundasın.
+      bounce_6_sports_instruction: Şimdi bayrak en üstte. Bulmacayı çözmek için "top
+        vurduğunda" bloklarının ikisine de bloklar eklemeniz gerekiyor.
       bounce_7_instruction: '"sırasında" bloklarının her birine bloklar ekleyin. Son
         hedefe vurana kadar topu zıplat.'
       bounce_7_basketball_instruction: Her bir "sırasında" bloğuna blokalar ekleyin.
         Son hedefe olaşana kadar topu zıplat.
-      bounce_7_sports_instruction: Blokları "ne zaman" bloklarının her birine ekleyin.
-        Bitiş hedefine ulaşana kadar topu sektirin.
+      bounce_7_sports_instruction: Her bir "sırasında" bloğuna blokalar ekleyin. Son
+        hedefe olaşana kadar topu zıplat.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -7054,6 +7112,9 @@
         toplayın.
       collectorSkinVideo1_instruction: Bu seviyeyi geçmek için dört yığını da toplayın.
       collectorSkinVideo2_instruction: Bu seviyeyi geçmek için bir yığın altın toplayın.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: Birçok çizgi çizmek için bir döngü
         kullanabilirsin. \r \r bir ev çizebilir misin? İstediğiniz şekilde görünmesini
         sağla!  Yinelenen kodları görmeyi deneyin!
@@ -7262,62 +7323,151 @@
         Play with the level and draw something fun.
       courseA_artist_loops10_instruction: Taşları yerleştireme yardımcı olun böylece
         içine düşmem!
+      courseA_artist_loops10_2018_instruction: |-
+        Help me put down stones so I don't
+        fall in!
       courseA_artist_loops11_instruction: Yelken açan gemiyi izlemek için gerekli
         adımları yapmama yardım et.
+      courseA_artist_loops11_2018_instruction: |-
+        Help me build steps to watch the
+        ship sail away.
       courseA_artist_loops12_instruction: Sanatçı uzaktan komik bir şey gördü.  Gördüğünü
         sandığı şeyi çizin.
+      courseA_artist_loops12_2018_instruction: |-
+        The artist saw something funny in
+        the distance.  Draw what you think he saw.
+      courseA_artist_loops1_2018_instruction: |-
+        This is a new type of puzzle called
+        "Artist". Play with the level and draw something fun.
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
+      courseA_artist_loops2_2018_instruction: |-
+        Help the artist draw this line two
+        times forward.
       courseA_artist_loops3_instruction: Ileriye doğru 5 kez çizgi çizin.
+      courseA_artist_loops3_2018_instruction: Ileriye doğru 5 kez çizgi çizin.
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
+      courseA_artist_loops4_2018_instruction: |-
+        Now, use a `repeat` loop to draw this
+        line five times!
       courseA_artist_loops5_instruction: |-
         Draw a line seven steps long. This will
         become our horizon.
+      courseA_artist_loops5_2018_instruction: |-
+        Draw a line seven steps long. This
+        will become our horizon.
       courseA_artist_loops6_instruction: Let's put a nice hill in the back.
+      courseA_artist_loops6_2018_instruction: Let's put a nice hill in the back.
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_2018_instruction: "'Tekrar' döngüsü kullanarak suya dalga
+        ekleyin."
       courseA_artist_loops7_forVideo_instruction: "'Tekrar' döngüsü kullanarak suya
         dalga ekleyin."
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
+      courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Meydan okuma: Merdivenleri düzelt.'
+      courseA_artist_loops9_2018_instruction: 'Meydan okuma: Merdivenleri düzelt.'
       courseA_artist_loops_challenge1_instruction: |-
         Can you draw a house? Make it
         look just the way you like it!
+      courseA_artist_loops_challenge1_2018_instruction: |-
+        Can you draw a house? Make
+        it look just the way you like it!
       courseA_artist_loops_challenge2_instruction: Tweet tweet! İki kuş evi yapmama
         yardımcı olabilir misin?
       courseA_artist_loops_challenge2a_instruction: "*Bu üç çadırı kurmak için bana
         yardım et!*"
+      courseA_artist_loops_challenge2a_2018_instruction: |-
+        *"Help me get these three
+        tents set up!"*
       courseA_artist_loops_challenge3_instruction: Bir oyun oynayalım! Çizebildiğin
         kadar X çiz! Üst üste 3 alabilir miyim?
+      courseA_bee_seq1_instruction: |-
+        Play with these blocks to help the bee get *one*
+        nectar.
+      courseA_bee_seq10_instruction: Try it by yourself! Get all the nectar.
+      courseA_bee_seq11_instruction: Get all the nectar.
+      courseA_bee_seq12_instruction: |-
+        Play with these blocks to help the bee get
+        *one* nectar.
+      courseA_bee_seq13_instruction: |-
+        Use three `Move West` blocks and one `Get Nectar`
+        block.
+      courseA_bee_seq14_instruction: |-
+        Use three `Move North` blocks and one `Get
+        Nectar` block.
+      courseA_bee_seq2_instruction: Help the bee get the nectar!
+      courseA_bee_seq3_instruction: Find the bug and fix it!
+      courseA_bee_seq4_instruction: Try it yourself!
+      courseA_bee_seq5_instruction: Try it yourself!
+      courseA_bee_seq6_instruction: Now the bee needs to get nectar from two flowers!
+      courseA_bee_seq7_instruction: Add two blocks to finish this puzzle!
+      courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
+      courseA_bee_seq9_instruction: Make sure to get nectar from every flower!
       courseA_collector_loops1_instruction: Laureli etrafta dolaştırın ve alabileceğiniz
         kadar hazine alın!
       courseA_collector_loops10_instruction: Laurel'in derin vadiden tüm hazineyi
         almasına yardım edin.
+      courseA_collector_loops10_2018_instruction: Laurel'in derin vadiden tüm hazineyi
+        almasına yardım edin.
       courseA_collector_loops11_instruction: Laurel'in çukurdan tüm hazineyi almasına
         yardım edin.
+      courseA_collector_loops11_2018_instruction: Laurel'in çukurdan tüm hazineyi
+        almasına yardım edin.
       courseA_collector_loops12_instruction: Haydi!  Mümkün olduğu kadar hazineyi
         alın!
+      courseA_collector_loops12_2018_instruction: |-
+        *"Eureka!  Get as much treasure
+        as you can!"*
+      courseA_collector_loops1_2018_instruction: |-
+        Move Laurel around and get as much
+        treasure as you can!
       courseA_collector_loops2_instruction: Bu seviyeyi geçmek için üç yığını da toplayın.
+      courseA_collector_loops2_2018_instruction: Bu seviyeyi geçmek için üç yığını
+        da toplayın.
       courseA_collector_loops4_instruction: Tüm bu hazineyi almak için Laurel'ın yolunu
         düzeltin.
+      courseA_collector_loops4_2018_instruction: |-
+        Fix Laurel's path to get all of
+        this treasure.
       courseA_collector_loops5_instruction: Tüm hazine almak için öğrendiklerinizi
         kullanın.
+      courseA_collector_loops5_2018_instruction: |-
+        Use what you learned to get all
+        of the treasure.
       courseA_collector_loops6_instruction: Blok tüm hazine almak için bloklar ekleyin.
+      courseA_collector_loops6_2018_instruction: |-
+        Add blocks to this code to get
+        all of the treasure.
       courseA_collector_loops7_instruction: Hazinenin tümünü almak için hangi blokları
         eklemek gerekir?
+      courseA_collector_loops7_2018_instruction: |-
+        What should you add to this code
+        to get all of the treasure?
       courseA_collector_loops8_instruction: Tüm bu hazineyi almak için kod yazın.
+      courseA_collector_loops8_2018_instruction: Tüm bu hazineyi almak için kod yazın.
       courseA_collector_loops9_instruction: "** Meydan: Okuma** Hazine bu merdivenlerden
         yukarı gider!  Laurel yardım için kod yazın."
+      courseA_collector_loops9_2018_instruction: |-
+        **Challenge:** The treasure goes
+        all the way up these stairs!  Write the code to help Laurel get it all.
       courseA_collector_loops_challenge1_instruction: Hatalar bulmama yardımcı olabilir
         misin? Hangi yoldan gitmek gerektiğini biliyorum fakat kaç adım bilmiyorum.
+      courseA_collector_loops_challenge1_2018_instruction: |-
+        *"Can you help me spot
+        some bugs?"*
       courseA_collector_loops_challenge2_instruction: 'Bu sefer sadece ok bloklrından
         birini kullanabilirsiniz. Tüm hazineyi al! '
       courseA_collector_loops_challenge2kp_instruction: Bu seviyeyi geçmek için en
         az *3* tane hazine topla.
+      courseA_collector_loops_challenge2kp_2018_instruction: |-
+        Collect at least **3**
+        pieces of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         Bu maceracı Laurel!\r
         \r
@@ -7338,58 +7488,137 @@
         toplayın.
       courseA_forVideoTest_artist_instruction: "'Tekrar' döngüsü kullanarak suya dalga
         ekleyin."
+      courseA_harvester_seq1_instruction: |-
+        Play with these blocks to help the harvester
+        pick *one* corn.
+      courseA_harvester_seq12_instruction: |-
+        Play with these blocks to help the bee
+        get *one* nectar.
+      courseA_harvester_seq2_instruction: |-
+        Use three `Move West` blocks and one `Pick
+        Corn` block.
+      courseA_harvester_seq3_instruction: |-
+        Use three `Move North` blocks and one
+        `Pick Corn` block.
+      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq5_instruction: Find the bug and fix it!
+      courseA_harvester_seq6_instruction: Try it yourself!
+      courseA_harvester_seq7_instruction: Try it yourself!
+      courseA_harvester_seq8_instruction: |-
+        Now the harvester needs to pick corn two
+        times!
       courseA_maze_seq1_instruction: Kuşu domuza ulaştırın!
       courseA_maze_seq10_instruction: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu
         domuza eriştirin! '
+      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
+        to the pig! "
       courseA_maze_seq11_instruction: Bir yöne ilerle ve sonra başka yöne ve kuşu
         domuza götür.
+      courseA_maze_seq11_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig.
       courseA_maze_seq12_instruction: 'Domuzcuğu yakala! '
+      courseA_maze_seq12_2018_instruction: 'Domuzcuğu yakala! '
       courseA_maze_seq13_instruction: Domuza ulaşın!
+      courseA_maze_seq13_2018_instruction: Domuza ulaşın!
+      courseA_maze_seq1_2018_instruction: Kuşu domuza ulaştırın!
       courseA_maze_seq2_instruction: Beni domuza götürmek için kodu değiştir!
+      courseA_maze_seq2_2018_instruction: Beni domuza götürmek için kodu değiştir!
       courseA_maze_seq3_instruction: Kuşu domuza ulaştırmak için kodu düzeltin!
+      courseA_maze_seq3_2018_instruction: Kuşu domuza ulaştırmak için kodu düzeltin!
       courseA_maze_seq4_instruction: Kuşu domuza ulaştırmak için bir blok çıkartın!
+      courseA_maze_seq4_2018_instruction: |-
+        REMOVE a block to get the bird to the
+        pig!
       courseA_maze_seq4a_instruction: Kuşu en az sayıda blok kullanarak domuzcuğa
         ulaştır.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
       courseA_maze_seq6_instruction: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza
         götür!
+      courseA_maze_seq6_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig!
       courseA_maze_seq7_instruction: Ne eksik olduğunu bulun ve bana domuza ulaşmak
         için blok ekleyin!
+      courseA_maze_seq7_2018_instruction: |-
+        Figure out what is missing and then add
+        blocks to get the bird to the pig!
       courseA_maze_seq8_instruction: Bu seviyeyi çözün ve kuşu donuza ulaştırın!
+      courseA_maze_seq8_2018_instruction: |-
+        Solve this level and get the bird to the
+        pig!
       courseA_maze_seq9_instruction: Blok ekleyerek kuşu domuza ulaştırın!
+      courseA_maze_seq9_2018_instruction: |-
+        Debug this level by adding blocks to get
+        the bird to the pig!
       courseA_maze_seq_challenge1_instruction: Hata ayıklama. İlave blokları kaldırın
         ve eksik blokları ekleyin. Kuşu domuza ulaştırın!
+      courseA_maze_seq_challenge1_2018_instruction: |-
+        Something is wrong here. Help
+        fix the code to get the bird to the pig!
       courseA_maze_seq_challenge2_instruction: Yolu takip et ve beni sersem domuza
         götür. Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
+      courseA_maze_seq_challenge2_2018_instruction: |-
+        Trace the path to lead the bird
+        to the pig. Avoid TNT or feathers will fly!
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
+      courseA_playLab_events1_2018_instruction: |-
+        This is a Play Lab level.  Move
+        blocks to the workspace and see what happens!
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
+      courseA_playLab_events2_2018_instruction: |-
+        Jorge the Dog wants to say "Hi
+        there."  Can you help him?
       courseA_playLab_events3_instruction: "'Sola döndüğü zaman' bloğuna 'sola taşı'
         bloğunu bağla."
+      courseA_playLab_events3_2018_instruction: |-
+        Connect the `move left` block to
+        the `when left` event block that is already in the workspace.
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
+      courseA_playLab_events4_2018_instruction: |-
+        Now, get Jorge to move right when
+        the `right` button is clicked.
       courseA_playLab_events5_instruction: |-
         Add events to have Jorge move up and
         down when the `up` and `down` buttons are pressed.
+      courseA_playLab_events5_2018_instruction: |-
+        Add events to have Jorge move up
+        and down when the `up` and `down` buttons are pressed.
       courseA_playLab_events6_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
+      courseA_playLab_events6_2018_instruction: |-
         Make this more interesting by changing
         the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: |-
+        Add anything you want to this game.  Can
+        you make the dinosaur disappear when Jorge runs into him?
       courseA_playlab_events_challenge1_instruction: Büyük hayvan yarışı Zamanı! ▼
         bastığınızda aşağı ilerlesib. Kim en hızlı koşar?
+      courseA_playlab_events_challenge1_2018_instruction: |-
+        Can you write code to
+        show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge2_instruction: Bir parti verelim! Her arkadaş
         tıkladığında yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
+      courseA_playlab_events_challenge2_2018_instruction: |-
+        Give everyone something
+        to do when you click on them.
       courseA_playlab_events_challengeClone_instruction: Benim arkadaşlarım nerede
         saklanıyor? Geri kalan arkadaşlarımı göstermek için kod yazabilir misiniz?
       courseA_toMakeLoopsVideo_Collector_instruction: Döngüler içinde ne varsa tekrar
         tekrar yapmana izin verir!
       courseA_video_events_instruction: Need a better playlab/events combo
+      courseA_video_events_2018_instruction: Need a better playlab/events combo
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -8307,7 +8536,7 @@
         komutlar burada... Şimdi hata ayıklama becerilerinizi kullanarak bu bulmacayı
         nasıl çözeceğinizi bulun.'
       courseD_collector_debugging_challenge2_instruction: "İç içe döngülerin uzmanı
-        mısınız? Hazinenin tümünü toplamak öğrendiklerinizi kullanın!"
+        mısınız? Hazinenin tümünü toplamak için öğrendiklerinizi kullanın!"
       courseD_collector_nested_loops_challenge2_instruction: Hadi döngüler kullanarak
         hazine avı yapalım! Toplayıcıya yardımcı ol ve araç kutusunda ki blokları
         kullanarak en az iki yığın hazine topla. 3 yığın toplamak mümkün.
@@ -8361,9 +8590,8 @@
       courseD_farmer_condLoops9_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
-      courseD_farmer_condLoops9_predict1_instruction: |-
-        Collect all of the corn and
-        lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_instruction: Mısır ve marulların hepsini
+        topla sonra kabakları seç.
       courseD_farmer_condLoops_challenge1_instruction: "Kabaklarda sağa dönün. \nBölümü
         tamamlamak için her şeyi toplayın. Her gizli üründe sadece bir adet mısır
         veya marul var."
@@ -8494,8 +8722,8 @@
       courseD_maze_ramp5b_2018_instruction: |-
         Navigate this maze to help the bird
         find the pig!
-      courseD_maze_ramp5c_instruction: Help the bird get to the pig.
-      courseD_maze_ramp5c_2018_instruction: Help the bird get to the pig.
+      courseD_maze_ramp5c_instruction: Domuza ulaşması için kuşa yardım et.
+      courseD_maze_ramp5c_2018_instruction: Domuza ulaşması için kuşa yardım et.
       courseD_maze_ramp5d_instruction: Get the bird to the pig.
       courseD_maze_ramp5d_2018_instruction: Get the bird to the pig.
       courseD_maze_ramp6_instruction: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa
@@ -8811,6 +9039,7 @@
         You are on your own for
         this challenge. This could "bee" harder than it looks!
       courseE_bee_functions_challenge2_instruction: Bu mücadelede tamamen kendi başınasın!
+        Ne güzel!
       courseE_bee_functions_challenge2_2018_instruction: |-
         You are on your own for
         this challenge. Sweet!
@@ -9187,6 +9416,9 @@
         the `set alpha` block to get this faded center.
       courseF_artist_for_Template_instruction: Bazı kodları son seviyeden kullanmayı
         deneyin, ama bu bükülmüş sarmalı oluşturmak için 89 derece dön.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: Bu çizimi tekrar nasıl yapabileceğini
         çözebildin mi?
       courseF_artist_for_challenge1_2018_instruction: |-
@@ -9746,6 +9978,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: '"Tıklandığında" bloğuna bir blok ekleyin sonra "Çalıştır"
         a basın. Flappy'' yi hedefe hareket ettirmek için tıklayın ya da ekrana dokunun.'
+      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
+        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
+        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       flappy_2_instruction: Şimdi biraz zemin ekledik. "Zemine çarptığında" bloğuna
         bir blok ekleyin. Flappy çarptığında 'OYUNU BİTİR' komutunu ihtiyaç var.
       flappy_3_instruction: '"Çalışıtığı zaman" bloğu oyun başladığında kodlarınızın
@@ -9765,9 +10000,6 @@
         geçince.
       flappy_9_instruction: "İşleri karıştırmak için, bir engele çarptığında, oyunu
         bitirmek yerine skoru 0 yapmayı deneyin."
-      flappy_11_instruction: Kendi Flappy oyununuzu oluşturun. Tüm görünümü ve kuralları
-        hatta yer çekimini değiştirebilirsiniz. Bitirdiğinizde, Bitir düğmesine tıklayıp,
-        arkadaşlarınızın oyununuzu telefonlarında denemelerine izin verin.
       frozen circle function in circle_instruction: "Şimdi herbirini çizdikten sonra
         18 derece bırakacağınız 20 tane çember oluşturun."
       frozen circle function with parameter_instruction: '"Çember oluştur" "create
@@ -11557,6 +11789,9 @@
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       group test_instruction: Make a game
+      harvester_Kahoot_instruction: |-
+        Now help the farmer pick the corn, lettuce,
+        **and** pumpkin.
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.

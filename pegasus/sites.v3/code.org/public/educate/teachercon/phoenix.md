@@ -75,8 +75,8 @@ You will not need to rent a vehicle while at TeacherCon since all conference ses
 
 <details>
 <summary>**Can I share a ride from the airport to the hotel with fellow TeacherCon attendees?**</summary>
-<p>
-<br>
+  <p>
+  <br>
 For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the [designated rideshare pickup locations at PHX Sky Harbor](https://www.skyharbor.com/ParkingTransportation/ride-share). Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
 </p> 
 </details>
@@ -93,7 +93,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 * A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
-All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
+All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other travel-related incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
 </p>
 </details>
 

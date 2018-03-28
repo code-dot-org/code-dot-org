@@ -28,7 +28,7 @@ class CsvToSqlTable
     # Starting with 1 means the first item's ID is 2 which matches the id to the line number of the item.
     at = 1
 
-    CSV.open(@path, 'rb') do |csv|
+    CSV.open(@path, 'rb', encoding: 'utf-8') do |csv|
       table, columns = create_table(csv.shift)
       while values = csv.shift
         table.insert(hash_from_keys_and_values(columns, values).merge({id: at += 1}))

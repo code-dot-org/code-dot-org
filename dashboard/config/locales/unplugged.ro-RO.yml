@@ -290,9 +290,6 @@
           Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura
           distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste
           două puncte (sau caractere ale jocului) se ating.
-      ! '':
-        title: "[șir gol]"
-        desc: "[șir gol]"
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -509,3 +506,26 @@
       SongwritingWithParameters_2018:
         title: "[șir gol]"
         desc: "[șir gol]"
+      PlantASeed_2018:
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
+          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
+          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
+          în care algoritmii joacă un rol esențial.
+      UnplugHappyMaps_2018:
+        title: Hărţi Fericite
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+      GoingPlacesSafely_2018:
+        title: Mergând în locuri în siguranţă
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Marele eveniment
+        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
+          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
+          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
+          în funcție de butonul care a fost apăsat.

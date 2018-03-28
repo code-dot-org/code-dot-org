@@ -919,6 +919,18 @@
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
         view full instructions.
+      Applab AllTheThings ResourcesTab AllResources_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab MapReference_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab ReferenceLinks_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
       Applab allthethings onRecordEvent_instruction: |-
         Please sign in to test applab
         levels (By design, applab levels only work if signed in. Normally, we make
@@ -1173,10 +1185,17 @@
       CSD U3 Boolean Modify_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Boolean Modify_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Boolean Predict_instruction: |-
         What do you think this code will do when
         it is run? Predict what each console.log() command will print, then run the
         program to check your predictions.
+      CSD U3 Boolean Predict_2018_instruction: |-
+        What do you think this code will
+        do when it is run? Predict what each console.log() command will print, then
+        run the program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |-
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -1190,16 +1209,29 @@
         Add the numbers 1 through 10. Multiply
         the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Keypress Boolean-2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Boolean_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Boolean_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Watchers_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Watchers_2018_instruction: |-
+        Modify the code so that all of
+        the console.log commands print true
       CSD U3 L5 Freeplay_instruction: |-
         რამდენჯერმე შეცვალეთ petalSize-ის მნიშვნელობა.
         როგორ ცვლის ეს ქმედება თქვენს ნახატს?
+      CSD U3 L5 Freeplay_2018_instruction: |-
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
       CSD U3 Mouse Input Bee 2_instruction: Do this
+      CSD U3 Mouse Input Bee 2_2018_instruction: Do this
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
         mouth.
@@ -1233,6 +1265,7 @@
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
         be displayed in the console?
@@ -1278,6 +1311,9 @@
       CSD U3 Variables change circle size_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables change circle size_2018_instruction: |-
+        Change the value of
+        petalSize multiple times. How does it change your drawing?
       CSD U3 Variables create and assign_instruction: |-
         Create and assign size in
         a single line of code.
@@ -1304,7 +1340,13 @@
       CSD U3 Variables multiple assignments_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2-2018_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables naming rules v2_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
       CSD U3 Variables naming rules_instruction: |-
@@ -1322,6 +1364,9 @@
       CSD U3 Variables random with assignment_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2018_instruction: |-
+        Change the value
+        of petalSize multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |-
         Predict: What will get displayed
         in the console?
@@ -3645,6 +3690,13 @@
       Function intro Ryan_instruction: |-
         Use the `build bridge` function twice to
         make a path to the Redstone Torch.
+      GLJ Drag and fall_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Dragity_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Flappy2_instruction: Click to flap - don't touch the ground!
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -3957,6 +4009,9 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
+      KIKI GLJ Test Response_instruction: |
+        Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?\r
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
@@ -7141,6 +7196,9 @@
       artistLoopsKFP_instruction: |-
         Picture time!  Use what you have learned to draw
         a picture of what you think the Artist saw on stage.
+      asteroids_instruction: |-
+        This Corgi has been a good boy! Drag this carrot to
+        him as a special treat.
       beeDebugVideo1_instruction: "გამოიყენეთ გამეორების ციკლი ყველა ნექტარის შესაგროვებლად."
       birdsDebugVideo1_instruction: "მონიშნეთ ტრაექტორია და მიმიყვანეთ სულელ გოჭამდე.
         უფრთხილით ასაფეთქებელს თორე ბუმბულები დაგცვივდებათ!"
@@ -7224,6 +7282,9 @@
         ოქრო და ამოხსნათ ეს თავსატეხი."
       collectorSkinVideo1_instruction: "შეაგროვეთ ოთხივე მიწის გროვა ამ დონის დასამთავრებლად."
       collectorSkinVideo2_instruction: "შეაგროვეთ ოქროს ერთი გროვა ამ დონის დასასრულებლად."
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         თქვენ შეგიძლიათ გამოიყენოთ ჩიკლი მწკრივში ბევრი ხაზის დასახატად.\r
         \r
@@ -7448,67 +7509,157 @@
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
       courseA_artist_loops10_instruction: "დამეხმარეთ ქვების დალაგებაში, რათა არ ჩავვარდე!"
+      courseA_artist_loops10_2018_instruction: |-
+        Help me put down stones so I don't
+        fall in!
       courseA_artist_loops11_instruction: "დამეხმარეთ კიბის აშენება, რათა ვუყურო გემის
         წასვლას."
+      courseA_artist_loops11_2018_instruction: |-
+        Help me build steps to watch the
+        ship sail away.
       courseA_artist_loops12_instruction: "მხატვარმა სიშორეში რაღაცა სასაცილო დახატა.
         დახატეთ ის, რაც თქვენი აზრით შექმნა მხატვარმა."
+      courseA_artist_loops12_2018_instruction: |-
+        The artist saw something funny in
+        the distance.  Draw what you think he saw.
+      courseA_artist_loops1_2018_instruction: |-
+        This is a new type of puzzle called
+        "Artist". Play with the level and draw something fun.
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
+      courseA_artist_loops2_2018_instruction: |-
+        Help the artist draw this line two
+        times forward.
       courseA_artist_loops3_instruction: "დახატეთ წინ მიმართული ხაზი ხუთჯერ."
+      courseA_artist_loops3_2018_instruction: "დახატეთ წინ მიმართული ხაზი ხუთჯერ."
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
+      courseA_artist_loops4_2018_instruction: |-
+        Now, use a `repeat` loop to draw this
+        line five times!
       courseA_artist_loops5_instruction: |-
         Draw a line seven steps long. This will
         become our horizon.
+      courseA_artist_loops5_2018_instruction: |-
+        Draw a line seven steps long. This
+        will become our horizon.
       courseA_artist_loops6_instruction: Let's put a nice hill in the back.
+      courseA_artist_loops6_2018_instruction: Let's put a nice hill in the back.
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_2018_instruction: "გამოიყენეთ `გამეორების` ციკლი, რათა
+        დაუმატოთ წყალს ტალღები."
       courseA_artist_loops7_forVideo_instruction: "გამოიყენეთ `გამეორების` ციკლი,
         რათა დაუმატოთ წყალს ტალღები."
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
+      courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "გამოწვევა: შეაკეთეთ კიბე."
+      courseA_artist_loops9_2018_instruction: "გამოწვევა: შეაკეთეთ კიბე."
       courseA_artist_loops_challenge1_instruction: |-
         Can you draw a house? Make it
         look just the way you like it!
+      courseA_artist_loops_challenge1_2018_instruction: |-
+        Can you draw a house? Make
+        it look just the way you like it!
       courseA_artist_loops_challenge2_instruction: '"როგორ შეგიძლიათ დამეხმაროთ ორი
         ჩიტის სახლის შექმნაში?"'
       courseA_artist_loops_challenge2a_instruction: |-
         *"Help me get these three tents
         set up!"*
+      courseA_artist_loops_challenge2a_2018_instruction: |-
+        *"Help me get these three
+        tents set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         მოდით ვითამაშოთ თამაში!
         დახატეთ იმდენი X-ი რამდენიც შეგიძლიათ! შეგიძლიათ დახატოთ 3 ერთ მწკრივში?
+      courseA_bee_seq1_instruction: |-
+        Play with these blocks to help the bee get *one*
+        nectar.
+      courseA_bee_seq10_instruction: Try it by yourself! Get all the nectar.
+      courseA_bee_seq11_instruction: Get all the nectar.
+      courseA_bee_seq12_instruction: |-
+        Play with these blocks to help the bee get
+        *one* nectar.
+      courseA_bee_seq13_instruction: |-
+        Use three `Move West` blocks and one `Get Nectar`
+        block.
+      courseA_bee_seq14_instruction: |-
+        Use three `Move North` blocks and one `Get
+        Nectar` block.
+      courseA_bee_seq2_instruction: Help the bee get the nectar!
+      courseA_bee_seq3_instruction: Find the bug and fix it!
+      courseA_bee_seq4_instruction: Try it yourself!
+      courseA_bee_seq5_instruction: Try it yourself!
+      courseA_bee_seq6_instruction: Now the bee needs to get nectar from two flowers!
+      courseA_bee_seq7_instruction: Add two blocks to finish this puzzle!
+      courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
+      courseA_bee_seq9_instruction: Make sure to get nectar from every flower!
       courseA_collector_loops1_instruction: "ამოძრავეთ ლაურიელი და შეაგროვეთ იმდენი
         განძი, რამდენსაც შეძლებთ!"
       courseA_collector_loops10_instruction: "დაეხმარეთ ლაურიელს, შეაგროვოს მთელი
         განძი, რაც კი გზაში შეხვდება."
+      courseA_collector_loops10_2018_instruction: "დაეხმარეთ ლაურიელს, შეაგროვოს მთელი
+        განძი, რაც კი გზაში შეხვდება."
       courseA_collector_loops11_instruction: "დაეხმარეთ ლაურიელს ამ გამოქვაბულში არსებული
         მთელი განძეულობის შეგროვება."
+      courseA_collector_loops11_2018_instruction: "დაეხმარეთ ლაურიელს ამ გამოქვაბულში
+        არსებული მთელი განძეულობის შეგროვება."
       courseA_collector_loops12_instruction: "ევრიკა! შეაგროვეთ განძეულობის მაქსიმალურად
         შესაძლო რაოდენობა!"
+      courseA_collector_loops12_2018_instruction: |-
+        *"Eureka!  Get as much treasure
+        as you can!"*
+      courseA_collector_loops1_2018_instruction: |-
+        Move Laurel around and get as much
+        treasure as you can!
       courseA_collector_loops2_instruction: "შეაგროვეთ სამივე მიწის გროვა ამ დონის
         დასამთავრებლად."
+      courseA_collector_loops2_2018_instruction: |-
+        Get all three piles to pass this
+        level.
       courseA_collector_loops4_instruction: "შეასწორეთ ლაურიელის გზა, რათა შეაგროვოთ
         მთელი განძი."
+      courseA_collector_loops4_2018_instruction: |-
+        Fix Laurel's path to get all of
+        this treasure.
       courseA_collector_loops5_instruction: "გამოიყენეთ ის, რაც შეისწავლეთ, რათა შეაგროვოთ
         მთელი განძი."
+      courseA_collector_loops5_2018_instruction: |-
+        Use what you learned to get all
+        of the treasure.
       courseA_collector_loops6_instruction: "დაამატეთ კოდს ბლოკები, რათა შეაგროვოთ
         მთელი განძი."
+      courseA_collector_loops6_2018_instruction: |-
+        Add blocks to this code to get
+        all of the treasure.
       courseA_collector_loops7_instruction: "რა უნდა დაამატოთ კოდში, რათა შეაგროვოთ
         მთელი განძი?"
+      courseA_collector_loops7_2018_instruction: |-
+        What should you add to this code
+        to get all of the treasure?
       courseA_collector_loops8_instruction: "დაწერეთ კოდი, რათა აიღოთ მთელი განძი."
+      courseA_collector_loops8_2018_instruction: "დაწერეთ კოდი, რათა აიღოთ მთელი განძი."
       courseA_collector_loops9_instruction: "**გამოწვევა:** განძი მიუყვება ამ კიბეს
         ბოლომდე. დაწერეთ კოდი, რათა შეაგროვებინოთ ლაურიელს ყველაფერი."
+      courseA_collector_loops9_2018_instruction: |-
+        **Challenge:** The treasure goes
+        all the way up these stairs!  Write the code to help Laurel get it all.
       courseA_collector_loops_challenge1_instruction: '*"შეგიძლიათ დამეხმაროთ რამდენიმე
         ხოჭოს პოვნაში? მე ვიცი თუ სად უნდა წავიდე, მაგრამ დარწმუნებული არ ვარ თუ რამდენი
         ნაბიჯი დამჭირდება ამისთვის."*'
+      courseA_collector_loops_challenge1_2018_instruction: |-
+        *"Can you help me spot
+        some bugs?"*
       courseA_collector_loops_challenge2_instruction: "შეაგროვეთ მთელი განძი! "
       courseA_collector_loops_challenge2kp_instruction: |-
         Collect at least **3** pieces
         of treasure to pass this level.
+      courseA_collector_loops_challenge2kp_2018_instruction: |-
+        Collect at least **3**
+        pieces of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -7536,61 +7687,140 @@
         level.
       courseA_forVideoTest_artist_instruction: "გამოიყენეთ `გამეორების` ციკლი, რათა
         დაუმატოთ წყალს ტალღები."
+      courseA_harvester_seq1_instruction: |-
+        Play with these blocks to help the harvester
+        pick *one* corn.
+      courseA_harvester_seq12_instruction: |-
+        Play with these blocks to help the bee
+        get *one* nectar.
+      courseA_harvester_seq2_instruction: |-
+        Use three `Move West` blocks and one `Pick
+        Corn` block.
+      courseA_harvester_seq3_instruction: |-
+        Use three `Move North` blocks and one
+        `Pick Corn` block.
+      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq5_instruction: Find the bug and fix it!
+      courseA_harvester_seq6_instruction: Try it yourself!
+      courseA_harvester_seq7_instruction: Try it yourself!
+      courseA_harvester_seq8_instruction: |-
+        Now the harvester needs to pick corn two
+        times!
       courseA_maze_seq1_instruction: "მიიყვანეთ ჩიტი ცუდ გოჭთან!"
       courseA_maze_seq10_instruction: "გამოწვევა: შემოუარეთ დინამიტს, რათა მიიყვანოთ
         ჩიტი გოჭთან! "
+      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
+        to the pig! "
       courseA_maze_seq11_instruction: "გადაადგილდით ერთი მიმართულებით, შემდეგ კი მეორე
         მიმართულებით და მიიყვანეთ ჩიტი გოჭთან."
+      courseA_maze_seq11_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig.
       courseA_maze_seq12_instruction: "დაიჭირეთ ეს გოჭი! "
+      courseA_maze_seq12_2018_instruction: "დაიჭირეთ ეს გოჭი! "
       courseA_maze_seq13_instruction: "გამოიყენეთ ნებისმიერ გზა ამ გოჭის დასაჭერად!"
+      courseA_maze_seq13_2018_instruction: "გამოიყენეთ ნებისმიერ გზა ამ გოჭის დასაჭერად!"
+      courseA_maze_seq1_2018_instruction: "მიიყვანეთ ჩიტი ცუდ გოჭთან!"
       courseA_maze_seq2_instruction: "შეცვალეთ კოდი ისე, რომ გოჭთან აღმოვჩნდე!"
+      courseA_maze_seq2_2018_instruction: "შეცვალეთ კოდი ისე, რომ გოჭთან აღმოვჩნდე!"
       courseA_maze_seq3_instruction: '"შეცვალეთ კოდი ისე, რომ ჩიტი გოჭთან აღმოჩნდეს!"!'
+      courseA_maze_seq3_2018_instruction: '"შეცვალეთ კოდი ისე, რომ ჩიტი გოჭთან აღმოჩნდეს!"!'
       courseA_maze_seq4_instruction: "ამოიღეთ ბლოკი, რათა ჩიტი გოჭთან აღმოჩნდეს!"
+      courseA_maze_seq4_2018_instruction: |-
+        REMOVE a block to get the bird to the
+        pig!
       courseA_maze_seq4a_instruction: "მიიყვანეთ ჩიტი გოჭთან ბლოკების ბლოკების მინიმალური
         რაოდენობის გამოყენებით."
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
       courseA_maze_seq6_instruction: "გადაადგილდით ერთი მიმართულებით, შემდეგ კი მეორე
         მიმართულებით და მიიყვანეთ ჩიტი გოჭთან!"
+      courseA_maze_seq6_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig!
       courseA_maze_seq7_instruction: "გაარკვიეთ, რა აკლია კოდს და დაამატეთ ბლოკები,
         რომ მიმიყვანოთ გოჭთან!"
+      courseA_maze_seq7_2018_instruction: |-
+        Figure out what is missing and then add
+        blocks to get the bird to the pig!
       courseA_maze_seq8_instruction: "დაასრულეთ ეს დონე და მიიყვანეთ ჩიტი გოჭთან!"
+      courseA_maze_seq8_2018_instruction: |-
+        Solve this level and get the bird to the
+        pig!
       courseA_maze_seq9_instruction: "დაადებაგირეთ ეს დონე ბლოკების დამატებით, რათა
         მიიყვანოთ ჩიტი გოჭთან!"
+      courseA_maze_seq9_2018_instruction: |-
+        Debug this level by adding blocks to get
+        the bird to the pig!
       courseA_maze_seq_challenge1_instruction: "აქ რაღაცა შეცდომითაა. დამეხმარეთ კოდის
         შესწორებაში, რათა მივიყვანო ჩიტი გოჭთან!"
+      courseA_maze_seq_challenge1_2018_instruction: |-
+        Something is wrong here. Help
+        fix the code to get the bird to the pig!
       courseA_maze_seq_challenge2_instruction: "მონიშნეთ ტრაექტორია და მიმიყვანეთ
         გოჭამდე. უფრთხილდით დინამიტს და ბუმბულს!"
+      courseA_maze_seq_challenge2_2018_instruction: |-
+        Trace the path to lead the bird
+        to the pig. Avoid TNT or feathers will fly!
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
+      courseA_playLab_events1_2018_instruction: |-
+        This is a Play Lab level.  Move
+        blocks to the workspace and see what happens!
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
+      courseA_playLab_events2_2018_instruction: |-
+        Jorge the Dog wants to say "Hi
+        there."  Can you help him?
       courseA_playLab_events3_instruction: "დააკავშირეთ `გადაადგილდი მარცხნივ` ბლოკი
         `როცა მარცხნივ` მოვლენის ბლოკთან, რომელიც უკვე სამუშაო სივრცეშია."
+      courseA_playLab_events3_2018_instruction: |-
+        Connect the `move left` block to
+        the `when left` event block that is already in the workspace.
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
+      courseA_playLab_events4_2018_instruction: |-
+        Now, get Jorge to move right when
+        the `right` button is clicked.
       courseA_playLab_events5_instruction: |-
         Add events to have Jorge move up and
         down when the `up` and `down` buttons are pressed.
+      courseA_playLab_events5_2018_instruction: |-
+        Add events to have Jorge move up
+        and down when the `up` and `down` buttons are pressed.
       courseA_playLab_events6_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
+      courseA_playLab_events6_2018_instruction: |-
         Make this more interesting by changing
         the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: |-
+        Add anything you want to this game.  Can
+        you make the dinosaur disappear when Jorge runs into him?
       courseA_playlab_events_challenge1_instruction: |-
         "სად იმალებიან ჩემი მეგობრები?
         შეგიძლიათ დაწეროთ კოდი, რათა დამანახოთ ჩემი დანარჩენი მეგობრები?"
+      courseA_playlab_events_challenge1_2018_instruction: |-
+        Can you write code to
+        show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge2_instruction: '"მოდით მოვაწყოთ წვეულება! გააკეთებინეთ
         ჩემს მეგობრებს რამე, როდესაც დააწკაპებთ ან თითით დააჭერთ მათ."'
+      courseA_playlab_events_challenge2_2018_instruction: |-
+        Give everyone something
+        to do when you click on them.
       courseA_playlab_events_challengeClone_instruction: |-
         სად იმალებიან ჩემი მეგობრები?
         შეგიძლიათ დაწეროთ კოდი, რათა დამანახოთ ჩემი დანარჩენი მეგობრები?
       courseA_toMakeLoopsVideo_Collector_instruction: "ციკლები გაძლევთ საშუალებას
         მრავალჯერ შეასრულოთ შიგნით განთავსებული ნებისმიერი კოდი!"
       courseA_video_events_instruction: Need a better playlab/events combo
+      courseA_video_events_2018_instruction: Need a better playlab/events combo
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -9425,6 +9655,9 @@
       courseF_artist_for_Template_instruction: "სცადეთ წინა დონის კოდის ნაწილის გამოყენება,
         მაგრამ ამჯერად 89 გრადუსიანი მობრუნების კუთხით დაკლაკნილი კვადრატული სპირალის
         შესაქმნელად."
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: "ხვდებით, როგორ უნდა გაიმეოროთ ეს
         ნახატი?"
       courseF_artist_for_challenge1_2018_instruction: |-
@@ -9882,7 +10115,7 @@
       courseF_playlab_variables3b_instruction: "Help Kiki have a conversation with\nBrian
         by using the variable `age` in all of the places where age `12` should\nbe
         used. "
-      courseF_playlab_variables3bEdit_instruction: "დაეხმარეთ კიკის გაესაუბროს ბრაიანს.
+      courseF_playlab_variables3bEdit_instruction: "დაეხმარეთ კიკის, გაესაუბროს ბრაიანს.
         ამისათვის ჩასვით `A1` ცვლადი წინადადების ყველა იმ ადგილას, სადაც ნახსენებია
         ასაკი - `12`. "
       courseF_playlab_variables3b_josh_instruction: "Help Kiki have a conversation\nwith
@@ -9991,6 +10224,9 @@
       eventsIntro_instruction: Need a better playlab/events combo
       flappy_1_instruction: მიუმაგრეთ ბლოკი ბლოკს "დაჭერისას" და გაუშვით. შემდეგ დააჭირეთ
         შესაბამის ღილაკს ან ეკრანს და გადადგილეთ ფლაპი მიზნისკენ.
+      flappy_11_instruction: შექმენით თქვენი საკუთარი Flappy თამაში. ყველა გამოსახულებისა
+        და წესის შეცვლა შეგიძლიათ, გრავიტაციისაც კი. როცა მორჩებით, დააჭირეთ "დასრულებას"
+        და ათამაშეთ თქვენი მეგობრები.
       flappy_2_instruction: ახლა უკვე მიწაც დავამატეთ. მიუმაგრეთ ბლოკი ბლოკს "როცა
         დაეჯახება მიწას". როცა ფლაპი შეეხება მიწას კოდი უნდა 'ამთავრებდეს თამაშს'.
       flappy_3_instruction: თამაშის დაწყებისას თქვენი კოდი მუშაობს "გაშვებისას" ბლოკის
@@ -10010,9 +10246,6 @@
         ყოველი ახალი მოვლენის, მაგალითად, წინაღობის გადალახვის დროს."
       flappy_9_instruction: "იმისთვის, რომ წინაღობაზე შეჯახების მერე თამაში გაგრძელდეს,
         და არა დასრულდეს, ისევ 0-ზე დასვით ქულების რაოდენობა."
-      flappy_11_instruction: შექმენით თქვენი საკუთარი Flappy თამაში. ყველა გამოსახულებისა
-        და წესის შეცვლა შეგიძლიათ, გრავიტაციისაც კი. როცა მორჩებით, დააჭირეთ "დასრულებას"
-        და ათამაშეთ თქვენი მეგობრები.
       frozen circle function in circle_instruction: "ახლა შევქმნათ 20 გადამკვეთი წრე,
         ყოველი წრის შემდეგ 18 გრადუსი მობრუნებით."
       frozen circle function with parameter_instruction: ეს არის ბლოკი "შექმენით წრე",
@@ -11808,6 +12041,9 @@
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       group test_instruction: Make a game
+      harvester_Kahoot_instruction: |-
+        Now help the farmer pick the corn, lettuce,
+        **and** pumpkin.
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.

@@ -219,6 +219,7 @@
   "iceAge": "Buz dövrü!",
   "ifDroid": "droid",
   "ifDroidN": "droid {spriteIndex}",
+  "ifSprite": "personaj",
   "ifSpriteN": "actor {spriteIndex}",
   "incrementPlayerScore": "xal qazan",
   "isSet": "is set",

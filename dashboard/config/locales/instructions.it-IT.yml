@@ -1015,6 +1015,18 @@
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
         view full instructions.
+      Applab AllTheThings ResourcesTab AllResources_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab MapReference_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab ReferenceLinks_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
       Applab allthethings onRecordEvent_instruction: |-
         Please sign in to test applab
         levels (By design, applab levels only work if signed in. Normally, we make
@@ -1268,10 +1280,17 @@
       CSD U3 Boolean Modify_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Boolean Modify_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Boolean Predict_instruction: |-
         What do you think this code will do when
         it is run? Predict what each console.log() command will print, then run the
         program to check your predictions.
+      CSD U3 Boolean Predict_2018_instruction: |-
+        What do you think this code will
+        do when it is run? Predict what each console.log() command will print, then
+        run the program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |-
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -1285,16 +1304,29 @@
         Add the numbers 1 through 10. Multiply
         the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Keypress Boolean-2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Boolean_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Boolean_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Watchers_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Watchers_2018_instruction: |-
+        Modify the code so that all of
+        the console.log commands print true
       CSD U3 L5 Freeplay_instruction: |-
         Change the value of petalSize multiple times.
         How does it change your drawing?
+      CSD U3 L5 Freeplay_2018_instruction: |-
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
       CSD U3 Mouse Input Bee 2_instruction: Do this
+      CSD U3 Mouse Input Bee 2_2018_instruction: Do this
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
         mouth.
@@ -1328,6 +1360,7 @@
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
         be displayed in the console?
@@ -1373,6 +1406,9 @@
       CSD U3 Variables change circle size_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables change circle size_2018_instruction: |-
+        Change the value of
+        petalSize multiple times. How does it change your drawing?
       CSD U3 Variables create and assign_instruction: |-
         Create and assign size in
         a single line of code.
@@ -1399,7 +1435,13 @@
       CSD U3 Variables multiple assignments_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2-2018_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables naming rules v2_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
       CSD U3 Variables naming rules_instruction: |-
@@ -1417,6 +1459,9 @@
       CSD U3 Variables random with assignment_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2018_instruction: |-
+        Change the value
+        of petalSize multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |-
         Predict: What will get displayed
         in the console?
@@ -3937,6 +3982,13 @@
       Frequency Analysis_instruction: Test
       Function intro Ryan_instruction: Usa due volte la funzione `build bridge` (*costruisci
         ponte*) per creare un sentiero fino alla torcia di pietrarossa.
+      GLJ Drag and fall_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Dragity_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Flappy2_instruction: Click to flap - don't touch the ground!
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4285,9 +4337,11 @@
       K2.0 sequence FP_instruction: |-
         Now figure out how to get the pig any way you
         can!
-      K2.0 sequence pre_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
+      K2.0 sequence pre_instruction: Gioca con questi blocchi per vedere se riesci
+        a farmi arrivare al maiale!
+      KIKI GLJ Test Response_instruction: |
+        Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?\r
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
@@ -4945,7 +4999,7 @@
       Overworld House Frame Chosen_2018_instruction: |-
         Build the rest of your house
         from any material you'd like. The "repeat" command will come in handy.
-      Overworld Move to Sheep_instruction: Aggiungi una seconda istruzione `vai avanti`
+      Overworld Move to Sheep_instruction: Aggiungi un secondo blocco `vai avanti`
         per raggiungere la pecora.
       Overworld Move to Sheep_2018_instruction: |-
         Add a second `move forward` block
@@ -7536,9 +7590,9 @@
       artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
       artistFunctionsVideo1_instruction: Segui le istruzioni per costruire la tua
         funzione.
-      artistLoopsK1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      artistLoopsK1_instruction: Questo è un nuovo tipo di esercizio chiamato "Artista".
+        Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
+        per passare all'esercizio successivo.
       artistLoopsK2_instruction: |-
         Now, use a `repeat` loop to draw this line five
         times!
@@ -7572,6 +7626,9 @@
       artistLoopsKFP_instruction: |-
         Picture time!  Use what you have learned to draw
         a picture of what you think the Artist saw on stage.
+      asteroids_instruction: |-
+        This Corgi has been a good boy! Drag this carrot to
+        him as a special treat.
       beeDebugVideo1_instruction: Riesci ad usare un <i>ciclo</i> `ripeti ... volte`
         per raccogliere tutto il nettare?
       birdsDebugVideo1_instruction: |-
@@ -7667,6 +7724,9 @@
         l'oro e risolvere il puzzle.
       collectorSkinVideo1_instruction: Collect all four piles to pass this level.
       collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
+      comment_intro_maze_2018_instruction: |-
+        Use the new `comment` block to leave
+        yourself quick reminders.
       course1_artist_loops_challenge1_instruction: |-
         You can use a loop to draw many
         lines in a row.\r
@@ -7931,75 +7991,161 @@
       course4_playlab_variables_challenge3_instruction: |-
         Can you figure out how this
         "Fortune Teller" app works? Click `MORE` to see your challenges.
-      courseA_artist_loops1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      courseA_artist_loops1_instruction: Questo è un nuovo tipo di esercizio chiamato
+        "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto,
+        premi "Termina" per passare all'esercizio successivo.
       courseA_artist_loops10_instruction: Aiutami a posare delle pietre per non cadere
         in acqua!
-      courseA_artist_loops11_instruction: Aiutami a creare degli scalini per vedere
-        la barca salpare.
-      courseA_artist_loops12_instruction: L'artista ha visto qualcosa di buffo in
-        lontananza. Disegna ciò che pensi abbia visto.
-      courseA_artist_loops2_instruction: |-
-        Help the artist draw this line two times
-        forward.
+      courseA_artist_loops10_2018_instruction: |-
+        Help me put down stones so I don't
+        fall in!
+      courseA_artist_loops11_instruction: Aiutami a costruire i gradini per vedere
+        la barca che salpa.
+      courseA_artist_loops11_2018_instruction: |-
+        Help me build steps to watch the
+        ship sail away.
+      courseA_artist_loops12_instruction: L'Artista ha visto qualcosa di divertente
+        al largo. Disegna ciò che pensi abbia visto. Quando sei soddisfatto, premi
+        "Termina" per completare la lezione.
+      courseA_artist_loops12_2018_instruction: |-
+        The artist saw something funny in
+        the distance.  Draw what you think he saw.
+      courseA_artist_loops1_2018_instruction: |-
+        This is a new type of puzzle called
+        "Artist". Play with the level and draw something fun.
+      courseA_artist_loops2_instruction: 'Aiuta l''artista a disegnare questa linea:
+        due volte avanti.'
+      courseA_artist_loops2_2018_instruction: |-
+        Help the artist draw this line two
+        times forward.
       courseA_artist_loops3_instruction: Disegna cinque volte una linea in avanti.
-      courseA_artist_loops4_instruction: |-
-        Now, use a `repeat` loop to draw this line
-        five times!
-      courseA_artist_loops5_instruction: |-
-        Draw a line seven steps long. This will
-        become our horizon.
-      courseA_artist_loops6_instruction: Let's put a nice hill in the back.
-      courseA_artist_loops7_instruction: |-
-        Use the `repeat` loop to add waves to the
-        water.
+      courseA_artist_loops3_2018_instruction: Disegna cinque volte una linea in avanti.
+      courseA_artist_loops4_instruction: Ora, usa un ciclo `ripeti` per disegnare
+        questa linea cinque volte!
+      courseA_artist_loops4_2018_instruction: |-
+        Now, use a `repeat` loop to draw this
+        line five times!
+      courseA_artist_loops5_instruction: Disegna una linea composta da sette segmenti.
+        Questo diventerà il nostro orizzonte.
+      courseA_artist_loops5_2018_instruction: |-
+        Draw a line seven steps long. This
+        will become our horizon.
+      courseA_artist_loops6_instruction: Mettiamo una bella collina sullo sfondo.
+      courseA_artist_loops6_2018_instruction: Let's put a nice hill in the back.
+      courseA_artist_loops7_instruction: Usa il ciclo `ripeti` per aggiungere le onde
+        all'acqua.
+      courseA_artist_loops7_2018_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops7_forVideo_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
-      courseA_artist_loops8_instruction: We need a ladder up to the boat.
+      courseA_artist_loops8_instruction: Ci serve una scala per salire sulla barca.
+      courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Sfida: ripara la scaletta.'
+      courseA_artist_loops9_2018_instruction: 'Sfida: ripara la scaletta.'
       courseA_artist_loops_challenge1_instruction: |-
         Can you draw a house? Make it
         look just the way you like it!
+      courseA_artist_loops_challenge1_2018_instruction: |-
+        Can you draw a house? Make
+        it look just the way you like it!
       courseA_artist_loops_challenge2_instruction: '"Puoi aiutarmi a costruire due
         casette per gli uccelli?"'
       courseA_artist_loops_challenge2a_instruction: |-
         *"Help me get these three tents
         set up!"*
+      courseA_artist_loops_challenge2a_2018_instruction: |-
+        *"Help me get these three
+        tents set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
+      courseA_bee_seq1_instruction: |-
+        Play with these blocks to help the bee get *one*
+        nectar.
+      courseA_bee_seq10_instruction: Try it by yourself! Get all the nectar.
+      courseA_bee_seq11_instruction: Get all the nectar.
+      courseA_bee_seq12_instruction: |-
+        Play with these blocks to help the bee get
+        *one* nectar.
+      courseA_bee_seq13_instruction: |-
+        Use three `Move West` blocks and one `Get Nectar`
+        block.
+      courseA_bee_seq14_instruction: |-
+        Use three `Move North` blocks and one `Get
+        Nectar` block.
+      courseA_bee_seq2_instruction: Help the bee get the nectar!
+      courseA_bee_seq3_instruction: Find the bug and fix it!
+      courseA_bee_seq4_instruction: Try it yourself!
+      courseA_bee_seq5_instruction: Try it yourself!
+      courseA_bee_seq6_instruction: Now the bee needs to get nectar from two flowers!
+      courseA_bee_seq7_instruction: Add two blocks to finish this puzzle!
+      courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
+      courseA_bee_seq9_instruction: Make sure to get nectar from every flower!
       courseA_collector_loops1_instruction: |-
-        Muovi Laurel raccogliendo più tesori che puoi!\r
+        Muovi Laurel raccogliendo più tesori che puoi! <br>
         (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseA_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
         lungo questo percorso.
+      courseA_collector_loops10_2018_instruction: Aiuta Laurel a raccogliere tutti
+        i tesori lungo questo percorso.
       courseA_collector_loops11_instruction: Aiuta Laurel a raccogliere tutti i tesori
         da questa grotta.
-      courseA_collector_loops12_instruction: |-
-        Evviva! Raccogli più tesori che puoi!\r
-        (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
+      courseA_collector_loops11_2018_instruction: Aiuta Laurel a raccogliere tutti
+        i tesori da questa grotta.
+      courseA_collector_loops12_instruction: '*"Evviva! Raccogli più tesori che puoi!"*'
+      courseA_collector_loops12_2018_instruction: |-
+        *"Eureka!  Get as much treasure
+        as you can!"*
+      courseA_collector_loops1_2018_instruction: |-
+        Move Laurel around and get as much
+        treasure as you can!
       courseA_collector_loops2_instruction: Raccogli tutte e tre le gemme per completare
         l'esercizio.
+      courseA_collector_loops2_2018_instruction: Raccogli tutte e tre le gemme per
+        completare l'esercizio.
       courseA_collector_loops4_instruction: Correggi il percorso di Laurel per raccogliere
         tutti i tesori.
+      courseA_collector_loops4_2018_instruction: |-
+        Fix Laurel's path to get all of
+        this treasure.
       courseA_collector_loops5_instruction: Usa quanto imparato sinora per raccogliere
         tutti i tesori.
-      courseA_collector_loops6_instruction: Aggiungi dei blocchi al codice per raccogliere
-        tutti i tesori.
+      courseA_collector_loops5_2018_instruction: |-
+        Use what you learned to get all
+        of the treasure.
+      courseA_collector_loops6_instruction: Aggiungi dei blocchi a questo programma
+        per raccogliere tutti i tesori.
+      courseA_collector_loops6_2018_instruction: |-
+        Add blocks to this code to get
+        all of the treasure.
       courseA_collector_loops7_instruction: Cosa devi aggiungere al codice per raccogliere
         tutti i tesori?
+      courseA_collector_loops7_2018_instruction: |-
+        What should you add to this code
+        to get all of the treasure?
       courseA_collector_loops8_instruction: Scrivi del codice per raccogliere tutti
         i tesori.
+      courseA_collector_loops8_2018_instruction: Scrivi del codice per raccogliere
+        tutti i tesori.
       courseA_collector_loops9_instruction: "**Sfida:** Le gemme salgono le scale!
         Scrivi il codice per aiutare Laurel a raccoglierle tutte."
+      courseA_collector_loops9_2018_instruction: |-
+        **Challenge:** The treasure goes
+        all the way up these stairs!  Write the code to help Laurel get it all.
       courseA_collector_loops_challenge1_instruction: '*"Mi aiuti a trovare alcuni
         errori? So da che parte voglio andare, ma non sono sicuro di quanti passi
         devo fare."*'
+      courseA_collector_loops_challenge1_2018_instruction: |-
+        *"Can you help me spot
+        some bugs?"*
       courseA_collector_loops_challenge2_instruction: 'Raccogli tutto il tesoro! '
       courseA_collector_loops_challenge2kp_instruction: Raccogli almeno *3* pezzi
         del tesoro per completare questo esercizio.
+      courseA_collector_loops_challenge2kp_2018_instruction: |-
+        Collect at least **3**
+        pieces of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -8027,67 +8173,137 @@
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
-      courseA_maze_seq1_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
-      courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
-        the pig! "
-      courseA_maze_seq11_instruction: |-
-        Move one way, then another to get the bird
-        to the pig.
+      courseA_harvester_seq1_instruction: |-
+        Play with these blocks to help the harvester
+        pick *one* corn.
+      courseA_harvester_seq12_instruction: |-
+        Play with these blocks to help the bee
+        get *one* nectar.
+      courseA_harvester_seq2_instruction: |-
+        Use three `Move West` blocks and one `Pick
+        Corn` block.
+      courseA_harvester_seq3_instruction: |-
+        Use three `Move North` blocks and one
+        `Pick Corn` block.
+      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq5_instruction: Find the bug and fix it!
+      courseA_harvester_seq6_instruction: Try it yourself!
+      courseA_harvester_seq7_instruction: Try it yourself!
+      courseA_harvester_seq8_instruction: |-
+        Now the harvester needs to pick corn two
+        times!
+      courseA_maze_seq1_instruction: Fai andare l'uccellino fino al maiale cattivo!
+      courseA_maze_seq10_instruction: 'Sfida: aggira la dinamite (TNT) per portare
+        l''uccellino fino al maialino! '
+      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
+        to the pig! "
+      courseA_maze_seq11_instruction: Muovi in una direzione, poi in un'altra, per
+        portare l'uccellino fino al maialino.
+      courseA_maze_seq11_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig.
       courseA_maze_seq12_instruction: 'Prendi quel maialino! '
+      courseA_maze_seq12_2018_instruction: 'Prendi quel maialino! '
       courseA_maze_seq13_instruction: Prendi quel maialino in qualsiasi modo!
+      courseA_maze_seq13_2018_instruction: Prendi quel maialino in qualsiasi modo!
+      courseA_maze_seq1_2018_instruction: Fai andare l'uccellino fino al maiale cattivo!
       courseA_maze_seq2_instruction: Modifica il codice per farmi arrivare al maialino!
+      courseA_maze_seq2_2018_instruction: Modifica il codice per farmi arrivare al
+        maialino!
       courseA_maze_seq3_instruction: Modifica il codice per farmi arrivare al maialino!
+      courseA_maze_seq3_2018_instruction: Modifica il codice per farmi arrivare al
+        maialino!
       courseA_maze_seq4_instruction: ELIMINA un blocco per far arrivare l'uccellino
         fino al maialino!
+      courseA_maze_seq4_2018_instruction: |-
+        REMOVE a block to get the bird to the
+        pig!
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
         blocks.
-      courseA_maze_seq5_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseA_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
-      courseA_maze_seq9_instruction: |-
-        Debug this level by adding blocks to get the
+      courseA_maze_seq5_instruction: Prova questo da solo dall'inizio.
+      courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq6_instruction: Muovi in una direzione, poi in un'altra per far
+        arrivare l'uccellino fino al maialino!
+      courseA_maze_seq6_2018_instruction: |-
+        Move one way, then another to get the
         bird to the pig!
+      courseA_maze_seq7_instruction: Cerca di capire cosa manca, quindi aggiungi i
+        blocchi necessari per far arrivare l'uccellino fino al maialino!
+      courseA_maze_seq7_2018_instruction: |-
+        Figure out what is missing and then add
+        blocks to get the bird to the pig!
+      courseA_maze_seq8_instruction: Risolvi questo esercizio per portare l'uccellino
+        fino al maialino!
+      courseA_maze_seq8_2018_instruction: |-
+        Solve this level and get the bird to the
+        pig!
+      courseA_maze_seq9_instruction: 'Sfida: Correggi gli errori in questo esercizio,
+        aggiungendo i blocchi necessari per portare l''uccellino fino al maialino!'
+      courseA_maze_seq9_2018_instruction: |-
+        Debug this level by adding blocks to get
+        the bird to the pig!
       courseA_maze_seq_challenge1_instruction: |-
         Something is wrong here. Help fix
         the code to get the bird to the pig!
+      courseA_maze_seq_challenge1_2018_instruction: |-
+        Something is wrong here. Help
+        fix the code to get the bird to the pig!
       courseA_maze_seq_challenge2_instruction: |-
         Trace the path to lead the bird to
         the pig. Avoid TNT or feathers will fly!
-      courseA_playLab_events1_instruction: |-
-        This is a Play Lab level.  Move blocks
-        to the workspace and see what happens!
-      courseA_playLab_events2_instruction: |-
-        Jorge the Dog wants to say "Hi there."  Can
-        you help him?
+      courseA_maze_seq_challenge2_2018_instruction: |-
+        Trace the path to lead the bird
+        to the pig. Avoid TNT or feathers will fly!
+      courseA_playLab_events1_instruction: Questo è il Laboratorio. Metti dei blocchi
+        nell'area di lavoro e prova a vedere cosa succede!
+      courseA_playLab_events1_2018_instruction: |-
+        This is a Play Lab level.  Move
+        blocks to the workspace and see what happens!
+      courseA_playLab_events2_instruction: Jorge, il cane, vuole dire "Ciao". Riesci
+        ad aiutarlo?
+      courseA_playLab_events2_2018_instruction: |-
+        Jorge the Dog wants to say "Hi
+        there."  Can you help him?
       courseA_playLab_events3_instruction: Aggancia il blocco `sposta il cane a sinistra`
-        al blocco verde `quando si preme la freccia sinistra` che si trova già nell'area
-        di lavoro.
-      courseA_playLab_events4_instruction: |-
-        Now, get Jorge to move right when the
-        `right` button is clicked.
-      courseA_playLab_events5_instruction: |-
-        Add events to have Jorge move up and
-        down when the `up` and `down` buttons are pressed.
-      courseA_playLab_events6_instruction: |-
+        al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
+        già nell'area di lavoro.
+      courseA_playLab_events3_2018_instruction: |-
+        Connect the `move left` block to
+        the `when left` event block that is already in the workspace.
+      courseA_playLab_events4_instruction: Ora fai muovere Jorge a destra quando si
+        preme la freccia a destra.
+      courseA_playLab_events4_2018_instruction: |-
+        Now, get Jorge to move right when
+        the `right` button is clicked.
+      courseA_playLab_events5_instruction: Aggiungi gli eventi per far muovere Jorge
+        su e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events5_2018_instruction: |-
+        Add events to have Jorge move up
+        and down when the `up` and `down` buttons are pressed.
+      courseA_playLab_events6_instruction: Rendi questa scena più interessante, cambiando
+        lo sfondo e riproducendo un suono casuale quando si clicca su Jorge.
+      courseA_playLab_events6_2018_instruction: |-
         Make this more interesting by changing
         the background and playing a random sound when Jorge is clicked.
-      courseA_playLab_events7_instruction: |-
+      courseA_playLab_events7_instruction: Aggiungi ciò che vuoi a questo gioco. Riesci
+        a fare in modo che il dinosauro scompaia quando Jorge sbatte contro di lui?
+        (Quando sei soddisfatto, premi "Termina" per completare il corso.)
+      courseA_playLab_events7_2018_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
       courseA_playlab_events_challenge1_instruction: |-
         Can you write code to show
         the rest of my friends? The hints will help you do this project step-by-step.
+      courseA_playlab_events_challenge1_2018_instruction: |-
+        Can you write code to
+        show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge2_instruction: |-
         Give everyone something to
         do when you click on them.
+      courseA_playlab_events_challenge2_2018_instruction: |-
+        Give everyone something
+        to do when you click on them.
       courseA_playlab_events_challengeClone_instruction: |-
         Where are my friends hiding?
         Can you write code to show the rest of my friends?
@@ -8095,9 +8311,10 @@
         Loops let you do whatever
         is inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
-      courseB_artist_loops1_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      courseA_video_events_2018_instruction: Need a better playlab/events combo
+      courseB_artist_loops1_instruction: Questo è un nuovo tipo di esercizio chiamato
+        "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto,
+        premi "Termina" per passare all'esercizio successivo.
       courseB_artist_loops10_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
@@ -8134,7 +8351,7 @@
       courseB_collector_loops10_instruction: Aiuta Laurel a raccogliere tutti i tesori
         da questa grotta.
       courseB_collector_loops11_instruction: |-
-        Evviva! Raccogli più tesori che puoi!\r
+        Evviva! Raccogli più tesori che puoi!
         (Se non sei riuscito a raccogliere tutti i tesori, ma sei soddisfatto, premi il pulsante "Termina")
       courseB_collector_loops2_instruction: |-
         Collect all four piles to pass this
@@ -8187,12 +8404,10 @@
       courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseB_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
+      courseB_maze_seq6_instruction: Muovi in una direzione, poi in un'altra per far
+        arrivare l'uccellino fino al maialino!
+      courseB_maze_seq7_instruction: Cerca di capire cosa manca, quindi aggiungi i
+        blocchi necessari per far arrivare l'uccellino fino al maialino!
       courseB_maze_seq8_instruction: |-
         Your turn!  What do you need to do to get the
         bird to the pig?
@@ -10105,6 +10320,9 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for_Template_2018_instruction: |-
+        Try using some of the code from
+        the last level, but turning 89 degrees to create this twisted square spiral.
       courseF_artist_for_challenge1_instruction: |-
         Can you figure out how to re-create
         this drawing?
@@ -10717,9 +10935,12 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
-      flappy_1_instruction: |-
-        Attacca un blocco al blocco `quando si clicca` e premi "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.<br>
-        <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-16#VIDEO" target="_blank">Video doppiato in italiano</a>
+      flappy_1_instruction: Attacca un blocco al blocco "quando si clicca" e premi
+        "Esegui". Clicca o tocca lo schermo per spostare Flappy verso il bersaglio.
+      flappy_11_instruction: Crea la tua versione del gioco Flappy. È possibile modificare
+        tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli
+        ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici
+        il gioco sui loro smartphone.
       flappy_2_instruction: Ora nello scenario c'è anche il terreno.  Attacca un blocco
         di azione al blocco di evento `quando precipita a terra`.  Inoltre, il tuo
         codice ha bisogno del blocco `fine del gioco` quando Flappy precipita a terra.
@@ -10743,10 +10964,6 @@
         Puoi anche impostare il tipo di giocatore.
       flappy_9_instruction: Per rendere lo sviluppo più interessante, prova a riportare
         il punteggio a 0 quando si colpisce un ostacolo invece di finire il gioco.
-      flappy_11_instruction: Crea la tua versione del gioco Flappy. È possibile modificare
-        tutte le immagini e tutte le regole, anche la gravità e lo spazio tra gli
-        ostacoli. Quando hai finito, clicca su Condividi per far provare agli amici
-        il gioco sui loro smartphone.
       frozen circle function in circle_instruction: Ora disegniamo 20 cerchi sovrapposti,
         girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
       frozen circle function with parameter_instruction: In questo esercizio il blocco
@@ -12497,9 +12714,8 @@
       gradek_adventurer_loopsPre_instruction: |-
         This is Laurel the Adventurer.  Mover
         her around and get as much gold as you can!
-      gradek_artist_loops1_instruction: |-
-        Help the artist draw this line two times
-        forward.
+      gradek_artist_loops1_instruction: 'Aiuta l''artista a disegnare questa linea:
+        due volte avanti.'
       gradek_artist_loops2_instruction: |-
         Our artist is trying to draw a line five
         times, but can't get it right.  Can you help?
@@ -12526,9 +12742,9 @@
       gradek_artist_loopsFP_instruction: |-
         The artist saw something funny in the distance.  Draw
         what you think he saw.
-      gradek_artist_loopsPre_instruction: |-
-        This is a new type of puzzle called "Artist".
-        Play with the level and draw something fun.
+      gradek_artist_loopsPre_instruction: Questo è un nuovo tipo di esercizio chiamato
+        "Artista". Prova a disegnare qualcosa di divertente. Quando sei soddisfatto,
+        premi "Termina" per passare all'esercizio successivo.
       gradek_playlab_events1_instruction: |-
         Make your robot say "Hello!" when the
         button is clicked.
@@ -12588,6 +12804,9 @@
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       group test_instruction: Make a game
+      harvester_Kahoot_instruction: |-
+        Now help the farmer pick the corn, lettuce,
+        **and** pumpkin.
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.

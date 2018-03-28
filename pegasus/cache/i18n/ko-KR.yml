@@ -34,15 +34,15 @@
     기초개념들을 학습해 보세요.
   og_title: "모든 아이들에게 기회가 주어져야 합니다."
   og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_here: Hour of Code 가 여기 있습니다!
   og_description: "모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다."
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Hour of Code 가 여기 있습니다
   csedweek_og_description: Hour of Code 는 180개 이상의 나라에서 45개 이상의 언어로, 나이에 상관없이 수천만
     명의 학생들과 함께하려는 전세계적 운동입니다.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
+  csedweek_og_description_soon: Hour of Code 가 2018년 12월 3일~9일에 옵니다. 컴퓨터 사이언스는 모든
+    학생들이 배우기 위한 기초입니다.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
@@ -247,14 +247,10 @@
   just_did_course2: "과정2를 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course3: "과정3을 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course4: "과정4를 완료했습니다. - @codeorg 를 살펴보세요!"
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_coursea: "방금 코스 A를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_courseb: "방금 코스 B를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_coursec: "방금 코스 C를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_coursed: "방금 코스 D를 끝냈습니다 - 확인해보세요! @codeorg"
   just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
@@ -752,18 +748,12 @@
   dashboard_course_csp_desc: Code.org는 컴퓨팅의 기초 아이디어를 탐구 하기 위한 엄격하고, 매력적이면서 접근하기 쉬운
     과정을 설계 했다.
   dashboard_landing_loading: Loading...
-  dashboard_action_edit: "편집"
-  dashboard_action_save: "저장"
-  dashboard_action_save_all: "모두 저장"
   dashboard_action_cancel: "취소"
   dashboard_action_delete: "삭제"
   dashboard_action_delete_yes: "예"
   dashboard_action_delete_no: "아니요"
   dashboard_action_confirm: "삭제하시겠습니까?"
-  dashboard_action_remove: "삭제"
-  dashboard_action_remove_confirm: "삭제할까요?"
   dashboard_action_done: "완료"
-  dashboard_action_required: "필수 항목"
   dashboard_action_print_certificates: "인증서 인쇄하기"
   dashboard_assessments_view: "평가 결과 보기:"
   dashboard_assessments_none: "평가 결과 없음"
@@ -850,31 +840,18 @@
   dashboard_error_none_selected: "당신은 이동시킬 학생을 선택하지 않았습니다. 최소 한 명 이상의 학생을 선택하세요."
   dashboard_error_other_section: "만약 여러분의 섹션으로 학생들을 이동시킬 것이라면, 드롭다운 목록에서 섹션을 선택하세요.
     학생들을 다른 선생님의 섹션으로 이동시키려면 '다른 섹션'을 선택합니다."
-  dashboard_students_add_student: "학생 추가"
-  dashboard_students_add_students: "여러 학생 추가"
   dashboard_students_add_multiple: "학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요."
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
   dashboard_students_new_section: "새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을
     눌러 학생들을 추가하세요."
-  dashboard_students_placeholder_name: "학생 이름"
   dashboard_students_name: "이름"
   dashboard_students_progress: "진행도"
-  dashboard_students_age: "나이"
-  dashboard_students_gender: "성별"
   dashboard_students_male: "남"
   dashboard_students_female: "여"
-  dashboard_students_secret: "비밀보호"
-  dashboard_students_password: password
-  dashboard_students_username: "사용자명: %{student_username}"
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: "단계 완료"
   dashboard_students_total_lines: "총 코드 라인"
-  dashboard_students_show_secret: "비밀보호 보기"
-  dashboard_students_auto_generated: "자동생성"
-  dashboard_students_reset_secret: "비밀보호 재설정"
-  dashboard_students_reset_password: "비밀번호 재설정"
   dashboard_students_share_section: "이 섹션의 로그인 페이지를 학생들에게 공유하기:"
   dashboard_students_share_section_secondary: "또는, 학생들에게 이 섹션의 로그인 페이지를 공유하세요:"
   dashboard_students_print_info: "학생 로그인 정보와 함께 카드 출력하기."
@@ -883,7 +860,7 @@
     그림에 로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
   dashboard_students_reset_picture: "학생들의 비밀그림을 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b>
     할 수 있습니다. 새로운 비밀그림은 학생이 로그인하면 생성될 것입니다."
-  dashboard_students_secret_word_title: "비밀 단어"
+  dashboard_students_secret_word_title: "비밀단어"
   dashboard_students_secret_word: "이 섹션의 비밀 형식으로 <b>그림</b>을 사용합니다.  그것은 각 학생의 비밀 그림에
     로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
   dashboard_students_reset_word: "학생들의 비밀단어를 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b>
@@ -939,7 +916,6 @@
   dashboard_login_word: "단어"
   dashboard_login_picture: "그림"
   dashboard_login_none: "이메일"
-  dashboard_new_password: "새 비밀번호"
   dashboard_stage: "단계"
   dashboard_puzzle: "퍼즐"
   dashboard_question: "질문"
@@ -1238,7 +1214,7 @@
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: 8 학년 이상
-  coursee_gradelevel: Grade 9+
+  coursee_gradelevel: "나이 8세-12세"
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "나이 10세-13세"
   codeorg_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"

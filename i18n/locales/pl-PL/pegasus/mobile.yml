@@ -623,18 +623,12 @@
   dashboard_course_csp: "AP ® Podstawy Informatyki"
   dashboard_course_csp_desc: "Code.org zaprojektował rygorystyczny, angażujący i przystępny kurs, służący poznaniu podstawowych idei informatyki."
   dashboard_landing_loading: "Trwa pobieranie ..."
-  dashboard_action_edit: "Edytuj"
-  dashboard_action_save: "Zapisz"
-  dashboard_action_save_all: "Zapisz wszystko"
   dashboard_action_cancel: "Anuluj"
   dashboard_action_delete: "Usuń"
   dashboard_action_delete_yes: 'Tak'
   dashboard_action_delete_no: 'Nie'
   dashboard_action_confirm: "Usunąć?"
-  dashboard_action_remove: "Usuń"
-  dashboard_action_remove_confirm: "Usunąć?"
   dashboard_action_done: "Wykonane"
-  dashboard_action_required: "wymagane"
   dashboard_action_print_certificates: "Drukuj certyfikaty"
   dashboard_assessments_view: 'Zobacz oceny w:'
   dashboard_assessments_none: "Większość nauczycieli mierzy postępy swoich uczniów korzystając z zakładki \"Zobacz Postępy\". Jeśli jesteś zainteresowany dodatkowym sprawdzianem uczniów, polecane pytania możesz znaleźć w planach lekcji. Odbywa się to poza Code Studio."
@@ -710,28 +704,15 @@
   dashboard_sections_assign_activity: "Przypisz kurs"
   dashboard_error_none_selected: "Nie wybrałeś żadnego ucznia do przeniesienia. Proszę wybrać przynajmniej jednego uczenia."
   dashboard_error_other_section: "Jeśli przenosisz uczniów między swoimi własnymi sekcjami, wybierz swoją sekcję z listy rozwijanej. Wybierz \"Inna Sekcja\" tylko, aby przenieść Twoich uczniów do sekcji innego nauczyciela."
-  dashboard_students_add_student: "Dodaj ucznia"
-  dashboard_students_add_students: "Dodawaj wielu uczniów"
   dashboard_students_add_multiple: 'Wpisz lub wklej imiona swoich uczniów, po jednym w wierszu:'
   dashboard_students_new_google_classroom_section: "Aby dodać uczniów, użyj <a href='http://classroom.google.com' target='_blank'>Google Classroom</a>, a następnie kliknij przycisk <b>Zsynchronizuj uczniów z Google Classroom</b> powyżej."
   dashboard_students_new_section: "Utworzyłeś nową sekcję! Teraz dodaj swoich uczniów posługując się przyciskami <b>Dodaj ucznia</b> i <b>Dodaj wielu studentów</b> powyżej."
-  dashboard_students_placeholder_name: "Imię ucznia"
   dashboard_students_name: "Imię/Nazwisko"
   dashboard_students_progress: "Postęp"
-  dashboard_students_age: "Wiek"
-  dashboard_students_gender: "Płeć"
   dashboard_students_male: "Mężczyzna"
   dashboard_students_female: "Kobieta"
-  dashboard_students_secret: "Sekret"
-  dashboard_students_password: "Hasło"
-  dashboard_students_username: 'Nazwa użytkownika: %{student_username}'
-  dashboard_students_email: 'E-mail: %{student_email}'
   dashboard_students_completed_levels: "Ukończone poziomy"
   dashboard_students_total_lines: "Linie kodu"
-  dashboard_students_show_secret: "Pokaż tajne (sekret)"
-  dashboard_students_auto_generated: "Generowany automatycznie"
-  dashboard_students_reset_secret: "Resetuj sekret"
-  dashboard_students_reset_password: "Resetuj hasło"
   dashboard_students_share_section: "Poproś swoich uczniów, aby przeszli na <a href=%{join_url}> %{join_url}</a> i wpisz w sekcji kodu (%{section_code})"
   dashboard_students_share_section_secondary: 'Zamiennie, udostępnij swoim uczniom stronę logowania do tej sekcji:'
   dashboard_students_print_info: "Wydrukuj karty z Informacjami o logowaniu dla swoich uczniów."
@@ -765,7 +746,7 @@
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: "Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj tych lekcji bez komputera</a> w klasie."
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Narzędzia: '
   dashboard_curriculum: "Program nauczania"
   dashboard_curriculum_overview: "Streszczenie programu (curriculum) dla K-5"
   dashboard_overview: "Streszczenie"
@@ -783,14 +764,13 @@
   dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
   dashboard_curriculum_csp: 'AP ® Podstawy Informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
-  dashboard_curriculum_csd: 'Computer Science Discoveries: '
+  dashboard_curriculum_csd: 'Odkrycia Informatyczne: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Inni/inne"
   dashboard_login_word: "Słowo"
   dashboard_login_picture: "Obrazek/Zdjęcie"
   dashboard_login_none: "e-mail"
-  dashboard_new_password: "nowe hasło"
   dashboard_stage: "Etap"
   dashboard_puzzle: "Łamigłówka"
   dashboard_question: "Pytanie"
@@ -1175,12 +1155,12 @@
   course2_shortdescription_congrats: "Dla uczniów z podstawową umiejętnością czytania, ten kurs jest oparty na Kursie 1. Uczniowie będą tworzyli programy, by rozwiązywać problemy i rozwijać interaktywne gry lub historyjki, którymi mogą się dzielić. Zalecane dla klas 2-5."
   course3_shortdescription_congrats: "Czy jesteście gotowi na następny poziom? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-5."
   course4_shortdescription_congrats: "Czy jesteście gotowi iść dalej? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

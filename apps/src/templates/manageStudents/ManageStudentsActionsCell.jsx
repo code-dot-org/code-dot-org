@@ -8,11 +8,15 @@ import {startEditingStudent, cancelEditingStudent, removeStudent, saveStudent, a
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from "../teacherDashboard/DialogFooter";
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
 const styles = {
   xIcon: {
     paddingRight: 5,
+  },
+  saveButton: {
+    marginRight: 5,
   }
 };
 
@@ -24,6 +28,7 @@ class ManageStudentActionsCell extends Component {
     isSaving: PropTypes.bool,
     disableSaving: PropTypes.bool,
     rowType: PropTypes.oneOf(Object.values(RowType)),
+    loginType: PropTypes.string,
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -41,8 +46,8 @@ class ManageStudentActionsCell extends Component {
     const {removeStudent, id, sectionId} = this.props;
     this.setState({requestInProgress: true});
     $.ajax({
-        url: `/v2/sections/${sectionId}/students/${id}`,
-        method: 'DELETE',
+        url: `/dashboardapi/sections/${sectionId}/students/${id}/remove`,
+        method: 'POST',
     }).done(() => {
         removeStudent(id);
     }).fail((jqXhr, status) => {
@@ -86,7 +91,8 @@ class ManageStudentActionsCell extends Component {
   };
 
   render() {
-    const {rowType, isEditing} = this.props;
+    const {rowType, isEditing, loginType} = this.props;
+    const canDelete = [SectionLoginType.word, SectionLoginType.picture, SectionLoginType.email].includes(loginType);
     return (
       <div>
         {!isEditing &&
@@ -96,14 +102,18 @@ class ManageStudentActionsCell extends Component {
             >
               {i18n.edit()}
             </PopUpMenu.Item>
-            <MenuBreak/>
-            <PopUpMenu.Item
-              onClick={this.onRequestDelete}
-              color={color.red}
-            >
-              <FontAwesome icon="times-circle" style={styles.xIcon}/>
-              {i18n.removeStudent()}
-            </PopUpMenu.Item>
+            {canDelete &&
+              <MenuBreak/>
+            }
+            {canDelete &&
+              <PopUpMenu.Item
+                onClick={this.onRequestDelete}
+                color={color.red}
+              >
+                <FontAwesome icon="times-circle" style={styles.xIcon}/>
+                {i18n.removeStudent()}
+              </PopUpMenu.Item>
+            }
           </QuickActionsCell>
         }
         {(isEditing && (rowType !== RowType.ADD)) &&
@@ -113,6 +123,7 @@ class ManageStudentActionsCell extends Component {
               color={Button.ButtonColor.orange}
               text={i18n.save()}
               disabled={this.props.isSaving || this.props.disableSaving}
+              style={styles.saveButton}
             />
             <Button
               onClick={this.onCancel}
@@ -140,7 +151,7 @@ class ManageStudentActionsCell extends Component {
           <h2 style={styles.heading}>{i18n.removeStudentHeader()}</h2>
           <div>
             {i18n.removeStudentConfirm1() + ' '}
-            <a href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
+            <a target="_blank" href="https://support.code.org/hc/en-us/articles/115001475131-Adding-a-personal-login-to-a-teacher-created-account">
               {i18n.removeStudentConfirm2()}
             </a>
             {' ' + i18n.removeStudentConfirm3()}

@@ -132,7 +132,7 @@
     teacher_terms: Code.org 서비스 약관을 준수할 것을 동의합니다. 개인정보보호에 대한 자세한 내용은 <a href='http://code.org/privacy'>개인정보
       보호정책</a>을 참조하세요.
     additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."
-    user_type_label: "계좌 타자"
+    user_type_label: "계정 유형"
     user_type_teacher: "선생님"
     user_type_student: student
     field_is_required: "이(가) 필요합니다."
@@ -219,7 +219,7 @@
     remove: "(섹션 삭제)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: "비밀단어"
       email: "이메일"
       google_classroom: Google Classroom
       clever: Clever
@@ -262,8 +262,7 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
+        user_type_change_email_mismatch: "제공하신 이메일 주소가 계정에 저장된 주소와 맞지 않습니다."
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.

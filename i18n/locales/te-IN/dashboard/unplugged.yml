@@ -163,9 +163,6 @@ te:
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -304,3 +301,18 @@ te:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Real-life Algorithms: Plant a Seed'
+        desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
+      UnplugHappyMaps_2018:
+        title: Happy Maps
+        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+      GoingPlacesSafely_2018:
+        title: Going Places Safely
+        desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: The Big Event
+        desc: Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.

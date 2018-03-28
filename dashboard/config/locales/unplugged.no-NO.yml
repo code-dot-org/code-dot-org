@@ -279,9 +279,6 @@
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører
           hverandre."
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgaven skal du lære om løkker!
@@ -492,3 +489,24 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Virkelige algoritmer: Plante et frø'
+        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
+          ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store
+          bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+      UnplugHappyMaps_2018:
+        title: Glade Kart
+        desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
+          en figur gjennom en labyrint med én kommando.
+      GoingPlacesSafely_2018:
+        title: Trygg reise
+        desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere
+          hvordan å være trygg når du navigerer på Internett.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: I denne oppgaven skal du lære om løkker!
+      BigEvent_2018:
+        title: Den store begivenheten
+        desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
+          handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll
+          og elevene svarer basert på hvilken knapp som er trykket.

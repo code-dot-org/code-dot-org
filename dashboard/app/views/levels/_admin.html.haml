@@ -1,7 +1,7 @@
 - if current_user && (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
   = render layout: 'shared/extra_links' do
     %strong= @level.name
-    - if (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
+    - if current_user.permission?(UserPermission::LEVELBUILDER)
       %ul
         %li= link_to level_path(@level), level_path(@level)
         -if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
@@ -62,7 +62,6 @@
             %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
         - else
           %li (Cannot edit)
-      %br/
       This level is in #{@level.script_levels.count} scripts:
       %ul
         - @level.script_levels.each do |script_level|
@@ -71,27 +70,34 @@
             = "(stage ID: #{script_level.stage_id})"
             as
             = link_to build_script_level_path(script_level), build_script_level_path(script_level)
-      %br/
       .project_admin
-      - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
+      - if current_user.permission?(UserPermission::PROJECT_VALIDATOR) && params[:channel_id]
         %br/
-        - if params[:channel_id]
-          - _, channel_id = storage_decrypt_channel_id(params[:channel_id])
-          - exists = FeaturedProject.exists?(:storage_app_id => channel_id)
+        Project info:
+        %ul
+          - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+          - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
+          %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
+          %li= "owner storage id: #{owner_storage_id}"
+          %li= "storage app id: #{storage_app_id}"
+          - exists = FeaturedProject.exists?(:storage_app_id => storage_app_id)
           - if exists
-            - project = FeaturedProject.find_by storage_app_id: channel_id
+            - project = FeaturedProject.find_by storage_app_id: storage_app_id
             - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
+          %li
+            S3 link:
+            = link_to 'sources', sources_link, target: '_blank'
 
-          #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
-            %button{id: "feature", class: "btn btn-default btn-sm"}
-              Feature in gallery
+        #feature_project{'style' => ('display: none;' unless !exists || !currently_featured)}
+          %button{id: "feature", class: "btn btn-default btn-sm"}
+            Feature in gallery
 
-          #unfeature_project{'style' => ('display: none;' unless currently_featured)}
-            %button{id: "feature", class: "btn btn-default btn-sm"}
-              Stop featuring in gallery
+        #unfeature_project{'style' => ('display: none;' unless currently_featured)}
+          %button{id: "feature", class: "btn btn-default btn-sm"}
+            Stop featuring in gallery
 
-          #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
-            * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
+        #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
+          * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
 
     - if current_user.permission?(UserPermission::PROJECT_VALIDATOR)
       %br

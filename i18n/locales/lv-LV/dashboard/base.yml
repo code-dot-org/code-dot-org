@@ -202,7 +202,7 @@ lv:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Slepenais vārds'
       email: 'E-pasts'
       google_classroom: 'Google Classroom'
       clever: 'Clever'

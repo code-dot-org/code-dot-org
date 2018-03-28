@@ -5,6 +5,7 @@ const ATTRIBUTES_TO_CLEAN = [
   'deletable',
   'movable',
 ];
+const DEFAULT_COLOR = [184, 1.00, 0.74];
 
 /**
  * Create the xml for a level's toolbox
@@ -12,6 +13,35 @@ const ATTRIBUTES_TO_CLEAN = [
  */
 exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
+};
+
+const appendBlocks = function (toolboxDom, blockTypes) {
+  const root = toolboxDom.getRootNode().firstChild;
+  blockTypes.forEach(blockName => {
+    const block = toolboxDom.createElement('block');
+    block.setAttribute('type', blockName);
+    root.appendChild(block);
+  });
+  return xml.serialize(toolboxDom);
+};
+exports.appendBlocks = appendBlocks;
+
+exports.appendCategory = function (toolboxXml, blockTypes, categoryName) {
+  const parser = new DOMParser();
+  const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
+  if (!toolboxDom.querySelector('category')) {
+    // Uncategorized toolbox, just add blocks to the end
+    return appendBlocks(toolboxDom, blockTypes);
+  }
+  const customCategory = toolboxDom.createElement('category');
+  customCategory.setAttribute('name', categoryName);
+  blockTypes.forEach(blockName => {
+    const block = toolboxDom.createElement('block');
+    block.setAttribute('type', blockName);
+    customCategory.appendChild(block);
+  });
+  toolboxDom.getRootNode().firstChild.appendChild(customCategory);
+  return xml.serialize(toolboxDom);
 };
 
 /**
@@ -347,18 +377,22 @@ const DUMMY_INPUT = 'dummy';
  *   curly braces, e.g. "Move the {SPRITE} {PIXELS} to the {DIR}"
  * @param {Object[]} args Define the type/options of the block's inputs.
  * @param {string} args[].name Input name, conventionally all-caps
- * @param {string[][]} args[].options For dropdowns, the list of options. Each
- *   entry is a 2-element string array with the display name first, and the
- *   codegen-compatible (i.e. strings should be doubly-quoted) value second.
+ * @param {string[][]|Function} args[].options For dropdowns, the list of
+ *   options. Each entry is a 2-element string array with the display name
+ *   first, and the codegen-compatible (i.e. strings should be doubly-quoted)
+ *   value second. Also accepts a zero-argument function to generate these
+ *   options.
  * @param {BlockValueType} args[].type For value inputs, the type required. Use
  *   BlockValueType.NONE to accept any block.
+ * @params {string[]} strictTypes Input/output types that are always configerd
+ *   with strict type checking.
  *
  * @returns {Object[]} a list of labeled inputs. Each one has the same fields
  *   as 'args', but additionally includes:
  * @returns {string} return[].mode Either 'dropdown', 'value', or 'dummy'
  * @returns {string} return[].label Text to display to the left of the input
  */
-const determineInputs = function (text, args) {
+const determineInputs = function (text, args, strictTypes=[]) {
   const tokens = text.split(/[{}]/);
   if (tokens[tokens.length - 1] === '') {
     tokens.pop();
@@ -369,19 +403,22 @@ const determineInputs = function (text, args) {
     const input = tokens[i + 1];
     if (input) {
       const arg = args.find(arg => arg.name === input);
+      const strict = arg.strict || strictTypes.includes(arg.type);
       if (arg.options) {
         inputs.push({
           mode: DROPDOWN_INPUT,
           name: arg.name,
           options: arg.options,
           label,
+          strict,
         });
-      } else if (arg.type) {
+      } else {
         inputs.push({
           mode: VALUE_INPUT,
           name: arg.name,
           type: arg.type,
           label,
+          strict,
         });
       }
     } else {
@@ -405,6 +442,7 @@ exports.determineInputs = determineInputs;
 const interpolateInputs = function (blockly, block, inputs) {
   inputs.map(input => {
     let dropdown;
+    let valueInput;
     switch (input.mode) {
       case DROPDOWN_INPUT:
         dropdown = new blockly.FieldDropdown(input.options);
@@ -413,9 +451,13 @@ const interpolateInputs = function (blockly, block, inputs) {
           .appendTitle(dropdown, input.name);
         break;
       case VALUE_INPUT:
-        block.appendValueInput(input.name)
-          .setCheck(input.type)
-          .appendTitle(input.label);
+        valueInput = block.appendValueInput(input.name);
+        if (input.strict) {
+          valueInput.setStrictCheck(input.type);
+        } else {
+          valueInput.setCheck(input.type);
+        }
+        valueInput.appendTitle(input.label);
         break;
       case DUMMY_INPUT:
         block.appendDummyInput()
@@ -427,18 +469,46 @@ const interpolateInputs = function (blockly, block, inputs) {
 exports.interpolateInputs = interpolateInputs;
 
 /**
+ * Add pre-labeled inputs
+ * @param {Blockly} blockly The Blockly object provided to install()
+ * @param {Block} block The block to add the inputs to
+ * @param {Object[]} args The list of inputs
+ * @param {String} args[].name The name for this input, conventionally all-caps
+ * @param {String} args[].type The type for this input, defaults to allowing any
+ *   type
+ * @param {boolean} args[].strict Whether or not to enforce strict type checking
+ * @param {String} args[].label The text to display to the left of the input
+ */
+const addInputs = function (blockly, block, args) {
+  block.appendDummyInput()
+    .appendTitle('show title screen');
+  args.forEach(arg => {
+    block.appendValueInput(arg.name)
+      .setCheck(arg.type || Blockly.BlockValueType.NONE, arg.strict)
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendTitle(arg.label);
+  });
+};
+
+/**
  * Create a block generator that creats blocks that directly map to a javascript
  * function call, method call, or other (hopefully simple) expression.
  *
  * @params {Blockly} blockly The Blockly object provided to install()
  * @params {string} blocksModuleName Module name that will be prefixed to all
  *   the block names
+ * @params {string[]} strictTypes Input/output types that are always configerd
+ *   with strict type checking.
+ * @params {string} defaultObjectType Default type used for the 'THIS' input in
+ *   method call blocks.
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
 exports.createJsWrapperBlockCreator = function (
   blockly,
-  blocksModuleName
+  blocksModuleName,
+  strictTypes,
+  defaultObjectType,
 ) {
 
   const {
@@ -469,12 +539,19 @@ exports.createJsWrapperBlockCreator = function (
    * @param {Object[]} opts.args List of block inputs, see determineInputs()
    * @param {BlockValueType} opts.returnType Type of value returned by this
    *   block, omit if you want a block with no output.
+   * @param {boolean} opts.strictOutput Whether to enforce strict type checking
+   *   on the output.
    * @param {boolean} opts.methodCall Generate a method call. The blockText
    *   should contain '{THIS}' in order to create an input for the instance
+   * @params {string} opts.objectType Type used for the 'THIS' input in a method
+   *   call block.
    * @param {boolean} opts.eventBlock Generate an event block, which is just a
    *   block without a previous statement connector.
    * @param {boolean} opts.eventLoopBlock Generate an "event loop" block, which
    *   looks like a loop block but without previous or next statement connectors
+   * @param {boolean} opts.inline Render inputs inline, defaults to false
+   *
+   * @returns {string} the name of the generated block
    */
   return ({
     color,
@@ -485,9 +562,12 @@ exports.createJsWrapperBlockCreator = function (
     blockText,
     args,
     returnType,
+    strictOutput,
     methodCall,
+    objectType,
     eventBlock,
     eventLoopBlock,
+    inline,
   }) => {
     if (!func === !expression) {
       throw new Error('Provide either func or expression, but not both');
@@ -496,6 +576,7 @@ exports.createJsWrapperBlockCreator = function (
       throw new Error('Expression blocks require a name');
     }
     args = args || [];
+    color = color || DEFAULT_COLOR;
     const blockName = `${blocksModuleName}_${name || func}`;
 
     blockly.Blocks[blockName] = {
@@ -504,17 +585,33 @@ exports.createJsWrapperBlockCreator = function (
         this.setHSV(...color);
         const inputs = [...args];
         if (methodCall) {
+          const thisType = objectType ||
+            defaultObjectType ||
+            Blockly.BlockValueType.NONE;
           inputs.push({
             name: 'THIS',
-            type: Blockly.BlockValueType.NONE,
+            type: thisType,
+            strict: strictTypes.includes(thisType),
           });
         }
 
-        interpolateInputs(blockly, this, determineInputs(blockText, inputs));
+        if (inline === false) {
+          addInputs(blockly, this, args);
+        } else {
+          interpolateInputs(
+            blockly,
+            this,
+            determineInputs(blockText, inputs, strictTypes),
+          );
+          this.setInputsInline(true);
+        }
 
-        this.setInputsInline(true);
         if (returnType) {
-          this.setOutput(true, returnType);
+          this.setOutput(
+            true,
+            returnType,
+            strictOutput || strictTypes.includes(returnType)
+          );
         } else if (eventLoopBlock) {
           this.appendStatementInput('DO');
         } else if (eventBlock) {
@@ -570,5 +667,7 @@ exports.createJsWrapperBlockCreator = function (
         return `${prefix}${func}(${values.join(', ')});\n`;
       }
     };
+
+    return blockName;
   };
 };

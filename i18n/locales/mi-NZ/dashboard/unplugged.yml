@@ -163,9 +163,6 @@ mi:
       CollisionDetection:
         title: Te Mātai Tūtuki me te Huatau Pythagorean
         desc: He mea nui i te nuinga o ngā kēmu te whakatau āhea puta mai ai ngā ahanoa i te pānga o te mata. I tēnei whakaakoranga ka aro tātou ki te whakamahi o te Ariā Pythagorean me te Tātai Tawhiti ki te ine i te tawhiti i waenganui i tētahi pūwāhi me tētahi atu pūwāhi o te waka rererangi. Mutu ana, ka whakatauhia mēnā rā e pā ana aua pūwāhi (kiripuaki rānei).
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -304,3 +301,18 @@ mi:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Hātepe Motuhenga: Whakatōkia he Kano'
+        desc: Mā te whakatō kano hei tauira, ka whakapuakitia i tēnei whakaakoranga ngā hātepe ka whakamahia e tātou i ngā mahi o ia rā. Ka aronuitia te tirohanga whānui ki te pūtaiao rorohiko me te nui o te whaitake o ngā hātepe i ēnei mahi.
+      UnplugHappyMaps_2018:
+        title: Ngā Mahere Harikoa
+        desc: Mā ngā ākonga ētahi hātepe (he tautuhinga tohutohu) māmā ki te whakaneke i tētahi kiripuaki i waenganui i tētahi rīrapa mā te whakahau kotahi.
+      GoingPlacesSafely_2018:
+        title: Te Karore Haumaru
+        desc: He mana nui tō te Ipurangi, heoi anō, he wāhi mōrearea i ētahi wā. Mā ngā pouako e tīmata ki te whakaako i ngā mahi e tika ana kia haumaru ai te haere i te tangata e torotoro haere ana i te Ipurangi.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Te Takahanga Nui
+        desc: Ka tūtaki ngā ākonga ki te ariā papatonotanga e kīia nei ko "ngā takahanga", arā, ngā whakahau e auau ana te mātaihia e te rorohiko. Ka pēhi te pouako i ētahi pātene kei tētahi raumamao pepa, ā, ka tauhohe ngā ākonga e ai ki tāna i pēhi ai.

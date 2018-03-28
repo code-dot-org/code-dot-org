@@ -1699,6 +1699,11 @@
         artistLoopsKB_a: "Það ættu að vera 3 kubbar innan í lykkjunni til að leysa
           þessa þraut."
       artistLoopsKFP_authored_hint: []
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Comments are also helpful when other people try
+          to read your code.
+        courseC_maze_programming4_b: Add a comment when you change directions- what
+          would have happened if you turned the other way?
       course1_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
           Þú getur notað svona lykkjur til að búa til veggina og þakið. Prófaðu að endurtaka mismunandi kubba.
@@ -3074,12 +3079,20 @@
 
           Fáðu vin til að prófa appið þegar það er tilbúið!
       courseA_artist_loops10_authored_hint: []
+      courseA_artist_loops10_2018_authored_hint: []
       courseA_artist_loops11_authored_hint: []
+      courseA_artist_loops11_2018_authored_hint: []
       courseA_artist_loops11_predict2_authored_hint: []
       courseA_artist_loops12_authored_hint: []
+      courseA_artist_loops12_2018_authored_hint: []
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching
           blocks to the `when run` block to see what happens.
+        courseA_artist_loops2_b: Notaðu kubbinn <xml><block type="simple_move_right"/></xml>
+          til að leysa þessa þraut.
+      courseA_artist_loops2_2018_authored_hint:
+        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching
+          blocks to the <xml><block type="when_run"/></xml> block to see what happens.
         courseA_artist_loops2_b: Notaðu kubbinn <xml><block type="simple_move_right"/></xml>
           til að leysa þessa þraut.
       courseA_artist_loops3_authored_hint:
@@ -3089,7 +3102,20 @@
           Þú vilt sennilega nota svona kubb til að leysa þessa þraut.
 
           ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+      courseA_artist_loops3_2018_authored_hint:
+        courseA_artist_loops3_a: Trace slowly through the program with your finger
+          to see where it goes wrong.
+        courseA_artist_loops3_b: |-
+          Þú vilt sennilega nota svona kubb til að leysa þessa þraut.
+
+          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
       courseA_artist_loops4_authored_hint:
+        courseA_artist_loops4_a: Ef þú vilt láta lykkjuna endurtaka sig oftar en 4
+          sinnum, getur þú breytt tölunni efst í kubbnum.
+        courseA_artist_loops4_b: Þar sem þú getur bara notað einn <xml><block type="simple_move_right"/></xml>
+          kubb, ættirðu að prófa að setja hann í <block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="2-6">5</title></block> lykkjuna.
+      courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: Ef þú vilt láta lykkjuna endurtaka sig oftar en 4
           sinnum, getur þú breytt tölunni efst í kubbnum.
         courseA_artist_loops4_b: Þar sem þú getur bara notað einn <xml><block type="simple_move_right"/></xml>
@@ -3102,12 +3128,33 @@
           sinnum, getur þú breytt tölunni efst í kubbnum.
         courseA_artist_loops5_c: "Þar sem þú getur bara notað einn Austur kubb, ættirðu
           að prófa að setja hann í `endurtaka` lykkjuna."
+      courseA_artist_loops5_2018_authored_hint:
+        courseA_artist_loops5_a: Reyndu að nota það sem þú hefur lært um lykkjukubba
+          til að ljúka þessari þraut!
+        courseA_artist_loops5_b: Ef þú vilt láta lykkjuna endurtaka sig oftar en 4
+          sinnum, getur þú breytt tölunni efst í kubbnum.
+        courseA_artist_loops5_c: "Þar sem þú getur bara notað einn Austur kubb, ættirðu
+          að prófa að setja hann í `endurtaka` lykkjuna."
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing
           with the blocks a bit to see what each one draws.
         courseA_artist_loops6_b: "Þú þarft að nota tvo kubba með mismunandi stefnur
           til að leysa þessa þraut."
+      courseA_artist_loops6_2018_authored_hint:
+        courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing
+          with the blocks a bit to see what each one draws.
+        courseA_artist_loops6_b: "Þú þarft að nota tvo kubba með mismunandi stefnur
+          til að leysa þessa þraut."
       courseA_artist_loops7_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+        courseA_artist_loops7_b: Skrifaðu kóðann fyrir eina bylgju fyrst og reyndu
+          svo að endurtaka það til að teikna hinar tvær.
+        courseA_artist_loops7_c: |-
+          Mundu að þú getur sett fleiri en einn kubb inn í <xml><block type="controls_repeat">
+          <title name="TIMES">???</title>
+          </block></xml> ` lykkju.
+      courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
           the code step-by-step and look for a pattern.
         courseA_artist_loops7_b: Skrifaðu kóðann fyrir eina bylgju fyrst og reyndu
@@ -3132,6 +3179,13 @@
           you?
         courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to
           do?  \nWhat does that tell you?"
+      courseA_artist_loops8_2018_authored_hint:
+        courseA_artist_loops8_a: Try running the code to see what has been written
+          for you.
+        courseA_artist_loops8_b: How would you loop the code that has been given to
+          you?
+        courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to
+          do?  \nWhat does that tell you?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: 'You don''t have to delete everything!  Some of the
           code is good. Use it to build the rest of the stairs. '
@@ -3140,7 +3194,16 @@
           lykkjuna."
         courseA_artist_loops9_c: Ef þú sérð ekki hvar á hafa lykkjuna, er ráð að skrifa
           kóðann þrep fyrir þrep og leita svo að endurtekningum.
+      courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: Add another block to the code you are given to draw
+          the rest of the stairs.
+        courseA_artist_loops9_b: "Kubburinn, sem þú bætir við, á að fara inn í \n<xml><block
+          type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>
+          lykkjuna."
+        courseA_artist_loops9_c: Ef þú sérð ekki hvar á hafa lykkjuna, er ráð að skrifa
+          kóðann þrep fyrir þrep og leita svo að endurtekningum.
       courseA_artist_loops_challenge1_authored_hint: []
+      courseA_artist_loops_challenge1_2018_authored_hint: []
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml>
           láta listamanninn færast á ská!'
@@ -3155,8 +3218,41 @@
           to get to the next!
         courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
           of a loop to finish this puzzle.
+      courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml>
+          láta listamanninn færast á ská!'
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice
+          to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside
+          of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: "Þú getur notað `hoppa` kubba til að fara á önnur svæði."
+      courseA_bee_seq1_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_bee_seq10_authored_hint: []
+      courseA_bee_seq11_authored_hint: []
+      courseA_bee_seq12_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_bee_seq13_authored_hint: []
+      courseA_bee_seq14_authored_hint: []
+      courseA_bee_seq2_authored_hint: []
+      courseA_bee_seq3_authored_hint: []
+      courseA_bee_seq4_authored_hint: []
+      courseA_bee_seq5_authored_hint: []
+      courseA_bee_seq6_authored_hint: []
+      courseA_bee_seq7_authored_hint: []
+      courseA_bee_seq8_authored_hint: []
+      courseA_bee_seq9_authored_hint: []
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
@@ -3164,14 +3260,33 @@
         courseA_collector_loops1_b: Einföld lausn væri að fara tvisvar í Austur og
           svo taka fjársjóð.
       courseA_collector_loops10_authored_hint: []
+      courseA_collector_loops10_2018_authored_hint: []
       courseA_collector_loops11_authored_hint: []
+      courseA_collector_loops11_2018_authored_hint: []
       courseA_collector_loops11_predict2_authored_hint: []
+      courseA_collector_loops1_2018_authored_hint:
+        courseA_collector_loops1_a: |-
+          Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Einföld lausn væri að fara tvisvar í Austur og
+          svo taka fjársjóð.
       courseA_collector_loops2_authored_hint:
         courseA_collector_loops2_a: "Þú verður að færa áður en þú getur safnað fjársjóði."
         courseA_collector_loops2_b: |-
           Þegar þú ert á reit með fjársjóði, þá þarftu að muna að nota þennan kubb til að taka hann upp.
           <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018_authored_hint:
+        courseA_collector_loops2_a: "Þú verður að færa áður en þú getur safnað fjársjóði."
+        courseA_collector_loops2_b: |-
+          Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3_authored_hint:
+        courseA_collector_loops3_a: Prófaðu að nota <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> lykkju!
+        courseA_collector_loops3_b: Mundu að þú getur sett fleiri en einn kubb inn
+          í <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> lykkju.
+      courseA_collector_loops3_2018_authored_hint:
         courseA_collector_loops3_a: Prófaðu að nota <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkju!
         courseA_collector_loops3_b: Mundu að þú getur sett fleiri en einn kubb inn
@@ -3183,7 +3298,22 @@
           the number of times that the loop runs.
         courseA_collector_loops4_b: Don't forget that the adventurer needs to walk
           down and collect gold after she finishes the `repeat` loop!
+      courseA_collector_loops4_2018_authored_hint:
+        courseA_collector_loops4_a: To change how far Laurel goes, change the number
+          of times that the loop runs.
+        courseA_collector_loops4_b: Don't forget that Laurel needs to walk down and
+          collect the treasure after she finishes the <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> loop!
       courseA_collector_loops5_authored_hint:
+        courseA_collector_loops5_a: If you can't figure out the answer right away,
+          try using a piece of paper to figure out what arrows you will need and look
+          for a pattern.
+        courseA_collector_loops5_b: Prófaðu að kljúfa verkefnið í 2 hluta, fara til
+          hliðar og svo niður.
+        courseA_collector_loops5_c: Þú ættir að byrja á <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> lykkju sem færir Láru
+          í vestur og safnar fjársjóði.
+      courseA_collector_loops5_2018_authored_hint:
         courseA_collector_loops5_a: If you can't figure out the answer right away,
           try using a piece of paper to figure out what arrows you will need and look
           for a pattern.
@@ -3197,12 +3327,27 @@
           code a couple of times to see what happens.
         courseA_collector_loops6_b: Stysta lausnin hefur tvær <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkjur í röð.
+      courseA_collector_loops6_2018_authored_hint:
+        courseA_collector_loops6_a: Can't figure out what's wrong? Try running the
+          code a couple of times to see what happens.
+        courseA_collector_loops6_b: Stysta lausnin hefur tvær <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> lykkjur í röð.
       courseA_collector_loops7_authored_hint:
+        courseA_collector_loops7_a: If you can't figure out what comes next, try running
+          the code to see where Laurel ends up.
+      courseA_collector_loops7_2018_authored_hint:
         courseA_collector_loops7_a: If you can't figure out what comes next, try running
           the code to see where Laurel ends up.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: If you are having trouble figuring this puzzle
           out, try writing the moves down on a piece of paper and look for a pattern.
+        courseA_collector_loops8_b: Prófaðu að skipta þessari þraut í 3 aðskilin verkefni
+          og skrifa lykkjur fyrir hvert.
+        courseA_collector_loops8_c: Mundu að þú getur skrifað kóðann eitt skref í
+          einu og svo keyrt hann til að sjá hvað þarf að gera næst.
+      courseA_collector_loops8_2018_authored_hint:
+        courseA_collector_loops8_a: If you are having trouble figuring this puzzle
+          out, try writing the moves down on a piece of paper and looking for a pattern.
         courseA_collector_loops8_b: Prófaðu að skipta þessari þraut í 3 aðskilin verkefni
           og skrifa lykkjur fyrir hvert.
         courseA_collector_loops8_c: Mundu að þú getur skrifað kóðann eitt skref í
@@ -3213,7 +3358,35 @@
         courseA_collector_loops9_b: Prófaðu að setja 2 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> lykkjur innan í aðra
           lykkju svo kóðinn þinn verði styttri!
+      courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: 'If you can''t spot the best places to use loops,
+          try coding it out step-by-step and look for a pattern. '
+        courseA_collector_loops9_b: Prófaðu að setja 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> lykkjur innan í aðra
+          lykkju svo kóðinn þinn verði styttri!
       courseA_collector_loops_challenge1_authored_hint:
+        courseA_collector_loops_challenge1_a: Prófaðu að breyta tölunum í hverri lykkju
+          ef eitthvað fer úrskeiðis.
+        courseA_collector_loops_challenge1_b: "Þú þarft ekki að nota lykkju ef þú
+          ert að gera eitthvað bara einu sinni."
+        courseA_collector_loops_challenge1_c: "Þar eru 6 eðalsteinar hægra megin í
+          hellinum, en þú þarft bara að færa og safna 5 sinnum. Veistu af hverju?"
+        courseA_collector_loops_challenge1_d: |-
+          Forritið, sem byrjað er með, safnar ekki síðustu 2 gersemenum. Prófaðu að bæta þessum kóða við alveg síðast:
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Prófaðu að breyta tölunum í hverri lykkju
           ef eitthvað fer úrskeiðis.
         courseA_collector_loops_challenge1_b: "Þú þarft ekki að nota lykkju ef þú
@@ -3246,6 +3419,10 @@
         courseA_collector_loops_challenge2kp_b: Prófaðu þessa slóð til að finna lausn.
         courseA_collector_loops_challenge2kp_a: Getur þú notað lykkjur til að leysa
           þessa þraut?
+      courseA_collector_loops_challenge2kp_2018_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Prófaðu þessa slóð til að finna lausn.
+        courseA_collector_loops_challenge2kp_a: Getur þú notað lykkjur til að leysa
+          þessa þraut?
       courseA_collector_preLoops1_authored_hint: []
       courseA_collector_preLoops2_authored_hint: []
       courseA_collector_preLoops3_authored_hint: []
@@ -3263,6 +3440,27 @@
           Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.
           <xml>  <block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: []
+      courseA_harvester_seq1_authored_hint:
+        courseA_harvester_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq12_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_harvester_seq2_authored_hint: []
+      courseA_harvester_seq3_authored_hint: []
+      courseA_harvester_seq4_authored_hint: []
+      courseA_harvester_seq5_authored_hint: []
+      courseA_harvester_seq6_authored_hint: []
+      courseA_harvester_seq7_authored_hint: []
+      courseA_harvester_seq8_authored_hint: []
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
           If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>
@@ -3275,8 +3473,14 @@
           on a piece of paper first.
         courseA_maze_seq10_b: You will need to go three different directions to solve
           this puzzle.
+      courseA_maze_seq10_2018_authored_hint:
+        courseA_maze_seq10_a: If you're having trouble, try writing down the steps
+          on a piece of paper first.
+        courseA_maze_seq10_b: You will need to go 3 directions to solve this puzzle.
       courseA_maze_seq11_authored_hint: []
+      courseA_maze_seq11_2018_authored_hint: []
       courseA_maze_seq12_authored_hint: []
+      courseA_maze_seq12_2018_authored_hint: []
       courseA_maze_seq12_predict2_authored_hint: []
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to
@@ -3287,9 +3491,31 @@
         courseA_maze_seq13_c: |-
           Kubbarnir <xml><block type="maze_moveNorth"/></xml>
           <xml><block type="maze_moveEast"/></xml> hjálpa þér að nálgast svínið.
+      courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_a: If the path you need is unclear, use your finger to
+          trace your way from the bird to the pig.
+        courseA_maze_seq13_b: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum
+          og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki
+          hafa klárað lausnina.
+        courseA_maze_seq13_c: |-
+          Kubbarnir <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml> hjálpa þér að nálgast svínið.
+      courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>
+          <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          The bird will need to move West 3 times to get to the pig. Use this block:
+          <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: This program is missing one block. Can you figure out
           which one?
+        courseA_maze_seq2_b: Prófaðu að keyra kóðann fyrst til að sjá hvert fuglinn
+          fer. Hvert þarf hann að fara næst?
+      courseA_maze_seq2_2018_authored_hint:
+        courseA_maze_seq2_a: This program is missing 1 block. Can you figure out which
+          one?
         courseA_maze_seq2_b: Prófaðu að keyra kóðann fyrst til að sjá hvert fuglinn
           fer. Hvert þarf hann að fara næst?
       courseA_maze_seq2_predict1_authored_hint: []
@@ -3300,7 +3526,19 @@
           fer út af sporinu. Er það í fyrsta þrepi? Eða öðru?
         courseA_maze_seq3_c: Þessi <xml><block type="maze_moveNorth"/></xml> kubbur
           virðist ekki færa fuglinn í rétta átt. Getur þú sett annan kubb í staðinn?
+      courseA_maze_seq3_2018_authored_hint:
+        courseA_maze_seq3_a: 1 of the blocks is moving the bird in the wrong direction.
+          Can you figure out which one and replace it with the correct block?
+        courseA_maze_seq3_b: Prófaðu að nota "Þrep" hnappinn til að sjá hvar forritið
+          fer út af sporinu. Er það í fyrsta þrepi? Eða öðru?
+        courseA_maze_seq3_c: Þessi <xml><block type="maze_moveNorth"/></xml> kubbur
+          virðist ekki færa fuglinn í rétta átt. Getur þú sett annan kubb í staðinn?
       courseA_maze_seq4_authored_hint:
+        courseA_maze_seq4_a: If you are having trouble, try to figure out what the
+          correct path is and then remove the block that doesn't fit.
+        courseA_maze_seq4_b: Prófaðu að keyra kóðann eins og hann er. Hvar fer eitthvað
+          úrskeiðis? Hvaða kubb getur þú fjarlægt?
+      courseA_maze_seq4_2018_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the
           correct path is and then remove the block that doesn't fit.
         courseA_maze_seq4_b: Prófaðu að keyra kóðann eins og hann er. Hvar fer eitthvað
@@ -3312,8 +3550,15 @@
       courseA_maze_seq5_authored_hint:
         courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
         courseA_maze_seq5_b: "Þú þarft tvo kubba, sem vísa í 2 áttir."
+      courseA_maze_seq5_2018_authored_hint:
+        courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
+        courseA_maze_seq5_b: "Þú þarft tvo kubba, sem vísa í 2 áttir."
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have three movement blocks.
+        courseA_maze_seq6_b: Ef þú festist er ráð að reyna að skipta þrautinni í það
+          sem gerist á undan horninu og það sem gerist eftir hornið.
+      courseA_maze_seq6_2018_authored_hint:
+        courseA_maze_seq6_a: Your final code should have 3 movement blocks.
         courseA_maze_seq6_b: Ef þú festist er ráð að reyna að skipta þrautinni í það
           sem gerist á undan horninu og það sem gerist eftir hornið.
       courseA_maze_seq7_authored_hint:
@@ -3321,7 +3566,15 @@
           to the pig.
         courseA_maze_seq7_b: If you can't figure out what to do, try drawing the puzzle
           on paper and use your finger to figure out which way to move.
+      courseA_maze_seq7_2018_authored_hint:
+        courseA_maze_seq7_a: There is 1 block that you need to add to move the bird
+          to the pig.
+        courseA_maze_seq7_b: If you can't figure out what to do, try drawing the puzzle
+          on paper and use your finger to figure out which way to move.
       courseA_maze_seq8_authored_hint:
+        courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see
+          how the bird should move.
+      courseA_maze_seq8_2018_authored_hint:
         courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see
           how the bird should move.
       courseA_maze_seq9_authored_hint:
@@ -3330,10 +3583,22 @@
           kóðann, sem þú fékkst gefins, og sjá hvar hann er að bila.
         courseA_maze_seq9_c: "Þú þarft að færast í þrjár mismunandi áttir til að leysa
           þessa þraut."
+      courseA_maze_seq9_2018_authored_hint:
+        courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
+        courseA_maze_seq9_b: Ef þú ert ekki viss um hvað á að gera, er ráð að keyra
+          kóðann, sem þú fékkst gefins, og sjá hvar hann er að bila.
+        courseA_maze_seq9_c: "Þú þarft að færast í þrjár mismunandi áttir til að leysa
+          þessa þraut."
       courseA_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge1_a: Sumar slóðir munu leiða til TNT, ef þú ferð
           of langt.
+      courseA_maze_seq_challenge1_2018_authored_hint:
+        courseA_maze_seq_challenge1_a: Sumar slóðir munu leiða til TNT, ef þú ferð
+          of langt.
       courseA_maze_seq_challenge2_authored_hint:
+        courseA_maze_seq_challenge2_a: Prófaðu að telja reitina með puttanum. Mundu
+          að sleppa reitnum þar sem þú byrjar!
+      courseA_maze_seq_challenge2_2018_authored_hint:
         courseA_maze_seq_challenge2_a: Prófaðu að telja reitina með puttanum. Mundu
           að sleppa reitnum þar sem þú byrjar!
       courseA_playLab_events2_authored_hint:
@@ -3352,7 +3617,33 @@
           </next>
           </block>
           </xml>
+      courseA_playLab_events2_2018_authored_hint:
+        courseA_playLab_events2_a: Look for a block that that makes the dog say something.
+        courseA_playLab_events2_b: |-
+          Þetta er kóðinn sem þú þarft til að ljúka þessari þraut:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Halló</title>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseA_playLab_events3_authored_hint:
+        courseA_playLab_events3_a: |-
+          Drag this block  <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml> out and snap it to the bottom of <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Mundu að nota vinstri örina til að færa Jorge að
+          flagginu eftir að þú hefur lokið við að skrifa forritið. Þegar flaggið verður
+          grænt hefur þú klárað þetta!
+      courseA_playLab_events3_2018_authored_hint:
         courseA_playLab_events3_a: |-
           Drag this block  <xml><block type="studio_move">
           <title name="SPRITE">1</title>
@@ -3381,6 +3672,24 @@
           <title name="SPRITE">1</title>
           <title name="DIR">2</title>
           </block></next></block></xml>
+      courseA_playLab_events4_2018_authored_hint:
+        courseA_playLab_events4_a: |-
+          Here is the event block that you will need to get Jorge to move right:
+
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></xml>
+        courseA_playLab_events4_b: |-
+          This is the code you will need to complete this puzzle:
+
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
       courseA_playLab_events5_authored_hint:
         courseA_playLab_events5_a: "Here are the event blocks that you will need to
           use to move Jorge up and down:\n\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\nand
@@ -3389,7 +3698,35 @@
           Veistu að þú getur breytt því hvaða lykill tengist atburðarörinni með því að smella á myndina á kubbnum og velja nýjan lykil?
 
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018_authored_hint:
+        courseA_playLab_events5_a: "Here are the event blocks that you will need to
+          use to move Jorge up and down:\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\nand \n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Veistu að þú getur breytt því hvaða lykill tengist atburðarörinni með því að smella á myndina á kubbnum og velja nýjan lykil?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events6_authored_hint:
+        courseA_playLab_events6_a: |-
+          Here is the event block that you would use to have Jorge do something when clicked:
+
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
+        courseA_playLab_events6_b: |-
+          Here is the block you would use to change the background:
+
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
+        courseA_playLab_events6_c: |-
+          Here is the block you would use to play a random sound:
+
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
+      courseA_playLab_events6_2018_authored_hint:
         courseA_playLab_events6_a: |-
           Here is the event block that you would use to have Jorge do something when clicked:
 
@@ -3416,8 +3753,42 @@
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
+      courseA_playLab_events7_2018_authored_hint:
+        courseA_playLab_events7_a: |-
+          Notaðu þennan kubb til að stjórna því hvað gerist þegar leikmennirnir rekast á.
+
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_playlab_challengeTemplate_authored_hint: []
       courseA_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar
+          þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú
+          smellir á Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega
+          þú smellir á Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Láttu vélmennið Spiff birtast þegar
+          þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Láttu loks galdrakarlinn Wendel birtast
+          þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018_authored_hint:
         courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar
           þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
@@ -3479,6 +3850,41 @@
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n<xml> \n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Þú getur látið reitt skrímsli urra.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_2018_authored_hint:
         courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n<xml> \n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
           \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
@@ -4152,6 +4558,7 @@
         courseB_starWars_prog9_c: Ekki hræðast að gera mistök! Prófaðu að bæta við
           kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
+      courseC_PlayLab_embed_events9_authored_hint: []
       courseC_PlayLab_events1_authored_hint:
         courseC_PlayLab_events1_a: |-
           Tengdu þennan kubb við `þegar keyrt` kubbinn:
@@ -5169,6 +5576,7 @@
           Það eru aðeins nokkrar rangar línur í upphaflega forritinu. Ef ein nálgun virkar ekki, er best að fara til baka og reyna aftur. Það er til lausn!
       courseD_artist_embed_frozen_authored_hint: []
       courseD_artist_embed_frozen2_authored_hint: []
+      courseD_artist_embedded_project1a_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -5388,6 +5796,7 @@
         courseD_artist_project2_b: Eftir að þú teiknar og færir í fyrsta skipti, getur
           þú endurtekið kóðann með því að setja lykkju utan um hann.
       courseD_artist_project2Template_authored_hint: []
+      courseD_artist_project2Template_2018_authored_hint: []
       courseD_artist_project2_2018_authored_hint:
         courseD_artist_project2_a: Mundu að `færa áfram` teiknar línu, en `hoppa fram`
           gerir það ekki.
@@ -5476,6 +5885,7 @@
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_projectTemplate_authored_hint: []
+      courseD_artist_projectTemplate_2018_authored_hint: []
       courseD_artist_project_embedded_authored_hint: []
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: Teiknaðu hlið með því að nota `færa áfram 100 díla`
@@ -6767,6 +7177,7 @@
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
+      courseD_playLab_embed_cond6a_authored_hint: []
       courseD_playLab_embedded_authored_hint: []
       courseD_scrat_predict1_authored_hint: []
       courseD_scrat_predict1_2018_authored_hint: []
@@ -7953,6 +8364,7 @@
           * Látið risaeðluna segja eitthvað.
           * Skipt um bakgrunn.
           * Látið alla leikmenn hverfa og birt skilaboðin "Leik lokið!"
+      courseE_playLab_embed_scaffold5_authored_hint: []
       courseE_playLab_scaffold1_authored_hint:
         courseE_playLab_scaffold1_a: Kubburinn `stilla leikmann 1 á ??? mynd` er notaður
           til að bæta leikmanni á sviðið.
@@ -12703,6 +13115,11 @@
           2) Play a random sound when you click the actor.
 
           Now, make sure both of those actions are attached underneath the same event!
+      harvester_Kahoot_authored_hint:
+        courseE_farmer_functions1a_a: Think through the `if/else` statements step
+          by step. What should you do if you are standing at a corn plant?
+        courseE_farmer_functions1a_b: Notaðu `endurtaka þar til` kubb til að komast
+          til graskersins!
       harvey_snowflake_artist1_authored_hint: []
       harvey_snowflake_artist2_authored_hint: []
       harvey_tictactoe_authored_hint:
@@ -12800,6 +13217,7 @@
         iceage_throw_hearts_b: Til að gera ömmu glaða þegar hún fær hjarta verður
           þú að tengja kubbinn `hafa leikmann 2 í góðu skapi` neðan á atburðinn `þegar
           leikmaður 2 snertir sendingu`.
+      iceage_warn_embed_ice_age_authored_hint: []
       iceage_warn_ice_age_authored_hint:
         iceage_warn_ice_age_a: "Þú þarft aðeins að bæta við tveimur kubbum til að
           koma þessari þraut í rétt horf. "

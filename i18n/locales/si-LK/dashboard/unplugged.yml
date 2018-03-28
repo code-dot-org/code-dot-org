@@ -163,9 +163,6 @@ si:
       CollisionDetection:
         title: ගැටීම අණාවරණය සහ පයිතගරස් ප්රමේයය
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -304,3 +301,18 @@ si:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
+        desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
+      UnplugHappyMaps_2018:
+        title: සතුටු සිතියම්
+        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+      GoingPlacesSafely_2018:
+        title: තැන්වලට සුරක්ෂිතව යාම
+        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: විශාල සිදුවීම
+        desc: Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.

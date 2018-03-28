@@ -160,9 +160,10 @@
           e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
         title: Gli Eventi
-        desc: |-
-          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\r
-          In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
+          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
+          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
         title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
@@ -204,10 +205,7 @@
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
       DiceRace:
-        title: |-
-          https://studio.code.org/s/course3/stage/10/puzzle/1
-
-          Algoritmi della Vita Reale: Gara con i Dadi
+        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo
           contesto, gli studenti devono identificare e scrivere l'algoritmo per un
           gioco con i dadi.
@@ -301,17 +299,14 @@
           il teorema di Pitagora e la formula per la distanza possono essere utilizzati
           per misurare la distanza tra due punti sul piano e poi decidere quando questi
           due punti o personaggi del gioco si toccano.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       courseB_unplugged_MRF:
-        title: Attività Tradizionale
-        desc: In this lesson, you will 'program' your friends!
+        title: 'Attività Tradizionale: I Miei Amici Robotici'
+        desc: In questa lezione, "programmerai" i tuoi amici!
       courseB_unplugged_loopyMRF:
-        title: Attività Tradizionale
+        title: 'Attività Tradizionale: I Miei Ciclici Amici Robotici'
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
@@ -321,7 +316,7 @@
         title: Attività Tradizionale
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Cittadinanza Digitale - Dati Personali
+        title: 'Cittadinanza Digitale: Dati Personali'
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
@@ -345,9 +340,10 @@
           introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
         title: Gli Eventi
-        desc: |-
-          Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno.\r
-          In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
+          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
+          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua Impronta Digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
@@ -522,3 +518,26 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmi della Vita Reale: Piantare un Seme'
+        desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
+          come esempio l'atto del piantare un seme. Viene discussa anche una visione
+          più generale dell'informatica  e il fatto che gli algoritmi ne sono una
+          parte essenziale.
+      UnplugHappyMaps_2018:
+        title: Mappe Felici
+        desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per
+          spostare un personaggio attraverso un labirinto utilizzando un solo comando.
+      GoingPlacesSafely_2018:
+        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
+          introduce come navigare su Internet in modo sicuro.
+      courseA_unplugged_loops_2018:
+        title: 'Cicli: Lezioni Tradizionali'
+        desc: In questa lezione, si parlerà di cicli!
+      BigEvent_2018:
+        title: Gli Eventi
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
+          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
+          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.

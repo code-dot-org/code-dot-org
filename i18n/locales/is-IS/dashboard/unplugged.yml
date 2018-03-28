@@ -163,9 +163,6 @@ is:
       CollisionDetection:
         title: Skynjun árekstra og regla Pýþagórasar
         desc: Það er mikilvægur þáttur í flestum leikjum að skynja hvenær hlutir á skjánum snertast. Í þessari námseiningu munum við skoða hvernig regla Pýþagórasar og fjarlægðarformúlan nýtast til að mæla fjarlægðina milli tveggja punkta á skjánum og hvernig við ákveðum hvort þessi tveir punktar (eða leikverur) snertist.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Lykkjur án tölvu
         desc: Í þessum tíma munt þú læra um lykkjur!
@@ -304,3 +301,18 @@ is:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algrím úr raunheimi: Sá fræi'
+        desc: Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki.
+      UnplugHappyMaps_2018:
+        title: Krúttleg kort
+        desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern ferðast um völundarhús með einni skipun.
+      GoingPlacesSafely_2018:
+        title: Ferðast í öryggi
+        desc: Internetið er öflugur en stundum hættulegur staður. Kennarar kynna hvernig þarf að passa sig þegar farið er um netið.
+      courseA_unplugged_loops_2018:
+        title: Lykkjur án tölvu
+        desc: Í þessum tíma munt þú læra um lykkjur!
+      BigEvent_2018:
+        title: Stórviðburður
+        desc: Nemendur fá kynningu á forritunarhugtakinu "atvik" sem eru aðgerðir sem tölvan er stöðugt að vakta. Kennarinn ýtir á hnapp á pappírsfjarstýringu og nemendur bregðast mismunandi við eftir því á hvaða hnapp var ýtt.

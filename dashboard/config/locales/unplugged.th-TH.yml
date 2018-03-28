@@ -259,9 +259,6 @@
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -471,3 +468,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+        desc: This lesson calls out ways we use algorithms in our daily lives, using
+          the act of planting a seed as an example. It also focuses on the bigger
+          picture of computer science and how algorithms play an essential part.
+      UnplugHappyMaps_2018:
+        title: "แผนที่แห่งความสุข"
+        desc: Students create simple algorithms (sets of instructions) to move a character
+          through a maze using a single command.
+      GoingPlacesSafely_2018:
+        title: Going Places Safely
+        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
+          introduce how to stay safe while navigating the Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: "เหตุการณ์ใหญ่"
+        desc: Students are introduced to the programming concept of "events," which
+          are actions that a computer constantly monitors for. The teacher will press
+          buttons on a paper remote and students will react depending on which button
+          is pressed.

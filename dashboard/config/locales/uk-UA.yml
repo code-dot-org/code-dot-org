@@ -15,14 +15,14 @@
     errors:
       messages:
         blank: "необхідне"
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: "необхідні"
+        invalid_plural: "недійсні"
     attributes:
       user:
         name: "Ім'я користувача"
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "Електронна пошта"
-        parent_email: Parent/guardian email
+        parent_email: "Електронна пошта батьків/опікуна"
         personal_email: Personal email address
         username: "ім'я користувача"
         password: "пароль"
@@ -96,10 +96,10 @@
     forgot_password: "Забули свій пароль?"
     need_confirmation: "Не отримали вказівок підтвердження?"
     need_unlock: "Не отримали вказівок розблокування?"
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
-    use_clever: Sorry, your Code.org account is not linked to your %{provider}. Please
-      sign in through your Clever Portal instead.
+    not_linked: "Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Вам
+      доведеться увійти, набравши свій пароль нижче."
+    use_clever: "Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Будь
+      ласка, увійдіть через ваш Clever Portal замість цього."
   signup_form:
     student_count: "%{count} учнів вже зареєструвались."
     teacher_count: "%{count} вчителів вже зареєструвались."
@@ -237,7 +237,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: "Таємне слово"
       email: "Електронна пошта"
       google_classroom: Google Classroom
       clever: Clever
@@ -1113,32 +1113,34 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
-    main_course: Main Course
-    extra_course_content: Extra Course Content
+    main_course: "Головний курс"
+    extra_course_content: "Додатковий вміст курсу"
     csf_e_1: Ramp Up to Course E (Optional)
-    csf_e_2: Course E Content
+    csf_e_2: "Зміст курсу E"
     csf_f_1: Ramp Up to Course F (Optional)
-    csf_f_2: Course F Content
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
+    csf_f_2: "Зміст курсу F"
+    csd1_1: "Глава 1: Процес вирішення проблем"
+    csd1_2: "Глава 2: Комп'ютери та вирішення проблем"
+    csd2_1: "Глава 1: Веб-контент та HTML"
+    csd2_2: "Глава: Стилізація та CSS"
+    csd3_1: "Глава 1: Зображення та анімації"
+    csd3_2: "Глава 2: Побудова ігор"
+    csd4_1: |-
+      Глава 1: Використуйте
+      Центрований дизайн
+    csd4_2: "Глава 2: Прототипування додатків"
+    csd5_1: "Глава 1: Представлення інформації"
+    csd5_2: "Глава 2: Вирішення проблем із даними"
+    csd6_1: "Глава 1: Програмування з обладнанням"
+    csd6_2: "Глава 2: Побудова фізичних прототипів"
+    csp1_1: "Глава 1: Представлення та передача інформації"
+    csp1_2: "Глава 2: Винайти інтернет"
+    csp2_1: "Глава 1: Кодування та стиснення складної інформації"
+    csp2_2: "Глава 2. Маніпулювання та візуалізація даних"
+    csp3_1: "Глава 1: Мови програмування та алгоритми"
+    csp4_1: "Глава 1: Світ великих даних та шифрування"
+    csp5_1: "Глава 1: Програмування, кероване подіями"
+    csp5_2: "Глава 2: Програмування з структурами даних"
     cspSurvey: Survey
     cspAssessment: Chapter Assessment
     csp_ap_1: 'Chapter 1: AP Tech Setup'

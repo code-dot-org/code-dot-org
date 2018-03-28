@@ -163,9 +163,6 @@ nn:
       CollisionDetection:
         title: Oppdage kollisjon og Pytagoras læresetning
         desc: Å finne ut når objekter på skjermen rørar kverandre er eit viktig aspekt i dei fleste videospel. No skal vi sjå på korleis Pythagoras læresetning og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter på eit plan, og så avgjøre om dei to punkta (eller spelefigurane) rører kvarandre.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgåve skal du lære om løkker!
@@ -304,3 +301,18 @@ nn:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Verkelege algoritmar: Plante eit frø'
+        desc: Denne oppgåva viser korleis vi bruker algoritmer i dagleglivet, her med det å plante eit frø som døme. Den fokuserer og på det større biletet av informatikk og korleis algoritmer er ein viktig del av det.
+      UnplugHappyMaps_2018:
+        title: Glade Kart
+        desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte ein figur gjennom ein labyrint med berre ein kommando.
+      GoingPlacesSafely_2018:
+        title: Går stader trygt
+        desc: Internettet er ein mektig, men nokre gongar ein farleg stad. Lærarar introduserer korleis du skal vere trygg når du navigerer på nettet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: I denne oppgåve skal du lære om løkker!
+      BigEvent_2018:
+        title: Den store hendinga
+        desc: Eleven blir introdusert for programmeringskonseptet "hending" som er handlingar som datamaskina overvåkar. Læraren trykker på knappar på ein papirfjernkontroll og elevane svarer basert på kva knapp som er trykka på.

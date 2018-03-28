@@ -163,9 +163,6 @@ es-MX:
       CollisionDetection:
         title: Detección de colisiones y el teorema de Pitágoras
         desc: Determinar cuándo los objetos en la pantalla táctil es un aspecto importante de la mayoría de los juegos. En esta lección analizaremos cómo la fórmula de la distancia y el teorema de Pitágoras se pueden utilizar para medir la distancia entre dos puntos en el avión y luego decidir si se tocan los dos puntos (o juego de caracteres).
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -304,3 +301,18 @@ es-MX:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algoritmos de la vida real: Planta una semilla'
+        desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
+      UnplugHappyMaps_2018:
+        title: Mapas felices
+        desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones) para mover un personaje a través de un laberinto utilizando un solo comando.
+      GoingPlacesSafely_2018:
+        title: Ir a sitios seguros
+        desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros muestran cómo mantenerse a salvo mientras se navega en Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: El gran evento
+        desc: Se presenta a los estudiantes el concepto de "eventos" en programación, que son acciones que una computadora monitoréa constántemente. El profesor presionará botones en un control remoto de papel y los estudiantes reaccionarán dependiendo de qué botón se presiona.

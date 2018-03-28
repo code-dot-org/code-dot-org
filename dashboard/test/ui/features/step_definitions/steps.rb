@@ -1,3 +1,5 @@
+require 'cdo/url_converter'
+
 # coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
@@ -38,25 +40,12 @@ def page_load(wait_until_unload)
 end
 
 def replace_hostname(url)
-  if ENV['DASHBOARD_TEST_DOMAIN']
-    raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
-    url = url.
-      gsub(/\/\/studio.code.org\//, "//" + ENV['DASHBOARD_TEST_DOMAIN'] + "/")
-  end
-  if ENV['PEGASUS_TEST_DOMAIN']
-    url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
-  end
-  if ENV['HOUROFCODE_TEST_DOMAIN']
-    url = url.gsub(/\/\/hourofcode.com\//, "//" + ENV['HOUROFCODE_TEST_DOMAIN'] + "/")
-  end
-  if ENV['CSEDWEEK_TEST_DOMAIN']
-    url = url.gsub(/\/\/csedweek.org\//, "//" + ENV['CSEDWEEK_TEST_DOMAIN'] + "/")
-  end
-
-  # Convert http to https
-  url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
-  # Convert x.y.code.org to x-y.code.org
-  url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
+  UrlConverter.new(
+    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
+    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
+    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
+    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN']
+  ).replace_origin(url)
 end
 
 # When an individual step fails in a call to steps, one gets no feedback about
@@ -146,10 +135,6 @@ end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
-end
-
-When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
-  wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
 
 def jquery_is_element_visible(selector)
@@ -992,44 +977,6 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
-end
-
-And(/^I give user "([^"]*)" project validator permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::PROJECT_VALIDATOR
-  user.save!
-end
-
-Then(/^I remove featured projects from the gallery$/) do
-  require_rails_env
-  FeaturedProject.delete_all
-end
-
-Then(/^I make a playlab project named "([^"]*)"$/) do |name|
-  steps %Q{
-    Then I am on "http://studio.code.org/projects/playlab/new"
-    And I get redirected to "/projects/playlab/([^\/]*?)/edit" via "dashboard"
-    And I wait for the page to fully load
-    And element "#runButton" is visible
-    And element ".project_updated_at" eventually contains text "Saved"
-    And I click selector ".project_edit"
-    And I type "#{name}" into "input.project_name"
-    And I click selector ".project_save"
-    And I wait until element ".project_edit" is visible
-    Then I should see title "#{name} - Play Lab"
-    And I press "#runButton" using jQuery
-    And I wait until element ".project_updated_at" contains text "Saved"
-    And I wait until initial thumbnail capture is complete
-  }
-end
-
-Then(/^I publish the project$/) do
-  steps %Q{
-    Given I open the project share dialog
-    And the project is unpublished
-    When I publish the project from the share dialog
-  }
 end
 
 And(/^I save the section url$/) do

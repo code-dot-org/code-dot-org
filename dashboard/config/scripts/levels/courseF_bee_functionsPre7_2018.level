@@ -41,6 +41,7 @@
     "markdown_instructions": "Now try building a function to solve this maze.  How is it different from last time?  \r\n\r\nTurn left at the honeycomb and right at the flowers.  \r\n**Note:** Some corners are unmarked!",
     "shape_shift": "false",
     "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

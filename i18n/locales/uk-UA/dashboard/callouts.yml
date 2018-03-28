@@ -40,6 +40,9 @@ uk:
       AppLab Intro 7 - thisOrThatAddButton_callout:
         AppLabHoCFinal11: You're now in Design Mode.
       AppLab_test02_callout: [ ]
+      Applab AllTheThings ResourcesTab AllResources_callout: [ ]
+      Applab AllTheThings ResourcesTab MapReference_callout: [ ]
+      Applab AllTheThings ResourcesTab ReferenceLinks_callout: [ ]
       Applab test_callout: [ ]
       Big Game Animation 1 (copy 1)_callout: [ ]
       Big Game Animation 1_callout: [ ]
@@ -84,39 +87,75 @@ uk:
       Big Game Vars 4_callout: [ ]
       CSD U3 - complex - compound conditionals_callout: [ ]
       CSD U3 - complex - key up and down_callout: [ ]
+      CSD U3 - complex - key up and down_2018_callout: [ ]
       CSD U3 - complex - mouse down_callout: [ ]
+      CSD U3 - complex - mouse down_2018_callout: [ ]
       CSD U3 - complex - mouse move_callout: [ ]
+      CSD U3 - complex - mouse move_2018_callout: [ ]
       CSD U3 - complex - nested conditional_callout: [ ]
+      CSD U3 - conditionals - first conditional 2-2018_callout: [ ]
       CSD U3 - conditionals - first conditional 2_callout: [ ]
+      CSD U3 - conditionals - first conditional 2_2018_callout: [ ]
       CSD U3 - conditionals - first conditional_callout: [ ]
+      CSD U3 - conditionals - first conditional_2018_callout: [ ]
       CSD U3 - conditionals - transition 2_callout: [ ]
       CSD U3 - conditionals - transition_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2018_callout:
+        CSD_U3_L8_S6_C1: Put the console log statement here
       CSD U3 - images - first sprite with image_callout: [ ]
       CSD U3 Boolean Modify_callout: [ ]
+      CSD U3 Boolean Modify_2018_callout: [ ]
       CSD U3 Boolean Predict_callout: [ ]
+      CSD U3 Boolean Predict_2018_callout: [ ]
       CSD U3 Compound Nested Challenge_callout: [ ]
+      CSD U3 Compound Nested Challenge_2018_callout: [ ]
       CSD U3 Compound Nested Examples_callout: [ ]
       CSD U3 Conditional Project_callout: [ ]
+      CSD U3 Conditionals Apple 2-2018_callout: [ ]
       CSD U3 Conditionals Apple 2_callout: [ ]
+      CSD U3 Conditionals Apple 2_2018_callout: [ ]
+      CSD U3 Conditionals Apple-2018_callout: [ ]
       CSD U3 Conditionals Apple_callout: [ ]
+      CSD U3 Conditionals Apple_2018_callout: [ ]
       CSD U3 Diagonal Movement_callout: [ ]
+      CSD U3 Diagonal Movement_2018_callout: [ ]
+      CSD U3 Direction Animations-2018_callout: [ ]
       CSD U3 Direction Animations_callout: [ ]
+      CSD U3 Direction Animations_2018_callout: [ ]
+      CSD U3 Direction Arrows-2018_callout: [ ]
       CSD U3 Direction Arrows_callout: [ ]
+      CSD U3 Direction Arrows_2018_callout: [ ]
       CSD U3 Draw Loop Plugged update your scene_callout: [ ]
+      CSD U3 Draw Loop Plugged update your scene_2018_callout: [ ]
       CSD U3 Drawing Squares to Corners_callout: [ ]
+      CSD U3 Drawing Squares to Corners_2018_callout: [ ]
       CSD U3 Else_callout: [ ]
+      CSD U3 Else_2018_callout: [ ]
       CSD U3 If Else_callout: [ ]
+      CSD U3 If Else_2018_callout: [ ]
+      CSD U3 Keyboard Input Challenge-2018_callout: [ ]
       CSD U3 Keyboard Input Challenge_callout: [ ]
+      CSD U3 Keyboard Input Challenge_2018_callout: [ ]
+      CSD U3 Keypress Boolean-2018_callout: [ ]
       CSD U3 Keypress Boolean_callout: [ ]
+      CSD U3 Keypress Boolean_2018_callout: [ ]
       CSD U3 Keypress Watchers_callout: [ ]
+      CSD U3 Keypress Watchers_2018_callout: [ ]
       CSD U3 L11 Freeplay_callout: [ ]
+      CSD U3 L11 Freeplay_2018_callout: [ ]
       CSD U3 L12 Freeplay_callout: [ ]
+      CSD U3 L12 Freeplay_2018_callout: [ ]
       CSD U3 L13 Freeplay_callout: [ ]
+      CSD U3 L13 Freeplay_2018_callout: [ ]
       CSD U3 L3 Freeplay_callout: [ ]
+      CSD U3 L3 Freeplay_2018_callout: [ ]
       CSD U3 L4 Freeplay_callout: [ ]
+      CSD U3 L4 Freeplay_2018_callout: [ ]
       CSD U3 L6 Freeplay_callout: [ ]
+      CSD U3 L6 Freeplay_2018_callout: [ ]
       CSD U3 L7 Freeplay_callout: [ ]
+      CSD U3 L7 Freeplay_2018_callout: [ ]
       CSD U3 Property Conditional Multi_callout: [ ]
       CSD U3 Property Conditional_callout: [ ]
       CSD U3 Random Choice_callout: [ ]
@@ -124,30 +163,55 @@ uk:
       CSD U3 Random Min Max_callout: [ ]
       CSD U3 Simple Drawing - Animation 2_callout: [ ]
       CSD U3 Sprites anitab 1_callout: [ ]
+      CSD U3 Sprites anitab 1_2018_callout: [ ]
       CSD U3 Sprites intro debug_callout: [ ]
+      CSD U3 Sprites intro debug_2018_callout: [ ]
       CSD U3 Sprites intro predict_callout: [ ]
+      CSD U3 Sprites intro predict_2018_callout: [ ]
       CSD U3 Sprites intro sprites_callout: [ ]
+      CSD U3 Sprites intro sprites_2018_callout: [ ]
       CSD U3 Sprites scene challenge_callout: [ ]
+      CSD U3 Sprites scene challenge_2018_callout: [ ]
       CSD U3 Sprites scene drawing_callout: [ ]
+      CSD U3 Sprites scene drawing_2018_callout: [ ]
       CSD U3 Sprites scene sprites_callout: [ ]
+      CSD U3 Sprites scene sprites_2018_callout: [ ]
       CSD U3 Sprites scene template_callout: [ ]
+      CSD U3 Sprites scene template_2018_callout: [ ]
       CSD U3 Sprites scene text_callout: [ ]
+      CSD U3 Sprites scene text_2018_callout: [ ]
+      CSD U3 Sprites text debug-2018_callout: [ ]
       CSD U3 Sprites text debug_callout: [ ]
+      CSD U3 Sprites text debug_2018_callout: [ ]
       CSD U3 Sprites text_callout: [ ]
+      CSD U3 Sprites text_2018_callout: [ ]
+      CSD U3 UP_ARROW-2018_callout: [ ]
       CSD U3 UP_ARROW_callout: [ ]
+      CSD U3 UP_ARROW_2018_callout: [ ]
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: Change the number here
       CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: Click here to show the grid.
       CSD U3 Variables Predict Where XY_callout:
         grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Change the number here
       CSD U3 Variables TEMPLATE square_callout: [ ]
       CSD U3 Variables make a big square_callout: [ ]
       CSD U3 Variables make a square_callout: [ ]
       CSD U3 Watcher Debug_callout: [ ]
+      CSD U3 Watcher Debug_2018_callout: [ ]
       CSD U3 abstraction accelerateX_callout:
         CSD_U3_L11_S6_C1: Add your code here.
+      CSD U3 abstraction accelerateX_2018_callout:
+        CSD_U3_L11_S6_C1: Add your code here.
       CSD U3 abstraction accelerateY_callout:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction accelerateY_2018_callout:
         CSD_U3_L11_S7_C1: Add your code here.
       CSD U3 abstraction change velocityX_callout:
         CSD_U3_L11_S5_C1: Add your block here.
@@ -169,7 +233,13 @@ uk:
       CSD U3 abstraction horse3_callout:
         CSD_U3_L11_S16_C1: Use the counter pattern to make the horse fall here.
         CSD_U3_L11_S16_C2: Stop the horse from falling here.
+      CSD U3 abstraction jump-2018_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
       CSD U3 abstraction jump_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
         CSD_U3_L11_S17_C2: Send the frog back down here
       CSD U3 abstraction jumper intro_callout:
@@ -182,7 +252,11 @@ uk:
         CSD_U3_L11_S17_C3: Add your if statement here.
       CSD U3 abstraction jumping_callout:
         CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2018_callout:
+        CSD_U3_L13_S8_C1: Set the velocity here
       CSD U3 abstraction looping_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction parabola_callout:
         CSD_U3_L11_S13_C1: Add your block here.
@@ -191,7 +265,11 @@ uk:
         CSD_U3_L11_S5_C2: Add your code here.
       CSD U3 abstraction rotation control_callout:
         CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction rotation control_2018_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction rotation_callout:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2018_callout:
         CSD_U3_L11_S4_C1: Use the rotationSpeed block here
       CSD U3 abstraction setSpeed accelerate_callout:
         CSD_U3_L11_S14_C1: Add your code here.
@@ -199,7 +277,15 @@ uk:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
         CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template-2018_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
       CSD U3 abstraction sidescroll template_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template_2018_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
         CSD_U3_L11_S17_C3: Add your if statement here.
@@ -209,68 +295,125 @@ uk:
         CSD_U3_L11_S17_C3: Add your if statement here.
       CSD U3 abstraction tumbleweed_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2018_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction velocityX control_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX control_2018_callout:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX if-statements_callout:
         CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityX if-statements_2018_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityX_callout:
+        CSD_U3_L11_S4_C1: Add your block here.
+      CSD U3 abstraction velocityX_2018_callout:
         CSD_U3_L11_S4_C1: Add your block here.
       CSD U3 abstraction velocityY 2_callout:
         CSD_U3_L11_S5_C1: Add your block here.
       CSD U3 abstraction velocityY control_callout:
         CSD_U3_L11_S5_C1: Look at this code.
+      CSD U3 abstraction velocityY control_2018_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 abstraction velocityY_2018_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
       CSD U3 challenge face_callout: [ ]
+      CSD U3 challenge face_2018_callout: [ ]
       CSD U3 challenge new shape_callout: [ ]
+      CSD U3 challenge new shape_2018_callout: [ ]
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
       CSD U3 collisions isTouching intro_callout:
+        CSD_U3_L12_S2_C1: Add your block here.
+      CSD U3 collisions isTouching intro_2018_callout:
         CSD_U3_L12_S2_C1: Add your block here.
       CSD U3 collisions pinball2_callout:
         CSD_U3_L14_S16_C1: Sprite interactions go in this function.
       CSD U3 collisions scoreboard_callout:
         CSD_U3_L12_S8_C1: These blocks display the score.
         CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the carrot go here.
+      CSD U3 collisions scoreboard_2018_callout:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the carrot go here.
       CSD U3 collisions try blocks_callout:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2018_callout:
         CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 collisions types_2018_callout:
+        CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 debug_2018_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 fill_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 fill_2018_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2018_callout:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2018_callout:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional-2018_callout: [ ]
       CSD U3 keydown conditional_callout: [ ]
+      CSD U3 keydown conditional_2018_callout: [ ]
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 picture_callout: [ ]
+      CSD U3 picture_2018_callout: [ ]
       CSD U3 platform background1_callout:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2018_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
         CSD_U3_L16_S3_C3: Change this function.
       CSD U3 platform platform1_callout:
         CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2018_callout:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
       CSD U3 platform scoreboard_callout:
         CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2018_callout:
+        CSD_U3_L17_S7_C1: Score is printed here.
       CSD U3 platform variable1_callout:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2018_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Here is the "Run" button.
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Here is the "Run" button.
       CSD U3 sequence_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: Here is the code
         CSD_U3_rect_c2: Drag this block into the code area.
       CSD U6 colorLeds intensity_callout:
@@ -322,7 +465,7 @@ uk:
       Counting_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       Course 4 Artist 4_callout:
         repeat_full_circle: Вкажи, скільки разів Зомбі має переміститись для утворення кола
       Course 4 Artist 7_callout:
@@ -394,7 +537,7 @@ uk:
       Course 4 Playlab For Loop Freeplay_callout: [ ]
       Course 4 Playlab For Loops 4b_callout:
         Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a different name for each character?  That's so each `for` loop can control its own counter.
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change the "increment" of the `for` loops.
+        Course_4_Playlab_For_Loops_4b_2: У цій головоломці ви можете змінювати тільки "інкрімент" петлі "for".
       Course 4 Playlab For Loops 5b_callout: [ ]
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
@@ -507,7 +650,7 @@ uk:
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       Modular Arithmetic_callout: [ ]
       NEW Course 4 Artist Functions 10_callout: [ ]
       NEW Course 4 Artist Functions 3_callout:
@@ -538,14 +681,14 @@ uk:
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program
         New Artist Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       New Frozen Project_callout:
         snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні сніжинки!
       New Maker Lab Project_callout: [ ]
       New Play Lab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -587,7 +730,7 @@ uk:
         pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
         play lab rocket 2: Define your rocket-height function here
       Play Lab Rocket 2B_callout:
-        pass_function: This black block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
+        pass_function: Цей чорний блок дозволяє передавати вашу функцію (а не значення, яку ваша функція повертає з певним вводом) у бібліотеку анімації ракети. Анімація, яку ви бачите на екрані, фактично використовує вашу функцію для переміщення ракети!
       Play Lab Rocket 3_callout:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: [ ]
@@ -605,7 +748,7 @@ uk:
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
       Ryan - 4-5 Bee Conditionals 2_callout:
@@ -631,7 +774,7 @@ uk:
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       TestLab_callout: [ ]
       U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
       U3 - Simple Drawing - Fill_callout: [ ]
@@ -689,9 +832,10 @@ uk:
         aEfreeplay_1: Note that starting the artist in the middle can be awkward.  We're looking at adding actions that can move the artist to absolute positions.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: [ ]
       artistLoopsK2_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
       artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
+      comment_intro_maze_2018_callout: [ ]
       course2_artist_nestedLoops_challenge2_callout: [ ]
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
@@ -723,45 +867,69 @@ uk:
         courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
       course4_collector_nested_loops_challenge2_callout: [ ]
       courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
+        courseA_artist_loops4_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
+      courseA_artist_loops4_2018_callout:
+        courseA_artist_loops4_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
       courseA_artist_loops7_callout:
+        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
+      courseA_artist_loops7_2018_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+      courseA_artist_loops8_2018_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+      courseA_collector_loops1_2018_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+        gradek_adventurer_loops2_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
+      courseA_collector_loops3_2018_callout:
+        gradek_adventurer_loops2_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
       courseA_collector_loops3_predict1_callout: [ ]
       courseA_collector_preLoops1_callout:
         courseA_collector_preLoops1_1: Click here to watch the code run!
       courseA_collector_preLoops2_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі.
       courseA_collector_preLoops3_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі.
       courseA_collector_preLoops4_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі.
       courseA_collector_preLoops5_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі.
       courseA_collector_preLoops6_callout:
-        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseA_collector_loops1_1: Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі.
       courseA_forVideoTest_artist_callout: [ ]
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: Натисніть лампочку, коли вам потрібна підказка!
+      courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Натисніть лампочку, коли вам потрібна підказка!
       courseA_maze_seq2_callout:
-        courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseA_maze_seqA_callout1: Використовуйте кнопку "крок", щоб поступово проходити через програму. Це допоможе вам знайти помилку!
+      courseA_maze_seq2_2018_callout:
+        courseA_maze_seqA_callout1: Використовуйте кнопку "крок", щоб поступово проходити через програму. Це допоможе вам знайти помилку!
       courseA_maze_seq4_callout:
+        made_of_stone: These blocks are made of stone.  You can move them, but you can't delete them!
+      courseA_maze_seq4_2018_callout:
         made_of_stone: These blocks are made of stone.  You can move them, but you can't delete them!
       courseA_maze_seq4a_callout: [ ]
       courseA_playLab_events2_callout: [ ]
+      courseA_playLab_events2_2018_callout: [ ]
       courseA_playLab_events3_callout: [ ]
+      courseA_playLab_events3_2018_callout: [ ]
       courseA_playLab_events4_callout:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: This is a callout
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Click here to change the direction of the event arrow.
+      courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
@@ -769,11 +937,11 @@ uk:
       courseB_artist_loops5_callout:
         courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
       courseB_collector_loops1_callout:
-        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
+        courseB_collector_loops1_1: Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: Натисніть лампочку, коли вам потрібна підказка!
       courseB_maze_seq2_callout:
-        courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+        courseB_maze_seq2_callout1: Використовуйте кнопку "крок", щоб поступово проходити через програму. Це допоможе вам знайти помилку!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
       courseB_maze_seq7_callout: [ ]
@@ -819,8 +987,8 @@ uk:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: [ ]
       courseC_maze_programming7_callout:
-        courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
-        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
+        courseC_maze_programming7_1: Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.
+        courseC_maze_programming7_2: Ці блоки виробленні з каміння та не можуть бути викинутими.
       courseC_starWars_loops10_callout: [ ]
       courseC_starWars_loops10_predict2_callout: [ ]
       courseC_starWars_loops11_callout: [ ]
@@ -936,9 +1104,9 @@ uk:
       courseD_scrat_ramp7_2018_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseD_scrat_ramp8_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseD_maze_ramp7_1: Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.
       courseD_scrat_ramp8_2018_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseD_maze_ramp7_1: Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.
       courseE_artist_concept_challenge2_callout: [ ]
       courseE_artist_concept_challenge2_2018_callout: [ ]
       courseE_artist_embed_functions8_callout: [ ]
@@ -1048,7 +1216,7 @@ uk:
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseE_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseD_maze_ramp7_1: Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
       courseE_playLab_challenge1_callout:
@@ -1151,6 +1319,7 @@ uk:
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
       courseF_artist_variables_template_callout: [ ]
+      courseF_artist_variables_template_2018_callout: [ ]
       courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of the blocks you need are beneath these labels!
@@ -1217,7 +1386,7 @@ uk:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseF_maze_ramp13_callout: [ ]
       courseF_maze_ramp15_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseF_maze_ramp7_1: Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.
       courseF_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseF_maze_ramp4_callout:
@@ -1226,11 +1395,11 @@ uk:
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseF_maze_ramp7_callout:
-        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseF_maze_ramp7_1: Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       courseF_playlab_embed_vars_callout: [ ]
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
@@ -1259,6 +1428,8 @@ uk:
       courseF_playlab_variables8c_callout: [ ]
       courseF_playlab_variables8c_2018_callout: [ ]
       courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variablesTemplate_2018_callout:
         courseF_playlab_variables5c_1: You will find your variable block in here.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: This is how you set the value of your variable.  Change the text connected to this block to change what is being held in your variable.
@@ -1387,7 +1558,7 @@ uk:
       grade4_playLab_proj_example2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       grade4_playlab_test_callout: [ ]
       grade4_review_artist1_callout: [ ]
       grade5_artist_for_loops1b_callout:
@@ -1450,9 +1621,9 @@ uk:
       grade5_playlab_variables_jump1_callout:
         Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
       gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+        gradek_adventurer_loops2_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
       gradek_artist_loops3_callout:
-        artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
+        artistLoopsK2_1: Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці.
       gradek_artist_loops7_callout:
         gradek_artist_loops7_1: Did you know that you can draw back over a line whenever you need to?
       gradek_playlab_events1c_callout: [ ]
@@ -1461,6 +1632,8 @@ uk:
       gradek_playlab_events4c_callout: [ ]
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      harvester_Kahoot_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       iceage_click_hello_callout: [ ]
       iceage_click_hello_2018_callout: [ ]
       iceage_free_play_callout: [ ]
@@ -1494,6 +1667,7 @@ uk:
         playlab_add_score: ""
       iceage_throw_hearts_callout: [ ]
       iceage_throw_hearts_2018_callout: [ ]
+      iceage_warn_embed_ice_age_callout: [ ]
       iceage_warn_ice_age_callout:
         playlab_add_blocks: ""
       iceage_warn_ice_age_2018_callout:
@@ -1523,7 +1697,7 @@ uk:
       small_actors_playlab_projects_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
       subgoal U3 L4 introducing subgoal labels_callout: [ ]
       subgoal U3L2 Using Simple Commands_callout: [ ]
       subgoal-test-clone_callout:

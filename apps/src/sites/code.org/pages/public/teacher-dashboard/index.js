@@ -7,8 +7,10 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+ import { registerReducers, getStore } from '@cdo/apps/redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import SectionProgress from '@cdo/apps/templates/teacherDashboard/SectionProgress';
+import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -19,6 +21,7 @@ import {
   renderSectionTable,
 } from '@cdo/apps/templates/teacherDashboard/sections';
 import logToCloud from '@cdo/apps/logToCloud';
+import sectionProgress, {setSection, setValidScripts} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -52,11 +55,15 @@ function renderSectionProjects(sectionId) {
 }
 
 function renderSectionProgress(section, validScripts) {
+  registerReducers({sectionProgress});
+  const store = getStore();
+  store.dispatch(setSection(section));
+  store.dispatch(setValidScripts(validScripts));
+
   ReactDOM.render(
-    <SectionProgress
-      section={section}
-      validScripts={validScripts}
-    />,
+    <Provider store={store}>
+      <SectionProgress />
+    </Provider>,
     document.getElementById('section-progress-react')
   );
 }
@@ -287,7 +294,6 @@ function main() {
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionsController'
@@ -304,7 +310,6 @@ function main() {
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
                                              function ($scope, $routeParams, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'StudentDetailController'
@@ -326,7 +331,6 @@ function main() {
   app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionDetailController'
@@ -397,7 +401,7 @@ function main() {
       });
 
       $scope.$on('student-table-react-rendered', () => {
-        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type));
+        $scope.section.$promise.then(section => renderSectionTable(section.id, section.login_type, section.course_name));
       });
 
       $scope.$on('$destroy', () => {
@@ -562,7 +566,6 @@ function main() {
 
   app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'MovingStudentsController'
@@ -658,7 +661,6 @@ function main() {
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
                                              function ($scope, $routeParams, $window, $q, sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionSigninCardsController'
@@ -701,7 +703,6 @@ function main() {
   app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
       function ($scope, $routeParams,  sectionsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionProjectsController'
@@ -738,7 +739,6 @@ function main() {
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService', 'paginatedSectionProgressService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService, paginatedSectionProgressService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionProgressController'
@@ -904,7 +904,6 @@ function main() {
   app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionResponsesController'
@@ -979,7 +978,6 @@ function main() {
   app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
     firehoseClient.putRecord(
-      'analysis-events',
       {
         study: 'teacher-dashboard-tabbing',
         event: 'SectionAssessmentsController'

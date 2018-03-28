@@ -163,9 +163,6 @@ ca:
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
         desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -304,3 +301,18 @@ ca:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algoritmes reals: Planta una llavor'
+        desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida diària, utilitzant el fet de plantar una llavor com a exemple. També es centra en un marc més ampli de la informàtica i com els algoritmes hi juguen un rol important.
+      UnplugHappyMaps_2018:
+        title: Mapes feliços
+        desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per moure un personatge a través d'un laberint utilitzant tant sols una ordre.
+      GoingPlacesSafely_2018:
+        title: Anant a llocs segurs
+        desc: Internet és una eina potent, però a vegades també és un lloc perillós. Els mestres t'expliquen com navegar amb seguretat per internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: El gran esdeveniment
+        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments", que són accions que un ordinador supervisa constantment. El mestre polsarà botons en un paper a distància i els alumnes reaccionaran depenent de quin botó es prem.

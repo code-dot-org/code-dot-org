@@ -33,7 +33,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   def workshops_user_enrolled_in
     authorize! :workshops_user_enrolled_in, Pd::Workshop
 
-    workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
+    enrollments = ::Pd::Enrollment.for_user(current_user).all.
+      reject do |enrollment|
+        future_or_current_teachercon_or_fit?(enrollment.workshop)
+      end
+    workshops = enrollments.map do |enrollment|
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
 
@@ -234,6 +238,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :capacity,
       :on_map,
       :funded,
+      :funding_type,
       :course,
       :subject,
       :notes,
@@ -244,5 +249,9 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     allowed_params.delete :regional_partner_id unless can_update_regional_partner
 
     params.require(:pd_workshop).permit(*allowed_params)
+  end
+
+  def future_or_current_teachercon_or_fit?(workshop)
+    [Pd::Workshop::SUBJECT_TEACHER_CON, Pd::Workshop::SUBJECT_FIT].include?(workshop.subject) && workshop.state != Pd::Workshop::STATE_ENDED
   end
 end

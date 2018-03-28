@@ -285,9 +285,6 @@
           e a fórmula da distancia poden ser usados para medir a distancia entre dous
           puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo)
           están se tocando.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -502,3 +499,25 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Algoritmos da Vida Real: Planta unha Semente'
+        desc: Esta lección presenta como usamos os algoritmos na nosa vida diaria,
+          usando o acto de plantar unha semente como exemplo. Tamén se concentra no
+          cadro xeral da informática e como os algoritmos desempeñan un papel fundamental.
+      UnplugHappyMaps_2018:
+        title: Mapas Felices
+        desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
+          mover un personaxe a través dun labirinto usando un único comando.
+      GoingPlacesSafely_2018:
+        title: Ir a Sitios en modo Seguro
+        desc: A internet é poderosa, pero ás veces perigosa. Os profesores mostran
+          como navegar en seguranza pola Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: O Gran Evento
+        desc: Os alumnos son introducidos ao concepto de "eventos" en programación,
+          que son accións que un computador monitora constantemente. O profesor vai
+          apertar os botóns de forma remota, e os alumnos van reaccionar de acordo
+          co botón presionado.

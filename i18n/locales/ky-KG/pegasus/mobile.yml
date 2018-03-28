@@ -6,10 +6,10 @@
   select_language: "Please select your language"
   upgrade_ie_message: "Code.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
   upgrade_ie_message_csedweek: "CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
-  upgrade_ie_link: "Learn more"
+  upgrade_ie_link: "Дагы кара"
   en: "Computer Science"
   computer_science_edweek: "Computer Science Education Week"
-  csedweek_dates: "December 8-14, 2014"
+  csedweek_dates: "December 3-9, 2018"
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
@@ -26,7 +26,7 @@
   twentyhours_heading: "Try our Intro to Computer Science Course"
   twentyhours_text: "Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course."
   og_title: 'Code.org: Ар ким үйрөнө алат'
-  og_title_soon: "The Hour of Code is coming"
+  og_title_soon: "Код сааты жакындап келатат"
   og_title_here: "Код сааты башталды!"
   og_description: "Бардык мектептердеги бардык окуучулардын компүтердик билим алуу мүмкүнчүлүгү болушу керек."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
@@ -260,97 +260,97 @@
   studiobar_donate_body: "One child learns for each dollar you donate"
   studiobar_shop_title: "Shop"
   studiobar_shop_body: "Break stereotypes. Wear our logo with pride."
-  homepage_stats_students: "of US students have accounts on Code.org"
-  homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
-  homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
-  homepage_stats_policy: "states changed policy to support computer science"
-  homepage_stats_title: "We're making a difference"
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner"
+  homepage_stats_students: "АКШ окуучуларынын Code.org эсеби бар"
+  homepage_stats_female: "- кыздар"
+  homepage_stats_teachers: "мугалим Code.org колдонот"
+  homepage_stats_hourofcodde: "дүйнө жүзүнөн окуучуу Код саатын байкап көрүштү"
+  homepage_stats_policy: "мамлекет компүтердик илимди колдоо саясатын өзгөрттү"
+  homepage_stats_title: "Биз өзгөртүү үстүндөбүз"
+  homepage_hero_text_malala: "&ldquo;Мен бардык өлкөлөрдүн кыздарын \nКод саатына катышууга чакырам&rdquo; \nМалала, Нобель сыйлыгынын ээси"
   homepage_hero_text_susan: |-
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Технологияларды өзгөртө алсаң,
+    дүйнөнү өзгөртө аласың.&rdquo;
+    Сузан, YouTube башкы аткаруучу директору
   homepage_hero_text_fistbump: |-
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Телефон ойноп тим болбо,
+    аны програмда.&rdquo;
+    Президент Барак Обама
   homepage_hero_text_sheryl: |-
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Балдарыбыздын &mdash; кыздарыбыздын дагы &mdash;
+    компүтер илимин үйрөнгөнгө мүмкүнчүлүгү болушу керек.&rdquo;
+    Шэрил, Facebook'тун башкы операциондук директору
   homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Компүтер илими дүйнөдөгү 
+    эң мыкты мүмкүнчүлүктү ача алат.&rdquo;
+    Сатиа, Microsoft'тун башкы аткаруучу директору
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;омпүтер илими окуучуларды 
+    эртеңки жашоону жаратууга шыктандырат.&rdquo;
+    Сатиа, Microsoft'тун башкы аткаруучу директору
   homepage_hero_text_bosh: |-
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
+    &ldquo;Код жазсаң, жашооңдун багытын
+    өзүң тандай аласың.&rdquo;
+    Крис Бош
   homepage_hero_text_student1: |-
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
+    &ldquo;Бул жөндөмдөр менин келечегимди өзгөрттү.
+    Башкасын айтпаганда, бул жагымдуу иш.&rdquo;
     Luna, 7th grade
   homepage_hero_text_student2: |-
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Балдарым бир нерсеге ушунчалык 
+    көңүлдөнгөнүн биринчи жолу көрүшүм.&rdquo;
+    Майкл, мугалим
   homepage_hero_text_student3: |-
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do with programming.&rdquo; \nMaya, 2nd grade"
-  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's for you, here, now.&rdquo; \nGeraldo, teacher"
-  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher"
+    &ldquo;Информатика - бир байкап көрмөйүн 
+    жагаарын же жакпасын биле албай турган тармак.&rdquo;
+    Жексон, 6-класстын окуучусу
+  homepage_hero_text_student4: "&ldquo;Програмдоо менен оюуңа келген \nиштин баарын кыла аласың.&rdquo; \nМая, 2- класстын окуучусу"
+  homepage_hero_text_student5: "&ldquo;Информатика - башка бирөө үчүн эмес.\nАл сен үчүн, азыр, ушул жерде.&rdquo; \nГералдо, мугалим"
+  homepage_hero_text_teacher1: "&ldquo;Код жазуу чыгармачылыкты ойготуп, инновацияларга шыктандырат. &mdash; \nБулар кайсы кесипте болбосун керектүү.&rdquo;\nФлореса, мугалим"
   homepage_hero_text_teacher2: |-
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: "8.5 million girls are enrolled to learn on Code.org"
-  homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
-  homepage_hero_hoc_is_coming: "The Hour of Code is coming"
-  homepage_hero_hoc_is_here: "The Hour of Code is here"
+    &ldquo;Бул программа окуучуларымды 100% 
+    кызыктырды, тартты жана катыштыра алды.&rdquo;
+    Адам, мугалим
+  homepage_hero_text_stat_loc: "8.5 млн кыз Code.org аркылуу үйрөнүп жатышат"
+  homepage_hero_text_stat_students: "#student_count окуучунун Code.org эсеби бар"
+  homepage_hero_text_stat_served: 'Код сааты: #served байкап көрүштү'
+  homepage_hero_hoc_is_coming: "Код сааты жакындап келатат"
+  homepage_hero_hoc_is_here: "Код сааты башталды"
   homepage_slot_text_hoc: "The Hour of Code"
-  homepage_slot_text_frozen: "Frozen with Anna and Elsa"
-  homepage_slot_text_teacher: "Teacher Dashboard"
-  homepage_slot_text_studio: "All of our tutorials"
+  homepage_slot_text_frozen: "Анна менен Элзага кошулуп тоңдургула"
+  homepage_slot_text_teacher: "Мугалимдин тактасы"
+  homepage_slot_text_studio: "Бардык көнүгүүлөрүбүз"
   homepage_slot_text_course4: "Course 4"
   homepage_slot_text_shop: "Shop"
   homepage_slot_text_flappy: "Flappy Code"
-  homepage_action_text_hoc: "An Hour of Code for every student."
+  homepage_action_text_hoc: "Код сааты ар бир окуучу үчүн."
   homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: "Join us"
+  homepage_action_text_join_us: "Бизге кошулгула"
   homepage_action_text_sign_up: "Sign up"
   homepage_action_text_try_it: "Көргүлө"
-  homepage_action_text_volunteers: "Technical volunteers wanted"
-  homepage_action_text_codevideo: "Watch the video"
-  homepage_action_text_teachervideo: "Watch the video"
-  homepage_action_text_watchvideo: "Watch the video"
-  homepage_action_text_girlvideo: "Inspire a girl"
-  homepage_action_text_learn: "Start learning"
-  homepage_action_text_signpetition: "Sign the petition"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
-  homepage_signpetition_dropdown: "I agree &#x25BE;"
-  homepage_diversity_pledge: "Take the diversity pledge"
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_action_text_volunteers: "Техникалык ыктыярчылар керек"
+  homepage_action_text_codevideo: "Видео көргүлө"
+  homepage_action_text_teachervideo: "Видео көргүлө"
+  homepage_action_text_watchvideo: "Видео көргүлө"
+  homepage_action_text_girlvideo: "Кызды шыктандыр"
+  homepage_action_text_learn: "Үйрөнүп баштоо"
+  homepage_action_text_signpetition: "Петицияга кол кой"
+  homepage_action_text_wincelebritychat: "Жылдыз менен чат утуп ал"
+  homepage_signpetition_dropdown: "Макулмун &#x25BE;"
+  homepage_diversity_pledge: "Ар түрдүүлүк петициясына кошулуу"
+  homepage_banner_text_prizes: '7-13 декабрда Код сааты кайрадан башталат. '
+  homepage_banner_link_prizes: 'Тарыхтагы эң чоң үйрөтүү иш-чарасына катыш. '
   homepage_banner_text_main: "Code.org and the College Board form an alliance to improve diversity in computer science."
-  homepage_banner_text_link: "Learn more"
+  homepage_banner_text_link: "Дагы кара"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "Learn more"
+  homepage_banner_privacy_link: "Дагы кара"
   homepage_banner_20k_teachers: "20,000 teachers trained, and now teaching computer science in classrooms."
-  homepage_banner_20k_teachers_link: "Learn more"
+  homepage_banner_20k_teachers_link: "Дагы кара"
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "We’re making an important change to how we support student privacy."
   homepage_banner_emailprivacy_link: "Read more"
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
-  homepage_banner_40k_teachers_link: "Learn more"
+  homepage_banner_40k_teachers_link: "Дагы кара"
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Anybody can learn. Start today"
   homepage_slot_text_link_hoc: "Try the Hour of Code"
@@ -472,7 +472,7 @@
   sports_og_title: "Push yourself. Anybody can learn."
   sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
   sports_title: "Code your own sports game"
-  sports_watch_video: "Watch the video"
+  sports_watch_video: "Видео көргүлө"
   sports_video_title: "Push yourself. Anybody can learn."
   sports_select_theme: "Select your tutorial theme"
   sports_basketball_title: "Make a basketball game"
@@ -498,7 +498,7 @@
   sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medalist and NBA Champion, Dallas Mavericks"
   watch_inspirational_videos: "Before you get started, watch one of these inspirational videos"
   video_title_cs_is_everything: "Computer Science is Changing Everything"
-  video_title_inspire_girl: "Inspire a girl"
+  video_title_inspire_girl: "Кызды шыктандыр"
   video_title_cs_intro: "Computer Science intro"
   video_title_schools_dont_teach: "What Most Schools Don't Teach"
   video_title_obama: "President Obama on computer science"
@@ -585,7 +585,7 @@
   volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
   petition_age: "Age"
   dashboard_announce_hoc_scaling_progress: "Yikes! We are experiencing high Hour of Code traffic. We are unable to save any progress this week, but progress from before this week is still safe."
-  dashboard_announce_learn_more_button: "Learn more"
+  dashboard_announce_learn_more_button: "Дагы кара"
   dashboard_landing_title: "Teacher Home Page"
   dashboard_landing_welcome: "Welcome to the new and improved teacher dashboard."
   dashboard_landing_video: "Watch this video"
@@ -632,18 +632,12 @@
   dashboard_course_csp: "AP® Computer Science Principles"
   dashboard_course_csp_desc: "Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing."
   dashboard_landing_loading: "Loading..."
-  dashboard_action_edit: "Edit"
-  dashboard_action_save: "Save"
-  dashboard_action_save_all: "Save all"
-  dashboard_action_cancel: "Жокко"
+  dashboard_action_cancel: "Жок кыл"
   dashboard_action_delete: "Delete"
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: "Delete?"
-  dashboard_action_remove: "Remove"
-  dashboard_action_remove_confirm: "Remove?"
   dashboard_action_done: "Done"
-  dashboard_action_required: "required"
   dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
@@ -719,35 +713,22 @@
   dashboard_sections_assign_activity: "Assign Course"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
-  dashboard_students_add_student: "Add student"
-  dashboard_students_add_students: "Add multiple students"
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_placeholder_name: "Student Name"
   dashboard_students_name: "Аты"
   dashboard_students_progress: "Progress"
-  dashboard_students_age: "Age"
-  dashboard_students_gender: "Gender"
   dashboard_students_male: "Male"
   dashboard_students_female: "Female"
-  dashboard_students_secret: "Secret"
-  dashboard_students_password: "Password"
-  dashboard_students_username: 'Username: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: "Completed Levels"
   dashboard_students_total_lines: "Lines of Code"
-  dashboard_students_show_secret: "Show secret"
-  dashboard_students_auto_generated: "Auto-generated"
-  dashboard_students_reset_secret: "Reset secret"
-  dashboard_students_reset_password: "Reset password"
   dashboard_students_share_section: "Ask your students to go to <a href=%{join_url}>%{join_url}</a> and type in the section code (%{section_code})"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
   dashboard_students_print_info: "Print out cards with your students' login information."
   dashboard_students_secret_picture_title: "Secret Picture"
   dashboard_students_secret_picture: "This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in."
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word_title: "Secret Word"
+  dashboard_students_secret_word_title: "Secret Words"
   dashboard_students_secret_word: "This section uses <b>word</b> as its secret type.  It means that each of your students has a pair of secret words used in place of a password to sign in.  Students should use the sign in web address given above to sign in."
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. '
   dashboard_students_join_link: "Tell your students to create their own accounts and join your section at"
@@ -799,7 +780,6 @@
   dashboard_login_word: "Word"
   dashboard_login_picture: "Picture"
   dashboard_login_none: "Email"
-  dashboard_new_password: "new password"
   dashboard_stage: "Stage"
   dashboard_puzzle: "Puzzle"
   dashboard_question: "Question"
@@ -1076,12 +1056,12 @@
   course2_gradelevel: "Ages 6-18"
   course3_gradelevel: "Ages 8-18"
   course4_gradelevel: "Ages 10-18"
-  coursea_gradelevel: "Grade 5+"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
-  coursed_gradelevel: "Grade 8+"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Grade 10+"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
+  coursed_gradelevel: "Ages 7-11"
+  coursee_gradelevel: "Ages 8-12"
+  coursef_gradelevel: "Ages 9-13"
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1184,12 +1164,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "An introduction to computer science for pre-readers."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

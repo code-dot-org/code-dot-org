@@ -249,9 +249,6 @@
       CollisionDetection:
         title: Sadursmes noteikšana
         desc: Sadrusmes noteikšanas nodarbības apraksts
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -455,3 +452,24 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+        desc: "Šī nodarbība izceļ algoritmus, ko mēs lietojam ikdienā, kā piemēru
+          rādot sēklu stādīšanu. Tā arī koncentrējas uz algoritmu nozīmīgumu un sniedz
+          lielāku priekšstatu par datorzinātnēm kā kopumu."
+      UnplugHappyMaps_2018:
+        title: Laimīgās kartes
+        desc: Skolēni veido vienkāršus algoritmus (instrukciju komplektus), lai pārvietotu
+          tēlu labirintā, lietojot vienu komandu.
+      GoingPlacesSafely_2018:
+        title: Nokļūst galamērķos droši
+        desc: Internets ir iespējām bagāta, bet reizēm bīstama vieta. Skolotāji iepazīstina,
+          kā būt drošiem, kamēr lieto internetu.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Lielais notikums
+        desc: Skolēni tiek iepazīstināti ar programmēšanas jēdzienu "notikums" (event),
+          kas ir aktivitāte, kam dators visu laiku seko līdzi. Skolotājs spiež pogas
+          uz papīra pults un skolēni reaģē atkarībā no tā, kāda poga ir piespiesta.

@@ -163,9 +163,6 @@ cs:
       CollisionDetection:
         title: Detekce kolizí a Pythagorova věta
         desc: Určení, kdy objekty na obrazovce se dotýkají, je důležitým aspektem většiny her. V této lekci se budeme zabývat, jak Pythagorova věta a vzorec vzdálenosti slouží k měření vzdálenosti mezi dvěma body v rovině a pak se rozhodnout, zda tyto dva body (nebo postavy her) se dotýkají.
-      ! '':
-        title: ""
-        desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -304,3 +301,18 @@ cs:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algoritmy ze života: Zasadit semínko'
+        desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      UnplugHappyMaps_2018:
+        title: Šťastné mapy
+        desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy bludištěm pomocí jediného příkazu.
+      GoingPlacesSafely_2018:
+        title: Cestování bezpečně
+        desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak zůstat v bezpečí při procházení Internetu.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Velká událost
+        desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.

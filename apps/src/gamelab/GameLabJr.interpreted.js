@@ -31,6 +31,7 @@ let sprites = [];
 let score = 0;
 let game_over = false;
 let show_score = false;
+let title = '', subTitle = '';
 
 // Behaviors
 
@@ -134,6 +135,10 @@ function whenTouching(a, b, event) {
   collisionEvents.push({a: a, b: b, event: event});
 }
 
+function whileTouching(a, b, event) {
+  collisionEvents.push({a: a, b: b, event: event, keepFiring: true});
+}
+
 // Loops
 
 function repeatWhile(condition, loop) {
@@ -178,21 +183,12 @@ function makeNewSprite(animation, x, y) {
   };
 
   sprite.setPosition = function (position) {
-    if (position === "top left") {
-      sprite.x = 50;
-      sprite.y = 50;
-    } else if (position === "top center") {
-      sprite.x = 200;
-      sprite.y = 50;
-    } else if (position === "bottom right") {
-      sprite.x = 350;
-      sprite.y = 350;
-    } else if (position === "center right") {
-      sprite.x = 350;
-      sprite.y = 200;
-    } else if (position === "random") {
+    if (position === "random") {
       sprite.x = randomNumber(50, 350);
       sprite.y = randomNumber(50, 350);
+    } else {
+      sprite.x = position.x;
+      sprite.y = position.y;
     }
   };
   sprite.setScale = function (scale) {
@@ -242,6 +238,15 @@ function isDestroyed(sprite) {
   return World.allSprites.indexOf(sprite) === -1;
 }
 
+function showTitleScreen(titleArg, subTitleArg) {
+  title = titleArg;
+  subTitle = subTitleArg;
+}
+
+function hideTitleScreen() {
+  title = subTitle = '';
+}
+
 function draw() {
   background(World.background_color || "white");
 
@@ -258,11 +263,17 @@ function draw() {
 
   // Run collision events
   for (let i=0; i<collisionEvents.length; i++) {
-    const a = collisionEvents[i].a;
-    const b = collisionEvents[i].b;
-    const event = collisionEvents[i].event;
-    a.overlap(b, event);
-    //if (a.isTouching(b) && a.visible && b.visible) event();
+    const collisionEvent = collisionEvents[i];
+    const a = collisionEvent.a;
+    const b = collisionEvent.b;
+    if (a.overlap(b)) {
+      if (!collisionEvent.touching || collisionEvent.keepFiring) {
+        collisionEvent.event();
+      }
+      collisionEvent.touching = true;
+    } else {
+      collisionEvent.touching = false;
+    }
   }
 
   // Run loops
@@ -312,5 +323,12 @@ function draw() {
     textAlign(CENTER);
     textSize(50);
     text("Game Over", 200, 200);
+  } else if (title) {
+    fill("black");
+    textAlign(CENTER);
+    textSize(50);
+    text(title, 200, 150);
+    textSize(35);
+    text(subTitle, 200, 250);
   }
 }

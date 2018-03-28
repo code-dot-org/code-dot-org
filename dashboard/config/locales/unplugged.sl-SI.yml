@@ -265,9 +265,6 @@
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
@@ -478,3 +475,24 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: "Življenjski algoritmi: Zasadi seme"
+        desc: Ta lekcija našteje načine kako uporabljamo algoritme v našem vsakdanjem
+          življenju, na primeru sajenja semena. Osredotoči se tudi na večjo sliko
+          računalništva in kako so algoritmi bistveni del računalništva.
+      UnplugHappyMaps_2018:
+        title: Veseli zemljevidi
+        desc: Učenci ustvarijo preproste algoritme (naborov ukazov) da premaknejo
+          lik skozi labirint z enim ukazom.
+      GoingPlacesSafely_2018:
+        title: Kako varno potovati
+        desc: Internet je močno, ampak včasih nevarno mesto. Učitelji predstavijo,
+          kako ostati varen, medtem ko navigiraš po internetu.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      BigEvent_2018:
+        title: Veliki dogodek
+        desc: Učenci spoznajo programerski koncept "dogodkov", ki so akcije, ki jih
+          računalnik nenehno spremlja. Učitelj bo pritisnil gumb na papirnatem daljincu,
+          učenci pa bodo reagirali v skladu z gumbom, na katerega je pritisnil.

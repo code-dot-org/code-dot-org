@@ -9,7 +9,7 @@
   upgrade_ie_link: "Ulteriori informazioni"
   en: "Informatica"
   computer_science_edweek: "Settimana di Educazione all'Informatica"
-  csedweek_dates: "8-14 dicembre 2014"
+  csedweek_dates: "3-9 dicembre 2018"
   csedweek_banner_hoc: 'L''<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate la vostra Ora del Codice</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Sei un insegnante interessato all''Informatica? Guarda le altre risorse disponibili</a>'
   n_have_learned_an_hoc: "<h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>"
@@ -29,10 +29,10 @@
   og_title_soon: "L'Ora del Codice è in arrivo"
   og_title_here: "L'Ora del Codice è qui!"
   og_description: "Ogni studente di ogni scuola merita l'opportunità di studiare informatica."
-  og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
+  og_description_celeb: "Prova i nuovi tutorial e vinci una video conferenza con una celebrità per te o la tua classe!"
   csedweek_og_title: "Ora di CodiceOra di Codice"
-  csedweek_og_description: "Dal 4 al 10 December 2017. È fondamentale che ogni studente impari l'informatica."
-  csedweek_og_description_soon: "The Hour of Code is coming December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description: "Dal 3 al 9 dicembre 2018. È fondamentale che ogni studente impari l'informatica."
+  csedweek_og_description_soon: "L'Ora del Codice è in arrivo: 3-9 dicembre 2018. Imparare l'informatica è fondamentale per ogni studente."
   csedweek_og_description_here: "L'Ora del Codice è qui. Imparare l'informatica è fondamentale per ogni studente."
   hoc2014_heading: "Iscriviti alla <a href=\"http://hourofcode.com/it\">Ora del Codice</a> <br/>8-14 dicembre 2014 <br/>"
   hoc2014_students: "Studenti"
@@ -74,12 +74,12 @@
   congratulations_on_completing_course2: "Complimenti per aver completato il Corso 2"
   congratulations_on_completing_course3: "Complimenti per aver completato il Corso 3"
   congratulations_on_completing_course4: "Complimenti per aver completato il Corso 4"
-  congratulations_on_completing_coursea: "Congratulations on completing Course A"
-  congratulations_on_completing_courseb: "Congratulations on completing Course B"
-  congratulations_on_completing_coursec: "Congratulations on completing Course C"
-  congratulations_on_completing_coursed: "Congratulations on completing Course D"
-  congratulations_on_completing_coursee: "Congratulations on completing Course E"
-  congratulations_on_completing_coursef: "Congratulations on completing Course F"
+  congratulations_on_completing_coursea: "Complimenti per aver completato il Corso A"
+  congratulations_on_completing_courseb: "Complimenti per aver completato il Corso B"
+  congratulations_on_completing_coursec: "Complimenti per aver completato il Corso C"
+  congratulations_on_completing_coursed: "Complimenti per aver completato il Corso D"
+  congratulations_on_completing_coursee: "Complimenti per aver completato il Corso E"
+  congratulations_on_completing_coursef: "Complimenti per aver completato il Corso F"
   congratulations_on_completing_accelerated: "Complimenti per aver completato il Corso Rapido"
   congrats_next_tutorials_title: "Promosso ai corsi successivi!"
   congrats_next_tutorials_desc: "Prova questi corsi più brevi, da 1 ora, oppure prova un <a href=\"%{current_path}/next\">corso di un partner</a>."
@@ -90,7 +90,7 @@
   congrats_guest_speaker_title: "Trova un relatore da ospitare per la tua classe"
   congrats_guest_speaker_desc: "Ora che i tuoi studenti hanno finito un corso di informatica, considera l'idea di festeggiare e di fare collegamenti con cose che possono creare nel mondo reale invitando un ospite d'onore per la tua classe. Puoi usare la nostra mappa di volontari per contattare volontari in zona per visitare la tua classe, oppure cerca in qualsiasi citta' per trovare studenti di informatica o professionisti pronti ad ispirare i tuoi studenti da remoto, tramite video chat."
   congrats_guest_speaker_cta: "Find a guest speaker"
-  congrats_third_party_title: "Usa la tua nuova abilità con queste app e siti"
+  congrats_third_party_title: "Usa le tue nuova capacità con queste app e siti web"
   third_party_gradelevel_kto8: "Da 5 a 13 anni"
   third_party_gradelevel_kto2: "Da 5 a 7 anni"
   third_party_gradelevel_2to8: "Da 7 a 13 anni"
@@ -205,25 +205,25 @@
   just_did_course2: "Ho appena completato il Corso 2 - Provalo! Su @codeorg @programmafuturo"
   just_did_course3: "Ho appena completato il Corso 3 - Provalo! Su @codeorg @programmafuturo"
   just_did_course4: "Ho appena completato il Corso 4 - Provalo! Su @codeorg @programmafuturo"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "Ho appena completato il Corso A - Provalo! Su @codeorg @programmafuturo"
+  just_did_courseb: "Ho appena completato il Corso B - Provalo! Su @codeorg @programmafuturo"
+  just_did_coursec: "Ho appena completato il Corso C - Provalo! Su @codeorg @programmafuturo"
+  just_did_coursed: "Ho appena completato il Corso D - Provalo! Su @codeorg @programmafuturo"
+  just_did_coursee: "Ho appena completato il Corso E - Provalo! Su @codeorg @programmafuturo"
+  just_did_coursef: "Ho appena completato il Corso F - Provalo! Su @codeorg @programmafuturo"
   just_did_accelerated: "Ho appena completato il Corso Rapido - Provalo! Su @codeorg @programmafuturo"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
-  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursea_donor: "Ho appena finito il Corso A - dacci un'occhiata! Grazie %{donor_twitter} per aver supportato @codeorg"
-  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
-  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_hoc_donor: 'Ho appena finito l''Ora del Codice (#HourOfCode) - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg'
+  just_did_course1_donor: "Ho appena finito il Corso 1 - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_course2_donor: "Ho appena finito il Corso 2 - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_course3_donor: "Ho appena finito il Corso 3 - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_course4_donor: "Ho appena finito il Corso 4 - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_coursea_donor: "Ho appena finito il Corso A - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_courseb_donor: "Ho appena finito il Corso B - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_coursec_donor: "Ho appena finito il Corso C - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_coursed_donor: "Ho appena finito il Corso D - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_coursee_donor: "Ho appena finito il Corso E - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_coursef_donor: "Ho appena finito il Corso F - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
+  just_did_accelerated_donor: "Ho appena finito il Corso Rapido - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg"
   twitter_teach_cs: "9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare informatica. http://youtu.be/nKIu9yen5nc. Visita https://code.org/."
   twitter_cs_foundational: "L'apprendimento dell'informatica è fondamentale per ogni studente.\nhttps://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Fai l'Ora del Codice"
@@ -236,7 +236,7 @@
   lines_of_code: "OLTRE <b># LINEE DI CODICE</b> SCRITTE FINO AD ORA."
   lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
+  who_has_done_hoc_donor: 'Chi ha svolto l''Ora del Codice (#HourOfCode)? - Provalo! Grazie %{donor_twitter} per aver supportato @codeorg'
   hoc_leaderboards: "Le classifiche dell'Ora del Codice"
   students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto %{lines} linee di codice."
   start_hoc: "Inizia l'Ora del Codice adesso"
@@ -284,8 +284,8 @@
     le migliori opportunità del mondo.&rdquo;
     Satya, Amministratore Delegato di Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
+    &ldquo;L'informatica darà agli studenti il potere
+    di creare il mondo di domani.&rdquo;
     Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
@@ -331,7 +331,7 @@
   homepage_action_text_girlvideo: "Convinci una ragazza a partecipare"
   homepage_action_text_learn: "Inizia ad apprendere"
   homepage_action_text_signpetition: "Firma la petizione"
-  homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_action_text_wincelebritychat: "Vinci una conversazione con una celebrità"
   homepage_signpetition_dropdown: "Firma la nostra petizione &#x25BE;"
   homepage_diversity_pledge: "Abbraccia la causa in favore delle diversità"
   homepage_banner_text_prizes: 'L''Ora di Codice sta per ripartire, 7-13 Dicembre. '
@@ -351,7 +351,7 @@
   homepage_slot_text_title_hoc: "L'Ora del Codice"
   homepage_slot_text_blurb_hoc: "Chiunque può imparare. Inizia oggi"
   homepage_slot_text_link_hoc: "Prova l'Ora del Codice"
-  homepage_slot_text_link_about_hoc: "About the Hour of Code"
+  homepage_slot_text_link_about_hoc: "Informazioni sull'Ora del Codice"
   homepage_slot_text_link_host: "Organizza un'Ora del Codice"
   homepage_slot_text_link_hocserved: "# fatte"
   homepage_solot_text_link_volunteer: "Volontario per l'Ora del Codice"
@@ -375,7 +375,7 @@
   homepage_slot_text_link_buy: "Fatti coinvolgere"
   homepage_slot_text_link_donate: "Fai una donazione"
   homepage_slot_text_link_shop: "T-shirts, cappellini & altro"
-  homepage_slot_text_link_administrators: "Bring CS to your school"
+  homepage_slot_text_link_administrators: "Porta l'informatica nella tua scuola"
   homepage_header_codestudio: "Creazioni degli studenti di Code Studio"
   homepage_header_donors: "Code.org ringrazia i suoi sostenitori"
   homepage_donors_seall: "Mostra tutto"
@@ -455,13 +455,13 @@
   minecraft_store_camps: "Free Minecraft Hour of Code Camps at the Microsoft Store"
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Sign up</a> for the free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada, Puerto Rico or the US. Learn how coding is for everyone and combines creativity, problem solving and loads of fun."
   minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_teach_resources: "Risorse per l'insegnante e piano di lavoro della lezione."
+  minecraft_leader_guide: "Scarica le risorse per aiutarti a pianificare ed organizzare un evento."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download</a> facilitator quick start guide and PowerPoint presentations for younger and older students now."
   minecraft_join_online_training: "Ready to facilitate your own Hour of Code with Minecraft, but not sure where to start? Check out our <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>. You will learn best practices, access ready-to-go facilitator materials, and get a walk-through of the new Hero’s Journey tutorial from the Minecraft team. Get a head start on thinking through what you need to bring Hour of Code to young people during Computer Science Education week (December 4-10) and beyond."
   minecraft_continue_learning: 'Computer Science for Everyone: Beyond an Hour of Code at the Microsoft Store'
   minecraft_continue_learning_description: "No computer science experience required! Help ensure all youth can learn the valuable skills gained through computer science education. Join us at the Microsoft Store to engage in a free series of three, 1-hour workshops where you will experience coding in a fun and stress-free environment, become familiar with key computer science concepts, and get ready to lead an Hour of Code in your classroom or community. You got this! <a href='%{minecraft_continue_learning_url}', target='_blank'>Sign up today</a>."
-  minecraft_future: "Help all youth become future ready"
+  minecraft_future: "Aiuta tutti i giovani a prepararsi al futuro"
   minecraft_future_description: "Find out how other schools and nonprofits are bringing digital skills, from digital literacy to computer science education, to their communities. Consider different models, get tips and tricks, and <a href='%{minecraft_future_url}', target='_blank'>access the resources</a> they found most valuable."
   minecraft_og_designer: "Minecraft is back with a new activity for the Hour of Code. Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_og_agent: "Minecraft è tornato per l'Ora del Codice e tu sei l'eroe! Programma il tuo viaggio attraverso le creature di Minecraft."
@@ -629,18 +629,12 @@
   dashboard_course_csp: "Principi di informatica ® AP"
   dashboard_course_csp_desc: "I corsi di Code.org sono stati progettati in modo rigoroso, coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti dell'informatica."
   dashboard_landing_loading: "Sto caricando..."
-  dashboard_action_edit: "Modifica"
-  dashboard_action_save: "Salva"
-  dashboard_action_save_all: "Salva tutto"
   dashboard_action_cancel: "Annulla"
   dashboard_action_delete: "Elimina"
   dashboard_action_delete_yes: 'Sì'
   dashboard_action_delete_no: 'No'
   dashboard_action_confirm: "Elimina?"
-  dashboard_action_remove: "Elimina"
-  dashboard_action_remove_confirm: "Eliminare?"
   dashboard_action_done: "Fatto"
-  dashboard_action_required: "obbligatorio"
   dashboard_action_print_certificates: "Stampa gli attestati"
   dashboard_assessments_view: 'Mostra risultati in:'
   dashboard_assessments_none: "La maggior parte degli insegnanti misura i progressi degli studenti utilizzando la scheda \"Avanzamento\": clicca sul link \"Avanzamento\" sotto il nome della classe nella sezione \"Gestione delle classi e degli studenti\". Se sei interessato ad effettuare ulteriori valutazioni dei tuoi studenti, puoi trovare argomenti e domande consigliate nei piani di attività di ogni lezione. Dovrai però gestire queste valutazioni al di fuori di questo cruscotto di controllo."
@@ -683,7 +677,7 @@
   dashboard_responses_view: 'Visualizza il testo delle risposte in:'
   dashboard_responses_none: "Nessuna risposta"
   dashboard_sections_new_section: "Nuova classe"
-  dashboard_sections_new_google_section: "Import section from Google Classroom"
+  dashboard_sections_new_google_section: "Importa classe da Google Classrom"
   dashboard_sections_jumbotron_instruction: "Crea nuove classi e aggiungici studenti. Le classi ti aiutano a organizzare gli studenti in gruppi più piccoli, così è possibile controllare i loro progressi e gestire i loro account."
   dashboard_sections_table_section: "Classe"
   dashboard_sections_table_secret: "Tipo di accesso"
@@ -716,28 +710,15 @@
   dashboard_sections_assign_activity: "Assegna un corso"
   dashboard_error_none_selected: "Non hai selezionato alcuno studente. Per favore, scegli almeno uno studente."
   dashboard_error_other_section: "Se stai spostando degli studenti tra le tue classi, selezionane una dal primo menù a tendina. Scegli \"<b>Altro insegnante</b>\" in tale menù a tendina <b>solo</b> se devi spostare degli studenti nella classe di un <b>altro<b> insegnante."
-  dashboard_students_add_student: "Aggiungi uno studente"
-  dashboard_students_add_students: "Aggiungi più studenti"
   dashboard_students_add_multiple: 'Scrivi o incolla i nomi dei tuoi studenti, uno per riga:'
-  dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
+  dashboard_students_new_google_classroom_section: "Per aggiungere studenti, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a>, quindi quindi clicca il pulsante in alto <b>Sincronizza studenti da Google Classroom</b>."
   dashboard_students_new_section: "Hai creato una nuova classe! Ora aggiungi gli studenti utilizzando i pulsanti <b>Aggiungi uno studente</b> e <b>Aggiungi più studenti</b> qui sopra."
-  dashboard_students_placeholder_name: "Nome dello studente"
   dashboard_students_name: "Nome"
   dashboard_students_progress: "Avanzamento"
-  dashboard_students_age: "Età"
-  dashboard_students_gender: "Sesso"
   dashboard_students_male: "Maschile"
   dashboard_students_female: "Femminile"
-  dashboard_students_secret: "Password"
-  dashboard_students_password: "password"
-  dashboard_students_username: 'Nome utente: %{student_username}'
-  dashboard_students_email: 'Indirizzo di posta elettronica: %{student_email}'
   dashboard_students_completed_levels: "Livelli completati"
   dashboard_students_total_lines: "Linee di codice"
-  dashboard_students_show_secret: "Mostra la password"
-  dashboard_students_auto_generated: "Auto-generata"
-  dashboard_students_reset_secret: "Reimposta la password"
-  dashboard_students_reset_password: "Reimposta la password"
   dashboard_students_share_section: "Condividi la pagina di accesso di questa classe con i tuoi studenti:"
   dashboard_students_share_section_secondary: 'In alternativa, condividi con i tuoi studenti il link alla pagina di login della classe:'
   dashboard_students_print_info: "Stampa le schede con le informazioni di accesso dei tuoi studenti."
@@ -762,12 +743,12 @@
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
   dashboard_course4: 'Corso 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Corso A: '
+  dashboard_courseb: 'Corso B: '
+  dashboard_coursec: 'Corso C: '
+  dashboard_coursed: 'Corso D: '
+  dashboard_coursee: 'Corso E: '
+  dashboard_coursef: 'Corso F: '
   dashboard_pre-express: 'Corso Rapido pre-scolare: '
   dashboard_express: 'Corso Rapido: '
   dashboard_unplugged: "Se non hai un computer, <a href='%{unplugged_url}'>usa queste lezioni tradizionali</a> nella tua classe."
@@ -796,7 +777,6 @@
   dashboard_login_word: "Parola"
   dashboard_login_picture: "Immagine"
   dashboard_login_none: "Indirizzo di posta elettronica"
-  dashboard_new_password: "nuova password"
   dashboard_stage: "Lezione"
   dashboard_puzzle: "Esercizio"
   dashboard_question: "Domanda"
@@ -872,11 +852,11 @@
   carousel_heading_webpages: "Impara a costruire pagine web"
   carousel_heading_robots: "Impara a programmare giocando con un robot"
   carousel_heading_ide: "Piattaforme didattiche popolari tra gli insegnanti"
-  carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
-  carousel_heading_prereader: "For pre-readers"
-  carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
-  carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
+  carousel_heading_desktop: "Impara a programmare un computer"
+  carousel_heading_mobtabelem: "Per telefoni e tablet"
+  carousel_heading_prereader: "Pre-scolare"
+  carousel_heading_beyondblocks: "Vai oltre ai blocchi - impara un linguaggio di programmazione"
+  carousel_heading_nointernet: "Connessione lenta? Installa queste app sul tuo computer"
   educator_notes: "Note per gli insegnanti"
   teach_led_lesson_plans: "Piani di attività \"Gestite dagli Insegnanti\" per l'Ora del Codice"
   learn_footer_all_tutorials: "Guarda <a href=\"https://code.org/educate/allhourofcode\">la lista comprensiva dei tutorial per l'Ora del Codice</a>. Per vedere I criteri e linee guida di sottomissione per l'Ora del Codice, <a href=\"https://hourofcode.com/tutorial-guidelines\">clicca qui.</a>"
@@ -1073,12 +1053,12 @@
   course2_gradelevel: "Da 6 anni in su (per chi sa leggere)"
   course3_gradelevel: "Da 8 anni in su (dopo il Corso 2)"
   course4_gradelevel: "Da 10 anni in su (dopo il Corso 3)"
-  coursea_gradelevel: "Da 10 anni in su"
-  courseb_gradelevel: "Grade 6+"
-  coursec_gradelevel: "Grade 7+"
-  coursed_gradelevel: "Classi 8+"
-  coursee_gradelevel: "Grade 9+"
-  coursef_gradelevel: "Da 15 anni in su"
+  coursea_gradelevel: "Da 4 a 7 anni"
+  courseb_gradelevel: "Da 5 a 8 anni"
+  coursec_gradelevel: "Da 6 a 10 anni"
+  coursed_gradelevel: "Da 7 a 11 anni"
+  coursee_gradelevel: "Da 8 a 12 anni"
+  coursef_gradelevel: "Da 9 a 13 anni"
   accelerated_gradelevel: "Da 10 anni in su (dopo il Corso 3)"
   codeorg_platformtext: "Browser moderni, smartphone, Tablet"
   codeintl_platformtext: "Browser moderni, smartphone, Tablet"
@@ -1181,12 +1161,12 @@
   course2_shortdescription_congrats: "Per gli studenti con competenze di lettura di base, questo corso si basa sul Corso 1. Gli studenti creeranno programmi per risolvere problemi e sviluppare giochi interattivi o storie che potranno condividere. Consigliato per le classi 2-5."
   course3_shortdescription_congrats: "Pronti ad andare oltre? Gli studenti potranno approfondire gli argomenti di programmazione introdotti nei corsi precedenti per trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti saranno in grado di creare storie interattive e giochi che potranno condividere con chiunque."
   course4_shortdescription_congrats: "Pronti ad andare oltre? Gli studenti potranno approfondire gli argomenti di programmazione introdotti nei corsi precedenti per trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti saranno in grado di creare storie interattive e giochi che potranno condividere con chiunque."
-  coursea_shortdescription_congrats: ""
-  courseb_shortdescription_congrats: ""
-  coursec_shortdescription_congrats: ""
-  coursed_shortdescription_congrats: ""
-  coursee_shortdescription_congrats: ""
-  coursef_shortdescription_congrats: ""
+  coursea_shortdescription_congrats: "Un'introduzione all'informatica per bambini che non leggono ancora."
+  courseb_shortdescription_congrats: "An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)"
+  coursec_shortdescription_congrats: "Learn the basics of computer science and create your own art, stories, and games."
+  coursed_shortdescription_congrats: "Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more."
+  coursee_shortdescription_congrats: "Quickly cover concepts in Course C & D and then go further with functions."
+  coursef_shortdescription_congrats: "Learn all the concepts in Computer Science Fundamentals and create your own art, story or game."
   codeorg_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   codeintl_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   thinkersmithspanish_longdescription: "Usando un \"Vocabolario per Robot\" pre-definito gli studenti capiscono come guidarsi a vicenda per svolgere compiti specifici senza essersi prima accordati. Questa lezione insegna ai bambini la connessione tra simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi). La lezione \"I miei amici robotici\" funziona meglio se sviluppata in gruppo e include una guida per l'insegnante per l'uso in aula."
@@ -1486,19 +1466,19 @@
   sign_in_instruct_secret: "Inserire la loro %{secret} segreta."
   sign_in_instruct_button: "Cliccare sul pulsante \"Accedi\"."
   sign_in_overview_cards: "Gli studenti trovano tutte queste informazioni, tra cui la loro %{secret} segreta, sulle schede di accesso qui sotto."
-  reset_student_password: "Resetting student passwords"
+  reset_student_password: "Reimpostazione delle password degli studenti"
   reset_student_password_instructions: "È possibile reimpostare la <word/picture> segreta per uno qualsiasi dei tuoi studenti andando nella scheda \"Gestisci gli studenti\" della classe, cliccando sul tasto \"Mostra la password\" sotto la colonna \"Password\" e poi cliccando sul pulsante \"Reimposta la password\"."
   login_cards: "Schede di accesso"
   print_login_cards: "Stampa le schede di accesso"
-  joining_section: "Joining your section (one-time only)"
+  joining_section: "Iscrizione alla tua classe (una tantum)"
   joining_section_overview: "If a student has not already joined your section, please ask them to do the following steps. Note that they only need to do this once. By joining your section, students will be able see the course assigned to them and you will be able to track the progress of the work they complete while they are signed in."
   joining_section_instruct_website: 'Create a Code.org account if they haven’t already done so. They can do this at https://studio.code.org/users/sign_up. Note that they can either sign up with an email address and password, or sign up through Google, Facebook, or Microsoft by clicking on one of these buttons:'
   joining_section_instruct_account: "Sign in to their Code.org account."
-  joining_section_instruct_code: 'Navigate to %{code_org_url} and type in their section code: %{section_code}.'
-  joining_section_instruct_button: "Once they press the “Go” button, they should be added to your section."
+  joining_section_instruct_code: 'Accedere alla pagina %{code_org_url} ed inserire il codice classe: %{section_code}.'
+  joining_section_instruct_button: "Alla pressione del pulsante “Go”, loro dovrebbero essere iscritti alla tua classe."
   signing_in_single_instruct: "Gli studenti possono accedere ai loro account Code.org andando alla pagina https://code.org/ e cliccando sul pulsante \"Accedi\" in alto a destra."
   reset_student_password_email: "Se il tuo studente ha creato un account di Code.org utilizzando il suo indirizzo email e la password (anziché accedere tramite il proprio account Google, Facebook, Microsoft o Clever), è possibile reimpostare la password accedendo alla scheda \"Gestisci gli studenti\" per la classe, e cliccare sul pulsante \"Reimposta la password\" sotto la colonna \"Password\"."
-  syncing_students: "Syncing your students"
+  syncing_students: "Sincronizzazione studenti"
   syncing_students_instructions: 'If your Code.org section is ever out of date with your list of students in Google Classroom, click on the “Sync students from Google Classroom” button on the “Manage students” tab:'
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
   hero_name: 'Minecraft: Il viaggio dell''eroe'

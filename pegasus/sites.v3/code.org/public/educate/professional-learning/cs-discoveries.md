@@ -52,8 +52,8 @@ The program kicks off with 5-day summer workshop where you'll have the opportuni
 ## <a name="features"></a>Program Features
 
 <details>
-<summary>**Cost should not be a barrier**</summary>
-<p>
+  <summary>**Cost should not be a barrier**</summary>
+  <p>
 <br>
 We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at *no cost to you or your school*.
 
@@ -62,24 +62,24 @@ In New York and North Carolina, there is a fee to cover the costs of the worksho
 </details>
 
 <details> 
-<summary>**One cohesive set of resources**</summary>
-<p>
+  <summary>**One cohesive set of resources**</summary>
+  <p>
 <br>
 ​Our professional learning and curriculum flow seamlessly together, empowering teachers to deliver the course with confidence. In-person workshops combine with online tools to provide participants with a broad selection of resources to help them plan ahead for implementing the course in their classrooms, while also collaborating with other educators.
 </p>
 </details>
 
 <details>
- <summary>**Teaching and learning in context**</summary>
- <p>
+  <summary>**Teaching and learning in context**</summary>
+  <p>
  <br>
 Participants will engage with the curriculum both as instructors and as learners. By experiencing the course content as an active learner, participants will gain important, concrete insight into the perspective their students will have during the academic year. By interacting with curriculum content as instructors, participants will learn how to plan and deliver lessons.
 </p>
 </details>
 
 <details>
-<summary>**A collaborative, participant-centric approach**</summary>
-<p>
+  <summary>**A collaborative, participant-centric approach**</summary>
+  <p>
 <br>
 ​Teachers and facilitators will have the opportunity to share their expertise from the field and collaborate on strategies to bring to the CS Principles and CS Discoveries classrooms, giving participants a chance to learn from everyone in the room. Facilitators model pedagogical strategies and participants share their own approaches by planning and delivering lessons.
 ​</p>
@@ -195,3 +195,5 @@ Help bring professional learning opportunities to your community by becoming a C
 
 <a href="/educate/professional-learning/facilitator"><button>Learn more</button>
 -->
+
+<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=1108",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> 

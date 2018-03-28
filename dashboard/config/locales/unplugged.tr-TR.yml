@@ -273,9 +273,6 @@
           ölçmeye bakacağız. Daha sonra bunu iki nokta (veya oyun karakterleri) arası
           mesafe ölçek için kullanıp dokunup dokunmadığına karar için kullanılabilir
           bakacağız.
-      ! '':
-        title: ''
-        desc: ''
       courseA_unplugged_loops:
         title: Bağımsız (Unplugged) Döngüler
         desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
@@ -482,3 +479,24 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+        desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın
+          bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca
+          algoritmaların bilgisayar bilimindeki önemini göreceğiz.
+      UnplugHappyMaps_2018:
+        title: Mutlu Haritalar
+        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler."
+      GoingPlacesSafely_2018:
+        title: Biryerlere Güvenle Gitmek
+        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
+      courseA_unplugged_loops_2018:
+        title: Bağımsız (Unplugged) Döngüler
+        desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
+      BigEvent_2018:
+        title: Büyük Olay
+        desc: "Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
+          öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
+          öğrenciler basılan tuşa göre eylemde bulunacak."
