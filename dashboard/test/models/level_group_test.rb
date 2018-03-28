@@ -222,4 +222,71 @@ MARKDOWN
     # returns undefined when signed out
     assert_nil LevelGroup.get_sublevel_last_attempt(nil, nil, level1, script)
   end
+
+  # Test that clone_with_suffix performs a deep copy of a LevelGroup, and the
+  # copy has the correct dsl text.
+  test 'clone level group with suffix' do
+    # DSL for the level_group.
+    level_group_input_dsl = "
+  name 'long assessment'
+  title 'Long Assessment'
+  submittable 'true'
+
+  page
+  level 'level1'
+  level 'level2'
+  level 'level3'
+  page
+  level 'level4'
+  text 'external1'
+  level 'level5'
+  page
+  level 'level6'
+  level 'level7'
+  "
+
+    level_group_copy_dsl = "name 'long assessment_copy'
+title 'Long Assessment'
+submittable 'true'
+
+page
+level 'level1_copy'
+level 'level2_copy'
+level 'level3_copy'
+
+page
+level 'level4_copy'
+text 'external1_copy'
+level 'level5_copy'
+
+page
+level 'level6_copy'
+level 'level7_copy'"
+
+    # Create multis named level1-level7.
+    levels = {}
+    (1..7).each do |id|
+      levels["multi_#{id}"] = Multi.create_from_level_builder({}, {dsl_text: get_multi_dsl(id)})
+    end
+
+    # Create the external level.
+    External.create_from_level_builder({}, {dsl_text: get_external_dsl(1)})
+
+    # Create the level_group.
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
+
+    # Copy the level group and all its sub levels.
+    level_group_copy = level_group.clone_with_suffix('_copy')
+
+    assert_equal level_group_copy_dsl, level_group_copy.dsl_text
+    (1..7).each do |id|
+      refute_nil l = Level.find_by_name("level#{id}_copy")
+      assert_equal 'What is the name of this function?', l.properties['questions'].first['text']
+    end
+    refute_nil l = Level.find_by_name('external1_copy')
+    assert_includes l.properties['markdown'], 'Sample external'
+
+    # clean up
+    File.delete(level_group_copy.filename)
+  end
 end
