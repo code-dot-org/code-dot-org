@@ -15,6 +15,7 @@ import {
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
 } from './templates/publishDialog/publishDialogRedux';
+import {createHiddenPrintWindow} from './utils';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -473,7 +474,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var printButton = feedback.querySelector('#print-button');
   if (printButton) {
     dom.addClickTouchEvent(printButton, function () {
-      FeedbackUtils.createHiddenPrintWindow(options.feedbackImage);
+      createHiddenPrintWindow(options.feedbackImage);
     });
   }
 
@@ -533,14 +534,6 @@ FeedbackUtils.saveThumbnail = function (image) {
     .then(project.saveThumbnail)
     // Don't pass any arguments to project.save().
     .then(() => project.save());
-};
-
-FeedbackUtils.createHiddenPrintWindow = function (src) {
-  var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
-  iframe.appendTo("body");
-  iframe[0].contentWindow.document.write("<img src='" + src + "'/>");
-  iframe[0].contentWindow.document.write("<script>if (document.execCommand('print', false, null)) {  } else { window.print();  } </script>");
-  $("#print_frame").remove(); // Remove the iframe when the print dialogue has been launched
 };
 
 FeedbackUtils.isLastLevel = function () {

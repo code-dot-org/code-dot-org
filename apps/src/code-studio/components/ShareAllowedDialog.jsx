@@ -11,6 +11,7 @@ import * as gamelabConstants from '../../gamelab/constants';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
 import { showPublishDialog } from '../../templates/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/publishDialog/PublishDialog';
+import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 function select(event) {
@@ -115,6 +116,7 @@ class ShareAllowedDialog extends React.Component {
     thumbnailUrl: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
+    canPrint: PropTypes.bool,
     canPublish: PropTypes.bool.isRequired,
     isPublished: PropTypes.bool.isRequired,
     isUnpublishPending: PropTypes.bool.isRequired,
@@ -163,6 +165,11 @@ class ShareAllowedDialog extends React.Component {
       showAdvancedOptions: false,
     });
     event.preventDefault();
+  };
+
+  print = event => {
+    event.preventDefault();
+    createHiddenPrintWindow(this.props.thumbnailUrl);
   };
 
   showAdvancedOptions = () => {
@@ -234,7 +241,7 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {canPublish, isPublished, userSharingDisabled, appType} = this.props;
+    const {canPrint, canPublish, isPublished, userSharingDisabled, appType} = this.props;
     return (
       <div>
         <BaseDialog
@@ -327,6 +334,12 @@ class ShareAllowedDialog extends React.Component {
                   />
                   }
                   {/* prevent buttons from overlapping when unpublish is pending */}
+                  {canPrint && hasThumbnail &&
+                    <a href="#" onClick={this.print}>
+                      <i className="fa fa-print" style={{fontSize: 26}} />
+                      <span>{i18n.print()}</span>
+                    </a>
+                  }
                   {this.props.canShareSocial && !this.props.isUnpublishPending &&
                   <span>
                     {this.state.isFacebookAvailable &&
