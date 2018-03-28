@@ -66,7 +66,7 @@ Bilgisayarlar her yerdeler ve gezegendeki her endüstriyi değiştiriyorlar. Bü
 
 Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyada her Apple Store Kodlama Saatine ev sahipliği yaptı, hatta Başkan Obama ve Kanada başbakanı Justin Trudeau kampanya kapsamında ilk kod satırlarını yazdı.
 
-Bu yıl daha büyük yapalım. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Bilgisayar Bilimleri Eğitim Haftası süresince <% = campaign_date ('full')%>,, "Kodlama Saati" etkinliklerinden birine katılın.
+Bu yıl daha büyük yapalım. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Bilgisayar Bilimleri Eğitim Haftası süresince <%= campaign_date('full')%>,, "Kodlama Saati" etkinliklerinden birine katılın.
 
 Organizasyondan bahsedin. Bir etkinlik düzenleyin. Yerel okullara kaydolmalarını isteyin. Veya Kodlama Saatini kendiniz deneyin - herkes temelleri öğrenerek kendine fayda sağlayabilir.
 

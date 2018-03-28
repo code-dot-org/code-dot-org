@@ -18,9 +18,12 @@ social:
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
   "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-அனுமதியை & lt;%    facebook = {: u => "http: // # {request.host} / us"}
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
 
-twitter =>: http://hourofcode.com ",: related => 'codeorg',: hashtags => '',: text => hoc_s (: twitter_default_text)}    twitter [: hashtags] = 'HourOfCode' hoc_s (: twitter_default_text) தவிர. '#HourOfCode' %>
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Thanks for signing up to host an Hour of Code!
 
