@@ -223,7 +223,7 @@
     "react-dom-confetti": "^0.0.8",
     "react-hot-loader": "^1.3.1",
     "selectize": "^0.12.4",
-    "snack-sdk": "https://github.com/expo/snack-sdk",
+    "snack-sdk": "https://github.com/code-dot-org/snack-sdk",
     "whatwg-fetch": "^2.0.3"
   }
 }
