@@ -70,7 +70,7 @@
           </block>
         </category>
         <category name="Sprites">
-          <block type="variables_set" inline="false">
+          <block type="sprite_variables_set" inline="false">
             <title name="VAR">sprite</title>
             <value name="VALUE">
               <block type="gamelab_makeNewSprite" inline="true">
@@ -90,28 +90,28 @@
           </block>
           <block type="gamelab_moveUp" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveDown" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveLeft" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveRight" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
@@ -121,26 +121,26 @@
           </block>
           <block type="gamelab_displace" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
             <value name="SPRITE">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">other</title>
               </block>
             </value>
           </block>
           <block type="gamelab_destroy" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
           </block>
         </category>
         <category name="Groups">
-          <block type="variables_set" inline="false">
+          <block type="sprite_variables_set" inline="false">
             <title name="VAR">group</title>
             <value name="VALUE">
               <block type="gamelab_makeNewGroup"/>
@@ -148,12 +148,12 @@
           </block>
           <block type="gamelab_add" inline="true">
             <value name="SPRITE">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">group</title>
               </block>
             </value>
@@ -171,12 +171,12 @@
           <block type="gamelab_whileRightArrow"/>
           <block type="gamelab_whenTouching" inline="true">
             <value name="SPRITE1">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">sprite</title>
               </block>
             </value>
             <value name="SPRITE2">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">other</title>
               </block>
             </value>

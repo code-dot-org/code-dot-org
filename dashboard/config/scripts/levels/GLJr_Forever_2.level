@@ -215,7 +215,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"forever\",\r\n    \"color\": [\r\n      322,\r\n      0.9,\r\n      0.95\r\n    ],\r\n    \"blockText\": \"repeat forever\",\r\n    \"args\": [],\r\n    \"eventLoopBlock\": true\r\n  },\r\n  {\r\n    \"func\": \"rotateRight\",\r\n    \"blockText\": \"rotate {SPRITE} right\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"growSprite\",\r\n    \"blockText\": \"make {SPRITE} bigger\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ]\r\n  }\r\n]",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"forever\",\r\n    \"color\": [\r\n      322,\r\n      0.9,\r\n      0.95\r\n    ],\r\n    \"blockText\": \"repeat forever\",\r\n    \"args\": [],\r\n    \"eventLoopBlock\": true\r\n  },\r\n  {\r\n    \"func\": \"rotateRight\",\r\n    \"blockText\": \"rotate {SPRITE} right\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"growSprite\",\r\n    \"blockText\": \"make {SPRITE} bigger\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  }\r\n]",
     "instructions": "Now you have some new blocks! Try them out and see how they work. On your worksheet, write down which ones you tried, and what they do.",
     "parent_level_id": 11923,
     "custom_helper_library": "function rotateRight(sprite) {\r\n  sprite.rotation+=6;\r\n}\r\nfunction growSprite(sprite) {\r\n  sprite.scale+=.01\r\n}",
@@ -232,7 +232,7 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="sprite_variables_set" inline="false">
               <title name="VAR">myDog</title>
               <value name="VALUE">
                 <block type="gamelab_makeNewSprite" inline="true">
@@ -256,7 +256,7 @@
           <statement name="DO">
             <block type="gamelab_moveRight" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">myDog</title>
                 </block>
               </value>
@@ -267,7 +267,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="variables_get">
+        <block type="sprite_variables_get">
           <title name="VAR">myDog</title>
         </block>
         <block type="gamelab_moveRight" inline="true"/>

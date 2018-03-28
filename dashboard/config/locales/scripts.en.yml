@@ -7761,3 +7761,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
