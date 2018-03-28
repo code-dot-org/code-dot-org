@@ -1096,7 +1096,7 @@ exports.install = function (blockly, blockInstallOptions) {
         '(\'block_id_' + this.id + '\');\n';
   };
 
-  function stickerSize(blockName)  {
+  function createDrawStickerBlock(blockName)  {
     return {
       helpUrl: '',
       init: function () {
@@ -1104,6 +1104,9 @@ exports.install = function (blockly, blockInstallOptions) {
         var dropdown;
         var input = this.appendDummyInput();
         input.appendTitle(msg.drawSticker());
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
 
         // Generates a list of pairs of the form [[url, name]]
         var values = [];
@@ -1115,50 +1118,53 @@ exports.install = function (blockly, blockInstallOptions) {
 
         input.appendTitle(dropdown, 'VALUE');
 
-        if (blockName === 'turtle_sticker_with_size') {
-          this.appendDummyInput()
-              .appendTitle(msg.withSize());
-          this.appendValueInput('SIZE')
-              .setCheck(blockly.BlockValueType.NUMBER);
-          this.appendDummyInput()
-              .appendTitle(msg.pixels());
-          this.setTooltip(msg.drawStickerWithSize());
-        } else if (blockName === 'turtle_sticker_with_size_non_param') {
-          this.appendDummyInput()
-              .appendTitle(msg.withSize());
-          this.appendDummyInput()
-              .appendTitle(new blockly.FieldTextInput('0',
-              blockly.FieldTextInput.numberValidator), 'SIZE')
-              .appendTitle(msg.pixels());
-          this.setTooltip(msg.drawStickerWithSize());
-        } else {
-          this.setTooltip(msg.drawSticker());
-        }
-          this.setInputsInline(true);
-          this.setPreviousStatement(true);
-          this.setNextStatement(true);
+        appendToDrawStickerBlock(blockName, this);
       }
     };
+  }
+
+  // Add size input to the draw sticker block (text input & socket)
+  function appendToDrawStickerBlock(blockName, block) {
+    if (blockName === 'turtle_sticker_with_size') {
+      block.appendDummyInput()
+           .appendTitle(msg.withSize());
+      block.appendValueInput('SIZE')
+           .setCheck(blockly.BlockValueType.NUMBER);
+      block.appendDummyInput()
+           .appendTitle(msg.pixels());
+      block.setTooltip(msg.drawStickerWithSize());
+    } else if (blockName === 'turtle_sticker_with_size_non_param') {
+      block.appendDummyInput()
+           .appendTitle(msg.withSize());
+      block.appendDummyInput()
+           .appendTitle(new blockly.FieldTextInput('0',
+           blockly.FieldTextInput.numberValidator), 'SIZE')
+           .appendTitle(msg.pixels());
+      block.setTooltip(msg.drawStickerWithSize());
+    } else {
+      block.setTooltip(msg.drawSticker());
+    }
   }
 
   // We alias 'turtle_stamp' to be the same as the 'sticker' block for
   // backwards compatibility.
 
-  blockly.Blocks.sticker = blockly.Blocks.turtle_stamp = stickerSize();
+  blockly.Blocks.sticker = blockly.Blocks.turtle_stamp = createDrawStickerBlock();
+
 
   generator.sticker = generator.turtle_stamp = function () {
     return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') +
         '", null, \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.turtle_sticker_with_size = stickerSize('turtle_sticker_with_size');
+  blockly.Blocks.turtle_sticker_with_size = createDrawStickerBlock('turtle_sticker_with_size');
 
   generator.turtle_sticker_with_size = function () {
     let size = generator.valueToCode(this, 'SIZE', Blockly.JavaScript.ORDER_NONE);
     return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},'block_id_${this.id}');\n`;
   };
 
-  blockly.Blocks.turtle_sticker_with_size_non_param = stickerSize('turtle_sticker_with_size_non_param');
+  blockly.Blocks.turtle_sticker_with_size_non_param = createDrawStickerBlock('turtle_sticker_with_size_non_param');
 
   generator.turtle_sticker_with_size_non_param = function () {
     let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
