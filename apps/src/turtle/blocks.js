@@ -281,6 +281,31 @@ blockly.Blocks.point_to = {
     return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value}, 'block_id_${this.id}');\n`;
   };
 
+// blockly.Blocks.point_to = {
+//     // Block for pointing to a specified direction
+//     helpUrl: '',
+//     init: function () {
+//       let angleOptions = ['30', '45', '60', '90', '120', '135', '150', '180'];
+//       this.setHSV(184, 1.00, 0.74);
+//       this.appendDummyInput()
+//           .appendTitle(msg.pointTo());
+//       this.appendDummyInput()
+//           .appendTitle(new blockly.FieldAngleTextInput('VALUE', '0'), 'DIRECTION')
+//           .appendTitle(new Blockly.FieldAngleDropdown(angleOptions), 'DIRECTION')
+//           .appendTitle(msg.degrees());
+//       this.setPreviousStatement(true);
+//       this.setInputsInline(true);
+//       this.setNextStatement(true);
+//       this.setTooltip(msg.pointTo());
+//     }
+//   };
+//
+//   generator.point_to = function () {
+//     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
+//     return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value}, 'block_id_${this.id}');\n`;
+//   };
+
+
   generator.draw_turn_inline = function () {
     // Generate JavaScript for turning left or right.
     var value = window.parseFloat(this.getTitleValue('VALUE'));
