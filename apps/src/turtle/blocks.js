@@ -1148,7 +1148,6 @@ exports.install = function (blockly, blockInstallOptions) {
 
   // We alias 'turtle_stamp' to be the same as the 'sticker' block for
   // backwards compatibility.
-
   blockly.Blocks.sticker = blockly.Blocks.turtle_stamp =
     createDrawStickerBlock();
 
