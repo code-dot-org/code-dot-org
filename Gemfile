@@ -283,6 +283,8 @@ gem 'StreetAddress', require: "street_address"
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
+gem 'loofah', ' ~> 2.2.1'
+
 # Install pg gem only on specific production hosts.
 require_pg = -> do
   require 'socket'

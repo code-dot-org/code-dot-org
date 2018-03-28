@@ -34,15 +34,15 @@
     기초개념들을 학습해 보세요.
   og_title: "모든 아이들에게 기회가 주어져야 합니다."
   og_title_soon: The Hour of Code is coming
-  og_title_here: The Hour of Code is here!
+  og_title_here: Hour of Code 가 여기 있습니다!
   og_description: "모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다."
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
   csedweek_og_title: Hour of Code 가 여기 있습니다
   csedweek_og_description: Hour of Code 는 180개 이상의 나라에서 45개 이상의 언어로, 나이에 상관없이 수천만
     명의 학생들과 함께하려는 전세계적 운동입니다.
-  csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
-    science is foundational for every student to learn.
+  csedweek_og_description_soon: Hour of Code 가 2018년 12월 3일~9일에 옵니다. 컴퓨터 사이언스는 모든
+    학생들이 배우기 위한 기초입니다.
   csedweek_og_description_here: The Hour of Code is here. Computer science is foundational
     for every student to learn.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
@@ -247,14 +247,10 @@
   just_did_course2: "과정2를 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course3: "과정3을 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course4: "과정4를 완료했습니다. - @codeorg 를 살펴보세요!"
-  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
-    supporting @codeorg
-  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
-    supporting @codeorg
+  just_did_coursea: "방금 코스 A를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_courseb: "방금 코스 B를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_coursec: "방금 코스 C를 끝냈습니다 - 확인해보세요! @codeorg"
+  just_did_coursed: "방금 코스 D를 끝냈습니다 - 확인해보세요! @codeorg"
   just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
@@ -864,7 +860,7 @@
     그림에 로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
   dashboard_students_reset_picture: "학생들의 비밀그림을 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b>
     할 수 있습니다. 새로운 비밀그림은 학생이 로그인하면 생성될 것입니다."
-  dashboard_students_secret_word_title: "비밀 단어"
+  dashboard_students_secret_word_title: "비밀단어"
   dashboard_students_secret_word: "이 섹션의 비밀 형식으로 <b>그림</b>을 사용합니다.  그것은 각 학생의 비밀 그림에
     로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
   dashboard_students_reset_word: "학생들의 비밀단어를 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b>

@@ -3988,8 +3988,15 @@
                 elegir algunas de las categorizaciones más difíciles. Luego, el profesor
                 introduce una definición de la computadora y permite a los grupos
                 revisar sus carteles de acuerdo con la nueva definición.
-              description_teacher: |
-                In this lesson students develop a preliminary definition of a computer. To begin the lesson, the class will brainstorm possible definitions for a computer and place the results of this brainstorm on the board. Next, students will work in groups to sort pictures into “is a computer” or “is not a computer” on poster paper. Groups will place their posters around the room and briefly explain their motivations for choosing some of their most difficult categorizations.  The teacher will then introduce a definition of the computer and allow students to revise their posters according to the new definition.
+              description_teacher: 'In this lesson students develop a preliminary
+                definition of a computer. To begin the lesson, the class will brainstorm
+                possible definitions for a computer and place the results of this
+                brainstorm on the board. Next, students will work in groups to sort
+                pictures into “is a computer” or “is not a computer” on poster paper.
+                Groups will place their posters around the room and briefly explain
+                their motivations for choosing some of their most difficult categorizations.  The
+                teacher will then introduce a definition of the computer and allow
+                students to revise their posters according to the new definition.  '
             Representing Information:
               name: Representing Information
             Processing with Bits:
@@ -9176,3 +9183,661 @@
             games, using the same programming concepts and the design process computer
             scientists use daily. In the final project, you’ll develop a personalized,
             interactive program."
+        textbook:
+          stages:
+            Test Map Level:
+              name: Test Map Level
+            new stage:
+              name: new stage
+          title: CSF Textbook Pages
+          description_audience: ''
+          description_short: ''
+          description: ''
+        glj-behavior-test:
+          stages:
+            Cats and Dogs:
+              name: Cats and Dogs
+          title: Game Lab Jr. Test - Behavior
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd3-2018:
+          title: CSD Unit 3 - Animations and Games
+          description: " In Unit 3, you’ll build on your coding experience as you
+            program animations, interactive art, and games in Game Lab. The unit starts
+            off with simple shapes and builds up to more sophisticated sprite-based
+            games, using the same programming concepts and the design process computer
+            scientists use daily. In the final project, you’ll develop a personalized,
+            interactive program."
+          description_short: Programación
+          description_audience: ''
+          stages:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+              description_student: Se le pide a la clase que considere los "problemas"
+                del aburrimiento y de autoexpresión, y una reflexion sobre cómo abordan
+                esos problemas en sus propias vidas. A partir de ahí, explorarán cómo
+                la informática en general, y la programación mas específico, juegan
+                un papel en una forma específica de entretenimiento o como vehículo
+                de autoexpresión.
+              description_teacher: Students are asked to consider the "problems" of
+                boredom and self expression, and to reflect on how they approach those
+                problems in their own lives. From there, students will explore how
+                Computer Science in general, and programming specifically, plays a
+                role in either a specific form of entertainment or as a vehicle for
+                self expression.
+            Plotting Shapes:
+              name: Plotting Shapes
+              description_student: Los estudiantes exploran los desafíos de comunicación
+                en cómo dibujar con formas y usan una herramienta que introduce la
+                forma de abordar este problema en Game Lab. La actividad de calentamiento
+                demuestra rápidamente los desafíos de comunicar sin algún punto de
+                referencia compartido. En la actividad principal, los estudiantes
+                exploran una herramienta de Game Lab que les permite a los mismo colocar
+                formas interactivamente en la cuadrícula de 400 por 400 de Game Lab.
+                Luego se turnan para instruir a un compañero sobre cómo dibujar una
+                imagen oculta con esta herramienta, lo que representa muchos desafíos
+                que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes
+                opcionalmente crean su propia imagen para comunicarse antes de discutir
+                la informacion.
+              description_teacher: Los estudiantes exploran los desafíos de comunicación
+                en cómo dibujar con formas y usan una herramienta que introduce la
+                forma de abordar este problema en Game Lab. La actividad de calentamiento
+                demuestra rápidamente los desafíos de comunicar sin algún punto de
+                referencia compartido. En la actividad principal, los estudiantes
+                exploran una herramienta de Game Lab que les permite a los mismo colocar
+                formas interactivamente en la cuadrícula de 400 por 400 de Game Lab.
+                Luego se turnan para instruir a un compañero sobre cómo dibujar una
+                imagen oculta con esta herramienta, lo que representa muchos desafíos
+                que los estudiantes enfrentarán al programar en Game Lab. Los estudiantes
+                opcionalmente crean su propia imagen para comunicarse antes de discutir
+                la informacion.
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+              description_student: The class is introduced to Game Lab, the programming
+                environment for this unit, and begins to use it to position shapes
+                on the screen. Thee lesson covers the basics of sequencing and debugging,
+                as well as a few simple commands. At the end of the lesson, the class
+                creates an online version of the image they designed in the previous
+                lesson.
+              description_teacher: Se les presenta a los estudiantes el Game Lab,
+                el entorno de programación de esta unidad, y comienzan a usarlo para
+                colocar las formas en la pantalla. Aprenden los conceptos básicos
+                de secuenciación y depuración, así como algunos comandos simples.
+                Al final de la lección, los estudiantes podrán programar imágenes
+                como las que hicieron con la herramienta de dibujo en la lección anterior.
+            Shapes and Randomization:
+              name: Shapes and Randomization
+              description_student: ''
+              description_teacher: ''
+            Variables:
+              name: Variables
+              description_student: Esta lección introduce variables como una forma
+                de etiquetar un número en un programa o guardar un valor generado
+                aleatoriamente. La clase comienza la lección con una descripción muy
+                básica del propósito de una variable y práctica usando los nuevos
+                bloques. Después, la clase usa variables para guardar un número aleatorio,
+                permitiendo que los programas usen el mismo número aleatorio varias
+                veces.
+              description_teacher: En esta lección, los estudiantes aprenden a usar
+                variables para etiqueta un número en su programa o guardar un valor
+                generado aleatoriamente. Los estudiantes comienzan la lección con
+                una descripción muy básica del propósito de una variable. Luego, los
+                estudiantes completan un nivel de progreso que refuerza el modelo
+                de una variable como una forma de etiquetar o nombrar un número. Los
+                estudiantes usan variables para guardar un número aleatorio para ver
+                que las variables realmente almacenan o guardan sus valores, lo que
+                les permite usar el mismo número aleatorio varias veces en sus programas.
+            Sprites:
+              name: Sprites
+              description_student: Para crear imágenes más interesantes y detalladas,
+                la clase se introduce en el objeto sprite. A cada sprite se le puede
+                asignar una imagen para mostrar, y los sprites también hacen un seguimiento
+                de múltiples valores acerca de ellos mismos, lo que resultará útil
+                en la via para hacer animaciones. Al final de la lección, todos crean
+                una escena usando sprites.
+              description_teacher: In order to create more interesting and detailed
+                images, students are introduced to the sprite object. Every sprite
+                can be assigned an image to show, and sprites also keep track of multiple
+                values about themselves, which will prove useful down the road when
+                making animations.
+            The Draw Loop:
+              name: The Draw Loop
+              description_student: This lesson introduces the draw loop, one of the
+                core programming paradigms in Game Lab.  The class combines the draw
+                loop with random numbers to manipulate some simple animations with
+                dots and then with sprites. Afterwards, everyone uses what they learned
+                to update the sprite scene from the previous lesson.
+              description_teacher: In this lesson students are introduced to the draw
+                loop, one of the core programming paradigms in Game Lab. To begin
+                the lesson students look at some physical flipbooks to see that having
+                many frames with different images creates the impression of motion.
+                Students then watch a video explaining how the draw loop in Game Lab
+                helps to create this same impression in their programs. Students combine
+                the draw loop with random numbers to manipulate some simple animations
+                with dots and then with sprites. At the end of the lesson students
+                use what they learned to update their sprite scene from the previous
+                lesson.
+            The Counter Pattern Unplugged:
+              name: The Counter Pattern Unplugged
+              description_student: This unplugged lesson explores the underlying behavior
+                of variables. Using notecards and string to simulate variables within
+                a program, the class implements a few short programs. Once comfortable
+                with this syntax, the class uses the same process with sprite properties,
+                tracking a sprite's progress across the screen.
+              description_teacher: Students explore the underlying behavior of variables
+                through an unplugged activity. Using notecards and string to simulate
+                variables within a program, students implement a few short programs.
+                Once comfortable with this syntax, students use the same process with
+                sprite properties, tracking a sprite's progress across the screen.
+            Sprite Movement:
+              name: Sprite Movement
+              description_student: By combining the Draw Loop and the Counter Pattern,
+                the class writes programs that move sprites across the screen, as
+                well as animate other sprite properties.
+              description_teacher: By combining the Draw Loop and the Counter Pattern,
+                students write programs that move sprites across the screen, as well
+                as animate other sprite properties.
+            Booleans Unplugged:
+              name: Booleans Unplugged
+              description_student: This lesson introduces boolean values and logic,
+                as well as conditional statements. The class starts by playing a simple
+                game of Stand Up, Sit Down in which the boolean (true/false) statements
+                describe personal properties (hair or eye color, clothing type, age,
+                etc). The class then groups objects based on increasingly complex
+                boolean statements, then looks at how conditionals can impact the
+                flow of a program.
+              description_teacher: |-
+                En esta lección, se les presenta a los estudiantes los valores booleanos y la lógica, así como las declaraciones condicionales. La clase comienza jugando un juego simple de Levantarse, Sentarse en el que las afirmaciones booleanas (verdadero / falso) describen propiedades personales (color de pelo o ojos, tipo de ropa, edad, etc.). Esto hace que los estudiantes piensen cómo pueden enmarcar una propiedad con múltiples valores potenciales (como la edad) con una pregunta binaria.
+
+                A partir de ahí, los estudiantes reciben un grupo de objetos con propiedades físicas similares pero variables. Con un compañero, agrupan esos objetos basándose en declaraciones booleanas cada vez más complejas, incluidos booleanos compuestos con "y" y "o".
+
+                Finalmente, revelamos los Condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa usando declaraciones booleanas como entrada.
+            Conditionals:
+              name: Condicionales
+              description_student: The class starts by using booleans to compare the
+                current value of a sprite property with a target value, using that
+                comparison to determine when a sprite has reached a point on the screen,
+                grown to a given size, or otherwise reached a value using the counter
+                pattern. After using booleans directly to investigate the values or
+                sprite properties, the class adds conditional if statements to write
+                code that responds to those boolean comparisons.
+              description_teacher: Students start by using booleans to compare the
+                current value of a sprite property with a target value, using that
+                comparison to determine when a sprite has reached a point on the screen,
+                grown to a given size, or otherwise reached a value using the counter
+                pattern. After using booleans directly to investigate the values or
+                sprite properties, students add conditional _if_ statements to write
+                code that responds to those boolean comparisons.
+            Keyboard Input:
+              name: Keyboard Input
+              description_student: Following the introduction to booleans and if statements
+                in the previous lesson, students are introduced to a new block called
+                keyDown() which returns a boolean and can be used in conditionals
+                statements to move sprites around the screen. By the end of this lesson
+                students will have written programs that take keyboard input from
+                the user to control sprites on the screen.
+              description_teacher: Después de la introducción a los booleanos y las
+                instrucciones _if_ en la lección anterior, se introduce a los estudiantes
+                en un nuevo bloque llamado `keyDown()` que devuelve un booleano y
+                se puede usar en sentencias de condicionales para mover sprites alrededor
+                de la pantalla. Al final de esta lección, los estudiantes tendrán
+                programas escritos que tomarán como entrada el teclado del usuario
+                para controlar los sprites en la pantalla.
+            Other Forms of Input:
+              name: Other Forms of Input
+              description_student: La clase continúa explorando formas de usar declaraciones
+                condicionales para tomar la entrada del usuario. Además del sencillo
+                comando keyDown() aprendido ayer, la clase aprende sobre varios otros
+                comandos de entrada del teclado, así como formas de entrada para el
+                mouse.
+              description_teacher: In this lesson students continue to explore ways
+                to use conditional statements to take user input. In addition to the
+                simple `keyDown()` command learned yesterday, students will learn
+                about several other keyboard input commands as well as ways to take
+                mouse input.
+            Project - Interactive Card:
+              name: Project - Interactive Card
+              description_student: In this cumulative project for Chapter 1, the class
+                plans for and develops an interactive greeting card using all of the
+                programming techniques they've learned to this point.
+              description_teacher: En este proyecto acumulativo para el Capítulo 1,
+                los estudiantes planifican y desarrollan una tarjeta de felicitación
+                interactiva usando todas las técnicas de programación que han aprendido
+                hasta este momento.
+            Velocity:
+              name: Velocidad
+              description_student: Después de una breve revisión de cómo se usa el
+                patrón de contador para mover los sprites, se introduce la clase a
+                las propiedades que establecen la velocidad y la velocidad de rotación
+                directamente. A medida que utilizan estas nuevas propiedades de diferentes
+                maneras, desarrollan las habilidades que necesitan para crear un juego
+                básico de desplazamiento lateral.
+              description_teacher: After a brief review of how they used the counter
+                pattern to move sprites in previous lessons, students are introduced
+                to the properties that set velocity and rotation speed directly.   As
+                they use these new properties in different ways, they build up the
+                skills they need to create a basic side scroller game.
+            Collision Detection:
+              name: Collision Detection
+              description_student: La clase aprende sobre la detección de colisión
+                en la computadora. Las parejas exploran cómo una computadora podría
+                usar las propiedades de tamaño y ubicación de los sprites y las matemáticas
+                para detectar si dos sprites se están tocando. Luego, la clase usa
+                el bloque isTouching() para crear diferentes efectos cuando los sprites
+                colisionan, incluidos los sonidos de reproducción. Por último, ellos
+                usan sus nuevas habilidades para mejorar el juego de desplazamiento
+                lateral que comenzaron en la última lección.
+              description_teacher: Students learn about collision detection on the
+                computer.  Working in pairs, they explore how a computer could use
+                sprite location and size properties and math to detect whether two
+                sprites are touching.  They then use the `isTouching()` block to create
+                different effects when sprites collide, including playing sounds.  Last,
+                they use their new skills to improve the sidescroller game that they
+                started in the last lesson.
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+              description_student: 'La clase aprende a combinar las propiedades de
+                velocidad de los sprites con el patrón de contador para crear un movimiento
+                de sprite más complejo, como simular la gravedad, hacer que un sprite
+                salte y permitir que un sprite flote hacia la izquierda o hacia la
+                derecha. En los niveles finales, la clase combina estos movimientos
+                para animar y controlar un solo sprite y construir un juego simple
+                en el que un personaje vuela y recoge monedas. '
+              description_teacher: Students learn to combine the velocity properties
+                of sprites with the counter pattern to create more complex sprite
+                movement. In particular students will learn how to simulate gravity,
+                make a sprite jump, and allow a sprite to float left or right. In
+                the final levels of the Code Studio progression students combine these
+                movements to animate and control a single sprite and build a simple
+                game in which a character flies around and collects a coin. Students
+                are encouraged to make their own additions to the game in the final
+                level.
+            Collisions:
+              name: Collisions
+              description_student: La clase programa sus sprites para interactuar
+                de nuevas maneras. Después de una breve revisión de cómo usaron el
+                bloque isTouching, la clase intercambia ideas sobre otras formas en
+                que dos sprites podrían interactuar. Luego usan isTouching para hacer
+                que un sprite presione otro en la pantalla antes de practicar con
+                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotar).
+              description_teacher: Students program their sprites to interact in new
+                ways.  After a brief review of how they used the `isTouching` block,
+                students brainstorm other ways that two sprites could interact.  They
+                then use `isTouching` to make one sprite push another across the screen
+                before practicing with the four collision blocks (`collide`, `displace`,
+                `bounce`, and `bounceOff`).
+            Functions:
+              name: Funciones
+              description_student: This lesson covers functions as a way to organize
+                their code, make it more readable, and remove repeated blocks of code.
+                The class learns that higher level or more abstract steps make it
+                easier to understand and reason about steps, then begins to create
+                functions in Game Lab.  At the end of the lesson the class uses these
+                skills to organize and add functionality to the final version of their
+                side scroller game.
+              description_teacher: Students learn how to create functions to organize
+                their code, make it more readable, and remove repeated blocks of code.
+                An unplugged warmup explores how directions at different levels of
+                detail can be useful depending on context. Students learn that higher
+                level or more abstract steps make it easier to understand and reason
+                about steps. Afterwards students learn to create functions in Game
+                Lab. They will use functions to remove long blocks of code from their
+                draw loop and to replace repeated pieces of code with a single function.
+                At the end of the lesson students use these skills to organize and
+                add functionality to the final version of their side scroller game.
+            The Game Design Process:
+              name: The Game Design Process
+              description_student: This lesson introduces the process the class will
+                use to design games for the remainder of the unit. The class walks
+                through through this process in a series of levels. As part of this
+                lesson the class also briefly learn to use multi-frame animations
+                in Game Lab. At the end of the lesson they have an opportunity to
+                make improvements to the game to make it their own.
+              description_teacher: This lesson introduces students to the process
+                they will use to design games for the remainder of the unit. This
+                process is centered around a project guide which asks students to
+                define their sprites, variables, and functions before they begin programming
+                their game. In this lesson students begin by playing a game on Game
+                Lab where the code is hidden. They discuss what they think the sprites,
+                variables, and functions would need to be to make the game. They are
+                then given a completed project guide which shows one way to implement
+                the game. Students are then walked through this process through a
+                series of levels. As part of this lesson students also briefly learn
+                to use multi-frame animations in Game Lab. At the end of the lesson
+                students have an opportunity to make improvements to the game to make
+                it their own.
+            Using the Game Design Process:
+              name: Using the Game Design Process
+              description_student: En esta lección de varios días, la clase usa el
+                proceso de resolución de problemas de la Unidad 1 para crear un juego
+                de salto de plataforma. Después de mirar un juego de muestra, la clase
+                define cómo se verán sus juegos y utiliza un proceso estructurado
+                para construirlos. Finalmente, la clase reflexiona sobre cómo se podrían
+                mejorar los juegos e implementa esos cambios.
+              description_teacher: En esta lección de varios días, los estudiantes
+                usan el proceso de resolución de problemas de la Unidad 1 para crear
+                un juego de salto de plataforma. Comienzan por mirar un ejemplo de
+                un saltador de plataforma y luego definen cómo se verán sus juegos.
+                A continuación, utilizan un proceso estructurado para planificar los
+                fondos, las variables, los sprites y las funciones que necesitarán
+                para implementar su juego. Después de escribir el código del juego,
+                los estudiantes reflexionarán sobre cómo se puede mejorar el juego
+                e implementarán esos cambios.
+            Project - Design a Game:
+              name: Project - Design a Game
+              description_student: The class plans and builds original games using
+                the project guide from the previous two lessons. Working individually
+                or in pairs, the class plans, develops, and gives feedback on the
+                games.  After incorporating the peer feedback, the class shares out
+                the completed games.
+              description_teacher: Los estudiantes planificarán y construirán su propio
+                juego utilizando la guía del proyecto de las dos lecciones anteriores
+                para guiar su proyecto. Trabajando individualmente o en parejas, los
+                estudiantes primero decidirán el tipo de juego que les gustaría construir,
+                tomando como inspiración un conjunto de juegos de muestra. Luego completarán
+                una guía de proyecto en blanco donde describirán el comportamiento
+                del juego y el alcance de las variables, sprites y funciones que necesitarán
+                construir. En Code Studio, una serie de niveles les indica una secuencia
+                general que pueden usar para implementar este plan. A mitad del proceso,
+                los estudiantes compartirán sus proyectos para la revisión por pares
+                e incorporarán comentarios a medida que finalicen su juego. Al final
+                de la lección, los estudiantes compartirán sus juegos completados
+                con sus compañeros de clase. Este proyecto abarcará múltiples clases
+                y puede tomar fácilmente de 3-5 períodos de clase.
+            CS Discoveries End of Semester Survey:
+              name: CS Discoveries End of Semester Survey
+              description_student: ''
+              description_teacher: ''
+        csd2-2018:
+          title: CSD Unit 2 - Web Development
+          description: " In Unit 2, you’ll learn how to create and share the content
+            on your own web pages. After deciding what content you want to share with
+            the world, you’ll learn how to structure and style your pages using HTML
+            and CSS. You’ll also practice valuable programming skills such as debugging
+            and commenting.  By the end of the unit, you’ll have a personal website
+            that you can publish to the Internet."
+          description_short: "  Learn to build your own web site in Web Lab."
+          description_audience: ''
+          stages:
+            Exploring Websites:
+              name: Exploring Websites
+              description_student: This lesson covers the purposes that a website
+                might serve, both for the users and the creators. The class explores
+                a handful of the most-used websites in the United States and discusses
+                how each of those sites is useful for users and how it might also
+                serve its creators.
+              description_teacher: Every website has a purpose, a reason someone created
+                it and others use it. In this lesson, students will start to consider
+                the purposes a website might serve, both for the users and the creators.
+                Students will explore a handful of the most-used websites in the United
+                States and try to figure out how each of those sites is useful for
+                users and how they might also serve their creators.
+            'Websites for Expression ':
+              name: 'Websites for Expression '
+              description_student: 'This lesson introduces websites as a means of
+                personal expression.  The class first discusses different ways that
+                people express and share their interests and ideas, then looks at
+                a few exemplar websites made by students from a previous course. Finally
+                everyone brainstorms and shares a list of topics and interests to
+                include, creating a resource for developing a personal website in
+                the rest of the unit. '
+              description_teacher: In this lesson students investigate ways to use
+                websites as a means of personal expression and develop a list of topics
+                and interests that they would want to include on a personal website.
+                To begin the lesson students brainstorm different ways that people
+                express and share their interests and ideas. Students then look at
+                a few exemplar websites made by students from a previous CS Discoveries
+                course to identify ways they are expressing their ideas. Finally students
+                brainstorm and share a list of topics and interests they might want
+                to include on a personal website which they can reference for ideas
+                as they progress through the unit.
+            Intro to HTML:
+              name: Intro to HTML
+              description_student: This lesson introduces to HTML as a solution to
+                the problem of how to communicate both the content and structure of
+                a website to a computer. The lesson begins with a brief unplugged
+                activity demonstrating the challenges of effectively communicating
+                the structure of a web page. The class looks at an HTML page in Web
+                Lab and discusses how HTML tags help solve this problem, then uses
+                HTML to write the first web pages of the unit.
+              description_teacher: In this lesson students are introduced HTML as
+                a solution to the problem of how to communicate both the content and
+                structure of a website to a computer. The lesson begins with a brief
+                unplugged activity demonstrating the challenges of effectively communicating
+                the structure of a web page. Students then look at an exemplar HTML
+                page in Web Lab and discuss with their classmates how HTML tags help
+                solve this problem. Students then write their first HTML. A wrap-up
+                discussion helps to solidify the understanding of content vs. structure
+                that was developed throughout the lesson.
+            Headings:
+              name: Headings
+              description_student: This lesson continues the introduction to HTML
+                tags, this time with headers.  The class practices using header tags
+                to create page and section titles and learns how the different header
+                elements are displayed by default.  Next, the class plans how to organize
+                their content on the personal web pages that will be built across
+                the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to
+                structure text on web pages, this time with headings.  Students learn
+                how the different heading elements are displayed by default and practice
+                using them to create page and section titles.  Students then start
+                to decide how they will organize their content on their own personal
+                web pages.  In the last level, students begin the project that they
+                will continue to work on throughout the unit.
+            Digital Footprint:
+              name: Digital Footprint
+              description_student: This lesson takes a step back from creating the
+                personal website to talk about personal information people choose
+                to share digitally.  The class begins by discussing what types of
+                information are good to share with other people, then looks at several
+                sample social media pages to see what types of personal information
+                could be shared intentionally or unintentionally.  Finally, the class
+                comes up with a set of guidelines to follow when putting information
+                online.
+              description_teacher: |-
+                As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r
+                \r
+                Students begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r
+                \r
+                The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
+            Lists:
+              name: Listas
+              description_student: This lesson introduces ordered and unordered lists
+                and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
+                class practices using the tags, then goes back to the personal web
+                page project to add a new HTML page that includes the new tags.
+              description_teacher: Students are introduced to ordered and unordered
+                lists in HTML and work through a few levels in which they use the
+                &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags.  They then go back to
+                their project, where they add a new HTML page.  Inside the new page,
+                they write the HTML to display a recipe, top ten list, or any other
+                content that uses the new tags that they have learned.
+            Intellectual Property and Images:
+              name: Intellectual Property and Images
+              description_student: This lesson covers how to use media such as images,
+                video, or music created by others a website while respecting the rights
+                of the creator of that media. After first studying Creative Commons
+                licensing, the class learns how to add images to web pages, and how
+                to give proper attribution when doing so.
+              description_teacher: |-
+                Starting with an discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content.  They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \r
+                \r
+                Finally, with a common understanding of the restrictions of various Creative Commons licenses, students learn how to add images to their web pages using the &lt;img&gt; tag.
+            Clean Code and Debugging:
+              name: Clean Code and Debugging
+              description_student: In this lesson covers common issues that arise
+                when designing web pages in HTML. The class will correct errors in
+                a sequence of increasingly complex web pages found on Code Studio
+                and learn the importance of comments, whitespace, and indentation
+                as tools for making web pages easier to read.
+              description_teacher: Students deal with common issues that arise when
+                designing web pages in HTML. Students will correct errors in a sequence
+                of increasingly complex web pages. In the process they will learn
+                the importance of comments, whitespace, and indentation as tools for
+                making web pages easier to read. At the end of the lesson students
+                create a list of strategies for debugging web pages and ensuring they
+                are easy to read and maintain.
+            Project - Multi-Page Websites:
+              name: Project - Multi-Page Websites
+              description_student: 'This lesson covers hyperlinks, which allow web
+                developers to connect pages together into one website.  The class
+                will link together all the previous pages into one project, and create
+                navigation bars for each page before publishing the entire site to
+                the Web.  '
+              description_teacher: |
+                After learning about how to link web pages to one another, students are finally able to publish the website they have been working on.  In this lesson, they link together all the previous pages they have created into one project, create a new page, and add navigation between the pages before publishing the entire site to the Web.  \r
+                \r
+            Styling Text with CSS:
+              name: Styling Text with CSS
+              description_student: This lesson introduces CSS as a way to style elements
+                on the page. The class learns the basic syntax for CSS rule-sets and
+                then explores properties that impact HTML text elements.  Finally,
+                everyone applies text styles to their personal websites.
+              description_teacher: |
+                This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r
+                \r
+            Styling Elements with CSS:
+              name: Styling Elements with CSS
+              description_student: This lesson continues the introduction to CSS style
+                properties, this time focusing more on non-text elements. The class
+                begins by investigating and modifying the new CSS styles on a Desserts
+                of the World page. Afterwards, everyone applies this new knowledge
+                to their personal websites.
+              description_teacher: This lesson continues the introduction to CSS style
+                properties, this time focusing more on non-text elements. Students
+                begin this lesson by looking at a website about Desserts of the World.
+                They investigate and modify the new CSS styles on this website, adding
+                their own styles to the page. After working on the Desserts page,
+                students apply their knowledge of new CSS properties to do more styling
+                of their personal websites.
+            Sources and Search Engines:
+              name: Sources and Search Engines
+              description_student: After first completing a web search scavenger hunt,
+                the class learns about the inner workings of search engines and has
+                an opportunity to flex their analytical skills in a search for strange
+                and unlikely animals.
+              description_teacher: Esta lección alienta a los estudiantes a pensar
+                más críticamente sobre cómo funcionan las búsquedas web y cómo encontrar
+                información relevante y confiable en línea. Después de ver y debatir
+                un video sobre cómo funcionan los motores de búsqueda, los estudiantes
+                buscarán información sobre varios animales poco comunes. Tendrán que
+                analizar los sitios que encuentran confiables para identificar cuál
+                de los animales son realmente un engaño.
+            RGB Colors and Classes:
+              name: RGB Colors and Classes
+              description_student: This lesson covers classes and custom colors. The
+                class first learns how to specify custom colors using RGB (red, green,
+                blue) values, then applies these colors to a new Four Seasons web
+                page, which uses CSS classes.  Using classes, the class adds more
+                styles to the Four Seasons web page, then use them to style their
+                personal websites.
+              description_teacher: In this lesson, students first learn how to specify
+                custom colors using their RGB (red, green, blue) values.  They then
+                apply these colors to a new Four Seasons web page, which uses CSS
+                classes.  CSS classes allow web developers to treat groups of elements
+                they want styled differently than other elements of the same type.
+                Using classes, students add more styles to the Four Seasons web page,
+                then use them to style their personal websites.
+            Project - Personal Portfolio Website:
+              name: Project - Personal Portfolio Website
+              description_student: In the last few days of the unit, the class finalizes
+                their personal websites, working with peers to get feedback, review
+                the rubric, and put the finishing touches on the site. To cap off
+                the unit, everyone shares their projects and how they were developed.
+              description_teacher: |
+                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+        coursea-2018:
+          title: Curso A
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: 'This lesson will guide students through the steps
+                of debugging.  Students will learn the mantra: "What happened?  What
+                was supposed to happen? What does that tell you?"'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: |-
+                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\r
+                \r
+                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmos de la vida real: Planta una semilla'
+              description_student: ''
+              description_teacher: |
+                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: This lesson will give students an idea of what
+                to expect when they head to the computer lab. It begins with a brief
+                discussion introducing them to computer lab manners, then they will
+                progress into using a computer to complete online puzzles.
+            'Programming: Happy Maps':
+              name: 'Programming: Happy Maps'
+              description_student: ''
+              description_teacher: The bridge from algorithms to programming can be
+                a short one if students understand the difference between planning
+                out a sequence and encoding that sequence into the appropriate language.  This
+                activity will help students gain experience reading and writing in
+                shorthand code.
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: In this series of online puzzles, students will
+                build on the understanding of algorithms, debugging, and general computer
+                literacy. Featuring characters from the game Angry Birds, students
+                will develop sequential algorithms to get the bird to the pig without
+                crashing into walls or TNT. Debugging puzzles have also been mixed
+                into this stage for added practice with problem solving and critical
+                thinking.
+            Going Places Safely:
+              name: Ir a sitios seguros
+              description_student: ''
+              description_teacher: In collaboration with [r common-sense-media], this
+                lesson helps students learn that many websites ask for information
+                that is private and discusses how to responsibly handle such requests.
+                Students also find out that they can go to exciting places online,
+                but they need to follow certain rules to remain safe.
+            'Loops: Happy Loops':
+              name: 'Loops: Happy Loops'
+              description_student: ''
+              description_teacher: Loops are a very helpful and powerful tool in programming.
+                To understand how helpful loops can be, students will need to be driven
+                to want an easier way to solve mundane problems.
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: Building on the concept of repeating instructions
+                from "Happy Loops," this stage will have students using loops to collect
+                treasure more efficiently on Code.org.
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: Returning to loops, students learn to draw images
+                by looping simple sequences of instructions. In the previous plugged
+                lesson, loops were used to traverse a maze and collect treasure. Here,
+                loops are creating patterns. At the end of this stage, students will
+                be given the opportunity to create their own images using loops.
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: Events are a great way to add variety to a pre-written
+                algorithm. Sometimes you want your program to be able to respond to
+                the user exactly when the user wants it to. That is what events are
+                for.
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: In this online activity, students will have the
+                opportunity to learn how to use events in Play Lab and to apply all
+                of the coding skills they've learned to create an animated game. It's
+                time to get creative and make a story in the Play Lab!
+            Programming in Bee:
+              name: Programming in Bee

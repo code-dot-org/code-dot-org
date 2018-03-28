@@ -189,4 +189,86 @@ class Pd::FormTest < ActiveSupport::TestCase
     assert form.valid?
     assert_equal({}, form.form_data_hash)
   end
+
+  test 'memoized form_data_hash' do
+    form = DummyForm.new(
+      form_data_hash: {
+        firstField: 'value1',
+        secondField: 'value2'
+      }
+    )
+    form_data_hash = {
+      'firstField' => 'value1',
+      'secondField' => 'value2'
+    }
+
+    assert_nil form.instance_variable_get(:@form_data_hash)
+    assert_equal form_data_hash, form.form_data_hash
+    assert_equal form_data_hash, form.instance_variable_get(:@form_data_hash)
+
+    form.form_data = nil
+    assert_nil form.instance_variable_get(:@form_data_hash)
+  end
+
+  test 'memoized sanitize_form_data_hash' do
+    form = DummyForm.new(
+      form_data_hash: {
+        firstField: 'value1',
+        secondField: 'value2'
+      }
+    )
+
+    sanitized_form_data_hash = {
+      first_field: 'value1',
+      second_field: 'value2'
+    }
+
+    assert_nil form.instance_variable_get(:@sanitized_form_data_hash)
+    assert_equal sanitized_form_data_hash, form.sanitize_form_data_hash
+    assert_equal sanitized_form_data_hash, form.instance_variable_get(:@sanitized_form_data_hash)
+
+    form.form_data = nil
+    assert_nil form.instance_variable_get(:@sanitized_form_data_hash)
+  end
+
+  test 'memoized sanitize_and_trim_form_data_hash' do
+    form = DummyForm.new(
+      form_data_hash: {
+        firstField: 'value1',
+        secondField: ''
+      }
+    )
+
+    sanitized_and_trimmed_form_data_hash = {
+      first_field: 'value1'
+    }
+
+    assert_nil form.instance_variable_get(:@sanitized_and_trimmed_form_data_hash)
+    assert_equal sanitized_and_trimmed_form_data_hash, form.sanitize_and_trim_form_data_hash
+    assert_equal sanitized_and_trimmed_form_data_hash, form.instance_variable_get(:@sanitized_and_trimmed_form_data_hash)
+
+    form.form_data = nil
+    assert_nil form.instance_variable_get(:@sanitized_and_trimmed_form_data_hash)
+  end
+
+  test 'memoized public_sanitized_form_data_hash' do
+    form = DummyForm.new(
+      form_data_hash: {
+        firstField: 'value1',
+        publicField1: 'public value 1'
+      }
+    )
+    DummyForm.stubs(:public_fields).returns([:public_field1])
+
+    public_sanitized_form_data_hash = {
+      public_field1: 'public value 1'
+    }
+
+    assert_nil form.instance_variable_get(:@public_sanitized_form_data_hash)
+    assert_equal public_sanitized_form_data_hash, form.public_sanitized_form_data_hash
+    assert_equal public_sanitized_form_data_hash, form.instance_variable_get(:@public_sanitized_form_data_hash)
+
+    form.form_data = nil
+    assert_nil form.instance_variable_get(:@public_sanitized_form_data_hash)
+  end
 end

@@ -242,7 +242,7 @@
     remove: "(Bereich löschen)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: Geheimwort
       email: E-Mail
       google_classroom: Google Classroom
       clever: Schlau

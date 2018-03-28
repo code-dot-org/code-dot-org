@@ -2090,13 +2090,25 @@ it:
           
           Have a friend try your app when it is finished!
       courseA_artist_loops10_authored_hint: [ ]
+      courseA_artist_loops10_2018_authored_hint: [ ]
       courseA_artist_loops11_authored_hint: [ ]
+      courseA_artist_loops11_2018_authored_hint: [ ]
       courseA_artist_loops11_predict2_authored_hint: [ ]
       courseA_artist_loops12_authored_hint: [ ]
+      courseA_artist_loops12_2018_authored_hint: [ ]
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: "Non riesci ad immaginare come si fa a disegnare una linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso al blocco iniziale\n<xml><block type=\"when_run\"/></xml>"
         courseA_artist_loops2_b: Utilizza questo blocco <xml><block type="simple_move_right"/></xml> per risolvere questo esercizio.
+      courseA_artist_loops2_2018_authored_hint:
+        courseA_artist_loops2_a: "Non riesci ad immaginare come si fa a disegnare una linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso al blocco iniziale\n<xml><block type=\"when_run\"/></xml>"
+        courseA_artist_loops2_b: Utilizza questo blocco <xml><block type="simple_move_right"/></xml> per risolvere questo esercizio.
       courseA_artist_loops3_authored_hint:
+        courseA_artist_loops3_a: Segui lentamente con il dito l'esecuzione del programma per capire dove sbaglia.
+        courseA_artist_loops3_b: |-
+          Devi usare un blocco come questo per risolvere l'esercizio.
+          
+          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+      courseA_artist_loops3_2018_authored_hint:
         courseA_artist_loops3_a: Segui lentamente con il dito l'esecuzione del programma per capire dove sbaglia.
         courseA_artist_loops3_b: |-
           Devi usare un blocco come questo per risolvere l'esercizio.
@@ -2109,14 +2121,34 @@ it:
           <xml><block type="simple_move_right"/></xml>
           prova a metterlo all'interno del ciclo
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
+      courseA_artist_loops4_2018_authored_hint:
+        courseA_artist_loops4_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseA_artist_loops4_b: |-
+          Dato che puoi utilizzare solo un blocco
+          <xml><block type="simple_move_right"/></xml>
+          prova a metterlo all'interno del ciclo
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: "Prova a utilizzare quello che hai imparato sui blocchi\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nper completare questo esercizio!"
         courseA_artist_loops5_b: Per indicare quante volte vuoi che il ciclo sia ripetuto, devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi (???) che vedi nella parte superiore del blocco.
         courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco\n<xml><block type=\"simple_move_right\"/></xml>\nprova a metterlo all'interno del ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+      courseA_artist_loops5_2018_authored_hint:
+        courseA_artist_loops5_a: "Prova a utilizzare quello che hai imparato sui blocchi\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nper completare questo esercizio!"
+        courseA_artist_loops5_b: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
+        courseA_artist_loops5_c: "Dato che puoi utilizzare solo un blocco\n<xml><block type=\"simple_move_right\"/></xml>\nprova a metterlo all'interno del ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Non riesci ad immaginare come disegnare la collina? Prova a giocare un po' con i blocchi per vedere che disegno fa ognuno.
         courseA_artist_loops6_b: Avrai bisogno di 2 blocchi in 2 direzioni per risolvere questo esercizio.
+      courseA_artist_loops6_2018_authored_hint:
+        courseA_artist_loops6_a: Non riesci ad immaginare come disegnare la collina? Prova a giocare un po' con i blocchi per vedere che disegno fa ognuno.
+        courseA_artist_loops6_b: Avrai bisogno di 2 blocchi in 2 direzioni per risolvere questo esercizio.
       courseA_artist_loops7_authored_hint:
+        courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua uno schema che si ripete e sostituiscilo con il ciclo.
+        courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
+        courseA_artist_loops7_c: |-
+          Ricorda: puoi mettere più di un blocco all'interno di un ciclo
+          <xml><block type="controls_repeat"> <title name="TIMES">???</title></block></xml>
+      courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Non riesci a capire dove posizionare il ciclo? Allora prima prova a scrivere il programma con tanti blocchi azzurri, poi individua uno schema che si ripete e sostituiscilo con il ciclo.
         courseA_artist_loops7_b: Scrivi il codice per disegnare un'onda, poi ripetilo per disegnare le altre due.
         courseA_artist_loops7_c: |-
@@ -2132,11 +2164,20 @@ it:
         courseA_artist_loops8_a: Prova ad eseguire il codice, per capire cosa è già stato scritto per te.
         courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato dato?
         courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe cosa ti suggerisce questo?"
+      courseA_artist_loops8_2018_authored_hint:
+        courseA_artist_loops8_a: Prova ad eseguire il codice, per capire cosa è già stato scritto per te.
+        courseA_artist_loops8_b: Come inseriresti in un ciclo il codice che ti è stato dato?
+        courseA_artist_loops8_c: "Cosa fa il codice?  \nChe cosa dovrebbe fare?  \nChe cosa ti suggerisce questo?"
       courseA_artist_loops9_authored_hint:
         courseA_artist_loops9_a: Per disegnare il resto della scala, aggiungi un blocco al programma che trovi già scritto.
         courseA_artist_loops9_b: "Il blocco che aggiungi devi inserirlo all'interno del ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block> </xml>"
         courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere la sequenza che si ripete.
+      courseA_artist_loops9_2018_authored_hint:
+        courseA_artist_loops9_a: Per disegnare il resto della scala, aggiungi un blocco al programma che trovi già scritto.
+        courseA_artist_loops9_b: "Il blocco che aggiungi devi inserirlo all'interno del ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block> </xml>"
+        courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere la sequenza che si ripete.
       courseA_artist_loops_challenge1_authored_hint: [ ]
+      courseA_artist_loops_challenge1_2018_authored_hint: [ ]
       courseA_artist_loops_challenge2_authored_hint:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
         courseA_artist_loops_challenge2_b: When you finish one bird house, `jump` to the next!
@@ -2145,17 +2186,59 @@ it:
         courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
         courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice to get to the next!
         courseA_artist_loops_challenge2_c: All of your blocks will need to be inside of a loop to finish this puzzle.
+      courseA_artist_loops_challenge2a_2018_authored_hint:
+        courseA_artist_loops_challenge2_a: Blocks like this <xml>  <block type="simple_move_up_left"/></xml> will let your artist move at a slant!
+        courseA_artist_loops_challenge2_b: When you finish one tent, `jump` up twice to get to the next!
+        courseA_artist_loops_challenge2_c: All of your blocks will need to be inside of a loop to finish this puzzle.
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: You can use `jump` blocks to move to other spaces.
+      courseA_bee_seq1_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_bee_seq10_authored_hint: [ ]
+      courseA_bee_seq11_authored_hint: [ ]
+      courseA_bee_seq12_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_bee_seq13_authored_hint: [ ]
+      courseA_bee_seq14_authored_hint: [ ]
+      courseA_bee_seq2_authored_hint: [ ]
+      courseA_bee_seq3_authored_hint: [ ]
+      courseA_bee_seq4_authored_hint: [ ]
+      courseA_bee_seq5_authored_hint: [ ]
+      courseA_bee_seq6_authored_hint: [ ]
+      courseA_bee_seq7_authored_hint: [ ]
+      courseA_bee_seq8_authored_hint: [ ]
+      courseA_bee_seq9_authored_hint: [ ]
       courseA_collector_loops1_authored_hint:
         courseA_collector_loops1_a: |-
           Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
           <xml><block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est (`E -->`) 2 volte, quindi prendere il tesoro.
       courseA_collector_loops10_authored_hint: [ ]
+      courseA_collector_loops10_2018_authored_hint: [ ]
       courseA_collector_loops11_authored_hint: [ ]
+      courseA_collector_loops11_2018_authored_hint: [ ]
       courseA_collector_loops11_predict2_authored_hint: [ ]
+      courseA_collector_loops1_2018_authored_hint:
+        courseA_collector_loops1_a: |-
+          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
+          <xml><block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi a Est (`E -->`) 2 volte, quindi prendere il tesoro.
       courseA_collector_loops2_authored_hint:
+        courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi tesoro.
+        courseA_collector_loops2_b: |-
+          Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
+          <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018_authored_hint:
         courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi tesoro.
         courseA_collector_loops2_b: |-
           Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
@@ -2163,27 +2246,68 @@ it:
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3_a: "Prova ad utilizzare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
+      courseA_collector_loops3_2018_authored_hint:
+        courseA_collector_loops3_a: "Prova ad utilizzare un ciclo <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>'
       courseA_collector_loops3_predict1_authored_hint: [ ]
       courseA_collector_loops4_authored_hint:
+        courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
+        courseA_collector_loops4_b: "Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo tesoro, dopo aver terminato il ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+      courseA_collector_loops4_2018_authored_hint:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi Laurel, cambia il numero di volte che il ciclo viene eseguito.
         courseA_collector_loops4_b: "Non dimenticare che Laurel deve ancora scendere per raccogliere l'ultimo tesoro, dopo aver terminato il ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
         courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti lateralmente e poi verso il basso.
         courseA_collector_loops5_c: "Potresti iniziare con un ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nche muove Laurel verso Ovest (`O <--`) e raccoglie il tesoro."
+      courseA_collector_loops5_2018_authored_hint:
+        courseA_collector_loops5_a: Se non riesci subito a capire la risposta, provare ad utilizzare un foglio di carta per capire di quali frecce hai bisogno e cerca di definire un percorso.
+        courseA_collector_loops5_b: Prova a dividere il problema in due parti, muovendoti lateralmente e poi verso il basso.
+        courseA_collector_loops5_c: "Potresti iniziare con un ciclo\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nche muove Laurel verso Ovest (`O <--`) e raccoglie il tesoro."
       courseA_collector_loops6_authored_hint:
+        courseA_collector_loops6_a: Non riesci a capire cosa non va? Provare a eseguire il codice un paio di volte per vedere cosa succede.
+        courseA_collector_loops6_b: "La soluzione più breve ha 2 cicli\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nuno dopo l'altro."
+      courseA_collector_loops6_2018_authored_hint:
         courseA_collector_loops6_a: Non riesci a capire cosa non va? Provare a eseguire il codice un paio di volte per vedere cosa succede.
         courseA_collector_loops6_b: "La soluzione più breve ha 2 cicli\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nuno dopo l'altro."
       courseA_collector_loops7_authored_hint:
         courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, prova ad eseguire il codice per vedere dove va a finire Laurel.
+      courseA_collector_loops7_2018_authored_hint:
+        courseA_collector_loops7_a: Se non riesci a capire che cosa accade dopo, prova ad eseguire il codice per vedere dove va a finire Laurel.
       courseA_collector_loops8_authored_hint:
+        courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare uno schema.
+        courseA_collector_loops8_b: Prova a dividere questo esercizio in tre problemi separati e scrivi un ciclo per ciascuno di essi.
+        courseA_collector_loops8_c: Ricorda che puoi scrivere un pezzo di codice alla volta, e poi premere "Esegui" per capire come devi procedere dal punto in cui sei arrivato.
+      courseA_collector_loops8_2018_authored_hint:
         courseA_collector_loops8_a: Se hai difficoltà nella risoluzione di questo esercizio, prova a scrivere le mosse su un foglio di carta e cerca di trovare uno schema.
         courseA_collector_loops8_b: Prova a dividere questo esercizio in tre problemi separati e scrivi un ciclo per ciascuno di essi.
         courseA_collector_loops8_c: Ricorda che puoi scrivere un pezzo di codice alla volta, e poi premere "Esegui" per capire come devi procedere dal punto in cui sei arrivato.
       courseA_collector_loops9_authored_hint:
         courseA_collector_loops9_a: 'Se non riesci ad immaginare quale possa essere il modo migliore di usare un ciclo, prova a programmare un movimento alla volta con i singoli blocchi blu e poi cerca lo schema che si ripete. '
         courseA_collector_loops9_b: Prova a mettere due cicli <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> dentro un altro ciclo per rendere il tuo programma più breve!
+      courseA_collector_loops9_2018_authored_hint:
+        courseA_collector_loops9_a: 'Se non riesci ad immaginare quale possa essere il modo migliore di usare un ciclo, prova a programmare un movimento alla volta con i singoli blocchi blu e poi cerca lo schema che si ripete. '
+        courseA_collector_loops9_b: Prova a mettere due cicli <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> dentro un altro ciclo per rendere il tuo programma più breve!
       courseA_collector_loops_challenge1_authored_hint:
+        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something seems wrong.
+        courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
+        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to get treasure 5 times moving South. Do you know why?
+        courseA_collector_loops_challenge1_d: |-
+          The starting program doesn't collect the last 2 gems. Try adding this code at the very end:
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect_simplified">
+          <next>
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_collector_loops_challenge1_2018_authored_hint:
         courseA_collector_loops_challenge1_a: Try changing the numbers in each loop if something seems wrong.
         courseA_collector_loops_challenge1_b: You don't need to use a loop if you are only doing something one time.
         courseA_collector_loops_challenge1_c: There are 6 gems on the right side of the cave when you start, but you only need to get treasure 5 times moving South. Do you know why?
@@ -2208,6 +2332,9 @@ it:
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
         courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
+      courseA_collector_loops_challenge2kp_2018_authored_hint:
+        courseA_collector_loops_challenge2kp_b: Try this path to get you to a solution.
+        courseA_collector_loops_challenge2kp_a: Can you use loops to solve this puzzle?
       courseA_collector_preLoops1_authored_hint: [ ]
       courseA_collector_preLoops2_authored_hint: [ ]
       courseA_collector_preLoops3_authored_hint: [ ]
@@ -2223,6 +2350,27 @@ it:
           Dopo aver raggiunto una casella con il tesoro, usa questo blocco per raccoglierlo:
           <xml><block type="collector_collect"/></xml>
       courseA_forVideoTest_artist_authored_hint: [ ]
+      courseA_harvester_seq1_authored_hint:
+        courseA_harvester_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq12_authored_hint:
+        courseA_bee_seq1_a: |-
+          Use this block to get nectar once the bee finds a flower.
+          
+          <xml>
+          <block type="maze_nectar"/>
+          </xml>
+      courseA_harvester_seq2_authored_hint: [ ]
+      courseA_harvester_seq3_authored_hint: [ ]
+      courseA_harvester_seq4_authored_hint: [ ]
+      courseA_harvester_seq5_authored_hint: [ ]
+      courseA_harvester_seq6_authored_hint: [ ]
+      courseA_harvester_seq7_authored_hint: [ ]
+      courseA_harvester_seq8_authored_hint: [ ]
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: |-
           Se hai difficoltà a far muovere l'uccellino, controlla che i blocchi siano agganciati tra loro e al blocco iniziale 
@@ -2233,8 +2381,13 @@ it:
       courseA_maze_seq10_authored_hint:
         courseA_maze_seq10_a: Se hai problemi, prova prima a scrivere i passaggi su un foglio di carta.
         courseA_maze_seq10_b: Avrai bisogno di muoverti in 3 direzioni diverse per risolvere l'esercizio.
+      courseA_maze_seq10_2018_authored_hint:
+        courseA_maze_seq10_a: Se hai problemi, prova prima a scrivere i passaggi su un foglio di carta.
+        courseA_maze_seq10_b: Avrai bisogno di muoverti in 3 direzioni diverse per risolvere l'esercizio.
       courseA_maze_seq11_authored_hint: [ ]
+      courseA_maze_seq11_2018_authored_hint: [ ]
       courseA_maze_seq12_authored_hint: [ ]
+      courseA_maze_seq12_2018_authored_hint: [ ]
       courseA_maze_seq12_predict2_authored_hint: [ ]
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito per tracciare il tuo percorso dall'uccellino fino al maialino.
@@ -2244,7 +2397,25 @@ it:
           <xml><block type="maze_moveNorth"/></xml> 
           <xml><block type="maze_moveEast"/></xml> 
           ti aiuteranno ad avvicinarti al maialino.
+      courseA_maze_seq13_2018_authored_hint:
+        courseA_maze_seq13_a: Se non ti è chiaro quale percorso seguire, usa il dito per tracciare il tuo percorso dall'uccellino fino al maialino.
+        courseA_maze_seq13_b: Non aver paura di commettere errori! Prova ad aggiungere blocchi e fai eseguire il programma per vedere cosa succede.
+        courseA_maze_seq13_c: |-
+          Questi blocchi
+          <xml><block type="maze_moveNorth"/></xml> 
+          <xml><block type="maze_moveEast"/></xml> 
+          ti aiuteranno ad avvicinarti al maialino.
+      courseA_maze_seq1_2018_authored_hint:
+        courseA_maze_seq1_a: |-
+          Se hai difficoltà a far muovere l'uccellino, controlla che i blocchi siano agganciati tra loro e al blocco iniziale 
+          <xml><block type="when_run"/></xml>
+        courseA_maze_seq1_b: |-
+          L'uccellino deve spostarsi tre volte verso Ovest per poter raggiungere il maiale. Usa questo blocco:
+          <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq2_authored_hint:
+        courseA_maze_seq2_a: In questo programma manca 1 blocco. Riesci a capire quale?
+        courseA_maze_seq2_b: Prova ad eseguire il programma per capire dove va a finire l'uccellino. Come devi proseguire?
+      courseA_maze_seq2_2018_authored_hint:
         courseA_maze_seq2_a: In questo programma manca 1 blocco. Riesci a capire quale?
         courseA_maze_seq2_b: Prova ad eseguire il programma per capire dove va a finire l'uccellino. Come devi proseguire?
       courseA_maze_seq2_predict1_authored_hint: [ ]
@@ -2252,7 +2423,14 @@ it:
         courseA_maze_seq3_a: 1 dei blocchi sposta l'uccellino nella direzione sbagliata. Riesci a capire qual è e a sostituirlo con il blocco corretto?
         courseA_maze_seq3_b: Prova ad usare il pulsante "Fai un passo" per capire dov'è l'errore. È al 1^ passo? Al 2^?
         courseA_maze_seq3_c: Questo blocco <xml><block type="maze_moveNorth"/></xml> non sembra muovere l'uccellino nella direzione corretta. Puoi sostituirlo con un altro blocco?
+      courseA_maze_seq3_2018_authored_hint:
+        courseA_maze_seq3_a: 1 dei blocchi sposta l'uccellino nella direzione sbagliata. Riesci a capire qual è e a sostituirlo con il blocco corretto?
+        courseA_maze_seq3_b: Prova ad usare il pulsante "Fai un passo" per capire dov'è l'errore. È al 1^ passo? Al 2^?
+        courseA_maze_seq3_c: Questo blocco <xml><block type="maze_moveNorth"/></xml> non sembra muovere l'uccellino nella direzione corretta. Puoi sostituirlo con un altro blocco?
       courseA_maze_seq4_authored_hint:
+        courseA_maze_seq4_a: Se sei in difficoltà, cerca di capire quale deve essere il percorso corretto da seguire ed elimina il blocco che non permette di seguirlo.
+        courseA_maze_seq4_b: Prova ad eseguire il codice così com'è. Qualcosa non funziona? Quale blocco puoi eliminare? Come puoi risolvere il problema?
+      courseA_maze_seq4_2018_authored_hint:
         courseA_maze_seq4_a: Se sei in difficoltà, cerca di capire quale deve essere il percorso corretto da seguire ed elimina il blocco che non permette di seguirlo.
         courseA_maze_seq4_b: Prova ad eseguire il codice così com'è. Qualcosa non funziona? Quale blocco puoi eliminare? Come puoi risolvere il problema?
       courseA_maze_seq4a_authored_hint:
@@ -2260,23 +2438,56 @@ it:
       courseA_maze_seq5_authored_hint:
         courseA_maze_seq5_a: Per trovare la soluzione, prova a scrivere i passi sulla carta!
         courseA_maze_seq5_b: Avrai bisogno di 2 blocchi, che puntano in 2 direzioni diverse.
+      courseA_maze_seq5_2018_authored_hint:
+        courseA_maze_seq5_a: Per trovare la soluzione, prova a scrivere i passi sulla carta!
+        courseA_maze_seq5_b: Avrai bisogno di 2 blocchi, che puntano in 2 direzioni diverse.
       courseA_maze_seq6_authored_hint:
+        courseA_maze_seq6_a: Il tuo programma finale dovrebbe avere 3 blocchi di movimento.
+        courseA_maze_seq6_b: Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.
+      courseA_maze_seq6_2018_authored_hint:
         courseA_maze_seq6_a: Il tuo programma finale dovrebbe avere 3 blocchi di movimento.
         courseA_maze_seq6_b: Se ti blocchi, prova a risolvere l'esercizio in due parti, una parte prima della curva e l'altra dopo la curva.
       courseA_maze_seq7_authored_hint:
         courseA_maze_seq7_a: Hai bisogno di aggiungere 1 blocco per far arrivare l'uccellino fino al maialino.
         courseA_maze_seq7_b: Se non riesci a capire cosa devi fare, prova a disegnare il labirinto sulla carta e usa le dita per capire il percorso da seguire e quindi scoprire le mosse da fare.
+      courseA_maze_seq7_2018_authored_hint:
+        courseA_maze_seq7_a: Hai bisogno di aggiungere 1 blocco per far arrivare l'uccellino fino al maialino.
+        courseA_maze_seq7_b: Se non riesci a capire cosa devi fare, prova a disegnare il labirinto sulla carta e usa le dita per capire il percorso da seguire e quindi scoprire le mosse da fare.
       courseA_maze_seq8_authored_hint:
+        courseA_maze_seq8_a: Se sei bloccato, prova a disegnare il labirinto sulla carta per capire come dovrebe muoversi l'uccellino.
+      courseA_maze_seq8_2018_authored_hint:
         courseA_maze_seq8_a: Se sei bloccato, prova a disegnare il labirinto sulla carta per capire come dovrebe muoversi l'uccellino.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Bloccato? Prova a tracciare con le dita il percorso che deve seguire l'uccellino.
         courseA_maze_seq9_b: Se non sai cosa fare, prova a premere "Ripristina" e fai partire il programma per vedere cosa non funziona.
         courseA_maze_seq9_c: Dovrai muoverti in 3 direzioni per risolvere questo esercizio.
+      courseA_maze_seq9_2018_authored_hint:
+        courseA_maze_seq9_a: Bloccato? Prova a tracciare con le dita il percorso che deve seguire l'uccellino.
+        courseA_maze_seq9_b: Se non sai cosa fare, prova a premere "Ripristina" e fai partire il programma per vedere cosa non funziona.
+        courseA_maze_seq9_c: Dovrai muoverti in 3 direzioni per risolvere questo esercizio.
       courseA_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge1_a: There are two solutions to this puzzle.
+      courseA_maze_seq_challenge1_2018_authored_hint:
         courseA_maze_seq_challenge1_a: There are two solutions to this puzzle.
       courseA_maze_seq_challenge2_authored_hint:
         courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember not to count the space where you start!
+      courseA_maze_seq_challenge2_2018_authored_hint:
+        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember not to count the space where you start!
       courseA_playLab_events2_authored_hint:
+        courseA_playLab_events2_a: Cerca un blocco che faccia dire qualcosa al cane.
+        courseA_playLab_events2_b: |2
+          Questo è il codice che ti serve per completare questo esercizio:
+          
+          <xml> 
+          <block type="when_run" movable="false" deletable="false"> 
+          <next> <block type="studio_saySpriteChoices"> 
+          <title name="SPRITE">1</title> 
+          <title name="VALUE">Hi there.</title> 
+          </block> 
+          </next> 
+          </block>
+           </xml>
+      courseA_playLab_events2_2018_authored_hint:
         courseA_playLab_events2_a: Cerca un blocco che faccia dire qualcosa al cane.
         courseA_playLab_events2_b: |2
           Questo è il codice che ti serve per completare questo esercizio:
@@ -2302,7 +2513,32 @@ it:
           <title name="VALUE">left</title>
           </block></xml>
         courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere Jorge fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
+      courseA_playLab_events3_2018_authored_hint:
+        courseA_playLab_events3_a: |-
+          Trascina questo blocco
+          <xml><block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">8</title>
+          </block></xml>
+          e aggancialo sotto al blocco
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          </block></xml>
+        courseA_playLab_events3_b: Dopo che hai scritto il programma, ricorda di utilizzare la freccia a sinistra per muovere Jorge fino alla bandierina. Quando la bandierina diventa verde, hai finito! (Puoi cliccare sulle frecce che vedi sullo schermo, oppure usare le frecce della tastiera.)
       courseA_playLab_events4_authored_hint:
+        courseA_playLab_events4_a: |-
+          Ecco il blocco evento che dovresti usare per far muovere Jorge a destra:
+          <xml><block type="studio_whenArrow"><title name="VALUE">right</title></block></xml>
+        courseA_playLab_events4_b: |-
+          Questo è il codice che ti serve per completare questo esercizio:
+          <xml><block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+          </block></next></block></xml>
+      courseA_playLab_events4_2018_authored_hint:
         courseA_playLab_events4_a: |-
           Ecco il blocco evento che dovresti usare per far muovere Jorge a destra:
           <xml><block type="studio_whenArrow"><title name="VALUE">right</title></block></xml>
@@ -2321,7 +2557,29 @@ it:
           Sapevi che puoi cambiare il verso della freccia nel blocco evento, cliccando sul disegno e scegliendone uno nuovo?
           
           ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018_authored_hint:
+        courseA_playLab_events5_a: "Ecco i blocchi degli eventi che dovresti usare per far muovere Jorge in su e in giù:\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\ne \n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Sapevi che puoi cambiare il verso della freccia nel blocco evento, cliccando sul disegno e scegliendone uno nuovo?
+          
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events6_authored_hint:
+        courseA_playLab_events6_a: |-
+          Ecco il blocco evento che dovresti usare per far fare qualcosa quando Jorge viene cliccato:
+          <xml><block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block></xml>
+        courseA_playLab_events6_b: |-
+          Ecco il blocco che dovresti usare per cambiare lo sfondo:
+          <xml><block type="studio_setBackground">
+          <title name="VALUE">random</title>
+          </block></xml>
+        courseA_playLab_events6_c: |-
+          Ecco il blocco che dovresti usare per riprodurre un suono casuale:
+          <xml><block type="studio_playSound">
+          <title name="SOUND">random</title>
+          </block></xml>
+      courseA_playLab_events6_2018_authored_hint:
         courseA_playLab_events6_a: |-
           Ecco il blocco evento che dovresti usare per far fare qualcosa quando Jorge viene cliccato:
           <xml><block type="studio_whenSpriteClicked">
@@ -2345,8 +2603,22 @@ it:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
+      courseA_playLab_events7_2018_authored_hint:
+        courseA_playLab_events7_a: |-
+          Usa questo blocco per definire cosa deve succedere quando i personaggi si scontrano.
+          
+          <xml><block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">0</title>
+          </block></xml>
       courseA_playlab_challengeTemplate_authored_hint: [ ]
       courseA_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show when you click Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018_authored_hint:
         courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
@@ -2380,6 +2652,33 @@ it:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          You can make an angry monster growl.
+          
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_2018_authored_hint:
         courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
@@ -9129,6 +9428,9 @@ it:
           2) Play a random sound when you click the actor.
           
           Now, make sure both of those actions are attached underneath the same event!
+      harvester_Kahoot_authored_hint:
+        courseE_farmer_functions1a_a: Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?
+        courseE_farmer_functions1a_b: Use a `repeat until` block to get to the pumpkin!
       harvey_snowflake_artist1_authored_hint: [ ]
       harvey_snowflake_artist2_authored_hint: [ ]
       harvey_tictactoe_authored_hint:

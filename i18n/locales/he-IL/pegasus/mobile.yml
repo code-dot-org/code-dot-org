@@ -712,7 +712,7 @@
   dashboard_students_secret_picture_title: "Secret Picture"
   dashboard_students_secret_picture: "This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in."
   dashboard_students_reset_picture: "תוכל לאפס תמונה סודית של התלמיד בכל עת על-ידי בחירת <b>הצג את סוד</b> ולאחר מכן <b>אפס את הסוד</b>. תמונה סודית חדשה תופק עבור אותו תלמיד בה יוכל להשתמש בעת הכניסה."
-  dashboard_students_secret_word_title: "Secret Word"
+  dashboard_students_secret_word_title: "Secret Words"
   dashboard_students_secret_word: "המילה הסודית"
   dashboard_students_reset_word: 'תוכל לאפס המילים הסודיות של התלמיד בכל עת על-ידי בחירת <b>הצג את הסוד</b> ולאחר מכן <b>אפס את הסוד</b>. זוג חדש של מילים סודיות יופק עבור אותו תלמיד בהם יוכל להשתמש בעת הכניסה. '
   dashboard_students_join_link: "הורה לתלמידיך ליצור חשבונות משלהם ולהצטרף לתחום שלך ב"

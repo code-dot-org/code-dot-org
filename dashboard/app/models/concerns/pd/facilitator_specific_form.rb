@@ -108,7 +108,7 @@ module Pd::FacilitatorSpecificForm
   #   'q2': 'f1 answer'
   # }
   def generate_summary_for_facilitator(facilitator_name)
-    hash = public_sanitized_form_data_hash
+    hash = public_sanitized_form_data_hash.dup
 
     hash.each do |k, v|
       if v.is_a? Hash
