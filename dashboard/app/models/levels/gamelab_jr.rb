@@ -187,4 +187,8 @@ class GamelabJr < Gamelab
   def uses_droplet?
     false
   end
+
+  def age_13_required?
+    false
+  end
 end
