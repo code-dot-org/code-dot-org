@@ -267,7 +267,7 @@ blockly.Blocks.point_to = {
       this.appendDummyInput()
           .appendTitle(msg.pointTo());
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
+          .appendTitle(new blockly.FieldAngleTextInput('VALUE', '90'), 'DIRECTION')
           .appendTitle(msg.degrees());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -278,7 +278,7 @@ blockly.Blocks.point_to = {
 
   generator.point_to = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
-    return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
+    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value}, 'block_id_${this.id}');\n`;
   };
 
   generator.draw_turn_inline = function () {
