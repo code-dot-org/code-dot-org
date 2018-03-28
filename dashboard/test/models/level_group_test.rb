@@ -280,9 +280,11 @@ level 'level7_copy'"
 
     assert_equal level_group_copy_dsl, level_group_copy.dsl_text
     (1..7).each do |id|
-      refute_nil Level.find_by_name("level#{id}_copy")
+      refute_nil l = Level.find_by_name("level#{id}_copy")
+      assert_equal 'What is the name of this function?', l.properties['questions'].first['text']
     end
-    refute_nil Level.find_by_name('external1_copy')
+    refute_nil l = Level.find_by_name('external1_copy')
+    assert_includes l.properties['markdown'], 'Sample external'
 
     # clean up
     File.delete(level_group_copy.filename)
