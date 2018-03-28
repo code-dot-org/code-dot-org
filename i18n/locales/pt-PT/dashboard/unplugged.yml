@@ -301,3 +301,18 @@ pt:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algoritmos da Vida Real: Plante uma Semente'
+        desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
+      UnplugHappyMaps_2018:
+        title: Mapas felizes
+        desc: Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando.
+      GoingPlacesSafely_2018:
+        title: Ir a Locais de um modo Seguro
+        desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram como navegar em segurança pela Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Nesta aula, vais aprender mais sobre os ciclos!
+      BigEvent_2018:
+        title: O Grande Evento
+        desc: Os alunos são introduzidos ao conceito de "eventos" em programação, que são ações que um computador monitora constantemente. O professor vai apertar os botões de forma remota, e os alunos vão reagir de acordo com o botão pressionado.

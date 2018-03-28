@@ -27,6 +27,15 @@ module Pd::Application
       assert_equal guid, teacher_application.application_guid
     end
 
+    test 'principal_approval_url' do
+      teacher_application = build :pd_teacher1819_application
+      assert_nil teacher_application.principal_approval_url
+
+      # save to generate guid and therefore principal approval url
+      teacher_application.save!
+      assert teacher_application.principal_approval_url
+    end
+
     test 'principal_greeting' do
       hash_with_principal_title = build :pd_teacher1819_application_hash
       hash_without_principal_title = build :pd_teacher1819_application_hash, principal_title: nil
@@ -756,7 +765,7 @@ module Pd::Application
     end
 
     test 'locked status appears in csv only when the supplied user can_see_locked_status' do
-      application = build :pd_teacher1819_application
+      application = create :pd_teacher1819_application
       mock_user = mock
 
       Teacher1819Application.stubs(:can_see_locked_status?).returns(false)
@@ -781,6 +790,56 @@ module Pd::Application
       assert (row = application.to_cohort_csv_row)
       assert_equal CSV.parse(header).length, CSV.parse(row).length,
         "Expected header and row to have the same number of columns"
+    end
+
+    test 'school cache' do
+      school = create :school
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash
+
+      # Original query: School, SchoolDistrict
+      assert_queries 2 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+
+      # Cached
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+      end
+    end
+
+    test 'cache prefetch' do
+      school = create :school
+      workshop = create :pd_workshop
+      form_data_hash = build :pd_teacher1819_application_hash, school: school
+      application = create :pd_teacher1819_application, form_data_hash: form_data_hash, pd_workshop_id: workshop.id
+
+      # Workshop, Session, Enrollment, School, SchoolDistrict
+      assert_queries 5 do
+        Teacher1819Application.prefetch_associated_models([application])
+      end
+
+      assert_queries 0 do
+        assert_equal school.name.titleize, application.school_name
+        assert_equal school.school_district.name.titleize, application.district_name
+        assert_equal workshop, application.workshop
+      end
+    end
+
+    test 'memoized filtered_labels' do
+      Teacher1819Application::FILTERED_LABELS.clear
+
+      filtered_labels_csd = Teacher1819Application.filtered_labels('csd')
+      assert filtered_labels_csd.include? :csd_which_grades
+      refute filtered_labels_csd.include? :csp_which_grades
+      assert_equal ['csd'], Teacher1819Application::FILTERED_LABELS.keys
+
+      filtered_labels_csd = Teacher1819Application.filtered_labels('csp')
+      refute filtered_labels_csd.include? :csd_which_grades
+      assert filtered_labels_csd.include? :csp_which_grades
+      assert_equal ['csd', 'csp'], Teacher1819Application::FILTERED_LABELS.keys
     end
   end
 end

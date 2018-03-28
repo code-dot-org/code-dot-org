@@ -64,13 +64,29 @@ class Census::StateCsOffering < ApplicationRecord
     8131
   ).freeze
 
+  GA_COURSE_CODES = %w(
+    11.01600
+    11.01700
+    11.01710
+    11.47100
+    11.47200
+    11.01900
+  ).freeze
+
   def self.get_courses(state_code, row_hash)
     case state_code
     when 'CA'
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
     when 'GA'
       # One course per row
-      [row_hash['COURSE_NUMBER']]
+      # Courses are in the form of XX.XXXXX but
+      # sometimes the codes are trucated if they had trailing zeros
+      # and other times they are padded with extra zeros.
+      course_parts = row_hash['COURSE_NUMBER'].split('.')
+      prefix = course_parts.first
+      suffix = format("%-5.5s", course_parts.second).tr(' ', '0')
+      course_code = "#{prefix}.#{suffix}"
+      GA_COURSE_CODES.select {|course| course == course_code}
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}

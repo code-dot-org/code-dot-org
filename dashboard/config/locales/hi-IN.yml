@@ -230,7 +230,7 @@
     remove: "(remove section)"
     type:
       picture: Picture Password
-      word: Secret Words
+      word: "गुप्त शब्द"
       email: "ईमेल"
       google_classroom: Google Classroom
       clever: Clever
