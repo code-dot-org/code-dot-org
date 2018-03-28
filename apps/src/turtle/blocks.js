@@ -1151,7 +1151,6 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.sticker = blockly.Blocks.turtle_stamp = createDrawStickerBlock();
 
-
   generator.sticker = generator.turtle_stamp = function () {
     return 'Turtle.drawSticker("' + this.getTitleValue('VALUE') +
         '", null, \'block_id_' + this.id + '\');\n';
