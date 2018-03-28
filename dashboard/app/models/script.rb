@@ -552,11 +552,7 @@ class Script < ActiveRecord::Base
     # UI tests deal with the 13+ requirement
     return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
 
-    # these are Games where if you're not logged in, we want to prompt to ask if
-    # you're at least 13 years old.
-    thirteen_plus_apps = [Game.applab, Game.gamelab, Game.weblab]
-
-    script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
+    script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
 
   # Create or update any scripts, script levels and stages specified in the
