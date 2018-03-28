@@ -8,15 +8,15 @@ import {SnackSession} from 'snack-sdk';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
-import exportProjectEjs from '../templates/exportProject.html.ejs';
-import exportExpoProjectEjs from '../templates/exportExpoProject.html.ejs';
-import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
-import exportExpoPackageJson from '../templates/exportExpoPackage.json.ejs';
-import exportExpoAppJson from '../templates/exportExpoApp.json.ejs';
-import exportExpoAppJs from '../templates/exportExpoApp.js.ejs';
-import exportExpoCustomAssetJs from '../templates/exportExpoCustomAsset.js.ejs';
-import exportExpoPackagedFiles from '../templates/exportExpoPackagedFiles.js.ejs';
-import exportExpoPackagedFilesEntry from '../templates/exportExpoPackagedFilesEntry.js.ejs';
+import exportProjectEjs from '../templates/export/project.html.ejs';
+import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
+import exportExpoIndexEjs from '../templates/export/expo/index.html.ejs';
+import exportExpoPackageJson from '../templates/export/expo/package.exported.json';
+import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
+import exportExpoAppJs from '../templates/export/expo/App.exported.js';
+import exportExpoCustomAssetJs from '../templates/export/expo/CustomAsset.exported.js';
+import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
+import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -231,7 +231,7 @@ export default {
     const jQueryBaseName = 'jquery-1.12.1.min';
     var html;
     if (expoMode) {
-      html = exportExpoProjectEjs({
+      html = exportExpoIndexEjs({
         htmlBody: outerHTML,
         applabApiPath: "applab-api.j",
         jQueryPath: jQueryBaseName + ".j",
@@ -280,18 +280,15 @@ export default {
 
     var zip = new JSZip();
     if (expoMode) {
-      const packageJson = exportExpoPackageJson();
-      const appJson = exportExpoAppJson({
+      const appJson = exportExpoAppJsonEjs({
         appName: appName,
         projectId: project.getCurrentId()
       });
-      const appJs = exportExpoAppJs();
-      const customAssetJs = exportExpoCustomAssetJs();
 
-      zip.file(appName + "/package.json", packageJson);
+      zip.file(appName + "/package.json", exportExpoPackageJson);
       zip.file(appName + "/app.json", appJson);
-      zip.file(appName + "/App.js", appJs);
-      zip.file(appName + "/CustomAsset.js", customAssetJs);
+      zip.file(appName + "/App.js", exportExpoAppJs);
+      zip.file(appName + "/CustomAsset.js", exportExpoCustomAssetJs);
     }
     // NOTE: for expoMode, it is important that index.html comes first...
     zip.file(mainProjectFilesPrefix + "index.html", rewriteAssetUrls(appAssets, html));
@@ -405,8 +402,8 @@ export default {
           moduleList.push({ fileName });
         }
     });
-    const entries = moduleList.map(module => exportExpoPackagedFilesEntry({ module }));
-    return exportExpoPackagedFiles({ entries });
+    const entries = moduleList.map(module => exportExpoPackagedFilesEntryEjs({ module }));
+    return exportExpoPackagedFilesEjs({ entries });
   },
 
   createPackageFilesFromExpoFiles(files) {
@@ -420,20 +417,18 @@ export default {
       const relativePath = fileName.substring(assetPrefixLength);
       moduleList.push({ fileName: relativePath });
     }
-    const entries = moduleList.map(module => exportExpoPackagedFilesEntry({ module }));
-    return exportExpoPackagedFiles({ entries });
+    const entries = moduleList.map(module => exportExpoPackagedFilesEntryEjs({ module }));
+    return exportExpoPackagedFilesEjs({ entries });
   },
 
   publishToExpo(appName, code, levelHtml) {
-    const appJson = exportExpoAppJson({
+    const appJson = exportExpoAppJsonEjs({
       appName: appName,
       projectId: project.getCurrentId()
     });
-    const appJs = exportExpoAppJs();
-    const customAssetJs = exportExpoCustomAssetJs();
     const appOptionsJs = getAppOptionsFile();
     const { css, outerHTML } = transformLevelHtml(levelHtml);
-    const html = exportExpoProjectEjs({
+    const html = exportExpoIndexEjs({
       htmlBody: outerHTML,
       commonLocalePath: "https://studio.code.org/blockly/js/en_us/common_locale.js",
       applabLocalePath: "https://studio.code.org/blockly/js/en_us/applab_locale.js",
@@ -452,8 +447,8 @@ export default {
     }));
 
     const files = {
-      'App.js': { contents: appJs, type: 'CODE'},
-      'CustomAsset.js': { contents: customAssetJs, type: 'CODE'},
+      'App.js': { contents: exportExpoAppJs, type: 'CODE'},
+      'CustomAsset.js': { contents: exportExpoCustomAssetJs, type: 'CODE'},
       'app.json': { contents: appJson, type: 'CODE'},
     };
 
