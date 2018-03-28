@@ -50,7 +50,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/gctools.git
-  revision: a318fede5cb519133a4d6bfa566b800c71c2e42c
+  revision: 729c6bbb32c4bcc2ebfed16543991e4d126f09cc
   ref: ruby-2.5
   specs:
     gctools (0.2.4)
@@ -214,9 +214,9 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     afm (0.2.2)
-    annotate (2.7.1)
+    annotate (2.7.2)
       activerecord (>= 3.2, < 6.0)
-      rake (>= 10.4, < 12.0)
+      rake (>= 10.4, < 13.0)
     ansi (1.5.0)
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
@@ -443,7 +443,7 @@ GEM
       actionpack (>= 4, < 5.1)
       activesupport (>= 4, < 5.1)
       railties (>= 4, < 5.1)
-    loofah (2.2.0)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -837,6 +837,7 @@ DEPENDENCIES
   launchy
   le (~> 2.2)
   lograge
+  loofah (~> 2.2.1)
   marked-rails
   mini_magick
   minitest (~> 5.5)

@@ -28,6 +28,8 @@ class GamelabJr < Gamelab
     helper_libraries
     custom_helper_library
     custom_blocks
+    hide_custom_blocks
+    use_default_sprites
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -42,6 +44,8 @@ class GamelabJr < Gamelab
           helper_libraries: [
             "GameLabJr",
           ],
+          use_default_sprites: true,
+          hide_animation_mode: true,
         }
       )
     )
@@ -65,6 +69,7 @@ class GamelabJr < Gamelab
 </category>
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
+  <block type="gamelab_setAnimation" />
   <block type="gamelab_moveUp" />
   <block type="gamelab_moveDown" />
   <block type="gamelab_moveLeft" />
@@ -74,6 +79,8 @@ class GamelabJr < Gamelab
   <block type="gamelab_destroy" />
   <block type="gamelab_firstTouched" />
   <block type="gamelab_secondTouched" />
+  <block type="sprite_variables_get" />
+  <block type="sprite_variables_set" />
 </category>
 <category name="Groups">
   <block type="gamelab_makeNewGroup" />
@@ -90,6 +97,7 @@ class GamelabJr < Gamelab
   <block type="gamelab_whileLeftArrow" />
   <block type="gamelab_whileRightArrow" />
   <block type="gamelab_whenTouching" />
+  <block type="gamelab_whileTouching" />
   <block type="gamelab_clickedOn" />
 </category>
 <category name="Math">

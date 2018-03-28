@@ -10,7 +10,7 @@ const topCourse = {
 
 export default storybook => {
   return storybook
-    .storiesOf('MakerLanding', module)
+    .storiesOf('MakerToolkit/MakerLanding', module)
     .withReduxStore()
     .addStoryTable([
       {
