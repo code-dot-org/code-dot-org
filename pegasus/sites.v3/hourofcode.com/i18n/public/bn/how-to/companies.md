@@ -16,22 +16,22 @@ Code.org offers the opportunity for your employees to [connect](<%= codeorg_url(
 
 ## অতিরিক্ত উপায়ে কোম্পানি কোড অফ আওয়ার সমর্থন করতে পারে:
 
-- আপনার সিইওকে <a href="%= resolve_url('/promote/resources#sample-emails')- এ জিজ্ঞাসা করুন একটি কোম্পানী ওয়াইড ইমেইল প্রেরণ করুন- কম্পিউটার বিজ্ঞানের গুরুত্বের উপর জোর দেওয়া এবং কর্মচারীদেরকে শব্দটি ছড়িয়ে দেওয়ার জন্য উত্সাহিত করা.
-- কোডের একটি ঘন্টা হোস্ট করুন সহকর্মীদের সাথে শুভ ঘন্টা [ কার্যকলাপগুলি ](<%= resolveurl('learn') %>) চেষ্টা করতে.
+- আপনার সিইওকে [- এ জিজ্ঞাসা করুন একটি কোম্পানী ওয়াইড ইমেইল প্রেরণ করুন- কম্পিউটার বিজ্ঞানের গুরুত্বের উপর জোর দেওয়া এবং কর্মচারীদেরকে শব্দটি ছড়িয়ে দেওয়ার জন্য উত্সাহিত করা](<%= resolve_url('/promote/resources#sample-emails') %>).
+- কোডের একটি ঘন্টা হোস্ট করুন সহকর্মীদের সাথে শুভ ঘন্টা [ কার্যকলাপগুলি ](<%= resolve_url('/learn') %>) চেষ্টা করতে.
 - আপনার কোম্পানির অফিসে একটি ঘন্টার কোড করার জন্য ছাত্রদের স্থানীয় শ্রেণীকক্ষ বা নন মুনাফা অংশীদারের জন্য কোডের একটি ঘন্টা আয়োজন করুন। কিভাবে নীচের নির্দেশিকা দেখুন ইভেন্ট দেখুন।.
 
 # ছাত্রদের সাথে একটি ঘন্টার কোড ইভেন্ট হোস্ট কিভাবে
 
 ## 1. কোড আপনার ঘন্টা প্রচার করুন
 
-- আপনার <a href="%= resolveurl('/promote') কে প্রচার করুন ● কোডের ঘন্টা </a> ইভেন্ট এবং হোস্ট হোস্ট অন্যদের উৎসাহিত করুন.
+- আপনার [ কে প্রচার করুন ● কোডের ঘন্টা ](<%= resolve_url('/promote') %>) ইভেন্ট এবং হোস্ট হোস্ট অন্যদের উৎসাহিত করুন.
 - আপনার কম্পিউটারে সফটওয়্যার প্রকৌশলীকে একটি স্থানীয় শ্রেণীকক্ষে দেখার জন্য কোড অফ দ্য আওয়ার এবং কম্পিউটার বিজ্ঞান অধ্যয়ন করার জন্য ছাত্রদের অনুপ্রাণিত করার জন্য সহায়তা করুন. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. কিভাবে এই ভিডিও দেখুন <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. একটি কার্যকলাপ চয়ন করুন
 
-আমরা বিভিন্ন ধরণের <a href="%= resolve_url('/learn')%) বিভিন্ন ধরণের অংশীদারদের দ্বারা তৈরি সব বয়সের অংশগ্রহণকারীদের জন্য মজাদার, ঘন্টা-দীর্ঘ কার্যক্রম </a> আয়োজন করি. তাদের চেস্টা করুন!
+আমরা বিভিন্ন ধরণের [ বিভিন্ন ধরণের অংশীদারদের দ্বারা তৈরি সব বয়সের অংশগ্রহণকারীদের জন্য মজাদার, ঘন্টা-দীর্ঘ কার্যক্রম ](<%= resolve_url('/learn') %>) আয়োজন করি. তাদের চেস্টা করুন!
 
 ** কোডের সমস্ত ঘন্টা কার্যক্রম </ strong> কমপক্ষে প্রিপেইডের প্রয়োজন এবং স্ব-নির্দেশিত - অংশগ্রহণকারীদের তাদের নিজস্ব গতি এবং দক্ষতা পর্যায়ে কাজ করার অনুমতি প্রদান করে.</p> 
 
@@ -57,7 +57,7 @@ Code.org offers the opportunity for your employees to [connect](<%= codeorg_url(
         
         **Show an inspirational video:**
         
-        - বিল গেটস, মার্ক জুকারবার্গের এবং এন বি এ তারকা তারকা ক্রিস বসের মূল কোডোড লঞ্চ ভিডিও, সেখানে রয়েছে [ 1 মিনিট </ a >, [ 5 মিনিট ](https://www.youtube.com/watch?v=nKIu9yen5nc), এবং <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 মিনিট ](https://www.youtube.com/watch?v=qYZF6oIZtfc) সংস্করণ).
+        - বিল গেটস, মার্ক জুকারবার্গের এবং এন বি এ তারকা তারকা ক্রিস বসের মূল কোডোড লঞ্চ ভিডিও, সেখানে রয়েছে [ 1 মিনিট ](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 মিনিট ](https://www.youtube.com/watch?v=nKIu9yen5nc), এবং <a href = "https://www.youtube.com/watch?v=dU1xS07N-FA"> 9 মিনিট </a> সংস্করণ).
         - [ কোড অফ ঘরোয়া ভিডিও বিশ্বব্যাপী ](https://www.youtube.com/watch?v=KsOIlDT145A)
         - [ প্রেসিডেন্ট ওবামা কম্পিউটার বিজ্ঞান শিখতে সব ছাত্রকে ডাকছেন ](https://www.youtube.com/watch?v=6XvmhE1J9PY).
         - আরও অনুপ্রেরণামূলক ভিডিও খুঁজুন [ এখানে ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
@@ -74,7 +74,7 @@ Code.org offers the opportunity for your employees to [connect](<%= codeorg_url(
         
         **কার্যকলাপে সরাসরি অংশগ্রহণকারীরা**
         
-        - একটি সাদা বোর্ডে কার্যকলাপ লিঙ্ক লিখুন। অংশগ্রহণকারীদের সংখ্যা অনুসারে <a href="%= resolveurl('/learn')% (আপনার নির্বাচিত কার্যকলাপের জন্য তথ্য) উপর তালিকাভুক্ত লিঙ্ক খুঁজুন.
+        - একটি সাদা বোর্ডে কার্যকলাপ লিঙ্ক লিখুন। অংশগ্রহণকারীদের সংখ্যা অনুসারে [ (আপনার নির্বাচিত কার্যকলাপের জন্য তথ্য) উপর তালিকাভুক্ত লিঙ্ক খুঁজুন](<%= resolve_url('/learn') %>).
         - তরুণ ছাত্রদের জন্য, সময়ের আগে কার্যকলাপ পৃষ্ঠা লোড বা একটি বুকমার্ক হিসাবে এটি সংরক্ষণ করুন.
         
         **অংশগ্রহণকারীরা যখন সমস্যার সম্মুখীন হয় তখন প্রতিক্রিয়া জানানোর জন্য ঠিক আছে:**
@@ -106,7 +106,7 @@ Code.org offers the opportunity for your employees to [connect](<%= codeorg_url(
         ## ৭) উদযাপন
         
         - [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
-        - <a href="%= resolveurl('/promote/resources#stickers')% "মুদ্রণ করুন" আমি কোড অফ আওয়ার করেছি! "</a> স্টিকারগুলি.
+        - [ "মুদ্রণ করুন" আমি কোড অফ আওয়ার করেছি! "](<%= resolve_url('/promote/resources#stickers') %>) স্টিকারগুলি.
         - আপনার কর্মীদের জন্য [ কাস্টম টি-শার্ট ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) অর্ডার করুন.
         - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
         
