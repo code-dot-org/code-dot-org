@@ -7467,6 +7467,8 @@ en:
               name: Programming in Bee
             Programming in Harvester:
               name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
         express-2018:
           title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -7755,6 +7757,14 @@ en:
               name: Using Behaviors
             Using Forever Loops:
               name: Using Forever Loops
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
           title: ''
           description_audience: ''
           description_short: ''

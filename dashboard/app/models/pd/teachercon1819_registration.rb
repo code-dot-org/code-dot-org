@@ -238,4 +238,13 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       sanitize_form_data_hash.try(:[], :able_to_attend)
     end
   end
+
+  def date_accepted
+    pd_application.try(&:date_accepted) || created_at.to_date.iso8601
+  end
+
+  def applicant_name
+    hash = sanitize_form_data_hash
+    "#{hash[:preferred_first_name]} #{hash[:last_name]}"
+  end
 end
