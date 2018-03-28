@@ -643,7 +643,7 @@ class Script < ActiveRecord::Base
 
         level =
           if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", allow_existing: true)
+            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}")
           else
             levels_by_key[key] || Level.find_by_key(key)
           end
