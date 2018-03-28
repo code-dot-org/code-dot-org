@@ -20,10 +20,10 @@
           %input#name.grey_input{:name=>"name_s", :placeholder=>I18n.t(:name), :type=>'text', :style=>''}
         .col-18
           %input#email.grey_input{:name=>"email_s", :placeholder=>I18n.t(:email), :type=>'email'}
-          %div.desktop-feature=I18n.t :used_infrequent_updates
+          .petition_help_text.desktop-feature=I18n.t :used_infrequent_updates
         .col-18
           %input#zip_code_or_country.grey_input{:name=>"zip_code_or_country_s", :placeholder=>I18n.t(:zipcode), :type=>'text'}
-          %div.desktop-feature=I18n.t :enter_country
+          .petition_help_text.desktop-feature=I18n.t :enter_country
         .col-18
           %span
             =I18n.t :petition_age
@@ -31,7 +31,7 @@
               %option{value:0}= '-'
               -(1..100).each do |age|
                 %option{value:age}= age
-          %div.desktop-feature
+          .petition_help_text.desktop-feature
             %a{href: '/privacy'}= I18n.t :privacy_practices_children
         .col-18
           %span

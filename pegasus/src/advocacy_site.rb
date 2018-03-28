@@ -8,7 +8,7 @@ class AdvocacySite
         color1: "118, 101, 160",
         color2: "166, 155, 193",
         url: CDO.studio_url("/courses"),
-        image: "/shared/images/courses/logo_tall_elementary.jpg",
+        image: "/images/advocacy3.jpg",
         links:
           [
             {
@@ -37,7 +37,7 @@ class AdvocacySite
         color1: "0, 148, 202",
         color2: "89, 185, 220",
         url: "/educate",
-        image: "/shared/images/courses/logo_tall_teacher2.jpg",
+        image: "/images/advocacy4.jpg",
         links:
           [
             {
@@ -66,7 +66,7 @@ class AdvocacySite
         color1: "0, 173, 188",
         color2: "89, 202, 211",
         url: "/learn",
-        image: "/images/mc/2016_homepage_hocblock.jpg",
+        image: "/images/advocacy1.jpg",
         links:
           [
             {
@@ -95,7 +95,7 @@ class AdvocacySite
         color1: "185, 191, 21",
         color2: "209, 213, 103",
         url: "/help",
-        image: "/shared/images/courses/logo_tall_map.jpg",
+        image: "/images/advocacy2.jpg",
         links:
           [
             {
