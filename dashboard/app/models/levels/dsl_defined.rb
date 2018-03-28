@@ -73,12 +73,17 @@ class DSLDefined < Level
 
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
-        File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
+        level.rewrite_dsl_file(text)
         rewrite_i18n_file(i18n)
       end
 
       level
     end
+  end
+
+  # Write the specified text to the dsl level definition file for this level.
+  def rewrite_dsl_file(text)
+    File.write(file_path, (encrypted ? encrypted_dsl_text(text) : text))
   end
 
   def self.rewrite_i18n_file(i18n)
@@ -120,9 +125,10 @@ class DSLDefined < Level
   end
 
   def clone_with_name(new_name)
+    raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     level = super(new_name)
-    new_dsl = dsl_text.sub("name '#{name}'", "name '#{new_name}'")
-    level.update!(dsl_text: new_dsl)
+    new_dsl = dsl_text.try(:sub, "name '#{name}'", "name '#{new_name}'")
+    level.update!(dsl_text: new_dsl) if new_dsl
     level
   end
 
