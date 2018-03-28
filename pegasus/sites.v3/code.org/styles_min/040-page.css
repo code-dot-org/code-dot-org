@@ -156,11 +156,10 @@ td {
 }
 
 #petition_form a:link, #petition_form a:visited {
-  color: #dcdcdc;
+  color: rgb(91,103,112);
   text-decoration: none;
 }
 #petition_form a:hover, #petition_form a:active {
-  color: #fff;
   text-decoration: underline;
 }
 
