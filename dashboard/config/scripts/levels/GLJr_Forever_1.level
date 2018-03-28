@@ -216,11 +216,8 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "custom_blocks": "[\r\n  {\r\n    \"func\": \"forever\",\r\n    \"color\": [\r\n      322,\r\n      0.9,\r\n      0.95\r\n    ],\r\n    \"blockText\": \"repeat forever\",\r\n    \"args\": [],\r\n    \"eventLoopBlock\": true\r\n  }\r\n]",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "instructions": "On your worksheet, write what you think the dog will do when you click \"Run.\""
+    "instructions": "On your worksheet, write what you think the dog will do when you click \"Run.\"",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -233,7 +230,7 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="sprite_variables_set" inline="false">
               <title name="VAR">myDog</title>
               <value name="VALUE">
                 <block type="gamelab_makeNewSprite" inline="true">
@@ -257,7 +254,7 @@
           <statement name="DO">
             <block type="gamelab_moveRight" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">myDog</title>
                 </block>
               </value>
