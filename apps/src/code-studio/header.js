@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
 import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
+import experiments from '../util/experiments';
 
 import { convertBlocksXml } from '../craft/code-connection/utils';
 
@@ -199,7 +200,7 @@ function shareProject() {
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
-          onClickExportExpo={exportExpoApp}
+          onClickExportExpo={experiments.isEnabled('exportExpo') ? exportExpoApp : null}
           canShareSocial={canShareSocial}
           userSharingDisabled={appOptions.userSharingDisabled}
         />
