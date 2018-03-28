@@ -2328,7 +2328,7 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.uid
     assert_nil user.reset_password_token
     assert_nil user.full_address
-    assert_equal({}, user.properties)
+    assert_equal({"sharing_disabled" => false}, user.properties)
     refute_nil user.purged_at
   end
 
