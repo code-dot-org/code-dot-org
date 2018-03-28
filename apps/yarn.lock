@@ -11173,9 +11173,9 @@ smart-buffer@^1.0.13:
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-1.1.15.tgz#7f114b5b65fab3e2a35aa775bb12f0d1c649bf16"
 
-"snack-sdk@https://github.com/expo/snack-sdk":
+"snack-sdk@https://github.com/code-dot-org/snack-sdk":
   version "1.0.11"
-  resolved "https://github.com/expo/snack-sdk#f63f59d1843bf6d4554c581544f96c8b1a938bc2"
+  resolved "https://github.com/code-dot-org/snack-sdk#a5e0a8e86498e10bb92dbb6842e92958bf1dcdee"
   dependencies:
     babel-runtime "^6.23.0"
     babylon "^6.17.2"
