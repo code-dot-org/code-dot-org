@@ -2384,6 +2384,45 @@ class UserTest < ActiveSupport::TestCase
     refute student.reload.sharing_disabled
   end
 
+  test 'students share setting updates after turning 13 if they are in no sections' do
+    # create a birthday 12 years ago
+    birthday = Date.today - (12 * 365)
+    student = create :user, birthday: birthday
+    assert student.reload.sharing_disabled
+
+    # go forward in time to a day past the student's 13th birthday
+    Timecop.travel (Date.today + 366) do
+      # student signs in
+      student.sign_in_count = 2
+      student.save
+
+      # check new share setting
+      refute student.reload.sharing_disabled
+    end
+  end
+
+  test 'students share setting does not update after turning 13 if they are in sections' do
+    # create a birthday 12 years ago
+    birthday = Date.today - (12 * 365)
+    student = create :user, birthday: birthday
+
+    teacher = create :teacher
+    section1 = create :section, user: teacher
+    section1.add_student(student)
+
+    assert student.reload.sharing_disabled
+
+    # go forward in time to a day past the student's 13th birthday
+    Timecop.travel (Date.today + 366) do
+      # student signs in
+      student.sign_in_count = 2
+      student.save
+
+      # check updated share setting is unchanged
+      assert student.reload.sharing_disabled
+    end
+  end
+
   test 'stage_extras_enabled?' do
     script = create :script
     other_script = create :script
