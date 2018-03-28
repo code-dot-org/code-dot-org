@@ -19,6 +19,9 @@ function select(event) {
 }
 
 const styles = {
+  modal: {
+    width: 720,
+  },
   abuseStyle: {
     border: '1px solid',
     borderRadius: 10,
@@ -245,7 +248,7 @@ class ShareAllowedDialog extends React.Component {
     return (
       <div>
         <BaseDialog
-          useDeprecatedGlobalStyles
+          style={styles.modal}
           isOpen={this.props.isOpen}
           handleClose={this.close}
           hideBackdrop={this.props.hideBackdrop}
@@ -302,7 +305,7 @@ class ShareAllowedDialog extends React.Component {
                       onClick={select}
                       readOnly="true"
                       value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 325}}
+                      style={{cursor: 'copy', width: 500}}
                     />
                   </div>
                 </div>
