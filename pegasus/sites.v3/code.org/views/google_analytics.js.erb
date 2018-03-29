@@ -2,15 +2,17 @@
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   ga('create', 'UA-37745279-1', '<%=request.site%>');
 
+  var currentLanguage = "default";
   var currentLocale = readCookie("language_");
   if (currentLocale && currentLocale != "")
   {
-    var currentLanguage = currentLocale.substring(0,2);
-    if (currentLanguage && currentLanguage != "")
+    language = currentLocale.substring(0,2);
+    if (language && language != "")
     {
-      ga('set', 'dimension1', currentLanguage);
+      currentLanguage = language;
     }
   }
+  ga('set', 'dimension1', currentLanguage);
 
   ga('set', 'dimension4', "<%="#{user_type}"%>");
 

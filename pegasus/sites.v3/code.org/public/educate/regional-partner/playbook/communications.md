@@ -9,7 +9,7 @@ nav: regional_partner_playbook_nav
 ## Table of contents
 
 - [Announcements](#announce)
-- [Weekly Newsletter Archive](#archive)
+- [Weekly Email Archive](#archive)
 - [Regional Partner Advisory Committee Meeting Notes](#adcom)
 - [Communication to teachers from Code.org](#code.org)
 - [Workshop communications](#workshop)
@@ -41,6 +41,9 @@ ________________
 
 ## Regional Partner Weekly Update Emails
 Each week we send out an email with important action items, new collateral, CS Education news, etc. View the [Group 1 weekly emails](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing), [Group 2 weekly emails](https://docs.google.com/document/d/1Z1gXtCTU5Veih9gAxLw4VsAHeSC4HA_A70O1VWH_ZZI/edit?usp=sharing) and the [Group 3 weekly emails](https://docs.google.com/document/d/1DThTQqcD6Rvvl0KTeH3sRIt-sKkDGlPRzixbe55q4gc/edit).
+
+## 2018 Federal Funding Update Emails
+See Code.org's archive of all federal funding update emails **<a href="https://docs.google.com/document/d/1aOcFXD9cwIaKN1HS17m6784e7_tcge4bDNo0X7DsxLQ/edit" target=_blank>here</a>**.
 
 <br/>
 
