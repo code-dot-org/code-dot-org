@@ -20,7 +20,8 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     role = form[:role].downcase
 
     mail(
-      to: 'Partners <partner@code.org>',
+      to: 'Nimisha <nimisha@code.org>',
+      cc: 'Jenna <jenna@code.org>',
       subject: "A " + role + " wants to connect with Code.org"
     )
   end

@@ -993,7 +993,6 @@ blockly.Blocks.point_to = {
           .appendTitle(msg.setColour());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setInputsInline(true);
       this.setTooltip(msg.colourTooltip());
     }
   };
@@ -1004,11 +1003,9 @@ blockly.Blocks.point_to = {
     // - Make sure it doesn't count against correct solutions
     //
     init: function () {
-      this.appendDummyInput()
-          .appendTitle(msg.setAlpha());
       this.appendValueInput("VALUE")
-          .setCheck("Number");
-      this.setInputsInline(true);
+          .setCheck("Number")
+          .appendTitle(msg.setAlpha());
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setHSV(196, 1.0, 0.79);
