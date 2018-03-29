@@ -105,9 +105,19 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   def lead_facilitator
     unless current_user.facilitator?
       render :unauthorized
+      return
     end
 
     teachercon = get_teachercon
+
+    # Has this user registered for this teachercon already?
+    registrations = Pd::Teachercon1819Registration.where(user: current_user).select {|r| r.sanitize_form_data_hash[:city] == teachercon[:city]}
+
+    if registrations.any?
+      @seat_accepted = registrations.first.accepted?
+      render :lead_facilitator_submitted
+      return
+    end
 
     unless teachercon
       render :invalid
