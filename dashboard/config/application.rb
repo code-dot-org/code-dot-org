@@ -23,7 +23,9 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
-    if Rails.env.development?
+    unless CDO.chef_managed
+      # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
+      # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Whitelist::Downstream,
@@ -34,7 +36,9 @@ module Dashboard
 
       config.middleware.insert_after Rack::Cache, Rack::Whitelist::Upstream,
         HttpCache.config(rack_env)[:dashboard]
+    end
 
+    if Rails.env.development?
       Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
 
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
