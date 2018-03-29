@@ -337,13 +337,13 @@ class ShareAllowedDialog extends React.Component {
                     className="no-mc"
                   />
                   }
-                  {/* prevent buttons from overlapping when unpublish is pending */}
                   {canPrint && hasThumbnail &&
                     <a href="#" onClick={this.print}>
                       <i className="fa fa-print" style={{fontSize: 26}} />
                       <span>{i18n.print()}</span>
                     </a>
                   }
+                  {/* prevent buttons from overlapping when unpublish is pending */}
                   {this.props.canShareSocial && !this.props.isUnpublishPending &&
                   <span>
                     {this.state.isFacebookAvailable &&
