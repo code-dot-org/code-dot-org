@@ -19,8 +19,6 @@ export default class Teachercon1819FormComponent extends LabeledFormComponent {
   }
 
   isLeadFacilitatorApplication() {
-    console.log(this.props.applicationType);
-    console.log(this.props.applicationType === LEAD_FACILITATOR);
     return this.props.applicationType === LEAD_FACILITATOR;
   }
 }

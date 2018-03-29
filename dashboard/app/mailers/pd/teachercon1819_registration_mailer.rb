@@ -12,7 +12,7 @@ class Pd::Teachercon1819RegistrationMailer < ActionMailer::Base
 
   def facilitator(registration)
     @registration = registration
-    email = registration.pd_application_id? ? registration.pd_application.user.email : registration.user.email
+    email = registration.user.email
     @location_city =
       if registration.pd_application_id?
         @registration.pd_application.workshop.location_city
