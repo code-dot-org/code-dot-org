@@ -181,6 +181,7 @@ bonus 'courseE_bee_functions_challenge1_2018'
 bonus 'courseE_bee_functions_challenge2_2018'
 
 stage 'Functions in Farmer', flex_category: 'csf_e_2'
+level 'harvester_skinOverview_video'
 level 'courseE_farmer_functions1_2018'
 level 'courseE_farmer_functions1a_2018'
 level 'courseE_farmer_functions2b_2018'
