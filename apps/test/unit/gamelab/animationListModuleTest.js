@@ -293,14 +293,15 @@ describe('animationListModule', function () {
 
       const clonedAnimationKey = store.getState().animationList.orderedKeys[1];
       const clonedAnimation = store.getState().animationList.propsByKey[clonedAnimationKey];
-      const orignalAnimation = store.getState().animationList.propsByKey[key0];
+      const originalAnimation = store.getState().animationList.propsByKey[key0];
 
-      expect(clonedAnimation.name).to.not.equal(orignalAnimation.name);
-      expect(clonedAnimation.frameSize).to.equal(orignalAnimation.frameSize);
-      expect(clonedAnimation.frameCount).to.equal(orignalAnimation.frameCount);
-      expect(clonedAnimation.frameDelay).to.equal(orignalAnimation.frameDelay);
-      expect(clonedAnimation.looping).to.equal(orignalAnimation.looping);
-      expect(clonedAnimation.sourceUrl).to.equal(orignalAnimation.sourceUrl);
+      expect(clonedAnimation.name).to.not.equal(originalAnimation.name);
+      expect(clonedAnimation.frameSize).to.equal(originalAnimation.frameSize);
+      expect(clonedAnimation.frameCount).to.equal(originalAnimation.frameCount);
+      expect(clonedAnimation.frameDelay).to.equal(originalAnimation.frameDelay);
+      expect(clonedAnimation.looping).to.equal(originalAnimation.looping);
+      expect(clonedAnimation.sourceUrl).to.equal(originalAnimation.sourceUrl);
+      expect(clonedAnimation.version).to.equal(originalAnimation.version);
     });
 
     it('cloning an animation twice creates two animations with unique names', function () {
