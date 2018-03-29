@@ -163,6 +163,7 @@ bonus 'courseD_maze_until_challenge1_2018'
 bonus 'courseD_farmer_until_challenge2_2018'
 
 stage 'Conditionals & Loops in Farmer'
+level 'harvester_skinOverview_video'
 level 'courseD_farmer_condLoops1_2018'
 level 'courseD_farmer_condLoops2_2018'
 level 'courseD_farmer_condLoops3_2018'
