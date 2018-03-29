@@ -710,8 +710,6 @@ var projects = module.exports = {
       return Promise.resolve();
     }
 
-    $('.project_updated_at').text(msg.saving());
-
     /**
      * Gets project source from code studio and writes it to the Channels API.
      * @returns {Promise} A Promise containing the new project data, which
