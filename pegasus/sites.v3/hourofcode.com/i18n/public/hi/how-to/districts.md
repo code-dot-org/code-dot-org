@@ -9,7 +9,7 @@ nav: how_to_nav
 
 ## Get every school participating, every student learning!
 
-1. **बरती स्थानीय स्कूल.**Share<ahref="%=resolve_url('/promote/resources#sample-emails') %">यह ईमेल</a>और [शिक्षक कैसे मार्गदर्शन करें](<%= resolve_url('/how-to') %>), या शामिल करें[कम ब्लॉन्ग](<%= resolve_url('/promote/stats') %>)समाचार में/जिला संचार.
+1. **बरती स्थानीय स्कूल.**Share<a href="%=resolve_url('/promote/resources#sample-emails') %">यह ईमेल</a>और [शिक्षक कैसे मार्गदर्शन करें](<%= resolve_url('/how-to') %>), या शामिल करें[कम ब्लॉन्ग](<%= resolve_url('/promote/stats') %>)समाचार में/जिला संचार.
 
 2. **Provide a sample logistics plan for schools.** Share this [sample logistics plan](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
 

@@ -110,7 +110,7 @@ nav: how_to_nav
 
 ## دیگر وسائل کوڈ وسائل کے لئے وسائل
 
-- چیک کریں <href="http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for- unsuccessful-educators-51273466"> ماضی کے کوڈ منتظمین سے بہترین طریقوں </a>.
+- چیک کریں <a href="http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for- unsuccessful-educators-51273466"> ماضی کے کوڈ منتظمین سے بہترین طریقوں </a>.
 - ہمارے [ قیامت کے کوڈ کے لئے رہنما کے رہنمائی ](https://youtu.be/EJeMeSW2-Mw) کی ریکارڈنگ دیکھیں.
 - دیگر منتظمین سے مشورہ، بصیرت اور تعاون حاصل کرنے کیلئے [ قیامت کا کوڈ فورم ](http://forum.code.org/c/plc/hour-of-code) ملاحظہ کریں. <% if @country == 'us' %>
 - [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔. <% end %>
