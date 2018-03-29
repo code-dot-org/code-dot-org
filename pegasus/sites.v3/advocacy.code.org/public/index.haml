@@ -11,6 +11,8 @@ social:
 video_player: false
 ---
 
+%link{:href=>"/css/advocacy.css", :rel=>"stylesheet"}
+
 #homepage
 
   #fullwidth{style: "position: relative"}
@@ -18,12 +20,12 @@ video_player: false
 
     .banner{style: "background-image: url(/images/advocacy-banner.jpg); height: 400px; background-repeat: no-repeat; background-size: cover; background-position: 50% 40%; color: white; text-align: center; xposition: absolute; top: 0; width: 100%; z-index: -5"}
       .container_responsive{style: "padding-top: 70px"}
-        %h1 Advocate for computer science education
+        %h1{style: "color: white"} Advocate for computer science education
         Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system.
 
         %div{style: "padding-top: 80px"}
           %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf")}
-            %button{style: "background-color: initial"}
+            %button{style: "background-color: initial; border-color: white; border-width: 2px"}
               Learn more
 
       .clear{style: "clear:both"}
@@ -34,7 +36,7 @@ video_player: false
 
     -state ||= nil
     %link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
-    = view :interactive_map, use_url: false, fill_color: '#00484F'
+    = view :interactive_map, use_url: false, advocacy_variation: true
 
     .clear{style: "clear:both"}
 
