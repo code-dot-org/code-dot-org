@@ -156,13 +156,20 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     validate_summary(school, school_year, "NO")
   end
 
-  test "conflicting overrides result in maybe" do
+  test "Latest override is used when there are many" do
     school_year = 2020
     school = create :census_school,
       :with_census_override_no,
-      :with_census_override_yes,
+      :with_census_override_maybe,
       school_year: school_year
-    validate_summary(school, school_year, "MAYBE")
+    # create another override separately to make sure it has a later created_at
+    create :census_override,
+      school: school,
+      school_year: school_year,
+      teaches_cs: 'HISTORICAL_YES',
+      created_at: school.created_at + 1.minute
+
+    validate_summary(school, school_year, "HISTORICAL_YES")
   end
 
   test "AP data overrides surveys, state data, and previous years" do
