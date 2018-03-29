@@ -954,22 +954,16 @@ var projects = module.exports = {
       return;
     }
 
-    this.sourceHandler.getAnimationList(animations => {
-      this.sourceHandler.getLevelSource().then(response => {
-        const source = response;
-        const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const newSources = {source, html, animations, makerAPIsEnabled};
-        if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-          hasProjectChanged = false;
-          callCallback();
-          return;
-        }
+    this.getUpdatedSourceAndHtml_(newSources => {
+      if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+        hasProjectChanged = false;
+        callCallback();
+        return;
+      }
 
-        this.saveSourceAndHtml_(newSources, () => {
-          hasProjectChanged = false;
-          callCallback();
-        });
+      this.saveSourceAndHtml_(newSources, () => {
+        hasProjectChanged = false;
+        callCallback();
       });
     });
   },
