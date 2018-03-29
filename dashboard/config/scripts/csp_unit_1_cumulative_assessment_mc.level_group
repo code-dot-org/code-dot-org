@@ -3,7 +3,6 @@ title 'CS Principles Unit 1 Assessment MC'
 submittable 'true'
 anonymous 'false'
 
-#chapter 1
 page
 level 'CSPFinal_Question_7'
 level 'CSPFinal_Question_9'
@@ -16,7 +15,6 @@ level 'CSP Unit 1 Ch 1 MC bits to make 512'
 level 'CSP Unit 1 Ch 1 MC binary def'
 level 'CSP Unit 1 Ch 1 MC binary to dec simple'
 
-#chapter 2
 page
 level 'CSPFinal_Question_23'
 level 'CSPFinal_Question_12'

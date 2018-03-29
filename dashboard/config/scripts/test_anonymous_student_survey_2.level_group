@@ -3,9 +3,9 @@ submittable 'true'
 anonymous 'true'
 
 page
-level 'test anonymous student survey fun'           # Multi
-level 'test_anonymous_student_survey_why_class'     # FreeResponse
+level 'test anonymous student survey fun'
+level 'test_anonymous_student_survey_why_class'
 
 page
-level 'test anonymous student survey educational'   # Multi
-level 'test_anonymous_student_survey_next_class'    # FreeResponse
+level 'test anonymous student survey educational'
+level 'test_anonymous_student_survey_next_class'

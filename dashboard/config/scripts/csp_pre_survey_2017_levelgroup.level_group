@@ -15,7 +15,7 @@ level 'csp-pre-survey-2017-q7'
 level 'csp-pre-survey-2017-q8'
 level 'csp-pre-survey-2017-q9'
 
-page 
+page
 text 'csp-pre-survey-2017 preamble 2 cs in general'
 level 'csp-pre-survey-2017-q10'
 level 'csp-pre-survey-2017-q11'
@@ -38,7 +38,6 @@ level 'csp-pre-survey-2017-q23'
 level 'csp-pre-survey-2017-q24'
 level 'csp-pre-survey-2017-q25'
 level 'csp-pre-survey-2017-q26'
-
 level 'csp-pre-survey-2017-q35'
 text 'csp-pre-survey-2017-q36-preamble'
 level 'csp-pre-survey-2017-q36-a'
@@ -56,11 +55,9 @@ level 'csp-pre-survey-2017-q34'
 level 'csp-pre-survey-2017-q32'
 level 'csp-pre-survey-2017-q33'
 
-
 page
 text 'csp-pre-survey-2017 preamble 5 demographics'
 level 'csp-pre-survey-2017-q37'
 level 'csp-pre-survey-2017-q38'
 level 'csp-pre-survey-2017-q39'
 level 'csp-pre-survey-2017-q40'
-
