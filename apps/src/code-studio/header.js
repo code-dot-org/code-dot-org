@@ -184,6 +184,7 @@ function shareProject() {
           shareUrl={shareUrl}
           thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
+          canPrint={appType === "artist"}
           canPublish={canPublish}
           isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
