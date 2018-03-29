@@ -38,10 +38,11 @@ class Census::StateCsOffering < ApplicationRecord
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
     when 'NC'
-      # school code in the spreadsheet from North Carolina is prefixed with the district code
-      # but our schools data imported from NCES does not
+      # School code in the spreadsheet from North Carolina is prefixed with the district code
+      # but our schools data imported from NCES is not.
       district_code = row_hash['NC LEA Code']
       school_code = row_hash['NC School Code']
+      # Remove district code prefix from school code.
       school_code.slice!(district_code)
       School.construct_state_school_id('NC', district_code, school_code)
     when 'SC'
