@@ -196,39 +196,19 @@ class Census::CensusSummary < ApplicationRecord
   end
 
   def self.summarize_override_data(overrides, school_year, audit)
-    counts = {
-      YES: 0,
-      NO: 0,
-      MAYBE: 0,
-      HISTORICAL_YES: 0,
-      HISTORICAL_NO: 0,
-      HISTORICAL_MAYBE: 0,
-      nil => 0,
-    }
     audit[:overrides] = {
       records: [],
-      counts: nil,
     }
-
-    overrides.select {|o| o.school_year == school_year}.each do |o|
-      audit[:overrides][:records].push({id: o.id, teaches_cs: o.teaches_cs})
-      counts[o.teaches_cs.try(:to_sym)] += 1
-    end
-
-    audit[:overrides][:counts] = counts
 
     overrides_summary = {
       should_override: false,
       override_value: nil,
     }
 
-    override_values = counts.select {|_, v| v > 0}.map {|k, _| k}
-    if override_values.length == 1
-      overrides_summary[:override_value] = override_values.first.try(:to_s)
+    overrides.order(:created_at).select {|o| o.school_year == school_year}.each do |o|
+      audit[:overrides][:records].push({id: o.id, teaches_cs: o.teaches_cs})
       overrides_summary[:should_override] = true
-    elsif override_values.length > 1
-      overrides_summary[:override_value] = 'MAYBE'
-      overrides_summary[:should_override] = true
+      overrides_summary[:override_value] = o.teaches_cs
     end
 
     return overrides_summary
