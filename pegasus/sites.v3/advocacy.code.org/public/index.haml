@@ -11,6 +11,8 @@ social:
 video_player: false
 ---
 
+-# Put advocacy.css after other CSS files so that it can override them.
+%link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
 %link{:href=>"/css/advocacy.css", :rel=>"stylesheet"}
 
 #homepage
@@ -35,7 +37,6 @@ video_player: false
   .container_responsive
 
     -state ||= nil
-    %link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
     = view :interactive_map, use_url: false, advocacy_variation: true
 
     .clear{style: "clear:both"}

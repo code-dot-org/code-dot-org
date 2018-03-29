@@ -5,3 +5,17 @@
 .greybox ul li:before {
   color: #666;
 }
+
+.info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
+  color: #888;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.fact.subfact {
+  color: #777;
+}
+
+.fact > a {
+  color: #777;
+}
