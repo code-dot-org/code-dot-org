@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](<%= resolve_url('/promote/press-kit') %>) for help.
 
 ## 2. During your event
@@ -33,29 +33,29 @@ nav: how_to_nav
 
 ## Host a Family Code Night with the Hour of Code and invite parents to participate
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+رسیدگی به میزبانی رویداد شبانه K-5 و دعوت از والدین برای پیوستن به دانش آموزان خود برای یک ساعت از علوم رایانه ای. این یک راه عالی برای درگیر شدن با جامعه بزرگتر است و حمایت والدین از دانش کامپیوتر در مدرسه شما را تشویق می کند. شرکای ما در خانواده برنامه امشب یک رویداد همه جانبه با چک لیست برنامه ریزی، خط ارائه دهنده، ایمیل دعوت نامه، پوستر، پاورپوینت و موارد دیگر برای ایجاد رویداد خود ایجاد کرده است. [برای دانلود مجموعه رویداد اینجا را کلیک کنید](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 ## نمونه طرح رویداد
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**رویداد**هفته آموزش ابتدایی در زمینه علوم کامپیوتر در سراسر مدارس
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**زمان**طی روز مدرسه رویداد اواسط صبح ترجیح داده شد تقریبا 1 ساعت.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**مکان**سالن اجتماعات مدرسه (مثلا تئاتر، ورزشگاه، کافه تریا)   
   
 
 
 ## اجرای نمایش
 
-| Time             | Action                                                                                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                       |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.            |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                              |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                |
+| زمان                      | اقدامات                                                                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 تا 10:05 قیل از ظهر | باز با یکی از ما [فیلم های الهام بخش](<%= resolve_url('/promote/resources#videos') %>)                                                             |
+| 10:05 تا 10:15 قبل از ظهر | سرپرست مقدمه ای را برای بررسی اهمیت علم کامپیوتر می آموزد. از اینها استفاده کنید [آمارو اطلاعات گرافیک](<%= resolve_url('/promote/stats') %>).     |
+| 10:15 تا 10:30 قبل از ظهر | مهمان ویژه در زمینه پیش زمینه و نحوه استفاده از تکنولوژی و علوم رایانه در زندگی روزمره آنها صحبت می کند.                                         |
+| 10:30 تا 10:40 قبل از ظهر | دانش آموزان یک ساعت از نسخه نمایشی برنامه برای مدرسه را انجام می دهند. پیچ و تاب و سرگرم کننده: آنها را به مدرس، سیاستمدار، یا دانش آموزان دیگر! |
+| 10:40 تا 11:00 قیل از ظهر | دانش آموزان یک فعالیت بی نظیر را نشان می دهند که چگونه می توان بدون استفاده از رایانه علوم کامپیوتر را آموزش داد.                                |
+| 11:00 تا 11:05 قیل از ظهر | معلم که کمک کرده برای رساندن مدرسه به ای رویداد بزرگبه حرفهای خود خاتمه میدهد.                                                                   |
 
 <%= view :signup_button %>

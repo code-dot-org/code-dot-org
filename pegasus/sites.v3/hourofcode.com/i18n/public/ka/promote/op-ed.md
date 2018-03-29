@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-კომპიუტერულ მეცნიერებაზე სპეციფიკური ინფორმაციის მისაღებად ეწვიეთ [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>)-ს.
+Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
 
 **სათაური: პროგრამირება... სამუშაო ადგილები იქმნება აქ**
 

@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe technologie werkt en hoe softwaretoepassingen kunt maken. Zet deze reis voort:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Woon](%= resolve_url('https://code.org/professional-development-workshops') %) een 1-dag in-persoon workshop bij, om instructie te krijgen over programmeren van een ervaren programmeur. (Alleen VS leraren)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

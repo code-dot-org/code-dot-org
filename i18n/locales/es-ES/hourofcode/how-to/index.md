@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Cómo enseñar una Hora de Código</h1>
 
-Únete al movimiento e introduce a un grupo de estudiantes a su primera hora de Informática con estos pasos. ¡La hora del código es fácil de ejecutar - incluso para los principiantes! Si desea un juego extra de manos para ayudar, usted puede encontrar un [ voluntario local](%= resolve_url('https://code.org/volunteer/local') %) para ayudar a ejecutar un hora de código en la clase.
+Únete al movimiento e introduce a un grupo de estudiantes a su primera hora de Informática con estos pasos. ¡La hora del código es fácil de ejecutar - incluso para los principiantes! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Mira este vídeo explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ Proporcione auriculares para su clase, o pida a los estudiantes que traign los s
 
 ## 5. Comienza tu Hora del Código con un orador o video inspirador
 
-**Invita a un[voluntario local](%= resolve_url('https://code.org/volunteer/local') %) para motivar a tus estudiantes, hablándoles sobre la amplitud de posibilidades de la Informática.** ¡Hay miles de voluntarios en todo el mundo listos para ayudar con tu Hora del Código haciendo una visita a la clase o a través de un video chat con tus estudiantes!
+**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Muestre un video inspirador:**
 
 - El video original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh. (Existen versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Encuentre más [recursos](%= resolve_url('https://code.org/inspire') %) y [vídeos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)motivadores.
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **No hay problema si usted y sus estudiantes son nuevos en Informática. Aquí tiene algunas ideas para presentar su actividad de Hora de Código:**
 
 - Explica algunas formas en las que la tecnología hace impacto en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (hable acerca de las tecnologías que salvan vidas, que ayudan apersonas, que las conecta, etc.).
 - Como clase, liste cosas que usan programación en la vida cotidiana.
-- Mira consejos para que las niñas se interesen por la informática [aquí](%= resolve_url('https://code.org/girls')%).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
 
 ## 6. ¡A Programar!
 
@@ -79,7 +79,7 @@ Proporcione auriculares para su clase, o pida a los estudiantes que traign los s
 
 [/col-33]
 
-- [Imprime certificados](%= resolve_url('https://code.org/certificates')%) para tus estudiantes.
+- [Print certificates](%= codeorg_url('/certificates')%) for your students.
 - [Imprima pegatinas de "Hice una Hora de Código!"](%= resolve_url('/promote/resources#stickers') %) para sus estudiantes.
 - [Pida camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para su escuela.
 - Comparta fotos y vídeos del evento de la Hora del Código en las redes sociales. ¡Utilice #HourOfCode y @codeorg para que también podamos resaltar su éxito!
@@ -101,7 +101,7 @@ Proporcione auriculares para su clase, o pida a los estudiantes que traign los s
 
 La Hora del Código es sólo el primer paso de un viaje para aprender más de cómo funciona la tecnología y cómo crear aplicaciones de software. Para continuar este viaje:
 
-- Anima a los estudiantes a seguir [aprendiendo online](%= resolve_url('https://code.org/learn/beyond')%).
-- [Asista a](%= resolve_url('https://code.org/professional-development-workshops') %) un taller presencial de 1 día, para recibir entrenamiento por un facilitador experimentado en Ciencias de la Computación. (Sólo para educadores de Estados Unidos)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

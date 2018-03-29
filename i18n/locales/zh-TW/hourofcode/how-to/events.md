@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. 準備你的活動
 
 - 決定場地、日期、與時間。
-- 寄 [一封信](<%= hoc_uri('https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit') %>) 邀請當地的市長、議員、政府長官、或有影響力的生意人等給與演說。 請查看我們的 [ how-to 工具組 ](%=resolve_url('/files/elected-official.pdf')%), 在一個小時的代碼中託管一個民選官員以瞭解更多資訊。
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
 - 邀請新聞媒體等，例如地方新聞台、報紙、教育與科技部落客。請參考我們的 [新聞稿](%= resolve_url('/promote/press-kit') %) 。
 
 ## 2) 活動進行時
@@ -39,7 +39,7 @@ nav: how_to_nav
 
 **活動:**開始學校內的電腦科學教育週集會
 
-**日期：** 12. 05 （計算機科學教育週的開始）
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **時間:**上學日的某天，活動首選上午，約1小時。
 
