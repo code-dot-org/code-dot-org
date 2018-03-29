@@ -27,18 +27,6 @@
 }
 
 .grey_input {
-  background-color: rgb(226,228,227);
-  color: rgb(82, 82, 82);
-  border: 1px solid rgb(146,147,148);
-}
-
-.dropdown {
-  background-color: rgb(226,228,227);
-  color: rgb(82, 82, 82);
-  border: 1px solid rgb(146,147,148);
-}
-
-.grey_input {
   width: 160px;
   height: 34px;
   margin-bottom: 10px;
@@ -50,10 +38,6 @@
   background-color: #e2e4e3;
   color: #595959;
   margin-bottom: 10px;
-}
-
-#petition_form .petition_help_text {
-  color: rgb(91,103,112);
 }
 
 #gobutton {

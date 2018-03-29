@@ -12,7 +12,9 @@
     %strong.figure
       =format_integer_with_commas(data[:cs_jobs_i])
     open computing jobs
-
+-unless data[:growth_vs_average_f] < 0.0
+  %p.fact{style: "color: #ddd;"}
+    (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
 %p.fact
   -unless data[:cs_graduates] == 0
     %strong.figure
@@ -89,9 +91,15 @@
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
   %div.download-fact-sheet
-    %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
+    %a{:href=>CDO.code_org_url("/advocacy/state-facts/#{state}.pdf"), target: '_blank'}
       %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<
         View #{statename} fact-sheet
+
+- if ! state.nil_or_empty?
+  %div.take-action
+    %a{:href=>CDO.advocacy_url('/action')}
+      %button{style: 'height:40px; padding-left: 20px; padding-right: 20px; margin-bottom: 20px'}<
+        Take action in your state
 
 -if data[:text_t]
   %p
