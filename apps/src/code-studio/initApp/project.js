@@ -482,7 +482,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function (event, callback) {
-          this.save().then(callback);
+          this.saveIfSourcesChanged().then(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -698,6 +698,28 @@ var projects = module.exports = {
    */
   clearHtml() {
     currentSources.html = '';
+  },
+  /**
+   * Saves the project only if the sources {source, html, animations,
+   * makerAPIsEnabled} have changed.
+   * @returns {Promise} A promise containing the project data if the project
+   * was saved, otherwise returns a promise which resolves with no arguments.
+   */
+  saveIfSourcesChanged() {
+    if (!isEditable()) {
+      return Promise.resolve();
+    }
+
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(newSources => {
+        const sourcesChanged = (JSON.stringify(currentSources) !== JSON.stringify(newSources));
+        if (sourcesChanged) {
+          this.saveSourceAndHtml_(newSources, resolve);
+        } else {
+          resolve();
+        }
+      });
+    });
   },
   /**
    * Saves the project to the Channels API.
