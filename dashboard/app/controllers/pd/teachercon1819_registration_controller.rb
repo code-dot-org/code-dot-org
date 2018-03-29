@@ -103,7 +103,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
   end
 
   def lead_facilitator
-    unless current_user.facilitator?
+    unless current_user.try(:facilitator?)
       render :unauthorized
       return
     end

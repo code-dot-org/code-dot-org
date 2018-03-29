@@ -12,7 +12,7 @@
     - info_link = "code.org/educate/teachercon/#{@registration.sanitize_form_data_hash[:city].downcase}"
     = link_to(info_link, "https://#{info_link}")
     for more information.
-- if @registration.declined?
+- else
   %p
     We noticed you responded that you are not able to attend Teachercon this year.
     Please contact
