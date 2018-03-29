@@ -95,6 +95,13 @@
       %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<
         View #{statename} fact-sheet
 
+- if request.site == "advocacy.code.org"
+  - if ! state.nil_or_empty?
+    %div.take-action
+      %a{:href=>CDO.advocacy_url('/action')}
+        %button{style: 'height:40px; padding-left: 20px; padding-right: 20px; margin-bottom: 20px'}<
+          Take action in your state
+
 -if data[:text_t]
   %p
     =data[:text_t]
