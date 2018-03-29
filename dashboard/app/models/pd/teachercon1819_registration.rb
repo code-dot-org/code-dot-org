@@ -33,6 +33,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   after_create :update_application_status
   def update_application_status
+    return unless pd_application
+
     if waitlisted?
       pd_application.update!(status: "waitlisted")
     elsif declined?
@@ -48,7 +50,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       return unless pd_application.try(:workshop) && pd_application.workshop.teachercon?
       Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
     else
-      Pd::Teachercon1819Registrationmailer.facilitator(self).deliver_now
+      Pd::Teachercon1819RegistrationMailer.facilitator(self).deliver_now
     end
   end
 
