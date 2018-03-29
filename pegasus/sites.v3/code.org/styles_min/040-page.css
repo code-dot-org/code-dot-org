@@ -156,10 +156,11 @@ td {
 }
 
 #petition_form a:link, #petition_form a:visited {
-  color: rgb(91,103,112);
+  color: #dcdcdc;
   text-decoration: none;
 }
 #petition_form a:hover, #petition_form a:active {
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -170,11 +171,7 @@ td {
 }
 
 .greybox {
-  background-color: #fff; color: #666; border: 1px solid #888; padding: 20px; text-align: center; overflow:hidden
-}
-
-.greybox ul li:before {
-  color: #666;
+  background-color: rgb(88, 103, 113); color: white; padding: 20px; text-align: center; overflow:hidden;
 }
 
 #about_nav {

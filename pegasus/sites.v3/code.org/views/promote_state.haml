@@ -24,7 +24,7 @@
 %p.fact
   = precede "Policy Environment (" do
     = succeed "):" do
-      %a{href: 'http://bit.ly/9policiesrubric', style: 'cursor: pointer;', target: '_blank'} rubric
+      %a{href: 'http://bit.ly/9policiesrubric', style: 'color: white; cursor: pointer;', target: '_blank'} rubric
 
 %div.fact{style: "margin-left: 20px;"}
   - if data[:pd_funding_s] == "No"
@@ -91,15 +91,9 @@
 
 -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
   %div.download-fact-sheet
-    %a{:href=>CDO.code_org_url("/advocacy/state-facts/#{state}.pdf"), target: '_blank'}
+    %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
       %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<
         View #{statename} fact-sheet
-
-- if ! state.nil_or_empty?
-  %div.take-action
-    %a{:href=>CDO.advocacy_url('/action')}
-      %button{style: 'height:40px; padding-left: 20px; padding-right: 20px; margin-bottom: 20px'}<
-        Take action in your state
 
 -if data[:text_t]
   %p

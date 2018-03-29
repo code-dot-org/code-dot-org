@@ -3,6 +3,8 @@
 
 - require 'state_abbr'
 
+- fill_color ||= '#3E484F'
+
 #state-list.phone-feature
   %h2 Choose a State
   %form
@@ -11,7 +13,7 @@
       -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
         %option{value:abbr}= state
 
-%h2.tablet-feature Choose a state
+%h2.tablet-feature Choose your state
 #map.tablet-feature
 #infobox.greybox.col-33
   %p.info
@@ -106,8 +108,8 @@
 
       // Map styling
       stateHoverAnimation: 0,
-      stateStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
-      labelBackingStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
+      stateStyles: {fill: '#0094ca', stroke: '#white'},
+      labelBackingStyles: {fill: '#0094ca', stroke: '#white'},
       labelBackingHoverStyles: {fill: '#DCDF8A'},
       stateHoverStyles: {fill: '#DCDF8A'},
       stateClickStyles: {fill: '#B9BF15', persistent: false}
