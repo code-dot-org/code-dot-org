@@ -38,10 +38,6 @@ const styles = {
   resourceStyle: {
     margin: 8
   },
-  linkFrame: {
-    width: '98%',
-    height: '94%'
-  },
   centeredDialog: {
     top: '50%',
     left: '50%',
@@ -83,6 +79,7 @@ class ResourceLink extends React.Component {
 
     const dialogStyle = {height: dialogHeight, width: dialogWidth,
       marginTop: (dialogHeight / -2) + 'px', marginLeft: (dialogWidth / -2) + 'px'};
+    const frameStyle = {height: dialogHeight-10, width: dialogWidth};
 
     return (
       <div>
@@ -102,8 +99,9 @@ class ResourceLink extends React.Component {
           isOpen={this.state.dialogSelected}
           handleClose={this.closeResource}
           style={{...styles.centeredDialog, ...dialogStyle}}
+          useUpdatedStyles
         >
-          <iframe style={styles.linkFrame} src={reference}/>
+          <iframe style={frameStyle} src={reference}/>
         </BaseDialog>
       </div>
     );
