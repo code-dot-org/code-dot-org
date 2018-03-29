@@ -273,16 +273,21 @@ class BucketHelper
 
     version_restored = false
 
-    begin
-      response = s3.copy_object(
-        bucket: @bucket,
-        key: key,
-        copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
-      )
-      version_restored = true
-    rescue Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument => err
-      raise err unless err.is_a?(Aws::S3::Errors::NoSuchVersion) || invalid_version_id?(err)
+    unless version_id.nil? || version_id.empty?
+      begin
+        response = s3.copy_object(
+          bucket: @bucket,
+          key: key,
+          copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
+        )
+        version_restored = true
+      rescue Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument => err
+        raise err unless err.is_a?(Aws::S3::Errors::NoSuchVersion) || invalid_version_id?(err)
+      end
+    end
 
+    # Try restoring the latest version
+    unless version_restored
       if object_exists?(key)
         response = s3.copy_object(
           bucket: @bucket,
