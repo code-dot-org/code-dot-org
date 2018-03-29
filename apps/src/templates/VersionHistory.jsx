@@ -3,6 +3,7 @@ import React, {PropTypes} from 'react';
 var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
 var filesApi = require('../clientApi').files;
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * A component for viewing project version history.
@@ -86,6 +87,22 @@ var VersionHistory = React.createClass({
 
   onClearPuzzle: function () {
     this.setState({showSpinner: true});
+    firehoseClient.putRecord(
+      {
+        study: 'project-data-integrity',
+        study_group: 'v2',
+        event: 'clear-puzzle',
+        project_id: dashboard.project.getCurrentId(),
+        data_json: JSON.stringify({
+          isOwner: dashboard.project.isOwner(),
+          currentUrl: window.location.href,
+          shareUrl: dashboard.project.getShareUrl(),
+          currentSourceVersionId: dashboard.project.getCurrentSourceVersionId(),
+        }),
+      },
+      {includeUserId: true}
+    );
+
     this.props.handleClearPuzzle()
       .then(() => dashboard.project.save(true))
       .then(() => location.reload());
