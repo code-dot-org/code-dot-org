@@ -1,0 +1,27 @@
+targets:
+  - name:      redshift-reporting
+    type:      
+    database:  
+    host:      
+    port:      
+    username:  
+    password:  
+steps:
+  - name: regional-partner-step-1
+    queries:
+      - name: 	workshop-attendance
+        file:  ./code-dot-org/aws/redshift/tables/quarterly_workshop_attendance.sql
+      - name:  student-activity
+        file:  ./code-dot-org/aws/redshift/tables/student_activity.sql
+      - name:  teacher-most-progress
+        file:  ./code-dot-org/aws/redshift/tables/teacher_most_progress.sql
+  - name: regional-partner-step-2
+    queries:
+      - name: regional-partner-stats
+        file: ./code-dot-org/aws/redshift/tables/regional_partner_stats.sql
+  - name: school-and-state-stats
+    queries:
+      - name:  city-year-stats
+        file:  ./code-dot-org/aws/redshift/tables/outreach_stats_by_year.sql
+      - name:  school-level-stats
+        file:  ./code-dot-org/aws/redshift/tables/school_activity_stats.sql
