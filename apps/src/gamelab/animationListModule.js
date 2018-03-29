@@ -439,7 +439,7 @@ export function cloneAnimation(key) {
       key: newAnimationKey,
       props: Object.assign({}, sourceAnimation, {
         name: generateAnimationName(sourceAnimation.name + '_copy', animationList.propsByKey),
-        version: null,
+        version: sourceAnimation.version,
         saved: false
       })
     });
