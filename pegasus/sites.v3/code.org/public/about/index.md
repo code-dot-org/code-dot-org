@@ -34,9 +34,9 @@ Code.org&reg; is a nonprofit dedicated to expanding access to computer science i
 
 <img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" class ="col-95">
 
-Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. In Code.org classrooms, girls and underrepresented minorities together comprise a majority of students, just as they do in the population at large.
+Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. 
 
-Increasing diversity in computer science is foundational to our work, and <a href="/diversity">we encourage you to read more about our efforts</a>.
+For the second year in a row, underrepresented minorities make up 48% of students in our courses. Increasing diversity in computer science is foundational to our work, and <a href="/diversity">we encourage you to read more about our efforts</a>. 
 
 <br />
 
@@ -62,7 +62,7 @@ See all past [news and announcements](/about/news).
 
 | Code.org Goal | Accomplishment                                                                                                                                                                                                                                                                                                    |
 |------| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Improve diversity in CS | In our online courses, 45% of students are girls and 48% are underrepresented minorities. In our high school classrooms, 37% are girls, and 56% African American or Hispanic.                                                                                                                                     |
+| Improve diversity in CS | 45% of Code.org students are girls, 48% are underrepresented minorities, and 49% of US students are on free and reduced meals. Read more about [our approach to diversity](/diversity).                                                                                                                           |
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female)                                                                                                                                                                      |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org).                                                                                                                                                                                                                    |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled.                                                                    |
