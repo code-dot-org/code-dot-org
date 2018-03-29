@@ -163,7 +163,8 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['partner@code.org'], mail.to
+    assert_equal ['nimisha@code.org'], mail.to
+    assert_equal ['jenna@code.org'], mail.cc
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
     assert_equal ['tanya_parker@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
@@ -173,7 +174,8 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal ['partner@code.org'], mail.to
+    assert_equal ['nimisha@code.org'], mail.to
+    assert_equal ['jenna@code.org'], mail.cc
     assert_equal 'A school administrator wants to connect with Code.org', mail.subject
     assert_equal ['tanya_parker@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
