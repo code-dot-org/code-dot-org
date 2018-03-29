@@ -260,12 +260,12 @@ getWidth()
   {func: 'setRotationSpeedEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['speed'], params: ["5"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setRotationSpeedEach' },
   {func: 'setScaleEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['scale'], params: ["5"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setScaleEach' },
   {func: 'setSpeedAndDirectionEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['speed','angle'], params: ["1", "90"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setSpeedAndDirectionEach' },
+  {func: 'setTintEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['color'], params: ['"blue"'], dropdown: { 0: ['"red"', '"green"', '"blue"', '"yellow"', 'rgb(255, 0, 0)', 'rgb(255, 0, 0, 0.5)'] }, tipPrefix: groupMethodPrefix, modeOptionName: '*.setTintEach' },
   {func: 'setVelocityEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['x','y'], params: ["1", "1"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVelocityEach' },
   {func: 'setVelocityXEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['velocityX'], params: ["3"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVelocityXEach' },
   {func: 'setVelocityYEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['velocityY'], params: ["3"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVelocityYEach' },
   {func: 'setVisibleEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['bool'], params: ["false"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setVisibleEach' },
   {func: 'setWidthEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['width'], params: ["50"], tipPrefix: groupMethodPrefix, modeOptionName: '*.setWidthEach' },
-  {func: 'setTintEach', blockPrefix: groupBlockPrefix, category: 'Groups', paletteParams: ['color'], params: ['"blue"'], dropdown: { 0: ['"red"', '"green"', '"blue"', '"yellow"', 'rgb(255, 0, 0)', 'rgb(255, 0, 0, 0.5)'] }, tipPrefix: groupMethodPrefix, modeOptionName: '*.setTintEach' },
   {func: 'comment_Groups', block: '// Comment', expansion: '// ', category: 'Groups' },
 /* TODO: decide whether to expose these Group methods:
 draw() - USEFUL?
