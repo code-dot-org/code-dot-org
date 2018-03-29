@@ -11,6 +11,7 @@ import * as gamelabConstants from '../../gamelab/constants';
 import { hideShareDialog, unpublishProject } from './shareDialogRedux';
 import { showPublishDialog } from '../../templates/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/publishDialog/PublishDialog';
+import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 function select(event) {
@@ -18,6 +19,10 @@ function select(event) {
 }
 
 const styles = {
+  modal: {
+    width: 720,
+    marginLeft: -360,
+  },
   abuseStyle: {
     border: '1px solid',
     borderRadius: 10,
@@ -115,6 +120,7 @@ class ShareAllowedDialog extends React.Component {
     thumbnailUrl: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
+    canPrint: PropTypes.bool,
     canPublish: PropTypes.bool.isRequired,
     isPublished: PropTypes.bool.isRequired,
     isUnpublishPending: PropTypes.bool.isRequired,
@@ -163,6 +169,11 @@ class ShareAllowedDialog extends React.Component {
       showAdvancedOptions: false,
     });
     event.preventDefault();
+  };
+
+  print = event => {
+    event.preventDefault();
+    createHiddenPrintWindow(this.props.thumbnailUrl);
   };
 
   showAdvancedOptions = () => {
@@ -234,11 +245,11 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {canPublish, isPublished, userSharingDisabled, appType} = this.props;
+    const {canPrint, canPublish, isPublished, userSharingDisabled, appType} = this.props;
     return (
       <div>
         <BaseDialog
-          useDeprecatedGlobalStyles
+          style={styles.modal}
           isOpen={this.props.isOpen}
           handleClose={this.close}
           hideBackdrop={this.props.hideBackdrop}
@@ -295,7 +306,7 @@ class ShareAllowedDialog extends React.Component {
                       onClick={select}
                       readOnly="true"
                       value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 325}}
+                      style={{cursor: 'copy', width: 500}}
                     />
                   </div>
                 </div>
@@ -325,6 +336,12 @@ class ShareAllowedDialog extends React.Component {
                     text={i18n.unpublish()}
                     className="no-mc"
                   />
+                  }
+                  {canPrint && hasThumbnail &&
+                    <a href="#" onClick={this.print}>
+                      <i className="fa fa-print" style={{fontSize: 26}} />
+                      <span>{i18n.print()}</span>
+                    </a>
                   }
                   {/* prevent buttons from overlapping when unpublish is pending */}
                   {this.props.canShareSocial && !this.props.isUnpublishPending &&
