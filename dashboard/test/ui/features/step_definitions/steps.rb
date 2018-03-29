@@ -138,6 +138,10 @@ When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do 
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 
+When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+  wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
+end
+
 def jquery_is_element_visible(selector)
   "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
@@ -961,8 +965,9 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
 
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
-    Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    Given I am on "http://studio.code.org/users/sign_up"
     And I wait to see "#user_name"
+    And I select the "Teacher" option in dropdown "user_user_type"
     And I wait to see "#schooldropdown-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
@@ -978,6 +983,44 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
+end
+
+And(/^I give user "([^"]*)" project validator permission$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::PROJECT_VALIDATOR
+  user.save!
+end
+
+Then(/^I remove featured projects from the gallery$/) do
+  require_rails_env
+  FeaturedProject.delete_all
+end
+
+Then(/^I make a playlab project named "([^"]*)"$/) do |name|
+  steps %Q{
+    Then I am on "http://studio.code.org/projects/playlab/new"
+    And I get redirected to "/projects/playlab/([^\/]*?)/edit" via "dashboard"
+    And I wait for the page to fully load
+    And element "#runButton" is visible
+    And element ".project_updated_at" eventually contains text "Saved"
+    And I click selector ".project_edit"
+    And I type "#{name}" into "input.project_name"
+    And I click selector ".project_save"
+    And I wait until element ".project_edit" is visible
+    Then I should see title "#{name} - Play Lab"
+    And I press "#runButton" using jQuery
+    And I wait until element ".project_updated_at" contains text "Saved"
+    And I wait until initial thumbnail capture is complete
+  }
+end
+
+Then(/^I publish the project$/) do
+  steps %Q{
+    Given I open the project share dialog
+    And the project is unpublished
+    When I publish the project from the share dialog
+  }
 end
 
 And(/^I save the section url$/) do
