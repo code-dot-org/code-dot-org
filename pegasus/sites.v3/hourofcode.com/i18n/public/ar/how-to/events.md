@@ -5,57 +5,57 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# كيف أقوم بتحرير نشاط وقت التعليمات البرمجية
 
-## 1. Prepare for your event
+## 1. التحضير للحدث الخاص بك
 
-- Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=resolve_url('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
+- بدلا من ذلك ، تقرر اليوم والوقت.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - دعوة وسائل الإعلام والصحفيين. أي محطة أخبار محلية، صحيفة، مدونين التعليم/التكنولوجيا. انظر الى مجموعة صحافتنا للحصول على مساعدة.
 
-## 2. During your event
+## 2-وخلال الحدث
 
-- Kick off your event with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](<%= resolve_url('/promote/stats') %>).   
+- نشاطك[الملهم كليب](<%= resolve_url('/promote/resources#videos') %>)بدء.
+- هذا[الإحصاءات والرسوم البيانية](<%= resolve_url('/promote/stats') %>)تقديم خطاب استهلالي يشير إلى اهميه علوم الحاسب الألى باستخدام.   
       
     
-- Other event ideas: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- أفكار الحدث الأخرى: 
+    - دعوه صاحب الشركة الذي يعمل مع علم الحاسوب في الميدان.
+    - دعوه سياسي محلي ونقول للطالب ان أقول لكم كيفيه ترميز الشخص الذي تدعوه.
+    - لإظهار نشاط لا يتطلب اتصال إنترنت ، حدد مجموعه من الطلاب.
+    - حدد مجموعه من الطلاب لإظهار مدير المدرسة أو مجموعه من المعلمين كيفيه القيام الترميز.
+    - إذا كانت مدرستك بالفعل يعلم علم الحاسوب ، وجعل المشاريع التجريبية للطلاب.
 
-## 3. Share how it went
+## 3. حصة كيف ذهب
 
-- شارك صور لحدثك على الفيسبوك و تويتر. 
-- Use the hashtag **#HourOfCode**
+- مشاركه الاحداث الخاصة بك علي ألفيس بوك وتويتر. 
+- **#HourOfCode**استخدام التسمية
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## المضيف ليله الاسره كودلويور الحدث مع رمز الوقت ، ودعوه الأسر للانضمام
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+لتنظيم الحدث المسائي K-5 وعائلاتهم. تخيل دعوتهم للانضمام إلى أطفالهم في صف علوم الحاسب الألى للمشاهدة. وهي طريقه رائعه لإدماج المجتمعات الأوسع في الاعمال التجارية ودعم أسرهم لدوره علوم الحاسب الألى في مدرستك. شركائنا قد خلقت مجموعه الحدث ، بما في ذلك جميع العائلات لتشغيل ليله النوم الحدث ، والتخطيط القائمة ، وملف الخادم ، ودعوه رسائل البريد الكتروني ، والملصقات ، وعروض باور بوينت وفعاليتها. [انقر هنا لتحميل مجموعه الاحداث.](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## Example Event Plan
+## نموذج خطه النشاط
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**نشاط**المدرسة العلوم الكمبيوتر علي نطاق الأسبوع التعليم بدء الاجتماع
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**ساعة** انه وقت المدرسة يفضل ان يكون في الصباح حوالي الساعة.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+** المكان: ** غرفه اجتماعات المدرسة (المسرح ، الجمنازيوم ، الكافتيريا)   
   
 
 
-## Run of Show
+## بدء العرض
 
-| Time             | Action                                                                                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](<%= resolve_url('/promote/resources#videos') %>)                                                       |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](<%= resolve_url('/promote/stats') %>). |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.            |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                              |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                |
+| Time             | نشاط                                                                                                                                      |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | [من أشرطه الفيديو الملهم لدينا](<%= resolve_url('/promote/resources#videos') %>)مع شخص                                                      |
+| 10:05 - 10:15 am | ويلقي مدير المدرسة خطابا افتتاحيا يشير إلى اهميه علم الحاسوب. هذا[الإحصاءات والرسوم البيانية](<%= resolve_url('/promote/stats') %>)استخدام. |
+| 10:15 - 10:30 am | المتكلم الضيف يجعل الحديث عن نفسه ، قليلا من التكنولوجيا وكيف علم الحاسوب ياخذ دورا هاما في حياتنا اليومية.                               |
+| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                 |
+| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                       |
+| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                         |
 
 <%= view :signup_button %>
