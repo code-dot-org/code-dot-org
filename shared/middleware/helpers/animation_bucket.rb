@@ -39,7 +39,7 @@ class AnimationBucket < BucketHelper
     # If the fallback is successful, let's notify Honeybadger, because we'd
     # like these to go down over time.
     Honeybadger.notify(
-      error_class: "#{self.class.name}Error",
+      error_class: "#{self.class.name}Warning",
       error_message: 'AnimationBucket served latest version instead of requested version',
       context: {
         s3_key: key,
