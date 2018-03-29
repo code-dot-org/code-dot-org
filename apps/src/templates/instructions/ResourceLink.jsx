@@ -1,10 +1,8 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
-import BaseDialog from '../BaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-
-const dialogRatio = 0.8;
+import LegacyDialog from '../../code-studio/LegacyDialog';
 
 const styles = {
   textLink: {
@@ -37,10 +35,6 @@ const styles = {
   },
   resourceStyle: {
     margin: 8
-  },
-  centeredDialog: {
-    top: '50%',
-    left: '50%',
   }
 };
 
@@ -57,15 +51,19 @@ class ResourceLink extends React.Component {
   };
 
   selectResource = () => {
-    this.setState({dialogSelected: true});
-  };
-
-  closeResource = () => {
-    this.setState({dialogSelected: false});
+    var dialog = new LegacyDialog({
+      body: $('<iframe>')
+        .addClass('markdown-instructions-container')
+        .width('100%')
+        .attr('src', this.props.reference),
+      autoResizeScrollableElement: '.markdown-instructions-container',
+      id: 'block-documentation-lightbox'
+    });
+    dialog.show();
   };
 
   render() {
-    const {icon, reference, text, highlight} = this.props;
+    const {icon, text, highlight} = this.props;
 
     const iconStyle = {
       ...styles.commonIcon,
@@ -73,13 +71,6 @@ class ResourceLink extends React.Component {
     const thumbnailStyle = {
       ...styles.commonThumbnail,
       ...(highlight && styles.mapThumbnail)};
-
-    const dialogHeight = $(window).height() * dialogRatio;
-    const dialogWidth = $(window).width() * dialogRatio;
-
-    const dialogStyle = {height: dialogHeight, width: dialogWidth,
-      marginTop: (dialogHeight / -2) + 'px', marginLeft: (dialogWidth / -2) + 'px'};
-    const frameStyle = {height: dialogHeight-10, width: dialogWidth};
 
     return (
       <div>
@@ -95,14 +86,6 @@ class ResourceLink extends React.Component {
             {text}
           </a>
         </div>
-        <BaseDialog
-          isOpen={this.state.dialogSelected}
-          handleClose={this.closeResource}
-          style={{...styles.centeredDialog, ...dialogStyle}}
-          useUpdatedStyles
-        >
-          <iframe style={frameStyle} src={reference}/>
-        </BaseDialog>
       </div>
     );
   }
