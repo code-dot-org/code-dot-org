@@ -242,8 +242,8 @@ theme: pdf
             teachers
           prepared to teach computer science in 2016.
 
-      %li
-        - if state_info[:principals_core_i] != 0
+      - if state_info[:principals_core_i] != 0
+        %li
           According a representative survey from Google/Gallup, school administrators in
           = state_info[:state_code_s]
           support expanding computer science education opportunities:
