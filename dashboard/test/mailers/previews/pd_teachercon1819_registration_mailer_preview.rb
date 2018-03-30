@@ -31,11 +31,11 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
   end
 
   def lead_facilitator_accepted
-    Pd::Teachercon1819RegistrationMailer.facilitator build_lead_facilitator_registration(:lead_facilitator_accepted)
+    Pd::Teachercon1819RegistrationMailer.lead_facilitator build_lead_facilitator_registration(:lead_facilitator_accepted)
   end
 
   def lead_facilitator_declined
-    Pd::Teachercon1819RegistrationMailer.facilitator build_lead_facilitator_registration(:lead_facilitator_declined)
+    Pd::Teachercon1819RegistrationMailer.lead_facilitator build_lead_facilitator_registration(:lead_facilitator_declined)
   end
 
   private
