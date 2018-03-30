@@ -24,10 +24,7 @@ class AnimationBucket < BucketHelper
   # and we want to see these incidents go down over time.
   #
   def s3_get_object(key, if_modified_since, version)
-    requested_version = version
-    if version === 'latestVersion'
-      requested_version = get_latest_version(key)
-    end
+    requested_version = (version == 'latestVersion') ? get_latest_version(key) : version
     super(key, if_modified_since, requested_version)
   rescue Aws::S3::Errors::NoSuchVersion
     # Rethrow if it clearly wasn't the version.
@@ -49,7 +46,9 @@ class AnimationBucket < BucketHelper
     s3_object
   end
 
-  # Helper class that returns the latest non-deleted version of the key
+  private
+
+  # Helper method that returns the latest non-deleted version of the key
   def get_latest_version(key)
     # Locate the latest non-deleted version
     versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
