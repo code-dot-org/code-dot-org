@@ -204,7 +204,7 @@ ArtistAPI.prototype.turnLeft = function (angle, id) {
 };
 
 ArtistAPI.prototype.pointTo = function (angle, id) {
-  this.log.push(['PT, angle, id']);
+  this.log.push(['PT', angle, id]);
 };
 
 ArtistAPI.prototype.globalAlpha = function (alpha, id) {
