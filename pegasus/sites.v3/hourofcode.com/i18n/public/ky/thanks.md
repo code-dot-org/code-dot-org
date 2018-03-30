@@ -44,7 +44,7 @@ social:
 
 ## 2. Иш-чараңарга жардам берүүчү жергиликтүү ыктыярчыларды тапкыла.
 
-Окуучуларыңарга информатиканын мүмкүнчүлүктөрү жөнүндө классыңарга келип же алыстан видеочат арыкылуу айтып берүүчү ыктыярчыларды [биздин ыктыярчылар картабыздан издегиле](<%= resolve_url('https://code.org/volunteer/local') %>).
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Өздүк Код саатыңарды пландаштыргыла
 

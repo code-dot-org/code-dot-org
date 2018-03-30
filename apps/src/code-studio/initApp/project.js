@@ -239,6 +239,10 @@ var projects = module.exports = {
     return currentSources.makerAPIsEnabled;
   },
 
+  getCurrentSourceVersionId() {
+    return currentSourceVersionId;
+  },
+
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
@@ -702,8 +706,7 @@ var projects = module.exports = {
    * @returns {Promise} A promise containing the project data.
    */
   save(forceNewVersion, preparingRemix) {
-    // Can't save a project if we're not the owner.
-    if (current && current.isOwner === false) {
+    if (!isEditable()) {
       return Promise.resolve();
     }
 
@@ -734,7 +737,7 @@ var projects = module.exports = {
    * @private
    */
   saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
-    if (current && current.isOwner === false) {
+    if (!isEditable()) {
       return;
     }
 

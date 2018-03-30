@@ -80,7 +80,9 @@ var BaseDialog = React.createClass({
       });
     }
     if (this.props.fullHeight) {
-      bodyStyle.height = '75%';
+      bodyStyle = {
+        height: '75%'
+      };
     }
 
     let wrapperClassNames = "";

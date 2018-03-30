@@ -15,8 +15,8 @@ export default class Teachercon1819Registration extends FormController {
     regionalPartnerId: PropTypes.number,
     applicationType: PropTypes.string.isRequired,
     course: PropTypes.string,
-    city: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
+    city: PropTypes.string,
+    date: PropTypes.string,
     email: PropTypes.string.isRequired,
     firstName: PropTypes.string,
     lastName: PropTypes.string,
@@ -34,7 +34,9 @@ export default class Teachercon1819Registration extends FormController {
       lastName: this.props.lastName,
       phone: this.props.phone,
       course: this.props.course,
-      applicationType: this.props.applicationType
+      applicationType: this.props.applicationType,
+      city: this.props.city,
+      date: this.props.date
     };
   }
 

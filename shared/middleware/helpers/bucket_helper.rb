@@ -92,11 +92,13 @@ class BucketHelper
     end
     key = s3_path owner_id, channel_id, filename
     begin
-      s3_object = s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
+      s3_object = s3_get_object(key, if_modified_since, version)
       {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
+      {status: 'NOT_FOUND'}
+    rescue Aws::S3::Errors::NoSuchVersion
       {status: 'NOT_FOUND'}
     rescue Aws::S3::Errors::InvalidArgument
       # Can happen when passed an invalid S3 version id
@@ -278,8 +280,8 @@ class BucketHelper
         copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
       )
       version_restored = true
-    rescue Aws::S3::Errors::InvalidArgument => err
-      raise err unless err.message =~ %r{Invalid version id specified}
+    rescue Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument => err
+      raise err unless err.is_a?(Aws::S3::Errors::NoSuchVersion) || invalid_version_id?(err)
 
       if object_exists?(key)
         response = s3.copy_object(
@@ -295,7 +297,8 @@ class BucketHelper
         )
         version_restored = true
         Honeybadger.notify(
-          "Restore at Specified Version Failed. Restored most recent.",
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed. Restored most recent.",
           context: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
           }
@@ -306,7 +309,8 @@ class BucketHelper
         # In this case, we want to do nothing.
         response = {status: 'NOT_MODIFIED'}
         Honeybadger.notify(
-          "Restore at Specified Version Failed on deleted object. No action taken.",
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed on deleted object. No action taken.",
           context: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
           }
@@ -316,30 +320,52 @@ class BucketHelper
 
     if version_restored
       # If we get this far, the restore request has succeeded.
-      FirehoseClient.instance.put_record(
-        study: 'project-data-integrity',
-        study_group: 'v2',
-        event: 'version-restored',
-
-        # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      log_restored_file(
         project_id: encrypted_channel_id,
-        data_string: @bucket,
-
         user_id: user_id,
-        data_json: {
-          restoredVersionId: version_id,
-          newVersionId: response.version_id,
-          bucket: @bucket,
-          key: key,
-          filename: filename,
-        }.to_json
+        filename: filename,
+        source_version_id: version_id,
+        new_version_id: response.version_id
       )
     end
 
-    response
+    response.to_h
   end
 
   protected
+
+  #
+  # Check if the given error indicates a badly-formatted version ID was passed.
+  # @param [Exception] err
+  # @return [Boolean] true if err was caused by an invalid version ID
+  #
+  def invalid_version_id?(err)
+    # S3 returns an InvalidArgument exception with a particular message for this case.
+    err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message =~ %r{Invalid version id specified}
+  end
+
+  def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
+    owner_id, channel_id = storage_decrypt_channel_id(project_id)
+    key = s3_path owner_id, channel_id, filename
+    FirehoseClient.instance.put_record(
+      study: 'project-data-integrity',
+      study_group: 'v2',
+      event: 'version-restored',
+
+      # Make it easy to limit our search to restores in the sources bucket for a certain project.
+      project_id: project_id,
+      data_string: @bucket,
+
+      user_id: user_id,
+      data_json: {
+        restoredVersionId: source_version_id,
+        newVersionId: new_version_id,
+        bucket: @bucket,
+        key: key,
+        filename: filename,
+      }.to_json
+    )
+  end
 
   def object_exists?(key)
     response = s3.get_object(bucket: @bucket, key: key)
@@ -350,5 +376,10 @@ class BucketHelper
 
   def s3_path(owner_id, channel_id, filename = nil)
     "#{@base_dir}/#{owner_id}/#{channel_id}/#{Addressable::URI.unencode(filename)}"
+  end
+
+  # Extracted so we can override with special behavior in AnimationBucket.
+  def s3_get_object(key, if_modified_since, version)
+    s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
   end
 end

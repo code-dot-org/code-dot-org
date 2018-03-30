@@ -60,9 +60,17 @@ module Pd::Application
       self.application_type = FACILITATOR_APPLICATION
     end
 
+    PROGRAMS = {
+      csf: 'CS Fundamentals (Pre-K - 5th grade)',
+      csd: 'CS Discoveries (6 - 10th grade)',
+      csp: 'CS Principles (9 - 12th grade)'
+    }.freeze
+    PROGRAM_OPTIONS = PROGRAMS.values
+    VALID_COURSES = PROGRAMS.keys.map(&:to_s)
+
     validates_uniqueness_of :user_id
 
-    validates_presence_of :course
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
@@ -79,12 +87,32 @@ module Pd::Application
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
 
+    # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
+    # @param [ActiveRecord::Relation<Pd::Application::Facilitator1819Application>] applications_query
+    #   (optional) defaults to all
+    # @note this is not chainable since it inspects fit_workshop_id from serialized attributes,
+    #   which must be done in the model.
+    # @return [array]
+    def self.fit_cohort(applications_query = all)
+      applications_query.
+        where(type: name).
+        where(status: [:accepted, :withdrawn]).
+        where.not(locked_at: nil).
+        select(&:fit_workshop_id?)
+    end
+
     def fit_workshop
-      Pd::Workshop.find(fit_workshop_id) if fit_workshop_id
+      return nil unless fit_workshop_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_workshop_cache_key(fit_workshop_id) do
+        Pd::Workshop.includes(:sessions, :enrollments).find_by(id: fit_workshop_id)
+      end
     end
 
     def registered_fit_workshop?
-      fit_workshop_id.present? && Pd::Enrollment.exists?(pd_workshop_id: fit_workshop_id, user: user)
+      # inspect the cached fit_workshop.enrollments rather than querying the DB
+      fit_workshop.enrollments.any? {|e| e.user_id == user.id} if fit_workshop_id
     end
 
     GRADES = [
@@ -94,13 +122,6 @@ module Pd::Application
       'Community college, college, or university',
       'Participants in a tech bootcamp or professional development program'
     ].freeze
-
-    PROGRAMS = {
-      csf: 'CS Fundamentals (Pre-K - 5th grade)',
-      csd: 'CS Discoveries (6 - 10th grade)',
-      csp: 'CS Principles (9 - 12th grade)'
-    }.freeze
-    PROGRAM_OPTIONS = PROGRAMS.values
 
     ONLY_WEEKEND = 'I will only be able to attend Saturday and Sunday of the training'.freeze
 
@@ -430,16 +451,22 @@ module Pd::Application
       ]
     end
 
-    # @override
-    # Filter out extraneous answers, based on selected program (course)
-    def self.filtered_labels(course)
-      labels_to_remove = (course == 'csf' ?
+    # memoize in a hash, per course
+    FILTERED_LABELS ||= Hash.new do |h, key|
+      labels_to_remove = (key == 'csf' ?
         [:csd_csp_fit_availability, :csd_csp_teachercon_availability]
         : # csd / csp
         [:csf_availability, :csf_partial_attendance_reason]
       )
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers, based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
     end
 
     # @override
@@ -562,6 +589,12 @@ module Pd::Application
         course: workshop_course,
         city: find_default_fit_teachercon[:city]
       )
+    end
+
+    # override
+    def self.prefetch_associated_models(applications)
+      # also prefetch fit workshops
+      prefetch_workshops applications.flat_map {|a| [a.pd_workshop_id, a.fit_workshop_id]}.uniq.compact
     end
   end
 end

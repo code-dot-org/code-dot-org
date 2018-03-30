@@ -15,6 +15,10 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     end
+    trait :fit do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_FIT
+    end
     capacity 10
     transient do
       num_sessions 0
@@ -879,9 +883,40 @@ FactoryGirl.define do
       able_to_attend 'No'
     end
 
-    trait :partner_registration do
+    trait :partner_accepted do
+      with_full_form_data
+
       after :build do |hash|
         hash['ableToAttend'] = "Yes"
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :partner_declined do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "No"
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :lead_facilitator_accepted do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "Yes"
+        hash['city'] = 'Phoenix'
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :lead_facilitator_declined do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "No"
+        hash['city'] = 'Phoenix'
         hash.delete('teacherAcceptSeat')
       end
     end
@@ -894,6 +929,7 @@ FactoryGirl.define do
     end
 
     association :pd_application, factory: :pd_teacher1819_application
+    association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end
 

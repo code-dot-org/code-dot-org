@@ -106,7 +106,7 @@ class Documents < Sinatra::Base
       settings.exclude_extnames +
       ['.fetch']
     set :markdown,
-      renderer: ::TextRender::MarkdownEngine::HTMLWithTags,
+      renderer: ::TextRender::MarkdownEngine::HTMLWithDivBrackets,
       autolink: true,
       tables: true,
       space_after_headers: true,

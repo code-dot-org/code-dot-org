@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Ikhupha isitatimende sephephandaba,** [ Sebenzisa lelisampula](<%= resolve_url('/promote/official-press-release') %>) njengenkombisa.
 
-9. **Xhumana endaweni.** Vakasha [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) ukufunda kabanzi ngemfundiso yekhompyutha sayensi kumbuso wakho. Bhalisa kuleso sikhalazo ubese uzothola izibuyekezo ku Code.org kumizamo yabo yenhlangano yamazwe yokumelana kudolobha nakulizwe.
+9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Bhalisa kuleso sikhalazo ubese uzothola izibuyekezo ku Code.org kumizamo yabo yenhlangano yamazwe yokumelana kudolobha nakulizwe.
 
 <%= view :signup_button %>

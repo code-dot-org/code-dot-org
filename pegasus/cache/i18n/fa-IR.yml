@@ -865,18 +865,12 @@
   dashboard_course_csp_desc: Code.org یک دوره ی سخت گیرانه، جذاب، و قابل دسترسی طراحی
     کرده که ایده ی بنیادی محاسبه را کشف می کند.
   dashboard_landing_loading: "در حال بارگذاری..."
-  dashboard_action_edit: "ویرایش"
-  dashboard_action_save: "ذخيره"
-  dashboard_action_save_all: "ذخیره‌ی همه"
   dashboard_action_cancel: "لغو"
   dashboard_action_delete: "پاک کردن"
   dashboard_action_delete_yes: "بله"
   dashboard_action_delete_no: "نه"
   dashboard_action_confirm: "پاک گردد؟"
-  dashboard_action_remove: "حذف کن"
-  dashboard_action_remove_confirm: "حذف شود؟"
   dashboard_action_done: "انجام شد"
-  dashboard_action_required: "اجباری"
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -987,8 +981,6 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_student: "افزودن دانش آموز"
-  dashboard_students_add_students: "اضافه کردن چند دانش آموز"
   dashboard_students_add_multiple: "نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید،
     فقط یک نام در هر خط:"
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -997,23 +989,12 @@
   dashboard_students_new_section: "شما یک بخش جدید ایجاد کرده اید! اکنون با استفاده
     از دکمه های <b>افزودن دانش آموز</b> و <b>اضافه کردن چند دانش آموز</b> بالا دانش
     آموزان خود را اضافه کنید."
-  dashboard_students_placeholder_name: "نام دانش آموز"
   dashboard_students_name: "نام"
   dashboard_students_progress: "پیشرفت"
-  dashboard_students_age: "سن"
-  dashboard_students_gender: "جنسیت"
   dashboard_students_male: "مرد"
   dashboard_students_female: "زن"
-  dashboard_students_secret: "عکس مخفی"
-  dashboard_students_password: "رمز عبور"
-  dashboard_students_username: "نام کاربری: %{student_username}"
-  dashboard_students_email: "ایمیل: %{student_email}"
   dashboard_students_completed_levels: "سطح‌های کامل شده"
   dashboard_students_total_lines: "خطوطی از کد"
-  dashboard_students_show_secret: "نمایش محرمانه"
-  dashboard_students_auto_generated: "تولید شده به صورت خودکار"
-  dashboard_students_reset_secret: "تنظیم مجدد عکس مخفی"
-  dashboard_students_reset_password: "تنظیم مجدد گذرواژه"
   dashboard_students_share_section: "صفحه ورود به این بخش را با دانش آموزان خود به
     اشتراک بگذارید:"
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
@@ -1086,7 +1067,6 @@
   dashboard_login_word: "واژه"
   dashboard_login_picture: "عکس"
   dashboard_login_none: "ایمیل"
-  dashboard_new_password: "گذرواژه‌ی تازه"
   dashboard_stage: "مرحله"
   dashboard_puzzle: "پازل"
   dashboard_question: "سوال"

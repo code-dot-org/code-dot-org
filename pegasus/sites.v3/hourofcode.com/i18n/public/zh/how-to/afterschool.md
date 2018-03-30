@@ -5,17 +5,17 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# 如何在課後班和俱樂部中講授編程一小時
+# 如何在課後及興趣班中講授編程一小時
 
-參加到活動中，通過以下步驟為一群學生介紹他們初始一小時的計算機科學課程。 哪怕是對初學者來說，編程一小時的課程都非常容易學。 如果你有時間願意幫忙的話，你可以找一名當地的 自願者一起幫忙在你的課程裡來教編程一小時課程。
+參與活動，并用下面的步驟向學生們介紹他們第一個小時的計算機科學。 編程一小時的課程對初學者來說都非常容易上手的！ If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 2. 觀看視頻指導 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. 選擇一個教程指南
+## 2. 選擇一個教程
 
-我們會提供一系列由多個合作夥伴製作的，適合於各個年齡段的，有趣的，為時一小時的指南課程。 [來試一試吧！](<%= resolve_url('/learn') %>)
+我們將為所有年齡段的參與者提供豐富多彩的[一小時課程](<%= resolve_url('/learn') %>)內容，而這些內容均是由我們的志願者編制的。 [來試一試吧！](<%= resolve_url('/learn') %>)
 
-**所有的編程一小時課程指南**對組織者來說都不需要額外再做什麼準備。它可以讓孩子們依照他們自己的進度和技術水平來自我學習。
+對組織者來說，**所有的編程一小時課程**都不需要額外再做其他準備，它可以讓孩子們依照自己的進度和技術水平來自我學習。
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
@@ -23,7 +23,7 @@ nav: how_to_nav
 
 ## 3) 推廣你的一小時玩程式活動
 
-你可以用這些工具</a>來推廣編程一小時，並鼓勵其他人去主辦自己的活動。
+你可以用這些工具</a>來推廣編程一小時，並鼓勵其他人去主辦自己的活動。</p> 
 
 ## 4. 您所需的教學設備——電腦不是必需的
 
@@ -43,7 +43,7 @@ nav: how_to_nav
 
 **展示一支激勵人心的影片**
 
-- 原版的Code.org 的視頻裡講述了比爾.蓋茨，馬克.扎克伯格，和NBA 球星克里斯.波什的勵志故事。 1 分鐘；5 分鐘[ 和9 分鐘](https://www.youtube.com/watch?v=dU1xS07N-FA) 的版本都有。
+- 原版的Code.org 的視頻裡講述了比爾.蓋茨，馬克.扎克伯格，和NBA 球星克里斯.波什的勵志故事。 1 分鐘；5 分鐘[ 和9 分鐘](https://www.youtube.com/watch?v=dU1xS07N-FA) 的版本都有。</li> 
     
     - [編程一小時 全球視頻 ](https://www.youtube.com/watch?v=KsOIlDT145A)
     - [總統奧巴馬號召所有學生學習計算機科學](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
@@ -55,13 +55,13 @@ nav: how_to_nav
     - 列出在日常生活中用到程式碼的事情。
     - 讓女孩對電腦科學產生興趣的小技巧 [ 看這裡](<%= resolve_url('https://code.org/girls') %>)
     
-    **需要更多的指南嗎？ **，請點擊</a>來下載的課程大綱模板。
+    **需要更多的指南嗎？ **，請點擊</a>來下載的課程大綱模板。</p> 
     
     ## 6) 寫程式！
     
     **在活動中指導參與者**
     
-    - 把課程指南的鏈接寫在白板上。在參加者數量下點擊</a> 找到列在裡你選擇的指南。 
+    - 把課程指南的鏈接寫在白板上。在參加者數量下點擊</a> 找到列在裡你選擇的指南。</li> </ul> 
         
         **如果有人在學的時候遇到困難的話，你可以這樣回复：**
         
@@ -86,7 +86,8 @@ nav: how_to_nav
         
         [/col-33]
 
-        <p style="clear:both">&nbsp;</p>
+<p style="clear:both">&nbsp;</p>
+
         
         ## 7. 慶祝
         
@@ -96,7 +97,7 @@ nav: how_to_nav
         
         [/col-33]
         
-        - 給你的學生打印[](<%= resolve_url('https://code.org/certificates') %>)證書。
+        - [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
         - 為你的學生[列印「我完成了一小時玩程式！」](<%= resolve_url('/promote/resources#stickers') %>)貼紙。
         - 為你的學校[訂購客製化 T 恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
         - 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。
@@ -107,21 +108,22 @@ nav: how_to_nav
         
         [/col-33]
 
-        <p style="clear:both">&nbsp;</p>
+<p style="clear:both">&nbsp;</p>
 
+        
         ## 適用於教育工作者的其他編程一小時的資源
         
-        - 參照以往編程一小時組織者提供的最佳實踐指南 
+        - 參照以往編程一小時組織者提供的最佳實踐指南 < /a></li> 
             
             - 觀看我們為教育工作者主辦的編程一小時在線會議回放。 [](https://youtu.be/EJeMeSW2-Mw)
             - 參加編程一小時討論會[](http://forum.code.org/c/plc/hour-of-code) 來聽取並獲得其他主辦人的意見，觀點和支持。 <% if @country == 'us' %>
-            - 觀看[一小時玩程式的常見問答](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %> 
+            - 觀看[一小時玩程式的常見問答](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %></ul> 
             
             ## Hour of Code之後有什麼？
             
             一小時玩程式只是入門，是瞭解科技如何運作、軟體如何創造的一小步，要繼續這段旅程，你可以：
             
-            - 鼓勵學生繼續 [ 在線學習 ](<%= resolve_url('https://code.org/learn/beyond') %>)。
-            - [參加](<%= resolve_url('https://code.org/professional-development-workshops') %>) 一場整天的在職進修工作坊，以接受有經驗的電腦科學引導者的指導。 （僅適於美國地區教師）
+            - Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+            - [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
             
             <%= view :signup_button %>

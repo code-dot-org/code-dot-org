@@ -22,8 +22,20 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
     Pd::Teachercon1819RegistrationMailer.facilitator build_facilitator_registration(:facilitator_declined)
   end
 
-  def regional_partner
-    Pd::Teachercon1819RegistrationMailer.regional_partner build_regional_partner_registration
+  def regional_partner_accepted
+    Pd::Teachercon1819RegistrationMailer.regional_partner build_regional_partner_registration(:partner_accepted)
+  end
+
+  def regional_partner_declined
+    Pd::Teachercon1819RegistrationMailer.regional_partner build_regional_partner_registration(:partner_declined)
+  end
+
+  def lead_facilitator_accepted
+    Pd::Teachercon1819RegistrationMailer.facilitator build_lead_facilitator_registration(:lead_facilitator_accepted)
+  end
+
+  def lead_facilitator_declined
+    Pd::Teachercon1819RegistrationMailer.facilitator build_lead_facilitator_registration(:lead_facilitator_declined)
   end
 
   private
@@ -51,10 +63,18 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
     build :pd_teachercon1819_registration, pd_application: application, hash_trait: status
   end
 
-  def build_regional_partner_registration
+  def build_regional_partner_registration(status)
     regional_partner_contact = build :teacher, email: 'dumbledore@hogwarts.co.uk', name: 'Albus Dumbledore'
     regional_partner = build :regional_partner, contact: regional_partner_contact
 
-    build :pd_regional_partner_program_registration, regional_partner: regional_partner, user: regional_partner_contact
+    build :pd_teachercon1819_registration, pd_application: nil,
+      regional_partner: regional_partner, user: regional_partner_contact, hash_trait: status
+  end
+
+  def build_lead_facilitator_registration(status)
+    user = build :facilitator, email: 'flitwick@hogwarts.co.uk'
+
+    build :pd_teachercon1819_registration, pd_application: nil, regional_partner: nil, user: user,
+      hash_trait: status
   end
 end

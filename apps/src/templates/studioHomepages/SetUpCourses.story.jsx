@@ -2,7 +2,7 @@ import React from 'react';
 import SetUpCourses from './SetUpCourses';
 
 export default storybook => storybook
-  .storiesOf('SetUpCourses', module)
+  .storiesOf('Homepages/SetUpCourses', module)
   .withReduxStore()
   .addStoryTable([
     {

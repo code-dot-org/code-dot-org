@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "true",
-    "markdown_instructions": "# List Manager\r\n\r\nThe list manager app allows user to keep track of the state of information and can be modified to serve many different purposes, such as checking in / out loaned items, tracking personal To Dos, or keeping track of where things are in a multi-step process.\r\n\r\nWhile this example focuses on a single list, more sophisticated list apps could allow the user to create multiple lists, or even move items between lists. This app also only keeps track of the name of an item and whether or not it is \"Done,\" but it could be extended to track and organize any amount of information about the list times.\r\n\r\n# Functionality Missing from this Prototype\r\n\r\n* Delete buttons don't actually delete items from the list\r\n* Add screen doesn't actually add an item to the list",
+    "markdown_instructions": "# List Manager\r\n\r\nThe list manager app allows user to keep track of the state of information and can be modified to serve many different purposes, such as checking in / out loaned items, tracking personal To Dos, or keeping track of where things are in a multi-step process.\r\n\r\nWhile this example focuses on a single list, more sophisticated list apps could allow the user to create multiple lists, or even move items between lists. This app also only keeps track of the name of an item and whether or not it is \"Done,\" but it could be extended to track and organize any amount of information about the list items.\r\n\r\n# Functionality Missing from this Prototype\r\n\r\n* Delete buttons don't actually delete items from the list\r\n* Add screen doesn't actually add an item to the list",
     "start_blocks": "// Home page navigation\r\nonEvent(\"home_worksBtn\", \"click\", function(event) {\r\n  setScreen(\"howto\");\r\n});\r\nonEvent(\"home_listViewBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\nonEvent(\"home_aboutBtn\", \"click\", function(event) {\r\n  setScreen(\"about\");\r\n});\r\n// Navigation Back Home\r\nonEvent(\"about_homeBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\nonEvent(\"howto_homeBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\nonEvent(\"listView_homeBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\n// List Editing\r\nonEvent(\"listView_addBtn\", \"click\", function(event) {\r\n  setScreen(\"addItem\");\r\n});\r\nonEvent(\"listView_deleteBtn1\", \"click\", function(event) {\r\n  setScreen(\"deleteItem\");\r\n});\r\nonEvent(\"listView_deleteBtn2\", \"click\", function(event) {\r\n  setScreen(\"deleteItem\");\r\n});\r\nonEvent(\"listView_deleteBtn3\", \"click\", function(event) {\r\n  setScreen(\"deleteItem\");\r\n});\r\nonEvent(\"listView_deleteBtn4\", \"click\", function(event) {\r\n  setScreen(\"deleteItem\");\r\n});\r\nonEvent(\"listView_deleteBtn5\", \"click\", function(event) {\r\n  setScreen(\"deleteItem\");\r\n});\r\nonEvent(\"listView_deleteBtn6\", \"click\", function(event) {\r\n  setScreen(\"deleteItem\");\r\n});\r\n// Add / Delete Item\r\nonEvent(\"addItem_addBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\nonEvent(\"addItem_cancelBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\nonEvent(\"deleteItem_deleteBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\nonEvent(\"deleteItem_cancelBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -40,10 +40,18 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
     "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-16 16:52:18 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

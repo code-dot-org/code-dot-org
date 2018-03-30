@@ -1,0 +1,16 @@
+name 'CSD U3 SFLP Velocity_2018'
+display_name 'Lesson Overview'
+css 'unplugged'
+
+
+markdown <<MARKDOWN
+# Overview
+
+After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
+
+## Introduced Code
+
+* [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
+* [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
+* [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
+MARKDOWN

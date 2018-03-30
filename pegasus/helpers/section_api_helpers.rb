@@ -645,9 +645,11 @@ class DashboardSection
   end
 
   def to_owner_hash
+    course_name = @row[:course_id] ? Dashboard.db[:courses].where(id: @row[:course_id]).select(:name).first[:name] : ''
     to_member_hash.merge(
       script: script,
       course_id: @row[:course_id],
+      course_name: course_name,
       teachers: teachers,
       students: students,
       studentCount: students.count,

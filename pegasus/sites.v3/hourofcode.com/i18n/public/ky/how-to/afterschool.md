@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Код саатын сабактан тышкары класстарда жана клубдарда кандай өткөрүү керек
 
-Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. Код сааты - баштаган оңой, үйрөнчүктөргө дагы! Код саатын өткөзгөнгө кошумча жардамчылар керек болсо, [жергиликтүү ыктыярчыларды](<%= resolve_url('https://code.org/volunteer/local') %>) таба аласыңар.
+Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. Код сааты - баштаган оңой, үйрөнчүктөргө дагы! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Кандай кылуу видеосун көрүңүз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- Окуучуларыңызга [сертификат чыгаргыла](<%= resolve_url('https://code.org/certificates') %>).
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - Окуучуларга [Мен "Код саатын өттүм"](<%= resolve_url('/promote/resources#stickers') %>) деген чаптама бастыргыла.
 - Мектебиңизге [ логосу бар футболкаларды](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) жасатыңыз.
 - Код саатыңыздын фото жана видеолорун социалдык желелерде бөлүшкүлө. #HourOfCode ж-а @codeorg хештег колдонуп, ийгилигиңизди бизге дагы билдиргиле!
@@ -110,7 +110,7 @@ nav: how_to_nav
 
 ## Код саатынын үйрөтүүчүлөр үчүн кошумча ресурсттар
 
-- Мурунку Код саатын уюштуруучулардан [мыкты тажрыйба](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) алыңыз. 
+- Мурунку Код саатын уюштуруучулардан [мыкты тажрыйба](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) алыңыз.
 - [Код сааты вебинары үчүн үйрөтүүчүлөрдүн жетектемеси](https://youtu.be/EJeMeSW2-Mw) видеобузду көрүңүз.
 - [Код сааты форумуна](http://forum.code.org/c/plc/hour-of-code) кирип, башка уюштуруучулардан кеңеш жана колдоо алыңыз. <% if @country == 'us' %>
 - [Код саатынын КБСин](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) карагыла. <% end %>
@@ -119,7 +119,7 @@ nav: how_to_nav
 
 Код сааты технологиялардын иштешин терең изилдөөдө саякатындагы жана програмдык жабдууларды өндүрүүдөгү биринчи эле кадам. Бул саякатты улантуу үчүн:
 
-- Окуучуларды [онлайн үйрөнүүнү](<%= resolve_url('https://code.org/learn/beyond') %>) улантууга чакыргыла.
-- Компүтердик технологиялар боюнча тажрыйбалуу адистер өткөзгөн 1 күндүк семинар-практикумга [катышкыла](<%= resolve_url('https://code.org/professional-development-workshops') %>). (АКШ үчүн гана)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>
