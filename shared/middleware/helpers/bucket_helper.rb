@@ -281,8 +281,11 @@ class BucketHelper
           copy_source: "#{@bucket}/#{key}?versionId=#{version_id}"
         )
         version_restored = true
-      rescue Aws::S3::Errors::NoSuchVersion, Aws::S3::Errors::InvalidArgument => err
-        raise err unless err.is_a?(Aws::S3::Errors::NoSuchVersion) || invalid_version_id?(err)
+      rescue Aws::S3::Errors::NoSuchVersion
+        # Do nothing - we'll attempt the fallback below.
+      rescue Aws::S3::Errors::InvalidArgument => err
+        # On invalid version, try the fallback - otherwise reraise.
+        raise unless invalid_version_id?(err)
       end
     end
 
