@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:45 GMT
+      - Fri, 30 Mar 2018 23:52:36 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -30,7 +30,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:44 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:35 GMT
 - request:
     method: get
     uri: https://cdo-v3-animations.s3.amazonaws.com/?encoding-type=url&prefix=animations_test/1/1/testac0a7f8c2faac49775a6.png&versions
@@ -46,7 +46,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:45 GMT
+      - Fri, 30 Mar 2018 23:52:37 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -57,9 +57,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/testac0a7f8c2faac49775a6.png</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>H93iRQFmn8HTpm.DaQ6cCZoqXRLKE.TY</VersionId><IsLatest>true</IsLatest><LastModified>2018-03-30T21:51:14.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><DeleteMarker><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>96S4wJYy_7d1BXFTTi_eCFufJMNFC1TS</VersionId><IsLatest>false</IsLatest><LastModified>2018-03-30T21:51:13.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>gI4NDVHKchbIOzhirAmgCx.Cum3aZ6yg</VersionId><IsLatest>false</IsLatest><LastModified>2018-03-30T21:51:12.000Z</LastModified><ETag>&quot;eea426002f1f82530bdc1dec1637d86c&quot;</ETag><Size>12</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/testac0a7f8c2faac49775a6.png</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>XB3bTdSOHwjG9s0grvW5yvE.XCn8S0F1</VersionId><IsLatest>true</IsLatest><LastModified>2018-03-30T21:56:49.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><DeleteMarker><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>asWHWxiN06_ulnrAGpwbSjwsy3lJIl.n</VersionId><IsLatest>false</IsLatest><LastModified>2018-03-30T21:56:47.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>_r6W5YhSXXpDL6Pb32S3GEp7JKDfVenw</VersionId><IsLatest>false</IsLatest><LastModified>2018-03-30T21:56:47.000Z</LastModified><ETag>&quot;eea426002f1f82530bdc1dec1637d86c&quot;</ETag><Size>12</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:44 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:36 GMT
 - request:
     method: post
     uri: https://cdo-v3-animations.s3.amazonaws.com/?delete
@@ -69,15 +69,15 @@ http_interactions:
         <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
           <Object>
             <Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key>
-            <VersionId>gI4NDVHKchbIOzhirAmgCx.Cum3aZ6yg</VersionId>
+            <VersionId>_r6W5YhSXXpDL6Pb32S3GEp7JKDfVenw</VersionId>
           </Object>
           <Object>
             <Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key>
-            <VersionId>H93iRQFmn8HTpm.DaQ6cCZoqXRLKE.TY</VersionId>
+            <VersionId>XB3bTdSOHwjG9s0grvW5yvE.XCn8S0F1</VersionId>
           </Object>
           <Object>
             <Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key>
-            <VersionId>96S4wJYy_7d1BXFTTi_eCFufJMNFC1TS</VersionId>
+            <VersionId>asWHWxiN06_ulnrAGpwbSjwsy3lJIl.n</VersionId>
           </Object>
           <Quiet>true</Quiet>
         </Delete>
@@ -85,7 +85,7 @@ http_interactions:
       Expect:
       - 100-continue
       Content-Md5:
-      - fIg4+MBjKFCzLte2rPBM1g==
+      - sFVbNqwFqXTjOtZZKmdNkA==
       Content-Length:
       - '530'
   response:
@@ -94,7 +94,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:46 GMT
+      - Fri, 30 Mar 2018 23:52:37 GMT
       Connection:
       - close
       Content-Type:
@@ -109,7 +109,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:45 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:37 GMT
 - request:
     method: get
     uri: https://cdo-v3-animations.s3.amazonaws.com/?encoding-type=url&prefix=animations_test/1/1/
@@ -125,7 +125,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:46 GMT
+      - Fri, 30 Mar 2018 23:52:38 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -140,7 +140,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:45 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:37 GMT
 - request:
     method: put
     uri: https://cdo-v3-animations.s3.amazonaws.com/animations_test/1/1/testac0a7f8c2faac49775a6.png
@@ -162,9 +162,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:47 GMT
+      - Fri, 30 Mar 2018 23:52:38 GMT
       X-Amz-Version-Id:
-      - _r6W5YhSXXpDL6Pb32S3GEp7JKDfVenw
+      - Bw9zCOn0Q142nA05MVHoTfhOXgTK.s_u
       Etag:
       - '"eea426002f1f82530bdc1dec1637d86c"'
       Content-Length:
@@ -175,7 +175,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:46 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:38 GMT
 - request:
     method: delete
     uri: https://cdo-v3-animations.s3.amazonaws.com/animations_test/1/1/testac0a7f8c2faac49775a6.png
@@ -191,9 +191,9 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:47 GMT
+      - Fri, 30 Mar 2018 23:52:39 GMT
       X-Amz-Version-Id:
-      - asWHWxiN06_ulnrAGpwbSjwsy3lJIl.n
+      - hD3ysTpKF4KqwWXNb2kGvGFy_lWlIzD0
       X-Amz-Delete-Marker:
       - 'true'
       Server:
@@ -202,7 +202,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:46 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:38 GMT
 - request:
     method: get
     uri: https://cdo-v3-animations.s3.amazonaws.com/?encoding-type=url&prefix=animations_test/1/1/testac0a7f8c2faac49775a6.png&versions
@@ -218,7 +218,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:47 GMT
+      - Fri, 30 Mar 2018 23:52:40 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -229,12 +229,12 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/testac0a7f8c2faac49775a6.png</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>asWHWxiN06_ulnrAGpwbSjwsy3lJIl.n</VersionId><IsLatest>true</IsLatest><LastModified>2018-03-30T21:56:47.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>_r6W5YhSXXpDL6Pb32S3GEp7JKDfVenw</VersionId><IsLatest>false</IsLatest><LastModified>2018-03-30T21:56:47.000Z</LastModified><ETag>&quot;eea426002f1f82530bdc1dec1637d86c&quot;</ETag><Size>12</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/testac0a7f8c2faac49775a6.png</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><DeleteMarker><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>hD3ysTpKF4KqwWXNb2kGvGFy_lWlIzD0</VersionId><IsLatest>true</IsLatest><LastModified>2018-03-30T23:52:39.000Z</LastModified><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner></DeleteMarker><Version><Key>animations_test/1/1/testac0a7f8c2faac49775a6.png</Key><VersionId>Bw9zCOn0Q142nA05MVHoTfhOXgTK.s_u</VersionId><IsLatest>false</IsLatest><LastModified>2018-03-30T23:52:38.000Z</LastModified><ETag>&quot;eea426002f1f82530bdc1dec1637d86c&quot;</ETag><Size>12</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:46 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:39 GMT
 - request:
     method: get
-    uri: https://cdo-v3-animations.s3.amazonaws.com/animations_test/1/1/testac0a7f8c2faac49775a6.png?versionId=_r6W5YhSXXpDL6Pb32S3GEp7JKDfVenw
+    uri: https://cdo-v3-animations.s3.amazonaws.com/animations_test/1/1/testac0a7f8c2faac49775a6.png?versionId=Bw9zCOn0Q142nA05MVHoTfhOXgTK.s_u
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -247,15 +247,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:49 GMT
+      - Fri, 30 Mar 2018 23:52:40 GMT
       Last-Modified:
-      - Fri, 30 Mar 2018 21:56:47 GMT
+      - Fri, 30 Mar 2018 23:52:38 GMT
       Etag:
       - '"eea426002f1f82530bdc1dec1637d86c"'
       X-Amz-Meta-Abuse-Score:
       - '0'
       X-Amz-Version-Id:
-      - _r6W5YhSXXpDL6Pb32S3GEp7JKDfVenw
+      - Bw9zCOn0Q142nA05MVHoTfhOXgTK.s_u
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -268,7 +268,7 @@ http_interactions:
       encoding: UTF-8
       string: stub-v1-body
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:48 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:39 GMT
 - request:
     method: delete
     uri: https://cdo-v3-animations.s3.amazonaws.com/animations_test/1/1/testac0a7f8c2faac49775a6.png
@@ -284,9 +284,9 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:49 GMT
+      - Fri, 30 Mar 2018 23:52:41 GMT
       X-Amz-Version-Id:
-      - XB3bTdSOHwjG9s0grvW5yvE.XCn8S0F1
+      - GDWDrhOZtUw6BAQcBKV8xF5gOu3HSCHp
       X-Amz-Delete-Marker:
       - 'true'
       Server:
@@ -295,7 +295,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:48 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:40 GMT
 - request:
     method: get
     uri: https://cdo-v3-animations.s3.amazonaws.com/?encoding-type=url&prefix=animations_test/1/1/
@@ -311,7 +311,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Mar 2018 21:56:50 GMT
+      - Fri, 30 Mar 2018 23:52:41 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -326,5 +326,5 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-animations</Name><Prefix>animations_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Fri, 30 Mar 2018 21:56:49 GMT
+  recorded_at: Fri, 30 Mar 2018 23:52:40 GMT
 recorded_with: VCR 3.0.3
