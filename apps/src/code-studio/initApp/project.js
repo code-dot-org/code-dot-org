@@ -78,6 +78,7 @@ var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
+let thumbnailChanged = false;
 
 /**
  * Current state of our sources API data
@@ -713,7 +714,8 @@ var projects = module.exports = {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(newSources => {
         const sourcesChanged = (JSON.stringify(currentSources) !== JSON.stringify(newSources));
-        if (sourcesChanged) {
+        if (sourcesChanged || thumbnailChanged) {
+          thumbnailChanged = false;
           this.saveSourceAndHtml_(newSources, resolve);
         } else {
           resolve();
@@ -1198,7 +1200,10 @@ var projects = module.exports = {
       const thumbnailPath = '.metadata/thumbnail.png';
       filesApi.putFile(thumbnailPath, pngBlob, () => {
         current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
-        initialCaptureComplete = true;
+        if (!initialCaptureComplete) {
+          initialCaptureComplete = true;
+          thumbnailChanged = true;
+        }
         resolve();
       }, error => {
         reject(`error saving thumbnail image: ${error}`);
