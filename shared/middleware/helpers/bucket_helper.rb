@@ -297,7 +297,8 @@ class BucketHelper
         )
         version_restored = true
         Honeybadger.notify(
-          "Restore at Specified Version Failed. Restored most recent.",
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed. Restored most recent.",
           context: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
           }
@@ -308,7 +309,8 @@ class BucketHelper
         # In this case, we want to do nothing.
         response = {status: 'NOT_MODIFIED'}
         Honeybadger.notify(
-          "Restore at Specified Version Failed on deleted object. No action taken.",
+          error_class: "#{self.class.name}Warning",
+          error_message: "Restore at Specified Version Failed on deleted object. No action taken.",
           context: {
             source: "#{@bucket}/#{key}?versionId=#{version_id}"
           }
