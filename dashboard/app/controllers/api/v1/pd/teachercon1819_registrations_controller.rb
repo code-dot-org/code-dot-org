@@ -1,5 +1,5 @@
 class Api::V1::Pd::Teachercon1819RegistrationsController < Api::V1::Pd::FormsController
-  load_and_authorize_resource :application, class: 'Pd::Application::ApplicationBase', id_param: :applicationId, except: :create_partner
+  load_and_authorize_resource :application, class: 'Pd::Application::ApplicationBase', id_param: :applicationId, except: :create_partner_or_lead_facilitator
 
   def new_form
     ::Pd::Teachercon1819Registration.new(
@@ -8,18 +8,18 @@ class Api::V1::Pd::Teachercon1819RegistrationsController < Api::V1::Pd::FormsCon
     )
   end
 
-  def create_partner
-    regional_partner_id = params[:regionalPartnerId]
-    regional_partner = RegionalPartner.find(regional_partner_id)
-    unless current_user && current_user.regional_partners.include?(regional_partner)
-      return head :forbidden
+  def create_partner_or_lead_facilitator
+    if params[:regionalPartnerId].present?
+      unless current_user && current_user.regional_partner_ids.include?(params[:regionalPartnerId].to_i)
+        return head :forbidden
+      end
     end
 
     form_data_hash = params[:form_data] || {}
     form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
 
     form = ::Pd::Teachercon1819Registration.new(
-      regional_partner_id: regional_partner_id,
+      regional_partner_id: params[:regionalPartnerId],
       user_id: current_user.id
     )
     form.form_data_hash = JSON.parse(form_data_json)

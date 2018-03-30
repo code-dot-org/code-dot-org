@@ -10,7 +10,7 @@ require 'tempfile'
 
 require_relative 'i18n_script_utils'
 
-def push_out_translated_files
+def sync_out
   rename_from_crowdin_name_to_locale
   run_bash_script "bin/i18n-codeorg/out.sh"
   copy_untranslated_apps
@@ -151,4 +151,4 @@ def check_for_mismatching_links_or_images
   outputfile.close
 end
 
-push_out_translated_files
+sync_out if __FILE__ == $0

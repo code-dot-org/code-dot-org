@@ -13,7 +13,7 @@ require 'tempfile'
 
 require_relative 'i18n_script_utils'
 
-def pull_in_files_for_translation
+def sync_in
   localize_level_content
   run_bash_script "bin/i18n-codeorg/in.sh"
 end
@@ -120,4 +120,4 @@ def localize_level_content
   reformat_quotes
 end
 
-pull_in_files_for_translation
+sync_in if __FILE__ == $0
