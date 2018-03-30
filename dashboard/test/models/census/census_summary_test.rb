@@ -245,6 +245,20 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     validate_summary(school, school_year, "NO")
   end
 
+  test "High school lack of state data in a blacklist state does not override anything" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_yes_parent_census_submission,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      state: Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.first,
+      school_year: school_year
+    validate_summary(school, school_year, "MAYBE")
+  end
+
   test "Inconsistent teacher surveys override other surveys" do
     school_year = 2020
     school = create :census_school,
