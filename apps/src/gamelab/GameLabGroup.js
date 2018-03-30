@@ -125,6 +125,7 @@ module.exports.Group = function (baseConstructor) {
   array.setRotationSpeedEach = array.setPropertyEach.bind(array, 'rotationSpeed');
   array.setScaleEach = array.setPropertyEach.bind(array, 'scale');
   array.setColorEach = array.setPropertyEach.bind(array, 'shapeColor');
+  array.setTintEach = array.setPropertyEach.bind(array, 'tint');
   array.setVisibleEach = array.setPropertyEach.bind(array, 'visible');
   array.setVelocityXEach = array.setPropertyEach.bind(array, 'velocityX');
   array.setVelocityYEach = array.setPropertyEach.bind(array, 'velocityY');
