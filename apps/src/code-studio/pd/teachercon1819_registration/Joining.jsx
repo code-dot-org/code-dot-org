@@ -69,9 +69,9 @@ export default class Joining extends Teachercon1819FormComponent {
       return (
         <p>
           We're looking forward to seeing you at TeacherCon this summer! Please complete
-          this registration form <strong>within two weeks,</strong> and contact
-          <a href="mailto:facilitators@code.org">facilitators@code.org</a> with any
-          questions.
+          this registration form <strong>within two weeks,</strong> and
+          contact <a href="mailto:facilitators@code.org">facilitators@code.org</a> with
+          any questions.
         </p>
       );
     }
@@ -147,7 +147,7 @@ export default class Joining extends Teachercon1819FormComponent {
           {this.props.data.ableToAttend === "No" &&
             <p>
               If you're unable to attend your assigned TeacherCon, please contact{' '}
-              {this.isFacilitatorApplication() && <a href="mailto:facilitators@code.org">facilitators@code.org</a>}
+              {(this.isFacilitatorApplication() || this.isLeadFacilitatorApplication()) && <a href="mailto:facilitators@code.org">facilitators@code.org</a>}
               {this.isPartnerApplication() && "your Outreach Regional Manager"}
               {' '}as soon as possible so we can assist you.
             </p>
