@@ -5,240 +5,98 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# رضا کاروں کے لئے کیسے رہنمائی
 
-### Make a difference in a classroom today!
+### آج ایک کلاس روم میں فرق کرو!
 
-## Why volunteer?
+## رضاکارانہ کیوں
 
-Check out some testimony from past volunteers:
+گذشتہ رضاکاروں سے کچھ گواہی چیک کریں:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "میرے تجربے کا بہترین حصہ یہ تھا کہ پوری طبقے خواتین اور رنگ کے لوگ تھے. یہ ہماری صنعت کے مستقبل کے لئے اچھی طرح سے بولتا ہے کہ ان بچوں کو پہنچنے اور حوصلہ افزائی کرنے کا موقع ملے. "
+- "خاص طور پر ٹیکنالوجی میں نوجوان لڑکیوں کی حوصلہ افزائی کرنے کے لئے حاصل کرنے کا لطف اٹھایا. جیسے ہی میں اپنے مقامی علاقے میں اگلی نسل کی مدد کر رہا تھا اس طرح محسوس کیا. "
+- "میں نے دیکھا کہ بچوں کو کتنی حوصلہ افزائی ملی تھی. ایک حیرت انگیز بات یہ تھی کہ اساتذہ نے محسوس کیا ہے کہ ان طالب علموں نے جو کچھ بھی علمی طور پر نہیں کیا تھا وہ ایک ڈویلپر کی طرح سوچنے میں حوصلہ افزائی کرتے تھے اور دوسروں کو سیکھنے میں مدد دیتے تھے.
 
-## Anyone can volunteer
+## کوئی بھی رضاکارانہ طور پر کرسکتا ہے
 
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+** ٹیکسٹائل میں رضاکاروں اور اسپیکرز </ strong>: کیا آپ کے پاس سی ایس یا ٹیک سے تعلق ہے؟ اگر آپ سافٹ ویئر انجینئرنگ میں کام کرتے ہیں تو کسی بھی ٹیکو کمپنی (کسی انجنیئر یا انجنیئرنگ) میں، یا آپ کمپیوٹر سائنس کورسز لے لیتے ہیں، آپ طلباء کو متاثر کرنے میں مدد کرسکتے ہیں! بہت سے طلبا نے کبھی بھی کسی سے ملاقات نہیں کی ہے جو ٹیک صنعت میں کام کرتا ہے اور ہمارے اساتذہ اپنے طبقے سے پیشہ ورانہ اور یونیورسٹی کے طالب علموں کو منسلک کرنے سے محبت کرتے ہیں.</p> 
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+آپ ایک کلاس روم میں ایک مہمان اسپیکر ہوسکتے ہیں، یا اساتذہ کو سرگرمی چلانے میں مدد کرسکتے ہیں. کمپیوٹر کلاس سیکھنے کے لۓ طالب علموں کو حوصلہ افزائی کرنے کے لئے مقامی کلاس روم کا دورہ کریں.
 
-<a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button></p> 
+<button>سائن اپ کرنے کے لئے آج تک سائن اپ کریں!</button></p> 
 
-<p>
-  <strong>Anyone passionate about expanding opportunity</strong>: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
-</p>
+** کسی بھی موقع پر توسیع کے بارے میں دلچسپی رکھتے ہیں </ strong>: کیا آپ کو یقین ہے کہ سیکھنے والے کمپیوٹر سائنس طالب علموں کے لئے موقع کے دروازے کھول سکتے ہیں؟ ایک مقامی کلاس روم میں مدد کریں یا اسکول کے ایونٹ کے بعد منظم کریں! کوڈ آف میزبانی کرنے کیلئے آپ کو کمپیوٹر سائنس میں کوئی پس منظر کی ضرورت نہیں ہے. اور، صرف مدد کرنے کی پیشکش صرف اکثر آپ کے بچے کے استاد، ایک دوست، یا ایک گھنٹے کی کوشش کرنے کے لئے ایک کلب کو قائل کرنے کے لئے کافی ہے.</p> 
 
-<p>
-  How do you get started?
-</p>
+آپ کیسے شروع ہو گئے ہیں؟
 
-<ol>
-  <li>
-    <p>
-      <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
-    </p>
-  </li>
+1. [ اس ای میل کو بھیجیں ](٪= resolve_url('/promote/resources#help-schools') ٪) اپنے بچے کے استاد کی پیشکش میں انہیں ایک گھنٹے کا کوڈ چلانے میں مدد کرنے کے لئے.
+
+2. ایک مقامی اسکول میں اسکول کے بعد ایک گھنٹے کے ایونٹ کی میزبانی کرنے کی پیشکش کرتے ہیں. [ آپ کی منصوبہ بندی میں مدد کے لئے اس طرح کے رہنمائی کا استعمال کریں ](٪= resolve_url('/how-to') ٪).
+
+## اپنے شریک کارکن رضاکارانہ طور پر بھرتی کریں
+
+کوڈ کے قیام کے بارے میں اپنے دوستوں اور شریک کارکنوں کو بتائیں. ہزاروں اساتذہ رضا کاروں کی تلاش کر رہے ہیں، لہذا انہیں [ رضاکارانہ طور پر سائن اپ کریں ](https://code.org/volunteer) سے پوچھیں. اپنے آجر سے ملوث ہونے کے لئے پوچھیں. [ اس ای میل کو بھیجیں ](٪= resolve_url('/promote/resources#sample-email') ٪) اپنے مینیجر یا سی ای او میں سبھی بورڈ پر حاصل کرنے کیلئے.
+
+## کس طرح تیار کرنا
+
+- کلاس پر توجہ مرکوز کرنے میں مدد کرنے اور اسے کوڈ کا قیام کرنے کے لئے حوصلہ افزائی کرنے کیلئے [ ایک ویڈیو اٹھاو ](٪= حل_ورل( '/ پیومیٹ / ریورسورس#videos') ٪).
+- [ قیامت کا رضاکارانہ ٹول کٹ ](/files/hoc-volunteer-toolkit.pdf) چیک کریں جس میں ایک جائزہ، ٹائم لائن، تیاری کے مواد، اور مارکیٹنگ کے مواد شامل ہیں. [ قیامت کا رضاکارانہ ٹول کٹ ](/files/hoc-volunteer-toolkit.pdf) چیک کریں جس میں ایک جائزہ، ٹائم لائن، تیاری کے مواد، اور مارکیٹنگ کے مواد شامل ہیں.
+- اگر آپ اپنے سیشن کے دوران سبق لینے جا رہے ہیں تو، کم سے کم ایک [ گھنٹے کا کوڈ ٹیوٹوریل ](٪= resolve_url('/learn') ٪) کی کوشش کر کے 30 منٹ خرچ کریں.
+- اگر آپ اپنے سیشن کے دوران سبق لینے جا رہے ہیں تو، کم سے کم ایک [ گھنٹے کا کوڈ ٹیوٹوریل ](٪= resolve_url('/learn') ٪) کی کوشش کر کے 30 منٹ خرچ کریں.
+- [ طلباء کے ساتھ بات چیت کے بارے میں ان تجاویز کا جائزہ ](https://code.org/files/CSTT_Volunteers.pdf).
+- #HourOfCode کے ساتھ فیس بک، ٹویٹر، انسٹاگرام، اور ٹمگریشن پر گفتگو میں شمولیت اختیار کریں.
+- استاد کے ساتھ رابطہ کریں کہ آپ اپنے سیشن کے دوران بات کرنے کی منصوبہ بندی کریں.
+- اگر آپ مجازی رضاکار ہیں تو، A / V اور اس سے قبل اسکرین اشتراک کی صلاحیتیں آزمائیں.
+
+## ضابطہ اخلاق پڑھیں یہ تصویر ضابطہ اخلاق کے مطابق ہے
+
+جب آپ کوڈ آف ایونٹ کی میزبانی کررہے ہیں تو، اپنے دن کی رہنمائی میں مدد کے لئے نمونہ اجنبی کی پیروی کریں. اس سے پہلے، اس بات کو یقینی بنائیں کہ آپ اسکول میں سائن ان کریں اور اس واقعہ کے دن استاد کو سلام کریں. دن کے لئے متفقہ شیڈول کی توثیق کریں اور بات چیت پوائنٹس پر بات چیت کریں.
+
+### **نمونہ ایجنڈا:**
+
+اپنے آپ کو متعارف کروانا اور طالب علموں کے بارے میں مزید جانیں: </ul>
+
+- آپ کیا کام کرتے ہیں، آپ کیا کرتے ہیں، اور آپ کو آپ کے کام کے بارے میں زیادہ سے زیادہ کیا پسند ہے؟
+- کیا یا آپ نے حوصلہ افزائی کی؟
+- آپ کو کمپیوٹر سائنس میں دلچسپی کیسے ملی؟
+- کیا آپ کو ایک مرشد ہے؟
+- ٹیکسی کس طرح ہر ایک کو متاثر کرتا ہے اس بارے میں کہانی کا اشتراک کریں.
   
-  <li>
-    <p>
-      Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
-    </p>
-  </li>
-</ol>
+طالب علموں کے سوالات سے پوچھیں اور ق & amp؛ A کے لئے وقت چھوڑ دیں.</br> 
 
-<h2>
-  Recruit your co-workers to volunteer
-</h2>
-
-<p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
-</p>
-
-<h2>
-  How to prepare
-</h2>
-
-<ul>
-  <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
-  </li>
-  <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  </li>
-  <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
-  </li>
-  <li>
-    If you're visiting a school, complete any background checks or required paperwork.
-  </li>
-  <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
-  </li>
-  <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
-  </li>
-  <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
-  </li>
-  <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
-  </li>
-</ul>
-
-<h2>
-  Day-of Hour of Code Event
-</h2>
-
-<p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
-</p>
-
-<h3>
-  <strong>Sample agenda:</strong>
-</h3>
-
-<table>
-  <tr>
-    <th>
-      Time
-    </th>
+- وہ ملازمتیں کیا دلچسپی رکھتے ہیں، ان کے پسندیدہ ٹیک گیجٹ یا اطلاقات کیا ہیں، اور وہ کس طرح سوچتے ہیں کہ وہ تعمیر کیے جاتے ہیں؟ 
+- کیا طالب علم آپ کے لئے کوئی سوالات رکھتے ہیں؟</ul></td> </tr> 
+    ** کوڈ! </ strong> کے ارد گرد چلیں، سوالات کا جواب دیں، اور انہیں مشکل پہیلیاں کے ذریعے رہنمائی کریں. طالب علموں کو حل کرنے کے بجائے حل کرنے کی کوشش نہ کریں، اس کے بجائے، ان کے سوالات سے پوچھیں تاکہ وہ اپنے آپ کو جواب دے سکیں جو غلط ہو، اور طلباء کو ایک دوسرے سے پوچھیں کہ اگر سوالات ہیں. ایک دوسرے سے سیکھنا ایک عظیم سیکھنے کا موقع ہے.</td> </tr> 
     
-    <th>
-      Agenda item
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      1-5 minutes
-    </td>
+    ** ایک مستقل تبدیلی بنائیں: </ strong> ایک مکمل کمپیوٹر سائنس کے کورس میں قیامت کے کوڈ کو تبدیل کرنے کے بارے میں استاد سے بات کریں! اپنے استاد کے ساتھ [ code.org/yourschool ](https://code.org/yourschool) پر جائیں، یہ اس اسکول کو آج کیا تعلیم دیتا ہے اور ان کی کلاس روم میں سیبورٹر سائنس لانے کے عہد میں ان کی حوصلہ افزائی کرتا ہے. .</td> </tr> </tbody> </table> 
     
-    <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      5-10 minutes
-    </td>
+    ### **واقعہ کے بعد:**
     
-    <td>
-      Introduce yourself and learn more about the students: </ul>
-      
-      <li>
-        What do you work, what do you do, and what do you love most about your job?
-      </li>
-      
-      <li>
-        What or who inspired you?
-      </li>
-      
-      <li>
-        How did you get interested in computer science?
-      </li>
-      
-      <li>
-        Did you have a mentor?
-      </li>
-      
-      <li>
-        Share a story about how tech affects everyone.
-      </li>
-      
-      <br />Ask the students questions and leave time for Q&A.</br> 
-      
-      <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
-      </li>
-      
-      <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
-          <td>
-            30-60 minutes
-          </td>
-          
-          <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
-          </td>
-        </tr>
+    - Code.org کے ساتھ اپنے دوستوں اور کہانیاں دے دیں at@code.org.
+    - اپنے رضاکارانہ گھنٹوں میں آپ کی کمپنی کے رضاکارانہ ٹریکنگ پورٹل میں داخل ہونے کی یاد رکھیں.
+    - سماجی میڈیا #HourOfCode پر اپنے تجربے کے بارے میں اشتراک کریں!
+    - اگر آپ ایونٹ کے دوران تصاویر / ویڈیو لے جاتے ہیں تو، ** خاص طور پر طالب علموں کے </ strong>، اس بات کو یقینی بنائیں کہ آپ اپنے استاد / والدین کی اجازت حاصل کریں تو آپ سوشل میڈیا پر اپنی کہانیوں کو پوسٹ کرنا چاہتے ہیں.</li> 
         
-        <tr>
-          <td>
-            1-3 minutes
-          </td>
-          
-          <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
-          </td>
-        </tr>
+        - اور، ایک ماہ میں واپس چیک کریں: کیا استاد کمپیوٹر سائنس کورس کی پیشکش کرنے میں دلچسپی رکھتا ہے؟ اسے [ انہیں کرنے میں مدد کیلئے وسائل اور پیشہ ورانہ سیکھنے کے مواقع اشتراک کریں ](https://code.org/yourschool).</ul> 
         
-        <tr>
-          <td>
-            After
-          </td>
-          
-          <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
-          </td>
-        </tr></tbody> </table> 
+        ## مہمان اسپیکر کے تکنیکی رضاکارانہ طور پر آپ کیسے منتخب ہوتے ہیں
         
-        <h3>
-          <strong>After the Event:</strong>
-        </h3>
-        <ul>
-          <li>
-            Share your photos and stories with Code.org at giving@code.org.
-          </li>
-          <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
-          </li>
-          <li>
-            Share about your experience on social media #HourOfCode!
-          </li>
-          <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
-          </li>
-          <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
-          </li>
-        </ul>
-        <h2>
-          How you get selected as a technical volunteer of guest speaker
-        </h2>
-        <ul>
-          <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
-          </li>
-          <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
-          </li>
-          <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
-          </li>
-        </ul>
-        <h2>
-          Volunteering during the Hour of Code FAQ
-        </h2>
-        <h3>
-          <strong>I haven't been contacted by a teacher yet. How can I still volunteer?</strong>
-        </h3>
-        <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
-        </p>
-        <h3>
-          <strong>How long do classroom visits last for?</strong>
-        </h3>
-        <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
-        </p>
-        <h3>
-          <strong>What age group is the Hour of Code tutorial appropriate for?</strong>
-        </h3>
-        <p>
-          Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
-        </p>
-        <p>
-          <%= view :signup_button %>
-        </p>
+        - ہمارا [ رضاکارانہ نقشہ ](https://code.org/volunteer/local) پر اساتذہ رضاکاروں کے لئے تلاش کریں گے.
+        - استاد آپ کو منتخب کرے گا اس موقع کو بڑھانے کے لئے اپنی پروفائل کو ممکن حد تک مکمل کرنے کی کوشش کریں.
+        - ایک استاد اس فارم کے ذریعے آپ سے رابطہ کرے گا (آپ کے ای میل ایڈریس کو استاد کے ساتھ کبھی بھی شریک نہیں کیا جائے گا). * اگر آپ کو اساتذہ سے بہت سے درخواستیں موصول ہوئی ہیں تو، آپ اپنی معلومات کو ترمیم کرنے یا رکنیت سے متعلق کسی بھی ای میل کے نیچے دیئے جانے والے کسی بھی ای میل کے نیچے لنک پر کلک کرکے اپنی ترجیحات کو ہمیشہ اپ ڈیٹ کرسکتے ہیں. </ em></li> </ul> 
+            
+            ## ضابطہ اخلاق پڑھیں ویڈیو میں ضابطہ اخلاق کی خلاف ورزی نہیں کی گئی
+            
+            ### **میں نے ابھی تک کسی استاد سے رابطہ نہیں کیا ہے. میں اب بھی رضاکارانہ کیسے کر سکتا ہوں؟**
+            
+            مقامی اسکولوں کی تلاش کرنے کی کوشش کریں اور پرنسپل / استاد / سامنے والے دفتر کو فون کریں اور پوچھیں کہ آپ کیسے مدد کر سکتے ہیں.
+            
+            ### **کتنی دیر کے لئے کلاس روم کا دورہ کرتا ہے؟**
+            
+            ایک غیر ملکی کلاس روم کا دورہ عام طور پر 60-90 منٹ تک ہوتا ہے جبکہ عام طور پر کلاس روم کا دورہ 20-30 منٹ تک ہوتا ہے.
+            
+            ### **کس عمر کے گروپ کے قیام کے قیام کے لئے مناسب ٹیوٹوریل ہے؟**
+            
+            Code.org کوڈ کے سبق کے قیام کو تمام گریڈوں کے تمام گریڈ کی سطح (K-12)، لڑکوں اور لڑکیوں کے طالب علموں کو مشغول کرنے کے لئے کھیل اور پہیلیاں بناتا ہے. سب لوگ، یہاں تک کہ بالغوں کو بھی ہمارے سبق کا لطف اندوز ہوسکتا ہے!
+            
+            <%= view :signup_button %>

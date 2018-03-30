@@ -55,6 +55,24 @@ export default {
 
     createJsWrapperBlock({
       color: SPRITE_COLOR,
+      func: 'setTint',
+      blockText: 'change color of {THIS} to {COLOR}',
+      args: [
+        { name: 'COLOR', type: blockly.BlockValueType.COLOUR },
+      ],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'removeTint',
+      blockText: 'remove color from {THIS}',
+      args: [],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
       func: 'makeNewGroup',
       blockText: 'make a new group',
       args: [],

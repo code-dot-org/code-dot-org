@@ -70,6 +70,12 @@ class GamelabJr < Gamelab
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
   <block type="gamelab_setAnimation" />
+  <block type="gamelab_setTint">
+    <value name="COLOR">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+  <block type="gamelab_removeTint" />
   <block type="gamelab_moveUp" />
   <block type="gamelab_moveDown" />
   <block type="gamelab_moveLeft" />
