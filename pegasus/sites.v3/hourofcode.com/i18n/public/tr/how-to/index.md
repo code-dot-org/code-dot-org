@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Kod-Saati Eğitimi Nasıl Yapılır</h1>
 
-Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! Sınıfınızda Kod-Saati eğitimleri için yardım isterseniz [ yerel bir gönüllü](<%= resolve_url('https://code.org/volunteer/local') %>) bulabilirsiniz.
+Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kul
 
 ## 5. Kod-Saati etkinliğinizi ilham verici bir konuşmacı veya bir video ile başlatın
 
-** Bilgisayardaki olasılıkların genişliği hakkında konuşarak öğrencilerinize ilham vermek için bir [ yerel bir gönüllü davet edin ](%= resolve_url('https://code.org/volunteer/local') %%) bilim. </ strong> Öğrencilerinizle sınıf ziyareti veya video sohbet ederek Kod-Saatiniz ile yardımcı olmaya hazır dünyanın dört bir yanında binlerce gönüllü var!</p> 
+**Invite a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **İlham verici bir video gösterin:**
 
 - Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'lu Code.org orijinal tanıtım videosu. ([1 dakikalık](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakikalık](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakikalık](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları mevcuttur)
-- Daha fazla ilham verici [kaynaklar](<%= resolve_url('https://code.org/inspire') %>) ve [videolar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) bulun.
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Öğrencileriniz ve siz bilgisayar bilimine karşı yeniyseniz, bu hiç sorun değil. İşte size Kod-Saatini tanıtacak birkaç aktivite:**
 
 - Teknolojinin hayatlarımıza olan etkilerini, hem kızların hem de erkeklerin ilgisini çekecek örneklerle açıklayın (Hayat kurtarmak, insanlara yardımcı olmak, insanlara ulaşmak, vb şeyler hakkında konuşun).
 - Sınıfça günlük hayatta kodlama kullanarak yaptığımız şeyleri listeleyin.
-- Kızların bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya](<%= resolve_url('https://code.org/girls') %>) bakın.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
 
 ## 6. Kodlayın!
 
@@ -79,7 +79,7 @@ Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kul
 
 [/col-33]
 
-- Öğrencileriniz için [sertifika basın](<%= resolve_url('https://code.org/certificates') %>).
+- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
 - Öğrencileriniz için ["Kod-Saati!" ](<%= resolve_url('/promote/resources#stickers') %>) çıkartmaları yazdırın.
 - Okulunuz için [özel sipariş t-shirtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
@@ -101,8 +101,7 @@ Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kul
 
 Kodlama Saati teknolojinin nasıl çalıştığı ve yazılım uygulamalarının nasıl yapıldığını öğrenmeye giden yolculukta sadece bir ilk adımdır. Bu yolculuğa devam etmek için:
 
-- Öğrencileri,  çevrimiçi öğrenmeye </ 0> devam etmeye teşvik edin.</li> 
-    
-    - Deneyimli bir bilgisayar bilimci ile 1 günlük yüz yüze atölyeye [katılın](<%= resolve_url('https://code.org/professional-development-workshops') %>). (Sadece ABD eğitmenleri için)</ul> 
-    
-    <%= view :signup_button %>
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

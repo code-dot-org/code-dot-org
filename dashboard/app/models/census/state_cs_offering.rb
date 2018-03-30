@@ -20,15 +20,19 @@ class Census::StateCsOffering < ApplicationRecord
   validates_presence_of :course
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2016, less_than_or_equal_to: 2030}
 
-  SUPPORTED_STATES = [
-    'CA',
-    'GA',
-    'ID',
-    'SC'
-  ].freeze
+  SUPPORTED_STATES = %w(
+    AR
+    CA
+    GA
+    ID
+    NC
+    SC
+  ).freeze
 
   def self.construct_state_school_id(state_code, row_hash)
     case state_code
+    when 'AR'
+      School.construct_state_school_id('AR', row_hash['District LEA'], row_hash['Location ID'])
     when 'CA'
       School.construct_state_school_id('CA', row_hash['DistrictCode'], row_hash['schoolCode'])
     when 'GA'
@@ -36,6 +40,14 @@ class Census::StateCsOffering < ApplicationRecord
       School.construct_state_school_id('GA', row_hash['SYSTEM_ID'], school_id)
     when 'ID'
       School.construct_state_school_id('ID', row_hash['LeaNumber'], row_hash['SchoolNumber'])
+    when 'NC'
+      # School code in the spreadsheet from North Carolina is prefixed with the district code
+      # but our schools data imported from NCES is not.
+      district_code = row_hash['NC LEA Code']
+      school_code = row_hash['NC School Code']
+      # Remove district code prefix from school code.
+      school_code.slice!(district_code)
+      School.construct_state_school_id('NC', district_code, school_code)
     when 'SC'
       School.construct_state_school_id('SC', row_hash['districtcode'], row_hash['schoolcode'])
     else
@@ -73,8 +85,61 @@ class Census::StateCsOffering < ApplicationRecord
     11.01900
   ).freeze
 
+  NC_COURSE_CODES = %w(
+    BL03
+    BL08
+    BL14
+    BP10
+    BP12
+    BP22
+    BW35
+    BW36
+    BW38
+    BW40
+    BW41
+    BW44
+    BX32
+    BX46
+    CS95
+    CU00
+    II21
+    II22
+    TP01
+    WC21
+    WC22
+  ).freeze
+
+  AR_COURSE_CODES = %w(
+    565320
+    565310
+    565120
+    565110
+    565020
+    565010
+    465520
+    465510
+    465340
+    465330
+    465320
+    465310
+    465220
+    465210
+    465140
+    465130
+    465120
+    465110
+    465060
+    465050
+    465040
+    465030
+    465020
+    465010
+  )
+
   def self.get_courses(state_code, row_hash)
     case state_code
+    when 'AR'
+      AR_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'CA'
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
     when 'GA'
@@ -90,6 +155,8 @@ class Census::StateCsOffering < ApplicationRecord
     when 'ID'
       # A column per CS course with a value of 'Y' if the course is offered.
       ['02204',	'03208', '10157'].select {|course| row_hash[course] == 'Y'}
+    when 'NC'
+      NC_COURSE_CODES.select {|course| course == row_hash['4 CHAR Code']}
     when 'SC'
       # One source per row
       [UNSPECIFIED_COURSE]

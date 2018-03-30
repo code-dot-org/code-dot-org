@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Lesho një deklaratë për shtyp.**[Përdor këtë shembull](%= resolve_url('/promote/official-press-release') %) si një udhëzues.
 
-9. **Lidhu në nivel lokal.** Vizito [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) për të mësuar më shumë rreth edukimit në shkencën kompjuterike në shtetin tuaj. Nënshkruaj peticionin këtu dhe do të marrësh përditësimet nga Code.org për përpjekjet e tyre lokale, shtetërore dhe federale.
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. Nënshkruaj peticionin këtu dhe do të marrësh përditësimet nga Code.org për përpjekjet e tyre lokale, shtetërore dhe federale.
 
 <%= view :signup_button %>

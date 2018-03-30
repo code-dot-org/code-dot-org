@@ -35,13 +35,13 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i h
 - Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh var med i den opprinnelige lanseringsvideoen for Code.org (Det finnes versjoner på [ett minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutter](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutter](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Den internasjonale [Kodetimen-videoen](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama oppfordrer alle elever til å lære datavitenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Finn flere inspirerende [ressurser](%= resolve_url('https://code.org/inspire') %) og [videoer](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Det er helt greit om hverken du eller barnet ditt har noen erfaring med informatikk fra før. Her er noen ideer til hvordan du kan presentere Kodetimen:
 
 - Forklar hvordan teknologi påvirker livene våre, gjerne med eksempler som både jenter og gutter kan kjenne seg igjen i (snakk f. eks. om å redde liv, hjelpe andre eller knytte mennesker sammen).
 - Fortell om ting vi bruker i hverdagen som inneholder kode.
-- Vi har samlet [noen tips](%= resolve_url('https://code.org/girls') %) for å få jenter mer interessert i informatikk.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Trenger du flere ideer og forslag? I vårt [forslag til læringsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) finner du tips og triks fra erfarne lærere.
 
@@ -61,7 +61,7 @@ Det er greit å svare:
 
 ## 6) Feiring
 
-[Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) til barnet ditt (og deg!).
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
 
@@ -73,7 +73,7 @@ Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknag
 
 Kodetimen er bare første steget på en reise for å lære seg mer om hvordan teknologi fungerer og hvordan du lager dine egne programmer. For å fortsette på denne reisen:
 
-- Oppmuntre barnet til å fortsette [å lære mer på Internett](%= resolve_url('https://code.org/learn/beyond') %).
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - [Vær pådriver](%= resolve_url('/promote') %) for informatikkutdanning i ditt barns skolekrets.
 
 <%= view :signup_button %>

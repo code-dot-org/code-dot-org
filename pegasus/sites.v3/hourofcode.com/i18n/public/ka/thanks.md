@@ -44,7 +44,7 @@ social:
 
 ## 2. მოძებნეთ ადგილობრივი მოხალისე, რომელიც თქვენი ღონისძიების ჩატარებაში დაგეხმარებათ.
 
-[გამოიკვლიეთ ჩვენი მოხალისეების რუკა](<%= resolve_url('https://code.org/volunteer/local') %>) და იპოვეთ მოხალისე, რომელიც მოვა თქვენს კლასში ან ვიდეო–ჩატით მოუყვება თქვენს მოსწავლეებს კომპიუტერული მეცნიერების შესაძლებლობებზე.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. დაგეგმეთ თქვენი კოდის ერთი საათი
 
