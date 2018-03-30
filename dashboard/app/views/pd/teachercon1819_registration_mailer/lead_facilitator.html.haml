@@ -8,10 +8,12 @@
 - if @registration.accepted?
   %p
     We look forward to seeing you this summer! You will receive more information about
-    travel approximately six weeks before TeacherCon. In the meantime, please visit
-    - info_link = "code.org/educate/teachercon/#{@registration.sanitize_form_data_hash[:city].downcase}"
-    = link_to(info_link, "https://#{info_link}")
-    for more information.
+    travel approximately six weeks before TeacherCon. In the meantime, please
+    %strong
+      do not
+    book your flight, and make sure to contact
+    = link_to("facilitators@code.org", "mailto:facilitators@code.org")
+    with any questions
 - else
   %p
     We noticed you responded that you are not able to attend Teachercon this year.
