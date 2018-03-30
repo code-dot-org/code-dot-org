@@ -36,7 +36,7 @@ module Api::V1::Pd
       partner = create :program_manager
 
       assert_no_difference 'Pd::Teachercon1819Registration.count' do
-        put :create_partner, params: {
+        put :create_partner_or_lead_facilitator, params: {
           form_data: build(:pd_teachercon1819_registration_hash, :partner_accepted),
           regionalPartnerId: partner.regional_partners.first.id
         }
@@ -45,7 +45,7 @@ module Api::V1::Pd
 
       assert_creates Pd::Teachercon1819Registration do
         sign_in partner
-        put :create_partner, params: {
+        put :create_partner_or_lead_facilitator, params: {
           form_data: build(:pd_teachercon1819_registration_hash, :partner_accepted),
           regionalPartnerId: partner.regional_partners.first.id
         }
