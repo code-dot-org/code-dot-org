@@ -35,4 +35,14 @@ class Pd::Teachercon1819RegistrationMailer < ActionMailer::Base
       subject: "We've received your TeacherCon registration form"
     )
   end
+
+  def lead_facilitator(registration)
+    @registration = registration
+
+    mail(
+      to: registration.user.email,
+      from: 'Sarah Fairweather <facilitators@code.org>',
+      subject: "We've received your TeacherCon registration form"
+    )
+  end
 end

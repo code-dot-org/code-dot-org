@@ -130,7 +130,10 @@ class Census::CensusSummary < ApplicationRecord
       teacher_or_admin: nil,
       not_teacher_or_admin: nil,
     }
-    has_inconsistent_surveys = false
+    has_inconsistent_surveys = {
+      teacher_or_admin: false,
+      not_teacher_or_admin: false,
+    }
 
     [:teacher_or_admin, :not_teacher_or_admin].each do |role|
       unless counts[role][:no] == 0 && counts[role][:yes] == 0
@@ -139,7 +142,7 @@ class Census::CensusSummary < ApplicationRecord
         elsif counts[role][:yes] == 0
           consistency[role] = "NO"
         else
-          has_inconsistent_surveys = true
+          has_inconsistent_surveys[role] = true
         end
       end
     end
@@ -181,6 +184,7 @@ class Census::CensusSummary < ApplicationRecord
       # without a row is counted as a NO
       if high_school &&
          state_offerings.empty? &&
+         Census::StateCsOffering.infer_no(school.state) &&
          Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
          state_years_with_data[school.state].include?(school_year)
         audit[:state_cs_offerings].push(nil)
@@ -237,12 +241,13 @@ class Census::CensusSummary < ApplicationRecord
 
   #
   # We will set teaches_cs to the first value we find in this order:
+  # 0 Overrides
   # 1	This year's AP data
   # 2	This year's IB data
   # 3	This year's surveys from teachers/administrators - consistent
   # 4	State data
-  # 5	This year's surveys from non-teachers/admins - consistent
-  # 6	This year's surveys - inconsistent
+  # 5	This year's surveys from teachers/admins - inconsistent
+  # 6	This year's surveys from non-teachers/admins
   # 7	teaches_cs from last year
   # 8	teaches_cs from 2 years ago
   # 9 nil
@@ -284,24 +289,19 @@ class Census::CensusSummary < ApplicationRecord
     result = conditional_result('state_offering', state_summary, state_summary, state_value, result, details)
 
     result = conditional_result(
-      'consistent_non_teacher_surveys',
-      submissions_summary[:consistency][:not_teacher_or_admin],
-      submissions_summary[:consistency][:not_teacher_or_admin],
-      submissions_summary[:counts][:not_teacher_or_admin],
+      'inconsistent_teacher_surveys',
+      submissions_summary[:has_inconsistent_surveys][:teacher_or_admin],
+      'MAYBE',
+      submissions_summary[:counts][:teacher_or_admin],
       result,
       details
     )
 
     result = conditional_result(
-      'inconsistent_surveys',
-      submissions_summary[:has_inconsistent_surveys],
-      'MAYBE',
-      {
-        yes: submissions_summary[:counts][:teacher_or_admin][:yes] +
-          submissions_summary[:counts][:not_teacher_or_admin][:yes],
-        no: submissions_summary[:counts][:teacher_or_admin][:no] +
-        submissions_summary[:counts][:not_teacher_or_admin][:no],
-      },
+      'non_teacher_surveys',
+      submissions_summary[:consistency][:not_teacher_or_admin] || submissions_summary[:has_inconsistent_surveys][:not_teacher_or_admin],
+      submissions_summary[:consistency][:not_teacher_or_admin] || 'MAYBE',
+      submissions_summary[:counts][:not_teacher_or_admin],
       result,
       details
     )
