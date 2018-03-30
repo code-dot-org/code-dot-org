@@ -259,6 +259,13 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
+  generator.draw_turn_inline = function () {
+    // Generate JavaScript for turning left or right.
+    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    return 'Turtle.' + this.getTitleValue('DIR') +
+        '(' + value + ', \'block_id_' + this.id + '\');\n';
+  };
+
 blockly.Blocks.point_to = {
     // Block for pointing to a specified direction
     helpUrl: '',
@@ -333,13 +340,6 @@ blockly.Blocks.point_to_direction_non_param = {
   generator.point_to_direction_non_param = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
     return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value}, 'block_id_${this.id}');\n`;
-  };
-
-  generator.draw_turn_inline = function () {
-    // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
-    return 'Turtle.' + this.getTitleValue('DIR') +
-        '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
 
   blockly.Blocks.variables_get_counter = {
