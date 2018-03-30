@@ -5,121 +5,121 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school classes and clubs
+# اسکول کی جماعتوں کے بعد اور کلب میں ایک گھنٹہ کے لئے کوڈ کیسے سکھایا جائے
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= resolve_url('https://code.org/volunteer/local') %>) to help run an Hour of Code in your class.
+تحریک میں شامل ہوں اوردیے گئے اقدامات کی مدد سے، طلبا کے ایک گروپ کو کمپیوٹر سائنس کے ساتھ پہلا گھنٹہ متعارف کرایئں. کوڈ گھنٹہ چلانا آسان ہے، حتیٰ کہ مبتدی کے لیئے بھی! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. اس ویڈیو پر کس طرح دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial
+## 2. سبق کا انتخاب کریں مضمون | مضمون کے لیَےدرخواست عنوان 2 XPath: /h2[2]
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [انہیں آزمائیں](<%= resolve_url('/learn') %>)
+ہم مختلف قسم کے شراکت داروں کے لئے مختلف قسم کے شراکت داروں کی تخلیق کے لئے مختلف قسم کے [ تفریح، گھنٹۂ سبق ](٪= solution_url('/learn') ٪) فراہم کرتے ہیں. [انہیں آزمائیں](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+<مضبوط> کوڈ کا تمام گھنٹے سبق </ strong> کو منتظمین کے لئے کم سے کم وقت کی ضرورت ہوتی ہے، اور خود ہدایت کی جاتی ہے - بچوں کو اپنی رفتار اور مہارت کی سطح پر کام کرنے کی اجازت دیتا ہے.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+** کوڈ کے قیام کے بعد آپ کے لئے ایک سبق کی منصوبہ بندی کی ضرورت ہے؟ </ strong> اس [ ٹیمپلیٹ کو چیک کریں ](/files/AfterschoolEducatorLessonPlanOutline.docx)!</p> 
 
-## 3. Promote your Hour of Code
+## 3. اپنے قیامت کو فروغ دینا
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+اپنا گھنٹہ کوڈ <a href="٪= حل_ورل('/ پیومیٹ')٪ کو فروغ دیں </a> ان آلات کے ساتھ </a> اور دوسروں کی حوصلہ افزائی کریں کہ ان کے اپنے واقعات کی میزبانی کریں.
 
-## 4. Plan your technology needs - computers are optional
+## 4. اپنی ٹیکنالوجی کی ضروریات کی منصوبہ بندی کریں - کمپیوٹر اختیاری ہیں
 
-آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. لیکن آپ <مضبوط> نہیں </ strong> ہر ایک بچے کے لئے ایک کمپیوٹر کی ضرورت ہے، اور آپ بھی کمپیوٹر کے بغیر کوڈ کا قیام بھی کر سکتے ہیں.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+اس بات کو یقینی بنانا کہ طالب علموں کے کمپیوٹر یا آلات پر سبق آزمائیں تاکہ وہ براؤزر پر آواز اور ویڈیو کے ساتھ مناسب طریقے سے کام کریں. ** کم بینڈوڈتھ کیا ہے؟ </ strong> کلاس کے سامنے ویڈیو دکھانے کا منصوبہ ہے، لہذا ہر طالب علم اپنی اپنی ویڈیو ڈاؤن لوڈ نہیں کررہے ہیں. یا غیر مقفل / آف لائن سبق کی کوشش کریں.</p> 
 
-اپنی کلاس کے لیے ھیڈ فون فراہم کریں، یا اسٹوڈینٹس سے کہیں کہ وہ اپنے ہیڈفونز اپنے ساتھ لے کر آئیں، جبکہ آپ کا منتخب کردہ ٹیٹوریئل ساؤنڈ کے ساتھ بہترین کام کرتا ہو۔
+اپنی کلاس کے لیے ھیڈ فون فراہم کریں، یا اسٹوڈینٹس سے کہیں کہ وہ اپنے ہیڈفونز اپنے ساتھ لے کر آئیں، جبکہ آپ کا منتخب کردہ ٹیٹوریئل ساؤنڈ کے ساتھ بہترین کام کرتا ہو۔.
 
-کافی ڈیوائسز نہیں ہیں؟ </strong> تو [پیئر پروگرامنگ](https://www.youtube.com/watch?v=vgkahOzFH2Q) استعمال کریں۔ جب اسٹوڈینٹس آپس میں پارٹنرز بنتے ہیں، تو وہ ایک دوسرے کی مدد کرتے ہیں اور ٹیچر پر کم انحصار کرتے ہیں۔ وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔
+کافی ڈیوائسز نہیں ہیں؟ </strong> تو [پیئر پروگرامنگ](https://www.youtube.com/watch?v=vgkahOzFH2Q) استعمال کریں۔. جب اسٹوڈینٹس آپس میں پارٹنرز بنتے ہیں، تو وہ ایک دوسرے کی مدد کرتے ہیں اور ٹیچر پر کم انحصار کرتے ہیں۔. وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. ایک متاثر کن ویڈیو کے ساتھ اپنے قیامت کا کوڈ شروع کریں   شراکت | درخواست کے حوالے
 
-پارٹیسیپنٹ کو متاثر کرتے ہوئے اپنا آور-آف-کوڈ دل جمعی سے شروع کریں اور انہیں بتائیں کہ کمپیوٹر سائنس ہماری روزمرہ زندگی کے ہر حصہ پر کس طرح اثرانداز ہوسکتی ہے۔
+پارٹیسیپنٹ کو متاثر کرتے ہوئے اپنا آور-آف-کوڈ دل جمعی سے شروع کریں اور انہیں بتائیں کہ کمپیوٹر سائنس ہماری روزمرہ زندگی کے ہر حصہ پر کس طرح اثرانداز ہوسکتی ہے۔.
 
 **کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- اصل Code.org لانچ ویڈیو، بل گیٹس، مارک زکربربر اور این بی اے اسٹار کرس بوش کی خاصیت کرتے ہیں - [ 1 منٹ </ a ہیں. >، [ 5 منٹ ](https://www.youtube.com/watch؟v=nKIu9yen5nc)، اور <a href = "https://www.youtube.com/watch؟v = dU1xS07N-FA "> 9 منٹ ](https://www.youtube.com/watch؟v=qYZF6oIZtfc) دستیاب ورژن دستیاب ہیں.
+- [ ورلڈ وائڈ ویڈیو کا قیام ](https://www.youtube.com/watch؟v=KsOIlDT145A)
+- [ صدر اوباما نے تمام طالب علموں کو کمپیوٹر سائنس سیکھنے کے لئے بلایا ](https://www.youtube.com/watch؟v=6XvmhE1J9PY).
+- مزید متاثر کن ویڈیوز تلاش کریں [ یہاں ](https://www.youtube.com/playlist؟list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**یہ ٹھیک ہے اگر آپ کمپیوٹر سائنس میں بالکل نئے برانڈ ہیں. آپ کے قیامت کا کوڈ سرگرمی متعارف کرانے کیلئے کچھ خیالات یہاں ہیں:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
+- طریقوں کی ٹیکنالوجی ہماری زندگیوں پر اثر انداز کرتی ہے، مثال کے طور پر لڑکوں اور لڑکیوں دونوں کی پرواہ کریں گے (اطلاقات اور ٹیکنالوجی کے بارے میں گفتگو کریں جو زندگی کو بچانے کے لئے استعمال کیا جاتا ہے، لوگوں کی مدد کریں، لوگوں سے رابطہ قائم کریں).
 - روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- کمپیوٹر سائنس میں دلچسپی رکھنے والے لڑکیوں کو حاصل کرنے کیلئے تجاویز ملاحظہ کریں ["> یہاں ](٪= resolve_url('https://code.org/girls')).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+** زیادہ رہنمائی کی ضرورت ہے؟ </ strong> اس [ ٹیمپلیٹ سبق کا منصوبہ ](/files/AfterschoolEducatorLessonPlanOutline.docx) ڈاؤن لوڈ کریں.</p> 
 
-## 6. Code!
+## 6. کوڈ!
 
 **ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
+- سفید تخت پر ٹیوٹوریل لنک لکھیں. شراکت داروں کی تعداد کے تحت [ آپ کے منتخب کردہ ٹیوٹوریل کیلئے معلومات ](٪= solution_url('/learn') ٪) میں درج کردہ لنک تلاش کریں.
 
-**When someone comes across difficulties it's okay to respond:**
+**جب کوئی مشکلات میں آتا ہے تو جواب دینا ٹھیک ہے:**
 
 - مجھے معلوم نہیں۔ آئیں مل کر اس کا پتہ لگاتے ہیں"۔"
 - ٹیکنالوجی ہمیشہ اس طرح کام نہیں کرتی جیسا کہ ہم چاہتے ہیں"۔"
 - پروگرامنگ سیکھنا بالکل ایسے ہی ہے جیسا کوئی نئی زبان سیکھنا؛ جس پر آپ فوراً ہی رواں نہیں ہوسکتے"۔"
 
-**اگر کوئی اسے قبل از وقت ختم کر لے تو؟**
+**اگر کوئی اسے قبل از وقت ختم کر لے تو?**
 
-- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
-- Or, ask those who finish early to help others who are having trouble.
+- شرکاء کو حوصلہ افزائی کریں کہ [ hourofcode.com/learn ](٪= حل_url('/learn') ٪) کی ایک اور گھنٹہ کوڈ کی سرگرمی کی کوشش کریں
+- یا، ان سے پوچھیں جو دوسروں کی مدد کرنے کے لۓ جلدی ختم کردیتے ہیں جو مصیبت میں ہیں.
 
-[col-33]
+[کال -33]
 
 ![](/images/fit-250/highschoolgirls.jpeg)
 
-[/col-33]
+[/ Col-33]
 
-[col-33]
+[کال -33]
 
 ![](/images/fit-300/group_ar.jpg)
 
-[/col-33]
+[/ Col-33]
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate
+## 7. جشن منائیں
 
-[col-33]
+[کال -33]
 
 ![](/images/fit-300/boy-certificate.jpg)
 
-[/col-33]
+[/ Col-33]
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
-- ["میں نے اپنا آور-آف-کوڈ مکمل کرلیا ہے"](<%= resolve_url('/promote/resources#stickers') %>) اپنے اسٹوڈینٹس کے لیے اسٹیکرز پرنٹ کریں۔
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
+- ["میں نے اپنا آور-آف-کوڈ مکمل کرلیا ہے"](<%= resolve_url('/promote/resources#stickers') %>) اپنے اسٹوڈینٹس کے لیے اسٹیکرز پرنٹ کریں۔.
+- آپ کے اسکول کے لئے [ آرڈر اپنی مرضی کے مطابق ٹی شرٹس ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
 
-[col-33]
+[کال -33]
 
 ![](/images/fit-260/highlight-certificates.jpg)
 
-[/col-33]
+[/ Col-33]
 
 <p style="clear:both">&nbsp;</p>
 
-## Other Hour of Code resources for educators
+## دیگر وسائل کوڈ وسائل کے لئے وسائل
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-- [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔ <% end %>
+- چیک کریں <a href="http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for- unsuccessful-educators-51273466"> ماضی کے کوڈ منتظمین سے بہترین طریقوں </a>.
+- ہمارے [ قیامت کے کوڈ کے لئے رہنما کے رہنمائی ](https://youtu.be/EJeMeSW2-Mw) کی ریکارڈنگ دیکھیں.
+- دیگر منتظمین سے مشورہ، بصیرت اور تعاون حاصل کرنے کیلئے [ قیامت کا کوڈ فورم ](http://forum.code.org/c/plc/hour-of-code) ملاحظہ کریں. <% if @country == 'us' %>
+- [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔. <% end %>
 
-## آور-آف-کوڈ کے بعد کیا ہو گا؟
+## آور-آف-کوڈ کے بعد کیا ہو گا?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+کوڈ کا قیام صرف کس طرح ٹیکنالوجی کام کرتا ہے اور سافٹ ویئر ایپلی کیشنز کو کیسے بنانے کے بارے میں مزید جاننے کے لئے سفر پر پہلا قدم ہے. اس سفر کو جاری رکھنے کے لئے:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

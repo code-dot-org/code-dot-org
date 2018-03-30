@@ -12,9 +12,16 @@ class Pd::Teachercon1819RegistrationMailer < ActionMailer::Base
 
   def facilitator(registration)
     @registration = registration
+    email = registration.user.email
+    @location_city =
+      if registration.pd_application_id?
+        @registration.pd_application.workshop.location_city
+      else
+        @registration.sanitize_form_data_hash[:city]
+      end
 
     mail(
-      to: registration.pd_application.user.email,
+      to: email,
       from: 'Sarah Fairweather <facilitators@code.org>',
       subject: "We've received your TeacherCon registration form"
     )
