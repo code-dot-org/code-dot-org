@@ -254,7 +254,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_yes,
       :with_three_years_ago_teaches_yes,
-      state: Census::StateCsOffering::INFERRED_NO_BLACKLIST.first,
+      state: Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.first,
       school_year: school_year
     validate_summary(school, school_year, "MAYBE")
   end
