@@ -122,10 +122,6 @@ designMode.attachElement = function (element) {
   designMode.editElementProperties(element);
 };
 
-designMode.onCopyElementToScreen = function (element) {
-  debugger;
-};
-
 designMode.editElementProperties = function (element) {
   highlightElement(element);
 
@@ -552,7 +548,8 @@ function duplicateScreen(element) {
   return newScreen;
 }
 
-designMode.copyElementToScreen = function (element, sourceScreen, destScreen) {
+designMode.onCopyElementToScreen = function (element, destScreen) {
+  const sourceScreen = $(element);
   designMode.changeScreen(destScreen);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
@@ -1237,7 +1234,7 @@ designMode.renderDesignWorkspace = function (element) {
     element: element || null,
     elementIdList: Applab.getIdDropdownForCurrentScreen(),
     handleChange: designMode.onPropertyChange.bind(this, element),
-    onCopyElementToScreen: designMode.onCopyElementToScreen.bind(this),
+    onCopyElementToScreen: designMode.onCopyElementToScreen.bind(this, element),
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
     onDuplicate: designMode.onDuplicate.bind(this, element),
