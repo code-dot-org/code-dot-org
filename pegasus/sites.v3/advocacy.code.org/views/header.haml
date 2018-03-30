@@ -2,18 +2,18 @@
 
 #language_dir{class: language_dir_class}
   #pageheader-wrapper
-    #pageheader{style: "background-color: initial; position: absolute"}
+    #pageheader
       .content
         #left
           #logo-wrapper
             %a.linktag#logo-signedin{href: CDO.code_org_url}
-              %img#logo{:src=>'/images/logo.png'}
+              %img#logo{src: '/images/logo.png'}
 
         #right
-          %a{:href=>CDO.code_org_url("/")}
-            %button{style: "background-color: initial; border-color: white; border-width: 2px"}
+          %a{href: CDO.code_org_url("/")}
+            %button.header-button
               Back to Code.org
 
-      #clear{:style=>'clear:both'}
+      #clear{style: 'clear:both'}
 
-#clear{:style=>'clear:both'}
+#clear{style: 'clear:both'}

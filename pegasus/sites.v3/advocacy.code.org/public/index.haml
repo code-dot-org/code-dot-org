@@ -17,17 +17,17 @@ video_player: false
 
 #homepage
 
-  #fullwidth{style: "position: relative"}
+  #fullwidth
     = view :header
 
-    .banner{style: "background-image: url(/images/advocacy-banner.jpg); height: 400px; background-repeat: no-repeat; background-size: cover; background-position: 50% 40%; color: white; text-align: center; xposition: absolute; top: 0; width: 100%; z-index: -5"}
-      .container_responsive{style: "padding-top: 70px"}
-        %h1{style: "color: white"} Advocate for computer science education
+    .banner
+      .container_responsive
+        %h1 Advocate for computer science education
         Bringing together more than 50 industry, non-profit, and advocacy organizations, the Code.org Advocacy Coalition advances the development of policies to make Computer Science a fundamental part of the K-12 education system.
 
-        %div{style: "padding-top: 80px"}
+        .learn-more
           %a{href: CDO.code_org_url("/files/CoalitionOnePager.pdf")}
-            %button{style: "background-color: initial; border-color: white; border-width: 2px"}
+            %button.header-button
               Learn more
 
       .clear{style: "clear:both"}
@@ -41,12 +41,12 @@ video_player: false
 
     .clear{style: "clear:both"}
 
-    %h2{style: "color: grey; text-align: center"}
+    %h2
       Drive the change in your state
 
     =inline_css 'homepage.css'
 
-    #audienceblocks{style: "text-align:center; margin-top:0px"}
+    #audienceblocks
       - blocks = AdvocacySite.get_blocks(request)
       - blocks.each do |block|
         .block
@@ -55,7 +55,7 @@ video_player: false
 
     .clear{style: "clear: both"}
 
-    %h2{style: "color: grey; text-align: center"} Our Coalition
+    %h2 Our Coalition
 
     = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
 
