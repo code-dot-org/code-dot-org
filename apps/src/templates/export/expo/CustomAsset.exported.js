@@ -1,9 +1,6 @@
-'use strict';
-
 import { NativeModules, PixelRatio, Platform } from 'react-native';
 import AssetRegistry from 'AssetRegistry';
 import AssetSourceResolver from 'AssetSourceResolver';
-import resolveAssetSource from 'resolveAssetSource';
 
 // On Android we pass the manifest in JSON form so this step is necessary
 const { ExponentConstants } = NativeModules;

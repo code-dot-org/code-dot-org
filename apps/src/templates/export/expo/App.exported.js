@@ -15,13 +15,16 @@ export default class App extends React.Component {
     this.state = {};
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.prepareAssets();
+  }
+
+  async prepareAssets() {
     const downloadAssets = packagedFiles.map(({ module, fileName }) =>
       CustomAsset.fromModule(module, fileName)
     );
     await CustomAsset.loadAsyncAssets(downloadAssets);
     const indexHtmlIndex = packagedFiles.findIndex(({ fileName }, index) => fileName === 'index.html');
-    await CustomAsset.loadAsyncAssets(downloadAssets);
     this.setState({
       indexUri: downloadAssets[indexHtmlIndex].localUri,
     });
