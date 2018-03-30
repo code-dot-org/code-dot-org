@@ -50,7 +50,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
       return unless pd_application.try(:workshop) && pd_application.workshop.teachercon?
       Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
     else
-      Pd::Teachercon1819RegistrationMailer.facilitator(self).deliver_now
+      Pd::Teachercon1819RegistrationMailer.lead_facilitator(self).deliver_now
     end
   end
 
