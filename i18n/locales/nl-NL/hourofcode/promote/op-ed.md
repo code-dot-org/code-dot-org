@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Ga naar [< % resolve_url('code.org/promote') = %>](%= resolve_url('https://code.org/promote') %) om de specifieke informatie te vinden over programmeren.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
 **Titel: Informatica... Waar de banen zijn**
 

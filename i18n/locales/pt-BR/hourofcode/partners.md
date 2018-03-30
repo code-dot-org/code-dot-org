@@ -11,7 +11,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Parceiros da América Latina
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Parceiros da África
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Parceiros da Austrália
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Parceiros da China
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Parceiros da França
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Parceiros da Indonésia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Parceiros da Irlanda
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'in' %>
 
-# India Partners
+# Parceiros da Índia
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Parceiros do Japão
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -107,7 +107,7 @@ O trabalho e a dedicação dos dois comitês contribuíram para o sucesso da Hor
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Parceiros do Canadá
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 

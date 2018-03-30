@@ -7,238 +7,90 @@ nav: how_to_nav
 
 # Könüllülər üçün təlimat
 
-### Make a difference in a classroom today!
+### Bu gün sinifdə fərq yarat!
 
 ## Nəyə görə könüllü olmalısınız?
 
-Check out some testimony from past volunteers:
+Keçmiş könüllülərdən bəzi bəyanatlar:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
+- "Təcrübəmin ən yaxşı hissəsi, bütün sinifin qadınlar və fərqli irqdən insanların olmasıydı. Bu, sənayinin gələcəyi üçün uşaqları daha çox həyacanlandırıb, motivasiya etmək üçün gözəl bir nümunədir."
+- "Xüsusilə gənc qızları texnologiyaya təşviq etməkdən zövq aldım. Öz sahəmdə, bizdən sonrakı nəsilə kömək etdiyimi hiss etdim."
+- "Uşaqların nə gədər həyacanlı olduğunu görmək çox xoş idi.". "Ən gözəl nümunələrdən biri, dərs sahəsində müvəffəqiyyətsiz olan bəzi şagirdlər, inkişaf etdirici kimi düşünüb, başqa şagirdlərə kömək edərək özlərini inamlı hiss edecek yer yaratmaları müəllimlərin diqqətindən yayınmamışdır."
 
-## Anyone can volunteer
+## Hər kəs könüllü ola bilər
 
-**Volunteers and speakers in tech**: Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+**Könüllülər ve spikerlər texnoloji sahədə**: Texnologiya və yaxud CS'lə əlaqəniz varmı? Əgər program mühəndisi olaraq, və ya texnoloji şirkətdə hər hansı bir vəzifədə (qeyri-mühəndis və ya mühəndis) işləyirsənizsə, və ya informatika dərsləri almışsanızsa, şagirdlərə ilham verməyə kömək edə bilərsiz! Bir çox şagird texnologiya sahəsində işləyən birisiylə tanışmamışlar və bizim müəllimlər, mütəxəssis və universitet tələbələriylə əlaqəyə keçməyi sevirler.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+Siz sinifdə qonaq spiker olaraq cıxış edə bilərsiz, ve ya bir çox fəaliyyətin həyata keçirilməsində müəllimə kömək edə bilərsiz. Sinifləri ziyarət edib, şagirdləri informatika dərsini öğrənməsi üçün motivasiya edə bilərsiz.
 
-<a href="https://code.org/volunteer/engineer"><button>Sign up today to be a tech volunteer!</button></p> 
+<button>Könüllü olmaq üçün bu gün qeydiyyatdan keçin!</button></p> 
 
-<p>
-  <strong>Anyone passionate about expanding opportunity</strong>: Do you believe that learning computer science can open doors of opportunity for students? Help out in a local classroom or organize an after school event! You don’t need any background in computer science to host an Hour of Code. And, just offering to help out is often enough to convince your child’s teacher, a friend, or a club to try an hour.
-</p>
+**Bu fürsətlə maraqlananlar üçün**: Sizcə, informatika öyrənmək, şagirdlərə fürsət qapılarını açar mı? Siniflərdə kömək edin, ve ya dərslərdən sonra tədbir təşkil edin! Kod saatını keçmək üçün, informatika ixtisasının olması şərt değil. Sadəcə köməğinizi təklif etmək, bir çox halda uşaqın müəllimini, dostu, ve ya klubu bir saat çalışmaya kifayət edir.
 
-<p>
-  How do you get started?
-</p>
+Necə başlaya bilərsiniz?
 
-<ol>
-  <li>
-    <p>
-      <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
-    </p>
-  </li>
+1. [ Bu emaili ](<%=resolve_url('/promote/resources#help-schools')%>) uşağın müəlliminə Kod Saatında onlara kömək edecəğivizi təklif ederek gonderin.
+
+2. Dərslərdən sonra Kod Saatı tədbirini keçirməyi təklif edin. [Bu təlimatdan](<%=resolve_url('/how-to')%>) sizə kömək etmək üçün istifadə ediniz.
+
+## İş yolşdaşlarıvızı da könüllü olmaya çağırınız
+
+Dostlarıvıza ve iş yolşdaşlarıvıza Kod Saatı haqqında bildiriniz. Minlərlə müəllim könüllü axtarır, buna görə onlardan [könüllü olmaq üçün qeydiiatdan keçməyi deyiniz](https:code.org/volunteer). İşçilərivizdən də qatılmağı xaiş ediniz. [ Bu emaili ](<%= resolve_url('/promote/resources#sample-email') %>) menecer ve ya direktoruvuza göndərin ki, hər kəsi dəvət edə bilək.
+
+## Necə hazırlaşmalı
+
+- Fikirlərini bir yerə toplaya bilməkləri və Kod Saatını etməyə həyacanlandırmaq üçün sinifə [ bir video seçib ](<%= resolve_url('/promote/resources#videos') %>) göstəriniz.
+- Analiz, cədvəl, hazırlıq materialları, və marketinq materiallarını özündə içərən [Kod Saatı Könüllü Rəhbərinə](/files/hoc-volunteer-toolkit.pdf) baxınız. Könüllü təcrübəsinə hazır olmaq üçün sizə lazım olacaq hər şey!
+- Əgər siz, sizə ayrılmış olan vaxt ərzində dərsliklərdən istifadə edəcəksinizsə, minimum 30 dəqiqəsini [ Kod Saatı dərsliyinə ](<%=resolve_url('/learn') %>) ayırınız.
+- Əgər siz məktəbi ziyarət edəcəksinizsə, tələb olan sənədləri əvvəlcədən hazırlayın.
+- Şagirdlərlə qarşılıqlı əlaqə haqqında fikir sahibi olmaq üçün [ verilən örnəkləri nəzərdən keçirin](https://code.org/files/CSTT_Volunteers.pdf).
+- Facebook, Twitter, Instargram, və Tumblr sosial şəbəkələrində #KodSaatı (#HourOfCode) ilə qrup sohbətinə qatılın.
+- Sizə ayrılmış sessiya zamanında nə haqqında danışacağınıza dair planınızı müəllimlə əlaqə saxlayaraq bildiriniz.
+- Əgər siz virtual könüllüysəniz, əvvəlcədən kompüterinizin A/V və ekran paylaşma özəlliyini test edin.
+
+## Kod Saatı Tədbirinin Günü
+
+Əgər Kod Saatı tədbirinə ev sahibliyi edirsinizsə, sizə yardım məqsədiylə hazırlanmış və aşağıda təqdim edilmiş tədbir programına riayət ediniz. Lakin öncəsində qeydiyatdan keçdiyinizdən və müəllimlə görüşdüyünüzdən əmin olunuz. Qərar qılınmış günlük cədvəli təsdiqlədin və zəruri yerləri mübahisə ediniz.
+
+### **Tədbir programı örnəyi:**
+
+Özüvüzü təqdim ediniz və şagirdlər haqqında daha çox məlumat öyrəniniz: </ul>
+
+- Nə işlə məşğul olduğunuz, işinizə dair ən çox nəyi sevdiğiniz haqqında məlumat veriniz.
+- Siz nələr və kimlər ilham verib?
+- İnformatika sahəsinə marağınız necə yarandı?
+- Bu sahədə öncədən rəhbəriniz olub mu?
+- Texnologiyanın hərkəsə nece təsir etdiyi haqqında hekayə paylaşın.
   
-  <li>
-    <p>
-      Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
-    </p>
-  </li>
-</ol>
+Şagirdlərə sual verin və S&C'a (Sual və Cavab) vaxt ayırınız.</br> 
 
-<h2>
-  Recruit your co-workers to volunteer
-</h2>
-
-<p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
-</p>
-
-<h2>
-  How to prepare
-</h2>
-
-<ul>
-  <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
-  </li>
-  <li>
-    Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  </li>
-  <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
-  </li>
-  <li>
-    If you're visiting a school, complete any background checks or required paperwork.
-  </li>
-  <li>
-    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
-  </li>
-  <li>
-    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
-  </li>
-  <li>
-    Connect with the teacher to discuss what you plan to speak about during your session.
-  </li>
-  <li>
-    If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand.
-  </li>
-</ul>
-
-<h2>
-  Day-of Hour of Code Event
-</h2>
-
-<p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
-</p>
-
-<h3>
-  <strong>Sample agenda:</strong>
-</h3>
-
-<table>
-  <tr>
-    <th>
-      Vaxt
-    </th>
+- Hansı işlərə maraqları var, ən çox sevdikləri texnolojik alətlər və aplikasiyalar hansılardır, və bunların necə istehsal olunduqlarına dair məlumatları nələrdir? 
+- Şagirdlərin sizə sualı var mı?</ul></td> </tr> 
+    </tbody> </table> 
+    ### **Tədbirdən Sonra:**
     
-    <th>
-      Agenda item
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      1-5 minutes
-    </td>
+    - Şəkillərinizi və hekayələrinizi Code.org vasitasiylə giving@code.org-da paylaşınız.
+    - Şirkətinizin könüllü təqib hissəsinə, könüllü olduğunuz saatları daxil etmeyi unutmayınız.
+    - Sosyal şəbəkədə #HoursOdCode-ilə təcrübənizi paylaşınız!
+    - Əgər tədbir zamanı çəktiyiniz şəkil və ya videonu, **xüsusilə şagirdlərlə çəktirdiyinizi**, sosyal şəbəkədə paylaşmaq istəyirsənizsə, müəllim/valideyn icazəsinin icazəsinin olduğuna əmin olun.
+    - Və, bir ay sonra yenidən yoxlayınız: Müəllim informatika dərsini verməyə maraq göstərirmi? [ Peşəkar öyrənmə fürsətlərini və mənbələrini onlara yardım məqsədi ilə](https://code.org/yourschoool) paylaşınız.
+    ## Qonaq spikerin texniki könüllüsü vəzifəsinə necə seçilə bilərsiniz
     
-    <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      5-10 minutes
-    </td>
+    - Müəllimlər [könüllü siyahısında](https://code.org/volunteer/local) könüllü axtaracaqlar.
+    - Profilinizi əlinizdən gəldiği qədər tam doldurmağa çalışın ki, müəllimlərin sizi seçmə şansını yüksəltəsiniz.
+    - Müəllim sizinlə bu forum vasitəsi ilə əlaqə saxlayacaq (sizin email adresiniz müəllimlə heçbir zaman paylaşılmayacaq). *Əgər müəllimlər tərəfindən çoxlu sayıda dəvət alırsınızsa, tərcihlərinizi istədiyiniz zaman yeniləmək üçün emailin aşağısında göstərilmiş olan linkdən bilgilərinizi yeniliyə bilərsiniz.*
+    ## Kod Saatı zamanında könüllü olmaq TVS (tez-tez verilən suallar)
     
-    <td>
-      Introduce yourself and learn more about the students: </ul>
-      
-      <li>
-        What do you work, what do you do, and what do you love most about your job?
-      </li>
-      
-      <li>
-        What or who inspired you?
-      </li>
-      
-      <li>
-        How did you get interested in computer science?
-      </li>
-      
-      <li>
-        Did you have a mentor?
-      </li>
-      
-      <li>
-        Share a story about how tech affects everyone.
-      </li>
-      
-      <br />Ask the students questions and leave time for Q&A.</br> 
-      
-      <li>
-        What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built?
-      </li>
-      
-      <li>
-        Do the students have any questions for you?</ul></td> </tr> <tr>
-          <td>
-            30-60 minutes
-          </td>
-          
-          <td>
-            <strong>Code!</strong> Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.
-          </td>
-        </tr>
-        
-        <tr>
-          <td>
-            1-3 minutes
-          </td>
-          
-          <td>
-            Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!
-          </td>
-        </tr>
-        
-        <tr>
-          <td>
-            After
-          </td>
-          
-          <td>
-            <strong>Make a lasting change:</strong> Talk to the teacher about turning the Hour of Code into a full computer science course! Go to <a href="https://code.org/yourschool">code.org/yourschool</a> with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.
-          </td>
-        </tr></tbody> </table> 
-        
-        <h3>
-          <strong>After the Event:</strong>
-        </h3>
-        <ul>
-          <li>
-            Share your photos and stories with Code.org at giving@code.org.
-          </li>
-          <li>
-            Remember to enter in your volunteer hours in your company’s volunteer tracking portal.
-          </li>
-          <li>
-            Share about your experience on social media #HourOfCode!
-          </li>
-          <li>
-            If you do take pictures/videos during the event, <strong>especially with students</strong>, make sure you get teacher/parent permission if you would like to post your stories on social media.
-          </li>
-          <li>
-            And, check back in a month: Is the teacher interested in offering a computer science course? Share <a href="https://code.org/yourschool">resources and professional learning opportunities to help them do this</a>.
-          </li>
-        </ul>
-        <h2>
-          How you get selected as a technical volunteer of guest speaker
-        </h2>
-        <ul>
-          <li>
-            Teachers will be searching for volunteers on our <a href="https://code.org/volunteer/local">volunteer map</a>.
-          </li>
-          <li>
-            Try to make your profile as complete as possible to increase the chance that a teacher will select you.
-          </li>
-          <li>
-            A teacher will contact you through this form (your email address will never be shared with the teacher). <em>If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.</em>
-          </li>
-        </ul>
-        <h2>
-          Volunteering during the Hour of Code FAQ
-        </h2>
-        <h3>
-          <strong>I haven't been contacted by a teacher yet. How can I still volunteer?</strong>
-        </h3>
-        <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
-        </p>
-        <h3>
-          <strong>How long do classroom visits last for?</strong>
-        </h3>
-        <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
-        </p>
-        <h3>
-          <strong>What age group is the Hour of Code tutorial appropriate for?</strong>
-        </h3>
-        <p>
-          Code.org designs the Hour of Code tutorials as games and puzzles to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing our tutorials!
-        </p>
-        <p>
-          <%= view :signup_button %>
-        </p>
+    ### **Müəllim mənimlə hələdə əlaqə saxlamayıb. Mən necə hələ könüllü ola bilərəm?**
+    
+    Yerli məktəblərə baxıb müəllim və ya direktorla əlaqə saxlayaraq necə kömək edə biləcəyinizi soruşa bilərsiniz.
+    
+    ### **Sinifləri nə gədər vaxt ərzində ziyarət etməm lazımdır?**
+    
+    Canlı olaraq dərslər adətən 60-90 dəqiqə davam edərkən, virtual dərslər adətən 20-30 dəqiqə davam eləyir.
+    
+    ### **Kod Saatı dərsliyi hansı yaş grupuna məsləhət görünür?**
+    
+    Code.org Kod Saatı dərsliklərini oyun və bulmacalar olaraq bütün yaş qrupları üçün təşkil eləyir, oğlan və qızlar üçün. Hamı, hətta böyüklər belə bizim dərsliklərlə oynayaraq gözəl zaman keçirdə bilərlər!
+    
+    <%= view :signup_button %>

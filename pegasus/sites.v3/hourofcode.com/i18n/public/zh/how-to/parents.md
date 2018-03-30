@@ -35,13 +35,13 @@ nav: how_to_nav
 - 原 Code.org 的揭幕影片，由微軟總裁比爾 · 蓋茨、 臉書創辦人馬克 · 佐伯克和 NBA 明星球員克里斯·波許代言(有 [1 分鐘](https://www.youtube.com/watch?v=qYZF6oIZtfc)、 [5 分鐘](https://www.youtube.com/watch?v=nKIu9yen5nc) 和 [9 分鐘](https://www.youtube.com/watch?v=dU1xS07N-FA) 版本)
 - [編程一小時 全球視頻 ](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [美國歐巴馬呼籲所有的學生都要學習電腦科學](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- 尋找更多有啟發性的[資源](<%= resolve_url('https://code.org/inspire') %>)和[影片](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 如果你和你孩子都是初入計算機科學領域的新手也沒有關係，這裡有些點子幫助你介紹你的一小時玩程式活動：
 
 - 用男女都會關心的例子（談談關於拯救生命，幫助人們，串連人們等）來解釋科技影響我們的生活的各種方式。
 - 列出在日常生活中用到程式碼的事情。
-- 讓女孩對電腦科學產生興趣的小技巧 [ 看這裡](<%= resolve_url('https://code.org/girls') %>)
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 想要更多的想法嗎？查閱我們的 [範本教案](/files/AfterschoolEducatorLessonPlanOutline.docx) 看看有經驗的教育工作者的最佳做法。
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 6) 慶祝
 
-為你的孩子（還有你自己！）[列印證書](<%= resolve_url('https://code.org/certificates') %>)。
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 一小時玩程式只是入門，是瞭解科技如何運作、軟體如何創造的一小步，要繼續這段旅程，你可以：
 
-- 鼓勵您的孩子繼續[線上學習](<%= resolve_url('https://code.org/learn/beyond') %>)
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - 在您的孩子的學區中協助[推廣](<%= resolve_url('/promote') %>)電腦科學教育。
 
 <%= view :signup_button %>

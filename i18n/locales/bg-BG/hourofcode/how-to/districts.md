@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Hour of Code е само първата стъпка в пътешествието в изучаването на това, как технологията работи и как да създавате софтуерни приложения. За да продължите това пътуване:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Дасе присъединят](%= resolve_url('https://code.org/professional-development-workshops') %)към 1-деневен уоркшоп, за да получат обучение от опитни фасилитатори. (Само за учители от САЩ)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>
