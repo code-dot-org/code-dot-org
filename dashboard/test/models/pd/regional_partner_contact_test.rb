@@ -161,24 +161,26 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     regional_partner.mappings.find_or_create_by!(zip_code: '45242')
 
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
-    mail = ActionMailer::Base.deliveries.first
+    first_mail = ActionMailer::Base.deliveries[0]
+    second_mail = ActionMailer::Base.deliveries[1]
 
-    assert_equal ['nimisha@code.org'], mail.to
-    assert_equal ['jenna@code.org'], mail.cc
-    assert_equal 'A school administrator wants to connect with Code.org', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
-    assert_equal 2, ActionMailer::Base.deliveries.count
+    assert_equal ['nimisha@code.org'], first_mail.to
+    assert_equal ['jenna@code.org'], second_mail.to
+    assert_equal 'A school administrator wants to connect with Code.org', first_mail.subject
+    assert_equal ['tanya_parker@code.org'], first_mail.from
+    assert_equal 3, ActionMailer::Base.deliveries.count
   end
 
   test 'Unmatched' do
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
-    mail = ActionMailer::Base.deliveries.first
+    first_mail = ActionMailer::Base.deliveries[0]
+    second_mail = ActionMailer::Base.deliveries[1]
 
-    assert_equal ['nimisha@code.org'], mail.to
-    assert_equal ['jenna@code.org'], mail.cc
-    assert_equal 'A school administrator wants to connect with Code.org', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
-    assert_equal 2, ActionMailer::Base.deliveries.count
+    assert_equal ['nimisha@code.org'], first_mail.to
+    assert_equal ['jenna@code.org'], second_mail.to
+    assert_equal 'A school administrator wants to connect with Code.org', first_mail.subject
+    assert_equal ['tanya_parker@code.org'], first_mail.from
+    assert_equal 3, ActionMailer::Base.deliveries.count
   end
 
   test 'Receipt email' do
