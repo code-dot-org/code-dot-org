@@ -32,7 +32,7 @@ class Census::StateCsOffering < ApplicationRecord
   # By default we treat the lack of state data for high schools as an
   # indication that the school doesn't teach cs. We aren't as confident
   # that the state data is conplete for the following states so we do
-  # no want to treat the lack of data as a no for those.
+  # not want to treat the lack of data as a no for those.
   INFERRED_NO_BLACKLIST = %w(
     ID
     MI
