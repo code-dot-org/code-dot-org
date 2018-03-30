@@ -519,17 +519,20 @@ function rewriteAssetUrls(appAssets, data) {
 }
 
 function transformLevelHtml(levelHtml) {
-  var holder = document.createElement('div');
+  const holder = document.createElement('div');
   holder.innerHTML = levelHtml;
-  var appElement = holder.children[0];
+  const appElement = holder.children[0];
   appElement.id = 'divApplab';
   appElement.style.display = 'block';
   appElement.classList.remove('notRunning');
   appElement.classList.remove('withCrosshair');
 
+  // NOTE: this also modifies appElement!
+  const css = extractCSSFromHTML(appElement);
+
   return {
     outerHTML: appElement.outerHTML,
-    css: extractCSSFromHTML(appElement),
+    css,
   };
 }
 
