@@ -1,6 +1,14 @@
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
+  factory :census_reviewer, parent: :teacher do
+    name 'Census Reviewer'
+    after(:create) do |reviewer|
+      reviewer.permission = UserPermission::CENSUS_REVIEWER
+      reviewer.save!
+    end
+  end
+
   factory :census_submission_school_info, parent: :school_info_us do
     transient do
       school_year 2017
@@ -36,6 +44,44 @@ FactoryGirl.define do
     is_high_school
     transient do
       school_year 2017
+    end
+
+    trait :with_census_override_no do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'NO'
+      end
+    end
+
+    trait :with_census_override_yes do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'YES'
+      end
+    end
+
+    trait :with_census_override_maybe do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'MAYBE'
+      end
+    end
+    trait :with_census_override_historical_yes do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_YES'
+      end
+    end
+    trait :with_census_override_historical_no do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_NO'
+      end
+    end
+    trait :with_census_override_historical_maybe do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_MAYBE'
+      end
+    end
+    trait :with_census_override_nil do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: nil
+      end
     end
 
     trait :with_ap_cs_offering do

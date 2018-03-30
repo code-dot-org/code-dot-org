@@ -1,9 +1,8 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Using Data
 nav: regional_partner_playbook_nav
 ---
+<meta name="robots" content="noindex">
 
 # Using Data
 

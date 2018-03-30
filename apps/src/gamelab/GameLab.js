@@ -54,6 +54,7 @@ import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import GameLabJrLib from './GameLabJr.interpreted';
+import defaultSprites from './defaultSprites.json';
 
 const LIBRARIES = {
   'GameLabJr': GameLabJrLib,
@@ -172,7 +173,9 @@ GameLab.prototype.init = function (config) {
   this.level = config.level;
 
   this.level.softButtons = this.level.softButtons || {};
-  if (this.level.startAnimations && this.level.startAnimations.length > 0) {
+  if (this.level.useDefaultSprites) {
+    this.startAnimations = defaultSprites;
+  } else if (this.level.startAnimations && this.level.startAnimations.length > 0) {
     try {
       this.startAnimations = JSON.parse(this.level.startAnimations);
     } catch (err) {
@@ -258,6 +261,11 @@ GameLab.prototype.init = function (config) {
     // Ignore user's code on embedded levels, so that changes made
     // to starting code by levelbuilders will be shown.
     config.ignoreLastAttempt = config.embed;
+
+    if (this.studioApp_.isUsingBlockly()) {
+      // Custom blockly config options for game lab jr
+      config.valueTypeTabShapeMap = { Sprite: 'angle' };
+    }
 
     this.studioApp_.init(config);
 

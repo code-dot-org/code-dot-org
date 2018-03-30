@@ -110,7 +110,6 @@ class Pd::Workshop < ActiveRecord::Base
     ],
     COURSE_CSF => [
       SUBJECT_CSF_101 = 'Intro Workshop'.freeze,
-      SUBJECT_CSF_201 = 'Deep Dive Workshop'.freeze,
       SUBJECT_CSF_FIT = SUBJECT_FIT
     ]
   }.freeze
@@ -284,6 +283,11 @@ class Pd::Workshop < ActiveRecord::Base
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_after(date)
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
+  end
+
+  scope :in_year, ->(year = Date.now.year) do
+    scheduled_start_on_or_after(Date.new(year)).
+    scheduled_start_on_or_before(Date.new(year + 1))
   end
 
   # Filters to workshops that are scheduled on or after today and have not yet ended

@@ -1,17 +1,17 @@
 ---
 title: <%= hoc_s(:title_partners) %>
 ---
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+کوڈ کا قیام کوڈ آفس اور کمپیوٹر سائنس تعلیم ہفتہ مشاورتی اور جائزہ لینے والے کمیٹیوں کے ذریعہ چلایا جاتا ہے.
 
-The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+[ مشاورتی کمیٹی ](٪= resolve_url('/advisory-committe') ٪) کے مطابق 12 -12، اکیڈمی، غیر منافع بخش، منافع اور بین الاقوامی تنظیموں کے نمائندوں پر مشتمل ہے. یہ کمیٹی کوڈ آفس کی مہم کے لئے حکمت عملی کی ہدایت کرتا ہے.
 
-The [Review Committee](%= resolve_url('/review-committee') %) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+<a href="٪= resolve_url('/ جائزہ ملاحظہ کریں')٪ "جائزہ لینے کی کمیٹی </a> K-12 گریڈ بینڈ کے 15 تعلیم دہندگان پر مشتمل ہے جو مشاورت کمیٹی کے روک کا استعمال کرتے ہوئے سرگرمیوں کا جائزہ لینے اور سفارش کرتی ہے. یہ محققین طالب علم کی قیادت کی سرگرمیوں اور سینکڑوں سرگرمی شراکت داروں کی جانب سے جمع کردہ طالب علموں کی قیادت کی منصوبہ بندی کا مطالعہ کرتے ہیں، سرگرمیوں کی 'تعلیمی قیمت، سیکھنے والوں کو مشغول کرنے کی صلاحیت، اور طالب علموں کے متنوع سیٹوں پر ممکنہ اپیل کی تشخیص کرتے ہیں.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+کمیٹریشن کی کامیابی اور ہر طالب علم کے لئے کمپیوٹر سائنس کے تعارف پیش کرنے کے اس نقطہ نظر میں دونوں کمیٹیوں کے کام اور وقفے نے حصہ لیا.
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# لاطینی امریکہ کے شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -19,7 +19,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# افریقہ شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -27,7 +27,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# آسٹریلیا کے شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -35,7 +35,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'cn' %>
 
-# China Partners
+# چین شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -43,7 +43,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'fr' %>
 
-# France Partners
+# فرانس شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -51,7 +51,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# انڈونیشیا پارٹنر
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
@@ -59,7 +59,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# آئر لینڈ کے شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -67,7 +67,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'in' %>
 
-# India Partners
+# بھارت شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -75,7 +75,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# جاپان کے شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -83,7 +83,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# ہالینڈ شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -91,7 +91,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# نیوزی لینڈ کے شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -99,7 +99,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# برطانیہ شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -107,37 +107,37 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# کینیڈا کے شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# بڑے شراکت دار اور کارپوریٹ معاونین
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Major Promotional Partners
+# بڑے پروموشنل شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International Partners
+# بین الاقوامی شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Activity Partners
+# سرگرمی شراکت دار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure Partners and Tools
+# انفراسٹرکچر شراکت داروں اور اوزار
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 

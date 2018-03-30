@@ -19,7 +19,7 @@
         4_5_Bee_Conditionals_2_1: Unutma, her bulutun arkasında bir çiçek olup olmadığını
           görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor.
       AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Bir Text Alanına tıkla ve ekran üzerine sürükle
+        dragTextAreaIn: Bir "Metin Alanına" tıkla ve ekran üzerine sürükle
         screenSelectorCallout3: Yaptığın ekranı seç
       AppLab Intro 2 - Edit place1_callout:
         screenSelectorCallout2: Bu ekran seçicisidir
@@ -31,9 +31,9 @@
         appLabIntro2_textColor: '"yazı rengi"ni değiştirmek için sayfayı aşağı kaydırın'
       AppLab Intro 2 - Edit startScreen2_callout:
         applabIntro2storyText: Bu ekrandaki hikaye yazısına tıklayın
-        appLabIntro2_editStoryText: Daha fazla alan açmak için bu yazı kutusunun alt
-          sağ köşesini sürükleyin. Sonra hikaye yazınızı tamamlayın
-        appLabIntro2_textColor: Aşağıdaki değiştirebileceğiniz farlı eşyalardan bazılarını
+        appLabIntro2_editStoryText: Daha fazla alan açmak için bu yazı kutusunun sağ
+          alt köşesini dışa doğru sürükleyin. Sonra hikaye yazınızı tamamlayın
+        appLabIntro2_textColor: Aşağıdaki değiştirebileceğiniz bazı farklı özellikleri
           deneyin
       AppLab Intro 2 - add Button_callout:
         designToolboxCallOut: Ekranınızın üstüne bir buton sürükleyin.
@@ -52,6 +52,9 @@
       AppLab Intro 7 - thisOrThatAddButton_callout:
         AppLabHoCFinal11: "Şu anda Tasarım Modundasınız."
       AppLab_test02_callout: []
+      Applab AllTheThings ResourcesTab AllResources_callout: []
+      Applab AllTheThings ResourcesTab MapReference_callout: []
+      Applab AllTheThings ResourcesTab ReferenceLinks_callout: []
       Applab test_callout: []
       Big Game Animation 1 (copy 1)_callout: []
       Big Game Animation 1_callout: []
@@ -102,39 +105,75 @@
       Big Game Vars 4_callout: []
       CSD U3 - complex - compound conditionals_callout: []
       CSD U3 - complex - key up and down_callout: []
+      CSD U3 - complex - key up and down_2018_callout: []
       CSD U3 - complex - mouse down_callout: []
+      CSD U3 - complex - mouse down_2018_callout: []
       CSD U3 - complex - mouse move_callout: []
+      CSD U3 - complex - mouse move_2018_callout: []
       CSD U3 - complex - nested conditional_callout: []
+      CSD U3 - conditionals - first conditional 2-2018_callout: []
       CSD U3 - conditionals - first conditional 2_callout: []
+      CSD U3 - conditionals - first conditional 2_2018_callout: []
       CSD U3 - conditionals - first conditional_callout: []
+      CSD U3 - conditionals - first conditional_2018_callout: []
       CSD U3 - conditionals - transition 2_callout: []
       CSD U3 - conditionals - transition_callout:
         CSD_U3_L8_S6_C1: Put the console log statement here
+      CSD U3 - conditionals - transition_2018_callout:
+        CSD_U3_L8_S6_C1: Put the console log statement here
       CSD U3 - images - first sprite with image_callout: []
       CSD U3 Boolean Modify_callout: []
+      CSD U3 Boolean Modify_2018_callout: []
       CSD U3 Boolean Predict_callout: []
+      CSD U3 Boolean Predict_2018_callout: []
       CSD U3 Compound Nested Challenge_callout: []
+      CSD U3 Compound Nested Challenge_2018_callout: []
       CSD U3 Compound Nested Examples_callout: []
       CSD U3 Conditional Project_callout: []
+      CSD U3 Conditionals Apple 2-2018_callout: []
       CSD U3 Conditionals Apple 2_callout: []
+      CSD U3 Conditionals Apple 2_2018_callout: []
+      CSD U3 Conditionals Apple-2018_callout: []
       CSD U3 Conditionals Apple_callout: []
+      CSD U3 Conditionals Apple_2018_callout: []
       CSD U3 Diagonal Movement_callout: []
+      CSD U3 Diagonal Movement_2018_callout: []
+      CSD U3 Direction Animations-2018_callout: []
       CSD U3 Direction Animations_callout: []
+      CSD U3 Direction Animations_2018_callout: []
+      CSD U3 Direction Arrows-2018_callout: []
       CSD U3 Direction Arrows_callout: []
+      CSD U3 Direction Arrows_2018_callout: []
       CSD U3 Draw Loop Plugged update your scene_callout: []
+      CSD U3 Draw Loop Plugged update your scene_2018_callout: []
       CSD U3 Drawing Squares to Corners_callout: []
+      CSD U3 Drawing Squares to Corners_2018_callout: []
       CSD U3 Else_callout: []
+      CSD U3 Else_2018_callout: []
       CSD U3 If Else_callout: []
+      CSD U3 If Else_2018_callout: []
+      CSD U3 Keyboard Input Challenge-2018_callout: []
       CSD U3 Keyboard Input Challenge_callout: []
+      CSD U3 Keyboard Input Challenge_2018_callout: []
+      CSD U3 Keypress Boolean-2018_callout: []
       CSD U3 Keypress Boolean_callout: []
+      CSD U3 Keypress Boolean_2018_callout: []
       CSD U3 Keypress Watchers_callout: []
+      CSD U3 Keypress Watchers_2018_callout: []
       CSD U3 L11 Freeplay_callout: []
+      CSD U3 L11 Freeplay_2018_callout: []
       CSD U3 L12 Freeplay_callout: []
+      CSD U3 L12 Freeplay_2018_callout: []
       CSD U3 L13 Freeplay_callout: []
+      CSD U3 L13 Freeplay_2018_callout: []
       CSD U3 L3 Freeplay_callout: []
+      CSD U3 L3 Freeplay_2018_callout: []
       CSD U3 L4 Freeplay_callout: []
+      CSD U3 L4 Freeplay_2018_callout: []
       CSD U3 L6 Freeplay_callout: []
+      CSD U3 L6 Freeplay_2018_callout: []
       CSD U3 L7 Freeplay_callout: []
+      CSD U3 L7 Freeplay_2018_callout: []
       CSD U3 Property Conditional Multi_callout: []
       CSD U3 Property Conditional_callout: []
       CSD U3 Random Choice_callout: []
@@ -142,30 +181,55 @@
       CSD U3 Random Min Max_callout: []
       CSD U3 Simple Drawing - Animation 2_callout: []
       CSD U3 Sprites anitab 1_callout: []
+      CSD U3 Sprites anitab 1_2018_callout: []
       CSD U3 Sprites intro debug_callout: []
+      CSD U3 Sprites intro debug_2018_callout: []
       CSD U3 Sprites intro predict_callout: []
+      CSD U3 Sprites intro predict_2018_callout: []
       CSD U3 Sprites intro sprites_callout: []
+      CSD U3 Sprites intro sprites_2018_callout: []
       CSD U3 Sprites scene challenge_callout: []
+      CSD U3 Sprites scene challenge_2018_callout: []
       CSD U3 Sprites scene drawing_callout: []
+      CSD U3 Sprites scene drawing_2018_callout: []
       CSD U3 Sprites scene sprites_callout: []
+      CSD U3 Sprites scene sprites_2018_callout: []
       CSD U3 Sprites scene template_callout: []
+      CSD U3 Sprites scene template_2018_callout: []
       CSD U3 Sprites scene text_callout: []
+      CSD U3 Sprites scene text_2018_callout: []
+      CSD U3 Sprites text debug-2018_callout: []
       CSD U3 Sprites text debug_callout: []
+      CSD U3 Sprites text debug_2018_callout: []
       CSD U3 Sprites text_callout: []
+      CSD U3 Sprites text_2018_callout: []
+      CSD U3 UP_ARROW-2018_callout: []
       CSD U3 UP_ARROW_callout: []
+      CSD U3 UP_ARROW_2018_callout: []
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: Buradaki sayıyı değiştir
       CSD U3 Variables Predict Where XY Embed_callout:
         grid: Izgarayı göstermek için buraya tıklayın.
+      CSD U3 Variables Predict Where XY Embed_2018_callout:
+        grid: Izgarayı göstermek için buraya tıklayın.
       CSD U3 Variables Predict Where XY_callout:
         grid: Izgarayı göstermek için buraya tıklayın.
+      CSD U3 Variables Predict Where XY_2018_callout:
+        grid: Izgarayı göstermek için buraya tıklayın.
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Buradaki sayıyı değiştir
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
       CSD U3 Watcher Debug_callout: []
+      CSD U3 Watcher Debug_2018_callout: []
       CSD U3 abstraction accelerateX_callout:
         CSD_U3_L11_S6_C1: Kodunu buraya ekle.
+      CSD U3 abstraction accelerateX_2018_callout:
+        CSD_U3_L11_S6_C1: Kodunu buraya ekle.
       CSD U3 abstraction accelerateY_callout:
+        CSD_U3_L11_S7_C1: Kodunu buraya ekle.
+      CSD U3 abstraction accelerateY_2018_callout:
         CSD_U3_L11_S7_C1: Kodunu buraya ekle.
       CSD U3 abstraction change velocityX_callout:
         CSD_U3_L11_S5_C1: Kodunu buraya ekle.
@@ -187,7 +251,13 @@
       CSD U3 abstraction horse3_callout:
         CSD_U3_L11_S16_C1: Use the counter pattern to make the horse fall here.
         CSD_U3_L11_S16_C2: Stop the horse from falling here.
+      CSD U3 abstraction jump-2018_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
       CSD U3 abstraction jump_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      CSD U3 abstraction jump_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
         CSD_U3_L11_S17_C2: Send the frog back down here
       CSD U3 abstraction jumper intro_callout:
@@ -200,7 +270,11 @@
         CSD_U3_L11_S17_C3: Add your if statement here.
       CSD U3 abstraction jumping_callout:
         CSD_U3_L13_S8_C1: Set the velocity here
+      CSD U3 abstraction jumping_2018_callout:
+        CSD_U3_L13_S8_C1: Set the velocity here
       CSD U3 abstraction looping_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction looping_2018_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction parabola_callout:
         CSD_U3_L11_S13_C1: Kodunu buraya ekle.
@@ -209,7 +283,11 @@
         CSD_U3_L11_S5_C2: Kodunu buraya ekle.
       CSD U3 abstraction rotation control_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction rotation control_2018_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction rotation_callout:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 abstraction rotation_2018_callout:
         CSD_U3_L11_S4_C1: Use the rotationSpeed block here
       CSD U3 abstraction setSpeed accelerate_callout:
         CSD_U3_L11_S14_C1: Kodunu buraya ekle.
@@ -217,7 +295,15 @@
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
         CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template-2018_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
       CSD U3 abstraction sidescroll template_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      CSD U3 abstraction sidescroll template_2018_callout:
         CSD_U3_L11_S17_C1: Set the sprite's starting position here.
         CSD_U3_L11_S17_C2: Set the hay bale's velocity here
         CSD_U3_L11_S17_C3: Add your if statement here.
@@ -227,24 +313,40 @@
         CSD_U3_L11_S17_C3: Add your if statement here.
       CSD U3 abstraction tumbleweed_callout:
         CSD_U3_L11_S17_C1: Look at this if statement
+      CSD U3 abstraction tumbleweed_2018_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
       CSD U3 abstraction velocityX control_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction velocityX control_2018_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityX if-statements_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction velocityX if-statements_2018_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityX_callout:
+        CSD_U3_L11_S4_C1: Kodunu buraya ekle.
+      CSD U3 abstraction velocityX_2018_callout:
         CSD_U3_L11_S4_C1: Kodunu buraya ekle.
       CSD U3 abstraction velocityY 2_callout:
         CSD_U3_L11_S5_C1: Kodunu buraya ekle.
       CSD U3 abstraction velocityY control_callout:
         CSD_U3_L11_S5_C1: Bu koda bakın.
+      CSD U3 abstraction velocityY control_2018_callout:
+        CSD_U3_L11_S5_C1: Bu koda bakın.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Kodunu buraya ekle.
+      CSD U3 abstraction velocityY_2018_callout:
+        CSD_U3_L11_S5_C1: Kodunu buraya ekle.
       CSD U3 challenge face_callout: []
+      CSD U3 challenge face_2018_callout: []
       CSD U3 challenge new shape_callout: []
+      CSD U3 challenge new shape_2018_callout: []
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
       CSD U3 collisions isTouching intro_callout:
+        CSD_U3_L12_S2_C1: Kodunu buraya ekle.
+      CSD U3 collisions isTouching intro_2018_callout:
         CSD_U3_L12_S2_C1: Kodunu buraya ekle.
       CSD U3 collisions pinball2_callout:
         CSD_U3_L14_S16_C1: Sprite interactions go in this function.
@@ -252,44 +354,86 @@
         CSD_U3_L12_S8_C1: These blocks display the score.
         CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
           carrot go here.
+      CSD U3 collisions scoreboard_2018_callout:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
       CSD U3 collisions try blocks_callout:
+        CSD_U3_L13_S6_C1: Change this block.
+      CSD U3 collisions try blocks_2018_callout:
         CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Kodunu buraya ekle.
+      CSD U3 collisions types_2018_callout:
+        CSD_U3_L13_S6_C1: Kodunu buraya ekle.
       CSD U3 debug_callout:
+        CSD_U3_rect_c1: "İşte kod"
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 debug_2018_callout:
         CSD_U3_rect_c1: "İşte kod"
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 ellipse_callout:
         CSD_U3_rect_c1: "İşte kod"
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: "İşte kod"
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 fill_callout:
+        CSD_U3_rect_c1: "İşte kod"
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 fill_2018_callout:
         CSD_U3_rect_c1: "İşte kod"
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
+      CSD U3 game backgrounds_2018_callout:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 game variables_2018_callout:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional-2018_callout: []
       CSD U3 keydown conditional_callout: []
+      CSD U3 keydown conditional_2018_callout: []
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: "İşte kod"
         CSD_U3_rect_c2: '"Çalıştır" düğmesi burada.'
       CSD U3 picture_callout: []
+      CSD U3 picture_2018_callout: []
       CSD U3 platform background1_callout:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      CSD U3 platform background1_2018_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
         CSD_U3_L16_S3_C3: Change this function.
       CSD U3 platform platform1_callout:
         CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 platform platform1_2018_callout:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
       CSD U3 platform scoreboard_callout:
         CSD_U3_L17_S7_C1: Score is printed here.
+      CSD U3 platform scoreboard_2018_callout:
+        CSD_U3_L17_S7_C1: Score is printed here.
       CSD U3 platform variable1_callout:
+        callout: This block creates a variable.
+      CSD U3 platform variable1_2018_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
         CSD_U3_rect_c1: "İşte kod"
         CSD_U3_rect_c2: '"Çalıştır" düğmesi burada.'
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: "İşte kod"
+        CSD_U3_rect_c2: '"Çalıştır" düğmesi burada.'
       CSD U3 sequence_callout:
+        CSD_U3_rect_c1: "İşte kod"
+        CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
+      CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: "İşte kod"
         CSD_U3_rect_c2: Bu bloğu kod alanına sürükleyin.
       CSD U6 colorLeds intensity_callout:
@@ -421,12 +565,13 @@
       Course 4 Bee Params 4_callout: []
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Programınızı denemek için "Çalıştır" düğmesine basın
-        Course 4 Maze 1_callout2: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
+        Course 4 Maze 1_callout2: '"İlerle" bloğunu tutup çalıma alanındaki diğer
+          blokların altına yapıştırın'
       Course 4 Maze 4_callout:
         repeat: Komutları tekrarlamak için blokları döngünün içine sürükleyin
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Bu yükseklik parametresi kullanılır Bu fonksiyonugüncelleştirmek
-          için "Düzenle" seçeneğini tıklatın.
+        Course_4 _Play_Lab_Params_2_1: ' Bu fonksiyonu yükseklik parametresi kullanacak
+          şekilde güncelleştirmek için "düzenle" seçeneğini tıklayın.'
       Course 4 Play Lab Params 3_callout:
         edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
       Course 4 Play Lab Params 5_callout: []
@@ -436,8 +581,8 @@
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
       Course 4 Play Lab Vars 6_callout: []
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: Tüm senin blokların Kategoriler altında düzenlenir!
-          Parçaları içinde görmek için etiketi tıklatın.
+        Course_4_Play_Lab_Vars_9_1: Senin tüm blokların kategoriler altında düzenlenir!
+          İçindeki parçaları görmek için başlıkları tıkla.
       Course 4 Play Labs For Loops 5_callout:
         Course_4_Play_Labs_For_Loops_5: Woah!  Kodum patladı!  Onu  birlikte düzeltip
           bu bulmacayı çözelim mi?
@@ -455,8 +600,8 @@
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Karakteri hareket ettirmek için okları kullan
       CourseF_PlayLab_vars10_callout:
-        Course_4_Play_Lab_Vars_9_1: Tüm senin blokların Kategoriler altında düzenlenir!
-          Parçaları içinde görmek için etiketi tıklatın.
+        Course_4_Play_Lab_Vars_9_1: Senin tüm blokların kategoriler altında düzenlenir!
+          İçindeki parçaları görmek için başlıkları tıkla.
       CourseF_PlayLab_vars6_callout: []
       CourseF_PlayLab_vars7_callout: []
       CourseF_PlayLab_vars8_callout: []
@@ -524,11 +669,11 @@
       Infinity_repeat_callout:
         Infinity_repeat_callout: '"İlerle" bloklarının buraya yerleştir'
       InspirationalArtwork_callout:
-        InspirationalArtwork_1: Programın içinde kendinize not bırakmak için bu etiketin
-          altında yeni 'yorum' karesi kullanın!
+        InspirationalArtwork_1: Programın içinde kendinize notlar bırakmak için bu
+          başlığın altından yeni 'yorum' bloğunu kullanın!
       InspirationalArtwork_2018_callout:
-        InspirationalArtwork_1: Programın içinde kendinize not bırakmak için bu etiketin
-          altında yeni 'yorum' karesi kullanın!
+        InspirationalArtwork_1: Programın içinde kendinize notlar bırakmak için bu
+          başlığın altından yeni 'yorum' bloğunu kullanın!
       Luigi's Pizza 1 (copy 1)_callout:
         luigi's pizza 1: Try ordering a pepperoni pizza
       Luigi's Pizza 1_callout:
@@ -692,11 +837,11 @@
         feeling_stuck_callout_test: " Takıldınız mı? < br / > bir ipucu için ampüle
           tıklayın!"
       Robot Doodle_callout:
-        4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize not bırakmak için
-          bu etiketin altında yeni 'yorum' karesi kullanın!
+        4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize notlar bırakmak
+          için bu başlığın altından yeni 'yorum' bloğunu kullanın!
       Robot Doodle_2018_callout:
-        4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize not bırakmak için
-          bu etiketin altında yeni 'yorum' karesi kullanın!
+        4-5_Artist_Patterns_Free_Play_2: Programın içinde kendinize notlar bırakmak
+          için bu başlığın altından yeni 'yorum' bloğunu kullanın!
       Robot Drawing_callout:
         4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
           organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
@@ -850,7 +995,12 @@
       course4_collector_nested_loops_challenge2_callout: []
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
+      courseA_artist_loops4_2018_callout:
+        courseA_artist_loops4_1: Bu sayı her bloktan kaç tane kullanabileceğini söylüyor.
       courseA_artist_loops7_callout:
+        courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
+          gelir.
+      courseA_artist_loops7_2018_callout:
         courseA_artist_loops7_1: Bu numara bu bloktan kaç tane kullanılabilir anlamına
           gelir.
       courseA_artist_loops7_forVideo_callout:
@@ -859,10 +1009,19 @@
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: "İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
           biliyor muydun?"
+      courseA_artist_loops8_2018_callout:
+        courseA_artist_loops8_1: "İhtiyacın olduğu zaman bir satır öncesine geri dönebileceğini
+          biliyor muydun?"
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
+      courseA_collector_loops1_2018_callout:
+        courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
+          aşamalarda bunları nasıl kullanacağını göstereceğiz.
       courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
+          söylüyor.
+      courseA_collector_loops3_2018_callout:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
       courseA_collector_loops3_predict1_callout: []
@@ -886,20 +1045,37 @@
       courseA_forVideoTest_artist_callout: []
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
+      courseA_maze_seq1_2018_callout:
+        courseA_maze_seq1_1: Bir ipucu gerektiğinde ampülü tıklayın!
       courseA_maze_seq2_callout:
+        courseA_maze_seqA_callout1: Programda adım adım gitmek için adım düğmesini
+          kullanın. Bu hatayı bulmanıza yardımcı olacaktır!
+      courseA_maze_seq2_2018_callout:
         courseA_maze_seqA_callout1: Programda adım adım gitmek için adım düğmesini
           kullanın. Bu hatayı bulmanıza yardımcı olacaktır!
       courseA_maze_seq4_callout:
         made_of_stone: Bu kareler taştan yapılmış. Onları hareket ettirebilirsiniz
           ama silemezsiniz!
+      courseA_maze_seq4_2018_callout:
+        made_of_stone: Bu kareler taştan yapılmış. Onları hareket ettirebilirsiniz
+          ama silemezsiniz!
       courseA_maze_seq4a_callout: []
       courseA_playLab_events2_callout: []
+      courseA_playLab_events2_2018_callout: []
       courseA_playLab_events3_callout: []
+      courseA_playLab_events3_2018_callout: []
       courseA_playLab_events4_callout:
+        courseA_playlab_events4_callout1: Bu bir belirtme
+      courseA_playLab_events4_2018_callout:
         courseA_playlab_events4_callout1: Bu bir belirtme
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
+      courseA_playLab_events5_2018_callout:
+        courseA_playLab_events5_1: Olay ok yönünü değiştirmek için burayı tıklatın.
       courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
+          durumlarda ''rastgele" bir ses seçmene izin verir!
+      courseA_playLab_events6_2018_callout:
         courseA_playLab_events6_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
           durumlarda ''rastgele" bir ses seçmene izin verir!
       courseA_toMakeLoopsVideo_Collector_callout: []
@@ -1780,11 +1956,11 @@
       grade5_playlab_variables6_callout: []
       grade5_playlab_variables6ask_callout: []
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: Tüm senin blokların Kategoriler altında düzenlenir!
-          Parçaları içinde görmek için etiketi tıklatın.
+        Course_4_Play_Lab_Vars_9_1: Senin tüm blokların kategoriler altında düzenlenir!
+          İçindeki parçaları görmek için başlıkları tıkla.
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: Tüm senin blokların Kategoriler altında düzenlenir!
-          Parçaları içinde görmek için etiketi tıklatın.
+        Course_4_Play_Lab_Vars_9_1: Senin tüm blokların kategoriler altında düzenlenir!
+          İçindeki parçaları görmek için başlıkları tıkla.
       gradek_adventurer_loops2_callout:
         gradek_adventurer_loops2_1: Bu sayı her bloktan kaç tane kullanabileceğini
           söylüyor.
@@ -1800,6 +1976,9 @@
       gradek_playlab_events5c_callout:
         gradek_playlab_events5c_1: Bu, duyana kadar ne tür bir ses çıkacağını bilmediğin
           durumlarda ''rastgele" bir ses seçmene izin verir!
+      harvester_Kahoot_callout:
+        courseE_farmer_functions1a_1: Bu veggie bilinmiyor. Programı çalıştırdığında
+          herhangi bir zaman değişir.
       iceage_click_hello_callout: []
       iceage_click_hello_2018_callout: []
       iceage_free_play_callout: []

@@ -66,7 +66,7 @@ Komputery są wszędzie, zmieniając każdą branżę na świecie. Jednakże mni
 
 Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy sklep Apple na świecie gościł już Hour of Code i jej liderów. Prezydent Obama i kanadyjski Premier Justin Trudeau napisali pierwsze linie kodu w ramach tej kampanii.
 
-W tym roku, zróbmy to wydarzenie jeszcze większym. Proszę, byś przyłączył się do Godziny Kodowania 2017. Proszę, weźcie udział w Godzinie Kodowania podczas Tygodnia Edukacji Informatycznej, < % = campaign_date('full') %>.
+W tym roku, zróbmy to wydarzenie jeszcze większym. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Proszę, weźcie udział w Godzinie Kodowania podczas Tygodnia Edukacji Informatycznej, < % = campaign_date('full') %>.
 
 Opowiedz o nas. Zorganizuj wydarzenie. Poproś lokalną szkołę, by się zarejestrowała lub sam spróbuj Godziny Kodowania - każdy może odnieść korzyści z nauki od podstaw.
 
@@ -78,7 +78,7 @@ Zacznij na http://hourofcode.com/<%= @country %>
 
 **Subject line:** Can we help you host and Hour of Code?
 
-Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 

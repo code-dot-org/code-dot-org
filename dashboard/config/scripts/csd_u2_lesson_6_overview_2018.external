@@ -1,0 +1,19 @@
+name 'CSD U2 Lesson 6 Overview_2018'
+display_name 'Lesson Overview'
+description 'description here'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson covers common issues that arise when designing web pages in HTML. The class will correct errors in a sequence of increasingly complex web pages found on Code Studio and learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read.
+## Vocabulary
+
+* **Bug** - Part of a program that does not work correctly.
+* **Comment** - A comment is a programmer-readable note in the source code of a computer program.
+* **Debugging** - Finding and fixing problems in your algorithm or program.
+* **Indentation** - The placement of text farther to the right, or left, to separate it from surrounding text which helps to convey the program's structure.
+* **Whitespace** - Whitespace refers to any character that shows up as a blank space on the screen, such as a space, a tab, or a new line. Whitespace helps separate different parts of the document to make it easier to read.
+
+## Introduced Code
+
+*  **[Comment](//curriculum.code.org/documentation/weblab/comment/)** - `<!-- -->`
+MARKDOWN

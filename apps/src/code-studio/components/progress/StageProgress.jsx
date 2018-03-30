@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 
 import color from "../../../util/color";
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
-import { levelsForLessonId, stageExtrasUrl } from '@cdo/apps/code-studio/progressRedux';
+import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
+import { levelsForLessonId, stageExtrasUrl, getPercentPerfect } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 
@@ -22,6 +23,17 @@ const styles = {
     marginLeft: 4,
     marginRight: 4,
   },
+  spacer: {
+    marginRight: 'auto',
+  },
+  stageTrophyContainer: {
+    border: 0,
+    borderRadius: 20,
+    paddingLeft: 8,
+    paddingRight: 0,
+    minWidth: 350,
+    marginLeft: 48,
+  },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
     paddingTop: 4,
@@ -38,13 +50,29 @@ const StageProgress = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
     stageExtrasUrl: PropTypes.string,
     onStageExtras: PropTypes.bool,
+    stageTrophyEnabled: PropTypes.bool,
   },
 
   render() {
-    const { levels, stageExtrasUrl, onStageExtras } = this.props;
+    const { stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
+    let levels = this.props.levels;
+
+    // Only puzzle levels (non-concept levels) should count towards mastery.
+    if (stageTrophyEnabled) {
+      levels = levels.filter(level => !level.isConceptLevel);
+    }
 
     return (
-      <div className="react_stage" style={styles.headerContainer}>
+      <div
+        className="react_stage"
+        style={{
+          ...styles.headerContainer,
+          ...(stageTrophyEnabled && styles.stageTrophyContainer),
+        }}
+      >
+        {stageTrophyEnabled &&
+          <div style={styles.spacer}/>
+        }
         {levels.map((level, index) =>
           <div
             key={index}
@@ -56,6 +84,7 @@ const StageProgress = React.createClass({
               level={level}
               disabled={false}
               smallBubble={!level.isCurrentLevel}
+              stageTrophyEnabled={stageTrophyEnabled}
             />
           </div>
         )}
@@ -63,6 +92,11 @@ const StageProgress = React.createClass({
           <StageExtrasProgressBubble
             stageExtrasUrl={stageExtrasUrl}
             onStageExtras={onStageExtras}
+          />
+        }
+        {stageTrophyEnabled &&
+          <StageTrophyProgressBubble
+            percentPerfect={getPercentPerfect(levels)}
           />
         }
       </div>
@@ -75,5 +109,5 @@ export const UnconnectedStageProgress = StageProgress;
 export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
   stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
-  onStageExtras: state.progress.currentLevelId === 'stage_extras'
+  onStageExtras: state.progress.currentLevelId === 'stage_extras',
 }))(StageProgress);

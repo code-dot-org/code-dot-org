@@ -92,6 +92,12 @@
       }
     }
   }
+
+  // Set React-Select popup dropdown z-index > 2 (the Bootstrap form control z-index),
+  // so it shows up on top as intended.
+  .Select .Select-menu-outer {
+    z-index: 3
+  }
 }
 
 div[role=dialog] {

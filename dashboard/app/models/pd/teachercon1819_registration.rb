@@ -8,11 +8,13 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  regional_partner_id :integer
+#  user_id             :integer
 #
 # Indexes
 #
 #  index_pd_teachercon1819_registrations_on_pd_application_id    (pd_application_id)
 #  index_pd_teachercon1819_registrations_on_regional_partner_id  (regional_partner_id)
+#  index_pd_teachercon1819_registrations_on_user_id              (user_id)
 #
 
 require 'cdo/shared_constants/pd/teachercon1819_registration_constants'
@@ -23,6 +25,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   belongs_to :pd_application, class_name: 'Pd::Application::ApplicationBase'
   belongs_to :regional_partner, class_name: 'RegionalPartner'
+  belongs_to :user
 
   YES = 'Yes'.freeze
   NO = 'No'.freeze
@@ -30,6 +33,8 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
   after_create :update_application_status
   def update_application_status
+    return unless pd_application
+
     if waitlisted?
       pd_application.update!(status: "waitlisted")
     elsif declined?
@@ -41,9 +46,11 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   def send_teachercon_confirmation_email
     if regional_partner_id?
       Pd::Teachercon1819RegistrationMailer.regional_partner(self).deliver_now
-    else
-      return unless pd_application.workshop && pd_application.workshop.teachercon?
+    elsif pd_application_id?
+      return unless pd_application.try(:workshop) && pd_application.workshop.teachercon?
       Pd::Teachercon1819RegistrationMailer.send(pd_application.application_type.downcase, self).deliver_now
+    else
+      Pd::Teachercon1819RegistrationMailer.facilitator(self).deliver_now
     end
   end
 
@@ -207,11 +214,12 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   end
 
   def accepted?
-    if pd_application.try(:application_type) == 'Teacher'
-      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
-    elsif pd_application.try(:application_type) == 'Facilitator'
-      accept_status == YES
-    end
+    accept_status ==
+      if pd_application.try(:application_type) == 'Teacher'
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:accept]
+      else
+        YES
+      end
   end
 
   def waitlisted?
@@ -220,18 +228,28 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
   end
 
   def declined?
-    if pd_application.try(:application_type) == 'Teacher'
-      accept_status == TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
-    elsif pd_application.try(:application_type) == 'Facilitator'
-      accept_status == NO
-    end
+    accept_status ==
+      if pd_application.try(:application_type) == 'Teacher'
+        TEACHER_SEAT_ACCEPTANCE_OPTIONS[:decline]
+      else
+        NO
+      end
   end
 
   def accept_status
     if pd_application.try(:application_type) == "Teacher"
       sanitize_form_data_hash.try(:[], :teacher_accept_seat)
-    elsif pd_application.try(:application_type) == "Facilitator"
+    elsif pd_application.try(:application_type) == "Facilitator" || pd_application.nil?
       sanitize_form_data_hash.try(:[], :able_to_attend)
     end
+  end
+
+  def date_accepted
+    pd_application.try(&:date_accepted) || created_at.to_date.iso8601
+  end
+
+  def applicant_name
+    hash = sanitize_form_data_hash
+    "#{hash[:preferred_first_name]} #{hash[:last_name]}"
   end
 end

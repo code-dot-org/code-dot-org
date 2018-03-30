@@ -202,7 +202,7 @@ eu:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Ezkutuko hitza'
       email: 'E-posta'
       google_classroom: 'Google Classroom'
       clever: 'Clever'

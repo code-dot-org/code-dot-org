@@ -275,9 +275,9 @@ ka:
   map_legend_hoc_events: 'კოდის ერთი საათის ღონისძიება'
   map_legend_cs_tech_jam: 'სპეციალური ღონისძიება'
   map_warning: "კოდის საათის რუკა გვიჩვენებს პირველ 200,000 დარეგისტრირებულ ღონისძიებას. ყველა დარეგისტრირებული ღონისძიების სწორი მისამართით შეგიძლიათ იხილოთ <a href='%{events_url}'>ღონისძიებების გვერდზე.</a>"
-  meta_tag_og_title: კოდის ერთი საათის დროა
+  meta_tag_og_title: 'კოდის ერთი საათის დროა'
   meta_tag_og_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
-  meta_tag_twitter_title: კოდის ერთი საათის დროა
+  meta_tag_twitter_title: 'კოდის ერთი საათის დროა'
   meta_tag_twitter_description: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან, 40 ენაზე მისაწვდომი ტუტორიალებით. ასაკი: 4-დან 104-მდე.'
   twitter_default_text: "მე ვიღებ მონაწილეობას წლევანდელ #HourOfCode–ში, და შენ? @codeorg"
   hoc_faq_title: 'ხშირად დასმული კითხვები'
@@ -325,12 +325,12 @@ ka:
   stats_hoc_2013_image_alt: '2013 წლის კოდის ერთი საათის სტატისტიკა'
   stats_growth: "ჩვენ ყველაზე სწრაფად მივაწვდინეთ ხმა 15 მილიონ მომხმარებელს."
   stats_i18n: "მოსწავლეები სწავლობენ 40 ენაზე"
-  stats_tumblr: 'Tumblr: 3.5 წელი'
-  stats_facebook: 'Facebook: 3 წელი'
-  stats_twitter: 'Twitter: 2.5 წელი'
-  stats_pinterest: 'Pinterest: 2 წელი'
-  stats_instagram: 'Instagram: 14 თვე'
-  stats_hoc: 'კოდის ერთი საათი: 5 დღე'
+  stats_tumblr: "Tumblr: 3.5 წელი"
+  stats_facebook: "Facebook: 3 წელი"
+  stats_twitter: "Twitter: 2.5 წელი"
+  stats_pinterest: "Pinterest: 2 წელი"
+  stats_instagram: "Instagram: 14 თვე"
+  stats_hoc: "კოდის ერთი საათი: 5 დღე"
   stats_global: "100 მილიონ მოსწავლეზე მეტმა უკვე სცადა კოდის ერთი საათი"
   stats_girls_more: "კომპიუტერულ მეცნიერებებში ძალები სცადა მეტმა გოგომ, ვიდრე ბოლო 70 წლის განმავლობაში"
   stats_females: "კომპიუტერულ მეცნიერებაში ჩართული ქალების რაოდენობა მხოლოდ 20%-ია სასკოლო, საუნივერსიტეტო კურსებისა და სამუშაო ბაზრის სტატისტიკის მიხედვით."
@@ -433,20 +433,20 @@ ka:
   learn_banner_heading: 'კოდის ერთი საათი'
   learn_banner_blurb: "სცადეთ ერთსაათიანი ტუტორიალი, რომელიც შექმნილია ყველა ასაკისთვის, 45 ენაზე. შემოუერთდით მილიონობით მოსწავლესა და მასწავლებელს 180-ზე მეტი ქვეყნიდან, რომლებიც იწყებენ კოდის ერთი საათით."
   learn_banner_beyond: "სწავლის გაგრძელება გინდათ? <a id='learn_banner_beyond'>გასცდით ერთ საათს</a>"
-  learn_banner_teachers: 'მასწავლებლებო: <a id=''teacher_banner_host''>უმასპინძლეთ საათს</a> ან <a id=''teacher_banner_howto''>წაიკითხეთ "თუ-როგორ" სახელმძღვანელო</a>'
+  learn_banner_teachers: "მასწავლებლებო: <a id='teacher_banner_host'>უმასპინძლეთ საათს</a> ან <a id='teacher_banner_howto'>წაიკითხეთ \"თუ-როგორ\" სახელმძღვანელო</a>"
   learn_robotics_banner_heading: 'რობოტიკა'
   learn_robotics_banner_blurb: 'გყავთ რობოტები? გამოიყენეთ ისინი ქვემოთ მოცემულ აქტივობებში და ჩაატარეთ კოდის ერთი საათი ყველა ასაკის მოსწავლისათვის!'
   tutorial_athlete_name: "დაწერეთ თქვენი საკუთარი სპორტული თამაში"
-  tutorial_moana_name: 'მოანა: გზის გაკვლევა კოდის საშუალებით'
-  tutorial_star-wars_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდის საშუალებით'
+  tutorial_moana_name: "მოანა: გზის გაკვლევა კოდის საშუალებით"
+  tutorial_star-wars_name: "ვარსკვლავური ომები: გალაქტიკის შექმნა კოდის საშუალებით"
   tutorial_gumadventure_name: "გამბოლის პროგრამირების მოგზაურობა"
   tutorial_mchoc_name: "მაინკრაფტის კოდის ერთი საათი"
-  tutorial_vidnews_name: 'ვიდკოდი: დააპროგრამეთ ამბები'
+  tutorial_vidnews_name: "ვიდკოდი: დააპროგრამეთ ამბები"
   tutorial_kodable-pre_name: "Kodable (დამწყები მკითველების მისალმება)"
   tutorial_highseas_name: "თავგადასავალი ღია ზღვაში"
   tutorial_capython_name: "Python-ის კუს გრაფიკა"
   tutorial_frzn_name: "წერეთ კოდი ანასთან და ელზასთან ერთად"
-  tutorial_cocom_name: 'CodeCombat: გაიქეცი საპყრობილედან!'
+  tutorial_cocom_name: "CodeCombat: გაიქეცი საპყრობილედან!"
   tutorial_play-lab_name: "სათამაშო ლაბორატორია"
   tutorial_boxisland_name: "ყუთების კუნძული"
   tutorial_textcomp_name: "ტექსტის შეკუმშვა"
@@ -455,7 +455,7 @@ ka:
   tutorial_foos_name: "codeSpark აკადემია The Foos-თან ერთად"
   tutorial_tynkerdd_name: "დრაკონების შერკინება"
   tutorial_tynkerana_name: "ანალოგური საათის STEM პაკეტი"
-  tutorial_vidcard_name: 'Vidcode: მეგობრის მისალმების ბარათი'
+  tutorial_vidcard_name: "Vidcode: მეგობრის მისალმების ბარათი"
   tutorial_spritebox_name: "Spritebox პროგრამირება"
   tutorial_tynkerch_name: "კონტრ-ხრიკი"
   tutorial_lightbot_name: "Lightbot"
@@ -463,7 +463,7 @@ ka:
   tutorial_code_name: "დაწერეთ თქვენი პირველი კომპიუტერული პროგრამა"
   tutorial_tinspire_name: "კოდის 10 წუთი Ti-Nspire CX-სთვის"
   tutorial_itchbounceball_name: "ITCH მხტუნავი ბურთი (Scratch-ში)"
-  tutorial_vidclim_name: 'ვიდკოდი: მეცნიერებისა და კოდის კლიმატის შექმნა'
+  tutorial_vidclim_name: "ვიდკოდი: მეცნიერებისა და კოდის კლიმატის შექმნა"
   tutorial_matlab_name: "ისწავლეთ პროგრამირება MATLAB-ის საშუალებით"
   tutorial_flap_name: "შექმენით მოფარფატე თამაში"
   tutorial_galaxy_name: "გალაქტიკური თამაშების ჯახი"
@@ -484,7 +484,7 @@ ka:
   tutorial_tynkerapp_name: "შექმენით აპლიკაცია"
   tutorial_tynkerpup_name: "ლეკვის თავგადასავალი"
   tutorial_livecode_name: "LiveCode-ის ხმის დაფები"
-  tutorial_cocomgame_name: 'CodeCombat: ააწყე შენი საკუთარი თამაში!'
+  tutorial_cocomgame_name: "CodeCombat: ააწყე შენი საკუთარი თამაში!"
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "შექმენით თამაში JavaScript-ის საშუალებით"
   tutorial_tynkercq_name: "კანფეტის კვესტი"
@@ -505,7 +505,7 @@ ka:
   tutorial_frogger_name: "შექმენით თქვენი საკუთარი 3D ფროგერის თამაში"
   tutorial_tynkereco_name: "Ecological Pyramid STEM Kit"
   tutorial_mitedarc_name: "MIT-ის საგანმანათლებლო არკადა"
-  tutorial_khan_name: 'ხანის აკადემია: ხატვა კოდის საშუალებით'
+  tutorial_khan_name: "ხანის აკადემია: ხატვა კოდის საშუალებით"
   tutorial_tynkerd_name: "დებაგერი"
   tutorial_cdmy_name: "Codecademy"
   tutorial_codestersdance_name: "საცეკვაო მოძრაობები"
@@ -524,7 +524,7 @@ ka:
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "კოდის მბრძანებელი"
   tutorial_bamboo_name: "ბამბუკის JS"
-  tutorial_robojav_name: 'რობოტები და Java: შესავალი Java-ში'
+  tutorial_robojav_name: "რობოტები და Java: შესავალი Java-ში"
   tutorial_roboba_name: "შეისწავლეთ ალგებრა RoboBlocky-ით"
   tutorial_knodsnake_name: "ჯავასკრიპტის გველი"
   tutorial_soccharater_name: "პერსონაჟის აწყობა"
@@ -532,7 +532,7 @@ ka:
   tutorial_robomesh_name: "დააპროგრამეთ VEX IQ რობოტები Blockly-ს საშუალებით"
   tutorial_amaze_name: "ლაბირინთობა"
   tutorial_codestersds_name: "სიზმრების მიმდევრობა"
-  tutorial_knodtext_name: 'ტექსტური თავგადასავალი: Python'
+  tutorial_knodtext_name: "ტექსტური თავგადასავალი: Python"
   tutorial_alicegar_name: "ანიმირება ელისთან და გარფილდთან ერთად"
   tutorial_codesterstransform_name: "ტრანსფორმაციული თავსატეხები"
   tutorial_flexfrog_name: "Flexbox ბაყაყუნა"
@@ -541,7 +541,7 @@ ka:
   tutorial_robobm_name: "შეისწავლეთ მათემატიკა RoboBlocky-სთან ერთად"
   tutorial_codingrobots_name: "შეისწავლეთ ერთსაათიანი პროგრამირება RoboBlocky-ით"
   tutorial_robob_name: "შეისწავლეთ რობოტიკა RoboBlocky-სთან ერთად"
-  tutorial_coders_name: 'კოდერების საპასუხო დარტყმა: შესავალი ბოტების პროგრამირებაში'
+  tutorial_coders_name: "კოდერების საპასუხო დარტყმა: შესავალი ბოტების პროგრამირებაში"
   tutorial_tynkerhw_name: "ისწავლეთ კოდის წერა Hot Wheels-თან ერთად"
   tutorial_tynkermh_name: "ისწავლეთ კოდის წერა Monster High-თან ერთად"
   tutorial_caphoto_name: "შექმენით ფოტოს ჯიხურის აპლიკაცია"
@@ -550,18 +550,18 @@ ka:
   tutorial_bbot_name: "მხიარულება ბომბერბოტთან ერთად და მარტივი პროგრამირების აქტივობები"
   tutorial_scratchg_name: "თამაშების დაპროგრამება Sratch-ში"
   tutorial_roboticfriends_name: "ჩემი რობოტული მეგობრები"
-  tutorial_sjforest_name: 'ScratchJr: შემიძლია, შევქმნა საშიში ტყე?'
-  tutorial_sjgreet_name: 'ScratchJr: შემიძლია, ისე გავაკეთო, რომ ჩემი პერსონაჟები ერთმამენთს მიესალმონ?'
-  tutorial_sjsunset_name: 'ScratchJr: შემიძლია თუ არა გამოვსახო მზის ჩასვლა?'
+  tutorial_sjforest_name: "ScratchJr: შემიძლია, შევქმნა საშიში ტყე?"
+  tutorial_sjgreet_name: "ScratchJr: შემიძლია, ისე გავაკეთო, რომ ჩემი პერსონაჟები ერთმამენთს მიესალმონ?"
+  tutorial_sjsunset_name: "ScratchJr: შემიძლია თუ არა გამოვსახო მზის ჩასვლა?"
   tutorial_fufafrenz_name: "fuzzFamily Frenzy"
   tutorial_bbcgeo_name: "Bitsbox პროგრამირება + გეომეტრია"
   tutorial_chspixel_name: "CodeHS პიქსელ არტი"
   tutorial_hummingbird_name: "თამაშის შექმნა Hummingbird-თან ერთად"
   tutorial_recoloring_name: "სამყაროს ფერების შეცვლა"
   tutorial_bbcchem_name: "Bitsbox პროგრამირება+ ქიმია"
-  tutorial_floalgo_name: 'პროგრამირება: ალგორითმების გაკვეთილების გეგმა'
-  tutorial_flocond_name: 'პროგრამირება: პირობითი ოპერატორების გაკვეთილების გეგმა'
-  tutorial_floloops_name: 'პროგრამირება: For ციკლების გაკვეთილების გეგმა'
+  tutorial_floalgo_name: "პროგრამირება: ალგორითმების გაკვეთილების გეგმა"
+  tutorial_flocond_name: "პროგრამირება: პირობითი ოპერატორების გაკვეთილების გეგმა"
+  tutorial_floloops_name: "პროგრამირება: For ციკლების გაკვეთილების გეგმა"
   tutorial_pgts_name: "ქვა, ქაღალდი, მაკრატელი"
   tutorial_ozo_name: "Ozobot-ის ტუტორიალი"
   tutorial_bbcla_name: "Bitsbox პროგრამირება + ენობრივი ხელოვნებები"
@@ -578,11 +578,11 @@ ka:
   tutorial_box_name: "ყუთების კუნძული"
   tutorial_hopgame_name: "Hopscotch-ის თამაშის დიზაინის სახელოსნო"
   tutorial_icontrol_name: "iკონტროლი"
-  tutorial_cocomteach_name: 'CodeCombat: მასწავლებლების მიერ ჩატარებადი აქტივობები'
+  tutorial_cocomteach_name: "CodeCombat: მასწავლებლების მიერ ჩატარებადი აქტივობები"
   tutorial_bbcmathii_name: "Bitsbox პროგრამირება + მათემატიკა (K-2)"
   tutorial_bbcphys_name: "Bitsbox პროგრამირება + ფიზიკა"
   tutorial_bitsbox_name: "შექმენით გიჟური აპლიკაციები Bitsbox-თან ერთად"
-  tutorial_tlcemo_name: 'ემოციების მაქანა: შექმენით-სახე ბარათი'
+  tutorial_tlcemo_name: "ემოციების მაქანა: შექმენით-სახე ბარათი"
   tutorial_crd_name: "პირობითი ბრძანებები ბანქოში"
   tutorial_bbcbio_name: "Bitsbox პროგრამირება + ბიოლოგია"
   tutorial_ticklebb8_name: "BB-8 ქნევა"
@@ -599,13 +599,13 @@ ka:
   tutorial_hopquiz_name: "ქვიზების შემქმნელი"
   tutorial_unfortunate_name: "უიღბლო მოვლენების მიმდევრობა"
   tutorial_cha_name: "კომპიუტერის ისტორიის აქტივობა"
-  tutorial_elaseq_name: 'წერა და პროგრამირება: ELA ინტეგრაცია საერთო ძირითად სტანდარტებთან'
+  tutorial_elaseq_name: "წერა და პროგრამირება: ELA ინტეგრაცია საერთო ძირითად სტანდარტებთან"
   tutorial_bbcmathi_name: "Bitsbox პროგრამირება + მათემატიკა (3-5)"
   tutorial_tlcpixel_name: "პიქსელური თავსატეხები"
   tutorial_arduino_name: "არდუინოს აქტივობა"
   tutorial_introrobo_name: "შესავალი რობოტიკაში"
   tutorial_tlcinvis_name: "უჩინარი შემოტყუების აქტივობა"
-  tutorial_tlcjflap_name: 'JFLAP: Creating Finite State Machines'
+  tutorial_tlcjflap_name: "JFLAP: Creating Finite State Machines"
   tutorial_procolor_name: "გაემგზავრეთ სკოლაში მანქანით Ozobot-თან ერთად"
   tutorial_spiralsfinch_name: "სპირალები ფინჩთან ერთად"
   tutorial_ozoi_name: "შესავალი პროგრამირებაში და Ozobot-ის გაცნობა"
@@ -636,7 +636,7 @@ ka:
   tutorial_tynkercan_name: "ფიზიკური ზარბაზნის თამაშის კომპლექტი 2 მოთამაშისთვის"
   tutorial_grokflags_name: "მსოფლიოს დროშები (Python კუ)"
   tutorial_robomind_name: "დააპროგრამეთ ვირტუალური რობოტი RoboMind-ის საშუალებით"
-  tutorial_scratchanimwork_name: 'მოახდინეთ თქვენი სახელის ანიმაცია: მასწავლებლის სახელმძღვანელო'
+  tutorial_scratchanimwork_name: "მოახდინეთ თქვენი სახელის ანიმაცია: მასწავლებლის სახელმძღვანელო"
   tutorial_adventureq_name: "თავგადასავალი Q-სთან ერთად"
   tutorial_khan-es_name: "შესავალი JavaScript-ში"
   tutorial_kpt_name: "შესავალი JavaScript-ში"
@@ -650,7 +650,7 @@ ka:
   tutorial_baypt_name: "დააპროგრამეთ Baymax-ი"
   tutorial_code-combat_name: "CodeCombat"
   tutorial_mky_name: "CodeMonkey"
-  tutorial_spellcraft_name: 'CodeSpells: Spellcraft'
+  tutorial_spellcraft_name: "CodeSpells: Spellcraft"
   tutorial_pirates_name: "მეკობრეების დაპროგრამება"
   tutorial_csfirst_name: "კომპიუტერული მეცნიერება პირველ რიგში"
   tutorial_loopedy_name: "იცეკვეთ ციკლურ ციკლში"
@@ -673,20 +673,20 @@ ka:
   tutorial_pixie_name: "PIXIE-ის გამოწვევები"
   tutorial_play_name: "სათამაშო ლაბორატორია"
   tutorial_robomind-nl_name: "დააპროგრამეთ ვირტუალური რობოტი"
-  tutorial_spheroi_name: 'SPRK ელვის ლაბორატორია, ბლოკები 1: შესავალი'
-  tutorial_spherol_name: 'SPRK ელვის ლაბორატორია, ბლოკები 3: შუქები'
-  tutorial_spherov_name: 'SPRK ელვის ლაბორატორია, ბლოკები 3: ცვლადები'
-  tutorial_swb_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდის საშუალებით'
-  tutorial_build-a-galaxy_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდის საშუალებით'
+  tutorial_spheroi_name: "SPRK ელვის ლაბორატორია, ბლოკები 1: შესავალი"
+  tutorial_spherol_name: "SPRK ელვის ლაბორატორია, ბლოკები 3: შუქები"
+  tutorial_spherov_name: "SPRK ელვის ლაბორატორია, ბლოკები 3: ცვლადები"
+  tutorial_swb_name: "ვარსკვლავური ომები: გალაქტიკის შექმნა კოდის საშუალებით"
+  tutorial_build-a-galaxy_name: "ვარსკვლავური ომები: გალაქტიკის შექმნა კოდის საშუალებით"
   tutorial_alicesims_name: "Storyboarding and Programming with Alice and The Sims"
   tutorial_tchr_name: "მასწავლებლის მიერ ჩასატარებელი გაკვეთილების გეგმები"
   tutorial_robogame_name: "თამაშები რობოტებზე"
   tutorial_tap_name: "ტინკერი ტაბლეტებზე"
   tutorial_cintl_name: "დაწერეთ თქვენი პირველი კომპიუტერული პროგრამა"
   tutorial_itchstop_name: "ITCH Stop Frame Animation (Scratch)"
-  tutorial_tynkerpn_name: 'Peep: გასეირნება ბუნებაში'
-  tutorial_tynkerpd_name: 'პიპი: ცეკვა მეგობრებთან ერთად'
-  tutorial_persistence_name: 'Persistence: Building a Foundation'
+  tutorial_tynkerpn_name: "Peep: გასეირნება ბუნებაში"
+  tutorial_tynkerpd_name: "პიპი: ცეკვა მეგობრებთან ერთად"
+  tutorial_persistence_name: "Persistence: Building a Foundation"
   tutorial_getloopy_name: "ჩაციკლვა"
   tutorial_createface_name: "შექმენით სახე"
   tutorial_happymaps_name: "ბედნიერი რუკები"
@@ -706,8 +706,8 @@ ka:
   tutorial_wolframn_name: "ნინძას სახელის გენერატორი"
   tutorial_soloweb_name: "თქვენი პირველი ვებგვერდი ერთ საათში!"
   tutorial_bloxmobapp_name: "შექმენით თქვენი მობილური აპლიკაცია"
-  tutorial_khanweb_name: 'ხანის აკადემია: ვებგვერდები'
-  tutorial_khandata_name: 'ხანის აკადემია: მონაცემთა ბაზები'
+  tutorial_khanweb_name: "ხანის აკადემია: ვებგვერდები"
+  tutorial_khandata_name: "ხანის აკადემია: მონაცემთა ბაზები"
   tutorial_robomeshiq_name: "დააპროგრამეთ VEX IQ რობოტები Blockly-ს საშუალებით"
   tutorial_googlelogo_name: "შექმენით თქვენი საკუთარი Google-ის ლოგო"
   tutorial_playtune_name: "აპლიკაცია \"დაუკარით ეს მელოდია\""
@@ -741,7 +741,7 @@ ka:
   tutorial_codehsjsgraph_name: "JavaScript-ის გრაფიკა CodeHS-თან ერთად"
   tutorial_thunkable_name: "ისწავლეთ 10 აპლიკაციის აწყობა 1 საათში!"
   tutorial_hopcrossyroad_name: "შექმენით Crossy Road-ი iPad/iPhone-ზე"
-  tutorial_switchglitch_name: 'Switch & Glitch: რობოტული თავგადასავალი'
+  tutorial_switchglitch_name: "Switch & Glitch: რობოტული თავგადასავალი"
   tutorial_codecar_name: "პროგრამული მანქანის სიმულატორი"
   tutorial_codesterscp_name: "საკოორდინატო სიბრტყე"
   tutorial_grokpetblock_name: "ვირტუალური შინაური ცხოველი (micro: ცოტაოდენ ბლოკური)"
@@ -751,8 +751,8 @@ ka:
   tutorial_grokdisease_name: "დაავადების ეპიდემია"
   tutorial_techec_name: "JS-ში დახურვების განმარტება"
   tutorial_rgbegin_name: "რობო ბაღი - დამწყები"
-  tutorial_myradream_name: 'აკტიმატორი: მირას სიზმარი'
-  tutorial_thinkfun_name: 'რობოტის შეკეთება: შეგიძლიათ, შეაკეთოთ რობოტის ტვინი?'
+  tutorial_myradream_name: "აკტიმატორი: მირას სიზმარი"
+  tutorial_thinkfun_name: "რობოტის შეკეთება: შეგიძლიათ, შეაკეთოთ რობოტის ტვინი?"
   tutorial_hopfireworks_name: "შექმენით ფოიერვერკის აპლიკაცია iPad/iPhone-ზე"
   tutorial_grokspace_name: "კოსმოსი (Blockly)"
   tutorial_codehspython_name: "დააპროგრამეთ Python-ში CodeHS-ის საშუალებით"
@@ -786,7 +786,7 @@ ka:
   tutorial_nclabdrone_name: "მოდით ავაწყოთ დრონი!"
   tutorial_gpbcircle_name: "შექმენით ინტერაქტიული ფერადი წრე"
   tutorial_gpbpaint_name: "შექმენით თქვენი საკუთარი სახატავი რედაქტორი"
-  tutorial_cocomarcade_name: 'CodeCombat: ააწყე არკადული თამაში!'
+  tutorial_cocomarcade_name: "CodeCombat: ააწყე არკადული თამაში!"
   tutorial_techcpp_name: "C++ 17-ის 7 თვისება, რომლებიც თქვენს კოდს გაამარტივებს"
   tutorial_beetik_name: "დააპროგრამეთ ფრანც ლისტცის მუსიკა"
   tutorial_codedj_name: "დააპროგრამეთ მუსიკა Code DJ-სთან ერთად"
@@ -794,7 +794,7 @@ ka:
   tutorial_codehsrn_name: "აპლიკაციების შექმნა React Native-ის საშუალებით"
   tutorial_codehswd_name: "ვებ დიზაინი CodeHS-ის საშუალებით"
   tutorial_turtlerobot_name: "რობოტი კუ"
-  tutorial_ozoevo_name: 'შესავალი Evo-ში: Evo-ს ძალოვანი ველი'
+  tutorial_ozoevo_name: "შესავალი Evo-ში: Evo-ს ძალოვანი ველი"
   tutorial_ozoexped_name: "Ozobot-ის ექსპედიცია ნეპტუნზე"
   tutorial_ozojourney_name: "მაგელანის მოგზაურობა"
   tutorial_ozocodes_name: "დაწერეთ თქვენი სახელი ოზოკოდების საშუალებით"
@@ -820,15 +820,15 @@ ka:
   tutorial_kodpizzapre_name: "პიცის წვეულება! (დამწყებებისთვის)"
   tutorial_kodpizza_name: "პიცის წვეულება!"
   tutorial_kodwomen_name: "ქალები ტექნოლოგიაში"
-  tutorial_tfunplug_name: 'რობოტების რემონტი: შეგიძლიათ, შეაკეთოთ რობოტის ტვინი? (უსადენო)'
+  tutorial_tfunplug_name: "რობოტების რემონტი: შეგიძლიათ, შეაკეთოთ რობოტის ტვინი? (უსადენო)"
   tutorial_lbvariables_name: "ცვლადები Littlebit-ებით"
   tutorial_lbfunctions_name: "მხიარულება ფუნქციებსა და littleBits-თან"
   tutorial_lblogic_name: "ლოგიკის გაკვეთილები littleBits-თან"
-  tutorial_lbworld_name: 'littleBits: არკადული გამოწვევა - შეცვალეთ სამყარო'
+  tutorial_lbworld_name: "littleBits: არკადული გამოწვევა - შეცვალეთ სამყარო"
   tutorial_lbloops_name: "ისწავლეთ ციკლები littleBits-თან ერთად!"
-  tutorial_lbtug_name: 'littleBits: Tug of War'
-  tutorial_lbpotato_name: 'littleBits: აპოკალიპტური... ცხელი კარტოფილი!'
-  tutorial_lbguitar_name: 'littlebits: როკ ვარსკვლავის გიტარა'
+  tutorial_lbtug_name: "littleBits: Tug of War"
+  tutorial_lbpotato_name: "littleBits: აპოკალიპტური... ცხელი კარტოფილი!"
+  tutorial_lbguitar_name: "littlebits: როკ ვარსკვლავის გიტარა"
   tutorial_lbio_name: "შემავალი & გამომავალი მონაცემები littleBits-თან ერთად"
   tutorial_wonpuppy_name: "Dash the Puppy (E3)"
   tutorial_woncue_name: "Cue's Starter Guide"
@@ -836,14 +836,14 @@ ka:
   tutorial_wontrip_name: "Dash's Road Trip (F2)"
   tutorial_woncollect_name: "Dash the Collector (B1)"
   tutorial_wonsecret_name: "Cue-ს საიდუმლო წერილი"
-  tutorial_hsscience_name: 'Hopscotch: შექმენით ინტერაქტიული სამეცნიერო მოდელები თქვენს iPad-ზე/iPhone-ზე!'
+  tutorial_hsscience_name: "Hopscotch: შექმენით ინტერაქტიული სამეცნიერო მოდელები თქვენს iPad-ზე/iPhone-ზე!"
   tutorial_popculture_name: "პოპ კულტურის მონაცემთა მეცნიერება"
   tutorial_legorobust_name: "Robust Structures – LEGO® Education WeDo 2.0"
   tutorial_legoplants_name: "Plants and Pollinators – LEGO® Education WeDo 2.0"
   tutorial_legopark_name: "Autonomous Parking – LEGO® MINDSTORMS® Education EV3"
   tutorial_legodetect_name: "ობიექტების გამოვლენა - LEGO® MINDSTORMS® განათლება EV3"
   tutorial_legolight_name: "ავტომატური ფარები - LEGO® MINDSTORMS® Education EV3"
-  tutorial_alexa_name: 'Amazon Alexa Fact Skill Tutorial: My School Facts'
+  tutorial_alexa_name: "Amazon Alexa Fact Skill Tutorial: My School Facts"
   tutorial_grokpetmicro_name: "ვირტუალური შინაური ცხოველი (micro: ცოტაოდენ MicroPithon)"
   tutorial_pirateplunder_name: "მეკობრული ნადავლი"
   tutorial_cadj_name: "DR DJ მოწყობილობა"
@@ -853,7 +853,7 @@ ka:
   tutorial_accai_name: "პლანეტების შესწავლა ხელოვნური ინტელექტის გამოყენებით"
   tutorial_vceclipse_name: "დააპროგრამეთ მზის დაბნელება"
   tutorial_pmzero_name: "Pac-Man ZERO"
-  tutorial_hsela_name: 'ამბების მოყოლა: ELA + პროგრამირება'
+  tutorial_hsela_name: "ამბების მოყოლა: ELA + პროგრამირება"
   tutorial_ticklear_name: "რა არის AR?"
   tutorial_bcrobot_name: "რობოტი BlocksCAD"
   tutorial_bcsnow_name: "BlocksCAD Snowflake"
@@ -861,14 +861,14 @@ ka:
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "მთხრელი ჯუჯა"
   tutorial_rmedr_name: "დააპროგრამეთ VEX EDR-ის რობოტები Blockly-ს გამოყენებით"
-  tutorial_dksky_name: 'DevKit: Build the Sky Fall App'
-  tutorial_dkcurrency_name: 'DevKit: Build the Currency King App'
-  tutorial_dkriver_name: 'DevKit: Build the River Monsters App'
-  tutorial_dkball_name: 'DevKit: Build the Bouncing Ball App'
-  tutorial_spheroit_name: 'Blocks 2: If/Then Else'
+  tutorial_dksky_name: "DevKit: Build the Sky Fall App"
+  tutorial_dkcurrency_name: "DevKit: Build the Currency King App"
+  tutorial_dkriver_name: "DevKit: Build the River Monsters App"
+  tutorial_dkball_name: "DevKit: Build the Bouncing Ball App"
+  tutorial_spheroit_name: "Blocks 2: If/Then Else"
   tutorial_gameofcodes_name: "Game Of Codes"
   tutorial_blocklygames_name: "Blockly Games"
-  tutorial_spherohello_name: 'Text 1: Hello World'
+  tutorial_spherohello_name: "Text 1: Hello World"
   tutorial_spheroarcade_name: "Sphero Arcade Playground"
   tutorial_bcpy1_name: "World of Python"
   tutorial_bcpy2_name: "World of Python 2"
@@ -916,7 +916,7 @@ ka:
   tutorial_itchbio_shortdescription: "შექმენით თქვენი საკუთარი თამაში, რომელშიც მოგიწევთ ბიოლოგიური უჯრედის ნაწილების დასახელება ITCH-ის საშუალებით (Scratch კლასებისთვის)"
   tutorial_itchj_shortdescription: "ისწავლეთ, თუ როგორ უნდა აახტუნოთ პერსონაჟი და დასვათ პლატფორმაზე ITCH-ის საშუალებით (Scratch-ი მასწავლებლებისთვის)"
   tutorial_tickleo_shortdescription: "Tickle, მომხმარებელზე ორიენტირებული აპლიკაცია, საშუალებას მოგცემთ, მარტივად დააპროგრამოთ ორკა, რომ მან იცუროს სხვადასხვა გზით, ამისთვის კი საჭიროა მხოლოდ კოდის ბლოკების გადმოტანა და ბრძანებების შექმნა, რომელსაც ის მიჰყვება."
-  tutorial_hopgeo_shortdescription: 'შექმენით თქვენი საკუთარი გეომეტრიული მხტუნავი თამაში: თავი აარიდეთ თქვენი მიმართულებით მფრინავ დაბრკოლებებს!'
+  tutorial_hopgeo_shortdescription: "შექმენით თქვენი საკუთარი გეომეტრიული მხტუნავი თამაში: თავი აარიდეთ თქვენი მიმართულებით მფრინავ დაბრკოლებებს!"
   tutorial_tynkermult_shortdescription: "შექმენით მხიარული თამაში გამრავლების შესახებ!"
   tutorial_monster_shortdescription: "პროგრამირების დამოუკიდებლად დასწავლადი, ფერადი თავგადასავალი ბავშვებისთვის."
   tutorial_tynkerapp_shortdescription: "დააპროგრამეთ თქვენი საყვარელი თამაშის ინდივიდუალური ვერსია!"
@@ -943,7 +943,7 @@ ka:
   tutorial_frogger_shortdescription: "შექმენით თქვენი საკუთარი 3D თამაში "
   tutorial_tynkereco_shortdescription: "დაწერეთ ინტერაქტიული ეკოლოგიური პირამიდის კოდი."
   tutorial_mitedarc_shortdescription: "შეაგროვებინეთ თქვენს სპრაიტს მონეტები და მიიღეთ ქულები."
-  tutorial_khan_shortdescription: 'ხანის აკადემია: კოდით ხატვა გასწავლით, თუ როგორ უნდა დაწეროთ JavaScript-ის კოდი თქვენი საკუთარი თოვლის პაპის დიზაინის შექმნით'
+  tutorial_khan_shortdescription: "ხანის აკადემია: კოდით ხატვა გასწავლით, თუ როგორ უნდა დაწეროთ JavaScript-ის კოდი თქვენი საკუთარი თოვლის პაპის დიზაინის შექმნით"
   tutorial_tynkerd_shortdescription: "ებრძოლეთ ხოჭოებს, რათა გადაარჩინოთ დედაპლატა!"
   tutorial_cdmy_shortdescription: "შეისწავლეთ JavaScript-ის პროგრამირება, ვებ-ბრაუზერში"
   tutorial_codestersdance_shortdescription: "შექმენით თქვენი საკუთარი საცეკვაო მიმდევრობა და დააპროგრამეთ სპრაიტი ისე, რომ მან შეასრულოს ის! "
@@ -1133,7 +1133,7 @@ ka:
   tutorial_gpp_shortdescription: "მოსწავლეები დაწერენ ალგორითმს (ინსტრუქციების მიმდევრობას). წინასწარ განსაზღვრული ბრძნაბების მიმდევრობის გამოყენებით ისინი მიანიშნებენ კლასელებს, რომ შექმნან ნახატის მსგავსი."
   tutorial_foosgame_shortdescription: "CodeSpark Academy with The Foos-თან ერთად დააპროექტეთ და დაწერეთ თქვენი საკუთარი ვიდეო თამაში."
   tutorial_solopython_shortdescription: "ასოების მთვლელი Python-ში"
-  tutorial_kodableint_shortdescription: 'მოსწავლეები გაეცნოებიან პროგრამირების ყველაზე ფუნდამენტურ კონცეფციას: მიმდევრობას.'
+  tutorial_kodableint_shortdescription: "მოსწავლეები გაეცნოებიან პროგრამირების ყველაზე ფუნდამენტურ კონცეფციას: მიმდევრობას."
   tutorial_kodableadv_shortdescription: "მოსწავლეები შექმნიან პროგრამებს პროგრამირების ფუნდამენტური კონცეფციების გათვალისწინებით და გაიგებენ მეტს უფრო მაღალი დონის, JavaScript-ის კოდის შესახებ."
   tutorial_tynkertj_shortdescription: "გამოიყენეთ პითონი ტოქსიკური ჯუნგლების გადასარჩენად!"
   tutorial_wolframa_shortdescription: "გსურთ გაიგოთ, თუ რამდენი წამია თქვენი ასაკი?"
@@ -1257,7 +1257,7 @@ ka:
   tutorial_kodchoose_shortdescription: "\"if პირობების\" გამოყენებით Choose Your Own Adventure ისტორია დაწერეთ!"
   tutorial_kodpizzapre_shortdescription: "დაეხმარეთ Dominic's Pizza-ს ალგორითმის მოფიქრებაში მათი მობილური აპლიკაციისთვის!"
   tutorial_kodpizza_shortdescription: "დაეხმარეთ Dominic's Pizza-ს ალგორითმის მოფიქრებაში მათი მობილური აპლიკაციისთვის!"
-  tutorial_kodwomen_shortdescription: 'ტექნოლოგია: არის თუ არა ის ყველასთვის? შეისწავლეთ უთანასწორობა ტექნოლოგიაში.'
+  tutorial_kodwomen_shortdescription: "ტექნოლოგია: არის თუ არა ის ყველასთვის? შეისწავლეთ უთანასწორობა ტექნოლოგიაში."
   tutorial_tfunplug_shortdescription: "გაერთეთ ამ სახალისო უსადენო CS-ის აქტივობით, რომელიც ბულის ლოგიკის კონცეფციებს ასწავლის."
   tutorial_lbvariables_shortdescription: "Having fun is not a variable with this littleBits Code Kit tutorial."
   tutorial_lbfunctions_shortdescription: "ხალისი არ წყდება, როდესაც თქვენ ფუნქციებზე დაფუძნებულ კოდის ბლოკებსა და littleBits-ს აერთიანებთ."
@@ -1291,7 +1291,7 @@ ka:
   tutorial_accai_shortdescription: "ასწავლეთ რობოტს ხელოვნური ინტელექტი, რომ ახალი პლანეტა შეისწავლოთ!"
   tutorial_vceclipse_shortdescription: "დააპროგრამეთ მზის დაბნელების სიმულაცია JavaScript-თან ერთად!"
   tutorial_pmzero_shortdescription: "შექმენით და დააპროგრამეთ 3D Pac-Man Maze World"
-  tutorial_hsela_shortdescription: 'ამბების მოყოლა: ELA + პროგრამირება'
+  tutorial_hsela_shortdescription: "ამბების მოყოლა: ELA + პროგრამირება"
   tutorial_ticklear_shortdescription: "ახლა ყველას შეუძლია დააპროგრამოს ვირტუალური და გაფართოებული რეალობის პერსონაჟები და დააპროგრამოს რეალური მოწყობილობები ამ პერსონაჟებთან ურთიერთქმედებისთვის - ერთ დავალებაში წარმოსახვის და რეალობის შერწყმა!"
   tutorial_bcrobot_shortdescription: "With only two blocks, students can design, create, and think in 3D! They can build their own robot, while learning underlying math and computational thinking concepts."
   tutorial_bcsnow_shortdescription: "მოსწავლეები გამოიყენებენ BlocksCAD-ს, რომ იაზროვნონ, დააპროექტონ და შექმნან 3D-ში!"
@@ -1317,7 +1317,7 @@ ka:
   tutorial_star-wars_longdescription: "ისწავლეთ დროიდების დაპროგრამება და შექმენით თქვენი საკუთარი ვარსკვლავური ომების თამაში შორეულ გალაქტიკაში."
   tutorial_gumadventure_longdescription: "Amazing World of Gumball-ის ეპიზოდში \"The Signal\" ხარვეზი ახდენს გავლენას პერსონაჟების ურთიერთობაზე. ამ აქტივობაში გააგრძელეთ ეს ამბავი თქვენი ხარვეზის შექმნით და წარმოიდგინეთ, როგორი რეაქცია ექნებოდათ მასზე Gumball-სა და მის მეგობრებს."
   tutorial_mchoc_longdescription: "გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი მაინკრაფტის სამყაროში."
-  tutorial_vidnews_longdescription: 'It''s the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. "Breaking News: 400 students at Roosevelt participate in the Hour of Code"'
+  tutorial_vidnews_longdescription: "It's the HOC News! Videos and graphics are all about tech, diversity, kids, and coding. Finished projects can be uploaded to school website as the report on the HOC itself. Teachers can encourage students to use the news to report on what they learned, or a statistic for their school. \"Breaking News: 400 students at Roosevelt participate in the Hour of Code\""
   tutorial_kodable-pre_longdescription: "\"დაკოდვადი\" არის თვითმართვადი თამაში, რომელიც 5+ ასაკის ბავშვებს აცნობს პროგრამირებას. მასწავლებლის ან მშობლის დახმარება სასურველია, მაგრამ არ არის აუცილებელი."
   tutorial_highseas_longdescription: "მოახდინეთ ოკეანეს ანიმირება, რათა შექმნათ გარემო, შემდეგ კი მოყვეთ ამბავი, რომელიც ვითარდება ღია ზღვებში."
   tutorial_capython_longdescription: "Python არის აქტიური და მარტივი ენა. გაიგეთ, როგორ გამოიყენოთ მოდულები, ფუნქციები, ციკლები და სიები სახალისო გამოსახულებების შექმნით, რაშიც თქვენი კუ მეგობრები დაგეხმარებიან. გეომეტრია ასეთი სახალისო არასდროს ყოფილა!"
@@ -1395,7 +1395,7 @@ ka:
   tutorial_marco_longdescription: "მოსწავლეები თამაშობენ სათავგადასავლო თამაშს, რომელიც დაფუძნებულია რეალურ ამბავზე. ისინი უძღვებიან მარკოს, მთავარ გმირს, თითოეულ საფეხურზე, რისთვისაც აძლევენ მას ნაბიჯ-ნაბიჯ ინსტრუქციებს, კოდის ერთ საათში გამოყენებული ვიზუალური პროგრამირების ენის დახმარებით. ისინი ეცნობიან ბრძანებების თანმიმდევრობას, იტერაციასა და პირობით ბრძანებებს ისე, რომ ვერც კი ამჩნევენ ამას."
   tutorial_codestersflappybike_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! Students are guided through a series of learning activities that teach them to build a complete game! After they finish, they are challenged to use what they learned about syntax, dot notation, events, variables, parameters and game mechanics to create a new game. "
   tutorial_kanopong_longdescription: "ისწავლეთ პროგრამირება ერთ საათი კლასიკური არკადული თამაშის შექმნის საშუალებით!"
-  tutorial_tynkerright_longdescription: 'შექმენით თქვენი საკუთარი კანონპროექტი უფლებების შესახებ: შეცვალეთ ფონი, დაამატეთ მეტი კითხვა, დააგროვეთ ქულები, დაამატეთ ანიმაციები.'
+  tutorial_tynkerright_longdescription: "შექმენით თქვენი საკუთარი კანონპროექტი უფლებების შესახებ: შეცვალეთ ფონი, დაამატეთ მეტი კითხვა, დააგროვეთ ქულები, დაამატეთ ანიმაციები."
   tutorial_flatverse_longdescription: "შეისწავლეთ პროგრამირების საფუძვლები ამ თამაშის საშუალებით, რომელშიც ან თქვენ შეჭამთ, ან თქვენ შეგჭამენ!"
   tutorial_touchdevelop_longdescription: "სენსორზე მორგებული რედაქტორი გაგაცნობთ პიქსელური ხელოვნების შექმნას, დათვის თავსატეხის ამოხსნას ან თქვენი საკუთარი მხტუნავი ჩიტის თამაშის შექმნას. "
   tutorial_tynkercc_longdescription: "მოამზადეთ თქვენი ჯარი ბრძოლისათვის! დაწერეთ შეტევის ლოგიკის კოდი ჯარის ყოველი წევრისთვის, რათა გამოიყენოთ მტრის სუსტი წერტილები და ამ ბრძოლაში გამარჯვებულად გამოხვიდეთ. სწავლის პროცესში თქვენ გახსნით ახალ პერსონაჟებს, რომელთა დაპროგრამებასაც შეძლებთ. შექმენით თქვენი ჯარი, შემდეგ ებრძოლეთ მეგობრებს. ვისი კოდია საუკეთესო?"
@@ -1492,7 +1492,7 @@ ka:
   tutorial_firstcomp_longdescription: "ძალიან ცოტა რამაა ისეთივე საინტერესო, როგორც კომპიუტერები. ახლა კი თქვენ მოგიწევთ თქვენი საკუთარი კომპიუტერის შექმნა - ამჯერად ქაღალდისგან. გაეცანით CPU-ს, RAM-ის და ROM-ის, მასიური დასამახსოვრებელი მოწყობილობის და GPU-ს ცნებებს. დახატეთ თქვენი პირველი აპლიკაცია. მოიმარჯვეთ მაკრატელი, კალამი და ქაღალდი!"
   tutorial_mazefinch_longdescription: "ამ აქტივობაში თქვენ გამოიყენებთ ძალიან მარტივ პროგრამირების ენას, რათა აამოძრაოთ და შემოაბრუნოთ რობოტი ფინჩი. შემდეგ თქვენ დაწერთ პროგრამებს და დაეხმარებით რობოტს ლაბირინთიდან გაღწევაში! თქვენ არ გჭირდებათ პროგრამირების გამოცდილება და შეგიძლიათ გამოიყენოთ ლეპტოპი ან Chromebook. "
   tutorial_tlccc_longdescription: "კომპიუტერში შენახული მონაცემები ინახება, როგორც სიმბოლოების გრძელი მიმდევრობები - კერძოდ კი ორობითი 1-იანების და 0-იანების მიმდევრობები. შეკუმშვის იდეა იმაში მდგომარეობს, რომ ჩვენ ვიყენებთ ალგორითმს, რომელიც იგივე მონაცემებს ნაკლები სიმბოლოს საშუალებით შეინახვას."
-  tutorial_tlcdoodle_longdescription: 'ფილმების სცენები ხშირად არის კომპიუტერით დაგენერირებული. გაინტერესებთ, როგორ აკეთებენ ამას? შემდეგ ჯერზე, როცა თქვენ დახატავთ ნაჯღაპნებს, თქვენ მას ალგორითმულად დახატავთ და შეისწავლით ალგორითმებით ბუნების ხატვას. ალგორითმები რეკურსიულია: ეს იმას ნიშნავს, რომ ისინი ერთ ბიჯს აღწერენ, რის მერეც გეუბნებიან, თუ როგორ უნდა დახატო შემდეგი ბიჯი იგივე გზით, რომ ალგორითმს თავიდანვე მივყვეთ.'
+  tutorial_tlcdoodle_longdescription: "ფილმების სცენები ხშირად არის კომპიუტერით დაგენერირებული. გაინტერესებთ, როგორ აკეთებენ ამას? შემდეგ ჯერზე, როცა თქვენ დახატავთ ნაჯღაპნებს, თქვენ მას ალგორითმულად დახატავთ და შეისწავლით ალგორითმებით ბუნების ხატვას. ალგორითმები რეკურსიულია: ეს იმას ნიშნავს, რომ ისინი ერთ ბიჯს აღწერენ, რის მერეც გეუბნებიან, თუ როგორ უნდა დახატო შემდეგი ბიჯი იგივე გზით, რომ ალგორითმს თავიდანვე მივყვეთ."
   tutorial_tlcpunch_longdescription: "Demonstrate how early computers were able to find data stored on punch cards and show that it is the same algorithm as the magic trick in the 'Australian Magician's Dream' Activity. It aims to show in a visual way how a search algorithm works. In doing so you demonstrate a practical use of binary numbers, a divide and conquer algorithm for searching and explore the computational thinking trick of translating solutions between problem areas."
   tutorial_finchfract_longdescription: "ეს აქტივობა იყენებს რეკურსიას იმისათვის, რომ დაახატინოს რობოტ ფინჩს კოხის ფრაქტალები. დავალება გულისხმობს იმას, რომ მოსწავლეებს გააცნეს რეკურსიის აზრი და ეს აქტივობა დაეხმარებათ მათ უფრო სიღრმისეულად გაიაზრონ რეკურსია ფიზიკური წარმოდგენის საშუალებით. ეს აქტივობა განკუთვნილია იმ მოსწავლეებისთვის, რომლებიც გადიან კომპიუტერული მეცნიერების შესავლის და მოწინავე დონის კურსებს, რომლებშიც გამოიყენება Python-ი ან Java."
   tutorial_tlcmind_longdescription: "ეს გაგაცნობთ ლოგიკური მსჯელობას ალგებრის გამოყენებით, რათა დავამტკიცოთ, რომ ალგორითმი ყოველთვის მუშაობს. ეს აჩვენებს, როგორ ვიყენებთ ალგორითმების შესაფასებლად აბსტრაქციასა და ლოგიკურ აზროვნებას."
@@ -1501,7 +1501,7 @@ ka:
   tutorial_oralhist_longdescription: "პროექტი \"Computing Educators Oral History\" არის ინტერვიუების და, ასევე, სწავლების მასალების და CEOHP კოლექციაზე მიბმული ხელსაწყოების კოლექცია."
   tutorial_tlcmicro_longdescription: "ეს ვიდეო შეგიძლიათ, გამოიყენოთ, როგორც ზოგადი შესავალი ადამიანისა და კომპიუტერის ურთიერთქმებაში (HCI - Human Computer Interaction). გაიგებთ, თუ რატომ არის ამდენი მოწყობილობის გამოყენება უფრო რთული, ვიდრე საჭიროა. ამაზე დიდ გავლენას ახდენს დიზაინი, ამიტომ, მნიშვნელოვანია, შევამოწმოთ ინტერფეისი, რომ მისი გამოყენება მარტივი იყოს."
   tutorial_imathematician_longdescription: "This, teacher led, activity provides the opportunity for pupils to use a cross curricular approach to computer science and mathematics.  \n\nPupils will create a computer program to solve a variation of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's Dilemma.\n"
-  tutorial_tlcmagic_longdescription: 'In exploring how the magic works, you learn about computational thinking: especially the importance of evaluation to algorithmic thinking. You explore both testing and hazard analysis. The magic trick shows how computer scientists, engineers (and magicians) have to check their algorithms thoroughly. They must think carefully about how things might go wrong as well as checking they will go right.'
+  tutorial_tlcmagic_longdescription: "In exploring how the magic works, you learn about computational thinking: especially the importance of evaluation to algorithmic thinking. You explore both testing and hazard analysis. The magic trick shows how computer scientists, engineers (and magicians) have to check their algorithms thoroughly. They must think carefully about how things might go wrong as well as checking they will go right."
   tutorial_scratchmus_longdescription: "Scratch-ის საშუალებით თქვენ შეგიძლიათ შექმნათ თქვენი საკუთარი ინტერაქტიული თამაშები, ამბები, ანიმაციები -- და გაუზიაროთ ისინი თქვენს მეგობრებს. დასაწყებად, შექმენით ინტერაქტიული მუსიკალური პროექტი. აქტივობის ბარათები და სახელოსნოს მეგზური ასევე ხელმისაწვდომია უფასოდ scratch.mit.edu-ზე"
   tutorial_scratchanim_longdescription: "Scratch-ის საშუალებით თქვენ შეგიძლიათ შექმნათ თქვენი საკუთარი ინტერაქტიული თამაშები, ამბები, ანიმაციები -- და გაუზიაროთ ისინი თქვენს მეგობრებს. დასაწყებად, მოახდინეთ თქვენი სახელის ასოების, ინიციალების ან საყვარელი სიტყვის ანიმაცია. აქტივობის ბარათები და სახელოსნოს მეგზური ასევე ხელმისაწვდომია უფასოდ scratch.mit.edu-ზე."
   tutorial_scratchfly_longdescription: "Scratch-ის საშუალებით თქვენ შეგიძლიათ შექმნათ თქვენი საკუთარი ინტერაქტიული თამაშები, ამბები, ანიმაციები -- და გაუზიაროთ ისინი თქვენს მეგობრებს. დასაწყებად, შეისწავლეთ თუ როგორ უნდა შექმნათ თქვენი საკუთარი მფრინავი პერსონაჟი. აქტივობის ბარათები და სახელოსნოს მეგზური ასევე ხელმისაწვდომია უფასოდ scratch.mit.edu-ზე. "
@@ -1512,7 +1512,7 @@ ka:
   tutorial_tynkercan_longdescription: "Make an awesome 2-player cannon game and challenge your friends to play with you! You'll start with a partially programmed version of the game, so you need to program the left cannon. Once you've got both cannons firing, you'll set up platforms and other items to knock over. Make it your own by adding extra features and customizing the theme!"
   tutorial_grokflags_longdescription: "ეს აქტივობა შექმნილია იმისათვის, რომ პირველად გაცდევინოთ პროგრამირება. ის სპეციალურადაა შექმნილი კოდის ერთი საათისთვის. გამოიყენეთ პროგრამირების ენა Python და მისი კუს მოდული, რათა დახატოთ სხვადასხვა ქვეყნის დროშები!"
   tutorial_robomind_longdescription: "საკუთარი ვირტუალური რობოტის კონტროლით მოსწავლეები ისწავლიან პროგრამირების საფუძვლებს. ეს ონლაინ გაკვეთილი მოიცავს ყველაფერს, რაც გჭირდებათ: პრეზენტაციებს, ფილმებს, ქვიზებსა და ავტომატურ გზამკვლევ/რჩევებს, რომლებიც დაეხმარებათ მოსწავლეებს პროგრამირების ამოცანების ამოხსნაში. "
-  tutorial_scratchanimwork_longdescription: 'This guide offers ideas for leading a one-hour workshop using Scratch. Students will gain experience with coding as they animate their names or a favorite word. This educator guide is designed for use with this Scratch tutorial: scratch.mit.edu/name'
+  tutorial_scratchanimwork_longdescription: "This guide offers ideas for leading a one-hour workshop using Scratch. Students will gain experience with coding as they animate their names or a favorite word. This educator guide is designed for use with this Scratch tutorial: scratch.mit.edu/name"
   tutorial_adventureq_longdescription: "Adventure with Q is a lesson plan for teachers (or anyone) to use to introduce programming logic in a group setting. The activity consists of different quests for kids to complete. Kids learn the basic commands through helping Q the alien in his forest adventure. "
   tutorial_khan-es_longdescription: "შეისწავლეთ JavaScript პროგრამირების საფუძვლები მხიარული ნახატების შექმნის საშუალებით. ამისთვის თქვენ უნდა გამოიყენოთ კოდი. შეასრულეთ ეს დავალება დამოუკიდებლად ან კლასთან ერთად!"
   tutorial_kpt_longdescription: "შეისწავლეთ JavaScript პროგრამირების საფუძვლები მხიარული ნახატების შექმნის საშუალებით. ამისთვის თქვენ უნდა გამოიყენოთ კოდი. შეასრულეთ ეს დავალება დამოუკიდებლად ან კლასთან ერთად!"
@@ -1582,8 +1582,8 @@ ka:
   tutorial_wolframn_longdescription: "ამ აქტივობაში მოსწავლეები შექმნიან სახელების გენერატორს, რომელიც გადააკეთებს მათ სახელებს ნინძას სტილის სახელებად."
   tutorial_soloweb_longdescription: "შედით www.sololearn.com-ზე და დააყენეთ HTML-ისა და CSS-ის აპლიკაციები ან გახსენით შესაბამისი გაკვეთილები ვებში (ანდროიდის მომხმარებლებს შეუძლიათ, დააყენონ გაერთიანებული SoloLearn აპლიკაცია). შეასრულეთ 2 მოდული (მიმოხილვა და HTML-ის საფუძვლები) HTML-ში და 2 მოდული (საფუძვლები და ტექსტთან მუშაობა) და მე-3 მოდულის პირველი 5 გაკვეთილი (თვისებები) CSS-ში. აიღეთ შაბლონი აქ: https://code.sololearn.com/WKeg2CtzpRts/ და მიჰყევით ინსტრუქციებს."
   tutorial_bloxmobapp_longdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ თანმიმდევრობითობა და სისტემური აზრივნება, ისეთი აპლიკაციებსი შესაქმნელად, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, სურათებისა და სხვა ობიექტების გამოყენებით თქვენს ინტერაქციულ აპლიკაციებში, რომლებიც იმუშავებს როგორც iOS-ზე, ისე ანდროიდზე. თქვენი მასალა, თქვენი პერსონალიზაცია, თქვენი აპლიკაცია თქვენს მობილრ ტელეფონზე."
-  tutorial_khanweb_longdescription: 'ხანის აკადემია: ვებგვერდები გასწავლიან HTML ტეგებისა და CSS-ის საშუალებით ვებგვერდების შექმნას. საბოლოოდ თქვენ შექმნით თქვენს საკუთარ მისასალმებელ ბარათს.'
-  tutorial_khandata_longdescription: 'ხანის აკადემია: მონაცემთა ბაზები გასწავლიან მონაცემების მანიპულირებას მონაცემთა ბაზაში და თქვენი საკუთარი მაღაზიის შექმნას.'
+  tutorial_khanweb_longdescription: "ხანის აკადემია: ვებგვერდები გასწავლიან HTML ტეგებისა და CSS-ის საშუალებით ვებგვერდების შექმნას. საბოლოოდ თქვენ შექმნით თქვენს საკუთარ მისასალმებელ ბარათს."
+  tutorial_khandata_longdescription: "ხანის აკადემია: მონაცემთა ბაზები გასწავლიან მონაცემების მანიპულირებას მონაცემთა ბაზაში და თქვენი საკუთარი მაღაზიის შექმნას."
   tutorial_robomeshiq_longdescription: "მოსწავლეები წერენ Google Blockly კოდს პოპულარული VEX IQ რობოტის გასაკონტროლებლად. მათ შეუძლიათ, აირჩიონ კოდის დაწერა ვირტუალური რობოტისთვის ან ნამდვილი VEX IQ რობოტისთვის, რომელსაც თავად შექმნიან. ორივე ვარიანტი ხელმისაწვდომია ერთი ვებზე დაფუძნებული ინტერფეისით. მოსწავლეებს შეუძლიათ, ისწავლონ რობოტების საბაზისო მოძრაობები და სენსორისა და შედეგის გამოტანის ხელსაწყოს გამოყენება. ეს აქტივობა არის მარტივი და სახალისო."
   tutorial_googlelogo_longdescription: "გამოიყენეთ თქვენი კრეატიულობა და წარმოსახვა და გააცოცხლეთ Google-ის ლოგო კოდის დახმარებით. ააცეკვეთ ასოები, მოჰყევით ამბავს ან შექმენით თამაში. Scratch-თან და CS First-თან ერთად, ყველას შეუძლია, გახდეს დიზაინერი და პროგრამისტი ერთ დღეში!"
   tutorial_playtune_longdescription: "ბლოკების ენა გამოიყენება მუსიკალური თავსატეხების ამოსახსნელად, კოდის ისე დაწერით, რომ შეესაბამებოდეს პიანინოს კლავიატურაზე დაკრულ მელოდიას. ამ თავსატეხების ამოსახსნელად საჭიროა თანმიმდევრობის, შერჩევისა და გამეორების ალგორითმები. მე-9 საფეხურის შემდეგ, მომხმარებლებს შეუძლიათ საკუთარი მელოდიების შექმნა და მათი გადმოწერა ანდროიდის აპლიკაციის სახით. მოსწავლეებს შეუძლიათ აპლიკაციის მოდიფიცირება App Inventor-ის საწყის კოდის ბმულზე გადასვლით."
@@ -1597,17 +1597,17 @@ ka:
   tutorial_codehsdigipixel_longdescription: "ისწავლეთ, როგორ ინახება და ჩანს გამოსახულებები კომპიუტერზე პიქსელების გამოყენებით. გამოიკვლიეთ, როგორ ხდება გამოსახულების კოდირება ფერების მნიშვნელობების ბადის სახით და შექმენით საკუთარი ციფრული გამოსახულებები ბინარული და მეთექვსმეტეული ფერის კოდების გამოყენებით!"
   tutorial_ccbinary_longdescription: "შექმენით Sratch-ის თამაში, რომელშიც თქვენ უნდა ეთამაშოთ სიმღერის ნოტებს, რომლებიც ამოძრავებენ დონეს ქვემოთა მიმართულებით. თქვენი მოაგროვებთ ათ ქულას ყოველი სწორი დაკრული ნოტისთვის. ყოველი ნოტი შეესაბამება ორობით რიცხვს."
   tutorial_codehsturtle_longdescription: "შეისწავლეთ პროგრამირების საფუძვლები კუ ტრეისისთან ერთად! ამისათვის დახატეთ თქვენს ეკრანზე ფიგურები. კუს გრაფიკა დამწყებზე გათვლილი პროგრამირების კონცეფციების შესწავლის გზაა, რომელსაც გრაფიკული გზით შემოაქვს კრეატიულობა პროგრამირებაში."
-  tutorial_grokhd_longdescription: 'განაგრძეთ Blockly-ის პროგრამირების უნარების დახვეწა! ეს კურსი ეფუძნება "გაყინული ფრაქტალების" აქტივობაში ნასწავლ მასალას: https://hourofcode.com/grokffblock. ეს აქტივობა შექმნილია იმისთვის, რომ გაგაცნოთ ალტერნატიული გადაწყვეტილებები პროგრამირებაში. გამოიყენეთ Python-ის Blockly ვერსია და მისი კუს მოდული ჰორტენზიას ყვავილების დასახატად და გასაფერადებლად!'
+  tutorial_grokhd_longdescription: "განაგრძეთ Blockly-ის პროგრამირების უნარების დახვეწა! ეს კურსი ეფუძნება \"გაყინული ფრაქტალების\" აქტივობაში ნასწავლ მასალას: https://hourofcode.com/grokffblock. ეს აქტივობა შექმნილია იმისთვის, რომ გაგაცნოთ ალტერნატიული გადაწყვეტილებები პროგრამირებაში. გამოიყენეთ Python-ის Blockly ვერსია და მისი კუს მოდული ჰორტენზიას ყვავილების დასახატად და გასაფერადებლად!"
   tutorial_grokem_longdescription: "ეს აქტივობა შექმნილია იმისათვის, რომ მოგანიჭოთ პროგრამირების პირველი გამოცდილება. ის სპეციალურადაა შექმნილი კოდის ერთი საათისთვის. გამოიყენეთ პროგრამირების ენა Python, რათა შეისწავლოთ ემოჯისა და ტექსტის მანიპულაცია."
   tutorial_kodmaze_longdescription: "შექმენით საკუთარი ლაბირინთები და გაუზიარეთ სხვებს! მოსწავლეები შეათავსებენ პროგრამირებასა და გეომეტრიას და ამოცანიდან გამომდინარე შექმნიან ამოხსნად ლაბირინთებს. გამოწვევბი მოიცავს მარტივ თავსატეხებს, თავსატეხებს წილადებით, სიმეტრიით და განსაზღვრული კუთხეებით."
-  tutorial_codestersa_longdescription: 'ამ აქტივობაში, რომელიც შექმნილია კოდის წერის მცირე გამოცდილების მქონეთათვის, მოსწავლეები იყენებენ გადმოსატან ტექსტებს და ქმნიან თამაშებს მოთამაშის კონტროლით! მოსწავლეები ეცნობიან ცვლადებს, შემთხვევითად წარმოქმნილ რიცხვებს, თამაშის დიზაინს, ქმედებების და ქმედების გამომწვევების უამრავ სახეს, და ყველაფერ ამასთან ერთად, ცდილობენ, ააცილონ ასტეროიდები თავიანთ კოსმოსურ ხომალდს. პრერეკვიზიტი: ცვლადები, პარამეტრები.'
+  tutorial_codestersa_longdescription: "ამ აქტივობაში, რომელიც შექმნილია კოდის წერის მცირე გამოცდილების მქონეთათვის, მოსწავლეები იყენებენ გადმოსატან ტექსტებს და ქმნიან თამაშებს მოთამაშის კონტროლით! მოსწავლეები ეცნობიან ცვლადებს, შემთხვევითად წარმოქმნილ რიცხვებს, თამაშის დიზაინს, ქმედებების და ქმედების გამომწვევების უამრავ სახეს, და ყველაფერ ამასთან ერთად, ცდილობენ, ააცილონ ასტეროიდები თავიანთ კოსმოსურ ხომალდს. პრერეკვიზიტი: ცვლადები, პარამეტრები."
   tutorial_cmdodo_longdescription: "თამაშზე დაფუძნებული პლატფორმა მე-2 და მე-4 კლასელთათავის, შექმნილი იმისთვის, რომ მოსწავლეებმა ისწავლონ და ივარჯოშონ მათემატიკაში იმავე მარტივად გამოსაყენებელი ინტერფეისით, რაც აქვს CodeMonkey-ის \"პროგრამულ თავგადასავალში\". 60 ინტერაქტიული აქტივობის შესრულებით მოსწავლეები გაიუმჯობესებენ მათემატიკურ უნარებს, ახალი გამოწვეევბით, პერსონაჟებით და ფუნქციებით. პიქსელის სახაზავისა და ტრანსპორტირის გამოყენებით, მანძილებისა და კუთხეების აგსაზომად, მოსწავლეები დაეხმარებიან დოდოს, მიაღწიოს კვერცხებამდე."
   tutorial_tynkerspace_longdescription: "თქვენი ასტრონავტის ხომალდი ავარიულად დაეშვა! საბედნიერდ, თქვენ შეგიძლიათ დახმარება. გამოიყენეთ გადასატანი ბლოკებით პროგრამირება და დაეხმარეთ პერსონაჟს, მოაგროვოს საჭირო ნაწილები და თან თავიდან აიცილოს უცხოპლანეტელები და წინააღმდეგობები. შეგიძლიათ, მოძებნოთ ხომალდი და სახლში დააბრუნოთ ასტრონავტი?"
   tutorial_gfbloons_longdescription: "ამ გაკვეთილში დააპროგრამებთ მსროლელი მაიმუნის კოშკს პოპულარული Bloons Tower Defense თამაშიდან. გაკვეთილის ბოლოსთვის გეცოდინებათ კუთხის გამოთვლის მათემატიკა და ალგორითმები, რომლებიც ყველაზე მეტად გამოიყენება დღევანდელ ყველაზე პოპულარულ კოშკის დაცვის თამაშებში. შეგეძლებათ, გამოიყენოთ ეს ცოდნა საკუთარი თამაშის შესაქმნელად. Gamefroot კოდის საათის ტუტორიალები იყენებს ვიზუალური პროგრამირების ენას - ბლოკებს, სადაც მოსწავლეებს კოდის დასაწერად, უბრალოდ, გადმოაქვთ და აგდებენ ვიზუალურ ბლოკებს."
   tutorial_raspipong_longdescription: "ნულიდან შექმენით კლასიკური თამაში Pong-ი Sense HAT-ისა და Python-ის კოდის გამოყენებით. ამ აქტივობის შესრულება შეგიძლიათ ონლაინ რეჟიმში Sense HAT-ის ემულატორის საშუალებით ან Raspberry Pi-ს და Sense HAT-ის მოწყობილობის გამოყენებით."
   tutorial_codehsvr_longdescription: "შეისწავლეთ ვირტუალური რეალობის შექმნის საფუძვლები HTML-ის და A-Frame JavaScript-ის ბიბლიოთეკის გამოყენებით. ამ აქტივობის საშუალებით, მოსწავლეები შექმნიან საკუთარ ვირტუალურ სამყაროებს, რომლებიც თავსებადნი იქნებიან VR მოწყობილობებთან, VR headset თავსებად სმარტფონების ჩათვლით!"
   tutorial_codesterstp_longdescription: "ამ აქტივობაში მოსწავლეები გამოიყენებენ Python-ს საკოორდინატო სიბრტყეზე სხვადასხვა გარდაქმნის განსახორციელებლად. გაკვეთილი მოიცავს დემონსტრაციებს, პირდაპირ ინსტრუქციებს და გამოწვევებს, რომლებიც მოსწავლეებისგან მოითხოვენ, დააპროგრამონ და გამოიცნონ სხვადასხვა სტატიკური გარდაქმნა!"
-  tutorial_codestersbb_longdescription: 'მოსწავლეები გამოიყენებენ ტექსტის გადაქაჩვის ხელსაწყოს და მაშინვე დაიწყებენ პროგრამირებას Python-თან ერთად! ამ დამოუკიდებელ აქტივობაში სტუდენტები ასრულებენ პირდაპირი მითითებების მქონე რამდენიმე აქტივობას, სადაც ისინი ქმნიან "მოქაჩე და ისროლე" ტიპის კალათბურთის თამაშს! მოსწავლეები ეცნობიან ცვლადებს, მოვლენებს, სინტაქსის საფუძვლებს, შემთხვევითი კოორდინატების შექმნას. სასურველი პრერეკვიზიტები: ცვლადები, წერტილოვანი ნოტაცია, მოვლენები, უარყოფითი რიცხვები'
+  tutorial_codestersbb_longdescription: "მოსწავლეები გამოიყენებენ ტექსტის გადაქაჩვის ხელსაწყოს და მაშინვე დაიწყებენ პროგრამირებას Python-თან ერთად! ამ დამოუკიდებელ აქტივობაში სტუდენტები ასრულებენ პირდაპირი მითითებების მქონე რამდენიმე აქტივობას, სადაც ისინი ქმნიან \"მოქაჩე და ისროლე\" ტიპის კალათბურთის თამაშს! მოსწავლეები ეცნობიან ცვლადებს, მოვლენებს, სინტაქსის საფუძვლებს, შემთხვევითი კოორდინატების შექმნას. სასურველი პრერეკვიზიტები: ცვლადები, წერტილოვანი ნოტაცია, მოვლენები, უარყოფითი რიცხვები"
   tutorial_gfcrossyroad_longdescription: "In this suite of introductory coding lessons you will learn about making your own Crossy Road style mini-game. You will learn how to code algorithms and sequences, inputs / outputs, loops and iteration, selection and if-statements, and comparative operators and think like a computer scientist. This suite of lessons is aligned with the New Zealand and Australian (Victorian) digital technologies curriculum and designed to help young people AND educators embrace coding in their schools, classrooms and coding clubs. Gamefroot Hour of Code tutorials use a visual programming language using blocks where students simply drag and drop visual blocks to write code."
   tutorial_googleww_longdescription: "ამ აქტივობაში დაწერთ კოდს ფილმის სამი უნიკალური სცენისთვის. ამისთვის გამოიყენებთ Blockly-ს, პროგრამირების ყველაზე მარტივ ენას და დაეხმარებით ქალ საოცრებას, თავიდან აიცილოს დაბრკოლებები და მიაღწიოს მიზანს. თქვენ ხელთ იქნება მიმდევრობების, ცვლადების, ციკლებისა და პირობითი ბრძანებების ძალა, რათა დაეხმაროთ დიანას, მოემზადოს მოწინააღმდეგეებთან შესახვედრად."
   tutorial_codehsjsapp_longdescription: "CodeHS თავსებადია უახლესი განახლებების მქონე ყველა ბრაუზერთან, Internet Explorer-ის გარდა. ჩვენ უპირატესობას ვანიჭებთ/გირჩევთ Chrome-ის ბრაუზერს, მაგრამ Firefox და Safari მშვენივრად იმუშაებს, თუ უკანასკნელ განახლებებს გამოიყენებთ."
@@ -1689,7 +1689,7 @@ ka:
   tutorial_florobot_longdescription: "ამ გაკვეთილში მოსწავლეები რობოტიკის შესწავლისას აამაღლებენ თავიანთ განათლების დონეს. ისინი ნახავენ Flocabulary-ს საგანმანათლებლო ჰიპ-ჰოპ ვიდეოს და აღმოაჩენენ, რა არის რობოტი როგორი რობოტები გვხვდება ყოველდღიურ ცხოვრებაში. ისინი წაიკითხავენ რობოტების მოკლე, მაგრამ ამომწურავ აღწერებს, განიხილავენ ამოცანებს, რომლებთანაც რობოტებს მარტივად შეუძლიათ გამკვლავება და დაამთავრებენ გაკვეთილს რობოტის დაპროექტებით, რომელიც მოცემულ ამოცანას ამოხსნის."
   tutorial_isavesanta_longdescription: "In this teacher-led festive activity, adapted for the Hour of Code, the children explore create a computer game using Scratch to save Santa. They design algorithms, use conditional statements as well as test and debug their work. Includes step-by-step lesson plan, pupil resources, support cards and pre-written program templates."
   tutorial_iorder_longdescription: "This teacher led activity, adapted for the Hour of Code, develops computational thinking and coding skills using Scratch 2.0. The children program an ice-cream stand simulation and/or game and, in doing so, design algorithms, use repetition, conditional statements, test and debug their work. Includes step-by-step lesson plan, pupil support materials, and pre-written Scratch 2.0 program templates for teacher and pupils."
-  tutorial_ianimate_longdescription: 'This teacher-led seasonal activity, adapted for the Hour of Code, introduces children to creating computer animations. The children will create frames, add artwork and animate a simple Christmas scene. Lots of ideas for differentiation, extension and enrichment from making a very simple animated sequence to more able pupils: animating backgrounds as well as characters and objects, adding 3D effects (e.g. shadows), creating more frames for smoother movement, switching backgrounds to create scene changes, and animating more than one object.'
+  tutorial_ianimate_longdescription: "This teacher-led seasonal activity, adapted for the Hour of Code, introduces children to creating computer animations. The children will create frames, add artwork and animate a simple Christmas scene. Lots of ideas for differentiation, extension and enrichment from making a very simple animated sequence to more able pupils: animating backgrounds as well as characters and objects, adding 3D effects (e.g. shadows), creating more frames for smoother movement, switching backgrounds to create scene changes, and animating more than one object."
   tutorial_iloveada_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides an opportunity to teach cross-curricular computing with history. Children research Ada Lovelace an important historical figure in computer science and the world's first computer programmer! They then use basic HTML to create a multimedia webpage showcasing their findings and skills as web masters. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_kodflash_longdescription: "Flash! Clap! This hands-on, wild weather lesson teaches conditional statements with lightning and thunder. Students will learn about why thunder always follows lightning and will examine the logic statement \"if there is lightning, then thunder will follow.\" Count the seconds between the two to see how far away the storm is!"
   tutorial_kodchoose_longdescription: "აირჩიეთ თქვენი საკუთარი თავგადასავალი! მოსწავლე შეცვლის თავისი მოთხრობის სცენარსა და დასასრულს რამოდენიმე \"if პირობით\". ისევე, როგორც პირობები ცვლიან პროგრამის მსვლელობას, შესაძლებელია, მოთხრობაში პერსონაჟის ბედიც შეიცვალოს. იაზროვნეთ შემოქმედებითად და გაუძეხით Kodable fuzzFamily-ს მრავალ თავგადასავალში ერთ ისტორიაში, რომელიც შეიძლება, სხვადასხვანაირად დამთავრდეს."
@@ -1731,7 +1731,7 @@ ka:
   tutorial_pmzero_longdescription: "ერთ საათში თქვენ შექმნით Pac-Man-ის თამაშის მარტივ ვერსიას. თქვენ დახატავთ 2D (ორგანზომილებიან) პერსონაჟებს და მათ გადააქცევთ 3D-დ (სამგანზომილებიანად). თქვენ შექმნით თვენს ლაბირინთს. შემდეგ თქვენ დააპროგამებთ თამაშს AgentCube-ის გამოყენებით. სულ რაღაც 11 IF/THEN წესით დახვეწილ AI-ს შექმნით. ორ ჭკვიან მოჩვენებასთანაც კი არ იქნება იოლი თამაშის მოგება."
   tutorial_hsela_longdescription: "Students will practice identifying narrative elements while bringing their favorite story, poem or historical event to life. Learning to code gives students another format and media for expressing their creativity and communicating with others. Show them how to program their own interactive stories, and wait for the smiles. 1-hour lesson plan, no prior coding experience required."
   tutorial_ticklear_longdescription: "You will learn the basic concept of AR (Augmented Reality), its current applications and its possibilities in the future and the basic concepts of programming using motion blocks and event blocks under an AR/3D environment."
-  tutorial_bcrobot_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D snowflake. Using shape and translate blocks, students will be exposed to computational thinking to construct something they can 3D print!"
+  tutorial_bcrobot_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D Robot. Using shapes, translate, and rotate blocks, students will be exposed to computational thinking to construct something they can 3D print!"
   tutorial_bcsnow_longdescription: "Using BlocksCAD, a free online software designed to teach students coding and Computer Aided Design, students will design a 3D snowflake. Using shapes, translate, rotate, and loop blocks, students will be exposed to computational thinking to construct something they can 3D print!"
   tutorial_ifly_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical systems through robotics. Using a visual drag-and-drop programming environment and drones, pupils learn that physical systems can be programmed and controlled through algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_idowedo_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical programming (robotics). Children design and build models using construction bricks and bring them to life with code! Using a visual drag-and-drop programming environment and LEGO™ WeDo parts (motor and hub and optional sensors), pupils learn that physical systems can be programmed and controlled using algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
@@ -1741,15 +1741,15 @@ ka:
   tutorial_dkcurrency_longdescription: "Build the awesome Currency King game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Currency King template, and follow along with the video tutorial!"
   tutorial_dkriver_longdescription: "Build the awesome River Monsters game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the River Monsters template, and follow along with the video tutorial!"
   tutorial_dkball_longdescription: "Build the awesome Bouncing Ball game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Bouncing Ball template, and follow along with the video tutorial!"
-  tutorial_spheroit_longdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
+  tutorial_spheroit_longdescription: "Learn your first \"if/then, else\" condition by building a fun game where you will be throwing Sphero and guessing animal sounds. This is a great activity after you complete Blocks 1, and can be used for the \"Hour of Code.\""
   tutorial_gameofcodes_longdescription: "Build an awesome Dragon game to defend the wall, then export it as a standalone app (for iOS, Android, PC, and Mac)."
   tutorial_blocklygames_longdescription: "Blockly Games is a series of educational games that teach programming. It is designed for children who have not had prior experience with computer programming but who wish to learn at a more challenging pace. By the end of these games, players are ready to use conventional text-based languages."
   tutorial_spherohello_longdescription: "Have you conquered Blocks and need a new challenge? Take the logic you have learned with block-based programming and begin to learn how to program with just text. In this first Text activity learn the basics of the text canvas, loops, and some tips to get started with your first lines of JavaScript code."
   tutorial_spheroarcade_longdescription: "In this arcade-style playground, you can recreate classic games with a Sphero SPRK+ robot while learning the basics of game design. You'll build your very own robotic renditions of some famous games like Pong, Bop It, and Pac-Man. Each game uses Sphero in a different way such as rolling on the floor, detecting gestures, or using Sphero as a joystick."
-  tutorial_bcpy1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
-  tutorial_bcpy2_longdescription: 'This Hour of Code lesson is a follow-up course to World of Python. You''ll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
-  tutorial_bcjs1_longdescription: 'This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
-  tutorial_bcjs2_longdescription: 'This Hour of Code lesson is a follow-up course to World of JavaScript. You''ll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You''ll have fun learning how to code while playing this game!'
+  tutorial_bcpy1_longdescription: "This Hour of Code lesson teaches you some basic concepts of coding in Python, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
+  tutorial_bcpy2_longdescription: "This Hour of Code lesson is a follow-up course to World of Python. You'll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
+  tutorial_bcjs1_longdescription: "This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
+  tutorial_bcjs2_longdescription: "This Hour of Code lesson is a follow-up course to World of JavaScript. You'll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
   tutorial_athlete_language: "ინგლისური, ფრანგული, ესპანური, იტალიური, პორტუგალიური (ბრაზილიური)"
   tutorial_moana_language: "ინგლისური, არაბული, ჩინური (გამარტივებული), ჩინური (ტრადიციული) დანიური, ჰოლანდიური, ფინური, ფრანგული, გერმანული, ინდონეზიური, იტალიური, იაპონური, კორეული, ნორვეგიული, პოლონური, პოლინეზიური (სამოა), პორტუგალირი, რუსული, ესპანური, შვედური, თურქული, უკრაინული, ვიეტნამური"
   tutorial_star-wars_language: "ინგლისური, არაბული, ბულგარული, ჩინური, ხორვატიული, დანიური, ჰოლანდიური, ფინური, ფრანგული, გერმანული, ბერზნული, ისლანდიური, ინდონეზიური, იტალიური, იაპონური, კორეული, ნორვეგიული, სპარსული, პოლონური, პორტუგალიური, რუმინული, რუსული, ესპანური, შვედური, თურქული, უკრაინული და 19 სხვა"
@@ -3739,9 +3739,9 @@ ka:
   tutorial_pixie_string_detail_programming_languages: "ბლოკები"
   tutorial_play_string_detail_programming_languages: "არ-აჩვენო"
   tutorial_robomind-nl_string_detail_programming_languages: "ბლოკები"
-  tutorial_spheroi_string_detail_programming_languages: "ბლოკები, C/C++"
-  tutorial_spherol_string_detail_programming_languages: "ბლოკები, C/C++"
-  tutorial_spherov_string_detail_programming_languages: "ბლოკები, C/C++"
+  tutorial_spheroi_string_detail_programming_languages: "ბლოკები, JavaScript"
+  tutorial_spherol_string_detail_programming_languages: "ბლოკები, JavaScript"
+  tutorial_spherov_string_detail_programming_languages: "ბლოკები, JavaScript"
   tutorial_swb_string_detail_programming_languages: "არ-აჩვენო"
   tutorial_build-a-galaxy_string_detail_programming_languages: "არ-აჩვენო"
   tutorial_alicesims_string_detail_programming_languages: "ბლოკები"
@@ -3931,7 +3931,7 @@ ka:
   tutorial_dkcurrency_string_detail_programming_languages: "ბლოკები"
   tutorial_dkriver_string_detail_programming_languages: "ბლოკები"
   tutorial_dkball_string_detail_programming_languages: "ბლოკები"
-  tutorial_spheroit_string_detail_programming_languages: "ბლოკები, C/C++"
+  tutorial_spheroit_string_detail_programming_languages: "ბლოკები, JavaScript"
   tutorial_gameofcodes_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_blocklygames_string_detail_programming_languages: "ბლოკები"
   tutorial_spherohello_string_detail_programming_languages: "JavaScript"

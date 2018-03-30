@@ -100,8 +100,9 @@ module Pd::Application
       Pd::Application::ApplicationBase.statuses.except('interview')
     end
 
+    VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
     validates_uniqueness_of :user_id
-    validates_presence_of :course
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
@@ -494,7 +495,7 @@ module Pd::Application
     end
 
     def principal_approval_url
-      pd_application_principal_approval_url(application_guid)
+      pd_application_principal_approval_url(application_guid) if application_guid
     end
 
     # @override
@@ -593,6 +594,7 @@ module Pd::Application
         columns = filtered_labels(course).values.map {|l| markdown.render(l)}.map(&:strip)
         columns.push(
           'Principal Approval',
+          'Principal Approval Form',
           'Meets Criteria',
           'Total Score',
           'Regional Partner',
@@ -603,6 +605,7 @@ module Pd::Application
           'School City',
           'School State',
           'School Zip Code',
+          'Date Submitted',
           'Notes',
           'Status'
         )
@@ -626,6 +629,7 @@ module Pd::Application
         row = self.class.filtered_labels(course).keys.map {|k| answers[k]}
         row.push(
           principal_approval,
+          principal_approval_url,
           meets_criteria,
           total_score,
           regional_partner_name,
@@ -636,6 +640,7 @@ module Pd::Application
           school_city,
           school_state,
           school_zip_code,
+          created_at.to_date.iso8601,
           notes,
           status
         )
@@ -653,16 +658,16 @@ module Pd::Application
           district_name,
           school_name,
           user.email,
-          assigned_workshop,
-          registered_workshop
+          workshop_date_and_location,
+          registered_workshop? ? 'Yes' : 'No'
         ]
       end
     end
 
-    # @override
-    # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      labels_to_remove = (course == 'csd' ?
+    # memoize in a hash, per course
+    FILTERED_LABELS = Hash.new do |h, key|
+      labels_to_remove = (
+      if key == 'csd'
         [
           :csp_which_grades,
           :csp_course_hours_per_week,
@@ -670,19 +675,30 @@ module Pd::Application
           :csp_terms_per_year,
           :csp_how_offer,
           :csp_ap_exam
-        ] : [
+        ]
+      else
+        [
           :csd_which_grades,
           :csd_course_hours_per_week,
           :csd_course_hours_per_year,
           :csd_terms_per_year
         ]
+      end
       )
+
       # school contains NCES id
       # the other fields are empty in the form data unless they selected "Other" school,
       # so we add it when we construct the csv row.
       labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
     end
 
     # @override
@@ -773,6 +789,26 @@ module Pd::Application
       user && (user.workshop_admin? || user.regional_partners.first.try(&:group) == 3)
     end
 
+    # override
+    def self.prefetch_associated_models(applications)
+      super(applications)
+
+      # also prefetch schools
+      prefetch_schools applications.map(&:school_id).uniq.compact
+    end
+
+    def self.prefetch_schools(school_ids)
+      return if school_ids.empty?
+
+      School.includes(:school_district).where(id: school_ids).each do |school|
+        Rails.cache.write get_school_cache_key(school.id), school, expires_in: CACHE_TTL
+      end
+    end
+
+    def self.get_school_cache_key(school_id)
+      "Pd::Application::Teacher1819Application.school(#{school_id})"
+    end
+
     protected
 
     def yes_no_response_to_yes_no_score(response)
@@ -807,11 +843,12 @@ module Pd::Application
     end
 
     def school
-      school_id = sanitize_form_data_hash[:school]
-      if school_id == '-1'
-        nil
-      else
-        School.find(school_id)
+      school_id = self.school_id
+      return nil unless school_id
+
+      # attempt to retrieve from cache
+      cache_fetch self.class.get_school_cache_key(school_id) do
+        School.includes(:school_district).find_by(id: school_id)
       end
     end
   end

@@ -866,18 +866,12 @@
   dashboard_course_csp_desc: Code.org telah dirancang ketat, menarik, dan didekati
     kursus yang menggali ide-ide dasar komputasi.
   dashboard_landing_loading: Memuat...
-  dashboard_action_edit: Edit
-  dashboard_action_save: Simpan
-  dashboard_action_save_all: Simpan semua
   dashboard_action_cancel: Batal
   dashboard_action_delete: Hapus
   dashboard_action_delete_yes: Ya
   dashboard_action_delete_no: Tidak
   dashboard_action_confirm: Hapus?
-  dashboard_action_remove: Hapus
-  dashboard_action_remove_confirm: Hapus?
   dashboard_action_done: Selesai
-  dashboard_action_required: diperlukan
   dashboard_action_print_certificates: Cetak Sertifikat
   dashboard_assessments_view: 'Lihat penilaian di:'
   dashboard_assessments_none: Kebanyakan guru mengukur siswa mereka ''Melihat Kemajuan''
@@ -990,8 +984,6 @@
   dashboard_error_other_section: Jika anda memindahkan siswa di antara bagian anda
     sendiri, pilih bagian dari dropdown. Hanya pilih bagian lainnya untuk memindahkan
     siswa anda ke bagian guru lainnya.
-  dashboard_students_add_student: Tambahkan siswa
-  dashboard_students_add_students: Tambahkan beberapa siswa
   dashboard_students_add_multiple: 'Ketik atau sisipkan nama siswa Anda, satu siswa
     setiap baris:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
@@ -1000,23 +992,12 @@
   dashboard_students_new_section: Anda telah membuat bagian yang baru! Sekarang tambahkan
     siswa Anda menggunakan tombol <b>Tambahkan siswa</b> dan <b>Tambahkan beberapa
     siswa</b> di atas.
-  dashboard_students_placeholder_name: Nama siswa
   dashboard_students_name: Nama
   dashboard_students_progress: Perkembangan
-  dashboard_students_age: Umur
-  dashboard_students_gender: Jenis kelamin
   dashboard_students_male: Laki-laki
   dashboard_students_female: Wanita
-  dashboard_students_secret: Rahasia
-  dashboard_students_password: kata sandi
-  dashboard_students_username: 'Nama pengguna: %{student_username}'
-  dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Tingkat yang telah selesai
   dashboard_students_total_lines: Baris kode
-  dashboard_students_show_secret: Tampilkan rahasia
-  dashboard_students_auto_generated: Hasilkan secara otomatis
-  dashboard_students_reset_secret: Reset rahasia
-  dashboard_students_reset_password: Reset kata sandi
   dashboard_students_share_section: 'Berbagi halaman masuk ini dengan siswa Anda:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
     sign in page with your students:'
@@ -1088,7 +1069,6 @@
   dashboard_login_word: Kata
   dashboard_login_picture: Gambar
   dashboard_login_none: email
-  dashboard_new_password: Kata sandi baru
   dashboard_stage: Tahap
   dashboard_puzzle: Teka-teki
   dashboard_question: Pertanyaan

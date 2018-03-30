@@ -205,7 +205,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": true,
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "show_d_pad": "false",
@@ -214,7 +214,7 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "custom_helper_library": "function setSize(sprite,scale) {\r\n  sprite.scale = scale;\r\n}\r\nfunction addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction spinClockwise(sprite) {\r\n  sprite.rotation+=6;\r\n}\r\nfunction spinCounterClockwise(sprite) {\r\n  sprite.rotation-=6;\r\n}\r\n\r\nfunction moveRightWithEdges(sprite) {\r\n  if (sprite.x <=380)\r\n\t  sprite.x+=8;\r\n}\r\nfunction moveLeftWithEdges(sprite) {\r\n  if (sprite.x >=20)\r\n  \tsprite.x-=8;\r\n}\r\nfunction jump(sprite) {\r\n  if (sprite.y>339) {\r\n\t  sprite.y-=10;\r\n\t  sprite.velocity.y=-12;\r\n\t  console.log(sprite.y);\r\n  }\r\n}\r\n\r\nfunction moveForwardBehavior() {\r\n  var behavior = function(sprite) {\r\n    sprite.velocity.x = cos(sprite.rotation) * 2;\r\n    sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    edges.displace(sprite);\r\n  }\r\n  behavior.name = 'alwaysMove';\r\n  return behavior;\r\n}\r\n\r\nfunction followBehavior(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotateToDirection = true;\r\n    // If sprite is not touching target\r\n    if (!sprite.isTouching(target)) {\r\n      // Point sprite to target\r\n      sprite.pointTo(target.x, target.y);\r\n      // Set sprite speed to 2\r\n      sprite.velocity.x = cos(sprite.rotation) * 2;\r\n      sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    } else {\r\n      // Set sprite speed to 0\r\n      sprite.velocity.x = 0;\r\n      sprite.velocity.y = 0;\r\n    }\r\n  }\r\n  behavior.name = 'follow';\r\n  return behavior;\r\n}\r\nfunction gravityBehavior() {\r\n  var behavior = function(sprite) {\r\n\tif (sprite.y <344) {\r\n      if (sprite.velocity.y < 10)\r\n\t      sprite.velocity.y+=1;\r\n      if ((sprite.y > 338) && (sprite.y < 344)) {\r\n          sprite.y=344;\r\n       \t  sprite.velocity.y=0;\r\n      }\r\n    } else {\r\n      sprite.y=344;\r\n      sprite.velocity.y=0;\r\n    }\r\n  }\r\n  behavior.name = 'gravity';\r\n  return behavior;\r\n}\r\n",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"spinClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} clockwise\"\r\n  },\r\n  {\r\n    \"func\": \"moveRightWithEdges\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"move {SPRITE} right stop at edge\"\r\n  },\r\n  {\r\n    \"func\": \"moveLeftWithEdges\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"move {SPRITE} left stop at edge\"\r\n  },\r\n  {\r\n    \"func\": \"spinCounterClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} counterclockwise\"\r\n  },\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"moveForwardBehavior\",\r\n    \"blockText\": \"always move\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"gravityBehavior\",\r\n    \"blockText\": \"gravity\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"followBehavior\",\r\n    \"blockText\": \"chase {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"setSize\",\r\n    \"blockText\": \"set {SPRITE} to size {SCALE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"SCALE\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"jump\",\r\n    \"blockText\": \"{SPRITE} jumps\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ]\r\n  }\r\n]",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"spinClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} clockwise\"\r\n  },\r\n  {\r\n    \"func\": \"moveRightWithEdges\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ],\r\n    \"blockText\": \"move {SPRITE} right stop at edge\"\r\n  },\r\n  {\r\n    \"func\": \"moveLeftWithEdges\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ],\r\n    \"blockText\": \"move {SPRITE} left stop at edge\"\r\n  },\r\n  {\r\n    \"func\": \"spinCounterClockwise\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ],\r\n    \"blockText\": \"spin {SPRITE} counterclockwise\"\r\n  },\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"moveForwardBehavior\",\r\n    \"blockText\": \"always move\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"gravityBehavior\",\r\n    \"blockText\": \"gravity\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"followBehavior\",\r\n    \"blockText\": \"chase {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"setSize\",\r\n    \"blockText\": \"set {SPRITE} to size {SCALE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"SCALE\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"jump\",\r\n    \"blockText\": \"{SPRITE} jumps\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  }\r\n]",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/fyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA/d19383c3-9b64-482d-811d-07f8997533ea.png?version=v.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\":  {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/8zM0XO0p3FHbpebQV2rgKdA5HyTxdSO7/category_environment/dirt_grass.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"8zM0XO0p3FHbpebQV2rgKdA5HyTxdSO7\"\r\n    }\r\n  }\r\n}",
     "contained_level_names": null
   },
@@ -236,7 +236,7 @@
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false">
+                <block type="sprite_variables_set" inline="false">
                   <title name="VAR">doggo</title>
                   <value name="VALUE">
                     <block type="gamelab_makeNewSprite" inline="true">
@@ -256,7 +256,7 @@
                   <next>
                     <block type="gamelab_setSize" inline="true">
                       <value name="SPRITE">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">doggo</title>
                         </block>
                       </value>
@@ -284,7 +284,7 @@
                             </block>
                           </value>
                           <statement name="DO">
-                            <block type="variables_set" inline="false">
+                            <block type="sprite_variables_set" inline="false">
                               <title name="VAR">ground</title>
                               <value name="VALUE">
                                 <block type="gamelab_makeNewSprite" inline="true">
@@ -293,7 +293,7 @@
                                     <block type="math_arithmetic" inline="true">
                                       <title name="OP">MULTIPLY</title>
                                       <value name="A">
-                                        <block type="variables_get">
+                                        <block type="sprite_variables_get">
                                           <title name="VAR">i</title>
                                         </block>
                                       </value>
@@ -314,7 +314,7 @@
                               <next>
                                 <block type="gamelab_setSize" inline="true">
                                   <value name="SPRITE">
-                                    <block type="variables_get">
+                                    <block type="sprite_variables_get">
                                       <title name="VAR">ground</title>
                                     </block>
                                   </value>
@@ -333,7 +333,7 @@
                                 <block type="gamelab_gravityBehavior"/>
                               </value>
                               <value name="SPRITE">
-                                <block type="variables_get">
+                                <block type="sprite_variables_get">
                                   <title name="VAR">doggo</title>
                                 </block>
                               </value>
@@ -352,7 +352,7 @@
           <next>
             <block type="gamelab_jump" inline="true">
               <value name="SPRITE">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">doggo</title>
                 </block>
               </value>
@@ -363,7 +363,7 @@
           <statement name="DO">
             <block type="gamelab_moveRight" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">doggo</title>
                 </block>
               </value>
@@ -374,7 +374,7 @@
           <statement name="DO">
             <block type="gamelab_moveLeft" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">doggo</title>
                 </block>
               </value>
@@ -401,10 +401,10 @@
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
+          <block type="sprite_variables_get">
             <title name="VAR">j</title>
           </block>
-          <block type="variables_set" inline="false">
+          <block type="sprite_variables_set" inline="false">
             <title name="VAR">i</title>
           </block>
         </category>

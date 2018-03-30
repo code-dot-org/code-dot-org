@@ -971,6 +971,18 @@
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
         view full instructions.
+      Applab AllTheThings ResourcesTab AllResources_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab MapReference_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
+      Applab AllTheThings ResourcesTab ReferenceLinks_instruction: |-
+        Draw a 1x1 square
+        above and to the left of the turtle's starting position. Click to see full
+        instructions.
       Applab allthethings onRecordEvent_instruction: |-
         Please sign in to test applab
         levels (By design, applab levels only work if signed in. Normally, we make
@@ -1227,10 +1239,17 @@
       CSD U3 Boolean Modify_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Boolean Modify_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Boolean Predict_instruction: |-
         What do you think this code will do when
         it is run? Predict what each console.log() command will print, then run the
         program to check your predictions.
+      CSD U3 Boolean Predict_2018_instruction: |-
+        What do you think this code will
+        do when it is run? Predict what each console.log() command will print, then
+        run the program to check your predictions.
       CSD U3 Draw Loop Discuss_instruction: |-
         Here's a program that looks pretty
         similar to what you've been writing, but may behave quite differently. You'll
@@ -1244,16 +1263,29 @@
         Add the numbers 1 through 10. Multiply
         the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
+      CSD U3 Keypress Boolean-2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Boolean_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Boolean_2018_instruction: |-
+        Modify the code so that all of the
+        console.log commands print true
       CSD U3 Keypress Watchers_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 Keypress Watchers_2018_instruction: |-
+        Modify the code so that all of
+        the console.log commands print true
       CSD U3 L5 Freeplay_instruction: |-
         Ubahlah nilai ukuran petalSize beberapa kali.
         Bagaimana cara mengubah gambar anda?
+      CSD U3 L5 Freeplay_2018_instruction: |-
+        Change the value of petalSize multiple
+        times. How does it change your drawing?
       CSD U3 Mouse Input Bee 2_instruction: Do this
+      CSD U3 Mouse Input Bee 2_2018_instruction: Do this
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
         mouth.
@@ -1287,6 +1319,7 @@
         block.
       CSD U3 Simple Drawing - Personal Animation_instruction: DO This
       CSD U3 Sprites intro sprites_instruction: Do This
+      CSD U3 Sprites intro sprites_2018_instruction: Do This
       CSD U3 Variable Arithmetic pt2_instruction: |-
         Predict: What two numbers will
         be displayed in the console?
@@ -1332,6 +1365,9 @@
       CSD U3 Variables change circle size_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables change circle size_2018_instruction: |-
+        Change the value of
+        petalSize multiple times. How does it change your drawing?
       CSD U3 Variables create and assign_instruction: |-
         Create and assign size in
         a single line of code.
@@ -1358,7 +1394,13 @@
       CSD U3 Variables multiple assignments_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2-2018_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
       CSD U3 Variables naming rules v2_instruction: |-
+        Change the value of petalSize
+        multiple times. How does it change your drawing?
+      CSD U3 Variables naming rules v2_2018_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
       CSD U3 Variables naming rules_instruction: |-
@@ -1376,6 +1418,9 @@
       CSD U3 Variables random with assignment_instruction: |-
         Change the value of petalSize
         multiple times. How does it change your drawing?
+      CSD U3 Variables random with assignment_2018_instruction: |-
+        Change the value
+        of petalSize multiple times. How does it change your drawing?
       CSD U3 Variables use value rect_instruction: |-
         Predict: What will get displayed
         in the console?
@@ -3347,14 +3392,9 @@
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       Course 4 Play Lab Vars 7_instruction: |-
         Bagus, sekarang mari kita pastikan permainan ini tidak terlalu mudah untuk bermain! \r
         \r
@@ -3468,21 +3508,20 @@
         "increment" by 1 and start again.\r
         3) If The Wizard does not get clicked
         at least 10 times, the game is over.
-      Course 4 Playlab For Loop Freeplay_instruction: |-
-        Freeplay: Use everything you've
-        learned so far to make a game that includes a `for` loop!
-      Course 4 Playlab For Loops 4b_instruction: |-
-        Can you change the **increment**
-        in one of the loops so that the race is a tie?
-      Course 4 Playlab For Loops 5b_instruction: |-
-        Adjust the interval on these `for`
-        loops so that the two characters end in the exact same place.
-      Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na
-        game that's fun for you to play! \\r\nPress \"Run\" and click Madame Unicorn\nas
-        many times as you can.  Can you beat our score of 24? "
-      Course 4 SCF 1_instruction: |-
-        Use the suggested functions to draw four rows
-        of hexagons. Notice how our even numbered rows are shifted to the right?
+      Course 4 Playlab For Loop Freeplay_instruction: 'Permainan bebas: Gunakan semua
+        yang sudah kamu pelajari untuk membuat sebuah permainan yang menyertakan sebuah
+        loop `for`!'
+      Course 4 Playlab For Loops 4b_instruction: Bisakah kamu mengganti **kenaikan**
+        pada salah satu loop agar membuat perlombaan menjadi seri?
+      Course 4 Playlab For Loops 5b_instruction: Sesuaikan rentang waktu pada loop
+        `for` tersebut supaya dua karakter berakhir di tempat yang sama persis.
+      Course 4 Playlab For Loops 6b_instruction: "Edit loop `for` ini untu membuat
+        sebuah permainan yang akan menyenangkan untuk kamu mainkan!\\r\nTekan \"Run\"
+        dan klik Madame Unicorn sebanyak yang kamu bisa. Bisakah kamu mengalahkan
+        nilai 24 kami? "
+      Course 4 SCF 1_instruction: Gunakan fungsi yang disarankan untuk menggambar
+        empat baris segi empat. Apakah kamu memperhatikan bagaimana baris bernomor
+        genap kami bergeser ke kanan?
       Course 4 SCF 1a_instruction: Bisakah Anda mencari tahu cara mengumpulkan semua
         nektar ini dengan blok paling sedikit?
       Course 4 SCF 1b_instruction: Bisakah Anda mencari tahu cara mengumpulkan semua
@@ -3520,22 +3559,14 @@
       Course 4 SCV 1_instruction: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCV 2_instruction: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCV 3_instruction: |-
-        Now for a game of tag!  Tag Cat to get 2 points.
-        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
-        But be careful,
-        when Cat and Penguin tag each other, they take points away.\r
+        Sekarang untuk permainan memberi tanda! Tandailah Kucing untuk mendapatkan 2 poin. Tandai Pinguin untuk mendapatkan poin 3. Kumpulkan poin 10 untuk menang!\r
+        Tetapi berhati-hatilah, ketika Kucing dan Pinguin saling menandai, itu akan mengurangi poin.\r
         \r
-        Add the
-        blocks necessary to make this game work the way it's been explained.  How
-        will you get Dog to move in all directions using the arrow keys?  How will
-        you add points when Dog tags Cat or Penguin?  How will you subtract points
-        when Cat and Penguin touch?
-      Course 4 SCV 4_instruction: |-
-        Solve this puzzle with the fewest number of blocks
-        possible.
-      Course 4 SCV 5_instruction: |-
-        Solve this puzzle with the fewest number of blocks
-        possible.
+        Tambahkan blok yang dibutuhkan untuk membuat permainan ini berjalan sesuai dengan yang telah dijelaskan. Bagaimana kamu membuat Anjing berpindah kesegala arah menggunakan tanda panah? Bagaimana kamu menambahkan poin ketika Anjing menandai Kucing atau Pinguin? Bagaiman kamu mengurangi poin ketika Kucing dan Pinguin bersentuhan?
+      Course 4 SCV 4_instruction: Selesaikan teka-teki ini dengan menggunakan blok
+        sesedikit mungkin.
+      Course 4 SCV 5_instruction: Selesaikan teka-teki ini dengan menggunakan blok
+        sesedikit mungkin.
       Course 4 SCV 6_instruction: Klik disini untuk melihat petunjuk lagi.
       Course 4 SCVP 1_instruction: |-
         Create a function with parameters that allows
@@ -3555,18 +3586,15 @@
         another to get me to the pig.
       CourseF_PlayLab_vars1_instruction: 'Untuk memainkan game ini, Anda tidak perlu
         menulis kode apapun, cukup tekan "Run"! '
-      CourseF_PlayLab_vars10_instruction: |-
-        Free Play time! Here are all of the variables
-        we've played with so far in this stage, as well as a few more in case you
-        want them. \r
-        \r
-        Notice that there are now so many blocks in our toolbox
-        that they need to be organized!  Here, we've put each piece into an appropriate
-        category.  Take some time to explore everything that is available. When you're
-        done browsing, make a game or story using repeats, variables, and events.  \r
-        \r
-        Hint:
-        scroll down to see all the commands in the workspace.
+      CourseF_PlayLab_vars10_instruction: "Waktu nya permainan bebas! Ini merupakan
+        semua variabel yang sudah kita mainkan pada tahap ini, juga beberapa variabel
+        lain jika kamu membutuhkannya!\\r\n\\r \nPerhatikan sekarang ada sangat banyak
+        blok didalam toolbox kita yang perlu disusun! Sekarang, kita sudah meletakkan
+        setiap potongan kedalam sebuah kategori yang sesuai. Ambil waktu sejenak untuk
+        menjelajahi semua kemungkinan yang ada. Saat kamu sudah selesai melihat-lihat,
+        buatlah sebuah permainan atau cerita menggunakan pengulangan, variabel-variabel,
+        dan kejadian-kejadian. \\r\n\\r\nPetunjuk:\nskrol kebawah untuk meilhat semua
+        perintah di dalam tempat kerja."
       CourseF_PlayLab_vars2_instruction: |-
         The race in that last puzzle wasn't very
         fair! Change the `dog_speed` variable to make sure you can collect more flags
@@ -3582,32 +3610,17 @@
         Buat kembali kode yang Anda lihat di level terakhir untuk menetapkan skor\nsampai
         10. "
       CourseF_PlayLab_vars6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       CourseF_PlayLab_vars7_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       CourseF_PlayLab_vars8_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       CourseF_PlayLab_vars9_instruction: |-
         Nice, now let's make sure this game isn't
         too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
@@ -3902,6 +3915,13 @@
       Frequency Analysis_instruction: Test
       Function intro Ryan_instruction: Gunakan fungsi `bangun jembatan` dua kali untuk
         membuat jalur menuju obor.
+      GLJ Drag and fall_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Dragity_instruction: |-
+        This Corgi has been a good boy! Drag this carrot
+        to him as a special treat.
+      GLJ Flappy2_instruction: Click to flap - don't touch the ground!
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4264,6 +4284,9 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
+      KIKI GLJ Test Response_instruction: |
+        Look carefully at the code below.  What
+        do you think the plane will do when you click "Run"?\r
       KTest1_instruction: Can you make me move South once more to get to the pig?
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
@@ -7532,6 +7555,9 @@
       artistLoopsKFP_instruction: |-
         Picture time!  Use what you have learned to draw
         a picture of what you think the Artist saw on stage.
+      asteroids_instruction: |-
+        This Corgi has been a good boy! Drag this carrot to
+        him as a special treat.
       beeDebugVideo1_instruction: Bisakah Anda menggunakan perulangan untuk mengumpulkan
         semua nektar itu?
       birdsDebugVideo1_instruction: |-
@@ -7921,82 +7947,175 @@
       courseA_artist_loops10_instruction: |-
         Help me put down stones so I don't fall
         in!
+      courseA_artist_loops10_2018_instruction: |-
+        Help me put down stones so I don't
+        fall in!
       courseA_artist_loops11_instruction: |-
         Help me build steps to watch the ship
         sail away.
+      courseA_artist_loops11_2018_instruction: |-
+        Help me build steps to watch the
+        ship sail away.
       courseA_artist_loops12_instruction: |-
         The artist saw something funny in the
         distance.  Draw what you think he saw.
+      courseA_artist_loops12_2018_instruction: |-
+        The artist saw something funny in
+        the distance.  Draw what you think he saw.
+      courseA_artist_loops1_2018_instruction: |-
+        This is a new type of puzzle called
+        "Artist". Play with the level and draw something fun.
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
+      courseA_artist_loops2_2018_instruction: |-
+        Help the artist draw this line two
+        times forward.
       courseA_artist_loops3_instruction: Draw a line forward five times.
+      courseA_artist_loops3_2018_instruction: Draw a line forward five times.
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
+      courseA_artist_loops4_2018_instruction: |-
+        Now, use a `repeat` loop to draw this
+        line five times!
       courseA_artist_loops5_instruction: |-
         Draw a line seven steps long. This will
         become our horizon.
+      courseA_artist_loops5_2018_instruction: |-
+        Draw a line seven steps long. This
+        will become our horizon.
       courseA_artist_loops6_instruction: Let's put a nice hill in the back.
+      courseA_artist_loops6_2018_instruction: Let's put a nice hill in the back.
       courseA_artist_loops7_instruction: |-
         Use the `repeat` loop to add waves to the
         water.
+      courseA_artist_loops7_2018_instruction: |-
+        Use the `repeat` loop to add waves
+        to the water.
       courseA_artist_loops7_forVideo_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
+      courseA_artist_loops8_2018_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
+      courseA_artist_loops9_2018_instruction: 'Challenge: Fix the stairs.'
       courseA_artist_loops_challenge1_instruction: |-
         Can you draw a house? Make it
         look just the way you like it!
+      courseA_artist_loops_challenge1_2018_instruction: |-
+        Can you draw a house? Make
+        it look just the way you like it!
       courseA_artist_loops_challenge2_instruction: |-
         "Can you help me make two bird
         houses?"
       courseA_artist_loops_challenge2a_instruction: |-
         *"Help me get these three tents
         set up!"*
+      courseA_artist_loops_challenge2a_2018_instruction: |-
+        *"Help me get these three
+        tents set up!"*
       courseA_artist_loops_challenge3_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
+      courseA_bee_seq1_instruction: |-
+        Play with these blocks to help the bee get *one*
+        nectar.
+      courseA_bee_seq10_instruction: Try it by yourself! Get all the nectar.
+      courseA_bee_seq11_instruction: Get all the nectar.
+      courseA_bee_seq12_instruction: |-
+        Play with these blocks to help the bee get
+        *one* nectar.
+      courseA_bee_seq13_instruction: |-
+        Use three `Move West` blocks and one `Get Nectar`
+        block.
+      courseA_bee_seq14_instruction: |-
+        Use three `Move North` blocks and one `Get
+        Nectar` block.
+      courseA_bee_seq2_instruction: Help the bee get the nectar!
+      courseA_bee_seq3_instruction: Find the bug and fix it!
+      courseA_bee_seq4_instruction: Try it yourself!
+      courseA_bee_seq5_instruction: Try it yourself!
+      courseA_bee_seq6_instruction: Now the bee needs to get nectar from two flowers!
+      courseA_bee_seq7_instruction: Add two blocks to finish this puzzle!
+      courseA_bee_seq8_instruction: Make sure to get nectar from every flower!
+      courseA_bee_seq9_instruction: Make sure to get nectar from every flower!
       courseA_collector_loops1_instruction: |-
         Move Laurel around and get as much treasure
         as you can!
       courseA_collector_loops10_instruction: |-
         Help Laurel get all of the treasure
         along this path.
+      courseA_collector_loops10_2018_instruction: |-
+        Help Laurel get all of the treasure
+        along this path.
       courseA_collector_loops11_instruction: |-
+        Help Laurel get all of the treasure
+        from this cave.
+      courseA_collector_loops11_2018_instruction: |-
         Help Laurel get all of the treasure
         from this cave.
       courseA_collector_loops12_instruction: |-
         *"Eureka!  Get as much treasure as
         you can!"*
+      courseA_collector_loops12_2018_instruction: |-
+        *"Eureka!  Get as much treasure
+        as you can!"*
+      courseA_collector_loops1_2018_instruction: |-
+        Move Laurel around and get as much
+        treasure as you can!
       courseA_collector_loops2_instruction: |-
         Collect all three piles to pass this
+        level.
+      courseA_collector_loops2_2018_instruction: |-
+        Get all three piles to pass this
         level.
       courseA_collector_loops4_instruction: |-
         Fix Laurel's path to get all of this
         treasure.
+      courseA_collector_loops4_2018_instruction: |-
+        Fix Laurel's path to get all of
+        this treasure.
       courseA_collector_loops5_instruction: |-
         Use what you learned to get all of the
         treasure.
+      courseA_collector_loops5_2018_instruction: |-
+        Use what you learned to get all
+        of the treasure.
       courseA_collector_loops6_instruction: |-
         Add blocks to this code to get all of
         the treasure.
+      courseA_collector_loops6_2018_instruction: |-
+        Add blocks to this code to get
+        all of the treasure.
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
         get all of the treasure?
+      courseA_collector_loops7_2018_instruction: |-
+        What should you add to this code
+        to get all of the treasure?
       courseA_collector_loops8_instruction: Write the code to get all of this gold.
+      courseA_collector_loops8_2018_instruction: Write code to get all of this treasure.
       courseA_collector_loops9_instruction: |-
         **Challenge:** The treasure goes all
         the way up these stairs!  Write the code to help Laurel get it all.
+      courseA_collector_loops9_2018_instruction: |-
+        **Challenge:** The treasure goes
+        all the way up these stairs!  Write the code to help Laurel get it all.
       courseA_collector_loops_challenge1_instruction: |-
         *"Can you help me spot some
         bugs?"*
+      courseA_collector_loops_challenge1_2018_instruction: |-
+        *"Can you help me spot
+        some bugs?"*
       courseA_collector_loops_challenge2_instruction: "This time you can only use\none
         of each arrow block. Get all of the treasure! "
       courseA_collector_loops_challenge2kp_instruction: |-
         Collect at least **3** pieces
         of treasure to pass this level.
+      courseA_collector_loops_challenge2kp_2018_instruction: |-
+        Collect at least **3**
+        pieces of treasure to pass this level.
       courseA_collector_preLoops1_instruction: |-
         This is Laurel the Adventurer! \r
         \r
@@ -8025,66 +8144,144 @@
       courseA_forVideoTest_artist_instruction: |-
         Use the `repeat` loop to add waves
         to the water.
+      courseA_harvester_seq1_instruction: |-
+        Play with these blocks to help the harvester
+        pick *one* corn.
+      courseA_harvester_seq12_instruction: |-
+        Play with these blocks to help the bee
+        get *one* nectar.
+      courseA_harvester_seq2_instruction: |-
+        Use three `Move West` blocks and one `Pick
+        Corn` block.
+      courseA_harvester_seq3_instruction: |-
+        Use three `Move North` blocks and one
+        `Pick Corn` block.
+      courseA_harvester_seq4_instruction: Help the harvester pick the corn!
+      courseA_harvester_seq5_instruction: Find the bug and fix it!
+      courseA_harvester_seq6_instruction: Try it yourself!
+      courseA_harvester_seq7_instruction: Try it yourself!
+      courseA_harvester_seq8_instruction: |-
+        Now the harvester needs to pick corn two
+        times!
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
         the pig! "
+      courseA_maze_seq10_2018_instruction: "Challenge: Go around the TNT to get the\nbird
+        to the pig! "
       courseA_maze_seq11_instruction: |-
         Move one way, then another to get the bird
         to the pig.
+      courseA_maze_seq11_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig.
       courseA_maze_seq12_instruction: 'Get that pig! '
+      courseA_maze_seq12_2018_instruction: 'Get that pig! '
       courseA_maze_seq13_instruction: Get the pig any way you can!
+      courseA_maze_seq13_2018_instruction: Get the pig any way you can!
+      courseA_maze_seq1_2018_instruction: Get the bird to the bad pig!
       courseA_maze_seq2_instruction: Ubah kode untuk membawa saya ke babi!
+      courseA_maze_seq2_2018_instruction: Ubah kode untuk membawa saya ke babi!
       courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
+      courseA_maze_seq3_2018_instruction: Fix the code to get the bird to the pig!
       courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq4_2018_instruction: |-
+        REMOVE a block to get the bird to the
+        pig!
       courseA_maze_seq4a_instruction: |-
         Get the bird to the pig using the fewest possible
         blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq5_2018_instruction: Try this one yourself from the beginning.
       courseA_maze_seq6_instruction: |-
         Move one way, then another to get the bird
         to the pig!
+      courseA_maze_seq6_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig!
       courseA_maze_seq7_instruction: |-
         Figure out what is missing and then add blocks
         to get the bird to the pig!
+      courseA_maze_seq7_2018_instruction: |-
+        Figure out what is missing and then add
+        blocks to get the bird to the pig!
       courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
+      courseA_maze_seq8_2018_instruction: |-
+        Solve this level and get the bird to the
+        pig!
       courseA_maze_seq9_instruction: |-
         Debug this level by adding blocks to get the
         bird to the pig!
+      courseA_maze_seq9_2018_instruction: |-
+        Debug this level by adding blocks to get
+        the bird to the pig!
       courseA_maze_seq_challenge1_instruction: |-
         Something is wrong here. Help fix
         the code to get the bird to the pig!
+      courseA_maze_seq_challenge1_2018_instruction: |-
+        Something is wrong here. Help
+        fix the code to get the bird to the pig!
       courseA_maze_seq_challenge2_instruction: |-
         Trace the path to lead the bird to
         the pig. Avoid TNT or feathers will fly!
+      courseA_maze_seq_challenge2_2018_instruction: |-
+        Trace the path to lead the bird
+        to the pig. Avoid TNT or feathers will fly!
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
+      courseA_playLab_events1_2018_instruction: |-
+        This is a Play Lab level.  Move
+        blocks to the workspace and see what happens!
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
+      courseA_playLab_events2_2018_instruction: |-
+        Jorge the Dog wants to say "Hi
+        there."  Can you help him?
       courseA_playLab_events3_instruction: |-
         Connect the `move left` block to the
         `when left` event block that is already in the workspace.
+      courseA_playLab_events3_2018_instruction: |-
+        Connect the `move left` block to
+        the `when left` event block that is already in the workspace.
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
+      courseA_playLab_events4_2018_instruction: |-
+        Now, get Jorge to move right when
+        the `right` button is clicked.
       courseA_playLab_events5_instruction: |-
         Add events to have Jorge move up and
         down when the `up` and `down` buttons are pressed.
+      courseA_playLab_events5_2018_instruction: |-
+        Add events to have Jorge move up
+        and down when the `up` and `down` buttons are pressed.
       courseA_playLab_events6_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
+      courseA_playLab_events6_2018_instruction: |-
         Make this more interesting by changing
         the background and playing a random sound when Jorge is clicked.
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
+      courseA_playLab_events7_2018_instruction: |-
+        Add anything you want to this game.  Can
+        you make the dinosaur disappear when Jorge runs into him?
       courseA_playlab_events_challenge1_instruction: |-
         Can you write code to show
         the rest of my friends? The hints will help you do this project step-by-step.
+      courseA_playlab_events_challenge1_2018_instruction: |-
+        Can you write code to
+        show the rest of my friends? The hints will help you do this project step-by-step.
       courseA_playlab_events_challenge2_instruction: |-
         Give everyone something to
         do when you click on them.
+      courseA_playlab_events_challenge2_2018_instruction: |-
+        Give everyone something
+        to do when you click on them.
       courseA_playlab_events_challengeClone_instruction: |-
         Where are my friends hiding?
         Can you write code to show the rest of my friends?
@@ -8092,6 +8289,7 @@
         Loops let you do whatever
         is inside over and over again!
       courseA_video_events_instruction: Need a better playlab/events combo
+      courseA_video_events_2018_instruction: Need a better playlab/events combo
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -10752,6 +10950,9 @@
       flappy_1_instruction: Tempatkan satu blok pada blok "Ketika klik", kemudian
         tekan "Jalankan Program". Klik atau sentuh layar untuk mengerakkan Flappy
         menuju target.
+      flappy_11_instruction: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
+        dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
+        agar ia mencoba pada ponselnya.
       flappy_2_instruction: Sekarang kita telah menambahkan beberapa permukaan.  Tempelkan
         blok ke blok "ketika mencapai permukaan".  Kode Anda memerlukan 'PERMAINAN
         BERAKHIR' ketika Flappy menghantam permukaan.
@@ -10775,9 +10976,6 @@
         ketika event berganti, misalnya ketika melewati penghalang.
       flappy_9_instruction: Untuk mencampurkan berbagai hal, ketika mengenai sebuah
         rintangan, daripada mengakhiri permainan cobalah atur nilai kembali ke 0.
-      flappy_11_instruction: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
-        dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
-        agar ia mencoba pada ponselnya.
       frozen circle function in circle_instruction: Sekarang, mari kita membuat 20
         lingkaran yang tumpang tindih, berbelok 18 derajat antara setiap lingkaran.
       frozen circle function with parameter_instruction: Ini adalah blok "Buatlah
@@ -11969,14 +12167,9 @@
       grade4_playlab_freeplay_instruction: "It's free play time! Have fun with all\nthe
         blocks in your tool box. "
       grade4_playlab_test_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       grade4_playlab_test2_instruction: |-
         Here's a function called `jump` that causes
         your main character to jump up 100 pixels. Run the program and use the jump
@@ -12418,14 +12611,9 @@
         build a game! First we'll need a score. Try setting the 'points' variable
         to give yourself 10 free points!
       grade5_playlab_variables6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Gunakan panah sebelah kanan untuk melempar pai.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Dalam permainan kami, bagaimana caranya kita mencetak poin? Tambahkan 1 ke variabel "poin" mu setiap kali Anjing mengenai Kucing dengan satu pai. Gunakan saat "ketika aktor 2 menyentuh sesuatu" untuk memicu penambahan nilai mu. Kamu bisa menaikkan variabel mu dengan mengatur "poin = poin + 1". Kumpulkan nilai mu sampai dengan 10 (setiap sekali main!) untuk melewati level tersebut.
       grade5_playlab_variables6ask_instruction: |-
         This time, you need 100 points to
         win!  Don't worry though, you can choose how many points you earn each time
@@ -12606,6 +12794,9 @@
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       group test_instruction: Make a game
+      harvester_Kahoot_instruction: |-
+        Now help the farmer pick the corn, lettuce,
+        **and** pumpkin.
       harvey_pixelation_instruction: |-
         Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only.

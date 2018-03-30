@@ -32,6 +32,7 @@ const blankAddRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.ADD,
 };
@@ -46,6 +47,7 @@ const blankNewStudentRow = {
   gender: '',
   username: '',
   loginType: '',
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
 };
@@ -84,6 +86,8 @@ const ADD_STUDENT_FAILURE = 'manageStudents/ADD_STUDENT_FAILURE';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const TOGGLE_SHARING_COLUMN = 'manageStudents/TOGGLE_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
+const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
+const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 
 export const setLoginType = loginType => ({ type: SET_LOGIN_TYPE, loginType });
 export const setSectionId = sectionId => ({ type: SET_SECTION_ID, sectionId});
@@ -94,7 +98,9 @@ export const removeStudent = (studentId) => ({ type: REMOVE_STUDENT, studentId }
 export const setSecretImage = (studentId, image) => ({ type: SET_SECRET_IMAGE, studentId, image });
 export const setSecretWords = (studentId, words) => ({ type: SET_SECRET_WORDS, studentId, words });
 export const editStudent = (studentId, studentData) => ({ type: EDIT_STUDENT, studentId, studentData });
+export const setSharingDefault = (studentId) => ({ type: SET_SHARING_DEFAULT, studentId});
 export const editAll = () => ({ type: EDIT_ALL });
+export const updateAllShareSetting = (disable) => ({type: UPDATE_ALL_SHARE_SETTING, disable});
 export const startSavingStudent = (studentId) => ({ type: START_SAVING_STUDENT, studentId });
 export const saveStudentSuccess = (studentId) => ({ type: SAVE_STUDENT_SUCCESS, studentId });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => (
@@ -105,6 +111,13 @@ export const addStudentsFailure = (numStudents, error, studentIds) => (
 );
 export const addMultipleRows = (studentData) => ({ type: ADD_MULTIPLE_ROWS, studentData });
 export const toggleSharingColumn = () => ({type: TOGGLE_SHARING_COLUMN});
+
+export const handleShareSetting = (disable) => {
+ return (dispatch, getState) => {
+   dispatch(editAll());
+   dispatch(updateAllShareSetting(disable));
+ };
+};
 
 export const saveStudent = (studentId) => {
   return (dispatch, getState) => {
@@ -347,6 +360,22 @@ export default function manageStudents(state=initialState, action) {
     };
     return newState;
   }
+  if (action.type === SET_SHARING_DEFAULT) {
+    const editedAge = state.editingData[action.studentId].age;
+    // For privacy reasons, we disable sharing by default if the student is under the age of 13.
+    const sharingDisabled = editedAge < 13;
+    return {
+      ...state,
+      editingData: {
+        ...state.editingData,
+        [action.studentId]: {
+          ...state.editingData[action.studentId],
+          id: action.studentId,
+          sharingDisabled: sharingDisabled
+        }
+      }
+    };
+  }
   if (action.type === EDIT_STUDENT) {
     return {
       ...state,
@@ -371,6 +400,16 @@ export default function manageStudents(state=initialState, action) {
         ...newState.studentData[student.id],
         ...state.editingData[student.id],
       };
+    }
+    return newState;
+  }
+  if (action.type === UPDATE_ALL_SHARE_SETTING) {
+    let newState = {
+      ...state
+    };
+    for (const studentKey in state.studentData) {
+      const student = state.studentData[studentKey];
+      newState.editingData[student.id].sharingDisabled = action.disable;
     }
     return newState;
   }
@@ -449,6 +488,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
       sectionId: sectionId,
+      sharingDisabled: student.sharing_disabled,
       isEditing: false,
       isSaving: false,
       rowType: RowType.STUDENT,
@@ -472,6 +512,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
       name: updatedStudentInfo.name,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
+      sharing_disabled: updatedStudentInfo.sharingDisabled,
     }
   };
   $.ajax({
@@ -496,13 +537,17 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       name: updatedStudentsInfo[i].name,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }
+  const students = {
+    students: studentsToAdd
+  };
   $.ajax({
-    url: `/v2/sections/${sectionId}/students`,
+    url: `/dashboardapi/sections/${sectionId}/students/bulk_add`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(studentsToAdd),
+    data: JSON.stringify(students),
   }).done((data) => {
     onComplete(null, data);
   }).fail((jqXhr, status) => {

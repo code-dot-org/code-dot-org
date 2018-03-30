@@ -9,7 +9,7 @@
   upgrade_ie_link: "了解详情"
   en: "计算机科学"
   computer_science_edweek: "计算机科学教育周"
-  csedweek_dates: 2014 年 12 月 8-14 日
+  csedweek_dates: 2018年12月3-9日
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">编程一小时</a>即将来临。邀请所有的老师和组织领导们<a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
@@ -34,8 +34,8 @@
   og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。"
   og_description_celeb: "试试这个新的教程，为你或你的班级赢得与名人视频聊天的机会。"
   csedweek_og_title: "计算机科学教育周"
-  csedweek_og_description: 2017年12月4日至10日。计算机科学是每个学生要学习的基础课程。
-  csedweek_og_description_soon: "编程一小时会在2017年12月4日至10日来临。计算机科学是每个学生都要学习的基础课程。"
+  csedweek_og_description: 2018年12月3至9日。计算机科学是每个学生要学习的基础课程。
+  csedweek_og_description_soon: "编程一小时会在2018年12月3至9日来临。计算机科学是每个学生都要学习的基础课程。"
   csedweek_og_description_here: "编程一小时来了。计算机科学是每个学生都要学习的基础课程。"
   hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
   hoc2014_students: "学生"
@@ -280,21 +280,45 @@
   homepage_stats_hourofcodde: "全世界已经尝试了编程一小时的学生"
   homepage_stats_policy: "国家改变了政策来支持计算机科学"
   homepage_stats_title: "我们正在有所作为"
-  homepage_hero_text_malala: "&ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;诺贝尔和平奖得主马拉拉说"
-  homepage_hero_text_susan: "&ldquo;如果你能改变技术，你可以改变世界。&rdquo;苏珊，YouTube 首席执行官"
-  homepage_hero_text_fistbump: "&ldquo;别总是玩电话，写上面的程序吧。&rdquo;奥巴马总统"
+  homepage_hero_text_malala: |-
+    &ldquo;我向每个国家的女孩子都发起学习《一小时编程》的挑战&rdquo;
+    诺贝尔和平奖得主马拉拉
+  homepage_hero_text_susan: |-
+    &ldquo;如果你能改变技术，你可以改变世界。&rdquo;
+    苏珊，YouTube 首席执行官
+  homepage_hero_text_fistbump: |-
+    &ldquo;别总是玩电话，写上面的程序吧。&rdquo;
+    奥巴马总统
   homepage_hero_text_sheryl: "&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo;
-    谢丽尔，Facebook 首席运营官说"
-  homepage_hero_text_satya: "&ldquo;计算机科学可以打开这个世界里最好的机会&rdquo;萨提亚，微软首席执行官世界。"
-  homepage_hero_text_satya_new: "&ldquo;计算机科学给予了学生创建未来世界的力量。&rdquo;萨提亚，微软首席执行官。"
-  homepage_hero_text_bosh: "&ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;克里斯 波什说"
-  homepage_hero_text_student1: "&ldquo;这些技能已经改变了我的未来。更不用说，这其实和玩差不多。&rdquo;卢娜，七年级"
-  homepage_hero_text_student2: "&ldquo;我从未看到我的孩子们如此兴奋的学习。 &rdquo;麦克老师"
-  homepage_hero_text_student3: "&ldquo;如果你没有尝试过，不会知道自己是不是会喜欢上计算机科学。&rdquo;杰克逊，6 年级"
-  homepage_hero_text_student4: "&ldquo;通过编程序你可以做到任何想做的事情。&rdquo;玛雅，二年级"
-  homepage_hero_text_student5: "&ldquo;计算机科学，不是别人的，是你的。它就在这里，快开始吧。&rdquo;杰拉尔多老师。"
-  homepage_hero_text_teacher1: "&ldquo;编码火花讲求创意、 灵感和创新 &mdash; 这些是任何职业都不可或缺的。&rdquo;弗洛雷萨老师"
-  homepage_hero_text_teacher2: "&ldquo;我所有的学生都投入，参与到了这个课程。&rdquo;亚当，老师"
+    \n谢丽尔，Facebook 首席运营官说"
+  homepage_hero_text_satya: "&ldquo;计算机科学可以打开这个世界里最好的机会&rdquo; \n萨提亚，微软首席执行官"
+  homepage_hero_text_satya_new: |-
+    &ldquo;计算机科学给予了学生创建未来世界的力量。&rdquo;
+    萨提亚，微软首席执行官
+  homepage_hero_text_bosh: |-
+    &ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;
+    克里斯 波什
+  homepage_hero_text_student1: |-
+    &ldquo;这些技能已经改变了我的未来。更不用说，这其实和玩差不多。&rdquo;
+    卢娜，七年级
+  homepage_hero_text_student2: |-
+    &ldquo;我从未看到我的孩子们如此兴奋的学习。 &rdquo;
+    麦克，老师
+  homepage_hero_text_student3: |-
+    &ldquo;如果你没有尝试过，不会知道自己是不是会喜欢上计算机科学。&rdquo;
+    杰克逊，6 年级
+  homepage_hero_text_student4: |-
+    &ldquo;通过编程序你可以做到任何想做的事情。&rdquo;
+    玛雅，二年级
+  homepage_hero_text_student5: |-
+    &ldquo;计算机科学，不是别人的，是你的。它就在这里，快开始吧。&rdquo;
+    杰拉尔多，老师
+  homepage_hero_text_teacher1: |-
+    &ldquo;编码火花讲求创意、 灵感和创新 &mdash; 这些是任何职业都不可或缺的。&rdquo;
+    弗洛雷萨，老师
+  homepage_hero_text_teacher2: |-
+    &ldquo;我所有的学生都投入，参与到了这个课程。&rdquo;
+    亚当，老师
   homepage_hero_text_stat_loc: "八百五十万女孩已经在Code.org里注册学习了。"
   homepage_hero_text_stat_students: 'Code.org有 #student_count 个学生帐户'
   homepage_hero_text_stat_served: "编程一小时：已有 #served 次参与"
@@ -638,18 +662,12 @@
   dashboard_course_csp: AP® 计算机科学原则
   dashboard_course_csp_desc: Code.org 设计了严谨、 紧密和容易接受的课程，专门探索计算相关的基本思想。
   dashboard_landing_loading: "正在载入...​​​"
-  dashboard_action_edit: "编辑"
-  dashboard_action_save: "保存​​"
-  dashboard_action_save_all: "全部保存"
   dashboard_action_cancel: "取消"
   dashboard_action_delete: "刪除"
   dashboard_action_delete_yes: "对"
   dashboard_action_delete_no: "不"
   dashboard_action_confirm: "要删除吗？"
-  dashboard_action_remove: "移除"
-  dashboard_action_remove_confirm: "移除？"
   dashboard_action_done: "完成"
-  dashboard_action_required: "必填"
   dashboard_action_print_certificates: "打印证书"
   dashboard_assessments_view: "查看评价："
   dashboard_assessments_none: "多数教师通过“查看进度”标签来知道学生的进度。如果你想给进行学生额外的评估，你可以在课程计划中找到推荐的问题和领域。这些都是Code.org之外的资源。"
@@ -728,29 +746,16 @@
   dashboard_sections_assign_activity: "指派课程"
   dashboard_error_none_selected: "你没有选择任何要转移的学生，请至少选择一个学生。"
   dashboard_error_other_section: "如果你要在自己管理的单元中调整学生，可以从下拉菜单选择你要调的单元。如果你要将学生调整到其他教师负责的单元，请选择”其它单元”。"
-  dashboard_students_add_student: "添加学生"
-  dashboard_students_add_students: "添加多位学生"
   dashboard_students_add_multiple: "输入或粘贴学生的名字，每行一个："
   dashboard_students_new_google_classroom_section: "如果要添加学生，请转到<a href='http://classroom.google.com'
     target='_blank'>谷歌课堂</a>然后点击<b>Sync students from Google Classroom</b>。"
   dashboard_students_new_section: "您已经创建了一个新的学习小组！现在，使用上面的<b>添加学生</b>和<b>添加多个学生</b>按钮来添加学生进组。"
-  dashboard_students_placeholder_name: "学生姓名"
   dashboard_students_name: "姓名"
   dashboard_students_progress: "进度"
-  dashboard_students_age: "年龄"
-  dashboard_students_gender: "性别"
   dashboard_students_male: "男性"
   dashboard_students_female: "女性"
-  dashboard_students_secret: "密钥"
-  dashboard_students_password: "密码"
-  dashboard_students_username: "用户名： %{student_username}"
-  dashboard_students_email: "电子邮件: %{student_email}"
   dashboard_students_completed_levels: "已完成的关卡"
   dashboard_students_total_lines: "代码行数"
-  dashboard_students_show_secret: "显示密钥"
-  dashboard_students_auto_generated: "自动生成"
-  dashboard_students_reset_secret: "重置密钥"
-  dashboard_students_reset_password: "重置密码"
   dashboard_students_share_section: "让您的学生点击<a href=%{join_url}>%{join_url}</a>，并且输入代码(%{section_code})。"
   dashboard_students_share_section_secondary: "或者，将这个小组的登录页面共享给你的学生："
   dashboard_students_print_info: "打印出包含学生登录信息的卡片"
@@ -812,7 +817,6 @@
   dashboard_login_word: "单词"
   dashboard_login_picture: "图片"
   dashboard_login_none: "电子邮件"
-  dashboard_new_password: "新密码"
   dashboard_stage: "阶段"
   dashboard_puzzle: "关卡"
   dashboard_question: "问题"
@@ -1099,12 +1103,12 @@
   course2_gradelevel: 6-18岁
   course3_gradelevel: 8-18 岁
   course4_gradelevel: 10-18 岁
-  coursea_gradelevel: 5年级以上
-  courseb_gradelevel: 6年级以上
-  coursec_gradelevel: 7年级以上
+  coursea_gradelevel: "年龄 4-7"
+  courseb_gradelevel: "年龄 5-8"
+  coursec_gradelevel: "年龄 6-10"
   coursed_gradelevel: 8年级以上
-  coursee_gradelevel: 9年级以上
-  coursef_gradelevel: "十年级以上"
+  coursee_gradelevel: "年龄 8-12"
+  coursef_gradelevel: "年龄 9-13"
   accelerated_gradelevel: 10-18 岁
   codeorg_platformtext: "最新的浏览器，智能手机，平板电脑"
   codeintl_platformtext: "最新的浏览器，智能手机，平板电脑"
