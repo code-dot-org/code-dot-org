@@ -87,13 +87,6 @@ class Census::CensusSubmission < ApplicationRecord
   validates :submitter_name, length: {maximum: 255}
   validates :topic_other_description, length: {maximum: 255}
 
-  def self.current_census_year
-    today = Date.today
-    month = today.month
-    year = today.year
-    (month > 7) ? year : (year - 1)
-  end
-
   def inaccuracy_review_data
     school_infos.map do |si|
       next unless si.school
