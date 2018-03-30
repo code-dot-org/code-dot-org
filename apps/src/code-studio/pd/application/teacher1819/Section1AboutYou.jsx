@@ -14,6 +14,7 @@ const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
 const PD_RESOURCES_URL = 'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const WHICH_PROGRAM_URL = 'https://code.org/files/PL-Program-for-Me.pdf';
+const PL_FAQ_URL = 'https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#heading=h.83a4cw26rwmq';
 const TEACHER_EMAIL = 'teacher@code.org';
 const INTERNATIONAL = 'International';
 const US = 'United States';
@@ -78,9 +79,11 @@ export default class Section1AboutYou extends LabeledFormComponent {
         </p>
         <p>
           <strong>
-            Applications are reviewed on a rolling basis, and spots will fill quickly.
-            The priority deadline to apply is March 30, 2018.
-            All applications received after March 30 will only be considered if space is available.
+            Applications are still being accepted through the spring in most regions, so please
+            still apply if you haven’t! If you have questions, be sure to
+            {' '}<a href={PL_FAQ_URL} target="_blank">check out our FAQs</a>{' '}
+            or contact us at
+            {' '}<a href={`mailto:${TEACHER_EMAIL}`}>{TEACHER_EMAIL}</a>.
           </strong>
         </p>
         <p>
