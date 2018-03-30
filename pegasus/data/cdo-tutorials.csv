@@ -862,41 +862,6 @@ CT.L2-01 - Use the basic steps in algorithmic problem-solving to design solution
 145,1,1,1,145,oral_history,Oral History Project,Computing Educators Oral History,http://www.cs.southwestern.edu/OHProject/materials-overview.html,The Computing Educators Oral History Project is a collection of interviews as well as teaching materials and tools tied to the CEOHP collection.,The Computing Educators Oral History Project is a collection of interviews as well as teaching materials and tools tied to the CEOHP collection.,Classroom Activity / Discussion,Grades 9+,/images/tutorials/resubmission/oral_history.png,2015-tutorial,,English only,en,oralhist,"all,9+",Grades 9+,beginner,beginner,lesson-plan,"history,la",computers,All modern browsers,,1hour,other,Language independent,,284,999,999,999,175
 135,1,135,135,135,tlc_microwave,Microwave Racing Video Activity,CAS London,https://teachinglondoncomputing.org/resources/inspiring-unplugged-classroom-activities/microwave-racing-video/,People race different microwave designs to see which is easiest to use to do a simple task. Some are seen to be far more complicated than others.,This video can be used as a general introduction to human computer interaction (HCI) and in particular why so many gadgets areharder to use than need be. Design does make a difference and it is important that interfaces are evaluated to check they are easy to use.,Unplugged,Grades 2+,/images/tutorials/new/tlc_microwave.png,2016-tutorial,https://teachinglondoncomputing.files.wordpress.com/2014/03/activity-microwaveracingvideo1.pdf,English only,en,tlcmicro,"all,2-5,6-8,9+",Grades 2+,beginner,beginner,lesson-plan,math,"no-computers,no-internet",Unplugged,Unplugged,1hour,other,Language independent,,248,999,127,230,193
 9,1,1,9,9,tlc_magic_book,Magical Book Magic,CAS London,https://teachinglondoncomputing.org/resources/computational-thinking-magical-book-magic/,Explore a magic trick based on an intriguing computational property about words.,"In exploring how the magic works, you learn about computational thinking: especially the importance of evaluation to algorithmic thinking. You explore both testing and hazard analysis. The magic trick shows how computer scientists, engineers (and magicians) have to check their algorithms thoroughly. They must think carefully about how things might go wrong as well as checking they will go right.",Unplugged,Grades 6+,/images/tutorials/new/tlc_magic_book.png,2016-tutorial,https://teachinglondoncomputing.files.wordpress.com/2015/08/booklet-magicalbookmagic.pdf,English only,en,tlcmagic,"all,6-8,9+",Grades 6+,beginner,beginner,lesson-plan,la,"no-computers,no-internet",Unplugged,Unplugged,1hour,other,Language independent,,234,999,999,182,179
-1950,2000,1955,1,1,codespark,codeSpark Academy with The Foos,codeSpark,http://thefoos.com/hour-of-code/,"""The Foos"" is a fun, pre-reader friendly game to learn about programming.","Code the adorable Foos to solve puzzles that teach fundamental computer science concepts like sequencing and loops. Everyone everywhere can learn to code with codeSpark Academy's award-winning ""no words"" interface. Beginner coders and pre-readers welcome!","iOS, Android (or web browser).",Elementary,/images/tutorials/hoc2017/codespark.jpg,"Apps,Mobile,International,Beginner",http://bit.ly/HoCpuzzles,"English, Arabic, Azerbaijani, Chinese, Dutch, French, German, Greek, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Spanish, Swedish, Turkish, Ukrainian","ar,az,de,el,en,es,fa,fr,id,is,it,ko,nl,no,pl,pt,pt-br,ro,ru,sr,sv,tr,uk,zh,hi,ja,hu",foos,"all,pre,2-5",Pre-reader - Grade 5,beginner,beginner,online-tutorial,art,"computers,android,ios,no-internet","All modern browsers, Android tablet, iPad, Android phone, iPhone",,1hour,blocks,Blocks,"CSTA:
-CSTA 1A-A-5-2
-CSTA 1A-A-4-4
-CSTA 1A-A-3-5
-CSTA 1A-A-3-6
-CSTA 1A-A-3-7
-CSTA 1A-C-7-9
-CSTA 1A-N-2-16
-CSTA 1B-A-5-4
-CSTA 1B-A-3-7
-Common Core Math:
-CCSS.Math.Practice.MP1
-CCSS.Math.Practice.MP2
-CCSS.Math.Practice.MP4
-CCSS.Math.Practice.MP6
-CCSS.Math.Practice.MP7
-CCSS.Math.Practice.MP8
-CCSS.Math.Content.K.MD.B.3
-National Core Arts Standards:
-MA:Cr1.1.K
-MA:Cr2.1.K
-MA:Cr3.1.1.a
-MA:Cr3.1.1.b
-MA:Pr5.1.1.a
-MA:Pr5.1.1.b
-ISTE:
-EmpoweredLearner-a1
-EmpoweredLearner-4d
-EmpoweredLearner-c1
-ComputationalThinker-5a
-ComputationalThinker-5c
-ComputationalThinker-5d
-CreativeCommunicator-6b
-CreativeCommunicator-6d
-GlobalCollaborator-7a",11,4,19,221,183
 1935,1,1,1960,1,gumball_coding_adventure,Gumball's Coding Adventure,Google,https://www.cs-first.com/HOC16S,Use code to continue an episode of The Amazing World of Gumball.,"In the Amazing World of Gumball episode ""The Signal"", a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it.",Web based,Grades 6-8,/images/tutorials/new/gumball_coding_adventure.jpg,2016-tutorial,http://www.cs-first.com/HOC16T,English only,en,gumadventure,"all,6-8",Grades 6-8,beginner,beginner,online-tutorial,la,computers,All modern browsers,,1hour,blocks,"Blocks, Scratch","The Hour of Code activity is part of our curriculum for VEX IQ programming. A complete guide to our alignment to CSTA is included at http://www.robotmesh.com/docs/teacher_guide/Default.htm.  We also align to the UK Computing Programmes of Study, also documented in the teachers guide. ",7,999,999,5,999
 1935,1,1940,1930,1,hopscotch_drop_phone,"Make ""Don't Drop the Phone"" on iPad/iPhone",Hopscotch,http://gethopscotch.com/hour-of-code/dont-drop-phone,"Make ""Don't Drop the Phone"" on iPad/iPhone","Hopscotch is a simple programming tool on the iPad/iPhone, beloved by millions of students for its freedom of creative expression. Watch your students squeal with delight as they create their own ""Don't Drop the Phone"" games! This self-guided video tutorial teaches kids ages 8+ programming basics while they code customized editions of this popular game.","iPad, iPhone",Grades 2-8,/images/tutorials/hoc2017/hopscotch_drop_phone.png,2017-tutorial,https://drive.google.com/open?id=1RGemrXzGy_KWm3ZznzsyeT8ZUIJnWRz5ULE0pHL-rWM,English only,en,hopdropphone,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,art,ios,"iPad, iPhone",,1hour,blocks,Hopscotch,"– Make sense of problems and persevere in solving (CCSS.MATH.PRACTICE.MP1)
 – Look for and make use of structure (CCSS.MATH.PRACTICE.MP7)
@@ -963,12 +928,6 @@ Common​ ​Core​ ​CCSS-ELA: 1.RI.3,​ ​2.RI.3,​ ​1.RI.6,​ ​2.RI
 ","A game-based platform for 2nd to 4th graders to learn and practice math with the same easy-to use interface enjoyed in CodeMonkey's ""Coding Adventure"". In 60 interactive challenges, students will improve their math skills with exciting new characters, features and challenges. Using a pixel ruler and protractor to measure distances and angles, students will help the Dodo get to the eggs. 
 ","All modern browsers, Android tablet, iPad",Grades 2-5,/images/tutorials/hoc2017/codemonkey_dodo.png,2017-tutorial,https://www.playcodemonkey.com/hour-of-code-dodo-does-math-teachers-notes.pdf,"English, Hebrew","en,en-GB,he",cmdodo,"all,2-5",Grades 2-5,beginner,comfortable,online-tutorial,math,"computers,android,ios","All modern browsers, Android tablet, iPad",,1hour,typing,CoffeeScript,"Common Core Math Standards Alignment
 ",216,999,105,999,258
-1780,1890,1800,1,1,codespark_snoopy,Snoopy Snow Brawl,codeSpark,http://thefoos.com/hour-of-code/,Code to win in Snoopy Snow Brawl - who will be the last scout standing?,"Team up with friends and practice your coding skills by programming Snoopy's Beagle Scouts in a fun and silly snowball fight! Beginners and pre-readers welcome - teams write their code in secret while trying to outsmart each other. With words-free code, everyone can get in on the fun! This activity supports 1- 4 players on the same device - play against friends or the computer.","All modern browsers, Android tablet, iPad, Android phone, iPhone",Pre-reader - Grade 5,/images/tutorials/hoc2017/codespark_snoopy.jpg,2017-tutorial,https://thefoos-com.s3.amazonaws.com/dashboard/pdf/english/Hour%20of%20Code%20Curriculum%202017%20Snoopy.pdf,"English, Chinese, Dutch, French, German, Italian, Korean, Malay, Portuguese, Spanish, Swedish, Thai","zh-CN,zh-TW,nl,en,en-GB,fr,de,it,ko,ms,pt-BR,pt-PT,es,es-MX,sv,th",codesnoopy,"all,pre,2-5",Pre-reader - Grade 5,comfortable,comfortable,online-tutorial,cs-only,"computers,android,ios","All modern browsers, Android tablet, iPad, Android phone, iPhone",,1hour,blocks,Blocks,"CSTA 1A-A-5-2
-CSTA 1A-A-4-4
-CSTA 1A-A-3-7
-CSTA 1A-C-7-9
-CSTA 1B-A-5-4
-CSTA 1B-A-3-7",80,21,65,233,198
 1634,1,1970,1634,1,code_avengers_crazy,Code Crazy Creatures,Code Avengers,https://www.codeavengers.com/programming/0,Use the MicroPython programming language to make a pet that you can feed and play with.,"Join Alex and Lonnie as they learn about coding by creating fun, interactive pictures.  Learn about sequence, loops, events, and actions as you create crazy creatures in this exciting adventure!","Chrome, Firefox, Safari",Grades 2-8,/images/tutorials/hoc2017/code_avengers_crazy.png,2017-tutorial,,English only,"en,en-GB",cacrazy,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,art,computers,"Chrome, Firefox, Safari",,1hour,blocks,Blocks,Grade 3-8 Program Development framework alignment,63,999,15,44,999
 1553,1,1553,1560,1,hopscotch_crossy_road,Make Crossy Road on iPad/iPhone,Hopscotch,http://gethopscotch.com/hour-of-code/crossy-road,Make Crossy Road on iPad/iPhone,"Hopscotch is a simple programming tool on the iPad/iPhone, beloved by millions of students for its freedom of creative expression. With this self-guided video tutorial, your students will make their own versions of Crossy Road! Kids ages 8+ will be exposed to the basics of programming while they code customized editions of this App Store favorite.","iPad, iPhone",Grades 2-8,/images/tutorials/hoc2017/hopscotch_crossy_road.png,2017-tutorial,https://drive.google.com/open?id=0BwKFT8tX5oZVbUM2UXhrTGJnQzg,English only,en,hopcrossyroad,"all,2-5,6-8",Grades 2-8,beginner,beginner,online-tutorial,art,ios,"iPad, iPhone",,1hour,blocks,Hopscotch,"– Make sense of problems and persevere in solving (CCSS.MATH.PRACTICE.MP1)
 – Look for and make use of structure (CCSS.MATH.PRACTICE.MP7)

@@ -121,7 +121,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal regional_partner.id, regional_partner_contact.regional_partner_id
   end
 
-  #If matched and regional partner has one pm, send matched email to pm
+  # If matched and regional partner has one pm, send matched email to pm
   test 'Matched with one regional partner pm' do
     regional_partner = create :regional_partner, name: "partner_OH_45242"
     regional_partner.mappings.find_or_create_by!(state: 'OH')
@@ -137,7 +137,7 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal 2, ActionMailer::Base.deliveries.count
   end
 
-  #If matched and regional partner with multiple pms, send matched email to all pms
+  # If matched and regional partner with multiple pms, send matched email to all pms
   test 'Matched with two regional partner pms' do
     regional_partner = create :regional_partner, name: "partner_OH_45242"
     regional_partner.mappings.find_or_create_by!(state: 'OH')
@@ -154,31 +154,35 @@ class Pd::RegionalPartnerContactTest < ActiveSupport::TestCase
     assert_equal 3, ActionMailer::Base.deliveries.count
   end
 
-  #If matched but no regional partner pms, send unmatched email
+  # If matched but no regional partner pms, send unmatched email
+  # TODO: When cc supported, fix test to check for Jenna cc
   test 'Matched with zero regional partner pms' do
     regional_partner = create :regional_partner, name: "partner_OH_45242"
     regional_partner.mappings.find_or_create_by!(state: 'OH')
     regional_partner.mappings.find_or_create_by!(zip_code: '45242')
 
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
-    mail = ActionMailer::Base.deliveries.first
+    first_mail = ActionMailer::Base.deliveries[0]
+    second_mail = ActionMailer::Base.deliveries[1]
 
-    assert_equal ['nimisha@code.org'], mail.to
-    assert_equal ['jenna@code.org'], mail.cc
-    assert_equal 'A school administrator wants to connect with Code.org', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
-    assert_equal 2, ActionMailer::Base.deliveries.count
+    assert_equal ['nimisha@code.org'], first_mail.to
+    assert_equal ['jenna@code.org'], second_mail.to
+    assert_equal 'A school administrator wants to connect with Code.org', first_mail.subject
+    assert_equal ['tanya_parker@code.org'], first_mail.from
+    assert_equal 3, ActionMailer::Base.deliveries.count
   end
 
+  # TODO: When cc supported, fix test to check for Jenna cc
   test 'Unmatched' do
     create :pd_regional_partner_contact, form_data: FORM_DATA.merge(MATCHED_FORM_DATA).to_json
-    mail = ActionMailer::Base.deliveries.first
+    first_mail = ActionMailer::Base.deliveries[0]
+    second_mail = ActionMailer::Base.deliveries[1]
 
-    assert_equal ['nimisha@code.org'], mail.to
-    assert_equal ['jenna@code.org'], mail.cc
-    assert_equal 'A school administrator wants to connect with Code.org', mail.subject
-    assert_equal ['tanya_parker@code.org'], mail.from
-    assert_equal 2, ActionMailer::Base.deliveries.count
+    assert_equal ['nimisha@code.org'], first_mail.to
+    assert_equal ['jenna@code.org'], second_mail.to
+    assert_equal 'A school administrator wants to connect with Code.org', first_mail.subject
+    assert_equal ['tanya_parker@code.org'], first_mail.from
+    assert_equal 3, ActionMailer::Base.deliveries.count
   end
 
   test 'Receipt email' do
