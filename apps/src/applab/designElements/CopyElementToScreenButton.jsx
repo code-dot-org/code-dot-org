@@ -45,17 +45,17 @@ class CopyElementToScreenButton extends React.Component {
 
   updateMenuLocation = () => {
     const rect = this.element.getBoundingClientRect();
-    const windowWidth = window.innerWidth;
+    /*const windowWidth = window.innerWidth;
     if (windowWidth > styleConstants['content-width']) { // Accounts for resizing when page is not scrollable
       this.setState({
         menuTop: rect.bottom + window.pageYOffset,
         menuLeft: rect.left - rect.width - (windowWidth - this.state.currWindowWidth)/2,
         currWindowWidth : window.innerWidth});
-    } else { // Accounts for scrolling or resizing when scrollable
+    } else { // Accounts for scrolling or resizing when scrollable  */
       this.setState({
         menuTop: rect.bottom + window.pageYOffset,
         menuLeft: rect.left - rect.width + window.pageXOffset});
-    }
+    //}
   };
 
   handleDropdownClick = (event) => {
@@ -68,15 +68,23 @@ class CopyElementToScreenButton extends React.Component {
     this.setState({opened: !this.state.opened});
   };
 
+  handleMenuClick = (screenId) => {
+    this.setState({opened: false});
+    this.props.handleCopyElementToScreen(screenId);
+  };
+
+  closeMenu() {
+    this.state.opened && this.setState({opened: false});
+  }
+
   render() {
     const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
     const otherScreens = this.props.screenIds
         .filter((screenId) => screenId !== this.props.currentScreenId)
-        .map((screenId) => function(screenId) {
-          return (
-              <PopUpMenu.Item onClick={this.props.handleCopyElementToScreen(screenId)}>Screen: {screenId}</PopUpMenu.Item>
-          );
-        });
+            .map((screenId) =>
+                <PopUpMenu.Item
+                    key={screenId}
+                    onClick={() => this.handleMenuClick(screenId)}>{screenId}</PopUpMenu.Item>);
 
     return (
         <div style={styles.main} ref={element => this.element = element}>
@@ -87,9 +95,8 @@ class CopyElementToScreenButton extends React.Component {
           <PopUpMenu
               isOpen={this.state.opened}
               targetPoint={targetPoint}
-              beforeClose={this.close}>
+              beforeClose={() => this.closeMenu()}>
             {otherScreens}
-            <PopUpMenu.Item onClick={() => {}}>One more that does nothing: {otherScreens.length}</PopUpMenu.Item>
           </PopUpMenu>
         </div>
     );
