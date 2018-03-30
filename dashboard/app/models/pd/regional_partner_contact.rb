@@ -35,14 +35,18 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
 
       if regional_partner_program_managers.empty?
         matched_but_no_pms = true
-        Pd::RegionalPartnerContactMailer.unmatched(form, matched_but_no_pms).deliver_now
+        # TODO: When cc supported, send one unmatched email with Jenna cc'ed
+        Pd::RegionalPartnerContactMailer.unmatched(form, 'nimisha@code.org', matched_but_no_pms).deliver_now
+        Pd::RegionalPartnerContactMailer.unmatched(form, 'jenna@code.org', matched_but_no_pms).deliver_now
       else
         regional_partner_program_managers.each do |rp_pm|
           Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
         end
       end
     else
-      Pd::RegionalPartnerContactMailer.unmatched(form).deliver_now
+      # TODO: When cc supported, send one unmatched email with Jenna cc'ed
+      Pd::RegionalPartnerContactMailer.unmatched(form, 'nimisha@code.org').deliver_now
+      Pd::RegionalPartnerContactMailer.unmatched(form, 'jenna@code.org').deliver_now
     end
 
     Pd::RegionalPartnerContactMailer.receipt(form).deliver_now
