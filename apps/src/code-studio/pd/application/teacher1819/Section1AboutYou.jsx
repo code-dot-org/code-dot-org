@@ -79,8 +79,8 @@ export default class Section1AboutYou extends LabeledFormComponent {
         </p>
         <p>
           <strong>
-            Applications are still being accepted through the spring in most regions, so please 
-            still apply if you haven’t! If you have questions, be sure to 
+            Applications are still being accepted through the spring in most regions, so please
+            still apply if you haven’t! If you have questions, be sure to
             {' '}<a href={PL_FAQ_URL} target="_blank">check out our FAQs</a>{' '}
             or contact us at
             {' '}<a href={`mailto:${TEACHER_EMAIL}`}>{TEACHER_EMAIL}</a>.
