@@ -10,6 +10,7 @@ social:
 
 - require 'country_codes'
 - require 'state_abbr'
+- require 'census_helper'
 %script{src: "https://cdn.optimizely.com/js/400912536.js"}
 - census_announcement = DCDO.get('census_announcement', nil)
 - census_announcement ||= {}
@@ -25,6 +26,7 @@ social:
 - census_announcement['school_state'] = request.params["state"] if request.params["state"]
 - census_announcement['school_zip'] = request.params["zip"] if request.params["zip"]
 - census_announcement['table-id'] = CDO.census_map_table_id
+- census_announcement['school_year'] = current_census_year
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: asset_path("js/#{js_locale}/common_locale.js")}
