@@ -100,6 +100,7 @@ jobs:
             dashboard_enable_pegasus: true
             dashboard_workers: 5
             skip_seed_all: true
+            sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
             " >> locals.yml
             yarn -V
 
