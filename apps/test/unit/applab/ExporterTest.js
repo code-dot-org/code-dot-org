@@ -440,7 +440,6 @@ describe('The Exporter,', function () {
       it("should contain a bunch of files", () => {
         const files = Object.keys(zipFiles);
         files.sort();
-        console.log(files.join('\n'));
         assert.deepEqual(files, [
           'my-app/',
           'my-app/App.js',
