@@ -123,7 +123,7 @@ GRAPH
     redisio (>= 0.0.0)
   cdo-repository (0.2.18)
     cdo-github-access (>= 0.0.0)
-  cdo-ruby (0.2.12)
+  cdo-ruby (0.2.13)
     apt (~> 2.6.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
