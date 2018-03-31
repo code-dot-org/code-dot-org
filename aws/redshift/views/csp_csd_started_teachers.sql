@@ -13,9 +13,9 @@ from
     st.started_at::date,
     row_number() over(partition by course_name, se.user_id, sy.school_year order by st.started_at asc) started_at_order
   from analysis.csp_csd_started st
-    join dashboard_production.followers f on f.student_user_id = st.user_id
-    join dashboard_production.sections se on se.id = f.section_id
     join analysis.school_years sy on st.started_at between sy.started_at and sy.ended_at
+    join dashboard_production.followers f on f.student_user_id = st.user_id and f.created_at between sy.started_at and sy.ended_at
+    join dashboard_production.sections se on se.id = f.section_id
 )
 where started_at_order = 5
 with no schema binding;
