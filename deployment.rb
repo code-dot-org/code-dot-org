@@ -201,7 +201,7 @@ class CDOImpl < OpenStruct
   end
 
   def advocacy_hostname
-    canonical_hostname('legacy.code.org')
+    canonical_hostname('advocacy.code.org')
   end
 
   def circle_run_identifier
