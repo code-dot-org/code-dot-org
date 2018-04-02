@@ -391,8 +391,6 @@ class AnimationsTest < FilesApiTestBase
     # Attempt to get object with special key to get latestVersion
     response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
     assert_equal response[:version_id], latest_version_id
-
-    soft_delete(filename)
   end
 
   def test_get_object_with_latest_version_of_non_deleted
@@ -417,8 +415,6 @@ class AnimationsTest < FilesApiTestBase
     # Attempt to get object with special key to get latestVersion
     response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
     assert_equal response[:status], 'NOT_FOUND'
-
-    soft_delete(filename)
   end
 
   private
