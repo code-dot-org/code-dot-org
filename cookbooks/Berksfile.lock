@@ -49,11 +49,11 @@ DEPENDENCIES
     path: cdo-varnish
   chef-client (~> 4.2.0)
   chef_client_updater
-    git: git://github.com/wjordan/chef_client_updater.git
+    git: https://github.com/wjordan/chef_client_updater.git
     revision: c15baa2bc783f515912665a7b1de00df5d7f0a3e
     branch: update_rubygems_fix
   ixgbevf
-    git: git://github.com/wjordan/chef-ixgbevf.git
+    git: https://github.com/wjordan/chef-ixgbevf.git
     revision: 969318033aecd49dbbd57d9dafd03a84959d7736
     branch: cdo
   ntp (~> 1.8.6)
@@ -123,7 +123,7 @@ GRAPH
     redisio (>= 0.0.0)
   cdo-repository (0.2.18)
     cdo-github-access (>= 0.0.0)
-  cdo-ruby (0.2.12)
+  cdo-ruby (0.2.13)
     apt (~> 2.6.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
