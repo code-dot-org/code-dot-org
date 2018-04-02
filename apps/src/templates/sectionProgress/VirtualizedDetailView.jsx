@@ -57,17 +57,14 @@ export default class VirtualizedDetailView extends Component {
       scrollToColumn: 0,
       scrollToRow: 0,
     };
-
-    this._cellRenderer = this._cellRenderer.bind(this);
-    this._getColumnWidth = this._getColumnWidth.bind(this);
   }
 
   render() {
     return (
         <MultiGrid
           {...this.state}
-          cellRenderer={this._cellRenderer}
-          columnWidth={this._getColumnWidth}
+          cellRenderer={this.cellRenderer}
+          columnWidth={this.getColumnWidth}
           columnCount={5}
           enableFixedColumnScroll
           enableFixedRowScroll
@@ -83,7 +80,7 @@ export default class VirtualizedDetailView extends Component {
     );
   }
 
-  _cellRenderer({columnIndex, key, rowIndex, style}) {
+  cellRenderer({columnIndex, key, rowIndex, style}) {
     return (
       <div className={styles.Cell} key={key} style={style}>
         {rowIndex > 1 && columnIndex > 0 && (
@@ -106,7 +103,7 @@ export default class VirtualizedDetailView extends Component {
     );
   }
 
-  _getColumnWidth({index}) {
+  getColumnWidth({index}) {
     return columnWidths[index];
   }
 
