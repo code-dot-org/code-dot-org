@@ -2,19 +2,8 @@
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   ga('create', 'UA-37745279-1', '<%=request.site%>');
 
-  var currentLanguage = "default";
-  var currentLocale = readCookie("language_");
-  if (currentLocale && currentLocale != "")
-  {
-    language = currentLocale.substring(0,2);
-    if (language && language != "")
-    {
-      currentLanguage = language;
-    }
-  }
-  ga('set', 'dimension1', currentLanguage);
-
-  ga('set', 'dimension4', "<%="#{user_type}"%>");
+  ga('set', 'dimension1', '<%=request.language%>');
+  ga('set', 'dimension4', '<%=user_type%>');
 
   ga('send', 'pageview');
   function trackEvent(category, action, label, value) {
