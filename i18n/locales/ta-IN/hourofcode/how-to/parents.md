@@ -5,75 +5,75 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# உங்கள் குழந்தையுடன் கோடரியின் முடிவை எவ்வாறு நிறைவு செய்வது
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+வீட்டிலுள்ள கோடரியின் முடிவை முடிக்க, அல்லது உங்கள் பிள்ளையின் வகுப்பறைக்கு கொண்டு வர தன்னார்வத் தொண்டு! எப்படி இருக்கிறது:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) எப்படி வீடியோவை பாருங்கள் <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Choose a tutorial:
+## 2) ஒரு பயிற்சி தேர்வு:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+பல்வேறு வயதினருக்கான மாணவர்களுக்காக உருவாக்கப்பட்ட பல்வேறு வேடிக்கையான, மணி நேர நீள பயிற்சிகளை நாங்கள் வழங்குகிறோம். [அவற்றை முயற்சிக்கவும்!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**கோட் டுடோரியல்களின் அனைத்து நேரம் சுய வழிகாட்டுதலும் - உங்கள் குழந்தை வேகத்திலும் வேகத்திலும் வேலை செய்ய அனுமதிக்கிறது**
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Plan your technology needs
+## 3) உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள்
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+இன்டர்நெட் இணைக்கப்பட்ட கணினிகளுடன் கோட் அனுபவத்தின் சிறந்த நேரம் இருக்கும். ஆனால் நீங்கள் ** </ strong> ஒரு கணினி தேவை இல்லை. "தடையேதும் இல்லை" மற்றும் எந்த தொழில்நுட்பம் இல்லாமல் செய்ய முடியும் என்று பல நடவடிக்கைகள் உள்ளன.</p> 
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
-
-## 4) Start your Hour of Code off with an inspiring video
-
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
-
-**Show an inspirational video:**
-
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
-
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
-
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
-
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
-
-## 5) Code!
-
-<img src="/images/fit-700/tutorial-short-link.png" />
-
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
-
-**When your child come across difficulties**
-
-It’s okay to respond:
-
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
-
-## 6) Celebrate
-
-[Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
-
-Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-
-**Other Hour of Code resources:**
-
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
-
-**What comes after the Hour of Code?**
-
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
-
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
-
-<%= view :signup_button %>
+- உங்கள் கணினி அல்லது சாதனத்தில் சோதனை பயிற்சிகள். அவர்கள் ஒலி மற்றும் வீடியோ உலாவிகளில் ஒழுங்காக இயங்குவதை உறுதிசெய்க.
+- ** உங்கள் குழந்தையுடன் சேர்ந்து கற்றுக்கொள்ள விரும்புகிறீர்களா? </ strong>  ஜோடி நிரலாக்க முயற்சிக்கவும். </ ஒரு> கணினி அறிவியல் சமூக மற்றும் கூட்டு</li> </ul> 
+    
+    ## 4) ஒரு மணிநேர வீடியோவை எழுச்சியூட்டும் வீடியோவுடன் தொடங்கவும்
+    
+    உங்கள் குழந்தையை ஊக்குவிப்பதன் மூலம் கோட் ஆஃப் ஹோர்ஸை உதைத்து, கணினி விஞ்ஞானம் நமது வாழ்க்கையின் ஒவ்வொரு பகுதியையும் எப்படி பாதிக்கிறது என்பதை விவாதிக்கிறது.
+    
+    **ஒரு தூண்டுதலாக வீடியோவை காட்டு:**
+    
+    - பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் என்.ஏ.ஏ. நட்சத்திரம் கிறிஸ் பாஷ் ([ 1 நிமிடம் </ a > [ 5 நிமிடம் ](https://www.youtube.com/watch?v=nKIu9yen5nc), மற்றும் <a href = "https://www.youtube.com/watch?v = dU1xS07N-FA "> 9 நிமிடம் ](https://www.youtube.com/watch?v=qYZF6oIZtfc) பதிப்புகள்)
+    - [ குறியீட்டு உலகளாவிய வீடியோவின் ஹவர் ](https://www.youtube.com/watch?v=KsOIlDT145A)
+    - [ஜனாதிபதி ஒபாமா அனைத்து மாணவர்களுக்கும் கணினி விஞ்ஞானம் கற்றுக்கொடுக்க அழைப்பு விடுத்துள்ளார்](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+    - Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+    
+    நீங்கள் மற்றும் உங்கள் குழந்தை இருவரும் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் நேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:
+    
+    - எமது வாழ்க்கையைப் பாதிக்கக்கூடிய வழிகளையும், சிறுவர்களையும் பெண்களையும் எடுத்துக் கொள்ளுங்கள் (உயிர்களை காப்பாற்றுவதைப் பற்றி, மக்களுக்கு உதவுதல், மக்களை இணைப்பது போன்றவை).
+    - அன்றாட வாழ்க்கையில் குறியீட்டைப் பயன்படுத்தும் பட்டியலைக் குறிப்பிடுக.
+    - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+    
+    மேலும் யோசனைகள் வேண்டுமா? அனுபவம் வாய்ந்த கல்வியாளர்களிடமிருந்து சிறந்த நடைமுறைகளுக்கு எங்கள் [ டெம்ப்ளேட் பாடம் திட்டம் ](/files/AfterschoolEducatorLessonPlanOutline.docx) என்பதைப் பார்க்கவும்.
+    
+    ## 5) கோட்!
+    
+    <img src="/images/fit-700/tutorial-short-link.png" />
+    
+    நீங்கள் டுடோரியலை தேர்வு செய்தால், நீங்கள் செய்ய விரும்பும் பயிற்சியைக் குறிக்க முடியும்.
+    
+    **உங்கள் குழந்தை சிரமங்களை சந்திக்கும்போது**
+    
+    உங்கள் குழந்தை சிரமங்களை சந்திக்கும்போது
+    
+    - "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
+    - "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது."
+    - "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
+    
+    ## 6) கொண்டாடுங்கள்
+    
+    [Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
+    
+    சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!
+    
+    **குறியீடு வளங்களின் பிற மணி நேரம்:**
+    
+    - [ கோட் FAQ இன் மணிநேரத்தை ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) மதிப்பாய்வு செய்யவும்.
+    
+    **கோட் ஆஃப் ஹவர் என்ன ஆனது?**
+    
+    தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும். இந்த பயணத்தை தொடர
+    
+    - Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
+    - உங்கள் பிள்ளையின் பள்ளி மாவட்டத்தில் கணினி அறிவியல் கல்வியை  விளம்பரப்படுத்த உதவுக.</li> </ul> 
+        
+        <%= view :signup_button %>

@@ -55,6 +55,24 @@ export default {
 
     createJsWrapperBlock({
       color: SPRITE_COLOR,
+      func: 'setTint',
+      blockText: 'change color of {THIS} to {COLOR}',
+      args: [
+        { name: 'COLOR', type: blockly.BlockValueType.COLOUR },
+      ],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'removeTint',
+      blockText: 'remove color from {THIS}',
+      args: [],
+      methodCall: true,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
       func: 'makeNewGroup',
       blockText: 'make a new group',
       args: [],
@@ -357,8 +375,13 @@ export default {
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
-    const blockNames =
-      customBlocks.map(createJsWrapperBlockCreator(blockly, 'gamelab'));
+    const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
+    const blockNames = customBlocks.map(createJsWrapperBlockCreator(
+      blockly,
+      'gamelab',
+      [SPRITE_TYPE],
+      SPRITE_TYPE,
+    ));
 
     if (!hideCustomBlocks) {
       level.toolbox = appendCategory(level.toolbox, blockNames, 'Custom');

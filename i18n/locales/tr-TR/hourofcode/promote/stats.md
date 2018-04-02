@@ -9,19 +9,19 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Blurbs and Useful Stats
+# Cümleler ve faydalı istatistikler
 
-## Use this short blurb in newsletters
+## bu kısa cümleyi haber bültenlerin'de kullanın
 
 ### Okulunuzu bilgisayar bilimi ile tanıştırın. Bir Hour of Code (Kodlama Saati) ile Başlayın!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! İyi haber şu ki, biz bu durumu değiştirmek için yola çıktık. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Teknoloji dünyadaki her sektörü değiştiren bilgisayar bilgisi iyi yoğrulmuş bir becerinin parçası haline gelmiştir. Fakat tüm okulların yarısından bile azı bilgisayar dersi verir! İyi haber bizler artık bu durumu değiştirmek için yola çıktık. Eğer geçen yıl kod saatini duyduysan tarih yazdığınıda biliyorsundur. Artık 100 milyon öğrenci sadece bir saat kod yaparak bilgisayar biliminin ne kadar erişilebilir ve eğlenceli olabileceğini keşfettiler.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Kod Saati herkesin kodlamanın temel bilgilerini öğrenebileceğini göstermek için tasarlanmış bir saatlik bilgisayar bilimi girişidir. kod saatini dünyaya tanıtmak için < a href = "http://HourofCode.com" > http://HourofCode.com </a>,Daha fazla bilgi edinin ve kendinizi bir saat deneyerek kod saati etkiliği oluşturun!
 
 <a id="infographics"></a>
 
-## Infographics
+## İnfografikler
 
 <%= view :stats_carousel %>
 

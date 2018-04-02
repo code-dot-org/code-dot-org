@@ -1,7 +1,7 @@
 - if current_user && (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
   = render layout: 'shared/extra_links' do
     %strong= @level.name
-    - if current_user.permission?(UserPermission::LEVELBUILDER)
+    - if (current_user.permission?(UserPermission::LEVELBUILDER) || current_user.permission?(UserPermission::PROJECT_VALIDATOR))
       %ul
         %li= link_to level_path(@level), level_path(@level)
         -if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?

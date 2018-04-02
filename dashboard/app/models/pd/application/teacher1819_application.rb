@@ -100,8 +100,9 @@ module Pd::Application
       Pd::Application::ApplicationBase.statuses.except('interview')
     end
 
+    VALID_COURSES = COURSE_NAME_MAP.keys.map(&:to_s)
     validates_uniqueness_of :user_id
-    validates_presence_of :course
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}
     before_validation :set_course_from_program
     def set_course_from_program
       self.course = PROGRAMS.key(program)
@@ -663,10 +664,10 @@ module Pd::Application
       end
     end
 
-    # @override
-    # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      labels_to_remove = (course == 'csd' ?
+    # memoize in a hash, per course
+    FILTERED_LABELS = Hash.new do |h, key|
+      labels_to_remove = (
+      if key == 'csd'
         [
           :csp_which_grades,
           :csp_course_hours_per_week,
@@ -674,19 +675,30 @@ module Pd::Application
           :csp_terms_per_year,
           :csp_how_offer,
           :csp_ap_exam
-        ] : [
+        ]
+      else
+        [
           :csd_which_grades,
           :csd_course_hours_per_week,
           :csd_course_hours_per_year,
           :csd_terms_per_year
         ]
+      end
       )
+
       # school contains NCES id
       # the other fields are empty in the form data unless they selected "Other" school,
       # so we add it when we construct the csv row.
       labels_to_remove.push(:school, :school_name, :school_address, :school_type, :school_city, :school_state, :school_zip_code)
 
-      ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+      h[key] = ALL_LABELS_WITH_OVERRIDES.except(*labels_to_remove)
+    end
+
+    # @override
+    # Filter out extraneous answers based on selected program (course)
+    def self.filtered_labels(course)
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
+      FILTERED_LABELS[course]
     end
 
     # @override

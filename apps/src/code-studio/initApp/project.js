@@ -239,6 +239,10 @@ var projects = module.exports = {
     return currentSources.makerAPIsEnabled;
   },
 
+  getCurrentSourceVersionId() {
+    return currentSourceVersionId;
+  },
+
   /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
