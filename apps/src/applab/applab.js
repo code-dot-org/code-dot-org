@@ -733,7 +733,7 @@ Applab.render = function () {
     Applab.reactMountPoint_);
 };
 
-Applab.exportApp = function () {
+Applab.exportApp = function (expoOpts) {
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
@@ -741,7 +741,8 @@ Applab.exportApp = function () {
     // TODO: find another way to get this info that doesn't rely on globals.
     window.dashboard && window.dashboard.project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
-    html
+    html,
+    expoOpts
   );
 };
 
