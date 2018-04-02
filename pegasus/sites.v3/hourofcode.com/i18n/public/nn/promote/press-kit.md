@@ -50,11 +50,11 @@ Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7
 
 **Flere detaljer og et sitat som du kan bruke i presentasjoner:**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Mer enn 100 millioner elever verden over har gjennomført en Kodetime. Etterspørselen etter en informatikkutdanning tilpasset det 21. århundre krysser alle grenser og kjenner ingen grenser."
+"Kodetimen er designet til å avmystifisere og vise at datavitenskap ikke er rakettvitenskap. Alle kan lære grunnleggende programmering," sier Hadi Partovi, grunnlegger og CEO i Code.org. "Mer enn 100 millioner elever verden over har gjennomført en Kodetime. Etterspørselen etter en informatikkutdanning tilpasset det 21. århundre krysser alle grenser og kjenner ingen grenser."
 
 **Om Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
+Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Dens visjon er at alle elever i alle skoler skal få muligheten til å lære programmering. Etter lanseringen i 2013 organiserte Code.org kampanjen Kodetimen, Kodetimen har hittil introdusert over et hundre millioner elever til datavitenskapen og samarbeider med 70 offenlige skolesistrikter over hele Usa for og utvide datavitenskap programmer. Code.org støttes av filantropiske donasjoner fra selskaper, stiftelser og generøse enkeltpersoner, inkludert Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network og andre. For mer informasjon, vennligst besøk: [ < % = resolve_url('code.org') %>](<%= resolve_url('https://code.org') %>).
 
   
 Flere ressurser og eksempler på e-poster kan du finne [her](<%= resolve_url('/promote') %>).
