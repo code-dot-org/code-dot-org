@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>როგორ ვასწავლოთ კოდის ერთი საათის ფარგლებში</h1>
 
-შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! თუ დახმარება გჭირდებათ, შეგიძლიათ მოძებნოთ [ადგილობრივი მოხალისე](<%= resolve_url('https://code.org/volunteer/local') %>), რომელიც დაგეხმარებათ თქვენს კლასში კოდის ერთი საათის ჩატარებაში.
+შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ nav: how_to_nav
 
 ## 5. კოდის ერთი საათი დაიწყეთ შთამაგონებელი მომხსენებლით ან ვიდეოთი
 
-**მოიწვიეთ [ადგილობრივი მოხალისე](<%= resolve_url('/promote/resources') %>), რომელიც მოსწავლეებს ესაუბრება კომპიუტერული მეცნიერების შესაძლებლობებზე.** მთელ მსოფლიოში ათასობით მოხალისეა მზად, დაგეხმაროთ კოდის ერთი საათის ჩატარებაში, როგორც პირადი ვიზიტის, ასევე ვიდეოჩატის საშუალებით!
+**Invite a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **აჩვენეთ შთამაგონებელი ვიდეო:**
 
 - Code.org-ის უნიკალური ვიდეო ღონისძიების დასაწყებად: ბილ გეითსის, მარკ ცუკერგერგის და NBA ვარსკვლავის კრის ბოშის მონაწილეობით. (ხელმისაწვდომია შემდეგი ხანგრძლივობის ვერსიები: [1 წუთიანი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთიანი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთიანი](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- მოიძიეთ მეტი შთამაგონებელი [რესურსი](<%= resolve_url('https://code.org/inspire') %>) და [ვიდეო](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **არაუშავს, თუ კომპიუტერეულ მეცნიერებებში თქვენ და თქვენი მოსწავლეები თანაბრად გამოუცდელი ხართ. აი, რამდენიმე იდეა, როგორ შეიძლება წარადგინოთ კოდის ერთი საათის აქტივობა:**
 
 - ახსენით, რა გავლენას ახდენენ ტექნოლოგიები ჩვენს ცხოვრებაზე. გამოიყენეთ მაგალითები, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება (ესაუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, მათ ერთმანეთთან დაკავშირებაზე და ა. შ.).
 - კლასთან ერთად ჩამოწერეთ ყოველდღიური გამოყენების საგნები, რომლებიც იყენებენ პროგრამირებას.
-- გაიგეთ, როგორ დააინტერესოთ გოგონები პროგრამირებითა და ინფორმატიკით [აქ](<%= resolve_url('https://code.org/girls')%>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
 
 ## 6. დაწერეთ კოდი!
 
@@ -79,7 +79,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- [დაბეჭდეთ სერთიფიკატები](<%= resolve_url('https://code.org/certificates')%>) თქვენი მოსწავლეებისთვის.
+- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
 - [ამობეჭდეთ სტიკერები "მე გავიარე კოდის ერთი საათი!"](<%= resolve_url('/promote/resources#stickers') %>) თქვენი მოსწავლეებისთვის.
 - [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი სკოლისთვის.
 - გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
@@ -101,7 +101,7 @@ nav: how_to_nav
 
 კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. ამ მოგზაურობის გასაგრძელებლად:
 
-- ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](<%= resolve_url('https://code.org/learn/beyond')%>).
-- [დაესწარით ](<%= resolve_url('https://code.org/professional-development-workshops') %>) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

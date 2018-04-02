@@ -21,6 +21,7 @@ class Census::StateCsOffering < ApplicationRecord
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2016, less_than_or_equal_to: 2030}
 
   SUPPORTED_STATES = %w(
+    AR
     CA
     GA
     ID
@@ -28,8 +29,23 @@ class Census::StateCsOffering < ApplicationRecord
     SC
   ).freeze
 
+  # By default we treat the lack of state data for high schools as an
+  # indication that the school doesn't teach cs. We aren't as confident
+  # that the state data is conplete for the following states so we do
+  # not want to treat the lack of data as a no for those.
+  INFERRED_NO_EXCLUSION_LIST = %w(
+    ID
+    MI
+  ).freeze
+
+  def self.infer_no(state_code)
+    INFERRED_NO_EXCLUSION_LIST.exclude? state_code.upcase
+  end
+
   def self.construct_state_school_id(state_code, row_hash)
     case state_code
+    when 'AR'
+      School.construct_state_school_id('AR', row_hash['District LEA'], row_hash['Location ID'])
     when 'CA'
       School.construct_state_school_id('CA', row_hash['DistrictCode'], row_hash['schoolCode'])
     when 'GA'
@@ -106,8 +122,37 @@ class Census::StateCsOffering < ApplicationRecord
     WC22
   ).freeze
 
+  AR_COURSE_CODES = %w(
+    565320
+    565310
+    565120
+    565110
+    565020
+    565010
+    465520
+    465510
+    465340
+    465330
+    465320
+    465310
+    465220
+    465210
+    465140
+    465130
+    465120
+    465110
+    465060
+    465050
+    465040
+    465030
+    465020
+    465010
+  )
+
   def self.get_courses(state_code, row_hash)
     case state_code
+    when 'AR'
+      AR_COURSE_CODES.select {|course| course == row_hash['Course ID']}
     when 'CA'
       CA_COURSE_CODES.select {|course| course == row_hash['CourseCode']}
     when 'GA'

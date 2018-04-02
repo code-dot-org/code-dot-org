@@ -1,0 +1,16 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2018-03-28T22:01:22.000Z",
+  "level_num": "custom",
+  "user_id": 772,
+  "properties": {
+    "video_key": "CSF_bb8_skinOverview_C-F",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>
