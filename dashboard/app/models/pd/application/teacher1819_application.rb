@@ -780,8 +780,7 @@ module Pd::Application
         return workshops_for_date.first if workshops_for_date.size == 1
 
         location = response.scan(/in (.+) hosted/).first.try(:first) || ''
-        workshops_for_date_and_location = workshops_for_date.find {|w| w.location_address == location} || workshops_for_date.first
-        return workshops_for_date_and_location if workshops_for_date_and_location
+        return workshops_for_date.find {|w| w.location_address == location} || workshops_for_date.first
       end
 
       # No match? Return the first workshop
