@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "C1_bee_level_intro",
+    "video_key": "CSF_skinOverview_Harvester",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -15,7 +15,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-10 19:08:49 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 19:37:26 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 19:08:49 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-20 19:37:26 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-03-30 20:15:19 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

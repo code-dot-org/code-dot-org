@@ -55,6 +55,11 @@ module Api::V1::Pd
 
       @happy_teacher_response = {data: @happy_teacher_question_responses.to_json}
       @angry_teacher_response = {data: @angry_teacher_question_responses.to_json}
+      @declined_response = {
+        data: {
+          consent_b: '0'
+        }.to_json
+      }
 
       @facilitators = TEST_FACILITATORS.map do |facilitator_name|
         create(:facilitator, name: facilitator_name)
@@ -63,19 +68,19 @@ module Api::V1::Pd
       @pegasus_db_stub = {}
       PEGASUS_DB.stubs(:[]).returns(@pegasus_db_stub)
 
-      @workshop = create(:pd_workshop, facilitators: @facilitators)
+      @workshop = create :pd_workshop, facilitators: @facilitators, enrolled_and_attending_users: 2, num_sessions: 1
       create(:pd_enrollment, workshop: @workshop)
       @workshops = [@workshop]
 
       AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
 
-      @workshop_for_course = create :pd_workshop, num_facilitators: 1
-      @other_workshop_for_course = create :pd_workshop, organizer: @workshop_for_course.organizer, num_facilitators: 1
+      @workshop_for_course = create :pd_workshop, num_facilitators: 1, enrolled_and_attending_users: 2, num_sessions: 1
+      @other_workshop_for_course = create :pd_workshop, organizer: @workshop_for_course.organizer, num_facilitators: 1, enrolled_and_attending_users: 2
     end
 
     test 'generate summary report returns expected columns for one good workshop, and one bad workshop' do
       # The first workshop went great
-      good_workshop = create :pd_workshop, facilitators: @facilitators[0..1], num_enrollments: 1
+      good_workshop = create :pd_workshop, facilitators: @facilitators[0..1], enrolled_and_attending_users: 2, num_sessions: 1
       happy_response_1 = @happy_teacher_question_responses.merge(
         {
           how_clearly_presented_s: {'Curly' => 'Extremely clearly'},
@@ -103,7 +108,7 @@ module Api::V1::Pd
       good_workshop_responses = [{data: happy_response_1.to_json}, {data: happy_response_2.to_json}]
 
       # The second workshop went poorly
-      bad_workshop = create :pd_workshop, facilitators: @facilitators[1..2], num_enrollments: 1
+      bad_workshop = create :pd_workshop, facilitators: @facilitators[1..2], enrolled_and_attending_users: 2, num_sessions: 1
       bad_response = @angry_teacher_question_responses.merge(
         {
           how_clearly_presented_s: {'Moe' => 'Not at all clearly', 'Larry' => 'Not at all clearly'},
@@ -138,7 +143,7 @@ module Api::V1::Pd
         teacher_engagement: 5.0,
         overall_success: 6.0,
         facilitator_effectiveness: 5.0,
-        number_teachers: 1,
+        number_teachers: 2,
         response_count: 2
       }
 
@@ -161,7 +166,7 @@ module Api::V1::Pd
         teacher_engagement: 1.0,
         overall_success: 1.0,
         facilitator_effectiveness: 1.0,
-        number_teachers: 1,
+        number_teachers: 2,
         response_count: 2
       }
 
@@ -224,7 +229,7 @@ module Api::V1::Pd
         teacher_engagement: 3.0,
         overall_success: 3.5,
         facilitator_effectiveness: 2.29,
-        number_teachers: 2,
+        number_teachers: 4,
         response_count: 4
       }
 
@@ -280,7 +285,7 @@ module Api::V1::Pd
           teacher_engagement: 3.0,
           overall_success: 3.5,
           facilitator_effectiveness: 2.69,
-          number_teachers: 2,
+          number_teachers: 4,
           response_count: 4
         }, organizer_view[:all_my_workshops_for_course]
       )
@@ -573,7 +578,7 @@ module Api::V1::Pd
           teacher_engagement: 3.0,
           overall_success: 3.5,
           facilitator_effectiveness: 3.0,
-          number_teachers: 1,
+          number_teachers: 2,
           response_count: 2
         }, response_summary
       )
@@ -636,10 +641,18 @@ module Api::V1::Pd
           teacher_engagement: 3.0,
           overall_success: 3.5,
           facilitator_effectiveness: 3.0,
-          number_teachers: 1,
+          number_teachers: 2,
           response_count: 2
         }, response_summary
       )
+    end
+
+    test 'rejections are filtered out when doing aggregation' do
+      @pegasus_db_stub.stubs(:where).returns([@happy_teacher_response, @declined_response])
+      response_summary = get_score_for_workshops(workshops: @workshops, include_free_responses: true, facilitator_name_filter: nil)
+
+      assert_equal 5.0, response_summary[:how_much_learned_s]
+      assert_equal 1, response_summary[:response_count]
     end
 
     private

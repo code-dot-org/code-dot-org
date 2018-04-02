@@ -25,10 +25,11 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
     assert links_are_complete_urls?(mail)
   end
 
+  # TODO: When cc is suported, remove email from unmatched
   test 'unmatched links are valid urls' do
     regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.to_json
     form = regional_partner_contact.sanitize_and_trim_form_data_hash
-    mail = Pd::RegionalPartnerContactMailer.unmatched(form)
+    mail = Pd::RegionalPartnerContactMailer.unmatched(form, 'nimisha@code.org')
 
     assert links_are_complete_urls?(mail)
   end

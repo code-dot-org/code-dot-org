@@ -304,5 +304,46 @@ module Pd::Application
         assert_equal @workshop, @application_with_fit_workshop.workshop
       end
     end
+
+    test 'fit_cohort' do
+      included = [
+        create(:pd_facilitator1819_application, :locked, fit_workshop_id: @fit_workshop.id, status: :accepted),
+        create(:pd_facilitator1819_application, :locked, fit_workshop_id: @fit_workshop.id, status: :waitlisted)
+      ]
+
+      excluded = [
+        # not locked
+        create(:pd_facilitator1819_application, fit_workshop_id: @fit_workshop.id, status: :accepted),
+
+        # not accepted or waitlisted
+        @application_with_fit_workshop,
+
+        # no workshop
+        @application
+      ]
+
+      fit_cohort = Facilitator1819Application.fit_cohort
+
+      included.each do |application|
+        assert fit_cohort.include? application
+      end
+      excluded.each do |application|
+        refute fit_cohort.include? application
+      end
+    end
+
+    test 'memoized filtered_labels' do
+      Facilitator1819Application::FILTERED_LABELS.clear
+
+      filtered_labels_csd = Facilitator1819Application.filtered_labels('csd')
+      assert filtered_labels_csd.key? :csd_csp_fit_availability
+      refute filtered_labels_csd.key? :csf_availability
+      assert_equal ['csd'], Facilitator1819Application::FILTERED_LABELS.keys
+
+      filtered_labels_csf = Facilitator1819Application.filtered_labels('csf')
+      refute filtered_labels_csf.key? :csd_csp_fit_availability
+      assert filtered_labels_csf.key? :csf_availability
+      assert_equal ['csd', 'csf'], Facilitator1819Application::FILTERED_LABELS.keys
+    end
   end
 end

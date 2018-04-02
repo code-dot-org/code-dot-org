@@ -122,7 +122,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
     response_sums, facilitator_specific_response_sums, free_response_summary, facilitator_specific_free_response_sums = initialize_response_summaries(facilitators, facilitator_name_filter)
 
     responses = PEGASUS_DB[:forms].where(source_id: workshops.flat_map(&:enrollments).map(&:id), kind: 'PdWorkshopSurvey').map {|form| form[:data].nil? ? {} : JSON.parse(form[:data])}
-    responses.compact!
+    responses = responses.compact.reject {|response| response['consent_b'] == '0'}
     return {} if responses.count == 0
 
     responses_per_facilitator = calculate_facilitator_name_frequencies(responses)
@@ -141,8 +141,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
     # Compute aggregate scores
     response_summary[:facilitator_effectiveness] = (response_summary.values_at(*FACILITATOR_EFFECTIVENESS_QUESTIONS).reduce(:+) / FACILITATOR_EFFECTIVENESS_QUESTIONS.length.to_f).round(2)
-    response_summary[:number_teachers] = workshops.flat_map(&:enrollments).count
-    response_summary[:response_count] = responses.count
+    response_summary[:number_teachers] = workshops.map {|w| w.attending_teachers.size}.reduce(:+)
+    response_summary[:response_count] = responses.size
 
     response_summary
   end

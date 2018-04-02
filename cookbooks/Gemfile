@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
+ruby '~> 2.5'
 
-gem 'berkshelf', '< 6.0.0' # >= 6.0.0 requires Ruby 2.3
+gem 'berkshelf'
 gem 'chef', '12.7.2'
 gem 'chefspec'
 gem 'kitchen-inspec'
 
-gem 'test-kitchen', '< 1.17.0' # >= 1.17.0 requires Ruby 2.3
+gem 'test-kitchen'
 
 gem 'kitchen-docker'
 gem 'kitchen-dokken'

@@ -13,14 +13,9 @@ import {ConnectionFailedError} from '@cdo/apps/lib/kits/maker/MakerError';
 import {
   findPortWithViableDevice,
   getPreferredPort,
-  CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT,
 } from '@cdo/apps/lib/kits/maker/portScanning';
-import experiments from '@cdo/apps/util/experiments';
 
 describe("maker/portScanning.js", function () {
-  // Unit tests assume no support for CPX, unless they explicitly enable it.
-  beforeEach(() => experiments.setEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT, false));
-
   describe(`findPortWithViableDevice()`, () => {
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
@@ -51,37 +46,13 @@ describe("maker/portScanning.js", function () {
           .catch(done);
     });
 
-    it('rejects if the best device is a Circuit Playground Express', done => {
-      expect(experiments.isEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT)).to.be.false;
+    it(`allows the Circuit Playground Express`, () => {
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
-      findPortWithViableDevice()
+      return findPortWithViableDevice()
         .then(port => {
-          done(new Error('Expected promise to reject, but it resolved to ' + port));
-        })
-        .catch(err => {
-          expect(err).to.be.an.instanceOf(ConnectionFailedError);
-          expect(err.message).to.equal('Failed to establish a board connection.');
-          expect(err.reason).to.include("It looks like you've connected a Circuit Playground Express.");
-          expect(err.reason).to.include("Code.org Maker Toolkit does not support the Express at this time.");
-          expect(err.reason).to.include("Please connect a Circuit Playground Developer Edition and try again.");
-          done();
-        })
-        .catch(done);
+          expect(port).to.equal('COM5');
+        });
     });
-
-    describe(`with experiment ${CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT}`, () => {
-      beforeEach(() => experiments.setEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT, true));
-      afterEach(() => experiments.setEnabled(CIRCUIT_PLAYGROUND_EXPRESS_EXPERIMENT, false));
-
-      it(`allows the Circuit Playground Express`, () => {
-        ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_EXPRESS_PORTS);
-        return findPortWithViableDevice()
-          .then(port => {
-            expect(port).to.equal('COM5');
-          });
-      });
-    });
-
   });
 
   describe(`getPreferredPort(portList)`, () => {

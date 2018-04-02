@@ -54,7 +54,7 @@ class CensusMapInfoWindow extends Component {
     };
 
     return (
-      <div className="census-info-window">
+      <div id="census-info-window" className="census-info-window">
         <h4>
           <b>
             {this.props.schoolName}

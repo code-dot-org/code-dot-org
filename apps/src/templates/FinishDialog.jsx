@@ -7,7 +7,8 @@ import GeneratedCode from './feedback/GeneratedCode';
 import Odometer from './Odometer';
 import PuzzleRatingButtons from  './PuzzleRatingButtons';
 import Confetti from 'react-dom-confetti';
-import StageProgress from '@cdo/apps/code-studio/components/progress/StageProgress.jsx';
+import StageProgress from '@cdo/apps/code-studio/components/progress/StageProgress';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import React, { Component, PropTypes } from 'react';
 import color from '../util/color';
 import msg from '@cdo/locale';
@@ -27,7 +28,7 @@ const styles = {
   },
   modal: {
     position: 'relative',
-    width: 375,
+    width: 450,
     backgroundColor: color.white,
     borderRadius: 10,
   },
@@ -38,7 +39,7 @@ const styles = {
     borderRadius: '10px 10px 0px 0px',
   },
   content: {
-    padding: '22px 56px 5px',
+    padding: '8px 0 5px',
     textAlign: 'center',
   },
   confetti: {
@@ -106,23 +107,39 @@ const styles = {
   mastery: {
     display: 'inline-block',
   },
-  achievements: {
-    width: 217,
-    display: 'block',
-    margin: '24px 0px 0px',
-    padding: '0px 23px',
-    borderColor: color.light_teal,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderRadius: 5,
+  achievementsHeading: {
+    margin: '20px auto 0',
+    color: color.light_gray,
     fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 16,
+  },
+  achievements: {
+    width: 380,
+    display: 'block',
+    margin: '4px auto 4px',
+    borderColor: color.lighter_gray,
+    borderWidth: "1px 0",
+    borderStyle: 'solid',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
     color: color.dark_charcoal,
+    overflow: 'hidden',
   },
   achievementIcon: {
-    width: 16,
+    color: color.teal,
+    marginRight: 6,
+    fontSize: 32,
+    verticalAlign: 'middle',
+  },
+  achievementText: {
+    verticalAlign: 'middle',
   },
   achievementRow: {
-    margin: 4,
+    width: '50%',
+    padding: 10,
+    boxSizing: 'border-box',
+    textAlign: 'left',
+    float: 'left',
   },
   generatedCodeWrapper: {
     padding: '30px 25px 15px 25px',
@@ -302,10 +319,6 @@ export class UnconnectedFinishDialog extends Component {
   }
 
   getAchievements() {
-    if (!this.props.achievements || this.props.achievements.length === 0) {
-      return null;
-    }
-
     const defaultStyles = this.props.achievements.map(() => ({
       color: this.state.achievementsHightlighted ? 1 : 0,
     }));
@@ -346,13 +359,13 @@ export class UnconnectedFinishDialog extends Component {
                   }}
                   key={index}
                 >
-                  <img
-                    src={style.color > 0 ?
-                      achievement.successIconUrl :
-                      achievement.failureIconUrl}
+                  <FontAwesome
+                    icon="check-circle-o"
                     style={styles.achievementIcon}
                   />
-                  {achievement.message}
+                  <span style={styles.achievementText}>
+                    {achievement.message}
+                  </span>
                 </div>
               );
             })}
@@ -423,6 +436,7 @@ export class UnconnectedFinishDialog extends Component {
     }
 
     const confetti = this.props.isChallenge && this.props.isPerfect && this.state.blocksCounted;
+    const showAchievements = this.props.achievements && this.props.achievements.length !== 0;
 
     return (
       <BaseDialog
@@ -456,7 +470,13 @@ export class UnconnectedFinishDialog extends Component {
                   <div style={styles.mastery}>
                     <StageProgress stageTrophyEnabled />
                   </div>
-                  {this.getAchievements()}
+                  {showAchievements && <div>
+                    <div style={styles.achievementsHeading}>
+                      {msg.achievements()}
+                    </div>
+                    {this.getAchievements()}
+                  </div>
+                  }
                   {this.getFunometer()}
                 </div>}
             </div>
