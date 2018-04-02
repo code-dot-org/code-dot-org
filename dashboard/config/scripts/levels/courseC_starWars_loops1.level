@@ -44,10 +44,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"When BB-8 rolls over scrap metal he picks it up automatically.\",\"hint_id\":\"courseC_starWars_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c535534cbccce7300ffd729e85b8e435/courseC_starWars_loops1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.\",\"hint_id\":\"courseC_starWars_loops1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5dbc8a441cfe78f9f41366345e6db629/courseC_starWars_loops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to `move forward` five times to solve this puzzle.\",\"hint_id\":\"courseC_starWars_loops1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/676011f18278148c11eb2c333f0541d8/courseC_starWars_loops1.mp3\"}]",
     "tts_markdown_instructions_override": "Use five of the same blocks to get the scrap metal. Scrap metal glows like this:",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
     "video_key": "CSF_bb8_skinOverview_C-F",
     "top_level_procedure_autopopulate": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
