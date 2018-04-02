@@ -9,19 +9,19 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Blurbs and Useful Stats
+# Blurb dan Statistik yang Berguna
 
-## Use this short blurb in newsletters
+## Gunakan blurb pendek ini dalam surat khabar
 
-### Bring computer science to your school. Start with an Hour of Code!
+### Membawa sains komputer ke sekolah anda. Mulakan dengan suatu Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Dengan teknologi telah mengubah setiap industri di planet ini, pengetahuan pengkomputeran telah menjadi sebahagian daripada set kemahiran yang baik. Tetapi kurang daripada separuh daripada semua sekolah mengajar sains komputer! Berita baiknya ialah, kita sedang berada di perjalanan untuk mengubah situasi ini. Jika anda pernah dengar tentang Hour of Code pada tahun lepas, kamu mungkin sudah tahu ia telah mencipta sejarah. 100 juta pelajar sekarang telah menemui betapa mudah diakses dan menyeronokkan sains komputer dengan hanya melaksanakan suatu Hour of Code.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Hour of Code merupakan pengenalan yang sejam lamanya kepada sains komputer, direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan bahawa sesiapa sahaja boleh belajar asasnya. Ketahui lebih lanjut di <http://HourofCode.com>, cubalah anda sendiri selama sejam, atau menganjurkan suatu acara Hour of Code untuk memperkenalkan orang lain kepada dunia pengkomputeran!
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografik
 
 <%= view :stats_carousel %>
 

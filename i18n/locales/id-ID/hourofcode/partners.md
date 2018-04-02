@@ -3,7 +3,7 @@ title: <%= hoc_s(:title_partners) %>
 ---
 The Hour dari Kode didorong oleh Jam Kode dan Ilmu Komputer Pendidikan Minggu Komite Penasehat dan Ulasan.
 
-The href="%= resolve_url('/advisory-committee') %"> <a Komite Penasehat </a> terdiri dari perwakilan dari K-12, akademisi, organisasi nirlaba, untuk-keuntungan, dan organisasi internasional. This committee guides the strategy for the Hour of Code campaign.
+The href="%= resolve_url('/advisory-committee') %"> <a Komite Penasehat </a> terdiri dari perwakilan dari K-12, akademisi, organisasi nirlaba, untuk-keuntungan, dan organisasi internasional. Komite ini memandu strategi kampanye Hour of Code.
 
 The href="%= resolve_url('/review-committee') <a %"> Komite Ulasan </a> terdiri dari 15 pendidik di seluruh K-12 band kelas yang menilai dan merekomendasikan kegiatan menggunakan rubrik Komite Penasehat. Pendidik ini meninjau kegiatan pimpinan siswa dan rencana pelajaran yang dipimpin oleh guru yang diajukan oleh ratusan mitra kegiatan, mengevaluasi nilai pendidikan, kemampuan untuk melibatkan peserta didik, dan daya tarik potensial bagi beragam siswa.
 

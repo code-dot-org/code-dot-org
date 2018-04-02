@@ -16,7 +16,7 @@ nav: promote_nav
 
 ## 1. Spreid het woord
 
-Tell your friends about the **#HourOfCode**!
+Vertel uw vrienden over **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

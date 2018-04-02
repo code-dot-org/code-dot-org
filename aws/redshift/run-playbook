@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Runs `sql-runner`, filtering the playbook through ERB and setting sqlroot relative to the current file.
+DIR=$(dirname "$0")
+PLAYBOOK="$1"
+shift
+
+# First argument must be playbook file.
+if [ ! -f "${PLAYBOOK}" ]; then
+  echo "Usage: $(basename "$0") FILE [OPTION]..."
+  exit 1
+fi
+
+sql-runner \
+  -playbook <(erb -r ${DIR}/../../deployment "${PLAYBOOK}") \
+  -sqlroot ${DIR} \
+  "$@"
