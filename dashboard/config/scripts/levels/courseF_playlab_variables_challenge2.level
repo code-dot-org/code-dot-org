@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return Studio.playerScore == 10;\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return (Studio.playerScore >= 10 || Studio.tickCount > 350);\r\n\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "soft_buttons": [
@@ -39,7 +39,7 @@
     "disable_examples": "false",
     "disable_sharing": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Now for a game of tag! Tag Cat to get 2 points. Tag Penguin to get 3 points.  Get exactly 10 points to win!\r\nBut be careful, when Cat and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks necessary to make this game work the way it's been explained.\r\n- How will you get Dog to move in all directions using the arrow keys?\r\n- How will you add points when Dog tags Cat or Penguin?\r\n- How will you subtract points when Cat and Penguin touch?",
+    "markdown_instructions": "Now for a game of tag! Tag Cat (actor 2) to get 2 points. Tag Penguin (actor 3) to get 3 points.  Get exactly 10 points to win!  \r\n \r\nBut be careful, when Cat and Penguin tag each other, they take points away.\r\n\r\n---\r\n\r\nAdd the blocks necessary to make this game work the way it's been explained.\r\n- How will you get Dog to move in all directions using the arrow keys?\r\n- How will you add points when Dog tags Cat or Penguin?\r\n- How will you subtract points when Cat and Penguin touch?",
     "min_workspace_height": "1000",
     "never_autoplay_video": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add and subtract points to the `score` variable when sprites collide.\",\"hint_id\":\"courseF_playlab_variables_challenge2_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/810f9b58240f9c61eb526995c729d064/courseF_playlab_variables_challenge2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can change how far you move your sprite each time one of the arrow keys is pressed.\",\"hint_id\":\"courseF_playlab_variables_challenge2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/14fa5c8e05f380db0ad1e2ed2be32e4c/courseF_playlab_variables_challenge2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"**Solution:**\\n\\n<xml>\\n  <block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">up</title>\\n    <next>\\n      <block type=\\\"studio_moveDistanceParams\\\" inline=\\\"true\\\">\\n        <title name=\\\"SPRITE\\\">0</title>\\n        <title name=\\\"DIR\\\">1</title>\\n        <value name=\\\"DISTANCE\\\">\\n          <block type=\\\"math_number\\\">\\n            <title name=\\\"NUM\\\">25</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block>\\n  <block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">down</title>\\n    <next>\\n      <block type=\\\"studio_moveDistanceParams\\\" inline=\\\"true\\\">\\n        <title name=\\\"SPRITE\\\">0</title>\\n        <title name=\\\"DIR\\\">4</title>\\n        <value name=\\\"DISTANCE\\\">\\n          <block type=\\\"math_number\\\">\\n            <title name=\\\"NUM\\\">25</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block>\\n  <block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">left</title>\\n    <next>\\n      <block type=\\\"studio_moveDistanceParams\\\" inline=\\\"true\\\">\\n        <title name=\\\"SPRITE\\\">0</title>\\n        <title name=\\\"DIR\\\">8</title>\\n        <value name=\\\"DISTANCE\\\">\\n          <block type=\\\"math_number\\\">\\n            <title name=\\\"NUM\\\">25</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block>\\n  <block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">right</title>\\n    <next>\\n      <block type=\\\"studio_moveDistanceParams\\\" inline=\\\"true\\\">\\n        <title name=\\\"SPRITE\\\">0</title>\\n        <title name=\\\"DIR\\\">2</title>\\n        <value name=\\\"DISTANCE\\\">\\n          <block type=\\\"math_number\\\">\\n            <title name=\\\"NUM\\\">25</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block>\\n  <block type=\\\"studio_whenSpriteCollided\\\">\\n    <title name=\\\"SPRITE1\\\">0</title>\\n    <title name=\\\"SPRITE2\\\">1</title>\\n    <next>\\n      <block type=\\\"studio_setScore\\\" inline=\\\"false\\\">\\n        <value name=\\\"VALUE\\\">\\n          <block type=\\\"math_arithmetic\\\" inline=\\\"true\\\">\\n            <title name=\\\"OP\\\">ADD</title>\\n            <value name=\\\"A\\\">\\n              <block type=\\\"studio_getScore\\\"/>\\n            </value>\\n            <value name=\\\"B\\\">\\n              <block type=\\\"math_number\\\">\\n                <title name=\\\"NUM\\\">3</title>\\n              </block>\\n            </value>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block>\\n  <block type=\\\"studio_whenSpriteCollided\\\">\\n    <title name=\\\"SPRITE1\\\">0</title>\\n    <title name=\\\"SPRITE2\\\">2</title>\\n    <next>\\n      <block type=\\\"studio_setScore\\\" inline=\\\"false\\\">\\n        <value name=\\\"VALUE\\\">\\n          <block type=\\\"math_arithmetic\\\" inline=\\\"true\\\">\\n            <title name=\\\"OP\\\">ADD</title>\\n            <value name=\\\"A\\\">\\n              <block type=\\\"studio_getScore\\\"/>\\n            </value>\\n            <value name=\\\"B\\\">\\n              <block type=\\\"math_number\\\">\\n                <title name=\\\"NUM\\\">3</title>\\n              </block>\\n            </value>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block>\\n  <block type=\\\"studio_whenSpriteCollided\\\">\\n    <title name=\\\"SPRITE1\\\">1</title>\\n    <title name=\\\"SPRITE2\\\">2</title>\\n    <next>\\n      <block type=\\\"studio_setScore\\\" inline=\\\"false\\\">\\n        <value name=\\\"VALUE\\\">\\n          <block type=\\\"math_arithmetic\\\" inline=\\\"true\\\">\\n            <title name=\\\"OP\\\">MINUS</title>\\n            <value name=\\\"A\\\">\\n              <block type=\\\"studio_getScore\\\"/>\\n            </value>\\n            <value name=\\\"B\\\">\\n              <block type=\\\"math_number\\\">\\n                <title name=\\\"NUM\\\">1</title>\\n              </block>\\n            </value>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"courseF_playlab_variables_challenge2_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a5e2814c3ca0aba6e90381c2b4ec602f/courseF_playlab_variables_challenge2.mp3\"}]",
@@ -52,15 +52,116 @@
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/aa09391a50f48af3501278a4a18b2b4c=levelbuilder/27794.png",
     "top_level_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
+    "timeout_failure_tick": "450",
     "contained_level_names": null
   },
   "published": true,
   "notes": "Course 4 version solution for later:\r\n\r\n<xml><block type=\"when_run\"><next><block type=\"variables_set\" inline=\"false\"><title name=\"VAR\">points</title><value name=\"VALUE\"><block type=\"math_number\"><title name=\"NUM\">0</title></block></value></block></next></block><block type=\"studio_whenArrow\"><title name=\"VALUE\">up</title><next><block type=\"studio_moveDistanceParams\" inline=\"true\"><title name=\"SPRITE\">0</title><title name=\"DIR\">1</title><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">25</title></block></value></block></next></block><block type=\"studio_whenArrow\"><title name=\"VALUE\">down</title><next><block type=\"studio_moveDistanceParams\" inline=\"true\"><title name=\"SPRITE\">0</title><title name=\"DIR\">4</title><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">25</title></block></value></block></next></block><block type=\"studio_whenArrow\"><title name=\"VALUE\">left</title><next><block type=\"studio_moveDistanceParams\" inline=\"true\"><title name=\"SPRITE\">0</title><title name=\"DIR\">8</title><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">25</title></block></value></block></next></block><block type=\"studio_whenArrow\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistanceParams\" inline=\"true\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">25</title></block></value></block></next></block><block type=\"studio_whenSpriteCollided\"><title name=\"SPRITE1\">0</title><title name=\"SPRITE2\">1</title><next><block type=\"variables_set\" inline=\"false\"><title name=\"VAR\">points</title><value name=\"VALUE\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">ADD</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">points</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></next></block><block type=\"studio_whenSpriteCollided\"><title name=\"SPRITE1\">0</title><title name=\"SPRITE2\">2</title><next><block type=\"variables_set\" inline=\"false\"><title name=\"VAR\">points</title><value name=\"VALUE\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">ADD</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">points</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">3</title></block></value></block></value></block></next></block><block type=\"when_run\" uservisible=\"false\"><next><block type=\"studio_setSpriteSize\" uservisible=\"false\"><title name=\"SPRITE\">0</title><title name=\"VALUE\">Studio.SpriteSize.VERY_SMALL</title><next><block type=\"studio_setSpriteSize\" uservisible=\"false\"><title name=\"SPRITE\">1</title><title name=\"VALUE\">Studio.SpriteSize.VERY_SMALL</title><next><block type=\"studio_setSpriteSize\" uservisible=\"false\"><title name=\"SPRITE\">2</title><title name=\"VALUE\">Studio.SpriteSize.VERY_SMALL</title></block></next></block></next></block></next></block><block type=\"studio_repeatForever\" uservisible=\"false\"><statement name=\"DO\"><block type=\"studio_setScoreText\" inline=\"true\" uservisible=\"false\"><value name=\"TEXT\"><block type=\"variables_get\" uservisible=\"false\"><title name=\"VAR\">points</title></block></value></block></statement></block><block type=\"studio_repeatForever\" uservisible=\"false\"><statement name=\"DO\"><block type=\"studio_moveDistanceParams\" inline=\"true\" uservisible=\"false\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><value name=\"DISTANCE\"><block type=\"math_random_int\" inline=\"true\" uservisible=\"false\"><value name=\"FROM\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">50</title></block></value><value name=\"TO\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">400</title></block></value></block></value><next><block type=\"studio_moveDistanceParams\" inline=\"true\" uservisible=\"false\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><value name=\"DISTANCE\"><block type=\"math_random_int\" inline=\"true\" uservisible=\"false\"><value name=\"FROM\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">50</title></block></value><value name=\"TO\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">400</title></block></value></block></value><next><block type=\"studio_setSpritePosition\" uservisible=\"false\"><title name=\"SPRITE\">1</title><title name=\"VALUE\">random</title></block></next></block></next></block></statement></block><block type=\"studio_repeatForever\" uservisible=\"false\"><statement name=\"DO\"><block type=\"studio_moveDistanceParams\" inline=\"true\" uservisible=\"false\"><title name=\"SPRITE\">2</title><title name=\"DIR\">1</title><value name=\"DISTANCE\"><block type=\"math_random_int\" inline=\"true\" uservisible=\"false\"><value name=\"FROM\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">50</title></block></value><value name=\"TO\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">400</title></block></value></block></value><next><block type=\"studio_moveDistanceParams\" inline=\"true\" uservisible=\"false\"><title name=\"SPRITE\">2</title><title name=\"DIR\">4</title><value name=\"DISTANCE\"><block type=\"math_random_int\" inline=\"true\" uservisible=\"false\"><value name=\"FROM\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">50</title></block></value><value name=\"TO\"><block type=\"math_number\" uservisible=\"false\"><title name=\"NUM\">400</title></block></value></block></value><next><block type=\"studio_setSpritePosition\" uservisible=\"false\"><title name=\"SPRITE\">2</title><title name=\"VALUE\">random</title></block></next></block></next></block></statement></block></xml>",
-  "audit_log": "[{\"changed_at\":\"2017-06-12 23:38:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:39:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:43:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:43:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:44:03 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:44:39 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:45:09 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:45:34 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:45:56 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:49:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:50:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:50:36 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:51:14 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:56:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:56:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:56:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:59:02 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-13 00:00:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-02 19:56:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 20:18:51 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-02-01 17:24:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-12 23:38:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:39:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:43:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:43:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:44:03 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:44:39 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:45:09 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:45:34 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:45:56 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:49:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:50:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:50:36 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:51:14 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:56:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:56:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:56:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:57:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-12 23:59:02 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-13 00:00:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-02 19:56:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 20:18:51 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-02-01 17:24:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-03-30 20:46:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 20:47:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 20:50:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 20:51:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 20:52:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 20:52:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 20:58:12 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 21:01:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"start_blocks\",\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 21:02:30 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"start_blocks\",\"initialization_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-30 21:17:33 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"start_blocks\",\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 21:20:01 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"start_blocks\",\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-30 21:23:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\",\"start_blocks\",\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
+    <initialization_blocks>
+      <xml>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="studio_moveDistanceParams" inline="true" uservisible="false">
+              <title name="SPRITE">1</title>
+              <title name="DIR">1</title>
+              <value name="DISTANCE">
+                <block type="math_random_int" inline="true">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">400</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="studio_moveDistanceParams" inline="true">
+                  <title name="SPRITE">1</title>
+                  <title name="DIR">4</title>
+                  <value name="DISTANCE">
+                    <block type="math_random_int" inline="true">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">50</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">400</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_setSpritePosition">
+                      <title name="SPRITE">1</title>
+                      <title name="VALUE">random</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="studio_moveDistanceParams" inline="true">
+              <title name="SPRITE">2</title>
+              <title name="DIR">1</title>
+              <value name="DISTANCE">
+                <block type="math_random_int" inline="true">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">400</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="studio_moveDistanceParams" inline="true">
+                  <title name="SPRITE">2</title>
+                  <title name="DIR">4</title>
+                  <value name="DISTANCE">
+                    <block type="math_random_int" inline="true">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">50</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">400</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_setSpritePosition">
+                      <title name="SPRITE">2</title>
+                      <title name="VALUE">random</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </initialization_blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -89,102 +190,6 @@
                   </value>
                 </block>
               </value>
-            </block>
-          </statement>
-        </block>
-        <block type="studio_repeatForever" uservisible="false">
-          <statement name="DO">
-            <block type="studio_moveDistanceParams" inline="true" uservisible="false">
-              <title name="SPRITE">1</title>
-              <title name="DIR">1</title>
-              <value name="DISTANCE">
-                <block type="math_random_int" inline="true" uservisible="false">
-                  <value name="FROM">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">50</title>
-                    </block>
-                  </value>
-                  <value name="TO">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">400</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="studio_moveDistanceParams" inline="true" uservisible="false">
-                  <title name="SPRITE">1</title>
-                  <title name="DIR">4</title>
-                  <value name="DISTANCE">
-                    <block type="math_random_int" inline="true" uservisible="false">
-                      <value name="FROM">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">50</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">400</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="studio_setSpritePosition" uservisible="false">
-                      <title name="SPRITE">1</title>
-                      <title name="VALUE">random</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="studio_repeatForever" uservisible="false">
-          <statement name="DO">
-            <block type="studio_moveDistanceParams" inline="true" uservisible="false">
-              <title name="SPRITE">2</title>
-              <title name="DIR">1</title>
-              <value name="DISTANCE">
-                <block type="math_random_int" inline="true" uservisible="false">
-                  <value name="FROM">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">50</title>
-                    </block>
-                  </value>
-                  <value name="TO">
-                    <block type="math_number" uservisible="false">
-                      <title name="NUM">400</title>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="studio_moveDistanceParams" inline="true" uservisible="false">
-                  <title name="SPRITE">2</title>
-                  <title name="DIR">4</title>
-                  <value name="DISTANCE">
-                    <block type="math_random_int" inline="true" uservisible="false">
-                      <value name="FROM">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">50</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number" uservisible="false">
-                          <title name="NUM">400</title>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="studio_setSpritePosition" uservisible="false">
-                      <title name="SPRITE">2</title>
-                      <title name="VALUE">random</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </statement>
         </block>

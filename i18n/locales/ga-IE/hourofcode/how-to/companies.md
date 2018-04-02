@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Spreag mac léinn agus oibrí deonach don Hour of Code
 
-Tugann Code.org deis do d'fhostaithe ceangal a dhéanamh le seomraí ranga áitiúla a dhéanann an Uair de Chód áit ar féidir leo a gcuid taithí gairme ardteicneolaíochta a roinnt agus spreagadh a dhéanamh ar dhaltaí chun staidéar a dhéanamh ar eolaíocht ríomhaireachta.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- Cláraigh le deonach.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - Le haghaidh treoracha breise maidir le fostaithe a spreagadh agus do chuid fostaithe a nascadh le seomraí ranga, féach ar ár dtreoir do chomhpháirtithe coporate.
 
 ## Bealaí breise is féidir le cuideachtaí tacú leis an Uair de Chód:
 
-- Arr ar do Phríomhoifigeach Feidhmiúcháin r-phost ar fud na cuideachta a sheoladh <ag cur béim ar thábhacht na heolaíochta ríomhaireachta agus ar fhostaithe a spreagadh chun an focal a scaipeadh. 
+- Arr ar do Phríomhoifigeach Feidhmiúcháin r-phost ar fud na cuideachta a sheoladh <ag cur béim ar thábhacht na heolaíochta ríomhaireachta agus ar fhostaithe a spreagadh chun an focal a scaipeadh.
 - Uair Oíche an Chóid a Shórtáil leis an Uair Shona le lucht oibre chun na gníomhaíochtaí a thriail.
 - Imeacht ócáid Uair de Chód do sheomra ranga áitiúil do mhic léinn nó do chomhpháirtithe neamhbhrabúis chun Uair de Chód a dhéanamh in oifig do chuideachta. Féach an teagmhas conas a threorú thíos.
 
@@ -25,7 +25,7 @@ Tugann Code.org deis do d'fhostaithe ceangal a dhéanamh le seomraí ranga áiti
 ## Do Uair de Chód a Chur Chun Cinn
 
 - Cuir d'imeacht Uair de Chód a chur chun cinn agus daoine eile a spreagadh chun a óstáil.
-- Spreag innealtóirí bogearraí i do chuideachta chun cuairt a thabhairt ar an seomra ranga áitiúil chun cabhrú le huaire an Chóid a threorú agus spreag na scoláirí chun staidéar a dhéanamh ar eolaíocht ríomhaireachta. Is féidir leo clárú le bheith ceangailte leis an seomra ranga.
+- Spreag innealtóirí bogearraí i do chuideachta chun cuairt a thabhairt ar an seomra ranga áitiúil chun cabhrú le huaire an Chóid a threorú agus spreag na scoláirí chun staidéar a dhéanamh ar eolaíocht ríomhaireachta. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Féach ar an físeán conas-go <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Ciceáil as do Uair de Chód trí rannpháirtithe a spreagadh agus plé a dhéan
 
 **Smaointe chun do ghníomhaíocht Uair de Chód a thabhairt isteach do mhic léinn:**
 
-- Mínigh bealaí a dtéann teicneolaíocht i bhfeidhm ar ár saol, le samplaí faoi chúram buachaillí agus cailíní araon - labhairt faoi theicneolaíocht a shábháil beatha, ag cabhrú le daoine, ag nascadh daoine. 
+- Mínigh bealaí a dtéann teicneolaíocht i bhfeidhm ar ár saol, le samplaí faoi chúram buachaillí agus cailíní araon - labhairt faoi theicneolaíocht a shábháil beatha, ag cabhrú le daoine, ag nascadh daoine.
 - Má tá tú ag cuideachta ardteicneolaíochta, taispeántas taispeána, tá táirgí nuálaíocha ag do chuideachta ag obair.
 - Mura bhfuil cuideachta ardteicneolaíochta agat, déan plé ar na bealaí a úsáideann do chuideachta teicneolaíocht chun fadhbanna a réiteach agus spriocanna a bhaint amach.
 - Tabhair cuireadh do innealtóirí bogearraí ó do chuideachta labhairt faoin gcúis a chinn siad staidéar a dhéanamh ar eolaíocht agus ar na tionscadail a oibríonn siad.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ Ciceáil as do Uair de Chód trí rannpháirtithe a spreagadh agus plé a dhéan
 
 ## 7) Celebrate
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!

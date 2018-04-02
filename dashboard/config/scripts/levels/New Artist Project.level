@@ -37,11 +37,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "discard_background": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 21:38:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:47:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-14 18:04:47 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"nkiru.onwuneme+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:38:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:47:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-14 18:04:47 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"nkiru.onwuneme+teacher@code.org\"},{\"changed_at\":\"2018-03-29 00:16:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -495,19 +497,19 @@
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_colour" inline="true" id="draw-color">
+          <block type="draw_colour" inline="false" id="draw-color">
             <value name="COLOUR">
               <block type="colour_picker">
                 <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
-          <block type="draw_colour" inline="true" id="draw-color">
+          <block type="draw_colour" inline="false" id="draw-color">
             <value name="COLOUR">
               <block type="colour_random"/>
             </value>
           </block>
-          <block type="draw_colour" inline="true" id="draw-color">
+          <block type="draw_colour" inline="false" id="draw-color">
             <value name="COLOUR">
               <block type="colour_rgb" inline="false">
                 <value name="RED">
@@ -528,7 +530,7 @@
               </block>
             </value>
           </block>
-          <block type="alpha" inline="true">
+          <block type="alpha" inline="false">
             <value name="VALUE">
               <block type="math_number">
                 <title name="NUM">???</title>

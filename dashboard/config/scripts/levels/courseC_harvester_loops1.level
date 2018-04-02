@@ -38,8 +38,8 @@
     "disable_procedure_autopopulate": "false",
     "step_speed": "2",
     "top_level_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "video_key": "CSF_skinOverview_Harvester"
+    "video_key": "CSF_skinOverview_Harvester",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
