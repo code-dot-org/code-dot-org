@@ -20,7 +20,7 @@ module Api::V1::Pd
     def registered_workshop
       # We don't have a known specific workshop here, but since it's a teachercon registration
       # we know they are registered
-      'Yes'
+      true
     end
 
     def locked
