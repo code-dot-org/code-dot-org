@@ -286,7 +286,7 @@ exports.install = function (blockly, blockInstallOptions) {
   function appendToPointToDirectionBlock(blockName, block) {
     if (blockName === 'point_to_direction') {
       block.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleTextInput('VALUE', '90'),
+          .appendTitle(new blockly.FieldAngleTextInput('VALUE', '0'),
               'DIRECTION')
           .appendTitle(msg.degrees());
     } else if (blockName === 'point_to_direction_param') {
