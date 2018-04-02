@@ -382,14 +382,41 @@ class AnimationsTest < FilesApiTestBase
     delete_all_animation_versions(filename)
 
     # Create an animation file
-    original_version_id = upload(filename, 'stub-v1-body')
+    upload(filename, 'stub-v1-body')
+    latest_version_id = upload(filename, 'stub-v2-body')
 
     # Delete it.
     soft_delete(filename)
 
     # Attempt to get object with special key to get latestVersion
     response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
-    assert_equal response[:version_id], original_version_id
+    assert_equal response[:version_id], latest_version_id
+
+    soft_delete(filename)
+  end
+
+  def test_get_object_with_latest_version_of_non_deleted
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Create an animation file
+    upload(filename, 'stub-v1-body')
+    latest_version_id = upload(filename, 'stub-v2-body')
+
+    # Attempt to get object with special key to get latestVersion
+    response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
+    assert_equal response[:version_id], latest_version_id
+
+    soft_delete(filename)
+  end
+
+  def test_get_object_with_latest_version_for_missing_animation
+    filename = @api.randomize_filename('test.png')
+    delete_all_animation_versions(filename)
+
+    # Attempt to get object with special key to get latestVersion
+    response = AnimationBucket.new.get(@channel_id, filename, nil, 'latestVersion')
+    assert_equal response[:status], 'NOT_FOUND'
 
     soft_delete(filename)
   end
