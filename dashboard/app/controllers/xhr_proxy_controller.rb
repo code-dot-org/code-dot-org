@@ -38,6 +38,7 @@ class XhrProxyController < ApplicationController
     api.themoviedb.org
     api.zippopotam.us
     atlas.media.mit.edu
+    bible-api.com
     code.org
     data.cityofchicago.org
     data.gv.at

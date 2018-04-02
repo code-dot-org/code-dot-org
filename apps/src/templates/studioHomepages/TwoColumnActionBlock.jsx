@@ -171,7 +171,7 @@ export class SpecialAnnouncementActionBlock extends Component {
   render() {
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus('/images/professional-learning/fill-540x289/teacher-apps-3.png')}
+        imageUrl={pegasus('/images/professional-learning/fill-540x289/teacher-apps-4.png')}
         subHeading={i18n.specialAnnouncementHeading()}
         description={i18n.specialAnnouncementDescription()}
         buttons={[

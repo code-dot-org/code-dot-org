@@ -37,6 +37,7 @@ function showYourSchool() {
         hideMap={yourschoolElement.data("parameters-hide-map")}
         fusionTableId={yourschoolElement.data("parameters-table-id")}
         prefillData={prefillData}
+        currentCensusYear={yourschoolElement.data("parameters-school-year")}
       />
     </Provider>,
     yourschoolElement[0]
