@@ -10,107 +10,35 @@ level 'GraphPaperProgramming_2018'
 
 stage 'Introduction'
 level 'courseE_video_ramp1_2018'
-variants
-  level 'courseD_scrat_ramp1_2018'
-  level 'courseE_maze_ramp1_2018'
-endvariants
-variants
-  level 'courseD_scrat_ramp2_2018'
-  level 'courseE_maze_ramp2_2018'
-endvariants
-variants
-  level 'courseD_scrat_ramp3_2018'
-  level 'courseE_maze_ramp3_2018'
-endvariants
-variants
-  level 'courseD_scrat_ramp4_2018'
-  level 'courseE_maze_ramp4_2018'
-endvariants
-variants
-  level 'courseD_scrat_ramp5_2018'
-  level 'courseE_maze_ramp5_2018'
-endvariants
-variants
-  level 'courseD_scrat_predict1_2018'
-  level 'courseE_maze_predict1_2018'
-endvariants
-variants
-  level 'courseD_video_ScratLoops_2018'
-  level 'courseCDEF_video_AngryBirdLoops_2018'
-endvariants
-variants
-  level 'courseD_scrat_ramp6_2018'
-  level 'courseE_maze_ramp6_2018'
-endvariants
-variants
-  level 'courseD_scrat_ramp7_2018'
-  level 'courseE_maze_ramp7_2018'
-endvariants
-variants
-  level 'courseD_scrat_ramp8_2018', challenge: true
-  level 'courseE_artist_ramp8_2018', challenge: true
-endvariants
-variants
-  level 'ramp_video_artistIntro_2018'
-  level 'courseC_video_angles_2018'
-endvariants
-variants
-  level 'courseE_artist_ramp8_2_2018'
-  level 'courseE_artist_ramp9_2018'
-endvariants
-variants
-  level 'courseC_video_angles2_2018'
-  level 'courseE_artist_predict1_2018'
-endvariants
-variants
-  level 'courseE_artist_ramp9_2_2018'
-  level 'courseD_video_nestedLoopsArtist_2018'
-endvariants
+level 'courseD_scrat_ramp1_2018'
+level 'courseD_scrat_ramp2_2018'
+level 'courseD_scrat_ramp3_2018'
+level 'courseD_scrat_ramp4_2018'
+level 'courseD_scrat_ramp5_2018'
+level 'courseD_scrat_predict1_2018'
+level 'courseD_video_ScratLoops_2018'
+level 'courseD_scrat_ramp6_2018'
+level 'courseD_scrat_ramp7_2018'
+level 'courseD_scrat_ramp8_2018', challenge: true
+level 'ramp_video_artistIntro_2018'
+level 'courseE_artist_ramp8_2_2018'
+level 'courseC_video_angles2_2018'
+level 'courseE_artist_ramp9_2_2018'
 
 stage 'Building a Foundation'
 level 'BuildingAFoundation_2018'
 
 stage 'Debugging in Collector'
-variants
-  level 'courseC_video_debugging_2018'
-  level 'courseD_video_debugging_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging1_2018'
-  level 'courseD_collector_debugging1_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging2_2018'
-  level 'courseD_collector_debugging2_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging3_2018'
-  level 'courseD_collector_debugging3_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging4_2018'
-  level 'courseD_collector_debugging4_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging5_2018'
-  level 'courseD_collector_debugging5_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging6_2018'
-  level 'courseD_collector_debugging6_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging7_2018', challenge: true
-  level 'courseD_collector_debugging8_2018', challenge: true
-endvariants
-variants
-  level 'courseC_maze_debugging8_predict1_2018'
-  level 'courseD_collector_debugging9_2018'
-endvariants
-variants
-  level 'courseC_maze_debugging9_2018'
-  level 'courseD_collector_debugging10_predict1_2018'
-endvariants
+level 'courseC_video_debugging_2018'
+level 'courseC_maze_debugging1_2018'
+level 'courseC_maze_debugging2_2018'
+level 'courseC_maze_debugging3_2018'
+level 'courseC_maze_debugging4_2018'
+level 'courseC_maze_debugging5_2018'
+level 'courseC_maze_debugging6_2018'
+level 'courseC_maze_debugging7_2018', challenge: true
+level 'courseC_maze_debugging8_predict1_2018'
+level 'courseC_maze_debugging9_2018'
 bonus 'courseC_maze_debugging_challenge1_2018'
 bonus 'courseC_maze_debugging_challenge2_2018'
 bonus 'courseD_bee_debugging_challenge1_2018'
