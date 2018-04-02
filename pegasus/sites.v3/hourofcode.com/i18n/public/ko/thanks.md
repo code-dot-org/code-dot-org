@@ -44,7 +44,7 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 ## 2. 이벤트 행사를 도와줄 수 있는 지역 자원 봉사자 찾기
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Plan your Hour of Code
 

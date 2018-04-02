@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Jak poprowadzić Godzinę Kodowania w ramach zajęć pozalekcyjnych
 
-Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli chcieliby Państwo dodatkowych rąk do pomocy, można znaleźć [ wolontariusza w okolicy](%= resolve_url('https://code.org/volunteer/local') %), który pomoże przeprowadzić Godzinę Kodowania w Waszej klasie.
+Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 [/col-33]
 
-- [Wydrukuj świadectwa](%= resolve_url('https://code.org/certificates') %) dla swoich uczniów.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - [Wydrukuj naklejki "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) dla swoich uczniów.
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twojej szkoły.
 - Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
@@ -110,7 +110,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ## Inne zasoby Godziny Kodowania dla nauczycieli
 
-- Sprawdź [najlepsze praktyki](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) organizatorów poprzednich Godzin Kodowania. 
+- Sprawdź [najlepsze praktyki](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) organizatorów poprzednich Godzin Kodowania.
 - Obejrzyj nagranie z naszego szkolenia online [Wprowadzenie dla nauczycieli prowadzących Godzinę Kodowania](https://youtu.be/EJeMeSW2-Mw).
 - Odwiedź [Forum Godziny Kodowania](http://forum.code.org/c/plc/hour-of-code), aby znaleźć porady, wyjaśnienia i wsparcie od innych organizatorów. <% if @country == 'us' %>
 - Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Zachęć uczniów do kontynuowania [nauki online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Weź udział](%= resolve_url('https://code.org/professional-development-workshops') %) w jednodniowych warsztatach, aby otrzymać wskazówki od doświadczonego instruktora informatyki. (Tylko dla edukatorów z USA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## 让每个学校都参加，每个学生都来学习！
 
-1. **阅读这一页** 了解计算机科学为什么重要，以及你如何支持编程一小时活动。 [ 在这里获取一个寻呼机. ](/files/hoc-one-pager.pdf)
+1. **阅读这一页** 了解计算机科学为什么重要，以及你如何支持编程一小时活动。 [ 在这里获取一页的版本。 ](/files/hoc-one-pager.pdf)
 
 2. **与当地的学校和地区机构合作** 使用 [此邮件](%= resolve_url('/promote/resources#sample-emails') %) 或 [该介绍](%= resolve_url('/promote/stats') %) 作为起点，查看该 [操作指南](%= resolve_url('/how-to') %) 指导当地学校和地区机构
 
@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **召开新闻发布会** [使用该示例](%= resolve_url('/promote/official-press-release') %) 为指导
 
-9. **与当地机构联系** 访问 [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) 了解你所在国家计算机科学教育的信息 在此请愿书上签名，你将得到 Code.org关于在全国，全省和当地倡议活动的更新信息
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. 在此请愿书上签名，你将得到 Code.org关于在全国，全省和当地倡议活动的更新信息
 
 <%= view :signup_button %>

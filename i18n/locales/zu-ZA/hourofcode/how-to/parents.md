@@ -35,13 +35,13 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza ingane yakho kanye noku xoxa ngendl
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Thola okuningi ukukhuthazayo [izinsiza](%= resolve_url('https://code.org/inspire') %) kanye [amavidiyo](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Kulungile uma wena nezingane zakho nibashasha kukhompyutha sayensi. Lapha kukhona amanye amasu okwazisa umsebenzi wakho weHora loKufingqwa:
 
 - Chaza izindlela ithekhinoloji ezinomthelela ngayo empilweni zethu, ngezibonelo amantombazane nabafana abazokhathala ngayo (Xoxa ngokusindiswa kwezimpilo, ukusizwa kwabantu, ukuxhumanisa abantu, njll.).
 - Bala izinto ezisebenzisa ukufingqwa kumpilo yemihla ngemihla.
-- Bona amathiphu okuthola amantombazane ukuba alangazelele ikhompyutha sayensi [lapha](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Ufuna eminye imibono? Bheka [ithempulethi yehlelo lesifundo,](/files/AfterschoolEducatorLessonPlanOutline.docx) ukuthola imikhuba emihle evela kothisha abanobuchwepheshe.
 
@@ -61,7 +61,7 @@ Kwamukelekile ukuphendula:
 
 ## 6) Zithokozise
 
-[Phrinta izitifiketi](%= resolve_url('https://code.org/certificates') %) ezezingane zakho (nawe futhi!).
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 Yabelana ngezithombe kanye namavidiyo omcimbi wakho weHora loKufingqwa kwezokusakaza. Sebenzisa #iHoraloKufingqwa kanye @codeorg ukuze sikwazi ukugqamisa ngempumelelo yakho, nawe!
 
@@ -73,7 +73,7 @@ Yabelana ngezithombe kanye namavidiyo omcimbi wakho weHora loKufingqwa kwezokusa
 
 IHora loKufingqwa liyisi nyathelo sokuqala kuhambo lokufunda kabanzi ngokuba ithekhinoloji isebenza kanjani kanye nokuba ama aplikheyishini amasofthiwe adalwa kanjani. Ukuqhubekela phambili ngalohambo:
 
-- Khuthaza izingane ukuba ziqhubeka[ukufunda ku inthanethi](%= resolve_url('https://code.org/learn/beyond') %).
-- Siza<o>khangisa<o>Imfundiso yekhompyutha sayensi esifundeni sesikole sengane yakho.
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
+- Siza[khangisa](%= resolve_url('/promote') %)Imfundiso yekhompyutha sayensi esifundeni sesikole sengane yakho.
 
 <%= view :signup_button %>

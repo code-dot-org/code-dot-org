@@ -7,50 +7,50 @@ nav: how_to_nav
 
 <h1>Ako učiť Hodinu Kódu</h1>
 
-Pridajte sa k hnutiu a absolvujte so skupinou študentov ich prvú hodinu informatiky podľa týchto krokov. Hodina Kódu je jednoduchá - aj pre začiatočníkov! Ak potrebujete pomôcť pri Hodine, môžete sa skontaktovať s [miestnym dobrovoľníkom](%= resolve_url('https://code.org/volunteer/local') %), aby Vám ju pomohol zorganizovať vo Vašej triede.
+Pridajte sa k hnutiu a absolvujte so skupinou študentov ich prvú hodinu informatiky podľa týchto krokov. Hodina Kódu je jednoduchá - aj pre začiatočníkov! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
-## Pozrite si toto ako-na-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Pozrite si “Ako na to” video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## Vyberte si návod pre Vašu hodinu
+## 2. Vyberte si návod pre Vašu Hodinu
 
 Ponúkame množstvo zábavy, [návody priamo od študentov](%= resolve_url('/learn') %) pre všetky vekové skupiny a pre ľudí bez i so skúsenosťami. Študenti robia aktivity osobne a samostatne, aj keď veľa aktivít zahrňuje učebné osnovy pre učiteľov (odkaz nájdete po klikntí na danú aktivitu), aby mohli viesť k aktivite diskusiu alebo ju mohli obohatiť či rozvinúť. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-## Spropagujte Vašu Hodinu Kódu
+## 3. Spropagujte Vašu Hodinu Kódu
 
-Spropagujte Vašu Hodinu Kódu s [týmito nástrojmi](%= resolve_url('/promote/resources') %) a povzbuďte Vaše okoli, aby si vytvorili vlastné Hodiny.
+Spropagujte Vašu Hodinu Kódu s [týmito nástrojmi](%= resolve_url('/promote/resources') %) a povzbuďte Vaše okolie, aby si vytvorili vlastné Hodiny.
 
 ## Naplánujte si technické vybavenie - počítače nie sú povinné
 
-Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pripojením na internet. Avšak **nepotrebujete** mať počítač pre každé dieťa, dokonca môžete spraviť Hodinu Kódu celkom bez počítača.
+Pre čo najlepší zážitok s Hodinou Kódu sú potrebné počítače s pripojením na internet. Avšak **nepotrebujete** mať počítač pre každé dieťa, dokonca môžete spraviť Hodinu Kódu celkom bez počítača.
 
-Otestujte si návody na počítačoch alebo zariadeniach šťudentov a skontrolujte, že fungujú správne v prehliadačoch so zvukom a videom. **Nízka rýchlosť internetu?** Zobrazte videa hromadne pred celou triedou, aby nemuseli študenti sťahovať videá osobitne. Alebo vyskúšajte offline návody.
+Otestujte si návody na počítačoch alebo zariadeniach študentov a skontrolujte, že fungujú správne v prehliadačoch so zvukom a videom. **Nízka rýchlosť internetu?** Zobrazte videá hromadne pred celou triedou, aby nemuseli študenti sťahovať videá osobitne. Alebo vyskúšajte offline návody.
 
-Poskytnite slúchadlá alebo požiadajte študentov, aby si priniestli vlastné, ak ste vybrali návody, ktoré fungujú najlepšie so zvukom.
+Poskytnite slúchadlá alebo požiadajte študentov, aby si priniesli vlastné, ak ste vybrali návody, ktoré fungujú najlepšie so zvukom.
 
-**Nemáte dostatok zariadení?** Použite [ programovanie v pári](https://www.youtube.com/watch?v=vgkahOzFH2Q). Keď sa študenti spoja, pomáhajú si sami sebe a menej zaťažujú učiteľa. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
+**Nemáte dostatok zariadení?** Použite [ programovanie v pároch](https://www.youtube.com/watch?v=vgkahOzFH2Q). Keď sa študenti spoja, pomáhajú si navzájom a menej zaťažujú učiteľa. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## Začnite Vašu Hodinu Kódu s inšpirujúcim prednášajúcim alebo s videom
+## Začnite Vašu Hodinu Kódu inšpirujúcim prednášajúcim alebo videom
 
-**Pozvite [lokálneho dobrovoľníka](%= resolve_url('https://code.org/volunteer/local') %), aby inšpiroval Vašich študentov rozprávaním o šírke možností v informačných technológiach.** Tisícky dobrovoľníkov z celého sveta sú pripravení pomôcť Vám s Hodinou Kódu buď návštevou vo Vašej triede, alebo cez video chat s Vašimi študentami!
+**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
-**Ukáž inšpiratívne video:**
+**Ukážte inšpiratívne video:**
 
 - Pôvodné Code.org úvodné video s Billom Gatesom, Markom Zuckerbergom a NBA hviezdou Chrisom Boshom. (Na výber je [1-minutová](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutová](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9-minutová](https://www.youtube.com/watch?v=dU1xS07N-FA) verzia)
-- Pozrite si ďaľšie motivačné [zdroje](%= resolve_url('https://code.org/inspire') %) a [videá](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Nevadí, ak sa Vy či študenti nevyznáte v počítačoch a informačných technológiach. Ponúkame Vám niektoré návrhy na Vašu Hodinu Kódu:**
 
 - Vysvetlite, ako technológie ovplyvňujú naše životy vrátane príkladov, ktoré pochopia chlapci i dievčatá (hovorte o záchrane životov, pomáhaní ľuďom, spájaní ľudí atď.).
 - Spolu s triedou spravte zoznam vecí z bežného života, ktoré používajú počítačový kód.
-- Tipy pre zvýšenie záujmu dievčat o počítače a informačné technológie nájdete na [tomto odkaze](%= resolve_url('https://code.org/girls')%).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
 
 ## 6. Kódujte!
 
 **Nasmerujte študentov na aktivity**
 
-- Napíšte odkaz na návod na tabuľu. Nájdite odkaz na [stránke s informáciami pre vybraný návod ](%= resolve_url('/learn')%) podľa počtu účastnikov.
+- Napíšte odkaz na návod na tabuľu. Nájdite odkaz na [stránke s informáciami pre vybraný návod ](%= resolve_url('/learn')%) podľa počtu účastníkov.
 
 **Ak sa budú študenti potýkať s ťažkosťami, môžete im odpovedať nasledovne:**
 
@@ -79,10 +79,10 @@ Poskytnite slúchadlá alebo požiadajte študentov, aby si priniestli vlastné,
 
 [/col-33]
 
-- [Vytlačte certifikáty](%= resolve_url('https://code.org/certificates')%) pre Vašich študentov.
-- [Vytlačte nálepky "Účastník Hodiny Kódovania"](%= resolve_url('/promote/resources#stickers') %) pre Vašich študentov.
+- [Print certificates](%= codeorg_url('/certificates')%) for your students.
+- [Vytlačte nálepky "Účastník Hodiny Kódu"](%= resolve_url('/promote/resources#stickers') %) pre Vašich študentov.
 - [Objednajte tričká na mieru](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pre Vašu školu.
-- Zdieľaj fotky a videá z vašej Hodiny kódu na sociálnych sieťach. Použi #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť váš úspech!
+- Zdieľajte fotky a videá z vašej Hodiny Kódu na sociálnych sieťach. Použite #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť Váš úspech!
 
 [col-33]
 
@@ -92,16 +92,16 @@ Poskytnite slúchadlá alebo požiadajte študentov, aby si priniestli vlastné,
 
 <p style="clear:both">&nbsp;</p>
 
-## Ďalšie zdroje k Hodine kódu pre vyučujúcich:
+## Ďalšie zdroje k Hodine Kódu pre vyučujúcich:
 
-- Navštívte [Fórum Vyučujúcich Hodiny Kodóvania](http://forum.code.org/c/plc/hour-of-code), kde nájdete rady, postrehy a podporu od ostatných vyučujúcich. <% if @country == 'us' %>
+- Navštívte [Fórum Vyučujúcich Hodiny Kódu](http://forum.code.org/c/plc/hour-of-code), kde nájdete rady, postrehy a podporu od ostatných vyučujúcich. <% if @country == 'us' %>
 - Pozrite si [Časté otázky o Hodine Kódu](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## Čo nasleduje po Hodine kódu?
+## Čo nasleduje po Hodine Kódu?
 
 Hodina Kódu je len prvým krokom na ceste učenia sa o tom, ako fungujú technológie a ako vytvárať softvérové aplikácie. Pre pokračovanie po tejto ceste:
 
-- Povzbuďte študentov, aby pokračovali [v štúdiu online](%= resolve_url('https://code.org/learn/beyond')%).
-- [Zúčastnite sa](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-dňového osobného workshopu, aby ste dostali inštrukcie od experta v informatike. (Len školitelia z USA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

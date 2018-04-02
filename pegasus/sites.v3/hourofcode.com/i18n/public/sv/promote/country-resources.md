@@ -140,6 +140,6 @@ p>[**Pedro Pablo Kuczynski. Presidente del Perú 2016-2021**](https://www.youtub
 
 <% else %>
 
-# Se fler övningar och material för Sverige på [edvira.com/hoc](http://edvira.com/hoc/)!
+# Se fler övningar och material för Sverige på edvira.com/hoc!
 
 <% end %>

@@ -32,7 +32,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# More Ways to Get User Input\r\n\r\nSo far you've used `keyDown` as a way to let users control your programs, but that's just one of many ways to take input. In fact, just one of many ways _to detect keypresses_! Depending on how you want to react to a keypress, there are a few other blocks you might want to use.\r\n\r\n# Do This\r\n\r\nYou will **not write any code** in this program.\r\n\r\n* Read the program and see if you can guess what will happen.\r\n* While the program is running, press the arrow keys and observe how the screen responds.\r\n* Write down or share with your neighbor your observations.\r\n\t* What seems to be the difference between `keyDown()`, `keyWentDown()`, and `keyWentUp()`?\r\n    * What do you think the exclamation mark (`!`) on line 10 does?\r\n    * How might you use the different keypress blocks in a game?",
     "callout_json": "[]",
     "show_d_pad": "false",
     "code_functions": {
@@ -116,10 +115,13 @@
     ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-03-27 20:00:44 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-27 20:02:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-27 20:30:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

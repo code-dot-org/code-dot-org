@@ -23,7 +23,7 @@ nav: how_to_nav
 
 "Кодтау Сағаты" - технологияны біліп, танып, үйретуге және де ойындар мен қосымшалар жасалу жолдарына апарар ең бірінші жол.
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Дұрыс мағлұмат алып, оқыту жолдарын меңгеру үшін информатика саласында тәжірибелі бір маманнан жекеше [1 күндік сабағына қатысыңыз.](<%= resolve_url('https://code.org/professional-development-workshops') %>) (Тек қана АҚШ мұғалімдері үшін)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>
