@@ -5,11 +5,11 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
+# अपने स्कूल जिले में घंटे का कोड कैसे लाएं?
 
 ## Get every school participating, every student learning!
 
-1. **Recruit local schools.** Share [this email](<%= resolve_url('/promote/resources#sample-emails') %>) and [teacher how to guide](<%= resolve_url('/how-to') %>), or include a [short blurb](<%= resolve_url('/promote/stats') %>) in newsletters/district communications.
+1. **बरती स्थानीय स्कूल.**Share<a href="%=resolve_url('/promote/resources#sample-emails') %">यह ईमेल</a>और [शिक्षक कैसे मार्गदर्शन करें](<%= resolve_url('/how-to') %>), या शामिल करें[कम ब्लॉन्ग](<%= resolve_url('/promote/stats') %>)समाचार में/जिला संचार.
 
 2. **Provide a sample logistics plan for schools.** Share this [sample logistics plan](<%= localized_file('/files/HOC_Logistics_plan.pdf') %>) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
 
@@ -23,7 +23,7 @@ nav: how_to_nav
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

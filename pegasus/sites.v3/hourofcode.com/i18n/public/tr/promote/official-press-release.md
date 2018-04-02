@@ -29,27 +29,27 @@ iletişim: [**İLETİŞİM BİLGİLERİ**]
   </p>
   
   <p>
-    [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+    [<strong>ÖRNEK STOK METNİ BAĞLAM İÇİN: </strong>] <br /> Bilgisayarlar her yerde, ama daha az okullar bilgisayar bilim öğretmek 10 yıl önce. Kızlar ve renk öğrencileri ciddi olarak temsil edilir. İyi haber, bunu daha iyi için değiştiriyoruz. Kodun saati, yüksek kaliteli bilgisayar bilimleri eğitimine erişim sağlayan tüm öğrencileri sağlamaya yönelik ağ geçididir.
   </p>
   
   <p>
-    Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! anasayfalarındaydı. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+    Dünya çapında 100.000.000 öğrencileri zaten kod saatini denedi. Kod saat sayesinde, bilgisayar bilimi Google, msn, Yahoo! ' nın ana sayfalarında yer almaktadır! anasayfalarındaydı. Başkan Obama, Shakira ve Ashton Kutcher tüm videoları ile kod saati ile başlattı videolaarını. 100 ortaklarla bu hareketi desteklemek için bir araya geldi.
   </p>
   
   <p>
-    [<strong>INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “We need to encourage and embrace our students’ interest in computer science,” said [<strong>INSERT NAME</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+    [<strong> INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “Öğrencilerimin bilgisayar bilimlerine ilgisini cesaretlendirmeli ve benimsemeliyiz,” dedi [<strong>INSERT NAME</strong>]. "her öğrenci, 21. yüzyılın en iyi kariyerine erişmek için bilgisayar bilimini öğrenme şansını hak etmekte."
   </p>
   
   <p>
-    [<strong>INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION</strong>]
+    [<strong> KURULUŞUNUZ HAKKINDA DAHA FAZLA BİLGİ EKLEME</strong>]
   </p>
   
   <p>
-    [<strong>INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT</strong>]
+    [<strong>BAŞKA BİR KURULUŞTAN VEYA ETKİNLİĞE KATILAN BİRİNDEN TEKLİF EKLEME</strong>]
   </p>
   
   <p>
-    For more information about [<strong>EVENT/PROGRAM/ETC</strong>], visit [<strong>INSERT WEBSITE</strong>] or contact [<strong>INSERT CONTACT INFORMATION</strong>]
+    [<strong>EVENT/PROGRAM/ETC</strong>] hakkında daha fazla bilgi için, [<strong>INSERT WEBSITE</strong>] ziyaret edin yada [<strong>INSERT CONTACT INFORMATION </strong>] ile iletişime geçin
   </p>
   
   <p>

@@ -10,13 +10,13 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Ielūdziet medijus, piemēram, vietējo ziņu raidījumu, avīžu vai tehnoloģiju žurnālistus. Apskati mūsu [sagatavotos materiālus](<%= hoc_uri('/resources/press-kit') %>).
 
 ## 2. During your event
 
 - Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+- Sniedz nelielu ievadu par datorzinātņu nozīmi, izmantojot vienu no šiem [infografikiem](<%= hoc_uri('/resources/stats') %>).   
       
     
 - Citas idejas pasākumam: 
@@ -39,7 +39,7 @@ Consider hosting a K-5 evening event and inviting parents to join their students
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 

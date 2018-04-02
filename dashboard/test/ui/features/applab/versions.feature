@@ -3,7 +3,7 @@
 Feature: App Lab Versions
 
 Scenario: Script Level Versions
-  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1"
+  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I ensure droplet is in block mode
@@ -28,7 +28,7 @@ Scenario: Script Level Versions
   Then ace editor code is equal to "// comment 1"
   And element "#workspace-header-span" contains text "View only"
 
-  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1"
+  When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/1?noautoplay=true"
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment 2// comment 1"
 

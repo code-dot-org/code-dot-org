@@ -7,56 +7,37 @@ nav: promote_nav
 
 # Образец пресс-релиз для выборных должностных лиц
 
-Для срочного выпуска  
-[**Дата**]  
-Контактные данные: [**Контактные данные**]  
+Для Безотлагательного Выпуска  
+[**ДАТА**]  
+Контактные данные: [**КОНТАКТНЫЕ ДАННЫЕ**]  
+  
+
+<strong><center>ГУБЕРНАТОР/СЕНАТОР/ЧЛЕН ЗАКОНОДАТЕЛЬНОГО СОБРАНИЯ/ПРЕДСТАВИТЕЛЬ/МЭР/ЧЛЕН СОВЕТА [ВСТАВЬТЕ ИМЯ][УЧАСТВОВАЛ В ЧАСЕ КОДА С МЕСТНЫМИ УЧЕНИКАМИ]</strong>  
+Общество объединяется для повышения осведомленности о важности образования в компьютерных науках путем участия в Неделе Изучения Компьютерных Наук</center>   
   
 
 
-<strong>
+**ДАТА** - [**ВСТАВЬТЕ ИМЯ**] присоединился к директору и преподавателям [**ВСТАВЬТЕ НАЗВАНИЕ ШКОЛЫ**], бизнес-лидерам и местным семьям на [**НАЗВАНИЕ МЕРОПРИЯТИЯ**], чтобы принять участие в Часе Кода как части Недели Изучения Компьютерных Наук. [ВСТАВЬТЕ ИМЯ] и члены общества были среди десятков миллионов людей по всему миру, которые приняли участие в крупнейшем образовательном мероприятии в истории.
 
-<center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
-</center>
+[**ВСТАВЬТЕ ДЕТАЛИ МЕРОПРИЯТИЯ, ИСПОЛЬЗУЙТЕ ОПИСАТЕЛЬНЫЙ И КОЛИЧЕСТВЕННЫЙ ЯЗЫК. НАПРИМЕР:**]  
+"Младшая школа провела общешкольное мероприятие - Час Кода, чтобы познакомить учеников с компьютерными науками. Более 700 учеников со всех классов выполнили хотя бы один Час Кода. Группа родителей и волонтеров из сообщества помогли с проведением мероприятия и собрали детей вместе для демонстрации почему компьютерные имеют значение в жизнях этих учеников."
 
-<br /> <br /></p> 
+[**ОБРАЗЕЦ ТЕКСТА ДЛЯ КОНТЕКСТА:**]  
+Компьютеры повсюду, но только немногие школы обучают компьютерным наукам. Девочки и ученики с отличным цветом кожи недостаточно представлены. Хорошей новостью является то, что мы меняем это в лучшую сторону. Час Кода это отправная точка к предоставлению всем студентам доступа к высококачественному образованию в области компьютерных наук.
 
-<p>
-  <strong>DATE</strong> - [<strong>INSERT NAME</strong>] joined the principal and faculty members of [<strong>INSERT NAME OF SCHOOL</strong>], business leaders and local families today for [<strong>NAME OF EVENT</strong>] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
-</p>
+В Часе Кода приняли участие уже более 100 миллионов человек во всем мире. Благодаря Часу Кода, компьютерные науки были на главных страницах Google, MSN, Yahoo! и Disney. Президент Обама, Шакира и Эштон Кутчер все помогли стартовать Час Кода со своим видео. Более 100 партнеров собрались вместе, чтобы поддержать это движение.
 
-<p>
-  [<strong>INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:</strong>]<br /> “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
-</p>
+[**ВСТАВЬТЕ ЦИТАТУ ВЫСТУПАЮЩЕГО, ПРИМЕР НИЖЕ:**]  
+“Мы должны поощрять и поддерживать интерес наших студентов к компьютерным наукам,” сказал [**ВСТАВЬТЕ ИМЯ**]. “Каждый студент заслуживает возможности изучать компьютерные науки, чтобы получить доступ к лучшим профессиям 21-го века.”
 
-<p>
-  [<strong>SAMPLE STOCK TEXT FOR CONTEXT:</strong>]<br /> Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. Хорошей новостью является то, что мы меняем это в лучшую сторону. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
-</p>
+[**ВСТАВЬТЕ БОЛЬШЕ ИНФОРМАЦИИ О ВАШЕМ МЕРОПРИЯТИИ И/ИЛИ О ВАШЕЙ ОРГАНИЗАЦИИ**]
 
-<p>
-  В Часе Кода приняли участие уже более 100 миллионов человек во всем мире. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! и Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
-</p>
+[**ВСТАВЬТЕ ЦИТАТЫ ДРУГОЙ ОРГАНИЗАЦИИ ИЛИ КОГО-ТО ДРУГОГО КТО ПОСЕТИЛ МЕРОПРИЯТИЕ**]
 
-<p>
-  [<strong>INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:</strong>]<br /> “We need to encourage and embrace our students’ interest in computer science,” said [<strong>INSERT NAME</strong>]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
-</p>
+Чтобы получить больше информации о [**МЕРОПРИЯТИИ/ПРОГРАММЕ/Т.Д.**], посетите [**ВСТАВЬТЕ ССЫЛКУ НА ВЕБ САЙТ**] или свяжитесь с [**ВСТАВЬТЕ КОНТАКТНУЮ ИНФОРМАЦИЮ**]
 
-<p>
-  [<strong>ВСТАВЬТЕ БОЛЬШЕ ИНФОРМАЦИИ О ВАШЕМ МЕРОПРИЯТИИ И/ИЛИ О ВАШЕЙ ОРГАНИЗАЦИИ</strong>]
-</p>
+  
+  
 
-<p>
-  [<strong>INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT</strong>]
-</p>
 
-<p>
-  For more information about [<strong>EVENT/PROGRAM/ETC</strong>], visit [<strong>INSERT WEBSITE</strong>] or contact [<strong>INSERT CONTACT INFORMATION</strong>]
-</p>
-
-<p>
-  <br /> <br />
-</p>
-
-<p>
-  <%= view :signup_button %>
-</p>
+<%= view :signup_button %>

@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Използвайте прессъобщения.** [ Използвайте тази пробни](<%= resolve_url('/promote/official-press-release') %>) както и ръководството.
 
-9. **Свържете се локално.** Посетете [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>), за да научите повече за CsedWeek във вашия щат. Подпишете петицията и ще получите актуализации от Code.org за техните местни, щатски и федерални застъпнически усилия.
+9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Подпишете петицията и ще получите актуализации от Code.org за техните местни, щатски и федерални застъпнически усилия.
 
 <%= view :signup_button %>

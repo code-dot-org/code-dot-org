@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Hour of Code를 방과후 수업에서 가르치는 방법
 
-이 운동에 참여하신 다음에는, 첫번째 컴푸터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! 만약 당신이 도움을 주고 싶다면, 당신은 [자원봉사](%= resolve_url('https://code.org/volunteer/local') %)를 방문하여 수업에서 Hour of Code를 사용할 수 있게 할 수 있습니다
+이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -15,15 +15,15 @@ nav: how_to_nav
 
 우리는 다양한 사람들이 만든 [ 재미있는 한시간짜리 튜토리얼을](%= resolve_url('/learn') %) 모든 연령에게 제공합니다. [재미있는 다양한 튜토리얼들을 해보세요!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**모든 한시간짜리 튜토리얼은** 조금의 준비 시간을 선생님들께 요구하고, 혼자서 배울 수 있으므로 혼자서 공부할 수 있습니다.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**방과후 수업을 위한 Hour of Code 교육 계획이 필요하세요?**이 [서식](/files/AfterschoolEducatorLessonPlanOutline.docx)을 확인해 보세요.
 
 ## 3. Promote your Hour of Code
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+[이 도구들을 이용하여](%= resolve_url('/promote') %) 여러분의 Hour of Code를 알리고 다른 사람들도 이벤트를 만들고 진행할 수 있도록 응원해주세요.
 
 ## 4. Plan your technology needs - computers are optional
 
@@ -37,7 +37,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. 여러분에게 영감을 주는 비디오를 보며 여러분의 Hour of code를 시작하세요.
 
 참가자들을 격려하는 것으로부터 여러분의 Hour of Code를 시작하세요. 그리고 컴퓨터 과학이 우리의 삶의 모든 부분에 어떻게 영향을 주는지 토론해보세요.
 
@@ -95,7 +95,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - 여러분의 학생들을 위한 ["나는 Hour of Code를 해냈다!"라는 스티커를 인쇄하세요.](%= resolve_url('/promote/resources#stickers') %)
 - [행사 T-셔츠 주문](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) 하기.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
@@ -110,7 +110,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요. <% end %>
@@ -119,7 +119,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 Hour of Code 는 컴퓨터과학기술이 어떻게 동작하고, 응용프로그램(앱) 들을 어떻게 만들어 낼 수 있는지 배울 수 있는 긴 여행의 첫 번째 시작입니다. 이 여행을 계속하려면:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [참여해보세요](%= resolve_url('https://code.org/professional-development-workshops') %) 컴퓨터과학 전문가와 함께 여러가지들을 배울 수 있는 하루 짜리 워크숍들에 개인적으로 참여할 수 있습니다. (US educators only)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

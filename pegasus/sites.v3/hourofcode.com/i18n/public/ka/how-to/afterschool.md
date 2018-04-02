@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # როგორ ჩავატაროთ კოდის ერთი საათი კლასგარეშე გარემოში და კლუბებში
 
-შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! თუ დახმარება გჭირდებათ, შეგიძლიათ მოძებნოთ [ადგილობრივი მოხალისე](<%= resolve_url('https://code.org/volunteer/local') %>), რომელიც დაგეხმარებათ თქვენს კლასში კოდის ერთი საათის ჩატარებაში.
+შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- [დაბეჭდეთ სერტიფიკატები](<%= resolve_url('https://code.org/certificates') %>) თქვენი მოსწავლეებისთვის.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [ამობეჭდეთ სტიკერები "მე გავიარე კოდის ერთი საათი!"](<%= resolve_url('/promote/resources#stickers') %>) თქვენი მოსწავლეებისთვის.
 - [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი სკოლისთვის.
 - გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
@@ -110,7 +110,7 @@ nav: how_to_nav
 
 ## კოდის ერთი საათის სხვა რესურსები მასწავლებლებისთვის
 
-- მიიღეთ [საუკეთესო რჩევები](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) შარშანდელი კოდის ერთი საათის ორგანიზატორებისგან. 
+- მიიღეთ [საუკეთესო რჩევები](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) შარშანდელი კოდის ერთი საათის ორგანიზატორებისგან.
 - უყურეთ ჩვენი [პედაგოგების კოდის ერთი საათის ვებინარის](https://youtu.be/EJeMeSW2-Mw) ჩანაწერს.
 - სხვა ორგანიზატორების მხარდაჭერისა და რჩევებისთვის ესტუმრეთ [კოდის ერთი საათის ფორუმს](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
 - გადახედეთ [კოდის ერთი საათის ხშირად დასმულ კითხვებს](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ nav: how_to_nav
 
 კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის ერთი პატარა ეტაპია. ამ მოგზაურობის გასაგრძელებლად:
 
-- ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [დაესწარით ](<%= resolve_url('https://code.org/professional-development-workshops') %>) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

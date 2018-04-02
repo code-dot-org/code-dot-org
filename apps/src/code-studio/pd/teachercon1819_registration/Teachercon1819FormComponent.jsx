@@ -3,6 +3,7 @@ import LabeledFormComponent from '../form_components/LabeledFormComponent';
 const TEACHER = "Teacher";
 const FACILITATOR = "Facilitator";
 const PARTNER = "Partner";
+const LEAD_FACILITATOR = "LeadFacilitator";
 
 export default class Teachercon1819FormComponent extends LabeledFormComponent {
   isTeacherApplication() {
@@ -15,5 +16,9 @@ export default class Teachercon1819FormComponent extends LabeledFormComponent {
 
   isPartnerApplication() {
     return this.props.applicationType === PARTNER;
+  }
+
+  isLeadFacilitatorApplication() {
+    return this.props.applicationType === LEAD_FACILITATOR;
   }
 }
