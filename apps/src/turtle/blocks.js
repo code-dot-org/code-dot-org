@@ -266,46 +266,56 @@ exports.install = function (blockly, blockInstallOptions) {
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.point_to_direction = {
-    // Block for pointing to a specified direction
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(msg.pointTo());
-      this.appendDummyInput()
+  function createPointToDirectionBlock(blockName) {
+    return {
+      helpUrl: '',
+      init: function () {
+        this.setHSV(184, 1.00, 0.74);
+        this.appendDummyInput()
+            .appendTitle(msg.pointTo());
+        this.setPreviousStatement(true);
+        this.setInputsInline(true);
+        this.setNextStatement(true);
+        this.setTooltip(msg.pointTo());
+
+        appendToPointToDirectionBlock(blockName, this);
+      }
+    };
+  }
+
+  function appendToPointToDirectionBlock(blockName, block) {
+    if (blockName === 'point_to_direction') {
+      block.appendDummyInput()
           .appendTitle(new blockly.FieldAngleTextInput('VALUE', '90'),
               'DIRECTION')
           .appendTitle(msg.degrees());
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.pointTo());
+    } else if (blockName === 'point_to_direction_param') {
+      block.appendValueInput('VALUE')
+          .setCheck(blockly.BlockValueType.NUMBER)
+          .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
+            block: block
+          });
+      block.appendDummyInput()
+          .appendTitle(msg.degrees());
+    } else {
+      block.appendDummyInput()
+          .appendTitle(new blockly.FieldAngleDropdown('DIRECTION', block.VALUE),
+              'VALUE')
+          .appendTitle(msg.degrees());
     }
-  };
+  }
+
+  blockly.Blocks.point_to_direction =
+      createPointToDirectionBlock('point_to_direction');
 
   generator.point_to_direction = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
-    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value},
+    return `Turtle.pointTo('${this.getTitleValue('VALUE')}', ${value},
         'block_id_${this.id}');\n`;
   };
 
-  blockly.Blocks.point_to_direction_by_constant_restricted = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(msg.pointTo());
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleDropdown('DIRECTION', this.VALUE),
-              'VALUE')
-          .appendTitle(msg.degrees());
-      this.setInputsInline(true);
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.pointTo());
-    }
-  };
+  blockly.Blocks.point_to_direction_by_constant_restricted =
+      createPointToDirectionBlock('point_to_direction_by_constant_restricted');
 
   blockly.Blocks.point_to_direction_by_constant_restricted.VALUE =
       [30, 45, 60, 90, 120, 135, 150, 180].map(function (t) {
@@ -318,30 +328,12 @@ exports.install = function (blockly, blockInstallOptions) {
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
 
-  blockly.Blocks.point_to_direction_param = {
-    // Block for pointing to a specified direction
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-          .appendTitle(msg.pointTo());
-      this.appendValueInput('VALUE')
-          .setCheck(blockly.BlockValueType.NUMBER)
-          .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
-            block: this
-          });
-      this.appendDummyInput()
-          .appendTitle(msg.degrees());
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.pointTo());
-    }
-  };
+  blockly.Blocks.point_to_direction_param =
+      createPointToDirectionBlock('point_to_direction_param');
 
   generator.point_to_direction_param = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
-    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value},
+    return `Turtle.pointTo('${this.getTitleValue('VALUE')}', ${value},
         'block_id_${this.id}');\n`;
   };
 
