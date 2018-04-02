@@ -5,75 +5,75 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# اپنے بچے کے ساتھ ایک گھنٹے کا کوڈ کیسے مکمل کرنا
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+گھر میں کوڈ کا ایک گھنٹے مکمل کریں، یا رضاکارانہ طور پر اپنے بچے کی کلاس روم میں لے لو! یہاں کیسے ہے:
 
 ## ١) ہدایات کے لیے یہ ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## ٢) ایک سبق کا انتخاب کریں:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+ہم مختلف اقسام کے طالب علموں کے لئے، ایک گھنٹے کے طویل سبق، مختلف قسم کے شراکت داروں کی طرف سے پیدا فراہم کرتے ہیں. [ انہیں آزمائیں! ](٪= resolve_url('/learn') ٪)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**تمام گھنٹے کے سبق خود کو ہدایت دی جاتی ہیں - آپ کے بچے کو ان کی اپنی رفتار اور مہارت کی سطح پر کام کرنے کی اجازت دی جاتی ہے**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Plan your technology needs
+## 3) اپنی ٹیکنالوجی کی ضروریات کی منصوبہ بندی کریں
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+کوڈ کا تجربہ بہترین وقت انٹرنیٹ سے منسلک کمپیوٹرز کے ساتھ ہوگا. لیکن آپ ** نہیں </ strong> کمپیوٹر کی ضرورت ہے. وہاں بہت سے سرگرمیاں ہیں جو "غیر منسلک" ہیں اور کسی بھی ٹیکنالوجی کے بغیر کیا جا سکتا ہے.</p> 
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
-
-## 4) Start your Hour of Code off with an inspiring video
-
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
-
-**کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:**
-
-- Code.org کی اوریجنل ویڈیو پلے کریں، جس میں بل گیٹس، مارک زوکربرگ، اور NBA اسٹار کرس بوش نمایاں کردار ہیں۔ (اس کے [ 1 منٹ](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [ 5 منٹ](https://www.youtube.com/watch?v=nKIu9yen5nc)، اور [ 9 منٹ](https://www.youtube.com/watch?v=dU1xS07N-FA) پر مبنی ورژن ہیں)
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [صدر اوباما نے تمام اسٹوڈینٹس کو کمپیوٹر سائنس سیکھنے پر زور دیا](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
-
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
-
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
-
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
-
-## 5) Code!
-
-<img src="/images/fit-700/tutorial-short-link.png" />
-
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
-
-**When your child come across difficulties**
-
-It’s okay to respond:
-
-- مجھے معلوم نہیں۔ آئیں مل کر اس کا پتہ لگاتے ہیں"۔"
-- ٹیکنالوجی ہمیشہ اس طرح کام نہیں کرتی جیسا کہ ہم چاہتے ہیں"۔"
-- پروگرامنگ سیکھنا بالکل ایسے ہی ہے جیسا کوئی نئی زبان سیکھنا؛ جس پر آپ فوراً ہی رواں نہیں ہوسکتے"۔"
-
-## 6) Celebrate
-
-[Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
-
-! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
-
-**Other Hour of Code resources:**
-
-- [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔
-
-**آور-آف-کوڈ کے بعد کیا ہو گا؟**
-
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
-
-- Encourage your child to continue [to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
-
-<%= view :signup_button %>
+- آپ کے کمپیوٹر یا آلہ پر ٹیسٹ سبق. یقینی بنائیں کہ وہ براؤزر پر آواز اور ویڈیو کے ساتھ مناسب طریقے سے کام کریں.
+- ** آپ کے بچے کے ساتھ سیکھنا چاہتے ہیں؟ </ strong>  جوڑی پروگرامنگ کی کوشش کریں. </ ایک> کمپیوٹر سائنس سماجی اور باہمی تعاون ہے.</li> </ul> 
+    
+    ## 4) ایک حوصلہ افزائی ویڈیو کے ساتھ آپ کا کوڈ بند کرو
+    
+    آپکے بچے کو حوصلہ افزائی کرکے آپکے قیام کا کوڈ لینا اور کس طرح بات چیت کرتے ہوئے کمپیوٹر سائنس ہماری جانوں کے ہر حصے پر اثر انداز کرتا ہے.
+    
+    **کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:**
+    
+    - Code.org کی اوریجنل ویڈیو پلے کریں، جس میں بل گیٹس، مارک زوکربرگ، اور NBA اسٹار کرس بوش نمایاں کردار ہیں۔ (اس کے [ 1 منٹ](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [ 5 منٹ](https://www.youtube.com/watch?v=nKIu9yen5nc)، اور [ 9 منٹ](https://www.youtube.com/watch?v=dU1xS07N-FA) پر مبنی ورژن ہیں)
+    - [ ورلڈ وائڈ ویڈیو کا قیام ](https://www.youtube.com/watch؟v=KsOIlDT145A)
+    - [صدر اوباما نے تمام اسٹوڈینٹس کو کمپیوٹر سائنس سیکھنے پر زور دیا](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+    - Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+    
+    یہ ٹھیک ہے اگر آپ اور آپ کا بچہ کمپیوٹر سائنس میں برانڈ نیا ہے. آپ کے قیامت کا کوڈ سرگرمی متعارف کرانے کیلئے کچھ خیالات یہاں ہیں:
+    
+    - طریقوں کی ٹیکنالوجی ہماری زندگیوں پر اثر انداز کرتی ہے، مثال کے طور پر لڑکوں اور لڑکیوں دونوں کی حفاظت کریں گے (زندگی کو بچانے کے بارے میں بات کریں، لوگوں کی مدد کرنے، لوگوں سے منسلک کرنے وغیرہ).
+    - روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔
+    - See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
+    
+    مزید خیالات چاہتے ہیں؟ تجربہ کار محققین کے بہترین طریقوں کے لئے ہمارے [ ٹیمپلیٹ سبق کا منصوبہ ](/files/AfterschoolEducatorLessonPlanOutline.docx) چیک کریں.
+    
+    ## 5) کوڈ!
+    
+    <img src="/images/fit-700/tutorial-short-link.png" />
+    
+    جب آپ نے سبق منتخب کیا ہے تو آپ کرنا چاہتے ہیں، آپ سبق کا مختصر لنک بک مارک کرسکتے ہیں.
+    
+    **جب آپ کے بچے مشکلات میں آتے ہیں**
+    
+    جواب دینے کا ٹھیک ہے:
+    
+    - مجھے معلوم نہیں۔ آئیں مل کر اس کا پتہ لگاتے ہیں"۔"
+    - ٹیکنالوجی ہمیشہ اس طرح کام نہیں کرتی جیسا کہ ہم چاہتے ہیں"۔"
+    - پروگرامنگ سیکھنا بالکل ایسے ہی ہے جیسا کوئی نئی زبان سیکھنا؛ جس پر آپ فوراً ہی رواں نہیں ہوسکتے"۔"
+    
+    ## 6) جشن منائیں
+    
+    [Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
+    
+    ! سوشل میڈیا پر اپنے آور-آف-کوڈ کے دلچسپ لمحات کی تصاویر اور ویڈیوز شیئر کریں۔ #HourOfCode اور @codeorg استعمال کریں تاکہ ہم آپ کی کامیابی کو بھی اجاگر کرسکیں!
+    
+    **دیگر وسائل کوڈ وسائل:**
+    
+    - [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔.
+    
+    **آور-آف-کوڈ کے بعد کیا ہو گا?**
+    
+    کوڈ کا قیام صرف کس طرح ٹیکنالوجی کام کرتا ہے اور کس طرح سافٹ ویئر ایپلی کیشنز تخلیق کرنے کے بارے میں مزید جاننے کے لئے سفر میں پہلا قدم ہے. اس سفر کو جاری رکھنے کے لئے:
+    
+    - Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
+    - اپنے بچے کے اسکول کے ضلع میں کمپیوٹر سائنس کی تعلیم  فروغ دینے میں مدد کریں.</li> </ul> 
+        
+        <%= view :signup_button %>

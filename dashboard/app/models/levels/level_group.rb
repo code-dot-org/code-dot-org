@@ -89,12 +89,52 @@ ruby
     end
   end
 
+  def assign_attributes(params)
+    @pages = nil
+    super(params)
+  end
+
   def plc_evaluation?
     levels.map(&:class).uniq == [EvaluationMulti]
   end
 
   # Surveys: How many students must complete a survey before any results are shown.
   SURVEY_REQUIRED_SUBMISSION_COUNT = 5
+
+  # Perform a deep copy of this level by cloning all of its sublevels
+  # using the same suffix, and write them to the new level definition file.
+  def clone_with_suffix(new_suffix)
+    level = super(new_suffix)
+    level.clone_sublevels_with_suffix(new_suffix)
+    level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
+    level
+  end
+
+  # Clone the sublevels, adding the specified suffix to the level name. Also
+  # updates this level to reflect the new level names.
+  def clone_sublevels_with_suffix(new_suffix)
+    new_properties = properties
+
+    if new_properties['texts']
+      new_properties['texts'].map! do |text|
+        Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
+        text['level_name'] << new_suffix
+        text
+      end
+    end
+
+    if new_properties['pages']
+      new_properties['pages'].map! do |page|
+        page['levels'].map! do |level_name|
+          Level.find_by_name(level_name).clone_with_suffix(new_suffix)
+          level_name << new_suffix
+        end
+        page
+      end
+    end
+
+    update!(properties: new_properties)
+  end
 
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
   def self.get_sublevel_result(sublevel, sublevel_response)

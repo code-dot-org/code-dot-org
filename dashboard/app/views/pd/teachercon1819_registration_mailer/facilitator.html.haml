@@ -1,7 +1,9 @@
 %p
   Hi
-  = @registration.pd_application.first_name + ','
-
+  - if @registration.pd_application
+    = @registration.pd_application.first_name + ','
+  - else
+    = @registration.sanitize_form_data_hash[:preferred_first_name] + ','
 %p
   Thank you for submitting your TeacherCon registration form.
 
@@ -9,13 +11,17 @@
   %p
     We look forward to seeing you this summer! You will receive more information about
     travel approximately six weeks before TeacherCon. In the meantime, please visit
-    - info_link = "code.org/educate/teachercon/#{@registration.pd_application.workshop.location_city.downcase}"
+    - info_link = "code.org/educate/teachercon/#{@location_city.downcase}"
     = link_to(info_link, "https://#{info_link}")
     for more information.
 - if @registration.declined?
   %p
-    We noticed you responded that you are not able to attend your assigned TeacherCon
-    and/or FiT Weekend dates. Please contact
+    We noticed you responded that you are not able to attend your assigned
+    - if @registration.pd_application
+      TeacherCon and/or FiT Weekend dates.
+    - else
+      TeacherCon dates.
+    Please contact
     = link_to("facilitators@code.org", "mailto:facilitators@code.org")
     as soon as possible so that we may assist you.
 

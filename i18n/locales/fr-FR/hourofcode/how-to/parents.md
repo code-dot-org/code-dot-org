@@ -33,15 +33,15 @@ Lancez le coup d'envoi de votre Heure de Code en inspirant votre enfant et en é
 **Montrez une vidéo qui inspire :**
 
 - La vidéo originale du lancement de Code.org, avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh (Il y a une version [d'1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [de 5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et [de 9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) disponible )
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- La [vidéo Heure de Code Mondiale](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Le président Obama a lancé un appel, invitant tous les étudiants à apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Retrouvez ici d'autres [ressources](%= resolve_url('https://code.org/inspire') %) et [vidéos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspirantes.
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Si vous ou vos élèves débutez en informatique, ce n'est pas bien grave. Voici quelques idées pour présenter votre Heure de Code :
 
 - Expliquez de quelles façons les nouvelles technologies influencent notre vie, avec des exemples qui toucheront à la fois les garçons et les filles (parlez des applications et des technologies qui permettent de sauver des vies, d'aider les gens, de les connecter entre eux, etc...).
 - Énumérez des exemples concrets, pris dans la vie de tous les jours, où on a besoin d'écrire des programmes.
-- Découvrez [ici](%= resolve_url('https://code.org/girls') %) des astuces pour amener les filles à s'intéresser à l'informatique.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Besoin de plus d'aide ? Téléchargez notre [exemple de plan de cours](/files/AfterschoolEducatorLessonPlanOutline.docx) et découvrez les bonnes pratiques venant d'éducateurs expérimentés.
 
@@ -61,7 +61,7 @@ N'ayez pas peur de répondre :
 
 ## 6) Célébrez
 
-[Imprimer des certificats](%= resolve_url('https://code.org/certificates') %) pour votre enfant (et pour vous-même !).
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !
 
@@ -73,7 +73,7 @@ Partagez les photos et les vidéos de votre événement l'Heure de Code sur les 
 
 L'Heure de Code n'est que la première étape pour en apprendre plus sur le fonctionnement des nouvelles technologies et comment créer des applications. Pour continuer l'aventure :
 
-- Encouragez votre enfant à continuer à [apprendre en ligne](%= resolve_url('https://code.org/learn/beyond') %).
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - Aidez à la [promotion](%= resolve_url('/promote') %) de l'apprentissage de l'informatique dans les écoles aux alentours de celle de votre enfant.
 
 <%= view :signup_button %>
