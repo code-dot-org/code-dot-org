@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Hour of Code 기간 동안에 학생들과 자원봉사자들을 격려해주세요.
 
-Code.org offers the opportunity for your employees to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- 자원봉사 [등록하기](%= resolve_url('https://code.org/volunteer') %)
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Hour of Code 행사를 회사 차원에서 지원할 수 있는 다른 방법들:
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
 - 여러분의 회사에서 지역 학생들이나 비영리 단체를 위한 Hour of Code 행사를 운영해주세요. 이벤트 how-to 가이드를 살펴보시면 됩니다.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](%= resolve_url('
 ## 1. Promote your Hour of Code
 
 - 여러분의 [Hour of Code](%= resolve_url('/promote') %) 이벤트를 홍보하고 다른 사람들도 가입하고록 격려하세요.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. 엔지니어들은 [가입해서](%= resolve_url('https://code.org/volunteer/engineer') %) 교실 수업에 연결될 수 있습니다.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - 기술 회사라면, 회사에서 공들이고 있는 재밌고 혁신적인 산물을 시연해 보세요.
 - 기술 회사가 아니라면, 회사에서 문제를 해결하고 목표를 달성하기 위해 기술을 사용하는 방법에 대해서 토론해 보세요.
 - 여러분의 회사의 소프트웨어 엔지니어들을 초대해서 왜 그들이 컴퓨터 과학을 공부하기로 결심했는지와 진행중인 프로젝트들에 대해서 얘기하게 해주세요.
-- 여학생들이 컴퓨터과학에 흥미를 갖도록 하기 위한 팁이 [여기](%= resolve_url('https://code.org/girls') %) 있습니다.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 7) 축하하기
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants and students.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - ["Hour of Code를 해냈어!"](%= resolve_url('/promote/resources#stickers') %) 스티커를 프린트하세요.
 - 직원들을 위해 [커스텀 티셔츠](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)를 주문하세요.
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.

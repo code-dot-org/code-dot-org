@@ -23,7 +23,7 @@ nav: how_to_nav
 
 A Kódolás Órája esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Itt tudod folytatni ezt az utat:
 
-- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Vegyél részt](<%= resolve_url('https://code.org/professional-development-workshops') %>) egy egynapos tréningen, hogy tanácsokat kapj tapasztalt emberektől, facilitátoroktól. (Csak Egyesült Államok oktatóinak)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

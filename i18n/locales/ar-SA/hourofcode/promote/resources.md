@@ -7,9 +7,9 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promote the Hour of Code
+# ساعد على الترويج لساعة من البرمجة
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## ستستضيف ساعة من البرمجة؟ [اقرأ الدليل التوجيهي](<%= hoc_uri('/resources/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -33,11 +33,11 @@ nav: promote_nav
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[تحميل إصدار hi-res](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**"ساعة من التعليمات البرمجية" هي علامة تجارية. نحن لا نريد منع استخدامها، ولكننا نريد أن نتأكد من أنها تتناسب مع حدود قليلة:**
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. **Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".**
+1. وينبغي استخدام أي إشارة إلى "ساعة من التعليمات البرمجية" بطريقة لا توحي أنها اسم علامة تجارية خاصة بك، ولكن بدلاً من ذلك الإشارة ل "ساعة من التعليمات البرمجية" كحركة شعبية. **مثالاً جيدا: "المشاركة في ساعة من Code™ في ACMECorp.com". مثال سيء: "جرب ساعة من التعليمات البرمجية مقدمة من شركة ACME".**
 2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
 3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
@@ -66,7 +66,7 @@ Computers are everywhere, changing every industry on the planet. But fewer than 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code 2017. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
@@ -78,7 +78,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Can we help you host and Hour of Code?
 
-Between Dec. 4-10, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code event at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 

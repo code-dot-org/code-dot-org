@@ -519,3 +519,27 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
+        desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan
+          sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang
+          lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran
+          amat penting.
+      UnplugHappyMaps_2018:
+        title: Pemetaan bahagia
+        desc: Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan
+          karakter melalui labirin menggunakan perintah tunggal.
+      GoingPlacesSafely_2018:
+        title: Pergi ke tempat-tempat dengan aman
+        desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi
+          tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat
+          melakukan navigasi Internet.
+      courseA_unplugged_loops_2018:
+        title: Loops Unplugged
+        desc: Dalam pelajaran ini, anda akan mempelajari tentang loop!
+      BigEvent_2018:
+        title: Acara besar
+        desc: Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang
+          merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan
+          menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung
+          pada tombol yang ditekan.

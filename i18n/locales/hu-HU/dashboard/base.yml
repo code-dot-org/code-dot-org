@@ -198,7 +198,7 @@ hu:
     remove: '(remove section)'
     type:
       picture: 'Picture Password'
-      word: 'Secret Words'
+      word: 'Titkos szó'
       email: 'Email'
       google_classroom: 'Google Classroom'
       clever: 'Okos'

@@ -116,7 +116,7 @@ it:
         title: Composizione di Canzoni - Parametri
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
       DiceRace:
-        title: "https://studio.code.org/s/course3/stage/10/puzzle/1\n\nAlgoritmi della Vita Reale: Gara con i Dadi"
+        title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi.
       Internet:
         title: Internet
@@ -301,3 +301,18 @@ it:
       SongwritingWithParameters_2018:
         title: ""
         desc: ""
+      PlantASeed_2018:
+        title: 'Algoritmi della Vita Reale: Piantare un Seme'
+        desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
+      UnplugHappyMaps_2018:
+        title: Mappe Felici
+        desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per spostare un personaggio attraverso un labirinto utilizzando un solo comando.
+      GoingPlacesSafely_2018:
+        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.
+      courseA_unplugged_loops_2018:
+        title: 'Cicli: Lezioni Tradizionali'
+        desc: In questa lezione, si parlerà di cicli!
+      BigEvent_2018:
+        title: Gli Eventi
+        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.

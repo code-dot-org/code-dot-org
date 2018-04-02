@@ -1,0 +1,41 @@
+<Bounce>
+  <config><![CDATA[{
+  "game_id": 22,
+  "created_at": "2018-03-26T16:21:17.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "bounce",
+    "timeout_failure_tick": "140",
+    "scale": {
+      "snapRadius": 2
+    },
+    "ball_direction": "4.0369465598628835",
+    "instructions": "Now the finish target is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle.",
+    "maze": "[[1,1,33,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,4,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,16,0,0,0,1]]",
+    "parent_level_id": 9476,
+    "name_suffix": "_2018",
+    "contained_level_names": null
+  },
+  "published": true
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="bounce_whenPaddleCollided" deletable="false" x="20" y="20"/>
+        <block type="bounce_whenWallCollided" deletable="false" x="20" y="120"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="bounce_bounceBall"/>
+        <block type="bounce_playSound"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="bounce_bounceBall"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Bounce>

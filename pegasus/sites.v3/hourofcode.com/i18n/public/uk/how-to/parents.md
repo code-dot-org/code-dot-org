@@ -35,13 +35,13 @@ nav: how_to_nav
 - Перше відео від Code.org, у ролях Біл Гейтс, Марк Цукерберг, зірка НБА Кріс Бош (Існують версії на [1 хвилину](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 хвилин](https://www.youtube.com/watch?v=nKIu9yen5nc), та [9 хвилин](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Заклик Президента Обами до всіх учнів - вивчати програмування](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Знайдіть ще надихальні [ресурси](<%= resolve_url('https://code.org/inspire') %>) та [відео](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Не біда, якщо як ви, так і ваша дитина є повними новачками в інформатиці. Ось деякі ідеї, як представити ваш захід Години коду:
 
 - Поясніть шляхи, якими технології впливають на наше життя, з прикладами, які хвилюватимуть як хлопчиків, так і дівчаток (розкажіть про рятування життя, допомогу людям, забезпечення зв'язку між людьми тощо).
 - Перелічіть повсякденні речі, які використовують код.
-- Поради для зацікавлення інформатикою дівчаток можна знайти [тут](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Хочете більше ідей? Гляньте найкращі прийоми від досвідчених педагогів в нашому [шаблоні плану уроку](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 6) Урочисто відзначте
 
-[Надрукуйте сертифікати](<%= resolve_url('https://code.org/certificates') %>) для своєї дитини (та для себе!).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 Година коду є лише першим кроком на шляху вивчення того, як працюють технології, і як створювати власні програмні застосунки. Для продовження цього шляху:
 
-- Заохотьте свою дитину продовжити [вчитися через Інтернет](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Допоможіть [просувати](<%= resolve_url('/promote') %>) освіту з інформатики в школах вашого району.
 
 <%= view :signup_button %>

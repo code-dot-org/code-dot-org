@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Etkinliğiniz için hazırlanın
 
 - Yerine, gününe ve saatine karar verin.
-- Belediye başkanına, bir kongre üyesine, valiye veya etkili iş adamlarına etkinliğinize katılmaları ve konuşma yapmaları için [bir mektup](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) gönderin. Kod-Saati sırasında seçilmiş bir yetkiliyi ağırlarken daha fazla bilgi için [ nasıl yapılır aracını ](<%=resolve_url('/files/elected-official.pdf')%>)kontrol edin.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Medyayı (yerel haber kanalları, gazeteler, eğitim ve teknoloji bloggerları,... vb.) davet edin. Bu konuda yardım için [basın kiti](<%= resolve_url('/promote/press-kit') %>)mizi inceleyin.
 
 ## 2. Etkinlik esnasında
@@ -39,7 +39,7 @@ K-5 akşam etkinliğine düzenlemeyi ve aileleri. bir saat bilgisayar bilimleri 
 
 **Etkinlik:** Okul geneli Bilgisayar Bilimleri Eğitim Haftası başlangıç toplantısı
 
-**Tarih** 5 Aralık (Bilgisayar Bilimleri Eğitim Haftası başlangıcı)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Saat:** Okul zamanı. Tercihen sabah vakti. Yaklaşık 1 saat.
 

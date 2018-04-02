@@ -128,6 +128,10 @@ class Applab < Blockly
     true
   end
 
+  def age_13_required?
+    true
+  end
+
   def self.palette
     SharedConstants::APPLAB_BLOCKS
   end
