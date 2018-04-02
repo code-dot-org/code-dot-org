@@ -90,6 +90,8 @@ export default class VirtualizedDetailView extends Component {
   }
 
   render() {
+    const {section} = this.props;
+    const rowCount = section.students.length + 2;
 
     return (
         <MultiGrid
@@ -101,7 +103,7 @@ export default class VirtualizedDetailView extends Component {
           enableFixedRowScroll
           height={300}
           rowHeight={40}
-          rowCount={this.props.section.students.length}
+          rowCount={rowCount}
           style={styles.multigrid}
           styleBottomLeftGrid={styles.bottomLeft}
           styleTopLeftGrid={styles.topLeft}
