@@ -69,6 +69,16 @@ class Tutorials
     end
     results
   end
+
+  # return the first tutorial with a matching code
+  def find_with_code(code)
+    @contents.find {|tutorial| tutorial[:code] == code}
+  end
+
+  # return the first tutorial with a matching short code
+  def find_with_short_code(short_code)
+    @contents.find {|tutorial| tutorial[:short_code] == short_code}
+  end
 end
 
 def no_credit_count
