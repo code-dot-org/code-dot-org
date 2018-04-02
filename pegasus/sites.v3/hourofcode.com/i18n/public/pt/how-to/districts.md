@@ -23,7 +23,7 @@ nav: how_to_nav
 
 A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar essa jornada:
 
-- Incentive os alunos a continuarem [aprendendo on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Assista](<%= resolve_url('https://code.org/professional-development-workshops') %>) a uma oficina presencial, de um dia, para receber instruções de uma pessoa com experiência em ciência da computação. (Somente para educadores dos EUA)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

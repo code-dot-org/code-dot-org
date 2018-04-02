@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>如何教授一小時玩程式的課程</h1>
 
-參加到活動中，通過以下步驟為一群學生介紹他們初始一小時的計算機科學課程。 哪怕是對初學者來說，編程一小時的課程都非常容易學。 如果你有時間願意幫忙的話，你可以找一名當地的 自願者一起幫忙在你的課程裡來教編程一小時課程。</p> 
+參與活動，并用下面的步驟向學生們介紹他們第一個小時的計算機科學。 編程一小時的課程對初學者來說都非常容易上手的！ If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 2. 觀看視頻指導 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ nav: how_to_nav
 
 ## 5）以一段激勵演講或視頻來開始編程一小時活動
 
-**邀請一名[當地的志願者](<%= resolve_url('https://code.org/volunteer/local') %>)通過談論計算機科學的各種可能性來激勵您的學生。 ** 全球有成千上萬的志願者願意他們可以到您的課堂訪問，或者和您的學生用視頻聊天來幫助您。
+**Invite a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **展示一支激勵人心的影片**
 
 - 正版的 Code.org 推出包括比爾蓋茨、馬克·扎克伯格和 NBA 球星克里斯. 波什的視頻。 (有 [ 1 分鐘 ](HTTPs://www.youtube.com/watch？v=qYZF6oIZtfc)、[ 5 分鐘 ](HTTPs://www.youtube.com/watch？v=nKIu9yen5nc) 和 [ 9 分鐘 ](HTTPs://www.youtube.com/watch？v=dU1xS07N-FA) 版本可用)
-- 尋找更多有啟發性的[資源](<%= resolve_url('https://code.org/inspire') %>)和[影片](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **如果您和您的學生都是第一次接觸計算機科學也沒關係。這裡有一些建議來幫助您介紹您的《編程一小時》活動：**
 
 - 通過男孩和女孩們都關心的例子，介紹科技如何影響我們的生活（比如拯救生命，幫助人們，連接人們等）
 - 全班一起列出在日常生活中用到程式碼的事情。
-- [這裡是](<%= resolve_url('https://code.org/girls')%>)讓女孩們對計算機科學感興趣的一些小貼士。
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
 
 ## 6) 寫程式！
 
@@ -79,7 +79,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- 給你的學生打印[](<%= resolve_url('https://code.org/certificates') %>)證書。
+- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
 - 為你的學生[列印「我完成了一小時玩程式！」](<%= resolve_url('/promote/resources#stickers') %>)貼紙。
 - 為你的學校[訂購客製化 T 恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 - 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。
@@ -101,7 +101,7 @@ nav: how_to_nav
 
 一小時玩程式只是入門，是瞭解科技如何運作、軟體如何創造的一小步，要繼續這段旅程，你可以：
 
-- 鼓勵學生繼續 [ 在線學習 ](<%= resolve_url('https://code.org/learn/beyond') %>)。
-- [參加](<%= resolve_url('https://code.org/professional-development-workshops') %>) 一場整天的在職進修工作坊，以接受有經驗的電腦科學引導者的指導。 （僅適於美國地區教師）
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

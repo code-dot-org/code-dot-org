@@ -124,7 +124,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
-- Video giới thiệu chính thức của Code.org, đặc biệt là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
+- Video giới thiệu chính thức của Code.org, có sự tham gia của Bill Gates, Mark Zuckerberg,Ngôi sao NBA Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
 - [Tổng thống Obama kêu gọi tất cả học sinh nên học môn tin học](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 

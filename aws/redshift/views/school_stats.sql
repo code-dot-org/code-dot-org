@@ -21,14 +21,19 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
                        grade_04_offered +
                        grade_05_offered) > 0
                  THEN 1
+                 WHEN grades_offered_lo in ('01','02','03','04','05','PK','KG') 
+                 THEN 1 
                  ELSE 0 END)                        AS stage_el,
            (CASE WHEN grades_offered_lo is null then null
+                 WHEN -- exclude K-6 and pre-K-6 schools from being classified as middle schools
+                 ((grades_offered_lo = 'PK' and grades_offered_hi = '06') or (grades_offered_lo = 'KG' and grades_offered_hi = '06')) = 1
+                 THEN 0                                   
                  WHEN (grade_06_offered +
                        grade_07_offered +
                        grade_08_offered) > 0
-                 -- exclude K-6 and pre-K-6 schools from being classified as middle schools
-                 AND ((grades_offered_lo = 'PK' and grades_offered_hi = '06') or (grades_offered_lo = 'KG' and grades_offered_hi = '06')) = 0                                      
                  THEN 1
+                 WHEN grades_offered_lo in ('06','07','08') OR grades_offered_hi in ('06','07','08')
+                 THEN 1 
                  ELSE 0 END)                        AS stage_mi,
            (CASE WHEN grades_offered_lo is null then null
                  WHEN (grade_09_offered +
@@ -37,6 +42,8 @@ CREATE OR REPLACE VIEW analysis.school_stats AS
                        grade_12_offered +
                        grade_13_offered) > 0
                  THEN 1
+                 WHEN grades_offered_hi in ('09','10','11','12')
+                 THEN 1 
                  ELSE 0 END)                        AS stage_hi,
            school_stats_by_years.students_total     AS students,
            school_stats_by_years.student_am_count   AS student_am,
