@@ -14,13 +14,14 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     )
   end
 
-  def unmatched(form, matched_but_no_pms = false)
+  # TODO: When cc supported, unmatched email cc's Jenna
+  def unmatched(form, email, matched_but_no_pms = false)
     @form = form
     @matched_but_no_pms = matched_but_no_pms
     role = form[:role].downcase
 
     mail(
-      to: 'Partners <partner@code.org>',
+      to: email,
       subject: "A " + role + " wants to connect with Code.org"
     )
   end

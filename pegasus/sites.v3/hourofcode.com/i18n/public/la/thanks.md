@@ -27,10 +27,10 @@ social:
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-Como agradecimiento por ayudar a que los estudiantes puedan comenzar a aprender informática, nos gustaría darle un conjunto gratuito de carteles impresos profesionalmente con diversos modelos para su clase. Utilice el código de oferta **FREEPOSTERS** al finalizar la compra. (Nota: esta última sólo está disponible mientras duren las existencias y usted necesitará cubrir los gastos de envío. Dado que estos carteles se envían desde los Estados Unidos, los costos de envío pueden ser bastante altos si se envían a Canadá e internacionalmente. Entendemos que esto puede no estar dentro de su presupuesto, y le recomendamos que imprima los [archivos PDF](https://code.org/inspire) para su clase.)  
+Como agradecimiento por ayudar a que los estudiantes puedan comenzar a aprender informática, nos gustaría darle un conjunto gratuito de carteles impresos profesionalmente con diversos modelos para su clase. Utilice el código de oferta **FREEPOSTERS** al finalizar la compra. (Nota: esta última sólo está disponible mientras siga disponible el material y usted necesitará cubrir los gastos de envío. Dado que estos carteles se envían desde los Estados Unidos, los costos de envío pueden ser bastante altos si se envían a Canadá e internacionalmente. Entendemos que esto puede no estar dentro de su presupuesto, y le recomendamos que imprima los [archivos PDF](https://code.org/inspire) para su clase.)  
 <br /> [<button>Obtener carteles</button>](https://store.code.org/products/code-org-posters-set-of-12) Utilice el código de oferta FREEPOSTERS
 
-<% if @country == 'us' %> ¡Gracias a la generosidad de Ozobot, Dexter Industries, littleBits y Wonder Workshop, más de 100 clases serán seleccionadas para recibir robots o circuitos para su clase! Para ser elegible para recibir un conjunto, asegúrese de completar la encuesta enviada desde Code.org después de la Hora del Código. Code.org seleccionará las aulas ganadoras. Mientras tanto, revisa algunas de las actividades de robótica y circuitos. Tenga en cuenta que esto solo está abierto para las escuelas de EE.UU. <% end %>
+<% if @country == 'us' %> ¡Gracias a la generosidad de Ozobot, Dexter Industries, littleBits y Wonder Workshop, más de 100 clases serán seleccionadas para recibir robots o circuitos para su clase! Para poder recibir un conjunto, asegúrese de completar la encuesta enviada desde Code.org después de la Hora del Código. Code.org seleccionará las clases ganadoras. Mientras tanto, revisa algunas de las actividades de robótica y circuitos. Tenga en cuenta que esto solo está disponible para las escuelas de EE. UU. <% end %>
 
 <br /> **La Hora del código se celebra durante <%= campaign_date('full')%>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
 
@@ -44,7 +44,7 @@ Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](<%= res
 
 ## 2. Encuentre un voluntario local para ayudarte con tu evento.
 
-[Buscar en nuestro mapa del voluntariado](<%= resolve_url('https://code.org/volunteer/local') %>) para que los voluntarios puedan visitar tu aula o hagan un videochat remotamente para inspirar a tus estudiantes acerca de la amplitud de posibilidades con las Ciencias de la Computación.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Planifique su Hora del Código
 

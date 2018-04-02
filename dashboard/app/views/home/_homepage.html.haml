@@ -1,3 +1,4 @@
+- require 'census_helper'
 - homepage_data = {courses: @recent_courses}
 - homepage_data[:showuitips] = show_ui_tips
 - homepage_data[:initialtipsdismissed] = current_user.ui_tip_dismissed_homepage_header
@@ -26,10 +27,7 @@
       - homepage_data[:teacherName] = current_user.name
       - homepage_data[:teacherId] = current_user.id
       - homepage_data[:teacherEmail] = current_user.email
-      - today = Date.today
-      - month = today.month
-      - year = today.year
-      - homepage_data[:currentSchoolYear] = (month > 7) ? year : (year - 1)
+      - homepage_data[:currentSchoolYear] = current_census_year
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false

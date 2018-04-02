@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Frymëzoni studentët dhe vullnetarët të mbajnë Orën e Kodimit
 
-Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Rregjistrohu](<%= resolve_url('https://code.org/volunteer') %>) si vullnetarë. 
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## Mënyra të tjera se si kompanitë mund të mbështesin Orën e Kodimit
 
-- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
 - Mbani një Orë Kodimi për një klasë lokale studentësh ose organizata jo-fitimprurëse në zyrat e kompanisë . Shikoni guiden më poshtë.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
 ## 1. Promote your Hour of Code
 
 - Promovo [ Orën tuaj të Kodimit ](<%= resolve_url('/promote') %>) dhe inkurajo të tjerët ta mbajnë.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Ata mund të [ regjistrohen](<%= resolve_url('https://code.org/volunteer/engineer') %>)për të qenë të lidhur me klasën.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Planifiko Orën tënde të Kodimit duke inspiruar fëmijët dhe diskutoni se si 
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - Nëse ju jeni një kompani e teknologjisë, demostro kënaqësinë, produktet e reja me të cilat kompania juaj është duke punuar.
 - Nëse ju nuk jeni një kompani e tekologjisë, diskuto mënyrat si kompania juaj përdor teknologjinë për të zgjidhur problemet dhe përmbushur qëllimet.
 - Fto inxhinierët e software-it nga kompania juaj të flasin rreth asaj se pse ata kanë vendosur të studiojnë shkenca kompjuterike dhe për projektet ku ata punojnë.
-- Shiko këshillat për të shtuar interesimin e vajzave në Shkenca Kompjuterike [këtu](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ Planifiko Orën tënde të Kodimit duke inspiruar fëmijët dhe diskutoni se si 
 
 ## 7) Festo
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - Printo ngjitëset "Unë bëra Orën e Kodimit!"</a> .
 - [Porosit bluza ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)për punonjësit e tu.
 - Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!

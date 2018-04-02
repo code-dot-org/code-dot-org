@@ -35,13 +35,13 @@ nav: how_to_nav
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Бұдан да әсерлі [ақпараттар](<%= resolve_url('https://code.org/inspire') %>) мен [бейнероликтер](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) табыңыз.
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Компьютерлік салада қабілетіңіз мүлде жоқ болса да, уайымдамаңыз. Мына "Кодтау Сағатымен" таныстыратын бірнеше пікірлерге көз жүгіртіп шығыңыз:
 
 - Балаларға тән ұғымды мысалдар келтіріп, қазіргі таңдағы технологияның өмірімізге деген ықпалын түсінідіріңіз. (Кейбір адамдардың өмірлерін құтқарған, көмек көрсеткен, жақындастырған, т.б. қосымшалар туралы айтып берсеңіз болады).
 - "Кодтауды" қажет ететін күнделікті қолданыстағы керек - жарақтар тізімін жасап көрсетіңіз.
-- [Мына сілтеме бойынша](<%= resolve_url('https://code.org/girls') %>) компьютерлік салада қыз балалардың қызығушылығын арттыратын салдар кеңестерін іздестіріп көріңіз.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Көбірек ой-пікірлер қалайсыз ба? Тәжірибелі ұстаздардан білім алу үшін біздің [сабақ үлгілерімізді](/files/AfterschoolEducatorLessonPlanOutline.docx) қарап шығыңыз.
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 6) Марапаттаңыз
 
-Оқушыларыңыз үшін [сертификаттарды басып шығарыңыз](<%= resolve_url('https://code.org/certificates') %>).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Әлеуметтік жүйелерге "Кодтау Сағатынан" жиналған суреттер мен видеоларды салып, біз де сіздің табысыңызды жариялауымыз үшін #HourOfCode хэштэгін, және де @codeorg аккаунтын белгілеңіз!
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 Кодтау Сағаты - бұл технологиялар қалай жұмыс жасайтыны және мобильді қосымшалар қалай жасалатыны жайлы үйрену сапарына арналған алғашқы қадам. Осы сапарды жалғастыру үшін:
 
-- Балаңызды [онлайн дәріс алуын](<%= resolve_url('https://code.org/learn/beyond') %>) жалғастыруға ынталандырыңыз.
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Балаңыз оқитын мектепке ақпараттық ғылымдарын оқытуға алға қадам жасауға [жәрдемдесіңіз](<%= resolve_url('/promote') %>).
 
 <%= view :signup_button %>

@@ -35,13 +35,13 @@ Na początku Godziny Kodowania postaraj się zainspirować swoje dziecko dyskutu
 - Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - [ Wideo na Światową Godzinę Kodowania](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Znajdź więcej inspirujących [zasobów](<%= resolve_url('https://code.org/inspire') %>) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 To nie szkodzi jeśli i Ty, i Twoje dziecko jesteście nowicjuszami w informatyce. Oto kilka pomysłów na rozpoczęcie waszej Godziny Kodowania:
 
 - Wyjaśnij, jak technologia wpływa na nasze życie, używając przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (opowiedz o ratowaniu życia, pomaganiu ludziom, łączeniu ludzi itp.).
 - Wymień rzeczy, które używają kodu w codziennym życiu.
-- Zobacz [tutaj](<%= resolve_url('https://code.org/girls') %>) porady, jak zainteresować informatyką dziewczęta.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Potrzebujesz więcej pomysłów? Zajrzyj do naszego [ szablonu planu lekcji](/files/AfterschoolEducatorLessonPlanOutline.docx), zawierającego najlepsze praktyki doświadczonych pedagogów.
 
@@ -61,7 +61,7 @@ Będzie w porządku, jeśli odpowiesz:
 
 ## 6) Świętuj
 
-[Wydrukuj świadectwa ukończenia](<%= resolve_url('https://code.org/certificates') %>) dla Twojego dziecka (i dla siebie).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
@@ -73,7 +73,7 @@ Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Ko
 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Zachęć swoje dziecko do kontynuowania [nauki online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Pomóż [ promować](<%= resolve_url('/promote') %>) edukację informatyczną w okręgu szkolnym Twojego dziecka.
 
 <%= view :signup_button %>
