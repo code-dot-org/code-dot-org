@@ -518,7 +518,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def location_address_tba?
-    %w(tba tbd n/a).any? {|word| location_address.try(:downcase).include? word}
+    %w(tba tbd n/a).include?(location_address.try(:downcase))
   end
 
   def process_location
