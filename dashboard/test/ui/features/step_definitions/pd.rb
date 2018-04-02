@@ -169,10 +169,11 @@ end
 def create_enrollment(workshop, name=nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
+  user = FactoryGirl.create(:teacher, email: "user#{SecureRandom.hex}@example.com")
   enrollment = Pd::Enrollment.create!(
     first_name: first_name,
     last_name: last_name,
-    email: "user@example.com",
+    email: user.email,
     school_info: SchoolInfo.find_or_create_by(
       {
         country: 'US',
@@ -184,6 +185,8 @@ def create_enrollment(workshop, name=nil)
     ),
     pd_workshop_id: workshop.id
   )
+
+  FactoryGirl.create(:pd_attendance, session: workshop.sessions.first, teacher: user)
   PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
 end
 
