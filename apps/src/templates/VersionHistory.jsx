@@ -1,8 +1,8 @@
-/* global dashboard */
 import React, {PropTypes} from 'react';
 var VersionRow = require('./VersionRow');
 var sourcesApi = require('../clientApi').sources;
 var filesApi = require('../clientApi').files;
+import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -92,19 +92,19 @@ var VersionHistory = React.createClass({
         study: 'project-data-integrity',
         study_group: 'v2',
         event: 'clear-puzzle',
-        project_id: dashboard.project.getCurrentId(),
+        project_id: project.getCurrentId(),
         data_json: JSON.stringify({
-          isOwner: dashboard.project.isOwner(),
+          isOwner: project.isOwner(),
           currentUrl: window.location.href,
-          shareUrl: dashboard.project.getShareUrl(),
-          currentSourceVersionId: dashboard.project.getCurrentSourceVersionId(),
+          shareUrl: project.getShareUrl(),
+          currentSourceVersionId: project.getCurrentSourceVersionId(),
         }),
       },
       {includeUserId: true}
     );
 
     this.props.handleClearPuzzle()
-      .then(() => dashboard.project.save(true))
+      .then(() => project.save(true))
       .then(() => location.reload());
   },
 
