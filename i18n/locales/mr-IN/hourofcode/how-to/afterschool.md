@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # How to teach one Hour of Code in after-school classes and clubs
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - ["I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) असे स्टीकर्स विद्यार्थ्यांकरिता छापणे.
 - तुमच्या शाळेकरिता [विशेष (सानुकूल) बनवलेले टी शर्ट](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) मागवणे.
 - या घटनेची छायाचित्रे आणि व्हिडीओ सोशल मेडिया (समाज माध्यमे) वर उपलब्ध करावी. #HourOfCode आणि @codeorg हे वापरून तसे केल्यास तुमचे यशसुद्धा उठून दिसेल!
@@ -110,7 +110,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) तपासा. <% end %>
@@ -119,7 +119,7 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ही शिकण्याची यात्रा चालू राहण्यासाठी, तंत्रज्ञान कसे काम करते आणि साॅफ्टवेअर अप्लिकेशन कसे बनवावे हे जाणण्याची, अवर ऑफ कोड ही पहिली पायरी आहे:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- अनुभवी संगणक मदतनिसांकडून सूचना घेण्यासाठी एक दिवसीय कार्यशाळेला स्वत: [उपस्थित](%= resolve_url('https://code.org/professional-development-workshops') %) राहावे. (फक्त अमेरिकेतील शिक्षकांसाठी)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

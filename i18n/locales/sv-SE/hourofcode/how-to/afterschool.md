@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Hur man undervisar en timme av kod på fritids och i föreningar
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. En timme kod är lätt att köra - även för nybörjare! Om du känner att du vill ha lite hjälp, kan du hitta en [ lokal volontär](%= resolve_url('https://code.org/volunteer/local') %) som kan hjälpa dig köra en timme av kod i din klass.
+Join the movement and introduce a group of students to their first hour of computer science with these steps. En timme kod är lätt att köra - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Se den här video-guiden <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - [Skriv ut "Jag gjorde en timme av kod!"](%= resolve_url('/promote/resources#stickers') %)- klistermärken för dina elever.
 - [Beställ specialgjorda t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) till din skola.
 - Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
@@ -110,7 +110,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 ## Other Hour of Code resources for educators
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
 - Läs igenom [ vanliga frågor och svar](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 Hour of Code är bara första steget på en resa för att lära dig mer om hur teknik fungerar och hur du skapar egna program. För att fortsätta den här resan:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Delta](%= resolve_url('https://code.org/professional-development-workshops') %) i en 1-dags, i-person workshop att få undervisning från en erfaren datavetenskaps facilitator. (Endast för lärare i USA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

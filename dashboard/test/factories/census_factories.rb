@@ -46,6 +46,44 @@ FactoryGirl.define do
       school_year 2017
     end
 
+    trait :with_census_override_no do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'NO'
+      end
+    end
+
+    trait :with_census_override_yes do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'YES'
+      end
+    end
+
+    trait :with_census_override_maybe do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'MAYBE'
+      end
+    end
+    trait :with_census_override_historical_yes do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_YES'
+      end
+    end
+    trait :with_census_override_historical_no do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_NO'
+      end
+    end
+    trait :with_census_override_historical_maybe do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: 'HISTORICAL_MAYBE'
+      end
+    end
+    trait :with_census_override_nil do
+      after(:create) do |school, evaluator|
+        create :census_override, school: school, school_year: evaluator.school_year, teaches_cs: nil
+      end
+    end
+
     trait :with_ap_cs_offering do
       after(:create) do |school, evaluator|
         create :ap_school_code, :with_ap_cs_offering, school: school, school_year: evaluator.school_year

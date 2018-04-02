@@ -485,6 +485,8 @@ class Level < ActiveRecord::Base
 
   # Create a copy of this level named new_name, and store the id of the original
   # level in parent_level_id.
+  # @param [String] new_name
+  # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
   def clone_with_name(new_name)
     level = dup
     level.update!(name: new_name, parent_level_id: id)
@@ -493,7 +495,8 @@ class Level < ActiveRecord::Base
 
   # Create a copy of this level by appending new_suffix to the name, removing
   # any previous suffix from the name first. Store the id of the original
-  # level in parent_level_id, and store the suffix in name_suffix.
+  # level in parent_level_id, and store the suffix in name_suffix. If a level
+  # with the same name already exists, us that instead of creating a new one.
   #
   # Also, copy over any project template level. If two levels with the same
   # project template level are copied using the same new_suffix, then the new
@@ -502,32 +505,30 @@ class Level < ActiveRecord::Base
   # @param [String] new_suffix The suffix to append to the name of the original
   #   level when choosing a name for the new level, replacing any existing
   #   name_suffix if one exists.
-  # @param [Boolean] allow_existing If true, use the existing level with the
-  #   same name, if one exists.
-  # @raise [ActiveRecord::RecordInvalid] if !allow_existing and the new level
-  #   name is already taken.
-  def clone_with_suffix(new_suffix, allow_existing: false)
+  def clone_with_suffix(new_suffix)
     new_name = "#{base_name}#{new_suffix}"
 
-    level = allow_existing && Level.find_by_name(new_name) ?
-       Level.find_by_name(new_name) :
-       clone_with_name(new_name)
+    level = Level.find_by_name(new_name) || clone_with_name(new_name)
 
     update_params = {name_suffix: new_suffix}
 
     if project_template_level
-      new_template_level = project_template_level.clone_with_suffix(new_suffix, allow_existing: true)
+      new_template_level = project_template_level.clone_with_suffix(new_suffix)
       update_params[:project_template_level_name] = new_template_level.name
     end
 
     unless contained_levels.empty?
       update_params[:contained_level_names] = contained_levels.map do |contained_level|
-        contained_level.clone_with_suffix(new_suffix, allow_existing: true).name
+        contained_level.clone_with_suffix(new_suffix).name
       end
     end
 
     level.update!(update_params)
     level
+  end
+
+  def age_13_required?
+    false
   end
 
   private
