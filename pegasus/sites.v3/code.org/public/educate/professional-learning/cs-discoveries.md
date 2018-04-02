@@ -20,8 +20,9 @@ theme: responsive
 - **Step 3**: Set aside 10 - 15 minutes to complete the application.
 [<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
 
-The priority deadline for applications is **March 30, 2018**. Late applications will only be reviewed at our Regional Partners' discretion.
-If you have questions, be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a>.
+**Applications are still being accepted through the Spring in most regions. If you haven't done so already, please apply!** 
+
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 
 [/col-50]
@@ -175,8 +176,10 @@ Check out these 3 key benefits of ISTE membership:
 
 [<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
 
-The priority deadline for applications is **March 30, 2018**. Late applications will only be reviewed at our Regional Partners' discretion.
-If you have questions, be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a>
+**Applications are still being accepted through the Spring in most regions. If you haven't done so already, please apply!** 
+
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
+
 
 <!--
 ## <a name="components"></a>How does it work?

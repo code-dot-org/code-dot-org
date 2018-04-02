@@ -3,31 +3,31 @@ title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": <%= hoc_s(:meta_tag_og_title) %>
-  "og:description": <%= hoc_s(:meta_tag_og_description) %>
-  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": http://<%=request.host%>
+  "og:url": "http://<%=request.host%>"
   "twitter:card": player
-  "twitter:site": '@codeorg'
-  "twitter:url": http://<%=request.host%>
-  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
-  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
-  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
-<% facebook = {: u = > "http://#{request.host}/us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %> '#HourOfCode' %>
+twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
 # 感谢注册并组织编程一小时活动！
 
-为了感谢的您帮助，使学生们开始学习计算机科学成为可能，我们想为您的课堂提供一套免费的具有各种重要例题的专业印刷海报。 在结账时使用**免单劵**。 （注意：这只能用于最后的物品清单，而您需要支付运费。 由于这些海报从美国出口，如果发往加拿大或者世界各地运费将会相当高。 我们知道这可能不在您的预算中, 我们鼓励您为您的教室打印 [ PDF 文件 ](https://code.org/inspire)。  
+为了感谢您的帮助，使学生们开始学习计算机科学成为可能，我们想为您的课堂提供一套免费的具有各种重要例题的专业印刷海报。 在结账时使用**免单劵**。 （注意：这只能用于最后的物品清单，而您需要支付运费。 由于这些海报从美国出口，如果发往加拿大或者世界各地运费将会相当高。 我们知道这可能不在您的预算中, 我们鼓励您为您的教室打印 [ PDF 文件 ](https://code.org/inspire)。  
 <br /> [ <button> 获取海报 </button> ](https://store.code.org/products/code-org-posters-set-of-12) 使用提供代码 FREEPOSTERS
 
-<% if @country == 'us' %> 感谢ozobot，德克斯特行业，littleBits和奇幻工房的慷慨相助，超过100多间教室将被选定为他们的班级得到机器人或电路！ 为了有资格获得一套, 请务必完成从 Code.org 发送后的《编程一小时》的调查。 Code.org 将选择获奖的教室。 同时检查一部分机器人和电路的活动。 请注意，这只对美国的学校开放。 <% end %>
+<% if @country == 'us' %> 感谢 Ozobot，德克斯特行业，littleBits 和奇幻工房的慷慨相助，超过100多间教室将获得到机器人或电路！ 为了有资格获得一套, 请务必完成从 Code.org 发送后的《编程一小时》的调查。 Code.org 将选择获奖的教室。 同时检查一部分机器人和电路的活动。 请注意，这只对美国的学校开放。 <% end %>
 
-<br /> **在《编程一小时》项目运行期间。我们将在新的课程和其它令人兴奋的更新推出时与您联系。同时您可以做些什么呢？**
+<br /> **在《编程一小时》项目运行期间，我们将在新的课程和其它令人兴奋的更新推出时与您联系。同时您可以做些什么呢？**
 
 ## 1. 在您的学校和社区传播这个信息
 
@@ -39,7 +39,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 2. 找当地的志愿者来帮助你的活动
 
-[搜索我们的志愿者分布图](https://code.org/volunteer/local) 志愿者可以到访您的教室或者通过远程视频聊天来激发您的学生了解学习计算机科学的广泛可能性。
+[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. 计划您的《编程一小时》
 

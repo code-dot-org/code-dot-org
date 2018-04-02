@@ -47,7 +47,10 @@ export default class SchoolAutocompleteDropdown extends Component {
     // function we're not guaranteed to return anything, and it's not a great
     // interface to sometimes return undefined when there's still async work
     // going on.
-    fetch(searchUrl)
+    //
+    // We are including the X-Requested-With header to avoid getting a 403
+    // returned by Rack::Protection::JsonCsrf in some environments
+    fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
       .then(response => response.ok ? response.json() : [])
       .then(json => {
         const schools = json.filter(this.props.schoolFilter).map(school => this.constructSchoolOption(school));

@@ -5,57 +5,57 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Paano mag organize ng isang kaganapan ng Hour of Code
 
-## 1. Prepare for your event
+## 1. Maghanda para sa iyong kaganapan
 
-- Determine a venue, date, and time.
-- Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=resolve_url('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+- Tukuyin ang lugar, petsa, at oras.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
+- Mag-imbita ng media/press. i.e. lokal na istasyong balitaan, pahayagaan, edukasyon/tech bloggers. Tignan ang aming [press kit](%= resolve_url('/promote/press-kit') %) para sa tulong.
 
-## 2. During your event
+## 2. Sa panahon ng iyong kaganapan
 
-- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+- I-kick off ang iyong kaganapan sa isa sa aming [nakakapukaw damdaming mga video](%= resolve_url('/promote/resources#videos') %).
+- Bigyan ng intro ang pangkalahatang pananaw sa kahalagahan ng computer science, gamit ang mga ito [stats at infographics](%= resolve_url('/promote/stats') %).   
       
     
-- Iba pang mga ideya na kaganapan: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- Iba pang mga ideya ng kaganapan: 
+    - Mag imbita ng isang lokal na leader ng indutriya pa ipaliwanag ang kanyang gawa na sangkot ang computer science.
+    - Mag imbita ng isang lokal na pulitiko at hayaang turuan sya ng mga estudyante kung paano mag-code.
+    - Magkaroong ng grupo ng mga estudyante na nagpapakita ng isang unplugged na aktibidad.
+    - Magkaroon ng grupo ng mga estudyante na magtuturo sa prinsipal o sa grupo ng mga guro kung paano mag code.
+    - Kung ang iyong paaralan ay nagtuturo na ng computer science, magkaroon ang mga estudyante ng demo na proyekto.
 
-## 3. Share how it went
+## 3. Ibahagi ang pangyayari
 
 - Ibahagi ang mga larawan ng iyong mga kaganapan sa Facebook at Twitter. 
-- Use the hashtag **#HourOfCode**
+- Gamitin ang hashtag**#HourOfCode**
 
-## Host a Family Code Night with the Hour of Code and invite parents to participate
+## Mag host ng isang gabing Family Code na may kasamang Hour of Code at imbitahin ang mga magulang na lumahok
 
-Consider hosting a K-5 evening event and inviting parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one Event Kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Isaalang-alang ang pag host ng isang pang gabing kaganapang K-5 at nag iimbita sa mga magulang na lumahok sa kanilang mga estudyante para sa isang oras na computer science. Ito ay isang mahusay na paraan upang makisali sa mas malaking komunidad at hikayatin ang suporta ng magulang para sa computer science sa iyong paaralan. Ang aming mga kasosyo sa Family Code Night ay lumikha ng isang All-in-one Event Kit kasama ang checklist ng pagpaplano, script ng presenter, mga email ng imbitasyon, poster, powerpoint at iba pa upang patakbuhin ang iyong sariling kaganapan. [I-click dito para ma-download ang Kit ng kaganapan](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-## Example Event Plan
+## Halimbawa ng Plano ng kaganapan
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Kaganapan:** Ang School-wide Computer Science Education Week kick-off assembly
 
-**Date:** Dec. 5th (start of Computer Science Education Week)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Oras:** Sa araw ng pag-aaral. Ginusto ang kalagitnaan ng umagang kaganapan. Humigit-kumulang na 1 oras.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Lokasyon:** School assembly hall (hal. theater, gym, cafeteria)   
   
 
 
-## Run of Show
+## Takbo ng palabas
 
-| Oras             | Aksyon                                                                                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                       |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %). |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.            |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                              |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                                |
+| Oras                   | Aksyon                                                                                                                                                                                                    |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 ng umaga | Buksan ang isa sa aming [nakakapukaw damdaming mga video](%= resolve_url('/promote/resources#videos') %)                                                                                                  |
+| 10:05 - 10:15 ng umaga | Nagbibigay ang Principal ng isang intro na sumisiyasat sa kahalagahan ng computer science. Gamitin ang mga ito [stats at infographics](%= resolve_url('/promote/stats') %).                               |
+| 10:15 - 10:30 ng umaga | Ang mga espesyal na panauhin at magsasalita tungkol sa kanilang background at kung paano ang teknolohiya at computer science ay gumaganap ng importanteng katungkulan sa kanilang araw araw na pamumuhay. |
+| 10:30 - 10:40 ng umaga | Ang mga estudyante ay gumawa ng demo ng Hour of Code para sa paaralan. Masyang twist: hayaan silang turuan ang punong guro, pulitiko, o ibang estudyante!                                                 |
+| 10:40 - 11:00 ng umaga | Ang mga estudyante ay nag demo ng isang unplugged na aktibidad at kung paano ituturo ang computer science ng hindi gumagamit ng mga computer.                                                             |
+| 11:00 - 11:05 ng umaga | Ang mga gurong tumulong para magdala nag kaganapang school-wide ay magbibigay na pagtatapos na salita.                                                                                                    |
 
 <%= view :signup_button %>

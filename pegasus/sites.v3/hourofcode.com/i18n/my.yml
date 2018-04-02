@@ -5,31 +5,26 @@ my:
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-
   campaign_date_start_short: "Dec. 4"
   campaign_date_start_long: "December 4"
   campaign_date_short: "Dec. 4-10"
   campaign_date_full: "December 4-10"
   campaign_date_year: "2017"
   campaign_date_full_year: "December 4-10, 2017"
-
   front_header_banner: 'Join the largest learning event in history, %{campaign_date}'
   front_intro_default: 'The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages 4 to 104.</strong>'
   front_watch_video: 'Watch the new video'
   front_watch_regular_video: 'Watch the video'
   front_volunteers: 'Technical volunteers wanted'
   front_start_learning: 'Start learning'
-
   header_menu_resources: 'Resources'
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'How-To'
   header_menu_promote: 'Promote'
   header_menu_activities: 'Activities'
-
   not_found_title: 'Page Not Found'
   not_found_desc: 'The requested page was not found'
   not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
-
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -78,7 +73,6 @@ my:
   company_disney: Disney
   company_dpsk12: Denver Public Schools
   company_dcsdk12: Douglas County Schools
-  company_cgcs: Council of the Great City Schools
   company_dpsnc: Durham Public Schools
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
@@ -158,9 +152,7 @@ my:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-
   nav_back_to_resources: "Back to Resources"
-
   how_to_nav_educators: "For educators"
   how_to_nav_after_school: "For after school"
   how_to_nav_parents: "For parents"
@@ -171,7 +163,6 @@ my:
   how_to_nav_companies: "For companies"
   how_to_nav_afterschool_educators: "For after-school educators"
   how_to_nav_volunteers: "For volunteers"
-
   whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. <a href='http://code.org/learn'>Try current tutorials</a> for any browser, smartphone – or even no computer!"
   whats_next_how_to: "<a href='/how-to'>How to run an Hour of Code</a>"
@@ -180,7 +171,6 @@ my:
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
   whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
   whats_next_try_button: 'Try tutorials'
-
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: 'Anybody can learn.'
   get_started: 'Start'
@@ -188,7 +178,6 @@ my:
   register_now: 'Register Now'
   share_on_facebook: 'Share on Facebook'
   share_on_twitter: 'Share on Twitter'
-
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_announcements: 'Announcements'
   front_join_us_anybody_can_learn: 'Anybody can learn'
@@ -232,7 +221,6 @@ my:
   front_join_us_n_students_served: "# served"
   front_join_us_challenge: "Win a video chat for your classroom with a celebrity!"
   front_join_us_learn_more: "Learn more"
-
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_header: 'Organize an Hour of Code during %{campaign_date}, and register it here.'
   signup_name_label: 'Your name'
@@ -257,7 +245,6 @@ my:
   signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
   signup_multiple_event_warning: "We will put your school name and city on the map when you register. If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_registration_deadline: "Registration for the Hour of Code closes December 11."
-
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'
   signup_organization_name_placeholder: "For example, Lincoln High School"
@@ -266,20 +253,16 @@ my:
   signup_event_location_placeholder: "Postal code and country OR full address."
   signup_special_event_details_placeholder: 'Describe what makes this a special event'
   signup_send_posters_address_placeholder: 'This address will not be shared on our map'
-
   signup_event_type_in_school: 'In a school'
   signup_event_type_out_of_school: 'Outside of school'
-
   signup_submit_census_label: 'Submit'
   signup_submit_census_error_message: "We're sorry. An error occurred. Please try submitting the form again."
   signup_submit_label: 'Sign up'
   signup_submit_error_message: "An error occurred. Please check to make sure all required fields have been filled out properly."
   signup_submit_and_continue_label: 'Submit and Continue'
   signup_continue_label: 'Continue'
-
   signup_thank_you_header: "Thank you for signing-up to host an Hour of Code event."
   signup_thank_you_message: 'We sent you a confirmation email with information to help you get started.'
-
   map_title: "Hour of Code map"
   map_header: '# events registered for Hour of Code 2017'
   see_all_events: 'See all events'
@@ -292,14 +275,11 @@ my:
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
   map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>"
-
   meta_tag_og_title: 'Hour of Code: Join the Movement'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
   meta_tag_twitter_title: 'Hour of Code: Join the Movement'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
-
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
-
   hoc_faq_title: 'FAQs'
   hoc_faq_what_is_hoc_q: 'What is the Hour of Code?'
   hoc_faq_what_is_hoc_a: "The Hour of Code started as a one-hour introduction to computer science, designed to demystify \"code\", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400 partners</a> and 200,000 educators worldwide."
@@ -342,7 +322,6 @@ my:
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
   hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these guidelines for usage</a>."
-
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
   stats_i18n: "Students are learning in over 45 languages"
@@ -359,7 +338,6 @@ my:
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
-
   resources_how_to: How-to guide for teachers
   resources_how_to_events: Event how-to guide
   resources_how_to_districts: How-to guide for districts
@@ -382,23 +360,19 @@ my:
   resources_nav_tutorials: 'Try the tutorials'
   resources_nav_promote: 'Spread the word'
   resources_nav_spread_word: 'How to get involved'
-
   resources_banner_promote_text: "Promote"
   resources_banner_promote_button: "Encourage others to sign up with brochures, inspirational posters and social media banners."
   resources_banner_howto_text: "How-to"
   resources_banner_howto_button: "Resources for educators, parents and districts to host an Hour of Code."
-
   handouts_section: Share these handouts
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
-
   videos_title: Show these videos to inspire students
   videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
   videos_obama_cs: President Obama on computer science
   videos_anybody_can_learn: Anybody Can Learn (1 min)
-
   title_country_resources: Country Specific Resources
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
@@ -413,13 +387,11 @@ my:
   title_press_kit: Press Kit
   title_proclamation: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
   title_stats: Blurbs and Stats
-
   title_partners: Partners
   title_resources: Resources
   title_signup_thanks: Thanks for signing up to host an Hour of Code!
   title_tutorial_guidelines: Activity Guidelines
   title_whole_school: Whole School Participation
-
   events_nav_title: Hour of Code Events
   events_nav_all: All Events
   events_nav_whole_schools: Whole Schools
@@ -432,7 +404,6 @@ my:
   events_orgs_title: All Hour of Code events organized by Partner Organizations
   event: event
   events: events
-
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
@@ -452,23 +423,19 @@ my:
   highlights_constant_ny_short_heading: Brooklyn beats Chicago
   highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
-
   footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
-
   footer_menu_partners: 'Partners and Advisors'
   footer_menu_contact: 'Contact us'
   footer_menu_support: 'Support'
   footer_menu_terms: 'Terms'
   footer_menu_privacy: 'Privacy Policy'
-
   learn_banner_heading: 'Hour of Code Activities'
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
   learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
   learn_banner_teachers: "Teachers: <a id='teacher_banner_host'>Host an hour</a> or <a id='teacher_banner_howto'>read the How-To Guide</a>"
   learn_robotics_banner_heading: 'Robotics and Circuits'
   learn_robotics_banner_blurb: 'Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware.'
-
   tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: "Moana: Wayfinding with Code"
   tutorial_star-wars_name: "Star Wars: Building a Galaxy with Code"
@@ -848,7 +815,6 @@ my:
   tutorial_iorder_name: "iOrder"
   tutorial_ianimate_name: "iAnimate"
   tutorial_iloveada_name: "iLove Ada"
-  tutorial_kodmaze_name: "Maze Maker Challenges"
   tutorial_kodflash_name: "If Flash, Then Clap!"
   tutorial_kodchoose_name: "Choose Your Own (Fuzzy) Adventure!"
   tutorial_kodpizzapre_name: "Pizza Party! (pre-reader)"
@@ -908,7 +874,6 @@ my:
   tutorial_bcpy2_name: "World of Python 2"
   tutorial_bcjs1_name: "World of JavaScript"
   tutorial_bcjs2_name: "World of JavaScript 2"
-
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
@@ -1288,7 +1253,6 @@ my:
   tutorial_iorder_shortdescription: "Summer time and the weather is sweet. Makes you want to make a nice cool treat. Create algorithms and program an ice-cream simulation/game using Scratch 2.0. Includes lesson plan, pupil support materials, and pre-written program templates."
   tutorial_ianimate_shortdescription: "Create an animated GIF for the festive season using animation software. Add artwork, backgrounds and objects and make them come to life!"
   tutorial_iloveada_shortdescription: "Teach computing with history. This teacher-led activity involves conducting online research about Ada Lovelace, a female pioneer in STEM and the world's first computer programmer!"
-  tutorial_kodmaze_shortdescription: "Build your own mazes to solve and share to challenge others!"
   tutorial_kodflash_shortdescription: "If there is lightning, then thunder will follow!"
   tutorial_kodchoose_shortdescription: "Write a Choose Your Own Adventure story using \"If statements\"!"
   tutorial_kodpizzapre_shortdescription: "Help Dominic's Pizza develop an algorithm for their new mobile app!"
@@ -1348,7 +1312,6 @@ my:
   tutorial_bcpy2_shortdescription: "Build your own world with Python."
   tutorial_bcjs1_shortdescription: "Build your own world with JavaScript."
   tutorial_bcjs2_shortdescription: "Build your world in JavaScript."
-
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
@@ -1728,7 +1691,6 @@ my:
   tutorial_iorder_longdescription: "This teacher led activity, adapted for the Hour of Code, develops computational thinking and coding skills using Scratch 2.0. The children program an ice-cream stand simulation and/or game and, in doing so, design algorithms, use repetition, conditional statements, test and debug their work. Includes step-by-step lesson plan, pupil support materials, and pre-written Scratch 2.0 program templates for teacher and pupils."
   tutorial_ianimate_longdescription: "This teacher-led seasonal activity, adapted for the Hour of Code, introduces children to creating computer animations. The children will create frames, add artwork and animate a simple Christmas scene. Lots of ideas for differentiation, extension and enrichment from making a very simple animated sequence to more able pupils: animating backgrounds as well as characters and objects, adding 3D effects (e.g. shadows), creating more frames for smoother movement, switching backgrounds to create scene changes, and animating more than one object."
   tutorial_iloveada_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides an opportunity to teach cross-curricular computing with history. Children research Ada Lovelace an important historical figure in computer science and the world's first computer programmer! They then use basic HTML to create a multimedia webpage showcasing their findings and skills as web masters. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
-  tutorial_kodmaze_longdescription: "Build your own mazes to solve and share! Students will pair geometry with programming to build solvable mazes based on given challenges. Challenges include mazes with simple shapes, fractions, symmetry, and specified angles."
   tutorial_kodflash_longdescription: "Flash! Clap! This hands-on, wild weather lesson teaches conditional statements with lightning and thunder. Students will learn about why thunder always follows lightning and will examine the logic statement \"if there is lightning, then thunder will follow.\" Count the seconds between the two to see how far away the storm is!"
   tutorial_kodchoose_longdescription: "Choose your own adventure! Through a series of \"If statements\", students will alter the storyline and ending to a narrative they write. Like a program's path changes based on conditions, the path a character takes through a narrative can change too. Get creative and lead the Kodable fuzzFamily on multiple adventures within one story that can have varying conclusions."
   tutorial_kodpizzapre_longdescription: "In a 3-part unit, students will connect math and programming to develop solutions for a restaurant's mobile ordering app. Dominic's Pizza restaurant is creating an algorithm for their new app and it's up to students to help calculate pizza costs. At the end of the unit, students will make and deliver their \"pizza\" after calculating the cost of the order."
@@ -1788,7 +1750,6 @@ my:
   tutorial_bcpy2_longdescription: "This Hour of Code lesson is a follow-up course to World of Python. You'll learn more advanced coding concepts in Python based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
   tutorial_bcjs1_longdescription: "This Hour of Code lesson teaches you some basic concepts of coding in JavaScript, based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
   tutorial_bcjs2_longdescription: "This Hour of Code lesson is a follow-up course to World of JavaScript. You'll learn more advanced coding concepts in JavaScript based on the CodeCraft 3D game by BuzzCoder.com. CodeCraft is a new game to learn programming by building whatever you imagine in a virtual 3D world. You can start from building simple blocks, columns, and walls, then large buildings, bridges, and even trees. When you are ready to delve into more advanced levels, you will be able to build more complex structures: growing flowers, flickering stars, and even invisible drones to move around and build or destroy things at your command. You'll have fun learning how to code while playing this game!"
-
   tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -2168,7 +2129,6 @@ my:
   tutorial_iorder_language: "English only"
   tutorial_ianimate_language: "English only"
   tutorial_iloveada_language: "English only"
-  tutorial_kodmaze_language: "English only"
   tutorial_kodflash_language: "English only"
   tutorial_kodchoose_language: "English only"
   tutorial_kodpizzapre_language: "English only"
@@ -2228,7 +2188,6 @@ my:
   tutorial_bcpy2_language: "English only"
   tutorial_bcjs1_language: "English only"
   tutorial_bcjs2_language: "English only"
-
   tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
@@ -2608,7 +2567,6 @@ my:
   tutorial_iorder_string_detail_grades: "Grades 2-8"
   tutorial_ianimate_string_detail_grades: "Grades 2-8"
   tutorial_iloveada_string_detail_grades: "Grades 2-5"
-  tutorial_kodmaze_string_detail_grades: "Pre-reader - Grade 5"
   tutorial_kodflash_string_detail_grades: "Pre-reader - Grade 5"
   tutorial_kodchoose_string_detail_grades: "Grades 2-5"
   tutorial_kodpizzapre_string_detail_grades: "Pre-reader - Grade 1"
@@ -2668,7 +2626,6 @@ my:
   tutorial_bcpy2_string_detail_grades: "Grades 6+"
   tutorial_bcjs1_string_detail_grades: "Grades 6+"
   tutorial_bcjs2_string_detail_grades: "Grades 9+"
-
   tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -3048,7 +3005,6 @@ my:
   tutorial_iorder_string_platforms: "All modern borwsers"
   tutorial_ianimate_string_platforms: "All modern browsers, iPad"
   tutorial_iloveada_string_platforms: "All modern borwsers"
-  tutorial_kodmaze_string_platforms: "All modern browsers, iPad"
   tutorial_kodflash_string_platforms: "Unplugged"
   tutorial_kodchoose_string_platforms: "Unplugged"
   tutorial_kodpizzapre_string_platforms: "Unplugged"
@@ -3108,7 +3064,6 @@ my:
   tutorial_bcpy2_string_platforms: "All modern browsers"
   tutorial_bcjs1_string_platforms: "All modern browsers"
   tutorial_bcjs2_string_platforms: "All modern browsers"
-
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
@@ -3488,7 +3443,6 @@ my:
   tutorial_iorder_string_detail_platforms: ""
   tutorial_ianimate_string_detail_platforms: ""
   tutorial_iloveada_string_detail_platforms: ""
-  tutorial_kodmaze_string_detail_platforms: ""
   tutorial_kodflash_string_detail_platforms: "Unplugged"
   tutorial_kodchoose_string_detail_platforms: "Unplugged"
   tutorial_kodpizzapre_string_detail_platforms: "Unplugged"
@@ -3548,7 +3502,6 @@ my:
   tutorial_bcpy2_string_detail_platforms: ""
   tutorial_bcjs1_string_detail_platforms: ""
   tutorial_bcjs2_string_detail_platforms: ""
-
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
@@ -3928,7 +3881,6 @@ my:
   tutorial_iorder_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_ianimate_string_detail_programming_languages: "Language independent"
   tutorial_iloveada_string_detail_programming_languages: "ChildScript"
-  tutorial_kodmaze_string_detail_programming_languages: "Language independent"
   tutorial_kodflash_string_detail_programming_languages: "Language independent"
   tutorial_kodchoose_string_detail_programming_languages: "Language independent"
   tutorial_kodpizzapre_string_detail_programming_languages: "Language independent"
@@ -3988,7 +3940,6 @@ my:
   tutorial_bcpy2_string_detail_programming_languages: "Python"
   tutorial_bcjs1_string_detail_programming_languages: "JavaScript"
   tutorial_bcjs2_string_detail_programming_languages: "JavaScript"
-
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
   school_name_error: "School name is required."
@@ -3996,7 +3947,6 @@ my:
   school_state: "School state"
   school_zip: "Postal code"
   school_zip_error: "School postal code is required."
-
   census_thanks: 'Thanks for signing up!'
   census_header: 'Please take a few minutes to tell us about your school (Optional).'
   census_heading: "Please share how much coding/computer programming is taught at this school. Assume for the purposes of the following questions that coding/computer programming does not include HTML/CSS, Web design, or how to use apps."
@@ -4022,7 +3972,6 @@ my:
   census_topics_data: "Data analysis"
   census_topics_web_design: "Web design using HTML and CSS"
   census_topics_game_design: "Game design using game layout tools without coding or computer programming"
-
   teacher: "Teacher"
   administrator: "Administrator"
   parent: "Parent"

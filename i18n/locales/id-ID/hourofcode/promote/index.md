@@ -5,32 +5,32 @@ nav: promote_nav
 ---
 <%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
+& lt;%    facebook = {: u => "http: // # {request.host} / us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
+twitter = {: url => "http://hourofcode.com",: related => 'codeorg',: hashtags => '',: text => hoc_s (: twitter_default_text)}    twitter [: hashtags] = 'HourOfCode' kecuali hoc_s (: twitter_default_text) .include? '#HourOfCode' %>
 
-# Get your community involved in the Hour of Code
+# Mintalah komunitas Anda terlibat dalam Jam Kode
 
 ## 1. Sebarkan berita
 
-Tell your friends about the **#HourOfCode**!
+Beri tahu teman Anda tentang ** #HourOfCode </ strong>!</p> 
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Tawarkan pada seluruh isi sekolah anda untuk mengikuti Hour of Code
+## 2. Minta seluruh sekolah Anda untuk menawarkan satu Jam Kode
 
-[Kirim email ini](%= resolve_url('/promote/resources#sample-emails') %) kepada kepala sekolah dan tantang setiap kelas di sekolah Anda untuk mendaftar.
+[ Kirimkan email ini ](%= resolve_url('/promote/resources#sample-emails') %) ke kepala sekolah Anda dan tantang setiap kelas di sekolah Anda untuk mendaftar.
 
-## 3. Tanyakanlah kepada bos anda untuk terlibat
+## 3. Minta atasan Anda untuk terlibat
 
-[Kirim email ini](%= resolve_url('/promote/resources#sample-emails') %) ke manajer Anda atau CEO perusahaan.
+[ Kirimkan email ini ](%= resolve_url('/promote/resources#sample-emails') %) ke manajer atau CEO perusahaan Anda.
 
-## 4. Promosikan Hour of Code dalam komunitas Anda
+## 4. Promosikan Jam Kode di komunitas Anda
 
-[Rekrut kelompok lokal](%= resolve_url('/promote/resources#sample-emails') %) — Pramuka, gereja, Universitas, grup veteran, serikat pekerja, atau bahkan beberapa teman. Anda tidak perlu berada di sekolah untuk belajar keterampilan baru. Gunakan [poster, spanduk, sticker, video ini dan banyak hal lagi](%= resolve_url('/promote/resources') %) untuk acara Anda sendiri.
+[ Merekrut grup lokal ](%= resolve_url('/promote/resources#sample-emails') %) - klub pramuka / anak perempuan, gereja, universitas, kelompok veteran, serikat pekerja, atau bahkan beberapa teman. Anda tidak harus bersekolah untuk belajar keterampilan baru. Gunakan [ poster, spanduk, stiker, video, dan lainnya ](%= resolve_url('/promote/resources') %) untuk acara Anda sendiri.
 
-## 5. Tanyakan seorang pejabat terpilih setempat untuk mendukung Hour of Code
+## 5. Minta pejabat terpilih setempat untuk mendukung Hour of Code
 
-[Kirim email ini](%= resolve_url('/promote/resources#sample-emails') %) ke perwakilan setempat, dewan kota, atau dewan sekolah dan mengundang mereka untuk mengunjungi sekolah Anda untuk Hour of Code. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
+[ Kirim email ini ](%= resolve_url('/promote/resources#sample-emails') %) ke perwakilan setempat, dewan kota, atau dewan sekolah Anda dan undang mereka untuk mengunjungi sekolah Anda untuk Jam Kode. Ini bisa membantu membangun dukungan untuk ilmu komputer di daerah Anda lebih dari satu jam.
 
 <%= view :signup_button %>
