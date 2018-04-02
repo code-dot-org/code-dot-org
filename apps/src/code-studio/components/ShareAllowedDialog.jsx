@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import React, {PropTypes} from 'react';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
@@ -15,6 +13,7 @@ import { showPublishDialog } from '../../templates/publishDialog/publishDialogRe
 import PublishDialog from '../../templates/publishDialog/PublishDialog';
 import { createHiddenPrintWindow } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 function recordShare(type) {
@@ -26,7 +25,7 @@ function recordShare(type) {
     study: 'finish-dialog-share',
     study_group: 'v1',
     event: 'project-share',
-    project_id: dashboard.project && dashboard.project.getCurrentId(),
+    project_id: getCurrentId(),
     data_string: type,
   }, {includeUserId: true});
 }
