@@ -266,7 +266,7 @@ exports.install = function (blockly, blockInstallOptions) {
         '(' + value + ', \'block_id_' + this.id + '\');\n';
   };
 
-blockly.Blocks.point_to_angle = {
+  blockly.Blocks.point_to_direction = {
     // Block for pointing to a specified direction
     helpUrl: '',
     init: function () {
@@ -274,7 +274,8 @@ blockly.Blocks.point_to_angle = {
       this.appendDummyInput()
           .appendTitle(msg.pointTo());
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldAngleTextInput('VALUE', '90'), 'DIRECTION')
+          .appendTitle(new blockly.FieldAngleTextInput('VALUE', '90'),
+              'DIRECTION')
           .appendTitle(msg.degrees());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -283,58 +284,54 @@ blockly.Blocks.point_to_angle = {
     }
   };
 
-  generator.point_to_angle = function () {
+  generator.point_to_direction = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
-    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value}, 'block_id_${this.id}');\n`;
+    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value},
+        'block_id_${this.id}');\n`;
   };
 
-  blockly.Blocks.point_to_angle_by_constant_restricted = {
-      helpUrl: '',
-      init: function () {
-        this.setHSV(184, 1.00, 0.74);
+  blockly.Blocks.point_to_direction_by_constant_restricted = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(msg.pointTo());
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldAngleDropdown('DIRECTION', this.VALUE),
+              'VALUE')
+          .appendTitle(msg.degrees());
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.pointTo());
+    }
+  };
 
-        this.appendDummyInput()
-            .appendTitle(msg.pointTo());
-        this.appendDummyInput()
-            .appendTitle(new blockly.FieldAngleDropdown('DIRECTION', this.VALUE), 'VALUE')
-            .appendTitle(msg.degrees());
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip(msg.turnTooltip());
-      }
-    };
+  blockly.Blocks.point_to_direction_by_constant_restricted.VALUE =
+      [30, 45, 60, 90, 120, 135, 150, 180].map(function (t) {
+        return [String(t), String(t)];
+      });
 
-    blockly.Blocks.point_to_angle_by_constant_restricted.VALUE =
-        [30, 45, 60, 90, 120, 135, 150, 180].map(function (t) {
-          return [String(t), String(t)];
-        });
+  generator.point_to_direction_by_constant_restricted = function () {
+    let value = window.parseFloat(this.getTitleValue('VALUE'));
+    return 'Turtle.' + this.getTitleValue('DIRECTION') +
+        '(' + value + ', \'block_id_' + this.id + '\');\n';
+  };
 
-    generator.point_to_angle_by_constant_restricted = function () {
-
-      var value = window.parseFloat(this.getTitleValue('VALUE'));
-      return 'Turtle.' + this.getTitleValue('DIRECTION') +
-          '(' + value + ', \'block_id_' + this.id + '\');\n';
-    };
-
-  blockly.Blocks.point_to_angle_param = {
+  blockly.Blocks.point_to_direction_param = {
     // Block for pointing to a specified direction
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-
       this.appendDummyInput()
           .appendTitle(msg.pointTo());
-
       this.appendValueInput('VALUE')
           .setCheck(blockly.BlockValueType.NUMBER)
           .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
             block: this
           });
-
       this.appendDummyInput()
           .appendTitle(msg.degrees());
-
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -342,9 +339,10 @@ blockly.Blocks.point_to_angle = {
     }
   };
 
-  generator.point_to_angle_param = function () {
+  generator.point_to_direction_param = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
-    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value}, 'block_id_${this.id}');\n`;
+    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value},
+        'block_id_${this.id}');\n`;
   };
 
   blockly.Blocks.variables_get_counter = {
