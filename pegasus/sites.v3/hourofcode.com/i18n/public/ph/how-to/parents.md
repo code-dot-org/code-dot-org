@@ -5,75 +5,75 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Paano kumpletuhin ang Hour of Code kasama ang iyong anak
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Kumpletuhin ang Hour of Code sa bahay, o mag boluntaryo na dalhin ito sa silid aralan ng iyong anak! Narito kung paano:
 
-## 1) Panoorin ang how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Panoorin itong how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Pumili ng isang tutorial:
+## 2) Pumili ng isang pagtuturo:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
+Naglalaan kmi ng iba't ibang kasiyahan, oras ang haba ng mga pagtuturo para sa mga studyante sa lahat ng edad, gawa ng iba't ibang mga kasosyo. [ Subukan ang mga ito!](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Lahat ng Hour of Code na pagtuturo ay self-guided - hinahayaang ang iyong anak na gumawa sa kanilang oras at kakayahan**
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Plan your technology needs
+## 3) Planuhin ang pangangailangan ng iyong teknolohiya
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+Ang pinakamahusay sa karanasan sa Hour of Code ay ang Internet-connected computers. Ngunit ikaw ay **hindi** nangangailangan ng computer. Napakaraming mga aktibidad na "unplugged" at maaaring gawin kahit walang ang teknolohiya.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Subukan ang mga pagtuturo sa iyong computer o aparato. Siguruhing gagana ng maayos sa mga browser na may tunog at video.
+- **Gusto mong matuto kasabay ng iyong anak? ** Subukan [ang pares na programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Ang computer science ay panlipunan at nakakatulong.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) Simulan mo ang iyong Hour of Code sa isang nakakapukaw na video
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+I-kick off ang iyong Hour of Code sa pamamagitan ng pagpukaw sa iyong anak at pinapaliwanag kung paano nakakaapekto ang computet science sa bawat bahagi ng ating mga buhay.
 
-**Show an inspirational video:**
+**Magpakita ng nakakapukaw na video:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Ang orihinal na Code.org na inilunsad na video, kabilang sina Bill Gates, Mark Zuckerberg, at NBA star na si Chris Bosh (Mayroong [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuto](https://www.youtube.com/watch?v=nKIu9yen5nc), at [9 minuto](https://www.youtube.com/watch?v=dU1xS07N-FA) na mga version)
+- Ang [Hour of Code na Pambuong Mundong Video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Si Presidente Obama ay nananawagan sa lahat ng mga estudyante na pag aralan ang computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Ayos lang kung ikaw at ang iyong anak ay baguhan sa computer science. Narito ang ilang mga ideya para ipakilala ang iyong Hour of Code na aktibidad:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- Ipaliwanag ang mga paraan kung paano nakakaapekto ang teknolohiga sa ating mga buhay, na may halimbawa sa parehong lalaki at babae na nakakatulong (Napag uusapan ang pagligtas ng buhay, pagtulong sa mga tao, pakikipag konekta sa tao, atibapa.).
 - Ilista ang mga bagay na ginagamit ang code sa pang-araw-araw na buhay.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Gusto ng iba pang ideya? Tignan ang aming [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) para sa mahusay na pagsusubok mula sa may karanasang mga tagapagturo.
 
-## 5) Code!
+## 5) Mag-Code!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Kapag napili mo na ang pagtuturo na gusto mong gawin, pwede mong i-bookmark ang maiksing link ng pagtuturo.
 
-**When your child come across difficulties**
+**Kapag ang iyong anak ay nahirapan**
 
-It’s okay to respond:
+Ayos lang na tumugon:
 
-- "Hindi ko alam. Ito ay sama-sama nating sagutin."
-- "Ang teknolohiya ay hindi palaging naayon sa ating kagustuhan."
-- "Ang pag-aaral kung paano mag-program ay katulad ng pag-aaral ng isang bagong wika; hindi ka kaagad maging mahusay na magsalita."
+- "Hindi ko alam. Subukan nating alaman ito ng magkasama"
+- "Ang teknolohiya ay hindi palaging nakaayon sa ating kagustuhan."
+- "Ang pag-aaral kung paano mag-program ay katulad ng pag-aaral ng isang bagong wika; hindi ka kaagad maging mahusay."
 
-## 6) Celebrate
+## 6) Magdiwang
 
-[Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
-Ibahagi ang mga larawan at video sa mga nangyayari sa Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin namin na i-highlight ang iyong pinagtatagumpayan!
+Ibahagi ang mga larawan at video sa mga nangyayari sa iyong Hour of Code sa social media. Gamitin ang #HourOfCode at @codeorg para maaari rin naming i-highlight ang iyong pinagtatagumpayan!
 
-**Other Hour of Code resources:**
+**Iba pang pinagkukunan ng Hour of Code:**
 
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- I-review ang [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 **Ano ang susunod pagkatapos ng Hour of Code?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Ang Hour of Code ay unang hakbang lamang sa ekspedisyon para mas matutunan kung paano gumagana ang teknolohiya at kung paano gumawa ng software applications. Para ituloy ang ekspedisyong ito:
 
-- Encourage your child to continue [to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
+- Tumulong[maitaguyod](<%= resolve_url('/promote') %>) ang computer science education sa distrito ng paaralan ng iyong anak.
 
 <%= view :signup_button %>

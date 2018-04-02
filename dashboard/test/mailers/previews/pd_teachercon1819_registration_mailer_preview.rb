@@ -30,6 +30,14 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
     Pd::Teachercon1819RegistrationMailer.regional_partner build_regional_partner_registration(:partner_declined)
   end
 
+  def lead_facilitator_accepted
+    Pd::Teachercon1819RegistrationMailer.lead_facilitator build_lead_facilitator_registration(:lead_facilitator_accepted)
+  end
+
+  def lead_facilitator_declined
+    Pd::Teachercon1819RegistrationMailer.lead_facilitator build_lead_facilitator_registration(:lead_facilitator_declined)
+  end
+
   private
 
   def build_teacher_registration(status)
@@ -61,5 +69,12 @@ class Pd::Teachercon1819RegistrationMailerPreview < ActionMailer::Preview
 
     build :pd_teachercon1819_registration, pd_application: nil,
       regional_partner: regional_partner, user: regional_partner_contact, hash_trait: status
+  end
+
+  def build_lead_facilitator_registration(status)
+    user = build :facilitator, email: 'flitwick@hogwarts.co.uk'
+
+    build :pd_teachercon1819_registration, pd_application: nil, regional_partner: nil, user: user,
+      hash_trait: status
   end
 end

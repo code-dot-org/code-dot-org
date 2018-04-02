@@ -181,6 +181,12 @@ function makeNewSprite(animation, x, y) {
   sprite.jump = function () {
     sprite.velocityY = -7;
   };
+  sprite.setTint = function (color) {
+    sprite.tint = color;
+  };
+  sprite.removeTint = function () {
+    sprite.tint = null;
+  };
 
   sprite.setPosition = function (position) {
     if (position === "random") {
