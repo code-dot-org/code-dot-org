@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Mergeti la [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) pentru a gasi statistici specifice si informatii despre tehnologia computerelor.
+Go to [code.org/promote](<%= codeorg_url('/promote') %>) to find state specific information about computer science.
 
 **Titlu: Utilizarea computerului la Locurile de Munca**
 

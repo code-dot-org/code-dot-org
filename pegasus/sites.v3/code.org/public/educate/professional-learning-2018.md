@@ -126,7 +126,8 @@ To help provide more information about the program, **Hadi Partovi** (Code.org F
 
 ## Apply Today!
 
-Learn more about each program and apply today! Priority deadline for applications is March 31, 2018.
+Learn more about each program and apply today!
+
 <br/>
 
 <%= view :professional_learning_apply_banner_bottom %>
