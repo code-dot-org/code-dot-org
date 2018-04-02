@@ -39,7 +39,6 @@ class GamelabJr < Gamelab
         game: Game.gamelab,
         level_num: 'custom',
         properties: {
-          code_functions: JSON.parse(palette),
           show_debug_watch: true,
           helper_libraries: [
             "GameLabJr",
