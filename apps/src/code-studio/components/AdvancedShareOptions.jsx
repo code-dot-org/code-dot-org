@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import Radium from 'radium';
+import QRCode from 'qrcode.react';
 import * as color from "../../util/color";
 import {CIPHER, ALPHABET} from '../../constants';
 
@@ -42,12 +43,29 @@ const style = {
     height: 80,
     margin: 0,
   },
+  expoButton: {
+    marginLeft: 0,
+    marginRight: 20,
+    width: 300,
+  },
+  expoContainer: {
+    display: 'flex',
+  },
+  expoExportColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  expoInput: {
+    cursor: 'copy',
+    width: 'unset',
+  },
 };
 
 class AdvancedShareOptions extends React.Component {
   static propTypes = {
     shareUrl: PropTypes.string.isRequired,
     onClickExport: PropTypes.func,
+    onClickExportExpo: PropTypes.func,
     onExpand: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired,
     i18n: PropTypes.object.isRequired,
@@ -61,9 +79,12 @@ class AdvancedShareOptions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: props.onClickExport ? 'export' : 'embed',
+      selectedOption: props.onClickExportExpo ? 'exportExpo' :
+          (props.onClickExport ? 'export' : 'embed'),
       exporting: false,
+      exportingExpo: null,
       exportError: null,
+      exportExpoError: null,
       embedWithoutCode: false,
     };
   }
@@ -79,6 +100,37 @@ class AdvancedShareOptions extends React.Component {
         });
       }
     );
+  };
+
+  downloadExpoExport = async () => {
+    this.setState({exportingExpo: 'zip'});
+    try {
+      await this.props.onClickExportExpo({ mode: 'zip'});
+      this.setState({
+        exportingExpo: null,
+      });
+    } catch (e) {
+      this.setState({
+        exportingExpo: null,
+        exportExpoError: 'Failed to export project. Please try again later.',
+      });
+    }
+  };
+
+  publishExpoExport = async () => {
+    this.setState({exportingExpo: 'publish'});
+    try {
+      const expoUri = await this.props.onClickExportExpo({ mode: 'publish'});
+      this.setState({
+        exportingExpo: null,
+        expoUri,
+      });
+    } catch (e) {
+      this.setState({
+        exportingExpo: null,
+        exportExpoError: 'Failed to publish project to Expo. Please try again later.',
+      });
+    }
   };
 
   renderEmbedTab() {
@@ -152,6 +204,67 @@ class AdvancedShareOptions extends React.Component {
     );
   }
 
+  onInputSelect = ({ target }) => {
+    target.select();
+  };
+
+  renderExportExpoTab() {
+    const { expoUri } = this.state;
+    const exportSpinner = this.state.exportingExpo === 'zip' ?
+          <i className="fa fa-spinner fa-spin"></i> :
+          null;
+    const publishSpinner = this.state.exportingExpo === 'publish' ?
+          <i className="fa fa-spinner fa-spin"></i> :
+          null;
+    // TODO: Make this use a nice UI component from somewhere.
+    const alert = this.state.exportExpoError ? (
+      <div className="alert fade in">
+        {this.state.exportExpoError}
+      </div>
+    ) : null;
+
+    return (
+      <div>
+        <p style={style.p}>
+          Try running your project in the Expo app on iOS or Android.
+          Note that data APIs will not work outside of Code Studio.
+          You can also export for submission to the Apple App Store or the
+          Google Play Store (both require following our step-by-step guide).
+        </p>
+        <div style={style.expoContainer}>
+          <div style={style.expoExportColumn}>
+            <button onClick={this.publishExpoExport} style={style.expoButton}>
+              {publishSpinner}
+              Try in Expo App
+            </button>
+            <button onClick={this.downloadExpoExport} style={style.expoButton}>
+              {exportSpinner}
+              Export for Store Submission
+            </button>
+          </div>
+          <div style={style.expoExportColumn}>
+            {!!expoUri &&
+              <div style={style.expoExportColumn}>
+                <p style={style.p}>
+                  Copy this URL or use this QR code to access your project from the Expo app.
+                </p>
+                <input
+                  type="text"
+                  onClick={this.onInputSelect}
+                  readOnly="true"
+                  value={expoUri}
+                  style={style.expoInput}
+                />
+                <QRCode value={expoUri} />
+              </div>
+            }
+            {alert}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     if (!this.state.selectedOption) {
       // no options are available. Render nothing.
@@ -161,7 +274,21 @@ class AdvancedShareOptions extends React.Component {
     let selectedOption;
     if (this.props.expanded) {
       let exportTab = null;
+      let exportExpoTab = null;
       if (this.props.onClickExport) {
+        if (this.props.onClickExportExpo) {
+          exportExpoTab = (
+            <li
+              style={[
+                style.nav.li,
+                this.state.selectedOption === 'exportExpo' && style.nav.selectedLi
+              ]}
+              onClick={() => this.setState({selectedOption: 'exportExpo'})}
+            >
+              Run on iOS/Android
+            </li>
+          );
+        }
         exportTab = (
           <li
             style={[
@@ -170,7 +297,7 @@ class AdvancedShareOptions extends React.Component {
             ]}
             onClick={() => this.setState({selectedOption: 'export'})}
           >
-            Export
+            Export for Web
           </li>
         );
       }
@@ -188,15 +315,22 @@ class AdvancedShareOptions extends React.Component {
       optionsNav = (
         <div>
           <ul style={style.nav.ul}>
+            {exportExpoTab}
             {exportTab}
             {embedTab}
           </ul>
         </div>
       );
-      if (this.state.selectedOption === 'export') {
-        selectedOption = this.renderExportTab();
-      } else if (this.state.selectedOption === 'embed') {
-        selectedOption = this.renderEmbedTab();
+      switch (this.state.selectedOption) {
+        case 'export':
+          selectedOption = this.renderExportTab();
+          break;
+        case 'exportExpo':
+          selectedOption = this.renderExportExpoTab();
+          break;
+        case 'embed':
+          selectedOption = this.renderEmbedTab();
+          break;
       }
     }
     const expand = this.props.expanded && this.state.selectedOption ? null :
