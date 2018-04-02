@@ -24,14 +24,26 @@ class AnimationBucket < BucketHelper
   # and we want to see these incidents go down over time.
   #
   def s3_get_object(key, if_modified_since, version)
-    requested_version = (version == 'latestVersion') ? get_latest_version(key) : version
+    requested_version = version
+
+    # If requesting latest version, get latest non-deleted version if one exists.
+    # Otherwise, use the parameter version.
+    if version == 'latestVersion'
+      versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
+      requested_version = !versions.empty? ? versions.first.version_id : version
+    end
+
     super(key, if_modified_since, requested_version)
   rescue Aws::S3::Errors::NoSuchVersion
     # Rethrow if it clearly wasn't the version.
     raise if version.nil?
 
+    # Locate the latest non-deleted version
+    versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
+    raise if versions.empty?
+
     # Try getting the first (non-delete-marker) version
-    s3_object = super(key, if_modified_since, get_latest_version(key))
+    s3_object = super(key, if_modified_since, versions.first.version_id)
 
     # If the fallback is successful, let's notify Honeybadger, because we'd
     # like these to go down over time.
@@ -44,15 +56,5 @@ class AnimationBucket < BucketHelper
       }
     )
     s3_object
-  end
-
-  private
-
-  # Helper method that returns the latest non-deleted version of the key
-  def get_latest_version(key)
-    # Locate the latest non-deleted version
-    versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
-    raise if versions.empty?
-    versions.first.version_id
   end
 end
