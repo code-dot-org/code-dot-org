@@ -122,4 +122,11 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
   def accepted?
     sanitize_form_data_hash.try(:[], :able_to_attend) == YES
   end
+
+  # Simplified string representing whether the registrant accepted the fit seat
+  # While this could be a bool, we are using strings for parity with Teachercon1819Registration
+  # which has more complex answers.
+  def accepted_seat_simplified
+    accepted? ? 'Yes' : 'No'
+  end
 end

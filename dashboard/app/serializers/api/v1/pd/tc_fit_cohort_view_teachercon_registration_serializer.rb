@@ -22,5 +22,13 @@ module Api::V1::Pd
       # we know they are registered
       'Yes'
     end
+
+    def locked
+      true
+    end
+
+    def status
+      object.pd_application.try(:status)
+    end
   end
 end

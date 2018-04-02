@@ -3,18 +3,25 @@ import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import {orderBy} from 'lodash';
-import { StatusColors } from './constants';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
 const styles = {
+  container: {
+    overflowX: 'auto'
+  },
   table: {
     width: '100%'
   },
-  statusCellCommon: {
-    padding: '5px'
-  },
-  statusCell: StatusColors
+  sortableColumnHeader: {
+    container: {
+      display: 'flex',
+      alignItems: 'center'
+    },
+    default: {
+      color: color.light_gray
+    }
+  }
 };
 
 export default class AdminCohortViewTable extends React.Component {
@@ -48,10 +55,7 @@ export default class AdminCohortViewTable extends React.Component {
     const sortable = wrappedSortable(
       this.getSortingColumns,
       this.onSort,
-      {
-        container: {whiteSpace: 'nowrap'},
-        default: {color: color.light_gray}
-      }
+      styles.sortableColumnHeader
     );
 
     this.columns = [
@@ -68,6 +72,33 @@ export default class AdminCohortViewTable extends React.Component {
         property: 'applicant_name',
         header: {
           label: 'Name',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'role',
+        header: {
+          label: 'Role',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'status',
+        header: {
+          label: 'Status',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'locked',
+        header: {
+          label: 'Locked',
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatBoolean
+        }
+      }, {
+        property: 'regional_partner_name',
+        header: {
+          label: 'Regional Partner',
           transforms: [sortable]
         }
       }, {
@@ -104,6 +135,33 @@ export default class AdminCohortViewTable extends React.Component {
           format: this.formatBoolean
         }
       }, {
+        property: 'accepted_teachercon',
+        header: {
+          label: 'Accepted Teachercon',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'assigned_fit',
+        header: {
+          label: 'Assigned FiT',
+          transforms: [sortable]
+        }
+      }, {
+        property: 'registered_fit',
+        header: {
+          label: 'Registered FiT',
+          transforms: [sortable]
+        },
+        cell: {
+          format: this.formatBoolean
+        }
+      }, {
+        property: 'accepted_fit',
+        header: {
+          label: 'Accepted FiT',
+          transforms: [sortable]
+        }
+      }, {
         property: 'id',
         header: {
           label: 'View Application'
@@ -133,7 +191,7 @@ export default class AdminCohortViewTable extends React.Component {
   };
 
   // Format dates as abbreviated month and day, e.g. "Mar 9"
-  formatDate = (iso8601Date) => moment(iso8601Date).format("MMM D");
+  formatDate = (iso8601Date) => iso8601Date ? moment(iso8601Date).format("MMM D") : "";
 
   formatBoolean = (bool) => bool ? "Yes" : "No";
 
@@ -169,15 +227,17 @@ export default class AdminCohortViewTable extends React.Component {
     })(rows);
 
     return (
-      <Table.Provider
-        id="cohort-view"
-        className="pure-table table-striped"
-        columns={this.columns}
-        style={styles.table}
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id"/>
-      </Table.Provider>
+      <div style={styles.container}>
+        <Table.Provider
+          id="cohort-view"
+          className="pure-table table-striped"
+          columns={this.columns}
+          style={styles.table}
+        >
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id"/>
+        </Table.Provider>
+      </div>
     );
   }
 }
