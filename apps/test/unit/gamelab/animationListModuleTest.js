@@ -51,13 +51,18 @@ describe('animationListModule', function () {
       expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=test-version');
     });
 
-    it(`adds a cachebust argument if no version is available`, function () {
-      const props = {sourceUrl: null};
-      // Temporary: Local-cachebust animation requests, so after restoring
-      // and old version of the project the client isn't seeing newer animations.
-      // Should be able to tear this out once we always request animations
-      // by specific version.
-      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?cachebust=7fffff');
+    it(`has empty version queryParam when version is falsy`, function () {
+      let props = {sourceUrl: null, version: null};
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
+
+      props = {sourceUrl: null, version: undefined};
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
+
+      props = {sourceUrl: null, version: false};
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
+
+      props = {sourceUrl: null, version: 0};
+      expect(animationSourceUrl(key, props)).to.equal('/v3/animations/fake_id/foo.png?version=');
     });
   });
 
