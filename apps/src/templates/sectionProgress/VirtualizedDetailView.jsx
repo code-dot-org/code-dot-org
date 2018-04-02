@@ -6,25 +6,23 @@ const styles = {
   cell: {
     padding: 10,
     width: '100%',
-    // color: 'red',
+  },
+  multigrid: {
+    border: '1px solid #ddd',
+  },
+  bottomLeft: {
+    borderRight: '2px solid #aaa',
+    backgroundColor: '#f7f7f7',
+  },
+  topLeft: {
+    borderBottom: '2px solid #aaa',
+    borderRight: '2px solid #aaa',
+    fontWeight: 'bold',
+  },
+  topRight: {
+    borderBottom: '2px solid #aaa',
+    fontWeight: 'bold',
   }
-};
-
-const STYLE = {
-  border: '1px solid #ddd',
-};
-const STYLE_BOTTOM_LEFT_GRID = {
-  borderRight: '2px solid #aaa',
-  backgroundColor: '#f7f7f7',
-};
-const STYLE_TOP_LEFT_GRID = {
-  borderBottom: '2px solid #aaa',
-  borderRight: '2px solid #aaa',
-  fontWeight: 'bold',
-};
-const STYLE_TOP_RIGHT_GRID = {
-  borderBottom: '2px solid #aaa',
-  fontWeight: 'bold',
 };
 
 const list = [
@@ -48,37 +46,12 @@ const columnWidths = [150, 50, 100, 300, 50];
 
 export default class VirtualizedDetailView extends Component {
 
-  constructor(props, context) {
-    super(props, context);
-
-    this.state = {
-      fixedColumnCount: 1,
-      fixedRowCount: 2,
-      scrollToColumn: 0,
-      scrollToRow: 0,
-    };
-  }
-
-  render() {
-    return (
-        <MultiGrid
-          {...this.state}
-          cellRenderer={this.cellRenderer}
-          columnWidth={this.getColumnWidth}
-          columnCount={5}
-          enableFixedColumnScroll
-          enableFixedRowScroll
-          height={300}
-          rowHeight={40}
-          rowCount={list.length}
-          style={STYLE}
-          styleBottomLeftGrid={STYLE_BOTTOM_LEFT_GRID}
-          styleTopLeftGrid={STYLE_TOP_LEFT_GRID}
-          styleTopRightGrid={STYLE_TOP_RIGHT_GRID}
-          width={970}
-        />
-    );
-  }
+  state = {
+    fixedColumnCount: 1,
+    fixedRowCount: 2,
+    scrollToColumn: 0,
+    scrollToRow: 0,
+  };
 
   cellRenderer({columnIndex, key, rowIndex, style}) {
     return (
@@ -107,4 +80,24 @@ export default class VirtualizedDetailView extends Component {
     return columnWidths[index];
   }
 
+  render() {
+    return (
+        <MultiGrid
+          {...this.state}
+          cellRenderer={this.cellRenderer}
+          columnWidth={this.getColumnWidth}
+          columnCount={5}
+          enableFixedColumnScroll
+          enableFixedRowScroll
+          height={300}
+          rowHeight={40}
+          rowCount={list.length}
+          style={styles.multigrid}
+          styleBottomLeftGrid={styles.bottomLeft}
+          styleTopLeftGrid={styles.topLeft}
+          styleTopRightGrid={styles.topRight}
+          width={970}
+        />
+    );
+  }
 }
