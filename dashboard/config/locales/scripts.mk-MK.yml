@@ -276,7 +276,7 @@
             Intro:
               name: Intro
             Variables:
-              name: "Променливи"
+              name: Променливи
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -329,7 +329,7 @@
           description_short: Create a story or make a game with Play Lab!
           stages:
             Infinity:
-              name: "Бесконечно"
+              name: Бесконечно
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming
@@ -3062,7 +3062,7 @@
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
-              name: "Лупови"
+              name: Лупови
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3130,7 +3130,7 @@
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Learn to drag and drop'
             Loops:
-              name: "Лупови"
+              name: Лупови
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3595,7 +3595,7 @@
                 block. Combining all of these skills students will draw a randomized
                 rainbow snake at the end of the lesson.
             Variables:
-              name: "Променливи"
+              name: Променливи
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -3827,11 +3827,11 @@
             Functions with Parameters:
               name: Functions with Parameters
             Loops:
-              name: "Лупови"
+              name: Лупови
             Nested Loops:
               name: Nested Loops
             Variables:
-              name: "Променливи"
+              name: Променливи
             While Loops:
               name: While Loops
         algebrapdnext:
@@ -4374,7 +4374,7 @@
                 web pages.  In the last level, students begin the project that they
                 will continue to work on throughout the unit.
             Lists:
-              name: "Листи"
+              name: Листи
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -4427,8 +4427,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4502,8 +4509,15 @@
                 users might react to a variety of products. Role playing as a different
                 person, each member of the class will get to experience designs through
                 someone else's eyes.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
+              description_teacher: 'Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4567,8 +4581,18 @@
                 ideas before investing a lot of time writing code. In this lesson
                 teams explore some example apps created in App Lab, using those apps
                 to help inform the first paper prototypes of their apps.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
+              description_teacher: 'Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: In this lesson teams test out their paper prototypes
@@ -5418,7 +5442,7 @@
             Foo:
               name: Foo
             Lists:
-              name: "Листи"
+              name: Листи
             Lights:
               name: Lights
             Event Types:
@@ -5696,7 +5720,7 @@
                 elements of the board as an ouput device while relying on App Lab
                 for user input.
             Lists:
-              name: "Листи"
+              name: Листи
               description_student: Learn how lists can be used to store multiple values
                 in a single variable name.
               description_teacher: A list, also commonly known as an array, is a type
@@ -6022,7 +6046,7 @@
             Drawing in Game Lab:
               name: Drawing in Game Lab
             Variables:
-              name: "Променливи"
+              name: Променливи
             Programming for Entertainment:
               name: Programming for Entertainment
             Sprites:
@@ -6524,7 +6548,7 @@
             Intellectual Property and Images:
               name: Intellectual Property and Images
             Lists:
-              name: "Листи"
+              name: Листи
         csd1-draft:
           title: ''
           description_audience: ''
@@ -6566,7 +6590,7 @@
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
-              name: "Променливи"
+              name: Променливи
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -6604,7 +6628,7 @@
             'Chapter 1: Images and Animation':
               name: 'Chapter 1: Images and Animation'
             'null':
-              name: "нула"
+              name: нула
             temp:
               name: temp
         coursef-ramp:
@@ -6771,8 +6795,12 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -7015,8 +7043,16 @@
               name: Conditionals with Cards
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+              description_teacher: 'This lesson demonstrates how conditionals can
+                be used to tailor a program to specific information. We don’t always
+                have all of the information we need when writing a program. Sometimes
+                you will want to do something different in one situation than in another,
+                even if you don''t know what situation will be true when your code
+                runs. That is where conditionals come in. Conditionals allow a computer
+                to make a decision, based on the information that is true any time
+                your code is run.
+
+'
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -8643,8 +8679,10 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -8984,7 +9022,7 @@
             The Circuit Playground:
               name: The Circuit Playground
             Lists:
-              name: "Листи"
+              name: Листи
             Lights:
               name: Lights
             For Loops:
@@ -9038,7 +9076,7 @@
             Shapes and Randomization:
               name: Shapes and Randomization
             Variables:
-              name: "Променливи"
+              name: Променливи
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -9169,7 +9207,7 @@
               description_student: ''
               description_teacher: ''
             Variables:
-              name: "Променливи"
+              name: Променливи
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -9530,7 +9568,7 @@
                 \r
                 The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
             Lists:
-              name: "Листи"
+              name: Листи
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -9633,8 +9671,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
         coursea-2018:
           title: Course A
           description: Learn the basics of computer science and internet safety. At
@@ -9658,8 +9703,12 @@
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
