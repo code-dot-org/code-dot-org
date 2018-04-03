@@ -8,7 +8,7 @@
   border: 1px solid #888;
   padding: 20px;
   text-align: center;
-  overflow:hidden
+  overflow: hidden;
 }
 
 .greybox ul li:before {
