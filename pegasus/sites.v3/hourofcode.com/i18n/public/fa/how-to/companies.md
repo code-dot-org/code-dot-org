@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## دانش آموزان و داوطلبان را به یکساعت کدنویسی تشویق کنید
 
-Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [ثبت نام](<%= resolve_url('https://code.org/volunteer') %>) به عنوان داوطلب.
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
 - For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
 
 ## راههای دیگری که شرکتها میتوانند ساعت کدنویسی را حمایت کنند:
 
-- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
+- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
 - میزبان رویدادهای یکساعت کدنویسی در کلاسهای دانش آموزان و یا موسسات غیرانتفاعی جهت یکساعت کدنویسی در محل شرکتتان باشید. راهنمای آنرا در زیر ببینید.
 
@@ -25,7 +25,7 @@ Code.org offers the opportunity for your employees to [connect](<%= resolve_url(
 ## 1. Promote your Hour of Code
 
 - رویداد [ساعت کدنویسی](<%= resolve_url('/promote') %>) خود را تبلیغ کنید و دیگران را به میزبانی آن تشویق کنید.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. آنها میتوانند [ثبت نام](<%= resolve_url('https://code.org/volunteer/engineer') %>) کنند تا با کلاسها در ارتباط باشند.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 **Ideas to introduce your Hour of Code activity to students:**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
 - اگر شما از یک شرکت فناوری هستید، یک دموی جذاب از محصولات نوآورانه شرکتتان که بر روی آن کار می کنید نمایش دهید.
 - اگر ار یک شرکت فناوری نیستید، در مورد استفاده های فناورانه شرکتتان در جهت حل مشکلات و رسیدن به هدف نهایی بحث کنید.
 - از مهندسین نرم افزار شرکتتان دعوت کنید تا درمورد اینکه چرا آنها تصمیم به مطالعه علوم کامپیوتر و پروژه های مربوطه گرفتند، صحبت کنند.
-- در [اینجا](<%= resolve_url('https://code.org/girls') %>) روشهایی را برای علاقمند کردن دختران به علوم کامپیوتر ببینید.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 ## 6. Code!
 
@@ -103,7 +103,7 @@ We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) f
 
 ## 8) جشن بگیرید
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - [چاپ برچسب "من یکساعت کدنویسی کردم!"](<%= resolve_url('/promote/resources#stickers') %>).
 - [سفارش تی شرت سفارشی](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) برای کارمندان.
 - عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!

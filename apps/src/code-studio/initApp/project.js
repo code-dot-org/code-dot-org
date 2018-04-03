@@ -78,6 +78,7 @@ var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
+let thumbnailChanged = false;
 
 /**
  * Current state of our sources API data
@@ -237,6 +238,10 @@ var projects = module.exports = {
    */
   useMakerAPIs() {
     return currentSources.makerAPIsEnabled;
+  },
+
+  getCurrentSourceVersionId() {
+    return currentSourceVersionId;
   },
 
   /**
@@ -478,7 +483,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function (event, callback) {
-          this.save().then(callback);
+          this.saveIfSourcesChanged().then(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -696,6 +701,29 @@ var projects = module.exports = {
     currentSources.html = '';
   },
   /**
+   * Saves the project only if the sources {source, html, animations,
+   * makerAPIsEnabled} have changed.
+   * @returns {Promise} A promise containing the project data if the project
+   * was saved, otherwise returns a promise which resolves with no arguments.
+   */
+  saveIfSourcesChanged() {
+    if (!isEditable()) {
+      return Promise.resolve();
+    }
+
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(newSources => {
+        const sourcesChanged = (JSON.stringify(currentSources) !== JSON.stringify(newSources));
+        if (sourcesChanged || thumbnailChanged) {
+          thumbnailChanged = false;
+          this.saveSourceAndHtml_(newSources, resolve);
+        } else {
+          resolve();
+        }
+      });
+    });
+  },
+  /**
    * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
@@ -705,8 +733,6 @@ var projects = module.exports = {
     if (!isEditable()) {
       return Promise.resolve();
     }
-
-    $('.project_updated_at').text(msg.saving());
 
     /**
      * Gets project source from code studio and writes it to the Channels API.
@@ -952,22 +978,16 @@ var projects = module.exports = {
       return;
     }
 
-    this.sourceHandler.getAnimationList(animations => {
-      this.sourceHandler.getLevelSource().then(response => {
-        const source = response;
-        const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const newSources = {source, html, animations, makerAPIsEnabled};
-        if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-          hasProjectChanged = false;
-          callCallback();
-          return;
-        }
+    this.getUpdatedSourceAndHtml_(newSources => {
+      if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+        hasProjectChanged = false;
+        callCallback();
+        return;
+      }
 
-        this.saveSourceAndHtml_(newSources, () => {
-          hasProjectChanged = false;
-          callCallback();
-        });
+      this.saveSourceAndHtml_(newSources, () => {
+        hasProjectChanged = false;
+        callCallback();
       });
     });
   },
@@ -1180,7 +1200,10 @@ var projects = module.exports = {
       const thumbnailPath = '.metadata/thumbnail.png';
       filesApi.putFile(thumbnailPath, pngBlob, () => {
         current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
-        initialCaptureComplete = true;
+        if (!initialCaptureComplete) {
+          initialCaptureComplete = true;
+          thumbnailChanged = true;
+        }
         resolve();
       }, error => {
         reject(`error saving thumbnail image: ${error}`);

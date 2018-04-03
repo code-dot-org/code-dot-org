@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Vær til inspirasjon for elever; meld deg frivillig til Kodetimen
 
-Code.org setter dine arbeidstagere [i kontakt](%= resolve_url('https://code.org/volunteer') %) med lokale læringsinstitusjoner for å delta på Kodetimen, hvor deres erfaringer fra teknologibransjen kan inspirere elever til å lære om og studere informatikk.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Meld deg](%= resolve_url('https://code.org/volunteer') %) som frivillig.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - For mer informasjon om hvordan oppmuntre ansatte til å delta i klasserommet, se vår [bruksanvisning for bedriftspartnere](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
 
 ## Flere måter bedriften din kan støtte opp under Kodetimen:
 
-- Be ledelsen sende ut en [e-post](%= resolve_url('/promote/resources#sample-emails') %) til alle ansatte hvor de fremhever hvor viktig informatikkfaget er, og hvor de oppmuntrer de ansatte til å delta, og å spre budskapet videre. 
+- Be ledelsen sende ut en [e-post](%= resolve_url('/promote/resources#sample-emails') %) til alle ansatte hvor de fremhever hvor viktig informatikkfaget er, og hvor de oppmuntrer de ansatte til å delta, og å spre budskapet videre.
 - Arranger en Kodetime for og med kolleger for å teste ut [undervisningsopplegget](%= resolve_url('/learn') %).
 - Arranger en Kodetime i bedriftens lokaler for en gruppe elever eller studenter fra nærmiljøet, eller en lokal ideell forening. Se arrangementsveiledning nedenfor.
 
@@ -25,7 +25,7 @@ Code.org setter dine arbeidstagere [i kontakt](%= resolve_url('https://code.org/
 ## 1. Reklamer for Kodetimen
 
 - Markedsfør ditt [Kodetime](%= resolve_url('/promote') %)-arrangement og oppmuntr andre til å sette igang sine egne.
-- Forsøk å oppmuntre bedriftens utviklere til å delta i Kodetimen ved en lokal skole for å inspirere elever til å studere datavitenskap. De kan [registrere seg](%= resolve_url('https://code.org/volunteer/engineer') %) for å bli satt i kontakt med en skole.
+- Forsøk å oppmuntre bedriftens utviklere til å delta i Kodetimen ved en lokal skole for å inspirere elever til å studere datavitenskap. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Se en veiledende video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 
 **Noen forslag til hvordan Kodetimen kan introduseres til elevene:**
 
-- Forklar og gi eksempler på hvordan informasjonsteknologi påvirker livene våre idag. Bruk eksempler alle kan kjenne seg igjen i - livreddende teknologi, hjelpemidler som forenkler hverdagen, kommunikasjonsteknologi. 
+- Forklar og gi eksempler på hvordan informasjonsteknologi påvirker livene våre idag. Bruk eksempler alle kan kjenne seg igjen i - livreddende teknologi, hjelpemidler som forenkler hverdagen, kommunikasjonsteknologi.
 - Hvis du kommer fra et teknologifirma, vis frem noen spennende, nyskapende produkter dere har.
 - Hvis firmaet ditt ikke er et teknologifirma, fortell hvordan informasjonsteknologi benyttes til å utføre arbeidsoppgaver og løse problemer.
 - Inviter utviklere fra bedriften til å snakke om hvordan de endte opp i yrket, og hvilke prosjekter de jobber på.
-- Vi har samlet [noen tips](%= resolve_url('https://code.org/girls') %) for å få jenter mer interessert i informatikk.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Koding!
 
@@ -103,7 +103,7 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 
 ## 7. Feiring
 
-- [Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) til deltagerne.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - [Skriv ut "Jeg gjennomførte Kodetimen!"](%= resolve_url('/promote/resources#stickers') %)-klistremerker til elevene.
 - [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til dine ansatte.
 - Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
