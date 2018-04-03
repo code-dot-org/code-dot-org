@@ -141,8 +141,8 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
     # Compute aggregate scores
     response_summary[:facilitator_effectiveness] = (response_summary.values_at(*FACILITATOR_EFFECTIVENESS_QUESTIONS).reduce(:+) / FACILITATOR_EFFECTIVENESS_QUESTIONS.length.to_f).round(2)
-    response_summary[:number_teachers] = workshops.flat_map(&:enrollments).count
-    response_summary[:response_count] = responses.count
+    response_summary[:number_teachers] = workshops.map {|w| w.attending_teachers.size}.reduce(:+)
+    response_summary[:response_count] = responses.size
 
     response_summary
   end
