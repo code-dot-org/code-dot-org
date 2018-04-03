@@ -1,0 +1,22 @@
+name 'cspu4_assess1_encryption_exam_prep'
+right 'Symmetric'
+wrong 'Asymmetric'
+wrong 'Public key'
+wrong 'SSL'
+
+markdown <<MARKDOWN
+ Fill in the blank of the following statement:
+ "______ encryption is a method of encryption involving one key for both encryption and decryption."
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Symmetric Encryption:** A scheme in which the key to encrypt data is the same as the key to decrypt.
+
+**Asymmetric Encryption:** Used in public key encryption, it is a scheme in which the key to encrypt data is _different_ from the key to decrypt.
+
+**Public Key:** This is used prevalently on the web, it allows for secure messages to be sent between parties without having to agree on, or share, a secret key. It uses an asymmetric encryption scheme in which the encryption key is made public, but the decryption key is kept private.
+
+**SSL:** (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. This link ensures that all data passed between the web server and browsers remain private and integral.
+
+_SSL Definition From: http://info.ssl.com/article.aspx?id=10241_ 
+MARKDOWN

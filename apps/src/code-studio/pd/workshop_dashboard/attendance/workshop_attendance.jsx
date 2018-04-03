@@ -76,7 +76,8 @@ export default class WorkshopAttendance extends React.Component {
         workshopState: data.state,
         sessions: data.sessions,
         accountRequiredForAttendance: data['account_required_for_attendance?'],
-        course: data.course
+        course: data.course,
+        enrollmentCount: data.enrollment_count
       });
     });
   }
@@ -135,7 +136,7 @@ export default class WorkshopAttendance extends React.Component {
       return <Spinner/>;
     }
 
-    const isReadOnly = this.hasWorkshopEnded() && !this.permission.isWorkshopAdmin;
+    const isReadOnly = this.hasWorkshopEnded() && !this.permission.isWorkshopAdmin && !this.permission.isOrganizer;
 
     let intro = null;
     if (isReadOnly) {
@@ -144,11 +145,11 @@ export default class WorkshopAttendance extends React.Component {
           This workshop has ended. The attendance view is now read-only.
         </p>
       );
-    } else if (this.hasWorkshopEnded() && this.permission.isWorkshopAdmin) {
+    } else if (this.hasWorkshopEnded()) {
       intro = (
         <p>
-          This workshop has ended. As an admin, you can still update attendance.
-          Note this will not be reflected in the payment report if it's already gone out.
+          This workshop has ended. You can still update attendance, but note this will not be
+          reflected in the payment report if it has already gone out.
         </p>
       );
     } else {
@@ -214,6 +215,7 @@ export default class WorkshopAttendance extends React.Component {
           onSaving={this.handleSaving}
           onSaved={this.handleSaved}
           accountRequiredForAttendance={this.state.accountRequiredForAttendance}
+          enrollmentCount={this.state.enrollmentCount}
         />
         <Row>
           <Col sm={10}>

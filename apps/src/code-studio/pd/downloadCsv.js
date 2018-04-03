@@ -1,5 +1,4 @@
 import saveCsv from 'save-csv';
-import _ from 'lodash';
 
 /**
  * Sends data as a csv download
@@ -10,13 +9,21 @@ import _ from 'lodash';
  *        and the values will be used as column headings.
  */
 const downloadCsv = ({data, filename, headers}) => {
-  const includedKeys = Object.keys(headers);
   const exportData = data.map(row => {
-    row = _.pick(row, includedKeys);
-    row = _.mapKeys(row, (_, key) => headers[key]);
-    row = _.mapValues(row, value => value || ""); // replace null with empty string
+    const exportRow = {};
 
-    return row;
+    for (const key in headers) {
+      let value = row[key];
+      if (Array.isArray(value)) {
+        value = `[${value.join(", ")}]`;
+      } else if (!value) {
+        value = ""; // replace null with empty string
+      }
+
+      exportRow[headers[key]] = value;
+    }
+
+    return exportRow;
   });
 
   saveCsv(exportData, {filename});
