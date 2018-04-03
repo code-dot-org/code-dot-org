@@ -1,0 +1,16 @@
+name 'CommuteAssess - loops 2 - block_exam_prep'
+question 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+wrong '0'
+wrong '1'
+wrong '5' 
+wrong '10'
+right '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+wrong 'it will be different each time you run it'
+
+markdown <<MARKDOWN
+![](https://images.code.org/38a472c2d0f29f185315d1bf481d84bc-image-1482507780691.png)
+
+<!--BLOCK <img src="https://images.code.org/bd306a4387943ae1cb82aa72f34e3984-image-1482384723399.png" style="width: 300px"> -->
+
+
+MARKDOWN

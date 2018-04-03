@@ -1,0 +1,8 @@
+name 'CSPFinal_Question_7_exam_prep'
+wrong '2 bits'
+wrong '3 bits'
+right '5 bits'
+wrong '6 bits'
+markdown <<MARKDOWN
+What is the minimum number of bits you would need to encode the 26 letters of the alphabet plus a space - a total of 27 characters?
+MARKDOWN

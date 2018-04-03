@@ -1,0 +1,27 @@
+name 'cspu5_assess1_codevalues_exam_prep'
+wrong '<img src="https://images.code.org/c6dc8124731de362b6c99ffd750f84c7-image-1475370574495.png" width=300>'
+right '<img src="https://images.code.org/302ee2e224d23fb9ec5588644dfe60f6-image-1475370577730.png" width=300>' 
+wrong '<img src="https://images.code.org/d6a6c39d108d1b431a1a0a706d9d9305-image-1475370580744.png" width=300>'
+wrong '<img src="https://images.code.org/4671c605a2dd8195781a96e8d24ac4b7-image-1475370583198.png" width=300>'
+wrong '<img src="https://images.code.org/1f4632ca9f0405dff72a360bf75aa0f9-image-1475370584704.png" width=300>'
+markdown <<MARKDOWN
+Consider the code segment below:
+
+![](https://images.code.org/fd521b7c95685c1b90b2e0bfc208b135-image-1475370737782.png)
+
+What are the values of a, b, and c after this code segment has been run?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4**
+
+Solve this problem by going through the lines of code while keeping track of the value of each variable.
+It is important to note that if a variable is assigned a new value, the lines of code that reference that variable afterwards also references the new value.
+
+* At the very beginning, a = 0, b = 3, c = 4
+* a = a + c which equals  0 + 4 = 4. Thus, variable "a" is changed to the value 4
+* _Now, the value of "a" is set to 4_
+* b = a + c which equals 4 + 4 = 8. Variable "b" now equals 8
+* c = a + c which equals 4 + 4 = 8
+* By the end of the program, a = 4, b = 8, and c = 8
+MARKDOWN
