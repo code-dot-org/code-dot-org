@@ -186,7 +186,7 @@ def create_enrollment(workshop, name=nil)
     pd_workshop_id: workshop.id
   )
 
-  FactoryGirl.create(:pd_attendance, session: workshop.sessions.first, teacher: user)
+  FactoryGirl.create(:pd_attendance, pd_session_id: workshop.sessions.first.id, teacher: user, pd_enrollment_id: enrollment.id)
   PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
 end
 
@@ -215,7 +215,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     course: course,
     organizer_id: organizer.id,
     capacity: number.to_i,
-    location_name: 'Buffalo'
+    location_name: 'Buffalo',
+    num_sessions: 1,
+    enrolled_and_attending_users: 5
   )
 
   Pd::Session.create!(
@@ -234,16 +236,16 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     workshop.facilitators << facilitator
   end
 
-  # Attendees
-  if number_type == 'people'
-    number.to_i.times do
-      create_enrollment(workshop)
-    end
-  else
-    if role == 'attended'
-      create_enrollment(workshop, name)
-    end
-  end
+  # # Attendees
+  # if number_type == 'people'
+  #   number.to_i.times do
+  #     create_enrollment(workshop)
+  #   end
+  # else
+  #   if role == 'attended'
+  #     create_enrollment(workshop, name)
+  #   end
+  # end
 
   if post_create_actions.include?('and end it')
     workshop.update!(started_at: DateTime.new(2016, 3, 15))
