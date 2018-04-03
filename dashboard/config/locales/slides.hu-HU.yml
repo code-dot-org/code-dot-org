@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "Üdvözlünk az első kódolás órádon! Kezdjük is el az első programozási
-          leckét."
+        text: Üdvözlünk az első kódolás órádon! Kezdjük is el az első programozási
+          leckét.
       2:
         image: notes/hoc1_2.jpg
         text: A Blockly nevű vizuális programozási nyelvet fogjuk használni, amelyben
@@ -167,7 +167,7 @@
         text: 'Fontos: az „ismétlés” blokkba több mint egy utasítást is betehetsz.'
       7:
         image: notes/hoc2_7.jpg
-        text: "Élvezd az új „ismétlés” blokk használatát!"
+        text: Élvezd az új „ismétlés” blokk használatát!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
@@ -371,7 +371,7 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: "Útmutató jegyzetek hamarosan!"
+        text: Útmutató jegyzetek hamarosan!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -457,7 +457,7 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: "Üdv, Chris Bosh vagyok. Profi kosaras vagyok, és én a fősulin programoztam."
+        text: Üdv, Chris Bosh vagyok. Profi kosaras vagyok, és én a fősulin programoztam.
       2:
         image: notes/frozen3_2.jpg
         text: Egyike legfontosabb ötleteknek a számítástechnikában, hogy hogyan határozzunk
@@ -2545,10 +2545,10 @@
           kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
+        text: És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
           balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj
           fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés
-          meg nem jelenik. Ekkor elengedem, és a két blokk összekattan."
+          meg nem jelenik. Ekkor elengedem, és a két blokk összekattan.
       9:
         image: notes/starwars_intro_9.JPG
         text: Ha ezután megnyomom a Futtatást, BB-8 minden a munkafelületen található
@@ -2649,9 +2649,9 @@
           blokkot a parancsba. És ugyanezt fogjuk tenni, hogy R2-D2 lefelé menjen.
       9:
         image: notes/starwars_events_9.JPG
-        text: "Így ahelyett, hogy a droid minden mozgását előre megterveznénk, R2-D2
+        text: Így ahelyett, hogy a droid minden mozgását előre megterveznénk, R2-D2
           a gombnyomásokra fog reagálni, és így fog mozogni a képernyőn. Lépésről
-          lépésre egyre interaktívabb lesz a játék."
+          lépésre egyre interaktívabb lesz a játék.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -2720,12 +2720,12 @@
           kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
+        text: És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
           balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj
           fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés
           meg nem jelenik. Ekkor elengedem, és a két blokk összekattan. Ha ezután
           megnyomom a Futtatást, BB-8 minden a munkafelületen található parancsot
-          teljesíteni fog föntről lefelé haladó sorrendben."
+          teljesíteni fog föntről lefelé haladó sorrendben.
       9:
         image: notes/starwars_blocks_intro_9.JPG
         text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
@@ -2848,12 +2848,12 @@
           kattintunk, mi fog történni? Alex előremozdul egy lépéssel a rácson.
       10:
         image: notes/mc_intro_10.JPG
-        text: "És mi van, ha még valamit kellene csinálnia, miután előrelépett egyet?
+        text: És mi van, ha még valamit kellene csinálnia, miután előrelépett egyet?
           Még egy blokkot hozzáadhatunk a programhoz. Én most a fordulj jobbra parancsot
           választom, és az előrelépni blokk alá vonszolom, amíg a narancssárga csík
           meg nem jelenik. Ekkor elengedem, és a két blokk összepattan. Ezután újra
           megnyomhatjuk a futtatást. Alex a Munkaterületen szereplő utasításokat fentről
-          lefelé történő sorrendben fogja végrehajtani."
+          lefelé történő sorrendben fogja végrehajtani.
       11:
         image: notes/mc_intro_11.JPG
         text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
