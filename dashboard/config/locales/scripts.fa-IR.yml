@@ -3,290 +3,289 @@
     script:
       name:
         course1:
-          title: "دوره 1"
-          description: "دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه
+          title: دوره 1
+          description: دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه
             دهد برنامه های کامپیوتری بسازند؛ برنامههایی که به آنها کمک خواهد کرد یاد
             بگیرند با دیگران همکاری کنند، مهارت های حل مسئله کسب کنند، و برای تکمیل
             امور دشوار پافشاری کنند. با پایان این دوره دانش آموزان بازیهای سفارشی
             مخصوص خودشان یا داستانهایشان را میسازند که میتوانند آنها را به اشتراک
-            بگذارند. توصیه شده برای اول دبستانیها (ک1)."
-          description_short: "دورۀ 1 برای کسانیکه تازه خواندن آموخته اند طراحی شده
-            است."
-          description_audience: "سنین 4 به بالا (کسانیکه سواد خواندن ندارند)"
+            بگذارند. توصیه شده برای اول دبستانیها (ک1).
+          description_short: دورۀ 1 برای کسانیکه تازه خواندن آموخته اند طراحی شده
+            است.
+          description_audience: سنین 4 به بالا (کسانیکه سواد خواندن ندارند)
           stages:
             'Artist: Loops':
-              name: "هنرمند: حلقه ها"
+              name: 'هنرمند: حلقه ها'
             'Artist: Sequence':
-              name: "هنرمند: دنباله"
+              name: 'هنرمند: دنباله'
             'Artist: Shapes':
-              name: "هنرمند: شکل ها"
+              name: 'هنرمند: شکل ها'
             'Bee: Loops':
-              name: "زنبور عسل: حلقه ها"
+              name: 'زنبور عسل: حلقه ها'
             'Bee: Sequence':
-              name: "زنبور عسل: دنباله"
+              name: 'زنبور عسل: دنباله'
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Getting Loopy:
-              name: "سر گیجه گرفتن"
+              name: سر گیجه گرفتن
             Going Places Safely:
-              name: "با خیال راحت سفرکردن"
+              name: با خیال راحت سفرکردن
             Happy Maps:
-              name: "نقشه های شاد"
+              name: نقشه های شاد
             'Jigsaw: Learn to drag and drop':
-              name: "پازل: یاد بگیر که بکشی و رها کنی"
+              name: 'پازل: یاد بگیر که بکشی و رها کنی'
             'Maze: Debugging':
-              name: "هزارتو: اشکال زدایی"
+              name: 'هزارتو: اشکال زدایی'
             'Maze: Loops':
-              name: "هزارتو: حلقه ها"
+              name: 'هزارتو: حلقه ها'
             'Maze: Sequence':
-              name: "هزارتو: دنباله"
+              name: 'هزارتو: دنباله'
             Move it, Move it:
-              name: "تکانش بده، تکانش بده"
+              name: تکانش بده، تکانش بده
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Spelling Bee:
-              name: "زنبور عسل هجی کن"
+              name: زنبور عسل هجی کن
             'Studio: Create a Story':
-              name: "آزمایشگاه بازی: یک داستان بنویس"
+              name: 'آزمایشگاه بازی: یک داستان بنویس'
             The Big Event:
-              name: "رویداد بزرگ"
+              name: رویداد بزرگ
         course2:
-          title: "دوره 2"
-          description: "دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه
-            برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی
-            برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند
-            آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5)."
-          description_short: "دوره 2 برای دانش آموزانی که می توانند بخوانند طراحی
-            شده است."
-          description_audience: "سنین 6 به بالا (خواندن لازم است)"
+          title: دوره 2
+          description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه
+            نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای
+            حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند
+            آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
+          description_short: دوره 2 برای دانش آموزانی که می توانند بخوانند طراحی شده
+            است.
+          description_audience: سنین 6 به بالا (خواندن لازم است)
           stages:
             'Artist: Debugging':
-              name: "هنرمند: اشکال زدایی"
+              name: 'هنرمند: اشکال زدایی'
             'Artist: Loops':
-              name: "هنرمند: حلقه ها"
+              name: 'هنرمند: حلقه ها'
             'Artist: Nested Loops':
-              name: "هنرمند: حلقه های تو در تو"
+              name: 'هنرمند: حلقه های تو در تو'
             'Artist: Sequence':
-              name: "هنرمند: دنباله"
+              name: 'هنرمند: دنباله'
             'Bee: Conditionals':
-              name: "زنبور عسل: شرطی ها"
+              name: 'زنبور عسل: شرطی ها'
             'Bee: Debugging':
-              name: "زنبور عسل: اشکال زدایی"
+              name: 'زنبور عسل: اشکال زدایی'
             'Bee: Loops':
-              name: "زنبور عسل: حلقه ها"
+              name: 'زنبور عسل: حلقه ها'
             Binary Bracelets:
-              name: "دستبند دودویی"
+              name: دستبند دودویی
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Flappy:
-              name: "فلاپی"
+              name: فلاپی
             Getting Loopy:
-              name: "سر گیجه گرفتن"
+              name: سر گیجه گرفتن
             Graph Paper Programming:
-              name: "برنامه نویسی روی کاغذ شطرنجی"
+              name: برنامه نویسی روی کاغذ شطرنجی
             'Maze: Loops':
-              name: "هزارتو: حلقه ها"
+              name: 'هزارتو: حلقه ها'
             'Maze: Sequence':
-              name: "هزارتو: دنباله"
+              name: 'هزارتو: دنباله'
             'Real-life Algorithms: Paper Planes':
-              name: "الگوریتم های زندگی واقعی: موشک های کاغذی"
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
             Relay programming:
-              name: "برنامه نویسی دست به دست"
+              name: برنامه نویسی دست به دست
             'Studio: Create a Story':
-              name: "آزمایشگاه بازی: یک داستان بنویس"
+              name: 'آزمایشگاه بازی: یک داستان بنویس'
             The Big Event:
-              name: "رویداد بزرگ"
+              name: رویداد بزرگ
             Your Digital Footprint:
-              name: "ردپای دیجیتالی شما"
+              name: ردپای دیجیتالی شما
         course3:
-          title: "دورۀ 3"
-          description: "دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده
+          title: دورۀ 3
+          description: دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده
             است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی به راه
             حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد. در پایان
             این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که می توانند
-            با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5."
-          description_short: "دوره 3 ادامه دوره 2 است."
-          description_audience: "سنین 8 به بالا (پس از دوره 2)"
+            با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5.
+          description_short: دوره 3 ادامه دوره 2 است.
+          description_audience: سنین 8 به بالا (پس از دوره 2)
           stages:
             Artist:
-              name: "هنرمند"
+              name: هنرمند
             'Artist: Functions':
-              name: "هنرمند: توابع"
+              name: 'هنرمند: توابع'
             'Artist: Nested Loops':
-              name: "هنرمند: حلقه های تو در تو"
+              name: 'هنرمند: حلقه های تو در تو'
             'Artist: Patterns':
-              name: "هنرمند: الگوها"
+              name: 'هنرمند: الگوها'
             'Bee: Conditionals':
-              name: "زنبور عسل: شرطی ها"
+              name: 'زنبور عسل: شرطی ها'
             'Bee: Debugging':
-              name: "زنبور عسل: اشکال زدایی"
+              name: 'زنبور عسل: اشکال زدایی'
             'Bee: Functions':
-              name: "زنبور عسل: توابع"
+              name: 'زنبور عسل: توابع'
             'Bee: Nested Loops':
-              name: "زنبور عسل: حلقه های تو در تو"
+              name: 'زنبور عسل: حلقه های تو در تو'
             Bounce:
-              name: "پریدن"
+              name: پریدن
             Computational Thinking:
-              name: "تفکر محاسباتی"
+              name: تفکر محاسباتی
             Crowdsourcing:
-              name: "کمک گیری جمعی"
+              name: کمک گیری جمعی
             Dice Race:
-              name: "مسابقۀ تاس انداختن"
+              name: مسابقۀ تاس انداختن
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             'Farmer: While Loops':
               name: 'کشاورز: حلقه‌های "در حالیکه"'
             Functional Suncatchers:
-              name: "نورگیرهای کاربردی"
+              name: نورگیرهای کاربردی
             Internet:
-              name: "اینترنت"
+              name: اینترنت
             Maze:
-              name: "پیچ و خم"
+              name: پیچ و خم
             'Maze: Conditionals':
-              name: "هزارتو: شرطی ها"
+              name: 'هزارتو: شرطی ها'
             Songwriting:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             'Studio: Create a Game':
-              name: "آزمایشگاه بازی: یک بازی بساز"
+              name: 'آزمایشگاه بازی: یک بازی بساز'
             'Studio: Create a Story':
-              name: "آزمایشگاه بازی: یک داستان بنویس"
+              name: 'آزمایشگاه بازی: یک داستان بنویس'
         playlab:
-          title: "آزمایشگاه بازی"
-          description: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
-          description_short: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
+          title: آزمایشگاه بازی
+          description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
+          description_short: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
           stages:
             Play Lab:
-              name: "آزمایشگاه بازی"
+              name: آزمایشگاه بازی
         artist:
-          title: "هنرمند"
-          description: "با نقاش چند عکس و طرح باحال بکش!"
-          description_short: "با نقاش چند عکس و طرح باحال بکش!"
+          title: هنرمند
+          description: با نقاش چند عکس و طرح باحال بکش!
+          description_short: با نقاش چند عکس و طرح باحال بکش!
           stages:
             Artist:
-              name: "هنرمند"
+              name: هنرمند
         hourofcode:
-          title: "هزارتوی کلاسیک"
-          description: "اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان
-            در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!"
-          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!"
+          title: هزارتوی کلاسیک
+          description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان
+            در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
+          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!
           stages:
             Maze:
-              name: "پیچ و خم"
+              name: پیچ و خم
           description_audience: ''
         frozen:
-          title: "کدنویسی با آنا و السا"
-          description: "بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
+          title: کدنویسی با آنا و السا
+          description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
             آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف
             و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می
-            توانی با دوستان خود به اشتراک بگذاری!"
-          description_short: "بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
-            و زیبایی یخ را کشف می کنند استفاده کنیم."
+            توانی با دوستان خود به اشتراک بگذاری!
+          description_short: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
+            و زیبایی یخ را کشف می کنند استفاده کنیم.
           stages:
             Artist:
-              name: "هنرمند"
+              name: هنرمند
         course4:
-          title: "دوره 4"
-          description: "دوره 4 برای دانش آموزانی که دوره های 2 و 3 را گذرانده اند
-            طراحی شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های
-            قبلی مربوط به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند
-            کرد. در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند
-            که می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس
-            4-8."
-          description_short: "دانش آموزانی که دوره 4 را گرفته اند باید تا به حال دوره
-            های 2 و 3 را گرفته باشند."
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          title: دوره 4
+          description: دوره 4 برای دانش آموزانی که دوره های 2 و 3 را گذرانده اند طراحی
+            شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی
+            مربوط به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد.
+            در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که
+            می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-8.
+          description_short: دانش آموزانی که دوره 4 را گرفته اند باید تا به حال دوره
+            های 2 و 3 را گرفته باشند.
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           stages:
             Artist:
-              name: "هنرمند"
+              name: هنرمند
             Artist Binary:
-              name: "دودویی هنرمند"
+              name: دودویی هنرمند
             'Artist: For Loops':
-              name: "هنرمند: برای حلقه ها"
+              name: 'هنرمند: برای حلقه ها'
             'Artist: Functions':
-              name: "هنرمند: توابع"
+              name: 'هنرمند: توابع'
             'Artist: Functions with Parameters':
-              name: "هنرمند: توابع با پارامترها"
+              name: 'هنرمند: توابع با پارامترها'
             'Artist: Variables':
-              name: "هنرمند: متغیرها"
+              name: 'هنرمند: متغیرها'
             'Bee: For Loops':
-              name: "زنبور عسل: برای حلقه ها"
+              name: 'زنبور عسل: برای حلقه ها'
             'Bee: Functions with Parameters':
-              name: "زنبور عسل: توابع با پارامترها"
+              name: 'زنبور عسل: توابع با پارامترها'
             Extreme Challenge - Comprehensive:
-              name: "چالش شدید - جامع"
+              name: چالش شدید - جامع
             Maze and Bee:
-              name: "هزارتو و زنبور عسل"
+              name: هزارتو و زنبور عسل
             'Play Lab: For Loops':
-              name: "آزمایشگاه بازی: برای حلقه ها"
+              name: 'آزمایشگاه بازی: برای حلقه ها'
             'Play Lab: Functions with Parameters':
-              name: "آزمایشگاه بازی: توابع با پارامترها"
+              name: 'آزمایشگاه بازی: توابع با پارامترها'
             'Play Lab: Variables':
-              name: "آزمایشگاه بازی: متغیرها"
+              name: 'آزمایشگاه بازی: متغیرها'
             Super Challenge - For Loops:
-              name: "چالش های فوق العاده - به صورت حلقه"
+              name: چالش های فوق العاده - به صورت حلقه
             Super Challenge - Functions and Parameters:
-              name: "چالش فوق العاده - توابع و پارامترها"
+              name: چالش فوق العاده - توابع و پارامترها
             Super Challenge - Variables:
-              name: "چالش های فوق العاده - متغیر"
+              name: چالش های فوق العاده - متغیر
             'Unplugged: Binary':
-              name: "بدون دستگاه: دودویی"
+              name: 'بدون دستگاه: دودویی'
             'Unplugged: Envelope Variables':
-              name: "بدون دستگاه: متغیرهای پاکت"
+              name: 'بدون دستگاه: متغیرهای پاکت'
             'Unplugged: For Loop Fun':
               name: 'بدون دستگاه: بازی حلقه های "برای"'
             'Unplugged: Madlibs':
-              name: "بدون دستگاه: جای خالی را پُرکن"
+              name: 'بدون دستگاه: جای خالی را پُرکن'
             'Unplugged: Songwriting with Parameters':
-              name: "بدون دستگاه: ترانه سرایی با پارامترها"
+              name: 'بدون دستگاه: ترانه سرایی با پارامترها'
             'Unplugged: Tangrams':
-              name: "بدون دستگاه: تنگرام"
+              name: 'بدون دستگاه: تنگرام'
         Course4pre:
-          title: "پیش نیاز دوره 4"
-          description: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های
-            2 و 3 را نگذرانده اند."
-          description_short: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
-            های 2 و 3 را نگذرانده اند."
+          title: پیش نیاز دوره 4
+          description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2
+            و 3 را نگذرانده اند.
+          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
+            های 2 و 3 را نگذرانده اند.
           description_audience: ''
           stages:
             'Artist: Functions':
-              name: "هنرمند: توابع"
+              name: 'هنرمند: توابع'
             'Artist: Loops':
-              name: "هنرمند: حلقه ها"
+              name: 'هنرمند: حلقه ها'
             'Artist: Nested Loops':
-              name: "هنرمند: حلقه های تو در تو"
+              name: 'هنرمند: حلقه های تو در تو'
             'Artist: Sequence':
-              name: "هنرمند: دنباله"
+              name: 'هنرمند: دنباله'
             'Bee: Conditionals':
-              name: "زنبور عسل: شرطی ها"
+              name: 'زنبور عسل: شرطی ها'
             'Bee: Debugging':
-              name: "زنبور عسل: اشکال زدایی"
+              name: 'زنبور عسل: اشکال زدایی'
             'Bee: Nested Loops':
-              name: "زنبور عسل: حلقه های تو در تو"
+              name: 'زنبور عسل: حلقه های تو در تو'
             'Farmer: While Loops':
               name: 'کشاورز: حلقه‌های "در حالیکه"'
             'Maze: Sequence':
-              name: "هزارتو: دنباله"
+              name: 'هزارتو: دنباله'
         usability:
-          title: "امتحان قابل استفاده بودن"
-          description: "منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده."
+          title: امتحان قابل استفاده بودن
+          description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
           description_short: ''
           description_audience: ''
           stages:
             Binary:
-              name: "دو دویی"
+              name: دو دویی
             For Loops:
               name: حلقه های "برای"
             Functions and Functions with Parameters:
-              name: "توابع و توابع با پارامترها"
+              name: توابع و توابع با پارامترها
             Intro:
-              name: "مقدمه"
+              name: مقدمه
             Variables:
-              name: "متغیرها"
+              name: متغیرها
         algebra:
-          title: "علوم کامپیوتر در جبر"
-          description: "یادگیری برنامه نویسی تابعی از طریق جبر"
-          description_short: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          title: علوم کامپیوتر در جبر
+          description: یادگیری برنامه نویسی تابعی از طریق جبر
+          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
           description_audience: ''
           stages:
             'Calc: Defining Variables':
@@ -296,13 +295,13 @@
             'Eval: Boolean Operators':
               name: Boolean Operators
             'Eval: Conditionals':
-              name: "مشروط"
+              name: مشروط
             'Eval: Defining Functions':
               name: Composite Functions
             'Eval: Functions':
               name: Solving Word Problems with the Design Recipe
             'Eval: Strings and Images':
-              name: "رشته ها و تصاویر"
+              name: رشته ها و تصاویر
             'Eval: Writing Contracts':
               name: Writing Contracts
             'Play Lab: Animation (Big Game)':
@@ -322,39 +321,39 @@
             'Unplugged: Collision Detection and the Distance Formula':
               name: 'Unplugged: Collision Detection and the Pythagorean Theorem'
             'Unplugged: Conditionals and Piecewise Functions':
-              name: "بدون دستگاه: شرطی ها و توابع چند ضابطه ای"
+              name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
             'Unplugged: Contracts':
               name: 'Unplugged: Contracts, Domain, and Range'
             'Unplugged: The Design Recipe':
-              name: "بدون دستگاه: دستور العمل طرح"
+              name: 'بدون دستگاه: دستور العمل طرح'
             'Unplugged: Video Games and Coordinate Planes':
-              name: "بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات"
+              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
         infinity:
-          title: "آزمایشگاه بازی بی نهایت دیزنی"
-          description: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
-            شخصیت های دیزنی بی نهایت."
-          description_short: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی
-            بازیگران شخصیت های دیزنی بی نهایت."
+          title: آزمایشگاه بازی بی نهایت دیزنی
+          description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
+            شخصیت های دیزنی بی نهایت.
+          description_short: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
+            شخصیت های دیزنی بی نهایت.
           stages:
             Infinity:
-              name: "بی نهایت"
+              name: بی نهایت
         algebrademo:
-          title: "نسخه ی نمایشی جبر"
-          description: "کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
-            شده در علوم کامپیوتر در جبرِ Code.org"
-          description_short: "کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
-            شده در علوم کامپیوتر در جبرِ Code.org"
+          title: نسخه ی نمایشی جبر
+          description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده
+            در علوم کامپیوتر در جبرِ Code.org
+          description_short: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
+            شده در علوم کامپیوتر در جبرِ Code.org
           stages:
             Defining Simple Functions:
-              name: "تعریف توابع ساده"
+              name: تعریف توابع ساده
             Defining Variables:
-              name: "تعریف متغیرها"
+              name: تعریف متغیرها
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Making Pictures:
-              name: "ساخت تصاویر"
+              name: ساخت تصاویر
             The Design Recipe:
-              name: "دستور العمل طراحی"
+              name: دستور العمل طراحی
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -364,7 +363,7 @@
             Computer Science Pedagogy:
               name: Computer Science Pedagogy
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             K-5 Courses:
               name: K-5 Courses
             Next Steps:
@@ -386,7 +385,7 @@
             Writing computer programs:
               name: Writing computer programs
         netsim:
-          title: "شبیه ساز اینترنت"
+          title: شبیه ساز اینترنت
           description: Learn about how the Internet works.
           description_short: Learn about how the Internet works.
           description_audience: ''
@@ -428,59 +427,59 @@
             Color Pixelation Tutorial:
               name: Color Pixelation Tutorial
         20-hour:
-          title: "دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)"
-          description: "این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
+          title: دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)
+          description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
             نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی
             تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر
-            نیز جالب باشد."
+            نیز جالب باشد.
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           stages:
             Abstraction:
-              name: "انتزاع"
+              name: انتزاع
             Algorithms:
-              name: "الگوریتم"
+              name: الگوریتم
             Computational Thinking:
-              name: "تفکر محاسباتی"
+              name: تفکر محاسباتی
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Functions:
-              name: "توابع"
+              name: توابع
             Graph Paper Programming:
-              name: "برنامه نویسی روی کاغذ شطرنجی"
+              name: برنامه نویسی روی کاغذ شطرنجی
             Introduction to Computer Science:
-              name: "آشنایی با علوم کامپیوتر"
+              name: آشنایی با علوم کامپیوتر
             Relay Programming:
-              name: "برنامه نویسی رله"
+              name: برنامه نویسی رله
             Song Writing:
-              name: "آهنگ سازی"
+              name: آهنگ سازی
             The Artist:
-              name: "هنرمند"
+              name: هنرمند
             The Artist 2:
-              name: "هنرمند 2"
+              name: هنرمند 2
             The Artist 3:
-              name: "هنرمند 3"
+              name: هنرمند 3
             The Artist 4:
-              name: "هنرمند 4"
+              name: هنرمند 4
             The Artist 5:
-              name: "هنرمند 5"
+              name: هنرمند 5
             The Farmer:
-              name: "کشاورز"
+              name: کشاورز
             The Farmer 2:
-              name: "کشاورز 2"
+              name: کشاورز 2
             The Farmer 3:
-              name: "کشاورز 3"
+              name: کشاورز 3
             The Internet:
-              name: "اینترنت"
+              name: اینترنت
             The Maze:
-              name: "پیچ و خم"
+              name: پیچ و خم
             Wrap-up:
-              name: "خلاصه"
+              name: خلاصه
         edit-code:
-          title: "ویرایش کد"
-          description: "ویرایش کد"
-          description_short: "ویرایش کد"
+          title: ویرایش کد
+          description: ویرایش کد
+          description_short: ویرایش کد
           description_audience: ''
           stages:
             Applab:
@@ -488,19 +487,19 @@
             Hoc2015 Blockly:
               name: Hoc2015 Blockly
             Play Lab:
-              name: "آزمایشگاه بازی"
+              name: آزمایشگاه بازی
             The Artist:
-              name: "هنرمند"
+              name: هنرمند
             The Maze:
-              name: "پیچ و خم"
+              name: پیچ و خم
         events:
-          title: "رویدادها"
-          description: "رویدادها"
-          description_short: "رویدادها"
+          title: رویدادها
+          description: رویدادها
+          description_short: رویدادها
           description_audience: ''
           stages:
             Bounce:
-              name: "پریدن"
+              name: پریدن
             Calc:
               name: Calc
             Eval:
@@ -508,40 +507,40 @@
             Studio:
               name: Studio
         flappy:
-          title: "کدنویسی Flappy"
-          description: "می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی
-            Flappy ما را امتحان کن!"
-          description_short: "نوشتن بازی Flappy خود را در کمتر از 10 دقیقه!"
+          title: کدنویسی Flappy
+          description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی
+            Flappy ما را امتحان کن!
+          description_short: نوشتن بازی Flappy خود را در کمتر از 10 دقیقه!
           description_audience: ''
           stages:
             Flappy Code:
-              name: "کدنویسی Flappy"
+              name: کدنویسی Flappy
         jigsaw:
-          title: "جورچین"
+          title: جورچین
           description: Try our Jigsaw tutorial.
           description_short: Try our Jigsaw tutorial.
           description_audience: ''
           stages:
             Jigsaw:
-              name: "جورچین"
+              name: جورچین
         step:
-          title: "مرحله"
-          description: "آموزش مرحله"
-          description_short: "آموزش مرحله"
+          title: مرحله
+          description: آموزش مرحله
+          description_short: آموزش مرحله
           description_audience: ''
           stages:
             Step:
-              name: "مرحله"
+              name: مرحله
         Hour of Code:
-          title: "ساعت کد نویسی سال 2013"
-          description: "مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان
-            عصبانی را امتحان کنید!"
-          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!"
+          title: ساعت کد نویسی سال 2013
+          description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان
+            عصبانی را امتحان کنید!
+          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!
           description_audience: ''
           stages:
             Hour of Code 2013:
-              name: "ساعت کد نویسی سال 2013"
+              name: ساعت کد نویسی سال 2013
         CodeStudioPuzzleChallenge:
           title: Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
@@ -611,9 +610,9 @@
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -627,11 +626,11 @@
           description_audience: ''
           stages:
             Booleans:
-              name: "بولی ها"
+              name: بولی ها
             Design Recipe Practice:
               name: Design Recipe Practice
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Luigi's Pizza:
               name: Luigi's Pizza
             Rocket-Height:
@@ -639,7 +638,7 @@
             Sam the Bat:
               name: Sam the Bat
             Strings and Images:
-              name: "رشته ها و تصاویر"
+              name: رشته ها و تصاویر
             Your Game - Animation:
               name: Your Game - Animation
             Your Game - Booleans:
@@ -668,7 +667,7 @@
             Impact of Computer Science:
               name: Impact of Computer Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -695,7 +694,7 @@
             Impact of Computer Science:
               name: Impact of Computer Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -719,7 +718,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -764,7 +763,7 @@
             Controlling Memory with Variables:
               name: Controlling Memory with Variables
             Creating Functions:
-              name: "ساختن تابع ها"
+              name: ساختن تابع ها
             Creating functions with Parameters:
               name: Creating Functions with Parameters
             Digital Assistant Project:
@@ -810,7 +809,7 @@
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: "حلقه ها ی While"
+              name: حلقه ها ی While
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -822,17 +821,17 @@
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Next Steps:
               name: Next Steps
             Strings and Images:
-              name: "رشته ها و تصاویر"
+              name: رشته ها و تصاویر
             Teacher Dashboard:
               name: Teacher Dashboard
             The Big Game:
               name: The Big Game
             The Design Recipe:
-              name: "دستور العمل طراحی"
+              name: دستور العمل طراحی
         ECSPD-NexTech:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -844,7 +843,7 @@
             Impact of Computer Science:
               name: Impact of Computer Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -862,7 +861,7 @@
             Impact of Computer Science:
               name: Impact of Computer Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teaching Strategies:
@@ -879,9 +878,9 @@
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -898,9 +897,9 @@
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -925,7 +924,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -956,7 +955,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -971,8 +970,8 @@
               name: What to Expect
         sciencePD2:
           title: Computer Science in Science PD
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           stages:
             Creating Breeds in Starlogo Nova:
               name: Creating Breeds in Starlogo Nova
@@ -985,9 +984,9 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         sciencePD3:
           title: Computer Science in Science PD
           description: Phase 3 Professional Development
@@ -1013,7 +1012,7 @@
             and how it functions by building off the concepts learned when sending
             bits in Unit 1. This unit is a pilot version and is no longer supported
             or updated. You can find the new units at code.org/educate/csp.
-          description_short: "اینترنت"
+          description_short: اینترنت
           stages:
             Algorithms Detour - Hard Problems TSP:
               name: Hard Problems - The Traveling Salesperson Problem
@@ -1050,7 +1049,7 @@
             Tell Me a Secret - Encrypting Text:
               name: The Need for Encryption
             The Internet:
-              name: "اینترنت"
+              name: اینترنت
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -1058,8 +1057,8 @@
           description_audience: ''
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_audience: ''
           stages:
             Big Game - Animation:
@@ -1073,13 +1072,13 @@
             Big Game - Variables:
               name: Big Game - Variables
             Booleans:
-              name: "بولی ها"
+              name: بولی ها
             Defining Variables:
-              name: "تعریف متغیرها"
+              name: تعریف متغیرها
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Free Play:
-              name: "بازی رایگان"
+              name: بازی رایگان
             Luigi's Pizza:
               name: Luigi's Pizza
             Rocket-Height:
@@ -1087,9 +1086,9 @@
             Sam the Bat:
               name: Sam the Bat
             Strings and Images:
-              name: "رشته ها و تصاویر"
+              name: رشته ها و تصاویر
             The Design Recipe:
-              name: "دستور العمل طراحی"
+              name: دستور العمل طراحی
         allthethings:
           title: All the Things!
           description: All the level types for UI testing
@@ -1103,35 +1102,35 @@
             AppLab:
               name: AppLab
             Artist:
-              name: "هنرمند"
+              name: هنرمند
             Bee:
-              name: "زنبور عسل"
+              name: زنبور عسل
             Bounce:
-              name: "پریدن"
+              name: پریدن
             CSinA:
               name: CSinA
             Farmer:
               name: Farmer
             Flappy:
-              name: "فلاپی"
+              name: فلاپی
             Free Response:
               name: Free Response
             Gamelab:
               name: Gamelab
             Jigsaw:
-              name: "جورچین"
+              name: جورچین
             Long assessment:
               name: Long assessment
             Markdown Details:
               name: Markdown Details
             Match:
-              name: "مسابقه"
+              name: مسابقه
             Maze:
-              name: "پیچ و خم"
+              name: پیچ و خم
             Minecraft:
-              name: "ماینکرفت"
+              name: ماینکرفت
             Multi:
-              name: "چند"
+              name: چند
             Multi2:
               name: Multi2
             Netsim:
@@ -1172,30 +1171,30 @@
               name: Curriculum Reference
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_audience: ''
           stages:
             Best Practices for Teaching Computer Science:
               name: Best Practices for Teaching Computer Science
             Booleans:
-              name: "بولی ها"
+              name: بولی ها
             Course Overview:
               name: Course Overview
             Defining Functions:
-              name: "تعریف توابع"
+              name: تعریف توابع
             Defining Variables:
-              name: "تعریف متغیرها"
+              name: تعریف متغیرها
             'Eval: Conditionals':
-              name: "ارزیابی: شرطی ها"
+              name: 'ارزیابی: شرطی ها'
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Next Steps:
               name: Next Steps
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
-              name: "رشته ها و تصاویر"
+              name: رشته ها و تصاویر
             Teacher Dashboard:
               name: Teacher Dashboard
             Writing Contracts:
@@ -1207,11 +1206,11 @@
           description_audience: ''
           stages:
             App Lab:
-              name: "آزمایشگاه نرم افزار"
+              name: آزمایشگاه نرم افزار
             Broadcast Lesson:
               name: Broadcast Lesson
             Internet Simulator:
-              name: "شبیه ساز اینترنت"
+              name: شبیه ساز اینترنت
             Pixelation Widget:
               name: Pixelation Widget
             Text Compression Lesson:
@@ -1219,7 +1218,7 @@
             Text Compression Widget:
               name: Text Compression Widget
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
         K5-OnlinePD:
           title: Teaching Computer Science Fundamentals
           description: Learn how to teach computer science using Code.org's Computer
@@ -1252,8 +1251,8 @@
               name: Planning
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_audience: ''
           stages:
             Unit 1, Day 10 Telling a Story with Data:
@@ -1277,9 +1276,9 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-up:
-              name: "خلاصه"
+              name: خلاصه
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1291,8 +1290,8 @@
               name: Necessary Background
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_audience: ''
           stages:
             Lesson Prep:
@@ -1304,13 +1303,13 @@
             Teaching with the Design Recipe:
               name: Teaching with the Design Recipe
             The Design Recipe:
-              name: "دستور العمل طراحی"
+              name: دستور العمل طراحی
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1324,9 +1323,9 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1339,8 +1338,8 @@
               name: Necessary Background
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1354,9 +1353,9 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description: Develop strategies for creating equity in your classroom with
@@ -1375,8 +1374,8 @@
               name: Next Steps
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_audience: ''
           stages:
             Advanced StarLogo Nova:
@@ -1390,13 +1389,13 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unit 1, Day 10 Telling a Story with Data
@@ -1419,13 +1418,13 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-up:
-              name: "خلاصه"
+              name: خلاصه
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
-          description_short: "فاز 2 آنلاین: مطالعه مخلوط تابستان"
+          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
+          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           stages:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unit 1, Day 10 Telling a Story with Data
@@ -1448,9 +1447,9 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-up:
-              name: "خلاصه"
+              name: خلاصه
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description: 8-hour online PD that builds on the 5-day in-person experience
@@ -1495,23 +1494,23 @@
           description_audience: Ages 6-13
           stages:
             Binary Bracelets:
-              name: "دستبند دودویی"
+              name: دستبند دودویی
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Getting Loopy:
-              name: "سر گیجه گرفتن"
+              name: سر گیجه گرفتن
             Graph Paper Programming:
-              name: "برنامه نویسی روی کاغذ شطرنجی"
+              name: برنامه نویسی روی کاغذ شطرنجی
             Happy Maps:
-              name: "نقشه های شاد"
+              name: نقشه های شاد
             Move it, Move it:
-              name: "تکانش بده، تکانش بده"
+              name: تکانش بده، تکانش بده
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Songwriting:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             The Big Event:
-              name: "رویداد بزرگ"
+              name: رویداد بزرگ
         afterschool1:
           title: Afterschool 1
           description: Afterschool 1 is designed to for informal classrooms where
@@ -1741,9 +1740,9 @@
             Thinking About Implementation:
               name: Thinking About Implementation
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: CS in Algebra mid year lesson support
@@ -1796,7 +1795,7 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           description: ''
           stages:
             Halloween 2015:
@@ -1807,20 +1806,20 @@
             might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description_audience: سنین 10 به بالا (پس از دوره 3)
           stages:
             Spring 2016:
               name: Spring 2016
             Halloween 2015:
               name: Halloween 2015
         iceage:
-          title: "آزمایشگاه بازی عصر یخبندان"
-          description: "یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!"
-          description_short: "یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!"
+          title: آزمایشگاه بازی عصر یخبندان
+          description: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
+          description_short: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
           description_audience: ''
           stages:
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1855,7 +1854,7 @@
             This course uses JavaScript as the programming language, and App Lab as
             the programming environment to build apps, but the concepts learned in
             these lessons span all programming languages and tools.
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description_audience: ''
           stages:
             Canvas and Arrays in Apps:
@@ -1873,7 +1872,7 @@
             Processing Arrays:
               name: Processing Arrays
             While Loops:
-              name: "حلقه ها ی While"
+              name: حلقه ها ی While
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -1894,14 +1893,14 @@
             Unit 3 Overview:
               name: Unit 3 Overview
         gumball:
-          title: "آزمایشگاه بازی Gumball"
+          title: آزمایشگاه بازی Gumball
           description: Create a story or make a game with Gumball Play Lab!
           description_short: Create a story or make a game with Gumball Play Lab!
           stages:
             Gumball Play Lab:
-              name: "آزمایشگاه بازی Gumball"
+              name: آزمایشگاه بازی Gumball
         starwars:
-          title: "جنگ ستارگان: یک کهکشان با کد بسازید"
+          title: 'جنگ ستارگان: یک کهکشان با کد بسازید'
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars
@@ -1909,9 +1908,9 @@
           description_audience: ''
           stages:
             Hour of Code 2015:
-              name: "ساعت کدنویسی 2015"
+              name: ساعت کدنویسی 2015
         starwarsblocks:
-          title: "جنگ ستارگان: یک کهکشان با کد بسازید"
+          title: 'جنگ ستارگان: یک کهکشان با کد بسازید'
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars
@@ -1919,15 +1918,15 @@
           description_audience: ''
           stages:
             Hour of Code 2015:
-              name: "ساعت کدنویسی 2015"
+              name: ساعت کدنویسی 2015
         mc:
           title: Minecraft Hour of Code
-          description: "استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین
-            کرافت"
-          description_short: "یک جهان ماینکرفتی را از طریق کد کاوش کنید"
+          description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین
+            کرافت
+          description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید
           stages:
             Hour of Code 2015:
-              name: "ساعت کدنویسی 2015"
+              name: ساعت کدنویسی 2015
           description_audience: ''
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1951,9 +1950,9 @@
             Assessing Computer Models:
               name: Assessing Computer Models
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -2105,58 +2104,58 @@
               name: Visualizing Data
         AlgebraA:
           title: 'Computer Science in Algebra: Course A'
-          description: "یادگیری برنامه نویسی تابعی از طریق جبر"
-          description_short: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          description: یادگیری برنامه نویسی تابعی از طریق جبر
+          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: "حساب: تعریف متغیرها"
+              name: 'حساب: تعریف متغیرها'
             'Calc: Evaluation Blocks':
-              name: "حساب: ارزیابی بلوکها"
+              name: 'حساب: ارزیابی بلوکها'
             'Eval: Defining Functions':
               name: 'Eval: Defining Functions'
             'Eval: Functions':
               name: 'Eval: Functions'
             'Eval: Strings and Images':
-              name: "ارزیابی: رشته ها و تصاویر"
+              name: 'ارزیابی: رشته ها و تصاویر'
             'Eval: Writing Contracts':
-              name: "ارزبابی: نوشتن قراردادها"
+              name: 'ارزبابی: نوشتن قراردادها'
             'Play Lab: Defining Functions':
               name: 'Play Lab: Defining Functions'
             'Unplugged: Contracts':
-              name: "بدون دستگاه: قراردادها"
+              name: 'بدون دستگاه: قراردادها'
             'Unplugged: Fast Functions':
               name: 'Unplugged: Fast Functions'
             'Unplugged: The Design Recipe':
-              name: "بدون دستگاه: دستور العمل طرح"
+              name: 'بدون دستگاه: دستور العمل طرح'
         AlgebraB:
-          title: "علوم کامپیوتر در جبر"
-          description: "یادگیری برنامه نویسی تابعی از طریق جبر"
-          description_short: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          title: علوم کامپیوتر در جبر
+          description: یادگیری برنامه نویسی تابعی از طریق جبر
+          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
           description_audience: ''
           stages:
             'Eval: Boolean Operators':
-              name: "ارزیابی: عملگرهای بولی"
+              name: 'ارزیابی: عملگرهای بولی'
             'Eval: Conditionals':
-              name: "ارزیابی: شرطی ها"
+              name: 'ارزیابی: شرطی ها'
             'Play Lab: Animation (Big Game)':
-              name: "آزمایشگاه بازی: انیمیشن (بازی بزرگ)"
+              name: 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
             'Play Lab: Boolean (Big Game)':
-              name: "آزمایشگاه بازی: بولی (بازی بزرگ)"
+              name: 'آزمایشگاه بازی: بولی (بازی بزرگ)'
             'Play Lab: Booleans':
-              name: "آزمایشگاه بازی: بولی"
+              name: 'آزمایشگاه بازی: بولی'
             'Play Lab: Collision Detection (Big Game)':
-              name: "آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)"
+              name: 'آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)'
             'Play Lab: Defining Variables (Big Game)':
-              name: "آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)"
+              name: 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
             'Unplugged: Booleans':
-              name: "بدون دستگاه: بولی ها"
+              name: 'بدون دستگاه: بولی ها'
             'Unplugged: Collision Detection and the Distance Formula':
-              name: "بدون دستگاه: تشخیص برخورد و فرمول فاصله"
+              name: 'بدون دستگاه: تشخیص برخورد و فرمول فاصله'
             'Unplugged: Conditionals and Piecewise Functions':
-              name: "بدون دستگاه: شرطی ها و توابع چند ضابطه ای"
+              name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
             'Unplugged: Video Games and Coordinate Planes':
-              name: "بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات"
+              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
         gamelab-hackathon:
           title: Gamelab Hackathon
           description: A place to try things out in Game Lab
@@ -2173,9 +2172,9 @@
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Preparing for in-person PD:
               name: Preparing for in-person PD
             Teacher Dashboard:
@@ -2201,7 +2200,7 @@
             transfer it between people and computational devices. The unit then explores
             the structure and design of the internet and the implications of those
             design decisions.
-          description_short: "اینترنت"
+          description_short: اینترنت
           description_audience: ''
           stages:
             Binary Numbers:
@@ -2229,7 +2228,7 @@
             Sending Numbers:
               name: Sending Numbers
             The Internet:
-              name: "اینترنت"
+              name: اینترنت
             The Need for Addressing:
               name: The Need for Addressing
             The Need for DNS:
@@ -2306,13 +2305,13 @@
             This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r
             \r
             This unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates.
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description_audience: ''
           stages:
             APIs and Function Parameters:
               name: APIs and Function Parameters
             Creating Functions:
-              name: "ساختن تابع ها"
+              name: ساختن تابع ها
             Creating functions with Parameters:
               name: Creating functions with Parameters
             Creativity in Algorithms:
@@ -2441,7 +2440,7 @@
             Using Variables in Apps:
               name: Using Variables in Apps
             While Loops:
-              name: "حلقه ها ی While"
+              name: حلقه ها ی While
             Edited lessons ABOVE this line:
               name: Edited lessons ABOVE this line
             Buttons and Events:
@@ -2542,7 +2541,7 @@
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: Temp place to work on U3 of Disco
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -2574,7 +2573,7 @@
             Variables and Animation:
               name: Variables and Animation
             Functions:
-              name: "توابع"
+              name: توابع
             Platform Jumper:
               name: Platform Jumper
             Defender:
@@ -2604,7 +2603,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2620,7 +2619,7 @@
         TEMP CSD Unit 3:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
           description: ''
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description_audience: ''
           stages:
             Drawing in Game Lab:
@@ -2629,7 +2628,7 @@
           title: Secret Sample
           description: Test of new educational philosophy
           description_short: This is a secret...shhhhh
-          description_audience: "سنین 8 به بالا (پس از دوره 2)"
+          description_audience: سنین 8 به بالا (پس از دوره 2)
           stages:
             Sample Stage:
               name: Sample Stage
@@ -2661,9 +2660,9 @@
           description_audience: ''
           stages:
             Evaluation Blocks:
-              name: "بلوک های ارزیابی"
+              name: بلوک های ارزیابی
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Teacher Dashboard:
               name: Teacher Dashboard
             Why Computer Science belongs in Algebra:
@@ -2685,7 +2684,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: "آشنايي با پیشرفت حرفه ای"
+              name: آشنايي با پیشرفت حرفه ای
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -3007,7 +3006,7 @@
           description_audience: Ages 8-98
           stages:
             Artist Functions:
-              name: "توابع هنرمند"
+              name: توابع هنرمند
             Sample Stage:
               name: Sample Stage
             The same thing with named levels:
@@ -3018,7 +3017,7 @@
           title: Artist Exemplar
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
-          description_audience: "سنین 8 به بالا (پس از دوره 2)"
+          description_audience: سنین 8 به بالا (پس از دوره 2)
           stages:
             Artist Exemplar:
               name: Artist Exemplar
@@ -3063,7 +3062,7 @@
           description: ''
           stages:
             'Bee: Conditionals':
-              name: "زنبور عسل: شرطی ها"
+              name: 'زنبور عسل: شرطی ها'
             Kindergarten Stage 1:
               name: Kindergarten Stage 1
         gradeKinder:
@@ -3077,15 +3076,15 @@
             Debugging:
               name: Debugging
             Events:
-              name: "رویدادها"
+              name: رویدادها
             Events Unplugged:
               name: Events Unplugged
             Fuzz Fiesta:
               name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
-              name: "پازل: یاد بگیر که بکشی و رها کنی"
+              name: 'پازل: یاد بگیر که بکشی و رها کنی'
             Loops:
-              name: "حلقه ها"
+              name: حلقه ها
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3093,13 +3092,13 @@
             Persistence & Frustration:
               name: Persistence & Frustration
             Programming:
-              name: "برنامه نویسی"
+              name: برنامه نویسی
             Programming Unplugged:
               name: Programming Unplugged
             Sequences & Algorithms:
               name: Sequences & Algorithms
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             'Programming Unplugged: Happy Maps':
               name: 'Programming Unplugged: Happy Maps'
         grade4:
@@ -3115,7 +3114,7 @@
             Build a Star Wars Game!:
               name: Build a Star Wars Game!
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             Explore project ideas:
               name: Explore project ideas
             'Farmer: Functions (New)':
@@ -3133,7 +3132,7 @@
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             'Unplugged: Funky Functions':
               name: 'Unplugged: Funky Functions'
         grade1:
@@ -3147,13 +3146,13 @@
             Debugging:
               name: Debugging
             Events:
-              name: "رویدادها"
+              name: رویدادها
             Events Unplugged:
               name: Events Unplugged
             'Jigsaw: Learn to drag and drop':
-              name: "پازل: یاد بگیر که بکشی و رها کنی"
+              name: 'پازل: یاد بگیر که بکشی و رها کنی'
             Loops:
-              name: "حلقه ها"
+              name: حلقه ها
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3163,7 +3162,7 @@
             Persistence & Frustration:
               name: Persistence & Frustration
             Programming:
-              name: "برنامه نویسی"
+              name: برنامه نویسی
             Programming Unplugged:
               name: Programming Unplugged
             Sequences & Algorithms:
@@ -3181,17 +3180,17 @@
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: "هنرمند: برای حلقه ها"
+              name: 'هنرمند: برای حلقه ها'
             'Artist: Functions with Parameters':
-              name: "هنرمند: توابع با پارامترها"
+              name: 'هنرمند: توابع با پارامترها'
             'Artist: Variables':
-              name: "هنرمند: متغیرها"
+              name: 'هنرمند: متغیرها'
             'Bee: For Loops':
-              name: "زنبور عسل: برای حلقه ها"
+              name: 'زنبور عسل: برای حلقه ها'
             'Bee: Functions with Parameters':
-              name: "زنبور عسل: توابع با پارامترها"
+              name: 'زنبور عسل: توابع با پارامترها'
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             Explore project ideas:
               name: Explore project ideas
             Final Project - Presentation Day:
@@ -3203,15 +3202,15 @@
             'Final Project - Work Day: Build Project Online':
               name: 'Final Project - Work Day: Build Project Online'
             'Play Lab: Variables':
-              name: "آزمایشگاه بازی: متغیرها"
+              name: 'آزمایشگاه بازی: متغیرها'
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             'Unplugged: Envelope Variables':
-              name: "بدون دستگاه: متغیرهای پاکت"
+              name: 'بدون دستگاه: متغیرهای پاکت'
             'Unplugged: For Loop Fun':
               name: 'بدون دستگاه: بازی حلقه های "برای"'
             'Unplugged: Songwriting with Parameters':
-              name: "بدون دستگاه: ترانه سرایی با پارامترها"
+              name: 'بدون دستگاه: ترانه سرایی با پارامترها'
         ecs-unit1:
           title: ECS Part 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -3239,9 +3238,9 @@
             Unit 1, Days 8-9 Impact of Computers and Communication:
               name: Unit 1, Days 8-9 Impact of Computers and Communication
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Wrap-up:
-              name: "خلاصه"
+              name: خلاصه
         ecs-unit2:
           title: ECS Unit 2
           description: 'Unit 2: Problem Solving'
@@ -3347,11 +3346,11 @@
             " Bee: Conditionals":
               name: " Bee: Conditionals"
             'Artist: Nested Loops':
-              name: "هنرمند: حلقه های تو در تو"
+              name: 'هنرمند: حلقه های تو در تو'
             Bee Debugging:
-              name: "اشکال زدایی زنبور عسل"
+              name: اشکال زدایی زنبور عسل
             Bounce:
-              name: "پریدن"
+              name: پریدن
             Build a Game:
               name: Build a Game
             Farmer Conditional with Cards:
@@ -3415,7 +3414,7 @@
             games, using the same programming concepts and the design process computer
             scientists use daily. In the final project, you’ll develop a personalized,
             interactive program."
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description_audience: ''
           stages:
             Booleans and Conditionals:
@@ -3510,7 +3509,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "توابع"
+              name: توابع
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -3623,7 +3622,7 @@
                 block. Combining all of these skills students will draw a randomized
                 rainbow snake at the end of the lesson.
             Variables:
-              name: "متغیرها"
+              name: متغیرها
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -3689,7 +3688,7 @@
                 students write programs that move sprites across the screen, as well
                 as animate other sprite properties.
             Conditionals:
-              name: "مشروط"
+              name: مشروط
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -3791,7 +3790,7 @@
             Exploring the Neighborhood:
               name: Exploring the Neighborhood
             Flappy:
-              name: "فلاپی"
+              name: فلاپی
             Getting Loopy with Puppy:
               name: Getting Loopy with Puppy
             Make a Dog Tag:
@@ -3815,11 +3814,11 @@
             Programming at home with my pet:
               name: Programming at home with my pet
             Binary Bracelets:
-              name: "دستبند دودویی"
+              name: دستبند دودویی
             'Real-life Algorithms: Paper Planes':
-              name: "الگوریتم های زندگی واقعی: موشک های کاغذی"
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
             The Big Event:
-              name: "رویداد بزرگ"
+              name: رویداد بزرگ
         transferring-over:
           title: ''
           description_audience: ''
@@ -3843,25 +3842,25 @@
           description: ''
           stages:
             Binary:
-              name: "دو دویی"
+              name: دو دویی
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Events:
-              name: "رویدادها"
+              name: رویدادها
             For Loops:
               name: حلقه های "برای"
             Functions:
-              name: "توابع"
+              name: توابع
             Functions with Parameters:
-              name: "معادله با پارامترها"
+              name: معادله با پارامترها
             Loops:
-              name: "حلقه ها"
+              name: حلقه ها
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
             Variables:
-              name: "متغیرها"
+              name: متغیرها
             While Loops:
-              name: "حلقه ها ی While"
+              name: حلقه ها ی While
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -3877,9 +3876,9 @@
             Teaching with the Design Recipe:
               name: Teaching with the Design Recipe
             The Design Recipe:
-              name: "دستور العمل طراحی"
+              name: دستور العمل طراحی
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
         csp-pre-survey:
           title: CS Principles Pre-Survey
           description_audience: ''
@@ -4199,7 +4198,7 @@
           description: ''
           stages:
             Bounce:
-              name: "پریدن"
+              name: پریدن
         sample-csp5:
           stages:
             Controlling Memory with Variables:
@@ -4215,15 +4214,15 @@
             Simple Encryption:
               name: Simple Encryption
         fesbinary:
-          title: "دو دویی"
+          title: دو دویی
           description_audience: ''
           description_short: ''
           description: ''
           stages:
             Binary Bracelets:
-              name: "دستبند دودویی"
+              name: دستبند دودویی
             Binary Images:
-              name: "تصاویر دوتایی"
+              name: تصاویر دوتایی
             Binary Artist Puzzles:
               name: Binary Artist Puzzles
             RGB Color:
@@ -4407,7 +4406,7 @@
                 web pages.  In the last level, students begin the project that they
                 will continue to work on throughout the unit.
             Lists:
-              name: "فهرست‌ها"
+              name: فهرست‌ها
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -4460,8 +4459,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
             Headings:
               name: Headings
               description_student: This lesson continues the introduction to HTML
@@ -4544,8 +4550,15 @@
                 will each receive a user profile describing a person. They will use
                 that user’s characteristics to choose appropriate products, critique
                 product design, and suggest improvements to design.
-              description_teacher: |
-                Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r
+              description_teacher: 'Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\r
+
+'
             Discovering Users:
               name: Discovering Users
             User-Centered Design Micro Activity:
@@ -4627,8 +4640,18 @@
                 basis for the type of app they will make. From there, teams will have
                 some time to discuss the basic functionality of their app before using
                 3x5 index cards to develop paper prototypes.
-              description_teacher: |
-                Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\r
+              description_teacher: 'Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\r
+
+'
             Prototype Testing:
               name: Prototype Testing
               description_student: Teams will develop a plan to test with users before
@@ -4714,8 +4737,13 @@
                 With the information and guidance gained from the last round of user
                 testing, each student will have the opportunity to plan for and implement
                 improvements to the team app.
-              description_teacher: |
-                Teams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student will have the opportunity to plan for and implement improvements to the team app.\r
+              description_teacher: 'Teams have at this point developed an app prototype
+                that has gone through multiple iterations and rounds of user testing.
+                With the information and guidance gained from the last round of user
+                testing, each student will have the opportunity to plan for and implement
+                improvements to the team app.\r
+
+'
             App Presentation:
               name: App Presentation
               description_student: At this point teams have researched a topic of
@@ -4724,8 +4752,14 @@
                 to incorporate new features and bug fixes. Now is the time for them
                 to review what they have done and pull together a coherent presentation
                 to demonstrate their process of creation.
-              description_teacher: |
-                At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation.\r
+              description_teacher: 'At this point teams have researched a topic of
+                personal and social importance, developed and tested both a paper
+                prototype and a digital prototype, and iterated on the initial app
+                to incorporate new features and bug fixes. Now is the time for them
+                to review what they have done and pull together a coherent presentation
+                to demonstrate their process of creation.\r
+
+'
             User Interface and Prototype Testing:
               name: User Interface and Prototype Testing
               description_student: Following the mini design project, students look
@@ -4878,7 +4912,7 @@
             Pre Hour of Code Survey:
               name: Pre Hour of Code Survey
             Flappy Code:
-              name: "کدنویسی Flappy"
+              name: کدنویسی Flappy
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         coursea-draft:
@@ -4894,7 +4928,7 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             'Programming: Happy Maps':
@@ -4916,7 +4950,7 @@
             Fuzz Fiesta:
               name: Fuzz Fiesta
             Going Places Safely:
-              name: "با خیال راحت سفرکردن"
+              name: با خیال راحت سفرکردن
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
         courseb-draft:
@@ -4958,9 +4992,9 @@
             Keep it Private:
               name: Keep it Private
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Your Digital Footprint:
-              name: "ردپای دیجیتالی شما"
+              name: ردپای دیجیتالی شما
         coursec-draft:
           title: 'CS Fundamentals: Course C'
           description_audience: ''
@@ -4973,7 +5007,7 @@
             Programming in Maze:
               name: Programming in Maze
             'Real-life Algorithms: Paper Planes':
-              name: "الگوریتم های زندگی واقعی: موشک های کاغذی"
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
@@ -4993,13 +5027,13 @@
             More CS with Run Marco:
               name: More CS with Run Marco
             Binary Bracelets:
-              name: "دستبند دودویی"
+              name: دستبند دودویی
             Events in Play Lab:
               name: Events in Play Lab
             Your Digital Footprint:
-              name: "ردپای دیجیتالی شما"
+              name: ردپای دیجیتالی شما
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Screen Out the Mean:
               name: Screen Out the Mean
             Debugging in Maze:
@@ -5030,7 +5064,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "شرطی ها با کارتها"
+              name: شرطی ها با کارتها
             Conditionals with Bee:
               name: Conditionals with Bee
             Conditionals & Loops in Maze:
@@ -5046,17 +5080,17 @@
             Conditionals in Bee:
               name: Conditionals in Bee
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             'Unplugged: Binary':
-              name: "بدون دستگاه: دودویی"
+              name: 'بدون دستگاه: دودویی'
             Artist Binary:
-              name: "دودویی هنرمند"
+              name: دودویی هنرمند
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Debugging in Collector:
@@ -5071,7 +5105,7 @@
             in a multi-day project. Recommended for 4th grade.
           stages:
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             Build a Star Wars Game:
               name: Build a Star Wars Game
             'Functions: Songwriting':
@@ -5099,15 +5133,15 @@
             Private and Personal Information:
               name: Private and Personal Information
             Internet:
-              name: "اینترنت"
+              name: اینترنت
             Crowdsourcing:
-              name: "کمک گیری جمعی"
+              name: کمک گیری جمعی
             Determine the Concept:
               name: Determine the Concept
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
         coursef-draft:
@@ -5120,15 +5154,15 @@
             in a multi-day project. Recommended for 5th grade.
           stages:
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             Envelope Variables:
-              name: "متغیرهای پاکت"
+              name: متغیرهای پاکت
             Variables in Play Lab:
               name: Variables in Play Lab
             Variables in Artist:
               name: Variables in Artist
             For Loop Fun:
-              name: "برای تفریح حلقه ای"
+              name: برای تفریح حلقه ای
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
@@ -5154,11 +5188,11 @@
             The Power of Words:
               name: The Power of Words
             Songwriting with Parameters:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
             Conditionals and Functions in Bee:
               name: Conditionals and Functions in Bee
             'Algorithms: Tangrams':
@@ -5166,8 +5200,8 @@
         classic-hoc-impact-study:
           title: Hour of Code with Survey
           description_audience: ''
-          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!"
+          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies! This version includes pre and post surveys
             to help us continue to improve Hour of Code. Ask your class to skip ahead
@@ -5176,14 +5210,14 @@
             Pre Hour of Code Survey:
               name: Pre Hour of Code Survey
             Hour of Code 2013:
-              name: "ساعت کد نویسی سال 2013"
+              name: ساعت کد نویسی سال 2013
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         hoc-impact-study:
           title: Classic Maze with Survey
           description_audience: ''
-          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!"
+          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies! This version includes pre and post surveys
             to help us continue to improve Hour of Code. Ask your class to skip ahead
@@ -5192,7 +5226,7 @@
             Pre Hour of Code Survey:
               name: Pre Hour of Code Survey
             Hour of Code 2013:
-              name: "ساعت کد نویسی سال 2013"
+              name: ساعت کد نویسی سال 2013
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         sports:
@@ -5210,7 +5244,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
@@ -5222,7 +5256,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         2016_sciencePD_phase2b:
           title: ''
           description_audience: ''
@@ -5230,7 +5264,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Review StarLogo Nova:
               name: Review StarLogo Nova
             Reviewing the Modules:
@@ -5242,7 +5276,7 @@
             Thinking Ahead to Implementation:
               name: Thinking Ahead to Implementation
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         sciencepd3-2016:
           title: ''
           description_audience: ''
@@ -5326,13 +5360,13 @@
           description: 'Phase 3: Reflect on semester 1 workshop'
           stages:
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Revisiting Complex Adaptive Systems:
               name: Revisiting Complex Adaptive Systems
             Thinking About Implementation:
               name: Thinking About Implementation
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         csp-ca-a:
           title: ''
           description_audience: ''
@@ -5348,7 +5382,7 @@
           description: ''
           stages:
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Earth Science Challenges:
               name: Earth Science Challenges
             Life Science Challenges:
@@ -5356,7 +5390,7 @@
             Physical Science Challenges:
               name: Physical Science Challenges
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         csf2harvey:
           title: New Functions Puzzles
           description_audience: ''
@@ -5376,7 +5410,7 @@
             Prepare your snowflake for 3D printing:
               name: Prepare your snowflake for 3D printing
             Binary:
-              name: "دو دویی"
+              name: دو دویی
             Snowflakes:
               name: Snowflakes
         sciencepd5:
@@ -5386,7 +5420,7 @@
           description: 'Phase 3: Prepare for semester 2 workshop'
           stages:
             Welcome!:
-              name: "خوش آمدی!"
+              name: خوش آمدی!
             Earth Science Challenges:
               name: Earth Science Challenges
             Life Science Challenges:
@@ -5394,7 +5428,7 @@
             Physical Science Challenges:
               name: Physical Science Challenges
             Wrap-Up:
-              name: "جمع و جور کن"
+              name: جمع و جور کن
         csp5-support:
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
@@ -5492,7 +5526,7 @@
             Foo:
               name: Foo
             Lists:
-              name: "فهرست‌ها"
+              name: فهرست‌ها
             Lights:
               name: Lights
             Event Types:
@@ -5552,7 +5586,7 @@
             Accelerometer:
               name: Accelerometer
             Functions with Parameters:
-              name: "معادله با پارامترها"
+              name: معادله با پارامترها
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -5564,7 +5598,7 @@
             to the breadth of Game Lab.
           stages:
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Sprites:
               name: Sprites
             Input:
@@ -5668,7 +5702,7 @@
           description: ''
           stages:
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
         workshop-maker:
           title: Maker Toolkit Workshop
           description_audience: Teachers attending an in-person Maker Toolkit Workshop
@@ -5694,11 +5728,11 @@
           description: ''
           stages:
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             'Real Life Algorithms: Dice Race':
-              name: "الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن"
+              name: 'الگوریتم های زندگی واقعی: مسابقۀ تاس انداختن'
         csd6:
           title: CSD Unit 6 - Physical Computing
           description_audience: ''
@@ -5767,7 +5801,7 @@
                 students move online where they will learn to write applications that
                 blink an LED and make noise with a buzzer.
             Lists:
-              name: "فهرست‌ها"
+              name: فهرست‌ها
               description_student: Students learn to use lists to store a series of
                 related values in a single variable.
               description_teacher: Students learn to use lists to store a series of
@@ -6001,7 +6035,7 @@
                 properties, as well as create multiple programs utilizing the accelerometer
                 similar to those they’ve likely come across in real world applications.
             Functions with Parameters:
-              name: "معادله با پارامترها"
+              name: معادله با پارامترها
               description_student: The lesson starts with a quick review of parameters,
                 in the context of App Lab blocks that they students have seen recently.  Students
                 then look at examples of parameters within user-created functions
@@ -6060,7 +6094,7 @@
             Accelerometer_:
               name: Accelerometer
             Functions with Parameters_:
-              name: "معادله با پارامترها"
+              name: معادله با پارامترها
             Circuits and Physical Prototypes_:
               name: Circuits and Physical Prototypes
             'Project: Prototype an Innovation_':
@@ -6082,7 +6116,7 @@
             Drawing in Game Lab:
               name: Drawing in Game Lab
             Variables:
-              name: "متغیرها"
+              name: متغیرها
             Programming for Entertainment:
               name: Programming for Entertainment
             Sprites:
@@ -6098,7 +6132,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Taking Input:
               name: Taking Input
             Complex Conditionals:
@@ -6118,7 +6152,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "توابع"
+              name: توابع
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6514,7 +6548,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "توابع"
+              name: توابع
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6591,7 +6625,7 @@
             Intellectual Property and Images:
               name: Intellectual Property and Images
             Lists:
-              name: "فهرست‌ها"
+              name: فهرست‌ها
         csd1-draft:
           title: ''
           description_audience: ''
@@ -6633,7 +6667,7 @@
             Shapes and Randomness:
               name: Shapes and Randomness
             Variables:
-              name: "متغیرها"
+              name: متغیرها
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -6645,7 +6679,7 @@
             Booleans and Conditionals:
               name: Booleans and Conditionals
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -6661,7 +6695,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "توابع"
+              name: توابع
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -6671,7 +6705,7 @@
             'Chapter 1: Images and Animation':
               name: 'Chapter 1: Images and Animation'
             'null':
-              name: "خالی"
+              name: خالی
             temp:
               name: temp
         coursef-ramp:
@@ -6679,9 +6713,9 @@
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
             Functions in Farmer:
               name: Functions in Farmer
             Conditionals and Functions in Bee:
@@ -6809,9 +6843,9 @@
             D13 no If/While:
               name: D13 no If/While
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
             Bounce:
-              name: "پریدن"
+              name: پریدن
             NewBounce:
               name: NewBounce
             F PlayLab Variables:
@@ -6836,10 +6870,14 @@
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -6866,7 +6904,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: "با خیال راحت سفرکردن"
+              name: با خیال راحت سفرکردن
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -6924,11 +6962,11 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Your Digital Footprint:
-              name: "ردپای دیجیتالی شما"
+              name: ردپای دیجیتالی شما
             'Programming: My Robotic Friends':
               name: 'Programming: My Robotic Friends'
             Programming in Maze:
@@ -6957,13 +6995,13 @@
         coursec:
           stages:
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Programming in Maze:
               name: Programming in Maze
             Debugging in Maze:
               name: Debugging in Maze
             'Real-life Algorithms: Paper Planes':
-              name: "الگوریتم های زندگی واقعی: موشک های کاغذی"
+              name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
             Programming in Collector:
               name: Programming in Collector
             Programming in Artist:
@@ -6983,7 +7021,7 @@
             Screen Out the Mean:
               name: Screen Out the Mean
             Binary Bracelets:
-              name: "دستبند دودویی"
+              name: دستبند دودویی
             Loops in Artist:
               name: Loops in Artist
             Loops with Rey and BB-8:
@@ -6999,7 +7037,7 @@
         coursed:
           stages:
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
               description_student: This lesson will give you practice in the skills
                 you will need for this course.
               description_teacher: 'In this set of puzzles, students will begin with
@@ -7032,7 +7070,7 @@
                 will have the opportunity to customize their game with different speeds
                 and sounds.
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
               description_student: Loops inside loops inside loops. What does this
                 mean? This lesson will teach you what happens when you place a loop
                 inside another loop.
@@ -7079,11 +7117,19 @@
                 students will know they need to keep filling the holes and digging
                 the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: "شرطی ها با کارتها"
+              name: شرطی ها با کارتها
               description_student: It's time to play a game where you earn points
                 only under certain conditions!
-              description_teacher: |
-                This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
+              description_teacher: 'This lesson demonstrates how conditionals can
+                be used to tailor a program to specific information. We don’t always
+                have all of the information we need when writing a program. Sometimes
+                you will want to do something different in one situation than in another,
+                even if you don''t know what situation will be true when your code
+                runs. That is where conditionals come in. Conditionals allow a computer
+                to make a decision, based on the information that is true any time
+                your code is run.
+
+'
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Now that you understand conditionals, it''s time
@@ -7112,7 +7158,7 @@
                 By practicing all three, students will learn to write complex and
                 flexible code.
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
               description_student: Some information is not safe to share online. This
                 lesson will help you learn the difference between safe and private
                 information.
@@ -7129,7 +7175,7 @@
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: "بدون دستگاه: دودویی"
+              name: 'بدون دستگاه: دودویی'
               description_student: 'Learn how computers store pictures using simple
                 ideas like on and off. '
               description_teacher: Though many people think of binary as strictly
@@ -7139,7 +7185,7 @@
                 store even more complex information (such as images and colors) in
                 binary, as well.
             Artist Binary:
-              name: "دودویی هنرمند"
+              name: دودویی هنرمند
               description_student: Direct your own artist to create a binary image
                 using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers.
@@ -7178,7 +7224,7 @@
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
               description_student: This fast-paced introduction will give you the
                 chance to practice most of the skills that you will need to solve
                 the puzzles in this course.
@@ -7192,21 +7238,21 @@
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
-              name: "متغیرهای پاکت"
+              name: متغیرهای پاکت
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "برای تفریح حلقه ای"
+              name: برای تفریح حلقه ای
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             Conditionals and Functions in Bee:
               name: Conditionals and Functions in Bee
             Functions with Parameters in Artist:
@@ -7267,7 +7313,7 @@
                 game. The goal here is to start building the skills to translate real-world
                 situations to online scenarios and vice versa.
             Conditionals:
-              name: "مشروط"
+              name: مشروط
               description_student: You will get to tell the computer what to do under
                 certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops
@@ -7359,7 +7405,7 @@
                 for all four stages of the process can be found in the first stage
                 of this project process [here](https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: "اینترنت"
+              name: اینترنت
               description_student: Ever wondered how information travels across the
                 internet? It's not magic! This lesson will teach you the basics of
                 how the internet works.
@@ -7368,7 +7414,7 @@
                 to flow through the internet, all the while learning about connections,
                 URLs, IP Addresses, and the DNS.
             Crowdsourcing:
-              name: "کمک گیری جمعی"
+              name: کمک گیری جمعی
               description_student: This lesson will teach you about crowdsourcing,
                 the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting
@@ -7381,7 +7427,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7395,7 +7441,9 @@
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
+            Functions in Harvester:
+              name: Functions in Harvester
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7421,7 +7469,7 @@
                 will learn the difference between a detailed and general algorithm
                 while playing with tangrams.
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
               description_student: This lesson will give you a brief introduction
                 to some of the amazing things you will learn in this course!
               description_teacher: 'In this lesson, students will be introduced to
@@ -7441,7 +7489,7 @@
                 in-person and online communication. Students then brainstorm ways
                 to respond to cyberbullying. "
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
               description_student: Think of your favorite video game. Ever wondered
                 how it was made? In these puzzles you will develop a video game of
                 your own with friends from Ice Age!
@@ -7450,7 +7498,7 @@
                 and loops to make characters move on the screen, and will get the
                 chance to create their own game or story after the guided levels.
             Envelope Variables:
-              name: "متغیرهای پاکت"
+              name: متغیرهای پاکت
               description_student: 'Envelopes and variables have something in common:
                 both can hold valuable things. Here you will learn what variables
                 are and the awesome things they can do.'
@@ -7480,7 +7528,7 @@
                 with user input to set the values of their variables, then get space
                 to create their own mini-project with variables.
             For Loop Fun:
-              name: "برای تفریح حلقه ای"
+              name: برای تفریح حلقه ای
               description_student: You're going to have loads of fun learning about
                 `for` loops!
               description_teacher: 'We know that loops allow us to do things over
@@ -7506,7 +7554,7 @@
                 At the end, they will have a chance to create their own art in a freeplay
                 level.
             Songwriting with Parameters:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
               description_student: You just might release the next big hit single!
                 In this lesson, you will be learning what parameters are and how they
                 make some fantastic songs!
@@ -7621,7 +7669,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -7932,7 +7980,7 @@
             'Programming Unplugged: My Robotic Friends':
               name: 'Programming Unplugged: My Robotic Friends'
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'
             'Algorithms: Relay Programming':
@@ -7946,9 +7994,9 @@
             Nested Loops Project in Artist:
               name: Nested Loops Project in Artist
             Internet:
-              name: "اینترنت"
+              name: اینترنت
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             Screen Out the Mean:
               name: Screen Out the Mean
             'Events: The Big Event':
@@ -7960,7 +8008,7 @@
             Build a Flappy Game:
               name: Build a Flappy Game
             Conditionals with Cards:
-              name: "شرطی ها با کارتها"
+              name: شرطی ها با کارتها
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals & Loops in Maze:
@@ -7970,19 +8018,19 @@
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Envelope Variables:
-              name: "متغیرهای پاکت"
+              name: متغیرهای پاکت
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "برای تفریح حلقه ای"
+              name: برای تفریح حلقه ای
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
@@ -8022,9 +8070,11 @@
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: ''
           description_audience: ''
           description_short: ''
@@ -8036,7 +8086,7 @@
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistence & Frustration: Stevie and the Marbles'
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             'Online Safety: Your Digital Footprint':
@@ -8058,7 +8108,7 @@
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
-              name: "زنبور عسل هجی کن"
+              name: زنبور عسل هجی کن
           title: ''
           description_audience: ''
           description_short: ''
@@ -8072,7 +8122,7 @@
             other:
               name: other
             Thanks:
-              name: "متشکرم"
+              name: متشکرم
             '':
               name: ''
             " ":
@@ -8110,7 +8160,7 @@
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
-              name: "ساختن تابع ها"
+              name: ساختن تابع ها
             Functions and Top-Down Design:
               name: Functions and Top-Down Design
             APIs and Function Parameters:
@@ -8131,7 +8181,7 @@
               name: Please complete the CSP Mid-course survey
           title: ''
           description_audience: ''
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description: ''
         csd4-draft:
           stages:
@@ -8215,7 +8265,7 @@
             Sequence and Preview in Maze:
               name: Sequence and Preview in Maze
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8225,7 +8275,7 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             Intro to Conditionals with Farmer:
@@ -8235,7 +8285,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8261,9 +8311,9 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "اینترنت"
+              name: اینترنت
             Crowdsourcing:
-              name: "کمک گیری جمعی"
+              name: کمک گیری جمعی
             Nested Loops in Bee:
               name: Nested Loops in Bee
             Nested Loops in Bee/Zombie:
@@ -8279,11 +8329,11 @@
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Events in Bounce:
               name: Events in Bounce
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
             Nested Loops in Artist:
               name: Nested Loops in Artist
             Nested Loops Project in Artist:
@@ -8295,7 +8345,7 @@
             While Loops in Farmer:
               name: While Loops in Farmer
             Conditionals with Cards:
-              name: "شرطی ها با کارتها"
+              name: شرطی ها با کارتها
             Conditionals in Bee:
               name: Conditionals in Bee
             Conditionals & Loops in Maze:
@@ -8303,15 +8353,15 @@
             Conditionals & Loops in Farmer:
               name: Conditionals & Loops in Farmer
             Digital Citizenship:
-              name: "شهروندی دیجیتالی"
+              name: شهروندی دیجیتالی
             Build a Play Lab Game:
               name: Build a Play Lab Game
             'Unplugged: Binary':
-              name: "بدون دستگاه: دودویی"
+              name: 'بدون دستگاه: دودویی'
             Artist Binary:
-              name: "دودویی هنرمند"
+              name: دودویی هنرمند
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Loops in Artist:
               name: Loops in Artist
             Nested Loops in Bee:
@@ -8337,7 +8387,7 @@
             'Algorithms: Graph Paper Programming':
               name: 'Algorithms: Graph Paper Programming'
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             'Algorithms: Relay Programming':
               name: 'Algorithms: Relay Programming'
             Debugging in Collector:
@@ -8403,11 +8453,11 @@
             Present Your Project:
               name: Present Your Project
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
             Loops in Artist (UPDATED!):
               name: Loops in Artist (UPDATED!)
             Sarah test stage:
@@ -8435,7 +8485,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8453,7 +8503,7 @@
             Course E Introduction:
               name: Course E Introduction
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Private and Personal Information:
               name: Private and Personal Information
             Build a Star Wars Game:
@@ -8479,9 +8529,9 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "اینترنت"
+              name: اینترنت
             Crowdsourcing:
-              name: "کمک گیری جمعی"
+              name: کمک گیری جمعی
           title: New Script for E
           description_audience: ''
           description_short: ''
@@ -8493,7 +8543,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8513,23 +8563,23 @@
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Envelope Variables:
-              name: "متغیرهای پاکت"
+              name: متغیرهای پاکت
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "برای تفریح حلقه ای"
+              name: برای تفریح حلقه ای
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
@@ -8694,7 +8744,7 @@
             Using Simple Commands:
               name: Using Simple Commands
             Creating Functions:
-              name: "ساختن تابع ها"
+              name: ساختن تابع ها
             Functions and Top-Down Design:
               name: Functions and Top-Down Design
             APIs and Function Parameters:
@@ -8710,8 +8760,10 @@
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
-          description: |
-            This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r
+          description: 'This is a replica of live levels in /s/csp3 with new and modified
+            stages added.  DO NOT EDIT LIVE LEVELS.\r
+
+'
         pwc:
           stages:
             new stage:
@@ -8921,7 +8973,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8931,15 +8983,15 @@
             Loops in Artist:
               name: Loops in Artist
             Nested Loops:
-              name: "حلقه های تو در تو"
+              name: حلقه های تو در تو
             Nested Loops with Frozen:
               name: Nested Loops with Frozen
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Private and Personal Information:
               name: Private and Personal Information
             'Functions: Songwriting':
@@ -8965,11 +9017,13 @@
             Present Your Project:
               name: Present Your Project
             Internet:
-              name: "اینترنت"
+              name: اینترنت
             Crowdsourcing:
-              name: "کمک گیری جمعی"
+              name: کمک گیری جمعی
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -8981,7 +9035,7 @@
             Sequence in Maze:
               name: Sequence in Maze
             Building a Foundation:
-              name: "ساختن بنیان"
+              name: ساختن بنیان
             Debugging with Scrat:
               name: Debugging with Scrat
             Programming in Artist:
@@ -8997,27 +9051,27 @@
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: "مقدمه"
+              name: مقدمه
             The Power of Words:
               name: The Power of Words
             Ice Age Play Lab:
-              name: "آزمایشگاه بازی عصر یخبندان"
+              name: آزمایشگاه بازی عصر یخبندان
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             Envelope Variables:
-              name: "متغیرهای پاکت"
+              name: متغیرهای پاکت
             Variables in Artist:
               name: Variables in Artist
             Variables in Play Lab:
               name: Variables in Play Lab
             For Loop Fun:
-              name: "برای تفریح حلقه ای"
+              name: برای تفریح حلقه ای
             For Loops in Bee:
               name: For Loops in Bee
             For Loops in Artist:
               name: For Loops in Artist
             Songwriting with Parameters:
-              name: "ترانه نویسی با پارامترها"
+              name: ترانه نویسی با پارامترها
             Functions in Bee:
               name: Functions in Bee
             Functions with Parameters in Artist:
@@ -9051,7 +9105,7 @@
             The Circuit Playground:
               name: The Circuit Playground
             Lists:
-              name: "فهرست‌ها"
+              name: فهرست‌ها
             Lights:
               name: Lights
             For Loops:
@@ -9105,7 +9159,7 @@
             Shapes and Randomization:
               name: Shapes and Randomization
             Variables:
-              name: "متغیرها"
+              name: متغیرها
             Sprites:
               name: Sprites
             The Draw Loop:
@@ -9117,7 +9171,7 @@
             Booleans Unplugged:
               name: Booleans Unplugged
             Conditionals:
-              name: "مشروط"
+              name: مشروط
             Keyboard Input:
               name: Keyboard Input
             Other Forms of Input:
@@ -9133,7 +9187,7 @@
             Collisions:
               name: Collisions
             Functions:
-              name: "توابع"
+              name: توابع
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -9144,7 +9198,7 @@
               name: CS Discoveries End of Semester Survey
           title: CSD Unit 3 - Animations and Games
           description_audience: ''
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description: " In Unit 3, you’ll build on your coding experience as you
             program animations, interactive art, and games in Game Lab. The unit starts
             off with simple shapes and builds up to more sophisticated sprite-based
@@ -9177,7 +9231,7 @@
             games, using the same programming concepts and the design process computer
             scientists use daily. In the final project, you’ll develop a personalized,
             interactive program."
-          description_short: "برنامه نویسی"
+          description_short: برنامه نویسی
           description_audience: ''
           stages:
             Programming for Entertainment:
@@ -9234,7 +9288,7 @@
               description_student: ''
               description_teacher: ''
             Variables:
-              name: "متغیرها"
+              name: متغیرها
               description_student: This lesson introduces variables as a way to label
                 a number in a program or save a randomly generated value. The class
                 begins the lesson with a very basic description of the purpose of
@@ -9315,7 +9369,7 @@
 
                 Finally we reveal Conditionals as a tool to make decisions or impact the flow of a program using boolean statements as input.
             Conditionals:
-              name: "مشروط"
+              name: مشروط
               description_student: The class starts by using booleans to compare the
                 current value of a sprite property with a target value, using that
                 comparison to determine when a sprite has reached a point on the screen,
@@ -9423,7 +9477,7 @@
                 before practicing with the four collision blocks (`collide`, `displace`,
                 `bounce`, and `bounceOff`).
             Functions:
-              name: "توابع"
+              name: توابع
               description_student: This lesson covers functions as a way to organize
                 their code, make it more readable, and remove repeated blocks of code.
                 The class learns that higher level or more abstract steps make it
@@ -9595,7 +9649,7 @@
                 \r
                 The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web.
             Lists:
-              name: "فهرست‌ها"
+              name: فهرست‌ها
               description_student: This lesson introduces ordered and unordered lists
                 and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
                 class practices using the tags, then goes back to the personal web
@@ -9698,8 +9752,15 @@
                 their personal websites, working with peers to get feedback, review
                 the rubric, and put the finishing touches on the site. To cap off
                 the unit, everyone shares their projects and how they were developed.
-              description_teacher: |
-                Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r
+              description_teacher: 'Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r
+
+'
         coursea-2018:
           title: Course A
           description: Learn the basics of computer science and internet safety. At
@@ -9721,10 +9782,14 @@
                 \r
                 This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
             'Real-life Algorithms: Plant a Seed':
-              name: "الگوریتم های زندگی واقعی: یک بذر بکار"
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
               description_student: ''
-              description_teacher: |
-                In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r
+              description_teacher: 'In this lesson, students will relate the concept
+                of algorithms back to everyday, real-life activities by planting an
+                actual seed. The goal here is to start building the skills to translate
+                real-world situations to online scenarios and vice versa.\r
+
+'
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
               description_student: ''
@@ -9751,7 +9816,7 @@
                 into this stage for added practice with problem solving and critical
                 thinking.
             Going Places Safely:
-              name: "با خیال راحت سفرکردن"
+              name: با خیال راحت سفرکردن
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this
                 lesson helps students learn that many websites ask for information
@@ -9794,3 +9859,311 @@
                 time to get creative and make a story in the Play Lab!
             Programming in Bee:
               name: Programming in Bee
+            Programming in Harvester:
+              name: Programming in Harvester
+            Loops in Harvester:
+              name: Loops in Harvester
+        express-2018:
+          title: Express Course
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best
+            of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: مقدمه
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: ساختن بنیان
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops:
+              name: حلقه های تو در تو
+              description_student: ''
+              description_teacher: ''
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+              description_student: ''
+              description_teacher: ''
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+              description_student: ''
+              description_teacher: ''
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Star Wars:
+              name: Events in Star Wars
+              description_student: ''
+              description_teacher: ''
+            Events with Flappy:
+              name: Events with Flappy
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+              description_student: ''
+              description_teacher: ''
+            Variables in Artist:
+              name: Variables in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables in Play Lab:
+              name: Variables in Play Lab
+              description_student: ''
+              description_teacher: ''
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+              description_student: ''
+              description_teacher: ''
+            Functions in Bee:
+              name: Functions in Bee
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+              description_student: ''
+              description_teacher: ''
+            Explore Project Ideas:
+              name: Explore Project Ideas
+              description_student: ''
+              description_teacher: ''
+            The Design Process:
+              name: The Design Process
+              description_student: ''
+              description_teacher: ''
+            Build Your Project:
+              name: Build Your Project
+              description_student: ''
+              description_teacher: ''
+            Revise Your Project:
+              name: Revise Your Project
+              description_student: ''
+              description_teacher: ''
+            Present Your Project:
+              name: Present Your Project
+              description_student: ''
+              description_teacher: ''
+        courseb-2018:
+          title: Course B
+          description: Learn the basics of computer science and internet safety. At
+            the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+            (Similar to Course A, but with more variety for older students.)
+          description_audience: 'Ages: 5-8'
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+              description_student: ''
+              description_teacher: ''
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+              description_student: ''
+              description_teacher: ''
+            'Real-life Algorithms: Plant a Seed':
+              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+              description_student: ''
+              description_teacher: ''
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+              description_student: ''
+              description_teacher: ''
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+              description_student: ''
+              description_teacher: ''
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: ''
+              description_teacher: ''
+            Loops in Collector:
+              name: Loops in Collector
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: ''
+              description_teacher: ''
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: ''
+              description_teacher: ''
+        coursed-2018:
+          title: New Course D Script
+          description: ''
+          description_short: ''
+          description_audience: ''
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+              description_student: ''
+              description_teacher: ''
+            Introduction:
+              name: مقدمه
+              description_student: ''
+              description_teacher: ''
+            Building a Foundation:
+              name: ساختن بنیان
+              description_student: ''
+              description_teacher: ''
+            Debugging in Collector:
+              name: Debugging in Collector
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Artist:
+              name: Nested Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+              description_student: ''
+              description_teacher: ''
+            Build a Play Lab Game:
+              name: Build a Play Lab Game
+              description_student: ''
+              description_teacher: ''
+            'Unplugged: Binary':
+              name: 'بدون دستگاه: دودویی'
+              description_student: ''
+              description_teacher: ''
+            Artist Binary:
+              name: دودویی هنرمند
+              description_student: ''
+              description_teacher: ''
+        jr-test:
+          stages:
+            Programming with Behaviors:
+              name: Programming with Behaviors
+            Programming with Forever:
+              name: Programming with Forever
+            Using Behaviors:
+              name: Using Behaviors
+            Using Forever Loops:
+              name: Using Forever Loops
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        petgame:
+          stages:
+            pet game:
+              name: pet game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
