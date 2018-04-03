@@ -228,7 +228,7 @@ end
 # TODO: (suresh) This method will eventually be used to write build status for all managed environments.
 # @param [Symbol] environment
 # @param [String] commit_hash
-# @param [String] status - :start, :success, :failed
+# @param [Symbol] status - :start, :success, :failed
 def write_build_status(environment, commit_hash, status)
   event = "#{environment}_#{status}"
   if environment == :staging
