@@ -1,0 +1,36 @@
+name 'cspu5_assess4_mysteryResult_exam_prep'
+wrong 'mystery returns the smallest of the three input values'
+wrong 'It returns the middle of the three input values'
+right 'It returns the largest of the three input values'
+wrong 'It returns the average of the three input values'
+wrong 'It always returns c'
+
+markdown <<MARKDOWN
+Which of the following best describes the result of running the procedure below?
+
+    PROCEDURE mystery (a, b, c)
+    {
+        IF ( a >= b AND a >= c)
+        {
+            RETURN (a)
+        }
+        ELSE IF ( b >= a AND b >= c)
+        {
+            RETURN (b)
+        }
+        ELSE
+        {
+            RETURN (c)
+        }
+    }
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Looking at the if statements:
+
+* If a is >= (greater than or equal) to b, and a is >= to c, return a
+* else if, b is >= (greater than or equal) to a, and b is >= to c, return b
+* Otherwise, (implying that c is greater than both a and b) c is returned
+
+This code will return the largest number of the three. It may be helpful to use concrete examples by assigning values to a, b, and c.
+MARKDOWN
