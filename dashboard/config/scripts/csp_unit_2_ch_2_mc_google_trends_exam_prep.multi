@@ -1,0 +1,14 @@
+name 'CSP Unit 2 Ch 2 MC google trends_exam_prep'
+title 'What\'s it showing?'
+description ' '
+question ' '
+wrong 'Since sometime around 2009, red has become the favorite color of more people'
+right 'Generally speaking, since 2009 more people use "red" in their search terms more than they use "blue", "yellow", "green", or "purple"'
+wrong 'The general decline in the search term "yellow" might be due to the decline of searches for yellow taxis, as car sharing services have become more popular' 
+wrong 'Generally speaking, the volume of internet searches is increasing over time because the number of people using the internet is also increasing.'
+
+markdown <<MARKDOWN
+The Chart below from Google Trends shows the prevelance of some search terms in the United States between 2004 and the present.  Which of the following is the most accurate statement of what this chart is showing.
+
+![](https://images.code.org/56a21ebf1889a58b0954483f4ccb9bdf-image-1470159033425.png)
+MARKDOWN
