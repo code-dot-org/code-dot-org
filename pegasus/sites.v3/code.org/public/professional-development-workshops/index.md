@@ -8,7 +8,7 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 <br />
 ### No workshop in your area or outside the United States? <br />
 
-If you are in the United States, [find a CS Fundamentals Facilitator](/educate/k5-affiliates-directory) near you and ask them to host one. Many of our facilitators are happy to work with you to organize a training at your school. 
+If you are in the United States, [find a CS Fundamentals Facilitator](/educate/k5-affiliates-directory) near you and ask them to host one. Many of our facilitators are happy to work with you to organize a training at your school.
 
 If there is no workshop near you, teachers anywhere in the world can use [our self-paced online workshop](/educate/professional-development-online) to get started at no cost. And, the curriculum, lesson plans, tools, and support are also available at no cost worldwide. [Join our forums](https://forum.code.org) to connect with other teachers for support, teaching tips, and best practices.
 <br />
@@ -72,4 +72,4 @@ Help bring professional learning opportunities to your community by becoming a C
 
 <a href="/educate/professional-learning/facilitator"><button>Learn more</button>
 
-<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=1108",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> 
+<%= view :answerdash %>
