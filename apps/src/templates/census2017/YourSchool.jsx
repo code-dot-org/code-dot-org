@@ -56,6 +56,13 @@ class YourSchool extends Component {
     adjustScroll('form');
   };
 
+  handleMapSchoolDropdownChange = (option) => {
+    this.handleSchoolDropdownChange(option);
+    if (option && option.value === '-1') {
+      adjustScroll('form');
+    }
+  };
+
   handleSchoolDropdownChange = (option) => {
     this.setState({
       schoolDropdownOption: option,
@@ -119,14 +126,13 @@ class YourSchool extends Component {
                value={this.props.prefillData ? this.props.prefillData['schoolId'] : undefined}
                fieldName="census-map-school-dropdown"
                schoolDropdownOption={schoolDropdownOption}
-               onChange={this.handleSchoolDropdownChange}
+               onChange={this.handleMapSchoolDropdownChange}
                schoolFilter={this.hasLocation}
              />
              <br/>
              <CensusMap
                fusionTableId={this.props.fusionTableId}
                school={schoolForMap}
-               onSchoolChange={this.handleSchoolDropdownChange}
                onTakeSurveyClick={this.handleTakeSurveyClick}
              />
            </div>

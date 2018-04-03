@@ -1,0 +1,30 @@
+name 'cspu5_assess3_array5_exam_prep'
+wrong '<img src="https://images.code.org/195cd447d0cfe1b4eb048e1a262ebed7-image-1477187443881.png">'
+right '<img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">'
+wrong '<img src="https://images.code.org/a875f2e8fae579e22b2dda3fd3c3a979-image-1477187473193.png">'
+wrong '<img src="https://images.code.org/5e3845cf3512d658ed2f6c0d5a80becf-image-1477187484503.png">'
+wrong '<img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">'
+
+markdown <<MARKDOWN
+What is contained in the list data after the following code segment is run?
+
+![](https://images.code.org/e4059928206fbaeed08fedff3e52a1bc-image-1477187364703.png)
+
+	data <- [10, 45, 38, 16, 23]
+	REMOVE(data, 2)
+	REMOVE(data, 3)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 13**
+
+Going through the code line by line:
+
+* An array named _data_ contains "10,45,38,16,23"
+* You remove the number at index 2.
+* Remember that after removing, the numbers after the removed index are shifted to the left
+* Now, the array looks like: data = [10,38,16,23]
+* You remove the number at index 3. 
+* The array now looks like: data = [10,38,23]
+MARKDOWN

@@ -1,0 +1,31 @@
+name 'cspu5_assess2_wrongLogic_exam_prep'
+wrong 'Any time between 6 and 9'
+wrong 'Any time between 10 and 19'
+wrong 'Any time between 0 and 20'
+right 'There is no value of time that will result in “Good Morning” being displayed'
+wrong 'The logic error will cause the program to stop running at line 7.'
+
+markdown <<MARKDOWN
+**Content: Unit 5 Lesson 9** - ordering of conditions in else-if
+
+Consider the following JavaScript code segment.  
+
+    var time = promptNum(“What hour is it (on a 24 hour clock)?”);
+    var greeting = “”;
+    if (time < 6) {
+        greeting = "It is too early!";
+    } else if (time < 20) {
+        greeting = "Good Day!";
+    } else if (time < 10) {
+        greeting = “Good Morning!”;
+    } else {
+        greeting = "Good Evening!";
+    }
+    console.log(greeting);
+
+Something is wrong with the logic in the program above. For which values of time will the greeting “Good Morning” be displayed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Looking at the two else if statements in the middle, we notice that (time < 20) comes before (time < 10). Since code executes sequentially, "Good Morning" will never be displayed because all values that are between 6 and 10 will first go into the (time < 20) statement due to the order of the code.
+MARKDOWN

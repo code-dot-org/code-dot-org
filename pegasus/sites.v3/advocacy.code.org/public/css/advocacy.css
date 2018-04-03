@@ -1,0 +1,88 @@
+.clear {
+  clear: both;
+}
+
+.greybox {
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #888;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.greybox ul li:before {
+  color: #666;
+}
+
+.info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
+  color: #888;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.fact.subfact {
+  color: #777;
+}
+
+.fact > a {
+  color: #777;
+}
+
+#fullwidth {
+  height: 400px;
+}
+
+#pageheader {
+  background-color: initial !important;
+  position: absolute;
+}
+
+#footer {
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #7665a0;
+}
+
+.banner {
+  background-image: url(/images/advocacy-banner.jpg);
+  height: 400px;
+  background-size: cover;
+  background-position: 50% 40%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  z-index: -5;
+  font-size: 16px;
+}
+
+.banner h1 {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 40px;
+  padding-top: 60px;
+  color: white;
+}
+
+.learn-more {
+  padding-top: 30px;
+}
+
+.header-button {
+  background-color: initial;
+  border-color: white;
+  border-width: 2px;
+}
+
+h2 {
+  font-size: 32px;
+  color: grey;
+  text-align: center;
+}
+
+#audienceblocks {
+  text-align: center;
+  margin-top: 0px;
+}
