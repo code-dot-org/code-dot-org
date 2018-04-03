@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# If run with the "interactive" flag, uns all steps necessary for a full i18n
+# If run with the "interactive" flag, runs all steps necessary for a full i18n
 # update:
 #
 # First, to process newly-added strings, we:
