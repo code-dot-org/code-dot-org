@@ -96,17 +96,14 @@ class SectionProgress extends Component {
 
 export const UnconnectedSectionProgress = SectionProgress;
 
-export default connect(state => {
-  let object = {
+export default connect(state => ({
   scriptId: state.sectionProgress.scriptId,
   section: state.sectionProgress.section,
   validScripts: state.sectionProgress.validScripts,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentScriptData(state),
   studentLevelProgress: getCurrentProgress(state),
-  };
-  return object;
-}, dispatch => ({
+}), dispatch => ({
   loadScript(scriptId) {
     dispatch(loadScript(scriptId));
   },
