@@ -1,7 +1,7 @@
 "vi-VN":
   hour_of_code: Giờ của mã
   hello: Xin chào thế giới
-  'yes': "Đồng ý"
+  'yes': Đồng ý
   'no': Không
   select_language: Vui lòng chọn ngôn ngữ của bạn
   upgrade_ie_message: Code.org sẽ sớm loại bỏ hỗ trợ cho Internet Explorer 8, 9 và
@@ -61,14 +61,14 @@
   hoc2014_support: Hỗ trợ nó &#x25BE;
   hoc2014_whatishoc: Giờ Mã là gì?
   csedweek_map_header: "# CSEdWeek / Các sự kiện Hour of Code trên toàn thế giới"
-  csedweek_map_signup: "Đăng ký sự kiện của bạn"
+  csedweek_map_signup: Đăng ký sự kiện của bạn
   csedweek_map_search_placeholder: Tìm kiếm sự kiện Hour of Code
   csedweek_map_search_search: Tìm kiếm
   csedweek_map_search_reset: Thiết lập lại
   csedweek_map_legend_title: Chú thích
   csedweek_map_legend_event: Sự kiện Hour of Code
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  cded_sign_up: "Đăng ký"
+  cded_sign_up: Đăng ký
   cded_try_it: Hãy thử nó
   try_now: Thử ngay bây giờ
   california_heading: Yêu cầu trường học của bạn giảng dạy khoa học máy tính
@@ -259,8 +259,8 @@
   boys: Nam
   girls: Nữ
   give_my_hour: 'Cho tôi giờ để:'
-  girls_team: "Đội nữ"
-  boys_team: "Đội nam"
+  girls_team: Đội nữ
+  boys_team: Đội nam
   tell_the_world: Nói với thê giới!
   thanks_for_voting: Cảm ơn bạn đã bỏ phiếu!
   share_on_facebook: Chia sẻ lên Facebook
@@ -439,7 +439,7 @@
   homepage_action_text_hoc: Một Giờ Mã Lập Trình dành cho tất cả học sinh.
   homepage_action_text_num_served: phục vụ
   homepage_action_text_join_us: Hãy tham gia với chúng tôi
-  homepage_action_text_sign_up: "Đăng ký"
+  homepage_action_text_sign_up: Đăng ký
   homepage_action_text_try_it: Hãy thử nó
   homepage_action_text_volunteers: Cần tình nguyện viên kỹ thuật
   homepage_action_text_codevideo: Xem video
@@ -469,14 +469,14 @@
   homepage_banner_congress_link: Thêm yêu cầu hỗ trợ của bạn
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: "Đọc thêm"
+  homepage_banner_emailprivacy_link: Đọc thêm
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Tìm hiểu thêm
   homepage_slot_text_title_hoc: Giờ của mã
   homepage_slot_text_blurb_hoc: Ai cũng có thể học. Ngay hôm nay
   homepage_slot_text_link_hoc: Học thử Hour of Code
   homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_host: "Đăng cai một Giờ Lập Trình"
+  homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
   homepage_slot_text_link_hocserved: phục vụ
   homepage_solot_text_link_volunteer: Tình nguyện viên cho Hour of Code
   homepage_slot_text_title_students: học viên
@@ -498,7 +498,7 @@
   homepage_slot_text_link_stats: Xem thống kê
   homepage_slot_text_link_buy: Tham gia
   homepage_slot_text_link_donate: Quyên góp
-  homepage_slot_text_link_shop: "Áo phông, nón và nhiều hơn nữa"
+  homepage_slot_text_link_shop: Áo phông, nón và nhiều hơn nữa
   homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Sản phẩm của học viên Code Studio
   homepage_header_donors: Code.org cảm ơn những người hỗ trợ
@@ -508,14 +508,14 @@
   contact_form_topic_parent: Tôi là một phụ huynh
   contact_form_topic_teacher: Tôi là một giáo viên/giáo dục
   contact_form_topic_outside_us: Tôi đang ở ngoài nước Mỹ.
-  contact_form_topic_contribution: "Đóng góp từ thiện"
+  contact_form_topic_contribution: Đóng góp từ thiện
   contact_form_topic_partner: Tôi muốn là đối tác
   contact_form_topic_other: Khác
   contact_form_label_topic: Chủ đề
-  contact_form_label_email: "Địa chỉ email của bạn"
+  contact_form_label_email: Địa chỉ email của bạn
   contact_form_label_message: Tin nhắn
   contact_form_label_submit: Gửi thư
-  class_submission_in_school: "Ở trường"
+  class_submission_in_school: Ở trường
   class_submission_in_school_daily_programming_course: Khoá lập trình hàng ngày
   class_submission_in_school_ap_computer_science: khoa học máy tính AP
   class_submission_in_school_full_university_cs_curriculum: Chương trình KHMT đầy
@@ -540,7 +540,7 @@
   class_submission_level_elementary: Tiểu học
   class_submission_level_middle_school: Trung học cơ sở
   class_submission_level_high_school: Trung học phổ thông
-  class_submission_level_college: "Đại học và cao đẳng"
+  class_submission_level_college: Đại học và cao đẳng
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
@@ -719,7 +719,7 @@
   volunteer_engineer_submission_field_company: Công ty (hoặc Đại Học)
   volunteer_engineer_submission_field_company_placeholder: Công ty (hoặc Đại Học)
   volunteer_engineer_submission_field_experience_level: Kinh nghiệm
-  volunteer_engineer_submission_field_location: "Địa điểm"
+  volunteer_engineer_submission_field_location: Địa điểm
   volunteer_engineer_submission_field_location_desc: Vị trí của bạn sẽ được sử dụng
     để cho phép các giáo viên để tìm kiếm các tình nguyện viên gần đó và sẽ được hiển
     thị như một nút ghim trên bản đồ. Nếu bạn lo lắng về vấn đề bảo mật, xin vui lòng
@@ -745,10 +745,10 @@
     hãy chắc chắn thêm nó ở đây.
   volunteer_engineer_submission_header_private: Thông tin giữ kín và không bao giờ
     bị chia sẻ
-  volunteer_engineer_submission_field_email: "Địa chỉ Email"
-  volunteer_engineer_submission_field_email_desc: "Địa chỉ email của bạn sẽ không
-    bao giờ được chia sẻ, nhưng chúng tôi sẽ gửi cho bạn yêu cầu từ giáo viên."
-  volunteer_engineer_submission_field_email_placeholder: "Địa chỉ Email"
+  volunteer_engineer_submission_field_email: Địa chỉ Email
+  volunteer_engineer_submission_field_email_desc: Địa chỉ email của bạn sẽ không bao
+    giờ được chia sẻ, nhưng chúng tôi sẽ gửi cho bạn yêu cầu từ giáo viên.
+  volunteer_engineer_submission_field_email_placeholder: Địa chỉ Email
   volunteer_engineer_submission_final_paragraph: Bạn sẽ được liệt kê trên một bản
     đồ cho các giáo viên địa phương liên hệ với bạn cho chương trình Hour of Code
     hoặc cơ hội tình nguyện viên khác. Email và địa chỉ chính xác của bạn sẽ không
@@ -781,8 +781,8 @@
   volunteer_engineer_submission_experience_unspecified: Không xác định
   volunteer_engineer_submission_experience_tech_company: Không phải kỹ sư tại một
     công ty công nghệ
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Đang
-    là sinh viên đại học (hoặc Nghiên cứu sinh sau đại học)"
+  volunteer_engineer_submission_experience_university_student_or_researcher: Đang
+    là sinh viên đại học (hoặc Nghiên cứu sinh sau đại học)
   volunteer_engineer_submission_experience_software_professional: Chuyên gia phần
     mềm
   volunteer_engineer_submission_distance_8: 5 dặm
@@ -821,11 +821,11 @@
     tôi.
   dashboard_landing_print_certificates: In giấy chứng nhận cho học sinh hoàn thành
     khóa học này
-  dashboard_landing_educator_blog: "Đọc về tin tức và cập nhật của chúng tôi tại tài
-    liệu blog giáo dục của chúng tôi"
+  dashboard_landing_educator_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài
+    liệu blog giáo dục của chúng tôi
   dashboard_landing_video_player: Kiểm tra video player mới tại trường của bạn
   dashboard_landing_progress_title: Tiến độ lớp chính
-  dashboard_landing_progress_biggest: "Đây là tiến độ cho phần bạn học nhiều nhất."
+  dashboard_landing_progress_biggest: Đây là tiến độ cho phần bạn học nhiều nhất.
   dashboard_landing_view_progress: Xem tiến độ cho %{biggest_section}
   dashboard_landing_print_progress: Quá trình in
   dashboard_landing_available_title: Các khóa học có sẵn
@@ -878,10 +878,10 @@
   dashboard_course_csp: AP® Computer Science Principles
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
-  dashboard_landing_loading: "Đang tải..."
+  dashboard_landing_loading: Đang tải...
   dashboard_action_cancel: Huỷ
   dashboard_action_delete: Xóa
-  dashboard_action_delete_yes: "Đồng ý"
+  dashboard_action_delete_yes: Đồng ý
   dashboard_action_delete_no: Không
   dashboard_action_confirm: Xóa?
   dashboard_action_done: Hoàn thành
@@ -926,8 +926,8 @@
   dashboard_progress_not_completed: chưa hoàn thành
   dashboard_progress_completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
   dashboard_progress_completed_perfect: hoàn thành, hoàn hảo
-  dashboard_progress_furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
-  dashboard_progress_submitted: "đã gửi"
+  dashboard_progress_furthest_level_attempted: đã cố gắng ở mức độ cao nhất
+  dashboard_progress_submitted: đã gửi
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
@@ -941,7 +941,7 @@
     their progress and manage their accounts.
   dashboard_sections_table_section: Học phần
   dashboard_sections_table_secret: Loại đăng nhập
-  dashboard_sections_table_grade: "Điểm số"
+  dashboard_sections_table_grade: Điểm số
   dashboard_sections_table_course: Khóa học
   dashboard_sections_table_pairing_allowed: Lập trình đôi
   dashboard_sections_table_stage_extras: Stage Extras
@@ -960,7 +960,7 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_sections_close: "Đóng"
+  dashboard_sections_close: Đóng
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -1075,7 +1075,7 @@
   dashboard_grade_other: Khác
   dashboard_login_word: Từ
   dashboard_login_picture: Hình ảnh
-  dashboard_login_none: "Địa chỉ email"
+  dashboard_login_none: Địa chỉ email
   dashboard_stage: giai đoạn
   dashboard_puzzle: Câu đố
   dashboard_question: Câu hỏi
@@ -1085,15 +1085,15 @@
   dashboard_correctness_unsubmitted: Chưa gửi lên
   dashboard_correctness_correct: Chính xác
   dashboard_correctness_incorrect: Không đúng
-  dashboard_submission_submitted: "Đã gửi lên"
-  dashboard_submission_in_progress: "Đang thực hiện ..."
+  dashboard_submission_submitted: Đã gửi lên
+  dashboard_submission_in_progress: Đang thực hiện ...
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
   dashboard_multi_correct_percent: "% multiple choice correct"
   dashboard_submission_timestamp: Submission timestamp
-  stats_hoc_2013_heading: "Đáng kinh ngạc số liệu thống kê từ cuối năm Giờ Mã. Trong
-    một tuần:"
+  stats_hoc_2013_heading: 'Đáng kinh ngạc số liệu thống kê từ cuối năm Giờ Mã. Trong
+    một tuần:'
   stats_hoc_2013_image_alt: Số liệu thống kê Giờ Lập Trình từ năm 2013
   dashboard_teacher: Giáo viên
   dashboard_student: học sinh
@@ -1113,7 +1113,7 @@
   dashboard_faq: Câu hỏi thường gặp
   dashboard_faq_k5: Câu thường hỏi tiểu học
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
-  code_sign_up: "Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính"
+  code_sign_up: Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính
   host_an_hour: Host an hour
   learn_banner_title: Join us for the Hour of Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
@@ -1125,7 +1125,7 @@
   learn_more: Tìm hiểu thêm
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: "Đăng ký"
+  learn_sign_up_button: Đăng ký
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -2023,7 +2023,7 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "đập cánh"
+  flappy_shortcode: đập cánh
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
@@ -2039,18 +2039,18 @@
   header_educate_middle: Trung học
   header_educate_high: Cao học
   header_educate_hoc: Giờ của mã
-  header_educate_partner: "Đối tác của chúng tôi"
-  header_educate_beyond: "Đằng sau Code.org"
+  header_educate_partner: Đối tác của chúng tôi
+  header_educate_beyond: Đằng sau Code.org
   header_educate_inspire: Truyền cảm hứng cho Hssv
   header_educate_community: Cộng đồng trực tuyến
   header_educate_tools: Các công cụ và video
   header_about_us: Thông tin
   header_about_leadership: Khả năng lãnh đạo
   header_about_donors: Người tặng
-  header_about_partners: "Đối tác"
-  header_about_team: "Đủ Thành viên"
+  header_about_partners: Đối tác
+  header_about_team: Đủ Thành viên
   header_about_news: Phòng tin tức
-  header_about_evaluation: "Đánh giá"
+  header_about_evaluation: Đánh giá
   header_about_jobs: Công việc
   header_about_contact: Liên hệ
   header_about_faqs: Hỏi đáp
@@ -2069,8 +2069,8 @@
   full_course_category_name: Full Courses
   user_header_label: Chào %{username}
   user_header_settings: Tài khoản của bạn
-  user_header_logout: "Đăng xuất"
-  user_header_signin: "Đăng nhập"
+  user_header_logout: Đăng xuất
+  user_header_signin: Đăng nhập
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}
