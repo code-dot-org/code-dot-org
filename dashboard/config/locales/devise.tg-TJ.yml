@@ -1,7 +1,7 @@
 "tg":
   devise:
     confirmations:
-      confirmed: "Нишонии почтаи электронии шумо бо муваффақият тасдиқ карда шуд."
+      confirmed: Нишонии почтаи электронии шумо бо муваффақият тасдиқ карда шуд.
       send_instructions: You will receive an email with instructions about how to
         confirm your account in a few minutes.
       send_paranoid_instructions: If your email address exists in our database, you
@@ -10,10 +10,10 @@
     failure:
       already_authenticated: You are already signed in.
       inactive: Your account was not activated yet.
-      invalid: "Почтаи электронӣ ё ниҳонвожа нодуруст аст."
+      invalid: Почтаи электронӣ ё ниҳонвожа нодуруст аст.
       invalid_token: Invalid authentication token.
       locked: Your account is locked.
-      not_found_in_database: "Почтаи электронӣ ё ниҳонвожа нодуруст аст."
+      not_found_in_database: Почтаи электронӣ ё ниҳонвожа нодуруст аст.
       timeout: Your session expired, please sign in again to continue.
       unauthenticated: You need to sign in or sign up before continuing.
       unconfirmed: You have to confirm your account before continuing.
@@ -66,7 +66,7 @@
       confirmation_period_expired: needs to be confirmed within %{period}, please
         request a new one
       expired: has expired, please request a new one
-      not_found: "ёфт нашуд"
+      not_found: ёфт нашуд
       not_locked: was not locked
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
