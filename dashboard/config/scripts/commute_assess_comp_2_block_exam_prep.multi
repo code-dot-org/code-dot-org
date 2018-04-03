@@ -1,0 +1,11 @@
+name 'Commute Assess - comp 2 - block_exam_prep'
+question 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
+right 'Returns the largest of the three numbers'
+wrong 'Set all three inputs to a temporary value'
+wrong 'Return the smallest of the three numbers '
+wrong 'Randomly returns on of the three numbers'
+wrong 'This code will cause an error'
+
+markdown <<MARKDOWN
+![](https://images.code.org/01c1cd1999d749a3d6f25ec39d3dc4f5-image-1483980229022.png)
+MARKDOWN

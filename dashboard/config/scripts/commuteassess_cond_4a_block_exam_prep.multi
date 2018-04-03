@@ -1,0 +1,14 @@
+name 'CommuteAssess - Cond 4a - block_exam_prep'
+question 'What will be displayed after this code has run?'
+wrong '<pre>The word is too short!</pre>'
+wrong '<pre>The word it too long!</pre>'
+right '<pre>The word is just right!</pre>'
+wrong '<pre>The word is still too short!</pre>'
+wrong '<pre>The word is just right!<br>The word is still too short!</pre>'
+wrong 'Nothing will be displayed'
+markdown <<MARKDOWN
+<!-- OLD <img src="https://images.code.org/b99a8b9ea7640427e10a331191e5a0ae-image-1482958340012.png" style="width: 545px"> -->
+
+
+![](https://images.code.org/c8eb0be2d7ef8659be0ee1721b1e87b8-image-1483467907570.png)
+MARKDOWN

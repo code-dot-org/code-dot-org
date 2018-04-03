@@ -692,11 +692,9 @@ function loadPendingFramesFromSource(key, props, callback) {
  * the spritesheet.
  * @param {!AnimationKey} key
  * @param {!SerializedAnimationProps} props
- * @param {boolean} withVersion - Whether to request a specific version of the
- *        animation if pulling from the local project.
  * @returns {string}
  */
-export function animationSourceUrl(key, props, withVersion = false) {
+export function animationSourceUrl(key, props) {
   // TODO: (Brad) We want to get to where the client doesn't know much about
   //       animation versions, by switching to Chris' new Files API.
   //       in the meantime, be able to request versions only when we export
@@ -710,17 +708,8 @@ export function animationSourceUrl(key, props, withVersion = false) {
   }
 
   // 2. Otherwise it's local to this project, and we should use the animation
-  //    key to look it up in the animations API.
-  return animationsApi.basePath(key) + '.png' +
-      (
-        (withVersion && props.version)
-        ? '?version=' + props.version
-        // Temporary: Local-cachebust animation requests, so after restoring
-        // and old version of the project the client isn't seeing newer animations.
-        // Should be able to tear this out once we always request animations
-        // by specific version.
-        : '?cachebust=' + Math.floor(Math.random() * 0xFFFFFF).toString(16)
-      );
+  //    key and version to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png?version=' + (props.version || '');
 }
 
 /**
@@ -735,7 +724,7 @@ export function withAbsoluteSourceUrls(serializedList) {
   list.orderedKeys.forEach(key => {
     let props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, props, true);
+    const relativeUrl = animationSourceUrl(key, props);
     const sourceLocation = document.createElement('a');
     sourceLocation.href = relativeUrl;
     props.sourceUrl = sourceLocation.href;
