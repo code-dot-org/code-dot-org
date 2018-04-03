@@ -1,4 +1,5 @@
 @dashboard_db_access
+@no_mobile
 Feature: Public Project Gallery
 
 Background:
@@ -6,7 +7,6 @@ Background:
   And I give user "Project_Czar" project validator permission
   And I remove featured projects from the gallery
 
-@no_mobile
 Scenario: Published Projects Show In Recency Order
   Then I make a playlab project named "Older Published"
   Then I publish the project
@@ -18,7 +18,6 @@ Scenario: Published Projects Show In Recency Order
   Given I am on "http://studio.code.org/projects/public"
   Then I wait until the first "#ui-project-name" contains text "Newer Published"
 
-@no_mobile
 Scenario: Featured Projects Show Before Published Projects
   Then I make a playlab project named "First Featured"
   Then I publish the project
@@ -33,7 +32,6 @@ Scenario: Featured Projects Show Before Published Projects
   Then I wait until element ".project_card" is in the DOM
   And I wait until the first "#ui-project-name" contains text "First Featured"
 
-@no_mobile
 Scenario: UnPublished, Featured Projects Do Not Show
   Then I make a playlab project named "Published, Featured"
   Then I publish the project
