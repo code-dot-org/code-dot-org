@@ -18,7 +18,6 @@
 #  index_auth_on_cred_type_and_auth_id                          (credential_type,authentication_id,deleted_at) UNIQUE
 #  index_authentication_options_on_email_and_deleted_at         (email,deleted_at)
 #  index_authentication_options_on_hashed_email_and_deleted_at  (hashed_email,deleted_at)
-#  index_authentication_options_on_user_id                      (user_id)
 #  index_authentication_options_on_user_id_and_deleted_at       (user_id,deleted_at)
 #
 
