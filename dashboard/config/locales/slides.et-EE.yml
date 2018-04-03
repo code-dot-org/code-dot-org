@@ -97,9 +97,9 @@
           et arvutid saavad olla interaktiivsed.
       2:
         image: notes/flappy02.jpg
-        text: "Ükskõik millal, kui keegi klõpsab, vajutab ekraanile või kirjutab arvutis
+        text: Ükskõik millal, kui keegi klõpsab, vajutab ekraanile või kirjutab arvutis
           või telefonis luuakse SÜNDMUS ja siin on jupp koodi mis otsustab mida teha
-          kui SÜNDMUS aset leiab."
+          kui SÜNDMUS aset leiab.
       3:
         image: notes/flappy03.jpg
         text: 'Näiteks sul võib olla mõni SÜNDMUSE- KÄSITSEJA mis ütleb "kui klikitakse,
@@ -342,10 +342,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: "Õnnitlused! Koos viimase lahendatud puslega kirjutasid sa just koodi,
+        text: Õnnitlused! Koos viimase lahendatud puslega kirjutasid sa just koodi,
           mis saab öelda igale robotile, kuidas leida tee läbi iga pikkusega mitte-hargneva
           labürindi või tunneli, olgu see siis zombi, lind, marsi kulgur või isegi
-          isesõitev auto."
+          isesõitev auto.
       2:
         image: notes/hoc6_2.jpg
         text: Põhimõisted, mida sa kasutasid, on iga programmi või rakenduse südames,
@@ -447,10 +447,10 @@
           kolledžis.
       2:
         image: notes/frozen3_2.jpg
-        text: "Üks kõige tähtsamaid küsimusi arvutiteaduses on see, kuidas määratleda
+        text: Üks kõige tähtsamaid küsimusi arvutiteaduses on see, kuidas määratleda
           uusi käske. Enamikus arvutikeeltes on kõigest umbes 100 sõna või käsku.
           Ja võlu peitubki selles, kuidas nendest ehitusplokkidest kokku panna omaenda
-          uusi sõnu."
+          uusi sõnu.
       3:
         image: notes/frozen3_3.jpg
         text: Kui oled arvutile õpetanud, kuidas käsujada abil mõnd tegevust sooritada,
@@ -735,10 +735,9 @@
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused.
-          Kui inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti
-          võib sama asja korrata miljon või biljon korda ning temal ei hakka kunagi
-          igav."
+        text: Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused. Kui
+          inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti võib
+          sama asja korrata miljon või biljon korda ning temal ei hakka kunagi igav.
       2:
         image: notes/C1_maze_loops_2.png
         text: Näiteks kui tahaksin kõigile Facebookis palju õnne soovida e-kirjaga,
@@ -859,13 +858,13 @@
           järgides maha istutada? See on nagu piltidega programmeerimine! '
       5:
         image: notes/C1_planting_seed_5.png
-        text: "Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
+        text: 'Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
           suur samm koosneb paljudest väiksematest sammudest. Saame valida erinevate
           retseptide ja algoritmide vahel, sõltuvalt sellest, mis maitsega šokolaadi
           soovime. Iga samm, isegi kõige väiksem, on nii oluline, et ilma seda läbimata
           ei saa sooritada ka ülejäänud toiminguid. On väga tähtis luua algoritme,
           millest teised aru saavad. Seepärast tuleb iga samm kirja panna nii, et
-          ükskõik kes seda teeb, oleks tulemus sama.  "
+          ükskõik kes seda teeb, oleks tulemus sama.  '
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
@@ -900,10 +899,9 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused.
-          Kui inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti
-          võib sama asja korrata miljon või biljon korda ning temal ei hakka kunagi
-          igav."
+        text: Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused. Kui
+          inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti võib
+          sama asja korrata miljon või biljon korda ning temal ei hakka kunagi igav.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
         text: Näiteks kui tahaksin kõigile Facebookis palju õnne soovida e-kirjaga,
@@ -1200,13 +1198,13 @@
           saamiseks äärmiselt vajalik.   '
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: "Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
+        text: 'Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
           suur samm koosneb paljudest väiksematest sammudest. Saame valida erinevate
           retseptide ja algoritmide vahel, sõltuvalt sellest, mis maitsega šokolaadi
           soovime. Iga samm, isegi kõige väiksem, on nii oluline, et ilma seda läbimata
           ei saa sooritada ka ülejäänud toiminguid. On väga tähtis luua algoritme,
           millest teised aru saavad. Seepärast tuleb iga samm kirja panna, nii et
-          ükskõik kes seda teeb, oleks tulemus sama.  "
+          ükskõik kes seda teeb, oleks tulemus sama.  '
     C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -1250,10 +1248,10 @@
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: "Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused.
-          Kui inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti
-          võib sama asja korrata miljoneid või miljardeid kordi ning temal ei hakka
-          kunagi igav."
+        text: Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused. Kui
+          inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti võib
+          sama asja korrata miljoneid või miljardeid kordi ning temal ei hakka kunagi
+          igav.
       2:
         image: notes/C2_zuck_repeat_loop_2.png
         text: 'Näiteks kui tahaksin kõigile Facebookis palju õnne soovida e-kirjaga,
@@ -1281,10 +1279,10 @@
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: "Üks tore asi programmeerimise juures on see, et kui olete arvutile
-          õpetanud, kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni
-          uuesti teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha.
-          See on nagu keelde uute sõnade lisamine."
+        text: Üks tore asi programmeerimise juures on see, et kui olete arvutile õpetanud,
+          kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni uuesti
+          teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha. See
+          on nagu keelde uute sõnade lisamine.
       2:
         image: notes/C3_artist_functions_2.png
         text: Oma programmis õppisime, kuidas joonistada ruutu neli korda edasi liikudes
@@ -1362,10 +1360,10 @@
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: "Üks kõige tähtsamaid küsimusi arvutiteaduses  on see, kuidas määratleda
+        text: Üks kõige tähtsamaid küsimusi arvutiteaduses  on see, kuidas määratleda
           uusi käske – kuidas lisada arvutikeelde uusi sõnu. Enamikus arvutikeeltes
           on kõigest umbes 100 sõna või käsku. Võlu peitub selles, kuidas nendest
-          klotsidest kokku panna omaenda uusi sõnu."
+          klotsidest kokku panna omaenda uusi sõnu.
       2:
         image: notes/C3_bee_functions_2.png
         text: 'Spordis teeme seda kogu aeg. Näiteks korvpallis alustatakse sellest,
@@ -1778,10 +1776,10 @@
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: "Üks tore asi programmeerimise juures on see, et kui olete arvutile
-          õpetanud, kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni
-          uuesti teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha.
-          See on nagu keelde uute sõnade lisamine."
+        text: Üks tore asi programmeerimise juures on see, et kui olete arvutile õpetanud,
+          kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni uuesti
+          teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha. See
+          on nagu keelde uute sõnade lisamine.
       2:
         image: notes/C4_function_edit_2.png
         text: Oma programmis õppisime, kuidas joonistada ruutu neli korda edasi liikudes
@@ -2225,10 +2223,10 @@
           õppetunni plaanist.
       2:
         image: notes/unplug2_2.png
-        text: "Õpilased jagunevad juhiste kirjutamiseks rühmadesse ja annavad need
+        text: 'Õpilased jagunevad juhiste kirjutamiseks rühmadesse ja annavad need
           üle teisele rühmale, kes peab koletise joonistama. Rühmad kirjutavad juhised,
           kasutades arvutusliku mõtlemise nelja etappi: osadeks jaotamine, mustrite
-          otsimine, eraldamine ja algoritmid."
+          otsimine, eraldamine ja algoritmid.'
       3:
         image: notes/unplug2_3.png
         text: Rühmad jaotavad kõigepealt ülesande osadeks ehk koostavad mänguplaani.
@@ -2238,9 +2236,9 @@
           on silmad, seega saame kirjutada rea, mis jätab koletise silmad tühjaks.
       4:
         image: notes/unplug2_4.png
-        text: "Õpilased saavad kirjutada juhised, mida nimetatakse algoritmiks ja
-          mis loetleb koletise osad, jättes silmad tühjaks. Nad annavad juhised edasi
-          teistele õpilastele, kes loovad oma koletise."
+        text: Õpilased saavad kirjutada juhised, mida nimetatakse algoritmiks ja mis
+          loetleb koletise osad, jättes silmad tühjaks. Nad annavad juhised edasi
+          teistele õpilastele, kes loovad oma koletise.
     unplug3:
       1:
         image: notes/unplug3_1.png
@@ -2266,10 +2264,10 @@
           teha.
       2:
         image: notes/unplug4_2.png
-        text: "Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
+        text: Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
           paberilehte voltida, et moodustada kuusteist identset ristkülikut. Seejärel
           arutame, kuidas mitu eri lahendust võivad anda sama lõpptulemuse ja miks
-          mõni lahendus on parem kui teine."
+          mõni lahendus on parem kui teine.
     unplug5:
       1:
         image: notes/unplug5_1.png
@@ -2280,10 +2278,10 @@
           teha.
       2:
         image: notes/unplug5_2.png
-        text: "Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
+        text: Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
           paberilehte voltida, et moodustada kuusteist identset ristkülikut. Seejärel
           arutame, kuidas mitu eri lahendust võivad anda sama lõpptulemuse ja miks
-          mõni lahendus on parem kui teine."
+          mõni lahendus on parem kui teine.
     unplug6:
       1:
         image: notes/unplug6_1.png
@@ -2333,10 +2331,10 @@
           abi.
       3:
         image: notes/unplug8_3.png
-        text: "Üks funktsioon võib lahendada paljusid eri probleeme. Tihti kirjutatakse
+        text: Üks funktsioon võib lahendada paljusid eri probleeme. Tihti kirjutatakse
           kõigi nende probleemide jaoks eraldi funktsioonid märkamata, et nende vahe
           on väga väike. Kui see väike erinevus lahendada, saab 14 funktsiooni asemel
-          üht funktsiooni palju kordi kasutada"
+          üht funktsiooni palju kordi kasutada
     unplug9:
       1:
         image: notes/unplug9_1.png
@@ -2363,10 +2361,10 @@
           sõnumi (nt meili) saatmist.
       2:
         image: notes/unplug10_2.png
-        text: "Õpilased edastavad sõnumeid, mängides üht kolmest edastusmeetodist:
+        text: 'Õpilased edastavad sõnumeid, mängides üht kolmest edastusmeetodist:
           traadita Internet, DSL või kiudoptiline kaabel. WiFit mängivad õpilased
           peavad sõnumit peas kandma, sest WiFi kaudu on suurim tõenäosus osa teavet
-          kaotada."
+          kaotada.'
       3:
         image: notes/unplug10_3.png
         text: DSL-i või kaablit mängivad õpilased kannavad sõnumit käeseljal, kus
@@ -2493,10 +2491,10 @@
           Ja tehnoloogia ongi selle võtmeks.
       2:
         image: notes/starwars_events_2.JPG
-        text: "Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
+        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
           proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
           selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
-          on R2-D2 ja C3PO."
+          on R2-D2 ja C3PO.
       3:
         image: notes/starwars_events_3.JPG
         text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
@@ -2620,10 +2618,10 @@
           Ja tehnoloogia ongi selle võtmeks.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
+        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
           proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
           selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
-          on R2-D2 ja C3PO."
+          on R2-D2 ja C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
@@ -2759,8 +2757,8 @@
           liigutamiseks. Kordustsüklid on programmeerimises väga võimsad.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Öö saabub ja paaril järgmisel tasemel ehitame maja, et meil oleks turvaline.
-          Kordusploki kasutamine muudab selle meile lihtsaks."
+        text: Öö saabub ja paaril järgmisel tasemel ehitame maja, et meil oleks turvaline.
+          Kordusploki kasutamine muudab selle meile lihtsaks.
       6:
         image: notes/mc_repeat_6.JPG
         text: Majaseina ehitamiseks võime käskida Alexil edasi liikuda ja neli planku
