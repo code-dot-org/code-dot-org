@@ -496,21 +496,21 @@
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Course 4 Artist 4_callout:
-        repeat_full_circle: "Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να
-          κινηθεί για να κάνει έναν πλήρη κύκλο"
+        repeat_full_circle: Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να κινηθεί
+          για να κάνει έναν πλήρη κύκλο
       Course 4 Artist 7_callout:
         repeat_blocks: Χρησιμοποίησε το "Επανάλαβε" μπλοκ και πιάσε ένα γύρο όλα τα
           μπλοκ στον χώρο εργασίας
       Course 4 Artist For Loops 4_callout:
-        place_counter_variable: "Σύρε τη μεταβλητή μετρητή μέσα σε αυτό το μπλοκ"
+        place_counter_variable: Σύρε τη μεταβλητή μετρητή μέσα σε αυτό το μπλοκ
       Course 4 Artist Functions 4_callout:
         create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την
           επιλογή "Δημιουργία Συνάρτησης".
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint: "Δεν πειράζει αν η εικόνα δεν μοιάζει ακόμη με  σπίτι. Θα το φτιάξουμε
-          στο επόμενο πρόβλημα."
+        house_hint: Δεν πειράζει αν η εικόνα δεν μοιάζει ακόμη με  σπίτι. Θα το φτιάξουμε
+          στο επόμενο πρόβλημα.
       Course 4 Artist Functions 8_callout:
-        edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
       Course 4 Artist Functions challenge_callout:
         Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
           and put them behind categories to keep things tidy.  Click here to find
@@ -535,10 +535,10 @@
         set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή
           τιμή.
       Course 4 Artist Vars 3_callout:
-        place_variable: "Σύρε τη μεταβλητή σου μέσα σε αυτό το μπλοκ"
+        place_variable: Σύρε τη μεταβλητή σου μέσα σε αυτό το μπλοκ
       Course 4 Artist Vars 6_callout:
-        degrees_per_side: "Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη
-          γωνία σε μοίρες."
+        degrees_per_side: Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη
+          γωνία σε μοίρες.
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
           coding area wider.
@@ -557,8 +557,8 @@
         actions_category: Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι
           εδώ μέσα τώρα.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: "Χρησιμοποίησε αυτό το πλήκτρο για να διορθώσεις τη συνάρτηση
-          και άλλαξε την κατεύθυνση της Μέλισσας να γυρίσει να πάρει το νέκταρ."
+        edit_get_nectar: Χρησιμοποίησε αυτό το πλήκτρο για να διορθώσεις τη συνάρτηση
+          και άλλαξε την κατεύθυνση της Μέλισσας να γυρίσει να πάρει το νέκταρ.
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called
@@ -570,18 +570,18 @@
         Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other
           blocks in the workspace
       Course 4 Maze 4_callout:
-        repeat: "Βάλτε το μπλοκ μέσα στο βρόχο για να επαναλάβει τις εντολές"
+        repeat: Βάλτε το μπλοκ μέσα στο βρόχο για να επαναλάβει τις εντολές
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that
           it uses the height parameter.
       Course 4 Play Lab Params 3_callout:
-        edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
       Course 4 Play Lab Params 5_callout: []
       Course 4 Play Lab Params 6_callout:
         edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο
           στην συνάρτή σου
       Course 4 Play Lab Vars 1_callout:
-        arrows_move_actor: "Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό"
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
       Course 4 Play Lab Vars 6_callout: []
       Course 4 Play Lab Vars 9_callout:
         Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
@@ -602,7 +602,7 @@
         Course_4_SCV_6: This block allows you to customize your color to almost anything
           you want to see!  Play around with the numbers to see what happens!
       CourseF_PlayLab_vars1_callout:
-        arrows_move_actor: "Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό"
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
       CourseF_PlayLab_vars10_callout:
         Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
           Click on a label to see the pieces inside.
@@ -627,7 +627,7 @@
         Eval Define Funcs 3: Make our function use the radius parameter instead of
           always having a radius of 50.
       Eval Design Recipe .1_callout:
-        edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
       Eval Design Recipe 3_callout:
         eval_design_recipe_3: This is your function definition. This code runs every
           time you use the 'wide-rect' function
@@ -644,11 +644,11 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
-          διαφορετικές χιονονιφάδες!"
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
       Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
-          διαφορετικές χιονονιφάδες!"
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
       Function intro Ryan_callout:
         Function_intro_Ryan_1: Αυτή η μικρή οδηγία "λέει" στον υπολογιστή να εκτελέσει
           το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας.
@@ -662,16 +662,16 @@
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
           into categories.  Click on these words to see where everything went!
       Infinity_move_collide_callout:
-        Infinity_move_collide_callout: "Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός."
+        Infinity_move_collide_callout: Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός.
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout: "Ποιο μπλοκ θα κάνει τον Baymax να μετακινηθεί
-          προς τα πάνω όταν πατιέται το πάνω βελάκι;"
-        Infinity_move_directions_callout_arrow: "Χρησιμοποιήστε αυτά τα βελάκια για
-          να το κατευθύνετε"
+        Infinity_move_directions_callout: Ποιο μπλοκ θα κάνει τον Baymax να μετακινηθεί
+          προς τα πάνω όταν πατιέται το πάνω βελάκι;
+        Infinity_move_directions_callout_arrow: Χρησιμοποιήστε αυτά τα βελάκια για
+          να το κατευθύνετε
       Infinity_move_right_callout:
-        Infinity_move_right_runbutton: "Προσθέστε εδώ το μπλοκ μετακίνησης"
+        Infinity_move_right_runbutton: Προσθέστε εδώ το μπλοκ μετακίνησης
       Infinity_repeat_callout:
-        Infinity_repeat_callout: "Τοποθετήστε τα μπλοκ μετακίνησης εδώ μέσα"
+        Infinity_repeat_callout: Τοποθετήστε τα μπλοκ μετακίνησης εδώ μέσα
       InspirationalArtwork_callout:
         InspirationalArtwork_1: Try using the new `comment` block under this label
           to leave yourself notes inside your program!
@@ -697,36 +697,35 @@
       MC HOC 2016 New Walk_callout:
         MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
       MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: "Χρησιμοποίησε τα πλήκτρα βέλους ή κάνε κλικ εδώ για
-          να ξεκινήσεις να μετακινείς τον παίκτη."
+        MC_HOC_2017_01_Cole_2: Χρησιμοποίησε τα πλήκτρα βέλους ή κάνε κλικ εδώ για
+          να ξεκινήσεις να μετακινείς τον παίκτη.
       MC_HOC_2017_01_Kiki_callout: []
       MC_HOC_2017_02_Cole_callout: []
       MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: "Τώρα ο παίκτης σου έχει ένα φιλαράκι!  Μπορείς να
-          γράψεις κώδικα για τον Agent, ώστε να σε βοηθήσει να περάσεις τα διάφορα
-          επίπεδα."
+        MC_HOC_2017_02_Cole_1: Τώρα ο παίκτης σου έχει ένα φιλαράκι!  Μπορείς να γράψεις
+          κώδικα για τον Agent, ώστε να σε βοηθήσει να περάσεις τα διάφορα επίπεδα.
       MC_HOC_2017_03_Cole_callout:
         MC_HOC_2017_03_Cole_1: Αυτός είναι ένας βρόχος "επανάλαβε"!  Τοποθέτησέ τον
           στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά
           και ξανά.
       MC_HOC_2017_04_Cole_callout:
-        MC_HOC_2017_04_Cole_a: "Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά
-          ο παίκτης όχι!"
+        MC_HOC_2017_04_Cole_a: Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο
+          παίκτης όχι!
       MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: "Τοποθέτησέ το στο χώρο εργασίας και πρόσθεσε κώδικα
-          για να επαναληφθεί ξανά και ξανά!"
+        MC_HOC_2017_04_Kiki_1: Τοποθέτησέ το στο χώρο εργασίας και πρόσθεσε κώδικα
+          για να επαναληφθεί ξανά και ξανά!
       MC_HOC_2017_06_Cole_callout:
-        MC_HOC_2017_06_Cole_1: "Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά
-          μπορείς να τους επεξεργαστείς!"
+        MC_HOC_2017_06_Cole_1: Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά
+          μπορείς να τους επεξεργαστείς!
       MC_HOC_2017_08_RY_callout:
-        MC_HOC_2017_08_RY_1: "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
-          όχι!  "
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
+          όχι!  '
       MC_HOC_2017_08_Will_callout:
-        MC_HOC_2017_08_RY_1: "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
-          όχι!  "
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
+          όχι!  '
       MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
-          όχι!  "
+        MC_HOC_2017_08_RY_1: 'Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης
+          όχι!  '
       MSM Defining Vars 2_callout:
         MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
           update the function
@@ -745,14 +744,14 @@
         NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
           that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
-        edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
-        function_editor_draw_square: "Αυτός είναι ορισμός της συνάρτηση σου. Αυτά
-          τα μπλοκ ενεργοποιούνται κάθε φορά που χρησιμοποιείς το μπλοκ «Σχεδίασε
-          ένα τετράγωνο»"
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
+        function_editor_draw_square: Αυτός είναι ορισμός της συνάρτηση σου. Αυτά τα
+          μπλοκ ενεργοποιούνται κάθε φορά που χρησιμοποιείς το μπλοκ «Σχεδίασε ένα
+          τετράγωνο»
       NEW Course 4 Artist Functions 7_callout:
-        edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
       NEW Course 4 Artist Functions 8_callout:
-        edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
+        edit_function: Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου.
       NEW Course 4 Artist Params 10_callout:
         create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την
           επιλογή "Δημιουργία Συνάρτησης".
@@ -766,8 +765,8 @@
         add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί
           "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable: "Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει
-          τα ερωτηματικά"
+        place_length_variable: Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει
+          τα ερωτηματικά
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop: Enter the largest number of nectar you want the bee to collect
           here
@@ -782,8 +781,8 @@
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       New Frozen Project_callout:
-        snowflake_dropdown: "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
-          διαφορετικές χιονονιφάδες!"
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
@@ -796,15 +795,15 @@
       Ninjacat Demo No Animate_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Overworld Chop Trees_callout:
-        craft_callout_preplaced: "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
       Overworld Chop Trees_2018_callout:
-        craft_callout_preplaced: "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
+        craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house: "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το
-          σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
+          σου. Μπορείς να τον ολοκληρώσεις;
       Overworld House Frame Chosen_2018_callout:
-        craft_callout_preplaced_house: "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το
-          σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
+        craft_callout_preplaced_house: Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι
+          σου. Μπορείς να τον ολοκληρώσεις;
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Πάτα "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
         craft_drag_block_callout: Drag a "move forward" block and snap it below the
@@ -814,9 +813,9 @@
         craft_drag_block_callout: Drag a "move forward" block and snap it below the
           other block
       Overworld Place Wall_callout:
-        craft_inside_repeat: "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       Overworld Place Wall_2018_callout:
-        craft_inside_repeat: "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
+        craft_inside_repeat: Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ
       PDAlg 13-16 Sam Extension Puzzle_callout: []
       PDAlg 17-20 Luigi Extension Puzzle_callout: []
       PDAlg Big Game History_callout: []
@@ -931,15 +930,15 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward: "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς
-          να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
+          προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
       Underground Avoiding Lava_2018_callout:
-        craft_callout_moveforward: "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς
-          να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
+        craft_callout_moveforward: Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να
+          προσθέσεις μία εντολή για να προχωρήσεις μπροστά;
       Underground Iron_callout:
-        craft_what_is_iron: "Εξόρυξε αυτόν τον σίδηρο!"
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
       Underground Iron_2018_callout:
-        craft_what_is_iron: "Εξόρυξε αυτόν τον σίδηρο!"
+        craft_what_is_iron: Εξόρυξε αυτόν τον σίδηρο!
       WebLab PS test - 1-12_callout:
         version_history_button: Check out version history
       WhileAdventure_callout:
@@ -1105,22 +1104,42 @@
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
           will you use it?
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: This number means that there are no more of this
+          block left in the toolbox.
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: This number means that there are no more of this
           block left in the toolbox.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
           worry, we will show you how to use them later in the stage.
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
       courseB_maze_seq1_callout:
         courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq1_2018_callout:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
       courseB_maze_seq2_callout:
+        courseB_maze_seq2_callout1: Use the step button to go step-by-step through
+          the program. This will help you find the bug!
+      courseB_maze_seq2_2018_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
           away.
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
+          away.
       courseB_maze_seq7_callout: []
+      courseB_maze_seq7_2018_callout: []
       courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
+      courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
@@ -1198,13 +1217,21 @@
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
           right. If you want to, this `random color` block makes it easy!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle
+          right. If you want to, this `random color` block makes it easy!
       courseD_artist_nestedLoops_challenge2_callout: []
+      courseD_artist_nestedLoops_challenge2_2018_callout: []
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat
           your code.
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+        4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
+      courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
           You don't have to check for honeycombs at all.
         4_5_Bee_Conditionals_2_2: Need help?  Click here for a VIDEO hint!
@@ -1216,10 +1243,16 @@
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
           nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: Try repeating the move forward block
           using this loop.
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
+          backward.
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: Use this command to move the bee
           backward.
       courseD_bee_debugging_challenge1a_callout:
@@ -1231,7 +1264,9 @@
       courseD_bee_nested_loops_challenge1_callout: []
       courseD_bee_nested_loops_challenge2_callout: []
       courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_debugging_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_2018_callout: []
       courseD_collector_nested_loops_challenge2a_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
@@ -1239,6 +1274,7 @@
       courseD_collector_ramp9_callout: []
       courseD_collector_until_challenge1_callout: []
       courseD_farmer_until_challenge2_callout: []
+      courseD_farmer_until_challenge2_2018_callout: []
       courseD_harvester_nested_loops_challenge1-broken_callout: []
       courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
@@ -1285,6 +1321,9 @@
           as you tell it to, then continue to run the rest of the program.
       courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
       courseD_scrat_predict1_callout: []
@@ -1384,6 +1423,7 @@
       courseE_artist_functions_predict1_callout: []
       courseE_artist_functions_predict1_2018_callout: []
       courseE_artist_predict1_callout: []
+      courseE_artist_predict1_2018_callout: []
       courseE_artist_ramp10_callout: []
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
@@ -1402,9 +1442,14 @@
         courseE_artist_ramp8_1: You can change this number.
         courseE_artist_ramp8_2: Click here to type in the number of times to repeat
           your code.
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat
+          your code.
       courseE_artist_ramp9_callout: []
       courseE_artist_ramp9_2_callout: []
       courseE_artist_ramp9_2018_callout: []
+      courseE_artist_ramp9_2_2018_callout: []
       courseE_collector_ramp10_callout: []
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -1460,24 +1505,44 @@
       courseE_farmer_functions9b_2018_callout: []
       courseE_farmer_functions9b_clone_callout: []
       courseE_maze_predict1_callout: []
+      courseE_maze_predict1_2018_callout: []
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
       courseE_maze_ramp13_callout: []
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
           blocks to complete your puzzles.
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
       courseE_maze_ramp5_callout: []
+      courseE_maze_ramp5_2018_callout: []
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
           as you tell it to, then continue to run the rest of the program.
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times
+          as you tell it to, then continue to run the rest of the program.
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
           to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: []
@@ -1742,8 +1807,8 @@
         course_playlab_variables2_1: This is how you set the value of your variable.  Change
           the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: "Έτσι μπορείτε να ορίσετε τιμή σε μία από τις
-          μεταβλητές σας."
+        course_playlab_variables3_1: Έτσι μπορείτε να ορίσετε τιμή σε μία από τις
+          μεταβλητές σας.
       coursef_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
@@ -1760,12 +1825,12 @@
         repeat_blocks_2: "(2) μετακίνησε το μπλοκ «Επανάλαβε» εδώ, και τοποθέτησε
           μέσα τα γκρι μπλοκ"
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
       frozen diamond_callout:
-        frozen_diamond_repeat: "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
       frozen freeplay_callout:
-        snowflake_dropdown: "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
-          διαφορετικές χιονονιφάδες!"
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
       frozen line_callout:
         run: Hit "Run" to try your program!
         move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το
@@ -1777,7 +1842,7 @@
         frozen_snowflake_branch: Χρησιμοποιήστε το μπλοκ "δημιουργία κλαδιού νιφάδας
           χιονιού"
       frozen square iterative_callout:
-        frozen_create_square: "Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο"
+        frozen_create_square: Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο
       frozen square loop 3x_callout:
         replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
@@ -1888,17 +1953,17 @@
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
           You don't have to check for honeycombs at all.
       grade4_frozen_freeplay_callout:
-        snowflake_dropdown: "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
-          διαφορετικές χιονονιφάδες!"
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
       grade4_frozen_functions3_callout:
         frozen_circle_function_with_parameter_circle: Χρησιμοποιήστε το μπλοκ "Δημιουργία
           κύκλου" και αλλάξτε το μέγεθος.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
+        frozen_diamond_repeat: Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη.
       grade4_frozen_square_callout:
         replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
@@ -1960,14 +2025,14 @@
           coding area wider.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable: "Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει
-          τα ερωτηματικά"
+        place_length_variable: Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει
+          τα ερωτηματικά
       grade5_artist_variables_pentagons12_callout:
         set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή
           τιμή.
       grade5_artist_variables_square7_callout:
-        degrees_per_side: "Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη
-          γωνία σε μοίρες."
+        degrees_per_side: Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη
+          γωνία σε μοίρες.
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
           to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -1991,13 +2056,13 @@
         grade5_bee_parameters_new4_1: Press the "edit" button to add a parameter to
           this function.
       grade5_playlab_variables1_callout:
-        arrows_move_actor: "Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό"
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
       grade5_playlab_variables10_callout: []
       grade5_playlab_variables11_callout:
         edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο
           στην συνάρτή σου
       grade5_playlab_variables1ask_callout:
-        arrows_move_actor: "Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό"
+        arrows_move_actor: Χρησιμοποιείστε τα βέλη για να μετακινήσετε τον ηθοποιό
       grade5_playlab_variables6_callout: []
       grade5_playlab_variables6ask_callout: []
       grade5_playlab_variables_freeplay_callout:
