@@ -12,8 +12,7 @@ Scenario: Published Projects Show In Recency Order
   Then I publish the project
   Given I am on "http://studio.code.org/projects/public"
   Then I wait until element ".project_card" is in the DOM
-  Then I wait until element "#ui-project-name" is in the DOM
-  Then I wait until the first "#ui-project-name" contains text "Older Published"
+  And I wait until the first "#ui-project-name" contains text "Older Published"
   Then I make a playlab project named "Newer Published"
   Then I publish the project
   Given I am on "http://studio.code.org/projects/public"
@@ -32,8 +31,7 @@ Scenario: Featured Projects Show Before Published Projects
   Then I publish the project
   Given I am on "http://studio.code.org/projects/public"
   Then I wait until element ".project_card" is in the DOM
-  Then I wait until element "#ui-project-name" is in the DOM
-  Then I wait until the first "#ui-project-name" contains text "First Featured"
+  And I wait until the first "#ui-project-name" contains text "First Featured"
 
 @no_mobile
 Scenario: UnPublished, Featured Projects Do Not Show
@@ -44,5 +42,4 @@ Scenario: UnPublished, Featured Projects Do Not Show
   Then I press "#feature_project" using jQuery
   Given I am on "http://studio.code.org/projects/public"
   Then I wait until element ".project_card" is in the DOM
-  Then I wait until element "#ui-project-name" is in the DOM
-  Then I wait until the first "#ui-project-name" contains text "Published, Featured"
+  And I wait until the first "#ui-project-name" contains text "Published, Featured"
