@@ -74,13 +74,13 @@
   "penDown": "下筆",
   "penTooltip": "使用「下筆」或「停筆」來開始或停止繪圖。",
   "penUp": "停筆",
+  "pointTo": "point to",
   "pixels": "像素",
   "reinfFeedbackMsg": "這是你的畫作！留下來再創作，或者繼續到下一關。",
   "setAlpha": "透明值設置",
   "setCharacter": "將角色設定為 {character}",
   "setColour": "顏色設為",
   "setPattern": "圖案設置",
-  "setStickerSize": "Set sticker size",
   "setWidth": "設定寬度",
   "shareDrawing": "分享您的畫作：",
   "showMe": "顯示",
@@ -94,5 +94,6 @@
   "turnTooltip": "讓小藝術家向左或向右轉一個指定的角度。",
   "turtleVisibilityTooltip": "將藝術家隱藏或顯示。",
   "widthTooltip": "更改畫筆筆跡的寬度。",
+  "withSize": "with size",
   "wrongColour": "你的圖形的顏色不正確。在這關必須用 %1。"
 }

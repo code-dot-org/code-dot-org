@@ -74,13 +74,13 @@
   "penDown": "položit tužku",
   "penTooltip": "Přiložit či odložit tužku, začít nebo přestat kreslit.",
   "penUp": "odložit tužku",
+  "pointTo": "point to",
   "pixels": "pixely",
   "reinfFeedbackMsg": "Tady je tvoje kresba! Můžeš na ní dál pracovat nebo pokračovat k další hádance.",
   "setAlpha": "nastavení alfa",
   "setCharacter": "set character to {character}",
   "setColour": "nastav barvu",
   "setPattern": "nastavte vzorek",
-  "setStickerSize": "Set sticker size",
   "setWidth": "nastav šířku",
   "shareDrawing": "Sdílej svojí kresbu:",
   "showMe": "Ukažte mi",
@@ -94,5 +94,6 @@
   "turnTooltip": "Otočit malíře vlevo či vpravo o zadaný počet stupňů.",
   "turtleVisibilityTooltip": "Zviditelnit nebo skrýt malíře.",
   "widthTooltip": "Změní tloušťku tužky.",
+  "withSize": "with size",
   "wrongColour": "Tvůj obrázek nemá správnou barvu. V této hádance to musí být %1."
 }

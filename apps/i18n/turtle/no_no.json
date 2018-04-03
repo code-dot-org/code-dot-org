@@ -74,13 +74,13 @@
   "penDown": "penn ned",
   "penTooltip": "Løfter eller senker pennen, for å starte eller slutte å tegne.",
   "penUp": "penn opp",
+  "pointTo": "point to",
   "pixels": "piksler",
   "reinfFeedbackMsg": "Her er tegningen din! Fortsett å jobbe på den eller fortsett til neste oppgave.",
   "setAlpha": "angi gjennomsiktighet",
   "setCharacter": "sett figur til {character}",
   "setColour": "angi farge",
   "setPattern": "angi mønster",
-  "setStickerSize": "Set sticker size",
   "setWidth": "angi bredde",
   "shareDrawing": "Del tegningen din:",
   "showMe": "Vis meg",
@@ -94,5 +94,6 @@
   "turnTooltip": "Snur kunstneren mot venstre eller høyre med den angitte vinkelen.",
   "turtleVisibilityTooltip": "Gjør kunstneren synlig eller usynlig.",
   "widthTooltip": "Endrer bredden på blyanten.",
+  "withSize": "with size",
   "wrongColour": "Ditt bilde har feil farge. For denne oppgaven skal fargen være %1."
 }

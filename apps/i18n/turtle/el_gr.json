@@ -74,13 +74,13 @@
   "penDown": "μολύβι κάτω",
   "penTooltip": "Ανεβάζει ή κατεβάζει το μολύβι, για να ξεκινήσει ή να σταματήσει η σχεδίαση.",
   "penUp": "μολύβι επάνω",
+  "pointTo": "point to",
   "pixels": "εικονοστοιχεία",
   "reinfFeedbackMsg": "Εδώ είναι το σχέδιό σου! Συνέχισε με αυτό ή πήγαινε στο επόμενο παζλ.",
   "setAlpha": "ορίσε άλφα",
   "setCharacter": "set character to {character}",
   "setColour": "όρισε χρώμα",
   "setPattern": "όρισε μοτίβο",
-  "setStickerSize": "Set sticker size",
   "setWidth": "όρισε πάχος",
   "shareDrawing": "Μοιράσου το σχέδιό σου:",
   "showMe": "Δείξε μου",
@@ -94,5 +94,6 @@
   "turnTooltip": "Στρίβει τον καλλιτέχνη αριστερά ή δεξιά κατά τον καθορισμένο αριθμό μοιρών.",
   "turtleVisibilityTooltip": "Κάνει τον καλλιτέχνη ορατό ή αόρατο.",
   "widthTooltip": "Αλλάζει το πάχος του μολυβιού.",
+  "withSize": "with size",
   "wrongColour": "Η εικόνα σας έχει λάθος χρώμα. Για αυτό το παζλ, πρέπει να είναι %1."
 }

@@ -74,13 +74,13 @@
   "penDown": "kynä alas",
   "penTooltip": "Nostaa tai laskee kynän, aloittaakseen tai lopettaakseen piirtämisen.",
   "penUp": "kynä ylös",
+  "pointTo": "point to",
   "pixels": "kuvapistettä",
   "reinfFeedbackMsg": "Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan tehtävään.",
   "setAlpha": "aseta läpinäkymättömyys",
   "setCharacter": "aseta merkki {character}: ksi",
   "setColour": "aseta väri",
   "setPattern": "määritä malli",
-  "setStickerSize": "Set sticker size",
   "setWidth": "aseta leveys",
   "shareDrawing": "Jaa piirustuksesi:",
   "showMe": "Näytä minulle",
@@ -94,5 +94,6 @@
   "turnTooltip": "Kääntää taiteilijaa vasemmalle tai oikealle annetun astemäärän.",
   "turtleVisibilityTooltip": "Tekee taiteilijasta näkyvän tai näkymättömän.",
   "widthTooltip": "Muuttaa kynän paksuutta.",
+  "withSize": "with size",
   "wrongColour": "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1."
 }
