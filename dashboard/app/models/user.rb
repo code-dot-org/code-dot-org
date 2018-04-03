@@ -190,6 +190,8 @@ class User < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
+  has_many :authentication_options, dependent: :destroy
+
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
