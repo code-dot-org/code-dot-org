@@ -15,16 +15,15 @@
           línu af "alvöru" kóða.
       4:
         image: notes/hoc1_4.jpg
-        text: "Þú munt læra grunnhugtök í tölvunarfræði, en þessi sömu hugtök eru
-          notuð víða, allt frá því að gera smáforrit upp í að stýra geimjeppanum á
-          Mars."
+        text: Þú munt læra grunnhugtök í tölvunarfræði, en þessi sömu hugtök eru notuð
+          víða, allt frá því að gera smáforrit upp í að stýra geimjeppanum á Mars.
       5:
         image: notes/hoc1_5.jpg
         text: Forrit er safn skipana sem tölvan les og fer eftir.
       6:
         image: notes/hoc1_6.jpg
-        text: "Í fyrsta forritinu þínu þarf að láta Angry Bird fuglinn ferðast um
-          völundarhús svo hann geti lúskrað á grænu svíni."
+        text: Í fyrsta forritinu þínu þarf að láta Angry Bird fuglinn ferðast um völundarhús
+          svo hann geti lúskrað á grænu svíni.
       7:
         image: notes/hoc1_7.jpg
         text: Vinstri hliðin er völundarhúsið þar sem forritið þitt er keyrt. Leiðbeiningarnar
@@ -62,8 +61,7 @@
           sigra. Þeir greina gögnin sem koma frá bílnum til að láta hann fara hraðar.
       2:
         image: notes/stage5_2.jpg
-        text: "Í þessum þrautum ert þú listamaður sem teiknar línu hvert sem hann
-          fer."
+        text: Í þessum þrautum ert þú listamaður sem teiknar línu hvert sem hann fer.
       3:
         image: notes/stage5_3.jpg
         text: Þessi kubbur segir "farðu áfram um 100 pixla“. Pixlar eru í raun litlir
@@ -84,8 +82,8 @@
           túninu sínu alveg sléttu til að geta byrjað að rækta.
       2:
         image: notes/stage9_2.jpg
-        text: "Þú verður að hjálpa henni að fjarlægja alla moldarhaugana og fylla
-          upp í allar holurnar."
+        text: Þú verður að hjálpa henni að fjarlægja alla moldarhaugana og fylla upp
+          í allar holurnar.
       3:
         image: notes/stage9_3.jpg
         text: Nýju kubbarnir fjarlægja 1 skóflufylli af mold úr haug og fylla í holu
@@ -101,9 +99,9 @@
           að tölvuforrit getur verið gagnvirkt.
       2:
         image: notes/flappy02.jpg
-        text: "Í hvert skipti sem einhver smellir eða slær eða skrifar á tölvu eða
+        text: Í hvert skipti sem einhver smellir eða slær eða skrifar á tölvu eða
           síma, þá verður til ATVIK og það er kóði sem fangar atvikið og ákveður hvað
-          eigi að gerast þegar ATVIK verður."
+          eigi að gerast þegar ATVIK verður.
       3:
         image: notes/flappy03.jpg
         text: 'Til dæmis gæti maður haft ATVIKAFANGARA sem segir "þegar mús er smellt
@@ -128,17 +126,17 @@
           og í leiknum mun það að smella músinni leiða til þess að fuglinn flýgur.
       8:
         image: notes/flappy08.jpg
-        text: "Í hverri þraut þessa verkefnis munum við kynna nýjar tegundir atvika
+        text: Í hverri þraut þessa verkefnis munum við kynna nýjar tegundir atvika
           sem græna kubba á vinnusvæðinu og þú þarft að ákveða hvaða kubbum á að bæta
-          við til að bregðast rétt við þessum atvikum."
+          við til að bregðast rétt við þessum atvikum.
       9:
         image: notes/flappy09.jpg
-        text: "Þegar þú sérð svona ör fyrir fellilista þá táknar það að þú getir breytt
-          stillingum - eins og hvaða hljóð eigi að spila þegar Flappy rekst á jörðina."
+        text: Þegar þú sérð svona ör fyrir fellilista þá táknar það að þú getir breytt
+          stillingum - eins og hvaða hljóð eigi að spila þegar Flappy rekst á jörðina.
       10:
         image: notes/flappy10.jpg
-        text: "Í síðustu þrautinni getur þú búið til eiginn leik og deilt honum með
-          vinum þínum. Skemmtu þér vel!"
+        text: Í síðustu þrautinni getur þú búið til eiginn leik og deilt honum með
+          vinum þínum. Skemmtu þér vel!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -147,8 +145,8 @@
           þúsund eða jafnvel miljarð sinnum.
       2:
         image: notes/hoc2_2.jpg
-        text: "Í þessari þraut viljum við láta fuglinn færa sig áfram um 5 svæði til
-          að ná svíninu."
+        text: Í þessari þraut viljum við láta fuglinn færa sig áfram um 5 svæði til
+          að ná svíninu.
       3:
         image: notes/hoc2_3.jpg
         text: Við getum notað nýja "endurtaka" kubbinn til að hjálpa okkur.
@@ -307,10 +305,10 @@
           út frá flokknum Föll og settu hann á staðinn "lengd".
       4:
         image: notes/stage11_4.jpg
-        text: "Það þýðir að listamaðurinn mun teikna ferning með hliðar sem eru 50
+        text: Það þýðir að listamaðurinn mun teikna ferning með hliðar sem eru 50
           pixlar á lengd. Síðan hækkar hann um 10 og teiknar ferning með 60 pixla
           langar hliðar. Síðan heldur hann áfram að hækka um 10 og teikna ferninga
-          þar til hann nær 90. Við fáum þá ferninga með hliðar 50, 60, 70, 80 og 90."
+          þar til hann nær 90. Við fáum þá ferninga með hliðar 50, 60, 70, 80 og 90.
     parameters:
       1:
         image: notes/stage15_1.jpg
@@ -379,8 +377,8 @@
           kanna töfra og fegurð íssins.
       2:
         image: notes/frozen1_2.jpg
-        text: "Þú munt búa til snjókorn og mynstur um leið og þú skautar og síðan
-          búa til fallega vetrarveröld sem þú getur svo deilt með vinum þínum."
+        text: Þú munt búa til snjókorn og mynstur um leið og þú skautar og síðan búa
+          til fallega vetrarveröld sem þú getur svo deilt með vinum þínum.
       3:
         image: notes/frozen1_3.jpg
         text: Næsta klukkutímann munt þú læra undirstöðu í forritun. Hefðbundin forritun
@@ -502,9 +500,9 @@
           neðan.
       3:
         image: notes/playlab_intro_3.png
-        text: "Á miðsvæðinu er verkfærakassinn og hver þessara kubba er bútur af kóða.
+        text: Á miðsvæðinu er verkfærakassinn og hver þessara kubba er bútur af kóða.
           Hvíta svæðið hægra megin er kallað vinnusvæðið og það er hér sem við munum
-          byggja upp forritin okkar."
+          byggja upp forritin okkar.
       4:
         image: notes/playlab_intro_4.png
         text: Til að byrja þarf að tengja kubba við appelsínugula "þegar keyrt" kubbinn.
@@ -557,19 +555,19 @@
           kubbinn.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: "Í næstu þraut er markmið okkar að hjálpa vitkanum að fylgjast með landamærum
+        text: Í næstu þraut er markmið okkar að hjálpa vitkanum að fylgjast með landamærum
           kóngsríkisins til vinstri og hægri endalaust. Ef þú lærir hvernig endurtaka
           skipunin virkar, mun það spara þér hellingstíma þegar kemur að því að smíða
-          eigin leiki."
+          eigin leiki.
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: "Þetta hér eru teiknikubbarnir. Notaðu þann rétta til að færa listamanninn
-          svo að hann teikni yfir gráu línurnar."
+        text: Þetta hér eru teiknikubbarnir. Notaðu þann rétta til að færa listamanninn
+          svo að hann teikni yfir gráu línurnar.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "Þetta eru stökkkubbar. Þegar þú notar þá færist listamaðurinn en teiknar
-          ekki. Notaðu þá til að láta hann hoppa yfir á næstu gráu línu."
+        text: Þetta eru stökkkubbar. Þegar þú notar þá færist listamaðurinn en teiknar
+          ekki. Notaðu þá til að láta hann hoppa yfir á næstu gráu línu.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
@@ -603,14 +601,14 @@
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "Þessi kennslustund er kölluð stóra atvikið (big event). Hún er um það
+        text: Þessi kennslustund er kölluð stóra atvikið (big event). Hún er um það
           hvernig við getum stjórnað forritum og í reynd breytt því hvað keyrandi
           forrit er að gera með því að nota atvik, svo sem að ýta á hnapp eða smella
-          með mús."
+          með mús.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "Í þessari kennslustund verður þér stjórnað með fjarstýringu úr pappír.
-          Á sama hátt og gert er í alvöru tölvuleik."
+        text: Í þessari kennslustund verður þér stjórnað með fjarstýringu úr pappír.
+          Á sama hátt og gert er í alvöru tölvuleik.
       3:
         image: notes/C1_bigevent_unplugged_3.png
         text: Atvik (event) er aðgerð sem orsakar það að eitthvað gerist. T.d. eins
@@ -620,16 +618,16 @@
           eða vill.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: "Ýmislegt gerist sem við bregðumst öll við. Við finnum til svengdar
-          og þá leitum við að einhverju til að borða. Við heyrum bankað og förum til
+        text: Ýmislegt gerist sem við bregðumst öll við. Við finnum til svengdar og
+          þá leitum við að einhverju til að borða. Við heyrum bankað og förum til
           dyra. Þetta eru dæmi um atvik alveg eins og það að ýta á hnapp eða hreyfa
           stýripinna. Þau eru eitthvað sem gerist og sem lætur okkur bregðast við
-          á einhvern hátt."
+          á einhvern hátt.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: "Í tölvuleikjum er atvik sem nefnist uppfærsla (update) og gerist 30
+        text: Í tölvuleikjum er atvik sem nefnist uppfærsla (update) og gerist 30
           eða 60 sinnum á sekúndu. Fyrir forritara tölvuleikja er þetta næstum mikilvægara
-          sem atvik en aðgerðir með hnöppum og stýripinnum."
+          sem atvik en aðgerðir með hnöppum og stýripinnum.
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: Stóra atvikið sem við erum að fylgjast með er að "uppfærsla" gerist.
@@ -640,16 +638,16 @@
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "Þegar listaverk eru gerð úr sandi skaltu vita að það er hluti af sköpuninni
+        text: Þegar listaverk eru gerð úr sandi skaltu vita að það er hluti af sköpuninni
           að mistakast. En ef maður heldur áfram getur árangurinn bara orðið betri
           og áhugaverðari. Þetta snýst um þrautseigju. Ekki gefast upp, ánægjan verður
-          meiri."
+          meiri.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "Þessi kennslustund er um það að byggja grunn. Ætlunin er að vinna við
+        text: Þessi kennslustund er um það að byggja grunn. Ætlunin er að vinna við
           verkefni sem á að vera mjög erfitt. Þú átt að finna út hvernig á að byggja
           hlut sem er að minnsta kosti eins hár og eitt þessara mála og nógu sterkur
-          til að bera uppi þyngd bókar."
+          til að bera uppi þyngd bókar.
       3:
         image: notes/C1_building_foundation_3.jpg
         text: Stundum kemur það fyrir að sköpunarverk okkar heppnast ekki. Og stundum
@@ -658,9 +656,9 @@
           þá er nokkuð víst að okkur muni takast áður en langt um líður.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Þrautseigja snýst um að halda áfram þegar maður vill helst gefast upp.
+        text: Þrautseigja snýst um að halda áfram þegar maður vill helst gefast upp.
           Ef þú vilt búa til eitthvað nýtt og frumlegt, verður margt sem misheppnast
-          á leiðinni."
+          á leiðinni.
       5:
         image: notes/C1_building_foundation_5.jpg
         text: Galdurinn við þrautseigju er að ákveða að halda áfram og læra af því
@@ -675,15 +673,15 @@
           Lykkjur eru að endurtaka eitthvað aftur og aftur.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: "Þegar maður endurtekur eitthvað margsinnis, eins og hreyfingar mínar
+        text: Þegar maður endurtekur eitthvað margsinnis, eins og hreyfingar mínar
           sem láta húlahringinn snúast, er maður að nota lykkju með aðgerðinni. Þetta
-          er lykkja. Þetta er lykkja. Og þetta er lykkja."
+          er lykkja. Þetta er lykkja. Og þetta er lykkja.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: "Í dag ætlum við að halda danspartí. Við ætlum að framkvæma lykkjur
-          með nýjum dansi. Lúppunni. Við ætlum að læra um lykkjur með því að nota
-          dans. Þú munt læra nokkrar auðveldar hreyfingar og endurtaka þær aftur og
-          aftur í dansinum."
+        text: Í dag ætlum við að halda danspartí. Við ætlum að framkvæma lykkjur með
+          nýjum dansi. Lúppunni. Við ætlum að læra um lykkjur með því að nota dans.
+          Þú munt læra nokkrar auðveldar hreyfingar og endurtaka þær aftur og aftur
+          í dansinum.
       4:
         image: notes/C1_getting_loopy_4.png
         text: Hér eru hreyfingar sem þú þarft að læra. Klappa saman höndunum. Setja
@@ -702,8 +700,8 @@
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: "Þessi kennslustund heitir Krúttleg kort. Í dag ætlum við að hjálpa
-          loðna litla vini okkar Flurb að komast til ávaxtanna sinna."
+        text: Þessi kennslustund heitir Krúttleg kort. Í dag ætlum við að hjálpa loðna
+          litla vini okkar Flurb að komast til ávaxtanna sinna.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
         text: Láttu Flurb ná ávextinum. Til þess þarftu að finna út í hvaða átt Flurb
@@ -719,7 +717,7 @@
           að leysa. Næsta er eins en stefnir niður.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "Þetta er eins og að forrita með pappír. Svona er það!"
+        text: Þetta er eins og að forrita með pappír. Svona er það!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -729,10 +727,10 @@
           á slánni en ég er alltaf að detta af.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: "Ég fór yfir hvern hluta skref fyrir skref og uppgötvaði hvað ég gerði
+        text: Ég fór yfir hvern hluta skref fyrir skref og uppgötvaði hvað ég gerði
           rangt. Ég var ekki að setja hendurnar rétt á slána. Svo ég reyndi annað
           afturábak stökk á slánni með nýju handstöðunni og náði því. Ég var virkilega
-          ánægð með að hafa villukembt afturábak stökkið mitt."
+          ánægð með að hafa villukembt afturábak stökkið mitt.
       3:
         image: notes/C1_maze_debugging_3.png
         text: Til að læra um villukembingu byrjum við með nokkra kubba á sviðinu.
@@ -746,8 +744,8 @@
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: "Í þessari þraut þarft þú að koma fuglinum til svínsins. Skoðaðu þrautina
-          og finndu út í hvaða áttir þarf að fara."
+        text: Í þessari þraut þarft þú að koma fuglinum til svínsins. Skoðaðu þrautina
+          og finndu út í hvaða áttir þarf að fara.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: Þú þarft að draga kubba frá verkfærakassanum yfir á vinnusvæðið. Gættu
@@ -797,15 +795,15 @@
           elskan!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "Ég elska tölvuna hennar mömmu því ég get farið á Internetið. Internetið
+        text: Ég elska tölvuna hennar mömmu því ég get farið á Internetið. Internetið
           er svona eins og hverfið okkar. Maður getur heimsótt áhugaverða staði, talað
-          við fjölskyldu og vini og lært haug af nýjum hlutum."
+          við fjölskyldu og vini og lært haug af nýjum hlutum.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Í gær heimsótti ég dýragarð sem er nálægt húsinu mínu. Ég sá sebrafolald.
+        text: Í gær heimsótti ég dýragarð sem er nálægt húsinu mínu. Ég sá sebrafolald.
           Ég tók mynd af því og breytti um lit á röndunum, bætti við hatti og setti
           það í safnið mitt yfir furðudýr. Frábært! Seinna fór ég á stað langt, langt
-          í burtu. Ég heimsótti Kenía. Það er land í Afríku. Þar eru mörg sebradýr."
+          í burtu. Ég heimsótti Kenía. Það er land í Afríku. Þar eru mörg sebradýr.
       4:
         image: notes/C1_going_places_safely_4.png
         text: 'Stundum á netinu tala ég við fólk sem ég þekki, eins og ömmu mína sem
@@ -815,10 +813,10 @@
           bara við fólk sem ég þekki. '
       5:
         image: notes/C1_going_places_safely_5.png
-        text: "Það sem mér finnst mest gaman á netinu er að geta spilað skemmtilega
+        text: Það sem mér finnst mest gaman á netinu er að geta spilað skemmtilega
           leiki. Fékk stig! Mér finnst líka gaman að teikna og búa til nýja hluti
           og deila með vinum mínum. Það er svalt! Stundum heimsæki ég vefi þar sem
-          ég læri eitthvað nýtt en ég fer bara á vefi sem hæfa mér. Vá, risaeðlur!"
+          ég læri eitthvað nýtt en ég fer bara á vefi sem hæfa mér. Vá, risaeðlur!
       6:
         image: notes/C1_going_places_safely_6.png
         text: 'Internetið er mjög skemmtilegur staður. En alveg eins og maður þarf
@@ -833,17 +831,17 @@
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: "Í dag ætlum við að læra um félagaforritun. Í félagaforritun er unnið
+        text: Í dag ætlum við að læra um félagaforritun. Í félagaforritun er unnið
           í teymi. Af hverju ættu tvær manneskjur að nota sömu tölvu? Vegna þess að
           tvö höfuð eru betri en eitt. Í félagaforritun sitjið þið félagi þinn saman
-          við eina tölvu og þið vinnið að sama verkefni."
+          við eina tölvu og þið vinnið að sama verkefni.
       2:
         image: notes/C1_pair_programming_2.png
-        text: "Í félagaforritun er annar félaginn ökumaður og hinn er leiðsögumaður,
+        text: Í félagaforritun er annar félaginn ökumaður og hinn er leiðsögumaður,
           eins og verið sé að aka bíl. Ökumaðurinn situr við tölvuna og notar lyklaborðið
           og músina eða snertiskjáinn til að stjórna aðgerðum tölvunnar. Hinn félaginn
           er leiðsögumaður og hjálpar ökumanninum með því að svara spurningum ökumannsins
-          og benda á hugsanleg vandamál eða villur."
+          og benda á hugsanleg vandamál eða villur.
       3:
         image: notes/C1_pair_programming_3.png
         text: Góð samskipti eru lykillinn að vel heppnaðri félagaforritun. Móðgaðu
@@ -859,10 +857,10 @@
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: "Þessi kennslustund heitir Fræsáning og hún mun hjálpa okkur að skilja
+        text: Þessi kennslustund heitir Fræsáning og hún mun hjálpa okkur að skilja
           algrím. Algrím eru nákvæm fyrirmæli sem lýsa í hvaða röð eigi að gera eitthvað.
           Jafnvel hversdagslegir hlutir eins og að borða morgunverð eða bursta tennurnar
-          eru algrím sem fela í sér smærri skref til að ljúka ákveðnu verki."
+          eru algrím sem fela í sér smærri skref til að ljúka ákveðnu verki.
       2:
         image: notes/C1_planting_seed_2.png
         text: Tölvur geta verið mjög klárar en þær geta aðeins skilið þig ef þú segir
@@ -871,9 +869,9 @@
           ekki að gera áður. Það er eins og að fylgja mataruppskrift.
       3:
         image: notes/C1_planting_seed_3.png
-        text: "Í dag ætlum við að sá okkar eigin fræjum með því að nota algrím. Búðu
+        text: Í dag ætlum við að sá okkar eigin fræjum með því að nota algrím. Búðu
           til þitt eigið algrím með því að klippa sundur myndirnar. Veldu myndirnar
-          sem sýna skrefin í því að sá fræi og raðaðu þessum myndum í rétta röð."
+          sem sýna skrefin í því að sá fræi og raðaðu þessum myndum í rétta röð.
       4:
         image: notes/C1_planting_seed_4.png
         text: Nú er kominn tími til að sjá hvort algrímið þitt virkar. Fylgdu þrepunum
@@ -911,8 +909,8 @@
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: "Þetta er áfangi með stafsetningu. Notaðu kubba þrautarinnar til að
-          færa býfluguna. Þegar hún færist safnar hún stöfum til að stafa orð."
+        text: Þetta er áfangi með stafsetningu. Notaðu kubba þrautarinnar til að færa
+          býfluguna. Þegar hún færist safnar hún stöfum til að stafa orð.
       2:
         image: notes/C1_spelling_bee_intro_2.png
         text: Gáðu hvort þú getir stafað orðið sem er sýnt í reitnum fyrir neðan sviðsmyndina.
@@ -952,14 +950,14 @@
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: "Það er ekki einu sinni hægt komast í keppnina nema hafa fólk sem er
+        text: Það er ekki einu sinni hægt komast í keppnina nema hafa fólk sem er
           kunnáttusamt í tölvunarfræði vegna þess hve bílarnir safna miklum upplýsingum
           og hve nauðsynlegt það er að hafa fólk sem getur skrifað forrit til að reikna
-          út hvernig er stöðugt hægt að bæta árangurinn."
+          út hvernig er stöðugt hægt að bæta árangurinn.
       2:
         image: notes/C2_artist_intro_2.png
-        text: "Í þessum þrautum verður þú listamaður sem notar blýant til að teikna
-          mismunandi form. Hvert sem listamaðurinn fer teiknar hann línu á eftir sér."
+        text: Í þessum þrautum verður þú listamaður sem notar blýant til að teikna
+          mismunandi form. Hvert sem listamaðurinn fer teiknar hann línu á eftir sér.
       3:
         image: notes/C2_artist_intro_3.png
         text: Til að færast um myndflötinn notar þú "færa áfram" kubbinn. Hér segir
@@ -980,23 +978,23 @@
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: "Þetta er kubbur með skilyrði. Hann segir að EF það er blómasafi eða
+        text: Þetta er kubbur með skilyrði. Hann segir að EF það er blómasafi eða
           hunang sem er minna en, jafnt og eða stærra en einhver tala, ÞÁ eigi að
-          gera eitthvað."
+          gera eitthvað.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: "Þetta er gagnlegt þegar við vitum ekki hve mikið er af blómasafa eða
-          hunangi, eins og við sjáum hér með þessu spurningarmerki."
+        text: Þetta er gagnlegt þegar við vitum ekki hve mikið er af blómasafa eða
+          hunangi, eins og við sjáum hér með þessu spurningarmerki.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: "Í þessu dæmi segjum við að EF fjólubláa blómið er með blómasafa sem
+        text: Í þessu dæmi segjum við að EF fjólubláa blómið er með blómasafa sem
           er meiri en 0, þá eigi að safna safa. Þetta segir býflugunni að halda áfram
-          að safna safa á meðan einhver safi er. Ta-dah!"
+          að safna safa á meðan einhver safi er. Ta-dah!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: "Þetta er kennslustundin tvíundararmbönd. Við ætlum að kóða stafina
-          okkar á armband sem við getum gengið með og sýnt vinum!"
+        text: Þetta er kennslustundin tvíundararmbönd. Við ætlum að kóða stafina okkar
+          á armband sem við getum gengið með og sýnt vinum!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: Tvíundir eru aðferð til að sýna upplýsingar með því að nota aðeins tvo
@@ -1020,14 +1018,14 @@
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: "Þessi kennslustund heitir skilyrði með spilum. Á hverjum degi tekur
-          þú ákvarðanir byggðar á því sem þú sérð og heyrir."
+        text: Þessi kennslustund heitir skilyrði með spilum. Á hverjum degi tekur
+          þú ákvarðanir byggðar á því sem þú sérð og heyrir.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: "Ég vil fara út að ganga en fyrst þarf ég að ákveða hvort ég ætti að
+        text: Ég vil fara út að ganga en fyrst þarf ég að ákveða hvort ég ætti að
           taka með regnhlíf eða ekki. Svo að ég lít út um gluggann. Ef það er skýjað,
           ætla ég að taka regnhlífina. Annars ætla ég að taka sólgleraugu. Það sem
-          ég sé og heyri ákveður hvað ég tek með mér."
+          ég sé og heyri ákveður hvað ég tek með mér.
       3:
         image: notes/C2_conditionals_with_cards_3.png
         text: Skilyrði eru líka notuð í leikjum. Í dag ætlum við að æfa að nota skilyrði
@@ -1036,10 +1034,10 @@
           að segja "Aaahhh". Prófum þetta! "Aahhh" "húrra"
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: "Ég þori að veðja að þú getur búið til enn skemmtilegri leiki með skilyrðum.
+        text: Ég þori að veðja að þú getur búið til enn skemmtilegri leiki með skilyrðum.
           Prófaðu! Skilyrði eru það sem lætur tölvur virðast greindar. Tölvuforrit
           sem inniheldur skilyrði getur brugðist við því sem notandinn gerir og breytt
-          því sem það er að gera."
+          því sem það er að gera.
       5:
         image: notes/C2_conditionals_with_cards_5.png
         text: Hugsaðu um uppáhalds tölvuleikinn þinn. Færðu fleiri stig fyrir sumar
@@ -1058,8 +1056,8 @@
           með þegar farið er gegnum kubbana skref fyrir skref.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Ó, þarna er vandamálið! Veiðihár kattarins eru 75 dílar á lengd, ekki
-          25."
+        text: Ó, þarna er vandamálið! Veiðihár kattarins eru 75 dílar á lengd, ekki
+          25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -1078,12 +1076,12 @@
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: "Á höfði þínu hefurðu hatt og viska þín mun segja þér hvar þú ert og
+        text: Á höfði þínu hefurðu hatt og viska þín mun segja þér hvar þú ert og
           að hugsa um dýragarðinn og kinka kolli við þessum og þessum! Notaðu höfuðið
           á netinu til að varðveita í höfðinu það sem er þitt og vita hvernig á að
           vera öruggur, hvernig á að hafa einkasvæði í lífi sínu! Frá höfði niður
           í tær, stoppaðu og hugsaðu. Frá fótum upp í nef, stoppaðu og hugsaðu þegar
-          þú ert á netinu!"
+          þú ert á netinu!
       2:
         image: notes/C2_digital_footprint_2.png
         text: Notaðu hjartað til að vaxa og vaxa og gefa þér heilbrigðan ljóma og
@@ -1125,10 +1123,10 @@
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: "Í hvert skipti sem þú ferð á netið skilur þú eftir fótspor sem hægt
+        text: Í hvert skipti sem þú ferð á netið skilur þú eftir fótspor sem hægt
           er að finna, afrita, deila, senda út og er varanlegt. Hvers konar fótspor
           ert þú að skilja eftir? Hvers konar rafrænt fótspor vilt þú skilja eftir
-          þig?"
+          þig?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
@@ -1147,11 +1145,11 @@
           þetta komið.
       4:
         image: notes/C2_graph_paper_4.png
-        text: "Ég nota algrím í vinnunni. Ef ég skrifa niður öll þrepin get ég endurtekið
+        text: Ég nota algrím í vinnunni. Ef ég skrifa niður öll þrepin get ég endurtekið
           þennan hluta aftur, eða ég get kennt einhverjum öðrum að gera þetta. Settu
           glerið í bræðsluofninn, bræddu það saman, fylgdu restinni af fyrirmælunum
           til að búa til skálina. Með algrímum færðu vegvísi yfir hvernig á að gera
-          eitthvað."
+          eitthvað.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
@@ -1213,23 +1211,23 @@
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: "Þessi kennslustund heitir Alvöru algrím. Algrím lýsa hversdagslegum
+        text: Þessi kennslustund heitir Alvöru algrím. Algrím lýsa hversdagslegum
           hlutum sem fólk tekur sér fyrir hendur. Kökuuppskriftir og leiðbeiningar
-          til að smíða fuglahús eru algrím úr daglega lífinu."
+          til að smíða fuglahús eru algrím úr daglega lífinu.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: "Í dag ætlum við að greina, búa til og prófa algrím fyrir pappírsskutlu.
+        text: Í dag ætlum við að greina, búa til og prófa algrím fyrir pappírsskutlu.
           Fyrst verðum við að skipta þessu stóra verkefni upp í auðveld lítil þrep.
           Til að búa til pappírsskutlu þurfum við að ákveða hvaða þrep á að hafa og
-          í hvaða röð á að hafa þau."
+          í hvaða röð á að hafa þau.
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: "Þú býrð algrímið til með því að klippa fyrst sundur myndirnar. Næst
+        text: Þú býrð algrímið til með því að klippa fyrst sundur myndirnar. Næst
           áttu að velja þær 6 myndir sem sýna þrepin sem þarf að hafa til að búa til
           pappírsskutlu og raða þessum myndum í rétta röð. Eftir að allt er í röð,
           átt þú að skiptast á algrími við annan nemanda til að prófa algrímið og
           sjá hvort það virkar. Vel hannað algrím er mjög mikilvægt til að gera bestu
-          pappírsskutluna."
+          pappírsskutluna.
       4:
         image: notes/C2_paper_airplanes_4.png
         text: Ef við viljum búa til súkkulaði, þá eru mörg stór þrep í því ferli.
@@ -1255,15 +1253,15 @@
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
-        text: "Í dag ætlum við að prófa boðhlaupsforritun. Hún snýst um að forrita
+        text: Í dag ætlum við að prófa boðhlaupsforritun. Hún snýst um að forrita
           undir álagi og kemba villurnar sem stundum koma upp þegar unnið er mjög
           hratt eða í teymum. Við notum forritun á grafpappír til að líkja eftir kóðun
-          og notum boðhlaup til að líkja eftir því að hafa skilatíma."
+          og notum boðhlaup til að líkja eftir því að hafa skilatíma.
       2:
         image: notes/C2_relay_programming_2.png
-        text: "Í boðhlaupsforritun hlaupa teymi í keppni um að ljúka grafpappírsforriti.
+        text: Í boðhlaupsforritun hlaupa teymi í keppni um að ljúka grafpappírsforriti.
           Þú þarft að fara yfir verk félaga þíns, eða kemba það, laga það ef það er
-          villa, bæta við þinni ör og hlaupa til baka og klukka félaga þinn."
+          villa, bæta við þinni ör og hlaupa til baka og klukka félaga þinn.
       3:
         image: notes/C2_relay_programming_3.png
         text: Forritarar nota kembun mikið til að finna og laga vandamál í algrímum
@@ -1328,14 +1326,14 @@
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: "Það er ekki einu sinni hægt komast í keppnina nema hafa fólk sem er
+        text: Það er ekki einu sinni hægt komast í keppnina nema hafa fólk sem er
           kunnáttusamt í tölvunarfræði vegna þess hve bílarnir safna miklum upplýsingum
           og hve nauðsynlegt það er að hafa fólk sem getur skrifað forrit til að reikna
-          út hvernig er stöðugt hægt að bæta árangurinn."
+          út hvernig er stöðugt hægt að bæta árangurinn.
       2:
         image: notes/C3_artist_intro_2.png
-        text: "Í þessum þrautum verður þú listamaður sem notar blýant til að teikna
-          mismunandi form. Hvert sem listamaðurinn fer teiknar hann línu á eftir sér."
+        text: Í þessum þrautum verður þú listamaður sem notar blýant til að teikna
+          mismunandi form. Hvert sem listamaðurinn fer teiknar hann línu á eftir sér.
       3:
         image: notes/C3_artist_intro_3.png
         text: Til að færast um myndflötinn notar þú "færa áfram" kubbinn. Hér segir
@@ -1367,18 +1365,18 @@
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: "Þetta er kubbur með skilyrði. Hann segir að EF það er blómasafi eða
+        text: Þetta er kubbur með skilyrði. Hann segir að EF það er blómasafi eða
           hunang sem er minna en, jafnt og eða stærra en einhver tala, ÞÁ eigi að
-          gera eitthvað."
+          gera eitthvað.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: "Þetta er gagnlegt þegar við vitum ekki hve mikið er af blómasafa eða
-          hunangi, eins og við sjáum hér með þessu spurningarmerki."
+        text: Þetta er gagnlegt þegar við vitum ekki hve mikið er af blómasafa eða
+          hunangi, eins og við sjáum hér með þessu spurningarmerki.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: "Í þessu dæmi segjum við að EF fjólubláa blómið er með blómasafa sem
+        text: Í þessu dæmi segjum við að EF fjólubláa blómið er með blómasafa sem
           er meiri en 0, þá eigi að safna safa. Þetta segir býflugunni að halda áfram
-          að safna safa á meðan einhver safi er. Ta-dah!"
+          að safna safa á meðan einhver safi er. Ta-dah!
     C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
@@ -1411,11 +1409,11 @@
           æfð og henni gefið nafn, vita allir í liðinu hvað á að gera.
       3:
         image: notes/C3_bee_functions_3.png
-        text: "Það er alveg eins með tölvu að þegar búið er að kenna henni einhverja
+        text: Það er alveg eins með tölvu að þegar búið er að kenna henni einhverja
           aðgerð með röð skipana, getur maður búið til eigið nafn yfir þessa aðgerð
           svo það sé auðvelt að endurtaka hana seinna. Þegar maður skilgreinir eigin
           skipun og gefur henni nafn er talað um fall. Nú ætlum við að nota föll til
-          að hjálpa býflugunni."
+          að hjálpa býflugunni.
       4:
         image: notes/C3_bee_functions_4.png
         text: Í þessu dæmi heitir fallið okkar "sækja 2 blómasafa", það er þessi græni
@@ -1433,8 +1431,8 @@
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: "Þú munt búa til þinn eigin leik með endurkasti sem þú getur svo deilt
-          með vinum þínum! Hversu svalt er það!"
+        text: Þú munt búa til þinn eigin leik með endurkasti sem þú getur svo deilt
+          með vinum þínum! Hversu svalt er það!
       2:
         image: notes/C3_bounce_2.png
         text: Til að byrja með þurfum við að tengja stjórn spaðans við örvarlyklana
@@ -1447,10 +1445,10 @@
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: "Þessi kennslustund er um tölvunarmiðaða hugsun. Stundum er erfitt að
+        text: Þessi kennslustund er um tölvunarmiðaða hugsun. Stundum er erfitt að
           læra nýjan leik, ekki satt? Fyrst virðist hann vera ruglingslegur og stundum
           er enginn til að kenna þér reglurnar, svo þú þarft að uppgötva þær á eigin
-          spýtur."
+          spýtur.
       2:
         image: notes/C3_computational_thinking_2.png
         text: Góðu fréttirnar eru að þú getur orðið betri við að finna út hlutina
@@ -1459,15 +1457,15 @@
           um fjórar brellur og æfa þær með vinum þínum til að uppgötva reglur í leik.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: "Þegar þú brýtur stórt vandamál niður í smærri búta, ert þú að nota
-          höfðuðið til að leysa stóra vandamálið upp. Þegar við höfum leyst stóra
-          vandamálið upp í nokkur smærri vandamál, getum við notað næstu brellu, sem
-          er kölluð samsvörun mynstra."
+        text: Þegar þú brýtur stórt vandamál niður í smærri búta, ert þú að nota höfðuðið
+          til að leysa stóra vandamálið upp. Þegar við höfum leyst stóra vandamálið
+          upp í nokkur smærri vandamál, getum við notað næstu brellu, sem er kölluð
+          samsvörun mynstra.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: "Þá erum við að leita að því hvernig hlutir líkjast. Þegar ég hef fundið
+        text: Þá erum við að leita að því hvernig hlutir líkjast. Þegar ég hef fundið
           það sem er eins, get ég séð hvað er ólíkt. Þegar ég fjarlægi það sem er
-          ólíkt, er það kallað útdráttur."
+          ólíkt, er það kallað útdráttur.
       5:
         image: notes/C3_computational_thinking_5.png
         text: Eftir að ég hef fundið út skrefin sem leiða til lausnar á vandamáli,
@@ -1478,26 +1476,26 @@
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: "Þessi kennslustund heitir hópvistun. Hér ætlum við að nota spilastokk
+        text: Þessi kennslustund heitir hópvistun. Hér ætlum við að nota spilastokk
           til að læra hversu mikið auðveldara er að gera suma hluti í hópi frekar
           en reyna að gera þá alein. Náðu í nokkra vini og búðu til eitthvað frábært.
           Hópvistun er það að fá hjálp frá stórum hópi fólks til að ljúka einhverju
-          hraðar."
+          hraðar.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: "Í tölvunarfræði erum við alltaf að nota hópvistun. Þúsundir áhugamanna
+        text: Í tölvunarfræði erum við alltaf að nota hópvistun. Þúsundir áhugamanna
           og sérfræðinga tengja tölvur sínar saman til að leita í miljörðum og aftur
           miljörðum bútum af upplýsingum. Í leit að hlutum eins og næstu Marsenne
-          prímtölu eða jafnvel hugsanlegum merkjum frá geimverum."
+          prímtölu eða jafnvel hugsanlegum merkjum frá geimverum.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: "Þegar þú horfir á bíómynd, er hver sekúnda myndarinnar 24 einstakar
+        text: Þegar þú horfir á bíómynd, er hver sekúnda myndarinnar 24 einstakar
           myndir, við köllum þær ramma. Svo hverja þessara mynda þarf að skapa og
           framleiða og setja saman. Teymið mitt og ég, við erum öll hugbúnaðarsmiðir.
           Við vinnum öll saman að því að skapa hugbúnað sem raunverulega býr til mynd,
           býr til endanlegu myndina sem þú sérð á skjánum. Það er verkfæri sem listamenn
           og aðrir hugbúnaðarsmiðir geta notað í sinni teymisvinnu og ferli til að
-          geta búið til myndirnar sem þeir vilja hafa á skjánum."
+          geta búið til myndirnar sem þeir vilja hafa á skjánum.
       4:
         image: notes/C3_crowdsourcing_4.png
         text: Til dæmis í Finding Nemo þegar Crush og Squirt og allir vinirnir eru
@@ -1510,10 +1508,10 @@
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: "Þessi kennslustund nefnist teningakapp. Næstum öllum finnst gaman að
+        text: Þessi kennslustund nefnist teningakapp. Næstum öllum finnst gaman að
           tölvuleikjum. Hefurðu nokkurn tíma pælt í hvernig tölvuforritarar færa það
           sem gerist í leik yfir í forrit? Fyrsta skrefið við að búa til tölvuleik
-          eða leysa eitthvert vandamál er að hugsa og gera áætlun."
+          eða leysa eitthvert vandamál er að hugsa og gera áætlun.
       2:
         image: notes/C3_dice_race_2.png
         text: Hugsunarskrefið í lausn vandamála leiðir til algríms, sem er skref-fyrir-skref
@@ -1531,18 +1529,18 @@
           skrefin að vera í tiltekinni röð.
       4:
         image: notes/C3_dice_race_4.png
-        text: "Ímyndaðu þér að útbúa samloku. Það skiptir ekki máli hvaða innihald
+        text: Ímyndaðu þér að útbúa samloku. Það skiptir ekki máli hvaða innihald
           er tekið úr skápnum fyrst. En þú getur ekki smurt hnetusmjörinu áður en
           þú opnar krukkuna. Tölvur þurfa algrím og forrit til að sýna þeim hvernig
           á að gera jafnvel einfalda hluti sem við getum gert án þess að hugsa um
-          það."
+          það.
       5:
         image: notes/C3_dice_race_5.png
-        text: "Í algrími er hugsunin bak við það sem þarf að gerast en í forriti eru
+        text: Í algrími er hugsunin bak við það sem þarf að gerast en í forriti eru
           sjálfar leiðbeiningarnar sem við gefum tölvunni til að láta það gerast.
           Algrím þarf að þýða yfir í forrit áður en tölva getur keyrt það. Að brjóta
           verkefni niður í skref sem kallast algrím er stundum erfitt. En eins og
-          öll ný færni, verður það auðveldara og auðveldara með æfingu."
+          öll ný færni, verður það auðveldara og auðveldara með æfingu.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
@@ -1559,9 +1557,9 @@
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: "Þessi kennslustund er um sólarskraut með föllum. Þú munt búa til þetta
+        text: Þessi kennslustund er um sólarskraut með föllum. Þú munt búa til þetta
           fallega sólarskraut með föllum. Það eru nokkur skref í að búa til svona
-          skraut. Sum skrefin þarft þú að endurtaka mörgum sinnum."
+          skraut. Sum skrefin þarft þú að endurtaka mörgum sinnum.
       2:
         image: notes/C3_functional_suncatchers_2.png
         text: Fyrsta skrefið í að einfalda það ferli að búa til sólarskraut er að
@@ -1582,9 +1580,9 @@
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: "Þessi kennslustund er um internetið. Internetið er iðandi af lífi og
+        text: Þessi kennslustund er um internetið. Internetið er iðandi af lífi og
           líkist fjölförnum vegi. Skilaboð eru eins og bílar sem þjóta áfram til að
-          komast á áfangastað. Skilaboð fara í gegnum internetið á miklum hraða."
+          komast á áfangastað. Skilaboð fara í gegnum internetið á miklum hraða.
       2:
         image: notes/C3_internet_2.png
         text: Að leika það hvernig internetið virkar hjálpar þér að skilja hvað gerist
@@ -1603,16 +1601,16 @@
           skeyti og slæ á senda.
       4:
         image: notes/C3_internet_4.png
-        text: "Ólíkt og hjá Póstinum, þá er það fyrsta sem gerist er að netið brýtur
+        text: Ólíkt og hjá Póstinum, þá er það fyrsta sem gerist er að netið brýtur
           skeytið niður í smærri hluta svo að það sé auðveldara að senda það. Þessar
           litlu hlutar eru kallaðir pakkar. Pökkum skeytisins er komið á áfangastaðinn
           einum í einu. Þessir pakkar eru settir saman í rétta röð svo að viðtakandinn
           geti lesið skeytið rétt. Auðvitað er margt fleira að læra um netið en þetta
           er góð byrjun. Þú ert á leið með að verða klár netnotandi! Ekki gleyma að
-          segja fjölskyldunni og vinunum hvað þú hefur lært!"
+          segja fjölskyldunni og vinunum hvað þú hefur lært!
       5:
         image: notes/C3_internet_5.png
-        text: "Ég heiti Amanda Camp og ég er hugbúnaðarsérfræðingur hjá Google. Ég
+        text: 'Ég heiti Amanda Camp og ég er hugbúnaðarsérfræðingur hjá Google. Ég
           vinn í teymi sem sér um bakendanetþjón sem geymir notendaupplýsingar og
           tengiliði. Í vinnunni minni hugsum við mikið um hvernig hægt er að senda
           tengiliði til annarra tækja, t.d. síma. Flest fólk hefur marga tengiliði,
@@ -1620,16 +1618,16 @@
           í einu í símann þinn því það er of mikið fyrir eitt skeyti. Á sama hátt
           og netið skiptir stórum skeytum í pakka, notum við hugtak sem heitir fletting
           en með því gætum við sent í símann þinn 100 tengiliði í einu og látið símann
-          svara okkur og biðja um næstu 100. "
+          svara okkur og biðja um næstu 100. '
       6:
         image: notes/C3_internet_6.png
-        text: "Það sem er mest spennandi við hugbúnað er sú staðreynd að hann getur
+        text: Það sem er mest spennandi við hugbúnað er sú staðreynd að hann getur
           haft áhrif um allan heim. Ég lærði fyrst að forrita þegar ég var um nítján
           ára. Mig minnir að ég hafi þá þegar verið á fyrsta ári í háskóla. Fyrsta
           forritið sem ég man að hafa skrifað var til að breyta Celsíus í Fahrenheit.
           Mér líkar forritun því mér finnst gaman að hjálpa fólki. Ég get skrifað
           forrit hjá Google sem hjálpa fólki um allan heim og það er virkilega ótrúlegt
-          og spennandi."
+          og spennandi.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
@@ -1654,22 +1652,22 @@
           þá náum við markmiði okkar.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: "Þetta er dæmi um notkun ef-setningar sem er raunar grundvallarhugtak
+        text: Þetta er dæmi um notkun ef-setningar sem er raunar grundvallarhugtak
           í tölvuforritun. Eitt af því fyrsta sem ég lærði var hvernig á að skrifa
           forrit sem spilaði myllu. Ég var með ef-setningar sem sögðu að ef hinn spilarinn
           væri að fara að vinna, þá ætti að setja hindrun í þann reit. Skemmtu þér
-          við að læra að nota ef-setningar, þetta er lykilhugtak."
+          við að læra að nota ef-setningar, þetta er lykilhugtak.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: "Í þessu dæmi er markmið þitt að koma uppvakningnum til sólblómsins.
+        text: 'Í þessu dæmi er markmið þitt að koma uppvakningnum til sólblómsins.
           Við gætum notað fimm færa-áfram kubba eða við gætum sagt tölvunni að færa
-          áfram og endurtaka fimm sinnum með þessum eina endurtaka kubbi. "
+          áfram og endurtaka fimm sinnum með þessum eina endurtaka kubbi. '
       2:
         image: notes/C3_maze_level_4_2.png
-        text: "Þetta sparar tíma og gerir það mun auðveldara. Til að nota það seturðu
+        text: Þetta sparar tíma og gerir það mun auðveldara. Til að nota það seturðu
           færa-áfram kubbinn inn í endurtaka kubbinn. Ýttu á Keyra og uppvakningurinn
-          mun færast áfram fimm sinnum að ljúffenga sólblóminu."
+          mun færast áfram fimm sinnum að ljúffenga sólblóminu.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
@@ -1686,9 +1684,9 @@
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: "Þetta er kennslustund í að skrifa söngtexta. Tónlist er mjög lík tölvuforriti.
+        text: Þetta er kennslustund í að skrifa söngtexta. Tónlist er mjög lík tölvuforriti.
           Skrifuðu nóturnar og orðin segja söngvaranum nákvæmlega hvað á að gera.
-          Sumir hlutar tónlistar eru notaðir aftur og aftur."
+          Sumir hlutar tónlistar eru notaðir aftur og aftur.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
         text: Við köllum það viðlagið. Í tölvuforriti eru hlutarnir sem eru notaðir
@@ -1697,21 +1695,21 @@
           orð mynda viðlagið.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: "Í þessari kennslustund muntu læra lítinn skrítinn söng sem heitir smákanínan
+        text: Í þessari kennslustund muntu læra lítinn skrítinn söng sem heitir smákanínan
           fú fú. Söngurinn er með viðlag sem þú munt syngja aftur og aftur. Fall er
           kóði sem þú getur kallað á og notað aftur og aftur. Það gerir forritun auðveldari
           og afkastameiri þannig að þú þarft ekki að skrifa aðgerðirnar sem eru í
-          fallinu aftur og aftur. Þú getur skrifað þær bara einu sinni!"
+          fallinu aftur og aftur. Þú getur skrifað þær bara einu sinni!
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: "Þetta er skilyrðiskubburinn. Hann segir að ef þú ert á blómi eða býflugnabúi,
+        text: Þetta er skilyrðiskubburinn. Hann segir að ef þú ert á blómi eða býflugnabúi,
           þá gerðu eitthvað. Þetta er gagnlegt þegar við vitum ekki hve mikið er af
-          hunangi eða blómasafa eins og við sjáum hér með þessu spurningarmerki."
+          hunangi eða blómasafa eins og við sjáum hér með þessu spurningarmerki.
       2:
         image: notes/C4_bee_conditional_2.png
-        text: "Í þessu dæmi ætlum við að segja, ef það er blóm, þá sækja allan safann
-          og svo nota annan til að segja, ef það er bú, þá búa til hunang. Ta-dah!"
+        text: Í þessu dæmi ætlum við að segja, ef það er blóm, þá sækja allan safann
+          og svo nota annan til að segja, ef það er bú, þá búa til hunang. Ta-dah!
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
@@ -1818,10 +1816,10 @@
           Mundu að draga þessa kubba inn í græna kubbinn sem umlykur fallið.
       3:
         image: notes/C4_function_create_3.png
-        text: "Þegar allt er klárt er smellt á vista og loka. Þetta færir þig aftur
+        text: Þegar allt er klárt er smellt á vista og loka. Þetta færir þig aftur
           í aðalvinnusvæði þrautarinnar. Nýja fallið sem þú bjóst til mun sjást sem
           grænn kubbur í flokknum Föll í verkfærakassanum. Dragðu hann inn á aðalvinnusvæðið
-          og notaðu hann eins og hvern annan kubb til að leysa þrautina."
+          og notaðu hann eins og hvern annan kubb til að leysa þrautina.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
@@ -1831,11 +1829,11 @@
           orði við tungumálið.
       2:
         image: notes/C4_function_edit_2.png
-        text: "Í forritinu sem við smíðuðum lærðum við að teikna ferning með því að
+        text: Í forritinu sem við smíðuðum lærðum við að teikna ferning með því að
           færa og snúa fjórum sinnum. Við getum tekið þessa virkni og gefið henni
           heiti, t.d. Teikna ferning. Eftir það getum einfaldlega sagt Teikna ferning
           og þá verður kallað á þessa virkni, þennan kóða eins og áður og þetta verður
-          gert fyrir okkur. Við höfum bætt þessu hugtaki við forritunarmálið."
+          gert fyrir okkur. Við höfum bætt þessu hugtaki við forritunarmálið.
       3:
         image: notes/C4_function_edit_3.png
         text: Í þessari þraut höfum við þegar búið til Teikna ferning fall fyrir þig.
@@ -1848,13 +1846,13 @@
           hvað fallið þitt á að gera.
       4:
         image: notes/C4_function_edit_4.png
-        text: "Í þessu tilfelli á það að teikna ferning. Hvíta svæðið fyrir neðan
-          er vinnusvæðið og virkar alveg eins og vinnusvæðið sem þú hefur þegar verið
+        text: Í þessu tilfelli á það að teikna ferning. Hvíta svæðið fyrir neðan er
+          vinnusvæðið og virkar alveg eins og vinnusvæðið sem þú hefur þegar verið
           að nota. Dragðu kubba úr verkfærakassanum inn á þetta vinnusvæði. Mundu
           að setja kubbana sem búa til ferning inn í græna kubbinn utan um fallið.
           Þegar allt er klárt er smellt á Vista og loka. Þetta færir þig aftur á aðalvinnusvæði
           þrautarinnar. Nú getur þú notað kubb Teikna ferning fallsins eins og hvern
-          annan kubb til að leysa þrautina."
+          annan kubb til að leysa þrautina.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
@@ -1933,10 +1931,9 @@
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: "Þessi kennslustund heitir Tangram Algrím. Tangram er þraut með sjö
-          stykki sem er mögulegt að raða saman til að búa til alls konar form. Þú
-          munt nota algrím til að útskýra fyrir félaga þínum hvernig á að raða þrautinni
-          saman."
+        text: Þessi kennslustund heitir Tangram Algrím. Tangram er þraut með sjö stykki
+          sem er mögulegt að raða saman til að búa til alls konar form. Þú munt nota
+          algrím til að útskýra fyrir félaga þínum hvernig á að raða þrautinni saman.
       2:
         image: notes/C4_unplugged_algorithms_2.png
         text: Algrím er bara listi yfir skref sem þarf að taka til að ljúka verki.
@@ -1947,17 +1944,17 @@
           þitt að sundurliðað og mjög nákvæmt.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: "Ég er að nota algrím í dag til að ljúka við málverk. Ég vildi prófa
+        text: Ég er að nota algrím í dag til að ljúka við málverk. Ég vildi prófa
           að mála málverk af úlfum en ég er ekki mjög fær listamaður. Til allrar hamingju
           fyrir mig þá er til að mála eftir tölum. Það eru 40 litir og það eru litlir
           stafir og tölur sem segja manni hvaða lit á að mála í hvern reit. Málað
-          eftir tölum segir mér nákvæmlega hvaða lit á að nota og hvar."
+          eftir tölum segir mér nákvæmlega hvaða lit á að nota og hvar.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "Þetta er mjög nákvæmt svo að ég get fylgt leiðbeiningum og málverkið
+        text: Þetta er mjög nákvæmt svo að ég get fylgt leiðbeiningum og málverkið
           verður flott. Þetta er fínt algrím. Ef leiðbeiningarnar væru ekki nógu nákvæmar,
           mundu úlfarnir mínir ekki líta eins vel út. Þegar maður virkilega vill að
-          eitthvað verði eins og til var ætlast, er best að vera ákaflega nákvæmur."
+          eitthvað verði eins og til var ætlast, er best að vera ákaflega nákvæmur.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
@@ -1981,12 +1978,12 @@
           aðferð til þess.'
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: "Ímyndum okkur að við setjum net yfir þennan pandabjörn og í hverjum
+        text: Ímyndum okkur að við setjum net yfir þennan pandabjörn og í hverjum
           möskva ætlum við að ákveða hvort ferningurinn er meira svartur eða meira
           hvítur. Síðan ætlum við að lita hann þannig. Nú er hver hver möskvi í netinu
           annaðhvort svartur eða hvítur og látum svörtu möskvana vera 0 (tvíund) og
           þá hvítu vera 1 (hina tvíundina). Í lokin hefur maður bara safn af 0 og
-          1. Þannig getur þú táknað þessa mynd með tvíundum."
+          1. Þannig getur þú táknað þessa mynd með tvíundum.
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
@@ -2030,16 +2027,16 @@
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: "Í þessari kennslustund munum við leika okkur með eyðufyllingarsögur.
+        text: Í þessari kennslustund munum við leika okkur með eyðufyllingarsögur.
           Þið fáið sniðmát sem þið getið fyllt út og búið til  sögur sem eru svipaðar
-          en skemmtilega ólíkar."
+          en skemmtilega ólíkar.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: "Í þessari kennslustund lærðum við líka að búa til útdregið sniðmát
-          út frá 2 sögum sem höfðu verið búnar til áður. Útdráttur er listin að fjarlægja
+        text: Í þessari kennslustund lærðum við líka að búa til útdregið sniðmát út
+          frá 2 sögum sem höfðu verið búnar til áður. Útdráttur er listin að fjarlægja
           það sem er ólíkt, svo og smáatriði til að koma auga á hvernig ein lausn
           gæti virkað fyrir mörg ólík verkefni. Hann er mjög gagnlegur í tölvunarfræði
-          því hann gerir mögulegt að búa til föll sem geta nýst við mismunandi aðstæður."
+          því hann gerir mögulegt að búa til föll sem geta nýst við mismunandi aðstæður.
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
@@ -2064,12 +2061,12 @@
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: "Þessi kennslustund heitir Breytur í umslögum. Við ætlum að læra hvernig
+        text: Þessi kennslustund heitir Breytur í umslögum. Við ætlum að læra hvernig
           við getum búið til setningar þó okkur vanti enn einhverja búta af upplýsingum.
           Flest okkar þekkja þá hugmynd að fylla í eyður. Við gerum það þegar við
           skrifum nafnið okkar á heimavinnuna. Stundum þarf að fylla út fleiri en
           eitt orð og þá merkjum við eyðuna með heiti svo að við vitum hvar hver bútur
-          af upplýsingum á að fara."
+          af upplýsingum á að fara.
       2:
         image: notes/C4_unplugged_variables_2.png
         text: Breytur eru staðgenglar fyrir búta af upplýsingum sem geta breyst. Með
@@ -2081,11 +2078,11 @@
           setur þær inn. Við erum alltaf að nota breytur í vinnunni.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: "Í hvert sinn sem þarf að geyma upplýsingar til að nota seinna, munum
+        text: Í hvert sinn sem þarf að geyma upplýsingar til að nota seinna, munum
           við nota breytu. Segjum að við þurfum telja hve oft notandi hefur tíst.
           Í hvert sinn sem þessi notandi tístir, þá bætum við einni við þá tölu og
           hvert sinn sem hann eyðir tísti, þá lækkum við töluna um einn. Þegar við
-          þurfum að sjá hve oft þessi notandi hefur tíst, skoðum við bara þessa breytu."
+          þurfum að sjá hve oft þessi notandi hefur tíst, skoðum við bara þessa breytu.
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
@@ -2122,11 +2119,11 @@
           því hvernig hann virkar, bara breytunni.
       3:
         image: notes/C4_variables_playlab_3.png
-        text: "Í vinnu minni fyrir Kindle og við X-Ray fyrir bækur, notum við breytur
+        text: Í vinnu minni fyrir Kindle og við X-Ray fyrir bækur, notum við breytur
           á marga mismunandi vegu. Ein leið til að nota breytu er að geyma fjölda
           blaðsíðna í bók. Notandi getur stækkað eða minnkað leturstærðina á síðu.
           Út frá leturstærðinni getur fjöldi blaðsíðna í bókinni breyst. Við getum
-          aðlagað þetta með því að geyma blaðsíðufjöldann í breytu."
+          aðlagað þetta með því að geyma blaðsíðufjöldann í breytu.
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
@@ -2147,10 +2144,10 @@
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: "Í hvaða bekk ert þú? Öðrum. Tíunda bekk. Fyrsta bekk. Ég var í áttunda
+        text: Í hvaða bekk ert þú? Öðrum. Tíunda bekk. Fyrsta bekk. Ég var í áttunda
           bekk þegar ég lærði að forrita. Ég fékk fyrstu tölvuna þegar ég var í sjötta
           bekk. Það sem mér finnst spennandi er að geta leyst vandamál fólks. Maður
-          getur tjáð sig, maður getur byggt hluti út frá hugmynd."
+          getur tjáð sig, maður getur byggt hluti út frá hugmynd.
       2:
         image: notes/infinity_playlab_intro_2.png
         text: Tölvunarfræði er grunnurinn undir mörgu af því sem háskólanemar og sérfræðingar
@@ -2161,21 +2158,21 @@
           þú lærir með mér.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: "Ég heiti John Vechey. Ég er einn af stofnendum PopCap Games. Við búum
+        text: Ég heiti John Vechey. Ég er einn af stofnendum PopCap Games. Við búum
           til leiki eins og Plants vs. Zombies, Bejeweled og Peggle. Mikið í leikjum
           snýst ekki um hve fullkominn kóðinn er, ekki um hve fullkomin listin er,
           heldur um hvaða tilfinningu leikur gefur og hve skemmtilegur hann er. Þú
           uppgötvar það aðeins með því að prófa, með því að gera, með því að læra
-          og aðlaga og æfa eigin færni í að búa til leiki."
+          og aðlaga og æfa eigin færni í að búa til leiki.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: "Áttu þér uppáhalds tölvuleik? Við ætlum að taka eitt skref í áttina
+        text: Áttu þér uppáhalds tölvuleik? Við ætlum að taka eitt skref í áttina
           að því að búa til alveg eins leiki með því að nota Leikjasmiðjuna. Góðir
           leikir hafa söguþráð og hver saga hefur leikendur. Leikarar gera hluti eins
           og tala, hreyfast og eiga innbyrðis samskipti. Jafnvel skora stig í samræmi
           við reglur leiksins. Í dag ætlum við að læra alla þessa hluti, einn í einu,
           með Disney persónum eins og Önnu, Elsu, Hiro, Baymax og Garðabrúðu. Við
-          smíðum leik frá grunni sem svo er hægt að deila og spila í síma."
+          smíðum leik frá grunni sem svo er hægt að deila og spila í síma.
       5:
         image: notes/infinity_playlab_intro_5.png
         text: Skjámyndin skiptist í 3 aðalhluta. Vinstra megin er leiksvæðið þar sem
@@ -2273,14 +2270,14 @@
           Ég held að góð forritun sé ekki svo ólík góðri list.
       3:
         image: notes/unplug1_3.png
-        text: "Þegar ég loksins lærði svolítið í forritun, þá breyttist sá auði veggur
+        text: Þegar ég loksins lærði svolítið í forritun, þá breyttist sá auði veggur
           í röð dyra og maður opnar þær og auðvitað finnur maður að bak við þær er
           bara annar gangur með röð dyra. Forritun er skemmtileg og auðveld. Maður
           getur gert allt sem hugurinn vill gera. Loksins þegar maður hefur opnað
           nógu margar dyr þá byrjar ljósið að skína inn. Fyrir mér er fullgert forrit
           eins og bygging full af ljósi. Öll hornin eru upplýst. Sá fjöldi fólks sem
           maður getur snert og átt samskipti við er eitthvað sem heimurinn hefur aldrei
-          séð áður."
+          séð áður.
       4:
         image: notes/unplug1_4.png
         text: Fyrsta kennslustundin okkar í þessari röð er um það hvað tölvunarfræði
@@ -2320,46 +2317,46 @@
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: "Í forritun með grafpappír, hjálpum við að útskýra forritun með því
-          að reyna að hjálpa fólki að skapa teikningar eingöngu með örvum og táknum.
+        text: Í forritun með grafpappír, hjálpum við að útskýra forritun með því að
+          reyna að hjálpa fólki að skapa teikningar eingöngu með örvum og táknum.
           Einn fær litla teikningu á grafpappír og hann þarf að fara í gegnum hana
           með því að nota aðeins tilteknar örvar og reyna að lýsa hvernig á að endurgera
-          þessa teikningu."
+          þessa teikningu.
       2:
         image: notes/unplug3_2.png
-        text: "Í þessu verkefni eru þetta einu táknin sem má nota: fara einn reit
+        text: 'Í þessu verkefni eru þetta einu táknin sem má nota: fara einn reit
           áfram, einn reit aftur á bak, fara einn reit upp, fara einn reit niður,
           skipta í næsta lit, og fylla reit með lit. Þegar við höfum skráð þetta sem
           kóða, getum við afhent það öðrum, sem getur lesið kóðann og reynt að endurgera
-          myndina."
+          myndina.'
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: "Í forritun með grafpappír, hjálpum við að útskýra forritun með því
-          að reyna að hjálpa fólki að skapa teikningar eingöngu með örvum og táknum.
+        text: Í forritun með grafpappír, hjálpum við að útskýra forritun með því að
+          reyna að hjálpa fólki að skapa teikningar eingöngu með örvum og táknum.
           Einn fær litla teikningu á grafpappír og hann þarf að fara í gegnum hana
           með því að nota aðeins tilteknar örvar og reyna að lýsa hvernig á að endurgera
-          þessa teikningu."
+          þessa teikningu.
       2:
         image: notes/unplug4_2.png
-        text: "Í seinni hluta verkefnisins, spyrjum við nemendur á hve marga mismunandi
+        text: Í seinni hluta verkefnisins, spyrjum við nemendur á hve marga mismunandi
           vegu er hægt að brjóta saman blað svo úr verði 16 jafnstórir ferningar.
           Síðan er umræða um það hvernig margar lausnir geta gefið sömu niðurstöðu
-          og hvers vegna sumar lausnir eru betri við vissar aðstæður."
+          og hvers vegna sumar lausnir eru betri við vissar aðstæður.
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: "Í forritun með grafpappír, hjálpum við að útskýra forritun með því
-          að reyna að hjálpa fólki að skapa teikningar eingöngu með örvum og táknum.
+        text: Í forritun með grafpappír, hjálpum við að útskýra forritun með því að
+          reyna að hjálpa fólki að skapa teikningar eingöngu með örvum og táknum.
           Einn fær litla teikningu á grafpappír og hann þarf að fara í gegnum hana
           með því að nota aðeins tilteknar örvar og reyna að lýsa hvernig á að endurgera
-          þessa teikningu."
+          þessa teikningu.
       2:
         image: notes/unplug5_2.png
-        text: "Í seinni hluta verkefnisins, spyrjum við nemendur á hve marga mismunandi
+        text: Í seinni hluta verkefnisins, spyrjum við nemendur á hve marga mismunandi
           vegu er hægt að brjóta saman blað svo úr verði 16 jafnstórir ferningar.
           Síðan er umræða um það hvernig margar lausnir geta gefið sömu niðurstöðu
-          og hvers vegna sumar lausnir eru betri við vissar aðstæður."
+          og hvers vegna sumar lausnir eru betri við vissar aðstæður.
     unplug6:
       1:
         image: notes/unplug6_1.png
@@ -2407,12 +2404,12 @@
           orðum fyrir eigin sögur og útskýrum fyrir þeim hugtakið útdrátt.
       2:
         image: notes/unplug8_2.png
-        text: "Þetta snýst allt um föll og hvernig maður getur haft fall, eins og
-          Old Macdonald, þar sem viðlagið hefur sérstakt form en það er eitthvað lítið
+        text: Þetta snýst allt um föll og hvernig maður getur haft fall, eins og Old
+          Macdonald, þar sem viðlagið hefur sérstakt form en það er eitthvað lítið
           sem breytist og maður dregur út þetta litla sem er breytilegt og maður getur
           svo sett inn sín eigin orð í hvert skipti sem farið er í gegnum lagið. En
           stundum hefur maður þrjú orð sem breytast og þá fyllir maður þau út með
-          þremur stikum, það er samt vel hjálplegt."
+          þremur stikum, það er samt vel hjálplegt.
       3:
         image: notes/unplug8_3.png
         text: Maður getur haft eitt fall sem ræður við mörg mismunandi verkefni. Oft
@@ -2429,23 +2426,23 @@
           æsingi í tölvunarfræðina.
       2:
         image: notes/unplug9_2.png
-        text: "Þú skiptir öllum í 2 hópa þar sem þau standa í röð og hlaupa eins og
+        text: Þú skiptir öllum í 2 hópa þar sem þau standa í röð og hlaupa eins og
           í boðhlaupi. Sá fremsti í hvorum hópi hleypur yfir í hina hlið stofunnar
           þar sem teikning á grafpappír og autt blað bíður. Þau skrifa niður fyrsta
           skrefið í að búa til myndina, hlaupa aftur í röðina og klukka næsta, sem
-          hleypur og skrifar niður næsta skref."
+          hleypur og skrifar niður næsta skref.
       3:
         image: notes/unplug9_3.png
-        text: "Þetta er fín leið til að koma þeim í skilning um hugmyndina að villukemba,
+        text: Þetta er fín leið til að koma þeim í skilning um hugmyndina að villukemba,
           að þurfa að fara yfir sína eigin vinnu, og þurfa að athuga vinnu þeirra
           sem fóru á undan. Það næst fljótt skilningur á því hve mikilvægt það er
-          að vanda kóðunina þegar allt liðið treystir á þig."
+          að vanda kóðunina þegar allt liðið treystir á þig.
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: "Þessi æfing útskýrir á auðskiljanlegan hátt hvernig internetið virkar.
+        text: Þessi æfing útskýrir á auðskiljanlegan hátt hvernig internetið virkar.
           Við munum útskýra allt orðfærið, sem þú þarft, á einföldum nótum svo að
-          nemendur geti líkt eftir því að senda skilaboð, t.d. tölvupóst."
+          nemendur geti líkt eftir því að senda skilaboð, t.d. tölvupóst.
       2:
         image: notes/unplug10_2.png
         text: Nemendur munu senda skilaboð og um leið þykjast vera ein af þremur sendingaraðferðum.
@@ -2461,10 +2458,10 @@
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: "Þá er kominn tími til að stíga til baka og fá yfirsýn yfir allt sem
+        text: Þá er kominn tími til að stíga til baka og fá yfirsýn yfir allt sem
           hefur verið gert í undanförnum nítján kennslustundum. Þetta er góður tími
           til að láta nemendur vita að það sem þeir hafa gert sé mikið afrek. Þau
-          hafa lært meira í þessum tímum en flestir fullorðnir vita um tölvunarfræði."
+          hafa lært meira í þessum tímum en flestir fullorðnir vita um tölvunarfræði.
       2:
         image: notes/unplug11_2.png
         text: Ræðið sem bekkur eða í smærri hópum um hvað hafi verið mest gaman. Þegar
@@ -2504,8 +2501,8 @@
           þraut eru fyrir neðan leiksvæðið.
       5:
         image: notes/starwars_intro_5.JPG
-        text: "Þetta miðsvæði er verkfærakassinn. Og hver þessara kubba er skipun
-          sem BB-8 skilur."
+        text: Þetta miðsvæði er verkfærakassinn. Og hver þessara kubba er skipun sem
+          BB-8 skilur.
       6:
         image: notes/starwars_intro_6.JPG
         text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
@@ -2522,9 +2519,9 @@
           Þá sleppi ég honum og kubbarnir tveir smella saman.
       9:
         image: notes/starwars_intro_9.JPG
-        text: "Þegar ég ýti aftur á Keyra, mun BB-8 gera skipanirnar sem er staflað
+        text: Þegar ég ýti aftur á Keyra, mun BB-8 gera skipanirnar sem er staflað
           ofan frá og niður á vinnusvæðinu. Ef þú vilt eyða kubbi, skaltu bara fjarlægja
-          hann úr stæðunni og draga hann aftur inn í verkfærakassann."
+          hann úr stæðunni og draga hann aftur inn í verkfærakassann.
       10:
         image: notes/starwars_intro_10.JPG
         text: Eftir að þú hefur ýtt á Keyra, geturðu alltaf ýtt á "Endurstilla" hnappinn
@@ -2550,12 +2547,12 @@
           kóða sem texta.
       4:
         image: notes/starwars_typing_4.JPG
-        text: "Í næstu þraut ætlum við að láta þig byrja í textahamnum. Þú getur eins
+        text: Í næstu þraut ætlum við að láta þig byrja í textahamnum. Þú getur eins
           og áður dregið kubb úr verkfærakassanum eða þú getur skrifað heiti skipunarinnar.
           Þegar þú byrjar að skrifa muntu sjá heiti skipana sem koma til greina fyrir
           neðan það sem þú skrifar. Í stað þess að skrifa allt heiti skipunar getur
           þú valið eina af þeim til að flýta fyrir. Í minni vinnu er ég alltaf að
-          nota þessa flýtifyllingu."
+          nota þessa flýtifyllingu.
       5:
         image: notes/starwars_typing_5.JPG
         text: |-
@@ -2563,8 +2560,8 @@
           Minnsta villa í ritun veldur því að BB-8 skilur ekki kóðann og getur ekki hreyft sig.
       6:
         image: notes/starwars_typing_6.JPG
-        text: "Þegar það er villa í línu merkir ritillinn hana fyrir þig svo þú getir
-          reynt að breyta textanum til að laga villuna."
+        text: Þegar það er villa í línu merkir ritillinn hana fyrir þig svo þú getir
+          reynt að breyta textanum til að laga villuna.
       7:
         image: notes/starwars_typing_7.JPG
         text: Ef þú festist, geturðu alltaf byrjað upp á nýtt með Byrja aftur hnappnum
@@ -2677,8 +2674,8 @@
           þar sem kóði mun keyra. Fyrirmælin fyrir hverja þraut eru fyrir neðan leiksvæðið.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: "Þetta miðsvæði er verkfærakassinn. Og hver þessara kubba er skipun
-          sem BB-8 skilur."
+        text: Þetta miðsvæði er verkfærakassinn. Og hver þessara kubba er skipun sem
+          BB-8 skilur.
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
@@ -2776,12 +2773,12 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "Ég heiti Jens Bergenstein, en er betur þekktur sem Jeb. Ég er yfir
-          hugbúnaðarþróun í Minecraft hér hjá Mojang í Stokkhólmi. Ég held ég hafi
-          verið 11 eða kannske 12 ára og ég byrjaði að forrita vegna þess að ég vildi
-          búa til leiki. Einn af vinum föður míns sagði mér að til að gera leiki þyrfti
-          maður að læra að forrita. Svo þannig byrjaði ég. Mér finnst gaman að hanna
-          og pæla í uppbyggingu hluta. Það er það sem mér líkar svo vel við Minecraft."
+        text: Ég heiti Jens Bergenstein, en er betur þekktur sem Jeb. Ég er yfir hugbúnaðarþróun
+          í Minecraft hér hjá Mojang í Stokkhólmi. Ég held ég hafi verið 11 eða kannske
+          12 ára og ég byrjaði að forrita vegna þess að ég vildi búa til leiki. Einn
+          af vinum föður míns sagði mér að til að gera leiki þyrfti maður að læra
+          að forrita. Svo þannig byrjaði ég. Mér finnst gaman að hanna og pæla í uppbyggingu
+          hluta. Það er það sem mér líkar svo vel við Minecraft.
       2:
         image: notes/mc_intro_2.JPG
         text: Næstu klukkustundina munt þú læra grunnatriði tölvunarfræði með því
@@ -2799,9 +2796,9 @@
           til að láta Minecraft virka.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Áður en þú byrjar, velur þú persónu. Ég ætla að velja hana Alex. Við
+        text: Áður en þú byrjar, velur þú persónu. Ég ætla að velja hana Alex. Við
           skulum setja saman kóða fyrir forrit, sem mun hjálpa henni að hreyfast um
-          skjáinn."
+          skjáinn.
       6:
         image: notes/mc_intro_6.JPG
         text: Skjárinn þinn skiptist í 3 meginhluta. Vinstra megin er Minecraft leiksvæðið
@@ -2809,8 +2806,8 @@
           fyrir neðan.
       7:
         image: notes/mc_intro_7.JPG
-        text: "Þetta svæði í miðjunni er verkfærakassinn og hver af þessum kubbum
-          er skipun sem stýrir hreyfingum Alex."
+        text: Þetta svæði í miðjunni er verkfærakassinn og hver af þessum kubbum er
+          skipun sem stýrir hreyfingum Alex.
       8:
         image: notes/mc_intro_8.JPG
         text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
@@ -2840,8 +2837,8 @@
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "Ég heiti Lydia Winters, vörumerkjastjóri hjá Mojang og við gerðum smá
-          leik sem heitir Minecraft."
+        text: Ég heiti Lydia Winters, vörumerkjastjóri hjá Mojang og við gerðum smá
+          leik sem heitir Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
         text: Uppáhaldsiðjan mín í Minecraft er að kanna. Ég elska að kanna hella
@@ -2850,10 +2847,10 @@
           einhverja kóðun.
       3:
         image: notes/mc_repeat_3.JPG
-        text: "Í síðasta borði voru notaðir mjög margir moveForward(); kubbar. Það
+        text: Í síðasta borði voru notaðir mjög margir moveForward(); kubbar. Það
           væri auðveldara ef við gætum bara sagt tölvunni að endurtaka moveForward();
           skipunina fjórum eða fimm sinnum. Við erum heppin því að tölvur eru virkilegar
-          góðar í að endurtaka skipanir með lykkjum sem endurtaka."
+          góðar í að endurtaka skipanir með lykkjum sem endurtaka.
       4:
         image: notes/mc_repeat_4.JPG
         text: Þegar Minecraft er keyrt upp, notum við lykkjur sem endurtaka til að
@@ -2886,14 +2883,14 @@
           þá aflæsi ég símanum. Annars sýnir hann villuboð.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: "Þú getur notað EF setningar í þínum kóða til að láta Steve og Alex
-          bregðast við því sem þau sjá í heiminum. Til dæmis, ef það er klöpp framundan,
-          þá geta þau beygt til vinstri. Eða snúið til hægri ef þau rekast á tré."
+        text: Þú getur notað EF setningar í þínum kóða til að láta Steve og Alex bregðast
+          við því sem þau sjá í heiminum. Til dæmis, ef það er klöpp framundan, þá
+          geta þau beygt til vinstri. Eða snúið til hægri ef þau rekast á tré.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "Í þessu dæmi viljum við ekki detta í hraunið. Það er auðvelt að gera
+        text: Í þessu dæmi viljum við ekki detta í hraunið. Það er auðvelt að gera
           ráð fyrir hrauninu sem við sjáum, en hvað með hraunið sem við sjáum ekki
-          undir klöppinni?"
+          undir klöppinni?
       5:
         image: notes/mc_if_statements_5.JPG
         text: Eftir að við gröfum út klöppina, þurfum að við athuga hvort að þar sé
@@ -2917,8 +2914,8 @@
           hús úr ull!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "Þegar sköpunarverkið þitt er tilbúið, getur þú valið að deila til að
-          fá tengil sem þú getur deilt með vinunum. Góða skemmtun!"
+        text: Þegar sköpunarverkið þitt er tilbúið, getur þú valið að deila til að
+          fá tengil sem þú getur deilt með vinunum. Góða skemmtun!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
@@ -2944,18 +2941,18 @@
           spila leik sem er þín eigin sköpun.
       2:
         image: notes/gumball_intro_2.JPG
-        text: "Áttu þér uppáhaldstölvuleik? Við ætlum að taka eitt skref í áttina
-          að því að búa til alveg eins leiki með því að nota Leikjasmiðjuna. Góðir
-          leikir hafa söguþráð og hver saga hefur leikendur. Leikarar gera hluti eins
-          og að tala, hreyfast og eiga innbyrðis samskipti. Jafnvel skora stig í samræmi
+        text: Áttu þér uppáhaldstölvuleik? Við ætlum að taka eitt skref í áttina að
+          því að búa til alveg eins leiki með því að nota Leikjasmiðjuna. Góðir leikir
+          hafa söguþráð og hver saga hefur leikendur. Leikarar gera hluti eins og
+          að tala, hreyfast og eiga innbyrðis samskipti. Jafnvel skora stig í samræmi
           við reglur leiksins. Í dag ætlum við að læra að gera alla þessa hluti -
           einn í einu - með skemmtilegum leikurum og smíða svo frá grunni leik sem
-          er hægt að deila og spila í síma."
+          er hægt að deila og spila í síma.
       3:
         image: notes/gumball_intro_3.JPG
-        text: "Í dag ætlum við að læra að gera alla þessa hluti - einn í einu - með
+        text: Í dag ætlum við að læra að gera alla þessa hluti - einn í einu - með
           skemmtilegum leikurum og smíða svo frá grunni leik sem er hægt að deila
-          og spila í síma."
+          og spila í síma.
       4:
         image: notes/gumball_intro_4.JPG
         text: Skjárinn þinn skiptist í 3 meginhluta. Vinstra megin er leiksvæðið þar
@@ -2963,8 +2960,8 @@
           neðan.
       5:
         image: notes/gumball_intro_5.JPG
-        text: "Þetta miðsvæði er verkfærakassinn og hver þessara kubba er bútur af
-          kóða."
+        text: Þetta miðsvæði er verkfærakassinn og hver þessara kubba er bútur af
+          kóða.
       6:
         image: notes/gumball_intro_6.JPG
         text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
@@ -3031,18 +3028,18 @@
           spila leik sem er þín eigin sköpun.
       2:
         image: notes/iceage_intro_2.JPG
-        text: "Áttu þér uppáhalds tölvuleik? Við ætlum að taka eitt skref í áttina
+        text: Áttu þér uppáhalds tölvuleik? Við ætlum að taka eitt skref í áttina
           að því að búa til svoleiðis leiki og gera það í í Leikjasmiðjunni. Góðir
           leikir hafa sögu og hver saga hefur leikara. Leikara sem tala, hreyfast
           og eiga samskipti. Geta jafnvel skorað stig eftir sem reglur leiksins segja
           til um. Í dag munum við læra að gera þessa hluti einn og einn í einu með
           skemmtilegum leikurum og síðan smíða frá grunni leik sem hægt verður að
-          deila og spila í síma."
+          deila og spila í síma.
       3:
         image: notes/iceage_intro_3.JPG
-        text: "Í dag ætlum við að læra að gera alla þessa hluti - einn í einu - með
+        text: Í dag ætlum við að læra að gera alla þessa hluti - einn í einu - með
           skemmtilegum leikurum og smíða svo frá grunni leik sem er hægt að deila
-          og spila í síma."
+          og spila í síma.
       4:
         image: notes/iceage_intro_4.JPG
         text: Skjárinn þinn skiptist í 3 meginhluta. Vinstra megin er leiksvæðið þar
@@ -3050,8 +3047,8 @@
           neðan.
       5:
         image: notes/iceage_intro_5.JPG
-        text: "Þetta miðsvæði er verkfærakassinn og hver þessara kubba er bútur af
-          kóða."
+        text: Þetta miðsvæði er verkfærakassinn og hver þessara kubba er bútur af
+          kóða.
       6:
         image: notes/iceage_intro_6.JPG
         text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
@@ -3120,15 +3117,15 @@
           kóða svo að Minecraft heimurinn virki.
       2:
         image: notes/mc_2016_intro_2.jpg
-        text: "Ég heiti Melissa og ég vinn við notendarannsóknir hjá Minecraft. Ég
+        text: 'Ég heiti Melissa og ég vinn við notendarannsóknir hjá Minecraft. Ég
           hef sérstakan áhuga á því hvernig fólk hugsar um og á samskipti við tölvutækni
           svo að það er fullkomið starf fyrir mig að geta tvinnað saman tölvuhönnun
-          og sálfræði: hvað fólk hugsar og gerir."
+          og sálfræði: hvað fólk hugsar og gerir.'
       3:
         image: notes/mc_2016_intro_3.jpg
-        text: "Þú sérð að skjárinn þinn skiptist í þrjá aðalhluta. 1) Vinstra megin
+        text: Þú sérð að skjárinn þinn skiptist í þrjá aðalhluta. 1) Vinstra megin
           er Minecraft leikurinn. Þessa stundina er heimurinn frosinn en við ætlum
-          að laga það með kóða."
+          að laga það með kóða.
       4:
         image: notes/mc_2016_intro_4.jpg
         text: 2) Þetta miðsvæði er verkfærakassinn. Hver þessara kubba er skipun sem
@@ -3180,10 +3177,10 @@
     mc_2016_events:
       1:
         image: notes/mc_2016_events_1.jpg
-        text: "Í þessu borði getur þú valið að vera annað hvort Steve eða Alex. Ýttu
+        text: Í þessu borði getur þú valið að vera annað hvort Steve eða Alex. Ýttu
           á örvarlyklana á lyklaborðinu til að fara upp, niður, til vinstri og til
           hægri. Nú getur þú fært þig um borðið hvert sem þú vilt. Nýttu þér veru
-          með því að ganga að henni, snúa þér að henni og ýta á bilslána."
+          með því að ganga að henni, snúa þér að henni og ýta á bilslána.
       2:
         image: notes/mc_2016_events_2.jpg
         text: Ef þú ert að nota snertiskjá, hreyfir þú þig með því að strjúka upp,
@@ -3224,9 +3221,9 @@
           að öllum skipunum og öllum verunum. Þú ákveður hvað gerist.
       2:
         image: notes/mc_2016_congrats_2.jpg
-        text: "Þegar leikurinn er tilbúinn getur þú valið að deila til að fá tengil
+        text: Þegar leikurinn er tilbúinn getur þú valið að deila til að fá tengil
           sem þú getur látið vini þína fá eða til að spila leikinn í símanum þínum.
-          Hafðu gaman af! Ég hlakka til að spila þína útgáfu af Minecraft."
+          Hafðu gaman af! Ég hlakka til að spila þína útgáfu af Minecraft.
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
