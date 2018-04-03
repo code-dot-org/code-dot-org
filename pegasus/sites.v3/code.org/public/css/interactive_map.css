@@ -27,3 +27,11 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+.fact.subfact {
+  color: #ddd;
+}
+
+.fact > a {
+  color: white;
+}
