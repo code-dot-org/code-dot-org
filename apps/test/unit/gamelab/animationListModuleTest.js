@@ -27,9 +27,6 @@ describe('animationListModule', function () {
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
-    beforeEach(() => sinon.stub(Math, 'random').returns(0.5));
-    afterEach(() => Math.random.restore());
-
     it(`returns the sourceUrl from props if it exists`, function () {
       const props = {sourceUrl: 'bar'};
       expect(animationSourceUrl(key, props)).to.equal('bar');
