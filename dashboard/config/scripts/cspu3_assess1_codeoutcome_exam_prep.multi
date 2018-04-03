@@ -1,0 +1,17 @@
+name 'cspu3_assess1_codeoutcome_exam_prep'
+wrong 'It will draw a star with each side 150 pixels long.'
+wrong 'The program will stop with an error at line 3 because parameters may not be used in for loops.'
+wrong 'The program will stop with an error at line 5 because it is dividing by 0.'
+right 'The program will run without error, but will not draw anything.'
+
+teacher_markdown <<MARKDOWN
+* Going through the code line by line, drawStar(0) is called with a parameter of zero.
+* For line 2, the function "drawStar(points)" is called where a zero is passed in as a parameter.
+* Looking at the 3rd line, a for loop is written but since a parameter of zero is passed in, the loop will repeat the code zero times.
+* Therefore, since the parameter passed in is zero, the program does not enter the for loop. It will not have an error, and it will not draw anything.
+MARKDOWN
+
+markdown <<MARKDOWN
+ What is the most likely outcome of running the code shown at right?
+![](https://images.code.org/259a2bcde6ae37f57814e0da7f7de458-image-1474952709813.png)
+MARKDOWN

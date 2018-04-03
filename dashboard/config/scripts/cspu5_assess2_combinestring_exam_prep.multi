@@ -1,0 +1,30 @@
+name 'cspu5_assess2_combineString_exam_prep'
+wrong '10'
+wrong 'error on str1 + str2: type mismatch'
+right '55'
+wrong 'result'
+markdown <<MARKDOWN
+What is the output of the following JavaScript code segment?
+
+    var str1 = “5”;
+    var str2 = “5”;
+    var result = str1 + str2;
+    console.log(result);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 6**
+
+* Since there are quotation marks around the numbers, str1 and str2 are set to a string with the number five inside it.
+* The variable "result" wants to combine the strings (_not_ the values of the digits) which puts them next to each other and the result is now the string "55"
+* The console wants to print out the value of result which is the string "55" and thus, 55 is printed out.
+
+You can relate this to any character that is inside the string, even if it is a numerical digit. It may be easier to start out with an example that uses letters such as:
+
+* var first = "h";
+* var second = "i";
+* var result = first + second
+* If result were printed, "hi" would be the output
+
+As long as the variable is of type string, combining letters and digits have the same concept.
+MARKDOWN

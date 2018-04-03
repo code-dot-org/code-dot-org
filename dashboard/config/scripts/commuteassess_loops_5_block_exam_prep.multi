@@ -1,0 +1,12 @@
+name 'CommuteAssess - loops 5 - block_exam_prep'
+question 'What will be displayed when this code is run?'
+wrong '<pre>5<br>4<br>3<br>2<br>1<br>0</pre>'
+wrong '<pre>5<br>3<br>1</pre>'
+right '<pre>3<br>1<br>-1</pre>'
+wrong '<pre>3<br>1</pre>'
+wrong '<pre>3</pre>'
+wrong 'it will be different each time you run it'
+
+markdown <<MARKDOWN
+![](https://images.code.org/da1c6db6f537c72748389671691619a0-image-1483468367249.png)
+MARKDOWN
