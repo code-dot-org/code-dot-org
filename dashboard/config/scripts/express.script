@@ -1,8 +1,8 @@
 hidden false
 hideable_stages true
 stage_extras_available true
-project_widget_visible true
 has_lesson_plan true
+project_widget_visible true
 project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses bullhorn", "type"=>"bullhorn"}]
 
@@ -278,7 +278,7 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-stage 'Conditionals & Loops in Farmer'
+stage 'Conditionals & Loops in Harvester'
 level 'courseD_farmer_condLoops1'
 level 'courseD_farmer_condLoops2'
 level 'courseD_farmer_condLoops3'

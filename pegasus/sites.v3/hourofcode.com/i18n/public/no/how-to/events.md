@@ -10,7 +10,7 @@ nav: how_to_nav
 ## Forberedelser til arrangementet
 
 - Velg tid og sted for arrangementet.
-- [Inviter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) borgermesteren, rådmannen, en lokalpolitiker, eller en sentral aktør fra det lokale næringslivet, til å tale. Sjekk ut [våre tips](<%=resolve_url('/files/elected-official.pdf')%>) til hvordan man gjennomfører Kodetimen med en offisiell representant tilstede.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Inviter pressen, f.eks. journalister fra lokalaviser og riksdekkende presse, lokale tv-stasjoner, og bloggere. Se vår [pressepakke](<%= resolve_url('/promote/press-kit') %>) for hjelp.
 
 ## 2. I løpet av arrangementet
@@ -39,7 +39,7 @@ Vurder et arrangement for småtrinnet på skolen, og inviter med foreldrene på 
 
 **Arrangement:** Kodeuka kick-off - samling for hele skolen
 
-**Dato:** 5. desember (starten på Kodeuka)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Tid:** I løpet av skoledagen, fortrinnsvis på formiddagen. Ca 1 time.
 

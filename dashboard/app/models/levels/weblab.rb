@@ -77,4 +77,8 @@ class Weblab < Level
     return if examples.nil?
     self.examples = examples.select(&:present?)
   end
+
+  def age_13_required?
+    true
+  end
 end

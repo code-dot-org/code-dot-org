@@ -54,7 +54,7 @@ class CensusMapInfoWindow extends Component {
     };
 
     return (
-      <div className="census-info-window">
+      <div id="census-info-window" className="census-info-window">
         <h4>
           <b>
             {this.props.schoolName}
@@ -94,7 +94,6 @@ class CensusMapInfoWindow extends Component {
 
 export default class CensusMap extends Component {
   static propTypes = {
-    onSchoolChange: PropTypes.func.isRequired,
     onTakeSurveyClick: PropTypes.func.isRequired,
     fusionTableId: PropTypes.string.isRequired,
     school: PropTypes.object,

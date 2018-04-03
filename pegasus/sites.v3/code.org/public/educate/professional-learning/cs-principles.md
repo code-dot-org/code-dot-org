@@ -27,7 +27,9 @@ theme: responsive
 - **Step 3:** Set aside 10 - 15 minutes to complete the application.
 [<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
 
-The priority deadline for applications is **March 30, 2018**. Late applications will only be reviewed at our Regional Partners' discretion. If you have questions, be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a>.
+**Applications are still being accepted through the spring in most regions. If you haven't done so already, please apply!** 
+
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 
 [/col-50]
@@ -57,7 +59,7 @@ In New York and North Carolina, there is a fee to cover the costs of the worksho
 </p>
 </details>
 
-<details> 
+<details>
   <summary>**One cohesive set of resources**</summary>
   <p>
 <br>
@@ -88,10 +90,10 @@ The Code.org Professional Learning Program has both in-person and online support
 
 <br/>
 
-**Summer Workshop:** 
+**Summer Workshop:**
 
 * Participants kick off the Professional Learning Program with a 5-day workshop
-* Explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers. 
+* Explore the curriculum and learning tools, discuss classroom management and teaching strategies, and build a community of teachers.
 * With a focus on a customized experience, participants will develop skills while working in small groups to deepen their understanding of the materials.<br/>
 
 **Ongoing Support, throughout following academic year:**  
@@ -106,7 +108,7 @@ In addition, all teachers have access to the Code.org forum, an online professio
 ## What does a Code.org CS Principles educator do?
 If accepted into the Code.org CS Principles Professional Learning Program, you will:
 
-- Join a nationwide community of educators working to change the face of computer science education 
+- Join a nationwide community of educators working to change the face of computer science education
 - Participate in in-person and online professional development
 - Plan and deliver the CS Principles curriculum to your students
 
@@ -118,7 +120,7 @@ The CS Principles Professional Learning Program is available in regions served b
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dKLjL6y3AKo45c7weK__JI3sxijfbmzq" width="640" height="480"></iframe>
 
 <br>
-Some of our Partners serve their entire state and will be hosting summer workshops in multiple locations. Even if your city is not listed on this map, we encourage you to apply! 
+Some of our Partners serve their entire state and will be hosting summer workshops in multiple locations. Even if your city is not listed on this map, we encourage you to apply!
 
 ## <a name="participate"></a>Who can participate?
 
@@ -133,9 +135,9 @@ Not sure if this is the right Code.org program for you? <a href="/files/PL-Progr
 
 ## <a name="cost"></a>What does the program cost?
 
-We are a nonprofit dedicated to helping schools teach computer science. We want to make sure all our students have access to a high quality education. In most states, our professional learning is offered at no cost to you or your school. 
+We are a nonprofit dedicated to helping schools teach computer science. We want to make sure all our students have access to a high quality education. In most states, our professional learning is offered at no cost to you or your school.
 
-In New York and North Carolina, there is a fee to cover the costs of the workshop. But, we have worked with many school districts in these regions and they have allocated funds to cover the costs for you and your school. If your principal or administration has any questions around the costs to support this, please encourage them to reach out to our partners in <a href="mailto:programs@codeinteractive.org">New York</a> and <a href="mailto:srmorri3@ncsu.edu">North Carolina</a> so we can help you.  
+In New York and North Carolina, there is a fee to cover the costs of the workshop. But, we have worked with many school districts in these regions and they have allocated funds to cover the costs for you and your school. If your principal or administration has any questions around the costs to support this, please encourage them to reach out to our partners in <a href="mailto:programs@codeinteractive.org">New York</a> and <a href="mailto:srmorri3@ncsu.edu">North Carolina</a> so we can help you.
 
 **5-day Summer Workshop Expenses**
 In some cases, travel may be required to attend your five-day summer workshop. Participants who are assigned to attend a Code.org-hosted Teacher Conference (TeacherCon) will have flights, lodging, and meals provided at no cost.
@@ -171,12 +173,13 @@ Be sure to complete the following steps before you apply.
 
 [<button>Apply now!</button>](https://studio.code.org/pd/application/teacher)
 
-The priority deadline for applications is **March 30, 2018**. Late applications will only be reviewed at our Regional Partners' discretion.
-If you have questions, be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a>.
+**Applications are still being accepted through the spring in most regions. If you haven't done so already, please apply!** 
+
+Be sure to check out our <a href="https://docs.google.com/document/d/1d3BRQt7NARChV6ZPgwyxJNP4TSYyBlo06m2TvJjOnwQ/edit#", target=_"blank">FAQs</a> or <a href="mailto:teacher@code.org">contact us</a> if you have questions.
 
 <!--
 ## <a name="components"></a>How does it work?
-The program has two components: 
+The program has two components:
 
 - **5-day Summer Workshop** (dates and locations vary by district) - An intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
 - **Continuing Professional Development** (held over 4 days, totaling 24 professional development hours; local, in-person workshops take place throughout the following academic year, usually on Saturdays) - A menu of online and local in-person professional development options from which educators can build a customized personal learning pathway. This phase of the program is blended, with ongoing in-person meetings as well as online activities.
@@ -185,10 +188,10 @@ The program has two components:
 
 ### <a name="facilitate"></a>How do I become a CS Discoveries Facilitator?
 
-Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum. 
+Code.org's [Facilitator Development Program](/educate/professional-learning/facilitator) is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on the CS Principles curriculum.
 
 If you're interested in becoming a Code.org Facilitator, <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAq4l_1HsjdbtRBo7fggTrTZe0H9_tcRMBrxXA893QkP6MWA/viewform", target=_"blank">let us know!</a>
 
 -->
 
-<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=1108",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> 
+<%= view :answerdash %>

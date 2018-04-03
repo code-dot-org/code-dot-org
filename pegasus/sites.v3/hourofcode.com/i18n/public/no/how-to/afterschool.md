@@ -7,7 +7,7 @@ nav: how_to_nav
 
 # Hvordan undervise i Kodetimen på AKS/SFO og på fritidsklubber
 
-Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig](<%= resolve_url('https://code.org/volunteer/local') %>) som kan hjelpe til med å organisere Kodetimen for klassen din.
+Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Se denne veiledningsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -95,7 +95,7 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 
 [/col-33]
 
-- [Skriv ut diplomer](<%= resolve_url('https://code.org/certificates') %>) til elevene.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for your students.
 - [Skriv ut "Jeg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>)-klistremerker til elevene.
 - [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skolen din.
 - Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
@@ -110,7 +110,7 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 
 ## Flere Kodetimen-ressurser for lærere
 
-- Se [anbefalte fremgangsmåter](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra tidligere arrangører av Kodetimen. 
+- Se [anbefalte fremgangsmåter](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra tidligere arrangører av Kodetimen.
 - Se på opptaket av vårt webinar [Lærerens Guide til Kodetimen](https://youtu.be/EJeMeSW2-Mw).
 - Sjekk ut råd, tips og erfaringer fra andre lærere på [Kodetimens lærerforum](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
 - Se på [Kodetimens ofte stilte spørsmål](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 
 Kodetimen er bare første steg på en reise for å lære seg mer om hvordan teknologien fungerer og hvordan du kan lage dine egne programmer. For å fortsette på denne reisen:
 
-- Oppmuntre elevene til å fortsette egen læring [på Internett](<%= resolve_url('https://code.org/learn/beyond') %>).
-- [Delta](<%= resolve_url('https://code.org/professional-development-workshops') %>) på et endags-seminar for å lære av en erfaren informatikklærer. (Bare i USA.)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond') %>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -61,12 +61,15 @@ export default class CensusInaccuracyReviewDetails extends Component {
   };
 
   stringForExplanationLabel = {
+    overrides: "Override",
     offers_ap: "Offers AP CS?",
     offers_ib: "Offers IB CS?",
     consistent_teacher_surveys: "Consistent Teacher/Admin Surveys",
     state_offering: "Teaches per State Data?",
+    inconsistent_teacher_surveys: "Inconsistent Teacher/Admin Surveys",
     consistent_non_teacher_surveys: "Consistent Non-Teacher/Admin Surveys",
     inconsistent_surveys: "Inconsistent Surveys",
+    non_teacher_surveys: "Non-Teacher/Admin Surveys",
     last_years_summary: "Last Year's Summary",
     two_years_agos_summary: "Two Years Ago's Summary",
   };

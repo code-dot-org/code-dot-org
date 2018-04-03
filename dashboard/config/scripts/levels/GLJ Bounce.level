@@ -6,178 +6,6 @@
   "user_id": 182,
   "properties": {
     "skin": "gamelab",
-    "code_functions": {
-      "draw": null,
-      "drawSprites": null,
-      "playSound": null,
-      "stopSound": null,
-      "keyDown": null,
-      "keyWentDown": null,
-      "keyWentUp": null,
-      "mouseDidMove": null,
-      "mouseDown": null,
-      "mouseIsOver": null,
-      "mouseWentDown": null,
-      "mouseWentUp": null,
-      "mousePressedOver": null,
-      "World.mouseX": null,
-      "World.mouseY": null,
-      "World.frameRate": null,
-      "World.frameCount": null,
-      "World.seconds": null,
-      "World.width": null,
-      "World.height": null,
-      "World.allSprites": null,
-      "camera.on": null,
-      "camera.off": null,
-      "camera.isActive": null,
-      "camera.mouseX": null,
-      "camera.mouseY": null,
-      "camera.x": null,
-      "camera.y": null,
-      "camera.zoom": null,
-      "comment_GameLab": null,
-      "var sprite = createSprite": null,
-      "setAnimation": null,
-      "x": null,
-      "y": null,
-      "velocityX": null,
-      "velocityY": null,
-      "scale": null,
-      "sprite.height": null,
-      "sprite.width": null,
-      "visible": null,
-      "rotation": null,
-      "rotationSpeed": null,
-      "rotateToDirection": null,
-      "debug": null,
-      "isTouching": null,
-      "collide": null,
-      "displace": null,
-      "overlap": null,
-      "bounce": null,
-      "bounceOff": null,
-      "bounciness": null,
-      "setCollider": null,
-      "createEdgeSprites": null,
-      "shapeColor": null,
-      "setVelocity": null,
-      "getDirection": null,
-      "getSpeed": null,
-      "setSpeedAndDirection": null,
-      "pointTo": null,
-      "mirrorX": null,
-      "mirrorY": null,
-      "getScaledWidth": null,
-      "getScaledHeight": null,
-      "lifetime": null,
-      "nextFrame": null,
-      "pause": null,
-      "play": null,
-      "setFrame": null,
-      "depth": null,
-      "destroy": null,
-      "comment_Sprites": null,
-      "var group = createGroup": null,
-      "add": null,
-      "remove": null,
-      "clear": null,
-      "contains": null,
-      "get": null,
-      "group.isTouching": null,
-      "group.bounce": null,
-      "group.bounceOff": null,
-      "group.collide": null,
-      "group.displace": null,
-      "group.overlap": null,
-      "maxDepth": null,
-      "minDepth": null,
-      "destroyEach": null,
-      "pointToEach": null,
-      "setAnimationEach": null,
-      "setColorEach": null,
-      "setColliderEach": null,
-      "setDepthEach": null,
-      "setHeightEach": null,
-      "setLifetimeEach": null,
-      "setMirrorXEach": null,
-      "setMirrorYEach": null,
-      "setRotateToDirectionEach": null,
-      "setRotationEach": null,
-      "setRotationSpeedEach": null,
-      "setScaleEach": null,
-      "setSpeedAndDirectionEach": null,
-      "setVelocityEach": null,
-      "setVelocityXEach": null,
-      "setVelocityYEach": null,
-      "setVisibleEach": null,
-      "setWidthEach": null,
-      "comment_Groups": null,
-      "background": null,
-      "fill": null,
-      "noFill": null,
-      "stroke": null,
-      "strokeWeight": null,
-      "noStroke": null,
-      "rgb": null,
-      "rect": null,
-      "ellipse": null,
-      "text": null,
-      "textAlign": null,
-      "textFont": null,
-      "textSize": null,
-      "arc": null,
-      "line": null,
-      "point": null,
-      "regularPolygon": null,
-      "shape": null,
-      "comment_Drawing": null,
-      "forLoop_i_0_4": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "whileBlock": null,
-      "comment_Control": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "greaterThanOrEqualOperator": null,
-      "lessThanOperator": null,
-      "lessThanOrEqualOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-      "mathRandom": null,
-      "comment_Math": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "includes": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
-      "comment_Variables": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null,
-      "comment": null
-    },
     "show_debug_watch": "true",
     "helper_libraries": [
       "GameLabJr"
@@ -215,7 +43,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\",\r\n    \"aebcfb1d-4308-44be-b11b-3affd0c92e3b\",\r\n    \"c9273272-8f5a-49ab-a38b-25234fba66d9\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Fstudio.code.org%252Fv3%252Fanimations%252FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%252Fd19383c3-9b64-482d-811d-07f8997533ea.png%253Fversion%253Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FObqhC6m3YYUSu8X0NiA-GQ%2F215c6306-73d7-4a48-8a6b-40eae22a2a0e.png%3Fversion%3DLTwvrcayEyZ8U_6FA0yKsVOyaYs6UdFq\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"LTwvrcayEyZ8U_6FA0yKsVOyaYs6UdFq\"\r\n    },\r\n    \"aebcfb1d-4308-44be-b11b-3affd0c92e3b\": {\r\n      \"name\": \"penguin\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/FMcijTb9R6rbXhRTXRCtiA/aebcfb1d-4308-44be-b11b-3affd0c92e3b.png?version=4a5epwTnLAP90N6ysD9i6hdRq_AsmK0W\",\r\n      \"frameSize\": {\r\n        \"x\": 50,\r\n        \"y\": 50\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"4a5epwTnLAP90N6ysD9i6hdRq_AsmK0W\"\r\n    },\r\n    \"c9273272-8f5a-49ab-a38b-25234fba66d9\": {\r\n      \"name\": \"paddle\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/FMcijTb9R6rbXhRTXRCtiA/c9273272-8f5a-49ab-a38b-25234fba66d9.png?version=FSW6gqzt4jLd1uoLegYXAVsyEUS6hZ2R\",\r\n      \"frameSize\": {\r\n        \"x\": 20,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"FSW6gqzt4jLd1uoLegYXAVsyEUS6hZ2R\"\r\n    }\r\n  }\r\n}",
     "custom_helper_library": "function addBehaviorSimple(sprite, name, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\n\r\nfunction tossable() {\r\n  var behavior = function(sprite) {\r\n    if (mouseWentUp()) {\r\n      sprite.maxVelocity = 5;\r\n      sprite.setVelocity(min(mouseX - pmouseX, sprite.maxVelocity), min(mouseY - pmouseY, sprite.maxVelocity));\r\n    }\r\n  }\r\n  behavior.name = \"tossable\";\r\n  return behavior;\r\n}\r\n\r\nfunction gravity() {\r\n    var behavior = function(sprite) {\r\n      sprite.maxVelocity = 5;\r\n      if (sprite.velocityY < sprite.maxVelocity) {\r\n    \tsprite.velocityY = sprite.velocityY + 0.1;\r\n      }\r\n    }\r\n    behavior.name=\"gravity\";\r\n    return behavior;\r\n}\r\n\r\nfunction bounceOffEdges(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.bounceOff(edges);\r\n  }\r\n  behavior.name = 'bounceOffEdges';\r\n  return behavior;\r\n}",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"blockText\": \"create new behavior for {SPRITE} called {NAME}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"NAME\"\r\n      }\r\n    ],\r\n    \"eventBlock\": true\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"draggable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"gravity\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"gravity\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"tossable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"tossable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOffEdges\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"bounce off edges\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOff\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"blockText\": \"{THIS} bounce off {TARGET}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"setVelocity\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"X\"\r\n      },\r\n      {\r\n        \"name\": \"Y\"\r\n      }\r\n    ],\r\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\r\n    \"methodCall\": true\r\n  }\r\n]",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"blockText\": \"create new behavior for {SPRITE} called {NAME}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"NAME\"\r\n      }\r\n    ],\r\n    \"eventBlock\": true\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"draggable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"gravity\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"gravity\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"tossable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"tossable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOffEdges\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"bounce off edges\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOff\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"blockText\": \"{THIS} bounce off {TARGET}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"setVelocity\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"X\"\r\n      },\r\n      {\r\n        \"name\": \"Y\"\r\n      }\r\n    ],\r\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\r\n    \"methodCall\": true\r\n  }\r\n]",
     "parent_level_id": 11142,
     "contained_level_names": null
   },
@@ -230,7 +58,7 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="sprite_variables_set" inline="false">
               <title name="VAR">left_score</title>
               <value name="VALUE">
                 <block type="math_number">
@@ -238,7 +66,7 @@
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false">
+                <block type="sprite_variables_set" inline="false">
                   <title name="VAR">right_score</title>
                   <value name="VALUE">
                     <block type="math_number">
@@ -246,7 +74,7 @@
                     </block>
                   </value>
                   <next>
-                    <block type="variables_set" inline="false">
+                    <block type="sprite_variables_set" inline="false">
                       <title name="VAR">penguin</title>
                       <value name="VALUE">
                         <block type="gamelab_makeNewSprite" inline="true">
@@ -264,7 +92,7 @@
                         </block>
                       </value>
                       <next>
-                        <block type="variables_set" inline="false">
+                        <block type="sprite_variables_set" inline="false">
                           <title name="VAR">paddleL</title>
                           <value name="VALUE">
                             <block type="gamelab_makeNewSprite" inline="true">
@@ -282,7 +110,7 @@
                             </block>
                           </value>
                           <next>
-                            <block type="variables_set" inline="false">
+                            <block type="sprite_variables_set" inline="false">
                               <title name="VAR">paddleR</title>
                               <value name="VALUE">
                                 <block type="gamelab_makeNewSprite" inline="true">
@@ -302,7 +130,7 @@
                               <next>
                                 <block type="gamelab_setVelocity" inline="true">
                                   <value name="THIS">
-                                    <block type="variables_get">
+                                    <block type="sprite_variables_get">
                                       <title name="VAR">penguin</title>
                                     </block>
                                   </value>
@@ -333,14 +161,14 @@
           <statement name="DO">
             <block type="gamelab_moveUp" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">paddleR</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_moveDown" inline="true">
                   <value name="THIS">
-                    <block type="variables_get">
+                    <block type="sprite_variables_get">
                       <title name="VAR">paddleL</title>
                     </block>
                   </value>
@@ -353,14 +181,14 @@
           <statement name="DO">
             <block type="gamelab_moveDown" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">paddleR</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_moveUp" inline="true">
                   <value name="THIS">
-                    <block type="variables_get">
+                    <block type="sprite_variables_get">
                       <title name="VAR">paddleL</title>
                     </block>
                   </value>
@@ -371,24 +199,24 @@
         </block>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">penguin</title>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">topEdge</title>
             </block>
           </value>
           <next>
             <block type="gamelab_bounceOff" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">penguin</title>
                 </block>
               </value>
               <value name="TARGET">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">topEdge</title>
                 </block>
               </value>
@@ -397,24 +225,24 @@
         </block>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">penguin</title>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">bottomEdge</title>
             </block>
           </value>
           <next>
             <block type="gamelab_bounceOff" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">penguin</title>
                 </block>
               </value>
               <value name="TARGET">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">bottomEdge</title>
                 </block>
               </value>
@@ -423,23 +251,23 @@
         </block>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">penguin</title>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">leftEdge</title>
             </block>
           </value>
           <next>
-            <block type="variables_set" inline="false">
+            <block type="sprite_variables_set" inline="false">
               <title name="VAR">right_score</title>
               <value name="VALUE">
                 <block type="math_arithmetic" inline="true">
                   <title name="OP">ADD</title>
                   <value name="A">
-                    <block type="variables_get">
+                    <block type="sprite_variables_get">
                       <title name="VAR">right_score</title>
                     </block>
                   </value>
@@ -455,7 +283,7 @@
                   <value name="TITLE">
                     <block type="text_join_simple" inline="false" inputcount="3">
                       <value name="ADD0">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">left_score</title>
                         </block>
                       </value>
@@ -465,7 +293,7 @@
                         </block>
                       </value>
                       <value name="ADD2">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">right_score</title>
                         </block>
                       </value>
@@ -480,7 +308,7 @@
                     <block type="gamelab_setPosition" inline="true">
                       <title name="POSITION">{x: 200, y: 200}</title>
                       <value name="THIS">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">penguin</title>
                         </block>
                       </value>
@@ -493,23 +321,23 @@
         </block>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">penguin</title>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">rightEdge</title>
             </block>
           </value>
           <next>
-            <block type="variables_set" inline="false">
+            <block type="sprite_variables_set" inline="false">
               <title name="VAR">left_score</title>
               <value name="VALUE">
                 <block type="math_arithmetic" inline="true">
                   <title name="OP">ADD</title>
                   <value name="A">
-                    <block type="variables_get">
+                    <block type="sprite_variables_get">
                       <title name="VAR">left_score</title>
                     </block>
                   </value>
@@ -525,7 +353,7 @@
                   <value name="TITLE">
                     <block type="text_join_simple" inline="false" inputcount="3">
                       <value name="ADD0">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">left_score</title>
                         </block>
                       </value>
@@ -535,7 +363,7 @@
                         </block>
                       </value>
                       <value name="ADD2">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">right_score</title>
                         </block>
                       </value>
@@ -550,7 +378,7 @@
                     <block type="gamelab_setPosition" inline="true">
                       <title name="POSITION">{x: 200, y: 200}</title>
                       <value name="THIS">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">penguin</title>
                         </block>
                       </value>
@@ -563,24 +391,24 @@
         </block>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">penguin</title>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">paddleL</title>
             </block>
           </value>
           <next>
             <block type="gamelab_bounceOff" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">penguin</title>
                 </block>
               </value>
               <value name="TARGET">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">paddleL</title>
                 </block>
               </value>
@@ -589,24 +417,24 @@
         </block>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">penguin</title>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">paddleR</title>
             </block>
           </value>
           <next>
             <block type="gamelab_bounceOff" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">penguin</title>
                 </block>
               </value>
               <value name="TARGET">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">paddleR</title>
                 </block>
               </value>
