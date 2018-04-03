@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { MultiGrid } from 'react-virtualized';
 import ProgressBubble from '../progress/ProgressBubble';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   cell: {
@@ -22,10 +23,13 @@ const styles = {
   topRight: {
     borderBottom: '2px solid #aaa',
     fontWeight: 'bold',
+  },
+  icon: {
+    width: 40,
+    padding: 3,
+    fontSize: 20,
   }
 };
-
-const columnWidths = [150, 50, 100, 300, 50];
 
 export default class VirtualizedDetailView extends Component {
 
@@ -60,8 +64,22 @@ export default class VirtualizedDetailView extends Component {
         {(rowIndex === 0 && columnIndex === 0) && (
           <span style={styles.cell}>Lesson</span>
         )}
+        {(rowIndex === 0 && columnIndex >= 1) && (
+          <span style={styles.cell}>{columnIndex}</span>
+        )}
         {(rowIndex === 1 && columnIndex === 0) && (
           <span style={styles.cell}>Level Type</span>
+        )}
+        {(rowIndex === 1 && columnIndex >= 1) && (
+          <span style={styles.cell}>
+            {scriptData.stages[columnIndex-1].levels.map((level, i) =>
+              <FontAwesome
+                className={level.icon ? level.icon: "fas fa-question"}
+                style={styles.icon}
+                key={i}
+              />
+            )}
+          </span>
         )}
         {(rowIndex >= 2 && columnIndex === 0) && (
           <span style={styles.cell}>
@@ -85,20 +103,30 @@ export default class VirtualizedDetailView extends Component {
     );
   };
 
-  getColumnWidth({index}) {
-    return columnWidths[index];
-  }
+  getColumnWidth = ({index}) => {
+    const {scriptData} = this.props;
+    const NAME_COLUMN_WIDTH = 150;
+    const PROGRESS_BUBBLE_WIDTH = 50;
+
+    if (index === 0) {
+      return NAME_COLUMN_WIDTH;
+    }
+    return scriptData.stages[index-1].levels.length * PROGRESS_BUBBLE_WIDTH;
+  };
 
   render() {
-    const {section} = this.props;
+    const {section, scriptData} = this.props;
+    // Add 2 to account for the 2 header rows
     const rowCount = section.students.length + 2;
+    // Add 1 to account for the student name column
+    const columnCount = scriptData.stages.length + 1;
 
     return (
         <MultiGrid
           {...this.state}
           cellRenderer={this.cellRenderer}
           columnWidth={this.getColumnWidth}
-          columnCount={5}
+          columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
           height={300}
