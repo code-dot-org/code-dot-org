@@ -105,10 +105,13 @@ export default class VirtualizedDetailView extends Component {
 
   getColumnWidth = ({index}) => {
     const {scriptData} = this.props;
+    const NAME_COLUMN_WIDTH = 150;
+    const PROGRESS_BUBBLE_WIDTH = 50;
+
     if (index === 0) {
-      return 150;
+      return NAME_COLUMN_WIDTH;
     }
-    return scriptData.stages[index-1].levels.length * 50;
+    return scriptData.stages[index-1].levels.length * PROGRESS_BUBBLE_WIDTH;
   };
 
   render() {
