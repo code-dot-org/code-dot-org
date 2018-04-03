@@ -30,14 +30,14 @@ Select the grade level below to learn more about our programs. Have questions ab
 <details>
   <summary style="font-size: 20px; color: #7665a0;">**Elementary School Professional Learning**</summary>
   <p>
-  
-* You don't need any previous experience teaching computer science to join us. 
-* Our 1-day, no cost, workshops prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). 
+
+* You don't need any previous experience teaching computer science to join us.
+* Our 1-day, no cost, workshops prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5).
 * Increase your knowledge and confidence in facilitating an engaged computer science classroom
-* Connect with other educators in your area who are working to bring computer science to their schools. 
+* Connect with other educators in your area who are working to bring computer science to their schools.
 * Facilitated by experienced computer science educators across the United States.
-* Covers content for [our elementary school Computer Science Fundamentals curriculum](/educate/curriculum/elementary-school), and you will receive the supplies you need to teach the courses - all at no cost. 
- 
+* Covers content for [our elementary school Computer Science Fundamentals curriculum](/educate/curriculum/elementary-school), and you will receive the supplies you need to teach the courses - all at no cost.
+
 
 <a href="/professional-development-workshops"><button>Find a local, no cost, K-5 workshop</button>
 <br/>
@@ -52,7 +52,7 @@ Select the grade level below to learn more about our programs. Have questions ab
 
 * You don't need any prior computer science experience to get started
 * The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area.
-* Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. 
+* Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
 * We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at no cost to you or your school.
 * Our [Computer Science Discoveries curriculum](/educate/csd) is designed for educators in the 6th - 10th grade classrooms. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data
 <br/>
@@ -66,15 +66,15 @@ Select the grade level below to learn more about our programs. Have questions ab
 
 <details>
   <summary style="font-size: 20px; color: #7665a0;">**High School Professional Learning** - *Applications for 2018 are still open!*<img src="/images/professional-learning/plane.png" width="3%"/></summary>
-  <p> 
+  <p>
 
 
-* You don't need any prior computer science experience to get started! 
+* You don't need any prior computer science experience to get started!
 * The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area.
-* Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. 
+* Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops.
 * We are a nonprofit dedicated to helping schools teach computer science. In most states, our professional learning is offered at no cost to you or your school.
 <br/><br/>
-**We have two curriculum options for high school classrooms:** 
+**We have two curriculum options for high school classrooms:**
 * For younger students, our [Computer Science Discoveries curriculum](/educate/csd) is designed for 6th - 10th grade classrooms. The course can be taught as a semester or full-year introduction and covers a broad range of topics such as physical computing, building websites, programming and learning about data.
 * Our [Computer Science Principles curriculum](/educate/csp) is also an introductory course that requires no computer science background (from students or teachers). We recommend it for 9th-12th grade students with stronger reading and writing skills. It can be taught as an AP or non-AP course. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.
 
@@ -110,7 +110,4 @@ The majority of our workshop attendees rank it the **best professional developme
 
 <img src="/images/k5pdcropped.jpg" width="100%"/>
 
-<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=1108",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> 
-
-
-
+<%= view :answerdash %>
