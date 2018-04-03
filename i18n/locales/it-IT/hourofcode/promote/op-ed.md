@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Vai a [programmailfuturo.it](%= resolve_url('https://code.org/promote') %) per avere informazioni sull'insegnamento dell'informatica nelle scuole italiane.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
 **Titolo: informatica... Dove sono i posti di lavoro**
 

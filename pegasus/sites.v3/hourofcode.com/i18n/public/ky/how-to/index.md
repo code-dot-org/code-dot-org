@@ -7,7 +7,7 @@ nav: how_to_nav
 
 <h1>Код саатын кантип үйрөтүү керек</h1>
 
-Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. Код сааты - баштаган оңой, үйрөнчүктөргө дагы! Код саатын өткөзгөнгө кошумча жардамчылар керек болсо, [жергиликтүү ыктыярчыларды](<%= resolve_url('https://code.org/volunteer/local') %>) таба аласыңар.
+Кыймылга кошулуп, окуучулардын тобуна алгачкы компүтердик билимин бул кадамдар аркылуу тааныштыргыла. Код сааты - баштаган оңой, үйрөнчүктөргө дагы! If you'd like an extra set of hands to help out, you can find a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to help run an Hour of Code in your class.
 
 ## 1. Кандай кылуу видеосун көрүңүз <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -33,18 +33,18 @@ nav: how_to_nav
 
 ## 5. Код саатын шыктандыруучу сөз айткан киши же видео менен баштагыла
 
-**Компүтердик технологиялардын кеңири мүмкүнчүлүктөрү тууралуу шыктандыра сүлөп берүүчү [жергиликтүү ыктыярчыларды](<%= resolve_url('https://code.org/volunteer/local') %>) чакыргыла**. Код саатыңызды өткөзүүгө класска келип же видеочат аркылуу жардам берүүгө даяр миңдеген ыктыярчылар бар!
+**Invite a [local volunteer](<%= codeorg_url('/volunteer/local') %>) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Шыктандыруучу видео көрсөткүлө:**
 
 - Билл Гейтс, Марк Цукерберг жана NBA жылдызы Крис Бош тартылган Code.org тааныштыруу видеосу. (Анын [1 мүнөт](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 мүнөт](https://www.youtube.com/watch?v=nKIu9yen5nc) жана [9 мүнөт](https://www.youtube.com/watch?v=dU1xS07N-FA) версиялары бар)
-- Дагы башка шыктандыруучу [ресурстар](<%= resolve_url('https://code.org/inspire') %>) жана [виделор](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Өзүңүз жана окуучуларыңыз дагы компүтер менен тааныш болбосо - эч нерсе эмес. Код сааты иш-чараңызды тааныштыруунун айрым идеялары:**
 
 - Технологиянын жашообузга тийгизген таасиринен мисал бергиле - балдарга жана кыздарга тең кызык болсун (өмүр сактаган, жардам берген, кишилерди байланыштырган ж. б.).
 - Класс катары, турмуштагы код колдонгон нерселердин тизмеси.
-- Кыздарды компүтердик илимге кызыктыруучу кеңештер [бул жерде](<%= resolve_url('https://code.org/girls')%>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls')%>).
 
 ## 6. Код жазгыла!
 
@@ -79,7 +79,7 @@ nav: how_to_nav
 
 [/col-33]
 
-- Окуучуларыңызга [сертификат чыгаргыла](<%= resolve_url('https://code.org/certificates')%>).
+- [Print certificates](<%= codeorg_url('/certificates')%>) for your students.
 - Окуучуларга [Мен "Код саатын өттүм"](<%= resolve_url('/promote/resources#stickers') %>) деген чаптама бастыргыла.
 - Мектебиңизге [ логосу бар футболкаларды](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) жасатыңыз.
 - Код саатыңыздын фото жана видеолорун социалдык желелерде бөлүшкүлө. #HourOfCode ж-а @codeorg хештег колдонуп, ийгилигиңизди бизге дагы билдиргиле!
@@ -101,7 +101,7 @@ nav: how_to_nav
 
 Код сааты технологиялардын иштешин терең изилдөөдө саякатындагы жана програмдык жабдууларды өндүрүүдөгү биринчи эле кадам. Бул саякатты улантуу үчүн:
 
-- Окуучуларды [онлайн үйрөнүүнү](<%= resolve_url('https://code.org/learn/beyond')%>) улантууга чакыргыла.
-- Компүтердик технологиялар боюнча тажрыйбалуу адистер өткөзгөн 1 күндүк семинар-практикумга [катышкыла](<%= resolve_url('https://code.org/professional-development-workshops') %>). (АКШ үчүн гана)
+- Encourage students to continue to [learn online](<%= codeorg_url('/learn/beyond')%>).
+- [Attend](<%= codeorg_url('/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -98,16 +98,15 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "contained_level_names": [
-      "CSD U3 Keypress Boolean embed_2018"
+      "CSD U3 Keypress Boolean embed-2018"
     ],
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 4692,
-    "top_level_procedure_autopopulate": "false",
-    "name_suffix": "_2018"
+    "top_level_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-22 19:02:11 +0000\",\"changed\":[\"free_play\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-20 22:19:57 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-20 22:21:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-03-15 16:58:33 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-19 23:03:42 +0000\",\"changed\":[\"name\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 19:02:11 +0000\",\"changed\":[\"free_play\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-10-20 22:19:57 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-20 22:21:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-03-15 16:58:33 +0000\",\"changed\":[\"start_blocks\",\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-27 22:53:21 +0000\",\"changed\":[\"name\",\"code_functions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

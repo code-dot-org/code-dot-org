@@ -1,6 +1,21 @@
 require 'json'
 require 'httparty'
 
+class ZendeskError < StandardError
+  attr_reader :error_details
+
+  def initialize(code, error_details)
+    @error_details = error_details
+    super("Zendesk failed with response code: #{code}")
+  end
+
+  def to_honeybadger_context
+    {
+      details: @error_details
+    }
+  end
+end
+
 class ReportAbuseController < ApplicationController
   AGE_CUSTOM_FIELD_ID = 24_024_923
 
@@ -30,7 +45,7 @@ class ReportAbuseController < ApplicationController
         }.to_json,
         basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
       )
-      raise 'Zendesk failed' unless response.success?
+      raise ZendeskError.new(response.code, response.body) unless response.success?
     end
 
     unless params[:channel_id].blank?

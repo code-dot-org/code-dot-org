@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '~> 2.2'
+ruby '~> 2.5'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -282,6 +282,8 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 gem 'StreetAddress', require: "street_address"
 
 gem 'recaptcha', require: 'recaptcha/rails'
+
+gem 'loofah', ' ~> 2.2.1'
 
 # Install pg gem only on specific production hosts.
 require_pg = -> do

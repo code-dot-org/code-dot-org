@@ -3,7 +3,7 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
 
   load_and_authorize_resource :application,
     class: 'Pd::Application::ApplicationBase', find_by: :application_guid,
-    id_param: :application_guid, except: [:partner, :partner_submitted]
+    id_param: :application_guid, except: [:partner, :partner_submitted, :lead_facilitator, :lead_facilitator_submitted]
 
   # here we handle the CanCan error manually so that we can present
   # non-authorized users with a custom page explaining that they must be logged
@@ -66,13 +66,14 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
       return
     end
 
-    unless current_user.regional_partners.where(group: 3).any?
+    regional_partner = current_user.regional_partners.find_by(group: 3)
+    unless regional_partner
       render :only_group_3
       return
     end
 
-    regional_partner = current_user.regional_partners.first
-    teachercon = get_matching_teachercon(regional_partner)
+    teachercon = get_teachercon regional_partner
+
     unless teachercon
       render :invalid
       return
@@ -99,5 +100,51 @@ class Pd::Teachercon1819RegistrationController < ApplicationController
     }
 
     render :new
+  end
+
+  def lead_facilitator
+    unless current_user.try(:facilitator?)
+      render :unauthorized
+      return
+    end
+
+    teachercon = get_teachercon
+
+    # Has this user registered for this teachercon already?
+    registrations = Pd::Teachercon1819Registration.where(user: current_user).select {|r| r.sanitize_form_data_hash[:city] == teachercon[:city]}
+
+    if registrations.any?
+      @seat_accepted = registrations.first.accepted?
+      render :lead_facilitator_submitted
+      return
+    end
+
+    unless teachercon
+      render :invalid
+      return
+    end
+
+    @script_data = {
+      props: {
+        options: Pd::Teachercon1819Registration.options.camelize_keys,
+        requiredFields: Pd::Teachercon1819Registration.camelize_required_fields,
+        apiEndpoint: "/api/v1/pd/teachercon_lead_facilitator_registrations",
+        applicationType: "LeadFacilitator",
+        city: teachercon[:city],
+        date: teachercon[:dates],
+        email: current_user.email
+      }.to_json
+    }
+    render :new
+  end
+
+  private
+
+  def get_teachercon(regional_partner = nil)
+    if params[:city].present?
+      TEACHERCONS.detect {|tc| tc[:city] == params[:city].titleize}
+    else
+      get_matching_teachercon(regional_partner)
+    end
   end
 end

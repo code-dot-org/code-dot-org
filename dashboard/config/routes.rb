@@ -300,6 +300,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
+  get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
+  post '/census/review', to: 'census_reviewers#create'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -406,7 +408,8 @@ Dashboard::Application.routes.draw do
 
       # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
       post 'teachercon_registrations', to: 'teachercon1819_registrations#create'
-      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner'
+      post 'teachercon_partner_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
+      post 'teachercon_lead_facilitator_registrations', to: 'teachercon1819_registrations#create_partner_or_lead_facilitator'
       post 'fit_weekend_registrations', to: 'fit_weekend1819_registrations#create'
 
       post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
@@ -430,6 +433,8 @@ Dashboard::Application.routes.draw do
           get :quick_view
           get :cohort_view
           get :search
+          get :teachercon_cohort
+          get :fit_cohort
         end
       end
     end
@@ -459,7 +464,8 @@ Dashboard::Application.routes.draw do
     end
 
     # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-    get 'teachercon_registration/partner', to: 'teachercon1819_registration#partner'
+    get 'teachercon_registration/partner(/:city)', to: 'teachercon1819_registration#partner'
+    get 'teachercon_registration/lead_facilitator(/:city)', to: 'teachercon1819_registration#lead_facilitator'
     get 'teachercon_registration/:application_guid', to: 'teachercon1819_registration#new'
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend1819_registration#new'
 

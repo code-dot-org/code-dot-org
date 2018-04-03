@@ -35,13 +35,13 @@ Planifiko Orën tënde të Kodimit duke inspiruar fëmijën tënd dhe diskutoni 
 - Video origjinale e lancimit të Code.org, ku paraqiten Bill Gates, Mark Zuckerberg, dhe ylli i NBA Chris Bosh (Ka versione [1 minutëshe](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutëshe](https://www.youtube.com/watch?v=nKIu9yen5nc), dhe [9 minutëshe](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Presidenti i SHBA-së Obama duke i bërë thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Gjej më shumë [burime](%= resolve_url('https://code.org/inspire') %) dhe[ video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) frymëzuese.
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike. Këtu janë disa ide se si mund të prezantoni aktivitetin tuaj të Orës së Kodimit:
 
 - Shpjego mënyrat se si teknologjia ndikon në jetët tona, me shembuj në të cilët interesohen vajzat dhe djemtë (Fol rreth aplikacioneve dhe teknologjisë që është përdorur të shpëtuar jetë, ndihmuar njerëz, lidhur njerëz etj).
 - Listo gjërat që përdorin kodim në jetën e përditëshme.
-- Shiko këshillat për të shtuar interesimin e vajzave në Shkenca Kompjuterike [këtu](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 Dëshiron më shumë ide për të shpjeguar? Shiko [praktikat më të mira](/files/AfterschoolEducatorLessonPlanOutline.docx) nga mësues me eksperiencë.
 
@@ -61,7 +61,7 @@ Pasi të zgjidhni tutorialin që doni të bëni, ruajeni atë si një bookmark.
 
 ## 6) Festo
 
-[Printo certifikatat](%= resolve_url('https://code.org/certificates') %) për fëmijët e tu (dhe për vete!).
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
@@ -73,7 +73,7 @@ Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përd
 
 Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar këtë udhëtim:
 
-- Inkurajo fëmijët të vazhdojnë të [mësojnë online](%= resolve_url('https://code.org/learn/beyond') %).
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - Ndihmo [ në promovimin](%= resolve_url('/promote') %) e edukimit të shkencave kompjuterike në shkollën e fëmjës tënd.
 
 <%= view :signup_button %>

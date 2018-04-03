@@ -579,8 +579,8 @@
   minecraft_agent_description: Minecraft đã trở lại trong Giờ Lập Trình với một hoạt
     động mới! Hãy bắt đầu cuộc hành trình Minecraft với việc lập trình.
   minecraft_agent_button: Bắt đầu
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer_description: Chương trình động vật và sinh vật Minecraft khác
+    trong phiên bản Minecraft của riêng bạn.
   minecraft_designer_button: Bắt đầu
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
   minecraft_adventurer_button: Bắt đầu
@@ -2015,10 +2015,10 @@
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: Trình duyệt của bạn không được hỗ trợ. Hãy nâng
+    cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một
+    trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang
+    nhưng mong đợi chức năng bị hỏng.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
