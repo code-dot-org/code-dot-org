@@ -25,6 +25,21 @@ module Metrics
     data[:created_at] = timestamp if timestamp
     dataset.insert(data)
   end
+
+  # Update build state of a managed environment.
+  # TODO: (suresh) Modify ci_build and dotd scripts to use this state to determine whether to build an environment and
+  # to determine which commit to use instead of the state tracked in Slack room topic and modify this method to publish
+  # read-only status to the appropriate chat rooms.  Also add a script and Slack command to allow users to manually
+  # set build status to "manual_block"
+  # @param environment [Symbol] rack environment symbol for any managed environment (:staging, :test, :production, etc)
+  # @param state [Symbol] Symbol indicating state of most recent build (:in_progress, :success, :failed, :manual_block).
+  #   A user would set state to Manual Block to prevent new automated builds from starting on an environment.
+  # @param last_successful_build [String] short git commit hash of most recent successful build on this environment
+  # @param notes [String] Short description of current status
+  # @param updated_at [DateTime] Date/time of last change to build state
+  def self.update_build_state(environment, state, last_successful_build, notes, updated_at)
+
+  end
 end
 
 # Summary of the data currently being logged in the metrics table:
