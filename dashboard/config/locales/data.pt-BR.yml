@@ -671,10 +671,10 @@
         csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
-        csd_weblab_intro_2: Intro to Web Lab - Part 2
+        csd_weblab_intro_2: Introdução ao Web Lab - Parte 2
         csd_weblab_css_1: Introdução para CSS - Parte 1
         csd_weblab_css_2: Intro to CSS - Part 2
-        csd_weblab_intro_3: Intro to Web Lab - Part 3
+        csd_weblab_intro_3: Introdução ao Web Lab - Parte 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -780,20 +780,20 @@
         mc_2017_puzzle_3: Hora do Código Minecraft - Loops repetitivos
         mc_2017_puzzle_8: Hora do Código Minecraft - Funções
         mc_2017_puzzle_12: Hora do Código Minecraft - Jogo Livre
-        hint_videos_d_11_3_first: 'Hint Videos: D.11.3 First'
-        hint_videos_d_11_3_last: 'Hint Videos: D.11.3 Last'
-        hint_videos_d_11_4_first: 'Hint Videos: D.11.4 First'
-        hint_videos_d_11_4_last: 'Hint Videos: D.11.4 Last'
-        hint_videos_d_11_5_first: 'Hint Videos: D.11.5 First'
-        hint_videos_d_11_5_last: 'Hint Videos: D.11.5 Last'
-        hint_videos_d_11_6_first: 'Hint Videos: D.11.6 First'
-        hint_videos_d_11_6_last: 'Hint Videos: D.11.6 Last'
-        hint_videos_d_11_7_first: 'Hint Videos: D.11.7 First'
-        hint_videos_d_11_7_last: 'Hint Videos: D.11.7 Last'
-        hint_videos_d_11_9_first: 'Hint Videos: D.11.9 First'
-        hint_videos_d_11_9_last: 'Hint Videos: D.11.9 Last'
-        hint_videos_d_11_11_first: 'Hint Videos: D.11.11 First'
-        hint_videos_d_11_11_last: 'Hint Videos: D.11.11 Last'
+        hint_videos_d_11_3_first: 'Vídeo-dica: D.11.3 Primeiro'
+        hint_videos_d_11_3_last: 'Vídeo-dica: D.11.3 Último'
+        hint_videos_d_11_4_first: 'Vídeo-dica: D.11.4 Primeiro'
+        hint_videos_d_11_4_last: 'Vídeo-dica: D.11.4 Último'
+        hint_videos_d_11_5_first: 'Vídeo-dica: D.11.5 Primeiro'
+        hint_videos_d_11_5_last: 'Vídeo-dica: D.11.5 Último'
+        hint_videos_d_11_6_first: 'Vídeo-dica: D.11.6 Primeiro'
+        hint_videos_d_11_6_last: 'Vídeo-dica: D.11.6 Último'
+        hint_videos_d_11_7_first: 'Vídeo-dica: D.11.7 Primeiro'
+        hint_videos_d_11_7_last: 'Vídeo-dica: D.11.7 Último'
+        hint_videos_d_11_9_first: 'Vídeo-dica: D.11.9 Primeiro'
+        hint_videos_d_11_9_last: 'Vídeo-dica: D.11.9 Último'
+        hint_videos_d_11_11_first: 'Vídeo-dica: D.11.11 Primeiro'
+        hint_videos_d_11_11_last: 'Vídeo-dica: D.11.11 Último'
         applab_intro_welcome: Laboratório de App - Como começar
         applab_intro_events: App Lab - Make It Interactive
         applab_intro_sounds: App Lab - Images and Sounds
@@ -801,6 +801,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introdução a Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco
