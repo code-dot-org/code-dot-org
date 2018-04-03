@@ -39,7 +39,6 @@ class GamelabJr < Gamelab
         game: Game.gamelab,
         level_num: 'custom',
         properties: {
-          code_functions: JSON.parse(palette),
           show_debug_watch: true,
           helper_libraries: [
             "GameLabJr",
@@ -70,6 +69,12 @@ class GamelabJr < Gamelab
 <category name="Sprites">
   <block type="gamelab_makeNewSprite" />
   <block type="gamelab_setAnimation" />
+  <block type="gamelab_setTint">
+    <value name="COLOR">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+  <block type="gamelab_removeTint" />
   <block type="gamelab_moveUp" />
   <block type="gamelab_moveDown" />
   <block type="gamelab_moveLeft" />
@@ -185,6 +190,10 @@ class GamelabJr < Gamelab
   end
 
   def uses_droplet?
+    false
+  end
+
+  def age_13_required?
     false
   end
 end

@@ -4,6 +4,7 @@ import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
 import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
+import VirtualizedDetailView from './VirtualizedDetailView';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 import {ViewType} from './sectionProgressRedux';
@@ -100,14 +101,19 @@ class SectionProgress extends Component {
         <SectionProgressToggle />
         {!levelDataInitialized && <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>}
         {(levelDataInitialized && currentView === ViewType.SUMMARY) &&
-          <div>{"This will be the summary view"}</div>
+          <div>
+            <h1>This will be the summary view</h1>
+          </div>
         }
         {(levelDataInitialized && currentView === ViewType.DETAIL) &&
-          <SectionScriptProgress
-            section={section}
-            scriptData={scriptData}
-            studentLevelProgress={studentLevelProgress}
-          />
+          <div>
+            <VirtualizedDetailView/>
+            <SectionScriptProgress
+              section={section}
+              scriptData={scriptData}
+              studentLevelProgress={studentLevelProgress}
+            />
+          </div>
         }
       </div>
     );

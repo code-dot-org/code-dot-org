@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Gehe zu [<%resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) um Informatik zu erhalten.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
 **Title: Computing…Where the Jobs Are**
 

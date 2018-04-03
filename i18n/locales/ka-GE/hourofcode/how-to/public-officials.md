@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **გამოაქვეყნეთ პრეს-რელიზი.** სახელმძღვანელოდ [გამოიყენეთ ეს მაგალითი](%= resolve_url('/promote/official-press-release') %).
 
-9. **დაამყარეთ კავშირი ადგილობრივად.** ეწვიეთ [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %)-ს, რათა გაიგოთ მეტი კომპიუტერული მეცნიერების განათლების შესახებ თქვენს შტატში. მოაწერეთ ხელი პეტიციას და მიიღეთ Code.org-ისგან ინფრომაცია ადგილობრივი, შტატისა და ფედერალური ოლქის მასშტაბის ღონისძიებები შესახებ.
+9. **Connect locally.** Visit [code.org/promote](%= codeorg_url('/promote') %) to learn more about computer science education in your state. მოაწერეთ ხელი პეტიციას და მიიღეთ Code.org-ისგან ინფრომაცია ადგილობრივი, შტატისა და ფედერალური ოლქის მასშტაბის ღონისძიებები შესახებ.
 
 <%= view :signup_button %>

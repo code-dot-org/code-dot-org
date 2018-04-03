@@ -35,13 +35,13 @@ nav: how_to_nav
 - Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - [კოდის ერთი საათის მსოფლიო მასშტაბის ვიდეო](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- მოიძიეთ მეტი შთამაგონებელი [რესურსი](%= resolve_url('https://code.org/inspire') %) და [ვიდეო](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 არაუშავს, თუ კომპიუტერეულ მეცნიერებებში თქვენც და თქვენი შვილიც თანაბრად გამოუცდელი ხართ. აი, რამდენიმე იდეა, როგორ შეიძლება დაიწყოთ კოდის ერთი საათის აქტივობა:
 
 - აუხსენით, როგორ გავლენას ახდენს ტექნოლოგია ჩვენს ცხოვრებაზე, ისეთი მაგალითების მოიშველიეთ, რომლებიც გოგონებისთვის და ბიჭებისთვის თანაბრად საინტერესო იქნება ( ესაუბრეთ სიცოცხლის გადარჩენაზე, ადამიანების დახმარებაზე, ადამიანების ერთმანეთთან დაკავშირებაზე და ა. შ.).
 - ჩამოწერეთ რაღაცები ყოველდღიური ცხოვრებიდან, რომლებშიც კოდი გამოიყენება.
-- გაიგეთ, როგორ დააინტერესოთ გოგონები პროგრამირებითა და ინფორმატიკით [აქ](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 მეტი იდეა გაინტერესებთ? იხილეთ ჩვენი [ გაკვეთილის გეგმის ნიმუში](/files/AfterschoolEducatorLessonPlanOutline.docx) გამოცდილი მასწავლებლების საუკეთესო პრაქტიკების სანახავად.
 
@@ -61,7 +61,7 @@ nav: how_to_nav
 
 ## 6) აღნიშნეთ
 
-[დაბეჭდეთ სერთიფიკატები](%= resolve_url('https://code.org/certificates') %) თქვენი შვილისთვის (და თქვენთვისაც!).
+[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
 
 გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
@@ -73,7 +73,7 @@ nav: how_to_nav
 
 კოდის ერთი საათი ტექნოლოგიების მუშაობისა და პროგრამირების შესწავლის მხოლოდ პირველი ნაბიჯია. ამ მოგზაურობის გასაგრძელებლად:
 
-- წაახალისეთ შვილი, გააგრძელოს [სწავლა ონლაინ](%= resolve_url('https://code.org/learn/beyond') %).
+- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
 - [ხელი შეუწყვეთ](%= resolve_url('/promote') %) კომპიუტერული მეცნიერებების სწავლებას თქვენი შვილის სკოლის უბანში.
 
 <%= view :signup_button %>

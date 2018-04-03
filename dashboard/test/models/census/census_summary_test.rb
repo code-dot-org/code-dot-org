@@ -142,6 +142,36 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school: nil, is_k8_school: nil)
   end
 
+  test "Override outweighs all other data sources" do
+    school_year = 2020
+    school = create :census_school,
+      :with_census_override_no,
+      :with_teaches_yes_teacher_census_submission,
+      :with_ap_cs_offering,
+      :with_ib_cs_offering,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      school_year: school_year
+    validate_summary(school, school_year, "NO")
+  end
+
+  test "Latest override is used when there are many" do
+    school_year = 2020
+    school = create :census_school,
+      :with_census_override_no,
+      :with_census_override_maybe,
+      school_year: school_year
+    # create another override separately to make sure it has a later created_at
+    create :census_override,
+      school: school,
+      school_year: school_year,
+      teaches_cs: 'HISTORICAL_YES',
+      created_at: school.created_at + 1.minute
+
+    validate_summary(school, school_year, "HISTORICAL_YES")
+  end
+
   test "AP data overrides surveys, state data, and previous years" do
     school_year = 2020
     school = create :census_school,
@@ -215,7 +245,21 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     validate_summary(school, school_year, "NO")
   end
 
-  test "Consistent yes non-teacher surveys override other surveys" do
+  test "High school lack of state data in a blacklist state does not override anything" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_no_teacher_census_submission,
+      :with_teaches_yes_teacher_census_submission,
+      :with_teaches_yes_parent_census_submission,
+      :with_one_year_ago_teaches_yes,
+      :with_two_years_ago_teaches_yes,
+      :with_three_years_ago_teaches_yes,
+      state: Census::StateCsOffering::INFERRED_NO_EXCLUSION_LIST.first,
+      school_year: school_year
+    validate_summary(school, school_year, "MAYBE")
+  end
+
+  test "Inconsistent teacher surveys override other surveys" do
     school_year = 2020
     school = create :census_school,
       :with_teaches_yes_teacher_census_submission,
@@ -226,14 +270,24 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_two_years_ago_teaches_no,
       :with_three_years_ago_teaches_no,
       school_year: school_year
+    validate_summary(school, school_year, "MAYBE")
+  end
+
+  test "Consistent yes non-teacher surveys override previous years" do
+    school_year = 2020
+    school = create :census_school,
+      :with_teaches_yes_parent_census_submission,
+      :with_state_not_having_state_data,
+      :with_one_year_ago_teaches_no,
+      :with_two_years_ago_teaches_no,
+      :with_three_years_ago_teaches_no,
+      school_year: school_year
     validate_summary(school, school_year, "YES")
   end
 
-  test "Consistent no non-teacher surveys override other surveys" do
+  test "Consistent no non-teacher surveys override previous years" do
     school_year = 2020
     school = create :census_school,
-      :with_teaches_yes_teacher_census_submission,
-      :with_teaches_no_teacher_census_submission,
       :with_teaches_no_parent_census_submission,
       :with_state_not_having_state_data,
       :with_one_year_ago_teaches_yes,
@@ -344,7 +398,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     summary = generate_summary(school, year)
     assert_equal expected_result, summary.teaches_cs, summary.audit_data
     explanation = JSON.parse(summary.audit_data)['explanation']
-    assert_equal 8, explanation.length, explanation
+    validate_explanation(explanation)
     # only one datum shoud be used for the decision
     assert_equal 1, explanation.map {|e| e['used'] ? 1 : 0}.reduce(:+), explanation
   end
@@ -352,6 +406,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
   def empty_compute_teaches_cs_args
     {
       audit: {},
+      overrides_summary: {
+        should_override: false,
+        override_value: nil,
+      },
       has_ap_data: false,
       has_ib_data: false,
       submissions_summary: {
@@ -359,7 +417,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
           teacher_or_admin: nil,
           not_teacher_or_admin: nil,
         },
-        has_inconsistent_surveys: false,
+        has_inconsistent_surveys: {
+          teacher_or_admin: false,
+          not_teacher_or_admin: false,
+        },
         counts: {
           teacher_or_admin: {
             yes: 0,
@@ -378,6 +439,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
 
   def compute_teaches_cs(args)
     Census::CensusSummary.compute_teaches_cs(
+      args[:overrides_summary],
       args[:has_ap_data],
       args[:has_ib_data],
       args[:submissions_summary],
@@ -389,7 +451,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
 
   def validate_explanation(explanation)
     assert_not_nil explanation
-    assert_equal 8, explanation.length, explanation
+    assert_equal 9, explanation.length, explanation
   end
 
   test "compute_teaches_cs without data gives correct results" do
@@ -403,6 +465,54 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       refute e['used'], e
       assert_nil e['value'], e
     end
+  end
+
+  def validate_compute_teaches_cs_with_override(override_value)
+    args = empty_compute_teaches_cs_args
+    args[:overrides_summary] = {
+      should_override: true,
+      override_value: override_value,
+    }
+
+    teaches_cs = compute_teaches_cs args
+
+    assert_equal override_value, teaches_cs, args[:audit] unless override_value.nil?
+    assert_nil teaches_cs, args[:audit] if override_value.nil?
+    explanation = args[:audit][:explanation]
+    validate_explanation explanation
+    explanation.select {|e| e[:label] == 'overrides'}.first.tap do |e|
+      assert e[:used], e
+      assert_equal override_value, e[:value], e unless override_value.nil?
+      assert_nil e[:value], e if override_value.nil?
+    end
+  end
+
+  test "compute_teaches_cs with yes override gives correct results" do
+    validate_compute_teaches_cs_with_override('YES')
+  end
+
+  test "compute_teaches_cs with no override gives correct results" do
+    validate_compute_teaches_cs_with_override('NO')
+  end
+
+  test "compute_teaches_cs with maybe override gives correct results" do
+    validate_compute_teaches_cs_with_override('MAYBE')
+  end
+
+  test "compute_teaches_cs with historic yes override gives correct results" do
+    validate_compute_teaches_cs_with_override('HISTORIC_YES')
+  end
+
+  test "compute_teaches_cs with historic no override gives correct results" do
+    validate_compute_teaches_cs_with_override('HISTORIC_NO')
+  end
+
+  test "compute_teaches_cs with historic maybe override gives correct results" do
+    validate_compute_teaches_cs_with_override('HISTORIC_MAYBE')
+  end
+
+  test "compute_teaches_cs with nil override gives correct results" do
+    validate_compute_teaches_cs_with_override(nil)
   end
 
   test "compute_teaches_cs with AP data gives correct results" do
@@ -440,7 +550,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
         teacher_or_admin: 'YES',
         not_teacher_or_admin: nil,
       },
-      has_inconsistent_surveys: false,
+      has_inconsistent_surveys: {
+        teacher_or_admin: false,
+        not_teacher_or_admin: false,
+      },
       counts: {
         teacher_or_admin: {
           yes: 5,
@@ -471,7 +584,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
         teacher_or_admin: 'NO',
         not_teacher_or_admin: nil,
       },
-      has_inconsistent_surveys: false,
+      has_inconsistent_surveys: {
+        teacher_or_admin: false,
+        not_teacher_or_admin: false,
+      },
       counts: {
         teacher_or_admin: {
           yes: 0,
@@ -530,7 +646,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
         teacher_or_admin: nil,
         not_teacher_or_admin: 'YES',
       },
-      has_inconsistent_surveys: false,
+      has_inconsistent_surveys: {
+        teacher_or_admin: false,
+        not_teacher_or_admin: false,
+      },
       counts: {
         teacher_or_admin: {
           yes: 0,
@@ -548,7 +667,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 'YES', teaches_cs, args[:audit]
     explanation = args[:audit][:explanation]
     validate_explanation explanation
-    explanation.select {|e| e[:label] == 'consistent_non_teacher_surveys'}.first.tap do |e|
+    explanation.select {|e| e[:label] == 'non_teacher_surveys'}.first.tap do |e|
       assert e[:used], e
       assert_equal({yes: 5, no: 0}, e[:value], e)
     end
@@ -561,7 +680,10 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
         teacher_or_admin: nil,
         not_teacher_or_admin: 'NO',
       },
-      has_inconsistent_surveys: false,
+      has_inconsistent_surveys: {
+        teacher_or_admin: false,
+        not_teacher_or_admin: false,
+      },
       counts: {
         teacher_or_admin: {
           yes: 0,
@@ -579,24 +701,27 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 'NO', teaches_cs, args[:audit]
     explanation = args[:audit][:explanation]
     validate_explanation explanation
-    explanation.select {|e| e[:label] == 'consistent_non_teacher_surveys'}.first.tap do |e|
+    explanation.select {|e| e[:label] == 'non_teacher_surveys'}.first.tap do |e|
       assert e[:used], e
       assert_equal({yes: 0, no: 5}, e[:value], e)
     end
   end
 
-  test "compute_teaches_cs with inconsistent surveys gives correct results" do
+  test "compute_teaches_cs with inconsistent teacher surveys gives correct results" do
     args = empty_compute_teaches_cs_args
     args[:submissions_summary] = {
       consistency: {
         teacher_or_admin: nil,
         not_teacher_or_admin: nil,
       },
-      has_inconsistent_surveys: true,
+      has_inconsistent_surveys: {
+        teacher_or_admin: true,
+        not_teacher_or_admin: true,
+      },
       counts: {
         teacher_or_admin: {
           yes: 5,
-          no: 5,
+          no: 1,
         },
         not_teacher_or_admin: {
           yes: 5,
@@ -610,9 +735,13 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert_equal 'MAYBE', teaches_cs, args[:audit]
     explanation = args[:audit][:explanation]
     validate_explanation explanation
-    explanation.select {|e| e[:label] == 'inconsistent_surveys'}.first.tap do |e|
+    explanation.select {|e| e[:label] == 'inconsistent_teacher_surveys'}.first.tap do |e|
       assert e[:used], e
-      assert_equal({yes: 10, no: 10}, e[:value], e)
+      assert_equal({yes: 5, no: 1}, e[:value], e)
+    end
+    explanation.select {|e| e[:label] == 'non_teacher_surveys'}.first.tap do |e|
+      refute e[:used], e
+      assert_equal({yes: 5, no: 5}, e[:value], e)
     end
   end
 

@@ -9,14 +9,14 @@ nav: how_to_nav
 
 ## Zainspiruj uczniów i wolontariuszy do Godziny Kodowania
 
-Code.org umożliwia połączenie się Twoich pracowników [połączenia ](%= resolve_url('https://code.org/volunteer') %) z lokalnymi klasami, które wykonują Godzinę Kodowania, aby mogli opowiedzieć uczniom o swoich doświadczeniach z pracy i zainspirować ich do studiowania informatyki.
+Code.org offers the opportunity for your employees to [connect](%= codeorg_url('/volunteer') %) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Zarejestruj się](%= resolve_url('https://code.org/volunteer') %) jako wolontariusz.
+- [Sign up](%= codeorg_url('/volunteer') %) to volunteer.
 - Więcej wskazówek dotyczących udziału pracowników w zajęciach lekcyjnych znajdziesz w naszym [Przewodniku dla partnerów korporacyjnych](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
 
 ## Dodatkowe sposoby, firm mogą wspomóc Godzinę Kodowania:
 
-- Poproś swojego CEO, aby [ rozesłał w firmie mail ](%= resolve_url('/promote/resources#sample-emails') %), podkreślający znaczenie informatyki i zachęcający pracowników, aby to rozpowszechniali. 
+- Poproś swojego CEO, aby [ rozesłał w firmie mail ](%= resolve_url('/promote/resources#sample-emails') %), podkreślający znaczenie informatyki i zachęcający pracowników, aby to rozpowszechniali.
 - Bądź gospodarzem radosnej Godziny Kodowania ze współpracownikami, aby spróbowali [ tych aktywności ](%= resolve_url('/learn') %).
 - Zorganizuj wydarzenie Godziny Kodowania dla lokalnej klasy uczniów lub dla partnerów niekomercyjnych w biurze Twojej firmy. Zobacz poniżej poradnik, jak to zrobić.
 
@@ -25,7 +25,7 @@ Code.org umożliwia połączenie się Twoich pracowników [połączenia ](%= res
 ## 1. Promuj swoją Godzinę Kodowania
 
 - Promuj swoją [Godzinę Kodowania](%= resolve_url('/promote') %) i zachęć innych do jej zorganizowania.
-- Zachęć programistów w swojej firmie do odwiedzenia lokalnej klasy, aby pomogli w poprowadzeniu Godziny Kodowania i zainspirowali uczniów do studiowania informatyki. Mogą oni [zarejestrować się](%= resolve_url('https://code.org/volunteer/engineer') %), by przyłączyć się do klasy.
+- Zachęć programistów w swojej firmie do odwiedzenia lokalnej klasy, aby pomogli w poprowadzeniu Godziny Kodowania i zainspirowali uczniów do studiowania informatyki. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
 
 ## 2. Obejrzyj ten film instruktażowy <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -63,11 +63,11 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 **Pomysły, jak przybliżyć aktywności Godziny Kodowania Twoim uczniom:**
 
-- Wyjaśnij, w jaki sposób technologia wpływa na nasze życie, użyj przykładów, które zainteresują zarówno chłopców, jak i dziewczęta - opowiedz o aplikacjach i technologii, które ratują życie, pomagają ludziom, łączą ludzi. 
+- Wyjaśnij, w jaki sposób technologia wpływa na nasze życie, użyj przykładów, które zainteresują zarówno chłopców, jak i dziewczęta - opowiedz o aplikacjach i technologii, które ratują życie, pomagają ludziom, łączą ludzi.
 - Jeśli jesteście firmą technologiczną, macie zabawne demo, innowacyjne produkty, nad którymi pracuje Wasza firma.
 - Jeśli nie jesteście firmą technologiczną, omówcie sposoby, Wasza firma korzysta z technologii do rozwiązywania problemów i realizacji celów.
 - Zaproście programistów z Waszej firmy, by opowiedzieli, dlaczego postanowili studiować informatykę i o projektach, nad którymi pracują.
-- Zobacz [tutaj](%= resolve_url('https://code.org/girls') %) porady, jak zainteresować informatyką dziewczęta.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
 
 ## 6. Programuj!
 
@@ -103,7 +103,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ## 7. Świętuj
 
-- [Wydrukuj świadectwa](%= resolve_url('https://code.org/certificates') %) dla swoich uczniów.
+- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
 - [Wydrukuj naklejki "Wykonałem Godzinę Kodowania!"](%= resolve_url('/promote/resources#stickers') %).
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twoich pracowników.
 - Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!

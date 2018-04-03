@@ -2,8 +2,10 @@
   "presets": ["es2015", "react" ],
   "plugins": [
     "add-module-exports",
+    "syntax-async-functions",
     "transform-object-rest-spread",
     "transform-class-properties",
+    ["transform-regenerator", {"async": true, "asyncGenerators": true}],
     // needed for IE 9/10 support
     ["transform-es2015-classes", {"loose": true}]
   ]
