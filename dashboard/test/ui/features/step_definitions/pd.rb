@@ -169,7 +169,7 @@ end
 def create_enrollment(workshop, name=nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
-  user = FactoryGirl.create(:teacher, email: "user#{SecureRandom.hex}@example.com")
+  user = FactoryGirl.create :teacher
   enrollment = Pd::Enrollment.create!(
     first_name: first_name,
     last_name: last_name,

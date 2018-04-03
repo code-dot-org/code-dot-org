@@ -45,7 +45,7 @@ FactoryGirl.define do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
       end
       evaluator.enrolled_and_attending_users.times do
-        teacher = create :teacher, email: "teacher#{SecureRandom.hex}@code.org"
+        teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
         workshop.sessions.each do |session|
           session.attendances << build(:pd_attendance, session: session, teacher: teacher)
