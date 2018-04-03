@@ -300,7 +300,7 @@ class BucketHelper
           metadata: {
             abuse_score: get_abuse_score(encrypted_channel_id, filename).to_s,
             failed_restore_at: Time.now.to_s,
-            failed_restore_from_version: version_id
+            failed_restore_from_version: version_id || ''
           }
         )
         version_restored = true
