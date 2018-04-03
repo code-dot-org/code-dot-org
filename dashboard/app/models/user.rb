@@ -48,6 +48,7 @@
 #  terms_of_service_version :integer
 #  urm                      :boolean
 #  races                    :string(255)
+#  primary_email_id         :integer
 #
 # Indexes
 #
@@ -191,6 +192,7 @@ class User < ActiveRecord::Base
   has_many :districts, through: :districts_users
 
   has_many :authentication_options, dependent: :destroy
+  belongs_to :primary_email, class_name: 'AuthenticationOption', foreign_key: :primary_email_id
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
@@ -237,6 +239,13 @@ class User < ActiveRecord::Base
       errors.add(:admin, 'must be a teacher') unless teacher?
       errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
+  end
+
+  def email
+    unless provider == 'migrated'
+      return self[:email]
+    end
+    primary_email.email
   end
 
   def facilitator?
