@@ -62,6 +62,13 @@ def parse_options
     end
   end
   opt_parser.parse!(ARGV)
+
+  unless options[:interactive] || options[:command]
+    puts "  ERROR: Must specify either interactive or command mode\n\n"
+    puts opt_parser.help
+    exit(1)
+  end
+
   options
 end
 
