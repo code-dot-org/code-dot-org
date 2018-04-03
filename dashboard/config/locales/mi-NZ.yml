@@ -23,7 +23,7 @@
       user:
         name: Ingoa Whakaatu
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
-        email: "Īmēra"
+        email: Īmēra
         parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Ingoa Kaiwhakamahi
@@ -47,7 +47,7 @@
   next_resource: Rauemi tōmuri
   done_with_module: Done with this Learning Module
   cancel: Whakakore
-  okay: "Āe"
+  okay: Āe
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
   add_teacher_form:
     code:
@@ -183,7 +183,7 @@
     school_organization_zip: School/Organization Zip Code
   signin_form:
     title: He pūkete kē tāu? Takiuru
-    login: "Īmēra"
+    login: Īmēra
     login_username: Email or Username
     password: Kupuhipa
     remember: Maumahara i ahau
@@ -244,7 +244,7 @@
     type:
       picture: Picture Password
       word: Secret Words
-      email: "Īmēra"
+      email: Īmēra
       google_classroom: Google Classroom
       clever: Clever
   follower:
@@ -374,10 +374,10 @@
     for_teachers_only: Mā ngā Pouako Anake
     title:
       one: 'Tō pouako:'
-      other: "Ō pouako:"
+      other: 'Ō pouako:'
     remove: "(tangohia te pouako)"
     confirm:
-      remove: "Āe rānei e hiahia ana koe ki te tango i tēnei pouako?"
+      remove: Āe rānei e hiahia ana koe ki te tango i tēnei pouako?
     students:
       dashboard: Haere ki Paemana Pouako
     user_not_found: Kāore te pouako i kitea.
@@ -407,7 +407,7 @@
     delete_text: Mā te pāwhiri i te pātene o raro nei ka muku i tō pūkete.
     delete_text_teacher_note: 'Kia mōhio ai koe: e kore ngā pūkete o ngā ākonga e
       mukua ina mukua tō ake pūkete.'
-    delete_confirm: "Āe rānei e hiahia ana koe ki te muku i tō pūkete?"
+    delete_confirm: Āe rānei e hiahia ana koe ki te muku i tō pūkete?
     deleted_user: deleted user
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
@@ -667,7 +667,7 @@
     copyright: Manatārua
     more: More
     feedback: Tuku urupare
-    translate: "Āwhinatia mātou ki te whakamāori ki tō reo"
+    translate: Āwhinatia mātou ki te whakamāori ki tō reo
     support: Tautoko
     support_url: http://support.code.org
     tos_short: Ngā Ture
@@ -721,8 +721,8 @@
   lesson_plan: Mahere Akoranga
   view_lesson_plan: Tirotiro Mahere Akoranga
   pdf_download: Tikiake i te PDF
-  download_coming_soon: "Ākuanei ka puta mai te ngohe tikiake."
-  video_coming_soon: "Ākuanei ka Puta te Ataata!"
+  download_coming_soon: Ākuanei ka puta mai te ngohe tikiake.
+  video_coming_soon: Ākuanei ka Puta te Ataata!
   not_started: Kāore anō te ākonga kia whakamātau i tēnei taumata.
   share_code:
     title: Pāwhiri 'Whakahaere' kia kitea taku papatono e rere ana
@@ -941,7 +941,7 @@
     correct_body: Koinā te whakautu tika.
   dialog:
     ok: Ka Pai
-    startover_title: "Āe rānei e hiahia ana koe ki te tīmata anō?"
+    startover_title: Āe rānei e hiahia ana koe ki te tīmata anō?
     startover_body: Mā tēnei ka tautuhi anō te panga ki tōna hanga i te tīmatanga,
       ā, ka tautahi hoki i te katoa o te raraunga kua tāpiritia, kua panonihia rānei
       e koe.
@@ -1072,12 +1072,12 @@
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
     really_delete: Delete?
-    delete_yes: "Āe"
+    delete_yes: Āe
     delete_no: Kāore
     saved: Kua Tiakina
     not_saved: Kāore anō kia tiakina
     cancel: Whakakore
-    delete_confirm_title: "Āe rānei e hiahia ana koe ki te muku i tēnei tūmahi?"
+    delete_confirm_title: Āe rānei e hiahia ana koe ki te muku i tēnei tūmahi?
     delete_confirm_text: Mā te muku i tō tūmahi ka poroa rawatia i tō rārangi Aku
       Tūmahi. Ko te katoa o ngā tāngata nāu te honongaitua o tēnei tūmahi i tiri ki
       a rātou, ka kore e kite tonu i tō tūmahi.
