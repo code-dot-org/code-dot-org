@@ -751,8 +751,8 @@ var projects = module.exports = {
   },
 
   /**
-   * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided.
+   * Saves the project to the Channels API and Sources API. Calls `callback` on
+   * success if a callback function was provided.
    * @param {object} sourceAndHtml Project source code to save.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
@@ -783,14 +783,6 @@ var projects = module.exports = {
 
     unpackSources(sourceAndHtml);
 
-    const updateChannels = () => {
-      channels.update(channelId, current, function (err, data) {
-        initialSaveComplete = true;
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
-      }.bind(this));
-    };
-
     if (this.useSourcesApi()) {
       let params = '';
       if (currentSourceVersionId) {
@@ -812,11 +804,25 @@ var projects = module.exports = {
         currentSourceVersionId = response.versionId;
         current.migratedToS3 = true;
 
-        updateChannels();
+        this.updateChannels_(callback);
       }.bind(this));
     } else {
-      updateChannels();
+      this.updateChannels_(callback);
     }
+  },
+
+  /**
+   * Saves the project to the Channels API. Calls `callback` on success if a
+   * callback function was provided.
+   * @param {function} callback Function to be called after saving.
+   * @private
+   */
+  updateChannels_(callback) {
+    channels.update(current.id, current, function (err, data) {
+      initialSaveComplete = true;
+      this.updateCurrentData_(err, data, false);
+      executeCallback(callback, data);
+    }.bind(this));
   },
 
   getSourceForChannel(channelId, callback) {
