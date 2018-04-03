@@ -120,13 +120,13 @@ module Api::V1::Pd
       serialized_applications = prefetch_and_serialize(
         applications,
         serializer: TcFitCohortViewSerializer,
-        scope: {user: current_user}
+        scope: {view: 'teachercon'}
       )
 
       serialized_tc_registrations = Pd::Teachercon1819Registration.
         where(pd_application_id: nil).
         includes(user: {school_info: {school: :school_district}}).map do |registration|
-        TcFitCohortViewTeacherconRegistrationSerializer.new(registration).attributes
+        TcFitCohortViewTeacherconRegistrationSerializer.new(registration, scope: {view: 'teachercon'}).attributes
       end
 
       render json: serialized_applications + serialized_tc_registrations
@@ -135,7 +135,7 @@ module Api::V1::Pd
     # GET /api/v1/pd/applications/fit_cohort
     def fit_cohort
       serialized_fit_cohort = Pd::Application::Facilitator1819Application.fit_cohort(@applications).map do |application|
-        TcFitCohortViewSerializer.new(application).attributes
+        TcFitCohortViewSerializer.new(application, scope: {view: 'fit'}).attributes
       end
 
       render json: serialized_fit_cohort
