@@ -23,11 +23,16 @@ const styles = {
     marginLeft: 4,
     marginRight: 4,
   },
+  spacer: {
+    marginRight: 'auto',
+  },
   stageTrophyContainer: {
     border: 0,
     borderRadius: 20,
-    paddingLeft: 10,
+    paddingLeft: 8,
     paddingRight: 0,
+    minWidth: 350,
+    marginLeft: 48,
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
@@ -49,7 +54,13 @@ const StageProgress = React.createClass({
   },
 
   render() {
-    const { levels, stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
+    const { stageExtrasUrl, onStageExtras, stageTrophyEnabled } = this.props;
+    let levels = this.props.levels;
+
+    // Only puzzle levels (non-concept levels) should count towards mastery.
+    if (stageTrophyEnabled) {
+      levels = levels.filter(level => !level.isConceptLevel);
+    }
 
     return (
       <div
@@ -59,6 +70,9 @@ const StageProgress = React.createClass({
           ...(stageTrophyEnabled && styles.stageTrophyContainer),
         }}
       >
+        {stageTrophyEnabled &&
+          <div style={styles.spacer}/>
+        }
         {levels.map((level, index) =>
           <div
             key={index}
@@ -70,6 +84,7 @@ const StageProgress = React.createClass({
               level={level}
               disabled={false}
               smallBubble={!level.isCurrentLevel}
+              stageTrophyEnabled={stageTrophyEnabled}
             />
           </div>
         )}
@@ -95,5 +110,4 @@ export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
   stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
   onStageExtras: state.progress.currentLevelId === 'stage_extras',
-  stageTrophyEnabled: state.progress.stageTrophyEnabled,
 }))(StageProgress);

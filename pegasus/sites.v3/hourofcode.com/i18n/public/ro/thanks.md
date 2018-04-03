@@ -27,28 +27,28 @@ social:
 
 # Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
 
-Ca un mulțumesc pentru ajutorul oferit de a face posibil pentru studenți sa înceapă să învețe ștința computărelor, ne-ar plăcea să va oferim un set gratis ds postere printate profesionist oferind diverse modele de urmat pentru clasa dumneavoastra. Foloseste codul oferit **POSTEREGRATUITE** la verificare. (Nota: aceasta este valabila doar in timp ce resursele dureaza si o sa ai nevoie sa acopere costurile de livrare. Intru-cat aceste postere sunt transportate din Statele Unite, costurile de transport pot fi destul de ridicate daca sunt transportate in Canada si international. We understand that this may not be in your budget, and we encourage you to print the [PDF files](https://code.org/inspire) for your classroom.)  
-<br /> [<button>Get posters</button>](https://store.code.org/products/code-org-posters-set-of-12) Use offer code FREEPOSTERS
+Ca un mulțumesc pentru ajutorul oferit de a face posibil pentru studenți sa înceapă să învețe ștința computărelor, ne-ar plăcea să va oferim un set gratis ds postere printate profesionist oferind diverse modele de urmat pentru clasa dumneavoastra. Foloseste codul oferit **POSTEREGRATUITE** la verificare. (Nota: aceasta este valabila doar in timp ce resursele dureaza si o sa ai nevoie sa acopere costurile de livrare. Intru-cat aceste postere sunt transportate din Statele Unite, costurile de transport pot fi destul de ridicate daca sunt transportate in Canada si international. Înțelegem că acestea s-ar putea sa nu se afle în bugetul dvs. și vă incurajăm să inserați [fișiere Pdf](https://code.org/inspire) pentru clasa dvs.)  
+<br mark="crud-mark" /> [ <button>Obțineți postere</button>](https://store.code.org/products/code-org-posters-set-of-12) Folosiți codul de ofertă POSTEREGRATUITE
 
-<% if @country == 'us' %> Thanks to the generosity of Ozobot, Dexter Industries, littleBits, and Wonder Workshop, over 100 classrooms will be selected to receive robots or circuits for their class! To be eligible to receive a set, make sure to complete the survey sent from Code.org after the Hour of Code. Code.org will select the winning classrooms. In the meantime, check out some of the robotics and circuits activities. Please note that this is only open for US schools. <% end %>
+<% if @country == 'us' %> Datorită generozității Ozobot, Dexter Industries, littleBits şi Wonder Workshop, peste 100 de săli de clase vor fi selectate pentru a primi roboţi sau circuite pentru clasa lor! Pentru a fi eligibil în a primi un set, asiguraţi-vă că ați finalizat sondajul trimis de Code.org după Ora de Cod. Code.org va selecta săli de clasă câștigătoare. Între timp, aruncați-vă o privire asupra unora dintre activităţile de robotică şi circuite. Vă rugăm să reţineţi că acest lucru este deschis numai pentru şcolile din SUA. <% end %>
 
-<br /> **The Hour of Code runs during <%= campaign_date('full') %> and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **Ora de Cod se derulează pe parcursul <%=campaign_date('full') %> și vă vom informa despre noile tutoriale și alte actualizări captivante în funcție de cum apar acestea. Între timp, ce poți face tu acum?**
 
 ## 1. Imprastie vestea in scoala si comunitatea ta
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Tocmai te-ai alăturat mișcării Hour of Code. Spune-le și prietenilor cu **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Encourage others to participate [with our sample emails.](<%= resolve_url('/promote/resources#sample-emails') %>) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nu trebuie să fii in şcoală ca să înveţi noi competenţe. Invite a local politician or policy maker to visit your school for the Hour of Code. Acestea te pot ajuta in construirea unei sustineri pentru tehnologia computerelor si programare si dincolo de tutorialele de o ora.
+<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Incurajeză și alte persoane să participe[ cu e-mailuri eșantion.](<%= resolve_url('/promote/resources#sample-emails') %>) Contactează-ți directorul și provoacă fiecare clasă din școala ta să se înscrie. Recrutează un grup local - club de cercetași băieți/fete, biserică, universitate, grup de veterani, sindicat sau chiar și câțiva prieteni. Nu trebuie să fiți în şcoală ca să învățaţi noi competenţe. Invită un politician sau legislator să îți viziteze școala pentru Ora de Cod. Toate acestea te pot ajuta în construirea susținerii informaticii și dincolo de o oră.
 
 Foloseşte aceste [postere, bannere, stickere, videoclipuri si multe altele](<%= resolve_url('/promote/resources') %>) pentru evenimentul tau.
 
 ## 2. Găsiți un voluntar pe plan local pentru a vă ajuta în organizarea evenimentului dumneavoastră.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Planoficati Ora Codului
+## 7. Planificați-vă Ora de Programare
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide](<%= resolve_url('/how-to') %>).
+Alegeți o [activitate Ora de Cod](https://hourofcode.com/learn) pentru clasa dvs. și[ revizuiți acest ghid](<%= resolve_url('/how-to') %>).
 
 # Mergi mai departe de Ora Codului
 

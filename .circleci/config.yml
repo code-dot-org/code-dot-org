@@ -147,6 +147,10 @@ jobs:
             override_pegasus: \"localhost.code.org\"
             dashboard_port: 3000
             pegasus_port: 3000
+            animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
+            assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
+            files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
+            sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
             " >> locals.yml
 
       - restore_cache:

@@ -19,6 +19,8 @@ import manageStudents, {
   addMultipleRows,
   RowType,
   toggleSharingColumn,
+  updateAllShareSetting,
+  setSharingDefault
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const studentEmailData = {
@@ -34,6 +36,7 @@ const studentEmailData = {
       secretPictureName: 'wizard',
       secretPicturePath: '/wizard.jpg',
       sectionId: 53,
+      sharingDisabled: true,
     },
   2: {
       id: 2,
@@ -47,6 +50,7 @@ const studentEmailData = {
       secretPictureName: 'wizard',
       secretPicturePath: '/wizard.jpg',
       sectionId: 53,
+      sharingDisabled: true,
     },
   3: {
       id: 3,
@@ -60,6 +64,7 @@ const studentEmailData = {
       secretPictureName: 'wizard',
       secretPicturePath: '/wizard.jpg',
       sectionId: 53,
+      sharingDisabled: true,
     },
 };
 
@@ -112,13 +117,101 @@ const expectedBlankRow = {
   gender: '',
   username: '',
   loginType: '',
-  sharingDisabled: false,
+  sharingDisabled: true,
   isEditing: true,
   rowType: RowType.ADD,
 };
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
+
+  describe('setSharingDefault', () => {
+    it('sets sharingDisabled to false if the student age is set to 13 or older', () => {
+      // Initial state with blank row
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        sectionId: 10,
+      };
+      const startEditingStudentAction = startEditingStudent(0);
+      const editingState = manageStudents(initialState, startEditingStudentAction);
+      assert.deepEqual(editingState.editingData[0].age, '');
+      assert.deepEqual(editingState.editingData[0].sharingDisabled, true);
+      const editStudentAgeAction = editStudent(0, {age: 13});
+      const stateWithAge = manageStudents(editingState, editStudentAgeAction);
+      assert.deepEqual(stateWithAge.editingData[0].age, 13);
+      const setSharingDefaultAction = setSharingDefault(0);
+      const stateWithDefaultShareSetting = manageStudents(stateWithAge, setSharingDefaultAction);
+      assert.deepEqual(stateWithDefaultShareSetting.editingData[0].sharingDisabled, false);
+    });
+
+    it('sharingDisabled remains true if the student age is set to under 13', () => {
+      // Initial state with blank row
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture',
+          }
+        },
+        sectionId: 10,
+      };
+      const startEditingStudentAction = startEditingStudent(0);
+      const editingState = manageStudents(initialState, startEditingStudentAction);
+      assert.deepEqual(editingState.editingData[0].age, '');
+      assert.deepEqual(editingState.editingData[0].sharingDisabled, true);
+      const editStudentAgeAction = editStudent(0, {age: 12});
+      const stateWithAge = manageStudents(editingState, editStudentAgeAction);
+      assert.deepEqual(stateWithAge.editingData[0].age, 12);
+      const setSharingDefaultAction = setSharingDefault(0);
+      const stateWithDefaultShareSetting = manageStudents(stateWithAge, setSharingDefaultAction);
+      assert.deepEqual(stateWithDefaultShareSetting.editingData[0].sharingDisabled, true);
+    });
+  });
+
+  describe('updateAllShareSetting', () => {
+    it('enable all sets sharingDisabled to false', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = editAll();
+      const nextNextState = manageStudents(nextState, startEditingStudentAction);
+      const enableAllShareSettingsStudentAction = updateAllShareSetting(false);
+      const finalState = manageStudents(nextNextState, enableAllShareSettingsStudentAction);
+      assert.deepEqual(finalState.editingData[1].sharingDisabled, false);
+      assert.deepEqual(finalState.editingData[2].sharingDisabled, false);
+      assert.deepEqual(finalState.editingData[3].sharingDisabled, false);
+    });
+
+    it('disable all sets sharingDisabled to true', () => {
+      const setStudentsAction = setStudents(studentEmailData);
+      const nextState = manageStudents(initialState, setStudentsAction);
+      const startEditingStudentAction = editAll();
+      const nextNextState = manageStudents(nextState, startEditingStudentAction);
+      const disableAllShareSettingsStudentAction = updateAllShareSetting(true);
+      const finalState = manageStudents(nextNextState, disableAllShareSettingsStudentAction);
+      assert.deepEqual(finalState.editingData[1].sharingDisabled, true);
+      assert.deepEqual(finalState.editingData[2].sharingDisabled, true);
+      assert.deepEqual(finalState.editingData[3].sharingDisabled, true);
+    });
+  });
 
   describe('toggleSharingColumn', () => {
     it('toggle showSharingColumn state', () => {

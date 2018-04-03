@@ -1,0 +1,27 @@
+name 'cspu5_assess2_statementOutput_exam_prep'
+wrong 'console.log(“Hello! \tHow are you?”);'
+wrong 'console.log(“Hello! \bHow are you?”);'
+wrong 'console.log(“Hello! \newLineHow are you?”);'
+right 'console.log(“Hello! \nHow are you?”);'
+wrong 'console.log(“Hello! \nlHow are you?”);'
+
+
+markdown <<MARKDOWN
+Which of the following JavaScript statements will result in the following output being displayed to the console?
+
+    Hello!
+    How are you?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 6**
+
+To format content inside a string in JavaScript, there are set letters that follows a backslash that denotes what the programmer wants the string to look like. In this case, \\n means go print this in the next line. 
+
+Below is a key that states the other possibilities that are not correct to this particular question:
+
+* \\t - horizontally tabs the string at the given place (not covered in lessons)
+* \\b - backspace (not covered in lessons, and relatively unused)
+* \\newLine - newLine is not a valid command
+* \\nl - nl is not a valid command
+MARKDOWN

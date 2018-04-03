@@ -1,0 +1,11 @@
+name 'CSPFinal_Question_12_exam_prep'
+layout 'wrap'
+wrong 'High level protocols take into account specific implementation details of lower level protocols to ensure they are compatible.'
+right 'Low level protocols can provide functionality to high level protocols without revealing the details of how this is accomplished.'
+wrong 'Low level protocols are written in binary while high level protocols are written in hexadecimal.'
+wrong 'High level protocols can take on the role of a low level protocol in the event of failure in the system.'
+
+markdown <<MARKDOWN
+Which of the following BEST describes how protocols on the Internet (e.g. IP, TCP, HTTP) make use of abstraction to accomplish their respective purposes?
+
+MARKDOWN

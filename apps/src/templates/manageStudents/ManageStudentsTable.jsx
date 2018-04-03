@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import ReactTooltip from 'react-tooltip';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -153,6 +154,7 @@ class ManageStudentsTable extends Component {
         id={rowData.id}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
+        shareColumnExperimentEnabled={showShareColumn}
       />
     );
   };
@@ -232,9 +234,25 @@ class ManageStudentsTable extends Component {
   projectSharingHeaderFormatter = () => {
     return (
       <span>
-        <div style={styles.headerName}>
+        <div
+          style={styles.headerName}
+          data-for="explain-sharing"
+          data-tip=""
+        >
           {i18n.projectSharingColumnHeader()}
         </div>
+        <ReactTooltip
+          id="explain-sharing"
+          class="react-tooltip-hover-stay"
+          role="tooltip"
+          effect="solid"
+          place="top"
+          delayHide={1000}
+        >
+          <div>
+            {i18n.shareSettingMoreDetailsTooltip()}
+          </div>
+        </ReactTooltip>
         <div style={styles.headerIcon}>
           <SharingControlActionsHeaderCell/>
         </div>

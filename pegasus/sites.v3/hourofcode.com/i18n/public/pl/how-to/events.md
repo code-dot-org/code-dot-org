@@ -10,7 +10,7 @@ nav: how_to_nav
 ## 1. Przygotuj własne wydarzenie
 
 - Określ miejsce, datę i czas.
-- Wyślij [list](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) z zaproszeniem do miejscowych władz. Zaproponuj, aby wygłosili krótkie przemówienie na otwarciu. Sprawdź nasze [ instrukcje](<%=resolve_url('/files/elected-official.pdf')%>), gdy gościsz oficjeli podczas Godziny Kodowania, aby uzyskać więcej informacji.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to invite your local mayor, congressman, governor, or influential business person to speak. Check out our [how-to toolkit](<%=localized_file('/files/elected-official.pdf')%>) when hosting an elected official during an Hour of Code for more info.
 - Zaproś media i prasę, np. lokalną rozgłośnię radiową, gazetę, blogerów zajmujących się techniką lub edukacją. Sprawdź nasz [pakiet dla prasy](<%= resolve_url('/promote/press-kit') %>).
 
 ## 2. W czasie Twojego wydarzenia
@@ -39,7 +39,7 @@ Rozważ zorganizowania wydarzenia wieczorem dla K-5 i zaproś rodziców, by przy
 
 **Wydarzenie: **Otwarcie ogólnoszkolnego Tygodnia Edukacji Informatycznej
 
-**Data: **5 grudnia (rozpoczęcie Tygodnia Edukacji Informatycznej)
+**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
 
 **Czas: **Podczas dnia szkolnego, najlepiej przed południem. Całość zajmie mniej więcej godzinę.
 

@@ -883,9 +883,40 @@ FactoryGirl.define do
       able_to_attend 'No'
     end
 
-    trait :partner_registration do
+    trait :partner_accepted do
+      with_full_form_data
+
       after :build do |hash|
         hash['ableToAttend'] = "Yes"
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :partner_declined do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "No"
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :lead_facilitator_accepted do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "Yes"
+        hash['city'] = 'Phoenix'
+        hash.delete('teacherAcceptSeat')
+      end
+    end
+
+    trait :lead_facilitator_declined do
+      with_full_form_data
+
+      after :build do |hash|
+        hash['ableToAttend'] = "No"
+        hash['city'] = 'Phoenix'
         hash.delete('teacherAcceptSeat')
       end
     end

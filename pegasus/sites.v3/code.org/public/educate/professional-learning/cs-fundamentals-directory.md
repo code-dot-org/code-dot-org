@@ -14,7 +14,7 @@ Below is a list of all Computer Science Fundamentals Facilitators. To find and s
 
 [col-25]
 
-- [Alabama](#al)  
+- [Alabama](#al)
 - [Arkansas](#ar)
 - [Arizona](#az)
 - [California](#ca)
@@ -1682,3 +1682,5 @@ kapptie@pd.code.org
 <br />
 <br />
 <a href="#top">Back to top</a>
+
+<%= view :answerdash %>

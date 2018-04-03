@@ -1,0 +1,10 @@
+name 'CB_Question_20_exam_prep'
+
+right 'about.example.com'
+wrong 'example.co.uk'
+wrong 'example.com.org'
+wrong 'example.org'
+
+markdown <<MARKDOWN
+According to the domain name system (DNS), which of the following is a subdomain of the domain example.com?
+MARKDOWN

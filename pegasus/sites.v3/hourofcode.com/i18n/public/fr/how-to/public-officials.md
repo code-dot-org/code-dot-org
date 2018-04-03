@@ -17,7 +17,7 @@ nav: how_to_nav
 
 ## Amenez chaque école à participer, permettez à n'importe quel étudiant d'apprendre !
 
-1. **Lisez notre brochure** qui explique pourquoi l’enseignement de l’informatique scientifique est si important, et comment vous pouvez vous impliquer en soutenant l’Heure de Code. [Get the one-pager here.](/files/hoc-one-pager.pdf)
+1. **Lisez notre brochure** qui explique pourquoi l’enseignement de l’informatique scientifique est si important, et comment vous pouvez vous impliquer en soutenant l’Heure de Code. [Obtenez la brochure ici.](/files/hoc-one-pager.pdf)
 
 2. **Faites participer des écoles près de chez vous et les académies.** Utilisez [ce courriel](<%= resolve_url('/promote/resources#sample-emails') %>) ou [ce texte de présentation](<%= resolve_url('/promote/stats') %>) comme point de départ, et jetez un œil à ce [guide](<%= resolve_url('/how-to') %>) destinés aux écoles et académies.
 
@@ -39,6 +39,6 @@ nav: how_to_nav
             
             - **Publiez un communiqué de presse.** [Utilisez cet exemple](<%= resolve_url('/promote/official-press-release') %>) pour vous aider.
             
-            - **Connectez-vous localement.** Consultez [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) pour en savoir plus sur l'éducation de l'informatique dans votre région. Signez la pétition ici et vous recevrez des actualités de Code.org au sujet de leurs efforts de promotion au niveau local, régional et national.</ol> 
+            - **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Signez la pétition ici et vous recevrez des actualités de Code.org au sujet de leurs efforts de promotion au niveau local, régional et national.</ol> 
             
             <%= view :signup_button %>

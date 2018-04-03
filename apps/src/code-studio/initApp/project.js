@@ -78,6 +78,7 @@ var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
+let thumbnailChanged = false;
 
 /**
  * Current state of our sources API data
@@ -237,6 +238,10 @@ var projects = module.exports = {
    */
   useMakerAPIs() {
     return currentSources.makerAPIsEnabled;
+  },
+
+  getCurrentSourceVersionId() {
+    return currentSourceVersionId;
   },
 
   /**
@@ -478,7 +483,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function (event, callback) {
-          this.save().then(callback);
+          this.saveIfSourcesChanged().then(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -696,18 +701,38 @@ var projects = module.exports = {
     currentSources.html = '';
   },
   /**
+   * Saves the project only if the sources {source, html, animations,
+   * makerAPIsEnabled} have changed.
+   * @returns {Promise} A promise containing the project data if the project
+   * was saved, otherwise returns a promise which resolves with no arguments.
+   */
+  saveIfSourcesChanged() {
+    if (!isEditable()) {
+      return Promise.resolve();
+    }
+
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(newSources => {
+        const sourcesChanged = (JSON.stringify(currentSources) !== JSON.stringify(newSources));
+        if (sourcesChanged || thumbnailChanged) {
+          thumbnailChanged = false;
+          this.saveSourceAndHtml_(newSources, resolve);
+        } else {
+          resolve();
+        }
+      });
+    });
+  },
+  /**
    * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    * @returns {Promise} A promise containing the project data.
    */
   save(forceNewVersion, preparingRemix) {
-    // Can't save a project if we're not the owner.
-    if (current && current.isOwner === false) {
+    if (!isEditable()) {
       return Promise.resolve();
     }
-
-    $('.project_updated_at').text(msg.saving());
 
     /**
      * Gets project source from code studio and writes it to the Channels API.
@@ -726,15 +751,15 @@ var projects = module.exports = {
   },
 
   /**
-   * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided.
+   * Saves the project to the Channels API and Sources API. Calls `callback` on
+   * success if a callback function was provided.
    * @param {object} sourceAndHtml Project source code to save.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @private
    */
   saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
-    if (current && current.isOwner === false) {
+    if (!isEditable()) {
       return;
     }
 
@@ -758,14 +783,6 @@ var projects = module.exports = {
 
     unpackSources(sourceAndHtml);
 
-    const updateChannels = () => {
-      channels.update(channelId, current, function (err, data) {
-        initialSaveComplete = true;
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
-      }.bind(this));
-    };
-
     if (this.useSourcesApi()) {
       let params = '';
       if (currentSourceVersionId) {
@@ -787,11 +804,25 @@ var projects = module.exports = {
         currentSourceVersionId = response.versionId;
         current.migratedToS3 = true;
 
-        updateChannels();
+        this.updateChannels_(callback);
       }.bind(this));
     } else {
-      updateChannels();
+      this.updateChannels_(callback);
     }
+  },
+
+  /**
+   * Saves the project to the Channels API. Calls `callback` on success if a
+   * callback function was provided.
+   * @param {function} callback Function to be called after saving.
+   * @private
+   */
+  updateChannels_(callback) {
+    channels.update(current.id, current, function (err, data) {
+      initialSaveComplete = true;
+      this.updateCurrentData_(err, data, false);
+      executeCallback(callback, data);
+    }.bind(this));
   },
 
   getSourceForChannel(channelId, callback) {
@@ -953,22 +984,16 @@ var projects = module.exports = {
       return;
     }
 
-    this.sourceHandler.getAnimationList(animations => {
-      this.sourceHandler.getLevelSource().then(response => {
-        const source = response;
-        const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const newSources = {source, html, animations, makerAPIsEnabled};
-        if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-          hasProjectChanged = false;
-          callCallback();
-          return;
-        }
+    this.getUpdatedSourceAndHtml_(newSources => {
+      if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+        hasProjectChanged = false;
+        callCallback();
+        return;
+      }
 
-        this.saveSourceAndHtml_(newSources, () => {
-          hasProjectChanged = false;
-          callCallback();
-        });
+      this.saveSourceAndHtml_(newSources, () => {
+        hasProjectChanged = false;
+        callCallback();
       });
     });
   },
@@ -980,15 +1005,16 @@ var projects = module.exports = {
     this.save().then(callback);
   },
   /**
-   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   * Freezes the project. Also hides so that it's not available for
+   * deleting/renaming in the user's project list.
    */
   freeze(callback) {
+    if (!(current && current.isOwner)) {
+      return;
+    }
     current.frozen = true;
     current.hidden = true;
-    this.save().then(data => {
-      executeCallback(callback, data);
-      redirectEditView();
-    });
+    this.updateChannels_(callback);
   },
 
   /**
@@ -1181,7 +1207,10 @@ var projects = module.exports = {
       const thumbnailPath = '.metadata/thumbnail.png';
       filesApi.putFile(thumbnailPath, pngBlob, () => {
         current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
-        initialCaptureComplete = true;
+        if (!initialCaptureComplete) {
+          initialCaptureComplete = true;
+          thumbnailChanged = true;
+        }
         resolve();
       }, error => {
         reject(`error saving thumbnail image: ${error}`);

@@ -1,0 +1,33 @@
+name 'cspu5_assess3_array1_exam_prep'
+wrong '4'
+wrong '7'
+wrong '9'
+right '10'
+wrong 'ab'
+
+markdown <<MARKDOWN
+Several questions below refer to arrays in JavaScript and pseudocode.  The pseudocode syntax is very similar to JavaScript with the notable exception that in pseudocode the first index in an array is 1. In Javascript the first index is 0.
+
+![](https://images.code.org/7ed16bd94a51d30c07e60c5bd9d07515-image-1477186383855.png)
+
+Given the following array, what will the code segment below display after being run?  The initial state of the array is shown for you to use as a reference.
+
+![](https://images.code.org/33a435440c69934174a66cbad3d70273-image-1477186479485.png)
+
+    data = [5, 8, 3, 4, 2, 1]
+    a <- data[5]
+    b <- data[2]
+    DISPLAY(a + b)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 13**
+
+Going through the code line by line:
+
+* You are given an array with numbers
+* _a_ is set to the value at index 5, which is a = 2
+* _b_ is set to the value at index 2, which is b = 8
+* Adding a + b, 10 is displayed
+MARKDOWN

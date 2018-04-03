@@ -87,6 +87,7 @@ class ProgressBubble extends React.Component {
     // This prop is provided as a testing hook, in normal use it will just be
     // set to window.location; see defaultProps.
     currentLocation: PropTypes.object.isRequired,
+    stageTrophyEnabled: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -94,7 +95,7 @@ class ProgressBubble extends React.Component {
   };
 
   render() {
-    const { level, smallBubble, selectedSectionId, currentLocation } = this.props;
+    const { level, smallBubble, selectedSectionId, currentLocation, stageTrophyEnabled } = this.props;
 
     const number = level.levelNumber;
     const url = level.url;
@@ -108,7 +109,7 @@ class ProgressBubble extends React.Component {
       ...(!disabled && hoverStyle),
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel && (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled)
+      ...levelProgressStyle(level, disabled),
     };
 
     let href = '';
@@ -150,13 +151,16 @@ class ProgressBubble extends React.Component {
       );
     }
 
+    // Two pixels on each side for border, 2 pixels on each side for margin.
+    const width = (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8;
+
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
     let bubble = (
       <div
         style={{
-          // two pixles on each side for border, 2 pixels on each side for margin
-          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8,
+          // two pixels on each side for border, 2 pixels on each side for margin
+          width: stageTrophyEnabled ? width - 3 : width,
           display: 'flex',
           justifyContent: 'center'
         }}
