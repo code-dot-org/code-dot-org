@@ -76,7 +76,8 @@ export default class WorkshopAttendance extends React.Component {
         workshopState: data.state,
         sessions: data.sessions,
         accountRequiredForAttendance: data['account_required_for_attendance?'],
-        course: data.course
+        course: data.course,
+        enrollmentCount: data.enrollment_count
       });
     });
   }
@@ -214,6 +215,7 @@ export default class WorkshopAttendance extends React.Component {
           onSaving={this.handleSaving}
           onSaved={this.handleSaved}
           accountRequiredForAttendance={this.state.accountRequiredForAttendance}
+          enrollmentCount={this.state.enrollmentCount}
         />
         <Row>
           <Col sm={10}>

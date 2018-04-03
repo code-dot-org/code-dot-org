@@ -16,7 +16,8 @@ const DEFAULT_PROPS = {
   isReadOnly: false,
   onSaving: () => {},
   onSaved: () => {},
-  accountRequiredForAttendance: false
+  accountRequiredForAttendance: false,
+  enrollmentCount: 25
 };
 const FAKE_API_RESPONSE = {
   session: {
