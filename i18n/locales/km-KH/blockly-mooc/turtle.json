@@ -38,7 +38,6 @@
   "drawUpperWave": "គូររលកខាងលើ",
   "drawLowerWave": "គូររលកខាងក្រោម",
   "drawSticker": "គូរស្លាក",
-  "drawStickerWithSize": "draw sticker with size",
   "heightParameter": "កម្ពស់",
   "hideTurtle": "លាក់​វិចិត្រករ",
   "jump": "លោត",
@@ -74,8 +73,6 @@
   "penDown": "ខ្មៅដៃចុះ",
   "penTooltip": "លើកឬបន្ថយខ្មៅដៃដើម្បីចាប់ផ្ដើមឬឈប់គំនូរ។",
   "penUp": "ខ្មៅដៃឡើង",
-  "pointTo": "point to",
-  "pixels": "ភីក​សែល",
   "reinfFeedbackMsg": "នេះគឺជាគំនូររបស់អ្នក! បន្តដំណើរការលើវាឬបន្តទៅផ្ដុំរូបបន្ទាប់។",
   "setAlpha": "កំណត់អាល់ហ្វា",
   "setCharacter": "កំណត់តួអក្សរទៅជា {character}",
@@ -94,6 +91,5 @@
   "turnTooltip": "បង្វែរតួរអង្គទៅឆ្វេងឬស្តាំដោយចំនួនដឺក្រេដែលបានបញ្ជាក់។",
   "turtleVisibilityTooltip": "ធ្វើឲ្យតួរអង្គអាចមើលឃើញឬមើលមិនឃើញ។",
   "widthTooltip": "ផ្លាស់ប្តូរទទឹងរបស់ខ្មៅដៃ។",
-  "withSize": "with size",
   "wrongColour": "រូបភាពរបស់អ្នកគឺខុសពណ៌ហើយ។ សម្រាប់ផ្ដុំរូបនេះត្រូវការ %1 ។"
 }
