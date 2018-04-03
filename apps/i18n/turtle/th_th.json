@@ -74,13 +74,13 @@
   "penDown": "ใช้ดินสอวาดลงมา",
   "penTooltip": "กดดินสอลงเพื่อวาด และยกดินสอขึ้นเพื่อหยุดวาด",
   "penUp": "ยกดินสอขึ้น",
+  "pointTo": "point to",
   "pixels": "พิกเซล",
   "reinfFeedbackMsg": "นี่เป็นที่ของรูปวาดคุณ! คุณยังจะทำมันต่อ หรือจะเลือกปริศนาต่อไป",
   "setAlpha": "ตั้งค่าอัลฟา",
   "setCharacter": "set character to {character}",
   "setColour": "ตั้งค่าสี",
   "setPattern": "ตั้งค่ารูปแบบ",
-  "setStickerSize": "Set sticker size",
   "setWidth": "ตั้งค่าความกว้าง",
   "shareDrawing": "แชร์รูปวาดของคุณ:",
   "showMe": "แสดงให้ฉันเห็น",
@@ -94,5 +94,6 @@
   "turnTooltip": "หันศิลปินไปทางซ้ายหรือขวาตามองศาที่กำหนด",
   "turtleVisibilityTooltip": "แสดงหรือซ่อน ศิลปิน.",
   "widthTooltip": "เปลี่ยนความกว้างของดินสอ.",
+  "withSize": "with size",
   "wrongColour": "รูปภาพนี้มีสีไม่ถูกต้อง สำหรับปริศนานี้ต้องเป็นสี %1"
 }
