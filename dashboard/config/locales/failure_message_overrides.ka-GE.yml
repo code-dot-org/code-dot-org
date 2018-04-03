@@ -49,57 +49,57 @@
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
         მშვენიერი მცდელობა იყო!
         კიდევ სცადე.
-      Course 4 Artist Vars 10_failure_message_override: "დარწმუნდით რომ იყენებთ გვერდების
-        ცვლადს!"
-      Course 4 Playlab For Loops 4b_failure_message_override: "გახსოვდეთ, ორივე პერსონაჟი
-        უნდა მივიდეს საკუთარ დროშასთან იგივე სვლების რაოდენობით!"
-      Course 4 Playlab For Loops 5b_failure_message_override: "გახსოვდეთ, ორივე პერსონაჟი
-        უნდა გაჩერდეს ერთსა და იმავე ადგილას."
+      Course 4 Artist Vars 10_failure_message_override: დარწმუნდით რომ იყენებთ გვერდების
+        ცვლადს!
+      Course 4 Playlab For Loops 4b_failure_message_override: გახსოვდეთ, ორივე პერსონაჟი
+        უნდა მივიდეს საკუთარ დროშასთან იგივე სვლების რაოდენობით!
+      Course 4 Playlab For Loops 5b_failure_message_override: გახსოვდეთ, ორივე პერსონაჟი
+        უნდა გაჩერდეს ერთსა და იმავე ადგილას.
       Eval Strings Images .2_failure_message_override: დარწმუნდით, რომ დააკავშირეთ
         ტექსტი "სამყარო", რათა შეაქმნევინოთ კოდს "გამარჯობა სამყარო"
-      Kiki_StarWars_Test_5_failure_message_override: "თამაში დასრულებულია!"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "თამაში დასრულებულია!"
-      MC HOC 2016 Level 2-2_failure_message_override: "გამოიყენეთ `წინ გადაადგილების`
-        და `მობრუნების` ბრძანებები, რათა ამოძრავოთ თქვენი ქათამი."
-      MC HOC 2016 Level 3_failure_message_override: "გამოიყენეთ `გააკეთე უსასრულოდ`
+      Kiki_StarWars_Test_5_failure_message_override: თამაში დასრულებულია!
+      Kiki_StarWars_Test_5_Example_failure_message_override: თამაში დასრულებულია!
+      MC HOC 2016 Level 2-2_failure_message_override: გამოიყენეთ `წინ გადაადგილების`
+        და `მობრუნების` ბრძანებები, რათა ამოძრავოთ თქვენი ქათამი.
+      MC HOC 2016 Level 3_failure_message_override: გამოიყენეთ `გააკეთე უსასრულოდ`
         ბლოკი და `წინ გადაადგილების` და `მობრუნების` ბრძანებები, რათა ასეირნოთ თქვენი
-        ქათამი."
-      MC HOC 2016 Level 4_failure_message_override: "თუ ყველა ქათამი ერთი მიმართულებით
+        ქათამი.
+      MC HOC 2016 Level 4_failure_message_override: თუ ყველა ქათამი ერთი მიმართულებით
         მოძრაობს, გამოიყენეთ `მოტრიალდი შემთხვევითად`, რათა შემთხვევითად შემოატრიალოთ
-        (მარჯვნივ ან მარცხნივ) ყველა ქათამი."
-      MC HOC 2016 Level 5_failure_message_override: "სცადეთ გამოიყენოთ `გააკეთე უსასრულოდ`
-        `გადადგი ნაბიჯი მოთამაშისკენ` ბლოკთან ერთად."
-      MC HOC 2016 Level 6_failure_message_override: "გამოიყენეთ `გააჩინე ზომბი` ბრძანება
+        (მარჯვნივ ან მარცხნივ) ყველა ქათამი.
+      MC HOC 2016 Level 5_failure_message_override: სცადეთ გამოიყენოთ `გააკეთე უსასრულოდ`
+        `გადადგი ნაბიჯი მოთამაშისკენ` ბლოკთან ერთად.
+      MC HOC 2016 Level 6_failure_message_override: გამოიყენეთ `გააჩინე ზომბი` ბრძანება
         `როცა ღამეა` ბლოკის ქვემოთ, რათა გააჩინოთ მინიმუმ სამი ზომბი. შემდეგ დაამატეთ
         `გადადგი ნაბიჯი მოთამაშისკენ` მათ `როცა გაჩნდები` მოვლენასთან ციკლით, რათა
         დაეხმაროთ მათ თქვენს დაჭერაში. თუ ზედმეტად სწრაფები არიან, დაამატეთ `დაიცადე`
-        ბრძანება."
-      MC HOC 2016 Level 8_failure_message_override: "თქვენ უნდა გამოიყენოთ ფეთქებადი
-        კრიპერი, რათა ააფეთქოთ კედელი და მიაღწიოთ ცხვართან."
-      MC HOC 2016 New Drop_failure_message_override: "გამოიყენეთ ისრის ღილაკები, რათა
+        ბრძანება.
+      MC HOC 2016 Level 8_failure_message_override: თქვენ უნდა გამოიყენოთ ფეთქებადი
+        კრიპერი, რათა ააფეთქოთ კედელი და მიაღწიოთ ცხვართან.
+      MC HOC 2016 New Drop_failure_message_override: გამოიყენეთ ისრის ღილაკები, რათა
         მიხვიდეთ ცხვართან და დააჭირეთ ჰარის ღილაკს ან დააკლიკეთ სათამაშო დაფას, რათა
-        გამოიყენოთ ცხვარი. და არ დაგავიწყდეთ თქვენს კოდში `დაგდების` ბლოკის დამატება."
-      MC HOC 2016 New Spawn_failure_message_override: "განათავსეთ `გააჩინე ცხვარი`
-        `როცა გაიშვება` ბლოკის ქვემოთ."
-      MC HOC 2016 New Walk_failure_message_override: "კარის გასაღებად დააჭირეთ ჰარის
+        გამოიყენოთ ცხვარი. და არ დაგავიწყდეთ თქვენს კოდში `დაგდების` ბლოკის დამატება.
+      MC HOC 2016 New Spawn_failure_message_override: განათავსეთ `გააჩინე ცხვარი`
+        `როცა გაიშვება` ბლოკის ქვემოთ.
+      MC HOC 2016 New Walk_failure_message_override: კარის გასაღებად დააჭირეთ ჰარის
         ღილაკს ან შეეხეთ სათამაშო დაფას, როდესაც მისკენ იქნებით მიმართული. გასაგრძელებლად
-        შედით შიგნით."
-      MC HOC 2016 SCORE LEVEL_failure_message_override: "თუ გიჭირთ 5 გოლემის დაჭერა,
-        სცადეთ თითო დაჭერაზე 2 ქულა დაიმატოთ."
-      MC HOC 2016 Village Test_failure_message_override: "გასამარჯვებლად, თქვენ უნდა
-        გააკეთოთ ისე, რომ გოლემი იჭერდეს და უტევდეს ზომბებს."
+        შედით შიგნით.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: თუ გიჭირთ 5 გოლემის დაჭერა,
+        სცადეთ თითო დაჭერაზე 2 ქულა დაიმატოთ.
+      MC HOC 2016 Village Test_failure_message_override: გასამარჯვებლად, თქვენ უნდა
+        გააკეთოთ ისე, რომ გოლემი იჭერდეს და უტევდეს ზომბებს.
       Valentine_playlab_01_failure_message_override: Almost!  Try again.
-      WhileAdventure_failure_message_override: "გილოცავთ! თქვენ შეაგროვეთ X მონეტა!"
-      courseE_playLab_scaffold3_failure_message_override: "თქვენ უნდა დაამატოთ ორი
-        ახალი მსახიობი თქვენს თამაშში და დაპროგრამების საშუალებით ამოძრაოთ ისინი."
+      WhileAdventure_failure_message_override: გილოცავთ! თქვენ შეაგროვეთ X მონეტა!
+      courseE_playLab_scaffold3_failure_message_override: თქვენ უნდა დაამატოთ ორი
+        ახალი მსახიობი თქვენს თამაშში და დაპროგრამების საშუალებით ამოძრაოთ ისინი.
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: "თქვენ უნდა დაამატოთ ორი
-        მოძრავი მსახიობი თქვენს თამაშში."
-      kikiTesta_failure_message_override: "გილოცავთ! თქვენ შეაგროვეთ X მონეტა!"
-      sample1_failure_message_override: "გილოცავთ! თქვენ შეაგროვეთ X მონეტა!"
-      sample4_failure_message_override: "გილოცავთ! თქვენ შეაგროვეთ X მონეტა!"
-      sample6_failure_message_override: "თქვენ ვერ დაასრულეთ თამაში. კიდევ სცადეთ!
-        [იმოძრავეთ სათამაშო გარემოსკენ]"
-      sample8_failure_message_override: "გილოცავთ! თქვენ შეაგროვეთ X მონეტა!"
+      grade4_scaffolded_project3_failure_message_override: თქვენ უნდა დაამატოთ ორი
+        მოძრავი მსახიობი თქვენს თამაშში.
+      kikiTesta_failure_message_override: გილოცავთ! თქვენ შეაგროვეთ X მონეტა!
+      sample1_failure_message_override: გილოცავთ! თქვენ შეაგროვეთ X მონეტა!
+      sample4_failure_message_override: გილოცავთ! თქვენ შეაგროვეთ X მონეტა!
+      sample6_failure_message_override: თქვენ ვერ დაასრულეთ თამაში. კიდევ სცადეთ!
+        [იმოძრავეთ სათამაშო გარემოსკენ]
+      sample8_failure_message_override: გილოცავთ! თქვენ შეაგროვეთ X მონეტა!
