@@ -11,7 +11,7 @@
   upgrade_ie_link: Lisateave
   en: Arvutiteadus
   computer_science_edweek: Arvutiteaduse hariduse nädal
-  csedweek_dates: 08-14. detsember, 2014
+  csedweek_dates: '08-14. detsember, 2014'
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja
     korraldajatele,<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -21,12 +21,12 @@
     nädala materjale</a>'
   n_have_learned_an_hoc: "<h1>Proovi</h1><h2>KoodiTund</h2><h3># served</h3>"
   anybody_can_learn: Igaüks võib õppida.
-  learn_now: "Õpi nüüd"
+  learn_now: Õpi nüüd
   petition_message: Igal õpilasel igas koolis peaks olema võimalus õppida arvutiteadust
   petition_sign_message: 'Kui nõustud, logi sisse enda nimega. Liitu # teistega.'
   petition_sign_message_support: 'Kui sa toetad meid, kirjuta oma nimi ning ühine
     # teistega.'
-  petition_join_others: "Ühine # teistega"
+  petition_join_others: 'Ühine # teistega'
   name: Nimi
   email: E-post
   zipcode: Postikood või riik
@@ -49,9 +49,9 @@
     for every student to learn.
   hoc2014_heading: Liitu <a href="http://hourofcode.com">KoodiTunniga</a><br/>8-14
     detsembril, 2014<br/>
-  hoc2014_students: "Õpilased"
+  hoc2014_students: Õpilased
   hoc2014_try: Proovi seda
-  hoc2014_teachers: "Õpetajad"
+  hoc2014_teachers: Õpetajad
   hoc2014_host: Korralda üritus
   hoc2014_everyone: Kõik
   hoc2014_support: Toeta &#x25BE;
@@ -79,10 +79,10 @@
   view_english_site: Vaata inglisekeelset lehte
   non_english_tutorials: 'Juhendid tõlgitud mitmesse keelde:'
   write_your_first_program: Kirjuta oma esimene arvutiprogramm
-  learn_cs_concepts: "Õpi arvutiteaduse põhimõtteid lihtsalt programmeerides. See
-    on mängusarnane õpetus, mis sisaldab ka Bill Gatesi, Mark Zuckerbergi loenguid
-    ja Angry Birdsi ning Plants vs. Zombies temaatikat. Õpi kordusi, tingimuslauseid
-    ja lihtsamaid algoritme."
+  learn_cs_concepts: Õpi arvutiteaduse põhimõtteid lihtsalt programmeerides. See on
+    mängusarnane õpetus, mis sisaldab ka Bill Gatesi, Mark Zuckerbergi loenguid ja
+    Angry Birdsi ning Plants vs. Zombies temaatikat. Õpi kordusi, tingimuslauseid
+    ja lihtsamaid algoritme.
   all_ages: Kõigile vanustele
   beginner: Algaja
   n_participants: "# osalejat"
@@ -92,17 +92,17 @@
   congratulations_on_completing_hoc: Palju õnne, oled lõpetanud KoodiTunni
   congratulations_volunteer: Palju õnne! Nüüd, kus oled proovinud KoodiTundi, <a href="https://code.org/volunteer">liitu,
     et osaleda vabatahtlikuna klassiruumis</a> ja aidata õpilasi KoodiTunni õppimisel!
-  congratulations_on_completing_course1: "Õnnitleme Kursus 1 läbimise puhul"
-  congratulations_on_completing_course2: "Õnnitleme Kursus 2 läbimise puhul"
-  congratulations_on_completing_course3: "Õnnitleme Kursus 3 läbimise puhul"
-  congratulations_on_completing_course4: "Õnnitleme Kursus 4 läbimise puhul"
-  congratulations_on_completing_coursea: "Õnnitleme Kursus A läbimise puhul"
-  congratulations_on_completing_courseb: "Õnnitleme Kursus B läbimise puhul"
-  congratulations_on_completing_coursec: "Õnnitleme Kursus C läbimise puhul"
-  congratulations_on_completing_coursed: "Õnnitleme Kursus D läbimise puhul"
-  congratulations_on_completing_coursee: "Õnnitleme Kursus E läbimise puhul"
-  congratulations_on_completing_coursef: "Õnnitleme Kursus F läbimise puhul"
-  congratulations_on_completing_accelerated: "Õnnitleme kiirkursuse läbimise puhul"
+  congratulations_on_completing_course1: Õnnitleme Kursus 1 läbimise puhul
+  congratulations_on_completing_course2: Õnnitleme Kursus 2 läbimise puhul
+  congratulations_on_completing_course3: Õnnitleme Kursus 3 läbimise puhul
+  congratulations_on_completing_course4: Õnnitleme Kursus 4 läbimise puhul
+  congratulations_on_completing_coursea: Õnnitleme Kursus A läbimise puhul
+  congratulations_on_completing_courseb: Õnnitleme Kursus B läbimise puhul
+  congratulations_on_completing_coursec: Õnnitleme Kursus C läbimise puhul
+  congratulations_on_completing_coursed: Õnnitleme Kursus D läbimise puhul
+  congratulations_on_completing_coursee: Õnnitleme Kursus E läbimise puhul
+  congratulations_on_completing_coursef: Õnnitleme Kursus F läbimise puhul
+  congratulations_on_completing_accelerated: Õnnitleme kiirkursuse läbimise puhul
   congrats_next_tutorials_title: Proovi järgnevaid õpetusi
   congrats_next_tutorials_desc: Proovi neid lühemaid 1 tunni õpetusi, või proovi <a
     href="%{current_path}/next">partneri õppetükki</a>.
@@ -190,7 +190,7 @@
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organisatsioon
-  third_party_curriculum: "Õppekava"
+  third_party_curriculum: Õppekava
   third_party_pricing: Hinnad
   third_party_cost_free: Free
   third_party_cost_5permonth: "$5/ kuu klassi kohta"
@@ -243,7 +243,7 @@
   get_started: Alusta
   i_agree: Olen nõus
   participant_select: "- Vali -"
-  participant_student: "Õpilane"
+  participant_student: Õpilane
   participant_parent: Lapsevanem
   participant_educator: Koolitaja
   participant_engineer: Tarkvara insener
@@ -317,7 +317,7 @@
     muuta. http://youtu.be/2DxWIxec6yo. Et saada rohkem infot, külasta http://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: "Õpi KoodiTunnis"
+  learn_hoc: Õpi KoodiTunnis
   beyond_hoc: Lisaks KoodiTunnile
   what_gender: Mis soost sa oled?
   girl: Tüdruk
@@ -325,7 +325,7 @@
   help_recruit_coders: Aita meil kaasata rohkem programmeerijaid oma meeskonda!
   help_recruit: Aita meil kaasata rohkem programmeerijaid!
   lines_of_code: TÄNASENI ON KIRJUTATUD ÜLE <b># PROGRAMMIREA</b>.
-  lines_of_code_alt: "ÕPILASED ON KIRJUTANUD <b>#</b> KOODIRIDA"
+  lines_of_code_alt: ÕPILASED ON KIRJUTANUD <b>#</b> KOODIRIDA
   who_has_done_hoc: 'Kes on teinud #HourOfCode? @codeorg'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
@@ -345,7 +345,7 @@
   studiobar_elementary_title: Baaskursused
   studiobar_elementary_body: Meie kolm uut kursust K&#8209;5 jaoks
   studiobar_hoc_title: KoodiTund
-  studiobar_hoc_body: "Õpi programmeerima, mängides Angry Birds mängu"
+  studiobar_hoc_body: Õpi programmeerima, mängides Angry Birds mängu
   studiobar_flappy_title: Flappy kood
   studiobar_flappy_body: Tee valmis ja jaga oma Flappy mängu
   studiobar_teacher_title: Valmistatud õpetajate jaoks
@@ -353,7 +353,7 @@
   studiobar_frozen_title: KoodiTund
   studiobar_frozen_body: Loo talve võlumaa koos Anna ja Elsaga
   studiobar_donate_title: Anneta
-  studiobar_donate_body: "Üks laps õpib iga dollari eest, mille te kingite"
+  studiobar_donate_body: Üks laps õpib iga dollari eest, mille te kingite
   studiobar_shop_title: Pood
   studiobar_shop_body: Murra stereotüüpe. Kanna uhkusega meie logo.
   homepage_stats_students: of US students have accounts on Code.org
@@ -402,7 +402,7 @@
   homepage_hero_hoc_is_here: The Hour of Code is here
   homepage_slot_text_hoc: KoodiTund
   homepage_slot_text_frozen: Frozen koos Anna ja Elsaga
-  homepage_slot_text_teacher: "Õpetaja töölaud"
+  homepage_slot_text_teacher: Õpetaja töölaud
   homepage_slot_text_studio: Kõik meie õpetused
   homepage_slot_text_course4: Kursus 4
   homepage_slot_text_shop: Pood
@@ -449,18 +449,18 @@
   homepage_slot_text_link_host: Korralda KoodiTund üritus
   homepage_slot_text_link_hocserved: "# läbinud"
   homepage_solot_text_link_volunteer: Ole KoodiTund vabatahtlik
-  homepage_slot_text_title_students: "Õpilased"
+  homepage_slot_text_title_students: Õpilased
   homepage_slot_text_blurb_students: Tutvu kõikide meie õpetustega
   homepage_slot_text_blurb_students_courses: Avastage meie kursusi
   homepage_slot_text_link_codestudio: Proovi Code Studio võimalusi
   homepage_slot_text_link_local: Otsi kohalik klass
   homepage_slot_text_link_othercourses: Teised veebikursused
-  homepage_slot_text_title_educators: "Õpetajad"
-  homepage_slot_text_blurb_educators: "Õpeta oma õpilasi"
+  homepage_slot_text_title_educators: Õpetajad
+  homepage_slot_text_blurb_educators: Õpeta oma õpilasi
   homepage_slot_text_link_elementary: Elementary school
   homepage_slot_text_link_middle: Põhikool
   homepage_slot_text_link_high: Keskkool
-  homepage_slot_text_link_k5: "Õpingud lasteaiast kuni 5. klassi lastele"
+  homepage_slot_text_link_k5: Õpingud lasteaiast kuni 5. klassi lastele
   homepage_slot_text_link_fullcurriculum: Vaata meie täielikku õppekava
   homepage_slot_text_link_pd: Professionaalne areng
   homepage_slot_text_title_advocates: Soovitajad
@@ -510,7 +510,7 @@
   class_submission_level_elementary: Algkool
   class_submission_level_middle_school: Põhikool
   class_submission_level_high_school: Keskkool
-  class_submission_level_college: "Ülikool"
+  class_submission_level_college: Ülikool
   class_submission_level_vocational: Kutseharidus
   class_submission_languages_other: Muu(d) keel(ed)
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
@@ -562,7 +562,7 @@
     ja USAs. Õpi, kuidas programmeerimine on igaühe jaoks ja ühendab loovust, probleemide
     lahendamist ja väga lõbus."
   minecraft_host_event: Korralda Minecraft KoodiTunni üritus
-  minecraft_teach_resources: "Õpetaja materjalid ja tunnikava."
+  minecraft_teach_resources: Õpetaja materjalid ja tunnikava.
   minecraft_leader_guide: Lae alla materjalid ürituse planeerimiseks ja läbiviimiseks.
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}'> Lae
     alla</a> juhendaja lühike juhend ja PowerPoint esitlused noorematele ja vanematele
@@ -756,7 +756,7 @@
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
   dashboard_announce_learn_more_button: Lisateave
-  dashboard_landing_title: "Õpetaja kodulehekülg"
+  dashboard_landing_title: Õpetaja kodulehekülg
   dashboard_landing_welcome: Tere tulemast uute ja paremate õpetajate lehele.
   dashboard_landing_video: Vaata seda videot
   dashboard_landing_watch_video: uute võimalustega tutvumiseks!
@@ -851,24 +851,24 @@
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: "Õpetaja esilehekülg"
-  dashboard_navigation_section_student_progress: "Õpilaste kontod ja edenemine"
+  dashboard_navigation_home_page: Õpetaja esilehekülg
+  dashboard_navigation_section_student_progress: Õpilaste kontod ja edenemine
   dashboard_navigation_section_teacher_progress: Sinu kursuse progress
   dashboard_navigation_section_lesson_plans: Tunnikavad ja ressursid
   dashboard_navigation_section_community: Abi ja kogukond
   dashboard_navigation_section_pd: Professionaalne arendus
   dashboard_navigation_section_speakers: Arvutiteadus<br/>Külalisesinejad
-  dashboard_navigation_all_sections: "Õpilaste kontod ja edenemine"
+  dashboard_navigation_all_sections: Õpilaste kontod ja edenemine
   dashboard_navigation_view_progress: Vaata edenemist
   dashboard_navigation_view_text_responses: Vaata teksti vastuseid
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Lisa õpilasi
-  dashboard_navigation_manage_students: "Õpilaste haldamine"
-  dashboard_navigation_lesson_plans_resources: "Õppekava standardid"
+  dashboard_navigation_manage_students: Õpilaste haldamine
+  dashboard_navigation_lesson_plans_resources: Õppekava standardid
   dashboard_navigation_view_stats: Vaata statistikat
   dashboard_navigation_section: 'Osa: %{section_name}'
-  dashboard_navigation_student: "Õpilane: %{student_name}"
+  dashboard_navigation_student: 'Õpilane: %{student_name}'
   dashboard_progress_not_started: pole alustatud
   dashboard_progress_in_progress: pooleli
   dashboard_progress_not_completed: pole valmis
@@ -893,7 +893,7 @@
   dashboard_sections_table_course: Kursus
   dashboard_sections_table_pairing_allowed: Paarisprogrammeerimine
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "Õpilased"
+  dashboard_sections_table_students: Õpilased
   dashboard_sections_table_code: Jaotise kood
   dashboard_sections_name: Osa nimi
   dashboard_sections_choose_secret: Kui soovid õpilastele kontod luua, vali salajane
@@ -973,8 +973,8 @@
   dashboard_students_reset_word: 'Võite muuta õpilase salasõna valides <b>Näita saladus</b>
     ja siis <b>Muuda salatust</b>. Õpilasele luuakse uus salasõnade paar, mida ta
     saab sisselogimisel kasutada. '
-  dashboard_students_join_link: "Öelge oma õpilastele, et nad teeksid endale kasutajakonto
-    ja liituks teie sektsiooniga"
+  dashboard_students_join_link: Öelge oma õpilastele, et nad teeksid endale kasutajakonto
+    ja liituks teie sektsiooniga
   dashboard_students_no_email: Kui su õpilastel ei ole e-posti aadresse või sa soovid
     neile kasutajakontod luua, siis määra saladuse tüübiks <b>sõna</b> või <b>pilt</b>.
   dashboard_students_print_page: Prindi see lehekülg
@@ -1003,9 +1003,9 @@
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_tools: 'Tools: '
-  dashboard_curriculum: "Õppekava"
+  dashboard_curriculum: Õppekava
   dashboard_curriculum_overview: K-5 õppekava ülevaade
-  dashboard_overview: "Ülevaade"
+  dashboard_overview: Ülevaade
   dashboard_sequence: Jada
   dashboard_framework: Raamistik
   dashboard_standards: Standardid
@@ -1014,8 +1014,8 @@
   dashboard_classroom_strategies: Klassiruumi strateegiaid õpetajatele
   dashboard_debugging: 'Debugimine:'
   dashboard_puzzle_solving: 'Puslede lahendamine:'
-  dashboard_student_worksheet: "õpilase tööleht"
-  dashboard_teacher_worksheet: "õpetaja tööleht"
+  dashboard_student_worksheet: õpilase tööleht
+  dashboard_teacher_worksheet: õpetaja tööleht
   dashboard_curriculum_csina: 'Arvutiteadus algebras:'
   dashboard_curriculum_csins: 'Arvutitehnika teaduses:'
   dashboard_curriculum_csp: 'AP® Arvutiteaduse põhiprintsiibid:'
@@ -1034,7 +1034,7 @@
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
-  dashboard_correctness_correct: "Õige"
+  dashboard_correctness_correct: Õige
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
@@ -1046,8 +1046,8 @@
   stats_hoc_2013_heading: 'Eelmise aasta KoodiTunni uskumatud tulemused. Ainult ühe
     nädala jooksul:'
   stats_hoc_2013_image_alt: 2013. aasta TunniKoodi tulemused
-  dashboard_teacher: "Õpetaja"
-  dashboard_student: "Õpilane"
+  dashboard_teacher: Õpetaja
+  dashboard_student: Õpilane
   dashboard_sections_email_question: Kas kõigil õpilastel on kehtiv e-posti aadress?
   dashboard_sections_account_creation_question: Kes loob õpilase konto?
   dashboard_sections_password_question: Mida kasutavad õpilased "salasõnaks"?
@@ -1056,7 +1056,7 @@
   dashboard_sections_sign_in_question: Kus õpilased sisse logivad?
   dashboard_sections_sign_in_unique: Unikaalne veebileht "Halda õpilasi" vahekaardil
   dashboard_sections_sign_in_main: http://code.org ja kliki "Logi sisse"
-  dashboard_sections_password_account_creation: "Õpilase loodud tekstiparool"
+  dashboard_sections_password_account_creation: Õpilase loodud tekstiparool
   dashboard_sections_login_type_explanation: See tabel selgitab, mis sisselogimise
     tüübi, <b>pilt, sõna, või e-post</b>, peaksid selles osas valima.
   dashboard_faq: Korduma kippuvad küsimused
@@ -1077,8 +1077,8 @@
   learn_videos_watch: Vaata seda inspireerivat videot koos oma klassiga
   learn_videos_show: Näita seda inspireerivat videot oma klassile
   learn_videos_before_hoc: Vaata inspireerivat videot enne oma KoodiTundi
-  learn_educator_resources_description: "Õpi, kuidas õpetada KoodiTundi"
-  learn_educator_resources_button: "Õpetaja materjalid"
+  learn_educator_resources_description: Õpi, kuidas õpetada KoodiTundi
+  learn_educator_resources_button: Õpetaja materjalid
   learn_are_you_educator: Oled õpetaja? Õpi <a href="http://hourofcode.com/resources/how-to">kuidas
     õpetada KoodiTundi</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Leia kohalik vabatahtlik</a>,
@@ -1105,25 +1105,25 @@
   carousel_heading_beginners: Juhendid algajatele
   carousel_heading_beyond_beginners: 'Juhendid algajatele: alusta plokk-programmeerimisega'
   carousel_heading_javascript: Juhendid, kus õpetatakse JavaScripti
-  carousel_heading_beyond_javascript: "Õpi JavaScripti"
+  carousel_heading_beyond_javascript: Õpi JavaScripti
   carousel_heading_unplugged: Pole seadmeid või internetti? Proovi arvutivabu tegevusi
     klassis
   carousel_heading_devices: Rakenduste juhendid telefonile ja tahvelarvutile
   carousel_heading_beyond_devices: Rakendused telefonile ja tahvelarvutile
   carousel_heading_languages: Teiste programmeerimiskeelte juhendid
-  carousel_heading_beyond_languages: "Õpi teidi programmeerimiskeeli"
+  carousel_heading_beyond_languages: Õpi teidi programmeerimiskeeli
   carousel_heading_apps_games: Loo ise mobiilirakendusi või mänge
-  carousel_heading_university: "Ülikooli veebipõhised kursused"
-  carousel_heading_webpages: "Õpi veebilehekülgi tegema"
-  carousel_heading_robots: "Õpi programmeerima robotite ja muude seadmetega"
-  carousel_heading_ide: "Õpetajate seas populaarsed platvormid"
+  carousel_heading_university: Ülikooli veebipõhised kursused
+  carousel_heading_webpages: Õpi veebilehekülgi tegema
+  carousel_heading_robots: Õpi programmeerima robotite ja muude seadmetega
+  carousel_heading_ide: Õpetajate seas populaarsed platvormid
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  educator_notes: "Õpetaja märkmed"
-  teach_led_lesson_plans: "Õpetaja juhitud KoodiTunni tunnikavad"
+  educator_notes: Õpetaja märkmed
+  teach_led_lesson_plans: Õpetaja juhitud KoodiTunni tunnikavad
   learn_footer_all_tutorials: Vaata <a href="https://code.org/educate/allhourofcode">Kooditunni
     õppetükkide täielikku loendit</a>. Kooditunnile kaastöö esitamise kriteeriumite
     ning juhtnööride vaatamiseks <a href="https://hourofcode.com/tutorial-guidelines">klõpsa
@@ -1135,11 +1135,11 @@
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
   participants: osalejad
-  teachers_notes: "Õpetaja märkmed"
-  teachers_notes_hoc: "Õpetajad: Lugege olulisi koolitaja märkmeid siit"
+  teachers_notes: Õpetaja märkmed
+  teachers_notes_hoc: 'Õpetajad: Lugege olulisi koolitaja märkmeid siit'
   previous: Eelmine
   next: Järgmine
-  older_systems: "Õpetused, mis töötavad vanematel süsteemidel"
+  older_systems: Õpetused, mis töötavad vanematel süsteemidel
   older_systems_subheading: Need peaks töötama vanematel veebilehitsejatel. Kõigile
     juhenditele ligipääsemiseks tuleb <a href="http://browsehappy.com/" target="_blank">uuendada
     veebilehitseja</a>
@@ -1161,7 +1161,7 @@
   thinkersmith_name: Minu robotsõbrad
   condcards_name: Tingimuslaused kaartidel
   lightbotintl_name: Lightbot
-  codehs_name: "Õpi programmeerima koos koer Kareliga"
+  codehs_name: Õpi programmeerima koos koer Kareliga
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: KoodiAhvipärdik
@@ -1193,7 +1193,7 @@
   boxisland_name: Kasti saar
   codesters_name: Codesters
   texasinstruments_name: 10 minutit koodi
-  teacherled_name: "Õpetaja juhitud KoodiTunni tunnikavad"
+  teacherled_name: Õpetaja juhitud KoodiTunni tunnikavad
   course1_name: Kursus 1
   course2_name: Kursus 2
   course3_name: Kursus 3
@@ -1386,41 +1386,41 @@
   codesters_platformtext: Tänapäevased veebibrauserid
   texasinstruments_platformtext: TI kalkulaator
   teacherled_platformtext: Tänapäevased brauserid, nutitelefonid ja tahvelarvutid
-  codeorg_shortdescription: "Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!"
-  codeintl_shortdescription: "Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!"
+  codeorg_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!
+  codeintl_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: "Õpi JavaScriptiga joonistama"
-  khanes_shortdescription: "Õpi JavaScriptiga joonistama"
-  khanpt_shortdescription: "Õpi JavaScriptiga joonistama"
-  khanhe_shortdescription: "Õpi JavaScriptiga joonistama"
-  khanfr_shortdescription: "Õpi JavaScriptiga joonistama"
-  khanpl_shortdescription: "Õpi JavaScriptiga joonistama"
-  tynker_shortdescription: "Õpi programmeerima, lahendades lõbusaid mõistatusi ja
-    luues päris oma mobiilimänge."
+  khan_shortdescription: Õpi JavaScriptiga joonistama
+  khanes_shortdescription: Õpi JavaScriptiga joonistama
+  khanpt_shortdescription: Õpi JavaScriptiga joonistama
+  khanhe_shortdescription: Õpi JavaScriptiga joonistama
+  khanfr_shortdescription: Õpi JavaScriptiga joonistama
+  khanpl_shortdescription: Õpi JavaScriptiga joonistama
+  tynker_shortdescription: Õpi programmeerima, lahendades lõbusaid mõistatusi ja luues
+    päris oma mobiilimänge.
   scratch_shortdescription: Loo interaktiivseid mänge, lugusid ja animatsioone.
   lightbot_shortdescription: Programm Lightbot lahendab puslesid kasutades protseduure
     ja kordusi!
-  thinkersmith_shortdescription: "Ühenduseta õpetused grupile, kellel pole seadmeid"
-  condcards_shortdescription: "Õpi algoritme kaardipaki abil"
+  thinkersmith_shortdescription: Ühenduseta õpetused grupile, kellel pole seadmeid
+  condcards_shortdescription: Õpi algoritme kaardipaki abil
   lightbotintl_shortdescription: Mäng, mis õpetab programmeerimise põhimõtteid
   codehs_shortdescription: Alusta programmeerimist koos koer Kareliga, tehes läbi
     lõbusa visuaalse sissejuhatuse programmeerimisse!
-  codecademy_shortdescription: "Õpi veebibrauseris JavaScriptiga programmeerima"
+  codecademy_shortdescription: Õpi veebibrauseris JavaScriptiga programmeerima
   codecombat_shortdescription: Mängi ja õpi Phytonit või JavaScripti selles suurepärases
     programmeerimismängus!
-  codemonkey_shortdescription: "Õpilased programmeerivad ahvi, kes oskab banaane püüda."
-  codeavengers_shortdescription: "Õpi veebibrauseris JavaScriptiga programmeerima"
+  codemonkey_shortdescription: Õpilased programmeerivad ahvi, kes oskab banaane püüda.
+  codeavengers_shortdescription: Õpi veebibrauseris JavaScriptiga programmeerima
   processing_shortdescription: Tekstitöötluse tunniajaline juhend
   robomind_shortdescription: Kirjuta programm virtuaalsele robotile
-  groklearning_shortdescription: "Õpeta jututoa-robot Eliza sinu sõpru ninapidi vedama
-    ja pane nad uskuma, et Eliza on inimene!"
+  groklearning_shortdescription: Õpeta jututoa-robot Eliza sinu sõpru ninapidi vedama
+    ja pane nad uskuma, et Eliza on inimene!
   quorum_shortdescription: Liitu Maryga, kes teeb sulle Quorumi programmeerimiskeele
     ekskursiooni.
   codespark_shortdescription: '"The Foos" on lõbus ja lastele sobiv mäng programmeerimise
     õppimiseks.'
   kodable_shortdescription: Lõbus mäng iPadile programmeerimise aluste õppimiseks
-  tynkerapp_shortdescription: "Õpi programmeerimist lõbusate programmeerimise puslede
-    abil. "
+  tynkerapp_shortdescription: 'Õpi programmeerimist lõbusate programmeerimise puslede
+    abil. '
   robomindnl_shortdescription: Kirjuta programm virtuaalsele robotile
   flappy_shortdescription: Tee omaenda mäng - Flappy Bird, Shark või Submarine
   bitsbox_shortdescription: Programmeeri erinevaid äppe mängimiseks ja jagamiseks,
@@ -1436,12 +1436,11 @@
   kodableunplugged_shortdescription: Lõbus arvutivaba ülesanne
   projguts_shortdescription: Proovige modelleerimist ja simulatsiooni kivi/paber/käärid
     abil
-  hourofcode_shortdescription: "Õpi programmeerima koos Mark Zuckerbergi ja Angry
-    Birds'iga!"
+  hourofcode_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry Birds'iga!
   frozen_shortdescription: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
     kui nad avastavad jää võlu ja ilu.
-  starwars_shortdescription: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
-    kauges, kauges galaktikas."
+  starwars_shortdescription: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+    kauges, kauges galaktikas.
   playlab_shortdescription: Loo lugu või mäng "Play Lab"iga!
   infinity_shortdescription: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
     Disney Infinity tegelased.
@@ -1454,8 +1453,8 @@
   boxisland_shortdescription: Mine programmeerimise reisile Kasti saarele vapra Hiroga.
   codesters_shortdescription: Loo enda mängud, animatsioonid ja kunstiteosed kasutades
     Pythonit.
-  texasinstruments_shortdescription: "Õpi programmeerimise algeid kasutades TI-84
-    &#8482; kalkulaatorit."
+  texasinstruments_shortdescription: Õpi programmeerimise algeid kasutades TI-84 &#8482;
+    kalkulaatorit.
   teacherled_shortdescription: Saa inspiratsiooni, et panna kokku enda KoodiTunni
     üritus, kasutades neid tunnikavasid.
   course2_shortdescription_congrats: For students with basic reading skills, this
@@ -1489,18 +1488,18 @@
     espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a
     a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute;
     como la valiosa habilidad de depuraci&oacute;n.
-  khan_longdescription: "Õpi JavaScript'iga programmeerimise aluseid, luues oma koodiga
-    põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!"
-  khanes_longdescription: "Õpi JavaScript'iga programmeerimise aluseid, luues oma
-    koodiga põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!"
-  khanpt_longdescription: "Õpi JavaScript'iga programmeerimise aluseid, luues oma
-    koodiga põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!"
-  khanhe_longdescription: "Õpi JavaScript'iga programmeerimise aluseid, luues oma
-    koodiga põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!"
-  khanfr_longdescription: "Õpi JavaScript'iga programmeerimise aluseid, luues oma
-    koodiga põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!"
-  khanpl_longdescription: "Õpi JavaScript'iga programmeerimise aluseid, luues oma
-    koodiga põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!"
+  khan_longdescription: Õpi JavaScript'iga programmeerimise aluseid, luues oma koodiga
+    põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!
+  khanes_longdescription: Õpi JavaScript'iga programmeerimise aluseid, luues oma koodiga
+    põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!
+  khanpt_longdescription: Õpi JavaScript'iga programmeerimise aluseid, luues oma koodiga
+    põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!
+  khanhe_longdescription: Õpi JavaScript'iga programmeerimise aluseid, luues oma koodiga
+    põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!
+  khanfr_longdescription: Õpi JavaScript'iga programmeerimise aluseid, luues oma koodiga
+    põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!
+  khanpl_longdescription: Õpi JavaScript'iga programmeerimise aluseid, luues oma koodiga
+    põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!
   tynker_longdescription: Loo ise mäng ning jaga seda sõpradega! Lahenda lõbusaid
     programmeerimise mõistatusi ja õpi programmeerimise kontseptsioone erinevatel
     tasanditel. Personaliseeri mänge animeeritud tegelastega, erinevate tasemete ja
@@ -1522,9 +1521,9 @@
   condcards_longdescription: Õpi algoritme ja tingimuslauseid selle "offline" tegevusega,
     kus kasutatakse kaardipakki. Õpilased on meeskondades ning vajavad üht kaardipakki
     meeskonna peale.
-  lightbotintl_longdescription: "Õpeta programmeerimise loogikat, alustades algtasemel
+  lightbotintl_longdescription: Õpeta programmeerimise loogikat, alustades algtasemel
     programmeerimisest, mis sobib vanusele 4+ iOS või Androidi seadmetel (või veebis).
-    Õpi, kuidas järjestada käsklusi, tuvasta kordusi, kasuta protseduure ja kordusi!"
+    Õpi, kuidas järjestada käsklusi, tuvasta kordusi, kasuta protseduure ja kordusi!
   codehs_longdescription: Programmeerimine on sisuliselt käskluste andmine, umbes
     nagu koerale käskluste andmine. Õpi programmeerimist Karel ja koeraga&mdash;lõbus,
     lihtne ning visuaalne sissejuhatus programmeerimisse, mis õpetab kontseptsioone
@@ -1548,10 +1547,10 @@
   processing_longdescription: Sissejuhatus programmeerimisse visuaalsete kunstide
     kontekstis Processing programmeerimiskeelt kasutades. Lühike video juhendab interaktiivses
     joonistamisprogrammis programmeerimisülesandeid lahendama
-  robomind_longdescription: "Õpilased õpivad virtuaalset robotit juhtides programmeerimise
+  robomind_longdescription: 'Õpilased õpivad virtuaalset robotit juhtides programmeerimise
     põhitõdesid. See online kursus sobib ise õppimiseks. Olemas on lühikesed esitlused,
     filmid, küsitlused ja automaatsed juhised/vihjed, mis aitavad programmeerimisülesannete
-    täitmisel. "
+    täitmisel. '
   groklearning_longdescription: Kasuta programmeerimiskeelt Phyton ja ehita juturobot
     "Eliza", kellest saab roboti psühholoog. Sa õpetad Elizale, kuidas rääkida ja
     mida öelda. Kas suudad sõbrad ära petta nii, et nad arvavad, et tegemist on inimese,
@@ -1566,13 +1565,13 @@
   kodable_longdescription: Kodable on õpetustega iPadi mäng, mis õpetab lastele vanuses
     5+ programmeerimise aluseid. Soovi korral võib õpetaja või lapsevanem kõrval olla,
     kuid see pole vajalik.
-  tynkerapp_longdescription: "Õpi programmeerima lõbusaid programmeerimismõistatusi
+  tynkerapp_longdescription: Õpi programmeerima lõbusaid programmeerimismõistatusi
     lahendades. Loo lihtsasti mänge ja lugusid teemakohaste piltide, 10+ mängukomplekti
-    ja muudetavate tegelaste abil. Soovi korral saad oma tegelasi ka veebis vaadata."
-  robomindnl_longdescription: "Õpilased õpivad virtuaalset robotit juhtides programmeerimise
+    ja muudetavate tegelaste abil. Soovi korral saad oma tegelasi ka veebis vaadata.
+  robomindnl_longdescription: 'Õpilased õpivad virtuaalset robotit juhtides programmeerimise
     põhitõdesid. See online kursus sobib ise õppimiseks. Olemas on lühikesed esitlused,
     filmid, küsitlused ja automaatsed juhised/vihjed, mis aitavad programmeerimisülesannete
-    täitmisel. "
+    täitmisel. '
   flappy_longdescription: Kasuta "võta ja liiguta" programmeerimist, et luua oma Flappy
     Bird mäng ning muuda selle välimust (Flappy hai, Flappy jõuluvana vmt). Lisa mäng
     oma telefoni ühe klikiga.
@@ -1580,11 +1579,11 @@
     erinevaid äppe mängimiseks ja jagamiseks. Lihtsad juhised lubavad ka väikestel
     lastel ehtsat JaVaScripti kasutades programmeerida. Mida rohkem oskad, seda kaugemale
     jõuad.
-  makeschool_longdescription: "Õpi programmeerimist iPhone'i mängu luues. Selleks
-    saad kasutada algajatele sobivat programmeerimiskeelt Swift! Loo Pok&eacute;emonist
+  makeschool_longdescription: Õpi programmeerimist iPhone'i mängu luues. Selleks saad
+    kasutada algajatele sobivat programmeerimiskeelt Swift! Loo Pok&eacute;emonist
     inspireeritud seiklusmäng. Kirjuta koodi ja õpeta oma koletisele uusi liigutusi.
     Mängus õpid, kuidas kasutada erinevaid tingimusi ning objekte nii, et sinu koletis
-    võidaks!"
+    võidaks!
   touchdevelop_longdescription: 'Puutesõbralik mäng aitab sul luua pikslite kunsti,
     lahendada karu mõistatus või luua oma hüppava linnu mäng. '
   appinventor_longdescription: Lõbusad ja lühikesed videoõpetused aitavad sul luua
@@ -1595,8 +1594,8 @@
   blockly_longdescription: Kas sinu arvutil on aeglane internetiühendus või polegi
     internetiühendust? Laadi alla Blocky juhiseid Code.org juhistest. Selle ühe 3MB
     suuruse zip faili saad laadida igasse arvutisse või salvestada mälupulgale
-  thinkersmith2_longdescription: "Õpilased õpivad, kuidas tähtedega ümber käia. Lõpus
-    oskab klass programmeerida oma nimetähed."
+  thinkersmith2_longdescription: Õpilased õpivad, kuidas tähtedega ümber käia. Lõpus
+    oskab klass programmeerida oma nimetähed.
   kodableunplugged_longdescription: 'FuzzFamily Frenzy mängimiseks on vaja valget
     paberit. See mäng õpetab programmeerimise loogikat lastele alates 5. eluaastast.
     Õpetaja peaks mängu selgitama ja seejärel moodustama lastest paarid, kes lihtsat
@@ -1608,8 +1607,8 @@
   frozen_longdescription: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
     jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise ajal
     ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
-  starwars_longdescription: "Õpi programmeerima droide ja loo oma Star Wars’i mäng
-    kauges, kauges galaktikas."
+  starwars_longdescription: Õpi programmeerima droide ja loo oma Star Wars’i mäng
+    kauges, kauges galaktikas.
   playlab_longdescription: Loo oma lugu või mäng Play Labi abil! Pane loomad, piraadid,
     zombid, ninjad ja paljud teised tegelased liikuma, hääli tegema, punkte koguma
     ja isegi tulepalle viskame!
@@ -1618,10 +1617,10 @@
     mõisteid ja nad saavad selle õppimisega ise hakkama. Iga plokkidel põhinev tegevus
     täiendab eelmist, et lapsed saaksid aimu funktsioonidest, kordustest, tingimuslausetest
     ja nooltest, kasutades värvilist animeeritud graafikat ja hääljuhendeid.
-  allcancode_longdescription: "Õpilased mängivad seiklusmängu, mis põhineb originaalsel
+  allcancode_longdescription: Õpilased mängivad seiklusmängu, mis põhineb originaalsel
     lool. Nad juhendavad Marcot - peategelast - läbi igast tasemest, andes talle juhiseid
     visuaalse programmeerimsie keele abil. Sel viisil saavad nad tuttavaks käskudega,
-    kordustega ja tingimuslausetega, ilma, et and seda ise märkaksid."
+    kordustega ja tingimuslausetega, ilma, et and seda ise märkaksid.
   csfirst_longdescription: Loo lugu kahest tegelasest mere ääres. Kujuta vett ja loo
     oma taust. Kasuta koodi, et rääkida enda lugu!
   boxisland_longdescription: Mine reisile Kasti saarele ja aita Hirol koguda kokku
@@ -1641,8 +1640,8 @@
     traditsiooniline arvutiõpe sisaldab. Et ka õpetajad leiaksid inspiratsiooni, panid
     KoodiTunni veteranid kokku tunniajalise näidistunni ja tegevuskava.
   codeorg_beyond_name: Sissejuhatus arvutiteadusesse (K-8)
-  khan_beyond_name: "Õpi programmeerimist"
-  tynker_beyond_name: "Õpi programmeerimist kodus"
+  khan_beyond_name: Õpi programmeerimist
+  tynker_beyond_name: Õpi programmeerimist kodus
   scratch_beyond_name: Ole loov programmeerides
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
@@ -1650,24 +1649,24 @@
   scratchjr_beyond_name: ScratchJR neile, kes veel ei loe
   hopscotch_beyond_name: 'Hopscotch: programmeerimine iPadil'
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: "Õpi programmeerimiskeelt Phyton"
-  hacketyhack_beyond_name: "Õpi Ruby't"
+  groklearning_beyond_name: Õpi programmeerimiskeelt Phyton
+  hacketyhack_beyond_name: Õpi Ruby't
   robomind_beyond_name: Programmeeri virtuaalne robot
   makeschool_beyond_name: Ehita iPhone'i mäng oma brauseris!
   appinventor_beyond_name: AppInventori KoodiTund
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: "Õpi programmeerima koos koer Kareliga"
+  codehs_beyond_name: Õpi programmeerima koos koer Kareliga
   udemy_beyond_name: Programmeerimise veebikursused
   lynda_beyond_name: Programmeerimise veebikursused
   edx_beyond_name: Harvardi Ülikooli aine CS50
   coursera_beyond_name: Stanfordi Ülikooli aine CS 101
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: "Ülikooli veebipõhised kursused"
+  teachingtree_beyond_name: Ülikooli veebipõhised kursused
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: "Õpi HTML'i"
-  codeavengers_beyond_name: "Õpi veebisaite looma"
+  w3schools_beyond_name: Õpi HTML'i
+  codeavengers_beyond_name: Õpi veebisaite looma
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
@@ -1696,10 +1695,10 @@
   codehs_beyond_gradelevel: Keskkool
   udemy_beyond_gradelevel: Keskkool +
   lynda_beyond_gradelevel: Keskkool +
-  edx_beyond_gradelevel: "Ülikool"
-  coursera_beyond_gradelevel: "Ülikool"
-  udacity_beyond_gradelevel: "Ülikool"
-  teachingtree_beyond_gradelevel: "Ülikool"
+  edx_beyond_gradelevel: Ülikool
+  coursera_beyond_gradelevel: Ülikool
+  udacity_beyond_gradelevel: Ülikool
+  teachingtree_beyond_gradelevel: Ülikool
   kodu_beyond_gradelevel: Vanusele 8+
   cargobot_beyond_gradelevel: Vanusele 8+
   kidsruby_beyond_gradelevel: Vanus 12+
@@ -1717,7 +1716,7 @@
   codeorg_beyond_platformtext: Tänapäevased brauserid ja tahvelarvutid
   khan_beyond_platformtext: Tänapäevased veebibrauserid
   tynker_beyond_platformtext: Tänapäevased veebibrauserid (vajalik $$)
-  scratch_beyond_platformtext: "Ükskõik milline brauser"
+  scratch_beyond_platformtext: Ükskõik milline brauser
   lightbot_beyond_platformtext: iOS, Android (või veebibrauser)
   codecademy_beyond_platformtext: Kaasaegsed veebibrauserid. iOS ja Android rakendused
   kodable_beyond_platformtext: iPad
@@ -1751,27 +1750,27 @@
   processing_beyond_platformtext: Tänapäevased veebibrauserid
   alice_beyond_platformtext: Windows või Mac (vajalik installimine)
   sphero_beyond_platformtext: Roboti ost
-  codeorg_beyond_shortdescription: "Õpi programmeerima koos Mark Zuckerbergi ja Angry
-    Birds'iga!"
-  khan_beyond_shortdescription: "Õpi JavaScriptiga joonistama"
+  codeorg_beyond_shortdescription: Õpi programmeerima koos Mark Zuckerbergi ja Angry
+    Birds'iga!
+  khan_beyond_shortdescription: Õpi JavaScriptiga joonistama
   tynker_beyond_shortdescription: Lõbus ja kaasahaarav kursus 4.-8. klassi õpilastele
   scratch_beyond_shortdescription: Loo interaktiivseid mänge, lugusid ja animatsioone.
   lightbot_beyond_shortdescription: Mäng, mis õpetab programmeerimise põhimõtteid
-  codecademy_beyond_shortdescription: "Õpi veebibrauseris JavaScriptiga programmeerima"
+  codecademy_beyond_shortdescription: Õpi veebibrauseris JavaScriptiga programmeerima
   kodable_beyond_shortdescription: Lõbus mäng iPadile programmeerimise aluste õppimiseks
   scratchjr_beyond_shortdescription: 'Loo ScratchJr abiga interaktiivseid lugusid
     ja mänge. '
-  hopscotch_beyond_shortdescription: "Õpi visuaalset programmeerimist iPad peal"
+  hopscotch_beyond_shortdescription: Õpi visuaalset programmeerimist iPad peal
   pocketcode_beyond_shortdescription: Loo mäng oma nutitelefonil ja jaga seda sõpradega!
   groklearning_beyond_shortdescription: Sissejuhatus programmeerimisse Pythoniga
-  hacketyhack_beyond_shortdescription: "Õpi Rubyt nullist"
+  hacketyhack_beyond_shortdescription: Õpi Rubyt nullist
   robomind_beyond_shortdescription: Kirjuta programm virtuaalsele robotile
-  makeschool_beyond_shortdescription: "Õpi kuidas ühe tunniga teha iPhone'i mäng"
+  makeschool_beyond_shortdescription: Õpi kuidas ühe tunniga teha iPhone'i mäng
   appinventor_beyond_shortdescription: Loo päris enda rakendus! (ainult Android)
   touchdevelop_beyond_shortdescription: Loo mobiilirakendusi oma telefonil, tahvelarvutil
     või sülearvutil
-  codehs_beyond_shortdescription: "Õpi läbi lõbusa visuaalse keskkonna JavaScripti
-    tundma"
+  codehs_beyond_shortdescription: Õpi läbi lõbusa visuaalse keskkonna JavaScripti
+    tundma
   udemy_beyond_shortdescription: Kümned programmeerimise veebikursused
   lynda_beyond_shortdescription: Kümned programmeerimise veebikursused
   edx_beyond_shortdescription: Kõige populaarsem aine Harvardi ülikoolis
@@ -1780,17 +1779,17 @@
   teachingtree_beyond_shortdescription: 'Online teadmised: kiire ja sundimatu'
   kodu_beyond_shortdescription: Loo kolmemõõtmeline mängumaailm
   cargobot_beyond_shortdescription: Programmeeri robotkäsi oma iPadil
-  kidsruby_beyond_shortdescription: "Õpi Rubyga programmeerima"
-  w3schools_beyond_shortdescription: "Õpi veebisaite looma"
-  codeavengers_beyond_shortdescription: "Õpi kirjutama koodi mängudele ja veebisaitidele"
+  kidsruby_beyond_shortdescription: Õpi Rubyga programmeerima
+  w3schools_beyond_shortdescription: Õpi veebisaite looma
+  codeavengers_beyond_shortdescription: Õpi kirjutama koodi mängudele ja veebisaitidele
   mozilla_beyond_shortdescription: Loo ja jaga veebilehti
   codecombat_beyond_shortdescription: Mängi mängu, võitmiseks õpi JavaScripti
   codea_beyond_shortdescription: Loo rakendusi oma iPadil
   lego_beyond_shortdescription: Ehita robot ja kirjuta talle programm
   finch_beyond_shortdescription: Robot arvutiõpetuseks
-  arduino_beyond_shortdescription: "Õpi Arduinot koos Sparkfun Digital Sandboxiga."
-  processing_beyond_shortdescription: "Õpi töötlemise keeli"
-  alice_beyond_shortdescription: "Õpeta programmeerimist kolmemõõtmelises keskkonnas"
+  arduino_beyond_shortdescription: Õpi Arduinot koos Sparkfun Digital Sandboxiga.
+  processing_beyond_shortdescription: Õpi töötlemise keeli
+  alice_beyond_shortdescription: Õpeta programmeerimist kolmemõõtmelises keskkonnas
   sphero_beyond_shortdescription: SPRK tunnid annavad lastele lõbusa kiirkursuse robotite
     programmeerimises, samal ajal parandades nende matemaatika- ja looduseaduste oskusi.
   codeorg_beyond_longdescription: Õpi peamisi arvutiteaduse kontseptsioone "lohista
@@ -1798,8 +1797,8 @@
     tunnist, kus on kasutatakse ka klassitegevusi, mis ei vaja arvutit. Mängude sarnastes
     juhistes esinevad Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies.
     Õpi kordusi, tingimuslauseid, algtaseme algoritme, funktsioone ja muutujaid.
-  khan_beyond_longdescription: "Õpi JavaScript'iga programmeerimise aluseid, luues
-    oma koodiga põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!"
+  khan_beyond_longdescription: Õpi JavaScript'iga programmeerimise aluseid, luues
+    oma koodiga põnevaid joonistusi. Tee seda kas iseseisvalt või klassis!
   tynker_beyond_longdescription: Tynkler muudab programmeerimise lõbusaks & lihtsaks.
     Lapsed ehitavad mänge ja mobiiliäppe koodiplokke kokku pannes. See tähendab, et
     sa ei pea tundma programmeerimiskeelt. Lapsed muudavad ideed animeeritud lugudeks.
@@ -1808,9 +1807,9 @@
   scratch_beyond_longdescription: Scratchi abil saad ise luua interaktiivseid mänge,
     lugusid, animatsioone &mdash; ja jagada neid sõpradega. Alustuseks abimeeri oma
     nimi, kujunda postkaart või loo lihtne mäng.
-  lightbot_beyond_longdescription: "Õpeta programmeerimise loogikat, alustades algtasemel
+  lightbot_beyond_longdescription: Õpeta programmeerimise loogikat, alustades algtasemel
     programmeerimisest, mis sobib vanusele 4+ iOS või Androidi seadmetel (või veebis).
-    Õpi, kuidas järjestada käsklusi, tuvasta kordusi, kasuta protseduure ja kordusi!"
+    Õpi, kuidas järjestada käsklusi, tuvasta kordusi, kasuta protseduure ja kordusi!
   codecademy_beyond_longdescription: Codecademy on interaktiivne juhenditega õpilastele
     mõeldud sissejuhatus arvutiteadusesse JavaScriptis, mida kasutavad kümned miljonid
     õpilased üle maailma. Me oleme Kooditunni jaoks ette valmistanud lihtsad ülesanded,
@@ -1822,10 +1821,10 @@
     võimaldab väikelastel luua ise interaktiivseid lugusid ja mänge. Lapsed panevad
     kokku koodiplokke ning panevad sellega tegelased liikuma, hüppama, tantsima ja
     laulma
-  hopscotch_beyond_longdescription: "Õpilastele mõeldud juhend iPadil, mis kasutab
+  hopscotch_beyond_longdescription: Õpilastele mõeldud juhend iPadil, mis kasutab
     Hopscotch programmeerimiskeelt. Õpilased ehitavad mänge ja äppe iPadil, mis ongi
     mõeldud iPadi jaoks. Õpilased saavad mängida omaette või koos sõpradega (kuni
-    3 last ühe iPadi kohta)."
+    3 last ühe iPadi kohta).
   pocketcode_beyond_longdescription: Loo ise mäng oma nutitelefonil Pocket Code abil!
     Aita langevalvur Steve'il pakid kohale toimetada. Saad mängu jagada sõpradega
     ning teised kasutajad saavad samuti mängu proovida!
@@ -1838,10 +1837,10 @@
     Hackety Hack õpetab programmeerimis Ruby programmeerimiskeeles. Rubyt kasutatakse
     erinevates programmides, sealhulgas töölauarakendustes ja veebilehtedel. [Märkus:
     Vajalik töölauale installeerimine]'
-  robomind_beyond_longdescription: "Õpilased õpivad virtuaalset robotit juhtides programmeerimise
+  robomind_beyond_longdescription: 'Õpilased õpivad virtuaalset robotit juhtides programmeerimise
     põhitõdesid. See online kursus sobib ise õppimiseks. Olemas on lühikesed esitlused,
     filmid, küsitlused ja automaatsed juhised/vihjed, mis aitavad programmeerimisülesannete
-    täitmisel. "
+    täitmisel. '
   makeschool_beyond_longdescription: Kas oskad veidi ObjectiveC-d? Õpi, kuidas valmistada
     iPhone'i mäng tunni ajaga! Me juhendame sind kogu protsessi vältel. Õpid, kuidas
     programmeerida, testida ja mängida oma mängu veebis ning jagada seda Facebookis
@@ -1855,17 +1854,17 @@
   touchdevelop_beyond_longdescription: TouchDevelop lubab luua äppe iPadile, iPhone'ile,
     Androidile, PCle, Macile, Windowsi telefonile. Meie puutesõbralik rakendus muudab
     programmeerimise lahedaks, seda ka sinu telefonis ja tahvelarvutis!
-  codehs_beyond_longdescription: "Õpi programmeerimise algtaset koer Kareliga. See
+  codehs_beyond_longdescription: 'Õpi programmeerimise algtaset koer Kareliga. See
     on lõbus, lihtne ja visuaalne sissejuhatus programmeerimisse. Mängus annad arvutile
     käsklusi nagu annaksid käsklusi koerale. See mäng sobib hästi, kui juhendajaks
-    on õpetaja, kuid seda saad mängida ka omaette. [Märkus: mäng on tasuline]"
+    on õpetaja, kuid seda saad mängida ka omaette. [Märkus: mäng on tasuline]'
   udemy_beyond_longdescription: 'Sõltumata sellest, kas oled päris algaja või programmeerimisspets,
     siis Udemy pakub kursusi, milles seast leivad kõik endale sobiva! Tunde annavad
     professionaalsed juhendajad [Märkus: tasuline]'
-  lynda_beyond_longdescription: "Õpi programmeerima veebirakendusi programmeerimiskeeltes
+  lynda_beyond_longdescription: 'Õpi programmeerima veebirakendusi programmeerimiskeeltes
     C ja C++ ning Java programmeerimiskeeles. Meie arendajate juhised õpetavad, kuidas
     luua mobiiliäppe, kasuta PHPd ja MySQL andmebaase ning samuti statistikanumbrite
-    töötlemise keelt R ning palju muud. [Märkus: tasuline]"
+    töötlemise keelt R ning palju muud. [Märkus: tasuline]'
   edx_beyond_longdescription: CS50x on Harvardi kolledži sissejuhatav kursus arvutiteadusesse,
     mis sobib kõigile, sõltumata sellest, kas sul on varasem programmeerimise kogemus
     või mitte. Teemadeks on abstraktsioon, algoritmid, andmestruktuurid, turvalisus,
@@ -1902,13 +1901,13 @@
     tee kodutöösid Ruby programmeerimiskeele abil! Lihtsalt ütle oma vanematele ja
     õpetajatele, et sa õpid Rubys programmeerimis... ;) See on tasuta ja töötab igas
     arvutis. [Märkus: Vajalik töölauale installeerimine]'
-  w3schools_beyond_longdescription: "Õpi oma arvutis, kuidas veebilehti luua. Serveri
-    põhitõed saad selgeks vähem kui päevaga. Õpi, kuidas lisada veebilehele andmebaase"
-  codeavengers_beyond_longdescription: "Õpi, kuidas programmeerida mänge, äppe ja
-    kodulehtesid. Juhendid on loodud ekspertide poolt ning need sobivad ideaalselt
-    algajatele. Juhised on kergesti mõistetavad ja igati abiks. Meie HTML, CSS ja
-    JacaScripti kursused sisaldavad programmeerimise ülesandeid ja kordavaid mänge,
-    mis muudavad õppimise lõbusaks ja efektiivseks sõltumata vanusest."
+  w3schools_beyond_longdescription: Õpi oma arvutis, kuidas veebilehti luua. Serveri
+    põhitõed saad selgeks vähem kui päevaga. Õpi, kuidas lisada veebilehele andmebaase
+  codeavengers_beyond_longdescription: Õpi, kuidas programmeerida mänge, äppe ja kodulehtesid.
+    Juhendid on loodud ekspertide poolt ning need sobivad ideaalselt algajatele. Juhised
+    on kergesti mõistetavad ja igati abiks. Meie HTML, CSS ja JacaScripti kursused
+    sisaldavad programmeerimise ülesandeid ja kordavaid mänge, mis muudavad õppimise
+    lõbusaks ja efektiivseks sõltumata vanusest.
   mozilla_beyond_longdescription: Thimble muudab oma kodulehtede loomise ja jagamise
     ülimalt lihtsaks. Kirjuta ja muuda HTML ja CSS koodi otse veebibrauseris ja näed
     koheselt oma töö tulemust. Vaid ühe klikiga saad oma töö tulemusi teistega jagada.
@@ -1987,7 +1986,7 @@
   header_about_contact: Contact Us
   header_about_faqs: FAQs
   header_learn: Learn
-  header_teach: "Õpeta"
+  header_teach: Õpeta
   header_stats: Stats
   header_help_us: Help Us
   header_about: Info

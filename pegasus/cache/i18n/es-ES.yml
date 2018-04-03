@@ -26,7 +26,7 @@
     Ciencias de la Computación
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre. Únete a # otros.'
   petition_sign_message_support: 'Si nos apoyas, firma con tu nombre. Invita a # otros.'
-  petition_join_others: "Únete a # otros"
+  petition_join_others: 'Únete a # otros'
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -277,7 +277,7 @@
   learn_next_level: Intente otro curso de Code Studio
   learn_online: Prueba otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
-  learn_back_to_minecraft: "Продолжаем учиться с Minecraft"
+  learn_back_to_minecraft: Продолжаем учиться с Minecraft
   hoc_is_here: 'La #HourOfCode viene otra vez del 5 al 11 de diciembre. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Hice una hora de codigo - #HourOfCode - !Écha un vistazo! @codeorg'
   just_did_course1: Acabo de terminar el Curso 1 - echa un vistazo! @codeorg
@@ -413,7 +413,7 @@
   homepage_slot_text_flappy: Código de Flappy
   homepage_action_text_hoc: Una hora de código para cada estudiante.
   homepage_action_text_num_served: "# servido"
-  homepage_action_text_join_us: "Únete"
+  homepage_action_text_join_us: Únete
   homepage_action_text_sign_up: Registrarse
   homepage_action_text_try_it: Pruébalo
   homepage_action_text_volunteers: Se necesitan voluntarios técnicos
@@ -427,7 +427,7 @@
   homepage_signpetition_dropdown: Firma nuestra petición &#x25BE;
   homepage_diversity_pledge: Abraza la promesa de la diversidad
   homepage_banner_text_prizes: 'Vuelve la Hora de Code, del 7 al 13 de Diciembre. '
-  homepage_banner_link_prizes: "Únete al mayor evento educativo de la historia. "
+  homepage_banner_link_prizes: 'Únete al mayor evento educativo de la historia. '
   homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar
     la diversidad en Ciencias de la computación.
   homepage_banner_text_link: Aprende más
@@ -806,7 +806,7 @@
   dashboard_landing_video_player: Pruebe nuestro nuevo reproductor de vídeo en su
     escuela
   dashboard_landing_progress_title: Progreso de la clase principal
-  dashboard_landing_progress_biggest: "Éste es el progreso de tu sección más grande."
+  dashboard_landing_progress_biggest: Éste es el progreso de tu sección más grande.
   dashboard_landing_view_progress: Ver progreso de %{biggest_section}
   dashboard_landing_print_progress: Progreso de la impresión
   dashboard_landing_available_title: Cursos disponibles
@@ -821,7 +821,7 @@
   dashboard_landing_video_library: Usa un vídeo de la biblioteca de vídeos sobre conceptos
     de informática.
   dashboard_landing_report_bug: Solicita una característica o informa sobre un error.
-  dashboard_landing_teacher_forum: "Únete a la comunidad de aprendizaje profesional."
+  dashboard_landing_teacher_forum: Únete a la comunidad de aprendizaje profesional.
   dashboard_hoc_courses: La Hora de Code es para todas las edades
   dashboard_hoc_courses_desc: "¡Prueba alguno de estos tutoriales de menos de 1 hora
     con tus alumnos!"
@@ -1111,7 +1111,7 @@
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   host_an_hour: Hospeda una hora
-  learn_banner_title: "Únete a nosotros para la Hora de Código"
+  learn_banner_title: Únete a nosotros para la Hora de Código
   learn_banner_desc: La Hora de Código es un movimiento mundial que alcanza más de
     100 millones de alumnos en mas de 180 países. Cualquier persona, en cualquier
     lugar puede organizar un evento de la Hora de Código. ¡Ayúdanos a dar a cada alumno
@@ -1468,8 +1468,8 @@
   robomind_shortdescription: Escribe código para un robot virtual
   groklearning_shortdescription: ¡Enseña a "Eliza", el robot que conversa, a engañar
     a tus amigos y que piensen que es humana!
-  quorum_shortdescription: "Únete a María en un tour guiado mientras aprende el lenguaje
-    de programación Quorum."
+  quorum_shortdescription: Únete a María en un tour guiado mientras aprende el lenguaje
+    de programación Quorum.
   codespark_shortdescription: Los Foos es un juego para aprender programación divertido
     y amigable para niños.
   kodable_shortdescription: Un juego divertido para aprender los conceptos básicos

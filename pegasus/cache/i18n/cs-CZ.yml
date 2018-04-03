@@ -134,7 +134,7 @@
   third_party_price_free: 'Cena: Zdarma'
   third_party_price_299: 'Cena: $2.99/stažení'
   third_party_price_individual: 'Individuální cena: Zkušební verze zdarma & 25 dolarů/měsíc'
-  third_party_price_school: "Školní cena: Zdarma & Pro na $2500 +"
+  third_party_price_school: 'Školní cena: Zdarma & Pro na $2500 +'
   third_party_tynker_desc: Tynker je kreativní výpočetní platforma, která pomáhá dětem
     rozvíjet výpočetní myšlení a znalosti programování zábavným, intuitivním a nápaditým
     způsobem. Náš inovativní vizuální programovací jazyk, interaktivní výukové kurzy
@@ -185,7 +185,7 @@
     a přístupné pro začátečníky. Pro školy a učitele poskytuje CodeHS vzorové úlohy,
     nástroje pro učitele a profesní rozvoj. Ti, kteří studují samostatně, mohou získat
     potřebnou pomoc při studiu od sítě školitelů.
-  third_party_codehs_btn_try: "Úvod do informatiky další informace pro školy"
+  third_party_codehs_btn_try: Úvod do informatiky další informace pro školy
   third_party_codecademy_desc: Přehodnocujeme vzdělání zdola nahoru. Web přehodnotil
     téměř vše - obchod, sociální sítě, zdravotnictví a další. Budujeme vzdělání, jaké
     svět potřebuje - první skutečně síťové nativní vzdělání.
@@ -235,7 +235,7 @@
   beyond_hour_message: Pokračujte s našimi <a href='http://studio.code.org'> dalšími
     kurzy</a> nebo si prohlédněte možnosti, jak pokračovat <a href='/learn/beyond'>
     dál než jednu hodinu</a>.
-  leaderboards_for_hoc: "Žebříčky pro Hodinu Kódu."
+  leaderboards_for_hoc: Žebříčky pro Hodinu Kódu.
   support_url: http://support.code.org/
   country: Země
   city: Město
@@ -245,7 +245,7 @@
   give_my_hour: 'Dej moji Hodinu:'
   girls_team: Dívčí tým
   boys_team: Chlapecký tým
-  tell_the_world: "Řekni to světu!"
+  tell_the_world: Řekni to světu!
   thanks_for_voting: Díky za hlasování!
   share_on_facebook: Sdílet na Facebooku
   share_on_twitter: Sdílet na Twitteru
@@ -257,7 +257,7 @@
   participant_parent: Rodič
   participant_educator: Vyučující
   participant_engineer: Softwarový inženýr
-  participant_other: "Žádný z výše uvedených"
+  participant_other: Žádný z výše uvedených
   print_all: Vytisknout vše
   print_ice_art: Vytiskni si své ledové obrázky
   create_art_with_zombie: nebo vytvoř pokročilé umění se zombie
@@ -333,7 +333,7 @@
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: "Žebříčky Hodiny Kódu"
+  hoc_leaderboards: Žebříčky Hodiny Kódu
   students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
     řádků kódu."
   start_hoc: Začni Hodinu Kódu teď
@@ -500,8 +500,8 @@
   class_submission_in_school: Ve škole
   class_submission_in_school_daily_programming_course: Denní kurz programování
   class_submission_in_school_ap_computer_science: AP informatika
-  class_submission_in_school_full_university_cs_curriculum: "Úplné univerzitní informatické
-    kurikulum"
+  class_submission_in_school_full_university_cs_curriculum: Úplné univerzitní informatické
+    kurikulum
   class_submission_in_school_robotics_club: Klub robotiky
   class_submission_in_school_programming_integrated_in_other_classes: Programování
     v jiných předmětech (matematika, přírodní vědy atd.)
@@ -518,7 +518,7 @@
   class_submission_online_programming_class: Online kurz programování
   class_submission_online_teacher_resource: Online zdroje pro učitele
   class_submission_online_other: Další - online
-  class_submission_level_preschool: "Školka"
+  class_submission_level_preschool: Školka
   class_submission_level_elementary: Základní
   class_submission_level_middle_school: 2. stupeň ZŠ
   class_submission_level_high_school: Střední škola
@@ -531,7 +531,7 @@
     vídeí </a> zobrazujících odborníky v technologiích
   playlab_choose_theme: Vyber si téma Play Lab
   playlab_classic_title: Klasické
-  playlab_gumball_title: "Žvýkačku"
+  playlab_gumball_title: Žvýkačku
   playlab_iceage_title: Doba ledová - se blíží
   playlab_iceage_title_live: Doba ledová
   starwars_subtitle: Budování Galaxie s kódem
@@ -644,7 +644,7 @@
     videí
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspirovat divku
-  video_title_cs_intro: "Úvod do počítačové vědy"
+  video_title_cs_intro: Úvod do počítačové vědy
   video_title_schools_dont_teach: Co většina škol neučí
   video_title_obama: Prezident Obama o informatice
   video_title_hoc_is_here: Hodina kódu je zde - každý se může naučit
@@ -696,7 +696,7 @@
   volunteer_engineer_submission_field_name_placeholder: Celé jméno
   volunteer_engineer_submission_field_company: Společnost (nebo univerzita)
   volunteer_engineer_submission_field_company_placeholder: Společnost (nebo univerzita)
-  volunteer_engineer_submission_field_experience_level: "Úroveň zkušeností"
+  volunteer_engineer_submission_field_experience_level: Úroveň zkušeností
   volunteer_engineer_submission_field_location: Místo
   volunteer_engineer_submission_field_location_desc: Pokud zadáte vaši přesnou adresu,
     nebudeme ji sdílet, ukáže se jen jako špendlík na mapě.
@@ -706,7 +706,7 @@
     kódu do... (zaškrtněte vše, co platí)
   volunteer_engineer_submission_checkbox_after_hoc: Mám zájem o dobrovolnictví po
     Hodině kódu
-  volunteer_engineer_submission_field_time_commitment: "Časový úvazek po Hodině kódu"
+  volunteer_engineer_submission_field_time_commitment: Časový úvazek po Hodině kódu
   volunteer_engineer_submission_field_linkedin: LinkedIn profil
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profil
@@ -810,7 +810,7 @@
   dashboard_landing_inspire: Inspirujte své studenty pomocí plakátů, videa a dalších
     médií.
   dashboard_landing_video_library: Použijte video z videotéky informatických pojmů.
-  dashboard_landing_report_bug: "Žádost o novou funkci nebo oznámení chyby."
+  dashboard_landing_report_bug: Žádost o novou funkci nebo oznámení chyby.
   dashboard_landing_teacher_forum: Připojte se ke komunitě profesního vzdělávání.
   dashboard_hoc_courses: Hodina kódu pro všechny věkové kategorie
   dashboard_hoc_courses_desc: Vyzkoušejte některý z těchto kratších 1 hodinových cvičeních
@@ -950,7 +950,7 @@
   dashboard_sections_no_move: Ne, chci studenta nebo studenty přesunout tak, aby byli
     pouze v nové sekci.
   dashboard_sections_move_students: Přesunout studenty
-  dashboard_sections_assign_hoc_script_desc: "Účast na hodině kódu?"
+  dashboard_sections_assign_hoc_script_desc: Účast na hodině kódu?
   dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
     in this course during the week of December 3-7, due to the unprecedented level
     of traffic our site will receive for the Hour of Code.  You may still assign the
@@ -977,9 +977,9 @@
   dashboard_students_name: Jméno
   dashboard_students_progress: pokrok
   dashboard_students_male: Muž
-  dashboard_students_female: "Žena"
+  dashboard_students_female: Žena
   dashboard_students_completed_levels: Dokončené úrovně
-  dashboard_students_total_lines: "Řádky kódu"
+  dashboard_students_total_lines: Řádky kódu
   dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
     žáky:'
   dashboard_students_share_section_secondary: 'Nebo sdílejte přihlašovací stránku
@@ -997,8 +997,8 @@
   dashboard_students_reset_word: 'Tajná slova studenta může kdykoliv obnovit výběrem
     <b>Zobrazit tajné</b> a pak <b>Obnovit tajný klíč</b>. Nový pár tajných slov bude
     pro tohoto studenta vygenerován při dalším přihlášení. '
-  dashboard_students_join_link: "Řekněte svým studentům ať si vytvoří své vlastní
-    účty a připojí se k vaší skupině na"
+  dashboard_students_join_link: Řekněte svým studentům ať si vytvoří své vlastní účty
+    a připojí se k vaší skupině na
   dashboard_students_no_email: Pokud vaši studenti nemají e-mailové adresy nebo pro
     ně chcete vytvořit účty sami, změňte typ tajemství v této sekci na <b>slovo</b>
     nebo <b>obrázek</b>.
@@ -1038,7 +1038,7 @@
   dashboard_glossary: Slovníček pojmů
   dashboard_classroom_strategies: Strategie do třídy pro učitele
   dashboard_debugging: 'Ladění:'
-  dashboard_puzzle_solving: "Řešení hádanek:"
+  dashboard_puzzle_solving: 'Řešení hádanek:'
   dashboard_student_worksheet: zadání pro studenty
   dashboard_teacher_worksheet: zadání pro učitele
   dashboard_curriculum_csina: 'Informatika v algebře:'
@@ -1067,7 +1067,7 @@
   dashboard_multi_correct: "# vícenásobných voleb správně"
   dashboard_multi_count: "# vícenásobných voleb"
   dashboard_multi_correct_percent: "% vícenásobných voleb správně"
-  dashboard_submission_timestamp: "Časové razítko odeslání"
+  dashboard_submission_timestamp: Časové razítko odeslání
   stats_hoc_2013_heading: 'Neuvěřitelná statistika z loňské Hodiny kódu. Během jediného
     týdne:'
   stats_hoc_2013_image_alt: Statistika z Hodiny kódu 2013
@@ -1086,7 +1086,7 @@
   dashboard_sections_login_type_explanation: Tato tabulka pomáhá vysvětlit, které
     z těchto typů přihlášení <b>obrázek, slovo nebo e-mail</b> budete chtít vybrat
     pro vaši skupinu.
-  dashboard_faq: "Často kladené dotazy"
+  dashboard_faq: Často kladené dotazy
   dashboard_faq_k5: K-5, nejčastější dotazy
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
@@ -1159,7 +1159,7 @@
     formulář.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
-  participants: "účastníci"
+  participants: účastníci
   teachers_notes: Poznámky pro učitele
   teachers_notes_hoc: 'Učitelé: Zde si přečtěte důležité informace pro vyučující'
   previous: Předchozí
@@ -1174,12 +1174,12 @@
   codeorg_name: Klasické bludiště
   codeintl_name: Klasické bludiště
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "Úvod do JavaScriptu"
-  khanes_name: "Úvod do JavaScriptu"
-  khanpt_name: "Úvod do JavaScriptu"
-  khanhe_name: "Úvod do JavaScriptu"
-  khanfr_name: "Úvod do JavaScriptu"
-  khanpl_name: "Úvod do JavaScriptu"
+  khan_name: Úvod do JavaScriptu
+  khanes_name: Úvod do JavaScriptu
+  khanpt_name: Úvod do JavaScriptu
+  khanhe_name: Úvod do JavaScriptu
+  khanfr_name: Úvod do JavaScriptu
+  khanpl_name: Úvod do JavaScriptu
   tynker_name: Vytvořte si vlastní hru
   scratch_name: Buďte kreativní s programováním
   lightbot_name: Lightbot
@@ -1260,7 +1260,7 @@
   csp6_name: 'Unit 6: AP Performance Tasks'
   csp-ap_name: AP Performance Tasks
   csppostap_name: 'Po testu: Databáze v aplikacích'
-  cspassessment_name: "Úplný test - 50 otázek"
+  cspassessment_name: Úplný test - 50 otázek
   csp-explore_name: 'AP: Explore PT Prep'
   csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
@@ -1449,8 +1449,8 @@
   bitsbox_shortdescription: Nakódujte několik aplikací za pomocí JavaScriptu.
   makeschool_shortdescription: Vytvořte hru pro iPhone! Zkuste se psaním kódu naučit
     vaši příšeru novým pohybům!
-  touchdevelop_shortdescription: "Řeš puzzle, tvoř hry a nauč se programovat prostřednictvím
-    tvého mobilu."
+  touchdevelop_shortdescription: Řeš puzzle, tvoř hry a nauč se programovat prostřednictvím
+    tvého mobilu.
   appinventor_shortdescription: Vytvořte si vlastní aplikaci! (Pouze pro Android)
   blockly_shortdescription: Stáhněte si ZIP soubor offline výuku
   thinkersmith2_shortdescription: Naučte se, jak počítače reprezentují informace pomocí
@@ -1564,13 +1564,13 @@
     krocích. Pak pokračuj v učení se základům programování (proměnné a příkaz KDYŽ)
     při vytváření kvízu, který můžeš sdílet přátelům. Cestou získej body a odznaky,
     abys v tomto soutěžení dosáhl vrcholu třídního žebříčku.
-  processing_longdescription: "Úvod do programování v rámci grafického umění pomocí
+  processing_longdescription: Úvod do programování v rámci grafického umění pomocí
     programovacího jazyka Processing. Krátké videolekce uvedou programovací cvičení,
-    které vedou k vytváření interaktivního programu pro kreslení"
-  robomind_longdescription: "Žáci se naučí základy programování prostřednictvím kontroly
+    které vedou k vytváření interaktivního programu pro kreslení
+  robomind_longdescription: 'Žáci se naučí základy programování prostřednictvím kontroly
     jejich vlastního virtuálního robota. Online kurz je plně soběstačný s krátkými
     prezentacemi, filmy, kvízy, automatickým vedením a tipy na pomoc s programovacími
-    cvičeními. "
+    cvičeními. '
   groklearning_longdescription: Použij programovací jazyk Python k vytvoření chatbota
     jménem "Eliza", který bude jednat jako robot psychoterapeut. Naučíš Elizu mluvit
     i říkat ty správné věci. Dokáže oklamat tvoje přátele, aby si mysleli, že je člověk
@@ -1589,10 +1589,10 @@
     vytvářejte hry a příběhy za použití různých grafických motivů, stavebnic her a
     přizpůsobitelných postaviček. Není nutné připojení k Internetu. K vašim výtvorům
     můžete přistupovat i na webu.
-  robomindnl_longdescription: "Žáci se naučí základy programování prostřednictvím
+  robomindnl_longdescription: 'Žáci se naučí základy programování prostřednictvím
     kontroly jejich vlastního virtuálního robota. Online kurz je plně soběstačný s
     krátkými prezentacemi, filmy, kvízy, automatickým vedením a tipy na pomoc s programovacími
-    cvičeními. "
+    cvičeními. '
   flappy_longdescription: Pomocí drag-and-drop programování si vytvořte vlastní Flappy
     Bird hru, kterou si můžete přizpůsobit aby vypadala jinak (Flappy žralok, Flappy
     Santa, cokoliv). Přidejte si ji do telefonu jediným kliknutím.
@@ -1614,9 +1614,9 @@
   blockly_longdescription: Máte PC s pomalým nebo žádným přístupem k Internetu? Stáhněte
     si Blockly cvičení, které bylo předchůdcem Code.org kurzů - jediný 3MB ZIP soubor
     může být nahraný na libovolný počítači nebo použit z přenosného USB disku
-  thinkersmith2_longdescription: "Žáci se učí o reprezentaci a ukládání znaků v dvojkové
+  thinkersmith2_longdescription: Žáci se učí o reprezentaci a ukládání znaků v dvojkové
     soustavě, stejně jako funkce zapnutí a vypnutí. Na konci třída dostane zakódovat
-    vlastní iniciály, aby si je vzala s sebou domů."
+    vlastní iniciály, aby si je vzala s sebou domů.
   kodableunplugged_longdescription: 'FuzzFamily Frenzy je navrženo pro použití s obyčejným
     papírem tak, aby uvedlo do programovací logiky děti starší pěti let. Učitel vysvětlí
     hru a studenti pak programují svého partnera, aby prošel jednoduchou překážkovou
@@ -1663,7 +1663,7 @@
     základů informatiky. K pomoci učitelům najít inspiraci, jsme shromáždili a lektorovali
     jednohodinové vedené lekce pro učitele a plány činnosti navržené pro různé studijní
     obory Hodiny kódu pro veterány.
-  codeorg_beyond_name: "Úvod do informatiky (2. stupeň ZŠ)"
+  codeorg_beyond_name: Úvod do informatiky (2. stupeň ZŠ)
   khan_beyond_name: Nauč se programovat počítač
   tynker_beyond_name: Nauč se programovat doma
   scratch_beyond_name: Buďte kreativní s programováním
@@ -1856,19 +1856,19 @@
   pocketcode_beyond_longdescription: Vytvořte si vlastní hru na váš mobilní telefon
     pomocí Pocket Code! Pomozte parašutistovi Stevovi doručit jeho balíčky. Můžete
     sdílet s přáteli a ostatními uživateli!
-  groklearning_beyond_longdescription: "Úvodní kurz pomocí programovacího jazyka Python
+  groklearning_beyond_longdescription: Úvodní kurz pomocí programovacího jazyka Python
     pro lidi s bez zkušeností s programováním. Naše unikátní kombinace úvodního obsahu
     a výzev vám zajistí důkladnou znalost Pythonu a programování samotného. Učili
     jsme tento obsah studenty různého věku z různých prostředí a jsme si jisti, že
-    vám bude také vyhovovat."
+    vám bude také vyhovovat.
   hacketyhack_beyond_longdescription: 'Hackety Hack vás naučí absolutní základy programování
     od základů. Žádné předchozí zkušenosti s programováním nejsou potřeba! S Hackety
     Hack se naučíte programovací jazyk Ruby. Ruby se používá pro všechny druhy programů,
     včetně aplikací a webových stránek. [Poznámka: nezbytná instalace]'
-  robomind_beyond_longdescription: "Žáci se naučí základy programování prostřednictvím
+  robomind_beyond_longdescription: 'Žáci se naučí základy programování prostřednictvím
     kontroly jejich vlastního virtuálního robota. Online kurz je plně soběstačný s
     krátkými prezentacemi, filmy, kvízy, automatickým vedením a tipy na pomoc s programovacími
-    cvičeními. "
+    cvičeními. '
   makeschool_beyond_longdescription: Znáte trochu ObjectiveC? Naučte se dělat hry
     pro iPhone za hodinu! Provedeme vás procesem nakódovat, otestovat a hrát svou
     hru v prohlížeči a pak jej sdílet s vašimi přáteli na Facebooku! Nepožaduje se
