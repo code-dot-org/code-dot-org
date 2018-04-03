@@ -49,6 +49,10 @@ module Pd::Application
       auto_assigned_enrollment_id
     )
 
+    has_one :pd_teachercon1819_registration,
+      class_name: 'Pd::Teachercon1819Registration',
+      foreign_key: 'pd_application_id'
+
     before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
     def destroy_autoenrollment
       return unless auto_assigned_enrollment_id
@@ -73,6 +77,7 @@ module Pd::Application
         where(type: descendants.map(&:name)). # this is an abstract class, so query descendant types
         where(status: [:accepted, :withdrawn]).
         where.not(locked_at: nil).
+        includes(:pd_teachercon1819_registration).
         all.
         select {|application| application.pd_workshop_id && teachercon_ids.include?(application.pd_workshop_id)}
     end
