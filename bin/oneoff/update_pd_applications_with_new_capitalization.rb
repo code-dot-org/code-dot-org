@@ -11,6 +11,7 @@ Pd::Application::PrincipalApproval1819Application.find_each do |principal_applic
     principal_application.save
     if principal_application.errors
       puts "principal app: #{principal_application.id} errors: #{principal_application.errors.full_messages}"
+      next
     end
 
     principal_response = principal_application.sanitize_form_data_hash
@@ -35,6 +36,7 @@ Pd::Application::PrincipalApproval1819Application.find_each do |principal_applic
     teacher_application.save
     if teacher_application.errors
       puts "teacher app: #{teacher_application.id} errors: #{teacher_application.errors.full_messages}"
+      next
     end
     teacher_application.auto_score!
   end
@@ -71,6 +73,7 @@ Pd::Application::Teacher1819Application.find_each do |teacher_application|
     teacher_application.save
     if teacher_application.errors
       puts "teacher app: #{teacher_application.id} errors: #{teacher_application.errors.full_messages}"
+      next
     end
     teacher_application.auto_score!
   end
