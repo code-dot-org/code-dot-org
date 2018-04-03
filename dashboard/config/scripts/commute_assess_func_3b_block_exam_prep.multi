@@ -1,0 +1,26 @@
+name 'Commute Assess - func 3b - block_exam_prep'
+
+question 'What will be displayed when this code is run?'
+wrong'<pre>in func3<br>in func3<br>in func1</pre>'
+wrong'<pre>in func3<br>in func1<br>in func3</pre>'
+right'<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually’
+wrong '<pre>in func3<br>in func1</pre>'
+wrong '<pre>func3<br>func1</pre>'
+wrong ‘Nothing is displayed'
+markdown <<MARKDOWN
+The procedures shown here are the same as the previous question.  They are shown for your reference.
+
+<div style="float: left; margin: 20px; width: 300px;">
+
+<p>
+What will be displayed when this code is run?
+</p>
+
+<img src="https://images.code.org/76caff38a07f0d70dae0ff14aa1d87f2-image-1482860842392.png" style="width: 68px">
+
+</div>
+<div style="width: 300px; float: left; border-left: solid 1px #00adbc; padding-left: 10px; margin-left: 25px">
+
+<img src="https://images.code.org/ea42034dd0c4e1eb7d610e20ef6fa70a-image-1482959065229.png" style="width: 245px;">
+</div>
+MARKDOWN

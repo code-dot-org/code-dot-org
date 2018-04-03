@@ -75,4 +75,40 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
     }
     assert_equal expected, serialized
   end
+
+  test 'deleted user that attended shows as attended' do
+    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
+    teacher.destroy!
+
+    serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
+    first_name, last_name = teacher.name.split(' ', 2)
+    expected = {
+      first_name: first_name,
+      last_name: last_name,
+      email: teacher.email,
+      session_1_date: @workshop.sessions[0].formatted_date,
+      session_1_attendance: true,
+      session_2_date: @workshop.sessions[1].formatted_date,
+      session_2_attendance: true
+    }
+    assert_equal expected, serialized
+  end
+
+  test 'deleted user that did not attend shows as not attended' do
+    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: false
+    teacher.destroy!
+
+    serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
+    first_name, last_name = teacher.name.split(' ', 2)
+    expected = {
+      first_name: first_name,
+      last_name: last_name,
+      email: teacher.email,
+      session_1_date: @workshop.sessions[0].formatted_date,
+      session_1_attendance: false,
+      session_2_date: @workshop.sessions[1].formatted_date,
+      session_2_attendance: false
+    }
+    assert_equal expected, serialized
+  end
 end

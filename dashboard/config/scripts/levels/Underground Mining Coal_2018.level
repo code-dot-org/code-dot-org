@@ -45,6 +45,7 @@
     "use_player": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Are you facing the right way? The `destroy block` mines the block in front of you.\",\"hint_id\":\"mc_9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/80549198436c9db38efe11c051ff6e09/Underground Mining Coal.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The black specks in the wall are coal! Use `destroy block` on these to mine the coal.\",\"hint_id\":\"mc_9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dedc461380acb321fd6d026015a3ee9c/Underground Mining Coal.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use `place torch` to put a torch in the space where you are standing.\",\"hint_id\":\"mc_9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/805f9f2ac346d8f860edac1f6236306e/Underground Mining Coal.mp3\"}]",
     "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

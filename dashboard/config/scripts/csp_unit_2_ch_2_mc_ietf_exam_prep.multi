@@ -1,0 +1,8 @@
+name 'CSP Unit 2 Ch 2 MC IETF_exam_prep'
+title 'The IETF'
+question 'The Internet Engineering Task Force (IETF) defines the protocols and standards for how the Internet works. The members of the IETF are:'
+wrong 'An International coalition of government agencies who oversee the Internet in their countries.'
+wrong 'A collection of the leaders of the Tier 1 Internet service providers.'
+right 'A loosely organized collection of citizens and engineers.'
+wrong 'Political leaders and heads of state.'
+wrong 'There are no members. IETF is an “organization” in name only.'

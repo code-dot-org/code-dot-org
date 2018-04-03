@@ -1,8 +1,8 @@
 hidden false
 hideable_stages true
 stage_extras_available true
-project_widget_visible true
 has_lesson_plan true
+project_widget_visible true
 project_widget_types ["playlab", "artist"]
 script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for Your Section", "details"=>"Click \"Learn More\" to read the help article on showing and hiding lessons.", "link"=>"https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses", "type"=>"bullhorn"}]
 
@@ -238,7 +238,7 @@ assessment 'courseE_bee_functions11_predict1'
 bonus 'courseE_bee_functions_challenge1'
 bonus 'courseE_bee_functions_challenge2'
 
-stage 'Functions in Farmer', flex_category: 'csf_e_2'
+stage 'Functions in Harvester', flex_category: 'csf_e_2'
 level 'courseE_farmer_functions1'
 level 'courseE_farmer_functions1a'
 level 'courseE_farmer_functions2b'

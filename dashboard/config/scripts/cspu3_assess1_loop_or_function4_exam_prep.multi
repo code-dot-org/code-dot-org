@@ -1,0 +1,13 @@
+name 'cspu3_assess1_loop_or_function4_exam_prep'
+wrong 'Loop'
+right 'Function(s)'
+
+markdown <<MARKDOWN
+For this scenario related to turtle drawing, indicate whether it is better to write a loop or a function (or a set of functions) to handle the task:
+
+**Drawing a circle of any size at any point on the screen** 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Since the drawing of the circle is inconsistent in size and in the placement of it, it is best to use a function and pass in different parameters for a particular circle (smaller/larger circle, placement of the circle) rather than using a loop.
+MARKDOWN

@@ -49,12 +49,37 @@ module Pd::Application
       auto_assigned_enrollment_id
     )
 
+    has_one :pd_teachercon1819_registration,
+      class_name: 'Pd::Teachercon1819Registration',
+      foreign_key: 'pd_application_id'
+
     before_save :destroy_autoenrollment, if: -> {status_changed? && status != "accepted"}
     def destroy_autoenrollment
       return unless auto_assigned_enrollment_id
 
       Pd::Enrollment.find_by(id: auto_assigned_enrollment_id).try(:destroy)
       self.auto_assigned_enrollment_id = nil
+    end
+
+    # Queries for locked and (accepted or withdrawn) and assigned to a teachercon workshop
+    # @param [ActiveRecord::Relation<Pd::Application::WorkshopAutoenrolledApplication>] applications_query
+    #   (optional) defaults to all
+    # @note this is not chainable since it inspects pd_workshop_id from serialized attributes,
+    #   which must be done in the model.
+    # @return [array]
+    def self.teachercon_cohort(applications_query = all)
+      teachercon_ids = Pd::Workshop.
+        in_year(2018).
+        where(subject: Pd::Workshop::SUBJECT_TEACHER_CON).
+        pluck(:id)
+
+      return applications_query.
+        where(type: descendants.map(&:name)). # this is an abstract class, so query descendant types
+        where(status: [:accepted, :withdrawn]).
+        where.not(locked_at: nil).
+        includes(:pd_teachercon1819_registration).
+        all.
+        select {|application| application.pd_workshop_id && teachercon_ids.include?(application.pd_workshop_id)}
     end
 
     def workshop

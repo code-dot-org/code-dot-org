@@ -6,178 +6,6 @@
   "user_id": 182,
   "properties": {
     "skin": "gamelab",
-    "code_functions": {
-      "draw": null,
-      "drawSprites": null,
-      "playSound": null,
-      "stopSound": null,
-      "keyDown": null,
-      "keyWentDown": null,
-      "keyWentUp": null,
-      "mouseDidMove": null,
-      "mouseDown": null,
-      "mouseIsOver": null,
-      "mouseWentDown": null,
-      "mouseWentUp": null,
-      "mousePressedOver": null,
-      "World.mouseX": null,
-      "World.mouseY": null,
-      "World.frameRate": null,
-      "World.frameCount": null,
-      "World.seconds": null,
-      "World.width": null,
-      "World.height": null,
-      "World.allSprites": null,
-      "camera.on": null,
-      "camera.off": null,
-      "camera.isActive": null,
-      "camera.mouseX": null,
-      "camera.mouseY": null,
-      "camera.x": null,
-      "camera.y": null,
-      "camera.zoom": null,
-      "comment_GameLab": null,
-      "var sprite = createSprite": null,
-      "setAnimation": null,
-      "x": null,
-      "y": null,
-      "velocityX": null,
-      "velocityY": null,
-      "scale": null,
-      "sprite.height": null,
-      "sprite.width": null,
-      "visible": null,
-      "rotation": null,
-      "rotationSpeed": null,
-      "rotateToDirection": null,
-      "debug": null,
-      "isTouching": null,
-      "collide": null,
-      "displace": null,
-      "overlap": null,
-      "bounce": null,
-      "bounceOff": null,
-      "bounciness": null,
-      "setCollider": null,
-      "createEdgeSprites": null,
-      "shapeColor": null,
-      "setVelocity": null,
-      "getDirection": null,
-      "getSpeed": null,
-      "setSpeedAndDirection": null,
-      "pointTo": null,
-      "mirrorX": null,
-      "mirrorY": null,
-      "getScaledWidth": null,
-      "getScaledHeight": null,
-      "lifetime": null,
-      "nextFrame": null,
-      "pause": null,
-      "play": null,
-      "setFrame": null,
-      "depth": null,
-      "destroy": null,
-      "comment_Sprites": null,
-      "var group = createGroup": null,
-      "add": null,
-      "remove": null,
-      "clear": null,
-      "contains": null,
-      "get": null,
-      "group.isTouching": null,
-      "group.bounce": null,
-      "group.bounceOff": null,
-      "group.collide": null,
-      "group.displace": null,
-      "group.overlap": null,
-      "maxDepth": null,
-      "minDepth": null,
-      "destroyEach": null,
-      "pointToEach": null,
-      "setAnimationEach": null,
-      "setColorEach": null,
-      "setColliderEach": null,
-      "setDepthEach": null,
-      "setHeightEach": null,
-      "setLifetimeEach": null,
-      "setMirrorXEach": null,
-      "setMirrorYEach": null,
-      "setRotateToDirectionEach": null,
-      "setRotationEach": null,
-      "setRotationSpeedEach": null,
-      "setScaleEach": null,
-      "setSpeedAndDirectionEach": null,
-      "setVelocityEach": null,
-      "setVelocityXEach": null,
-      "setVelocityYEach": null,
-      "setVisibleEach": null,
-      "setWidthEach": null,
-      "comment_Groups": null,
-      "background": null,
-      "fill": null,
-      "noFill": null,
-      "stroke": null,
-      "strokeWeight": null,
-      "noStroke": null,
-      "rgb": null,
-      "rect": null,
-      "ellipse": null,
-      "text": null,
-      "textAlign": null,
-      "textFont": null,
-      "textSize": null,
-      "arc": null,
-      "line": null,
-      "point": null,
-      "regularPolygon": null,
-      "shape": null,
-      "comment_Drawing": null,
-      "forLoop_i_0_4": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "whileBlock": null,
-      "comment_Control": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "greaterThanOrEqualOperator": null,
-      "lessThanOperator": null,
-      "lessThanOrEqualOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-      "mathRandom": null,
-      "comment_Math": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "includes": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
-      "comment_Variables": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null,
-      "comment": null
-    },
     "show_debug_watch": "true",
     "helper_libraries": [
       "GameLabJr"
@@ -215,7 +43,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2Fd19383c3-9b64-482d-811d-07f8997533ea.png%3Fversion%3Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"215c6306-73d7-4a48-8a6b-40eae22a2a0e\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/ObqhC6m3YYUSu8X0NiA-GQ/215c6306-73d7-4a48-8a6b-40eae22a2a0e.png?version=LTwvrcayEyZ8U_6FA0yKsVOyaYs6UdFq\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"LTwvrcayEyZ8U_6FA0yKsVOyaYs6UdFq\"\r\n    }\r\n  }\r\n}",
     "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\nfunction draggable(sprite) {\r\n  var behavior = function(sprite) {\r\n  sprite.mouseActive=true;\r\n  if (sprite.mouseIsPressed) {\r\n    sprite.x=camera.mouseX;\r\n    sprite.y=camera.mouseY;\r\n  }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\nfunction danceBehavior() {\r\n    var behavior = function(sprite) {\r\n    sprite.rotation+=6;\r\n    }\r\n    behavior.name=\"dancing\";\r\n    return behavior;\r\n}",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"args\": [],\r\n    \"blockText\": \"draggable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"danceBehavior\",\r\n    \"args\": [],\r\n    \"blockText\": \"dancing\",\r\n    \"returnType\": \"function\"\r\n  }\r\n]",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"args\": [],\r\n    \"blockText\": \"draggable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"danceBehavior\",\r\n    \"args\": [],\r\n    \"blockText\": \"dancing\",\r\n    \"returnType\": \"function\"\r\n  }\r\n]",
     "instructions": "This Corgi has been a good boy! Drag this carrot to him as a special treat.",
     "contained_level_names": null
   },
@@ -230,7 +58,7 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="sprite_variables_set" inline="false">
               <title name="VAR">doggo</title>
               <value name="VALUE">
                 <block type="gamelab_makeNewSprite" inline="true">
@@ -248,7 +76,7 @@
                 </block>
               </value>
               <next>
-                <block type="variables_set" inline="false">
+                <block type="sprite_variables_set" inline="false">
                   <title name="VAR">carrot</title>
                   <value name="VALUE">
                     <block type="gamelab_makeNewSprite" inline="true">
@@ -271,7 +99,7 @@
                         <block type="gamelab_draggable"/>
                       </value>
                       <value name="SPRITE">
-                        <block type="variables_get">
+                        <block type="sprite_variables_get">
                           <title name="VAR">carrot</title>
                         </block>
                       </value>
@@ -284,12 +112,12 @@
         </block>
         <block type="gamelab_whenTouching" inline="true">
           <value name="SPRITE1">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">carrot</title>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="variables_get">
+            <block type="sprite_variables_get">
               <title name="VAR">doggo</title>
             </block>
           </value>
@@ -299,14 +127,14 @@
                 <block type="gamelab_danceBehavior"/>
               </value>
               <value name="SPRITE">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">doggo</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_destroy" inline="true">
                   <value name="THIS">
-                    <block type="variables_get">
+                    <block type="sprite_variables_get">
                       <title name="VAR">carrot</title>
                     </block>
                   </value>
@@ -328,10 +156,10 @@
           <block type="math_number">
             <title name="NUM">0</title>
           </block>
-          <block type="variables_set" inline="false">
+          <block type="sprite_variables_set" inline="false">
             <title name="VAR">doggo</title>
           </block>
-          <block type="variables_get">
+          <block type="sprite_variables_get">
             <title name="VAR">doggo</title>
           </block>
         </category>

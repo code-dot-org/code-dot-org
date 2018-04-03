@@ -3,18 +3,18 @@ title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
 nav: how_to_nav
 social:
-  "og:title": <%= hoc_s(:meta_tag_og_title) %>
-  "og:description": <%= hoc_s(:meta_tag_og_description) %>
-  "og:image": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": http://<%=request.host%>
+  "og:url": "http://<%=request.host%>"
   "twitter:card": player
-  "twitter:site": '@codeorg'
-  "twitter:url": http://<%=request.host%>
-  "twitter:title": <%= hoc_s(:meta_tag_twitter_title) %>
-  "twitter:description": <%= hoc_s(:meta_tag_twitter_description) %>
-  "twitter:image:src": http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 <% facebook = {:u=>"http://#{request.host}/us"}
 
@@ -54,7 +54,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 </h2>
 
 <p>
-  <a href="https://code.org/volunteer/local">搜索我們的志願者分佈圖</a> 志願者可以到訪您的教室或者通過遠程視頻聊天來激發您的學生了解學習計算機科學廣泛應用的可能性。
+  <a href="%= codeorg_url('/volunteer/local') %">Search our volunteer map</a> for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 </p>
 
 <h2>

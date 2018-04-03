@@ -1,0 +1,24 @@
+name 'cspu5_assess2_false_exam_prep'
+wrong 'Strings consist of a sequence of concatenated characters.'
+wrong 'Strings are indicated by quotation marks.'
+right 'Strings with numerical digits in them are invalid.'
+wrong 'A string can be empty, meaning that it contains nothing.'
+wrong 'Strings sometimes include spaces.'
+
+
+markdown <<MARKDOWN
+Which of the following statements about strings in JavaScript is FALSE?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 6**
+
+Strings can be any combinations and any types of characters if it is surrounded by quotation marks "". This includes having numerical digits as a string; however, it is important to note that the number will be treated as a string and not as an integer.
+
+For example:
+
+* var num1 = "5";
+* var num2 = "3";
+* If you add num1 and num2 together, you are combining the strings and not the values of the strings.
+* num1 + num2 = "53" and NOT 8 because the variables are of a string type.
+MARKDOWN

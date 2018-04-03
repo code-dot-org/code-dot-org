@@ -126,11 +126,12 @@ To help provide more information about the program, **Hadi Partovi** (Code.org F
 
 ## Apply Today!
 
-Learn more about each program and apply today! Priority deadline for applications is March 31, 2018.
+Learn more about each program and apply today!
+
 <br/>
 
 <%= view :professional_learning_apply_banner_bottom %>
 
 <br/>
 
-<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=1108",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> 
+<%= view :answerdash %>

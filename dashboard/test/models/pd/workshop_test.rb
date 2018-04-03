@@ -373,6 +373,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       Pd::Workshop.scheduled_start_on_or_after(pivot_date).scheduled_start_on_or_before(pivot_date).pluck(:id)
   end
 
+  test 'in_year' do
+    # before
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.new(2016, 12, 31)
+
+    workshops_this_year = [
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.new(2017, 1, 1)),
+      create(:pd_workshop, num_sessions: 1, sessions_from: Date.new(2017, 12, 31))
+    ]
+
+    # after
+    create :pd_workshop, num_sessions: 1, sessions_from: Date.new(2018, 12, 31)
+
+    assert_equal workshops_this_year.map(&:id), Pd::Workshop.in_year(2017).pluck(:id)
+  end
+
   test 'future scope' do
     future_workshops = [
       # Today

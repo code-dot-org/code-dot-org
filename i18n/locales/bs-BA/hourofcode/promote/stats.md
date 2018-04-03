@@ -11,11 +11,11 @@ nav: promote_nav
 
 # Blurbs and Useful Stats
 
-## Use this short blurb in newsletters
+## Koristi ovu kratku pohvalu u novinama
 
-### Bring computer science to your school. Start with an Hour of Code!
+### Donesi informatiku u svoju školu. Počni sa Časom Kodiranja!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But fewer than half of all schools teach computer science! Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Sa tehnologijom koja mijenja svaku industriju na planeti, znanje o računarstvu je postalo dio dobro zaokruženih vještina. Ali manje od polovine svi škola podučavaju računarske nauke! Good news is, we’re on our way to change this. Ako si čuo za Čas Kodiranja prošle godine, možda znaš da je ušao u historiju. 100 miliona učenika radeći samo jedan Čas Kodiranja je otkrilo kako pristupačna i zanimljiva informatika može biti.
 
 The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 

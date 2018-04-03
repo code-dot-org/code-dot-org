@@ -318,3 +318,18 @@
       SongwritingWithParameters_2018:
         title: ''
         desc: ''
+      PlantASeed_2018:
+        title: "真实算法： 播种一颗种子"
+        desc: "这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。"
+      UnplugHappyMaps_2018:
+        title: "快乐地图"
+        desc: "学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。"
+      GoingPlacesSafely_2018:
+        title: "去安全的地方"
+        desc: "互联网既功能强大又是危险的领域。教师们讲解如何在浏览互联网时保证安全。"
+      courseA_unplugged_loops_2018:
+        title: "线下循环"
+        desc: "在这节课中，你会学到循环。"
+      BigEvent_2018:
+        title: "大事件"
+        desc: 学生们将学习编程概念中的"事件"，即计算机不断监控时的行动。老师在纸上按遥控按钮而学生们根据不同的按钮做某些动作，作为回应。

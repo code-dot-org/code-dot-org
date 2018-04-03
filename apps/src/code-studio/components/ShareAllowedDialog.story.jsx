@@ -53,6 +53,7 @@ export default storybook => {
         return (
             <ShareAllowedDialog
               isOpen={true}
+              canPrint={true}
               canPublish={false}
               isPublished={false}
               isUnpublishPending={false}

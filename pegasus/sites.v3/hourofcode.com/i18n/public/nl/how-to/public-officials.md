@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Maak een persbericht.** [Gebruik dit voorbeeld](<%= resolve_url('/promote/official-press-release') %>) als een gids.
 
-9. **Verbind lokaal.** Bezoek [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) om meer te leren over programmeren in uw staat. Teken de petitie en krijg updates van Code.org over de locale, statelijke, federale steun.
+9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Teken de petitie en krijg updates van Code.org over de locale, statelijke, federale steun.
 
 <%= view :signup_button %>

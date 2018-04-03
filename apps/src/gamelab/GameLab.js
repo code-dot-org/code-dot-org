@@ -262,6 +262,11 @@ GameLab.prototype.init = function (config) {
     // to starting code by levelbuilders will be shown.
     config.ignoreLastAttempt = config.embed;
 
+    if (this.studioApp_.isUsingBlockly()) {
+      // Custom blockly config options for game lab jr
+      config.valueTypeTabShapeMap = { Sprite: 'angle' };
+    }
+
     this.studioApp_.init(config);
 
     var finishButton = document.getElementById('finishButton');

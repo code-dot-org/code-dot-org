@@ -47,6 +47,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
+    "name_suffix": "_2018",
     "contained_level_names": null
   },
   "published": true,

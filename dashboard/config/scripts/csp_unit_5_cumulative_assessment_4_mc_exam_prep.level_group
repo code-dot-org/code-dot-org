@@ -1,0 +1,23 @@
+name 'CSP Unit 5 Cumulative Assessment 4 MC_exam_prep'
+title 'CS Principles Unit 5 Assessment 4'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_exam_prep'
+level 'cspu5_assess4_arrayContains_exam_prep'
+level 'cspu5_assess4_mysteryMethod_exam_prep'
+level 'cspu5_assess4_mysteryReturn_exam_prep'
+level 'cspu5_assess4_playGame_exam_prep'
+
+page
+level 'cspu5_assess4_robot_exam_prep'
+level 'cspu5_assess4_mysteryResult_exam_prep'
+level 'cspu5_assess4_listOutput_exam_prep'
+level 'cspu5_assess4_shortAnswerShopping_exam_prep'
+
+page
+level 'cspu5_assess4_listContains_exam_prep'
+level 'cspu5_assess4_scoreToGrade_exam_prep'
+level 'cspu5_assess4_dataReturns_exam_prep'
+level 'cspu5_assess4_challenge_exam_prep'
