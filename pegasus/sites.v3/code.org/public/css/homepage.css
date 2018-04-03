@@ -253,8 +253,16 @@ body.modal-open .supreme-container{
 
 #homepage .quarterslot-links {
   float: left;
+}
+
+#homepage .quarterslot-links-small {
   height: 390px;
   padding: 0px 5px 10px 5px;
+}
+
+#homepage .quarterslot-links-large {
+  height: 475px;
+  padding: 30px;
 }
 
 #homepage .quarterslot-links .slotbox {
