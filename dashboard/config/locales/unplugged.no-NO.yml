@@ -72,11 +72,11 @@
         video: Unplug6
       Unplug7:
         title: Låtskriving
-        desc: "Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
+        desc: Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
           Vi vil ta en aktivitet som allerede er kjent, og benytte den for å gi en
           god opplæring i å definere og kalle funksjoner. Når elevene er blitt kjent
           med definere/kalle prosessen, vi vil legge til ekstra funksjoner, kombinert
-          med med passerende parametre."
+          med med passerende parametre.
         pdfs:
         - unplug7
         video: Unplug7
@@ -274,11 +274,11 @@
           skille mellom verdiene. Dette er hvor kondisjoner trengs...
       CollisionDetection:
         title: Collision Detection og Pytagoras læresetning
-        desc: "Å finne ut når objekter på skjermen berører hverandre er et viktig
-          aspekt i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning
+        desc: Å finne ut når objekter på skjermen berører hverandre er et viktig aspekt
+          i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører
-          hverandre."
+          hverandre.
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: I denne oppgaven skal du lære om løkker!
@@ -416,7 +416,7 @@
           forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig
           nyttig praksis.  '
       swipeRightPassThrough:
-        title: "Økt med rekruttering rekrutterings scenarier"
+        title: Økt med rekruttering rekrutterings scenarier
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -429,7 +429,7 @@
           \r
           When you click continue below, we'll send you to the game, and pass along the Code.org email address you're logged in with.
       swipeRightPassThrough-test123:
-        title: "Økt med rekruttering rekrutterings scenarier"
+        title: Økt med rekruttering rekrutterings scenarier
         desc: |-
           # Recruitment Scenarios Session\r
           \r
@@ -510,3 +510,30 @@
         desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
           handlnger som datamaskinen overvåker. Læreren trykker på knapper på en papirfjernkontroll
           og elevene svarer basert på hvilken knapp som er trykket.
+      GraphPaperProgramming_2018:
+        title: Millimeterpapirprogrammering
+        desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en
+          samling med instruksjoner) for å styre klassekameratene sine til å lage
+          en tegning.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Frakoblet Aktivitet
+        desc: I dag skal du lære hva det vil si å være en digital borger.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Frakoblet Aktivitet
+        desc: I dag skal du lære hva du skal gjøre hvis noen er slemme på nett.
+      Conditionals_2018:
+        title: Betingelser
+        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill
+          og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis
+          jeg tegner et svart kort, får du et poeng."
+      DigitalFootprint_2018:
+        title: Dine digitale fotavtrykk
+        desc: Lærere introdusere elever ideen at sette informasjon om seg selv online
+          skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+      BinaryImages_2018:
+        title: Binære Bilder
+        desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser
+          vårt forrige kurs elevene at den informasjonen kan bli representert i en
+          rekke av binære alternativer. Denne leksjonen tar det konseptet et steg
+          videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
+          informasjon (som for eksempel bilder og farger) binært også.
