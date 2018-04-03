@@ -165,7 +165,7 @@
     select_school_type: Wähle die Art der Schule
     charter: Charta
     private: Privat
-    public: "Öffentlich"
+    public: Öffentlich
     homeschool: Schule zu Hause
     after_school: Nach Schule
     other: Andere
@@ -214,7 +214,7 @@
         zu haben. Bitte emaile support@code.org um einen Link zur Wiederherstellung
         deines Passwortes zu erhalten.
     change_form:
-      title: "Ändere dein Passwort"
+      title: Ändere dein Passwort
       new_password: Neues Passwort
       confirm_password: Neues Passwort bestätigen
       submit: Mein Passwort ändern
@@ -328,7 +328,7 @@
       educate_inspire: Inspiriere einen Schüler/eine Schülerin
       educate_community: Online Community
       educate_tools: Hilfsmittel und Videos
-      about_us: "Über uns "
+      about_us: 'Über uns '
       about_leadership: Die Leitung
       about_donors: Sponsoren
       about_partners: Partner
@@ -342,7 +342,7 @@
       stats: Statistiken
       help_us: Helfen Sie uns
       teach: Unterrichten
-      about: "Über"
+      about: Über
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Landkreis-Dashboard
@@ -442,7 +442,7 @@
     lines_of_code: "%{lines_count} VON SCHÜLERN ERSTELLTE CODEZEILEN"
     lines_of_code_linebreak: "%{lines_count} CODE-ZEILEN, <br/> VON %{students_count}
       MILLIONEN SCHÜLERN GESCHRIEBEN"
-    all_courses: "Übersicht der Level 1, 2 und 3"
+    all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
     student_reg_link: Schüler-Anmeldung
@@ -465,7 +465,7 @@
     student_left_off: 'Wo du aufgehört hast:'
     student_finished: Du hast alle Code.org-Tutorials abgeschlossen. Wähle einen anderen
       Kurs  %{online_link} oder in deiner %{local_school_link}
-    local_school: "örtlichen Schule."
+    local_school: örtlichen Schule.
     online: online
     see_details: Zeige Details
     view_course: Zeige Kurs
@@ -715,7 +715,7 @@
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
   lesson_plan: Stundenplan
-  view_lesson_plan: "Überblick des Unterrichtsplans"
+  view_lesson_plan: Überblick des Unterrichtsplans
   pdf_download: PDF herunterladen
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
@@ -1142,7 +1142,7 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "Übersicht"
+    required: Übersicht
     content: Inhalt
     practice: Lehrer Übungen
     peer_review: Peer Review
