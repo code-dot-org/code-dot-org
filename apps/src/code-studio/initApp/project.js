@@ -1005,15 +1005,16 @@ var projects = module.exports = {
     this.save().then(callback);
   },
   /**
-   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   * Freezes the project. Also hides so that it's not available for
+   * deleting/renaming in the user's project list.
    */
   freeze(callback) {
+    if (!(current && current.isOwner)) {
+      return;
+    }
     current.frozen = true;
     current.hidden = true;
-    this.save().then(data => {
-      executeCallback(callback, data);
-      redirectEditView();
-    });
+    this.updateChannels_(callback);
   },
 
   /**
