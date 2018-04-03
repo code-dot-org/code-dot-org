@@ -200,6 +200,10 @@ class CDOImpl < OpenStruct
     canonical_hostname('hourofcode.com')
   end
 
+  def advocacy_hostname
+    canonical_hostname('advocacy.code.org')
+  end
+
   def circle_run_identifier
     ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
   end
@@ -233,6 +237,10 @@ class CDOImpl < OpenStruct
 
   def code_org_url(path = '', scheme = '')
     site_url('code.org', path, scheme)
+  end
+
+  def advocacy_url(path = '', scheme = '')
+    site_url('advocacy.code.org', path, scheme)
   end
 
   def default_scheme

@@ -1,0 +1,35 @@
+name 'cspu5_assess3_rollDie_exam_prep'
+wrong 'rolls >= 0 && sixes < 25'
+right 'rolls < 100 && sixes < 25'
+wrong 'rolls < 100 || sixes < 25'
+wrong 'rolls = 100 || sixes <= 25'
+wrong 'rolls < sixes || sixes > 25'
+
+markdown <<MARKDOWN
+![](https://images.code.org/e302df6cd54f89259c3942f22706f236-image-1477186020363.png)
+
+A statistician would like to simulate rolling a single die until she has rolled the die a total of 100 times, or she rolls a six a total of 25 times, whichever comes first.  Which boolean expression should she use for the &lt;missing code&gt; to accomplish this?
+
+      var rolls = 0;
+      var sixes = 0;
+      while ( <missing code> ){
+        var nextRoll = randomNumber(1, 6);
+        if(nextRoll == 6)
+        {
+          sixes = sixes + 1;
+        }
+        rolls = rolls + 1;
+      }
+      console.log(rolls);
+      console.log(sixes);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 12** -- requires incorporation of boolean expressions
+
+The condition to exit the while loop is when the die is rolled a total of 100 times, or a six is rolled 25 times, whichever comes first. Therefore, we have to consider what condition must be true for the code to keep running. Reading the problem, the loop should continue when the total rolls < 100 AND the sixes < 25. To put it into code, the condition looks like:
+
+	rolls < 100 && sixes < 25
+
+When one of the conditions is false, it means the die was either rolled more than 100 times or a six was rolled more than 25 times and thus, should exit while loop.
+MARKDOWN

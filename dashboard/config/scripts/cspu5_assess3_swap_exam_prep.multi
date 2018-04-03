@@ -1,0 +1,35 @@
+name 'cspu5_assess3_swap_exam_prep'
+wrong '<img src="https://images.code.org/955c0423604d555feaec71adc7556a70-image-1477188270771.png">'
+wrong '<img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">'
+right '<img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">'
+wrong '<img src="https://images.code.org/89e9c5e5afc13710fd368de5b1e623a7-image-1477188305378.png">'
+
+
+markdown <<MARKDOWN
+You are trying to write a function _swap(list, a, b)_ , which will swap the position of the two values at indexes _a_ and _b_ in the _list_.  
+
+Example: before and after a call to _swap(list, 1, 2)_ on the list shown below
+
+![](https://images.code.org/9784f0825b8928cbcfa97dd758fecbee-image-1477188165541.png)
+
+The function header is defined for you.  Choose the 3 lines of code that will perform the swap correctly.
+
+    function swap(list, a, b){
+        <choose option from below> 
+    }
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 13**
+
+It is important to note that swapping a to b, and then b to a will **not** work. For example:
+
+	*THIS EXAMPLE DOES NOT WORK*
+    a = 30
+    b = 75
+    Swapping a to b, a = 75, b = 75
+    Swapping b to a, a = 75, b = 75
+    
+In this case, you would need to temporarily store the data of one of the variables to successfully swap the numbers. To do this, create a temp variable that holds the data at index _b_. Swap the data at _b_ with _a_, and then set the data at _a_ to temp which holds the original value of index _b_.
+MARKDOWN
