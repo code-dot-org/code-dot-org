@@ -278,6 +278,10 @@ module Pd::Application
       update! locked_at: nil
     end
 
+    def email
+      user.try(:email) || sanitize_form_data_hash[:alternate_email]
+    end
+
     def regional_partner_name
       regional_partner.try(:name)
     end
