@@ -162,7 +162,7 @@
     district: Okres
     other_district_not_listed: Jiný okres neuvedený v seznamu
     district_name: Název okresu
-    school: "Škola"
+    school: Škola
     other_school_not_listed: Jiná škola neuvedená v seznamu
     school_name: Název školy
     school_zip: PSČ školy
@@ -339,7 +339,7 @@
       already_registered: Už jste zaregistrováni?
       pair_programming: Párové programování
       team: Tým
-      driver: "Řidič"
+      driver: Řidič
       navigator: Navigátor
     popup:
       progress_for_user: pokrok je %{name}
@@ -421,8 +421,8 @@
     title: Code studio
     description: Code Studio je místem pro on-line kurzy vytvořené Code.org
     lines_of_code: "%{lines_count} ŘÁDKY KÓDU NAPSANÝCH STUDENTY"
-    lines_of_code_linebreak: "ŘÁDKY KÓDU, %{lines_count} <br/> NAPSANÉ %{students_count}
-      MILIONY STUDENTŮ"
+    lines_of_code_linebreak: ŘÁDKY KÓDU, %{lines_count} <br/> NAPSANÉ %{students_count}
+      MILIONY STUDENTŮ
     all_courses: Přehled kurzů 1, 2 a 3
     lesson_plans: Plány hodin
     signin_message: Nejsi už zaregistrován? %{link}
@@ -446,7 +446,7 @@
     student_left_off: 'Kde jsi přestal:'
     student_finished: Dokončil jsi všechna cvičení, vyber si další třídu %{online_link}
       nebo v %{local_school_link}
-    local_school: "škola v okolí"
+    local_school: škola v okolí
     online: online
     see_details: Viz podrobnosti
     view_course: Prohlídka kurzu
@@ -602,7 +602,7 @@
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
   gender:
     male: Muž
-    female: "Žena"
+    female: Žena
     none: Raději bych neodpovídal/a
   user_type:
     student: student
@@ -662,7 +662,7 @@
     direction: Počáteční směr (ve stupních)
   video:
     tab: Video.
-    notes: "Žádné video? Zobrazit poznámky."
+    notes: Žádné video? Zobrazit poznámky.
     notes_coming_soon: Poznámky pro toto video přijdou brzy.
     autoplay_option: Automatické přehrávání videí
     download: Stáhnout Video
@@ -715,7 +715,7 @@
     manage: Sestavení úrovně
     view: Zobrazit
     back: Zpět ke skriptům
-    success: "Úspěšně jste upravili bloky."
+    success: Úspěšně jste upravili bloky.
     level:
       create: Vytvořit novou úroveň
       current: Současné úrovně
@@ -880,7 +880,7 @@
       jistý?
   match:
     wrong_title: Nesprávné řešení
-    wrong_body: "Řešení, které jste zadali, není správné.  Opakujte akci!"
+    wrong_body: Řešení, které jste zadali, není správné.  Opakujte akci!
     correct_title: Správně
     correct_body: To je správná odpověď.
   contract_match:
@@ -956,7 +956,7 @@
     message: Prosím vyberte vaši rasovou příslušnost (označte všechna platná políčka)
     races:
     - white: Běloch
-    - black: "Černoch nebo Afroameričan"
+    - black: Černoch nebo Afroameričan
     - hispanic: Hispánec nebo Latino
     - asian: Asiat
     - hawaiian: Rodilý havajčan nebo ostrovan z Pacifiku
