@@ -93,7 +93,7 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: "Žaidimas „Atmušk“: sujungimo užduotis"
+        Bounce Matching: 'Žaidimas „Atmušk“: sujungimo užduotis'
         Match the events with the actions: Suderink įvykius su veiksmais
         Matching: Sujungimas
       2-3 flappy match 1:
@@ -654,7 +654,7 @@
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500"
-        Famer Loops Multiple Choice: "Ūkininkas: parink teisingą atsakymą"
+        Famer Loops Multiple Choice: 'Ūkininkas: parink teisingą atsakymą'
         Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
       4-5 maze conditionals multi 1:
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
@@ -907,6 +907,6 @@
         George Washington: Džordžas Vašingtonas
         Martha Washington: Marta Vašington
         Presidents: Prezidentai
-        This multiple choice is all about the presidents of the United States.: "Šie
-          klausimai su keliais pasirinktinais variantais yra apie JAV prezidentus."
+        This multiple choice is all about the presidents of the United States.: Šie
+          klausimai su keliais pasirinktinais variantais yra apie JAV prezidentus.
         Who was the first president of the USA?: Kas buvo pirmasis JAV prezidentas?
