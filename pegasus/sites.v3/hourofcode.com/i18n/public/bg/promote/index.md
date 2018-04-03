@@ -16,7 +16,7 @@ nav: promote_nav
 
 ## Разпространете новината
 
-Tell your friends about the **#HourOfCode**!
+Кажете на приятелите си за **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

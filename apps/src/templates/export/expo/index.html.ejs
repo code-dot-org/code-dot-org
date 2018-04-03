@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>My App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=320, minimal-ui, target-densityDpi=device-dpi, user-scalable=no">
+    <script src="<%- jQueryPath %>"></script>
+  <% if (appOptionsPath) { -%>
+    <script src="<%- appOptionsPath %>"></script>
+  <% } -%>
+  <% if (commonLocalePath) { -%>
+    <script src="<%- commonLocalePath %>"></script>
+  <% } -%>
+  <% if (applabLocalePath) { -%>
+    <script src="<%- applabLocalePath %>"></script>
+  <% } -%>
+    <script src="<%- applabApiPath %>"></script>
+    <script src="code.j" defer></script>
+  <% if (commonCssPath) { -%>
+    <link rel="stylesheet" href="<%- commonCssPath %>">
+  <% } -%>
+    <link rel="stylesheet" href="<%- applabCssPath %>">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <%- htmlBody %>
+  </body>
+</html>

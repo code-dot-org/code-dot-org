@@ -38,6 +38,7 @@ class YourSchool extends Component {
     prefillData: censusFormPrefillDataShape,
     fusionTableId: PropTypes.string,
     hideMap: PropTypes.bool,
+    currentCensusYear: PropTypes.number,
   };
 
   state = {
@@ -137,6 +138,7 @@ class YourSchool extends Component {
           showExistingInaccuracy={showExistingInaccuracy}
           existingInaccuracy={existingInaccuracy}
           onExistingInaccuracyChange={this.handleExistingInaccuracyChange}
+          initialSchoolYear={this.props.currentCensusYear}
         />
       </div>
     );

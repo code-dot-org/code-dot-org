@@ -9,72 +9,72 @@ nav: how_to_nav
 
 ## Encouragez les étudiants à s'engager pour l'Heure de Code
 
-Code.org offers the opportunity for your employees to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org offers the opportunity for your employees to [connect](<%= codeorg_url('/volunteer') %>) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-- [Inscrivez-vous](<%= resolve_url('https://code.org/volunteer') %>) pour participer.
-- For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](<%= localized_file('/files/hoc-corporate-toolkit.pdf') %>).
+- [Sign up](<%= codeorg_url('/volunteer') %>) to volunteer.
+- Pour obtenir plus d'informations sur la mise en relation de vos employés avec les classes, consultez notre [guide pour les entreprises partenaires](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
 
 ## Moyens supplémentaires pour les entreprises de soutenir l'Heure de Code :
 
-- Ask your CEO to [send a company-wide email](<%= resolve_url('/promote/resources#sample-emails') %>) emphasizing the importance of computer science and encouraging employees to spread the word. 
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](<%= resolve_url('/learn') %>).
+- Demandez à votre PDG d'[envoyer un e-mail à toute la société](<%= resolve_url('/promote/resources#sample-emails') %>) mettant l’accent sur l’importance de l’informatique et encourageant les employés à faire passer le message.
+- Organisez un Happy Hour Heure de Code avec vos collègues pour essayer [les tutoriels](<%= resolve_url('/learn') %>).
 - Organisez dans les locaux de votre entreprise une session de l'Heure de Code pour une classe locale, ou pour des partenaires sans buts lucratifs. Consultez ci-dessous le guide Comment organiser des événements.
 
-# How to host an Hour of Code event with students
+# Comment organiser un événement l'Heure de Code avec des élèves
 
-## 1. Promote your Hour of Code
+## 1) Promouvoir votre Heure de Code
 
 - Assurez la promotion de votre [Heure de Code](<%= resolve_url('/promote') %>) et encouragez les autres à en organiser.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. Ils peuvent [s'inscrire](<%= resolve_url('https://code.org/volunteer/engineer') %>) pour rejoindre une classe.
+- Encouragez les informaticiens de votre entreprise à rejoindre une classe pour aider à organiser l'Heure de Code, et donner envie aux élèves d'étudier l'informatique. They can [sign up](<%= codeorg_url('/volunteer/engineer') %>) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 2) Regarder cette vidéo qui explique comment faire <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 3. Choose an activity
+## 3) Choisir une activité
 
-We host a variety of [fun, hour-long activities](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [N'hésitez pas à les essayer !](<%= resolve_url('/learn') %>)
+Nous mettrons à votre disposition toute une série de tutoriels, [sympas et d'une durée ne dépassant pas l'heure](<%= resolve_url('/learn') %>), adaptés à tous les âges et créés par différents partenaires. [N'hésitez pas à les essayer !](<%= resolve_url('/learn') %>)
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+**Tous les tutoriels de l'Heure de Code** demandent un temps de préparation minime, et sont autoguidés - ce qui permet aux enfants de travailler à leurs propres vitesse et niveau de compétences.
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 4. Plan your technology needs - computers are optional
+## 4) Déterminez quels sont vos besoins en matériel - vous n'avez pas forcément besoin d'ordinateur
 
 Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. Mais vous **n'avez pas besoin** d'un ordinateur pour chacun des participants, et vous pouvez même suivre l'Heure de Code sans aucun ordinateur.
 
 **Préparez le terrain !** Procédez aux choses qui suivent avant de lancer votre événement :
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
+- Testez les activités sur différents ordinateurs et appareils. Assurez-vous que le son et la vidéo fonctionnent correctement sur différents navigateurs.
+- Fournissez des écouteurs ou demandez aux participants d'apporter les leurs si les activités que vous avez choisies nécessitent du son.
 - **Vous n'avez pas suffisamment de matériel informatique ?** Mettez en place [des binômes pour la programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Lorsque les participants travaillent en binôme, ils peuvent s'entraider et ont moins besoin de l'aide de l'enseignant. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Vous avez une connexion internet trop lente ?** Projetez les vidéos devant toute la classe, ainsi les élèves n'auront pas à les télécharger. Ou bien essayez les activités hors ligne.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5) Démarrez votre Heure de Code avec une vidéo qui donne de l'enthousiasme
 
 Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et en montrant combien l'informatique impacte chaque aspect de notre vie quotidienne. Partagez vos impressions, racontez ce qui vous a motivé à faire de l'informatique, et expliquez le rôle que vous jouez au sein de votre entreprise.
 
 **Montrez une vidéo qui inspire :**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- La vidéo originale du lancement de Code.org avec Bill Gates, Mark Zuckerberg et la star de la NBA Chris Bosh (des versions d'[1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), de [5 minutes](https://www.youtube.com/watch?v=nKIu9yen5nc), et de [9 minutes](https://www.youtube.com/watch?v=dU1xS07N-FA) sont disponibles).
+- La [vidéo Heure de Code Mondiale](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Le Président Obama incite tous les élèves à apprendre l'informatique](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Encore plus de vidéos sources d'inspiration [ici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity to students:**
+**Quelques idées pour présenter vos activités Heure de Code aux élèves :**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- Expliquez la manière dont les nouvelles technologies impactent notre vie, au moyen d'exemples qui parleront aux garçons et aux filles (évoquez les technologies qui permettent de sauver des vies, d'aider les gens, ou de relier les personnes entre elles, etc...).
 - - Si vous êtes une entreprise technologique, présentez des produits amusants, innovants, sur lesquels votre entreprise travaille.
 - - Si vous n'êtes pas une entreprise technologique, discutez de la façon dont votre entreprise utilise la technologie pour résoudre des problèmes et atteindre des objectifs.
 - - Invitez les informaticiens de votre entreprise à expliquer pourquoi ils ont décidé d'étudier l'informatique et à parler des projets sur lesquels ils travaillent.
-- Découvrez [ici](<%= resolve_url('https://code.org/girls') %>) des astuces pour amener les filles à s'intéresser à l'informatique.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
-## 6. Code!
+## 6) Programmez !
 
 **Guider les participants pendant l'activité**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](<%= resolve_url('/learn') %>) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+- Notez sur un tableau le lien vers l'activité. Vous pouvez trouver ce lien sur la [fiche d'information de l'activité choisie](<%= resolve_url('/learn') %>), sous le nombre de participants.
+- Pour les plus jeunes élèves, chargez la page de l'activité à l'avance, ou enregistrez-la comme favori.
 
 **Lorsque les participants rencontrent des difficultés, n'ayez pas peur de répondre :**
 
@@ -103,7 +103,7 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 ## 7) Rendez ça festif !
 
-- [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants and students.
+- [Print certificates](<%= codeorg_url('/certificates') %>) for participants and students.
 - Imprimez des [autocollants "J'ai suivi l'Heure de Code !"](<%= resolve_url('/promote/resources#stickers') %>).
 - [Commandez des t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pour vos employés.
 - Partagez les photos et les vidéos de votre événement l'Heure de Code sur les réseaux sociaux. Utilisez les mots-clefs #HourOfCode et @codeorg, pour que nous aussi, nous puissions mettre en avant votre réussite !

@@ -44,7 +44,7 @@ Përdorni këto [postera, banera, stikers, video dhe më shumë](<%= resolve_url
 
 ## 2. Gjej një vullnetar të zonës për të të ndihmuar me eventin.
 
-[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map](<%= codeorg_url('/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Plan your Hour of Code
 
