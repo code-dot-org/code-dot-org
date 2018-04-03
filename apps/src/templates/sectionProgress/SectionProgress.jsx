@@ -107,7 +107,10 @@ class SectionProgress extends Component {
         }
         {(levelDataInitialized && currentView === ViewType.DETAIL) &&
           <div>
-            <VirtualizedDetailView/>
+            <VirtualizedDetailView
+              section={section}
+              scriptData={scriptData}
+            />
             <SectionScriptProgress
               section={section}
               scriptData={scriptData}
