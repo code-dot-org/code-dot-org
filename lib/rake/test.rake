@@ -272,12 +272,23 @@ namespace :test do
 end
 task test: ['test:changed']
 
+# Some files are so fundamental to our test runner(s) that changes to them
+# should cause us to run all tests.
+GLOBS_AFFECTING_EVERYTHING = %w(
+  .circleci/config.yml
+  lib/rake/test.rake
+)
+
 def run_tests_if_changed(test_name, changed_globs, ignore: [])
   base_branch = GitUtils.current_branch_base
   max_identifier_length = 12
   justified_test_name = test_name.ljust(max_identifier_length)
 
-  relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs, ignore_patterns: ignore)
+  relevant_changed_files = GitUtils.files_changed_in_branch_or_local(
+    base_branch,
+    GLOBS_AFFECTING_EVERYTHING + changed_globs,
+    ignore_patterns: ignore
+  )
   if relevant_changed_files.empty?
     ChatClient.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
   else

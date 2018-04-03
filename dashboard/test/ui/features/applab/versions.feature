@@ -43,7 +43,13 @@ Scenario: Project Load and Reload
   And I wait for the page to fully load
   And I click selector "#versions-header"
   And I wait until element "button:contains(Current Version)" is visible
-  Then element "button:contains(Restore this Version)" is not visible
+
+  # There is currently no guarantee that Version History will initially be
+  # empty, because we don't necessarily clear past project data from S3 between
+  # test runs in the test environment. Therefore, just check that we have no
+  # version that was updated within the last 90 seconds, which will show as
+  # "less than a minute ago" or "about a minute ago".
+  Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version)" is not visible
 
   When I close the dialog
   # This run may nor may not trigger a save, because sometimes serializing
@@ -56,5 +62,5 @@ Scenario: Project Load and Reload
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector "#versions-header"
   And I wait until element "button:contains(Current Version)" is visible
-  Then element "button:contains(Restore this Version):eq(0)" is visible
-  And element "button:contains(Restore this Version):eq(1)" is not visible
+  Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
+  And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible

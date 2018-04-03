@@ -45,6 +45,10 @@ module Pd::Application
       auto_assigned_fit_enrollment_id
     )
 
+    has_one :pd_fit_weekend1819_registration,
+      class_name: 'Pd::FitWeekend1819Registration',
+      foreign_key: 'pd_application_id'
+
     def send_decision_notification_email
       # Accepted, declined, and waitlisted are the only valid "final" states;
       # all other states shouldn't need emails, and we plan to send "Accepted"
@@ -98,6 +102,7 @@ module Pd::Application
         where(type: name).
         where(status: [:accepted, :withdrawn]).
         where.not(locked_at: nil).
+        includes(:pd_fit_weekend1819_registration).
         select(&:fit_workshop_id?)
     end
 
@@ -108,6 +113,10 @@ module Pd::Application
       cache_fetch self.class.get_workshop_cache_key(fit_workshop_id) do
         Pd::Workshop.includes(:sessions, :enrollments).find_by(id: fit_workshop_id)
       end
+    end
+
+    def fit_workshop_date_and_location
+      fit_workshop.try(&:date_and_location_name)
     end
 
     def registered_fit_workshop?
