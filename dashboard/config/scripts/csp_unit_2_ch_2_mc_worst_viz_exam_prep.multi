@@ -1,0 +1,31 @@
+name 'CSP Unit 2 Ch 2 MC worst viz_exam_prep'
+title 'Which is the Best?'
+description ' '
+question ' '
+wrong 'Chart A (Line Chart)'
+right 'Chart B (Vertical Bar Chart)'
+wrong 'Chart C (Stacked Line Chart)'
+wrong 'Chart D (Stacked Vertical Bar Chart)'
+
+markdown <<MARKDOWN
+This question refers to the same data from the High School Survey about college plans from the previous question.
+
+Amara decides to make a visualization of a portion of the responses showing only a few states and a few areas of study.  She wants to make an effective visualization that shows for comparison: **Students' average likelihood of attending college in-state broken down by which state they live in *and* what they plan to major in.**  For example, in Illinois (IL) on average students who want to study economics are very likely to say they want to attend college in-state.
+
+Amara makes four different visualizations shown below (marked A, B, C, D). According to good principles of visualization, and for what Amara wants to show, which one of these would be **considered the best visual representation**?
+
+![](https://images.code.org/592b314e869da6c9e9cb3e9e8818771f-image-1470337609511.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+To see why **B** is correct it's easier to explain why the other responses are bad or at least not great...
+
+**A** is bad because connecting the points across states is meaningless.  These are not trend lines, this is not showing change over time.
+
+**C** and **D** are both not great because stacked graphs attempt to show how parts contribute to a whole. So the problem is that the height of each stack doesn’t mean anything - you can’t add up averages this way. They are not as good visual representations because you have a key visual indicator - the height of the stacks - that doesn’t actually convey any information.  It is therefore potentially misleading because the viewer might make up their own meaning for the heights. A stack would be good if the data were about whole numbers of students rather than averages.  We actually know nothing about the total number of students involved here.
+
+It's worth noting that **D** is accidentally not horrible, but only if you know what you're looking at, and know that each portion of the stack is basically independent of the stack itself -- it's arguably easier to compare the likelihoods across states.
+
+So **B** is the best choice here because there is nothing potentially misleading, and it also allows you to quickly see the answer to the intended question: for each state which types of students are most likely to stay in state?  All of the other choices you have to do work to answer that question.  In graph **D** for example, you just have to read the numbers, which defeats the purpose of having a chart - you could just look at the data.
+
+MARKDOWN

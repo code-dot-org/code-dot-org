@@ -1,0 +1,14 @@
+name 'cspu4_assess1_keyEncryption_exam_prep'
+wrong 'A key for decrypting is never made public'
+wrong 'Using public key guarantees that only the intended recipient can decrypt the message'
+right 'A Public Key database ensures 3rd party accountability of security'
+wrong 'Allows secure communication without establishing a *shared* encryption key ahead of time.'
+
+markdown <<MARKDOWN
+Choose the answer that is NOT a feature of Public Key Cryptography:
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Public-key cryptography is any cryptographic system that uses pairs of keys. Public keys may be distributed and paired with private keys which are known only to the owner. Since the public and private keys are given by the owner, no third parties should be held accountable for the security of the information.
+MARKDOWN

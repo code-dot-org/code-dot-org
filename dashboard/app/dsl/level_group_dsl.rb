@@ -86,6 +86,26 @@ class LevelGroupDSL < BaseDSL
     {'name' => {@name => @i18n_strings}}
   end
 
+  def self.serialize(level)
+    properties = level.properties
+    new_dsl = "name '#{level.name}'"
+    new_dsl << "\ntitle '#{properties['title']}'" if properties['title']
+    new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
+    new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
+
+    texts = properties['texts'] || []
+    level.pages.each do |page|
+      new_dsl << "\n\npage"
+      page.levels.each_with_index do |sublevel, index|
+        texts.select {|text| text['index'] == page.offset + index}.each do |text|
+          new_dsl << "\ntext '#{text['level_name']}'"
+        end
+        new_dsl << "\nlevel '#{sublevel.name}'"
+      end
+    end
+    new_dsl
+  end
+
   def self.parse_file(filename)
     super(filename, File.basename(filename, '.level_group'))
   end

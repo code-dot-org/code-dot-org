@@ -130,7 +130,10 @@ class Census::CensusSummary < ApplicationRecord
       teacher_or_admin: nil,
       not_teacher_or_admin: nil,
     }
-    has_inconsistent_surveys = false
+    has_inconsistent_surveys = {
+      teacher_or_admin: false,
+      not_teacher_or_admin: false,
+    }
 
     [:teacher_or_admin, :not_teacher_or_admin].each do |role|
       unless counts[role][:no] == 0 && counts[role][:yes] == 0
@@ -139,7 +142,7 @@ class Census::CensusSummary < ApplicationRecord
         elsif counts[role][:yes] == 0
           consistency[role] = "NO"
         else
-          has_inconsistent_surveys = true
+          has_inconsistent_surveys[role] = true
         end
       end
     end
@@ -147,6 +150,7 @@ class Census::CensusSummary < ApplicationRecord
     return {
       consistency: consistency,
       has_inconsistent_surveys: has_inconsistent_surveys,
+      counts: counts,
     }
   end
 
@@ -180,6 +184,7 @@ class Census::CensusSummary < ApplicationRecord
       # without a row is counted as a NO
       if high_school &&
          state_offerings.empty? &&
+         Census::StateCsOffering.infer_no(school.state) &&
          Census::StateCsOffering::SUPPORTED_STATES.include?(school.state) &&
          state_years_with_data[school.state].include?(school_year)
         audit[:state_cs_offerings].push(nil)
@@ -194,36 +199,135 @@ class Census::CensusSummary < ApplicationRecord
     state_data
   end
 
+  def self.summarize_override_data(overrides, school_year, audit)
+    audit[:overrides] = {
+      records: [],
+    }
+
+    overrides_summary = {
+      should_override: false,
+      override_value: nil,
+    }
+
+    overrides.order(:created_at).select {|o| o.school_year == school_year}.each do |o|
+      audit[:overrides][:records].push({id: o.id, teaches_cs: o.teaches_cs})
+      overrides_summary[:should_override] = true
+      overrides_summary[:override_value] = o.teaches_cs
+    end
+
+    return overrides_summary
+  end
+
+  def self.conditional_result(detail_label, condition, new_result, detail_value, current_result, details, set_value_when_not_used = false)
+    result = current_result
+    if condition
+      value = detail_value
+      used = result.nil?
+      result = new_result if result.nil?
+    else
+      value = set_value_when_not_used ? detail_value : nil
+      used = false
+    end
+    details.push(
+      {
+        label: detail_label,
+        value: value,
+        used: used,
+      }
+    )
+
+    return result
+  end
+
   #
   # We will set teaches_cs to the first value we find in this order:
+  # 0 Overrides
   # 1	This year's AP data
   # 2	This year's IB data
   # 3	This year's surveys from teachers/administrators - consistent
   # 4	State data
-  # 5	This year's surveys from non-teachers/admins - consistent
-  # 6	This year's surveys - inconsistent
+  # 5	This year's surveys from teachers/admins - inconsistent
+  # 6	This year's surveys from non-teachers/admins
   # 7	teaches_cs from last year
   # 8	teaches_cs from 2 years ago
   # 9 nil
   #
-  def self.compute_teaches_cs(has_ap_data, has_ib_data, submissions_summary, state_summary, previous_years_results)
-    if has_ap_data || has_ib_data
-      'YES'
-    elsif submissions_summary[:consistency][:teacher_or_admin]
-      submissions_summary[:consistency][:teacher_or_admin]
-    elsif state_summary
-      state_summary
-    elsif submissions_summary[:consistency][:not_teacher_or_admin]
-      submissions_summary[:consistency][:not_teacher_or_admin]
-    elsif submissions_summary[:has_inconsistent_surveys]
-      'MAYBE'
-    elsif map_historical_teaches_cs previous_years_results.first
-      map_historical_teaches_cs previous_years_results.first
-    elsif map_historical_teaches_cs previous_years_results.second
-      map_historical_teaches_cs previous_years_results.second
-    else
-      nil
-    end
+  def self.compute_teaches_cs(overrides_summary, has_ap_data, has_ib_data, submissions_summary, state_summary, previous_years_results, audit)
+    result = nil
+    details = []
+
+    # Each call to conditional_result will update the result if it hasn't already
+    # been set and simultaneously add the appropriate data to the details array
+    # so that we can explain the result in the /census/review UI. We need to make
+    # the call for every data element so that we get the full data in the explanation.
+    result = conditional_result(
+      'overrides',
+      overrides_summary[:should_override],
+      overrides_summary[:override_value],
+      overrides_summary[:override_value],
+      result,
+      details
+    )
+
+    result = conditional_result('offers_ap', has_ap_data, 'YES', true, result, details)
+    result = conditional_result('offers_ib', has_ib_data, 'YES', true, result, details)
+    result = conditional_result(
+      'consistent_teacher_surveys',
+      submissions_summary[:consistency][:teacher_or_admin],
+      submissions_summary[:consistency][:teacher_or_admin],
+      submissions_summary[:counts][:teacher_or_admin],
+      result,
+      details
+    )
+
+    state_value = {
+      'NO' => false,
+      'YES' => true,
+      nil => nil
+    }[state_summary]
+
+    result = conditional_result('state_offering', state_summary, state_summary, state_value, result, details)
+
+    result = conditional_result(
+      'inconsistent_teacher_surveys',
+      submissions_summary[:has_inconsistent_surveys][:teacher_or_admin],
+      'MAYBE',
+      submissions_summary[:counts][:teacher_or_admin],
+      result,
+      details
+    )
+
+    result = conditional_result(
+      'non_teacher_surveys',
+      submissions_summary[:consistency][:not_teacher_or_admin] || submissions_summary[:has_inconsistent_surveys][:not_teacher_or_admin],
+      submissions_summary[:consistency][:not_teacher_or_admin] || 'MAYBE',
+      submissions_summary[:counts][:not_teacher_or_admin],
+      result,
+      details
+    )
+
+    result = conditional_result(
+      'last_years_summary',
+      map_historical_teaches_cs(previous_years_results.first),
+      map_historical_teaches_cs(previous_years_results.first),
+      previous_years_results.first,
+      result,
+      details,
+      true
+    )
+
+    result = conditional_result(
+      'two_years_agos_summary',
+      map_historical_teaches_cs(previous_years_results.second),
+      map_historical_teaches_cs(previous_years_results.second),
+      previous_years_results.second,
+      result,
+      details,
+      true
+    )
+
+    audit[:explanation] = details
+    return result
   end
 
   def self.empty_audit_data
@@ -271,17 +375,20 @@ class Census::CensusSummary < ApplicationRecord
       has_ap_data = summarize_ap_data(school, school_year, audit)
       has_ib_data = summarize_ib_data(school, school_year, audit)
       state_summary = summarize_state_data(school, school_year, stats[:high_school], state_years_with_data, audit)
+      overrides_summary = summarize_override_data(school.census_overrides, school_year, audit)
 
       summary = Census::CensusSummary.find_or_initialize_by(
         school: school,
         school_year: school_year,
       )
       summary.teaches_cs = compute_teaches_cs(
+        overrides_summary,
         has_ap_data,
         has_ib_data,
         submissions_summary,
         state_summary,
-        previous_years_results
+        previous_years_results,
+        audit
       )
 
       audit[:previous_years_results] = previous_years_results
@@ -327,6 +434,7 @@ class Census::CensusSummary < ApplicationRecord
         eager_load(ib_school_code: :ib_cs_offering).
         eager_load(:state_cs_offering).
         eager_load(:school_stats_by_year).
+        eager_load(:census_overrides).
         find_each do |school|
 
         summarize_school_data(

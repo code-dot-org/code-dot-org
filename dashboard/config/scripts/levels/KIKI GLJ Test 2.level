@@ -6,178 +6,6 @@
   "user_id": 9,
   "properties": {
     "skin": "gamelab",
-    "code_functions": {
-      "draw": null,
-      "drawSprites": null,
-      "playSound": null,
-      "stopSound": null,
-      "keyDown": null,
-      "keyWentDown": null,
-      "keyWentUp": null,
-      "mouseDidMove": null,
-      "mouseDown": null,
-      "mouseIsOver": null,
-      "mouseWentDown": null,
-      "mouseWentUp": null,
-      "mousePressedOver": null,
-      "World.mouseX": null,
-      "World.mouseY": null,
-      "World.frameRate": null,
-      "World.frameCount": null,
-      "World.seconds": null,
-      "World.width": null,
-      "World.height": null,
-      "World.allSprites": null,
-      "camera.on": null,
-      "camera.off": null,
-      "camera.isActive": null,
-      "camera.mouseX": null,
-      "camera.mouseY": null,
-      "camera.x": null,
-      "camera.y": null,
-      "camera.zoom": null,
-      "comment_GameLab": null,
-      "var sprite = createSprite": null,
-      "setAnimation": null,
-      "x": null,
-      "y": null,
-      "velocityX": null,
-      "velocityY": null,
-      "scale": null,
-      "sprite.height": null,
-      "sprite.width": null,
-      "visible": null,
-      "rotation": null,
-      "rotationSpeed": null,
-      "rotateToDirection": null,
-      "debug": null,
-      "isTouching": null,
-      "collide": null,
-      "displace": null,
-      "overlap": null,
-      "bounce": null,
-      "bounceOff": null,
-      "bounciness": null,
-      "setCollider": null,
-      "createEdgeSprites": null,
-      "shapeColor": null,
-      "setVelocity": null,
-      "getDirection": null,
-      "getSpeed": null,
-      "setSpeedAndDirection": null,
-      "pointTo": null,
-      "mirrorX": null,
-      "mirrorY": null,
-      "getScaledWidth": null,
-      "getScaledHeight": null,
-      "lifetime": null,
-      "nextFrame": null,
-      "pause": null,
-      "play": null,
-      "setFrame": null,
-      "depth": null,
-      "destroy": null,
-      "comment_Sprites": null,
-      "var group = createGroup": null,
-      "add": null,
-      "remove": null,
-      "clear": null,
-      "contains": null,
-      "get": null,
-      "group.isTouching": null,
-      "group.bounce": null,
-      "group.bounceOff": null,
-      "group.collide": null,
-      "group.displace": null,
-      "group.overlap": null,
-      "maxDepth": null,
-      "minDepth": null,
-      "destroyEach": null,
-      "pointToEach": null,
-      "setAnimationEach": null,
-      "setColorEach": null,
-      "setColliderEach": null,
-      "setDepthEach": null,
-      "setHeightEach": null,
-      "setLifetimeEach": null,
-      "setMirrorXEach": null,
-      "setMirrorYEach": null,
-      "setRotateToDirectionEach": null,
-      "setRotationEach": null,
-      "setRotationSpeedEach": null,
-      "setScaleEach": null,
-      "setSpeedAndDirectionEach": null,
-      "setVelocityEach": null,
-      "setVelocityXEach": null,
-      "setVelocityYEach": null,
-      "setVisibleEach": null,
-      "setWidthEach": null,
-      "comment_Groups": null,
-      "background": null,
-      "fill": null,
-      "noFill": null,
-      "stroke": null,
-      "strokeWeight": null,
-      "noStroke": null,
-      "rgb": null,
-      "rect": null,
-      "ellipse": null,
-      "text": null,
-      "textAlign": null,
-      "textFont": null,
-      "textSize": null,
-      "arc": null,
-      "line": null,
-      "point": null,
-      "regularPolygon": null,
-      "shape": null,
-      "comment_Drawing": null,
-      "forLoop_i_0_4": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "whileBlock": null,
-      "comment_Control": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "greaterThanOrEqualOperator": null,
-      "lessThanOperator": null,
-      "lessThanOrEqualOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-      "mathRandom": null,
-      "comment_Math": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "includes": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
-      "comment_Variables": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null,
-      "comment": null
-    },
     "show_d_pad": "true",
     "show_debug_watch": "true",
     "embed": "false",
@@ -218,7 +46,7 @@
     "lock_zero_param_functions": "false",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/fyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA/d19383c3-9b64-482d-811d-07f8997533ea.png?version=v.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/fyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA/62c23e14-37e1-4b40-9dc8-68553ff35ff9.png?version=t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\",\r\n      \"frameSize\": {\r\n        \"x\": 64,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\"\r\n    }\r\n  }\r\n}",
     "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}\r\n\r\nfunction tossable() {\r\n  var behavior = function(sprite) {\r\n    if (mouseWentUp()) {\r\n      sprite.maxVelocity = 5;\r\n      sprite.setVelocity(min(mouseX - pmouseX, sprite.maxVelocity), min(mouseY - pmouseY, sprite.maxVelocity));\r\n    }\r\n  }\r\n  behavior.name = \"tossable\";\r\n  return behavior;\r\n}\r\n\r\nfunction gravity() {\r\n    var behavior = function(sprite) {\r\n      sprite.maxVelocity = 5;\r\n      if (sprite.velocityY < sprite.maxVelocity) {\r\n    \tsprite.velocityY = sprite.velocityY + 0.1;\r\n      }\r\n    }\r\n    behavior.name=\"gravity\";\r\n    return behavior;\r\n}\r\n\r\nfunction bounceOffEdges(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.bounceOff(edges);\r\n  }\r\n  behavior.name = 'bounceOffEdges';\r\n  return behavior;\r\n}\r\n\r\nfunction followBehavior(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotateToDirection = true;\r\n    // If sprite is not touching target\r\n    if (!sprite.isTouching(target)) {\r\n      // Point sprite to target\r\n      sprite.pointTo(target.x, target.y);\r\n      // Set sprite speed to 2\r\n      sprite.velocity.x = cos(sprite.rotation) * 2;\r\n      sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    } else {\r\n      // Set sprite speed to 0\r\n      sprite.velocity.x = 0;\r\n      sprite.velocity.y = 0;\r\n    }\r\n  }\r\n  behavior.name = 'follow';\r\n  return behavior;\r\n}\r\nfunction fleeBehavior(target) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotateToDirection = true;\r\n    // Point sprite away from target\r\n    sprite.pointTo(target.x, target.y);\r\n    sprite.rotation = (sprite.rotation + 180) % 360;\r\n    // Set sprite speed to 2\r\n    sprite.velocity.x = cos(sprite.rotation) * 2;\r\n    sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    edges.displace(sprite);\r\n  }\r\n  behavior.name = 'flee';\r\n  return behavior;\r\n}\r\nfunction jump(sprite) {\r\n  if (sprite.y>339) {\r\n\t  sprite.y-=10;\r\n\t  sprite.velocity.y=-12;\r\n\t  console.log(sprite.y);\r\n  }\r\n}\r\nfunction setSize(sprite,scale) {\r\n  sprite.scale = scale;\r\n}\r\nfunction moveBehavior() {\r\n  var behavior = function(sprite) {\r\n\tsprite.x += 12;\r\n  }\r\n  behavior.name = 'move';\r\n  return behavior;\r\n}\r\nfunction gravityBehavior() {\r\n  var behavior = function(sprite) {\r\n\tif (sprite.y <=340) {\r\n      if (sprite.velocity.y < 10)\r\n\t      sprite.velocity.y+=1;\r\n    } else {\r\n      sprite.velocity.y=0;\r\n    }\r\n  }\r\n  behavior.name = 'gravity';\r\n  return behavior;\r\n}\r\n\r\nfunction randomBehavior() {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation = (sprite.rotation + Math.floor(Math.random() * 360)) % 360;\r\n    // Set sprite speed to 20\r\n    sprite.velocity.x = cos(sprite.rotation) * 20;\r\n    sprite.velocity.y = sin(sprite.rotation) * 20;\r\n    edges.displace(sprite);\r\n  }\r\n  behavior.name = 'random';\r\n  return behavior;\r\n}\r\n\r\nfunction patrol() {\r\n  var behavior = function(sprite) {\r\n    edges.displace(sprite);\r\n    if(sprite.x <= 75 && sprite.rotation != 0) {\r\n      //sprite.velocity.x=10;\r\n\t  sprite.rotation = 0;\r\n\t  sprite.x+=10;\r\n\t  console.log(sprite.x);\r\n      console.log(\"First Case\");\r\n\t  console.log(sprite.rotation);\r\n    }\r\n    else if (sprite.x >= 325 && sprite.rotation != 180) {\r\n      sprite.rotation = 180;\r\n     // sprite.velocity.x=-10;\r\n\t  sprite.x-=10;\r\n\t  console.log(sprite.x);\r\n      console.log(\"Second Case\");\r\n\t  console.log(sprite.rotation);\r\n    }\r\n    else if (sprite.rotation == 0) {\r\n      //sprite.velocity.x=10;\r\n\t  sprite.x+=10;\r\n\t  console.log(sprite.x);\r\n      console.log(\"Third Case\");\r\n\t  console.log(sprite.rotation);\r\n    }\r\n    else{\r\n      //sprite.velocity.x=-10;\r\n\t  sprite.x-=10;\r\n\t  console.log(sprite.x);\r\n      console.log(\"Last Case\");\r\n\t  console.log(sprite.rotation);\r\n    }\r\n   \r\n  }\r\n  behavior.name = 'patrol';\r\n  return behavior;\r\n}\r\n\r\nfunction teleportBehavior() {\r\n  var behavior = function(sprite) {\r\n    sprite.x = Math.floor(Math.random() * 400);\r\n    sprite.y = Math.floor(Math.random() * 400);\r\n    for (i=0; i<720; i++){\r\n      sprite.rotation = (sprite.rotation + i) %360;\r\n    }\r\n    edges.displace(sprite);\r\n  }\r\n  behavior.name = 'teleport';\r\n  return behavior;\r\n}\r\n\r\nfunction boingBehavior() {\r\n  var behavior = function(sprite) {\r\n    var leftWall, topWall, rightWall, bottomWall;\r\n    leftWall.x = 0;\r\n    leftWall.y = 200;\r\n    topWall.x = 200;\r\n    topWall.y = 0;\r\n    rightWall.x = 400;\r\n    rightWall.y = 200;\r\n    bottomWall.x = 200;\r\n    bottomWall.y = 400;\r\n    var target = bottomWall;\r\n    sprite.rotateToDirection = true;\r\n    // If sprite is not touching target\r\n    if (!sprite.isTouching(target)) {\r\n      // Point sprite to target\r\n      sprite.pointTo(target.x, target.y);\r\n      // Set sprite speed to 2\r\n      sprite.velocity.x = cos(sprite.rotation) * 2;\r\n      sprite.velocity.y = sin(sprite.rotation) * 2;\r\n    } else {\r\n      switch(target) {\r\n    case leftWall:\r\n        target = bottomWall;\r\n        break;\r\n    case bottomWall:\r\n        target = rightWall;\r\n        break;\r\n    case rightWall:\r\n        target = topWall;\r\n        break;\r\n    case topWall:\r\n        target = leftWall;\r\n        break;\r\n    default:\r\n        target = leftWall;\r\n} \r\n    }\r\n  }\r\n  behavior.name = 'boing';\r\n  return behavior;\r\n}\r\n",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"draggable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"gravity\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"gravity\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"tossable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"tossable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOffEdges\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"bounce off edges\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOff\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"blockText\": \"{THIS} bounce off {TARGET}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"setVelocity\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"X\"\r\n      },\r\n      {\r\n        \"name\": \"Y\"\r\n      }\r\n    ],\r\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"followBehavior\",\r\n    \"blockText\": \"chase {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"fleeBehavior\",\r\n    \"blockText\": \"flee {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"expression\": \"edges\",\r\n    \"blockText\": \"edges\",\r\n    \"name\": \"edges\",\r\n    \"returnType\": \"None\"\r\n  },\r\n  {\r\n    \"func\": \"gravityBehavior\",\r\n    \"blockText\": \"gravity\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"followBehavior\",\r\n    \"blockText\": \"chase {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"setSize\",\r\n    \"blockText\": \"set {SPRITE} to size {SCALE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      },\r\n      {\r\n        \"name\": \"SCALE\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"moveBehavior\",\r\n    \"blockText\": \"move\",\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"jump\",\r\n    \"blockText\": \"{SPRITE} jumps\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"randomBehavior\",\r\n    \"blockText\": \"random\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"patrol\",\r\n    \"blockText\": \"patrol\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"teleportBehavior\",\r\n    \"blockText\": \"teleport\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"boingBehavior\",\r\n    \"blockText\": \"boing\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  }\r\n]",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"draggable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"gravity\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"gravity\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"tossable\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"tossable\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOffEdges\",\r\n    \"color\": [\r\n      0,\r\n      0.45,\r\n      0.65\r\n    ],\r\n    \"args\": [],\r\n    \"blockText\": \"bounce off edges\",\r\n    \"returnType\": \"function\"\r\n  },\r\n  {\r\n    \"func\": \"bounceOff\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"blockText\": \"{THIS} bounce off {TARGET}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"setVelocity\",\r\n    \"color\": [\r\n      184,\r\n      1,\r\n      0.74\r\n    ],\r\n    \"args\": [\r\n      {\r\n        \"name\": \"X\"\r\n      },\r\n      {\r\n        \"name\": \"Y\"\r\n      }\r\n    ],\r\n    \"blockText\": \"Set {THIS} velocity {X}, {Y}\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"followBehavior\",\r\n    \"blockText\": \"chase {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"fleeBehavior\",\r\n    \"blockText\": \"flee {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"expression\": \"edges\",\r\n    \"blockText\": \"edges\",\r\n    \"name\": \"edges\",\r\n    \"returnType\": \"None\"\r\n  },\r\n  {\r\n    \"func\": \"gravityBehavior\",\r\n    \"blockText\": \"gravity\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"followBehavior\",\r\n    \"blockText\": \"chase {TARGET}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"TARGET\"\r\n      }\r\n    ],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"setSize\",\r\n    \"blockText\": \"set {SPRITE} to size {SCALE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"SCALE\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"moveBehavior\",\r\n    \"blockText\": \"move\",\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"jump\",\r\n    \"blockText\": \"{SPRITE} jumps\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"randomBehavior\",\r\n    \"blockText\": \"random\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"patrol\",\r\n    \"blockText\": \"patrol\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"teleportBehavior\",\r\n    \"blockText\": \"teleport\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  },\r\n  {\r\n    \"func\": \"boingBehavior\",\r\n    \"blockText\": \"boing\",\r\n    \"args\": [],\r\n    \"returnType\": \"Function\"\r\n  }\r\n]",
     "parent_level_id": 11137,
     "contained_level_names": null
   },
@@ -233,7 +61,7 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="sprite_variables_set" inline="false">
               <title name="VAR">mySprite</title>
               <value name="VALUE">
                 <block type="gamelab_makeNewSprite" inline="true">
@@ -256,7 +84,7 @@
                     <block type="gamelab_moveBehavior"/>
                   </value>
                   <value name="SPRITE">
-                    <block type="variables_get">
+                    <block type="sprite_variables_get">
                       <title name="VAR">mySprite</title>
                     </block>
                   </value>
@@ -271,7 +99,7 @@
           <statement name="STACK">
             <block type="gamelab_moveRight" inline="true">
               <value name="THIS">
-                <block type="variables_get">
+                <block type="sprite_variables_get">
                   <title name="VAR">mySprite</title>
                 </block>
               </value>
@@ -283,7 +111,7 @@
     <toolbox_blocks>
       <xml>
         <category name="Make Sprite">
-          <block type="variables_set" inline="false">
+          <block type="sprite_variables_set" inline="false">
             <title name="VAR">myCat</title>
           </block>
           <block type="gamelab_makeNewSprite" inline="true">
@@ -303,28 +131,28 @@
         <category name="Movement">
           <block type="gamelab_moveUp" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">myCat</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveDown" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">myCat</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveLeft" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">myCat</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveRight" inline="true">
             <value name="THIS">
-              <block type="variables_get">
+              <block type="sprite_variables_get">
                 <title name="VAR">myCat</title>
               </block>
             </value>

@@ -460,6 +460,22 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_restore_main_json_with_bad_animation_versions
+    assert_restores_main_json_with_animation_version 'not_a_real_version_id'
+  end
+
+  def test_restore_main_json_with_empty_animation_versions
+    assert_restores_main_json_with_animation_version ''
+  end
+
+  def test_restore_main_json_with_null_animation_versions
+    assert_restores_main_json_with_animation_version nil
+  end
+
+  private
+
+  def assert_restores_main_json_with_animation_version(version_value)
+    delete_all_source_versions(MAIN_JSON)
+
     animation_key = @api.add_random_suffix('animation-key')
     animation_filename = "#{animation_key}.png"
     delete_all_animation_versions(animation_filename)
@@ -475,7 +491,7 @@ class SourcesTest < FilesApiTestBase
         "propsByKey": {
           "#{animation_key}": {
             "name": "Test animation v1",
-            "version": "not_a_real_version_id_v1"
+            "version": version_value
           }
         }
       }
@@ -494,7 +510,7 @@ class SourcesTest < FilesApiTestBase
         "propsByKey": {
           "#{animation_key}": {
             "name": "Test animation v2",
-            "version": "not_a_real_version_id_v2"
+            "version": version_value
           }
         }
       }
@@ -539,8 +555,6 @@ class SourcesTest < FilesApiTestBase
     delete_all_animation_versions(animation_filename)
     delete_all_source_versions(MAIN_JSON)
   end
-
-  private
 
   #
   # Upload a new main.json version to the API

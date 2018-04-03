@@ -3,15 +3,27 @@
 
 - require 'state_abbr'
 
+- advocacy_variation ||= false
+- fill_color = advocacy_variation ? '#0094ca' : '#3E484F'
+- stroke_color = advocacy_variation ? 'white' : '#7A7A7A'
+
 #state-list.phone-feature
-  %h2 Choose a State
+  - if advocacy_variation
+    %h2 Choose your State
+  - else
+    %h2 Choose a State
+
   %form
     %select.dropdown#state-dropdown
       %option
       -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
         %option{value:abbr}= state
 
-%h2.tablet-feature Choose a State
+- if advocacy_variation
+  %h2.tablet-feature Choose your State
+- else
+  %h2.tablet-feature Choose a State
+
 #map.tablet-feature
 #infobox.greybox.col-33
   %p.info
@@ -106,8 +118,8 @@
 
       // Map styling
       stateHoverAnimation: 0,
-      stateStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
-      labelBackingStyles: {fill: '#3E484F', stroke: '#7A7A7A'},
+      stateStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
+      labelBackingStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
       labelBackingHoverStyles: {fill: '#DCDF8A'},
       stateHoverStyles: {fill: '#DCDF8A'},
       stateClickStyles: {fill: '#B9BF15', persistent: false}
