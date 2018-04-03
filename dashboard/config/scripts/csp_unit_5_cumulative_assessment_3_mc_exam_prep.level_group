@@ -1,0 +1,34 @@
+name 'CSP Unit 5 Cumulative Assessment 3 MC_exam_prep'
+title 'CS Principles Unit 5 Assessment 3'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_exam_prep'
+level 'cspu5_assess3_whileTrue_exam_prep'
+level 'cspu5_assess3_bakeSale_exam_prep'
+level 'cspu5_assess3_shortAnswer_exam_prep'
+level 'cspu5_assess3_robot_exam_prep'
+
+page
+level 'cspu5_assess3_loopValue1_exam_prep'
+level 'cspu5_assess3_loopValue2_exam_prep'
+level 'cspu5_assess3_loopValue3_exam_prep'
+level 'cspu5_assess3_impossibleOutput_exam_prep'
+
+page
+level 'cspu5_assess3_counter_exam_prep'
+level 'cspu5_assess3_rollDie_exam_prep'
+level 'cspu5_assess3_array1_exam_prep'
+level 'cspu5_assess3_array2_exam_prep'
+
+page
+level 'cspu5_assess3_array3_exam_prep'
+level 'cspu5_assess3_array4_exam_prep'
+level 'cspu5_assess3_array5_exam_prep'
+level 'cspu5_assess3_ageList_exam_prep'
+
+page
+level 'cspu5_assess3_listAppend_exam_prep'
+level 'cspu5_assess3_swap_exam_prep'
+level 'cspu5_assess3_mysterySwap_exam_prep'

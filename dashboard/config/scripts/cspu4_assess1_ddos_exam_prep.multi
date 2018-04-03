@@ -1,0 +1,14 @@
+name 'cspu4_assess1_DDoS_exam_prep'
+wrong 'A coordinated effort by a group to simultaneously attempt to gain entry to foreign government\'s servers or systems'
+wrong 'An effort by network engineers to focus all systems on catching a user or computer that has illegally gained access.'
+right 'An attempt to compromise a single target by flooding it with requests from multiple systems.'
+wrong 'An attempt to harass or extort all customers of one or more Internet Service Providers (ISPs).'
+
+markdown <<MARKDOWN
+What is a Distributed Denial of Service (DDoS) attack?
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

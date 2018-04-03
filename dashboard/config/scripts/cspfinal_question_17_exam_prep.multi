@@ -1,0 +1,9 @@
+name 'CSPFinal_Question_17_exam_prep'
+right 'Public key encryption is an encryption method which relies on separate keys for encrypting and decrypting information.'
+wrong 'Public key encryption is a highly secure encryption scheme that in which a single shared key is used by both the sender and receiver of the message.'
+wrong 'Public key encryption makes use of certain types of problems which are easier for humans to solve than computers.'
+wrong 'Public key encryption makes use of mathematical problems which no algorithm can be used to solve.'
+
+markdown <<MARKDOWN
+Which of the following statements best describes the properties of public key encryption?
+MARKDOWN
