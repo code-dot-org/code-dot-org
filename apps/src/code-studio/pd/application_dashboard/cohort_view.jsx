@@ -89,6 +89,10 @@ class CohortView extends React.Component {
     window.open(this.getCsvUrl());
   };
 
+  handleViewAllClick = () => {
+    this.context.router.push(`/${this.props.route.role}`);
+  };
+
   render() {
     if (this.state.loading) {
       return (
@@ -128,6 +132,12 @@ class CohortView extends React.Component {
               onClick={this.handleDownloadCsvClick}
             >
               Download CSV
+            </Button>
+            <Button
+              style={styles.button}
+              onClick={this.handleViewAllClick}
+            >
+              View All Applications
             </Button>
           </Col>
           <CohortViewTable
