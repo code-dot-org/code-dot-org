@@ -429,6 +429,13 @@ export const levelsByLesson = ({stages, levelProgress, currentLevelId}) => (
 );
 
 /**
+ * Get level data for one lesson/stage
+ */
+export const levelByLesson = ({stage, levelProgress, currentLevelId}) => (
+  stage.levels.map(level => levelWithStatus({levelProgress, currentLevelId}, level))
+);
+
+/**
  * Get data for a particular lesson/stage
  */
 export const levelsForLessonId = (state, lessonId) => (
