@@ -283,9 +283,16 @@ GameLab.prototype.init = function (config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.level.autoRunSetup && !config.level.edit_blocks) {
-      const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-      blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
-        this.runSetupCode.bind(this));
+      if (this.studioApp_.isUsingBlockly()) {
+        const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+        blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
+          this.runSetupCode.bind(this));
+      } else {
+        this.studioApp_.editor.on('change', this.runSetupCode.bind(this));
+        // Droplet doesn't automatically bubble up aceEditor changes
+        this.studioApp_.editor.aceEditor.on('change',
+          this.runSetupCode.bind(this));
+      }
     }
   };
 
@@ -574,7 +581,7 @@ GameLab.prototype.reset = function () {
   }
 };
 
-GameLab.prototype.runSetupCode = function () {
+GameLab.prototype.runSetupCode = _.debounce(function () {
   if (getStore().getState().runState.isRunning) {
     return;
   }
@@ -598,7 +605,7 @@ GameLab.prototype.runSetupCode = function () {
     setTimeout(() => document.body.removeChild(duplicateCanvas), 0);
   }
   this.execute(false /* keep Ticking */);
-};
+}, 50, {leading: true, maxWait: 250});
 
 GameLab.prototype.onPuzzleComplete = function (submit) {
   if (this.executionError) {
