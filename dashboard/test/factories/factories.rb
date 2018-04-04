@@ -49,7 +49,7 @@ FactoryGirl.define do
 
   factory :user do
     birthday Date.new(1991, 3, 14)
-    sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+    email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
     password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
