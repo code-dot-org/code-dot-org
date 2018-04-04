@@ -259,7 +259,7 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-blockly.Blocks.point_to = {
+  blockly.Blocks.point_to = {
     // Block for pointing to a specified direction
     helpUrl: '',
     init: function () {
@@ -322,7 +322,7 @@ blockly.Blocks.point_to = {
   };
 
   blockly.Blocks.point_to_by_constant_restricted.VALUE =
-      [30, 45, 60, 90, 120, 135, 150, 180].map(function (t) {
+      [0, 30, 45, 60, 90, 120, 135, 150, 180].map(function (t) {
         return [String(t), String(t)];
       });
 
