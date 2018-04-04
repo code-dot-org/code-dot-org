@@ -16,7 +16,7 @@ import {
 
 const styles = {
   button: {
-    margin: '20px auto'
+    margin: '20px 20px 20px auto'
   }
 };
 
