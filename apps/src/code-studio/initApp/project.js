@@ -69,9 +69,15 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
-// Server time at which the first project version was saved from this browser tab,
-// for logging purposes.
+// String representing server timestamp at which the first project version was
+// saved from this browser tab, to uniquely identify the browser tab for
+// logging purposes.
 var firstSaveTimestamp;
+// The last client time in milliseconds when we forced a new source version.
+let lastNewSourceVersionTime = 0;
+// Force a new source version if it has been this many milliseconds since we
+// last did so.
+let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
@@ -368,6 +374,9 @@ var projects = module.exports = {
     setCurrentData(data) {
       current = data;
     },
+    setSourceVersionInterval(seconds) {
+      newSourceVersionInterval = seconds * 1000;
+    }
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -751,8 +760,8 @@ var projects = module.exports = {
   },
 
   /**
-   * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided.
+   * Saves the project to the Channels API and Sources API. Calls `callback` on
+   * success if a callback function was provided.
    * @param {object} sourceAndHtml Project source code to save.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
@@ -765,7 +774,15 @@ var projects = module.exports = {
 
     $('.project_updated_at').text(msg.saving());
 
+    // Force a new version if we have not done so recently. This creates
+    // periodic "checkpoint" saves if the user works for a long period of time
+    // without refreshing the browser window.
+    if (lastNewSourceVersionTime + newSourceVersionInterval < Date.now()) {
+      forceNewVersion = true;
+    }
+
     if (forceNewVersion) {
+      lastNewSourceVersionTime = Date.now();
       currentSourceVersionId = null;
     }
 
@@ -782,14 +799,6 @@ var projects = module.exports = {
     }
 
     unpackSources(sourceAndHtml);
-
-    const updateChannels = () => {
-      channels.update(channelId, current, function (err, data) {
-        initialSaveComplete = true;
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
-      }.bind(this));
-    };
 
     if (this.useSourcesApi()) {
       let params = '';
@@ -812,11 +821,25 @@ var projects = module.exports = {
         currentSourceVersionId = response.versionId;
         current.migratedToS3 = true;
 
-        updateChannels();
+        this.updateChannels_(callback);
       }.bind(this));
     } else {
-      updateChannels();
+      this.updateChannels_(callback);
     }
+  },
+
+  /**
+   * Saves the project to the Channels API. Calls `callback` on success if a
+   * callback function was provided.
+   * @param {function} callback Function to be called after saving.
+   * @private
+   */
+  updateChannels_(callback) {
+    channels.update(current.id, current, function (err, data) {
+      initialSaveComplete = true;
+      this.updateCurrentData_(err, data, false);
+      executeCallback(callback, data);
+    }.bind(this));
   },
 
   getSourceForChannel(channelId, callback) {
@@ -999,15 +1022,16 @@ var projects = module.exports = {
     this.save().then(callback);
   },
   /**
-   * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
+   * Freezes the project. Also hides so that it's not available for
+   * deleting/renaming in the user's project list.
    */
   freeze(callback) {
+    if (!(current && current.isOwner)) {
+      return;
+    }
     current.frozen = true;
     current.hidden = true;
-    this.save().then(data => {
-      executeCallback(callback, data);
-      redirectEditView();
-    });
+    this.updateChannels_(callback);
   },
 
   /**
