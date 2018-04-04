@@ -6,19 +6,17 @@ require_relative('../config/environment')
 puts "Starting to batch update all students under 13."
 num_students_updated = 0
 
+batch_size = 10000
 min_birthday = Date.today - 13.years
-User.
-  where('birthday IS NULL OR birthday > ?', min_birthday).
-  find_in_batches(batch_size: 10_000) do |group|
-    User.import(
-      [:id, :properties],
-      group.pluck(:id, :properties).tap {|users| users.each {|_, properties| properties['sharing_disabled'] = true}},
-      validate: false,
-      on_duplicate_key_update: [:properties]
-    )
-    num_students_updated += group.size
-    puts "Updated #{num_students_updated} students so far." if num_students_updated % 100000 == 0
+User.where('birthday IS NULL OR birthday > ?', min_birthday).in_batches(of: batch_size) do |where|
+  values = where.pluck(:id, :properties)
+  values.each do |_id, properties|
+    properties['sharing_disabled'] = true
   end
+  User.import([:id, :properties], values, validate: false, on_duplicate_key_update: [:properties])
+  num_students_updated += values.length
+  puts "Updated #{num_students_updated} students so far."
+end
 
 # Output how many total students were updated.
 puts "Finished updating #{num_students_updated} students."
