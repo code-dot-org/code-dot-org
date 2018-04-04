@@ -586,9 +586,10 @@ GameLab.prototype.runSetupCode = _.debounce(function () {
     return;
   }
   const visualizationCanvas = document.getElementById('defaultCanvas0');
-  let duplicateCanvas;
   if (visualizationCanvas) {
-    duplicateCanvas = document.createElement('canvas');
+    // Cover the playspace with a copy of itself while rerunning the setup code
+    // to avoid flickering
+    const duplicateCanvas = document.createElement('canvas');
     const visualizationRect = visualizationCanvas.getBoundingClientRect();
     duplicateCanvas.width = visualizationRect.width;
     duplicateCanvas.height = visualizationRect.height;
