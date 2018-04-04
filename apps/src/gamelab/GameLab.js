@@ -147,7 +147,7 @@ GameLab.prototype.log = function (object, logLevel) {
  */
 GameLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
-  this.studioApp_.reset = this.reset.bind(this);
+  this.studioApp_.reset = this.resetHandler.bind(this);
   this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
 
   this.studioApp_.setCheckForEmptyBlocks(true);
@@ -509,11 +509,22 @@ GameLab.prototype.startTickTimer = function () {
 };
 
 /**
- * Reset GameLab to its initial state.
+ * Reset GameLab to its initial state and optionally run setup code
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
-GameLab.prototype.reset = function (ignore) {
+GameLab.prototype.resetHandler = function (ignore) {
+  if (this.level.autoRunSetup && !this.level.edit_blocks) {
+    this.runSetupCode();
+  } else {
+    this.reset();
+  }
+};
+
+/**
+ * Reset GameLab to its initial state.
+ */
+GameLab.prototype.reset = function () {
   this.haltExecution_();
 
   /*
@@ -850,7 +861,7 @@ GameLab.prototype.execute = function (keepTicking = true) {
   this.response = null;
 
   // Reset all state.
-  this.studioApp_.reset();
+  this.reset();
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (this.studioApp_.isUsingBlockly() &&
