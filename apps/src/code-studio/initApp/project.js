@@ -77,7 +77,7 @@ var firstSaveTimestamp;
 let lastNewSourceVersionTime = 0;
 // Force a new source version if it has been this many milliseconds since we
 // last did so.
-const newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
+let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
@@ -374,6 +374,9 @@ var projects = module.exports = {
     setCurrentData(data) {
       current = data;
     },
+    setSourceVersionInterval(seconds) {
+      newSourceVersionInterval = seconds * 1000;
+    }
   },
 
   //////////////////////////////////////////////////////////////////////
