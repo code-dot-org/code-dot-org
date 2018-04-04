@@ -17,27 +17,34 @@ class CensusMapInfoWindow extends Component {
   render() {
     let censusMessage;
     let missingCensusData = false;
+    let color = "";
 
     switch (this.props.teachesCs) {
       case 'YES':
         censusMessage = "We believe this school offers Computer Science.";
+        color = "green";
         break;
       case 'NO':
         censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
+        color = "blue";
         break;
       case 'HISTORICAL_YES':
         censusMessage = "We believe this school historically offered Computer Science.";
+        color = "green";
         break;
       case 'HISTORICAL_NO':
         censusMessage = "We believe this school historically offered limited or no Computer Science opportunities.";
+        color = "blue";
         break;
       case 'MAYBE':
       case 'HISTORICAL_MAYBE':
         censusMessage = "We have conflicting data for this school.";
+        color = "yellow";
         break;
       default:
         censusMessage = "We need data for this school.";
         missingCensusData = true;
+        color = "white";
     }
 
     const schoolDropdownOption = {
@@ -53,6 +60,8 @@ class CensusMapInfoWindow extends Component {
       },
     };
 
+    const colorClass = `color-small ${color}`;
+
     return (
       <div id="census-info-window" className="census-info-window">
         <h4>
@@ -64,6 +73,7 @@ class CensusMapInfoWindow extends Component {
         </h4>
         <hr />
         <div className="census-message">
+          <div className={colorClass}></div>
           {censusMessage}
           {!missingCensusData && (
             <span>
