@@ -267,7 +267,8 @@ blockly.Blocks.point_to = {
       this.appendDummyInput()
           .appendTitle(msg.pointTo());
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
+          .appendTitle(new blockly.FieldTextInput(
+              '0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
           .appendTitle(msg.degrees());
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -278,6 +279,55 @@ blockly.Blocks.point_to = {
 
   generator.point_to = function () {
     let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
+    return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.point_to_param = {
+  // Block for pointing to a specified direction
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(msg.pointTo());
+      this.appendValueInput('VALUE');
+      this.appendDummyInput()
+          .appendTitle(msg.degrees());
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.pointTo());
+    }
+  };
+
+  generator.point_to_param = function () {
+    let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
+    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value},
+        'block_id_${this.id}');\n`;
+  };
+
+  blockly.Blocks.point_to_by_constant_restricted = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(msg.pointTo());
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(this.VALUE), 'VALUE')
+          .appendTitle(msg.degrees());
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.pointTo());
+    }
+  };
+
+  blockly.Blocks.point_to_by_constant_restricted.VALUE =
+      [30, 45, 60, 90, 120, 135, 150, 180].map(function (t) {
+        return [String(t), String(t)];
+      });
+
+  generator.point_to_by_constant_restricted = function () {
+    let value = window.parseFloat(this.getTitleValue('VALUE'));
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
