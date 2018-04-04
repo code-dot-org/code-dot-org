@@ -67,6 +67,14 @@
   float: left;
 }
 
+.color-small {
+  display: inline-block;
+  border: 1px solid;
+  height: 10px;
+  width: 10px;
+  margin-right: 8px;
+}
+
 .green {
   background: #66DC57;
 }
