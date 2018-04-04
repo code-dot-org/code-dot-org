@@ -43,8 +43,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     howTraveling: "Code.org provides a round trip flight for every TeacherCon attendee. If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to TeacherCon. If you choose not to fly, and live at least 25 miles from the TeacherCon location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trains, or public transit if you live less than 25 miles from the TeacherCon location. How will you travel to TeacherCon?",
     needHotel: "Code.org provides a hotel room for every TeacherCon attendee. Attendees will not be required to share a room. Would you like a hotel room at TeacherCon?",
     needAda: "Do you require an ADA accessible hotel room?",
-    explainAda: "Please explain your specific accommodation needs.",
-    travelCovered: "Code.org provides travel and hotel funding for one person from each Regional Partner. Will we be covering your trip or will you be funding your own travel and hotel at TeacherCon?"
+    explainAda: "Please explain your specific accommodation needs."
   };
 
   /**
@@ -88,10 +87,6 @@ export default class TravelPlans extends Teachercon1819FormComponent {
       if (data.needAda === 'Yes') {
         requiredFields.push("explainAda");
       }
-    }
-
-    if (data.applicationType === 'Partner') {
-      requiredFields.push('travelCovered');
     }
 
     return requiredFields;
@@ -147,9 +142,6 @@ export default class TravelPlans extends Teachercon1819FormComponent {
           {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
             'I will carpool with another TeacherCon attendee (Please note who):': 'carpooling_with_attendee'
           })}
-          {
-            this.isPartnerApplication() && this.radioButtonsFor("travelCovered")
-          }
           {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel === 'Yes' &&
