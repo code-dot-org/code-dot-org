@@ -18,6 +18,12 @@
   %strong Urban:
   = @regional_partner.urban? ? 'Yes' : 'No'
 %p
+  %strong CSD Cohort Capacity:
+  = @regional_partner.cohort_capacity_csd
+%p
+  %strong CSP Cohort Capacity:
+  = @regional_partner.cohort_capacity_csp
+%p
   %strong Contact Email:
   = @regional_partner.contact.try(:email)
 %p
