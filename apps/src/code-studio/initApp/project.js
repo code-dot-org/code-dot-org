@@ -73,7 +73,7 @@ var currentSourceVersionId;
 // saved from this browser tab, to uniquely identify the browser tab for
 // logging purposes.
 var firstSaveTimestamp;
-// The last time in milliseconds when we forced a new source version.
+// The last client time in milliseconds when we forced a new source version.
 let lastNewSourceVersionTime = 0;
 // Force a new source version if it has been this many milliseconds since we
 // last did so.
