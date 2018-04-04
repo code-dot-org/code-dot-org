@@ -567,6 +567,25 @@ GameLab.prototype.runSetupCode = function () {
   if (getStore().getState().runState.isRunning) {
     return;
   }
+  const visualizationCanvas = document.getElementById('defaultCanvas0');
+  let duplicateCanvas;
+  if (visualizationCanvas) {
+    duplicateCanvas = document.createElement('canvas');
+    const visualizationRect = visualizationCanvas.getBoundingClientRect();
+    duplicateCanvas.width = visualizationRect.width;
+    duplicateCanvas.height = visualizationRect.height;
+    Object.assign(duplicateCanvas.style, {
+      position: 'absolute',
+      top: visualizationRect.top + 'px',
+      left: visualizationRect.left + 'px',
+      zIndex: 1,
+    });
+    const duplicateCtx = duplicateCanvas.getContext('2d');
+    duplicateCtx.drawImage(visualizationCanvas, 0, 0);
+
+    document.body.appendChild(duplicateCanvas);
+    setTimeout(() => document.body.removeChild(duplicateCanvas), 0);
+  }
   this.execute(false /* keep Ticking */);
 };
 
