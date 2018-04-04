@@ -410,7 +410,7 @@ Resources:
           # TODO: Set prod_stack_name: false after production cutover to CloudFormation-managed CloudFront distribution,
           # to update CloudFront aliases to the production CNAME entries.
           [studio_subdomain(prod_stack_name: true)] :
-          [subdomain(prod_stack_name: true)] + (CDO.partners).map{|x| subdomain(nil, x, prod_stack_name: true)},
+          [subdomain(prod_stack_name: true)] + (CDO.partners + ['advocacy']).map{|x| subdomain(nil, x, prod_stack_name: true)},
         {
           AcmCertificateArn: certificate_arn,
           MinimumProtocolVersion: 'TLSv1',
