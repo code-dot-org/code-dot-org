@@ -15,6 +15,7 @@ import manageStudents, {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
+import SectionsSharingButton from '@cdo/apps/templates/teacherDashboard/SectionsSharingButton';
 import ManageStudentsTable from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
@@ -52,7 +53,7 @@ function syncOauthSectionMountPoint() {
  * at the bottom of the manage students tab.
  * @param {number} sectionId
  */
-export function renderLoginTypeControls(sectionId) {
+export function renderLoginTypeAndSharingControls(sectionId) {
   registerReducers({teacherSections});
   const store = getStore();
 
@@ -66,6 +67,14 @@ export function renderLoginTypeControls(sectionId) {
       />
     </Provider>,
     loginTypeControlsMountPoint()
+  );
+  ReactDOM.render(
+    <Provider store={store}>
+      <SectionsSharingButton
+        sectionId={sectionId}
+      />
+    </Provider>,
+    shareSettingMountPoint()
   );
 }
 
@@ -101,10 +110,15 @@ export function renderSectionTable(sectionId, loginType, courseName) {
   });
 }
 
-export function unmountLoginTypeControls() {
+export function unmountLoginTypeAndSharingControls() {
   ReactDOM.unmountComponentAtNode(loginTypeControlsMountPoint());
+  ReactDOM.unmountComponentAtNode(shareSettingMountPoint());
 }
 
 function loginTypeControlsMountPoint() {
   return document.getElementById('login-type-react');
+}
+
+function shareSettingMountPoint() {
+  return document.getElementById('share-setting-react');
 }
