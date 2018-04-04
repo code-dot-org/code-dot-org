@@ -281,6 +281,12 @@ GameLab.prototype.init = function (config) {
     });
 
     this.setCrosshairCursorForPlaySpace();
+
+    if (this.level.autoRunSetup && !config.level.edit_blocks) {
+      const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+      blocklyCanvas.addEventListener('blocklyBlockSpaceChange',
+        this.runSetupCode.bind(this));
+    }
   };
 
   // Always hide DPad until better UI is created.
@@ -557,6 +563,13 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
+GameLab.prototype.runSetupCode = function () {
+  if (getStore().getState().runState.isRunning) {
+    return;
+  }
+  this.execute(false /* keep Ticking */);
+};
+
 GameLab.prototype.onPuzzleComplete = function (submit) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
@@ -811,7 +824,7 @@ GameLab.prototype.onMouseUp = function (e) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-GameLab.prototype.execute = function () {
+GameLab.prototype.execute = function (keepTicking = true) {
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -830,6 +843,7 @@ GameLab.prototype.execute = function () {
   }
 
   this.gameLabP5.startExecution();
+  this.gameLabP5.setLoop(keepTicking);
 
   if (!this.JSInterpreter ||
       !this.JSInterpreter.initialized() ||
@@ -837,12 +851,14 @@ GameLab.prototype.execute = function () {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.studioApp_.isUsingBlockly() && keepTicking) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  this.startTickTimer();
+  if (keepTicking) {
+    this.startTickTimer();
+  }
 };
 
 GameLab.prototype.initInterpreter = function () {
