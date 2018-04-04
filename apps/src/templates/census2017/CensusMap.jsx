@@ -353,10 +353,20 @@ export default class CensusMap extends Component {
           </div>
         </div>
         <div id="map-footer">
-          <span id="footer-text">
-            In partnership with
-          </span>
-          <img src="/images/fit-200/avatars/computer_science_teachers_association.png"/>
+          <div id="left">
+            <a
+              href="/yourschool/about"
+              target="_blank"
+            >
+              Summary of the data sources we use
+            </a>
+          </div>
+          <div id="right">
+            <span id="footer-text">
+              In partnership with
+            </span>
+            <img src="/images/fit-200/avatars/computer_science_teachers_association.png"/>
+          </div>
         </div>
         <br />
         <br />
