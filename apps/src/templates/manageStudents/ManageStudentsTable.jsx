@@ -20,9 +20,6 @@ import { connect } from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import Button from '../Button';
-import experiments from '@cdo/apps/util/experiments';
-
-const showShareColumn = experiments.isEnabled(experiments.SHARE_COLUMN);
 
 const styles = {
   headerName: {
@@ -154,7 +151,6 @@ class ManageStudentsTable extends Component {
         id={rowData.id}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
-        shareColumnExperimentEnabled={showShareColumn}
       />
     );
   };
@@ -218,12 +214,10 @@ class ManageStudentsTable extends Component {
               {i18n.actions()}
             </div>
             <div style={styles.headerIcon}>
-              {showShareColumn &&
-                <ManageStudentsActionsHeaderCell
-                  editAll={this.props.editAll}
-                  isShareColumnVisible={this.props.showSharingColumn}
-                />
-              }
+              <ManageStudentsActionsHeaderCell
+                editAll={this.props.editAll}
+                isShareColumnVisible={this.props.showSharingColumn}
+              />
             </div>
           </span>
         }

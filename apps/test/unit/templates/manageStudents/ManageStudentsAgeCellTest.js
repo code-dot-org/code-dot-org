@@ -73,7 +73,6 @@ describe('ManageStudentAgeCell', () => {
         isEditing={true}
         editStudent={editStudent}
         setSharingDefault={setSharingDefault}
-        shareColumnExperimentEnabled={true}
       />
     );
     expect(editStudent.callCount).to.equal(0);
