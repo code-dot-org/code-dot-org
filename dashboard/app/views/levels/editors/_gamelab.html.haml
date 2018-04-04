@@ -81,6 +81,10 @@
   = boolean_check_box f, :debugger_disabled
 
 .field
+  =f.label 'Run setup code as you write it (under development)'
+  = boolean_check_box f, :auto_run_setup
+
+.field
   =f.label 'Animations are paused by default'
   %p
     If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
