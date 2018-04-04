@@ -69,9 +69,15 @@ var PathPart = {
  */
 var current;
 var currentSourceVersionId;
-// Server time at which the first project version was saved from this browser tab,
-// for logging purposes.
+// String representing server timestamp at which the first project version was
+// saved from this browser tab, to uniquely identify the browser tab for
+// logging purposes.
 var firstSaveTimestamp;
+// The last client time in milliseconds when we forced a new source version.
+let lastNewSourceVersionTime = 0;
+// Force a new source version if it has been this many milliseconds since we
+// last did so.
+let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
@@ -368,6 +374,9 @@ var projects = module.exports = {
     setCurrentData(data) {
       current = data;
     },
+    setSourceVersionInterval(seconds) {
+      newSourceVersionInterval = seconds * 1000;
+    }
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -765,7 +774,15 @@ var projects = module.exports = {
 
     $('.project_updated_at').text(msg.saving());
 
+    // Force a new version if we have not done so recently. This creates
+    // periodic "checkpoint" saves if the user works for a long period of time
+    // without refreshing the browser window.
+    if (lastNewSourceVersionTime + newSourceVersionInterval < Date.now()) {
+      forceNewVersion = true;
+    }
+
     if (forceNewVersion) {
+      lastNewSourceVersionTime = Date.now();
       currentSourceVersionId = null;
     }
 
