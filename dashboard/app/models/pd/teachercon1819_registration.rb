@@ -187,7 +187,7 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
 
     # some fields are required based on the values of other fields
 
-    if hash[:live_far_away] == YES
+    if hash[:live_far_away] == YES && !regional_partner_id?
       requireds.concat [
         :address_street,
         :address_city,
