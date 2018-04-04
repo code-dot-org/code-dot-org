@@ -78,7 +78,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
    */
   static getDynamicallyRequiredFields(data) {
     const requiredFields = [];
-    if (data.liveFarAway === 'Yes') {
+    if (data.liveFarAway === 'Yes' && data.applicationType !== 'Partner') {
       requiredFields.push(
         "addressStreet",
         "addressCity",
@@ -140,6 +140,7 @@ export default class TravelPlans extends Teachercon1819FormComponent {
           {
             this.props.data.liveFarAway &&
             this.props.data.liveFarAway === 'Yes' &&
+            !this.isPartnerApplication() &&
             <FormGroup>
               <ControlLabel>
                 Please provide your home address
