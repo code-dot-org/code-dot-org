@@ -38,6 +38,19 @@ var GameLabP5 = function () {
       this.p5.frameRate(this.prevFrameRate || defaultFrameRate);
     }
   };
+
+  this.setLoop = (shouldLoop) => {
+    if (!this.p5) {
+      return;
+    }
+    if (shouldLoop) {
+      // Calling p5.loop() invokes p5.draw(), but we might still be waiting for
+      // animations to load.
+      this.p5._loop = true;
+    } else {
+      this.p5.noLoop();
+    }
+  };
 };
 
 module.exports = GameLabP5;
