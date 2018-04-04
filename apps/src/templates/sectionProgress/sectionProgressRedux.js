@@ -140,6 +140,7 @@ export default function sectionProgress(state=initialState, action) {
   * Retrieves the progress for the section in the selected script
   * @returns {studentLevelProgressPropType} keys are student ids, values are
   * objects of {levelIds: LevelStatus}
+  * TODO(caleybrock) write a test for this function
   */
 export const getCurrentProgress = (state) => {
   return state.sectionProgress.studentLevelProgressByScript[state.sectionProgress.scriptId];
@@ -148,6 +149,7 @@ export const getCurrentProgress = (state) => {
 /**
  * Retrieves the script data for the section in the selected script
  * @returns {scriptDataPropType} object containing metadata about the script structre
+ * TODO(caleybrock) write a test for this function
  */
 export const getCurrentScriptData = (state) => {
   return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
