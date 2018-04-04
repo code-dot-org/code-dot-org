@@ -101,7 +101,7 @@ export const getCurrentScriptData = (state) => {
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
-    $.getJSON(`/dashboardapi/script_structure/${state.section.id}`, scriptData => {
+    $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
       dispatch(addScriptData(scriptId, scriptData));
     });
 
