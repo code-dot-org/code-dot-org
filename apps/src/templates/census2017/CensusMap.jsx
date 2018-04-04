@@ -65,13 +65,17 @@ class CensusMapInfoWindow extends Component {
         <hr />
         <div className="census-message">
           {censusMessage}
-          &nbsp;
-          <a
-            href="/yourschool/about"
-            target="_blank"
-          >
-            (Why?)
-          </a>
+          {!missingCensusData && (
+            <span>
+              &nbsp;
+              <a
+                href="/yourschool/about"
+                target="_blank"
+              >
+                (Why?)
+              </a>
+            </span>
+          )}
         </div>
         <div className="button-container">
           <div className="button-link-div">
