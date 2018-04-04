@@ -13,6 +13,8 @@ import {
   setScriptId,
   sectionDataPropType,
   validScriptPropType,
+  scriptDataPropType,
+  studentLevelProgressPropType,
 } from './sectionProgressRedux';
 
 /**
@@ -28,8 +30,8 @@ class SectionProgress extends Component {
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
-    scriptData: PropTypes.object,
-    studentLevelProgress: PropTypes.object,
+    scriptData: scriptDataPropType,
+    studentLevelProgress: studentLevelProgressPropType,
 
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,

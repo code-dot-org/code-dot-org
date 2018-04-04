@@ -50,6 +50,28 @@ export const validScriptPropType = PropTypes.shape({
   position: PropTypes.number,
 });
 
+/**
+ * Shape for scriptData
+ * The data we get from the server's call to script.summarize. The format
+ * ends up being similar to that which we send to initProgress in progressRedux.
+ * The important part is scriptData.stages, which gets used by levelsWithLesson
+ */
+export const scriptDataPropType = PropTypes.shape({
+  stages: PropTypes.arrayOf(PropTypes.shape({
+    levels: PropTypes.arrayOf(PropTypes.object).isRequired
+  })),
+  id: PropTypes.number.isRequired,
+});
+
+/**
+ * Shape for studentLevelProgress
+ * For each student id, has a mapping from level id to the student's result
+ * on that level
+ */
+export const studentLevelProgressPropType = PropTypes.objectOf(
+  PropTypes.objectOf(PropTypes.number)
+);
+
 const initialState = {
   // TODO: default to what is assigned to section, or at least come up with
   // some heuristic so that we have a default
@@ -112,7 +134,8 @@ export default function sectionProgress(state=initialState, action) {
 
 /**
   * Retrieves the progress for the section in the selected script
-  * @returns {Object} keys are student ids, values are objects of {levelIds: LevelStatus}
+  * @returns {studentLevelProgressPropType} keys are student ids, values are
+  * objects of {levelIds: LevelStatus}
   */
 export const getCurrentProgress = (state) => {
   return state.sectionProgress.studentLevelProgressByScript[state.sectionProgress.scriptId];
@@ -120,7 +143,7 @@ export const getCurrentProgress = (state) => {
 
 /**
  * Retrieves the script data for the section in the selected script
- * @returns {Object} object containing metadata about the script structre
+ * @returns {scriptDataPropType} object containing metadata about the script structre
  */
 export const getCurrentScriptData = (state) => {
   return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
@@ -130,7 +153,7 @@ export const getCurrentScriptData = (state) => {
 /**
  * Query the server for script data (info about the levels in the script) and
  * also for user progress on that script
-  * @param {string} scriptId to load data for
+ * @param {string} scriptId to load data for
  */
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
