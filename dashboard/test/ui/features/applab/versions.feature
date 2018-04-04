@@ -65,6 +65,7 @@ Scenario: Project Load and Reload
   Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 
+@no_ie
 Scenario: Project Version Checkpoints
   Given I am on "http://studio.code.org/projects/applab/new"
   And I rotate to landscape

@@ -219,12 +219,6 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
   )
 
-  Pd::Session.create!(
-    pd_workshop_id: workshop.id,
-    start: DateTime.new(2016, 3, 15) + 3.hours,
-    end: DateTime.new(2016, 3, 15) + 9.hours
-  )
-
   # Facilitators
   if number_type == 'facilitators'
     number.to_i.times do

@@ -7,15 +7,27 @@
 }
 
 #map-footer {
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+#map-footer #left {
+  float: left;
+  margin-right: 40px;
+}
+
+#map-footer #left a {
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+#map-footer #right {
   float: right;
-  padding-top: 10px;
-  padding-bottom: 20px;
 }
 
 #footer-text {
-  font-family: 'Gotham 7r' sans-serif;
-  font-size: 20px;
-  margin-right: 25px;
+  font-family: 'Gotham 4r', sans-serif;
+  vertical-align: top;
+  margin-right: 15px;
 }
 
 .signup-button {
@@ -96,7 +108,12 @@
 }
 
 .census-info-window .census-message {
+  font-family: 'Gotham 3r', sans-serif;
   text-align: center;
+}
+
+.census-info-window .census-message a {
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .census-info-window .button-container {

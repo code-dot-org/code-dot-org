@@ -101,6 +101,8 @@ class RegionalPartnersController < ApplicationController
       name
       group
       urban
+      cohort_capacity_csd
+      cohort_capacity_csp
       attention
       street
       apartment_or_suite
