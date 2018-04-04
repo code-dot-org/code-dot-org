@@ -26,8 +26,11 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     'needHotel',
     'needAda',
     'explainAda',
-    'dietaryNeedsDetails'
+    'dietaryNeedsDetails',
+    'travelCovered'
   ];
+
+  static howTravelingString = " If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to TeacherCon. If you choose not to fly, and live at least 25 miles from the TeacherCon location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trains, or public transit if you live less than 25 miles from the TeacherCon location. How will you travel to TeacherCon?";
 
   static labels = {
     contactFirstName: "First name:",
@@ -40,7 +43,13 @@ export default class TravelPlans extends Teachercon1819FormComponent {
     addressCity: "City",
     addressState: "State",
     addressZip: "Zip",
-    howTraveling: "Code.org provides a round trip flight for every TeacherCon attendee. If you choose to fly, we will provide you with detailed flight booking instructions approximately six weeks prior to TeacherCon. If you choose not to fly, and live at least 25 miles from the TeacherCon location, Code.org will provide you with a $150 gift card to help cover the cost of driving, trains, or public transit. Code.org is not able to provide reimbursement for the cost of driving, trains, or public transit if you live less than 25 miles from the TeacherCon location. How will you travel to TeacherCon?",
+    howTraveling: "Code.org provides a round trip flight for every TeacherCon attendee. " + TravelPlans.howTravelingString,
+    howTravelingPartner: (
+      <span>
+        <strong>Code.org provides a round trip flight for one Program Manager from each Regional Partner.</strong>
+        {TravelPlans.howTravelingString}
+      </span>
+    ),
     needHotel: "Code.org provides a hotel room for every TeacherCon attendee. Attendees will not be required to share a room. Would you like a hotel room at TeacherCon?",
     needAda: "Do you require an ADA accessible hotel room?",
     explainAda: "Please explain your specific accommodation needs.",
@@ -146,10 +155,10 @@ export default class TravelPlans extends Teachercon1819FormComponent {
         <FormGroup>
           {this.radioButtonsWithAdditionalTextFieldsFor("howTraveling", {
             'I will carpool with another TeacherCon attendee (Please note who):': 'carpooling_with_attendee'
+          }, {
+            label: this.isPartnerApplication() ? TravelPlans.labels['howTravelingPartner'] : TravelPlans.labels['howTraveling']
           })}
-          {
-            this.isPartnerApplication() && this.radioButtonsFor("travelCovered")
-          }
+          {this.isPartnerApplication() && this.radioButtonsFor("travelCovered")}
           {this.radioButtonsFor("needHotel")}
           {
             this.props.data.needHotel === 'Yes' &&
