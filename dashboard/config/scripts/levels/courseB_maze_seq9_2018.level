@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 3,
   "properties": {
-    "skin": "birds",
-    "instructions": "Challenge: Move around the TNT to get the bird to the pig.",
+    "skin": "scrat",
+    "instructions": "Challenge: Move around the broken ice to get Scrat to the acorn.",
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",
@@ -27,7 +27,7 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing down all of the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seq9_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bab2eeecaf82c4bc842a491e76cb4041/courseB_maze_seq9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Build your program a block at a time and test as you build.\",\"hint_id\":\"courseB_maze_seq9_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2629ff37a17271c59f483b722ef4fd9b/courseB_maze_seq9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There are two ways to solve this puzzle.\",\"hint_id\":\"courseB_maze_seq9_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c35bf9f0669bdccc19d3410495c147db/courseB_maze_seq9.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Stuck?  Try this path!\",\"hint_id\":\"courseB_maze_seq9_d\",\"hint_type\":\"general\",\"hint_path\":\"[[5,3],[5,2],[3,2],[3,3],[2,3]]\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5c51d8016174b0c90db59c8a86614437/courseB_maze_seq9.mp3\"}]",
-    "markdown_instructions": "**Challenge:** Move around the TNT to get the bird to the pig.",
+    "markdown_instructions": "**Challenge:** Move around the broken ice to get Scrat to the acorn.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -35,11 +35,15 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 5177,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "top_level_procedure_autopopulate": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 22:56:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:15:21 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-08 22:54:06 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-08 22:57:34 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-28 22:56:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:15:21 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-11-08 22:54:06 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-08 22:57:34 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-03 23:30:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-04-03 23:31:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
