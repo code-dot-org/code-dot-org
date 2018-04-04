@@ -1,4 +1,5 @@
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
+import { PropTypes } from 'react';
 import _ from 'lodash';
 
 const SET_SCRIPT = 'sectionProgress/SET_SCRIPT';
@@ -23,6 +24,31 @@ export const ViewType = {
   SUMMARY: "summary",
   DETAIL: "detail",
 };
+
+/**
+ * Shape for the section
+ * The section we get directly from angular right now. This gives us a
+ * different shape than some other places we use sections. For now, I'm just
+ * going to document the parts of section that we use here
+ */
+export const sectionDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  students: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  })).isRequired
+});
+
+/**
+ * Shape for a validScript
+ */
+export const validScriptPropType = PropTypes.shape({
+  category: PropTypes.string.isRequired,
+  category_priority: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.number,
+});
 
 const initialState = {
   // TODO: default to what is assigned to section, or at least come up with
@@ -84,24 +110,34 @@ export default function sectionProgress(state=initialState, action) {
 
 // Selector functions
 
-// Retrieves the progress for the section in the selected script
+/**
+  * Retrieves the progress for the section in the selected script
+  * @returns {Object} keys are student ids, values are objects of {levelIds: LevelStatus}
+  */
 export const getCurrentProgress = (state) => {
   return state.sectionProgress.studentLevelProgressByScript[state.sectionProgress.scriptId];
 };
 
-// Retrieves the script data for the section in the selected script
+/**
+ * Retrieves the script data for the section in the selected script
+ * @returns {Object} object containing metadata about the script structre
+ */
 export const getCurrentScriptData = (state) => {
   return state.sectionProgress.scriptDataByScript[state.sectionProgress.scriptId];
 };
 
+
 /**
  * Query the server for script data (info about the levels in the script) and
  * also for user progress on that script
+  * @param {string} scriptId to load data for
  */
 export const loadScript = (scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
     $.getJSON(`/dashboardapi/script_structure/${scriptId}`, scriptData => {
+      // TODO(caleybrock): we don't need all these feilds, clean up this data before dispatching
+      // it to redux.
       dispatch(addScriptData(scriptId, scriptData));
     });
 
