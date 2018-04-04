@@ -110,6 +110,7 @@ class SectionProgress extends Component {
             <VirtualizedDetailView
               section={section}
               scriptData={scriptData}
+              studentLevelProgress={studentLevelProgress}
             />
             <SectionScriptProgress
               section={section}
