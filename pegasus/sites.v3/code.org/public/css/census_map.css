@@ -96,7 +96,12 @@
 }
 
 .census-info-window .census-message {
+  font-family: 'Gotham 3r', sans-serif;
   text-align: center;
+}
+
+.census-info-window .census-message a {
+  font-family: 'Gotham 5r', sans-serif;
 }
 
 .census-info-window .button-container {

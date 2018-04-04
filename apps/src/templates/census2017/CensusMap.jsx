@@ -63,7 +63,16 @@ class CensusMapInfoWindow extends Component {
           ({this.props.city}, {this.props.state})
         </h4>
         <hr />
-        <div className="census-message">{censusMessage}</div>
+        <div className="census-message">
+          {censusMessage}
+          &nbsp;
+          <a
+            href="/yourschool/about"
+            target="_blank"
+          >
+            (Why?)
+          </a>
+        </div>
         <div className="button-container">
           <div className="button-link-div">
             <a onClick={() => this.props.onTakeSurveyClick(schoolDropdownOption, false)}>
