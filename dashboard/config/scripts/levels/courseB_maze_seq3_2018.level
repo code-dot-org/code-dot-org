@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "skin": "birds",
+    "skin": "scrat",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
@@ -25,22 +25,26 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?\",\"hint_id\":\"courseB_maze_seq3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fc84034a9d3f1ed1bd1bdd8f97f33d6c/courseB_maze_seq3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the step button to find where the program goes wrong. Is it the first step? The second?\",\"hint_id\":\"courseB_maze_seq3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be014cfad068b3140e882c0e1e61d607/courseB_maze_seq3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The <xml><block type=\\\"maze_moveWest\\\"/></xml> block doesn't seem to be moving the bird in the right direction.\",\"hint_id\":\"courseB_maze_seq3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6aa23e061907fe2ec0806015e15a53c6/courseB_maze_seq3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One of the blocks is moving Scrat in the wrong direction. Can you figure out which one and replace it with the correct block?\",\"hint_id\":\"courseB_maze_seq3_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8cd89b95687c6d26ef52ca6edb2d11b0/courseB_maze_seq3_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the step button to find where the program goes wrong. Is it the first step? The second?\",\"hint_id\":\"courseB_maze_seq3_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be014cfad068b3140e882c0e1e61d607/courseB_maze_seq3_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The <xml><block type=\\\"maze_moveWest\\\"/></xml> block doesn't seem to be moving the bird in the right direction.\",\"hint_id\":\"courseB_maze_seq3_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6aa23e061907fe2ec0806015e15a53c6/courseB_maze_seq3_2018.mp3\"}]",
     "instructions_important": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseB_maze_seq3_1\",\r\n  \"callout_text\": \"The grey blocks are made of stone and can't be thrown away.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 50\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "tts_instructions_override": "Fix the code to get me to the pig!",
+    "tts_instructions_override": "Fix the code to get me to the acorn!",
     "shape_shift": "false",
-    "markdown_instructions": "*\"Fix the code to get me to the pig!\"*",
+    "markdown_instructions": "*\"Fix the code to get me to the acorn!\"*",
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 5169,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "top_level_procedure_autopopulate": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:49:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-28 19:55:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:06:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:49:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-28 19:55:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:06:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-03 23:05:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"authored_hints\",\"tts_instructions_override\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

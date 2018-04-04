@@ -2328,7 +2328,7 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.uid
     assert_nil user.reset_password_token
     assert_nil user.full_address
-    assert_equal({"sharing_disabled" => false}, user.properties)
+    assert_equal({}, user.properties)
     refute_nil user.purged_at
   end
 
@@ -2372,55 +2372,6 @@ class UserTest < ActiveSupport::TestCase
       },
       @student.summarize
     )
-  end
-
-  test 'under 13 students have sharing off by default' do
-    student = create :user, age: 10
-    assert student.reload.sharing_disabled
-  end
-
-  test 'over 13 students have sharing on by default' do
-    student = create :user, age: 14
-    refute student.reload.sharing_disabled
-  end
-
-  test 'students share setting updates after turning 13 if they are in no sections' do
-    # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
-    student = create :user, birthday: birthday
-    assert student.reload.sharing_disabled
-
-    # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
-      # student signs in
-      student.sign_in_count = 2
-      student.save
-
-      # check new share setting
-      refute student.reload.sharing_disabled
-    end
-  end
-
-  test 'students share setting does not update after turning 13 if they are in sections' do
-    # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
-    student = create :user, birthday: birthday
-
-    teacher = create :teacher
-    section1 = create :section, user: teacher
-    section1.add_student(student)
-
-    assert student.reload.sharing_disabled
-
-    # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
-      # student signs in
-      student.sign_in_count = 2
-      student.save
-
-      # check updated share setting is unchanged
-      assert student.reload.sharing_disabled
-    end
   end
 
   test 'stage_extras_enabled?' do
