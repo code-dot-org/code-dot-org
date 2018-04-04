@@ -31,7 +31,7 @@ import {
 
 const styles = {
   button: {
-    margin: '20px auto'
+    margin: '20px 20px 20px auto'
   },
   select: {
     width: '200px'
@@ -116,6 +116,10 @@ export class QuickView extends React.Component {
     window.open(this.getCsvUrl(this.state.regionalPartnerFilter || ''));
   };
 
+  handleViewCohortClick = () => {
+    this.context.router.push(`/${this.props.route.path}_cohort`);
+  };
+
   handleStateChange = (selected) => {
     const filter = selected ? selected.value : null;
     this.setState({ filter });
@@ -166,6 +170,12 @@ export class QuickView extends React.Component {
               onClick={this.handleDownloadCsvClick}
             >
               Download CSV
+            </Button>
+            <Button
+              style={styles.button}
+              onClick={this.handleViewCohortClick}
+            >
+              View accepted cohort
             </Button>
           </Col>
           <Col md={6} sm={6}>
