@@ -660,7 +660,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..3).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
 
       application = create :pd_teacher1819_application, form_data_hash: (
         build(:pd_teacher1819_application_hash, :with_multiple_workshops,
@@ -731,6 +731,31 @@ module Pd::Application
 
       workshops[1].destroy
       assert_nil application.get_first_selected_workshop
+    end
+
+    test 'get_first_selected_workshop picks correct workshop even when multiple are on the same day' do
+      workshop_1 = create :pd_workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_2 = create :pd_workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_1.update_column(:location_address, 'Location 1')
+      workshop_2.update_column(:location_address, 'Location 2')
+
+      application = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: [workshop_1.id, workshop_2.id],
+          able_to_attend_multiple: ["#{workshop_2.friendly_date_range} in Location 2 hosted by Code.org"]
+        )
+      )
+
+      assert_equal workshop_2, application.get_first_selected_workshop
+
+      application_2 = create :pd_teacher1819_application, form_data_hash: (
+        build(:pd_teacher1819_application_hash, :with_multiple_workshops,
+          regional_partner_workshop_ids: [workshop_1.id, workshop_2.id],
+          able_to_attend_multiple: ["#{workshop_2.friendly_date_range} in Location 1 hosted by Code.org"]
+        )
+      )
+
+      assert_equal workshop_1, application_2.get_first_selected_workshop
     end
 
     test 'assign_default_workshop! saves the default workshop' do

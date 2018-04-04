@@ -45,6 +45,6 @@ module PrincipalApproval1819ApplicationConstants
   TEXT_FIELDS = {
     other_with_text: 'Other:'.freeze,
     other_please_explain: 'Other (Please Explain):'.freeze,
-    dont_know_explain: "I don't know (please explain):".freeze
+    dont_know_explain: "I don't know (Please Explain):".freeze
   }.freeze
 end
