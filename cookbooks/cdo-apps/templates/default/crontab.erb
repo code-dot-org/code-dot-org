@@ -96,6 +96,7 @@
       cronjob at:'10 5 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_s3')
       cronjob at:'00 17 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
+      cronjob at:'0 18 * * *', do:deploy_dir('bin', 'cron', 'regional_partner_reporting')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')

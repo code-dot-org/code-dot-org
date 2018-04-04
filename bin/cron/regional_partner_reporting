@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+ ../../aws/redshift/run-playbook \
+ 	../../aws/redshift/playbooks/regional_partner_reporting.yml.erb
