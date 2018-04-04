@@ -116,10 +116,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
         "2 trimesters",
         "Full year",
         "I'm not sure",
-      ],
-      travel_covered: [
-        "Code.org is covering my trip",
-        "I am covering my trip"
       ]
     }.freeze
   end
@@ -211,12 +207,6 @@ class Pd::Teachercon1819Registration < ActiveRecord::Base
     if pd_application
       requireds.concat [
         :agree_share_contact
-      ]
-    end
-
-    if regional_partner_id?
-      requireds.concat [
-        :travel_covered
       ]
     end
 
