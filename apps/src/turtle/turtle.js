@@ -403,6 +403,10 @@ class Visualization {
     this.heading = heading;
   }
 
+  pointToDirection(degreesRight) {
+    this.setHeading(this.heading + degreesRight);
+  }
+
   /**
    * Converts degrees into radians.
    *
