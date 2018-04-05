@@ -157,7 +157,7 @@ var base = {
     }).done(function (data, text) {
       callback(null, data);
     }).fail(function (request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
+      var err = errorString(request, status, error);
       callback(err, false);
     });
   },
@@ -185,7 +185,9 @@ var base = {
   }
 };
 
-
+function errorString(request, status, error) {
+  return new Error('status: ' + status + '; error: ' + error);
+}
 
 module.exports = {
   /**
