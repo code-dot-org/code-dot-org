@@ -7,9 +7,9 @@ wrong ‘Nothing with be printed'
 wrong ‘It will be different each time you run it'
 
 markdown <<MARKDOWN
-![](https://images.code.org/4588dcf523db0fdafdaddb9207f60bc4-image-1482507919175.png)
+<!-- TEXT: ![](https://images.code.org/4588dcf523db0fdafdaddb9207f60bc4-image-1482507919175.png) -->
 
-<!-- BLOCK:  ![](https://images.code.org/df0f281144cd421b1359f60a7b085628-image-1482344098332.png) -->
+![](https://images.code.org/df0f281144cd421b1359f60a7b085628-image-1482344098332.png)
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

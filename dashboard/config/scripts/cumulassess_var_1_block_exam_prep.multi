@@ -8,5 +8,13 @@ wrong 'x is equal to 10, 15; y is equal to 5, 10'
 wrong 'x is equal to 10; y is equal to 5'
 
 markdown <<MARKDOWN
+![](https://images.code.org/f03631bd3572a6aab2c62b8c7407a81e-image-1522960901454.png)
+
+
+<!-- BLOCK
+
 <img src="https://images.code.org/140b3a9acd4de6d287ca3f854c331302-image-1482854264929.png" style="width: 100px">
+-->
+
+
 MARKDOWN
