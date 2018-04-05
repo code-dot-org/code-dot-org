@@ -191,6 +191,9 @@ export const addMultipleAddRows = (studentNames) => {
   return (dispatch, getState) => {
     let studentData = {};
     for (let i = 0; i<studentNames.length; i++) {
+      // Do not add empty rows
+      if (studentNames[i] === '') { continue; }
+
       // Create a new uniqueId for the newStudentRow
       const newId = addRowIdCounter;
       addRowIdCounter = addRowIdCounter - 1;
