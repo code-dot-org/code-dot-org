@@ -11,7 +11,7 @@ const WHEN_RUN_COLOR = [39, 1.00, 0.99];
 export default {
   install(blockly, blockInstallOptions) {
     const SPRITE_TYPE = blockly.BlockValueType.SPRITE;
-    const { ORDER_MEMBER } = Blockly.JavaScript;
+    const { ORDER_MEMBER, ORDER_ATOMIC } = Blockly.JavaScript;
 
     const sprites = () => {
       const animationList = getStore().getState().animationList;
@@ -48,6 +48,17 @@ export default {
         { name: 'ANIMATION', options: sprites },
         { name: 'X', type: blockly.BlockValueType.NUMBER },
         { name: 'Y', type: blockly.BlockValueType.NUMBER },
+      ],
+      returnType: SPRITE_TYPE,
+    });
+
+    createJsWrapperBlock({
+      color: SPRITE_COLOR,
+      func: 'makeNewSpriteLocation',
+      blockText: 'make a new {ANIMATION} sprite at {LOCATION}',
+      args: [
+        { name: 'ANIMATION', options: sprites },
+        { name: 'LOCATION' },
       ],
       returnType: SPRITE_TYPE,
     });
@@ -381,6 +392,31 @@ export default {
       },
     };
     generator.sprite_variables_set = generator.variables_set;
+
+    Blockly.Blocks.gamelab_location_picker = {
+      init: function () {
+        this.setHSV(300, 0.46, 0.89);
+        const label = this.appendDummyInput()
+            .appendTitle('(0, 0)', 'LABEL')
+            .titleRow[0];
+        var button = new Blockly.FieldButton('select', () => {
+            const value = prompt();
+            return value;
+          },
+          this.getHexColour(),
+          value => {
+            const obj = JSON.parse(value);
+            label.setText(`(${obj.x}, ${obj.y})`);
+          });
+        this.appendDummyInput()
+            .appendTitle(button, 'LOCATION');
+        this.setOutput(true);
+        this.setInputsInline(true);
+      },
+    };
+    generator.gamelab_location_picker = function () {
+      return [this.getTitleValue('LOCATION'), ORDER_ATOMIC];
+    };
   },
 
   installCustomBlocks(blockly, blockInstallOptions, customBlocks, level, hideCustomBlocks) {
