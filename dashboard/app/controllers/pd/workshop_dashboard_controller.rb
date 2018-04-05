@@ -3,6 +3,8 @@ module Pd
     before_action :authenticate_user!
 
     def index
+      facilitator_courses = Pd::CourseFacilitator.where(facilitator: current_user).pluck(:course)
+
       permission_list = []
 
       if current_user.permission? UserPermission::WORKSHOP_ADMIN
@@ -13,7 +15,7 @@ module Pd
         permission_list << 'Facilitator' if current_user.facilitator?
 
         # CSF Facilitators have special permissions. For the time being, they are the only ones that have special permissions
-        if Pd::CourseFacilitator.exists?(facilitator: current_user, course: Pd::Workshop::COURSE_CSF)
+        if facilitator_courses.include? Pd::Workshop::COURSE_CSF
           permission_list << 'CsfFacilitator'
         end
 
@@ -26,7 +28,8 @@ module Pd
 
       @script_data = {
         props: {
-          permissionList: permission_list
+          permissionList: permission_list,
+          facilitatorCourses: facilitator_courses
         }.to_json
       }
 
