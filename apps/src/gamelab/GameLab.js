@@ -600,7 +600,10 @@ GameLab.prototype.runSetupCode = _.debounce(function () {
       zIndex: 1,
     });
     const duplicateCtx = duplicateCanvas.getContext('2d');
-    duplicateCtx.drawImage(visualizationCanvas, 0, 0);
+    duplicateCtx.drawImage(visualizationCanvas,
+      0, 0,
+      visualizationRect.width, visualizationRect.height
+    );
 
     document.body.appendChild(duplicateCanvas);
     setTimeout(() => document.body.removeChild(duplicateCanvas), 0);
