@@ -294,3 +294,5 @@ end
 install_if require_pg do
   gem 'pg', require: false
 end
+
+gem 'activerecord-import'
