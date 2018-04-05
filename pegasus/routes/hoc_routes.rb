@@ -5,7 +5,7 @@ get '/:short_code' do |short_code|
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', partner_sites].flatten
   pass if request.site == 'hourofcode.com' && ['ap', 'ca', 'co', 'gr'].include?(short_code)
   tutorial = begin
-    DB[:tutorials].where(short_code: short_code).first
+    Tutorials.new(:tutorials).find_with_short_code(short_code)
   rescue Sequel::DatabaseError
     nil
   end
@@ -27,7 +27,7 @@ end
 
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code: code).first
+  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
 
   # set company to nil if not a valid company
   company = request.GET['company'] || request.cookies['company']
@@ -45,13 +45,13 @@ end
 # reenable this in a scalable way or remove it entirely.
 get '/api/hour/begin_learn/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code: code).first
+  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
   redirect tutorial[:url], 302
 end
 
 get '/api/hour/begin_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code: code).first
+  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
   launch_tutorial_pixel(tutorial)
 end
 
@@ -140,13 +140,13 @@ end
 
 get '/api/hour/finish/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code: code).first
+  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
   complete_tutorial(tutorial)
 end
 
 get '/api/hour/finish_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code: code).first
+  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
   complete_tutorial_pixel(tutorial)
 end
 
