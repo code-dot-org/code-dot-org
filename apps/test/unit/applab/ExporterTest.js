@@ -41,6 +41,7 @@ a.third-rule {
 `;
 
 const JQUERY_JS_CONTENT = 'jquery content';
+const PNG_ASSET_CONTENT = 'asset content';
 
 describe('The Exporter,', function () {
   var server;
@@ -73,6 +74,10 @@ describe('The Exporter,', function () {
     server.respondWith(
       'https://code.jquery.com/jquery-1.12.1.min.js',
       JQUERY_JS_CONTENT
+    );
+    server.respondWith(
+      /\/_karma_webpack_\/.*\.png/,
+      PNG_ASSET_CONTENT
     );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
@@ -445,6 +450,9 @@ describe('The Exporter,', function () {
           'my-app/App.js',
           'my-app/CustomAsset.js',
           'my-app/app.json',
+          'my-app/appassets/',
+          'my-app/appassets/icon.png',
+          'my-app/appassets/splash.png',
           'my-app/assets/',
           'my-app/assets/README.txt',
           'my-app/assets/applab-api.j',
