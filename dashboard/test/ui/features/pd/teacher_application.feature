@@ -1,5 +1,5 @@
 @dashboard_db_access
-@eyes
+#@eyes
 
 Feature: Teacher Application
 
@@ -7,7 +7,7 @@ Scenario: Basic teacher application submission
   Given I create a teacher named "Severus"
     And I am on "http://studio.code.org/pd/application/teacher"
     And I wait until element "h1" contains text "2018-19 Professional Learning Program Teacher Application"
-   And I open my eyes to test "Teacher Application"
+    And I open my eyes to test "Teacher Application"
 
   # Section 1
   When I wait until element "h3" contains text "Section 1: About You"
@@ -33,6 +33,7 @@ Scenario: Basic teacher application submission
    And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
   Then I wait until element "input#schoolName" is visible
    And I press keys "Code.org" for element "input#schoolName"
+   And I press keys "Code.org District" for element "input#schoolDistrictName"
    And I press keys "1501 4th Ave" for element "input#schoolAddress"
    And I press keys "Seattle" for element "input#schoolCity"
    And I select the "Washington" option in dropdown "schoolState"
@@ -98,7 +99,7 @@ Scenario: Basic teacher application submission
 
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
-  Then I see no difference for "Confirmation"
+#  Then I see no difference for "Confirmation"
 
   # Principal approval
   Then I sign out
