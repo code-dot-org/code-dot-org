@@ -22,7 +22,17 @@ ________________
 ## Teacher Workshops
 Code.org pays Regional Partners for program expenses related to hosting workshops for teachers according to their contracts. These payments may include funds for facilitators at the workshops, costs for venue space and food during the workshop day, and compensation for time for a Regional Partner staff member to plan and execute the workshop.
 
-Code.org’s payment cycles are the 1st-15th and 16th-last day of each month. In the two weeks following, Code.org prepares a report and sends it with payment for all workshops closed in that prior period. For example: if a workshop was held July 11-12th, the cycle would close July 15th, and Code.org would mail a check to the Regional Partner by the end of July.
+We are transitioning all workshop payments to ACH Direct Deposit, allowing us to process payments more efficiently, provide better tracking, and allow Partners to receive their payments faster.
+
+In order to make this transition, we will need you to submit your organization’s W9 and banking information through this secure <a href="" target=_blank>DocuSign banking form</a>. Please respond to survey questions with information about your organization, and not your personal banking information.
+
+- All CS Fundamentals workshops will be paid via ACH Direct Deposit effective immediately (April 4, 2018).
+- All CS Discoveries and CS Principles workshops will be paid via ACH Direct Deposit starting June 1, 2018.
+- For now, payments for CS Fairs, Community Events, workshop supplies lump sums for 6-12 Programs will still be paid via check and you should still follow all invoicing procedures (providing receipts, attendance, etc).
+- Partners that have already submitted their ACH Direct Deposit information for CS Fundamental do not need to re-submit this form, unless there are changes you need to make for the 6-12 programs. Please email carol@code.org if you need us to route workshop payments for CS Discoveries and CS Principles to a different bank account. We will send you additional instructions (please don’t send banking information via email).  
+- We will still issue payments twice a month: Code.org’s payment cycles are the 1st-15th and 16th-last day of each month. In the two weeks following, Code.org prepares a report and sends it with payment for all workshops closed in that prior period. For example: if a workshop was held July 11-12th, the cycle would close July 15th.
+
+[**Back to the top**](#top)
 
 ________________
 <a id="facilitators"></a>
@@ -69,7 +79,7 @@ ________________
 ## Administrator and Counselor Workshops
 **What will Code.org pay for?**
 
-Code.org will pay for up to 80 individuals to attend an Adminstrator or Counselor workshop. This includes printed materials & swag.
+Code.org will pay for up to 80 individuals to attend an Administrator or Counselor workshop. This includes printed materials & swag.
 
 **How payments are calculated**
 
