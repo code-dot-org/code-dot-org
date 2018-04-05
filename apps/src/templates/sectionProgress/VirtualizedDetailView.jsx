@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { MultiGrid } from 'react-virtualized';
 import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import styleConstants from '../../styleConstants';
 
 const styles = {
   cell: {
@@ -119,7 +120,7 @@ export default class VirtualizedDetailView extends Component {
     if (index === 0) {
       return NAME_COLUMN_WIDTH;
     }
-      return scriptData.stages[stageIdIndex].levels.length * PROGRESS_BUBBLE_WIDTH;
+    return scriptData.stages[stageIdIndex].levels.length * PROGRESS_BUBBLE_WIDTH;
   };
 
   render() {
@@ -144,7 +145,7 @@ export default class VirtualizedDetailView extends Component {
           styleBottomLeftGrid={styles.bottomLeft}
           styleTopLeftGrid={styles.topLeft}
           styleTopRightGrid={styles.topRight}
-          width={970}
+          width={styleConstants['content-width']}
         />
     );
   }

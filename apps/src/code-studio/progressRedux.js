@@ -431,6 +431,13 @@ export const levelsByLesson = ({stages, levelProgress, currentLevelId}) => (
 /**
  * Get level data for one lesson/stage
  */
+
+ /**
+ * TODO: (ErinB) levelByLesson is a varient of levelsByLesson that I modified
+ * for the prototype of the detail view of the progress table. If we end up
+ * using levelByLesson, I need to write a test for it.
+ */
+
 export const levelByLesson = ({stage, levelProgress, currentLevelId}) => (
   stage.levels.map(level => levelWithStatus({levelProgress, currentLevelId}, level))
 );

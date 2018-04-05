@@ -686,16 +686,6 @@ describe('progressReduxTest', () => {
     });
   });
 
-//TODO: (ErinB) levelByLesson is a varient of levelsByLesson that I modified
-// for the prototype of the detail view of the progress table. If we end up
-// using levelByLesson, this serves as a reminder to write a test for it.
-// If we don't end up using it, this should be removed.
-  describe('levelByLesson', () => {
-    it('extracts info for levels for the given stage', () => {
-      assert.strictEqual(true, true);
-    });
-  });
-
   describe('levelsForLessonId', () => {
     it('returns levels for the given stage', () => {
       const initializedState = reducer(undefined,
