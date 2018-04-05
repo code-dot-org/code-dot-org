@@ -607,6 +607,13 @@ GameLab.prototype.runSetupCode = _.debounce(function () {
 
     document.body.appendChild(duplicateCanvas);
     setTimeout(() => document.body.removeChild(duplicateCanvas), 0);
+
+    if (!document.getElementById('p5_loading')) {
+      // Add a fake loading element to hide the "Loading..." text
+      const loadingElement = document.createElement('span');
+      loadingElement.id = 'p5_loading';
+      document.body.appendChild(loadingElement);
+    }
   }
   this.execute(false /* keep Ticking */);
 }, 50, {leading: true, maxWait: 250});
@@ -1194,7 +1201,11 @@ GameLab.prototype.completeSetupIfSetupComplete = function () {
 GameLab.prototype.onP5Draw = function () {
   if (this.JSInterpreter && this.eventHandlers.draw) {
     this.drawInProgress = true;
-    this.eventHandlers.draw.apply(null);
+    if (getStore().getState().runState.isRunning) {
+      this.eventHandlers.draw.apply(null);
+    } else {
+      this.JSInterpreter.evalInCurrentScope('drawSprites();');
+    }
   }
   this.completeRedrawIfDrawComplete();
 };
