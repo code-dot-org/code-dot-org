@@ -1,0 +1,33 @@
+name 'cspu5_assess2_oldEnough_exam_prep'
+wrong '35'
+wrong 'true'
+wrong 'false'
+wrong 'You are not old enough to be President.'
+right 'You are old enough to be President!'
+
+markdown <<MARKDOWN
+What is the expected output of the given pseudo code segment?  A reference for the pseudo code can be found immediately below the question
+
+    age <- 35
+    IF (age < 35)
+    {
+        DISPLAY ("You are not old enough to be President.")
+    } 
+    ELSE 
+    {
+        DISPLAY ("You are old enough to be President!")
+    }
+
+<img src="https://images.code.org/dcb91471aad876e5ed307b66648c2f1e-image-1475996573144.png" style="width:700px;">
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8**
+
+Going through the code line by line:
+
+* A variable "age" is set to 35
+* Going into the IF statement, it checks if age is less than 35. 35 is equal to 35 and NOT less than it so the condition is false.
+* Therefore, since age is not less than 35, the program executes the code that is in the else statement.
+* The program displays "You are old enough to be President!"
+MARKDOWN
