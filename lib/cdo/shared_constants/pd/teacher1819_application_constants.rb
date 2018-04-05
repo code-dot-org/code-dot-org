@@ -36,6 +36,7 @@ module Teacher1819ApplicationConstants
     section_2_your_school: {
       school: 'School',
       school_name: 'School name',
+      school_district_name: 'School district name',
       school_address: 'School address',
       school_city: 'City',
       school_state: 'State',
