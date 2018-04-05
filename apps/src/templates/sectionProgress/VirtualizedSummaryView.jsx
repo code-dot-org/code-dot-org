@@ -1,6 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { MultiGrid } from 'react-virtualized';
 import ProgressBox from '../sectionProgress/ProgressBox';
+import styleConstants from '../../styleConstants';
+import { sectionDataPropType, scriptDataPropType } from './sectionProgressRedux';
 
 const styles = {
   cell: {
@@ -33,19 +35,8 @@ const styles = {
 export default class VirtualizedDetailView extends Component {
 
   static propTypes = {
-    section: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      students: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })).isRequired
-    }).isRequired,
-    scriptData: PropTypes.shape({
-      stages: PropTypes.arrayOf(PropTypes.shape({
-        levels: PropTypes.arrayOf(PropTypes.object).isRequired
-      })),
-      id: PropTypes.number.isRequired,
-    }).isRequired,
+    section: sectionDataPropType.isRequired,
+    scriptData: scriptDataPropType.isRequired,
   };
 
   state = {
@@ -114,7 +105,7 @@ export default class VirtualizedDetailView extends Component {
           styleBottomLeftGrid={styles.bottomLeft}
           styleTopLeftGrid={styles.topLeft}
           styleTopRightGrid={styles.topRight}
-          width={970}
+          width={styleConstants['content-width']}
         />
     );
   }
