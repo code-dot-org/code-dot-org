@@ -24,7 +24,8 @@ import WorkshopFilter from './workshop_filter';
 import WorkshopAttendance from './attendance/workshop_attendance';
 import ReportView from './reports/report_view';
 import workshopDashboardReducers, {
-  setPermission
+  setPermission,
+  setFacilitatorCourses
 } from './reducers';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
@@ -42,7 +43,8 @@ const WorkshopDashboardHeader = (props) => (
 
 export default class WorkshopDashboard extends React.Component {
   static propTypes = {
-    permissionList: PropTypes.arrayOf(PropTypes.string).isRequired
+    permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   constructor(props) {
@@ -50,6 +52,10 @@ export default class WorkshopDashboard extends React.Component {
 
     if (props.permissionList) {
       store.dispatch(setPermission(props.permissionList));
+    }
+
+    if (props.facilitatorCourses) {
+      store.dispatch(setFacilitatorCourses(props.facilitatorCourses));
     }
   }
 
