@@ -7,75 +7,51 @@ import Permission, {
   Partner
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
+const permissionTypes = [
+  WorkshopAdmin,
+  Facilitator,
+  Organizer,
+  ProgramManager,
+  Partner
+];
+
 describe("Permission class", () => {
-  it("Detects workshop admin", () => {
-    const permission = new Permission([WorkshopAdmin]);
-    expect(permission.has(WorkshopAdmin)).to.be.true;
-    expect(permission.has(Facilitator)).to.be.false;
-    expect(permission.has(Organizer)).to.be.false;
-    expect(permission.has(ProgramManager)).to.be.false;
-    expect(permission.has(Partner)).to.be.false;
-  });
+  let permission;
 
-  it("Detects facilitator", () => {
-    const permission = new Permission([Facilitator]);
-    expect(permission.has(WorkshopAdmin)).to.be.false;
-    expect(permission.has(Facilitator)).to.be.true;
-    expect(permission.has(Organizer)).to.be.false;
-    expect(permission.has(Partner)).to.be.false;
-  });
+  /**
+   * Verify each permission based on a list of expected permissions
+   * It ensures that each expected permission is present, and all others are absent
+   * @param expectedPermissions
+   */
+  const expectExactPermissions = (...expectedPermissions) => {
+    permissionTypes.forEach(permissionType => {
+      if (expectedPermissions.includes(permissionType)) {
+        expect(permission.has(permissionType)).to.be.true;
+      } else {
+        expect(permission.has(permissionType)).to.be.false;
+      }
+    });
+  };
 
-  it("Detects organizer", () => {
-    const permission = new Permission([Organizer]);
-    expect(permission.has(WorkshopAdmin)).to.be.false;
-    expect(permission.has(Facilitator)).to.be.false;
-    expect(permission.has(Organizer)).to.be.true;
-    expect(permission.has(ProgramManager)).to.be.false;
-    expect(permission.has(Partner)).to.be.false;
-  });
-
-  it("Detects program manager", () => {
-    const permission = new Permission([ProgramManager]);
-    expect(permission.has(WorkshopAdmin)).to.be.false;
-    expect(permission.has(Facilitator)).to.be.false;
-    expect(permission.has(Organizer)).to.be.false;
-    expect(permission.has(ProgramManager)).to.be.true;
-    expect(permission.has(Partner)).to.be.false;
-  });
-
-  it("Detects partner", () => {
-    const permission = new Permission([Partner]);
-    expect(permission.has(WorkshopAdmin)).to.be.false;
-    expect(permission.has(Facilitator)).to.be.false;
-    expect(permission.has(Organizer)).to.be.false;
-    expect(permission.has(ProgramManager)).to.be.false;
-    expect(permission.has(Partner)).to.be.true;
+  permissionTypes.forEach(permissionType => {
+    it(`Detects ${permissionType}`, () => {
+      permission = new Permission([permissionType]);
+      expectExactPermissions(permissionType);
+    });
   });
 
   it("Detects multiple permissions for organizer-partners", () => {
-    const permission = new Permission([Organizer, Partner]);
-    expect(permission.has(WorkshopAdmin)).to.be.false;
-    expect(permission.has(Facilitator)).to.be.false;
-    expect(permission.has(Organizer)).to.be.true;
-    expect(permission.has(ProgramManager)).to.be.false;
-    expect(permission.has(Partner)).to.be.true;
+    permission = new Permission([Organizer, Partner]);
+    expectExactPermissions(Organizer, Partner);
   });
 
   it("Detects multiple permissions for CSF Facilitators", () => {
-    const permission = new Permission([Facilitator, Organizer]);
-    expect(permission.has(WorkshopAdmin)).to.be.false;
-    expect(permission.has(Facilitator)).to.be.true;
-    expect(permission.has(Organizer)).to.be.true;
-    expect(permission.has(ProgramManager)).to.be.false;
-    expect(permission.has(Partner)).to.be.false;
+    permission = new Permission([Facilitator, Organizer]);
+    expectExactPermissions(Facilitator, Organizer);
   });
 
   it("Detects multiple permissions for organizer-program_managers", () => {
-    const permission = new Permission([ProgramManager, Organizer]);
-    expect(permission.has(WorkshopAdmin)).to.be.false;
-    expect(permission.has(Facilitator)).to.be.false;
-    expect(permission.has(Organizer)).to.be.true;
-    expect(permission.has(ProgramManager)).to.be.true;
-    expect(permission.has(Partner)).to.be.false;
+    permission = new Permission([ProgramManager, Organizer]);
+    expectExactPermissions(ProgramManager, Organizer);
   });
 });
