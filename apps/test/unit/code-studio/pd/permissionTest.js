@@ -1,91 +1,81 @@
 import {expect} from 'chai';
-import Permission from '@cdo/apps/code-studio/pd/permission';
+import Permission, {
+  WorkshopAdmin,
+  Facilitator,
+  Organizer,
+  ProgramManager,
+  Partner
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 describe("Permission class", () => {
-  const setGlobalPermissionString = (permissionString) => {
-    window.dashboard = {
-      workshop: {
-        permission: permissionString
-      }
-    };
-  };
-
   it("Detects workshop admin", () => {
-    setGlobalPermissionString("workshop_admin");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.true;
-    expect(permission.isFacilitator).to.be.false;
-    expect(permission.isOrganizer).to.be.false;
-    expect(permission.isProgramManager).to.be.false;
-    expect(permission.isPartner).to.be.false;
+    const permission = new Permission([WorkshopAdmin]);
+    expect(permission.has(WorkshopAdmin)).to.be.true;
+    expect(permission.has(Facilitator)).to.be.false;
+    expect(permission.has(Organizer)).to.be.false;
+    expect(permission.has(ProgramManager)).to.be.false;
+    expect(permission.has(Partner)).to.be.false;
   });
 
   it("Detects facilitator", () => {
-    setGlobalPermissionString("[facilitator]");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.false;
-    expect(permission.isFacilitator).to.be.true;
-    expect(permission.isOrganizer).to.be.false;
-    expect(permission.isPartner).to.be.false;
+    const permission = new Permission([Facilitator]);
+    expect(permission.has(WorkshopAdmin)).to.be.false;
+    expect(permission.has(Facilitator)).to.be.true;
+    expect(permission.has(Organizer)).to.be.false;
+    expect(permission.has(Partner)).to.be.false;
   });
 
   it("Detects organizer", () => {
-    setGlobalPermissionString("[workshop_organizer]");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.false;
-    expect(permission.isFacilitator).to.be.false;
-    expect(permission.isOrganizer).to.be.true;
-    expect(permission.isProgramManager).to.be.false;
-    expect(permission.isPartner).to.be.false;
+    const permission = new Permission([Organizer]);
+    expect(permission.has(WorkshopAdmin)).to.be.false;
+    expect(permission.has(Facilitator)).to.be.false;
+    expect(permission.has(Organizer)).to.be.true;
+    expect(permission.has(ProgramManager)).to.be.false;
+    expect(permission.has(Partner)).to.be.false;
   });
 
   it("Detects program manager", () => {
-    setGlobalPermissionString("[program_manager]");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.false;
-    expect(permission.isFacilitator).to.be.false;
-    expect(permission.isOrganizer).to.be.false;
-    expect(permission.isProgramManager).to.be.true;
-    expect(permission.isPartner).to.be.false;
+    const permission = new Permission([ProgramManager]);
+    expect(permission.has(WorkshopAdmin)).to.be.false;
+    expect(permission.has(Facilitator)).to.be.false;
+    expect(permission.has(Organizer)).to.be.false;
+    expect(permission.has(ProgramManager)).to.be.true;
+    expect(permission.has(Partner)).to.be.false;
   });
 
   it("Detects partner", () => {
-    setGlobalPermissionString("[partner]");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.false;
-    expect(permission.isFacilitator).to.be.false;
-    expect(permission.isOrganizer).to.be.false;
-    expect(permission.isProgramManager).to.be.false;
-    expect(permission.isPartner).to.be.true;
+    const permission = new Permission([Partner]);
+    expect(permission.has(WorkshopAdmin)).to.be.false;
+    expect(permission.has(Facilitator)).to.be.false;
+    expect(permission.has(Organizer)).to.be.false;
+    expect(permission.has(ProgramManager)).to.be.false;
+    expect(permission.has(Partner)).to.be.true;
   });
 
   it("Detects multiple permissions for organizer-partners", () => {
-    setGlobalPermissionString("[workshop_organizer,partner]");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.false;
-    expect(permission.isFacilitator).to.be.false;
-    expect(permission.isOrganizer).to.be.true;
-    expect(permission.isProgramManager).to.be.false;
-    expect(permission.isPartner).to.be.true;
+    const permission = new Permission([Organizer, Partner]);
+    expect(permission.has(WorkshopAdmin)).to.be.false;
+    expect(permission.has(Facilitator)).to.be.false;
+    expect(permission.has(Organizer)).to.be.true;
+    expect(permission.has(ProgramManager)).to.be.false;
+    expect(permission.has(Partner)).to.be.true;
   });
 
   it("Detects multiple permissions for CSF Facilitators", () => {
-    setGlobalPermissionString("[facilitator,workshop_organizer]");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.false;
-    expect(permission.isFacilitator).to.be.true;
-    expect(permission.isOrganizer).to.be.true;
-    expect(permission.isProgramManager).to.be.false;
-    expect(permission.isPartner).to.be.false;
+    const permission = new Permission([Facilitator, Organizer]);
+    expect(permission.has(WorkshopAdmin)).to.be.false;
+    expect(permission.has(Facilitator)).to.be.true;
+    expect(permission.has(Organizer)).to.be.true;
+    expect(permission.has(ProgramManager)).to.be.false;
+    expect(permission.has(Partner)).to.be.false;
   });
 
   it("Detects multiple permissions for organizer-program_managers", () => {
-    setGlobalPermissionString("[program_manager,workshop_organizer]");
-    const permission = new Permission();
-    expect(permission.isWorkshopAdmin).to.be.false;
-    expect(permission.isFacilitator).to.be.false;
-    expect(permission.isOrganizer).to.be.true;
-    expect(permission.isProgramManager).to.be.true;
-    expect(permission.isPartner).to.be.false;
+    const permission = new Permission([ProgramManager, Organizer]);
+    expect(permission.has(WorkshopAdmin)).to.be.false;
+    expect(permission.has(Facilitator)).to.be.false;
+    expect(permission.has(Organizer)).to.be.true;
+    expect(permission.has(ProgramManager)).to.be.true;
+    expect(permission.has(Partner)).to.be.false;
   });
 });
