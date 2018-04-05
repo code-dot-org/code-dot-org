@@ -76,7 +76,7 @@ describe('The Exporter,', function () {
       JQUERY_JS_CONTENT
     );
     server.respondWith(
-      /\/assets\/js\/.*\.png/,
+      /\/_karma_webpack_\/.*\.png/,
       PNG_ASSET_CONTENT
     );
 
