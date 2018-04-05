@@ -13,6 +13,7 @@ require_relative '../../lib/cdo/shared_constants/pd/facilitator1819_application_
 require_relative '../../lib/cdo/shared_constants/pd/teacher1819_application_constants'
 require_relative '../../lib/cdo/shared_constants/pd/principal_approval1819_application_constants'
 require_relative '../../lib/cdo/shared_constants/pd/teachercon1819_registration_constants'
+require_relative '../../lib/cdo/shared_constants/pd/shared_workshop_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
@@ -79,6 +80,15 @@ def main
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
   generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
+
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(COURSES SUBJECTS STATES),
+      source_module: Pd::SharedWorkshopConstants,
+      transform_keys: false
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/sharedWorkshopConstants.js"
+  )
 
   generate_shared_js_file(
     generate_multiple_constants(
