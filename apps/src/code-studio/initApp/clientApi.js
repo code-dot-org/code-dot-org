@@ -186,7 +186,7 @@ var base = {
 };
 
 function errorString(request, status, error) {
-  return new Error('status: ' + status + '; error: ' + error);
+  return new Error(`httpStatusCode: ${request.status}; status: ${status}; error: ${error}`);
 }
 
 module.exports = {
