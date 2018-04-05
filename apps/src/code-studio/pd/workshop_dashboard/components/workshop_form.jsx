@@ -37,6 +37,7 @@ import {
   PermissionPropType,
   WorkshopAdmin,
   Organizer,
+  Facilitator,
   ProgramManager,
   Partner,
   CsfFacilitator
@@ -69,6 +70,7 @@ export class WorkshopForm extends React.Component {
 
   static propTypes = {
     permission: PermissionPropType.isRequired,
+    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
     workshop: PropTypes.shape({
       id: PropTypes.number.isRequired,
       facilitators: PropTypes.array.isRequired,
@@ -283,7 +285,17 @@ export class WorkshopForm extends React.Component {
   };
 
   renderCourseSelect(validation) {
-    const options = Courses.map((course, i) => {
+    let allowedCourses;
+    if (this.props.permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
+      allowedCourses = Courses;
+    } else if (this.props.permission.has(Facilitator)) {
+      allowedCourses = this.props.facilitatorCourses;
+    } else {
+      console.error("Insufficient permissions, expected one one of: Organizer, ProgramManager, WorkshopAdmin, or Facilitator");
+      allowedCourses = [];
+    }
+
+    const options = allowedCourses.map((course, i) => {
       return (<option key={i} value={course}>{course}</option>);
     });
     const placeHolder = this.state.course ? null : <option />;
@@ -886,5 +898,6 @@ export class WorkshopForm extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.permission
+  permission: state.permission,
+  facilitatorCourses: state.facilitatorCourses
 }))(WorkshopForm);
