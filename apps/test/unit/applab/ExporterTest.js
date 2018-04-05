@@ -41,6 +41,7 @@ a.third-rule {
 `;
 
 const JQUERY_JS_CONTENT = 'jquery content';
+const PNG_ASSET_CONTENT = 'asset content';
 
 describe('The Exporter,', function () {
   var server;
@@ -73,6 +74,10 @@ describe('The Exporter,', function () {
     server.respondWith(
       'https://code.jquery.com/jquery-1.12.1.min.js',
       JQUERY_JS_CONTENT
+    );
+    server.respondWith(
+      /\/assets\/js\/.*\.png/,
+      PNG_ASSET_CONTENT
     );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
