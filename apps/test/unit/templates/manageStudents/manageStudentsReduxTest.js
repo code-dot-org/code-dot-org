@@ -353,6 +353,7 @@ describe('manageStudentsRedux', () => {
       const removeStudentAction = removeStudent(1);
       const stateAfterDeleting = manageStudents(nextState, removeStudentAction);
       assert.equal(stateAfterDeleting.studentData[1], undefined);
+      assert.equal(stateAfterDeleting.editingData[1], undefined);
       assert.deepEqual(stateAfterDeleting.studentData[2], studentEmailData[2]);
       assert.deepEqual(stateAfterDeleting.studentData[3], studentEmailData[3]);
     });
