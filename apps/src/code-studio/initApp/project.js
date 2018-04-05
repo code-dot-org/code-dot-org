@@ -810,9 +810,14 @@ var projects = module.exports = {
       const filename = SOURCE_FILE + params;
       sources.put(channelId, packSources(), filename, function (err, response) {
         if (err) {
-          saveSourcesErrorCount++;
-          this.showSaveError_('save-sources-error', saveSourcesErrorCount, err + '');
-          return;
+          if (err.message.includes('Unauthorized')) {
+            this.showSaveError_('unauthorized-save-sources-reload', saveSourcesErrorCount, err.message);
+            window.location.reload();
+          } else {
+            saveSourcesErrorCount++;
+            this.showSaveError_('save-sources-error', saveSourcesErrorCount, err.message);
+            return;
+          }
         }
         saveSourcesErrorCount = 0;
         if (!firstSaveTimestamp) {

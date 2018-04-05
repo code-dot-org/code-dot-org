@@ -801,12 +801,22 @@ And(/^I set the language cookie$/) do
   debug_cookies(@browser.manage.all_cookies)
 end
 
-Given(/^I sign in as "([^"]*)"/) do |name|
+Given(/^I sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
     Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "#signin-button"
+    And I wait to see ".header_user"
+  }
+end
+
+Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
+  steps %Q{
+    And check that the url contains "/users/sign_in"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
@@ -1416,4 +1426,20 @@ end
 
 Then /^I open the section action dropdown$/ do
   steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
+end
+
+Then /^I sign out using jquery$/ do
+  code = <<-JAVASCRIPT
+    window.signOutComplete = false;
+    function onSuccess() {
+      window.signOutComplete = true;
+    }
+    $.ajax({
+      url:'/users/sign_out',
+      method: 'GET',
+      success: onSuccess
+    });
+  JAVASCRIPT
+  @browser.execute_script(code)
+  wait_short_until {@browser.execute_script('return window.signOutComplete;')}
 end
