@@ -102,7 +102,7 @@ module Api::V1::Pd::Application
           committed_to_master_schedule_other: "this is the other for master schedule",
           committed_to_diversity: "Other (Please Explain):",
           committed_to_diversity_other: "this is the other for diversity",
-          replace_course: "I don't know (please explain):",
+          replace_course: "I don't know (Please Explain):",
           replace_course_other: "this is the other for replace course"
         )
       }
@@ -116,7 +116,7 @@ module Api::V1::Pd::Application
         principal_approval: "Other: this is the other for do you approve",
         schedule_confirmed: "Other: this is the other for master schedule",
         diversity_recruitment: "Other (Please Explain): this is the other for diversity",
-        wont_replace_existing_course: "I don't know (please explain): this is the other for replace course",
+        wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
       actual_principal_fields = teacher_application.reload.sanitize_form_data_hash.select do |k, _|
         expected_principal_fields.keys.include? k

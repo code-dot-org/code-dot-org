@@ -19,6 +19,11 @@ const IDLE_TIMEOUT = 60000;
 const styles = {
   idle: {
     opacity: .5
+  },
+  attendanceSummary: {
+    fontFamily: 'Gotham 4r',
+    fontSize: 16,
+    margin: 15
   }
 };
 
@@ -30,7 +35,8 @@ export default class SessionAttendance extends React.Component {
     isReadOnly: PropTypes.bool,
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
-    accountRequiredForAttendance: PropTypes.bool.isRequired
+    accountRequiredForAttendance: PropTypes.bool.isRequired,
+    enrollmentCount: PropTypes.number.isRequired
   };
 
   state = {
@@ -161,34 +167,40 @@ export default class SessionAttendance extends React.Component {
           idleAction={this.setIdle}
           activeAction={this.setActive}
         >
-          <Table
-            striped
-            bordered
-            condensed
-            hover
-            style={this.state.refreshInterval ? null : styles.idle}
-          >
-            <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
-              <th>Verified Teacher Account</th>
-              {this.showPuzzlesCompleted &&
+          <div>
+            <div style={styles.attendanceSummary}>
+              Attendance: {this.state.attendance.length} / {this.props.enrollmentCount}
+            </div>
+
+            <Table
+              striped
+              bordered
+              condensed
+              hover
+              style={this.state.refreshInterval ? null : styles.idle}
+            >
+              <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
+                <th>Verified Teacher Account</th>
+                {this.showPuzzlesCompleted &&
                 <th>Puzzles Completed</th>
-              }
-              {this.isCSF ?
-                <th>Attended</th>
-                :
-                <th>Present</th>
-              }
-            </tr>
-            </thead>
-            <tbody>
-            {tableRows}
-            </tbody>
-          </Table>
+                }
+                {this.isCSF ?
+                  <th>Attended</th>
+                  :
+                  <th>Present</th>
+                }
+              </tr>
+              </thead>
+              <tbody>
+              {tableRows}
+              </tbody>
+            </Table>
+          </div>
         </IdleTimer>
       </VisibilitySensor>
     );

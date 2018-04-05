@@ -1,3 +1,5 @@
+/* global dashboard */
+
 import { Motion, StaggeredMotion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { hideFeedback } from '../redux/feedback';
@@ -107,6 +109,26 @@ const styles = {
   mastery: {
     display: 'inline-block',
   },
+  share: {
+    float: 'left',
+    width: 180,
+    height: 200,
+    paddingTop: 20,
+  },
+  thumbnail: {
+    width: 150,
+    height: 150,
+    backgroundSize: 'cover',
+    marginLeft: 15,
+  },
+  shareButton: {
+    background: color.cyan,
+    color: color.white,
+  },
+  achievementWrapper: {
+    marginLeft: 20,
+    marginRight: 20,
+  },
   achievementsHeading: {
     margin: '20px auto 0',
     color: color.light_gray,
@@ -114,7 +136,6 @@ const styles = {
     fontSize: 16,
   },
   achievements: {
-    width: 380,
     display: 'block',
     margin: '4px auto 4px',
     borderColor: color.lighter_gray,
@@ -135,10 +156,12 @@ const styles = {
     verticalAlign: 'middle',
   },
   achievementRow: {
-    width: '50%',
     padding: 10,
     boxSizing: 'border-box',
     textAlign: 'left',
+  },
+  achievementRowNonShare: {
+    width: '50%',
     float: 'left',
   },
   generatedCodeWrapper: {
@@ -351,6 +374,7 @@ export class UnconnectedFinishDialog extends Component {
                 <div
                   style={{
                     ...styles.achievementRow,
+                    ...(!this.props.canShare && styles.achievementRowNonShare),
                     color: interpolateColors(
                       color.lighter_gray,
                       color.dark_charcoal,
@@ -437,6 +461,10 @@ export class UnconnectedFinishDialog extends Component {
 
     const confetti = this.props.isChallenge && this.props.isPerfect && this.state.blocksCounted;
     const showAchievements = this.props.achievements && this.props.achievements.length !== 0;
+    const canShare = this.props.canShare;
+
+    const defaultThumbnailUrl = '/blockly/media/projects/project_default.png';
+    const thumbnailUrl = (window.dashboard && dashboard.project && dashboard.project.getThumbnailUrl && dashboard.project.getThumbnailUrl()) || defaultThumbnailUrl;
 
     return (
       <BaseDialog
@@ -470,12 +498,31 @@ export class UnconnectedFinishDialog extends Component {
                   <div style={styles.mastery}>
                     <StageProgress stageTrophyEnabled />
                   </div>
-                  {showAchievements && <div>
-                    <div style={styles.achievementsHeading}>
-                      {msg.achievements()}
+                  {canShare &&
+                    <div style={styles.share}>
+                      <div
+                        style={{
+                          ...styles.thumbnail,
+                          backgroundImage: `url(${thumbnailUrl})`,
+                        }}
+                      />
+                      <button style={styles.shareButton}>
+                        {msg.share()}
+                      </button>
                     </div>
-                    {this.getAchievements()}
-                  </div>
+                  }
+                  {showAchievements &&
+                    <div
+                      style={{
+                        ...styles.achievementWrapper,
+                        ...(canShare && {marginLeft: 180}),
+                      }}
+                    >
+                      <div style={styles.achievementsHeading}>
+                        {msg.achievements()}
+                      </div>
+                      {this.getAchievements()}
+                    </div>
                   }
                   {this.getFunometer()}
                 </div>}
