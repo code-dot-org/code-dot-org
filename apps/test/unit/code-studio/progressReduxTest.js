@@ -15,6 +15,7 @@ import reducer, {
   setIsSummaryView,
   setStudentDefaultsSummaryView,
   SignInState,
+  levelByLesson,
   levelsByLesson,
   levelsForLessonId,
   progressionsFromLevels,
@@ -683,6 +684,26 @@ describe('progressReduxTest', () => {
       assert.equal(results[0][0].levelNumber, null);
       assert.equal(results[0][1].isUnplugged, false);
       assert.equal(results[0][1].levelNumber, 1);
+    });
+  });
+
+  describe('levelByLesson', () => {
+    it('extracts info for levels for the given stage', () => {
+      const initializedState = reducer(undefined,
+        initProgress(initialScriptOverviewProgress));
+      // merge some progress so that we have statuses
+      const action = mergeProgress({
+        // stage 2 level 2 is pass
+        339: TestResults.ALL_PASS,
+      });
+      const state = reducer(initializedState, action);
+      console.log("state", JSON.stringify(state, null, 2));
+      const stage = stageData[0];
+      state[stage] = stage;
+      // console.log(JSON.stringify(stageData[0], null, 2))
+      // console.log("stage.levels", JSON.stringify(stage.levels, null, 2))
+      const results = levelByLesson(state);
+      assert.strictEqual(results.length, 3);
     });
   });
 

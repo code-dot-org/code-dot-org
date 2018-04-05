@@ -34,12 +34,12 @@ export default class StudentProgressDetailCell extends Component {
   studentLevelProgressInStage(studentId, stageId) {
     const { scriptData, studentLevelProgress } = this.props;
 
-    const fakeState = {
+    const levelState = {
       stage: scriptData.stages[stageId],
       levelProgress: studentLevelProgress[studentId],
       currentLevelId: null
     };
-    return levelByLesson(fakeState);
+    return levelByLesson(levelState);
   }
 
   render() {

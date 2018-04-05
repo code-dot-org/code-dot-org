@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import ScriptSelector from './ScriptSelector';
 import { getLevelResult } from '@cdo/apps/code-studio/progressRedux';
-import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import VirtualizedDetailView from './VirtualizedDetailView';
@@ -108,11 +107,6 @@ class SectionProgress extends Component {
         {(levelDataInitialized && currentView === ViewType.DETAIL) &&
           <div>
             <VirtualizedDetailView
-              section={section}
-              scriptData={scriptData}
-              studentLevelProgress={studentLevelProgress}
-            />
-            <SectionScriptProgress
               section={section}
               scriptData={scriptData}
               studentLevelProgress={studentLevelProgress}

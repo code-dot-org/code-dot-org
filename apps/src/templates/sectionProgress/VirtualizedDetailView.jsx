@@ -61,9 +61,11 @@ export default class VirtualizedDetailView extends Component {
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
     const {section, scriptData, studentLevelProgress} = this.props;
-    // Subtract 2 to account for the 2 header rows
+    // Subtract 2 to account for the 2 header rows.
     // We don't want leave off the first 2 students.
     const studentStartIndex = rowIndex-2;
+    // Subtract 1 to account for the student name column.
+    const stageIdIndex = columnIndex-1;
 
     return (
       <div className={styles.Cell} key={key} style={style}>
@@ -78,7 +80,7 @@ export default class VirtualizedDetailView extends Component {
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
           <span style={styles.cell}>
-            {scriptData.stages[columnIndex-1].levels.map((level, i) =>
+            {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 className={level.icon ? level.icon: "fas fa-question"}
                 style={styles.icon}
@@ -99,7 +101,7 @@ export default class VirtualizedDetailView extends Component {
             studentId={section.students[studentStartIndex].id}
             section={section}
             studentLevelProgress={studentLevelProgress}
-            stageId={columnIndex-1}
+            stageId={stageIdIndex}
             scriptData={scriptData}
           />
         )}
@@ -111,11 +113,13 @@ export default class VirtualizedDetailView extends Component {
     const {scriptData} = this.props;
     const NAME_COLUMN_WIDTH = 150;
     const PROGRESS_BUBBLE_WIDTH = 50;
+    // Subtract 1 to account for the student name column.
+    const stageIdIndex = index-1;
 
     if (index === 0) {
       return NAME_COLUMN_WIDTH;
     }
-    return scriptData.stages[index-1].levels.length * PROGRESS_BUBBLE_WIDTH;
+      return scriptData.stages[stageIdIndex].levels.length * PROGRESS_BUBBLE_WIDTH;
   };
 
   render() {
@@ -133,7 +137,7 @@ export default class VirtualizedDetailView extends Component {
           columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
-          height={300}
+          height={520}
           rowHeight={40}
           rowCount={rowCount}
           style={styles.multigrid}
