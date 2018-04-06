@@ -87,4 +87,32 @@ class Api::V1::SchoolsControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal [JOANN_A_ALEXIE_MEMORIAL_SCHOOL], JSON.parse(@response.body)
   end
+
+  test 'new search with non-matching term' do
+    get :search, params: {q: 'Albert Einstein Elementary OTHERTERM', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal ALBERT_EINSTEIN_ACADEMY_ELEMENTARY, response_body.first, response_body
+  end
+
+  test 'new search with zip and text term' do
+    get :search, params: {q: 'Einstein 91355', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal ALBERT_EINSTEIN_ACADEMY_ELEMENTARY, response_body.first, response_body
+  end
+
+  test 'new search with name and city' do
+    get :search, params: {q: 'Jung Bethel', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal GLADYS_JUNG_ELEMENTARY, response_body.first, response_body
+  end
+
+  test 'new search with name, zip, city, and non-matching term' do
+    get :search, params: {q: 'Jung Bethel 99559 OTHERTERM', limit: 40, use_new_search: true}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal GLADYS_JUNG_ELEMENTARY, response_body.first, response_body
+  end
 end
