@@ -39,7 +39,7 @@ Over the course of the week, you will join with hundreds of teachers from across
   <br>
 TeacherCon accomodations as well as all conference sessions will take place at:
 
-[Sheraton Grand Phoenix](http://www.sheratonphoenixdowntown.com/)
+<a href="http://www.sheratonphoenixdowntown.com/", target=_"blank">Sheraton Grand Phoenix</a>
 <br> 340 North 3rd Street
 <br> Phoenix, AZ 85004
   
@@ -77,7 +77,7 @@ You will not need to rent a vehicle while at TeacherCon since all conference ses
 <summary>**Can I share a ride from the airport to the hotel with fellow TeacherCon attendees?**</summary>
   <p>
   <br>
-For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the [designated rideshare pickup locations at PHX Sky Harbor](https://www.skyharbor.com/ParkingTransportation/ride-share). Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm at any of the <a href="https://www.skyharbor.com/ParkingTransportation/ride-share" target=_"blank">designated rideshare pickup locations at PHX Sky Harbor</a>. Then order a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the pickup location, make sure to ask others nearby if they are part of TeacherCon.
 </p> 
 </details>
 
@@ -190,7 +190,7 @@ More information coming soon!
 </details>
 
 ## **Contact Us**
-Check out our <a href="https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#, target="_blank">FAQ's!</a>
+Check out our <a href="https://docs.google.com/document/d/1kyf-LMuqZx3Jne-q-Ce8MOaWJQm67VekO_kYKr9EFPQ/edit#", target=_"blank">FAQ's!</a>
 
 Still can't find what you're looking for? Email us at: [teacher@code.org](mailto:teacher@code.org). 
 

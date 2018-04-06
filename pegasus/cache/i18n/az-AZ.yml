@@ -9,8 +9,8 @@
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
   upgrade_ie_link: Daha ətraflı
-  en: "İnformatika"
-  computer_science_edweek: "İnformatika təhsili həftəsi"
+  en: İnformatika
+  computer_science_edweek: İnformatika təhsili həftəsi
   csedweek_dates: 8-14 dekabr 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kod Saatı</a> gəlir. Bütün müəllim və təşkilaçıları səsləyirik,
@@ -22,20 +22,20 @@
   n_have_learned_an_hoc: "<h1>Kod Saatında</h1><h2>özünüzü sınayın</h2><h3># nəfər
     faydalanıb</h3>"
   anybody_can_learn: Hər kəs öyrənə bilər.
-  learn_now: "İndi öyrən"
+  learn_now: İndi öyrən
   petition_message: Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı
     olmalıdır
   petition_sign_message: 'Razısınızsa, adınızı yazın. Daha # nəfərə qoşulun.'
-  petition_sign_message_support: "Əgər bizi dəstəkləyirsinizsə, adınızı daxil edin.
-    Bizə qatılın."
+  petition_sign_message_support: Əgər bizi dəstəkləyirsinizsə, adınızı daxil edin.
+    Bizə qatılın.
   petition_join_others: 'Digər # nəfərə qoşulun'
   name: Ad
   email: E-poçt
-  zipcode: "Ölkə və ya poçt indeksi"
+  zipcode: Ölkə və ya poçt indeksi
   submit: Göndər
   twentyhours_heading: Bizim İnformatika Giriş kursumuzu sınaqdan keçirin
-  twentyhours_text: "İlk Kod saatınızı bitirdiniz? Kursları izləyərək kompyuter sahəsi
-    və proqramlaşdırma anlayışları barədə daha çox şey öyrənin."
+  twentyhours_text: İlk Kod saatınızı bitirdiniz? Kursları izləyərək kompyuter sahəsi
+    və proqramlaşdırma anlayışları barədə daha çox şey öyrənin.
   og_title: Hər bir uşaq fürsətə layiqdir
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
@@ -43,7 +43,7 @@
     deserves the opportunity to study computer science.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "İnformatika təhsili həftəsi"
+  csedweek_og_title: İnformatika təhsili həftəsi
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
@@ -52,7 +52,7 @@
     for every student to learn.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 -
     14 dekabr, 2014<br/>
-  hoc2014_students: "Şagirdlər"
+  hoc2014_students: Şagirdlər
   hoc2014_try: Sınaqdan keçirin
   hoc2014_teachers: Müəllimlər
   hoc2014_host: Təşkil edin
@@ -64,24 +64,24 @@
   csedweek_map_search_placeholder: Kod Saatı tədbirlərini axtarın
   csedweek_map_search_search: Axtar
   csedweek_map_search_reset: Yenidən başla
-  csedweek_map_legend_title: "Əfsanə"
+  csedweek_map_legend_title: Əfsanə
   csedweek_map_legend_event: Kod saatı tədbiri
   csedweek_map_legend_cs_tech_jam: Xüsusi tədbir
   cded_sign_up: Qeydiyyatdan keçin
   cded_try_it: Sınaqdan keçirin
   try_now: Elə indi sınaqdan keçirin
-  california_heading: "İnformatikanı tədris etməyi məktəbinizdən xahiş edin"
-  california_text: "İstənilən müəllim <a href='http://studio.code.org/'>pulsuz kurslarımızı</a>
+  california_heading: İnformatikanı tədris etməyi məktəbinizdən xahiş edin
+  california_text: İstənilən müəllim <a href='http://studio.code.org/'>pulsuz kurslarımızı</a>
     deyə bilər. İstənilən ibtidai sinifdə <a href='http://code.org/educate/k5'>informatika
     tədris oluna</a> bilər. Məktəblərdən xahiş edin ki, <a href='http://code.org/educate/districts'>bizimlə
-    tərəfdaş olsunlar."
+    tərəfdaş olsunlar.
   california_button: Daha çox
   flappy_heading: Qanad günün mübarək, Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: "İngiliscə saytı göstər"
+  view_english_site: İngiliscə saytı göstər
   non_english_tutorials: 'Bir neçə dilə tərcümə olunmuş dərsliklər:'
-  write_your_first_program: "İlk kompüter proqramınızı yazın"
+  write_your_first_program: İlk kompüter proqramınızı yazın
   learn_cs_concepts: İnfromatikanın təməl anlayışlarını sürüklə-burax tipli proqramlaşdırma
     ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin video mühazirələri,
     "Angry Birds" və "Plants vs. Zombies" yer alır. "Təkrar et" dövrləri, "əgər-onda"
@@ -198,7 +198,7 @@
   third_party_organization: Organization
   third_party_curriculum: Curriculum
   third_party_pricing: Qiymət
-  third_party_cost_free: "Şagird və müəllimlər üçün ödənişsiz"
+  third_party_cost_free: Şagird və müəllimlər üçün ödənişsiz
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/download"
   third_party_cost_free_399: Free to try, $399/classroom
@@ -225,16 +225,16 @@
     Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or
     see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
   thanks_for_submitting: Göndərdiyiniz üçün təşəkkürlər!
-  if_you_enjoyed: "Öyrənmək xoşunuza gəldisə, dostlarınızdan da bunu sınaqdan keçirməyi
-    xahiş edin! Bütün dünyanın öyrənməyini istəyirik."
+  if_you_enjoyed: Öyrənmək xoşunuza gəldisə, dostlarınızdan da bunu sınaqdan keçirməyi
+    xahiş edin! Bütün dünyanın öyrənməyini istəyirik.
   personalize_certificate: Sertifikatınızı fərdiləşdirin
   share_achievement: Nailiyyətinizi bölüşün
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
   leaderboards_for_hoc: Kod Saaatı üçün liderlər cədvəli.
   support_url: http://support.code.org/
-  country: "Ölkə"
-  city: "Şəhər"
+  country: Ölkə
+  city: Şəhər
   gender: Cins
   boys: Oğlanlar
   girls: Qızlar
@@ -249,7 +249,7 @@
   get_started: Başlayın
   i_agree: Razıyam
   participant_select: "- Seçin -"
-  participant_student: "şagird"
+  participant_student: şagird
   participant_parent: Valideyn
   participant_educator: Təhsil işçisi
   participant_engineer: Proqramçı-mühəndis
@@ -331,7 +331,7 @@
   help_recruit_coders: Komandanıza daha çox proqramçı cəlb etməyimizə kömək edin!
   help_recruit: Daha çox proqramçı cəlb etməyimizə kömək edin!
   lines_of_code: BU GÜNƏ QƏDƏR <b># SƏTİRDƏN ÇOX KOD</b> YAZILIB.
-  lines_of_code_alt: "ŞAGİRDLƏR <b>#</b> SƏTİR KOD YAZIB"
+  lines_of_code_alt: ŞAGİRDLƏR <b>#</b> SƏTİR KOD YAZIB
   who_has_done_hoc: "#HourOfCode Kod Saatını kim bitirdi? @codeorg"
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
@@ -348,18 +348,18 @@
     görməmişdim" - Maykl Klark, müəllim'
   studiobar_title: "<a href='http://studio.code.org'>Kod Studiyası</a>nı kəşf edin"
   studiobar_title_nolink: Kod Studiyasını kəşf edin
-  studiobar_elementary_title: "İbtidai kurslar"
+  studiobar_elementary_title: İbtidai kurslar
   studiobar_elementary_body: K-5 (11-12 yaşlılar) üçün üç yeni kursumuz
   studiobar_hoc_title: Kod Saatı
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Qanadlı Kod
-  studiobar_flappy_body: "Öz qanadlı oyununuzu düzəldib bölüşün"
+  studiobar_flappy_body: Öz qanadlı oyununuzu düzəldib bölüşün
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Sinfinizi Kod Studiyası ilə tanış edin
   studiobar_frozen_title: Kod Saatı
   studiobar_frozen_body: Anna və Elza ilə bir qış möcüzəsi yaradın
-  studiobar_donate_title: "İanə verin"
-  studiobar_donate_body: "İanə etdiyiniz hər dollara bir uşaq dərs alır"
+  studiobar_donate_title: İanə verin
+  studiobar_donate_body: İanə etdiyiniz hər dollara bir uşaq dərs alır
   studiobar_shop_title: Dükan
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_stats_students: of US students have accounts on Code.org
@@ -438,7 +438,7 @@
   homepage_action_text_teachervideo: Videoya baxın
   homepage_action_text_watchvideo: Videoya baxın
   homepage_action_text_girlvideo: Bir qızı həvəsləndirin
-  homepage_action_text_learn: "Öyrənməyə başlayın"
+  homepage_action_text_learn: Öyrənməyə başlayın
   homepage_action_text_signpetition: Petisiyaya qol çəkin
   homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: Mən razıyam &#x25BE;
@@ -469,14 +469,14 @@
   homepage_slot_text_link_host: Bir Kod Saatı təşkil edin
   homepage_slot_text_link_hocserved: "# nəfər faydalanıb"
   homepage_solot_text_link_volunteer: Kod Saatına könüllü kimi dəstək verin
-  homepage_slot_text_title_students: "Şagirdlər"
+  homepage_slot_text_title_students: Şagirdlər
   homepage_slot_text_blurb_students: Bütün dərsliklərimizi nəzərdən keçirin
   homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Kod Studiyasını sınaqdan keçirin
   homepage_slot_text_link_local: Yaxında bir sinif tapın
   homepage_slot_text_link_othercourses: Digər onlayn kurslar
   homepage_slot_text_title_educators: Təlimçilər
-  homepage_slot_text_blurb_educators: "Şagirdlərinizi öyrədin"
+  homepage_slot_text_blurb_educators: Şagirdlərinizi öyrədin
   homepage_slot_text_link_elementary: Elementary school
   homepage_slot_text_link_middle: Middle school
   homepage_slot_text_link_high: High school
@@ -484,16 +484,16 @@
   homepage_slot_text_link_fullcurriculum: Tam kurikulumu nəzərdən keçirin
   homepage_slot_text_link_pd: Peşəkar inkişaf
   homepage_slot_text_title_advocates: Təbliğatçılar
-  homepage_slot_text_blurb_advocates: "İnformatikada müxtəlifliyə dəstək verin"
+  homepage_slot_text_blurb_advocates: İnformatikada müxtəlifliyə dəstək verin
   homepage_slot_text_link_stats: Statistikaya baxın
-  homepage_slot_text_link_buy: "İştriak edin"
-  homepage_slot_text_link_donate: "İanə verin"
+  homepage_slot_text_link_buy: İştriak edin
+  homepage_slot_text_link_donate: İanə verin
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Kod Studiyasında şagirdlərin əl işləri
   homepage_header_donors: '"Code.org" onu dəstəkləyənlərə təşəkkür edir'
   homepage_donors_seall: Hamısına baxın
-  homepage_donors_donate: "İanə verin"
+  homepage_donors_donate: İanə verin
   contact_form_topic_student: Mən şagirdəm
   contact_form_topic_parent: Mən valideynəm
   contact_form_topic_teacher: Mən müəllim/təlimçiyəm
@@ -503,13 +503,13 @@
   contact_form_topic_other: Digər
   contact_form_label_topic: Mövzu
   contact_form_label_email: Sizin e-poçt ünvanınız
-  contact_form_label_message: "İsmarıc"
+  contact_form_label_message: İsmarıc
   contact_form_label_submit: Send Message
   class_submission_in_school: Məktəbdə
   class_submission_in_school_daily_programming_course: Gündəlik proqramlaşdırma kursu
   class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: "İnformatika üzrə tam
-    universitet kurrikulumu"
+  class_submission_in_school_full_university_cs_curriculum: İnformatika üzrə tam universitet
+    kurrikulumu
   class_submission_in_school_robotics_club: Robotika klubu
   class_submission_in_school_programming_integrated_in_other_classes: Digər dərslərə
     (riyaziyyat, təbiət fənləri və s.) daxil edilmiş proqramlaşdırma kursları
@@ -527,7 +527,7 @@
   class_submission_online_teacher_resource: Online teacher resource
   class_submission_online_other: Other online
   class_submission_level_preschool: Məktəbəqədər
-  class_submission_level_elementary: "İbtidai"
+  class_submission_level_elementary: İbtidai
   class_submission_level_middle_school: Middle school
   class_submission_level_high_school: High school
   class_submission_level_college: Kollec
@@ -703,8 +703,8 @@
     bölüşülən məlumat
   volunteer_engineer_submission_field_name: Ad
   volunteer_engineer_submission_field_name_placeholder: Tam Ad
-  volunteer_engineer_submission_field_company: "Şirkət (və ya universitet)"
-  volunteer_engineer_submission_field_company_placeholder: "Şirkət (və ya universitet)"
+  volunteer_engineer_submission_field_company: Şirkət (və ya universitet)
+  volunteer_engineer_submission_field_company_placeholder: Şirkət (və ya universitet)
   volunteer_engineer_submission_field_experience_level: Experience level
   volunteer_engineer_submission_field_location: Yer
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
@@ -760,8 +760,8 @@
     to open-source curriculum projects
   volunteer_engineer_submission_experience_unspecified: Unspecified
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: "İnformatika
-    üzrə universitet tələbəsi"
+  volunteer_engineer_submission_experience_university_student_or_researcher: İnformatika
+    üzrə universitet tələbəsi
   volunteer_engineer_submission_experience_software_professional: Proqramçı-mühəndis
   volunteer_engineer_submission_distance_8: 8 km
   volunteer_engineer_submission_distance_16: 16 km
@@ -787,7 +787,7 @@
   dashboard_landing_video: Bu videoya baxın
   dashboard_landing_watch_video: for a tour of the new features!
   dashboard_landing_view_as_student: View this site as a student
-  dashboard_landing_students_title: "Şagirdləriniz"
+  dashboard_landing_students_title: Şagirdləriniz
   dashboard_landing_students_manage: View and manage your students
   dashboard_landing_news_title: K-5 Educator Resources (in English only)
   dashboard_landing_new_beta: New! Try our beta courses for K-5 students.
@@ -856,7 +856,7 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Yüklənir...
-  dashboard_action_cancel: "İmtina et"
+  dashboard_action_cancel: İmtina et
   dashboard_action_delete: Sil
   dashboard_action_delete_yes: Bəli
   dashboard_action_delete_no: Xeyr
@@ -897,7 +897,7 @@
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
   dashboard_navigation_view_stats: Göstəricilər
   dashboard_navigation_section: 'Bölmə: %{section_name}'
-  dashboard_navigation_student: "Şagird: %{student_name}"
+  dashboard_navigation_student: 'Şagird: %{student_name}'
   dashboard_progress_not_started: başlanmayıb
   dashboard_progress_in_progress: tamamlanmayıb
   dashboard_progress_not_completed: tamamlanmayıb
@@ -922,7 +922,7 @@
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "Şagirdlər"
+  dashboard_sections_table_students: Şagirdlər
   dashboard_sections_table_code: Bölmə kodu
   dashboard_sections_name: Bölmənin adı
   dashboard_sections_choose_secret: If you would like to provide accounts to your
@@ -969,8 +969,8 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_multiple: "Şagirdlərinizin adlarını hər sətirdə biri olmaqla
-    yazın və ya əlavə edin:"
+  dashboard_students_add_multiple: 'Şagirdlərinizin adlarını hər sətirdə biri olmaqla
+    yazın və ya əlavə edin:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
@@ -997,11 +997,11 @@
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret
     words will be generated for that student to use when they sign in. '
-  dashboard_students_join_link: "Şagirdlərinizə deyin ki, özlərinə hesab düzəltsinlər
-    və bölmənizə növbəti keçiddən qoşulsunlar:"
-  dashboard_students_no_email: "Şagirdlərinizin e-poçt ünvanı yoxdursa, yaxud onların
+  dashboard_students_join_link: 'Şagirdlərinizə deyin ki, özlərinə hesab düzəltsinlər
+    və bölmənizə növbəti keçiddən qoşulsunlar:'
+  dashboard_students_no_email: Şagirdlərinizin e-poçt ünvanı yoxdursa, yaxud onların
     hesablarını özünüz düzəltmək istəyirsinizsə, bu bölmənin məxfi kodunu <b>söz</b>
-    və ya <b>şəkil</b> növünə dəyişin."
+    və ya <b>şəkil</b> növünə dəyişin.
   dashboard_students_print_page: Bu səhifəni çap et
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
   dashboard_students_url: URL ünvan
@@ -1049,7 +1049,7 @@
   dashboard_grade_k: K
   dashboard_grade_other: Digər
   dashboard_login_word: Söz
-  dashboard_login_picture: "Şəkil"
+  dashboard_login_picture: Şəkil
   dashboard_login_none: E-poçt
   dashboard_stage: mərhələ
   dashboard_puzzle: Tapmaca
@@ -1071,7 +1071,7 @@
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Müəllim
-  dashboard_student: "şagird"
+  dashboard_student: şagird
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -1160,7 +1160,7 @@
   participants: iştirakçılar
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: "Əvvəlki"
+  previous: Əvvəlki
   next: Növbəti
   older_systems: Tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all
@@ -1169,8 +1169,8 @@
   mobile_devices: Tutorials for mobile devices
   frozen_name: Anna və Elza ilə proqramlaşdır
   starwars_name: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın'
-  codeorg_name: "İlk kompüter proqramınızı yazın"
-  codeintl_name: "İlk kompüter proqramınızı yazın"
+  codeorg_name: İlk kompüter proqramınızı yazın
+  codeintl_name: İlk kompüter proqramınızı yazın
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -1206,7 +1206,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: "İlk kompüter proqramınızı yazın"
+  hourofcode_name: İlk kompüter proqramınızı yazın
   playlab_name: Oyun labı
   infinity_name: Infinity Play Lab
   artist_name: Rəssam
@@ -1324,12 +1324,12 @@
   robomind_gradelevel: 8-13 yaş
   groklearning_gradelevel: Middle school +
   quorum_gradelevel: Middle school +
-  codespark_gradelevel: "İbtidai"
-  kodable_gradelevel: "İbtidai"
+  codespark_gradelevel: İbtidai
+  kodable_gradelevel: İbtidai
   tynkerapp_gradelevel: 5-13 yaş
   robomindnl_gradelevel: 8-13 yaş
   flappy_gradelevel: 4-104 yaş
-  bitsbox_gradelevel: "İbtidai"
+  bitsbox_gradelevel: İbtidai
   makeschool_gradelevel: High school
   touchdevelop_gradelevel: High school
   appinventor_gradelevel: Middle school +
@@ -1346,7 +1346,7 @@
   monstercoding_gradelevel: 5-13 yaş
   allcancode_gradelevel: 5-10 yaş
   csfirst_gradelevel: 9-14 yaş
-  boxisland_gradelevel: "İbtidai"
+  boxisland_gradelevel: İbtidai
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: 5+ yaş
@@ -1420,7 +1420,7 @@
   khanpl_shortdescription: Learn to draw in JavaScript
   tynker_shortdescription: Learn to code by solving fun puzzles and build your own
     mobile games.
-  scratch_shortdescription: "İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin."
+  scratch_shortdescription: İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin.
   lightbot_shortdescription: Program Lightbot to solve puzzles using procedures and
     loops!
   thinkersmith_shortdescription: Heç bir avadanlığı olmayan bir qrup üçün sərbəst
@@ -1454,7 +1454,7 @@
   appinventor_shortdescription: Make your own app! (Android-only)
   blockly_shortdescription: Download a ZIP file to learn offline
   thinkersmith2_shortdescription: Learn how computers use 1s and 0s to represent information
-  kodableunplugged_shortdescription: "Əyləncəli sərbəst çalışma"
+  kodableunplugged_shortdescription: Əyləncəli sərbəst çalışma
   projguts_shortdescription: Try modeling and simulation using rock/paper/scissors
   hourofcode_shortdescription: Placeholder for new code.org/hoc
   frozen_shortdescription: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya
@@ -1709,8 +1709,8 @@
   scratch_beyond_gradelevel: 8+ yaş
   lightbot_beyond_gradelevel: Bütün yaşlar
   codecademy_beyond_gradelevel: High school
-  kodable_beyond_gradelevel: "İbtidai"
-  scratchjr_beyond_gradelevel: "İbtidai"
+  kodable_beyond_gradelevel: İbtidai
+  scratchjr_beyond_gradelevel: İbtidai
   hopscotch_beyond_gradelevel: Middle school +
   pocketcode_beyond_gradelevel: Middle school +
   groklearning_beyond_gradelevel: Middle school +
@@ -1743,7 +1743,7 @@
   codeorg_beyond_platformtext: Müasir veb səyyahlar, planşetlər
   khan_beyond_platformtext: Müasir veb səyyahlar
   tynker_beyond_platformtext: Müasir veb səyyahlar (ödənişlidir)
-  scratch_beyond_platformtext: "İstənilən veb səyyah"
+  scratch_beyond_platformtext: İstənilən veb səyyah
   lightbot_beyond_platformtext: iOS, Android (or web browser)
   codecademy_beyond_platformtext: Müasir veb səyyahlar. iOS, Android proqramları
   kodable_beyond_platformtext: iPad
@@ -1780,7 +1780,7 @@
   codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   khan_beyond_shortdescription: Learn to draw in JavaScript
   tynker_beyond_shortdescription: 4-8-ci sinif uşaqları üçün əyləncəli, maraqlı kurs
-  scratch_beyond_shortdescription: "İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin."
+  scratch_beyond_shortdescription: İnteraktiv oyunlar, əhvalat və animasiyalar düzəldin.
   lightbot_beyond_shortdescription: A game to teach coding concepts
   codecademy_beyond_shortdescription: Learn JavaScript programming, in a web-browser
   kodable_beyond_shortdescription: A fun iPad game to teach computer programming concepts
@@ -2001,7 +2001,7 @@
   header_sections: Bölmələr
   header_professional_learning: Peşəkar təhsil
   header_educate_overview: Təlimçi üçün xülasə
-  header_educate_elementary: "İbtidai məktəb"
+  header_educate_elementary: İbtidai məktəb
   header_educate_middle: Orta məktəb
   header_educate_high: Orta məktəbin yuxarı sinifləri
   header_educate_hoc: Kod Saatı
@@ -2020,8 +2020,8 @@
   header_about_jobs: Vakansiyalar
   header_about_contact: Bizimlə əlaqə saxlayın
   header_about_faqs: Tez-tez verilən suallar
-  header_learn: "Öyrənin"
-  header_teach: "Öyrədin"
+  header_learn: Öyrənin
+  header_teach: Öyrədin
   header_stats: Göstəricilər
   header_help_us: Bizə kömək edin
   header_about: Haqqımızda
@@ -2035,7 +2035,7 @@
   full_course_category_name: Full Courses
   user_header_label: Salam %{username}
   user_header_settings: Mənim hesabım
-  user_header_logout: "Çıxın"
+  user_header_logout: Çıxın
   user_header_signin: Daxil olun
   view_all_sections: View All Sections
   view_section: View Section
