@@ -3,17 +3,17 @@ es-MX:
     course:
       name:
         csp:
-          title: Computer Science Principles
-          description_student: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
-          description_teacher: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
-          description_short: Learn foundational computer science concepts.
+          title: Principios de Ciencias de la Computación
+          description_student: En otoño 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados en el con herramientas computacionales esenciales y oportunidades multidisciplinarias.
+          description_teacher: En otoño de 2016, el College Board lanzó su más reciente curso AP, Principios de Ciencias de la Computación. El curso introduce a los estudiantes a los conceptos fundamentales de Ciencias de la computación y desafía a explorar cómo la computación y la tecnología pueden impactar el mundo. El Programa AP lo diseñó con el objetivo de crear líderes en el campo de Ciencias de la Computación y atraer a quienes tradicionalmente son subrepresentados en el con herramientas computacionales esenciales y oportunidades multidisciplinarias.
+          description_short: Aprende conceptos fundamentales de ciencias de la computación.
         csd:
           title: Computer Science Discoveries
-          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: CS Discoveries es un curso introductorio que permite a los estudiantes crear artefactos auténticos y utilizar las Ciencias de la computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_teacher: CS Discoveries es un curso introductorio que permite a los estudiantes crear artefactos auténticos y utilizar las Ciencias de la computación como un medio para la creatividad, comunicación, resolución de problemas y diversión.
+          description_short: Un curso introductorio de Ciencias de la Computación que permite a los estudiantes crear artefactos auténticos.
         allthethingscourse:
           title: allthethingscourse
-          description_short: This is a course for allthethings
-          description_student: This is a course for allthethings and has a longer description for students
-          description_teacher: This is a course for allthethings and has a longer description for teachers
+          description_short: Este es un curso para allthethings
+          description_student: Este es un curso para allthethings y cuenta con una descripción más larga para los estudiantes
+          description_teacher: Este es un curso para allthethings y cuenta con una descripción más larga para los profesores

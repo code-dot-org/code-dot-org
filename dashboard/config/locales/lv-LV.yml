@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Lūdzu, izlabojiet šādas kļūdas:'
-      too_young: "Šim saturam ir vecuma ierobežojums, un tas nav pieejams jaunākiem
-        skolēniem."
+      too_young: Šim saturam ir vecuma ierobežojums, un tas nav pieejams jaunākiem
+        skolēniem.
       teacher_must_accept_terms: This content has age restrictions in place and is
         not available for younger students. Ask your teacher to accept the updated
         Terms of Service to give you access to this content. Your teacher can do this
@@ -460,9 +460,9 @@
     tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
     trynow: Izmēģini tūlīt
     add_hint_help: Lūdzu palīdziet mums pievienot gudrus padomus Code.org pamācībās
-    20hour_overview: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
+    20hour_overview: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
       pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet
-      tas sagādās prieku mācīties visos vecumos."
+      tas sagādās prieku mācīties visos vecumos.
     test_videos_help: Izmēģinat mūsu jauno video atskaņotāju savā skolā
     try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem
     use_as_teacher: Izmantojiet šo vietni, kā skolotājs
@@ -730,9 +730,9 @@
         koda apmācību!
     20-hour:
       title: Accelerated Course
-      body: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
+      body: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
         Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās
-        prieku mācīties visos vecumos."
+        prieku mācīties visos vecumos.
       body_short: Learn basic computer science in an accelerated version of courses
         2-4.
     hoc2014:
@@ -820,11 +820,11 @@
     header_artist: Mākslinieks
     report_abuse: Report Abuse
   landing:
-    prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
+    prerelease: Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
       ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju
-      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
-    prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā.
-      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
+      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti.
+    prerelease_hoc2014: Šī pamācība ir <span class='betatext'>beta</span >stadijā.
+      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes.
     report_bug: Kļūdas ziņojums
     support: Saņemt palīdzību
     support_url: "//support.code.org"

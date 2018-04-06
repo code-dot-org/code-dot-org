@@ -59,7 +59,7 @@
   csedweek_map_signup: Registrera ditt evenemang
   csedweek_map_search_placeholder: Sök efter Kodtimmen evenemang
   csedweek_map_search_search: Sök
-  csedweek_map_search_reset: "Återställ"
+  csedweek_map_search_reset: Återställ
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Kodtimmen evenemang
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
@@ -325,7 +325,7 @@
   boy: Pojke
   help_recruit_coders: Hjälp oss att rekrytera fler kodare till vårt team!
   help_recruit: Hjälp oss att rekrytera fler kodare!
-  lines_of_code: "ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS."
+  lines_of_code: ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS.
   lines_of_code_alt: "<b>#</b> RADER MED KOD SKRIVET AV ELEVER"
   who_has_done_hoc: Vilka har gjort en Timme med Kod? @codeorg
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
@@ -488,7 +488,7 @@
   contact_form_topic_contribution: Bidrag/Välgörenhet
   contact_form_topic_partner: Jag vill jobba tillsammans med andra
   contact_form_topic_other: Annat
-  contact_form_label_topic: "Ämne"
+  contact_form_label_topic: Ämne
   contact_form_label_email: Din e-postadress
   contact_form_label_message: Meddelande
   contact_form_label_submit: Skicka meddelande
@@ -542,7 +542,7 @@
     den här Minecraft-världen.
   mc_shortdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr
     genom denna Minecraft-värld.
-  mc_gradelevel: "Ålder 6+"
+  mc_gradelevel: Ålder 6+
   mc_platformtext: Moderna webbläsare, smartphones, surfplattor
   mc_specs: Många språk | Moderna webbläsare och pekplattor | Åldrarna 6-106
   minecraft_agent: 'Minecraft: Hero’s Journey'
@@ -657,7 +657,7 @@
   help_translate: Hjälp oss att översätta.
   no_internet: Inte har Internet?
   download_offline: Ladda ned offline-versionen.
-  are_you_teacher: "Är du en lärare?"
+  are_you_teacher: Är du en lärare?
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspirera elever och frivilliga för Hour of
     Code.
@@ -769,7 +769,7 @@
     klassrum för att säga några ord av inspiration till barnen
   volunteer_engineer_submission_type_task_mentor: Jag söker en mentor för att förbereda
     mig för kodning med mina elever
-  petition_age: "Ålder"
+  petition_age: Ålder
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
@@ -828,7 +828,7 @@
     för att lära matematiska och naturvetenskapliga begrepp. För att registrera dig
     för kompetensutveckling workshops, ansök om ett <a href="/educate/districts">distrikt
     hela partnerskap</a> med Code.org.
-  dashboard_high_courses: "Årslånga High School kurser"
+  dashboard_high_courses: Årslånga High School kurser
   dashboard_high_courses_desc: Våra gymnasieprogram hjälper skoldistrikt att erbjuda
     läsårskurser i diavetenskap genom att förbereda den befintliga lärarkåren i detta
     nya område. För att registrera för kompetensutveckling-sworkshops, ansök om ett
@@ -909,7 +909,7 @@
     kan följa deras framsteg och hantera deras konton.
   dashboard_sections_table_section: Grupp
   dashboard_sections_table_secret: Inloggningstyp
-  dashboard_sections_table_grade: "Årskurs"
+  dashboard_sections_table_grade: Årskurs
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_pairing_allowed: Par-programmering
   dashboard_sections_table_stage_extras: Stage Extras
@@ -1021,7 +1021,7 @@
   dashboard_tools: 'Tools: '
   dashboard_curriculum: Läroplan
   dashboard_curriculum_overview: K-5 kursplans- översikt
-  dashboard_overview: "Översikt"
+  dashboard_overview: Översikt
   dashboard_sequence: Sekvens
   dashboard_framework: Ramverk
   dashboard_standards: Standarder
@@ -1117,17 +1117,17 @@
   carousel_heading_codeorg_any_device: Handledning av Code.org (för alla enheter)
   carousel_heading_3rd_party: 'Tutorials av 3: e part'
   carousel_heading_third_party: Handledning av tredje part
-  carousel_heading_international: "Övningar på ditt språk"
-  carousel_heading_domestic: "Övningar på engelska"
-  carousel_heading_beginners: "Övningar för nybörjare"
-  carousel_heading_beyond_beginners: "Övningar för nybörjare"
-  carousel_heading_javascript: "Övningar som lär JavaScript"
-  carousel_heading_beyond_javascript: "Övningar som lär dig JavaScript"
+  carousel_heading_international: Övningar på ditt språk
+  carousel_heading_domestic: Övningar på engelska
+  carousel_heading_beginners: Övningar för nybörjare
+  carousel_heading_beyond_beginners: Övningar för nybörjare
+  carousel_heading_javascript: Övningar som lär JavaScript
+  carousel_heading_beyond_javascript: Övningar som lär dig JavaScript
   carousel_heading_unplugged: Inga datorer eller internet? Prova "ouppkopplad" datavetenskap
   carousel_heading_devices: Appar med övningar för mobiler och sufplattor
   carousel_heading_beyond_devices: Appar med övningar för mobiler och surfplattor
-  carousel_heading_languages: "Övningar i andra programmeringsspråk"
-  carousel_heading_beyond_languages: "Övningar i andra programmeringsspråk"
+  carousel_heading_languages: Övningar i andra programmeringsspråk
+  carousel_heading_beyond_languages: Övningar i andra programmeringsspråk
   carousel_heading_apps_games: Gör dina egna appar eller spel
   carousel_heading_university: Universitetskurser på nätet
   carousel_heading_webpages: Lär dig göra webbsidor
@@ -1158,7 +1158,7 @@
   older_systems_subheading: Dessa ska fungera i äldre webbläsare. För att få tillgång
     till alla övningar, uppgradera till en <a href="http://browsehappy.com/" target="_blank">modern
     webbläsare.</a>
-  mobile_devices: "Övningar för mobila enheter"
+  mobile_devices: Övningar för mobila enheter
   frozen_name: Koda med Anna och Elsa
   starwars_name: 'Star Wars: Bygg en galax med kod'
   codeorg_name: Klassisk labyrint
@@ -1288,12 +1288,12 @@
   gamelab_name: Game Lab
   basketball_name: Göra en basketmatch
   sports_name: Sport
-  applab_gradelevel: "Ålder 13+"
+  applab_gradelevel: Ålder 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
-  codeorg_gradelevel: "Åldrarna 4-104"
-  codeintl_gradelevel: "Åldrarna 4-104"
+  codeorg_gradelevel: Åldrarna 4-104
+  codeintl_gradelevel: Åldrarna 4-104
   thinkersmithspanish_gradelevel: Por todos
   khan_gradelevel: Högstadiet +
   khanes_gradelevel: Högstadiet +
@@ -1301,11 +1301,11 @@
   khanhe_gradelevel: Högstadiet +
   khanfr_gradelevel: Högstadiet +
   khanpl_gradelevel: Högstadiet +
-  tynker_gradelevel: "Åldrarna 5-13"
-  scratch_gradelevel: "Åldrar 8 +"
+  tynker_gradelevel: Åldrarna 5-13
+  scratch_gradelevel: Åldrar 8 +
   lightbot_gradelevel: Alla åldrar
   thinkersmith_gradelevel: Alla åldrar
-  condcards_gradelevel: "Åldrarna 8-12"
+  condcards_gradelevel: Åldrarna 8-12
   lightbotintl_gradelevel: Alla åldrar
   codehs_gradelevel: Gymnasiet
   codecademy_gradelevel: Gymnasiet
@@ -1313,46 +1313,46 @@
   codemonkey_gradelevel: Högstadiet +
   codeavengers_gradelevel: Högstadiet +
   processing_gradelevel: Gymnasiet
-  robomind_gradelevel: "Åldrarna 8-13"
+  robomind_gradelevel: Åldrarna 8-13
   groklearning_gradelevel: Högstadiet +
   quorum_gradelevel: Högstadiet +
   codespark_gradelevel: Grundskolan
   kodable_gradelevel: Grundskolan
-  tynkerapp_gradelevel: "Åldrarna 5-13"
-  robomindnl_gradelevel: "Åldrarna 8-13"
-  flappy_gradelevel: "Åldrarna 4-104"
+  tynkerapp_gradelevel: Åldrarna 5-13
+  robomindnl_gradelevel: Åldrarna 8-13
+  flappy_gradelevel: Åldrarna 4-104
   bitsbox_gradelevel: Grundskolan
   makeschool_gradelevel: Gymnasiet
   touchdevelop_gradelevel: Gymnasiet
   appinventor_gradelevel: Högstadiet +
   blockly_gradelevel: Alla åldrar
-  thinkersmith2_gradelevel: "Åldrar 8 +"
-  kodableunplugged_gradelevel: "Åldrarna 8-13"
-  projguts_gradelevel: "Åldrarna 10-13"
-  hourofcode_gradelevel: "Åldrarna 4-104"
-  frozen_gradelevel: "Åldrar 8 +"
-  starwars_gradelevel: "Ålder 6+"
-  playlab_gradelevel: "Åldrarna 4-104"
-  infinity_gradelevel: "Åldrarna 4-104"
-  artist_gradelevel: "Åldrarna 4-104"
-  monstercoding_gradelevel: "Åldrarna 5-13"
-  allcancode_gradelevel: "Ålder 5-10"
-  csfirst_gradelevel: "Ålder 9-14"
+  thinkersmith2_gradelevel: Åldrar 8 +
+  kodableunplugged_gradelevel: Åldrarna 8-13
+  projguts_gradelevel: Åldrarna 10-13
+  hourofcode_gradelevel: Åldrarna 4-104
+  frozen_gradelevel: Åldrar 8 +
+  starwars_gradelevel: Ålder 6+
+  playlab_gradelevel: Åldrarna 4-104
+  infinity_gradelevel: Åldrarna 4-104
+  artist_gradelevel: Åldrarna 4-104
+  monstercoding_gradelevel: Åldrarna 5-13
+  allcancode_gradelevel: Ålder 5-10
+  csfirst_gradelevel: Ålder 9-14
   boxisland_gradelevel: Grundskolan
-  codesters_gradelevel: "Ålder 12-14"
-  texasinstruments_gradelevel: "Ålder 13-16"
-  teacherled_gradelevel: "Ålder 5+"
+  codesters_gradelevel: Ålder 12-14
+  texasinstruments_gradelevel: Ålder 13-16
+  teacherled_gradelevel: Ålder 5+
   course1_gradelevel: Från 4 år (icke-läsare)
-  course2_gradelevel: "Åldrar 6 + (läsförmåga krävs)"
-  course3_gradelevel: "Åldrar 8 + (efter kurs 2)"
-  course4_gradelevel: "Åldrar 10 + (efter kurs 3)"
+  course2_gradelevel: Åldrar 6 + (läsförmåga krävs)
+  course3_gradelevel: Åldrar 8 + (efter kurs 2)
+  course4_gradelevel: Åldrar 10 + (efter kurs 3)
   coursea_gradelevel: Grade 5+
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grade 8+
-  coursee_gradelevel: "Åldrarna 8-12"
+  coursee_gradelevel: Åldrarna 8-12
   coursef_gradelevel: Grade 10+
-  accelerated_gradelevel: "Åldrar 10 + (efter kurs 3)"
+  accelerated_gradelevel: Åldrar 10 + (efter kurs 3)
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeintl_platformtext: Moderna webbläsare, smartphones, surfplattor
   thinkersmithspanish_platformtext: Ouppkopplad
@@ -1699,10 +1699,10 @@
   processing_beyond_name: Programmera med Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "Åldrarna 4-104"
+  codeorg_beyond_gradelevel: Åldrarna 4-104
   khan_beyond_gradelevel: Högstadiet +
-  tynker_beyond_gradelevel: "Åldrarna 5-13"
-  scratch_beyond_gradelevel: "Åldrar 8 +"
+  tynker_beyond_gradelevel: Åldrarna 5-13
+  scratch_beyond_gradelevel: Åldrar 8 +
   lightbot_beyond_gradelevel: Alla åldrar
   codecademy_beyond_gradelevel: Gymnasiet
   kodable_beyond_gradelevel: Grundskolan
@@ -1711,7 +1711,7 @@
   pocketcode_beyond_gradelevel: Högstadiet +
   groklearning_beyond_gradelevel: Högstadiet +
   hacketyhack_beyond_gradelevel: Gymnasiet
-  robomind_beyond_gradelevel: "Åldrarna 8-13"
+  robomind_beyond_gradelevel: Åldrarna 8-13
   makeschool_beyond_gradelevel: Gymnasiet
   appinventor_beyond_gradelevel: Högstadiet +
   touchdevelop_beyond_gradelevel: Gymnasiet
@@ -1722,20 +1722,20 @@
   coursera_beyond_gradelevel: Universitet
   udacity_beyond_gradelevel: Universitet
   teachingtree_beyond_gradelevel: Universitet
-  kodu_beyond_gradelevel: "Åldrar 8 +"
-  cargobot_beyond_gradelevel: "Åldrar 8 +"
-  kidsruby_beyond_gradelevel: "Åldrar 12 +"
-  w3schools_beyond_gradelevel: "Åldrar 12 +"
+  kodu_beyond_gradelevel: Åldrar 8 +
+  cargobot_beyond_gradelevel: Åldrar 8 +
+  kidsruby_beyond_gradelevel: Åldrar 12 +
+  w3schools_beyond_gradelevel: Åldrar 12 +
   codeavengers_beyond_gradelevel: Högstadiet +
-  mozilla_beyond_gradelevel: "Åldrar 12 +"
+  mozilla_beyond_gradelevel: Åldrar 12 +
   codecombat_beyond_gradelevel: Högstadiet +
   codea_beyond_gradelevel: Gymnasiet +
   lego_beyond_gradelevel: Högstadiet +
-  finch_beyond_gradelevel: "Åldrar 8 +"
+  finch_beyond_gradelevel: Åldrar 8 +
   arduino_beyond_gradelevel: Gymnasiet +
   processing_beyond_gradelevel: Gymnasiet
   alice_beyond_gradelevel: Högstadiet +
-  sphero_beyond_gradelevel: "Åldrar 8 +"
+  sphero_beyond_gradelevel: Åldrar 8 +
   codeorg_beyond_platformtext: Moderna webbläsare + surfplattor
   khan_beyond_platformtext: Moderna webbläsare
   tynker_beyond_platformtext: Moderna webbläsare ($$ krävs)

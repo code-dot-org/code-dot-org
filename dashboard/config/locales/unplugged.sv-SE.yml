@@ -510,3 +510,29 @@
         desc: Eleverna introduceras i programmerings-konceptet 'händelser' som är
           åtgärder en dator konstant letar efter. Läraren trycker på knappar på ett
           papper och elevernas reaktion beror på vilken knapp som blivit tryckt.
+      GraphPaperProgramming_2018:
+        title: Kalkyleringsprogrammering
+        desc: Eleverna skriver en uppsättning instruktioner genom att använda fördefinierade
+          kommandon så att andra elever kan reproducera en teckning.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Ouppkopplad aktivitet
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Ouppkopplad aktivitet
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Villkor
+        desc: För att lära om villkors-satser får eleverna spela ett kortspel och
+          skapa regler som 'om jag drar ett rött kort får jag en poäng' och 'om jag
+          drar ett svart kort får du en poäng'.
+      DigitalFootprint_2018:
+        title: Ditt digitala fotavtryck
+        desc: Läraren visar eleverna hur de genom att lägga ut information om dem
+          själva på nätet skapar digital fotavtryck eller 'spår' som har konsekvenser.
+      BinaryImages_2018:
+        title: Binära bilder
+        desc: Fastän många människor tänker på binärt som bara nollor och ettor, har
+          de föregående kurserna visat eleverna att information kan bli presenterad
+          på olika binära sätt. Den här lektionen tar det konceptet vidare genom att
+          visa hur en dator kan lagra även mer komplex information(som bilder och
+          färger) på binärt sätt.

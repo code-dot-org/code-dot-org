@@ -301,7 +301,7 @@
         What's Brent's last name?: What's Brent's last name?
         What's in the ocean?: What's in the ocean?
         Where is Brendan from?: Where is Brendan from?
-        blue: "شین"
+        blue: شین
         salt: salt
     multi:
       2-3 Algorithms Multi 1:
@@ -892,7 +892,7 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "هەڕەمەکی"
+        random: هەڕەمەکی
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone

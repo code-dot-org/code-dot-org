@@ -15,7 +15,7 @@
   activerecord:
     errors:
       messages:
-        blank: "é obrigatório"
+        blank: é obrigatório
         blank_plural: obrigatório
         invalid_plural: inválido
     attributes:
@@ -157,7 +157,7 @@
     user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Estudante
-    field_is_required: "é obrigatório"
+    field_is_required: é obrigatório
     accept_terms: Você precisa aceitar criar uma conta
     error: Ocorreu um erro.
   school_info:
@@ -210,7 +210,7 @@
       email: Endereço de email
       submit: Enviar
     reset_errors:
-      captcha_required: Please fill out the CAPTCHA to reset your password.
+      captcha_required: Por favor, preencha o CAPTCHA para redefinir sua senha.
       invalid_email: Parece que você se inscreveu com um endereço de e-mail inválido.
         Envie um e-mail para support@code.org para receber um link de recuperação
         de senha.
@@ -682,7 +682,7 @@
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas
     teacher: Ver a solução
-    teacher_no_solution: Stop seeing solution
+    teacher_no_solution: Não mostrar a solução
     auth_error: Você não está autorizado a ver a solução.
     submit: Atualize a Localização do Artista
     direction: Direção de início (em graus)
@@ -692,8 +692,8 @@
     notes_coming_soon: As notas deste vídeo estarão disponíveis em breve.
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
-    show_notes: Show Notes
-    show_video: Show Video
+    show_notes: Mostrar as notas
+    show_video: Mostrar o vídeo
   compatibility:
     upgrade:
       unsupported_message: Seu navegador não é compatível. Atualize seu navegador
@@ -961,12 +961,12 @@
       de alunos no Code Studio.</i> Essa é uma grande mudança para nós, e esperamos
       que essa decisão defina um novo padrão para a privacidade dos alunos na tecnologia
       da educação. Enviamos um resumo das demais alterações a você por e-mail.'
-    intro_instructions: "É preciso aceitar esses novos termos para alunos com menos
+    intro_instructions: É preciso aceitar esses novos termos para alunos com menos
       de 13 anos na sua sala de aula para ter acesso completo a todos os recursos
       mais recentes do Code Studio. Ao cadastrar uma conta para um aluno menor de
       13 anos, você terá que confirmar que sua escola tem o consentimento dos pais
       ou responsáveis para a coleta de informações pessoais do aluno para uso e benefício
-      da escola, incluindo programas educativos, como o Code Studio."
+      da escola, incluindo programas educativos, como o Code Studio.
     tos: Termos de Serviço
     privacy: Política de Privacidade
     privacy_notice: Aviso de privacidade
@@ -997,7 +997,7 @@
     - hispanic: Hispânico ou Latino
     - asian: Asiático
     - hawaiian: Nativo do Havaí ou de outra ilha do Pacífico
-    - american_indian: "Índio Americano/Nativo do Alaska"
+    - american_indian: Índio Americano/Nativo do Alaska
     - other: Outros
     - opt_out: Prefiro não responder
     submit: Enviar
@@ -1147,21 +1147,21 @@
     csf_e_2: Course E Content
     csf_f_1: Ramp Up to Course F (Optional)
     csf_f_2: Course F Content
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
-    csd3_1: 'Chapter 1: Images and Animations'
-    csd3_2: 'Chapter 2: Building Games'
-    csd4_1: 'Chapter 1: User Centered Design'
-    csd4_2: 'Chapter 2: App Prototyping'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
-    csd6_1: 'Chapter 1: Hardware Output'
-    csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csd1_1: 'Capítulo 1: O Processo de Solução de Problemas'
+    csd1_2: 'Capítulo 2: Computadores e Solução de Problemas'
+    csd2_1: 'Capítulo 1: Conteúdo Web e HTML'
+    csd2_2: 'Capítulo 2: Estilo e CSS'
+    csd3_1: 'Capítulo 1: Imagens e Amimações'
+    csd3_2: 'Capítulo 2: Construindo Jogos'
+    csd4_1: 'Capítulo 1: Desenho orientado ao usuário'
+    csd4_2: 'Capítulo 1: Prototipando o App'
+    csd5_1: 'Capítulo 1: Representando Informação'
+    csd5_2: 'Capítulo 2: Resolvendo Problemas de Informações'
+    csd6_1: 'Capítulo 1: Programando com Hardware'
+    csd6_2: 'Capítulo 2: Construindo protótipos físicos'
+    csp1_1: 'Capítulo 1: Representando e Transmitindo Informação'
+    csp1_2: 'Capítulo 2: Inventando a Internet'
+    csp2_1: 'Capítulo 1: Codificando e Comprimindo Informações Complexas'
     csp2_2: 'Chapter 2: Manipulating and Visualing Data'
     csp3_1: 'Chapter 1: Programming Languages and Algorithms'
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'

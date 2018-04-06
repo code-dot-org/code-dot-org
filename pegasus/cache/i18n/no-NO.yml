@@ -308,8 +308,7 @@
     ut! Takk %{donor_twitter} for å støtte @codeorg
   twitter_teach_cs: 9 av 10 personer enig, skoler bør undervise i programmering. http://youtu.be/nKIu9yen5nc.
     Besøk https://code.org/.
-  twitter_cs_foundational: "Å lære programmering er fundamentalt for alle elever.
-    https://youtu.be/QvyTEx1wyOY."
+  twitter_cs_foundational: Å lære programmering er fundamentalt for alle elever. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Lær en Time med Kode
   beyond_hoc: Utover en time
   what_gender: Er du jente eller gutt?
@@ -784,7 +783,7 @@
   dashboard_landing_available_title: Tilgjengelige kurs
   dashboard_landing_available_courses: Disse kursene er for tiden tilgjengelig for
     deg og dine elever.
-  dashboard_landing_more_tutorials: "Ønsker du å se flere opplæringsprogrammer?"
+  dashboard_landing_more_tutorials: Ønsker du å se flere opplæringsprogrammer?
   dashboard_landing_more_tutorials_desc: Det finnes flere opplæringsprogrammer <a
     href="/learn/beyond">tilbudt av partnerne våre.</a> Lær å programmere med roboter,
     lage nettsider, lage din egen applikasjon eller utforske andre språk som C++,
@@ -812,7 +811,7 @@
     programmering i midtskolematematikk og -vitenskap - som et verktøy for å lære
     matemtikk- og vitenskapskonsepter. For å melde deg på de profesjonelle utviklingsverkstedene,
     søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.
-  dashboard_high_courses: "Årslange høyskolekurs"
+  dashboard_high_courses: Årslange høyskolekurs
   dashboard_high_courses_desc: Høyskoleprogrammet vårt hjelper skoledistrikter med
     å tilby helårige datavitenskapskurs ved å sette eksisterende pedagogisk ansatte
     i gang med å tilby dette fagområdet. For å melde deg på de profesjonelle utviklingsverkstedene,
@@ -1102,16 +1101,16 @@
   carousel_heading_3rd_party: Guider laget av andre
   carousel_heading_third_party: Guider laget av andre
   carousel_heading_international: Gjennomganger på norsk
-  carousel_heading_domestic: "Øvinger tilgjengelig på engelsk"
-  carousel_heading_beginners: "Øvinger for nybegynnere"
-  carousel_heading_beyond_beginners: "Øvinger for nybegynnere"
-  carousel_heading_javascript: "Øvinger som underviser JavaScript"
-  carousel_heading_beyond_javascript: "Øvinger som lærer deg JavaScript"
+  carousel_heading_domestic: Øvinger tilgjengelig på engelsk
+  carousel_heading_beginners: Øvinger for nybegynnere
+  carousel_heading_beyond_beginners: Øvinger for nybegynnere
+  carousel_heading_javascript: Øvinger som underviser JavaScript
+  carousel_heading_beyond_javascript: Øvinger som lærer deg JavaScript
   carousel_heading_unplugged: Ingen enhet eller Internett? Prøv 'frakoblet' koding
-  carousel_heading_devices: "Øvings-apper for telefoner og nettbrett"
-  carousel_heading_beyond_devices: "Øvings-apper for telefoner og nettbrett"
-  carousel_heading_languages: "Øvinger i andre programmeringsspråk"
-  carousel_heading_beyond_languages: "Øvinger i andre programmeringsspråk"
+  carousel_heading_devices: Øvings-apper for telefoner og nettbrett
+  carousel_heading_beyond_devices: Øvings-apper for telefoner og nettbrett
+  carousel_heading_languages: Øvinger i andre programmeringsspråk
+  carousel_heading_beyond_languages: Øvinger i andre programmeringsspråk
   carousel_heading_apps_games: Lag dine egne apper eller spill
   carousel_heading_university: Universitetskurs på nett
   carousel_heading_webpages: Lær hvordan å lage nettsider
@@ -1130,8 +1129,8 @@
     her.</a>
   how_to_teach_hoc: Hvordan lære bort en Kodetime
   more_resources_educators: Flere lærerressurser
-  beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
-    innlevering skjemaet."
+  beyond_submission: Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
+    innlevering skjemaet.
   third_party_submission: Vil du registrere ett opplæringsprogram for visning her?
     <a href="%{submission_url}">Se kriterier og registrerings skjema.</a>
   participants: deltakere
@@ -1139,11 +1138,11 @@
   teachers_notes_hoc: 'Lærere: Les viktig opplæringsnotater her'
   previous: Forrige
   next: Neste
-  older_systems: "Øvinger som fungerer på eldre systemer"
+  older_systems: Øvinger som fungerer på eldre systemer
   older_systems_subheading: Disse burde fungere i eldre nettlesere. For å få tilgang
     til alle øvinger, oppgrader til en <a href="http://browsehappy.com/" target="_blank">moderne
     nettleser.</a>
-  mobile_devices: "Øvinger for mobile enheter"
+  mobile_devices: Øvinger for mobile enheter
   frozen_name: Kode med Anna og Elsa
   starwars_name: 'Star Wars: Skap en galakse med kode'
   codeorg_name: Klassisk labyrint
@@ -1166,7 +1165,7 @@
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
   codeavengers_name: Bygg et spill med JavaScript
-  processing_name: "Å tegne med kode"
+  processing_name: Å tegne med kode
   robomind_name: Programmer en virtuell robot
   groklearning_name: Chatterbot-doktotren Eliza
   quorum_name: Tilgjengelig koding (med skjemleserstøtte)
@@ -1522,12 +1521,12 @@
     grunnleggende programmering, for de på 4 år og oppover, på iOS eller Android (eller
     nettleser). Lær hvordan du sorterer kommandoer, identifiserer mønstre, bruker
     prosedyrer og løkker!
-  codehs_longdescription: "Å gi kommandoer til en datamaskin, som er hva programmering
+  codehs_longdescription: Å gi kommandoer til en datamaskin, som er hva programmering
     handler om, er akkurat som å gi kommandoer til en hund. Lær å kode med hunden
     Karel&mdash; en morsom, tilgjengelig og visuell introduksjon til programmering
     som lærer elevene grunnleggende begreper som kommandoer og funksjoner på nybegynnernivå.
     Opplæringen er rettet mot elever men lærere kan registrere seg for tilgang til
-    lærerverktøy og spore elevenes mestring!"
+    lærerverktøy og spore elevenes mestring!
   codecademy_longdescription: Codecademy er en interaktiv, elevfokusert introduksjon
     til grunnleggende CS gjennom JavaScript som brukes av millioner av elever over
     hele verden. Vi har utarbeidet en problemfri Kodetime-opplevelse med tilhørende

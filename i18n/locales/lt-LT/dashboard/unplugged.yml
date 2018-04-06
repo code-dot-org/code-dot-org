@@ -316,3 +316,21 @@ lt:
       BigEvent_2018:
         title: Didelis įvykis
         desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo to, kuris mygtukas bus nuspaustas.
+      GraphPaperProgramming_2018:
+        title: Programavimas ant languoto popieriaus
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis naudodamasis, kitas mokinys turės nupiešti piešinį.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Veikla be kompiuterių
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Sąlyginiai sakiniai
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“ arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+      DigitalFootprint_2018:
+        title: Virtualūs pirštų antspaudai
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų galima sekti ir tai gali turėti pasėkmių.
+      BinaryImages_2018:
+        title: Dvejetainiai vaizdai
+        desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.

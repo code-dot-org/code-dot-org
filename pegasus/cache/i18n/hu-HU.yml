@@ -82,7 +82,7 @@
     az eredményt a barátaiddal!
   view_english_site: Az angol oldal megtekintése
   non_english_tutorials: 'Több nyelvre lefordított útmutatók:'
-  write_your_first_program: "Írd meg az első számítógépes programod"
+  write_your_first_program: Írd meg az első számítógépes programod
   learn_cs_concepts: Tanuld meg a számítástechnika alapgondolatait fogd és vidd elvű
     programozással. Az útmutatók játékosak, a videók és előadások főszereplői pedig
     Bill Gates, Mark Zuckerberg, Angry Birds és Plants vs. Zombies. Tanulj ciklusokról,
@@ -135,9 +135,9 @@
   third_party_platform_all: 'Platform: Web, iPad és Android'
   third_party_platform_mobile: 'Platform: iPad és Android'
   third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: "Ár: változtatás tervben"
-  third_party_price_free: "Ár: ingyenes"
-  third_party_price_299: "Ár: $2.99/letöltés"
+  third_party_price_varies: 'Ár: változtatás tervben'
+  third_party_price_free: 'Ár: ingyenes'
+  third_party_price_299: 'Ár: $2.99/letöltés'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
   third_party_tynker_desc: Tynker's creative computing platform helps children develop
@@ -197,7 +197,7 @@
   third_party_codecademy_btn_site: Codeacademy megtekintése
   third_party_organization: Szervezet
   third_party_curriculum: Tanterv
-  third_party_pricing: "Árazás"
+  third_party_pricing: Árazás
   third_party_cost_free: Diákoknak és tanároknak ingyenes
   third_party_cost_5permonth: osztályonként 5$ / hó
   third_party_cost_299: 2,99$/Letöltés
@@ -257,7 +257,7 @@
   print_all: Kinyomtatni mindet
   print_ice_art: A jégrajzod kinyomtatása
   create_art_with_zombie: vagy készíts bonyolultabb műalkotást a zombival
-  i_am_a: "Én vagyok egy"
+  i_am_a: Én vagyok egy
   never_spam: Mi soha sem fogunk spamet küldeni
   enter_country: Add meg az országot, ha az Egyesült Államokon kívül élsz
   used_infrequent_updates: Csak ritka frissítéshez használatos
@@ -272,14 +272,14 @@
   learn_classes: Találjon helyi osztályokat
   learn_back_to_minecraft: Folytasd a tanulást a Minecrafttal
   hoc_is_here: Tanuljon meg programozni. És minden megváltozik. https://youtu.be/xJqSu1IbcHg.
-  just_did_hoc: "Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg"
+  just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
     supporting @codeorg
-  just_did_course4: "Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg"
+  just_did_course4: Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg
   just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
@@ -359,7 +359,7 @@
   studiobar_frozen_body: Hozz létre egy téli csodaországot Annával és Elsával!
   studiobar_donate_title: Támogatás
   studiobar_donate_body: Egy gyermek tanulását támogatja minden egyes dollár adományozásával
-  studiobar_shop_title: "Áruház"
+  studiobar_shop_title: Áruház
   studiobar_shop_body: Számoljunk le az előítéletekkel. Viseld büszkén a logónkat.
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
@@ -421,7 +421,7 @@
   homepage_slot_text_teacher: Tanári nyitólap
   homepage_slot_text_studio: Az összes gyakorlatunk
   homepage_slot_text_course4: 4. tanfolyam
-  homepage_slot_text_shop: "Áruház"
+  homepage_slot_text_shop: Áruház
   homepage_slot_text_flappy: Flappy kód
   homepage_action_text_hoc: Minden diáknak legyen egy Kódolás Órája.
   homepage_action_text_num_served: "# fő már kipróbálta"
@@ -434,11 +434,11 @@
   homepage_action_text_watchvideo: Nézd meg a videót
   homepage_action_text_girlvideo: Inspirálj egy lányt
   homepage_action_text_learn: Kezdj tanulni
-  homepage_action_text_signpetition: "Írd alá a petíciót"
+  homepage_action_text_signpetition: Írd alá a petíciót
   homepage_action_text_wincelebritychat: Win a celebrity chat
-  homepage_signpetition_dropdown: "Írd alá a petíciót &#x25BE;"
+  homepage_signpetition_dropdown: Írd alá a petíciót &#x25BE;
   homepage_diversity_pledge: Csatlakozz a diverzitási peticióhoz
-  homepage_banner_text_prizes: "Újra közeledik a Kódolás órája, december 7-13. "
+  homepage_banner_text_prizes: 'Újra közeledik a Kódolás órája, december 7-13. '
   homepage_banner_link_prizes: Csatlakozz a történelem legnagyobb tanulási eseményéhez!
   homepage_banner_text_main: A Code.org és a felsőoktatás összefog az informatika
     sokszínűségének javítása érdekében.
@@ -463,7 +463,7 @@
   homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: "# fő már kipróbálta"
-  homepage_solot_text_link_volunteer: "Önkéntes az kódolás órájához"
+  homepage_solot_text_link_volunteer: Önkéntes az kódolás órájához
   homepage_slot_text_title_students: Tanuló
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
   homepage_slot_text_blurb_students_courses: Fedezd fel a tanfolyamainkat
@@ -472,8 +472,8 @@
   homepage_slot_text_link_othercourses: További online tanfolyamok
   homepage_slot_text_title_educators: Oktatók
   homepage_slot_text_blurb_educators: Tanítsd a diákjaidat
-  homepage_slot_text_link_elementary: "Általános iskola"
-  homepage_slot_text_link_middle: "Általános iskola felső tagozat"
+  homepage_slot_text_link_elementary: Általános iskola
+  homepage_slot_text_link_middle: Általános iskola felső tagozat
   homepage_slot_text_link_high: Középiskola
   homepage_slot_text_link_k5: Tanfolyamok alsó tagozatosoknak
   homepage_slot_text_link_fullcurriculum: Teljes tananyag megtekintése
@@ -487,7 +487,7 @@
   homepage_slot_text_link_administrators: Bring to your school or district
   homepage_header_codestudio: Code.org tanulóinak alkotásai
   homepage_header_donors: A Code.org megköszöni a támogatókat
-  homepage_donors_seall: "Összes megtekintése"
+  homepage_donors_seall: Összes megtekintése
   homepage_donors_donate: Támogatás
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
@@ -498,7 +498,7 @@
   contact_form_topic_other: Egyéb
   contact_form_label_topic: Témakör
   contact_form_label_email: E-mail címe
-  contact_form_label_message: "Üzenet"
+  contact_form_label_message: Üzenet
   contact_form_label_submit: Küldjön üzenetet
   class_submission_in_school: Az iskolában
   class_submission_in_school_daily_programming_course: Napi programozási tanfolyam
@@ -520,9 +520,9 @@
   class_submission_online_programming_class: Online programozási osztály
   class_submission_online_teacher_resource: Online tanári forrásanyag
   class_submission_online_other: Más online
-  class_submission_level_preschool: "Óvoda"
-  class_submission_level_elementary: "Általános iskola"
-  class_submission_level_middle_school: "Általános iskola felső tagozat"
+  class_submission_level_preschool: Óvoda
+  class_submission_level_elementary: Általános iskola
+  class_submission_level_middle_school: Általános iskola felső tagozat
   class_submission_level_high_school: Középiskola
   class_submission_level_college: Főiskola
   class_submission_level_vocational: Szakmai
@@ -667,7 +667,7 @@
   download_offline: Töltsd le az offline verziót.
   are_you_teacher: Tanár vagy?
   review_lesson_plan: Nézd át a tanóra terveket és egyéb oktatói segédanyagokat.
-  volunteer_engineer_submission_title: "Ösztönözz tanulókat és jelentkezz önkéntesnek"
+  volunteer_engineer_submission_title: Ösztönözz tanulókat és jelentkezz önkéntesnek
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját
     tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} tanárnak van szüksége
@@ -708,16 +708,16 @@
     állam/ország vagy utca
   volunteer_engineer_submission_field_location_flexibility: Tudok segíteni a kódolás
     órája alatt a... (jelölje ki az összes vállalni kívánt tevékenységet)
-  volunteer_engineer_submission_checkbox_after_hoc: "Éngem érdekel az önkéntesség
-    a Kódolás Órája után"
+  volunteer_engineer_submission_checkbox_after_hoc: Éngem érdekel az önkéntesség a
+    Kódolás Órája után
   volunteer_engineer_submission_field_time_commitment: Időráfordítás
   volunteer_engineer_submission_field_linkedin: LinkedIn adatlap
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/saját_neved
   volunteer_engineer_submission_field_facebook: Facebook adatlap
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/saját_neved
   volunteer_engineer_submission_field_description: Leírás
-  volunteer_engineer_submission_field_description_desc: "Írd le a szoftverfejlesztési
-    tapasztalataidat és hogy hogyan vennél részt önkéntesként."
+  volunteer_engineer_submission_field_description_desc: Írd le a szoftverfejlesztési
+    tapasztalataidat és hogy hogyan vennél részt önkéntesként.
   volunteer_engineer_submission_field_description_placeholder: Tapasztalat vagy munkaelőzmény
     leírása. Ha beszélsz az angolon kívül más nyelvet mindenképp említsd meg.
   volunteer_engineer_submission_header_private: Bizalmasan kezeljük az adatokat, nem
@@ -744,7 +744,7 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 óra hetente
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 óra hetente
   volunteer_engineer_submission_commitment_now_and_then: Néha napján
-  volunteer_engineer_submission_commitment_annually: "évente 2-3 alkalommal"
+  volunteer_engineer_submission_commitment_annually: évente 2-3 alkalommal
   volunteer_engineer_submission_commitment_monthly: Egy pár óra havonta
   volunteer_engineer_submission_commitment_weekly: Egy pár óra hetente
   volunteer_engineer_submission_commitment_more: Mégtöbb
@@ -779,15 +779,15 @@
     before this week is still safe.
   dashboard_announce_learn_more_button: Tudj meg többet
   dashboard_landing_title: Tanári kezdőlap
-  dashboard_landing_welcome: "Üdvözlünk az új és továbbfejlesztett tanári felületen."
+  dashboard_landing_welcome: Üdvözlünk az új és továbbfejlesztett tanári felületen.
   dashboard_landing_video: Nézd meg ezt a videót
   dashboard_landing_watch_video: hogy megismerkedj az új funkciókkal!
   dashboard_landing_view_as_student: Az oldal megtekintése diákként
   dashboard_landing_students_title: A diákjaid
   dashboard_landing_students_manage: Diákok megtekintése és kezelése
   dashboard_landing_news_title: alsó tagozatos oktatói segédanyagok (csak angol nyelven)
-  dashboard_landing_new_beta: "ÚJ! Próbáld ki az alsós diákoknak szánt béta kurzusokat."
-  dashboard_landing_new_k5courses: "Új! Próbáld ki az alsós diákoknak szánt kurzusokat."
+  dashboard_landing_new_beta: ÚJ! Próbáld ki az alsós diákoknak szánt béta kurzusokat.
+  dashboard_landing_new_k5courses: Új! Próbáld ki az alsós diákoknak szánt kurzusokat.
   dashboard_landing_useful_links: Egyéb hasznos linkek (csak angol nyelven)
   dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Kérdezz személyesen! Nézz be a havi videós irodai
@@ -798,7 +798,7 @@
     Pedagógus Blog-ban
   dashboard_landing_video_player: Teszteld az új videó lejátszót az iskolában
   dashboard_landing_progress_title: Az elsődleges osztály fejlődése
-  dashboard_landing_progress_biggest: "Így fejlődik a legnagyobb szekciód."
+  dashboard_landing_progress_biggest: Így fejlődik a legnagyobb szekciód.
   dashboard_landing_view_progress: Nézd meg a fejlődést a(z) %{biggest_section}
   dashboard_landing_print_progress: A haladás kinyomtatása
   dashboard_landing_available_title: Elérhető kurzusok
@@ -832,7 +832,7 @@
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: "Éves középiskolás tanfolyamok"
+  dashboard_high_courses: Éves középiskolás tanfolyamok
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -880,7 +880,7 @@
   dashboard_navigation_home_page: Tanári kezdőlap
   dashboard_navigation_section_student_progress: Diákok fiókja és haladása
   dashboard_navigation_section_teacher_progress: A tanfolyam haladás
-  dashboard_navigation_section_lesson_plans: "Óravázlatok és erőforrások"
+  dashboard_navigation_section_lesson_plans: Óravázlatok és erőforrások
   dashboard_navigation_section_community: Súgó és Közösség
   dashboard_navigation_section_pd: Szakmai fejlődés
   dashboard_navigation_section_speakers: Számítógép-tudomány <br/> vendég előadók
@@ -891,7 +891,7 @@
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
-  dashboard_navigation_lesson_plans_resources: "Óravázlatok és erőforrások"
+  dashboard_navigation_lesson_plans_resources: Óravázlatok és erőforrások
   dashboard_navigation_view_stats: Statisztika megtekintése
   dashboard_navigation_section: 'Szekció: %{section_name}'
   dashboard_navigation_student: 'Diák: %{student_name}'
@@ -908,14 +908,14 @@
   dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
-  dashboard_sections_new_section: "Új csoport"
+  dashboard_sections_new_section: Új csoport
   dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Hozz létre új csoportokat és adj hozzá
     diákokat. Csoportok használatával a diákokat kisebb egységekbe szervezheted, így
     követheted nyomon fejlődésüket és kezelheted a fiókjukat.
   dashboard_sections_table_section: Csoport
   dashboard_sections_table_secret: Bejelentkezés típusa
-  dashboard_sections_table_grade: "Évfolyam"
+  dashboard_sections_table_grade: Évfolyam
   dashboard_sections_table_course: Tanfolyam
   dashboard_sections_table_pairing_allowed: Páros programozás
   dashboard_sections_table_stage_extras: Extra szakasz feladatok
@@ -969,7 +969,7 @@
   dashboard_error_other_section: Ha a tanulóidat másik csoportba szeretnéd tenni,
     válaszd ki a csoportot a legördülő listából. Válaszd ki a "másik csoport" lehetőséget,
     hogy áthelyezd a tanulókat egy másik tanári csoportba.
-  dashboard_students_add_multiple: "Írd vagy másold be diákjaid nevét, soronként egyet:"
+  dashboard_students_add_multiple: 'Írd vagy másold be diákjaid nevét, soronként egyet:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
@@ -1014,7 +1014,7 @@
   dashboard_curriculum_k5_title: K-5 pedagógus források
   dashboard_curriculum_middle_title: Középiskolai pedagógus források
   dashboard_curriculum_high_title: Középiskola pedagógus források
-  dashboard_lesson_plans: "Óravázlat"
+  dashboard_lesson_plans: Óravázlat
   dashboard_view_all_lesson_plans: Az összes lecke áttekintése
   dashboard_course1: 'Első kurzus:'
   dashboard_course2: 'Második kurzus:'
@@ -1033,7 +1033,7 @@
   dashboard_tools: 'Tools: '
   dashboard_curriculum: Tanterv
   dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
-  dashboard_overview: "Összefoglaló"
+  dashboard_overview: Összefoglaló
   dashboard_sequence: Sorozat
   dashboard_framework: Keretrendszer
   dashboard_standards: Sztenderdek
@@ -1197,7 +1197,7 @@
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: "Építs játékot JavaScript használatával"
+  codeavengers_name: Építs játékot JavaScript használatával
   processing_name: Rajzolás kóddal
   robomind_name: Programozz egy virtuális robotot
   groklearning_name: Eiza a beszélgető robot doktor
@@ -1333,12 +1333,12 @@
   robomind_gradelevel: 8-tól 13 éves korig
   groklearning_gradelevel: Felső tagozattól felfelé
   quorum_gradelevel: Felső tagozattól felfelé
-  codespark_gradelevel: "Általános iskola"
-  kodable_gradelevel: "Általános iskola"
+  codespark_gradelevel: Általános iskola
+  kodable_gradelevel: Általános iskola
   tynkerapp_gradelevel: 5-től 13 éves korig
   robomindnl_gradelevel: 8-tól 13 éves korig
   flappy_gradelevel: 6-tól 106 éves korig
-  bitsbox_gradelevel: "Általános iskola"
+  bitsbox_gradelevel: Általános iskola
   makeschool_gradelevel: Középiskola
   touchdevelop_gradelevel: Középiskola
   appinventor_gradelevel: Felső tagozattól felfelé
@@ -1355,7 +1355,7 @@
   monstercoding_gradelevel: 5-től 13 éves korig
   allcancode_gradelevel: 5-től 10 éves korig
   csfirst_gradelevel: 9-től 14 éves korig
-  boxisland_gradelevel: "Általános iskola"
+  boxisland_gradelevel: Általános iskola
   codesters_gradelevel: 12-től 14 éves korig
   texasinstruments_gradelevel: 13-tól 16 éves korig
   teacherled_gradelevel: 5 éves kortól
@@ -1444,7 +1444,7 @@
     banánokat.
   codeavengers_shortdescription: Tanulj JavaScriptben programozni egy web böngészőben
   processing_shortdescription: Egy egy órás oktatóanyag a feldolgozó nyelvekről
-  robomind_shortdescription: "Írj programot egy virtuális robotnak"
+  robomind_shortdescription: Írj programot egy virtuális robotnak
   groklearning_shortdescription: Tanítsd „Eliza”-t a beszélgető robotot, hogy megtréfáld
     a barátaidat, hadd higgyék ő egy ember!
   quorum_shortdescription: Csatlakozz Maryhez egy idegenvezetésre, ahol megtanulja
@@ -1454,7 +1454,7 @@
   kodable_shortdescription: Egy vidám iPad játék a programozás alapgondolatainak megtanításához
   tynkerapp_shortdescription: 'Tanulj meg programozni a szórakoztató kódolási rejtvények
     megoldásával. '
-  robomindnl_shortdescription: "Írj programot egy virtuális robotnak"
+  robomindnl_shortdescription: Írj programot egy virtuális robotnak
   flappy_shortdescription: Készítsd el a saját játékod - Flappy Birds, Shark vagy
     Submarine
   bitsbox_shortdescription: Kódolj le néhány appot, hogy játszhass velük és megoszthasd
@@ -1536,13 +1536,13 @@
     rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
   khanpl_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató
     rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
-  tynker_longdescription: "Építs saját játékot, és osszd meg a barátaiddal! Oldd meg
+  tynker_longdescription: Építs saját játékot, és osszd meg a barátaiddal! Oldd meg
     a vidám kód fejtörőt, és tanuld meg az egyes szintekhez tartozó programozási koncepciókat.
     Tedd személyre szabottá a játékot animált karakterekkel, több szinten és gazdag
     sajátsággal. Tedd a játékodat valósághűvé a fizikai modellezés használatával.
     Vizuális tömbökként vagy JavaScript-ként lásd a kódot. Tedd a a játékod iPad-on
     és Android tableten hordozhatóvá. Több mint egy tucat szórakoztató dolog közül
-    lehet választani!"
+    lehet választani!
   scratch_longdescription: A Scratch segítségével elkészítheted saját játékaidat,
     sztorijaidat, animációidat &mdash; és megoszthatod azokat a barátaiddal. Kezdd
     az ismerkedést azzal, hogy animálod a neved, készítesz egy üdvözlőlapot, vagy
@@ -1582,11 +1582,11 @@
     tanítja a kódírást! A diákok beprogramozzák a majmot a banánok elkapására, miközben  az
     egyre bonyolultabb lesz minden egyes szinten. Csillag pontszámot kapnak minden
     egyes megoldásnál, ami egyetlen kattintással megosztható. '
-  codeavengers_longdescription: "Építs két játékos 2D játékot JavaScript segítségével
+  codeavengers_longdescription: Építs két játékos 2D játékot JavaScript segítségével
     10 rövid lépésben. Ezután folytasd a tanulást néhány programozási alap (változók,
     if feltételek) megismerésével, miközben összeállítasz egy barátaiddal is megosztható
     kvízt. A munka során pontokat és címeket szerezhetsz, ahogy a feladatok teljesítése
-    során az osztály rangsorának teteje felé menetelsz."
+    során az osztály rangsorának teteje felé menetelsz.
   processing_longdescription: Egy bevezetés a programozás világába a vizuális művészetek
     előtérbe helyezésével és a Processing programozási nyelv használatával. Rövid
     videós leckék kódolási feladatokat mutatnak be, melyek egy interaktív rajzolóprogram
@@ -1735,8 +1735,8 @@
   scratch_beyond_gradelevel: 8 éves kortól
   lightbot_beyond_gradelevel: Minden korosztály számára
   codecademy_beyond_gradelevel: Középiskola
-  kodable_beyond_gradelevel: "Általános iskola"
-  scratchjr_beyond_gradelevel: "Általános iskola"
+  kodable_beyond_gradelevel: Általános iskola
+  scratchjr_beyond_gradelevel: Általános iskola
   hopscotch_beyond_gradelevel: Felső tagozattól felfelé
   pocketcode_beyond_gradelevel: Felső tagozattól felfelé
   groklearning_beyond_gradelevel: Felső tagozattól felfelé
@@ -1820,7 +1820,7 @@
     meg a barátaiddal, hogy próbálják ki azt!
   groklearning_beyond_shortdescription: Bevezetés a Python programozás világába
   hacketyhack_beyond_shortdescription: Tanulj meg Ruby-ban programozni az alapoktól
-  robomind_beyond_shortdescription: "Írj programot egy virtuális robotnak"
+  robomind_beyond_shortdescription: Írj programot egy virtuális robotnak
   makeschool_beyond_shortdescription: Tanulj meg iPhone játékot készíteni egy óra
     alatt
   appinventor_beyond_shortdescription: Készítsd el a saját app-od! (csak Androidra)
@@ -1842,7 +1842,7 @@
   mozilla_beyond_shortdescription: Készíts és ossz meg weboldalakat
   codecombat_beyond_shortdescription: Játssz, és tanuld meg a JavaScriptet, hogy nyerj
   codea_beyond_shortdescription: Készíts appokat az iPadedre
-  lego_beyond_shortdescription: "Építs és programozz egy robotot"
+  lego_beyond_shortdescription: Építs és programozz egy robotot
   finch_beyond_shortdescription: Egy robot a számítástechnika oktatására
   arduino_beyond_shortdescription: Tanulj Arduinot a Sparkfunk Digital Sandboxszal.
   processing_beyond_shortdescription: Tanuld meg a Processing nyelvet
@@ -2046,7 +2046,7 @@
   header_project_gallery: Projektek
   header_sections: Csoportok
   header_professional_learning: Professzionális tanulás
-  header_educate_overview: "Áttekintés oktatóknak"
+  header_educate_overview: Áttekintés oktatóknak
   header_educate_elementary: Alsó tagozat
   header_educate_middle: Felső tagozat
   header_educate_high: Középiskola
@@ -2062,8 +2062,8 @@
   header_about_partners: Partnerek
   header_about_team: Teljes csapat
   header_about_news: Sajtósarok
-  header_about_evaluation: "Értékelés"
-  header_about_jobs: "Állás"
+  header_about_evaluation: Értékelés
+  header_about_jobs: Állás
   header_about_contact: Kapcsolat
   header_about_faqs: GYIK
   header_learn: Tanulj
@@ -2079,7 +2079,7 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "Üdv %{username}"
+  user_header_label: Üdv %{username}
   user_header_settings: Profilom
   user_header_logout: Kijelentkezés
   user_header_signin: Bejelentkezés

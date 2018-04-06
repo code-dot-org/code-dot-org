@@ -68,15 +68,15 @@
   trophies: trofee
   courses: cursuri
   courses_page:
-    title_student: "Învață in Atelierul de programare"
+    title_student: Învață in Atelierul de programare
     title_teacher: Predă cu Studio-ul Code
   unplugged_activity: Activitate fără Calculator
   of: de
   more: MAI MULT
   less: MAI PUŢIN
   beta: beta
-  try_hoc: "Încearcă Ora de Programare, faceți clic aici >> "
-  try_k8intro: "Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)"
+  try_hoc: 'Încearcă Ora de Programare, faceți clic aici >> '
+  try_k8intro: Încearcă Cursul nostru K-8 de introducere în Informatică (15-25 ore)
   k8intro: Cursul Introducere K-8 in Programare (15-25 ore)
   already_started: Ai început deja? Rezumă aici >>
   demos: 'Admin: Toate demo-urile'
@@ -85,7 +85,7 @@
   more_info: Mai multe informaţii
   auth:
     sign_in_with: Loghează-te cu %{provider}
-    signed_in: "Înregistrat!"
+    signed_in: Înregistrat!
     signed_out: Te-ai delogat de pe <a href="%{url}">Code.org</a>.
     sign_out_of: Ai folosit %{provider} pentru a te loga. <a href="%{url}">Fă clic
       aici</a> pentru ate deloga de pe %{provider}.
@@ -109,7 +109,7 @@
     overview: Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona
       clasa dvs. <a href="/"> puteţi parcurge diverse stadii şi puzzle-uri</a> fără
       un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.
-    hoc_already_signed_up_heading: "Începe fără logare"
+    hoc_already_signed_up_heading: Începe fără logare
     hoc_already_signed_up_content: Esti logat pentru a preda o Oră de Programare!
       Nu e nevoie ca tu și elevii tăi să vă logați in Code Studio pentru a participa
       la acest eveniment. Pentru a incepe, <a href="https://code.org/learn">alegeți
@@ -124,7 +124,7 @@
       can also continue to browse the various stages and puzzles</a> without creating
       an account.
     teacher_educator_guide: Consultă ghidul educatorului
-    title: "Înregistrați-vă pentru Code.org"
+    title: Înregistrați-vă pentru Code.org
     school_name: Numele şcolii (opţional)
     school_address: Adresa şcolii (opţional)
     address_placeholder: adresă, oraş, județ, cod poștal
@@ -160,7 +160,7 @@
     error: S-a produs o eroare.
   school_info:
     title: Informații școală (opțional)
-    school_country: "Țara școlii"
+    school_country: Țara școlii
     select_school_type: Tipul Școlii
     charter: Charter
     private: Private
@@ -184,12 +184,12 @@
     login: E-mail
     login_username: Email or Username
     password: Parolă
-    remember: "Ține-mă minte"
+    remember: Ține-mă minte
     submit: Loghează-te
   signin:
     try_heading: Dorești să încerci să programezi fără a te înregistra?
-    try_hoc: "Încearcă prima dată o Oră de Programare"
-    try_20hours: "Încearcă cele 20 de ore ale noastre de Introducere în Informatică"
+    try_hoc: Încearcă prima dată o Oră de Programare
+    try_20hours: Încearcă cele 20 de ore ale noastre de Introducere în Informatică
   signinsection:
     welcome: Bine ai venit la %{section_name}
     name: Alege-ţi numele
@@ -275,7 +275,7 @@
     update: Actualizează
     submit: Trimite
     destroy: Distruge
-    back: "Înapoi"
+    back: Înapoi
     confirm: Eşti sigur(ă)?
     created: "%{model} a fost creat cu succes."
     updated: "%{model} a fost actualizat cu succes."
@@ -356,7 +356,7 @@
       progress_for_user: Progresul lui %{name}
       progress: Progresul tău
       lines: 'Total linii de cod: %{lines}'
-      close: "ÎNCHIDE"
+      close: ÎNCHIDE
       mastery: Concepte
       puzzle_map: Etape
       prizes: Colectează toate cele %{total_trophies} trofee și câștigă premii!
@@ -381,7 +381,7 @@
       answer_viewer: Panoul profesorului
       student: elev
       viewing_solution: Indicator soluție
-      try_it_yourself: "Încearcă-l și tu"
+      try_it_yourself: Încearcă-l și tu
       section: Secţiune
       example: Exemplu soluţie
       example_with_number: Exemplu soluţie %{solution_number}
@@ -397,7 +397,7 @@
     email_resend_confirm: Retrimite instrucțiunile de confirmare
     new_password_hint: "(lasă necompletat dacă nu dorești să schimbi)"
     current_password_hint: "(avem nevoie de parola ta curentă pentru a confirma modificările)"
-    delete: "Șterge-ți contul"
+    delete: Șterge-ți contul
     delete_text: Apasă butonul de mai jos pentru a-ți șterge contul.
     delete_text_teacher_note: 'Atenție: ștergerea contului tău nu implică ștergerea
       conturilor elevilor tăi.'
@@ -429,7 +429,7 @@
       recovery)
   user_level:
     completed: Finalizat
-    tried: "Încercat"
+    tried: Încercat
   home:
     title: Studio-ul Code
     description: Studio-ul Code este gazda cursurilor online create de Code.org
@@ -439,8 +439,8 @@
     all_courses: Prezentare generală a cursurilor 1, 2 și 3
     lesson_plans: Planuri de lecție
     signin_message: Deja înregistrat? %{link}
-    student_reg_link: "Înregistrare student"
-    teacher_reg_link: "Înregistrare profesor"
+    student_reg_link: Înregistrare student
+    teacher_reg_link: Înregistrare profesor
     signin_directions: Folosește un cont pentru a urmări progresul. <br/> Profesori,
       urmăriţi întreaga clasă.
     teacher_dashboard: Vezi grila de progres
@@ -459,14 +459,14 @@
     student_left_off: 'Unde ai rămas:'
     student_finished: Ai completat toate tutoriale, alege o altă clasă %{online_link}
       sau la o altă școală %{local_school_link}
-    local_school: "şcoală locală"
+    local_school: şcoală locală
     online: online
     see_details: Vezi detalii
     view_course: Vizualizare curs
     prize_info: 'Premii pentru participare (doar pentru profesorii americani din sistemul
       public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
     tryfirst: 'Sau, poţi încerca prima dată, urmând să te înscrii mai târziu:'
-    trynow: "Încearcă acum"
+    trynow: Încearcă acum
     add_hint_help: Ajută-ne să adăugăm sugestii inteligente pentru tutorialele Code.org
     20hour_overview: Acest curs de 20 de ore prezintă concepte de bază din informatică
       şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele
@@ -482,9 +482,9 @@
       pentru liceu</h1>"
     heading_legacy: "<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>"
     your_gallery: Galerie
-    no_primary_course: "Încearcă un curs cu Atelierul de programare"
-    choose_next_course: "Încearcă un curs cu Atelierul de programare alegând unul
-      de mai jos"
+    no_primary_course: Încearcă un curs cu Atelierul de programare
+    choose_next_course: Încearcă un curs cu Atelierul de programare alegând unul de
+      mai jos
     print_certificate: Tipărește certificatul
     announcement_title: Anunțuri
     announcement_message_fall2016_features: Ne-am petrecut vara transformând feedback-ul
@@ -500,7 +500,7 @@
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Află mai mult
-    announcement_try_now_button: "Încearcă acum"
+    announcement_try_now_button: Încearcă acum
     announcement_host_an_hour_button: Organizeaza o ora
     announcement_watch_video_button: Urmăriţi videoclipul
     announcement_petition: Ca profesor, sunteți liderul miscarii pentru a oferi fiecarui
@@ -610,10 +610,10 @@
     already_enrolled_in_new_section: Nu puteţi muta aceşti studenţi deoarece acest
       profesor ii are deja în altă secţiune.
   share:
-    title: "Învață in Atelierul de programare"
+    title: Învață in Atelierul de programare
     description: Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu
       programare.
-    try_hour_of_code: "Încearcă Ora de Programare!"
+    try_hour_of_code: Încearcă Ora de Programare!
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -667,7 +667,7 @@
     built_on_code_studio: Construit pe Code Studio
     make_my_own_app: Realizeaza propria mea aplicatie
     how_it_works: Cum funcționează
-    try_hour_of_code: "Încearcă Ora de Programare!"
+    try_hour_of_code: Încearcă Ora de Programare!
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
@@ -679,7 +679,7 @@
   video:
     tab: Video.
     notes: Nici un video? Arată note.
-    notes_coming_soon: "În curând, notiţe vor fi disponibile pentru acest video."
+    notes_coming_soon: În curând, notiţe vor fi disponibile pentru acest video.
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
     show_notes: Show Notes
@@ -704,7 +704,7 @@
         Private Browsing mode. Please reload your project in normal mode. Sorry for
         the inconvenience.
   slow_loading: Aceasta durează mai mult decât de obicei...
-  try_reloading: "Încearcă să reîncarci pagina"
+  try_reloading: Încearcă să reîncarci pagina
   next_stage: Ai terminat! Continuă cu următoarea etapă
   download_pdf: Plan de lecţie deschisă
   lesson_plan: Plan de lecţie
@@ -732,7 +732,7 @@
     destroyed: Ai distrus un script.
     manage: Construiește niveluri
     view: Vizualizare
-    back: "Înapoi la script-uri"
+    back: Înapoi la script-uri
     success: Ai editat cu succes blocurile.
     level:
       create: Crează nivel nou
@@ -750,7 +750,7 @@
       cta: Află cum
     hoc:
       title: Labirint Clasic
-      body: "Încearcă bazele programarii. Milioane de oameni au încercat."
+      body: Încearcă bazele programarii. Milioane de oameni au încercat.
     flappy:
       title: Codul Flappy
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția
@@ -760,11 +760,11 @@
       body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare.
         Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar
         este distractiv de învăţat la toate vârstele.
-      body_short: "Învață bazele informaticii în cadrul unei versiuni intensive a
-        cursurilor 2-4."
+      body_short: Învață bazele informaticii în cadrul unei versiuni intensive a cursurilor
+        2-4.
     hoc2014:
-      try_new_tutorial: "Încearcă noul nostru tutorial Ora de Programare în versiune
-        beta"
+      try_new_tutorial: Încearcă noul nostru tutorial Ora de Programare în versiune
+        beta
       try_frozen: Artist cu Anna și Elsa, din Frozen
     gallery:
       title: Galerie
@@ -834,12 +834,12 @@
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
-    picture_count: "În ultimele <b>%{days}</b> zile, studenții au desenat <b>%{count}</b>
+    picture_count: În ultimele <b>%{days}</b> zile, studenții au desenat <b>%{count}</b>
       imagini scriind propriile programe de calculator. Fă clic pe imagini pentru
-      a vedea fiecare program în acțiune."
-    activity_count: "În ultimele <b>%{days}</b> zile, elevii au creat <b>%{count}</b>
+      a vedea fiecare program în acțiune.
+    activity_count: În ultimele <b>%{days}</b> zile, elevii au creat <b>%{count}</b>
       aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic
-      pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune."
+      pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune.
     want_to_make_your_own: Vrei să realizezi propriul tău program?
     how_to_save: In ultimul nivel al acestor tutoriale, faceţi click pe "Finish" şi
       "Save" pentru a salva munca de pana acum in Galerie.
@@ -872,16 +872,16 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Mulţumesc
-    wrong_body: "Îți mulțumim pentru trimiterea răspunsului tău."
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
     correct_title: Mulţumesc
-    correct_body: "Îți mulțumim pentru trimiterea răspunsului tău."
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Mulţumesc
-    wrong_body: "Îți mulțumim pentru trimiterea răspunsului tău."
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
     correct_title: Mulţumesc
-    correct_body: "Îți mulțumim pentru trimiterea răspunsului tău."
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
     hide_survey_last_answer: Acest studiu este anonim.  Vă rugăm să vizitaţi tabloul
       de profesor pentru rezultatele agregate.  Reţineţi că rezultatele sunt vizibile
       în cazul în care cel puțin cinci studenţi transmit chestionarul.
@@ -890,9 +890,9 @@
       still be able to see responses for the whole class, but without names attached.
   level_group-submittable:
     wrong_title: Mulţumesc
-    wrong_body: "Îți mulțumim pentru trimiterea răspunsului tău."
+    wrong_body: Îți mulțumim pentru trimiterea răspunsului tău.
     correct_title: Mulţumesc
-    correct_body: "Îți mulțumim pentru trimiterea răspunsului tău."
+    correct_body: Îți mulțumim pentru trimiterea răspunsului tău.
     unsubmit-title: Neprezentarea evaluarii
     unsubmit-body: Neprezentarea evaluarii dumneavoastră va reseta timpul si data
       prezentata.  Eşti sigur?
@@ -920,7 +920,7 @@
   text_match:
     placeholder: Completează răspunsul tău aici
     open_response_title: Mulţumim
-    open_response_body: "Îți mulţumim pentru răspuns!"
+    open_response_body: Îți mulţumim pentru răspuns!
     correct_title: Corect
     correct_body: Acela este răspunsul corect.
   dialog:
@@ -991,14 +991,14 @@
     - other: Alte
     - opt_out: Prefer să nu răspund
     submit: Trimite
-    decline: "Închide"
+    decline: Închide
   zendesk_too_young_message: Ne pare rău, însă utilizatorii mai tineri nu au voie
     să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a>
     fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze
     în numele tău.
   progress:
     not_started: Neînceput
-    in_progress: "în curs de desfăşurare"
+    in_progress: în curs de desfăşurare
     completed_too_many_blocks: finalizat, prea multe blocuri
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
@@ -1015,7 +1015,7 @@
     new: Creează unul nou
     rename: Redenumește
     save: Salvează
-    delete: "Șterge"
+    delete: Șterge
     import: Import
     share_link_import_bad_link_header: Share link not recognized
     share_link_import_bad_link_body: 'We couldn''t import that share link. Make sure
@@ -1036,11 +1036,11 @@
       pentru a afişa proiectul pe o pagină web.
     share_u13_warning: Cere profesorului tău înainte de partajare. Partajaţi numai
       cu alţii în şcoala dumneavoastră.
-    embed: "Încorporat"
+    embed: Încorporat
     advanced_share: Afişaţi opţiunile avansate
     no_projects: You currently have no projects. Click on one of the buttons above
       to start a project.
-    close: "Închide"
+    close: Închide
     more: Mai mult
     name: Nume
     updated: Actualizat
@@ -1053,16 +1053,16 @@
     thumbnail_help: Not seeing the correct thumbnail for your project? Run your app
       to generate a new thumbnail. Note that it may take a couple hours for the thumbnail
       to refresh everywhere.
-    really_delete: "Șterge?"
+    really_delete: Șterge?
     delete_yes: Da
     delete_no: Nu
     saved: Salvat
     not_saved: Nesalvat
     cancel: Anulează
     delete_confirm_title: Sigur ștergeți aceast proiect?
-    delete_confirm_text: "Ștergerea proiectului tău îl va elimina definitiv pe acesta
+    delete_confirm_text: Ștergerea proiectului tău îl va elimina definitiv pe acesta
       din propria listă Proiectele Mele. Orice persoană căreia i-ai distribuit link-ul
-      nu va mai putea vedea proiectul tău."
+      nu va mai putea vedea proiectul tău.
     view_all: Vizualizează proiectele mele
     remix: Remix
     click_to_remix: Fă clic pe "Remix" pentru a-ți crea propria ta versiune!
@@ -1098,7 +1098,7 @@
             conținut?
           harassment: Ameninţări, cyberbullying, hărțuire
           offensive: Conținut ofensiv
-          infringement: "Încălcarea drepturilor de autor"
+          infringement: Încălcarea drepturilor de autor
           other: Alte
         detail: Vă rugăm să oferiți cât mai multe detalii posibil cu privire la conţinutul
           pe care îl raportați.
@@ -1134,7 +1134,7 @@
     required: Prezentare generală
     content: Conţinut
     practice: Practicile de predare
-    peer_review: "Împerecheaţi dispozitivele"
+    peer_review: Împerecheaţi dispozitivele
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages

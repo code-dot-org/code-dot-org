@@ -11,7 +11,7 @@
   upgrade_ie_link: Pour en savoir plus
   en: Informatique/Sciences informatiques
   computer_science_edweek: Semaine de l'enseignement de l’informatique
-  csedweek_dates: 8-14 décembre 2014
+  csedweek_dates: Du 3 au 9 décembre 2018
   csedweek_banner_hoc: 'L’<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Heure de Code</a> arrive. Appel à tous les enseignants et organisateurs
     -<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -37,7 +37,7 @@
   twentyhours_text: Première Heure de Code complétée&#160;? Découvrez les concepts
     de l’informatique et de la programmation avec ce cours d’approfondissement.
   og_title: Chaque enfant mérite une opportunité
-  og_title_soon: The Hour of Code is coming
+  og_title_soon: L'Heure de Code arrive
   og_title_here: The Hour of Code is here!
   og_description: Chaque élève de chaque école mérite une opportunité d'étudier l'informatique.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
@@ -52,7 +52,7 @@
     for every student to learn.
   hoc2014_heading: Rejoignez l'<a href="http://hourofcode.com">Heure de Code</a><br/>Du
     8 au 14 décembre 2014<br/>
-  hoc2014_students: "Élèves"
+  hoc2014_students: Élèves
   hoc2014_try: Participez
   hoc2014_teachers: Enseignants
   hoc2014_host: Accueillez-la
@@ -66,8 +66,8 @@
   csedweek_map_search_search: Rechercher
   csedweek_map_search_reset: Réinitialiser
   csedweek_map_legend_title: Légende
-  csedweek_map_legend_event: "Événement Heure de Code"
-  csedweek_map_legend_cs_tech_jam: "Événement spécial"
+  csedweek_map_legend_event: Événement Heure de Code
+  csedweek_map_legend_cs_tech_jam: Événement spécial
   cded_sign_up: Inscription
   cded_try_it: Participez
   try_now: Essaie maintenant
@@ -83,7 +83,7 @@
     avec des amis !
   view_english_site: Consulter le site en anglais
   non_english_tutorials: 'Tutoriels traduits en plusieurs langues :'
-  write_your_first_program: "Écris ton premier programme informatique"
+  write_your_first_program: Écris ton premier programme informatique
   learn_cs_concepts: Apprends les concepts de base de l'informatique avec la programmation,
     en glissant et en déposant. Il s'agit d'un didacticiel ludique mettant en vedette
     des conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs.
@@ -131,7 +131,7 @@
   congrats_guest_speaker_cta: Trouver un conférencier à inviter
   congrats_third_party_title: Utilise ce que tu viens d'apprendre avec ces apps et
     sites web
-  third_party_gradelevel_kto8: "École primaire et collège"
+  third_party_gradelevel_kto8: École primaire et collège
   third_party_gradelevel_kto2: De l'école maternelle jusqu'au CE1
   third_party_gradelevel_2to8: Du CE1 jusqu'en 4ème
   third_party_gradelevel_4to12: Du CM1 jusqu'en terminale
@@ -259,8 +259,8 @@
   boys: Garçons
   girls: Filles
   give_my_hour: 'Donner mon Heure à:'
-  girls_team: "Équipe des filles"
-  boys_team: "Équipe des garçons"
+  girls_team: Équipe des filles
+  boys_team: Équipe des garçons
   tell_the_world: Partagez !
   thanks_for_voting: Merci pour votre vote !
   share_on_facebook: Partagez sur Facebook
@@ -269,9 +269,9 @@
   get_started: Commencer
   i_agree: J'accepte
   participant_select: "-Sélectionner-"
-  participant_student: "Élève"
+  participant_student: Élève
   participant_parent: Parent
-  participant_educator: "Éducateur"
+  participant_educator: Éducateur
   participant_engineer: Ingénieur logiciel
   participant_other: Autre
   print_all: Imprimer tout
@@ -379,12 +379,13 @@
   studiobar_donate_body: Un enfant apprend pour chaque dollar que vous donnez.
   studiobar_shop_title: Boutique
   studiobar_shop_body: Casse les stéréotypes. Porte fièrement notre logo.
-  homepage_stats_students: of US students have accounts on Code.org
-  homepage_stats_female: of our students are female
-  homepage_stats_teachers: teachers use Code.org
-  homepage_stats_hourofcodde: of the world's students have tried the Hour of Code
-  homepage_stats_policy: states changed policy to support computer science
-  homepage_stats_title: We're making a difference
+  homepage_stats_students: des élèves américains ont un compte sur Code.org
+  homepage_stats_female: de nos élèves sont des femmes
+  homepage_stats_teachers: professeurs utilisent Code.org
+  homepage_stats_hourofcodde: des élèves dans le monde ont essayé l'Heure de Code
+  homepage_stats_policy: états ont changé leur politique pour favoriser l'étude de
+    l'informatique
+  homepage_stats_title: Nous faisons la différence
   homepage_hero_text_malala: "« Je mets au défi toutes les filles de tous les pays
     d'apprendre une Heure de Code » Malala, lauréat du prix Nobel de la Paix"
   homepage_hero_text_susan: "«&#160;Si vous pouvez changer la technologie, vous pouvez
@@ -420,8 +421,8 @@
     sur Code Studio
   homepage_hero_text_stat_students: "#student_count comptes d'élèves sur Code Studio"
   homepage_hero_text_stat_served: 'L’Heure de Code: #served servis'
-  homepage_hero_hoc_is_coming: The Hour of Code is coming
-  homepage_hero_hoc_is_here: The Hour of Code is here
+  homepage_hero_hoc_is_coming: L'Heure de Code arrive
+  homepage_hero_hoc_is_here: L'Heure de Code est là
   homepage_slot_text_hoc: L'Heure de Code
   homepage_slot_text_frozen: La reine des neige avec Anna et Elsa
   homepage_slot_text_teacher: Tableau de bord enseignant
@@ -441,7 +442,7 @@
   homepage_action_text_girlvideo: Encourager une fille
   homepage_action_text_learn: Commencer à apprendre
   homepage_action_text_signpetition: Signez la pétition
-  homepage_action_text_wincelebritychat: Win a celebrity chat
+  homepage_action_text_wincelebritychat: Gagnez un chat avec une célébrité
   homepage_signpetition_dropdown: Je suis d'accord ▾
   homepage_diversity_pledge: Prendre l'engagement de diversité
   homepage_banner_text_prizes: L’Heure de Code revient du 7 au 13 décembre.
@@ -467,19 +468,19 @@
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
-  homepage_slot_text_link_about_hoc: "À propos de l'Heure de Code"
+  homepage_slot_text_link_about_hoc: À propos de l'Heure de Code
   homepage_slot_text_link_host: Héberger une Heure de Code
   homepage_slot_text_link_hocserved: "# servi"
   homepage_solot_text_link_volunteer: Soyez bénévole pour l’Heure de Code
-  homepage_slot_text_title_students: "Élèves"
+  homepage_slot_text_title_students: Élèves
   homepage_slot_text_blurb_students: Découvrez l'ensemble de nos tutoriels
   homepage_slot_text_blurb_students_courses: Explorer nos cours
   homepage_slot_text_link_codestudio: Essaie le Code Studio
   homepage_slot_text_link_local: Trouvez un cours près de chez vous
   homepage_slot_text_link_othercourses: Autres cours en ligne
-  homepage_slot_text_title_educators: "Éducateurs"
+  homepage_slot_text_title_educators: Éducateurs
   homepage_slot_text_blurb_educators: Enseignez à vos élèves
-  homepage_slot_text_link_elementary: "École primaire"
+  homepage_slot_text_link_elementary: École primaire
   homepage_slot_text_link_middle: Collège
   homepage_slot_text_link_high: Lycée
   homepage_slot_text_link_k5: Cours pour les classes de CM2
@@ -491,7 +492,7 @@
   homepage_slot_text_link_buy: S'impliquer
   homepage_slot_text_link_donate: Faire un don
   homepage_slot_text_link_shop: T-shirts, chapeaux, & plus
-  homepage_slot_text_link_administrators: Bring to your school or district
+  homepage_slot_text_link_administrators: Amener l'informatique dans votre école
   homepage_header_codestudio: Créations des élèves de Code.org
   homepage_header_donors: Code.org remercie tout ceux qui l'ont soutenu
   homepage_donors_seall: Tout afficher
@@ -507,7 +508,7 @@
   contact_form_label_email: Votre adresse e-mail
   contact_form_label_message: Message
   contact_form_label_submit: Envoyer un message
-  class_submission_in_school: "À l'école"
+  class_submission_in_school: À l'école
   class_submission_in_school_daily_programming_course: Cours de programmation quotidien
   class_submission_in_school_ap_computer_science: Programme de formation approfondie
     en sciences informatiques
@@ -531,8 +532,8 @@
   class_submission_online_programming_class: Cours de programmation en ligne
   class_submission_online_teacher_resource: Ressource en ligne pour les enseignants
   class_submission_online_other: Autre en ligne
-  class_submission_level_preschool: "École maternelle"
-  class_submission_level_elementary: "École primaire"
+  class_submission_level_preschool: École maternelle
+  class_submission_level_elementary: École primaire
   class_submission_level_middle_school: Collège
   class_submission_level_high_school: Lycée
   class_submission_level_college: Université
@@ -682,7 +683,7 @@
   help_translate: Aidez-nous à traduire.
   no_internet: Pas d'internet ?
   download_offline: Télécharger la version hors ligne.
-  are_you_teacher: "Êtes-vous un enseignant?"
+  are_you_teacher: Êtes-vous un enseignant?
   review_lesson_plan: Revoir le plan de la leçon et les autres ressources pour les
     enseignants.
   volunteer_engineer_submission_title: Inspirer les élèves et les bénévoles
@@ -780,8 +781,8 @@
   volunteer_engineer_submission_experience_unspecified: Non spécifié
   volunteer_engineer_submission_experience_tech_company: Non-ingénieur dans une entreprise
     technologique
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Étudiant
-    en informatique à l'université"
+  volunteer_engineer_submission_experience_university_student_or_researcher: Étudiant
+    en informatique à l'université
   volunteer_engineer_submission_experience_software_professional: Ingénieur ou technicien
     spécialiste de logiciels
   volunteer_engineer_submission_distance_8: 8 km
@@ -922,14 +923,14 @@
   dashboard_navigation_all_sections: Comptes et progression de l'élève
   dashboard_navigation_view_progress: Progression
   dashboard_navigation_view_text_responses: Réponses écrites
-  dashboard_navigation_view_assessments: "Évaluations"
-  dashboard_navigation_view_assessments_surveys: "Évaluations/Sondages"
+  dashboard_navigation_view_assessments: Évaluations
+  dashboard_navigation_view_assessments_surveys: Évaluations/Sondages
   dashboard_navigation_add_students: Ajouter des élèves
   dashboard_navigation_manage_students: Gérer les élèves
   dashboard_navigation_lesson_plans_resources: Plans de cours et ressources
   dashboard_navigation_view_stats: Statistiques
   dashboard_navigation_section: 'Section&#160;: %{section_name}'
-  dashboard_navigation_student: "Élève&#160;: %{student_name}"
+  dashboard_navigation_student: 'Élève&#160;: %{student_name}'
   dashboard_progress_not_started: pas commencé
   dashboard_progress_in_progress: en cours
   dashboard_progress_not_completed: non terminé
@@ -953,8 +954,8 @@
   dashboard_sections_table_grade: Classe
   dashboard_sections_table_course: Cours
   dashboard_sections_table_pairing_allowed: Programmation en Binôme
-  dashboard_sections_table_stage_extras: "Étape Supplémentaire"
-  dashboard_sections_table_students: "Élèves"
+  dashboard_sections_table_stage_extras: Étape Supplémentaire
+  dashboard_sections_table_students: Élèves
   dashboard_sections_table_code: Code de la section
   dashboard_sections_name: Nom de la section
   dashboard_sections_choose_secret: Si vous souhaitez créer des comptes pour vos élèves,
@@ -1099,7 +1100,7 @@
   dashboard_login_word: Mot
   dashboard_login_picture: Image
   dashboard_login_none: E-mail
-  dashboard_stage: "étape"
+  dashboard_stage: étape
   dashboard_puzzle: Puzzle
   dashboard_question: Question
   dashboard_response: Réponse
@@ -1273,7 +1274,7 @@
   monstercoding_name: Quête du codage de l’île mystérieuse
   allcancode_name: Cours Marco&#160;!
   csfirst_name: D’abord l’informatique
-  boxisland_name: "Île Box"
+  boxisland_name: Île Box
   codesters_name: Codesters
   texasinstruments_name: 10 minutes de Code
   teacherled_name: Plans de cours menés par l’enseignant
@@ -1356,7 +1357,7 @@
   gamelab_name: Game Lab
   basketball_name: Faire un match de basket
   sports_name: Sports
-  applab_gradelevel: "Âge recommandé: 13 ans et plus"
+  applab_gradelevel: 'Âge recommandé: 13 ans et plus'
   applab_shortdescription_congrats: App Lab est un environnement de programmation
     avec lequel vous pouvez créer des applications simples. Concevez une application,
     codez-la avec des blocs ou du JavaScript, puis partagez-la en quelques secondes
@@ -1384,12 +1385,12 @@
   robomind_gradelevel: De 8 à 13 ans
   groklearning_gradelevel: Secondaire
   quorum_gradelevel: Secondaire
-  codespark_gradelevel: "École primaire"
-  kodable_gradelevel: "École primaire"
+  codespark_gradelevel: École primaire
+  kodable_gradelevel: École primaire
   tynkerapp_gradelevel: De 5 à 13 ans
   robomindnl_gradelevel: De 8 à 13 ans
   flappy_gradelevel: De 6 à 106 ans
-  bitsbox_gradelevel: "École primaire"
+  bitsbox_gradelevel: École primaire
   makeschool_gradelevel: Lycée
   touchdevelop_gradelevel: Lycée
   appinventor_gradelevel: Secondaire
@@ -1406,7 +1407,7 @@
   monstercoding_gradelevel: De 5 à 13 ans
   allcancode_gradelevel: De 5 à 10 ans
   csfirst_gradelevel: De 9 à 14 ans
-  boxisland_gradelevel: "École primaire"
+  boxisland_gradelevel: École primaire
   codesters_gradelevel: De 12 à 14 ans
   texasinstruments_gradelevel: De 13 à 16 ans
   teacherled_gradelevel: 5 ans et plus
@@ -1494,15 +1495,15 @@
     ludique et visuelle à la programmation !
   codecademy_shortdescription: Apprends la programmation en JavaScript, dans un navigateur
     Web
-  codecombat_shortdescription: "Écrase les ogres pour apprendre Python ou JavaScript
-    dans ce jeu épique de programmation&#160;!"
+  codecombat_shortdescription: Écrase les ogres pour apprendre Python ou JavaScript
+    dans ce jeu épique de programmation&#160;!
   codemonkey_shortdescription: Les élèves programment un singe pour qu'il attrape
     des bananes.
   codeavengers_shortdescription: Apprends la programmation en JavaScript, dans un
     navigateur web
   processing_shortdescription: Un tutoriel d'une heure au sujet des langages de programmation
     Processing
-  robomind_shortdescription: "Écris du code pour un robot virtuel"
+  robomind_shortdescription: Écris du code pour un robot virtuel
   groklearning_shortdescription: Apprends à «&#160;Eliza&#160;» le ChatBot à faire
     croire à tes amis qu'elle est humaine&#160;!
   quorum_shortdescription: Rejoins Mary dans une visite guidée où elle apprend le
@@ -1512,7 +1513,7 @@
   kodable_shortdescription: Un jeu amusant sur iPad pour enseigner les concepts de
     la programmation informatique
   tynkerapp_shortdescription: Apprends à programmer en résolvant des puzzles de codage.
-  robomindnl_shortdescription: "Écris du code pour un robot virtuel"
+  robomindnl_shortdescription: Écris du code pour un robot virtuel
   flappy_shortdescription: Crée ton propre jeu — Flappy Bird, Requin ou Sous-marin
   bitsbox_shortdescription: Code une série d'applications pour jouer et partager,
     en utilisant le vrai JavaScript.
@@ -1642,8 +1643,8 @@
     par des dizaines de millions d'élèves à travers le monde. Nous avons préparé une
     expérience sans tracas de l’Heure de Code accompagnée de questionnaires, de diapositives
     et d’un projet terminé pour les élèves en fin de séance.
-  codecombat_longdescription: "Écrase les ogres pour apprendre Python ou JavaScript
-    dans ce jeu épique de programmation !"
+  codecombat_longdescription: Écrase les ogres pour apprendre Python ou JavaScript
+    dans ce jeu épique de programmation !
   codemonkey_longdescription: 'CodeMonkey est un jeu en ligne qui apprend à coder
     dans un langage de programmation réel ! Les élèves programment un singe pour que
     celui-ci attrape des bananes, et cela devient un peu plus compliqué à chaque niveau.
@@ -1811,8 +1812,8 @@
   scratch_beyond_gradelevel: 8 ans et plus
   lightbot_beyond_gradelevel: Tous les âges
   codecademy_beyond_gradelevel: Lycée
-  kodable_beyond_gradelevel: "École primaire"
-  scratchjr_beyond_gradelevel: "École primaire"
+  kodable_beyond_gradelevel: École primaire
+  scratchjr_beyond_gradelevel: École primaire
   hopscotch_beyond_gradelevel: Secondaire
   pocketcode_beyond_gradelevel: Secondaire
   groklearning_beyond_gradelevel: Secondaire
@@ -1899,7 +1900,7 @@
   groklearning_beyond_shortdescription: Introduction élémentaire à la programmation
     en Python
   hacketyhack_beyond_shortdescription: Apprends Ruby depuis les bases
-  robomind_beyond_shortdescription: "Écris du code pour un robot virtuel"
+  robomind_beyond_shortdescription: Écris du code pour un robot virtuel
   makeschool_beyond_shortdescription: Apprends à créer un jeu pour iPhone en une heure
   appinventor_beyond_shortdescription: Développe ta propre application ! (Android
     seulement)
@@ -2143,7 +2144,7 @@
   header_sections: Sections
   header_professional_learning: Apprentissage professionnel
   header_educate_overview: Aperçu enseignant
-  header_educate_elementary: "École primaire"
+  header_educate_elementary: École primaire
   header_educate_middle: Collège
   header_educate_high: Lycée
   header_educate_hoc: Heure de Code
@@ -2152,13 +2153,13 @@
   header_educate_inspire: Inspirer un élève
   header_educate_community: Communauté en ligne
   header_educate_tools: Outils et vidéos
-  header_about_us: "À propos"
-  header_about_leadership: "Équipe de direction"
+  header_about_us: À propos
+  header_about_leadership: Équipe de direction
   header_about_donors: Donateurs
   header_about_partners: Partenaires
   header_about_team: Toute l'équipe
   header_about_news: Actualité
-  header_about_evaluation: "Évaluation"
+  header_about_evaluation: Évaluation
   header_about_jobs: Emplois
   header_about_contact: Nous contacter
   header_about_faqs: FAQ
@@ -2166,7 +2167,7 @@
   header_teach: Enseigner
   header_stats: Statistiques
   header_help_us: Nous aider
-  header_about: "À propos"
+  header_about: À propos
   header_teacher_community: Communauté des enseignants
   header_help_support: 'Aide et support '
   header_report_bug: Rapporter un problème

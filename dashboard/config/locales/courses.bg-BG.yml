@@ -34,7 +34,7 @@
           description_short: An introductory computer science course that empowers
             students to create authentic artifacts.
         allthethingscourse:
-          title: "курс за всичко"
-          description_short: "Това е курс за всичко"
-          description_student: "Това е курс за всичко и има по-дълго описание за учениците"
-          description_teacher: "Това е курс за всичко и има по-дълго описание за учителите"
+          title: курс за всичко
+          description_short: Това е курс за всичко
+          description_student: Това е курс за всичко и има по-дълго описание за учениците
+          description_teacher: Това е курс за всичко и има по-дълго описание за учителите

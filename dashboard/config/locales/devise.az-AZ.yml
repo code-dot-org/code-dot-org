@@ -34,9 +34,8 @@
         tam URL-ünvandan istifadə etmisiniz.
       send_instructions: Siz bir neçə dəqiqəyə parolunuzu necə yeniləməniz barədə
         təlimatları özündə saxlayan bir e-məktub alacaqsınız.
-      send_paranoid_instructions: "Əgər sizin e-məktub ünvanınız bizim məlumatlar
-        bazamızda varsa, bir neçə dəqiqə ərzində parol yeniləmə keçidi e-məktub ünvanınıza
-        göndəriləcəkdir."
+      send_paranoid_instructions: Əgər sizin e-məktub ünvanınız bizim məlumatlar bazamızda
+        varsa, bir neçə dəqiqə ərzində parol yeniləmə keçidi e-məktub ünvanınıza göndəriləcəkdir.
       updated: Parolunuz müvəffəqiyyətlə dəyişdirildi. İndi hesabınıza daxil olubsunuz.
       updated_not_active: Parolunuz müvəffəqiyyətlə dəyişdirildi.
     registrations:
@@ -61,8 +60,8 @@
     unlocks:
       send_instructions: Bir neçə dəqiqəyə hesabınızın kilidini necə açacağınız barədə
         bir e-məktub alacaqsınız.
-      send_paranoid_instructions: "Əgər, hesabınız varsa, bir neçə dəqiqəyə onun kilidini
-        necə açacağınız barədə bir e-məktub alacaqsınız."
+      send_paranoid_instructions: Əgər, hesabınız varsa, bir neçə dəqiqəyə onun kilidini
+        necə açacağınız barədə bir e-məktub alacaqsınız.
       unlocked: Sizin hesabınızın kilidi müvəffəqiyyət ilə açılmışdır. Davam etmək
         üçün hesabınıza daxil olun.
   errors:
@@ -80,15 +79,15 @@
     invitations:
       send_instructions: "%{email} ünvanına dəvət mesajı göndərildi."
       invitation_token_invalid: Göstərilən dəvət işarəsi etibarlı deyil!
-      updated: "Şifrən müvəffəqiyyətlə təyin edildi. İndi hesab açdın."
+      updated: Şifrən müvəffəqiyyətlə təyin edildi. İndi hesab açdın.
       no_invitations_remaining: Dəvət qalmadı
       invitation_removed: Dəvətiniz silindi.
       new:
         header: Dəvət göndər
         submit_button: Bir dəvətnamə göndər
       edit:
-        header: "Şifrənizi təyin edin"
-        submit_button: "Şifrəmi təyin et"
+        header: Şifrənizi təyin edin
+        submit_button: Şifrəmi təyin et
     mailer:
       invitation_instructions:
         subject: Dəvət təlimatları

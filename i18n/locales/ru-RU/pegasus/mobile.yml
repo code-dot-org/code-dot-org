@@ -27,7 +27,7 @@
   twentyhours_text: "Закончили свой первый Час кода? Узнайте больше об информатике и концепциях программирования в следующем курсе."
   og_title: 'Code.org: Любой может научиться'
   og_title_soon: "The Hour of Code is coming"
-  og_title_here: "The Hour of Code is here!"
+  og_title_here: "Час Кода здесь!"
   og_description: "Каждый студент в каждой школе заслуживает возможность изучения компьютерных наук."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Час кода настал"
@@ -262,7 +262,7 @@
   studiobar_shop_body: "Ломайте стереотипы. Носите наш логотип с гордостью."
   homepage_stats_students: "of US students have accounts on Code.org"
   homepage_stats_female: "of our students are female"
-  homepage_stats_teachers: "teachers use Code.org"
+  homepage_stats_teachers: "учителя используют Code.org"
   homepage_stats_hourofcodde: "of the world's students have tried the Hour of Code"
   homepage_stats_policy: "states changed policy to support computer science"
   homepage_stats_title: "We're making a difference"
@@ -737,7 +737,7 @@
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: "Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте эти оффлайн уроки в вашем классе."
-  dashboard_tools: 'Tools: '
+  dashboard_tools: 'Инструменты: '
   dashboard_curriculum: "Учебная программа"
   dashboard_curriculum_overview: "Обзор программы для дошкольников и учеников начальной школы"
   dashboard_overview: "Краткий обзор"
@@ -838,7 +838,7 @@
   carousel_heading_robots: "Научись программировать роботов"
   carousel_heading_ide: "Популярные среди преподавателей платформы"
   carousel_heading_desktop: "Learn to code on a computer"
-  carousel_heading_mobtabelem: "For phones and tablets"
+  carousel_heading_mobtabelem: "Для телефонов и планшетов"
   carousel_heading_prereader: "For pre-readers"
   carousel_heading_beyondblocks: "Go beyond blocks - learn a programming language"
   carousel_heading_nointernet: "Poor internet? Install these apps on your computer"
@@ -1038,12 +1038,12 @@
   course2_gradelevel: "Возраст 6-18 лет"
   course3_gradelevel: "Возраст 8-18 лет"
   course4_gradelevel: "Возраст 10-18 лет"
-  coursea_gradelevel: "Ages 4-7"
-  courseb_gradelevel: "Ages 5-8"
-  coursec_gradelevel: "Ages 6-10"
+  coursea_gradelevel: "Возраст 4-7"
+  courseb_gradelevel: "Возраст 5-8"
+  coursec_gradelevel: "Возраст 6-10"
   coursed_gradelevel: "Класс 8 и выше"
   coursee_gradelevel: "Возраст 8-12"
-  coursef_gradelevel: "Ages 9-13"
+  coursef_gradelevel: "Возраст 9-13"
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
   codeintl_platformtext: "Современные браузеры, смартфоны, планшеты"
@@ -1428,7 +1428,7 @@
   header_help_us: "Помогите нам"
   header_about: "О разработчике"
   header_teacher_community: "Сообщество учителей"
-  header_help_support: 'Help and support '
+  header_help_support: 'Помощь и поддержка '
   header_report_bug: "Сообщить об ошибке"
   header_tutorials: "Обучающие материалы"
   header_documentation: "Документация"

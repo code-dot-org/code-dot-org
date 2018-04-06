@@ -14,7 +14,7 @@
       invalid_token: Ugyldig godkjenningstoken.
       locked: Kontoen din er låst.
       not_found_in_database: Ugyldig epostadresse eller passord.
-      timeout: "Økta er utløpt. Logg inn på nytt for å fortsette."
+      timeout: Økta er utløpt. Logg inn på nytt for å fortsette.
       unauthenticated: Du må logge inn eller registrere deg før du held fram.
       unconfirmed: Du må stadfesta kontoen før du kan halde fram.
     mailer:

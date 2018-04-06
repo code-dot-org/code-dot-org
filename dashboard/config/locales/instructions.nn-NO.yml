@@ -84,7 +84,7 @@
         Kvifor ender denne forma med sider som er 75 pikslar for korte på kvar side?\r
         \r
         Kvar er koden feil?
-      2-3 Artist Free Play_instruction: "Åpent brett! Teikn kva du vil."
+      2-3 Artist Free Play_instruction: Åpent brett! Teikn kva du vil.
       2-3 Artist Functions 1_instruction: |-
         Hallo. Meg zombiekunstner. Meg elske tegning!\r
         \r
@@ -158,8 +158,10 @@
       2-3 Artist Loops New 11_instruction: Bygg koden frå forrige oppgåve igjen, men
         legg til ein 30 graders venstresving inne i løkka. Gjenta 24 gonger i staden
         for 8.
-      2-3 Artist Loops New 12_instruction: |
-        Tegn ein diamant der kvar av sidene er 100 piksel.
+      2-3 Artist Loops New 12_instruction: 'Tegn ein diamant der kvar av sidene er
+        100 piksel.
+
+'
       2-3 Artist Loops New 13_instruction: |-
         Vi skal starte med litt kode(i grått) som lagar ein diamant!\r
         \r
@@ -222,8 +224,10 @@
         løkker i løkker.'
       2-3 Bee Conditionals 1_instruction: Hallo! Eg er ei bie. Hjelp meg å samla nektar
         frå blomen.
-      2-3 Bee Conditionals 10_instruction: |
-        Lilla blomer kan ha 1 eller 0 nektar. Pass på at du ikkje samlar inn nektar frå ein lilla blome som ikkje har nektar.\r
+      2-3 Bee Conditionals 10_instruction: 'Lilla blomer kan ha 1 eller 0 nektar.
+        Pass på at du ikkje samlar inn nektar frå ein lilla blome som ikkje har nektar.\r
+
+'
       2-3 Bee Conditionals 11_instruction: "Eg lurer på kva som er der ute?\\r\n\\r\nHjelp
         meg å fly rundt gården og samle nektar frå dei blomane som har nektar. "
       2-3 Bee Conditionals 12_instruction: Hjelp meg å finne all nektaren med så få
@@ -859,8 +863,10 @@
         Om du gjer det riktig, kan han gå kva for ein svingete veg uansett lengde!
       4-5 Maze Conditionals 2_instruction: Bruk "Gjenta-til"-blokka for å få zombien
         til solsikka.
-      4-5 Maze Conditionals 3_instruction: |
-        Bruk "viss"-blokka for å la meg bestemme når eg skal snu. \r
+      4-5 Maze Conditionals 3_instruction: 'Bruk "viss"-blokka for å la meg bestemme
+        når eg skal snu. \r
+
+'
       4-5 Maze Conditionals 4_instruction: Ok, denne er heilt lik den forrige oppgåva,
         men du må hugse på korleis du brukte "viss"-blokken og deretter "Gjenta"-blokken
         saman.
@@ -2760,8 +2766,10 @@
         gongar.
       Course 4 Artist 8a_instruction: Hugsar du denne figuren? Når skal du byggje
         den utan at vi gjer deg nokre blokkar å starte med!
-      Course 4 Artist 9_instruction: |
-        Gjenta dette designet 10 gongar og pass på at du roterer mellom kvar figur som blir teikna. \r
+      Course 4 Artist 9_instruction: 'Gjenta dette designet 10 gongar og pass på at
+        du roterer mellom kvar figur som blir teikna. \r
+
+'
       Course 4 Artist Binary 1_instruction: Her er ein funksjon som tek ein binær-streng
         av 1-are og 0-are og instruerer kunstnaren til å følgje dei frå venstre til
         høgre, frå topp til botn. Artisten vil fylle inn rutene om den ser ein 1 og
@@ -2836,8 +2844,12 @@
       Course 4 Artist For Loops 2_instruction: 'Eg har satt koden for å teikne ein
         trekant inn i ei for-løkke som tel frå 50-100 med 10 om gongen. Hugs: Ta ein
         kikk på koden før du klikkar på "Køyr".'
-      Course 4 Artist For Loops 3_instruction: |
-        Bruk førre oppgåve som referanse for å gjere ferdig denne oppgåva. Den minste trekanten har sider på 20 pikslar, den største har sider på 200 pikslar, og kvar trekant er 20 pikslar større enn den førre.
+      Course 4 Artist For Loops 3_instruction: 'Bruk førre oppgåve som referanse for
+        å gjere ferdig denne oppgåva. Den minste trekanten har sider på 20 pikslar,
+        den største har sider på 200 pikslar, og kvar trekant er 20 pikslar større
+        enn den førre.
+
+'
       Course 4 Artist For Loops 4_instruction: 'Korleis vil du endre det du har lært
         for å teikne desse kvadratane? Dei startar med lengde på 15 pikslar, den største
         har lengde på 300 pikslar, og kvart kvadrat er 15 pikslar større enn det forrige. '
@@ -2897,8 +2909,11 @@
         Tips: du må snu 144 grader'
       Course 4 Artist Functions 2_instruction: 'Kan du teikne 3 kvadratar med 20 pikslar
         mellomrom? Tips: kvart kvadrat har storleik på 100 pikslar'
-      Course 4 Artist Functions 3_instruction: |
-        Kan du teikne dette biletet ved å bruke "teikn eit kvadrat" funksjonen? Tips: kvart kvadrat er 120 pikslar frå kvarandre.\r
+      Course 4 Artist Functions 3_instruction: 'Kan du teikne dette biletet ved å
+        bruke "teikn eit kvadrat" funksjonen? Tips: kvart kvadrat er 120 pikslar frå
+        kvarandre.\r
+
+'
       Course 4 Artist Functions 4_instruction: 'Er du klar til å lage di eiga Funksjonsblokk?
         Klikk på "Funksjonsblokka" i verktøykassa og kall den "Teikn ein trekant".
         Deretter lagar du ein trekant på same måte som du gjorde i Aksjons- og Løkkeblokka.
@@ -2906,8 +2921,11 @@
         pikslar lang. Lykke til!'
       Course 4 Artist Functions 5 OLD_instruction: La oss prøve å bruke to funksjonar
         til å teikne eit hus - kva må fiksast i denne koden for å teikne huset riktig?
-      Course 4 Artist Functions 5_instruction: |
-        Kan du teikne dette biletet ved å bruke "teikn eit kvadrat" funksjonen? Tips: kvart kvadrat er 120 pikslar frå kvarandre.\r
+      Course 4 Artist Functions 5_instruction: 'Kan du teikne dette biletet ved å
+        bruke "teikn eit kvadrat" funksjonen? Tips: kvart kvadrat er 120 pikslar frå
+        kvarandre.\r
+
+'
       Course 4 Artist Functions 6_instruction: Kva blokk må du legge til for å få
         trekanten til å stå på toppen av kvadratet?
       Course 4 Artist Functions 7_instruction: Kan du teikne ei linje av kvadratar
@@ -3289,11 +3307,11 @@
       Course 4 Play Labs For Loops 3_instruction: Om me teljer med endå større tal,
         teljer me endå høgare på same tid. Prøv å få piraten Pegleg til å telje frå
         10 til 1000, med 10 av gongen.
-      Course 4 Play Labs For Loops 4_instruction: "Å endre økningen når vi teller
-        kan være nyttig, men vi teller fortsatt lineært (hvert tall er like langt
-        fra det forrige). Hva hvis vi vil telle eksponensielt? Uten å endre innstillingene
+      Course 4 Play Labs For Loops 4_instruction: Å endre økningen når vi teller kan
+        være nyttig, men vi teller fortsatt lineært (hvert tall er like langt fra
+        det forrige). Hva hvis vi vil telle eksponensielt? Uten å endre innstillingene
         i denne for-løkka, kan du telle 1, 4, 9, 16, 25... (teller-variabelen ganget
-        med seg selv)?"
+        med seg selv)?
       Course 4 Play Labs For Loops 4a_instruction: |-
         La oss blande variablene fra Scene 7 sammen med teller-variabelen for å skape magi. \r
         \r
@@ -3748,6 +3766,29 @@
         This Corgi has been a good boy! Drag this carrot
         to him as a special treat.
       GLJ Flappy2_instruction: Click to flap - don't touch the ground!
+      GLJr_Behavior_1_instruction: |-
+        On your worksheet, write what you think the dog
+        will do when you click "Run."
+      GLJr_Behavior_2_instruction: |-
+        Now you have some new blocks! Try them out and
+        see how they work. On your worksheet, write down which ones you tried, and
+        what they do.
+      GLJr_Behavior_5_instruction: |-
+        Now we have two sprites! Use behaviors to make
+        the dog jittery and make the cat wander
+      GLJr_Behavior_6_instruction: |-
+        Let's try some more behaviors - make the dog
+        run up and make the cat run right.
+      GLJr_Forever_1_instruction: |-
+        On your worksheet, write what you think the dog
+        will do when you click "Run."
+      GLJr_Forever_2_instruction: |-
+        Now you have some new blocks! Try them out and
+        see how they work. On your worksheet, write down which ones you tried, and
+        what they do.
+      GLJr_Forever_5_instruction: |-
+        Now we have two sprites! Use a loop to make the
+        dog jittery and make the cat wander
       'Game Lab Workshop: Random_instruction': |-
         Pick a shape block and use calls
         to randomNumber() in place of one or more of the parameters. Maker sure you
@@ -4109,8 +4150,11 @@
         Sett ut vesen og få dei til å gjere kva du enn vil! Ha det gøy!
       MC HOC 2016 Level 2-2_instruction: Kyllingen har frose fast. Plasser ei "flytt"-
         og ei "snu"-blokk i "når sett ut"-blokka for å få den til å flytte seg.
-      MC HOC 2016 Level 3_instruction: |
-        Flott, kyllingen flytta på seg! Men den har stoppa. I spel går kyllingar heile tida. Bruk ei "for alltid"-løkke for å få desse kyllingane til å halde seg gåande.\r
+      MC HOC 2016 Level 3_instruction: 'Flott, kyllingen flytta på seg! Men den har
+        stoppa. I spel går kyllingar heile tida. Bruk ei "for alltid"-løkke for å
+        få desse kyllingane til å halde seg gåande.\r
+
+'
       MC HOC 2016 Level 4_instruction: Det ser litt rart ut at kyllingen går i kun
         ei retning. I spel nyttar ein tilfeldige røyrsler for at ting skal sjå ekte
         ut. Gjer slik at kyllingen snur tilfeldig.
@@ -4173,8 +4217,8 @@
         å bygge ei bru over elva.
       MC_HOC_2017_06_Kiki_instruction: Fiks på denne koden for å hjelpe agenten med
         å bygge ei bru over elva.
-      MC_HOC_2017_07_Cole_instruction: "Øydelegg isen og få {currentPlayerName} til
-        Minecarten."
+      MC_HOC_2017_07_Cole_instruction: Øydelegg isen og få {currentPlayerName} til
+        Minecarten.
       MC_HOC_2017_07_Kiki_instruction: Bruk ein funksjon for å klarere banen til den
         oransje firkanten.
       MC_HOC_2017_07a_Kiki_instruction: Klarér banen til den oransje firkanten.
@@ -4209,8 +4253,8 @@
       MC_HOC_2017_FP20x20_instruction: "**Frileik:** Utforsk på eiga hand!"
       MC_HOC_2017_Ryan_03_instruction: No brukar du løkker for å hjelpe agenten med
         å bygge ei bru over elva ved å plassere blokker i vatnet.
-      MC_HOC_2017_Ryan_05_instruction: "Øydelegge desse kaktusane slik at spelaren
-        kan komme seg til målet."
+      MC_HOC_2017_Ryan_05_instruction: Øydelegge desse kaktusane slik at spelaren
+        kan komme seg til målet.
       MC_HOC_Kiki_02_instruction: Få agenten til trykkplata.
       MSM Big Game Empty_instruction: |-
         All variables and functions are currently
@@ -4315,8 +4359,11 @@
         hvilke kommandoer som skulle kjøres? Klikk på "endre" i "tegn en firkant"-brikken.
         Brikkene i vinduet som åpnes er definisjonen på hva som er "tegn en firkant"-funksjonen.
         Ta en titt. Når du er ferdig, klikk "Lagre og lukk" og så "Kjør"
-      NEW Course 4 Artist Functions 6_instruction: |
-        Klarer du å tegne dette bildet ved å bruke funksjonsbrikken "tegn en firkant"? Hint: Hver firkant er 20 piksler fra hverandre.\r
+      NEW Course 4 Artist Functions 6_instruction: 'Klarer du å tegne dette bildet
+        ved å bruke funksjonsbrikken "tegn en firkant"? Hint: Hver firkant er 20 piksler
+        fra hverandre.\r
+
+'
       NEW Course 4 Artist Functions 7_instruction: 'Byrjar du å få dreisen på funksjonsblokkene?
         La oss endre denne firkanten til å bli 200 pikslar stor. Klikk på "Rediger"
         for å komme til "Teikn ein firkant"-funksjonseditoren. Hugs å klikke på "Lukk"
@@ -4351,8 +4398,10 @@
       NEW Course 4 Artist Params 2_instruction: |-
         Create a `draw triangle` function
         from scratch that makes a triangle with  50 pixel sides.
-      NEW Course 4 Artist Params 3_instruction: |
-        No kan vi nytte funksjonen til å teikne fem trekantar på rekke. Det er 30 pikslar mellom trekantane.\r
+      NEW Course 4 Artist Params 3_instruction: 'No kan vi nytte funksjonen til å
+        teikne fem trekantar på rekke. Det er 30 pikslar mellom trekantane.\r
+
+'
       NEW Course 4 Artist Params 4_instruction: Ser du noko annleis med desse funksjonsblokkene?
         Trykk på «Kjør» så ser du kva som skjer.
       NEW Course 4 Artist Params 5_instruction: 'Fyll ut "???" i lengde-parameteret
@@ -4383,8 +4432,10 @@
       NEW Course 4 Artist Vars 2.5_instruction: 'Ta en titt på koden. Ser du hvordan
         "Angi lengde"-blokka og "lengde"-blokkere fungerer sammen? Klikk "Kjør" for
         å se hva som skjer. '
-      NEW Course 4 Artist Vars 2_instruction: |
-        Dra ei nummerblokk både til «set lengde»-blokka og «gjenta _ gongar»-blokka for å teikne eit sett med 50 piksel-triangel.
+      NEW Course 4 Artist Vars 2_instruction: 'Dra ei nummerblokk både til «set lengde»-blokka
+        og «gjenta _ gongar»-blokka for å teikne eit sett med 50 piksel-triangel.
+
+'
       NEW Course 4 Artist Vars 4 5_instruction: Fantastisk jobb på den forrige oppgaven!
         La oss lage dette kule designet på sekskanter med 60 piksler lange sider.
       NEW Course 4 Artist Vars 4_instruction: |-
@@ -4597,8 +4648,8 @@
       October15 stars 1_instruction: |-
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: "Å springe inn i ein kjøttetande plante
-        er ein dårleg ide. Gå forsiktig forbi planten for å komme sikkert heim."
+      Overworld Avoid Monsters_instruction: Å springe inn i ein kjøttetande plante
+        er ein dårleg ide. Gå forsiktig forbi planten for å komme sikkert heim.
       Overworld Avoid Monsters_2018_instruction: |-
         Running into a Creeper is a bad
         idea. Carefully move past the Creepers and reach the safety of your home.
@@ -4982,8 +5033,10 @@
       SG U3L06 Challenge 5 overlapping circles_instruction: 'Dette biletet er laga
         berre ved å bruke dot() og penColor(), men korleis skal vi få sirklane til
         å vere gjennomsiktige?  Om du ikkje har tatt hintet enno: sjekk ut dokumentasjonen!'
-      SG U3L06 Challenge 6 squiggles_instruction: |
-        Les dokumentasjonen for "arcLeft" og "arcRight"-kommandoane og teikn så kråketær som vist.
+      SG U3L06 Challenge 6 squiggles_instruction: 'Les dokumentasjonen for "arcLeft"
+        og "arcRight"-kommandoane og teikn så kråketær som vist.
+
+'
       SG U3L06 Challenge 7 smiley face_instruction: Bruk turnTo() og moveTo() for
         å teikne eit smilefjes. (Trykk for å sjå fullstendige instruksjonar)
       SG U3L06 Challenge 8 make your own_instruction: |-
@@ -7057,8 +7110,8 @@
         Now things are getting tricky.
         Mine 3 redstone, but don’t fall in the lava. Use an "If" command to place
         cobblestone over any lava you uncover.
-      Underground Iron_instruction: "Å gå inn i smelta lava er ein dårleg ide. Plassèr
-        brustein over for å lage ei bru, og grav ut minst to av jern-blokkene."
+      Underground Iron_instruction: Å gå inn i smelta lava er ein dårleg ide. Plassèr
+        brustein over for å lage ei bru, og grav ut minst to av jern-blokkene.
       Underground Iron_2018_instruction: |-
         Walking into molten lava is a bad idea.
         Place cobblestone to create a bridge, then mine at least two of the iron blocks.
@@ -7213,6 +7266,10 @@
         «skår motstanderen et poeng» blokkene til «når ein ball i mål» og «når ein
         ball bommar på rekkerten»-blokkene for å lage eit spel! Sjå kor mange poeng
         du greier å skåre før motstandaren din skårer to gonger!
+      bounce_10_2018_instruction: Det er no eit mål på toppen. Fest «skår eit poeng»
+        og «skår motstanderen et poeng» blokkene til «når ein ball i mål» og «når
+        ein ball bommar på rekkerten»-blokkene for å lage eit spel! Sjå kor mange
+        poeng du greier å skåre før motstandaren din skårer to gonger!
       bounce_10_basketball_instruction: Det er no eit mål på toppen! Fest «skår eit
         poeng» og «skår motstanderen et poeng» blokkene til «når ein ball i mål» og
         «når ein ball bommar på handa»-blokkene for å lage eit spel. Sjå kor mange
@@ -7225,6 +7282,11 @@
         må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg:
         prøv å endre scena eller farta på rekkerten og ballen og sjå kor mange poeng
         du kan skåre før motstandaren din har skåra to gonger.'
+      bounce_11_2018_instruction: |-
+        You can now attach blocks to the "when run"
+        block. You have to attach the new "launch new ball" block in more than one
+        place. Also, try changing the scene or the speed of the paddle and the ball
+        and see how many points you can score before your opponent scores twice.
       bounce_11_basketball_instruction: 'Du kan no feste blokker til «når starta»-blokka.
         Du må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg:
         prøv å endre scena eller farta på handa og ballen og sjå kor mange poeng du
@@ -7236,6 +7298,10 @@
       bounce_12_instruction: Opprett ditt eget Sprett-spel. Du kan endre alle bilda
         og reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på
         sine telefonar.
+      bounce_12_2018_instruction: |-
+        Create your own Bounce game. You can change all
+        the visuals and the rules. When you're done, click Finish to let friends
+        try your game on their phones.
       bounce_12_basketball_instruction: Opprett ditt eget basketball-spel. Du kan
         endre alle reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet
         på sine telefonar.
@@ -7243,23 +7309,39 @@
         på alle reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er
         ferdig, trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve
         det på sine telefonar!'
+      bounce_1_2018_instruction: |-
+        Attach a block to the "when left arrow" block
+        and press "Run". Move the paddle using the left arrow to reach the finish
+        target.
       bounce_1_basketball_instruction: Fest ei blokk til «når venstre pil»-blokka
         og trykk «Køyr». Flytt handa ved å bruke venstre pil for å nå målet.
       bounce_1_sports_instruction: Kom deg til flagget! Kople ei blokk til "når venstre
         pil"-blokka og trykk "Køyr" for å flytte spelfiguren til flagget.
       bounce_2_instruction: Fest ei blokk til «når høgre pil»- og «når venstre pil»-blokkene.
         Flytt rekkerten for å nå begge måla.
+      bounce_2_2018_instruction: |-
+        Attach a block to the "when right arrow" and
+        "when left arrow" blocks. Move the paddle to reach both finish targets.
       bounce_2_basketball_instruction: Fest ei blokk til «når høgre pil»- og «når
         venstre pil»-blokkene. Flytt handa for å nå begge måla.
       bounce_2_sports_instruction: No er det to flagg! Kople ei blokk til "når venstre
         pil"- og "når høgre pil"-blokkene for å kunne flytte spelfiguren i to retningar.
       bounce_3_instruction: Prøv noko liknande med «når opp pil»-blokka. Flytt rekkerten
         til målet på toppen.
+      bounce_3_2018_instruction: Prøv noko liknande med «når opp pil»-blokka. Flytt
+        rekkerten til målet på toppen.
       bounce_4_instruction: Denne gongen må du legge til fire blokker. Flytt rekkerten
         til alle fire måla for å fullføre denne oppgåva.
+      bounce_4_2018_instruction: |-
+        This time you need to add four blocks. Move the
+        paddle to all four finish targets to complete this puzzle.
       bounce_5_instruction: Me skal sende ein ball flygande ned mot rekkerten. Fest
         ei blokk til «når ein ball treffer rekkerten»-blokka for å vere sikker på
         at ballen når mål.
+      bounce_5_2018_instruction: |-
+        We're going to send a ball flying down towards
+        the paddle. Attach a block to the "when ball hits paddle" block to ensure
+        the ball reaches the finish target.
       bounce_5_basketball_instruction: Me skal sende ein ball flygande ned mot handa.
         Fest ei blokk til «når ein ball treffer handa»-blokka for å vere sikker på
         at ballen når flagget.
@@ -7267,12 +7349,17 @@
         Kople en blokk til "når ball treff spelaren"-blokka for å treffe flagget.
       bounce_6_instruction: No er sluttmålet på toppen. Du må feste blokker til begge
         «når ein ball treffer»-blokkene for å løyse denne oppgåva.
+      bounce_6_2018_instruction: |-
+        Now the finish target is on the top. You need to
+        attach blocks to both of the "when ball hits" blocks to solve this puzzle.
       bounce_6_basketball_instruction: No er flagget på toppen. Du må feste blokker
         til begge «når ein ball treffer»-blokkene for å løyse denne oppgåva.
       bounce_6_sports_instruction: No er flagget på toppen. Du må feste blokker til
         begge «når ein ball treffer»-blokkene for å løyse denne oppgåva.
       bounce_7_instruction: Fest blokker til alle «når» blokkene. Sprett ballen heilt
         til den treff målet.
+      bounce_7_2018_instruction: Fest blokker til alle «når» blokkene. Sprett ballen
+        heilt til den treff målet.
       bounce_7_basketball_instruction: Fest blokker til alle «når» blokkene. Sprett
         ballen heilt til den treff flagget.
       bounce_7_sports_instruction: Fest blokker til alle «når» blokkene. Sprett ballen
@@ -7685,12 +7772,40 @@
         dette nivået.
       courseA_forVideoTest_artist_instruction: Bruk "løkka" for å lage bølgjer på
         vatnet.
+      courseA_harvester_loops1_instruction: Help the farmer pick all the corn!
+      courseA_harvester_loops10_instruction: |-
+        Help the harvester pick all three ears
+        of corn!
+      courseA_harvester_loops11_instruction: 'Try one more on your own! '
+      courseA_harvester_loops2_instruction: Make sure to pick all the corn!
+      courseA_harvester_loops3_instruction: |-
+        Can you pick all the corn using only
+        **one** move block?
+      courseA_harvester_loops4_instruction: |-
+        Can you help the harvester find the
+        bug in her code?
+      courseA_harvester_loops5_instruction: 'Help the harvester fix her code. '
+      courseA_harvester_loops6_instruction: |-
+        You will need **one** `Move South` block
+        and **one** `Move West` block.
+      courseA_harvester_loops7_instruction: 'Try it on your own! '
+      courseA_harvester_loops8_instruction: |-
+        This is the same puzzle, but now you
+        have to repeat **three** times!
+      courseA_harvester_loops9_instruction: |-
+        Can you figure out how to pick all the
+        corn?
       courseA_harvester_seq1_instruction: |-
         Play with these blocks to help the harvester
         pick *one* corn.
+      courseA_harvester_seq10_instruction: Make sure to pick all the corn!
+      courseA_harvester_seq11_instruction: Try it by yourself! Pick all the corn.
       courseA_harvester_seq12_instruction: |-
         Play with these blocks to help the bee
         get *one* nectar.
+      courseA_harvester_seq13_instruction: |-
+        Play with these blocks to help the harvester
+        pick **one** corn.
       courseA_harvester_seq2_instruction: |-
         Use three `Move West` blocks and one `Pick
         Corn` block.
@@ -7704,6 +7819,7 @@
       courseA_harvester_seq8_instruction: |-
         Now the harvester needs to pick corn two
         times!
+      courseA_harvester_seq9_instruction: Add two blocks to finish this puzzle!
       courseA_maze_seq1_instruction: Få fuglen til den slemme grisen!
       courseA_maze_seq10_instruction: 'Utfordring: Gå rundt dynamitten for å få fuglen
         bort til grisen! '
@@ -7825,57 +7941,126 @@
       courseB_artist_loops10_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
+      courseB_artist_loops10_2018_instruction: |-
+        Use what you have learned to draw
+        a picture of what you think the artist saw when he got home.
+      courseB_artist_loops1_2018_instruction: |-
+        This is a new type of puzzle called
+        "Artist". Play with the level and draw something fun.
       courseB_artist_loops2_instruction: Kunstnaren prøver å teikne ei linje **6**
         gongar, men kan ikkje få det riktig. Kan du hjelpe?
+      courseB_artist_loops2_2018_instruction: |-
+        The Artist is trying to draw a line
+        **6** times, but can't get it right.  Can you help?
       courseB_artist_loops3_instruction: Hjelp kunstnaren med å teike ei linje 7 gongar
         slik at han kan lage ein vegg i hagen.
+      courseB_artist_loops3_2018_instruction: |-
+        Help the artist draw a line 7 times
+        to make a garden wall.
       courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
         the bugs in the code and help the artist prepare the ground. "
+      courseB_artist_loops4_2018_instruction: |
+        Now we need to get the soil ready
+        to plant. Find the bugs in the code and help the artist prepare the ground.
       courseB_artist_loops5_instruction: På tide å fikse trappa! Gjenta dette mønsteret
         **5** gongar slik at kunstnaren kan nå toppen av buskane.
+      courseB_artist_loops5_2018_instruction: |-
+        Time to fix the stairs!  Repeat this
+        pattern **5** times so the artist can reach the top of the bushes.
       courseB_artist_loops6_instruction: Klatr opp slyngplanta og sjå kor det endar?
+      courseB_artist_loops6_2018_instruction: Klatr opp slyngplanta og sjå kor det
+        endar?
       courseB_artist_loops7_instruction: "**Utfordring:** Det er en skjult hage! La
         oss går rundt."
+      courseB_artist_loops7_2018_instruction: "**Utfordring:** Det er en skjult hage!
+        La oss går rundt."
       courseB_artist_loops8_instruction: På tide å dra heim. Kan du fikse denne stigen
         med berre ei blokk for å hjelpe kunstnaren ned?
+      courseB_artist_loops8_2018_instruction: |-
+        Time to head home. Can you fix this
+        ladder using only one block to help the artist get down?
       courseB_artist_loops9_instruction: |-
         Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?
+      courseB_artist_loops9_2018_instruction: |-
+        Let's take the short way home, over
+        the pond. Can you help the artist stay on the stones?
       courseB_artist_loops_challenge1_instruction: '"Det er på tide å kaste terningane!
         Kan du hjelpe meg å trekke desse?"'
+      courseB_artist_loops_challenge1_2018_instruction: |-
+        "It's time to toss the
+        dice! Can you help me draw these?"
       courseB_artist_loops_challenge2_instruction: La oss spele eit spel! Tegn så
         mange X'ar som du kan! Klarer du tre på rad?
+      courseB_artist_loops_challenge2_2018_instruction: |-
+        Draw as many X's as you
+        can. Can you get 3 in a row?
       courseB_collector_loops1_instruction: Dette er Laurel, eventyraren!  Kan du
         flytte henne og få ein skatt?
       courseB_collector_loops10_instruction: Hjelp Laurel til å få tak i alle skattane
         i grotta.
+      courseB_collector_loops10_2018_instruction: Hjelp Laurel til å få tak i alle
+        skattane i grotta.
       courseB_collector_loops11_instruction: Eureka!  Få tak i så mange skattar du
         berre kan!
+      courseB_collector_loops11_2018_instruction: |-
+        Eureka!  Get as much treasure
+        as you can!
+      courseB_collector_loops1_2018_instruction: Dette er Laurel, eventyraren!  Kan
+        du flytte henne og få ein skatt?
       courseB_collector_loops2_instruction: Samle inn alle fire haugane for å klare
         dette nivået.
+      courseB_collector_loops2_2018_instruction: |-
+        Get all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: Korleis kan Laurel få alle dei fem skattehaugane
         med berre ei "E-->"-blokk?
+      courseB_collector_loops3_2018_instruction: |-
+        How can Laurel get all five piles
+        of treasure using only one `E -->` block?
       courseB_collector_loops3_predict1_instruction: |-
         How can Laurel collect all
         five piles of gold using only one `E -->` block?
       courseB_collector_loops4_instruction: Fiks Laurel si bane for å få tak i alle
         skattane!
+      courseB_collector_loops4_2018_instruction: |-
+        Fix Laurel's path to get all of
+        this treasure!
       courseB_collector_loops5_instruction: 'Legg til meir i koden frå forrige oppgåve
         for å få all skatten. '
+      courseB_collector_loops5_2018_instruction: 'Legg til meir i koden frå forrige
+        oppgåve for å få all skatten. '
       courseB_collector_loops6_instruction: |-
         Finn koden som hjelper Laurel
         til å få tak i heile skatten!
+      courseB_collector_loops6_2018_instruction: |-
+        Figure out the code to help Laurel
+        get all of the treasure!
       courseB_collector_loops7_instruction: Skriv koden for å få tak i heile skatten.
+      courseB_collector_loops7_2018_instruction: |-
+        Write the code to get all of this
+        treasure.
       courseB_collector_loops8_instruction: "**Utfordring:** Skatten går heile vegen
         opp trappa! \nSkriv koden slik at Laurel får tak i alt."
+      courseB_collector_loops8_2018_instruction: |-
+        **Challenge: ** The treasure goes
+        all the way down these stairs!  Write the code to help Laurel get it all.
       courseB_collector_loops9_instruction: '*"Hjelp meg med å få skatten frå denne
         djupe dalen."*'
+      courseB_collector_loops9_2018_instruction: |-
+        *"Help me get the treasure from
+        this deep valley."*
       courseB_collector_loops_challenge1_instruction: "Denne gangen har du avgrensa
+        tal \npå blokker. Få tak i heile skatten! "
+      courseB_collector_loops_challenge1_2018_instruction: "Denne gangen har du avgrensa
         tal \npå blokker. Få tak i heile skatten! "
       courseB_collector_loops_challenge2_instruction: "La oss få tak i skatten! Hjelp
         \nmeg over kvar rad og kom deretter tilbake for å starte neste rad. Kan du
         finne eit mønster?"
       courseB_collector_loops_challenge2a_instruction: |-
+        Help Laurel get at least
+        **5** pieces of treasure to finish this puzzle.
+      courseB_collector_loops_challenge2a_2018_instruction: |-
         Help Laurel get at least
         **5** pieces of treasure to finish this puzzle.
       courseB_collector_loops_challenge`_instruction: 'Denne gongen kan du berre bruke
@@ -7889,20 +8074,45 @@
       courseB_maze_seq1_instruction: "Spel med desse blokkene å sjp kva dei får \nfuglen
         til å gjere! \\r \n\\r \nFå fuglen til grisen for å fullføre nivået."
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
+      courseB_maze_seq10_2018_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
+      courseB_maze_seq11_2018_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Få tak i grisen!
+      courseB_maze_seq12_2018_instruction: Få tak i grisen!
+      courseB_maze_seq1_2018_instruction: |-
+        Play with these blocks to see what they
+        make the bird do! \r
+        \r
+        Get the bird to the pig to complete the level.
       courseB_maze_seq2_instruction: '*"Ein feil! Endre koden for å få meg bort til
         grisen."*'
+      courseB_maze_seq2_2018_instruction: |-
+        *"A bug! Fix the code to get me to the
+        pig."*
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
+      courseB_maze_seq4_2018_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
+      courseB_maze_seq5_2018_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: Flytt meg først ein veg og så ein anna veg for
         å få meg bort til grisen!
+      courseB_maze_seq6_2018_instruction: |-
+        Move one way, then another to get the
+        bird to the pig!
       courseB_maze_seq7_instruction: Finn ut kva som manglar og legg så til dei manglande
         blokkane for å få fuglen bort til grisen!
+      courseB_maze_seq7_2018_instruction: |-
+        Figure out what is missing and then add
+        blocks to get the bird to the pig!
       courseB_maze_seq8_instruction: "Din tur!  Kva treng du å gjere  for å få \nfuglen
         til grisen?"
+      courseB_maze_seq8_2018_instruction: |-
+        Your turn!  What do you need to do to
+        get the bird to the pig?
       courseB_maze_seq9_instruction: 'Utfordring: Gå rundt dynamitten for å få fuglen
         bort til grisen.'
+      courseB_maze_seq9_2018_instruction: |-
+        Challenge: Move around the TNT to get
+        the bird to the pig.
       courseB_maze_seq9_challenge1_instruction: "*Kor har den grisen gøymd seg no?*"
       courseB_maze_seqCold_instruction: "Utfordring: Feilsøk dette nivået ved å leggje
         til blokker \nfor å få fuglen bort til grisen!"
@@ -7910,31 +8120,61 @@
         grisen! '
       courseB_maze_seq_challenge1_instruction: "Du kan bare flytte opp til fire gonger
         \ni kvar retning. Finn du ein bane før du går tom for blokker?"
+      courseB_maze_seq_challenge1_2018_instruction: |-
+        Can you find a path before you
+        run out of blocks?
       courseB_maze_seq_challenge2_instruction: |-
         Feilsøk dette nivået. Dette er dei rette
         blokkene, men dei ligg i feil rekkefølgje!
+      courseB_maze_seq_challenge2_2018_instruction: Debug dette nivået. Det er dei
+        rette blokkene, men dei er i feil rekkefølge!
       courseB_playLab_events1_instruction: Sjå om du kan finne ut kva kvar blokk gjer.
+      courseB_playLab_events1_2018_instruction: |-
+        See if you can figure out what each
+        block does.
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
         you click "Run".
+      courseB_playlab_events2_2018_instruction: |-
+        Have Daisy the Dragon say something
+        when you click "Run".
       courseB_playlab_events3_instruction: |-
+        Use an event to make Daisy the Dragon
+        switch to a random mood when you click on her.
+      courseB_playlab_events3_2018_instruction: |-
         Use an event to make Daisy the Dragon
         switch to a random mood when you click on her.
       courseB_playlab_events4_instruction: |-
         Knight time!  Add an event so that the
         knight moves toward the dragon when the left arrow is clicked.
+      courseB_playlab_events4_2018_instruction: |-
+        Knight time!  Add an event so that
+        the knight moves toward the dragon when the left arrow is clicked.
       courseB_playlab_events5_instruction: |-
         Now add an event so that the knight runs
         away from the dragon when you press the right arrow.
+      courseB_playlab_events5_2018_instruction: |-
+        Now add an event so that the knight
+        runs away from the dragon when you press the right arrow.
       courseB_playlab_events6_instruction: |-
         Help your knight get all of the flags!\r
         \r
         To
         do this, you'll need to add events to help the knight move up, down, left,
         and right.
+      courseB_playlab_events6_2018_instruction: |-
+        Help your knight get all of the
+        flags!\r
+        \r
+        To do this, you'll need to add events to help the knight move
+        up, down, left, and right.
       courseB_playlab_events7_instruction: |-
         Make this game fun by setting the knight
         to vanish when he runs into the dragon on his way to get the flags!  Play
+        a sound when they collide to make it feel more real.
+      courseB_playlab_events7_2018_instruction: |-
+        Make this game fun by setting the
+        knight to vanish when he runs into the dragon on his way to get the flags!  Play
         a sound when they collide to make it feel more real.
       courseB_playlab_events8_instruction: |-
         Use your imagination. What can you do
@@ -7942,30 +8182,61 @@
       courseB_playlab_eventsFP_instruction: |-
         Use your imagination. What can you do
         to make this game more fun?
+      courseB_playlab_eventsFP_2018_instruction: |-
+        Use your imagination. What can
+        you do to make this game more fun?
       courseB_playlab_eventsToolbox_instruction: |-
         Finish by playing a sound and making
         the knight vanish when he runs into the dragon!
       courseB_playlab_events_challenge1_instruction: Det er klart for Det store dyeløpet!
         Få dyra til å flytte seg ned når du trykkar på ▼. Kven spring fortast?
+      courseB_playlab_events_challenge1_2018_instruction: "Make the animals move\ndown
+        when you press ▼. "
       courseB_playlab_events_challenge2_instruction: |-
+        La oss få dyra til å forsvinne når du trykkar på dei! Prøv å spele med hunden no og etterpå la dei andre dyra få være med på moroa!\r
+        Du kan også leggje til lydar og poengsummar for å lage eit sisten-spel!
+      courseB_playlab_events_challenge2_2018_instruction: |-
         La oss få dyra til å forsvinne når du trykkar på dei! Prøv å spele med hunden no og etterpå la dei andre dyra få være med på moroa!\r
         Du kan også leggje til lydar og poengsummar for å lage eit sisten-spel!
       courseB_playlab_events_challenge2_embed_instruction: Her er det ferdige spelet!
       courseB_playlab_events_challenge2_template_instruction: La oss få dyra til å
         forsvinne når du trykkar på dei! Du kan også leggje til lydar og poengsummar
         for å lage eit sisten-spel!
+      courseB_playlab_events_challenge2_template_2018_instruction: |-
+        Let's make the
+        animals disappear when you click on them! You can also add sounds and score
+        points to create a fun game of Animal Tag!
       courseB_starWars_prog1_instruction: '"Få tak i skrapmetallet, BB-8!"'
       courseB_starWars_prog10_instruction: Hjelp BB-8 å samle det glødande skrapmetallet
+      courseB_starWars_prog10_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
       courseB_starWars_prog11_instruction: Hjelp BB-8 å samle det glødande skrapmetallet
+      courseB_starWars_prog11_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
+      courseB_starWars_prog1_2018_instruction: '"Få tak i skrapmetallet, BB-8!"'
       courseB_starWars_prog2_instruction: Få tak i alt metallet.
+      courseB_starWars_prog2_2018_instruction: Få tak i alt metallet.
       courseB_starWars_prog3_instruction: Få tak i alt skrapmetallet
+      courseB_starWars_prog3_2018_instruction: Få tak i alt skrapmetallet
       courseB_starWars_prog4_instruction: Få tak i alt skrapmetallet
+      courseB_starWars_prog4_2018_instruction: Få tak i alt skrapmetallet
       courseB_starWars_prog5_instruction: Få tak i skrapmetallet
+      courseB_starWars_prog5_2018_instruction: Få tak i skrapmetallet
       courseB_starWars_prog6_instruction: Få tak i alt skrapmetallet
+      courseB_starWars_prog6_2018_instruction: Få tak i alt skrapmetallet
       courseB_starWars_prog7_instruction: Gå og hent det!
+      courseB_starWars_prog7_2018_instruction: Gå og hent det!
       courseB_starWars_prog8_instruction: "**Utfordring:** Hjelp BB-8 å samle det
         glødande skrapmetallet"
+      courseB_starWars_prog8_2018_instruction: |-
+        **Challenge:** Help BB-8 gather the
+        glowing scrap metal
       courseB_starWars_prog9_instruction: Hjelp BB-8 å samle det glødande skrapmetallet
+      courseB_starWars_prog9_2018_instruction: |-
+        Help BB-8 gather the glowing scrap
+        metal
       courseC_PlayLab_events1_instruction: |-
         Make Jorge the Dog (actor 1) say "Hi
         there."
@@ -8020,25 +8291,34 @@
         er 250 pikslar unna)*  "
       courseC_artist_loops1a_instruction: 'Få kunstnaren til midten av spelområdet,
         teikn deretter ein fugl ved å bruke eit klistremerke. '
+      courseC_artist_loops1a_2018_instruction: "Get the artist to the center of the\nplay
+        area, then draw a bird using a sticker. "
       courseC_artist_loops2_instruction: No som zombie kjenner vegen sin, hjelp han
         med å grave hol langs banen for å plante fleire blomar!
       courseC_artist_loops2a_instruction: No kan du bruke ei løkke for å spinne fuglen
         din rundt tolv gongar med ein 30 graders sving.
+      courseC_artist_loops2a_2018_instruction: |-
+        Now, use a loop to spin your bird
+        around 12 times with a 30 degree turn.
       courseC_artist_loops3_instruction: Nydeleg!  No som blomen spirer, hjelp zombien
         med å plassere ein ven for kvar 50 piksel for å vakte over dei til dei har
         vokst ut.
       courseC_artist_loops3a_instruction: Legg til ei flaggermus!
+      courseC_artist_loops3a_2018_instruction: Legg til ei flaggermus!
       courseC_artist_loops4_instruction: Zombien har funne ein tom gard! Kan du hjelpe
         ham å starte opp at ved å plassere klistremerker med dyr kvar 100 piksel?
       courseC_artist_loops4a_instruction: Prøv å hoppe framover 75 pikslar.
+      courseC_artist_loops4a_2018_instruction: Prøv å hoppe framover 75 pikslar.
       courseC_artist_loops5_instruction: "Flott! No er det på tide å lage eit gjerde
         \nfor å halde dyra ute. \\r\n\\r\n"
       courseC_artist_loops5a_instruction: Prøv nye klistremerke!
       courseC_artist_loops5b_instruction: Prøv å legge til linjer!
+      courseC_artist_loops5b_2018_instruction: Prøv å legge til linjer!
       courseC_artist_loops6_instruction: "Kva skal zombien setje i \nhagen? \\r\n\\r\n\\r\n"
       courseC_artist_loops6a_instruction: Legg til eit anna klistremerke!
       courseC_artist_loops7a_instruction: Prøv deg fram med løkker og vinklar.
       courseC_artist_loops8a_instruction: Prøv noko på eiga hand!
+      courseC_artist_loops8a_2018_instruction: Prøv noko på eiga hand!
       courseC_artist_loopsPre1a_instruction: Tid for å få den linja til å spinne!
       courseC_artist_loopsPrePre1a_instruction: 'Få kunstnaren til midten av spelområdet,
         teikn deretter ei linje. '
@@ -8047,6 +8327,8 @@
         dei har vokst ut.
       courseC_artist_loopsTemplateA_instruction: 'Få kunstnaren til midten av spelområdet,
         teikn deretter ein fugl ved å bruke eit klistremerke. '
+      courseC_artist_loopsTemplateA_2018_instruction: "Get the artist to the center\nof
+        the play area, then draw a bird using a sticker. "
       courseC_artist_prog1_instruction: |-
         Play with the blocks in the toolbox to see
         what they do!
@@ -8256,8 +8538,13 @@
         Debug this level to get Scrat to
         the acorn.
       courseC_maze_debugging_challenge1_instruction: '*"Går eg berre rundt i sirklar?"*'
+      courseC_maze_debugging_challenge1_2018_instruction: |-
+        Help Scrat decide which
+        way to turn to get to the acorn.
       courseC_maze_debugging_challenge2_instruction: '*"Om eg snur for ofte, kan eg
         bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
+      courseC_maze_debugging_challenge2_2018_instruction: '*"Om eg snur for ofte,
+        kan eg bli svimmel! Hjelp med å nå eikenøtta med berre fire "snu" kommandoar."*'
       courseC_maze_loops1_instruction: |-
         Can you get the bird to the pig using 5 of
         the same kind of blocks?
@@ -8362,27 +8649,52 @@
       courseD_artist_binary1_instruction: |-
         Use the blocks below to have the artist
         draw "01010101" in binary in the first row.
+      courseD_artist_binary1_2018_instruction: Bruk blokkene nedanfor til å få kunstnaren
+        til å teikne "01010101" i binær i den første raden.
       courseD_artist_binary2_instruction: |-
         Run this code to see how the artist uses
         binary to draw this pattern.
+      courseD_artist_binary2_2018_instruction: |-
+        Run this code to see how the artist
+        uses binary to draw this pattern.
       courseD_artist_binary3_instruction: |-
         Which of the binary strings below could
         you loop 8 times to draw this image?
+      courseD_artist_binary3_2018_instruction: |-
+        Which of the binary strings below
+        could you loop 8 times to draw this image?
       courseD_artist_binary4_instruction: |-
         Can you draw this pattern by looping just
         three binary digits (0s and 1s)?
+      courseD_artist_binary4_2018_instruction: Kan du teikne dette mønsteret ved å
+        køyre ei løkke over ein tresifra binærstreng(0 og 1)?
       courseD_artist_binary5_instruction: |-
         Each binary string below represents one
         row of this picture. \r
         \r
         Can you rearrange them so it draws a smiley face
         instead of a frown?
+      courseD_artist_binary5_2018_instruction: |-
+        Each binary string below represents
+        one row of this picture. \r
+        \r
+        Can you rearrange them so it draws a smiley
+        face instead of a frown?
       courseD_artist_binary6_instruction: Kva 6 sifra binærstreng, repetert 11 gongar,
         vil teikne dette biletet?
+      courseD_artist_binary6_2018_instruction: Kva 6 sifra binærstreng, repetert 11
+        gongar, vil teikne dette biletet?
       courseD_artist_binary7_instruction: Kva er den kortaste binærstrengen du kan
         repetere for å teikne dette biletet?
+      courseD_artist_binary7_2018_instruction: |-
+        What is the shortest binary string
+        that you can repeat to draw this image?
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
+      courseD_artist_binary8_2018_instruction: Finish the code to create this drawing.
       courseD_artist_binary8_predict1_instruction: Gjer ferdig koden for å lage teikninga.
+      courseD_artist_binary8_predict1_2018_instruction: |-
+        Finish the code to create
+        this drawing.
       courseD_artist_binaryFP_instruction: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r
@@ -8391,14 +8703,26 @@
         get creative with the bits!
       courseD_artist_binaryFP8_instruction: "**Free Play:**  Draw whatever you want\nin
         binary! "
+      courseD_artist_binaryFP_2018_instruction: |-
+        Here's a higher resolution canvas
+        to draw on - 16 pixels by 16 pixels!\r
+        \r
+        See what happens when we start
+        to get creative with the bits!
       courseD_artist_binary_challenge0_instruction: Prøv å bruke løkker for å fullføre
         teikninga.
       courseD_artist_binary_challenge1_instruction: Du kan berre bruke kvar binærverdi
         (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne
         teikninga.
+      courseD_artist_binary_challenge1_2018_instruction: Du kan berre bruke kvar binærverdi
+        (0 eller 1) ein gong i denne oppgåva. Præv å bruke løkker for å fullføre denne
+        teikninga.
       courseD_artist_binary_challenge2_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
+      courseD_artist_binary_challenge2_2018_instruction: |-
+        Are you persistent enough
+        to restore this logo back to normal?
       courseD_artist_binary_challenge3_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
@@ -8439,49 +8763,95 @@
       courseD_artist_nestedLoops10_instruction: |-
         Take the squares from before, but
         this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops10_2018_instruction: |-
+        Take the squares from before,
+        but this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops1_2018_instruction: |-
+        Draw a triangle to kickstart
+        this stage.  \r
+        (Each side is 100 pixels long and you'll need to turn 120
+        degrees for each exterior angle.)
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
         each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops1a_2018_instruction: 'Now loop the triangle 6 times.
+
+'
       courseD_artist_nestedLoops2_instruction: |-
         This time, complete the puzzle with
         the fewest number of blocks possible.
+      courseD_artist_nestedLoops2_2018_instruction: |-
+        This time, complete the puzzle
+        with the fewest number of blocks possible.
       courseD_artist_nestedLoops3_instruction: |-
         Use your new skills to quickly draw
         the last row of windows for this building.\r
         \r
         The windows are 20 pixel
         squares, each 20 pixels apart.
+      courseD_artist_nestedLoops3_2018_instruction: |-
+        Use your new skills to quickly
+        draw the last row of windows for this building.\r
+        \r
+        The windows are 20
+        pixel squares, each 20 pixels apart.
       courseD_artist_nestedLoops4_instruction: |-
         Great!  Do the same thing with these
         circles.
+      courseD_artist_nestedLoops4_2018_instruction: |-
+        Great!  Do the same thing with
+        these circles.
       courseD_artist_nestedLoops5_instruction: |-
         What happens if you also turn 90
         degrees between circles?
+      courseD_artist_nestedLoops5_2018_instruction: |-
+        What happens if you also turn
+        90 degrees between circles?
       courseD_artist_nestedLoops6_instruction: |-
         Edit blocks within your existing
         code to make this image.
       courseD_artist_nestedLoops7_instruction: |-
         Use what you've learned to make
         this drawing.
+      courseD_artist_nestedLoops7_2018_instruction: |-
+        Use what you've learned to
+        make this drawing.
       courseD_artist_nestedLoops8_instruction: |-
         Using what you have learned in the
         last couple of puzzles, build this image from the beginning.
+      courseD_artist_nestedLoops8_2018_instruction: |-
+        Using what you have learned
+        in the last couple of puzzles, build this image from the beginning.
       courseD_artist_nestedLoops9_instruction: |-
         **Challenge:** Can you figure out
         how to make a picture like this?
+      courseD_artist_nestedLoops9_2018_instruction: "**Utfordring:** Kan du finne
+        ut korleis du lagar eit slikt bilete?"
       courseD_artist_nestedLoops9_predict1_instruction: "**Utfordring:** Kan du finne
         ut korleis du lagar eit slikt bilete?"
+      courseD_artist_nestedLoops9_predict1_2018_instruction: |-
+        **Challenge:** Can
+        you figure out how to make a picture like this?
       courseD_artist_nestedLoopsFP_instruction: |-
         Now it's your turn.  Take the skills
         you have learned and make something that you love!
+      courseD_artist_nestedLoopsFP_2018_instruction: |-
+        Now it's your turn.  Take
+        the skills you have learned and make something that you love!
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
       courseD_artist_nestedLoops_challenge1_instruction: Kan du finne ut korleis du
         lagar eit slikt bilete?
+      courseD_artist_nestedLoops_challenge1_2018_instruction: |-
+        Can you figure out
+        how to make a picture like this?
       courseD_artist_nestedLoops_challenge2_instruction: Kan du finne ut korleis du
         lagar eit slikt bilete?
+      courseD_artist_nestedLoops_challenge2_2018_instruction: |-
+        Fix the code to make
+        this picture!
       courseD_artist_project1_instruction: 'Teikn ein liten figur, mellom **20 og
         50** pikslar brei. Det kan vere kva som helst figur.  '
       courseD_artist_project1_2018_instruction: "Draw a small shape, between **20\nand
@@ -8542,10 +8912,18 @@
       courseD_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
+      courseD_bee_conditionals10_2018_instruction: |-
+        Collect all of the nectar and
+        make all of the honey.
       courseD_bee_conditionals1_predict1_instruction: Kontroller om det er ein blome
         under skya. Om det er ein blome, få nektar.
+      courseD_bee_conditionals1_predict1_2018_instruction: |-
+        Check to see if there's
+        a flower under the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals2_instruction: "Check underneath every cloud to see\nif
         it is hiding a flower before you get nectar.  "
+      courseD_bee_conditionals2_2018_instruction: 'Sjekk under kvar sky for å sjå
+        om det skjular ein blome før du får nektar.  '
       courseD_bee_conditionals2_test_instruction: 'Sjekk under kvar sky for å sjå
         om det skjular ein blome før du får nektar.  '
       courseD_bee_conditionals3_instruction: |-
@@ -8554,32 +8932,66 @@
         \r
         You can only collect nectar from flowers, but you can check any space
         to see if there is a flower.
+      courseD_bee_conditionals3_2018_instruction: |-
+        Help the bee collect all of the
+        nectar. \r
+        \r
+        You can only collect nectar from flowers, but you can check
+        any space to see if there is a flower.
       courseD_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
         blocks as possible.
+      courseD_bee_conditionals4_2018_instruction: |-
+        Get all of the nectar using as
+        few blocks as possible.
       courseD_bee_conditionals5_instruction: |-
         Collect all of the nectar using as
         few blocks as possible
+      courseD_bee_conditionals5_2018_instruction: |-
+        Collect all of the nectar using
+        as few blocks as possible
       courseD_bee_conditionals6_instruction: |-
         Some of these clouds might have honeycombs
         under them.  Be sure to check if a honeycomb is hiding behind each cloud!
+      courseD_bee_conditionals6_2018_instruction: |-
+        Some of these clouds might have
+        honeycombs under them.  Be sure to check if a honeycomb is hiding behind each
+        cloud!
       courseD_bee_conditionals7_instruction: |-
+        Use the `if/else` block to collect
+        nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals7_2018_instruction: |-
         Use the `if/else` block to collect
         nectar at flowers and make honey at honeycomb.
       courseD_bee_conditionals7_predict2_instruction: |-
         Use the `if/else` block to
         collect nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals7_predict2_2018_instruction: |-
+        Use the `if/else` block
+        to collect nectar at flowers and make honey at honeycomb.
       courseD_bee_conditionals8_instruction: |-
+        Collect nectar if there is a flower.\r
+        Otherwise,
+        make honey (because there is a honeycomb).
+      courseD_bee_conditionals8_2018_instruction: |-
         Collect nectar if there is a flower.\r
         Otherwise,
         make honey (because there is a honeycomb).
       courseD_bee_conditionals9_instruction: |-
         Collect all of the nectar or make all
         the honey.
+      courseD_bee_conditionals9_2018_instruction: |-
+        Collect all of the nectar or make
+        all the honey.
       courseD_bee_conditionals_challenge1_instruction: Få tak i all nektaren og lag
         honning.
+      courseD_bee_conditionals_challenge1_2018_instruction: |-
+        Collect all the nectar
+        and make all the honey.
       courseD_bee_conditionals_challenge2_instruction: Få tak i all nektaren og lag
         honning.
+      courseD_bee_conditionals_challenge2_2018_instruction: Få tak i all nektaren
+        og lag honning.
       courseD_bee_conditionals_challenge3_instruction: Få tak i all nektaren og lag
         honning.
       courseD_bee_debugging1_instruction: |-
@@ -8604,6 +9016,10 @@
         nectar.
       courseD_bee_debugging_challenge1_instruction: Sjå korleis biene får nektar.
         Kan du bruke det same mønsteret til å hjelpe biene å lage honning?
+      courseD_bee_debugging_challenge1_2018_instruction: |-
+        Watch how the bees gets
+        the nectar. Can you use the same kind of pattern to help the bee make all
+        of the honey?
       courseD_bee_debugging_challenge1a_instruction: Sjå korleis biene får nektar.
         Kan du bruke det same mønsteret til å hjelpe biene å lage honning?
       courseD_bee_debugging_challenge2_instruction: Sjå korleis biene får nektar.
@@ -8671,6 +9087,9 @@
       courseD_bounce_events10s_instruction: "Attach the `score point` block to the\n`when
         ball in goal` event and the `score opponent point` block to the `when\nball
         misses hand` event to make a game. "
+      courseD_bounce_events10s_2018_instruction: "Attach the `score point` block\nto
+        the `when ball in goal` event and the `score opponent point` block to the\n`when
+        ball misses hand` event to make a game. "
       courseD_bounce_events11_instruction: |-
         You can now attach blocks to the "when
         run" block. You have to attach the new "launch new ball" block in more
@@ -8679,6 +9098,8 @@
         twice.
       courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
         of the places where the game needs a new ball. "
+      courseD_bounce_events11s_2018_instruction: "Attach the `throw new ball` block\nin
+        all of the places where the game needs a new ball. "
       courseD_bounce_events12_instruction: |-
         Create your own Bounce game. You can
         change all the visuals and the rules. When you're done, click Finish to let
@@ -8687,15 +9108,25 @@
         Make this game your own. You can change
         all the visuals and the rules. When you're done, click "Finish" to let
         friends try your game on their phones.
+      courseD_bounce_events12s_2018_instruction: |-
+        Make this game your own. You can
+        change all the visuals and the rules. When you're done, click "Finish"
+        to let friends try your game on their phones.
       courseD_bounce_events1s_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the net.
+      courseD_bounce_events1s_2018_instruction: |-
+        Attach a block to the "when left
+        arrow" block and press "Run" to move the player to the net.
       courseD_bounce_events2_instruction: |-
         Attach a block to the "when right arrow"
         and "when left arrow" blocks. Move the paddle to reach both finish targets.
       courseD_bounce_events2s_instruction: |-
         Now, attach a block to the `when right
         event` so that the hand can get to both baskets.
+      courseD_bounce_events2s_2018_instruction: |-
+        Now, attach a block to the `when
+        right event` so that the hand can get to both baskets.
       courseD_bounce_events3_instruction: |-
         Now try something similar with the "when
         up arrow" block. Move the paddle to the finish target at the top.
@@ -8715,6 +9146,9 @@
       courseD_bounce_events5s_instruction: |-
         Attach a block to the `when ball hits
         hand` event to ensure the ball reaches the basket.
+      courseD_bounce_events5s_2018_instruction: |-
+        Attach a block to the `when ball
+        hits hand` event to ensure the ball reaches the basket.
       courseD_bounce_events6_instruction: |-
         Now the finish target is on the top. You
         need to attach blocks to both of the "when ball hits" blocks to solve this
@@ -8722,6 +9156,9 @@
       courseD_bounce_events6s_instruction: |-
         Attach code to make the ball bounce when
         it hits the wall so you can solve this puzzle.
+      courseD_bounce_events6s_2018_instruction: |-
+        Attach code to make the ball bounce
+        when it hits the wall so you can solve this puzzle.
       courseD_bounce_events7_instruction: |-
         Attach blocks to each of the "when"
         blocks. Bounce the ball until it hits the finish target.
@@ -8729,30 +9166,78 @@
         Attach sound blocks to make the net swish
         when you hit the basket and have the whistle blow when the ball misses your
         hand. Bounce the ball until it hits the finish target.
+      courseD_bounce_events7s_2018_instruction: |-
+        Attach sound blocks to make the
+        net swish when you hit the basket and have the whistle blow when the ball
+        misses your hand. Bounce the ball until it hits the finish target.
       courseD_collector_debugging1_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging1_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging1a_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging1a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging2_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging2_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging2a_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging2a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging3_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging3_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging3a_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging3a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging4_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging4_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging4a_instruction: Rett feilen(e) for å samle skatte.
+      courseD_collector_debugging4a_2018_instruction: |-
+        Fix the error(s) to collect
+        all of the treasure.
       courseD_collector_debugging5_instruction: Alle kommandoane du treng er her allereie...
         bruk det du har lært til å finne ut korleis du kan løyse oppgåva.
+      courseD_collector_debugging5_2018_instruction: |-
+        All of the commands that you
+        need are already here...now use your debugging skills to figure out how to
+        solve this puzzle.
       courseD_collector_debugging5a_instruction: Alle kommandoane du treng er her
         allereie... bruk det du har lært til å finne ut korleis du kan løyse oppgåva.
+      courseD_collector_debugging5a_2018_instruction: |-
+        All of the commands that you
+        need are already here...now use your debugging skills to figure out how to
+        solve this puzzle.
       courseD_collector_debugging6_instruction: 'Utfordring: Bruk det du har lært
         til å fikse feilene og samle saman skatten.'
+      courseD_collector_debugging6_2018_instruction: |-
+        Challenge: Use your debugging
+        skills to fix the errors and collect all of the treasure.
       courseD_collector_debugging6a_instruction: 'Utfordring: Bruk koden i arbeidsområdet
         til å få tak i minst **6** deler av skatten!'
+      courseD_collector_debugging6a_2018_instruction: |-
+        Challenge: Use the code in
+        the work area to get at least **6** pieces of treasure!
       courseD_collector_debugging7_instruction: 'Utfordring: Alle kommandoane du treng
         er her allereie... bruk det du har lært til å finne ut korleis du kan løyse
         oppgåva.'
       courseD_collector_debugging_challenge2_instruction: Er du ein ekspert på løkker?
         Bruk det du har lært så langt for å samle all skatten!
+      courseD_collector_debugging_challenge2_2018_instruction: |-
+        Are you an expert
+        at nested loops? Use what you have learned so far to collect all the treasure!
       courseD_collector_nested_loops_challenge2_instruction: Hjelp samlaren om å få
         minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di.
         Det er mogleg å samle alle fire.
+      courseD_collector_nested_loops_challenge2_2018_instruction: Hjelp samlaren om
+        å få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa
+        di. Det er mogleg å samle alle fire.
       courseD_collector_nested_loops_challenge2a_instruction: Hjelp samlaren om å
         få minst to haugar med skatten ved å berre bruke blokkene i verktøykassa di.
         Det er mogleg å samle alle fire.
@@ -8776,40 +9261,76 @@
       courseD_farmer_condLoops1_instruction: |-
         Use conditionals to make sure that
         you pick corn only when it's there.
+      courseD_farmer_condLoops1_2018_instruction: |-
+        Use conditionals to make sure
+        that you pick corn only when it's there.
       courseD_farmer_condLoops2_instruction: |-
-        Help the farmer collect both corn and
-        lettuce from the field.
+        Help the harvester collect both corn
+        and lettuce from the field.
+      courseD_farmer_condLoops2_2018_instruction: |-
+        Help the harvester collect both
+        corn and lettuce from the field.
       courseD_farmer_condLoops3_instruction: |-
         *"Corn, lettuce, AND pumpkins! Help
         me harvest them all."*
+      courseD_farmer_condLoops3_2018_instruction: |-
+        *"Corn, lettuce, AND pumpkins!
+        Help me harvest them all."*
       courseD_farmer_condLoops4_instruction: |-
-        Help the farmer pick all of the lettuce
-        in each cluster before moving on to the next bunch.
+        Help the harvester pick all of the
+        lettuce in each cluster before moving on to the next bunch.
+      courseD_farmer_condLoops4_2018_instruction: |-
+        Help the harvester pick all of
+        the lettuce in each cluster before moving on to the next bunch.
       courseD_farmer_condLoops4a_instruction: |-
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
       courseD_farmer_condLoops5_instruction: |-
         Collect all of the corn and lettuce,
         then grab the pumpkin at the end.
+      courseD_farmer_condLoops5_2018_instruction: |-
+        Collect all of the corn and lettuce,
+        then grab the pumpkin at the end.
       courseD_farmer_condLoops6_instruction: |-
         Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!
+      courseD_farmer_condLoops6_2018_instruction: |-
+        Can you figure out how to pick
+        the pumpkin?  Make sure to collect all of the corn along the way!
       courseD_farmer_condLoops7_instruction: |-
         Challenge: Collect all of the corn
         and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops7_2018_instruction: |-
+        Challenge: Collect all of the
+        corn and lettuce, then pick the pumpkin.
       courseD_farmer_condLoops8_instruction: |-
+        Collect all of the corn and lettuce,
+        then pick the pumpkin.
+      courseD_farmer_condLoops8_2018_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
       courseD_farmer_condLoops9_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
+      courseD_farmer_condLoops9_2018_instruction: |-
+        Collect all of the corn and lettuce,
+        then pick the pumpkin.
       courseD_farmer_condLoops9_predict1_instruction: |-
         Collect all of the corn and
         lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_2018_instruction: |-
+        Collect all of the corn
+        and lettuce, then pick the pumpkin.
       courseD_farmer_condLoops_challenge1_instruction: |-
         Collect everything to complete
         the level. Each hidden crop has only one corn or lettuce.
+      courseD_farmer_condLoops_challenge1_2018_instruction: |-
+        Collect everything to
+        complete the level. Each hidden crop has only one corn or lettuce.
       courseD_farmer_condLoops_challenge2_instruction: Samle alt for å fullføre nivået.
+      courseD_farmer_condLoops_challenge2_2018_instruction: |-
+        Collect everything to
+        complete the level.
       courseD_farmer_condLoops_challenge2_clone_instruction: Samle alt for å fullføre
         nivået.
       courseD_farmer_conditionals1_instruction: |-
@@ -8826,8 +9347,9 @@
       courseD_farmer_conditionals4_instruction: |-
         Help the farmer remove this entire
         pile using a `while` loop.
-      courseD_farmer_conditionals5_instruction: |
-        Help me remove all of this dirt.
+      courseD_farmer_conditionals5_instruction: 'Help me remove all of this dirt.
+
+'
       courseD_farmer_conditionals6_instruction: |-
         Use the `while` loop to easily fill
         all of the holes.
@@ -8841,44 +9363,85 @@
       courseD_farmer_until_challenge2_instruction: Bruk blokken hvis/ellers til å
         følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en
         løkke for å fjerne haugene.
+      courseD_farmer_until_challenge2_2018_instruction: Bruk blokken hvis/ellers til
+        å følge den svingete banen. På hvert hjørne, bruk kommandoen `fjern 1` i en
+        løkke for å fjerne haugene.
       courseD_farmer_while1_instruction: |-
         Move to the pile of dirt and use the `remove`
         block to remove it.
       courseD_farmer_while10_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
+      courseD_farmer_while10_2018_instruction: "Flatten all of these piles using\nas
+        few blocks as possible. "
       courseD_farmer_while10_predict2_instruction: "Flatten all of these piles using\nas
         few blocks as possible. "
+      courseD_farmer_while10_predict2_2018_instruction: "Flatten all of these piles\nusing
+        as few blocks as possible. "
+      courseD_farmer_while1_2018_instruction: |-
+        Move to the pile of dirt and use the
+        `remove` block to remove it.
       courseD_farmer_while2_instruction: |-
         Move to the hole and fill it with six shovelfuls
         of dirt, using the `fill` block.
+      courseD_farmer_while2_2018_instruction: |-
+        Move to the hole and fill it with
+        six shovelfuls of dirt, using the `fill` block.
       courseD_farmer_while3_instruction: |-
+        Use as few blocks as possible to solve
+        this puzzle.
+      courseD_farmer_while3_2018_instruction: |-
         Use as few blocks as possible to solve
         this puzzle.
       courseD_farmer_while4_instruction: |-
         Help the farmer remove this entire pile
         using a `while` loop.
+      courseD_farmer_while4_2018_instruction: |-
+        Help the farmer remove this entire
+        pile using a `while` loop.
       courseD_farmer_while4_predict1_instruction: |-
         Help the farmer remove this entire
         pile using a `while` loop.
+      courseD_farmer_while4_predict1_2018_instruction: |-
+        Help the farmer remove this
+        entire pile using a `while` loop.
       courseD_farmer_while5_instruction: 'Help me remove all of this dirt. '
+      courseD_farmer_while5_2018_instruction: 'Help me remove all of this dirt. '
       courseD_farmer_while6_instruction: |-
         Use the `while` loop to easily fill all
         of the holes.
+      courseD_farmer_while6_2018_instruction: |-
+        Use the `while` loop to easily fill
+        all of the holes.
       courseD_farmer_while7_instruction: |-
         Fill in the hole at the end of each of
         these paths.
+      courseD_farmer_while7_2018_instruction: |-
+        Fill in the hole at the end of each
+        of these paths.
       courseD_farmer_while8_instruction: "Challenge: Fill all of these holes using\nas
         few blocks as possible. "
+      courseD_farmer_while8_2018_instruction: "Challenge: Fill all of these holes\nusing
+        as few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
+      courseD_farmer_while9_2018_instruction: "Flatten all of these piles using as\nfew
+        blocks as possible. "
       courseD_farmer_while_challenge1_instruction: Fyll i alle hulla og fjern alle
         haugane.
+      courseD_farmer_while_challenge1_2018_instruction: |-
+        Fill all of the holes and
+        remove all of the piles.
       courseD_farmer_while_challenge2_instruction: Fyll i alle hulla og fjern alle
         haugane.
+      courseD_farmer_while_challenge2_2018_instruction: |-
+        Fill all of the holes and
+        remove all of the piles.
       courseD_harvester_nested_loops_challenge1-broken_instruction: '"Eg treng litt
         hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseD_harvester_nested_loops_challenge1_instruction: '"Eg treng litt hjelp
         på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
+      courseD_harvester_nested_loops_challenge1_2018_instruction: '"Eg treng litt
+        hjelp på gården! Hjelp meg å hauste maisen ved å bare bruke blokker i verktøykassa."'
       courseD_maze_loops_challenge1_instruction: |-
         Let's hunt for treasure - using
         loops! Help the collector reach at least two piles of treasure using only
@@ -8952,29 +9515,50 @@
       courseD_maze_ramp7_instruction: Få fuglen til grisen!
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until10_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until10_predict2_2018_instruction: |-
+        Help the zombie get to the
+        sunflower.
+      courseD_maze_until1_2018_instruction: Get the angry bird to the pig.
       courseD_maze_until2_instruction: |-
         Now, use the `repeat until` loop to do the
         same thing without specifying how many times to move forward and turn.
       courseD_maze_until3_instruction: Get the bird to the pig.
+      courseD_maze_until3_2018_instruction: Get the bird to the pig.
       courseD_maze_until4_instruction: |-
         Can you get the zombie to the sunflower using
         only the blocks that are available?
+      courseD_maze_until4_2018_instruction: |-
+        Can you get the zombie to the sunflower
+        using only the blocks that are available?
       courseD_maze_until5_instruction: |-
         Use the `if` block to help the zombie decide
         when to turn, then get the zombie to the sunflower.
+      courseD_maze_until5_2018_instruction: |-
+        Use the `if` block to help the zombie
+        decide when to turn, then get the zombie to the sunflower.
       courseD_maze_until6_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until6_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until7_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until7_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until8_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until8_2018_instruction: Help the zombie get to the sunflower.
       courseD_maze_until9_instruction: |-
         **Challenge:** Avoid the chompers and help
         the zombie get to the sunflower.
+      courseD_maze_until9_2018_instruction: |-
+        **Challenge:** Avoid the chompers and
+        help the zombie get to the sunflower.
       courseD_maze_until_challenge_instruction: Ingen hint, berre utfordringar. Få
         zombien til solsikka.
       courseD_maze_until_challenge1-delete-this-copy_instruction: Ingen hint, berre
         utfordringar. Få zombien til solsikka.
       courseD_maze_until_challenge1_instruction: Ingen hint, berre utfordringar. Få
         zombien til solsikka.
+      courseD_maze_until_challenge1_2018_instruction: |-
+        No hints, just challenge.
+        Get the zombie to the sunflower.
       courseD_maze_until_challenge2_instruction: Ingen hint, berre utfordringar. Få
         zombien til solsikka.
       courseD_pixelation_instruction: |-
@@ -8983,12 +9567,22 @@
       courseD_playLab_cond1_instruction: |-
         Get Pegleg to the dragon to solve this
         puzzle.
+      courseD_playLab_cond1_2018_instruction: |-
+        Get Pegleg to the flags to solve this
+        puzzle.
       courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes\nit
         to the dragon. "
+      courseD_playLab_cond2_2018_instruction: "Give Pegleg a point every time he\nmakes
+        it to the dragon. "
       courseD_playLab_cond3_instruction: "Make the dragon change between random emotions\nevery
         second.  "
+      courseD_playLab_cond3_2018_instruction: "Make the dragon change between random\nemotions
+        every second.  "
       courseD_playLab_cond3a_instruction: Gjer det slik at når Trebein kjem til dragen,
         får han 2 poeng om dragen er glad. Ellers får han 1 poeng.
+      courseD_playLab_cond3a_2018_instruction: |-
+        Make it so when Pegleg gets to the
+        dragon, he gets 2 points if the dragon is happy and 1 otherwise.
       courseD_playLab_cond3b_instruction: "1) Få dragen til å bytte mellom tilfeldige
         \nfølelsar kvart sekund. \\r\n2) Gjer det slik at når Trebein kjem til dragen,
         \nfår han 2 poeng om dragen er glad. Ellers får han 1 poeng."
@@ -8996,7 +9590,15 @@
         Add some code so that the ninja (actor
         3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
         if the ninja catches him.
+      courseD_playLab_cond4_2018_instruction: |-
+        Add some code so that the ninja (actor
+        3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
+        if the ninja catches him.
       courseD_playLab_cond5_instruction: |-
+        Add a `repeat forever` loop that continuously
+        checks if the score is greater than 5, then ends the game as a win when it
+        is.
+      courseD_playLab_cond5_2018_instruction: |-
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
@@ -9004,12 +9606,23 @@
         set him to chase the pirate.  \\r\n2)  If the pirate is greater than 225\npixels
         down, set the ninja to **flee** the pirate.  Otherwise, set the ninja\nto
         **chase** the pirate.  "
+      courseD_playLab_cond6_2018_instruction: "1)  Slow the ninja (actor 3) down\nbefore
+        you set him to chase the pirate.  \\r\n2)  If the pirate is greater\nthan
+        225 pixels down, set the ninja to **flee** the pirate.  Otherwise, set\nthe
+        ninja to **chase** the pirate.  "
       courseD_playLab_cond6a_instruction: Om piraten er i sikker sone, vent eit sekund,
         trekk så eit poeng så lenge han held seg under brekksprutlinja.
+      courseD_playLab_cond6a_2018_instruction: |-
+        If the pirate (actor 1) is in the
+        safe zone, wait one second, then deduct a point as long as he stays beneath
+        the octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
+      courseD_playLab_condFP_2018_instruction: |-
+        Now, build your own game to show
+        off to your friends!
       courseD_playLab_embedded_instruction: |-
         Move Pegleg the Pirate with the arrow
         keys. Get to the dragon to score points, but avoid the ninja! Standing below
@@ -9163,11 +9776,15 @@
       courseE_artist_ramp8_instruction: Now make a square using Artist!
       courseE_artist_ramp8_2_instruction: Now make a square using Artist!
       courseE_artist_ramp8_2018_instruction: Now make a square using Artist!
+      courseE_artist_ramp8_2_2018_instruction: Now make a square using Artist!
       courseE_artist_ramp9_instruction: Bruk det du har lært til å teikne denne trekanten.
       courseE_artist_ramp9_2_instruction: Bruk det du har lært til å teikne denne
         trekanten.
       courseE_artist_ramp9_2018_instruction: Bruk det du har lært til å teikne denne
         trekanten.
+      courseE_artist_ramp9_2_2018_instruction: |-
+        Use what you've learned to draw
+        this triangle.
       courseE_bee_concept1_instruction: 'Samle inn all nektar frå alle blomane. Bruk
         ei løkke inni ei løkke. '
       courseE_bee_concept1_2018_instruction: |-
@@ -9177,8 +9794,9 @@
         Help the bee make all of the honey. You
         can only make honey at a honeycomb, but you can check any space to see if
         there is a honeycomb.
-      courseE_bee_concept2_2018_instruction: |
-        Help the bee make all of the honey.
+      courseE_bee_concept2_2018_instruction: 'Help the bee make all of the honey.
+
+'
       courseE_bee_concept3_instruction: |-
         Collect all of the nectar using  as few
         blocks as possible.
@@ -9293,7 +9911,7 @@
         å teikne den neste linja. Kva for nokre av desse kodeblokkene kan du plassere
         i slutten av den ytste løkka for å teikne heile mønsteret?
       courseE_farmer_functions1_instruction: |-
-        Help the farmer get to the pumpkin
+        Help the harvester get to the pumpkin
         and pick it.
       courseE_farmer_functions10_instruction: "No one knows what these sprouts will\nbecome.
         \ Use `if` statements to write the code to check and harvest each one.   "
@@ -9304,13 +9922,13 @@
         Use your new function twice
         to solve this puzzle.
       courseE_farmer_functions1_2018_instruction: |-
-        Help the farmer get to the pumpkin
-        and pick it.
+        Help the harvester get to the
+        pumpkin and pick it.
       courseE_farmer_functions1a_instruction: |-
-        Now help the farmer pick the corn,
+        Now help the harvester pick the corn,
         lettuce, **and** pumpkin.
       courseE_farmer_functions1a_2018_instruction: |-
-        Now help the farmer pick the
+        Now help the harvester pick the
         corn, lettuce, **and** pumpkin.
       courseE_farmer_functions2_instruction: |-
         Now, there will be a different number
@@ -9327,10 +9945,10 @@
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier.
       courseE_farmer_functions2b_instruction: |-
-        Help the farmer pick the corn and
+        Help the harvester pick the corn and
         pumpkins.
       courseE_farmer_functions2b_2018_instruction: |-
-        Help the farmer pick the corn
+        Help the harvester pick the corn
         and pumpkins.
       courseE_farmer_functions2ba_instruction: Hjelp bonden med å plukke mais og gress
         ved å bruke funksjonen "mais og gresskar".
@@ -9395,11 +10013,11 @@
         program to check whether a sprout is corn or lettuce?
       courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
       courseE_farmer_functions7b_instruction: |-
-        Help the farmer find her way down
+        Help the harvester find her way down
         this confusing path and to the pumpkin by turning left at the corn and right
         at the lettuce.
       courseE_farmer_functions7b_2018_instruction: |-
-        Help the farmer find her way
+        Help the harvester find her way
         down this confusing path and to the pumpkin by turning left at the corn and
         right at the lettuce.
       courseE_farmer_functions8_instruction: |-
@@ -9478,24 +10096,44 @@
       courseE_maze_predict1_instruction: |-
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
+      courseE_maze_predict1_2018_instruction: |-
+        This code includes a new block. What
+        do you think would happen if you press the "Run" block?
       courseE_maze_ramp1_instruction: |-
         For this puzzle, drag all of the blocks together
         and click "Run" to watch it go!
       courseE_maze_ramp13_instruction: Time for one last puzzle to pull it all together!
+      courseE_maze_ramp1_2018_instruction: |-
+        For this puzzle, drag all of the blocks
+        together and click "Run" to watch it go!
       courseE_maze_ramp2_instruction: |-
         Drag an extra `move forward` block out of
         the toolbox, then attach all blocks to `when run` to finish your code.
+      courseE_maze_ramp2_2018_instruction: |-
+        Drag an extra `move forward` block out
+        of the toolbox, then attach all blocks to `when run` to finish your code.
       courseE_maze_ramp3_instruction: |-
         There is one extra block that is going to
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseE_maze_ramp3_2018_instruction: |-
+        There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseE_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseE_maze_ramp4_2018_instruction: Avoid TNT or feathers will fly!
       courseE_maze_ramp5_instruction: Avoid the TNT.
+      courseE_maze_ramp5_2018_instruction: Avoid the TNT.
       courseE_maze_ramp6_instruction: |-
         "Keep calm and help me find the bad pig.
         Otherwise I might get angry!"
+      courseE_maze_ramp6_2018_instruction: |-
+        "Keep calm and help me find the bad
+        pig. Otherwise I might get angry!"
       courseE_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
+      courseE_maze_ramp7_2018_instruction: |-
+        Use what you've learned to get the bird
+        to the pig!
       courseE_maze_ramp_predict1_instruction: |-
         This code includes a new block. What
         do you think would happen if you press the "Run" block?
@@ -9808,8 +10446,9 @@
         Build this design where the squares
         have 80 pixel sides and the artist jumps 80 pixels over and down between each
         one.
-      courseF_artist_variables7_instruction: |
-        Draw a triangle with 150 pixels sides.
+      courseF_artist_variables7_instruction: 'Draw a triangle with 150 pixels sides.
+
+'
       courseF_artist_variables7_2018_instruction: "Draw a triangle with 150 pixels\nsides. "
       courseF_artist_variables8_instruction: |-
         Rebuild the triangle code from the
@@ -9895,8 +10534,9 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals2_2018_instruction: "Check underneath each cloud to\nsee
         if it is hiding a flower before you get nectar.  "
-      courseF_bee_conditionals3_instruction: |
-        Help the bee collect all of the nectar.
+      courseF_bee_conditionals3_instruction: 'Help the bee collect all of the nectar.
+
+'
       courseF_bee_conditionals3_2018_instruction: "Help the bee collect all of the\nnectar. "
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -10292,25 +10932,60 @@
       flappy_11_instruction: Lag ditt eige Flakse-spel! Du kan endre alle bilda og
         alle reglane, til og med tyngdekrafta. Når du er ferdig, klikk Fullfør og
         du kan la venane dine prøve spelet på sine telefonar.
+      flappy_11_2018_instruction: |-
+        Create your own Flappy game. You can change all
+        the visuals and all the rules, even the gravity. When you're done, click
+        Finish to let friends try your game on their phones.
+      flappy_1_2018_instruction: |-
+        Attach a block to the "when click" block, then
+        press "Run". Click or tap the screen to move Flappy to the target.
       flappy_2_instruction: Vi har no lagt til bakken. Fest ei blokk til "når traff
         bakken"-blokka. Koden må "Avslutt spelet" når Flakse krasjar.
+      flappy_2_2018_instruction: |-
+        Now we've added some ground.  Attach a block to
+        the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
+        crashes.
       flappy_3_instruction: Med "Når køyrt"-blokka kan du køyre kode når spelet startar.  Prøv
         å sette farta og flyge Flakse til målet!
+      flappy_3_2018_instruction: |-
+        The "when run" block allows you to run code when
+        your game starts.  Try setting the level speed and flapping to the target.
       flappy_4_instruction: Flakse vil fly gjennom hindringar med mindre du skriv
         kode som får han til å kræsje. Fest ei blokk til "når treff ei hindring"-blokka.
         Koden må "AVSLUTTE SPEL" når Flakse kræsjar inn i det første settet av røyr.
+      flappy_4_2018_instruction: |-
+        Flappy will fly through obstacles unless you write
+        code to make him crash. Attach a block to the "when hit an obstacle" block.
+        Your code needs to 'END GAME' when Flappy crashes into the first set of
+        pipes.
       flappy_5_instruction: La oss legge til ei resultattavle og telle poeng når Flakse
         kjem seg forbi hinder. Legg til meir i blokka "når hinder passert" og få poeng
         når du flyg Flakse forbi det første settet med rør.
+      flappy_5_2018_instruction: |-
+        Let's add a scoreboard, and count points when
+        Flappy makes it past obstacles. Add to the "when pass an obstacle" block,
+        and then score a point by flying Flappy through the first set of pipes.
       flappy_6_instruction: Sjå om du framleis kan skåre etter at du har fått Flakse
         til å flakse meir eller mindre.
+      flappy_6_2018_instruction: |-
+        See if you can still score a point after making
+        Flappy flap either a smaller or larger amount.
       flappy_7_instruction: Prøv å endre scena ved å feste ei anna blokk til "når
         køyrt"-blokka.
+      flappy_7_2018_instruction: |-
+        Next, try changing the scene by attaching another
+        block to the "when run" block.
       flappy_8_instruction: Du kan sette utsjånad når som helst, ikkje berre når spelet
         startar. Prøv å sette ei tilfeldig scene når andre hendingar skjer, for eksempel
         når du passerer eit hinder.
+      flappy_8_2018_instruction: |-
+        You can set visuals anytime, not just when the
+        game starts. Try setting a RANDOM scene when other events happen, for example,
+        when passing an obstacle.
       flappy_9_instruction: For å gjere det meir moro, prøv å sette poengsummen tilbake
         til 0 i staden for å avslutte spelet når du treff eit hinder.
+      flappy_9_2018_instruction: For å gjere det meir moro, prøv å sette poengsummen
+        tilbake til 0 i staden for å avslutte spelet når du treff eit hinder.
       frozen circle function in circle_instruction: Nå skal vi lage 20 overlappande
         sirklar medan vi dreier 18 grader mellom kvar sirkel.
       frozen circle function with parameter_instruction: Her er ei "Lag sirkel"-blokk
@@ -10445,8 +11120,9 @@
       grade1_maze_sequence8_instruction: |-
         Debug this level by adding blocks to get
         me to the pig!
-      grade1_maze_sequence9_instruction: |
-        Go around the TNT to get me to the pig!
+      grade1_maze_sequence9_instruction: 'Go around the TNT to get me to the pig!
+
+'
       grade1_maze_sequenceA_instruction: |-
         Challenge: Move me around the TNT to get
         to the pig.
@@ -10560,7 +11236,7 @@
         \r
         Draw this
         diamond with 200 pixel sides.
-      grade2_MakeDogTag_6_instruction: "Åpent brett! Teikn kva du vil."
+      grade2_MakeDogTag_6_instruction: Åpent brett! Teikn kva du vil.
       grade2_MakeDogTag_7_instruction: |-
         One more tag.  This is a triangle for Pi.\r
         (Each
@@ -10971,8 +11647,10 @@
       grade3_bee_conditionals_quantum1_instruction: |-
         Check to see if there's a flower
         under the cloud. If there's a flower, get nectar.
-      grade3_bee_conditionals_quantum2_instruction: |
-        Sjekk under kvar sky for å sjå om det skjular ein blom før du får nektar.  \r
+      grade3_bee_conditionals_quantum2_instruction: 'Sjekk under kvar sky for å sjå
+        om det skjular ein blom før du får nektar.  \r
+
+'
       grade3_bee_conditionals_quantum3_instruction: |-
         Some of these clouds might have
         honeycombs under them.  Be sure to check if a honeycomb is hiding behind each
@@ -12135,8 +12813,9 @@
       iceage_click_hello_2018_instruction: "Can you help Sid call for his friends\nwhen
         you click on him? "
       iceage_free_play_instruction: 'Time to create your own game or story! '
-      iceage_free_play_2018_instruction: |
-        Time to create your own game or story!
+      iceage_free_play_2018_instruction: 'Time to create your own game or story!
+
+'
       iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
         story! "
       iceage_hello1_instruction: |-
@@ -12291,6 +12970,41 @@
         to glitch out! \r
         \r
         Delete the extra bit to restore Mario back to normal!
+      pet game 1_instruction: |-
+        Use the "make a new sprite" block to make yourself
+        a pet!
+      pet game 2_instruction: |-
+        Your pet needs some exercise! Use the "add behavior"
+        block to get them moving.
+      pet game 3_instruction: |-
+        Pets love toys! Use a second "make sprite" block
+        to give your pet a toy, then use the "move towards" behavior to make your
+        pet run to their new toy.
+      pet game 4_instruction: |-
+        When your pet gets to their toy, they get excited!
+        Use the "when touches" block to detect when your pet gets to their toy.\r
+        \r
+        When
+        that happens, use the "remove behavior" block to make them stop walking,
+        and the "add behavior" block to make them have a dance party!
+      pet game 5_instruction: |-
+        You can add lots more things for your pet to interact
+        with! Play around with the "set sprite" block and make more stuff anywhere
+        you want it!
+      pet game 6_instruction: |-
+        It's important for pets to learn to follow commands.
+        Use the "when clicked" block to teach your pet to only start wandering after
+        you click on them.
+      pet game 7_instruction: |-
+        Pets need to learn to stop, too! Use the "when clicked"
+        block to teach your pet to stop wandering after you click on them.
+      pet game 8_instruction: |-
+        Your pet now has two toys! Use the "when clicked"
+        block to get them to move to the toy you click on
+      pet game 9_instruction: |-
+        Your pet has been so good, they deserve a treat. Use
+        the "add behavior" block to make the bone draggable, then drag it to your
+        pet.
       playEventsK1_instruction: |-
         This game is called "Play Lab".  See if you can
         figure out what each block does.
@@ -12394,8 +13108,9 @@
       sample8_instruction: |-
         Look at this trove of coins! How many can you get the
         adventurer to grab?
-      sample9_instruction: |
-        Use loops to help the artist connect all of the dots.
+      sample9_instruction: 'Use loops to help the artist connect all of the dots.
+
+'
       sample9a_instruction: |-
         The wizard has found his potions!  Use everything you
         have learned to help him collect them.

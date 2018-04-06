@@ -905,8 +905,8 @@
     badrange: Je ontwerp heeft het verkeerde bereik.
     baddomainsize: Je ontwerp heeft niet het juiste aantal variabeletypen.
     baddomainname: Een of meer van je variabeletypen heeft een verkeerde naam.
-    baddomaintype: "Één of meer van de items van uw domein heeft het verkeerde type,
-      of ze zijn in de verkeerde volgorde."
+    baddomaintype: Één of meer van de items van uw domein heeft het verkeerde type,
+      of ze zijn in de verkeerde volgorde.
   text_match:
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt

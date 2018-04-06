@@ -59,11 +59,11 @@
       instructions_short: Entrez les 6 lettres de votre code section
     submit: Ajouter un enseignant
   add_hint_form:
-    placeholder: "Écrire un indice ici"
+    placeholder: Écrire un indice ici
     submit: Ajouter un indice
   appname: Code.org
-  stage: "étape"
-  stage_number: "Étape %{number}"
+  stage: étape
+  stage_number: Étape %{number}
   puzzle: Puzzle
   trophies: trophées
   courses: Cours
@@ -135,9 +135,9 @@
     gender: Sexe (facultatif)
     birthday: Date de naissance (facultatif)
     age: Age
-    user_type: "Êtes-vous un élève ou un enseignant ?"
+    user_type: Êtes-vous un élève ou un enseignant ?
     submit: S’inscrire
-    teacher: "Êtes-vous un enseignant?"
+    teacher: Êtes-vous un enseignant?
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
     taken_username: Nom d'utilisateur déjà utilisé
@@ -159,7 +159,7 @@
       pour continuer l’inscription.
     user_type_label: Type de compte
     user_type_teacher: Enseignant
-    user_type_student: "Élève"
+    user_type_student: Élève
     field_is_required: est obligatoire
     accept_terms: Vous devez accepter les conditions d'utilisation pour créer un compte
     error: Une erreur est apparue.
@@ -170,14 +170,14 @@
     charter: Charte
     private: Privé
     public: Public
-    homeschool: "École à domicile"
+    homeschool: École à domicile
     after_school: Après l’école
     other: Autres
-    state: "État"
+    state: État
     district: Quartier
     other_district_not_listed: Autre quartier, non listé ci-dessus
     district_name: Nom du quartier
-    school: "École"
+    school: École
     other_school_not_listed: Autre école non listée ci-dessus
     school_name: Nom de l'école
     school_zip: Code postal de l’école
@@ -242,7 +242,7 @@
       other: 'Tes sections:'
     code_with_teacher: "%{section_code} avec %{teacher_name}"
     confirm:
-      remove: "Êtes-vous sûr de vouloir quitter cette section ?"
+      remove: Êtes-vous sûr de vouloir quitter cette section ?
     remove: "(supprimer la section)"
     type:
       picture: Picture Password
@@ -322,7 +322,7 @@
       documentation: Documentation
       tutorials: Tutoriels
       educate_overview: Aperçu enseignant
-      educate_elementary: "École primaire"
+      educate_elementary: École primaire
       educate_middle: Collège
       educate_high: Lycée
       educate_hoc: Heure de Code
@@ -331,13 +331,13 @@
       educate_inspire: Inspirer un élève
       educate_community: Communauté en ligne
       educate_tools: Outils et vidéos
-      about_us: "À propos"
-      about_leadership: "Équipe de direction"
+      about_us: À propos
+      about_leadership: Équipe de direction
       about_donors: Donateurs
       about_partners: Partenaires
       about_team: Toute l'équipe
       about_news: Actualité
-      about_evaluation: "Évaluation"
+      about_evaluation: Évaluation
       about_jobs: Emplois
       about_contact: Nous contacter
       about_faqs: FAQ
@@ -345,7 +345,7 @@
       stats: Statistiques
       help_us: Nous aider
       teach: Enseigner
-      about: "À propos"
+      about: À propos
     user:
       classroom: Page d'accueil de l'enseignant
       district_dashboard: Tableau de bord du district
@@ -357,7 +357,7 @@
       signup: Créer un compte
       already_registered: Déjà enregistré ?
       pair_programming: Programmation en Binôme
-      team: "Équipe"
+      team: Équipe
       driver: Pilote
       navigator: Navigateur
     popup:
@@ -366,7 +366,7 @@
       lines: 'Total de lignes de code: %{lines}'
       close: FERMER
       mastery: Concepts
-      puzzle_map: "Étapes"
+      puzzle_map: Étapes
       prizes: Remporte tous les %{total_trophies} trophées et gagne des prix!
       prize_earned: Les %{total_trophies} trophées ont été remportés. Prix gagné !
       prize_us_only: "(Uniquement pour les élèves vivant aux États-Unis)"
@@ -386,8 +386,8 @@
     student_teacher_disassociated: Tu as supprimé % {teacher_name} en tant que ton
       professeur.
     panel:
-      answer_viewer: "Écran de l'enseignant"
-      student: "Élève"
+      answer_viewer: Écran de l'enseignant
+      student: Élève
       viewing_solution: Voir la solution
       try_it_yourself: Essaie-le toi-même
       section: Section
@@ -411,7 +411,7 @@
     delete_text: Cliquer sur le bouton ci-dessous supprimera votre compte.
     delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
       pas les comptes de vos élèves.'
-    delete_confirm: "Êtes-vous sûr de vouloir supprimer votre compte ?"
+    delete_confirm: Êtes-vous sûr de vouloir supprimer votre compte ?
     deleted_user: utilisateur supprimé
     no_password_because_oauth: Aucun mot de passe parce que vous vous connectez avec
       un fournisseur tiers.
@@ -469,7 +469,7 @@
     student_left_off: 'Vous vous êtes arrêté à cet endroit la dernière fois:'
     student_finished: Vous avez terminé tous les tutoriels de Code.org. Choisir une
       autre classe %{online_link} ou une autre école  %{local_school_link}.
-    local_school: "école locale"
+    local_school: école locale
     online: en ligne
     see_details: Voir les détails
     view_course: Voir le cours
@@ -637,7 +637,7 @@
     female: Femme
     none: Préfère ne pas répondre
   user_type:
-    student: "Élève"
+    student: Élève
     teacher: Professeur
   footer:
     thank_you: Nous remercions nos <a href="https://code.org/about/donors"> donateurs</a>,
@@ -766,7 +766,7 @@
         avec JavaScript, puis partagez-la en quelques secondes.
       body_short: Concevez une application, codez à l'aide de blocs ou en JavaScript
         pour la faire fonctionner, puis partagez votre application en quelques secondes.
-      audience: "Âge recommandé: 13 ans et plus"
+      audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
     hoc:
       title: Labyrinthe classique
@@ -794,7 +794,7 @@
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
-      audience: "Âge recommandé: 13 ans et plus"
+      audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
     hoc-encryption:
       title: Cryptage simple
@@ -803,7 +803,7 @@
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: "Âge recommandé: 13 ans et plus"
+      audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
     frozen:
       title: La Reine des neiges
@@ -833,7 +833,7 @@
         text by substituting patterns with symbols.
     unplugged:
       title: Leçons en mode "déconnecté"
-      audience: "Âge recommandé: 4 ans et plus"
+      audience: 'Âge recommandé: 4 ans et plus'
       body: Nous avons compilé une liste de leçons en mode "déconnecté" que vous pouvez
         utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique,
         que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser
@@ -1027,7 +1027,7 @@
     completed_too_many_blocks: terminé, trop de blocs
     completed_perfect: terminé, parfait
     furthest_level_attempted: le plus haut niveau tenté
-    assessment: "évaluation"
+    assessment: évaluation
     submitted: envoyé
   studio:
     courses_working_on: Les cours sur lesquels tu travailles

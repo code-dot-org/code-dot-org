@@ -2,17 +2,17 @@
   data:
     game:
       name:
-        Unplug1: "សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ"
+        Unplug1: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
         Maze: The Maze
         Multi: Multiple Choice Stuffs
-        Unplug2: "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug3: Graph Paper Programming
-        Artist: "វិចិត្រករ"
+        Artist: វិចិត្រករ
         Unplug4: Algorithms
         Artist2: The Artist 2
-        Unplug5: "អនុគមន៍"
-        Farmer: "កសិករ"
-        Unplug6: "លក្ខខណ្ឌ"
+        Unplug5: អនុគមន៍
+        Farmer: កសិករ
+        Unplug6: លក្ខខណ្ឌ
         Artist3: The Artist 3
         Unplug7: Song Writing
         Farmer2: The Farmer 2
@@ -20,17 +20,17 @@
         Artist4: The Artist 4
         Unplug9: Relay Programming
         Farmer3: The Farmer 3
-        Unplug10: "អ៊ីនធឺណិត"
+        Unplug10: អ៊ីនធឺណិត
         Artist5: The Artist 5
         Unplug11: Wrap-up
         MazeEC: The Maze
-        Bounce: "បាល់​លោត"
+        Bounce: បាល់​លោត
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
         Wordsearch: Wordsearch
         Webapp: Webapp
-        ArtistEC: "វិចិត្រករ"
+        ArtistEC: វិចិត្រករ
         TextMatch: Text Match
         StudioEC: Play Lab
         Applab: App Lab
@@ -40,9 +40,9 @@
         Gamelab: Game Lab
     trophy:
       name:
-        Bronze: "សំរឹទ្ធ"
-        Silver: "ប្រាក់"
-        Gold: "មាស"
+        Bronze: សំរឹទ្ធ
+        Silver: ប្រាក់
+        Gold: មាស
     concept:
       description:
         sequence: Sequence
@@ -52,7 +52,7 @@
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: "អនុគមន៍"
+        function: អនុគមន៍
         parameters: Functions with parameters
     level:
       instructions:
@@ -492,17 +492,17 @@
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: "អនុគមន៍"
+        function: អនុគមន៍
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug3: Graph Paper Programming
         Unplug4: Algorithms
-        Unplug5: "អនុគមន៍"
-        Unplug6: "លក្ខខណ្ឌ"
+        Unplug5: អនុគមន៍
+        Unplug6: លក្ខខណ្ឌ
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
@@ -535,7 +535,7 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: "លក្ខខណ្ឌ"
+        C2_conditionals_with_cards: លក្ខខណ្ឌ
         C2_binary_bracelets: Binary Bracelets
         C2_relay_programming: Relay Programming
         C2_paper_airplanes: Paper Airplanes
@@ -551,16 +551,16 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: "បាល់​លោត"
+        C3_bounce: បាល់​លោត
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
+        C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: "រង្វិល​ជុំ"
+        C4_loops_zombie: រង្វិល​ជុំ
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -571,7 +571,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: "លក្ខខណ្ឌ"
+        C4_conditionals: លក្ខខណ្ឌ
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -652,7 +652,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: "រង្វិល​ជុំ"
+        csp_applab_loops: រង្វិល​ជុំ
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -752,6 +752,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
