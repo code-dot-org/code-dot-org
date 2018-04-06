@@ -15,6 +15,12 @@ class AutocompleteHelper
     return [MIN_LIMIT, [limit.to_i, MAX_LIMIT].min].max
   end
 
+  def self.get_query_terms(query)
+    query.strip.split(/\s+/).map do |w|
+      w.gsub(/\W/, '').upcase.presence
+    end.compact
+  end
+
   # Formats the query string for boolean full-text search.
   # For instance, if the user-defined query string is 'abc def',
   # the string is reformatted to '+ABC +DEF*'.
@@ -23,10 +29,7 @@ class AutocompleteHelper
   # @param query [String] the user-defined query string
   # @return [String] the formatted query string
   def self.format_query(query)
-    words = query.strip.split(/\s+/).map do |w|
-      w.gsub(/\W/, '').upcase.presence
-    end.compact
-
+    words = get_query_terms query
     # Don't filter the last word if it is short since we will
     # append it with * for a wildcard search.
     words = words.select.with_index do |w, i|
