@@ -298,9 +298,8 @@ exports.install = function (blockly, blockInstallOptions) {
   });
 
   generator.point_to_param = function () {
-    let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
-    return `Turtle.pointTo('${this.getTitleValue('VALUE')}',${value},
-        'block_id_${this.id}');\n`;
+    let value = window.parseFloat(this.getTitleValue('VALUE'));
+    return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
   blockly.Blocks.point_to_by_constant_restricted =
