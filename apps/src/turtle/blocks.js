@@ -299,7 +299,7 @@ exports.install = function (blockly, blockInstallOptions) {
   });
 
   generator.point_to_param = function () {
-    let value = window.parseFloat(this.getTitleValue('VALUE'));
+    let value = generator.valueToCode(this, 'VALUE', Blockly.JavaScript.ORDER_NONE);
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
