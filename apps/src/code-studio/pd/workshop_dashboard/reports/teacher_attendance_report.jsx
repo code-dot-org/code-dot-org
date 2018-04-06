@@ -2,8 +2,9 @@
  * Teacher Attendance Report
  */
 import React, {PropTypes} from "react";
+import {connect} from 'react-redux';
 import ReportTable from "./report_table";
-import Permission from "../../permission";
+import {PermissionPropType} from '../permission';
 import {Button} from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import Spinner from '../../components/spinner';
@@ -14,8 +15,9 @@ const styles = {
   link: {cursor: 'pointer'}
 };
 
-export default class TeacherAttendanceReport extends React.Component {
+export class TeacherAttendanceReport extends React.Component {
   static propTypes = {
+    permission: PermissionPropType.isRequired,
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
@@ -31,10 +33,6 @@ export default class TeacherAttendanceReport extends React.Component {
     rows: null,
     showFacilitatorDetails: false
   };
-
-  componentWillMount() {
-    this.permission = new Permission();
-  }
 
   componentDidMount() {
     this.load();
@@ -164,7 +162,7 @@ export default class TeacherAttendanceReport extends React.Component {
       header: {label: 'Days'}
     }];
 
-    if (this.permission.isWorkshopAdmin) {
+    if (this.props.permission.hasWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}
@@ -193,10 +191,6 @@ export default class TeacherAttendanceReport extends React.Component {
     window.open(downloadUrl);
   };
 
-  handleFacilitatorDetailsChange = (e) => {
-    this.setState({showFacilitatorDetails: e.target.checked});
-  };
-
   render() {
     if (this.state.loading) {
       return <Spinner/>;
@@ -218,3 +212,7 @@ export default class TeacherAttendanceReport extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(TeacherAttendanceReport);
