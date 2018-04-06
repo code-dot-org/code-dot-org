@@ -394,6 +394,10 @@ class Visualization {
     }
   }
 
+  pointTo(degrees) {
+    this.setHeading(degrees);
+  }
+
   turnByDegrees(degreesRight) {
     this.setHeading(this.heading + degreesRight);
   }
