@@ -10,6 +10,7 @@ class Pd::WorkshopUserManagementController < ApplicationController
     current_sign_in_at
     sign_in_count
     users.created_at
+    provider
   ).freeze
 
   # get /pd/workshop_user_management/facilitator_courses
