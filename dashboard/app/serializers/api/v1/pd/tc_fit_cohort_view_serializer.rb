@@ -17,6 +17,7 @@ class Api::V1::Pd::TcFitCohortViewSerializer < ActiveModel::Serializer
     :status,
     :locked,
     :regional_partner_name,
+    :course_name,
     :form_data
   )
 
