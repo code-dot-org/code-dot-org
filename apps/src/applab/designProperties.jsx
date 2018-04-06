@@ -55,7 +55,7 @@ export default class DesignProperties extends React.Component {
     const isScreen = (elementType === elementLibrary.ElementType.SCREEN);
     // For now, limit duplication to just non-screen elements
 
-    const onlyOneScreen = (elementUtils.getScreens().length === 1);
+    const onlyOneScreen = (this.props.screenIds.length === 1);
 
     // First screen is not deletable
     const isOnlyScreen = (isScreen && onlyOneScreen);
