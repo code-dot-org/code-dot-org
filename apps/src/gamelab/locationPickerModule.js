@@ -2,6 +2,7 @@ import {
   REQUEST_LOCATION,
   CANCEL_LOCATION_SELECTION,
   SELECT_LOCATION,
+  UPDATE_LOCATION,
 } from './actions';
 import {LocationPickerMode} from './constants';
 import {getStore} from '../redux';
@@ -25,6 +26,11 @@ export default function locationPicker(state, action) {
         mode: LocationPickerMode.IDLE,
         lastSelection: action.value,
       };
+    case UPDATE_LOCATION:
+      return {
+        mode: LocationPickerMode.SELECTING,
+        lastSelection: action.value,
+      };
     default:
       return state;
   }
@@ -33,6 +39,13 @@ export default function locationPicker(state, action) {
 export function requestLocation() {
   return {
     type: REQUEST_LOCATION,
+  };
+}
+
+export function updateLocation(loc) {
+  return {
+    type: UPDATE_LOCATION,
+    value: loc,
   };
 }
 
@@ -50,11 +63,10 @@ export function cancelLocationSelection() {
 }
 
 export function isPickingLocation(state) {
-  console.log(state);
   return state.mode === LocationPickerMode.SELECTING;
 }
 
-export async function getLocation() {
+export async function getLocation(update) {
   const store = getStore();
   store.dispatch(requestLocation());
   window.fakeResolve = () => store.dispatch(selectLocation('{"x": 300, "y": 300}'));
@@ -64,6 +76,8 @@ export async function getLocation() {
       if (state.locationPicker.mode === LocationPickerMode.IDLE) {
         resolve(state.locationPicker.lastSelection);
         unsubscribe();
+      } else {
+        update(state.locationPicker.lastSelection);
       }
     });
   });

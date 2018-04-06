@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {
   cancelLocationSelection,
   selectLocation,
+  updateLocation,
   isPickingLocation
 } from './locationPickerModule';
 
@@ -12,6 +13,7 @@ class LocationPicker extends React.Component {
 
     cancel: PropTypes.func.isRequired,
     select: PropTypes.func.isRequired,
+    update: PropTypes.func.isRequired,
   };
 
   select(mouseEvent) {
@@ -26,8 +28,13 @@ class LocationPicker extends React.Component {
           const loc = {x: e.offsetX, y: e.offsetY};
           this.props.select(loc);
         };
+        playSpace.onmousemove = e => {
+          const loc = {x: e.offsetX, y: e.offsetY};
+          this.props.update(loc);
+        };
       } else {
         playSpace.onclick = null;
+        playSpace.onmousemove = null;
       }
     }
     if (!this.props.pickingLocation) {
@@ -47,6 +54,7 @@ export default connect(
   }),
   dispatch => ({
     cancel: () => dispatch(cancelLocationSelection()),
+    update: loc => dispatch(updateLocation(loc)),
     select: loc => dispatch(selectLocation(loc)),
   }),
 )(LocationPicker);

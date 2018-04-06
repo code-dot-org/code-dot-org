@@ -400,8 +400,8 @@ export default {
         const label = this.appendDummyInput()
             .appendTitle('(0, 0)', 'LABEL')
             .titleRow[0];
-        var button = new Blockly.FieldButton('select', async () => {
-            return JSON.stringify(await getLocation());
+        var button = new Blockly.FieldButton('select', async update => {
+            return JSON.stringify(await getLocation(loc => update(JSON.stringify(loc))));
           },
           this.getHexColour(),
           value => {
