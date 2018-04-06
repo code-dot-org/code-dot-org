@@ -25,7 +25,7 @@ class AuthenticationOption < ApplicationRecord
   acts_as_paranoid
   belongs_to :user
 
-  # These are duplicated
+  # These are duplicated from the user model, until we're ready to cut over and remove them from there
   before_save :normalize_email, :hash_email, :fix_by_user_type
 
   def fix_by_user_type
