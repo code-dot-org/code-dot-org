@@ -25,7 +25,7 @@ export class RegionalPartnerDropdown extends React.Component {
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ]),
+    ]).isRequired,
     regionalPartners: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string

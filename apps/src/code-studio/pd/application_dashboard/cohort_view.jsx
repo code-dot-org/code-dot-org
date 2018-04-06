@@ -23,7 +23,7 @@ class CohortView extends React.Component {
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ]),
+    ]).isRequired,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -88,56 +88,55 @@ class CohortView extends React.Component {
   };
 
   render() {
-    let accepted = 0;
-    let registered = 0;
-    if (this.state.applications !== null) {
-      accepted = this.state.applications
-      .filter(app => app.status === 'accepted')
-      .length;
-      registered = this.state.applications
-        .filter(app => app.registered_workshop === 'Yes')
+    if (this.state.loading) {
+      return (
+        <Spinner />
+      );
+    } else {
+      let accepted = 0;
+      let registered = 0;
+      if (this.state.applications !== null) {
+        accepted = this.state.applications
+        .filter(app => app.status === 'accepted')
         .length;
-    }
-    return (
-      <div>
-        {this.state.applications &&
-          <CohortCalculator
-            role={this.props.route.role}
-            regionalPartnerFilter={this.props.regionalPartnerFilter}
-            accepted={accepted}
-            registered={registered}
-          />
-        }
-        {this.props.isWorkshopAdmin &&
-          <RegionalPartnerDropdown
-            regionalPartnerFilter={this.props.regionalPartnerFilter}
-            additionalOptions={dropdownOptions}
-          />
-        }
-        {this.state.loading &&
-          <Spinner />
-        }
-        {!this.state.loading &&
-          <div>
-            <h1>{this.props.regionalPartnerName}</h1>
-            <h2>{this.props.route.applicationType}</h2>
-            <Col md={6} sm={6}>
-              <Button
-                style={styles.button}
-                onClick={this.handleDownloadCsvClick}
-              >
-                Download CSV
-              </Button>
-            </Col>
-            <CohortViewTable
-              data={this.state.applications}
-              viewType={this.props.route.viewType}
-              path={this.props.route.path}
+        registered = this.state.applications
+          .filter(app => app.registered_workshop === 'Yes')
+          .length;
+      }
+      return (
+        <div>
+          {this.state.applications &&
+            <CohortCalculator
+              role={this.props.route.role}
+              regionalPartnerFilter={this.props.regionalPartnerFilter}
+              accepted={accepted}
+              registered={registered}
             />
-          </div>
-        }
-      </div>
-    );
+          }
+          {this.props.isWorkshopAdmin &&
+            <RegionalPartnerDropdown
+              regionalPartnerFilter={this.props.regionalPartnerFilter}
+              additionalOptions={dropdownOptions}
+            />
+          }
+          <h1>{this.props.regionalPartnerName}</h1>
+          <h2>{this.props.route.applicationType}</h2>
+          <Col md={6} sm={6}>
+            <Button
+              style={styles.button}
+              onClick={this.handleDownloadCsvClick}
+            >
+              Download CSV
+            </Button>
+          </Col>
+          <CohortViewTable
+            data={this.state.applications}
+            viewType={this.props.route.viewType}
+            path={this.props.route.path}
+          />
+        </div>
+      );
+    }
   }
 }
 

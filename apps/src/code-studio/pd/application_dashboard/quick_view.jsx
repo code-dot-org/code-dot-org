@@ -43,7 +43,7 @@ export class QuickView extends React.Component {
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ]),
+    ]).isRequired,
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -155,39 +155,35 @@ export class QuickView extends React.Component {
             additionalOptions={dropdownOptions}
           />
         }
-        {this.state.loading &&
-          <Spinner />
-        }
-        {!this.state.loading &&
-          <Row>
-            <h1>{this.props.regionalPartnerName}</h1>
-            <h2>{this.props.route.applicationType}</h2>
-            <Col md={6} sm={6}>
-              <Button
-                style={styles.button}
-                onClick={this.handleDownloadCsvClick}
-              >
-                Download CSV
-              </Button>
-            </Col>
-            <Col md={6} sm={6}>
-              <FormGroup className="pull-right">
-                <ControlLabel>Filter by Status</ControlLabel>
-                <Select
-                  value={this.state.filter}
-                  onChange={this.handleStateChange}
-                  placeholder={null}
-                  options={this.statuses}
-                  style={styles.select}
-                  clearable={false}
-                  {...SelectStyleProps}
-                />
-              </FormGroup>
-            </Col>
-          </Row>
-        }
-        {!this.state.loading &&
-          this.renderApplicationsTable()
+        <Row>
+          <h1>{this.props.regionalPartnerName}</h1>
+          <h2>{this.props.route.applicationType}</h2>
+          <Col md={6} sm={6}>
+            <Button
+              style={styles.button}
+              onClick={this.handleDownloadCsvClick}
+            >
+              Download CSV
+            </Button>
+          </Col>
+          <Col md={6} sm={6}>
+            <FormGroup className="pull-right">
+              <ControlLabel>Filter by Status</ControlLabel>
+              <Select
+                value={this.state.filter}
+                onChange={this.handleStateChange}
+                placeholder={null}
+                options={this.statuses}
+                style={styles.select}
+                clearable={false}
+                {...SelectStyleProps}
+              />
+            </FormGroup>
+          </Col>
+        </Row>
+        {this.state.loading
+          ? <Spinner />
+          : this.renderApplicationsTable()
         }
       </div>
     );

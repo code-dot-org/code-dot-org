@@ -10,6 +10,7 @@ module Pd
       @script_data = {
         props: {
           regionalPartnerName: regional_partner.try(:name),
+          regionalPartnerFilter: regional_partner.try(:id),
           regionalPartnerGroup: regional_partner.try(:group),
           regionalPartners: RegionalPartner.select("id, name"),
           isWorkshopAdmin: is_workshop_admin,
