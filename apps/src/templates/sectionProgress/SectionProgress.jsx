@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import ScriptSelector from './ScriptSelector';
-import SectionScriptProgress from './SectionScriptProgress';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import VirtualizedDetailView from './VirtualizedDetailView';
@@ -79,10 +78,6 @@ class SectionProgress extends Component {
         {(levelDataInitialized && currentView === ViewType.DETAIL) &&
           <div>
             <VirtualizedDetailView
-              section={section}
-              scriptData={scriptData}
-            />
-            <SectionScriptProgress
               section={section}
               scriptData={scriptData}
               studentLevelProgress={studentLevelProgress}
