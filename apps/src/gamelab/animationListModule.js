@@ -545,7 +545,8 @@ function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState().animationList;
-    const sourceUrl = animationSourceUrl(key, state.propsByKey[key]);
+    const sourceUrl = animationSourceUrl(key, state.propsByKey[key], false,
+      getState().pageConstants.channelId, state);
     dispatch({
       type: START_LOADING_FROM_SOURCE,
       key: key
@@ -688,15 +689,34 @@ function loadPendingFramesFromSource(key, props, callback) {
 }
 
 /**
+  * Given the animationList and key, determine whether the animation identified
+  * by the key currently exists in the project. If not present, the animation
+  * could be deleted or not a part of this project.
+*/
+function sourcePresentInProject(animationList, key) {
+  let inProject = false;
+  const props = animationList.propsByKey[key];
+  animationList.orderedKeys.forEach(item=> {
+      if (props.sourceUrl.includes(item)) {
+        inProject = true;
+      }
+  });
+  return inProject;
+}
+
+/**
  * Given a key/serialized-props pair for an animation, work out where to get
  * the spritesheet.
  * @param {!AnimationKey} key
  * @param {!SerializedAnimationProps} props
  * @param {boolean} withVersion - Whether to request a specific version of the
  *        animation if pulling from the local project.
+ * @param {string} channelId - Used to differentiate library animations from others
+ * @param {object} animationList - Used to check if src url exists in this
+ *        project and is deleted
  * @returns {string}
  */
-export function animationSourceUrl(key, props, withVersion = false) {
+export function animationSourceUrl(key, props, withVersion = false, channelId = null, animationList = null) {
   // TODO: (Brad) We want to get to where the client doesn't know much about
   //       animation versions, by switching to Chris' new Files API.
   //       in the meantime, be able to request versions only when we export
@@ -705,8 +725,28 @@ export function animationSourceUrl(key, props, withVersion = false) {
   // 1. If the animation has a sourceUrl it's external (from the library
   //    or some other outside source, not the animation API) - and we may need
   //    to run it through the media proxy.
-  if (props.sourceUrl) {
+
+  const srcInProj = sourcePresentInProject(animationList, key);
+
+  // ChannelId differentiates anims included by levelbuilders from project animations
+
+  const fromLibraryOrLevelbuilder = props.sourceUrl && !props.sourceUrl.includes('v3/animations/' + channelId);
+  const uploadedAnimation = props.sourceUrl && props.sourceUrl.includes('v3/animations/' + channelId);
+
+  // No need to append a version for animations in the library/from levelbuilders
+  // or if the src points to an uploaded animation and contains a version
+  const versionNotNeeded = fromLibraryOrLevelbuilder || (uploadedAnimation && props.sourceUrl.includes('?version'));
+
+  if (versionNotNeeded) {
     return assetPrefix.fixPath(props.sourceUrl);
+  } else if (uploadedAnimation && !props.sourceUrl.includes('?version')) {
+    if (srcInProj) {
+      // SrcUrl doesn't point to a delete animation
+      return assetPrefix.fixPath(props.sourceUrl) + '?version=' + props.version;
+    } else {
+      // SrcUrl points to deleted animation
+      return assetPrefix.fixPath(props.sourceUrl) + '?version=latestVersion';
+    }
   }
 
   // 2. Otherwise it's local to this project, and we should use the animation
