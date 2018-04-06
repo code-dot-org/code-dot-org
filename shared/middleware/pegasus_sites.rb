@@ -11,6 +11,7 @@ class PegasusSites
       codeprojects.org
       csedweek.org
       hourofcode.com
+      advocacy.code.org
     ).concat(CDO.partners.map {|partner| "#{partner}.code.org"})
     @pegasus_hosts = pegasus_domains.map {|i| canonical_hostname(i)}
   end

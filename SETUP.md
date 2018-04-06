@@ -13,7 +13,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ruby --version  # --> ruby 2.5.0
      node --version  # --> v6.9.0
      npm --version   # --> 3.10.8
-     yarn -V         # --> 0.23.2
+     yarn --version  # --> 0.23.2
      ```
 1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. `gem install bundler`
@@ -41,9 +41,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. Run `rbenv init`
     1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
     1. Pick up those changes: `source ~/.bash_profile`
-1. Install Ruby 2.2.3
-    1. `rbenv install 2.2.3`
-    1. Set the global version of Ruby: `rbenv global 2.2.3`
+1. Install Ruby 2.5.0
+    1. `rbenv install 2.5.0`
+    1. Set the global version of Ruby: `rbenv global 2.5.0`
     1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up [nvm](https://github.com/creationix/nvm)
     1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
@@ -74,14 +74,14 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv ruby-build npm ruby2.3-dev`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv ruby-build npm ruby2.5-dev`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. Install Node and Nodejs
     1. Type `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
     1. And then `sudo apt-get install -y nodejs`
-1. Install Ruby 2.2.3 with rbenv
-     1. `rbenv install 2.2.3`
-     1. `rbenv global 2.2.3`
+1. Install Ruby 2.5.0 with rbenv
+     1. `rbenv install 2.5.0`
+     1. `rbenv global 2.5.0`
      1. `rbenv rehash`
 1. Install yarn
     1. First, type `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`

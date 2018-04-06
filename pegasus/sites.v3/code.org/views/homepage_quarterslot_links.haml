@@ -1,12 +1,20 @@
-.quarterslot-links.div.col-25.col-mobile-50
+- desktop_column_width ||= 25
+- layout_class ||= 'quarterslot-links-small'
+
+.quarterslot-links.col-mobile-50{class: "col-#{desktop_column_width} #{layout_class}"}
   %a.linktag{href: entry[:url], id: entry[:id]}
     - entry[:image] = entry[:image].gsub("/images/", "/images/fit-400/")
     .slotbox{style: "background-image: url(#{entry[:image]})"}
       .headerbox{style: "background-color: rgb(#{entry[:color1]}); background-color: rgba(#{entry[:color1]}, 0.92)"}
         .header.underscorehover
-          = I18n.t(entry[:title])
+          - if !entry[:title_actual].nil_or_empty?
+            = entry[:title_actual]
+          - if !entry[:title].nil_or_empty?
+            = I18n.t(entry[:title])
         .sentence
-          - unless entry[:text].nil_or_empty?
+          - if !entry[:text_actual].nil_or_empty?
+            = entry[:text_actual]
+          - elsif !entry[:text].nil_or_empty?
             = I18n.t(entry[:text])
           - else
             &nbsp;
@@ -14,4 +22,8 @@
     - entry[:links].each_with_index do |link, link_index|
       %p.linkentry
         %a.link.linktag{href: link[:url], id: "#{entry[:id]}-#{link_index}" }
-          = I18n.t(link[:text]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+          - if !link[:text_actual].nil_or_empty?
+            - text = link[:text_actual]
+          - else
+            - text = I18n.t(link[:text])
+          = text.gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)

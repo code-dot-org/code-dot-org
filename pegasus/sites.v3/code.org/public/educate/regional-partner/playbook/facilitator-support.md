@@ -32,14 +32,14 @@ Due to an increase in new facilitators this year, new facilitators for Group 1 a
 
 - All new facilitators (regardless of group) will still attend one of the two Code.org-hosted Facilitator-in-Training (FiT) weekends this summer, where they'll learn how to co-lead academic year workshops. This means everyone will still have the chance to meet Code.org staff in person, and get a feel for Code.org events.
 - We think it's important for new facilitators to meet and learn alongside the teachers who will be in their cohort**. The summer is an excellent time for them to start building those strong relationships locally.
-- New facilitators won’t count towards filling your teacher cohort. 
+- New facilitators won’t count towards filling your teacher cohort.
 - Code.org will cover all cost of travel for these facilitators.
-- Code.org will cover stipends, if applicable: 
-	- Novice facilitators do not receive payment from code.org for attending the 5-day workshop, because they're attending as teachers. 
-	- Apprentice facilitators will receive a $1000 stipend for attending (paid by code.org). 
+- Code.org will cover stipends, if applicable:
+	- Novice facilitators do not receive payment from code.org for attending the 5-day workshop, because they're attending as teachers.
+	- Apprentice facilitators will receive a $1000 stipend for attending (paid by code.org).
 Partners are responsible for paying their lead facilitators for the week.
 
-**If your summer workshop is scheduled after the last Facilitator in Training (FiT) Weekend (July 28 - 29, 2018), we will find an alternate summer workshop date and location that falls before that training. This way, your facilitators will still experience the five-day workshop before joining the FiT weekend. If you have any questions or concerns, please contact your Regional Manager. 
+**If your summer workshop is scheduled after the last Facilitator in Training (FiT) Weekend (July 28 - 29, 2018), we will find an alternate summer workshop date and location that falls before that training. This way, your facilitators will still experience the five-day workshop before joining the FiT weekend. If you have any questions or concerns, please contact your Regional Manager.
 
 <br>
 <a id="booking"></a>
@@ -48,20 +48,20 @@ For those who need to book extra facilitators beyond your current capacity for l
 
 If you:
 
-- Don’t have enough trained facilitators locally to run your local summer workshop, and 
-- Have talked with your Regional Manager about approval for booking facilitators (if not, please do so as soon as possible). 
+- Don’t have enough trained facilitators locally to run your local summer workshop, and
+- Have talked with your Regional Manager about approval for booking facilitators (if not, please do so as soon as possible).
 
 Then:
 
-- Check [this list](http://bit.ly/facilitator-summer-availability) for trained facilitators’ summer workshop availability. 
+- Check [this list](http://bit.ly/facilitator-summer-availability) for trained facilitators’ summer workshop availability.
 - Reach out directly to schedule them for your workshops as needed.  
-- Start by emailing 1-2 facilitators close to you. Then, if they are not available, expand your search and reach out to 1-2 more. **Do not** email all available facilitators at once, as they will be overwhelmed by many partner requests. 
-- Update [the list](http://bit.ly/facilitator-summer-availability) in the “Booked/Confirmed by” column when you’ve booked someone. 
-- Update your workshop dashboard with the name of your booked facilitator. 
+- Start by emailing 1-2 facilitators close to you. Then, if they are not available, expand your search and reach out to 1-2 more. **Do not** email all available facilitators at once, as they will be overwhelmed by many partner requests.
+- Update [the list](http://bit.ly/facilitator-summer-availability) in the “Booked/Confirmed by” column when you’ve booked someone.
+- Update your workshop dashboard with the name of your booked facilitator.
 
 Remember, the sooner you start this the easier it will be to find an available facilitator.
 
-**Important**: Book facilitators only for workshops that have been confirmed with Code.org/Regional Manager. Do not book facilitators for additional cohorts that you may be adding later based on teacher recruitment numbers. 
+**Important**: Book facilitators only for workshops that have been confirmed with Code.org/Regional Manager. Do not book facilitators for additional cohorts that you may be adding later based on teacher recruitment numbers.
 
 Since you will likely be making quick decisions, we suggest including language like this in your email to facilitators:<br/>
 
@@ -102,9 +102,10 @@ ________________
 <a id="docs"></a>
 ## Facilitator Support Documents
 
+- [Important Resources for CS Fundamentals Facilitators](https://curriculum.code.org/plcsf/) - See full list of resources and agendas for CS Fundamentals Facilitators 
 - [6-12 Facilitator Playbook](https://docs.google.com/document/d/1xTZkAfmjsOttqNB7uFT-Sp5yH0fVDGbQ0PPhhcU70Zk/edit) - Toolkit for CS Discoveries and CS Principles facilitators
 - [6-12 Facilitation Guide](https://docs.google.com/document/d/1xvBjf74VL0YfVswqLwoCdau5NN3D-QRyqQHGYl20034/edit)
-- [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators 
+- [Important Resources for CS Principles Facilitators](https://curriculum.code.org/plcsp/) - See full list of resources and agendas for CS Principles Facilitators
 - [Important Resources for CS Discoveries Facilitators](https://curriculum.code.org/plcsd/) - See full list of resources and agendas for CS Discoveries Facilitators
 - [Not-so-local Facilitator Travel Policy](https://docs.google.com/document/d/1GmwNtu3r9Yi6VwAvDtPV9AFiENVD5QKJEVLNH1SMECM/edit) - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops.
 
@@ -125,7 +126,7 @@ ________________
 	- Novice Facilitators attend as teachers, and are not paid for attending the workshop. Novices are new facilitators who did not participate in a previous Code.org Professional Learning Program for this course.
 	- Code.org will pay Apprentice Facilitators directly for attending and supporting the workshop. Apprentices are new facilitators who have participated in a previous Code.org Professional Learning Program for this course. They will observe workshops, and engage in daily preparation and debrief sessions with lead facilitators.
 	- All Lead Facilitators are paid by Regional Partners at the expected rate of $500/day.
-- For Facilitator-in-Training Weekends: Code.org will pay all new facilitators for attending the training. 
+- For Facilitator-in-Training Weekends: Code.org will pay all new facilitators for attending the training.
 
 
 <br/>

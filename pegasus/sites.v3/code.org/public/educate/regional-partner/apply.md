@@ -11,7 +11,7 @@ Please note that we will only accept applicants from regions in the United State
 
 ### Application Process ###
 
-Step 1: Online application, Deadline: March 30, 2018
+Step 1: Online application, Deadline: April 6, 2018
 
 Step 2: Virtual or in-person interview
 

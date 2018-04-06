@@ -69,18 +69,39 @@ export default class AdminCohortView extends React.Component {
   }
 
   handleDownloadCsv = () => {
-    downloadCsv({
-      data: this.state.filteredCohort,
-      filename: `${this.props.route.cohortType.toLowerCase()}_cohort.csv`,
-      headers: {
-        date_accepted: 'Date Accepted',
-        applicant_name: 'Name',
-        district_name: 'School District',
-        school_name: 'School Name',
-        email: 'Email',
-        assigned_workshop: 'Assigned Workshop',
-        registered_workshop: 'Registered Workshop'
+    const headers = {
+      date_accepted: 'Date Accepted',
+      applicant_name: 'Name',
+      district_name: 'School District',
+      school_name: 'School Name',
+      email: 'Email',
+      assigned_workshop: 'Assigned Workshop',
+      registered_workshop: 'Registered Workshop',
+      accepted_seat: 'Accepted Seat?',
+      course_name: 'Course'
+    };
+
+    const filteredCohortWithFormData = this.state.filteredCohort.map(row => {
+      if (!row.form_data) {
+        return row;
       }
+
+      // The keys in form_data vary based on registration type (TC/FiT), and on other answers.
+      // Make sure we include all form_data keys that appear on any row:
+      Object.keys(row.form_data).forEach(formDataHeader => {
+        if (!headers[formDataHeader]) {
+          // Use the raw formData key as the column header
+          headers[formDataHeader] = formDataHeader;
+        }
+      });
+
+      return {...row, ...row.form_data};
+    });
+
+    downloadCsv({
+      data: filteredCohortWithFormData,
+      filename: `${this.props.route.cohortType.toLowerCase()}_cohort.csv`,
+      headers
     });
   };
 
@@ -94,7 +115,8 @@ export default class AdminCohortView extends React.Component {
     this.filterCohort({date});
   };
 
-  filterCohort(filter) {
+  filterCohort(filterOverrides) {
+    const filter = {...this.state.filter, ...filterOverrides};
     let filteredCohort = this.state.cohort;
     if (filter.role) {
       filteredCohort = filteredCohort.filter(a => a.role === filter.role);

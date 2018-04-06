@@ -1,0 +1,8 @@
+name 'CSP Unit 1 Ch 1 MC bits to make 512_exam_prep'
+title 'How Many Bits?'
+description ''
+question '8 bits is enough to represent 256 different numbers.  How many total bits do you need to represent 512 (twice as many) numbers?'
+right '9 bits'
+wrong '10 bits'
+wrong '16 bits'
+wrong '17 bits'

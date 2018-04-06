@@ -38,6 +38,6 @@ nav: how_to_nav
 
 8. **Баспасөз хабарламасын шығарыңыз.** [Мына үлгіні](<%= resolve_url('/promote/official-press-release') %>) нұсқаулық ретінде пайдаланыңыз.
 
-9. **Жергілікті адамдармен байланысыңыз.** Мемлекетіңіздегі ақпарат ғылымдарына байланысты білім беру жайлы көбірек мәлімет алу үшін мында кіріңіз: [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>). Ішіндегі петицияға қол қою арқылы Code.org -тан олардың жергілікті, мемлекеттік және федералды насихаттары жайлы жаңалықтарын оқып тұрыңыз.
+9. **Connect locally.** Visit [code.org/promote](<%= codeorg_url('/promote') %>) to learn more about computer science education in your state. Ішіндегі петицияға қол қою арқылы Code.org -тан олардың жергілікті, мемлекеттік және федералды насихаттары жайлы жаңалықтарын оқып тұрыңыз.
 
 <%= view :signup_button %>

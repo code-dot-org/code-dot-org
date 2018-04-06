@@ -183,6 +183,10 @@ export default {
       case 'value':
         element.value = value;
         break;
+      case 'text':
+        // Overrides generic text setter and sets from the dropdown options
+        element.value = value;
+        break;
       default:
         return false;
     }

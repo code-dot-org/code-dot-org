@@ -6,178 +6,6 @@
   "user_id": 9,
   "properties": {
     "skin": "gamelab",
-    "code_functions": {
-      "draw": null,
-      "drawSprites": null,
-      "playSound": null,
-      "stopSound": null,
-      "keyDown": null,
-      "keyWentDown": null,
-      "keyWentUp": null,
-      "mouseDidMove": null,
-      "mouseDown": null,
-      "mouseIsOver": null,
-      "mouseWentDown": null,
-      "mouseWentUp": null,
-      "mousePressedOver": null,
-      "World.mouseX": null,
-      "World.mouseY": null,
-      "World.frameRate": null,
-      "World.frameCount": null,
-      "World.seconds": null,
-      "World.width": null,
-      "World.height": null,
-      "World.allSprites": null,
-      "camera.on": null,
-      "camera.off": null,
-      "camera.isActive": null,
-      "camera.mouseX": null,
-      "camera.mouseY": null,
-      "camera.x": null,
-      "camera.y": null,
-      "camera.zoom": null,
-      "comment_GameLab": null,
-      "var sprite = createSprite": null,
-      "setAnimation": null,
-      "x": null,
-      "y": null,
-      "velocityX": null,
-      "velocityY": null,
-      "scale": null,
-      "sprite.height": null,
-      "sprite.width": null,
-      "visible": null,
-      "rotation": null,
-      "rotationSpeed": null,
-      "rotateToDirection": null,
-      "debug": null,
-      "isTouching": null,
-      "collide": null,
-      "displace": null,
-      "overlap": null,
-      "bounce": null,
-      "bounceOff": null,
-      "bounciness": null,
-      "setCollider": null,
-      "createEdgeSprites": null,
-      "shapeColor": null,
-      "setVelocity": null,
-      "getDirection": null,
-      "getSpeed": null,
-      "setSpeedAndDirection": null,
-      "pointTo": null,
-      "mirrorX": null,
-      "mirrorY": null,
-      "getScaledWidth": null,
-      "getScaledHeight": null,
-      "lifetime": null,
-      "nextFrame": null,
-      "pause": null,
-      "play": null,
-      "setFrame": null,
-      "depth": null,
-      "destroy": null,
-      "comment_Sprites": null,
-      "var group = createGroup": null,
-      "add": null,
-      "remove": null,
-      "clear": null,
-      "contains": null,
-      "get": null,
-      "group.isTouching": null,
-      "group.bounce": null,
-      "group.bounceOff": null,
-      "group.collide": null,
-      "group.displace": null,
-      "group.overlap": null,
-      "maxDepth": null,
-      "minDepth": null,
-      "destroyEach": null,
-      "pointToEach": null,
-      "setAnimationEach": null,
-      "setColorEach": null,
-      "setColliderEach": null,
-      "setDepthEach": null,
-      "setHeightEach": null,
-      "setLifetimeEach": null,
-      "setMirrorXEach": null,
-      "setMirrorYEach": null,
-      "setRotateToDirectionEach": null,
-      "setRotationEach": null,
-      "setRotationSpeedEach": null,
-      "setScaleEach": null,
-      "setSpeedAndDirectionEach": null,
-      "setVelocityEach": null,
-      "setVelocityXEach": null,
-      "setVelocityYEach": null,
-      "setVisibleEach": null,
-      "setWidthEach": null,
-      "comment_Groups": null,
-      "background": null,
-      "fill": null,
-      "noFill": null,
-      "stroke": null,
-      "strokeWeight": null,
-      "noStroke": null,
-      "rgb": null,
-      "rect": null,
-      "ellipse": null,
-      "text": null,
-      "textAlign": null,
-      "textFont": null,
-      "textSize": null,
-      "arc": null,
-      "line": null,
-      "point": null,
-      "regularPolygon": null,
-      "shape": null,
-      "comment_Drawing": null,
-      "forLoop_i_0_4": null,
-      "ifBlock": null,
-      "ifElseBlock": null,
-      "whileBlock": null,
-      "comment_Control": null,
-      "addOperator": null,
-      "subtractOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
-      "equalityOperator": null,
-      "inequalityOperator": null,
-      "greaterThanOperator": null,
-      "greaterThanOrEqualOperator": null,
-      "lessThanOperator": null,
-      "lessThanOrEqualOperator": null,
-      "andOperator": null,
-      "orOperator": null,
-      "notOperator": null,
-      "randomNumber_min_max": null,
-      "mathRound": null,
-      "mathAbs": null,
-      "mathMax": null,
-      "mathMin": null,
-      "mathRandom": null,
-      "comment_Math": null,
-      "declareAssign_x": null,
-      "declareNoAssign_x": null,
-      "assign_x": null,
-      "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "includes": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
-      "comment_Variables": null,
-      "functionParams_none": null,
-      "functionParams_n": null,
-      "callMyFunction": null,
-      "callMyFunction_n": null,
-      "return": null,
-      "comment": null
-    },
     "show_d_pad": "true",
     "show_debug_watch": "true",
     "embed": "false",
@@ -216,17 +44,20 @@
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\",\r\n    \"c3971151-dd41-4ab2-83be-11951180825e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2Fd19383c3-9b64-482d-811d-07f8997533ea.png%3Fversion%3Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2F62c23e14-37e1-4b40-9dc8-68553ff35ff9.png%3Fversion%3Dt7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\",\r\n      \"frameSize\": {\r\n        \"x\": 64,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\"\r\n    },\r\n    \"c3971151-dd41-4ab2-83be-11951180825e\": {\r\n      \"name\": \"pig\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/aI5VRmuwZNqKpmYz1bFBfwJU1pnMe1Q36YmU_QaYKZ4/c3971151-dd41-4ab2-83be-11951180825e.png?version=f0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 89\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"f0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9\"\r\n    }\r\n  }\r\n}",
-    "custom_blocks": "[\r\n  {\r\n    \"func\": \"isDestroyed\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\"\r\n      }\r\n    ],\r\n    \"blockText\": \"{SPRITE} is destroyed?\",\r\n    \"returnType\": \"Boolean\"\r\n  },\r\n  {\r\n    \"func\": \"jump\",\r\n    \"blockText\": \"{THIS} jump\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"whenSpace\",\r\n    \"blockText\": \"while spacebar pressed\",\r\n    \"eventLoopBlock\": true\r\n  },\r\n  {\r\n    \"func\": \"alert\",\r\n    \"blockText\": \"alert\"\r\n  }\r\n]",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\",\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\",\r\n    \"c3971151-dd41-4ab2-83be-11951180825e\",\r\n    \"1bcc10f3-b99e-4f09-a4ca-1597fbd1674f\",\r\n    \"406c0770-b798-4b05-b891-5e49dea00f95\",\r\n    \"e3a7b57b-21fa-450a-993f-c7de36cb268f\",\r\n    \"5648b28d-dd41-4af1-9132-b52078215b65\",\r\n    \"f394d0aa-bc5a-4224-91b6-4de1e828f983\",\r\n    \"f84963c5-9aac-45fd-a3a0-95500c3963c0\",\r\n    \"4704746b-90fb-40bd-aa82-6aada67c41e0\",\r\n    \"8675c677-cc7e-4b86-abd0-f998c0a16662\",\r\n    \"f2390376-9112-403d-bf1d-0f197397c4d9\",\r\n    \"73243e2d-bfdf-48ce-858f-b35b3f11eefb\",\r\n    \"f3c3203a-49ab-4e65-9bb2-38a32f9cfc9c\",\r\n    \"d8ef077f-e2fa-4c52-967a-a75b3bd5b54c\",\r\n    \"735c5317-dca6-4619-bc2b-7a2e65bea477\",\r\n    \"12e42be6-cf5d-4f7f-8eed-78f6db1c621f\",\r\n    \"ceafa1b4-e5d0-4ce8-b478-cf969298bbd0\",\r\n    \"fea5a70f-c68b-4674-a786-e1a97ef345e1\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d19383c3-9b64-482d-811d-07f8997533ea\": {\r\n      \"name\": \"dog\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2Fd19383c3-9b64-482d-811d-07f8997533ea.png%3Fversion%3Dv.GmQEfbU1j.B.l4vI46thaJVPawniCF\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 87\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"v.GmQEfbU1j.B.l4vI46thaJVPawniCF\"\r\n    },\r\n    \"62c23e14-37e1-4b40-9dc8-68553ff35ff9\": {\r\n      \"name\": \"cat\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FfyCTcQ6s52URiFmswI6n_lmlYnv7ggPYH0oASid6kRA%2F62c23e14-37e1-4b40-9dc8-68553ff35ff9.png%3Fversion%3Dt7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\",\r\n      \"frameSize\": {\r\n        \"x\": 64,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"t7yJ2eX2s4X..cVkKdwWebbWGC.YvO5k\"\r\n    },\r\n    \"c3971151-dd41-4ab2-83be-11951180825e\": {\r\n      \"name\": \"pig\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/aI5VRmuwZNqKpmYz1bFBfwJU1pnMe1Q36YmU_QaYKZ4/c3971151-dd41-4ab2-83be-11951180825e.png?version=f0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 89\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"f0yMcQGn5mmGc1eGiXouj5IRLDAHyCD9\"\r\n    },\r\n    \"1bcc10f3-b99e-4f09-a4ca-1597fbd1674f\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/1bcc10f3-b99e-4f09-a4ca-1597fbd1674f.png?version=_c7xXqd2si95f3Fl6daAB4qlFKFDzVJ7\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 50\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"_c7xXqd2si95f3Fl6daAB4qlFKFDzVJ7\"\r\n    },\r\n    \"406c0770-b798-4b05-b891-5e49dea00f95\": {\r\n      \"name\": \"cow\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/406c0770-b798-4b05-b891-5e49dea00f95.png?version=CejvYpAI.dc9Zb14ugc9C8D6IBWEi4tB\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 113\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"CejvYpAI.dc9Zb14ugc9C8D6IBWEi4tB\"\r\n    },\r\n    \"e3a7b57b-21fa-450a-993f-c7de36cb268f\": {\r\n      \"name\": \"bear\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/e3a7b57b-21fa-450a-993f-c7de36cb268f.png?version=1IqqEvqnnxx.yvgUV7xd97M2FJfuBsO6\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 131\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"1IqqEvqnnxx.yvgUV7xd97M2FJfuBsO6\"\r\n    },\r\n    \"5648b28d-dd41-4af1-9132-b52078215b65\": {\r\n      \"name\": \"ladybug\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/5648b28d-dd41-4af1-9132-b52078215b65.png?version=WP9BxCDtkRJgcIwG2yxTa5.bVsd5ODMN\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 36\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"WP9BxCDtkRJgcIwG2yxTa5.bVsd5ODMN\"\r\n    },\r\n    \"f394d0aa-bc5a-4224-91b6-4de1e828f983\": {\r\n      \"name\": \"book\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/firWv5nhwyb9ycg5ivInks6Lbb_uIFt6/category_generic_items/book.png\",\r\n      \"frameSize\": {\r\n        \"x\": 109,\r\n        \"y\": 125\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"firWv5nhwyb9ycg5ivInks6Lbb_uIFt6\"\r\n    },\r\n    \"f84963c5-9aac-45fd-a3a0-95500c3963c0\": {\r\n      \"name\": \"teapot\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/9_4OVrgkBp1ZkDiA1Buybml2cKrfq53s/category_generic_items/teapot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 152,\r\n        \"y\": 116\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"9_4OVrgkBp1ZkDiA1Buybml2cKrfq53s\"\r\n    },\r\n    \"4704746b-90fb-40bd-aa82-6aada67c41e0\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/_C2x10SnwauWvJRCQq.u2jEtcmNrPifb/category_food/apple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_C2x10SnwauWvJRCQq.u2jEtcmNrPifb\"\r\n    },\r\n    \"8675c677-cc7e-4b86-abd0-f998c0a16662\": {\r\n      \"name\": \"carrot\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/fCiFCbsTDOoiLsbStivUZ249XH0TOxIY/category_food/carrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 78,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"fCiFCbsTDOoiLsbStivUZ249XH0TOxIY\"\r\n    },\r\n    \"f2390376-9112-403d-bf1d-0f197397c4d9\": {\r\n      \"name\": \"cupcake\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/f2390376-9112-403d-bf1d-0f197397c4d9.png?version=wsxP7ZjkAKUoQ9P.EfNazEEPV3.FA1KB\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 106\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"wsxP7ZjkAKUoQ9P.EfNazEEPV3.FA1KB\"\r\n    },\r\n    \"73243e2d-bfdf-48ce-858f-b35b3f11eefb\": {\r\n      \"name\": \"watermelon\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/73243e2d-bfdf-48ce-858f-b35b3f11eefb.png?version=u8MBe5jNW3GZELtoEAhA2Vx1qIxDwbpz\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 80\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"u8MBe5jNW3GZELtoEAhA2Vx1qIxDwbpz\"\r\n    },\r\n    \"f3c3203a-49ab-4e65-9bb2-38a32f9cfc9c\": {\r\n      \"name\": \"pizza\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/f3c3203a-49ab-4e65-9bb2-38a32f9cfc9c.png?version=In50_1x6woMP1.aRX.xBf0Z8Fd__tvyP\",\r\n      \"frameSize\": {\r\n        \"x\": 60,\r\n        \"y\": 40\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"In50_1x6woMP1.aRX.xBf0Z8Fd__tvyP\"\r\n    },\r\n    \"d8ef077f-e2fa-4c52-967a-a75b3bd5b54c\": {\r\n      \"name\": \"coin\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/i9_exqo4EZveb7Cs3ci67bPuExMkYfuQ/category_gameplay/coin_gold.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 61\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"i9_exqo4EZveb7Cs3ci67bPuExMkYfuQ\"\r\n    },\r\n    \"735c5317-dca6-4619-bc2b-7a2e65bea477\": {\r\n      \"name\": \"cactus\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/735c5317-dca6-4619-bc2b-7a2e65bea477.png?version=NcRh83d1UrKhdzY4JlWIyI3WUqiMcX_e\",\r\n      \"frameSize\": {\r\n        \"x\": 80,\r\n        \"y\": 109\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"NcRh83d1UrKhdzY4JlWIyI3WUqiMcX_e\"\r\n    },\r\n    \"12e42be6-cf5d-4f7f-8eed-78f6db1c621f\": {\r\n      \"name\": \"wheat\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/12e42be6-cf5d-4f7f-8eed-78f6db1c621f.png?version=yVw3MJZPBC9MyD0yHiDbbc5A_mYQabcV\",\r\n      \"frameSize\": {\r\n        \"x\": 80,\r\n        \"y\": 80\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"yVw3MJZPBC9MyD0yHiDbbc5A_mYQabcV\"\r\n    },\r\n    \"ceafa1b4-e5d0-4ce8-b478-cf969298bbd0\": {\r\n      \"name\": \"bone\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/BM2gtAVVVBUKBW_yP8zROtbjxkvS3stT/category_generic_items/bone.png\",\r\n      \"frameSize\": {\r\n        \"x\": 81,\r\n        \"y\": 119\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"BM2gtAVVVBUKBW_yP8zROtbjxkvS3stT\"\r\n    },\r\n    \"fea5a70f-c68b-4674-a786-e1a97ef345e1\": {\r\n      \"name\": \"suitcase\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/e0aIKr0mnhhc8iY90ZSZMA/fea5a70f-c68b-4674-a786-e1a97ef345e1.png?version=N9IO3hRjOmrqzHSfK_f2R8nhmEH2mj57\",\r\n      \"frameSize\": {\r\n        \"x\": 80,\r\n        \"y\": 143\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"N9IO3hRjOmrqzHSfK_f2R8nhmEH2mj57\"\r\n    }\r\n  }\r\n}",
+    "custom_blocks": "[\r\n  {\r\n    \"func\": \"isDestroyed\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ],\r\n    \"blockText\": \"{SPRITE} is destroyed?\",\r\n    \"returnType\": \"Boolean\"\r\n  },\r\n  {\r\n    \"func\": \"jump\",\r\n    \"blockText\": \"{THIS} jump\",\r\n    \"methodCall\": true\r\n  },\r\n  {\r\n    \"func\": \"whenSpace\",\r\n    \"blockText\": \"while spacebar pressed\",\r\n    \"eventLoopBlock\": true\r\n  },\r\n  {\r\n    \"func\": \"randomizeLocation\",\r\n    \"blockText\": \"send {SPRITE} randomly\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"addBehaviorSimple\",\r\n    \"blockText\": \"add behavior {BEHAVIOR} to {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"removeBehaviorSimple\",\r\n    \"blockText\": \"remove behavior {BEHAVIOR} from {SPRITE}\",\r\n    \"args\": [\r\n      {\r\n        \"name\": \"SPRITE\",\r\n        \"type\": \"Sprite\"\r\n      },\r\n      {\r\n        \"name\": \"BEHAVIOR\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"jitter\",\r\n    \"blockText\": \"jitter\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"wander\",\r\n    \"blockText\": \"wander\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"grow\",\r\n    \"blockText\": \"grow\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"shrink\",\r\n    \"blockText\": \"shrink\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"spin\",\r\n    \"blockText\": \"spin\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"danceParty\",\r\n    \"blockText\": \"dance party\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"runUp\",\r\n    \"blockText\": \"run up\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"draggable\",\r\n    \"blockText\": \"drag and drop\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"runDown\",\r\n    \"blockText\": \"run down\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"runLeft\",\r\n    \"blockText\": \"run left\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  },\r\n  {\r\n    \"func\": \"runRight\",\r\n    \"blockText\": \"run right\",\r\n    \"returnType\": \"Function\",\r\n    \"color\": [\r\n      56,\r\n      \".98\",\r\n      \".82\"\r\n    ]\r\n  }\r\n]",
     "is_project_level": true,
-    "custom_helper_library": "\r\nfunction alert() {\r\n  alert('hi');\r\n}",
     "hide_custom_blocks": "false",
     "use_default_sprites": "false",
-    "contained_level_names": null
+    "custom_helper_library": "function addBehaviorSimple(sprite, behavior) {\r\n  addBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction removeBehaviorSimple(sprite, behavior) {\r\n  removeBehavior(sprite, behavior, behavior.name);\r\n}\r\n\r\nfunction jitter(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.scale = 1 + (randomNumber(-1, 1) / 50);\r\n  }\r\n  behavior.name='jitter';\r\n  return behavior;\r\n}\r\n\r\nfunction grow(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.scale += 0.01;\r\n  }\r\n  behavior.name='grow';\r\n  return behavior;\r\n}\r\n\r\nfunction shrink(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.scale -= 0.01;\r\n  }\r\n  behavior.name='shrink';\r\n  return behavior;\r\n}\r\n\r\nfunction spin(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.rotation++;\r\n  }\r\n  behavior.name='spin';\r\n  return behavior;\r\n}\r\n\r\nfunction wander(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (!sprite.xoff) {\r\n      sprite.xoff = randomNumber(0, 1000);\r\n      sprite.yoff = randomNumber(0, 1000);\r\n    }\r\n    sprite.x = map(noise(sprite.xoff + World.frameCount / 100), 0, 1, 0, World.width);\r\n    sprite.y = map(noise(sprite.yoff + World.frameCount / 100), 0, 1, 0, World.height);\r\n  }\r\n  behavior.name='wander';\r\n  return behavior;\r\n}\r\n\r\nfunction runUp(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveUp();\r\n  }\r\n  behavior.name = 'runUp';\r\n  return behavior;\r\n}\r\n\r\nfunction runDown(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveDown();\r\n  }\r\n  behavior.name = 'runDown';\r\n  return behavior;\r\n}\r\n\r\nfunction runLeft(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveLeft();\r\n  }\r\n  behavior.name = 'runLeft';\r\n  return behavior;\r\n}\r\n\r\nfunction runRight(sprite) {\r\n  var behavior = function(sprite) {\r\n    sprite.moveRight();\r\n  }\r\n  behavior.name = 'runRight';\r\n  return behavior;\r\n}\r\n\r\nfunction danceParty(sprite) {\r\n  var behavior = function(sprite) {\r\n    if (World.frameCount % 10 === 0) {\r\n      sprite.rotation += randomNumber(-5, 5);\r\n    }\r\n    if (World.frameCount % 20 === 0) {\r\n      sprite.scale = 1 + (randomNumber(-1, 1) / 10);\r\n    }\r\n  }\r\n  behavior.name = 'danceParty';\r\n  return behavior;\r\n}\r\n\r\nfunction randomizeLocation(sprite) {\r\n   sprite.x=Math.floor(Math.random()*400);\r\n   sprite.y=Math.floor(Math.random()*400);\r\n}\r\nfunction draggable() {\r\n  var behavior = function(sprite) {\r\n    if (mousePressedOver(sprite) && !sprite.dragging) {\r\n      sprite.dragging = true;\r\n      sprite.xOffset = sprite.x - World.mouseX;\r\n      sprite.yOffset = sprite.y - World.mouseY;\r\n    }\r\n    if (sprite.dragging) {\r\n      sprite.x = World.mouseX + sprite.xOffset;\r\n      sprite.y = World.mouseY + sprite.yOffset;\r\n    }\r\n    if (mouseWentUp()) {\r\n      sprite.dragging = false;\r\n    }\r\n  }\r\n  behavior.name='draggable';\r\n  return behavior;\r\n}",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-21 19:18:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-02-23 01:34:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-02-23 01:34:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-01 11:22:37 -0800\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-01 11:23:03 -0800\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-01 11:24:03 -0800\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 11:21:33 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 11:22:59 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 14:30:24 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:11:30 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:12:51 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:16:55 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:17:27 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:18:40 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-06 11:24:18 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:12:16 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:15:51 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:18:04 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:21:22 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:24:13 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:42:39 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:39:09 -0800\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:39:43 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:40:26 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:42:14 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-12 15:46:16 -0700\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-13 18:43:01 -0700\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 11:47:07 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 11:48:56 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"hide_custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 11:49:07 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"hide_custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 12:50:40 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"hide_custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 17:30:08 -0700\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 18:21:03 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-23 16:15:40 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-26 14:54:18 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-26 14:56:12 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-21 19:18:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-02-23 01:34:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-02-23 01:34:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-01 11:22:37 -0800\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-01 11:23:03 -0800\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-01 11:24:03 -0800\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 11:21:33 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 11:22:59 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 14:30:24 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:11:30 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:12:51 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:16:55 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:17:27 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-02 15:18:40 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-06 11:24:18 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:12:16 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:15:51 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:18:04 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:21:22 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:24:13 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-08 11:42:39 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:39:09 -0800\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:39:43 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:40:26 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-09 14:42:14 -0800\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-12 15:46:16 -0700\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-13 18:43:01 -0700\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 11:47:07 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 11:48:56 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"hide_custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 11:49:07 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"hide_custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 12:50:40 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"encrypted_examples\",\"hide_custom_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 17:30:08 -0700\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-22 18:21:03 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-23 16:15:40 -0700\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-26 14:54:18 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-26 14:56:12 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":2,\"changed_by_email\":\"ram+teacher@code.org\"},{\"changed_at\":\"2018-03-28 00:57:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-28 00:58:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-28 00:58:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-28 18:40:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2018-03-30 16:44:27 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"custom_helper_library\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-30 16:45:28 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-30 16:46:37 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-30 16:52:41 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-30 17:01:10 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-30 17:02:04 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\",\"custom_helper_library\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-03-30 19:16:49 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-04 23:08:29 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-04 23:08:51 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-04 23:14:23 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-04 23:19:08 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-04 23:23:56 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 01:14:30 +0000\",\"changed\":[\"toolbox_blocks\",\"custom_blocks\",\"custom_helper_library\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 01:19:10 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-04-05 01:24:30 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -276,6 +107,20 @@
                 </value>
               </block>
             </value>
+          </block>
+          <block type="sprite_variables_get">
+            <title name="VAR">sprite</title>
+          </block>
+          <block type="gamelab_setAnimation" inline="true">
+            <title name="ANIMATION">"dog"</title>
+            <value name="THIS">
+              <block type="sprite_variables_get">
+                <title name="VAR">sprite</title>
+              </block>
+            </value>
+          </block>
+          <block type="sprite_variables_set" inline="false">
+            <title name="VAR">sprite</title>
           </block>
           <block type="gamelab_moveUp" inline="true">
             <value name="THIS">
@@ -369,6 +214,18 @@
           <block type="gamelab_whileDownArrow"/>
           <block type="gamelab_whileLeftArrow"/>
           <block type="gamelab_whileRightArrow"/>
+          <block type="gamelab_whileTouching" inline="true">
+            <value name="SPRITE1">
+              <block type="sprite_variables_get">
+                <title name="VAR">sprite</title>
+              </block>
+            </value>
+            <value name="SPRITE2">
+              <block type="sprite_variables_get">
+                <title name="VAR">other</title>
+              </block>
+            </value>
+          </block>
           <block type="gamelab_whenTouching" inline="true">
             <value name="SPRITE1">
               <block type="sprite_variables_get">

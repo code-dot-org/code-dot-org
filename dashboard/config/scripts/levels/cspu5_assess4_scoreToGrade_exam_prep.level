@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2018-04-03T15:26:22.000Z",
+  "level_num": "custom",
+  "user_id": 532,
+  "properties": {
+    "markdown_instructions": "**Short Answer:** Jimmy wrote the procedure scoreToGrade which accepts as a parameter score - a quiz score in the range 0-100.  The procedure is supposed to return a letter grade. He feels confident his program is correct because he has tested it using the scores 3, 29, and 67. Sally believes the program is incorrect because she tested the values 73 and 86.  The code is syntactically correct, and the programs runs without generating an error, but the results are sometimes wrong.  Why does the procedure return the correct values for Jimmy’s tests but not Sally’s? \r\n\r\n    PROCEDURE scoreToGrade (percent)\r\n    {\r\n        IF (percent < 60)\r\n        {\r\n            RETURN (\"F\")\r\n        }\r\n        ELSE IF (percent >= 60)\r\n        {\r\n        \tRETURN (\"D\")\r\n        }\r\n        ELSE IF (percent >= 70)\r\n        {\r\n            RETURN (\"C\")\r\n        }\r\n        ELSE IF (percent >= 80)\r\n        {\r\n            RETURN (\"B\")\r\n        }\r\n        ELSE\r\n        {\r\n        \tRETURN (\"A\")\r\n        }\r\n    }",
+    "instructions_important": "false",
+    "encrypted_solution": "zMj0x+6tjSQL/qt859CJVp69rsKYZ/xSWsStLWhL576NoqtUfe7Cj959ZfAw\nS3QhDewdtV3qYic8H+JwsdaD8ddLguB5K14afk0ICgvmR5JVQRk7GrrIh8WN\n4RpxBSd6mWoC3iKRvf8tBa0AYOTuFnuMMLcYP0+NTkVMfN6lutYmfrJRd2Ik\nk3LIYprfanHJAxUp+vM7ZRhFcNCqh2vhLcqGefOTtqa0s87qBtklnLQm6ryW\ngNg5PZ6ayPVqBAxyf1vpguqwIS0LUjA/IjquuBRDF/pvnwgTYmbVbcnYvha0\ngTkkjxDpo3ymPruEIjVW2Voibp+6MFyNXZ04ZLDIvFIfs1nG7dura7WSz/aE\nh5oJcFrQXj25nxXRZcCY5bJ2+ny3qxi/RMMLX4PZojoyWH/9LDKGbdNvMgRK\nP+evESGKOpHIurqpW3GX9hMz+6bJyIllsqiU0qT3+tpZB9P1SG88L5vhc36W\nT9oEKc4xOq8=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 7202,
+    "name_suffix": "_exam_prep"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'cdo/url_converter'
 
 # coding: utf-8
@@ -135,6 +136,10 @@ end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
+end
+
+When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+  wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
 
 def jquery_is_element_visible(selector)
@@ -796,12 +801,22 @@ And(/^I set the language cookie$/) do
   debug_cookies(@browser.manage.all_cookies)
 end
 
-Given(/^I sign in as "([^"]*)"/) do |name|
+Given(/^I sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I wait to see "#signin_button"
     Then I click selector "#signin_button"
+    And I wait to see ".new_user"
+    And I fill in username and password for "#{name}"
+    And I click selector "#signin-button"
+    And I wait to see ".header_user"
+  }
+end
+
+Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
+  steps %Q{
+    And check that the url contains "/users/sign_in"
     And I wait to see ".new_user"
     And I fill in username and password for "#{name}"
     And I click selector "#signin-button"
@@ -960,8 +975,9 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
 
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
-    Given I am on "http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher"
+    Given I am on "http://studio.code.org/users/sign_up"
     And I wait to see "#user_name"
+    And I select the "Teacher" option in dropdown "user_user_type"
     And I wait to see "#schooldropdown-block"
     And I type "#{name}" into "#user_name"
     And I type "#{email}" into "#user_email"
@@ -977,6 +993,44 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
+end
+
+And(/^I give user "([^"]*)" project validator permission$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::PROJECT_VALIDATOR
+  user.save!
+end
+
+Then(/^I remove featured projects from the gallery$/) do
+  require_rails_env
+  FeaturedProject.delete_all
+end
+
+Then(/^I make a playlab project named "([^"]*)"$/) do |name|
+  steps %Q{
+    Then I am on "http://studio.code.org/projects/playlab/new"
+    And I get redirected to "/projects/playlab/([^\/]*?)/edit" via "dashboard"
+    And I wait for the page to fully load
+    And element "#runButton" is visible
+    And element ".project_updated_at" eventually contains text "Saved"
+    And I click selector ".project_edit"
+    And I type "#{name}" into "input.project_name"
+    And I click selector ".project_save"
+    And I wait until element ".project_edit" is visible
+    Then I should see title "#{name} - Play Lab"
+    And I press "#runButton" using jQuery
+    And I wait until element ".project_updated_at" contains text "Saved"
+    And I wait until initial thumbnail capture is complete
+  }
+end
+
+Then(/^I publish the project$/) do
+  steps %Q{
+    Given I open the project share dialog
+    And the project is unpublished
+    When I publish the project from the share dialog
+  }
 end
 
 And(/^I save the section url$/) do
@@ -1366,10 +1420,26 @@ def get_section_id_from_table(row_index)
   section_id
 end
 
-Then /^I scroll the save button into view$/ do
-  @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
+Then /^I scroll the "([^"]*)" element into view$/ do |selector|
+  @browser.execute_script("$('#{selector}')[0].scrollIntoView(true)")
 end
 
 Then /^I open the section action dropdown$/ do
   steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
+end
+
+Then /^I sign out using jquery$/ do
+  code = <<-JAVASCRIPT
+    window.signOutComplete = false;
+    function onSuccess() {
+      window.signOutComplete = true;
+    }
+    $.ajax({
+      url:'/users/sign_out',
+      method: 'GET',
+      success: onSuccess
+    });
+  JAVASCRIPT
+  @browser.execute_script(code)
+  wait_short_until {@browser.execute_script('return window.signOutComplete;')}
 end

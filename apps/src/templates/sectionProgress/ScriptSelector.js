@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import {validScriptPropType} from './sectionProgressRedux';
 import _ from 'lodash';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
@@ -16,17 +17,11 @@ const groupedAssignments = assignments => (
 
 export default class ScriptSelector extends Component {
   static propTypes = {
-    validScripts: PropTypes.arrayOf(PropTypes.shape({
-      // This shape is similar to that used by AssignmentSelector, but in that
-      // case they've been semi-processed and given assignIds to diferentiate
-      // courses and scripts
-      category: PropTypes.string.isRequired,
-      category_priority: PropTypes.number.isRequired,
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      position: PropTypes.number,
-    })).isRequired,
-    scriptId: PropTypes.string,
+    // This shape is similar to that used by AssignmentSelector, but in that
+    // case they've been semi-processed and given assignIds to diferentiate
+    // courses and scripts
+    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
   };
 
