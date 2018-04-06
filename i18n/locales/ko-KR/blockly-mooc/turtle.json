@@ -74,13 +74,13 @@
   "penDown": "펜 내리기",
   "penTooltip": "펜을 올려 선을 그리지 않거나, 펜을 내려 선을 그립니다.",
   "penUp": "펜 올리기",
+  "pointTo": "point to",
   "pixels": "픽셀",
   "reinfFeedbackMsg": "만든 그림이 여기 있습니다! 계속 하거나 다음 퍼즐로 이동하세요!",
   "setAlpha": "alpha 설정",
   "setCharacter": "set character to {character}",
   "setColour": "색 설정:",
   "setPattern": "패턴 설정",
-  "setStickerSize": "Set sticker size",
   "setWidth": "set width",
   "shareDrawing": "그림 공개하기:",
   "showMe": "보이기",
@@ -94,5 +94,6 @@
   "turnTooltip": "예술가를 원하는 각도 만큼, 왼쪽이나 오른쪽으로 회전시킵니다.",
   "turtleVisibilityTooltip": "예술가를 보이거나 보이지 않도록 합니다.",
   "widthTooltip": "펜의 두께를 바꿉니다.",
+  "withSize": "with size",
   "wrongColour": "색이 다릅니다. %1 색 이어야 합니다."
 }

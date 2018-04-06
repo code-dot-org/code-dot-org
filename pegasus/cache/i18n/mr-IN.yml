@@ -3,7 +3,7 @@
   hello: Hello world
   'yes': 'Yes'
   'no': 'No'
-  select_language: "कृपया आपली भाषा निवडा"
+  select_language: कृपया आपली भाषा निवडा
   upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
     and 10. Please upgrade to a modern browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
@@ -11,7 +11,7 @@
   upgrade_ie_link: Learn more
   en: Computer Science
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: "८-१४ डिसेंबर, २०१४"
+  csedweek_dates: ८-१४ डिसेंबर, २०१४
   csedweek_banner_hoc: "<a href=\"http://hourofcode.com\" style=\"color: white; text-decoration:underline;
     font-weight:bold\">'आवर ऑफ कोड' - एक तास कोडींग साठी</a> येत आहे. सर्व शिक्षक
     आणि आयोजकांना  <a href=\"http://hourofcode.com\" style=\"color: white; text-decoration:underline;
@@ -22,16 +22,16 @@
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: Anybody can learn.
   learn_now: Learn Now
-  petition_message: "प्रत्येक शाळेतील प्रत्येक विद्यार्थ्याला संगणक शिकण्याची संधी
-    मिळाली पाहिजे"
+  petition_message: प्रत्येक शाळेतील प्रत्येक विद्यार्थ्याला संगणक शिकण्याची संधी
+    मिळाली पाहिजे
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
-  name: "नाव"
+  name: नाव
   email: Email
-  zipcode: "पोस्टल क्रमांक"
+  zipcode: पोस्टल क्रमांक
   submit: Submit
-  twentyhours_heading: "संगणक शास्त्राशी ओळख करून पहा"
+  twentyhours_heading: संगणक शास्त्राशी ओळख करून पहा
   twentyhours_text: "'आवर ऑफ कोड' चा पहिला भाग संपला ? आमच्या पुढच्या आभ्यास्क्रमामध्ये
     संगणक शास्त्र आणि प्रोग्रामिंग च्या अजून संकल्पना शिका."
   og_title: Coding is foundational
@@ -230,23 +230,23 @@
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>.
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
   support_url: http://support.code.org/
-  country: "देश"
-  city: "शहर"
+  country: देश
+  city: शहर
   gender: Gender
-  boys: "मुले"
-  girls: "मुली"
-  give_my_hour: "तुमचा एक तास द्या:"
-  girls_team: "मुलींचा गट"
-  boys_team: "मुलांचा गट"
-  tell_the_world: "जगाला सांगा!"
-  thanks_for_voting: "मतदानाबद्दल आभारी आहोत."
+  boys: मुले
+  girls: मुली
+  give_my_hour: 'तुमचा एक तास द्या:'
+  girls_team: मुलींचा गट
+  boys_team: मुलांचा गट
+  tell_the_world: जगाला सांगा!
+  thanks_for_voting: मतदानाबद्दल आभारी आहोत.
   share_on_facebook: Share on Facebook
   share_on_twitter: Share on Twitter
   beyond_an_hour: Beyond an Hour of Code
   get_started: Start
   i_agree: I agree
   participant_select: "- Select -"
-  participant_student: "विध्यार्थी"
+  participant_student: विध्यार्थी
   participant_parent: Parent
   participant_educator: Educator
   participant_engineer: Software Engineer
@@ -256,7 +256,7 @@
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: I am a
   never_spam: We'll never spam you
-  enter_country: "जर तुम्ही अमेरिकेबाहेरील असाल तर तुमच्या देशाचे नाव"
+  enter_country: जर तुम्ही अमेरिकेबाहेरील असाल तर तुमच्या देशाचे नाव
   used_infrequent_updates: Only used for infrequent updates
   privacy_practices_children: See our privacy practices for children
   petition_thankyou: Thank you for signing the petition
@@ -698,7 +698,7 @@
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "नाव"
+  volunteer_engineer_submission_field_name: नाव
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
@@ -973,7 +973,7 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_name: "नाव"
+  dashboard_students_name: नाव
   dashboard_students_progress: Progress
   dashboard_students_male: Male
   dashboard_students_female: Female
@@ -1068,7 +1068,7 @@
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
   dashboard_teacher: Teacher
-  dashboard_student: "विध्यार्थी"
+  dashboard_student: विध्यार्थी
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?

@@ -319,8 +319,9 @@
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         Choose an algorithm for the image provided.: Scegli l'algoritmo che ti fa
           disegnare questa figura.
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Inizia
           con un quadrato<br/>Metti un parallelogramma sopra il quadrato<br/>Metti
           un triangolo a destra del parallelogramma
@@ -340,8 +341,9 @@
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Inizia
           con un triangolo<br/>Metti un quadrato sotto il triangolo<br/>Metti un altro
           triangolo sotto il quadrato
@@ -352,8 +354,9 @@
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which program makes this image?: Quale programma ti fa disegnare questa figura?
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
@@ -364,8 +367,9 @@
         According to the rules of the game, which set of cards is scored correctly?: Applicando
           le regole scritte qui a sinistra, a quale insieme di carte viene assegnato
           il punteggio corretto?
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
       2-3 Getting Loopy Multi 1:
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
@@ -374,15 +378,17 @@
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Come semplificheresti la
           sequenza di blocchi sulla sinistra usando i blocchi "ripeti", cioè i "cicli"?
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
       2-3 Graph Paper Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which program makes this image?: Quale programma ti fa disegnare questa figura?
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
@@ -398,16 +404,18 @@
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which program does not create this image?: Quale programma non ti fa disegnare
           questa figura?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which image-program combo does not contain mistakes?: Quale delle seguenti
           coppie figura-programma non contiene errori?
       2-3 artist debug multi 1:
@@ -499,8 +507,9 @@
         Baking cookies: Cuocere i biscotti
         Banana: " Una banana (il frutto)"
         Brushing your teeth: Lavarsi i denti
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Shopping from a grocery list: Acquistare i prodotti di una lista della spesa
         Which one of these items is hardest to describe an algorithm for?: Tra queste
           situazioni, quale è la più difficile da descrivere con un algoritmo?
@@ -510,8 +519,9 @@
           so that all three match the same pattern as the template?"
         1: ": Qui ci sono tre frasi. Quale degli schemi qua sotto è un'astrazione
           in grado di rappresentarle tutte e tre in modo corretto?"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Seattle _____ a _____ _____.: Seattle _____ una _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Ecco
           tre frasi: <br/>1. Seattle è una città grande. <br/>2. Eugene è una città
@@ -523,23 +533,26 @@
       4-5 Crowdsourcing Multi 1:
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which of these pictures best represents crowdsourcing?: Quale di queste immagini
           rappresenta meglio l'intelligenza collettiva?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Lavarsi i capelli
         Cleaning your room: Pulire la propria camera
         Eating your dessert: Mangiare il proprio dolce
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Washing your face: Lavarsi il viso
         Which one of these activities would be best for practicing crowdsourcing?: Quale
           di queste attività sarebbe meglio compiere per esercitare l'intelligenza
           collettiva?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which piece of information listed below is okay to share on the internet?: Quale
           informazione tra quelle elencate qua sotto può essere condivisa su internet?
         Your address: Il tuo indirizzo
@@ -553,8 +566,9 @@
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Quando
           ti colleghi a code.org, a quale indirizzo IP fra quelli elencati in questa
           tabella ti farà arrivare il DNS?
@@ -563,8 +577,9 @@
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Se
           il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
           su quale sito web fra quelli elencati in questa tabella sei arrivato?
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -587,8 +602,9 @@
         : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
           buttermilk, <br/>Shoo, fly, shoo,
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
         : Qual è il pezzo più lungo di questa canzone che puoi definire come ritornello,
@@ -599,8 +615,9 @@
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Quale
           dei programmi qui sotto <em>non</em> produce la stessa sequenza di istruzioni
           definita dal programma 1?
@@ -734,8 +751,9 @@
         "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which blocks solve this puzzle?: Quale sequenza di blocchi ti fa completare
           il disegno?
       K-1 Artist 1 Multi 2:
@@ -745,8 +763,9 @@
         "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which blocks draw the square?: Quale sequenza di blocchi ti fa disegnare un
           quadrato?
       K-1 Artist 2 Multi 1:
@@ -756,8 +775,9 @@
         "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which shape do these squares combine to make?: Quale forma viene costruita
           dalla combinazione di questi quadrati?
       K-1 Artist Loops Multi 1:
@@ -767,8 +787,9 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which blocks create this picture?: Quali blocchi creano questa immagine?
       K-1 Bee 1 Multi 1:
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
@@ -778,8 +799,9 @@
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Sommando il nettare contenuto nei due fiori in
           alto a sinistra, quante dosi di nettare ottieni?
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
       K-1 Bee 1 Multi 2:
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
@@ -788,15 +810,17 @@
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Sommando il nettare contenuto nei due fiori in
           alto a sinistra, quante dosi di nettare ottieni?
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
       K-1 Digital Footprint Multi 1:
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Quale
           animale ha l'impronta digitale che lo rende <strong>il più insicuro</strong>?
       K-1 Getting Loopy Multi 1:
@@ -806,24 +830,27 @@
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Come semplificheresti la
           sequenza di blocchi sulla sinistra usando i blocchi "ripeti", cioè i "cicli"?
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
       K-1 Happy Maps Multi 1:
         "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which arrow gets the Flurb to the treasure?: Quale freccia fa arrivare il
           Flurb al tesoro?
       K-1 Keep it Private Multi 1:
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which information should you <strong>not</strong> share online?: Quali informazioni
           dovresti <strong>non condividere online</strong>?
       K-1 Maze Debugging Multi 1:
@@ -833,8 +860,9 @@
         "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
         "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
         "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which choice should be the final block?: Quale blocco devi aggiungere alla
           sequenza mostrata qua a sinistra per farmi arrivare al maialino?
       K-1 Maze Loops Multi 1:
@@ -843,8 +871,9 @@
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which repeat block is the same?: Quale blocco "ripeti" fa gli stessi movimenti
           della sequenza di blocchi sulla sinistra?
       K-1 Maze Loops Multi 2:
@@ -853,8 +882,9 @@
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Pick the correct repeat block.: Scegli il blocco "ripeti" che esegue gli stessi
           movimenti della sequenza di blocchi sulla sinistra.
       K-1 Maze Multiple Choice 2:
@@ -873,8 +903,9 @@
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which algorithm gets the Flurb to the flowers?: Quali frecce fanno arrivare
           il Flurb ai fiori?
       K-1 Plant a Seed Multi 1:
@@ -882,8 +913,9 @@
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which step should go at the beginning of this algorithm?: Quale immagine scegli
           per descrivere il primo passo di questo algoritmo?
       K-1 Plant a Seed Multi 2:
@@ -891,8 +923,9 @@
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which step should fill in the blank for this algorithm?: Quale immagine scegli
           per descrivere il passo di questo algoritmo rappresentato dal punto interrogativo?
       K-1 Word Search Multi 1:
@@ -901,8 +934,9 @@
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which blocks spell "MOVE"?: Quale sequenza di blocchi devi scegliere per scrivere
           le lettere della parola "MOVE"?
       K-1 Word Search Multi 2:
@@ -911,15 +945,17 @@
         "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         Which blocks spell "JUMP"?: Quale sequenza di blocchi devi scegliere per scrivere
           le lettere della parola "JUMP"?
       K-1 Word Search Multi 3:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
-        Multiple Choice: |
-          Esercizio di Verifica (Risposte Multiple)
+        Multiple Choice: 'Esercizio di Verifica (Risposte Multiple)
+
+'
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE

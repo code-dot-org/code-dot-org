@@ -22,7 +22,7 @@
         Farmer3: Fermierul 3
         Unplug10: Internetul
         Artist5: Artistul 5
-        Unplug11: "Încheiere"
+        Unplug11: Încheiere
         MazeEC: Labirintul
         Bounce: Săritură
         Flappy: Pasărea Flappy
@@ -67,7 +67,7 @@
           s-ar putea să mă enervez!
         maze_2_5: Există o modalitate prin care pot ajunge la porcușorul nătâng folosind
           doar 2 blocuri. Poți să-ți dai seama cum?
-        maze_2_6: "Încearcă să mă duci la intrusul verde folosind doar trei blocuri."
+        maze_2_6: Încearcă să mă duci la intrusul verde folosind doar trei blocuri.
         maze_2_7: Ajută-mă să alung acest purceluş rău folosind cel mai mic număr
           de blocuri. Încearcă să folosești mai mult de un bloc "repetă ori".
         maze_2_8: 'Când un bloc este gri, inseamnă că nu poți să-l ștergi. Rezolvă
@@ -110,12 +110,12 @@
           întorci făcând clic pe numărul în blocul de întoarcere.'
         turtle_1_5: Acum, pentru antrenament , desenează un triunghi, pe urmă un pătrat
           pentru a obține un plic.
-        turtle_1_6: "Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
+        turtle_1_6: 'Îți poți da seama cum să desenezi acest triunghi și acest pătrat?
           Indiciu: Desenează mai întâi triunghiul, apoi dă-ți seama cât de mult să
-          întorci înainte de a desena pătratul."
-        turtle_1_7: "În regulă, hai să facem lucrurile un pic mai complicate - vezi
+          întorci înainte de a desena pătratul.'
+        turtle_1_7: În regulă, hai să facem lucrurile un pic mai complicate - vezi
           dacă poți desena acești ochelari verzi. Pătratele au 100 de pixeli pe fiecare
-          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!"
+          parte, și sunt la 50 de pixeli între ele. Nu uita să desenezi cu verde!
         turtle_1_8: Ok, încearcă să îți dai seama ce se întamplă dacă rulezi acest
           cod (sau apasă "Rulează" pentru a-l încerca). Apoi repetă-l de câte ori
           e nevoie ca să completezi desenul. Culorile vor fi diferite de fiecare dată.
@@ -217,10 +217,10 @@
         turtle_2_10: Aici ai un cod ca să încerci să experimentezi cu diferite spirale.
           Ce se întamplă dacă schimbi cu cât se face întoarcerea? Sau dacă setezi
           o culoare la întâmplare în buclă? Desenează orice îți place.
-        maze_karel_2_1: "Încearcă să folosești blocurile ca să mă ajuţi să elimin
+        maze_karel_2_1: 'Încearcă să folosești blocurile ca să mă ajuţi să elimin
           toate grămezile şi să umplu toate gropile din pământ. Încearcă să folosești
           bucle în loc să utilizezi prea multe blocuri. Sugestie: poți amplasa o buclă
-          în interiorul altei bucle."
+          în interiorul altei bucle.'
         maze_karel_2_2: Ne-am definit propriul nostru bloc numit "umple 5", care este
           acum în categoria Funcţiilor. Foloseşte-l ca să mă ajuţi să umplu această
           groapă.
@@ -289,24 +289,24 @@
           să-mi fac câmpul plat?
         maze_karel_debug_function_3: 'Editează acest program, astfel incât să elimin
           toate grămezile de pe domeniul meu. '
-        turtle_5_1: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+        turtle_5_1: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_2: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_2: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_3: "Încearcă să execuți acest program, şi fă modificări pentru a
-          vedea ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l
-          şi înlocuiește-l cu ceva total diferit)"
-        turtle_5_4: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_3: Încearcă să execuți acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_5: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_4: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
-        turtle_5_6: "Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_5: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
           ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
-          înlocuiește-l cu ceva total diferit)"
+          înlocuiește-l cu ceva total diferit)
+        turtle_5_6: Încearcă să rulezi acest program, şi fă modificări pentru a vedea
+          ce se întâmplă. Pot să îţi dai seama cum funcționează? (Sau şterge-l şi
+          înlocuiește-l cu ceva total diferit)
         maze_3_1: Am nevoie să ajung la acel porcușor! Tastează două chemări de mutare();
           să-mi recuperez ouălele.
         maze_3_2: Scrie-mi un program, ca să reușesc să ajung până la porcușor.
@@ -394,8 +394,8 @@
           2) ar dori să-și spună "hello". Îi puteți ajuta folosind blocul "spune"
           de două ori?
         studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
-        studio_playlab_4: "Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
-          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?"
+        studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
+          la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
         studio_playlab_5: Îl puteți ajuta pe robotul spatial să spună "Salutări pamantenilor"
           când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe
           Rulare
@@ -544,7 +544,7 @@
         loop_while: Bloc În timp ce
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
-        hoc_wrapup: "Încheierea Orei de Programare"
+        hoc_wrapup: Încheierea Orei de Programare
         Unplug1: Ce este informatica?
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
@@ -555,7 +555,7 @@
         Unplug8: Abstractizare
         Unplug9: Programare de releu
         Unplug10: Internet
-        Unplug11: "Încheiere"
+        Unplug11: Încheiere
         C1_happy_maps_unplugged: Hărţi Fericite
         C1_moveitmoveit_unplugged: Mutaţi-l, mutați-l
         C1_bigevent_unplugged: Marele eveniment
@@ -801,6 +801,9 @@
         applab_intro_share: Laborator de applicații - Distribuie applicația ta
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
@@ -834,8 +837,8 @@
           în interior"
         snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
           fulgi de zăpadă!
-        degrees_per_side: "Împărțiți 360 la numărul de laturi pentru a obține mărimea
-          în grade a fiecărui unghi."
+        degrees_per_side: Împărțiți 360 la numărul de laturi pentru a obține mărimea
+          în grade a fiecărui unghi.
         set_sides: Utilizaţi acest bloc ca să setați "laturi" la numărul necesar pentru
           a finaliza puzzle-ul.
         set_length: Utilizaţi acest bloc pentru a seta "lungime" la valoarea corectă.

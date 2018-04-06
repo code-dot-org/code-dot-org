@@ -1163,9 +1163,9 @@
     main_course: Kursus Utama
     extra_course_content: Isi Kursus Tambahan
     csf_e_1: Jalur naik tujuan E (opsional)
-    csf_e_2: Course E Content
+    csf_e_2: Isi kursus E
     csf_f_1: Jalur naik tujuan F (opsional)
-    csf_f_2: Course F Content
+    csf_f_2: Isi kursus F
     csd1_1: 'Bab 1: Proses Pemecahan Masalah'
     csd1_2: 'Bab 2: Komputer dan Pemecahan Masalah'
     csd2_1: 'Bab 1: Konten Web dan HTML'
@@ -1186,7 +1186,7 @@
     csp4_1: 'Bab 1: Dunia Big Data dan Enkripsi'
     csp5_1: 'Bab 1: Pemrograman Event-Driven'
     csp5_2: 'Bab 2: Pemrograman dengan Struktur Data'
-    cspSurvey: Survey
+    cspSurvey: Survei
     cspAssessment: Bab Penilaian
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Bab 2: AP Tepat Kinerja Tugas'

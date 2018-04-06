@@ -35,8 +35,8 @@
             students to create authentic artifacts.
         allthethingscourse:
           title: allthethingscourse
-          description_short: "Đây là một khóa học cho allthethings"
-          description_student: "Đây là một khóa học cho allthethings và có mô tả dài
-            hơn cho học sinh"
-          description_teacher: "Đây là một khóa học cho allthethings và có mô tả dài
-            hơn cho giáo viên"
+          description_short: Đây là một khóa học cho allthethings
+          description_student: Đây là một khóa học cho allthethings và có mô tả dài
+            hơn cho học sinh
+          description_teacher: Đây là một khóa học cho allthethings và có mô tả dài
+            hơn cho giáo viên

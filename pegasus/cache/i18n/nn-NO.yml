@@ -307,8 +307,7 @@
     det ut! Takk %{donor_twitter} for at de støttar @codeorg
   twitter_teach_cs: 9 av 10 er enige i at skular bør undervise koding. http://youtu.be/nKIu9yen5nc.
     Besøk https://code.org/.
-  twitter_cs_foundational: "Å lære programmering er fundamentalt for alle elevar.
-    https://youtu.be/QvyTEx1wyOY."
+  twitter_cs_foundational: Å lære programmering er fundamentalt for alle elevar. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Prøv Kodetimen
   beyond_hoc: Etter Kodetimen
   what_gender: Er du jente eller gut?
@@ -786,7 +785,7 @@
   dashboard_landing_available_title: Tilgjengelege kurs
   dashboard_landing_available_courses: Her er kursa som er tilgjengelege for deg og
     elevane dine.
-  dashboard_landing_more_tutorials: "Ønsker du å sjå fleire opplæringskurs?"
+  dashboard_landing_more_tutorials: Ønsker du å sjå fleire opplæringskurs?
   dashboard_landing_more_tutorials_desc: Det finst fleire opplæringskurs som vert
     <a href="/learn/beyond">tilbydd av partnarane våre.</a> Lær å programmere med
     robotar, lage nettsider, lag din eigen app eller utforsk andre språk som C++,
@@ -815,7 +814,7 @@
     og programmering i matematikk og realfag - som eit verktøy for å læra matematiske
     og realfaglege konsept. For å melda di interesse for fagleg utviklande workshops,
     søke etter ein <a href="/educate/districts">partnar i distriktet</a> med Code.org.
-  dashboard_high_courses: "Årslange kurs for vidaregåande skule"
+  dashboard_high_courses: Årslange kurs for vidaregåande skule
   dashboard_high_courses_desc: Programmet vårt for vidaregåande skular tilbyr heilårskurs
     i datavitskap ved å førebu lærarar til å tilby dette nye fagområdet. For å melde
     deg på de profesjonelle utviklingsverkstadene, søk etter <a href="/educate/districts">partnar
@@ -1136,8 +1135,8 @@
     til Kodetimen,<a href="https://hourofcode.com/activity-guidelines">klikk her.</a>
   how_to_teach_hoc: Korleis undervise ein Kodetime
   more_resources_educators: Fleire ressursar for lærarar og utdannarar
-  beyond_submission: "Ønsker du sende inn ei oppskrift til Kodetimen? Sjå vilkår og
-    innleveringsskjemaet."
+  beyond_submission: Ønsker du sende inn ei oppskrift til Kodetimen? Sjå vilkår og
+    innleveringsskjemaet.
   third_party_submission: Vil du sende ei oppskrift og bli oppført her? <a href="%{submission_url}">Sjå
     kriteria og innleveringsskjemaet.</a>
   participants: deltakarar
@@ -1145,11 +1144,11 @@
   teachers_notes_hoc: 'Lærarar: Les viktige opplæringsnotat her'
   previous: Førre
   next: Neste
-  older_systems: "Øvingar frå partnarar som fungerer på eldre system"
+  older_systems: Øvingar frå partnarar som fungerer på eldre system
   older_systems_subheading: Desse skal fungere på eldre nettlesarar. For å få tilgang
     til alle øvingane må du oppgradere til ein <a href="http://browsehappy.com/" target="_blank">moderne
     nettlesar.</a>
-  mobile_devices: "Øvingar for mobile einingar"
+  mobile_devices: Øvingar for mobile einingar
   frozen_name: Koding med Anna og Elsa
   starwars_name: 'Star Wars: Bygg ein galakse med kode'
   codeorg_name: Klassisk labyrint
@@ -1536,12 +1535,12 @@
     enkel programmering, for dei på 4 år og oppover, på iOS eller Android (eller nettleser).
     Lær å sette kommandoar i rett rekkefylgje, identifiserer mønster, bruke prosedyrer
     og nytte løkker!
-  codehs_longdescription: "Å gi kommandoar til ei datamaskin, som er det programmering
+  codehs_longdescription: Å gi kommandoar til ei datamaskin, som er det programmering
     handlar om, er akkurat som å gi kommandoar til ein hund. Lær å kode med hunden
     Karel&mdash; ein artig, tilgjengelig og visuell introduksjon til programmering
     som lærer elevane grunnleggjande begreper som kommandoar og funksjonar på nybegynnernivå.
     Opplæringa er retta mot elever, men lærarar kan registrere seg for tilgang til
-    lærarverktøy og spore framgangen til elevane!"
+    lærarverktøy og spore framgangen til elevane!
   codecademy_longdescription: Codecademy er ein interaktiv, elevstyrt introduksjon
     til grunnleggjande datavitskap med JavaScript som blir brukt av millionar av elevar
     over heile verda. Vi har utarbeida ein problemfri Kodetime-opplevelse med tilhørande

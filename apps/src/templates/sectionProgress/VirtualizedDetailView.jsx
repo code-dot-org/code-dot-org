@@ -1,7 +1,13 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { MultiGrid } from 'react-virtualized';
-import ProgressBubble from '../progress/ProgressBubble';
+import StudentProgressDetailCell from '@cdo/apps/templates/sectionProgress/StudentProgressDetailCell';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import styleConstants from '../../styleConstants';
+import {
+  sectionDataPropType,
+  scriptDataPropType,
+  studentLevelProgressPropType
+} from './sectionProgressRedux';
 
 const styles = {
   cell: {
@@ -34,19 +40,9 @@ const styles = {
 export default class VirtualizedDetailView extends Component {
 
   static propTypes = {
-    section: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      students: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-      })).isRequired
-    }).isRequired,
-    scriptData: PropTypes.shape({
-      stages: PropTypes.arrayOf(PropTypes.shape({
-        levels: PropTypes.arrayOf(PropTypes.object).isRequired
-      })),
-      id: PropTypes.number.isRequired,
-    }).isRequired,
+    section: sectionDataPropType.isRequired,
+    scriptData: scriptDataPropType.isRequired,
+    studentLevelProgress: studentLevelProgressPropType.isRequired,
   };
 
   state = {
@@ -57,7 +53,12 @@ export default class VirtualizedDetailView extends Component {
   };
 
   cellRenderer = ({columnIndex, key, rowIndex, style}) => {
-    const {section, scriptData} = this.props;
+    const {section, scriptData, studentLevelProgress} = this.props;
+    // Subtract 2 to account for the 2 header rows.
+    // We don't want leave off the first 2 students.
+    const studentStartIndex = rowIndex-2;
+    // Subtract 1 to account for the student name column.
+    const stageIdIndex = columnIndex-1;
 
     return (
       <div className={styles.Cell} key={key} style={style}>
@@ -72,7 +73,7 @@ export default class VirtualizedDetailView extends Component {
         )}
         {(rowIndex === 1 && columnIndex >= 1) && (
           <span style={styles.cell}>
-            {scriptData.stages[columnIndex-1].levels.map((level, i) =>
+            {scriptData.stages[stageIdIndex].levels.map((level, i) =>
               <FontAwesome
                 className={level.icon ? level.icon: "fas fa-question"}
                 style={styles.icon}
@@ -84,19 +85,17 @@ export default class VirtualizedDetailView extends Component {
         {(rowIndex >= 2 && columnIndex === 0) && (
           <span style={styles.cell}>
             <a href={`/teacher-dashboard#/sections/${section.id}/student/${section.students[rowIndex-2].id}/script/${scriptData.id}`}>
-              {section.students[rowIndex-2].name}
+              {section.students[studentStartIndex].name}
             </a>
           </span>
         )}
         {rowIndex > 1 && columnIndex > 0 && (
-          <ProgressBubble
-            level={{
-              levelNumber: 3,
-              status: "complete",
-              url: "/foo/bar",
-              icon: "fa-document"
-            }}
-            disabled={false}
+          <StudentProgressDetailCell
+            studentId={section.students[studentStartIndex].id}
+            section={section}
+            studentLevelProgress={studentLevelProgress}
+            stageId={stageIdIndex}
+            scriptData={scriptData}
           />
         )}
       </div>
@@ -107,11 +106,13 @@ export default class VirtualizedDetailView extends Component {
     const {scriptData} = this.props;
     const NAME_COLUMN_WIDTH = 150;
     const PROGRESS_BUBBLE_WIDTH = 50;
+    // Subtract 1 to account for the student name column.
+    const stageIdIndex = index-1;
 
     if (index === 0) {
       return NAME_COLUMN_WIDTH;
     }
-    return scriptData.stages[index-1].levels.length * PROGRESS_BUBBLE_WIDTH;
+    return scriptData.stages[stageIdIndex].levels.length * PROGRESS_BUBBLE_WIDTH;
   };
 
   render() {
@@ -129,14 +130,14 @@ export default class VirtualizedDetailView extends Component {
           columnCount={columnCount}
           enableFixedColumnScroll
           enableFixedRowScroll
-          height={300}
+          height={520}
           rowHeight={40}
           rowCount={rowCount}
           style={styles.multigrid}
           styleBottomLeftGrid={styles.bottomLeft}
           styleTopLeftGrid={styles.topLeft}
           styleTopRightGrid={styles.topRight}
-          width={970}
+          width={styleConstants['content-width']}
         />
     );
   }

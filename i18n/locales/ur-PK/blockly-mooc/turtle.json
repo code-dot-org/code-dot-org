@@ -74,13 +74,13 @@
   "penDown": "pencil down",
   "penTooltip": "ڈرائنگ شروع کرنے یا روکنے کے لیے، پینسل کو اٹھاتا یا جھکاتا ہے۔",
   "penUp": "پنسل اَپ",
+  "pointTo": "point to",
   "pixels": "پکسلز",
   "reinfFeedbackMsg": "یہاں ہے آپ کی ڈرائنگ! اس پر کام کرتے رہیں یا اگلے سوال پر چلیں.",
   "setAlpha": "سیٹ ایلفا",
   "setCharacter": "set character to {character}",
   "setColour": "سیٹ کلر",
   "setPattern": "سیٹ پیٹرن",
-  "setStickerSize": "Set sticker size",
   "setWidth": "سیٹ وڈتھ",
   "shareDrawing": "اپنی ڈرائنگ دوسروں کو دکھائیں:",
   "showMe": "مجھے دکھاؤ",
@@ -94,5 +94,6 @@
   "turnTooltip": "مصورکو بتائے گۓ ڈگری کے مطابق بائیں یا دائیں موڑتا ہے.",
   "turtleVisibilityTooltip": "مصور کو دکھاتا یا چھپاتا ہے.",
   "widthTooltip": "پنسل کی چوڑائی بدلتا ہے.",
+  "withSize": "with size",
   "wrongColour": "آپ کی تصویر غلط رنگ کی ہے. اس سوال کے لیے، اسے %1 ہونا چاہئیے."
 }

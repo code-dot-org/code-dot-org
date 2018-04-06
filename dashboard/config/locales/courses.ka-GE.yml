@@ -34,9 +34,9 @@
           description_short: An introductory computer science course that empowers
             students to create authentic artifacts.
         allthethingscourse:
-          title: "ყველაფრისკურსი"
-          description_short: "ეს არის კურსი ყველაფრისათვის"
-          description_student: "ეს კურსი ყველაფრისთვისაა და აქვს უფრო ვრცელი აღწერა
-            მოსწავლეებისათვის"
-          description_teacher: "ეს კურსი ყველაფრისთვისაა და აქვს უფრო ვრცელი აღწერა
-            მოსწავლეებისათვის"
+          title: ყველაფრისკურსი
+          description_short: ეს არის კურსი ყველაფრისათვის
+          description_student: ეს კურსი ყველაფრისთვისაა და აქვს უფრო ვრცელი აღწერა
+            მოსწავლეებისათვის
+          description_teacher: ეს კურსი ყველაფრისთვისაა და აქვს უფრო ვრცელი აღწერა
+            მოსწავლეებისათვის

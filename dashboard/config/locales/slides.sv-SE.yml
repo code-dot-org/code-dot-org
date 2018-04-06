@@ -1057,8 +1057,8 @@
           på den när den går igenom varje block steg för steg.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Åh, där är problemet! Kattens morrhår är 75 bildpunkter långa, inte
-          25."
+        text: Åh, där är problemet! Kattens morrhår är 75 bildpunkter långa, inte
+          25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png

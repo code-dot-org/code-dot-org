@@ -172,9 +172,9 @@
           la tierra esté plana?"
         maze_karel_1_8: Ayúdame a llenar el agujero en el otro extremo del campo,
           con la menor cantidad posible de bloques.
-        maze_karel_1_9: 'Hacerme quitar todas estas pilas de tierra. Trata de usar
-          la menor cantidad de bloques que sea posible. Sugerencia: prueba usando
-          un bloque "mientras".'
+        maze_karel_1_9: 'Hazme quitar todas estas pilas de tierra. Trata de usar la
+          menor cantidad de bloques que sea posible. Sugerencia: prueba usando un
+          bloque "mientras".'
         maze_karel_1_10: Estoy trabajando hasta tarde, así que está oscuro afuera,
           y no sé qué tan grandes son las pilas. Ahora no tengo todas las opciones
           que solía tener en el bloque "mientras". Muéveme a lo largo del campo y
@@ -625,12 +625,12 @@
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Loops in Artist
-        CSF_artist_angles: Angles in Artist
+        CSF_artist_angles: Ángulos en Artist
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El
-          coleccionista'
-        CSF_collector_repeat_loops: Collector Repeat Loops
+          recolector'
+        CSF_collector_repeat_loops: Bucles de repetición de colector
         CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación:
-          El coleccionista'
+          El recolector'
         CSF_create_functions: Crear funciones
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
@@ -642,7 +642,7 @@
         CSF_Super_Digital_Citizen: Super ciudadano digital
         CSF_stevie_big_project: Stevie y el gran proyecto
         CSF_unspotted_bugs: Errores desapercibidos
-        CSF_zuck_loops_short: Repetir bucles
+        CSF_zuck_loops_short: Bucles de repetición
         frozen_intro: Prueba la Hora del Código
         frozen_loops: Introducción a los bucles
         frozen_functions: Introducción a las Funciones
@@ -653,8 +653,8 @@
         infinity_playlab_intro: Jugar Lab - introducción
         infinity_playlab_events: Jugar Lab - eventos
         infinity_playlab_repeat_forever: Jugar Lab - repetir para siempre
-        csd_concept_how_computers_work: Introducción de cómo funcionan las computadoras
-        csd_concept_computer: 'Cómo funcionan las computadoras: ¿Qué hace a una computadora,
+        csd_concept_how_computers_work: Presentando cómo funcionan las computadoras
+        csd_concept_computer: 'Cómo funcionan las computadoras: ¿Qué hace a una computadora
           una computadora?'
         csd_concept_binary_data: 'Cómo funcionan las computadoras: Binario & Datos'
         csd_concept_circuits_logic: 'Cómo funcionan las computadoras: Circuitos &
@@ -680,11 +680,11 @@
         csd_gamelab_variables_1: Introduction to Variables - Part 1
         csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Velocidad
-        csd_weblab_intro_1: Introducción a Laboratorio Web - Parte 1
-        csd_weblab_intro_2: Introducción a Laboratorio Web - Part 2
+        csd_weblab_intro_1: Introducción a Web Lab - Parte 1
+        csd_weblab_intro_2: Introducción a Web Lab - Parte 2
         csd_weblab_css_1: Introducción a CSS - Parte 1
         csd_weblab_css_2: Introducción a CSS - Parte 2
-        csd_weblab_intro_3: Introducción a Laboratorio Web - Part 3
+        csd_weblab_intro_3: Introducción a Web Lab - Parte 3
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -768,24 +768,24 @@
         iceage_intro: Hora de código Era del Hielo - Introducción
         iceage_events: Hora de Código Era del Hielo - Eventos
         iceage_repeat: Hora de Código Era del Hielo - Repetir comando
-        mc_2016_intro: Hora de Code de Minecraft - Introducción
-        mc_2016_loops: Hora de Code de Minecraft - Bucles
-        mc_2016_events: Hora de Code de Minecraft - Eventos
-        mc_2016_spawn: Hora de Code de Minecraft
-        mc_2016_congrats: Hora de Code de Minecraft - Felicitaciones
+        mc_2016_intro: Hora del código de Minecraft - Introducción
+        mc_2016_loops: Hora del código de Minecraft - Ciclos
+        mc_2016_events: Hora del código de Minecraft - Eventos
+        mc_2016_spawn: Hora del código de Minecraft - Generar
+        mc_2016_congrats: Hora del código de Minecraft - Felicidades
         applab_hoc_welcome: Hora del código de App Lab - Bienvenida
         applab_hoc_setproperty: Hora del código de App Lab - setProperty
         applab_hoc_onevent: Hora del código de App Lab - onEvent
         applab_hoc_designmode: Hora del código de App Lab - Modo de diseño
         applab_hoc_share: Hora del código de App Lab - Compartir
         mc_2017_agent_intro: Hora del código de Minecraft - El agente
-        mc_2017_repeat: Hora del código de Minecraft - Repetir bucles
+        mc_2017_repeat: Hora del código de Minecraft - Repetir ciclos
         mc_2017_functions: Hora del código de Minecraft - Funciones
-        mc_2017_congratulations: Hora de Code de Minecraft - Felicitaciones
+        mc_2017_congratulations: Hora del código de Minecraft - Felicidades
         mc_2017_puzzle_1: Hora del código de Minecraft - El agente
-        mc_2017_puzzle_3: Hora del código de Minecraft - Repetir bucles
+        mc_2017_puzzle_3: Hora del código de Minecraft - Repetir ciclos
         mc_2017_puzzle_8: Hora del código de Minecraft - Funciones
-        mc_2017_puzzle_12: Hora del código de Minecraft - Juego Gratis
+        mc_2017_puzzle_12: Hora del código de Minecraft - Juego libre
         hint_videos_d_11_3_first: 'Videos sugeridos: D.11.3 Primero'
         hint_videos_d_11_3_last: 'Videos sugeridos: D.11.3 Último'
         hint_videos_d_11_4_first: 'Videos sugeridos: D.11.4 Primero'
@@ -806,7 +806,10 @@
         applab_intro_designmode: App Lab - Modo de diseño
         applab_intro_share: App Lab - Comparte tu aplicación
         csd_applab_arrays: Introduction to Arrays
-        CSF_skinOverview_Harvester: The Harvester
+        CSF_skinOverview_Harvester: El recolector
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -1,16 +1,16 @@
 "he-IL":
-  hour_of_code: "שעת תיכנות"
-  hello: "הי עולם"
-  'yes': "כן"
-  'no': "לא"
-  select_language: "אנא בחר את שפתך"
+  hour_of_code: שעת תיכנות
+  hello: הי עולם
+  'yes': כן
+  'no': לא
+  select_language: אנא בחר את שפתך
   upgrade_ie_message: Code.org יסיר בקרוב תמיכה ב- Internet Explorer 8, 9 ו-10. אנא
     שדרג לדפדפן מודרני.
   upgrade_ie_message_csedweek: Code.org יסיר בקרוב תמיכה ב- Internet Explorer 8, 9
     ו-10. אנא שדרג לדפדפן מודרני.
-  upgrade_ie_link: "למד עוד"
-  en: "מדעי המחשב"
-  computer_science_edweek: "שבוע החינוך למדעי המחשב"
+  upgrade_ie_link: למד עוד
+  en: מדעי המחשב
+  computer_science_edweek: שבוע החינוך למדעי המחשב
   csedweek_dates: 8-14 בדצמבר, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">שעה של קוד</a> מגיעה. כל המורים והמארגנים נקראים, <a href="http://hourofcode.com"
@@ -19,27 +19,27 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">האם אתה מורה למדעי המחשב? ראה עוד משאבים של CSEdWeek</a>'
   n_have_learned_an_hoc: "<h1>נסו</h1><h2>שעת קוד</h2><h3># מוגשת</h3>"
-  anybody_can_learn: "כל אחד יכול ללמוד."
-  learn_now: "למד עכשיו"
-  petition_message: "כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב"
-  petition_sign_message: "אם אתה מסכים, חתום בשמך. הצטרף ל- # אחרים."
-  petition_sign_message_support: "אם אתם תומכים בנו חיתמו את שמכם. צרפו# נוספים."
-  petition_join_others: "הצטרף #לאחרים"
-  name: "שם"
-  email: "דואר אלקטרוני"
-  zipcode: "מיקוד או מדינה"
-  submit: "שלח"
-  twentyhours_heading: "נסה את קורס המבוא למדעי המחשב"
-  twentyhours_text: "גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
-    בתכנות בקורס הבא הזה."
-  og_title: "לכל ילד מגיע הזדמנות"
+  anybody_can_learn: כל אחד יכול ללמוד.
+  learn_now: למד עכשיו
+  petition_message: כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב
+  petition_sign_message: 'אם אתה מסכים, חתום בשמך. הצטרף ל- # אחרים.'
+  petition_sign_message_support: אם אתם תומכים בנו חיתמו את שמכם. צרפו# נוספים.
+  petition_join_others: 'הצטרף #לאחרים'
+  name: שם
+  email: דואר אלקטרוני
+  zipcode: מיקוד או מדינה
+  submit: שלח
+  twentyhours_heading: נסה את קורס המבוא למדעי המחשב
+  twentyhours_text: גמרת את שעת הקוד הראשונה שלך? למד עוד מבסיס מדעי המחשב ומושגים
+    בתכנות בקורס הבא הזה.
+  og_title: לכל ילד מגיע הזדמנות
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
-  og_description: "כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science.
-    It's changing everything."
+  og_description: כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science.
+    It's changing everything.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "שבוע החינוך למדעי המחשב"
+  csedweek_og_title: שבוע החינוך למדעי המחשב
   csedweek_og_description: 4-10 בדצמבר, 2017. מדעי המחשב הם הבסיס שעל כל תלמידה ללמוד.
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
     science is foundational for every student to learn.
@@ -47,98 +47,98 @@
     for every student to learn.
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
-  hoc2014_students: "סטודנטים"
-  hoc2014_try: "נסו זאת"
-  hoc2014_teachers: "מורים"
-  hoc2014_host: "ארח זאת"
-  hoc2014_everyone: "כולם"
-  hoc2014_support: "תמוך בו &#x25BE;"
-  hoc2014_whatishoc: "מהו Hour of Code?"
+  hoc2014_students: סטודנטים
+  hoc2014_try: נסו זאת
+  hoc2014_teachers: מורים
+  hoc2014_host: ארח זאת
+  hoc2014_everyone: כולם
+  hoc2014_support: תמוך בו &#x25BE;
+  hoc2014_whatishoc: מהו Hour of Code?
   csedweek_map_header: "# CSEdWeek / אירועי שעה של קוד ברחבי העולם"
-  csedweek_map_signup: "העלה את התכנות שלך"
-  csedweek_map_search_placeholder: "חפש אירועי שעה של קוד"
-  csedweek_map_search_search: "חפש"
-  csedweek_map_search_reset: "אפס"
-  csedweek_map_legend_title: "מקרא"
-  csedweek_map_legend_event: "אירוע שעה של קוד"
-  csedweek_map_legend_cs_tech_jam: "אירוע מיוחד"
-  cded_sign_up: "הירשם"
-  cded_try_it: "נסו זאת"
-  try_now: "נסה עכשיו"
-  california_heading: "בקש מבית הספר שלך ללמד מדעי המחשב"
-  california_text: "כל מורה יכול להציע את <a href='http://learn.code.org/'> קורס המבוא
+  csedweek_map_signup: העלה את התכנות שלך
+  csedweek_map_search_placeholder: חפש אירועי שעה של קוד
+  csedweek_map_search_search: חפש
+  csedweek_map_search_reset: אפס
+  csedweek_map_legend_title: מקרא
+  csedweek_map_legend_event: אירוע שעה של קוד
+  csedweek_map_legend_cs_tech_jam: אירוע מיוחד
+  cded_sign_up: הירשם
+  cded_try_it: נסו זאת
+  try_now: נסה עכשיו
+  california_heading: בקש מבית הספר שלך ללמד מדעי המחשב
+  california_text: כל מורה יכול להציע את <a href='http://learn.code.org/'> קורס המבוא
     החינמי שלנו</a>.  כל בית ספר יסודי יכול <a href='http://code.org/educate/k5'>ללמד
     מדעי המחשב</a>. בקשו מבתי ספר תיכוניים <a href='http://code.org/educate/districts'>להשתתף
-    עימנו."
-  california_button: "למד עוד"
-  flappy_heading: "יום הולדת flappy Code.org"
-  flappy_text: "לCode.org מלאה שנה. <br/> <br/> חגגו איתנו על-ידי יצירת משחק <b>פלאפי</b>
-    מותאם אישית משלך. קדד חוקים משלך ושתף אותו עם חברים!"
-  view_english_site: "עבור לאתר באנגלית"
-  non_english_tutorials: "ההדרכות תורגמו לשפות רבות:"
-  write_your_first_program: "כתוב את תוכנת המחשב הראשונה שלך"
-  learn_cs_concepts: "למד את המושגים הבסיסיים של מדעי המחשב באמצעות תכנות גרור ושחרר.
+    עימנו.
+  california_button: למד עוד
+  flappy_heading: יום הולדת flappy Code.org
+  flappy_text: לCode.org מלאה שנה. <br/> <br/> חגגו איתנו על-ידי יצירת משחק <b>פלאפי</b>
+    מותאם אישית משלך. קדד חוקים משלך ושתף אותו עם חברים!
+  view_english_site: עבור לאתר באנגלית
+  non_english_tutorials: 'ההדרכות תורגמו לשפות רבות:'
+  write_your_first_program: כתוב את תוכנת המחשב הראשונה שלך
+  learn_cs_concepts: למד את המושגים הבסיסיים של מדעי המחשב באמצעות תכנות גרור ושחרר.
     זו ערכת לימוד דמוית משחק המלווה בהרצאות וידאו בכיכובם של ביל גייטס, מארק צוקרברג,
-    הציפור הכועסת, וצמחים נגד זומבים. למד לולאות-חזור, הצהרות אם-אז ואלגוריתמים בסיסיים."
-  all_ages: "כל הגילאים"
-  beginner: "מתחיל"
+    הציפור הכועסת, וצמחים נגד זומבים. למד לולאות-חזור, הצהרות אם-אז ואלגוריתמים בסיסיים.
+  all_ages: כל הגילאים
+  beginner: מתחיל
   n_participants: "# משתתפים"
-  go: "קדימה"
-  thank_you_: "תודה!"
-  congratulations: "ברכות!"
-  congratulations_on_completing_hoc: "ברכות על השלמת שעה אחת של קוד"
+  go: קדימה
+  thank_you_: תודה!
+  congratulations: ברכות!
+  congratulations_on_completing_hoc: ברכות על השלמת שעה אחת של קוד
   congratulations_volunteer: 'ברכות: עכשיו לאחר שניסית את שעה של קוד, <a href="https://code.org/volunteer">
     הרשם בכדי להתנדב בכיתה </a>, ותעזור לסטודנטים ללמוד שעה של קוד!'
-  congratulations_on_completing_course1: "ברכות על סיום קורס 1"
-  congratulations_on_completing_course2: "ברכות על סיום קורס 2"
-  congratulations_on_completing_course3: "ברכות על סיום קורס 3"
-  congratulations_on_completing_course4: "ברכות על סיום קורס 4"
+  congratulations_on_completing_course1: ברכות על סיום קורס 1
+  congratulations_on_completing_course2: ברכות על סיום קורס 2
+  congratulations_on_completing_course3: ברכות על סיום קורס 3
+  congratulations_on_completing_course4: ברכות על סיום קורס 4
   congratulations_on_completing_coursea: Congratulations on completing Course A
   congratulations_on_completing_courseb: Congratulations on completing Course B
   congratulations_on_completing_coursec: Congratulations on completing Course C
   congratulations_on_completing_coursed: Congratulations on completing Course D
   congratulations_on_completing_coursee: Congratulations on completing Course E
   congratulations_on_completing_coursef: Congratulations on completing Course F
-  congratulations_on_completing_accelerated: "ברכות על סיום הקורס המואץ"
-  congrats_next_tutorials_title: "הוסמכת לשלב הבא"
+  congratulations_on_completing_accelerated: ברכות על סיום הקורס המואץ
+  congrats_next_tutorials_title: הוסמכת לשלב הבא
   congrats_next_tutorials_desc: נסה את ההדרכות הקצרות יותר באורך כשעה, או נסה <a href="%{current_path}/next">
     שותף הדרכה</a>.
-  get_a_certificate_of_achievement: "קבל תעודה על ההישג"
-  view_course: "צפה בקורס"
-  view_unit: "הצג יחידה"
-  make_app: "צור אפליקציה"
-  congrats_guest_speaker_title: "מצא מרצה אורח לכיתה שלך"
+  get_a_certificate_of_achievement: קבל תעודה על ההישג
+  view_course: צפה בקורס
+  view_unit: הצג יחידה
+  make_app: צור אפליקציה
+  congrats_guest_speaker_title: מצא מרצה אורח לכיתה שלך
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
     real world by inviting a guest speaker to your classroom. You can use our map
     of volunteers to contact local volunteers to visit your classroom, or search in
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: "מצא מרצה אורח"
-  congrats_third_party_title: "השתמש בכישורים החדשים שלך באתרים והאפליקציות הללו"
-  third_party_gradelevel_kto8: "מגן חובה עד ח'"
-  third_party_gradelevel_kto2: "גן חובה -ב'"
-  third_party_gradelevel_2to8: "כיתות ב' עד ח'"
-  third_party_gradelevel_4to12: "כיתות ד' עד ח'"
-  third_party_gradelevel_5to12: "כיתות ה' עד ח'"
-  third_party_gradelevel_6plus: "כיתות ו' ומעלה"
-  third_party_gradelevel_8plus: "כיתות ח' ומעלה"
-  third_party_platform_all: "פלטפורמה: דפדפן, אייפד ואנדרואיד"
-  third_party_platform_mobile: "פלטפורמה: אייפד ואנדרואיד"
-  third_party_platform_web: "פלטפורמה: דפדפן"
-  third_party_price_varies: "המחיר משתנה לפי התוכנית"
-  third_party_price_free: "מחיר: חינם"
-  third_party_price_299: "מחיר: $2.99/הורדה"
-  third_party_price_individual: "מחיר יחיד: ניסיון חינם ו - $25/לחודש"
-  third_party_price_school: "המחיר לבית הספר: תוכניות חינמיות ותוכניות פרו החל מ2500$
-    ומעלה"
-  third_party_tynker_desc: "פלטפורמת מחשוב יצירתי של Tynker מסייעת לילדים לפתח חשיבה
+  congrats_guest_speaker_cta: מצא מרצה אורח
+  congrats_third_party_title: השתמש בכישורים החדשים שלך באתרים והאפליקציות הללו
+  third_party_gradelevel_kto8: מגן חובה עד ח'
+  third_party_gradelevel_kto2: גן חובה -ב'
+  third_party_gradelevel_2to8: כיתות ב' עד ח'
+  third_party_gradelevel_4to12: כיתות ד' עד ח'
+  third_party_gradelevel_5to12: כיתות ה' עד ח'
+  third_party_gradelevel_6plus: כיתות ו' ומעלה
+  third_party_gradelevel_8plus: כיתות ח' ומעלה
+  third_party_platform_all: 'פלטפורמה: דפדפן, אייפד ואנדרואיד'
+  third_party_platform_mobile: 'פלטפורמה: אייפד ואנדרואיד'
+  third_party_platform_web: 'פלטפורמה: דפדפן'
+  third_party_price_varies: המחיר משתנה לפי התוכנית
+  third_party_price_free: 'מחיר: חינם'
+  third_party_price_299: 'מחיר: $2.99/הורדה'
+  third_party_price_individual: 'מחיר יחיד: ניסיון חינם ו - $25/לחודש'
+  third_party_price_school: 'המחיר לבית הספר: תוכניות חינמיות ותוכניות פרו החל מ2500$
+    ומעלה'
+  third_party_tynker_desc: פלטפורמת מחשוב יצירתי של Tynker מסייעת לילדים לפתח חשיבה
     חישובית, מיומנויות תיכנות בדרך כיפית אינטואיטיבית ומלאת דמיון. שפת התכנות החדשנית
     שלנו של תכנות ויזואלי, הקורסים הם אינטראקטיביים ובקצב אישי, פעילויות תכנות מבוססות
-    משחק נועדו לספק מבוא קל תכנות, ולהעצים את הילדים לחדש וליצור."
-  third_party_tynker_btn_curriculum: "נסו את תוכנית הלימודים של Tynker עבור גילאי
-    ראשית קריאה"
-  third_party_tynker_btn_site: "בקר ב - Tynker"
+    משחק נועדו לספק מבוא קל תכנות, ולהעצים את הילדים לחדש וליצור.
+  third_party_tynker_btn_curriculum: נסו את תוכנית הלימודים של Tynker עבור גילאי ראשית
+    קריאה
+  third_party_tynker_btn_site: בקר ב - Tynker
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -166,7 +166,7 @@
     can share whatever you create, explore what others have created and learn from
     each other!
   third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: "פורום מדעי המחשב האקדמיה של קהאן"
+  third_party_khan_btn_forum: פורום מדעי המחשב האקדמיה של קהאן
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
@@ -180,22 +180,22 @@
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
-  third_party_codehs_btn_try: "מבוא למדעי המחשב מידע נוסף עבור בתי ספר"
+  third_party_codehs_btn_try: מבוא למדעי המחשב מידע נוסף עבור בתי ספר
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
     native education.
-  third_party_codecademy_btn_curriculum: "הורד את תוכנית הלימודים של Codecademy"
-  third_party_codecademy_btn_site: "בקר את Codecademy"
-  third_party_organization: "ארגון"
-  third_party_curriculum: "תוכנית לימוד"
-  third_party_pricing: "מחירים"
-  third_party_cost_free: "חינם לתלמידים ולמורים"
+  third_party_codecademy_btn_curriculum: הורד את תוכנית הלימודים של Codecademy
+  third_party_codecademy_btn_site: בקר את Codecademy
+  third_party_organization: ארגון
+  third_party_curriculum: תוכנית לימוד
+  third_party_pricing: מחירים
+  third_party_cost_free: חינם לתלמידים ולמורים
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: 2.99 $/ להורדה
-  third_party_cost_free_399: "נסיון חינם, $399 לכיתה"
-  third_party_cost_free_2: "נסיון חינם, $2 לסטודנט"
-  third_party_cost_free_10: "נסיון חינם, $9.99 לחודש"
+  third_party_cost_free_399: נסיון חינם, $399 לכיתה
+  third_party_cost_free_2: נסיון חינם, $2 לסטודנט
+  third_party_cost_free_10: נסיון חינם, $9.99 לחודש
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
@@ -206,64 +206,64 @@
   third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
   third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: "כ- 20 שיעורים, המיועדות לכיתות ב' עד ח'"
+  third_party_desc_20_2to8: כ- 20 שיעורים, המיועדות לכיתות ב' עד ח'
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
-  enter_valid_age: "בבקשה, בחר את גילך"
-  enter_valid_email: "אנא הכנס כתובת דוא״ל תקינה"
-  get_a_certificate_message: "אנחנו נשלח לך תעודה ומידע על איך <a href='/learn/beyond'>ללמוד
-    מעבר לשעה אחת</a>"
-  get_a_certificate_message_after: "לחץ על האישור כדי להוריד או להדפיס אותו. עכשיו,
+  enter_valid_age: בבקשה, בחר את גילך
+  enter_valid_email: אנא הכנס כתובת דוא״ל תקינה
+  get_a_certificate_message: אנחנו נשלח לך תעודה ומידע על איך <a href='/learn/beyond'>ללמוד
+    מעבר לשעה אחת</a>
+  get_a_certificate_message_after: לחץ על האישור כדי להוריד או להדפיס אותו. עכשיו,
     המשך עם <a href='http://studio.code.org'> קורסים אחרים</a> שלנו, או ראה אפשרויות
-    נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>."
-  thanks_for_submitting: "תודה על השליחה!"
-  if_you_enjoyed: "אם נהנית מהלמידה, בקש מחבריך לנסות גם! אנחנו רוצים שכל העולם ילמד."
-  personalize_certificate: "התאם אישית את האישור שלך"
-  share_achievement: "שתף בהישגיך"
-  beyond_hour_message: "המשך עם <a href='http://studio.code.org'> קורסים אחרים</a>
-    שלנו, או ראה אפשרויות נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>."
-  leaderboards_for_hoc: "טבלת המובילים בשעה של קוד."
+    נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>.
+  thanks_for_submitting: תודה על השליחה!
+  if_you_enjoyed: אם נהנית מהלמידה, בקש מחבריך לנסות גם! אנחנו רוצים שכל העולם ילמד.
+  personalize_certificate: התאם אישית את האישור שלך
+  share_achievement: שתף בהישגיך
+  beyond_hour_message: המשך עם <a href='http://studio.code.org'> קורסים אחרים</a>
+    שלנו, או ראה אפשרויות נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>.
+  leaderboards_for_hoc: טבלת המובילים בשעה של קוד.
   support_url: http://support.code.org/
-  country: "מדינה"
-  city: "עיר"
-  gender: "מין"
-  boys: "בנים"
-  girls: "בנות"
-  give_my_hour: "תן את השעה שלי ל-:"
-  girls_team: "קבוצת הבנות"
-  boys_team: "חבורת הבנים"
-  tell_the_world: "ספר לעולם!"
-  thanks_for_voting: "תודה על ההצבעה!"
-  share_on_facebook: "שתף בפייסבוק"
-  share_on_twitter: "שתף בטוויטר"
-  beyond_an_hour: "מעבר שעה של קוד"
-  get_started: "התחל"
-  i_agree: "מסכים"
+  country: מדינה
+  city: עיר
+  gender: מין
+  boys: בנים
+  girls: בנות
+  give_my_hour: 'תן את השעה שלי ל-:'
+  girls_team: קבוצת הבנות
+  boys_team: חבורת הבנים
+  tell_the_world: ספר לעולם!
+  thanks_for_voting: תודה על ההצבעה!
+  share_on_facebook: שתף בפייסבוק
+  share_on_twitter: שתף בטוויטר
+  beyond_an_hour: מעבר שעה של קוד
+  get_started: התחל
+  i_agree: מסכים
   participant_select: "-בחר-"
-  participant_student: "תלמיד"
-  participant_parent: "הורה"
-  participant_educator: "מחנך"
-  participant_engineer: "מהנדס תוכנה"
-  participant_other: "אף אחד מאלו"
-  print_all: "הדפס הכל"
-  print_ice_art: "הדפס את אמנות הקרח שלך"
-  create_art_with_zombie: "או צור אמנות מתקדמת עם זומבי"
-  i_am_a: "אני"
-  never_spam: "לעולם לא נשלח לך דואר זבל"
-  enter_country: "הזן מדינה באם מחוץ לארצות הברית"
-  used_infrequent_updates: "משמש עבור עדכונים נדירים בלבד"
-  privacy_practices_children: "ראה את נהלי הפרטיות שלנו עבור ילדים"
-  petition_thankyou: "תודה על חתימת העצומה"
-  continue_learning_header: "המשך ללמוד מעבר לשעה אחת"
-  continue_learning_body: "הרבה אפשרויות קיימות. אתה יכול ללמוד מהאינטרנט, בבית הספר
-    או במחנה קיץ."
-  learn_code_studio: "נסו את הקורסים של Code.org"
-  learn_next_level: "המשך לשלב הבא"
-  learn_online: "נסה קורסים אחרים באינטרנט"
-  learn_classes: "מצא כיתות מקומיות"
+  participant_student: תלמיד
+  participant_parent: הורה
+  participant_educator: מחנך
+  participant_engineer: מהנדס תוכנה
+  participant_other: אף אחד מאלו
+  print_all: הדפס הכל
+  print_ice_art: הדפס את אמנות הקרח שלך
+  create_art_with_zombie: או צור אמנות מתקדמת עם זומבי
+  i_am_a: אני
+  never_spam: לעולם לא נשלח לך דואר זבל
+  enter_country: הזן מדינה באם מחוץ לארצות הברית
+  used_infrequent_updates: משמש עבור עדכונים נדירים בלבד
+  privacy_practices_children: ראה את נהלי הפרטיות שלנו עבור ילדים
+  petition_thankyou: תודה על חתימת העצומה
+  continue_learning_header: המשך ללמוד מעבר לשעה אחת
+  continue_learning_body: הרבה אפשרויות קיימות. אתה יכול ללמוד מהאינטרנט, בבית הספר
+    או במחנה קיץ.
+  learn_code_studio: נסו את הקורסים של Code.org
+  learn_next_level: המשך לשלב הבא
+  learn_online: נסה קורסים אחרים באינטרנט
+  learn_classes: מצא כיתות מקומיות
   learn_back_to_minecraft: Keep learning with Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
-  just_did_hoc: "בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@"
+  just_did_hoc: בדיוק עכשיו עשיתי את ה-HourOfCode# - לכו לבדוק! codeorg@
   just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
     supporting @codeorg
   just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
@@ -310,48 +310,48 @@
     for supporting @codeorg
   just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
     Thanks %{donor_twitter} for supporting @codeorg
-  twitter_teach_cs: "מדוע אין יות ר בתי ספר המלמדים מדעי המחשב? אנחנו יכולים לתקן
-    זאת. http://youtu.be/nKIu9yen5nc . בקרו ב -  http://code.org/ למידע נוסף."
+  twitter_teach_cs: מדוע אין יות ר בתי ספר המלמדים מדעי המחשב? אנחנו יכולים לתקן זאת.
+    http://youtu.be/nKIu9yen5nc . בקרו ב -  http://code.org/ למידע נוסף.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
     https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: "למד שעה של קוד"
-  beyond_hoc: "מעבר לשעה אחת"
-  what_gender: "מהו המין שלך?"
-  girl: "ילדה"
-  boy: "ילד"
-  help_recruit_coders: "עזור לנו לגייס עוד כותבי קוד לצוות שלך!"
-  help_recruit: "עזור לנו לגייס עוד כותבי קוד!"
-  lines_of_code: "מעל <b># שורות קוד</b> נכתבו עד כה."
+  learn_hoc: למד שעה של קוד
+  beyond_hoc: מעבר לשעה אחת
+  what_gender: מהו המין שלך?
+  girl: ילדה
+  boy: ילד
+  help_recruit_coders: עזור לנו לגייס עוד כותבי קוד לצוות שלך!
+  help_recruit: עזור לנו לגייס עוד כותבי קוד!
+  lines_of_code: מעל <b># שורות קוד</b> נכתבו עד כה.
   lines_of_code_alt: "<b>#</b> שורות קוד נכתבו על ידי תלמידים"
-  who_has_done_hoc: "מי עשה את #HourOfCode? @codeorg"
+  who_has_done_hoc: 'מי עשה את #HourOfCode? @codeorg'
   who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
-  hoc_leaderboards: "לוח התוצאות של Hour of Code"
+  hoc_leaderboards: לוח התוצאות של Hour of Code
   students_and_lines: "{students}% תלמידים סיימו את ה- Hour of Code וכתבו {lines}%
     שורות של קוד."
-  start_hoc: "התחל עכשיו בשעה של קוד"
-  contact_form_topic_press: "עיתונות/תקשורת (ראיון או הרצאה)"
+  start_hoc: התחל עכשיו בשעה של קוד
+  contact_form_topic_press: עיתונות/תקשורת (ראיון או הרצאה)
   stats_nina: '"כל יום הניב תוצאות דומות&mdash; 100% התחייבות." נינה ניקולס פרי, מורה'
   stats_student: '". ידעתי שזאת היתה הזדמנות <b>של פעם בחיים</b> ."-מריאנה אלזאט,
     תלמידת כיתה ה'''
   stats_michael: '" <b>מעולם לא</b> ראיתי את התלמידים שלי מתרגשים כך מלמידה." - מיכאל
     קלארק, מורה'
-  studiobar_title: "חקור את <a href='http://studio.code.org'> קוד סטודיו</a>"
-  studiobar_title_nolink: "חקור את  קוד סטודיו"
-  studiobar_elementary_title: "קורסים בסיסיים"
-  studiobar_elementary_body: "שלושת הקורסים החדשים שלנו עבור K &#8209; 5"
-  studiobar_hoc_title: "שעה של קוד"
-  studiobar_hoc_body: "למד לקודד עם אנגרי בירדס"
-  studiobar_flappy_title: "קוד מתנופף"
-  studiobar_flappy_body: "צור ושתף את משחק הפלאפי בירד שלך"
-  studiobar_teacher_title: "נוצר עבור מורים"
-  studiobar_teacher_body: "הצג את קוד הסטודיו בכיתתך"
-  studiobar_frozen_title: "שעה של קוד"
-  studiobar_frozen_body: "צור עולם פלאים חורפי עם אלסה ואנה"
-  studiobar_donate_title: "תרום"
-  studiobar_donate_body: "ילד אחד ילמד עבור כל דולר תרומה"
-  studiobar_shop_title: "חנות"
-  studiobar_shop_body: "שברו סטריאוטיפים. לבשו את הלוגו שלנו בגאווה."
+  studiobar_title: חקור את <a href='http://studio.code.org'> קוד סטודיו</a>
+  studiobar_title_nolink: חקור את  קוד סטודיו
+  studiobar_elementary_title: קורסים בסיסיים
+  studiobar_elementary_body: שלושת הקורסים החדשים שלנו עבור K &#8209; 5
+  studiobar_hoc_title: שעה של קוד
+  studiobar_hoc_body: למד לקודד עם אנגרי בירדס
+  studiobar_flappy_title: קוד מתנופף
+  studiobar_flappy_body: צור ושתף את משחק הפלאפי בירד שלך
+  studiobar_teacher_title: נוצר עבור מורים
+  studiobar_teacher_body: הצג את קוד הסטודיו בכיתתך
+  studiobar_frozen_title: שעה של קוד
+  studiobar_frozen_body: צור עולם פלאים חורפי עם אלסה ואנה
+  studiobar_donate_title: תרום
+  studiobar_donate_body: ילד אחד ילמד עבור כל דולר תרומה
+  studiobar_shop_title: חנות
+  studiobar_shop_body: שברו סטריאוטיפים. לבשו את הלוגו שלנו בגאווה.
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
   homepage_stats_teachers: teachers use Code.org
@@ -392,42 +392,42 @@
     פעילים ומעורבים. &rdquo; אדם, מורה"
   homepage_hero_text_stat_loc: "#loc שורות קוד שכתבו התלמידים"
   homepage_hero_text_stat_students: "#student_count תלמידים רשומים בCode Studio"
-  homepage_hero_text_stat_served: "שעת קוד #served הוגשה"
+  homepage_hero_text_stat_served: 'שעת קוד #served הוגשה'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_slot_text_hoc: "שעה של קוד"
-  homepage_slot_text_frozen: "לשבור את הקרח עם אנה ואלזה"
+  homepage_slot_text_hoc: שעה של קוד
+  homepage_slot_text_frozen: לשבור את הקרח עם אנה ואלזה
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: "כל המדריכים שלנו"
-  homepage_slot_text_course4: "קורס 4"
-  homepage_slot_text_shop: "חנות"
-  homepage_slot_text_flappy: "קוד מתנופף"
+  homepage_slot_text_studio: כל המדריכים שלנו
+  homepage_slot_text_course4: קורס 4
+  homepage_slot_text_shop: חנות
+  homepage_slot_text_flappy: קוד מתנופף
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: "# למדו"
-  homepage_action_text_join_us: "הצטרף אלינו"
-  homepage_action_text_sign_up: "הירשם"
-  homepage_action_text_try_it: "נסו זאת"
+  homepage_action_text_join_us: הצטרף אלינו
+  homepage_action_text_sign_up: הירשם
+  homepage_action_text_try_it: נסו זאת
   homepage_action_text_volunteers: Technical volunteers wanted
-  homepage_action_text_codevideo: "צפה בסרטון"
-  homepage_action_text_teachervideo: "צפה בסרטון"
-  homepage_action_text_watchvideo: "צפה בסרטון"
+  homepage_action_text_codevideo: צפה בסרטון
+  homepage_action_text_teachervideo: צפה בסרטון
+  homepage_action_text_watchvideo: צפה בסרטון
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: "התחל ללמוד"
-  homepage_action_text_signpetition: "חתום על העצומה"
+  homepage_action_text_learn: התחל ללמוד
+  homepage_action_text_signpetition: חתום על העצומה
   homepage_action_text_wincelebritychat: Win a celebrity chat
-  homepage_signpetition_dropdown: "חתום על העצומה שלנו;"
+  homepage_signpetition_dropdown: חתום על העצומה שלנו;
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org והנהלת המכללה יוצרים ברית לשפר את המגוון במדעי
     המחשב.
-  homepage_banner_text_link: "למד עוד"
+  homepage_banner_text_link: למד עוד
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "למד עוד"
+  homepage_banner_privacy_link: למד עוד
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
-  homepage_banner_20k_teachers_link: "למד עוד"
+  homepage_banner_20k_teachers_link: למד עוד
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
@@ -435,104 +435,103 @@
     student privacy.
   homepage_banner_emailprivacy_link: Read more
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "למד עוד"
-  homepage_slot_text_title_hoc: "שעה של קוד"
-  homepage_slot_text_blurb_hoc: "כל אחד יכול ללמוד. התחל היום"
+  homepage_banner_40k_teachers_link: למד עוד
+  homepage_slot_text_title_hoc: שעה של קוד
+  homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
   homepage_slot_text_link_about_hoc: About the Hour of Code
-  homepage_slot_text_link_host: "ארח שעה של קוד"
+  homepage_slot_text_link_host: ארח שעה של קוד
   homepage_slot_text_link_hocserved: "# למדו"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: "סטודנטים"
-  homepage_slot_text_blurb_students: "נסה את כל ההדרכות שלנו"
+  homepage_slot_text_title_students: סטודנטים
+  homepage_slot_text_blurb_students: נסה את כל ההדרכות שלנו
   homepage_slot_text_blurb_students_courses: Explore our courses
-  homepage_slot_text_link_codestudio: "נסה את סטודיו הקוד"
-  homepage_slot_text_link_local: "מצא כיתה מקומית"
-  homepage_slot_text_link_othercourses: "קורסים אחרים באינטרנט"
-  homepage_slot_text_title_educators: "מחנכים"
-  homepage_slot_text_blurb_educators: "למד את התלמידים שלך"
+  homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
+  homepage_slot_text_link_local: מצא כיתה מקומית
+  homepage_slot_text_link_othercourses: קורסים אחרים באינטרנט
+  homepage_slot_text_title_educators: מחנכים
+  homepage_slot_text_blurb_educators: למד את התלמידים שלך
   homepage_slot_text_link_elementary: Elementary school
-  homepage_slot_text_link_middle: "חטיבת הביניים"
-  homepage_slot_text_link_high: "בית ספר תיכון"
-  homepage_slot_text_link_k5: "קורסים לגילאי גן חובה-כיתה ה'"
-  homepage_slot_text_link_fullcurriculum: "ראה את תוכנית הלימודים המלאה שלנו"
-  homepage_slot_text_link_pd: "פיתוח מקצועי"
-  homepage_slot_text_title_advocates: "תומכים"
-  homepage_slot_text_blurb_advocates: "תמוך בעבודה שלנו"
-  homepage_slot_text_link_stats: "ראה סטטיסטיקה"
-  homepage_slot_text_link_buy: "השתתף"
-  homepage_slot_text_link_donate: "תרום"
+  homepage_slot_text_link_middle: חטיבת הביניים
+  homepage_slot_text_link_high: בית ספר תיכון
+  homepage_slot_text_link_k5: קורסים לגילאי גן חובה-כיתה ה'
+  homepage_slot_text_link_fullcurriculum: ראה את תוכנית הלימודים המלאה שלנו
+  homepage_slot_text_link_pd: פיתוח מקצועי
+  homepage_slot_text_title_advocates: תומכים
+  homepage_slot_text_blurb_advocates: תמוך בעבודה שלנו
+  homepage_slot_text_link_stats: ראה סטטיסטיקה
+  homepage_slot_text_link_buy: השתתף
+  homepage_slot_text_link_donate: תרום
   homepage_slot_text_link_shop: T-shirts, hats, & more
   homepage_slot_text_link_administrators: Bring to your school or district
-  homepage_header_codestudio: "יצירותיהם של תלמידי קוד סטודיו"
+  homepage_header_codestudio: יצירותיהם של תלמידי קוד סטודיו
   homepage_header_donors: code.org מודה לתומכיו
-  homepage_donors_seall: "ראה הכל"
-  homepage_donors_donate: "תרום"
-  contact_form_topic_student: "אני תלמיד"
-  contact_form_topic_parent: "אני הורה"
+  homepage_donors_seall: ראה הכל
+  homepage_donors_donate: תרום
+  contact_form_topic_student: אני תלמיד
+  contact_form_topic_parent: אני הורה
   contact_form_topic_teacher: ". אני מורה/מחנך"
   contact_form_topic_outside_us: ". אני מחוץ לגבולות ארה ב"
-  contact_form_topic_contribution: "תרומה"
-  contact_form_topic_partner: "אשמח לשותף"
-  contact_form_topic_other: "אחר"
-  contact_form_label_topic: "נושא"
-  contact_form_label_email: "כתובת האימייל שלך"
-  contact_form_label_message: "הודעה"
-  contact_form_label_submit: "שלח הודעה"
-  class_submission_in_school: "בבית הספר"
-  class_submission_in_school_daily_programming_course: "קורס תיכנות יומי"
-  class_submission_in_school_ap_computer_science: "מדעי המחשב AP"
-  class_submission_in_school_full_university_cs_curriculum: "תוכנית לימודים מלאה באוניברסיטה
-    בפקולטה למדעי המחשב"
-  class_submission_in_school_robotics_club: "מועדון רובוטיקה"
-  class_submission_in_school_programming_integrated_in_other_classes: "תכנות משולב
-    במקצועות אחרים (מתמטיקה, מדעים וכו')"
-  class_submission_in_school_summer_school_cs_program: "תוכנית קיץ בית הספר למדעי
-    המחשב"
-  class_submission_in_school_exploring_computer_science: "חקר מדעי המחשב"
-  class_submission_in_school_other: "השני בבית הספר"
-  class_submission_out_of_school: "מבית הספר"
-  class_submission_out_of_school_summer_camp: "מחנה קיץ"
-  class_submission_out_of_school_afterschool_program: "תוכנית הלימודים"
-  class_submission_out_of_school_all-day_workshop: "סדנת יום שלם (עד 1 לשבוע)"
-  class_submission_out_of_school_multi-week_workshop: "סדנה רב-שבועי"
-  class_submission_out_of_school_other: "השני מבית הספר"
-  class_submission_online: "באינטרנט"
-  class_submission_online_programming_class: "מחלקת תכנות באינטרנט"
-  class_submission_online_teacher_resource: "המורה המקוון משאבים"
-  class_submission_online_other: "אחרים באינטרנט"
-  class_submission_level_preschool: "בגן חובה"
-  class_submission_level_elementary: "בית ספר יסודי"
-  class_submission_level_middle_school: "חטיבת הביניים"
-  class_submission_level_high_school: "בית ספר תיכון"
-  class_submission_level_college: "המכללה"
-  class_submission_level_vocational: "מקצועית"
-  class_submission_languages_other: "שפות אחרות"
+  contact_form_topic_contribution: תרומה
+  contact_form_topic_partner: אשמח לשותף
+  contact_form_topic_other: אחר
+  contact_form_label_topic: נושא
+  contact_form_label_email: כתובת האימייל שלך
+  contact_form_label_message: הודעה
+  contact_form_label_submit: שלח הודעה
+  class_submission_in_school: בבית הספר
+  class_submission_in_school_daily_programming_course: קורס תיכנות יומי
+  class_submission_in_school_ap_computer_science: מדעי המחשב AP
+  class_submission_in_school_full_university_cs_curriculum: תוכנית לימודים מלאה באוניברסיטה
+    בפקולטה למדעי המחשב
+  class_submission_in_school_robotics_club: מועדון רובוטיקה
+  class_submission_in_school_programming_integrated_in_other_classes: תכנות משולב
+    במקצועות אחרים (מתמטיקה, מדעים וכו')
+  class_submission_in_school_summer_school_cs_program: תוכנית קיץ בית הספר למדעי המחשב
+  class_submission_in_school_exploring_computer_science: חקר מדעי המחשב
+  class_submission_in_school_other: השני בבית הספר
+  class_submission_out_of_school: מבית הספר
+  class_submission_out_of_school_summer_camp: מחנה קיץ
+  class_submission_out_of_school_afterschool_program: תוכנית הלימודים
+  class_submission_out_of_school_all-day_workshop: סדנת יום שלם (עד 1 לשבוע)
+  class_submission_out_of_school_multi-week_workshop: סדנה רב-שבועי
+  class_submission_out_of_school_other: השני מבית הספר
+  class_submission_online: באינטרנט
+  class_submission_online_programming_class: מחלקת תכנות באינטרנט
+  class_submission_online_teacher_resource: המורה המקוון משאבים
+  class_submission_online_other: אחרים באינטרנט
+  class_submission_level_preschool: בגן חובה
+  class_submission_level_elementary: בית ספר יסודי
+  class_submission_level_middle_school: חטיבת הביניים
+  class_submission_level_high_school: בית ספר תיכון
+  class_submission_level_college: המכללה
+  class_submission_level_vocational: מקצועית
+  class_submission_languages_other: שפות אחרות
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
     featuring professionals in technology fields
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: "קלאסי"
+  playlab_classic_title: קלאסי
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: "עידן הקרח"
-  starwars_subtitle: "לבנות את הגלקסיה באמצעות קוד"
+  playlab_iceage_title_live: עידן הקרח
+  starwars_subtitle: לבנות את הגלקסיה באמצעות קוד
   starwars_javascript_title: Javascript
   starwars_javascript_description: השתמשו בבלוקים "גרור ושחרר" ו-JavaScript.
-  starwars_javascript_specs: "אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה"
-  starwars_blocks_title: "בלוקים"
+  starwars_javascript_specs: אנגלית בלבד | דפדפנים מודרניים | לגילאי 11 ומעלה
+  starwars_blocks_title: בלוקים
   starwars_blocks_description: השתמש בבלוקים ב"גרור ושחרר".
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10
-  starwars_platform_text: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
-  mc_name: "שעת הקוד: גרסת מיינקראפט"
-  mc_longdescription: "השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
-    של מיינקראפט."
-  mc_shortdescription: "השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
-    של מיינקראפט."
-  mc_gradelevel: "גילאי 4-104"
-  mc_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
+  starwars_platform_text: דפדפנים מודרנים, סמארטפונים, טאבלטים
+  mc_name: 'שעת הקוד: גרסת מיינקראפט'
+  mc_longdescription: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של
+    מיינקראפט.
+  mc_shortdescription: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
+    של מיינקראפט.
+  mc_gradelevel: גילאי 4-104
+  mc_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_agent: 'Minecraft: Hero’s Journey'
   minecraft_designer: Minecraft Designer
@@ -541,15 +540,15 @@
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
   minecraft_agent_description: Minecraft is back for the Hour of Code with a brand
     new activity! Journey through Minecraft with code.
-  minecraft_agent_button: "התחל"
+  minecraft_agent_button: התחל
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
-  minecraft_designer_button: "התחל"
+  minecraft_designer_button: התחל
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: "התחל"
+  minecraft_adventurer_button: התחל
   minecraft_no_internet: Don't have Internet?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_subtitle: "שעת הקוד: גרסת מיינקראפט"
+  minecraft_subtitle: 'שעת הקוד: גרסת מיינקראפט'
   minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}'>Sign up</a> for the
     free Minecraft Hour of Code workshops at Microsoft Stores in Australia, Canada,
@@ -590,7 +589,7 @@
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
   sports_title: Code your own sports game
-  sports_watch_video: "צפה בסרטון"
+  sports_watch_video: צפה בסרטון
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
@@ -646,7 +645,7 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: "האם אתה מורה?"
+  are_you_teacher: האם אתה מורה?
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
     of Code.
@@ -673,15 +672,15 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: "עדכן את המידע שלך"
+  volunteer_engineer_submission_update_information: עדכן את המידע שלך
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "שם"
-  volunteer_engineer_submission_field_name_placeholder: "שם מלא"
-  volunteer_engineer_submission_field_company: "חברה (או אוניברסיטה)"
-  volunteer_engineer_submission_field_company_placeholder: "חברה (או אוניברסיטה)"
+  volunteer_engineer_submission_field_name: שם
+  volunteer_engineer_submission_field_name_placeholder: שם מלא
+  volunteer_engineer_submission_field_company: חברה (או אוניברסיטה)
+  volunteer_engineer_submission_field_company_placeholder: חברה (או אוניברסיטה)
   volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: "מיקום"
+  volunteer_engineer_submission_field_location: מיקום
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
@@ -692,21 +691,21 @@
     after the Hour of Code
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
-  volunteer_engineer_submission_field_linkedin: "פרופיל לינקדאין"
+  volunteer_engineer_submission_field_linkedin: פרופיל לינקדאין
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: "פרופיל פייסבוק"
+  volunteer_engineer_submission_field_facebook: פרופיל פייסבוק
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "תיאור"
+  volunteer_engineer_submission_field_description: תיאור
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: "כתובת דואר אלקטרוני"
+  volunteer_engineer_submission_field_email: כתובת דואר אלקטרוני
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: "כתובת דואר אלקטרוני"
+  volunteer_engineer_submission_field_email_placeholder: כתובת דואר אלקטרוני
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -715,28 +714,28 @@
     קשר לגבי אפשרויות התנדבות (כתובת הדוא"ל שלך לא תפורסם)
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "שלח"
+  volunteer_engineer_submission_submit: שלח
   volunteer_engineer_submission_thankyou: תודה על ההתנדבותך ל"שעת תיכנות". כדי להתכונן
     לקראת "שעת תיכנות" ועל מנת לגייס מתנדבים אחרים, <a href="%{url}"> המשך לקרוא כאן.</a>
-  volunteer_engineer_submission_commitment_uncertain: "לא בטוח"
+  volunteer_engineer_submission_commitment_uncertain: לא בטוח
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 שעה בשבוע
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 שעות בשבוע
   volunteer_engineer_submission_commitment_five_hrs_per_week: 3 שעות בשבוע
-  volunteer_engineer_submission_commitment_now_and_then: "מפעם לפעם"
-  volunteer_engineer_submission_commitment_annually: "פעמיים עד שלושה בשנה"
-  volunteer_engineer_submission_commitment_monthly: "מספר שעות בחודש"
-  volunteer_engineer_submission_commitment_weekly: "מספר שעות בשבוע"
-  volunteer_engineer_submission_commitment_more: "יותר"
-  volunteer_engineer_submission_location_flexibility_onsite: "באתר בית ספר"
-  volunteer_engineer_submission_location_flexibility_remote: "חונכות מרחוק (מורים
-    או תלמידים)"
-  volunteer_engineer_submission_location_flexibility_curriculum: "מוכנה לתרום פרוייקטי
-    קוד פתוח תוכניות לימודים"
-  volunteer_engineer_submission_experience_unspecified: "לא צוין"
+  volunteer_engineer_submission_commitment_now_and_then: מפעם לפעם
+  volunteer_engineer_submission_commitment_annually: פעמיים עד שלושה בשנה
+  volunteer_engineer_submission_commitment_monthly: מספר שעות בחודש
+  volunteer_engineer_submission_commitment_weekly: מספר שעות בשבוע
+  volunteer_engineer_submission_commitment_more: יותר
+  volunteer_engineer_submission_location_flexibility_onsite: באתר בית ספר
+  volunteer_engineer_submission_location_flexibility_remote: חונכות מרחוק (מורים או
+    תלמידים)
+  volunteer_engineer_submission_location_flexibility_curriculum: מוכנה לתרום פרוייקטי
+    קוד פתוח תוכניות לימודים
+  volunteer_engineer_submission_experience_unspecified: לא צוין
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: "סטודנט
-    באוניברסיטת הנוכחי (או חוקר)"
-  volunteer_engineer_submission_experience_software_professional: "תוכנה מקצועית"
+  volunteer_engineer_submission_experience_university_student_or_researcher: סטודנט
+    באוניברסיטת הנוכחי (או חוקר)
+  volunteer_engineer_submission_experience_software_professional: תוכנה מקצועית
   volunteer_engineer_submission_distance_8: 8 ק"מ
   volunteer_engineer_submission_distance_16: 16 ק"מ
   volunteer_engineer_submission_distance_24: 15 miles
@@ -745,42 +744,42 @@
   volunteer_engineer_submission_num_volunteers_10: 10 מתנדבים
   volunteer_engineer_submission_num_volunteers_25: 25 מתנדבים
   volunteer_engineer_submission_num_volunteers_50: 50 מתנדבים
-  volunteer_engineer_submission_type_task_onsite: "אנא בקרו בכיתתי למתן עזרה טכנית
-    והשראה"
-  volunteer_engineer_submission_type_task_remote: "אנא הצטרפו לכיתתי באמצעות סקייפ
-    על מנת להלהיב את הילדים"
+  volunteer_engineer_submission_type_task_onsite: אנא בקרו בכיתתי למתן עזרה טכנית
+    והשראה
+  volunteer_engineer_submission_type_task_remote: אנא הצטרפו לכיתתי באמצעות סקייפ
+    על מנת להלהיב את הילדים
   volunteer_engineer_submission_type_task_mentor: מעוניין במנחה שידריך אותי לקראת
     "שעת תיכנות" עם התלמידים
-  petition_age: "גיל"
+  petition_age: גיל
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "למד עוד"
-  dashboard_landing_title: "דף הבית של המורה"
-  dashboard_landing_welcome: "ברוכים הבאים לתצוגת המורה המשופרת."
-  dashboard_landing_video: "צפה בסרטון זה"
-  dashboard_landing_watch_video: "לסיור בתכונות החדשות!"
-  dashboard_landing_view_as_student: "הצג את האתר בתצוגה לתלמיד"
-  dashboard_landing_students_title: "תלמידיך"
-  dashboard_landing_students_manage: "צפה ונהל את התלמידים שלך"
-  dashboard_landing_news_title: "משאבים למחנך של גילאי גן חובה-כיתה ה' (באנגלית בלבד)"
-  dashboard_landing_new_beta: "חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'."
-  dashboard_landing_new_k5courses: "חדש! נסה את הקורסים שלנו לגילאי גן חובה-כיתה ה'."
-  dashboard_landing_useful_links: "קישורים שימושיים נוספים (באנגלית בלבד)"
+  dashboard_announce_learn_more_button: למד עוד
+  dashboard_landing_title: דף הבית של המורה
+  dashboard_landing_welcome: ברוכים הבאים לתצוגת המורה המשופרת.
+  dashboard_landing_video: צפה בסרטון זה
+  dashboard_landing_watch_video: לסיור בתכונות החדשות!
+  dashboard_landing_view_as_student: הצג את האתר בתצוגה לתלמיד
+  dashboard_landing_students_title: תלמידיך
+  dashboard_landing_students_manage: צפה ונהל את התלמידים שלך
+  dashboard_landing_news_title: משאבים למחנך של גילאי גן חובה-כיתה ה' (באנגלית בלבד)
+  dashboard_landing_new_beta: חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'.
+  dashboard_landing_new_k5courses: חדש! נסה את הקורסים שלנו לגילאי גן חובה-כיתה ה'.
+  dashboard_landing_useful_links: קישורים שימושיים נוספים (באנגלית בלבד)
   dashboard_landing_classroom_resources: Resources for your classroom
-  dashboard_landing_office_hours: "שאל שאלות באופן אישי! בקר בשעות הקבלה בוידאו החודשיות
-    שלנו."
-  dashboard_landing_print_certificates: "הדפס תעודות לתלמידים שגמרו את הקורס הזה"
+  dashboard_landing_office_hours: שאל שאלות באופן אישי! בקר בשעות הקבלה בוידאו החודשיות
+    שלנו.
+  dashboard_landing_print_certificates: הדפס תעודות לתלמידים שגמרו את הקורס הזה
   dashboard_landing_educator_blog: קרא על חדשות ועדכונים לחומרים שלנו ב"בלוג מחנכים"
-  dashboard_landing_video_player: "נסה את נגן הוידאו החדש שלנו בבית ספרך"
-  dashboard_landing_progress_title: "התקדמות השיעור הראשי"
+  dashboard_landing_video_player: נסה את נגן הוידאו החדש שלנו בבית ספרך
+  dashboard_landing_progress_title: התקדמות השיעור הראשי
   dashboard_landing_progress_biggest: ". זאת ההתקדמות עבור מקטע הכי גדול שלך."
-  dashboard_landing_view_progress: "הצג התקדמות עבור %{biggest_section}"
+  dashboard_landing_view_progress: הצג התקדמות עבור %{biggest_section}
   dashboard_landing_print_progress: Print progress
-  dashboard_landing_available_title: "קורסים זמינים"
-  dashboard_landing_available_courses: "להלן הקורסים הזמינים כעת עבור התלמידים שלך
-    ולך."
-  dashboard_landing_more_tutorials: "רוצה לראות עוד הדרכות?"
+  dashboard_landing_available_title: קורסים זמינים
+  dashboard_landing_available_courses: להלן הקורסים הזמינים כעת עבור התלמידים שלך
+    ולך.
+  dashboard_landing_more_tutorials: רוצה לראות עוד הדרכות?
   dashboard_landing_more_tutorials_desc: הדרכות נוספות מוצעות על ידי <a href="/learn/beyond">שותפים
     שלנו.</a>. למד תכנות עם רובוטים, צור דפי אינטרנט, צור אפליקציות משלך או חקור שפות
     שנות כגון C++, Ruby או Python!
@@ -789,11 +788,11 @@
     science concepts.
   dashboard_landing_report_bug: Request a feature or report a bug.
   dashboard_landing_teacher_forum: Join the professional learning community.
-  dashboard_hoc_courses: "שעה של קוד לכל הגילאים"
-  dashboard_hoc_courses_desc: "נסה את אחת מההדרכות הקצרות הללו (באורך שעה) עם התלמידים
-    שלך!"
-  dashboard_hoc_courses_desc_and_cta: "נסה את מערכי ההדרכה הקצרים (שעה) עם הסטודנטים."
-  dashboard_k5_courses: "קורס באורך 20 שעות לגילאי גן חובה עד כיתה ה"
+  dashboard_hoc_courses: שעה של קוד לכל הגילאים
+  dashboard_hoc_courses_desc: נסה את אחת מההדרכות הקצרות הללו (באורך שעה) עם התלמידים
+    שלך!
+  dashboard_hoc_courses_desc_and_cta: נסה את מערכי ההדרכה הקצרים (שעה) עם הסטודנטים.
+  dashboard_k5_courses: קורס באורך 20 שעות לגילאי גן חובה עד כיתה ה
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -801,12 +800,12 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: "קורס באורך 20 שעות לגילאי חטיבת בניים"
+  dashboard_middle_courses: קורס באורך 20 שעות לגילאי חטיבת בניים
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: "קורס לאורך השנה לגילאי תיכון"
+  dashboard_high_courses: קורס לאורך השנה לגילאי תיכון
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -818,20 +817,20 @@
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
-  dashboard_course_ecs: "חקר מדעי המחשב"
+  dashboard_course_ecs: חקר מדעי המחשב
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: AP® Computer Science Principles
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
-  dashboard_landing_loading: "טוען..."
-  dashboard_action_cancel: "בטל"
-  dashboard_action_delete: "מחק"
-  dashboard_action_delete_yes: "כן"
-  dashboard_action_delete_no: "לא"
-  dashboard_action_confirm: "למחוק?"
-  dashboard_action_done: "מוכן"
+  dashboard_landing_loading: טוען...
+  dashboard_action_cancel: בטל
+  dashboard_action_delete: מחק
+  dashboard_action_delete_yes: כן
+  dashboard_action_delete_no: לא
+  dashboard_action_confirm: למחוק?
+  dashboard_action_done: מוכן
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
@@ -850,30 +849,30 @@
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
   dashboard_download_csv: Download CSV
-  dashboard_navigation_home_page: "דף הבית של המורה"
-  dashboard_navigation_section_student_progress: "חשבונות תלמידים וההתקדמות שלהם"
-  dashboard_navigation_section_teacher_progress: "התקדמות הקורס שלך"
-  dashboard_navigation_section_lesson_plans: "מערכי שיעור ומשאבים"
-  dashboard_navigation_section_community: "עזרה וקהילה"
-  dashboard_navigation_section_pd: "פיתוח מקצועי"
-  dashboard_navigation_section_speakers: "מדעי המחשב <br/> מציגים אורחים"
-  dashboard_navigation_all_sections: "חשבונות תלמידים וההתקדמות שלהם"
-  dashboard_navigation_view_progress: "התקדמות"
+  dashboard_navigation_home_page: דף הבית של המורה
+  dashboard_navigation_section_student_progress: חשבונות תלמידים וההתקדמות שלהם
+  dashboard_navigation_section_teacher_progress: התקדמות הקורס שלך
+  dashboard_navigation_section_lesson_plans: מערכי שיעור ומשאבים
+  dashboard_navigation_section_community: עזרה וקהילה
+  dashboard_navigation_section_pd: פיתוח מקצועי
+  dashboard_navigation_section_speakers: מדעי המחשב <br/> מציגים אורחים
+  dashboard_navigation_all_sections: חשבונות תלמידים וההתקדמות שלהם
+  dashboard_navigation_view_progress: התקדמות
   dashboard_navigation_view_text_responses: View Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
-  dashboard_navigation_add_students: "הוסף תלמידים"
-  dashboard_navigation_manage_students: "נהל תלמידים"
-  dashboard_navigation_lesson_plans_resources: "מערכי שיעור ומשאבים"
-  dashboard_navigation_view_stats: "ראה סטטיסטיקה"
-  dashboard_navigation_section: "חלק: %{section_name}"
-  dashboard_navigation_student: "תלמיד: %{student_name}"
-  dashboard_progress_not_started: "לא החל"
-  dashboard_progress_in_progress: "בביצוע"
-  dashboard_progress_not_completed: "לא הושלם"
-  dashboard_progress_completed_too_many_blocks: "הושלם, בלוקים רבים מדי"
-  dashboard_progress_completed_perfect: "הושלם, מושלם"
-  dashboard_progress_furthest_level_attempted: "רמת הרחוקה ניסיון"
+  dashboard_navigation_add_students: הוסף תלמידים
+  dashboard_navigation_manage_students: נהל תלמידים
+  dashboard_navigation_lesson_plans_resources: מערכי שיעור ומשאבים
+  dashboard_navigation_view_stats: ראה סטטיסטיקה
+  dashboard_navigation_section: 'חלק: %{section_name}'
+  dashboard_navigation_student: 'תלמיד: %{student_name}'
+  dashboard_progress_not_started: לא החל
+  dashboard_progress_in_progress: בביצוע
+  dashboard_progress_not_completed: לא הושלם
+  dashboard_progress_completed_too_many_blocks: הושלם, בלוקים רבים מדי
+  dashboard_progress_completed_perfect: הושלם, מושלם
+  dashboard_progress_furthest_level_attempted: רמת הרחוקה ניסיון
   dashboard_progress_submitted: submitted
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
@@ -881,32 +880,32 @@
   dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
-  dashboard_sections_new_section: "חלק חדש"
+  dashboard_sections_new_section: חלק חדש
   dashboard_sections_new_google_section: Import section from Google Classroom
-  dashboard_sections_jumbotron_instruction: "צור חלקים חדשים והוסף תלמידים אליהם.
-    חלקים עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה
-    שלהם ולנהל את המשתמשים שלהם."
-  dashboard_sections_table_section: "סעיף"
-  dashboard_sections_table_secret: "סוג התחברות"
-  dashboard_sections_table_grade: "כיתה"
-  dashboard_sections_table_course: "קורס"
-  dashboard_sections_table_pairing_allowed: "תכנות בזוגות"
+  dashboard_sections_jumbotron_instruction: צור חלקים חדשים והוסף תלמידים אליהם. חלקים
+    עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה שלהם ולנהל
+    את המשתמשים שלהם.
+  dashboard_sections_table_section: סעיף
+  dashboard_sections_table_secret: סוג התחברות
+  dashboard_sections_table_grade: כיתה
+  dashboard_sections_table_course: קורס
+  dashboard_sections_table_pairing_allowed: תכנות בזוגות
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "סטודנטים"
+  dashboard_sections_table_students: סטודנטים
   dashboard_sections_table_code: Section Code
-  dashboard_sections_name: "שם החלק"
-  dashboard_sections_choose_secret: "אם ברצונך לספק חשבונות לתלמידיך, בחרו סוג הסודי
-    של <b>מילה</b> או <b>תמונה</b> עבור מקטע זה."
+  dashboard_sections_name: שם החלק
+  dashboard_sections_choose_secret: אם ברצונך לספק חשבונות לתלמידיך, בחרו סוג הסודי
+    של <b>מילה</b> או <b>תמונה</b> עבור מקטע זה.
   dashboard_sections_secret_word: "<b>Word</b> מאפשר לך להגדיר מילה סודית עבור כל
     תלמיד."
   dashboard_sections_secret_picture: "<b>התמונה</b> מאפשר לך להגדיר תמונה סודית עבור
     כל תלמיד, אידיאלי עבור תלמידים צעירים שעדיין לא יודעים להקליד."
-  dashboard_sections_secret_none: "אם תרצו שהתלמידים שלכם ינהלו את החשבונות בעצמם,
-    כולל בחירת הסיסמאות שלהם, בחרו סוג הסודי של <b>none</b>."
-  dashboard_sections_print_secrets: "ואז ניתן להדפיס גיליון של כרטיסים המכיל את פרטי
-    החשבון שיחולקו לסטודנטים שלך בנפרד."
-  dashboard_sections_switch_section: "בורר מקטע:"
-  dashboard_sections_close: "סגור"
+  dashboard_sections_secret_none: אם תרצו שהתלמידים שלכם ינהלו את החשבונות בעצמם,
+    כולל בחירת הסיסמאות שלהם, בחרו סוג הסודי של <b>none</b>.
+  dashboard_sections_print_secrets: ואז ניתן להדפיס גיליון של כרטיסים המכיל את פרטי
+    החשבון שיחולקו לסטודנטים שלך בנפרד.
+  dashboard_sections_switch_section: 'בורר מקטע:'
+  dashboard_sections_close: סגור
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -938,50 +937,50 @@
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
-  dashboard_students_add_multiple: "הקלד או הדבק את שמות התלמידים שלך, אחד בכל שורה:"
+  dashboard_students_add_multiple: 'הקלד או הדבק את שמות התלמידים שלך, אחד בכל שורה:'
   dashboard_students_new_google_classroom_section: To add students, use <a href='http://classroom.google.com'
     target='_blank'>Google Classroom</a> and then click the <b>Sync students from
     Google Classroom</b> button above.
-  dashboard_students_new_section: "יצירת מקטע חדש! עכשיו , הוסף את התלמידים שלך באמצעות
-    הלחצנים <b>הוסף תלמיד</b>, <b>להוסיף מספר התלמידים</b> לעיל."
-  dashboard_students_name: "שם"
-  dashboard_students_progress: "התקדמות"
-  dashboard_students_male: "גבר"
-  dashboard_students_female: "אישה"
-  dashboard_students_completed_levels: "שלבים שהושלמו"
-  dashboard_students_total_lines: "שורות קוד"
-  dashboard_students_share_section: "שתף את חלק הכניסה עם התלמידים שלך:"
+  dashboard_students_new_section: יצירת מקטע חדש! עכשיו , הוסף את התלמידים שלך באמצעות
+    הלחצנים <b>הוסף תלמיד</b>, <b>להוסיף מספר התלמידים</b> לעיל.
+  dashboard_students_name: שם
+  dashboard_students_progress: התקדמות
+  dashboard_students_male: גבר
+  dashboard_students_female: אישה
+  dashboard_students_completed_levels: שלבים שהושלמו
+  dashboard_students_total_lines: שורות קוד
+  dashboard_students_share_section: 'שתף את חלק הכניסה עם התלמידים שלך:'
   dashboard_students_share_section_secondary: 'Alternatively, share this section''s
     sign in page with your students:'
-  dashboard_students_print_info: "הדפס כרטיסים עם מידע ההתחברות של התלמידים שלך."
+  dashboard_students_print_info: הדפס כרטיסים עם מידע ההתחברות של התלמידים שלך.
   dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: "תמונה סודית"
-  dashboard_students_reset_picture: "תוכל לאפס תמונה סודית של התלמיד בכל עת על-ידי
+  dashboard_students_secret_picture: תמונה סודית
+  dashboard_students_reset_picture: תוכל לאפס תמונה סודית של התלמיד בכל עת על-ידי
     בחירת <b>הצג את סוד</b> ולאחר מכן <b>אפס את הסוד</b>. תמונה סודית חדשה תופק עבור
-    אותו תלמיד בה יוכל להשתמש בעת הכניסה."
+    אותו תלמיד בה יוכל להשתמש בעת הכניסה.
   dashboard_students_secret_word_title: Secret Word
-  dashboard_students_secret_word: "המילה הסודית"
-  dashboard_students_reset_word: "תוכל לאפס המילים הסודיות של התלמיד בכל עת על-ידי
+  dashboard_students_secret_word: המילה הסודית
+  dashboard_students_reset_word: 'תוכל לאפס המילים הסודיות של התלמיד בכל עת על-ידי
     בחירת <b>הצג את הסוד</b> ולאחר מכן <b>אפס את הסוד</b>. זוג חדש של מילים סודיות
-    יופק עבור אותו תלמיד בהם יוכל להשתמש בעת הכניסה. "
-  dashboard_students_join_link: "הורה לתלמידיך ליצור חשבונות משלהם ולהצטרף לתחום שלך
-    ב"
-  dashboard_students_no_email: "אם אין לתלמידיך כתובות מייל, או שברצונך ליצור עבורם
-    חשבונות מייל, שנה את הסוג הסודי של החלק הזה ל <b>word</b> או <b>picture</b>."
-  dashboard_students_print_page: "הדפס דף זה"
+    יופק עבור אותו תלמיד בהם יוכל להשתמש בעת הכניסה. '
+  dashboard_students_join_link: הורה לתלמידיך ליצור חשבונות משלהם ולהצטרף לתחום שלך
+    ב
+  dashboard_students_no_email: אם אין לתלמידיך כתובות מייל, או שברצונך ליצור עבורם
+    חשבונות מייל, שנה את הסוג הסודי של החלק הזה ל <b>word</b> או <b>picture</b>.
+  dashboard_students_print_page: הדפס דף זה
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
-  dashboard_students_url: "קישור"
+  dashboard_students_url: קישור
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">לחץ
     כאן</a>למסמך הפרטיות שלנו כדי לשתף או להדפיס אותו לתלמידים שלך.
-  dashboard_curriculum_k5_title: "מקורות מידע למורי יסודי"
-  dashboard_curriculum_middle_title: "מקורות מידע למורי חטיבת ביניים"
-  dashboard_curriculum_high_title: "מקורות מידע למורי תיכון"
-  dashboard_lesson_plans: "תוכנית לימודים"
-  dashboard_view_all_lesson_plans: "צפה בכל תכניות השיעורים"
-  dashboard_course1: "חוג 1:"
-  dashboard_course2: "חוג 2:"
-  dashboard_course3: "חוג 3:"
-  dashboard_course4: "קורס 4 (בטא): "
+  dashboard_curriculum_k5_title: מקורות מידע למורי יסודי
+  dashboard_curriculum_middle_title: מקורות מידע למורי חטיבת ביניים
+  dashboard_curriculum_high_title: מקורות מידע למורי תיכון
+  dashboard_lesson_plans: תוכנית לימודים
+  dashboard_view_all_lesson_plans: צפה בכל תכניות השיעורים
+  dashboard_course1: 'חוג 1:'
+  dashboard_course2: 'חוג 2:'
+  dashboard_course3: 'חוג 3:'
+  dashboard_course4: 'קורס 4 (בטא): '
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
   dashboard_coursec: 'Course C: '
@@ -993,38 +992,38 @@
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_tools: 'Tools: '
-  dashboard_curriculum: "תוכנית לימוד"
-  dashboard_curriculum_overview: "סקירה על תוכנית הלימודים מגן חובה עד כיתה ה'"
-  dashboard_overview: "סקירה"
-  dashboard_sequence: "רצף"
-  dashboard_framework: "מסגרת"
-  dashboard_standards: "תשתית"
-  dashboard_implementation_guide: "מדריך יישום"
-  dashboard_glossary: "מילון"
-  dashboard_classroom_strategies: "אסטרטגיות כיתה עבור מורים"
-  dashboard_debugging: "מציאת טעויות:"
-  dashboard_puzzle_solving: "פתירת פאזל:"
-  dashboard_student_worksheet: "דף עבודה לתלמיד"
-  dashboard_teacher_worksheet: "דף עבודה למורה"
-  dashboard_curriculum_csina: "מדעי המחשב באלגברה:"
-  dashboard_curriculum_csins: "מדעי המחשב במדע:"
-  dashboard_curriculum_csp: "עקרונות מדעי המחשב ®AP:"
-  dashboard_curriculum_ecs: "חקר מדעי המחשב:"
+  dashboard_curriculum: תוכנית לימוד
+  dashboard_curriculum_overview: סקירה על תוכנית הלימודים מגן חובה עד כיתה ה'
+  dashboard_overview: סקירה
+  dashboard_sequence: רצף
+  dashboard_framework: מסגרת
+  dashboard_standards: תשתית
+  dashboard_implementation_guide: מדריך יישום
+  dashboard_glossary: מילון
+  dashboard_classroom_strategies: אסטרטגיות כיתה עבור מורים
+  dashboard_debugging: 'מציאת טעויות:'
+  dashboard_puzzle_solving: 'פתירת פאזל:'
+  dashboard_student_worksheet: דף עבודה לתלמיד
+  dashboard_teacher_worksheet: דף עבודה למורה
+  dashboard_curriculum_csina: 'מדעי המחשב באלגברה:'
+  dashboard_curriculum_csins: 'מדעי המחשב במדע:'
+  dashboard_curriculum_csp: 'עקרונות מדעי המחשב ®AP:'
+  dashboard_curriculum_ecs: 'חקר מדעי המחשב:'
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
-  dashboard_grade_k: "כיתה"
-  dashboard_grade_other: "אחר"
-  dashboard_login_word: "מילה"
-  dashboard_login_picture: "תמונה"
-  dashboard_login_none: "דואר אלקטרוני"
-  dashboard_stage: "שלב"
-  dashboard_puzzle: "חידה"
+  dashboard_grade_k: כיתה
+  dashboard_grade_other: אחר
+  dashboard_login_word: מילה
+  dashboard_login_picture: תמונה
+  dashboard_login_none: דואר אלקטרוני
+  dashboard_stage: שלב
+  dashboard_puzzle: חידה
   dashboard_question: Question
-  dashboard_response: "תגובה"
+  dashboard_response: תגובה
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
-  dashboard_correctness_correct: "נכון"
+  dashboard_correctness_correct: נכון
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
@@ -1033,26 +1032,26 @@
   dashboard_multi_count: "# multiple choice"
   dashboard_multi_correct_percent: "% multiple choice correct"
   dashboard_submission_timestamp: Submission timestamp
-  stats_hoc_2013_heading: "סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד
-    בלבד:"
-  stats_hoc_2013_image_alt: "סטטיסטיקה של  Hour of Code 2013"
-  dashboard_teacher: "מורה"
-  dashboard_student: "תלמיד"
-  dashboard_sections_email_question: "האם לכל התלמידים יש כתובת דואר תקינה?"
-  dashboard_sections_account_creation_question: "מי יוצר את החשבון של התלמיד?"
+  stats_hoc_2013_heading: 'סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד
+    בלבד:'
+  stats_hoc_2013_image_alt: סטטיסטיקה של  Hour of Code 2013
+  dashboard_teacher: מורה
+  dashboard_student: תלמיד
+  dashboard_sections_email_question: האם לכל התלמידים יש כתובת דואר תקינה?
+  dashboard_sections_account_creation_question: מי יוצר את החשבון של התלמיד?
   dashboard_sections_password_question: במה תלמידים משתמשים בתור "סיסמה"?
-  dashboard_sections_picture_account_creation: "תמונה שהוקצה על-ידי Code.org"
-  dashboard_sections_word_account_creation: "מילה פשוטה שהוקצה על-ידי Code.org"
-  dashboard_sections_sign_in_question: "מהיכן התלמידים מתחברים?"
+  dashboard_sections_picture_account_creation: תמונה שהוקצה על-ידי Code.org
+  dashboard_sections_word_account_creation: מילה פשוטה שהוקצה על-ידי Code.org
+  dashboard_sections_sign_in_question: מהיכן התלמידים מתחברים?
   dashboard_sections_sign_in_unique: דף אינטרנט ייחודי המופיע בטאב "ניהול התלמידים"
   dashboard_sections_sign_in_main: http://code.org ולחצו על "כניסה"
-  dashboard_sections_password_account_creation: "סיסמת טקסט שנוצרה על-ידי התלמיד"
+  dashboard_sections_password_account_creation: סיסמת טקסט שנוצרה על-ידי התלמיד
   dashboard_sections_login_type_explanation: טבלה זו עוזרת להסביר אילו מסוגי הכניסה,
     <b>תמונה, מילה, או דוא"ל</b>, תרצה לבחור עבור אזור מסויים.
-  dashboard_faq: "שאלות נפוצות"
-  dashboard_faq_k5: "שאלות נפוצות למורי יסודי"
-  code_hoc_coming: "שעה של הקוד הוא כאן - דצמבר 8-14!"
-  code_sign_up: "הירשם להשתתף במהלך שבוע חינוך מדעי המחשב"
+  dashboard_faq: שאלות נפוצות
+  dashboard_faq_k5: שאלות נפוצות למורי יסודי
+  code_hoc_coming: שעה של הקוד הוא כאן - דצמבר 8-14!
+  code_sign_up: הירשם להשתתף במהלך שבוע חינוך מדעי המחשב
   host_an_hour: Host an hour
   learn_banner_title: Join us for the Hour of Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
@@ -1061,10 +1060,10 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: "למד עוד"
+  learn_more: למד עוד
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: "הירשם"
+  learn_sign_up_button: הירשם
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -1084,97 +1083,97 @@
     videos</a>
   hoc2014_try_new_tutorials: נסה את ההדרכות החדשות של "שעת הקוד"
   hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
-  hoc2014_try_scrat: "האנגרי בירדז,צמחים נגד זומבים וראט הסנאי"
+  hoc2014_try_scrat: האנגרי בירדז,צמחים נגד זומבים וראט הסנאי
   hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
   carousel_heading_codeorg: Tutorials by Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
   carousel_heading_third_party: Tutorials by third parties
-  carousel_heading_international: "הדרכות בשפה שלך"
-  carousel_heading_domestic: "הדרכות בשפה האנגלית"
-  carousel_heading_beginners: "הדרכות למתחילים"
+  carousel_heading_international: הדרכות בשפה שלך
+  carousel_heading_domestic: הדרכות בשפה האנגלית
+  carousel_heading_beginners: הדרכות למתחילים
   carousel_heading_beyond_beginners: Tutorials for Beginners
-  carousel_heading_javascript: "הדרכות שמלמדות JavaScript"
+  carousel_heading_javascript: הדרכות שמלמדות JavaScript
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
   carousel_heading_unplugged: ללא התקן או אינטרנט? נסה "מדעי המחשב בלי חיבור לחשמל"
-  carousel_heading_devices: "אפליקציות לימוד לטלפונים וטבלטים"
+  carousel_heading_devices: אפליקציות לימוד לטלפונים וטבלטים
   carousel_heading_beyond_devices: Tutorial apps for phones and tablets
-  carousel_heading_languages: "הדרכות בשפות תכנות אחרות"
+  carousel_heading_languages: הדרכות בשפות תכנות אחרות
   carousel_heading_beyond_languages: Tutorials in other programming languages
-  carousel_heading_apps_games: "צרו משחקים ואפליקציות משלכם"
-  carousel_heading_university: "קורסים אוניברסיטאים באינטרנט"
-  carousel_heading_webpages: "למד ליצור דפי אינטרנט"
-  carousel_heading_robots: "למד לתכנת בעזרת רובוטים"
-  carousel_heading_ide: "פלטפורמות פופולריות בקרב מורים"
+  carousel_heading_apps_games: צרו משחקים ואפליקציות משלכם
+  carousel_heading_university: קורסים אוניברסיטאים באינטרנט
+  carousel_heading_webpages: למד ליצור דפי אינטרנט
+  carousel_heading_robots: למד לתכנת בעזרת רובוטים
+  carousel_heading_ide: פלטפורמות פופולריות בקרב מורים
   carousel_heading_desktop: Learn to code on a computer
   carousel_heading_mobtabelem: For phones and tablets
   carousel_heading_prereader: For pre-readers
   carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
   carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  educator_notes: "הערות מורה"
+  educator_notes: הערות מורה
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
     here.</a>
   how_to_teach_hoc: כיצד ללמד "שעה של קוד"
-  more_resources_educators: "משאבים נוספים עבור מורים ומחנכים"
+  more_resources_educators: משאבים נוספים עבור מורים ומחנכים
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
   third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
     the criteria and submission form.</a>
-  participants: "משתתפים"
-  teachers_notes: "ההערות למורה"
-  teachers_notes_hoc: "מורים: לקרוא הערות מחנך חשובות כאן"
-  previous: "הקודם"
-  next: "הבא"
-  older_systems: "הדרכות שעובדות על מערכות ישנות יותר"
+  participants: משתתפים
+  teachers_notes: ההערות למורה
+  teachers_notes_hoc: 'מורים: לקרוא הערות מחנך חשובות כאן'
+  previous: הקודם
+  next: הבא
+  older_systems: הדרכות שעובדות על מערכות ישנות יותר
   older_systems_subheading: אלה צריכים לעבוד בדפדפנים ישנים יותר. כדי לגשת לכל הדרכות,
     יש לשדרג<a href="http://browsehappy.com/" target="_blank"> לדפדפן אינטרנט מודרני.</a>
-  mobile_devices: "הדרכות עבור התקנים ניידים"
-  frozen_name: "תכנתו עם אנה ואלזה"
-  starwars_name: "מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד"
-  codeorg_name: "מבוך קלאסי"
-  codeintl_name: "מבוך קלאסי"
+  mobile_devices: הדרכות עבור התקנים ניידים
+  frozen_name: תכנתו עם אנה ואלזה
+  starwars_name: 'מלחמת הכוכבים: לבנות את הגלקסיה באמצעות קוד'
+  codeorg_name: מבוך קלאסי
+  codeintl_name: מבוך קלאסי
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "מבוא ל-JavaScript"
-  khanes_name: "מבוא ל-JavaScript"
-  khanpt_name: "מבוא ל-JavaScript"
-  khanhe_name: "מבוא ל-JavaScript"
-  khanfr_name: "מבוא ל-JavaScript"
-  khanpl_name: "מבוא ל-JavaScript"
-  tynker_name: "בנה משחק משלך"
-  scratch_name: "היה יצירתי עם קידוד"
+  khan_name: מבוא ל-JavaScript
+  khanes_name: מבוא ל-JavaScript
+  khanpt_name: מבוא ל-JavaScript
+  khanhe_name: מבוא ל-JavaScript
+  khanfr_name: מבוא ל-JavaScript
+  khanpl_name: מבוא ל-JavaScript
+  tynker_name: בנה משחק משלך
+  scratch_name: היה יצירתי עם קידוד
   lightbot_name: Lightbot
-  thinkersmith_name: "חברי הרובוטיים"
-  condcards_name: "התניות עם כרטיסים"
+  thinkersmith_name: חברי הרובוטיים
+  condcards_name: התניות עם כרטיסים
   lightbotintl_name: Lightbot
-  codehs_name: "למד לקודד עם קרל הכלב"
+  codehs_name: למד לקודד עם קרל הכלב
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
   codemonkey_name: CodeMonkey
-  codeavengers_name: "בנה משחק עם JavaScript"
-  processing_name: "לצייר בעזרת קוד"
-  robomind_name: "תכנת רובוט וירטואלי"
-  groklearning_name: "אלייזה הרופאה הרובו-דברנית"
-  quorum_name: "תכנות נגישה (תמיכה של מקריא מסך)"
-  codespark_name: "הפואים - (טרום-קוראים מוזמנים)"
+  codeavengers_name: בנה משחק עם JavaScript
+  processing_name: לצייר בעזרת קוד
+  robomind_name: תכנת רובוט וירטואלי
+  groklearning_name: אלייזה הרופאה הרובו-דברנית
+  quorum_name: תכנות נגישה (תמיכה של מקריא מסך)
+  codespark_name: הפואים - (טרום-קוראים מוזמנים)
   kodable_name: Kodable (טרום קוראים מוזמנים)
-  tynkerapp_name: "טינקר - על טבלטים"
-  robomindnl_name: "תכנת רובוט וירטואלי"
+  tynkerapp_name: טינקר - על טבלטים
+  robomindnl_name: תכנת רובוט וירטואלי
   flappy_name: צרו את משחק "ציפור מנופפת בכנפיים"
-  bitsbox_name: "צרו את משחק הביטס בוקס"
+  bitsbox_name: צרו את משחק הביטס בוקס
   makeschool_name: Build an iPhone game in your browser!
   touchdevelop_name: TouchDevelop
-  appinventor_name: "אפ אינוונטור - שעה של קוד"
-  blockly_name: "בלוקלי"
+  appinventor_name: אפ אינוונטור - שעה של קוד
+  blockly_name: בלוקלי
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
-  projguts_name: "אבן, נייר ומספריים"
-  hourofcode_name: "מבוך קלאסי"
-  playlab_name: "מעבדת משחקים"
-  infinity_name: "אינסוף לשחק מעבדה"
-  artist_name: "אמן"
+  projguts_name: אבן, נייר ומספריים
+  hourofcode_name: מבוך קלאסי
+  playlab_name: מעבדת משחקים
+  infinity_name: אינסוף לשחק מעבדה
+  artist_name: אמן
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
@@ -1182,10 +1181,10 @@
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
-  course1_name: "קורס 1"
-  course2_name: "קורס 2"
-  course3_name: "קורס 3"
-  course4_name: "קורס 4"
+  course1_name: קורס 1
+  course2_name: קורס 2
+  course3_name: קורס 3
+  course4_name: קורס 4
   coursea-draft_name: Course A
   coursea_name: Course A
   courseb-draft_name: Course B
@@ -1198,7 +1197,7 @@
   coursee_name: Course E
   coursef-draft_name: Course F
   coursef_name: Course F
-  accelerated_name: "קורס מואץ"
+  accelerated_name: קורס מואץ
   express_name: Express Course
   pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Unit 1: Digital Information'
@@ -1234,21 +1233,21 @@
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
-  20-hour_name: "קורס מואץ"
+  20-hour_name: קורס מואץ
   algebra_name: CS in Algebra
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
-  classicmaze_name: "מבוך קלאסי"
-  iceage_name: "עידן הקרח"
-  minecraft_name: "מיינקראפט"
+  classicmaze_name: מבוך קלאסי
+  iceage_name: עידן הקרח
+  minecraft_name: מיינקראפט
   starwarsblocks_name: Star Wars (Blocks)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "מתמטיקה"
-  hoc_category_name: "שעה של קוד"
+  math_category_name: מתמטיקה
+  hoc_category_name: שעה של קוד
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
@@ -1257,7 +1256,7 @@
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
-  applab_name: "מעבדת היישומים"
+  applab_name: מעבדת היישומים
   gamelab_name: Game Lab
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
@@ -1265,167 +1264,167 @@
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
-  codeorg_gradelevel: "גילאי 4-104"
-  codeintl_gradelevel: "גילאי 4-104"
+  codeorg_gradelevel: גילאי 4-104
+  codeintl_gradelevel: גילאי 4-104
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: "חטיבת ביניים +"
-  khanes_gradelevel: "חטיבת ביניים +"
-  khanpt_gradelevel: "חטיבת ביניים +"
-  khanhe_gradelevel: "חטיבת ביניים +"
-  khanfr_gradelevel: "חטיבת ביניים +"
-  khanpl_gradelevel: "חטיבת ביניים +"
-  tynker_gradelevel: "גילאי 5-13"
-  scratch_gradelevel: "גילאי 8 +"
-  lightbot_gradelevel: "כל הגילאים"
-  thinkersmith_gradelevel: "כל הגילאים"
-  condcards_gradelevel: "גילאי 8-12"
-  lightbotintl_gradelevel: "כל הגילאים"
-  codehs_gradelevel: "בית ספר תיכון"
-  codecademy_gradelevel: "בית ספר תיכון"
-  codecombat_gradelevel: "חטיבת ביניים +"
-  codemonkey_gradelevel: "חטיבת ביניים +"
-  codeavengers_gradelevel: "חטיבת ביניים +"
-  processing_gradelevel: "בית ספר תיכון"
-  robomind_gradelevel: "גילאי 8-13"
-  groklearning_gradelevel: "חטיבת ביניים +"
-  quorum_gradelevel: "חטיבת ביניים +"
-  codespark_gradelevel: "בית ספר יסודי"
-  kodable_gradelevel: "בית ספר יסודי"
-  tynkerapp_gradelevel: "גילאי 5-13"
-  robomindnl_gradelevel: "גילאי 8-13"
-  flappy_gradelevel: "גילאי 4-104"
-  bitsbox_gradelevel: "בית ספר יסודי"
-  makeschool_gradelevel: "בית ספר תיכון"
-  touchdevelop_gradelevel: "בית ספר תיכון"
-  appinventor_gradelevel: "חטיבת ביניים +"
-  blockly_gradelevel: "כל הגילאים"
-  thinkersmith2_gradelevel: "גילאי 8 +"
-  kodableunplugged_gradelevel: "גילאי 8-13"
-  projguts_gradelevel: "גילאי 10-13"
-  hourofcode_gradelevel: "גילאי 4-104"
-  frozen_gradelevel: "גילאי 8 +"
-  starwars_gradelevel: "לגילאי 6 ומעלה"
-  playlab_gradelevel: "גילאי 4-104"
-  infinity_gradelevel: "גילאי 4-104"
-  artist_gradelevel: "גילאי 8 +"
-  monstercoding_gradelevel: "גילאי 5-13"
+  khan_gradelevel: חטיבת ביניים +
+  khanes_gradelevel: חטיבת ביניים +
+  khanpt_gradelevel: חטיבת ביניים +
+  khanhe_gradelevel: חטיבת ביניים +
+  khanfr_gradelevel: חטיבת ביניים +
+  khanpl_gradelevel: חטיבת ביניים +
+  tynker_gradelevel: גילאי 5-13
+  scratch_gradelevel: גילאי 8 +
+  lightbot_gradelevel: כל הגילאים
+  thinkersmith_gradelevel: כל הגילאים
+  condcards_gradelevel: גילאי 8-12
+  lightbotintl_gradelevel: כל הגילאים
+  codehs_gradelevel: בית ספר תיכון
+  codecademy_gradelevel: בית ספר תיכון
+  codecombat_gradelevel: חטיבת ביניים +
+  codemonkey_gradelevel: חטיבת ביניים +
+  codeavengers_gradelevel: חטיבת ביניים +
+  processing_gradelevel: בית ספר תיכון
+  robomind_gradelevel: גילאי 8-13
+  groklearning_gradelevel: חטיבת ביניים +
+  quorum_gradelevel: חטיבת ביניים +
+  codespark_gradelevel: בית ספר יסודי
+  kodable_gradelevel: בית ספר יסודי
+  tynkerapp_gradelevel: גילאי 5-13
+  robomindnl_gradelevel: גילאי 8-13
+  flappy_gradelevel: גילאי 4-104
+  bitsbox_gradelevel: בית ספר יסודי
+  makeschool_gradelevel: בית ספר תיכון
+  touchdevelop_gradelevel: בית ספר תיכון
+  appinventor_gradelevel: חטיבת ביניים +
+  blockly_gradelevel: כל הגילאים
+  thinkersmith2_gradelevel: גילאי 8 +
+  kodableunplugged_gradelevel: גילאי 8-13
+  projguts_gradelevel: גילאי 10-13
+  hourofcode_gradelevel: גילאי 4-104
+  frozen_gradelevel: גילאי 8 +
+  starwars_gradelevel: לגילאי 6 ומעלה
+  playlab_gradelevel: גילאי 4-104
+  infinity_gradelevel: גילאי 4-104
+  artist_gradelevel: גילאי 8 +
+  monstercoding_gradelevel: גילאי 5-13
   allcancode_gradelevel: Ages 5-10
   csfirst_gradelevel: Ages 9-14
-  boxisland_gradelevel: "בית ספר יסודי"
+  boxisland_gradelevel: בית ספר יסודי
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
-  course1_gradelevel: "גילאי 4-6"
-  course2_gradelevel: "גילאי 6-18"
-  course3_gradelevel: "גילאי 8-18"
-  course4_gradelevel: "גילאי 10-18"
+  course1_gradelevel: גילאי 4-6
+  course2_gradelevel: גילאי 6-18
+  course3_gradelevel: גילאי 8-18
+  course4_gradelevel: גילאי 10-18
   coursea_gradelevel: Grade 5+
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
-  coursed_gradelevel: "כיתות ח' ומעלה"
-  coursee_gradelevel: "גילאי 8-12"
+  coursed_gradelevel: כיתות ח' ומעלה
+  coursee_gradelevel: גילאי 8-12
   coursef_gradelevel: Grade 10+
-  accelerated_gradelevel: "גילאי 10-18"
-  codeorg_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
-  codeintl_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
-  thinkersmithspanish_platformtext: "ללא חיבור"
-  khan_platformtext: "דפדפנים מודרניים"
-  khanes_platformtext: "דפדפנים מודרניים"
-  khanpt_platformtext: "דפדפנים מודרניים"
-  khanhe_platformtext: "דפדפנים מודרניים"
-  khanfr_platformtext: "דפדפנים מודרניים"
-  khanpl_platformtext: "דפדפנים מודרניים"
-  tynker_platformtext: "דפדפנים מודרניים"
-  scratch_platformtext: "דפדפנים במחשב נייח בלבד (לא טבלטים)"
-  lightbot_platformtext: "כל הדפדפנים ו iOS, אנדרואיד או קונסולת משחקים"
-  thinkersmith_platformtext: "ללא חיבור"
+  accelerated_gradelevel: גילאי 10-18
+  codeorg_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  codeintl_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  thinkersmithspanish_platformtext: ללא חיבור
+  khan_platformtext: דפדפנים מודרניים
+  khanes_platformtext: דפדפנים מודרניים
+  khanpt_platformtext: דפדפנים מודרניים
+  khanhe_platformtext: דפדפנים מודרניים
+  khanfr_platformtext: דפדפנים מודרניים
+  khanpl_platformtext: דפדפנים מודרניים
+  tynker_platformtext: דפדפנים מודרניים
+  scratch_platformtext: דפדפנים במחשב נייח בלבד (לא טבלטים)
+  lightbot_platformtext: כל הדפדפנים ו iOS, אנדרואיד או קונסולת משחקים
+  thinkersmith_platformtext: ללא חיבור
   condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, אנדרואיד (או דפדפן )
-  codehs_platformtext: "דפדפנים מודרנים. (קורס ההמשך הנו בתשלום)"
-  codecademy_platformtext: "דפדפנים מודרניים ואפליקציות iOS  או אנדרואיד"
-  codecombat_platformtext: "דפדפנים מודרניים (מסלול ההמשך כרוך בתשלום)"
-  codemonkey_platformtext: "דפדפנים מודרניים"
-  codeavengers_platformtext: "דפדפנים מודרניים"
-  processing_platformtext: "דפדפנים מודרניים"
-  robomind_platformtext: "דפדפנים מודרניים, אינטרנט סלולרי"
-  groklearning_platformtext: "דפדפנים מודרניים"
-  quorum_platformtext: "דפדפנים מודרנים. תמיכה בקוראי מסך"
+  codehs_platformtext: דפדפנים מודרנים. (קורס ההמשך הנו בתשלום)
+  codecademy_platformtext: דפדפנים מודרניים ואפליקציות iOS  או אנדרואיד
+  codecombat_platformtext: דפדפנים מודרניים (מסלול ההמשך כרוך בתשלום)
+  codemonkey_platformtext: דפדפנים מודרניים
+  codeavengers_platformtext: דפדפנים מודרניים
+  processing_platformtext: דפדפנים מודרניים
+  robomind_platformtext: דפדפנים מודרניים, אינטרנט סלולרי
+  groklearning_platformtext: דפדפנים מודרניים
+  quorum_platformtext: דפדפנים מודרנים. תמיכה בקוראי מסך
   codespark_platformtext: iOS, אנדרואיד (או דפדפן )
   kodable_platformtext: iPad
-  tynkerapp_platformtext: "אייפד, טבלטים"
-  robomindnl_platformtext: "דפדפנים מודרניים, אינטרנט סלולרי"
-  flappy_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
-  bitsbox_platformtext: "דפדפנים מודרניים"
-  makeschool_platformtext: "דפדפנים מודרניים"
-  touchdevelop_platformtext: "דפדפנים מודרניים , סמארטפונים, כל ההתקנים"
-  appinventor_platformtext: "דפדפנים מודרניים +אנדרואיד"
-  blockly_platformtext: "דפדפנים מודרניים בלבד"
-  thinkersmith2_platformtext: "ללא חיבור"
-  kodableunplugged_platformtext: "ללא חיבור"
-  projguts_platformtext: "ללא חיבור"
-  hourofcode_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
-  frozen_platformtext: "דפדפנים מודרניים + טאבלטים"
-  starwars_platformtext: "דפדפנים מודרניים + טאבלטים"
-  playlab_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
+  tynkerapp_platformtext: אייפד, טבלטים
+  robomindnl_platformtext: דפדפנים מודרניים, אינטרנט סלולרי
+  flappy_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  bitsbox_platformtext: דפדפנים מודרניים
+  makeschool_platformtext: דפדפנים מודרניים
+  touchdevelop_platformtext: דפדפנים מודרניים , סמארטפונים, כל ההתקנים
+  appinventor_platformtext: דפדפנים מודרניים +אנדרואיד
+  blockly_platformtext: דפדפנים מודרניים בלבד
+  thinkersmith2_platformtext: ללא חיבור
+  kodableunplugged_platformtext: ללא חיבור
+  projguts_platformtext: ללא חיבור
+  hourofcode_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  frozen_platformtext: דפדפנים מודרניים + טאבלטים
+  starwars_platformtext: דפדפנים מודרניים + טאבלטים
+  playlab_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
   monstercoding_platformtext: Modern web browsers, iOS, Android
   allcancode_platformtext: Modern web browsers, iOS
-  csfirst_platformtext: "דפדפנים מודרניים"
+  csfirst_platformtext: דפדפנים מודרניים
   boxisland_platformtext: Android, iOS
-  codesters_platformtext: "דפדפנים מודרניים"
+  codesters_platformtext: דפדפנים מודרניים
   texasinstruments_platformtext: TI Calculators
-  teacherled_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
-  codeorg_shortdescription: "למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!"
-  codeintl_shortdescription: "למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!"
+  teacherled_platformtext: דפדפנים מודרנים, סמרטפונים, טבלטים
+  codeorg_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
+  codeintl_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
-  khan_shortdescription: "לומדים לצייר ב- JavaScript"
-  khanes_shortdescription: "לומדים לצייר ב- JavaScript"
-  khanpt_shortdescription: "לומדים לצייר ב- JavaScript"
-  khanhe_shortdescription: "לומדים לצייר ב- JavaScript"
-  khanfr_shortdescription: "לומדים לצייר ב- JavaScript"
-  khanpl_shortdescription: "לומדים לצייר ב- JavaScript"
-  tynker_shortdescription: "למד לכתוב קוד על ידי פתירת חידות מהנות ובנה משחקי מובייל
-    משלך."
-  scratch_shortdescription: "צרו משחקים אינטראקטיביים, סיפורים ואנימציות."
-  lightbot_shortdescription: "תכנת את Lightbot כדי לפתור חידות באמצעות פרוצדורות וחזרות!"
-  thinkersmith_shortdescription: "הדרכה לא מכוונת עבור קבוצה ללא התקנים"
-  condcards_shortdescription: "למד אלגוריתמים עם חפיסת קלפים"
-  lightbotintl_shortdescription: "משחק המלמד את עקרונות הקידוד"
-  codehs_shortdescription: "התחלי לקודד עם צ'רלי הכלב, מבוא ויזואלית ומהנה לתכנות!"
-  codecademy_shortdescription: "למדו תכנות JavaScript, בדפדפן"
-  codecombat_shortdescription: "הביסו מפלצות כדי ללמוד פייתון או ג'אווה סקריפט במשחק
-    התכנות האדיר הזה!"
-  codemonkey_shortdescription: "תלמידים מתכנתים קוף כדי שיתפוס בננות."
-  codeavengers_shortdescription: "למדו תכנות JavaScript, בדפדפן"
-  processing_shortdescription: "הדרכה בת שעה אחת בשפות עיבוד"
-  robomind_shortdescription: "כתבו קוד עבור רובוט וירטואלי"
+  khan_shortdescription: לומדים לצייר ב- JavaScript
+  khanes_shortdescription: לומדים לצייר ב- JavaScript
+  khanpt_shortdescription: לומדים לצייר ב- JavaScript
+  khanhe_shortdescription: לומדים לצייר ב- JavaScript
+  khanfr_shortdescription: לומדים לצייר ב- JavaScript
+  khanpl_shortdescription: לומדים לצייר ב- JavaScript
+  tynker_shortdescription: למד לכתוב קוד על ידי פתירת חידות מהנות ובנה משחקי מובייל
+    משלך.
+  scratch_shortdescription: צרו משחקים אינטראקטיביים, סיפורים ואנימציות.
+  lightbot_shortdescription: תכנת את Lightbot כדי לפתור חידות באמצעות פרוצדורות וחזרות!
+  thinkersmith_shortdescription: הדרכה לא מכוונת עבור קבוצה ללא התקנים
+  condcards_shortdescription: למד אלגוריתמים עם חפיסת קלפים
+  lightbotintl_shortdescription: משחק המלמד את עקרונות הקידוד
+  codehs_shortdescription: התחלי לקודד עם צ'רלי הכלב, מבוא ויזואלית ומהנה לתכנות!
+  codecademy_shortdescription: למדו תכנות JavaScript, בדפדפן
+  codecombat_shortdescription: הביסו מפלצות כדי ללמוד פייתון או ג'אווה סקריפט במשחק
+    התכנות האדיר הזה!
+  codemonkey_shortdescription: תלמידים מתכנתים קוף כדי שיתפוס בננות.
+  codeavengers_shortdescription: למדו תכנות JavaScript, בדפדפן
+  processing_shortdescription: הדרכה בת שעה אחת בשפות עיבוד
+  robomind_shortdescription: כתבו קוד עבור רובוט וירטואלי
   groklearning_shortdescription: ללמד את צ'ט בוט "אליזה" כדי לעבוד על חבריך שיחשבו
     שהיא אנושית!
-  quorum_shortdescription: "הצטרפו למרי לסיור מודרך בו היא לומדת את שפת התכנות Quorum."
-  codespark_shortdescription: "הזהב Foos הוא משחק כיפי וידידותי לילדים כדי ללמוד תכנות."
-  kodable_shortdescription: "משחק כיפי לאייפד המלמד מושגי תכנות"
-  tynkerapp_shortdescription: "ללמוד לתכנת על ידי פתרון של חידות קידוד כיפיות. "
-  robomindnl_shortdescription: "כתבו קוד עבור רובוט וירטואלי"
-  flappy_shortdescription: "ליצור משחק משלך - ריקוד הציפורים, כריש או צוללות"
-  bitsbox_shortdescription: "לקודד סדרת אפליקציות למשחק ושיתוף, בשימוש בג'אווה סקריפט
-    אמיתי."
+  quorum_shortdescription: הצטרפו למרי לסיור מודרך בו היא לומדת את שפת התכנות Quorum.
+  codespark_shortdescription: הזהב Foos הוא משחק כיפי וידידותי לילדים כדי ללמוד תכנות.
+  kodable_shortdescription: משחק כיפי לאייפד המלמד מושגי תכנות
+  tynkerapp_shortdescription: 'ללמוד לתכנת על ידי פתרון של חידות קידוד כיפיות. '
+  robomindnl_shortdescription: כתבו קוד עבור רובוט וירטואלי
+  flappy_shortdescription: ליצור משחק משלך - ריקוד הציפורים, כריש או צוללות
+  bitsbox_shortdescription: לקודד סדרת אפליקציות למשחק ושיתוף, בשימוש בג'אווה סקריפט
+    אמיתי.
   makeschool_shortdescription: Make an iPhone game! Learn by writing code to teach
     your monster new moves!
-  touchdevelop_shortdescription: "לפתור חידות, ליצור משחקים, ולמד לתכנת ,הכל בטלפון
-    שלך. "
-  appinventor_shortdescription: "צרו את האפליקציה שלכם (אנדרואיד בלבד)"
-  blockly_shortdescription: "הורד קובץ ZIP כדי ללמוד במצב לא מקוון"
-  thinkersmith2_shortdescription: "למד כיצד מחשבים משתמשים ב1 ו- 0 כדי לייצג מידע"
-  kodableunplugged_shortdescription: "תרגיל כיפי שאינו מצריך חיבור"
-  projguts_shortdescription: "נסו מודלים וסימולציות באמצעות אבן/נייר/מספריים"
-  hourofcode_shortdescription: "למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!"
-  frozen_shortdescription: "בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
-    והיופי של קרח."
+  touchdevelop_shortdescription: 'לפתור חידות, ליצור משחקים, ולמד לתכנת ,הכל בטלפון
+    שלך. '
+  appinventor_shortdescription: צרו את האפליקציה שלכם (אנדרואיד בלבד)
+  blockly_shortdescription: הורד קובץ ZIP כדי ללמוד במצב לא מקוון
+  thinkersmith2_shortdescription: למד כיצד מחשבים משתמשים ב1 ו- 0 כדי לייצג מידע
+  kodableunplugged_shortdescription: תרגיל כיפי שאינו מצריך חיבור
+  projguts_shortdescription: נסו מודלים וסימולציות באמצעות אבן/נייר/מספריים
+  hourofcode_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
+  frozen_shortdescription: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
+    והיופי של קרח.
   starwars_shortdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
     הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-  playlab_shortdescription: "ליצור סיפור או משחק עם Play Lab!"
+  playlab_shortdescription: ליצור סיפור או משחק עם Play Lab!
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
-  artist_shortdescription: "ציירו תמונות מגניבות ועיצובים עם האמן!"
+  artist_shortdescription: ציירו תמונות מגניבות ועיצובים עם האמן!
   monsterocding_shortdescription: A colorful self-guided programming adventure for
     children.
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming
@@ -1457,96 +1456,96 @@
   coursed_shortdescription_congrats: ''
   coursee_shortdescription_congrats: ''
   coursef_shortdescription_congrats: ''
-  codeorg_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
+  codeorg_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
     ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק
     צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים.
-    מוצע ב34 שפות."
-  codeintl_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
+    מוצע ב34 שפות.
+  codeintl_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור
     ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק
     צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים.
-    מוצע ב34 שפות."
+    מוצע ב34 שפות.
   thinkersmithspanish_longdescription: באמצעות שימוש ב"מילון רובוטי" המוגדר מראש,
     התלמידים ילמדו להנחות אחד את השני בהשלמת משימות ללא דיון מקדים. השיעור הזה מלמד
     את הילדים את הקשר בין סמלים לפעולות, וגם את היכולת החשובה מאוד של לדבג.
-  khan_longdescription: "למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים באמצעות
-    הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!"
-  khanes_longdescription: "למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים
-    באמצעות הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!"
-  khanpt_longdescription: "למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים
-    באמצעות הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!"
-  khanhe_longdescription: "למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים
-    באמצעות הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!"
-  khanfr_longdescription: "למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים
-    באמצעות הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!"
-  khanpl_longdescription: "למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים
-    באמצעות הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!"
-  tynker_longdescription: "לבנות משחקים בעצמכם ולשתף אותם עם חברים! לפתור חידות קידוד
+  khan_longdescription: למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים באמצעות
+    הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!
+  khanes_longdescription: למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים באמצעות
+    הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!
+  khanpt_longdescription: למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים באמצעות
+    הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!
+  khanhe_longdescription: למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים באמצעות
+    הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!
+  khanfr_longdescription: למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים באמצעות
+    הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!
+  khanpl_longdescription: למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים באמצעות
+    הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!
+  tynker_longdescription: לבנות משחקים בעצמכם ולשתף אותם עם חברים! לפתור חידות קידוד
     מהנות וללמוד מושגי תכנות בכל שלב. לבצע התאמה אישית למשחקים עם דמויות אנימציה,
     רמות מרובות ואבזור עשיר. להפוך את המשחקים למציאותיים על ידי שימוש בפיזיקה. לראות
     את הקוד כבלוקים ויזואליים או ג'אווה סקריפט. להפוך את המשחקים שלכם למתאימים לאייפד
-    וטבלטים. מעל תריסר פעילויות מהנות לבחירה!"
-  scratch_longdescription: "עם סקראץ', תוכלו ליצור משחקים אינטרקטיביים, סיפורים והנפשות
-    ולשתף אותם עם חבריכם. התחילו בליצור הנפשה משמך, יצירת כרטיס ברכה או משחק פונג."
-  lightbot_longdescription: "הדריכו את הלייטבוט כך שידליק את כל האריחים הכחולים.לייטבוט
+    וטבלטים. מעל תריסר פעילויות מהנות לבחירה!
+  scratch_longdescription: עם סקראץ', תוכלו ליצור משחקים אינטרקטיביים, סיפורים והנפשות
+    ולשתף אותם עם חבריכם. התחילו בליצור הנפשה משמך, יצירת כרטיס ברכה או משחק פונג.
+  lightbot_longdescription: הדריכו את הלייטבוט כך שידליק את כל האריחים הכחולים.לייטבוט
     הוא משחק חשיבה שמתשמש בתכנות של מכניקת משחקים כדי להקנות לשחקנים הבנה מעשית של
     כתיבת קוד בסיסית. תלמדו לכתוב הוראות ברצף, לכתוב פרוצדורות, ולהשתמש בלולאות כדי
-    לעבור שלבים. מתאים לכל הגילאים."
+    לעבור שלבים. מתאים לכל הגילאים.
   thinkersmith_longdescription: באמצעות שימוש במילון רובוטי המוגדר מראש, תלמידים יגלו
     איך להדריך אחד את השני לביצוע משימות מבלי לדבר עליהן לפני כן. השיעור מלמד את הילדים
     את הקשר בין סמלים ופעולות, ואת המיומנות החשובה של איתור באגים."החברים הרובוטים
     שלי" מתאים במיוחד כפעילות קבוצתית וכולל חוברת למורה לשימוש בכיתה.
-  condcards_longdescription: "למדו על אלגוריתמים ותנאים בפעילות לא מקוונת זו על ידי
+  condcards_longdescription: למדו על אלגוריתמים ותנאים בפעילות לא מקוונת זו על ידי
     שימוש בחפיסת קלפים. תלמידים יעשו פעילות זו בקבוצות ויזדקקו חפיסת קלפים עבור כל
-    קבוצה."
-  lightbotintl_longdescription: "למדו את החלקים העיקריים בלוגיקת תכנות, החל מתכנות
+    קבוצה.
+  lightbotintl_longdescription: למדו את החלקים העיקריים בלוגיקת תכנות, החל מתכנות
     סופר בסיסי , לגילאי 4+, על iOs  או אנדרואיד (או בדפדפם). למדו איך ליצור רצףשל
-    הוראות, לזהות תבניות ,להשתמש בפרוצדורות ובלולאות!"
-  codehs_longdescription: "לתכנת זה בעצם לתת פקודות למחשב. זה דומה מאוד ללתת פקודות
+    הוראות, לזהות תבניות ,להשתמש בפרוצדורות ובלולאות!
+  codehs_longdescription: לתכנת זה בעצם לתת פקודות למחשב. זה דומה מאוד ללתת פקודות
     לכלב. למדו לקודד עם קרל הכלב :מבוא כיפי , ויזואלי ומהנה לתכנות שמלמד מושגי יסוג
     כמו פקודות ופונקציות למתחילים של ממש. ההדרכה היא בקצב התלמיד אבל המורה יכול להירשם
-    כדי לגשת לכלים למורה ולעקוב אחרי התקדמות תלמידיו!"
+    כדי לגשת לכלים למורה ולעקוב אחרי התקדמות תלמידיו!
   codecademy_longdescription: Codecademy היא מבוא אינטרקטיבי בקצב אישי ליסודות מדעי
     המחשב באמצעות ג'אווה סקריפט, שמתמשים בו מיליוני תלמידים ברחבי העולם. הכנו את חוויית
     שעת הקוד המלווה בשאלונים, שקפים ופרויקט מושלם עבור הסטודנטים בסיומו.
-  codecombat_longdescription: "הביסו מפלצות כדי ללמוד פייתון או ג'אווה סקריפט במשחק
-    התכנות האדיר הזה!"
-  codemonkey_longdescription: "קוד מנקי הוא משחק מקוון המלמד תכנות בשפת תכנות אמיתית!
+  codecombat_longdescription: הביסו מפלצות כדי ללמוד פייתון או ג'אווה סקריפט במשחק
+    התכנות האדיר הזה!
+  codemonkey_longdescription: 'קוד מנקי הוא משחק מקוון המלמד תכנות בשפת תכנות אמיתית!
     תלמידים מתכנתים את הקוף כך שיתפוס בננות , משימה שהופכת קשה יותר ויותר עם ההתקדמות
     בשלבים. התלמידים מקבלים ניקוד בכוכבים על כל פתרון ויכולים לשתף את הפתרון בלחיצת
-    כפתור. "
-  codeavengers_longdescription: "בנו משחק לשני שחקנים, בשני מימדים, בג'אווה סקריפט
+    כפתור. '
+  codeavengers_longdescription: בנו משחק לשני שחקנים, בשני מימדים, בג'אווה סקריפט
     באמצעות 10 משימות קצרות. אחר כך המשיכו ללימודי בסיס התכנות (משתנים ותנאים) כשאתם
     יוצרים שאלון שתוכלו לשתף עם חברים. הרוויחו נקודות וסיכות מיוחדות בתחרות על הדירוג
-    הכיתתי."
-  processing_longdescription: "מבוא לתכנות בקונטקסט של אמנות חזותית בעזרת שפת תכנות
+    הכיתתי.
+  processing_longdescription: מבוא לתכנות בקונטקסט של אמנות חזותית בעזרת שפת תכנות
     מעבדת. סרטוני וידאו קצרים מציגים את תרגילי הקידוד המובילים לתכנון תוכנית ציור
-    אינטראקטיבית"
-  robomind_longdescription: "התלמידים לומדים את יסודות התכנות על ידי שליטה ברובוט
+    אינטראקטיבית
+  robomind_longdescription: 'התלמידים לומדים את יסודות התכנות על ידי שליטה ברובוט
     וירטואלי משלהם. הקורס המקוון הוא לגמרי עצמאי עם מצגות קצרות, סרטונים, חידושים
-    הכל עם הדרכה אוטומטית/רמזים כדי לעזור עם תרגילי התכנות. "
-  groklearning_longdescription: "השתמשו בשפת פייתון כדי לבנות רובוט צ'ט בשם אליזה
-    שתתפקד כרובוט פסיכולוג. אתם תלמדו את אליזה לדבר ומה הדבר הנכון לומר. האם היא תצליח
-    לעבוד על חבריכם כדי שיחשבו שהיא אדם ולא מחשב?"
-  quorum_longdescription: "מדריך זה נגיש עבור לקויי ראייה, ועובד עם screenreaders.
+    הכל עם הדרכה אוטומטית/רמזים כדי לעזור עם תרגילי התכנות. '
+  groklearning_longdescription: השתמשו בשפת פייתון כדי לבנות רובוט צ'ט בשם אליזה שתתפקד
+    כרובוט פסיכולוג. אתם תלמדו את אליזה לדבר ומה הדבר הנכון לומר. האם היא תצליח לעבוד
+    על חבריכם כדי שיחשבו שהיא אדם ולא מחשב?
+  quorum_longdescription: מדריך זה נגיש עבור לקויי ראייה, ועובד עם screenreaders.
     הצטרפו לסיור עם מרי כשהיא מצטרפת למעבדה ביולוגית כמתכנת ולומדת את שפת התכנות Quorum.
-    מדריך זה מונחה-תלמיד ומכיל פעילויות מקוונות לדוגמה."
+    מדריך זה מונחה-תלמיד ומכיל פעילויות מקוונות לדוגמה.
   codespark_longdescription: משפחת פו (Foo) הוא דרך כיפית וידידותית לילדים ללמוד תכנות.
     תכנת דמויות על מנת לפתור פאזלים ולהחיות עולם וירטואלי. זה משחק "נטול מילים" כך
     שכולם יכולים לשחק!
-  kodable_longdescription: "בר-קידוד (Kodable) הוא משחק אי-פד עצמאי שחושף ילדים בגילאי
-    5+ ליסודות התכנות. נוכחות של הורה או מורה ממלצת אך לא הכרחית."
-  tynkerapp_longdescription: "למדו לתכנת בעזרת פתרון פאזלים כייפים. בנו בקלות משחקים
+  kodable_longdescription: בר-קידוד (Kodable) הוא משחק אי-פד עצמאי שחושף ילדים בגילאי
+    5+ ליסודות התכנות. נוכחות של הורה או מורה ממלצת אך לא הכרחית.
+  tynkerapp_longdescription: למדו לתכנת בעזרת פתרון פאזלים כייפים. בנו בקלות משחקים
     וסיפורים עם גרפיקה נושאית, למעלה מעשר ערכות משחק ודמויות להתאמה אישית. אין צורך
-    בחיבור לאינטרנט. באפשרותך גם לגשת ליצירות שלך באינטרנט."
-  robomindnl_longdescription: "התלמידים לומדים את יסודות התכנות על ידי שליטה ברובוט
+    בחיבור לאינטרנט. באפשרותך גם לגשת ליצירות שלך באינטרנט.
+  robomindnl_longdescription: 'התלמידים לומדים את יסודות התכנות על ידי שליטה ברובוט
     וירטואלי משלהם. הקורס המקוון הוא לגמרי עצמאי עם מצגות קצרות, סרטונים, חידושים
-    הכל עם הדרכה אוטומטית/רמזים כדי לעזור עם תרגילי התכנות. "
-  flappy_longdescription: "השתמש בתכנות גרור-ושחרר הכן משחק הציפור-פלאפי (Flappy-Bird)
+    הכל עם הדרכה אוטומטית/רמזים כדי לעזור עם תרגילי התכנות. '
+  flappy_longdescription: השתמש בתכנות גרור-ושחרר הכן משחק הציפור-פלאפי (Flappy-Bird)
     משלך והתאם אותו להיראות שונה (בדמות כריש, סנטה וכו'). הוסף את המשחק לטלפון שלך
-    בלחיצה אחת."
-  bitsbox_longdescription: "הכן טאבלט וירטואלי משלך, תכנת סדרה של אפליקציות ושתף אותן.
+    בלחיצה אחת.
+  bitsbox_longdescription: הכן טאבלט וירטואלי משלך, תכנת סדרה של אפליקציות ושתף אותן.
     ההולכה הפשוטה מאפשרת גם לילדים צעירים לתכנת תוכנית JavaScript אמיתיות. ככל שתתקדם
-    יותר, תגיע רחוק יותר."
+    יותר, תגיע רחוק יותר.
   makeschool_longdescription: Learn to code by making an iPhone game using a brand
     new and beginner-friendly programming language called Swift! Create a Pok&eacute;mon-inspired
     action game and write code to teach your monster new moves. You will learn how
@@ -1559,9 +1558,9 @@
     own apps before you know it. Imagine sharing your own app creations with your
     friends! These activities are suitable for individuals and for teachers leading
     classes.
-  blockly_longdescription: "האם ברשותכם מחשב עם חיבור איטי (או לא קיים) לאינטרנט?
-    הורידו את ההדרכות של בלוקי שהיו קיימים לפני הדרכות בCode.org -קובץ ZIP יחיד בגודל
-    3 מגה שניתן להטעינו על כל מחשב או להשתמש בו מדיסק און קי"
+  blockly_longdescription: האם ברשותכם מחשב עם חיבור איטי (או לא קיים) לאינטרנט? הורידו
+    את ההדרכות של בלוקי שהיו קיימים לפני הדרכות בCode.org -קובץ ZIP יחיד בגודל 3 מגה
+    שניתן להטעינו על כל מחשב או להשתמש בו מדיסק און קי
   thinkersmith2_longdescription: תלמידים לומדים על הצגה ואחסון של אותיות בצורה בינארית,
     באמצעות הסימנים "מופעל" ו"מכובה". בסופו של שיעור, הכיתה תוכל להצפין את ראשי התיבות
     של שמם כדי לקחתם הביתה.
@@ -1572,9 +1571,9 @@
   projguts_longdescription: פעילות זו שאינה מצריכה חיבור לרשת מסייעת לתלמידים ללמוד
     איך מידול וסימולציה עובדים על ידי כך שקבוצת תלמידים תשחק בגרסאות שונות של המשחק
     "אבן נייר ומספריים" , ותראה את התוצאות כניסוים שונים במידול.
-  hourofcode_longdescription: "מחזיק מקום עבור code.org/hoc חדש"
-  frozen_longdescription: "תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
-    שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!"
+  hourofcode_longdescription: מחזיק מקום עבור code.org/hoc חדש
+  frozen_longdescription: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
+    שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
   starwars_longdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
     הפרטי שלכם בגלקסיה רחוקה, רחוקה...
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
@@ -1611,182 +1610,182 @@
     activities that teach the basics of computer science. To help teachers find inspiration,
     we collected and curated one-hour teacher-led lesson and activity plans designed
     for different subject areas for Hour of Code veterans.
-  codeorg_beyond_name: "מבוא למדעי המחשב (גן חובה-כיתה ח')"
-  khan_beyond_name: "למדו תכנות"
-  tynker_beyond_name: "למדו תכנות בבית"
-  scratch_beyond_name: "היה יצירתי עם קידוד"
+  codeorg_beyond_name: מבוא למדעי המחשב (גן חובה-כיתה ח')
+  khan_beyond_name: למדו תכנות
+  tynker_beyond_name: למדו תכנות בבית
+  scratch_beyond_name: היה יצירתי עם קידוד
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
   kodable_beyond_name: Kodable
-  scratchjr_beyond_name: "סקראץ' ג'וניור לגילאי טרום קריאה"
-  hopscotch_beyond_name: "הופסקוץ' :תכנות על האייפד שלך"
+  scratchjr_beyond_name: סקראץ' ג'וניור לגילאי טרום קריאה
+  hopscotch_beyond_name: הופסקוץ' :תכנות על האייפד שלך
   pocketcode_beyond_name: Pocket Code
-  groklearning_beyond_name: "ללמוד תכנות Python"
-  hacketyhack_beyond_name: "למד רובי"
-  robomind_beyond_name: "תכנת רובוט וירטואלי"
+  groklearning_beyond_name: ללמוד תכנות Python
+  hacketyhack_beyond_name: למד רובי
+  robomind_beyond_name: תכנת רובוט וירטואלי
   makeschool_beyond_name: Build an iPhone game in your browser!
-  appinventor_beyond_name: "אפ אינוונטור - שעה של קוד"
+  appinventor_beyond_name: אפ אינוונטור - שעה של קוד
   touchdevelop_beyond_name: TouchDevelop
-  codehs_beyond_name: "למד לקודד עם קרל הכלב"
-  udemy_beyond_name: "קורסי תכנות באינטרנט"
-  lynda_beyond_name: "קורסי תכנות באינטרנט"
-  edx_beyond_name: "קורס CS50  בהרווארד"
-  coursera_beyond_name: "קורס מבוא למדעי המחשב של אוניברסיטת סטאנפורד"
+  codehs_beyond_name: למד לקודד עם קרל הכלב
+  udemy_beyond_name: קורסי תכנות באינטרנט
+  lynda_beyond_name: קורסי תכנות באינטרנט
+  edx_beyond_name: קורס CS50  בהרווארד
+  coursera_beyond_name: קורס מבוא למדעי המחשב של אוניברסיטת סטאנפורד
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: "קורסים אוניברסיטאים באינטרנט"
+  teachingtree_beyond_name: קורסים אוניברסיטאים באינטרנט
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
-  w3schools_beyond_name: "ללמוד HTML"
-  codeavengers_beyond_name: "ללמוד לקודד אתרי אינטרנט"
+  w3schools_beyond_name: ללמוד HTML
+  codeavengers_beyond_name: ללמוד לקודד אתרי אינטרנט
   mozilla_beyond_name: Webmaker
   codecombat_beyond_name: CodeCombat
   codea_beyond_name: Codea
   lego_beyond_name: Mindstorms
   finch_beyond_name: Finch
-  arduino_beyond_name: "ארדואינו עם ספארק פאן"
+  arduino_beyond_name: ארדואינו עם ספארק פאן
   processing_beyond_name: לתכנת עם "עיבוד"
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "גילאי 4-104"
-  khan_beyond_gradelevel: "חטיבת ביניים +"
-  tynker_beyond_gradelevel: "גילאי 5-13"
-  scratch_beyond_gradelevel: "גילאי 8 +"
-  lightbot_beyond_gradelevel: "כל הגילאים"
-  codecademy_beyond_gradelevel: "בית ספר תיכון"
-  kodable_beyond_gradelevel: "בית ספר יסודי"
-  scratchjr_beyond_gradelevel: "בית ספר יסודי"
-  hopscotch_beyond_gradelevel: "חטיבת ביניים +"
-  pocketcode_beyond_gradelevel: "חטיבת ביניים +"
-  groklearning_beyond_gradelevel: "חטיבת ביניים +"
-  hacketyhack_beyond_gradelevel: "בית ספר תיכון"
-  robomind_beyond_gradelevel: "גילאי 8-13"
-  makeschool_beyond_gradelevel: "בית ספר תיכון"
-  appinventor_beyond_gradelevel: "חטיבת ביניים +"
-  touchdevelop_beyond_gradelevel: "בית ספר תיכון"
-  codehs_beyond_gradelevel: "בית ספר תיכון"
-  udemy_beyond_gradelevel: "בית ספר תיכון +"
-  lynda_beyond_gradelevel: "בית ספר תיכון +"
-  edx_beyond_gradelevel: "אוניברסיטה"
-  coursera_beyond_gradelevel: "אוניברסיטה"
-  udacity_beyond_gradelevel: "אוניברסיטה"
-  teachingtree_beyond_gradelevel: "אוניברסיטה"
-  kodu_beyond_gradelevel: "גילאי 8 +"
-  cargobot_beyond_gradelevel: "גילאי 8 +"
-  kidsruby_beyond_gradelevel: "גילאי 12 +"
-  w3schools_beyond_gradelevel: "גילאי 12 +"
-  codeavengers_beyond_gradelevel: "חטיבת ביניים +"
-  mozilla_beyond_gradelevel: "גילאי 12 +"
-  codecombat_beyond_gradelevel: "חטיבת ביניים +"
-  codea_beyond_gradelevel: "בית ספר תיכון +"
-  lego_beyond_gradelevel: "חטיבת ביניים +"
-  finch_beyond_gradelevel: "גילאי 8 +"
-  arduino_beyond_gradelevel: "בית ספר תיכון +"
-  processing_beyond_gradelevel: "בית ספר תיכון"
-  alice_beyond_gradelevel: "חטיבת ביניים +"
-  sphero_beyond_gradelevel: "גילאי 8 +"
-  codeorg_beyond_platformtext: "דפדפנים מודרניים + טאבלטים"
-  khan_beyond_platformtext: "דפדפנים מודרניים"
-  tynker_beyond_platformtext: "דפדנים מודרניים (כרוך בתשלום)"
-  scratch_beyond_platformtext: "בכל דפדפן"
+  codeorg_beyond_gradelevel: גילאי 4-104
+  khan_beyond_gradelevel: חטיבת ביניים +
+  tynker_beyond_gradelevel: גילאי 5-13
+  scratch_beyond_gradelevel: גילאי 8 +
+  lightbot_beyond_gradelevel: כל הגילאים
+  codecademy_beyond_gradelevel: בית ספר תיכון
+  kodable_beyond_gradelevel: בית ספר יסודי
+  scratchjr_beyond_gradelevel: בית ספר יסודי
+  hopscotch_beyond_gradelevel: חטיבת ביניים +
+  pocketcode_beyond_gradelevel: חטיבת ביניים +
+  groklearning_beyond_gradelevel: חטיבת ביניים +
+  hacketyhack_beyond_gradelevel: בית ספר תיכון
+  robomind_beyond_gradelevel: גילאי 8-13
+  makeschool_beyond_gradelevel: בית ספר תיכון
+  appinventor_beyond_gradelevel: חטיבת ביניים +
+  touchdevelop_beyond_gradelevel: בית ספר תיכון
+  codehs_beyond_gradelevel: בית ספר תיכון
+  udemy_beyond_gradelevel: בית ספר תיכון +
+  lynda_beyond_gradelevel: בית ספר תיכון +
+  edx_beyond_gradelevel: אוניברסיטה
+  coursera_beyond_gradelevel: אוניברסיטה
+  udacity_beyond_gradelevel: אוניברסיטה
+  teachingtree_beyond_gradelevel: אוניברסיטה
+  kodu_beyond_gradelevel: גילאי 8 +
+  cargobot_beyond_gradelevel: גילאי 8 +
+  kidsruby_beyond_gradelevel: גילאי 12 +
+  w3schools_beyond_gradelevel: גילאי 12 +
+  codeavengers_beyond_gradelevel: חטיבת ביניים +
+  mozilla_beyond_gradelevel: גילאי 12 +
+  codecombat_beyond_gradelevel: חטיבת ביניים +
+  codea_beyond_gradelevel: בית ספר תיכון +
+  lego_beyond_gradelevel: חטיבת ביניים +
+  finch_beyond_gradelevel: גילאי 8 +
+  arduino_beyond_gradelevel: בית ספר תיכון +
+  processing_beyond_gradelevel: בית ספר תיכון
+  alice_beyond_gradelevel: חטיבת ביניים +
+  sphero_beyond_gradelevel: גילאי 8 +
+  codeorg_beyond_platformtext: דפדפנים מודרניים + טאבלטים
+  khan_beyond_platformtext: דפדפנים מודרניים
+  tynker_beyond_platformtext: דפדנים מודרניים (כרוך בתשלום)
+  scratch_beyond_platformtext: בכל דפדפן
   lightbot_beyond_platformtext: iOS, אנדרואיד (או דפדפן )
-  codecademy_beyond_platformtext: "דפדפנים מודרניים ואפליקציות iOS  או אנדרואיד"
+  codecademy_beyond_platformtext: דפדפנים מודרניים ואפליקציות iOS  או אנדרואיד
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
-  pocketcode_beyond_platformtext: "האפליקצייה"
-  groklearning_beyond_platformtext: "דפדפנים מודרניים"
-  hacketyhack_beyond_platformtext: "התקנה למחשב"
-  robomind_beyond_platformtext: "דפדפנים מודרניים, אינטרנט סלולרי"
-  makeschool_beyond_platformtext: "דפדפנים מודרניים"
-  appinventor_beyond_platformtext: "דפדפנים מודרניים +אנדרואיד"
-  touchdevelop_beyond_platformtext: "דפדפנים מודרניים , סמארטפונים, כל ההתקנים"
-  codehs_beyond_platformtext: "דפדפנים מודרניים (כרוך בתשלום)"
-  udemy_beyond_platformtext: "מבוסס אינטרנט"
-  lynda_beyond_platformtext: "מבוסס אינטרנט (כרוך בתשלום)"
-  edx_beyond_platformtext: "דפדפנים מודרניים"
-  coursera_beyond_platformtext: "דפדפנים מודרניים"
-  udacity_beyond_platformtext: "דפדפנים מודרניים"
-  teachingtree_beyond_platformtext: "מבוסס אינטרנט"
+  pocketcode_beyond_platformtext: האפליקצייה
+  groklearning_beyond_platformtext: דפדפנים מודרניים
+  hacketyhack_beyond_platformtext: התקנה למחשב
+  robomind_beyond_platformtext: דפדפנים מודרניים, אינטרנט סלולרי
+  makeschool_beyond_platformtext: דפדפנים מודרניים
+  appinventor_beyond_platformtext: דפדפנים מודרניים +אנדרואיד
+  touchdevelop_beyond_platformtext: דפדפנים מודרניים , סמארטפונים, כל ההתקנים
+  codehs_beyond_platformtext: דפדפנים מודרניים (כרוך בתשלום)
+  udemy_beyond_platformtext: מבוסס אינטרנט
+  lynda_beyond_platformtext: מבוסס אינטרנט (כרוך בתשלום)
+  edx_beyond_platformtext: דפדפנים מודרניים
+  coursera_beyond_platformtext: דפדפנים מודרניים
+  udacity_beyond_platformtext: דפדפנים מודרניים
+  teachingtree_beyond_platformtext: מבוסס אינטרנט
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: "התקנה למחשב"
-  w3schools_beyond_platformtext: "דפדפנים מודרניים"
-  codeavengers_beyond_platformtext: "דפדפנים מודרניים"
-  mozilla_beyond_platformtext: "דפדפנים מודרניים"
-  codecombat_beyond_platformtext: "מבוסס אינטרנט (פיירפוקס, כרום, ספארי, IE9 +)"
+  kidsruby_beyond_platformtext: התקנה למחשב
+  w3schools_beyond_platformtext: דפדפנים מודרניים
+  codeavengers_beyond_platformtext: דפדפנים מודרניים
+  mozilla_beyond_platformtext: דפדפנים מודרניים
+  codecombat_beyond_platformtext: מבוסס אינטרנט (פיירפוקס, כרום, ספארי, IE9 +)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: "רכישת רובוט"
-  finch_beyond_platformtext: "רכישת רובוט"
-  arduino_beyond_platformtext: "דפדפן האינטרנט ולאחר מכן רכישת קיט"
-  processing_beyond_platformtext: "דפדפנים מודרניים"
+  lego_beyond_platformtext: רכישת רובוט
+  finch_beyond_platformtext: רכישת רובוט
+  arduino_beyond_platformtext: דפדפן האינטרנט ולאחר מכן רכישת קיט
+  processing_beyond_platformtext: דפדפנים מודרניים
   alice_beyond_platformtext: Windows או Mac (נדרשת התקנה )
-  sphero_beyond_platformtext: "רכישת רובוט"
-  codeorg_beyond_shortdescription: "למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!"
-  khan_beyond_shortdescription: "לומדים לצייר ב- JavaScript"
-  tynker_beyond_shortdescription: "קורס מרתק ומהנה לילדים בכיתות ד-ח"
-  scratch_beyond_shortdescription: "צרו משחקים אינטראקטיביים, סיפורים ואנימציות."
-  lightbot_beyond_shortdescription: "משחק המלמד את עקרונות הקידוד"
-  codecademy_beyond_shortdescription: "למדו תכנות JavaScript, בדפדפן"
-  kodable_beyond_shortdescription: "משחק כיפי לאייפד המלמד מושגי תכנות"
-  scratchjr_beyond_shortdescription: "ליצור סיפורים אינטראקטיביים ומשחקים באמצעות
-    ScratchJr. "
-  hopscotch_beyond_shortdescription: "ללמוד תכנות ויזואלי ב- iPad"
-  pocketcode_beyond_shortdescription: "צרו משחק בסמארטפון ושתפו עם חבריכם כדי שיוכלו
-    לשחק גם!"
-  groklearning_beyond_shortdescription: "מבוא בסיסי לתכנות בפייתון"
-  hacketyhack_beyond_shortdescription: "למד רובי מההתחלה"
-  robomind_beyond_shortdescription: "כתבו קוד עבור רובוט וירטואלי"
+  sphero_beyond_platformtext: רכישת רובוט
+  codeorg_beyond_shortdescription: למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!
+  khan_beyond_shortdescription: לומדים לצייר ב- JavaScript
+  tynker_beyond_shortdescription: קורס מרתק ומהנה לילדים בכיתות ד-ח
+  scratch_beyond_shortdescription: צרו משחקים אינטראקטיביים, סיפורים ואנימציות.
+  lightbot_beyond_shortdescription: משחק המלמד את עקרונות הקידוד
+  codecademy_beyond_shortdescription: למדו תכנות JavaScript, בדפדפן
+  kodable_beyond_shortdescription: משחק כיפי לאייפד המלמד מושגי תכנות
+  scratchjr_beyond_shortdescription: 'ליצור סיפורים אינטראקטיביים ומשחקים באמצעות
+    ScratchJr. '
+  hopscotch_beyond_shortdescription: ללמוד תכנות ויזואלי ב- iPad
+  pocketcode_beyond_shortdescription: צרו משחק בסמארטפון ושתפו עם חבריכם כדי שיוכלו
+    לשחק גם!
+  groklearning_beyond_shortdescription: מבוא בסיסי לתכנות בפייתון
+  hacketyhack_beyond_shortdescription: למד רובי מההתחלה
+  robomind_beyond_shortdescription: כתבו קוד עבור רובוט וירטואלי
   makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
-  appinventor_beyond_shortdescription: "צרו את האפליקציה שלכם (אנדרואיד בלבד)"
-  touchdevelop_beyond_shortdescription: "צרו אפליקציות מובייל ישירות בסלולרי, טבלט
-    או מחשב נייד"
-  codehs_beyond_shortdescription: "ללמוד תכנות JavaScript עם סביבה ויזואלית מהנה"
-  udemy_beyond_shortdescription: "עשרות קורסי תכנות באינטרנט"
-  lynda_beyond_shortdescription: "עשרות קורסי תכנות באינטרנט"
-  edx_beyond_shortdescription: "הקורס הפופולרי ביותר באוניברסיטת הארווארד"
-  coursera_beyond_shortdescription: "התחילו עם מבוא למדעי המחשב"
-  udacity_beyond_shortdescription: "התחילו עם מבוא למדעי המחשב"
-  teachingtree_beyond_shortdescription: "הידע המקוון: מהיר,וללא הגבלה"
-  kodu_beyond_shortdescription: "צרו עולם משחק תלת מימדי"
-  cargobot_beyond_shortdescription: "תכנתו יד רובוטית באייפד שלכם"
-  kidsruby_beyond_shortdescription: "למדו לתכנת ברובי"
-  w3schools_beyond_shortdescription: "למדו ליצור אתרי אינטרנט"
-  codeavengers_beyond_shortdescription: "למדו לקודד משחקים ואתרים"
-  mozilla_beyond_shortdescription: "צרו ושתפו עמודי ווב"
-  codecombat_beyond_shortdescription: "שחקו משחק ולמדו JavaScript כדי לנצח"
-  codea_beyond_shortdescription: "ליצור אפליקציות באייפד שלך"
-  lego_beyond_shortdescription: "לבנות ולתכנת רובוט"
-  finch_beyond_shortdescription: "רובוט ללימודי מדעי המחשב"
+  appinventor_beyond_shortdescription: צרו את האפליקציה שלכם (אנדרואיד בלבד)
+  touchdevelop_beyond_shortdescription: צרו אפליקציות מובייל ישירות בסלולרי, טבלט
+    או מחשב נייד
+  codehs_beyond_shortdescription: ללמוד תכנות JavaScript עם סביבה ויזואלית מהנה
+  udemy_beyond_shortdescription: עשרות קורסי תכנות באינטרנט
+  lynda_beyond_shortdescription: עשרות קורסי תכנות באינטרנט
+  edx_beyond_shortdescription: הקורס הפופולרי ביותר באוניברסיטת הארווארד
+  coursera_beyond_shortdescription: התחילו עם מבוא למדעי המחשב
+  udacity_beyond_shortdescription: התחילו עם מבוא למדעי המחשב
+  teachingtree_beyond_shortdescription: 'הידע המקוון: מהיר,וללא הגבלה'
+  kodu_beyond_shortdescription: צרו עולם משחק תלת מימדי
+  cargobot_beyond_shortdescription: תכנתו יד רובוטית באייפד שלכם
+  kidsruby_beyond_shortdescription: למדו לתכנת ברובי
+  w3schools_beyond_shortdescription: למדו ליצור אתרי אינטרנט
+  codeavengers_beyond_shortdescription: למדו לקודד משחקים ואתרים
+  mozilla_beyond_shortdescription: צרו ושתפו עמודי ווב
+  codecombat_beyond_shortdescription: שחקו משחק ולמדו JavaScript כדי לנצח
+  codea_beyond_shortdescription: ליצור אפליקציות באייפד שלך
+  lego_beyond_shortdescription: לבנות ולתכנת רובוט
+  finch_beyond_shortdescription: רובוט ללימודי מדעי המחשב
   arduino_beyond_shortdescription: ללמוד ארדואינו עם "ארגז החול הדיגיטלי" של Sparkfun.
-  processing_beyond_shortdescription: "למדו את שפות העיבוד"
-  alice_beyond_shortdescription: "ללמד תכנות בסביבה תלת מימדית"
-  sphero_beyond_shortdescription: "שיעורי SPRK נותנים לילדים שיעור מהיר וכיפי בתכנות
-    רובוטים, תוך כדי שיפור המיומנויות במתמטיקה ומדעים."
-  codeorg_beyond_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות
+  processing_beyond_shortdescription: למדו את שפות העיבוד
+  alice_beyond_shortdescription: ללמד תכנות בסביבה תלת מימדית
+  sphero_beyond_shortdescription: שיעורי SPRK נותנים לילדים שיעור מהיר וכיפי בתכנות
+    רובוטים, תוך כדי שיפור המיומנויות במתמטיקה ומדעים.
+  codeorg_beyond_longdescription: למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות
     גרור-ושחרר. 3 קורסים מלאים, שכל אחד כולל 15-20 שיעורים המכילים הן פעילויות לא
     מקוונות בכיתה והן שיעורים בקצב אישי, דמויי משחק בכיכובם של ביל גייטס, מארק צוקרברג
     , אנגרי בירדז וצמחים נגד זומבים. למדו על לולאות, תנאים, אלגוריתמים בסיסיים, פונקציות
-    ומשתנים."
-  khan_beyond_longdescription: "למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים
-    באמצעות הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!"
+    ומשתנים.
+  khan_beyond_longdescription: למד את יסודות התכנות JavaScript תוך יצירת ציורים כיפים
+    באמצעות הקוד שלך. עשו את זה בעצמכם או עם הכיתה שלכם!
   tynker_beyond_longdescription: Tynker makes it fun & easy to learn programming.
     It makes it visual. Kids build games and mobile apps by arranging blocks of code.
     It removes the need to know programming syntax. Kids transform ideas into animated
     stories and math art right away. It promotes progressive learning. As kids learn
     fundamentals, Tynker introduces more advanced concepts including syntax driven
     programming.
-  scratch_beyond_longdescription: "עם סקראץ', תוכלו ליצור משחקים אינטרקטיביים, סיפורים
+  scratch_beyond_longdescription: עם סקראץ', תוכלו ליצור משחקים אינטרקטיביים, סיפורים
     והנפשות ולשתף אותם עם חבריכם. התחילו בליצור הנפשה משמך, יצירת כרטיס ברכה או משחק
-    פונג."
-  lightbot_beyond_longdescription: "למדו את החלקים העיקריים בלוגיקת תכנות, החל מתכנות
+    פונג.
+  lightbot_beyond_longdescription: למדו את החלקים העיקריים בלוגיקת תכנות, החל מתכנות
     סופר בסיסי , לגילאי 4+, על iOs  או אנדרואיד (או בדפדפם). למדו איך ליצור רצףשל
-    הוראות, לזהות תבניות ,להשתמש בפרוצדורות ובלולאות!"
+    הוראות, לזהות תבניות ,להשתמש בפרוצדורות ובלולאות!
   codecademy_beyond_longdescription: Codecademy היא מבוא אינטרקטיבי בקצב אישי ליסודות
     מדעי המחשב באמצעות ג'אווה סקריפט, שמתמשים בו מיליוני תלמידים ברחבי העולם. הכנו
     את חוויית שעת הקוד המלווה בשאלונים, שקפים ופרויקט מושלם עבור הסטודנטים בסיומו.
-  kodable_beyond_longdescription: "בר-קידוד (Kodable) הוא משחק אי-פד עצמאי שחושף ילדים
-    בגילאי 5+ ליסודות התכנות. נוכחות של הורה או מורה ממלצת אך לא הכרחית."
+  kodable_beyond_longdescription: בר-קידוד (Kodable) הוא משחק אי-פד עצמאי שחושף ילדים
+    בגילאי 5+ ליסודות התכנות. נוכחות של הורה או מורה ממלצת אך לא הכרחית.
   scratchjr_beyond_longdescription: ScratchJr is an introductory programming language
     that enables young children to create their own interactive stories and games.
     Children snap together graphical programming blocks to make characters move, jump,
@@ -1886,15 +1885,15 @@
     share your own web pages. Write and edit HTML and CSS right in your browser, then
     instantly preview your work. Host and share your finished projects with a single
     click. Perfect for beginners and experts alike.
-  codecombat_beyond_longdescription: "שחקו בתפקיד מכשף על ידי שימוש בכשפים (קוד) כדי
+  codecombat_beyond_longdescription: שחקו בתפקיד מכשף על ידי שימוש בכשפים (קוד) כדי
     לשלוט בדמויות שלכם, לנווט במבוכים, לנצח מפלצות, להערים על אויבים, ולהציל את חבריכם!
-    למדדו ג'אווה סקריפט במשחק HTML5 וובי המתאים למתחילים מהיסוד."
-  codea_beyond_longdescription: "קודאה לאייפד מאפשרת לכם ליצור משחקים והדמיות ,או
-    בעצם כל רעיון ויזואלי שיש לכם. הפכו את מחשבותיכם ליצירות אינטראקטיביות המנצלות
-    את תכונות האיפד כגון מולטי טאץ' ומד התאוצה.לדעתנו קודאה היא סביבת הפיתוח היפה
-    ביותר שתוכלו למצוא, והיא קלה לשימוש. קודאה פותחה כדי לאפשר לכם לגעת בקוד שלכם.
-    רוצים לשנות מספר? נגיעה קלה וגרירה. מה לגבי שינוי צבע, או ציור? נגיעה מעלה עורך
-    ויזואלי המאפשר לכם לבחור בדיוק את מה שאתם רוצים."
+    למדדו ג'אווה סקריפט במשחק HTML5 וובי המתאים למתחילים מהיסוד.
+  codea_beyond_longdescription: קודאה לאייפד מאפשרת לכם ליצור משחקים והדמיות ,או בעצם
+    כל רעיון ויזואלי שיש לכם. הפכו את מחשבותיכם ליצירות אינטראקטיביות המנצלות את תכונות
+    האיפד כגון מולטי טאץ' ומד התאוצה.לדעתנו קודאה היא סביבת הפיתוח היפה ביותר שתוכלו
+    למצוא, והיא קלה לשימוש. קודאה פותחה כדי לאפשר לכם לגעת בקוד שלכם. רוצים לשנות
+    מספר? נגיעה קלה וגרירה. מה לגבי שינוי צבע, או ציור? נגיעה מעלה עורך ויזואלי המאפשר
+    לכם לבחור בדיוק את מה שאתם רוצים.
   lego_beyond_longdescription: Create small, customizable and programmable robots
     using LEGO pieces.
   finch_beyond_longdescription: The Finch is a new robot for computer science education.
@@ -1903,9 +1902,9 @@
     It has support for over a dozen programming languages and environments, including
     several environments appropriate for students as young as eight years old. The
     Finch was designed to allow students to write richly interactive programs.
-  arduino_beyond_longdescription: "ארדואינו הנו פלטפורמה פופולרית המאפשרת לאמנים ומעצבים
+  arduino_beyond_longdescription: ארדואינו הנו פלטפורמה פופולרית המאפשרת לאמנים ומעצבים
     לעבוד עם חיישנים אמיתיים, נורות לד, צפצפות ועוד. ארגז החול הוירטואלי של ספארקפאן
-    ילמד אתכם קידוד ארדואינו אמיתי בתוך הדפדפן שלכם."
+    ילמד אתכם קידוד ארדואינו אמיתי בתוך הדפדפן שלכם.
   processing_beyond_longdescription: Processing is a programming language, development
     environment, and online community. Since 2001, Processing has promoted software
     literacy within the visual arts and visual literacy within technology. Initially
@@ -1929,22 +1928,22 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "נופף"
+  flappy_shortcode: נופף
   infinity_shortcode: inf
-  playlab_shortcode: "הפעל"
+  playlab_shortcode: הפעל
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard
-  header_courses: "מסלולים"
+  header_courses: מסלולים
   header_course_catalog: Course Catalog
-  header_project_gallery: "פרויקט"
+  header_project_gallery: פרויקט
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: "שעה של קוד"
+  header_educate_hoc: שעה של קוד
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1973,10 +1972,10 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "היי %{username}"
-  user_header_settings: "החשבון שלי"
-  user_header_logout: "התנתק"
-  user_header_signin: "התחבר"
+  user_header_label: היי %{username}
+  user_header_settings: החשבון שלי
+  user_header_logout: התנתק
+  user_header_signin: התחבר
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}

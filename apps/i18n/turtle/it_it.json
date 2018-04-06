@@ -74,13 +74,13 @@
   "penDown": "abbassa il pennello",
   "penTooltip": "Abbassa o alza il pennello, per tracciare o meno un segno.",
   "penUp": "alza il pennello",
+  "pointTo": "point to",
   "pixels": "pixel",
   "reinfFeedbackMsg": "Ecco il tuo disegno! Continua a lavorarci sopra oppure passa al prossimo esercizio.",
   "setAlpha": "imposta l'opacità",
   "setCharacter": "imposta carattere come {character}",
   "setColour": "Imposta il colore",
   "setPattern": "imposta lo schema",
-  "setStickerSize": "Set sticker size",
   "setWidth": "imposta la larghezza",
   "shareDrawing": "Condividi il tuo disegno:",
   "showMe": "Spiega",
@@ -94,5 +94,6 @@
   "turnTooltip": "Gira l'artista a sinistra o a destra della quantità di gradi specificata.",
   "turtleVisibilityTooltip": "Rende l'artista visibile o invisibile.",
   "widthTooltip": "Cambia la larghezza del pennello.",
+  "withSize": "with size",
   "wrongColour": "Il tuo disegno usa un colore sbagliato. Per questo esercizio, deve essere %1."
 }

@@ -218,8 +218,14 @@
       submit: Cambiar mi contraseña
   welcome_email:
     subject: Unirme a mi clase (en Code.org)
-    body: |
-      Haz clic en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "profesor"): %{link} Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia sencilla y guiada, similar a un juego. ¡Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombis! :-) %{name}
+    body: 'Haz clic en el vínculo de más abajo para registrarte y usar tutoriales
+      de ciencias de la computación en Code.org (conmigo como tu "profesor"): %{link}
+      Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos
+      básicos de las ciencias de la computación usando una experiencia sencilla y
+      guiada, similar a un juego. ¡Aprende a programar con Bill Gates, Mark Zuckerberg,
+      Angry Birds y Plantas vs. Zombis! :-) %{name}
+
+'
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
   teacher_mailer:
@@ -720,8 +726,8 @@
   share_code:
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
-    flappy_og_title: "Échale un vistazo a mi juego Flappy Bird"
-    studio_og_title: "Échale un vistazo a mi aplicación Play Lab"
+    flappy_og_title: Échale un vistazo a mi juego Flappy Bird
+    studio_og_title: Échale un vistazo a mi aplicación Play Lab
     check_out_what_i_made: Mira lo que hice
     og_description: Yo escribí el código con Code.org
     phone_number_not_allowed: Parece que hay un número de teléfono en el texto. Trata
@@ -809,7 +815,7 @@
       body: Minecraft is back for the Hour of Code with a brand new activity! Journey
         through Minecraft with code.
     sports:
-      title: "Спорт"
+      title: Спорт
       body: Make a basketball game or mix and match across sports.
     text-compression:
       title: Compresión de texto

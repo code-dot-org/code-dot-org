@@ -36,9 +36,9 @@
           Le vei utiliza pe acestea pentru a-ți construi codul.
       9:
         image: notes/hoc1_9.jpg
-        text: "În dreapta este spațiul tău de lucru unde vei trage blocuri din cutia
+        text: În dreapta este spațiul tău de lucru unde vei trage blocuri din cutia
           de instrumente pentru a îți construi programul. Ca să ștergi un bloc trage-l
-          la gunoi în colț."
+          la gunoi în colț.
       10:
         image: notes/hoc1_10.jpg
         text: Fiecare bloc este o instrucție. Dacă tragi un bloc de tip "mută înainte"
@@ -63,8 +63,8 @@
           mai repede.
       2:
         image: notes/stage5_2.jpg
-        text: "În aceste puzzle-uri, vei fi un artist care desenează o linie în spatele
-          lor indiferent unde merg ei."
+        text: În aceste puzzle-uri, vei fi un artist care desenează o linie în spatele
+          lor indiferent unde merg ei.
       3:
         image: notes/stage5_3.jpg
         text: Acest bloc spune "mută înainte cu 100 pixeli." Pixelii sunt de fapt
@@ -133,9 +133,9 @@
           va zbura.
       8:
         image: note/flappy08.jpg
-        text: "În fiecare puzzle din cadrul acestei activități vom introduce noi tipuri
+        text: În fiecare puzzle din cadrul acestei activități vom introduce noi tipuri
           de evenimente sub forma blocurilor verzi din spațiul de lucru, şi tu poţi
-          alege blocurile adecvate pe care le vei adauga în răspuns la aceste evenimente."
+          alege blocurile adecvate pe care le vei adauga în răspuns la aceste evenimente.
       9:
         image: note/flappy09.jpg
         text: Când vezi o săgeată de tip "dropdown" ca aceasta, înseamnă că poţi schimba
@@ -143,8 +143,8 @@
           atinge pământul.
       10:
         image: note/flappy10.jpg
-        text: "În puzzle-ul final vei fi capabil să-ți creezi propriul joc şi să-l
-          distribui și prietenilor tăi. Distracţie plăcută!"
+        text: În puzzle-ul final vei fi capabil să-ți creezi propriul joc şi să-l
+          distribui și prietenilor tăi. Distracţie plăcută!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -153,8 +153,8 @@
           mii sau chiar de miliarde de ori.
       2:
         image: notes/hoc2_2.jpg
-        text: "În acest puzzle, vrem să facem pasărea să se mute înainte 5 spații
-          pentru a ajunge la porcușor."
+        text: În acest puzzle, vrem să facem pasărea să se mute înainte 5 spații pentru
+          a ajunge la porcușor.
       3:
         image: notes/hoc2_3.jpg
         text: Putem să folosim noul bloc "repetă" ca să ne ajute.
@@ -401,11 +401,11 @@
           puteti construi un paradis de iarnă, pe care îl puteţi distribui prietenilor.
       3:
         image: notes/frozen1_3.jpg
-        text: "În următoarea oră, vei învăța elementele de bază ale programării. Programarea
+        text: În următoarea oră, vei învăța elementele de bază ale programării. Programarea
           tradițională este, de obicei, sub forma text, dar vom folosi Blockly, care
           foloseste blocuri vizuale ce se pot glisa și fixa pentru a scrie programe.
           Acest mod este folosit și de studenţi în universități pentru a învăța bazele
-          programării. Sub capotă, de fapt scrieți cod."
+          programării. Sub capotă, de fapt scrieți cod.
       4:
         image: notes/frozen1_4.jpg
         text: Un program este un set de instrucţiuni care îi spune unui computer ce
@@ -1549,10 +1549,10 @@
           de ajutor de la un grup mare de oameni pentru a termina ceva mai repede.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: "În informatică folosim crowdsourcing tot timpul. Mii de amatori şi
-          profesionişti își conectează computerele împreună pentru a căuta prin miliarde
-          şi miliarde de informaţii. Se află în căutarea unor lucruri ca următorul
-          număr prim Marsenne, sau chiar posibile comunicaţii extraterestre."
+        text: În informatică folosim crowdsourcing tot timpul. Mii de amatori şi profesionişti
+          își conectează computerele împreună pentru a căuta prin miliarde şi miliarde
+          de informaţii. Se află în căutarea unor lucruri ca următorul număr prim
+          Marsenne, sau chiar posibile comunicaţii extraterestre.
       3:
         image: notes/C3_crowdsourcing_3.png
         text: Cand vezi un film, fiecare secunda de film este formata din 24 de imagini

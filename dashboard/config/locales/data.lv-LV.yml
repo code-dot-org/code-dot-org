@@ -58,7 +58,7 @@
       instructions:
         maze_2_2: 'Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus "kustēties
           uz priekšu" blokus kopā un spied "Skriet" lai palīdzēt man tur nonākt. '
-        maze_2_1: "Šī cūka ir man traucē. Palīdzi man to atrast!"
+        maze_2_1: Šī cūka ir man traucē. Palīdzi man to atrast!
         maze_2_2_5: Izseko ceļu un aizved mani līdz muļķīgajai cūkai. Izvairies no
           Dinamīta, savādāk spalvas lidos!
         maze_2_3: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
@@ -78,8 +78,8 @@
         maze_2_10: Pēdēja prakses reize - vai vari atrisināt, izmantojot tikai 4 blokus?
         maze_2_11: Dārgais cilvēks. Es zombijs. Es izsalcis. Vajag... tikt... līdz
           saulespuķei... Vari mani tu nogādāt, izmantojot tikai 5 blokus?
-        maze_2_12: "Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt,
-          izmantojot tikai 5 blokus?"
+        maze_2_12: Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt, izmantojot
+          tikai 5 blokus?
         maze_2_13: 'Izmanto jauno "Ja" bloku, lai ļautu man izlemt kad pagriezties.
           Padoms: tev jāizmanto tikai vēl viens bloks, bet iemācies kā to uzstādīt
           pašam nākamajā reizē.'
@@ -128,23 +128,23 @@
         turtle_4_3: Šis ir kods, ko tu uzrakstīji, lai uzzīmētu vienu trijstūril.
           Vai vari pievienot "atkārtot" un "pagriezt" blokus lai izveidotu skaistu
           puķi?
-        turtle_4_4: "Šis ir kods no iepriekšējās mīklas, bet pagriežot tikai 36 grādus
+        turtle_4_4: 'Šis ir kods no iepriekšējās mīklas, bet pagriežot tikai 36 grādus
           pēc katra trijstūra uzzīmēšanas. Cik reizes ir jāatkārto šī darbība? (Padoms:
-          pēc 360 grādu griešanas, zīmējums izveidos pilnu apli)"
-        turtle_4_5: "Šis ir kods no iepriekšējās mīklas, atkārtojot pagriezienus 36
+          pēc 360 grādu griešanas, zīmējums izveidos pilnu apli)'
+        turtle_4_5: 'Šis ir kods no iepriekšējās mīklas, atkārtojot pagriezienus 36
           reizes. Cik grādu lenķim vajadzētu būt katrā pagriezienā? (Padoms: pēc 360
-          grādu pagriešanas, zīmējums izveidos pilnu apli)"
+          grādu pagriešanas, zīmējums izveidos pilnu apli)'
         turtle_4_6: Vai tu vari uzzīmēt kvadrātu ar malu garumu 20 pikseļi, izmantojot
           tikai 3 blokus?
-        turtle_4_7: "Šis ir kods, lai uzzīmētu kvadrātu no iepriekšējās mīklas. Vai
+        turtle_4_7: 'Šis ir kods, lai uzzīmētu kvadrātu no iepriekšējās mīklas. Vai
           tu vari atkārtot to, lai uzzīmētu 10 blakus esošus kvadrātus kā pakāpienus?
-          Padoms: Tev vajag izmantot tikai papildus 2 blokus."
-        turtle_4_8: "Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt
-          vēl tikai 2 blokus, lai pabeigtu zīmējumu?"
-        turtle_4_9: "Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu
-          jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)"
-        turtle_4_10: "Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams
-          atkārtot šo darbību, lai pabeigtu zīmējumu?"
+          Padoms: Tev vajag izmantot tikai papildus 2 blokus.'
+        turtle_4_8: Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt
+          vēl tikai 2 blokus, lai pabeigtu zīmējumu?
+        turtle_4_9: Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu
+          jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)
+        turtle_4_10: Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams
+          atkārtot šo darbību, lai pabeigtu zīmējumu?
         turtle_4_11: Mēģini izmainīt skaitļus "pagrieziens" un "atkārtot" blokos,
           lai veidot citus zīmējumus. Vai arī izmēģini mainīt citas koda daļas, lai
           zīmēt ko vien vēlies.
@@ -205,9 +205,9 @@
         turtle_2_9: Izmanto "Skaitīt ar" cilpu, lai uzzīmētu sniegavīru ģimeni, kurā
           ģimenes locekļu augumi ir 110, 100, 90, 80 un 70. Visiem sniegavīriem vajadzētu
           būt 60 pikseļu attālumā vienam no otra.
-        turtle_2_10: "Šeit ir kods eksperimentēšanai ar dažādām spirālēm. Kas notiek,
-          ja Tu pamaini apgriezienu daudzumu? Vai arī ciklā uzliec nejaušu krāsu?
-          \ Uzzīmē jebko, ko gribi."
+        turtle_2_10: Šeit ir kods eksperimentēšanai ar dažādām spirālēm. Kas notiek,
+          ja Tu pamaini apgriezienu daudzumu? Vai arī ciklā uzliec nejaušu krāsu?  Uzzīmē
+          jebko, ko gribi.
         maze_karel_2_1: 'Pamēģini izmantot blokus, lai palīdzētu man noņemt visas
           čupiņas un aizpildīt visas bedres. Mēģini daudzo bloku vietā izmantot cilpas.
           Norādījums: Tu vari ielikt  vienu cilpa iekšā otrā cilpā.'
@@ -254,8 +254,10 @@
         turtle_3_8: Rediģē ''uzzīmē māju'' tā, lai tas atrastos labajā apakšējā stūrī
           pēc jaunas mājas zīmēšanas. Lieto šo modificēto funkciju, lai uzzīmētu trīs
           mājas.
-        turtle_3_9: |
-          Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības? izmēģini to un tad uzzīmē veselu rindu ar mājām.
+        turtle_3_9: 'Vai tu vari izveidot "uzzīmē māju " funkciju bez palīdzības?
+          izmēģini to un tad uzzīmē veselu rindu ar mājām.
+
+'
         turtle_3_10: Tu esi apguvis daudz! Tagad izmanto to lai zīmētu visu ko tu
           vēlies. Centies uzzīmēt zvaigzni vai spirāli vai daiļu sniegpārsliņu.
         maze_karel_debug_seq_1: Esi sveicināts atkļūdošanā! Mans kods nestrādā pareizi.
@@ -489,8 +491,8 @@
           ABOVE
         maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu
           BELOW
-        maze_wordsearch_k_20: "Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad
-          citu, lai pateiktu STORY"
+        maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad
+          citu, lai pateiktu STORY
         applab_ec_simple: Izveido savu aplikāciju, lietojot rīkus, kas atrodas instrumentu
           kastē.
         turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu,
@@ -771,6 +773,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka
@@ -784,7 +789,7 @@
           kategorijās
         set_sprite_image: Pievieno "uzstādi tēlu attēlam" bloku pie "kad stāsts sakas"
           bloka, lai iespējotu tēlu šim stāstam
-        studio_say_text: "Šajās pēdiņās uzraksti, ko vēlies, lai tavs tēls teiktu"
+        studio_say_text: Šajās pēdiņās uzraksti, ko vēlies, lai tavs tēls teiktu
         jigsaw_click: Klikšķini uz šī bloka!
         move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists"
           bloka, lai Elza ietu uz priekšu
@@ -838,7 +843,7 @@
           nospiešanas
         playlab_add_move: Atkārtošanas blokā pievieno blokus "pārvietot"
         playlab_add_score: Pievieno šeit punktu blokus
-        playlab_add_blocks: "Šeit pievieno savus blokus"
+        playlab_add_blocks: Šeit pievieno savus blokus
         set_variable: Velc skaitļu bloku te, lai noteiktu mainīgo
         place_variable: Ievelc mainīgo šajā blokā
         bee_for_loop: Velc lielāko nektāra vērtību, kādu gribi savākt.

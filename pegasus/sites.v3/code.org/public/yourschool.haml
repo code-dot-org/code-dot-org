@@ -14,8 +14,6 @@ social:
 %script{src: "https://cdn.optimizely.com/js/400912536.js"}
 - census_announcement = DCDO.get('census_announcement', nil)
 - census_announcement ||= {}
-- if 'us' != hoc_detect_country
-  - census_announcement['hide_map'] = 'true'
 - census_announcement['user_name'] = request.params["name"] if request.params["name"]
 - census_announcement['user_email'] = request.params["email"] if request.params["email"]
 - census_announcement['is_teacher'] = 'true' if request.params["isTeacher"] == 'true'

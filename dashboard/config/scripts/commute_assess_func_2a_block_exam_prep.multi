@@ -13,20 +13,19 @@ The next two questions refer to the procedures definitions shown on the right.
 What will be displayed when this code is run?<br>
 </p>
 
-<img src="https://images.code.org/9004a3fcaf647a126632fe3482c027b9-image-1482508130833.png">
+<img src="https://images.code.org/0100822f7808d6cfd12a5067508c9bdc-image-1482334943610.png" style="width: 200px">
+
+<!--
+TEXT: <img src="https://images.code.org/9004a3fcaf647a126632fe3482c027b9-image-1482508130833.png">
+-->
 
 </div>
 
 <div style="width: 300px; float: left; border-left: solid 1px #00adbc; padding-left: 10px; margin-left: 25px">
-<img src="https://images.code.org/0e5c121af945f2f4a975eab32ebbac05-image-1482508093713.png" >
+<img src="https://images.code.org/4735000ae66d81b5a1dd2c9775a5b7e3-image-1482334301386.png" style="width: 300px">
+<!-- TEXT: <img src="https://images.code.org/0e5c121af945f2f4a975eab32ebbac05-image-1482508093713.png" > -->
 </div>
 
 
 
-<!-- BLOCK:
-Line of code: ![](https://images.code.org/0100822f7808d6cfd12a5067508c9bdc-image-1482334943610.png) 
-Procedures: <img src="https://images.code.org/4735000ae66d81b5a1dd2c9775a5b7e3-image-1482334301386.png" style="width: 200px">
-
-
--->
 MARKDOWN

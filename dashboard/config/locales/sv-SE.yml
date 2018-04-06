@@ -25,13 +25,14 @@
         email: E-post
         parent_email: Parent/guardian email
         personal_email: Personal email address
-        username: |
-          användarnamn
+        username: 'användarnamn
+
+'
         password: Lösenord
         password_confirmation: Lösenordsbekräftelse
         current_password: Nuvarande lösenord
         locale: språk
-        age: "Ålder"
+        age: Ålder
         gender: Kön
         edit_header: Redigera kontouppgifter
         error:
@@ -41,7 +42,7 @@
   your_professional_learning_plan: Din professionella utbildningsplan
   see_your_learning_plan: Se din utbildningsplan
   submit: Skicka in
-  unsubmit: "Ångra Inlämnad"
+  unsubmit: Ångra Inlämnad
   previous_page: Föregående sida
   next_page: Nästa sida
   next_resource: Nästa resurs
@@ -126,10 +127,10 @@
     address_placeholder: adress, stad, län, postnummer
     gender: Kön (valfritt)
     birthday: Födelsedag (valfritt)
-    age: "Ålder"
-    user_type: "Är du elev eller lärare?"
+    age: Ålder
+    user_type: Är du elev eller lärare?
     submit: Registrera dig
-    teacher: "Är du en lärare?"
+    teacher: Är du en lärare?
     valid_username: Tillgängligt!
     invalid_username: Användarnamnet måste innehålla minst fem tecken
     taken_username: Användarnamnet är upptaget
@@ -207,10 +208,10 @@
       invalid_email: It looks like you may have signed up with an invalid email address.
         Please email support@code.org to receive a password recovery link.
     change_form:
-      title: "Ändra ditt lösenord"
+      title: Ändra ditt lösenord
       new_password: Nytt lösenord
       confirm_password: Bekräfta nytt lösenord
-      submit: "Ändra mitt lösenord"
+      submit: Ändra mitt lösenord
   welcome_email:
     subject: Gå med i min klass (på Code.org)
     body: |
@@ -271,7 +272,7 @@
     submit: Skicka in
     destroy: Förstöra
     back: Tillbaka
-    confirm: "Är du säker?"
+    confirm: Är du säker?
     created: "%{model} har skapats."
     updated: "%{model} har uppdaterats."
     destroyed: "%{model} har tagits bort."
@@ -366,7 +367,7 @@
       other: 'Dina lärare:'
     remove: "(ta bort lärare)"
     confirm:
-      remove: "Är du säker du vill ta bort denna lärare?"
+      remove: Är du säker du vill ta bort denna lärare?
     students:
       dashboard: Gå till Dashboard för lärare
     user_not_found: Läraren kunde inte hittas.
@@ -380,7 +381,7 @@
       example: Exempel lösning
       example_with_number: Exempel lösning %{solution_number}
       submitted_on: 'Inlämnad den %{date} '
-      unsubmit: "Ångra Inlämnad"
+      unsubmit: Ångra Inlämnad
       worked_with: Arbetat med
       update_lock_settings: Uppdatera låsinställningar här.
       clear_response: Tydligt svar
@@ -396,7 +397,7 @@
     delete_text: Ett klick på knappen nedan kommer att ta bort ditt konto.
     delete_text_teacher_note: 'Observera: genom att ta bort ditt konto tas inte elevernas
       konton bort.'
-    delete_confirm: "Är du säker du vill ta bort ditt konto?"
+    delete_confirm: Är du säker du vill ta bort ditt konto?
     deleted_user: borttagen användare
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
@@ -431,7 +432,7 @@
     lines_of_code: "%{lines_count} RADER KOD SKRIVEN AV STUDENTER"
     lines_of_code_linebreak: "%{lines_count} rader kod <br/> skrivna av %{students_count}
       miljoner studenter"
-    all_courses: "Översikt över kurser 1, 2 och 3"
+    all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: Redan registrerad? %{link}
     student_reg_link: Registrera dig som elev
@@ -690,7 +691,7 @@
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
-  download_pdf: "Öppen kursplan"
+  download_pdf: Öppen kursplan
   lesson_plan: Lektionsplan
   view_lesson_plan: Visa lektionsplan
   pdf_download: Ladda ner PDF
@@ -732,7 +733,7 @@
       body_short: Utveckla en app, bygg den med blocks eller JavaScript. När du har
         fått den att fungerar som du tänkte kan du inom några sekunder dela med dig
         av den till andra.
-      audience: "Ålder 13+"
+      audience: Ålder 13+
       cta: Läs mer
     hoc:
       title: Klassisk labyrint
@@ -758,7 +759,7 @@
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
-      audience: "Ålder 13+"
+      audience: Ålder 13+
       cta: Läs mer
     hoc-encryption:
       title: Simple Encryption
@@ -767,7 +768,7 @@
       title: Web Lab (beta)
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
-      audience: "Ålder 13+"
+      audience: Ålder 13+
       cta: Läs mer
     frozen:
       title: Frost
@@ -796,7 +797,7 @@
         text by substituting patterns with symbols.
     unplugged:
       title: Lektioner där du inte behöver tillgång till en dator
-      audience: "Ålder 4+"
+      audience: Ålder 4+
       body: Vi har sammanställt en lista över lektioner som du kan använda i klassrummet
         där du inte behöver tillgång till en dator. Nu kan du lära grunderna i datavetenskap,
         om du har datorer i klassrummet eller inte! Prova att använda dessa lektioner
@@ -907,7 +908,7 @@
     correct_body: Det är det rätta svaret.
   dialog:
     ok: Ok
-    startover_title: "Är du säker på att du vill börja om?"
+    startover_title: Är du säker på att du vill börja om?
     startover_body: Detta kommer att återställa pusslet och ta bort all data du har
       lagt till eller ändrat.
     startover_ok: Börja om
@@ -994,7 +995,7 @@
     create: Skapa projekt
     create_a_project: 'Skapa ett nytt projekt:'
     new: Skapa ny
-    rename: "Ändra namn"
+    rename: Ändra namn
     save: Spara
     delete: Ta bort
     import: Importera
@@ -1039,7 +1040,7 @@
     saved: Sparade
     not_saved: Inte sparad
     cancel: Avbryt
-    delete_confirm_title: "Är du säker på att du vill ta bort detta projekt?"
+    delete_confirm_title: Är du säker på att du vill ta bort detta projekt?
     delete_confirm_text: Genom att Ta bort ditt projekt kommer det att tas bort permanent
       från listan Mina projekt. Någon du har delat länken till kommer inte längre
       att kunna se ditt projekt.
@@ -1091,7 +1092,7 @@
     escalated:
       name: Upptrappad
       description: Jag skulle vilja att en instruktör granskar denna inlämning
-    instructor_feedback: "Återkoppling till instruktör"
+    instructor_feedback: Återkoppling till instruktör
     peer_feedback: Din feedback
     outdated: Denna feedback skapades för en tidigare skickad version
     review_in_progress: Ready to review
@@ -1104,7 +1105,7 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "Översikt"
+    required: Översikt
     content: Innehåll
     practice: Undervisningsmetoder
     peer_review: Din recension
