@@ -1531,6 +1531,9 @@ Artist.prototype.step = function (command, values, options) {
       tupleDone = result.tupleDone;
       this.visualization.turnByDegrees(result.distance);
       break;
+    case 'PT': //Point To
+      this.visualization.pointTo(values[1]);
+      break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
       alpha = Math.max(0, alpha);
