@@ -316,3 +316,21 @@ zh-TW:
       BigEvent_2018:
         title: 大事件
         desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
+      GraphPaperProgramming_2018:
+        title: 方格紙編程
+        desc: 學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。
+      courseD_unplugged_digitalCitizenship_2018:
+        title: 不插電活動
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: 不插電活動
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: 條件判斷（Conditionals）
+        desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
+      DigitalFootprint_2018:
+        title: 你的數位足跡
+        desc: 教師向學生介紹，把關於自己的信息放在網路上會留下數位足跡（或痕跡），從而導致某些後果。
+      BinaryImages_2018:
+        title: 二進制圖像
+        desc: 雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。

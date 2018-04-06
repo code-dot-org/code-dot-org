@@ -74,13 +74,13 @@
   "penDown": "arkatza behera",
   "penTooltip": "Arkatza igo edo jaisten du, marrazten hasi edo bukatzkeo.",
   "penUp": "arkatza gora",
+  "pointTo": "point to",
   "pixels": "pixel",
   "reinfFeedbackMsg": "Hona hemen zure marrazkia! Jarraitu lanean marrazkian edo pasa hurrengo ariketara.",
   "setAlpha": "ezarri alfa",
   "setCharacter": "set character to {character}",
   "setColour": "ezarri kolorea",
   "setPattern": "ezarri eredua",
-  "setStickerSize": "Set sticker size",
   "setWidth": "ezarri zabalera",
   "shareDrawing": "Elkarbanatu zure marrazkia:",
   "showMe": "Erakutsi niri",
@@ -94,5 +94,6 @@
   "turnTooltip": "Artista ezkerrera biratzen du zehaztutako angeluan.",
   "turtleVisibilityTooltip": "Artista ikuskor edo ikustezin bihurtzen du.",
   "widthTooltip": "Arkatzaren lodiera aldatzen du.",
+  "withSize": "with size",
   "wrongColour": "Zure irudia kolore okerrekoa da. Ariketa honetarako %1 behar du izan."
 }

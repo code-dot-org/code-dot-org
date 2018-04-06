@@ -15,7 +15,7 @@
   activerecord:
     errors:
       messages:
-        blank: "é obrigatorio"
+        blank: é obrigatorio
         blank_plural: obrigatorio
         invalid_plural: inválidas
     attributes:
@@ -133,7 +133,7 @@
     age: Idade
     user_type: Alumno ou profesor?
     submit: Crear conta
-    teacher: "É un profesor?"
+    teacher: É un profesor?
     valid_username: Dispoñíbel!
     invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres
     taken_username: O nome de usuario xa existe
@@ -154,7 +154,7 @@
     user_type_label: Tipo de conta
     user_type_teacher: Profesor
     user_type_student: Estudante
-    field_is_required: "é obrigatorio"
+    field_is_required: é obrigatorio
     accept_terms: Debe estar de acordo para crear unha conta
     error: Ocorreu un erro.
   school_info:
@@ -1032,7 +1032,7 @@
     close: Pechar
     more: Máis
     name: Nome
-    updated: "Última actualización"
+    updated: Última actualización
     project_type: Tipo de proxecto
     help_text: Clica en <strong>Desenvolver unha aplicación</strong> ou <strong>Desenhar
       algunha cousa</strong> para entrares nun novo Laboratorio de xogos ou faceres

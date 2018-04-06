@@ -7,8 +7,8 @@ wrong '<pre>Inside the else. <br>All done.</pre>'
 wrong '<pre>Inside the if. <br>Inside the else. <br>All done.</pre>'
 
 markdown <<MARKDOWN
-![](https://images.code.org/25998f71dad01951719e0a6c95bf4ea1-image-1482507408209.png)
+<img src="https://images.code.org/2e5016fb21ed29c8aaca77e208ffc594-image-1482383117531.png" style="width: 300px">
 
-<!-- BLOCK: ![](https://images.code.org/2e5016fb21ed29c8aaca77e208ffc594-image-1482383117531.png)
+<!-- TEXT: ![](https://images.code.org/25998f71dad01951719e0a6c95bf4ea1-image-1482507408209.png)
 -->
 MARKDOWN

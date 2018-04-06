@@ -316,3 +316,21 @@ sq:
       BigEvent_2018:
         title: Eventi i Madh
         desc: Studentët janë prezantuar me konceptet e programimit të "eventeve", të cilat janë veprime që monitoron një kompjuter në mënyrë të vazhdueshme. Mësuesi do të shtypë butona në një letër të veçuar dhe studentët do të reagojnë në varësi të butonit që është shtypur.
+      GraphPaperProgramming_2018:
+        title: Programimi me grafikë
+        desc: Studentët shkruajnë një algoritëm (grup instruksionesh) duke përdorur një grup komandash të paracaktuara për të drejtuar shokët e tyre të klasës që të ribëjnë një vizatim.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktiviteti Unplugged
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktiviteti Unplugged
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Kushtoret
+        desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
+      DigitalFootprint_2018:
+        title: Gjurmët e Tua Dixhitale
+        desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.
+      BinaryImages_2018:
+        title: Imazhet Binare
+        desc: Edhe pse shumë njerëz mendojnë për binarët si zero dhe njësha striktë, kurset tona të mëparshme i mësuan studentëve që informacioni mund të paraqitet në opsione të ndryshme binare. Ky mësim merr këtë koncept një hap më larg kur ilustron se si një kompjuter mund të ruajë edhe informacione më komplekse (si psh imazhe dhe ngjyra) në binarë, gjithashtu.

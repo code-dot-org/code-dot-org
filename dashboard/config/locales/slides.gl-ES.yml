@@ -35,9 +35,9 @@
           vai usalos para crear o seu programa.
       9:
         image: notes/hoc1_9.jpg
-        text: "Á dereita vostede ten a súa área de traballo, onde vai arrastrar os
+        text: Á dereita vostede ten a súa área de traballo, onde vai arrastrar os
           bloques da caixa de ferramentas para crear o seu programa. Para excluír
-          un bloque, arrástreo para a recolledora de lixo no recanto."
+          un bloque, arrástreo para a recolledora de lixo no recanto.
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloque é unha instrución. Se vostede arrastra un bloque "avance"
@@ -721,7 +721,7 @@
           resolver. O segundo é igual, pero vai para baixo.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "É como programar con papel. E é iso mesmo!"
+        text: É como programar con papel. E é iso mesmo!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -1975,11 +1975,11 @@
           A pintura por números me di exactamente cal cor usar e onde.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: "É moi específica, entón podo seguir as instrucións e a pintura ficará
+        text: É moi específica, entón podo seguir as instrucións e a pintura ficará
           incríbel! É un excelente algoritmo. Se as instrucións non fosen abondo específicas,
           os meus lobos non ficarían tan bos. Cando realmente quixeras que algunha
           cousa fique exactamente do xeito que planeaches, é mellor ser extremamente
-          preciso."
+          preciso.
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
@@ -2077,10 +2077,10 @@
           "parámetros".
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: "Ás veces unha función precisa dun parámetro. Un parámetro é unha información
+        text: Ás veces unha función precisa dun parámetro. Un parámetro é unha información
           adicional que podes pasar para unha función e personalizala para unha necesidade
           especial. Cando fas xelado na casa cos teus amigos, está usando un proceso
-          similar aos parámetros nun programa de computador."
+          similar aos parámetros nun programa de computador.
       3:
         image: notes/C4_unplugged_parameters_3.png
         text: A bóla do xelado de crema pode ser igual en todos os cucuruchos, pero
@@ -2275,12 +2275,12 @@
           preciso agregar as lonxitudes e graos apropiados.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: "Ás veces podes accidentalmente estragar o código inicial. O que facer
+        text: Ás veces podes accidentalmente estragar o código inicial. O que facer
           nese caso? Podes presionar limpar desafío e comezar de novo. Vou arrastrar
           este bloque numérico para as distintas áreas de pixels. Seleccione 100 para
           pixels, 45 para graos e 100 para pixels de novo. Fantásticol! Aquí está
           a abella do Code Studio. Necesito mover a abella para cada unha das flores
-          e recoller néctar."
+          e recoller néctar.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
         text: A primeira flor está a tres bloques de distancia, entón necesito tres

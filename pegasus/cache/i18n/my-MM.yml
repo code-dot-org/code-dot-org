@@ -1,15 +1,15 @@
 "my-MM":
   hour_of_code: Hour of Code
-  hello: "မဂၤလာပါ ကမာၻၾကီး"
+  hello: မဂၤလာပါ ကမာၻၾကီး
   'yes': 'Yes'
   'no': 'No'
-  select_language: "ကျေးဇူးပြု၍ဘာသာစကားရွေးချယ်ပါ"
+  select_language: ကျေးဇူးပြု၍ဘာသာစကားရွေးချယ်ပါ
   upgrade_ie_message: Code.orgသည်မကြာခင်အင်တာနက်Explorer 8, 9, and 10တို့ကိုဖယ်ရှားပါတော့မည်။ကျေးဇူးပြု၍အဆင့်ထပ်မြင့်ပေးပါ။
   upgrade_ie_message_csedweek: CSEdWeek.org သည်မကြာခင်အင်တာနက်Explorer 8, 9, and 10ကိုဖယ်ရှားပါတော့မည်။ကျေးဇူးပြု၍browserကိုအဆင့်မြင့်ပေးပါ.
-  upgrade_ie_link: "ဆက်သင်ယူရန်"
-  en: "ကွန်ပျုတာသိပ္ပံ"
-  computer_science_edweek: "ကွန်ပျူတာသိပ္ပံ ပညာရေး ရက်သတ္တပတ်"
-  csedweek_dates: "ဒီဇင်ဘာ၈-၁၄, ၂၀၁၄"
+  upgrade_ie_link: ဆက်သင်ယူရန်
+  en: ကွန်ပျုတာသိပ္ပံ
+  computer_science_edweek: ကွန်ပျူတာသိပ္ပံ ပညာရေး ရက်သတ္တပတ်
+  csedweek_dates: ဒီဇင်ဘာ၈-၁၄, ၂၀၁၄
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -18,16 +18,16 @@
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: Anybody can learn.
-  learn_now: "စတင်သင်ကြားပါ"
+  learn_now: စတင်သင်ကြားပါ
   petition_message: Every student in every school should have the opportunity to learn
     computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
-  name: "အမည္"
+  name: အမည္
   email: email လိပ္စာ
   zipcode: ZIP code သို့မဟုတ် နိုင်ငံ
-  submit: "ပေးပို့ပါ"
+  submit: ပေးပို့ပါ
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
@@ -38,7 +38,7 @@
     computer science.
   og_description_celeb: Try the new tutorials, win a celebrity video chat for yourself
     or your class!
-  csedweek_og_title: "ကွန်ပျူတာသိပ္ပံ ပညာရေး ရက်သတ္တပတ်"
+  csedweek_og_title: ကွန်ပျူတာသိပ္ပံ ပညာရေး ရက်သတ္တပတ်
   csedweek_og_description: December 4-10, 2017. Computer science is foundational for
     every student to learn.
   csedweek_og_description_soon: The Hour of Code is coming December 4-10, 2017. Computer
@@ -58,7 +58,7 @@
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Search
-  csedweek_map_search_reset: "ပြန်လည်စတင်မယ်"
+  csedweek_map_search_reset: ပြန်လည်စတင်မယ်
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: Special Event
@@ -74,18 +74,18 @@
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: "အင်္ဂလိပ် အင်တာနက်စာမျက်နှာကိုကြည့်ရှုရန်"
-  non_english_tutorials: "ဘာသာစကားအမျိုးမျိုးနှင့် ပြန်ဆိုထားသည့် Tutorialsများ:"
-  write_your_first_program: "သင့်ရဲ့ပထမဆုံးကွန်ပျူတာပရိုဂရမ်ကိုရေးပါ"
-  learn_cs_concepts: "ကြန္ပ်ဴတာသိပၸံရဲ့ အေျခခံသေဘာတရားကို ဆြဲယူေနရာခ်ထားသည့္ Programming
+  view_english_site: အင်္ဂလိပ် အင်တာနက်စာမျက်နှာကိုကြည့်ရှုရန်
+  non_english_tutorials: 'ဘာသာစကားအမျိုးမျိုးနှင့် ပြန်ဆိုထားသည့် Tutorialsများ:'
+  write_your_first_program: သင့်ရဲ့ပထမဆုံးကွန်ပျူတာပရိုဂရမ်ကိုရေးပါ
+  learn_cs_concepts: ကြန္ပ်ဴတာသိပၸံရဲ့ အေျခခံသေဘာတရားကို ဆြဲယူေနရာခ်ထားသည့္ Programming
     နဲ႔ေလ့လာမယ္။ Game ပံုစံ သင္ၾကားထားျပီး  Bill Gates, Mark Zuckerberg, Angry Birds,
-    Plants vs Zombies ေတြပါပါတယ္။ repeat loops, if statements, အေျခခံ algorithm ေတြကိုေလ့လာၾကပါမယ္။"
-  all_ages: "အသက်အရွယ်အားလုံး"
-  beginner: "အခုမှစသူ"
+    Plants vs Zombies ေတြပါပါတယ္။ repeat loops, if statements, အေျခခံ algorithm ေတြကိုေလ့လာၾကပါမယ္။
+  all_ages: အသက်အရွယ်အားလုံး
+  beginner: အခုမှစသူ
   n_participants: "# ပါဝင်သူ"
-  go: "စမယ်"
-  thank_you_: "ကျေးဇူးတင်ပါသည်!"
-  congratulations: "ဂုဏ္ယူပါတယ္"
+  go: စမယ်
+  thank_you_: ကျေးဇူးတင်ပါသည်!
+  congratulations: ဂုဏ္ယူပါတယ္
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
@@ -105,7 +105,7 @@
   congrats_next_tutorials_title: Graduate to the next level
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
-  get_a_certificate_of_achievement: "အောင်မြင်စွာပြီးဆုံးကြောင်း certificateရယူပါ"
+  get_a_certificate_of_achievement: အောင်မြင်စွာပြီးဆုံးကြောင်း certificateရယူပါ
   view_course: View course
   view_unit: View unit
   make_app: Make an app
@@ -211,13 +211,13 @@
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Please select a valid age
-  enter_valid_email: "ကျေးဇူးပြု၍ email ရေးပေးပါ"
+  enter_valid_email: ကျေးဇူးပြု၍ email ရေးပေးပါ
   get_a_certificate_message: We'll send you a certificate and information about how
     to <a href='/learn/beyond'>Learn beyond an Hour</a>
   get_a_certificate_message_after: Click on the certificate to download or print it.
     Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or
     see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
-  thanks_for_submitting: "ေပးပို႔မႈအတြက္ ေက်းဇူးတင္ပါတယ္။"
+  thanks_for_submitting: ေပးပို႔မႈအတြက္ ေက်းဇူးတင္ပါတယ္။
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
   personalize_certificate: Personalize your certificate
@@ -226,15 +226,15 @@
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
   leaderboards_for_hoc: Hour of Code အတွက် ဦးဆောင်သူများ
   support_url: http://support.code.org/
-  country: "နိုင်ငံ"
-  city: "မြို့"
-  gender: "က်ား/မ"
-  boys: "ယောက်ျားလေး"
-  girls: "မိန်းကလေး"
-  give_my_hour: "ကိုယ့် အချိန်ကို ပေးမယ်"
-  girls_team: "မိန်းကလေး အဖွဲ့"
+  country: နိုင်ငံ
+  city: မြို့
+  gender: က်ား/မ
+  boys: ယောက်ျားလေး
+  girls: မိန်းကလေး
+  give_my_hour: ကိုယ့် အချိန်ကို ပေးမယ်
+  girls_team: မိန်းကလေး အဖွဲ့
   boys_team: Boys' Team
-  tell_the_world: "တစ်ကမ္ဘာလုံးကိုပြောလိုက်ပါ့!"
+  tell_the_world: တစ်ကမ္ဘာလုံးကိုပြောလိုက်ပါ့!
   thanks_for_voting: Thanks for voting!
   share_on_facebook: Facebook မှာshareမယ်
   share_on_twitter: Twitter မှာshare မယ်
@@ -398,75 +398,75 @@
   homepage_hero_hoc_is_here: Hour of Codeကိုဒီမှာကြည့်ရန်
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen နှင့်အတူ Anna နဲ့ Elsa
-  homepage_slot_text_teacher: "ဆရာ့ကျောက်သင်ပုန်း"
-  homepage_slot_text_studio: "ကျွန်ုပ်တို့ရဲ့tutorialများ"
+  homepage_slot_text_teacher: ဆရာ့ကျောက်သင်ပုန်း
+  homepage_slot_text_studio: ကျွန်ုပ်တို့ရဲ့tutorialများ
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: "ကျောင်းသားတိုင်းအတွက် Hour of Code"
+  homepage_action_text_hoc: ကျောင်းသားတိုင်းအတွက် Hour of Code
   homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: "ကျွန်ပ်တို့နှင့်ပူးပေါင်းပါ"
+  homepage_action_text_join_us: ကျွန်ပ်တို့နှင့်ပူးပေါင်းပါ
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: Try it
-  homepage_action_text_volunteers: "နည်းပညာဆိုင်ရာစေတနာ့ထန်ထမ်းများအလိုရှိပါသည်"
-  homepage_action_text_codevideo: "ဗီဒီရိုကြည့်ပါ"
-  homepage_action_text_teachervideo: "ဗီဒီရိုကြည့်ပါ"
-  homepage_action_text_watchvideo: "ဗီဒီရိုကြည့်ပါ"
-  homepage_action_text_girlvideo: "မိန်းကလေးတစ်ဦးကိုဆွဲဆောင်ခြင်း"
-  homepage_action_text_learn: "စတင်လေ့လာသည်"
-  homepage_action_text_signpetition: "လျှောက်လွှာတွင်လက်မှတ်ထိုးသည်"
+  homepage_action_text_volunteers: နည်းပညာဆိုင်ရာစေတနာ့ထန်ထမ်းများအလိုရှိပါသည်
+  homepage_action_text_codevideo: ဗီဒီရိုကြည့်ပါ
+  homepage_action_text_teachervideo: ဗီဒီရိုကြည့်ပါ
+  homepage_action_text_watchvideo: ဗီဒီရိုကြည့်ပါ
+  homepage_action_text_girlvideo: မိန်းကလေးတစ်ဦးကိုဆွဲဆောင်ခြင်း
+  homepage_action_text_learn: စတင်လေ့လာသည်
+  homepage_action_text_signpetition: လျှောက်လွှာတွင်လက်မှတ်ထိုးသည်
   homepage_action_text_wincelebritychat: Celebrity Chat တစ်ခုလုပ်မယ်
-  homepage_signpetition_dropdown: "လက်ခံသည်&#x25BE;"
-  homepage_diversity_pledge: "အားလုံးပါဝင်ကွန်ပျူတာသိပ္ပံတစ်ခွင်"
+  homepage_signpetition_dropdown: လက်ခံသည်&#x25BE;
+  homepage_diversity_pledge: အားလုံးပါဝင်ကွန်ပျူတာသိပ္ပံတစ်ခွင်
   homepage_banner_text_prizes: Hour of Code ​ေနာက်တစ်ကြိမ်ရောက်ရှိလာနေပါပြီ၊ဒီဇင်ဘာ
     ၇-၁၃
-  homepage_banner_link_prizes: "သမိုင်းတွင်အကြီးဆုံးသင်ယူခြင်းလှုပ်ရှားမှု၌ပါဝင်ရန် "
+  homepage_banner_link_prizes: 'သမိုင်းတွင်အကြီးဆုံးသင်ယူခြင်းလှုပ်ရှားမှု၌ပါဝင်ရန် '
   homepage_banner_text_main: Code.org နှင့် College Board တို့ကွန်ပျူတာသိပ္ပံတွင်ဘက်စုံတိုးတက်စေရန်ပူးပေါင်းအဖွဲ့ဖွဲ့စည်းထားသည်
-  homepage_banner_text_link: "ဆက်သင်ယူရန်"
+  homepage_banner_text_link: ဆက်သင်ယူရန်
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "ဆက်သင်ယူရန်"
+  homepage_banner_privacy_link: ဆက်သင်ယူရန်
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
-  homepage_banner_20k_teachers_link: "ဆက်သင်ယူရန်"
+  homepage_banner_20k_teachers_link: ဆက်သင်ယူရန်
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: "ကျွန်ုပ်တို့ကျောင်းသားprivacyပံ့ပိုးပုံအတွက်အရေးကြီးသောအပြောင်းအလဲပြုလုပ်နေပါသည်"
-  homepage_banner_emailprivacy_link: "ဆက်ဖတ်ရန်"
+  homepage_banner_emailprivacy: ကျွန်ုပ်တို့ကျောင်းသားprivacyပံ့ပိုးပုံအတွက်အရေးကြီးသောအပြောင်းအလဲပြုလုပ်နေပါသည်
+  homepage_banner_emailprivacy_link: ဆက်ဖတ်ရန်
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "ဆက်သင်ယူရန်"
+  homepage_banner_40k_teachers_link: ဆက်သင်ယူရန်
   homepage_slot_text_title_hoc: Hour of Code
-  homepage_slot_text_blurb_hoc: "မည်သူမဆိုသင်ယူနိုင်သည်။ယနေ့ဘဲစတင်ပါ"
+  homepage_slot_text_blurb_hoc: မည်သူမဆိုသင်ယူနိုင်သည်။ယနေ့ဘဲစတင်ပါ
   homepage_slot_text_link_hoc: Hour of Code ကို စမ်းကြည့်ပါ
   homepage_slot_text_link_about_hoc: Hour of Code အကြောင်း
   homepage_slot_text_link_host: Hour of Codeကို ကိုယ်တိုင်ပြုလုပ်ကျင်းပရန်
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Hour of Code အတွက်စေတနာ့ဝန်ထမ်း
   homepage_slot_text_title_students: Students
-  homepage_slot_text_blurb_students: "ကျွန်ုပ်တို့ tutorial အားလုံးကိုကြည့်ရန်"
-  homepage_slot_text_blurb_students_courses: "ကျွန်ုပ်တို့သင်တန်းများကိုကြည့်ရန်"
-  homepage_slot_text_link_codestudio: "ကုတ်စတူဒီယိုကိုလေ့လာရန်"
-  homepage_slot_text_link_local: "ဒေသတွင်းသင်တန်းတစ်ခုရှာရန်"
-  homepage_slot_text_link_othercourses: "အခြားအွန်လိုင်းသင်တန်းများ"
-  homepage_slot_text_title_educators: "ဆရာ/ဆရာမများ"
-  homepage_slot_text_blurb_educators: "သင့်ကျောင်းသားများကိုသင်ကြားပေးပါ"
-  homepage_slot_text_link_elementary: "မူလတန်းကျောင်း"
+  homepage_slot_text_blurb_students: ကျွန်ုပ်တို့ tutorial အားလုံးကိုကြည့်ရန်
+  homepage_slot_text_blurb_students_courses: ကျွန်ုပ်တို့သင်တန်းများကိုကြည့်ရန်
+  homepage_slot_text_link_codestudio: ကုတ်စတူဒီယိုကိုလေ့လာရန်
+  homepage_slot_text_link_local: ဒေသတွင်းသင်တန်းတစ်ခုရှာရန်
+  homepage_slot_text_link_othercourses: အခြားအွန်လိုင်းသင်တန်းများ
+  homepage_slot_text_title_educators: ဆရာ/ဆရာမများ
+  homepage_slot_text_blurb_educators: သင့်ကျောင်းသားများကိုသင်ကြားပေးပါ
+  homepage_slot_text_link_elementary: မူလတန်းကျောင်း
   homepage_slot_text_link_middle: Middle school
   homepage_slot_text_link_high: High school
   homepage_slot_text_link_k5: K-5အဆင့်သင်တန်းများ
-  homepage_slot_text_link_fullcurriculum: "ကျွန်ုပ်တို့သင်ရိုးညွှန်းတမ်းအစုံကိုကြည့်ရန်"
-  homepage_slot_text_link_pd: "အတတ်ပညာဆိုင်ရာတိုးတက်မှု"
-  homepage_slot_text_title_advocates: "အားပေးသူများ"
+  homepage_slot_text_link_fullcurriculum: ကျွန်ုပ်တို့သင်ရိုးညွှန်းတမ်းအစုံကိုကြည့်ရန်
+  homepage_slot_text_link_pd: အတတ်ပညာဆိုင်ရာတိုးတက်မှု
+  homepage_slot_text_title_advocates: အားပေးသူများ
   homepage_slot_text_blurb_advocates: Computingတွင်မျိုးစုံထောက်ပံ့ပါ
-  homepage_slot_text_link_stats: "စာရင်းကြည့်ရန်"
-  homepage_slot_text_link_buy: "ပါဝင်ရန်"
+  homepage_slot_text_link_stats: စာရင်းကြည့်ရန်
+  homepage_slot_text_link_buy: ပါဝင်ရန်
   homepage_slot_text_link_donate: Donate
-  homepage_slot_text_link_shop: "တီရှပ်များ၊ဦးထုပ်များနှင့်အခြားပစ္စည်းများ"
-  homepage_slot_text_link_administrators: "သင့်ကျောင်း (သို့မဟုတ်) ​ေဒသတွင်ပြုလုပ်ပါ"
+  homepage_slot_text_link_shop: တီရှပ်များ၊ဦးထုပ်များနှင့်အခြားပစ္စည်းများ
+  homepage_slot_text_link_administrators: သင့်ကျောင်း (သို့မဟုတ်) ​ေဒသတွင်ပြုလုပ်ပါ
   homepage_header_codestudio: Code.org ​ေကျာင်းသားဖန်တီးမှုများ
   homepage_header_donors: Code.orgအားပံ့ပိုးပေးသူများကိုကျေးဇူးတင်ပါသည်
-  homepage_donors_seall: "အားလုံးကြည့်ရန်"
+  homepage_donors_seall: အားလုံးကြည့်ရန်
   homepage_donors_donate: Donate
   contact_form_topic_student: I'm a student
   contact_form_topic_parent: I'm a parent
@@ -525,18 +525,18 @@
     Ages 6-106
   starwars_platform_text: Modern browsers, smartphones, tablets
   mc_name: Minecraft Hour of Code
-  mc_longdescription: "ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန်
-    ကုတ်နံပါတ် blockများကို သုံးပါ"
-  mc_shortdescription: "ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန်
-    ကုတ်နံပါတ် blockများကို သုံးပါ"
+  mc_longdescription: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန်
+    ကုတ်နံပါတ် blockများကို သုံးပါ
+  mc_shortdescription: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန်
+    ကုတ်နံပါတ် blockများကို သုံးပါ
   mc_gradelevel: Ages 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
-  mc_specs: "ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Ages 6-106"
+  mc_specs: ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Ages 6-106
   minecraft_agent: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
   minecraft_designer: Minecraft ဒီဇိုင်းနာ
   minecraft_adventurer: Minecraft စွန့်စားခန်း
   minecraft_tutorials: Minecraft Hour of Code နည်းပြ Tutorialများ
-  minecraft_specs: "ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Grades 2+"
+  minecraft_specs: ဘာသာစကားများ |ခေတ်မှီ browsersများ နှင့် tabletsများ |Grades 2+
   minecraft_agent_description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။
     Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
   minecraft_agent_button: Start
@@ -547,8 +547,8 @@
      ."
   minecraft_adventurer_button: Start
   minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: "အင်တာနက်အသုံးပြုစရာ မလိုသော minecraft adventurer
-    ဂိမ်းကစားနည်းကို ဒေါင်းလုတ်ဆွဲပါ."
+  minecraft_download_adventurer: အင်တာနက်အသုံးပြုစရာ မလိုသော minecraft adventurer
+    ဂိမ်းကစားနည်းကို ဒေါင်းလုတ်ဆွဲပါ.
   minecraft_subtitle: Minecraft Hour of Code
   minecraft_store_camps: "'Microsoft' Storeတွင် minecraft camps ကို အခမဲ့ ရနိုင်ပါတယ်။"
   minecraft_signup_store_camps: Austrialia, Canada, Puerto Rico သို့မဟုတ် US စသော
@@ -556,25 +556,25 @@
     အခမဲ့ ရယူရန် <a href='%{signup_store_camp}'>sign up</a> လုပ်ပြီး တီထွင်ဖန်တီးမှုများ
     ပြသနာဖြေရှင်းနည်းများဖြင့် ပါဝင်ပေါင်းစပ်ထားသော coding ကို သင်ယူပါ။.
   minecraft_host_event: Minecraft Hour of Code event တစ်ခု ကျင်းပပါ။
-  minecraft_teach_resources: "ဆရာ့အရင်းအမြစ်များနှင့် သင်ခန်းစာ အစီအစဉ်"
+  minecraft_teach_resources: ဆရာ့အရင်းအမြစ်များနှင့် သင်ခန်းစာ အစီအစဉ်
   minecraft_leader_guide: Eventတစ်ခုကို အစီအစဉ်ဆွဲရန် နှင့် ဦးဆောင်ရာ၌ သင့်ကို ကူညီနိုင်ရန်
     အရင်းအမြစ်များကို downloadဆွဲပါ.
-  minecraft_facilitating_event: "ကျောင်းသားငယ်များနှင့် အတန်းကြီးကျောင်းသားများအတွက်
+  minecraft_facilitating_event: ကျောင်းသားငယ်များနှင့် အတန်းကြီးကျောင်းသားများအတွက်
     facilitator quick start guide နှင့် powerpoint presentation များကို ယခု <a href='%{minecraft_facilitator_download}'>Download</a>
-    ရယူနိုင်ပါပြီ။"
+    ရယူနိုင်ပါပြီ။
   minecraft_join_online_training: Hour of Code ကို minecraft တွင် အသုံးပြုရန် <a href='%{minecraft_webinar_url}'>on-demand
     webinar</a>တွင်လေ့လာပါ။ Minecraft teamမှ မည်သို့ ပြုလုပ်ရမည်ကို သိနိုင်ပါသည်။
     ထိုမှတစ်ဆင့် December 4-10 Computer science education week တွင် Hour of code ကို
     လူငယ်တွေဆီ ရောက်ရှိစေရန် ဘာတွေ လိုအပ်ကြောင်း စဉ်းစားပါ။.
-  minecraft_continue_learning: "လူတိုင်းအတွက် ကွန်ပျူတာ သိပ္ပံ: Beyond an Hour of
-    Code at the Microsoft Store"
+  minecraft_continue_learning: 'လူတိုင်းအတွက် ကွန်ပျူတာ သိပ္ပံ: Beyond an Hour of
+    Code at the Microsoft Store'
   minecraft_continue_learning_description: |-
     ကွန်ပျူတာသိပ္ပံဆိုင်ရာမည်သည့် အတွေ့ကြုံမှမလိုအပ်ဘဲ ၁နာရီကြာသော workshopကို အခမဲ့ တက်ရောက်နိုင်ရန် ခြင်းဖြင့်သင်သည်Codingအကြောင်းများ ကွန်ပျူတာသိပ္ပံရဲ့အယူအဆများ နှင့်ရင်းနှီးလာမည်ဖြစ်ပြီး Hour of Codeကိုလဲကိုယ်တိုင်ဦးဆောင်ကျင်းပနိုင်မည်ဖြစ်သည်။
      <a href='%{minecraft_continue_learning_url}'>ယနေ့ဘဲSign up လုပ်ပါ</a>.
-  minecraft_future: "လူငယ်အားလုံးကို အနာဂတ်အတွက် အဆင့်သင့်ဖြစ်အောင် ကူညီပါ"
-  minecraft_future_description: "ကျောင်းတွေ စေတနာရှင် အဖွဲ့အစည်းတွေက digital skills
+  minecraft_future: လူငယ်အားလုံးကို အနာဂတ်အတွက် အဆင့်သင့်ဖြစ်အောင် ကူညီပါ
+  minecraft_future_description: ကျောင်းတွေ စေတနာရှင် အဖွဲ့အစည်းတွေက digital skills
     တွေကို digital literacy ကတစ်ဆင့်ကွန်ပျူတာသိပ္ပံပညာရေး နဲ့ လူထုဆီကိုဘယ်လိုယူဆောင်ပေးကြတယ်ဆိုတာ
-    သိရှိရန် <a href='%{minecraft_future_url}'>access the resources</a> တွင်ရှာဖွေပါ."
+    သိရှိရန် <a href='%{minecraft_future_url}'>access the resources</a> တွင်ရှာဖွေပါ.
   minecraft_og_designer: Minecraft သည် အသစ်သစ်သော လုပ်ဆောင်ချက်တေ့နဲ့အတူ ယခု ဗားရှင်းအသစ်တွင်
     ပါဝင်လာပါပြီ။animals တွေနဲ့အတူအခြားMinecraft သက်ရှိတွေကိုကိုယ်တိုင်ပရိုဂရမ်ဆွဲနိုင်ပါပြီ
   minecraft_og_agent: Minecraft ဂိမ်းကစားနည်းသည် Hour of Code အတွက်ပြန်လည်ရောက်ရှိလာပါပြီ။သင်သည်
@@ -585,7 +585,7 @@
   sports_og_description: Champions and gold medalists encourage you to try the Hour
     of Code. Code your own sports game.
   sports_title: Code your own sports game
-  sports_watch_video: "ဗီဒီရိုကြည့်ပါ"
+  sports_watch_video: ဗီဒီရိုကြည့်ပါ
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
@@ -622,7 +622,7 @@
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
   video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: "မိန်းကလေးတစ်ဦးကိုဆွဲဆောင်ခြင်း"
+  video_title_inspire_girl: မိန်းကလေးတစ်ဦးကိုဆွဲဆောင်ခြင်း
   video_title_cs_intro: Computer Science intro
   video_title_schools_dont_teach: What Most Schools Don't Teach
   video_title_obama: President Obama on computer science
@@ -668,7 +668,7 @@
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "အမည္"
+  volunteer_engineer_submission_field_name: အမည္
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
@@ -689,7 +689,7 @@
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook profile
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: "ဖော်ပြချက်"
+  volunteer_engineer_submission_field_description: ဖော်ပြချက်
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience or technical background and how you would like to participate as a
     volunteer for local teachers.
@@ -710,7 +710,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "ပေးပို့ပါ"
+  volunteer_engineer_submission_submit: ပေးပို့ပါ
   volunteer_engineer_submission_thankyou: Thank you! Your volunteer information was
     successfully submitted. Teachers will be using <a href="%{url}">this map</a> to
     search for and contact volunteers like you. Please allow 48 hours for your information
@@ -754,7 +754,7 @@
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "ဆက်သင်ယူရန်"
+  dashboard_announce_learn_more_button: ဆက်သင်ယူရန်
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -829,7 +829,7 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
-  dashboard_action_cancel: "ပယ်ဖျတ်သည်"
+  dashboard_action_cancel: ပယ်ဖျတ်သည်
   dashboard_action_delete: Delete
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
@@ -950,7 +950,7 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_name: "အမည္"
+  dashboard_students_name: အမည္
   dashboard_students_progress: Progress
   dashboard_students_male: Male
   dashboard_students_female: Female
@@ -1263,7 +1263,7 @@
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "သင်္ချာ"
+  math_category_name: သင်္ချာ
   hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
@@ -1292,10 +1292,10 @@
   khanpl_gradelevel: Middle school +
   tynker_gradelevel: Ages 5-13
   scratch_gradelevel: Ages 8+
-  lightbot_gradelevel: "အသက်အရွယ်အားလုံး"
-  thinkersmith_gradelevel: "အသက်အရွယ်အားလုံး"
+  lightbot_gradelevel: အသက်အရွယ်အားလုံး
+  thinkersmith_gradelevel: အသက်အရွယ်အားလုံး
   condcards_gradelevel: Ages 8-12
-  lightbotintl_gradelevel: "အသက်အရွယ်အားလုံး"
+  lightbotintl_gradelevel: အသက်အရွယ်အားလုံး
   codehs_gradelevel: High school
   codecademy_gradelevel: High school
   codecombat_gradelevel: Middle school +
@@ -1314,7 +1314,7 @@
   makeschool_gradelevel: High school
   touchdevelop_gradelevel: High school
   appinventor_gradelevel: Middle school +
-  blockly_gradelevel: "အသက်အရွယ်အားလုံး"
+  blockly_gradelevel: အသက်အရွယ်အားလုံး
   thinkersmith2_gradelevel: Ages 8+
   kodableunplugged_gradelevel: Ages 8-13
   projguts_gradelevel: Ages 10-13
@@ -1686,7 +1686,7 @@
   khan_beyond_gradelevel: Middle school +
   tynker_beyond_gradelevel: Ages 5-13
   scratch_beyond_gradelevel: Ages 8+
-  lightbot_beyond_gradelevel: "အသက်အရွယ်အားလုံး"
+  lightbot_beyond_gradelevel: အသက်အရွယ်အားလုံး
   codecademy_beyond_gradelevel: High school
   kodable_beyond_gradelevel: Elementary
   scratchjr_beyond_gradelevel: Elementary
@@ -1968,12 +1968,12 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: "လှုပ်ခတ်ပါ"
+  flappy_shortcode: လှုပ်ခတ်ပါ
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
   header_home: Home
-  header_my_dashboard: "ကျွန်ုပ်ကျောက်သင်ပုံး"
+  header_my_dashboard: ကျွန်ုပ်ကျောက်သင်ပုံး
   header_courses: Courses
   header_course_catalog: Course Catalog
   header_project_gallery: Projects

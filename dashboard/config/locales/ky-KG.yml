@@ -39,13 +39,13 @@
   welcome_back: Welcome back, %{name}
   your_professional_learning_plan: Your Professional Learning Plan
   see_your_learning_plan: See your learning plan
-  submit: "Кошуу"
+  submit: Кошуу
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
   next_resource: Next resource
   done_with_module: Done with this Learning Module
-  cancel: "Жок кыл"
+  cancel: Жок кыл
   okay: Okay
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
@@ -78,7 +78,7 @@
   k8intro: K-8 Intro to Computer Science Course (15-25 hours)
   already_started: 'Already started? Resume here >> '
   demos: 'Admin: All Demos'
-  continue: "Улантуу"
+  continue: Улантуу
   prize: prize
   more_info: More info
   auth:
@@ -203,7 +203,7 @@
       instructions: Enter your email address below and we'll send you password reset
         instructions.
       email: Email address
-      submit: "Кошуу"
+      submit: Кошуу
     reset_errors:
       captcha_required: Please fill out the CAPTCHA to reset your password.
       invalid_email: It looks like you may have signed up with an invalid email address.
@@ -270,7 +270,7 @@
     edit: Edit
     edit_model: Edit %{model}
     update: Update
-    submit: "Кошуу"
+    submit: Кошуу
     destroy: Destroy
     back: Back
     confirm: Are you sure?
@@ -493,7 +493,7 @@
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: "Дагы кара"
+    announcement_learn_more_button: Дагы кара
     announcement_try_now_button: Try now
     announcement_host_an_hour_button: Host an Hour
     announcement_watch_video_button: Watch video
@@ -679,7 +679,7 @@
         to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
-      link: "Дагы кара"
+      link: Дагы кара
       applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
         with a mouse and keyboard. You may experience issues using this tool on your
         current device.
@@ -910,11 +910,11 @@
     correct_body: That is the correct answer.
   dialog:
     ok: OK
-    startover_title: "Кайрадан баштагыңыз келгени аныкпы?"
+    startover_title: Кайрадан баштагыңыз келгени аныкпы?
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: "Кайра баштоо"
-    startover_cancel: "Жок кыл"
+    startover_ok: Кайра баштоо
+    startover_cancel: Жок кыл
   time:
     hour: 1 hour
     day: day
@@ -975,7 +975,7 @@
     - american_indian: American Indian/Alaska Native
     - other: Other
     - opt_out: Prefer not to say
-    submit: "Кошуу"
+    submit: Кошуу
     decline: Close
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
@@ -1026,7 +1026,7 @@
       to start a project.
     close: Close
     more: More
-    name: "Аты"
+    name: Аты
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
@@ -1041,7 +1041,7 @@
     delete_no: 'No'
     saved: Saved
     not_saved: Not saved
-    cancel: "Жок кыл"
+    cancel: Жок кыл
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able

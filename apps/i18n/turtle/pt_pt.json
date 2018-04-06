@@ -74,13 +74,13 @@
   "penDown": "baixar o lápis",
   "penTooltip": "Levanta ou baixa o lápis, para iniciar ou parar de desenhar.",
   "penUp": "levantar o lápis",
+  "pointTo": "point to",
   "pixels": "píxeis",
   "reinfFeedbackMsg": "Aqui está o teu desenho! Continua a aperfeiçoá-lo ou continua para o próximo desafio.",
   "setAlpha": "definir transparência",
   "setCharacter": "set character to {character}",
   "setColour": "definir cor",
   "setPattern": "definir padrão",
-  "setStickerSize": "Set sticker size",
   "setWidth": "definir largura",
   "shareDrawing": "Partilha o teu desenho:",
   "showMe": "Mostrem-me",
@@ -94,5 +94,6 @@
   "turnTooltip": "Vira o artista à direita ou à esquerda de acordo com o número de graus especificado.",
   "turtleVisibilityTooltip": "Torna o artista visível ou invisível.",
   "widthTooltip": "Altera a largura do lápis.",
+  "withSize": "with size",
   "wrongColour": "A tua imagem está na cor errada. Neste desafio tem de ser %1."
 }

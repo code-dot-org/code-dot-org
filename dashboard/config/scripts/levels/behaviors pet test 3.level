@@ -48,10 +48,7 @@
     "hide_custom_blocks": "true",
     "instructions": "**It's time to make your own virtual pet!** You can change whatever code you want to to make your own pet. Here are some ideas:\r\n* Can you make your pet start a new behavior when you click on it?\r\n* Can you make your pet run away when you drag the vacuum to it?\r\n* Can you add other animal friends to your pet's area? ",
     "parent_level_id": 12163,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

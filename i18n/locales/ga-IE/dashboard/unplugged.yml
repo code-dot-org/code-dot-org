@@ -316,3 +316,21 @@ ga:
       BigEvent_2018:
         title: An Teagmhas Mór
         desc: Foghlaimeoidh na daltaí faoi "teagmhais" sa ríomhchlárú, gníomhartha a ndéanann an ríomhaire monatóireacht leanúnach orthu. Brúfaidh an múinteoir cnaipí ar chianrialtán páipéir, agus freagróidh na daltaí, ag brath ar an gcnaipe a bhí brúite.
+      GraphPaperProgramming_2018:
+        title: Ríomhchlárú ar Ghrafpháipéar
+        desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide as orduithe réamhshainithe, a úsáidfidh a gcomhscoláirí chun líníocht a atáirgeadh.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Gníomhaíocht Dhíphlugáilte
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Gníomhaíocht Dhíphlugáilte
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Coinníollacha
+        desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."
+      DigitalFootprint_2018:
+        title: Do Lorg Digiteach
+        desc: Foghlaimeoidh na daltaí go bhfágann siad "lorg digiteach" nuair a chuireann siad faisnéis fúthu féin ar líne, agus go mbaineann torthaí leis an lorg digiteach seo.
+      BinaryImages_2018:
+        title: Íomhánna Dénártha
+        desc: Síleann mórán daoine nach mbaineann an córas dénártha ach le náideanna agus aonta, ach d'fhoghlaim muid i gcúrsaí roimhe seo gur féidir faisnéis a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.

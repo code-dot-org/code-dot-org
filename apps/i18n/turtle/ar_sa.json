@@ -74,13 +74,13 @@
   "penDown": "خفض القلم",
   "penTooltip": "رفع أو خفض القلم، لبدء أو إيقاف الرسم.",
   "penUp": "رفع القلم",
+  "pointTo": "point to",
   "pixels": "بكسل",
   "reinfFeedbackMsg": "ها هي رسمتك! بإمكانك الاستمرار في العمل عليها أو التوجه إلى اللغز التالي.",
   "setAlpha": "تعيين \"alpha\"تعيين",
   "setCharacter": "set character to {character}",
   "setColour": "تعيين اللون",
   "setPattern": "تعيين النمط",
-  "setStickerSize": "Set sticker size",
   "setWidth": "تعيين العرض",
   "shareDrawing": "أنشر رسمتك:",
   "showMe": "أَرِني",
@@ -94,5 +94,6 @@
   "turnTooltip": "تحويل اتجاه الفنان إلى اليسار أو اليمين بعدد الدرجات المحددة.",
   "turtleVisibilityTooltip": "إظهاِر أو إخفاء الفنان.",
   "widthTooltip": "تغيير عرض القلم.",
+  "withSize": "with size",
   "wrongColour": "لون صورتك خاطئ. لهذا اللغز، يجب أن يكون اللون %1."
 }

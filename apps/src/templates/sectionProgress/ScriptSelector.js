@@ -21,7 +21,7 @@ export default class ScriptSelector extends Component {
     // case they've been semi-processed and given assignIds to diferentiate
     // courses and scripts
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
-    scriptId: PropTypes.string,
+    scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
   };
 

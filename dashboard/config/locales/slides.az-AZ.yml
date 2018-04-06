@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: "İlk kod saatınıza xoş gəldiniz! Gəlin, birbaşa proqramlaşdırmanın ilk
-          dadını çıxarmağa dalaq."
+        text: İlk kod saatınıza xoş gəldiniz! Gəlin, birbaşa proqramlaşdırmanın ilk
+          dadını çıxarmağa dalaq.
       2:
         image: notes/hoc1_2.jpg
         text: Kod yazmaq üçün blokları sürükləyib buraxacağınız bir vizual proqramlaşdırma
@@ -23,8 +23,8 @@
         text: Proqram kompüterinizin əməl etməsi üçün əmrlər çoxluğudur.
       6:
         image: notes/hoc1_6.jpg
-        text: "İlk proqramınızın məqsədi Acıqlı Quşu labirintdən keçirməkdir ki, Yaşıl
-          Donuzu vursun."
+        text: İlk proqramınızın məqsədi Acıqlı Quşu labirintdən keçirməkdir ki, Yaşıl
+          Donuzu vursun.
       7:
         image: notes/hoc1_7.jpg
         text: Ekranın sol tərəfində proqramınızın icra olunduğu labirint yerləşir.
@@ -91,8 +91,8 @@
           torpaq doldurur.
       4:
         image: notes/stage9_4.jpg
-        text: "Çuxurlarin və təpəciklərin ölçüləri müxtəlifdir. Ona görə də siz fermerə
-          neçə kürək istifadə etməli olduğunu deməlisiniz."
+        text: Çuxurlarin və təpəciklərin ölçüləri müxtəlifdir. Ona görə də siz fermerə
+          neçə kürək istifadə etməli olduğunu deməlisiniz.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
@@ -256,7 +256,7 @@
           bloklarının içinə yerləşdirə bilərsiniz.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "İndi isə, gəlin, dələ Cırmağa kömək edək ki, o palıd qozasını ələ keçirsin!"
+        text: İndi isə, gəlin, dələ Cırmağa kömək edək ki, o palıd qozasını ələ keçirsin!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -343,8 +343,8 @@
           klikləyin və "ölçülü üçbucaq çək" funksiyanızı sürükləyin.
       8:
         image: notes/stage15_8.jpg
-        text: "İndi  girişə müxtəlif ədədlər verərək müxtəlif ölçüdə üçbucaqlar çəkmək
-          üçün riyaziyyat blokundan istifadə edə bilərsiniz."
+        text: İndi  girişə müxtəlif ədədlər verərək müxtəlif ölçüdə üçbucaqlar çəkmək
+          üçün riyaziyyat blokundan istifadə edə bilərsiniz.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
@@ -360,11 +360,11 @@
           ta ki", "əgər" və "əgər-əks halda" ifadələri barədə öyrəndik.
       3:
         image: notes/hoc6_3.jpg
-        text: "İlk kod saatınızı bəyəndinizsə, infromatika təhsilinizi davam etdirmək
+        text: İlk kod saatınızı bəyəndinizsə, infromatika təhsilinizi davam etdirmək
           üçün code.org ünvanına baş çəkin! Bizim 20 saatlıq kursumuzu başa vurduqdan
           sonra proqramlaşdırmanın əsaslarını mənimsəyib, telefonlar üçün proqramlar,
           robotlar üçün əmrlər, oyunlar, ürəyiniz istəyən hər şeyi necə yazmağı öyrənməyə
-          başlaya bilərsiniz."
+          başlaya bilərsiniz.
       4:
         image: notes/hoc6_4.jpg
         text: Texnologiya bizim bütün hərəkətlərimizi dəyişir və fərqi yoxdur, siz
@@ -521,10 +521,10 @@
           run button to see what you've programmed.
       6:
         image: notes/playlab_intro_6.png
-        text: "İlk addımı atın və axırda siz öz oyununuzu düzəldə biləcəksiniz. Cürbəcür
+        text: İlk addımı atın və axırda siz öz oyununuzu düzəldə biləcəksiniz. Cürbəcür
           oyunçular qarşılıqlı ünsiyyət qura, xoşbəxt və ya qəmli ola, xallar qazana
           və ya alov topları ata, hətta bir birini məhv edə biləcəklər. Hamısı sizdən
-          və düzəltmək istədiyiniz oyundan asılıdır."
+          və düzəltmək istədiyiniz oyundan asılıdır.
     playlab_events:
       1:
         image: notes/playlab_events_1.png

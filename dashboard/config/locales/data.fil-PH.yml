@@ -852,6 +852,9 @@
         applab_intro_share: App Lab - Ibahagi ang Iyong App
         csd_applab_arrays: Introduksyon sa mga Array
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Mga Loops kasama si BB-8
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang

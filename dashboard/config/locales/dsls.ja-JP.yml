@@ -11,8 +11,8 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
-        Match the button combination to the dance moves.: "一致するボタンの組み合わせをえらびましょう。"
-        Matching: "一致"
+        Match the button combination to the dance moves.: 一致するボタンの組み合わせをえらびましょう。
+        Matching: 一致
       2-3 Binary Match 1:
         "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
@@ -24,8 +24,8 @@
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>P</strong>"
         "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: "合致"
-        Use the key to match each code to its letter: "キーを使って一致する文字の組み合わせをえらびましょう。"
+        Matching: 合致
+        Use the key to match each code to its letter: キーを使って一致する文字の組み合わせをえらびましょう。
       2-3 Graph Paper Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -33,8 +33,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program.: "一致するマス目のプログラムの組み合わせをえらびましょう。"
-        Matching: "合致"
+        Match the grid to the program.: 一致するマス目のプログラムの組み合わせをえらびましょう。
+        Matching: 合致
       2-3 Maze Match 2:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
@@ -43,10 +43,10 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "一致するようにブロックをドラッグしましょう。"
-        Instructions: "やり方:"
-        Match the puzzles to the blocks: "一致するパズルのブロックの組み合わせをえらびましょう。"
-        Maze Match: "迷路パズル"
+        Drag the blocks to match.: 一致するようにブロックをドラッグしましょう。
+        Instructions: 'やり方:'
+        Match the puzzles to the blocks: 一致するパズルのブロックの組み合わせをえらびましょう。
+        Maze Match: 迷路パズル
       2-3 Relay Programming Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -54,8 +54,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: "一致する組み合わせをえらびましょう。"
-        Matching: "合致"
+        Match the grid to the program: 一致する組み合わせをえらびましょう。
+        Matching: 合致
       2-3 artist loops match 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
@@ -65,8 +65,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: "一致する組み合わせをえらびましょう。"
-        Match the loop to the shape: "一致する組み合わせをえらびましょう。"
+        Artist Loops Matching One: 一致する組み合わせをえらびましょう。
+        Match the loop to the shape: 一致する組み合わせをえらびましょう。
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
@@ -76,8 +76,8 @@
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
-        Artist Matching: "アーティストの一致"
-        Match the shape with the blocks that complete it.: "一致する組み合わせをえらびましょう。"
+        Artist Matching: アーティストの一致
+        Match the shape with the blocks that complete it.: 一致する組み合わせをえらびましょう。
       2-3 bounce match 1:
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
@@ -89,9 +89,9 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: "バウンスの一致"
-        Match the events with the actions: "動きと出来事を一緒に合わせてください。"
-        Matching: "合致"
+        Bounce Matching: バウンスの一致
+        Match the events with the actions: 動きと出来事を一緒に合わせてください。
+        Matching: 合致
       2-3 flappy match 1:
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
@@ -100,8 +100,8 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
         Flappy Matching One: Flappy どれに一致する
-        Match the events with the actions: "動きと出来事を一緒に合わせてください。"
-        Matching: "合致"
+        Match the events with the actions: 動きと出来事を一緒に合わせてください。
+        Matching: 合致
       2-3 maze match 1:
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
@@ -109,8 +109,8 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        Match the puzzles to the blocks: "一致するパズルのブロックの組み合わせをえらびましょう。"
-        Maze Match One: "迷路はどれに一致するか"
+        Match the puzzles to the blocks: 一致するパズルのブロックの組み合わせをえらびましょう。
+        Maze Match One: 迷路はどれに一致するか
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
@@ -120,8 +120,8 @@
         "<h4>Compare player scores to see who wins</h4>": "<h4>プレイヤーの点数を比較して誰が勝ったか見てみましょう</h4>"
         "<h4>Player 1 rolls die</h4>": "<h4>プレイヤー１がサイコロを振ります</h4>"
         "<h4>Set Player 1 score to 0</h4>": "<h4>プレイヤー１の点数をゼロにします</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: "サイコロレースゲームの手順を一致させましょう。"
-        Matching: "合致"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: サイコロレースゲームの手順を一致させましょう。
+        Matching: 合致
       4-5 Computational Thinking Match 1:
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
@@ -131,8 +131,8 @@
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>車輪/片面: 2<br/>窓/片面: 1</h3>"
         "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>車輪/片面: 2<br/>窓/片面: 6</h3>"
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>車輪/片面: 3<br/>窓/片面: 2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: "これらの車両を分解しました。分解した部品リストを一致させましょう。"
-        Matching: "合致"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: これらの車両を分解しました。分解した部品リストを一致させましょう。
+        Matching: 合致
       4-5 Suncatchers Match 1:
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
@@ -144,7 +144,7 @@
         "<h4>STAMP</h4>": "<h4>STAMP</h4>"
         "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: SKILL表を使い、PROGRAMとできる単語を一致させましょう
-        Matching: "合致"
+        Matching: 合致
       4-5 maze match 1:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
@@ -153,10 +153,10 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "一致するようにブロックをドラッグする。"
-        Instructions: "やり方:"
-        Match the puzzles to the blocks: "一致するパズルのブロックの組み合わせをえらびましょう。"
-        Maze Match: "迷路パズル"
+        Drag the blocks to match.: 一致するようにブロックをドラッグする。
+        Instructions: 'やり方:'
+        Match the puzzles to the blocks: 一致するパズルのブロックの組み合わせをえらびましょう。
+        Maze Match: 迷路パズル
       K-1 Artist 2 Match 1:
         "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
         "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
@@ -164,8 +164,8 @@
         "<br/><br/>above": "<br/><br/>上記"
         "<br/><br/>below": "<br/> <br/> 以下"
         "<br/><br/>next to": "<br/> <br/> 次へ"
-        Is the square next to, above, or below the ball?: "正方形は、ボールの横、上、下のどこにありますか？"
-        Matching: "合致"
+        Is the square next to, above, or below the ball?: 正方形は、ボールの横、上、下のどこにありますか？
+        Matching: 合致
       K-1 Artist 2 Match 2:
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
@@ -175,8 +175,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
-        Match the shapes based on type.: "種類別に形を一致させてください。"
-        Matching: "合致"
+        Match the shapes based on type.: 種類別に形を一致させてください。
+        Matching: 合致
       K-1 Artist 2 Match 3:
         "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
@@ -186,8 +186,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        Match the shapes based on type.: "種類別に形を一致させてください。"
-        Matching: "合致"
+        Match the shapes based on type.: 種類別に形を一致させてください。
+        Matching: 合致
       K-1 Artist Loops Match 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
@@ -195,8 +195,8 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
-        Match the code to the stairs it draws.: "階段をかくためのプログラムに一致"
-        Matching: "合致"
+        Match the code to the stairs it draws.: 階段をかくためのプログラムに一致
+        Matching: 合致
       K-1 Bee Loops Match 1:
         "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
         "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
@@ -206,8 +206,8 @@
         "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
-        Match the blocks: "ブロックを一致させましょう。"
-        Matching: "合致"
+        Match the blocks: ブロックを一致させましょう。
+        Matching: 合致
       K-1 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
@@ -216,8 +216,8 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        Match the button combination to the dance moves.: "一致するボタンの組み合わせをえらびましょう。"
-        Matching: "合致"
+        Match the button combination to the dance moves.: 一致するボタンの組み合わせをえらびましょう。
+        Matching: 合致
       K-1 Flappy Match 1:
         "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
         "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
@@ -225,8 +225,8 @@
         "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
         "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
         "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
-        Match the blocks: "ブロックを一致させる"
-        Matching: "合致"
+        Match the blocks: ブロックを一致させる
+        Matching: 合致
       K-1 Happy Maps Match 1:
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
@@ -235,7 +235,7 @@
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
         Match the Map to the arrow that gets the Flurb to the treasure: Flurb が宝をもらえるよう一致した地図と矢印
-        Matching: "合致"
+        Matching: 合致
       K-1 Maze Match 1:
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -246,10 +246,10 @@
         "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: "一致するようにブロックをドラッグする。"
-        Instructions: "やり方:"
-        Match the puzzles and blocks: "ブロックとパズルを一致させましょう。"
-        Matching: "合致"
+        Drag the blocks to match.: 一致するようにブロックをドラッグする。
+        Instructions: 'やり方:'
+        Match the puzzles and blocks: ブロックとパズルを一致させましょう。
+        Matching: 合致
       K-1 Move It Match 1:
         "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
         "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
@@ -259,7 +259,7 @@
         "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
         Match the Map to the algorithm that gets the Flurb to the flowers.: Flurb
           が花をもらえるのに一致したアルゴリズムと地図
-        Matching: "合致"
+        Matching: 合致
       test matching image:
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
@@ -271,11 +271,11 @@
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: "やり方:"
+        Instructions: 'やり方:'
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: "合致"
+        Matching: 合致
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
         Sydney: Sydney
@@ -284,58 +284,58 @@
         What's Brent's last name?: What's Brent's last name?
         What's in the ocean?: What's in the ocean?
         Where is Brendan from?: Where is Brendan from?
-        blue: "青"
+        blue: 青
         salt: salt
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided.: "与えられた画像のためのアルゴリズムを選びましょう"
-        Multiple Choice: "複数の選択肢"
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: "正方形から始めます<br/>正方形の上に平行四辺形を置きます<br/>三角形を平行四辺形の右に置きます"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: "正方形から始めましょう。<br/>
-          正方形の上に三角形を置きます。 <br/> 正方形の下に三角形を置きます。"
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: "正方形から始めます<br/>三角形を正方形の下に置きます<br/>平行四辺形を三角形の右に置きます"
+        Choose an algorithm for the image provided.: 与えられた画像のためのアルゴリズムを選びましょう
+        Multiple Choice: 複数の選択肢
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 正方形から始めます<br/>正方形の上に平行四辺形を置きます<br/>三角形を平行四辺形の右に置きます
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 正方形から始めましょう。<br/>
+          正方形の上に三角形を置きます。 <br/> 正方形の下に三角形を置きます。
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 正方形から始めます<br/>三角形を正方形の下に置きます<br/>平行四辺形を三角形の右に置きます
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : "正方形から始めます<br/>三角形を正方形の右に置きます<br/>平行四辺形を正方形の下に置きます<br/>三角形を平行四辺形の右に置きます"
+        : 正方形から始めます<br/>三角形を正方形の右に置きます<br/>平行四辺形を正方形の下に置きます<br/>三角形を平行四辺形の右に置きます
       2-3 Algorithms Multi 2:
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        Multiple Choice: "複数の選択肢"
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "三角形から始めます<br/>正方形を三角形の下に置きます<br/>もう一つの三角形を正方形の下に置きます"
-        Which image does <em>not</em> follow this algorithm?: "どの絵がこのアルゴリズムに従って<em>いない</em>でしょうか？"
+        Multiple Choice: 複数の選択肢
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 三角形から始めます<br/>正方形を三角形の下に置きます<br/>もう一つの三角形を正方形の下に置きます
+        Which image does <em>not</em> follow this algorithm?: どの絵がこのアルゴリズムに従って<em>いない</em>でしょうか？
       2-3 Binary Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "複数の選択肢"
-        Which program makes this image?: "この画像を描いたのはどのプログラムでしょうか？"
+        Multiple Choice: 複数の選択肢
+        Which program makes this image?: この画像を描いたのはどのプログラムでしょうか？
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: "ゲームのルールによると、カードの組み合わせの点数が正しいのはどれでしょう？"
-        Multiple Choice: "複数の選択肢"
+        According to the rules of the game, which set of cards is scored correctly?: ゲームのルールによると、カードの組み合わせの点数が正しいのはどれでしょう？
+        Multiple Choice: 複数の選択肢
       2-3 Getting Loopy Multi 1:
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "この流れをループを使って簡単にする方法はないでしょうか？"
-        Multiple Choice: "複数の選択肢"
+        How would you simplify this sequence with loops?: この流れをループを使って簡単にする方法はないでしょうか？
+        Multiple Choice: 複数の選択肢
       2-3 Graph Paper Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "複数の選択肢"
-        Which program makes this image?: "この画像を描いたのはどのプログラムでしょうか？"
+        Multiple Choice: 複数の選択肢
+        Which program makes this image?: この画像を描いたのはどのプログラムでしょうか？
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
@@ -343,21 +343,21 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
-        Maze Multiple Choice: "めいろ選択問題（せんたくもんだい）"
-        Which blocks work?: "どのブロックが正しいですか？"
+        Maze Multiple Choice: めいろ選択問題（せんたくもんだい）
+        Which blocks work?: どのブロックが正しいですか？
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Multiple Choice: "複数の選択肢"
-        Which program does not create this image?: "この画像を描くことができないプログラムはどれですか？"
+        Multiple Choice: 複数の選択肢
+        Which program does not create this image?: この画像を描くことができないプログラムはどれですか？
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
-        Multiple Choice: "複数の選択肢"
-        Which image-program combo does not contain mistakes?: "正しい画像プログラムはどれですか？"
+        Multiple Choice: 複数の選択肢
+        Which image-program combo does not contain mistakes?: 正しい画像プログラムはどれですか？
       2-3 artist debug multi 1:
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
@@ -365,16 +365,16 @@
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
-        Artist Debugging Multiple Choice One: "アーティストデバッグ選択問題（せんたくもんだい）"
-        Why won't this circle go all the way around?: "なぜこの円はみちをさいごまでとおらないのでしょうか？"
+        Artist Debugging Multiple Choice One: アーティストデバッグ選択問題（せんたくもんだい）
+        Why won't this circle go all the way around?: なぜこの円はみちをさいごまでとおらないのでしょうか？
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice One: "アーティスト ファンクション選択問題（せんたくもんだい）"
-        Pick the correct blocks to draw this image using the given functions: "与えられた関数を使ってこの画像を描くことができるように、正しいブロックをえらびましょう。"
+        Artist Functions Multiple Choice One: アーティスト ファンクション選択問題（せんたくもんだい）
+        Pick the correct blocks to draw this image using the given functions: 与えられた関数を使ってこの画像を描くことができるように、正しいブロックをえらびましょう。
       2-3 artist loops multi 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500"
@@ -382,8 +382,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "アーティストループ 選択問題（せんたくもんだい）"
-        Which shape is made by this loop?: "このループではどんな形が描かれるでしょうか？"
+        Artist Loops Multiple Choice: アーティストループ 選択問題（せんたくもんだい）
+        Which shape is made by this loop?: このループではどんな形が描かれるでしょうか？
       2-3 artist loops multi 2:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500"
@@ -391,15 +391,15 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "アーティストループ 選択問題（せんたくもんだい）"
-        Which shape is made by this program?: "このプログラムで描いた図形はどれでしょう？"
+        Artist Loops Multiple Choice: アーティストループ 選択問題（せんたくもんだい）
+        Which shape is made by this program?: このプログラムで描いた図形はどれでしょう？
       2-3 bee conditionals multi 1:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: "正しいものを選ぼう 1"
-        Which comparison below is true?: "下のどっちの比較がtrueになるでしょうか？"
+        Bee Conditionals Multiple Choice One: 正しいものを選ぼう 1
+        Which comparison below is true?: 下のどっちの比較がtrueになるでしょうか？
       2-3 bee conditionals multi 2:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
@@ -407,8 +407,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "正しいものを選ぼう 2"
-        Choose the best blocks.: "正しいブロックを選んでください。"
+        Bee Conditionals Multiple Choice Two: 正しいものを選ぼう 2
+        Choose the best blocks.: 正しいブロックを選んでください。
       2-3 bee conditionals multi 3:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
@@ -416,8 +416,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "正しいものを選ぼう 2"
-        Choose the best blocks.: "正しいブロックを選んでください。"
+        Bee Conditionals Multiple Choice Two: 正しいものを選ぼう 2
+        Choose the best blocks.: 正しいブロックを選んでください。
       2-3 bee loops multi 1:
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
@@ -425,8 +425,8 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500"
-        Bee Loops Multiple Choice One: "みつばちループ選択問題（せんたくもんだい）"
-        Which blocks collect all of the nectar?: "すべての花のミツを集めるブロックはどれでしょう？"
+        Bee Loops Multiple Choice One: みつばちループ選択問題（せんたくもんだい）
+        Which blocks collect all of the nectar?: すべての花のミツを集めるブロックはどれでしょう？
       2-3 maze multi 1:
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
@@ -434,58 +434,58 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice One: "めいろ選択問題（せんたくもんだい）"
-        Which set of blocks is the correct answer?: "正しいブロックの組み合わせはどれでしょう？"
+        Maze Multiple Choice One: めいろ選択問題（せんたくもんだい）
+        Which set of blocks is the correct answer?: 正しいブロックの組み合わせはどれでしょう？
       4-5 Algorithms Multi 1:
-        Baking cookies: "クッキーを焼く"
-        Banana: "バナナ"
-        Brushing your teeth: "歯を磨く"
-        Multiple Choice: "複数の選択肢"
-        Shopping from a grocery list: "食料品リストから買い物をする"
-        Which one of these items is hardest to describe an algorithm for?: "どのアイテムがアルゴリズムを記述するのが最も難しいですか?"
+        Baking cookies: クッキーを焼く
+        Banana: バナナ
+        Brushing your teeth: 歯を磨く
+        Multiple Choice: 複数の選択肢
+        Shopping from a grocery list: 食料品リストから買い物をする
+        Which one of these items is hardest to describe an algorithm for?: どのアイテムがアルゴリズムを記述するのが最も難しいですか?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene は _____ 都市です。
         0: "? Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?"
         1: 3つの文章があります。3つ全てが同じパターンにあてはまるようなテンプレートはどれでしょう？
-        Multiple Choice: "複数の選択肢"
-        Seattle _____ a _____ _____.: "シアトル _____ _____ _____。"
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: "シアトルは大きな町。<br/>ユージーンは中くらいの町<br/>
-          ヒルビューは小さな町。"
+        Multiple Choice: 複数の選択肢
+        Seattle _____ a _____ _____.: シアトル _____ _____ _____。
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: シアトルは大きな町。<br/>ユージーンは中くらいの町<br/>
+          ヒルビューは小さな町。
         _____ is _____ a _____.: _____は_____ _____。
         _____ is a _____ city.: _____ は、_____ 都市です。
       4-5 Crowdsourcing Multi 1:
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-        Multiple Choice: "複数の選択肢"
-        Which of these pictures best represents crowdsourcing?: "どの写真がクラウドソーシングを表していますか?"
+        Multiple Choice: 複数の選択肢
+        Which of these pictures best represents crowdsourcing?: どの写真がクラウドソーシングを表していますか?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: "髪をとかす"
-        Cleaning your room: "部屋の掃除"
-        Eating your dessert: "デザートを食べる"
-        Multiple Choice: "複数の選択肢"
-        Washing your face: "顔を洗う"
-        Which one of these activities would be best for practicing crowdsourcing?: "クラウドソーシングの実践に適した活動はどれだろうと思いますか？"
+        Brushing your hair: 髪をとかす
+        Cleaning your room: 部屋の掃除
+        Eating your dessert: デザートを食べる
+        Multiple Choice: 複数の選択肢
+        Washing your face: 顔を洗う
+        Which one of these activities would be best for practicing crowdsourcing?: クラウドソーシングの実践に適した活動はどれだろうと思いますか？
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: "複数の選択肢"
-        Which piece of information listed below is okay to share on the internet?: "インターネット上で公開や共有しても大丈夫なのは、次のうちどれでしょうか？"
-        Your address: "あなたの住所"
-        Your birthday: "あなたの誕生日"
-        Your favorite food: "あなたの好きな食べ物"
-        Your parent's credit card number: "親のクレジットカード番号"
+        Multiple Choice: 複数の選択肢
+        Which piece of information listed below is okay to share on the internet?: インターネット上で公開や共有しても大丈夫なのは、次のうちどれでしょうか？
+        Your address: あなたの住所
+        Your birthday: あなたの誕生日
+        Your favorite food: あなたの好きな食べ物
+        Your parent's credit card number: 親のクレジットカード番号
       4-5 Internet Multi 1:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: "複数の選択肢"
+        Multiple Choice: 複数の選択肢
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Code.org
           にログオンする時、DNSはあなたを、どの IP アドレスに連れていくでしょうか？
       4-5 Internet Multi 2:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: "もしDNSがIPアドレス100.42.50.110のページを送信したすると、どのウェブサイトが該当しますか?"
-        Multiple Choice: "複数の選択肢"
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: もしDNSがIPアドレス100.42.50.110のページを送信したすると、どのウェブサイトが該当しますか?
+        Multiple Choice: 複数の選択肢
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -508,18 +508,18 @@
         : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
           buttermilk, <br/>Shoo, fly, shoo,
-        Multiple Choice: "複数の選択肢"
+        Multiple Choice: 複数の選択肢
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : "毎回かならずコーラスとして繰り返され、コーラスとして定義される、この曲の最大の部分を、何と呼びますか。"
+        : 毎回かならずコーラスとして繰り返され、コーラスとして定義される、この曲の最大の部分を、何と呼びますか。
       4-5 Suncatchers Multi 1:
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        Multiple Choice: "複数の選択肢"
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: "プログラム
-          1 とまったく同じ順序 <em>では無い</em> のは、下のどのプログラムですか?"
+        Multiple Choice: 複数の選択肢
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: プログラム
+          1 とまったく同じ順序 <em>では無い</em> のは、下のどのプログラムですか?
       4-5 artist functions multi 1:
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
@@ -527,8 +527,8 @@
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice: "アーティスト ファンクション選択問題（せんたくもんだい）"
-        Which function creates a rectangle that can change its size?: "サイズを変更して四角形を作れるのは、どの関数ですか？"
+        Artist Functions Multiple Choice: アーティスト ファンクション選択問題（せんたくもんだい）
+        Which function creates a rectangle that can change its size?: サイズを変更して四角形を作れるのは、どの関数ですか？
       4-5 artist loops multi 1:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
@@ -536,30 +536,30 @@
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500"
-        Artist Loops Multiple Choice: "アーティストループ 選択問題（せんたくもんだい）"
-        Which blocks will create the design?: "どのくみあわせでこの絵がかけますか？"
+        Artist Loops Multiple Choice: アーティストループ 選択問題（せんたくもんだい）
+        Which blocks will create the design?: どのくみあわせでこの絵がかけますか？
       4-5 artist loops multi 2:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
-        Artist Functions Multiple Choice: "アーティスト ファンクション選択問題（せんたくもんだい）"
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': "次のパターンを表すループを選べ:
-          5、10、15、20、25、30、35、40、45、50"
+        Artist Functions Multiple Choice: アーティスト ファンクション選択問題（せんたくもんだい）
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': '次のパターンを表すループを選べ:
+          5、10、15、20、25、30、35、40、45、50'
       4-5 artist multi 1:
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
-        Artist Multiple Choice: "アーティスト選択問題（せんたくもんだい）"
-        Which blocks draw a rectangle with a perimeter of 100?: "一辺の長さが100の正方形を描くブロックはどれでしょうか？"
+        Artist Multiple Choice: アーティスト選択問題（せんたくもんだい）
+        Which blocks draw a rectangle with a perimeter of 100?: 一辺の長さが100の正方形を描くブロックはどれでしょうか？
       4-5 artist multi 2:
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
-        Artist Multiple Choice: "アーティスト選択問題（せんたくもんだい）"
-        Which drawing is symmetric?: "対称（たいしょう）な図形（ずけい）はどれですか？"
+        Artist Multiple Choice: アーティスト選択問題（せんたくもんだい）
+        Which drawing is symmetric?: 対称（たいしょう）な図形（ずけい）はどれですか？
       4-5 bee conditionals multi 1:
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
@@ -570,8 +570,8 @@
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?"
         1: ": むらさきの花には、いくつかわかりませんが、 3、2、1 のいずれかの みつ があります。むらさきの花からすべての みつ を正しく集めるのは、どのブロックですか？"
-        Bee Conditionals Multiple Choice: "正しいものを選ぼう"
-        Choose the best blocks.: "正しいブロックを選んでください。"
+        Bee Conditionals Multiple Choice: 正しいものを選ぼう
+        Choose the best blocks.: 正しいブロックを選んでください。
       4-5 bee debug multi 1:
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
@@ -579,16 +579,16 @@
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
-        Bee Debug Multiple Choice: "みつばちデバッグ選択問題（せんたくもんだい）"
-        Which version of the function will work?: "どのバージョンの関数をつかえばよいでしょうか？"
+        Bee Debug Multiple Choice: みつばちデバッグ選択問題（せんたくもんだい）
+        Which version of the function will work?: どのバージョンの関数をつかえばよいでしょうか？
       4-5 bee loops multi 1:
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
-        Bee Loops Multiple Choice: "みつばちループ選択問題（せんたくもんだい）"
-        Which blocks will solve the puzzle?: "どのコードが正（ただ）しいくみあわせですか？"
+        Bee Loops Multiple Choice: みつばちループ選択問題（せんたくもんだい）
+        Which blocks will solve the puzzle?: どのコードが正（ただ）しいくみあわせですか？
       4-5 farmer loops multi 1:
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
@@ -596,8 +596,8 @@
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500"
-        Famer Loops Multiple Choice: "農家ループ選択問題（せんたくもんだい）"
-        Which blocks solve the puzzle?: "どのコードが正（ただ）しいですか？"
+        Famer Loops Multiple Choice: 農家ループ選択問題（せんたくもんだい）
+        Which blocks solve the puzzle?: どのコードが正（ただ）しいですか？
       4-5 maze conditionals multi 1:
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
@@ -605,8 +605,8 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500"
-        Maze Conditionals Multiple Choice: "めいろ：条件文（じょうけんぶん）選択問題（せんたくもんだい）"
-        Which blocks solve the puzzle?: "どのコードが正（ただ）しいですか？"
+        Maze Conditionals Multiple Choice: めいろ：条件文（じょうけんぶん）選択問題（せんたくもんだい）
+        Which blocks solve the puzzle?: どのコードが正（ただ）しいですか？
       4-5 maze multi 1:
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
@@ -614,8 +614,8 @@
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice: "めいろ選択問題（せんたくもんだい）"
-        Which blocks solve the puzzle?: "どのコードが正（ただ）しいですか？"
+        Maze Multiple Choice: めいろ選択問題（せんたくもんだい）
+        Which blocks solve the puzzle?: どのコードが正（ただ）しいですか？
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: 3 - 7
@@ -642,8 +642,8 @@
         "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Multiple Choice: "複数の選択肢"
-        Which blocks solve this puzzle?: "どのブロックが正（ただ）しいくみあわせですか？"
+        Multiple Choice: 複数の選択肢
+        Which blocks solve this puzzle?: どのブロックが正（ただ）しいくみあわせですか？
       K-1 Artist 1 Multi 2:
         "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
         "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
@@ -651,8 +651,8 @@
         "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Multiple Choice: "複数の選択肢"
-        Which blocks draw the square?: "しかくをかくくみあわせはどれですか？"
+        Multiple Choice: 複数の選択肢
+        Which blocks draw the square?: しかくをかくくみあわせはどれですか？
       K-1 Artist 2 Multi 1:
         "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
         "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
@@ -660,8 +660,8 @@
         "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
-        Multiple Choice: "複数の選択肢"
-        Which shape do these squares combine to make?: "これらの四角形は、どの形を組み合わせて作りますか？"
+        Multiple Choice: 複数の選択肢
+        Which shape do these squares combine to make?: これらの四角形は、どの形を組み合わせて作りますか？
       K-1 Artist Loops Multi 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
@@ -669,53 +669,53 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Multiple Choice: "複数の選択肢"
-        Which blocks create this picture?: "どのブロックが、この絵を作りますか？"
+        Multiple Choice: 複数の選択肢
+        Which blocks create this picture?: どのブロックが、この絵を作りますか？
       K-1 Bee 1 Multi 1:
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？"
-        Multiple Choice: "複数の選択肢"
+        How many nectars is this?: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
+        Multiple Choice: 複数の選択肢
       K-1 Bee 1 Multi 2:
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？"
-        Multiple Choice: "複数の選択肢"
+        How many nectars is this?: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
+        Multiple Choice: 複数の選択肢
       K-1 Digital Footprint Multi 1:
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        Multiple Choice: "複数の選択肢"
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: "どの動物が<strong>
-          もっとも安全ではない </strong>デジタル足あとを、のこしますか？"
+        Multiple Choice: 複数の選択肢
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: どの動物が<strong>
+          もっとも安全ではない </strong>デジタル足あとを、のこしますか？
       K-1 Getting Loopy Multi 1:
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "この流れをループを使って簡単にする方法はないでしょうか？"
-        Multiple Choice: "複数の選択肢"
+        How would you simplify this sequence with loops?: この流れをループを使って簡単にする方法はないでしょうか？
+        Multiple Choice: 複数の選択肢
       K-1 Happy Maps Multi 1:
         "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Multiple Choice: "複数の選択肢"
-        Which arrow gets the Flurb to the treasure?: "どの矢印を選べば、Flurbはお宝をゲットできますか？"
+        Multiple Choice: 複数の選択肢
+        Which arrow gets the Flurb to the treasure?: どの矢印を選べば、Flurbはお宝をゲットできますか？
       K-1 Keep it Private Multi 1:
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-        Multiple Choice: "複数の選択肢"
-        Which information should you <strong>not</strong> share online?: "オンラインで<strong>共有すべきではない</strong>情報はどれでしょう？"
+        Multiple Choice: 複数の選択肢
+        Which information should you <strong>not</strong> share online?: オンラインで<strong>共有すべきではない</strong>情報はどれでしょう？
       K-1 Maze Debugging Multi 1:
         "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
           700"
@@ -723,24 +723,24 @@
         "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
         "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
         "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
-        Multiple Choice: "複数の選択肢"
-        Which choice should be the final block?: "どのブロックがさいごになればいいでしょうか？"
+        Multiple Choice: 複数の選択肢
+        Which choice should be the final block?: どのブロックがさいごになればいいでしょうか？
       K-1 Maze Loops Multi 1:
         "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
           300"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
-        Multiple Choice: "複数の選択肢"
-        Which repeat block is the same?: "正しいリピートブロックをえらびましょう。"
+        Multiple Choice: 複数の選択肢
+        Which repeat block is the same?: 正しいリピートブロックをえらびましょう。
       K-1 Maze Loops Multi 2:
         "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
           240"
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
-        Multiple Choice: "複数の選択肢"
-        Pick the correct repeat block.: "正しいリピートブロックをえらびましょう。"
+        Multiple Choice: 複数の選択肢
+        Pick the correct repeat block.: 正しいリピートブロックをえらびましょう。
       K-1 Maze Multiple Choice 2:
         "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
           500"
@@ -748,37 +748,37 @@
         "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
         "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
         "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
-        Maze: "迷路"
-        Which answer solves this level?: "答えはどれでしょう？"
+        Maze: 迷路
+        Which answer solves this level?: 答えはどれでしょう？
       K-1 Move It Multi 1:
         "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
         "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        Multiple Choice: "複数の選択肢"
-        Which algorithm gets the Flurb to the flowers?: "どのアルゴリズム（命令のセット）を選べば、Flurbは花をゲットできますか？"
+        Multiple Choice: 複数の選択肢
+        Which algorithm gets the Flurb to the flowers?: どのアルゴリズム（命令のセット）を選べば、Flurbは花をゲットできますか？
       K-1 Plant a Seed Multi 1:
         "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        Multiple Choice: "複数の選択肢"
-        Which step should go at the beginning of this algorithm?: "このアルゴリズムの？を埋めましょう。"
+        Multiple Choice: 複数の選択肢
+        Which step should go at the beginning of this algorithm?: このアルゴリズムの？を埋めましょう。
       K-1 Plant a Seed Multi 2:
         "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
-        Multiple Choice: "複数の選択肢"
-        Which step should fill in the blank for this algorithm?: "このアルゴリズムの？を埋めましょう。"
+        Multiple Choice: 複数の選択肢
+        Which step should fill in the blank for this algorithm?: このアルゴリズムの？を埋めましょう。
       K-1 Word Search Multi 1:
         "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
         "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
-        Multiple Choice: "複数の選択肢"
+        Multiple Choice: 複数の選択肢
         Which blocks spell "MOVE"?: '"MOVE"のつづりはどれでしょう？'
       K-1 Word Search Multi 2:
         "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
@@ -786,33 +786,33 @@
         "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
-        Multiple Choice: "複数の選択肢"
+        Multiple Choice: 複数の選択肢
         Which blocks spell "JUMP"?: '"JUMP"のつづりはどれでしょう？'
       K-1 Word Search Multi 3:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
-        Multiple Choice: "複数の選択肢"
+        Multiple Choice: 複数の選択肢
         SET: SET
-        SOUTH: "南"
+        SOUTH: 南
         SQUARE: SQUARE
-        Which word is spelled?: "このつづりはどの単語でしょう？"
+        Which word is spelled?: このつづりはどの単語でしょう？
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "ドライバーとヘルパー"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "ひとりの少年は、<b>ドライバー</b>
-          です。もう一人は、<b>ヘルパー</b> です。"
-        Which boy is the <large>helper</large>?: "どちらの少年が <large>ヘルパー</large> ですか？"
+        Driver and Helper: ドライバーとヘルパー
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: ひとりの少年は、<b>ドライバー</b>
+          です。もう一人は、<b>ヘルパー</b> です。
+        Which boy is the <large>helper</large>?: どちらの少年が <large>ヘルパー</large> ですか？
       K-1 multi 5:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "ドライバーとヘルパー"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "ひとりの少年は、<b>ドライバー</b>
-          です。もう一人は、<b>ヘルパー</b> です。"
-        This time, which boy is the <large>driver</large>?: "こんどは、どちらの少年が <large>ドライバー</large>
-          ですか?"
+        Driver and Helper: ドライバーとヘルパー
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: ひとりの少年は、<b>ドライバー</b>
+          です。もう一人は、<b>ヘルパー</b> です。
+        This time, which boy is the <large>driver</large>?: こんどは、どちらの少年が <large>ドライバー</large>
+          ですか?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100
@@ -833,7 +833,7 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "ランダム"
+        random: ランダム
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
