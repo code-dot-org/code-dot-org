@@ -16,6 +16,10 @@ Scenario: Published Projects Show In Recency Order
   Then I make a playlab project named "Newer Published"
   Then I publish the project
   Given I am on "http://studio.code.org/projects/public"
+  Then I debug element ".ui-project-name:eq(0)" text content
+  Then I debug element ".ui-project-name:eq(1)" text content
+  Then I debug element ".ui-project-name:eq(2)" text content
+  Then I debug element ".ui-project-name:eq(3)" text content
   Then I wait until the first ".ui-project-name" contains text "Newer Published"
 
 Scenario: Featured Projects Show Before Published Projects
@@ -30,6 +34,10 @@ Scenario: Featured Projects Show Before Published Projects
   Then I publish the project
   Given I am on "http://studio.code.org/projects/public"
   Then I wait until element ".project_card" is in the DOM
+  Then I debug element ".ui-project-name:eq(0)" text content
+  Then I debug element ".ui-project-name:eq(1)" text content
+  Then I debug element ".ui-project-name:eq(2)" text content
+  Then I debug element ".ui-project-name:eq(3)" text content
   And I wait until the first ".ui-project-name" contains text "First Featured"
 
 Scenario: UnPublished, Featured Projects Do Not Show
@@ -40,4 +48,8 @@ Scenario: UnPublished, Featured Projects Do Not Show
   Then I press "#feature_project" using jQuery
   Given I am on "http://studio.code.org/projects/public"
   Then I wait until element ".project_card" is in the DOM
+  Then I debug element ".ui-project-name:eq(0)" text content
+  Then I debug element ".ui-project-name:eq(1)" text content
+  Then I debug element ".ui-project-name:eq(2)" text content
+  Then I debug element ".ui-project-name:eq(3)" text content
   And I wait until the first ".ui-project-name" contains text "Published, Featured"

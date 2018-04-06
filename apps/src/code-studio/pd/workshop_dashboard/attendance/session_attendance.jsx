@@ -2,6 +2,7 @@
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
 import SessionAttendanceRow from './session_attendance_row';
@@ -10,7 +11,11 @@ import Spinner from '../../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
-import Permission from '../../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  Partner
+} from '../permission';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -27,8 +32,9 @@ const styles = {
   }
 };
 
-export default class SessionAttendance extends React.Component {
+export class SessionAttendance extends React.Component {
   static propTypes = {
+    permission: PermissionPropType.isRequired,
     workshopId: PropTypes.number.isRequired,
     course: PropTypes.string.isRequired,
     sessionId: PropTypes.number.isRequired,
@@ -44,10 +50,6 @@ export default class SessionAttendance extends React.Component {
     attendance: undefined,
     refreshInterval: undefined
   };
-
-  componentWillMount() {
-    this.permission = new Permission();
-  }
 
   componentDidMount() {
     this.load();
@@ -156,10 +158,12 @@ export default class SessionAttendance extends React.Component {
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
           showPuzzlesCompleted={this.showPuzzlesCompleted}
-          displayYesNoAttendance={!this.permission.isWorkshopAdmin && !this.permission.isPartner}
+          displayYesNoAttendance={!this.props.permission.hasAny(WorkshopAdmin, Partner)}
         />
       );
     });
+
+    const attendedCount = this.state.attendance.filter(a => a.attended).length;
     return (
       <VisibilitySensor onHidden={this.setIdle} onVisible={this.setActive}>
         <IdleTimer
@@ -169,7 +173,7 @@ export default class SessionAttendance extends React.Component {
         >
           <div>
             <div style={styles.attendanceSummary}>
-              Attendance: {this.state.attendance.length} / {this.props.enrollmentCount}
+              Attendance: {attendedCount} / {this.props.enrollmentCount}
             </div>
 
             <Table
@@ -206,3 +210,7 @@ export default class SessionAttendance extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(SessionAttendance);

@@ -2,16 +2,22 @@
  * Workshop management buttons (view, edit, delete).
  */
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
-import Permission from '../../permission';
+import {
+  PermissionPropType,
+  Organizer,
+  ProgramManager
+} from '../permission';
 
-export default class WorkshopManagement extends React.Component {
+export class WorkshopManagement extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
 
   static propTypes = {
+    permission: PermissionPropType.isRequired,
     workshopId: PropTypes.number.isRequired,
     subject: PropTypes.string,
     viewUrl: PropTypes.string.isRequired,
@@ -25,16 +31,16 @@ export default class WorkshopManagement extends React.Component {
     onDelete: null
   };
 
-  componentWillMount() {
-    if (this.props.showSurveyUrl) {
-      this.permission = new Permission();
+  constructor(props) {
+    super(props);
 
+    if (props.showSurveyUrl) {
       let surveyBaseUrl;
 
-      if (this.props.subject === '5-day Summer') {
+      if (props.subject === '5-day Summer') {
         surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {
-        surveyBaseUrl = (this.permission.isOrganizer || this.permission.isProgramManager) ? "organizer_survey_results" : "survey_results";
+        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager) ? "organizer_survey_results" : "survey_results";
       }
 
       this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
@@ -147,3 +153,7 @@ export default class WorkshopManagement extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(WorkshopManagement);

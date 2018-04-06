@@ -810,9 +810,14 @@ var projects = module.exports = {
       const filename = SOURCE_FILE + params;
       sources.put(channelId, packSources(), filename, function (err, response) {
         if (err) {
-          saveSourcesErrorCount++;
-          this.showSaveError_('save-sources-error', saveSourcesErrorCount, err + '');
-          return;
+          if (err.message.includes('httpStatusCode: 401')) {
+            this.showSaveError_('unauthorized-save-sources-reload', saveSourcesErrorCount, err.message);
+            window.location.reload();
+          } else {
+            saveSourcesErrorCount++;
+            this.showSaveError_('save-sources-error', saveSourcesErrorCount, err.message);
+            return;
+          }
         }
         saveSourcesErrorCount = 0;
         if (!firstSaveTimestamp) {
@@ -914,7 +919,7 @@ var projects = module.exports = {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
-        study_group: 'v2',
+        study_group: 'v3',
         event: errorType,
         data_int: errorCount,
         project_id: current.id + '',
