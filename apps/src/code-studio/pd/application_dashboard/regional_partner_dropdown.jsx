@@ -8,6 +8,10 @@ import { connect } from 'react-redux';
 import { FormGroup, ControlLabel } from 'react-bootstrap';
 import Select from "react-select";
 import { SelectStyleProps } from '../constants';
+import {
+  setRegionalPartnerFilter,
+  setRegionalPartnerName
+} from './reducers';
 
 const styles = {
   select: {
@@ -17,7 +21,7 @@ const styles = {
 
 export class RegionalPartnerDropdown extends React.Component {
   static propTypes = {
-    onChange: PropTypes.func,
+    onChange: PropTypes.func.isRequired,
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
@@ -26,7 +30,7 @@ export class RegionalPartnerDropdown extends React.Component {
       id: PropTypes.number,
       name: PropTypes.string
     })),
-    additionalOptions: PropTypes.array,
+    additionalOptions: PropTypes.array
   };
 
   componentWillMount() {
@@ -36,24 +40,10 @@ export class RegionalPartnerDropdown extends React.Component {
     }
   }
 
-  componentDidMount() {
-    let regionalPartnerFilter;
-    if (this.props.regionalPartnerFilter) {
-      regionalPartnerFilter = this.props.regionalPartnerFilter;
-    } else if (sessionStorage.getItem("regionalPartnerFilter")) {
-      regionalPartnerFilter = sessionStorage.getItem("regionalPartnerFilter");
-    } else {
-      regionalPartnerFilter = 'none';
-    }
-    const initialOption = this.regionalPartners.find((element) => {
-      return element.value === regionalPartnerFilter;
-    });
-    this.handleChange(initialOption);
-  }
-
-  handleChange = (selected) => {
+  onChange = (selected) => {
     this.props.onChange(selected);
     sessionStorage.setItem("regionalPartnerFilter", selected.value);
+    sessionStorage.setItem("regionalPartnerName", selected.label);
   };
 
   render() {
@@ -63,7 +53,7 @@ export class RegionalPartnerDropdown extends React.Component {
         <Select
           clearable={false}
           value={this.props.regionalPartnerFilter}
-          onChange={this.handleChange}
+          onChange={this.onChange}
           placeholder={null}
           options={this.regionalPartners}
           style={styles.select}
@@ -74,6 +64,14 @@ export class RegionalPartnerDropdown extends React.Component {
   }
 }
 
-export default connect(state => ({
-  regionalPartners: state.regionalPartners,
-}))(RegionalPartnerDropdown);
+export default connect(
+  state => ({
+    regionalPartners: state.regionalPartners,
+  }),
+  dispatch => ({
+    onChange(selectedOption) {
+      dispatch(setRegionalPartnerFilter(selectedOption.value));
+      dispatch(setRegionalPartnerName(selectedOption.label));
+    }
+  })
+)(RegionalPartnerDropdown);
