@@ -15,7 +15,12 @@ from
   from analysis.csp_csd_started st
     join analysis.school_years sy on st.started_at between sy.started_at and sy.ended_at
     join dashboard_production.followers f on f.student_user_id = st.user_id and f.created_at between sy.started_at and sy.ended_at
-    join dashboard_production.sections se on se.id = f.section_id
+    join dashboard_production.sections se on se.id = f.section_id 
+      and (
+        (se.course_id = 14 or se.course_id = 15) 
+        or se.script_id in (select script_id from analysis.course_structure where course_name in ('csp','csd')) 
+        or (se.course_id is null and se.script_id is null)
+      )
 )
 where started_at_order = 5
 with no schema binding;

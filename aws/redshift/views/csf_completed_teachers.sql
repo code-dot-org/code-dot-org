@@ -18,6 +18,7 @@ from
   from analysis.csf_completed com
     join dashboard_production.followers f on f.student_user_id = com.user_id
     join dashboard_production.sections se on se.id = f.section_id
+      and (se.script_id IN (1,17,18,19,23,236,237,238,239,240,241,258,259) or se.script_id is null)
 )
 where completed_at_order = 5
 with no schema binding; 
