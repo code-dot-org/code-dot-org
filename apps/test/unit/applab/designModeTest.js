@@ -101,16 +101,19 @@ describe('makeUrlProtocolRelative', () => {
 });
 
 describe('setProperty and read Property', () => {
+  let text_input, text_area, dropdown;
   // Create HTML elements to get/set
-  const text_input = document.createElement('input');
-  const text_area = document.createElement('div');
-  const dropdown = document.createElement('select');
-  let option1 = document.createElement('option');
-  option1.innerHTML = "Eta Theta";
-  let option2 = document.createElement('option');
-  option2.innerHTML = "Epsilon Zeta";
-  dropdown.appendChild(option1);
-  dropdown.appendChild(option2);
+  beforeEach( () => {
+    text_input = document.createElement('input');
+    text_area = document.createElement('div');
+    dropdown = document.createElement('select');
+    let option1 = document.createElement('option');
+    option1.innerHTML = "Eta Theta";
+    let option2 = document.createElement('option');
+    option2.innerHTML = "Epsilon Zeta";
+    dropdown.appendChild(option1);
+    dropdown.appendChild(option2);
+  });
 
   describe('setProperty: ', () => {
     it('Sets the expected text for dropdowns, text area, and text input', () => {
@@ -134,7 +137,7 @@ describe('setProperty and read Property', () => {
   });
 
   describe('readProperty: ', () => {
-    before( () => {
+    beforeEach( () => {
       text_input.value = "Nu Xi";
       text_area.innerHTML = "Omicron Pi";
       dropdown.value = "Epsilon Zeta";
