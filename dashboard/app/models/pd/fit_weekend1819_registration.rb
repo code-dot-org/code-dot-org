@@ -129,4 +129,8 @@ class Pd::FitWeekend1819Registration < ActiveRecord::Base
   def accepted_seat_simplified
     accepted? ? 'Yes' : 'No'
   end
+
+  def course_name
+    pd_application.try(&:course_name)
+  end
 end
