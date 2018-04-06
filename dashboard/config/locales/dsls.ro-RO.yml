@@ -328,28 +328,28 @@
         Choose an algorithm for the image provided.: Alege un algoritm pentru imaginea
           dată.
         Multiple Choice: Alegere multiplă
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: "Începe
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Începe
           cu un pătrat<br/>Pune un paralelogram deasupra pătratului<br/>Pune un triunghi
-          în dreapta paralelogramului"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: "Începe
+          în dreapta paralelogramului
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Începe
           cu un pătrat<br/>Pune un triunghi deasupra pătratului<br/>Pune un triunghi
-          sub pătrat"
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: "Începe
+          sub pătrat
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Începe
           cu un pătrat<br/>Pune un triunghi sub pătrat<br/>Pune un paralelogram în
-          dreapta triunghiului"
+          dreapta triunghiului
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : "Începe cu un pătrat<br/>Pune un triunghi în dreapta pătratului <br/>Pune
-          un paralelogram sub pătrat<br/>Pune triunghi în dreapta paralelogramului"
+        : Începe cu un pătrat<br/>Pune un triunghi în dreapta pătratului <br/>Pune
+          un paralelogram sub pătrat<br/>Pune triunghi în dreapta paralelogramului
       2-3 Algorithms Multi 2:
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         Multiple Choice: Alegere multiplă
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "Începe
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Începe
           cu un triunghi<br/>Pune un pătrat sub triunghi<br/>Pune un alt triunghi
-          sub pătrat"
+          sub pătrat
         Which image does <em>not</em> follow this algorithm?: Care imagine <em>nu</em>
           urmăreşte acest algoritm?
       2-3 Binary Multi 1:
@@ -891,7 +891,7 @@
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "Șofer și ajutor"
+        Driver and Helper: Șofer și ajutor
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Unul
           dintre acești băieți este <b>șoferul</b>.Și unul este <b>ajutorul</b>.
         Which boy is the <large>helper</large>?: Care băiat este <large>ajutorul</large>?
@@ -899,7 +899,7 @@
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "Șofer și ajutor"
+        Driver and Helper: Șofer și ajutor
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Unul
           dintre acești băieți este <b>șoferul</b>. Și unul este <b>ajutorul</b>.
         This time, which boy is the <large>driver</large>?: De data aceasta, care

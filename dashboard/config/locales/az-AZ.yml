@@ -38,14 +38,14 @@
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
   your_professional_learning_plan: Sizin peşəkar öyrənmə planınız
-  see_your_learning_plan: "Öyrənmə planınıza baxın"
+  see_your_learning_plan: Öyrənmə planınıza baxın
   submit: Göndər
   unsubmit: Abunə olmamaq
-  previous_page: "Əvvəlki səhifə"
+  previous_page: Əvvəlki səhifə
   next_page: Növbəti səhifə
   next_resource: Növbəti resurs
   done_with_module: Done with this Learning Module
-  cancel: "İmtina et"
+  cancel: İmtina et
   okay: Oldu
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
@@ -125,7 +125,7 @@
     title: Code.org da qeydiyyatdan keçin
     school_name: Məktəbin Adı (vacib deyil)
     school_address: Məktəbin ünvanı (vacib deyil)
-    address_placeholder: "ünvan, şəhər, vilayət, poçt indeksi"
+    address_placeholder: ünvan, şəhər, vilayət, poçt indeksi
     gender: Cins (vacib deyil)
     birthday: Ad günü (vacib deyil)
     age: Yaşınız
@@ -133,7 +133,7 @@
     submit: Qeydiyyatdan keçin
     teacher: Müəllimsiniz?
     valid_username: Olar!
-    invalid_username: "İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır"
+    invalid_username: İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır
     taken_username: Bu istifadəçi adı artıq götürülüb
     valid_password: Düzgün parol!
     invalid_password: Parol ən azı 6 simvol olmalıdır
@@ -149,7 +149,7 @@
       ehtiyacımız var.
     user_type_label: Hesab növü
     user_type_teacher: Müəllim
-    user_type_student: "şagird"
+    user_type_student: şagird
     field_is_required: zəruridir
     accept_terms: You must agree to create an account
     error: An error occurred.
@@ -183,13 +183,13 @@
     submit: Daxil olun
   signin:
     try_heading: Qeydiyyatdan keçmədən özünüzü proqramlaşdırmada sınamaq istəyirsiniz?
-    try_hoc: "Əvvəlcə Hour of Code yoxlayın"
+    try_hoc: Əvvəlcə Hour of Code yoxlayın
     try_20hours: Bizim 20 saatliq İnformatikaya Giriş-i yoxlayın
   signinsection:
     welcome: "%{section_name} bölməsinə xoş gəldiniz"
     name: Adınızı seçin
-    picture: "İndi isə gizli şəkilinizi seçin"
-    words: "İndi isə gizli sözünüzü daxil edin"
+    picture: İndi isə gizli şəkilinizi seçin
+    words: İndi isə gizli sözünüzü daxil edin
     login: Daxil olun
     invalid_login: Invalid login, please try again
     pair_programming: I have a partner at my computer
@@ -273,7 +273,7 @@
     submit: Göndər
     destroy: Məhv et
     back: Geri
-    confirm: "Əminsiniz?"
+    confirm: Əminsiniz?
     created: "%{model} müvəffəqiyyətlə yaradıldı."
     updated: "%{model} müvəffəqiyyətlə yeniləndi."
     destroyed: "%{model} was successfully deleted."
@@ -311,7 +311,7 @@
       documentation: Documentation
       tutorials: Dərsliklər
       educate_overview: Educator Overview
-      educate_elementary: "İbtidai məktəb"
+      educate_elementary: İbtidai məktəb
       educate_middle: Orta məktəb
       educate_high: Yuxarı siniflər
       educate_hoc: Kod Saatı
@@ -333,7 +333,7 @@
       learn: Learn
       stats: Göstəricilər
       help_us: Bizə kömək edin
-      teach: "Öyrədin"
+      teach: Öyrədin
       about: Haqqımızda
     user:
       classroom: Müəllimin ev səhifəsi
@@ -341,7 +341,7 @@
       label: Salam %{username}
       stats: Mənim nəticələrim
       settings: Mənim hesabım
-      logout: "Çıxın"
+      logout: Çıxın
       signin: Daxil olun
       signup: Hesab yaradın
       already_registered: Artıq qeydiyyatdan keçmisiniz?
@@ -376,9 +376,9 @@
       for %{student_name}"
     panel:
       answer_viewer: Müəllim Paneli
-      student: "şagird"
+      student: şagird
       viewing_solution: Viewing Solution
-      try_it_yourself: "özünüz edin"
+      try_it_yourself: özünüz edin
       section: Bölmə
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
@@ -431,13 +431,13 @@
     title: Mənim nəticələrim
     description: Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların
       məskənidir
-    lines_of_code: "ŞAGİRDLƏR %{lines_count} SƏTİR KOD YAZIB"
+    lines_of_code: ŞAGİRDLƏR %{lines_count} SƏTİR KOD YAZIB
     lines_of_code_linebreak: "%{students_count} MİLYON ŞAGİRD<br/>%{lines_count} SƏTİR
       KOD YAZIB"
     all_courses: Kurs 1, 2 və 3-ün icmalı
     lesson_plans: Dərs planları
     signin_message: Artıq qeydiyyatdan keçmisiniz? %{link}
-    student_reg_link: "Şagird qeydiyyatı"
+    student_reg_link: Şagird qeydiyyatı
     teacher_reg_link: Müəllim qeydiyyatı
     signin_directions: Use an account to track progress.<br/> Teachers, track your
       entire class.
@@ -612,7 +612,7 @@
     female: Qadın
     none: Cavab verməməyə üstünlük verirəm
   user_type:
-    student: "şagird"
+    student: şagird
     teacher: Müəllim
   footer:
     thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
@@ -641,7 +641,7 @@
     translate: Sizin dilinizə tərcümə etməkdə bizə kömək edin
     support: Dəstək
     support_url: http://support.code.org
-    tos_short: "Şərtlər"
+    tos_short: Şərtlər
     tos: Xidmət şərtləri
     privacy: Məxfilik siyasəti
     secure: Təhlükəsiz versiya
@@ -732,8 +732,8 @@
       cta: Learn how
     hoc:
       title: Kod Saatı
-      body: "İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
-        bu fürsətdən istifadə edib."
+      body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
+        bu fürsətdən istifadə edib.
     flappy:
       title: Qanadlı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod
@@ -743,15 +743,15 @@
       body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas
         anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə
         istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
-      body_short: "İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
-        ilə öyrənin."
+      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
+        ilə öyrənin.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
     gallery:
       title: Qalereya
-      body: "İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına
-        baxın"
+      body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına
+        baxın
     gamelab:
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
@@ -801,7 +801,7 @@
       body_short: If you don't have computers, try these unplugged lessons in your
         classroom.
     unplugged_conditionals:
-      title: "Şərti ifadələr"
+      title: Şərti ifadələr
       body: Learn about algorithms and conditional statements in this “unplugged”
         activity using a deck of cards.
     widgets:
@@ -813,14 +813,14 @@
       cta: Learn how
   gallery:
     students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: "Şagirdlər bunları kod yazmaqla edib!"
-    picture_count: "Ötən <b>%{days}</b> gün ərzində şagirdlər öz kompüter proqramlarını
+    students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
+    picture_count: Ötən <b>%{days}</b> gün ərzində şagirdlər öz kompüter proqramlarını
       yazaraq <b>%{count}</b> şəkil çəkib. Hər proqramın necə işlədiyini görmək üçün
-      şəkilləri klikləyin."
-    activity_count: "Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını
+      şəkilləri klikləyin.
+    activity_count: Ötən <b>%{days}</b> gün ərzində, şagirdlər öz kompüter proqramlarını
       yazaraq <b>%{count}</b> mobil əlavə və şəkil düzəldib. Hər proqramın necə işlədiyini
-      görmək üçün şəkil və ekran təsvirlərini klikləyin."
-    want_to_make_your_own: "Özünüz üçün də birini düzəltmək istərdiniz?"
+      görmək üçün şəkil və ekran təsvirlərini klikləyin.
+    want_to_make_your_own: Özünüz üçün də birini düzəltmək istərdiniz?
     how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
       save your work to the gallery.
     more: Daha çox &rarr;
@@ -909,7 +909,7 @@
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
     startover_ok: Yenidən başla
-    startover_cancel: "İmtina et"
+    startover_cancel: İmtina et
   time:
     hour: 1 saat
     day: gün
@@ -943,7 +943,7 @@
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Qəbul et
-    print: "çap"
+    print: çap
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
@@ -984,7 +984,7 @@
     assessment: yoxlama
     submitted: submitted
   studio:
-    courses_working_on: "Üzərində işlədiyiniz kurslar"
+    courses_working_on: Üzərində işlədiyiniz kurslar
     completed_courses: Tamamlanmış kurslar
     all_courses: Bütün kurslar
   project:
@@ -1036,7 +1036,7 @@
     delete_no: Xeyr
     saved: Qalereyada yadda saxlandı!
     not_saved: Not saved
-    cancel: "İmtina et"
+    cancel: İmtina et
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able
@@ -1106,7 +1106,7 @@
   flex_category:
     required: Yekun
     content: Məzmun
-    practice: "Öyrədici proqramlar"
+    practice: Öyrədici proqramlar
     peer_review: Peer Review
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1156,7 +1156,7 @@
     title: Kod saatı yükləmələr
     capsule_title: Internetiniz varmı?
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: "Əlaqə yoxdur?"
+    instructions_headline: Əlaqə yoxdur?
     instructions: 'Instructions for teachers: if you have poor Internet service, these
       Hour of Code tutorials are available to download and install for offline use.
       Choose your language and platform, download and install it on all the computers

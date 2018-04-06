@@ -2,31 +2,31 @@
   data:
     unplugged:
       Unplug1:
-        title: "แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น"
-        desc: "บทนี้จะแนะนำหลักการของวิทยาการคอมพิวเตอร์ และ อธิบายสิ่งที่ นักวิทยาศาสตร์คอมพิวเตอร์ทำ.
-          \ เป็นโอกาสที่นักเรียนจะได้เห็นว่า ตัวเขาเหมาะจะเป็น นักวิทยาศาสตร์คอมพิวเตอร์แขนงใด.
-          \ By the end of the activity, each student will have a take-home reminder
-          of what he or she learned.  You may be tempted to skip teaching young children
-          the vocabulary words that are associated with the lessons that follow, but
-          presenting them in a fun and playful light now is far more productive than
-          waiting for more advanced opportunities."
+        title: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
+        desc: บทนี้จะแนะนำหลักการของวิทยาการคอมพิวเตอร์ และ อธิบายสิ่งที่ นักวิทยาศาสตร์คอมพิวเตอร์ทำ.  เป็นโอกาสที่นักเรียนจะได้เห็นว่า
+          ตัวเขาเหมาะจะเป็น นักวิทยาศาสตร์คอมพิวเตอร์แขนงใด.  By the end of the activity,
+          each student will have a take-home reminder of what he or she learned.  You
+          may be tempted to skip teaching young children the vocabulary words that
+          are associated with the lessons that follow, but presenting them in a fun
+          and playful light now is far more productive than waiting for more advanced
+          opportunities.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "คิดคำนวณ"
-        desc: "โดยใช้เพียงแค่กระดาษและปากกา นักเรียนจะได้เรียนรู้เกี่ยวกับสี่ขั้นตอนของการคิดเชิงคำนวณอย่างเป็นระบบ
+        title: คิดคำนวณ
+        desc: โดยใช้เพียงแค่กระดาษและปากกา นักเรียนจะได้เรียนรู้เกี่ยวกับสี่ขั้นตอนของการคิดเชิงคำนวณอย่างเป็นระบบ
           (Computational Thinking) หลังจากบทนำสั้นๆ นักเรียนจะได้แบ่งกลุ่ม และออกคำสั่งให้นักเรียนคนอื่นๆ
           วาดมอนสเตอร์ตัวใดตัวหนึ่งจากรายการของมอนสเตอร์ที่มีจัดไว้ให้ กิจกรรมนี้จะถูกแยกออกเป็นส่วนๆ
           แต่ละกลุ่มจะวิเคราะห์มอนสเตอร์ในรายการ จากรูปแบบและรายละเอียดนามธรรมต่างๆของมอนสเตอร์
           แล้วนำข้อมูลที่ได้มาสร้างเป็นอัลกอริทึม (Algorithm) เพื่อให้อีกทีมหนึ่งวาด
           แต่ละทีมจะเปลี่ยนอัลกอริทึมเมื่อเปลี่ยนกลุ่มที่เล่นด้วย และวาดมอนสเตอร์ตามอัลกอริทึมที่ได้รับ
-          ภาพที่วาดออกมาจะเหมือนกับที่ทีมที่ออกคำสั่งต้องการหรือไม่"
+          ภาพที่วาดออกมาจะเหมือนกับที่ทีมที่ออกคำสั่งต้องการหรือไม่
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
-        title: "การเขียนกระดาษกราฟ"
+        title: การเขียนกระดาษกราฟ
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -36,7 +36,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: "อัลกอริทึม"
+        title: อัลกอริทึม
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -46,7 +46,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "ฟังก์ชัน"
+        title: ฟังก์ชัน
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -61,7 +61,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: "เงื่อนไข"
+        title: เงื่อนไข
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -69,7 +69,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "การแต่งเพลง"
+        title: การแต่งเพลง
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -87,7 +87,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "โปรแกรมการถ่ายทอดข้อมูล"
+        title: โปรแกรมการถ่ายทอดข้อมูล
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -95,9 +95,9 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "อินเทอร์เน็ต"
-        desc: "ในบทเรียนนี้ นักเรียนจะสมมติตัวเองว่าไหลผ่านอินเทอร์เน็ต ในระหว่างที่เรียนรู้เรื่อง
-          web address, IPs และ DNS"
+        title: อินเทอร์เน็ต
+        desc: ในบทเรียนนี้ นักเรียนจะสมมติตัวเองว่าไหลผ่านอินเทอร์เน็ต ในระหว่างที่เรียนรู้เรื่อง
+          web address, IPs และ DNS
         pdfs:
         - unplug10
         video: Unplug10
@@ -111,20 +111,20 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: "แผนที่แห่งความสุข"
+        title: แผนที่แห่งความสุข
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       MoveIt:
-        title: "ขยับมันสิ, ขยับมัน"
+        title: ขยับมันสิ, ขยับมัน
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       PlantASeed:
-        title: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+        title: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       BuildingAFoundation:
-        title: "สร้างพื้นฐาน"
+        title: สร้างพื้นฐาน
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
@@ -134,18 +134,18 @@
           through a dance activity. Students will learn simple choreography, then
           be instructed to repeat it.
       RelayProgramming:
-        title: "โปรแกรมการถ่ายทอดข้อมูล"
+        title: โปรแกรมการถ่ายทอดข้อมูล
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       Conditionals:
-        title: "เงื่อนไข"
+        title: เงื่อนไข
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
       BigEvent:
-        title: "เหตุการณ์ใหญ่"
+        title: เหตุการณ์ใหญ่
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -155,7 +155,7 @@
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       GraphPaperProgramming:
-        title: "การเขียนกระดาษกราฟ"
+        title: การเขียนกระดาษกราฟ
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       PaperPlanes:
@@ -173,7 +173,7 @@
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       ComputationalThinking:
-        title: "คิดคำนวณ"
+        title: คิดคำนวณ
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -193,7 +193,7 @@
           part of that, students will identify and write down the algorithm for a
           dice race game.
       Internet:
-        title: "อินเทอร์เน็ต"
+        title: อินเทอร์เน็ต
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       Crowdsourcing:
@@ -224,7 +224,7 @@
           for differences so that they can abstract them away. Those abstracted stories
           become templates for fun and crazy new ones.
       ForLoopFun:
-        title: "สนุกกับ For ลูป"
+        title: สนุกกับ For ลูป
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
@@ -263,34 +263,34 @@
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
-        title: "กิจกรรมถอดปลั๊ก"
+        title: กิจกรรมถอดปลั๊ก
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
-        title: "กิจกรรมถอดปลั๊ก"
+        title: กิจกรรมถอดปลั๊ก
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: "กิจกรรมถอดปลั๊ก"
+        title: กิจกรรมถอดปลั๊ก
         desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
-        title: "กิจกรรมถอดปลั๊ก"
+        title: กิจกรรมถอดปลั๊ก
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: "กิจกรรมถอดปลั๊ก"
+        title: กิจกรรมถอดปลั๊ก
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
-        title: "กิจกรรมถอดปลั๊ก"
+        title: กิจกรรมถอดปลั๊ก
         desc: Today you will learn about what to do if someone is being mean online.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+        title: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       courseA_unplugged_happyMaps:
-        title: "แผนที่แห่งความสุข"
+        title: แผนที่แห่งความสุข
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       courseA_unplugged_goingPlacesSafely:
@@ -298,7 +298,7 @@
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers
           introduce how to stay safe while navigating the Internet.
       courseABC_unplugged_bigEvent:
-        title: "เหตุการณ์ใหญ่"
+        title: เหตุการณ์ใหญ่
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -308,7 +308,7 @@
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       courseC_unplugged_buildingAFoundation:
-        title: "สร้างพื้นฐาน"
+        title: สร้างพื้นฐาน
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
@@ -328,17 +328,17 @@
           of their name. Students learn that data can be represented and stored in
           more than one way.
       courseD_unplugged_graphPaperProgramming:
-        title: "การเขียนกระดาษกราฟ"
+        title: การเขียนกระดาษกราฟ
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
       courseD_unplugged_relayProgramming:
-        title: "โปรแกรมการถ่ายทอดข้อมูล"
+        title: โปรแกรมการถ่ายทอดข้อมูล
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       courseD_unplugged_conditionalsCards:
-        title: "เงื่อนไข"
+        title: เงื่อนไข
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
@@ -359,7 +359,7 @@
         desc: Students use the concept of the chorus in a song to learn about defining
           and calling functions.
       courseE_unplugged_internet:
-        title: "อินเทอร์เน็ต"
+        title: อินเทอร์เน็ต
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       courseE_unplugged_crowdsourcing:
@@ -384,7 +384,7 @@
           ways. Use this activity before (or in conjunction with) the lesson on abstraction
           to really hit the idea home.
       courseF_unplugged_forLoopFun:
-        title: "สนุกกับ For ลูป"
+        title: สนุกกับ For ลูป
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       courseF_unplugged_songwritingParameters:
@@ -469,12 +469,12 @@
         title: ''
         desc: ''
       PlantASeed_2018:
-        title: "วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์"
+        title: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
       UnplugHappyMaps_2018:
-        title: "แผนที่แห่งความสุข"
+        title: แผนที่แห่งความสุข
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
       GoingPlacesSafely_2018:
@@ -485,8 +485,34 @@
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       BigEvent_2018:
-        title: "เหตุการณ์ใหญ่"
+        title: เหตุการณ์ใหญ่
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
           is pressed.
+      GraphPaperProgramming_2018:
+        title: การเขียนกระดาษกราฟ
+        desc: Students write an algorithm (a set of instructions) using a set of predefined
+          commands to direct their classmates to reproduce a drawing.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: กิจกรรมถอดปลั๊ก
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: กิจกรรมถอดปลั๊ก
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: เงื่อนไข
+        desc: To learn about conditional statements, students play a card game and
+          create rules like "If I draw a red card, I get a point" and "If I draw a
+          black card, you get a point."
+      DigitalFootprint_2018:
+        title: Your Digital Footprint
+        desc: Teachers introduce to students the idea that putting information about
+          themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: Binary Images
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.

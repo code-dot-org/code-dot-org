@@ -74,13 +74,13 @@
   "penDown": "הורד את העיפרון",
   "penTooltip": "מרים או מוריד את העפרון, כדי להתחיל או להפסיק לצייר.",
   "penUp": "הרם את העיפרון",
+  "pointTo": "point to",
   "pixels": "פיקסלים",
   "reinfFeedbackMsg": "הנה הציור שלך! המשך לעבוד עליו או המשך לחידה הבאה.",
   "setAlpha": "הגדר אלפא",
   "setCharacter": "set character to {character}",
   "setColour": "צבע קבוע",
   "setPattern": "הגדר דפוס קבוע",
-  "setStickerSize": "Set sticker size",
   "setWidth": "העובי הקבוע",
   "shareDrawing": "שתף את הציור שלך:",
   "showMe": "הראה לי",
@@ -94,5 +94,6 @@
   "turnTooltip": "סובב את האמן שמאלה או ימינה על פי מספר המעלות שמצויין.",
   "turtleVisibilityTooltip": "הפוך את האמן לנראה או בלתי-נראה.",
   "widthTooltip": "שנה את עובי העיפרון.",
+  "withSize": "with size",
   "wrongColour": "התמונה בצבע לא נכון. לחידה הזאת, היא צריכה להיות %1."
 }

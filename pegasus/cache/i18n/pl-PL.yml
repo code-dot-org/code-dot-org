@@ -261,7 +261,7 @@
   participant_parent: Rodzic
   participant_educator: Nauczyciel
   participant_engineer: Programista
-  participant_other: "Żaden z powyższych"
+  participant_other: Żaden z powyższych
   print_all: Drukuj wszystko
   print_ice_art: Drukuj swoje lodowe kompozycje
   create_art_with_zombie: lub utwórz zaawansowane kompozycje z zombie
@@ -357,7 +357,7 @@
   studiobar_donate_title: Podaruj
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
-  studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
+  studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
   homepage_stats_students: amerykańskich studentów mają konta na Code.org
   homepage_stats_female: naszych studentów to kobiety
   homepage_stats_teachers: nauczyciele korzystają z Code.org
@@ -1055,7 +1055,7 @@
   dashboard_login_picture: Obrazek/Zdjęcie
   dashboard_login_none: e-mail
   dashboard_stage: Etap
-  dashboard_puzzle: "Łamigłówka"
+  dashboard_puzzle: Łamigłówka
   dashboard_question: Pytanie
   dashboard_response: Odpowiedź
   dashboard_correctness: Poprawność

@@ -1,44 +1,44 @@
 "si":
   data:
     failure_message_overrides:
-      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Code Studio Puzzle Challenge Var - Artist_failure_message_override: "හොද උත්සාහයක්!
-        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න."
-      Course 4 Artist Vars 10_failure_message_override: "ඔබ භාවිතා කරන බවට සහතික කරන්න
-        දෙපස විචල්‍යන්!"
-      Course 4 Playlab For Loops 4b_failure_message_override: "මතක තබා ගන්න, චරිත
-        දෙකම පියවරයන් සංඛ්යාව සමාන ඔවුන්ගේ කොඩි ලබා ගත යුතුයි!"
-      Course 4 Playlab For Loops 5b_failure_message_override: "මතක තබා ගන්න, චරිත
-        දෙන්නම එකම තැනින් නතර කිරීමට අවශ්ය වේ."
+      Code Studio Puzzle Challenge 1 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 10 - Bee_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 10b - Bee_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 11 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 12 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 13 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 14 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 2 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 3 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 4 - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 5 - Bee_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 6 - Bee_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 7 - Bee_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 8 - Bee_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge 9 - Bee_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Code Studio Puzzle Challenge Var - Artist_failure_message_override: හොද උත්සාහයක්!
+        එය නිවැරදි කරගැනීමට නැවත උත්සාහ කරන්න.
+      Course 4 Artist Vars 10_failure_message_override: ඔබ භාවිතා කරන බවට සහතික කරන්න
+        දෙපස විචල්‍යන්!
+      Course 4 Playlab For Loops 4b_failure_message_override: මතක තබා ගන්න, චරිත දෙකම
+        පියවරයන් සංඛ්යාව සමාන ඔවුන්ගේ කොඩි ලබා ගත යුතුයි!
+      Course 4 Playlab For Loops 5b_failure_message_override: මතක තබා ගන්න, චරිත දෙන්නම
+        එකම තැනින් නතර කිරීමට අවශ්ය වේ.
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
@@ -85,8 +85,8 @@
       WhileAdventure_failure_message_override: |-
         Congratulations!  You gathered X
         coins!
-      courseE_playLab_scaffold3_failure_message_override: "ඔබ ඔබගේ ක්‍රිඩාව සහ වැඩසටහන
-        ඉදිරියට කිරීම සඳහා නව චරිත දෙකක් හෝ ඊට වැඩි එකතු විය යුතුය."
+      courseE_playLab_scaffold3_failure_message_override: ඔබ ඔබගේ ක්‍රිඩාව සහ වැඩසටහන
+        ඉදිරියට කිරීම සඳහා නව චරිත දෙකක් හෝ ඊට වැඩි එකතු විය යුතුය.
       courseE_playLab_scaffold3_2018_failure_message_override: |-
         You must add two
         or more new actors to your game and program them to move.

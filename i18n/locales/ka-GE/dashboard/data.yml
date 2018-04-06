@@ -522,6 +522,9 @@ ka:
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: შესავალი მასივებში
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: ციკლები BB-8-სთან ერთად
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

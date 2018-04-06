@@ -13,7 +13,7 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         Match the button combination to the dance moves.: Match the button combination
           to the dance moves.
-        Matching: "মিলছে"
+        Matching: মিলছে
       2-3 Binary Match 1:
         "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
@@ -25,9 +25,9 @@
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>O</strong>"
         "<strong>Q</strong>": "<strong>O</strong>"
-        Matching: "মিলছে"
-        Use the key to match each code to its letter: "প্রতিটি কোড এর Letter সাথে
-          মেলানোর জন্য key টি  ব্যাবহার করো"
+        Matching: মিলছে
+        Use the key to match each code to its letter: প্রতিটি কোড এর Letter সাথে মেলানোর
+          জন্য key টি  ব্যাবহার করো
       2-3 Graph Paper Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -35,8 +35,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program.: "গ্রিডটি প্রোগ্রামের সাথে মিলাও।."
-        Matching: "মিলছে"
+        Match the grid to the program.: গ্রিডটি প্রোগ্রামের সাথে মিলাও।.
+        Matching: মিলছে
       2-3 Maze Match 2:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
@@ -46,9 +46,9 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "নির্দেশনা"
-        Match the puzzles to the blocks: "পাজলগুলো ব্লক এর সাথে মিলাও"
-        Maze Match: "মেজ ম্যাচ"
+        Instructions: নির্দেশনা
+        Match the puzzles to the blocks: পাজলগুলো ব্লক এর সাথে মিলাও
+        Maze Match: মেজ ম্যাচ
       2-3 Relay Programming Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -56,8 +56,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: "গ্রিডটি প্রোগ্রামের সাথে মিলাও।"
-        Matching: "মিলছে"
+        Match the grid to the program: গ্রিডটি প্রোগ্রামের সাথে মিলাও।
+        Matching: মিলছে
       2-3 artist loops match 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
@@ -94,7 +94,7 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
         Bounce Matching: Bounce Matching
         Match the events with the actions: Match the events with the actions
-        Matching: "মিলছে"
+        Matching: মিলছে
       2-3 flappy match 1:
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
@@ -104,7 +104,7 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
         Flappy Matching One: Flappy Matching One
         Match the events with the actions: Match the events with the actions
-        Matching: "মিলছে"
+        Matching: মিলছে
       2-3 maze match 1:
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
@@ -112,7 +112,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        Match the puzzles to the blocks: "পাজলগুলো ব্লক এর সাথে মিলাও"
+        Match the puzzles to the blocks: পাজলগুলো ব্লক এর সাথে মিলাও
         Maze Match One: Maze Match One
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
@@ -128,7 +128,7 @@
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
           the steps in the Dice Race game to the order that they should appear in
           the algorithm.
-        Matching: "মিলছে"
+        Matching: মিলছে
       4-5 Computational Thinking Match 1:
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
@@ -145,7 +145,7 @@
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
           of these vehicles has been decomposed into smaller pieces. Match each vehicle
           with its decomposed list.
-        Matching: "মিলছে"
+        Matching: মিলছে
       4-5 Suncatchers Match 1:
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
@@ -158,7 +158,7 @@
         "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: Match
           each program to the word it makes, using the provided group of skills.
-        Matching: "মিলছে"
+        Matching: মিলছে
       4-5 maze match 1:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
@@ -168,9 +168,9 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "নির্দেশনা"
-        Match the puzzles to the blocks: "পাজলগুলো ব্লক এর সাথে মিলাও"
-        Maze Match: "মেজ ম্যাচ"
+        Instructions: নির্দেশনা
+        Match the puzzles to the blocks: পাজলগুলো ব্লক এর সাথে মিলাও
+        Maze Match: মেজ ম্যাচ
       K-1 Artist 2 Match 1:
         "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
         "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
@@ -180,7 +180,7 @@
         "<br/><br/>next to": "<br/><br/>next to"
         Is the square next to, above, or below the ball?: Is the square next to, above,
           or below the ball?
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Artist 2 Match 2:
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
@@ -191,7 +191,7 @@
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
         Match the shapes based on type.: Match the shapes based on type.
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Artist 2 Match 3:
         "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
@@ -202,7 +202,7 @@
         "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         Match the shapes based on type.: Match the shapes based on type.
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Artist Loops Match 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
@@ -211,7 +211,7 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
         Match the code to the stairs it draws.: Match the code to the stairs it draws.
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Bee Loops Match 1:
         "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
         "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
@@ -222,7 +222,7 @@
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
         Match the blocks: Match the blocks
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
@@ -233,7 +233,7 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         Match the button combination to the dance moves.: Match the button combination
           to the dance moves.
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Flappy Match 1:
         "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
         "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
@@ -242,7 +242,7 @@
         "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
         "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
         Match the blocks: Match the blocks
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Happy Maps Match 1:
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
@@ -252,7 +252,7 @@
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
         Match the Map to the arrow that gets the Flurb to the treasure: Match the
           Map to the arrow that gets the Flurb to the treasure
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Maze Match 1:
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -264,9 +264,9 @@
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "নির্দেশনা"
+        Instructions: নির্দেশনা
         Match the puzzles and blocks: Match the puzzles and blocks
-        Matching: "মিলছে"
+        Matching: মিলছে
       K-1 Move It Match 1:
         "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
         "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
@@ -276,7 +276,7 @@
         "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
         Match the Map to the algorithm that gets the Flurb to the flowers.: Match
           the Map to the algorithm that gets the Flurb to the flowers.
-        Matching: "মিলছে"
+        Matching: মিলছে
       test matching image:
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
@@ -288,11 +288,11 @@
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: "নির্দেশনা"
+        Instructions: নির্দেশনা
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: "মিলছে"
+        Matching: মিলছে
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
         Sydney: Sydney
@@ -301,14 +301,14 @@
         What's Brent's last name?: What's Brent's last name?
         What's in the ocean?: What's in the ocean?
         Where is Brendan from?: Where is Brendan from?
-        blue: "নীল"
+        blue: নীল
         salt: salt
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided.: "জেই ছবি (ইমেজ) দাওয়া হওেছে সেটার
-          জন্য আল্গরিদ্ম টা পছন্দ (চউজ) করুন।."
-        Multiple Choice: "একাধিক-পছন্দের"
+        Choose an algorithm for the image provided.: জেই ছবি (ইমেজ) দাওয়া হওেছে সেটার
+          জন্য আল্গরিদ্ম টা পছন্দ (চউজ) করুন।.
+        Multiple Choice: একাধিক-পছন্দের
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start
           with a square<br/>Put a parallelogram above the square<br/>Put a triangle
           right of the parallelogram
@@ -327,7 +327,7 @@
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start
           with a triangle<br/>Put a square below the triangle<br/>Put another triangle
           below the square
@@ -338,7 +338,7 @@
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which program makes this image?: Which program makes this image?
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
@@ -348,7 +348,7 @@
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         According to the rules of the game, which set of cards is scored correctly?: According
           to the rules of the game, which set of cards is scored correctly?
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
       2-3 Getting Loopy Multi 1:
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
@@ -357,13 +357,13 @@
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: How would you simplify this
           sequence with loops?
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
       2-3 Graph Paper Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which program makes this image?: Which program makes this image?
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
@@ -379,14 +379,14 @@
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which program does not create this image?: Which program does not create this
           image?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which image-program combo does not contain mistakes?: Which image-program
           combo does not contain mistakes?
       2-3 artist debug multi 1:
@@ -472,9 +472,9 @@
           answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
-        Banana: "কলা"
+        Banana: কলা
         Brushing your teeth: Brushing your teeth
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Shopping from a grocery list: Shopping from a grocery list
         Which one of these items is hardest to describe an algorithm for?: Which one
           of these items is hardest to describe an algorithm for?
@@ -484,7 +484,7 @@
           so that all three match the same pattern as the template?"
         1: ": Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
           is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
@@ -493,23 +493,23 @@
       4-5 Crowdsourcing Multi 1:
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which of these pictures best represents crowdsourcing?: Which of these pictures
           best represents crowdsourcing?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Brushing your hair
         Cleaning your room: Cleaning your room
         Eating your dessert: Eating your dessert
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Washing your face: Washing your face
         Which one of these activities would be best for practicing crowdsourcing?: Which
           one of these activities would be best for practicing crowdsourcing?
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which piece of information listed below is okay to share on the internet?: Which
           piece of information listed below is okay to share on the internet?
-        Your address: "আপনার ঠিকানা"
-        Your birthday: "আপনার জন্মদিন"
+        Your address: আপনার ঠিকানা
+        Your birthday: আপনার জন্মদিন
         Your favorite food: Your favorite food
         Your parent's credit card number: Your parent's credit card number
       4-5 Internet Multi 1:
@@ -518,7 +518,7 @@
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: When
           you try to log on to code.org, which IP address is the DNS most likely to
           take you to?
@@ -527,7 +527,7 @@
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: If
           the DNS has sent you to the page at the IP address 100.42.50.110, which
           website are you on?
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -550,7 +550,7 @@
         : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
           buttermilk, <br/>Shoo, fly, shoo,
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
         : What is the largest chunk of this song that you can define as the chorus
@@ -560,7 +560,7 @@
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
           of the programs below <em>does not</em> make the exact same sequence as
           Program 1?
@@ -692,7 +692,7 @@
         "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which blocks solve this puzzle?: Which blocks solve this puzzle?
       K-1 Artist 1 Multi 2:
         "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
@@ -701,7 +701,7 @@
         "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which blocks draw the square?: Which blocks draw the square?
       K-1 Artist 2 Multi 1:
         "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
@@ -710,7 +710,7 @@
         "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which shape do these squares combine to make?: Which shape do these squares
           combine to make?
       K-1 Artist Loops Multi 1:
@@ -720,7 +720,7 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which blocks create this picture?: Which blocks create this picture?
       K-1 Bee 1 Multi 1:
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
@@ -729,7 +729,7 @@
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: How many nectars is this?
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
       K-1 Bee 1 Multi 2:
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
@@ -737,13 +737,13 @@
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: How many nectars is this?
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
       K-1 Digital Footprint Multi 1:
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which
           animal has the digital footprint that leaves him or her the <strong>most
           unsafe</strong>?
@@ -754,21 +754,21 @@
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: How would you simplify this
           sequence with loops?
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
       K-1 Happy Maps Multi 1:
         "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which arrow gets the Flurb to the treasure?: Which arrow gets the Flurb to
           the treasure?
       K-1 Keep it Private Multi 1:
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which information should you <strong>not</strong> share online?: Which information
           should you <strong>not</strong> share online?
       K-1 Maze Debugging Multi 1:
@@ -778,7 +778,7 @@
         "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
         "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
         "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which choice should be the final block?: Which choice should be the final
           block?
       K-1 Maze Loops Multi 1:
@@ -787,7 +787,7 @@
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which repeat block is the same?: Which repeat block is the same?
       K-1 Maze Loops Multi 2:
         "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
@@ -795,7 +795,7 @@
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Pick the correct repeat block.: Pick the correct repeat block.
       K-1 Maze Multiple Choice 2:
         "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
@@ -804,7 +804,7 @@
         "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
         "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
         "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
-        Maze: "গোলকধাঁধা"
+        Maze: গোলকধাঁধা
         Which answer solves this level?: Which answer solves this level?
       K-1 Move It Multi 1:
         "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
@@ -812,7 +812,7 @@
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which algorithm gets the Flurb to the flowers?: Which algorithm gets the Flurb
           to the flowers?
       K-1 Plant a Seed Multi 1:
@@ -820,7 +820,7 @@
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which step should go at the beginning of this algorithm?: Which step should
           go at the beginning of this algorithm?
       K-1 Plant a Seed Multi 2:
@@ -828,7 +828,7 @@
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which step should fill in the blank for this algorithm?: Which step should
           fill in the blank for this algorithm?
       K-1 Word Search Multi 1:
@@ -837,7 +837,7 @@
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which blocks spell "MOVE"?: Which blocks spell "MOVE"?
       K-1 Word Search Multi 2:
         "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
@@ -845,12 +845,12 @@
         "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         Which blocks spell "JUMP"?: Which blocks spell "JUMP"?
       K-1 Word Search Multi 3:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
-        Multiple Choice: "একাধিক-পছন্দের"
+        Multiple Choice: একাধিক-পছন্দের
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE
@@ -892,7 +892,7 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "এলোমেলো"
+        random: এলোমেলো
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone

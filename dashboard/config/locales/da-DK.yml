@@ -270,7 +270,7 @@
     edit_model: Rediger %{model}
     update: Opdater
     submit: Indsend
-    destroy: "Ødelæg"
+    destroy: Ødelæg
     back: Tilbage
     confirm: Er du sikker?
     created: "%{model} blev oprettet."
@@ -692,7 +692,7 @@
   slow_loading: Dette tager længere tid end normalt...
   try_reloading: Prøv at genindlæse siden
   next_stage: Færdig! Fortsæt til næste fase
-  download_pdf: "Åben lektionsplan"
+  download_pdf: Åben lektionsplan
   lesson_plan: Lektionsplan
   view_lesson_plan: Se lektionsplan
   pdf_download: Download PDF
@@ -895,7 +895,7 @@
       for dit kontraktnavn.
     badrange: Din kontrakt har det forkert navn.
     baddomainsize: Din kontrakt har ikke det rigtige antal elementer i domænet.
-    baddomainname: "Én eller flere af dine domæneelementer har det forkert navn."
+    baddomainname: Én eller flere af dine domæneelementer har det forkert navn.
     baddomaintype: En eller flere af dine domæne elementer har en forkert type, eller
       de er i forkert rækkefølge.
   text_match:

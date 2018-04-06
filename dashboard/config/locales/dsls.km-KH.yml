@@ -46,7 +46,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "សេចក្ដី​ណែនាំ"
+        Instructions: សេចក្ដី​ណែនាំ
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       2-3 Relay Programming Match 1:
@@ -168,7 +168,7 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "សេចក្ដី​ណែនាំ"
+        Instructions: សេចក្ដី​ណែនាំ
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       K-1 Artist 2 Match 1:
@@ -264,7 +264,7 @@
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: "សេចក្ដី​ណែនាំ"
+        Instructions: សេចក្ដី​ណែនាំ
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Matching
       K-1 Move It Match 1:
@@ -288,7 +288,7 @@
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: "សេចក្ដី​ណែនាំ"
+        Instructions: សេចក្ដី​ណែនាំ
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
@@ -301,7 +301,7 @@
         What's Brent's last name?: What's Brent's last name?
         What's in the ocean?: What's in the ocean?
         Where is Brendan from?: Where is Brendan from?
-        blue: "ពណ៌​ខៀវ"
+        blue: ពណ៌​ខៀវ
         salt: salt
     multi:
       2-3 Algorithms Multi 1:
@@ -373,7 +373,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
         Maze Multiple Choice: Maze Multiple Choice
-        Which blocks work?: "តើ​ប្លុក​មួយ​ណា​មាន​ដំណើរការ?"
+        Which blocks work?: តើ​ប្លុក​មួយ​ណា​មាន​ដំណើរការ?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
@@ -862,7 +862,7 @@
         Driver and Helper: Driver and Helper
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One
           of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
-        Which boy is the <large>helper</large>?: "តើ​ក្មេង​ប្រុស​មួយ​ណា​គឺ​ជា​<larger>អ្នក​ជួយ</larger>?"
+        Which boy is the <large>helper</large>?: តើ​ក្មេង​ប្រុស​មួយ​ណា​គឺ​ជា​<larger>អ្នក​ជួយ</larger>?
       K-1 multi 5:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
@@ -892,14 +892,14 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "ព្រាវ"
+        random: ព្រាវ
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
         George Washington: George Washington
         Martha Washington: Martha Washington
-        Presidents: "ប្រធានាធិបតី"
-        This multiple choice is all about the presidents of the United States.: "ពហុជម្រើស​ទាំង​នេះ​ស្ដី​អំពី​ប្រធានាធិបតី​នៃ​សហរដ្ឋ​អាមេរិក។"
-        Who was the first president of the USA?: "តើ​នរណា​ជា​ប្រធានាធិបតី​ដំបូង​គេ​នៃ
-          ស.រ.អា. ?"
+        Presidents: ប្រធានាធិបតី
+        This multiple choice is all about the presidents of the United States.: ពហុជម្រើស​ទាំង​នេះ​ស្ដី​អំពី​ប្រធានាធិបតី​នៃ​សហរដ្ឋ​អាមេរិក។
+        Who was the first president of the USA?: តើ​នរណា​ជា​ប្រធានាធិបតី​ដំបូង​គេ​នៃ
+          ស.រ.អា. ?

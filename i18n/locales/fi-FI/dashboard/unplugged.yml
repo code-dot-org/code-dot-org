@@ -316,3 +316,21 @@ fi:
       BigEvent_2018:
         title: Suuri tapahtuma
         desc: Opiskelijat tutustutetaan "tapahtumien" ohjelmointikäsitteeseen, ne ovat toimenpiteitä, joita tietokone monitoroi koko ajan. Opettaja painelee paperisen kaukosäätimen nappuloita ja opiskelijat reagoivat riippuen mitä nappulaa painettiin.
+      GraphPaperProgramming_2018:
+        title: Ruutupaperiohjelmointi
+        desc: Opiskelijat kirjoittavat algoritmin (käskyjen joukon) käyttäen tiettyjä ennaltamäärättyjä komentoja joilla ohjataan luokkakavereita piirroksen jäljentämisessä.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Tietokoneeton tekeminen
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Tietokoneeton tekeminen
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Ehtolausekkeet
+        desc: Ehtolausekkeiden oppimiseksi opiskeliat pelaavat korttipeliä ja luovat sääntöjä kuten "Jos saan punaisen kortin, saan pisteen" ja "Jos saan mustan kortin, sinä saat pisteen."
+      DigitalFootprint_2018:
+        title: Digitaalinen jalanjälkesi
+        desc: Opettajat kertovat oppilailleen, että omien tietojensa lisääminen verkkoon luo digitaalisen jalanjäljen tai "polun" jolla on seurauksensa.
+      BinaryImages_2018:
+        title: Binäärikuvat
+        desc: Vaikka monet ajattelevat binääriä puhtaasti nollina ja ykkösinä, aiemmat kurssimme opettivat opiskelijoille, että informaatiota voidaan esittää monenlaisina binäärivaihtoehtoina. Tällä oppitunnilla viedään käsitettä askel pidemmälle, näyttäessään kuinka tietokone voi tallentaa jopa monimutkaisempaa informaatiota (kuen kuvia ja värejä) myös binäärisenä.

@@ -1,7 +1,7 @@
 "vi":
   devise:
     confirmations:
-      confirmed: "Địa chỉ email của bạn đã được xác nhận thành công."
+      confirmed: Địa chỉ email của bạn đã được xác nhận thành công.
       send_instructions: Bạn sẽ nhận được một email hướng dẫn xác nhận tài khoản của
         bạn trong vài phút nữa.
       send_paranoid_instructions: Nếu địa chỉ email của bạn có trong cơ sở dữ liệu
@@ -55,7 +55,7 @@
       updated: Bạn đã cập nhật tài khoản thành công.
     sessions:
       signed_in: ''
-      signed_out: "Đăng xuất thành công."
+      signed_out: Đăng xuất thành công.
     unlocks:
       send_instructions: Bạn sẽ nhận được một email hướng dẫn mở khóa tài khoản của
         bạn trong vài phút nữa.
@@ -65,18 +65,19 @@
         để tiếp tục.
   errors:
     messages:
-      already_confirmed: "đã được xác nhận, hãy thử đăng nhập"
+      already_confirmed: đã được xác nhận, hãy thử đăng nhập
       confirmation_period_expired: cần được xác nhận nhận trong khoảng %{period},
         xin vui lòng yêu cầu cái mới
-      expired: "đã hết hạn, xin vui lòng yêu cầu cái mới"
+      expired: đã hết hạn, xin vui lòng yêu cầu cái mới
       not_found: không tìm thấy
-      not_locked: "đã không bị khóa"
+      not_locked: đã không bị khóa
       not_saved:
         one: '1 lỗi cấm %{resource} này được lưu:'
         other: "%{count} lỗi cấm %{resource} này được lưu:"
     invitations:
-      send_instructions: |
-        một thư mời đã được gửi tới %{email}.
+      send_instructions: 'một thư mời đã được gửi tới %{email}.
+
+'
       invitation_token_invalid: Dấu hiệu lời mời được cung cấp không hợp lệ!
       updated: mật khẩu đã đặt lại thành công. bạn đã đăng nhập.
       no_invitations_remaining: không có lời mời còn lại
@@ -85,8 +86,8 @@
         header: gửi lời mời
         submit_button: gửi một lời mời
       edit:
-        header: "đặt lại mật khẩu của bạn"
-        submit_button: "đặt lại mật khẩu của tôi"
+        header: đặt lại mật khẩu của bạn
+        submit_button: đặt lại mật khẩu của tôi
     mailer:
       invitation_instructions:
         subject: hướng đẫn mời

@@ -28,15 +28,15 @@
       failure: "%{kind} kimliği %{reason} nedeniyle doğrulanamadı."
       success: "%{kind} hesabından başarıyla kimlik doğrulandı."
     passwords:
-      no_token: "Şifre sıfırlama e-postası dışında  bu sayfaya erişemezsin. Eğer şifre
+      no_token: Şifre sıfırlama e-postası dışında  bu sayfaya erişemezsin. Eğer şifre
         sıfırlama e-postasından geldiysen, lütfen verilen URL'nin tamamını kullandığına
-        emin ol."
+        emin ol.
       send_instructions: Birkaç dakika içinde parolanızı nasıl sıfırlayacağınız hakkında
         talimatlar içeren bir eposta alacaksınız.
       send_paranoid_instructions: Eğer e-posta adresiniz veritabanımızda kayıtlı ise,
         birkaç dakika içinde parola kurtarma bağlantısı içeren bir e-posta alacaksınız.
-      updated: "Şifreniz başarıyla değiştirildi. Şu anda oturum açtın."
-      updated_not_active: "Şifreniz başarıyla değiştirildi."
+      updated: Şifreniz başarıyla değiştirildi. Şu anda oturum açtın.
+      updated_not_active: Şifreniz başarıyla değiştirildi.
     registrations:
       destroyed: Hoşçakal! Hesabın başarıyla iptal edildi. Seni tekrar aramızda görmeyi
         umuyoruz.
@@ -75,15 +75,15 @@
     invitations:
       send_instructions: "%{email} adresine davetiye epostası gönderildi."
       invitation_token_invalid: Sağlanan davet işareti geçerli değil!
-      updated: "Şifreniz başarıyla değiştirildi. Şimdi giriş yaptınız."
+      updated: Şifreniz başarıyla değiştirildi. Şimdi giriş yaptınız.
       no_invitations_remaining: Davet kalmadı
       invitation_removed: Davetin kaldırıldı.
       new:
         header: Davetiye gönder
         submit_button: Bir davetiye gönder
       edit:
-        header: "Şifreni belirle"
-        submit_button: "Şifremi belirle"
+        header: Şifreni belirle
+        submit_button: Şifremi belirle
     mailer:
       invitation_instructions:
         subject: Davetiye yönergeleri

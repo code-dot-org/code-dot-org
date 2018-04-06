@@ -33,8 +33,8 @@
         Bandyk dar kartą!
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: Gražus bandymas!
         Bandyk dar kartą!
-      Course 4 Artist Vars 10_failure_message_override: "Įsitikinkite, kad naudojate
-        pusių kintam!"
+      Course 4 Artist Vars 10_failure_message_override: Įsitikinkite, kad naudojate
+        pusių kintam!
       Course 4 Playlab For Loops 4b_failure_message_override: |-
         Remember, both characters
         should get to their flags in the same number of moves!
@@ -43,8 +43,8 @@
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: "Žaidimas baigtas!"
-      Kiki_StarWars_Test_5_Example_failure_message_override: "Žaidimas baigtas!"
+      Kiki_StarWars_Test_5_failure_message_override: Žaidimas baigtas!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Žaidimas baigtas!
       MC HOC 2016 Level 2-2_failure_message_override: |-
         Use `move forward` and `turn`
         commands to get your chicken moving.

@@ -51,7 +51,7 @@
   add_teacher_form:
     code:
       label: 'Lisa õpetaja:'
-      placeholder: "Üksuse kood (ABCDEF)"
+      placeholder: Üksuse kood (ABCDEF)
       instructions: Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline
         tähtedest koosnev kood, näiteks "ABCDEF".
       instructions_short: Sisestage oma 6-täheline sektsiooni kood
@@ -61,13 +61,13 @@
     submit: Lisa vihje
   appname: Code.org
   stage: Tase
-  stage_number: "Õppetund %{number}"
+  stage_number: Õppetund %{number}
   puzzle: Mõistatus
   trophies: Trofeed
   courses: Kursused
   courses_page:
-    title_student: "Õpi Code stuudios"
-    title_teacher: "Õpeta koos Code Studioga"
+    title_student: Õpi Code stuudios
+    title_teacher: Õpeta koos Code Studioga
   unplugged_activity: Lahutatud tegevus
   of: kohta
   more: NÄITA ROHKEM
@@ -147,8 +147,8 @@
       et saada rohkem informatsiooni.
     additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
     user_type_label: Konto tüüp
-    user_type_teacher: "Õpetaja"
-    user_type_student: "Õpilane"
+    user_type_teacher: Õpetaja
+    user_type_student: Õpilane
     field_is_required: on nõutud
     accept_terms: Pead konto loomiseks nõustuma
     error: An error occurred.
@@ -212,8 +212,13 @@
       submit: Muuda mu parool
   welcome_email:
     subject: Liitu minu klassiga (Code.org lehel)
-    body: |
-      Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt ja Plants vs Zombielt! :-) %{name}
+    body: 'Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos
+      minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja
+      õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid
+      kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt
+      ja Plants vs Zombielt! :-) %{name}
+
+'
   parent_mailer:
     student_associated_subject: Login information for Code.org
   teacher_mailer:
@@ -324,10 +329,10 @@
       learn: Learn
       stats: Stats
       help_us: Help Us
-      teach: "Õpeta"
+      teach: Õpeta
       about: Info
     user:
-      classroom: "Õpetaja kodulehekülg"
+      classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
       label: Tere, %{username}
       stats: Koodistuudio
@@ -362,12 +367,12 @@
       remove: Oled kindel, et tahad seda õpetajat eemaldada?
     students:
       dashboard: Mine õpetaja menüüsse
-    user_not_found: "Õpetajat ei leitud."
+    user_not_found: Õpetajat ei leitud.
     student_teacher_disassociated: Olete lahkunud oma õpetaja %{teacher_name} tunnist
       %{section_code}.
     panel:
-      answer_viewer: "Õpetaja paneel"
-      student: "Õpilane"
+      answer_viewer: Õpetaja paneel
+      student: Õpilane
       viewing_solution: Lahenduse vaatamine
       try_it_yourself: Proovi seda ise
       section: Jaotis
@@ -427,8 +432,8 @@
     all_courses: Kursuste 1, 2 ja 3 ülevaade
     lesson_plans: Tunnikavad
     signin_message: Oled juba registreerunud? %{link}
-    student_reg_link: "Õpilaste registreerimine"
-    teacher_reg_link: "Õpetajate registreerimine"
+    student_reg_link: Õpilaste registreerimine
+    teacher_reg_link: Õpetajate registreerimine
     signin_directions: Konto abil saate jälgida oma edusamme. <br/> Õpetajad, Jälgige
       kogu oma klassi.
     teacher_dashboard: Vaata edusammudee armatuurlauda
@@ -489,11 +494,11 @@
     announcement_try_now_button: Proovi nüüd
     announcement_host_an_hour_button: Vii läbi KoodiTund
     announcement_watch_video_button: Vaata videot
-    announcement_petition: "Õpetajana oled sa teejuht liikumises, mis annab igale
-      õpilasele igas koolis võimaluse arvutiteadust õppida. Nüüd on aeg, et ka sinu
-      esindajad sinu arvamust kuuleksid. Sel nädalal kirjutasid haridusjuhid, 28 kuberneri,
+    announcement_petition: Õpetajana oled sa teejuht liikumises, mis annab igale õpilasele
+      igas koolis võimaluse arvutiteadust õppida. Nüüd on aeg, et ka sinu esindajad
+      sinu arvamust kuuleksid. Sel nädalal kirjutasid haridusjuhid, 28 kuberneri,
       ameerika suurimate ettevõtete juhid ühise avatud kirja, kus palusid, et U.S.A.
-      kongress rahastaks K-12 hariduse arvutiteaduse programmi."
+      kongress rahastaks K-12 hariduse arvutiteaduse programmi.
     announcement_petition_button: Lisa oma nimi
     announcement_go_beyond_button: Go beyond
     announcement_apply_now: Taotle nüüd
@@ -504,11 +509,10 @@
       aitate meil jõuda rohkemate õpilasteni kui kunagi varem. <a href='%{signup_url}'
       target='_blank'> Registreeri oma KoodiTund</a> ja andke ja teistele õpetajatele
       teada, et igaühest võib saada arvutiteaduste õpetaja.
-    announcement_mc_launch: "Ühel meie kõige populaarsemal juhendil on nüüd järg!
-      Uus KoodiTunni Minecraft Designer laseb õpilastel ise luua Minecrafti maailma
-      reegleid. Nad saavad luua täiesti unikaalse Minecrafti kogemuse ning jagada
-      seda sõpradega, kes saavad seda oma telefonides mängida. Kasuta seda oma klassi
-      KoodiTunnis."
+    announcement_mc_launch: Ühel meie kõige populaarsemal juhendil on nüüd järg! Uus
+      KoodiTunni Minecraft Designer laseb õpilastel ise luua Minecrafti maailma reegleid.
+      Nad saavad luua täiesti unikaalse Minecrafti kogemuse ning jagada seda sõpradega,
+      kes saavad seda oma telefonides mängida. Kasuta seda oma klassi KoodiTunnis.
     announcement_how_code_studio: Selleks, et arvutiteadusi oma klassis õpetada ei
       ole teil vaja eelnevat kogemust. Code.org pakub õppe- ja tunnikavasid, kõrge
       kvaliteediga õppeprogramme ja hulgaliselt vahendeid kõikidele tasemetele&mdash;
@@ -587,13 +591,13 @@
     current_section_dne: Vabandame, kuid seda sektsiooni ei ole olemas %{current_section_code}
       Palun lisa teine sektsioonikood.
     student_ids_not_entered: Palun sisesta õpilaste_id-d.
-    student_not_found: "Ühte või mitut õpilast ei leitud."
+    student_not_found: Ühte või mitut õpilast ei leitud.
     all_students_must_be_in_current_section: Kõik õpilased peavad praegu sinu sektsiooni
       registreeritud olema.
     already_enrolled_in_new_section: Sa ei saa neid õpilasi liigutada, sest nad on
       selle õpetaja uues sektsioonis.
   share:
-    title: "Õpi Code stuudios"
+    title: Õpi Code stuudios
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
     try_hour_of_code: Proovi Koodi Tundi!
   gender:
@@ -601,8 +605,8 @@
     female: Naine
     none: Ei soovi vastata
   user_type:
-    student: "Õpilane"
-    teacher: "Õpetaja"
+    student: Õpilane
+    teacher: Õpetaja
   footer:
     thank_you: Me täname oma <a href="https://code.org/about/donors"> sponsoreid </a>,<a
       href="https://code.org/about/partners">partnereid</a>, meie <a href="https://code.org/about/team">
@@ -692,7 +696,7 @@
   pdf_download: Lae alla PDF-fail
   download_coming_soon: Allalaaditav tegevus tuleb varsti.
   video_coming_soon: Video tuleb varsti!
-  not_started: "Õpilane pole seda taset veel proovinud."
+  not_started: Õpilane pole seda taset veel proovinud.
   share_code:
     title: Klikka 'Run', et programm alustaks
     bounce_og_title: Tsekka mu Põrke mängu (Bounce Game)
@@ -725,7 +729,7 @@
       body_short: Kujunda rakendus, programmeeri see plokkide või JavaScriptiga, et
         rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga.
       audience: Vanus 13+
-      cta: "Õpi kuidas"
+      cta: Õpi kuidas
     hoc:
       title: Klassikaline labürint
       body: Proovige arvutiteaduse alused. Miljonid on proovinud.
@@ -738,8 +742,7 @@
       body: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise
         kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18
         aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
-      body_short: "Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel
-        2-4."
+      body_short: Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.
     hoc2014:
       try_new_tutorial: Proovi meie uut KoodiTunni beta õpetusvideot
       try_frozen: Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene talv"
@@ -751,7 +754,7 @@
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
       audience: Vanus 13+
-      cta: "Õpi kuidas"
+      cta: Õpi kuidas
     hoc-encryption:
       title: Simple Encryption
       body: Students will learn techniques to create and crack encrypted messages.
@@ -760,7 +763,7 @@
       body: Web Lab is a programming environment where you can make simple web pages
         using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Vanus 13+
-      cta: "Õpi kuidas"
+      cta: Õpi kuidas
     frozen:
       title: Frozen
     starwars:
@@ -805,10 +808,10 @@
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
       audience: Vanuses 14 +
-      cta: "Õpi kuidas"
+      cta: Õpi kuidas
   gallery:
-    students_drew_these_with_code: "Õpilased joonistasid need koodi kasutades!"
-    students_made_these_with_code: "Õpilased tegid need koodiga!"
+    students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
+    students_made_these_with_code: Õpilased tegid need koodiga!
     picture_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
       pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel, et nende programmide
       tööd ise näha.
@@ -841,7 +844,7 @@
   multi:
     wrong_title: Vale vastus
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
-    correct_title: "Õige"
+    correct_title: Õige
     correct_body: See on õige vastus.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
@@ -880,7 +883,7 @@
   match:
     wrong_title: Vale lahendus
     wrong_body: Sinu poolt sisestatud lahendus ei ole õige. Palun proovi uuesti!
-    correct_title: "Õige"
+    correct_title: Õige
     correct_body: See on õige vastus.
   contract_match:
     wrong_title: Vale vastus
@@ -889,14 +892,14 @@
       nime muuta.
     badrange: Sinu kontaktil on vale vahemik.
     baddomainsize: Sinu lepingule ei ole domeenis õiget esemete arvu.
-    baddomainname: "Ühel või mitmel sinu domeeni üksusel on vale nimi."
-    baddomaintype: "Ühel või mitu sinu domeeni üksust on vale tüüpi või need on vales
-      järjekorras."
+    baddomainname: Ühel või mitmel sinu domeeni üksusel on vale nimi.
+    baddomaintype: Ühel või mitu sinu domeeni üksust on vale tüüpi või need on vales
+      järjekorras.
   text_match:
     placeholder: Sisesta siia oma vastus
     open_response_title: Tänud
     open_response_body: Täname vastuse eest!
-    correct_title: "Õige"
+    correct_title: Õige
     correct_body: See on õige vastus.
   dialog:
     ok: Olgu
@@ -1080,7 +1083,7 @@
     escalated:
       name: Hoogustus
       description: Ma tahaksin, et juhendaja esitatud töö üle vaataks
-    instructor_feedback: "Õpetaja tagasiside"
+    instructor_feedback: Õpetaja tagasiside
     peer_feedback: Kaaslaste tagasiside
     outdated: See tagasiside lisati varem esitatud versioonile
     review_in_progress: Ready to review
@@ -1093,9 +1096,9 @@
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
   flex_category:
-    required: "Ülevaade"
+    required: Ülevaade
     content: Sisu
-    practice: "Õpetamise tavad"
+    practice: Õpetamise tavad
     peer_review: Vastastikune hindamine
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
@@ -1216,8 +1219,8 @@
   locked_stage: Selle etapi sisu ei ole nähtav, sest see etapp on praegu lukus. Õpetaja
     saab selle etapi avada, kui on aeg selle kallal tööd teha või oma vastused üle
     vaadata.
-  hidden_stage: "Õpetaja ei oodanud, et sa sind siin. Palun küsi oma õpetajalt, millises
-    tunnis sa peaksid olema."
+  hidden_stage: Õpetaja ei oodanud, et sa sind siin. Palun küsi oma õpetajalt, millises
+    tunnis sa peaksid olema.
   hidden_script: Your teacher didn't expect you to be here. Please ask your teacher
     which unit you should be on.
   return_unit_overview: Go to unit overview
