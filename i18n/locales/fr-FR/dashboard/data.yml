@@ -367,7 +367,7 @@ fr:
         CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie et le grand projet
         CSF_unspotted_bugs: Bugs passés inaperçus
-        CSF_zuck_loops_short: Bouclers de répétition
+        CSF_zuck_loops_short: Boucles de répétition
         frozen_intro: Introduction à l'Heure de Code
         frozen_loops: Introduction aux Boucles
         frozen_functions: Introduction aux Fonctions
@@ -522,6 +522,9 @@ fr:
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

@@ -11,8 +11,8 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
-        Match the button combination to the dance moves.: "找到與組合按鈕相符的舞蹈動作，將它們配對起來。"
-        Matching: "配對"
+        Match the button combination to the dance moves.: 找到與組合按鈕相符的舞蹈動作，將它們配對起來。
+        Matching: 配對
       2-3 Binary Match 1:
         "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
@@ -24,8 +24,8 @@
         "<strong>O</strong>": "<strong>N</strong>"
         "<strong>P</strong>": "<strong>N</strong>"
         "<strong>Q</strong>": "<strong>N</strong>"
-        Matching: "配對"
-        Use the key to match each code to its letter: "將字母與對應的代碼配對"
+        Matching: 配對
+        Use the key to match each code to its letter: 將字母與對應的代碼配對
       2-3 Graph Paper Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -33,8 +33,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program.: "將右邊的程式放到正確的格子中。"
-        Matching: "配對"
+        Match the grid to the program.: 將右邊的程式放到正確的格子中。
+        Matching: 配對
       2-3 Maze Match 2:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
@@ -43,10 +43,10 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "拖曳這些積木到符合的位置。"
-        Instructions: "說明"
-        Match the puzzles to the blocks: "哪個程式積木可以解決關卡，把它們配對起來。"
-        Maze Match: "迷宮：配對題"
+        Drag the blocks to match.: 拖曳這些積木到符合的位置。
+        Instructions: 說明
+        Match the puzzles to the blocks: 哪個程式積木可以解決關卡，把它們配對起來。
+        Maze Match: 迷宮：配對題
       2-3 Relay Programming Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -54,8 +54,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: "將右邊的程式放到正確的格子中"
-        Matching: "配對"
+        Match the grid to the program: 將右邊的程式放到正確的格子中
+        Matching: 配對
       2-3 artist loops match 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
@@ -65,8 +65,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: "小藝術家 - 迴圈：配對題"
-        Match the loop to the shape: "將正確的迴圈放到對應的形狀旁邊"
+        Artist Loops Matching One: 小藝術家 - 迴圈：配對題
+        Match the loop to the shape: 將正確的迴圈放到對應的形狀旁邊
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
@@ -76,8 +76,8 @@
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
-        Artist Matching: "小藝術家：配對題"
-        Match the shape with the blocks that complete it.: "配對圖形和完成形狀的積木。"
+        Artist Matching: 小藝術家：配對題
+        Match the shape with the blocks that complete it.: 配對圖形和完成形狀的積木。
       2-3 bounce match 1:
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
@@ -89,9 +89,9 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: "彈跳球：配對題"
-        Match the events with the actions: "配對事件（evnets）和動作（actions）"
-        Matching: "配對"
+        Bounce Matching: 彈跳球：配對題
+        Match the events with the actions: 配對事件（evnets）和動作（actions）
+        Matching: 配對
       2-3 flappy match 1:
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
@@ -99,9 +99,9 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
-        Flappy Matching One: "像素鳥：配對題"
-        Match the events with the actions: "配對事件（evnets）和動作（actions）"
-        Matching: "配對"
+        Flappy Matching One: 像素鳥：配對題
+        Match the events with the actions: 配對事件（evnets）和動作（actions）
+        Matching: 配對
       2-3 maze match 1:
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
@@ -109,8 +109,8 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        Match the puzzles to the blocks: "哪個程式積木可以解決關卡，把它們配對起來。"
-        Maze Match One: "迷宮：配對題"
+        Match the puzzles to the blocks: 哪個程式積木可以解決關卡，把它們配對起來。
+        Maze Match One: 迷宮：配對題
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>2)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
@@ -120,8 +120,8 @@
         "<h4>Compare player scores to see who wins</h4>": "<h4>比較所有玩家的總分看看誰獲勝</h4>"
         "<h4>Player 1 rolls die</h4>": "<h4>玩家1 擲出骰子</h4>"
         "<h4>Set Player 1 score to 0</h4>": "<h4>設定玩家1 的總分為 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: "配對在擲骰子比賽中正確的遊戲順序。"
-        Matching: "配對"
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 配對在擲骰子比賽中正確的遊戲順序。
+        Matching: 配對
       4-5 Computational Thinking Match 1:
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
@@ -131,8 +131,8 @@
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>車輪/側面: 2<br/>窗戶/側面: 1</h3>"
         "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>車輪/側面: 2<br/>窗戶/側面: 6</h3>"
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>車輪/側面: 2<br/>窗戶/側面: 2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: "每台車已經被分解成小部分，利用它的分解列表幫每台車子完成配對。"
-        Matching: "配對"
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: 每台車已經被分解成小部分，利用它的分解列表幫每台車子完成配對。
+        Matching: 配對
       4-5 Suncatchers Match 1:
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
@@ -143,8 +143,8 @@
         "<h4>STACK</h4>": "<h4>STACK</h4>"
         "<h4>STAMP</h4>": "<h4>STAMP</h4>"
         "<h4>STAR</h4>": "<h4>STAR</h4>"
-        Match each program to the word it makes, using the provided group of skills.: "這些程式分別製造出了什麼單字？請配對。"
-        Matching: "配對"
+        Match each program to the word it makes, using the provided group of skills.: 這些程式分別製造出了什麼單字？請配對。
+        Matching: 配對
       4-5 maze match 1:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
@@ -153,10 +153,10 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "拖曳方塊至符合位置。"
-        Instructions: "說明"
-        Match the puzzles to the blocks: "哪個程式積木可以解決關卡，把它們配對起來。"
-        Maze Match: "迷宮：配對題"
+        Drag the blocks to match.: 拖曳方塊至符合位置。
+        Instructions: 說明
+        Match the puzzles to the blocks: 哪個程式積木可以解決關卡，把它們配對起來。
+        Maze Match: 迷宮：配對題
       K-1 Artist 2 Match 1:
         "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
         "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
@@ -164,8 +164,8 @@
         "<br/><br/>above": "<br/> <br/> 上面"
         "<br/><br/>below": "<br/> <br/> 下面"
         "<br/><br/>next to": "<br/> <br/> 旁邊"
-        Is the square next to, above, or below the ball?: "這個方塊在球的旁邊？上面？還是下面？"
-        Matching: "配對"
+        Is the square next to, above, or below the ball?: 這個方塊在球的旁邊？上面？還是下面？
+        Matching: 配對
       K-1 Artist 2 Match 2:
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
@@ -175,8 +175,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
-        Match the shapes based on type.: "配對同類的形狀。"
-        Matching: "配對"
+        Match the shapes based on type.: 配對同類的形狀。
+        Matching: 配對
       K-1 Artist 2 Match 3:
         "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
@@ -186,8 +186,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        Match the shapes based on type.: "配對同類的形狀。"
-        Matching: "配對"
+        Match the shapes based on type.: 配對同類的形狀。
+        Matching: 配對
       K-1 Artist Loops Match 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
@@ -195,8 +195,8 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
-        Match the code to the stairs it draws.: "把程式碼和畫出的樓梯配對起來。"
-        Matching: "配對"
+        Match the code to the stairs it draws.: 把程式碼和畫出的樓梯配對起來。
+        Matching: 配對
       K-1 Bee Loops Match 1:
         "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
         "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
@@ -206,8 +206,8 @@
         "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
-        Match the blocks: "配對這些程式積木"
-        Matching: "配對"
+        Match the blocks: 配對這些程式積木
+        Matching: 配對
       K-1 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
@@ -216,8 +216,8 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        Match the button combination to the dance moves.: "找到與組合按鈕相符的舞蹈動作，將它們配對起來。"
-        Matching: "配對"
+        Match the button combination to the dance moves.: 找到與組合按鈕相符的舞蹈動作，將它們配對起來。
+        Matching: 配對
       K-1 Flappy Match 1:
         "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
         "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
@@ -225,8 +225,8 @@
         "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
         "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
         "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
-        Match the blocks: "配對這些程式積木"
-        Matching: "配對"
+        Match the blocks: 配對這些程式積木
+        Matching: 配對
       K-1 Happy Maps Match 1:
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
@@ -234,9 +234,9 @@
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Match the Map to the arrow that gets the Flurb to the treasure: "配對地圖和箭頭，讓
-          Flurb 得到寶藏。"
-        Matching: "配對"
+        Match the Map to the arrow that gets the Flurb to the treasure: 配對地圖和箭頭，讓
+          Flurb 得到寶藏。
+        Matching: 配對
       K-1 Maze Match 1:
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -247,10 +247,10 @@
         "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: "拖曳方塊至符合位置。"
-        Instructions: "說明"
-        Match the puzzles and blocks: "哪個程式積木可以解決關卡，把它們配對起來。"
-        Matching: "配對"
+        Drag the blocks to match.: 拖曳方塊至符合位置。
+        Instructions: 說明
+        Match the puzzles and blocks: 哪個程式積木可以解決關卡，把它們配對起來。
+        Matching: 配對
       K-1 Move It Match 1:
         "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
         "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
@@ -258,9 +258,9 @@
         "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
         "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
         "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
-        Match the Map to the algorithm that gets the Flurb to the flowers.: "配對地圖和演算法讓
-          Flurb 採到花。"
-        Matching: "配對"
+        Match the Map to the algorithm that gets the Flurb to the flowers.: 配對地圖和演算法讓
+          Flurb 採到花。
+        Matching: 配對
       test matching image:
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
@@ -272,70 +272,70 @@
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: "說明"
+        Instructions: 說明
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: "配對"
+        Matching: 配對
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
-        Sydney: "雪梨"
+        Sydney: 雪梨
         Van Minnen: Van Minnen
-        What color is the sky?: "天空是什麼顏色的？"
-        What's Brent's last name?: "布倫特的姓是什麼？"
-        What's in the ocean?: "在海洋中是什麼？"
+        What color is the sky?: 天空是什麼顏色的？
+        What's Brent's last name?: 布倫特的姓是什麼？
+        What's in the ocean?: 在海洋中是什麼？
         Where is Brendan from?: Where is Brendan from?
-        blue: "藍"
-        salt: "鹽"
+        blue: 藍
+        salt: 鹽
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        Choose an algorithm for the image provided.: "為提供的圖像選擇一個演算法"
-        Multiple Choice: "選擇題"
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: "從一個正方形開始<br/>在正方形的上面放個平行四邊形<br/>在平行四邊形的右邊放個三角形"
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: "從一個正方形開始<br/>在正方形的上面放個三角形<br/>在正方形的下面放個三角形"
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: "從一個正方形開始<br/>在正方形的下面放個三角形<br/>在三角形的右邊放個平行四邊形"
+        Choose an algorithm for the image provided.: 為提供的圖像選擇一個演算法
+        Multiple Choice: 選擇題
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 從一個正方形開始<br/>在正方形的上面放個平行四邊形<br/>在平行四邊形的右邊放個三角形
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 從一個正方形開始<br/>在正方形的上面放個三角形<br/>在正方形的下面放個三角形
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 從一個正方形開始<br/>在正方形的下面放個三角形<br/>在三角形的右邊放個平行四邊形
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : "從一個正方形開始<br/>在正方形的右邊放個三角形<br/>在正方形的下面放個平行四邊形<br/>在平行四邊形的右邊放個三角形"
+        : 從一個正方形開始<br/>在正方形的右邊放個三角形<br/>在正方形的下面放個平行四邊形<br/>在平行四邊形的右邊放個三角形
       2-3 Algorithms Multi 2:
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        Multiple Choice: "選擇題"
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: "從一個三角形開始<br/>在三角形的下面放個正方形<br/>在正方形的下面放個三角形"
-        Which image does <em>not</em> follow this algorithm?: "哪個圖像<strong>沒有</strong>遵循演算法？"
+        Multiple Choice: 選擇題
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 從一個三角形開始<br/>在三角形的下面放個正方形<br/>在正方形的下面放個三角形
+        Which image does <em>not</em> follow this algorithm?: 哪個圖像<strong>沒有</strong>遵循演算法？
       2-3 Binary Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "選擇題"
-        Which program makes this image?: "哪個程式畫出了這個圖像？"
+        Multiple Choice: 選擇題
+        Which program makes this image?: 哪個程式畫出了這個圖像？
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        According to the rules of the game, which set of cards is scored correctly?: "根據遊戲規則，哪一組牌卡的得分是正確的？"
-        Multiple Choice: "選擇題"
+        According to the rules of the game, which set of cards is scored correctly?: 根據遊戲規則，哪一組牌卡的得分是正確的？
+        Multiple Choice: 選擇題
       2-3 Getting Loopy Multi 1:
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
         "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "要如何利用迴圈簡化序列？"
-        Multiple Choice: "選擇題"
+        How would you simplify this sequence with loops?: 要如何利用迴圈簡化序列？
+        Multiple Choice: 選擇題
       2-3 Graph Paper Multi 1:
         "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        Multiple Choice: "選擇題"
-        Which program makes this image?: "這個圖片是哪段程式產生出來的"
+        Multiple Choice: 選擇題
+        Which program makes this image?: 這個圖片是哪段程式產生出來的
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
@@ -343,21 +343,21 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
-        Maze Multiple Choice: "迷宮：選擇題"
-        Which blocks work?: "哪個程式有用？"
+        Maze Multiple Choice: 迷宮：選擇題
+        Which blocks work?: 哪個程式有用？
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
-        Multiple Choice: "選擇題"
-        Which program does not create this image?: "哪個程式無法畫出這個圖像？"
+        Multiple Choice: 選擇題
+        Which program does not create this image?: 哪個程式無法畫出這個圖像？
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
-        Multiple Choice: "選擇題"
-        Which image-program combo does not contain mistakes?: "哪一組的程式與圖像沒有問題？"
+        Multiple Choice: 選擇題
+        Which image-program combo does not contain mistakes?: 哪一組的程式與圖像沒有問題？
       2-3 artist debug multi 1:
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
@@ -365,16 +365,16 @@
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
-        Artist Debugging Multiple Choice One: "小藝術家 - 除錯：選擇題 1"
-        Why won't this circle go all the way around?: "為什麼這個圓形不會到處亂跑？關鍵是什麼？"
+        Artist Debugging Multiple Choice One: 小藝術家 - 除錯：選擇題 1
+        Why won't this circle go all the way around?: 為什麼這個圓形不會到處亂跑？關鍵是什麼？
       2-3 artist functions multi 1:
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice One: "小藝術家 - 函式：選擇題 1"
-        Pick the correct blocks to draw this image using the given functions: "選出正確的積木。用給予的函式，能畫出這個圖形的，是哪個積木？"
+        Artist Functions Multiple Choice One: 小藝術家 - 函式：選擇題 1
+        Pick the correct blocks to draw this image using the given functions: 選出正確的積木。用給予的函式，能畫出這個圖形的，是哪個積木？
       2-3 artist loops multi 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500"
@@ -382,8 +382,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "小藝術家 - 迴圈：多選題"
-        Which shape is made by this loop?: "哪個圖形是用這個迴圈做出來的？"
+        Artist Loops Multiple Choice: 小藝術家 - 迴圈：多選題
+        Which shape is made by this loop?: 哪個圖形是用這個迴圈做出來的？
       2-3 artist loops multi 2:
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500"
@@ -391,15 +391,15 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-        Artist Loops Multiple Choice: "小藝術家 - 迴圈：選擇題"
-        Which shape is made by this program?: "哪個圖形是用這個程式做出來的？"
+        Artist Loops Multiple Choice: 小藝術家 - 迴圈：選擇題
+        Which shape is made by this program?: 哪個圖形是用這個程式做出來的？
       2-3 bee conditionals multi 1:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-        Bee Conditionals Multiple Choice One: "蜜蜂 - 條件判斷：選擇題 1"
-        Which comparison below is true?: "下列的比較中，哪個得到的結果會是 true？"
+        Bee Conditionals Multiple Choice One: 蜜蜂 - 條件判斷：選擇題 1
+        Which comparison below is true?: 下列的比較中，哪個得到的結果會是 true？
       2-3 bee conditionals multi 2:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
@@ -407,8 +407,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "蜜蜂 - 條件判斷：選擇題 2"
-        Choose the best blocks.: "選出最適合的程式積木。"
+        Bee Conditionals Multiple Choice Two: 蜜蜂 - 條件判斷：選擇題 2
+        Choose the best blocks.: 選出最適合的程式積木。
       2-3 bee conditionals multi 3:
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
@@ -416,8 +416,8 @@
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
-        Bee Conditionals Multiple Choice Two: "蜜蜂 - 條件判斷：選擇題 2"
-        Choose the best blocks.: "選取最佳方塊。"
+        Bee Conditionals Multiple Choice Two: 蜜蜂 - 條件判斷：選擇題 2
+        Choose the best blocks.: 選取最佳方塊。
       2-3 bee loops multi 1:
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
@@ -425,8 +425,8 @@
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500"
-        Bee Loops Multiple Choice One: "蜜蜂 - 迴圈：選擇題 1"
-        Which blocks collect all of the nectar?: "哪個程式可以收集到所有的花蜜？"
+        Bee Loops Multiple Choice One: 蜜蜂 - 迴圈：選擇題 1
+        Which blocks collect all of the nectar?: 哪個程式可以收集到所有的花蜜？
       2-3 maze multi 1:
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
@@ -434,58 +434,58 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice One: "迷宮：選擇題 1"
-        Which set of blocks is the correct answer?: "哪一個程式是正確解法？"
+        Maze Multiple Choice One: 迷宮：選擇題 1
+        Which set of blocks is the correct answer?: 哪一個程式是正確解法？
       4-5 Algorithms Multi 1:
-        Baking cookies: "烘烤餅乾"
-        Banana: "香蕉"
-        Brushing your teeth: "刷牙"
-        Multiple Choice: "選擇題"
-        Shopping from a grocery list: "按照購物單來買東西"
-        Which one of these items is hardest to describe an algorithm for?: "這些項目中，哪一項是最難用演算法來描述的？"
+        Baking cookies: 烘烤餅乾
+        Banana: 香蕉
+        Brushing your teeth: 刷牙
+        Multiple Choice: 選擇題
+        Shopping from a grocery list: 按照購物單來買東西
+        Which one of these items is hardest to describe an algorithm for?: 這些項目中，哪一項是最難用演算法來描述的？
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: "齊齊哈爾是一個 _____ 城市。"
+        Eugene is a _____ city.: 齊齊哈爾是一個 _____ 城市。
         0: "？這裡有三個句子。哪一個模板正確的抽象了這三句話的模式？"
         1: "：這裡有三個句子。哪一個模板正確的抽象了這三句話的模式？"
-        Multiple Choice: "選擇題"
-        Seattle _____ a _____ _____.: "西雅圖 _____一個 _____ _____。"
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: "西雅圖是一個大型城市。
-          <br/>尤金是一個中等城市。<br/> 曉嵐是一個小型城市。"
+        Multiple Choice: 選擇題
+        Seattle _____ a _____ _____.: 西雅圖 _____一個 _____ _____。
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 西雅圖是一個大型城市。
+          <br/>尤金是一個中等城市。<br/> 曉嵐是一個小型城市。
         _____ is _____ a _____.: _____ 是 _____ 一個 _____。
         _____ is a _____ city.: _____ 是一個 _____ 城市。
       4-5 Crowdsourcing Multi 1:
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
-        Multiple Choice: "選擇題"
-        Which of these pictures best represents crowdsourcing?: "這些圖片中，哪一個最能用來代表群眾外包（Crowdsourcing）？"
+        Multiple Choice: 選擇題
+        Which of these pictures best represents crowdsourcing?: 這些圖片中，哪一個最能用來代表群眾外包（Crowdsourcing）？
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: "梳頭"
-        Cleaning your room: "清掃房間"
-        Eating your dessert: "吃甜點"
-        Multiple Choice: "選擇題"
-        Washing your face: "洗臉"
-        Which one of these activities would be best for practicing crowdsourcing?: "這些活動中，哪一個最適合用群眾外包（Crowdsourcing）？"
+        Brushing your hair: 梳頭
+        Cleaning your room: 清掃房間
+        Eating your dessert: 吃甜點
+        Multiple Choice: 選擇題
+        Washing your face: 洗臉
+        Which one of these activities would be best for practicing crowdsourcing?: 這些活動中，哪一個最適合用群眾外包（Crowdsourcing）？
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: "選擇題"
-        Which piece of information listed below is okay to share on the internet?: "下列的哪個資訊是可以在網路上公開或分享的？"
-        Your address: "你的地址"
-        Your birthday: "你的生日"
-        Your favorite food: "你最愛的食物"
-        Your parent's credit card number: "你的父母的信用卡卡號"
+        Multiple Choice: 選擇題
+        Which piece of information listed below is okay to share on the internet?: 下列的哪個資訊是可以在網路上公開或分享的？
+        Your address: 你的地址
+        Your birthday: 你的生日
+        Your favorite food: 你最愛的食物
+        Your parent's credit card number: 你的父母的信用卡卡號
       4-5 Internet Multi 1:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
-        Multiple Choice: "選擇題"
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: "當你試著造訪
-          code.org 時，DNS 最有可能帶你到哪個 IP 位址？"
+        Multiple Choice: 選擇題
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: 當你試著造訪
+          code.org 時，DNS 最有可能帶你到哪個 IP 位址？
       4-5 Internet Multi 2:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: "如果
-          DNS 已把你導向 IP 為 100.42.50.110 的網頁，那麼你會在哪個網站？"
-        Multiple Choice: "選擇題"
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: 如果
+          DNS 已把你導向 IP 為 100.42.50.110 的網頁，那麼你會在哪個網站？
+        Multiple Choice: 選擇題
         code.org: code.org
         csisfun.com: csisfun.com
         khanacademy.org: khanacademy.org
@@ -508,18 +508,18 @@
         : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
           skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
           buttermilk, <br/>Shoo, fly, shoo,
-        Multiple Choice: "選擇題"
+        Multiple Choice: 選擇題
         ? What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
-        : "在這首歌裡，哪一大段因為每次都會完全重複，所以能被稱為副歌？"
+        : 在這首歌裡，哪一大段因為每次都會完全重複，所以能被稱為副歌？
       4-5 Suncatchers Multi 1:
         "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        Multiple Choice: "選擇題"
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: "下列的哪個程式<strong>沒有</strong>產生和程式
-          1 相同的序列？"
+        Multiple Choice: 選擇題
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 下列的哪個程式<strong>沒有</strong>產生和程式
+          1 相同的序列？
       4-5 artist functions multi 1:
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
@@ -527,8 +527,8 @@
         "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
           500"
-        Artist Functions Multiple Choice: "小藝術家 - 函式：選擇題"
-        Which function creates a rectangle that can change its size?: "哪個函式可以創造出能改變尺寸的長方形？"
+        Artist Functions Multiple Choice: 小藝術家 - 函式：選擇題
+        Which function creates a rectangle that can change its size?: 哪個函式可以創造出能改變尺寸的長方形？
       4-5 artist loops multi 1:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
@@ -536,30 +536,30 @@
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500"
-        Artist Loops Multiple Choice: "小藝術家 - 迴圈：選擇題"
-        Which blocks will create the design?: "哪個程式可以作出這樣的圖案？"
+        Artist Loops Multiple Choice: 小藝術家 - 迴圈：選擇題
+        Which blocks will create the design?: 哪個程式可以作出這樣的圖案？
       4-5 artist loops multi 2:
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
-        Artist Functions Multiple Choice: "小藝術家 - 函式：選擇題"
-        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': "選出正確的計數迴圈，哪個計數迴圈能表示出
-          5、 10、 15、 20、 25、 30、 35、 40、 45、 50"
+        Artist Functions Multiple Choice: 小藝術家 - 函式：選擇題
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 選出正確的計數迴圈，哪個計數迴圈能表示出
+          5、 10、 15、 20、 25、 30、 35、 40、 45、 50
       4-5 artist multi 1:
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
-        Artist Multiple Choice: "小藝術家：選擇題"
-        Which blocks draw a rectangle with a perimeter of 100?: "哪個程式可以畫出周長為 100 像素的長方形？"
+        Artist Multiple Choice: 小藝術家：選擇題
+        Which blocks draw a rectangle with a perimeter of 100?: 哪個程式可以畫出周長為 100 像素的長方形？
       4-5 artist multi 2:
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
         "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
-        Artist Multiple Choice: "小藝術家：選擇題"
-        Which drawing is symmetric?: "哪一個圖形是對稱的？"
+        Artist Multiple Choice: 小藝術家：選擇題
+        Which drawing is symmetric?: 哪一個圖形是對稱的？
       4-5 bee conditionals multi 1:
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
@@ -568,8 +568,8 @@
         "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         0: "？一朵紫色的花可能會有 1 至 3 個花蜜，但你不知道有多少。用哪些積木可以正確的檢查並收集紫色花蜜呢？"
         1: "：一朵紫色的花可能會有 1 至 3 個花蜜，但你不知道有多少。用哪一些積木可以正確的檢查並收集紫色花蜜呢？"
-        Bee Conditionals Multiple Choice: "蜜蜂 - 條件判斷：選擇題"
-        Choose the best blocks.: "選取最佳方塊。"
+        Bee Conditionals Multiple Choice: 蜜蜂 - 條件判斷：選擇題
+        Choose the best blocks.: 選取最佳方塊。
       4-5 bee debug multi 1:
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
@@ -577,16 +577,16 @@
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
-        Bee Debug Multiple Choice: "蜜蜂 - 除錯：選擇題"
-        Which version of the function will work?: "哪個版本的函式有用？"
+        Bee Debug Multiple Choice: 蜜蜂 - 除錯：選擇題
+        Which version of the function will work?: 哪個版本的函式有用？
       4-5 bee loops multi 1:
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
-        Bee Loops Multiple Choice: "蜜蜂 - 迴圈：選擇題"
-        Which blocks will solve the puzzle?: "哪個程式可以完成這個關卡？"
+        Bee Loops Multiple Choice: 蜜蜂 - 迴圈：選擇題
+        Which blocks will solve the puzzle?: 哪個程式可以完成這個關卡？
       4-5 farmer loops multi 1:
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
@@ -594,8 +594,8 @@
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
         "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
           500"
-        Famer Loops Multiple Choice: "農夫 - 迴圈：選擇題"
-        Which blocks solve the puzzle?: "哪個程式可以解決這個關卡？"
+        Famer Loops Multiple Choice: 農夫 - 迴圈：選擇題
+        Which blocks solve the puzzle?: 哪個程式可以解決這個關卡？
       4-5 maze conditionals multi 1:
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
@@ -603,8 +603,8 @@
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500"
-        Maze Conditionals Multiple Choice: "迷宮 - 條件判斷（Conditionals）：選擇題"
-        Which blocks solve the puzzle?: "哪些方塊解決了這個難題？"
+        Maze Conditionals Multiple Choice: 迷宮 - 條件判斷（Conditionals）：選擇題
+        Which blocks solve the puzzle?: 哪些方塊解決了這個難題？
       4-5 maze multi 1:
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
@@ -612,8 +612,8 @@
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice: "迷宮：選擇題"
-        Which blocks solve the puzzle?: "哪些方塊解決了這個難題？"
+        Maze Multiple Choice: 迷宮：選擇題
+        Which blocks solve the puzzle?: 哪些方塊解決了這個難題？
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: 3 - 7
@@ -626,10 +626,10 @@
           one and be right.
         What is 2 + 2?: 2 + 2 是多少？
       Choose 2 Test:
-        Line 2: "行 2"
-        Line 3: "行 3"
-        Line 4: "行 4"
-        Line 5: "行 5"
+        Line 2: 行 2
+        Line 3: 行 3
+        Line 4: 行 4
+        Line 5: 行 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
@@ -640,8 +640,8 @@
         "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
         "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
           500"
-        Multiple Choice: "選擇題"
-        Which blocks solve this puzzle?: "哪個程式可以解決這個關卡？"
+        Multiple Choice: 選擇題
+        Which blocks solve this puzzle?: 哪個程式可以解決這個關卡？
       K-1 Artist 1 Multi 2:
         "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
         "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
@@ -649,8 +649,8 @@
         "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
           500"
-        Multiple Choice: "選擇題"
-        Which blocks draw the square?: "哪個程式可以畫出這個正方形？"
+        Multiple Choice: 選擇題
+        Which blocks draw the square?: 哪個程式可以畫出這個正方形？
       K-1 Artist 2 Multi 1:
         "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
         "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
@@ -658,8 +658,8 @@
         "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
         "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
           500"
-        Multiple Choice: "選擇題"
-        Which shape do these squares combine to make?: "這些正方形可以組合出哪個圖形？"
+        Multiple Choice: 選擇題
+        Which shape do these squares combine to make?: 這些正方形可以組合出哪個圖形？
       K-1 Artist Loops Multi 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
@@ -667,53 +667,53 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
           300"
-        Multiple Choice: "選擇題"
-        Which blocks create this picture?: "哪個程式可以創建這個圖形？"
+        Multiple Choice: 選擇題
+        Which blocks create this picture?: 哪個程式可以創建這個圖形？
       K-1 Bee 1 Multi 1:
         "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "合起來有多少花蜜？"
-        Multiple Choice: "選擇題"
+        How many nectars is this?: 合起來有多少花蜜？
+        Multiple Choice: 選擇題
       K-1 Bee 1 Multi 2:
         "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
         "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
         "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
         "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
-        How many nectars is this?: "合起來有多少花蜜？"
-        Multiple Choice: "選擇題"
+        How many nectars is this?: 合起來有多少花蜜？
+        Multiple Choice: 選擇題
       K-1 Digital Footprint Multi 1:
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        Multiple Choice: "選擇題"
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: "哪隻動物留下的數位足跡讓牠最有可能<strong>曝露在危險中</strong>？"
+        Multiple Choice: 選擇題
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 哪隻動物留下的數位足跡讓牠最有可能<strong>曝露在危險中</strong>？
       K-1 Getting Loopy Multi 1:
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
         "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
-        How would you simplify this sequence with loops?: "要如何利用迴圈簡化序列？"
-        Multiple Choice: "選擇題"
+        How would you simplify this sequence with loops?: 要如何利用迴圈簡化序列？
+        Multiple Choice: 選擇題
       K-1 Happy Maps Multi 1:
         "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
         "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
-        Multiple Choice: "選擇題"
-        Which arrow gets the Flurb to the treasure?: "哪個箭頭可以讓 Flurb 拿到寶藏？"
+        Multiple Choice: 選擇題
+        Which arrow gets the Flurb to the treasure?: 哪個箭頭可以讓 Flurb 拿到寶藏？
       K-1 Keep it Private Multi 1:
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-        Multiple Choice: "選擇題"
-        Which information should you <strong>not</strong> share online?: "你<strong>不應該</strong>
-          在線上分享哪種資訊？"
+        Multiple Choice: 選擇題
+        Which information should you <strong>not</strong> share online?: 你<strong>不應該</strong>
+          在線上分享哪種資訊？
       K-1 Maze Debugging Multi 1:
         "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
           700"
@@ -721,24 +721,24 @@
         "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
         "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
         "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
-        Multiple Choice: "選擇題"
-        Which choice should be the final block?: "最後一個積木應該是？"
+        Multiple Choice: 選擇題
+        Which choice should be the final block?: 最後一個積木應該是？
       K-1 Maze Loops Multi 1:
         "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
           300"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
         "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
-        Multiple Choice: "選擇題"
-        Which repeat block is the same?: "哪個重複積木的結果會和左圖一樣？"
+        Multiple Choice: 選擇題
+        Which repeat block is the same?: 哪個重複積木的結果會和左圖一樣？
       K-1 Maze Loops Multi 2:
         "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
           240"
         "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
         "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
         "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
-        Multiple Choice: "選擇題"
-        Pick the correct repeat block.: "選出正確的重複積木。"
+        Multiple Choice: 選擇題
+        Pick the correct repeat block.: 選出正確的重複積木。
       K-1 Maze Multiple Choice 2:
         "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
           500"
@@ -746,70 +746,70 @@
         "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
         "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
         "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
-        Maze: "迷宮"
-        Which answer solves this level?: "哪個答案可以解決這個關卡？"
+        Maze: 迷宮
+        Which answer solves this level?: 哪個答案可以解決這個關卡？
       K-1 Move It Multi 1:
         "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
         "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
         "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
         "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
-        Multiple Choice: "選擇題"
-        Which algorithm gets the Flurb to the flowers?: "哪個演算法可以讓 Flurb 到達花的位置？"
+        Multiple Choice: 選擇題
+        Which algorithm gets the Flurb to the flowers?: 哪個演算法可以讓 Flurb 到達花的位置？
       K-1 Plant a Seed Multi 1:
         "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        Multiple Choice: "選擇題"
-        Which step should go at the beginning of this algorithm?: "這個演算法的開頭應該會是？"
+        Multiple Choice: 選擇題
+        Which step should go at the beginning of this algorithm?: 這個演算法的開頭應該會是？
       K-1 Plant a Seed Multi 2:
         "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
-        Multiple Choice: "選擇題"
-        Which step should fill in the blank for this algorithm?: "哪一個最適合放到演算法的問號處？"
+        Multiple Choice: 選擇題
+        Which step should fill in the blank for this algorithm?: 哪一個最適合放到演算法的問號處？
       K-1 Word Search Multi 1:
         "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
         "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
         "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
         "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
           450"
-        Multiple Choice: "選擇題"
-        Which blocks spell "MOVE"?: "哪個程式可以拼出單字 MOVE？"
+        Multiple Choice: 選擇題
+        Which blocks spell "MOVE"?: 哪個程式可以拼出單字 MOVE？
       K-1 Word Search Multi 2:
         "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
         "/script_assets/k_1_images/move_blocks/NENE.png": "/script_assets/k_1_images/move_blocks/NENE.png"
         "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
         "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
           450"
-        Multiple Choice: "選擇題"
-        Which blocks spell "JUMP"?: "哪個程式可以拼出單字 JUMP？"
+        Multiple Choice: 選擇題
+        Which blocks spell "JUMP"?: 哪個程式可以拼出單字 JUMP？
       K-1 Word Search Multi 3:
         "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
           700"
-        Multiple Choice: "選擇題"
+        Multiple Choice: 選擇題
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE
-        Which word is spelled?: "哪個單字被拼出來了？（中英對照：設置 - Set，正方形 - Square，南 - South ）"
+        Which word is spelled?: 哪個單字被拼出來了？（中英對照：設置 - Set，正方形 - Square，南 - South ）
       K-1 multi 4:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "駕駛與副手"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "這些男孩中的一個是
-          <b>駕駛</b>，而另一個是 <b>副手</b>。"
-        Which boy is the <large>helper</large>?: "哪個男生是<large>副手</large>？"
+        Driver and Helper: 駕駛與副手
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 這些男孩中的一個是
+          <b>駕駛</b>，而另一個是 <b>副手</b>。
+        Which boy is the <large>helper</large>?: 哪個男生是<large>副手</large>？
       K-1 multi 5:
         "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
         "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
         "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
-        Driver and Helper: "駕駛與副手"
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "這些男孩中的一個是
-          <b>駕駛</b>，而另一個是 <b>副手</b>。"
-        This time, which boy is the <large>driver</large>?: "這一回，哪個男生要當<large>駕駛</large>？"
+        Driver and Helper: 駕駛與副手
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 這些男孩中的一個是
+          <b>駕駛</b>，而另一個是 <b>副手</b>。
+        This time, which boy is the <large>driver</large>?: 這一回，哪個男生要當<large>駕駛</large>？
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
           1.blocks1.start_blocks, 350, 100
@@ -830,13 +830,13 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "隨機"
+        random: 隨機
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
-        George Washington: "喬治 · 華盛頓"
-        Martha Washington: "瑪莎 · 華盛頓"
-        Presidents: "總統"
-        This multiple choice is all about the presidents of the United States.: "這個多選題是有關於美國的總統。"
-        Who was the first president of the USA?: "美國第一任總統是誰？"
+        George Washington: 喬治 · 華盛頓
+        Martha Washington: 瑪莎 · 華盛頓
+        Presidents: 總統
+        This multiple choice is all about the presidents of the United States.: 這個多選題是有關於美國的總統。
+        Who was the first president of the USA?: 美國第一任總統是誰？

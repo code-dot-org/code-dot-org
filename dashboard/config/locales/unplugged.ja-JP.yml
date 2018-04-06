@@ -2,126 +2,127 @@
   data:
     unplugged:
       Unplug1:
-        title: "コンピューター・サイエンス入門"
-        desc: "このレッスンではコンピュータ ・ サイエンスの概念を紹介して、コンピューター科学者が普段どのようなことをしているのか解説します。そしてみなさんは、コンピュータ科学者の役割を経験することができます。アクティビティの最後には、学んだ事について復習をする宿題が出されます。レッスンの後に関係ある単語を子供達に教えることなど忘れてしまいがちですが、楽しさと遊びの中で学んでいるこの時期に教える方が、もっと先に同じことを学ぶ機会を待つより遥かに効果的です。"
+        title: コンピューター・サイエンス入門
+        desc: このレッスンではコンピュータ ・ サイエンスの概念を紹介して、コンピューター科学者が普段どのようなことをしているのか解説します。そしてみなさんは、コンピュータ科学者の役割を経験することができます。アクティビティの最後には、学んだ事について復習をする宿題が出されます。レッスンの後に関係ある単語を子供達に教えることなど忘れてしまいがちですが、楽しさと遊びの中で学んでいるこの時期に教える方が、もっと先に同じことを学ぶ機会を待つより遥かに効果的です。
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
-        desc: |
-          何もなくても白紙やマーカーだけで、生徒達は計算論的思考の 4 つのステップを学びます。簡単な紹介の後、生徒達はグループに分かれて、他の生徒達のために（事前に選出したモンスターのカタログから)特定のモンスター を描くための手順を作成します。役割全体を分解し、そしてチームがカタログにあるすべてのモンスターを分析、モンスターの別の詳細を抽象化し、その情報を使用し別のチームが特定のモンスターを描画するためのアルゴリズム (手順) を作成します。チームは別のチームと一緒にアルゴリズムを交換し、そしてそのアルゴリズムの手順に従ってモンスターを描きます。その描画はオリジナルチームが意図していたものですか？
+        title: コンピュテーショナル・シンキング（コンピューターの様に考える）
+        desc: '何もなくても白紙やマーカーだけで、生徒達は計算論的思考の 4 つのステップを学びます。簡単な紹介の後、生徒達はグループに分かれて、他の生徒達のために（事前に選出したモンスターのカタログから)特定のモンスター
+          を描くための手順を作成します。役割全体を分解し、そしてチームがカタログにあるすべてのモンスターを分析、モンスターの別の詳細を抽象化し、その情報を使用し別のチームが特定のモンスターを描画するためのアルゴリズム
+          (手順) を作成します。チームは別のチームと一緒にアルゴリズムを交換し、そしてそのアルゴリズムの手順に従ってモンスターを描きます。その描画はオリジナルチームが意図していたものですか？
+
+'
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
-        title: "グラフ用紙のプログラミング"
-        desc: |+
-          1 つで別の絵を描くことをプログラミングで行うということによって、生徒達はプログラミングがどんなものか本当に理解し始めます。授業では、目の前にある画像を再現するのに、お互いグラフ用紙に色の正方形をつくる指示をすることで始められます。もし時間があれば、生徒自らが作り出した画像でレッスンを締めくくるのことができます。
-
+        title: グラフ用紙のプログラミング
+        desc: "1 つで別の絵を描くことをプログラミングで行うということによって、生徒達はプログラミングがどんなものか本当に理解し始めます。授業では、目の前にある画像を再現するのに、お互いグラフ用紙に色の正方形をつくる指示をすることで始められます。もし時間があれば、生徒自らが作り出した画像でレッスンを締めくくるのことができます。\n\n"
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
-        title: "アルゴリズム"
-        desc: "このレッスンではアルゴリズムを学びます。まずタングラムとグラフ用紙を利用して、可能な限り明確かつ明瞭な指示をすることが大事であることを学びます。その後、紙を折って正方形を作る方法が何通りあり、方法によって紙を折る回数が異なることを学びます。"
+        title: アルゴリズム
+        desc: このレッスンではアルゴリズムを学びます。まずタングラムとグラフ用紙を利用して、可能な限り明確かつ明瞭な指示をすることが大事であることを学びます。その後、紙を折って正方形を作る方法が何通りあり、方法によって紙を折る回数が異なることを学びます。
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
-        title: "関数"
-        desc: "このレッスンでは、学生は特別なチャーム、ビーズ、文字列からサンカッチャーになります。学生は一連の反復的な手順に従いますし、数回を重複している「スキル」の特定のセットを識別するように求められます。これらのスキルを定義すると、彼らはメイン
+        title: 関数
+        desc: このレッスンでは、学生は特別なチャーム、ビーズ、文字列からサンカッチャーになります。学生は一連の反復的な手順に従いますし、数回を重複している「スキル」の特定のセットを識別するように求められます。これらのスキルを定義すると、彼らはメイン
           プログラムから呼び出され、作成の美しい全体のプロセスは、紙の単一シートに記録されます。最終的なプログラムになりますどんな全体クラス チャーム、ビーズ、文字列のタイプを対象します。効果的にこれを可能にする、学生は彼らの特定の材料の詳細を「抽象」と個々
-          供給ためのあいまいな用語を作成する必要があります。 このジェネリック プレース ホルダーの使用は、変数に素晴らしい紹介です。"
+          供給ためのあいまいな用語を作成する必要があります。 このジェネリック プレース ホルダーの使用は、変数に素晴らしい紹介です。
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
-        title: "条件"
-        desc: "これはクラスみんなで行うゲームです。conditional と if-statement そして loop に関する基本的な考え方を紹介した後に、あらかじめ書かれたプログラムと、トランプ、くじ引きを使いながらみんなで練習できるようになっています。"
+        title: 条件
+        desc: これはクラスみんなで行うゲームです。conditional と if-statement そして loop に関する基本的な考え方を紹介した後に、あらかじめ書かれたプログラムと、トランプ、くじ引きを使いながらみんなで練習できるようになっています。
         pdfs:
         - unplug6
         video: Unplug6
       Unplug7:
-        title: "作曲する"
-        desc: "詩を読み解くことは多くの学生にとってとても創造的な活動になります。私達は今では常識とされている知識を define と関数呼び出しの学習へと転換するような活動を行います。学生達が
-          define と call のプロセスに慣れてきたら、それらの関数の呼び出しの中でも、さらにパラメーターの引き渡しについて理解できるような知識を追加していきます。"
+        title: 作曲する
+        desc: 詩を読み解くことは多くの学生にとってとても創造的な活動になります。私達は今では常識とされている知識を define と関数呼び出しの学習へと転換するような活動を行います。学生達が
+          define と call のプロセスに慣れてきたら、それらの関数の呼び出しの中でも、さらにパラメーターの引き渡しについて理解できるような知識を追加していきます。
         pdfs:
         - unplug7
         video: Unplug7
       Unplug8:
-        title: "抽象化"
-        desc: "ここでのアクティビティは、生徒たちが日頃いつも行っている活動を Mad-Lib 形式のゲームを行って表現することによって、抽象的な概念の効果的な使い方を楽しく学べるようにするものです。"
+        title: 抽象化
+        desc: ここでのアクティビティは、生徒たちが日頃いつも行っている活動を Mad-Lib 形式のゲームを行って表現することによって、抽象的な概念の効果的な使い方を楽しく学べるようにするものです。
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
-        title: "プログラミングをリレーします。"
-        desc: "このレッスンは前回のアクティビティ (4. Graph Paper Programming) で習ったスキルを使い、シーケンスで動くプログラムを完成させることや、バグがないかプログラムを頻繁に確認することの重要さを強調します。"
+        title: プログラミングをリレーします。
+        desc: このレッスンは前回のアクティビティ (4. Graph Paper Programming) で習ったスキルを使い、シーケンスで動くプログラムを完成させることや、バグがないかプログラムを頻繁に確認することの重要さを強調します。
         pdfs:
         - unplug9
         video: Unplug9
       Unplug10:
-        title: "インターネット"
-        desc: "このレッスンでは、生徒はインターネットを冒険して、ウェブアドレス、IP や DNS について学びます。"
+        title: インターネット
+        desc: このレッスンでは、生徒はインターネットを冒険して、ウェブアドレス、IP や DNS について学びます。
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
-        title: "まとめ"
-        desc: "最初の20時間のシリーズについての最後のまとめは、クラスの参加者たちに、彼らが楽しんだすべての時間を追体験させることを助けるものとなります。それは同時に、コンピュータ科学の旅を続けていくことに興味を持っている人を対象に、彼らが取り組むべき次のステップを与えることにもなります。"
+        title: まとめ
+        desc: 最初の20時間のシリーズについての最後のまとめは、クラスの参加者たちに、彼らが楽しんだすべての時間を追体験させることを助けるものとなります。それは同時に、コンピュータ科学の旅を続けていくことに興味を持っている人を対象に、彼らが取り組むべき次のステップを与えることにもなります。
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: "ハッピーマップ"
-        desc: "生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。"
+        title: ハッピーマップ
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
       MoveIt:
-        title: "動かせ！動かせ！"
-        desc: "生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。"
+        title: 動かせ！動かせ！
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
       PlantASeed:
-        title: "現実のアルゴリズム：種を植えましょう"
-        desc: "このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。"
+        title: 現実のアルゴリズム：種を植えましょう
+        desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
       BuildingAFoundation:
-        title: "ピラミッドをたてよう"
+        title: ピラミッドをたてよう
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
       GettingLoopy:
         title: Getting Loopy
-        desc: "ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。"
+        desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
       RelayProgramming:
-        title: "リレープログラミング"
+        title: リレープログラミング
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       Conditionals:
-        title: "条件"
-        desc: "カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。"
+        title: 条件
+        desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
       BigEvent:
         title: The Big Event
-        desc: "ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。"
+        desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
       GoingPlacesSafely:
-        title: "安全な道を通って行く"
-        desc: "インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。"
+        title: 安全な道を通って行く
+        desc: インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。
       GraphPaperProgramming:
-        title: "グラフ用紙のプログラミング"
-        desc: "生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。"
+        title: グラフ用紙のプログラミング
+        desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
       PaperPlanes:
-        title: "現実世界のアルゴリズム: 紙飛行機を作る場合"
-        desc: "この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。"
+        title: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+        desc: この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。
       BinaryBracelets:
-        title: "バイナリブレスレット"
+        title: バイナリブレスレット
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
       DigitalFootprint:
-        title: "あなたのデジタルフットプリント"
+        title: あなたのデジタルフットプリント
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       ComputationalThinking:
-        title: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
+        title: コンピュテーショナル・シンキング（コンピューターの様に考える）
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -141,11 +142,11 @@
           part of that, students will identify and write down the algorithm for a
           dice race game.
       Internet:
-        title: "インターネット"
+        title: インターネット
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       Crowdsourcing:
-        title: "クラウドソーシング"
+        title: クラウドソーシング
         desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
@@ -176,21 +177,21 @@
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       SongwritingWithParameters:
-        title: "パラメーターで作詞作曲"
+        title: パラメーターで作詞作曲
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
           will help students intuitively understand why combining chunks of code into
           functions is such a helpful practice.  '
       BinaryImages:
-        title: "バイナリ画像"
+        title: バイナリ画像
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
           illustrates how a computer can store even more complex information (such
           as images and colors) in binary, as well.
       VideoGamesCoordinatePlanes:
-        title: "ビデオゲームと座標平面"
+        title: ビデオゲームと座標平面
         desc: Video Games and Coordinate Planes lesson description
       Contracts:
         title: Contracts
@@ -199,85 +200,85 @@
         title: The Design Recipe
         desc: Design Recipe lesson description
       Booleans:
-        title: "ブール値と論理"
+        title: ブール値と論理
         desc: Booleans lesson description
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Conditionals and Piecewise Functions lesson description
       CollisionDetection:
-        title: "衝突検出とピタゴラスの定理"
+        title: 衝突検出とピタゴラスの定理
         desc: Collision Detection lesson description
       courseA_unplugged_loops:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
-        title: "コンピューターを使わない活動"
+        title: コンピューターを使わない活動
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
-        title: "コンピューターを使わない活動"
+        title: コンピューターを使わない活動
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
           but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: "コンピューターを使わない活動"
+        title: コンピューターを使わない活動
         desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
-        title: "コンピューターを使わない活動"
+        title: コンピューターを使わない活動
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: "コンピューターを使わない活動"
+        title: コンピューターを使わない活動
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
-        title: "コンピューターを使わない活動"
+        title: コンピューターを使わない活動
         desc: Today you will learn about what to do if someone is being mean online.
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: "現実のアルゴリズム：種を植えましょう"
-        desc: "このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。"
+        title: 現実のアルゴリズム：種を植えましょう
+        desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
       courseA_unplugged_happyMaps:
-        title: "ハッピーマップ"
-        desc: "生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。"
+        title: ハッピーマップ
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
       courseA_unplugged_goingPlacesSafely:
-        title: "安全な道を通って行く"
-        desc: "インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。"
+        title: 安全な道を通って行く
+        desc: インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。
       courseABC_unplugged_bigEvent:
         title: The Big Event
-        desc: "ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。"
+        desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
       courseB_unplugged_digitalFootprint:
-        title: "あなたのデジタルフットプリント"
+        title: あなたのデジタルフットプリント
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
       courseC_unplugged_buildingAFoundation:
-        title: "ピラミッドをたてよう"
+        title: ピラミッドをたてよう
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
       courseC_unplugged_paperPlanes:
-        title: "現実世界のアルゴリズム: 紙飛行機を作る場合"
-        desc: "この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。"
+        title: '現実世界のアルゴリズム: 紙飛行機を作る場合'
+        desc: この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。
       courseC_unplugged_gettingLoopy:
         title: Getting Loopy
-        desc: "ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。"
+        desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
       courseC_unplugged_binaryBracelets:
-        title: "バイナリブレスレット"
+        title: バイナリブレスレット
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
       courseD_unplugged_graphPaperProgramming:
-        title: "プログラミングのグラフ用紙"
-        desc: "生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。"
+        title: プログラミングのグラフ用紙
+        desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
       courseD_unplugged_relayProgramming:
-        title: "プログラミングをリレーする"
+        title: プログラミングをリレーする
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
           erase everything back to that point.
       courseD_unplugged_conditionalsCards:
-        title: "カードと条件"
-        desc: "カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。"
+        title: カードと条件
+        desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
       courseD_unplugged_binaryImages:
-        title: "バイナリ画像"
+        title: バイナリ画像
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
@@ -289,15 +290,15 @@
           part of that, students will identify and write down the algorithm for a
           dice race game.
       courseE_unplugged_songwritingParameters:
-        title: "パラメーターで歌や曲をつくる"
+        title: パラメーターで歌や曲をつくる
         desc: Students use the concept of the chorus in a song to learn about defining
           and calling functions.
       courseE_unplugged_internet:
-        title: "インターネット"
+        title: インターネット
         desc: Students send messages representing various Internet transmission methods
           using pieces of paper.
       courseE_unplugged_crowdsourcing:
-        title: "クラウドソーシング"
+        title: クラウドソーシング
         desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
@@ -322,7 +323,7 @@
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
       courseF_unplugged_songwritingParameters:
-        title: "パラメーターで作詞作曲"
+        title: パラメーターで作詞作曲
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson
@@ -403,17 +404,40 @@
         title: ''
         desc: ''
       PlantASeed_2018:
-        title: "現実のアルゴリズム：種を植えましょう"
-        desc: "このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。"
+        title: 現実のアルゴリズム：種を植えましょう
+        desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
       UnplugHappyMaps_2018:
-        title: "ハッピーマップ"
-        desc: "生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。"
+        title: ハッピーマップ
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
       GoingPlacesSafely_2018:
-        title: "安全な道を通って行く"
-        desc: "インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。"
+        title: 安全な道を通って行く
+        desc: インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。
       courseA_unplugged_loops_2018:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       BigEvent_2018:
         title: The Big Event
-        desc: "ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。"
+        desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
+      GraphPaperProgramming_2018:
+        title: プログラミングのグラフ用紙
+        desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
+      courseD_unplugged_digitalCitizenship_2018:
+        title: コンピューターを使わない活動
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: コンピューターを使わない活動
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: 条件
+        desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
+      DigitalFootprint_2018:
+        title: あなたのデジタルフットプリント
+        desc: Teachers introduce to students the idea that putting information about
+          themselves online creates a digital footprint or "trail" that has consequences.
+      BinaryImages_2018:
+        title: バイナリ画像
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.

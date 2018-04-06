@@ -74,13 +74,13 @@
   "penDown": "pero dolu",
   "penTooltip": "Posúva pero hore alebo dole, aby maliar začal alebo prestal kresliť.",
   "penUp": "pero hore",
+  "pointTo": "point to",
   "pixels": "pixely",
   "reinfFeedbackMsg": "Tu je tvoja kresba! Môžeš na nej ďalej pracovať alebo pokračovať na ďalšiu hádanku.",
   "setAlpha": "nastav alfa",
   "setCharacter": "set character to {character}",
   "setColour": "nastav farbu",
   "setPattern": "nastav vzor",
-  "setStickerSize": "Set sticker size",
   "setWidth": "nastav šírku",
   "shareDrawing": "Zdieľajte Vašu kresbu:",
   "showMe": "Ukáž mi",
@@ -94,5 +94,6 @@
   "turnTooltip": "Otočí maliara vľavo alebo vpravo o zadaný počet stupňov.",
   "turtleVisibilityTooltip": "Zviditeľní alebo skryje maliara.",
   "widthTooltip": "Zmení šírku pera.",
+  "withSize": "with size",
   "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1."
 }

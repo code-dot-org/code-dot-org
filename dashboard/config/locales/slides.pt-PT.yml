@@ -35,10 +35,10 @@
           Usarás estas para construir o teu código.
       9:
         image: notes/hoc1_9.jpg
-        text: "À direita está o teu espaço de trabalho, que é a área para onde irás
+        text: À direita está o teu espaço de trabalho, que é a área para onde irás
           arrastar os blocos da caixa de ferramentas que vais usar para criares o
           teu programa. Para apagares um bloco, arrasta-o para o lixo que aparece
-          no canto."
+          no canto.
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloco é uma instrução. Se arrastares o bloco "mover para a frente"

@@ -30,7 +30,7 @@ ja:
           future: 現在までの日付にする
   hello: "世界の皆さん、こんにちは"
   welcome_back: "Welcome Back, %{name}"
-  your_professional_learning_plan: "専門的な学習計画"
+  your_professional_learning_plan: "プロフェッショナル学習計画"
   see_your_learning_plan: "学習計画を参照してください。"
   submit: 送信
   unsubmit: 取り消す
@@ -265,7 +265,7 @@ ja:
       help_support: "ヘルプとサポート"
       report_bug: "バグを報告"
       teacher_community: "先生のコミュニティ"
-      professional_learning: "専門的な学習"
+      professional_learning: "プロフェッショナル ラーニング"
       documentation: "ドキュメント"
       tutorials: "チュートリアル"
       educate_overview: "教育の概要"
@@ -593,8 +593,8 @@ ja:
       title: "マインクラフト"
       body: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
     sports:
-      title: "Sports"
-      body: "Make a basketball game or mix and match across sports."
+      title: "スポーツ"
+      body: "バスケットボールゲームや、様々なスポーツの混合競技をつくろう！"
     text-compression:
       title: "Text Compression"
       body: "In this lesson, students will use the Text Compression Widget to compress text by substituting patterns with symbols."

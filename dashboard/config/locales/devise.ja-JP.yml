@@ -1,76 +1,76 @@
 "ja":
   devise:
     confirmations:
-      confirmed: "あなたのメール アドレスを確認しました。"
-      send_instructions: "数分であなたのアカウントを確認する方法が書かれたメールが届きます。"
-      send_paranoid_instructions: "メールアドレスが登録済みの場合、数分でアカウント確認方法について書かれたメールが届きます。"
+      confirmed: あなたのメール アドレスを確認しました。
+      send_instructions: 数分であなたのアカウントを確認する方法が書かれたメールが届きます。
+      send_paranoid_instructions: メールアドレスが登録済みの場合、数分でアカウント確認方法について書かれたメールが届きます。
     failure:
-      already_authenticated: "既にサインインしています。"
-      inactive: "あなたのアカウントはまだ有効ではありませんでした。"
-      invalid: "メールアドレスまたはパスワードが無効です。"
-      invalid_token: "認証トークンが無効です。"
-      locked: "あなたのアカウントはロックされています。"
-      not_found_in_database: "メールアドレスまたはパスワードが無効です。"
-      timeout: "セッションの有効期限が切れました。もう一度サインインしてください。"
-      unauthenticated: "続ける前に、サインインまたは登録する必要があります。"
-      unconfirmed: "続ける前にあなたのアカウントを確認してください。"
+      already_authenticated: 既にサインインしています。
+      inactive: あなたのアカウントはまだ有効ではありませんでした。
+      invalid: メールアドレスまたはパスワードが無効です。
+      invalid_token: 認証トークンが無効です。
+      locked: あなたのアカウントはロックされています。
+      not_found_in_database: メールアドレスまたはパスワードが無効です。
+      timeout: セッションの有効期限が切れました。もう一度サインインしてください。
+      unauthenticated: 続ける前に、サインインまたは登録する必要があります。
+      unconfirmed: 続ける前にあなたのアカウントを確認してください。
     mailer:
       confirmation_instructions:
         subject: Code.org 確認手順
       reset_password_instructions:
         subject: Code.org パスワードのリセット手順
       unlock_instructions:
-        subject: "ロックを解除する方法"
+        subject: ロックを解除する方法
     omniauth_callbacks:
       failure: "「%{reason}」という理由で%{kind}から認証できませんでした。"
       success: "%{kind} アカウントから正しく認証されました。"
     passwords:
-      no_token: "パスワード再設定メールからのみこのページにアクセスできまます。もしパスワード再設定メールからアクセスしたのであれば、URLが途切れていないか確認してください。"
-      send_instructions: "数分であなたのパスワードをリセットする方法が書かれたメールが届きます。"
-      send_paranoid_instructions: "メールアドレスが登録済みの場合、数分でパスワード再設定リンクが書かれたメールが届きます。"
-      updated: "パスワードは正常に変更されました。サインインしています。"
-      updated_not_active: "あなたのパスワードは変更されました。"
+      no_token: パスワード再設定メールからのみこのページにアクセスできまます。もしパスワード再設定メールからアクセスしたのであれば、URLが途切れていないか確認してください。
+      send_instructions: 数分であなたのパスワードをリセットする方法が書かれたメールが届きます。
+      send_paranoid_instructions: メールアドレスが登録済みの場合、数分でパスワード再設定リンクが書かれたメールが届きます。
+      updated: パスワードは正常に変更されました。サインインしています。
+      updated_not_active: あなたのパスワードは変更されました。
     registrations:
-      destroyed: "さようなら！あなたのアカウントは正しく削除されました。またお会いしましょう。"
-      signed_up: "ようこそ！正常に入会手続きが完了しました。"
-      signed_up_but_inactive: "入会手続きは正常に完了しています。しかし、あなたのアカウントはまだ有効ではないのでサインインできませんでした。"
-      signed_up_but_locked: "正常に入会手続きが完了しました。ただし、あなたのアカウントはロックされているのでサインインできませんでした。"
-      signed_up_but_unconfirmed: "あなたのメールアドレスに、確認リンク付きのメッセージが送信されています。アカウントを有効にするためにリンクを開いてください。"
-      update_needs_confirmation: "あなたのアカウントは更新されましたが、新しいメールアドレスを確認する必要があります。メールをチェックして、新しいメールアドレスを確認するためのリンクをクリックしてください。"
-      updated: "あなたのアカウントを更新しました。"
+      destroyed: さようなら！あなたのアカウントは正しく削除されました。またお会いしましょう。
+      signed_up: ようこそ！正常に入会手続きが完了しました。
+      signed_up_but_inactive: 入会手続きは正常に完了しています。しかし、あなたのアカウントはまだ有効ではないのでサインインできませんでした。
+      signed_up_but_locked: 正常に入会手続きが完了しました。ただし、あなたのアカウントはロックされているのでサインインできませんでした。
+      signed_up_but_unconfirmed: あなたのメールアドレスに、確認リンク付きのメッセージが送信されています。アカウントを有効にするためにリンクを開いてください。
+      update_needs_confirmation: あなたのアカウントは更新されましたが、新しいメールアドレスを確認する必要があります。メールをチェックして、新しいメールアドレスを確認するためのリンクをクリックしてください。
+      updated: あなたのアカウントを更新しました。
     sessions:
       signed_in: ''
-      signed_out: "正しくサインアウトしました。"
+      signed_out: 正しくサインアウトしました。
     unlocks:
-      send_instructions: "数分であなたのアカウントのロックを解除する方法が書かれたメールが届きます。"
-      send_paranoid_instructions: "アカウントが登録済みの場合、数分でロックを解除する方法が書かれたメールが届きます。"
-      unlocked: "あなたのアカウントが正しくロック解除されました。続けるにはサインインしてください。"
+      send_instructions: 数分であなたのアカウントのロックを解除する方法が書かれたメールが届きます。
+      send_paranoid_instructions: アカウントが登録済みの場合、数分でロックを解除する方法が書かれたメールが届きます。
+      unlocked: あなたのアカウントが正しくロック解除されました。続けるにはサインインしてください。
   errors:
     messages:
-      already_confirmed: "すでに確認済です。サインインしてください"
+      already_confirmed: すでに確認済です。サインインしてください
       confirmation_period_expired: "%{period}以内に確認する必要があるので、もう一度リクエストしてください"
-      expired: "期限が切れたので、もう一度リクエストしてください"
-      not_found: "見つかりませんでした"
-      not_locked: "ロックされていませんでした"
+      expired: 期限が切れたので、もう一度リクエストしてください
+      not_found: 見つかりませんでした
+      not_locked: ロックされていませんでした
       not_saved:
-        one: "エラーが1つあるのでこの%{resource}は保存されませんでした："
+        one: エラーが1つあるのでこの%{resource}は保存されませんでした：
         other: "%{count}つのエラーがあるのでこの%{resource}は保存されませんでした："
     invitations:
       send_instructions: "%{email} に招待メールを送りました。"
-      invitation_token_invalid: "この招待コードは使えません。"
-      updated: "パスワードは変更されました。サインインしています。"
-      no_invitations_remaining: "もう招待は残っていません。"
-      invitation_removed: "招待は削除されました。"
+      invitation_token_invalid: この招待コードは使えません。
+      updated: パスワードは変更されました。サインインしています。
+      no_invitations_remaining: もう招待は残っていません。
+      invitation_removed: 招待は削除されました。
       new:
-        header: "招待を送る"
-        submit_button: "招待を送る"
+        header: 招待を送る
+        submit_button: 招待を送る
       edit:
-        header: "パスワードを設定します。"
-        submit_button: "パスワードを設定します。"
+        header: パスワードを設定します。
+        submit_button: パスワードを設定します。
     mailer:
       invitation_instructions:
-        subject: "招待の送り方"
-        hello: "こんにちは %{email}"
-        someone_invited_you: "あなたを %{url} に招待した人がいます。以下のリンクから受け取ってください。"
-        accept: "招待を受け取る"
-        ignore: "招待を受け取らないときは、このメールを無視してください。<br />上のリンクにアクセスしてパスワードを設定しなければ、アカウントは作成されません。"
+        subject: 招待の送り方
+        hello: こんにちは %{email}
+        someone_invited_you: あなたを %{url} に招待した人がいます。以下のリンクから受け取ってください。
+        accept: 招待を受け取る
+        ignore: 招待を受け取らないときは、このメールを無視してください。<br />上のリンクにアクセスしてパスワードを設定しなければ、アカウントは作成されません。

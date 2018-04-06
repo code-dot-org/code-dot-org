@@ -273,7 +273,7 @@
     edit_model: Rediger %{model}
     update: Oppdater
     submit: Send
-    destroy: "Ødelegg"
+    destroy: Ødelegg
     back: Tilbake
     confirm: Er du sikker?
     created: "%{model} ble opprettet."
@@ -693,7 +693,7 @@
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
-  download_pdf: "Åpne oppgaveplanen"
+  download_pdf: Åpne oppgaveplanen
   lesson_plan: Oppgaveplan
   view_lesson_plan: Vis oppgaveplan
   pdf_download: Last ned PDF
@@ -969,7 +969,7 @@
     - hawaiian: Hawaii eller stillehavsøyene
     - american_indian: Amerikansk urbefolkning
     - other: Andre
-    - opt_out: "Ønsker ikke å si"
+    - opt_out: Ønsker ikke å si
     submit: Send
     decline: Lukk
   zendesk_too_young_message: Beklager, yngre brukere kan ikke logge på nettstedet
