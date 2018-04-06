@@ -35,13 +35,13 @@ Puteti spori succesul evenimentului vostru Hour of Code inspirandu-ti copilul sa
 - Videoclipul original al lansării Hour of Code, care îi înfățișează pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh ( există versiuni de [1](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5](https://www.youtube.com/watch?v=nKIu9yen5nc) sau [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - [Videoclipul Ora de Cod la nivel mondial](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Găseşte mai multe [resurse inspirationale](<%= resolve_url('https://code.org/inspire') %>) şi [clipuri video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Este in regula dacă atât tu cât şi copilul tau sunteti incepatori in domeniul tehnologiei computerului si programarii. Aici sunt unele idei ce te vor ajuta in activitatea ta Hour of Code:
 
 - Explica-i copilului tau modurile in care tehnologia are impact asupra vietilor noastre, cu exemple pe care atat baietii cat si fetele le vor intelege(salvarea vietilor, ajutarea oamenilor, conectarea lor etc.).
 - Faceti o lista cu toate lucrurile ce necesita programare din viata de zi cu zi.
-- Vezi sugestii pentru a le stârni fetelor interesul în informatică [aici](<%= resolve_url('https://code.org/girls') %>).
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Vrei mai multe idei? Verifica [planul de lecţie şablon](/files/AfterschoolEducatorLessonPlanOutline.docx) pentru a afla cele mai bune practici ale educatorilor cu experienta.
 
@@ -61,7 +61,7 @@ Este bine să răspunzi:
 
 ## 6) Sărbătoriti
 
-[Printați certificate](<%= resolve_url('https://code.org/certificates') %>) pentru copilul dvs. si pentru dumneavoastră.
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Distribuiti fotografii şi înregistrări video ale evenimentului dumneavoastra Hour of Code pe social media. Utilizati #HourOfCode şi @codeorg, astfel încât putem evidenţia si noi succesul dumneavoastră!
 
@@ -73,7 +73,7 @@ Distribuiti fotografii şi înregistrări video ale evenimentului dumneavoastra 
 
 Hour of Code este doar primul pas într-o călătorie pentru a afla mai multe despre modul în care tehnologia funcționează şi cum se creează aplicațiile software. Pentru a continua această călătorie:
 
-- Încurajaza-ti copilul să continue să [înveţe online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Ajuta la [promovarea](<%= resolve_url('/promote') %>) stiintei computerului si programarii in scoala unde invata copilul tau.
 
 <%= view :signup_button %>

@@ -1,0 +1,27 @@
+targets:
+  - name:      redshift-reporting
+    type:      redshift
+    database:  dashboard
+    host:      <%= CDO.redshift_host %>
+    port:      5439
+    username:  dev
+    password:  <%= CDO.redshift_password %>
+steps:
+  - name: regional-partner-step-1
+    queries:
+      - name: workshop-attendance
+        file: tables/quarterly_workshop_attendance.sql
+      - name: student-activity
+        file: tables/student_activity.sql
+      - name: teacher-most-progress
+        file: tables/teacher_most_progress.sql
+  - name: regional-partner-step-2
+    queries:
+      - name: regional-partner-stats
+        file: tables/regional_partner_stats.sql
+  - name: school-and-state-stats
+    queries:
+      - name: city-year-stats
+        file: tables/outreach_stats_by_year.sql
+      - name: school-level-stats
+        file: tables/school_activity_stats.sql

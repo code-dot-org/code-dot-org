@@ -17,27 +17,34 @@ class CensusMapInfoWindow extends Component {
   render() {
     let censusMessage;
     let missingCensusData = false;
+    let color = "";
 
     switch (this.props.teachesCs) {
       case 'YES':
         censusMessage = "We believe this school offers Computer Science.";
+        color = "green";
         break;
       case 'NO':
         censusMessage = "We believe this school offers limited or no Computer Science opportunities.";
+        color = "blue";
         break;
       case 'HISTORICAL_YES':
         censusMessage = "We believe this school historically offered Computer Science.";
+        color = "green";
         break;
       case 'HISTORICAL_NO':
         censusMessage = "We believe this school historically offered limited or no Computer Science opportunities.";
+        color = "blue";
         break;
       case 'MAYBE':
       case 'HISTORICAL_MAYBE':
         censusMessage = "We have conflicting data for this school.";
+        color = "yellow";
         break;
       default:
         censusMessage = "We need data for this school.";
         missingCensusData = true;
+        color = "white";
     }
 
     const schoolDropdownOption = {
@@ -53,6 +60,8 @@ class CensusMapInfoWindow extends Component {
       },
     };
 
+    const colorClass = `color-small ${color}`;
+
     return (
       <div id="census-info-window" className="census-info-window">
         <h4>
@@ -63,7 +72,21 @@ class CensusMapInfoWindow extends Component {
           ({this.props.city}, {this.props.state})
         </h4>
         <hr />
-        <div className="census-message">{censusMessage}</div>
+        <div className="census-message">
+          <div className={colorClass}></div>
+          {censusMessage}
+          {!missingCensusData && (
+            <span>
+              &nbsp;
+              <a
+                href="/yourschool/about"
+                target="_blank"
+              >
+                (Why?)
+              </a>
+            </span>
+          )}
+        </div>
         <div className="button-container">
           <div className="button-link-div">
             <a onClick={() => this.props.onTakeSurveyClick(schoolDropdownOption, false)}>
@@ -94,7 +117,6 @@ class CensusMapInfoWindow extends Component {
 
 export default class CensusMap extends Component {
   static propTypes = {
-    onSchoolChange: PropTypes.func.isRequired,
     onTakeSurveyClick: PropTypes.func.isRequired,
     fusionTableId: PropTypes.string.isRequired,
     school: PropTypes.object,
@@ -354,10 +376,20 @@ export default class CensusMap extends Component {
           </div>
         </div>
         <div id="map-footer">
-          <span id="footer-text">
-            In partnership with
-          </span>
-          <img src="/images/fit-200/avatars/computer_science_teachers_association.png"/>
+          <div id="left">
+            <a
+              href="/yourschool/about"
+              target="_blank"
+            >
+              Summary of the data sources we use
+            </a>
+          </div>
+          <div id="right">
+            <span id="footer-text">
+              In partnership with
+            </span>
+            <img src="/images/fit-200/avatars/computer_science_teachers_association.png"/>
+          </div>
         </div>
         <br />
         <br />

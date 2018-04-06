@@ -204,6 +204,8 @@ GEM
       activemodel (= 5.0.6)
       activesupport (= 5.0.6)
       arel (~> 7.0)
+    activerecord-import (0.22.0)
+      activerecord (>= 3.2)
     activesupport (5.0.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -781,6 +783,7 @@ DEPENDENCIES
   acmesmith
   active_model_serializers!
   active_record_query_trace
+  activerecord-import
   acts_as_list
   addressable
   annotate
@@ -922,7 +925,7 @@ DEPENDENCIES
   youtube-dl.rb
 
 RUBY VERSION
-   ruby 2.2.7p470
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1

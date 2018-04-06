@@ -44,13 +44,13 @@ Check out **<a href="https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTp
 
 <a name="access"></a>
 ## K-12 Computer Science Access Report
-Which K-12 schools across the US teach computer science? Check out the map at <a href="https://code.org/yourschool#map" target=_blank>https://code.org/yourschool#map</a> to see data we've gathered so far.
+The CSTA and Code.org are partnering to create the first-ever comprehensive report of which schools offer computer science in the US. We are using a combination of crowdsourced surveys, data from curriculum providers like the College Board and data from state departments of education to get information about every school in the country. All the data we are gathering is made public on our site at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a> and as regional partners, you have access to even more data via Tableau. Learn about how to access this data in the [Data Dashboard How-To Guide](https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTpW4qZ-Wnt0U-v1xpNHjss/edit?ts=5a737737#)
 
-The map shows a pin for every school in the US, color coded by whether or not they teach computer science and whether or not we have any data about that school.
+The data we gather can be an incredible resource to you, but only if it is robust. We need your help gathering data about every school in the country!
 
 **How can you help?**
 
-* Include a call in your newsletters for students, teachers, parents, and districts to fill out the survey at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a>. 
+* Include a call in your newsletters for students, teachers, parents, and districts to fill out the survey at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a>. You can find sample language to use in your newsletter[here](https://code.org/educate/regional-partner/playbook/data)
 * Connect to local organizations in your region who can spread the word on your behalf.
 * Connect us to organizations that may already have this information in your region (accessreport@code.org).
 * Share <a href="http://code.org/yourschool" target=_blank>the page</a> on Twitter or Facebook.

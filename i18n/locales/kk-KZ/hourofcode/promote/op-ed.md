@@ -10,7 +10,7 @@ nav: promote_nav
   
 
 
-Информатика туралы нақты мемлекеттік ақпарат табу үшін [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) сілтемесіне өтіңіз.
+Go to [code.org/promote](%= codeorg_url('/promote') %) to find state specific information about computer science.
 
 **Тақырыбы: Есептеу... Жұмыстар Қайда**
 

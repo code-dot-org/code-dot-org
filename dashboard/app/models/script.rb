@@ -675,6 +675,12 @@ class Script < ActiveRecord::Base
       stage_name = raw_script_level.delete(:stage)
       properties = raw_script_level.delete(:properties) || {}
 
+      if new_suffix && properties[:variants]
+        properties[:variants] = properties[:variants].map do |old_level_name, value|
+          ["#{old_level_name}_#{new_suffix}", value]
+        end.to_h
+      end
+
       script_level_attributes = {
         script_id: script.id,
         chapter: (chapter += 1),

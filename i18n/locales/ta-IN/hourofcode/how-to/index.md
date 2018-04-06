@@ -5,63 +5,63 @@ nav: how_to_nav
 ---
 <%= view :signup_button %>
 
-<h1>How to teach one Hour of Code</h1>
+<h1>மணிநேரத்தில் நிரலாக்கத்தை எப்படி கற்பிப்பது</h1>
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to help run an Hour of Code in your class.
+இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. எப்படி செய்வது என்று காட்டும் காணொளியை பார்க்க <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2. Choose a tutorial for your hour
+## 2. பயிற்சியை தேர்வு செய்க
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+எல்லா வயதினருக்கும், அனுபவ மட்டங்களுக்கும், பல்வேறு வகையான வேடிக்கையான, [ மாணவர் வழிகாட்டப்பட்ட பயிற்சிகள் ](%= resolve_url('/learn') %) வழங்கும். மாணவர்களே தங்கள் சொந்த நடவடிக்கைகளை மேற்கொள்கிறார்கள், இருப்பினும் பல நடவடிக்கைகள், ஆசிரியர்களுக்கான பாடம் திட்டங்களைக் கொண்டுள்ளன (கலந்துரையாடலை நீங்கள் கிளிக் செய்யும் போது) விவாதத்தை வழிகாட்ட அல்லது செயல்பாடு நீட்டிக்க வேண்டும். [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
 
-## 3. Promote your Hour of Code
+## 3. உங்கள் கோடை மணிநேரத்தை ஊக்குவிக்கவும்
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+இந்த கருவியை [ உங்கள் கருவிகளைப் ](%= resolve_url('/promote/resources') %) ஊக்குவிக்கவும் மற்றும் அவர்களின் சொந்த நிகழ்வுகளை நடத்த மற்றவர்களை ஊக்குவிக்கவும்.
 
-## 4. Plan your technology needs - computers are optional
+## 4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். மணிநேர நிரலாக்கம் சொல்லிக் கொடுக்கப்படும் ஒவ்வொரு குழந்தைக்கும் ஒரு கணினி இருக்க **தேவையில்லை**. ஒரு கணினி கூட இல்லாமலும் சொல்லித்தர முடியும்.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+மாணவர்களின் கணினியில், சாதனங்களில் பயிற்சிகளை சோதிக்கவும். உலாவிகளில், ஒலி மற்றும் வீடியோ ஒழுங்காக இயங்குவதை உறுதிப்படுத்தவும். ** குறைவான பட்டையகலம் உள்ளதா? ** அனைத்து மாணவருக்கும் சேர்த்து வகுப்பின் முன், வீடியோக்களைக் காட்ட திட்டம் செய்க. அப்படி செய்வதால் ஒவ்வொரு மாணவரும் தங்கள் சொந்த வீடியோக்களை பதிவிறக்கம் செய்யவில்லை. அல்லது unplugged / அகல்நிலை பயிற்சிகளையும் முயற்சிக்கவும்.
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+ஒலியோடு சிறந்த இயங்கும் பயிற்சியை நீங்கள் தேர்ந்து எடுத்தால், வகுப்பிற்கான காதணிபாடிகள் நீங்களே வழங்கலாம் அல்லது மாணவர்கள் தங்கள் சொந்தமாக காதணிபாடிகளை கொண்டு வரும்படியும் கேட்கலாம்.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+** போதுமான சாதனங்கள் இல்லையா? </ strong> [ ஜோடி நிரலாக்க ](https://www.youtube.com/watch?v=vgkahOzFH2Q) என்பதைப் பயன்படுத்துக. மாணவர்கள் பங்குதாரர் போது, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் ஆசிரியர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.</p> 
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+## 5. எழுச்சியூட்டும் பேச்சாளரோடோ அல்லது காணொளியொடோ உங்கள் மணிநேர நிரலாக்கத்தை தொடங்கவும்
 
-**Invite a [local volunteer](%= resolve_url('https://code.org/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
-**Show an inspirational video:**
+**ஒரு தூண்டுதலாக வீடியோவை காட்டு:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- அசல் Code.org வெளியீட்டு வீடியோ, பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நட்சத்திர கிறிஸ் போஷ் ஆகியவற்றைக் கொண்டது. [ 1 நிமிடம் ](https://www.youtube.com/watch?v=qYZF6oIZtfc), <a href = "https://www.youtube.com/watch?v = nKIu9yen5nc "> 5 நிமிடம் </a>, மற்றும் [ 9 நிமிட ](https://www.youtube.com/watch?v=dU1xS07N-FA) பதிப்புகளில் கிடைக்கும்)
+- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**நீங்கள் மற்றும் உங்கள் மாணவர்கள் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் நேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:**
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
-- As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls')%).
+- தொழில்நுட்பங்கள் நம் வாழ்வில் தாக்கத்தை ஏற்படுத்தும் வழிகளை விவரிக்கவும், சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களையும் எடுத்துக் கொள்ளுங்கள் (உயிர்களை காப்பாற்றுவதைப் பற்றி பேசுதல், மக்களுக்கு உதவுதல், மக்கள் இணைப்பது போன்றவை).
+- ஒரு வர்க்கமாக, அன்றாட வாழ்வில் குறியீட்டை பயன்படுத்தும் விஷயங்களை பட்டியலிடுங்கள்.
+- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
 
-## 6. Code!
+## 6. கோட்!
 
-**Direct students to the activity**
+**நடவடிக்கைக்கு நேரடி மாணவர்களுக்கு**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
+- ஒரு whiteboard இல் பயிற்சி இணைப்பை எழுதவும். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் [ தேர்ந்தெடுத்த டுடோரியலுக்கான தகவல் ](%= resolve_url('/learn')%) பட்டியலிடப்பட்ட இணைப்பைக் கண்டறியவும்.
 
-**When your students come across difficulties it's okay to respond:**
+**உங்கள் மாணவர்கள் சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை:**
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "
+- "தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது."
+- "நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "
 
-**What if a student finishes early?**
+**ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?**
 
-- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
-- Or, ask students who finish early to help classmates who are having trouble with the activity.
+- ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?
+- அல்லது, நடவடிக்கைகளைத் தொந்தரவு செய்யும் வகுப்புத் தோழர்களுக்கு உதவ ஆரம்பிக்கிற மாணவர்களைக் கேட்கவும்.
 
 [col-33]
 
@@ -71,7 +71,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate
+## 7. கொண்டாடுங்கள்
 
 [col-33]
 
@@ -79,29 +79,31 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 [/col-33]
 
-- [Print certificates](%= resolve_url('https://code.org/certificates')%) for your students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-
-[col-33]
-
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
+- [Print certificates](%= codeorg_url('/certificates')%) for your students.
+- [ உங்கள் கோடெக்ஸின் ஒரு மணிநேரம் நான் அச்சிட்டுள்ளேன்! ](%= fix_url('/promote/resources#stickers') %)
+- உங்கள் பள்ளிக்காக  தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும்.</li> 
+    
+    - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</ul> 
+    
+    [col-33]
+    
+    ![](/images/fit-260/highlight-certificates.jpg)
+    
+    [/col-33]
 
 <p style="clear:both">&nbsp;</p>
 
-## Other Hour of Code resources for educators:
-
-- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
-
-## What comes after the Hour of Code?
-
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
-
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond')%).
-- [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
-
-<%= view :signup_button %>
+    
+    ## கல்வியாளர்களுக்கான கோட் வளங்களின் பிற மணி:...
+    
+    - அறிவுரை, அறிவுரை மற்றும் மற்ற கல்வியாளர்களிடமிருந்து உதவி பெற [ கோட் டீச்சர் அரங்கத்தின் மணிநேரத்தை பார்வையிடவும்](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
+    - [ கோட் FAQ இன் மணிநேரத்தை ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) மதிப்பாய்வு செய்யவும். <% end %>
+    
+    ## கோட் ஆஃப் ஹவர் என்ன ஆனது?
+    
+    தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும்.
+    
+    - Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
+    - [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+    
+    <%= view :signup_button %>

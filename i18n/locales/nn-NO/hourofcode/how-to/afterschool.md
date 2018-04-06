@@ -7,19 +7,19 @@ nav: how_to_nav
 
 # Korleis undervise Kodetimen på AKS/SFO og fritidsklubbar
 
-Bli med og introduser en gruppe elever til deres første time i informatikk ved å følge disse stegene. Kodetimen er enkel å organisere, selv for nybegynnere! Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig](%= resolve_url('https://code.org/volunteer/local') %) som kan hjelpe til med å organisere Kodetimen for klassen din.
+Bli med i rørsla og introdusér ei gruppe elevar til deira fyrste time i koding med desse trinna. Kodetimen er enkel å organisere, sjølv for nybyrjarar! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
 
 ## 1. Sjå denne rettleiingsvideoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Vel ei oppgåve
 
-I samarbeid med våre partnere har vi laget flere [morsomme en-times oppgaver](%= resolve_url('https://code. org/learn') %) tilpasset ulike alderstrinn. [Prøv dei!](%= resolve_url('/learn') %)
+I samarbeid med våre partnere har vi laget fleire [morosamme en-times oppgaver](%= resolve_url('https://code. org/learn') %) tilpassa ulike alderstrinn. [Prøv dei!](%= resolve_url('/learn') %)
 
 **Alle kodetimeaktivitetar** krev minimal førebuingstid, og er sjølvforklarande slik at deltakarane kan arbeide i eige tempo og dugleiksnivå.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-Trenger du en **timeplan** for gjennomføring av Kodetimen på SFO / AKS? Sjekk ut denne [malen](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+Treng du ein **timeplan** for gjennomføring av Kodetimen på Sfo / Aks? Sjekk ut denne [malen](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Marknadsfør Kodetimen din
 
@@ -95,7 +95,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 
 [/col-33]
 
-- [Skriv ut diplomar](%= resolve_url('https://code.org/certificates') %) til elevane dine.
+- [Print certificates](%= codeorg_url('/certificates') %) for your students.
 - [Skriv ut "Eg gjennomførte Kodetimen!"](%= resolve_url('/promote/resources#stickers') %)-klistremerke til elevane dine.
 - [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til skulen din.
 - Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
@@ -110,7 +110,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 
 ## Andre ressursar til Kodetimen for lærarar:
 
-- Se [anbefalte fremgangsmåter](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra tidligere arrangører av Kodetimen. 
+- Se [anbefalte fremgangsmåter](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra tidligere arrangører av Kodetimen.
 - Se på opptaket av vårt webinar [Lærerens Guide til Kodetimen](https://youtu.be/EJeMeSW2-Mw).
 - Sjekk ut råd, tips og erfaringer fra andre lærere på [Kodetimens lærerforum](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
 - Sjå på [ofte stilte spørsmål om Kodetimen](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
@@ -119,7 +119,7 @@ Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informa
 
 Kodetimen er berre første steget på ei reise for å lære seg meir om korleis teknologi fungerer og korleis du lagar dine eigne program. For å halde fram på denne reisa:
 
-- Oppmuntre elevane til å halde fram å [lære på nettet](%= resolve_url('https://code.org/learn/beyond') %).
-- [Delta på](%= resolve_url('https://code.org/professional-development-workshops') %) en 1-dags seminar der du vil få opplæring fra en erfaren tilretteleggar med kompetanse innan informatikk. (gjeld kun lærarar i USA)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -5690,6 +5690,8 @@ en:
               name: Nested Loops with Frozen
             Nested Loops:
               name: Nested Loops
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
@@ -6124,6 +6126,8 @@ en:
               name: Building a Foundation
             Nested Loops:
               name: Nested Loops
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
           title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
@@ -7050,6 +7054,8 @@ en:
               name: Crowdsourcing
             Build a Star Wars Game:
               name: Build a Star Wars Game
+            Functions in Harvester:
+              name: Functions in Harvester
           title: Course E 2018
           description_audience: ''
           description_short: ''
@@ -7469,6 +7475,8 @@ en:
               name: Programming in Harvester
             Loops in Harvester:
               name: Loops in Harvester
+            Sequencing in Maze:
+              name: Sequencing in Maze
         express-2018:
           title: Express Course
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -7673,6 +7681,10 @@ en:
               name: Events in Play Lab
               description_student: ''
               description_teacher: ''
+            Programming in Ice Age:
+              name: Programming in Ice Age
+            Loops in Ice Age:
+              name: Loops in Ice Age
         coursed-2018:
           title: New Course D Script
           description: ''
@@ -7757,6 +7769,8 @@ en:
               name: Using Behaviors
             Using Forever Loops:
               name: Using Forever Loops
+            Virtual Pet - Behaviors:
+              name: Virtual Pet - Behaviors
           title: ''
           description_audience: ''
           description_short: ''

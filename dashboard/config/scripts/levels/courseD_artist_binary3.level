@@ -36,33 +36,20 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 19:11:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:41:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 19:11:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:41:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-02 22:42:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "repeat_loops": 2
   }
 }]]></config>
   <blocks>
-    <start_blocks>
+    <initialization_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">8</title>
-              <statement name="DO">
-                <block type="procedures_callnoreturn" inline="true">
-                  <mutation name="draw">
-                    <arg name="binary"/>
-                  </mutation>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation>
             <arg name="binary"/>
@@ -264,6 +251,24 @@
               </next>
             </block>
           </statement>
+        </block>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn" inline="true">
+                  <mutation name="draw">
+                    <arg name="binary"/>
+                  </mutation>
+                </block>
+              </statement>
+            </block>
+          </next>
         </block>
       </xml>
     </start_blocks>

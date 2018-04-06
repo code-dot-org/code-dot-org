@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '~> 2.2'
+ruby '~> 2.5'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -294,3 +294,5 @@ end
 install_if require_pg do
   gem 'pg', require: false
 end
+
+gem 'activerecord-import'
