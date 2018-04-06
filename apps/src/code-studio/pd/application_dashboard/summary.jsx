@@ -15,6 +15,10 @@ import $ from 'jquery';
 export class Summary extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string,
+    regionalPartnerFilter: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     isWorkshopAdmin: PropTypes.bool
   };
 
@@ -27,6 +31,16 @@ export class Summary extends React.Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
+      this.load(nextProps.regionalPartnerFilter);
+    }
+  }
+
+  componentWillMount() {
+    this.load(this.props.regionalPartnerFilter);
+  }
+
   componentWillUnmount() {
     this.abortLoad();
   }
@@ -37,7 +51,7 @@ export class Summary extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter = this.state.regionalPartnerFilter) {
+  load(regionalPartnerFilter = this.props.regionalPartnerFilter) {
     this.abortLoad();
     this.setState({loading: true});
 
@@ -58,13 +72,6 @@ export class Summary extends React.Component {
     });
   }
 
-  handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerName = selected.label;
-    const regionalPartnerFilter = selected.value;
-    this.setState({regionalPartnerName, regionalPartnerFilter});
-    this.load(selected.value);
-  };
-
   render() {
     return (
       <div>
@@ -74,12 +81,11 @@ export class Summary extends React.Component {
         }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
-            onChange={this.handleRegionalPartnerChange}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            regionalPartnerFilter={this.props.regionalPartnerFilter}
             additionalOptions={dropdownOptions}
           />
         }
-        <h1>{this.state.regionalPartnerName}</h1>
+        <h1>{this.props.regionalPartnerName}</h1>
         {this.state.loading
           ? <Spinner />
           : this.renderSummaryTables()
@@ -128,5 +134,6 @@ export class Summary extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
+  regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(Summary);

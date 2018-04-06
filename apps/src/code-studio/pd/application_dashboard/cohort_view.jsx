@@ -20,6 +20,10 @@ const styles = {
 class CohortView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartnerFilter: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -39,13 +43,19 @@ class CohortView extends React.Component {
     regionalPartnerName: this.props.regionalPartnerName
   };
 
-  load(selected = null) {
+  componentWillMount() {
+    this.load(this.props.regionalPartnerFilter);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
+      this.load(nextProps.regionalPartnerFilter);
+    }
+  }
+
+  load(regionalPartnerFilter = this.props.regionalPartnerFilter) {
     let url = this.getJsonUrl();
     if (this.props.isWorkshopAdmin) {
-      const regionalPartnerFilter = selected ? selected.value : this.state.regionalPartnerFilter;
-      const regionalPartnerName = selected ? selected.label : this.state.regionalPartnerName;
-      this.setState({ regionalPartnerName, regionalPartnerFilter });
-
       url += `&regional_partner_filter=${regionalPartnerFilter}`;
     }
 
@@ -62,16 +72,12 @@ class CohortView extends React.Component {
       });
   }
 
-  handleRegionalPartnerChange = (selected) => {
-    this.load(selected);
-  };
-
   getApiUrl = (format = '') => `/api/v1/pd/applications/cohort_view${format}?role=${this.props.route.role}`;
   getJsonUrl = () => this.getApiUrl();
   getCsvUrl = () => {
     let url = this.getApiUrl('.csv');
-    if (this.props.isWorkshopAdmin && this.state.regionalPartnerFilter) {
-      url += `&regional_partner_filter=${this.state.regionalPartnerFilter}`;
+    if (this.props.isWorkshopAdmin && this.props.regionalPartnerFilter) {
+      url += `&regional_partner_filter=${this.props.regionalPartnerFilter}`;
     }
 
     return url;
@@ -97,15 +103,14 @@ class CohortView extends React.Component {
         {this.state.applications &&
           <CohortCalculator
             role={this.props.route.role}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            regionalPartnerFilter={this.props.regionalPartnerFilter}
             accepted={accepted}
             registered={registered}
           />
         }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
-            onChange={this.handleRegionalPartnerChange}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            regionalPartnerFilter={this.props.regionalPartnerFilter}
             additionalOptions={dropdownOptions}
           />
         }
@@ -114,7 +119,7 @@ class CohortView extends React.Component {
         }
         {!this.state.loading &&
           <div>
-            <h1>{this.state.regionalPartnerName}</h1>
+            <h1>{this.props.regionalPartnerName}</h1>
             <h2>{this.props.route.applicationType}</h2>
             <Col md={6} sm={6}>
               <Button
@@ -138,5 +143,6 @@ class CohortView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
+  regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin
 }))(CohortView);

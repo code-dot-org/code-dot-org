@@ -40,6 +40,10 @@ const styles = {
 export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartnerFilter: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
@@ -59,16 +63,23 @@ export class QuickView extends React.Component {
     this.state = {
       loading: true,
       applications: null,
-      filter: '',
-      regionalPartnerName: props.regionalPartnerName
+      filter: ''
     };
     this.loadRequest = null;
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
+      this.load(nextProps.regionalPartnerFilter);
+    }
   }
 
   componentWillMount() {
     const statusList = ApplicationStatuses[this.props.route.viewType];
     this.statuses = statusList.map(v => ({value: v.toLowerCase(), label: v}));
     this.statuses.unshift({value: '', label: "All statuses"});
+
+    this.load(this.props.regionalPartnerFilter);
   }
 
   componentWillUnmount() {
@@ -81,7 +92,7 @@ export class QuickView extends React.Component {
     }
   }
 
-  load(regionalPartnerFilter = this.state.regionalPartnerFilter) {
+  load(regionalPartnerFilter = this.props.regionalPartnerFilter) {
     this.abortLoad();
     this.setState({loading: true});
 
@@ -117,14 +128,6 @@ export class QuickView extends React.Component {
     this.setState({ filter });
   };
 
-  handleRegionalPartnerChange = (selected) => {
-    const regionalPartnerFilter = selected ? selected.value : null;
-    const regionalPartnerName = regionalPartnerFilter ? selected.label : this.props.regionalPartnerName;
-    this.setState({ regionalPartnerName, regionalPartnerFilter });
-
-    this.load(regionalPartnerFilter);
-  };
-
   render() {
     let accepted = 0;
     let registered = 0;
@@ -141,15 +144,14 @@ export class QuickView extends React.Component {
         {this.state.applications &&
           <CohortCalculator
             role={this.props.route.role}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            regionalPartnerFilter={this.props.regionalPartnerFilter}
             accepted={accepted}
             registered={registered}
           />
         }
         {this.props.isWorkshopAdmin &&
           <RegionalPartnerDropdown
-            onChange={this.handleRegionalPartnerChange}
-            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            regionalPartnerFilter={this.props.regionalPartnerFilter}
             additionalOptions={dropdownOptions}
           />
         }
@@ -158,7 +160,7 @@ export class QuickView extends React.Component {
         }
         {!this.state.loading &&
           <Row>
-            <h1>{this.state.regionalPartnerName}</h1>
+            <h1>{this.props.regionalPartnerName}</h1>
             <h2>{this.props.route.applicationType}</h2>
             <Col md={6} sm={6}>
               <Button
@@ -206,5 +208,6 @@ export class QuickView extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
+  regionalPartnerFilter: state.regionalPartnerFilter,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(QuickView);
