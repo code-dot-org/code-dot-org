@@ -245,7 +245,22 @@ class User < ActiveRecord::Base
     unless provider == 'migrated'
       return self[:email]
     end
-    primary_email.email
+    if primary_email.nil?
+      nil
+    else
+      primary_email.email
+    end
+  end
+
+  def hashed_email
+    unless provider == 'migrated'
+      return self[:hashed_email]
+    end
+    if primary_email.nil?
+      nil
+    else
+      primary_email.hashed_email
+    end
   end
 
   def facilitator?
