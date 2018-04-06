@@ -13,7 +13,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ruby --version  # --> ruby 2.5.0
      node --version  # --> v6.9.0
      npm --version   # --> 3.10.8
-     yarn -V         # --> 0.23.2
+     yarn -v         # --> 0.23.2
      ```
 1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
 1. `gem install bundler`

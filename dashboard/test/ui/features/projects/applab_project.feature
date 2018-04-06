@@ -89,6 +89,7 @@ Scenario: Applab Flow
 
   # TODO - maybe we do a remix and/or create new as well
 
+@no_mobile
 Scenario: Save Project After Signing Out
   Given I create a student named "Sally Student"
   And I am on "http://studio.code.org/projects/applab/new"
@@ -114,6 +115,7 @@ Scenario: Save Project After Signing Out
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// comment 1"
 
+@no_mobile
 Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
   And I am on "http://studio.code.org/s/csp3/stage/5/puzzle/3"
