@@ -1,5 +1,5 @@
 @dashboard_db_access
-#@eyes
+@eyes
 
 Feature: Teacher Application
 
@@ -99,7 +99,7 @@ Scenario: Basic teacher application submission
 
   # Confirmation page
   Then I wait until element "h1" contains text "Thank you for submitting your application to join Code.org’s Professional Learning Program!"
-#  Then I see no difference for "Confirmation"
+  Then I see no difference for "Confirmation"
 
   # Principal approval
   Then I sign out
