@@ -292,7 +292,8 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
   // Block for pointing to a specified direction
-    block.appendValueInput('VALUE');
+    block.appendValueInput('VALUE')
+        .setCheck(blockly.BlockValueType.NUMBER);
     block.appendDummyInput()
         .appendTitle(msg.degrees());
   });
