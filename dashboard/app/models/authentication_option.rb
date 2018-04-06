@@ -24,4 +24,26 @@
 class AuthenticationOption < ApplicationRecord
   acts_as_paranoid
   belongs_to :user
+
+  # These are duplicated
+  before_save :normalize_email, :hash_email, :fix_by_user_type
+
+  def fix_by_user_type
+    self.email = '' if user.student?
+  end
+
+  def normalize_email
+    return unless email.present?
+    self.email = email.strip.downcase
+  end
+
+  def self.hash_email(email)
+    Digest::MD5.hexdigest(email.downcase)
+  end
+
+  def hash_email
+    return unless email.present?
+    self.hashed_email = AuthenticationOption.hash_email(email)
+    self.authentication_id = hashed_email if credential_type == 'email'
+  end
 end

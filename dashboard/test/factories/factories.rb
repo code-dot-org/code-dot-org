@@ -274,6 +274,13 @@ FactoryGirl.define do
     hashed_email {''}
     credential_type {'email'}
     authentication_id {''}
+
+    factory :email_authentication_option do
+      sequence(:email) {|n| "testuser#{n}@example.com.xx"}
+      after(:create) do |auth|
+        auth.authentication_id = auth.hashed_email
+      end
+    end
   end
 
   factory :districts_users do
