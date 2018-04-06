@@ -26,7 +26,7 @@ import {
 class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
-    scriptId: PropTypes.string.isRequired,
+    scriptId: PropTypes.number.isRequired,
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
