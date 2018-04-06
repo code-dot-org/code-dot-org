@@ -10,9 +10,8 @@ import { showShareDialog } from './components/shareDialogRedux';
 import { PublishableProjectTypesOver13 } from '../util/sharedConstants';
 import experiments from '../util/experiments';
 
-export function shareProject() {
+export function shareProject(shareUrl = dashboard.project.getShareUrl()) {
   dashboard.project.save().then(() => {
-    const shareUrl = dashboard.project.getShareUrl();
 
     var i18n = window.dashboard.i18n;
 
@@ -23,11 +22,9 @@ export function shareProject() {
       document.body.appendChild(dialogDom);
     }
 
-    // TODO: ditch this in favor of react-redux connector
-    // once more of code-studio is integrated into mainline react tree.
-    const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+    const appType = pageConstants.appType;
 
     // Allow publishing for any project type that older students can publish.
     // Younger students should never be able to get to the share dialog in the
