@@ -1,0 +1,38 @@
+hidden false
+login_required true
+hideable_stages true
+student_detail_progress_view true
+has_verified_resources true
+
+stage 'Unit 1 - Assessment 1'
+assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep'
+
+stage 'Unit 1 - Assessment 2'
+assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep'
+
+stage 'Unit 2 - Assessment 1'
+assessment 'CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep'
+
+stage 'Unit 2 - Assessment 2'
+assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep'
+
+stage 'Unit 3 - Assessment 1'
+assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep'
+
+stage 'Unit 4 - Assessment 1'
+assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep'
+
+stage 'Unit 5 - Assessment 1'
+assessment 'CSP Unit 5 Cumulative Assessment 1 MC_exam_prep'
+
+stage 'Unit 5 - Assessment 2'
+assessment 'CSP Unit 5 Cumulative Assessment 2 MC_exam_prep'
+
+stage 'Unit 2 - Assessment 3'
+assessment 'CSP Unit 5 Cumulative Assessment 3 MC_exam_prep'
+
+stage 'Unit 2 - Assessment 4'
+assessment 'CSP Unit 5 Cumulative Assessment 4 MC_exam_prep'
+
+stage 'Unit 2 - Assessment 5 - Practice AP Pseudocode Questions'
+assessment 'CSP Cumulative Assess A_exam_prep'
