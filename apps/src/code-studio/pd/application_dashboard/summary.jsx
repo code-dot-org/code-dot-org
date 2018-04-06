@@ -14,11 +14,11 @@ import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string,
+    regionalPartnerName: PropTypes.string.isRequired,
     regionalPartnerFilter: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
-    ]),
+    ]).isRequired,
     isWorkshopAdmin: PropTypes.bool
   };
 
