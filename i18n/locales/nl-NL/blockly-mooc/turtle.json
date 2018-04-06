@@ -74,13 +74,13 @@
   "penDown": "potlood neer",
   "penTooltip": "Optillen of laten zakken van het potlood, om te starten of stoppen met tekenen.",
   "penUp": "potlood optillen",
+  "pointTo": "point to",
   "pixels": "pixels",
   "reinfFeedbackMsg": "Hier is je tekening! Blijf er aan werken of ga verder naar de volgende puzzel.",
   "setAlpha": "zet doorzichtigheid",
   "setCharacter": "zet personnage naar {character}",
   "setColour": "kleur instellen",
   "setPattern": "patroon instellen",
-  "setStickerSize": "Set sticker size",
   "setWidth": "dikte instellen",
   "shareDrawing": "Deel je tekening:",
   "showMe": "Laat zien",
@@ -94,5 +94,6 @@
   "turnTooltip": "Draait de kunstenaar links of rechts met het opgegeven aantal graden.",
   "turtleVisibilityTooltip": "Maakt de kunstenaar zichtbaar of onzichtbaar.",
   "widthTooltip": "Verandert de dikte van het potlood.",
+  "withSize": "with size",
   "wrongColour": "Je plaatje is de verkeerde kleur. Voor deze puzzel moet het %1 zijn."
 }

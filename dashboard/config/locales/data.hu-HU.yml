@@ -22,7 +22,7 @@
         Farmer3: A Farmer 3
         Unplug10: Az internet
         Artist5: A Művész 5
-        Unplug11: "Összefoglaló"
+        Unplug11: Összefoglaló
         MazeEC: A labirintus
         Bounce: Visszapattanós
         Flappy: Flappy madár
@@ -63,8 +63,8 @@
         maze_2_2_5: Tervezd meg az utat a malacig. A TNT-t viszont kerüld el mindenképp,
           vagy repülsz!
         maze_2_3: Vezess el a zöld förtelemig! (Vigyázz a TNT-vel)
-        maze_2_4: "Őrizd meg a nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként
-          lehet, hogy dühös leszek!"
+        maze_2_4: Őrizd meg a nyugalmad, és segíts megkeresni Rossz Disznót. Egyébként
+          lehet, hogy dühös leszek!
         maze_2_5: Van egy 2 utasításból álló út a malachoz. Kitalálod?
         maze_2_6: Próbálj meg elvezetni a zöld behatolóhoz nem több, mint 3 utasítás
           használatával.
@@ -265,9 +265,9 @@
           függvényt? Próbáld ki, aztán rajzolj egy egész házsort.
         turtle_3_10: Sokat tanultál! Most ezt a tudást használd arra, hogy szabadon
           rajzolj. Próbálhatsz rajzolni csillagot, spirált, vagy egy izgalmas hópehelyhet.
-        maze_karel_debug_seq_1: "Üdvözölünk hibakeresés földjén! A kódom nem fut helyesen.
+        maze_karel_debug_seq_1: Üdvözölünk hibakeresés földjén! A kódom nem fut helyesen.
           Látod már a problémát, és ki tudod javítani, hogy előkészíthessem a földet
-          az ültetéshez?"
+          az ültetéshez?
         maze_karel_debug_seq_2: Mi a baj ezzel a programmal? Hogyan lehet kijavítani,
           hogy eltávolíthassam a földhányásokat?
         maze_karel_debug_repeat: Irtsd ki a programhibákat, hogy a földem sima és
@@ -304,7 +304,7 @@
           az egészet, és írhat helyette valami teljesen mást)
         maze_3_1: El kell kapnom a malacot. Gépelj be néhány move(); (mozgás()) utasítást,
           hogy visszakapjam a tojásaimat.
-        maze_3_2: "Írj egy programot, hogy megtehessem az egész utat a malachoz."
+        maze_3_2: Írj egy programot, hogy megtehessem az egész utat a malachoz.
         maze_3_3: Hogy jussak el a malachoz? Vigyázz, nehogy belefussak egy doboz
           TNT-be!
         maze_3_4: Ahh! Írj nekem egy programot, amivel elkerülhetem a TNT-t és eljuthatok
@@ -401,10 +401,10 @@
         studio_playlab_8: Ki tudnád egészíteni egy blokkal, ami a pontokat számolja,
           és egy másik blokkal, ami hangot ad, ha az egyszarvú nekifut egy varázslónak?
           Aztán mozgasd az egyszarvút a nyilakkal, amíg pontot nem szerzel.
-        studio_playlab_9: "Állítsd be ennek a földönkívüli inváziónak a hátterét,
-          és segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd
+        studio_playlab_9: Állítsd be ennek a földönkívüli inváziónak a hátterét, és
+          segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd
           a nyíl billentyűket, hogy elérjen a földönkívülihez, és figyelmeztetni tudjon
-          másokat"
+          másokat
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész
           gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_iceage_hello1: Sid összeakar mindenkit gyűjteni egy új kalandra. Tudsz
@@ -542,7 +542,7 @@
         Unplug8: Absztrakció
         Unplug9: Váltó programozás
         Unplug10: Internet
-        Unplug11: "Összefoglaló"
+        Unplug11: Összefoglaló
         C1_happy_maps_unplugged: Vidám térképek
         C1_moveitmoveit_unplugged: Mozgás, mozgás
         C1_bigevent_unplugged: A nagy esemény
@@ -787,6 +787,9 @@
         applab_intro_share: App Lab - Share Your App
         csd_applab_arrays: Introduction to Arrays
         CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Loops with BB-8
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
@@ -801,7 +804,7 @@
           vannak rendezve
         set_sprite_image: Illeszd a "szereplő beállítása" blokkot az "amikor a történet
           kezdődik" blokkhoz, hogy a szereplő része legyen a történetnek
-        studio_say_text: "Írd idézőjelek közé a szereplő által mondani kívánt szöveget"
+        studio_say_text: Írd idézőjelek közé a szereplő által mondani kívánt szöveget
         jigsaw_click: Kattints erre a blokkra!
         move_elsa_forward: Húzd a "menj előre" blokkot és illeszd azt a "futtatáskor"
           blokk alá ahhoz, hogy Elsa előre lépjen
@@ -875,21 +878,21 @@
         write_draw_triangle_function: Húzz ide olyan blokkokat az eszköztárból, amelyek
           egy háromszöget rajzolnak
         edit_add_parameter: Kattints a szerkesztésre, hogy paramétert adj a függvényedhez
-        add_and_drag_parameter: "Írd be ide a paramétered nevét, kattints a hozzáadásra,
-          majd húzd a függvényed leírásába"
-        fill_in_actor: "Írd be a ??? helyére a szereplőknek megfelelő számokat (1,
-          2, és 3)"
+        add_and_drag_parameter: Írd be ide a paramétered nevét, kattints a hozzáadásra,
+          majd húzd a függvényed leírásába
+        fill_in_actor: Írd be a ??? helyére a szereplőknek megfelelő számokat (1,
+          2, és 3)
         repeat: Tedd a blokkokat a ciklusok belsejébe a parancsok ismétléséhez!
         if_bee_nectar: Használd a "ha" blokkot, hogy eldöntsd hogy a méhnek kell-e
           nektárt kapnia
         if_else_bee: Használd a "ha/különben" blokkot, hogy a méh nektárt kapjon a
           virágból, és mézet csináljon, ha az nem virág
-        repeat_full_circle: "Írd be a számát, hogy hányszor kell a zombinak mozognia,
-          hogy egy teljes kört leírjon"
+        repeat_full_circle: Írd be a számát, hogy hányszor kell a zombinak mozognia,
+          hogy egy teljes kört leírjon
         place_length_variable: Húzd a hossza változót ide a kérdőjelek helyére
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
         right_arrow_fireball: A jobbra nyíllal tudod kilőni a tűzgolyókat
-        name_function: "Írd be a függvény nevét ide"
+        name_function: Írd be a függvény nevét ide
         Infinity_move_right_runbutton: Itt adj hozzá mozgasd blokkot
         Infinity_move_directions_callout: Melyik blokk mozgatja majd Baymaxot fölfelé,
           ha megnyomjuk a fel gombot?

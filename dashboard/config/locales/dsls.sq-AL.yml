@@ -15,8 +15,7 @@
           me lëvizjet e kërcimit.
         Matching: Lidhje
       2-3 Binary Match 1:
-        "/script_assets/2-3_images/unplugged/binary_1_a1.png": |
-          /script_assets/2-3_images/unplugged/binary_1_a1.png
+        "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png\n"
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
         "/script_assets/2-3_images/unplugged/binary_1_a3.png": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
         "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
@@ -298,9 +297,9 @@
           shumë të thjeshta për tu bashkuar. Lëvize rreth e rrotull derisa ta bësh.
         Sydney: Sidnej
         Van Minnen: Van Minnen
-        What color is the sky?: "Çfarë ngjyre ka qielli?"
+        What color is the sky?: Çfarë ngjyre ka qielli?
         What's Brent's last name?: Cili është mbiemri i Brent-it?
-        What's in the ocean?: "Çfarë ka nën oqean?"
+        What's in the ocean?: Çfarë ka nën oqean?
         Where is Brendan from?: Nga është Brendan-i?
         blue: blu
         salt: kripë
@@ -831,8 +830,8 @@
         "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which step should go at the beginning of this algorithm?: "Çfarë hapi duhet
-          të bëhet në fillim të këtij algoritmi?"
+        Which step should go at the beginning of this algorithm?: Çfarë hapi duhet
+          të bëhet në fillim të këtij algoritmi?
       K-1 Plant a Seed Multi 2:
         "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"

@@ -35,8 +35,8 @@
             students to create authentic artifacts.
         allthethingscourse:
           title: allthethings námskeið
-          description_short: "Þetta er námskeið fyrir allthethings"
-          description_student: "Þetta er námskeið fyrir allthethings og er með lengri
-            lýsingu fyrir nemendur"
-          description_teacher: "Þetta er námskeið fyrir allthethings og er með lengri
-            lýsingu fyrir kennara"
+          description_short: Þetta er námskeið fyrir allthethings
+          description_student: Þetta er námskeið fyrir allthethings og er með lengri
+            lýsingu fyrir nemendur
+          description_teacher: Þetta er námskeið fyrir allthethings og er með lengri
+            lýsingu fyrir kennara

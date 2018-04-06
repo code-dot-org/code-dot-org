@@ -74,13 +74,13 @@
   "penDown": "baixar o lapis",
   "penTooltip": "Levanta ou baixa o lapis, para comezar ou parar de debuxar.",
   "penUp": "levantar o lapis",
+  "pointTo": "point to",
   "pixels": "píxeles",
   "reinfFeedbackMsg": "Aquí está o teu debuxo! Continúa a traballar nel, ou segue para o próximo desafío.",
   "setAlpha": "definir alfa",
   "setCharacter": "configurar personaxe a {character}",
   "setColour": "definir cor",
   "setPattern": "definir padrón",
-  "setStickerSize": "Set sticker size",
   "setWidth": "definir o longo",
   "shareDrawing": "Comparta o seu debuxo:",
   "showMe": "Móstreme",
@@ -94,5 +94,6 @@
   "turnTooltip": "Vira o artista á dereita ou á esquerda usando o número especificado de graos.",
   "turtleVisibilityTooltip": "Fai que o artista fique visíbel ou invisíbel.",
   "widthTooltip": "Cambia o longo do lapis.",
+  "withSize": "with size",
   "wrongColour": "A túa figura ten unha cor errónea. Para este desafío necesita ser %1."
 }

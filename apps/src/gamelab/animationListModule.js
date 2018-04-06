@@ -439,7 +439,7 @@ export function cloneAnimation(key) {
       key: newAnimationKey,
       props: Object.assign({}, sourceAnimation, {
         name: generateAnimationName(sourceAnimation.name + '_copy', animationList.propsByKey),
-        version: null,
+        version: sourceAnimation.version,
         saved: false
       })
     });
@@ -750,17 +750,8 @@ export function animationSourceUrl(key, props, withVersion = false, channelId = 
   }
 
   // 2. Otherwise it's local to this project, and we should use the animation
-  //    key to look it up in the animations API.
-  return animationsApi.basePath(key) + '.png' +
-      (
-        (withVersion && props.version)
-        ? '?version=' + props.version
-        // Temporary: Local-cachebust animation requests, so after restoring
-        // and old version of the project the client isn't seeing newer animations.
-        // Should be able to tear this out once we always request animations
-        // by specific version.
-        : '?cachebust=' + Math.floor(Math.random() * 0xFFFFFF).toString(16)
-      );
+  //    key and version to look it up in the animations API.
+  return animationsApi.basePath(key) + '.png?version=' + (props.version || '');
 }
 
 /**
@@ -775,7 +766,7 @@ export function withAbsoluteSourceUrls(serializedList) {
   list.orderedKeys.forEach(key => {
     let props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, props, true);
+    const relativeUrl = animationSourceUrl(key, props);
     const sourceLocation = document.createElement('a');
     sourceLocation.href = relativeUrl;
     props.sourceUrl = sourceLocation.href;

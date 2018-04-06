@@ -2,21 +2,24 @@ import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
-import SessionAttendance from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance';
+import {SessionAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance';
 import Spinner from "@cdo/apps/code-studio/pd/components/spinner";
 import {COURSE_CSF} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
+import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 const FAKE_WORKSHOP_ID = 11;
 const FAKE_SESSION_ID = 22;
 const FAKE_COURSE_NAME = 'Computer Science Postulates';
 const DEFAULT_PROPS = {
+  permission: new Permission(),
   workshopId: FAKE_WORKSHOP_ID,
   course: FAKE_COURSE_NAME,
   sessionId: FAKE_SESSION_ID,
   isReadOnly: false,
   onSaving: () => {},
   onSaved: () => {},
-  accountRequiredForAttendance: false
+  accountRequiredForAttendance: false,
+  enrollmentCount: 25
 };
 const FAKE_API_RESPONSE = {
   session: {

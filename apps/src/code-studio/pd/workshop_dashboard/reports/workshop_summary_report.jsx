@@ -2,8 +2,12 @@
  * Workshop Summary Report
  */
 import React, {PropTypes} from "react";
+import {connect} from 'react-redux';
 import ReportTable from "./report_table";
-import Permission from '../../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin
+} from '../permission';
 import {
   Checkbox,
   Button
@@ -19,8 +23,9 @@ const styles = {
   link: {cursor: 'pointer'}
 };
 
-export default class WorkshopSummaryReport extends React.Component {
+export class WorkshopSummaryReport extends React.Component {
   static propTypes = {
+    permission: PermissionPropType.isRequired,
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
@@ -36,10 +41,6 @@ export default class WorkshopSummaryReport extends React.Component {
     rows: null,
     showFacilitatorDetails: false
   };
-
-  componentWillMount() {
-    this.permission = new Permission();
-  }
 
   componentDidMount() {
     this.load();
@@ -183,7 +184,7 @@ export default class WorkshopSummaryReport extends React.Component {
       });
     }
 
-    if (this.permission.isWorkshopAdmin) {
+    if (this.props.permission.has(WorkshopAdmin)) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}
@@ -255,3 +256,7 @@ export default class WorkshopSummaryReport extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(WorkshopSummaryReport);

@@ -1,0 +1,25 @@
+name 'cspu5_assess1_additem_exam_prep'
+wrong 'cart total = 1;'
+wrong 'cartTotal + 1;'
+right 'cartTotal = cartTotal +1;'
+wrong 'var cartTotal = cartTotal + 1;'
+wrong 'var cartTotal + 1;'
+
+
+markdown <<MARKDOWN
+Jasmine is writing a shopping app.  She has created a variable to keep track of the number of items in the shopping cart.  Every time someone clicks the “addItemButton”, she would like the variable to increase by 1.
+
+![](https://images.code.org/c0a0429e482ef79e3127059fe270a041-image-1475371042841.png)
+
+What code should Jasmine insert where it says `<missing code>` in order for her app to work?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 4,5**
+
+Since Jasmine wants to increase the cartTotal by one every time the "addItemButton" is clicked, the new cartTotal should be the current cartTotal plus one. In other words,
+
+_cartTotal = cartTotal + 1;_
+
+Since the variable cartTotal is already initialized in line 1, the word "var" is not necessary because that would create a new local variable instead of adding on to the existing cartTotal.
+MARKDOWN

@@ -13,7 +13,7 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         Match the button combination to the dance moves.: Match the button combination
           to the dance moves.
-        Matching: "การจับคู่"
+        Matching: การจับคู่
       2-3 Binary Match 1:
         "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
         "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
@@ -25,8 +25,8 @@
         "<strong>O</strong>": "<strong>O</strong>"
         "<strong>P</strong>": "<strong>P</strong>"
         "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: "การจับคู่"
-        Use the key to match each code to its letter: "ใช้คีย์เพื่อจับคู่โค้ดแต่ละอันกับตัวอักษร"
+        Matching: การจับคู่
+        Use the key to match each code to its letter: ใช้คีย์เพื่อจับคู่โค้ดแต่ละอันกับตัวอักษร
       2-3 Graph Paper Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -34,8 +34,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program.: "จับคู่ตารางกับโปรแกรม"
-        Matching: "การจับคู่"
+        Match the grid to the program.: จับคู่ตารางกับโปรแกรม
+        Matching: การจับคู่
       2-3 Maze Match 2:
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
@@ -44,10 +44,10 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "ลากบล็อกเพื่อให้จับคู่"
-        Instructions: "คำแนะนำ"
-        Match the puzzles to the blocks: "จับคู่ปริศนากับบล็อก"
-        Maze Match: "จับคู่เขาวงกต"
+        Drag the blocks to match.: ลากบล็อกเพื่อให้จับคู่
+        Instructions: คำแนะนำ
+        Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
+        Maze Match: จับคู่เขาวงกต
       2-3 Relay Programming Match 1:
         "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
@@ -55,8 +55,8 @@
         "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        Match the grid to the program: "จับคู่ตารางกับโปรแกรม"
-        Matching: "การจับคู่"
+        Match the grid to the program: จับคู่ตารางกับโปรแกรม
+        Matching: การจับคู่
       2-3 artist loops match 1:
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
@@ -66,8 +66,8 @@
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        Artist Loops Matching One: "ศิลปินลูปจับคู่หนึ่ง"
-        Match the loop to the shape: "จับคู่ลูปกับรูปภาพ"
+        Artist Loops Matching One: ศิลปินลูปจับคู่หนึ่ง
+        Match the loop to the shape: จับคู่ลูปกับรูปภาพ
       2-3 artist match 1:
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
@@ -77,9 +77,9 @@
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
-        Artist Matching: "จับคู่ศิลปิน"
-        Match the shape with the blocks that complete it.: "จับคู่รูปทรงเลขาคณิต กับ
-          บล๊อก ที่เข้ากันได้"
+        Artist Matching: จับคู่ศิลปิน
+        Match the shape with the blocks that complete it.: จับคู่รูปทรงเลขาคณิต กับ
+          บล๊อก ที่เข้ากันได้
       2-3 bounce match 1:
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
@@ -91,9 +91,9 @@
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
         "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
-        Bounce Matching: "การจับคู่ Bounce"
-        Match the events with the actions: "จับคู่ Events กับ actions"
-        Matching: "การจับคู่"
+        Bounce Matching: การจับคู่ Bounce
+        Match the events with the actions: จับคู่ Events กับ actions
+        Matching: การจับคู่
       2-3 flappy match 1:
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
@@ -101,9 +101,9 @@
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
         "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
-        Flappy Matching One: "จับคู่แฟล๊ปปี้ หนึ่ง"
-        Match the events with the actions: "จับคู่ Events กับ actions"
-        Matching: "การจับคู่"
+        Flappy Matching One: จับคู่แฟล๊ปปี้ หนึ่ง
+        Match the events with the actions: จับคู่ Events กับ actions
+        Matching: การจับคู่
       2-3 maze match 1:
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
@@ -111,8 +111,8 @@
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        Match the puzzles to the blocks: "จับคู่ปริศนากับบล็อก"
-        Maze Match One: "จับคู่เขาวงกต หนึ่ง"
+        Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
+        Maze Match One: จับคู่เขาวงกต หนึ่ง
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
         "<h4>2)</h4>": "<h4>2)</h4>"
@@ -127,7 +127,7 @@
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match
           the steps in the Dice Race game to the order that they should appear in
           the algorithm.
-        Matching: "การจับคู่"
+        Matching: การจับคู่
       4-5 Computational Thinking Match 1:
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
@@ -144,7 +144,7 @@
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each
           of these vehicles has been decomposed into smaller pieces. Match each vehicle
           with its decomposed list.
-        Matching: "การจับคู่"
+        Matching: การจับคู่
       4-5 Suncatchers Match 1:
         "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
@@ -157,7 +157,7 @@
         "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: Match
           each program to the word it makes, using the provided group of skills.
-        Matching: "การจับคู่"
+        Matching: การจับคู่
       4-5 maze match 1:
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
@@ -166,10 +166,10 @@
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
         "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
-        Drag the blocks to match.: "ลากบล็อกเพื่อให้จับคู่"
-        Instructions: "คำแนะนำ"
-        Match the puzzles to the blocks: "จับคู่ปริศนากับบล็อก"
-        Maze Match: "จับคู่เขาวงกต"
+        Drag the blocks to match.: ลากบล็อกเพื่อให้จับคู่
+        Instructions: คำแนะนำ
+        Match the puzzles to the blocks: จับคู่ปริศนากับบล็อก
+        Maze Match: จับคู่เขาวงกต
       K-1 Artist 2 Match 1:
         "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
         "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
@@ -177,9 +177,9 @@
         "<br/><br/>above": "<br/><br/>บน"
         "<br/><br/>below": "<br/><br/>ล่าง"
         "<br/><br/>next to": "<br/><br/>ข้างๆ"
-        Is the square next to, above, or below the ball?: "สี่เหลี่ียมจตุรัส อยู่
-          ข้างๆ ข้างบน หรือ ข้างล่าง ของ ลูกบอล?"
-        Matching: "การจับคู่"
+        Is the square next to, above, or below the ball?: สี่เหลี่ียมจตุรัส อยู่ ข้างๆ
+          ข้างบน หรือ ข้างล่าง ของ ลูกบอล?
+        Matching: การจับคู่
       K-1 Artist 2 Match 2:
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
         "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
@@ -189,8 +189,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
-        Match the shapes based on type.: "จับคู่รูปทรงเลขาคณิตตามชนิดของมัน."
-        Matching: "การจับคู่"
+        Match the shapes based on type.: จับคู่รูปทรงเลขาคณิตตามชนิดของมัน.
+        Matching: การจับคู่
       K-1 Artist 2 Match 3:
         "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
         "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
@@ -200,8 +200,8 @@
         "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
         "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
         "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
-        Match the shapes based on type.: "จับคู่รูปทรงเลขาคณิตตามชนิดของมัน."
-        Matching: "การจับคู่"
+        Match the shapes based on type.: จับคู่รูปทรงเลขาคณิตตามชนิดของมัน.
+        Matching: การจับคู่
       K-1 Artist Loops Match 1:
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
@@ -209,8 +209,8 @@
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
         "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
-        Match the code to the stairs it draws.: "จับคู่โปรแกรมกับบันไดที่มันวาด."
-        Matching: "การจับคู่"
+        Match the code to the stairs it draws.: จับคู่โปรแกรมกับบันไดที่มันวาด.
+        Matching: การจับคู่
       K-1 Bee Loops Match 1:
         "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
         "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
@@ -220,8 +220,8 @@
         "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
         "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
         "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
-        Match the blocks: "จับคู่บล๊อก"
-        Matching: "การจับคู่"
+        Match the blocks: จับคู่บล๊อก
+        Matching: การจับคู่
       K-1 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
@@ -232,7 +232,7 @@
         "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         Match the button combination to the dance moves.: Match the button combination
           to the dance moves.
-        Matching: "การจับคู่"
+        Matching: การจับคู่
       K-1 Flappy Match 1:
         "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
         "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
@@ -240,8 +240,8 @@
         "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
         "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
         "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
-        Match the blocks: "จับคู่บล๊อก"
-        Matching: "การจับคู่"
+        Match the blocks: จับคู่บล๊อก
+        Matching: การจับคู่
       K-1 Happy Maps Match 1:
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
         "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
@@ -251,7 +251,7 @@
         "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
         Match the Map to the arrow that gets the Flurb to the treasure: Match the
           Map to the arrow that gets the Flurb to the treasure
-        Matching: "การจับคู่"
+        Matching: การจับคู่
       K-1 Maze Match 1:
         "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
@@ -262,10 +262,10 @@
         "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
         "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
         "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
-        Drag the blocks to match.: "ลากบล็อกเพื่อให้จับคู่"
-        Instructions: "คำแนะนำ"
-        Match the puzzles and blocks: "จับคู่ปริศนากับบล๊อก"
-        Matching: "การจับคู่"
+        Drag the blocks to match.: ลากบล็อกเพื่อให้จับคู่
+        Instructions: คำแนะนำ
+        Match the puzzles and blocks: จับคู่ปริศนากับบล๊อก
+        Matching: การจับคู่
       K-1 Move It Match 1:
         "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
         "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
@@ -275,7 +275,7 @@
         "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
         Match the Map to the algorithm that gets the Flurb to the flowers.: Match
           the Map to the algorithm that gets the Flurb to the flowers.
-        Matching: "การจับคู่"
+        Matching: การจับคู่
       test matching image:
         "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
         "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
@@ -287,21 +287,21 @@
         "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
         "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: "คำแนะนำ"
+        Instructions: คำแนะนำ
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: "การจับคู่"
+        Matching: การจับคู่
         Some really easy stuff to match.  Drag it around until you get it.: Some really
           easy stuff to match.  Drag it around until you get it.
-        Sydney: "ซิดนีย์"
+        Sydney: ซิดนีย์
         Van Minnen: Van Minnen
-        What color is the sky?: "ท้องฟ้ามีสีอะไร"
-        What's Brent's last name?: "นามสกุลของเบรนท์คืออะไร"
-        What's in the ocean?: "อะไรอยู่ในมหาสมุทร"
-        Where is Brendan from?: "เบรนแดนมาจากที่ไหน"
-        blue: "ฟ้า"
-        salt: "เกลือ"
+        What color is the sky?: ท้องฟ้ามีสีอะไร
+        What's Brent's last name?: นามสกุลของเบรนท์คืออะไร
+        What's in the ocean?: อะไรอยู่ในมหาสมุทร
+        Where is Brendan from?: เบรนแดนมาจากที่ไหน
+        blue: ฟ้า
+        salt: เกลือ
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -338,7 +338,7 @@
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Multiple Choice
-        Which program makes this image?: "โปรแกรมไหนใช้สร้างรูปนี้?"
+        Which program makes this image?: โปรแกรมไหนใช้สร้างรูปนี้?
       2-3 Conditionals Multi 1:
         "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
@@ -363,7 +363,7 @@
         "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Multiple Choice
-        Which program makes this image?: "โปรแกรมไหนใช้สร้างรูปนี้?"
+        Which program makes this image?: โปรแกรมไหนใช้สร้างรูปนี้?
       2-3 Maze Multi 2:
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
@@ -379,7 +379,7 @@
         "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         Multiple Choice: Multiple Choice
-        Which program does not create this image?: "โปรแกรมไหนไม่ได้ใช้สร้างภาพนี้?"
+        Which program does not create this image?: โปรแกรมไหนไม่ได้ใช้สร้างภาพนี้?
       2-3 Relay Programming Multi 2:
         "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
@@ -466,10 +466,10 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500"
         Maze Multiple Choice One: Maze Multiple Choice One
-        Which set of blocks is the correct answer?: "กลุ่มบล๊อกไหนเป็นคำตอบที่ถูกต้อง?"
+        Which set of blocks is the correct answer?: กลุ่มบล๊อกไหนเป็นคำตอบที่ถูกต้อง?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
-        Banana: "กล้วยหอม"
+        Banana: กล้วยหอม
         Brushing your teeth: Brushing your teeth
         Multiple Choice: Multiple Choice
         Shopping from a grocery list: Shopping from a grocery list
@@ -494,20 +494,20 @@
         Which of these pictures best represents crowdsourcing?: Which of these pictures
           best represents crowdsourcing?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: "หวีผมของคุณ"
-        Cleaning your room: "ทำความสะอาดห้องของคุณ"
-        Eating your dessert: "กินขนมหวานของคุณ"
+        Brushing your hair: หวีผมของคุณ
+        Cleaning your room: ทำความสะอาดห้องของคุณ
+        Eating your dessert: กินขนมหวานของคุณ
         Multiple Choice: Multiple Choice
-        Washing your face: "ล้างหน้าของคุณ"
+        Washing your face: ล้างหน้าของคุณ
         Which one of these activities would be best for practicing crowdsourcing?: Which
           one of these activities would be best for practicing crowdsourcing?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Multiple Choice
         Which piece of information listed below is okay to share on the internet?: Which
           piece of information listed below is okay to share on the internet?
-        Your address: "ที่อยู่ของคุณ"
-        Your birthday: "วัดเกิดของคุณ"
-        Your favorite food: "อาหารที่คุณโปรดปราน"
+        Your address: ที่อยู่ของคุณ
+        Your birthday: วัดเกิดของคุณ
+        Your favorite food: อาหารที่คุณโปรดปราน
         Your parent's credit card number: Your parent's credit card number
       4-5 Internet Multi 1:
         "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
@@ -801,7 +801,7 @@
         "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
         "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
         "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
-        Maze: "เขาวงกต"
+        Maze: เขาวงกต
         Which answer solves this level?: Which answer solves this level?
       K-1 Move It Multi 1:
         "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
@@ -889,13 +889,13 @@
           circle to code, the correct order is
         left top right: left top right
         left, right, top: left, right, top
-        random: "ค่าสุ่ม"
+        random: ค่าสุ่ม
         top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
         George Washington: George Washington
         Martha Washington: Martha Washington
-        Presidents: "ประธานาธิบดี"
-        This multiple choice is all about the presidents of the United States.: "โจทย์ข้อนี้เกี่ยวกับประธานาธิบดีของสหรัฐอเมริกา"
-        Who was the first president of the USA?: "ประธานาธิบดีคนแรกของสหรัฐอเมริกาคือใคร"
+        Presidents: ประธานาธิบดี
+        This multiple choice is all about the presidents of the United States.: โจทย์ข้อนี้เกี่ยวกับประธานาธิบดีของสหรัฐอเมริกา
+        Who was the first president of the USA?: ประธานาธิบดีคนแรกของสหรัฐอเมริกาคือใคร

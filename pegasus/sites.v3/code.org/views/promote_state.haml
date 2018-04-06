@@ -13,7 +13,7 @@
       =format_integer_with_commas(data[:cs_jobs_i])
     open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
-  %p.fact{style: "color: #ddd;"}
+  %p.fact.subfact
     (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
 %p.fact
   -unless data[:cs_graduates] == 0
@@ -24,7 +24,7 @@
 %p.fact
   = precede "Policy Environment (" do
     = succeed "):" do
-      %a{href: 'http://bit.ly/9policiesrubric', style: 'color: white; cursor: pointer;', target: '_blank'} rubric
+      %a{href: 'http://bit.ly/9policiesrubric', target: '_blank'} rubric
 
 %div.fact{style: "margin-left: 20px;"}
   - if data[:pd_funding_s] == "No"
@@ -94,6 +94,13 @@
     %a{:href=>"/advocacy/state-facts/#{state}.pdf", target: '_blank'}
       %button{style: 'height:40px; padding-left: 20px; padding-right: 20px;'}<
         View #{statename} fact-sheet
+
+- if request.site == "advocacy.code.org"
+  - if ! state.nil_or_empty?
+    %div.take-action
+      %a{:href=>CDO.advocacy_url('/action')}
+        %button{style: 'height:40px; padding-left: 20px; padding-right: 20px; margin-bottom: 20px'}<
+          Take action in your state
 
 -if data[:text_t]
   %p

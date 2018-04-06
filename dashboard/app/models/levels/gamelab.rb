@@ -93,6 +93,10 @@ class Gamelab < Blockly
     true
   end
 
+  def age_13_required?
+    true
+  end
+
   def self.palette
     SharedConstants::GAMELAB_BLOCKS
   end

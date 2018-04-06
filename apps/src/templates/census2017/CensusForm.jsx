@@ -26,6 +26,7 @@ export const censusFormPrefillDataShape = PropTypes.shape({
 class CensusForm extends Component {
   static propTypes = {
     prefillData: censusFormPrefillDataShape,
+    initialSchoolYear: PropTypes.number,
     schoolDropdownOption: PropTypes.object,
     onSchoolDropdownChange: PropTypes.func,
     showExistingInaccuracy: PropTypes.bool,
@@ -45,6 +46,8 @@ class CensusForm extends Component {
       selectedTopics: [],
       otherTopicsDesc: '',
       schoolName: prefillData['schoolName'] || '',
+      schoolYear: this.props.initialSchoolYear,
+      showSchoolYearDropdown: false,
       submission: {
         name: prefillData['userName'] || '',
         email: prefillData['userEmail'] || '',
@@ -71,6 +74,14 @@ class CensusForm extends Component {
       }
     };
   }
+
+  showSchoolYearDropdown = () => {
+    this.setState({showSchoolYearDropdown: true});
+  };
+
+  handleSchoolYearChange = (event) => {
+    this.setState({schoolYear: event ? event.value : this.props.initialSchoolYear});
+  };
 
   handleChange = (field, event) => {
     this.setState({
@@ -340,7 +351,6 @@ class CensusForm extends Component {
           {i18n.yourSchoolTellUs()}
         </h2>
         <form id="census-form">
-        <input type="hidden" id="school_year" name="school_year" value="2017"/>
           <CountryAutocompleteDropdown
             onChange={this.handleDropdownChange.bind("country")}
             value={submission.country}
@@ -382,6 +392,37 @@ class CensusForm extends Component {
                 />
               </label>
             </div>
+          )}
+          {!this.state.showSchoolYearDropdown && (
+             <div>
+               <div style={styles.question}>
+                 Please answer the questions below about the {this.props.initialSchoolYear}-{this.props.initialSchoolYear+1} school year.
+                 (<a onClick={this.showSchoolYearDropdown}>Answer for a different school year.</a>)
+               </div>
+             <input type="hidden" id="school_year" name="school_year" value={this.props.initialSchoolYear}/>
+             </div>
+          )}
+          {this.state.showSchoolYearDropdown && (
+            <label style={styles.dropdownBox}>
+              <span style={styles.question}>
+                Choose a school year:
+              </span>
+              <select
+                name="school_year"
+                value={this.state.schoolYear}
+                onChange={this.handleSchoolYearChange}
+                style={styles.dropdown}
+              >
+                {[this.props.initialSchoolYear - 1, this.props.initialSchoolYear, this.props.initialSchoolYear + 1].map((schoolYear) => (
+                  <option
+                    value={schoolYear}
+                    key={schoolYear}
+                  >
+                    {schoolYear} - {schoolYear + 1}
+                  </option>
+                ))}
+              </select>
+            </label>
           )}
           <div style={styles.question}>
             How much <span style={{fontWeight: 'bold'}}> coding/computer programming </span> is taught at this school? (assume for the purposes of this question that this does not include HTML/CSS, Web design, or how to use apps)
@@ -541,7 +582,7 @@ class CensusForm extends Component {
                   {i18n.censusExistingInaccuracyTip()}
                   &nbsp;
                   <a
-                    href="/yourschool/defining-computer-science"
+                    href="/yourschool/about"
                     target="_blank"
                   >
                     {i18n.censusExistingInaccuracyTipLink()}

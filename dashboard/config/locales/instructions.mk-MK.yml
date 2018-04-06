@@ -226,8 +226,9 @@
         Rebuild the code from the last puzzle,
         but this time, add a left turn of 30 degrees inside the loop. Now, repeat
         it 24 times instead of 8.
-      2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+      2-3 Artist Loops New 12_instruction: 'Draw a diamond with sides of 100 pixels.
+
+'
       2-3 Artist Loops New 13_instruction: |-
         We are going to start you with some code
         (in grey) to make one diamond. \r
@@ -1307,7 +1308,7 @@
         start you with the 4x2 image Maddie was creating, but we've left out the
         last two squares. Finish off the image by figuring out which two colors are
         missing and encode them.
-      App Lab test_instruction: "тест"
+      App Lab test_instruction: тест
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
         view full instructions.
@@ -4089,8 +4090,8 @@
         too easy to play. Any time Dog (actor 1) gets hit by a sandwich from Cat (actor
         2), you should lose a point. Start with 10 points so it's not too hard. Let
         your score drop down from 10 to 0 to pass the level.
-      Crack Random Substitution_instruction: "Инструкции"
-      Crack a Caesar Cipher_instruction: "Инструкции"
+      Crack Random Substitution_instruction: Инструкции
+      Crack a Caesar Cipher_instruction: Инструкции
       ECSPD Binary Odometer_instruction: |-
         This is another resource you could use
         with your students.
@@ -4749,10 +4750,10 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
-      Kiki_StarWars_Test_3_instruction: "Текст"
-      Kiki_StarWars_Test_4_instruction: "Текст"
-      Kiki_StarWars_Test_5_instruction: "Текст"
-      Kiki_StarWars_Test_5_Example_instruction: "Текст"
+      Kiki_StarWars_Test_3_instruction: Текст
+      Kiki_StarWars_Test_4_instruction: Текст
+      Kiki_StarWars_Test_5_instruction: Текст
+      Kiki_StarWars_Test_5_Example_instruction: Текст
       LaurelDebugging4Video1_instruction: |-
         Move Laurel around and get as much gold
         as you can!
@@ -6034,8 +6035,8 @@
         As you type entries into the dictionary, the symbol for the entry is inserted
         into the text in place of the pattern.\r
         \r
-      The Vigenere Cipher Widget_instruction: "Инструкции"
-      The Vigenere Cipher_instruction: "Инструкции"
+      The Vigenere Cipher Widget_instruction: Инструкции
+      The Vigenere Cipher_instruction: Инструкции
       Total Artist Clone Me_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -6064,9 +6065,9 @@
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
       U2 Vigenere_instruction: Test
-      U2 frequency caesar_instruction: "Инструкции"
-      U2 frequency random sub_instruction: "Инструкции"
-      U2 vigenere cipher_instruction: "Инструкции"
+      U2 frequency caesar_instruction: Инструкции
+      U2 frequency random sub_instruction: Инструкции
+      U2 vigenere cipher_instruction: Инструкции
       U2L04 - NetSim Routers with Addresses_instruction: |-
         Send messages with your
         classmates (Click to see full instructions)
@@ -7821,7 +7822,7 @@
       U4 Model Design 1_instruction: |-
         Add a large red button to your screen using
         Design Mode. (Click for full instructions.)
-      U4 vigenere cipher 2_instruction: "Инструкции"
+      U4 vigenere cipher 2_instruction: Инструкции
       U4L02 - Objects - Template1_instruction: |
         Create an object with at least 3
         properties and display it in the Debug Console. (Click to see full instructions)
@@ -9156,8 +9157,9 @@
       courseC_artist_prog_challenge1-doghouse_instruction: |-
         Let's build a dog house
         for Jorge!
-      courseC_artist_prog_challenge1_instruction: |
-        Draw rooms for each of the animals.
+      courseC_artist_prog_challenge1_instruction: 'Draw rooms for each of the animals.
+
+'
       courseC_artist_prog_challenge1_2018_instruction: "Draw rooms for each of the\nanimals. "
       courseC_artist_prog_challenge2_instruction: |-
         *Help me paint the yellow lines
@@ -9975,8 +9977,9 @@
       courseD_farmer_conditionals4_instruction: |-
         Help the farmer remove this entire
         pile using a `while` loop.
-      courseD_farmer_conditionals5_instruction: |
-        Help me remove all of this dirt.
+      courseD_farmer_conditionals5_instruction: 'Help me remove all of this dirt.
+
+'
       courseD_farmer_conditionals6_instruction: |-
         Use the `while` loop to easily fill
         all of the holes.
@@ -10345,8 +10348,9 @@
         Help the bee make all of the honey. You
         can only make honey at a honeycomb, but you can check any space to see if
         there is a honeycomb.
-      courseE_bee_concept2_2018_instruction: |
-        Help the bee make all of the honey.
+      courseE_bee_concept2_2018_instruction: 'Help the bee make all of the honey.
+
+'
       courseE_bee_concept3_instruction: |-
         Collect all of the nectar using  as few
         blocks as possible.
@@ -10997,8 +11001,9 @@
         Build this design where the squares
         have 80 pixel sides and the artist jumps 80 pixels over and down between each
         one.
-      courseF_artist_variables7_instruction: |
-        Draw a triangle with 150 pixels sides.
+      courseF_artist_variables7_instruction: 'Draw a triangle with 150 pixels sides.
+
+'
       courseF_artist_variables7_2018_instruction: "Draw a triangle with 150 pixels\nsides. "
       courseF_artist_variables8_instruction: |-
         Rebuild the triangle code from the
@@ -11087,8 +11092,9 @@
         it is hiding a flower before you get nectar.  "
       courseF_bee_conditionals2_2018_instruction: "Check underneath each cloud to\nsee
         if it is hiding a flower before you get nectar.  "
-      courseF_bee_conditionals3_instruction: |
-        Help the bee collect all of the nectar.
+      courseF_bee_conditionals3_instruction: 'Help the bee collect all of the nectar.
+
+'
       courseF_bee_conditionals3_2018_instruction: "Help the bee collect all of the\nnectar. "
       courseF_bee_conditionals4_instruction: |-
         Get all of the nectar using as few
@@ -11667,8 +11673,9 @@
       grade1_maze_sequence8_instruction: |-
         Debug this level by adding blocks to get
         me to the pig!
-      grade1_maze_sequence9_instruction: |
-        Go around the TNT to get me to the pig!
+      grade1_maze_sequence9_instruction: 'Go around the TNT to get me to the pig!
+
+'
       grade1_maze_sequenceA_instruction: |-
         Challenge: Move me around the TNT to get
         to the pig.
@@ -13471,8 +13478,9 @@
       iceage_click_hello_2018_instruction: "Can you help Sid call for his friends\nwhen
         you click on him? "
       iceage_free_play_instruction: 'Time to create your own game or story! '
-      iceage_free_play_2018_instruction: |
-        Time to create your own game or story!
+      iceage_free_play_2018_instruction: 'Time to create your own game or story!
+
+'
       iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
         story! "
       iceage_hello1_instruction: |-
@@ -13732,8 +13740,9 @@
       sample8_instruction: |-
         Look at this trove of coins! How many can you get the
         adventurer to grab?
-      sample9_instruction: |
-        Use loops to help the artist connect all of the dots.
+      sample9_instruction: 'Use loops to help the artist connect all of the dots.
+
+'
       sample9a_instruction: |-
         The wizard has found his potions!  Use everything you
         have learned to help him collect them.

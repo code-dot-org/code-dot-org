@@ -1,11 +1,22 @@
-import WorkshopManagement from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
+import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
 import ConfirmationDialog from '@cdo/apps/code-studio/pd/workshop_dashboard/components/confirmation_dialog';
 import {Button} from 'react-bootstrap';
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import Permission from '@cdo/apps/code-studio/pd/permission';
+import Permission, {
+  Organizer,
+  ProgramManager,
+  Facilitator
+}
+from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+
+const defaultProps = {
+  permission: new Permission(),
+  workshopId: 123,
+  viewUrl: "viewUrl"
+};
 
 describe("WorkshopManagement", () => {
   const fakeRouter = {
@@ -23,7 +34,6 @@ describe("WorkshopManagement", () => {
 
   beforeEach(() => {
     mockRouter = sinon.mock(fakeRouter);
-    new Permission();
   });
 
   afterEach(() => {
@@ -56,10 +66,9 @@ describe("WorkshopManagement", () => {
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId = {123}
-          viewUrl = "viewUrl"
+          {...defaultProps}
           editUrl = "editUrl"
-          onDelete={deleteStub}
+          onDelete = {deleteStub}
         />, {context}
       );
     });
@@ -127,8 +136,7 @@ describe("WorkshopManagement", () => {
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId = {123}
-          viewUrl = "viewUrl"
+          {...defaultProps}
         />,
         {context}
       );
@@ -142,14 +150,13 @@ describe("WorkshopManagement", () => {
 
   describe("For completed workshops to a workshop organizer", () => {
     beforeEach(() => {
-      (new Permission()).setPermission("workshop_organizer");
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
       mockRouter.expects("createHref").withExactArgs("/organizer_survey_results/123").returns("organizerResultsHref");
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId = {123}
-          viewUrl = "viewUrl"
+          {...defaultProps}
+          permission={new Permission([Organizer])}
           showSurveyUrl={true}
         />,
         {context}
@@ -175,14 +182,13 @@ describe("WorkshopManagement", () => {
 
   describe("For completed workshops to a program manager organizer", () => {
     beforeEach(() => {
-      (new Permission()).setPermission("program_manager");
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
       mockRouter.expects("createHref").withExactArgs("/organizer_survey_results/123").returns("organizerResultsHref");
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId = {123}
-          viewUrl = "viewUrl"
+          {...defaultProps}
+          permission={new Permission([ProgramManager])}
           showSurveyUrl={true}
         />,
         {context}
@@ -208,14 +214,13 @@ describe("WorkshopManagement", () => {
 
   describe("For completed workshops to a facilitator", () => {
     beforeEach(() => {
-      new Permission().setPermission("facilitator");
       mockRouter.expects("createHref").withExactArgs("viewUrl").returns("viewHref");
       mockRouter.expects("createHref").withExactArgs("/survey_results/123").returns("facilitatorResultsHref");
 
       workshopManagement = shallow(
         <WorkshopManagement
-          workshopId={123}
-          viewUrl="viewUrl"
+          {...defaultProps}
+          permission={new Permission(Facilitator)}
           showSurveyUrl={true}
         />,
         {context}

@@ -1,6 +1,6 @@
 "tg-TJ":
-  hour_of_code: "Соати рамз"
-  hello: "Салом ҷаҳон"
+  hour_of_code: Соати рамз
+  hello: Салом ҷаҳон
   'yes': 'Yes'
   'no': 'No'
   select_language: Please select your language
@@ -8,7 +8,7 @@
     and 10. Please upgrade to a modern browser.
   upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
     Explorer 8, 9, and 10. Please upgrade to a modern browser.
-  upgrade_ie_link: "Маълумоти бештар"
+  upgrade_ie_link: Маълумоти бештар
   en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 8-14-уми декабри соли 2014
@@ -20,21 +20,21 @@
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   n_have_learned_an_hoc: "<h1>Шумо метавонед</h1><h2>Соати рамзи гузаронидашударо</h2><h3>#
     дида бароед</h3>"
-  anybody_can_learn: "Ҳар кас метавонад рамзро омӯзад."
-  learn_now: "Ҳозир омӯзед"
+  anybody_can_learn: Ҳар кас метавонад рамзро омӯзад.
+  learn_now: Ҳозир омӯзед
   petition_message: Every student in every school should have the opportunity to learn
     computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
-  name: "Ном"
-  email: "Почтаи электронӣ"
-  zipcode: "Рамзи ZIP ё кишвар"
-  submit: "Пешниҳод кардан"
+  name: Ном
+  email: Почтаи электронӣ
+  zipcode: Рамзи ZIP ё кишвар
+  submit: Пешниҳод кардан
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
-  og_title: "Ҳар як фарзанд бояд имконият дошта бошад"
+  og_title: Ҳар як фарзанд бояд имконият дошта бошад
   og_title_soon: The Hour of Code is coming
   og_title_here: The Hour of Code is here!
   og_description: Every student in every school deserves the opportunity to study
@@ -50,45 +50,45 @@
     for every student to learn.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
-  hoc2014_students: "Хонандагон"
-  hoc2014_try: "Дида бароед"
-  hoc2014_teachers: "Муаллимон"
+  hoc2014_students: Хонандагон
+  hoc2014_try: Дида бароед
+  hoc2014_teachers: Муаллимон
   hoc2014_host: Host it
-  hoc2014_everyone: "Ҳар кас"
+  hoc2014_everyone: Ҳар кас
   hoc2014_support: Support it &#x25BE;
-  hoc2014_whatishoc: "Соати рамз чист?"
+  hoc2014_whatishoc: Соати рамз чист?
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
-  csedweek_map_signup: "Худро барои чорабинӣ ба қайд гиред"
-  csedweek_map_search_placeholder: "Чорабиниҳои Соати рамзро ҷустуҷӯ кунед"
-  csedweek_map_search_search: "Ҷустуҷӯ"
+  csedweek_map_signup: Худро барои чорабинӣ ба қайд гиред
+  csedweek_map_search_placeholder: Чорабиниҳои Соати рамзро ҷустуҷӯ кунед
+  csedweek_map_search_search: Ҷустуҷӯ
   csedweek_map_search_reset: Reset
   csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: "Чорабинии Соати рамз"
-  csedweek_map_legend_cs_tech_jam: "Чорабинии махсус"
-  cded_sign_up: "Худро ба қайд гиред"
-  cded_try_it: "Дида бароед"
+  csedweek_map_legend_event: Чорабинии Соати рамз
+  csedweek_map_legend_cs_tech_jam: Чорабинии махсус
+  cded_sign_up: Худро ба қайд гиред
+  cded_try_it: Дида бароед
   try_now: Try now
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
     courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
     computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
     with us.
-  california_button: "Маълумоти бештар"
+  california_button: Маълумоти бештар
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: "Намоиш додан дар забони англисӣ"
+  view_english_site: Намоиш додан дар забони англисӣ
   non_english_tutorials: 'Tutorials translated into multiple languages:'
   write_your_first_program: Write your first computer program
   learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
     programming. This is a game-like tutorial starring video lectures by Bill Gates,
     Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
     statements, and basic algorithms.
-  all_ages: "Синну сол: Ҳама"
-  beginner: "Навкор"
+  all_ages: 'Синну сол: Ҳама'
+  beginner: Навкор
   n_participants: "# иштирокчӣ"
-  go: "Гузаштан"
-  thank_you_: "Ташаккур!"
+  go: Гузаштан
+  thank_you_: Ташаккур!
   congratulations: Congratulations!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
@@ -122,11 +122,11 @@
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
   congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: "Синфҳои K-8"
-  third_party_gradelevel_kto2: "Синфҳои K-2"
-  third_party_gradelevel_2to8: "Синфҳои 2-8"
-  third_party_gradelevel_4to12: "Синфҳои 4-12"
-  third_party_gradelevel_5to12: "Синфҳои 5-12"
+  third_party_gradelevel_kto8: Синфҳои K-8
+  third_party_gradelevel_kto2: Синфҳои K-2
+  third_party_gradelevel_2to8: Синфҳои 2-8
+  third_party_gradelevel_4to12: Синфҳои 4-12
+  third_party_gradelevel_5to12: Синфҳои 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
   third_party_platform_all: 'Platform: Web, iPad & Android'
@@ -192,7 +192,7 @@
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: "Созмондиҳӣ"
+  third_party_organization: Созмондиҳӣ
   third_party_curriculum: Curriculum
   third_party_pricing: Pricing
   third_party_cost_free: Free for students and teachers
@@ -230,28 +230,28 @@
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
   leaderboards_for_hoc: Leaderboards for the Hour of Code.
   support_url: http://support.code.org/
-  country: "Кишвар"
-  city: "Шаҳр"
-  gender: "Ҷинс"
-  boys: "Бачагон"
-  girls: "Духтарон"
+  country: Кишвар
+  city: Шаҳр
+  gender: Ҷинс
+  boys: Бачагон
+  girls: Духтарон
   give_my_hour: 'Give my Hour to:'
   girls_team: Girls' Team
   boys_team: Boys' Team
   tell_the_world: Tell the world!
   thanks_for_voting: Thanks for voting!
   share_on_facebook: Share on Facebook
-  share_on_twitter: "Дар Twitter мубодила кунед"
-  beyond_an_hour: "Баъд аз Соати рамз"
+  share_on_twitter: Дар Twitter мубодила кунед
+  beyond_an_hour: Баъд аз Соати рамз
   get_started: Start
-  i_agree: "Ман розӣ ҳастам"
+  i_agree: Ман розӣ ҳастам
   participant_select: "- Select -"
-  participant_student: "Донишҷӯ"
-  participant_parent: "Волид"
-  participant_educator: "Устод"
+  participant_student: Донишҷӯ
+  participant_parent: Волид
+  participant_educator: Устод
   participant_engineer: Software Engineer
   participant_other: None of the Above
-  print_all: "Ҳамаро чоп кардан"
+  print_all: Ҳамаро чоп кардан
   print_ice_art: Print your ice art
   create_art_with_zombie: or make advanced art with zombie
   i_am_a: I am a
@@ -324,7 +324,7 @@
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond an Hour
   what_gender: What gender are you?
-  girl: "Духтар"
+  girl: Духтар
   boy: Boy
   help_recruit_coders: Help us recruit more coders to your team!
   help_recruit: Help us recruit more coders!
@@ -348,17 +348,17 @@
   studiobar_title_nolink: Explore Code Studio
   studiobar_elementary_title: Elementary courses
   studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: "Соати рамз"
+  studiobar_hoc_title: Соати рамз
   studiobar_hoc_body: Learn to code with Angry Birds
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: "Соати рамз"
+  studiobar_frozen_title: Соати рамз
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
   studiobar_donate_title: Donate
   studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: "Дукон"
+  studiobar_shop_title: Дукон
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_stats_students: of US students have accounts on Code.org
   homepage_stats_female: of our students are female
@@ -419,24 +419,24 @@
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_hero_hoc_is_coming: The Hour of Code is coming
   homepage_hero_hoc_is_here: The Hour of Code is here
-  homepage_slot_text_hoc: "Соати рамз"
+  homepage_slot_text_hoc: Соати рамз
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
-  homepage_slot_text_course4: "Дарси 4"
-  homepage_slot_text_shop: "Дукон"
+  homepage_slot_text_course4: Дарси 4
+  homepage_slot_text_shop: Дукон
   homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: "Соати рамз барои ҳар як донишҷӯ."
+  homepage_action_text_hoc: Соати рамз барои ҳар як донишҷӯ.
   homepage_action_text_num_served: "# served"
-  homepage_action_text_join_us: "Ба мо ҳамроҳ шавед"
-  homepage_action_text_sign_up: "Худро ба қайд гиред"
-  homepage_action_text_try_it: "Дида бароед"
-  homepage_action_text_volunteers: "Валонтёрон бо дониши техникӣ лозиманд"
-  homepage_action_text_codevideo: "Видеоро тамошо кунед"
-  homepage_action_text_teachervideo: "Видеоро тамошо кунед"
-  homepage_action_text_watchvideo: "Видеоро тамошо кунед"
+  homepage_action_text_join_us: Ба мо ҳамроҳ шавед
+  homepage_action_text_sign_up: Худро ба қайд гиред
+  homepage_action_text_try_it: Дида бароед
+  homepage_action_text_volunteers: Валонтёрон бо дониши техникӣ лозиманд
+  homepage_action_text_codevideo: Видеоро тамошо кунед
+  homepage_action_text_teachervideo: Видеоро тамошо кунед
+  homepage_action_text_watchvideo: Видеоро тамошо кунед
   homepage_action_text_girlvideo: Inspire a girl
-  homepage_action_text_learn: "Омӯзишро оғоз намоед"
+  homepage_action_text_learn: Омӯзишро оғоз намоед
   homepage_action_text_signpetition: Sign the petition
   homepage_action_text_wincelebritychat: Win a celebrity chat
   homepage_signpetition_dropdown: I agree &#x25BE;
@@ -445,13 +445,13 @@
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
-  homepage_banner_text_link: "Маълумоти бештар"
+  homepage_banner_text_link: Маълумоти бештар
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: "Маълумоти бештар"
+  homepage_banner_privacy_link: Маълумоти бештар
   homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
     science in classrooms.
-  homepage_banner_20k_teachers_link: "Маълумоти бештар"
+  homepage_banner_20k_teachers_link: Маълумоти бештар
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
@@ -459,15 +459,15 @@
     student privacy.
   homepage_banner_emailprivacy_link: Read more
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: "Маълумоти бештар"
-  homepage_slot_text_title_hoc: "Соати рамз"
+  homepage_banner_40k_teachers_link: Маълумоти бештар
+  homepage_slot_text_title_hoc: Соати рамз
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
   homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: "Хонандагон"
+  homepage_slot_text_title_students: Хонандагон
   homepage_slot_text_blurb_students: Explore all of our tutorials
   homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Try Code Studio
@@ -476,8 +476,8 @@
   homepage_slot_text_title_educators: Educators
   homepage_slot_text_blurb_educators: Teach your students
   homepage_slot_text_link_elementary: Elementary school
-  homepage_slot_text_link_middle: "Миёна"
-  homepage_slot_text_link_high: "Донишкада"
+  homepage_slot_text_link_middle: Миёна
+  homepage_slot_text_link_high: Донишкада
   homepage_slot_text_link_k5: Courses for grades K-5
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
@@ -498,11 +498,11 @@
   contact_form_topic_outside_us: I'm outside the U.S.
   contact_form_topic_contribution: Charitable contribution
   contact_form_topic_partner: I'd like to partner
-  contact_form_topic_other: "Дигар"
+  contact_form_topic_other: Дигар
   contact_form_label_topic: Topic
-  contact_form_label_email: "Суроғаи почтаи электронии шумо"
-  contact_form_label_message: "Паём"
-  contact_form_label_submit: "Фиристодани паём"
+  contact_form_label_email: Суроғаи почтаи электронии шумо
+  contact_form_label_message: Паём
+  contact_form_label_submit: Фиристодани паём
   class_submission_in_school: In school
   class_submission_in_school_daily_programming_course: Daily programming course
   class_submission_in_school_ap_computer_science: AP computer science
@@ -511,7 +511,7 @@
   class_submission_in_school_programming_integrated_in_other_classes: Programming
     integrated in other classes (math, science, etc)
   class_submission_in_school_summer_school_cs_program: Summer school CS program
-  class_submission_in_school_exploring_computer_science: "Омӯзиши илми компютерӣ"
+  class_submission_in_school_exploring_computer_science: Омӯзиши илми компютерӣ
   class_submission_in_school_other: Other in school
   class_submission_out_of_school: Out of school
   class_submission_out_of_school_summer_camp: Summer camp
@@ -519,14 +519,14 @@
   class_submission_out_of_school_all-day_workshop: All-day workshop (up to 1 week)
   class_submission_out_of_school_multi-week_workshop: Multi-week workshop
   class_submission_out_of_school_other: Other out of school
-  class_submission_online: "Онлайн"
+  class_submission_online: Онлайн
   class_submission_online_programming_class: Online programming class
   class_submission_online_teacher_resource: Online teacher resource
   class_submission_online_other: Other online
   class_submission_level_preschool: Preschool
-  class_submission_level_elementary: "Ибтидоӣ"
-  class_submission_level_middle_school: "Миёна"
-  class_submission_level_high_school: "Донишкада"
+  class_submission_level_elementary: Ибтидоӣ
+  class_submission_level_middle_school: Миёна
+  class_submission_level_high_school: Донишкада
   class_submission_level_college: College
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
@@ -553,7 +553,7 @@
     this Minecraft world.
   mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
     this Minecraft world.
-  mc_gradelevel: "Синну сол: 6-106"
+  mc_gradelevel: 'Синну сол: 6-106'
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_agent: 'Minecraft: Hero’s Journey'
@@ -612,7 +612,7 @@
   sports_og_description: Champions and gold medalists encourage you to try the Hour
     of Code. Code your own sports game.
   sports_title: Code your own sports game
-  sports_watch_video: "Видеоро тамошо кунед"
+  sports_watch_video: Видеоро тамошо кунед
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
@@ -668,7 +668,7 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: "Шумо муаллим ҳастед?"
+  are_you_teacher: Шумо муаллим ҳастед?
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -695,12 +695,12 @@
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: "Ном"
-  volunteer_engineer_submission_field_name_placeholder: "Номи пурра"
+  volunteer_engineer_submission_field_name: Ном
+  volunteer_engineer_submission_field_name_placeholder: Номи пурра
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: "Ҷойгиршавӣ"
+  volunteer_engineer_submission_field_location: Ҷойгиршавӣ
   volunteer_engineer_submission_field_location_desc: Your location will be used to
     allow teachers to search for nearby volunteers and will be shown as a pin on the
     map. If you are concerned about privacy, please use your work/school address or
@@ -725,10 +725,10 @@
     include it here.
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: "Суроғаи почтаи электронӣ"
+  volunteer_engineer_submission_field_email: Суроғаи почтаи электронӣ
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: "Суроғаи почтаи электронӣ"
+  volunteer_engineer_submission_field_email_placeholder: Суроғаи почтаи электронӣ
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -737,7 +737,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
     18 years old.
-  volunteer_engineer_submission_submit: "Пешниҳод кардан"
+  volunteer_engineer_submission_submit: Пешниҳод кардан
   volunteer_engineer_submission_thankyou: Thank you! Your volunteer information was
     successfully submitted. Teachers will be using <a href="%{url}">this map</a> to
     search for and contact volunteers like you. Please allow 48 hours for your information
@@ -781,7 +781,7 @@
   dashboard_announce_hoc_scaling_progress: Yikes! We are experiencing high Hour of
     Code traffic. We are unable to save any progress this week, but progress from
     before this week is still safe.
-  dashboard_announce_learn_more_button: "Маълумоти бештар"
+  dashboard_announce_learn_more_button: Маълумоти бештар
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -848,7 +848,7 @@
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
-  dashboard_course_ecs: "Омӯзиши илми компютерӣ"
+  dashboard_course_ecs: Омӯзиши илми компютерӣ
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
@@ -860,7 +860,7 @@
   dashboard_action_delete: Delete
   dashboard_action_delete_yes: 'Yes'
   dashboard_action_delete_no: 'No'
-  dashboard_action_confirm: "Нест мекунед?"
+  dashboard_action_confirm: Нест мекунед?
   dashboard_action_done: Done
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
@@ -875,32 +875,32 @@
     students' answers here.
   dashboard_assessments_summaries: Assessment summaries
   dashboard_assessments_answers: All assessment answers
-  dashboard_surveys_answers: "Тадқиқҳо"
-  dashboard_percent: "Фоиз"
+  dashboard_surveys_answers: Тадқиқҳо
+  dashboard_percent: Фоиз
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: "Ҳама"
+  dashboard_filter_all: Ҳама
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Teacher home page
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: "Дастгирӣ"
+  dashboard_navigation_section_community: Дастгирӣ
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
-  dashboard_navigation_view_progress: "Пешрафт"
+  dashboard_navigation_view_progress: Пешрафт
   dashboard_navigation_view_text_responses: Text Responses
   dashboard_navigation_view_assessments: Assessments
   dashboard_navigation_view_assessments_surveys: Assessments/Surveys
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: "Омор"
+  dashboard_navigation_view_stats: Омор
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: not started
   dashboard_progress_in_progress: in progress
-  dashboard_progress_not_completed: "иҷро нашуд"
+  dashboard_progress_not_completed: иҷро нашуд
   dashboard_progress_completed_too_many_blocks: completed, too many blocks
   dashboard_progress_completed_perfect: completed, perfect
   dashboard_progress_furthest_level_attempted: furthest level attempted
@@ -926,7 +926,7 @@
   dashboard_sections_table_course: Course
   dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
-  dashboard_sections_table_students: "Хонандагон"
+  dashboard_sections_table_students: Хонандагон
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: Section Name
   dashboard_sections_choose_secret: If you would like to provide accounts to your
@@ -941,7 +941,7 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_sections_close: "Пӯшидан"
+  dashboard_sections_close: Пӯшидан
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -977,10 +977,10 @@
     Google Classroom</b> button above.
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_name: "Ном"
-  dashboard_students_progress: "Пешрафт"
-  dashboard_students_male: "Мард"
-  dashboard_students_female: "Зан"
+  dashboard_students_name: Ном
+  dashboard_students_progress: Пешрафт
+  dashboard_students_male: Мард
+  dashboard_students_female: Зан
   dashboard_students_completed_levels: Completed Levels
   dashboard_students_total_lines: Lines of Code
   dashboard_students_share_section: 'Share this section''s sign in page with your
@@ -1011,7 +1011,7 @@
     or <b>picture</b>.
   dashboard_students_print_page: Print this page
   dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
-  dashboard_students_url: "Суроғаи URL"
+  dashboard_students_url: Суроғаи URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Click
     here</a> for our privacy document that can be shared or printed for your students.
   dashboard_curriculum_k5_title: K-5 Educator Resources
@@ -1019,10 +1019,10 @@
   dashboard_curriculum_high_title: High School Educator Resources
   dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Download complete curriculum for Courses 1-4
-  dashboard_course1: "Дарси 1:"
-  dashboard_course2: "Дарси 2:"
-  dashboard_course3: "Дарси 3:"
-  dashboard_course4: "Дарси 4:"
+  dashboard_course1: 'Дарси 1:'
+  dashboard_course2: 'Дарси 2:'
+  dashboard_course3: 'Дарси 3:'
+  dashboard_course4: 'Дарси 4:'
   dashboard_coursea: 'Course A: '
   dashboard_courseb: 'Course B: '
   dashboard_coursec: 'Course C: '
@@ -1041,7 +1041,7 @@
   dashboard_framework: Framework
   dashboard_standards: Standards
   dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: "Вожанома"
+  dashboard_glossary: Вожанома
   dashboard_classroom_strategies: Classroom strategies for teachers
   dashboard_debugging: 'Debugging:'
   dashboard_puzzle_solving: 'Puzzle-solving:'
@@ -1054,21 +1054,21 @@
   dashboard_curriculum_csd: 'Computer Science Discoveries: '
   dashboard_curriculum_apcsa: 'AP Computer Science in Java: '
   dashboard_grade_k: K
-  dashboard_grade_other: "Дигар"
-  dashboard_login_word: "Калима"
+  dashboard_grade_other: Дигар
+  dashboard_login_word: Калима
   dashboard_login_picture: Picture
-  dashboard_login_none: "Почтаи электронӣ"
-  dashboard_stage: "Давра"
-  dashboard_puzzle: "Муаммо"
+  dashboard_login_none: Почтаи электронӣ
+  dashboard_stage: Давра
+  dashboard_puzzle: Муаммо
   dashboard_question: Question
   dashboard_response: Response
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Correct
-  dashboard_correctness_incorrect: "Нодуруст"
-  dashboard_submission_submitted: "Пешниҳод карда шудааст"
-  dashboard_submission_in_progress: "Иҷро мешавад"
+  dashboard_correctness_incorrect: Нодуруст
+  dashboard_submission_submitted: Пешниҳод карда шудааст
+  dashboard_submission_in_progress: Иҷро мешавад
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -1077,8 +1077,8 @@
   stats_hoc_2013_heading: 'Incredible stats from last year''s Hour of Code. In one
     week alone:'
   stats_hoc_2013_image_alt: Stats from 2013 Hour of Code
-  dashboard_teacher: "Муаллим"
-  dashboard_student: "Донишҷӯ"
+  dashboard_teacher: Муаллим
+  dashboard_student: Донишҷӯ
   dashboard_sections_email_question: Do all students have a valid email address?
   dashboard_sections_account_creation_question: Who creates the student's account?
   dashboard_sections_password_question: What do students use as a "password"?
@@ -1090,11 +1090,11 @@
   dashboard_sections_password_account_creation: Student-created text password
   dashboard_sections_login_type_explanation: This table helps explain which of these
     login types, <b>picture, word, or email</b>, you'll want to choose for a section.
-  dashboard_faq: "Саволҳои роиҷ"
+  dashboard_faq: Саволҳои роиҷ
   dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
-  host_an_hour: "Ташкилкунандаи Соати рамз шавед"
+  host_an_hour: Ташкилкунандаи Соати рамз шавед
   learn_banner_title: Join us for the Hour of Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
@@ -1105,7 +1105,7 @@
   learn_more: Try now
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: "Худро ба қайд гиред"
+  learn_sign_up_button: Худро ба қайд гиред
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -1158,7 +1158,7 @@
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
     here.</a>
-  how_to_teach_hoc: "Тарзи гузаронидани дарси як Соати рамз"
+  how_to_teach_hoc: Тарзи гузаронидани дарси як Соати рамз
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
@@ -1167,8 +1167,8 @@
   participants: participants
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: "Қаблӣ"
-  next: "Навбатӣ"
+  previous: Қаблӣ
+  next: Навбатӣ
   older_systems: Partner tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all
     tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern
@@ -1179,12 +1179,12 @@
   codeorg_name: Classic Maze
   codeintl_name: Classic Maze
   thinkersmithspanish_name: Mis Amigos Roboticos
-  khan_name: "Муаррифӣ ба JavaScript"
-  khanes_name: "Муаррифӣ ба JavaScript"
-  khanpt_name: "Муаррифӣ ба JavaScript"
-  khanhe_name: "Муаррифӣ ба JavaScript"
-  khanfr_name: "Муаррифӣ ба JavaScript"
-  khanpl_name: "Муаррифӣ ба JavaScript"
+  khan_name: Муаррифӣ ба JavaScript
+  khanes_name: Муаррифӣ ба JavaScript
+  khanpt_name: Муаррифӣ ба JavaScript
+  khanhe_name: Муаррифӣ ба JavaScript
+  khanfr_name: Муаррифӣ ба JavaScript
+  khanpl_name: Муаррифӣ ба JavaScript
   tynker_name: Build your own game
   scratch_name: Get creative with coding
   lightbot_name: Lightbot
@@ -1224,10 +1224,10 @@
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
-  course1_name: "Дарси 1"
-  course2_name: "Дарси 2"
-  course3_name: "Дарси 3"
-  course4_name: "Дарси 4"
+  course1_name: Дарси 1
+  course2_name: Дарси 2
+  course3_name: Дарси 3
+  course4_name: Дарси 4
   coursea-draft_name: Course A
   coursea_name: Course A
   courseb-draft_name: Course B
@@ -1270,7 +1270,7 @@
   csp-create_name: 'AP: Create PT Prep'
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: "Синфҳои 9-12"
+  cspunit3_gradelevel: Синфҳои 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
@@ -1290,7 +1290,7 @@
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
   math_category_name: Math
-  hoc_category_name: "Соати рамз"
+  hoc_category_name: Соати рамз
   csf_category_name: CS Fundamentals
   csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
@@ -1307,99 +1307,99 @@
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
-  codeorg_gradelevel: "Синну сол: 4-104"
-  codeintl_gradelevel: "Синну сол: 4-104"
+  codeorg_gradelevel: 'Синну сол: 4-104'
+  codeintl_gradelevel: 'Синну сол: 4-104'
   thinkersmithspanish_gradelevel: Por todos
-  khan_gradelevel: "Мактаби миёна +"
-  khanes_gradelevel: "Мактаби миёна +"
-  khanpt_gradelevel: "Мактаби миёна +"
-  khanhe_gradelevel: "Мактаби миёна +"
-  khanfr_gradelevel: "Мактаби миёна +"
-  khanpl_gradelevel: "Мактаби миёна +"
-  tynker_gradelevel: "Синну сол: 5-13"
-  scratch_gradelevel: "Синну сол: 8+"
-  lightbot_gradelevel: "Синну сол: Ҳама"
-  thinkersmith_gradelevel: "Синну сол: Ҳама"
-  condcards_gradelevel: "Синну сол: 8-12"
-  lightbotintl_gradelevel: "Синну сол: Ҳама"
-  codehs_gradelevel: "Донишкада"
-  codecademy_gradelevel: "Донишкада"
-  codecombat_gradelevel: "Мактаби миёна +"
-  codemonkey_gradelevel: "Мактаби миёна +"
-  codeavengers_gradelevel: "Мактаби миёна +"
-  processing_gradelevel: "Донишкада"
-  robomind_gradelevel: "Синну сол: 8-13"
-  groklearning_gradelevel: "Мактаби миёна +"
-  quorum_gradelevel: "Мактаби миёна +"
-  codespark_gradelevel: "Ибтидоӣ"
-  kodable_gradelevel: "Ибтидоӣ"
-  tynkerapp_gradelevel: "Синну сол: 5-13"
-  robomindnl_gradelevel: "Синну сол: 8-13"
-  flappy_gradelevel: "Синну сол: 6-106"
-  bitsbox_gradelevel: "Ибтидоӣ"
-  makeschool_gradelevel: "Донишкада"
-  touchdevelop_gradelevel: "Донишкада"
-  appinventor_gradelevel: "Мактаби миёна +"
-  blockly_gradelevel: "Синну сол: Ҳама"
-  thinkersmith2_gradelevel: "Синну сол: 8+"
-  kodableunplugged_gradelevel: "Синну сол: 8-13"
-  projguts_gradelevel: "Синну сол: 10-13"
-  hourofcode_gradelevel: "Синну сол: 6-106"
-  frozen_gradelevel: "Синну сол: 8-108"
-  starwars_gradelevel: "Синну сол: 6-106"
-  playlab_gradelevel: "Синну сол: 6-14"
-  infinity_gradelevel: "Синну сол: 6-14"
-  artist_gradelevel: "Синну сол: 8-108"
-  monstercoding_gradelevel: "Синну сол: 5-13"
-  allcancode_gradelevel: "Синну сол: 5-10"
-  csfirst_gradelevel: "Синну сол: 9-14"
-  boxisland_gradelevel: "Ибтидоӣ"
-  codesters_gradelevel: "Синну сол: 12-14"
-  texasinstruments_gradelevel: "Синну сол: 13-16"
-  teacherled_gradelevel: "Синну сол: 5+"
+  khan_gradelevel: Мактаби миёна +
+  khanes_gradelevel: Мактаби миёна +
+  khanpt_gradelevel: Мактаби миёна +
+  khanhe_gradelevel: Мактаби миёна +
+  khanfr_gradelevel: Мактаби миёна +
+  khanpl_gradelevel: Мактаби миёна +
+  tynker_gradelevel: 'Синну сол: 5-13'
+  scratch_gradelevel: 'Синну сол: 8+'
+  lightbot_gradelevel: 'Синну сол: Ҳама'
+  thinkersmith_gradelevel: 'Синну сол: Ҳама'
+  condcards_gradelevel: 'Синну сол: 8-12'
+  lightbotintl_gradelevel: 'Синну сол: Ҳама'
+  codehs_gradelevel: Донишкада
+  codecademy_gradelevel: Донишкада
+  codecombat_gradelevel: Мактаби миёна +
+  codemonkey_gradelevel: Мактаби миёна +
+  codeavengers_gradelevel: Мактаби миёна +
+  processing_gradelevel: Донишкада
+  robomind_gradelevel: 'Синну сол: 8-13'
+  groklearning_gradelevel: Мактаби миёна +
+  quorum_gradelevel: Мактаби миёна +
+  codespark_gradelevel: Ибтидоӣ
+  kodable_gradelevel: Ибтидоӣ
+  tynkerapp_gradelevel: 'Синну сол: 5-13'
+  robomindnl_gradelevel: 'Синну сол: 8-13'
+  flappy_gradelevel: 'Синну сол: 6-106'
+  bitsbox_gradelevel: Ибтидоӣ
+  makeschool_gradelevel: Донишкада
+  touchdevelop_gradelevel: Донишкада
+  appinventor_gradelevel: Мактаби миёна +
+  blockly_gradelevel: 'Синну сол: Ҳама'
+  thinkersmith2_gradelevel: 'Синну сол: 8+'
+  kodableunplugged_gradelevel: 'Синну сол: 8-13'
+  projguts_gradelevel: 'Синну сол: 10-13'
+  hourofcode_gradelevel: 'Синну сол: 6-106'
+  frozen_gradelevel: 'Синну сол: 8-108'
+  starwars_gradelevel: 'Синну сол: 6-106'
+  playlab_gradelevel: 'Синну сол: 6-14'
+  infinity_gradelevel: 'Синну сол: 6-14'
+  artist_gradelevel: 'Синну сол: 8-108'
+  monstercoding_gradelevel: 'Синну сол: 5-13'
+  allcancode_gradelevel: 'Синну сол: 5-10'
+  csfirst_gradelevel: 'Синну сол: 9-14'
+  boxisland_gradelevel: Ибтидоӣ
+  codesters_gradelevel: 'Синну сол: 12-14'
+  texasinstruments_gradelevel: 'Синну сол: 13-16'
+  teacherled_gradelevel: 'Синну сол: 5+'
   course1_gradelevel: Ages 4-6
-  course2_gradelevel: "Синну сол: 6-18"
+  course2_gradelevel: 'Синну сол: 6-18'
   course3_gradelevel: Ages 8-18
   course4_gradelevel: Ages 10-18
   coursea_gradelevel: Grade 5+
   courseb_gradelevel: Grade 6+
   coursec_gradelevel: Grade 7+
   coursed_gradelevel: Grade 8+
-  coursee_gradelevel: "Синну сол: 8-12"
+  coursee_gradelevel: 'Синну сол: 8-12'
   coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
-  khan_platformtext: "Браузерҳои веби ҳозиразамон"
-  khanes_platformtext: "Браузерҳои веби ҳозиразамон"
-  khanpt_platformtext: "Браузерҳои веби ҳозиразамон"
-  khanhe_platformtext: "Браузерҳои веби ҳозиразамон"
-  khanfr_platformtext: "Браузерҳои веби ҳозиразамон"
-  khanpl_platformtext: "Браузерҳои веби ҳозиразамон"
-  tynker_platformtext: "Браузерҳои веби ҳозиразамон"
+  khan_platformtext: Браузерҳои веби ҳозиразамон
+  khanes_platformtext: Браузерҳои веби ҳозиразамон
+  khanpt_platformtext: Браузерҳои веби ҳозиразамон
+  khanhe_platformtext: Браузерҳои веби ҳозиразамон
+  khanfr_platformtext: Браузерҳои веби ҳозиразамон
+  khanpl_platformtext: Браузерҳои веби ҳозиразамон
+  tynker_platformtext: Браузерҳои веби ҳозиразамон
   scratch_platformtext: Desktop-only web browsers (not tablets)
   lightbot_platformtext: ALL browsers and iOS, Android, or Game Console
   thinkersmith_platformtext: Unplugged
   condcards_platformtext: Unplugged
   lightbotintl_platformtext: iOS, Android (ё браузери веб)
   codehs_platformtext: Modern browsers. (Follow-on course requires  $$)
-  codecademy_platformtext: "Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android"
+  codecademy_platformtext: Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android
   codecombat_platformtext: Modern web browsers (Follow-on course requires $$)
-  codemonkey_platformtext: "Браузерҳои веби ҳозиразамон"
-  codeavengers_platformtext: "Браузерҳои веби ҳозиразамон"
-  processing_platformtext: "Браузерҳои веби ҳозиразамон"
-  robomind_platformtext: "Браузерҳои веби ҳозиразамон, Веби мобилӣ"
-  groklearning_platformtext: "Браузерҳои веби ҳозиразамон"
+  codemonkey_platformtext: Браузерҳои веби ҳозиразамон
+  codeavengers_platformtext: Браузерҳои веби ҳозиразамон
+  processing_platformtext: Браузерҳои веби ҳозиразамон
+  robomind_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
+  groklearning_platformtext: Браузерҳои веби ҳозиразамон
   quorum_platformtext: Modern web browsers. Screen-readers supported
   codespark_platformtext: iOS, Android (ё браузери веб)
   kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android tablets
-  robomindnl_platformtext: "Браузерҳои веби ҳозиразамон, Веби мобилӣ"
+  robomindnl_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
   flappy_platformtext: Modern browsers, smartphones, tablets
-  bitsbox_platformtext: "Браузерҳои веби ҳозиразамон"
-  makeschool_platformtext: "Браузерҳои веби ҳозиразамон"
-  touchdevelop_platformtext: "Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо"
+  bitsbox_platformtext: Браузерҳои веби ҳозиразамон
+  makeschool_platformtext: Браузерҳои веби ҳозиразамон
+  touchdevelop_platformtext: Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо
   appinventor_platformtext: Modern browsers + Android
   blockly_platformtext: Modern browsers only
   thinkersmith2_platformtext: Unplugged
@@ -1411,9 +1411,9 @@
   playlab_platformtext: Modern browsers, smartphones, tablets
   monstercoding_platformtext: Modern web browsers, iOS, Android
   allcancode_platformtext: Modern web browsers, iOS
-  csfirst_platformtext: "Браузерҳои веби ҳозиразамон"
+  csfirst_platformtext: Браузерҳои веби ҳозиразамон
   boxisland_platformtext: Android, iOS
-  codesters_platformtext: "Браузерҳои веби ҳозиразамон"
+  codesters_platformtext: Браузерҳои веби ҳозиразамон
   texasinstruments_platformtext: TI Calculators
   teacherled_platformtext: Modern browsers, smartphones, tablets
   codeorg_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
@@ -1708,80 +1708,80 @@
   processing_beyond_name: Program with Processing
   alice_beyond_name: Alice
   sphero_beyond_name: SPRK
-  codeorg_beyond_gradelevel: "Синну сол: 4-104"
-  khan_beyond_gradelevel: "Мактаби миёна +"
-  tynker_beyond_gradelevel: "Синну сол: 5-13"
-  scratch_beyond_gradelevel: "Синну сол: 8+"
-  lightbot_beyond_gradelevel: "Синну сол: Ҳама"
-  codecademy_beyond_gradelevel: "Донишкада"
-  kodable_beyond_gradelevel: "Ибтидоӣ"
-  scratchjr_beyond_gradelevel: "Ибтидоӣ"
-  hopscotch_beyond_gradelevel: "Мактаби миёна +"
-  pocketcode_beyond_gradelevel: "Мактаби миёна +"
-  groklearning_beyond_gradelevel: "Мактаби миёна +"
-  hacketyhack_beyond_gradelevel: "Донишкада"
-  robomind_beyond_gradelevel: "Синну сол: 8-13"
-  makeschool_beyond_gradelevel: "Донишкада"
-  appinventor_beyond_gradelevel: "Мактаби миёна +"
-  touchdevelop_beyond_gradelevel: "Донишкада"
-  codehs_beyond_gradelevel: "Донишкада"
-  udemy_beyond_gradelevel: "Донишкада +"
-  lynda_beyond_gradelevel: "Донишкада +"
-  edx_beyond_gradelevel: "Донишгоҳ"
-  coursera_beyond_gradelevel: "Донишгоҳ"
-  udacity_beyond_gradelevel: "Донишгоҳ"
-  teachingtree_beyond_gradelevel: "Донишгоҳ"
-  kodu_beyond_gradelevel: "Синну сол: 8+"
-  cargobot_beyond_gradelevel: "Синну сол: 8+"
-  kidsruby_beyond_gradelevel: "Синну сол: 12+"
-  w3schools_beyond_gradelevel: "Синну сол: 12+"
-  codeavengers_beyond_gradelevel: "Мактаби миёна +"
-  mozilla_beyond_gradelevel: "Синну сол: 12+"
-  codecombat_beyond_gradelevel: "Мактаби миёна +"
-  codea_beyond_gradelevel: "Донишкада +"
-  lego_beyond_gradelevel: "Мактаби миёна +"
-  finch_beyond_gradelevel: "Синну сол: 8+"
-  arduino_beyond_gradelevel: "Донишкада +"
-  processing_beyond_gradelevel: "Донишкада"
-  alice_beyond_gradelevel: "Мактаби миёна +"
-  sphero_beyond_gradelevel: "Синну сол: 8+"
+  codeorg_beyond_gradelevel: 'Синну сол: 4-104'
+  khan_beyond_gradelevel: Мактаби миёна +
+  tynker_beyond_gradelevel: 'Синну сол: 5-13'
+  scratch_beyond_gradelevel: 'Синну сол: 8+'
+  lightbot_beyond_gradelevel: 'Синну сол: Ҳама'
+  codecademy_beyond_gradelevel: Донишкада
+  kodable_beyond_gradelevel: Ибтидоӣ
+  scratchjr_beyond_gradelevel: Ибтидоӣ
+  hopscotch_beyond_gradelevel: Мактаби миёна +
+  pocketcode_beyond_gradelevel: Мактаби миёна +
+  groklearning_beyond_gradelevel: Мактаби миёна +
+  hacketyhack_beyond_gradelevel: Донишкада
+  robomind_beyond_gradelevel: 'Синну сол: 8-13'
+  makeschool_beyond_gradelevel: Донишкада
+  appinventor_beyond_gradelevel: Мактаби миёна +
+  touchdevelop_beyond_gradelevel: Донишкада
+  codehs_beyond_gradelevel: Донишкада
+  udemy_beyond_gradelevel: Донишкада +
+  lynda_beyond_gradelevel: Донишкада +
+  edx_beyond_gradelevel: Донишгоҳ
+  coursera_beyond_gradelevel: Донишгоҳ
+  udacity_beyond_gradelevel: Донишгоҳ
+  teachingtree_beyond_gradelevel: Донишгоҳ
+  kodu_beyond_gradelevel: 'Синну сол: 8+'
+  cargobot_beyond_gradelevel: 'Синну сол: 8+'
+  kidsruby_beyond_gradelevel: 'Синну сол: 12+'
+  w3schools_beyond_gradelevel: 'Синну сол: 12+'
+  codeavengers_beyond_gradelevel: Мактаби миёна +
+  mozilla_beyond_gradelevel: 'Синну сол: 12+'
+  codecombat_beyond_gradelevel: Мактаби миёна +
+  codea_beyond_gradelevel: Донишкада +
+  lego_beyond_gradelevel: Мактаби миёна +
+  finch_beyond_gradelevel: 'Синну сол: 8+'
+  arduino_beyond_gradelevel: Донишкада +
+  processing_beyond_gradelevel: Донишкада
+  alice_beyond_gradelevel: Мактаби миёна +
+  sphero_beyond_gradelevel: 'Синну сол: 8+'
   codeorg_beyond_platformtext: Modern browsers, tablets
-  khan_beyond_platformtext: "Браузерҳои веби ҳозиразамон"
+  khan_beyond_platformtext: Браузерҳои веби ҳозиразамон
   tynker_beyond_platformtext: Modern web browsers ($$ required)
   scratch_beyond_platformtext: Any browser
   lightbot_beyond_platformtext: iOS, Android (ё браузери веб)
-  codecademy_beyond_platformtext: "Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android"
+  codecademy_beyond_platformtext: Браузерҳои веби ҳозиразамон. Барномаҳои iOS, Android
   kodable_beyond_platformtext: iPad
   scratchjr_beyond_platformtext: iPad
   hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobile App
-  groklearning_beyond_platformtext: "Браузерҳои веби ҳозиразамон"
-  hacketyhack_beyond_platformtext: "Насб дар мизи корӣ"
-  robomind_beyond_platformtext: "Браузерҳои веби ҳозиразамон, Веби мобилӣ"
-  makeschool_beyond_platformtext: "Браузерҳои веби ҳозиразамон"
+  groklearning_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  hacketyhack_beyond_platformtext: Насб дар мизи корӣ
+  robomind_beyond_platformtext: Браузерҳои веби ҳозиразамон, Веби мобилӣ
+  makeschool_beyond_platformtext: Браузерҳои веби ҳозиразамон
   appinventor_beyond_platformtext: Modern browser + Android
-  touchdevelop_beyond_platformtext: "Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо"
+  touchdevelop_beyond_platformtext: Браузерҳои ҳозиразамон, смартфонҳо, ҳамаи дастгоҳҳо
   codehs_beyond_platformtext: Modern browsers ($$ required)
-  udemy_beyond_platformtext: "Дар асоси веб"
+  udemy_beyond_platformtext: Дар асоси веб
   lynda_beyond_platformtext: Web based ($$ required)
-  edx_beyond_platformtext: "Браузерҳои ҳозиразамон"
-  coursera_beyond_platformtext: "Браузерҳои ҳозиразамон"
-  udacity_beyond_platformtext: "Браузерҳои ҳозиразамон"
-  teachingtree_beyond_platformtext: "Дар асоси веб"
+  edx_beyond_platformtext: Браузерҳои ҳозиразамон
+  coursera_beyond_platformtext: Браузерҳои ҳозиразамон
+  udacity_beyond_platformtext: Браузерҳои ҳозиразамон
+  teachingtree_beyond_platformtext: Дар асоси веб
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: "Насб дар мизи корӣ"
-  w3schools_beyond_platformtext: "Браузерҳои веби ҳозиразамон"
-  codeavengers_beyond_platformtext: "Браузерҳои веби ҳозиразамон"
-  mozilla_beyond_platformtext: "Браузерҳои веби ҳозиразамон"
+  kidsruby_beyond_platformtext: Насб дар мизи корӣ
+  w3schools_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  codeavengers_beyond_platformtext: Браузерҳои веби ҳозиразамон
+  mozilla_beyond_platformtext: Браузерҳои веби ҳозиразамон
   codecombat_beyond_platformtext: Web based (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
-  lego_beyond_platformtext: "Харидани робот"
-  finch_beyond_platformtext: "Харидани робот"
+  lego_beyond_platformtext: Харидани робот
+  finch_beyond_platformtext: Харидани робот
   arduino_beyond_platformtext: Web browser, then Kit purchase
-  processing_beyond_platformtext: "Браузерҳои веби ҳозиразамон"
+  processing_beyond_platformtext: Браузерҳои веби ҳозиразамон
   alice_beyond_platformtext: Windows or Mac (install required)
-  sphero_beyond_platformtext: "Харидани робот"
+  sphero_beyond_platformtext: Харидани робот
   codeorg_beyond_shortdescription: Learn to code with Mark Zuckerberg and Angry Birds!
   khan_beyond_shortdescription: Learn to draw in JavaScript
   tynker_beyond_shortdescription: A fun and engaging course for children in grades
@@ -2000,16 +2000,16 @@
   artist_shortcode: art
   header_home: Home
   header_my_dashboard: My Dashboard
-  header_courses: "Дарсҳо"
+  header_courses: Дарсҳо
   header_course_catalog: Course Catalog
-  header_project_gallery: "Лоиҳаҳо"
+  header_project_gallery: Лоиҳаҳо
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: "Соати рамз"
+  header_educate_hoc: Соати рамз
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -2027,7 +2027,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: "Омор"
+  header_stats: Омор
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -2038,10 +2038,10 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  user_header_label: "Салом %{username}"
-  user_header_settings: "Ҳисоби ман"
-  user_header_logout: "Хориҷ шудан"
-  user_header_signin: "Ворид шудан"
+  user_header_label: Салом %{username}
+  user_header_settings: Ҳисоби ман
+  user_header_logout: Хориҷ шудан
+  user_header_signin: Ворид шудан
   view_all_sections: View All Sections
   view_section: View Section
   view_named_section: View %{section_name}

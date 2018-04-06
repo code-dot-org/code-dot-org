@@ -934,18 +934,33 @@ zh-CN:
       courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
+      courseB_artist_loops3_2018_callout:
+        courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
       courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
+      courseB_artist_loops5_2018_callout:
         courseB_artist_loops5_1: 这个数字意味着工具箱中不再有这个块了。
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
+      courseB_collector_loops1_2018_callout:
+        courseB_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseB_maze_seq1_callout:
+        courseB_maze_seq1: 当您需要提示时点击灯泡!
+      courseB_maze_seq1_2018_callout:
         courseB_maze_seq1: 当您需要提示时点击灯泡!
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
+      courseB_maze_seq2_2018_callout:
+        courseB_maze_seq2_callout1: 使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: 灰色的块是石头做的, 不能扔掉。
+      courseB_maze_seq3_2018_callout:
+        courseB_maze_seq3_1: 灰色的块是石头做的, 不能扔掉。
       courseB_maze_seq7_callout: [ ]
+      courseB_maze_seq7_2018_callout: [ ]
       courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
+      courseB_playlab_events6_2018_callout:
         courseB_playlab_events6_a: 使用绿色下拉箭头可更改方向。
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
@@ -1006,7 +1021,10 @@ zh-CN:
         courseD_artist_functions8_1: 用来创建函数的模块已经移动到了工具箱的这个标签里。
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: 您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!
+      courseD_artist_nestedLoops1a_2018_callout:
+        courseD_artist_nestedLoops1a_1: 您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!
       courseD_artist_nestedLoops_challenge2_callout: [ ]
+      courseD_artist_nestedLoops_challenge2_2018_callout: [ ]
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: 您可以更改此数字。
         courseD_artist_ramp11_2: 单击此处键入重复代码的次数。
@@ -1014,14 +1032,21 @@ zh-CN:
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
         4_5_Bee_Conditionals_2_2: 需要帮助吗？ 点击这里查看视频提示!
+      courseD_bee_conditionals2_2018_callout:
+        4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
+        4_5_Bee_Conditionals_2_2: 需要帮助吗？ 点击这里查看视频提示!
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
         4_5_Bee_Conditionals_2_2: 需要点帮助吗？ 点击这里查看我们的新视频提示!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: 使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。
+      courseD_bee_conditionals_challenge2_2018_callout:
+        courseD_bee_conditionals_challenge2_1: 使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。
       courseD_bee_conditionals_challenge3_callout:
         courseD_bee_conditionals_challenge3_1: 尝试使用这个循环重复向前移动块。
       courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
+      courseD_bee_debugging_challenge1_2018_callout:
         courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
       courseD_bee_debugging_challenge1a_callout:
         courseD_bee_debugging_challenge1_callout1: 使用此命令可将蜜蜂向后移动。
@@ -1030,7 +1055,9 @@ zh-CN:
       courseD_bee_nested_loops_challenge1_callout: [ ]
       courseD_bee_nested_loops_challenge2_callout: [ ]
       courseD_collector_debugging_challenge2_callout: [ ]
+      courseD_collector_debugging_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2_2018_callout: [ ]
       courseD_collector_nested_loops_challenge2a_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
@@ -1038,6 +1065,7 @@ zh-CN:
       courseD_collector_ramp9_callout: [ ]
       courseD_collector_until_challenge1_callout: [ ]
       courseD_farmer_until_challenge2_callout: [ ]
+      courseD_farmer_until_challenge2_2018_callout: [ ]
       courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
       courseD_maze_loops_challenge1_callout: [ ]
       courseD_maze_ramp1_callout:
@@ -1074,6 +1102,8 @@ zh-CN:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
+      courseD_playLab_condFP_2018_callout:
         courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
       courseD_scrat_predict1_callout: [ ]
       courseD_scrat_predict1_2018_callout: [ ]
@@ -1140,6 +1170,7 @@ zh-CN:
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_functions_predict1_2018_callout: [ ]
       courseE_artist_predict1_callout: [ ]
+      courseE_artist_predict1_2018_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: 您可以更改此数字。
@@ -1154,9 +1185,13 @@ zh-CN:
       courseE_artist_ramp8_2018_callout:
         courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
+      courseE_artist_ramp8_2_2018_callout:
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_ramp9_callout: [ ]
       courseE_artist_ramp9_2_callout: [ ]
       courseE_artist_ramp9_2018_callout: [ ]
+      courseE_artist_ramp9_2_2018_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: '使用此块收集一块宝藏。  '
@@ -1203,19 +1238,33 @@ zh-CN:
       courseE_farmer_functions9b_2018_callout: [ ]
       courseE_farmer_functions9b_clone_callout: [ ]
       courseE_maze_predict1_callout: [ ]
+      courseE_maze_predict1_2018_callout: [ ]
       courseE_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseE_maze_ramp13_callout: [ ]
+      courseE_maze_ramp1_2018_callout:
+        grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
+      courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: 这是工具箱。能找到用来完成此关卡的额外的模块。
       courseE_maze_ramp3_callout:
         courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: 你能将多余的模块拖到工具箱来扔掉它们。
       courseE_maze_ramp4_callout:
         courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: 这是你的模块限制。它告诉你还可以使用多少模块。
       courseE_maze_ramp5_callout: [ ]
+      courseE_maze_ramp5_2018_callout: [ ]
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
+      courseE_maze_ramp6_2018_callout:
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+      courseE_maze_ramp7_2018_callout:
         courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]

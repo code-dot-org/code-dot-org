@@ -78,6 +78,12 @@ class Script < ActiveRecord::Base
 
   after_save :generate_plc_objects
 
+  SCRIPT_DIRECTORY = 'config/scripts'.freeze
+
+  def self.script_directory
+    SCRIPT_DIRECTORY
+  end
+
   def generate_plc_objects
     if professional_learning_course?
       course = Course.find_by_name(professional_learning_course)
@@ -552,11 +558,7 @@ class Script < ActiveRecord::Base
     # UI tests deal with the 13+ requirement
     return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
 
-    # these are Games where if you're not logged in, we want to prompt to ask if
-    # you're at least 13 years old.
-    thirteen_plus_apps = [Game.applab, Game.gamelab, Game.weblab]
-
-    script_levels.any? {|script_level| script_level.levels.any? {|level| thirteen_plus_apps.include? level.game}}
+    script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
 
   # Create or update any scripts, script levels and stages specified in the
@@ -643,7 +645,7 @@ class Script < ActiveRecord::Base
 
         level =
           if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", allow_existing: true)
+            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}")
           else
             levels_by_key[key] || Level.find_by_key(key)
           end
@@ -672,6 +674,12 @@ class Script < ActiveRecord::Base
 
       stage_name = raw_script_level.delete(:stage)
       properties = raw_script_level.delete(:properties) || {}
+
+      if new_suffix && properties[:variants]
+        properties[:variants] = properties[:variants].map do |old_level_name, value|
+          ["#{old_level_name}_#{new_suffix}", value]
+        end.to_h
+      end
 
       script_level_attributes = {
         script_id: script.id,
@@ -761,14 +769,18 @@ class Script < ActiveRecord::Base
   def clone_with_suffix(new_suffix)
     new_name = "#{name}-#{new_suffix}"
 
-    script_filename = "config/scripts/#{name}.script"
+    script_filename = "#{Script.script_directory}/#{name}.script"
     scripts, _ = Script.setup([script_filename], new_suffix: new_suffix)
     new_script = scripts.first
 
-    copy_and_write_i18n(new_name)
+    # Make sure we don't modify any files in unit tests.
+    if Rails.application.config.levelbuilder_mode
+      copy_and_write_i18n(new_name)
+      new_filename = "#{Script.script_directory}/#{new_name}.script"
+      ScriptDSL.serialize(new_script, new_filename)
+    end
 
-    new_filename = "config/scripts/#{new_name}.script"
-    ScriptDSL.serialize(new_script, new_filename)
+    new_script
   end
 
   # Creates a copy of all translations associated with this script, and adds

@@ -2120,11 +2120,11 @@
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: "Čím chceš být, až vyrosteš, Olivia? Astronautem. Nevíš náhodou, kdo
+        text: Čím chceš být, až vyrosteš, Olivia? Astronautem. Nevíš náhodou, kdo
           je počítačový programátor? Ano, No ne. Na co čekat? Nejsem si úplně jistý,
           jak vysvětlit to počítačové programování, že je to velmi jednoduché. Je
           to sada instrukcí, jako recept, musíš je následovat krok za krokem, abys
-          dostal konečný výsledek, který chceš."
+          dostal konečný výsledek, který chceš.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
         text: Mohu změnit počet pixelů, délku řádku pomocí tohoto rozevíracího seznamu.
@@ -2161,11 +2161,11 @@
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: "Čím chceš být, až vyrosteš, Olivia? Hm, Astronaut. Nevíš náhodou, kdo
+        text: Čím chceš být, až vyrosteš, Olivia? Hm, Astronaut. Nevíš náhodou, kdo
           je počítačový programátor? Ano, No ne. Na co čekat? Nejsem si úplně jistý,
           jak vysvětlit to počítačové programování, že je to velmi jednoduché. Je
           to sada instrukcí, jako recept, musíš je následovat krok za krokem, abys
-          dostal konečný výsledek, který chceš."
+          dostal konečný výsledek, který chceš.
       2:
         image: notes/unplug1_2.png
         text: Informatika je cesta k ovlivnění světa. Mohou to být hudební videa,
@@ -2312,10 +2312,10 @@
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: "Štafetové programování je velmi zábavná lekce, která se dostane napříč
+        text: Štafetové programování je velmi zábavná lekce, která se dostane napříč
           přes informatiku. Někdy všichni jsou stále ještě trochu netrpěliví a chcejí
           se postavit na své nohy. To je skvělý způsob, jak přidat jisté povzbuzení
-          do informatiky."
+          do informatiky.
       2:
         image: notes/unplug9_2.png
         text: Jste všichni rozdělení do dvou skupin, kde stojí v řadě a spustí štafetový
@@ -3067,8 +3067,14 @@
           A když se to stane, provedou akci.
       4:
         image: notes/mc_2016_events_4.jpg
-        text: |
-          A když se to stane, provedou akci. Zatím jsme použili jen jednu událost. Vložením kódu "Při stvoření" se spustila akce, když se objevila zvířata nebo když začala hra. Během příštích několika úrovní budeš mít nové možnosti událostí jako jsou "Při dotyku", které se spustí, když se dotkneš zvířete. Nebo "Při použití", když použiješ předmět. Nebo když chceš, aby zombík zmizel při východu slunce. Vložíš kód "Při východu slunce".
+        text: 'A když se to stane, provedou akci. Zatím jsme použili jen jednu událost.
+          Vložením kódu "Při stvoření" se spustila akce, když se objevila zvířata
+          nebo když začala hra. Během příštích několika úrovní budeš mít nové možnosti
+          událostí jako jsou "Při dotyku", které se spustí, když se dotkneš zvířete.
+          Nebo "Při použití", když použiješ předmět. Nebo když chceš, aby zombík zmizel
+          při východu slunce. Vložíš kód "Při východu slunce".
+
+'
     mc_2016_spawn:
       1:
         image: notes/mc_2016_spawn_1.jpg

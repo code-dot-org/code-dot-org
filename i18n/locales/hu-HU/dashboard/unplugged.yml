@@ -316,3 +316,21 @@ hu:
       BigEvent_2018:
         title: A nagy esemény
         desc: A diákok megismerkednek az "események" fogalmával, melyek olyan programozási cselekvések, amiket a számítógép folyamatosan figyel.  A tanár gombokat rajzol egy papírra és a diákok attól függően kell, hogy reagáljanak, hogy a tanár melyik gombot "nyomja meg".
+      GraphPaperProgramming_2018:
+        title: Grafikus programozás
+        desc: A diákok egy algoritmust (utasítások sorozata) írnak osztálytársaiknak egy sor előre definiált parancs segítségével, hogy reprodukáljanak egy rajzot.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Offline tevékenység
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Offline tevékenység
+        desc: Today you will learn about what to do if someone is being mean online.
+      Conditionals_2018:
+        title: Feltételek
+        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
+      DigitalFootprint_2018:
+        title: A digitális lábnyomod
+        desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
+      BinaryImages_2018:
+        title: Bináris képek
+        desc: Sokan azt hiszik, a bináris rendszer szigorúan nullákkal és egyesekkel operál, ám korábbi tanfolyamainkon megtanultuk,  a bináris opciók sokféle információt tudnak képviselni.  Ez a lecke ezt a koncepciót viszi előrébb egy lépéssel azt mutatva, hogy egy számítógép hogy képes tárolni összetett információt (például a képeket és színeket) is binárisan.

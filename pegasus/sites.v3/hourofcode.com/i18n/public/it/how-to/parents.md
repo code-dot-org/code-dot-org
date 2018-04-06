@@ -37,13 +37,13 @@ Dai il via alla tua Ora del Codice stimolando i bambini e discutendo di come l'i
 - Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Il [video globale dell'Ora del Codice](https://www.youtube.com/watch?v=KsOIlDT145A) (in inglese).
 - [Il video del Presidente Obama che invita gli studenti ad imparare l'informatica.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Trova ancora più [risorse](<%= resolve_url('https://code.org/inspire') %>) e [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) stimolanti <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro" target="_blank">oppure questo in italiano di Programma il Futuro</a>.
+- Find more inspirational [resources](<%= codeorg_url('/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Non preoccuparti se sia tu che i tuoi bambini siete digiuni di informatica. Qui ci sono alcune idee per farti familiarizzare con le attività della tua Ora del Codice:
 
 - Spiega in che modo la tecnologia influisce sulle nostre vite con degli esempi che interessino sia i ragazzi che le ragazze (puoi parlare di come venga utilizzata per salvare delle vite, aiutare la gente, mettere in comunicazione le persone, ecc.).
 - Elenca tutto ciò che utilizza programmi informatici nella vita quotidiana.
-- [Qui](<%= resolve_url('https://code.org/girls') %>) puoi trovare dei suggerimenti per far interessare le ragazze all'informatica.
+- See tips for getting girls interested in computer science [here](<%= codeorg_url('/girls') %>).
 
 Vuoi altre idee? Scopri il nostro [schema del piano di lavoro](/files/AfterschoolEducatorLessonPlanOutline.docx) per le buone pratiche consigliate da insegnanti esperti.
 
@@ -63,7 +63,7 @@ Puoi rispondere:
 
 ## 6. Festeggia
 
-[Stampa i certificati](<%= resolve_url('https://code.org/certificates') %>) per il tuo bambino (e per te!).
+[Print certificates](<%= codeorg_url('/certificates') %>) for your child (and yourself!).
 
 Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
@@ -75,7 +75,7 @@ Condividi le foto e i video del tuo evento dell'Ora del Codice sui social networ
 
 L'Ora del Codice è solo il primo passo in un viaggio per imparare di più su come funziona la tecnologia e come creare applicazioni software. Per continuare questo viaggio:
 
-- Incoraggia tuo figlio a continuare [ad imparare online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Encourage your child to continue [to learn online](<%= codeorg_url('/learn/beyond') %>).
 - Aiuta a [promuovere](<%= resolve_url('/promote') %>) l'informatica nella scuola di tuo figlio.
 
 <%= view :signup_button %>

@@ -182,7 +182,7 @@
           dostosowują wzorce, abstrahują, stosują algorytmy), aby odkryć, jak grać
           w grę, którą otrzymali bez instrukcji.
       FunctionalSuncatchers:
-        title: "Łapacze Słońca (Suncatchers): Funkcje"
+        title: 'Łapacze Słońca (Suncatchers): Funkcje'
         desc: Uczniowie tworzą algorytm ze zmiennymi i funkcjami (czyli fragmentami
           kodu, które mogą być wielokrotnie używane) do tworzenia łapaczy słońca (suncatchers)
           przy użyciu łańcuszka i koralików.
@@ -515,3 +515,29 @@
           są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
           przyciski na papierze a uczniowie będą reagować w zależności od tego, który
           przycisk został naciśnięty.
+      GraphPaperProgramming_2018:
+        title: Programowanie na papierze milimetrowym
+        desc: Uczniowie piszą algorytm (zestaw instrukcji) korzystając ze zbioru wcześniej
+          zdefiniowanych poleceń, aby kierować innymi uczniami przy odtworzeniu rysunku.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Aktywność unplugged (bez komputera)
+        desc: Dzisiaj dowiesz się, co to znaczy być Cyfrowym Obywatelem.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Aktywność unplugged (bez komputera)
+        desc: Dziś dowiesz się, co zrobić, jeśli ktoś jest złośliwy online.
+      Conditionals_2018:
+        title: Warunkowe
+        desc: 'Aby dowiedzieć się o instrukcjach warunkowych, uczniowie grają w karty
+          i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam
+          punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
+      DigitalFootprint_2018:
+        title: Twój cyfrowy ślad
+        desc: Nauczycieli przedstawia uczniom, że umieszczenie informacji o sobie
+          online tworzy cyfrowy ślad lub "szlak", co może mieć konsekwencje.
+      BinaryImages_2018:
+        title: Binarne obrazy (Binary Images)
+        desc: Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, w naszych
+          poprzednich kursach uczniowie mogli się dowiedzieć, że informacja może być
+          reprezentowana na różne binarne sposoby.  Na tej lekcji to pojęcie jest
+          rozwijane jeszcze dalej i ilustrowane jest, jak komputer może przechowywać
+          bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.

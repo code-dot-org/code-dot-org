@@ -74,13 +74,13 @@
   "penDown": "Ibaba ang lapis",
   "penTooltip": "Iangat o ibaba ang lapis, pag mag-uumpisa o hihinto sa pag-guhit.",
   "penUp": "Itaas ang lapis",
+  "pointTo": "point to",
   "pixels": "pixels",
   "reinfFeedbackMsg": "Narito ang iyong mga guhit ! Panatilihin ang paggawa dito o magpatuloy sa susunod na palaisipan .",
   "setAlpha": "set alpha",
   "setCharacter": "itakda ang karakter sa {character}",
   "setColour": "itakda ang kulay",
   "setPattern": "i-set ang pattern",
-  "setStickerSize": "Set sticker size",
   "setWidth": "Itakda ang lapad",
   "shareDrawing": "Ibahagi ang iyong iginuhit:",
   "showMe": "Ipakita sa akin",
@@ -94,5 +94,6 @@
   "turnTooltip": "Pagliko ng artist pakaliwa o pakanan ayon sa itinakdang bilang ng degrees.",
   "turtleVisibilityTooltip": "Ipakita o huwag ipakita ang artist.",
   "widthTooltip": "Pagbabago ng lapad ng lapis.",
+  "withSize": "with size",
   "wrongColour": "Ang iyong larawan ay mali ang kulay. Para sa puzzle na ito ang kailangan ay %1."
 }

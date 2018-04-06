@@ -35,8 +35,8 @@
             students to create authentic artifacts.
         allthethingscourse:
           title: Allthethingscourse
-          description_short: "Αυτό είναι ένα μάθημα για Αllthethings"
-          description_student: "Αυτό είναι ένα μάθημα για Αllthethings και έχει μια
-            μεγαλύτερη περιγραφή για τους μαθητές"
-          description_teacher: "Αυτό είναι ένα μάθημα για Αllthethings και έχει μια
-            μεγαλύτερη περιγραφή για τους καθηγητές"
+          description_short: Αυτό είναι ένα μάθημα για Αllthethings
+          description_student: Αυτό είναι ένα μάθημα για Αllthethings και έχει μια
+            μεγαλύτερη περιγραφή για τους μαθητές
+          description_teacher: Αυτό είναι ένα μάθημα για Αllthethings και έχει μια
+            μεγαλύτερη περιγραφή για τους καθηγητές

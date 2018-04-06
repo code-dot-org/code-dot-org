@@ -6,10 +6,15 @@
 
 import $ from 'jquery';
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import SessionTime from '../components/session_time';
 import Spinner from '../../components/spinner';
 import SessionAttendance from './session_attendance';
-import Permission from '../../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  Organizer
+} from "../permission";
 import color from '@cdo/apps/util/color';
 import {
   Row,
@@ -28,12 +33,13 @@ const styles = {
   }
 };
 
-export default class WorkshopAttendance extends React.Component {
+export class WorkshopAttendance extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
 
   static propTypes = {
+    permission: PermissionPropType.isRequired,
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,
       sessionId: PropTypes.string
@@ -51,10 +57,6 @@ export default class WorkshopAttendance extends React.Component {
 
   hasWorkshopEnded() {
     return this.state.workshopState === 'Ended';
-  }
-
-  componentWillMount() {
-    this.permission = new Permission();
   }
 
   componentDidMount() {
@@ -76,7 +78,8 @@ export default class WorkshopAttendance extends React.Component {
         workshopState: data.state,
         sessions: data.sessions,
         accountRequiredForAttendance: data['account_required_for_attendance?'],
-        course: data.course
+        course: data.course,
+        enrollmentCount: data.enrollment_count
       });
     });
   }
@@ -135,7 +138,7 @@ export default class WorkshopAttendance extends React.Component {
       return <Spinner/>;
     }
 
-    const isReadOnly = this.hasWorkshopEnded() && !this.permission.isWorkshopAdmin;
+    const isReadOnly = this.hasWorkshopEnded() && !this.props.permission.hasAny(WorkshopAdmin, Organizer);
 
     let intro = null;
     if (isReadOnly) {
@@ -144,11 +147,11 @@ export default class WorkshopAttendance extends React.Component {
           This workshop has ended. The attendance view is now read-only.
         </p>
       );
-    } else if (this.hasWorkshopEnded() && this.permission.isWorkshopAdmin) {
+    } else if (this.hasWorkshopEnded()) {
       intro = (
         <p>
-          This workshop has ended. As an admin, you can still update attendance.
-          Note this will not be reflected in the payment report if it's already gone out.
+          This workshop has ended. You can still update attendance, but note this will not be
+          reflected in the payment report if it has already gone out.
         </p>
       );
     } else {
@@ -214,6 +217,7 @@ export default class WorkshopAttendance extends React.Component {
           onSaving={this.handleSaving}
           onSaved={this.handleSaved}
           accountRequiredForAttendance={this.state.accountRequiredForAttendance}
+          enrollmentCount={this.state.enrollmentCount}
         />
         <Row>
           <Col sm={10}>
@@ -231,3 +235,7 @@ export default class WorkshopAttendance extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.permission
+}))(WorkshopAttendance);

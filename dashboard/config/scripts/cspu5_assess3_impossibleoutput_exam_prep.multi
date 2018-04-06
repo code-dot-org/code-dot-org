@@ -1,0 +1,41 @@
+name 'cspu5_assess3_impossibleOutput_exam_prep'
+type 'multi2'
+right '0, 0'
+wrong '1, 1'
+right '2, 4'
+wrong '2, 1'
+wrong '2, 2'
+
+markdown <<MARKDOWN
+Study the code segment below to see what it will output.  Values of x and y will be displayed multiple times during the running of the program, and you might recognize a pattern. From the list of possible outputs listed two (2) are IMPOSSIBLE.  Choose the two (2) outputs that are impossible for this code to produce. 
+
+    x <- 0
+    REPEAT_UNTIL( x = 3 ){
+        y <- 0
+        x <- x+1
+        REPEAT_UNTIL ( y = 3 ){
+            y <- y+1
+            DISPLAY( x + “, “ + y)
+        }
+    }
+
+NOTE: if the condition is TRUE the loop does not execute.  For example if `x` is currently 3 then `REPEAT_UNTIL (x=3)` will not execute.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 11**
+
+This is a difficult problem. If you trace the code for a few iterations of the loops you should be able to fairly quickly derive all the possible outputs since they follow a pattern.  They are:
+
+    1,1
+    1,2
+    2,1
+    2,2
+
+Even if the student thinks that they code will print a value like `3,3` it shouldn't affect their ability to answer correctly. It should be clear that `4` is an impossible output and so is `0`.
+
+
+Going through the code, we can see what condition needs to be met before we exit the loops inside the code. Right as we enter the first loop, x is incremented by 1 and this is before it gets to the "Display" command. With this in mind, "0, 0" is something that cannot be displayed because at any time "Display" is called, x will always be greater than 0.
+
+Looking at the second loop that runs until (y = 3), the condition is to repeat until y = 3. When y = 3, it exits this loop. Therefore, y is never greater than 3 when "Display" is called and thus, "2, 4" is an impossible option.
+MARKDOWN

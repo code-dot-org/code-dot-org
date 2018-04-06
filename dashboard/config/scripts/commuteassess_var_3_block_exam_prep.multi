@@ -1,0 +1,13 @@
+name 'CommuteAssess - Var 3 - block_exam_prep'
+question 'What are x, y, and z equal to after this program is run?'
+wrong 'x is equal to "yes"; y is equal to "maybe"; z is equal to "no"'
+wrong 'x is equal to "no"; y is equal to "maybe"; z is equal to "yes"'
+wrong 'x is equal to "no"; y is equal to "maybe"; z is equal to "x"'
+wrong 'x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no"'
+right 'x is equal to "no"; y is equal to "maybe"; z is equal to "no"'
+
+markdown <<MARKDOWN
+![](https://images.code.org/53dadff0f71c5555889c5207ed4e14f2-image-1482507245478.png)
+
+<!-- ![](https://images.code.org/a2c5468821e5ba36de39e3aad83811f0-image-1482297661569.png) -->
+MARKDOWN

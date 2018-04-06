@@ -23,7 +23,7 @@ nav: how_to_nav
 
 Година коду є лише першим кроком на шляху вивчення того, як працюють технології, і як створювати власні програмні застосунки. Для продовження цього шляху:
 
-- Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- [Відвідайте](%= resolve_url('https://code.org/professional-development-workshops') %) одноденний особистий семінар для отримання інструктажу від досвідченого інструктора з інформатики. (лише педагоги США)
+- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond') %).
+- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

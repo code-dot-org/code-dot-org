@@ -74,13 +74,13 @@
   "penDown": "zīmulis piespiests",
   "penTooltip": "Paceļ vai noliek zīmuli, lai sāktu vai partrauktu zīmēt.",
   "penUp": "zīmuli pacelts",
+  "pointTo": "point to",
   "pixels": "punktiem",
   "reinfFeedbackMsg": "Šeit ir tavs zīmējums! Turpini darbu pie tā, vai sāc darbu pie nākamās puzles.",
   "setAlpha": "uzstādīt alfa vērtību",
   "setCharacter": "set character to {character}",
   "setColour": "uzstādīt krāsu",
   "setPattern": "uzstādīt rakstu",
-  "setStickerSize": "Set sticker size",
   "setWidth": "uzstādīt platumu",
   "shareDrawing": "Ieteikt savu zīmējumu:",
   "showMe": "Pārādīt man",
@@ -94,5 +94,6 @@
   "turnTooltip": "Pagriezt zīmējumu pa labi par noteiktiem grādiem.",
   "turtleVisibilityTooltip": "Padara zīmējumu redzamu vai neredzamu.",
   "widthTooltip": "Nomaina zīmuļa platumu.",
+  "withSize": "with size",
   "wrongColour": "Tava bilde ir nepareizajā krāsā. Šai puzlei nepieciešama šāda krāsa %1."
 }

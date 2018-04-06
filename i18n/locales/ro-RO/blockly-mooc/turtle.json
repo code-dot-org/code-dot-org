@@ -74,13 +74,13 @@
   "penDown": "creionul jos",
   "penTooltip": "Ridică sau coboară creionul, pentru a porni sau a înceta desenul.",
   "penUp": "creionul sus",
+  "pointTo": "point to",
   "pixels": "pixeli",
   "reinfFeedbackMsg": "Aici este desenul dvs.! Continuaţi să lucrați la el sau continuați cu următorul puzzle.",
   "setAlpha": "setează alfa",
   "setCharacter": "setează caracterul pentru a {character}",
   "setColour": "setează culoarea",
   "setPattern": "setează model",
-  "setStickerSize": "Set sticker size",
   "setWidth": "setează lăţimea",
   "shareDrawing": "Imparte desenul tau:",
   "showMe": "Arată-mi",
@@ -94,5 +94,6 @@
   "turnTooltip": "Întoarce artistul la stânga în funcție de unghiul specificat.",
   "turtleVisibilityTooltip": "Face artistul vizibil sau invizibil.",
   "widthTooltip": "Modifică lăţimea creionului.",
+  "withSize": "with size",
   "wrongColour": "Imaginea ta are culoarea greşită.  Pentru acest puzzle, aceasta trebuie să fie de %1."
 }
