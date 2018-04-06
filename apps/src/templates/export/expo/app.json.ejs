@@ -32,7 +32,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "org.code.studio.applab.<%- projectId %>",
+      "bundleIdentifier": "org.code.studio.applab.<%- projectId.replace(/([^a-zA-Z0-9\-]+)/gi, '-') %>",
       "buildNumber": "1"
     }, "android": {
       "package": "org.code.studio.applab.<%- projectId %>",
