@@ -75,6 +75,8 @@ class Video < ActiveRecord::Base
   end
 
   def fetch_thumbnail
+    return unless Rails.application.config.levelbuilder_mode
+
     path = dashboard_dir('public', 'c', 'video_thumbnails', "#{key}.jpg")
     url = "http://img.youtube.com/vi/#{youtube_code}/mqdefault.jpg"
     IO.copy_stream(open(url), path)
