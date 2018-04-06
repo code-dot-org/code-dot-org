@@ -549,20 +549,20 @@ function duplicateScreen(element) {
 }
 
 designMode.onCopyElementToScreen = function (element, destScreen) {
-  const sourceScreen = $(element);
+  const sourceElement = $(element);
   designMode.changeScreen(destScreen);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
-  const madeUndraggable = makeUndraggable(sourceScreen.children());
+  const madeUndraggable = makeUndraggable(sourceElement.children());
 
-  let duplicateElement = $(element).clone(true)[0];
+  let duplicateElement = sourceElement.clone(true)[0];
   const elementType = elementLibrary.getElementType(duplicateElement);
   elementUtils.setId(duplicateElement, elementLibrary.getUnusedElementId(elementType.toLowerCase()));
   designMode.attachElement(duplicateElement);
 
   // Restore the draggable wrappers on the elements in the source screen:
   if (madeUndraggable) {
-    makeDraggable(sourceScreen.children());
+    makeDraggable(sourceElement.children());
   }
 };
 
