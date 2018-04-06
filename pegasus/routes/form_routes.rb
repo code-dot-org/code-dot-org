@@ -27,7 +27,11 @@ post '/forms/:kind' do |kind|
 end
 
 post '/forms/:kind/query' do |kind|
-  kind = Object.const_get(kind)
+  kind = begin
+    Object.const_get(kind)
+  rescue NameError
+    halt 400
+  end
   pass unless kind.respond_to?(:solr_query)
 
   host, port = CDO.solr_server.to_s.split(':')
