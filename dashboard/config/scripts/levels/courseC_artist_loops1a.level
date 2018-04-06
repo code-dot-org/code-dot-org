@@ -37,8 +37,8 @@
     "project_template_level_name": "courseC_artist_loopsTemplateA",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the first block you will need:\\n\\n<xml>\\n<block type=\\\"jump_to_xy\\\">\\n    <title name=\\\"XPOS\\\">200</title>\\n    <title name=\\\"YPOS\\\">200</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseC_artist_loops1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19b7f2b48164dfab24feb6c60c797715/courseC_artist_loops1a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to draw the sticker!\\n\\n<xml>\\n<block type=\\\"sticker\\\">\\n    <title name=\\\"VALUE\\\">Bird</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseC_artist_loops1a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c1291a61b5faefecbf56cbd99f83cda5/courseC_artist_loops1a.mp3\"}]",
     "disable_procedure_autopopulate": "false",
-    "contained_level_names": null,
-    "top_level_procedure_autopopulate": "false"
+    "top_level_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
