@@ -36,6 +36,26 @@ export class RegionalPartnerDropdown extends React.Component {
     }
   }
 
+  componentDidMount() {
+    let regionalPartnerFilter;
+    if (this.props.regionalPartnerFilter) {
+      regionalPartnerFilter = this.props.regionalPartnerFilter;
+    } else if (sessionStorage.getItem("regionalPartnerFilter")) {
+      regionalPartnerFilter = sessionStorage.getItem("regionalPartnerFilter");
+    } else {
+      regionalPartnerFilter = 'none';
+    }
+    const initialOption = this.regionalPartners.find((element) => {
+      return element.value === regionalPartnerFilter;
+    });
+    this.handleChange(initialOption);
+  }
+
+  handleChange = (selected) => {
+    this.props.onChange(selected);
+    sessionStorage.setItem("regionalPartnerFilter", selected.value);
+  };
+
   render() {
     return (
       <FormGroup>
@@ -43,7 +63,7 @@ export class RegionalPartnerDropdown extends React.Component {
         <Select
           clearable={false}
           value={this.props.regionalPartnerFilter}
-          onChange={this.props.onChange}
+          onChange={this.handleChange}
           placeholder={null}
           options={this.regionalPartners}
           style={styles.select}

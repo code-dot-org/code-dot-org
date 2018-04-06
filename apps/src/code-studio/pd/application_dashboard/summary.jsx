@@ -9,15 +9,12 @@ import RegionalPartnerDropdown from './regional_partner_dropdown';
 import ApplicantSearch from './applicant_search';
 import AdminNavigationButtons from './admin_navigation_buttons';
 import Spinner from '../components/spinner';
-import {
-  UnmatchedFilter,
-  RegionalPartnerDropdownOptions as dropdownOptions
-} from './constants';
+import { RegionalPartnerDropdownOptions as dropdownOptions } from './constants';
 import $ from 'jquery';
 
 export class Summary extends React.Component {
   static propTypes = {
-    regionalPartnerName: PropTypes.string.isRequired,
+    regionalPartnerName: PropTypes.string,
     isWorkshopAdmin: PropTypes.bool
   };
 
@@ -27,13 +24,7 @@ export class Summary extends React.Component {
     this.state = {
       loading: true,
       applications: null,
-      regionalPartnerName: this.props.regionalPartnerName,
-      regionalPartnerFilter: UnmatchedFilter
     };
-  }
-
-  componentWillMount() {
-    this.load();
   }
 
   componentWillUnmount() {
@@ -75,9 +66,6 @@ export class Summary extends React.Component {
   };
 
   render() {
-    if (this.state.loading) {
-      return <Spinner />;
-    }
     return (
       <div>
         <ApplicantSearch/>
@@ -92,38 +80,47 @@ export class Summary extends React.Component {
           />
         }
         <h1>{this.state.regionalPartnerName}</h1>
-        <div className="row">
-          <SummaryTable
-            id="summary-csf-facilitators"
-            caption="CS Fundamentals Facilitators"
-            data={this.state.applications["csf_facilitators"]}
-            path="csf_facilitators"
-          />
-          <SummaryTable
-            id="summary-csd-facilitators"
-            caption="CS Discoveries Facilitators"
-            data={this.state.applications["csd_facilitators"]}
-            path="csd_facilitators"
-          />
-          <SummaryTable
-            id="summary-csp-facilitators"
-            caption="CS Principles Facilitators"
-            data={this.state.applications["csp_facilitators"]}
-            path="csp_facilitators"
-          />
-          <SummaryTable
-            id="summary-csd-teachers"
-            caption="CS Discoveries Teachers"
-            data={this.state.applications["csd_teachers"]}
-            path="csd_teachers"
-          />
-          <SummaryTable
-            id="summary-csp-teachers"
-            caption="CS Principles Teachers"
-            data={this.state.applications["csp_teachers"]}
-            path="csp_teachers"
-          />
-        </div>
+        {this.state.loading
+          ? <Spinner />
+          : this.renderSummaryTables()
+        }
+      </div>
+    );
+  }
+
+  renderSummaryTables() {
+    return (
+      <div className="row">
+        <SummaryTable
+          id="summary-csf-facilitators"
+          caption="CS Fundamentals Facilitators"
+          data={this.state.applications["csf_facilitators"]}
+          path="csf_facilitators"
+        />
+        <SummaryTable
+          id="summary-csd-facilitators"
+          caption="CS Discoveries Facilitators"
+          data={this.state.applications["csd_facilitators"]}
+          path="csd_facilitators"
+        />
+        <SummaryTable
+          id="summary-csp-facilitators"
+          caption="CS Principles Facilitators"
+          data={this.state.applications["csp_facilitators"]}
+          path="csp_facilitators"
+        />
+        <SummaryTable
+          id="summary-csd-teachers"
+          caption="CS Discoveries Teachers"
+          data={this.state.applications["csd_teachers"]}
+          path="csd_teachers"
+        />
+        <SummaryTable
+          id="summary-csp-teachers"
+          caption="CS Principles Teachers"
+          data={this.state.applications["csp_teachers"]}
+          path="csp_teachers"
+        />
       </div>
     );
   }
@@ -131,6 +128,5 @@ export class Summary extends React.Component {
 
 export default connect(state => ({
   regionalPartnerName: state.regionalPartnerName,
-  regionalPartners: state.regionalPartners,
   isWorkshopAdmin: state.permissions.workshopAdmin,
 }))(Summary);

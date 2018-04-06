@@ -9,10 +9,7 @@ import CohortViewTable from './cohort_view_table';
 import CohortCalculator from './cohort_calculator';
 import RegionalPartnerDropdown from './regional_partner_dropdown';
 import { Button, Col } from 'react-bootstrap';
-import {
-  RegionalPartnerDropdownOptions as dropdownOptions,
-  UnmatchedFilter
-} from './constants';
+import { RegionalPartnerDropdownOptions as dropdownOptions } from './constants';
 
 const styles = {
   button: {
@@ -39,13 +36,8 @@ class CohortView extends React.Component {
   state = {
     loading: true,
     applications: null,
-    regionalPartnerName: this.props.regionalPartnerName,
-    regionalPartnerFilter: UnmatchedFilter
+    regionalPartnerName: this.props.regionalPartnerName
   };
-
-  componentWillMount() {
-    this.load();
-  }
 
   load(selected = null) {
     let url = this.getJsonUrl();
@@ -90,54 +82,57 @@ class CohortView extends React.Component {
   };
 
   render() {
-    if (this.state.loading) {
-      return (
-        <Spinner/>
-      );
-    } else {
-      let accepted = 0;
-      let registered = 0;
-      if (this.state.applications !== null) {
-        accepted = this.state.applications
-        .filter(app => app.status === 'accepted')
+    let accepted = 0;
+    let registered = 0;
+    if (this.state.applications !== null) {
+      accepted = this.state.applications
+      .filter(app => app.status === 'accepted')
+      .length;
+      registered = this.state.applications
+        .filter(app => app.registered_workshop === 'Yes')
         .length;
-        registered = this.state.applications
-          .filter(app => app.registered_workshop === 'Yes')
-          .length;
-      }
-      return (
-        <div>
+    }
+    return (
+      <div>
+        {this.state.applications &&
           <CohortCalculator
             role={this.props.route.role}
             regionalPartnerFilter={this.state.regionalPartnerFilter}
             accepted={accepted}
             registered={registered}
           />
-          {this.props.isWorkshopAdmin &&
-            <RegionalPartnerDropdown
-              onChange={this.handleRegionalPartnerChange}
-              regionalPartnerFilter={this.state.regionalPartnerFilter}
-              additionalOptions={dropdownOptions}
-            />
-          }
-          <h1>{this.state.regionalPartnerName}</h1>
-          <h2>{this.props.route.applicationType}</h2>
-          <Col md={6} sm={6}>
-            <Button
-              style={styles.button}
-              onClick={this.handleDownloadCsvClick}
-            >
-              Download CSV
-            </Button>
-          </Col>
-          <CohortViewTable
-            data={this.state.applications}
-            viewType={this.props.route.viewType}
-            path={this.props.route.path}
+        }
+        {this.props.isWorkshopAdmin &&
+          <RegionalPartnerDropdown
+            onChange={this.handleRegionalPartnerChange}
+            regionalPartnerFilter={this.state.regionalPartnerFilter}
+            additionalOptions={dropdownOptions}
           />
-        </div>
-      );
-    }
+        }
+        {this.state.loading &&
+          <Spinner />
+        }
+        {!this.state.loading &&
+          <div>
+            <h1>{this.state.regionalPartnerName}</h1>
+            <h2>{this.props.route.applicationType}</h2>
+            <Col md={6} sm={6}>
+              <Button
+                style={styles.button}
+                onClick={this.handleDownloadCsvClick}
+              >
+                Download CSV
+              </Button>
+            </Col>
+            <CohortViewTable
+              data={this.state.applications}
+              viewType={this.props.route.viewType}
+              path={this.props.route.path}
+            />
+          </div>
+        }
+      </div>
+    );
   }
 }
 
