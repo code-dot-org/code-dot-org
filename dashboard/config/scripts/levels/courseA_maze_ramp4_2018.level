@@ -34,11 +34,10 @@
     "disable_if_else_editing": "false",
     "name_suffix": "_2018",
     "parent_level_id": 10758,
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
