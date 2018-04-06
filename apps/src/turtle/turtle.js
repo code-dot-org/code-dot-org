@@ -395,7 +395,7 @@ class Visualization {
   }
 
   pointTo(degrees) {
-    this.setHeading(degrees);
+    this.setHeading(degrees + 90);
   }
 
   turnByDegrees(degreesRight) {
@@ -1532,7 +1532,7 @@ Artist.prototype.step = function (command, values, options) {
       this.visualization.turnByDegrees(result.distance);
       break;
     case 'PT': //Point To
-      this.visualization.pointTo(values[1]);
+      this.visualization.pointTo(values[0]);
       break;
     case 'GA':  // Global Alpha
       var alpha = values[0];
