@@ -279,10 +279,10 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to = createPointToBlocks(function (block) {
     // Block for pointing to a specified direction
-      block.appendDummyInput()
-          .appendTitle(new blockly.FieldTextInput(
-              '0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
-          .appendTitle(msg.degrees());
+    block.appendDummyInput()
+        .appendTitle(new blockly.FieldTextInput(
+            '0', blockly.FieldTextInput.numberValidator), 'DIRECTION')
+        .appendTitle(msg.degrees());
   });
 
   generator.point_to = function () {
@@ -292,9 +292,9 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
   // Block for pointing to a specified direction
-      block.appendValueInput('VALUE');
-      block.appendDummyInput()
-          .appendTitle(msg.degrees());
+    block.appendValueInput('VALUE');
+    block.appendDummyInput()
+        .appendTitle(msg.degrees());
   });
 
   generator.point_to_param = function () {
@@ -304,9 +304,9 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to_by_constant_restricted =
       createPointToBlocks(function (block) {
-      block.appendDummyInput()
-          .appendTitle(new blockly.FieldDropdown(block.VALUE), 'VALUE')
-          .appendTitle(msg.degrees());
+    block.appendDummyInput()
+        .appendTitle(new blockly.FieldDropdown(block.VALUE), 'VALUE')
+        .appendTitle(msg.degrees());
   });
 
   blockly.Blocks.point_to_by_constant_restricted.VALUE =
